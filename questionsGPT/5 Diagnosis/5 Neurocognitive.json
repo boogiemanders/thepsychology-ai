@@ -1,6 +1,27 @@
 {
   "questions": [
     {
+      "stem": "A psychologist is conducting a neuropsychological evaluation of an HIV-positive client who presents with forgetfulness, difficulty concentrating, psychomotor slowing, and social withdrawal. These symptoms are most consistent with which pattern of neurocognitive impairment?",
+      "options": [
+        "Cortical neurocognitive disorder, characterized by aphasia, agnosia, and apraxia",
+        "Subcortical neurocognitive disorder, characterized by cognitive slowing, apathy, and motor problems",
+        "Cortico-subcortical neurocognitive disorder, characterized by variable symptoms depending on areas affected",
+        "Frontotemporal neurocognitive disorder, characterized by personality changes and disinhibition"
+      ],
+      "answer": "Subcortical neurocognitive disorder, characterized by cognitive slowing, apathy, and motor problems",
+      "explanation": "The lesson states that HIV-related NCD is 'Caused by HIV infection affecting the brain' and 'Shows subcortical symptoms: forgetfulness, poor attention, cognitive slowing, psychomotor slowing, apathy, social withdrawal, tremors, clumsiness.' The client's presentation matches this subcortical pattern exactly. Option A is incorrect because cortical NCDs (like Alzheimer's) feature aphasia, agnosia, and apraxia as primary symptoms. Option C describes cortico-subcortical patterns seen in vascular NCD or Lewy body disease. Option D describes frontotemporal NCD, which is a cortical disorder featuring personality changes as the earliest symptom.",
+      "kn": "KN42",
+      "kn_explanation": "Neuropsychological evaluation of an HIV-positive client with cognitive symptoms relates to matching treatment/intervention decisions to assessment and diagnosis findings, including consideration of medical comorbidities and special population factors.",
+      "difficulty": "medium",
+      "quality_comment": "Tests ability to identify subcortical vs. cortical NCD patterns in a specific medical population. Lesson coverage is adequate but brief.",
+      "suggestedLesson": "5-neurocognitive",
+      "suggestedParagraph": "### HIV-Related NCD",
+      "lessonExcerpt": "Caused by HIV infection affecting the brain. Shows subcortical symptoms: forgetfulness, poor attention, cognitive slowing, psychomotor slowing, apathy, social withdrawal, tremors, clumsiness.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 4
+    },
+    {
       "stem": "Which of the following best characterizes the diagnostic criteria of delirium?",
       "options": [
         "A gradual onset of cognitive decline over months with no fluctuations and no attention disturbance",
@@ -25,8 +46,8 @@
       ],
       "answer": "Amyloid plaques and neurofibrillary tangles disrupting cell-to-cell communication",
       "explanation": "Alzheimer's disease is characterized by extracellular amyloid plaques composed of beta-amyloid protein and intracellular neurofibrillary tangles made of abnormal tau protein, which interfere with neuronal communication.",
-      "kn": "KN1",
-      "kn_explanation": "This question targets knowledge of biological bases of neurocognitive disorders, specifically the neurobiological markers of Alzheimer's disease.",
+      "kn": "KN35",
+      "kn_explanation": "This question is best aligned with KN35 because it tests Criteria for selection and adaptation of assessment methods (e.g., evidenced-based knowledge of assessment limitations, cultural appropriateness, trans-cultural adaptation, and language accommodations).",
       "difficulty": "medium",
       "quality_comment": "Options include other neurological features to mislead, but the correct response is clearly the signature pathological hallmark of Alzheimer's."
     },
@@ -46,22 +67,22 @@
       "quality_comment": "The question carefully distinguishes overlapping symptoms, requiring nuanced understanding of frontotemporal vs. Alzheimer's presentations."
     },
     {
-      "stem": "A 72-year-old patient shows progressive memory loss and trouble with daily activities over several years. Genetic testing reveals an ApoE4 allele. What does this finding suggest about the patient\u2019s neurocognitive disorder?",
+      "stem": "A 72-year-old patient shows progressive memory loss and trouble with daily activities over several years. Genetic testing reveals an ApoE4 allele. What does this finding suggest about the patient’s neurocognitive disorder?",
       "options": [
-        "The presence of the ApoE4 allele decreases the likelihood of Alzheimer\u2019s disease",
-        "The ApoE4 allele is a risk factor for Alzheimer\u2019s disease and supports a probable diagnosis",
+        "The presence of the ApoE4 allele decreases the likelihood of Alzheimer’s disease",
+        "The ApoE4 allele is a risk factor for Alzheimer’s disease and supports a probable diagnosis",
         "The ApoE4 allele is diagnostic for Lewy body dementia",
         "ApoE4 presence suggests the disorder is due to vascular causes"
       ],
-      "answer": "The ApoE4 allele is a risk factor for Alzheimer\u2019s disease and supports a probable diagnosis",
-      "explanation": "1. The correct answer, \"The ApoE4 allele is a risk factor for Alzheimer\u2019s disease and supports a probable diagnosis,\" is accurate because the presence of the ApoE4 variant has been identified as a genetic risk factor for Alzheimer\u2019s disease. In individuals with neurocognitive disorder symptoms, such as progressive memory loss and difficulty with daily activities, the identification of the ApoE4 allele strengthens the likelihood of a probable diagnosis of Alzheimer\u2019s, aligning with the criteria that require evidence of a causative genetic mutation.\n\n2. The incorrect options are as follows:\n- \"The presence of the ApoE4 allele decreases the likelihood of Alzheimer\u2019s disease\" is wrong because the ApoE4 allele is known to increase, not decrease, the risk of developing Alzheimer\u2019s disease.\n- \"The ApoE4 allele is diagnostic for Lewy body dementia\" is incorrect because the ApoE4 allele is specifically associated with Alzheimer\u2019s disease, not Lewy body dementia, which has different diagnostic criteria and features.\n- \"ApoE4 presence suggests the disorder is due to vascular causes\" is misleading because the ApoE4 allele is not linked to vascular neurocognitive disorders; instead, it is a known risk factor specifically for Alzheimer\u2019s disease.",
-      "kn": "KN4",
-      "kn_explanation": "This question emphasizes behavioral genetics and the role of genetic risk factors in neurocognitive disorders.",
+      "answer": "The ApoE4 allele is a risk factor for Alzheimer’s disease and supports a probable diagnosis",
+      "explanation": "1. The correct answer, \"The ApoE4 allele is a risk factor for Alzheimer’s disease and supports a probable diagnosis,\" is accurate because the presence of the ApoE4 variant has been identified as a genetic risk factor for Alzheimer’s disease. In individuals with neurocognitive disorder symptoms, such as progressive memory loss and difficulty with daily activities, the identification of the ApoE4 allele strengthens the likelihood of a probable diagnosis of Alzheimer’s, aligning with the criteria that require evidence of a causative genetic mutation.\n\n2. The incorrect options are as follows:\n- \"The presence of the ApoE4 allele decreases the likelihood of Alzheimer’s disease\" is wrong because the ApoE4 allele is known to increase, not decrease, the risk of developing Alzheimer’s disease.\n- \"The ApoE4 allele is diagnostic for Lewy body dementia\" is incorrect because the ApoE4 allele is specifically associated with Alzheimer’s disease, not Lewy body dementia, which has different diagnostic criteria and features.\n- \"ApoE4 presence suggests the disorder is due to vascular causes\" is misleading because the ApoE4 allele is not linked to vascular neurocognitive disorders; instead, it is a known risk factor specifically for Alzheimer’s disease.",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
       "difficulty": "medium",
       "quality_comment": "Options are plausible and reflect common misunderstandings, making the question effective for testing genetic knowledge."
     },
     {
-      "stem": "Which of the following medications primarily acts as a cholinesterase inhibitor used in treating Alzheimer\u2019s disease?",
+      "stem": "Which of the following medications primarily acts as a cholinesterase inhibitor used in treating Alzheimer’s disease?",
       "options": [
         "Memantine",
         "Donepezil",
@@ -69,14 +90,14 @@
         "Levodopa"
       ],
       "answer": "Donepezil",
-      "explanation": "Donepezil is a cholinesterase inhibitor that delays breakdown of acetylcholine, helping reduce cognitive symptoms in Alzheimer\u2019s disease, whereas memantine regulates glutamate, haloperidol is an antipsychotic, and levodopa is used in Parkinson\u2019s disease.",
-      "kn": "KN2",
-      "kn_explanation": "The question tests knowledge of drug classification and mechanisms of action relevant to neurocognitive disorder pharmacotherapy.",
+      "explanation": "Donepezil is a cholinesterase inhibitor that delays breakdown of acetylcholine, helping reduce cognitive symptoms in Alzheimer’s disease, whereas memantine regulates glutamate, haloperidol is an antipsychotic, and levodopa is used in Parkinson’s disease.",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
       "difficulty": "easy",
       "quality_comment": "The stem is straightforward and options are common drugs, ensuring clarity and good differentiation."
     },
     {
-      "stem": "Which symptom is more typical of neurocognitive disorder with Lewy bodies than Alzheimer\u2019s disease?",
+      "stem": "Which symptom is more typical of neurocognitive disorder with Lewy bodies than Alzheimer’s disease?",
       "options": [
         "Memory loss as the earliest symptom",
         "Fluctuating cognition and recurrent visual hallucinations",
@@ -84,22 +105,22 @@
         "Prominent early aphasia and apraxia"
       ],
       "answer": "Fluctuating cognition and recurrent visual hallucinations",
-      "explanation": "NCD with Lewy bodies is characterized by fluctuating attention/alertness and recurrent visual hallucinations early in the course, which differ from the early predominant memory deficits in Alzheimer\u2019s disease.",
+      "explanation": "NCD with Lewy bodies is characterized by fluctuating attention/alertness and recurrent visual hallucinations early in the course, which differ from the early predominant memory deficits in Alzheimer’s disease.",
       "kn": "KN36",
-      "kn_explanation": "This focuses on clinical features aiding differential diagnosis between neurocognitive disorders.",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
       "difficulty": "medium",
-      "quality_comment": "Distractors reflect Alzheimer\u2019s symptoms, enhancing discriminatory power of the question."
+      "quality_comment": "Distractors reflect Alzheimer’s symptoms, enhancing discriminatory power of the question."
     },
     {
       "stem": "Which of the following best describes the prognosis and course of vascular neurocognitive disorder?",
       "options": [
-        "A rapid, always steadily progressive decline similar to Alzheimer\u2019s disease",
+        "A rapid, always steadily progressive decline similar to Alzheimer’s disease",
         "A stepwise decline or fluctuating symptom severity often related to cerebrovascular events",
         "A stable cognitive deficit with no further deterioration",
         "Primarily a reversible disorder with rapid full recovery"
       ],
       "answer": "A stepwise decline or fluctuating symptom severity often related to cerebrovascular events",
-      "explanation": "1. The correct answer, \"A stepwise decline or fluctuating symptom severity often related to cerebrovascular events,\" accurately describes the prognosis and course of vascular neurocognitive disorder (NCD). This disorder is characterized by symptoms that are consistent with a vascular etiology, often showing a temporal relationship with cerebrovascular events such as strokes. The course of vascular NCD can involve a stepwise decline, where cognitive function may fluctuate in severity and can experience plateaus, reflecting the impact of these vascular events.\n\n2. The option \"A rapid, always steadily progressive decline similar to Alzheimer\u2019s disease\" is incorrect because vascular NCD does not follow a continuous and uniform progression like Alzheimer\u2019s disease; instead, it can exhibit fluctuations and stepwise changes. The statement \"A stable cognitive deficit with no further deterioration\" is wrong because vascular NCD typically does not remain stable; it is characterized by changes in cognitive function over time, often linked to cerebrovascular incidents. Lastly, \"Primarily a reversible disorder with rapid full recovery\" is inaccurate because, while some vascular NCDs can improve if the underlying medical condition is treated, they are not primarily reversible, and rapid full recovery is not a typical expectation.",
+      "explanation": "1. The correct answer, \"A stepwise decline or fluctuating symptom severity often related to cerebrovascular events,\" accurately describes the prognosis and course of vascular neurocognitive disorder (NCD). This disorder is characterized by symptoms that are consistent with a vascular etiology, often showing a temporal relationship with cerebrovascular events such as strokes. The course of vascular NCD can involve a stepwise decline, where cognitive function may fluctuate in severity and can experience plateaus, reflecting the impact of these vascular events.\n\n2. The option \"A rapid, always steadily progressive decline similar to Alzheimer’s disease\" is incorrect because vascular NCD does not follow a continuous and uniform progression like Alzheimer’s disease; instead, it can exhibit fluctuations and stepwise changes. The statement \"A stable cognitive deficit with no further deterioration\" is wrong because vascular NCD typically does not remain stable; it is characterized by changes in cognitive function over time, often linked to cerebrovascular incidents. Lastly, \"Primarily a reversible disorder with rapid full recovery\" is inaccurate because, while some vascular NCDs can improve if the underlying medical condition is treated, they are not primarily reversible, and rapid full recovery is not a typical expectation.",
       "kn": "KN36",
       "kn_explanation": "This question addresses clinical course and prognosis relevant to diagnosis of neurocognitive disorders.",
       "difficulty": "medium",
@@ -109,14 +130,14 @@
       "stem": "A patient with Down syndrome in their 20s begins showing early signs of cognitive decline. Which neurocognitive disorder and mechanism is most consistent with this presentation?",
       "options": [
         "Lewy body dementia due to alpha-synuclein buildup",
-        "Alzheimer\u2019s disease associated with overproduction of amyloid precursor protein from trisomy 21",
-        "Parkinson\u2019s disease due to dopamine depletion",
+        "Alzheimer’s disease associated with overproduction of amyloid precursor protein from trisomy 21",
+        "Parkinson’s disease due to dopamine depletion",
         "Prion disease causing rapid cognitive deterioration"
       ],
-      "answer": "Alzheimer\u2019s disease associated with overproduction of amyloid precursor protein from trisomy 21",
-      "explanation": "1. The correct answer is \"Alzheimer\u2019s disease associated with overproduction of amyloid precursor protein from trisomy 21\" because individuals with Down syndrome (trisomy 21) have an extra copy of the gene for amyloid precursor protein (APP), which leads to an increased risk of developing Alzheimer\u2019s disease at an earlier age, often in their 20s. This overproduction of APP results in the accumulation of amyloid plaques, a hallmark of Alzheimer\u2019s disease, which contributes to cognitive decline.\n\n2. The incorrect options are as follows:\n- **Lewy body dementia due to alpha-synuclein buildup:** This disorder typically presents with fluctuating cognition, visual hallucinations, and motor symptoms, which are not the primary concerns for individuals with Down syndrome showing early cognitive decline.\n- **Parkinson\u2019s disease due to dopamine depletion:** Parkinson\u2019s disease primarily involves motor symptoms that precede cognitive decline, and while it can occur in individuals with Down syndrome, it is not directly linked to the cognitive decline observed in this case.\n- **Prion disease causing rapid cognitive deterioration:** Prion diseases, like Creutzfeldt-Jakob disease, are characterized by rapid progression of symptoms, but they are not specifically associated with Down syndrome or the mechanisms of cognitive decline related to amyloid precursor protein overproduction.",
-      "kn": "KN1",
-      "kn_explanation": "Focuses on the genetic and biological bases of behavior underlying neurocognitive risk factors in a medical condition.",
+      "answer": "Alzheimer’s disease associated with overproduction of amyloid precursor protein from trisomy 21",
+      "explanation": "1. The correct answer is \"Alzheimer’s disease associated with overproduction of amyloid precursor protein from trisomy 21\" because individuals with Down syndrome (trisomy 21) have an extra copy of the gene for amyloid precursor protein (APP), which leads to an increased risk of developing Alzheimer’s disease at an earlier age, often in their 20s. This overproduction of APP results in the accumulation of amyloid plaques, a hallmark of Alzheimer’s disease, which contributes to cognitive decline.\n\n2. The incorrect options are as follows:\n- **Lewy body dementia due to alpha-synuclein buildup:** This disorder typically presents with fluctuating cognition, visual hallucinations, and motor symptoms, which are not the primary concerns for individuals with Down syndrome showing early cognitive decline.\n- **Parkinson’s disease due to dopamine depletion:** Parkinson’s disease primarily involves motor symptoms that precede cognitive decline, and while it can occur in individuals with Down syndrome, it is not directly linked to the cognitive decline observed in this case.\n- **Prion disease causing rapid cognitive deterioration:** Prion diseases, like Creutzfeldt-Jakob disease, are characterized by rapid progression of symptoms, but they are not specifically associated with Down syndrome or the mechanisms of cognitive decline related to amyloid precursor protein overproduction.",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
       "difficulty": "medium",
       "quality_comment": "Question integrates genetics and clinical presentation effectively; distractors are plausible but biologically distinct."
     },
@@ -136,22 +157,22 @@
       "quality_comment": "Clear formulation contrasts mild vs. major NCD, with distractors that are partially true but misleading for diagnostic criteria."
     },
     {
-      "stem": "In the assessment of Alzheimer\u2019s disease, which statement about a definitive diagnosis is accurate?",
+      "stem": "In the assessment of Alzheimer’s disease, which statement about a definitive diagnosis is accurate?",
       "options": [
         "Definitive diagnosis is possible with clinical evaluation alone",
         "Brain biopsy is commonly used to confirm diagnosis during life",
         "Definitive diagnosis requires postmortem brain autopsy showing characteristic pathology",
-        "Genetic testing alone can confirm Alzheimer\u2019s disease diagnosis"
+        "Genetic testing alone can confirm Alzheimer’s disease diagnosis"
       ],
       "answer": "Definitive diagnosis requires postmortem brain autopsy showing characteristic pathology",
-      "explanation": "A definitive diagnosis of Alzheimer\u2019s disease is possible only with a postmortem brain autopsy revealing amyloid plaques and neurofibrillary tangles; brain biopsies are rarely done and clinical diagnosis is presumptive.",
+      "explanation": "A definitive diagnosis of Alzheimer’s disease is possible only with a postmortem brain autopsy revealing amyloid plaques and neurofibrillary tangles; brain biopsies are rarely done and clinical diagnosis is presumptive.",
       "kn": "KN33",
       "kn_explanation": "This question concerns assessment methods and limitations in diagnosis, emphasizing integration of non-psychological information.",
       "difficulty": "medium",
       "quality_comment": "The question clarifies a common misconception, with well-balanced distractors for clinical context."
     },
     {
-      "stem": "Which intervention has recently been FDA approved to slow progression of early-stage Alzheimer\u2019s disease by targeting amyloid plaques?",
+      "stem": "Which intervention has recently been FDA approved to slow progression of early-stage Alzheimer’s disease by targeting amyloid plaques?",
       "options": [
         "Memantine",
         "Haloperidol",
@@ -159,9 +180,9 @@
         "Donanemab"
       ],
       "answer": "Donanemab",
-      "explanation": "1. **Correct Answer: Donanemab**  \nDonanemab is the correct answer because it is an intravenous infusion recently approved by the FDA specifically to slow the progression of early-stage Alzheimer\u2019s disease by targeting and reducing amyloid plaques in the brain. This mechanism directly addresses one of the hallmark brain abnormalities associated with Alzheimer\u2019s disease.\n\n2. **Incorrect Options:**\n- **Memantine:** Memantine is used to reduce or stabilize cognitive symptoms in Alzheimer\u2019s disease but does not specifically target amyloid plaques; instead, it regulates glutamate activity.\n- **Haloperidol:** Haloperidol is an antipsychotic medication that may help reduce agitation and psychotic symptoms in Alzheimer\u2019s patients but is not used to slow disease progression or target amyloid plaques.\n- **Donepezil:** Donepezil is a cholinesterase inhibitor that helps delay the breakdown of acetylcholine to improve cognitive functioning but does not target amyloid plaques or slow the progression of the disease.",
-      "kn": "KN3",
-      "kn_explanation": "Involves knowledge about recent pharmacological treatment advances for neurocognitive disorders, under pharmacotherapy guidelines.",
+      "explanation": "1. **Correct Answer: Donanemab**  \nDonanemab is the correct answer because it is an intravenous infusion recently approved by the FDA specifically to slow the progression of early-stage Alzheimer’s disease by targeting and reducing amyloid plaques in the brain. This mechanism directly addresses one of the hallmark brain abnormalities associated with Alzheimer’s disease.\n\n2. **Incorrect Options:**\n- **Memantine:** Memantine is used to reduce or stabilize cognitive symptoms in Alzheimer’s disease but does not specifically target amyloid plaques; instead, it regulates glutamate activity.\n- **Haloperidol:** Haloperidol is an antipsychotic medication that may help reduce agitation and psychotic symptoms in Alzheimer’s patients but is not used to slow disease progression or target amyloid plaques.\n- **Donepezil:** Donepezil is a cholinesterase inhibitor that helps delay the breakdown of acetylcholine to improve cognitive functioning but does not target amyloid plaques or slow the progression of the disease.",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
       "difficulty": "medium",
       "quality_comment": "Options are well-known drugs for neurocognitive or psychiatric disorders, increasing plausibility."
     },
@@ -190,13 +211,13 @@
       ],
       "answer": "Haloperidol or other antipsychotic medications",
       "explanation": "1. The correct answer, \"Haloperidol or other antipsychotic medications,\" is recommended for treating agitation and psychotic symptoms in delirium because they can help reduce these symptoms effectively. Delirium often presents with fluctuating attention and awareness, and antipsychotic medications like haloperidol are specifically noted in the reference material as useful for managing agitation and psychotic features associated with this condition.\n\n2. \n- **Cholinesterase inhibitors like donepezil:** These medications are primarily used to treat cognitive symptoms in neurocognitive disorders such as Alzheimer's disease, not for managing agitation and psychotic symptoms in delirium.\n  \n- **NMDA receptor antagonists like memantine:** While memantine is used to manage cognitive symptoms in neurocognitive disorders, it is not indicated for treating agitation or psychotic symptoms in delirium.\n\n- **Benzodiazepines as first-line agents:** Although benzodiazepines can be used for anxiety and agitation, they are not the first-line treatment for delirium and may even exacerbate cognitive impairment, making them less suitable than antipsychotics.",
-      "kn": "KN3",
-      "kn_explanation": "This question targets treatment guidelines and pharmacological management of delirium.",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
       "difficulty": "easy",
       "quality_comment": "Clear question stem and relevant plausible options; distractors are pharmacologically related but distinct in use."
     },
     {
-      "stem": "Which of the following factors is associated with increased risk for developing Alzheimer\u2019s disease?",
+      "stem": "Which of the following factors is associated with increased risk for developing Alzheimer’s disease?",
       "options": [
         "High educational attainment",
         "Obesity and hearing loss",
@@ -204,9 +225,9 @@
         "Young age at onset"
       ],
       "answer": "Obesity and hearing loss",
-      "explanation": "1. \"Obesity and hearing loss\" is the correct answer because both factors have been linked to an increased risk of developing Alzheimer\u2019s disease. The DSM-5-TR indicates that low educational status and obesity are risk factors, while hearing loss has also been associated with cognitive decline and may contribute to the development of neurocognitive disorders, including Alzheimer\u2019s.\n\n2. \n- **High educational attainment:** This option is incorrect because higher educational attainment is generally associated with a lower risk of developing Alzheimer\u2019s disease, likely due to the cognitive reserve it provides.\n- **Regular aerobic exercise:** This is incorrect as regular aerobic exercise is associated with a reduced risk of Alzheimer\u2019s disease, promoting overall brain health and cognitive function.\n- **Young age at onset:** This option is incorrect because younger age at onset is typically linked to genetic factors or specific conditions (like Down syndrome) that increase risk, rather than being a general risk factor for Alzheimer\u2019s disease itself.",
-      "kn": "KN28",
-      "kn_explanation": "Assesses knowledge of risk and protective factors impacting the course of neurocognitive disease across the lifespan.",
+      "explanation": "1. \"Obesity and hearing loss\" is the correct answer because both factors have been linked to an increased risk of developing Alzheimer’s disease. The DSM-5-TR indicates that low educational status and obesity are risk factors, while hearing loss has also been associated with cognitive decline and may contribute to the development of neurocognitive disorders, including Alzheimer’s.\n\n2. \n- **High educational attainment:** This option is incorrect because higher educational attainment is generally associated with a lower risk of developing Alzheimer’s disease, likely due to the cognitive reserve it provides.\n- **Regular aerobic exercise:** This is incorrect as regular aerobic exercise is associated with a reduced risk of Alzheimer’s disease, promoting overall brain health and cognitive function.\n- **Young age at onset:** This option is incorrect because younger age at onset is typically linked to genetic factors or specific conditions (like Down syndrome) that increase risk, rather than being a general risk factor for Alzheimer’s disease itself.",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
       "difficulty": "medium",
       "quality_comment": "Options balance protective and risk factors well, requiring applied knowledge."
     },
@@ -219,7 +240,7 @@
         "Cognitive load theory"
       ],
       "answer": "Heuristics and biases framework",
-      "explanation": "1. The \"Heuristics and biases framework\" is the correct answer because it specifically addresses how cognitive shortcuts (heuristics) and systematic errors (biases) can influence decision-making and interpretation of information, including neuropsychological test results. This framework highlights the potential for misinterpretation of data based on cognitive biases, which can lead to inaccurate conclusions about an individual's cognitive functioning.\n\n2. The \"Dual process theory\" is incorrect because it focuses on two distinct types of thinking\u2014intuitive and analytical\u2014rather than specifically addressing biases in interpreting test results. The \"Information processing model\" is also incorrect as it describes how information is encoded, processed, and retrieved, but does not specifically consider biases that affect interpretation. Finally, \"Cognitive load theory\" is wrong because it pertains to the limitations of working memory and how excessive cognitive load impacts learning and performance, rather than the biases affecting the interpretation of neuropsychological assessments.",
+      "explanation": "1. The \"Heuristics and biases framework\" is the correct answer because it specifically addresses how cognitive shortcuts (heuristics) and systematic errors (biases) can influence decision-making and interpretation of information, including neuropsychological test results. This framework highlights the potential for misinterpretation of data based on cognitive biases, which can lead to inaccurate conclusions about an individual's cognitive functioning.\n\n2. The \"Dual process theory\" is incorrect because it focuses on two distinct types of thinking—intuitive and analytical—rather than specifically addressing biases in interpreting test results. The \"Information processing model\" is also incorrect as it describes how information is encoded, processed, and retrieved, but does not specifically consider biases that affect interpretation. Finally, \"Cognitive load theory\" is wrong because it pertains to the limitations of working memory and how excessive cognitive load impacts learning and performance, rather than the biases affecting the interpretation of neuropsychological assessments.",
       "kn": "KN37",
       "kn_explanation": "KN37 covers evidence-based interpretation of data including base rates and biases, making this framework relevant to interpreting assessment results.",
       "difficulty": "medium",
@@ -249,7 +270,7 @@
         "Behavioral model"
       ],
       "answer": "The connectome model",
-      "explanation": "1. **The connectome model** is the correct answer because it emphasizes the role of disruptions in brain network connectivity, which aligns with the understanding of neurocognitive disorders. These disorders often involve impairments in cognitive functions due to damage or degeneration in specific brain areas and their connections, as indicated by the various neurocognitive disorders discussed, such as Alzheimer\u2019s disease and frontotemporal NCD, which highlight the importance of brain structure and function in cognition.\n\n2. The **biopsychosocial model** is incorrect because it integrates biological, psychological, and social factors in understanding mental health but does not specifically focus on brain connectivity. The **psychodynamic model** is also incorrect as it centers on unconscious processes and early life experiences rather than neurobiological mechanisms. Lastly, the **behavioral model** is incorrect because it emphasizes observable behaviors and learning processes rather than the underlying neural connectivity that contributes to neurocognitive disorders.",
+      "explanation": "1. **The connectome model** is the correct answer because it emphasizes the role of disruptions in brain network connectivity, which aligns with the understanding of neurocognitive disorders. These disorders often involve impairments in cognitive functions due to damage or degeneration in specific brain areas and their connections, as indicated by the various neurocognitive disorders discussed, such as Alzheimer’s disease and frontotemporal NCD, which highlight the importance of brain structure and function in cognition.\n\n2. The **biopsychosocial model** is incorrect because it integrates biological, psychological, and social factors in understanding mental health but does not specifically focus on brain connectivity. The **psychodynamic model** is also incorrect as it centers on unconscious processes and early life experiences rather than neurobiological mechanisms. Lastly, the **behavioral model** is incorrect because it emphasizes observable behaviors and learning processes rather than the underlying neural connectivity that contributes to neurocognitive disorders.",
       "kn": "KN39",
       "kn_explanation": "KN39 involves theories and models of psychopathology; the connectome model is relevant for understanding neurocognitive disorder mechanisms.",
       "difficulty": "hard",
@@ -264,7 +285,7 @@
         "A temporary state of confusion caused by medication"
       ],
       "answer": "A decline in cognitive function that interferes with independence",
-      "explanation": "1. The correct answer, \"A decline in cognitive function that interferes with independence,\" accurately reflects a core feature of major neurocognitive disorder (NCD). Major NCD is diagnosed when there is a significant decline in one or more cognitive domains that not only represents a change from a previous level of functioning but also interferes with the individual\u2019s ability to perform everyday activities independently, distinguishing it from mild NCD.\n\n2. The option \"A gradual onset of cognitive decline with no fluctuations\" is incorrect because, while major NCD does typically have a gradual onset, the presence of fluctuations in cognitive function is characteristic of delirium, not major NCD. \"A sudden onset of confusion that resolves quickly\" is also incorrect, as major NCD is characterized by a significant and persistent decline rather than a temporary condition, which aligns more with delirium. Lastly, \"A temporary state of confusion caused by medication\" is incorrect because this description pertains to delirium, where confusion can be induced by medications, rather than the chronic cognitive decline seen in major NCD.",
+      "explanation": "1. The correct answer, \"A decline in cognitive function that interferes with independence,\" accurately reflects a core feature of major neurocognitive disorder (NCD). Major NCD is diagnosed when there is a significant decline in one or more cognitive domains that not only represents a change from a previous level of functioning but also interferes with the individual’s ability to perform everyday activities independently, distinguishing it from mild NCD.\n\n2. The option \"A gradual onset of cognitive decline with no fluctuations\" is incorrect because, while major NCD does typically have a gradual onset, the presence of fluctuations in cognitive function is characteristic of delirium, not major NCD. \"A sudden onset of confusion that resolves quickly\" is also incorrect, as major NCD is characterized by a significant and persistent decline rather than a temporary condition, which aligns more with delirium. Lastly, \"A temporary state of confusion caused by medication\" is incorrect because this description pertains to delirium, where confusion can be induced by medications, rather than the chronic cognitive decline seen in major NCD.",
       "difficulty": "easy",
       "kn": "KN36",
       "kn_explanation": "The question focuses on clinical diagnostic criteria for delirium, relating to the understanding of classification systems and diagnosis in neurocognitive disorders.",

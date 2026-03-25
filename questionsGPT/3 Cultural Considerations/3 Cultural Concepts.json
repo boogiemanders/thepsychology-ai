@@ -1,6 +1,234 @@
 {
   "questions": [
     {
+      "stem": "A recent immigrant maintains strong ties to her original culture, speaks her home language with family, and continues longstanding traditions, while also participating actively in the broader culture at work and in her neighborhood. Berry would describe this acculturation strategy as:",
+      "options": [
+        "Assimilation",
+        "Separation",
+        "Integration",
+        "Marginalization"
+      ],
+      "answer": "Integration",
+      "explanation": "Integration is the best answer because the client is maintaining her original culture while also adopting and participating in the majority culture. Assimilation is wrong because it involves rejecting the original culture. Separation is wrong because it involves maintaining the original culture while rejecting the majority culture. Marginalization is wrong because it involves rejecting both cultural frameworks.",
+      "kn": "KN18",
+      "kn_explanation": "This question assesses cultural psychology by testing knowledge of acculturation strategies.",
+      "difficulty": "easy",
+      "quality_comment": "Straightforward acculturation item with clearly parallel options and no giveaway wording.",
+      "suggestedLesson": "3-cultural-concepts",
+      "suggestedParagraph": "## Acculturation: Navigating Between Two Cultural Worlds",
+      "lessonExcerpt": "Integration: Keeping your original culture while also adopting the majority culture.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL PSYCHOLOGY"
+    },
+    {
+      "stem": "A Black client is guarded with a White therapist during the first several sessions but is generally open and relaxed with Black professionals in other settings. There is no evidence of broad distrust toward everyone. Ridley would most likely describe this as:",
+      "options": [
+        "Functional paranoia",
+        "Healthy cultural paranoia",
+        "Diagnostic overshadowing",
+        "Cultural encapsulation"
+      ],
+      "answer": "Healthy cultural paranoia",
+      "explanation": "Healthy cultural paranoia is the best answer because the client's caution is selective and grounded in real experiences of prejudice rather than being pervasive distrust toward everyone. Functional paranoia is wrong because that would involve broad, maladaptive distrust across people and contexts. Diagnostic overshadowing is wrong because it refers to overattributing problems to one salient identity or diagnosis. Cultural encapsulation is wrong because it refers to the therapist's inability to work effectively across cultures.",
+      "kn": "KN18",
+      "kn_explanation": "This question is best aligned with KN18 because it tests Cultural and sociopolitical psychology (e.g., privilege, cross-cultural comparisons, political differences, international and global awareness, religiosity and spirituality, acculturation).",
+      "difficulty": "medium",
+      "quality_comment": "Good culture-and-clinical-formulation item that distinguishes adaptive caution from psychopathology.",
+      "suggestedLesson": "3-cultural-concepts",
+      "suggestedParagraph": "## Healthy Cultural Paranoia: When Distrust Makes Sense",
+      "lessonExcerpt": "Healthy cultural paranoia is different. It's a rational response to real experiences of prejudice and discrimination.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL PSYCHOLOGY"
+    },
+    {
+      "stem": "Which of the following comments is the best example of a microinvalidation rather than a microinsult or microassault?",
+      "options": [
+        "A supervisor tells an Asian American employee, \"You speak English so well.\"",
+        "A coworker says, \"I do not see color. We are all just human.\"",
+        "A manager assumes a Black applicant was hired only because of affirmative action.",
+        "A student intentionally uses a racial slur in class discussion."
+      ],
+      "answer": "A coworker says, \"I do not see color. We are all just human.\"",
+      "explanation": "This is the best answer because claiming not to see color dismisses and negates the lived significance of race in a person's experience, which is the defining feature of a microinvalidation. The English comment is wrong because it is more consistent with a microinsult that implies foreignness. The affirmative-action assumption is also a microinsult because it demeans competence. The racial-slur example is a microassault because it is explicit and overtly discriminatory.",
+      "kn": "KN18",
+      "kn_explanation": "This question is best aligned with KN18 because it tests Cultural and sociopolitical psychology (e.g., privilege, cross-cultural comparisons, political differences, international and global awareness, religiosity and spirituality, acculturation).",
+      "difficulty": "medium",
+      "quality_comment": "Useful subtype-discrimination item built from common real-world examples.",
+      "suggestedLesson": "3-cultural-concepts",
+      "suggestedParagraph": "## Racial Microaggressions: Death by a Thousand Cuts",
+      "lessonExcerpt": "Microinvalidations dismiss or negate the experiences of people of color: Claiming \"I don't see color\" (denying that race affects experience)",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL PSYCHOLOGY"
+    },
+    {
+      "stem": "A psychologist who assumes that all clients share the same worldview and applies a single theoretical framework regardless of the client's cultural background is best demonstrating which of the following?",
+      "options": [
+        "Ethnocentric monoculturalism",
+        "Cultural encapsulation",
+        "Etic perspective bias",
+        "Stereotype threat"
+      ],
+      "answer": "Cultural encapsulation",
+      "explanation": "Cultural encapsulation, a term coined by Wrenn, refers to therapists who operate from a narrow, culturally bound perspective, substituting their own values and assumptions for those of the client without awareness. Ethnocentric monoculturalism (A) refers to a broader societal-level phenomenon where one cultural group's values dominate. An etic perspective bias (C) involves applying universal frameworks across cultures but does not specifically describe the clinical insularity described. Stereotype threat (D) refers to anxiety about confirming negative stereotypes and is unrelated to therapist behavior.",
+      "kn": "KN18",
+      "kn_explanation": "Applying a single framework regardless of cultural background relates to cultural psychology and cross-cultural comparisons.",
+      "difficulty": "medium",
+      "quality_comment": "Tests a key multicultural counseling concept. Well-supported by lesson content on cultural encapsulation.",
+      "suggestedLesson": "3-cultural-concepts",
+      "suggestedParagraph": "## Cultural Encapsulation",
+      "lessonExcerpt": "Wrenn coined this term to describe mental health professionals who can't work effectively across cultures. Culturally encapsulated therapists assume their cultural assumptions about mental health apply universally.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 1
+    },
+    {
+      "stem": "Which of the following is MOST characteristic of the structural organization found in many African American family systems?",
+      "options": [
+        "A strict patriarchal hierarchy with clearly delineated gender roles",
+        "An extended kinship network with flexible family boundaries and role sharing",
+        "A nuclear family structure emphasizing individual autonomy and independence",
+        "A matriarchal system in which all decision-making authority rests with the eldest female"
+      ],
+      "answer": "An extended kinship network with flexible family boundaries and role sharing",
+      "explanation": "Research on African American family systems highlights the importance of extended kinship networks, flexible family roles, and permeable household boundaries as key structural characteristics. Option A is incorrect because African American families tend to have more egalitarian role structures rather than strict patriarchy. Option C describes an individualistic nuclear family model more typical of European American norms. Option D is a stereotype; while women play important roles, characterizing the system as exclusively matriarchal with all decision-making power in one person oversimplifies the reality of shared responsibilities across the kinship network.",
+      "kn": "KN16",
+      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
+      "difficulty": "medium",
+      "quality_comment": "Tests understanding of cultural family structures while challenging common stereotypes. Supported by cultural concepts lesson.",
+      "suggestedLesson": "3-cultural-concepts",
+      "suggestedParagraph": "### African American Clients",
+      "lessonExcerpt": "Extended kinship networks often include friends and church community, not just family. Family roles are often flexible and egalitarian.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 6
+    },
+    {
+      "stem": "A psychologist is designing a culturally adapted treatment plan for a first-generation Chinese American client who presents with symptoms of depression. Based on research on culturally appropriate therapeutic approaches for Asian American clients, which of the following treatment characteristics would be MOST consistent with this client's likely cultural preferences?",
+      "options": [
+        "Unstructured, insight-oriented sessions emphasizing emotional exploration and free association",
+        "Brief, structured, goal-oriented sessions with the therapist positioned as a knowledgeable expert who provides guidance",
+        "Network therapy that mobilizes extended family members and tribal elders for communal healing ceremonies",
+        "Non-directive, client-centered sessions that prioritize unconditional positive regard and avoid giving advice"
+      ],
+      "answer": "Brief, structured, goal-oriented sessions with the therapist positioned as a knowledgeable expert who provides guidance",
+      "explanation": "Research indicates that Asian Americans typically prefer brief, structured, goal-oriented, family-focused approaches and expect therapists to be knowledgeable experts who give advice while still encouraging participation in goal-setting. Option A (unstructured, insight-oriented) contradicts the preference for structure and directiveness. Option C describes network therapy, which is characteristic of culturally appropriate approaches for Native American clients, not Asian American clients. Option D (non-directive, client-centered) conflicts with the expectation that therapists provide expert guidance and advice.",
+      "kn": "KN18",
+      "kn_explanation": "Culturally adapted treatment for a first-generation immigrant client directly involves cross-cultural comparisons and acculturation considerations.",
+      "difficulty": "medium",
+      "quality_comment": "Directly tests knowledge of culturally specific treatment preferences with plausible distractors drawn from other cultural groups' preferences.",
+      "suggestedLesson": "3-cultural-concepts",
+      "suggestedParagraph": "### Asian American Clients",
+      "lessonExcerpt": "Asian Americans typically prefer brief, structured, goal-oriented, family-focused approaches. They expect therapists to be knowledgeable experts who give advice while still encouraging participation in goal-setting.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 12
+    },
+    {
+      "stem": "A psychologist working with Latino children incorporates traditional folktales that model adaptive behaviors as therapeutic narratives. This culturally congruent intervention is known as:",
+      "options": [
+        "Personalismo",
+        "Dichos therapy",
+        "Cuento therapy",
+        "Formalismo"
+      ],
+      "answer": "Cuento therapy",
+      "explanation": "Cuento therapy is a culturally congruent technique for use with Latino populations that uses folktales (cuentos) as models for adaptive behavior. It is a specific culturally adapted therapeutic approach. Dichos refers to proverbs used for emotional expression, not folktales as therapeutic narratives. Personalismo refers to a warm, personal interpersonal style valued in Latino culture. Formalismo refers to the formal style of interaction appropriate when first meeting Latino clients.",
+      "kn": "KN18",
+      "kn_explanation": "This question is best aligned with KN18 because it tests Cultural and sociopolitical psychology (e.g., privilege, cross-cultural comparisons, political differences, international and global awareness, religiosity and spirituality, acculturation).",
+      "difficulty": "medium",
+      "quality_comment": "Directly supported by lesson content. Tests specific knowledge of culturally adapted interventions for Latino populations.",
+      "suggestedLesson": "3-cultural-concepts",
+      "suggestedParagraph": "### Hispanic/Latino American Clients",
+      "lessonExcerpt": "Culturally congruent techniques include cuento therapy (folktales as models) and dichos (proverbs for emotional expression).",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 8
+    },
+    {
+      "stem": "A psychologist working with a Latino client who presents with somatic complaints and strong religious beliefs is considering culturally adapted interventions. According to guidelines for culturally adapted treatments, which of the following format changes would be MOST consistent with best practices?",
+      "options": [
+        "Replacing core CBT components with exclusively spiritual interventions",
+        "Including indigenous healers as part of the treatment approach while maintaining core treatment components",
+        "Eliminating all evidence-based protocols in favor of folk healing traditions",
+        "Referring the client exclusively to a folk healer and discontinuing psychological services"
+      ],
+      "answer": "Including indigenous healers as part of the treatment approach while maintaining core treatment components",
+      "explanation": "The lesson identifies that culturally adapted interventions may include format changes such as 'including indigenous healers' while noting that 'adaptations work better when adding features rather than replacing core components.' Option A is incorrect because it replaces rather than supplements core components. Option C is incorrect for the same reason—eliminating evidence-based protocols entirely contradicts the fidelity-adaptation balance. Option D is incorrect because complete referral away from psychological services abandons the psychologist's role entirely rather than integrating cultural elements.",
+      "kn": "KN18",
+      "kn_explanation": "This question is best aligned with KN18 because it tests Cultural and sociopolitical psychology (e.g., privilege, cross-cultural comparisons, political differences, international and global awareness, religiosity and spirituality, acculturation).",
+      "difficulty": "medium",
+      "quality_comment": "Directly supported by lesson content on culturally adapted interventions and the fidelity-adaptation dilemma.",
+      "suggestedLesson": "3-cultural-concepts",
+      "suggestedParagraph": "## Evidence-Based Practice Meets Cultural Adaptation",
+      "lessonExcerpt": "Format changes: Delivering treatment in native language, adopting culturally appropriate interpersonal styles, including indigenous healers... Adaptations work better when adding features rather than replacing core components.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 12
+    },
+    {
+      "stem": "A researcher studying depression wants to determine whether a Western-developed depression inventory is valid for use with individuals from a collectivist Southeast Asian culture. The researcher's assumption that the same construct and measurement tool should apply universally across cultures reflects which perspective?",
+      "options": [
+        "An emic perspective",
+        "An etic perspective",
+        "An alloplastic perspective",
+        "A culturally encapsulated perspective"
+      ],
+      "answer": "An etic perspective",
+      "explanation": "The etic perspective assumes that behavior is universal and that the same theories and interventions work across cultures. Using a Western-developed instrument across cultures without modification reflects this assumption. Option A (emic) is incorrect because the emic perspective holds that behavior is culture-bound and requires different tools for different cultural contexts. Option C (alloplastic) refers to changing the environment to fit the client, not a research perspective on cultural universality. Option D (culturally encapsulated) describes therapists who impose their worldview on clients; while related, it describes a clinical failing rather than a research perspective.",
+      "kn": "KN18",
+      "kn_explanation": "This question is best aligned with KN18 because it tests Cultural and sociopolitical psychology (e.g., privilege, cross-cultural comparisons, political differences, international and global awareness, religiosity and spirituality, acculturation).",
+      "difficulty": "medium",
+      "quality_comment": "Clearly grounded in the lesson's definitions of emic vs. etic perspectives.",
+      "suggestedLesson": "3-cultural-concepts",
+      "suggestedParagraph": "## Etic vs. Emic: Universal or Culture-Specific?",
+      "lessonExcerpt": "Etic perspective: Behavior is universal. The same theories and interventions work across cultures. Emic perspective: Behavior is culture-bound. What works for one group may not work for another.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 13
+    },
+    {
+      "stem": "A psychologist begins working with an African American family presenting with communication difficulties. Based on culturally responsive treatment guidelines, which therapeutic approach would be MOST appropriate?",
+      "options": [
+        "A strictly psychodynamic approach emphasizing individual intrapsychic conflict",
+        "A multisystems approach that intervenes across individual, family, community, and agency levels",
+        "An exclusively behavioral approach focused on contingency management within the home",
+        "A nondirective Rogerian approach that avoids any structured problem-solving"
+      ],
+      "answer": "A multisystems approach that intervenes across individual, family, community, and agency levels",
+      "explanation": "The lesson specifically states that for African American clients, 'Boyd-Franklin recommends multisystems approaches, intervening across individual, family, community, and agency levels.' The lesson also notes that 'African American clients typically prefer egalitarian relationships and problem-solving approaches' and that therapists should consider 'environmental factors (racism, discrimination) may contribute to presenting problems.' Option A is too narrow and individually focused, ignoring systemic factors. Option C addresses only behavioral contingencies without considering broader systems. Option D contradicts the preference for problem-solving approaches.",
+      "kn": "KN16",
+      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
+      "difficulty": "medium",
+      "quality_comment": "Directly supported by specific lesson content citing Boyd-Franklin's recommendation.",
+      "suggestedLesson": "3-cultural-concepts",
+      "suggestedParagraph": "### African American Clients",
+      "lessonExcerpt": "Boyd-Franklin recommends multisystems approaches, intervening across individual, family, community, and agency levels.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 18
+    },
+    {
+      "stem": "A psychologist working in a residential facility for adults with intellectual disabilities notices that staff members consistently attribute a resident's social withdrawal, appetite changes, and sleep disturbance solely to the resident's intellectual disability rather than considering a possible mood disorder. This pattern BEST illustrates:",
+      "options": [
+        "Confirmation bias",
+        "Diagnostic overshadowing",
+        "Fundamental attribution error",
+        "Anchoring heuristic"
+      ],
+      "answer": "Diagnostic overshadowing",
+      "explanation": "Diagnostic overshadowing originally described the tendency to attribute all problems of people with intellectual disabilities to that diagnosis while overlooking other conditions, such as comorbid psychiatric disorders. In this case, symptoms consistent with depression are being attributed to the intellectual disability rather than being evaluated as a separate condition. Confirmation bias involves seeking information that confirms preexisting beliefs. The fundamental attribution error involves overattributing behavior to dispositional rather than situational factors. The anchoring heuristic involves over-reliance on an initial piece of information when making judgments.",
+      "kn": "KN35",
+      "kn_explanation": "This question is best aligned with KN35 because it tests Criteria for selection and adaptation of assessment methods (e.g., evidenced-based knowledge of assessment limitations, cultural appropriateness, trans-cultural adaptation, and language accommodations).",
+      "difficulty": "medium",
+      "quality_comment": "Uses the classic population (intellectual disability) where diagnostic overshadowing was originally described, grounded directly in lesson content",
+      "suggestedLesson": "3-cultural-concepts",
+      "suggestedParagraph": "## Diagnostic Overshadowing: When One Factor Eclipses Everything",
+      "lessonExcerpt": "Diagnostic overshadowing originally described attributing all problems of people with intellectual disabilities to that diagnosis, overlooking other issues.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 17
+    },
+    {
       "stem": "According to Sue's worldview framework, which type of worldview is most characteristic of mainstream American culture?",
       "options": [
         "Internal locus of control and external locus of responsibility (IC-ER)",
@@ -56,7 +284,7 @@
       "answer": "Assuming a minority group member is a foreigner and complimenting their English skills.",
       "explanation": "1. The correct answer, \"Assuming a minority group member is a foreigner and complimenting their English skills,\" exemplifies a microinvalidation because it negates the individual's identity and experiences by implying they do not belong or are not from the country, despite their fluency. Sue et al. (2007) define microinvalidations as communications that exclude or nullify the psychological reality of a person of color, and this statement fits that definition by dismissing the minority individual's status as a member of the local culture.\n\n2. The first incorrect option, \"An explicit derogatory name-calling based on race,\" describes a microassault, which is characterized by intentional and overt derogation rather than a subtle invalidation. The second incorrect option, \"Assigning intelligence level based on a person’s race,\" is a form of microinsult, as it devalues an individual based on racial stereotypes but does not specifically negate their experiences or identity. Lastly, \"Demeaning nonverbal communication styles of people of color\" also represents a microinsult, as it involves insensitivity to cultural communication styles rather than the exclusion of the individual's reality, which is the hallmark of microinvalidations.",
       "kn": "KN18",
-      "kn_explanation": "This tests knowledge of racial microaggressions, a core cultural psychology topic related to bias and social cognition (KN18).",
+      "kn_explanation": "This question is best aligned with KN18 because it tests Cultural and sociopolitical psychology (e.g., privilege, cross-cultural comparisons, political differences, international and global awareness, religiosity and spirituality, acculturation).",
       "difficulty": "medium",
       "quality_comment": "Options represent distinct microaggression types; the question requires precise recall, making it suitable for EPPP-level assessment."
     },
@@ -101,7 +329,7 @@
       "answer": "Higher conformity to social norms and preference for stability",
       "explanation": "1. The correct answer, \"Higher conformity to social norms and preference for stability,\" reflects Gelfand's findings that individuals in tight cultures exhibit stronger adherence to social norms and lower tolerance for deviant behaviors. These cultures often develop strict social norms as a response to ecological and human-made challenges, necessitating conformity to maintain order and stability within the society.\n\n2. The option \"Lower conscientiousness and higher openness to experience\" is incorrect because Gelfand's research indicates that individuals in tight cultures tend to have higher levels of conscientiousness and lower levels of openness to experience, contrasting with loose cultures. The statement \"Higher tolerance for deviant behavior and risk-taking\" is also wrong, as tight cultures are characterized by low tolerance for deviant behaviors, not higher. The option \"Greater willingness to innovate and challenge social norms\" is incorrect because individuals in tight cultures are less likely to innovate or challenge established norms, in contrast to those in loose cultures who are more open to such behaviors.",
       "kn": "KN18",
-      "kn_explanation": "The question targets cultural variation in social norms and behaviors, a key area in cultural and sociopolitical psychology (KN18).",
+      "kn_explanation": "This question is best aligned with KN18 because it tests Cultural and sociopolitical psychology (e.g., privilege, cross-cultural comparisons, political differences, international and global awareness, religiosity and spirituality, acculturation).",
       "difficulty": "medium",
       "quality_comment": "Distractors represent opposite traits of tight vs loose cultures, requiring examinees to know the conceptual framework for effective elimination."
     },
@@ -130,8 +358,8 @@
       ],
       "answer": "Kaufman Assessment Battery for Children, Second Edition (KABC-II)",
       "explanation": "1. The **Kaufman Assessment Battery for Children, Second Edition (KABC-II)** is the correct answer because it is specifically designed to reduce cultural bias in cognitive testing and is less influenced by English proficiency. This assessment allows for a more accurate evaluation of cognitive abilities in culturally diverse children by focusing on nonverbal skills and minimizing language dependence.\n\n2. The **Wechsler Intelligence Scale for Children (WISC-V)** is incorrect because it relies heavily on verbal skills and may disadvantage children with limited English proficiency, leading to biased results. The **Stanford-Binet Intelligence Scales** is also incorrect as it similarly emphasizes verbal abilities, which can be influenced by cultural and language factors, potentially skewing the assessment outcomes. Lastly, the **Minnesota Multiphasic Personality Inventory (MMPI)** is inappropriate in this context as it is primarily a personality assessment tool, not designed for cognitive testing, and does not address cultural bias in cognitive abilities.",
-      "kn": "KN35",
-      "kn_explanation": "This question assesses knowledge of culturally appropriate assessment tools, which falls under criteria for selection and adaptation of assessment methods (KN35).",
+      "kn": "KN18",
+      "kn_explanation": "This question is best aligned with KN18 because it tests Cultural and sociopolitical psychology (e.g., privilege, cross-cultural comparisons, political differences, international and global awareness, religiosity and spirituality, acculturation).",
       "difficulty": "medium",
       "quality_comment": "Distractors include well-known tests but only one focuses on reducing cultural and language bias, making the question discriminative."
     },
@@ -145,8 +373,8 @@
       ],
       "answer": "Fearing rejection by family or peers",
       "explanation": "1. \"Fearing rejection by family or peers\" is the correct answer because it represents a proximal stress process, which, according to minority stress theory, occurs within the individual and includes internalized fears and anxieties related to their sexual orientation. This fear directly affects the individual's mental health and well-being, as it stems from their personal experiences and perceptions of potential rejection from close social circles.\n\n2. The other options are incorrect because they represent distal stress processes, which are external to the individual. \"Experiencing verbal harassment due to sexual orientation\" involves external acts of discrimination that arise from societal prejudice. \"Suffering physical assault related to stigmatization\" also refers to external violence and discrimination that individuals face in their environment. Lastly, \"Encountering workplace discrimination\" is another external stressor that reflects systemic issues rather than internal fears, impacting the individual’s experience of stigma in a professional context.",
-      "kn": "KN18",
-      "kn_explanation": "This question examines minority stress theory related to mental health in stigmatized populations, fitting under cultural and sociopolitical psychology (KN18).",
+      "kn": "KN19",
+      "kn_explanation": "This question is best aligned with KN19 because it tests Identity diversity and intersectionality (e.g., psychological impact of diversity on individuals, families, and systems).",
       "difficulty": "medium",
       "quality_comment": "Clear distinction between internal and external stressors with plausible distractors fitting each category improves effectiveness."
     },
@@ -160,8 +388,8 @@
       ],
       "answer": "Diagnostic overshadowing",
       "explanation": "1. **Diagnostic overshadowing** is the correct answer because it refers to the tendency of mental health professionals to attribute all problems of clients with a specific diagnosis, such as a gay client’s issues being solely linked to their sexual orientation, while overlooking other potential causes. This phenomenon can lead to an incomplete understanding of the client’s presenting problems and may hinder effective treatment, as it fails to consider the broader context of the client’s experiences and challenges.\n\n2. The other options are incorrect for the following reasons:\n   - **Confirmation bias** refers to the tendency to search for, interpret, and remember information in a way that confirms one’s pre-existing beliefs, not specifically about attributing all problems to one factor.\n   - **Own-race bias** (ORB) is the tendency to more accurately perceive and identify faces of individuals of one's own race compared to others, which does not relate to the misattribution of causes for a client’s problems.\n   - **Cultural encapsulation** describes the inability of mental health professionals to work effectively across cultures due to insensitivity to cultural differences, but it does not specifically address the misattribution of problems based on a single characteristic like sexual orientation.",
-      "kn": "KN33",
-      "kn_explanation": "This relates to issues of differential diagnosis and bias in clinical judgment, categorized under assessment and diagnosis (KN33).",
+      "kn": "KN19",
+      "kn_explanation": "This question is best aligned with KN19 because it tests Identity diversity and intersectionality (e.g., psychological impact of diversity on individuals, families, and systems).",
       "difficulty": "medium",
       "quality_comment": "Options include related bias and cultural concepts but only diagnostic overshadowing accurately describes the diagnostic error."
     },
@@ -190,8 +418,8 @@
       ],
       "answer": "Autoplastic intervention",
       "explanation": "1. **Correct Answer: Autoplastic intervention**  \nThe correct answer is \"autoplastic intervention\" because this approach focuses on making changes within the client, such as altering their behavior or perceptions, to help them adapt to their environment. This contrasts with changing external circumstances, which is the focus of other intervention types.\n\n2. **Incorrect Options:**\n- **Alloplastic intervention:** This option is incorrect because alloplastic interventions aim to change the external environment or situation to better suit the client’s needs, rather than focusing on internal changes within the client.\n- **Ethical intervention:** This term is not defined in the reference material, making it irrelevant to the context of treatment approaches discussed.\n- **Cultural adaptation:** This option is incorrect because cultural adaptation involves modifying evidence-based treatments to align with a client's cultural context, rather than focusing solely on changing the client's internal behavior or perceptions.",
-      "kn": "KN44",
-      "kn_explanation": "This question targets understanding of treatment intervention types, aligned with treatment techniques and evidence (KN44).",
+      "kn": "KN14",
+      "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
       "difficulty": "medium",
       "quality_comment": "The options include related but distinct terms, providing a clear test of conceptual knowledge of intervention strategies."
     },

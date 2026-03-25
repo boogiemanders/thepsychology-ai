@@ -1,6 +1,342 @@
 {
   "questions": [
     {
+      "stem": "Dr. Martinez has been a member of her department's faculty committee for three years. During that time, she has consistently attended meetings, volunteered for subcommittees, and supported the group's decisions. Recently, she proposed a curriculum change that deviates significantly from the committee's traditional approach. Despite the unconventional nature of her proposal, the committee gave it serious consideration and ultimately approved it. According to Hollander's concept, the committee's willingness to accept Dr. Martinez's deviation is BEST explained by:",
+      "options": [
+        "Groupthink, which causes groups to suppress critical evaluation of proposals",
+        "Idiosyncrasy credits she earned through her history of conforming to group norms",
+        "The minority influence effect, which produces private acceptance through consistency",
+        "Social facilitation, which improves individual performance in the presence of others"
+      ],
+      "answer": "Idiosyncrasy credits she earned through her history of conforming to group norms",
+      "explanation": "Hollander's concept of idiosyncrasy credits explains that group members who initially conform to the group's norms earn 'credits' that later allow them greater latitude to deviate from those norms without facing rejection. Dr. Martinez's three years of consistent participation and support built up these credits, allowing her unconventional proposal to be accepted. Groupthink (A) involves the suppression of dissent, not the acceptance of well-earned deviation. Minority influence (C) involves a consistent minority changing the majority's view, but this concept doesn't account for the role of prior conformity. Social facilitation (D) relates to task performance in the presence of others, not group tolerance of deviance.",
+      "kn": "KN16",
+      "kn_explanation": "Faculty committee participation, volunteering, and group membership dynamics reflect group/systems processes in a work setting",
+      "difficulty": "medium",
+      "quality_comment": "Strong applied scenario that tests understanding of idiosyncrasy credits. The concept is supported by the reference text though not in the structured lesson files.",
+      "suggestedLesson": "3-influence",
+      "suggestedParagraph": "## Conformity to Group Norms: Going Along to Get Along",
+      "lessonExcerpt": "Idiosyncrasy credits can be earned by initially conforming to the group's norms. If a person has earned idiosyncrasy credits, the group is more tolerant when she or he later deviates from certain group norms.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 18
+    },
+    {
+      "stem": "Milgram's obedience studies are frequently cited as a landmark example of ethically problematic research in psychology. Which of the following best describes a primary ethical concern raised by these experiments?",
+      "options": [
+        "Participants were not debriefed after the study concluded",
+        "Participants experienced significant psychological distress from believing they were harming another person",
+        "The confederate learner was actually subjected to painful electric shocks",
+        "Participants were recruited through coercion and were unable to withdraw"
+      ],
+      "answer": "Participants experienced significant psychological distress from believing they were harming another person",
+      "explanation": "The primary ethical concern with Milgram's studies was the extreme psychological distress participants experienced. They believed they were delivering painful and potentially lethal shocks to another person, causing them significant emotional turmoil. Option A is incorrect because Milgram did debrief participants. Option C is incorrect because the learner was a confederate who did not actually receive shocks ('The learner wasn't actually receiving shocks, but they acted like they were, screaming, begging to stop, and eventually going silent'). Option D is incorrect because participants were not coerced into participating, though the situational pressures made it psychologically difficult to withdraw once the study began.",
+      "kn": "KN16",
+      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
+      "difficulty": "medium",
+      "quality_comment": "Well-grounded in lesson content about Milgram's methodology and the distress participants experienced.",
+      "suggestedLesson": "3-influence",
+      "suggestedParagraph": "## Obedience to Authority: The Milgram Studies",
+      "lessonExcerpt": "The learner wasn't actually receiving shocks, but they acted like they were, screaming, begging to stop, and eventually going silent.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 11
+    },
+    {
+      "stem": "What is the primary mechanism through which attitudes can change due to social influence?",
+      "options": [
+        "Social comparison leads to attitude change through direct experience.",
+        "Social norms create pressure to conform, leading to attitude change.",
+        "Attitudes are fixed and cannot change through social influence.",
+        "Social influence has no effect on individual attitudes."
+      ],
+      "answer": "Social norms create pressure to conform, leading to attitude change.",
+      "explanation": "This answer accurately describes how social norms can influence attitudes through conformity. The other options incorrectly state that attitudes cannot change or misrepresent the role of social influence.",
+      "kn": "KN16",
+      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and effectively assesses understanding of social influence on attitudes.",
+      "suggestedLesson": "3-influence",
+      "suggestedParagraph": "## The Three Pillars of Social Influence",
+      "lessonExcerpt": "Social influence shows up everywhere: in your therapy room when a client describes peer pressure.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 7
+    },
+    {
+      "stem": "What is a key benefit of cooperative learning in educational settings?",
+      "options": [
+        "It promotes competition among students.",
+        "It enhances individual accountability.",
+        "It fosters social interaction and teamwork.",
+        "It reduces the need for teacher involvement."
+      ],
+      "answer": "It fosters social interaction and teamwork.",
+      "explanation": "The correct answer is 'It fosters social interaction and teamwork' because cooperative learning emphasizes collaboration among students, which enhances their social skills and ability to work together. 'It promotes competition among students' contradicts the principles of cooperative learning. 'It enhances individual accountability' is a secondary benefit, while 'It reduces the need for teacher involvement' is misleading, as teachers still play a crucial role in facilitating cooperative learning.",
+      "kn": "KN16",
+      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and assesses understanding of cooperative learning.",
+      "suggestedLesson": "3-influence",
+      "suggestedParagraph": "## The Three Pillars of Social Influence",
+      "lessonExcerpt": "Cooperative learning fosters social interaction and teamwork, which are essential for effective learning experiences.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 20
+    },
+    {
+      "stem": "How does exposure to pornography potentially affect empathy towards victims of sexual violence?",
+      "options": [
+        "It increases empathy by providing educational content.",
+        "It has no effect on empathy levels.",
+        "It may decrease empathy by normalizing aggressive behaviors.",
+        "It enhances understanding of consent and healthy relationships."
+      ],
+      "answer": "It may decrease empathy by normalizing aggressive behaviors.",
+      "explanation": "The correct answer reflects research suggesting that exposure to pornography can desensitize individuals to violence and reduce empathy towards victims. The other options either misrepresent the effects or suggest positive outcomes that are not supported by evidence.",
+      "kn": "KN16",
+      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
+      "difficulty": "hard",
+      "quality_comment": "The question is relevant and tests knowledge of media influence on empathy.",
+      "suggestedLesson": "3-influence",
+      "suggestedParagraph": "## Introduction: Why Understanding Social Influence Matters for Your Practice",
+      "lessonExcerpt": "Understanding these patterns is essential for your EPPP exam.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 4
+    },
+    {
+      "stem": "Which leadership style focuses on inspiring and motivating followers to achieve higher levels of performance?",
+      "options": [
+        "Transactional leadership.",
+        "Transformational leadership.",
+        "Autocratic leadership.",
+        "Laissez-faire leadership."
+      ],
+      "answer": "Transformational leadership.",
+      "explanation": "The correct answer identifies transformational leadership as the style that emphasizes inspiration and motivation. The other options describe different leadership styles that do not focus on inspiring followers.",
+      "kn": "KN16",
+      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of leadership styles.",
+      "suggestedLesson": "3-influence",
+      "suggestedParagraph": "## The Three Pillars of Social Influence",
+      "lessonExcerpt": "Understanding these patterns is essential for your EPPP exam.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 8
+    },
+    {
+      "stem": "Which type of power is characterized by the ability to influence others through the use of rewards?",
+      "options": [
+        "A) Coercive power",
+        "B) Reward power",
+        "C) Expert power",
+        "D) Referent power"
+      ],
+      "answer": "B) Reward power",
+      "explanation": "Option B is correct as reward power is defined by the ability to influence others by providing rewards. Option A, coercive power, involves threats or punishment. Option C, expert power, is based on knowledge or skills. Option D, referent power, stems from personal traits or relationships.",
+      "kn": "KN16",
+      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
+      "difficulty": "easy",
+      "quality_comment": "The question clearly assesses knowledge of types of power in leadership.",
+      "suggestedLesson": "3-influence",
+      "suggestedParagraph": "## The Three Pillars of Social Influence",
+      "lessonExcerpt": "Reward power is characterized by the ability to influence others through the use of rewards.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 16
+    },
+    {
+      "stem": "In high-context cultures, which communication style is most commonly observed?",
+      "options": [
+        "Direct and explicit",
+        "Indirect and implicit",
+        "Formal and structured",
+        "Casual and informal"
+      ],
+      "answer": "Indirect and implicit",
+      "explanation": "High-context cultures rely on indirect and implicit communication styles, where much of the information is conveyed through context, non-verbal cues, and shared understanding rather than explicit verbal communication. In contrast, low-context cultures tend to favor direct and explicit communication. Formality and casualness can vary independently of context, making them less relevant to this specific question. Thus, indirect and implicit is the correct answer.",
+      "kn": "KN15",
+      "kn_explanation": "This question is best aligned with KN15 because it tests Social interaction and relationships (e.g., attraction, aggression, altruism, organizational justice, verbal and non-verbal communication, internet communication, mate selection, empathy).",
+      "difficulty": "medium",
+      "quality_comment": "Effective question that tests understanding of communication styles in cultural contexts.",
+      "suggestedLesson": "3-influence",
+      "suggestedParagraph": "## The Three Pillars of Social Influence",
+      "lessonExcerpt": "High-context cultures rely on indirect and implicit communication styles.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 3
+    },
+    {
+      "stem": "Which aspect of kinesics is most important for interpreting nonverbal communication across different cultures?",
+      "options": [
+        "Facial expressions",
+        "Gestures",
+        "Posture",
+        "Eye contact"
+      ],
+      "answer": "Gestures",
+      "explanation": "Gestures are particularly important in kinesics as they can vary significantly across cultures, leading to different interpretations of nonverbal communication. While facial expressions and posture also play roles, gestures are often the most culturally specific. Eye contact can also vary, but gestures are more likely to cause misunderstandings. Therefore, the correct answer is gestures.",
+      "kn": "KN15",
+      "kn_explanation": "This question is best aligned with KN15 because it tests Social interaction and relationships (e.g., attraction, aggression, altruism, organizational justice, verbal and non-verbal communication, internet communication, mate selection, empathy).",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of kinesics in cross-cultural contexts.",
+      "suggestedLesson": "3-influence",
+      "suggestedParagraph": "## The Three Pillars of Social Influence",
+      "lessonExcerpt": "Gestures can vary significantly across cultures, leading to different interpretations of nonverbal communication.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 16
+    },
+    {
+      "stem": "Which type of conformity involves changing one's beliefs or behaviors based on information from others?",
+      "options": [
+        "Normative conformity",
+        "Informational conformity",
+        "Private conformity",
+        "Public conformity"
+      ],
+      "answer": "Informational conformity",
+      "explanation": "Informational conformity occurs when individuals change their beliefs or behaviors based on the information they receive from others, particularly in ambiguous situations. Normative conformity is driven by the desire to fit in, while private and public conformity refer to the nature of the change (internal vs. external). Therefore, the correct answer is informational conformity.",
+      "kn": "KN16",
+      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests knowledge of conformity types.",
+      "suggestedLesson": "3-influence",
+      "suggestedParagraph": "## Obedience to Authority: The Milgram Studies",
+      "lessonExcerpt": "Informational conformity occurs when individuals change their beliefs or behaviors based on the information they receive from others.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 18
+    },
+    {
+      "stem": "According to social learning theory, what is the primary mechanism through which aggression is learned?",
+      "options": [
+        "Direct reinforcement",
+        "Observational learning",
+        "Cognitive restructuring",
+        "Emotional regulation"
+      ],
+      "answer": "Observational learning",
+      "explanation": "Observational learning is the correct answer as it refers to learning behaviors by watching others, which is a key component of social learning theory. Direct reinforcement, cognitive restructuring, and emotional regulation do not specifically address the mechanism of learning aggression through observation.",
+      "kn": "KN16",
+      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
+      "difficulty": "hard",
+      "quality_comment": "The question is well-structured and effectively tests knowledge of social learning theory.",
+      "suggestedLesson": "3-influence",
+      "suggestedParagraph": "## The Three Pillars of Social Influence",
+      "lessonExcerpt": "Observational learning is a primary mechanism through which aggression is learned according to social learning theory.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 7
+    },
+    {
+      "stem": "Which brainstorming technique is most effective for enhancing group creativity?",
+      "options": [
+        "Encouraging criticism of ideas during the session.",
+        "Allowing free-flowing ideas without immediate judgment.",
+        "Focusing on a single idea until it is fully developed.",
+        "Limiting the number of participants to avoid chaos."
+      ],
+      "answer": "Allowing free-flowing ideas without immediate judgment.",
+      "explanation": "Research shows that allowing free-flowing ideas without immediate judgment fosters creativity in brainstorming sessions. The other options either inhibit creativity or do not align with effective brainstorming practices.",
+      "kn": "KN16",
+      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses knowledge of group creativity techniques.",
+      "suggestedLesson": "3-influence",
+      "suggestedParagraph": "## The Three Pillars of Social Influence",
+      "lessonExcerpt": "Allowing free-flowing ideas without immediate judgment fosters creativity in brainstorming sessions.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 16
+    },
+    {
+      "stem": "Which of the following best describes referent power in the context of social influence?",
+      "options": [
+        "The ability to influence others based on perceived authority or expertise.",
+        "The capacity to affect others' behavior through personal relationships and admiration.",
+        "The influence derived from the ability to reward or punish others.",
+        "The power to change others' beliefs through logical argumentation."
+      ],
+      "answer": "The capacity to affect others' behavior through personal relationships and admiration.",
+      "explanation": "Referent power is based on the personal relationships and admiration that one individual has for another, making them more likely to be influenced. The other options describe different types of power, such as expert power or coercive power, which do not align with the concept of referent power.",
+      "kn": "KN16",
+      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of referent power in social influence.",
+      "suggestedLesson": "3-influence",
+      "suggestedParagraph": "## The Three Pillars of Social Influence",
+      "lessonExcerpt": "Referent power is based on the personal relationships and admiration that one individual has for another.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 21
+    },
+    {
+      "stem": "A senior charge nurse holds no formal administrative title but is widely admired across the unit. Junior nurses frequently seek her guidance, adopt her patient-care practices, and report wanting to be like her professionally. She does not control rewards or discipline, nor does she hold institutional authority. According to French and Raven's (1959) taxonomy of social power, which type of power does this nurse PRIMARILY exercise?",
+      "options": [
+        "Legitimate power, derived from her institutional seniority and recognized role on the unit",
+        "Expert power, because colleagues defer to her specialized clinical knowledge and judgment",
+        "Referent power, because colleagues identify with and aspire to emulate her as a person",
+        "Informational power, because she controls access to informal knowledge about unit operations"
+      ],
+      "answer": "Referent power, because colleagues identify with and aspire to emulate her as a person",
+      "explanation": "Referent power derives from others' identification with, admiration of, or desire to be like a person — independent of formal role or specialized knowledge. Although the nurse likely also possesses some expert power, the vignette emphasizes that staff wish to emulate her personally and seek her out as a role model, which is the defining feature of referent power. Expert power would be primary if influence rested solely on deference to her clinical knowledge base. Legitimate power requires a formal authority role, which the vignette explicitly excludes. Informational power involves controlling specific information that others require to complete tasks.",
+      "kn": "KN16",
+      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
+      "difficulty": "hard",
+      "quality_comment": "Expertly constructed vignette requiring discrimination between referent and expert power; the absence of formal authority sharpens the contrast with legitimate power.",
+      "suggestedLesson": "3-influence",
+      "suggestedParagraph": "## The Three Pillars of Social Influence",
+      "lessonExcerpt": "Lesson content covers obedience, conformity, and compliance but does not explicitly enumerate French and Raven's types of social power. Question written from established EPPP knowledge base.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 3
+    },
+    {
+      "stem": "In Sherif's autokinetic studies, participants who first made individual estimates of a stationary light's apparent movement subsequently made estimates alongside small groups over several sessions, during which their individual estimates converged. When these participants were later returned to making judgments alone, they maintained estimates near the group standard rather than reverting to their initial individual responses. This finding MOST directly demonstrates which principle about group norms?",
+      "options": [
+        "Conformity is sustained by ongoing normative social pressure and dissolves once group surveillance is removed",
+        "Ambiguous social situations produce public compliance while leaving private beliefs and standards unchanged",
+        "Group norms emerge through social interaction in ambiguous situations and become internalized as personal standards that persist beyond the group context",
+        "Majority influence requires unanimity within the group to successfully shift an individual's private judgment"
+      ],
+      "answer": "Group norms emerge through social interaction in ambiguous situations and become internalized as personal standards that persist beyond the group context",
+      "explanation": "Sherif's autokinetic research demonstrated that individuals converged on a shared group standard during group sessions, and crucially, they retained that standard when subsequently making judgments alone — indicating genuine internalization rather than surface compliance. Option A is directly contradicted by the data: if conformity depended on ongoing social pressure, estimates should have reverted to pre-group baselines once participants were alone. Option B also contradicts the finding — private beliefs were demonstrably altered, not merely surface behavior. Option D describes unanimity as a precondition, which was the focus of Asch's line-judgment paradigm, not Sherif's autokinetic work.",
+      "kn": "KN16",
+      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
+      "difficulty": "hard",
+      "quality_comment": "Tests the critical internalization finding and requires discrimination between private acceptance and public compliance — one of the most commonly misunderstood distinctions in conformity research.",
+      "suggestedLesson": "3-influence",
+      "suggestedParagraph": "## Conformity to Group Norms: Going Along to Get Along",
+      "lessonExcerpt": "Muzafer Sherif was one of the first researchers to study conformity systematically. He used a clever trick of perception: when you stare at a stationary point of light in a completely dark room, it appears to move.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 7
+    },
+    {
+      "stem": "A newly hired staff psychologist at a community mental health center spends the first six months scrupulously following all agency documentation procedures, attending every team meeting, and deferring to senior colleagues on treatment decisions — even when privately disagreeing. In the seventh month, the psychologist proposes replacing the agency's standard intake protocol with a significantly streamlined alternative. To the psychologist's surprise, senior staff endorse the proposal with little resistance. According to Hollander's idiosyncrasy credit model, this acceptance is BEST explained by:",
+      "options": [
+        "The psychologist's growing seniority and formal status within the agency now confer permission to deviate from established norms",
+        "Informational social influence caused senior staff to genuinely agree that the new protocol was superior on its merits",
+        "Early conformity to agency norms accumulated social capital that legitimizes subsequent deviation without threatening the psychologist's standing",
+        "Normative social influence shifted the group's standards over time toward the psychologist's preferred approach"
+      ],
+      "answer": "Early conformity to agency norms accumulated social capital that legitimizes subsequent deviation without threatening the psychologist's standing",
+      "explanation": "Hollander's idiosyncrasy credit model (1958) holds that group members earn 'credits' through early conformity to group norms and through demonstrated competence. These credits function as social capital that permits the member to later deviate from group expectations without losing status or influence. The psychologist's initial period of scrupulous conformity was credit-building behavior; the tolerance for the later protocol deviation reflects those credits being spent. Formal seniority alone would confer some permission regardless of behavioral history, but the idiosyncrasy credit model specifically explains tolerance for deviation as a function of prior conformity, not mere time elapsed. Informational influence pertains to accepting others' positions as accurate — it does not explain why the same proposal would be tolerated from this psychologist but might not be from a newcomer. Normative social influence describes pressures toward conformity with existing norms, not the mechanism by which deviance from those norms becomes acceptable.",
+      "kn": "KN16",
+      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
+      "difficulty": "hard",
+      "quality_comment": "Tests a specific and frequently misunderstood group dynamics concept; requires understanding that idiosyncrasy credits are earned specifically through conformity and that they provide a mechanism for tolerated deviance distinct from formal authority.",
+      "suggestedLesson": "3-influence",
+      "suggestedParagraph": "Conformity to Group Norms: Going Along to Get Along",
+      "lessonExcerpt": "Muzafer Sherif was one of the first researchers to study conformity systematically. He used a clever trick of perception... People were less willing to deviate when they were part of an established group.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 18
+    },
+    {
       "stem": "In Milgram's original obedience study, what factor did he identify as the main reason subjects continued to deliver shocks despite apparent harm to the learner?",
       "options": [
         "Subjects experienced psychological reactance leading to compliance",

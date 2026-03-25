@@ -1,6 +1,321 @@
 {
   "questions": [
     {
+      "stem": "A child is bitten by a large black dog (US) and develops a fear response (CR) to the sight of the dog (CS1). Later, the child notices that the dog is always behind a specific red fence. Eventually, the child begins to feel anxious upon seeing any red fence, even without the dog present. This phenomenon is BEST described as:",
+      "options": [
+        "Stimulus generalization, because the fear response spread to a similar stimulus",
+        "Second-order conditioning, because a new neutral stimulus was paired with an established CS and now elicits a conditioned response",
+        "Sensory preconditioning, because the red fence was associated with the dog before conditioning occurred",
+        "Blocking, because the first conditioned stimulus prevented conditioning to the second stimulus"
+      ],
+      "answer": "Second-order conditioning, because a new neutral stimulus was paired with an established CS and now elicits a conditioned response",
+      "explanation": "Higher-order (second-order) conditioning occurs when an established CS is paired with a new neutral stimulus, and the new stimulus eventually elicits a conditioned response without ever being directly paired with the original US. In this case, the red fence (new neutral stimulus) was repeatedly paired with the sight of the dog (CS1), and the fence now elicits anxiety on its own. Option A is incorrect because stimulus generalization involves responding to stimuli similar to the original CS (e.g., other dogs), not a completely different stimulus class (fences). Option C is incorrect because sensory preconditioning requires the two neutral stimuli to be associated before any conditioning occurs. Option D is incorrect because blocking would predict the fence would NOT become a CS, which is the opposite of what happened here.",
+      "kn": "KN7",
+      "kn_explanation": "This describes higher-order classical conditioning (CS1 → CS2 chaining), which is a principle of learning, not intelligence.",
+      "difficulty": "hard",
+      "quality_comment": "Good applied question requiring differentiation between higher-order conditioning and commonly confused concepts. Distractors represent genuine alternative explanations students might consider.",
+      "suggestedLesson": "2-pavlov-and-classical-conditioning",
+      "suggestedParagraph": "### Higher-Order Conditioning",
+      "lessonExcerpt": "In higher-order conditioning, a CS is treated as if it were a US and paired with a new neutral stimulus. This allows conditioning to spread without ever presenting the original US again.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 3
+    },
+    {
+      "stem": "A child who was once stung by a bee develops a fear response to bees. Over time, the child also begins to feel anxious when seeing the yellow and black striped pattern on a sports jersey. This expansion of the fear response to new stimuli that were never directly paired with pain is BEST explained by:",
+      "options": [
+        "Operant generalization",
+        "Higher-order conditioning",
+        "Stimulus generalization in classical conditioning",
+        "The overjustification effect"
+      ],
+      "answer": "Stimulus generalization in classical conditioning",
+      "explanation": "Stimulus generalization occurs when stimuli similar to the original conditioned stimulus (the bee) also elicit the conditioned response (fear). The yellow-black pattern on the jersey is perceptually similar to the bee's coloring, triggering anxiety without any direct pairing with the painful sting. Higher-order conditioning (B) involves pairing a new neutral stimulus with an established CS, not a stimulus that merely resembles the CS. Operant generalization (A) involves voluntary behaviors, not automatic fear responses. The overjustification effect (D) relates to the decrease in intrinsic motivation when external rewards are provided and is unrelated to fear acquisition.",
+      "kn": "KN7",
+      "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
+      "difficulty": "medium",
+      "quality_comment": "Applied clinical scenario distinguishing stimulus generalization from higher-order conditioning—a common EPPP confusion point. Tests understanding that attitudes/emotional responses can spread through classical conditioning principles.",
+      "suggestedLesson": "2-pavlov-and-classical-conditioning",
+      "suggestedParagraph": "### Stimulus Generalization",
+      "lessonExcerpt": "classical conditioning can establish complex emotional responses, physiological reactions, immune responses, and even aspects of social behavior. It's far more pervasive than most people realize.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 5
+    },
+    {
+      "stem": "A child was bitten by a dog (US) and subsequently developed a fear response (CR) to the sight of dogs (CS). Later, the child begins to feel anxious whenever she sees the leash hanging by the front door, even though the leash was never directly associated with being bitten. The leash had only been associated with seeing dogs. This phenomenon is best described as:",
+      "options": [
+        "Stimulus generalization, because the leash is physically similar to a dog",
+        "Higher-order conditioning, because a previously established CS was paired with a new neutral stimulus",
+        "Sensory preconditioning, because the leash and dog were associated before the bite occurred",
+        "Conditioned inhibition, because the leash signals the absence of the dog"
+      ],
+      "answer": "Higher-order conditioning, because a previously established CS was paired with a new neutral stimulus",
+      "explanation": "In higher-order (second-order) conditioning, an established CS is paired with a new neutral stimulus, causing that new stimulus to elicit the CR without ever being directly paired with the US. The dog (CS) was paired with the leash (new neutral stimulus), and now the leash alone triggers anxiety. Stimulus generalization (A) is incorrect because the leash is not physically similar to a dog — generalization requires perceptual similarity to the original CS. Sensory preconditioning (C) involves two neutral stimuli being paired before either is conditioned, which doesn't match this sequence. Conditioned inhibition (D) would involve the leash signaling safety (absence of the US), not triggering fear.",
+      "kn": "KN7",
+      "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
+      "difficulty": "hard",
+      "quality_comment": "Requires distinguishing higher-order conditioning from stimulus generalization and sensory preconditioning — a frequently tested discrimination.",
+      "suggestedLesson": "2-pavlov-and-classical-conditioning",
+      "suggestedParagraph": "### Higher-Order Conditioning",
+      "lessonExcerpt": "In higher-order conditioning, a CS is treated as if it were a US and paired with a new neutral stimulus. This allows conditioning to spread without ever presenting the original US again.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 12
+    },
+    {
+      "stem": "John Watson's study of Little Albert demonstrated that after conditioning a fear response to a white rat, the infant also exhibited fear toward a white rabbit, a fur coat, and a Santa Claus mask. This spread of the conditioned fear response to stimuli that were never directly paired with the unconditioned stimulus is an example of:",
+      "options": [
+        "Response generalization, because Albert displayed different types of fear behaviors",
+        "Higher-order conditioning, because each new stimulus was paired with the original CS",
+        "Stimulus generalization, because stimuli sharing features with the original CS elicited the CR",
+        "Incubation, because the fear response strengthened over time without additional pairings"
+      ],
+      "answer": "Stimulus generalization, because stimuli sharing features with the original CS elicited the CR",
+      "explanation": "Stimulus generalization occurs when stimuli similar to the original CS also elicit the CR, even though they were never paired with the US. The white rabbit, fur coat, and Santa Claus mask all shared perceptual features (white, furry) with the original CS (white rat). Response generalization (A) refers to reinforcing one behavior increasing similar behaviors — it's about different responses, not different stimuli. Higher-order conditioning (B) requires explicit pairing of the original CS with a new stimulus, which did not occur here. Incubation (D) refers to strengthening of a CR over time, not spread to similar stimuli.",
+      "kn": "KN7",
+      "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
+      "difficulty": "medium",
+      "quality_comment": "Uses the classic Little Albert example directly from the lesson to test understanding of stimulus generalization vs. related concepts.",
+      "suggestedLesson": "2-pavlov-and-classical-conditioning",
+      "suggestedParagraph": "### Stimulus Generalization",
+      "lessonExcerpt": "Stimulus generalization occurs when stimuli similar to the original CS also elicit the CR, even though they were never paired with the US.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 13
+    },
+    {
+      "stem": "A researcher conditions a dog to salivate to a tone by pairing it with food. After this association is well-established, the researcher begins pairing a flashing light with the tone but never presents food during these trials. Eventually, the flashing light alone elicits salivation. This outcome demonstrates:",
+      "options": [
+        "Stimulus generalization, because the dog is responding to a stimulus that resembles the original conditioned stimulus",
+        "Higher-order conditioning, because an established conditioned stimulus was used to condition a new neutral stimulus",
+        "Spontaneous recovery, because an extinguished response has reappeared to a novel stimulus",
+        "Sensory preconditioning, because the two stimuli were paired before any conditioning occurred"
+      ],
+      "answer": "Higher-order conditioning, because an established conditioned stimulus was used to condition a new neutral stimulus",
+      "explanation": "Higher-order (second-order) conditioning occurs when an established CS is paired with a new neutral stimulus, causing the new stimulus to also elicit the CR—without ever being directly paired with the US. In this example, the tone (CS) was paired with the light (new neutral stimulus) without food, and the light came to elicit salivation. Option A is incorrect because stimulus generalization involves responding to stimuli physically similar to the original CS (e.g., similar tones), not a completely different modality (light vs. tone) paired through a new conditioning procedure. Option C is incorrect because spontaneous recovery refers to the return of an extinguished CR after a rest period, not conditioning to a new stimulus. Option D is incorrect because sensory preconditioning involves pairing two neutral stimuli before either is conditioned.",
+      "kn": "KN7",
+      "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
+      "difficulty": "hard",
+      "quality_comment": "Directly tests the distinction between higher-order conditioning and stimulus generalization—a common EPPP confusion point—using a concrete experimental scenario.",
+      "suggestedLesson": "2-pavlov-and-classical-conditioning",
+      "suggestedParagraph": "### Higher-Order Conditioning: Chaining Responses",
+      "lessonExcerpt": "Once you've established a CS, you can use it like a US to condition yet another neutral stimulus. This is higher-order conditioning (also called second-order conditioning when it involves two stimuli, third-order when it involves three, and so on).",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 24
+    },
+    {
+      "stem": "In classical conditioning, what is the term for a learned fear response to a previously neutral stimulus?",
+      "options": [
+        "Unconditioned response",
+        "Conditioned response",
+        "Neutral stimulus",
+        "Unconditioned stimulus"
+      ],
+      "answer": "Conditioned response",
+      "explanation": "The learned fear response to a previously neutral stimulus is referred to as a conditioned response. The unconditioned response is the natural reaction to an unconditioned stimulus, while the neutral stimulus does not elicit a response before conditioning.",
+      "kn": "KN7",
+      "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
+      "difficulty": "hard",
+      "quality_comment": "The question is challenging and requires a deep understanding of classical conditioning.",
+      "suggestedLesson": "2-pavlov-and-classical-conditioning",
+      "suggestedParagraph": "## The Foundation: Pavlov's Discovery",
+      "lessonExcerpt": "Classical conditioning explains involuntary, automatic responses.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 12
+    },
+    {
+      "stem": "What is the process called when a conditioned response is elicited by stimuli that are similar to the original conditioned stimulus?",
+      "options": [
+        "Stimulus discrimination",
+        "Stimulus generalization",
+        "Conditioned response",
+        "Unconditioned response"
+      ],
+      "answer": "Stimulus generalization",
+      "explanation": "Stimulus generalization occurs when stimuli similar to the original conditioned stimulus elicit the conditioned response. Stimulus discrimination, on the other hand, refers to the ability to distinguish between different stimuli.",
+      "kn": "KN7",
+      "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of stimulus generalization.",
+      "suggestedLesson": "2-pavlov-and-classical-conditioning",
+      "suggestedParagraph": "## What Happens After Conditioning: Important Processes",
+      "lessonExcerpt": "Stimulus generalization occurs when stimuli similar to the original CS also elicit the conditioned response.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 13
+    },
+    {
+      "stem": "In the context of conditioning, how does higher-order conditioning differ from stimulus generalization?",
+      "options": [
+        "Higher-order conditioning involves a new conditioned stimulus being paired with an existing conditioned response, while generalization involves similar stimuli eliciting the same response.",
+        "Higher-order conditioning is a form of extinction, while generalization is a form of reinforcement.",
+        "Higher-order conditioning requires a longer time to establish than generalization.",
+        "Higher-order conditioning can only occur with negative stimuli, while generalization can occur with positive stimuli."
+      ],
+      "answer": "Higher-order conditioning involves a new conditioned stimulus being paired with an existing conditioned response, while generalization involves similar stimuli eliciting the same response.",
+      "explanation": "This option accurately describes the distinction between higher-order conditioning, which builds on existing conditioned responses, and stimulus generalization, which refers to the tendency for similar stimuli to elicit the same response. The other options misrepresent the concepts or introduce inaccuracies.",
+      "kn": "KN7",
+      "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
+      "difficulty": "hard",
+      "quality_comment": "The question is well-structured and tests a nuanced understanding of conditioning concepts.",
+      "suggestedLesson": "2-pavlov-and-classical-conditioning",
+      "suggestedParagraph": "## What Happens After Conditioning: Important Processes",
+      "lessonExcerpt": "Higher-order conditioning involves a new conditioned stimulus being paired with an existing conditioned response.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 24
+    },
+    {
+      "stem": "Which concept describes the process of behavior modification through pairing a neutral stimulus with an unconditioned stimulus?",
+      "options": [
+        "Operant conditioning",
+        "Higher-order conditioning",
+        "Classical conditioning",
+        "Observational learning"
+      ],
+      "answer": "Classical conditioning",
+      "explanation": "The correct answer is 'Classical conditioning' because it involves learning through the association of a neutral stimulus with an unconditioned stimulus to elicit a conditioned response. The other options do not accurately describe this specific process.",
+      "kn": "KN7",
+      "kn_explanation": "This KN code applies as it pertains to conditioning and the mechanisms of behavior modification.",
+      "difficulty": "medium",
+      "quality_comment": "The question is straightforward and tests foundational knowledge of classical conditioning.",
+      "suggestedLesson": "2-pavlov-and-classical-conditioning",
+      "suggestedParagraph": "## The Foundation: Pavlov's Discovery",
+      "lessonExcerpt": "Classical conditioning involves learning through the association of a neutral stimulus with an unconditioned stimulus.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 6
+    },
+    {
+      "stem": "What does stimulus generalization in traumatic experiences refer to?",
+      "options": [
+        "The ability to recall specific details of a traumatic event",
+        "The tendency to respond similarly to stimuli that resemble the original trauma",
+        "The process of forgetting traumatic memories over time",
+        "The reduction of anxiety responses to trauma-related stimuli"
+      ],
+      "answer": "The tendency to respond similarly to stimuli that resemble the original trauma",
+      "explanation": "The correct answer is B because stimulus generalization refers to the phenomenon where responses to a specific traumatic event extend to similar stimuli. Option A is incorrect as it describes recall, not generalization. Option C is incorrect as it describes forgetting, not generalization. Option D is incorrect as it describes desensitization, not generalization.",
+      "kn": "KN7",
+      "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests knowledge of learning theories related to trauma.",
+      "suggestedLesson": "2-pavlov-and-classical-conditioning",
+      "suggestedParagraph": "## What Happens After Conditioning: Important Processes",
+      "lessonExcerpt": "Stimulus generalization occurs when stimuli similar to the original CS also elicit the conditioned response.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 20
+    },
+    {
+      "stem": "What is the primary mechanism by which classical extinction occurs in classical conditioning?",
+      "options": [
+        "Repeated presentation of the conditioned stimulus without the unconditioned stimulus",
+        "Pairing the conditioned stimulus with a new unconditioned stimulus",
+        "Increasing the intensity of the unconditioned stimulus",
+        "Decreasing the frequency of the conditioned stimulus"
+      ],
+      "answer": "Repeated presentation of the conditioned stimulus without the unconditioned stimulus",
+      "explanation": "The correct answer is that classical extinction occurs through the repeated presentation of the conditioned stimulus (CS) without the unconditioned stimulus (US), leading to a gradual decrease in the conditioned response (CR). The other options do not accurately describe the extinction process; pairing with a new US would lead to a different conditioning process, increasing the intensity of the US does not relate to extinction, and decreasing the frequency of the CS does not directly cause extinction.",
+      "kn": "KN7",
+      "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and directly assesses knowledge of classical extinction.",
+      "suggestedLesson": "2-pavlov-and-classical-conditioning",
+      "suggestedParagraph": "## What Happens After Conditioning: Important Processes",
+      "lessonExcerpt": "This is crucial for therapy. It's the basis for exposure treatments. Repeatedly presenting the feared stimulus (CS) without the feared outcome (US) until the fear response (CR) extinguishes.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 11
+    },
+    {
+      "stem": "A combat veteran was involved in an explosion during deployment and now experiences a strong fear response whenever he hears a car backfire. After several months of treatment, he reports that he also experiences notable anxiety when he hears a truck door slam loudly, a sound never directly paired with the original traumatic event. Which classical conditioning process best explains his anxiety to the truck door slam?",
+      "options": [
+        "Spontaneous recovery, because an extinguished conditioned response has re-emerged after a delay",
+        "Higher-order conditioning, because the car backfire has been used to condition the new stimulus",
+        "Stimulus generalization, because a stimulus similar to the original conditioned stimulus elicits the conditioned response",
+        "Stimulus discrimination, because the veteran has learned to differentiate between acoustic cues"
+      ],
+      "answer": "Stimulus generalization, because a stimulus similar to the original conditioned stimulus elicits the conditioned response",
+      "explanation": "Stimulus generalization occurs when stimuli similar to the original conditioned stimulus also elicit the conditioned response, even without direct pairing with the unconditioned stimulus. The truck door slam is acoustically similar to the car backfire (the conditioned stimulus), so it triggers the fear response through generalization. Spontaneous recovery (A) refers to the return of an extinguished CR after a rest period, not the spread of fear to new stimuli. Higher-order conditioning (B) would require the car backfire to be explicitly paired with the truck slam across multiple trials. Stimulus discrimination (D) is the opposite process—it describes learning to respond only to the original CS and not to similar stimuli.",
+      "kn": "KN7",
+      "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
+      "difficulty": "medium",
+      "quality_comment": "Clinically grounded scenario using PTSD context; clearly distinguishes generalization from other post-conditioning phenomena.",
+      "suggestedLesson": "2-pavlov-and-classical-conditioning",
+      "suggestedParagraph": "### Stimulus Generalization",
+      "lessonExcerpt": "Stimulus generalization occurs when stimuli similar to the original CS also elicit the [conditioned response].",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 12
+    },
+    {
+      "stem": "During a child's first dental appointment, the sound of the drill (CS1) was paired with the pain of a cavity filling (US), and the child developed a fear response (CR) to the drill sound. On subsequent visits, the dental receptionist greets the child by name before escorting her to the operatory. After several such visits, the child begins showing measurable fear when she hears the receptionist's voice on the phone, even though the receptionist has never been present during any painful procedure. This scenario best illustrates:",
+      "options": [
+        "Stimulus generalization, because the receptionist's voice is acoustically similar to the drill sound and elicits the conditioned response",
+        "Trace conditioning, because there was a temporal gap between the receptionist's greeting and the eventual painful procedure",
+        "Higher-order conditioning, because the drill sound (an established CS) functioned as a US to condition the receptionist's voice as a new CS",
+        "Spontaneous recovery, because a previously extinguished fear response has returned in a new stimulus context"
+      ],
+      "answer": "Higher-order conditioning, because the drill sound (an established CS) functioned as a US to condition the receptionist's voice as a new CS",
+      "explanation": "Higher-order (second-order) conditioning occurs when an already-established conditioned stimulus is used to condition a new neutral stimulus, without any further contact with the original unconditioned stimulus. Here, the drill sound (CS1, which already elicits fear) is systematically followed by or associated with the receptionist's voice across multiple visits. The voice acquires fear-eliciting properties not because it was directly paired with pain, but because it was paired with an established CS. Stimulus generalization (A) would require the receptionist's voice to be acoustically similar to the drill sound; the mechanism here is sequential pairing, not similarity. Trace conditioning (B) describes a timing procedure during original conditioning (gap between CS offset and US onset) and is not relevant to the acquisition of a new CS. Spontaneous recovery (D) refers to the reappearance of an extinguished CR after a rest period, not the acquisition of a new conditioned stimulus.",
+      "kn": "KN7",
+      "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
+      "difficulty": "hard",
+      "quality_comment": "Scenario carefully constructs the necessary conditions for higher-order conditioning and provides plausible distractors that require precise conceptual differentiation.",
+      "suggestedLesson": "2-pavlov-and-classical-conditioning",
+      "suggestedParagraph": "## What Happens After Conditioning: Important Processes",
+      "lessonExcerpt": "The provided file was truncated before reaching the higher-order conditioning section. The foundational conditioning procedures and post-conditioning processes are established in the lesson, but the specific higher-order conditioning subsection was not available in the excerpt provided.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 18
+    },
+    {
+      "stem": "A client who completed an inpatient substance use treatment program relapses after walking past the bar where he used to drink regularly. The sight of the bar triggered intense cravings that overwhelmed his coping skills. This relapse is best explained by which principle?",
+      "options": [
+        "Operant extinction burst—the bar visit temporarily increased substance-seeking behavior before it would have decreased",
+        "Classical conditioning—environmental cues associated with past drug use became conditioned stimuli that trigger cravings",
+        "Negative reinforcement—the client used substances to escape the unpleasant feelings triggered by seeing the bar",
+        "Stimulus generalization—the client generalized his drinking behavior to a new environment"
+      ],
+      "answer": "Classical conditioning—environmental cues associated with past drug use became conditioned stimuli that trigger cravings",
+      "explanation": "The lesson on classical conditioning explicitly states: 'Drug cues (needles, specific locations, certain people) become CSs that trigger cravings and physiological preparation for drug use. This is why changing environments can be crucial in early recovery.' The bar is a conditioned stimulus that was repeatedly paired with substance use (the unconditioned stimulus), and seeing it elicits conditioned craving responses. Option A is incorrect because this is not an extinction burst—the behavior was not being extinguished at the time. Option C, while partially true in that negative reinforcement may play a role in substance use generally, does not explain the specific mechanism of environmental cue-triggered cravings. Option D is incorrect because the bar is the original environment, not a new one—this is direct conditioned responding, not generalization.",
+      "kn": "KN44",
+      "kn_explanation": "Describes a classical conditioning phenomenon (cue-induced relapse) in the context of substance use treatment, relating to treatment techniques and understanding relapse mechanisms",
+      "difficulty": "medium",
+      "quality_comment": "Applied clinical scenario that requires distinguishing between classical and operant conditioning mechanisms in addiction. All distractors are plausible.",
+      "suggestedLesson": "2-pavlov-and-classical-conditioning",
+      "suggestedParagraph": "## Real-World Applications in Clinical Practice",
+      "lessonExcerpt": "Drug cues (needles, specific locations, certain people) become CSs that trigger cravings and physiological preparation for drug use. This is why changing environments can be crucial in early recovery.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 3
+    },
+    {
+      "stem": "A client was classically conditioned to fear elevators after being trapped in one during a power outage. A therapist treats this phobia by having the client repeatedly ride elevators without any aversive event occurring, until the fear response diminishes. This procedure is best described as:",
+      "options": [
+        "Counterconditioning, because a new response is being paired with the conditioned stimulus",
+        "Stimulus discrimination training, because the client learns to differentiate safe from dangerous elevators",
+        "Classical extinction, because the conditioned stimulus is repeatedly presented without the unconditioned stimulus",
+        "Systematic desensitization, because the client is gradually exposed to the feared situation"
+      ],
+      "answer": "Classical extinction, because the conditioned stimulus is repeatedly presented without the unconditioned stimulus",
+      "explanation": "The lesson on classical conditioning states: 'if you repeatedly present the CS without the US, the CR gradually disappears. This is classical extinction.' The elevator (CS) was paired with being trapped (US), producing fear (CR). By repeatedly presenting the elevator without the aversive event, the fear response extinguishes. Option A is incorrect because no new incompatible response is being deliberately paired with the stimulus—the client is simply exposed to the CS without the US. Option B is incorrect because the goal is not to distinguish between safe and dangerous elevators but to extinguish the fear response to elevators generally. Option D is incorrect because systematic desensitization specifically involves creating an anxiety hierarchy and pairing relaxation with feared stimuli, which is not described here.",
+      "kn": "KN44",
+      "kn_explanation": "Describes systematic desensitization or exposure therapy (a specific treatment technique) for a classically conditioned phobia, fitting treatment techniques and their efficacy",
+      "difficulty": "easy",
+      "quality_comment": "Straightforward application question with clear correct answer. Tests fundamental distinction between extinction and counterconditioning.",
+      "suggestedLesson": "2-pavlov-and-classical-conditioning",
+      "suggestedParagraph": "### Classical Extinction",
+      "lessonExcerpt": "if you repeatedly present the CS without the US, the CR gradually disappears. This is classical extinction.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 7
+    },
+    {
       "stem": "In classical conditioning, which procedure is considered most effective for acquiring a conditioned response?",
       "options": [
         "Simultaneous conditioning, where the conditioned stimulus (CS) and unconditioned stimulus (US) occur at the same time",

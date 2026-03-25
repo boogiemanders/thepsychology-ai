@@ -1,6 +1,27 @@
 {
   "questions": [
     {
+      "stem": "A 28-year-old patient presents with a chief complaint of suddenly falling asleep during conversations and at work, occurring approximately four times per week for the past six months. She also reports vivid, dream-like visual experiences just as she is waking up. Her sleep study reveals a REM sleep latency of 12 minutes. Which additional finding would be MOST consistent with a diagnosis of narcolepsy?",
+      "options": [
+        "Episodes of sudden bilateral loss of muscle tone triggered by strong emotions",
+        "Repeated occurrences of extended, well-remembered nightmares during the second half of the sleep period",
+        "Incomplete awakenings from Stage 3 sleep with panicky screaming and autonomic arousal",
+        "Difficulty maintaining sleep characterized by frequent awakenings occurring three or more nights per week"
+      ],
+      "answer": "Episodes of sudden bilateral loss of muscle tone triggered by strong emotions",
+      "explanation": "Narcolepsy diagnosis requires irresistible sleep attacks plus at least ONE of: cataplexy (episodes of loss of muscle tone), hypocretin deficiency, or REM sleep latency ≤15 minutes. The patient already meets the REM latency criterion (12 minutes), but cataplexy—sudden loss of muscle tone often triggered by strong emotions—is the hallmark associated feature of narcolepsy and would further confirm the diagnosis. Option B describes nightmare disorder (REM sleep, second half of sleep period, well-remembered). Option C describes sleep terrors (non-REM sleep arousal disorder with panicky screaming and no memory). Option D describes insomnia disorder symptoms, not narcolepsy.",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
+      "difficulty": "medium",
+      "quality_comment": "Strong question requiring differential knowledge of sleep-wake disorders and specific narcolepsy diagnostic criteria. Integrates cataplexy, hallucinations, and REM latency.",
+      "suggestedLesson": "5-eating-sleep-elimination",
+      "suggestedParagraph": "### Narcolepsy: Irresistible Sleep Attacks",
+      "lessonExcerpt": "Diagnosis Requires ONE of These: Episodes of cataplexy (loss of muscle tone), Hypocretin deficiency, REM sleep latency of 15 minutes or less on polysomnography... Because cataplexy is often triggered by strong emotions, people with narcolepsy may try to control their emotions to prevent sleep episodes.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 1
+    },
+    {
       "stem": "Which of the following best characterizes the core psychopathology underlying eating disorders targeted by transdiagnostic CBT-E treatment?",
       "options": [
         "Distorted body image and lack of awareness of weight status",
@@ -10,8 +31,8 @@
       ],
       "answer": "Excessive valuation of physical appearance and weight",
       "explanation": "1. The correct answer, \"Excessive valuation of physical appearance and weight,\" is accurate because transdiagnostic cognitive-behavioral therapy-enhanced (CBT-E) for eating disorders is based on the premise that these disorders share a core psychopathology of placing disproportionate importance on physical appearance and weight. This excessive valuation leads to maladaptive behaviors related to eating and body image, which CBT-E aims to address by focusing on the factors maintaining an individual's symptoms.\n\n2. The option \"Distorted body image and lack of awareness of weight status\" is incorrect because, while these factors may be present in some eating disorders, they do not encompass the broader psychopathology targeted by CBT-E, which focuses on valuation rather than just perception. \"Compulsive need for control over food and emotions\" is not the core psychopathology of eating disorders as defined by CBT-E; instead, it reflects specific behaviors that may arise from the underlying valuation issues. Lastly, \"An intense fear of food and social eating situations\" is also incorrect because, while fear can be a symptom in disorders like anorexia and bulimia, it does not capture the central theme of excessive valuation of appearance and weight that CBT-E addresses across various eating disorders.",
-      "kn": "KN44",
-      "kn_explanation": "This question assesses knowledge of evidence-based treatment models and their theoretical bases for eating disorders, falling under treatment techniques and interventions (KN44).",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
       "difficulty": "medium",
       "quality_comment": "The stem is clear and the distractors are realistic but distinct, reflecting common misconceptions and specifics of treatment models."
     },
@@ -25,8 +46,8 @@
       ],
       "answer": "Moisture alarm (bell-and-pad)",
       "explanation": "1. The \"moisture alarm (bell-and-pad)\" is the correct answer because it is the most common treatment for nocturnal enuresis, which involves repeated involuntary urination during sleep. This method effectively helps children learn to wake up when they begin to urinate, thereby promoting bladder control and reducing bedwetting episodes.\n\n2. **Behavioral dry-bed training:** This approach may involve various behavioral strategies to encourage dry nights, but it is not as effective or commonly recommended as the moisture alarm for nocturnal enuresis. \n\n   **Imipramine medication:** While imipramine has been used for treating enuresis, it is not considered a first-line treatment due to potential side effects and the availability of more effective non-pharmacological options like the moisture alarm.\n\n   **Desmopressin monotherapy:** Although desmopressin can reduce or stop bedwetting, it is associated with a high risk of relapse when discontinued and is not the first-line treatment compared to the moisture alarm method.",
-      "kn": "KN44",
-      "kn_explanation": "This question focuses on treatment intervention principles for elimination disorders, specifically the behavioral approach, which aligns with treatment techniques and evidence (KN44).",
+      "kn": "KN37",
+      "kn_explanation": "This question is best aligned with KN37 because it tests Factors influencing evidence-based interpretation of data and decision-making (e.g., base rates, group differences, cultural biases and differences, heuristics).",
       "difficulty": "easy",
       "quality_comment": "The options present plausible treatments for enuresis, with the moisture alarm clearly the best first-line evidence-based intervention, enhancing question validity."
     },
@@ -40,8 +61,8 @@
       ],
       "answer": "Electrolyte imbalance leading to cardiac arrhythmias",
       "explanation": "1. The correct answer, \"Electrolyte imbalance leading to cardiac arrhythmias,\" is directly associated with the compensatory behaviors seen in bulimia nervosa, particularly self-induced vomiting and excessive exercise. These behaviors can result in significant fluid loss and electrolyte disturbances, which can lead to serious medical complications such as cardiac arrhythmias due to the heart's reliance on proper electrolyte levels for maintaining normal rhythm and function.\n\n2. The option \"Severe malnutrition affecting all major organ systems\" is incorrect because, while malnutrition can occur in bulimia nervosa, it is more characteristic of anorexia nervosa, where energy intake is severely restricted. \"Intestinal obstruction and lead poisoning\" is incorrect as these complications are primarily related to pica, which involves the ingestion of non-nutritive substances, rather than the behaviors associated with bulimia nervosa. Lastly, \"Osteoporosis from prolonged calcium deficiency\" is incorrect because, while individuals with eating disorders may experience bone density loss, it is more closely linked to anorexia nervosa and prolonged malnutrition rather than the compensatory behaviors specific to bulimia nervosa.",
-      "kn": "KN1",
-      "kn_explanation": "This assesses knowledge of physiological consequences of psychological disorders, fitting biological bases of behavior related to medical complications (KN1).",
+      "kn": "KN33",
+      "kn_explanation": "This question is best aligned with KN33 because it tests Issues of differential diagnosis and integration of non-psychological information into psychological assessment.",
       "difficulty": "medium",
       "quality_comment": "The distractors include serious complications related to other feeding disorders, increasing the plausibility of incorrect choices and testing detailed knowledge."
     },
@@ -54,9 +75,9 @@
         "Pharmacotherapy with olanzapine"
       ],
       "answer": "Cognitive behavior therapy (CBT) post-hospitalization",
-      "explanation": "1. **Correct Answer: Cognitive behavior therapy (CBT) post-hospitalization**  \nCognitive behavior therapy (CBT) post-hospitalization is the most appropriate treatment approach for a patient with anorexia nervosa who is resistant to treatment and denies having an eating disorder because it focuses on addressing distorted beliefs about weight and shape while enhancing motivation for change. This intervention is designed to help patients recognize and replace problematic thinking, which is crucial for those who may not acknowledge their eating issues, particularly after initial weight restoration.\n\n2. **Incorrect Options:**\n- **Family-based treatment (FBT):** While FBT is effective for adolescents with anorexia, it primarily focuses on parental involvement in nutritional rehabilitation and may not directly address the individual\u2019s motivation and distorted beliefs post-hospitalization.\n- **Enhanced cognitive-behavior therapy (CBT-E):** Although CBT-E is beneficial for various eating disorders, it is a transdiagnostic treatment that may not specifically target the unique motivational challenges faced by patients who have already been hospitalized and are resistant to treatment.\n- **Pharmacotherapy with olanzapine:** This medication has shown some efficacy in fostering weight gain; however, it does not address the psychological components of anorexia, such as distorted beliefs and motivation, which are critical for long-term recovery.",
-      "kn": "KN44",
-      "kn_explanation": "This question targets treatment decision-making and intervention techniques for anorexia nervosa, relevant to treatment efficacy and approaches (KN44).",
+      "explanation": "1. **Correct Answer: Cognitive behavior therapy (CBT) post-hospitalization**  \nCognitive behavior therapy (CBT) post-hospitalization is the most appropriate treatment approach for a patient with anorexia nervosa who is resistant to treatment and denies having an eating disorder because it focuses on addressing distorted beliefs about weight and shape while enhancing motivation for change. This intervention is designed to help patients recognize and replace problematic thinking, which is crucial for those who may not acknowledge their eating issues, particularly after initial weight restoration.\n\n2. **Incorrect Options:**\n- **Family-based treatment (FBT):** While FBT is effective for adolescents with anorexia, it primarily focuses on parental involvement in nutritional rehabilitation and may not directly address the individual’s motivation and distorted beliefs post-hospitalization.\n- **Enhanced cognitive-behavior therapy (CBT-E):** Although CBT-E is beneficial for various eating disorders, it is a transdiagnostic treatment that may not specifically target the unique motivational challenges faced by patients who have already been hospitalized and are resistant to treatment.\n- **Pharmacotherapy with olanzapine:** This medication has shown some efficacy in fostering weight gain; however, it does not address the psychological components of anorexia, such as distorted beliefs and motivation, which are critical for long-term recovery.",
+      "kn": "KN40",
+      "kn_explanation": "This question is best aligned with KN40 because it tests Measurement of outcomes and changes due to prevention or intervention efforts with individuals, couples, families, groups, and organizations.",
       "difficulty": "medium",
       "quality_comment": "The options reflect common treatments, but only CBT post-hospitalization specifically targets motivation and cognition, making distractors plausible yet distinct."
     },
@@ -100,8 +121,8 @@
       ],
       "answer": "Stimulus control",
       "explanation": "1. **Correct Answer: Stimulus control**  \n\"Stimulus control\" is the correct answer because it is a key component of cognitive-behavior therapy for insomnia (CBT-I) that focuses on strengthening the bed and bedroom as cues for sleep. This is achieved by encouraging individuals to associate their bed with sleep rather than wakefulness, which involves practices such as going to bed only when tired and using the bed solely for sleep.\n\n2. **Incorrect Options:**\n- **Cognitive restructuring:** This component involves identifying and replacing negative thoughts and beliefs that contribute to insomnia, but it does not specifically target the environmental cues associated with sleep.\n- **Sleep hygiene training:** While this component provides education about behaviors that facilitate or interfere with sleep, it does not directly focus on strengthening the bed and bedroom as cues for sleep.\n- **Sleep restriction:** This technique aims to improve sleep efficiency by limiting the time spent in bed to the amount of time a person typically sleeps, but it does not enhance the association between the bed and sleep.",
-      "kn": "KN44",
-      "kn_explanation": "This question focuses on understanding specific CBT-I techniques, reflecting treatment methods and their evidence base (KN44).",
+      "kn": "KN32",
+      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
       "difficulty": "medium",
       "quality_comment": "Options are all common CBT-I components, making the question a precise test of specific intervention knowledge."
     },
@@ -130,8 +151,8 @@
       ],
       "answer": "Parents taking charge of nutritional rehabilitation and weight restoration",
       "explanation": "1. The correct answer, \"Parents taking charge of nutritional rehabilitation and weight restoration,\" accurately reflects the primary focus of the first phase of family-based treatment (FBT) for adolescent anorexia nervosa. In this phase, parents are given the responsibility to oversee their child's nutritional rehabilitation and weight restoration with the support of the therapist, which is crucial for addressing the immediate health concerns associated with anorexia nervosa.\n\n2. The option \"Helping the adolescent develop age-appropriate independence regarding eating\" is incorrect because this aspect is addressed in later phases of FBT, not the first phase, which prioritizes parental control over nutritional rehabilitation. The option \"Addressing adolescent and family psychological issues\" is also incorrect, as the initial focus is primarily on nutritional and weight restoration rather than psychological issues, which are addressed in subsequent phases. Finally, \"Collaboratively disrupting the adolescent's binge and purge behaviors\" is wrong because this option pertains to the treatment of bulimia nervosa rather than anorexia nervosa, where the focus is on restoring weight and nutrition in the early stages of FBT.",
-      "kn": "KN44",
-      "kn_explanation": "The question assesses the foundational phase and goals of a specific evidence-based treatment, pertinent to treatment techniques (KN44).",
+      "kn": "KN32",
+      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
       "difficulty": "medium",
       "quality_comment": "Distractors describe later phases or features of other treatments, providing a clear but challenging test of FBT procedural knowledge."
     },
@@ -145,8 +166,8 @@
       ],
       "answer": "Venlafaxine",
       "explanation": "1. **Correct Answer: Venlafaxine**  \nVenlafaxine is the primary pharmacological treatment specifically used to reduce cataplexy in individuals with narcolepsy. It is classified as an antidepressant and is effective in managing cataplexy, which is characterized by sudden loss of muscle tone often triggered by strong emotions. The use of venlafaxine helps mitigate the frequency and severity of these episodes.\n\n2. **Incorrect Options:**  \n- **Modafinil:** While modafinil is used to improve alertness in narcolepsy, it is not specifically indicated for reducing cataplexy.  \n- **Lisdexamfetamine:** This medication is primarily a stimulant used to enhance alertness and does not specifically target cataplexy in narcolepsy.  \n- **Desmopressin:** This medication is used to manage enuresis (bedwetting) and is not relevant to the treatment of narcolepsy or its symptoms, including cataplexy.",
-      "kn": "KN2",
-      "kn_explanation": "This question assesses knowledge of drug classifications, mechanisms, and their use in treating sleep disorders (KN2).",
+      "kn": "KN32",
+      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
       "difficulty": "medium",
       "quality_comment": "Options include commonly used drugs but only venlafaxine targets cataplexy specifically, testing pharmacotherapy details."
     },
@@ -160,8 +181,8 @@
       ],
       "answer": "Maladaptive safety behaviors",
       "explanation": "1. The correct answer, \"maladaptive safety behaviors,\" refers to actions that individuals engage in to try to gain control over their sleep but ultimately exacerbate their insomnia. In this case, the patient's worry about the consequences of poor sleep and the act of frequently checking the clock are counterproductive strategies that increase anxiety and reinforce negative beliefs about sleep, thereby worsening their sleep difficulties.\n\n2. **Sleep hygiene violations:** This option is incorrect because sleep hygiene refers to practices that promote good sleep quality, such as maintaining a consistent sleep schedule or creating a comfortable sleep environment; the patient's behaviors do not fall under this category. \n\n**Sleep restriction techniques:** This option is incorrect because sleep restriction is a component of cognitive behavior therapy for insomnia (CBT-I) designed to improve sleep efficiency by limiting time in bed to the actual amount of sleep; the patient's behaviors do not align with this therapeutic approach.\n\n**Stimulus control errors:** This option is incorrect because stimulus control involves establishing the bed and bedroom as cues for sleep, such as going to bed only when tired; the patient's behaviors of worrying and clock-checking do not reflect errors in this strategy but rather maladaptive attempts to manage anxiety about sleep.",
-      "kn": "KN44",
-      "kn_explanation": "This question tests understanding of cognitive therapy concepts for insomnia, focusing on behavioral mechanisms relevant to treatment (KN44).",
+      "kn": "KN32",
+      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
       "difficulty": "medium",
       "quality_comment": "Distractors are plausible sleep-related terms, allowing for meaningful discrimination based on CT-I theory."
     },
@@ -220,8 +241,8 @@
       ],
       "answer": "Anxiety disorders often precede the onset of anorexia nervosa",
       "explanation": "1. The statement \"Anxiety disorders often precede the onset of anorexia nervosa\" is correct because the reference material indicates that there is evidence suggesting anxiety frequently occurs prior to the development of anorexia nervosa. This temporal relationship highlights that individuals may experience anxiety symptoms before the restrictive eating behaviors characteristic of anorexia emerge, suggesting a potential underlying vulnerability.\n\n2. The option \"Anxiety disorders often emerge after recovery from anorexia nervosa\" is incorrect because the material does not support the idea that anxiety disorders typically develop following recovery; rather, they are often present before the onset of anorexia. The statement \"Anxiety disorders typically co-occur but are unrelated in onset\" is wrong because it implies that the two disorders are independent of each other, while the reference material emphasizes that anxiety often precedes anorexia. Lastly, the option \"Anxiety disorders only emerge in severe cases of anorexia nervosa\" is incorrect as it suggests that anxiety is exclusively linked to severe cases, whereas the evidence indicates that anxiety can be present before anorexia develops, regardless of severity.",
-      "kn": "KN39",
-      "kn_explanation": "This question probes knowledge of psychopathology theories and models relating to feeding/eating disorders, specifically temporal precedence of comorbid anxiety (KN39).",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
       "difficulty": "medium",
       "quality_comment": "The options are well-constructed and reflect common clinical patterns, making discrimination of temporal sequence necessary."
     },
@@ -234,7 +255,7 @@
         "Anchoring bias"
       ],
       "answer": "Base rate fallacy",
-      "explanation": "1. **Base rate fallacy** is the correct answer because it refers to the error in reasoning that occurs when people ignore the base rate (the general prevalence) of a condition or symptom in the population. In psychological assessment, particularly with rare symptoms, failing to consider low base rates can lead to overestimating the likelihood of a disorder, resulting in misinterpretation of assessment results.\n\n2. **Confirmation bias** is incorrect because it involves favoring information that confirms existing beliefs rather than considering all relevant data, which is not specifically about the misinterpretation of rare symptoms based on their prevalence. **Overconfidence effect** is wrong as it pertains to an individual\u2019s excessive confidence in their knowledge or predictions, rather than a misunderstanding of statistical prevalence. **Anchoring bias** is also incorrect since it refers to relying too heavily on the first piece of information encountered (the \"anchor\") when making decisions, rather than the statistical base rates of symptoms.",
+      "explanation": "1. **Base rate fallacy** is the correct answer because it refers to the error in reasoning that occurs when people ignore the base rate (the general prevalence) of a condition or symptom in the population. In psychological assessment, particularly with rare symptoms, failing to consider low base rates can lead to overestimating the likelihood of a disorder, resulting in misinterpretation of assessment results.\n\n2. **Confirmation bias** is incorrect because it involves favoring information that confirms existing beliefs rather than considering all relevant data, which is not specifically about the misinterpretation of rare symptoms based on their prevalence. **Overconfidence effect** is wrong as it pertains to an individual’s excessive confidence in their knowledge or predictions, rather than a misunderstanding of statistical prevalence. **Anchoring bias** is also incorrect since it refers to relying too heavily on the first piece of information encountered (the \"anchor\") when making decisions, rather than the statistical base rates of symptoms.",
       "kn": "KN37",
       "kn_explanation": "This question addresses evidence-based interpretation of data and cognitive biases relevant to psychological assessment and diagnosis (KN37).",
       "difficulty": "medium",
@@ -266,8 +287,8 @@
       "answer": "All-or-nothing thinking about food",
       "explanation": "All-or-nothing thinking is a cognitive distortion where individuals view situations in black-and-white terms, which is often seen in those with eating disorders. CBT-E helps clients recognize and modify these thought patterns.",
       "difficulty": "easy",
-      "kn": "KN44",
-      "kn_explanation": "This question assesses knowledge of evidence-based treatment models and their theoretical bases for eating disorders, falling under treatment techniques and interventions (KN44).",
+      "kn": "KN40",
+      "kn_explanation": "This question is best aligned with KN40 because it tests Measurement of outcomes and changes due to prevention or intervention efforts with individuals, couples, families, groups, and organizations.",
       "quality_comment": "This question effectively tests knowledge of cognitive distortions relevant to eating disorders.",
       "is_lock_in_drill": true,
       "lock_in_level": "easier",
@@ -286,8 +307,8 @@
       "answer": "Perfectionism regarding body shape",
       "explanation": "Perfectionism, particularly concerning body shape and weight, can drive individuals to engage in disordered eating behaviors as they strive for an unattainable ideal. CBT-E addresses these perfectionistic tendencies to help break the cycle.",
       "difficulty": "hard",
-      "kn": "KN44",
-      "kn_explanation": "This question assesses knowledge of evidence-based treatment models and their theoretical bases for eating disorders, falling under treatment techniques and interventions (KN44).",
+      "kn": "KN32",
+      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
       "quality_comment": "This question challenges the test-taker to connect psychological factors with eating disorder maintenance.",
       "is_lock_in_drill": true,
       "lock_in_level": "harder",

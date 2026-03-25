@@ -1,6 +1,48 @@
 {
   "questions": [
     {
+      "stem": "A psychologist is consulting with a manufacturing company about leadership effectiveness. According to Fiedler's contingency model, a task-oriented leader with a low LPC score would be MOST effective in which of the following situations?",
+      "options": [
+        "A moderately favorable situation where leader-member relations are good but task structure is low",
+        "A very favorable situation where the leader has good relations, high task structure, and strong position power",
+        "A moderately favorable situation where the leader must balance relationship building with task completion",
+        "Any situation, provided the leader receives training to adapt their style to the group's needs"
+      ],
+      "answer": "A very favorable situation where the leader has good relations, high task structure, and strong position power",
+      "explanation": "Fiedler's contingency model holds that low-LPC (task-oriented) leaders perform best in situations that are either very favorable or very unfavorable. In highly favorable conditions (good leader-member relations, high task structure, strong position power), the task-oriented leader thrives because the group is already cohesive and the work is clear, so directive leadership moves things forward efficiently. Option A describes a moderately favorable situation, which is where high-LPC (relationship-oriented) leaders perform best. Option C also describes moderate favorability. Option D is incorrect because a central tenet of Fiedler's model is that leadership style is relatively fixed—rather than training the leader to change style, the model recommends changing the situation to match the leader.",
+      "kn": "KN46",
+      "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
+      "difficulty": "hard",
+      "quality_comment": "Strong question testing core LPC contingency theory. However, the provided lesson content does not cover Fiedler's model, so this is based on general EPPP knowledge rather than the lesson.",
+      "suggestedLesson": "5-6-leadership",
+      "suggestedParagraph": "## Fiedler's Contingency Model",
+      "lessonExcerpt": "Fiedler used the Least Preferred Coworker (LPC) scale. Leaders rate their least preferred coworker on bipolar adjectives. Low LPC leaders (task-oriented) rate their least preferred coworker negatively because they focus on that person's poor task performance.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 31
+    },
+    {
+      "stem": "A newly hired employee quickly adopts the work habits and values of a senior colleague whom she admires and with whom she strongly identifies. The senior colleague's ability to influence the new employee's behavior is best explained by which of French and Raven's bases of social power?",
+      "options": [
+        "Expert power",
+        "Legitimate power",
+        "Referent power",
+        "Informational power"
+      ],
+      "answer": "Referent power",
+      "explanation": "Referent power is based on identification with and admiration for the power holder. The new employee changes her behavior because she identifies with and wants to be like the senior colleague, which is the hallmark of referent power. Expert power (A) is based on perceived knowledge or skill, not personal identification. Legitimate power (B) derives from a formal role or position of authority. Informational power (D) stems from possessing specific information others need. The key distinguishing feature here is the identification and admiration, pointing to referent power.",
+      "kn": "KN16",
+      "kn_explanation": "Adopting habits/values of an admired colleague reflects social influence processes (identification, conformity) within a work system",
+      "difficulty": "medium",
+      "quality_comment": "Well-constructed vignette that clearly distinguishes referent power from other bases.",
+      "suggestedLesson": "5-6-leadership",
+      "suggestedParagraph": "## French and Raven's Bases of Social Power",
+      "lessonExcerpt": "French and Raven (1958) identified five types of power leaders use to influence others. The 'softer' forms of power (expert and referent) generate genuine commitment, while reward and legitimate power get compliance, and coercive power often backfires with resistance.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 4
+    },
+    {
       "stem": "According to Judge, Bono, Ilies, and Gerehardt (2002), which Big Five personality traits are most strongly correlated with leader effectiveness?",
       "options": [
         "Neuroticism and openness",
@@ -10,8 +52,8 @@
       ],
       "answer": "Extraversion and conscientiousness",
       "explanation": "1. The correct answer, \"Extraversion and conscientiousness,\" is supported by Judge, Bono, Ilies, and Gerehardt’s (2002) meta-analysis, which found that these two traits have the largest correlation coefficients with leader effectiveness, specifically .31 for extraversion and .28 for conscientiousness. These traits are associated with positive leader behaviors, such as being sociable, assertive, organized, and dependable, which contribute to effective leadership.\n\n2. The option \"Neuroticism and openness\" is incorrect because while openness can be beneficial, neuroticism is generally associated with negative outcomes, including increased anxiety and emotional instability, which can hinder leadership effectiveness. \"Agreeableness and openness\" is also wrong; although agreeableness can foster positive relationships, it is not one of the top traits correlated with leader effectiveness as identified in the meta-analysis. Lastly, \"Conscientiousness and neuroticism\" is incorrect because, while conscientiousness is positively correlated with effective leadership, neuroticism is negatively correlated and can impair a leader's ability to perform effectively.",
-      "kn": "KN34",
-      "kn_explanation": "The question involves assessment and diagnosis concepts related to identifying personality traits linked to leadership effectiveness, which is appropriate for KN34.",
+      "kn": "KN46",
+      "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
       "difficulty": "medium",
       "quality_comment": "The question is clear and targets knowledge of personality traits in leadership, with plausible distractors that could challenge test-takers."
     },
@@ -70,8 +112,8 @@
       ],
       "answer": "The leader is task-oriented and describes their least preferred coworker negatively",
       "explanation": "1. The correct answer, \"The leader is task-oriented and describes their least preferred coworker negatively,\" aligns with Fiedler’s Contingency Model, which states that a low Least Preferred Coworker (LPC) score indicates a task-oriented leadership style. Leaders with low LPC scores focus on the performance and task completion of their least preferred coworker, resulting in negative descriptions, as they prioritize task performance over interpersonal qualities.\n\n2. The option \"The leader is primarily person-oriented\" is incorrect because a low LPC score specifically signifies a task-oriented focus, not a person-oriented one. The statement \"The leader is conflicted about their coworker’s traits\" is wrong because low LPC leaders do not exhibit conflict; they evaluate coworkers based on their task performance, leading to negative perceptions. Lastly, the option \"The leader is flexible and switches between task and person orientation\" is incorrect, as Fiedler posits that a leader’s style is stable and not characterized by flexibility between orientations.",
-      "kn": "KN34",
-      "kn_explanation": "The question addresses assessment instruments used to evaluate leadership orientation, fitting well with organizational assessment topics (KN34).",
+      "kn": "KN46",
+      "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
       "difficulty": "hard",
       "quality_comment": "This question requires understanding of a specific and less commonly known leadership assessment tool, raising its difficulty appropriately."
     },
@@ -101,7 +143,7 @@
       "answer": "Supportive leadership",
       "explanation": "1. **Supportive leadership** is the correct answer according to House's Path-Goal Theory, which posits that this style is most effective when subordinates have a high need for affiliation and are experiencing low job satisfaction while performing mundane tasks. Supportive leaders focus on creating a friendly and supportive work environment, which is essential for enhancing the morale and motivation of employees who may feel unchallenged or disengaged.\n\n2. **Directive leadership** is incorrect because it is most effective when subordinates are dogmatic or authoritarian and the tasks are ambiguous and complex, rather than when employees need support in mundane tasks. **Achievement-oriented leadership** is also not suitable, as it is best for subordinates who are motivated and capable, focusing on setting high goals and expectations, which does not align with the needs of those struggling with low job satisfaction. Lastly, **participative leadership** is inappropriate in this context because it is more effective when subordinates are willing and able to contribute to decision-making, which is not the case when they are performing mundane tasks with low engagement.",
       "kn": "KN46",
-      "kn_explanation": "The question assesses theoretical knowledge about how leaders adapt style to subordinate needs, a key part of treatment and supervision models (KN46).",
+      "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
       "difficulty": "medium",
       "quality_comment": "Clear and focused stem with plausible distractors, requiring precise application of the theory."
     },
@@ -116,7 +158,7 @@
       "answer": "The optimal leadership decision-making style based on situational variables",
       "explanation": "The model provides decision trees and matrices that help determine whether a leader should make decisions alone or include group members, depending on factors such as expertise and required commitment.",
       "kn": "KN46",
-      "kn_explanation": "This question requires knowledge of a leadership theory focused on decision-making processes relevant to intervention and supervision (KN46).",
+      "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
       "difficulty": "medium",
       "quality_comment": "Distractors are credible and somewhat related to leadership theory, adequately challenging knowledge without being misleading."
     },
@@ -146,7 +188,7 @@
       "answer": "Management by contingency rewards",
       "explanation": "Contingency rewards are a feature of transactional leadership, whereas transformational leadership includes idealized influence, inspirational motivation, intellectual stimulation, and individualized consideration.",
       "kn": "KN46",
-      "kn_explanation": "This tests differentiation between transformational and transactional leadership styles, part of contemporary treatment/intervention theories (KN46).",
+      "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
       "difficulty": "medium",
       "quality_comment": "The question clearly differentiates related constructs; distractors reflect both leadership styles to test nuanced understanding."
     },
@@ -175,8 +217,8 @@
       ],
       "answer": "Intelligence",
       "explanation": "1. \"Intelligence\" is the correct answer because research indicates that leader intelligence correlates with leader effectiveness, particularly when the leader’s stress level is low and a directive leadership style is employed. Specifically, Judge, Colbert, and Ilies’s meta-analysis found a corrected correlation coefficient of .27, suggesting that intelligence is a significant predictor of effectiveness under these specific conditions.\n\n2. \n- **Emotional intelligence**: While important in leadership, emotional intelligence is not specifically mentioned in the reference material as a predictor of leader effectiveness in conjunction with low stress and directive style.\n- **Agreeableness**: This trait is not highlighted in the reference material as a significant predictor of leader effectiveness; instead, extraversion and conscientiousness are noted for their stronger correlations.\n- **Openness to experience**: Similar to agreeableness, openness is not discussed in the context of predicting leader effectiveness within the provided material, and thus lacks the empirical support found for intelligence.",
-      "kn": "KN34",
-      "kn_explanation": "This question concerns assessment of leader characteristics and how contextual factors influence predictive validity, matching KN34 on assessment theories.",
+      "kn": "KN46",
+      "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
       "difficulty": "medium",
       "quality_comment": "This question requires integration of trait and situational influences, providing moderate difficulty and differentiation."
     },
@@ -191,7 +233,7 @@
       "answer": "Reward and legitimate power elicit compliance, expert and referent power elicit commitment",
       "explanation": "1. The correct answer, \"Reward and legitimate power elicit compliance, expert and referent power elicit commitment,\" aligns with Yukl's (2002) findings on leader power bases. Yukl indicates that reward power, which involves control over rewards, and legitimate power, derived from formal positions, are effective in gaining compliance from subordinates. In contrast, expert power, based on knowledge and expertise, and referent power, stemming from respect and admiration, are more likely to foster commitment among subordinates, leading to higher engagement and motivation.\n\n2. The first incorrect option, \"Coercive power elicits compliance, reward power elicits resistance,\" is wrong because Yukl states that coercive power typically elicits resistance, not compliance, while reward power is associated with compliance. The second option, \"Expert power elicits resistance, coercive power elicits commitment,\" is incorrect as expert power is linked to commitment rather than resistance, and coercive power does not foster commitment. Lastly, the option \"Referent power elicits compliance, legitimate power elicits resistance\" is incorrect because referent power is associated with commitment, and legitimate power is expected to elicit compliance, not resistance.",
       "kn": "KN46",
-      "kn_explanation": "This item tests understanding of power dynamics and subordinate reactions relevant to leadership interventions, fitting KN46.",
+      "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
       "difficulty": "medium",
       "quality_comment": "Choices are nuanced and related; the correct answer requires precise knowledge of power bases and influence outcomes."
     },
@@ -206,7 +248,7 @@
       "answer": "Unstructured task",
       "explanation": "1. \"Unstructured task\" is the correct answer because, according to Fiedler's Contingency Model, a very favorable situation for a leader is characterized by high task structure. An unstructured task lacks clear guidelines and objectives, making it difficult for leaders to exert influence and achieve performance goals, thereby contributing to an unfavorable situation.\n\n2. \n- **Strong position power**: This option is incorrect because strong position power enhances a leader’s ability to influence subordinates, contributing to a favorable situation.\n- **Good leader-member relations**: This option is incorrect because positive leader-member relations foster trust and respect, which are essential for creating a favorable situation.\n- **High task structure**: This option is incorrect as high task structure provides clear guidelines and expectations, facilitating effective leadership and contributing to a very favorable situation.",
       "kn": "KN46",
-      "kn_explanation": "The question assesses understanding of situational variables affecting leadership effectiveness according to Fiedler’s contingency theory, relevant to treatment knowledge (KN46).",
+      "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
       "difficulty": "medium",
       "quality_comment": "Clear distractors focus on key situational elements; discriminates well between knowledge levels about leadership contingencies."
     },
@@ -221,8 +263,8 @@
       "answer": "Extraversion and agreeableness",
       "explanation": "1. \"Extraversion and agreeableness\" is the correct answer because these two Big Five personality traits have been shown to correlate positively with leader effectiveness, which is essential for successful team collaboration in organizational settings. Extraversion reflects sociability and assertiveness, promoting effective communication and relationship-building within teams. Agreeableness enhances cooperation and trust, fostering a supportive team environment that facilitates collaboration.\n\n2. The option \"Neuroticism and openness\" is incorrect because neuroticism typically relates to emotional instability, which can hinder effective collaboration, while openness, although valuable, does not have a direct correlation with team collaboration as strongly as extraversion and agreeableness. \n\nThe option \"Conscientiousness and neuroticism\" is wrong because, while conscientiousness is associated with reliability and goal achievement, neuroticism can negatively impact team dynamics and collaboration due to its association with anxiety and emotional instability. \n\nLastly, \"Openness and extraversion\" is incorrect because, although extraversion is beneficial for team collaboration, openness does not directly correlate with team success in the same way agreeableness does, as it primarily relates to creativity and willingness to consider new ideas rather than interpersonal collaboration.",
       "difficulty": "easy",
-      "kn": "KN34",
-      "kn_explanation": "The question involves assessment and diagnosis concepts related to identifying personality traits linked to leadership effectiveness, which is appropriate for KN34.",
+      "kn": "KN46",
+      "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
       "quality_comment": "This question effectively assesses understanding of personality traits in a different but relevant context.",
       "is_lock_in_drill": true,
       "lock_in_level": "easier",
@@ -241,8 +283,8 @@
       "answer": "Extraversion and openness",
       "explanation": "1. \"Extraversion and openness\" is the correct answer because these traits are associated with transformational leadership, which emphasizes the ability to inspire and motivate followers. Extraversion, characterized by sociability and assertiveness, facilitates a leader's charisma and ability to engage with others, while openness to experience fosters creativity and adaptability, both crucial for effective transformational leadership.\n\n2. \n- **Conscientiousness and agreeableness**: While conscientiousness relates to dependability and organization, and agreeableness involves being cooperative and compassionate, neither trait specifically predicts a leader's ability to inspire and motivate followers in the context of transformational leadership.\n  \n- **Neuroticism and extraversion**: Neuroticism, which involves emotional instability and anxiety, typically does not correlate positively with effective leadership; thus, it does not predict a leader's ability to inspire, even though extraversion is a relevant trait.\n\n- **Agreeableness and conscientiousness**: Similar to the first incorrect option, although these traits contribute to a leader’s interpersonal relationships and reliability, they do not directly relate to the characteristics needed for inspiring and motivating followers within transformational leadership.",
       "difficulty": "hard",
-      "kn": "KN34",
-      "kn_explanation": "The question involves assessment and diagnosis concepts related to identifying personality traits linked to leadership effectiveness, which is appropriate for KN34.",
+      "kn": "KN46",
+      "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
       "quality_comment": "This question challenges the test-taker to apply knowledge of personality traits to a specific leadership style, enhancing critical thinking.",
       "is_lock_in_drill": true,
       "lock_in_level": "harder",

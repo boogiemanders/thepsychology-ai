@@ -1,6 +1,153 @@
 {
   "questions": [
     {
+      "stem": "Which of the following methods is most effective for increasing the sensitivity of a psychological test?",
+      "options": [
+        "Reducing the number of items",
+        "Using a forced-choice format",
+        "Increasing the test length",
+        "Employing a Likert scale"
+      ],
+      "answer": "Using a forced-choice format",
+      "explanation": "A forced-choice format can increase sensitivity by requiring respondents to make a choice between two equally appealing options, thus providing clearer distinctions in responses. The other options may not effectively enhance sensitivity.",
+      "kn": "KN41",
+      "kn_explanation": "This question is best aligned with KN41 because it tests Use of technology in implementing tests, surveys, and other forms of assessment and diagnostic evaluation (e.g., validity, cost-effectiveness, consumer acceptability).",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests knowledge of test development strategies.",
+      "suggestedLesson": "5-personality-tests",
+      "suggestedParagraph": "## Understanding Personality Assessment Tools: Your Guide to Structured and Projective Tests",
+      "lessonExcerpt": "Using a forced-choice format can increase the sensitivity of a psychological test.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 3
+    },
+    {
+      "stem": "What is the primary goal of frame-of-reference training in performance appraisal?",
+      "options": [
+        "To enhance employee motivation",
+        "To standardize performance ratings across evaluators",
+        "To improve communication skills",
+        "To increase job satisfaction"
+      ],
+      "answer": "To standardize performance ratings across evaluators",
+      "explanation": "Frame-of-reference training aims to ensure that all evaluators use the same standards and criteria when assessing employee performance, thus standardizing ratings. The other options do not capture the primary goal of this training.",
+      "kn": "KN34",
+      "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and effectively assesses understanding of performance appraisal techniques.",
+      "suggestedLesson": "5-personality-tests",
+      "suggestedParagraph": "## Understanding Personality Assessment Tools: Your Guide to Structured and Projective Tests",
+      "lessonExcerpt": "The primary goal of frame-of-reference training is to standardize performance ratings across evaluators.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 6
+    },
+    {
+      "stem": "In functional analysis of behavior, what is the primary goal of identifying antecedents and consequences?",
+      "options": [
+        "A. To increase the frequency of maladaptive behaviors",
+        "B. To understand the context in which behaviors occur",
+        "C. To eliminate all behaviors from the individual",
+        "D. To create a standardized behavior assessment tool"
+      ],
+      "answer": "B. To understand the context in which behaviors occur",
+      "explanation": "Option B is correct because the goal of functional analysis is to identify the antecedents and consequences that influence behavior, thereby understanding the context in which behaviors occur. Option A is incorrect as the aim is not to increase maladaptive behaviors. Option C is misleading; the goal is not to eliminate behaviors but to understand them. Option D is not relevant to the purpose of functional analysis.",
+      "kn": "KN30",
+      "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of functional analysis.",
+      "suggestedLesson": "5-personality-tests",
+      "suggestedParagraph": "## Understanding Personality Assessment Tools: Your Guide to Structured and Projective Tests",
+      "lessonExcerpt": "The goal of functional analysis is to identify the antecedents and consequences that influence behavior.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 23
+    },
+    {
+      "stem": "Which strategy is most effective in addressing rater leniency during performance appraisals?",
+      "options": [
+        "Implementing a forced-choice rating system",
+        "Providing extensive training on rating criteria",
+        "Using a peer review process",
+        "Conducting appraisals more frequently"
+      ],
+      "answer": "Providing extensive training on rating criteria",
+      "explanation": "Providing extensive training on rating criteria helps raters understand the standards and reduces leniency bias. The other options may help but do not directly address the root cause of leniency.",
+      "kn": "KN34",
+      "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests knowledge of performance appraisal techniques.",
+      "suggestedLesson": "5-personality-tests",
+      "suggestedParagraph": "## Understanding Personality Assessment Tools: Your Guide to Structured and Projective Tests",
+      "lessonExcerpt": "Personality tests fall into two main camps: structured tests (where questions have clear, specific answers) and projective tests (where people respond to ambiguous images and reveal themselves indirectly).",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 6
+    },
+    {
+      "stem": "Which symptom is most characteristic of dissociative amnesia?",
+      "options": [
+        "Inability to recall important autobiographical information",
+        "Experiencing episodes of intense fear in social situations",
+        "Persistent feelings of sadness and hopelessness",
+        "Delusions of grandeur or persecution"
+      ],
+      "answer": "Inability to recall important autobiographical information",
+      "explanation": "The hallmark of dissociative amnesia is the inability to recall significant personal information, often related to trauma. The other options describe symptoms of anxiety disorders and mood disorders.",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of dissociative disorders.",
+      "suggestedLesson": "5-personality-tests",
+      "suggestedParagraph": "## Understanding Personality Assessment Tools: Your Guide to Structured and Projective Tests",
+      "lessonExcerpt": "Personality tests fall into two main camps: structured tests (where questions have clear, specific answers) and projective tests (where people respond to ambiguous images and reveal themselves indirectly).",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 9
+    },
+    {
+      "stem": "What is the primary purpose of empirical criterion keying in personality assessment?",
+      "options": [
+        "To ensure the test is culturally fair.",
+        "To identify items that differentiate between groups.",
+        "To create a forced-choice format.",
+        "To enhance the test's face validity."
+      ],
+      "answer": "To identify items that differentiate between groups.",
+      "explanation": "Empirical criterion keying focuses on selecting items that effectively distinguish between individuals with different diagnoses or characteristics, enhancing the test's predictive validity. The other options do not accurately describe the primary purpose of this method.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and assesses knowledge of personality assessment methods.",
+      "suggestedLesson": "5-personality-tests",
+      "suggestedParagraph": "## Understanding Personality Assessment Tools: Your Guide to Structured and Projective Tests",
+      "lessonExcerpt": "The lesson does not explicitly cover empirical criterion keying in personality assessment.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 16
+    },
+    {
+      "stem": "What is the main purpose of projective tests in psychology?",
+      "options": [
+        "To measure specific personality traits directly.",
+        "To assess cognitive abilities.",
+        "To reveal unconscious thoughts and feelings.",
+        "To provide standardized scores for comparison."
+      ],
+      "answer": "To reveal unconscious thoughts and feelings.",
+      "explanation": "Projective tests are designed to uncover underlying emotions and thoughts by analyzing responses to ambiguous stimuli. The other options describe functions of more structured assessments rather than the exploratory nature of projective tests.",
+      "kn": "KN41",
+      "kn_explanation": "This question is best aligned with KN41 because it tests Use of technology in implementing tests, surveys, and other forms of assessment and diagnostic evaluation (e.g., validity, cost-effectiveness, consumer acceptability).",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of projective testing purposes.",
+      "suggestedLesson": "5-personality-tests",
+      "suggestedParagraph": "## Understanding Personality Assessment Tools: Your Guide to Structured and Projective Tests",
+      "lessonExcerpt": "The lesson does not adequately cover the purpose of projective tests in psychology.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 17
+    },
+    {
       "stem": "Which personality assessment is based on the assumption that important personality traits are encoded in the English language and uses factor analysis to identify both primary and global traits?",
       "options": [
         "Sixteen Personality Factor Questionnaire (16 PF)",
@@ -9,7 +156,7 @@
         "Edwards Personal Preference Schedule (EPPS)"
       ],
       "answer": "Sixteen Personality Factor Questionnaire (16 PF)",
-      "explanation": "1. The \"Sixteen Personality Factor Questionnaire (16 PF)\" is the correct answer because it was developed by Cattell using the lexical strategy, which posits that important personality traits are encoded in language. Cattell employed factor analysis to distill a large number of personality descriptors into 16 primary traits and five broader global traits, effectively identifying both specific and overarching aspects of personality.\n\n2. The \"NEO Personality Inventory-3 (NEO-PI-3)\" is incorrect because, while it also uses a lexical approach and factor analysis, it focuses specifically on the Big Five personality traits rather than identifying a broader range of primary and global traits like the 16 PF. The \"Myers-Briggs Type Indicator (MBTI)\" is wrong because it is based on Jung\u2019s personality typology and identifies personality types through four bipolar dimensions, rather than deriving traits from language and factor analysis. Lastly, the \"Edwards Personal Preference Schedule (EPPS)\" is incorrect as it assesses basic needs through a forced-choice format, focusing on relative strengths of needs rather than employing factor analysis to identify personality traits.",
+      "explanation": "1. The \"Sixteen Personality Factor Questionnaire (16 PF)\" is the correct answer because it was developed by Cattell using the lexical strategy, which posits that important personality traits are encoded in language. Cattell employed factor analysis to distill a large number of personality descriptors into 16 primary traits and five broader global traits, effectively identifying both specific and overarching aspects of personality.\n\n2. The \"NEO Personality Inventory-3 (NEO-PI-3)\" is incorrect because, while it also uses a lexical approach and factor analysis, it focuses specifically on the Big Five personality traits rather than identifying a broader range of primary and global traits like the 16 PF. The \"Myers-Briggs Type Indicator (MBTI)\" is wrong because it is based on Jung’s personality typology and identifies personality types through four bipolar dimensions, rather than deriving traits from language and factor analysis. Lastly, the \"Edwards Personal Preference Schedule (EPPS)\" is incorrect as it assesses basic needs through a forced-choice format, focusing on relative strengths of needs rather than employing factor analysis to identify personality traits.",
       "kn": "KN32",
       "kn_explanation": "This question evaluates knowledge of commonly used personality assessment instruments and their theoretical basis.",
       "difficulty": "medium",
@@ -25,13 +172,13 @@
       ],
       "answer": "Ipsative scoring, which allows intra-individual but not inter-individual comparisons",
       "explanation": "1. The correct answer is \"Ipsative scoring, which allows intra-individual but not inter-individual comparisons\" because the Edwards Personal Preference Schedule (EPPS) uses a forced-choice format that yields ipsative scores. This means that the scores reflect the relative strength of an individual's needs by comparing choices made within the test but do not provide absolute measures that can be compared across different individuals, thus limiting inter-individual comparisons.\n\n2. The option \"Norm-referenced scoring, which allows extensive inter-individual comparisons\" is incorrect because norm-referenced scoring involves comparing an individual's score to a normative sample, which the EPPS does not provide. \"Criterion-referenced scoring, which compares examinees to fixed standards\" is also incorrect as the EPPS does not assess performance against fixed criteria but rather focuses on relative preferences. Lastly, \"Raw scores, which directly reflect absolute strength of needs\" is incorrect because the EPPS does not generate raw scores that indicate absolute strengths; instead, it produces ipsative scores that only suggest relative strengths of needs within the individual.",
-      "kn": "KN32",
-      "kn_explanation": "This question targets understanding of assessment scoring methods and their implications for test interpretation.",
+      "kn": "KN34",
+      "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
       "difficulty": "medium",
       "quality_comment": "Distractors are plausible but incorrect scoring types, making the correct choice clear for knowledgeable candidates."
     },
     {
-      "stem": "Which personality test categorizes individuals into 16 types based on four bipolar dimensions derived from Jung\u2019s theory?",
+      "stem": "Which personality test categorizes individuals into 16 types based on four bipolar dimensions derived from Jung’s theory?",
       "options": [
         "Myers-Briggs Type Indicator (MBTI)",
         "NEO Personality Inventory-3 (NEO-PI-3)",
@@ -39,7 +186,7 @@
         "Edwards Personal Preference Schedule (EPPS)"
       ],
       "answer": "Myers-Briggs Type Indicator (MBTI)",
-      "explanation": "1. The \"Myers-Briggs Type Indicator (MBTI)\" is the correct answer because it categorizes individuals into 16 distinct personality types based on four bipolar dimensions derived from Jung\u2019s personality typology: introversion-extraversion, sensing-intuition, thinking-feeling, and judging-perceiving. Each type represents a unique combination of these dimensions, allowing for a nuanced understanding of personality.\n\n2. The \"NEO Personality Inventory-3 (NEO-PI-3)\" is incorrect because it assesses the Big Five personality traits (openness, conscientiousness, extraversion, agreeableness, and neuroticism) rather than categorizing individuals into types. The \"Sixteen Personality Factor Questionnaire (16 PF)\" is also incorrect as it identifies 16 primary traits through factor analysis but does not classify individuals into types based on bipolar dimensions. Lastly, the \"Edwards Personal Preference Schedule (EPPS)\" is incorrect because it measures 15 basic needs using a forced-choice format, focusing on relative strengths of needs rather than categorizing personality types.",
+      "explanation": "1. The \"Myers-Briggs Type Indicator (MBTI)\" is the correct answer because it categorizes individuals into 16 distinct personality types based on four bipolar dimensions derived from Jung’s personality typology: introversion-extraversion, sensing-intuition, thinking-feeling, and judging-perceiving. Each type represents a unique combination of these dimensions, allowing for a nuanced understanding of personality.\n\n2. The \"NEO Personality Inventory-3 (NEO-PI-3)\" is incorrect because it assesses the Big Five personality traits (openness, conscientiousness, extraversion, agreeableness, and neuroticism) rather than categorizing individuals into types. The \"Sixteen Personality Factor Questionnaire (16 PF)\" is also incorrect as it identifies 16 primary traits through factor analysis but does not classify individuals into types based on bipolar dimensions. Lastly, the \"Edwards Personal Preference Schedule (EPPS)\" is incorrect because it measures 15 basic needs using a forced-choice format, focusing on relative strengths of needs rather than categorizing personality types.",
       "kn": "KN32",
       "kn_explanation": "This question assesses knowledge of specific personality assessment instruments and their theoretical underpinnings.",
       "difficulty": "easy",
@@ -54,14 +201,14 @@
         "Myers-Briggs Type Indicator (MBTI)"
       ],
       "answer": "NEO Personality Inventory-3 (NEO-PI-3)",
-      "explanation": "1. The **NEO Personality Inventory-3 (NEO-PI-3)** is the correct answer because it specifically assesses the \"Big Five\" personality traits: openness to experience, conscientiousness, extraversion, agreeableness, and neuroticism. Additionally, it provides scores not only on these broad traits but also on six or more facets for each, allowing for a detailed understanding of an individual's personality.\n\n2. The **Sixteen Personality Factor Questionnaire (16 PF)** is incorrect because it identifies 16 primary traits and five global traits, rather than the Big Five traits. The **Edwards Personal Preference Schedule (EPPS)** is not the correct answer as it focuses on 15 basic needs derived from Murray\u2019s system, using a forced-choice format that does not assess broad personality traits. Lastly, the **Myers-Briggs Type Indicator (MBTI)** is incorrect because it is based on Jung\u2019s personality typology and measures four bipolar dimensions, resulting in 16 personality types rather than the Big Five traits.",
+      "explanation": "1. The **NEO Personality Inventory-3 (NEO-PI-3)** is the correct answer because it specifically assesses the \"Big Five\" personality traits: openness to experience, conscientiousness, extraversion, agreeableness, and neuroticism. Additionally, it provides scores not only on these broad traits but also on six or more facets for each, allowing for a detailed understanding of an individual's personality.\n\n2. The **Sixteen Personality Factor Questionnaire (16 PF)** is incorrect because it identifies 16 primary traits and five global traits, rather than the Big Five traits. The **Edwards Personal Preference Schedule (EPPS)** is not the correct answer as it focuses on 15 basic needs derived from Murray’s system, using a forced-choice format that does not assess broad personality traits. Lastly, the **Myers-Briggs Type Indicator (MBTI)** is incorrect because it is based on Jung’s personality typology and measures four bipolar dimensions, resulting in 16 personality types rather than the Big Five traits.",
       "kn": "KN32",
       "kn_explanation": "This question tests understanding of major personality inventories and their trait models.",
       "difficulty": "medium",
       "quality_comment": "Good distractor options that are also personality tests enhance the question's rigor without ambiguity."
     },
     {
-      "stem": "According to meta-analytic research, which Big Five personality traits are most consistently associated with an increased risk for Alzheimer\u2019s disease and other neurocognitive disorders?",
+      "stem": "According to meta-analytic research, which Big Five personality traits are most consistently associated with an increased risk for Alzheimer’s disease and other neurocognitive disorders?",
       "options": [
         "High neuroticism and low conscientiousness",
         "High extraversion and high openness",
@@ -69,9 +216,9 @@
         "Low neuroticism and high conscientiousness"
       ],
       "answer": "High neuroticism and low conscientiousness",
-      "explanation": "1. The correct answer, \"High neuroticism and low conscientiousness,\" is supported by Aschwanden et al.\u2019s (2021) meta-analysis, which found that these two traits were significantly and most consistently linked to an increased risk for Alzheimer\u2019s disease and other forms of neurocognitive disorders. Neuroticism is associated with emotional instability and anxiety, while low conscientiousness relates to a lack of organization and reliability, both of which may contribute to cognitive decline.\n\n2. The incorrect options are as follows:\n- **High extraversion and high openness:** These traits are generally associated with sociability and a willingness to engage in new experiences, which do not correlate with increased risk for neurocognitive disorders according to the research.\n- **Low agreeableness and low extraversion:** While these traits may reflect certain personality styles, they have not been identified in the meta-analysis as significant risk factors for Alzheimer\u2019s disease or neurocognitive disorders.\n- **Low neuroticism and high conscientiousness:** This combination is typically associated with better mental health and cognitive functioning, making it unlikely to be linked to an increased risk for neurocognitive disorders.",
-      "kn": "KN1",
-      "kn_explanation": "This question integrates personality traits with neurobehavioral disease risk, fitting within biological bases of behavior.",
+      "explanation": "1. The correct answer, \"High neuroticism and low conscientiousness,\" is supported by Aschwanden et al.’s (2021) meta-analysis, which found that these two traits were significantly and most consistently linked to an increased risk for Alzheimer’s disease and other forms of neurocognitive disorders. Neuroticism is associated with emotional instability and anxiety, while low conscientiousness relates to a lack of organization and reliability, both of which may contribute to cognitive decline.\n\n2. The incorrect options are as follows:\n- **High extraversion and high openness:** These traits are generally associated with sociability and a willingness to engage in new experiences, which do not correlate with increased risk for neurocognitive disorders according to the research.\n- **Low agreeableness and low extraversion:** While these traits may reflect certain personality styles, they have not been identified in the meta-analysis as significant risk factors for Alzheimer’s disease or neurocognitive disorders.\n- **Low neuroticism and high conscientiousness:** This combination is typically associated with better mental health and cognitive functioning, making it unlikely to be linked to an increased risk for neurocognitive disorders.",
+      "kn": "KN41",
+      "kn_explanation": "This question is best aligned with KN41 because it tests Use of technology in implementing tests, surveys, and other forms of assessment and diagnostic evaluation (e.g., validity, cost-effectiveness, consumer acceptability).",
       "difficulty": "hard",
       "quality_comment": "The question requires integration of personality and neurocognitive disorder knowledge, appropriately challenging for the EPPP."
     },
@@ -103,18 +250,18 @@
       "kn": "KN32",
       "kn_explanation": "This question tests knowledge of specific scoring interpretation techniques for projective measures, critical in assessment.",
       "difficulty": "hard",
-      "quality_comment": "Distractors are related to other possible interpretations, increasing the question\u2019s discriminative power."
+      "quality_comment": "Distractors are related to other possible interpretations, increasing the question’s discriminative power."
     },
     {
       "stem": "The Thematic Apperception Test (TAT) was developed based on which of the following theoretical frameworks?",
       "options": [
-        "Murray\u2019s system of human needs involving needs and press",
-        "Jung\u2019s typology of personality dimensions",
-        "Costa and McCrae\u2019s Big Five factors",
-        "Cattell\u2019s lexical hypothesis and factor analysis"
+        "Murray’s system of human needs involving needs and press",
+        "Jung’s typology of personality dimensions",
+        "Costa and McCrae’s Big Five factors",
+        "Cattell’s lexical hypothesis and factor analysis"
       ],
-      "answer": "Murray\u2019s system of human needs involving needs and press",
-      "explanation": "1. \"Murray\u2019s system of human needs involving needs and press\" is the correct answer because the Thematic Apperception Test (TAT) was specifically developed by Henry Murray to assess human needs through storytelling. The test prompts examinees to create narratives based on ambiguous images, allowing insights into their internal needs and the external pressures (press) that influence their behavior.\n\n2. The option \"Jung\u2019s typology of personality dimensions\" is incorrect because while the Myers-Briggs Type Indicator (MBTI) is based on Jung\u2019s theories, the TAT is not; it focuses on needs rather than typological dimensions. \"Costa and McCrae\u2019s Big Five factors\" is wrong because the NEO Personality Inventory assesses these traits, not the TAT, which is centered on needs and press rather than broad personality dimensions. Lastly, \"Cattell\u2019s lexical hypothesis and factor analysis\" is incorrect as it pertains to the development of the Sixteen Personality Factor Questionnaire (16 PF), not the TAT, which is based on a different theoretical framework focused on human needs.",
+      "answer": "Murray’s system of human needs involving needs and press",
+      "explanation": "1. \"Murray’s system of human needs involving needs and press\" is the correct answer because the Thematic Apperception Test (TAT) was specifically developed by Henry Murray to assess human needs through storytelling. The test prompts examinees to create narratives based on ambiguous images, allowing insights into their internal needs and the external pressures (press) that influence their behavior.\n\n2. The option \"Jung’s typology of personality dimensions\" is incorrect because while the Myers-Briggs Type Indicator (MBTI) is based on Jung’s theories, the TAT is not; it focuses on needs rather than typological dimensions. \"Costa and McCrae’s Big Five factors\" is wrong because the NEO Personality Inventory assesses these traits, not the TAT, which is centered on needs and press rather than broad personality dimensions. Lastly, \"Cattell’s lexical hypothesis and factor analysis\" is incorrect as it pertains to the development of the Sixteen Personality Factor Questionnaire (16 PF), not the TAT, which is based on a different theoretical framework focused on human needs.",
       "kn": "KN32",
       "kn_explanation": "This item focuses on the theoretical foundation of a specific projective test, relevant for assessment knowledge.",
       "difficulty": "medium",
@@ -130,13 +277,13 @@
       ],
       "answer": "They present unstructured, ambiguous stimuli to elicit projections of personality",
       "explanation": "1. The correct answer, \"They present unstructured, ambiguous stimuli to elicit projections of personality,\" accurately describes projective personality tests because these tests operate on the assumption that individuals will project their personalities when presented with ambiguous stimuli. For example, in the Rorschach Inkblot Test, examinees interpret inkblots that lack clear meaning, allowing their responses to reveal underlying thoughts, feelings, and personality traits.\n\n2. The option \"They use direct self-report items with objective, non-ambiguous wording\" is incorrect because this characteristic describes structured personality tests, not projective tests. The statement \"They score examinees based on their absolute levels of traits relative to norms\" is misleading since projective tests do not provide absolute scores but rather interpret responses qualitatively. Lastly, \"They utilize forced-choice formats to avoid social desirability bias\" is incorrect as forced-choice formats, like those in the Edwards Personal Preference Schedule, are a feature of some structured tests, not projective tests, which allow for open-ended responses.",
-      "kn": "KN32",
-      "kn_explanation": "This question assesses understanding of the fundamental nature of projective personality testing within assessment.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
       "difficulty": "easy",
       "quality_comment": "Simple yet important distinction, with distractors reflecting characteristics of structured tests, enhancing clarity."
     },
     {
-      "stem": "In the Rorschach test, what does a 'whole' response location typically indicate about the examinee\u2019s cognitive style?",
+      "stem": "In the Rorschach test, what does a 'whole' response location typically indicate about the examinee’s cognitive style?",
       "options": [
         "Creative or theoretical thinking",
         "Emotional reactivity",
@@ -159,9 +306,9 @@
         "A hierarchical model of five broad traits with specific facets"
       ],
       "answer": "A lexical hypothesis where language encodes fundamental personality traits identified by factor analysis",
-      "explanation": "1. The correct answer, \"A lexical hypothesis where language encodes fundamental personality traits identified by factor analysis,\" accurately describes the theoretical model of the 16 Personality Factor Questionnaire (16 PF) because it was developed by Cattell using a lexical strategy to identify personality traits. This approach assumes that significant personality traits are embedded in language, and Cattell utilized factor analysis to distill these traits into 16 primary traits and five broader global traits.\n\n2. The incorrect options are as follows:  \n- \"A typology based on Jungian psychological functions and attitudes\" is wrong because the 16 PF is not based on Jung's typology; instead, it is rooted in Cattell\u2019s lexical approach and factor analysis.  \n- \"A system of ipsative scoring contrasting human needs\" is incorrect because the 16 PF does not use ipsative scoring or focus on human needs, which is characteristic of the Edwards Personal Preference Schedule (EPPS).  \n- \"A hierarchical model of five broad traits with specific facets\" is misleading as it describes the structure of the NEO Personality Inventory-3 (NEO-PI-3), which assesses the Big Five traits, whereas the 16 PF focuses on 16 primary traits and five global traits without the same hierarchical facet structure.",
-      "kn": "KN30",
-      "kn_explanation": "This question taps knowledge of assessment theories/models, focusing on the theoretical basis for a widely used personality test.",
+      "explanation": "1. The correct answer, \"A lexical hypothesis where language encodes fundamental personality traits identified by factor analysis,\" accurately describes the theoretical model of the 16 Personality Factor Questionnaire (16 PF) because it was developed by Cattell using a lexical strategy to identify personality traits. This approach assumes that significant personality traits are embedded in language, and Cattell utilized factor analysis to distill these traits into 16 primary traits and five broader global traits.\n\n2. The incorrect options are as follows:  \n- \"A typology based on Jungian psychological functions and attitudes\" is wrong because the 16 PF is not based on Jung's typology; instead, it is rooted in Cattell’s lexical approach and factor analysis.  \n- \"A system of ipsative scoring contrasting human needs\" is incorrect because the 16 PF does not use ipsative scoring or focus on human needs, which is characteristic of the Edwards Personal Preference Schedule (EPPS).  \n- \"A hierarchical model of five broad traits with specific facets\" is misleading as it describes the structure of the NEO Personality Inventory-3 (NEO-PI-3), which assesses the Big Five traits, whereas the 16 PF focuses on 16 primary traits and five global traits without the same hierarchical facet structure.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
       "difficulty": "medium",
       "quality_comment": "Well-constructed item distinguishing theoretical foundations, enhancing domain-relevant conceptual understanding."
     },
@@ -175,8 +322,8 @@
       ],
       "answer": "Ipsative scores prevent valid comparisons between different individuals because they indicate relative, not absolute, trait strength",
       "explanation": "1. The correct answer, \"Ipsative scores prevent valid comparisons between different individuals because they indicate relative, not absolute, trait strength,\" accurately reflects the nature of ipsative scoring used in the Edwards Personal Preference Schedule (EPPS). In this format, examinees choose between two statements that assess different needs, resulting in scores that reflect the relative strength of their needs compared to one another. However, these scores do not provide information on how strong each need is in an absolute sense, making it impossible to compare one individual's need profile directly with another's.\n\n2. The first incorrect option, \"Ipsative scores are norm-based and require large sample sizes for accurate interpretation,\" is wrong because ipsative scoring does not rely on normative data; rather, it focuses on an individual's relative preferences, making norms irrelevant. The second incorrect option, \"Ipsative scoring inflates inter-individual variability and undermines reliability,\" is incorrect because ipsative scores do not inflate variability; they limit the ability to make inter-individual comparisons, which does not inherently affect reliability. Lastly, the option \"Ipsative formats measure absolute need strengths allowing inter-individual comparison\" is incorrect because ipsative formats specifically measure relative strengths, not absolute ones, thus precluding valid comparisons between different individuals.",
-      "kn": "KN30",
-      "kn_explanation": "This item assesses understanding of test scoring models and their psychometric implications in assessment practice.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
       "difficulty": "medium",
       "quality_comment": "Options are plausible but distinct, requiring nuanced comprehension of scoring methods."
     },
@@ -204,7 +351,7 @@
         "Assuming ipsative scores provide absolute trait levels"
       ],
       "answer": "Considering base rates of disorders to avoid misclassification errors",
-      "explanation": "1. **Correct Answer Explanation:** \"Considering base rates of disorders to avoid misclassification errors\" is crucial in evidence-based interpretation of personality assessment data because it ensures that clinicians understand the prevalence of disorders within specific populations. This consideration helps in accurately diagnosing individuals by providing context for the test results, reducing the likelihood of misclassifying normal variations in personality as pathological.\n\n2. **Incorrect Options Explanation:**\n   - **Relying solely on test score cutoffs without contextual information:** This approach is flawed because it overlooks the importance of individual differences and situational factors that can influence test scores, leading to potentially misleading conclusions.\n   - **Ignoring potential response biases for expediency:** Ignoring response biases can compromise the validity of the assessment, as individuals may respond in a socially desirable manner or be influenced by their current mood, which skews the results.\n   - **Assuming ipsative scores provide absolute trait levels:** Ipsative scores, such as those from the Edwards Personal Preference Schedule (EPPS), only allow for intra-individual comparisons and do not provide information on absolute trait levels, making them unsuitable for understanding an individual\u2019s personality in a broader context.",
+      "explanation": "1. **Correct Answer Explanation:** \"Considering base rates of disorders to avoid misclassification errors\" is crucial in evidence-based interpretation of personality assessment data because it ensures that clinicians understand the prevalence of disorders within specific populations. This consideration helps in accurately diagnosing individuals by providing context for the test results, reducing the likelihood of misclassifying normal variations in personality as pathological.\n\n2. **Incorrect Options Explanation:**\n   - **Relying solely on test score cutoffs without contextual information:** This approach is flawed because it overlooks the importance of individual differences and situational factors that can influence test scores, leading to potentially misleading conclusions.\n   - **Ignoring potential response biases for expediency:** Ignoring response biases can compromise the validity of the assessment, as individuals may respond in a socially desirable manner or be influenced by their current mood, which skews the results.\n   - **Assuming ipsative scores provide absolute trait levels:** Ipsative scores, such as those from the Edwards Personal Preference Schedule (EPPS), only allow for intra-individual comparisons and do not provide information on absolute trait levels, making them unsuitable for understanding an individual’s personality in a broader context.",
       "kn": "KN37",
       "kn_explanation": "This item examines the application of evidence-based principles including biases and base rates in personality test interpretation.",
       "difficulty": "medium",
@@ -239,7 +386,7 @@
         "Myers-Briggs Type Indicator (MBTI)"
       ],
       "answer": "Sixteen Personality Factor Questionnaire (16 PF)",
-      "explanation": "1. The \"Sixteen Personality Factor Questionnaire (16 PF)\" is the correct answer because it was developed by Cattell using the lexical strategy, which assumes that important personality traits are encoded in language. Cattell identified words that describe personality and applied factor analysis to distill them into 16 primary traits and five global traits, focusing on the language used to characterize these traits.\n\n2. The \"NEO Personality Inventory-3 (NEO-PI-3)\" is incorrect because, although it assesses the Big Five personality traits using a lexical approach, the question specifically asks for the assessment that identifies key traits through a lexical strategy as the primary method, making the 16 PF more directly aligned with this definition. The \"California Psychological Inventory (CPI)\" is not mentioned in the reference material, and therefore, it does not fit the criteria of using a lexical approach as described. Lastly, the \"Myers-Briggs Type Indicator (MBTI)\" is incorrect because it is based on Jung\u2019s personality typology and focuses on bipolar dimensions rather than deriving traits from language through a lexical approach.",
+      "explanation": "1. The \"Sixteen Personality Factor Questionnaire (16 PF)\" is the correct answer because it was developed by Cattell using the lexical strategy, which assumes that important personality traits are encoded in language. Cattell identified words that describe personality and applied factor analysis to distill them into 16 primary traits and five global traits, focusing on the language used to characterize these traits.\n\n2. The \"NEO Personality Inventory-3 (NEO-PI-3)\" is incorrect because, although it assesses the Big Five personality traits using a lexical approach, the question specifically asks for the assessment that identifies key traits through a lexical strategy as the primary method, making the 16 PF more directly aligned with this definition. The \"California Psychological Inventory (CPI)\" is not mentioned in the reference material, and therefore, it does not fit the criteria of using a lexical approach as described. Lastly, the \"Myers-Briggs Type Indicator (MBTI)\" is incorrect because it is based on Jung’s personality typology and focuses on bipolar dimensions rather than deriving traits from language through a lexical approach.",
       "difficulty": "hard",
       "kn": "KN32",
       "kn_explanation": "This question evaluates knowledge of commonly used personality assessment instruments and their theoretical basis.",

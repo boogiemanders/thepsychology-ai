@@ -1,6 +1,237 @@
 {
   "questions": [
     {
+      "stem": "An adolescent explains that she refused to shoplift with her friends because \"if everyone just stole whatever they wanted, stores would close and the whole system would fall apart.\" According to Kohlberg's theory of moral development, this reasoning is most consistent with which stage?",
+      "options": [
+        "Stage 2: Instrumental Hedonism",
+        "Stage 3: Good Boy/Good Girl orientation",
+        "Stage 4: Law and Order orientation",
+        "Stage 5: Social Contract orientation"
+      ],
+      "answer": "Stage 4: Law and Order orientation",
+      "explanation": "Stage 4 (Law and Order) reasoning focuses on maintaining social order and recognizing that society needs rules to function. The adolescent's concern that widespread stealing would cause systemic breakdown reflects this stage's emphasis on laws and social order. Stage 2 (A) focuses on personal benefit ('What's in it for me?'). Stage 3 (B) focuses on social approval ('Will others think I'm a good person?'). Stage 5 (D) involves abstract reasoning about democratic principles and individual rights superseding specific laws. The adolescent's reasoning centers on the necessity of rules for societal functioning, which is the hallmark of Stage 4.",
+      "kn": "KN23",
+      "kn_explanation": "Describes Kohlberg's post-conventional moral reasoning (universal ethical principles/social contract stage), which is a major research-based theory of development.",
+      "difficulty": "medium",
+      "quality_comment": "Good vignette requiring differentiation between Stage 3 (approval-based) and Stage 4 (system-maintenance) reasoning within the conventional level.",
+      "suggestedLesson": "4-morality",
+      "suggestedParagraph": "### Level 2: Conventional Morality (Typical in Adolescents and Many Adults)",
+      "lessonExcerpt": "Stage 4 represents a more systematic view. People here recognize that society needs rules to function... 'Heinz shouldn't steal because laws against stealing maintain social order, even in hard cases.'",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 5
+    },
+    {
+      "stem": "A psychologist is advising parents who want to foster moral development and prosocial behavior in their 8-year-old child. According to research on discipline approaches and moral development, which parenting strategy would be MOST effective?",
+      "options": [
+        "Consistently removing privileges when the child misbehaves to reinforce consequences",
+        "Using induction by explaining why a behavior is wrong and how it affects others",
+        "Withdrawing affection temporarily when the child acts selfishly to motivate better behavior",
+        "Allowing natural consequences to occur without parental discussion or explanation"
+      ],
+      "answer": "Using induction by explaining why a behavior is wrong and how it affects others",
+      "explanation": "Research shows that induction is the most effective discipline approach for promoting moral development. Induction involves explaining why a behavior is wrong and emphasizing how the behavior affects others, which promotes empathy and helps children understand the reasons behind moral rules. Option A describes power assertion, which is associated with Stage 1 (punishment avoidance) reasoning and is less effective for moral development. Option C describes love withdrawal, which can lead to Stage 3 reasoning (gaining approval) but doesn't promote deeper moral thinking. Option D describes a hands-off approach that misses the opportunity for moral teaching through explanation and perspective-taking.",
+      "kn": "KN23",
+      "kn_explanation": "This question addresses parenting influences on moral and prosocial development, a key topic in developmental psychology.",
+      "difficulty": "medium",
+      "quality_comment": "Directly grounded in the lesson's coverage of three discipline styles and their effects on moral development. Distractors represent the other discipline approaches.",
+      "suggestedLesson": "4-morality",
+      "suggestedParagraph": "### Three Discipline Styles and Their Effects",
+      "lessonExcerpt": "Induction (Most effective for moral development) - Explaining why a behavior is wrong - Emphasizing how the behavior affects others... research shows induction is most effective because it promotes empathy and helps children understand the reasons behind moral rules, not just the rules themselves.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 4
+    },
+    {
+      "stem": "When presented with the Heinz dilemma, a graduate student argues: 'Heinz should steal the drug because the law protecting property rights, while generally valid, fails to protect the more fundamental right to life in this case. Laws are social contracts that should serve democratic values, and when they don't, they should be changed.' This reasoning is MOST characteristic of which of Kohlberg's stages?",
+      "options": [
+        "Stage 3: Good Boy/Good Girl orientation, focused on gaining social approval",
+        "Stage 4: Law and Order orientation, focused on maintaining the social system",
+        "Stage 5: Social Contract orientation, focused on democratically established rights and values",
+        "Stage 6: Universal Ethical Principles orientation, focused on abstract principles of justice"
+      ],
+      "answer": "Stage 5: Social Contract orientation, focused on democratically established rights and values",
+      "explanation": "Stage 5 reasoning recognizes that laws are social contracts that should reflect democratic values and protect individual rights. The key reasoning in this vignette is that laws should usually be followed but that the right to life supersedes property rights, and the law should be changed to reflect this. This matches the lesson's Stage 5 example reasoning. Option A (Stage 3) focuses on whether others will approve, not on abstract rights. Option B (Stage 4) focuses on maintaining social order and following laws because society needs rules. Option D (Stage 6) involves universal principles of human dignity that transcend all laws, rather than critiquing specific laws against democratic standards.",
+      "kn": "KN23",
+      "kn_explanation": "This question tests Kohlberg's postconventional moral reasoning stages, a major developmental theory.",
+      "difficulty": "medium",
+      "quality_comment": "The vignette includes specific language cues distinguishing Stage 5 from Stage 6. The key differentiator is the appeal to democratic values and changeable laws rather than immutable universal principles.",
+      "suggestedLesson": "4-morality",
+      "suggestedParagraph": "### Level 3: Postconventional Morality (Achieved by Some Adults)",
+      "lessonExcerpt": "Stage 5 | Social Contract | 'Do the laws reflect democratic values and protect rights?' | 'Laws should usually be followed, but Heinz should steal because the right to life supersedes property rights, and the law should be changed to reflect this.'",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 7
+    },
+    {
+      "stem": "At which stage of moral development does Kohlberg suggest individuals begin to understand that rules can be changed through mutual agreement?",
+      "options": [
+        "Preconventional",
+        "Conventional",
+        "Postconventional",
+        "Autonomous"
+      ],
+      "answer": "Autonomous",
+      "explanation": "Kohlberg's Autonomous Stage indicates that individuals understand rules are created through mutual agreement and can be changed. The other stages do not reflect this understanding.",
+      "kn": "KN23",
+      "kn_explanation": "This question is best aligned with KN23 because it tests Major research-based theories and models of development.",
+      "difficulty": "hard",
+      "quality_comment": "The question accurately tests knowledge of Kohlberg's moral development stages.",
+      "suggestedLesson": "4-morality",
+      "suggestedParagraph": "## The Expansion: Kohlberg's Six-Stage Theory",
+      "lessonExcerpt": "More importantly, they begin judging actions based on intentions rather than just outcomes.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 7
+    },
+    {
+      "stem": "Which parenting style is most likely to foster the development of conscience in children?",
+      "options": [
+        "Authoritarian",
+        "Permissive",
+        "Authoritative",
+        "Neglectful"
+      ],
+      "answer": "Authoritative",
+      "explanation": "The correct answer is 'Authoritative' because this parenting style is characterized by warmth, support, and appropriate expectations, which fosters healthy conscience development. The other styles either lack support or impose too much control.",
+      "kn": "KN25",
+      "kn_explanation": "This question is best aligned with KN25 because it tests Family development, configuration, and functioning and their impact on the individual across the lifespan.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of parenting styles and their effects.",
+      "suggestedLesson": "4-morality",
+      "suggestedParagraph": "## The Foundation: Piaget's Three-Stage Theory",
+      "lessonExcerpt": "Understanding how families and schools shape development isn't just academic trivia.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 9
+    },
+    {
+      "stem": "Which of the following best describes the rigid moral thinking observed in children during Piaget's Heteronomous Stage?",
+      "options": [
+        "Moral reasoning based on intentions",
+        "Judgment based solely on outcomes",
+        "Understanding rules as negotiable",
+        "Recognition of moral dilemmas"
+      ],
+      "answer": "Judgment based solely on outcomes",
+      "explanation": "Children in the Heteronomous Stage judge actions based purely on their consequences, not considering the intentions behind them. In contrast, moral reasoning based on intentions occurs in the Autonomous Stage, understanding rules as negotiable is not characteristic of this stage, and recognition of moral dilemmas develops later.",
+      "kn": "KN23",
+      "kn_explanation": "This question is best aligned with KN23 because it tests Major research-based theories and models of development.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of Piaget's moral development theory and its implications.",
+      "suggestedLesson": "4-morality",
+      "suggestedParagraph": "## The Foundation: Piaget's Three-Stage Theory",
+      "lessonExcerpt": "The key feature of this stage is moral realism – kids judge actions purely by their consequences, not by intentions.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 13
+    },
+    {
+      "stem": "According to Kohlberg's theory, which stage of moral reasoning is characterized by an individual's focus on social approval and maintaining relationships?",
+      "options": [
+        "Preconventional Stage",
+        "Conventional Stage",
+        "Postconventional Stage",
+        "Autonomous Stage"
+      ],
+      "answer": "Conventional Stage",
+      "explanation": "The Conventional Stage is where individuals focus on social approval and maintaining relationships, adhering to societal norms. The Preconventional Stage is based on self-interest, the Postconventional Stage involves abstract principles, and the Autonomous Stage is not a term used in Kohlberg's theory.",
+      "kn": "KN23",
+      "kn_explanation": "This question is best aligned with KN23 because it tests Major research-based theories and models of development.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests understanding of Kohlberg's moral development theory.",
+      "suggestedLesson": "4-morality",
+      "suggestedParagraph": "## The Expansion: Kohlberg's Six-Stage Theory",
+      "lessonExcerpt": "At this level, people have internalized social rules and care about maintaining social order.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 15
+    },
+    {
+      "stem": "At what stage of moral development, according to Piaget, do children begin to understand that rules can be changed through mutual agreement and start judging actions based on intentions rather than just outcomes?",
+      "options": [
+        "Heteronomous Stage",
+        "Premoral Stage",
+        "Autonomous Stage",
+        "Concrete Operational Stage"
+      ],
+      "answer": "Autonomous Stage",
+      "explanation": "The Autonomous Stage is when children understand that rules are created through mutual agreement and can be changed. In contrast, the Heteronomous Stage focuses on rules as fixed and handed down by authority, while the Premoral Stage lacks any understanding of rules. The Concrete Operational Stage pertains to cognitive development rather than moral reasoning.",
+      "kn": "KN23",
+      "kn_explanation": "This question is best aligned with KN23 because it tests Major research-based theories and models of development.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of Piaget's moral development stages.",
+      "suggestedLesson": "4-morality",
+      "suggestedParagraph": "## The Foundation: Piaget's Three-Stage Theory",
+      "lessonExcerpt": "More importantly, they begin judging actions based on intentions rather than just outcomes.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 1
+    },
+    {
+      "stem": "In Kohlberg's stages of moral development, which stage is characterized by a focus on social approval and maintaining relationships?",
+      "options": [
+        "Stage 1: Punishment and Obedience",
+        "Stage 2: Instrumental Hedonism",
+        "Stage 3: Good Boy/Good Girl",
+        "Stage 4: Law and Order"
+      ],
+      "answer": "Stage 3: Good Boy/Good Girl",
+      "explanation": "Stage 3 is characterized by a focus on gaining approval from others and maintaining good relationships, which aligns with the 'Good Boy/Good Girl' orientation. Stage 1 focuses on avoiding punishment, Stage 2 on personal gain, and Stage 4 on adherence to laws and social order.",
+      "kn": "KN23",
+      "kn_explanation": "This question is best aligned with KN23 because it tests Major research-based theories and models of development.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses knowledge of Kohlberg's stages and their characteristics.",
+      "suggestedLesson": "4-morality",
+      "suggestedParagraph": "## The Expansion: Kohlberg's Six-Stage Theory",
+      "lessonExcerpt": "At this level, morality is all about external consequences – what happens to *me*?",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 12
+    },
+    {
+      "stem": "In Kohlberg's theory of moral development, which stage is characterized by a focus on social approval and maintaining relationships?",
+      "options": [
+        "Punishment and Obedience",
+        "Instrumental Hedonism",
+        "Good Boy/Good Girl",
+        "Social Contract"
+      ],
+      "answer": "Good Boy/Good Girl",
+      "explanation": "The correct answer is 'Good Boy/Good Girl', which is the third stage in Kohlberg's conventional level of moral reasoning, where individuals seek approval from others. The other options represent different stages: 'Punishment and Obedience' is the first stage, 'Instrumental Hedonism' is the second stage, and 'Social Contract' is a later stage in the post-conventional level.",
+      "kn": "KN23",
+      "kn_explanation": "This question is best aligned with KN23 because it tests Major research-based theories and models of development.",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and tests understanding of Kohlberg's stages.",
+      "suggestedLesson": "4-morality",
+      "suggestedParagraph": "## The Expansion: Kohlberg's Six-Stage Theory",
+      "lessonExcerpt": "At this level, people have internalized social rules and care about maintaining social order.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 5
+    },
+    {
+      "stem": "When asked whether Heinz was right to steal the drug to save his dying wife, a 16-year-old responds: 'He should steal it because a good husband would do everything possible to save his wife. People would lose respect for him if he just let her die when he could have done something.' According to Kohlberg's theory, which level and stage does this reasoning best exemplify?",
+      "options": [
+        "Level 1, Stage 2 (Instrumental Hedonism): reasoning focused on personal benefit and reciprocal exchange",
+        "Level 2, Stage 3 (Good Boy/Good Girl): reasoning focused on gaining interpersonal approval and fulfilling relational role expectations",
+        "Level 2, Stage 4 (Law and Order): reasoning focused on upholding legal systems and formal social institutions",
+        "Level 3, Stage 5 (Social Contract): reasoning based on universal rights and the principles underlying just laws"
+      ],
+      "answer": "Level 2, Stage 3 (Good Boy/Good Girl): reasoning focused on gaining interpersonal approval and fulfilling relational role expectations",
+      "explanation": "The adolescent's reasoning is organized entirely around how others would judge Heinz ('people would lose respect for him') and around conforming to the role of a 'good husband.' This is the hallmark of Kohlberg's Stage 3, within Level 2 Conventional Morality, where moral judgments are driven by the desire for interpersonal approval and living up to role expectations. Critically, Kohlberg evaluated the reasoning process, not the conclusion. Stage 2 would center on personal cost-benefit analysis. Stage 4 would invoke law, institutional duty, or formal obligation. Stage 5 would invoke abstract principles about rights independent of social approval. The Level 2 designation is correct because the adolescent has internalized social norms and cares about maintaining social relationships.",
+      "kn": "KN23",
+      "kn_explanation": "This question is best aligned with KN23 because it tests Major research-based theories and models of development.",
+      "difficulty": "medium",
+      "quality_comment": "Well-calibrated vignette. The response is specific enough to differentiate Stage 3 from Stage 4 and avoids ambiguity. Tests the key Kohlberg principle that reasoning—not conclusion—determines stage.",
+      "suggestedLesson": "4-morality",
+      "suggestedParagraph": "### Level 2: Conventional Morality (Typical in Adolescents and Many Adults)",
+      "lessonExcerpt": "At this level, people have internalized social rules and care about maintaining social order. Stage 3, 'Good Boy/Good Girl,' Key Question: 'Will others approve?' Kohlberg didn't care whether people said 'yes, steal' or 'no, don't steal.' He cared about why they gave that answer. The reasoning reveals the stage, not the conclusion.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 4
+    },
+    {
       "stem": "According to Piaget, at which stage do children begin to understand that rules are agreements between people and can be changed?",
       "options": [
         "Heteronomous Stage",
@@ -70,8 +301,8 @@
       ],
       "answer": "Induction, explaining why behavior is wrong and its effects on others",
       "explanation": "1. The correct answer, \"Induction, explaining why behavior is wrong and its effects on others,\" is associated with advanced levels of a child's moral reasoning because it encourages children to understand the consequences of their actions on others. This style of discipline promotes cognitive development and moral understanding by fostering discussions about moral standards, which aligns with findings that induction leads to higher levels of moral reasoning compared to other styles.\n\n2. The incorrect options are as follows: \n- **Power assertion, emphasizing strict obedience without explanation:** This style relies on authority and punishment, which does not promote understanding of moral reasoning or the impact of actions on others. \n- **Love withdrawal, withholding affection to discourage behavior:** This approach can create anxiety and insecurity in children, detracting from their ability to develop a nuanced understanding of morality and the reasons behind certain behaviors. \n- **Permissive, allowing children to act without constraints:** This style lacks guidance and structure, preventing children from developing a clear understanding of moral rules and the implications of their actions on others.",
-      "kn": "KN21",
-      "kn_explanation": "This item focuses on socialization influences on moral development in childhood, aligning with normal growth and development across the lifespan (KN21).",
+      "kn": "KN23",
+      "kn_explanation": "This question is best aligned with KN23 because it tests Major research-based theories and models of development.",
       "difficulty": "medium",
       "quality_comment": "Distractors are commonly known parenting styles, making the correct answer stand out but still challenging for those less familiar with moral development research."
     },
@@ -130,8 +361,8 @@
       ],
       "answer": "Peer relationships allow mutual negotiation, unlike adult unilateral authority.",
       "explanation": "1. The correct answer, \"Peer relationships allow mutual negotiation, unlike adult unilateral authority,\" reflects the idea that interactions among peers foster discussions and collaborative problem-solving regarding moral issues. Piaget and Kohlberg argue that adult authority often limits open dialogue about moral decisions, whereas the equality inherent in peer relationships promotes negotiation and shared understanding, which are crucial for moral development.\n\n2. The option \"Parents tend to model immoral behaviors more often than peers\" is incorrect because it generalizes parental behavior without evidence from the theories of Piaget and Kohlberg, which do not suggest that parents model immoral behavior more than peers. The statement \"Children are biologically predisposed to follow peers over parents\" is inaccurate as it lacks support from the theories, which emphasize social interaction rather than biological predisposition in moral development. Lastly, the option \"Parents do not discuss moral issues verbally with their children\" is misleading; while Piaget and Kohlberg emphasize peer influence, they do not claim that parents never engage in discussions about moral issues, but rather that the nature of those discussions may differ from peer interactions.",
-      "kn": "KN21",
-      "kn_explanation": "This item highlights social environmental influences on moral development across childhood, fitting the normal growth and social interaction focus of KN21.",
+      "kn": "KN23",
+      "kn_explanation": "This question is best aligned with KN23 because it tests Major research-based theories and models of development.",
       "difficulty": "hard",
       "quality_comment": "The question probes conceptual understanding of social influences with plausible distractors that require nuanced knowledge of developmental theory."
     },
@@ -160,8 +391,8 @@
       ],
       "answer": "Explaining why a behavior is wrong and emphasizing its effect on others",
       "explanation": "1. The correct answer, \"Explaining why a behavior is wrong and emphasizing its effect on others,\" accurately reflects the induction style of parental discipline. This approach focuses on helping children understand the reasons behind their actions and the consequences for others, promoting advanced levels of moral reasoning. Research indicates that this style fosters a deeper comprehension of moral standards compared to other disciplinary methods.\n\n2. The option \"Withholding affection as a means of reducing undesirable behavior\" is incorrect because it describes a power assertion style of discipline, which relies on emotional manipulation rather than reasoning. \"Imposing strict consequences without explanation\" is also incorrect, as it reflects an authoritarian approach that does not involve the child in understanding the rationale behind rules or consequences. Lastly, \"Allowing children to do as they please without limits\" is incorrect because it suggests a lack of guidance or boundaries, which is contrary to the structured and educational nature of the induction style that aims to teach moral reasoning.",
-      "kn": "KN21",
-      "kn_explanation": "This question focuses on parental discipline styles and their influence on moral development, under normal growth and lifespan socialization influences (KN21).",
+      "kn": "KN23",
+      "kn_explanation": "This question is best aligned with KN23 because it tests Major research-based theories and models of development.",
       "difficulty": "medium",
       "quality_comment": "This item tests understanding of key parenting practices relevant to moral socialization with plausible distractors reflecting common disciplinary practices."
     },

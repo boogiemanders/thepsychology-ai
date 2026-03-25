@@ -1,6 +1,111 @@
 {
   "questions": [
     {
+      "stem": "According to Sue and Sue's Racial/Cultural Identity Development (R/CID) model, an individual who initially idealized the dominant culture but now actively rejects dominant cultural values and immerses in their own cultural heritage is most likely in which stage?",
+      "options": [
+        "Conformity",
+        "Dissonance",
+        "Resistance and immersion",
+        "Integrative awareness"
+      ],
+      "answer": "Resistance and immersion",
+      "explanation": "In the R/CID model, the resistance and immersion stage is characterized by active rejection of the dominant culture and full embrace of one's own cultural group. Conformity (A) involves preference for dominant cultural values. Dissonance (B) involves conflict and questioning but not yet full rejection. Integrative awareness (D) represents the final stage where the individual develops a balanced appreciation of both their own and other cultures. The active rejection described in the stem is the defining feature of resistance and immersion.",
+      "kn": "KN19",
+      "kn_explanation": "This question is best aligned with KN19 because it tests Identity diversity and intersectionality (e.g., psychological impact of diversity on individuals, families, and systems).",
+      "difficulty": "medium",
+      "quality_comment": "Tests understanding of stage progression in a widely tested identity model.",
+      "suggestedLesson": "3-cultural-identity",
+      "suggestedParagraph": "## Atkinson, Morten, and Sue's R/CID Model",
+      "lessonExcerpt": "Atkinson, Morten, and Sue's Racial/Cultural Identity Development Model... This is your foundational model. It applies broadly to members of any racial or cultural minority group.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 5
+    },
+    {
+      "stem": "An African American college student who has always admired White cultural values experiences a racially motivated incident on campus. She begins to question her previous assumptions and develops a growing interest in learning about her African American heritage. According to Cross's Nigrescence model, this student is most likely in the:",
+      "options": [
+        "Pre-Encounter stage",
+        "Encounter stage",
+        "Immersion-Emersion stage",
+        "Internalization stage"
+      ],
+      "answer": "Encounter stage",
+      "explanation": "In Cross's Nigrescence model, the Encounter stage occurs when something happens that forces awareness of racism's impact, triggering questioning and interest in one's own culture. The student previously idealized White culture (Pre-Encounter) but a racially motivated incident has shaken her assumptions, leading to new cultural curiosity—hallmarks of the Encounter stage. Pre-Encounter would involve continued idealization of White culture without questioning. Immersion-Emersion involves complete rejection of White culture and intense immersion in Black culture. Internalization involves a secure Black identity with tolerance for racial differences.",
+      "kn": "KN19",
+      "kn_explanation": "This question is best aligned with KN19 because it tests Identity diversity and intersectionality (e.g., psychological impact of diversity on individuals, families, and systems).",
+      "difficulty": "medium",
+      "quality_comment": "Well-constructed scenario that tests stage identification in Cross's model with clear behavioral indicators.",
+      "suggestedLesson": "3-cultural-identity",
+      "suggestedParagraph": "## Cross's Black Racial Identity Development Model",
+      "lessonExcerpt": "Encounter: Something happens that forces awareness of racism's impact. It's like suddenly noticing a pattern you'd been blind to... This triggers questioning and interest in their own culture.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 9
+    },
+    {
+      "stem": "A licensed psychologist at a community mental health clinic consistently interprets Latino clients' somatic complaints as pathological somatization, dismisses spirituality-based explanatory models as irrational, and applies manualized CBT protocols without culturally responsive modification. The clinical supervisor observes that this therapist appears unaware that these worldviews differ from mainstream Western psychological assumptions. This pattern BEST exemplifies which phenomenon?",
+      "options": [
+        "Differential diagnostic error stemming from insufficient clinical training in somatic presentations",
+        "Cultural encapsulation, in which the therapist applies a single cultural framework to all clients",
+        "Negative countertransference arising from unresolved personal biases toward this population",
+        "Practitioner ethnocentrism limited to the diagnostic labeling process but not treatment delivery"
+      ],
+      "answer": "Cultural encapsulation, in which the therapist applies a single cultural framework to all clients",
+      "explanation": "Cultural encapsulation (Wrenn, 1962) describes a clinician who defines reality through a single cultural set of assumptions, ignores cultural variation, and applies techniques without awareness of their cultural embeddedness. The vignette illustrates this pattern across diagnosis, explanatory models, and treatment selection. Option A frames the error as a knowledge deficit about somatic presentations rather than a cultural awareness problem. Option C (countertransference) refers to the therapist's personal emotional reactions projected onto clients, which is not the focus here. Option D incorrectly restricts cultural encapsulation to diagnostic labeling alone; the concept applies across the entire clinical encounter.",
+      "kn": "KN18",
+      "kn_explanation": "This question is best aligned with KN18 because it tests Cultural and sociopolitical psychology (e.g., privilege, cross-cultural comparisons, political differences, international and global awareness, religiosity and spirituality, acculturation).",
+      "difficulty": "hard",
+      "quality_comment": "Strong vignette with multiple behavioral indicators spanning diagnosis, conceptualization, and treatment; distractors target frequent confusions among related multicultural constructs.",
+      "suggestedLesson": "3-cultural-identity",
+      "suggestedParagraph": "## Multicultural Competence",
+      "lessonExcerpt": "Lesson content does not explicitly address cultural encapsulation. Question written from established EPPP knowledge base; needsReview flagged accordingly.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 0
+    },
+    {
+      "stem": "A 26-year-old Black woman reports that a racially charged incident at her graduate program last month prompted her to question assumptions she had long held about racial identity. She has since immersed herself in African American literature and cultural organizations, reports intense anger toward White-dominated institutions, and has begun distancing herself from non-Black social contacts. According to Cross's (1971) Nigrescence model, she is MOST likely in which stage?",
+      "options": [
+        "Pre-encounter, characterized by low racial identity salience and internalized Eurocentric values",
+        "Encounter, in which a catalytic racial event disrupts the person's existing identity framework",
+        "Immersion-Emersion, characterized by idealization of Black culture and rejection of the dominant cultural framework",
+        "Internalization, in which a secure, multidimensional Black identity is stably consolidated"
+      ],
+      "answer": "Immersion-Emersion, characterized by idealization of Black culture and rejection of the dominant cultural framework",
+      "explanation": "The Immersion-Emersion stage of Nigrescence is marked by intense immersion in Black culture, idealization of Blackness, anger toward racism and White institutions, and withdrawal from non-Black social contexts. The Encounter stage is specifically the catalytic event that disrupts the prior framework — the woman appears to have moved beyond that initial disruption into the active immersion response. Pre-encounter involves acceptance of Eurocentric norms with low racial salience, which contradicts the current presentation. Internalization reflects a stable, non-reactive Black identity that allows positive cross-cultural engagement — the anger and social withdrawal described indicate the person has not yet reached this consolidation.",
+      "kn": "KN18",
+      "kn_explanation": "This question is best aligned with KN18 because it tests Cultural and sociopolitical psychology (e.g., privilege, cross-cultural comparisons, political differences, international and global awareness, religiosity and spirituality, acculturation).",
+      "difficulty": "hard",
+      "quality_comment": "Vignette strategically includes both encounter-stage and immersion-stage features to require precise stage discrimination; high clinical relevance for multicultural practice.",
+      "suggestedLesson": "3-cultural-identity",
+      "suggestedParagraph": "## Racial and Cultural Identity Development",
+      "lessonExcerpt": "Lesson content on racial identity development stages was not present in the provided lesson files. Question written from established EPPP knowledge base.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 4
+    },
+    {
+      "stem": "During a home visit, a family therapist observes that an African American family's infant is regularly cared for by the maternal grandmother, two aunts, and an older teenage cousin in addition to the parents, with childcare responsibilities shifting fluidly among all of them across different households. This arrangement is BEST understood as an expression of which characteristic strength consistently identified in the research literature on African American families?",
+      "options": [
+        "Patriarchal authority structures that preserve intergenerational role clarity and parental hierarchy",
+        "Extended family and kinship network support providing flexible, collectively shared caregiving",
+        "Nuclear family self-sufficiency as a primary buffer against institutional racism",
+        "Egalitarian marital role flexibility as the central protective factor against socioeconomic stress"
+      ],
+      "answer": "Extended family and kinship network support providing flexible, collectively shared caregiving",
+      "explanation": "Research by Hill (1972), McAdoo, and Boyd-Franklin consistently identifies strong extended family and kinship bonds — including shared caregiving across household boundaries — as a defining resilience-promoting strength of African American families. Option A incorrectly attributes the strength to rigid patriarchal hierarchy, which is not supported by the research literature. Option C misidentifies the mechanism; it is collective extended-network support rather than nuclear-family insularity that functions protectively. Option D refers to marital role flexibility, which is a related but distinct finding and does not capture the cross-household extended kinship arrangement described in the vignette.",
+      "kn": "KN18",
+      "kn_explanation": "This question is best aligned with KN18 because it tests Cultural and sociopolitical psychology (e.g., privilege, cross-cultural comparisons, political differences, international and global awareness, religiosity and spirituality, acculturation).",
+      "difficulty": "medium",
+      "quality_comment": "Grounded in observational clinical vignette; distractors test common stereotypes and partial knowledge that may mislead less-prepared examinees.",
+      "suggestedLesson": "3-cultural-identity",
+      "suggestedParagraph": "## Multicultural Considerations in Family Systems",
+      "lessonExcerpt": "Lesson content on African American family strengths was not present in the provided lesson files. Question written from established EPPP knowledge base.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 5
+    },
+    {
       "stem": "In Atkinson, Morten, and Sue’s Racial/Cultural Identity Development (R/CID) Model, which stage is characterized by positive attitudes toward one's own minority group, negative attitudes toward the majority group, and suspicion of mental health services?",
       "options": [
         "Dissonance",
@@ -160,8 +265,8 @@
       ],
       "answer": "Identity Commitment",
       "explanation": "1. **Identity Commitment** is the correct answer because it represents the final stage in Troiden’s Model of Homosexual Identity Development, where individuals have fully internalized their gay or lesbian identity. At this stage, they are comfortable disclosing their sexual orientation to others, including heterosexual individuals, and have accepted homosexuality as a valid and integral part of their lives.\n\n2. The other options are incorrect for the following reasons:\n\n- **Sensitization** is the initial stage during childhood characterized by feelings of difference from same-sex peers, but it does not involve acceptance or disclosure of sexual orientation.\n  \n- **Identity Confusion** occurs in middle or late adolescence when individuals begin to feel attraction to the same sex and experience uncertainty and anxiety about their sexual identity, but they have not yet reached a point of acceptance.\n\n- **Identity Assumption** is the stage where individuals begin to accept a gay or lesbian identity and seek social relationships within the LGBTQ+ community, but they may not yet be fully comfortable disclosing their orientation to heterosexual individuals.",
-      "kn": "KN24",
-      "kn_explanation": "This question addresses sexual identity development, specifically individuals’ acceptance and disclosure stages, fitting the diverse identities and development knowledge area.",
+      "kn": "KN19",
+      "kn_explanation": "This question is best aligned with KN19 because it tests Identity diversity and intersectionality (e.g., psychological impact of diversity on individuals, families, and systems).",
       "difficulty": "medium",
       "quality_comment": "The options reflect distinct stages clearly described in the model, offering well-balanced alternatives that require understanding of developmental progression."
     },
@@ -175,8 +280,8 @@
       ],
       "answer": "Synthesis",
       "explanation": "1. **Correct Answer - Synthesis:** \"Synthesis\" is the correct answer in Worthington et al.'s Multidimensional Model of Heterosexual Identity Development because it is specifically defined as the status where individuals integrate their sexual identity with other identities, such as gender and race/ethnicity. This stage emphasizes the holistic understanding of one’s identity, allowing for a cohesive sense of self that encompasses multiple identity dimensions.\n\n2. **Incorrect Options:**\n   - **Diffusion:** This status is characterized by an absence of active exploration and commitment, leading to confusion about various aspects of identity, rather than integration.\n   - **Deepening and Commitment:** This stage involves moving toward greater commitment to one’s identified sexual needs and values but does not specifically focus on integrating sexual identity with other identities.\n   - **Active Exploration:** In this status, individuals engage in purposeful exploration of their sexual needs and values, yet it does not encompass the integration of sexual identity with other aspects of identity.",
-      "kn": "KN24",
-      "kn_explanation": "This item targets knowledge of sexual identity integration processes and their developmental significance, appropriate for diverse identities and identity development studies.",
+      "kn": "KN19",
+      "kn_explanation": "This question is best aligned with KN19 because it tests Identity diversity and intersectionality (e.g., psychological impact of diversity on individuals, families, and systems).",
       "difficulty": "medium",
       "quality_comment": "Distractors are stages within the model, and the stem clearly distinguishes integration, enhancing item clarity and focus."
     },

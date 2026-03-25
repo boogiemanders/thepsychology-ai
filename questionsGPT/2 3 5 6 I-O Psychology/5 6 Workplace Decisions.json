@@ -1,6 +1,90 @@
 {
   "questions": [
     {
+      "stem": "Members of a neighborhood watch committee are individually polled before their meeting and each reports moderate support for a curfew ordinance. After one hour of discussion exclusively among themselves, the committee unanimously endorses a far stricter ordinance than any individual had originally favored. Which phenomenon MOST directly accounts for this outcome?",
+      "options": [
+        "Groupthink, in which the desire for unanimity suppresses dissenting viewpoints and critical analysis",
+        "Group polarization, in which discussion among like-minded individuals amplifies their shared initial tendency toward a more extreme position",
+        "Deindividuation, in which members lose personal accountability within the collective and adopt more extreme norms",
+        "Conformity pressure, in which a dominant minority enforces attitude change through normative influence"
+      ],
+      "answer": "Group polarization, in which discussion among like-minded individuals amplifies their shared initial tendency toward a more extreme position",
+      "explanation": "Group polarization refers to the reliable tendency for deliberation among people who share an initial lean to produce a collective position more extreme than their pre-discussion average. Because each committee member already favored the curfew to some degree, discussion reinforced and magnified that lean, yielding an outcome beyond any individual's original position. This is the defining signature of group polarization. Groupthink (Option A) involves specific symptoms—illusion of invulnerability, self-censorship, mindguarding—and primarily concerns the suppression of alternatives to preserve cohesion; it does not require or predict a shift to extremity per se. Deindividuation (Option C) involves reduced self-awareness in crowds and the abandonment of personal restraints, not the amplification of pre-existing attitudes through discussion. Option D (conformity) describes influence exerted by a minority or majority on an individual, not the emergent amplification of an already-shared group tendency.",
+      "kn": "KN16",
+      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
+      "difficulty": "medium",
+      "quality_comment": "Scenario precisely exemplifies group polarization and the distractors target the most commonly confused constructs. Remapped to 5-6-workplace-decisions which covers group polarization in depth.",
+      "suggestedLesson": "5-6-workplace-decisions",
+      "suggestedParagraph": "## Group Polarization: When Groups Amplify Extremes",
+      "lessonExcerpt": "Group polarization describes the tendency for groups to make more extreme decisions than individual members would make alone. After discussion, the group shifts toward a more intense version of the average initial position. Either riskier or more cautious.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 23
+    },
+    {
+      "stem": "Members of a hospital ethics committee individually lean slightly toward approving an experimental treatment protocol. After group discussion, the committee votes to approve the protocol with significantly more enthusiasm and fewer restrictions than any individual member originally favored. This shift is best explained by:",
+      "options": [
+        "Groupthink",
+        "Group polarization",
+        "Social loafing",
+        "Deindividuation"
+      ],
+      "answer": "Group polarization",
+      "explanation": "Group polarization describes the tendency for groups to make more extreme decisions than individual members would make alone. After discussion, the group shifts toward a more intense version of the average initial position. Since committee members initially leaned toward approval, group discussion amplified that inclination into stronger approval with fewer restrictions. Groupthink involves suppressing dissent to maintain consensus, but there is no indication of dissent suppression here. Social loafing involves reduced individual effort in groups. Deindividuation involves loss of self-awareness and behavioral restraints in crowds.",
+      "kn": "KN16",
+      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
+      "difficulty": "hard",
+      "quality_comment": "Tests application of group polarization in a realistic clinical scenario, requiring differentiation from groupthink.",
+      "suggestedLesson": "5-6-workplace-decisions",
+      "suggestedParagraph": "## Group Polarization: When Groups Amplify Extremes",
+      "lessonExcerpt": "Group polarization describes the tendency for groups to make more extreme decisions than individual members would make alone. After discussion, the group shifts toward a more intense version of the average initial position. Either riskier or more cautious.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 7
+    },
+    {
+      "stem": "Research on group composition in decision-making contexts has found that heterogeneous groups, compared to homogeneous groups, tend to:",
+      "options": [
+        "Make better decisions but may have more difficulty with cohesion",
+        "Make worse decisions but have stronger cohesion",
+        "Make equivalent decisions with better cohesion",
+        "Make better decisions with equivalent cohesion"
+      ],
+      "answer": "Make better decisions but may have more difficulty with cohesion",
+      "explanation": "Research on group effectiveness indicates that heterogeneous groups make better decisions than homogeneous groups because diverse perspectives lead to more comprehensive analysis. However, heterogeneous groups can experience problems with cohesion due to differences among members. This represents a trade-off between decision quality and group harmony. The other options incorrectly characterize either the decision quality or cohesion outcomes of heterogeneous versus homogeneous groups.",
+      "kn": "KN16",
+      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
+      "difficulty": "medium",
+      "quality_comment": "Directly supported by reference text content on group effectiveness.",
+      "suggestedLesson": "5-6-workplace-decisions",
+      "suggestedParagraph": "## Group Decision-Making",
+      "lessonExcerpt": "Heterogeneous groups make better decisions than homogeneous groups. However, there can be problems with cohesion in heterogeneous groups.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 10
+    },
+    {
+      "stem": "A multidisciplinary treatment team at a prestigious hospital is discussing discharge planning for a high-risk patient. The team is highly cohesive and led by an attending physician who states her preference for early discharge before inviting input. Team members privately have concerns but remain silent, interpreting others' silence as agreement. One senior nurse redirects conversations away from a junior staff member's attempt to raise safety data. Which combination of groupthink symptoms is MOST evident in this scenario?",
+      "options": [
+        "Illusion of invulnerability, collective rationalization, and excessive stereotyping",
+        "Self-censorship, illusion of unanimity, and mindguards",
+        "Belief in inherent morality, collective rationalization, and self-censorship",
+        "Excessive stereotyping, illusion of invulnerability, and mindguards"
+      ],
+      "answer": "Self-censorship, illusion of unanimity, and mindguards",
+      "explanation": "The scenario illustrates three specific groupthink symptoms identified by Janis: (1) Self-censorship—members suppress their private doubts to maintain harmony; (2) Illusion of unanimity—silence is interpreted as agreement, when in fact members have unexpressed concerns; (3) Mindguards—the senior nurse acts as a self-appointed protector who shields the group from contradictory information by redirecting away from the junior staff member's safety data. Option A is incorrect because the scenario does not describe the group feeling invulnerable to failure or dismissing warnings as irrelevant, nor stereotyping critics. Option C is incorrect because there is no mention of the group believing their decisions are inherently ethical (belief in inherent morality) or dismissing external warnings (collective rationalization). Option D is incorrect because there is no evidence of the group viewing critics as incompetent or feeling invulnerable.",
+      "kn": "KN16",
+      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
+      "difficulty": "hard",
+      "quality_comment": "Complex scenario requiring examinees to match specific observable behaviors to Janis's groupthink symptoms rather than simply recognizing the concept. Tests discrimination among symptom clusters.",
+      "suggestedLesson": "5-6-workplace-decisions",
+      "suggestedParagraph": "### Symptoms of Groupthink",
+      "lessonExcerpt": "Self-censorship: Members suppress doubts to maintain harmony. Illusion of unanimity: Silence is interpreted as agreement. Mindguards: Self-appointed members shield the group from contradictory information.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 22
+    },
+    {
       "stem": "Which of the following best characterizes a programmed decision in an organization?",
       "options": [
         "A novel and complex decision requiring creative problem-solving",

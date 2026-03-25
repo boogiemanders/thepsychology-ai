@@ -1,6 +1,69 @@
 {
   "questions": [
     {
+      "stem": "A pediatrician refers a 4-year-old child to a psychologist after the child has been hospitalized multiple times for unexplained symptoms. The mother appears unusually knowledgeable about medical procedures and seems invested in the child remaining hospitalized, but no external incentives such as financial gain or avoidance of legal consequences can be identified. Which diagnosis is most appropriate for the mother?",
+      "options": [
+        "Malingering",
+        "Factitious disorder imposed on another",
+        "Somatic symptom disorder",
+        "Illness anxiety disorder"
+      ],
+      "answer": "Factitious disorder imposed on another",
+      "explanation": "Factitious disorder imposed on another involves falsifying or inducing symptoms in another person (often a child) and presenting them as ill, with deception occurring even without obvious external rewards. This is the correct answer because the mother is inducing symptoms in her child with no identifiable external gain. Malingering is incorrect because it requires clear external rewards (money, drugs, avoiding consequences) and is not a mental disorder. Somatic symptom disorder is incorrect because it involves the person's own distressing physical symptoms, not inducing symptoms in another. Illness anxiety disorder is incorrect because it involves preoccupation with having a serious illness oneself, with absent or mild somatic symptoms.",
+      "kn": "KN33",
+      "kn_explanation": "Integrating non-psychological medical information (unexplained hospitalizations, pediatrician referral) into psychological assessment for differential diagnosis, likely involving Factitious Disorder Imposed on Another",
+      "difficulty": "medium",
+      "quality_comment": "Strong question testing the key distinction between factitious disorder imposed on another and malingering based on motivation, well-supported by lesson content.",
+      "suggestedLesson": "5-trauma-dissociation-somatic",
+      "suggestedParagraph": "### Factitious Disorder: The Intent to Deceive",
+      "lessonExcerpt": "Factitious Disorder Imposed on Another: Same as above, but symptoms are induced in another person (often a child by their parent)... Factitious Disorder: Internal psychological need; no obvious external reward... Malingering: Clear external reward (money, drugs, avoiding work/legal consequences)",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 1
+    },
+    {
+      "stem": "A pediatrician reports that a 4-year-old patient has been hospitalized multiple times for symptoms that cannot be medically explained, and lab results appear to have been tampered with. The child's mother, who has medical training, is always present and appears very engaged with hospital staff. There is no evidence of external incentive such as financial gain or avoidance of legal responsibility. Which diagnosis is most appropriate for the mother?",
+      "options": [
+        "Malingering",
+        "Factitious disorder imposed on another",
+        "Somatic symptom disorder",
+        "Illness anxiety disorder"
+      ],
+      "answer": "Factitious disorder imposed on another",
+      "explanation": "Factitious disorder imposed on another involves falsifying or inducing symptoms in another person (often a child) with associated deception and no clear external reward. This distinguishes it from malingering, which requires a clear external motivation such as financial gain, avoiding work, or obtaining drugs. Somatic symptom disorder involves excessive thoughts/emotions/behaviors about one's own real symptoms, not fabrication of symptoms in another person. Illness anxiety disorder involves preoccupation with having a serious illness oneself, with minimal somatic symptoms. The key distinguishing feature is the absence of obvious external reward combined with the deception directed at a dependent person.",
+      "kn": "KN33",
+      "kn_explanation": "Integrating non-psychological medical information (unexplained hospitalizations, lab results) into psychological assessment points to differential diagnosis with medical data",
+      "difficulty": "medium",
+      "quality_comment": "Good differential diagnosis question requiring distinction between factitious disorder imposed on another and malingering based on motivation, and from somatic symptom/illness anxiety disorders based on who is affected.",
+      "suggestedLesson": "5-trauma-dissociation-somatic",
+      "suggestedParagraph": "### Factitious Disorder: The Deception Element",
+      "lessonExcerpt": "Imposed on another: Person causes symptoms in someone else (often a child)... The person presents themselves as ill or impaired even without obvious external reward. This distinguishes it from malingering.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 1
+    },
+    {
+      "stem": "A 4-year-old child who spent the first two years of life in a severely understaffed orphanage now lives with an adoptive family. The child readily approaches unfamiliar adults at the park, sits on strangers' laps, and has wandered off with an unknown person at a store without showing distress. This presentation is most consistent with a diagnosis of:",
+      "options": [
+        "Reactive attachment disorder",
+        "Disinhibited social engagement disorder",
+        "Separation anxiety disorder",
+        "Attention-deficit/hyperactivity disorder, predominantly hyperactive-impulsive presentation"
+      ],
+      "answer": "Disinhibited social engagement disorder",
+      "explanation": "Disinhibited Social Engagement Disorder (DSED) is characterized by indiscriminate social behavior toward unfamiliar adults following a history of extreme insufficient care. The lesson describes DSED: 'these kids act like every adult is potentially their caregiver. They'll approach strangers without hesitation, act overly familiar with people they just met, wander off without checking back with their actual caregivers, and might leave with strangers readily.' Reactive attachment disorder (A) involves the opposite response—emotional withdrawal and failure to seek comfort. Separation anxiety disorder (C) involves excessive distress about separation from attachment figures, not indiscriminate approach behavior. ADHD (D) involves hyperactivity and impulsivity but not the characteristic pattern of indiscriminate social approach with strangers following neglect.",
+      "kn": "KN36",
+      "kn_explanation": "Describing a child with indiscriminate attachment behavior following institutional deprivation points to classification/diagnosis of a disorder (likely Reactive Attachment Disorder or Disinhibited Social Engagement Disorder)",
+      "difficulty": "medium",
+      "quality_comment": "Strong clinical vignette that tests the critical distinction between RAD and DSED as opposite responses to severe neglect.",
+      "suggestedLesson": "5-trauma-dissociation-somatic",
+      "suggestedParagraph": "### The Early Years: When Caregiving Goes Wrong",
+      "lessonExcerpt": "**DSED is the \"indiscriminate\" response.** Instead of shutting down, these kids act like every adult is potentially their caregiver. They'll approach strangers without hesitation, act overly familiar with people they just met, wander off without checking back with their actual caregivers, and might leave with strangers readily.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 23
+    },
+    {
       "stem": "Which of the following is a diagnostic criterion specific to Reactive Attachment Disorder (RAD) in young children?",
       "options": [
         "A persistent pattern of overly familiar behavior with strangers",
@@ -13,7 +76,7 @@
       "kn": "KN36",
       "kn_explanation": "This question focuses on criteria and diagnosis of a psychological disorder, aligning with Classification systems and their rationales (KN36).",
       "difficulty": "medium",
-      "quality_comment": "The distractors are disorder-relevant concepts that test differentiation between similar trauma/stressor-related diagnoses, enhancing the question\u2019s discriminative ability."
+      "quality_comment": "The distractors are disorder-relevant concepts that test differentiation between similar trauma/stressor-related diagnoses, enhancing the question’s discriminative ability."
     },
     {
       "stem": "For the diagnosis of Disinhibited Social Engagement Disorder (DSED), which of the following behaviors would be most characteristic?",
@@ -40,8 +103,8 @@
       ],
       "answer": "Reduced volume of the hippocampus and hyperactive amygdala",
       "explanation": "1. \"Reduced volume of the hippocampus and hyperactive amygdala\" is the correct answer because neuroimaging studies have consistently linked PTSD to these specific brain abnormalities. The hyperactive amygdala is associated with an exaggerated fear response, while the reduced volume of the hippocampus is thought to relate to difficulties in memory processing and emotional regulation, both of which are prevalent in individuals with PTSD.\n\n2. The first incorrect option, \"Hyperactivity in ventromedial prefrontal cortex and reduced amygdala activity,\" is wrong because PTSD is characterized by reduced activity in the ventromedial prefrontal cortex, which normally inhibits the amygdala, rather than hyperactivity. The second option, \"Increased serotonin levels and decreased dopamine activity,\" is incorrect because PTSD is associated with decreased serotonin and GABA activity, not increased serotonin, along with increased levels and activity of dopamine and norepinephrine. Lastly, \"Hypoactive anterior cingulate cortex with increased GABA activity\" is wrong because, while there is evidence of hypoactivity in the anterior cingulate cortex in PTSD, the disorder is linked to decreased GABA activity, not increased.",
-      "kn": "KN1",
-      "kn_explanation": "This question targets knowledge of neurobiological bases and brain correlates of psychological disorders (KN1).",
+      "kn": "KN32",
+      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
       "difficulty": "hard",
       "quality_comment": "Options are plausible and neurobiologically detailed, requiring advanced knowledge of PTSD pathophysiology suitable for EPPP."
     },
@@ -55,8 +118,8 @@
       ],
       "answer": "Serotonin-norepinephrine reuptake inhibitor (SNRI) venlafaxine",
       "explanation": "1. The correct answer, \"Serotonin-norepinephrine reuptake inhibitor (SNRI) venlafaxine,\" is recommended by the APA Clinical Practice Guideline as a second-line pharmacological treatment for PTSD in adults. This guideline suggests that while first-line treatments for PTSD include cognitive processing therapy, prolonged exposure, and trauma-focused cognitive behavioral therapy (CBT), venlafaxine is recognized for its utility in alleviating core PTSD symptoms, particularly when depression is also present.\n\n2. The incorrect options are as follows:  \n- **Benzodiazepines for acute anxiety management**: Benzodiazepines are not recommended for PTSD treatment as they do not address the core symptoms of PTSD and may even worsen symptoms over time.  \n- **Tricyclic antidepressants as first-line treatment**: The guideline does not classify tricyclic antidepressants as first-line treatments; instead, it emphasizes cognitive therapies and specific SSRIs and SNRIs.  \n- **Antipsychotics for core PTSD symptoms**: Antipsychotics are not recommended for treating core PTSD symptoms according to the guideline, as they do not effectively target the specific symptoms associated with PTSD.",
-      "kn": "KN3",
-      "kn_explanation": "This question assesses knowledge of pharmacological treatment guidelines for psychological disorders (KN3).",
+      "kn": "KN37",
+      "kn_explanation": "This question is best aligned with KN37 because it tests Factors influencing evidence-based interpretation of data and decision-making (e.g., base rates, group differences, cultural biases and differences, heuristics).",
       "difficulty": "medium",
       "quality_comment": "Distractors represent plausible but incorrect medication choices, making the question clinically relevant and clear."
     },
@@ -70,8 +133,8 @@
       ],
       "answer": "Factitious disorder involves deception without obvious external incentives, whereas malingering involves external incentives",
       "explanation": "1. The correct answer, \"Factitious disorder involves deception without obvious external incentives, whereas malingering involves external incentives,\" accurately captures the core distinction between these two conditions. Factitious disorder is characterized by individuals intentionally falsifying or inducing symptoms without any clear external gain, motivated instead by a psychological need to be seen as ill. In contrast, malingering is driven by the pursuit of tangible benefits, such as financial compensation or drugs, indicating that the deceptive behavior is motivated by external rewards.\n\n2. The first incorrect option, \"Factitious disorder involves intentional symptom fabrication for external rewards, while malingering does not,\" is wrong because it inaccurately suggests that factitious disorder is motivated by external rewards, which contradicts its definition. The second option, \"Malingering always occurs in a healthcare setting, whereas factitious disorder occurs outside of it,\" is incorrect because both conditions can manifest in healthcare settings; the key difference lies in the motivation behind the symptoms, not the context. Lastly, the statement \"Individuals with malingering lack insight into their deceptive behavior\" is incorrect because individuals who engage in malingering are typically aware of their actions and the reasons for them, while those with factitious disorder may not fully recognize their motivations or the nature of their deception.",
-      "kn": "KN36",
-      "kn_explanation": "This question covers differential diagnosis criteria, a key aspect of assessment and diagnosis (KN36).",
+      "kn": "KN33",
+      "kn_explanation": "This question is best aligned with KN33 because it tests Issues of differential diagnosis and integration of non-psychological information into psychological assessment.",
       "difficulty": "medium",
       "quality_comment": "The question clearly contrasts two commonly confused diagnoses with plausible distractors reflecting common misconceptions."
     },
@@ -85,8 +148,8 @@
       ],
       "answer": "Hazy and gradual onset and partial memory retention for events during amnestic period",
       "explanation": "1. The correct answer, \"Hazy and gradual onset and partial memory retention for events during amnestic period,\" aligns with the characteristics of dissociative amnesia. Individuals with dissociative amnesia typically experience an inability to recall important personal information, and their memory loss often has a gradual onset, with some retention of memories from the amnestic period. This contrasts with feigned memory loss, where the individual usually presents a sudden and complete loss of memory.\n\n2. The first incorrect option, \"Sudden onset and termination of amnestic period with complete memory loss,\" is wrong because individuals with dissociative amnesia generally do not exhibit a sudden and complete memory loss; instead, their memory loss develops more gradually. The second incorrect option, \"Complete and permanent memory loss beginning abruptly with no recollection of events,\" is incorrect as dissociative amnesia does not typically result in permanent memory loss, and the onset is not abrupt. Lastly, the option \"Belief that memory loss is entirely irreversible and unrelated to trauma\" is incorrect because individuals with dissociative amnesia often have a recognition that their memory loss is related to trauma, rather than viewing it as entirely irreversible.",
-      "kn": "KN36",
-      "kn_explanation": "This question involves differentiating genuine from feigned memory loss, relevant to assessment and diagnosis (KN36).",
+      "kn": "KN32",
+      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
       "difficulty": "hard",
       "quality_comment": "Distractors effectively test nuanced clinical judgment, suitable for advanced level EPPP candidates."
     },
@@ -115,8 +178,8 @@
       ],
       "answer": "Prolonged exposure therapy",
       "explanation": "1. **Prolonged exposure therapy** is considered a first-line psychological treatment for PTSD according to the APA Clinical Practice Guideline because it has been shown through research to effectively alleviate core PTSD symptoms, including re-experiencing, avoidance/numbing, and hyperarousal. The guideline emphasizes the importance of evidence-based therapies, and prolonged exposure therapy is specifically recommended alongside cognitive processing therapy and trauma-focused cognitive behavioral therapy as primary treatments for PTSD.\n\n2. **Critical incident stress debriefing** is incorrect because the guideline does not recommend it for PTSD and research indicates it may worsen symptoms rather than help. **Eye movement desensitization and reprocessing (EMDR)** is also incorrect as it is categorized as a second-line treatment rather than a first-line therapy according to the guideline. Lastly, **single-session cognitive behavioral therapy** is incorrect because it is not mentioned in the guideline as a recommended treatment for PTSD, and effective treatment typically requires more than a single session to address the complexities of the disorder.",
-      "kn": "KN44",
-      "kn_explanation": "This item assesses knowledge of evidence-based treatment methods for PTSD (KN44).",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
       "difficulty": "easy",
       "quality_comment": "Question is straightforward; distractors include commonly misunderstood or less supported interventions, improving test validity."
     },
@@ -160,8 +223,8 @@
       ],
       "answer": "Prior psychiatric disorder",
       "explanation": "1. \"Prior psychiatric disorder\" is the correct answer because it is identified as a pre-trauma factor that increases the risk of developing Posttraumatic Stress Disorder (PTSD) after exposure to trauma. Individuals with a history of psychiatric disorders may have pre-existing vulnerabilities that can exacerbate their response to traumatic events, making them more susceptible to PTSD symptoms (American Psychiatric Association, 2022).\n\n2. The option \"High socioeconomic status\" is incorrect because lower socioeconomic status is associated with a greater risk of developing PTSD, not higher status. \"Extensive social support\" is also incorrect, as having strong social support typically serves as a protective factor against PTSD rather than a risk factor. Lastly, \"Male gender\" is incorrect because female gender is associated with a higher risk of developing PTSD, highlighting that males are generally at a lower risk compared to females (American Psychiatric Association, 2022).",
-      "kn": "KN27",
-      "kn_explanation": "This question relates to risk and protective factors influencing the developmental course of disorders (KN27).",
+      "kn": "KN38",
+      "kn_explanation": "This question is best aligned with KN38 because it tests Constructs of epidemiology and base rates of psychological and behavioral disorders.",
       "difficulty": "easy",
       "quality_comment": "Clear and well-constructed question with plausible alternative answers based on demographic and psychosocial factors."
     },
@@ -190,8 +253,8 @@
       ],
       "answer": "Individuals who malinger will answer more items incorrectly than expected by chance",
       "explanation": "1. The correct answer, \"Individuals who malinger will answer more items incorrectly than expected by chance,\" is based on the assumption that those feigning symptoms will deliberately choose incorrect answers at a higher rate than what would occur randomly. This is because malingerers may lack genuine knowledge or experience related to the test items, leading to a pattern of incorrect responses that deviates from what would be expected from individuals responding honestly or from genuine impairment.\n\n2. The option \"Individuals feigning impairment will guess at chance on test items during assessment\" is incorrect because it suggests that malingerers would respond randomly, which would not lead to a significant number of incorrect answers beyond chance levels. The statement \"Malingerers will perform better than genuine patients on complex memory tests\" is wrong because it overlooks the fact that malingerers may not possess the knowledge or skills to perform well, leading to poorer performance rather than better. Lastly, \"Genuine impairment results in random responding across test items\" is incorrect as genuine impairment typically leads to consistent patterns of incorrect responses based on the nature of the impairment, rather than random guessing.",
-      "kn": "KN31",
-      "kn_explanation": "This item assesses understanding of assessment methods used in differential diagnosis and detecting malingering (KN31).",
+      "kn": "KN34",
+      "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
       "difficulty": "hard",
       "quality_comment": "Question requires integration of knowledge about clinical assessment methods and malingering detection strategies, suitable for advanced learners."
     },
@@ -205,8 +268,8 @@
       ],
       "answer": "Pharmacological treatment as the primary intervention",
       "explanation": "1. The correct answer, \"Pharmacological treatment as the primary intervention,\" is correct because the reference material specifies that trauma-focused cognitive behavior therapy (TF-CBT) is designed as a psychological intervention for children and adolescents who have experienced trauma. It emphasizes cognitive-behavioral techniques and family involvement rather than pharmacological treatments, which are not considered the primary intervention in this context.\n\n2. \n- **Individual trauma processing with the child**: This option is incorrect because TF-CBT includes individual therapy sessions where the child processes their trauma, which is a core component of the treatment.\n- **Inclusion of family therapy components**: This option is incorrect as TF-CBT incorporates family therapy elements, recognizing the importance of family support in the healing process.\n- **Conjoint parent-child sessions**: This option is incorrect because TF-CBT explicitly includes conjoint sessions, allowing parents and children to work together on trauma-related issues, which enhances the therapeutic process.",
-      "kn": "KN44",
-      "kn_explanation": "This question addresses evidence-based treatment techniques specifically for trauma in children and adolescents (KN44).",
+      "kn": "KN31",
+      "kn_explanation": "This question is best aligned with KN31 because it tests Assessment methods and their strengths and limitations (e.g., self-report, multi-informant reports, psychophysiological measures, work samples, assessment centers, direct observation, structured and semi-structured interviews).",
       "difficulty": "easy",
       "quality_comment": "Simple and direct question with distractors reflecting plausible components, making it accessible yet discriminative."
     },
@@ -235,8 +298,8 @@
       ],
       "answer": "Increased dopamine, norepinephrine, and glutamate activity with decreased serotonin and GABA",
       "explanation": "1. The correct answer, \"Increased dopamine, norepinephrine, and glutamate activity with decreased serotonin and GABA,\" aligns with the neurochemical abnormalities identified in PTSD. Research indicates that individuals with PTSD exhibit heightened levels and activity of dopamine, norepinephrine, and glutamate, which contribute to the disorder's symptoms, while serotonin and GABA levels are decreased, leading to impaired regulation of mood and anxiety (Sherin & Nemeroff, 2011).\n\n2. The first incorrect option, \"Increased serotonin and GABA activity with decreased dopamine and glutamate levels,\" is wrong because it contradicts the established findings that PTSD is characterized by decreased serotonin and GABA, not increased. The second option, \"Decreased norepinephrine and dopamine with increased serotonin and glutamate,\" is incorrect as it misrepresents the activity levels; PTSD is associated with increased norepinephrine and dopamine, not decreased. Lastly, the option \"Equivalent neurotransmitter activity to healthy controls, but altered receptor sensitivity\" is incorrect because PTSD is defined by distinct neurochemical abnormalities rather than equivalent activity levels compared to healthy individuals.",
-      "kn": "KN39",
-      "kn_explanation": "This question relates to neurochemical theories and models of psychopathology, specifically neurotransmitter involvement in PTSD (KN39).",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
       "difficulty": "hard",
       "quality_comment": "Distractors include plausible but incorrect neurochemical profiles, requiring detailed knowledge of PTSD neurobiology."
     },
@@ -250,8 +313,8 @@
       ],
       "answer": "Reduced inhibitory control of the amygdala by the ventromedial prefrontal cortex leads to exaggerated fear responses",
       "explanation": "1. The correct answer, \"Reduced inhibitory control of the amygdala by the ventromedial prefrontal cortex leads to exaggerated fear responses,\" is supported by research indicating that the ventromedial prefrontal cortex normally inhibits amygdala activity. In PTSD, decreased activity in the ventromedial prefrontal cortex diminishes this inhibitory control, resulting in heightened fear responses and contributing to the persistence of PTSD symptoms.\n\n2. The option \"The hyperactivity of the hippocampus alone accounts for symptom persistence\" is incorrect because while there are findings of both increased and decreased hippocampal activity in PTSD, it is not solely responsible for symptom persistence; rather, the interplay of various brain regions is involved. The statement \"Increased anterior cingulate cortex activity causes persistent avoidance symptoms\" is wrong as the anterior cingulate cortex is linked to emotional regulation and decision-making, but its activity alone does not directly cause avoidance symptoms in PTSD. Lastly, the option \"High serotonin levels intensify re-experiencing symptoms through increased neural excitation\" is misleading because PTSD is associated with decreased serotonin levels, not high levels, which are linked to alleviating symptoms, rather than exacerbating them.",
-      "kn": "KN39",
-      "kn_explanation": "This question covers theoretical models of psychopathology and brain dysfunction underlying PTSD symptoms (KN39).",
+      "kn": "KN37",
+      "kn_explanation": "This question is best aligned with KN37 because it tests Factors influencing evidence-based interpretation of data and decision-making (e.g., base rates, group differences, cultural biases and differences, heuristics).",
       "difficulty": "medium",
       "quality_comment": "The item focuses on a central mechanistic model, with distractors reflecting related but inaccurate neurobiological hypotheses."
     },

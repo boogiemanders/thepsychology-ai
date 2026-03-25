@@ -1,6 +1,132 @@
 {
   "questions": [
     {
+      "stem": "A psychologist is explaining test results to the parents of a child who scored 85% correct on a reading mastery assessment. The parents ask whether this means their child is performing better than 85% of other children. Which response BEST clarifies the distinction between the two types of scores?",
+      "options": [
+        "The 85% represents a criterion-referenced score indicating the proportion of content mastered, not a comparison to other children's performance",
+        "The 85% is equivalent to a percentile rank of 85, meaning the child scored better than 85% of the normative sample",
+        "The 85% should be converted to a z-score before any meaningful interpretation can be made",
+        "The 85% represents a norm-referenced standard score that places the child one standard deviation above the mean"
+      ],
+      "answer": "The 85% represents a criterion-referenced score indicating the proportion of content mastered, not a comparison to other children's performance",
+      "explanation": "A percentage score of 85% is a criterion-referenced score indicating the child answered 85% of items correctly—it measures mastery of content, not comparison to others. Option B confuses percentage scores with percentile ranks, which are norm-referenced and indicate standing relative to a comparison group. As the lesson explicitly states: 'A percentile rank of 75 means you scored better than 75% of people. A percentage score of 75 means you answered 75% of questions correctly. These are completely different metrics.' Option C is incorrect because criterion-referenced scores are meaningful without conversion to z-scores. Option D is wrong because 85% correct is not a standard score.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
+      "difficulty": "medium",
+      "quality_comment": "Clinically relevant scenario that tests a commonly confused distinction. The lesson explicitly addresses this misconception.",
+      "suggestedLesson": "5-interpreting-scores",
+      "suggestedParagraph": "## Criterion-Referenced Scores: Measuring Against a Standard",
+      "lessonExcerpt": "While norm-referenced scores compare people to each other, criterion-referenced scores evaluate whether someone has achieved a specific level of competence or mastery. The question shifts from 'How do you compare to others?' to 'Can you do what needs to be done?'",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 2
+    },
+    {
+      "stem": "A psychologist obtains a z-score of +1.5 on a standardized measure for a client. The psychologist needs to convert this to a T-score for reporting purposes. What is the equivalent T-score?",
+      "options": [
+        "55",
+        "60",
+        "65",
+        "72.5"
+      ],
+      "answer": "65",
+      "explanation": "T-scores have a mean of 50 and a standard deviation of 10. To convert a z-score to a T-score, use the formula: T = 50 + 10(z). With z = +1.5: T = 50 + 10(1.5) = 50 + 15 = 65. Option A (55) would correspond to z = +0.5. Option B (60) would correspond to z = +1.0. Option D (72.5) incorrectly uses a different conversion formula. Understanding standardized score conversions is essential for interpreting psychological test results across different metric systems.",
+      "kn": "KN55",
+      "kn_explanation": "Converting z-scores to T-scores involves descriptive statistics and probability theory (score transformations).",
+      "difficulty": "medium",
+      "quality_comment": "Straightforward calculation question.",
+      "suggestedLesson": "5-interpreting-scores",
+      "suggestedParagraph": "## T-Scores",
+      "lessonExcerpt": "T-scores have a mean of 50 and a standard deviation of 10. They're essentially z-scores that have been rescaled to avoid negative numbers and decimals.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 2
+    },
+    {
+      "stem": "A client obtains a T-score of 70 on a standardized anxiety measure that has a normal distribution. What is the client's approximate percentile rank?",
+      "options": [
+        "70th percentile",
+        "84th percentile",
+        "95th percentile",
+        "98th percentile"
+      ],
+      "answer": "98th percentile",
+      "explanation": "A T-score of 70 corresponds to 2 standard deviations above the mean (T-scores have M=50, SD=10; so 70 = 50 + 2×10). In a normal distribution, a score at +2 SD corresponds to approximately the 98th percentile. The lesson provides the conversion table showing that +2 SD = T-score of 70 = z-score of +2.0 = percentile rank of 98. Option A (70th) confuses the T-score value with a percentile rank. Option B (84th) corresponds to +1 SD (T-score of 60). Option C (95th) is incorrect and may be confused with the 95% confidence interval.",
+      "kn": "KN56",
+      "kn_explanation": "This question is best aligned with KN56 because it tests Statistical interpretation (e.g., power, effect size, causation vs. association, clinical vs. statistical significance).",
+      "difficulty": "medium",
+      "quality_comment": "Clean, straightforward conversion question. Tests memorization of the standard score equivalency table which is essential EPPP knowledge.",
+      "suggestedLesson": "5-interpreting-scores",
+      "suggestedParagraph": "### The Critical Table: Standard Score Equivalents",
+      "lessonExcerpt": "| +2 SD | +2.0 | 70 | 130 | 9 | 98 |",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 2
+    },
+    {
+      "stem": "A set of raw scores from an anxiety measure has a bimodal distribution. When each raw score is converted to a z-score using the formula z = (X – M)/SD, the resulting distribution of z-scores will be:",
+      "options": [
+        "Normal, because z-score transformation always normalizes a distribution",
+        "Bimodal, because z-score conversion is a linear transformation that preserves the shape of the distribution",
+        "Rectangular, because z-scores spread all values evenly across the distribution",
+        "Positively skewed, because z-scores shift all values to the right of the distribution"
+      ],
+      "answer": "Bimodal, because z-score conversion is a linear transformation that preserves the shape of the distribution",
+      "explanation": "Converting raw scores to z-scores is a linear transformation, which changes the scale (mean becomes 0, SD becomes 1) but preserves the shape of the original distribution. The lesson explicitly states: 'converting raw scores to standard scores is a linear transformation, the shape of the distribution stays the same. If your raw scores form a bell curve, your standard scores will too.' Therefore, if the original distribution is bimodal, the z-score distribution will also be bimodal. Option A is incorrect — z-score transformation does NOT normalize distributions; that requires a separate nonlinear normalization procedure. Option C describes the effect of converting to percentile ranks, not z-scores. Option D has no basis in how z-score transformation works.",
+      "kn": "KN55",
+      "kn_explanation": "Understanding z-score transformations and their effect on distribution shape is a descriptive statistics concept, falling under KN55's quantitative analytic methods.",
+      "difficulty": "medium",
+      "quality_comment": "Tests a commonly confused concept — the distinction between linear transformation (z-scores) and nonlinear transformation (percentile ranks/normalization). Strong distractors.",
+      "suggestedLesson": "5-interpreting-scores",
+      "suggestedParagraph": "### Standard Scores: Speaking the Language of Standard Deviations",
+      "lessonExcerpt": "converting raw scores to standard scores is a linear transformation, the shape of the distribution stays the same. If your raw scores form a bell curve, your standard scores will too.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 9
+    },
+    {
+      "stem": "A child obtains an IQ score of 85 on a standardized intelligence test with a mean of 100 and standard deviation of 15. Assuming a normal distribution, which of the following is the BEST estimate of this child's percentile rank?",
+      "options": [
+        "2nd percentile",
+        "10th percentile",
+        "16th percentile",
+        "30th percentile"
+      ],
+      "answer": "16th percentile",
+      "explanation": "An IQ score of 85 falls exactly 1 standard deviation below the mean (100 - 15 = 85). According to the standard score equivalents table, a score at -1 SD corresponds to the 16th percentile rank. The 2nd percentile corresponds to -2 SD (IQ of 70). The 10th and 30th percentiles do not correspond to any whole standard deviation unit. The lesson's critical table explicitly shows: -1 SD = z-score of -1.0 = T-score of 40 = IQ of 85 = percentile rank of 16.",
+      "kn": "KN57",
+      "kn_explanation": "This question is best aligned with KN57 because it tests Critical appraisal and application of research findings (e.g., adequacy of design and statistics, limitations to generalizability, threats to internal and external validity, design flaws, level of evidence).",
+      "difficulty": "medium",
+      "quality_comment": "Straightforward application of the standard score conversion table. Tests a fundamental skill that appears frequently on the EPPP.",
+      "suggestedLesson": "5-interpreting-scores",
+      "suggestedParagraph": "### The Critical Table: Standard Score Equivalents",
+      "lessonExcerpt": "| -1 SD | -1.0 | 40 | 85 | 3 | 16 |",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 2
+    },
+    {
+      "stem": "A set of raw scores on a psychological test has a mean of 75 and a standard deviation of 10. When these scores are converted to z-scores, the resulting distribution will have:",
+      "options": [
+        "A mean of 0, a standard deviation of 1, and the same shape as the original distribution",
+        "A mean of 0, a standard deviation of 1, and a normal (bell-shaped) distribution regardless of the original shape",
+        "A mean of 50, a standard deviation of 10, and the same shape as the original distribution",
+        "A mean of 0, a standard deviation of 1, and a rectangular (flat) distribution"
+      ],
+      "answer": "A mean of 0, a standard deviation of 1, and the same shape as the original distribution",
+      "explanation": "Converting raw scores to z-scores is a linear transformation. The lesson states that 'converting raw scores to standard scores is a linear transformation — the shape of the distribution stays the same. If your raw scores form a bell curve, your standard scores will too.' Z-scores always have a mean of 0 and SD of 1, but the shape is preserved. Option B is incorrect because z-score conversion does not normalize a distribution — only nonlinear normalization does that. Option C describes T-scores, not z-scores. Option D describes percentile ranks, which produce a rectangular distribution through nonlinear transformation.",
+      "kn": "KN57",
+      "kn_explanation": "This question is best aligned with KN57 because it tests Critical appraisal and application of research findings (e.g., adequacy of design and statistics, limitations to generalizability, threats to internal and external validity, design flaws, level of evidence).",
+      "difficulty": "medium",
+      "quality_comment": "Targets a critical distinction between linear and nonlinear transformations that is commonly tested on the EPPP.",
+      "suggestedLesson": "5-interpreting-scores",
+      "suggestedParagraph": "### Standard Scores: Speaking the Language of Standard Deviations",
+      "lessonExcerpt": "Unlike percentile ranks, converting raw scores to standard scores is a linear transformation — the shape of the distribution stays the same. If your raw scores form a bell curve, your standard scores will too.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 9
+    },
+    {
       "stem": "Which of the following best describes a percentile rank score?",
       "options": [
         "The number of standard deviations an individual's score is from the mean",
@@ -31,7 +157,7 @@
       "quality_comment": "Clear and concise, the options are numerically close, requiring test-takers to apply knowledge rather than guess."
     },
     {
-      "stem": "If an individual\u2019s raw score on a test corresponds to a z-score of +2.0, what is the approximate percentile rank equivalent in a normal distribution?",
+      "stem": "If an individual’s raw score on a test corresponds to a z-score of +2.0, what is the approximate percentile rank equivalent in a normal distribution?",
       "options": [
         "About the 98th percentile",
         "About the 50th percentile",
@@ -40,8 +166,8 @@
       ],
       "answer": "About the 98th percentile",
       "explanation": "1. The correct answer, \"About the 98th percentile,\" is based on the relationship between z-scores and percentile ranks in a normal distribution. A z-score of +2.0 indicates that the individual's score is two standard deviations above the mean. According to the reference material, a percentile rank of 98 corresponds to a z-score of +2.0, meaning that approximately 98% of examinees scored at or below this individual's score.\n\n2. The option \"About the 50th percentile\" is incorrect because a percentile rank of 50 indicates a z-score of 0, which corresponds to the mean, not two standard deviations above it. \"About the 16th percentile\" is wrong because this percentile corresponds to a z-score of -1.0, indicating a score one standard deviation below the mean. Lastly, \"About the 2nd percentile\" is incorrect as it aligns with a z-score of -2.0, indicating a score two standard deviations below the mean, which is the opposite of the given z-score of +2.0.",
-      "kn": "KN29",
-      "kn_explanation": "This question involves converting standard scores to percentile ranks, a fundamental part of test score interpretation (KN29).",
+      "kn": "KN37",
+      "kn_explanation": "This question is best aligned with KN37 because it tests Factors influencing evidence-based interpretation of data and decision-making (e.g., base rates, group differences, cultural biases and differences, heuristics).",
       "difficulty": "medium",
       "quality_comment": "Distractors represent common percentile ranks associated with standard deviations, making the question appropriately challenging."
     },
@@ -85,8 +211,8 @@
       ],
       "answer": "Grouping scores into ranges based on the test's standard error of measurement and considering all candidates within a band equivalent",
       "explanation": "1. The correct answer, \"Grouping scores into ranges based on the test's standard error of measurement and considering all candidates within a band equivalent,\" accurately characterizes banding because it reflects the principle that small differences in test scores may arise from measurement unreliability. Banding treats candidates with scores within the same range as equivalent, allowing for selection based on additional factors beyond test scores, thereby addressing potential adverse impact and promoting fairness in the selection process.\n\n2. The first incorrect option, \"Grouping test scores into ranks from highest to lowest and selecting top candidates accordingly,\" misrepresents banding, as it does not involve ranking but rather grouping scores into bands. The second incorrect option, \"Setting a score cutoff and accepting any candidates who exceed it,\" is incorrect because banding does not rely on a strict cutoff score; instead, it considers ranges of scores. Lastly, the option \"Selecting candidates solely based on their exact test score differences\" is wrong because banding emphasizes the equivalence of scores within a band rather than making decisions based on precise score differences, which could overlook other important candidate attributes.",
-      "kn": "KN29",
-      "kn_explanation": "This question concerns test score use in applied contexts, focusing on fairness and decision-making based on test reliability (KN29).",
+      "kn": "KN34",
+      "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
       "difficulty": "medium",
       "quality_comment": "Distractors reflect common selection methods, creating a realistic and challenging question format."
     },
@@ -100,8 +226,8 @@
       ],
       "answer": "Expectancy tables show the distribution of criterion scores for each predictor score, whereas regression equations predict a single criterion score",
       "explanation": "1. The correct answer states that \"Expectancy tables show the distribution of criterion scores for each predictor score, whereas regression equations predict a single criterion score.\" This is accurate because expectancy tables provide a breakdown of how different test scores (predictor scores) correlate with various performance outcomes (criterion scores) in a distribution format. In contrast, regression equations generate a specific predicted value for a criterion score based on a given predictor score, focusing on a single outcome rather than a distribution.\n\n2. The first incorrect option, \"Expectancy tables predict a single criterion score, whereas regression equations show the distribution of criterion scores for a given predictor score,\" is wrong because it reverses the functions of expectancy tables and regression equations; expectancy tables do not predict a single score but rather display a distribution. The second incorrect option, \"Expectancy tables assess ranking only, whereas regression equations are used for cutoff score setting,\" is incorrect because expectancy tables provide a distribution of scores rather than just ranking, and regression equations do not specifically relate to cutoff scores but predict outcomes. Lastly, the third incorrect option, \"Expectancy tables are used exclusively for criterion-referenced tests, while regression equations apply to norm-referenced tests,\" is misleading since both expectancy tables and regression equations can be used in various contexts, not limited to the type of test (norm-referenced or criterion-referenced).",
-      "kn": "KN29",
-      "kn_explanation": "Understanding how predictive information from tests is represented reflects deep knowledge of assessment and test interpretation (KN29).",
+      "kn": "KN37",
+      "kn_explanation": "This question is best aligned with KN37 because it tests Factors influencing evidence-based interpretation of data and decision-making (e.g., base rates, group differences, cultural biases and differences, heuristics).",
       "difficulty": "hard",
       "quality_comment": "The options are nuanced and rely on subtle distinctions that require thorough understanding; distractors are credible."
     },
@@ -114,11 +240,11 @@
         "The score is two standard deviations below the mean"
       ],
       "answer": "The score is one standard deviation below the mean",
-      "explanation": "1. The correct answer, \"The score is one standard deviation below the mean,\" is accurate because full-scale IQ scores on the Wechsler tests have a mean of 100 and a standard deviation of 15. A score of 85 is calculated as one standard deviation below the mean (100 - 15 = 85), confirming that the individual\u2019s performance is lower than the average population score.\n\n2. The option \"The score is one standard deviation above the mean\" is incorrect because a score of 85 is lower than the mean of 100, not higher. The statement \"The score is equal to the population mean\" is wrong because 85 does not equal 100, which is the mean IQ score for the Wechsler tests. Lastly, \"The score is two standard deviations below the mean\" is incorrect because a score of 85 is only one standard deviation below the mean, which would correspond to a score of 70 (100 - 30 = 70) if it were two standard deviations below.",
-      "kn": "KN29",
-      "kn_explanation": "This item assesses knowledge of major standardized score types and their interpretation (KN29).",
+      "explanation": "1. The correct answer, \"The score is one standard deviation below the mean,\" is accurate because full-scale IQ scores on the Wechsler tests have a mean of 100 and a standard deviation of 15. A score of 85 is calculated as one standard deviation below the mean (100 - 15 = 85), confirming that the individual’s performance is lower than the average population score.\n\n2. The option \"The score is one standard deviation above the mean\" is incorrect because a score of 85 is lower than the mean of 100, not higher. The statement \"The score is equal to the population mean\" is wrong because 85 does not equal 100, which is the mean IQ score for the Wechsler tests. Lastly, \"The score is two standard deviations below the mean\" is incorrect because a score of 85 is only one standard deviation below the mean, which would correspond to a score of 70 (100 - 30 = 70) if it were two standard deviations below.",
+      "kn": "KN32",
+      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
       "difficulty": "easy",
-      "quality_comment": "Clear and straightforward, with options that show common misunderstandings, making it easy to differentiate test-takers\u2019 knowledge."
+      "quality_comment": "Clear and straightforward, with options that show common misunderstandings, making it easy to differentiate test-takers’ knowledge."
     },
     {
       "stem": "Why is the conversion of raw scores to percentile ranks considered a nonlinear transformation?",
@@ -130,8 +256,8 @@
       ],
       "answer": "Because each percentile rank corresponds to exactly 1% of scores, resulting in a uniform distribution",
       "explanation": "1. The correct answer, \"Because each percentile rank corresponds to exactly 1% of scores, resulting in a uniform distribution,\" is accurate because percentile ranks are assigned in a way that each rank represents a fixed percentage (1%) of the total scores. This creates a rectangular or flat distribution, regardless of the actual shape of the raw score distribution, as the highest 1% of scores is ranked 100, the next highest 1% is ranked 99, and so forth. This non-linear transformation contrasts with standard scores, which maintain the shape of the raw score distribution.\n\n2. The option \"Because percentile ranks represent equal intervals of raw scores\" is incorrect because percentile ranks do not represent equal intervals; they are based on the relative standing of scores within the distribution rather than fixed score differences. The statement \"Because the shape of the raw score distribution is preserved in percentile ranks\" is inaccurate since percentile ranks do not preserve the shape of the raw score distribution; they create a uniform distribution instead. Lastly, the option \"Because percentile ranks involve adding a constant value to raw scores\" is misleading because percentile ranks are derived from the ranking of scores rather than through arithmetic operations like adding constants to raw scores.",
-      "kn": "KN29",
-      "kn_explanation": "This question taps into understanding score transformations and distributions, a core psychometric concept (KN29).",
+      "kn": "KN37",
+      "kn_explanation": "This question is best aligned with KN37 because it tests Factors influencing evidence-based interpretation of data and decision-making (e.g., base rates, group differences, cultural biases and differences, heuristics).",
       "difficulty": "medium",
       "quality_comment": "Options target common misconceptions about linearity versus nonlinearity, supporting effective differentiation."
     },
@@ -140,13 +266,13 @@
       "options": [
         "Ranking candidates from highest to lowest scores and selecting the top scorers until positions are filled",
         "Using criterion-referenced scores to identify candidates who meet a minimal acceptable level of job performance",
-        "Banding candidates\u2019 scores into groups based on score unreliability and randomly selecting within bands",
-        "Comparing candidates\u2019 scores to the distribution of scores in the general population"
+        "Banding candidates’ scores into groups based on score unreliability and randomly selecting within bands",
+        "Comparing candidates’ scores to the distribution of scores in the general population"
       ],
       "answer": "Using criterion-referenced scores to identify candidates who meet a minimal acceptable level of job performance",
-      "explanation": "1. The correct answer, \"Using criterion-referenced scores to identify candidates who meet a minimal acceptable level of job performance,\" is accurate because criterion-referenced scores evaluate a candidate's competence against a pre-established standard of performance. In this case, the hiring manager sets a cutoff score linked to a criterion measure of job performance, which aligns with the definition of criterion-referenced testing aimed at determining if candidates meet a minimum level of proficiency.\n\n2. The first incorrect option, \"Ranking candidates from highest to lowest scores and selecting the top scorers until positions are filled,\" is wrong because this describes a norm-referenced approach, which focuses on comparing candidates to one another rather than assessing their performance against a specific standard. \n\nThe second incorrect option, \"Banding candidates\u2019 scores into groups based on score unreliability and randomly selecting within bands,\" is incorrect as it pertains to a method that groups scores based on their standard error of measurement rather than evaluating candidates against a criterion-based cutoff score. \n\nThe third incorrect option, \"Comparing candidates\u2019 scores to the distribution of scores in the general population,\" is wrong because this approach reflects norm-referenced scoring, which assesses how candidates perform relative to a broader population, rather than measuring their performance against a specific criterion or standard.",
-      "kn": "KN29",
-      "kn_explanation": "This question addresses applying test score interpretations for practical decision making in personnel selection (KN29).",
+      "explanation": "1. The correct answer, \"Using criterion-referenced scores to identify candidates who meet a minimal acceptable level of job performance,\" is accurate because criterion-referenced scores evaluate a candidate's competence against a pre-established standard of performance. In this case, the hiring manager sets a cutoff score linked to a criterion measure of job performance, which aligns with the definition of criterion-referenced testing aimed at determining if candidates meet a minimum level of proficiency.\n\n2. The first incorrect option, \"Ranking candidates from highest to lowest scores and selecting the top scorers until positions are filled,\" is wrong because this describes a norm-referenced approach, which focuses on comparing candidates to one another rather than assessing their performance against a specific standard. \n\nThe second incorrect option, \"Banding candidates’ scores into groups based on score unreliability and randomly selecting within bands,\" is incorrect as it pertains to a method that groups scores based on their standard error of measurement rather than evaluating candidates against a criterion-based cutoff score. \n\nThe third incorrect option, \"Comparing candidates’ scores to the distribution of scores in the general population,\" is wrong because this approach reflects norm-referenced scoring, which assesses how candidates perform relative to a broader population, rather than measuring their performance against a specific criterion or standard.",
+      "kn": "KN34",
+      "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
       "difficulty": "medium",
       "quality_comment": "The distractors represent other common selection methods, making this an applied and relevant question."
     },
@@ -159,7 +285,7 @@
         "Calculating percentage of items answered correctly"
       ],
       "answer": "Converting raw scores to z-scores",
-      "explanation": "1. \"Converting raw scores to z-scores\" is the correct answer because this process involves a linear transformation where the z-score expresses an examinee\u2019s score in terms of standard deviations from the mean. The formula for calculating a z-score, \\( z = (X - M)/SD \\), shows that it maintains the same distribution shape as the raw scores, thus qualifying it as a linear transformation.\n\n2. The option \"Converting raw scores to percentile ranks\" is incorrect because this transformation is nonlinear; percentile ranks are assigned based on a flat distribution where each percentile represents an equal percentage of scores, regardless of the raw score distribution shape. \"Using expectancy tables to predict criterion scores\" is not a transformation of raw scores but rather a method of interpreting test scores based on established relationships between predictor and criterion measures. Lastly, \"Calculating percentage of items answered correctly\" is incorrect as it represents a criterion-referenced score rather than a transformation of raw scores; it simply indicates the proportion of correct responses without altering the original score distribution.",
+      "explanation": "1. \"Converting raw scores to z-scores\" is the correct answer because this process involves a linear transformation where the z-score expresses an examinee’s score in terms of standard deviations from the mean. The formula for calculating a z-score, \\( z = (X - M)/SD \\), shows that it maintains the same distribution shape as the raw scores, thus qualifying it as a linear transformation.\n\n2. The option \"Converting raw scores to percentile ranks\" is incorrect because this transformation is nonlinear; percentile ranks are assigned based on a flat distribution where each percentile represents an equal percentage of scores, regardless of the raw score distribution shape. \"Using expectancy tables to predict criterion scores\" is not a transformation of raw scores but rather a method of interpreting test scores based on established relationships between predictor and criterion measures. Lastly, \"Calculating percentage of items answered correctly\" is incorrect as it represents a criterion-referenced score rather than a transformation of raw scores; it simply indicates the proportion of correct responses without altering the original score distribution.",
       "kn": "KN29",
       "kn_explanation": "Understanding types of score transformations is fundamental for psychometric interpretation (KN29).",
       "difficulty": "medium",
@@ -169,14 +295,14 @@
       "stem": "What primary purpose do expectancy tables serve in test score interpretation?",
       "options": [
         "To estimate the percentile rank equivalent of a raw score",
-        "To predict an examinee\u2019s distribution of criterion scores based on their predictor score",
+        "To predict an examinee’s distribution of criterion scores based on their predictor score",
         "To establish cutoff scores for mastery of skills",
         "To convert raw scores into norm-referenced standard scores"
       ],
-      "answer": "To predict an examinee\u2019s distribution of criterion scores based on their predictor score",
+      "answer": "To predict an examinee’s distribution of criterion scores based on their predictor score",
       "explanation": "Expectancy tables provide the proportion of individuals expected to achieve various levels on a criterion measure given their predictor test score, showing the distribution rather than a single point estimate.",
-      "kn": "KN30",
-      "kn_explanation": "This question addresses assessment models and their application in predicting criterion performance from predictor test scores (KN30).",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
       "difficulty": "medium",
       "quality_comment": "The item effectively distinguishes expectancy tables from other score interpretations with plausible distractors."
     },
@@ -190,8 +316,8 @@
       ],
       "answer": "That small score differences within a band are due to measurement error rather than meaningful differences",
       "explanation": "1. The correct answer, \"That small score differences within a band are due to measurement error rather than meaningful differences,\" reflects the foundational assumption of banding in selection techniques. Banding posits that minor variations in test scores may not accurately reflect true differences in ability due to the inherent unreliability of the test. Therefore, candidates with scores that fall within the same band are considered equivalent, allowing for a more equitable selection process that accounts for potential measurement errors.\n\n2. The option \"That all scores within a band represent identical true ability levels\" is incorrect because banding acknowledges that while scores within a band are treated as equivalent, they may not reflect identical true abilities; rather, they are seen as potentially influenced by measurement error. The statement \"That higher raw scores always indicate superior ability regardless of error\" is wrong because banding specifically addresses the unreliability of test scores, suggesting that not all higher scores are indicative of true ability due to possible measurement error. Lastly, the option \"That test scores should be converted to percentile ranks before banding\" is incorrect because the banding process does not necessitate the conversion of scores to percentile ranks; it focuses on grouping scores based on their standard error of measurement without altering their original format.",
-      "kn": "KN30",
-      "kn_explanation": "This item relates to assessment theory by addressing how measurement error influences interpretation and use of scores in decision making (KN30).",
+      "kn": "KN37",
+      "kn_explanation": "This question is best aligned with KN37 because it tests Factors influencing evidence-based interpretation of data and decision-making (e.g., base rates, group differences, cultural biases and differences, heuristics).",
       "difficulty": "medium",
       "quality_comment": "The distractors address common misunderstandings, requiring examinees to grasp measurement concepts underlying banding."
     },

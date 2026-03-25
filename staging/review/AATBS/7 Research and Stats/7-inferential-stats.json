@@ -1,0 +1,64 @@
+{
+  "questions": [
+    {
+      "stem": "A researcher is studying a subtle treatment effect and cannot change the intervention itself or the alpha level. Which of the following design changes would most directly increase the study's statistical power?",
+      "options": [
+        "Increase the sample size",
+        "Convert interval data into nominal categories",
+        "Use a more heterogeneous sample on the dependent variable",
+        "Reduce the number of participants to minimize random variation"
+      ],
+      "answer": "Increase the sample size",
+      "explanation": "Increasing sample size is the best answer because larger samples increase power by reducing random sampling variation and making true effects easier to detect. Converting interval data into categories is wrong because it can force the use of less powerful methods and discard information. Using a more heterogeneous sample is wrong because greater variability on the dependent variable makes effects harder to detect. Reducing sample size is wrong because it does the opposite of what power analysis typically recommends.",
+      "kn": "KN56",
+      "kn_explanation": "This question assesses statistical interpretation, specifically the factors that affect statistical power.",
+      "difficulty": "medium",
+      "quality_comment": "High-yield power question framed as a practical design choice rather than a definition check.",
+      "suggestedLesson": "7-inferential-stats",
+      "suggestedParagraph": "## Statistical Power: Your Ability to Detect Real Effects",
+      "lessonExcerpt": "Larger samples increase power substantially.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS"
+    },
+    {
+      "stem": "Which statement correctly distinguishes a 95% Bayesian credibility interval from a 95% frequentist confidence interval?",
+      "options": [
+        "Both intervals mean there is a 95% probability that the true population mean lies in the specific interval obtained from the study",
+        "Only the Bayesian credibility interval can be interpreted as the probability that the true population mean lies within the specific interval",
+        "Only the frequentist confidence interval combines prior knowledge with the current sample to estimate the parameter",
+        "Neither interval can be described in probabilistic terms under any interpretation"
+      ],
+      "answer": "Only the Bayesian credibility interval can be interpreted as the probability that the true population mean lies within the specific interval",
+      "explanation": "This is the best answer because Bayesian credibility intervals are interpreted as probability statements about the parameter in the interval obtained from the study. The first option is wrong because that common interpretation does not apply to frequentist confidence intervals. The third option is wrong because combining prior knowledge with current data is a defining feature of Bayesian, not frequentist, analysis. The final option is wrong because Bayesian intervals are explicitly probabilistic in their interpretation.",
+      "kn": "KN56",
+      "kn_explanation": "This question tests statistical interpretation by distinguishing Bayesian and frequentist interval meaning.",
+      "difficulty": "hard",
+      "quality_comment": "Tests a common exam trap: intuitive but incorrect confidence-interval interpretation.",
+      "suggestedLesson": "7-inferential-stats",
+      "suggestedParagraph": "### Confidence Intervals vs. Credibility Intervals",
+      "lessonExcerpt": "95% Bayesian Credibility Interval: There's a 95% probability that the true population mean falls within this specific interval.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS"
+    },
+    {
+      "stem": "A researcher decides to change the significance level from .05 to .01 while keeping the sample, effect size, and statistical test the same. What is the most likely result of this decision?",
+      "options": [
+        "Power will increase and Type I error will decrease",
+        "Power will decrease and false positives will become less likely",
+        "The sampling distribution will become more normal",
+        "Effect size will increase because the criterion is more conservative"
+      ],
+      "answer": "Power will decrease and false positives will become less likely",
+      "explanation": "This is the best answer because lowering alpha makes it harder to reject the null hypothesis, which reduces the probability of Type I error but also lowers statistical power. The first option is wrong because power does not rise when alpha becomes more conservative. The sampling-distribution option is wrong because alpha does not determine distribution shape. The effect-size option is wrong because effect size is a property of the underlying effect, not something changed by choosing a different significance level.",
+      "kn": "KN56",
+      "kn_explanation": "This question assesses statistical interpretation of alpha, power, and Type I error tradeoffs.",
+      "difficulty": "medium",
+      "quality_comment": "Useful alpha-power tradeoff item with distractors targeting common causal confusions.",
+      "suggestedLesson": "7-inferential-stats",
+      "suggestedParagraph": "## Statistical Power: Your Ability to Detect Real Effects",
+      "lessonExcerpt": "Increasing alpha increases power. If you use alpha = .10 instead of alpha = .05, you're more likely to detect effects. However, this also increases your Type I error risk.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS"
+    }
+  ]
+}

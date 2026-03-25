@@ -1,0 +1,64 @@
+{
+  "questions": [
+    {
+      "stem": "A psychologist working for a hospital is instructed by the medical director to upload full psychotherapy notes to a shared drive that non-treatment administrators can access. The psychologist believes this would violate confidentiality requirements. According to Ethics Standard 1.02, what is the most appropriate initial response?",
+      "options": [
+        "Upload the notes because employer policy takes precedence over ethical standards",
+        "Clarify the nature of the conflict, make the commitment to the Ethics Code known, and take reasonable steps to resolve the conflict",
+        "Resign immediately without discussing the matter further",
+        "File a licensing complaint against the medical director before taking any internal action"
+      ],
+      "answer": "Clarify the nature of the conflict, make the commitment to the Ethics Code known, and take reasonable steps to resolve the conflict",
+      "explanation": "This is the best answer because Standard 1.02 requires the psychologist to identify the ethical conflict, make the commitment to the Ethics Code explicit, and attempt a reasonable resolution before simply complying or escalating. The option about uploading the notes is wrong because organizational pressure does not erase the psychologist's ethical obligations. The resignation option is wrong because the standard emphasizes reasonable efforts to resolve the conflict first. Filing a licensing complaint immediately is also wrong because the problem here is an ethics-law or ethics-policy conflict, not necessarily misconduct that requires formal reporting as the first step.",
+      "kn": "KN64",
+      "kn_explanation": "This question tests identification and management of a potential ethical issue involving conflict between policy demands and confidentiality obligations.",
+      "difficulty": "hard",
+      "quality_comment": "Application-style ethics scenario with one clearly best action and three plausible but inferior responses.",
+      "suggestedLesson": "8-standards-1-2",
+      "suggestedParagraph": "### Handling Conflicts Between Ethics and Law",
+      "lessonExcerpt": "Clarify the nature of the conflict. Make your commitment to the Ethics Code known. Take reasonable steps to resolve the conflict.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES"
+    },
+    {
+      "stem": "A psychologist learns that a colleague accidentally left identifiable client intake forms on an unsecured office printer. No client has yet been harmed, and the colleague is generally careful in practice. According to Standard 1.04, what is the BEST first step?",
+      "options": [
+        "Ignore the problem because no substantial harm has occurred yet",
+        "Immediately report the colleague to the licensing board",
+        "Bring the issue to the colleague's attention and attempt informal resolution if doing so is appropriate",
+        "Notify all current clients in the practice before speaking with the colleague"
+      ],
+      "answer": "Bring the issue to the colleague's attention and attempt informal resolution if doing so is appropriate",
+      "explanation": "This is the best answer because Standard 1.04 says psychologists should try to resolve a colleague's ethical violation informally when that approach is appropriate. Ignoring the issue is wrong because the conduct still creates a confidentiality risk and should be addressed. Immediate formal reporting is wrong because the scenario does not suggest the kind of harm or severity that makes informal resolution clearly inappropriate. Notifying all clients first is wrong because that skips the expected initial step and may create unnecessary disruption without first confirming the scope of the problem.",
+      "kn": "KN64",
+      "kn_explanation": "This question assesses management of colleague ethical violations and the threshold for informal resolution.",
+      "difficulty": "medium",
+      "quality_comment": "Tests the distinction between informal and formal responses to colleague misconduct without using an extreme vignette.",
+      "suggestedLesson": "8-standards-1-2",
+      "suggestedParagraph": "### Dealing with Colleagues' Ethical Violations",
+      "lessonExcerpt": "When appropriate, try to resolve the issue informally by bringing it to the colleague's attention.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES"
+    },
+    {
+      "stem": "A psychologist with strong experience providing CBT to middle-class adults is asked to begin treatment with a recently arrived refugee family whose care will require knowledge of language, cultural context, and trauma-related migration issues that the psychologist does not currently possess. Under Standard 2.01(b), what is the most ethical course of action?",
+      "options": [
+        "Begin treatment immediately because general CBT skills are sufficient across populations",
+        "Avoid discussing cultural factors so therapy stays focused on universal symptoms",
+        "Provide services only after obtaining the necessary knowledge and training, or make an appropriate referral if that cannot be done adequately",
+        "Accept the case as long as the family signs an informed consent acknowledging the psychologist's limitations"
+      ],
+      "answer": "Provide services only after obtaining the necessary knowledge and training, or make an appropriate referral if that cannot be done adequately",
+      "explanation": "This is the best answer because Standard 2.01(b) makes competence population-specific when cultural and related factors are essential for effective service. Starting immediately is wrong because general skill with CBT does not automatically establish competence with every population. Avoiding cultural issues is wrong because those issues are central, not optional, in the scenario. The informed-consent option is wrong because a client's awareness of a psychologist's limitations does not substitute for competence.",
+      "kn": "KN64",
+      "kn_explanation": "This question tests identification and management of an ethical competence issue involving cultural knowledge and referral decisions.",
+      "difficulty": "hard",
+      "quality_comment": "Good population-competence item with realistic distractors that reflect common overgeneralizations.",
+      "suggestedLesson": "8-standards-1-2",
+      "suggestedParagraph": "### Staying Within Your Boundaries",
+      "lessonExcerpt": "If understanding issues related to gender, gender identity, race, ethnicity, or other characteristics is essential for effective service, you must have the necessary knowledge and training. If you don't, make appropriate referrals.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES"
+    }
+  ]
+}

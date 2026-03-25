@@ -1,6 +1,48 @@
 {
   "questions": [
     {
+      "stem": "An I/O psychologist is advising an organization considering alternative work schedules. Based on meta-analytic research, what is the primary documented benefit of implementing a flextime schedule?",
+      "options": [
+        "Substantial increase in overall job satisfaction",
+        "Significant improvement in employee productivity ratings",
+        "Strongest effect on reducing employee absenteeism",
+        "Marked decrease in workplace accidents and errors"
+      ],
+      "answer": "Strongest effect on reducing employee absenteeism",
+      "explanation": "Research on alternative work schedules shows that flextime's strongest documented benefit is reducing absenteeism, while its effects on self-rated performance are the weakest. In contrast, compressed workweeks have the strongest positive effect on job satisfaction. Substantial increase in job satisfaction (A) is more associated with compressed workweeks. Significant improvement in productivity (B) is not the primary finding for flextime—effects on performance are weak. Decreased workplace accidents (D) is not a documented primary benefit of flextime in the research literature.",
+      "kn": "KN46",
+      "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
+      "difficulty": "medium",
+      "quality_comment": "Strong question with clear lesson support differentiating flextime from compressed workweek outcomes.",
+      "suggestedLesson": "6-how-orgs-change",
+      "suggestedParagraph": "### Technostructural Interventions",
+      "lessonExcerpt": "Flextime: Strongest effect on reducing absenteeism; weakest effect on self-rated performance; beneficial for job satisfaction... compressed workweeks boost satisfaction most, while flextime reduces absenteeism most.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 16
+    },
+    {
+      "stem": "An I/O psychologist is advising a manufacturing company on implementing a compressed workweek schedule (four 10-hour days). Based on the research literature, what outcome pattern should the psychologist predict?",
+      "options": [
+        "Strong improvements in both job satisfaction and productivity",
+        "Strong improvement in job satisfaction with a weaker effect on productivity",
+        "Strong improvement in productivity with a weaker effect on job satisfaction",
+        "Strong reduction in absenteeism with minimal effects on satisfaction or productivity"
+      ],
+      "answer": "Strong improvement in job satisfaction with a weaker effect on productivity",
+      "explanation": "Research on compressed workweeks consistently shows a strong positive effect on job satisfaction but a positive yet weaker effect on productivity, with unclear effects on absenteeism. This pattern is distinct from flextime, which shows its strongest effect on reducing absenteeism and its weakest effect on self-rated performance. Option A overstates the productivity effect. Option C reverses the pattern. Option D describes the pattern more associated with flextime (strongest effect on reducing absenteeism). The key exam takeaway is knowing that different alternative work schedules produce different patterns of outcomes.",
+      "kn": "KN46",
+      "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
+      "difficulty": "hard",
+      "quality_comment": "Tests nuanced knowledge of specific research findings. Requires distinguishing between compressed workweek and flextime effects.",
+      "suggestedLesson": "6-how-orgs-change",
+      "suggestedParagraph": "### Alternative Work Schedules",
+      "lessonExcerpt": "Compressed Workweek: Fewer days with longer hours (e.g., four 10-hour days) | Strong positive effect on job satisfaction; positive but weaker effect on productivity; unclear effects on absenteeism",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 16
+    },
+    {
       "stem": "According to Lewin's three-step model of planned change, what is the primary focus of the 'unfreezing' stage?",
       "options": [
         "Implementing desired changes to establish a new equilibrium",
@@ -10,8 +52,8 @@
       ],
       "answer": "Identifying and reducing forces maintaining the current status quo",
       "explanation": "1. The correct answer, \"Identifying and reducing forces maintaining the current status quo,\" is accurate because the 'unfreezing' stage in Lewin's three-step model focuses on recognizing and diminishing the factors that uphold an undesirable status quo. This stage is essential for creating a readiness for change by increasing awareness of the need for transformation within the organization.\n\n2. The option \"Implementing desired changes to establish a new equilibrium\" is incorrect because this action occurs during the 'changing' stage, not 'unfreezing.' The option \"Stabilizing the organization to prevent regression to previous states\" is wrong because this is part of the 'refreezing' stage, where the focus is on integrating and solidifying the changes made. Lastly, \"Evaluating the outcomes of organizational change interventions\" is incorrect as this evaluation occurs later in the process, specifically in the 'evaluating and institutionalizing' phase, after the changes have been implemented.",
-      "kn": "KN46",
-      "kn_explanation": "This question relates to theories and models of organizational change interventions within systems and organizations, which corresponds to interventions enhancing performance of organizations (KN46).",
+      "kn": "KN42",
+      "kn_explanation": "This question is best aligned with KN42 because it tests Factors related to treatment or intervention decision-making (e.g., relevant research, matching treatment to assessment/diagnosis, matching client or patient with psychologist characteristics, knowledge and use of allied services, cost and benefit, readiness to change).",
       "difficulty": "medium",
       "quality_comment": "The question clearly assesses knowledge of foundational change theory, with plausible distractors that test differentiation of model stages."
     },
@@ -115,8 +157,8 @@
       ],
       "answer": "To provide a roadmap connecting program resources and activities to intended outcomes",
       "explanation": "1. The correct answer, \"To provide a roadmap connecting program resources and activities to intended outcomes,\" accurately reflects the primary purpose of a program logic model. According to the reference material, a program logic model serves as a tool that outlines the sequence of events linking necessary resources and activities to the desired results of a program. This roadmap helps stakeholders understand how inputs and activities lead to outputs and ultimately to the expected outcomes, ensuring clarity in program planning and implementation.\n\n2. The option \"To identify ethical issues that may arise during program implementation\" is incorrect because the program logic model focuses on the connection between resources, activities, and outcomes rather than ethical considerations. The option \"To evaluate the quality of products and services compared to competitors\" is wrong as it pertains to benchmarking and quality management rather than the specific function of a program logic model in planning. Lastly, \"To prescribe exact operational steps for direct supervisor involvement\" is incorrect because the program logic model provides a broader overview of program components rather than detailed operational instructions for supervisors.",
-      "kn": "KN58",
-      "kn_explanation": "This question is about program evaluation and planning methods, a key aspect of evaluation strategies and techniques (KN58).",
+      "kn": "KN42",
+      "kn_explanation": "This question is best aligned with KN42 because it tests Factors related to treatment or intervention decision-making (e.g., relevant research, matching treatment to assessment/diagnosis, matching client or patient with psychologist characteristics, knowledge and use of allied services, cost and benefit, readiness to change).",
       "difficulty": "medium",
       "quality_comment": "The distractors are plausible but clearly distinct from the definition, helping assess understanding of program logic models."
     },
@@ -145,8 +187,8 @@
       ],
       "answer": "Inputs",
       "explanation": "1. \"Inputs\" is the correct answer because it refers to the human, financial, organizational, and community resources necessary to support a program. These inputs are essential for ensuring that the program can be effectively developed, implemented, and evaluated, as they provide the foundational resources required for the program's activities.\n\n2. The incorrect options are as follows:\n\n- **Outputs** refer to the direct, tangible results or products of program activities, such as the number of employees who complete training, rather than the resources needed to support the program.\n  \n- **Activities** are the processes and actions required to produce the program's outputs, such as conducting training sessions, but do not encompass the resources necessary for those activities.\n  \n- **Outcomes** are the expected short-, intermediate-, and long-term changes or benefits produced by the program’s activities and outputs, focusing on the results rather than the initial resources required.",
-      "kn": "KN58",
-      "kn_explanation": "This question assesses understanding of program evaluation components, specifically resource identification, which is part of evaluation techniques and process analysis (KN58).",
+      "kn": "KN42",
+      "kn_explanation": "This question is best aligned with KN42 because it tests Factors related to treatment or intervention decision-making (e.g., relevant research, matching treatment to assessment/diagnosis, matching client or patient with psychologist characteristics, knowledge and use of allied services, cost and benefit, readiness to change).",
       "difficulty": "easy",
       "quality_comment": "Clear definitions make the question straightforward but effective for foundational knowledge assessment."
     },
@@ -190,8 +232,8 @@
       ],
       "answer": "Providing a structured roadmap linking resources and expected benefits",
       "explanation": "1. The correct answer, \"Providing a structured roadmap linking resources and expected benefits,\" is supported by the program logic model as it serves to illustrate the sequence of events connecting the resources (inputs), activities, outputs, and desired outcomes of a program. The logic model effectively outlines how these components interact, providing stakeholders with a clear understanding of how resources will lead to the intended benefits, thereby facilitating program planning and evaluation.\n\n2. The option \"Facilitating top management commitment to quality\" is incorrect because the program logic model focuses on the relationships between inputs and outcomes, rather than directly influencing management commitment. \"Increasing employee responsibility in self-managed teams\" is not relevant, as the logic model does not specifically address team dynamics or employee roles but rather the overall program structure. Lastly, \"Designing flexible work schedules to improve job satisfaction\" is incorrect because the logic model does not specifically pertain to designing work schedules; instead, it provides a framework for understanding how various program components contribute to outcomes, which may include job satisfaction but is not limited to that aspect.",
-      "kn": "KN58",
-      "kn_explanation": "This item targets program logic models as a tool for program planning and evaluation, aligning with evaluation techniques in organizational change (KN58).",
+      "kn": "KN46",
+      "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
       "difficulty": "medium",
       "quality_comment": "The question clearly distinguishes the unique role of logic models, avoiding confusion with other organizational development methods."
     },
@@ -205,8 +247,8 @@
       ],
       "answer": "Planning and implementing phase",
       "explanation": "1. The \"Planning and implementing phase\" is the correct answer because it specifically addresses the organization's readiness to change and involves creating a vision for the future, designing organizational development interventions, and formulating an action plan for their implementation. This phase ensures that the necessary resources and support are in place to manage the transition effectively.\n\n2. The \"Entering and contracting phase\" is incorrect because it primarily focuses on identifying problems, establishing a collaborative relationship with members, and developing a contract with the OD practitioner, rather than on planning interventions. The \"Diagnosing phase\" is also incorrect as it involves collecting and analyzing diagnostic information about the organization’s problems, not planning or assessing readiness for change. Lastly, the \"Evaluating and institutionalizing phase\" is not the correct answer because it centers on evaluating the implementation and results of interventions, rather than planning and readiness for change.",
-      "kn": "KN46",
-      "kn_explanation": "This question assesses familiarity with the stages of planned change and the focus on intervention design and readiness, which fits organizational development consultation (KN46).",
+      "kn": "KN42",
+      "kn_explanation": "This question is best aligned with KN42 because it tests Factors related to treatment or intervention decision-making (e.g., relevant research, matching treatment to assessment/diagnosis, matching client or patient with psychologist characteristics, knowledge and use of allied services, cost and benefit, readiness to change).",
       "difficulty": "medium",
       "quality_comment": "Options correspond to distinct phases of change, requiring detailed knowledge of the model’s stages."
     },
@@ -220,8 +262,8 @@
       ],
       "answer": "Improved employee physical health and lifestyle",
       "explanation": "1. \"Improved employee physical health and lifestyle\" is the correct answer because it represents an outcome in a program logic model, specifically the expected long-term changes or benefits resulting from the wellness program's activities and outputs. Outcomes in a logic model reflect the impact of the program on participants, such as changes in knowledge, behaviors, or overall well-being, which aligns perfectly with the goal of an employee wellness program.\n\n2. The other options are incorrect for the following reasons:  \n- **Number of training sessions conducted**: This is an output, not an outcome, as it reflects the tangible results of program activities rather than the long-term effects on employees' health and lifestyles.  \n- **Funding allocated to the program**: This represents an input, which refers to the resources needed to support the program, rather than the changes or benefits produced by the program's implementation.  \n- **Materials used for the wellness sessions**: This is also an input, as it pertains to the resources and tools utilized during the program, rather than the outcomes that result from the program's activities.",
-      "kn": "KN58",
-      "kn_explanation": "This question targets understanding of program logic components, specifically distinguishing outcomes from inputs, activities, and outputs (KN58).",
+      "kn": "KN42",
+      "kn_explanation": "This question is best aligned with KN42 because it tests Factors related to treatment or intervention decision-making (e.g., relevant research, matching treatment to assessment/diagnosis, matching client or patient with psychologist characteristics, knowledge and use of allied services, cost and benefit, readiness to change).",
       "difficulty": "easy",
       "quality_comment": "The options contrast tangible resources and products with actual benefits, helping test comprehension of evaluation terminology."
     },

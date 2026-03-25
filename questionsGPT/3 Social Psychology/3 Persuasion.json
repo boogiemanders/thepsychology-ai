@@ -1,6 +1,111 @@
 {
   "questions": [
     {
+      "stem": "A public health official wants to create the most effective anti-vaping campaign for teenagers. Based on persuasion research, which combination of elements would produce the STRONGEST persuasive effect?",
+      "options": [
+        "A moderately frightening message delivered by a celebrity endorser without any action steps",
+        "A low-fear message emphasizing only the statistical risks of vaping, delivered by an unknown source",
+        "A high-fear message describing health consequences paired with clear efficacy information about how teens can quit, delivered by a credible medical expert",
+        "A high-fear message delivered by a low-credibility source with no efficacy component"
+      ],
+      "answer": "A high-fear message describing health consequences paired with clear efficacy information about how teens can quit, delivered by a credible medical expert",
+      "explanation": "Research on persuasion identifies three ingredients for effective fear appeals: high fear arousal, an efficacy message assuring people they can take effective action, and a clear risk description. The lesson states: 'fear appeals work best when they're high in fear BUT they must also include an efficacy message.' Additionally, communicator credibility (expertise + trustworthiness) enhances persuasion. Option A lacks efficacy information and relies on peripheral cues. Option B uses low fear, which is less effective. Option D lacks efficacy and uses a low-credibility source, which would likely produce defensiveness rather than attitude change.",
+      "kn": "KN16",
+      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
+      "difficulty": "medium",
+      "quality_comment": "Integrates multiple persuasion concepts (fear appeals, efficacy, credibility) in an applied scenario.",
+      "suggestedLesson": "3-persuasion",
+      "suggestedParagraph": "### Fear Appeals: How Scared Should People Be?",
+      "lessonExcerpt": "Fear appeals work best when they're high in fear BUT (and this is crucial) they must also include an efficacy message... Three ingredients make fear appeals effective: 1. High fear arousal 2. Efficacy message 3. Clear risk description.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 17
+    },
+    {
+      "stem": "How does cognitive dissonance typically lead to attitude change?",
+      "options": [
+        "By reinforcing existing beliefs",
+        "By creating discomfort that motivates change",
+        "By providing new information that contradicts beliefs",
+        "By increasing confidence in one's decisions"
+      ],
+      "answer": "By creating discomfort that motivates change",
+      "explanation": "The correct answer is 'By creating discomfort that motivates change' because cognitive dissonance arises when there is a conflict between beliefs and behaviors, leading to psychological discomfort that individuals seek to resolve by changing their attitudes. 'By reinforcing existing beliefs' is incorrect as cognitive dissonance challenges existing beliefs. 'By providing new information that contradicts beliefs' does not capture the essence of dissonance, which is about internal conflict. 'By increasing confidence in one's decisions' is misleading, as dissonance often leads to uncertainty.",
+      "kn": "KN14",
+      "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of cognitive dissonance.",
+      "suggestedLesson": "3-persuasion",
+      "suggestedParagraph": "## Why Persuasion Matters for Psychologists",
+      "lessonExcerpt": "Cognitive dissonance creates discomfort that motivates individuals to change their attitudes to resolve the conflict.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 16
+    },
+    {
+      "stem": "According to the elaboration likelihood model, which route to persuasion is most effective when individuals are motivated and able to process information?",
+      "options": [
+        "Peripheral route.",
+        "Central route.",
+        "Social proof route.",
+        "Fear appeal route."
+      ],
+      "answer": "Central route.",
+      "explanation": "The correct answer indicates that the central route is effective when individuals are motivated and able to engage deeply with the content. The peripheral route is less effective under these conditions.",
+      "kn": "KN16",
+      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of persuasion mechanisms.",
+      "suggestedLesson": "3-persuasion",
+      "suggestedParagraph": "## The Two Big Strategies: Alpha and Omega",
+      "lessonExcerpt": "Understanding what makes messages stick – and what makes people resist them – isn't just academic knowledge.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 9
+    },
+    {
+      "stem": "What technique can increase compliance by making a request seem less daunting through audience engagement?",
+      "options": [
+        "Foot-in-the-door technique.",
+        "Door-in-the-face technique.",
+        "Low-ball technique.",
+        "That's-not-all technique."
+      ],
+      "answer": "That's-not-all technique.",
+      "explanation": "The correct answer reflects the technique where an initial request is followed by additional incentives, making the request seem more appealing. The other options describe different compliance techniques that do not specifically focus on audience engagement.",
+      "kn": "KN16",
+      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of compliance techniques.",
+      "suggestedLesson": "3-persuasion",
+      "suggestedParagraph": "## Communicator Factors: Who's Doing the Persuading?",
+      "lessonExcerpt": "Understanding these patterns is essential for your EPPP exam.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 10
+    },
+    {
+      "stem": "Which persuasive strategy involves addressing a person's resistance to change by acknowledging their concerns?",
+      "options": [
+        "Alpha strategy",
+        "Omega strategy",
+        "Cognitive dissonance",
+        "Social proof"
+      ],
+      "answer": "Omega strategy",
+      "explanation": "An omega strategy focuses on reducing resistance by addressing concerns and providing counterarguments, making the change seem less threatening. An alpha strategy, in contrast, increases the appeal of the change. Cognitive dissonance refers to the discomfort from holding conflicting beliefs, and social proof involves using others' behaviors to influence someone.",
+      "kn": "KN14",
+      "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests knowledge of persuasion strategies and their applications.",
+      "suggestedLesson": "3-persuasion",
+      "suggestedParagraph": "## The Two Big Strategies: Alpha and Omega",
+      "lessonExcerpt": "Omega strategies take a different approach. Instead of adding more pull, they reduce the push-back.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 24
+    },
+    {
       "stem": "Which strategy in persuasion aims to overcome resistance by increasing approach forces such as maximizing the strength of arguments and using consensus information?",
       "options": [
         "Omega strategy",
@@ -115,8 +220,8 @@
       ],
       "answer": "The distress from losing $100 feels roughly twice as powerful as the pleasure from gaining $100",
       "explanation": "1. The correct answer, \"The distress from losing $100 feels roughly twice as powerful as the pleasure from gaining $100,\" accurately reflects the principle of loss aversion as described by Kahneman and Tversky. This concept posits that the emotional impact of losses is significantly greater than that of equivalent gains, illustrating how losses loom larger in our perception and decision-making processes.\n\n2. The option \"People prefer a guaranteed small reward over a risky larger reward\" is incorrect because it describes a preference for certainty rather than the specific emotional asymmetry between gains and losses that defines loss aversion. The statement \"Individuals always take risks to avoid a certain loss\" is misleading, as loss aversion does not imply that individuals will always take risks; rather, it suggests that the fear of loss influences their decision-making, which may lead to risk-averse behavior. Lastly, \"Gains and losses of equal amounts produce equivalent emotional responses\" directly contradicts the principle of loss aversion, as it asserts that gains and losses are perceived equally, which is not the case according to the research findings.",
-      "kn": "KN9",
-      "kn_explanation": "This question relates to theories of motivation and decision-making under risk, fitting under major models of motivation and their application (KN9).",
+      "kn": "KN16",
+      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
       "difficulty": "medium",
       "quality_comment": "Options are clear and differentiated; tests precise understanding of the key concept of loss aversion."
     },
@@ -130,8 +235,8 @@
       ],
       "answer": "A mental state where preoccupation with unfulfilled needs leads to self-defeating behaviors perpetuating scarcity",
       "explanation": "1. The correct answer, \"A mental state where preoccupation with unfulfilled needs leads to self-defeating behaviors perpetuating scarcity,\" accurately reflects the concept of a \"scarcity trap\" as described by Mullainathan and Shafir (2014). In this state, individuals become so focused on their unmet needs that they engage in behaviors that ultimately worsen their situation, such as postponing necessary repairs, which can lead to additional costs and further scarcity.\n\n2. The first incorrect option, \"A situation where abundance leads to poor decision-making due to complacency,\" is wrong because it misrepresents the concept; a scarcity trap specifically involves a lack of resources rather than abundance. The second incorrect option, \"A condition where sudden availability of resources increases risky behaviors,\" is incorrect because it suggests that the presence of resources leads to risk-taking, while a scarcity trap focuses on the negative consequences of lacking resources. Lastly, the option \"A form of cognitive overload caused by too many options,\" is incorrect because it conflates scarcity with the abundance of choices, whereas a scarcity trap is about the cognitive limitations imposed by unmet needs, not by having too many options.",
-      "kn": "KN9",
-      "kn_explanation": "This question addresses motivational and cognitive factors related to decision-making under scarcity, related to models of motivation and cognition (KN9).",
+      "kn": "KN16",
+      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
       "difficulty": "hard",
       "quality_comment": "The question captures a complex concept with well-balanced answer choices, requiring integration of multiple ideas."
     },
@@ -146,7 +251,7 @@
       "answer": "The communicator is perceived as biased or dishonest",
       "explanation": "1. The correct answer, \"The communicator is perceived as biased or dishonest,\" decreases the perceived trustworthiness of a communicator because trustworthiness is defined by the communicator's fairness, honesty, and lack of bias. When a communicator is viewed as biased or dishonest, it undermines their credibility, making recipients less likely to accept their message and change their attitudes or beliefs.\n\n2. The option \"The communicator argues against their own self-interest\" is incorrect because such behavior typically enhances trustworthiness; it suggests that the communicator is honest and not solely motivated by personal gain. The option \"The message appears to be accidentally overheard\" is also incorrect, as accidental overhearing can enhance trustworthiness by suggesting that the communicator is not trying to persuade intentionally, thus making the message seem more genuine. Lastly, \"The communicator is a well-known expert in the field\" is incorrect because high expertise generally increases trustworthiness; recipients are more likely to trust messages from credible sources who possess relevant knowledge and experience.",
       "kn": "KN16",
-      "kn_explanation": "This question involves source credibility factors in persuasion, a core topic in social and group influence processes (KN16).",
+      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
       "difficulty": "easy",
       "quality_comment": "Clear and straightforward question with plausible distractors, appropriate for foundational understanding."
     },
@@ -175,8 +280,8 @@
       ],
       "answer": "The focus on acquiring wealth and possessions at the expense of personal and spiritual well-being",
       "explanation": "1. \"The focus on acquiring wealth and possessions at the expense of personal and spiritual well-being\" is the correct answer because materialism is defined as a set of values and goals centered on wealth, possessions, image, and status, which can conflict with personal well-being and spiritual growth (Kasser, 2016). Research has shown that prioritizing materialistic values negatively correlates with various aspects of personal well-being, highlighting the detrimental effects of such a focus (Dittmar et al., 2014).\n\n2. The first incorrect option, \"A preference for money over other forms of rewards in decision-making scenarios,\" is wrong because it does not capture the broader concept of materialism, which encompasses values related to possessions and status, not just money. The second option, \"The tendency to save money rather than spend,\" is incorrect as materialism is more about the desire for possessions and wealth rather than merely saving money. Lastly, \"An intrinsic motivation to achieve status through social connections\" is not accurate because materialism specifically relates to the acquisition of possessions and wealth, rather than social connections or status derived from them.",
-      "kn": "KN9",
-      "kn_explanation": "This question relates to motivational values and goals affecting behavior and personal outcomes, linked to motivation models (KN9).",
+      "kn": "KN16",
+      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
       "difficulty": "medium",
       "quality_comment": "Good conceptual clarity; distractors are plausible but clearly different constructs from materialism."
     },

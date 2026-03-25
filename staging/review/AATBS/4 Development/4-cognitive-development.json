@@ -1,0 +1,64 @@
+{
+  "questions": [
+    {
+      "stem": "A 4-year-old watches Maya put a sticker in the blue box and leave the room. While Maya is gone, Liam moves the sticker to the red box. When asked where Maya will look first, the child answers, \"The red box.\" This response most directly suggests difficulty with:",
+      "options": [
+        "Theory of mind",
+        "Object permanence",
+        "Conservation",
+        "Scaffolding"
+      ],
+      "answer": "Theory of mind",
+      "explanation": "Theory of mind is the best answer because the child is failing a false-belief task and cannot yet separate Maya's belief from the child's own knowledge of where the sticker really is. Object permanence is wrong because the issue is not whether the child understands the sticker still exists when unseen. Conservation is wrong because nothing in the vignette involves quantity remaining the same despite a change in appearance. Scaffolding is wrong because that refers to guided assistance from a more skilled person, not the child's misunderstanding of another person's mental state.",
+      "kn": "KN21",
+      "kn_explanation": "This question assesses normal cognitive development by testing age-linked emergence of theory of mind.",
+      "difficulty": "medium",
+      "quality_comment": "Standard false-belief item with clean developmental discrimination among closely taught concepts.",
+      "suggestedLesson": "4-cognitive-development",
+      "suggestedParagraph": "## Theory of Mind: Understanding Other Minds",
+      "lessonExcerpt": "Theory of Mind (ToM) is the ability to attribute mental states (beliefs, desires, intentions) to others and use those attributions to predict behavior.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT"
+    },
+    {
+      "stem": "A child insists that a taller, narrower glass contains more juice than a shorter, wider glass even after watching the same amount of juice get poured from one glass into the other. Piaget would say the child's error is primarily due to:",
+      "options": [
+        "Centration",
+        "Decentration",
+        "Reversibility",
+        "Hypothetical-deductive reasoning"
+      ],
+      "answer": "Centration",
+      "explanation": "Centration is the best answer because the child is focusing on one visible feature, the height of the liquid, while ignoring other relevant dimensions such as width. Decentration is wrong because that is the ability that eventually solves conservation problems. Reversibility is wrong because it also helps explain conservation, but the question asks what the child is doing in the moment, which is focusing on one aspect. Hypothetical-deductive reasoning is wrong because that is characteristic of formal operational thought, not the preoperational conservation error shown here.",
+      "kn": "KN23",
+      "kn_explanation": "This question tests a major research-based developmental model, Piaget's account of preoperational thought.",
+      "difficulty": "easy",
+      "quality_comment": "Classic conservation item written in original wording with close Piagetian distractors.",
+      "suggestedLesson": "4-cognitive-development",
+      "suggestedParagraph": "### Piaget's Four Stages: The Essential Framework",
+      "lessonExcerpt": "Centration: Focusing on one aspect while ignoring others",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT"
+    },
+    {
+      "stem": "A 14-year-old spends the entire school day convinced that everyone in class noticed a small ink stain on his sleeve and kept thinking about it. Piaget described this adolescent pattern as:",
+      "options": [
+        "Personal fable",
+        "Imaginary audience",
+        "Animism",
+        "Transductive reasoning"
+      ],
+      "answer": "Imaginary audience",
+      "explanation": "Imaginary audience is the best answer because the adolescent is acting as if other people are closely observing and judging him. Personal fable is wrong because that involves beliefs about one's uniqueness or invulnerability. Animism is wrong because it refers to attributing life to inanimate objects. Transductive reasoning is wrong because it involves linking events that occur together as if one caused the other, which is typical of preoperational thinking rather than adolescent egocentrism.",
+      "kn": "KN23",
+      "kn_explanation": "This question assesses a major developmental model by testing Piaget's description of adolescent egocentrism.",
+      "difficulty": "easy",
+      "quality_comment": "Short vignette that distinguishes adolescent egocentrism subtypes without relying on copied stock examples.",
+      "suggestedLesson": "4-cognitive-development",
+      "suggestedParagraph": "### Piaget's Four Stages: The Essential Framework",
+      "lessonExcerpt": "Imaginary audience: Feeling like everyone's watching and judging you",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT"
+    }
+  ]
+}

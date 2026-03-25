@@ -1,6 +1,27 @@
 {
   "questions": [
     {
+      "stem": "Research on the Type A behavior pattern and coronary heart disease has found that the component most strongly associated with increased cardiovascular risk is:",
+      "options": [
+        "Chronic time urgency",
+        "Excessive competitiveness",
+        "Hostility",
+        "Achievement striving"
+      ],
+      "answer": "Hostility",
+      "explanation": "The lesson clearly identifies hostility as the toxic component: 'While earlier research linked the entire pattern to coronary heart disease, more recent studies suggest hostility is the toxic component. The person who's driven and time-urgent but not hostile may not face elevated heart disease risk. But the hostile, cynical person—regardless of time urgency—shows increased cardiovascular problems.' Time urgency (A) and competitiveness (B), while features of Type A personality, are not independently predictive of cardiovascular disease. Achievement striving (D) is a general motivational characteristic not identified as the pathogenic element.",
+      "kn": "KN31",
+      "kn_explanation": "This question is best aligned with KN31 because it tests Assessment methods and their strengths and limitations (e.g., self-report, multi-informant reports, psychophysiological measures, work samples, assessment centers, direct observation, structured and semi-structured interviews).",
+      "difficulty": "easy",
+      "quality_comment": "Classic EPPP question testing a well-established finding. The lesson provides very clear support for the correct answer.",
+      "suggestedLesson": "2-3-work-satisfaction",
+      "suggestedParagraph": "## Common Misconceptions That Trip Up Test-Takers",
+      "lessonExcerpt": "**Type A Behavior Pattern** is the opposite of protective. Friedman and Rosenman described it as chronic time urgency, excessive competitiveness, and hostility. While earlier research linked the entire pattern to coronary heart disease, more recent studies suggest hostility is the toxic component.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 26
+    },
+    {
       "stem": "Which individual factor has been linked to the stability of job satisfaction over time and across different jobs?",
       "options": [
         "Affective disposition",
@@ -25,8 +46,8 @@
       ],
       "answer": "Procedural justice",
       "explanation": "1. \"Procedural justice\" is the correct answer because it specifically refers to the fairness of the procedures used to determine workplace outcomes. This type of justice focuses on how decisions are made and the processes involved in reaching those decisions, which directly impacts employees' perceptions of fairness in the workplace.\n\n2. The incorrect options are as follows:\n\n- **Interactional justice:** This type refers to the fairness of the way outcomes are communicated to workers, focusing on interpersonal treatment and the quality of information provided, rather than the procedures used to determine those outcomes.\n  \n- **Distributive justice:** This type concerns the fairness of the distribution of resources and outcomes themselves, rather than the processes or procedures that lead to those distributions.\n  \n- **Normative justice:** While not explicitly defined in the reference material, it generally relates to the moral obligations and loyalty employees feel towards their organization, which does not pertain to the fairness of procedures used in decision-making.",
-      "kn": "KN15",
-      "kn_explanation": "This question addresses organizational justice, a social interaction and organizational behavior concept in the social domain (KN15).",
+      "kn": "KN16",
+      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
       "difficulty": "easy",
       "quality_comment": "The question is straightforward with distractors that are commonly confused types of justice, suitable for EPPP level."
     },
@@ -55,8 +76,8 @@
       ],
       "answer": "Cortisol",
       "explanation": "1. **Cortisol** is the correct answer because it is released by the adrenal cortex during the resistance stage of the general adaptation syndrome (GAS) to help maintain energy levels as the body copes with prolonged stress. Elevated cortisol levels allow the body to sustain high energy and manage stressors effectively, as outlined in the reference material.\n\n2. The other options are incorrect for the following reasons:\n   - **Adrenocorticotropic hormone (ACTH)**: Although ACTH is involved in the stress response by stimulating the adrenal cortex to release cortisol, it is not the hormone that directly helps maintain energy; rather, it acts as a trigger for cortisol release.\n   - **Epinephrine**: This hormone is released by the adrenal medulla during the alarm reaction stage of GAS and is primarily responsible for the immediate fight-or-flight response, rather than sustaining energy during prolonged stress.\n   - **Norepinephrine**: Similar to epinephrine, norepinephrine is released during the alarm reaction stage and contributes to the initial stress response, but it does not play a role in maintaining energy levels during the resistance stage.",
-      "kn": "KN1",
-      "kn_explanation": "The question tests knowledge of physiological stress responses involving neuroendocrine mechanisms, part of biological bases of behavior (KN1).",
+      "kn": "KN16",
+      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
       "difficulty": "medium",
       "quality_comment": "Distractors include hormones related to stress but with different roles, making the question both challenging and clear."
     },
@@ -70,8 +91,8 @@
       ],
       "answer": "Organizational fairness",
       "explanation": "1. \"Organizational fairness\" is the correct answer because it is not explicitly mentioned as a major source of work-related stress in the reference material. Instead, the material highlights specific sources of stress, such as lack of control over work-related factors, work-family conflict, and downsizing, which are directly linked to increased stress levels among employees.\n\n2. \n- **Lack of control over work tasks:** This is identified as a significant source of stress, as it has been linked to higher levels of psychological and physical symptoms and poorer job outcomes.\n- **Work-family conflict:** This is also described as a major source of stress, with employees experiencing conflict between their work roles and personal life roles, leading to lower job and life satisfaction.\n- **Downsizing:** The reference material discusses downsizing as a major source of stress for both employees who lose their jobs and those who remain, causing various negative psychological effects including reduced job satisfaction and anxiety.",
-      "kn": "KN13",
-      "kn_explanation": "This question involves psychosocial factors influencing behavior and stress at work, linking to social influences (KN13).",
+      "kn": "KN16",
+      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
       "difficulty": "easy",
       "quality_comment": "Options are well balanced; the correct choice is clearly differentiated from the others, aiding test-taker discrimination."
     },
@@ -85,8 +106,8 @@
       ],
       "answer": "Reduced commitment, loss of control, anxiety, and guilt",
       "explanation": "1. The correct answer, \"Reduced commitment, loss of control, anxiety, and guilt,\" accurately describes the survivor syndrome observed in employees who remain after organizational downsizing. Research indicates that survivors often experience decreased job satisfaction and organizational commitment, a sense of loss of control, and emotional distress, including anxiety and guilt related to being a survivor amidst job losses (Muchinsky, 2012).\n\n2. The option \"Increased motivation and commitment due to survival\" is incorrect because survivor syndrome typically leads to reduced commitment rather than increased motivation. \"Elevated job satisfaction and sense of security\" is also wrong, as survivors often report lower job satisfaction and feelings of insecurity post-downsizing. Finally, \"Indifference about organizational changes\" does not reflect survivor syndrome, as affected employees usually exhibit emotional responses such as anxiety and guilt, rather than indifference.",
-      "kn": "KN13",
-      "kn_explanation": "This question reflects group and organizational processes and their impact on individuals, fitting with social influences on functioning (KN13).",
+      "kn": "KN16",
+      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
       "difficulty": "medium",
       "quality_comment": "The distractors are plausible reactions to organizational change; the correct answer clearly reflects the syndrome described."
     },
@@ -100,8 +121,8 @@
       ],
       "answer": "Increased productivity",
       "explanation": "1. \"Increased productivity\" is the correct answer because it is not one of the core characteristics of job burnout as defined by Maslach and colleagues. Instead, burnout is characterized by exhaustion, depersonalization and cynicism, and a sense of inefficacy, which are indicative of decreased functioning and well-being rather than increased productivity.\n\n2. \n- **Exhaustion:** This refers to the physical and emotional depletion that individuals experience as a result of chronic stress and overwhelming workloads, which is a primary sign of burnout.\n- **Depersonalization and cynicism:** This characteristic involves a negative, detached attitude towards one’s work and the people involved, reflecting a loss of empathy and engagement, which are central to the burnout experience.\n- **Sense of inefficacy:** This refers to feelings of incompetence and a lack of accomplishment in one’s work, indicating a diminished sense of personal achievement, which is a key aspect of burnout.",
-      "kn": "KN13",
-      "kn_explanation": "This question addresses psychological manifestations of stress and burnout, falling under social and cognitive-affective influences on behavior (KN13).",
+      "kn": "KN16",
+      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
       "difficulty": "easy",
       "quality_comment": "Clear and concise question with an obvious correct answer relative to plausible distractors enhances reliability."
     },
@@ -115,8 +136,8 @@
       ],
       "answer": "Hardiness",
       "explanation": "1. **Hardiness** is the correct answer because it is identified by Kobasa (1982) as a personality trait that enhances an individual's resistance to the harmful effects of stress. Hardy individuals possess a sense of control over their lives, a commitment to their work and family, and view challenges as opportunities rather than threats, which helps them cope better with stress.\n\n2. The **Type A behavior pattern** is incorrect because, although it is associated with increased susceptibility to stress and negative health effects, it does not promote resistance to stress; rather, it heightens the risk for stress-related issues. **Low self-esteem** is also incorrect since it is linked to being more affected by stress and less effective in coping, which diminishes resistance to stress. Lastly, **neuroticism** is incorrect because it is characterized by emotional instability and a tendency to experience negative emotions, which increases vulnerability to stress rather than enhancing resistance.",
-      "kn": "KN12",
-      "kn_explanation": "This question focuses on personality traits that influence stress response and cognitive-affective resilience, aligning with psychosocial influences (KN12).",
+      "kn": "KN16",
+      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
       "difficulty": "medium",
       "quality_comment": "Distractors include related but incorrect traits, encouraging critical thinking about stress resilience."
     },
@@ -130,8 +151,8 @@
       ],
       "answer": "Hostility",
       "explanation": "1. \"Hostility\" is the correct answer because research indicates that it is most strongly associated with an increased risk for coronary heart disease among the characteristics of the Type A behavior pattern. While Type A individuals display traits such as competitiveness and time urgency, it is hostility that has been consistently linked to negative health outcomes, including cardiovascular issues, as noted by Friedman and Rosenman (1959) and further supported by subsequent studies.\n\n2. The option \"Excessive competitiveness\" is incorrect because, while it is a characteristic of Type A behavior, it does not have the same level of association with coronary heart disease as hostility does. \"Time urgency\" is also incorrect; although it contributes to the Type A profile, it is not specifically linked to increased heart disease risk in the same way that hostility is. Lastly, \"Multitasking\" is not recognized as a core characteristic of Type A behavior in the provided reference material and thus does not relate to the increased risk for coronary heart disease.",
-      "kn": "KN1",
-      "kn_explanation": "This question links personality behavior patterns to biological health outcomes, consistent with biological bases of behavior (KN1).",
+      "kn": "KN16",
+      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
       "difficulty": "medium",
       "quality_comment": "The question targets a nuanced detail in the relationship between Type A behavior and health, with plausible distractors enhancing challenge."
     },
@@ -145,8 +166,8 @@
       ],
       "answer": "Organization-based self-esteem (OBSE)",
       "explanation": "1. **Correct Answer: Organization-based self-esteem (OBSE)**  \nOrganization-based self-esteem (OBSE) refers to employees' perceptions of their value as members of their organization. This construct is significant because it has been linked to job stress; individuals with low levels of OBSE are more adversely affected by stress and tend to cope with it in a more passive manner, whereas those with high OBSE exhibit greater resistance to job stress.\n\n2. **Incorrect Options:**\n- **Hardiness:** While hardiness is a personality trait that increases resistance to stress, it does not specifically relate to employees' perceptions of their value within an organization, which is the focus of the question.\n- **Organizational justice:** This construct pertains to the fairness of outcomes and procedures within an organization, but it does not directly address employees' self-perceptions or their resistance to job stress.\n- **Continuance commitment:** This type of commitment refers to an employee's belief that they must stay with the organization for financial or alternative opportunity reasons, rather than their self-esteem or value as a member, making it unrelated to the perception of value in the context of stress resistance.",
-      "kn": "KN13",
-      "kn_explanation": "The question involves psychosocial factors affecting stress and organizational behavior, fitting within social influences on behavior (KN13).",
+      "kn": "KN16",
+      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
       "difficulty": "medium",
       "quality_comment": "Distractors are related constructs, making the question appropriate for assessing nuanced knowledge in this area."
     },
@@ -175,8 +196,8 @@
       ],
       "answer": "Exhaustion stage",
       "explanation": "1. The \"Exhaustion stage\" is the correct answer because it represents the final phase of the General Adaptation Syndrome (GAS) when the body's physiological systems can no longer maintain elevated hormone levels, leading to a breakdown of physiological processes. In this stage, chronic stress has depleted the body's resources, resulting in various health issues and an inability to cope with ongoing stressors.\n\n2. The \"Alarm reaction stage\" is incorrect because it is the initial response to a stressor, characterized by the activation of the sympathetic nervous system and the release of stress hormones, preparing the body for a fight-or-flight response. The \"Resistance stage\" is also incorrect, as it occurs after the alarm reaction and involves the body attempting to adapt to the stressor while maintaining some physiological functions, rather than experiencing a breakdown. Lastly, the \"Recovery stage\" is not a recognized stage within the GAS framework; instead, the correct stages are alarm, resistance, and exhaustion, with recovery not being defined in the context of Selye's theory.",
-      "kn": "KN12",
-      "kn_explanation": "This question addresses the physiological stages of stress response, which involves cognitive-affective and biological bases of behavior (KN12).",
+      "kn": "KN16",
+      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
       "difficulty": "medium",
       "quality_comment": "The question clearly distinguishes the key features of each stage, helping test-takers understand the sequence and consequences of stress."
     },
@@ -190,8 +211,8 @@
       ],
       "answer": "Type A behavior pattern",
       "explanation": "1. **Type A behavior pattern** is the correct answer because it is characterized by a chronic sense of time urgency, excessive competitiveness, and hostility, which are linked to increased susceptibility to the negative effects of stress. Research indicates that this behavior pattern is associated with a higher risk for coronary heart disease, particularly due to the hostility component (Friedman & Rosenman, 1959; Krantz & McCeney, 2002).\n\n2. The incorrect options are:\n\n- **Hardiness**: This personality trait is associated with increased resistance to stress, as hardy individuals perceive challenges positively and maintain a sense of control, thus reducing the likelihood of negative health outcomes.\n  \n- **Organization-based self-esteem (OBSE)**: OBSE relates to employees’ perceptions of their value within an organization and is linked to higher job satisfaction and commitment, but low OBSE can make individuals more passive in coping with stress rather than increasing susceptibility.\n\n- **Neuroticism**: While neuroticism is associated with emotional instability and higher stress levels, it is not specifically mentioned in the provided material as a direct contributor to increased susceptibility to stress or coronary heart disease compared to the Type A behavior pattern.",
-      "kn": "KN12",
-      "kn_explanation": "This question involves personality factors influencing stress responses, fitting the cognitive-affective domain focusing on stress susceptibility (KN12).",
+      "kn": "KN16",
+      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
       "difficulty": "medium",
       "quality_comment": "The distractors are plausible resilience or unrelated traits; the item assesses important associations in stress-health research."
     },
@@ -205,8 +226,8 @@
       ],
       "answer": "Men report more work-to-family interference; women report more family-to-work interference",
       "explanation": "1. The correct answer, \"Men report more work-to-family interference; women report more family-to-work interference,\" is supported by Schockley et al.’s (2017) meta-analysis, which found that while men and women generally report similar levels of work-family conflict, slight differences emerge in dual-earner couples. Specifically, men tend to experience greater interference from work impacting family life, while women report greater interference from family obligations affecting their work.\n\n2. The option \"Men report more family-to-work interference; women report more work-to-family interference\" is incorrect because it reverses the findings of the research, misrepresenting the type of interference associated with each gender. The option \"Women report more family-to-work interference; men report more work-to-family interference\" is also incorrect for the same reason, as it inaccurately attributes the types of interference to the opposite genders. Lastly, the option \"No differences exist in interference types by gender\" is wrong because the research indicates that while overall levels of work-family conflict are similar, there are indeed slight differences in the types of interference reported by men and women.",
-      "kn": "KN13",
-      "kn_explanation": "This item focuses on psychosocial stressors and gender differences in work-family conflict, linking to cognitive-affective and social influences (KN13).",
+      "kn": "KN16",
+      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
       "difficulty": "medium",
       "quality_comment": "The question examines nuanced gender-related differences in work-family stress, promoting application of research findings."
     },

@@ -1,6 +1,27 @@
 {
   "questions": [
     {
+      "stem": "A test developer creates an integrity test designed to screen job applicants for dishonest tendencies. The items are carefully worded to appear as general workplace attitude questions rather than directly asking about theft or dishonesty. This approach deliberately reduces which of the following?",
+      "options": [
+        "Face validity",
+        "Content validity",
+        "Construct validity",
+        "Criterion-related validity"
+      ],
+      "answer": "Face validity",
+      "explanation": "Face validity refers to whether a test looks like it measures what it claims to measure from the test-taker's perspective. The lesson states that face validity 'is not actual validity at all. It's about appearances and perceptions.' The lesson also notes that 'tests measuring socially sensitive topics like honesty, criminal thinking, or prejudice often work better when they're not face valid. If it's obvious what you're measuring, people can fake their responses to look better.' Content validity involves systematic domain sampling verified by experts (Option B). Construct validity involves convergent and divergent evidence for hypothetical traits (Option C). Criterion-related validity involves predicting or estimating criterion performance (Option D). None of these are reduced by disguising item content.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
+      "difficulty": "medium",
+      "quality_comment": "Excellent application question that tests understanding of when low face validity is desirable, directly supported by lesson content about socially sensitive constructs.",
+      "suggestedLesson": "5-what-tests-measure",
+      "suggestedParagraph": "### Content Validity vs. Face Validity",
+      "lessonExcerpt": "Face validity refers to whether a test looks valid to the people taking it. It's not actual validity at all. It's about appearances and perceptions... Tests measuring socially sensitive topics like honesty, criminal thinking, or prejudice often work better when they're not face valid.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 4
+    },
+    {
       "stem": "Which of the following best describes content validity in psychological testing?",
       "options": [
         "The degree to which a test measures what it intends to by sampling items representative of the domain",
@@ -78,15 +99,15 @@
     {
       "stem": "Assuming factors are orthogonal, how is the communality of a test item in factor analysis calculated?",
       "options": [
-        "By squaring and summing each of the test\u2019s factor loadings",
+        "By squaring and summing each of the test’s factor loadings",
         "By correlating the test item with other items on the same factor",
         "By averaging the factor loadings across all factors",
         "By subtracting error variance from total variance"
       ],
-      "answer": "By squaring and summing each of the test\u2019s factor loadings",
-      "explanation": "1. The correct answer, \"By squaring and summing each of the test\u2019s factor loadings,\" is accurate because the communality of a test item in factor analysis represents the total variance in the test item that is explained by the identified factors. When factors are orthogonal (uncorrelated), the communality can be calculated by squaring each factor loading (which indicates the strength of the relationship between the test item and each factor) and then summing these squared values. This method provides a clear quantification of how much of the test item\u2019s variance is accounted for by the identified factors.\n\n2. The option \"By correlating the test item with other items on the same factor\" is incorrect because communality specifically pertains to variance explained by the identified factors, not correlations with individual items. The option \"By averaging the factor loadings across all factors\" is wrong as it does not accurately reflect the calculation of communality, which requires squaring and summing, not averaging. Lastly, \"By subtracting error variance from total variance\" is incorrect because communality is focused on the variance explained by the factors, rather than directly addressing error variance in the context of total variance.",
-      "kn": "KN55",
-      "kn_explanation": "This question assesses understanding of factor analysis procedures and statistical interpretation, central to analytic methods (KN55).",
+      "answer": "By squaring and summing each of the test’s factor loadings",
+      "explanation": "1. The correct answer, \"By squaring and summing each of the test’s factor loadings,\" is accurate because the communality of a test item in factor analysis represents the total variance in the test item that is explained by the identified factors. When factors are orthogonal (uncorrelated), the communality can be calculated by squaring each factor loading (which indicates the strength of the relationship between the test item and each factor) and then summing these squared values. This method provides a clear quantification of how much of the test item’s variance is accounted for by the identified factors.\n\n2. The option \"By correlating the test item with other items on the same factor\" is incorrect because communality specifically pertains to variance explained by the identified factors, not correlations with individual items. The option \"By averaging the factor loadings across all factors\" is wrong as it does not accurately reflect the calculation of communality, which requires squaring and summing, not averaging. Lastly, \"By subtracting error variance from total variance\" is incorrect because communality is focused on the variance explained by the factors, rather than directly addressing error variance in the context of total variance.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
       "difficulty": "hard",
       "quality_comment": "The question requires knowledge of factor analysis computations, making it appropriate for advanced examinees; distractors are reasonable but clearly incorrect."
     },
@@ -109,12 +130,12 @@
       "stem": "Why might face validity be undesirable for certain tests, such as those assessing honesty or criminality?",
       "options": [
         "Because it may lead examinees to respond inaccurately to avoid detection",
-        "Because it reduces the test\u2019s internal consistency reliability",
+        "Because it reduces the test’s internal consistency reliability",
         "Because it biases expert judgment of content validity",
-        "Because it decreases the test\u2019s ability to predict relevant behaviors"
+        "Because it decreases the test’s ability to predict relevant behaviors"
       ],
       "answer": "Because it may lead examinees to respond inaccurately to avoid detection",
-      "explanation": "1. The correct answer, \"Because it may lead examinees to respond inaccurately to avoid detection,\" highlights that face validity can be counterproductive for tests assessing sensitive traits like honesty or criminality. When examinees perceive that the test is designed to catch dishonest behavior, they may alter their responses to appear more favorable, thus compromising the accuracy of the test results.\n\n2. The option \"Because it reduces the test\u2019s internal consistency reliability\" is incorrect because face validity does not inherently affect the internal consistency of a test; internal consistency is determined by how well the items on a test correlate with one another. The statement \"Because it biases expert judgment of content validity\" is also wrong, as face validity pertains to examinees' perceptions and does not influence the objective evaluation of content validity by experts. Lastly, \"Because it decreases the test\u2019s ability to predict relevant behaviors\" is inaccurate because face validity does not directly impact a test\u2019s predictive validity; instead, it relates to how test items are perceived by examinees rather than their actual predictive capabilities.",
+      "explanation": "1. The correct answer, \"Because it may lead examinees to respond inaccurately to avoid detection,\" highlights that face validity can be counterproductive for tests assessing sensitive traits like honesty or criminality. When examinees perceive that the test is designed to catch dishonest behavior, they may alter their responses to appear more favorable, thus compromising the accuracy of the test results.\n\n2. The option \"Because it reduces the test’s internal consistency reliability\" is incorrect because face validity does not inherently affect the internal consistency of a test; internal consistency is determined by how well the items on a test correlate with one another. The statement \"Because it biases expert judgment of content validity\" is also wrong, as face validity pertains to examinees' perceptions and does not influence the objective evaluation of content validity by experts. Lastly, \"Because it decreases the test’s ability to predict relevant behaviors\" is inaccurate because face validity does not directly impact a test’s predictive validity; instead, it relates to how test items are perceived by examinees rather than their actual predictive capabilities.",
       "kn": "KN29",
       "kn_explanation": "This question tests understanding of the implications of face validity and response biases on psychological assessment, relevant to test fairness and bias (KN29).",
       "difficulty": "medium",
@@ -145,8 +166,8 @@
       ],
       "answer": "Computing regression coefficients to predict criterion variables",
       "explanation": "1. The correct answer is \"Computing regression coefficients to predict criterion variables\" because this step is not part of the factor analysis process aimed at assessing test validity. Factor analysis primarily focuses on identifying underlying factors through correlation among test items, not on predicting outcomes or establishing relationships with criterion variables.\n\n2. The option \"Correlating all pairs of test scores to create a correlation matrix\" is incorrect because this step is essential in factor analysis, as it helps to determine the relationships among the test scores and is the foundation for deriving the factor matrix. \"Administering the test with related and unrelated measures to a sample\" is also incorrect, as this step is crucial for gathering data necessary for factor analysis, allowing for the assessment of convergent and divergent validity. Lastly, \"Rotating the initial factor matrix to facilitate interpretation\" is incorrect because this is a vital step in factor analysis that enhances the clarity and interpretability of the factors identified, making it easier to understand the relationships between tests and the underlying constructs.",
-      "kn": "KN55",
-      "kn_explanation": "This question assesses knowledge of research methods and statistical procedures, focusing on factor analysis techniques (KN55).",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
       "difficulty": "medium",
       "quality_comment": "The distractors are believable steps related to test validation, making the question good for assessing procedural knowledge."
     },
@@ -190,8 +211,8 @@
       ],
       "answer": "Evidence based on response process",
       "explanation": "1. \"Evidence based on response process\" is the correct answer because it specifically examines how respondents interact with test items during administration, which is crucial for ensuring that a test accurately measures the intended construct. This source of validity evidence focuses on the cognitive and emotional processes that respondents use while answering, thereby providing insights into whether the test is effectively capturing the underlying traits it aims to assess.\n\n2. \n- **Evidence based on test content:** This option is incorrect because it pertains to the relevance and representativeness of test items in relation to the domain being measured, rather than how respondents engage with those items during the test.\n- **Evidence based on internal structure:** This option is wrong because it focuses on the relationships among test items and the underlying dimensions they measure, rather than the processes respondents use to answer the items.\n- **Evidence based on consequences of testing:** This option is incorrect as it relates to the outcomes and impacts of the testing process on individuals and society, rather than the immediate response behaviors of test-takers during the test administration.",
-      "kn": "KN30",
-      "kn_explanation": "This item aligns with assessment theories and models regarding the mechanisms of test validity, fitting KN30 in Domain 5.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
       "difficulty": "medium",
       "quality_comment": "This question adds coverage on validity evidence related to response processes, filling an underrepresented validity source area with clear distractors."
     },
@@ -205,8 +226,8 @@
       ],
       "answer": "By differentiating method effects from trait effects through varying methods and traits",
       "explanation": "1. The correct answer, \"By differentiating method effects from trait effects through varying methods and traits,\" is accurate because the multitrait-multimethod matrix explicitly involves administering tests that measure the same trait using different methods and tests that measure different traits using the same and different methods. This approach allows researchers to isolate and identify the influence of measurement methods on test scores, thereby clarifying whether observed correlations are due to the traits being measured or the methods used to measure them, which is essential for understanding measurement error in construct validity.\n\n2. The first incorrect option, \"By directly measuring test-retest reliability over time,\" is wrong because the multitrait-multimethod matrix does not focus on test-retest reliability; instead, it assesses the validity of a test through correlations with other measures and methods. The second incorrect option, \"By assessing face validity of test items through expert ratings,\" is incorrect because face validity is not a formal type of validity and does not provide evidence of the underlying constructs measured by the tests. Lastly, \"By correlating test scores with external behavioral criteria\" is incorrect because this describes criterion-related validity rather than the specific purpose of the multitrait-multimethod matrix, which is to evaluate convergent and divergent validity through the comparison of multiple traits and methods.",
-      "kn": "KN30",
-      "kn_explanation": "This question addresses assessment theories and models focused on improving construct validity and evaluation of measurement error, relevant to KN30.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
       "difficulty": "hard",
       "quality_comment": "The item targets higher-level understanding of the multitrait-multimethod approach, adding depth to the question bank with well-crafted distractors."
     },
@@ -220,8 +241,8 @@
       ],
       "answer": "By revealing factors that load on items unrelated to the intended construct",
       "explanation": "1. The correct answer, \"By revealing factors that load on items unrelated to the intended construct,\" is accurate because factor analysis identifies how different test items correlate with underlying factors. If items load significantly on factors that are not related to the intended construct, it indicates the presence of construct-irrelevant variance, suggesting that the test may measure something other than what it was designed to assess.\n\n2. \n- \"By validating the internal consistency of the test\": This option is incorrect because internal consistency pertains to the reliability of the test items measuring the same construct, rather than identifying unrelated factors.\n- \"By assessing test-retest reliability across administrations\": This is wrong because test-retest reliability evaluates the stability of test scores over time, not the presence of construct-irrelevant variance.\n- \"By evaluating how items appear to test takers\": This option is incorrect as it refers to face validity, which concerns how valid the test seems to examinees, rather than revealing any underlying constructs or irrelevant variance.",
-      "kn": "KN30",
-      "kn_explanation": "This question relates to psychometric models of construct validity and techniques for identifying extraneous variance in assessments (KN30).",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
       "difficulty": "medium",
       "quality_comment": "The question introduces the application of factor analysis beyond simple construct confirmation, enhancing conceptual coverage with balanced options."
     },
@@ -235,8 +256,8 @@
       ],
       "answer": "A test of anxiety correlates strongly with established measures of depression and weakly with measures of intelligence",
       "explanation": "1. The correct answer, \"A test of anxiety correlates strongly with established measures of depression and weakly with measures of intelligence,\" illustrates construct validity evidence using external correlates because it demonstrates convergent validity (strong correlation with related constructs, like depression) and divergent validity (weak correlation with an unrelated construct, like intelligence). This aligns with the definition of construct validity, which involves assessing how well a test measures a hypothetical trait by examining its relationships with other variables.\n\n2. The first incorrect option, \"A test content domain is reviewed by experts for representativeness,\" is wrong because it pertains to content validity, which focuses on the appropriateness of test items rather than external correlates. The second option, \"A new achievement test is administered twice to assess score consistency,\" is incorrect because it addresses test reliability, not validity, as it evaluates consistency rather than the accuracy of what the test measures. Finally, \"Test items appear appropriate to examinees on the surface level\" is incorrect because it refers to face validity, which is about the superficial appearance of the test rather than its actual construct validity.",
-      "kn": "KN37",
-      "kn_explanation": "This question taps evidence-based interpretation of validity data considering correlational patterns and construct relationships (KN37).",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
       "difficulty": "medium",
       "quality_comment": "This question broadens coverage into evidence evaluation and construct validation, supporting interpretive skill development with plausible distractors."
     },

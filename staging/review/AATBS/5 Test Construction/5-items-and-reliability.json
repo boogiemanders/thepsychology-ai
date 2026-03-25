@@ -1,0 +1,64 @@
+{
+  "questions": [
+    {
+      "stem": "A test developer reports that a new screening instrument has a reliability coefficient of .84. Which of the following is the most accurate interpretation of that coefficient?",
+      "options": [
+        "Eighty-four percent of the items measure the same construct",
+        "Eighty-four percent of score variability reflects true differences, and sixteen percent reflects measurement error",
+        "There is an eighty-four percent probability that any single obtained score equals the person's true score",
+        "The test will correctly classify eighty-four percent of examinees"
+      ],
+      "answer": "Eighty-four percent of score variability reflects true differences, and sixteen percent reflects measurement error",
+      "explanation": "This is the best answer because the reliability coefficient indicates the proportion of observed-score variance attributable to true-score variance rather than random error. The item-consistency option is wrong because reliability is not simply the percentage of items measuring the same construct. The probability option is wrong because a reliability coefficient is not the probability that a single score exactly equals a true score. The classification option is wrong because reliability does not by itself tell you the percentage of correct decisions or classifications.",
+      "kn": "KN29",
+      "kn_explanation": "This question assesses psychometric theory related to reliability and measurement error.",
+      "difficulty": "medium",
+      "quality_comment": "Good interpretation item that forces the examinee to translate coefficient language into variance language.",
+      "suggestedLesson": "5-items-and-reliability",
+      "suggestedParagraph": "## Understanding Reliability: What Does \"Consistent\" Really Mean?",
+      "lessonExcerpt": "A reliability coefficient tells you directly what percentage of score variability comes from true differences versus error.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT"
+    },
+    {
+      "stem": "Why is internal consistency reliability generally not an appropriate way to estimate reliability for a pure speed test?",
+      "options": [
+        "Because speed tests are always scored by multiple raters",
+        "Because people who reach more items tend to get more items correct, which can inflate apparent item consistency",
+        "Because speed tests cannot be standardized",
+        "Because classical test theory applies only to power tests"
+      ],
+      "answer": "Because people who reach more items tend to get more items correct, which can inflate apparent item consistency",
+      "explanation": "This is the best answer because on speed tests, internal consistency can look artificially high simply because examinees who get farther answer more items correctly, not because the items are meaningfully homogeneous. The multiple-rater option is wrong because speed tests do not inherently require multiple raters. The standardization option is wrong because speed tests can certainly be standardized. The classical-test-theory option is wrong because classical test theory is not restricted to power tests.",
+      "kn": "KN29",
+      "kn_explanation": "This question tests psychometric theory concerning reliability estimation and test characteristics.",
+      "difficulty": "hard",
+      "quality_comment": "High-yield psychometrics trap item that distinguishes method misuse from general unreliability.",
+      "suggestedLesson": "5-items-and-reliability",
+      "suggestedParagraph": "### 3. Internal Consistency Reliability: Do the Items Work Together?",
+      "lessonExcerpt": "Internal consistency is NOT appropriate for speed tests. Why? Because on speed tests, people who get far in the test answer more items correctly, making it look like the items are highly consistent when really you're just measuring speed.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT"
+    },
+    {
+      "stem": "An item analysis shows that an item's discrimination index is negative. Which conclusion is most justified?",
+      "options": [
+        "The item is moderately difficult and should be retained automatically",
+        "High scorers are answering the item correctly more often than low scorers",
+        "Low scorers are answering the item correctly more often than high scorers, suggesting the item is flawed",
+        "The item is too easy and therefore has perfect validity"
+      ],
+      "answer": "Low scorers are answering the item correctly more often than high scorers, suggesting the item is flawed",
+      "explanation": "This is the best answer because a negative discrimination index means the item is working in the wrong direction, with lower-performing examinees getting it right more often than higher-performing examinees. The second option is wrong because that describes positive discrimination. The moderate-difficulty option is wrong because difficulty and discrimination are separate item-analysis concepts. The perfect-validity option is wrong because item difficulty alone does not establish validity, and a negative discrimination value is a warning sign rather than evidence of a strong item.",
+      "kn": "KN29",
+      "kn_explanation": "This question assesses item analysis and discrimination within psychometric theory.",
+      "difficulty": "medium",
+      "quality_comment": "Direct but important item-analysis question with plausible distractors tied to common psychometric confusions.",
+      "suggestedLesson": "5-items-and-reliability",
+      "suggestedParagraph": "### Item Discrimination Index (D)",
+      "lessonExcerpt": "D = -1.0: All low scorers got it right, no high scorers did (something's wrong!)",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT"
+    }
+  ]
+}

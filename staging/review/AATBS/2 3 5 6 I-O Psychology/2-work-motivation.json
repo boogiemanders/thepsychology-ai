@@ -1,0 +1,64 @@
+{
+  "questions": [
+    {
+      "stem": "A company raises salaries and improves office lighting, but employee enthusiasm for the work itself does not increase. According to Herzberg, the most likely explanation is that the company improved:",
+      "options": [
+        "Motivator factors, which should directly increase satisfaction and motivation",
+        "Hygiene factors, which reduce dissatisfaction but do not necessarily create motivation",
+        "Valence, which guarantees higher motivation if rewards are visible",
+        "Task identity, which automatically produces job enrichment"
+      ],
+      "answer": "Hygiene factors, which reduce dissatisfaction but do not necessarily create motivation",
+      "explanation": "This is the best answer because Herzberg classified pay and working conditions as hygiene factors, which prevent dissatisfaction when adequate but do not by themselves create motivation. The motivator option is wrong because motivators are factors such as responsibility, challenge, achievement, and growth. The valence option is wrong because valence belongs to expectancy theory, not Herzberg's model. Task identity is wrong because it is one of the job characteristics in a different theory and is not what the vignette changed.",
+      "kn": "KN9",
+      "kn_explanation": "This question assesses a major theory of motivation and its application to workplace behavior.",
+      "difficulty": "medium",
+      "quality_comment": "Strong Herzberg item that targets the classic pay-is-not-a-motivator misconception.",
+      "suggestedLesson": "2-work-motivation",
+      "suggestedParagraph": "### Theory #3: Herzberg's Two-Factor Theory",
+      "lessonExcerpt": "Hygiene factors (job context): These include pay, benefits, working conditions, company policies, and supervision. When these are adequate, workers simply aren't dissatisfied. They're not necessarily satisfied or motivated either.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL PSYCHOLOGY"
+    },
+    {
+      "stem": "A high-performing employee is offered a promotion. She believes she could succeed in the role and trusts that the company would follow through on the offer, but she has no interest in relocating and does not want the new position. In Vroom's model, which component is most clearly limiting her motivation?",
+      "options": [
+        "Expectancy",
+        "Instrumentality",
+        "Valence",
+        "Equity"
+      ],
+      "answer": "Valence",
+      "explanation": "Valence is the best answer because the employee does not value the outcome even though she believes she can perform well and that success would lead to the reward. Expectancy is wrong because she does believe she could succeed. Instrumentality is wrong because she trusts the organization would actually deliver the promotion. Equity is wrong because fairness comparison is not the main issue described in the scenario.",
+      "kn": "KN9",
+      "kn_explanation": "This question tests expectancy theory as a major motivation model applied to organizational decision-making.",
+      "difficulty": "medium",
+      "quality_comment": "Useful VIE item that isolates one expectancy-theory component with clear positive values for the other two.",
+      "suggestedLesson": "2-work-motivation",
+      "suggestedParagraph": "### Theory #6: Expectancy Theory (VIE Theory)",
+      "lessonExcerpt": "All three must be positive for high motivation. If any single factor is zero or negative, motivation plummets.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL PSYCHOLOGY"
+    },
+    {
+      "stem": "A manager notices that one employee routinely volunteers for projects with a moderate chance of success, prefers to be personally responsible for the outcome, and asks for frequent performance feedback. McClelland would say this employee is high in need for:",
+      "options": [
+        "Affiliation",
+        "Power",
+        "Achievement",
+        "Security"
+      ],
+      "answer": "Achievement",
+      "explanation": "Achievement is the best answer because McClelland described high nAch individuals as preferring personal responsibility, moderate risk, and frequent feedback. Affiliation is wrong because that need is more focused on relationships and being liked. Power is wrong because that need centers on influence, status, and control over others. Security is wrong because it is not one of McClelland's three acquired needs.",
+      "kn": "KN9",
+      "kn_explanation": "This question assesses McClelland's acquired needs theory as a major model of motivation.",
+      "difficulty": "easy",
+      "quality_comment": "Classic McClelland profile item with close but distinguishable motivational alternatives.",
+      "suggestedLesson": "2-work-motivation",
+      "suggestedParagraph": "### Theory #1: McClelland's Acquired Needs Theory",
+      "lessonExcerpt": "They want personal responsibility, prefer moderate risk, and crave frequent feedback about their performance.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL PSYCHOLOGY"
+    }
+  ]
+}

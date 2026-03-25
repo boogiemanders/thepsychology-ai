@@ -1,0 +1,64 @@
+{
+  "questions": [
+    {
+      "stem": "A client with a severe blood-injection-injury phobia often becomes lightheaded and has nearly fainted during blood draws. In addition to exposure, which treatment component is especially indicated for this specific phobia subtype?",
+      "options": [
+        "Applied tension",
+        "Systematic desensitization with hypnosis",
+        "Free association",
+        "Interoceptive exposure"
+      ],
+      "answer": "Applied tension",
+      "explanation": "Applied tension is the best answer because blood-injection-injury phobia has a distinctive physiological pattern that can culminate in fainting, and muscle-tensing procedures help maintain blood pressure during exposure. Systematic desensitization with hypnosis is wrong because that is not the key treatment modification highlighted for this subtype. Free association is wrong because it is not a first-line intervention for phobias. Interoceptive exposure is wrong because it is most associated with panic treatment rather than preventing fainting in blood-injection-injury phobia.",
+      "kn": "KN44",
+      "kn_explanation": "This question assesses treatment techniques and their evidence base for anxiety-related disorders.",
+      "difficulty": "medium",
+      "quality_comment": "Subtype-specific treatment item with clean differentiation from panic-treatment techniques.",
+      "suggestedLesson": "5-anxiety-and-ocd",
+      "suggestedParagraph": "### Special Case: Blood-Injection-Injury Type",
+      "lessonExcerpt": "Treatment modification: Add applied tension to exposure. The person repeatedly tenses and relaxes large muscle groups to keep blood pressure elevated and prevent fainting.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS"
+    },
+    {
+      "stem": "A client with panic disorder says, \"The racing heart means I am about to die, so I avoid exercise, caffeine, and anything that makes my body feel activated.\" Which component of Panic Control Treatment would most directly target this fear?",
+      "options": [
+        "Interoceptive exposure",
+        "Applied behavior analysis",
+        "Response cost",
+        "Thought stopping"
+      ],
+      "answer": "Interoceptive exposure",
+      "explanation": "Interoceptive exposure is the best answer because it deliberately evokes feared bodily sensations so the client can learn that those sensations are uncomfortable but not dangerous. Applied behavior analysis is wrong because it is not the standard CBT technique used for panic symptoms. Response cost is wrong because it is a punishment-based operant procedure unrelated to panic treatment. Thought stopping is wrong because Panic Control Treatment targets catastrophic misinterpretation of bodily sensations more directly through exposure and corrective learning.",
+      "kn": "KN44",
+      "kn_explanation": "This question tests evidence-based treatment techniques for panic disorder.",
+      "difficulty": "medium",
+      "quality_comment": "Useful treatment-mechanism item that ties panic symptoms to the core CBT intervention.",
+      "suggestedLesson": "5-anxiety-and-ocd",
+      "suggestedParagraph": "### Treatment: Panic Control Treatment",
+      "lessonExcerpt": "Interoceptive exposure: Deliberately creating physical panic symptoms (running in place, spinning, breathing through a straw) to help the person learn these sensations aren't dangerous",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS"
+    },
+    {
+      "stem": "An adult becomes intensely distressed whenever her partner leaves for work trips, refuses to stay home alone, repeatedly reports nausea and headaches before each separation, and has shown this pattern for the past four months. Assuming the symptom threshold is otherwise met, which fact would prevent a DSM diagnosis of Separation Anxiety Disorder in this case?",
+      "options": [
+        "The symptoms are accompanied by physical complaints",
+        "The fear is focused on separation from an attachment figure",
+        "The duration has been only four months",
+        "The anxiety causes the person to avoid being alone"
+      ],
+      "answer": "The duration has been only four months",
+      "explanation": "The duration is the best answer because adults must show the pattern for at least six months, whereas children and adolescents require only four weeks. Physical complaints are wrong because they can be part of the disorder. Fear centered on separation from an attachment figure is wrong because that is a defining feature. Avoidance of being alone is also wrong because it is consistent with separation-related fear.",
+      "kn": "KN36",
+      "kn_explanation": "This question assesses classification systems and diagnostic criteria for evaluating client functioning.",
+      "difficulty": "hard",
+      "quality_comment": "Criterion-threshold item that tests adult-versus-child duration without copying textbook language into the stem.",
+      "suggestedLesson": "5-anxiety-and-ocd",
+      "suggestedParagraph": "## Separation Anxiety Disorder",
+      "lessonExcerpt": "Duration requirements: Four weeks for children and adolescents, six months for adults.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS"
+    }
+  ]
+}

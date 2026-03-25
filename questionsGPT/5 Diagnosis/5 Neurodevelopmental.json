@@ -1,6 +1,111 @@
 {
   "questions": [
     {
+      "stem": "A psychologist is evaluating a 10-year-old boy referred for academic difficulties. Testing reveals average intelligence but significant reading deficits. Which of the following is MOST accurate regarding specific learning disorder with impairment in reading?",
+      "options": [
+        "It is diagnosed when IQ scores fall significantly below average",
+        "It represents approximately 80% of all specific learning disorder cases",
+        "ADHD is rarely comorbid with specific learning disorders",
+        "It is equally common in boys and girls and typically resolves by adolescence"
+      ],
+      "answer": "It represents approximately 80% of all specific learning disorder cases",
+      "explanation": "Approximately 80% of children with specific learning disorders have a reading disorder, making it by far the most common subtype. Option A is incorrect because people with specific learning disorders typically have average to above-average IQ; that discrepancy is part of what distinguishes learning disorders from intellectual disability. Option C is wrong because ADHD is actually the most common comorbid psychiatric disorder with specific learning disorders. Option D is misleading; while prevalence rates may be similar across genders in some studies, learning disorders tend to be chronic conditions that persist into adulthood rather than resolving by adolescence.",
+      "kn": "KN28",
+      "kn_explanation": "Reading deficiency in a child despite average intelligence suggests a specific learning disorder (e.g., dyslexia), which is a disorder that impacts the expected course of development over the lifespan.",
+      "difficulty": "medium",
+      "quality_comment": "Tests key epidemiological facts about reading disorders. The lesson covers prevalence and comorbidity well but long-term prognosis is",
+      "suggestedLesson": "5-neurodevelopmental",
+      "suggestedParagraph": "### The Numbers",
+      "lessonExcerpt": "About 5-15% of school-age children have a specific learning disorder. Of these, approximately 80% have a reading disorder. The most common reading disorder is dyslexia, and the most common type of dys",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 14
+    },
+    {
+      "stem": "A developmental psychologist is reviewing epidemiological data on autism spectrum disorder (ASD) for a grant proposal. Based on current prevalence estimates, which of the following statements most accurately describes the sex distribution of ASD diagnoses?",
+      "options": [
+        "Females are diagnosed approximately twice as often as males",
+        "Males and females are diagnosed at approximately equal rates",
+        "Males are diagnosed three to four times more often than females",
+        "Males are diagnosed ten times more often than females"
+      ],
+      "answer": "Males are diagnosed three to four times more often than females",
+      "explanation": "Research consistently shows that males receive ASD diagnoses 3-4 times more often than females. This is one of the most well-established epidemiological findings in developmental psychology. Option A reverses the sex ratio. Option B incorrectly suggests equal rates. Option D exaggerates the male predominance — while the ratio is significant, it is not as extreme as 10:1.",
+      "kn": "KN38",
+      "kn_explanation": "The question asks about epidemiological data and prevalence rates of a psychological disorder (ASD), which directly maps to KN38: Constructs of epidemiology and base rates of psychological and behavioral disorders.",
+      "difficulty": "easy",
+      "quality_comment": "Straightforward factual recall question testing a frequently examined epidemiological fact about ASD.",
+      "suggestedLesson": "5-neurodevelopmental",
+      "suggestedParagraph": "### Prevalence and Gender Differences",
+      "lessonExcerpt": "Males receive diagnoses three to four times more often than females.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 13
+    },
+    {
+      "stem": "A child psychologist is conducting an initial evaluation of a 9-year-old boy who was referred for multiple motor tics (eye blinking, shoulder shrugging) and one vocal tic (throat clearing) that have been present for 18 months. The psychologist should be MOST alert to the possible co-occurrence of which condition?",
+      "options": [
+        "Obsessive-compulsive disorder",
+        "Specific learning disorder",
+        "Attention-deficit/hyperactivity disorder",
+        "Separation anxiety disorder"
+      ],
+      "answer": "Attention-deficit/hyperactivity disorder",
+      "explanation": "ADHD is the most common comorbid disorder with Tourette's disorder. The child described meets criteria for Tourette's (multiple motor tics AND at least one vocal tic persisting for more than one year with onset before age 18), so the psychologist should screen for ADHD. While OCD is also commonly associated with Tourette's, ADHD is specifically identified as the most common comorbidity. Specific learning disorder and separation anxiety disorder are not as strongly associated with Tourette's.",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
+      "difficulty": "medium",
+      "quality_comment": "Tests specific knowledge of Tourette's most common comorbidity rather than just recognition of tic disorders",
+      "suggestedLesson": "5-neurodevelopmental",
+      "suggestedParagraph": "### The Three Tic Disorder Diagnoses",
+      "lessonExcerpt": "ADHD is the most common comorbid disorder with Tourette's.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 14
+    },
+    {
+      "stem": "Epidemiological research on autism spectrum disorder (ASD) consistently identifies a significant difference in diagnostic prevalence between males and females. Which of the following most accurately describes the male-to-female sex ratio in ASD diagnoses across population-based studies?",
+      "options": [
+        "Approximately 1:1, with equal prevalence in males and females",
+        "Approximately 2:1, with males diagnosed twice as often as females",
+        "Approximately 4:1, with males diagnosed approximately four times as often as females",
+        "Approximately 8:1, with males dramatically overrepresented across all age groups"
+      ],
+      "answer": "Approximately 4:1, with males diagnosed approximately four times as often as females",
+      "explanation": "Epidemiological research consistently estimates a male-to-female ratio of approximately 4:1 in ASD diagnoses. This disparity is thought to reflect a combination of genuine biological sex differences in vulnerability and the possibility that females are underdiagnosed because they may camouflage or 'mask' symptoms more effectively—a phenomenon that has gained increased research attention. A 1:1 ratio would imply equal prevalence, which contradicts established epidemiological data. A 2:1 ratio underestimates the disparity documented in population studies. An 8:1 ratio substantially overestimates the difference and is not supported by current community-based research.",
+      "kn": "KN38",
+      "kn_explanation": "This question is best aligned with KN38 because it tests Constructs of epidemiology and base rates of psychological and behavioral disorders.",
+      "difficulty": "medium",
+      "quality_comment": "Focused factual question with well-spaced numerical distractors spanning above and below the correct ratio; tests a frequently examined EPPP epidemiological fact.",
+      "suggestedLesson": "5-neurodevelopmental",
+      "suggestedParagraph": "## Autism Spectrum Disorder Epidemiology",
+      "lessonExcerpt": "Not found in provided lesson content. Needs review.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 13
+    },
+    {
+      "stem": "Under DSM-5-TR, a child previously diagnosed with Asperger's disorder would now receive which diagnosis?",
+      "options": [
+        "Social (pragmatic) communication disorder",
+        "Autism spectrum disorder",
+        "Autism spectrum disorder with language impairment specifier",
+        "Unspecified neurodevelopmental disorder"
+      ],
+      "answer": "Autism spectrum disorder",
+      "explanation": "The DSM-5-TR combined what were previously separate diagnoses—autistic disorder, Asperger's disorder, and PDD-NOS—into a single diagnosis of autism spectrum disorder (ASD). A child who would have previously received an Asperger's diagnosis (characterized by social communication deficits and restricted interests without significant language delay) now receives an ASD diagnosis. The key is that ASD requires both social communication/interaction deficits AND restricted, repetitive behaviors. Social (pragmatic) communication disorder (A) would apply only if restricted/repetitive behaviors were absent. Option C is incorrect because Asperger's was characterized by the absence of language impairment, not its presence. Option D is a residual category, not the appropriate primary diagnosis.",
+      "kn": "KN36",
+      "kn_explanation": "This question is about DSM-5-TR classification systems and how diagnostic categories have been reorganized (Asperger's folded into Autism Spectrum Disorder), which falls under classification systems and their underlying rationales.",
+      "difficulty": "medium",
+      "quality_comment": "Tests an important DSM-5 structural change that is high-yield for the EPPP and clinically relevant.",
+      "suggestedLesson": "5-neurodevelopmental",
+      "suggestedParagraph": "## Autism Spectrum Disorder (ASD)",
+      "lessonExcerpt": "ASD has gone through several name changes and classification updates. The current DSM-5-TR combines what used to be separate diagnoses (autistic disorder, Asperger's disorder) into one spectrum.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 24
+    },
+    {
       "stem": "Which of the following is a core deficit required for the diagnosis of Intellectual Developmental Disorder according to DSM-5-TR?",
       "options": [
         "Deficits in intellectual functioning determined by standardized intelligence testing",
@@ -25,8 +130,8 @@
       ],
       "answer": "Down syndrome and Fragile X syndrome",
       "explanation": "1. \"Down syndrome and Fragile X syndrome\" is the correct answer because these two genetic causes are identified as the most common contributors to Intellectual Disability when the etiology is known. Specifically, Down syndrome is a chromosomal abnormality resulting from an error during cell division, while Fragile X syndrome is the most common inherited genetic disorder, caused by a mutated gene on the X chromosome. Together, they account for a significant proportion of cases with known genetic etiology.\n\n2. The option \"Fragile X syndrome and Turner syndrome\" is incorrect because, while Fragile X syndrome is a common genetic cause of Intellectual Disability, Turner syndrome is not typically associated with Intellectual Disability to the same extent and primarily affects females with a missing or incomplete X chromosome. The option \"Prader-Willi syndrome and Angelman syndrome\" is wrong because, although both are genetic disorders that can involve intellectual impairment, they are not among the most common causes of Intellectual Disability specifically listed in the reference material. Lastly, \"Williams syndrome and Down syndrome\" is incorrect because, while Down syndrome is correctly included, Williams syndrome is less common and not noted as a primary contributor to Intellectual Disability compared to Down syndrome and Fragile X syndrome.",
-      "kn": "KN4",
-      "kn_explanation": "This tests knowledge of genetic contributions to neurodevelopmental disorders, consistent with behavioral genetics and genetic transmission information (KN4).",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
       "difficulty": "medium",
       "quality_comment": "Options contain well-known genetic disorders to challenge the examinee; the correct option is precise and directly from the content."
     },
@@ -55,8 +160,8 @@
       ],
       "answer": "Accelerated brain growth beginning at about 6 months of age",
       "explanation": "1. \"Accelerated brain growth beginning at about 6 months of age\" is the correct answer because studies have found that children with Autism Spectrum Disorder (ASD) exhibit this characteristic growth pattern, which is associated with larger-than-normal head circumference and increased brain volume and weight during early development. This abnormality in brain growth is a key neuroanatomical feature linked to ASD, indicating atypical brain development during a critical period.\n\n2. The option \"Reduced volume of the prefrontal cortex\" is incorrect because, while children with ADHD have been found to have reduced volumes in this area, the reference material does not specifically link this abnormality to ASD. \"Enlarged hippocampus\" is incorrect as the material does not mention the hippocampus as a common neuroanatomical abnormality associated with ASD. Lastly, \"Increased serotonin levels throughout the brain\" is wrong because individuals with ASD often have lower-than-normal levels of serotonin in several brain areas, contradicting the claim of increased levels.",
-      "kn": "KN1",
-      "kn_explanation": "This question relates to neurobiological correlates of ASD, involving brain development abnormalities, fitting within biological bases of behavior (KN1).",
+      "kn": "KN32",
+      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
       "difficulty": "medium",
       "quality_comment": "Options present plausible brain-related abnormalities but only one matches ASD-specific evidence, requiring discrimination at the EPPP level."
     },
@@ -70,8 +175,8 @@
       ],
       "answer": "Applied Behavior Analysis (ABA) including Early Intensive Behavioral Intervention (EIBI)",
       "explanation": "1. \"Applied Behavior Analysis (ABA) including Early Intensive Behavioral Intervention (EIBI)\" is the correct answer because it is an evidence-based treatment specifically designed for children with Autism Spectrum Disorder (ASD). EIBI utilizes the principles and techniques of ABA to provide intensive behavioral interventions that promote the acquisition of functional skills and minimize core symptoms of ASD, making it the primary intervention recommended for young children with this disorder.\n\n2. \n- **Cognitive Behavioral Therapy (CBT) focused on social skills**: While CBT can be beneficial for addressing specific issues in individuals with ASD, it is not primarily designed for young children with ASD and does not encompass the comprehensive behavioral strategies used in ABA.\n  \n- **Parent-Child Interaction Therapy (PCIT)**: PCIT is a behavioral intervention aimed at improving parent-child interactions and is primarily used for addressing disruptive behaviors in children, rather than specifically targeting the core symptoms of ASD.\n\n- **Dialectical Behavior Therapy (DBT)**: DBT is primarily designed for treating borderline personality disorder and emotional dysregulation, and it is not an evidence-based intervention for the core symptoms of ASD in young children.",
-      "kn": "KN44",
-      "kn_explanation": "This question focuses on treatment techniques and evidence for ASD, matching treatment/intervention evidence base (KN44).",
+      "kn": "KN30",
+      "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
       "difficulty": "medium",
       "quality_comment": "Distractors are other behavioral therapies, but only ABA/EIBI is well-established for ASD core symptoms, creating a clear but challenging test item."
     },
@@ -85,8 +190,8 @@
       ],
       "answer": "Low dopamine and norepinephrine levels",
       "explanation": "1. \"Low dopamine and norepinephrine levels\" is the correct answer because research has consistently identified these neurotransmitter deficiencies as contributors to the cognitive and behavioral symptoms of ADHD. Specifically, low levels of dopamine and norepinephrine in the prefrontal cortex are linked to impairments in impulse control, attention, and executive functioning, which are core features of ADHD.\n\n2. The option \"Excess serotonin and elevated GABA\" is incorrect because ADHD has not been linked to high levels of serotonin or GABA; rather, individuals with ADHD often show low levels of dopamine and norepinephrine. Similarly, \"Elevated acetylcholine and glutamate\" is wrong because while glutamate may play a role in various brain functions, there is no strong evidence to suggest that elevated acetylcholine or glutamate is associated with ADHD symptoms. Lastly, \"Low serotonin and increased dopamine\" is incorrect because ADHD is characterized by low levels of dopamine, not increased levels, and serotonin is not identified as a primary neurotransmitter involved in the disorder's symptoms.",
-      "kn": "KN1",
-      "kn_explanation": "This involves understanding neurochemical contributions to ADHD, falling within neurobiological bases of behavior (KN1).",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
       "difficulty": "medium",
       "quality_comment": "Distractors contain plausible neurotransmitter combinations but only low dopamine/norepinephrine correctly corresponds to ADHD, making it a solid clinical neuroscience question."
     },
@@ -100,13 +205,13 @@
       ],
       "answer": "Parent- and teacher-administered behavioral interventions as first-line treatment",
       "explanation": "1. The correct answer, \"Parent- and teacher-administered behavioral interventions as first-line treatment,\" is supported by the American Academy of Pediatrics guidelines, which recommend these interventions for preschool children with ADHD as the primary approach. These behavioral strategies, such as parent training in behavioral management, are tailored to improve the child's behavior effectively before considering medication.\n\n2. The option \"Medication alone without behavioral interventions\" is incorrect because the guidelines emphasize that medication should only be prescribed when behavioral interventions do not lead to adequate improvement. \"Combined medication and behavioral interventions immediately\" is wrong because the guidelines suggest starting with behavioral interventions first, rather than jumping to a combination treatment. Lastly, \"No treatment until school entry\" is incorrect as the guidelines advocate for early intervention, highlighting that preschool children should receive behavioral support rather than delaying treatment until they enter school.",
-      "kn": "KN43",
-      "kn_explanation": "This question concerns evidence-based clinical decision-making and age-appropriate interventions, covered under treatment models and guidelines (KN43).",
+      "kn": "KN37",
+      "kn_explanation": "This question is best aligned with KN37 because it tests Factors influencing evidence-based interpretation of data and decision-making (e.g., base rates, group differences, cultural biases and differences, heuristics).",
       "difficulty": "medium",
       "quality_comment": "Distractors include common misconceptions and opposites of guidelines, requiring knowledge of age-specific treatment recommendations."
     },
     {
-      "stem": "A diagnosis of Tourette\u2019s disorder requires which of the following?",
+      "stem": "A diagnosis of Tourette’s disorder requires which of the following?",
       "options": [
         "Multiple vocal tics that persist for less than one year",
         "At least one vocal tic and multiple motor tics present for more than one year before age 18",
@@ -114,7 +219,7 @@
         "One or more motor tics only lasting more than one year"
       ],
       "answer": "At least one vocal tic and multiple motor tics present for more than one year before age 18",
-      "explanation": "1. The correct answer, \"At least one vocal tic and multiple motor tics present for more than one year before age 18,\" accurately reflects the diagnostic criteria for Tourette\u2019s disorder as defined by the DSM-5-TR. This disorder specifically requires the presence of both vocal and multiple motor tics that have persisted for more than one year and have an onset before the age of 18, distinguishing it from other tic disorders.\n\n2. The option \"Multiple vocal tics that persist for less than one year\" is incorrect because Tourette\u2019s disorder requires both vocal and motor tics to be present for more than one year, not just vocal tics. The option \"Either motor or vocal tics lasting less than one year\" is wrong because it does not meet the criteria of having both types of tics for a duration longer than one year. Lastly, \"One or more motor tics only lasting more than one year\" is incorrect because it fails to include the necessary vocal tics, which are essential for a diagnosis of Tourette\u2019s disorder.",
+      "explanation": "1. The correct answer, \"At least one vocal tic and multiple motor tics present for more than one year before age 18,\" accurately reflects the diagnostic criteria for Tourette’s disorder as defined by the DSM-5-TR. This disorder specifically requires the presence of both vocal and multiple motor tics that have persisted for more than one year and have an onset before the age of 18, distinguishing it from other tic disorders.\n\n2. The option \"Multiple vocal tics that persist for less than one year\" is incorrect because Tourette’s disorder requires both vocal and motor tics to be present for more than one year, not just vocal tics. The option \"Either motor or vocal tics lasting less than one year\" is wrong because it does not meet the criteria of having both types of tics for a duration longer than one year. Lastly, \"One or more motor tics only lasting more than one year\" is incorrect because it fails to include the necessary vocal tics, which are essential for a diagnosis of Tourette’s disorder.",
       "kn": "KN36",
       "kn_explanation": "This question concerns DSM-5-TR diagnostic criteria for tic disorders, thus classification and diagnosis are the focus (KN36).",
       "difficulty": "medium",
@@ -130,8 +235,8 @@
       ],
       "answer": "There is no significant difference in future substance use problems between treated and untreated ADHD children",
       "explanation": "1. The correct answer, \"There is no significant difference in future substance use problems between treated and untreated ADHD children,\" is supported by a meta-analysis conducted by Humphreys, Eng, and Lee (2013), which found that children with ADHD who received psychostimulant treatment did not have a different rate of substance-related problems compared to those who did not receive treatment. This indicates that treatment with psychostimulants does not increase or decrease the risk for later substance use disorders, challenging the misconception that such treatment may lead to substance abuse.\n\n2. The statement \"Psychostimulant treatment increases the risk of substance-related problems in adulthood\" is incorrect because research shows no significant difference in substance use issues between treated and untreated ADHD children, indicating that treatment does not elevate risk. The option \"Psychostimulant treatment prevents later substance use disorders\" is also misleading, as the studies do not support that treatment guarantees prevention of substance use problems; they simply show no increased risk. Lastly, the claim \"Psychostimulant treatment causes immediate substance abuse during adolescence\" is false because the research indicates that treatment does not lead to increased rates of substance use, neither immediately nor in the long term.",
-      "kn": "KN43",
-      "kn_explanation": "This question focuses on treatment effects and outcomes research related to ADHD, appropriate for treatment and intervention decision-making (KN43).",
+      "kn": "KN37",
+      "kn_explanation": "This question is best aligned with KN37 because it tests Factors influencing evidence-based interpretation of data and decision-making (e.g., base rates, group differences, cultural biases and differences, heuristics).",
       "difficulty": "medium",
       "quality_comment": "Distractors represent common myths and misconceptions, requiring exam takers to rely on evidence-based knowledge."
     },
@@ -175,8 +280,8 @@
       ],
       "answer": "Heritability of ASD averages about 62% with additional environmental risk factors also involved",
       "explanation": "1. The statement \"Heritability of ASD averages about 62% with additional environmental risk factors also involved\" is correct because research indicates a significant genetic contribution to Autism Spectrum Disorder (ASD), with heritability estimates around 62%. Additionally, environmental factors, such as prenatal exposure to certain drugs and advanced parental age, have been identified as risk factors, highlighting that both genetics and environment play a role in the development of ASD.\n\n2. The incorrect options are as follows:\n   - \"Concordance rates for monozygotic twins approach 100%, indicating purely genetic causes\" is wrong because the concordance rates for monozygotic twins range from 59% to 84%, indicating that genetics alone does not account for all cases of ASD.\n   - \"Environmental factors such as vaccines significantly increase ASD risk\" is incorrect as extensive research has not established any link between vaccinations and an increased risk of ASD.\n   - \"There is no evidence for genetic contribution to ASD\" is false because numerous studies, including family, twin, and adoption studies, provide strong evidence of a genetic contribution to the disorder, confirming its heritability.",
-      "kn": "KN4",
-      "kn_explanation": "This question pertains to behavioral genetics and etiological complexity regarding ASD, suitable for genetics knowledge (KN4).",
+      "kn": "KN37",
+      "kn_explanation": "This question is best aligned with KN37 because it tests Factors influencing evidence-based interpretation of data and decision-making (e.g., base rates, group differences, cultural biases and differences, heuristics).",
       "difficulty": "medium",
       "quality_comment": "Explanation rejects incorrect environmental myths and clarifies heritability and environmental interplay, useful for discriminating nuanced knowledge."
     },
@@ -186,10 +291,10 @@
         "Signal Detection Theory",
         "Classical Test Theory",
         "Bayesian Probability Theory",
-        "Piaget\u2019s Stage Theory"
+        "Piaget’s Stage Theory"
       ],
       "answer": "Bayesian Probability Theory",
-      "explanation": "1. **Bayesian Probability Theory** is the correct answer because it emphasizes the role of prior knowledge (base rates) and evidence in updating beliefs about the likelihood of a particular outcome. In the context of interpreting neuropsychological test results, Bayesian approaches allow clinicians to consider the prevalence of conditions (base rates) and adjust their interpretations of test scores accordingly, thus minimizing biases that may arise from overestimating or underestimating the significance of test results in individual cases.\n\n2. **Signal Detection Theory** is incorrect because it focuses on the ability to distinguish between signal (true positives) and noise (false positives) in decision-making, rather than incorporating base rates into the interpretation of test results. **Classical Test Theory** is also not applicable, as it primarily deals with the reliability and validity of test scores without addressing the influence of base rates or biases in interpretation. Lastly, **Piaget\u2019s Stage Theory** is irrelevant in this context as it pertains to cognitive development stages in children, rather than the statistical and interpretative frameworks used in neuropsychological assessment.",
+      "explanation": "1. **Bayesian Probability Theory** is the correct answer because it emphasizes the role of prior knowledge (base rates) and evidence in updating beliefs about the likelihood of a particular outcome. In the context of interpreting neuropsychological test results, Bayesian approaches allow clinicians to consider the prevalence of conditions (base rates) and adjust their interpretations of test scores accordingly, thus minimizing biases that may arise from overestimating or underestimating the significance of test results in individual cases.\n\n2. **Signal Detection Theory** is incorrect because it focuses on the ability to distinguish between signal (true positives) and noise (false positives) in decision-making, rather than incorporating base rates into the interpretation of test results. **Classical Test Theory** is also not applicable, as it primarily deals with the reliability and validity of test scores without addressing the influence of base rates or biases in interpretation. Lastly, **Piaget’s Stage Theory** is irrelevant in this context as it pertains to cognitive development stages in children, rather than the statistical and interpretative frameworks used in neuropsychological assessment.",
       "kn": "KN37",
       "kn_explanation": "This question targets evidence-based interpretation of data and how knowledge of base rates and biases influence clinical judgment (KN37).",
       "difficulty": "medium",
@@ -204,7 +309,7 @@
         "Hindsight bias"
       ],
       "answer": "Base rate neglect",
-      "explanation": "1. **Base rate neglect** is the correct answer because it refers to the tendency to ignore the general prevalence (or base rate) of a disorder when evaluating specific cases. Clinicians may focus on the unique characteristics of an individual or specific assessment data, leading them to overestimate the likelihood of a rare disorder without considering how common or rare that disorder is in the general population. This can result in misdiagnosis or an inflated perception of the disorder\u2019s prevalence in a given context.\n\n2. **Confirmation bias** is incorrect because it involves favoring information that confirms existing beliefs or hypotheses rather than overestimating the likelihood of a rare disorder based on assessment data. **Availability heuristic** is also wrong as it pertains to judging the likelihood of events based on how easily examples come to mind, which does not specifically relate to the statistical base rates of disorders. Lastly, **hindsight bias** is incorrect because it refers to the tendency to see events as having been predictable after they have already occurred, rather than influencing the estimation of rare disorders during assessment interpretation.",
+      "explanation": "1. **Base rate neglect** is the correct answer because it refers to the tendency to ignore the general prevalence (or base rate) of a disorder when evaluating specific cases. Clinicians may focus on the unique characteristics of an individual or specific assessment data, leading them to overestimate the likelihood of a rare disorder without considering how common or rare that disorder is in the general population. This can result in misdiagnosis or an inflated perception of the disorder’s prevalence in a given context.\n\n2. **Confirmation bias** is incorrect because it involves favoring information that confirms existing beliefs or hypotheses rather than overestimating the likelihood of a rare disorder based on assessment data. **Availability heuristic** is also wrong as it pertains to judging the likelihood of events based on how easily examples come to mind, which does not specifically relate to the statistical base rates of disorders. Lastly, **hindsight bias** is incorrect because it refers to the tendency to see events as having been predictable after they have already occurred, rather than influencing the estimation of rare disorders during assessment interpretation.",
       "kn": "KN37",
       "kn_explanation": "This question addresses a key cognitive bias affecting evidence-based interpretation and assessment decisions, fitting within KN37.",
       "difficulty": "medium",
@@ -220,8 +325,8 @@
       ],
       "answer": "Predictive validity",
       "explanation": "1. **Predictive validity** is the correct answer because it assesses how well a neurodevelopmental disorder assessment tool can forecast the outcomes of treatment based on the results of the assessment. In the context of neurodevelopmental disorders, demonstrating predictive validity ensures that the tool is effective in identifying individuals who will benefit from specific interventions, which is crucial for improving treatment efficacy and planning.\n\n2. **Content validity** is incorrect because it refers to how well the assessment tool covers the relevant domains of the disorder, rather than its ability to predict treatment outcomes. **Construct validity** is also not applicable here, as it evaluates whether the tool accurately measures the theoretical construct of the disorder rather than its predictive capabilities regarding treatment effectiveness. Lastly, **face validity** is not relevant because it simply assesses whether the tool appears to measure what it is intended to measure, based on subjective judgment, without providing evidence of its predictive power for treatment outcomes.",
-      "kn": "KN40",
-      "kn_explanation": "This item relates to measuring outcomes and change, focusing on assessment tool effectiveness and evidence-based evaluation (KN40).",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
       "difficulty": "medium",
       "quality_comment": "Distractors are valid forms of validity but only predictive validity relates to future outcome prediction, making the item conceptually sound."
     },

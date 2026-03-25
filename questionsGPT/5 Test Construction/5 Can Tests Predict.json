@@ -1,6 +1,69 @@
 {
   "questions": [
     {
+      "stem": "A researcher is using Test X to predict scores on a criterion measure. The criterion measure has a standard deviation of 10. If the validity coefficient between the predictor and criterion is .00, what would the standard error of estimate equal?",
+      "options": [
+        "0",
+        "5",
+        "10",
+        "It cannot be determined without knowing the predictor's standard deviation"
+      ],
+      "answer": "10",
+      "explanation": "The standard error of estimate is calculated as: SEE = SD of criterion × √(1 - r²). When the validity coefficient (r) equals .00, the formula becomes: SEE = 10 × √(1 - 0) = 10 × √1 = 10 × 1 = 10. This means the SEE equals the full standard deviation of the criterion, reflecting maximum prediction error. The lesson explicitly states: 'The standard error ranges from 0 (when r = ±1.0, perfect prediction, no error) to the full standard deviation of the criterion (when r = 0, no relationship, maximum error).' Option A (0) would only occur with perfect validity. Option B (5) has no basis. Option D is incorrect because the formula only requires the criterion SD and validity coefficient, not the predictor's SD.",
+      "kn": "KN29",
+      "kn_explanation": "Standard error of estimate, validity coefficients, and criterion prediction are core psychometric/test characteristics concepts.",
+      "difficulty": "medium",
+      "quality_comment": "Directly tests the conceptual relationship described in the lesson between SEE, criterion SD, and validity coefficient with a clear computational example.",
+      "suggestedLesson": "5-can-tests-predict",
+      "suggestedParagraph": "## Predicting Individual Scores: Standard Error of Estimate",
+      "lessonExcerpt": "The standard error ranges from 0 (when r = ±1.0, perfect prediction, no error) to the full standard deviation of the criterion (when r = 0, no relationship, maximum error).",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 5
+    },
+    {
+      "stem": "A psychologist is using a screening instrument for alcohol use disorder in a primary care setting. The current cutoff score produces high specificity but low sensitivity. If the psychologist LOWERS the cutoff score, which of the following outcomes is MOST likely?",
+      "options": [
+        "Both true positives and false positives will increase",
+        "True positives will increase while false positives will decrease",
+        "Both true negatives and false negatives will increase",
+        "Sensitivity will decrease while specificity will increase"
+      ],
+      "answer": "Both true positives and false positives will increase",
+      "explanation": "Lowering the cutoff score makes it easier to 'pass' (test positive), which means more people are selected/identified. According to the lesson, lowering the cutoff results in: 'More true positives (catch more good candidates), More false positives (accidentally accept more bad candidates), Fewer true negatives, Fewer false negatives.' This increases sensitivity (catching more people with the disorder) but decreases specificity (more false alarms). Option B is wrong because false positives increase, not decrease. Option C is wrong because both true negatives and false negatives decrease. Option D describes raising the cutoff, not lowering it.",
+      "kn": "KN37",
+      "kn_explanation": "This question is best aligned with KN37 because it tests Factors influencing evidence-based interpretation of data and decision-making (e.g., base rates, group differences, cultural biases and differences, heuristics).",
+      "difficulty": "hard",
+      "quality_comment": "Strong application question requiring understanding of how cutoff score adjustments affect the four classification categories and sensitivity/specificity trade-offs.",
+      "suggestedLesson": "5-can-tests-predict",
+      "suggestedParagraph": "### Understanding Cutoff Score Effects",
+      "lessonExcerpt": "Lowering the cutoff (making it easier to 'pass'): More people selected, More true positives (catch more good candidates), More false positives (accidentally accept more bad candidates), Fewer true negatives (reject fewer people correctly), Fewer false negatives (miss fewer good candidates).",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 3
+    },
+    {
+      "stem": "A psychologist uses a selection test with a validity coefficient of .60 to predict job performance. The criterion measure (supervisor ratings) has a standard deviation of 8. If the validity coefficient were increased to .80 while the criterion SD remained the same, what would happen to the standard error of estimate?",
+      "options": [
+        "It would increase from 6.4 to 7.2",
+        "It would decrease from 6.4 to 4.8",
+        "It would remain unchanged because the criterion SD is the same",
+        "It would decrease from 4.8 to 3.2"
+      ],
+      "answer": "It would decrease from 6.4 to 4.8",
+      "explanation": "The standard error of estimate formula is: SEE = SD of criterion × √(1 - validity coefficient²). With validity = .60: SEE = 8 × √(1 - .36) = 8 × √.64 = 8 × .8 = 6.4. With validity = .80: SEE = 8 × √(1 - .64) = 8 × √.36 = 8 × .6 = 4.8. Thus, increasing the validity coefficient from .60 to .80 decreases the SEE from 6.4 to 4.8. This illustrates the inverse relationship between the validity coefficient and the standard error of estimate: as the predictor becomes more valid, prediction errors become smaller. The criterion SD alone does not determine the SEE; both the criterion SD and the validity coefficient jointly determine it.",
+      "kn": "KN29",
+      "kn_explanation": "Validity coefficients, criterion measures, and prediction of job performance are core psychometric concepts (reliability and validity).",
+      "difficulty": "hard",
+      "quality_comment": "Excellent computational question that requires applying the SEE formula and understanding the inverse relationship between validity and prediction error.",
+      "suggestedLesson": "5-can-tests-predict",
+      "suggestedParagraph": "### The Standard Error of Estimate",
+      "lessonExcerpt": "Here's the formula: Standard Error = SD of criterion × √(1 - validity coefficient²)... Example calculation: Your job performance measure has a standard deviation of 5, and your hiring test has a validity coefficient of .60. Step 1: Square the coefficient: .60² = .36. Step 2: Subtract from 1: 1 - .36 = .64. Step 3: Take the square root: √.64 = .8. Step 4: Multiply by criterion SD: 5 × .8 = 4.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 5
+    },
+    {
       "stem": "Which of the following scenarios best exemplifies the use of predictive validity in a criterion-related validity study?",
       "options": [
         "Correlating scores on a new intelligence test with scores on an established intelligence test collected at the same time",
@@ -66,10 +129,10 @@
         "It is reduced and underestimates the true relationship due to measurement error",
         "It increases because more variability is accounted for",
         "It remains unaffected since reliability does not influence validity",
-        "It becomes exactly equal to the predictor\u2019s reliability coefficient"
+        "It becomes exactly equal to the predictor’s reliability coefficient"
       ],
       "answer": "It is reduced and underestimates the true relationship due to measurement error",
-      "explanation": "1. The correct answer, \"It is reduced and underestimates the true relationship due to measurement error,\" is accurate because when the reliability of the predictor and/or criterion decreases, the criterion-related validity coefficient is negatively affected. This occurs because lower reliability introduces measurement error, which attenuates the correlation between the predictor and criterion, leading to an underestimation of the true relationship between them.\n\n2. The first incorrect option, \"It increases because more variability is accounted for,\" is wrong because a decrease in reliability does not lead to an increase in variability accounted for; rather, it introduces more error, diminishing the validity coefficient. \n\nThe second incorrect option, \"It remains unaffected since reliability does not influence validity,\" is incorrect because reliability directly impacts validity; a predictor\u2019s validity cannot exceed its reliability, meaning that decreased reliability will affect the validity coefficient. \n\nThe third incorrect option, \"It becomes exactly equal to the predictor\u2019s reliability coefficient,\" is misleading because while the criterion-related validity coefficient cannot exceed the reliability coefficient, a decrease in reliability does not automatically equate the validity coefficient to the reliability; it would likely be lower due to measurement error.",
+      "explanation": "1. The correct answer, \"It is reduced and underestimates the true relationship due to measurement error,\" is accurate because when the reliability of the predictor and/or criterion decreases, the criterion-related validity coefficient is negatively affected. This occurs because lower reliability introduces measurement error, which attenuates the correlation between the predictor and criterion, leading to an underestimation of the true relationship between them.\n\n2. The first incorrect option, \"It increases because more variability is accounted for,\" is wrong because a decrease in reliability does not lead to an increase in variability accounted for; rather, it introduces more error, diminishing the validity coefficient. \n\nThe second incorrect option, \"It remains unaffected since reliability does not influence validity,\" is incorrect because reliability directly impacts validity; a predictor’s validity cannot exceed its reliability, meaning that decreased reliability will affect the validity coefficient. \n\nThe third incorrect option, \"It becomes exactly equal to the predictor’s reliability coefficient,\" is misleading because while the criterion-related validity coefficient cannot exceed the reliability coefficient, a decrease in reliability does not automatically equate the validity coefficient to the reliability; it would likely be lower due to measurement error.",
       "kn": "KN29",
       "kn_explanation": "Understanding correction for attenuation involves concepts of reliability affecting validity coefficients, core to psychometric knowledge in assessment and diagnosis.",
       "difficulty": "medium",
@@ -85,8 +148,8 @@
       ],
       "answer": "It results in fewer hires, leading to fewer true and false positives and more true and false negatives",
       "explanation": "1. The correct answer, \"It results in fewer hires, leading to fewer true and false positives and more true and false negatives,\" is accurate because raising the predictor cutoff score means that only candidates with higher scores will be selected for hiring. This results in fewer individuals being hired overall, which decreases the number of true positives (correctly identified high performers) and false positives (incorrectly identified low performers), while increasing the number of false negatives (missed high performers) since some qualified candidates may not meet the higher cutoff.\n\n2. The first incorrect option, \"It leads to more hires, increasing true and false positives and decreasing false negatives,\" is wrong because raising the cutoff score actually reduces the number of candidates hired, not increases it. The second incorrect option, \"It has no effect on the number of true positives or false negatives,\" is incorrect because adjusting the cutoff score directly impacts the classification of candidates, thus affecting true positives and false negatives. Lastly, the option \"It increases false positives while decreasing true positives\" is incorrect because raising the cutoff score would actually decrease false positives, as fewer candidates would qualify for hiring, while true positives may also decrease due to missed qualified candidates.",
-      "kn": "KN29",
-      "kn_explanation": "This question assesses understanding of decision thresholds and classification outcomes in criterion-related validity and test interpretation.",
+      "kn": "KN37",
+      "kn_explanation": "This question is best aligned with KN37 because it tests Factors influencing evidence-based interpretation of data and decision-making (e.g., base rates, group differences, cultural biases and differences, heuristics).",
       "difficulty": "medium",
       "quality_comment": "The question is well-constructed with plausible alternatives that require conceptual understanding of cutoff adjustments and their impact."
     },
@@ -100,8 +163,8 @@
       ],
       "answer": "The improvement in prediction accuracy when a new predictor is added to existing methods",
       "explanation": "1. The correct answer, \"The improvement in prediction accuracy when a new predictor is added to existing methods,\" accurately defines incremental validity as it measures the added benefit of using a new predictor in enhancing the accuracy of predictions about criterion performance. Incremental validity is evaluated by comparing the number of accurate predictions made with the new predictor against those made without it, highlighting the test's utility in practical applications.\n\n2. The option \"The ability of a test to perfectly classify all cases correctly\" is incorrect because no test can achieve perfect classification due to inherent variability and measurement error in real-world settings. The statement \"The reliability of a test across repeated administrations\" is wrong because reliability refers to the consistency of test scores over time, not the improvement in predictive accuracy that incremental validity assesses. Lastly, \"The magnitude of the correlation between a predictor and a criterion score\" is incorrect because it describes the strength of the relationship between the two measures rather than the added predictive accuracy provided by introducing a new predictor.",
-      "kn": "KN29",
-      "kn_explanation": "Incremental validity is a key concept in evaluating the usefulness of assessment tools, which falls within psychometric theories and applications.",
+      "kn": "KN37",
+      "kn_explanation": "This question is best aligned with KN37 because it tests Factors influencing evidence-based interpretation of data and decision-making (e.g., base rates, group differences, cultural biases and differences, heuristics).",
       "difficulty": "easy",
       "quality_comment": "The stem is straightforward, and the distractors are reasonable but clearly different constructs, making this accessible yet informative."
     },
@@ -130,8 +193,8 @@
       ],
       "answer": "Positive predictive value increases as prevalence increases",
       "explanation": "1. The correct answer, \"Positive predictive value increases as prevalence increases,\" is accurate because as the prevalence of a disorder rises within a population, the likelihood that a person who tests positive for the disorder actually has it also increases. This is due to the higher proportion of true cases in the population, which enhances the positive predictive value (PPV) of the screening test. Conversely, when prevalence is low, there are more false positives relative to true positives, diminishing the PPV.\n\n2. The first incorrect option, \"Positive predictive value decreases as prevalence increases,\" is wrong because it contradicts the established relationship between prevalence and PPV; higher prevalence leads to a greater proportion of true positives. The second option, \"Positive predictive value is unaffected by prevalence,\" is incorrect as it ignores the fact that PPV is influenced by the proportion of true cases in the population, which directly relates to prevalence. Lastly, the statement \"Positive predictive value always equals sensitivity\" is incorrect because PPV and sensitivity are distinct measures; sensitivity refers to the test's ability to correctly identify those with the disorder, whereas PPV focuses on the likelihood that individuals who test positive actually have the disorder.",
-      "kn": "KN29",
-      "kn_explanation": "Understanding how predictive values depend on base rates is critical to interpretation of diagnostic test results, central to psychometrics and assessment.",
+      "kn": "KN37",
+      "kn_explanation": "This question is best aligned with KN37 because it tests Factors influencing evidence-based interpretation of data and decision-making (e.g., base rates, group differences, cultural biases and differences, heuristics).",
       "difficulty": "medium",
       "quality_comment": "The question probes understanding of an important but often misunderstood aspect of diagnostic statistics, with plausible distractors."
     },
@@ -155,13 +218,13 @@
       "options": [
         "Estimating the incremental validity by determining the increase in correct decisions due to the new predictor",
         "Calculating the standard error of estimate for predicted criterion scores",
-        "Determining the test\u2013retest reliability of the predictor",
+        "Determining the test–retest reliability of the predictor",
         "Assessing the internal consistency of the predictor test items"
       ],
       "answer": "Estimating the incremental validity by determining the increase in correct decisions due to the new predictor",
-      "explanation": "1. The correct answer, \"Estimating the incremental validity by determining the increase in correct decisions due to the new predictor,\" is accurate because Taylor-Russell tables are specifically designed to evaluate how much a new predictor contributes to the accuracy of predictions regarding criterion performance. By using these tables, one can assess the extent to which the new predictor improves the rate of correct hiring decisions compared to existing methods, thus quantifying its incremental validity.\n\n2. The option \"Calculating the standard error of estimate for predicted criterion scores\" is incorrect because the standard error of estimate is derived from the criterion-related validity coefficient, not directly related to the use of Taylor-Russell tables. The option \"Determining the test\u2013retest reliability of the predictor\" is also wrong, as Taylor-Russell tables focus on evaluating predictive validity rather than reliability measures like test-retest. Finally, the option \"Assessing the internal consistency of the predictor test items\" is incorrect because internal consistency pertains to the reliability of test items, which is not the purpose of Taylor-Russell tables; they are not used for this type of analysis.",
-      "kn": "KN29",
-      "kn_explanation": "This pertains to psychometric models used in assessing test utility and incremental validity, central to criterion-related validity evaluation.",
+      "explanation": "1. The correct answer, \"Estimating the incremental validity by determining the increase in correct decisions due to the new predictor,\" is accurate because Taylor-Russell tables are specifically designed to evaluate how much a new predictor contributes to the accuracy of predictions regarding criterion performance. By using these tables, one can assess the extent to which the new predictor improves the rate of correct hiring decisions compared to existing methods, thus quantifying its incremental validity.\n\n2. The option \"Calculating the standard error of estimate for predicted criterion scores\" is incorrect because the standard error of estimate is derived from the criterion-related validity coefficient, not directly related to the use of Taylor-Russell tables. The option \"Determining the test–retest reliability of the predictor\" is also wrong, as Taylor-Russell tables focus on evaluating predictive validity rather than reliability measures like test-retest. Finally, the option \"Assessing the internal consistency of the predictor test items\" is incorrect because internal consistency pertains to the reliability of test items, which is not the purpose of Taylor-Russell tables; they are not used for this type of analysis.",
+      "kn": "KN37",
+      "kn_explanation": "This question is best aligned with KN37 because it tests Factors influencing evidence-based interpretation of data and decision-making (e.g., base rates, group differences, cultural biases and differences, heuristics).",
       "difficulty": "medium",
       "quality_comment": "This question adds depth by addressing specific methods used to evaluate incremental validity, with distractors related to other psychometric concepts."
     },

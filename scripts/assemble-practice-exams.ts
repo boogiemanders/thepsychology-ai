@@ -2,7 +2,7 @@
 /**
  * Assembles EPPP practice exams from the audited question bank.
  *
- * Primary source:  staging/review/questionsGPT/**
+ * Primary source:  staging/review/psychprep/**
  * Fallback source: questionsGPT/**
  *
  * Usage: npx tsx scripts/assemble-practice-exams.ts
@@ -44,7 +44,7 @@ interface ExamQuestion {
 // ─── Constants ────────────────────────────────────────────────────────────────
 
 const ROOT = process.cwd()
-const STAGING_DIR = join(ROOT, 'staging', 'review', 'questionsGPT')
+const STAGING_DIR = join(ROOT, 'staging', 'review', 'psychprep')
 const FALLBACK_DIR = join(ROOT, 'questionsGPT')
 const OUTPUT_DIR = join(ROOT, 'exams', 'practice')
 

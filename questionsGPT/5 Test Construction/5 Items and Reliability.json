@@ -1,6 +1,318 @@
 {
   "questions": [
     {
+      "stem": "A test developer reports that a new screening instrument has a reliability coefficient of .84. Which of the following is the most accurate interpretation of that coefficient?",
+      "options": [
+        "Eighty-four percent of the items measure the same construct",
+        "Eighty-four percent of score variability reflects true differences, and sixteen percent reflects measurement error",
+        "There is an eighty-four percent probability that any single obtained score equals the person's true score",
+        "The test will correctly classify eighty-four percent of examinees"
+      ],
+      "answer": "Eighty-four percent of score variability reflects true differences, and sixteen percent reflects measurement error",
+      "explanation": "This is the best answer because the reliability coefficient indicates the proportion of observed-score variance attributable to true-score variance rather than random error. The item-consistency option is wrong because reliability is not simply the percentage of items measuring the same construct. The probability option is wrong because a reliability coefficient is not the probability that a single score exactly equals a true score. The classification option is wrong because reliability does not by itself tell you the percentage of correct decisions or classifications.",
+      "kn": "KN29",
+      "kn_explanation": "This question assesses psychometric theory related to reliability and measurement error.",
+      "difficulty": "medium",
+      "quality_comment": "Good interpretation item that forces the examinee to translate coefficient language into variance language.",
+      "suggestedLesson": "5-items-and-reliability",
+      "suggestedParagraph": "## Understanding Reliability: What Does \"Consistent\" Really Mean?",
+      "lessonExcerpt": "A reliability coefficient tells you directly what percentage of score variability comes from true differences versus error.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT"
+    },
+    {
+      "stem": "Why is internal consistency reliability generally not an appropriate way to estimate reliability for a pure speed test?",
+      "options": [
+        "Because speed tests are always scored by multiple raters",
+        "Because people who reach more items tend to get more items correct, which can inflate apparent item consistency",
+        "Because speed tests cannot be standardized",
+        "Because classical test theory applies only to power tests"
+      ],
+      "answer": "Because people who reach more items tend to get more items correct, which can inflate apparent item consistency",
+      "explanation": "This is the best answer because on speed tests, internal consistency can look artificially high simply because examinees who get farther answer more items correctly, not because the items are meaningfully homogeneous. The multiple-rater option is wrong because speed tests do not inherently require multiple raters. The standardization option is wrong because speed tests can certainly be standardized. The classical-test-theory option is wrong because classical test theory is not restricted to power tests.",
+      "kn": "KN29",
+      "kn_explanation": "This question tests psychometric theory concerning reliability estimation and test characteristics.",
+      "difficulty": "hard",
+      "quality_comment": "High-yield psychometrics trap item that distinguishes method misuse from general unreliability.",
+      "suggestedLesson": "5-items-and-reliability",
+      "suggestedParagraph": "### 3. Internal Consistency Reliability: Do the Items Work Together?",
+      "lessonExcerpt": "Internal consistency is NOT appropriate for speed tests. Why? Because on speed tests, people who get far in the test answer more items correctly, making it look like the items are highly consistent when really you're just measuring speed.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT"
+    },
+    {
+      "stem": "An item analysis shows that an item's discrimination index is negative. Which conclusion is most justified?",
+      "options": [
+        "The item is moderately difficult and should be retained automatically",
+        "High scorers are answering the item correctly more often than low scorers",
+        "Low scorers are answering the item correctly more often than high scorers, suggesting the item is flawed",
+        "The item is too easy and therefore has perfect validity"
+      ],
+      "answer": "Low scorers are answering the item correctly more often than high scorers, suggesting the item is flawed",
+      "explanation": "This is the best answer because a negative discrimination index means the item is working in the wrong direction, with lower-performing examinees getting it right more often than higher-performing examinees. The second option is wrong because that describes positive discrimination. The moderate-difficulty option is wrong because difficulty and discrimination are separate item-analysis concepts. The perfect-validity option is wrong because item difficulty alone does not establish validity, and a negative discrimination value is a warning sign rather than evidence of a strong item.",
+      "kn": "KN29",
+      "kn_explanation": "This question assesses item analysis and discrimination within psychometric theory.",
+      "difficulty": "medium",
+      "quality_comment": "Direct but important item-analysis question with plausible distractors tied to common psychometric confusions.",
+      "suggestedLesson": "5-items-and-reliability",
+      "suggestedParagraph": "### Item Discrimination Index (D)",
+      "lessonExcerpt": "D = -1.0: All low scorers got it right, no high scorers did (something's wrong!)",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT"
+    },
+    {
+      "stem": "A psychologist administers an IQ test that has a standard deviation of 15 and a reliability coefficient of .91. She calculates the standard error of measurement (SEM) to be 4.5. The SEM value of 4.5 is expressed in:",
+      "options": [
+        "Standard deviation units",
+        "The same units as the test's raw or standard scores",
+        "Percentile rank units",
+        "Correlation coefficient units"
+      ],
+      "answer": "The same units as the test's raw or standard scores",
+      "explanation": "The SEM is calculated using the formula SEM = SD × √(1 - reliability). Since it is derived by multiplying the test's standard deviation by a scalar value, the resulting SEM is expressed in the same metric (units) as the test scores themselves. In this case, the test uses IQ points with SD = 15, so the SEM of 4.5 is in IQ points. It is not in standard deviation units (which would be a z-score-like metric), not in percentile ranks (a different scale entirely), and not in correlation coefficient units (which are dimensionless values between -1 and +1).",
+      "kn": "KN29",
+      "kn_explanation": "Standard error of measurement is a core psychometric concept related to reliability and test characteristics.",
+      "difficulty": "medium",
+      "quality_comment": "Good conceptual question grounded in the SEM formula from the lesson. The lesson clearly shows SEM derived from the SD, implying shared units.",
+      "suggestedLesson": "5-items-and-reliability",
+      "suggestedParagraph": "## Standard Error of Measurement: Embracing Uncertainty",
+      "lessonExcerpt": "SEM = SD × √(1 - Reliability coefficient)... Example calculation: Test has SD = 15 and reliability = .91, SEM = 15 × √(1 - .91) = 15 × √.09 = 15 × .3 = 4.5",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 4
+    },
+    {
+      "stem": "Two clinicians independently diagnose 100 patients using the same structured diagnostic interview. Their inter-rater agreement yields a Cohen's Kappa of .85. This coefficient indicates that:",
+      "options": [
+        "The two raters agreed on 85% of their diagnoses",
+        "The raters demonstrated high agreement beyond what would be expected by chance alone",
+        "85% of the variance in diagnoses is attributable to true diagnostic differences",
+        "The diagnostic interview has a reliability coefficient of .85"
+      ],
+      "answer": "The raters demonstrated high agreement beyond what would be expected by chance alone",
+      "explanation": "Cohen's Kappa is specifically described in the lesson as 'a more sophisticated measure that corrects for chance agreement.' A Kappa of .85 indicates high inter-rater agreement after accounting for the agreement that would occur by chance. Option A confuses Kappa with simple percent agreement — Kappa adjusts for chance, so .85 does not mean 85% raw agreement. Option C confuses Kappa with a reliability coefficient interpreted as variance explained; Kappa is an agreement index, not a variance-partitioning statistic. Option D incorrectly equates inter-rater Kappa with the test's overall reliability coefficient — Kappa measures agreement between specific raters, not the test's general reliability.",
+      "kn": "KN29",
+      "kn_explanation": "Cohen's Kappa and inter-rater reliability are psychometric properties covering reliability of measurement.",
+      "difficulty": "medium",
+      "quality_comment": "Clean question that tests conceptual understanding of Kappa versus simple percent agreement, well-grounded in lesson content.",
+      "suggestedLesson": "5-items-and-reliability",
+      "suggestedParagraph": "### 4. Inter-Rater Reliability: Consistency Across Scorers",
+      "lessonExcerpt": "Cohen's Kappa: A more sophisticated measure that corrects for chance agreement. It's used when two raters are assigning ratings on a nominal scale (categories with no inherent order).",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 7
+    },
+    {
+      "stem": "A psychologist is evaluating a cognitive ability test that has a standard deviation of 15. She notes that the standard error of measurement (SEM) for this test could theoretically range from:",
+      "options": [
+        "0.0 to 1.0",
+        "0.0 to 15",
+        "-15 to +15",
+        "0.0 to 225"
+      ],
+      "answer": "0.0 to 15",
+      "explanation": "The SEM ranges from 0.0 to the standard deviation of the test (SDx). When reliability is perfect (1.0), SEM = SD × √(1-1.0) = 0. When reliability is 0, SEM = SD × √(1-0) = SD. Therefore, for a test with SD = 15, SEM ranges from 0 to 15. Option A (0 to 1.0) confuses SEM range with the range of the reliability coefficient itself. Option C (-15 to +15) incorrectly applies the range of a correlation coefficient. Option D (0 to 225) confuses SEM with variance (SD²).",
+      "kn": "KN29",
+      "kn_explanation": "Standard error of measurement and standard deviation are fundamental psychometric/test characteristics.",
+      "difficulty": "hard",
+      "quality_comment": "Tests understanding of the mathematical relationship between SEM, reliability, and SD — a frequently tested psychometric concept.",
+      "suggestedLesson": "5-items-and-reliability",
+      "suggestedParagraph": "## Standard Error of Measurement: Embracing Uncertainty",
+      "lessonExcerpt": "The standard error of the measurement has a range from 0.0 to SDx.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 11
+    },
+    {
+      "stem": "A graduate student is studying psychometric principles and reads that the Spearman-Brown prophecy formula is used in split-half reliability to correct for the fact that shorter tests are less reliable. This principle reflects the broader psychometric finding that increasing test length:",
+      "options": [
+        "Increases both reliability and validity, with validity always exceeding reliability",
+        "Increases reliability but has no effect on validity",
+        "Increases reliability, and because reliability sets a ceiling on validity, can also increase the maximum possible validity",
+        "Decreases reliability due to respondent fatigue but increases validity through broader content sampling"
+      ],
+      "answer": "Increases reliability, and because reliability sets a ceiling on validity, can also increase the maximum possible validity",
+      "explanation": "Adding more items to a test increases reliability (as demonstrated by the Spearman-Brown formula, which corrects split-half reliability upward to estimate full-test reliability). Since reliability sets a ceiling on validity (maximum validity = √reliability), increasing reliability through greater test length also raises the maximum possible validity. Option A is wrong because validity cannot exceed the reliability index (√reliability), not reliability itself. Option B is partially correct about reliability increasing but wrong that there is no effect on validity — the ceiling effect means increased reliability can permit higher validity. Option D reverses the effect on reliability; while fatigue is a practical concern, the psychometric principle is that more items increase reliability.",
+      "kn": "KN29",
+      "kn_explanation": "Spearman-Brown prophecy formula and split-half reliability are core psychometric theories and reliability concepts.",
+      "difficulty": "hard",
+      "quality_comment": "Integrates two related psychometric principles — Spearman-Brown correction and the reliability ceiling on validity — into one applied question.",
+      "suggestedLesson": "5-items-and-reliability",
+      "suggestedParagraph": "### 3. Internal Consistency Reliability: Do the Items Work Together?",
+      "lessonExcerpt": "Because shorter tests are less reliable, split-half gives you the reliability of two half-length tests. The Spearman-Brown formula corrects this to estimate the full test's reliability... A test's reliability always sets a ceiling on its validity.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 18
+    },
+    {
+      "stem": "A test developer is deciding between classical test theory (CTT) and item response theory (IRT) for constructing a new adaptive screening measure. Which characteristic of IRT represents its PRIMARY advantage over CTT for this application?",
+      "options": [
+        "IRT produces more reliable total scores across all ability levels",
+        "IRT item parameters remain stable across different examinee samples",
+        "IRT requires smaller sample sizes for item calibration",
+        "IRT eliminates the need for establishing test-retest reliability"
+      ],
+      "answer": "IRT item parameters remain stable across different examinee samples",
+      "explanation": "The primary advantage of IRT over CTT is that IRT is sample-invariant—item properties (difficulty, discrimination, guessing parameters) remain stable across different groups of examinees. This is essential for adaptive testing because items are selected from an item bank and administered to diverse populations. In CTT, item statistics are sample-dependent, meaning they change depending on who takes the test. IRT does not necessarily produce more reliable total scores at all levels, does not require smaller samples (it typically requires larger ones), and does not eliminate the need for reliability assessment.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
+      "difficulty": "hard",
+      "quality_comment": "Targets the specific sample-invariance property that makes IRT suitable for adaptive testing, requiring deeper understanding beyond surface-level comparison",
+      "suggestedLesson": "5-items-and-reliability",
+      "suggestedParagraph": "## Item Response Theory: The Modern Alternative",
+      "lessonExcerpt": "Sample-dependent (item statistics change with different groups) | Sample-invariant (item properties stable across groups)",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 18
+    },
+    {
+      "stem": "Two clinicians independently review 100 patient records and classify each patient as meeting or not meeting criteria for a specific diagnosis. Their percent agreement is 88%, but when Cohen's Kappa is calculated, the value is .76. The difference between these two values is best explained by the fact that Kappa:",
+      "options": [
+        "Uses a more lenient threshold for agreement than percent agreement",
+        "Adjusts for the proportion of agreement expected by chance alone",
+        "Weights disagreements by severity rather than treating all disagreements equally",
+        "Only counts agreement on positive cases while ignoring agreement on negative cases"
+      ],
+      "answer": "Adjusts for the proportion of agreement expected by chance alone",
+      "explanation": "Cohen's Kappa provides a more conservative estimate of inter-rater agreement by correcting for chance agreement. Simple percent agreement can be inflated because raters will agree some proportion of the time purely by chance, especially when base rates are very high or very low. For example, if 90% of cases are negative, two raters could agree 81% of the time just by both randomly guessing 'negative.' Kappa removes this chance-expected agreement, yielding a lower but more meaningful value. A Kappa of .76 indicates substantial agreement beyond chance. Kappa does not weight disagreements by severity (that would be weighted Kappa), does not use a more lenient threshold, and does not ignore agreement on negative cases.",
+      "kn": "KN29",
+      "kn_explanation": "Inter-rater reliability (percent agreement between clinicians) is a reliability/psychometric concept",
+      "difficulty": "medium",
+      "quality_comment": "Good conceptual question. The lesson mentions Kappa corrects for chance agreement but does not provide specific interpretation benchmarks for Kappa values (e.g., .76 = substantial). The core concept is well-supported.",
+      "suggestedLesson": "5-items-and-reliability",
+      "suggestedParagraph": "### Inter-Rater Reliability: The Subjective Scoring Check",
+      "lessonExcerpt": "Cohen's Kappa fixes this by accounting for chance agreement. It provides a more conservative estimate of true rater consistency.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 7
+    },
+    {
+      "stem": "A psychologist reports that an intelligence test with a standard deviation of 15 and a reliability coefficient of .91 has a standard error of measurement of approximately 4.5 points. A school team uses this value to construct a confidence interval around a student's obtained score of 112. In what metric are both the obtained score and the confidence interval boundaries expressed?",
+      "options": [
+        "Percentile rank units, because the SEM is derived from the normal distribution",
+        "Standard deviation units, because the SEM formula contains the standard deviation",
+        "The same units as the original test scores, because the SEM is computed from the test's own standard deviation",
+        "Z-score units, because SEM standardizes measurement error around a mean of zero"
+      ],
+      "answer": "The same units as the original test scores, because the SEM is computed from the test's own standard deviation",
+      "explanation": "The standard error of measurement (SEM = SD × √[1 – rxx]) is expressed in the same metric as the original test scores because it is derived directly from the test's standard deviation. When the SD is 15 IQ points and reliability is .91, the SEM of approximately 4.5 is also in IQ points. Confidence intervals constructed using the SEM are therefore also expressed in IQ points, allowing direct interpretation. The SEM is not in percentile rank units, which are nonlinear transformations requiring separate conversion. It is not in standard deviation units per se—although it uses the SD in its formula, the product inherits the original scale's unit. It is not in z-score units, which would require dividing by the test SD.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
+      "difficulty": "medium",
+      "quality_comment": "Tests a frequently confused but clinically important measurement concept; high face validity for applied practice.",
+      "suggestedLesson": "5-items-and-reliability",
+      "suggestedParagraph": "## Measurement Error Statistics",
+      "lessonExcerpt": "",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 4
+    },
+    {
+      "stem": "A researcher validates two cognitive screening tests against the same criterion (clinician-rated functional impairment, SD = 12). Test A has a validity coefficient of .80 and a standard error of estimate of 7.2. Test B has a validity coefficient of .00 and a standard error of estimate of 12.0. Which of the following best explains the difference in these standard errors of estimate?",
+      "options": [
+        "Test A's higher reliability reduces unsystematic error, which lowers the standard error of estimate independently of validity",
+        "The standard error of estimate equals the criterion SD when validity is zero and decreases toward zero as validity approaches 1.0, reflecting the amount of criterion variance left unexplained",
+        "Test B's standard error of estimate is inflated because of restriction of range in the criterion variable",
+        "The standard error of estimate is equivalent to one minus the validity coefficient multiplied by the criterion SD"
+      ],
+      "answer": "The standard error of estimate equals the criterion SD when validity is zero and decreases toward zero as validity approaches 1.0, reflecting the amount of criterion variance left unexplained",
+      "explanation": "The standard error of estimate (SEest = SDy × √[1 – r²]) quantifies the average prediction error around the regression line. When the validity coefficient r = .00, SEest = SDy × √(1 – 0) = SDy = 12, confirming that the test predicts no better than the criterion mean—the entire criterion SD represents residual error. As r approaches 1.0, SEest approaches zero because essentially all criterion variance is explained. Test A's validity of .80 yields SEest = 12 × √(1 – .64) ≈ 12 × .60 = 7.2, matching the reported value. Reliability affects validity (through attenuation) but is not the direct cause of SEest differences when validity is the variable under examination. Restriction of range would attenuate both coefficients equally and is not described here. Subtracting r from 1 and multiplying by SDy (option D) conflates SEest with the formula for mean absolute error and yields incorrect values.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
+      "difficulty": "hard",
+      "quality_comment": "Quantitative vignette requiring formula derivation and conceptual understanding; distractors target common computational errors.",
+      "suggestedLesson": "5-items-and-reliability",
+      "suggestedParagraph": "## Standard Error of Estimate",
+      "lessonExcerpt": "",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 5
+    },
+    {
+      "stem": "Two doctoral-level clinicians independently administer and score a structured diagnostic interview with 40 patients. Their raw percentage agreement is 75%. Given the base rates of diagnoses in this clinic population, chance agreement is estimated at 50%. The computed kappa coefficient is .50. Which of the following statements accurately interprets this kappa value?",
+      "options": [
+        "The raters agreed on exactly half of all diagnoses, indicating unacceptable reliability for clinical use",
+        "The raters demonstrated agreement that is 50% greater than what chance alone would predict, indicating moderate reliability",
+        "Kappa of .50 is equivalent to a Pearson r of .50, indicating a moderate linear association between rater scores",
+        "The observed agreement of 75% was reduced to .50 after correcting for the unreliability of the diagnostic instrument"
+      ],
+      "answer": "The raters demonstrated agreement that is 50% greater than what chance alone would predict, indicating moderate reliability",
+      "explanation": "Cohen's kappa is computed as κ = (Po – Pe) / (1 – Pe), where Po is observed proportional agreement and Pe is expected chance agreement. Here κ = (.75 – .50) / (1 – .50) = .25 / .50 = .50. This means the raters agreed 50% more often than chance would predict—not that they agreed on only 50% of cases, which would imply 50% raw agreement. Kappa values in the range .41–.60 are conventionally classified as moderate agreement. Kappa is not equivalent to Pearson r; they are different statistics serving different purposes and cannot be directly compared. Kappa does not represent a corrected form of percentage agreement; rather, it indexes the proportion of possible beyond-chance agreement that was actually achieved.",
+      "kn": "KN37",
+      "kn_explanation": "This question is best aligned with KN37 because it tests Factors influencing evidence-based interpretation of data and decision-making (e.g., base rates, group differences, cultural biases and differences, heuristics).",
+      "difficulty": "medium",
+      "quality_comment": "Forces students to distinguish between raw agreement rate and the beyond-chance interpretation of kappa; distractors exploit common misreadings of the statistic.",
+      "suggestedLesson": "5-items-and-reliability",
+      "suggestedParagraph": "## Interrater Reliability",
+      "lessonExcerpt": "",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 7
+    },
+    {
+      "stem": "A psychologist is explaining the properties of the standard error of measurement (SEM) to an intern. She notes that regardless of the test being used, the SEM always falls within a predictable range relative to the test's standard deviation (SD). Which of the following most accurately describes the boundaries of this range?",
+      "options": [
+        "The SEM always equals the SD, because both reflect total score variability",
+        "The SEM ranges from zero to a value equal to the full SD of the test",
+        "The SEM can exceed the SD when reliability falls below 0.50",
+        "The SEM is fixed at exactly one-half of the SD for any well-constructed test"
+      ],
+      "answer": "The SEM ranges from zero to a value equal to the full SD of the test",
+      "explanation": "The SEM is calculated as SEM = SD × √(1 − rxx). When reliability (rxx) equals 1.0 (perfect reliability), SEM = SD × √0 = 0. When reliability equals 0.0 (completely unreliable), SEM = SD × √1 = SD. Therefore, the SEM can range from a minimum of zero to a maximum equal to the full SD, never exceeding it. Option A is incorrect because SEM equals SD only at zero reliability, not universally. Option C is incorrect because the SEM can never mathematically exceed the SD regardless of how low reliability falls. Option D is incorrect because the SEM is not fixed at half the SD; its value depends entirely on the test's specific reliability coefficient.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
+      "difficulty": "medium",
+      "quality_comment": "Clean conceptual question with plausible numerical distractors; effectively tests understanding of the SEM formula's boundary conditions rather than rote formula recall.",
+      "suggestedLesson": "5-items-and-reliability",
+      "suggestedParagraph": "## Standard Error of Measurement",
+      "lessonExcerpt": "Not found in provided lesson content. Needs review.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 11
+    },
+    {
+      "stem": "In its landmark 1954 ruling in Brown v. Board of Education, the U.S. Supreme Court cited social science research demonstrating the psychological harm caused by racial segregation in public schools. Which psychologist's empirical research on children's racial self-concept was specifically referenced in the Court's decision?",
+      "options": [
+        "Francis Galton, whose work on individual differences in mental ability was reinterpreted as evidence of environmental over hereditary influence",
+        "Kenneth Clark, whose doll studies showed that Black children preferred white dolls and assigned negative characteristics to brown dolls",
+        "Alfred Binet, whose intelligence test was used to document disparate academic outcomes between segregated and integrated schools",
+        "Lewis Terman, whose Stanford-Binet research was cited to demonstrate that educational deprivation suppressed measured intelligence"
+      ],
+      "answer": "Kenneth Clark, whose doll studies showed that Black children preferred white dolls and assigned negative characteristics to brown dolls",
+      "explanation": "Kenneth Clark, working alongside Mamie Clark, conducted doll studies in the 1940s in which Black children were presented with two physically identical dolls—one white, one brown—and asked which was 'nice,' which was 'bad,' and which they preferred. The majority of Black children preferred the white doll and attributed negative qualities to the brown doll. Clark interpreted these findings as evidence that segregation had caused Black children to internalize negative racial self-concepts. Kenneth Clark provided expert testimony in lower court cases leading to Brown, and this research was cited in the Supreme Court's decision in footnote 11. The other psychologists listed made significant contributions to intelligence testing but were not involved in the Brown litigation.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
+      "difficulty": "medium",
+      "quality_comment": "Historically rich question with plausible distractors drawn from well-known names in psychometric history; tests specific knowledge of a landmark event in the applied use of psychological research.",
+      "suggestedLesson": "5-items-and-reliability",
+      "suggestedParagraph": "## History of Psychological Testing",
+      "lessonExcerpt": "Not found in provided lesson content. Needs review.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 17
+    },
+    {
+      "stem": "A test developer applies the Spearman-Brown prophecy formula to estimate the effect of doubling the number of items on a 50-item personality scale. She finds that reliability increases substantially. A colleague then cautions that the same doubling may not improve—and could even harm—another psychometric property. Which of the following BEST describes the differential effect of increasing test length on reliability versus validity?",
+      "options": [
+        "Both reliability and validity increase proportionally with each additional item, making longer tests uniformly superior",
+        "Reliability increases predictably with test length, but validity may not improve proportionally and could decrease if added items measure different or weaker constructs",
+        "Validity increases predictably with test length because more items sample the domain more thoroughly, while reliability is largely unaffected by length",
+        "Neither reliability nor validity changes meaningfully when test length is increased by fewer than 100%"
+      ],
+      "answer": "Reliability increases predictably with test length, but validity may not improve proportionally and could decrease if added items measure different or weaker constructs",
+      "explanation": "The Spearman-Brown prophecy formula demonstrates that reliability increases in a predictable, systematic fashion as test length grows—longer tests aggregate more observations, reducing random error. Validity, however, does not follow the same pattern. Adding items improves validity only if the new items tap the same construct and maintain the same relationship to the criterion. If added items introduce construct heterogeneity, measure related but distinct constructs, or have weaker criterion relationships, the test's validity coefficient can remain flat or decrease. This asymmetry is a core psychometric principle: reliability is a necessary but not sufficient condition for validity, and mechanically increasing reliability through length does not guarantee improved predictive or construct validity.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
+      "difficulty": "hard",
+      "quality_comment": "Sophisticated conceptual question that distinguishes between two frequently conflated psychometric properties; requires understanding beyond formula memorization.",
+      "suggestedLesson": "5-items-and-reliability",
+      "suggestedParagraph": "## Test Length and Psychometric Properties",
+      "lessonExcerpt": "Not found in provided lesson content. Needs review.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 18
+    },
+    {
       "stem": "In classical test theory, an observed test score (X) is conceptualized as the sum of which two components?",
       "options": [
         "True score variability and measurement error",
@@ -31,7 +343,7 @@
       "quality_comment": "The question is clear with well-differentiated options, focusing on appropriate reliability methods."
     },
     {
-      "stem": "Cronbach\u2019s alpha is commonly used to estimate which type of reliability?",
+      "stem": "Cronbach’s alpha is commonly used to estimate which type of reliability?",
       "options": [
         "Internal consistency reliability",
         "Test-retest reliability",
@@ -39,7 +351,7 @@
         "Inter-rater reliability"
       ],
       "answer": "Internal consistency reliability",
-      "explanation": "1. **Internal Consistency Reliability** is the correct answer because Cronbach\u2019s alpha is specifically designed to assess the consistency of scores across different test items within a single test. This method evaluates how closely related the items are as a group, making it suitable for tests measuring a single content domain or aspect of behavior.\n\n2. **Test-Retest Reliability** is incorrect because it measures the consistency of scores over time by administering the same test to the same group on two different occasions, rather than assessing item consistency. **Alternate Forms Reliability** is also incorrect because it evaluates the consistency of scores across different forms of the same test, rather than focusing on the internal consistency of items within a single test. Lastly, **Inter-Rater Reliability** is wrong because it assesses the agreement between different raters scoring the same test or item, which is unrelated to the internal consistency of test items.",
+      "explanation": "1. **Internal Consistency Reliability** is the correct answer because Cronbach’s alpha is specifically designed to assess the consistency of scores across different test items within a single test. This method evaluates how closely related the items are as a group, making it suitable for tests measuring a single content domain or aspect of behavior.\n\n2. **Test-Retest Reliability** is incorrect because it measures the consistency of scores over time by administering the same test to the same group on two different occasions, rather than assessing item consistency. **Alternate Forms Reliability** is also incorrect because it evaluates the consistency of scores across different forms of the same test, rather than focusing on the internal consistency of items within a single test. Lastly, **Inter-Rater Reliability** is wrong because it assesses the agreement between different raters scoring the same test or item, which is unrelated to the internal consistency of test items.",
       "kn": "KN29",
       "kn_explanation": "This question covers knowledge of a major internal consistency reliability statistic, important in evaluating psychometric properties (KN29).",
       "difficulty": "medium",
@@ -80,15 +392,15 @@
       "options": [
         "Spearman-Brown prophecy formula",
         "Kuder-Richardson 20 formula",
-        "Cronbach\u2019s alpha",
-        "Cohen\u2019s kappa coefficient"
+        "Cronbach’s alpha",
+        "Cohen’s kappa coefficient"
       ],
       "answer": "Spearman-Brown prophecy formula",
-      "explanation": "1. The **Spearman-Brown prophecy formula** is the correct answer because it is specifically designed to correct for the underestimation of reliability that occurs when a test is split in half for the calculation of split-half reliability. When a test is divided into two halves, each half is shorter than the original test, which typically leads to a lower reliability coefficient; the Spearman-Brown formula adjusts this coefficient to reflect the reliability of the full-length test.\n\n2. The **Kuder-Richardson 20 formula** is incorrect because it is used to evaluate internal consistency reliability for dichotomously scored items, rather than correcting split-half reliability underestimations. **Cronbach\u2019s alpha** is also incorrect because, while it assesses internal consistency reliability, it does not specifically address the issue of underestimating reliability from split-half testing. Lastly, **Cohen\u2019s kappa coefficient** is incorrect because it measures inter-rater reliability for nominal scales and does not relate to the correction of split-half reliability coefficients.",
+      "explanation": "1. The **Spearman-Brown prophecy formula** is the correct answer because it is specifically designed to correct for the underestimation of reliability that occurs when a test is split in half for the calculation of split-half reliability. When a test is divided into two halves, each half is shorter than the original test, which typically leads to a lower reliability coefficient; the Spearman-Brown formula adjusts this coefficient to reflect the reliability of the full-length test.\n\n2. The **Kuder-Richardson 20 formula** is incorrect because it is used to evaluate internal consistency reliability for dichotomously scored items, rather than correcting split-half reliability underestimations. **Cronbach’s alpha** is also incorrect because, while it assesses internal consistency reliability, it does not specifically address the issue of underestimating reliability from split-half testing. Lastly, **Cohen’s kappa coefficient** is incorrect because it measures inter-rater reliability for nominal scales and does not relate to the correction of split-half reliability coefficients.",
       "kn": "KN29",
       "kn_explanation": "This question relates to methods for estimating reliability coefficients and their correction, grounded in psychometric theory (KN29).",
       "difficulty": "hard",
-      "quality_comment": "The question is technically detailed and challenges test-takers\u2019 knowledge of specific reliability corrections."
+      "quality_comment": "The question is technically detailed and challenges test-takers’ knowledge of specific reliability corrections."
     },
     {
       "stem": "A test has a reliability coefficient of .81. What is the reliability index (index of reliability), as defined by taking the square root of the coefficient?",
@@ -99,7 +411,7 @@
         "1.62"
       ],
       "answer": "0.90",
-      "explanation": "1. The correct answer is \"0.90\" because the reliability index, or index of reliability, is calculated by taking the square root of the reliability coefficient. In this case, the reliability coefficient is .81, and when you take the square root of .81, you get approximately 0.90 (\u221a.81 = 0.90). This value represents the theoretical correlation between the observed test scores and the true test scores.\n\n2. The option \"0.81\" is incorrect because it simply restates the reliability coefficient rather than providing the reliability index, which requires taking the square root. The option \"0.18\" is wrong as it does not relate to the square root of .81 and is significantly lower than expected; it may arise from a misunderstanding of the calculation. Lastly, \"1.62\" is incorrect because it exceeds the maximum value of 1.0 for reliability indices, which is not possible as reliability coefficients range from 0 to 1.0.",
+      "explanation": "1. The correct answer is \"0.90\" because the reliability index, or index of reliability, is calculated by taking the square root of the reliability coefficient. In this case, the reliability coefficient is .81, and when you take the square root of .81, you get approximately 0.90 (√.81 = 0.90). This value represents the theoretical correlation between the observed test scores and the true test scores.\n\n2. The option \"0.81\" is incorrect because it simply restates the reliability coefficient rather than providing the reliability index, which requires taking the square root. The option \"0.18\" is wrong as it does not relate to the square root of .81 and is significantly lower than expected; it may arise from a misunderstanding of the calculation. Lastly, \"1.62\" is incorrect because it exceeds the maximum value of 1.0 for reliability indices, which is not possible as reliability coefficients range from 0 to 1.0.",
       "kn": "KN29",
       "kn_explanation": "Understanding the relationship between reliability coefficients and their indices is part of psychometric measurement concepts (KN29).",
       "difficulty": "medium",
@@ -108,13 +420,13 @@
     {
       "stem": "Inter-rater reliability is most accurately estimated by which statistic that accounts for chance agreement when two raters assign nominal ratings?",
       "options": [
-        "Cohen\u2019s kappa coefficient",
+        "Cohen’s kappa coefficient",
         "Percent agreement",
-        "Cronbach\u2019s alpha",
+        "Cronbach’s alpha",
         "Spearman-Brown prophecy formula"
       ],
-      "answer": "Cohen\u2019s kappa coefficient",
-      "explanation": "1. **Cohen\u2019s kappa coefficient** is the correct answer because it is specifically designed to measure inter-rater reliability for nominal ratings while accounting for chance agreement between raters. This means it provides a more accurate assessment of the consistency of ratings assigned by different raters compared to other methods that do not consider chance agreement.\n\n2. **Percent agreement** is incorrect because it does not account for chance agreement, which can lead to an overestimate of reliability. **Cronbach\u2019s alpha** is not suitable because it evaluates internal consistency reliability, not inter-rater reliability, and is used for tests measuring a single content domain rather than for comparing ratings from different raters. **Spearman-Brown prophecy formula** is also incorrect as it is used to adjust split-half reliability coefficients and does not pertain to inter-rater reliability assessment.",
+      "answer": "Cohen’s kappa coefficient",
+      "explanation": "1. **Cohen’s kappa coefficient** is the correct answer because it is specifically designed to measure inter-rater reliability for nominal ratings while accounting for chance agreement between raters. This means it provides a more accurate assessment of the consistency of ratings assigned by different raters compared to other methods that do not consider chance agreement.\n\n2. **Percent agreement** is incorrect because it does not account for chance agreement, which can lead to an overestimate of reliability. **Cronbach’s alpha** is not suitable because it evaluates internal consistency reliability, not inter-rater reliability, and is used for tests measuring a single content domain rather than for comparing ratings from different raters. **Spearman-Brown prophecy formula** is also incorrect as it is used to adjust split-half reliability coefficients and does not pertain to inter-rater reliability assessment.",
       "kn": "KN29",
       "kn_explanation": "Inter-rater reliability measurement techniques are integral to psychometric evaluation in assessment (KN29).",
       "difficulty": "medium",
@@ -144,7 +456,7 @@
         "2.0"
       ],
       "answer": "4.0",
-      "explanation": "To calculate the standard error of measurement (SEM), we use the formula: SEM = standard deviation \u00d7 \u221a(1 - reliability coefficient). Given a standard deviation of 10 and a reliability coefficient of 0.84, we first calculate 1 - 0.84, which equals 0.16. The square root of 0.16 is 0.4. Therefore, SEM = 10 \u00d7 0.4 = 4.0, making \"4.0\" the correct answer.\n\nNow, let's examine the incorrect options:\n\n- **8.4**: This option suggests a misunderstanding of the SEM formula; it does not accurately apply the calculation involving the reliability coefficient and standard deviation.\n  \n- **1.6**: This value appears to result from an incorrect calculation, possibly misapplying the square root or not using the standard deviation correctly in the SEM formula.\n\n- **2.0**: This option likely arises from a miscalculation of the square root or the multiplication step, as it does not align with the correct application of the SEM formula. \n\nIn summary, the correct SEM calculation leads to \"4.0,\" while the incorrect options stem from errors in applying the formula or misunderstanding the relationship between standard deviation and reliability.",
+      "explanation": "To calculate the standard error of measurement (SEM), we use the formula: SEM = standard deviation × √(1 - reliability coefficient). Given a standard deviation of 10 and a reliability coefficient of 0.84, we first calculate 1 - 0.84, which equals 0.16. The square root of 0.16 is 0.4. Therefore, SEM = 10 × 0.4 = 4.0, making \"4.0\" the correct answer.\n\nNow, let's examine the incorrect options:\n\n- **8.4**: This option suggests a misunderstanding of the SEM formula; it does not accurately apply the calculation involving the reliability coefficient and standard deviation.\n  \n- **1.6**: This value appears to result from an incorrect calculation, possibly misapplying the square root or not using the standard deviation correctly in the SEM formula.\n\n- **2.0**: This option likely arises from a miscalculation of the square root or the multiplication step, as it does not align with the correct application of the SEM formula. \n\nIn summary, the correct SEM calculation leads to \"4.0,\" while the incorrect options stem from errors in applying the formula or misunderstanding the relationship between standard deviation and reliability.",
       "kn": "KN29",
       "kn_explanation": "Calculating SEM requires understanding of reliability and variability concepts in psychological measurement (KN29).",
       "difficulty": "medium",
@@ -189,7 +501,7 @@
         "Exactly zero"
       ],
       "answer": "0.30 or higher",
-      "explanation": "1. The correct answer, \"0.30 or higher,\" is considered acceptable for item discrimination indices (D) because it indicates a sufficient difference in item performance between high-scoring and low-scoring examinees. A D value of 0.30 suggests that a significant proportion of high scorers answered the item correctly compared to low scorers, reflecting the item\u2019s effectiveness in distinguishing between varying levels of knowledge or ability among test-takers.\n\n2. The option \"0.10 or lower\" is incorrect because such a low D value indicates minimal discrimination, suggesting the item does not effectively differentiate between high and low performers. The option \"-0.25 or below\" is wrong as negative values indicate that more low-scoring examinees answered the item correctly than high-scoring ones, which is undesirable in test construction. Lastly, \"exactly zero\" is incorrect because a D value of zero means no difference in performance between groups, rendering the item ineffective for discrimination purposes.",
+      "explanation": "1. The correct answer, \"0.30 or higher,\" is considered acceptable for item discrimination indices (D) because it indicates a sufficient difference in item performance between high-scoring and low-scoring examinees. A D value of 0.30 suggests that a significant proportion of high scorers answered the item correctly compared to low scorers, reflecting the item’s effectiveness in distinguishing between varying levels of knowledge or ability among test-takers.\n\n2. The option \"0.10 or lower\" is incorrect because such a low D value indicates minimal discrimination, suggesting the item does not effectively differentiate between high and low performers. The option \"-0.25 or below\" is wrong as negative values indicate that more low-scoring examinees answered the item correctly than high-scoring ones, which is undesirable in test construction. Lastly, \"exactly zero\" is incorrect because a D value of zero means no difference in performance between groups, rendering the item ineffective for discrimination purposes.",
       "kn": "KN29",
       "kn_explanation": "This question focuses on item analysis and interpretation of discrimination values, central to psychometric test development (KN29).",
       "difficulty": "easy",
@@ -201,10 +513,10 @@
         "The consistency of scores across two different versions of a test",
         "The consistency of scores over repeated test administrations",
         "The internal consistency of items within the same test",
-        "The agreement between two raters\u2019 scores"
+        "The agreement between two raters’ scores"
       ],
       "answer": "The consistency of scores across two different versions of a test",
-      "explanation": "### Explanation of the Correct Answer\n\n\"Alternate forms reliability is best described as an assessment of the consistency of scores across two different versions of a test\" because this method specifically evaluates how well scores from one form of a test correlate with scores from another form administered to the same examinees. This reliability type is crucial when a test has multiple forms, ensuring that different versions yield similar results, which is essential for maintaining test integrity and validity.\n\n### Explanation of Incorrect Options\n\n- **The consistency of scores over repeated test administrations**: This describes test-retest reliability, which measures how stable scores are when the same test is given to the same group at different times, not across different forms of a test.\n\n- **The internal consistency of items within the same test**: This refers to internal consistency reliability, which assesses how well items on a single test measure the same construct, rather than comparing different test forms.\n\n- **The agreement between two raters\u2019 scores**: This describes inter-rater reliability, which evaluates the consistency of scores assigned by different raters, focusing on subjective scoring rather than the consistency of scores across different test versions.",
+      "explanation": "### Explanation of the Correct Answer\n\n\"Alternate forms reliability is best described as an assessment of the consistency of scores across two different versions of a test\" because this method specifically evaluates how well scores from one form of a test correlate with scores from another form administered to the same examinees. This reliability type is crucial when a test has multiple forms, ensuring that different versions yield similar results, which is essential for maintaining test integrity and validity.\n\n### Explanation of Incorrect Options\n\n- **The consistency of scores over repeated test administrations**: This describes test-retest reliability, which measures how stable scores are when the same test is given to the same group at different times, not across different forms of a test.\n\n- **The internal consistency of items within the same test**: This refers to internal consistency reliability, which assesses how well items on a single test measure the same construct, rather than comparing different test forms.\n\n- **The agreement between two raters’ scores**: This describes inter-rater reliability, which evaluates the consistency of scores assigned by different raters, focusing on subjective scoring rather than the consistency of scores across different test versions.",
       "kn": "KN29",
       "kn_explanation": "This question asks about a key method for estimating reliability, covered in psychometric test evaluation (KN29).",
       "difficulty": "easy",
@@ -220,8 +532,8 @@
       ],
       "answer": "Focuses on examinee responses to individual test items rather than total test scores",
       "explanation": "1. The correct answer, \"Focuses on examinee responses to individual test items rather than total test scores,\" accurately reflects a key distinction between item response theory (IRT) and classical test theory (CTT). IRT is item-based, concentrating on how examinees respond to individual items, which allows for a more nuanced understanding of item characteristics and the probability of a correct response based on the latent trait being measured. In contrast, CTT is test-based and primarily focuses on total test scores, limiting its ability to analyze item-level data.\n\n2. The first incorrect option, \"Assumes test scores are composed of true score plus error score,\" is wrong because this assumption is a fundamental principle of classical test theory (CTT), not item response theory (IRT). The second option, \"Uses total test scores to estimate item difficulty and discrimination,\" is incorrect because IRT specifically estimates item parameters independently of total test scores, focusing instead on individual item responses. Lastly, the option \"Does not require large sample sizes for parameter estimation\" is incorrect because IRT relies on large sample sizes to derive stable and sample-invariant item parameters, which is a significant advantage over CTT.",
-      "kn": "KN30",
-      "kn_explanation": "This item assesses understanding of differing assessment theories and models, specifically the contrast between CTT and IRT (KN30).",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
       "difficulty": "medium",
       "quality_comment": "The question clearly distinguishes key features of IRT versus traditional measurement models with plausible options."
     },
@@ -234,9 +546,9 @@
         "They represent the internal consistency of test items"
       ],
       "answer": "They plot the probability of endorsing or correctly answering an item against levels of the latent trait",
-      "explanation": "1. The correct answer, \"They plot the probability of endorsing or correctly answering an item against levels of the latent trait,\" accurately describes the function of item characteristic curves (ICCs) in item response theory (IRT). ICCs depict the relationship between an individual\u2019s performance on a specific test item and their latent trait level, showing how the probability of answering the item correctly changes with varying levels of the trait being measured. This graphical representation is essential for understanding item difficulty and discrimination in IRT.\n\n2. The option \"They illustrate the variability of total test scores across examinees\" is incorrect because ICCs focus on individual item responses rather than total test scores, which are a broader measure. The statement \"They show the correlation between test items and overall test scores\" is wrong because ICCs specifically assess item-level performance in relation to the latent trait, not the correlation with overall test scores. Lastly, \"They represent the internal consistency of test items\" is incorrect as ICCs do not measure internal consistency; instead, they focus on the characteristics of individual items, such as difficulty and discrimination, rather than how consistently items measure the same construct across a test.",
-      "kn": "KN30",
-      "kn_explanation": "This question targets the interpretation of key graphical tools used in modern test theories aligning with assessment models (KN30).",
+      "explanation": "1. The correct answer, \"They plot the probability of endorsing or correctly answering an item against levels of the latent trait,\" accurately describes the function of item characteristic curves (ICCs) in item response theory (IRT). ICCs depict the relationship between an individual’s performance on a specific test item and their latent trait level, showing how the probability of answering the item correctly changes with varying levels of the trait being measured. This graphical representation is essential for understanding item difficulty and discrimination in IRT.\n\n2. The option \"They illustrate the variability of total test scores across examinees\" is incorrect because ICCs focus on individual item responses rather than total test scores, which are a broader measure. The statement \"They show the correlation between test items and overall test scores\" is wrong because ICCs specifically assess item-level performance in relation to the latent trait, not the correlation with overall test scores. Lastly, \"They represent the internal consistency of test items\" is incorrect as ICCs do not measure internal consistency; instead, they focus on the characteristics of individual items, such as difficulty and discrimination, rather than how consistently items measure the same construct across a test.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
       "difficulty": "medium",
       "quality_comment": "Well-constructed with focused content, this question taps understanding of foundational IRT concepts."
     },
@@ -249,9 +561,9 @@
         "Reliability coefficient"
       ],
       "answer": "Discrimination parameter",
-      "explanation": "1. The \"Discrimination parameter\" is the correct answer because it indicates how well an item differentiates among examinees with varying levels of the latent trait measured by the test. In item response theory (IRT), the discrimination parameter is represented by the slope of the item characteristic curve (ICC); a steeper slope signifies that the item effectively distinguishes between individuals with high and low levels of the trait.\n\n2. The \"Difficulty parameter\" is incorrect because it refers to the level of the trait required for a 50% probability of answering the item correctly, not its ability to differentiate among examinees. The \"Guessing parameter\" is also incorrect, as it indicates the likelihood of answering correctly by chance, rather than the item\u2019s discriminative ability. Lastly, the \"Reliability coefficient\" is incorrect because it measures the consistency of test scores overall, rather than the performance of a specific item in distinguishing between different levels of the latent trait.",
-      "kn": "KN30",
-      "kn_explanation": "This item highlights understanding of specific IRT parameters central to assessment theories and models (KN30).",
+      "explanation": "1. The \"Discrimination parameter\" is the correct answer because it indicates how well an item differentiates among examinees with varying levels of the latent trait measured by the test. In item response theory (IRT), the discrimination parameter is represented by the slope of the item characteristic curve (ICC); a steeper slope signifies that the item effectively distinguishes between individuals with high and low levels of the trait.\n\n2. The \"Difficulty parameter\" is incorrect because it refers to the level of the trait required for a 50% probability of answering the item correctly, not its ability to differentiate among examinees. The \"Guessing parameter\" is also incorrect, as it indicates the likelihood of answering correctly by chance, rather than the item’s discriminative ability. Lastly, the \"Reliability coefficient\" is incorrect because it measures the consistency of test scores overall, rather than the performance of a specific item in distinguishing between different levels of the latent trait.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
       "difficulty": "medium",
       "quality_comment": "This question clarifies key distinctions among item parameters, reinforcing core conceptual knowledge required for the EPPP."
     },

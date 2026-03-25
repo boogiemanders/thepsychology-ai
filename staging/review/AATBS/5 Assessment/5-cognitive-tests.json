@@ -1,0 +1,64 @@
+{
+  "questions": [
+    {
+      "stem": "A school psychologist is evaluating a 10-year-old refugee child whose English is limited. The psychologist wants an instrument that was explicitly designed to minimize cultural content and verbal demands and that can be interpreted using either the CHC model or Luria's model. Which test best fits that goal?",
+      "options": [
+        "Peabody Picture Vocabulary Test-Fifth Edition (PPVT-5)",
+        "Kaufman Assessment Battery for Children, Second Edition (KABC-II)",
+        "Wonderlic Cognitive Ability Test",
+        "Fagan Test of Infant Intelligence (FTII)"
+      ],
+      "answer": "Kaufman Assessment Battery for Children, Second Edition (KABC-II)",
+      "explanation": "The KABC-II is the best answer because it was designed with cultural fairness in mind, minimizes cultural content and verbal requirements, and can be interpreted using either CHC or Luria models. The PPVT-5 is wrong because it measures receptive vocabulary rather than broad cognitive processing. The Wonderlic is wrong because it is a brief group test typically used in employment settings. The FTII is wrong because it is designed for infants, not school-age children.",
+      "kn": "KN35",
+      "kn_explanation": "This question tests criteria for selecting and adapting assessment methods, especially cultural appropriateness and language accommodation.",
+      "difficulty": "hard",
+      "quality_comment": "Strong test-selection item anchored to specific design features rather than name recognition alone.",
+      "suggestedLesson": "5-cognitive-tests",
+      "suggestedParagraph": "### Tests for When Words Get in the Way",
+      "lessonExcerpt": "The KABC-II was designed with cultural fairness in mind. It's for ages 3 to 18 years and minimizes cultural content and verbal requirements. You can interpret results using two different models: The Cattell-Horn-Carroll (CHC) model of cognitive abilities. Luria's neuropsychological processing model.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT"
+    },
+    {
+      "stem": "An adult client is recovering from a stroke and has severe expressive speech difficulties but can point accurately to visual stimuli. The psychologist wants to measure the client's receptive vocabulary with minimal verbal output demands. Which instrument is most appropriate?",
+      "options": [
+        "PPVT-5",
+        "Leiter-3",
+        "CogAT7",
+        "CMMS"
+      ],
+      "answer": "PPVT-5",
+      "explanation": "The PPVT-5 is the best answer because it measures receptive vocabulary by having the client point to one of four pictures after hearing a word, which minimizes expressive language demands. Leiter-3 is wrong because it is a broader nonverbal cognitive measure rather than a vocabulary test. CogAT7 is wrong because it is a group test used primarily for educational planning. CMMS is wrong because it measures general reasoning ability in children rather than receptive vocabulary in adults.",
+      "kn": "KN32",
+      "kn_explanation": "This question assesses knowledge of commonly used instruments and their appropriate use with specific populations.",
+      "difficulty": "medium",
+      "quality_comment": "Good applied assessment-selection item with a clinically realistic aphasia-style vignette.",
+      "suggestedLesson": "5-cognitive-tests",
+      "suggestedParagraph": "### Tests for When Words Get in the Way",
+      "lessonExcerpt": "The PPVT-5 measures receptive vocabulary. You show someone four pictures and say a word. They point to the picture that matches the word. That's it. No speaking required.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT"
+    },
+    {
+      "stem": "Which of the following best describes how computerized adaptive testing (CAT) typically proceeds?",
+      "options": [
+        "All examinees receive the same fixed sequence of items so their scores are directly comparable",
+        "The test begins with a moderately difficult item and then presents harder or easier items depending on the examinee's previous responses",
+        "The test presents only the most difficult items first in order to estimate ceiling performance efficiently",
+        "The test alternates between verbal and nonverbal items regardless of the examinee's performance level"
+      ],
+      "answer": "The test begins with a moderately difficult item and then presents harder or easier items depending on the examinee's previous responses",
+      "explanation": "This is the best answer because CAT adapts item difficulty based on the examinee's responses, usually starting around a moderate difficulty level. The fixed-sequence option is wrong because that describes traditional testing, not adaptive testing. Presenting only the hardest items first is wrong because CAT aims to match item difficulty to the examinee's estimated ability rather than overwhelm everyone initially. Alternating content types regardless of performance is wrong because CAT's defining logic is adaptation based on prior responses.",
+      "kn": "KN41",
+      "kn_explanation": "This question tests the use of technology in implementing tests and other forms of assessment.",
+      "difficulty": "easy",
+      "quality_comment": "Foundational CAT mechanism item that fits the AATBS-style direct-concept format.",
+      "suggestedLesson": "5-cognitive-tests",
+      "suggestedParagraph": "## The Future of Testing: Computerized Adaptive Testing (CAT)",
+      "lessonExcerpt": "You start with a moderately difficult question. If you answer correctly next question is harder. If you answer incorrectly next question is easier.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT"
+    }
+  ]
+}

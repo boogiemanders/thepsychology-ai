@@ -1,6 +1,153 @@
 {
   "questions": [
     {
+      "stem": "A supervisor who reviewed the hiring files of her new employees discovers that one team member scored exceptionally high on the pre-employment cognitive ability test. Despite this employee performing at an average level, the supervisor consistently rates this employee as \"above average\" on all performance dimensions. This rating error is best described as an example of:",
+      "options": [
+        "Halo effect",
+        "Leniency bias",
+        "Criterion contamination",
+        "Criterion deficiency"
+      ],
+      "answer": "Criterion contamination",
+      "explanation": "Criterion contamination occurs when a performance measure is influenced by factors unrelated to actual job performance. In this case, the supervisor's knowledge of the employee's pre-employment test scores (irrelevant to current performance) is inflating performance ratings. This is a classic example of contamination through 'knowledge of hiring scores.' Halo effect is incorrect because halo involves one performance dimension bleeding into ratings on other dimensions, not external information influencing all ratings. Leniency bias is incorrect because leniency involves giving all employees uniformly high ratings, not selectively inflating one employee's ratings due to extraneous information. Criterion deficiency is incorrect because it refers to a measure missing important aspects of performance, not including irrelevant factors.",
+      "kn": "KN34",
+      "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
+      "difficulty": "hard",
+      "quality_comment": "Excellent question requiring differentiation between criterion contamination and similar-sounding biases, directly supported by the lesson's specific example of knowledge of hiring scores as a contamination source.",
+      "suggestedLesson": "5-6-evaluating-jobs",
+      "suggestedParagraph": "## The Gap Between Ideal and Real: Ultimate Versus Actual Criteria",
+      "lessonExcerpt": "Criterion contamination occurs when the measure is influenced by factors unrelated to actual job performance. Common sources of contamination include... Knowledge of hiring scores: When a supervisor knows how well someone scored on pre-employment tests and lets that knowledge color performance ratings",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 2
+    },
+    {
+      "stem": "An organization wants to reduce halo error in its annual performance evaluations. Based on research evidence, which combination of strategies would be MOST effective?",
+      "options": [
+        "Switching from absolute to relative rating scales and increasing the number of rating dimensions",
+        "Using behaviorally anchored rating scales (BARS) combined with frame-of-reference (FOR) training for raters",
+        "Providing raters with training focused specifically on identifying and avoiding halo bias",
+        "Replacing supervisor ratings with objective performance measures such as productivity counts"
+      ],
+      "answer": "Using behaviorally anchored rating scales (BARS) combined with frame-of-reference (FOR) training for raters",
+      "explanation": "The lesson identifies BARS and FOR training as the most effective combination for reducing rater biases including halo error. BARS 'reduce all types of biases by clarifying what each rating point means through specific behavioral descriptions,' and FOR training is described as 'the most powerful tool for improving rating accuracy.' Option A is partially correct (relative scales eliminate distribution errors) but doesn't specifically target halo. Option C is explicitly contradicted by the lesson: 'training focused solely on avoiding biases can actually reduce overall accuracy.' Option D replaces subjective ratings entirely rather than improving them, and objective measures have their own limitations and aren't available for many jobs.",
+      "kn": "KN34",
+      "kn_explanation": "Performance evaluation methods and reducing rating errors falls under instruments and methods for assessment of organizations and personnel",
+      "difficulty": "medium",
+      "quality_comment": "Strong question with well-differentiated distractors, including the research-supported finding that bias-focused training can backfire.",
+      "suggestedLesson": "5-6-evaluating-jobs",
+      "suggestedParagraph": "## Reducing Rater Biases: Practical Solutions",
+      "lessonExcerpt": "BARS reduce all types of biases by clarifying what each rating point means through specific behavioral descriptions... Frame-of-reference (FOR) training is the most effective way to improve rating accuracy... training focused solely on avoiding biases can actually reduce overall accuracy.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 6
+    },
+    {
+      "stem": "An I-O psychologist is asked to improve the accuracy of performance ratings at a large corporation where different supervisors appear to use inconsistent internal standards when evaluating employees. Research suggests the MOST effective approach would be to implement which type of rater training?",
+      "options": [
+        "Frame-of-reference training that establishes shared performance standards and provides practice with feedback",
+        "Bias awareness training that educates raters about halo, leniency, and central tendency errors",
+        "Behavioral observation training that teaches raters to record critical incidents before rating",
+        "Forced distribution training that requires raters to assign predetermined percentages to each rating category"
+      ],
+      "answer": "Frame-of-reference training that establishes shared performance standards and provides practice with feedback",
+      "explanation": "The lesson explicitly states that frame-of-reference (FOR) training is 'the most powerful tool for improving rating accuracy' and is superior to bias-focused training. FOR training works by: (1) teaching the multidimensional nature of performance, (2) establishing shared standards so all raters use the same reference frame, and (3) providing practice with feedback. Option B is specifically noted as counterproductive—'training focused solely on avoiding biases can actually reduce overall accuracy' because raters overcorrect. Option C describes a useful technique but is not identified as the most effective approach. Option D describes forced distribution, which is a rating scale format, not a training approach.",
+      "kn": "KN34",
+      "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
+      "difficulty": "medium",
+      "quality_comment": "Strong question directly supported by lesson content. Tests an important distinction between FOR training and bias awareness training that is frequently tested.",
+      "suggestedLesson": "5-6-evaluating-jobs",
+      "suggestedParagraph": "### Provide Effective Rater Training",
+      "lessonExcerpt": "The superior approach is frame-of-reference (FOR) training, which includes: Teaching the multidimensional nature of performance, Establishing shared standards, Practice with feedback... Research shows that training focused solely on avoiding biases can actually reduce overall accuracy.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 6
+    },
+    {
+      "stem": "During annual performance reviews, a supervisor rates a research assistant highly on statistical analysis, literature review skills, and interpersonal communication after being particularly impressed by the assistant's consistently excellent data management abilities. The supervisor's ratings MOST likely reflect:",
+      "options": [
+        "Leniency bias",
+        "Central tendency error",
+        "Halo effect",
+        "Contrast error"
+      ],
+      "answer": "Halo effect",
+      "explanation": "The halo effect (or halo error) occurs when a rater's impression of one performance dimension bleeds over into ratings of unrelated dimensions. In this case, the supervisor's strong impression of the assistant's data management inflated ratings on other dimensions (statistical analysis, literature review, interpersonal communication) that may not be directly related. Leniency bias would involve giving everyone high ratings regardless of specific impressions. Central tendency error involves rating everyone as average. Contrast error occurs when ratings are influenced by comparison with a previously evaluated employee rather than by absolute standards.",
+      "kn": "KN34",
+      "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
+      "difficulty": "medium",
+      "quality_comment": "Presents a realistic scenario where one strong attribute clearly drives ratings of unrelated dimensions, testing distinction from other rating errors",
+      "suggestedLesson": "5-6-evaluating-jobs",
+      "suggestedParagraph": "### Halo Error",
+      "lessonExcerpt": "The halo error (also called halo effect or halo bias) occurs when a rater's impression of one performance dimension bleeds over into ratings of unrelated dimensions.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 20
+    },
+    {
+      "stem": "A supervisor provides performance ratings for employees in her department. She recently learned that one of her subordinates graduated from a prestigious doctoral program. Although this information is unrelated to the employee's current job duties, the supervisor's ratings of this employee are consistently higher across all performance dimensions compared to a colleague with equivalent actual performance. This scenario best illustrates:",
+      "options": [
+        "Criterion deficiency",
+        "Criterion contamination",
+        "Halo effect",
+        "Leniency bias"
+      ],
+      "answer": "Criterion contamination",
+      "explanation": "Criterion contamination occurs when performance ratings are influenced by irrelevant factors that are unrelated to actual job performance. In this case, the supervisor's knowledge of the employee's prestigious educational background is polluting her ratings, making them reflect more than just job performance. This is distinct from criterion deficiency, which involves failing to measure important aspects of performance. While the scenario superficially resembles halo effect, halo effect specifically refers to one performance dimension rating bleeding into ratings on other unrelated performance dimensions—not external biographical information influencing all ratings. Leniency bias involves rating all employees too highly, not selectively inflating ratings for one employee based on extraneous information.",
+      "kn": "KN34",
+      "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
+      "difficulty": "hard",
+      "quality_comment": "Strong question requiring nuanced distinction between criterion contamination and halo effect, which are commonly confused concepts.",
+      "suggestedLesson": "5-6-evaluating-jobs",
+      "suggestedParagraph": "### The Gap Between Perfect and Practical Measurement",
+      "lessonExcerpt": "Criterion contamination means we're measuring things we shouldn't. This happens when ratings get polluted by irrelevant factors. If your supervisor's ratings are influenced by knowing you were hired through a prestigious fellowship program, or by your gender or ethnicity, or simply by whether they like you personally, that's contamination.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 2
+    },
+    {
+      "stem": "An organizational psychologist consults with a company whose performance appraisal system uses graphic rating scales. Supervisors tend to rate employees who excel in one area as excellent across all dimensions, even those unrelated to the area of strength. The psychologist recommends implementing a training program that helps raters understand that performance is multidimensional, provides examples of effective versus ineffective behaviors, and includes practice rating with feedback. This intervention is known as:",
+      "options": [
+        "Forced distribution training",
+        "Bias awareness training",
+        "Frame-of-reference (FOR) training",
+        "Critical incident technique training"
+      ],
+      "answer": "Frame-of-reference (FOR) training",
+      "explanation": "Frame-of-reference (FOR) training is the most effective rater training method for improving rating accuracy. It teaches raters that job performance is multidimensional, defines what the organization considers effective versus ineffective performance, and includes practice opportunities where raters evaluate performance examples and receive feedback. The problem described is halo effect—one strong performance dimension inflating ratings on unrelated dimensions. Simple bias awareness training (just teaching people about biases like halo effect) has actually been shown to decrease overall accuracy because raters become preoccupied with avoiding specific biases rather than making meaningful distinctions. Forced distribution is a rating method, not a training program. Critical incident technique is a method for collecting behavioral examples, not a training approach.",
+      "kn": "KN34",
+      "kn_explanation": "Graphic rating scales with central tendency/leniency bias concerns are about instruments and methods for organizational and personnel assessment and their limitations.",
+      "difficulty": "medium",
+      "quality_comment": "Well-constructed question that tests knowledge of FOR training as the preferred intervention for rating biases and distinguishes it from less effective bias awareness approaches.",
+      "suggestedLesson": "5-6-evaluating-jobs",
+      "suggestedParagraph": "## Fixing Rating Problems: Strategies That Actually Work",
+      "lessonExcerpt": "The better approach is frame-of-reference (FOR) training. This comprehensive training helps raters understand: Job performance is multidimensional... What the organization defines as effective versus ineffective performance... How to observe and categorize performance accurately... FOR training includes practice opportunities: raters watch performance examples, assign ratings, and receive feedback on their accuracy.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 6
+    },
+    {
+      "stem": "An industrial-organizational psychologist develops a performance evaluation for clinical psychologists that measures diagnostic accuracy and treatment effectiveness but fails to assess ethics, cultural competence, or consultation skills. This evaluation instrument best illustrates which measurement problem?",
+      "options": [
+        "Criterion contamination",
+        "Criterion deficiency",
+        "Halo error",
+        "Differential validity"
+      ],
+      "answer": "Criterion deficiency",
+      "explanation": "Criterion deficiency occurs when important aspects of job performance are missing from the measurement. The lesson specifically uses this exact example: 'A job knowledge test for clinical psychologists covering only diagnosis and treatment but ignoring ethics, consultation skills, and cultural competence is deficient—it leaves out crucial aspects of actual performance.' Criterion contamination (A) is the opposite problem—measuring irrelevant factors. Halo error (C) is a rater bias where one dimension influences ratings on unrelated dimensions. Differential validity (D) refers to a test having different validity coefficients for different groups.",
+      "kn": "KN34",
+      "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
+      "difficulty": "medium",
+      "quality_comment": "Uses the lesson's own example scenario, making it a strong content-grounded question testing the distinction between criterion deficiency and contamination.",
+      "suggestedLesson": "5-6-evaluating-jobs",
+      "suggestedParagraph": "### The Gap Between Perfect and Practical Measurement",
+      "lessonExcerpt": "**Criterion deficiency** means we're missing important stuff. A job knowledge test for clinical psychologists covering only diagnosis and treatment but ignoring ethics, consultation skills, and cultural competence is deficient—it leaves out crucial aspects of actual performance.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 22
+    },
+    {
       "stem": "Which of the following best describes a work-oriented job analysis?",
       "options": [
         "Focuses on the personal characteristics such as knowledge, skills, abilities, and other attributes needed to perform the job",
@@ -86,7 +233,7 @@
       "answer": "An employee’s gender biases the supervisor's rating, unrelated to actual performance",
       "explanation": "1. \"An employee’s gender biases the supervisor's rating, unrelated to actual performance\" is the correct answer because it illustrates criterion contamination, which occurs when a performance measure is influenced by factors unrelated to job performance. In this case, the supervisor's bias based on the employee's gender affects the rating, leading to an inaccurate assessment that does not reflect the employee's actual job performance.\n\n2. The option \"A supervisor fails to rate all employees on important dimensions of job performance\" is incorrect because it describes criterion deficiency, where essential aspects of performance are not evaluated, rather than contamination by irrelevant factors. \"A performance test covers only some but not all essential job tasks\" is also incorrect as it pertains to criterion deficiency, indicating that the measure is incomplete rather than contaminated by extraneous influences. Lastly, \"Ratings focus primarily on exceptional rather than typical behaviors\" is incorrect because it refers to a potential bias in the focus of the assessment, which does not involve contamination from unrelated factors affecting the ratings.",
       "kn": "KN34",
-      "kn_explanation": "This question assesses understanding of problems affecting criterion validity in performance measurement, relevant to organizational assessment methods (KN34).",
+      "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
       "difficulty": "medium",
       "quality_comment": "Distractors represent related but distinct issues, making this an effective item for assessing nuanced knowledge of criterion validity concepts."
     },

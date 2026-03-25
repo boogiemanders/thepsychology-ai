@@ -1,0 +1,64 @@
+{
+  "questions": [
+    {
+      "stem": "A client regains consciousness after a moderate traumatic brain injury and can describe events from childhood and even details from the morning of the accident. However, throughout the next several days, the client repeatedly asks where he is and cannot retain new information from one conversation to the next. This pattern is most consistent with:",
+      "options": [
+        "Retrograde amnesia",
+        "Anterograde amnesia",
+        "Aprosodia",
+        "Spatial neglect"
+      ],
+      "answer": "Anterograde amnesia",
+      "explanation": "Anterograde amnesia is the best answer because the client cannot form new memories after the injury despite retaining older memories. Retrograde amnesia is wrong because that refers to loss of memory for events before the injury. Aprosodia is wrong because it involves difficulty expressing or understanding emotional tone in speech. Spatial neglect is wrong because it involves inattention to one side of space rather than impaired memory formation.",
+      "kn": "KN1",
+      "kn_explanation": "This question tests functional correlates of neurobehavioral disease processes, specifically memory impairment following traumatic brain injury.",
+      "difficulty": "medium",
+      "quality_comment": "Strong neuropsychology discrimination item with realistic TBI presentation and clean distractors.",
+      "suggestedLesson": "1-neurological-endocrine-disorders",
+      "suggestedParagraph": "### What Happens After TBI",
+      "lessonExcerpt": "Anterograde amnesia (also called post-traumatic amnesia): Can't form new memories after the injury.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR"
+    },
+    {
+      "stem": "A patient is brought in for evaluation after several brief nighttime episodes in which he suddenly sits up, makes bicycling leg movements, and emits a loud scream. During one episode he is unable to speak, but he appears to understand what others say to him. This seizure pattern most strongly suggests onset in the:",
+      "options": [
+        "Temporal lobe",
+        "Frontal lobe",
+        "Parietal lobe",
+        "Occipital lobe"
+      ],
+      "answer": "Frontal lobe",
+      "explanation": "Frontal lobe onset is the best answer because frontal seizures are often brief, may occur during sleep, and can involve repetitive movements such as kicking or bicycle pedaling as well as explosive screams. Temporal lobe seizures are more associated with automatisms, autonomic symptoms, and aura experiences such as deja vu or unusual smells or tastes. Parietal lobe seizures more often produce sensory distortions. Occipital lobe seizures primarily produce visual symptoms.",
+      "kn": "KN1",
+      "kn_explanation": "This question assesses knowledge of neurobiological correlates of behavior by linking seizure symptoms to brain-region dysfunction.",
+      "difficulty": "hard",
+      "quality_comment": "Application-style seizure-localization item that avoids copied stock temporal-lobe wording.",
+      "suggestedLesson": "1-neurological-endocrine-disorders",
+      "suggestedParagraph": "### Focal Onset Seizures: Starting in One Location",
+      "lessonExcerpt": "Frontal lobe: Often during sleep, brief (under 30 seconds); repetitive movements like kicking or bicycle pedaling; abnormal postures; explosive screams or laughter; speech problems with intact understanding.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR"
+    },
+    {
+      "stem": "A 52-year-old client presents with depressed mood, lethargy, weight gain, cold intolerance, slowed heart rate, and difficulty concentrating. Before concluding that the client has a primary depressive disorder, which endocrine condition should be strongly considered?",
+      "options": [
+        "Hyperthyroidism",
+        "Cushing's disease",
+        "Hypothyroidism",
+        "Addison's disease"
+      ],
+      "answer": "Hypothyroidism",
+      "explanation": "Hypothyroidism is the best answer because it is associated with decreased metabolism, cold intolerance, weight gain, lethargy, depression, and impaired concentration and memory. Hyperthyroidism is wrong because it is more associated with heat intolerance, weight loss, insomnia, and emotional instability. Cushing's disease can involve mood symptoms, but the combination of cold intolerance and slowed physiology points away from it. Addison's disease can include depression and weakness but does not best fit this classic thyroid presentation.",
+      "kn": "KN1",
+      "kn_explanation": "This question focuses on biological determinants of mood and cognition by testing recognition of an endocrine disorder that mimics depression.",
+      "difficulty": "medium",
+      "quality_comment": "Good medical-rule-out item for psychiatry versus endocrine mimicry.",
+      "suggestedLesson": "1-neurological-endocrine-disorders",
+      "suggestedParagraph": "### Thyroid Disorders",
+      "lessonExcerpt": "Hypothyroidism (too little thyroid hormone): Decreased metabolism, lowered temperature, cold intolerance. Reduced appetite with weight gain. Slowed heart rate. Depression, lethargy, decreased libido. Confusion, impaired concentration and memory.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR"
+    }
+  ]
+}

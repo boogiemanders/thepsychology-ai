@@ -1,6 +1,465 @@
 {
   "questions": [
     {
+      "stem": "A school psychologist is evaluating a 10-year-old refugee child whose English is limited. The psychologist wants an instrument that was explicitly designed to minimize cultural content and verbal demands and that can be interpreted using either the CHC model or Luria's model. Which test best fits that goal?",
+      "options": [
+        "Peabody Picture Vocabulary Test-Fifth Edition (PPVT-5)",
+        "Kaufman Assessment Battery for Children, Second Edition (KABC-II)",
+        "Wonderlic Cognitive Ability Test",
+        "Fagan Test of Infant Intelligence (FTII)"
+      ],
+      "answer": "Kaufman Assessment Battery for Children, Second Edition (KABC-II)",
+      "explanation": "The KABC-II is the best answer because it was designed with cultural fairness in mind, minimizes cultural content and verbal requirements, and can be interpreted using either CHC or Luria models. The PPVT-5 is wrong because it measures receptive vocabulary rather than broad cognitive processing. The Wonderlic is wrong because it is a brief group test typically used in employment settings. The FTII is wrong because it is designed for infants, not school-age children.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
+      "difficulty": "hard",
+      "quality_comment": "Strong test-selection item anchored to specific design features rather than name recognition alone.",
+      "suggestedLesson": "5-cognitive-tests",
+      "suggestedParagraph": "### Tests for When Words Get in the Way",
+      "lessonExcerpt": "The KABC-II was designed with cultural fairness in mind. It's for ages 3 to 18 years and minimizes cultural content and verbal requirements. You can interpret results using two different models: The Cattell-Horn-Carroll (CHC) model of cognitive abilities. Luria's neuropsychological processing model.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT"
+    },
+    {
+      "stem": "An adult client is recovering from a stroke and has severe expressive speech difficulties but can point accurately to visual stimuli. The psychologist wants to measure the client's receptive vocabulary with minimal verbal output demands. Which instrument is most appropriate?",
+      "options": [
+        "PPVT-5",
+        "Leiter-3",
+        "CogAT7",
+        "CMMS"
+      ],
+      "answer": "PPVT-5",
+      "explanation": "The PPVT-5 is the best answer because it measures receptive vocabulary by having the client point to one of four pictures after hearing a word, which minimizes expressive language demands. Leiter-3 is wrong because it is a broader nonverbal cognitive measure rather than a vocabulary test. CogAT7 is wrong because it is a group test used primarily for educational planning. CMMS is wrong because it measures general reasoning ability in children rather than receptive vocabulary in adults.",
+      "kn": "KN32",
+      "kn_explanation": "This question assesses knowledge of commonly used instruments and their appropriate use with specific populations.",
+      "difficulty": "medium",
+      "quality_comment": "Good applied assessment-selection item with a clinically realistic aphasia-style vignette.",
+      "suggestedLesson": "5-cognitive-tests",
+      "suggestedParagraph": "### Tests for When Words Get in the Way",
+      "lessonExcerpt": "The PPVT-5 measures receptive vocabulary. You show someone four pictures and say a word. They point to the picture that matches the word. That's it. No speaking required.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT"
+    },
+    {
+      "stem": "Which of the following best describes how computerized adaptive testing (CAT) typically proceeds?",
+      "options": [
+        "All examinees receive the same fixed sequence of items so their scores are directly comparable",
+        "The test begins with a moderately difficult item and then presents harder or easier items depending on the examinee's previous responses",
+        "The test presents only the most difficult items first in order to estimate ceiling performance efficiently",
+        "The test alternates between verbal and nonverbal items regardless of the examinee's performance level"
+      ],
+      "answer": "The test begins with a moderately difficult item and then presents harder or easier items depending on the examinee's previous responses",
+      "explanation": "This is the best answer because CAT adapts item difficulty based on the examinee's responses, usually starting around a moderate difficulty level. The fixed-sequence option is wrong because that describes traditional testing, not adaptive testing. Presenting only the hardest items first is wrong because CAT aims to match item difficulty to the examinee's estimated ability rather than overwhelm everyone initially. Alternating content types regardless of performance is wrong because CAT's defining logic is adaptation based on prior responses.",
+      "kn": "KN41",
+      "kn_explanation": "This question tests the use of technology in implementing tests and other forms of assessment.",
+      "difficulty": "easy",
+      "quality_comment": "Foundational CAT mechanism item that fits the AATBS-style direct-concept format.",
+      "suggestedLesson": "5-cognitive-tests",
+      "suggestedParagraph": "## The Future of Testing: Computerized Adaptive Testing (CAT)",
+      "lessonExcerpt": "You start with a moderately difficult question. If you answer correctly next question is harder. If you answer incorrectly next question is easier.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT"
+    },
+    {
+      "stem": "A psychologist selects Raven's Standard Progressive Matrices (SPM) to assess a 10-year-old child with autism spectrum disorder who has limited verbal abilities. This choice is most appropriate because Raven's SPM:",
+      "options": [
+        "Provides separate scores for crystallized and fluid intelligence, allowing comparison across domains",
+        "Is a nonverbal measure of abstract reasoning and fluid intelligence that is less likely than Wechsler tests to underestimate intelligence in individuals with ASD",
+        "Was specifically normed on populations with autism spectrum disorder and intellectual disabilities",
+        "Measures Spearman's g factor by assessing both verbal comprehension and perceptual reasoning equally"
+      ],
+      "answer": "Is a nonverbal measure of abstract reasoning and fluid intelligence that is less likely than Wechsler tests to underestimate intelligence in individuals with ASD",
+      "explanation": "Raven's SPM measures abstract reasoning and fluid intelligence through nonverbal pattern completion tasks, making it relatively free from cultural and educational influences. Critically, research shows it is less likely than Wechsler tests to underestimate intelligence in people with ASD. Option A is wrong because Raven's only measures fluid intelligence/abstract reasoning, not crystallized intelligence. Option C is wrong because Raven's was not specifically normed on ASD populations — it simply performs better with this population. Option D is wrong because Raven's does not assess verbal comprehension at all; while it is considered a good measure of Spearman's g, it achieves this through nonverbal means only.",
+      "kn": "KN35",
+      "kn_explanation": "Selecting an appropriate assessment instrument based on the client's characteristics (ASD, limited verbal ability) involves criteria for selection and adaptation of assessment methods, including cultural appropriateness and accommodations for specific populations.",
+      "difficulty": "medium",
+      "quality_comment": "Integrates test selection rationale with knowledge of Spearman's g and ASD assessment considerations.",
+      "suggestedLesson": "5-cognitive-tests",
+      "suggestedParagraph": "## Individual Tests: Matching the Right Tool to the Right Person",
+      "lessonExcerpt": "research has shown Raven's SPM is less likely than Wechsler tests to underestimate intelligence in people with autism spectrum disorder.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 19
+    },
+    {
+      "stem": "A developmental psychologist administers the Bayley-4 to a 24-month-old toddler who obtains above-average scores across all domains. When the parents ask whether this means their child will have a high IQ in school, the psychologist's MOST accurate response would be:",
+      "options": [
+        "Infant developmental tests are better for identifying delays than for predicting later IQ scores in typically developing children",
+        "Bayley-4 scores at 24 months are highly predictive of IQ at school age with a correlation above .80",
+        "The Bayley-4 directly measures the same cognitive abilities as school-age intelligence tests",
+        "Above-average scores at 24 months guarantee placement in gifted programs upon school entry"
+      ],
+      "answer": "Infant developmental tests are better for identifying delays than for predicting later IQ scores in typically developing children",
+      "explanation": "The lesson explicitly addresses this as a common misconception: 'Infant tests predict adult IQ perfectly—They don't. While tests like the FTII show predictive validity, infant assessment is better for identifying developmental delays than predicting exact future IQ scores.' The Bayley-4 measures cognitive, motor, language, social-emotional, and adaptive behavior domains—these overlap only partially with what school-age IQ tests measure. Option B overstates the predictive correlation. Option C is incorrect because infant tests measure developmental milestones, not the same abilities as later IQ tests. Option D makes an unsupported guarantee about gifted placement.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
+      "difficulty": "medium",
+      "quality_comment": "Clinically relevant question that addresses a common misconception explicitly identified in the lesson content.",
+      "suggestedLesson": "5-cognitive-tests",
+      "suggestedParagraph": "## The Youngest Clients: Infant and Toddler Assessment",
+      "lessonExcerpt": "Infant tests predict adult IQ perfectly—They don't. While tests like the FTII show predictive validity, infant assessment is better for identifying developmental delays than predicting exact future IQ scores.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 9
+    },
+    {
+      "stem": "In criterion-based scoring, which of the following is a primary focus?",
+      "options": [
+        "Comparing scores to a normative sample",
+        "Assessing the reliability of the test",
+        "Evaluating the validity of the test",
+        "Determining the relationship between test items and specific criteria"
+      ],
+      "answer": "Determining the relationship between test items and specific criteria",
+      "explanation": "Criterion-based scoring focuses on how well test items relate to specific criteria or outcomes rather than comparing scores to a normative sample. The other options pertain to different aspects of test evaluation.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
+      "difficulty": "hard",
+      "quality_comment": "The question is well-structured and tests understanding of psychometric principles.",
+      "suggestedLesson": "5-cognitive-tests",
+      "suggestedParagraph": "## Individual Tests: Matching the Right Tool to the Right Person",
+      "lessonExcerpt": "Criterion-based scoring focuses on determining the relationship between test items and specific criteria.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 2
+    },
+    {
+      "stem": "Which principle of item response theory emphasizes the relationship between item characteristics and respondent abilities?",
+      "options": [
+        "Item difficulty",
+        "Item discrimination",
+        "Guessing parameter",
+        "Test reliability"
+      ],
+      "answer": "Item discrimination",
+      "explanation": "The correct answer is 'Item discrimination' as it refers to how well an item differentiates between respondents of varying abilities. The other options do not capture this specific relationship as accurately.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
+      "difficulty": "hard",
+      "quality_comment": "The question is precise and tests knowledge of item response theory principles effectively.",
+      "suggestedLesson": "5-cognitive-tests",
+      "suggestedParagraph": "## Understanding Intelligence: The Theoretical Foundation",
+      "lessonExcerpt": "The lesson does not specifically cover item response theory principles, indicating a need for review.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 18
+    },
+    {
+      "stem": "What does test-retest reliability measure in psychological testing?",
+      "options": [
+        "The consistency of a test's results over time",
+        "The accuracy of a test in predicting outcomes",
+        "The degree to which a test measures what it claims to measure",
+        "The agreement between different raters scoring the same test"
+      ],
+      "answer": "The consistency of a test's results over time",
+      "explanation": "Test-retest reliability specifically assesses how consistent a test's results are when administered at different times. The other options refer to different types of reliability or validity.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests knowledge of reliability types in psychological testing.",
+      "suggestedLesson": "5-cognitive-tests",
+      "suggestedParagraph": "## Tests Based on Brain Processing Models",
+      "lessonExcerpt": "This test is particularly useful when you suspect a child has specific processing difficulties rather than general intellectual problems.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 3
+    },
+    {
+      "stem": "What is the primary purpose of the Kuder-Richardson formula in psychological testing?",
+      "options": [
+        "A. To assess the validity of a test",
+        "B. To estimate the reliability of a test with dichotomous choices",
+        "C. To determine the standard error of measurement",
+        "D. To analyze the variance in test scores"
+      ],
+      "answer": "B. To estimate the reliability of a test with dichotomous choices",
+      "explanation": "Option B is correct because the Kuder-Richardson formula is specifically designed to estimate the reliability of tests that have dichotomous (yes/no) responses. Option A refers to validity, C pertains to standard error, and D relates to variance analysis.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and tests knowledge of reliability estimation.",
+      "suggestedLesson": "5-cognitive-tests",
+      "suggestedParagraph": "## Individual Tests: Matching the Right Tool to the Right Person",
+      "lessonExcerpt": "The Kuder-Richardson formula is used to estimate the reliability of tests with dichotomous choices.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 3
+    },
+    {
+      "stem": "In the WISC-IV, which cognitive ability is primarily assessed by the Perceptual Reasoning Index?",
+      "options": [
+        "A. Verbal comprehension",
+        "B. Visual-spatial skills",
+        "C. Working memory",
+        "D. Processing speed"
+      ],
+      "answer": "B. Visual-spatial skills",
+      "explanation": "Option B is correct because the Perceptual Reasoning Index of the WISC-IV specifically measures visual-spatial skills and non-verbal reasoning. Options A, C, and D pertain to other cognitive abilities assessed by different indices.",
+      "kn": "KN32",
+      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses knowledge of the WISC-IV structure.",
+      "suggestedLesson": "5-cognitive-tests",
+      "suggestedParagraph": "## Individual Tests: Matching the Right Tool to the Right Person",
+      "lessonExcerpt": "The Perceptual Reasoning Index assesses visual-spatial skills and non-verbal reasoning.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 4
+    },
+    {
+      "stem": "How does the standard error of estimate relate to the validity of a psychological test?",
+      "options": [
+        "A. A higher standard error indicates greater validity.",
+        "B. A lower standard error suggests less reliability.",
+        "C. A lower standard error enhances the test's predictive validity.",
+        "D. The standard error is unrelated to validity."
+      ],
+      "answer": "C. A lower standard error enhances the test's predictive validity.",
+      "explanation": "Option C is correct because a lower standard error of estimate indicates that the predictions made by the test are more accurate, thus enhancing its predictive validity. Options A and B are incorrect as they misinterpret the relationship, and D is false as the standard error is indeed related to validity.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests understanding of validity and standard error.",
+      "suggestedLesson": "5-cognitive-tests",
+      "suggestedParagraph": "## Individual Tests: Matching the Right Tool to the Right Person",
+      "lessonExcerpt": "A lower standard error of estimate enhances the predictive validity of a test.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 5
+    },
+    {
+      "stem": "What does the Kappa coefficient measure in psychological assessments?",
+      "options": [
+        "A. The internal consistency of a test",
+        "B. The agreement between two raters",
+        "C. The validity of a test",
+        "D. The reliability of test scores over time"
+      ],
+      "answer": "B. The agreement between two raters",
+      "explanation": "Option B is correct because the Kappa coefficient specifically measures the level of agreement between two raters or observers. Options A, C, and D refer to different aspects of test evaluation.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
+      "difficulty": "medium",
+      "quality_comment": "The question clearly assesses knowledge of interrater reliability.",
+      "suggestedLesson": "5-cognitive-tests",
+      "suggestedParagraph": "## Individual Tests: Matching the Right Tool to the Right Person",
+      "lessonExcerpt": "The Kappa coefficient measures the agreement between two raters.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 6
+    },
+    {
+      "stem": "What is a key characteristic of the forced distribution method in employee performance evaluations?",
+      "options": [
+        "A. It allows for unlimited ratings across all employees.",
+        "B. It requires employees to be ranked within a predetermined distribution curve.",
+        "C. It focuses solely on qualitative feedback.",
+        "D. It eliminates bias in performance ratings."
+      ],
+      "answer": "B. It requires employees to be ranked within a predetermined distribution curve.",
+      "explanation": "Option B is correct because the forced distribution method mandates that employees be ranked according to a specific distribution, often leading to a set percentage of employees being categorized into performance tiers. Options A, C, and D are incorrect as they misrepresent the forced distribution method.",
+      "kn": "KN32",
+      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of forced distribution in evaluations.",
+      "suggestedLesson": "5-cognitive-tests",
+      "suggestedParagraph": "## Individual Tests: Matching the Right Tool to the Right Person",
+      "lessonExcerpt": "The forced distribution method requires employees to be ranked within a predetermined distribution curve.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 8
+    },
+    {
+      "stem": "When adjusting predictor cutoffs in hiring processes, what is a primary consideration?",
+      "options": [
+        "A. The cost of the testing materials",
+        "B. The potential impact on diversity in hiring",
+        "C. The length of the assessment process",
+        "D. The popularity of the assessment tool"
+      ],
+      "answer": "B. The potential impact on diversity in hiring",
+      "explanation": "Option B is correct because adjusting predictor cutoffs can significantly affect the diversity of candidates selected for hiring. Options A, C, and D are less relevant to the ethical and practical implications of cutoff adjustments.",
+      "kn": "KN32",
+      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of hiring practices and diversity considerations.",
+      "suggestedLesson": "5-cognitive-tests",
+      "suggestedParagraph": "## Individual Tests: Matching the Right Tool to the Right Person",
+      "lessonExcerpt": "Adjusting predictor cutoffs in hiring processes requires consideration of the potential impact on diversity.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 10
+    },
+    {
+      "stem": "What does the standard error of measurement (SEM) indicate in the context of psychological testing?",
+      "options": [
+        "It reflects the degree to which a test score can vary due to measurement error.",
+        "It measures the reliability of a test based on the number of items it contains.",
+        "It indicates the validity of a test by comparing it to other established measures.",
+        "It determines the average score of a population on a specific test."
+      ],
+      "answer": "It reflects the degree to which a test score can vary due to measurement error.",
+      "explanation": "The SEM quantifies the amount of error associated with a test score, providing insight into the precision of the measurement. The other options misinterpret the purpose of SEM or confuse it with other testing concepts.",
+      "kn": "KN32",
+      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
+      "difficulty": "medium",
+      "quality_comment": "The question accurately tests knowledge of SEM in psychological assessment.",
+      "suggestedLesson": "5-cognitive-tests",
+      "suggestedParagraph": "## Individual Tests: Matching the Right Tool to the Right Person",
+      "lessonExcerpt": "The standard error of measurement (SEM) indicates the degree to which a test score can vary due to measurement error.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 2
+    },
+    {
+      "stem": "How might chronic otitis media affect cognitive testing results in children?",
+      "options": [
+        "It can lead to significant impairments in visual-motor integration skills.",
+        "It has no impact on cognitive testing as it primarily affects hearing.",
+        "It may result in lower scores due to temporary hearing loss affecting language processing.",
+        "It typically enhances cognitive abilities by improving attention span."
+      ],
+      "answer": "It may result in lower scores due to temporary hearing loss affecting language processing.",
+      "explanation": "Chronic otitis media can cause hearing loss, which may hinder a child's ability to process language during cognitive assessments, leading to lower scores. The other options either exaggerate the effects or incorrectly state that there is no impact.",
+      "kn": "KN41",
+      "kn_explanation": "This question is best aligned with KN41 because it tests Use of technology in implementing tests, surveys, and other forms of assessment and diagnostic evaluation (e.g., validity, cost-effectiveness, consumer acceptability).",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of the impact of chronic otitis media on cognitive testing.",
+      "suggestedLesson": "5-cognitive-tests",
+      "suggestedParagraph": "## Tests Based on Brain Processing Models",
+      "lessonExcerpt": "Chronic otitis media may result in lower scores due to temporary hearing loss affecting language processing.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 3
+    },
+    {
+      "stem": "What is the primary purpose of the Stroop Color Interference Test in cognitive assessment?",
+      "options": [
+        "To measure verbal intelligence and vocabulary.",
+        "To assess cognitive flexibility and processing speed.",
+        "To evaluate memory retention over time.",
+        "To determine the level of emotional distress in individuals."
+      ],
+      "answer": "To assess cognitive flexibility and processing speed.",
+      "explanation": "The Stroop Test evaluates how well individuals can manage conflicting information, which reflects cognitive flexibility and processing speed. The other options do not accurately describe the primary purpose of the test.",
+      "kn": "KN32",
+      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of the Stroop Test's purpose.",
+      "suggestedLesson": "5-cognitive-tests",
+      "suggestedParagraph": "## Executive Function Tests",
+      "lessonExcerpt": "The primary purpose of the Stroop Color Interference Test is to assess cognitive flexibility and processing speed.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 5
+    },
+    {
+      "stem": "What is the primary goal of administering the Mini-Mental State Examination (MMSE)?",
+      "options": [
+        "To assess personality traits and emotional functioning.",
+        "To evaluate cognitive impairment and screen for dementia.",
+        "To measure intelligence quotient (IQ) levels.",
+        "To determine the effectiveness of psychotherapy."
+      ],
+      "answer": "To evaluate cognitive impairment and screen for dementia.",
+      "explanation": "The MMSE is specifically designed to assess cognitive functioning and identify potential dementia. The other options do not accurately reflect the purpose of the MMSE.",
+      "kn": "KN41",
+      "kn_explanation": "This question is best aligned with KN41 because it tests Use of technology in implementing tests, surveys, and other forms of assessment and diagnostic evaluation (e.g., validity, cost-effectiveness, consumer acceptability).",
+      "difficulty": "medium",
+      "quality_comment": "The question accurately tests knowledge of the MMSE's purpose.",
+      "suggestedLesson": "5-cognitive-tests",
+      "suggestedParagraph": "## Cognitive Assessment Tools",
+      "lessonExcerpt": "The primary goal of the MMSE is to evaluate cognitive impairment and screen for dementia.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 8
+    },
+    {
+      "stem": "What is the primary challenge in equating scores from non-parallel measures in psychological assessment?",
+      "options": [
+        "Ensuring that both measures assess the same construct.",
+        "Determining the reliability of each measure independently.",
+        "Adjusting for differences in test administration conditions.",
+        "Calculating the mean scores of both measures."
+      ],
+      "answer": "Ensuring that both measures assess the same construct.",
+      "explanation": "The primary challenge in equating scores from non-parallel measures is confirming that they are measuring the same underlying construct, which is essential for valid comparisons. The other options address different aspects of measurement but do not capture the core issue.",
+      "kn": "KN32",
+      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of the complexities involved in score equating.",
+      "suggestedLesson": "5-cognitive-tests",
+      "suggestedParagraph": "## Individual Tests: Matching the Right Tool to the Right Person",
+      "lessonExcerpt": "The primary challenge in equating scores from non-parallel measures is ensuring that both measures assess the same construct.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 10
+    },
+    {
+      "stem": "Raven's Progressive Matrices is frequently cited in factor-analytic research as one of the strongest available indicators of Spearman's g (general intelligence). Based on the test's core characteristics, which of the following BEST explains why it serves as such a high-loading measure of g?",
+      "options": [
+        "It assesses crystallized intelligence by sampling a wide range of culturally acquired verbal knowledge and reasoning skills",
+        "It measures abstract reasoning and fluid intelligence with minimal dependence on cultural knowledge or formal education, closely approximating pure cognitive processing capacity",
+        "It uses empirical criterion keying to select items that reliably distinguish individuals across a range of occupational performance levels",
+        "It provides separate composite scores for verbal and nonverbal domains, allowing g to be computed as the shared variance between the two composites"
+      ],
+      "answer": "It measures abstract reasoning and fluid intelligence with minimal dependence on cultural knowledge or formal education, closely approximating pure cognitive processing capacity",
+      "explanation": "Raven's Progressive Matrices requires examinees to identify which option completes an incomplete geometric pattern—a task demanding abstract reasoning and fluid intelligence (Gf) rather than accumulated knowledge. Because the test minimizes the role of language, cultural content, and formal educational background, it is considered relatively culture-fair and is thought to tap the core cognitive processing capacity that Spearman conceptualized as g. Factor-analytic studies consistently show Raven's has among the highest g-loadings of any widely used cognitive instrument. Option A is incorrect because Raven's explicitly avoids crystallized content. Option C (empirical criterion keying) describes the construction of the MMPI clinical scales and the Strong Interest Inventory's Occupational Scales, not Raven's. Option D is incorrect because Raven's does not yield separate verbal and nonverbal composites.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
+      "difficulty": "hard",
+      "quality_comment": "Strong conceptual question linking Raven's design features to the construct of g; the distractor referencing empirical criterion keying is an effective high-level foil for well-prepared candidates.",
+      "suggestedLesson": "5-cognitive-tests",
+      "suggestedParagraph": "## Raven's Standard Progressive Matrices (SPM)",
+      "lessonExcerpt": "Raven's SPM is elegant in its simplicity. It shows you 60 incomplete patterns (matrices), and you choose which piece completes each pattern. That's the whole test. But don't let the simplicity fool you – it's measuring abstract reasoning and fluid intelligence, relatively free from cultural and educational influences.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 19
+    },
+    {
+      "stem": "A genetic counselor consults a psychologist regarding a family in which three male members across two generations have been diagnosed with an X-linked recessive neurodevelopmental condition, while female relatives who carry the pathogenic allele are largely unaffected. The psychologist is asked to explain the fundamental mechanism by which X-linked recessive disorders produce higher prevalence and greater severity in males than in females. Which of the following explanations is most accurate?",
+      "options": [
+        "Males produce higher levels of androgens that increase transcription of recessive alleles on the X chromosome",
+        "Females possess two X chromosomes; a dominant normal allele on one X can compensate for the recessive pathogenic allele on the other, whereas males have only one X chromosome and no compensatory allele",
+        "Random X-inactivation in females preferentially silences the X chromosome carrying the pathogenic allele, providing complete protection from expression",
+        "Males inherit X-linked mutations exclusively from their fathers, who transmit a more severe form of the pathogenic allele than maternal transmissions"
+      ],
+      "answer": "Females possess two X chromosomes; a dominant normal allele on one X can compensate for the recessive pathogenic allele on the other, whereas males have only one X chromosome and no compensatory allele",
+      "explanation": "Males are hemizygous for the X chromosome (XY genotype): they possess only one copy of each X-linked gene. When a male inherits a recessive pathogenic allele on his single X chromosome, there is no second X chromosome providing a normal dominant allele to mask or compensate for the mutation, and the condition is expressed. Females (XX genotype) carrying a single copy of the pathogenic allele on one X chromosome typically have a normal dominant allele on the other X chromosome that masks expression, resulting in unaffected carrier status. This hemizygosity principle explains why X-linked recessive conditions (e.g., hemophilia, Duchenne muscular dystrophy, color blindness) are far more prevalent in males. Option A is incorrect; testosterone does not upregulate transcription of recessive alleles. Option C is partially related but overstates the protection provided by X-inactivation (Lyon hypothesis)—X-inactivation is random and can lead to variable expressivity in carrier females, not complete protection. Option D is incorrect; males inherit their X chromosome from their mothers, not fathers (fathers contribute the Y chromosome).",
+      "kn": "KN34",
+      "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
+      "difficulty": "medium",
+      "quality_comment": "Tests a fundamental genetics principle with clinical relevance. Option C is an excellent distractor that reflects partial knowledge of X-inactivation. Option D tests whether examinees know the directionality of X chromosome inheritance.",
+      "suggestedLesson": "5-cognitive-tests",
+      "suggestedParagraph": "## Biological and Genetic Factors in Cognitive Assessment",
+      "lessonExcerpt": "NOT COVERED: The provided lesson files do not address X-linked inheritance or genetic mechanisms. While 5-cognitive-tests.md references fragile X syndrome briefly, it does not explain X-linked inheritance patterns or sex differences in prevalence. A genetics and biological bases lesson is needed for this content.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 27
+    },
+    {
+      "stem": "Which of the following assessments is primarily designed to evaluate non-verbal intelligence?",
+      "options": [
+        "Wechsler Adult Intelligence Scale",
+        "Stanford-Binet Intelligence Scale",
+        "Leiter International Performance Scale",
+        "Minnesota Multiphasic Personality Inventory"
+      ],
+      "answer": "Leiter International Performance Scale",
+      "explanation": "The Leiter International Performance Scale is specifically designed to assess non-verbal intelligence, making it suitable for individuals with communication difficulties. The other assessments, such as the Wechsler and Stanford-Binet, include verbal components.",
+      "kn": "KN32",
+      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
+      "difficulty": "hard",
+      "quality_comment": "The question is clear and directly assesses knowledge of non-verbal intelligence assessments.",
+      "suggestedLesson": "5-cognitive-tests",
+      "suggestedParagraph": "## Individual Tests: Matching the Right Tool to the Right Person",
+      "lessonExcerpt": "The Leiter-3 is the Swiss Army knife of nonverbal cognitive assessment.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 13
+    },
+    {
       "stem": "Which cognitive assessment is based on the PASS theory, measuring planning, attention, simultaneous, and successive processing in children aged 5 to 18 years?",
       "options": [
         "Cognitive Assessment System, Second Edition (CAS2)",
@@ -10,8 +469,8 @@
       ],
       "answer": "Cognitive Assessment System, Second Edition (CAS2)",
       "explanation": "1. The **Cognitive Assessment System, Second Edition (CAS2)** is the correct answer because it is explicitly described as a measure of cognitive processing abilities for individuals aged 5 to 18 years, based on the PASS cognitive/neurological theory. This theory identifies four cognitive functions: planning, attention, simultaneous processing, and successive processing, which are directly assessed by the CAS2.\n\n2. \n- The **Kaufman Assessment Battery for Children, Second Edition (KABC-II)** is incorrect because, while it assesses cognitive abilities in children aged 3 to 18 years, it is designed to be culturally fair and does not specifically utilize the PASS theory framework.\n- The **Leiter International Performance Scale-Third Edition (Leiter-3)** is also incorrect as it is a nonverbal measure of cognitive abilities for individuals aged 3 to 75+ years, focusing on fluid intelligence without reference to the PASS theory.\n- The **Columbia Mental Maturity Scale-Third Edition (CMMS)** is incorrect because it measures general reasoning ability specifically for children aged 3:6 through 9:11 and does not incorporate the four cognitive functions outlined in the PASS theory.",
-      "kn": "KN6",
-      "kn_explanation": "This question covers theory-based cognitive assessment development and models of intelligence, aligning with major research-based theories and models of intelligence (KN6).",
+      "kn": "KN32",
+      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
       "difficulty": "medium",
       "quality_comment": "The question focuses on distinguishing a specific test based on theoretical underpinnings, with well-balanced answer choices covering similar age ranges and functions."
     },
@@ -21,10 +480,10 @@
         "Peabody Picture Vocabulary Test-Fifth Edition (PPVT-5)",
         "Kaufman Assessment Battery for Children, Second Edition (KABC-II)",
         "Wonderlic Cognitive Ability Test",
-        "Raven\u2019s Standard Progressive Matrices (SPM)"
+        "Raven’s Standard Progressive Matrices (SPM)"
       ],
       "answer": "Peabody Picture Vocabulary Test-Fifth Edition (PPVT-5)",
-      "explanation": "1. The **Peabody Picture Vocabulary Test-Fifth Edition (PPVT-5)** is the correct answer because it specifically assesses receptive vocabulary without requiring reading or writing skills, making it ideal for individuals with speech or motor impairments. The test utilizes stimulus cards with pictures, allowing the examinee to indicate which image best represents the meaning of a spoken word, thus accommodating those who may struggle with verbal responses.\n\n2. The **Kaufman Assessment Battery for Children, Second Edition (KABC-II)** is incorrect because it is a broader measure of cognitive ability that includes various scales, but it does not specifically focus on receptive vocabulary or accommodate individuals with speech or motor impairments as effectively as the PPVT-5. The **Wonderlic Cognitive Ability Test** is also incorrect; while it assesses general intelligence, it primarily consists of verbal, numerical, and spatial items that require reading and comprehension skills, making it unsuitable for those with speech or motor difficulties. Lastly, the **Raven\u2019s Standard Progressive Matrices (SPM)** is incorrect because it measures abstract reasoning and fluid intelligence through nonverbal tasks, but it does not focus on vocabulary assessment or cater specifically to individuals with speech or motor impairments.",
+      "explanation": "1. The **Peabody Picture Vocabulary Test-Fifth Edition (PPVT-5)** is the correct answer because it specifically assesses receptive vocabulary without requiring reading or writing skills, making it ideal for individuals with speech or motor impairments. The test utilizes stimulus cards with pictures, allowing the examinee to indicate which image best represents the meaning of a spoken word, thus accommodating those who may struggle with verbal responses.\n\n2. The **Kaufman Assessment Battery for Children, Second Edition (KABC-II)** is incorrect because it is a broader measure of cognitive ability that includes various scales, but it does not specifically focus on receptive vocabulary or accommodate individuals with speech or motor impairments as effectively as the PPVT-5. The **Wonderlic Cognitive Ability Test** is also incorrect; while it assesses general intelligence, it primarily consists of verbal, numerical, and spatial items that require reading and comprehension skills, making it unsuitable for those with speech or motor difficulties. Lastly, the **Raven’s Standard Progressive Matrices (SPM)** is incorrect because it measures abstract reasoning and fluid intelligence through nonverbal tasks, but it does not focus on vocabulary assessment or cater specifically to individuals with speech or motor impairments.",
       "kn": "KN32",
       "kn_explanation": "This question tests knowledge of specific assessment instruments and their appropriate application (KN32).",
       "difficulty": "easy",
@@ -39,9 +498,9 @@
         "Columbia Mental Maturity Scale-Third Edition (CMMS)"
       ],
       "answer": "Kaufman Assessment Battery for Children, Second Edition (KABC-II)",
-      "explanation": "1. The **Kaufman Assessment Battery for Children, Second Edition (KABC-II)** is the correct answer because it was specifically designed to be a culturally fair test by minimizing cultural content and verbal instructions, thereby reducing cultural bias. Additionally, it allows for interpretation using both the Cattell-Horn-Carroll (CHC) model of cognitive abilities and Luria\u2019s neuropsychological processing model, making it versatile for diverse populations.\n\n2. The **Leiter International Performance Scale-Third Edition (Leiter-3)** is incorrect because, while it is a nonverbal test designed for individuals with cognitive delays and other impairments, it does not explicitly mention the use of both CHC and Luria's models for interpretation. The **Cognitive Assessment System, Second Edition (CAS2)** is also incorrect as it focuses on cognitive processing abilities based on the PASS theory rather than minimizing cultural content or verbal instructions. Lastly, the **Columbia Mental Maturity Scale-Third Edition (CMMS)** is not the correct answer because it primarily assesses general reasoning ability without the comprehensive cultural fairness and interpretative frameworks offered by the KABC-II.",
-      "kn": "KN35",
-      "kn_explanation": "This question relates to test selection and adaptation for cultural appropriateness and minimizing bias (KN35).",
+      "explanation": "1. The **Kaufman Assessment Battery for Children, Second Edition (KABC-II)** is the correct answer because it was specifically designed to be a culturally fair test by minimizing cultural content and verbal instructions, thereby reducing cultural bias. Additionally, it allows for interpretation using both the Cattell-Horn-Carroll (CHC) model of cognitive abilities and Luria’s neuropsychological processing model, making it versatile for diverse populations.\n\n2. The **Leiter International Performance Scale-Third Edition (Leiter-3)** is incorrect because, while it is a nonverbal test designed for individuals with cognitive delays and other impairments, it does not explicitly mention the use of both CHC and Luria's models for interpretation. The **Cognitive Assessment System, Second Edition (CAS2)** is also incorrect as it focuses on cognitive processing abilities based on the PASS theory rather than minimizing cultural content or verbal instructions. Lastly, the **Columbia Mental Maturity Scale-Third Edition (CMMS)** is not the correct answer because it primarily assesses general reasoning ability without the comprehensive cultural fairness and interpretative frameworks offered by the KABC-II.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
       "difficulty": "medium",
       "quality_comment": "High-quality question targeting knowledge of test characteristics and cultural fairness, with well-chosen distractors."
     },
@@ -61,7 +520,7 @@
       "quality_comment": "The distractors test knowledge of other assessments, with plausible but incorrect matches, making the question effective."
     },
     {
-      "stem": "Raven\u2019s Standard Progressive Matrices (SPM) is best described as:",
+      "stem": "Raven’s Standard Progressive Matrices (SPM) is best described as:",
       "options": [
         "A nonverbal measure of abstract reasoning estimating fluid intelligence and minimizing educational and cultural influences",
         "A receptive vocabulary test using picture stimuli and verbal prompts to assess verbal comprehension",
@@ -69,9 +528,9 @@
         "A test measuring motor, cognitive, and language development in infants up to 42 months"
       ],
       "answer": "A nonverbal measure of abstract reasoning estimating fluid intelligence and minimizing educational and cultural influences",
-      "explanation": "1. The correct answer, \"A nonverbal measure of abstract reasoning estimating fluid intelligence and minimizing educational and cultural influences,\" accurately describes Raven\u2019s Standard Progressive Matrices (SPM) because it is designed to assess abstract reasoning through nonverbal tasks, thus focusing on fluid intelligence rather than learned knowledge. Additionally, the test is structured to reduce the impact of educational background and cultural factors, making it a fair assessment across diverse populations.\n\n2. The first incorrect option, \"A receptive vocabulary test using picture stimuli and verbal prompts to assess verbal comprehension,\" is wrong because it describes the Peabody Picture Vocabulary Test-Fifth Edition (PPVT-5), which focuses on receptive vocabulary rather than abstract reasoning. \n\nThe second incorrect option, \"A group-administered test assessing verbal, quantitative, and nonverbal domains for students in grades 2-12,\" is incorrect as it refers to the Cognitive Abilities Test, Form 7 (CogAT7), which evaluates multiple cognitive domains in a group setting rather than focusing solely on nonverbal abstract reasoning like the SPM. \n\nThe third incorrect option, \"A test measuring motor, cognitive, and language development in infants up to 42 months,\" is inaccurate because it describes the Bayley Scales of Infant and Toddler Development, Fourth Edition (Bayley-4), which assesses developmental status rather than abstract reasoning in older children and adults as Raven\u2019s SPM does.",
-      "kn": "KN32",
-      "kn_explanation": "This question evaluates knowledge of cognitive ability measures, specifically nonverbal tests and their applicable constructs (KN32).",
+      "explanation": "1. The correct answer, \"A nonverbal measure of abstract reasoning estimating fluid intelligence and minimizing educational and cultural influences,\" accurately describes Raven’s Standard Progressive Matrices (SPM) because it is designed to assess abstract reasoning through nonverbal tasks, thus focusing on fluid intelligence rather than learned knowledge. Additionally, the test is structured to reduce the impact of educational background and cultural factors, making it a fair assessment across diverse populations.\n\n2. The first incorrect option, \"A receptive vocabulary test using picture stimuli and verbal prompts to assess verbal comprehension,\" is wrong because it describes the Peabody Picture Vocabulary Test-Fifth Edition (PPVT-5), which focuses on receptive vocabulary rather than abstract reasoning. \n\nThe second incorrect option, \"A group-administered test assessing verbal, quantitative, and nonverbal domains for students in grades 2-12,\" is incorrect as it refers to the Cognitive Abilities Test, Form 7 (CogAT7), which evaluates multiple cognitive domains in a group setting rather than focusing solely on nonverbal abstract reasoning like the SPM. \n\nThe third incorrect option, \"A test measuring motor, cognitive, and language development in infants up to 42 months,\" is inaccurate because it describes the Bayley Scales of Infant and Toddler Development, Fourth Edition (Bayley-4), which assesses developmental status rather than abstract reasoning in older children and adults as Raven’s SPM does.",
+      "kn": "KN35",
+      "kn_explanation": "This question is best aligned with KN35 because it tests Criteria for selection and adaptation of assessment methods (e.g., evidenced-based knowledge of assessment limitations, cultural appropriateness, trans-cultural adaptation, and language accommodations).",
       "difficulty": "medium",
       "quality_comment": "This question has clearly differentiated options referencing different tests and domains, facilitating discrimination of knowledge."
     },
@@ -85,8 +544,8 @@
       ],
       "answer": "Wonderlic Cognitive Ability Test",
       "explanation": "1. The **Wonderlic Cognitive Ability Test** is the correct answer because it is specifically designed as a 12-minute assessment that includes 50 verbal, numerical, and spatial items, making it a quick measure of general intelligence. It is frequently utilized in adult hiring decisions, providing employers with a tool to evaluate potential employees' cognitive abilities efficiently.\n\n2. The **Cognitive Abilities Test, Form 7 (CogAT7)** is incorrect because it assesses cognitive abilities in three domains (verbal, quantitative, and nonverbal) for students in grades 2 through 12, rather than being aimed at adults for hiring purposes. The **SAT** is also incorrect since it is a college admissions test primarily intended for high school students, focusing on reading, writing, and math skills rather than general cognitive ability for adult hiring. Lastly, the **Graduate Record Exam (GRE)** is not the correct answer because it is an admissions test for graduate and professional schools that measures skills important for academic achievement, rather than a general intelligence test used for hiring decisions.",
-      "kn": "KN32",
-      "kn_explanation": "This question tests familiarity with commonly used group intelligence tests and their purposes (KN32).",
+      "kn": "KN34",
+      "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
       "difficulty": "easy",
       "quality_comment": "A straightforward recall question with plausible distractors relevant to cognitive testing."
     },
@@ -100,8 +559,8 @@
       ],
       "answer": "Tailoring item difficulty in real time based on examinee responses, thus improving efficiency and precision",
       "explanation": "1. The correct answer, \"Tailoring item difficulty in real time based on examinee responses, thus improving efficiency and precision,\" accurately reflects the primary advantage of computerized adaptive testing (CAT). CAT assesses an examinee's ability by presenting questions that adapt in difficulty based on their previous responses, allowing for a more precise measurement of their cognitive abilities while significantly reducing testing time. This adaptive approach ensures that the questions are appropriately challenging, enhancing the overall testing experience and accuracy of the results.\n\n2. The option \"Presenting the same set of standardized items to all examinees for comparability\" is incorrect because CAT specifically tailors questions to each individual, rather than using a uniform set of items. \"Allowing examinees to review and change previously answered items during the test session\" is wrong as CAT typically does not permit this feature, focusing instead on real-time adaptation without review. Finally, \"Reducing test administration to paper and pencil formats emphasizing manual scoring\" is incorrect because CAT is primarily a digital format that leverages technology for automated scoring, rather than a shift to traditional paper-based testing.",
-      "kn": "KN29",
-      "kn_explanation": "This question assesses understanding of test construction and psychometric properties, particularly the advantages of computerized adaptive testing (KN29).",
+      "kn": "KN41",
+      "kn_explanation": "This question is best aligned with KN41 because it tests Use of technology in implementing tests, surveys, and other forms of assessment and diagnostic evaluation (e.g., validity, cost-effectiveness, consumer acceptability).",
       "difficulty": "medium",
       "quality_comment": "The question is well-phrased with plausible distractors that address common misunderstandings about CAT."
     },
@@ -145,8 +604,8 @@
       ],
       "answer": "Allows examinees to review and change previous answers",
       "explanation": "1. The correct answer, \"Allows examinees to review and change previous answers,\" is an advantage that is NOT associated with computerized adaptive testing (CAT). According to the reference material, CAT does not typically allow examinees to review questions they have already answered, which is a limitation of this testing method.\n\n2. The first incorrect option, \"Reduces testing time by not administering all items,\" is wrong because one of the primary advantages of CAT is its efficiency in reducing testing time by only presenting questions that are appropriate to the examinee's ability level, thus avoiding unnecessary items. The second incorrect option, \"Maintains test security by varying items between examinees,\" is incorrect because CAT enhances test security by ensuring that different examinees receive different sets of questions, which helps prevent cheating and item exposure. Lastly, the option \"Assesses all examinees at approximately equal precision levels\" is incorrect because CAT is designed to assess each examinee's ability with a high level of precision tailored to their individual performance, ensuring that all examinees are evaluated fairly and accurately based on their responses.",
-      "kn": "KN29",
-      "kn_explanation": "This question tests knowledge of key strengths and limitations of computerized adaptive testing in assessment theory and practice (KN29).",
+      "kn": "KN41",
+      "kn_explanation": "This question is best aligned with KN41 because it tests Use of technology in implementing tests, surveys, and other forms of assessment and diagnostic evaluation (e.g., validity, cost-effectiveness, consumer acceptability).",
       "difficulty": "medium",
       "quality_comment": "Distractors are accurate CAT advantages, making the correct answer stand out as the known limitation."
     },
@@ -160,8 +619,8 @@
       ],
       "answer": "Verbal reasoning, quantitative reasoning, and analytical reasoning skills relevant to graduate academic achievement",
       "explanation": "1. The correct answer, \"Verbal reasoning, quantitative reasoning, and analytical reasoning skills relevant to graduate academic achievement,\" accurately reflects the purpose of the GRE General Test. This test measures skills that are essential for success in graduate and professional schools, focusing on areas that assess the examinee's readiness for advanced academic work.\n\n2. The first incorrect option, \"Specific knowledge in biology, chemistry, psychology, and literature,\" is wrong because the GRE General Test does not assess specific subject knowledge; instead, it evaluates general reasoning abilities across verbal, quantitative, and analytical domains. The second incorrect option, \"General cognitive ability including verbal, numerical, and spatial capacity for employment screening,\" is incorrect as it describes the Wonderlic Cognitive Ability Test, which is used primarily for employment decisions, not the GRE. Lastly, the option \"Receptive vocabulary skills for individuals with speech impairments\" is incorrect because it pertains to the Peabody Picture Vocabulary Test, which focuses specifically on vocabulary assessment rather than the broader reasoning skills measured by the GRE.",
-      "kn": "KN32",
-      "kn_explanation": "This question addresses knowledge of standardized testing for higher education admissions and their constructs (KN32).",
+      "kn": "KN31",
+      "kn_explanation": "This question is best aligned with KN31 because it tests Assessment methods and their strengths and limitations (e.g., self-report, multi-informant reports, psychophysiological measures, work samples, assessment centers, direct observation, structured and semi-structured interviews).",
       "difficulty": "easy",
       "quality_comment": "Clear question with well-differentiated options testing familiarity with graduate-level assessments."
     },
@@ -174,9 +633,9 @@
         "Dynamic testing with qualitative scoring"
       ],
       "answer": "Computerized adaptive testing using item response theory",
-      "explanation": "1. **Correct Answer Explanation**: \"Computerized adaptive testing using item response theory\" is the correct answer because this approach tailors test items to the individual examinee\u2019s ability level in real time. It begins with a moderately difficult question, adjusting the difficulty of subsequent questions based on the examinee's responses, allowing for a precise assessment of cognitive ability.\n\n2. **Incorrect Options Explanation**:\n   - **Traditional fixed-form paper-and-pencil testing**: This method presents the same set of questions to all examinees, regardless of their individual ability levels, and does not adapt to their performance during the test.\n   - **Interview-based cognitive evaluations**: These evaluations rely on subjective questioning and responses rather than a standardized item format, and do not adapt items based on cognitive ability in real time.\n   - **Dynamic testing with qualitative scoring**: While dynamic testing assesses learning potential through various methods, it does not primarily focus on real-time adaptation of item difficulty based on the examinee's performance like computerized adaptive testing does.",
-      "kn": "KN29",
-      "kn_explanation": "This item focuses on the theoretical and technological basis of CAT, matching the content on assessment theories and models in this domain (KN29).",
+      "explanation": "1. **Correct Answer Explanation**: \"Computerized adaptive testing using item response theory\" is the correct answer because this approach tailors test items to the individual examinee’s ability level in real time. It begins with a moderately difficult question, adjusting the difficulty of subsequent questions based on the examinee's responses, allowing for a precise assessment of cognitive ability.\n\n2. **Incorrect Options Explanation**:\n   - **Traditional fixed-form paper-and-pencil testing**: This method presents the same set of questions to all examinees, regardless of their individual ability levels, and does not adapt to their performance during the test.\n   - **Interview-based cognitive evaluations**: These evaluations rely on subjective questioning and responses rather than a standardized item format, and do not adapt items based on cognitive ability in real time.\n   - **Dynamic testing with qualitative scoring**: While dynamic testing assesses learning potential through various methods, it does not primarily focus on real-time adaptation of item difficulty based on the examinee's performance like computerized adaptive testing does.",
+      "kn": "KN41",
+      "kn_explanation": "This question is best aligned with KN41 because it tests Use of technology in implementing tests, surveys, and other forms of assessment and diagnostic evaluation (e.g., validity, cost-effectiveness, consumer acceptability).",
       "difficulty": "medium",
       "quality_comment": "This question clearly differentiates between testing modalities and emphasizes the importance of IRT in CAT, improving conceptual understanding."
     },
@@ -186,17 +645,17 @@
         "Kaufman Assessment Battery for Children, Second Edition (KABC-II)",
         "Peabody Picture Vocabulary Test-Fifth Edition (PPVT-5)",
         "Wonderlic Cognitive Ability Test",
-        "Raven\u2019s Standard Progressive Matrices (SPM)"
+        "Raven’s Standard Progressive Matrices (SPM)"
       ],
       "answer": "Kaufman Assessment Battery for Children, Second Edition (KABC-II)",
-      "explanation": "1. The **Kaufman Assessment Battery for Children, Second Edition (KABC-II)** is the correct answer because it was specifically designed to be a culturally fair test, minimizing cultural content and verbal instructions, which helps reduce bias related to language and cultural background. Furthermore, it allows for interpretation using either the Cattell-Horn-Carroll (CHC) model or Luria's neuropsychological processing model, making it versatile in assessing cognitive abilities without being influenced by cultural or language factors.\n\n2. The **Peabody Picture Vocabulary Test-Fifth Edition (PPVT-5)** is incorrect because it primarily measures receptive vocabulary rather than broader cognitive abilities, and while it is useful for individuals with speech or motor impairments, it does not specifically address cultural bias in cognitive assessment. The **Wonderlic Cognitive Ability Test** is also incorrect as it is a general intelligence test primarily used for hiring decisions and is not designed to minimize cultural or language bias in children. Lastly, the **Raven\u2019s Standard Progressive Matrices (SPM)**, while a nonverbal measure of abstract reasoning that reduces educational and cultural bias, does not provide the flexibility of interpretation based on the CHC or Luria models, making it less suited for the specified purpose compared to the KABC-II.",
-      "kn": "KN35",
-      "kn_explanation": "This question covers assessment theories and models related to cultural fairness and test interpretation, fitting with the domain\u2019s focus on psychometric models and bias (KN35).",
+      "explanation": "1. The **Kaufman Assessment Battery for Children, Second Edition (KABC-II)** is the correct answer because it was specifically designed to be a culturally fair test, minimizing cultural content and verbal instructions, which helps reduce bias related to language and cultural background. Furthermore, it allows for interpretation using either the Cattell-Horn-Carroll (CHC) model or Luria's neuropsychological processing model, making it versatile in assessing cognitive abilities without being influenced by cultural or language factors.\n\n2. The **Peabody Picture Vocabulary Test-Fifth Edition (PPVT-5)** is incorrect because it primarily measures receptive vocabulary rather than broader cognitive abilities, and while it is useful for individuals with speech or motor impairments, it does not specifically address cultural bias in cognitive assessment. The **Wonderlic Cognitive Ability Test** is also incorrect as it is a general intelligence test primarily used for hiring decisions and is not designed to minimize cultural or language bias in children. Lastly, the **Raven’s Standard Progressive Matrices (SPM)**, while a nonverbal measure of abstract reasoning that reduces educational and cultural bias, does not provide the flexibility of interpretation based on the CHC or Luria models, making it less suited for the specified purpose compared to the KABC-II.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
       "difficulty": "medium",
       "quality_comment": "The options provide tests with varying cultural fairness, emphasizing the distinctiveness of the KABC-II for reducing bias, enhancing item validity."
     },
     {
-      "stem": "In the context of cognitive assessments, what is a major benefit of nonverbal tests such as Raven\u2019s Standard Progressive Matrices and Leiter-3?",
+      "stem": "In the context of cognitive assessments, what is a major benefit of nonverbal tests such as Raven’s Standard Progressive Matrices and Leiter-3?",
       "options": [
         "They reduce the influence of language proficiency and cultural knowledge on test performance",
         "They primarily assess motor skills alongside cognitive abilities",
@@ -204,7 +663,7 @@
         "They emphasize crystallized intelligence over fluid reasoning"
       ],
       "answer": "They reduce the influence of language proficiency and cultural knowledge on test performance",
-      "explanation": "1. The correct answer, \"They reduce the influence of language proficiency and cultural knowledge on test performance,\" is accurate because nonverbal tests like Raven\u2019s Standard Progressive Matrices (SPM) and Leiter-3 are designed to minimize the impact of verbal instructions and responses. This makes them particularly beneficial for individuals with limited English proficiency, cultural differences, or other communication challenges, allowing for a fairer assessment of cognitive abilities that are not reliant on language skills.\n\n2. The option \"They primarily assess motor skills alongside cognitive abilities\" is incorrect because nonverbal tests like the SPM and Leiter-3 focus specifically on cognitive functions such as reasoning and visualization, rather than on motor skills. The statement \"They are designed exclusively for group administration\" is misleading as these tests can be administered individually, making them suitable for a wide range of settings, not just group contexts. Lastly, the option \"They emphasize crystallized intelligence over fluid reasoning\" is wrong because both the SPM and Leiter-3 emphasize fluid intelligence, which involves abstract reasoning and problem-solving, rather than crystallized intelligence, which is more related to knowledge acquired through experience and education.",
+      "explanation": "1. The correct answer, \"They reduce the influence of language proficiency and cultural knowledge on test performance,\" is accurate because nonverbal tests like Raven’s Standard Progressive Matrices (SPM) and Leiter-3 are designed to minimize the impact of verbal instructions and responses. This makes them particularly beneficial for individuals with limited English proficiency, cultural differences, or other communication challenges, allowing for a fairer assessment of cognitive abilities that are not reliant on language skills.\n\n2. The option \"They primarily assess motor skills alongside cognitive abilities\" is incorrect because nonverbal tests like the SPM and Leiter-3 focus specifically on cognitive functions such as reasoning and visualization, rather than on motor skills. The statement \"They are designed exclusively for group administration\" is misleading as these tests can be administered individually, making them suitable for a wide range of settings, not just group contexts. Lastly, the option \"They emphasize crystallized intelligence over fluid reasoning\" is wrong because both the SPM and Leiter-3 emphasize fluid intelligence, which involves abstract reasoning and problem-solving, rather than crystallized intelligence, which is more related to knowledge acquired through experience and education.",
       "kn": "KN35",
       "kn_explanation": "This question highlights the use of assessment models and theories emphasizing fairness and cultural considerations in test selection (KN35).",
       "difficulty": "easy",
@@ -219,10 +678,10 @@
         "Woodcock-Johnson Tests of Cognitive Abilities, Fourth Edition (WJ IV)"
       ],
       "answer": "Cognitive Assessment System, Second Edition (CAS2)",
-      "explanation": "1. The **Cognitive Assessment System, Second Edition (CAS2)** is the correct answer because it is specifically designed to evaluate cognitive processing abilities in individuals aged 5 to 18 years, utilizing the PASS theory framework, which focuses on planning, attention, simultaneous processing, and successive processing. This aligns directly with the question\u2019s requirement for a tool aimed at children and adolescents within that age range and based on the PASS cognitive theory.\n\n2. The **Wechsler Intelligence Scale for Children, Fifth Edition (WISC-V)** is incorrect because it primarily assesses cognitive abilities for children ages 6 to 16 years but does not specifically utilize the PASS theory framework. The **Stanford-Binet Intelligence Scales, Fifth Edition (SB5)** is also incorrect as it measures cognitive ability across a broader age range (2 to 85+ years) and does not adhere to the PASS framework. Lastly, the **Woodcock-Johnson Tests of Cognitive Abilities, Fourth Edition (WJ IV)** is wrong because it assesses cognitive abilities across a wide age range (2 to 90+ years) and does not specifically utilize the PASS theory, focusing instead on the Cattell-Horn-Carroll model.",
+      "explanation": "1. The **Cognitive Assessment System, Second Edition (CAS2)** is the correct answer because it is specifically designed to evaluate cognitive processing abilities in individuals aged 5 to 18 years, utilizing the PASS theory framework, which focuses on planning, attention, simultaneous processing, and successive processing. This aligns directly with the question’s requirement for a tool aimed at children and adolescents within that age range and based on the PASS cognitive theory.\n\n2. The **Wechsler Intelligence Scale for Children, Fifth Edition (WISC-V)** is incorrect because it primarily assesses cognitive abilities for children ages 6 to 16 years but does not specifically utilize the PASS theory framework. The **Stanford-Binet Intelligence Scales, Fifth Edition (SB5)** is also incorrect as it measures cognitive ability across a broader age range (2 to 85+ years) and does not adhere to the PASS framework. Lastly, the **Woodcock-Johnson Tests of Cognitive Abilities, Fourth Edition (WJ IV)** is wrong because it assesses cognitive abilities across a wide age range (2 to 90+ years) and does not specifically utilize the PASS theory, focusing instead on the Cattell-Horn-Carroll model.",
       "difficulty": "easy",
-      "kn": "KN6",
-      "kn_explanation": "This question covers theory-based cognitive assessment development and models of intelligence, aligning with major research-based theories and models of intelligence (KN6).",
+      "kn": "KN32",
+      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
       "quality_comment": "This question effectively tests knowledge of specific cognitive assessments related to the PASS theory.",
       "is_lock_in_drill": true,
       "lock_in_level": "easier",
@@ -239,10 +698,10 @@
         "Differential Ability Scales, Second Edition (DAS-II)"
       ],
       "answer": "Cognitive Assessment System, Second Edition (CAS2)",
-      "explanation": "1. The **Cognitive Assessment System, Second Edition (CAS2)** is the correct answer because it specifically employs the PASS model, which focuses on four cognitive functions: planning, attention, simultaneous processing, and successive processing. This model is designed to assess cognitive functioning in children aged five to 18 years, emphasizing the understanding of cognitive processing abilities rather than just verbal skills.\n\n2. \n- The **Kaufman Assessment Battery for Children, Second Edition (KABC-II)** is incorrect because, while it is a measure of cognitive ability for children, it is not based on the PASS model; instead, it can be interpreted using the Cattell-Horn-Carroll (CHC) model or Luria\u2019s neuropsychological processing model.\n- The **Leiter International Performance Scale-Third Edition (Leiter-3)** is also incorrect as it is primarily a nonverbal measure of cognitive abilities but does not utilize the PASS model, focusing instead on fluid intelligence and nonverbal tasks.\n- The **Differential Ability Scales, Second Edition (DAS-II)** is incorrect because it is not mentioned in the reference material provided, and it does not utilize the PASS model for cognitive assessment.",
+      "explanation": "1. The **Cognitive Assessment System, Second Edition (CAS2)** is the correct answer because it specifically employs the PASS model, which focuses on four cognitive functions: planning, attention, simultaneous processing, and successive processing. This model is designed to assess cognitive functioning in children aged five to 18 years, emphasizing the understanding of cognitive processing abilities rather than just verbal skills.\n\n2. \n- The **Kaufman Assessment Battery for Children, Second Edition (KABC-II)** is incorrect because, while it is a measure of cognitive ability for children, it is not based on the PASS model; instead, it can be interpreted using the Cattell-Horn-Carroll (CHC) model or Luria’s neuropsychological processing model.\n- The **Leiter International Performance Scale-Third Edition (Leiter-3)** is also incorrect as it is primarily a nonverbal measure of cognitive abilities but does not utilize the PASS model, focusing instead on fluid intelligence and nonverbal tasks.\n- The **Differential Ability Scales, Second Edition (DAS-II)** is incorrect because it is not mentioned in the reference material provided, and it does not utilize the PASS model for cognitive assessment.",
       "difficulty": "hard",
-      "kn": "KN6",
-      "kn_explanation": "This question covers theory-based cognitive assessment development and models of intelligence, aligning with major research-based theories and models of intelligence (KN6).",
+      "kn": "KN32",
+      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
       "quality_comment": "This question challenges the test-taker to apply their understanding of cognitive assessments within a specific theoretical framework.",
       "is_lock_in_drill": true,
       "lock_in_level": "harder",

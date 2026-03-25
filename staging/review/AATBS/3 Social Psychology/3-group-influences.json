@@ -1,0 +1,64 @@
+{
+  "questions": [
+    {
+      "stem": "A psychologist notices that a trainee performs routine intake interviews more smoothly when observed by a supervisor but becomes noticeably less effective when observed while trying a new and unfamiliar intervention. Zajonc's drive theory would describe the drop in performance on the unfamiliar task as:",
+      "options": [
+        "Social facilitation",
+        "Social inhibition",
+        "Minority influence",
+        "Deindividuation"
+      ],
+      "answer": "Social inhibition",
+      "explanation": "Social inhibition is the best answer because the presence of others can impair performance on difficult or unfamiliar tasks by increasing arousal and strengthening the dominant, but incorrect or hesitant, response. Social facilitation is wrong because that refers to improved performance on easy or well-learned tasks. Minority influence is wrong because it concerns how consistent minorities change group opinions. Deindividuation is wrong because it involves loss of individuality and restraint in anonymous group contexts.",
+      "kn": "KN16",
+      "kn_explanation": "This question tests group processes and social influences on functioning, specifically audience effects on performance.",
+      "difficulty": "medium",
+      "quality_comment": "Scenario-based application of the social facilitation/inhibition distinction rather than a pure definition item.",
+      "suggestedLesson": "3-group-influences",
+      "suggestedParagraph": "## When Others Watch: Social Facilitation and Social Inhibition",
+      "lessonExcerpt": "Social facilitation occurs when other people's presence improves your performance. Social inhibition happens when their presence makes your performance worse. The deciding factor? Whether the task is easy and well-practiced, or difficult and unfamiliar.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL PSYCHOLOGY"
+    },
+    {
+      "stem": "A hospital team is planning a surprise retirement celebration. If even one member fails to keep the plan secret, the entire effort is ruined. According to Steiner's task taxonomy, this is best classified as which type of group task?",
+      "options": [
+        "Additive",
+        "Compensatory",
+        "Disjunctive",
+        "Conjunctive"
+      ],
+      "answer": "Conjunctive",
+      "explanation": "Conjunctive is the best answer because the group's success depends on every member contributing adequately, and performance is limited by the weakest link. Additive is wrong because additive tasks sum independent contributions. Compensatory is wrong because it involves averaging judgments or estimates. Disjunctive is wrong because it requires selecting the best solution from those offered rather than depending on every member's adequate performance.",
+      "kn": "KN16",
+      "kn_explanation": "This question assesses knowledge of team functioning and group task structure within group and systems processes.",
+      "difficulty": "medium",
+      "quality_comment": "Good task-taxonomy item with concrete, memorable stakes instead of abstract jargon.",
+      "suggestedLesson": "3-group-influences",
+      "suggestedParagraph": "## Task Types and Group Performance",
+      "lessonExcerpt": "Conjunctive tasks demand that everyone contribute, and the group's performance is limited by the weakest member.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL PSYCHOLOGY"
+    },
+    {
+      "stem": "In a committee meeting, only two members oppose the popular plan. They continue presenting the same evidence calmly and consistently over several meetings, and eventually several other members privately change their minds. Moscovici would describe this pattern as an example of:",
+      "options": [
+        "Normative influence by the majority",
+        "Minority influence",
+        "Social loafing",
+        "Evaluation apprehension"
+      ],
+      "answer": "Minority influence",
+      "explanation": "Minority influence is the best answer because a small, consistent minority can shift opinions through behavioral style and produce genuine private acceptance. Normative influence by the majority is wrong because the source of change here is not pressure from the larger group. Social loafing is wrong because it concerns reduced effort in group tasks. Evaluation apprehension is wrong because it involves concern about being judged, not conversion to a minority position.",
+      "kn": "KN16",
+      "kn_explanation": "This question tests social influence within groups by assessing understanding of minority influence processes.",
+      "difficulty": "hard",
+      "quality_comment": "Captures the behavioral-style mechanism and private-conversion outcome central to Moscovici's model.",
+      "suggestedLesson": "3-group-influences",
+      "suggestedParagraph": "## The Power of the Persistent Few: Minority Influence",
+      "lessonExcerpt": "The key is consistency without rigidity.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL PSYCHOLOGY"
+    }
+  ]
+}

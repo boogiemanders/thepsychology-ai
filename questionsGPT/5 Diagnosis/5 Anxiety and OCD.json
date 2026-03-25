@@ -1,6 +1,171 @@
 {
   "questions": [
     {
+      "stem": "A client with a severe blood-injection-injury phobia often becomes lightheaded and has nearly fainted during blood draws. In addition to exposure, which treatment component is especially indicated for this specific phobia subtype?",
+      "options": [
+        "Applied tension",
+        "Systematic desensitization with hypnosis",
+        "Free association",
+        "Interoceptive exposure"
+      ],
+      "answer": "Applied tension",
+      "explanation": "Applied tension is the best answer because blood-injection-injury phobia has a distinctive physiological pattern that can culminate in fainting, and muscle-tensing procedures help maintain blood pressure during exposure. Systematic desensitization with hypnosis is wrong because that is not the key treatment modification highlighted for this subtype. Free association is wrong because it is not a first-line intervention for phobias. Interoceptive exposure is wrong because it is most associated with panic treatment rather than preventing fainting in blood-injection-injury phobia.",
+      "kn": "KN37",
+      "kn_explanation": "This question is best aligned with KN37 because it tests Factors influencing evidence-based interpretation of data and decision-making (e.g., base rates, group differences, cultural biases and differences, heuristics).",
+      "difficulty": "medium",
+      "quality_comment": "Subtype-specific treatment item with clean differentiation from panic-treatment techniques.",
+      "suggestedLesson": "5-anxiety-and-ocd",
+      "suggestedParagraph": "### Special Case: Blood-Injection-Injury Type",
+      "lessonExcerpt": "Treatment modification: Add applied tension to exposure. The person repeatedly tenses and relaxes large muscle groups to keep blood pressure elevated and prevent fainting.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS"
+    },
+    {
+      "stem": "A client with panic disorder says, \"The racing heart means I am about to die, so I avoid exercise, caffeine, and anything that makes my body feel activated.\" Which component of Panic Control Treatment would most directly target this fear?",
+      "options": [
+        "Interoceptive exposure",
+        "Applied behavior analysis",
+        "Response cost",
+        "Thought stopping"
+      ],
+      "answer": "Interoceptive exposure",
+      "explanation": "Interoceptive exposure is the best answer because it deliberately evokes feared bodily sensations so the client can learn that those sensations are uncomfortable but not dangerous. Applied behavior analysis is wrong because it is not the standard CBT technique used for panic symptoms. Response cost is wrong because it is a punishment-based operant procedure unrelated to panic treatment. Thought stopping is wrong because Panic Control Treatment targets catastrophic misinterpretation of bodily sensations more directly through exposure and corrective learning.",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
+      "difficulty": "medium",
+      "quality_comment": "Useful treatment-mechanism item that ties panic symptoms to the core CBT intervention.",
+      "suggestedLesson": "5-anxiety-and-ocd",
+      "suggestedParagraph": "### Treatment: Panic Control Treatment",
+      "lessonExcerpt": "Interoceptive exposure: Deliberately creating physical panic symptoms (running in place, spinning, breathing through a straw) to help the person learn these sensations aren't dangerous",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS"
+    },
+    {
+      "stem": "An adult becomes intensely distressed whenever her partner leaves for work trips, refuses to stay home alone, repeatedly reports nausea and headaches before each separation, and has shown this pattern for the past four months. Assuming the symptom threshold is otherwise met, which fact would prevent a DSM diagnosis of Separation Anxiety Disorder in this case?",
+      "options": [
+        "The symptoms are accompanied by physical complaints",
+        "The fear is focused on separation from an attachment figure",
+        "The duration has been only four months",
+        "The anxiety causes the person to avoid being alone"
+      ],
+      "answer": "The duration has been only four months",
+      "explanation": "The duration is the best answer because adults must show the pattern for at least six months, whereas children and adolescents require only four weeks. Physical complaints are wrong because they can be part of the disorder. Fear centered on separation from an attachment figure is wrong because that is a defining feature. Avoidance of being alone is also wrong because it is consistent with separation-related fear.",
+      "kn": "KN36",
+      "kn_explanation": "This question assesses classification systems and diagnostic criteria for evaluating client functioning.",
+      "difficulty": "hard",
+      "quality_comment": "Criterion-threshold item that tests adult-versus-child duration without copying textbook language into the stem.",
+      "suggestedLesson": "5-anxiety-and-ocd",
+      "suggestedParagraph": "## Separation Anxiety Disorder",
+      "lessonExcerpt": "Duration requirements: Four weeks for children and adolescents, six months for adults.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS"
+    },
+    {
+      "stem": "A 32-year-old woman presents to the emergency department with sudden onset of chest pain, heart palpitations, dizziness, and intense fear of dying. Cardiac workup and other medical tests reveal no abnormalities. She reports that similar episodes have occurred three times over the past two months, and she now avoids exercising because she fears triggering another episode. The most likely diagnosis is:",
+      "options": [
+        "Somatic symptom disorder",
+        "Illness anxiety disorder",
+        "Panic disorder",
+        "Generalized anxiety disorder"
+      ],
+      "answer": "Panic disorder",
+      "explanation": "This presentation is classic for panic disorder: recurrent, unexpected panic attacks (sudden onset of chest pain, palpitations, dizziness, fear of dying — at least four of the 13 panic attack symptoms) followed by maladaptive behavior change (avoiding exercise for fear of triggering attacks). The lesson states panic disorder involves 'recurrent, unexpected panic attacks followed by at least one month of either persistent concern about additional attacks or their consequences, OR significant maladaptive behavior change related to the attacks.' Medical causes have been ruled out, which the lesson notes is essential. Somatic symptom disorder (Option A) is incorrect because it requires excessive thoughts, emotions, or behaviors about somatic symptoms rather than discrete panic episodes. Illness anxiety disorder (Option B) involves preoccupation with having a serious illness with absent or mild somatic symptoms, not acute panic episodes. GAD (Option D) involves chronic worry across multiple domains, not discrete sudden-onset episodes with specific physical symptoms.",
+      "kn": "KN33",
+      "kn_explanation": "Differential diagnosis requiring integration of medical/non-psychological information (ruling out cardiac conditions vs. panic disorder)",
+      "difficulty": "medium",
+      "quality_comment": "Classic EPPP-style vignette with well-constructed distractors from related diagnostic categories, directly supported by lesson content.",
+      "suggestedLesson": "5-anxiety-and-ocd",
+      "suggestedParagraph": "## Panic Disorder",
+      "lessonExcerpt": "Panic disorder involves recurrent, unexpected panic attacks followed by at least one month of either: Persistent concern about additional attacks or their consequences, OR Significant maladaptive behavior change related to the attacks... These symptoms overlap with medical conditions like hyperthyroidism and cardiac arrhythmia. Always rule out medical causes before diagnosing panic disorder.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 9
+    },
+    {
+      "stem": "A child psychologist is conducting an intake evaluation for an 8-year-old boy referred for repetitive hand-washing and intrusive thoughts about contamination. When considering the epidemiology of obsessive-compulsive disorder, the psychologist should be aware that:",
+      "options": [
+        "OCD affects males and females equally across all age groups",
+        "Males have earlier onset than females, resulting in higher childhood prevalence of OCD in males",
+        "Females have earlier onset than males, resulting in higher childhood prevalence of OCD in females",
+        "OCD is diagnosed exclusively in adults, making this referral inconsistent with the disorder's typical presentation"
+      ],
+      "answer": "Males have earlier onset than females, resulting in higher childhood prevalence of OCD in males",
+      "explanation": "Research shows that males have earlier onset of OCD than females, which results in higher childhood prevalence among males. In contrast, females have slightly higher adult prevalence. This sex difference in onset timing is a commonly tested EPPP fact. Option A is wrong because there are clear sex differences in onset and prevalence across the lifespan. Option C reverses the pattern — it is males, not females, who have earlier onset. Option D is wrong because OCD can and does present in childhood, and the question scenario itself describes a childhood presentation.",
+      "kn": "KN38",
+      "kn_explanation": "This question is best aligned with KN38 because it tests Constructs of epidemiology and base rates of psychological and behavioral disorders.",
+      "difficulty": "medium",
+      "quality_comment": "Contextualizes an epidemiological fact within a clinical scenario, testing both factual knowledge and clinical application.",
+      "suggestedLesson": "5-anxiety-and-ocd",
+      "suggestedParagraph": "### Demographics and Comorbidity",
+      "lessonExcerpt": "Males have earlier onset than females (higher childhood prevalence). Females have slightly higher adult prevalence.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 20
+    },
+    {
+      "stem": "When comparing the epidemiology of obsessive-compulsive disorder across gender, which statement MOST accurately describes the research findings?",
+      "options": [
+        "Males and females have equal prevalence rates across all age groups",
+        "Males have higher prevalence in childhood, while females have slightly higher prevalence in adulthood",
+        "Females have higher prevalence rates in both childhood and adulthood",
+        "Males have higher prevalence rates in both childhood and adulthood"
+      ],
+      "answer": "Males have higher prevalence in childhood, while females have slightly higher prevalence in adulthood",
+      "explanation": "Research on OCD epidemiology shows that males have earlier onset than females, resulting in higher childhood prevalence for males. However, females have slightly higher adult prevalence. This creates a crossover pattern across development. Equal prevalence across all age groups is incorrect because there are documented gender differences. Females do not have higher rates in both childhood and adulthood. Males do not have higher rates across both periods either—the pattern shifts from male predominance in childhood to female predominance in adulthood.",
+      "kn": "KN38",
+      "kn_explanation": "This question is best aligned with KN38 because it tests Constructs of epidemiology and base rates of psychological and behavioral disorders.",
+      "difficulty": "medium",
+      "quality_comment": "Tests the nuanced developmental crossover pattern in OCD gender prevalence rather than a simple male-vs-female comparison",
+      "suggestedLesson": "5-anxiety-and-ocd",
+      "suggestedParagraph": "### Demographics and Comorbidity",
+      "lessonExcerpt": "Males have earlier onset than females (higher childhood prevalence); Females have slightly higher adult prevalence",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 19
+    },
+    {
+      "stem": "A 28-year-old woman presents to the emergency department reporting heart palpitations, chest tightness, shortness of breath, dizziness, and tingling in her extremities. She states the episode came on suddenly while watching television and peaked within approximately 10 minutes. Medical workup including EKG, troponin levels, and thyroid panel are all within normal limits. She reports persistent worry about having additional episodes and has begun avoiding situations where she previously experienced similar symptoms. The most likely diagnosis is:",
+      "options": [
+        "Somatic symptom disorder",
+        "Illness anxiety disorder",
+        "Panic disorder",
+        "Generalized anxiety disorder"
+      ],
+      "answer": "Panic disorder",
+      "explanation": "This presentation is classic panic disorder: recurrent unexpected panic attacks (abrupt surge of intense fear peaking within minutes) with at least four symptoms (palpitations, chest tightness, shortness of breath, dizziness, paresthesias), followed by persistent worry about future attacks and maladaptive behavioral changes (avoidance). The medical workup ruled out cardiac and thyroid conditions, which is important because hyperthyroidism and cardiac arrhythmia can mimic panic attacks. Somatic symptom disorder involves excessive thoughts, feelings, or behaviors about somatic symptoms—the focus is on disproportionate concern about symptoms, not sudden episodic surges of fear. Illness anxiety disorder involves preoccupation with having a serious illness with minimal or no somatic symptoms, whereas this patient has prominent acute physical symptoms during discrete episodes. GAD involves excessive worry about multiple life domains, not discrete episodes of sudden intense fear with specific physiological symptoms.",
+      "kn": "KN33",
+      "kn_explanation": "Differentiating panic disorder from medical conditions (e.g., cardiac) requires differential diagnosis and integration of non-psychological information into psychological assessment.",
+      "difficulty": "medium",
+      "quality_comment": "Strong clinical vignette requiring differential diagnosis. Well-supported by lesson content on panic disorder criteria and the need to rule out medical conditions.",
+      "suggestedLesson": "5-anxiety-and-ocd",
+      "suggestedParagraph": "### Panic Disorder: The Alarm System Gone Haywire",
+      "lessonExcerpt": "Panic disorder requires recurrent unexpected panic attacks, with at least one followed by a month or more of worry about future attacks or maladaptive behavior changes because of attacks... Critical diagnostic consideration: Rule out medical conditions first. Hyperthyroidism, cardiac arrhythmia, and other medical issues can mimic panic attacks.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 9
+    },
+    {
+      "stem": "A 28-year-old woman reports intense fear and avoidance of work meetings, dinner parties, and any situation where she might be observed by others. She experiences heart palpitations, sweating, and trembling exclusively in these social contexts. She does not experience panic attacks at any other time. The most appropriate diagnosis is:",
+      "options": [
+        "Panic disorder",
+        "Specific phobia, situational type",
+        "Social anxiety disorder",
+        "Agoraphobia"
+      ],
+      "answer": "Social anxiety disorder",
+      "explanation": "This presentation is most consistent with social anxiety disorder because the fear and physiological symptoms occur exclusively in social situations where the person might face scrutiny. The lesson states: 'Social anxiety disorder involves fear or anxiety in social situations where scrutiny might occur. The person fears showing anxiety symptoms that others will negatively evaluate.' The panic-like symptoms (palpitations, sweating, trembling) are situationally bound to social contexts, not unexpected. Panic disorder (A) requires recurrent unexpected panic attacks—these attacks are expected and tied to social situations. Specific phobia, situational type (B) involves fears of specific situations like elevators or flying, not social evaluation. Agoraphobia (D) involves fear of situations where escape might be difficult, not specifically fear of social scrutiny.",
+      "kn": "KN36",
+      "kn_explanation": "Identifying social anxiety disorder from a symptom presentation involves applying DSM classification systems and diagnostic criteria to evaluate client functioning.",
+      "difficulty": "hard",
+      "quality_comment": "Tests a clinically important differential diagnosis point—distinguishing situationally-bound panic symptoms in social anxiety from unexpected panic attacks in panic disorder.",
+      "suggestedLesson": "5-anxiety-and-ocd",
+      "suggestedParagraph": "### Social Anxiety Disorder: Fear of the Spotlight",
+      "lessonExcerpt": "Social anxiety disorder involves fear or anxiety in social situations where scrutiny might occur. The person fears showing anxiety symptoms that others will negatively evaluate. Duration requirement: six months minimum.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 25
+    },
+    {
       "stem": "Which of the following best describes the role of operant conditioning in the development of specific phobias according to Mowrer's two-factor theory?",
       "options": [
         "It creates the initial fear response by pairing a neutral stimulus with an aversive stimulus.",
@@ -10,8 +175,8 @@
       ],
       "answer": "It maintains the phobic behavior by negatively reinforcing avoidance of the feared stimulus.",
       "explanation": "1. The correct answer, \"It maintains the phobic behavior by negatively reinforcing avoidance of the feared stimulus,\" aligns with Mowrer's two-factor theory, which posits that once an individual develops a fear response through classical conditioning (pairing a neutral stimulus with an aversive stimulus), operant conditioning takes over. This occurs when individuals learn that avoiding the feared stimulus alleviates their anxiety, thus reinforcing the avoidance behavior and preventing the extinction of the conditioned fear response.\n\n2. The incorrect options are as follows:\n- \"It creates the initial fear response by pairing a neutral stimulus with an aversive stimulus.\" This statement describes classical conditioning, which is responsible for the initial fear response, not operant conditioning.\n- \"It reduces anxiety by helping the individual habituate to the feared stimulus over time.\" This option misrepresents the role of operant conditioning; instead of reducing anxiety through habituation, it maintains avoidance behaviors that prevent exposure to the feared stimulus.\n- \"It causes a genetic predisposition for the phobic reaction in individuals with affected relatives.\" This statement incorrectly attributes the development of specific phobias to genetic factors rather than learned behaviors through conditioning processes.",
-      "kn": "KN7",
-      "kn_explanation": "This question assesses knowledge of learning theory principles, specifically operant conditioning, which is a foundation of major research-based theories and models of learning.",
+      "kn": "KN32",
+      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
       "difficulty": "medium",
       "quality_comment": "The question clearly focuses on learning theory application with plausible distractors that test understanding of different conditioning processes."
     },
@@ -25,8 +190,8 @@
       ],
       "answer": "Contrast avoidance model",
       "explanation": "1. The \"contrast avoidance model\" is the correct answer because it suggests that individuals with Generalized Anxiety Disorder (GAD) engage in chronic worry to maintain a sustained state of negative emotions. This allows them to avoid sudden shifts from a neutral or positive emotional state to a negative one when faced with feared stimuli, as they are more disturbed by rapid emotional contrasts (Newman & Llera, 2011). \n\n2. The \"cognitive avoidance theory\" posits that worry serves as a verbal-linguistic activity that helps individuals with GAD avoid unpleasant mental imagery and the associated negative emotions, rather than specifically addressing shifts in affect. The \"intolerance of uncertainty model\" focuses on how individuals with GAD react poorly to ambiguity and uncertainty, emphasizing their difficulty in tolerating uncertain situations rather than the avoidance of emotional contrasts. Lastly, the \"negative problem orientation\" refers to a poor confidence in problem-solving abilities, particularly in uncertain contexts, and does not directly address the function of worry in managing emotional states.",
-      "kn": "KN12",
-      "kn_explanation": "This question deals with theories explaining cognitive and affective processes related to anxiety, fitting well within relations among cognitions/beliefs, behavior, and affect.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
       "difficulty": "hard",
       "quality_comment": "The question tests detailed knowledge of competing cognitive models of GAD with well-constructed distractors that are conceptually related but distinct."
     },
@@ -40,8 +205,8 @@
       ],
       "answer": "Cognitive-behavioral therapy with parent training focused on psychoeducation and exposure",
       "explanation": "1. **Correct Answer Explanation**: The preferred initial treatment for childhood Separation Anxiety Disorder (SAD), particularly when it includes school refusal, is cognitive-behavioral therapy (CBT) combined with parent training. This approach focuses on psychoeducation and exposure techniques, which have been shown to effectively address the symptoms of SAD by helping children gradually confront their fears and reducing the risk of social isolation and academic failure.\n\n2. **Incorrect Options Explanation**: \n- **Pharmacotherapy with SSRIs combined with relaxation techniques**: While SSRIs can be effective for anxiety disorders, the reference material emphasizes that CBT with parent training is the first-line treatment for SAD, making this pharmacological approach secondary.\n- **Psychoanalytic therapy focused on unconscious conflicts**: This option is not supported by the reference material, which does not mention psychoanalytic therapy as a treatment for SAD; instead, it emphasizes CBT as the primary intervention.\n- **In vivo flooding exposure without parent involvement**: The reference material specifies that parent involvement is crucial in the treatment of SAD, especially for school refusal, and in vivo flooding alone does not incorporate the necessary psychoeducation and support for parents.",
-      "kn": "KN44",
-      "kn_explanation": "This question targets knowledge of evidence-based treatment modalities for anxiety disorders, particularly cognitive-behavioral therapy and parent training.",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
       "difficulty": "medium",
       "quality_comment": "Options represent plausible treatments, but the correct answer aligns with best research-supported interventions for this disorder and population."
     },
@@ -55,8 +220,8 @@
       ],
       "answer": "Deliberate induction of physical sensations associated with panic to reduce fear of them",
       "explanation": "1. The correct answer, \"Deliberate induction of physical sensations associated with panic to reduce fear of them,\" accurately describes interoceptive exposure as part of panic control treatment. This approach involves intentionally provoking the physical symptoms that individuals associate with panic attacks (such as increased heart rate or dizziness) to help them confront and desensitize to these sensations, ultimately reducing their fear and anxiety related to panic attacks.\n\n2. The incorrect options are as follows:\n- \"Exposure to social situations that trigger anxiety and avoidance\" is wrong because interoceptive exposure specifically targets the internal physical sensations associated with panic attacks, not external social situations.\n- \"Use of relaxation techniques to immediately stop panic attacks\" is incorrect since the goal of interoceptive exposure is not to stop panic attacks but to help individuals tolerate and reduce their fear of panic-related sensations.\n- \"Gradual exposure to feared physical locations outside the home\" is misleading because this describes a form of exposure therapy related to agoraphobia, not the interoceptive exposure that focuses on inducing bodily sensations linked to panic disorder.",
-      "kn": "KN44",
-      "kn_explanation": "The question assesses knowledge of specific behavioral treatment techniques for panic disorder covered in evidence-based models of treatment.",
+      "kn": "KN37",
+      "kn_explanation": "This question is best aligned with KN37 because it tests Factors influencing evidence-based interpretation of data and decision-making (e.g., base rates, group differences, cultural biases and differences, heuristics).",
       "difficulty": "medium",
       "quality_comment": "The stem clearly specifies panic disorder context; distractors are reasonable but different treatment concepts, increasing question quality."
     },
@@ -70,8 +235,8 @@
       ],
       "answer": "Cortico-striato-thalamo-cortical (CSTC) circuit",
       "explanation": "1. The \"Cortico-striato-thalamo-cortical (CSTC) circuit\" is the correct answer because neuroimaging studies have identified hyperactivity in this circuit, which links the orbitofrontal cortex and anterior cingulate cortex with the basal ganglia (e.g., caudate nucleus, putamen) and other areas. This circuit plays a crucial role in the execution of movement, habit formation, and reward, all of which are relevant to the compulsive behaviors seen in Obsessive-Compulsive Disorder (OCD).\n\n2. The \"Amygdala-hippocampal pathway\" is incorrect because, while the amygdala is involved in emotional processing, it is not specifically implicated in the neurobiological mechanisms of OCD as identified in the CSTC circuit. The \"Hypothalamic-pituitary-adrenal axis\" is wrong because it primarily regulates stress responses and is not directly related to the compulsive behaviors characteristic of OCD. Lastly, the \"Dorsal attention network\" is incorrect because it is involved in attention and cognitive control, rather than the specific compulsive and obsessive behaviors associated with OCD.",
-      "kn": "KN1",
-      "kn_explanation": "This question addresses functional neurobiology and brain circuits implicated in OCD, under the biological bases of behavior domain.",
+      "kn": "KN32",
+      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
       "difficulty": "hard",
       "quality_comment": "The question requires integration of neuroanatomical knowledge with disorder-specific findings; distractors are relevant brain circuits, enhancing rigor."
     },
@@ -85,8 +250,8 @@
       ],
       "answer": "Heritability estimates range from about 30% to 50%, with monozygotic twin concordance rates generally twice those of dizygotic twins.",
       "explanation": "1. The statement \"Heritability estimates range from about 30% to 50%, with monozygotic twin concordance rates generally twice those of dizygotic twins\" is correct because the reference material indicates that family and twin studies support these heritability estimates for anxiety disorders. Specifically, it notes that monozygotic twins have concordance rates ranging from 12% to 26%, which are significantly higher than the 4% to 15% rates found in dizygotic twins, demonstrating a genetic contribution to the development of anxiety disorders.\n\n2. The incorrect option \"Heritability is near 100% with nearly identical concordance rates for monozygotic and dizygotic twins\" is wrong because the reference material clearly states that heritability estimates for anxiety disorders are between 30% to 50%, not near 100%, and that the concordance rates for monozygotic twins are higher than those for dizygotic twins, not identical. \n\nThe statement \"Anxiety disorders show no significant familial aggregation, suggesting environmental causes only\" is incorrect as the reference indicates a significant familial risk, with children of anxious parents being nearly twice as likely to develop anxiety problems, highlighting both genetic and environmental factors. \n\nLastly, the option \"Dizygotic twins have higher concordance rates than monozygotic twins, indicating non-genetic factors predominate\" is inaccurate because the reference material explicitly states that monozygotic twins have higher concordance rates than dizygotic twins, supporting the role of genetic factors in the development of anxiety disorders.",
-      "kn": "KN4",
-      "kn_explanation": "This question covers behavioral genetics concepts related to heritability and familial transmission of anxiety disorders.",
+      "kn": "KN37",
+      "kn_explanation": "This question is best aligned with KN37 because it tests Factors influencing evidence-based interpretation of data and decision-making (e.g., base rates, group differences, cultural biases and differences, heuristics).",
       "difficulty": "medium",
       "quality_comment": "The options distinguish genetic vs. environmental contributions clearly with scientifically accurate ranges, making the item valid and discriminative."
     },
@@ -96,12 +261,12 @@
         "To reduce the risk of fainting by increasing heart rate and blood pressure during exposure",
         "To accelerate extinction of the phobic response through increased muscle relaxation",
         "To provide cognitive restructuring during phobic stimulus presentation",
-        "To enhance the patient\u2019s focus on the feared object and distract from anxiety"
+        "To enhance the patient’s focus on the feared object and distract from anxiety"
       ],
       "answer": "To reduce the risk of fainting by increasing heart rate and blood pressure during exposure",
-      "explanation": "1. The correct answer, \"To reduce the risk of fainting by increasing heart rate and blood pressure during exposure,\" is accurate because individuals with the blood-injection-injury subtype of specific phobia often experience an initial increase in heart rate and blood pressure, followed by a decrease that can lead to fainting. By combining exposure therapy with applied tension techniques, therapists aim to maintain elevated blood pressure and heart rate, thus preventing fainting during exposure to feared stimuli, which enhances the effectiveness of the treatment.\n\n2. The option \"To accelerate extinction of the phobic response through increased muscle relaxation\" is incorrect because applied tension is designed to increase, not decrease, muscle tension to prevent fainting, rather than to promote relaxation. The option \"To provide cognitive restructuring during phobic stimulus presentation\" is wrong as cognitive restructuring is a separate cognitive-behavioral technique and is not the primary focus of applied tension during exposure therapy. Lastly, the option \"To enhance the patient\u2019s focus on the feared object and distract from anxiety\" is incorrect because applied tension is not intended to distract from anxiety but rather to help manage physiological responses that could lead to fainting during exposure to the phobic stimulus.",
-      "kn": "KN44",
-      "kn_explanation": "This question assesses knowledge of specialized intervention techniques tailored to phobia subtypes, an important aspect of treatment and intervention.",
+      "explanation": "1. The correct answer, \"To reduce the risk of fainting by increasing heart rate and blood pressure during exposure,\" is accurate because individuals with the blood-injection-injury subtype of specific phobia often experience an initial increase in heart rate and blood pressure, followed by a decrease that can lead to fainting. By combining exposure therapy with applied tension techniques, therapists aim to maintain elevated blood pressure and heart rate, thus preventing fainting during exposure to feared stimuli, which enhances the effectiveness of the treatment.\n\n2. The option \"To accelerate extinction of the phobic response through increased muscle relaxation\" is incorrect because applied tension is designed to increase, not decrease, muscle tension to prevent fainting, rather than to promote relaxation. The option \"To provide cognitive restructuring during phobic stimulus presentation\" is wrong as cognitive restructuring is a separate cognitive-behavioral technique and is not the primary focus of applied tension during exposure therapy. Lastly, the option \"To enhance the patient’s focus on the feared object and distract from anxiety\" is incorrect because applied tension is not intended to distract from anxiety but rather to help manage physiological responses that could lead to fainting during exposure to the phobic stimulus.",
+      "kn": "KN40",
+      "kn_explanation": "This question is best aligned with KN40 because it tests Measurement of outcomes and changes due to prevention or intervention efforts with individuals, couples, families, groups, and organizations.",
       "difficulty": "medium",
       "quality_comment": "Distractors are plausible treatment components but only the correct response contextualizes the rationale specific to this subtype, improving question validity."
     },
@@ -130,8 +295,8 @@
       ],
       "answer": "Guided internet-delivered CBT",
       "explanation": "1. **Guided internet-delivered CBT** is the correct answer because research has shown that it is equivalent to face-to-face cognitive behavior therapy (CBT) in terms of symptom reduction for Social Anxiety Disorder in adults. This form of therapy utilizes online platforms to provide structured interventions, making it a flexible and accessible option for individuals seeking treatment.\n\n2. **Pharmacotherapy with benzodiazepines** is incorrect because while benzodiazepines can provide immediate relief from anxiety symptoms, they do not address the underlying cognitive and behavioral aspects of Social Anxiety Disorder, which CBT targets. **Psychoanalysis** is also incorrect as it focuses on exploring unconscious processes and past experiences rather than the specific cognitive and behavioral strategies effective in treating anxiety disorders like social anxiety. Lastly, **exposure therapy without cognitive restructuring** is wrong because it lacks the cognitive component that helps individuals understand and modify their thought patterns, which is essential for effective treatment of Social Anxiety Disorder.",
-      "kn": "KN44",
-      "kn_explanation": "This question targets treatment modalities and evidence supporting telehealth interventions, fitting under treatment and intervention knowledge.",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
       "difficulty": "medium",
       "quality_comment": "Distractors include plausible but less supported or inappropriate options, aiding in testing knowledge of empirically supported modern treatments."
     },
@@ -175,8 +340,8 @@
       ],
       "answer": "In vivo exposure and response prevention",
       "explanation": "1. The correct answer, \"In vivo exposure and response prevention,\" is supported by the reference material, which states that this is the first-line treatment for agoraphobia. It emphasizes the use of graded exposure to feared situations, which helps individuals learn to tolerate high levels of fear and anxiety, thereby reducing avoidance behaviors and improving functioning over time.\n\n2. The option \"Long-term benzodiazepine therapy\" is incorrect because benzodiazepines are typically used for immediate short-term relief of acute anxiety rather than as a long-term treatment strategy, which can lead to tolerance and dependence. \"Group psychodynamic psychotherapy\" is not mentioned as a recommended treatment for agoraphobia in the reference material, which focuses on exposure-based therapies as the most effective approach. Lastly, while \"Applied tension exercises\" may be beneficial for specific phobias, particularly the blood-injection-injury subtype, they are not identified as a primary treatment for agoraphobia, where exposure and response prevention is emphasized instead.",
-      "kn": "KN44",
-      "kn_explanation": "This question targets treatment interventions specifically for agoraphobia supported by empirical evidence, fitting under treatment and intervention knowledge.",
+      "kn": "KN40",
+      "kn_explanation": "This question is best aligned with KN40 because it tests Measurement of outcomes and changes due to prevention or intervention efforts with individuals, couples, families, groups, and organizations.",
       "difficulty": "easy",
       "quality_comment": "The options mix various interventions to challenge knowledge of evidence-based practice while maintaining clarity and plausibility."
     },
@@ -189,7 +354,7 @@
         "Generalized Anxiety Disorder"
       ],
       "answer": "Separation Anxiety Disorder",
-      "explanation": "1. **Separation Anxiety Disorder** is the correct diagnosis for the 9-year-old child because the symptoms of excessive distress when anticipating separation from parents, reluctance to go to school, and recurrent physical complaints (headaches and stomachaches) align with the criteria for this disorder. According to the reference material, separation anxiety disorder involves developmentally inappropriate and excessive fear of being separated from attachment figures, with symptoms lasting for at least four weeks and causing significant distress or impaired functioning, which fits the child's clinical presentation.\n\n2. The other options are incorrect for the following reasons: \n\n- **Social Anxiety Disorder** involves a fear of social situations where the individual may be scrutinized or negatively evaluated, which is not the primary concern in this child's case, as the symptoms are focused on separation rather than social scrutiny.\n\n- **Specific Phobia** is characterized by an intense fear of a specific object or situation, leading to avoidance; however, the child's symptoms do not indicate a fear of a specific object or situation, but rather a fear of separation from parents.\n\n- **Generalized Anxiety Disorder** involves excessive anxiety and worry about multiple events or activities, lasting at least six months, and the child\u2019s symptoms are specifically related to separation rather than a broader pattern of worry about various life events.",
+      "explanation": "1. **Separation Anxiety Disorder** is the correct diagnosis for the 9-year-old child because the symptoms of excessive distress when anticipating separation from parents, reluctance to go to school, and recurrent physical complaints (headaches and stomachaches) align with the criteria for this disorder. According to the reference material, separation anxiety disorder involves developmentally inappropriate and excessive fear of being separated from attachment figures, with symptoms lasting for at least four weeks and causing significant distress or impaired functioning, which fits the child's clinical presentation.\n\n2. The other options are incorrect for the following reasons: \n\n- **Social Anxiety Disorder** involves a fear of social situations where the individual may be scrutinized or negatively evaluated, which is not the primary concern in this child's case, as the symptoms are focused on separation rather than social scrutiny.\n\n- **Specific Phobia** is characterized by an intense fear of a specific object or situation, leading to avoidance; however, the child's symptoms do not indicate a fear of a specific object or situation, but rather a fear of separation from parents.\n\n- **Generalized Anxiety Disorder** involves excessive anxiety and worry about multiple events or activities, lasting at least six months, and the child’s symptoms are specifically related to separation rather than a broader pattern of worry about various life events.",
       "kn": "KN36",
       "kn_explanation": "This question assesses differential diagnosis and diagnostic features related to anxiety disorders in children, within classification and diagnosis.",
       "difficulty": "medium",
@@ -205,8 +370,8 @@
       ],
       "answer": "Applying motivational interviewing as a pretreatment to reduce resistance and improve engagement",
       "explanation": "1. **Correct Answer Explanation**: \"Applying motivational interviewing as a pretreatment to reduce resistance and improve engagement\" is the correct answer because research indicates that combining motivational interviewing with cognitive-behavioral therapy (CBT) can enhance treatment effectiveness by reducing resistance to treatment and improving patient engagement in the therapeutic process. This approach prepares patients for CBT by addressing ambivalence and fostering a commitment to change, making it an evidence-based method for enhancing motivation.\n\n2. **Incorrect Options**:\n   - **Administering benzodiazepines prior to CBT sessions to decrease anxiety symptoms**: This option is incorrect because while benzodiazepines may provide short-term relief from anxiety, they do not address motivation or engagement in therapy, and their long-term use can lead to dependence.\n   - **Using psychoeducation alone without direct exposure or cognitive restructuring**: This option is incorrect because psychoeducation is not sufficient on its own to enhance motivation; effective treatment for anxiety disorders typically requires exposure and cognitive restructuring as core components of CBT.\n   - **Scheduling brief supportive counseling sessions without specific therapeutic techniques**: This option is incorrect because brief supportive counseling lacks the structured therapeutic techniques necessary to effectively enhance motivation and engagement in CBT for anxiety disorders.",
-      "kn": "KN37",
-      "kn_explanation": "This item assesses knowledge of evidence-based interpretation of data including strategies to improve treatment adherence and effectiveness in anxiety disorders.",
+      "kn": "KN31",
+      "kn_explanation": "This question is best aligned with KN31 because it tests Assessment methods and their strengths and limitations (e.g., self-report, multi-informant reports, psychophysiological measures, work samples, assessment centers, direct observation, structured and semi-structured interviews).",
       "difficulty": "medium",
       "quality_comment": "The item focuses on integrated intervention strategies supported by research, with distractors reflecting common but less evidence-supported approaches."
     },
@@ -234,7 +399,7 @@
         "Guarantees immediate symptom extinction after a single session"
       ],
       "answer": "Allows controlled, safe exposure to feared stimuli that may be difficult to replicate in vivo",
-      "explanation": "1. The correct answer, \"Allows controlled, safe exposure to feared stimuli that may be difficult to replicate in vivo,\" highlights the primary benefit of virtual reality exposure therapy (VRET) in anxiety disorder treatment. VRET provides a safe and controlled environment to expose patients to feared stimuli, which can be particularly beneficial when real-life exposure is impractical or poses significant risk, such as heights or flying. This method allows for gradual exposure while ensuring the patient\u2019s safety, which is crucial in the treatment of anxiety disorders.\n\n2. The first incorrect option, \"Facilitates rapid neurotransmitter changes to reduce anxiety,\" is wrong because VRET does not primarily function by altering neurotransmitter levels; rather, it focuses on exposure techniques to help patients confront and manage their fears. The second incorrect option, \"Eliminates the need for therapist involvement, improving cost-efficiency,\" is incorrect as VRET typically requires therapist guidance to facilitate exposure and ensure proper therapeutic techniques are employed, thus maintaining the need for professional involvement. Lastly, the option \"Guarantees immediate symptom extinction after a single session\" is misleading because while VRET can be effective, symptom extinction is a process that usually requires multiple sessions and cannot be guaranteed after just one session.",
+      "explanation": "1. The correct answer, \"Allows controlled, safe exposure to feared stimuli that may be difficult to replicate in vivo,\" highlights the primary benefit of virtual reality exposure therapy (VRET) in anxiety disorder treatment. VRET provides a safe and controlled environment to expose patients to feared stimuli, which can be particularly beneficial when real-life exposure is impractical or poses significant risk, such as heights or flying. This method allows for gradual exposure while ensuring the patient’s safety, which is crucial in the treatment of anxiety disorders.\n\n2. The first incorrect option, \"Facilitates rapid neurotransmitter changes to reduce anxiety,\" is wrong because VRET does not primarily function by altering neurotransmitter levels; rather, it focuses on exposure techniques to help patients confront and manage their fears. The second incorrect option, \"Eliminates the need for therapist involvement, improving cost-efficiency,\" is incorrect as VRET typically requires therapist guidance to facilitate exposure and ensure proper therapeutic techniques are employed, thus maintaining the need for professional involvement. Lastly, the option \"Guarantees immediate symptom extinction after a single session\" is misleading because while VRET can be effective, symptom extinction is a process that usually requires multiple sessions and cannot be guaranteed after just one session.",
       "kn": "KN41",
       "kn_explanation": "This question addresses the use of technology in assessment and intervention, fitting the domain topic of technology in testing and treatment.",
       "difficulty": "medium",
@@ -251,8 +416,8 @@
       "answer": "Avoiding social situations reduces anxiety and reinforces the avoidance behavior.",
       "explanation": "1. The correct answer, \"Avoiding social situations reduces anxiety and reinforces the avoidance behavior,\" illustrates negative reinforcement in social anxiety by demonstrating that when individuals avoid feared social situations, their anxiety decreases. This reduction in anxiety serves as a reward, reinforcing the avoidance behavior, making it more likely that they will continue to avoid such situations in the future. This cycle perpetuates the disorder, as the individual never learns to confront and manage their anxiety in social contexts.\n\n2. The option \"Engaging in social situations increases feelings of anxiety\" is incorrect because it does not illustrate negative reinforcement; rather, it describes a situation that may initially heighten anxiety but does not explain how avoidance is reinforced. The statement \"Practicing social skills leads to improved interactions\" is also incorrect, as it focuses on a positive outcome of engaging in social situations, which contradicts the concept of avoidance and its reinforcement. Lastly, \"Seeking therapy decreases the symptoms of anxiety\" is incorrect because it implies a proactive approach to managing anxiety rather than avoidance; therapy can help reduce symptoms but does not illustrate the negative reinforcement associated with avoidance behaviors in social anxiety.",
       "difficulty": "easy",
-      "kn": "KN7",
-      "kn_explanation": "This question assesses knowledge of learning theory principles, specifically operant conditioning, which is a foundation of major research-based theories and models of learning.",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
       "quality_comment": "This question effectively tests the understanding of negative reinforcement in the context of social anxiety.",
       "is_lock_in_drill": true,
       "lock_in_level": "easier",
@@ -271,8 +436,8 @@
       "answer": "Performing compulsive rituals reduces anxiety and reinforces the ritualistic behavior.",
       "explanation": "1. The correct answer, \"Performing compulsive rituals reduces anxiety and reinforces the ritualistic behavior,\" exemplifies operant conditioning in OCD because the compulsions serve to alleviate the anxiety caused by obsessions. This reduction in anxiety acts as a negative reinforcement, encouraging the individual to continue performing these rituals to avoid distress, thereby maintaining the cycle of OCD.\n\n2. The option \"Experiencing intrusive thoughts leads to increased compulsive behavior\" is incorrect because it describes a relationship between thoughts and behaviors but does not illustrate the reinforcement process that maintains compulsions. \"Ignoring compulsions leads to a decrease in anxiety over time\" is wrong because it contradicts the nature of OCD, where ignoring compulsions typically increases anxiety rather than decreases it. Lastly, \"Seeking reassurance from others alleviates anxiety temporarily\" is incorrect because, while it may provide short-term relief, it does not highlight the negative reinforcement mechanism that strengthens compulsive behaviors in the long term.",
       "difficulty": "hard",
-      "kn": "KN7",
-      "kn_explanation": "This question assesses knowledge of learning theory principles, specifically operant conditioning, which is a foundation of major research-based theories and models of learning.",
+      "kn": "KN32",
+      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
       "quality_comment": "This question challenges the test-taker to apply their understanding of operant conditioning specifically to OCD, enhancing critical thinking.",
       "is_lock_in_drill": true,
       "lock_in_level": "harder",

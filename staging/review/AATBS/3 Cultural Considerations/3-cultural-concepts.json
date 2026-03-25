@@ -1,0 +1,64 @@
+{
+  "questions": [
+    {
+      "stem": "A recent immigrant maintains strong ties to her original culture, speaks her home language with family, and continues longstanding traditions, while also participating actively in the broader culture at work and in her neighborhood. Berry would describe this acculturation strategy as:",
+      "options": [
+        "Assimilation",
+        "Separation",
+        "Integration",
+        "Marginalization"
+      ],
+      "answer": "Integration",
+      "explanation": "Integration is the best answer because the client is maintaining her original culture while also adopting and participating in the majority culture. Assimilation is wrong because it involves rejecting the original culture. Separation is wrong because it involves maintaining the original culture while rejecting the majority culture. Marginalization is wrong because it involves rejecting both cultural frameworks.",
+      "kn": "KN18",
+      "kn_explanation": "This question assesses cultural psychology by testing knowledge of acculturation strategies.",
+      "difficulty": "easy",
+      "quality_comment": "Straightforward acculturation item with clearly parallel options and no giveaway wording.",
+      "suggestedLesson": "3-cultural-concepts",
+      "suggestedParagraph": "## Acculturation: Navigating Between Two Cultural Worlds",
+      "lessonExcerpt": "Integration: Keeping your original culture while also adopting the majority culture.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL PSYCHOLOGY"
+    },
+    {
+      "stem": "A Black client is guarded with a White therapist during the first several sessions but is generally open and relaxed with Black professionals in other settings. There is no evidence of broad distrust toward everyone. Ridley would most likely describe this as:",
+      "options": [
+        "Functional paranoia",
+        "Healthy cultural paranoia",
+        "Diagnostic overshadowing",
+        "Cultural encapsulation"
+      ],
+      "answer": "Healthy cultural paranoia",
+      "explanation": "Healthy cultural paranoia is the best answer because the client's caution is selective and grounded in real experiences of prejudice rather than being pervasive distrust toward everyone. Functional paranoia is wrong because that would involve broad, maladaptive distrust across people and contexts. Diagnostic overshadowing is wrong because it refers to overattributing problems to one salient identity or diagnosis. Cultural encapsulation is wrong because it refers to the therapist's inability to work effectively across cultures.",
+      "kn": "KN20",
+      "kn_explanation": "This question focuses on the manifestations and psychological effects of oppression and discrimination.",
+      "difficulty": "medium",
+      "quality_comment": "Good culture-and-clinical-formulation item that distinguishes adaptive caution from psychopathology.",
+      "suggestedLesson": "3-cultural-concepts",
+      "suggestedParagraph": "## Healthy Cultural Paranoia: When Distrust Makes Sense",
+      "lessonExcerpt": "Healthy cultural paranoia is different. It's a rational response to real experiences of prejudice and discrimination.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL PSYCHOLOGY"
+    },
+    {
+      "stem": "Which of the following comments is the best example of a microinvalidation rather than a microinsult or microassault?",
+      "options": [
+        "A supervisor tells an Asian American employee, \"You speak English so well.\"",
+        "A coworker says, \"I do not see color. We are all just human.\"",
+        "A manager assumes a Black applicant was hired only because of affirmative action.",
+        "A student intentionally uses a racial slur in class discussion."
+      ],
+      "answer": "A coworker says, \"I do not see color. We are all just human.\"",
+      "explanation": "This is the best answer because claiming not to see color dismisses and negates the lived significance of race in a person's experience, which is the defining feature of a microinvalidation. The English comment is wrong because it is more consistent with a microinsult that implies foreignness. The affirmative-action assumption is also a microinsult because it demeans competence. The racial-slur example is a microassault because it is explicit and overtly discriminatory.",
+      "kn": "KN20",
+      "kn_explanation": "This question assesses understanding of oppression by testing recognition of racial microaggression subtypes.",
+      "difficulty": "medium",
+      "quality_comment": "Useful subtype-discrimination item built from common real-world examples.",
+      "suggestedLesson": "3-cultural-concepts",
+      "suggestedParagraph": "## Racial Microaggressions: Death by a Thousand Cuts",
+      "lessonExcerpt": "Microinvalidations dismiss or negate the experiences of people of color: Claiming \"I don't see color\" (denying that race affects experience)",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL PSYCHOLOGY"
+    }
+  ]
+}

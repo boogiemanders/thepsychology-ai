@@ -1,0 +1,64 @@
+{
+  "questions": [
+    {
+      "stem": "A student studies a list of 15 terms and is tested immediately, recalling the first and last items best. When the same student is required to wait 30 seconds before recall, which part of the serial position effect is most likely to disappear?",
+      "options": [
+        "Primacy effect",
+        "Recency effect",
+        "Chunking effect",
+        "Encoding specificity effect"
+      ],
+      "answer": "Recency effect",
+      "explanation": "The recency effect is the best answer because the last items are still in short-term memory immediately after study, but they fade during a delay. The primacy effect is wrong because early list items are more likely to have been rehearsed into long-term memory and therefore remain relatively intact. Chunking is wrong because it refers to grouping material to increase short-term capacity. Encoding specificity is wrong because it concerns similarity between learning and retrieval conditions, not the serial-position pattern after a delay.",
+      "kn": "KN8",
+      "kn_explanation": "This question assesses a major model of memory by applying the serial position effect to short-term and long-term memory processes.",
+      "difficulty": "medium",
+      "quality_comment": "High-yield memory-systems item built around a common exam manipulation: inserting a short delay.",
+      "suggestedLesson": "2-memory",
+      "suggestedParagraph": "### The Serial Position Effect: Proof the Model Works",
+      "lessonExcerpt": "Wait 30 seconds before the test, and the recency effect disappears.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR"
+    },
+    {
+      "stem": "A client recently changed phone numbers but keeps giving friends the old number whenever asked for contact information. Which process best explains this memory error?",
+      "options": [
+        "Retroactive interference",
+        "Proactive interference",
+        "State-dependent learning",
+        "Repetition priming"
+      ],
+      "answer": "Proactive interference",
+      "explanation": "Proactive interference is the best answer because previously learned information, the old phone number, is interfering with the recall of newly learned information. Retroactive interference is wrong because that refers to new learning disrupting recall of older information. State-dependent learning is wrong because it involves matching internal states across encoding and retrieval. Repetition priming is wrong because it refers to prior exposure influencing responses without conscious awareness, not confusion between old and new information.",
+      "kn": "KN8",
+      "kn_explanation": "This question tests a major memory principle, interference, and its application to everyday forgetting.",
+      "difficulty": "easy",
+      "quality_comment": "Simple but effective interference item using everyday wording instead of textbook phrasing.",
+      "suggestedLesson": "2-memory",
+      "suggestedParagraph": "## Why We Forget: Trace Decay vs. Interference",
+      "lessonExcerpt": "Proactive interference: Old information blocks new learning.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR"
+    },
+    {
+      "stem": "A client says, \"I do not usually forget what people tell me, but I keep forgetting that I have supervision on Tuesdays unless I set three reminders.\" This difficulty is most directly a problem in:",
+      "options": [
+        "Semantic memory",
+        "Episodic memory",
+        "Prospective memory",
+        "Implicit memory"
+      ],
+      "answer": "Prospective memory",
+      "explanation": "Prospective memory is the best answer because the problem is remembering to carry out an intention in the future. Semantic memory is wrong because that involves facts and general knowledge. Episodic memory is wrong because it involves recall of personal past events. Implicit memory is wrong because it involves memory expressed without conscious retrieval, such as skills or priming.",
+      "kn": "KN8",
+      "kn_explanation": "This question assesses knowledge of memory systems by distinguishing prospective memory from other long-term memory types.",
+      "difficulty": "easy",
+      "quality_comment": "Clear distinction between future-intention memory failures and standard recall problems.",
+      "suggestedLesson": "2-memory",
+      "suggestedParagraph": "### Retrospective vs. Prospective Memory",
+      "lessonExcerpt": "Prospective memory: Remembering to do something in the future",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR"
+    }
+  ]
+}

@@ -9,7 +9,7 @@
  *   node scripts/generate-from-references.mjs [--domain 1] [--dry-run]
  *
  * Reads from:  staging/pdf-parsed/domain-*.json
- * Writes to:   staging/review/questionsGPT/{domain-folder}/{topic}.json
+ * Writes to:   staging/review/psychprep/{domain-folder}/{topic}.json
  */
 
 import fs from 'fs/promises'
@@ -34,7 +34,7 @@ const DOMAIN_FOLDER_MAP = {
 }
 
 const PARSED_DIR = path.resolve('staging/pdf-parsed')
-const REVIEW_DIR = path.resolve('staging/review/questionsGPT')
+const REVIEW_DIR = path.resolve('staging/review/psychprep')
 const CONTENT_DIR = path.resolve('topic-content-v4')
 const OPENAI_MODEL = process.env.OPENAI_MODEL || 'gpt-4o-mini'
 
@@ -453,7 +453,7 @@ async function main() {
     await processDomain(filePath)
   }
 
-  console.log('\nDone. Review generated questions in staging/review/questionsGPT/')
+  console.log('\nDone. Review generated questions in staging/review/psychprep/')
 }
 
 main().catch((err) => {

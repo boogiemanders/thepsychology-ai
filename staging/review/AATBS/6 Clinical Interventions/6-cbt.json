@@ -1,0 +1,64 @@
+{
+  "questions": [
+    {
+      "stem": "A practicum student receives an evaluation that is strongly positive overall but includes one comment about improving time management. For the rest of the day, the student thinks only about that criticism and concludes, \"My supervisor thinks I am doing a terrible job.\" Beck would describe this thinking error as:",
+      "options": [
+        "Selective abstraction",
+        "Personalization",
+        "Emotional reasoning",
+        "Arbitrary inference"
+      ],
+      "answer": "Selective abstraction",
+      "explanation": "Selective abstraction is the best answer because the student is focusing on one negative detail while ignoring the broader positive feedback. Personalization is wrong because the problem is not wrongly taking responsibility for an outside event. Emotional reasoning is wrong because the student is not using a feeling as proof of a fact. Arbitrary inference is wrong because, although the conclusion is unsupported, the defining pattern here is the narrow focus on one negative detail while discounting the rest of the evaluation.",
+      "kn": "KN43",
+      "kn_explanation": "This question assesses a contemporary research-based model of treatment, specifically Beck's cognitive therapy model.",
+      "difficulty": "medium",
+      "quality_comment": "Classic CBT discrimination item with plausible distortions from the same concept family.",
+      "suggestedLesson": "6-cbt",
+      "suggestedParagraph": "### The Three Core Components",
+      "lessonExcerpt": "Selective Abstraction | Focusing on one negative detail while ignoring everything else",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT/INTERVENTION"
+    },
+    {
+      "stem": "In CBT, a client says, \"If I make one mistake during the presentation, everyone will know I am incompetent.\" The therapist responds, \"Let's treat that prediction as a hypothesis and review the evidence for and against it.\" This intervention best illustrates:",
+      "options": [
+        "Free association",
+        "Collaborative empiricism",
+        "Paradoxical intention",
+        "Unconditional positive regard"
+      ],
+      "answer": "Collaborative empiricism",
+      "explanation": "Collaborative empiricism is the best answer because the therapist and client are examining the client's thought together as a testable hypothesis rather than treating it as fact. Free association is wrong because that is a psychodynamic technique aimed at uncovering unconscious material. Paradoxical intention is wrong because the therapist is not prescribing the feared behavior or symptom. Unconditional positive regard is wrong because, while warmth may be present, the key CBT mechanism here is joint evidence-testing.",
+      "kn": "KN43",
+      "kn_explanation": "This question tests a core process within a contemporary research-based treatment model, CBT.",
+      "difficulty": "medium",
+      "quality_comment": "Captures the collaborative stance of CBT rather than just naming a technique.",
+      "suggestedLesson": "6-cbt",
+      "suggestedParagraph": "### How CBT Works in Practice",
+      "lessonExcerpt": "Therapist and client become like scientific partners investigating evidence together.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT/INTERVENTION"
+    },
+    {
+      "stem": "A therapist is completing a Safety Planning Intervention with a client who has recurrent suicidal crises. The client has already identified warning signs and tried internal coping strategies, but the suicidal urge remains intense. According to the sequence of the intervention, what should come next?",
+      "options": [
+        "Ask the client to sign a no-suicide contract before continuing",
+        "Contact social supports who can provide distraction",
+        "Return to earlier childhood experiences that may explain the crisis",
+        "Move immediately to hospitalization in every case"
+      ],
+      "answer": "Contact social supports who can provide distraction",
+      "explanation": "This is the best answer because the Safety Planning Intervention proceeds from warning signs to internal coping strategies and then to contacting social supports for distraction before moving to people who can actively help resolve the crisis or to professional services. The no-suicide contract option is wrong because those contracts are not evidence-based. The childhood-history option is wrong because safety planning is a concrete crisis-management tool, not an exploratory intervention. Automatic hospitalization is wrong because the model uses graduated steps and does not require the same response in every situation.",
+      "kn": "KN44",
+      "kn_explanation": "This question assesses an evidence-based treatment technique used in suicide prevention.",
+      "difficulty": "hard",
+      "quality_comment": "Procedure-sequence item with clinically realistic distractors, including the common no-suicide-contract trap.",
+      "suggestedLesson": "6-cbt",
+      "suggestedParagraph": "### Safety Planning Intervention (SPI)",
+      "lessonExcerpt": "Use internal coping strategies (distraction, self-soothing). Contact social supports for distraction.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT/INTERVENTION"
+    }
+  ]
+}
