@@ -9,7 +9,7 @@
         "better; subordinate"
       ],
       "answer": "better; dominant",
-      "explanation": "Zajonc's drive theory states that the presence of others increases physiological arousal, which strengthens the dominant (most likely) response. For a well-rehearsed task, the dominant response is the correct one, so arousal improves performance (social facilitation). Therefore, a well-prepared student would perform better in front of her committee. Option A is incorrect because for well-learned tasks, the dominant response leads to better, not worse, performance. Options C and D incorrectly reference the subordinate response — arousal strengthens the dominant response, not the subordinate one.",
+      "explanation": "Zajonc's drive theory states that the presence of others increases physiological arousal, which strengthens the dominant (most likely) response. For a well-rehearsed task, the dominant response is the correct one, so arousal improves performance (social facilitation). Therefore, a well-prepared student would perform better in front of her committee. Option A is incorrect because for well-learned tasks, the dominant response leads to better, not worse, performance. Options C and D incorrectly reference the subordinate response \u2014 arousal strengthens the dominant response, not the subordinate one.",
       "kn": "KN16",
       "kn_explanation": "Social facilitation is a group/social influence process",
       "difficulty": "easy",
@@ -30,7 +30,7 @@
         "The termination stage, in which members process feelings about the group ending"
       ],
       "answer": "The conflict stage, characterized by rebellion toward leaders and attempts at dominance",
-      "explanation": "Yalom's model describes three stages of group development: orientation/dependency, conflict/dominance, and cohesiveness. The second stage is characterized by conflict among group members, rebellion toward group leaders, and attempts at dominance—exactly what is described in the scenario. The orientation stage (A) involves hesitant participation and seeking structure, not challenging leadership. The cohesiveness stage (C) involves trust and mutual concern, which has not yet developed. There is no separate termination stage in Yalom's three-stage model (D).",
+      "explanation": "Yalom's model describes three stages of group development: orientation/dependency, conflict/dominance, and cohesiveness. The second stage is characterized by conflict among group members, rebellion toward group leaders, and attempts at dominance\u2014exactly what is described in the scenario. The orientation stage (A) involves hesitant participation and seeking structure, not challenging leadership. The cohesiveness stage (C) involves trust and mutual concern, which has not yet developed. There is no separate termination stage in Yalom's three-stage model (D).",
       "kn": "KN16",
       "kn_explanation": "Group development stages (Tuckman's storming) and group process",
       "difficulty": "medium",
@@ -51,7 +51,7 @@
         "Risky shift, because groups tend to make more extreme decisions in the direction of risk"
       ],
       "answer": "Group polarization, because discussion amplified the group's initial cautious inclination",
-      "explanation": "Group polarization describes the tendency for groups to make more extreme decisions than individual members would make alone—shifting toward a more intense version of the average initial position. Since team members initially leaned toward caution, group discussion amplified that cautious tendency. Groupthink (A) involves suppression of dissent and pressure toward uniformity, but the scenario describes a natural amplification of an existing tendency, not suppression of disagreement. Social loafing (C) involves reduced individual effort in groups, not decision-making shifts. Risky shift (D) is incorrect because it specifically refers to polarization toward riskier decisions, whereas this scenario shows a shift toward greater caution—demonstrating that polarization can go in either direction.",
+      "explanation": "Group polarization describes the tendency for groups to make more extreme decisions than individual members would make alone\u2014shifting toward a more intense version of the average initial position. Since team members initially leaned toward caution, group discussion amplified that cautious tendency. Groupthink (A) involves suppression of dissent and pressure toward uniformity, but the scenario describes a natural amplification of an existing tendency, not suppression of disagreement. Social loafing (C) involves reduced individual effort in groups, not decision-making shifts. Risky shift (D) is incorrect because it specifically refers to polarization toward riskier decisions, whereas this scenario shows a shift toward greater caution\u2014demonstrating that polarization can go in either direction.",
       "kn": "KN16",
       "kn_explanation": "Group polarization is a classic group process phenomenon",
       "difficulty": "hard",
@@ -59,7 +59,7 @@
       "suggestedLesson": "3-group-influences",
       "suggestedParagraph": "## The Dark Side: When Groups Go Wrong",
       "lessonExcerpt": "Group polarization describes the tendency for groups to make more extreme decisions than individual members would make alone. After discussion, the group shifts toward a more intense version of the average initial position. Either riskier or more cautious.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
       "inspirationIndex": 23
     },
@@ -419,6 +419,132 @@
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
       "inspirationIndex": 22
+    },
+    {
+      "stem": "A residential psychologist is consulting on a high-density urban housing project where tenants report chronic irritability, frequent interpersonal conflicts, and reduced willingness to assist neighbors compared to residents of lower-density buildings in the same neighborhood. Which explanation from environmental psychology research MOST accurately accounts for these findings?",
+      "options": [
+        "Prolonged crowding reduces baseline arousal through habituation, paradoxically increasing irritability during low-stimulation periods",
+        "High residential density elevates physiological arousal, which heightens aggressive responding and diminishes prosocial behavior",
+        "Crowding selectively impairs performance on complex cognitive tasks while leaving interpersonal behavior largely unaffected",
+        "The behavioral effects of crowding are mediated entirely by perceived loss of privacy rather than objective physical density"
+      ],
+      "answer": "High residential density elevates physiological arousal, which heightens aggressive responding and diminishes prosocial behavior",
+      "explanation": "Environmental psychology research consistently links residential crowding to elevated physiological arousal, which in turn is associated with increased irritability and aggression and reduced prosocial helping. Option A incorrectly inverts the arousal model \u2014 crowding does not reliably produce habituation leading to reduced arousal. Option C incorrectly limits crowding effects to cognitive performance while excluding social behavior, when interpersonal outcomes are among the most robust findings. Option D overstates the singular role of perceived privacy; objective physical density contributes to arousal independently of perceived control or privacy.",
+      "kn": "KN3",
+      "kn_explanation": "Environmental crowding, arousal, and behavior fall within the Social and Multicultural Bases of Behavior domain, specifically environmental psychology's influence on social conduct.",
+      "difficulty": "medium",
+      "quality_comment": "Applied vignette grounded in environmental psychology research; tests the arousal mechanism with plausible distractors that reflect common misconceptions.",
+      "suggestedLesson": "3-group-influences",
+      "suggestedParagraph": "## When Others Watch: Social Facilitation and Social Inhibition",
+      "lessonExcerpt": "Lesson content does not explicitly address environmental crowding. Zajonc's drive theory (covered in 3-group-influences.md) provides a partial conceptual bridge via arousal mechanisms but crowding-specific content is absent from the provided files.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 1
+    },
+    {
+      "stem": "A management consultant is hired to reduce social loafing on a software engineering team where individual contributions are indistinguishable in the final product and the team shares a single performance bonus regardless of individual output. Based on the empirical literature on group performance, which structural redesign has the STRONGEST support for eliminating free-rider behavior?",
+      "options": [
+        "Increasing team size so that workload is distributed more broadly and no single individual feels undue pressure",
+        "Replacing individual performance metrics with team-only metrics to foster collective identity and interdependence",
+        "Restructuring tasks so that each member's contribution is uniquely identifiable and indispensable to completing the final product",
+        "Rotating task assignments monthly so that each member's diverse contributions are visible to the full team over time"
+      ],
+      "answer": "Restructuring tasks so that each member's contribution is uniquely identifiable and indispensable to completing the final product",
+      "explanation": "Social loafing is substantially reduced when individual contributions are both identifiable and essential to group success. Identifiability increases evaluation apprehension, and task indispensability reduces diffusion of responsibility \u2014 the two primary mechanisms driving social loafing. Option A is counterproductive; larger teams increase anonymity and diffusion of responsibility, typically worsening social loafing. Option B (team-only metrics) preserves collective anonymity and maintains the reward structure that enabled loafing in the first place. Option D (task rotation) may provide some visibility benefits but does not create the sustained identifiability and indispensability that directly address the core mechanisms.",
+      "kn": "KN3",
+      "kn_explanation": "Task design and individual contribution identifiability as moderators of social loafing are core group performance topics within Domain 3: Social and Multicultural Bases of Behavior.",
+      "difficulty": "medium",
+      "quality_comment": "Applied organizational vignette that tests mechanistic understanding of social loafing; Option B is a particularly effective distractor because collective reward structures are intuitively appealing but empirically counterproductive.",
+      "suggestedLesson": "3-group-influences",
+      "suggestedParagraph": "## When Social Loafing Doesn't Happen",
+      "lessonExcerpt": "Social loafing isn't inevitable. Research shows it's less likely when: ...Individual contributions are clearly necessary for success... Each person's contribution can be identified and evaluated.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 8
+    },
+    {
+      "stem": "An experienced concert violinist who has performed the same concerto hundreds of times is asked, on the same evening, to sight-read an unfamiliar contemporary piece she has never rehearsed. Both performances occur before a packed concert hall. According to Zajonc's drive theory of social facilitation, which outcome is MOST predicted?",
+      "options": [
+        "Audience presence will improve both performances because the violinist's general expertise generalizes the facilitation effect across tasks",
+        "Audience presence will improve her performance on the familiar concerto but impair her performance on the unfamiliar sight-reading piece",
+        "Audience effects will occur only if the audience is perceived as evaluative; a supportive audience will enhance performance on both pieces equally",
+        "The heightened arousal from the audience will disrupt automatic motor programs regardless of task familiarity, uniformly impairing both performances"
+      ],
+      "answer": "Audience presence will improve her performance on the familiar concerto but impair her performance on the unfamiliar sight-reading piece",
+      "explanation": "Zajonc's drive theory holds that the mere presence of others increases physiological arousal, which energizes the dominant response for any given task. For the well-practiced concerto, the dominant response is correct and fluent execution, so arousal facilitates performance. For the unfamiliar sight-reading piece, the dominant response is hesitant and error-prone, so the same arousal impairs performance. Option A incorrectly assumes that expertise generalizes the facilitation benefit to all tasks \u2014 Zajonc's model is explicit that the task's degree of mastery, not the performer's overall expertise, determines the direction of the effect. Option C describes evaluation apprehension theory (Cottrell et al., 1968), not Zajonc's mere-presence account, which attributes effects to arousal from presence alone rather than perceived evaluation. Option D incorrectly predicts uniform impairment, contradicting the differential prediction central to drive theory.",
+      "kn": "KN3",
+      "kn_explanation": "Social facilitation and inhibition as a function of task mastery and audience-induced arousal is a core group influence topic within Domain 3: Social and Multicultural Bases of Behavior.",
+      "difficulty": "hard",
+      "quality_comment": "Precisely constructed two-condition vignette that demands differential prediction; the Cottrell distractor effectively tests ability to distinguish competing theoretical accounts of the same phenomenon.",
+      "suggestedLesson": "3-group-influences",
+      "suggestedParagraph": "## When Others Watch: Social Facilitation and Social Inhibition",
+      "lessonExcerpt": "Zajonc's drive theory explains why this happens. The presence of others increases your physiological arousal...This arousal strengthens whatever response is dominant (most likely to occur) in that situation. For well-learned tasks, your dominant response is the correct one, so arousal helps. For difficult or new tasks, your dominant response is often incorrect or hesitant, so arousal hurts your performance.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 9
+    },
+    {
+      "stem": "An ongoing therapy group has met weekly for two months. During the first several sessions, members were polite, tended to seek the facilitator's approval before speaking, and kept disclosures superficial. In the eighth session, a previously cooperative member directly confronts the facilitator: 'You always validate the same people and dismiss what I say.' Two other members immediately express similar grievances about the facilitator's perceived favoritism. According to developmental models of group therapy, this pattern of member hostility toward the leader MOST likely signals that the group has entered:",
+      "options": [
+        "The initial/orientation stage, as members continue to test whether the group environment is psychologically safe",
+        "The transition/conflict stage, as members struggle with issues of control, authority, and leader dependence",
+        "The working stage, as heightened cohesion produces the trust necessary for direct confrontation of the facilitator",
+        "The termination stage, as members experience and express anger in response to the anticipated loss of the group"
+      ],
+      "answer": "The transition/conflict stage, as members struggle with issues of control, authority, and leader dependence",
+      "explanation": "In standard group therapy developmental models (e.g., Corey; Yalom), the transition or conflict stage \u2014 analogous to Tuckman's 'storming' phase \u2014 follows an initial orientation stage and is characterized by member resistance, challenges to the leader's authority, interpersonal conflict, anxiety about self-disclosure, and struggles over control and dependence. The chronology in the vignette (initial polite phase followed by emergent hostility at session eight) and the behavioral content (direct challenge to the facilitator, rapid peer joining) are hallmark features of this stage. The initial/orientation stage is characterized by anxiety, cautious testing of norms, and surface-level interaction \u2014 not overt hostility to leadership. The working stage is marked by cohesion, deeper self-disclosure, and productive therapeutic work; conflict at this stage would represent disruption rather than normal development. The termination stage involves themes of loss, closure, and transfer of learning; while anger can appear, it is oriented toward the group ending rather than authority challenges.",
+      "kn": "KN3",
+      "kn_explanation": "This question assesses group therapy development within the Social and Multicultural Bases of Behavior domain, specifically the stage during which member hostility toward the group leader characteristically emerges.",
+      "difficulty": "hard",
+      "quality_comment": "Clinically important scenario with realistic developmental cues; requires knowledge of stage-specific behavioral markers rather than simple stage naming; distractors are precisely matched to plausible but incorrect developmental stages.",
+      "suggestedLesson": "3-group-influences",
+      "suggestedParagraph": "Introduction: Why Groups Change Everything",
+      "lessonExcerpt": "You've probably noticed something interesting about your own behavior: you're not quite the same person when you're alone versus when you're surrounded by others. Maybe you crush presentations when it's just you and your slides, but freeze up in front of a crowd.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 19
+    },
+    {
+      "stem": "In an environmental psychology experiment, two groups of participants complete proofreading tasks while exposed to loud, unpredictable noise. Group A is given a button they are told can stop the noise, but are asked not to press it; Group B has no such button. Despite the fact that Group A never actually uses the button, they make significantly fewer errors and report less frustration than Group B. This finding is BEST accounted for by which of the following?",
+      "options": [
+        "Learned helplessness: Group B's lack of control extinguishes motivated responding more rapidly than noise alone would",
+        "Perceived control: the belief that one can terminate an aversive stimulus reduces its disruptive effects even when control is never exercised",
+        "Reactance: providing a control option in Group A elicits greater effort to protect perceived freedom",
+        "Stimulus overload: Group A's attention is divided between the task and monitoring the button, paradoxically reducing the salience of the noise"
+      ],
+      "answer": "Perceived control: the belief that one can terminate an aversive stimulus reduces its disruptive effects even when control is never exercised",
+      "explanation": "The Glass and Singer (1972) research program established that perceived controllability is the primary determinant of how disruptive noise proves to be\u2014not the actual reduction of noise or the exercise of control. Group A participants who believed they could stop the noise showed better performance and less physiological arousal than those with no option, despite never pressing the button. This demonstrates that it is the cognitive representation of control, not its execution, that buffers against environmental stressors. Option A (learned helplessness) applies to Group B's situation but does not explain why Group A outperforms\u2014learned helplessness describes a deficit, not a buffer. Option C (reactance) concerns motivation to restore threatened freedom, not performance protection. Option D describes an attentional mechanism that would predict worse performance in Group A, the opposite of the finding.",
+      "kn": "KN3",
+      "kn_explanation": "Environmental psychology and perceived control over stressors are topics within the Social and Multicultural Bases of Behavior domain, addressing how features of the physical and social environment affect psychological functioning.",
+      "difficulty": "hard",
+      "quality_comment": "Well-grounded in classic empirical research; tests a precise and frequently examined principle. Flagged for review: the provided lesson files do not contain content on environmental psychology or perceived control over noise\u2014this question draws on Glass and Singer (1972), a standard EPPP topic not represented in the supplied materials.",
+      "suggestedLesson": "3-group-influences",
+      "suggestedParagraph": "## Introduction: Why Groups Change Everything",
+      "lessonExcerpt": "CONTENT NOT FOUND IN PROVIDED LESSONS: The supplied lesson files do not address environmental psychology or perceived control over noise. This question is grounded in Glass & Singer (1972) and is a recognized EPPP topic for this domain.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 22
+    },
+    {
+      "stem": "Members of a neighborhood watch committee are individually polled before their meeting and each reports moderate support for a curfew ordinance. After one hour of discussion exclusively among themselves, the committee unanimously endorses a far stricter ordinance than any individual had originally favored. Which phenomenon MOST directly accounts for this outcome?",
+      "options": [
+        "Groupthink, in which the desire for unanimity suppresses dissenting viewpoints and critical analysis",
+        "Group polarization, in which discussion among like-minded individuals amplifies their shared initial tendency toward a more extreme position",
+        "Deindividuation, in which members lose personal accountability within the collective and adopt more extreme norms",
+        "Conformity pressure, in which a dominant minority enforces attitude change through normative influence"
+      ],
+      "answer": "Group polarization, in which discussion among like-minded individuals amplifies their shared initial tendency toward a more extreme position",
+      "explanation": "Group polarization refers to the reliable tendency for deliberation among people who share an initial lean to produce a collective position more extreme than their pre-discussion average. Because each committee member already favored the curfew to some degree, discussion reinforced and magnified that lean, yielding an outcome beyond any individual's original position. This is the defining signature of group polarization. Groupthink (Option A) involves specific symptoms\u2014illusion of invulnerability, self-censorship, mindguarding\u2014and primarily concerns the suppression of alternatives to preserve cohesion; it does not require or predict a shift to extremity per se. Deindividuation (Option C) involves reduced self-awareness in crowds and the abandonment of personal restraints, not the amplification of pre-existing attitudes through discussion. Option D (conformity) describes influence exerted by a minority or majority on an individual, not the emergent amplification of an already-shared group tendency.",
+      "kn": "KN3",
+      "kn_explanation": "Group polarization is a central topic in the Social and Multicultural Bases of Behavior domain under group dynamics and group decision-making, explaining how social discussion processes can produce more extreme collective judgments.",
+      "difficulty": "medium",
+      "quality_comment": "Scenario precisely exemplifies group polarization and the distractors target the most commonly confused constructs. Remapped to 5-6-workplace-decisions which covers group polarization in depth.",
+      "suggestedLesson": "5-6-workplace-decisions",
+      "suggestedParagraph": "## Group Polarization: When Groups Amplify Extremes",
+      "lessonExcerpt": "Group polarization describes the tendency for groups to make more extreme decisions than individual members would make alone. After discussion, the group shifts toward a more intense version of the average initial position. Either riskier or more cautious.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 23
     }
   ]
 }

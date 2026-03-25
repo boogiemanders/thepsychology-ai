@@ -17,7 +17,7 @@
       "suggestedLesson": "2-stress-and-emotion",
       "suggestedParagraph": "## Why Understanding Emotions and Stress Matters for Your EPPP Success",
       "lessonExcerpt": "Job enrichment is designed to enhance intrinsic motivation by providing employees with more meaningful work.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 4
     },
@@ -38,7 +38,7 @@
       "suggestedLesson": "2-stress-and-emotion",
       "suggestedParagraph": "## Why Understanding Emotions and Stress Matters for Your EPPP Success",
       "lessonExcerpt": "Specific and challenging goals lead to higher performance compared to vague or easy goals.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 6
     },
@@ -59,7 +59,7 @@
       "suggestedLesson": "2-stress-and-emotion",
       "suggestedParagraph": "## Why Understanding Emotions and Stress Matters for Your EPPP Success",
       "lessonExcerpt": "Performance distribution can affect how individuals perceive their capabilities, particularly through social comparison processes.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 7
     },
@@ -80,7 +80,7 @@
       "suggestedLesson": "2-stress-and-emotion",
       "suggestedParagraph": "## Why Understanding Emotions and Stress Matters for Your EPPP Success",
       "lessonExcerpt": "Equity theory posits that individuals assess their work effort based on perceived fairness in comparison to others.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 10
     },
@@ -185,7 +185,7 @@
       "suggestedLesson": "2-stress-and-emotion",
       "suggestedParagraph": "## The Stress Response: From Perception to Action",
       "lessonExcerpt": "The Yerkes-Dodson law posits that performance improves with arousal up to a certain point, after which it can decline.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 3
     },
@@ -249,7 +249,7 @@
       "suggestedLesson": "2-stress-and-emotion",
       "suggestedParagraph": "## The Brain's Emotion Centers: Meet Your Neural Cast",
       "lessonExcerpt": "Understanding these mechanisms will make you a better clinician who can explain to clients why their heart races before presentations.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 24
     },
@@ -441,6 +441,27 @@
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 23
+    },
+    {
+      "stem": "In a classic experiment, participants injected with epinephrine were placed in a room with a confederate acting either euphoric or angry. Despite receiving identical injections, participants reported emotions consistent with the confederate's behavior\u2014happy in the euphoria condition and angry in the anger condition. This pattern of results is most consistent with which theory of emotion?",
+      "options": [
+        "James-Lange theory, which holds that each discrete emotion is produced by a distinct, recognizable pattern of peripheral physiological change",
+        "Cannon-Bard theory, which proposes that the thalamus simultaneously sends signals to both the cortex and the body, producing emotion and arousal independently",
+        "Schachter-Singer two-factor theory, which holds that emotion results from the cognitive labeling of undifferentiated physiological arousal based on available situational cues",
+        "Opponent-process theory, which predicts that an initial emotional state is followed by an affectively opposite rebound state once the eliciting stimulus ends"
+      ],
+      "answer": "Schachter-Singer two-factor theory, which holds that emotion results from the cognitive labeling of undifferentiated physiological arousal based on available situational cues",
+      "explanation": "The Schachter-Singer epinephrine study demonstrates that the same state of undifferentiated physiological arousal is experienced as qualitatively different emotions depending on the social context in which it is interpreted. This supports the two-factor model: emotion requires both arousal and a cognitive label drawn from contextual cues. James-Lange theory predicts distinct physiological profiles for distinct emotions, which the identical-injection design directly contradicts. Cannon-Bard theory posits that emotion and physiological arousal arise simultaneously and independently, leaving no role for cognitive appraisal of arousal. Opponent-process theory addresses the dynamics of affective contrast over time and is unrelated to the labeling phenomenon demonstrated here.",
+      "kn": "KN6",
+      "kn_explanation": "Theories of emotion are a tested subtopic within Domain 2: Cognitive-Affective Bases of Behavior.",
+      "difficulty": "hard",
+      "quality_comment": "High-quality scenario that requires distinguishing four competing theories. Content goes beyond current lesson material \u2014 valid EPPP topic, no lesson excerpt available.",
+      "suggestedLesson": "2-stress-and-emotion",
+      "suggestedParagraph": "## Theories of Emotion",
+      "lessonExcerpt": "",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 3
     }
   ]
 }

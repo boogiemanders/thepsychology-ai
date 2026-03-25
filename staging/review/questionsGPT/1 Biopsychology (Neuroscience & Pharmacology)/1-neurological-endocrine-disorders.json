@@ -17,7 +17,7 @@
       "suggestedLesson": "1-neurological-endocrine-disorders",
       "suggestedParagraph": "### Seizures After TBI",
       "lessonExcerpt": "Post-traumatic seizures (PTS) occur within the first week and usually respond well to medication.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 7
     },
@@ -72,7 +72,7 @@
         "The brain damage is exclusively genetic in origin and occurs during the first trimester"
       ],
       "answer": "The brain damage can occur prenatally, perinatally, or postnatally, with prenatal causes being most common",
-      "explanation": "Cerebral palsy results from brain damage that can occur before birth (prenatal), during birth (perinatal), or after birth (postnatal), with prenatal factors being the most common cause. Option A reflects a common misconception—while birth asphyxia can cause cerebral palsy, it is not the most common cause. Option B is incorrect because environmental toxin exposure in the first year is not the primary etiology. Option D is incorrect because cerebral palsy is not exclusively genetic, though genetic factors may contribute.",
+      "explanation": "Cerebral palsy results from brain damage that can occur before birth (prenatal), during birth (perinatal), or after birth (postnatal), with prenatal factors being the most common cause. Option A reflects a common misconception\u2014while birth asphyxia can cause cerebral palsy, it is not the most common cause. Option B is incorrect because environmental toxin exposure in the first year is not the primary etiology. Option D is incorrect because cerebral palsy is not exclusively genetic, though genetic factors may contribute.",
       "kn": "KN1",
       "kn_explanation": "Cerebral palsy etiology involves neurobiological bases of behavior pertaining to brain development and chronic neurobehavioral disease processes",
       "difficulty": "hard",
@@ -93,7 +93,7 @@
         "Inability to consolidate new declarative memories"
       ],
       "answer": "Hemispatial neglect of the left side of space",
-      "explanation": "In right-handed individuals, the left hemisphere is typically dominant for language, making the right hemisphere the nondominant hemisphere. The lesson explicitly states that middle cerebral artery strokes produce 'language problems (dominant hemisphere) or spatial neglect (nondominant hemisphere).' Since this patient has a right (nondominant) hemisphere stroke, spatial neglect—specifically left hemispatial neglect, where the patient fails to attend to or recognize stimuli on the contralesional side—is the expected finding. This reflects the right hemisphere's specialization for visuospatial processing. Option A is incorrect because Broca's aphasia results from dominant (left) hemisphere damage. Option C is also incorrect for the same reason—Wernicke's aphasia involves left hemisphere damage. Option D describes hippocampal/medial temporal lobe dysfunction, not a middle cerebral artery stroke presentation.",
+      "explanation": "In right-handed individuals, the left hemisphere is typically dominant for language, making the right hemisphere the nondominant hemisphere. The lesson explicitly states that middle cerebral artery strokes produce 'language problems (dominant hemisphere) or spatial neglect (nondominant hemisphere).' Since this patient has a right (nondominant) hemisphere stroke, spatial neglect\u2014specifically left hemispatial neglect, where the patient fails to attend to or recognize stimuli on the contralesional side\u2014is the expected finding. This reflects the right hemisphere's specialization for visuospatial processing. Option A is incorrect because Broca's aphasia results from dominant (left) hemisphere damage. Option C is also incorrect for the same reason\u2014Wernicke's aphasia involves left hemisphere damage. Option D describes hippocampal/medial temporal lobe dysfunction, not a middle cerebral artery stroke presentation.",
       "kn": "KN1",
       "kn_explanation": "Stroke presentation with lateralized deficits and brain imaging findings relates to neurobiological bases of behavior in an acute neurobehavioral disease process",
       "difficulty": "medium",
@@ -122,7 +122,7 @@
       "suggestedLesson": "1-neurological-endocrine-disorders",
       "suggestedParagraph": "## Sex Chromosome Variations",
       "lessonExcerpt": "Klinefelter Syndrome affects males who have XXY (or sometimes XXXY or more X chromosomes) instead of the typical XY. They develop male identity and typically masculine appearance, but have: Incomplete development of secondary sex characteristics",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 14
     },
@@ -135,7 +135,7 @@
         "Generalized onset non-motor seizure with focal features"
       ],
       "answer": "Focal onset aware seizure originating in the frontal lobe",
-      "explanation": "This describes a Jacksonian seizure, which is a type of simple partial (focal onset aware) seizure originating in the frontal lobe. The hallmark feature is the 'march' — a localized motor seizure that progressively spreads to adjacent body areas (finger → hand → arm), reflecting the sequential activation of adjacent areas in the motor cortex. Consciousness remains intact, ruling out focal onset impaired awareness seizures (Option A) and generalized seizures (Options B and D). Temporal lobe seizures typically present with auras involving taste/smell and autonomic symptoms, not progressive motor spread.",
+      "explanation": "This describes a Jacksonian seizure, which is a type of simple partial (focal onset aware) seizure originating in the frontal lobe. The hallmark feature is the 'march' \u2014 a localized motor seizure that progressively spreads to adjacent body areas (finger \u2192 hand \u2192 arm), reflecting the sequential activation of adjacent areas in the motor cortex. Consciousness remains intact, ruling out focal onset impaired awareness seizures (Option A) and generalized seizures (Options B and D). Temporal lobe seizures typically present with auras involving taste/smell and autonomic symptoms, not progressive motor spread.",
       "kn": "KN1",
       "kn_explanation": "This question tests knowledge of seizure classification and neurological disorders, a biological bases topic.",
       "difficulty": "medium",
@@ -156,7 +156,7 @@
         "Nearly 100% chance if the father is homozygous, as the gene shows incomplete penetrance"
       ],
       "answer": "50% chance of developing the disease, as it follows an autosomal dominant pattern",
-      "explanation": "Huntington's disease is an autosomal dominant genetic disorder caused by a mutated gene on chromosome 4. Because only one copy of the mutated gene is needed to develop the disease, each child of an affected parent has a 50% chance of inheriting it. Option A is incorrect because Huntington's is dominant, not recessive (a recessive pattern would require both parents to carry the gene). Option C is incorrect because Huntington's is autosomal (chromosome 4), not X-linked, so sex does not affect transmission. Option D introduces concepts of incomplete penetrance that do not apply — Huntington's shows essentially complete penetrance.",
+      "explanation": "Huntington's disease is an autosomal dominant genetic disorder caused by a mutated gene on chromosome 4. Because only one copy of the mutated gene is needed to develop the disease, each child of an affected parent has a 50% chance of inheriting it. Option A is incorrect because Huntington's is dominant, not recessive (a recessive pattern would require both parents to carry the gene). Option C is incorrect because Huntington's is autosomal (chromosome 4), not X-linked, so sex does not affect transmission. Option D introduces concepts of incomplete penetrance that do not apply \u2014 Huntington's shows essentially complete penetrance.",
       "kn": "KN1",
       "kn_explanation": "This question tests knowledge of genetic inheritance patterns in neurological disorders, a biological bases topic.",
       "difficulty": "medium",
@@ -755,6 +755,111 @@
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 23
+    },
+    {
+      "stem": "A 38-year-old graphic designer is referred for neurological evaluation after recurring stereotyped episodes. Each episode begins with a sudden, intense sense of d\u00e9j\u00e0 vu and a rising epigastric sensation, followed by approximately 90 seconds of unresponsiveness during which she smacks her lips and makes repetitive picking motions with her right hand. Afterward, she has no recollection of the episode. EEG reveals focal ictal discharge. Which brain lobe is the most probable origin of these seizures?",
+      "options": [
+        "Frontal lobe",
+        "Parietal lobe",
+        "Temporal lobe",
+        "Occipital lobe"
+      ],
+      "answer": "Temporal lobe",
+      "explanation": "The presentation describes focal impaired awareness seizures (previously called partial complex seizures), which most commonly originate in the temporal lobe. Classic features include a psychic or autonomic aura (d\u00e9j\u00e0 vu, epigastric rising sensation), followed by automatisms (lip-smacking, purposeless hand movements), impaired awareness during the ictal phase, and postictal amnesia. Frontal lobe seizures typically involve prominent motor features (tonic-clonic or hypermotor activity) and tend to be briefer. Parietal lobe seizures usually present with contralateral somatosensory disturbances such as tingling or numbness. Occipital lobe seizures characteristically produce visual phenomena such as phosphenes or formed hallucinations.",
+      "kn": "KN1",
+      "kn_explanation": "Seizure disorder types and their neuroanatomical origins are covered in the neurological disorders section of Domain 1: Biological Bases of Behavior.",
+      "difficulty": "hard",
+      "quality_comment": "Rich clinical vignette requiring recognition of temporal lobe seizure semiology; strong distractors reflect other focal seizure types with distinct features.",
+      "suggestedLesson": "1-neurological-endocrine-disorders",
+      "suggestedParagraph": "## Strokes: When Blood Flow Gets Cut Off",
+      "lessonExcerpt": "[Partial complex seizures and their temporal lobe origin are covered in the seizure disorders section of the lesson \u2014 full content extends beyond the provided excerpt]",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 7
+    },
+    {
+      "stem": "A neurologist's consultation report on a newly referred client describes the patient's progressive movement disorder as 'idiopathic in etiology.' When integrating this information into a biopsychosocial case conceptualization, a psychologist should interpret this term to mean the condition:",
+      "options": [
+        "Arose from a single identified autosomal dominant gene mutation",
+        "Developed following a known external traumatic event to the brain",
+        "Has no established or identifiable underlying cause",
+        "Was present from birth due to a chromosomal abnormality"
+      ],
+      "answer": "Has no established or identifiable underlying cause",
+      "explanation": "In medical terminology, 'idiopathic' refers to a disease or condition that arises spontaneously with no identifiable cause. This is clinically important for psychologists who routinely interpret medical records. Option A describes conditions with a known genetic etiology (e.g., Huntington's disease, which involves 'a mutated gene on chromosome 4'). Option B describes an acquired condition with a known external mechanism (e.g., TBI). Option D describes a congenital condition with an identifiable chromosomal basis. Idiopathic Parkinson's disease is a prototypical example of this terminology in neurology.",
+      "kn": "KN1",
+      "kn_explanation": "Medical terminology used to classify neurological disorders falls under Biological Bases of Behavior (Domain 1), directly relevant to understanding etiology of neurological conditions encountered in clinical practice.",
+      "difficulty": "medium",
+      "quality_comment": "Applied medical terminology question with strong clinical relevance; appropriately distinguishes idiopathic from genetic, acquired, and congenital etiologies",
+      "suggestedLesson": "1-neurological-endocrine-disorders",
+      "suggestedParagraph": "## Movement Disorders: When Motor Control Breaks Down",
+      "lessonExcerpt": "Understanding neurological and endocrine disorders isn't just important for the EPPP; it's essential for being a competent psychologist who knows when symptoms point to a medical emergency rather than a mental health concern.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 11
+    },
+    {
+      "stem": "A health psychologist is designing a study to assess biological markers of chronic stress in nurses working in high-acuity ICU settings. To capture HPA axis activation associated with prolonged occupational stress, the researcher selects a salivary biomarker secreted by the adrenal cortex in response to CRH and ACTH signaling. Which biomarker is MOST appropriate for this purpose?",
+      "options": [
+        "Epinephrine, which is released by the adrenal medulla during acute sympathetic arousal",
+        "Insulin, which is secreted by the pancreas to regulate blood glucose homeostasis",
+        "Cortisol, which is the primary glucocorticoid released during HPA axis activation",
+        "Testosterone, which is primarily associated with reproductive function and aggression"
+      ],
+      "answer": "Cortisol, which is the primary glucocorticoid released during HPA axis activation",
+      "explanation": "Cortisol is the primary glucocorticoid produced by the adrenal cortex in response to hypothalamic-pituitary-adrenal (HPA) axis activation and is the most widely validated biological marker of chronic stress. Epinephrine is released by the adrenal medulla (not cortex) as part of rapid, acute sympathetic nervous system activation\u2014it is a marker of short-term stress rather than chronic HPA dysregulation. Insulin is a pancreatic hormone and is unrelated to the stress response cascade. Testosterone is an androgen associated with sexual function and may fluctuate with stress, but it is not the primary or direct marker of HPA activation.",
+      "kn": "KN1",
+      "kn_explanation": "Understanding endocrine mechanisms of stress, specifically the HPA axis and cortisol as a physiological marker, is foundational Biological Bases of Behavior content relevant to health psychology.",
+      "difficulty": "medium",
+      "quality_comment": "Solid question; the epinephrine distractor is particularly strong as it targets a common confusion between adrenal medulla (acute stress) and adrenal cortex (chronic HPA activation)",
+      "suggestedLesson": "1-neurological-endocrine-disorders",
+      "suggestedParagraph": "## Endocrine Disorders and the HPA Axis",
+      "lessonExcerpt": "Content about cortisol and the HPA axis stress response was in the truncated portion of the lesson file.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 17
+    },
+    {
+      "stem": "A psychologist is providing parent education to the family of a child recently diagnosed with spastic cerebral palsy (CP). The parents ask when the brain injury that caused the diagnosis most likely occurred. Based on the established etiology of cerebral palsy, the psychologist should explain that the responsible brain damage most commonly occurs:",
+      "options": [
+        "During the first trimester of gestation, when neural tube formation is occurring",
+        "During the perinatal period, encompassing the time just before, during, or shortly after birth",
+        "Between 18 and 24 months of postnatal age, during the critical period for myelination",
+        "After age three, following a period of normal motor development, due to viral encephalitis"
+      ],
+      "answer": "During the perinatal period, encompassing the time just before, during, or shortly after birth",
+      "explanation": "Cerebral palsy is a non-progressive neuromotor disorder most commonly caused by brain damage occurring during the perinatal period, typically due to hypoxic-ischemic injury (oxygen deprivation) before, during, or shortly after birth. First trimester damage (Option A) more commonly results in structural brain malformations or neural tube defects. Damage during the myelination window (Option C) can cause motor impairment, but CP is defined by a broader perinatal injury window. Damage after age three following normal development (Option D) would be classified as an acquired brain injury, not cerebral palsy, since CP requires injury prior to established normal development.",
+      "kn": "KN1",
+      "kn_explanation": "Understanding the timing and etiology of neurodevelopmental disorders such as cerebral palsy is core content within the Biological Bases of Behavior domain, specifically neurodevelopmental disorders.",
+      "difficulty": "medium",
+      "quality_comment": "Strong question with practical parent-counseling framing; the third-trimester/myelination distractor appropriately tests precision of developmental timing knowledge",
+      "suggestedLesson": "1-neurological-endocrine-disorders",
+      "suggestedParagraph": "## Movement Disorders: When Motor Control Breaks Down",
+      "lessonExcerpt": "Content about cerebral palsy timing and etiology was in the truncated portion of the lesson file.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 18
+    },
+    {
+      "stem": "A 71-year-old right-handed woman is referred for neuropsychological assessment three weeks after a cerebrovascular accident involving the right middle cerebral artery. During the evaluation, she copies only the right half of a complex geometric figure, consistently marks the rightward third of a horizontal line when asked to bisect it, and omits all objects placed to her left during a cancellation task. Her primary care physician notes she also lacks awareness of these errors and does not report any subjective difficulties. Which of the following BEST explains the neurological basis of this clinical presentation?",
+      "options": [
+        "Left hemisphere damage disrupting language-mediated spatial orientation",
+        "Right (nondominant) hemisphere damage impairing visuospatial processing, producing hemispatial neglect",
+        "Bilateral occipital lobe infarction causing symmetric visual field loss",
+        "Left parietal damage selectively impairing constructional praxis without attentional involvement"
+      ],
+      "answer": "Right (nondominant) hemisphere damage impairing visuospatial processing, producing hemispatial neglect",
+      "explanation": "The constellation of findings\u2014contralesional spatial neglect (ignoring left hemispace), line bisection error biased rightward, anosognosia (unawareness of deficits), and failure to attend to left-sided stimuli\u2014is the classic presentation of right hemisphere stroke affecting visuospatial processing. Because the right (nondominant) hemisphere specializes in visuospatial functions, damage here produces neglect of the contralateral (left) side of space. Option A is incorrect: left hemisphere strokes characteristically produce language deficits (aphasia), not hemispatial neglect. Option C is incorrect: bilateral occipital damage would cause visual field cuts (homonymous hemianopia) but not the attentional and anosognosic features present here. Option D is incorrect: left parietal damage would affect the right hemispace and would more likely produce apraxia or Gerstmann syndrome, not the described leftward neglect pattern.",
+      "kn": "KN1",
+      "kn_explanation": "This question falls under KN1 (Biological Bases of Behavior), addressing cerebral lateralization and the functional specialization of the right (nondominant) hemisphere for visuospatial processing, as evidenced by the clinical consequences of right hemisphere stroke.",
+      "difficulty": "hard",
+      "quality_comment": "Strong doctoral-level question that integrates cerebral lateralization, stroke symptomatology, and clinical neuropsychological presentation. Requires distinguishing hemispatial neglect from visual field deficits and from left-hemisphere stroke sequelae. The lesson provides moderate support via spatial neglect referenced in the MCA stroke table; the right-hemisphere visuospatial specialization principle is implied rather than explicitly stated, which is noted.",
+      "suggestedLesson": "1-neurological-endocrine-disorders",
+      "suggestedParagraph": "Recognizing Stroke Symptoms by Location",
+      "lessonExcerpt": "Middle cerebral artery (most common): Weakness/paralysis on opposite side of body, vision loss in half the visual field, slurred speech, language problems (dominant hemisphere) or spatial neglect (nondominant hemisphere)",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 22
     }
   ]
 }

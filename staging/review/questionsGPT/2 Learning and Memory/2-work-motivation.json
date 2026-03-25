@@ -9,11 +9,11 @@
         "Vroom's expectancy theory, because the nurses do not value the salary increase"
       ],
       "answer": "Herzberg's two-factor theory, because salary and working conditions are hygiene factors that prevent dissatisfaction but do not produce satisfaction or motivation",
-      "explanation": "Herzberg's two-factor theory distinguishes between hygiene factors (pay, benefits, working conditions) and motivator factors (challenge, responsibility, recognition). According to this theory, improving hygiene factors can reduce dissatisfaction but cannot create satisfaction or motivation—workers simply move from dissatisfied to 'not dissatisfied.' Only motivator factors related to job content produce actual satisfaction and motivation. Option A is incorrect because Maslow's theory would predict that meeting lower needs should allow higher needs to emerge, not stagnation. Option C is incorrect because equity theory would predict that increased pay beyond equity should temporarily increase effort. Option D is incorrect because nothing in the scenario suggests the nurses don't value higher pay; the issue is that pay operates as a hygiene factor, not a motivator.",
+      "explanation": "Herzberg's two-factor theory distinguishes between hygiene factors (pay, benefits, working conditions) and motivator factors (challenge, responsibility, recognition). According to this theory, improving hygiene factors can reduce dissatisfaction but cannot create satisfaction or motivation\u2014workers simply move from dissatisfied to 'not dissatisfied.' Only motivator factors related to job content produce actual satisfaction and motivation. Option A is incorrect because Maslow's theory would predict that meeting lower needs should allow higher needs to emerge, not stagnation. Option C is incorrect because equity theory would predict that increased pay beyond equity should temporarily increase effort. Option D is incorrect because nothing in the scenario suggests the nurses don't value higher pay; the issue is that pay operates as a hygiene factor, not a motivator.",
       "kn": "KN9",
       "kn_explanation": "This describes Herzberg's two-factor theory of motivation, where hygiene factors (salary, facilities) prevent dissatisfaction but do not increase motivation/satisfaction.",
       "difficulty": "medium",
-      "quality_comment": "Strong question that tests the counterintuitive core of Herzberg's theory—that improving pay doesn't increase motivation—with plausible distractors from other motivation theories.",
+      "quality_comment": "Strong question that tests the counterintuitive core of Herzberg's theory\u2014that improving pay doesn't increase motivation\u2014with plausible distractors from other motivation theories.",
       "suggestedLesson": "2-work-motivation",
       "suggestedParagraph": "### Theory #3: Herzberg's Two-Factor Theory",
       "lessonExcerpt": "Hygiene Factors (job context): These include pay, benefits, working conditions, company policies, and supervision. When these are inadequate, workers feel dissatisfied. But here's the counterintuitive part: When they're adequate, workers simply aren't dissatisfied. They're not necessarily satisfied or motivated either.",
@@ -38,7 +38,7 @@
       "suggestedLesson": "2-work-motivation",
       "suggestedParagraph": "### Theory #2: Maslow's Need Hierarchy Theory",
       "lessonExcerpt": "A modification of Maslow's theory, ERG Theory (1972) divides needs into those based on existence, relatedness and growth. Rather than arranging the needs hierarchically, Alderfer posits that all needs may influence a person at the same time. Further, according to the principle of frustration-regression, if a person is frustrated, he or she will move towards a previously met need.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 2
     },
@@ -51,7 +51,7 @@
         "Self-actualization is motivated by external reinforcement rather than internal drive"
       ],
       "answer": "Self-actualization can never be fully satisfied, while lower needs can be",
-      "explanation": "According to Maslow, self-actualization is unique among the five needs because it can never be fully satisfied—there is always room for more growth and development. Once lower needs (physiological, safety, social, esteem) are satisfied, they stop motivating behavior, and the next level takes over. Self-actualization does not require social interaction more than other needs (A)—social needs are at level 3. There is no age restriction in the theory (C). Self-actualization is driven by internal growth motivation, not external reinforcement (D).",
+      "explanation": "According to Maslow, self-actualization is unique among the five needs because it can never be fully satisfied\u2014there is always room for more growth and development. Once lower needs (physiological, safety, social, esteem) are satisfied, they stop motivating behavior, and the next level takes over. Self-actualization does not require social interaction more than other needs (A)\u2014social needs are at level 3. There is no age restriction in the theory (C). Self-actualization is driven by internal growth motivation, not external reinforcement (D).",
       "kn": "KN6",
       "kn_explanation": "Maslow's need hierarchy is a foundational motivation theory within the Cognitive-Affective Bases domain.",
       "difficulty": "medium",
@@ -59,7 +59,7 @@
       "suggestedLesson": "2-work-motivation",
       "suggestedParagraph": "### Theory #2: Maslow's Need Hierarchy Theory",
       "lessonExcerpt": "The exception? Self-actualization never gets fully satisfied. There's always room for more growth and development.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 4
     },
@@ -72,7 +72,7 @@
         "Attribute the pay difference to their own superior qualifications"
       ],
       "answer": "Decrease effort or seek higher compensation to restore the input-outcome ratio",
-      "explanation": "Adams' equity theory predicts that underpayment inequity—when a worker's input/outcome ratio is worse than a comparison other's—motivates the worker to restore equity by decreasing inputs (effort, quality, quantity) or seeking better outcomes (raises, promotions). Increasing work output (A) is the predicted response to overpayment inequity, not underpayment. Increased motivation from competition (C) is not an equity theory prediction. Attributing the difference to superior qualifications (D) would reflect a perception of equity, not inequity, and contradicts the scenario premise.",
+      "explanation": "Adams' equity theory predicts that underpayment inequity\u2014when a worker's input/outcome ratio is worse than a comparison other's\u2014motivates the worker to restore equity by decreasing inputs (effort, quality, quantity) or seeking better outcomes (raises, promotions). Increasing work output (A) is the predicted response to overpayment inequity, not underpayment. Increased motivation from competition (C) is not an equity theory prediction. Attributing the difference to superior qualifications (D) would reflect a perception of equity, not inequity, and contradicts the scenario premise.",
       "kn": "KN6",
       "kn_explanation": "Equity theory is a workplace motivation theory within the Cognitive-Affective Bases domain.",
       "difficulty": "medium",
@@ -93,7 +93,7 @@
         "Herzberg's hygiene factors must be addressed before motivator factors can take effect"
       ],
       "answer": "Job enrichment works best for younger, well-educated workers and those with high achievement needs",
-      "explanation": "The lesson explicitly states that job enrichment — redesigning jobs to include more motivator factors such as meaningful challenges, autonomy, and responsibility — 'works best for younger, well-educated workers and those with high achievement needs.' This directly explains why the younger, college-educated employees benefited more. Option A misattributes locus of control to the job characteristics model. Option C confuses job enlargement (adding more tasks at the same level) with job enrichment (adding depth and meaning). Option D, while partially true of Herzberg's theory, doesn't explain the individual differences in response to enrichment.",
+      "explanation": "The lesson explicitly states that job enrichment \u2014 redesigning jobs to include more motivator factors such as meaningful challenges, autonomy, and responsibility \u2014 'works best for younger, well-educated workers and those with high achievement needs.' This directly explains why the younger, college-educated employees benefited more. Option A misattributes locus of control to the job characteristics model. Option C confuses job enlargement (adding more tasks at the same level) with job enrichment (adding depth and meaning). Option D, while partially true of Herzberg's theory, doesn't explain the individual differences in response to enrichment.",
       "kn": "KN6",
       "kn_explanation": "Job enrichment and work motivation fall under Domain 2: Cognitive-Affective Bases, specifically I-O psychology content tested on the EPPP.",
       "difficulty": "hard",
@@ -114,7 +114,7 @@
         "Power and affiliation needs emerge only after achievement needs have been satisfied"
       ],
       "answer": "The three core psychological needs are shaped by early experiences and life circumstances rather than being fixed traits",
-      "explanation": "McClelland's acquired needs theory posits that the needs for achievement, power, and affiliation are shaped by early experiences and life circumstances, making them malleable rather than fixed. Option A is incorrect because the theory explicitly frames these as acquired (learned) needs, not innate biological drives. Option C is incorrect because all three needs—not just achievement—are shaped by experience. Option D is incorrect because McClelland did not propose a hierarchical relationship among the three needs (that would be more consistent with Maslow's theory).",
+      "explanation": "McClelland's acquired needs theory posits that the needs for achievement, power, and affiliation are shaped by early experiences and life circumstances, making them malleable rather than fixed. Option A is incorrect because the theory explicitly frames these as acquired (learned) needs, not innate biological drives. Option C is incorrect because all three needs\u2014not just achievement\u2014are shaped by experience. Option D is incorrect because McClelland did not propose a hierarchical relationship among the three needs (that would be more consistent with Maslow's theory).",
       "kn": "KN6",
       "kn_explanation": "This question falls under Domain 2: Cognitive-Affective Bases of Behavior, which covers motivation theories including McClelland's acquired needs theory.",
       "difficulty": "medium",
@@ -135,17 +135,80 @@
         "The company has failed to establish a continuous reinforcement schedule for work performance"
       ],
       "answer": "Adequate hygiene factors prevent dissatisfaction but do not generate motivation or satisfaction",
-      "explanation": "Herzberg's two-factor theory distinguishes between hygiene factors (salary, benefits, working conditions, company policies, job security) and motivator factors (responsibility, challenge, advancement, recognition, meaningful work). Hygiene factors prevent dissatisfaction when adequate but cannot create satisfaction or motivation—only motivator factors can do that. Option A incorrectly applies Maslow's hierarchy rather than Herzberg's framework. Option C describes hedonic adaptation, not Herzberg's theory. Option D incorrectly applies operant conditioning principles to this motivational question.",
+      "explanation": "Herzberg's two-factor theory distinguishes between hygiene factors (salary, benefits, working conditions, company policies, job security) and motivator factors (responsibility, challenge, advancement, recognition, meaningful work). Hygiene factors prevent dissatisfaction when adequate but cannot create satisfaction or motivation\u2014only motivator factors can do that. Option A incorrectly applies Maslow's hierarchy rather than Herzberg's framework. Option C describes hedonic adaptation, not Herzberg's theory. Option D incorrectly applies operant conditioning principles to this motivational question.",
       "kn": "KN6",
       "kn_explanation": "This question falls under Domain 2: Cognitive-Affective Bases of Behavior, which includes workplace motivation theories.",
       "difficulty": "medium",
-      "quality_comment": "Applied scenario that tests the critical distinction in Herzberg's theory—that satisfaction and dissatisfaction are separate dimensions with different determinants.",
+      "quality_comment": "Applied scenario that tests the critical distinction in Herzberg's theory\u2014that satisfaction and dissatisfaction are separate dimensions with different determinants.",
       "suggestedLesson": "2-work-motivation",
       "suggestedParagraph": "### Herzberg's Two-Factor Theory: Why Raises Don't Always Work",
       "lessonExcerpt": "Hygiene Factors (also called job context factors) include salary, benefits, working conditions, company policies, and job security. These prevent dissatisfaction when adequate, but don't create motivation or satisfaction.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 22
+    },
+    {
+      "stem": "An industrial-organizational psychologist reviews exit interview data and employee satisfaction surveys from a large healthcare organization. She finds that units with the lowest mean job satisfaction scores show the highest rates of voluntary employee turnover. Which of the following best characterizes this statistical relationship?",
+      "options": [
+        "A positive correlation, indicating that higher satisfaction predicts greater likelihood of leaving",
+        "A negative correlation, indicating that lower satisfaction predicts greater likelihood of leaving",
+        "An absence of a reliable relationship, because turnover is primarily determined by external labor market conditions rather than internal satisfaction",
+        "A U-shaped curvilinear relationship, in which both very low and very high satisfaction predict elevated turnover rates"
+      ],
+      "answer": "A negative correlation, indicating that lower satisfaction predicts greater likelihood of leaving",
+      "explanation": "The established finding in I/O psychology is that job satisfaction and voluntary turnover are negatively correlated: as job satisfaction decreases, the probability of an employee voluntarily leaving the organization increases. This relationship is one of the most replicated findings in organizational behavior research. The positive correlation option reverses the established direction. While labor market conditions moderate the relationship, satisfaction remains a reliable independent predictor, contradicting the 'no relationship' option. A U-shaped relationship is not supported by the literature for this outcome.",
+      "kn": "KN6",
+      "kn_explanation": "Job satisfaction and its organizational correlates including turnover fall within the I/O subsection of Domain 2: Cognitive-Affective Bases of Behavior.",
+      "difficulty": "medium",
+      "quality_comment": "Conceptually clean question with a clear correct answer. Content goes beyond current lesson material \u2014 valid EPPP topic, no lesson excerpt available.",
+      "suggestedLesson": "2-work-motivation",
+      "suggestedParagraph": "## Job Satisfaction",
+      "lessonExcerpt": "",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 2
+    },
+    {
+      "stem": "An industrial-organizational psychologist reviewing the empirical literature on job satisfaction reports to leadership that satisfaction is moderately correlated with job performance and is more strongly associated with turnover and absenteeism than with output quality. She cautions that the relationship with performance should not be interpreted as demonstrating that improving satisfaction will cause proportional performance gains. Her caution reflects which empirical and interpretive consideration?",
+      "options": [
+        "Satisfaction and performance are causally linked, so raising satisfaction reliably increases performance above baseline levels",
+        "The satisfaction-performance correlation is correlational, not necessarily causal, and tenure-related outcomes such as turnover show stronger associations than performance metrics",
+        "Job satisfaction is entirely determined by hygiene factors, making performance improvements dependent only on extrinsic working conditions",
+        "Satisfaction is orthogonal to performance because intrinsic motivation fully mediates any apparent relationship between the two variables"
+      ],
+      "answer": "The satisfaction-performance correlation is correlational, not necessarily causal, and tenure-related outcomes such as turnover show stronger associations than performance metrics",
+      "explanation": "The research literature consistently shows a modest positive correlation between job satisfaction and performance (meta-analytic estimates typically around r = .30), but the relationship is correlational and causality is difficult to establish. Satisfaction shows stronger and more consistent relationships with turnover intention, absenteeism, and organizational citizenship behaviors than with objective performance outputs. Option A overstates the causal and predictive power of satisfaction on performance. Option C incorrectly invokes Herzberg's hygiene factors as the exclusive determinant of satisfaction. Option D incorrectly claims orthogonality; the established modest positive correlation rules out a zero relationship.",
+      "kn": "KN6",
+      "kn_explanation": "Job satisfaction and its organizational correlates are a tested topic within Domain 2: Cognitive-Affective Bases of Behavior, which includes industrial-organizational psychology constructs such as work motivation and work attitudes.",
+      "difficulty": "hard",
+      "quality_comment": "Tests both substantive knowledge and methodological reasoning (correlation vs. causation); appropriate doctoral-level demand.",
+      "suggestedLesson": "2-work-motivation",
+      "suggestedParagraph": "## Job Satisfaction and Organizational Outcomes",
+      "lessonExcerpt": "N/A \u2014 no work motivation or job satisfaction lesson file was included in the provided content. This question is grounded in standard EPPP I-O psychology content but cannot be anchored to the provided lesson text.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 15
+    },
+    {
+      "stem": "According to Herzberg's two-factor theory, a hospital administrator notices that nursing staff frequently complain about inadequate pay, poor scheduling, and interpersonal conflicts with supervisors. She implements salary increases, adopts flexible scheduling, and offers conflict-resolution workshops. Several months later, complaints decrease but employee motivation and engagement remain unchanged. Herzberg would most likely explain this outcome by noting that:",
+      "options": [
+        "The salary and scheduling improvements constitute motivators that reduce dissatisfaction but cannot produce active motivation",
+        "The interventions targeted hygiene factors, which can prevent dissatisfaction but are insufficient to generate intrinsic motivation",
+        "The administrator should have increased the frequency of positive reinforcement schedules to produce motivational change",
+        "Employee motivation is primarily determined by equity perceptions, and the interventions failed to restore perceived input-outcome balance"
+      ],
+      "answer": "The interventions targeted hygiene factors, which can prevent dissatisfaction but are insufficient to generate intrinsic motivation",
+      "explanation": "Herzberg's two-factor (motivation-hygiene) theory distinguishes between hygiene factors and motivators. Hygiene factors\u2014including pay, working conditions, supervisory relationships, company policy, and job security\u2014are extrinsic to the work itself. When deficient, they cause dissatisfaction; when adequate, they prevent dissatisfaction but do not produce positive motivation or engagement. True motivation requires motivators: achievement, recognition, the work itself, responsibility, and advancement opportunities (intrinsic factors). The administrator correctly addressed hygiene factors, eliminating dissatisfaction, but left motivators untouched, explaining unchanged engagement. Option A misidentifies salary and scheduling as motivators; they are classic hygiene factors. Option C introduces reinforcement schedules, which are not part of Herzberg's framework. Option D describes equity theory, not Herzberg's model.",
+      "kn": "KN6",
+      "kn_explanation": "Herzberg's two-factor theory is a core work motivation theory tested under Domain 2: Cognitive-Affective Bases of Behavior in the I-O psychology subtopic.",
+      "difficulty": "hard",
+      "quality_comment": "Scenario requires two-step reasoning: identify which factor category was addressed, then predict the theoretical outcome. Strong discriminative validity across distractors.",
+      "suggestedLesson": "2-work-motivation",
+      "suggestedParagraph": "## Herzberg's Two-Factor Theory",
+      "lessonExcerpt": "N/A \u2014 no work motivation lesson file was included in the provided content. This question is grounded in standard EPPP I-O psychology content but cannot be anchored to the provided lesson text.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 16
     }
   ]
 }

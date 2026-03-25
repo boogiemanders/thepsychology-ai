@@ -9,7 +9,7 @@
         "Stimulus control, because the presence of homework signals that reinforcement is available"
       ],
       "answer": "The Premack principle, because a high-frequency behavior is being used to reinforce a low-frequency behavior",
-      "explanation": "The Premack principle states that a high-frequency (preferred) behavior can serve as reinforcement for a low-frequency (non-preferred) behavior. Video gaming is a high-frequency behavior for this adolescent, and making it contingent on completing homework (low-frequency behavior) uses the preferred activity to reinforce the non-preferred one. Option A is incorrect because shaping involves reinforcing progressive approximations of a target behavior, not using one established behavior to reinforce another. Option C is incorrect because video game time is not a token—it is the reinforcing activity itself. Option D is incorrect because stimulus control refers to a behavior occurring in the presence of a discriminative stimulus that signals reinforcement availability.",
+      "explanation": "The Premack principle states that a high-frequency (preferred) behavior can serve as reinforcement for a low-frequency (non-preferred) behavior. Video gaming is a high-frequency behavior for this adolescent, and making it contingent on completing homework (low-frequency behavior) uses the preferred activity to reinforce the non-preferred one. Option A is incorrect because shaping involves reinforcing progressive approximations of a target behavior, not using one established behavior to reinforce another. Option C is incorrect because video game time is not a token\u2014it is the reinforcing activity itself. Option D is incorrect because stimulus control refers to a behavior occurring in the presence of a discriminative stimulus that signals reinforcement availability.",
       "kn": "KN7",
       "kn_explanation": "The question describes a behavioral therapist using reinforcement principles (Premack principle/contingency management) to shape homework behavior, which falls under theories and principles of learning and their application.",
       "difficulty": "easy",
@@ -38,7 +38,7 @@
       "suggestedLesson": "2-operant-conditioning-interventions",
       "suggestedParagraph": "## Cognitive-Behavioral Approaches",
       "lessonExcerpt": "Protocol analysis is a procedure that is used when a person is learning a task and is asked to describe aloud the steps being taken to solve the task. Protocol analysis is used to gain access to people's problem-solving strategies.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 19
     },
@@ -51,11 +51,11 @@
         "Differential reinforcement of alternative behavior, because drawing replaces the refusal behavior"
       ],
       "answer": "Premack principle, because a high-frequency preferred behavior is used to reinforce a low-frequency behavior",
-      "explanation": "The Premack principle states that 'a high-frequency behavior can reinforce a low-frequency behavior.' Drawing is the high-frequency (preferred) activity, and completing math worksheets is the low-frequency (non-preferred) activity. Access to drawing is contingent upon completing the worksheets. A token economy (A) involves earning tokens exchangeable for backup reinforcers — drawing is the reinforcer itself, not a token. Shaping (C) involves reinforcing successive approximations toward a target behavior, not using a preferred activity as a reinforcer. Differential reinforcement of alternative behavior (D) involves reinforcing an alternative to the problem behavior, but the Premack principle specifically uses the activity preference hierarchy as the basis for reinforcement.",
+      "explanation": "The Premack principle states that 'a high-frequency behavior can reinforce a low-frequency behavior.' Drawing is the high-frequency (preferred) activity, and completing math worksheets is the low-frequency (non-preferred) activity. Access to drawing is contingent upon completing the worksheets. A token economy (A) involves earning tokens exchangeable for backup reinforcers \u2014 drawing is the reinforcer itself, not a token. Shaping (C) involves reinforcing successive approximations toward a target behavior, not using a preferred activity as a reinforcer. Differential reinforcement of alternative behavior (D) involves reinforcing an alternative to the problem behavior, but the Premack principle specifically uses the activity preference hierarchy as the basis for reinforcement.",
       "kn": "KN6",
       "kn_explanation": "The Premack principle is an operant conditioning concept within Domain 2: Cognitive-Affective Bases of Behavior.",
       "difficulty": "medium",
-      "quality_comment": "Applied clinical scenario that requires understanding the Premack principle's specific mechanism — using activity preference hierarchy — versus other reinforcement-based interventions.",
+      "quality_comment": "Applied clinical scenario that requires understanding the Premack principle's specific mechanism \u2014 using activity preference hierarchy \u2014 versus other reinforcement-based interventions.",
       "suggestedLesson": "2-operant-conditioning-interventions",
       "suggestedParagraph": "### The Premack Principle: Grandma's Rule for Professionals",
       "lessonExcerpt": "The Premack principle states that a high-frequency behavior can reinforce a low-frequency behavior. In plain language: you can do something you love AFTER you do something you don't want to do.",
@@ -185,7 +185,7 @@
       "suggestedLesson": "2-operant-conditioning-interventions",
       "suggestedParagraph": "## Positive Reinforcement: Building New Behaviors",
       "lessonExcerpt": "Time out functions by removing an individual from a reinforcing environment, thereby decreasing the likelihood of undesirable behavior.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 5
     },
@@ -290,7 +290,7 @@
       "suggestedLesson": "2-operant-conditioning-interventions",
       "suggestedParagraph": "## Why Operant Conditioning Still Matters in Modern Practice",
       "lessonExcerpt": "Flextime allows employees to manage their work schedules more effectively, leading to higher satisfaction and lower stress levels.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 2
     },
@@ -311,7 +311,7 @@
       "suggestedLesson": "2-operant-conditioning-interventions",
       "suggestedParagraph": "## Positive Reinforcement: Building New Behaviors",
       "lessonExcerpt": "Behaviors followed by satisfying consequences tend to happen again, while behaviors followed by unsatisfying consequences tend to disappear.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 13
     },
@@ -374,7 +374,7 @@
       "suggestedLesson": "2-operant-conditioning-interventions",
       "suggestedParagraph": "## Why Operant Conditioning Still Matters in Modern Practice",
       "lessonExcerpt": "Understanding these techniques will give you practical tools for treating anxiety disorders, phobias, PTSD, and addictive behaviors.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 23
     },
@@ -461,6 +461,48 @@
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 22
+    },
+    {
+      "stem": "A board-certified behavior analyst conducts a functional behavioral assessment for a 5-year-old with a history of screaming and floor-kicking during transitions. The FBA reveals that the behavior is maintained by caregiver attention. The treatment plan instructs all caregivers to provide zero social attention\u2014no eye contact, verbal response, or physical contact\u2014when screaming and floor-kicking occur, while ensuring physical safety. Over the next two weeks, the behavior decreases substantially. The primary mechanism responsible for the behavior reduction is:",
+      "options": [
+        "Negative punishment, because caregivers are removing their attention as a consequence of the tantrum",
+        "Extinction, because the maintaining reinforcer identified by the FBA is being withheld following the target behavior",
+        "Differential reinforcement of incompatible behavior (DRI), because caregivers are selectively reinforcing quiet, compliant behavior",
+        "Positive punishment, because the absence of attention constitutes an aversive experience for the child"
+      ],
+      "answer": "Extinction, because the maintaining reinforcer identified by the FBA is being withheld following the target behavior",
+      "explanation": "Operant extinction involves discontinuing delivery of the reinforcer that has been functionally maintaining a behavior. The FBA identified caregiver attention as the maintaining reinforcer; completely withdrawing that attention following tantrums breaks the operant contingency and reduces the behavior over time. Negative punishment requires actively removing a preferred stimulus the child already possesses at the time of the behavior (e.g., taking away a toy); ignoring is not removal of a possessed stimulus but withholding of a future consequence. DRI would require the treatment plan to also specify and reinforce a behavior that is physically incompatible with tantrums, which is not described. Positive punishment requires adding an aversive stimulus; the absence of attention is not an added aversive event.",
+      "kn": "KN6",
+      "kn_explanation": "Operant extinction as an intervention procedure is foundational to Domain 2: Cognitive-Affective Bases of Behavior.",
+      "difficulty": "hard",
+      "quality_comment": "Excellent applied question requiring precise differentiation of extinction from negative punishment\u2014a common EPPP confusion. FBA framework is explicitly covered in the lesson.",
+      "suggestedLesson": "2-operant-conditioning-interventions",
+      "suggestedParagraph": "## The Foundation: What Makes Behavior Stick or Disappear?",
+      "lessonExcerpt": "Every behavior serves a function \u2013 maybe it gets attention, avoids something unpleasant, provides sensory stimulation, or obtains a tangible reward.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 5
+    },
+    {
+      "stem": "A behavioral therapist instructs a highly distractible adult client to allow himself to browse news websites for 15 minutes, but only after completing 30 minutes of uninterrupted report writing. The therapist explains that this works because the preferred activity is being used as a consequence for completing the less preferred one. Which operant principle most precisely describes this intervention?",
+      "options": [
+        "Token economy, because the preferred activity serves as an exchangeable backup reinforcer",
+        "Negative reinforcement, because completing the aversive report writing eventually terminates the demand",
+        "The Premack principle, because a high-frequency behavior is used to reinforce a low-frequency behavior",
+        "Differential reinforcement of incompatible behavior, because browsing and writing cannot occur simultaneously"
+      ],
+      "answer": "The Premack principle, because a high-frequency behavior is used to reinforce a low-frequency behavior",
+      "explanation": "The Premack principle specifies that a high-frequency (preferred) behavior can serve as a reinforcer for a low-frequency (less preferred) behavior when access to the preferred behavior is made contingent on performing the non-preferred behavior. Browsing news (high-frequency) is made contingent on report writing (low-frequency), which is the defining feature of the Premack principle. Token economy requires an exchangeable medium; negative reinforcement requires removal of an aversive stimulus to increase behavior; DRI requires topographic incompatibility between the target and alternative behavior. None of those mechanisms are driving this arrangement.",
+      "kn": "KN6",
+      "kn_explanation": "Domain 2 (Cognitive-Affective Bases of Behavior) covers operant conditioning principles including the Premack principle as a framework for structuring reinforcement contingencies.",
+      "difficulty": "medium",
+      "quality_comment": "Strong clinical vignette that requires conceptual understanding rather than simple definitional recall. Distractors represent plausible misattributions a doctoral candidate might make.",
+      "suggestedLesson": "2-operant-conditioning-interventions",
+      "suggestedParagraph": "### The Premack Principle: Grandma's Rule for Professionals",
+      "lessonExcerpt": "The Premack principle states that a high-frequency behavior can reinforce a low-frequency behavior. In plain language: you can do something you love AFTER you do something you don't want to do.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 21
     }
   ]
 }

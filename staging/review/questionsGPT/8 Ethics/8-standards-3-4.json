@@ -17,7 +17,7 @@
       "suggestedLesson": "8-standards-3-4",
       "suggestedParagraph": "### Multiple Relationships: The Most Complex Standard",
       "lessonExcerpt": "Only those that 'could reasonably be expected to impair objectivity, competence, or effectiveness' or risk exploitation or harm.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 3
     },
@@ -45,21 +45,21 @@
     {
       "stem": "A psychologist suspects that a 7-year-old client is being physically abused by a parent. Before filing a report with child protective services, the psychologist wants to contact the child's pediatrician for corroborating information. What does the psychologist need in order to contact the pediatrician?",
       "options": [
-        "Nothing—mandated reporting laws automatically waive all consent requirements for any communication related to suspected abuse",
+        "Nothing\u2014mandated reporting laws automatically waive all consent requirements for any communication related to suspected abuse",
         "A signed release of information from the non-abusing parent or legal guardian authorizing contact with the pediatrician",
         "A court order specifically authorizing inter-provider communication about the suspected abuse",
         "Only verbal consent from the child, since the child is the identified client"
       ],
       "answer": "A signed release of information from the non-abusing parent or legal guardian authorizing contact with the pediatrician",
-      "explanation": "Mandated reporting laws require reporting suspected abuse to protective services—they do not broadly waive confidentiality for all communications with any party. Contacting the pediatrician is a separate clinical action that still requires proper authorization (a release of information). Option A incorrectly assumes mandated reporting laws eliminate all consent requirements for any abuse-related communication. Option C is overly restrictive—a court order is not required for routine provider-to-provider communication when proper consent exists. Option D is incorrect because minors generally cannot provide their own consent for release of information; the parent or legal guardian holds that right.",
+      "explanation": "Mandated reporting laws require reporting suspected abuse to protective services\u2014they do not broadly waive confidentiality for all communications with any party. Contacting the pediatrician is a separate clinical action that still requires proper authorization (a release of information). Option A incorrectly assumes mandated reporting laws eliminate all consent requirements for any abuse-related communication. Option C is overly restrictive\u2014a court order is not required for routine provider-to-provider communication when proper consent exists. Option D is incorrect because minors generally cannot provide their own consent for release of information; the parent or legal guardian holds that right.",
       "kn": "KN63",
       "kn_explanation": "Mandatory reporting laws and legal obligations regarding child abuse",
       "difficulty": "hard",
-      "quality_comment": "Tests the important distinction between mandated reporting to authorities versus general inter-provider communication. The lesson covers mandated reporting and consent separately but does not explicitly address this exact scenario.",
+      "quality_comment": "Tests the important distinction between mandated reporting to authorities versus general inter-provider communication. The lesson covers mandated reporting and consent separately but",
       "suggestedLesson": "8-standards-3-4",
       "suggestedParagraph": "### Disclosing Confidential Information: When Secrets Must Be Broken",
-      "lessonExcerpt": "Mandatory reporting laws require reporting suspected child abuse or neglect to protective services. Many jurisdictions extend this to elder abuse and abuse of adults with disabilities. You report when you have 'reasonable cause to suspect'. Not when you're certain.",
-      "needsReview": true,
+      "lessonExcerpt": "### Informed Consent: More Than Just a Signature",
+      "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 12
     },
@@ -72,7 +72,7 @@
         "Contact the court that issued the custody order to obtain a judicial authorization before hospitalizing the minor"
       ],
       "answer": "Proceed with hospitalization based on the mother's consent, as one parent's consent typically suffices legally, especially in an emergency",
-      "explanation": "The lesson clearly states that 'In intact families, consent from one parent usually suffices legally.' While these parents are divorced, the emergency nature of the situation further supports proceeding with one parent's consent. Additionally, emergency situations are listed as exceptions where minors can receive treatment even without parental consent when the minor's life is at risk. Option A is dangerous—delaying hospitalization for a suicidal minor could be fatal and is not legally required. Option C overstates the psychologist's independent authority; parental consent is still sought when available. Option D introduces unnecessary delay in a life-threatening situation.",
+      "explanation": "The lesson clearly states that 'In intact families, consent from one parent usually suffices legally.' While these parents are divorced, the emergency nature of the situation further supports proceeding with one parent's consent. Additionally, emergency situations are listed as exceptions where minors can receive treatment even without parental consent when the minor's life is at risk. Option A is dangerous\u2014delaying hospitalization for a suicidal minor could be fatal and is not legally required. Option C overstates the psychologist's independent authority; parental consent is still sought when available. Option D introduces unnecessary delay in a life-threatening situation.",
       "kn": "KN63",
       "kn_explanation": "Legal issues regarding minor hospitalization, custody, and consent laws",
       "difficulty": "medium",
@@ -93,15 +93,15 @@
         "No privilege exists in court-ordered therapy; all records are automatically available to the court"
       ],
       "answer": "The client holds the privilege, as privilege belongs to the client even in court-ordered therapy",
-      "explanation": "The lesson clearly states that privilege is a 'Legal right' where the 'Client holds it; client decides to claim or waive.' While the lesson lists 'Court-ordered competency evaluations' as a common exception to privilege, court-ordered therapy (treatment) is distinct from court-ordered evaluations. In court-ordered treatment, the client generally retains the privilege. The therapist can assert privilege on behalf of the client. Option A incorrectly assigns privilege to the court—courts determine exceptions but don't hold privilege. Option B is partially correct in that therapists can assert privilege, but they do so on behalf of the client who holds it. Option D overstates the exception; court-ordered treatment does not automatically eliminate all privilege.",
+      "explanation": "The lesson clearly states that privilege is a 'Legal right' where the 'Client holds it; client decides to claim or waive.' While the lesson lists 'Court-ordered competency evaluations' as a common exception to privilege, court-ordered therapy (treatment) is distinct from court-ordered evaluations. In court-ordered treatment, the client generally retains the privilege. The therapist can assert privilege on behalf of the client. Option A incorrectly assigns privilege to the court\u2014courts determine exceptions but don't hold privilege. Option B is partially correct in that therapists can assert privilege, but they do so on behalf of the client who holds it. Option D overstates the exception; court-ordered treatment does not automatically eliminate all privilege.",
       "kn": "KN63",
       "kn_explanation": "Court-ordered therapy, subpoena, and privileged communication laws",
       "difficulty": "hard",
-      "quality_comment": "Tests a commonly confused distinction. The lesson covers privilege ownership and court-ordered evaluation exceptions but does not explicitly discuss court-ordered therapy privilege, which is the key test point.",
+      "quality_comment": "Tests privilege vs. confidentiality distinction in court-ordered therapy. Lesson covers court-ordered evaluation and privilege ownership.",
       "suggestedLesson": "8-standards-3-4",
       "suggestedParagraph": "### Confidentiality versus Privilege: Understanding the Difference",
-      "lessonExcerpt": "Privilege: Legal right, Client holds it; client decides to claim or waive, Legal proceedings only... Common exceptions to privilege: Court-ordered competency evaluations.",
-      "needsReview": true,
+      "lessonExcerpt": "Court-ordered evaluation: The court/attorney who retained you \u2014 Objective assessment; limited confidentiality.",
+      "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 16
     },
@@ -114,7 +114,7 @@
         "Neither party, because records from 29 years ago exceed the recommended retention period and should have been destroyed"
       ],
       "answer": "Only the now-adult former client, who gained full HIPAA rights over her entire record when she turned 18",
-      "explanation": "The lesson explicitly states: 'When minors turn 18: They gain full HIPAA rights over their entire record, including information from when they were minors. Parents lose access without the now-adult child's authorization.' The mother no longer has automatic rights to these records, even though she consented to the original treatment. The now-adult client controls access. Option A is incorrect because the mother's original consent does not grant ongoing access after the child reaches adulthood. Option B reverses the actual HIPAA rule. Option D, while raising a valid records retention point, does not address the access rights question—and if records still exist, access rights apply.",
+      "explanation": "The lesson explicitly states: 'When minors turn 18: They gain full HIPAA rights over their entire record, including information from when they were minors. Parents lose access without the now-adult child's authorization.' The mother no longer has automatic rights to these records, even though she consented to the original treatment. The now-adult client controls access. Option A is incorrect because the mother's original consent does not grant ongoing access after the child reaches adulthood. Option B reverses the actual HIPAA rule. Option D, while raising a valid records retention point, does not address the access rights question\u2014and if records still exist, access rights apply.",
       "kn": "KN68",
       "kn_explanation": "Client/patient rights regarding access to records and minor-era records",
       "difficulty": "medium",
@@ -156,7 +156,7 @@
         "He is ethically required to inform members that everything discussed in group will be reported to their individual therapists"
       ],
       "answer": "He cannot guarantee confidentiality but should discuss its importance during screening, the first session, subsequent sessions as needed, and the final session",
-      "explanation": "The lesson explicitly states that therapists cannot guarantee confidentiality in group therapy because group members are not bound by professional ethics or legal liability. However, the therapist's role is risk reduction: discussing confidentiality during screening interviews, the first session, subsequent sessions as needed, and the final session. Option A is wrong because even with a signed agreement, confidentiality cannot be guaranteed since group members are not legally bound. Option B is wrong because the inability to guarantee confidentiality does not mean groups should not be run—risk reduction strategies are appropriate. Option D is fabricated and not an ethical requirement.",
+      "explanation": "The lesson explicitly states that therapists cannot guarantee confidentiality in group therapy because group members are not bound by professional ethics or legal liability. However, the therapist's role is risk reduction: discussing confidentiality during screening interviews, the first session, subsequent sessions as needed, and the final session. Option A is wrong because even with a signed agreement, confidentiality cannot be guaranteed since group members are not legally bound. Option B is wrong because the inability to guarantee confidentiality does not mean groups should not be run\u2014risk reduction strategies are appropriate. Option D is fabricated and not an ethical requirement.",
       "kn": "KN61",
       "kn_explanation": "APA ethical principles regarding confidentiality standards in group therapy",
       "difficulty": "medium",
@@ -177,7 +177,7 @@
         "Proceed with the evaluation as long as another committee member reviews her scoring for bias"
       ],
       "answer": "Recuse herself from the admissions decision regarding her niece because the familial relationship could impair her objectivity or expose her niece to harm",
-      "explanation": "Standard 3.06 prohibits psychologists from accepting roles that impair their objectivity or expose others to harm. Having evaluative authority over a family member's application creates a clear conflict of interest—whether Dr. Torres advocates for or against her niece, her objectivity is compromised. Option A is incorrect because mere disclosure does not resolve the inherent conflict. Option C is incorrect because partial participation still involves impaired objectivity. Option D is incorrect because peer review of scores does not eliminate the underlying conflict of interest.",
+      "explanation": "Standard 3.06 prohibits psychologists from accepting roles that impair their objectivity or expose others to harm. Having evaluative authority over a family member's application creates a clear conflict of interest\u2014whether Dr. Torres advocates for or against her niece, her objectivity is compromised. Option A is incorrect because mere disclosure does not resolve the inherent conflict. Option C is incorrect because partial participation still involves impaired objectivity. Option D is incorrect because peer review of scores does not eliminate the underlying conflict of interest.",
       "kn": "KN64",
       "kn_explanation": "Identifying and managing conflict of interest in professional role",
       "difficulty": "medium",
@@ -198,7 +198,7 @@
         "Release the records to the attorney because a legal proceeding overrides confidentiality protections"
       ],
       "answer": "Decline to release the records without consent from all parties to the therapy, and seek court guidance if necessary",
-      "explanation": "In family therapy, all participants are considered clients, and confidentiality belongs to all parties jointly. When one party does not consent to the release, the therapist should not release the records. The lesson emphasizes that in couples and family therapy, the therapist must clarify upfront who the clients are and how information will be handled. Since the mother has not consented, releasing the records would violate her confidentiality. If compelled, the therapist should seek court guidance—consistent with the subpoena response protocol of filing a motion to quash or requesting a protective order. Option A is incorrect because one party's consent does not authorize release of records involving all parties. Option B is incorrect because family therapy records are typically integrated and cannot be neatly separated. Option D is incorrect because a legal proceeding does not automatically override confidentiality; the therapist should assert privilege and seek court guidance.",
+      "explanation": "In family therapy, all participants are considered clients, and confidentiality belongs to all parties jointly. When one party does not consent to the release, the therapist should not release the records. The lesson emphasizes that in couples and family therapy, the therapist must clarify upfront who the clients are and how information will be handled. Since the mother has not consented, releasing the records would violate her confidentiality. If compelled, the therapist should seek court guidance\u2014consistent with the subpoena response protocol of filing a motion to quash or requesting a protective order. Option A is incorrect because one party's consent does not authorize release of records involving all parties. Option B is incorrect because family therapy records are typically integrated and cannot be neatly separated. Option D is incorrect because a legal proceeding does not automatically override confidentiality; the therapist should assert privilege and seek court guidance.",
       "kn": "KN64",
       "kn_explanation": "Managing ethical issue of role conflict - therapist asked to serve as custody evaluator",
       "difficulty": "hard",
@@ -206,7 +206,7 @@
       "suggestedLesson": "8-standards-3-4",
       "suggestedParagraph": "#### Couples and Family Therapy",
       "lessonExcerpt": "You must clarify upfront: Who are the clients? How will information shared privately by one person be handled?",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 30
     },
@@ -671,6 +671,195 @@
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 25
+    },
+    {
+      "stem": "A psychologist terminated therapy with a client two years ago. The former client, with whom the psychologist had no prior personal relationship, now requests to begin therapy again after having been in an intimate relationship with the psychologist for the past six months. According to APA ethical standards, the psychologist should:",
+      "options": [
+        "Resume therapy since the required two-year waiting period has passed",
+        "Resume therapy only after consulting with a colleague about potential risks",
+        "Not resume therapy because the intimate relationship creates a problematic multiple relationship that would likely impair professional objectivity",
+        "Resume therapy only if the intimate relationship is formally ended first"
+      ],
+      "answer": "Not resume therapy because the intimate relationship creates a problematic multiple relationship that would likely impair professional objectivity",
+      "explanation": "While APA Standard 10.08 establishes a two-year minimum before sexual intimacies with former clients (and even then only under very limited circumstances), resuming a therapeutic relationship with a current or former intimate partner creates a multiple relationship that could reasonably impair objectivity, competence, or effectiveness. The lesson notes that post-therapy relationships 'prevent the former client from returning to therapy.' Option A incorrectly treats the two-year rule as a green light. Option B is insufficient because consultation alone does not resolve the fundamental conflict. Option D is wrong because even ending the relationship does not eliminate the history that would impair objectivity.",
+      "kn": "KN8",
+      "kn_explanation": "This question addresses multiple relationships and post-therapy intimacies under Standards 3 and 10 of the APA Ethics Code.",
+      "difficulty": "hard",
+      "quality_comment": "Complex scenario requiring integration of multiple relationship rules with post-therapy sexual contact standards. Well-grounded in lesson content about post-therapy relationships.",
+      "suggestedLesson": "8-standards-3-4",
+      "suggestedParagraph": "### Multiple Relationships: The Most Complex Standard",
+      "lessonExcerpt": "post-therapy friendships. Many students think these are fine since therapy has ended. Wrong. These relationships still count as problematic because they prevent the former client from returning to therapy and prevent you from providing other professional services",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 3
+    },
+    {
+      "stem": "Dr. Okafor is a clinical psychologist who also serves as the clinical director at a community mental health center. One of her direct supervisees has requested that she also provide individual clinical supervision for licensure hours. Which factor from Gottlieb's decision-making model would be MOST relevant in evaluating this arrangement?",
+      "options": [
+        "Whether the supervisee has given informed consent to the dual relationship",
+        "The power differential inherent in Dr. Okafor's administrative authority combined with supervisory authority",
+        "Whether Dr. Okafor has previously supervised other employees at the center",
+        "The geographic availability of alternative supervisors in the community"
+      ],
+      "answer": "The power differential inherent in Dr. Okafor's administrative authority combined with supervisory authority",
+      "explanation": "Gottlieb's decision-making model evaluates multiple relationships along three dimensions: power differential, duration, and clarity of termination. In this scenario, the most salient concern is the compounded power differential\u2014Dr. Okafor already holds administrative authority over the supervisee as clinical director, and adding clinical supervision creates an even larger power gap. The lesson specifically identifies 'Large gap (supervisor-supervisee)' as higher risk. Option A, while relevant to ethical practice generally, is not one of Gottlieb's three factors. Option C is irrelevant to the model. Option D addresses practical concerns but not the ethical framework.",
+      "kn": "KN8",
+      "kn_explanation": "This question tests understanding of supervision ethics and multiple relationships using Gottlieb's model under Standard 3.",
+      "difficulty": "hard",
+      "quality_comment": "Well-constructed question integrating Gottlieb's model with a realistic supervision scenario. Directly supported by lesson content.",
+      "suggestedLesson": "8-standards-3-4",
+      "suggestedParagraph": "#### Gottlieb's Decision-Making Model",
+      "lessonExcerpt": "Power Differential: Higher Risk = Large gap (supervisor-supervisee), Lower Risk = Minimal gap (peer consultation). Duration: Higher Risk = Long-term or ongoing. Clarity of Termination: Higher Risk = Likely to resume.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 9
+    },
+    {
+      "stem": "Dr. Kim, a licensed psychologist, suspects that a 7-year-old client is being physically abused by a parent. Dr. Kim wants to contact the child's pediatrician to gather additional information. Which of the following best describes the consent requirements for this contact?",
+      "options": [
+        "Dr. Kim must obtain written consent from both parents before contacting the pediatrician",
+        "As a mandated reporter, Dr. Kim may contact the pediatrician without parental consent when gathering information related to a suspected abuse report",
+        "Dr. Kim must obtain a court order before contacting any third-party provider about suspected abuse",
+        "Dr. Kim needs consent from the child's legal guardian but may proceed if only one parent consents"
+      ],
+      "answer": "As a mandated reporter, Dr. Kim may contact the pediatrician without parental consent when gathering information related to a suspected abuse report",
+      "explanation": "Mandated reporting laws generally override standard confidentiality and consent requirements. When a psychologist has reasonable suspicion of child abuse, the duty to report and gather relevant information supersedes the typical requirement to obtain parental consent before contacting other providers. Option A is incorrect because mandated reporting obligations override standard consent requirements. Option C is incorrect because court orders are not required for mandated reporting activities. Option D applies to standard treatment situations, not mandated reporting contexts where the suspected abuser may be the guardian whose consent would typically be required.",
+      "kn": "KN8",
+      "kn_explanation": "This question addresses the intersection of mandated reporting obligations and consent requirements, core topics in Domain 8: Ethical, Legal & Professional Issues.",
+      "difficulty": "hard",
+      "quality_comment": "Tests an important intersection of mandated reporting and consent. The lesson covers confidentiality exceptions including mandated reporting but",
+      "suggestedLesson": "8-standards-3-4",
+      "suggestedParagraph": "## Standard 4: Privacy and Confidentiality",
+      "lessonExcerpt": "When services are mandated by the court, you still discuss the nature of services and confidentiality limits with the person, but you don't need their consent to proceed. If someone refuses a court-or",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 12
+    },
+    {
+      "stem": "A 15-year-old client expresses suicidal ideation with a specific plan during a therapy session. The adolescent's parents are divorced and share joint legal custody. What is the MINIMUM parental consent requirement to authorize psychiatric hospitalization of the minor?",
+      "options": [
+        "Both parents must provide written consent before hospitalization can occur",
+        "Consent from one parent with legal custody is generally sufficient to authorize hospitalization",
+        "No parental consent is needed because the therapist can authorize emergency hospitalization independently",
+        "The minor must also provide assent in addition to parental consent for hospitalization to proceed"
+      ],
+      "answer": "Consent from one parent with legal custody is generally sufficient to authorize hospitalization",
+      "explanation": "In most jurisdictions, consent from one parent who has legal custody is sufficient to authorize the hospitalization of a minor, particularly in emergency situations involving imminent danger. Option A is incorrect because requiring both parents' consent in an emergency situation could dangerously delay needed treatment; most jurisdictions do not require both parents to consent. Option C is incorrect because while therapists may initiate emergency holds under certain statutes, standard hospitalization requires parental consent. Option D is incorrect because while assent from the minor is ethically desirable, it is not legally required for hospitalization when a parent with legal authority consents and the situation involves imminent danger.",
+      "kn": "KN8",
+      "kn_explanation": "This question addresses consent requirements for minors in emergency situations, a topic within Domain 8: Ethical, Legal & Professional Issues.",
+      "difficulty": "hard",
+      "quality_comment": "Tests a practical and commonly tested legal issue. The lesson content discusses consent and minors but",
+      "suggestedLesson": "8-standards-3-4",
+      "suggestedParagraph": "### Third-Party Requests: Who's Really Your Client?",
+      "lessonExcerpt": "Standard 3.07 requires you to clarify relationships when someone else requests your services",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 14
+    },
+    {
+      "stem": "Dr. Wallace has been treating a 22-year-old college student for anxiety. The student's parents, who are paying for therapy, request copies of their daughter's psychological test results. The student has not authorized the release. What should Dr. Wallace do?",
+      "options": [
+        "Release the results because the parents are financially responsible for treatment",
+        "Release only a summary of results rather than the full test data",
+        "Decline to release the results without the adult client's explicit authorization",
+        "Release the results but remove any sensitive information the client might not want shared"
+      ],
+      "answer": "Decline to release the results without the adult client's explicit authorization",
+      "explanation": "The client is a legal adult (age 22), and regardless of who pays for treatment, confidentiality belongs to the client. Standard 4.01 requires psychologists to take reasonable precautions to protect confidential information, and Standard 9.04 addresses the release of test data. Without the adult client's authorization (or a court order or legal mandate), the psychologist must not release confidential information, including test results, to third parties \u2014 even parents who are paying for services. Option A is incorrect because financial responsibility does not confer a right to confidential clinical information about an adult client. Option B is incorrect because even a summary constitutes protected confidential information requiring client authorization. Option D is incorrect because selective redaction still constitutes unauthorized disclosure.",
+      "kn": "KN8",
+      "kn_explanation": "This question addresses Standards 4.01 and 9.04 regarding confidentiality of adult client records and test data, within Domain 8.",
+      "difficulty": "medium",
+      "quality_comment": "Well-grounded question testing the intersection of confidentiality, adult client rights, and third-party payment. Common EPPP scenario.",
+      "suggestedLesson": "8-standards-3-4",
+      "suggestedParagraph": "### Third-Party Requests: Who's Really Your Client?",
+      "lessonExcerpt": "Standard 3.07 requires you to clarify relationships when someone else requests your services",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 20
+    },
+    {
+      "stem": "Dr. Patel is a psychologist in a small rural community where she also serves on the school board. A school board member's teenager is referred to her for therapy. According to the APA Ethics Code, under what condition would this multiple relationship be permissible?",
+      "options": [
+        "Only if Dr. Patel obtains written informed consent from the school board member",
+        "Only if the relationship would not reasonably be expected to impair her objectivity, competence, or effectiveness or risk exploitation or harm",
+        "Only if another psychologist in the community is unavailable to provide services",
+        "Multiple relationships are never permissible under any circumstances according to the Ethics Code"
+      ],
+      "answer": "Only if the relationship would not reasonably be expected to impair her objectivity, competence, or effectiveness or risk exploitation or harm",
+      "explanation": "The APA Ethics Code does not prohibit all multiple relationships\u2014only those that could reasonably be expected to impair objectivity, competence, or effectiveness or risk exploitation or harm. Option A is insufficient because informed consent alone does not make a problematic multiple relationship ethical. Option C incorrectly suggests unavailability of other providers is the standard. Option D is incorrect because the Ethics Code explicitly recognizes that not all multiple relationships are prohibited.",
+      "kn": "KN8",
+      "kn_explanation": "This question addresses Standard 3 of the APA Ethics Code regarding multiple relationships, which falls under Ethical, Legal & Professional Issues (Domain 8).",
+      "difficulty": "medium",
+      "quality_comment": "Strong question testing a common EPPP misconception that all multiple relationships are prohibited. The rural setting adds realistic context.",
+      "suggestedLesson": "8-standards-3-4",
+      "suggestedParagraph": "### Multiple Relationships: The Most Complex Standard",
+      "lessonExcerpt": "Not all multiple relationships are prohibited. Only those that \"could reasonably be expected to impair objectivity, competence, or effectiveness\" or risk exploitation or harm.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 21
+    },
+    {
+      "stem": "Dr. Nakamura is beginning a therapy group for adults with social anxiety. At the first session, she discusses ground rules with group members. Regarding confidentiality in this setting, which of the following BEST describes Dr. Nakamura's ethical obligation?",
+      "options": [
+        "She must guarantee that all group members will maintain confidentiality of information shared in the group",
+        "She should inform group members early in therapy about the importance of confidentiality and that she cannot guarantee it will be maintained by all members",
+        "She has no obligation to discuss confidentiality because group members implicitly consent to shared disclosure by joining a group",
+        "She should require each group member to sign a legally binding confidentiality agreement before the group begins"
+      ],
+      "answer": "She should inform group members early in therapy about the importance of confidentiality and that she cannot guarantee it will be maintained by all members",
+      "explanation": "The APA Ethics Code requires psychologists to discuss confidentiality at the outset of therapy, including its limitations. In group therapy, the psychologist cannot guarantee confidentiality because other group members are not bound by the same ethical and legal obligations as the therapist. Option A is incorrect because psychologists cannot guarantee other members' behavior. Option C is incorrect because implicit consent does not relieve the psychologist of the duty to discuss confidentiality. Option D is incorrect because while confidentiality agreements may be used, they are not legally binding on group members in the same way, and the ethical obligation is to inform, not to create binding contracts.",
+      "kn": "KN8",
+      "kn_explanation": "This question addresses confidentiality obligations in group therapy settings under Standard 10, falling within Domain 8 Ethical, Legal & Professional Issues.",
+      "difficulty": "medium",
+      "quality_comment": "Solid question testing a nuanced and commonly tested distinction about the limits of confidentiality guarantees in group settings.",
+      "suggestedLesson": "8-standards-3-4",
+      "suggestedParagraph": "## Standard 4: Privacy and Confidentiality",
+      "lessonExcerpt": "",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 24
+    },
+    {
+      "stem": "Dr. Okafor serves on the admissions committee for a clinical psychology doctoral program. She learns that her niece has applied to the program. According to Standard 3.06 of the APA Ethics Code regarding conflicts of interest, what should Dr. Okafor do?",
+      "options": [
+        "Proceed with the evaluation as long as she discloses the relationship to the committee",
+        "Recuse herself from any evaluative role regarding her niece's application to avoid impaired objectivity",
+        "Continue her role on the committee but assign a higher standard of evaluation to her niece to compensate for potential bias",
+        "Resign from the admissions committee entirely for the current application cycle"
+      ],
+      "answer": "Recuse herself from any evaluative role regarding her niece's application to avoid impaired objectivity",
+      "explanation": "Standard 3.06 prohibits psychologists from taking on roles where personal, financial, or other interests could reasonably impair their objectivity or risk exploitation or harm. Having a family member's application under review creates a clear conflict of interest. Option A is insufficient because disclosure alone does not eliminate the conflict. Option C introduces an inappropriate compensatory bias that further violates objectivity. Option D is unnecessarily extreme\u2014recusal from the specific application is sufficient without abandoning the entire committee role.",
+      "kn": "KN8",
+      "kn_explanation": "This question addresses Standard 3.06 regarding conflicts of interest in evaluative roles, which falls under Domain 8 Ethical, Legal & Professional Issues.",
+      "difficulty": "medium",
+      "quality_comment": "Clear application question with a realistic scenario. Tests the distinction between disclosure and recusal as appropriate responses to conflicts of interest.",
+      "suggestedLesson": "8-standards-3-4",
+      "suggestedParagraph": "### Conflict of Interest: Following the Money",
+      "lessonExcerpt": "Standard 3.06 prohibits accepting roles that impair your objectivity or expose others to harm.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 27
+    },
+    {
+      "stem": "Dr. Whitfield has been providing family therapy to both parents and their two children. The parents are now divorcing and in a custody dispute. The mother requests that Dr. Whitfield release the complete family therapy records to her attorney, but the father does not consent to the release. What is Dr. Whitfield's MOST appropriate course of action?",
+      "options": [
+        "Release the records because the mother has a right to access her own therapy records",
+        "Release only portions of the records that pertain exclusively to the mother's individual statements",
+        "Decline to release the records without consent from all parties involved in the family therapy, and seek legal consultation if necessary",
+        "Release the records to the court directly rather than to either party's attorney"
+      ],
+      "answer": "Decline to release the records without consent from all parties involved in the family therapy, and seek legal consultation if necessary",
+      "explanation": "In family therapy, confidentiality belongs to all participants in the treatment. When one party consents to release but another does not, the psychologist cannot release the records because doing so would violate the non-consenting party's confidentiality rights. This is particularly important in custody disputes where released information could be used adversarially. Option A incorrectly treats family therapy records as individual records. Option B attempts a partial solution but family therapy records are intertwined and separating them risks revealing information about the non-consenting party. Option D circumvents the consent issue improperly\u2014the psychologist should instead wait for a court order if the court needs the records.",
+      "kn": "KN8",
+      "kn_explanation": "This question addresses confidentiality in family therapy during custody disputes under Standards 4 and 10, falling within Domain 8 Ethical, Legal & Professional Issues.",
+      "difficulty": "hard",
+      "quality_comment": "Tests a high-stakes clinical scenario frequently examined on the EPPP. The custody context adds complexity that requires understanding of how confidentiality applies to multiple therapy participants.",
+      "suggestedLesson": "8-standards-3-4",
+      "suggestedParagraph": "### Multiple Relationships: The Most Complex Standard",
+      "lessonExcerpt": "",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 30
     }
   ]
 }

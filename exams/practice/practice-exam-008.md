@@ -1,0 +1,4513 @@
+---
+exam_id: practice-exam-008
+exam_type: practice
+generated_at: 2026-03-25T15:00:59.891Z
+question_count: 225
+version: 1
+format: full
+source: Assembled from audited question bank (PsychPrep 2016 Exam A references)
+---
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "What ethical concern arises when a psychologist waives copayment fees for clients?",
+      "options": [
+        "It may create a financial burden on the psychologist.",
+        "It could lead to unequal treatment among clients.",
+        "It violates confidentiality agreements.",
+        "It encourages clients to over-utilize services."
+      ],
+      "correct_answer": "It could lead to unequal treatment among clients.",
+      "explanation": "Waiving copayment fees can create disparities in treatment, as it may lead to perceptions of favoritism or unequal access to services. While it may seem beneficial, it can have ethical implications regarding fairness and equity among clients.",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN24",
+      "source_file": "8-standards-3-4.json",
+      "source_folder": "8 Ethics",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 2,
+      "question": "A 28-year-old patient presents with a chief complaint of suddenly falling asleep during conversations and at work, occurring approximately four times per week for the past six months. She also reports vivid, dream-like visual experiences just as she is waking up. Her sleep study reveals a REM sleep latency of 12 minutes. Which additional finding would be MOST consistent with a diagnosis of narcolepsy?",
+      "options": [
+        "Repeated occurrences of extended, well-remembered nightmares during the second half of the sleep period",
+        "Incomplete awakenings from Stage 3 sleep with panicky screaming and autonomic arousal",
+        "Episodes of sudden bilateral loss of muscle tone triggered by strong emotions",
+        "Difficulty maintaining sleep characterized by frequent awakenings occurring three or more nights per week"
+      ],
+      "correct_answer": "Episodes of sudden bilateral loss of muscle tone triggered by strong emotions",
+      "explanation": "Narcolepsy diagnosis requires irresistible sleep attacks plus at least ONE of: cataplexy (episodes of loss of muscle tone), hypocretin deficiency, or REM sleep latency ≤15 minutes. The patient already meets the REM latency criterion (12 minutes), but cataplexy—sudden loss of muscle tone often triggered by strong emotions—is the hallmark associated feature of narcolepsy and would further confirm the diagnosis. Option B describes nightmare disorder (REM sleep, second half of sleep period, well-remembered). Option C describes sleep terrors (non-REM sleep arousal disorder with panicky screaming and no memory). Option D describes insomnia disorder symptoms, not narcolepsy.",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN5",
+      "source_file": "5-eating-sleep-elimination.json",
+      "source_folder": "5 Assessment",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": false,
+      "is_org_psych": false
+    },
+    {
+      "id": 3,
+      "question": "Dr. Martinez has been a member of her department's faculty committee for three years. During that time, she has consistently attended meetings, volunteered for subcommittees, and supported the group's decisions. Recently, she proposed a curriculum change that deviates significantly from the committee's traditional approach. Despite the unconventional nature of her proposal, the committee gave it serious consideration and ultimately approved it. According to Hollander's concept, the committee's willingness to accept Dr. Martinez's deviation is BEST explained by:",
+      "options": [
+        "The minority influence effect, which produces private acceptance through consistency",
+        "Groupthink, which causes groups to suppress critical evaluation of proposals",
+        "Idiosyncrasy credits she earned through her history of conforming to group norms",
+        "Social facilitation, which improves individual performance in the presence of others"
+      ],
+      "correct_answer": "Idiosyncrasy credits she earned through her history of conforming to group norms",
+      "explanation": "Hollander's concept of idiosyncrasy credits explains that group members who initially conform to the group's norms earn 'credits' that later allow them greater latitude to deviate from those norms without facing rejection. Dr. Martinez's three years of consistent participation and support built up these credits, allowing her unconventional proposal to be accepted. Groupthink (A) involves the suppression of dissent, not the acceptance of well-earned deviation. Minority influence (C) involves a consistent minority changing the majority's view, but this concept doesn't account for the role of prior conformity. Social facilitation (D) relates to task performance in the presence of others, not group tolerance of deviance.",
+      "domain": "Domain 3: Social Psychology & Cultural Aspects",
+      "knId": "KN16",
+      "source_file": "3-influence.json",
+      "source_folder": "3 Social Psychology",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": false,
+      "is_org_psych": false
+    },
+    {
+      "id": 4,
+      "question": "A psychologist's client has an insurance plan that does not cover adjustment disorders. The client's presenting problem is clearly an adjustment disorder with depressed mood. The psychologist considers assigning a major depressive disorder diagnosis instead so the client can receive insurance coverage. According to APA Standard 6.06, which of the following best describes the consequences of this action?",
+      "options": [
+        "It constitutes both an ethical violation of accurate billing standards and insurance fraud, which is also illegal",
+        "It is a minor ethical infraction that would result in a warning but no formal sanction",
+        "It is acceptable if the psychologist documents the clinical rationale for the alternative diagnosis in the client's file",
+        "It is acceptable as long as the client provides informed consent to use the alternative diagnosis"
+      ],
+      "correct_answer": "It constitutes both an ethical violation of accurate billing standards and insurance fraud, which is also illegal",
+      "explanation": "Standard 6.06 requires providing accurate information about diagnosis codes, types of services, who provided services, and fees charged. The lesson explicitly identifies 'Assigning inaccurate diagnosis for insurance coverage' as a practice that is 'both unethical and illegal (fraud).' No amount of documentation or client consent makes misrepresenting a diagnosis acceptable. Option A is incorrect—documenting rationale does not legitimize a knowingly inaccurate diagnosis. Option B is wrong because client consent cannot authorize fraud. Option D understates the severity; insurance fraud carries serious legal and professional consequences.",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN64",
+      "source_file": "8-standards-5-6.json",
+      "source_folder": "8 Ethics",
+      "difficulty": "easy",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 5,
+      "question": "What does the Kappa coefficient measure in psychological assessments?",
+      "options": [
+        "A. The internal consistency of a test",
+        "B. The agreement between two raters",
+        "C. The validity of a test",
+        "D. The reliability of test scores over time"
+      ],
+      "correct_answer": "B. The agreement between two raters",
+      "explanation": "Option B is correct because the Kappa coefficient specifically measures the level of agreement between two raters or observers. Options A, C, and D refer to different aspects of test evaluation.",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN5",
+      "source_file": "5-cognitive-tests.json",
+      "source_folder": "5 Assessment",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 6,
+      "question": "According to Gender Schema Theory, how do individuals develop their understanding of gender roles?",
+      "options": [
+        "By internalizing societal norms and expectations",
+        "Through biological predispositions",
+        "By observing and imitating others",
+        "Through direct reinforcement of gender-appropriate behaviors"
+      ],
+      "correct_answer": "By internalizing societal norms and expectations",
+      "explanation": "Gender Schema Theory posits that individuals develop their understanding of gender roles by internalizing societal norms and expectations, which shape their perceptions and behaviors regarding gender. While biological predispositions, observation, and reinforcement play roles, the theory emphasizes the cognitive framework formed by societal influences. Therefore, internalizing societal norms and expectations is the correct answer.",
+      "domain": "Domain 3: Social Psychology & Cultural Aspects",
+      "knId": "KN3",
+      "source_file": "3-helping-and-hurting.json",
+      "source_folder": "3 Social Psychology",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 7,
+      "question": "A company receives 200 applications from White candidates and hires 80 (40% hiring rate), and receives 100 applications from Hispanic candidates and hires 28 (28% hiring rate). According to the four-fifths rule outlined in the Uniform Guidelines on Employee Selection Procedures, this hiring pattern:",
+      "options": [
+        "Cannot be evaluated for adverse impact without knowing the validity coefficient of the selection procedure",
+        "Does not indicate adverse impact because the hiring rate difference is less than 20 percentage points",
+        "Does not indicate adverse impact because both groups had candidates hired",
+        "Indicates adverse impact because 28% ÷ 40% = .70, which is below the .80 threshold"
+      ],
+      "correct_answer": "Indicates adverse impact because 28% ÷ 40% = .70, which is below the .80 threshold",
+      "explanation": "The four-fifths (80%) rule states that adverse impact is occurring when the hiring rate for a protected group is less than 80% of the hiring rate for the majority group. Here, 28% ÷ 40% = .70, which is below .80, indicating adverse impact. Option A is wrong because simply hiring some members of both groups does not preclude adverse impact. Option C incorrectly uses a raw percentage point difference rather than the ratio. Option D is wrong because the four-fifths rule is a statistical test applied to hiring rates independent of validity — though validity may be used as a defense after adverse impact is established.",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN29",
+      "source_file": "5-do-hiring-tools-work.json",
+      "source_folder": "5 Assessment",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 8,
+      "question": "A longitudinal research team studying Type A behavior pattern and cardiovascular outcomes follows 1,500 middle-aged adults over 22 years. After controlling for traditional cardiovascular risk factors (blood pressure, cholesterol, smoking, BMI), the researchers conduct multivariate analyses to determine which specific Type A component independently predicts incident coronary artery disease. Based on the preponderance of psychophysiological research, which Type A component would most likely emerge as the significant independent predictor?",
+      "options": [
+        "Rapid speech rate and psychomotor agitation",
+        "Hostility and cynical mistrust of others",
+        "Achievement striving and competitive drive",
+        "Time urgency and chronic time pressure"
+      ],
+      "correct_answer": "Hostility and cynical mistrust of others",
+      "explanation": "Research by Williams, Barefoot, Dembroski, and others decomposed the Type A behavior pattern and found that hostility—specifically cynical hostility (distrustful, antagonistic interpersonal orientation and resentful reactivity to others)—is the 'toxic component' most consistently associated with cardiovascular disease risk after controlling for other variables. Hostility is thought to produce heightened sympathetic nervous system reactivity, neuroendocrine dysregulation (elevated cortisol, catecholamines), and greater inflammatory response, all contributing to atherosclerosis. Options A, C, and D (time urgency, achievement striving, rapid speech/psychomotor agitation) have not shown consistent independent predictive validity for coronary artery disease in multivariate studies, and in some research, achievement striving has been associated with lower CVD risk. This finding has clinical implications for health psychology interventions targeting cardiac-prone individuals.",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN2",
+      "source_file": "5-clinical-tests.json",
+      "source_folder": "5 Assessment",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 9,
+      "question": "Which of the following statements best describes the findings of Smith, Glass, and Miller's meta-analysis on psychotherapy outcomes?",
+      "options": [
+        "Psychotherapy effects were only evident in inpatient settings",
+        "Psychotherapy was ineffective compared to no treatment",
+        "Combined treatments involving medication were superior to psychotherapy alone",
+        "Average patient receiving psychotherapy was better off than 80% of untreated patients"
+      ],
+      "correct_answer": "Average patient receiving psychotherapy was better off than 80% of untreated patients",
+      "explanation": "1. The correct answer, \"Average patient receiving psychotherapy was better off than 80% of untreated patients,\" accurately reflects the findings of Smith, Glass, and Miller's meta-analysis, which reported a mean effect size of .85. This indicates that the average patient who received psychotherapy had outcomes that were better than 80% of patients who did not receive any psychotherapy, demonstrating the effectiveness of psychotherapy in improving patient outcomes.\n\n2. The option \"Psychotherapy was ineffective compared to no treatment\" is incorrect because it misrepresents the findings; the analysis showed that psychotherapy is effective, with patients experiencing significant improvements compared to untreated individuals. The statement \"Combined treatments involving medication were superior to psychotherapy alone\" is wrong as the meta-analysis did not focus on medication and specifically highlighted the effectiveness of psychotherapy alone. Lastly, \"Psychotherapy effects were only evident in inpatient settings\" is incorrect because the meta-analysis examined a broad range of studies, not limited to inpatient settings, supporting the effectiveness of psychotherapy in various contexts.",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN44",
+      "source_file": "6 Prevention and Consultation.json",
+      "source_folder": "6 Clinical Interventions",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": false,
+      "is_org_psych": false
+    },
+    {
+      "id": 10,
+      "question": "A cross-cultural psychologist presents findings showing that speakers of a language lacking grammatical distinction between past and future events perceive time as more cyclical and show different patterns of future-oriented planning than speakers of languages with distinct tense markers. These findings provide the strongest support for which theoretical position regarding the relationship between language and cognition?",
+      "options": [
+        "The linguistic relativity hypothesis, because the structure of one's language shapes how one conceptualizes and reasons about the world",
+        "Nativist theory, because universal grammatical structures reflect innate cognitive architecture shared across all humans",
+        "Learning theory, because reinforcement histories within different cultural contexts differentially shape time-related behaviors",
+        "Social interactionist theory, because cultural environments mediate both language acquisition and behavioral outcomes"
+      ],
+      "correct_answer": "The linguistic relativity hypothesis, because the structure of one's language shapes how one conceptualizes and reasons about the world",
+      "explanation": "The linguistic relativity hypothesis (also called the Sapir-Whorf hypothesis) proposes that the language one speaks influences how one perceives and thinks about reality. The finding that tense-marking differences across languages correlate with differences in temporal cognition and future-oriented behavior is precisely the type of cross-linguistic evidence this hypothesis predicts. Nativist theory (Chomsky's LAD) argues for universal innate grammar underlying all languages, making it predict similarities rather than cognitive differences across language groups. Social interactionist theory focuses on how social environments facilitate language acquisition, not how acquired language shapes downstream cognition. Learning theory attributes behavioral variation to differential reinforcement schedules rather than to structural properties of language itself.",
+      "domain": "Domain 4: Growth & Lifespan Development",
+      "knId": "KN4",
+      "source_file": "4-language-development.json",
+      "source_folder": "4 Development",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": false,
+      "is_org_psych": false
+    },
+    {
+      "id": 11,
+      "question": "A therapist working with an adolescent who frequently uses profanity during sessions decides to implement a brief, firm verbal reprimand each time the behavior occurs. Over the next several sessions, the frequency of profanity decreases. Which operant conditioning principle best explains the reduction in the adolescent's behavior?",
+      "options": [
+        "Extinction, because the therapist is no longer reinforcing the profanity",
+        "Negative reinforcement, because the reprimand removes the desire to use profanity",
+        "Positive punishment, because an aversive stimulus is introduced following the behavior",
+        "Negative punishment, because a pleasant interaction is disrupted by the reprimand"
+      ],
+      "correct_answer": "Positive punishment, because an aversive stimulus is introduced following the behavior",
+      "explanation": "Positive punishment involves adding an aversive stimulus (the reprimand) after an undesired behavior, which decreases that behavior. This matches the definition: 'Positive Punishment: Decreases behavior. Something unpleasant is added.' Negative reinforcement (A) increases behavior through removal of an aversive stimulus — the opposite of what's happening. Negative punishment (C) would involve removing something desirable (like a privilege), not adding something aversive. Extinction (D) would involve withholding reinforcement that previously maintained the behavior, not introducing a new consequence.",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
+      "knId": "KN6",
+      "source_file": "2-skinner-and-operant-conditioning.json",
+      "source_folder": "2 Learning and Memory",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 12,
+      "question": "Which of the following factors is most likely to contribute to negative attitudes towards homosexual individuals?",
+      "options": [
+        "B) Cultural norms and values that stigmatize non-heteronormative identities.",
+        "A) Increased exposure to LGBTQ+ communities.",
+        "C) Personal experiences with LGBTQ+ individuals.",
+        "D) Education about sexual orientation and diversity."
+      ],
+      "correct_answer": "B) Cultural norms and values that stigmatize non-heteronormative identities.",
+      "explanation": "Option B is correct as cultural norms and values play a significant role in shaping negative attitudes towards homosexual individuals. Option A is incorrect because increased exposure typically reduces negative attitudes. Option C may vary but does not universally contribute to negative attitudes. Option D is also incorrect as education generally promotes understanding and acceptance.",
+      "domain": "Domain 3: Social Psychology & Cultural Aspects",
+      "knId": "KN3",
+      "source_file": "3-helping-and-hurting.json",
+      "source_folder": "3 Social Psychology",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 13,
+      "question": "A behavioral consultant is asked why a teacher's repeated use of verbal reprimands for off-task behavior has become progressively less effective over the course of the school year. The consultant explains that the students' responsiveness to the reprimands has diminished through repeated exposure. This phenomenon is best described as:",
+      "options": [
+        "Negative reinforcement, because the students have learned to avoid attending to the reprimands",
+        "Learned helplessness, because the students have given up trying to change their behavior",
+        "Extinction, because the reprimands are no longer paired with meaningful consequences",
+        "Habituation, because repeated exposure to the stimulus has led to a gradual decline in responding"
+      ],
+      "correct_answer": "Habituation, because repeated exposure to the stimulus has led to a gradual decline in responding",
+      "explanation": "Habituation refers to a gradual decline in response over time with repeated exposure. The lesson specifically notes that when punishment is used repeatedly, 'people often become accustomed to it, and it loses effectiveness,' creating 'a dangerous situation: as punishment becomes less effective, there's temptation to increase its intensity.' Extinction (A) involves withholding reinforcement for a previously reinforced behavior, not diminished response to a punisher. Negative reinforcement (B) would increase behavior, not decrease responsiveness to a stimulus. Learned helplessness (D) involves exposure to uncontrollable aversive events leading to passivity, which is a different mechanism than simple habituation.",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
+      "knId": "KN6",
+      "source_file": "2-skinner-and-operant-conditioning.json",
+      "source_folder": "2 Learning and Memory",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 14,
+      "question": "Which stage in the development of gay and lesbian identity involves individuals recognizing their sexual orientation and beginning to explore it?",
+      "options": [
+        "Identity confusion.",
+        "Identity acceptance.",
+        "Identity synthesis.",
+        "Identity pride."
+      ],
+      "correct_answer": "Identity acceptance.",
+      "explanation": "The correct answer reflects the stage where individuals begin to accept their sexual orientation and explore it more openly. The other options refer to different stages in the identity development process.",
+      "domain": "Domain 3: Social Psychology & Cultural Aspects",
+      "knId": "KN6",
+      "source_file": "3-helping-and-hurting.json",
+      "source_folder": "3 Social Psychology",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 15,
+      "question": "In classical conditioning, what is the term for a learned fear response to a previously neutral stimulus?",
+      "options": [
+        "Neutral stimulus",
+        "Unconditioned stimulus",
+        "Conditioned response",
+        "Unconditioned response"
+      ],
+      "correct_answer": "Conditioned response",
+      "explanation": "The learned fear response to a previously neutral stimulus is referred to as a conditioned response. The unconditioned response is the natural reaction to an unconditioned stimulus, while the neutral stimulus does not elicit a response before conditioning.",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
+      "knId": "KN6",
+      "source_file": "2-pavlov-and-classical-conditioning.json",
+      "source_folder": "2 Learning and Memory",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 16,
+      "question": "Which of the following factors is most likely to influence job satisfaction in the workplace?",
+      "options": [
+        "D) The age of the employees.",
+        "C) The physical location of the workplace.",
+        "B) The level of autonomy and control over one's work.",
+        "A) The number of hours worked per week."
+      ],
+      "correct_answer": "B) The level of autonomy and control over one's work.",
+      "explanation": "Option B is correct as autonomy and control are strongly linked to job satisfaction. Option A may influence satisfaction but is not as significant. Option C can affect satisfaction but is less impactful than autonomy. Option D is not a primary factor influencing job satisfaction.",
+      "domain": "Domain 3: Social Psychology & Cultural Aspects",
+      "knId": "KN3",
+      "source_file": "3-helping-and-hurting.json",
+      "source_folder": "3 Social Psychology",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 17,
+      "question": "Under what circumstances can a psychologist disclose confidential information without client consent?",
+      "options": [
+        "When the psychologist believes it will benefit the client",
+        "When the psychologist is subpoenaed",
+        "When requested by a family member",
+        "When there is a risk of harm to the client or others"
+      ],
+      "correct_answer": "When there is a risk of harm to the client or others",
+      "explanation": "Confidential information can be disclosed without consent when there is a clear risk of harm, as this is a recognized exception to confidentiality. A subpoena may require disclosure, but it is not an automatic exception without considering client rights.",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN4",
+      "source_file": "8-standards-5-6.json",
+      "source_folder": "8 Ethics",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": false,
+      "is_org_psych": false
+    },
+    {
+      "id": 18,
+      "question": "Dr. Okafor is a clinical psychologist who also serves as the clinical director at a community mental health center. One of her direct supervisees has requested that she also provide individual clinical supervision for licensure hours. Which factor from Gottlieb's decision-making model would be MOST relevant in evaluating this arrangement?",
+      "options": [
+        "The power differential inherent in Dr. Okafor's administrative authority combined with supervisory authority",
+        "Whether the supervisee has given informed consent to the dual relationship",
+        "Whether Dr. Okafor has previously supervised other employees at the center",
+        "The geographic availability of alternative supervisors in the community"
+      ],
+      "correct_answer": "The power differential inherent in Dr. Okafor's administrative authority combined with supervisory authority",
+      "explanation": "Gottlieb's decision-making model evaluates multiple relationships along three dimensions: power differential, duration, and clarity of termination. In this scenario, the most salient concern is the compounded power differential—Dr. Okafor already holds administrative authority over the supervisee as clinical director, and adding clinical supervision creates an even larger power gap. The lesson specifically identifies 'Large gap (supervisor-supervisee)' as higher risk. Option A, while relevant to ethical practice generally, is not one of Gottlieb's three factors. Option C is irrelevant to the model. Option D addresses practical concerns but not the ethical framework.",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN8",
+      "source_file": "8-standards-3-4.json",
+      "source_folder": "8 Ethics",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 19,
+      "question": "Which of the following best describes the ethical considerations regarding relationships with former patients?",
+      "options": [
+        "They can be problematic if they impair objectivity.",
+        "They are always acceptable after therapy ends.",
+        "They are encouraged to maintain professional connections.",
+        "They should be avoided only if the patient requests it."
+      ],
+      "correct_answer": "They can be problematic if they impair objectivity.",
+      "explanation": "Engaging in relationships with former patients can lead to conflicts of interest and impair the psychologist's objectivity, making it a complex ethical issue. The other options misrepresent the ethical guidelines surrounding such relationships.",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN25",
+      "source_file": "8-standards-3-4.json",
+      "source_folder": "8 Ethics",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 20,
+      "question": "Which type of headache is characterized by unilateral throbbing pain and often accompanied by nausea?",
+      "options": [
+        "Migraine headache",
+        "Tension headache",
+        "Cluster headache",
+        "Sinus headache"
+      ],
+      "correct_answer": "Migraine headache",
+      "explanation": "Migraine headaches are characterized by unilateral throbbing pain, often accompanied by nausea and sensitivity to light or sound. Tension headaches are typically bilateral and not associated with nausea, cluster headaches are severe but occur in cyclical patterns, and sinus headaches are related to sinus pressure.",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN6",
+      "source_file": "1-neurological-endocrine-disorders.json",
+      "source_folder": "1 Biopsychology (Neuroscience & Pharmacology)",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 21,
+      "question": "A school psychologist is consulting with a racially divided middle school where two student groups have developed sustained intergroup hostility. A sensitivity training workshop produced no lasting change. The psychologist redesigns an academic unit so that each student in a multiethnic group is assigned a unique segment of the material; all group members must learn from and teach each other for the group to complete the project successfully. Hostility between the groups decreases significantly. The operative mechanism in this intervention is BEST described as:",
+      "options": [
+        "Superordinate goals, because achieving the shared objective requires cooperative interdependence across group boundaries",
+        "The minimal group paradigm, which reframes group boundaries by creating new shared category memberships",
+        "The jigsaw classroom technique, which operates through a different mechanism than superordinate goal strategies",
+        "The contact hypothesis, because structured positive intergroup exposure reduces prejudice over time"
+      ],
+      "correct_answer": "Superordinate goals, because achieving the shared objective requires cooperative interdependence across group boundaries",
+      "explanation": "Superordinate goals are objectives that can only be achieved through active cooperation between previously hostile groups, as demonstrated in Sherif's Robbers Cave study. The lesson explicitly identifies the jigsaw classroom as an educational application of superordinate goal principles. The correct answer identifies the underlying mechanism. Option A (contact hypothesis) is insufficient — mere contact without structured interdependence does not reliably reduce hostility. Option C is a trap: the jigsaw classroom IS an application of superordinate goals, not a distinct mechanism; describing it as operating through a 'different mechanism' is factually incorrect. The minimal group paradigm is a laboratory research paradigm demonstrating how easily intergroup bias develops from arbitrary categorization — it is not an intervention strategy and does not involve cooperative interdependence.",
+      "domain": "Domain 3: Social Psychology & Cultural Aspects",
+      "knId": "KN3",
+      "source_file": "3-helping-and-hurting.json",
+      "source_folder": "3 Social Psychology",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": false,
+      "is_org_psych": false
+    },
+    {
+      "id": 22,
+      "question": "A child who calls all round objects 'ball' encounters a globe for the first time. After her mother explains it is called a 'globe' and describes how it differs from a toy ball, the child creates a separate mental category for globe-like objects. According to Piaget, which cognitive process does this represent?",
+      "options": [
+        "Accommodation, because the child modified her existing schema to incorporate the new information",
+        "Conservation, because the child recognized that the object retained its properties regardless of its label",
+        "Equilibration, because the child restored cognitive balance through interaction with the environment",
+        "Assimilation, because the child incorporated new information into an existing schema"
+      ],
+      "correct_answer": "Accommodation, because the child modified her existing schema to incorporate the new information",
+      "explanation": "Accommodation is the Piagetian process in which a child changes or creates new mental frameworks when existing schemas prove inadequate. Here, the child's existing 'ball' schema could not successfully incorporate a globe — the two objects differ in function, label, and purpose — leading her to restructure her cognitive representation by forming a new category. Assimilation (A) is incorrect because that process involves fitting new information into an existing schema without modifying it; the child initially may have assimilated the globe into 'ball,' but the described outcome is schema revision. Equilibration (B) is the overarching motivational force driving adaptation but is not itself a specific cognitive operation. Conservation (D) refers to understanding that physical quantities remain constant despite perceptual change and is unrelated to this scenario.",
+      "domain": "Domain 4: Growth & Lifespan Development",
+      "knId": "KN4",
+      "source_file": "4-cognitive-development.json",
+      "source_folder": "4 Development",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 23,
+      "question": "Which of the following symptoms is most commonly associated with post-concussion syndrome following a head injury?",
+      "options": [
+        "Increased appetite",
+        "Improved memory function",
+        "Severe headaches",
+        "Heightened sense of smell"
+      ],
+      "correct_answer": "Severe headaches",
+      "explanation": "Severe headaches are a hallmark symptom of post-concussion syndrome, often persisting long after the initial injury. Increased appetite, heightened sense of smell, and improved memory function are not typical symptoms associated with this condition.",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN1",
+      "source_file": "1-neurological-endocrine-disorders.json",
+      "source_folder": "1 Biopsychology (Neuroscience & Pharmacology)",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 24,
+      "question": "Which therapeutic technique involves instructing family members to engage in the problematic behavior, often in an exaggerated way, to promote change?",
+      "options": [
+        "Reframing",
+        "Boundary making",
+        "Unbalancing",
+        "Prescribing the symptom"
+      ],
+      "correct_answer": "Prescribing the symptom",
+      "explanation": "1. **Correct Answer: Prescribing the symptom**  \n\"Prescribing the symptom\" is a technique used in strategic family therapy where the therapist instructs family members to engage in the problematic behavior, often in an exaggerated way. This method aims to help family members realize their control over the behavior and encourages them to change it by confronting the issue directly, highlighting the maladaptive nature of the behavior.\n\n2. **Incorrect Options:**\n\n- **Reframing:** This technique involves relabeling a problematic behavior to help family members view it in a more constructive way, rather than instructing them to engage in the behavior itself.\n\n- **Unbalancing:** Involves altering hierarchical relationships within the family by aligning with a family member whose power needs to be increased, rather than directing them to act out their symptoms.\n\n- **Boundary making:** This technique is used to alter the degree of proximity between family members by establishing clearer boundaries, not by encouraging the expression of problematic behaviors.",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN44",
+      "source_file": "6 Family and Group.json",
+      "source_folder": "6 Clinical Interventions",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 25,
+      "question": "Which of the following statements BEST captures Skinner's central contribution to the understanding of learning through operant conditioning?",
+      "options": [
+        "Learning occurs through the formation of stimulus-response associations that are stamped in by satisfying consequences",
+        "Whether a voluntary behavior is repeated depends on whether it produces reinforcement or punishment from operating on the environment",
+        "All behavior can be explained by classical conditioning principles involving stimulus substitution",
+        "Organisms learn by forming cognitive maps of their environment through latent exploration"
+      ],
+      "correct_answer": "Whether a voluntary behavior is repeated depends on whether it produces reinforcement or punishment from operating on the environment",
+      "explanation": "Skinner's operant conditioning framework proposes that voluntary behaviors are controlled by their consequences—specifically, whether they produce reinforcement (which increases behavior) or punishment (which decreases behavior). The term 'operant' reflects that the organism 'operates' on the environment. Option A describes Thorndike's law of effect, which was the precursor to Skinner's work but used the language of 'satisfying consequences' and 'stamping in.' Option C incorrectly attributes all behavior to classical conditioning, which Skinner specifically differentiated from operant conditioning. Option D describes Tolman's latent learning and cognitive maps, a cognitive approach that differs from Skinner's behavioral framework.",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
+      "knId": "KN7",
+      "source_file": "2-skinner-and-operant-conditioning.json",
+      "source_folder": "2 Learning and Memory",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 26,
+      "question": "A behavior analyst uses an ABAB reversal design to evaluate a token economy for reducing aggressive behavior in a child with conduct disorder. During both treatment phases, aggressive behavior decreases substantially. However, during the second baseline phase, aggressive behavior does NOT return to original baseline levels. What is the MOST likely methodological concern?",
+      "options": [
+        "Carryover effects from the treatment may have produced lasting behavioral change that prevents a true return to baseline",
+        "The design should be abandoned in favor of a multiple baseline design whenever behavior fails to reverse",
+        "The treatment lacks internal validity because the results were not replicated across phases",
+        "The failure to return to baseline indicates that maturation rather than the treatment caused the improvement"
+      ],
+      "correct_answer": "Carryover effects from the treatment may have produced lasting behavioral change that prevents a true return to baseline",
+      "explanation": "The ABAB design relies on behavior returning to baseline levels when treatment is withdrawn to demonstrate experimental control. The lesson states: 'When behavior returns to baseline after treatment withdrawal and improves again when treatment is reintroduced, you have strong evidence the treatment works.' When behavior does NOT reverse, this undermines the logic of the design. The most likely explanation is carryover — the treatment produced learning or behavioral change that persists even after formal treatment withdrawal. Option A is partially correct but doesn't identify the mechanism. Option C is less likely since maturation would produce gradual change, not the pattern described. Option D is too absolute — the design may still provide useful information even without perfect reversal.",
+      "domain": "Domain 7: Research Methods & Statistics",
+      "knId": "KN54",
+      "source_file": "7-research-designs.json",
+      "source_folder": "7 Research and Stats",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 27,
+      "question": "Which of the following best describes the consequences of behavior in learning theory?",
+      "options": [
+        "Consequences are only relevant in classical conditioning.",
+        "Consequences can either reinforce or punish behavior.",
+        "Consequences have no impact on future behavior.",
+        "Consequences must always be immediate to be effective."
+      ],
+      "correct_answer": "Consequences can either reinforce or punish behavior.",
+      "explanation": "In learning theory, consequences are critical as they determine whether a behavior is likely to be repeated (reinforcement) or decreased (punishment). The other options misrepresent the role of consequences in behavior change.",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
+      "knId": "KN6",
+      "source_file": "2-skinner-and-operant-conditioning.json",
+      "source_folder": "2 Learning and Memory",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": false,
+      "is_org_psych": false
+    },
+    {
+      "id": 28,
+      "question": "What strategy is most effective in reducing racial prejudice according to intergroup contact theory?",
+      "options": [
+        "Encouraging group isolation",
+        "Increased competition between groups",
+        "Facilitating positive interactions between groups",
+        "Promoting stereotypes"
+      ],
+      "correct_answer": "Facilitating positive interactions between groups",
+      "explanation": "Intergroup contact theory suggests that facilitating positive interactions between groups can effectively reduce racial prejudice. Increased competition can exacerbate tensions, group isolation does not foster understanding, and promoting stereotypes is counterproductive. Therefore, facilitating positive interactions is the correct answer.",
+      "domain": "Domain 3: Social Psychology & Cultural Aspects",
+      "knId": "KN3",
+      "source_file": "3-helping-and-hurting.json",
+      "source_folder": "3 Social Psychology",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 29,
+      "question": "Which of the following is considered a risk factor in child development that can lead to negative outcomes?",
+      "options": [
+        "High parental involvement",
+        "Stable home environment",
+        "Exposure to violence",
+        "Access to quality education"
+      ],
+      "correct_answer": "Exposure to violence",
+      "explanation": "Exposure to violence is a well-documented risk factor that can lead to various negative outcomes in child development, including emotional and behavioral issues. The other options are protective factors that promote positive development.",
+      "domain": "Domain 4: Growth & Lifespan Development",
+      "knId": "KN5",
+      "source_file": "4-heredity-and-environment.json",
+      "source_folder": "4 Development",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 30,
+      "question": "Which of the following best describes the ethical considerations involved in marketing psychological services?",
+      "options": [
+        "Psychologists should ensure that all marketing materials are truthful and not misleading.",
+        "Psychologists can use testimonials from current clients to promote their services.",
+        "Psychologists should focus solely on their qualifications and ignore client outcomes.",
+        "Psychologists can make exaggerated claims about their services to attract clients."
+      ],
+      "correct_answer": "Psychologists should ensure that all marketing materials are truthful and not misleading.",
+      "explanation": "The correct answer emphasizes the ethical requirement for honesty in marketing. The other options violate ethical standards regarding truthfulness and the exploitation of client relationships.",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN5",
+      "source_file": "8-standards-5-6.json",
+      "source_folder": "8 Ethics",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": false,
+      "is_org_psych": false
+    },
+    {
+      "id": 31,
+      "question": "What is a key cultural consideration that therapists should keep in mind when providing multicultural counseling?",
+      "options": [
+        "Therapeutic techniques are universally applicable",
+        "All clients prefer the same therapeutic approach",
+        "Cultural values can influence client expectations and behaviors",
+        "Therapists should avoid discussing cultural backgrounds"
+      ],
+      "correct_answer": "Cultural values can influence client expectations and behaviors",
+      "explanation": "This option is correct because cultural values significantly shape how clients perceive therapy and what they expect from it. The other options are incorrect as they either generalize client preferences or suggest avoidance of cultural discussions, which are essential in multicultural counseling.",
+      "domain": "Domain 3: Social Psychology & Cultural Aspects",
+      "knId": "KN3",
+      "source_file": "3-helping-and-hurting.json",
+      "source_folder": "3 Social Psychology",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 32,
+      "question": "A clinical psychologist is designing a token economy program for a residential treatment facility. After successfully establishing a target behavior using continuous reinforcement, she transitions to an intermittent schedule to maintain the behavior long-term. Which of the following schedules would produce the GREATEST resistance to extinction if the token system were eventually discontinued?",
+      "options": [
+        "Fixed ratio schedule, because the predictable reinforcement pattern strengthens the behavior-consequence association",
+        "Variable interval schedule, because the time-based unpredictability prevents habituation to the reinforcement",
+        "Fixed interval schedule, because the consistent time-based delivery ensures reliable behavioral maintenance",
+        "Variable ratio schedule, because the unpredictable reinforcement pattern makes it difficult for the individual to detect when reinforcement has ceased"
+      ],
+      "correct_answer": "Variable ratio schedule, because the unpredictable reinforcement pattern makes it difficult for the individual to detect when reinforcement has ceased",
+      "explanation": "Variable ratio (VR) schedules produce the highest response rates and the greatest resistance to extinction. This is because the unpredictability of reinforcement delivery means the individual cannot easily discriminate between a period of non-reinforcement during the schedule and the actual cessation of reinforcement (extinction). Fixed ratio schedules (A) produce post-reinforcement pauses and are less resistant to extinction because the individual quickly detects when the expected reinforcement after a set number of responses fails to appear. Fixed interval schedules (B) produce scalloping patterns with low overall response rates and are the least resistant to extinction among intermittent schedules. Variable interval schedules (D) do produce greater resistance to extinction than fixed schedules, but they generate lower response rates and less resistance to extinction compared to variable ratio schedules.",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
+      "knId": "KN7",
+      "source_file": "2-skinner-and-operant-conditioning.json",
+      "source_folder": "2 Learning and Memory",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 33,
+      "question": "A clinician uses an ABAB withdrawal design to evaluate a token economy intervention for reducing aggressive outbursts in a child with conduct disorder. During the second baseline phase (second A), the child's aggressive behavior does NOT return to the original baseline level but remains partially reduced. What is the MOST likely methodological concern?",
+      "options": [
+        "The study should be redesigned as a multiple baseline design to eliminate the need for withdrawal",
+        "The study demonstrates a testing threat that invalidates the findings",
+        "The treatment may have produced carryover effects, making it difficult to attribute changes solely to the intervention's presence or absence",
+        "The results confirm that the intervention was effective because some improvement was maintained"
+      ],
+      "correct_answer": "The treatment may have produced carryover effects, making it difficult to attribute changes solely to the intervention's presence or absence",
+      "explanation": "The ABAB design's logic depends on behavior returning to baseline levels when treatment is withdrawn, and improving again when treatment is reintroduced. The lesson states: 'When behavior returns to baseline after treatment withdrawal and improves again when treatment is reintroduced, you have strong evidence the treatment works.' When behavior does NOT return to baseline, it suggests carryover effects — the treatment produced lasting changes that persist even after withdrawal. This undermines the design's internal validity because the causal demonstration relies on the behavior tracking with the treatment phases. Option A incorrectly identifies the threat. Option C mistakes a methodological limitation for a strength — while maintenance is clinically desirable, it weakens the design's logic. Option D identifies an alternative design but doesn't address the core concern.",
+      "domain": "Domain 7: Research Methods & Statistics",
+      "knId": "KN54",
+      "source_file": "7-research-designs.json",
+      "source_folder": "7 Research and Stats",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": false,
+      "is_org_psych": false
+    },
+    {
+      "id": 34,
+      "question": "How might chronic otitis media affect cognitive testing results in children?",
+      "options": [
+        "It typically enhances cognitive abilities by improving attention span.",
+        "It may result in lower scores due to temporary hearing loss affecting language processing.",
+        "It has no impact on cognitive testing as it primarily affects hearing.",
+        "It can lead to significant impairments in visual-motor integration skills."
+      ],
+      "correct_answer": "It may result in lower scores due to temporary hearing loss affecting language processing.",
+      "explanation": "Chronic otitis media can cause hearing loss, which may hinder a child's ability to process language during cognitive assessments, leading to lower scores. The other options either exaggerate the effects or incorrectly state that there is no impact.",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN3",
+      "source_file": "5-cognitive-tests.json",
+      "source_folder": "5 Assessment",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 35,
+      "question": "Which of the following symptoms is most commonly associated with delirium following surgery?",
+      "options": [
+        "Persistent memory loss",
+        "Severe mood swings",
+        "Visual hallucinations",
+        "Disorientation and confusion"
+      ],
+      "correct_answer": "Disorientation and confusion",
+      "explanation": "Disorientation and confusion are hallmark symptoms of delirium, particularly in post-surgical patients. Persistent memory loss is more characteristic of conditions like dementia. Severe mood swings can occur in various psychological disorders but are not specific to delirium. Visual hallucinations may occur but are not as common as confusion and disorientation.",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN1",
+      "source_file": "1-neurological-endocrine-disorders.json",
+      "source_folder": "1 Biopsychology (Neuroscience & Pharmacology)",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 36,
+      "question": "A health psychologist is designing a study to assess biological markers of chronic stress in nurses working in high-acuity ICU settings. To capture HPA axis activation associated with prolonged occupational stress, the researcher selects a salivary biomarker secreted by the adrenal cortex in response to CRH and ACTH signaling. Which biomarker is MOST appropriate for this purpose?",
+      "options": [
+        "Insulin, which is secreted by the pancreas to regulate blood glucose homeostasis",
+        "Testosterone, which is primarily associated with reproductive function and aggression",
+        "Cortisol, which is the primary glucocorticoid released during HPA axis activation",
+        "Epinephrine, which is released by the adrenal medulla during acute sympathetic arousal"
+      ],
+      "correct_answer": "Cortisol, which is the primary glucocorticoid released during HPA axis activation",
+      "explanation": "Cortisol is the primary glucocorticoid produced by the adrenal cortex in response to hypothalamic-pituitary-adrenal (HPA) axis activation and is the most widely validated biological marker of chronic stress. Epinephrine is released by the adrenal medulla (not cortex) as part of rapid, acute sympathetic nervous system activation—it is a marker of short-term stress rather than chronic HPA dysregulation. Insulin is a pancreatic hormone and is unrelated to the stress response cascade. Testosterone is an androgen associated with sexual function and may fluctuate with stress, but it is not the primary or direct marker of HPA activation.",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN1",
+      "source_file": "1-neurological-endocrine-disorders.json",
+      "source_folder": "1 Biopsychology (Neuroscience & Pharmacology)",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": false,
+      "is_org_psych": false
+    },
+    {
+      "id": 37,
+      "question": "Which ethnic group has been identified as having a higher prevalence of hypertension according to health disparities research?",
+      "options": [
+        "African American",
+        "Asian American",
+        "Hispanic",
+        "Caucasian"
+      ],
+      "correct_answer": "African American",
+      "explanation": "African American is the correct answer as research indicates that this group has a higher prevalence of hypertension compared to other ethnic groups. The other options do not reflect the same level of prevalence identified in health disparities research.",
+      "domain": "Domain 3: Social Psychology & Cultural Aspects",
+      "knId": "KN3",
+      "source_file": "3-helping-and-hurting.json",
+      "source_folder": "3 Social Psychology",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 38,
+      "question": "A 5-year-old child recently placed with foster parents after removal from a severely neglectful home readily approaches unfamiliar adults at the park, climbs onto strangers' laps, and agrees to leave with people she has just met without hesitation or glancing back at her caregiver. She shows no stranger wariness and initiates physical contact indiscriminately. The foster parents report this behavior has been consistent across multiple settings since placement. According to DSM-5, which of the following etiological conditions must be present to diagnose Disinhibited Social Engagement Disorder (DSED)?",
+      "options": [
+        "Evidence of neurological compromise affecting the orbitofrontal cortex or amygdala",
+        "Documented traumatic exposure to domestic violence or abuse before age 3",
+        "A co-occurring diagnosis of Reactive Attachment Disorder established prior to the current placement",
+        "A history of social neglect or other forms of pathogenic care reflecting insufficient caregiving"
+      ],
+      "correct_answer": "A history of social neglect or other forms of pathogenic care reflecting insufficient caregiving",
+      "explanation": "DSM-5 Criterion C for Disinhibited Social Engagement Disorder requires that the child experienced a pattern of extremes of insufficient care, which includes social neglect (persistent deprivation of basic emotional needs), repeated changes in primary caregivers, or rearing in settings that severely limit opportunities to form selective attachments (e.g., institutional care). This pathogenic care history is a necessary etiological criterion that distinguishes DSED from disinhibited behavior with other causes. Option A is incorrect; while DSED and RAD can co-occur, a prior RAD diagnosis is not required for DSED. Option B is incorrect; generalized traumatic exposure (e.g., domestic violence, abuse) is not specifically listed in DSM-5 Criterion C—the pathogenic care must involve insufficient caregiving that limits attachment formation. Option D is incorrect; neurological compromise is considered in differential diagnosis but is not a diagnostic criterion for DSED.",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN5",
+      "source_file": "5-clinical-tests.json",
+      "source_folder": "5 Assessment",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 39,
+      "question": "How do cultural differences influence the expression of psychological distress?",
+      "options": [
+        "A) All cultures express psychological distress in the same way.",
+        "D) Cultural differences have no impact on psychological distress.",
+        "B) Cultural norms dictate acceptable expressions of distress.",
+        "C) Psychological distress is universally recognized across cultures."
+      ],
+      "correct_answer": "B) Cultural norms dictate acceptable expressions of distress.",
+      "explanation": "Option B is correct because cultural norms significantly influence how individuals express psychological distress. Option A is incorrect as cultures vary widely in expression. Option C is misleading; while distress is recognized, expressions differ. Option D is false; cultural differences greatly impact distress expression.",
+      "domain": "Domain 3: Social Psychology & Cultural Aspects",
+      "knId": "KN3",
+      "source_file": "3-helping-and-hurting.json",
+      "source_folder": "3 Social Psychology",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 40,
+      "question": "Dr. Kim is starting a new private practice and considers offering a free initial consultation to prospective clients. According to APA ethical guidelines, which of the following is the MOST important consideration when offering such free sessions?",
+      "options": [
+        "Free sessions are prohibited because they constitute in-person solicitation of vulnerable individuals",
+        "The psychologist must clearly explain the limited purpose of the session, inform the person of future fees, document the agreement, and be cautious about creating unmet expectations",
+        "Free sessions are permissible only if they last no longer than 15 minutes",
+        "The psychologist must obtain approval from the state licensing board before offering free sessions"
+      ],
+      "correct_answer": "The psychologist must clearly explain the limited purpose of the session, inform the person of future fees, document the agreement, and be cautious about creating unmet expectations",
+      "explanation": "The lesson states that offering free initial consultations is 'not explicitly prohibited' but requires caution. Specifically, the psychologist should clearly explain the limited purpose, inform the person of future fees beforehand, document the agreement, and be cautious about creating expectations that cannot be met. Option A is incorrect because free initial consultations are distinct from prohibited in-person solicitation of vulnerable individuals. Option C is incorrect because the Ethics Code does not specify a time limit. Option D is incorrect because state licensing board approval is not mentioned as a requirement.",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN61",
+      "source_file": "8-standards-5-6.json",
+      "source_folder": "8 Ethics",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 41,
+      "question": "Dr. Alvarez, a psychologist in private practice, refers clients to Dr. Kim, a neuropsychologist, for specialized testing. Dr. Kim sends Dr. Alvarez a percentage of the fees collected from each referred client as a \"referral bonus.\" Which of the following best describes the ethical status of this arrangement?",
+      "options": [
+        "This is acceptable because both psychologists are providing legitimate services to the client",
+        "This is acceptable as long as the client is informed about the referral fee arrangement",
+        "This is acceptable as long as the referral fee does not exceed 10% of the total charges",
+        "This is a violation because fee splitting based on referrals rather than services provided is prohibited"
+      ],
+      "correct_answer": "This is a violation because fee splitting based on referrals rather than services provided is prohibited",
+      "explanation": "The APA Ethics Code (Standard 6.07) prohibits psychologists from paying, receiving, or participating in referral fees based solely on the referral itself. Fee splitting is only permissible when each professional is being compensated for services they actually provided. Dr. Kim sending a percentage back to Dr. Alvarez simply for the referral constitutes an impermissible kickback arrangement. Option A is wrong because the legitimacy of each professional's services doesn't justify a referral kickback. Option B is wrong because client disclosure doesn't make referral-based fee splitting ethical. Option D is wrong because there is no percentage threshold that makes referral-based fee splitting acceptable.",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN64",
+      "source_file": "8-standards-5-6.json",
+      "source_folder": "8 Ethics",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 42,
+      "question": "A researcher conditions a dog to salivate to a tone by pairing it with food. After this association is well-established, the researcher begins pairing a flashing light with the tone but never presents food during these trials. Eventually, the flashing light alone elicits salivation. This outcome demonstrates:",
+      "options": [
+        "Higher-order conditioning, because an established conditioned stimulus was used to condition a new neutral stimulus",
+        "Sensory preconditioning, because the two stimuli were paired before any conditioning occurred",
+        "Stimulus generalization, because the dog is responding to a stimulus that resembles the original conditioned stimulus",
+        "Spontaneous recovery, because an extinguished response has reappeared to a novel stimulus"
+      ],
+      "correct_answer": "Higher-order conditioning, because an established conditioned stimulus was used to condition a new neutral stimulus",
+      "explanation": "Higher-order (second-order) conditioning occurs when an established CS is paired with a new neutral stimulus, causing the new stimulus to also elicit the CR—without ever being directly paired with the US. In this example, the tone (CS) was paired with the light (new neutral stimulus) without food, and the light came to elicit salivation. Option A is incorrect because stimulus generalization involves responding to stimuli physically similar to the original CS (e.g., similar tones), not a completely different modality (light vs. tone) paired through a new conditioning procedure. Option C is incorrect because spontaneous recovery refers to the return of an extinguished CR after a rest period, not conditioning to a new stimulus. Option D is incorrect because sensory preconditioning involves pairing two neutral stimuli before either is conditioned.",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
+      "knId": "KN6",
+      "source_file": "2-pavlov-and-classical-conditioning.json",
+      "source_folder": "2 Learning and Memory",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 43,
+      "question": "Self-instructional training (Meichenbaum) aims to improve children's impulsivity mainly by teaching them to:",
+      "options": [
+        "Develop cognitive schemas during early childhood",
+        "Modify core beliefs through disputation of irrational thoughts",
+        "Avoid stressful stimuli through role playing and relaxation techniques",
+        "Verbalize internal task instructions progressively from modeling to covert self-guidance"
+      ],
+      "correct_answer": "Verbalize internal task instructions progressively from modeling to covert self-guidance",
+      "explanation": "1. The correct answer, \"Verbalize internal task instructions progressively from modeling to covert self-guidance,\" reflects the five stages of self-instructional training developed by Meichenbaum. This approach begins with cognitive modeling, where children observe a model verbalizing instructions, and progresses through stages where they gradually take on more responsibility for verbalizing these instructions themselves, ultimately leading to covert self-instruction. This method is specifically designed to enhance problem-solving skills and reduce impulsivity by fostering self-guidance and self-regulation.\n\n2. The option \"Avoid stressful stimuli through role playing and relaxation techniques\" is incorrect because self-instructional training focuses on teaching task-related verbalization rather than avoidance strategies. The option \"Modify core beliefs through disputation of irrational thoughts\" is wrong as it pertains to Rational Emotive Behavior Therapy (REBT), which targets irrational beliefs, not self-instructional training. Lastly, \"Develop cognitive schemas during early childhood\" is incorrect because self-instructional training does not aim to develop cognitive schemas but rather to teach children specific self-instruction strategies to manage tasks and impulsivity.",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN44",
+      "source_file": "6 CBT.json",
+      "source_folder": "6 Clinical Interventions",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 44,
+      "question": "Mindfulness-Based Cognitive Therapy (MBCT) primarily seeks to help clients:",
+      "options": [
+        "Develop rigid cognitive structures to eliminate emotional distress",
+        "Become self-aware and de-center from distressing thoughts, feelings, and behaviors through combining mindfulness and CBT techniques",
+        "Focus exclusively on physical symptoms of stress while ignoring cognitive processes",
+        "Replace negative automatic thoughts with positive ones using cognitive restructuring"
+      ],
+      "correct_answer": "Become self-aware and de-center from distressing thoughts, feelings, and behaviors through combining mindfulness and CBT techniques",
+      "explanation": "1. The correct answer, \"Become self-aware and de-center from distressing thoughts, feelings, and behaviors through combining mindfulness and CBT techniques,\" accurately reflects the primary goal of Mindfulness-Based Cognitive Therapy (MBCT). MBCT aims to enable clients to develop self-awareness, allowing them to distance themselves from distressing thoughts and emotions, which aligns with the therapy's integration of mindfulness practices with cognitive-behavioral techniques to facilitate this process.\n\n2. The first incorrect option, \"Develop rigid cognitive structures to eliminate emotional distress,\" is wrong because MBCT promotes flexibility and self-awareness rather than rigidity in cognitive structures. The second option, \"Focus exclusively on physical symptoms of stress while ignoring cognitive processes,\" is incorrect as MBCT emphasizes the importance of both cognitive and emotional awareness, not just physical symptoms. Lastly, the third option, \"Replace negative automatic thoughts with positive ones using cognitive restructuring,\" is misleading because MBCT does not solely focus on replacing negative thoughts but rather encourages clients to observe and accept their thoughts without judgment, fostering a more adaptive relationship with their experiences rather than simply restructuring them.",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN44",
+      "source_file": "6 CBT.json",
+      "source_folder": "6 Clinical Interventions",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 45,
+      "question": "An organization is concerned that its current selection procedure for entry-level warehouse positions disproportionately screens out minority applicants. Which selection method would BEST address this concern while maintaining job-relevant prediction of performance?",
+      "options": [
+        "An unstructured interview conducted by experienced managers",
+        "A general mental ability test, since it has the highest validity for predicting job performance",
+        "A biographical information blank with empirically keyed items",
+        "A work sample test requiring applicants to perform actual warehouse tasks"
+      ],
+      "correct_answer": "A work sample test requiring applicants to perform actual warehouse tasks",
+      "explanation": "Work sample tests require applicants to actually perform job tasks under realistic conditions, providing high face validity and direct job relevance. The lesson notes that work samples work exceptionally well for manual skilled jobs. While general mental ability tests (Option A) are the most valid predictors overall, the lesson explicitly states they carry 'the highest risk of adverse impact on applicants from certain ethnic and racial minority groups,' making them the worst choice when the goal is reducing discrimination. Unstructured interviews (Option B) may introduce interviewer biases. Biographical information blanks (Option D) may lack face validity and raise privacy concerns, and the lesson notes items may appear 'invasive or irrelevant.' Work samples, being direct demonstrations of job-relevant skills, minimize the construct-irrelevant variance that drives adverse impact.",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN29",
+      "source_file": "5-hiring-methods.json",
+      "source_folder": "5 Assessment",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": false,
+      "is_org_psych": false
+    },
+    {
+      "id": 46,
+      "question": "A 14-month-old girl has just learned the word 'dog' in reference to the family's German Shepherd. While at a park, she points to a cat and says 'dog.' She also calls a horse 'dog' at the petting zoo. A developmental psychologist observing these interactions would identify this language behavior as an example of:",
+      "options": [
+        "Overextension, because the child is applying a learned word label to new but perceptually or functionally similar referents beyond its correct categorical boundary",
+        "Overregularization, because the child is applying a recently acquired linguistic rule to contexts where it does not apply",
+        "Holophrastic speech, because the child is using a single word to convey a rich communicative intent about the animals",
+        "Underextension, because the child is applying the label only to animals that perceptually resemble the original referent"
+      ],
+      "correct_answer": "Overextension, because the child is applying a learned word label to new but perceptually or functionally similar referents beyond its correct categorical boundary",
+      "explanation": "Overextension occurs when a child applies a word to a broader range of referents than is conventionally correct, typically on the basis of perceptual similarity (shape, movement, size) or functional similarity. Calling a cat and a horse 'dog' is a classic example. This is an expected and normal feature of early word learning, reflecting the child's attempt to generalize limited vocabulary. Underextension is the opposite error—restricting a word to too narrow a category. Holophrastic speech refers to using a single word to express a full proposition, which is a different phenomenon entirely. Overregularization refers to applying morphological grammar rules (e.g., adding '-ed' for past tense) in overly broad ways (e.g., 'goed'), not to applying word labels to new referents.",
+      "domain": "Domain 4: Growth & Lifespan Development",
+      "knId": "KN4",
+      "source_file": "4-language-development.json",
+      "source_folder": "4 Development",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": false,
+      "is_org_psych": false
+    },
+    {
+      "id": 47,
+      "question": "In Bateson's communication theory relevant to family therapy, what characterizes a 'double-bind' communication pattern?",
+      "options": [
+        "Communicating in a way that reflects equality and reciprocal behavior",
+        "Assuming a dominant-subordinate interaction pattern consistently",
+        "Receiving two contradictory messages simultaneously with no opportunity to resolve the contradiction",
+        "Blaming one family member to avoid addressing the real conflict"
+      ],
+      "correct_answer": "Receiving two contradictory messages simultaneously with no opportunity to resolve the contradiction",
+      "explanation": "1. The correct answer, \"Receiving two contradictory messages simultaneously with no opportunity to resolve the contradiction,\" accurately describes a 'double-bind' communication pattern as identified by Bateson. This type of communication creates a paradox for the recipient, where they receive conflicting messages that prevent them from responding appropriately, leading to confusion and distress, which Bateson linked to the development of schizophrenia.\n\n2. The first incorrect option, \"Communicating in a way that reflects equality and reciprocal behavior,\" is wrong because it describes symmetrical interactions, where behaviors are equal and reciprocal, rather than contradictory. The second option, \"Assuming a dominant-subordinate interaction pattern consistently,\" is incorrect as it refers to complementary interactions, which involve unequal power dynamics, not the contradictory nature of double-bind communication. Lastly, the option \"Blaming one family member to avoid addressing the real conflict\" is mistaken because it pertains to a detouring-support coalition, where blame is used as a strategy to divert attention from the core issues, rather than the simultaneous contradictions characteristic of a double-bind.",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN16",
+      "source_file": "6 Family and Group.json",
+      "source_folder": "6 Clinical Interventions",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 48,
+      "question": "Which of the following is NOT considered a threat to validity in research design?",
+      "options": [
+        "Maturation",
+        "History",
+        "Differential selection",
+        "Random assignment"
+      ],
+      "correct_answer": "Random assignment",
+      "explanation": "The correct answer is 'Random assignment' because it is a method used to enhance internal validity by ensuring that groups are equivalent at the start of a study. In contrast, history, maturation, and differential selection are all recognized threats to validity.",
+      "domain": "Domain 7: Research Methods & Statistics",
+      "knId": "KN10",
+      "source_file": "7-internal-external-validity.json",
+      "source_folder": "7 Research and Stats",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 49,
+      "question": "What is the main goal of Emotionally Focused Therapy (EFT) for couples?",
+      "options": [
+        "To assign therapeutic tasks and paradoxical directives to alter family hierarchies",
+        "To analyze family-of-origin issues through role-play and genograms",
+        "To establish clear behavioral contingencies and reinforce desired interactions",
+        "To expand and restructure partners’ emotional experiences to foster attachment security within their relationship"
+      ],
+      "correct_answer": "To expand and restructure partners’ emotional experiences to foster attachment security within their relationship",
+      "explanation": "1. The correct answer, \"To expand and restructure partners’ emotional experiences to foster attachment security within their relationship,\" accurately reflects the primary goal of Emotionally Focused Therapy (EFT). EFT is designed to help emotionally distressed partners strengthen their relationship by addressing and restructuring their emotional interactions, thereby promoting attachment security and healthier relational patterns.\n\n2. The first incorrect option, \"To analyze family-of-origin issues through role-play and genograms,\" is wrong because this approach is characteristic of Bowen's Extended Family Systems Therapy, which focuses on family dynamics and intergenerational patterns rather than the emotional restructuring central to EFT. The second incorrect option, \"To establish clear behavioral contingencies and reinforce desired interactions,\" is incorrect as it aligns more with the goals of behavioral family therapies, which focus on modifying specific behaviors rather than the emotional experiences emphasized in EFT. Lastly, the option \"To assign therapeutic tasks and paradoxical directives to alter family hierarchies\" is incorrect because it pertains to Strategic Family Therapy, which employs directives to shift power dynamics, while EFT centers on emotional experiences rather than hierarchical structures.",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN44",
+      "source_file": "6 Family and Group.json",
+      "source_folder": "6 Clinical Interventions",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 50,
+      "question": "A researcher is evaluating a new behavioral intervention for a single client using an AB design. During the treatment phase, a natural disaster occurs in the client's community, leading to a noticeable increase in stress-related behaviors. Which threat to internal validity is MOST relevant in this scenario, and why is this design particularly vulnerable to it?",
+      "options": [
+        "Maturation, because the AB design cannot account for natural developmental changes over time",
+        "History, because the AB design lacks a second baseline phase to demonstrate that changes are due to the intervention rather than coincidental external events",
+        "Statistical regression, because the client's extreme baseline scores would naturally move toward the mean",
+        "Differential attrition, because the participant may drop out of the study due to the disaster"
+      ],
+      "correct_answer": "History, because the AB design lacks a second baseline phase to demonstrate that changes are due to the intervention rather than coincidental external events",
+      "explanation": "The AB design is specifically vulnerable to history threats because it has only one baseline and one treatment phase. When an external event (the natural disaster) coincides with the treatment phase, there is no way to disentangle the effects of the intervention from the effects of the external event. The lesson explicitly states the AB design 'doesn't control for history – any one-time event that happens to coincide with treatment.' An ABAB design would better address this by demonstrating the behavior changes with each phase transition. Maturation is incorrect because the AB design does control for maturation (gradual trends would be visible). Differential attrition applies to group designs with dropout. Statistical regression requires selection based on extreme scores.",
+      "domain": "Domain 7: Research Methods & Statistics",
+      "knId": "KN57",
+      "source_file": "7-research-designs.json",
+      "source_folder": "7 Research and Stats",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 51,
+      "question": "Which of the following best illustrates a lack of differentiation in family dynamics?",
+      "options": [
+        "A couple that frequently engages in heated arguments without resolution",
+        "A family member who expresses their own opinions without fear of judgment",
+        "Siblings who support each other's decisions without rivalry",
+        "Parents who encourage their children to pursue independent interests"
+      ],
+      "correct_answer": "A couple that frequently engages in heated arguments without resolution",
+      "explanation": "1. \"A couple that frequently engages in heated arguments without resolution\" illustrates a lack of differentiation in family dynamics because it reflects emotional fusion, where individuals are unable to separate their own feelings and thoughts from those of their partner. This emotional entanglement leads to unresolved conflicts and prevents each partner from expressing their individuality, which is a key aspect of differentiation as described by Bowen.\n\n2. \n- \"A family member who expresses their own opinions without fear of judgment\" is incorrect because this behavior indicates a high level of differentiation, where the individual feels secure in their identity and can share their thoughts independently.\n- \"Parents who encourage their children to pursue independent interests\" is incorrect as it demonstrates healthy family dynamics and differentiation, fostering individual growth and autonomy within the family structure.\n- \"Siblings who support each other's decisions without rivalry\" is incorrect because this supportive behavior reflects a positive family environment and differentiation, where siblings can maintain their individual identities while still being connected.",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN25",
+      "source_file": "6 Family and Group.json",
+      "source_folder": "6 Clinical Interventions",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 52,
+      "question": "What is a primary effect of severing the corpus callosum in patients?",
+      "options": [
+        "Difficulty in coordinating movements",
+        "Split-brain syndrome",
+        "Increased interhemispheric communication",
+        "Enhanced cognitive function"
+      ],
+      "correct_answer": "Split-brain syndrome",
+      "explanation": "Severing the corpus callosum can lead to split-brain syndrome, where the two hemispheres of the brain cannot communicate effectively. This results in unique cognitive and perceptual deficits. Increased interhemispheric communication is incorrect as the procedure disrupts it, difficulty in coordinating movements is not a direct result, and enhanced cognitive function is not associated with this condition.",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN9",
+      "source_file": "1-neurological-endocrine-disorders.json",
+      "source_folder": "1 Biopsychology (Neuroscience & Pharmacology)",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 53,
+      "question": "What is a key ethical consideration for psychologists when promoting their services through media?",
+      "options": [
+        "They should avoid discussing their fees in public statements.",
+        "They can use testimonials from current clients to enhance credibility.",
+        "They should exaggerate their qualifications to attract clients.",
+        "They must ensure all public statements are truthful and not misleading."
+      ],
+      "correct_answer": "They must ensure all public statements are truthful and not misleading.",
+      "explanation": "Ethical media promotion requires psychologists to make truthful and accurate public statements about their qualifications and services. Exaggerating qualifications or using testimonials from current clients violates ethical standards.",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN4",
+      "source_file": "8-standards-5-6.json",
+      "source_folder": "8 Ethics",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": false,
+      "is_org_psych": false
+    },
+    {
+      "id": 54,
+      "question": "A researcher uses a quasi-experimental design to evaluate the effectiveness of a new group therapy for social anxiety by comparing an existing therapy group at one clinic with a waitlist control group at another clinic. Six weeks into the study, the clinic housing the control group hosts a community mental health awareness event that several control participants attend. Which threat to internal validity is MOST concerning in this scenario?",
+      "options": [
+        "History, because an external event differentially affected one group during the study",
+        "Statistical regression, because extreme scorers tend to move toward the mean",
+        "Maturation, because participants naturally improve over the six-week period",
+        "Differential selection, because participants were not randomly assigned to groups"
+      ],
+      "correct_answer": "History, because an external event differentially affected one group during the study",
+      "explanation": "History is the most concerning threat here because an outside event (the mental health awareness event) occurred during the study and differentially affected only the control group. While differential selection is also a legitimate concern in quasi-experimental designs (no random assignment), the question specifically asks about the described scenario involving the community event. The lesson describes history as occurring 'when outside events during the study affect the results' and notes the trickier version: 'when you're testing groups separately and something happens to just one group.' Maturation would affect both groups equally. Statistical regression requires selection based on extreme scores, which is not described.",
+      "domain": "Domain 7: Research Methods & Statistics",
+      "knId": "KN7",
+      "source_file": "7-internal-external-validity.json",
+      "source_folder": "7 Research and Stats",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 55,
+      "question": "In Strategic Family Therapy, what is the purpose of 'restraining' as a therapeutic directive?",
+      "options": [
+        "Teaching communication skills to all family members",
+        "Directly asking family members to perform the problematic behavior",
+        "Altering hierarchical relationships by aligning with a less powerful member",
+        "Encouraging family members not to change or warning against too rapid change"
+      ],
+      "correct_answer": "Encouraging family members not to change or warning against too rapid change",
+      "explanation": "In Strategic Family Therapy, \"restraining\" serves the purpose of encouraging family members not to change or warning against too rapid change. This directive is employed to help family members recognize the potential consequences of change and to allow them to process their feelings and dynamics before making significant adjustments. By cautioning against hasty changes, therapists aim to stabilize the family system and promote thoughtful engagement with the issues at hand.\n\n1. **Directly asking family members to perform the problematic behavior:** This option describes \"prescribing the symptom,\" which involves instructing family members to engage in the problematic behavior, often in an exaggerated manner, rather than restraining change.\n\n2. **Altering hierarchical relationships by aligning with a less powerful member:** This option refers to \"unbalancing,\" a technique used to shift power dynamics within the family, which is distinct from the purpose of restraining.\n\n3. **Teaching communication skills to all family members:** This option does not fit within the scope of restraining, as it focuses on skill development rather than the therapeutic strategy of cautioning against immediate change. Restraining is more about managing the pace of change rather than directly enhancing communication skills.",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN44",
+      "source_file": "6 Family and Group.json",
+      "source_folder": "6 Clinical Interventions",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 56,
+      "question": "In cognitive-behavioral therapy, what role do cognitive schemas play in influencing a person's emotional responses?",
+      "options": [
+        "They act as filters through which individuals interpret experiences, affecting their emotional reactions.",
+        "They are unrelated to emotional responses and focus only on behavioral changes.",
+        "They are temporary thoughts that have no lasting impact on emotions.",
+        "They are solely responsible for creating irrational fears and phobias."
+      ],
+      "correct_answer": "They act as filters through which individuals interpret experiences, affecting their emotional reactions.",
+      "explanation": "1. The correct answer, \"They act as filters through which individuals interpret experiences, affecting their emotional reactions,\" accurately reflects the role of cognitive schemas in cognitive-behavioral therapy (CBT). Cognitive schemas are core beliefs developed during childhood that shape how individuals perceive and interpret their experiences. These schemas influence automatic thoughts, which can lead to emotional responses; for example, a negative schema may lead to negative automatic thoughts, resulting in feelings of sadness or anxiety.\n\n2. The first incorrect option, \"They are temporary thoughts that have no lasting impact on emotions,\" is wrong because cognitive schemas are enduring beliefs rather than fleeting thoughts, and they significantly influence emotional reactions over time. The second incorrect option, \"They are solely responsible for creating irrational fears and phobias,\" is incorrect because while schemas can contribute to irrational fears, they are not the sole factor; other elements, such as environmental influences and experiences, also play a role. Lastly, the option \"They are unrelated to emotional responses and focus only on behavioral changes\" is incorrect because cognitive schemas are directly tied to emotional responses and are integral to understanding both emotional and behavioral patterns in CBT.",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN12",
+      "source_file": "6 CBT.json",
+      "source_folder": "6 Clinical Interventions",
+      "difficulty": "easy",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 57,
+      "question": "During a child's first dental appointment, the sound of the drill (CS1) was paired with the pain of a cavity filling (US), and the child developed a fear response (CR) to the drill sound. On subsequent visits, the dental receptionist greets the child by name before escorting her to the operatory. After several such visits, the child begins showing measurable fear when she hears the receptionist's voice on the phone, even though the receptionist has never been present during any painful procedure. This scenario best illustrates:",
+      "options": [
+        "Trace conditioning, because there was a temporal gap between the receptionist's greeting and the eventual painful procedure",
+        "Spontaneous recovery, because a previously extinguished fear response has returned in a new stimulus context",
+        "Stimulus generalization, because the receptionist's voice is acoustically similar to the drill sound and elicits the conditioned response",
+        "Higher-order conditioning, because the drill sound (an established CS) functioned as a US to condition the receptionist's voice as a new CS"
+      ],
+      "correct_answer": "Higher-order conditioning, because the drill sound (an established CS) functioned as a US to condition the receptionist's voice as a new CS",
+      "explanation": "Higher-order (second-order) conditioning occurs when an already-established conditioned stimulus is used to condition a new neutral stimulus, without any further contact with the original unconditioned stimulus. Here, the drill sound (CS1, which already elicits fear) is systematically followed by or associated with the receptionist's voice across multiple visits. The voice acquires fear-eliciting properties not because it was directly paired with pain, but because it was paired with an established CS. Stimulus generalization (A) would require the receptionist's voice to be acoustically similar to the drill sound; the mechanism here is sequential pairing, not similarity. Trace conditioning (B) describes a timing procedure during original conditioning (gap between CS offset and US onset) and is not relevant to the acquisition of a new CS. Spontaneous recovery (D) refers to the reappearance of an extinguished CR after a rest period, not the acquisition of a new conditioned stimulus.",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
+      "knId": "KN6",
+      "source_file": "2-pavlov-and-classical-conditioning.json",
+      "source_folder": "2 Learning and Memory",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 58,
+      "question": "A neurologist's consultation report on a newly referred client describes the patient's progressive movement disorder as 'idiopathic in etiology.' When integrating this information into a biopsychosocial case conceptualization, a psychologist should interpret this term to mean the condition:",
+      "options": [
+        "Has no established or identifiable underlying cause",
+        "Developed following a known external traumatic event to the brain",
+        "Was present from birth due to a chromosomal abnormality",
+        "Arose from a single identified autosomal dominant gene mutation"
+      ],
+      "correct_answer": "Has no established or identifiable underlying cause",
+      "explanation": "In medical terminology, 'idiopathic' refers to a disease or condition that arises spontaneously with no identifiable cause. This is clinically important for psychologists who routinely interpret medical records. Option A describes conditions with a known genetic etiology (e.g., Huntington's disease, which involves 'a mutated gene on chromosome 4'). Option B describes an acquired condition with a known external mechanism (e.g., TBI). Option D describes a congenital condition with an identifiable chromosomal basis. Idiopathic Parkinson's disease is a prototypical example of this terminology in neurology.",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN1",
+      "source_file": "1-neurological-endocrine-disorders.json",
+      "source_folder": "1 Biopsychology (Neuroscience & Pharmacology)",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": false,
+      "is_org_psych": false
+    },
+    {
+      "id": 59,
+      "question": "In what situation would a psychologist be ethically justified in engaging in a dual relationship with a former client?",
+      "options": [
+        "If the relationship is purely social and not related to therapy.",
+        "If the psychologist believes it will benefit their practice.",
+        "If the former client requests the relationship.",
+        "If the dual relationship does not impair the psychologist's objectivity and is clearly defined."
+      ],
+      "correct_answer": "If the dual relationship does not impair the psychologist's objectivity and is clearly defined.",
+      "explanation": "The correct answer highlights the need for clarity and the absence of impairment to objectivity in dual relationships. The other options either ignore the potential for impairment or suggest that personal benefit or client requests alone justify the relationship, which is not ethically sound.",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN12",
+      "source_file": "8-standards-3-4.json",
+      "source_folder": "8 Ethics",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 60,
+      "question": "What medical explanation is often considered when physical symptoms arise without a clear medical diagnosis?",
+      "options": [
+        "Psychosomatic disorders",
+        "Neurological disorders",
+        "Endocrine disorders",
+        "Genetic disorders"
+      ],
+      "correct_answer": "Endocrine disorders",
+      "explanation": "Endocrine disorders can often manifest as physical symptoms without a clear medical diagnosis, affecting mood, energy levels, and physical health. Psychosomatic disorders involve psychological factors, neurological disorders typically have identifiable symptoms, and genetic disorders are usually diagnosed through genetic testing.",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN10",
+      "source_file": "1-neurological-endocrine-disorders.json",
+      "source_folder": "1 Biopsychology (Neuroscience & Pharmacology)",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 61,
+      "question": "What condition is characterized by Wernicke's encephalopathy due to thiamine deficiency?",
+      "options": [
+        "Huntington's disease",
+        "Alzheimer's disease",
+        "Korsakoff syndrome",
+        "Multiple sclerosis"
+      ],
+      "correct_answer": "Korsakoff syndrome",
+      "explanation": "The correct answer is Korsakoff syndrome, which is directly associated with Wernicke's encephalopathy resulting from thiamine deficiency. The other conditions are unrelated to thiamine deficiency.",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN1",
+      "source_file": "1-neurological-endocrine-disorders.json",
+      "source_folder": "1 Biopsychology (Neuroscience & Pharmacology)",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 62,
+      "question": "Which stage in the Racial/Cultural Identity Development Model involves individuals recognizing their own cultural identity and its significance?",
+      "options": [
+        "Immersion-Emersion stage",
+        "Internalization stage",
+        "Pre-encounter stage",
+        "Encounter stage"
+      ],
+      "correct_answer": "Internalization stage",
+      "explanation": "The Internalization stage is where individuals recognize and embrace their cultural identity, integrating it into their self-concept. The other stages focus on different aspects of identity development, such as awareness or immersion in cultural experiences.",
+      "domain": "Domain 3: Social Psychology & Cultural Aspects",
+      "knId": "KN3",
+      "source_file": "3-helping-and-hurting.json",
+      "source_folder": "3 Social Psychology",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 63,
+      "question": "Which of the following strategies is most effective for optimizing external validity in research?",
+      "options": [
+        "Using complex statistical models",
+        "Controlling for extraneous variables",
+        "Using a diverse sample",
+        "Increasing sample size"
+      ],
+      "correct_answer": "Using a diverse sample",
+      "explanation": "The correct answer is 'Using a diverse sample' because a diverse sample enhances the generalizability of the findings to a broader population, which is the essence of external validity. While controlling for extraneous variables and increasing sample size are important, they do not directly address the generalizability of results across different populations.",
+      "domain": "Domain 7: Research Methods & Statistics",
+      "knId": "KN9",
+      "source_file": "7-internal-external-validity.json",
+      "source_folder": "7 Research and Stats",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 64,
+      "question": "In the WISC-IV, which cognitive ability is primarily assessed by the Perceptual Reasoning Index?",
+      "options": [
+        "D. Processing speed",
+        "B. Visual-spatial skills",
+        "A. Verbal comprehension",
+        "C. Working memory"
+      ],
+      "correct_answer": "B. Visual-spatial skills",
+      "explanation": "Option B is correct because the Perceptual Reasoning Index of the WISC-IV specifically measures visual-spatial skills and non-verbal reasoning. Options A, C, and D pertain to other cognitive abilities assessed by different indices.",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN5",
+      "source_file": "5-cognitive-tests.json",
+      "source_folder": "5 Assessment",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 65,
+      "question": "What is a common issue that can lead to the misdiagnosis of learning disorders in children?",
+      "options": [
+        "Cultural differences in learning styles",
+        "Overemphasis on standardized testing",
+        "All of the above",
+        "Lack of parental involvement in education"
+      ],
+      "correct_answer": "All of the above",
+      "explanation": "The correct answer is 'All of the above' as each factor can contribute to the misdiagnosis of learning disorders. Cultural differences can lead to misunderstandings of a child's abilities, lack of parental involvement can affect educational outcomes, and standardized testing may not accurately reflect a child's learning style.",
+      "domain": "Domain 4: Growth & Lifespan Development",
+      "knId": "KN5",
+      "source_file": "4-language-development.json",
+      "source_folder": "4 Development",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": false,
+      "is_org_psych": false
+    },
+    {
+      "id": 66,
+      "question": "A 71-year-old right-handed woman is referred for neuropsychological assessment three weeks after a cerebrovascular accident involving the right middle cerebral artery. During the evaluation, she copies only the right half of a complex geometric figure, consistently marks the rightward third of a horizontal line when asked to bisect it, and omits all objects placed to her left during a cancellation task. Her primary care physician notes she also lacks awareness of these errors and does not report any subjective difficulties. Which of the following BEST explains the neurological basis of this clinical presentation?",
+      "options": [
+        "Left parietal damage selectively impairing constructional praxis without attentional involvement",
+        "Right (nondominant) hemisphere damage impairing visuospatial processing, producing hemispatial neglect",
+        "Bilateral occipital lobe infarction causing symmetric visual field loss",
+        "Left hemisphere damage disrupting language-mediated spatial orientation"
+      ],
+      "correct_answer": "Right (nondominant) hemisphere damage impairing visuospatial processing, producing hemispatial neglect",
+      "explanation": "The constellation of findings—contralesional spatial neglect (ignoring left hemispace), line bisection error biased rightward, anosognosia (unawareness of deficits), and failure to attend to left-sided stimuli—is the classic presentation of right hemisphere stroke affecting visuospatial processing. Because the right (nondominant) hemisphere specializes in visuospatial functions, damage here produces neglect of the contralateral (left) side of space. Option A is incorrect: left hemisphere strokes characteristically produce language deficits (aphasia), not hemispatial neglect. Option C is incorrect: bilateral occipital damage would cause visual field cuts (homonymous hemianopia) but not the attentional and anosognosic features present here. Option D is incorrect: left parietal damage would affect the right hemispace and would more likely produce apraxia or Gerstmann syndrome, not the described leftward neglect pattern.",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN1",
+      "source_file": "1-neurological-endocrine-disorders.json",
+      "source_folder": "1 Biopsychology (Neuroscience & Pharmacology)",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": false,
+      "is_org_psych": false
+    },
+    {
+      "id": 67,
+      "question": "Which concept describes the process of behavior modification through pairing a neutral stimulus with an unconditioned stimulus?",
+      "options": [
+        "Higher-order conditioning",
+        "Observational learning",
+        "Classical conditioning",
+        "Operant conditioning"
+      ],
+      "correct_answer": "Classical conditioning",
+      "explanation": "The correct answer is 'Classical conditioning' because it involves learning through the association of a neutral stimulus with an unconditioned stimulus to elicit a conditioned response. The other options do not accurately describe this specific process.",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
+      "knId": "KN7",
+      "source_file": "2-pavlov-and-classical-conditioning.json",
+      "source_folder": "2 Learning and Memory",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 68,
+      "question": "Which factor is most likely to influence the manifestation of psychopathology across different cultures?",
+      "options": [
+        "Biological factors",
+        "Individual personality traits",
+        "Sociocultural impact",
+        "Genetic predisposition"
+      ],
+      "correct_answer": "Sociocultural impact",
+      "explanation": "Sociocultural impact is crucial in understanding how psychopathology manifests differently across cultures, as cultural norms, values, and social structures shape the expression and understanding of mental health issues. While genetic predisposition, individual personality traits, and biological factors play roles, they do not account for the cultural variations in psychopathology. Therefore, sociocultural impact is the correct answer.",
+      "domain": "Domain 3: Social Psychology & Cultural Aspects",
+      "knId": "KN3",
+      "source_file": "3-helping-and-hurting.json",
+      "source_folder": "3 Social Psychology",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 69,
+      "question": "Which of the following best exemplifies positive punishment in a behavioral context?",
+      "options": [
+        "A parent removes a child's favorite toy for misbehavior.",
+        "A coach makes a player run laps for arriving late to practice.",
+        "A manager praises an employee for meeting a deadline.",
+        "A teacher reprimands a student for talking during class."
+      ],
+      "correct_answer": "A coach makes a player run laps for arriving late to practice.",
+      "explanation": "This option illustrates positive punishment because it involves adding an unpleasant consequence (running laps) to decrease the likelihood of the undesirable behavior (arriving late). The other options either represent reinforcement or negative punishment, which do not fit the definition of positive punishment.",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
+      "knId": "KN6",
+      "source_file": "2-skinner-and-operant-conditioning.json",
+      "source_folder": "2 Learning and Memory",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": false,
+      "is_org_psych": false
+    },
+    {
+      "id": 70,
+      "question": "According to Caplan's model of prevention, which type of prevention aims to reduce the occurrence of new cases of a disorder by targeting entire populations or groups regardless of risk status?",
+      "options": [
+        "Tertiary prevention",
+        "Secondary prevention",
+        "Primary prevention",
+        "Selective prevention"
+      ],
+      "correct_answer": "Primary prevention",
+      "explanation": "1. **Primary prevention** is the correct answer because it is defined by Caplan as the type of prevention aimed at reducing the occurrence of new cases of a mental or physical disorder by targeting entire populations or groups, regardless of their risk status. This approach focuses on preventive measures that can be applied broadly, such as public education programs or community health initiatives.\n\n2. **Secondary prevention** is incorrect because it focuses on reducing the prevalence of a disorder through early detection and intervention, specifically targeting individuals identified as at elevated risk for the disorder. **Tertiary prevention** is also incorrect because it aims to reduce the severity and duration of an already diagnosed disorder, targeting individuals who have received a diagnosis rather than preventing new cases. Lastly, **selective prevention** is incorrect as it targets individuals who are at increased risk for a disorder due to specific biological, psychological, or social characteristics, rather than addressing the entire population.",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN45",
+      "source_file": "6 Prevention and Consultation.json",
+      "source_folder": "6 Clinical Interventions",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 71,
+      "question": "What is the typical correlation of IQ scores among siblings raised in the same household?",
+      "options": [
+        "0.75",
+        "0.0",
+        "0.5",
+        "0.25"
+      ],
+      "correct_answer": "0.5",
+      "explanation": "Research indicates that the correlation of IQ scores among siblings raised in the same household is approximately 0.5, reflecting both genetic and environmental influences. The other correlations do not accurately represent this relationship.",
+      "domain": "Domain 4: Growth & Lifespan Development",
+      "knId": "KN1",
+      "source_file": "4-heredity-and-environment.json",
+      "source_folder": "4 Development",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 72,
+      "question": "What is the process called when a conditioned response is elicited by stimuli that are similar to the original conditioned stimulus?",
+      "options": [
+        "Unconditioned response",
+        "Stimulus discrimination",
+        "Stimulus generalization",
+        "Conditioned response"
+      ],
+      "correct_answer": "Stimulus generalization",
+      "explanation": "Stimulus generalization occurs when stimuli similar to the original conditioned stimulus elicit the conditioned response. Stimulus discrimination, on the other hand, refers to the ability to distinguish between different stimuli.",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
+      "knId": "KN6",
+      "source_file": "2-pavlov-and-classical-conditioning.json",
+      "source_folder": "2 Learning and Memory",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 73,
+      "question": "Which economic evaluation method compares the costs and benefits of interventions by converting both into monetary terms?",
+      "options": [
+        "Cost-utility analysis",
+        "Cost-effectiveness analysis",
+        "Cost-benefit analysis",
+        "Cost-minimization analysis"
+      ],
+      "correct_answer": "Cost-benefit analysis",
+      "explanation": "**1. Explanation of the Correct Answer: Cost-benefit analysis**  \nCost-benefit analysis (CBA) is the correct answer because it is specifically designed to compare the costs and benefits of one or multiple interventions by converting both into monetary terms. This allows decision-makers to evaluate the net benefit of interventions based on their financial implications, facilitating a clear understanding of the economic feasibility of various options.\n\n**2. Explanation of Incorrect Options:**  \n- **Cost-effectiveness analysis:** This method compares the costs and benefits of two or more interventions, but it does not express benefits in monetary terms; instead, it measures benefits using non-monetary outcomes (e.g., health improvements).\n  \n- **Cost-utility analysis:** Similar to cost-effectiveness analysis, cost-utility analysis compares costs to benefits but focuses specifically on quality-adjusted life-years (QALYs) rather than converting benefits into monetary values.\n\n- **Cost-minimization analysis:** This approach is used when the outcomes of interventions are assumed to be equivalent, focusing solely on comparing the costs to identify the least expensive option. It does not involve the conversion of benefits into monetary terms.",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN58",
+      "source_file": "6 Prevention and Consultation.json",
+      "source_folder": "6 Clinical Interventions",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": false,
+      "is_org_psych": false
+    },
+    {
+      "id": 74,
+      "question": "What are the primary milestones in language development during the first two years of life?",
+      "options": [
+        "Babbling, complex sentences, understanding grammar",
+        "Cooing, babbling, first words",
+        "Cooing, understanding grammar, two-word phrases",
+        "First words, two-word phrases, complex sentences"
+      ],
+      "correct_answer": "Cooing, babbling, first words",
+      "explanation": "The primary milestones in language development during the first two years include cooing (around 2-3 months), babbling (around 6 months), and the emergence of first words (around 12 months). The other options either misorder these milestones or include stages not typically reached within the first two years.",
+      "domain": "Domain 4: Growth & Lifespan Development",
+      "knId": "KN4",
+      "source_file": "4-language-development.json",
+      "source_folder": "4 Development",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 75,
+      "question": "An adolescent explains that she refused to shoplift with her friends because \"if everyone just stole whatever they wanted, stores would close and the whole system would fall apart.\" According to Kohlberg's theory of moral development, this reasoning is most consistent with which stage?",
+      "options": [
+        "Stage 5: Social Contract orientation",
+        "Stage 4: Law and Order orientation",
+        "Stage 2: Instrumental Hedonism",
+        "Stage 3: Good Boy/Good Girl orientation"
+      ],
+      "correct_answer": "Stage 4: Law and Order orientation",
+      "explanation": "Stage 4 (Law and Order) reasoning focuses on maintaining social order and recognizing that society needs rules to function. The adolescent's concern that widespread stealing would cause systemic breakdown reflects this stage's emphasis on laws and social order. Stage 2 (A) focuses on personal benefit ('What's in it for me?'). Stage 3 (B) focuses on social approval ('Will others think I'm a good person?'). Stage 5 (D) involves abstract reasoning about democratic principles and individual rights superseding specific laws. The adolescent's reasoning centers on the necessity of rules for societal functioning, which is the hallmark of Stage 4.",
+      "domain": "Domain 4: Growth & Lifespan Development",
+      "knId": "KN23",
+      "source_file": "4-morality.json",
+      "source_folder": "4 Development",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": false,
+      "is_org_psych": false
+    },
+    {
+      "id": 76,
+      "question": "Routine outcome monitoring (ROM) in clinical practice primarily involves:",
+      "options": [
+        "Regular assessment of client symptoms and feedback to inform collaborative treatment planning",
+        "Collecting client data only at baseline and final sessions",
+        "Therapist-only evaluation of treatment progress at therapy termination",
+        "Use of imaging techniques to assess brain changes across therapy"
+      ],
+      "correct_answer": "Regular assessment of client symptoms and feedback to inform collaborative treatment planning",
+      "explanation": "1. The correct answer, \"Regular assessment of client symptoms and feedback to inform collaborative treatment planning,\" accurately reflects the essence of Routine Outcome Monitoring (ROM). ROM is defined as a process that includes routinely administered symptom measures before each clinical encounter, practitioner and patient review of data, and collaborative reevaluation of the treatment plan based on this data (Scott & Lewis, 2015). This systematic approach ensures that treatment is tailored to the client's evolving needs and enhances overall therapeutic effectiveness.\n\n2. The option \"Therapist-only evaluation of treatment progress at therapy termination\" is incorrect because ROM emphasizes ongoing assessments throughout therapy rather than solely at the end, ensuring continuous feedback and adaptation. \"Collecting client data only at baseline and final sessions\" is also wrong, as ROM involves regular assessments throughout the treatment process, not just at the beginning and end. Lastly, \"Use of imaging techniques to assess brain changes across therapy\" is incorrect because ROM focuses on symptom and outcome measures rather than neuroimaging, which is not part of the ROM framework.",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN44",
+      "source_file": "6 Prevention and Consultation.json",
+      "source_folder": "6 Clinical Interventions",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": false,
+      "is_org_psych": false
+    },
+    {
+      "id": 77,
+      "question": "In the context of family therapy, what does 'differentiation' primarily involve?",
+      "options": [
+        "The avoidance of conflict in family interactions",
+        "The establishment of strict family roles",
+        "The ability to maintain one's own identity while in close relationships",
+        "The tendency to rely on family members for emotional support"
+      ],
+      "correct_answer": "The ability to maintain one's own identity while in close relationships",
+      "explanation": "1. \"The ability to maintain one's own identity while in close relationships\" is the correct answer because differentiation, as described by Bowen in extended family systems therapy, refers to a person's capacity to distinguish their own thoughts and feelings from those of others. This ability allows individuals to maintain their identity and emotional autonomy while still being connected to their family members, preventing emotional fusion that can lead to dysfunction.\n\n2. The option \"The tendency to rely on family members for emotional support\" is incorrect because differentiation emphasizes emotional independence rather than dependence on family members for support. \"The establishment of strict family roles\" is wrong because differentiation is about flexibility in roles and maintaining individual identities, not rigidly defined roles. Lastly, \"The avoidance of conflict in family interactions\" is incorrect since differentiation does not entail avoidance of conflict; rather, it involves managing one's emotional responses and engaging in healthy interactions despite conflicts.",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN25",
+      "source_file": "6 Family and Group.json",
+      "source_folder": "6 Clinical Interventions",
+      "difficulty": "easy",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 78,
+      "question": "A doctoral student in clinical psychology who has not yet completed her dissertation is developing a website for her supervised practice placement. She lists herself as 'Dr. Jane Smith, Clinical Psychologist' and advertises her fee of $150 per session. Which aspect of this advertisement is most clearly problematic under APA Standard 5.01?",
+      "options": [
+        "Using the title 'Dr.' and 'Clinical Psychologist' before earning the doctoral degree and obtaining licensure",
+        "Charging $150 per session, which exceeds what a trainee may ethically charge",
+        "Advertising fees on a website, which is prohibited for trainees",
+        "Failing to list her supervisor's name alongside her own credentials"
+      ],
+      "correct_answer": "Using the title 'Dr.' and 'Clinical Psychologist' before earning the doctoral degree and obtaining licensure",
+      "explanation": "Standard 5.01 prohibits false, deceptive, or fraudulent public statements about credentials and licenses. The student has not yet earned her doctoral degree, so claiming 'Dr.' is false. Additionally, claiming the title 'Clinical Psychologist' typically requires licensure, which she does not have. The lesson specifies that acceptable degree credentials are 'Doctoral degrees in psychology from regionally accredited institutions' or 'Degrees that your state licensing board accepted as the basis for your psychology license.' She meets neither criterion. Option A is incorrect—advertising fees is not inherently prohibited for trainees. Option C, while good practice, is not the most clearly problematic element. Option D is incorrect—there is no specific cap on what a trainee may charge.",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN62",
+      "source_file": "8-standards-5-6.json",
+      "source_folder": "8 Ethics",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 79,
+      "question": "What is the primary purpose of the Stroop Color Interference Test in cognitive assessment?",
+      "options": [
+        "To measure verbal intelligence and vocabulary.",
+        "To assess cognitive flexibility and processing speed.",
+        "To determine the level of emotional distress in individuals.",
+        "To evaluate memory retention over time."
+      ],
+      "correct_answer": "To assess cognitive flexibility and processing speed.",
+      "explanation": "The Stroop Test evaluates how well individuals can manage conflicting information, which reflects cognitive flexibility and processing speed. The other options do not accurately describe the primary purpose of the test.",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN5",
+      "source_file": "5-cognitive-tests.json",
+      "source_folder": "5 Assessment",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 80,
+      "question": "A developmental psychologist administers the Bayley-4 to a 24-month-old toddler who obtains above-average scores across all domains. When the parents ask whether this means their child will have a high IQ in school, the psychologist's MOST accurate response would be:",
+      "options": [
+        "Bayley-4 scores at 24 months are highly predictive of IQ at school age with a correlation above .80",
+        "Infant developmental tests are better for identifying delays than for predicting later IQ scores in typically developing children",
+        "Above-average scores at 24 months guarantee placement in gifted programs upon school entry",
+        "The Bayley-4 directly measures the same cognitive abilities as school-age intelligence tests"
+      ],
+      "correct_answer": "Infant developmental tests are better for identifying delays than for predicting later IQ scores in typically developing children",
+      "explanation": "The lesson explicitly addresses this as a common misconception: 'Infant tests predict adult IQ perfectly—They don't. While tests like the FTII show predictive validity, infant assessment is better for identifying developmental delays than predicting exact future IQ scores.' The Bayley-4 measures cognitive, motor, language, social-emotional, and adaptive behavior domains—these overlap only partially with what school-age IQ tests measure. Option B overstates the predictive correlation. Option C is incorrect because infant tests measure developmental milestones, not the same abilities as later IQ tests. Option D makes an unsupported guarantee about gifted placement.",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN5",
+      "source_file": "5-cognitive-tests.json",
+      "source_folder": "5 Assessment",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 81,
+      "question": "Which of the following factors is most commonly associated with an increased risk of developing autism spectrum disorder?",
+      "options": [
+        "Low birth weight",
+        "Advanced parental age",
+        "High socioeconomic status",
+        "Exposure to environmental toxins"
+      ],
+      "correct_answer": "Advanced parental age",
+      "explanation": "Research indicates that advanced parental age, particularly of the father, is associated with an increased risk of autism spectrum disorder. While low birth weight and environmental toxins can be factors, advanced parental age has a stronger correlation. High socioeconomic status is not typically associated with increased risk.",
+      "domain": "Domain 4: Growth & Lifespan Development",
+      "knId": "KN6",
+      "source_file": "4-heredity-and-environment.json",
+      "source_folder": "4 Development",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 82,
+      "question": "Which of the following is a potential threat to the validity of quasi-experimental designs?",
+      "options": [
+        "Control groups",
+        "Random assignment",
+        "Standardized measures",
+        "Selection bias"
+      ],
+      "correct_answer": "Selection bias",
+      "explanation": "The correct answer is 'Selection bias' because quasi-experimental designs often lack random assignment, which can lead to systematic differences between groups that threaten the internal validity of the study. Random assignment, control groups, and standardized measures are strategies used to enhance validity, not threats.",
+      "domain": "Domain 7: Research Methods & Statistics",
+      "knId": "KN3",
+      "source_file": "7-internal-external-validity.json",
+      "source_folder": "7 Research and Stats",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 83,
+      "question": "What is the ethical guideline regarding quoting academic work in psychological publications?",
+      "options": [
+        "Only use quotes from peer-reviewed journals.",
+        "Quoting is allowed without attribution as long as the source is well-known.",
+        "All quotes must be accurately attributed to the original author.",
+        "Paraphrasing is preferred over direct quotes."
+      ],
+      "correct_answer": "All quotes must be accurately attributed to the original author.",
+      "explanation": "The correct answer is that all quotes must be attributed, which is a fundamental ethical guideline in academic writing. The lesson emphasizes the importance of proper citation to maintain integrity in academic work. The other options misrepresent ethical standards regarding quoting and attribution.",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN6",
+      "source_file": "8-standards-5-6.json",
+      "source_folder": "8 Ethics",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": false,
+      "is_org_psych": false
+    },
+    {
+      "id": 84,
+      "question": "Which of the following best illustrates the interaction of genes and environment in human development?",
+      "options": [
+        "A child with a genetic predisposition for high intelligence who grows up in a stimulating environment",
+        "A child raised in an impoverished environment who shows no signs of cognitive development",
+        "A child with no genetic predisposition for athleticism who becomes a professional athlete",
+        "A child with a genetic disorder who thrives in a supportive family"
+      ],
+      "correct_answer": "A child with a genetic predisposition for high intelligence who grows up in a stimulating environment",
+      "explanation": "This option illustrates how genetic predispositions can be enhanced or diminished by environmental factors, demonstrating the interaction between nature and nurture. The other options either misrepresent the interaction or suggest that environment alone determines outcomes without considering genetic influences.",
+      "domain": "Domain 4: Growth & Lifespan Development",
+      "knId": "KN1",
+      "source_file": "4-heredity-and-environment.json",
+      "source_folder": "4 Development",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 85,
+      "question": "What does code-switching in bilingual individuals primarily refer to?",
+      "options": [
+        "Adopting formal language in professional contexts",
+        "Using slang in informal settings",
+        "Changing dialects within the same language",
+        "Switching languages based on context"
+      ],
+      "correct_answer": "Switching languages based on context",
+      "explanation": "Code-switching refers to the practice of alternating between two or more languages or dialects depending on the social context. The other options describe variations in language use but do not capture the essence of code-switching.",
+      "domain": "Domain 4: Growth & Lifespan Development",
+      "knId": "KN6",
+      "source_file": "4-language-development.json",
+      "source_folder": "4 Development",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 86,
+      "question": "What is a psychologist's responsibility when they discover that a public statement they made was misleading?",
+      "options": [
+        "They must correct the misrepresentation as soon as possible.",
+        "They should ignore it if no one has complained.",
+        "They should deny any responsibility for the misleading statement.",
+        "They can wait until they receive a formal complaint before addressing it."
+      ],
+      "correct_answer": "They must correct the misrepresentation as soon as possible.",
+      "explanation": "The correct answer reflects the ethical obligation to correct any misleading public statements to maintain integrity and trust. Ignoring it or waiting for complaints does not align with ethical standards.",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN3",
+      "source_file": "8-standards-5-6.json",
+      "source_folder": "8 Ethics",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": false,
+      "is_org_psych": false
+    },
+    {
+      "id": 87,
+      "question": "What is a common medical explanation for anxiety symptoms?",
+      "options": [
+        "Anxiety is caused by a lack of social support.",
+        "Anxiety is solely a psychological disorder with no medical basis.",
+        "Anxiety symptoms can be attributed to hormonal imbalances.",
+        "Anxiety symptoms are always linked to past trauma."
+      ],
+      "correct_answer": "Anxiety symptoms can be attributed to hormonal imbalances.",
+      "explanation": "The correct answer indicates that hormonal imbalances can contribute to anxiety symptoms, which is supported by medical research. The other options either dismiss medical explanations or incorrectly attribute anxiety solely to psychological or social factors.",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN1",
+      "source_file": "1-neurological-endocrine-disorders.json",
+      "source_folder": "1 Biopsychology (Neuroscience & Pharmacology)",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 88,
+      "question": "Which of the following describes client-centered case consultation as defined by Caplan?",
+      "options": [
+        "Enhancing the consultee’s skills to better work with present and future clients",
+        "Improving professional functioning of administrators for future program evaluation",
+        "Improving program administrators’ ability to clarify and resolve program issues",
+        "Focusing on a specific client with treatment difficulties to guide the consultee's plan"
+      ],
+      "correct_answer": "Focusing on a specific client with treatment difficulties to guide the consultee's plan",
+      "explanation": "1. The correct answer, \"Focusing on a specific client with treatment difficulties to guide the consultee's plan,\" accurately reflects Caplan's definition of client-centered case consultation. This type of consultation specifically targets a consultee's individual client who is experiencing challenges in receiving effective services, with the consultant's goal being to develop a plan that will benefit that particular client.\n\n2. The first incorrect option, \"Improving program administrators’ ability to clarify and resolve program issues,\" describes program-centered administrative consultation, which focuses on helping administrators address problems within a mental health program rather than individual clients. The second incorrect option, \"Enhancing the consultee’s skills to better work with present and future clients,\" refers to consultee-centered case consultation, which aims to improve the consultee's overall capabilities rather than focusing on a single client. Lastly, \"Improving professional functioning of administrators for future program evaluation\" also pertains to consultee-centered administrative consultation, which is aimed at enhancing the skills of program administrators for better future performance, not at addressing specific client issues.",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN47",
+      "source_file": "6 Prevention and Consultation.json",
+      "source_folder": "6 Clinical Interventions",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 89,
+      "question": "In Milan Systemic Family Therapy, what is the purpose of 'circular questioning'?",
+      "options": [
+        "To assign blame for problematic behaviors",
+        "To have family members role-play past conflicts",
+        "To instruct family members to perform rituals between sessions",
+        "To identify differences in family members' perceptions and uncover communication patterns"
+      ],
+      "correct_answer": "To identify differences in family members' perceptions and uncover communication patterns",
+      "explanation": "In Milan Systemic Family Therapy, the purpose of 'circular questioning' is to identify differences in family members' perceptions and uncover communication patterns. This technique involves asking each family member the same question to reveal how their views differ, which helps the therapist understand the family's dynamics and the underlying issues affecting their interactions (Browning & Green, 2003).\n\nThe incorrect options are as follows:\n\n- **To assign blame for problematic behaviors:** This option is incorrect because circular questioning aims to explore perceptions and communication rather than to attribute blame, which would not facilitate understanding or healing within the family system.\n\n- **To have family members role-play past conflicts:** This option is wrong because circular questioning does not involve role-playing; instead, it focuses on gathering insights into individual perspectives and communication styles rather than reenacting past events.\n\n- **To instruct family members to perform rituals between sessions:** This option is incorrect as it misrepresents the function of circular questioning, which is not about directing family members to perform specific actions but rather about facilitating dialogue that reveals their perceptions and communication patterns.",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN44",
+      "source_file": "6 Family and Group.json",
+      "source_folder": "6 Clinical Interventions",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 90,
+      "question": "What type of reading errors are characteristic of deep dyslexia?",
+      "options": [
+        "Orthographic errors",
+        "Semantic errors",
+        "Phonological errors",
+        "Syntactic errors"
+      ],
+      "correct_answer": "Semantic errors",
+      "explanation": "Deep dyslexia is characterized by semantic errors, where a reader may substitute a word with another that has a similar meaning. Phonological errors relate to phonological dyslexia, while syntactic and orthographic errors are not specific to deep dyslexia.",
+      "domain": "Domain 4: Growth & Lifespan Development",
+      "knId": "KN8",
+      "source_file": "4-language-development.json",
+      "source_folder": "4 Development",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 91,
+      "question": "In 1971, the U.S. Supreme Court ruled in Griggs v. Duke Power Co. that Duke Power's requirement of a high school diploma and passing scores on two general intelligence tests for internal job transfers was unlawful under Title VII of the Civil Rights Act. The company had not validated these requirements as related to successful job performance, and Black employees were disproportionately excluded. Which of the following most accurately captures the central principle established by this ruling for employment selection testing?",
+      "options": [
+        "Disparate impact in employment testing can only be legally challenged after the EEOC has conducted a formal administrative investigation",
+        "Employers must use only content-valid tests developed internally from job task analyses and may not purchase commercially developed assessments for selection purposes",
+        "Employment selection procedures that produce disparate impact on a protected class must be demonstrably job-related and justified by business necessity",
+        "Standardized intelligence tests are categorically prohibited from use in employment selection under federal civil rights law"
+      ],
+      "correct_answer": "Employment selection procedures that produce disparate impact on a protected class must be demonstrably job-related and justified by business necessity",
+      "explanation": "Griggs v. Duke Power Co. established the legal doctrine of adverse (disparate) impact discrimination in employment. The Supreme Court held unanimously that employment practices neutral on their face—but producing a disproportionate adverse impact on members of a protected class—are unlawful under Title VII unless the employer demonstrates the requirement is job-related and consistent with business necessity. The intelligence tests used by Duke Power had not been validated for the jobs in question, and the company could not demonstrate they predicted job performance. This ruling transformed employment testing by requiring demonstrated job-relatedness for selection tools with adverse impact, laying the groundwork for the Uniform Guidelines on Employee Selection Procedures (1978). Option A is incorrect; the ruling does not mandate internally developed or content-valid-only tests—job-relatedness can be demonstrated through multiple validation strategies. Option C is incorrect; intelligence tests are not categorically prohibited; they must be job-relevant. Option D is incorrect; the ruling established that individual employees and the courts could challenge adverse impact directly; no prerequisite EEOC investigation is required to bring suit.",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN8",
+      "source_file": "5-hiring-methods.json",
+      "source_folder": "5 Assessment",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": false,
+      "is_org_psych": false
+    },
+    {
+      "id": 92,
+      "question": "How should psychologists determine their fees for therapy services?",
+      "options": [
+        "Based on what competitors charge.",
+        "By charging the highest possible rate.",
+        "In accordance with the APA guidelines and community standards.",
+        "By considering their own financial needs."
+      ],
+      "correct_answer": "In accordance with the APA guidelines and community standards.",
+      "explanation": "Psychologists should establish their fees based on ethical guidelines and community standards to ensure fairness and accessibility. Charging based on competitors or personal financial needs can lead to unethical practices.",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN8",
+      "source_file": "8-standards-5-6.json",
+      "source_folder": "8 Ethics",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": false,
+      "is_org_psych": false
+    },
+    {
+      "id": 93,
+      "question": "A researcher conducts a 2 × 3 factorial ANOVA examining the effects of therapy type (CBT vs. psychodynamic) and session frequency (weekly, biweekly, monthly) on depression scores. The results reveal a significant interaction effect but NO significant main effects. Which interpretation is MOST appropriate?",
+      "options": [
+        "Neither therapy type nor session frequency has any effect on depression scores",
+        "The study lacked sufficient power to detect main effects, so the interaction is likely a Type I error",
+        "The results are uninterpretable because main effects must be significant before an interaction can be meaningful",
+        "The effect of therapy type on depression depends on session frequency, even though neither variable has a consistent overall effect across all conditions"
+      ],
+      "correct_answer": "The effect of therapy type on depression depends on session frequency, even though neither variable has a consistent overall effect across all conditions",
+      "explanation": "A significant interaction without significant main effects means that the effect of one variable depends on the level of the other variable, but neither variable produces a consistent average effect across all levels of the other. For example, CBT might be superior with weekly sessions while psychodynamic might be superior with monthly sessions, with these effects canceling out when averaged. The lesson states: 'When there's a significant interaction, be cautious interpreting main effects – the interaction might tell the more important story.' Option A is wrong because the significant interaction shows the variables DO affect scores, just conditionally. Option C is wrong because interactions can be significant and meaningful without significant main effects. Option D is an unwarranted assumption.",
+      "domain": "Domain 7: Research Methods & Statistics",
+      "knId": "KN55",
+      "source_file": "7-research-designs.json",
+      "source_folder": "7 Research and Stats",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 94,
+      "question": "Which core process in Acceptance and Commitment Therapy (ACT) counters attempts to alter or avoid unpleasant private experiences by promoting an open and accepting attitude toward them?",
+      "options": [
+        "Experiential acceptance",
+        "Committed action",
+        "Attentional rigidity",
+        "Cognitive fusion"
+      ],
+      "correct_answer": "Experiential acceptance",
+      "explanation": "1. \"Experiential acceptance\" is the correct answer because it is defined in Acceptance and Commitment Therapy (ACT) as the active and aware embrace of private experiences—such as thoughts and emotions—without unnecessary attempts to change their frequency or form. This core process directly counters experiential avoidance by fostering an open and accepting attitude towards unpleasant experiences, promoting psychological flexibility.\n\n2. The incorrect options are as follows:\n- **Cognitive fusion** refers to the tendency to become entangled with one's thoughts and feelings, viewing them as reality rather than as separate experiences, which can hinder acceptance.\n- **Attentional rigidity** involves a narrow focus on the past or future, which can prevent individuals from being present and accepting their current experiences, thus not promoting an open attitude.\n- **Committed action** pertains to the commitment to act in ways consistent with one’s values, which is a proactive approach rather than a process that directly addresses the acceptance of unpleasant experiences.",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN44",
+      "source_file": "6 CBT.json",
+      "source_folder": "6 Clinical Interventions",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 95,
+      "question": "A psychologist is providing parent education to the family of a child recently diagnosed with spastic cerebral palsy (CP). The parents ask when the brain injury that caused the diagnosis most likely occurred. Based on the established etiology of cerebral palsy, the psychologist should explain that the responsible brain damage most commonly occurs:",
+      "options": [
+        "After age three, following a period of normal motor development, due to viral encephalitis",
+        "Between 18 and 24 months of postnatal age, during the critical period for myelination",
+        "During the first trimester of gestation, when neural tube formation is occurring",
+        "During the perinatal period, encompassing the time just before, during, or shortly after birth"
+      ],
+      "correct_answer": "During the perinatal period, encompassing the time just before, during, or shortly after birth",
+      "explanation": "Cerebral palsy is a non-progressive neuromotor disorder most commonly caused by brain damage occurring during the perinatal period, typically due to hypoxic-ischemic injury (oxygen deprivation) before, during, or shortly after birth. First trimester damage (Option A) more commonly results in structural brain malformations or neural tube defects. Damage during the myelination window (Option C) can cause motor impairment, but CP is defined by a broader perinatal injury window. Damage after age three following normal development (Option D) would be classified as an acquired brain injury, not cerebral palsy, since CP requires injury prior to established normal development.",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN1",
+      "source_file": "1-neurological-endocrine-disorders.json",
+      "source_folder": "1 Biopsychology (Neuroscience & Pharmacology)",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": false,
+      "is_org_psych": false
+    },
+    {
+      "id": 96,
+      "question": "In developmental psychopathology, what does the term multifinality refer to?",
+      "options": [
+        "Different outcomes from the same starting point",
+        "The ability to adapt to various environments",
+        "The same outcome from different starting points",
+        "The process of developing multiple skills simultaneously"
+      ],
+      "correct_answer": "Different outcomes from the same starting point",
+      "explanation": "Multifinality refers to the concept that individuals with the same initial conditions can develop different outcomes, particularly in the context of psychological development. The other options misrepresent the concept or focus on unrelated ideas.",
+      "domain": "Domain 4: Growth & Lifespan Development",
+      "knId": "KN13",
+      "source_file": "4-heredity-and-environment.json",
+      "source_folder": "4 Development",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 97,
+      "question": "A 15-year-old client expresses suicidal ideation with a specific plan during a therapy session. The adolescent's parents are divorced and share joint legal custody. What is the MINIMUM parental consent requirement to authorize psychiatric hospitalization of the minor?",
+      "options": [
+        "Consent from one parent with legal custody is generally sufficient to authorize hospitalization",
+        "Both parents must provide written consent before hospitalization can occur",
+        "The minor must also provide assent in addition to parental consent for hospitalization to proceed",
+        "No parental consent is needed because the therapist can authorize emergency hospitalization independently"
+      ],
+      "correct_answer": "Consent from one parent with legal custody is generally sufficient to authorize hospitalization",
+      "explanation": "In most jurisdictions, consent from one parent who has legal custody is sufficient to authorize the hospitalization of a minor, particularly in emergency situations involving imminent danger. Option A is incorrect because requiring both parents' consent in an emergency situation could dangerously delay needed treatment; most jurisdictions do not require both parents to consent. Option C is incorrect because while therapists may initiate emergency holds under certain statutes, standard hospitalization requires parental consent. Option D is incorrect because while assent from the minor is ethically desirable, it is not legally required for hospitalization when a parent with legal authority consents and the situation involves imminent danger.",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN8",
+      "source_file": "8-standards-3-4.json",
+      "source_folder": "8 Ethics",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 98,
+      "question": "Which of the following best describes the social model of disability?",
+      "options": [
+        "Disability results primarily from biological impairments intrinsic to the individual",
+        "Disability arises from barriers created by societal attitudes and environments",
+        "Disability is a functional inability to perform work or social roles",
+        "Disability requires legal proof of impairment to determine benefits"
+      ],
+      "correct_answer": "Disability arises from barriers created by societal attitudes and environments",
+      "explanation": "1. The correct answer, \"Disability arises from barriers created by societal attitudes and environments,\" aligns with the social model of disability, which views disability as a difference rather than an abnormality. This model emphasizes that societal factors, such as negative attitudes and physical barriers, create obstacles for individuals with disabilities, rather than the disabilities being solely intrinsic medical conditions. Therefore, interventions should focus on changing societal structures and attitudes to improve accessibility and inclusion.\n\n2. The option \"Disability results primarily from biological impairments intrinsic to the individual\" is incorrect because it reflects the biomedical model, which sees disabilities as medical conditions that deviate from the norm, focusing on treating the individual rather than addressing societal barriers. The statement \"Disability is a functional inability to perform work or social roles\" is misleading as it represents the functional model, which recognizes disabilities but emphasizes the need for accommodations rather than societal change. Lastly, the option \"Disability requires legal proof of impairment to determine benefits\" is wrong because it describes the forensic model, which focuses on legal criteria and motivations for seeking disability recognition, rather than addressing the societal context of disability.",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN18",
+      "source_file": "6 Prevention and Consultation.json",
+      "source_folder": "6 Clinical Interventions",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": false,
+      "is_org_psych": false
+    },
+    {
+      "id": 99,
+      "question": "A genetic counselor consults a psychologist regarding a family in which three male members across two generations have been diagnosed with an X-linked recessive neurodevelopmental condition, while female relatives who carry the pathogenic allele are largely unaffected. The psychologist is asked to explain the fundamental mechanism by which X-linked recessive disorders produce higher prevalence and greater severity in males than in females. Which of the following explanations is most accurate?",
+      "options": [
+        "Males produce higher levels of androgens that increase transcription of recessive alleles on the X chromosome",
+        "Random X-inactivation in females preferentially silences the X chromosome carrying the pathogenic allele, providing complete protection from expression",
+        "Males inherit X-linked mutations exclusively from their fathers, who transmit a more severe form of the pathogenic allele than maternal transmissions",
+        "Females possess two X chromosomes; a dominant normal allele on one X can compensate for the recessive pathogenic allele on the other, whereas males have only one X chromosome and no compensatory allele"
+      ],
+      "correct_answer": "Females possess two X chromosomes; a dominant normal allele on one X can compensate for the recessive pathogenic allele on the other, whereas males have only one X chromosome and no compensatory allele",
+      "explanation": "Males are hemizygous for the X chromosome (XY genotype): they possess only one copy of each X-linked gene. When a male inherits a recessive pathogenic allele on his single X chromosome, there is no second X chromosome providing a normal dominant allele to mask or compensate for the mutation, and the condition is expressed. Females (XX genotype) carrying a single copy of the pathogenic allele on one X chromosome typically have a normal dominant allele on the other X chromosome that masks expression, resulting in unaffected carrier status. This hemizygosity principle explains why X-linked recessive conditions (e.g., hemophilia, Duchenne muscular dystrophy, color blindness) are far more prevalent in males. Option A is incorrect; testosterone does not upregulate transcription of recessive alleles. Option C is partially related but overstates the protection provided by X-inactivation (Lyon hypothesis)—X-inactivation is random and can lead to variable expressivity in carrier females, not complete protection. Option D is incorrect; males inherit their X chromosome from their mothers, not fathers (fathers contribute the Y chromosome).",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN1",
+      "source_file": "5-cognitive-tests.json",
+      "source_folder": "5 Assessment",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 100,
+      "question": "Which of the following practices is considered unethical when referring clients to other professionals?",
+      "options": [
+        "Referring clients to a colleague who specializes in their issue",
+        "Informing clients about multiple options for treatment",
+        "Accepting a fee for making a referral",
+        "Discussing the referral process with the client"
+      ],
+      "correct_answer": "Accepting a fee for making a referral",
+      "explanation": "Accepting a fee for referrals can create a conflict of interest and is considered unethical, as it may compromise the integrity of the referral process. The other options are acceptable practices that prioritize client welfare.",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN23",
+      "source_file": "8-standards-3-4.json",
+      "source_folder": "8 Ethics",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 101,
+      "question": "A researcher studying the heritability of intelligence explains that monozygotic twins share 100% of their DNA while dizygotic twins share approximately 50%, similar to non-twin siblings. If a heritability study finds that monozygotic twins show substantially higher IQ correlations than dizygotic twins, this finding MOST directly supports which conclusion?",
+      "options": [
+        "Intelligence is entirely determined by genetic factors with minimal environmental contribution",
+        "Shared family environment is the primary determinant of intelligence differences",
+        "Heritability of intelligence is stable across all populations and environmental contexts",
+        "Genetic factors contribute meaningfully to individual differences in intelligence within the studied population"
+      ],
+      "correct_answer": "Genetic factors contribute meaningfully to individual differences in intelligence within the studied population",
+      "explanation": "When monozygotic twins (who share 100% of DNA) show substantially higher IQ correlations than dizygotic twins (who share 50% of DNA like regular siblings), this provides evidence for genetic contributions to intelligence differences. The lesson states intelligence has moderate-high heritability (0.50-0.70). Option A is incorrect because the lesson emphasizes that both nature and nurture always interact and that heritability of 0.50-0.70 means environment also contributes significantly. Option C is contradicted by the finding that MZ twins are more similar than DZ twins despite both sharing family environment. Option D is incorrect because the lesson explicitly states that heritability estimates vary depending on the environment and are population statistics, not fixed values.",
+      "domain": "Domain 4: Growth & Lifespan Development",
+      "knId": "KN23",
+      "source_file": "4-heredity-and-environment.json",
+      "source_folder": "4 Development",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 102,
+      "question": "A client reports that she fastens her seatbelt every time she gets in the car because the annoying warning chime stops as soon as the belt clicks. Her seatbelt-fastening behavior is BEST maintained by:",
+      "options": [
+        "Positive punishment",
+        "Positive reinforcement",
+        "Negative reinforcement",
+        "Negative punishment"
+      ],
+      "correct_answer": "Negative reinforcement",
+      "explanation": "Negative reinforcement increases or maintains behavior through the removal of an aversive stimulus. The annoying warning chime (aversive stimulus) is removed when the seatbelt is fastened, which strengthens the seatbelt-fastening behavior. Positive reinforcement (A) would involve adding a pleasant stimulus after the behavior. Negative punishment (C) involves removing a desirable stimulus to decrease behavior. Positive punishment (D) involves adding an aversive stimulus to decrease behavior. The two-step identification process confirms: the behavior is increasing/maintaining (reinforcement) and something unpleasant is being removed (negative).",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
+      "knId": "KN6",
+      "source_file": "2-skinner-and-operant-conditioning.json",
+      "source_folder": "2 Learning and Memory",
+      "difficulty": "easy",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 103,
+      "question": "What is a significant limitation of the WISC-IV when assessing gifted children?",
+      "options": [
+        "It is not suitable for children under age 6",
+        "It may underestimate abilities in nonverbal areas",
+        "It lacks cultural fairness",
+        "It does not measure verbal skills"
+      ],
+      "correct_answer": "It may underestimate abilities in nonverbal areas",
+      "explanation": "The WISC-IV has been criticized for potentially underestimating the abilities of gifted children, particularly in nonverbal areas, due to its structure and scoring. The other options do not accurately reflect limitations of the WISC-IV.",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN7",
+      "source_file": "5-iq-tests.json",
+      "source_folder": "5 Assessment",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": false,
+      "is_org_psych": false
+    },
+    {
+      "id": 104,
+      "question": "What is a common consequence of minority marginalization in relation to cultural identity?",
+      "options": [
+        "Increased social cohesion within the marginalized group.",
+        "A diminished sense of belonging and identity among minority members.",
+        "Greater acceptance of diverse cultural practices.",
+        "Enhanced visibility and representation in mainstream culture."
+      ],
+      "correct_answer": "A diminished sense of belonging and identity among minority members.",
+      "explanation": "Minority marginalization often leads to a decreased sense of belonging and identity, as individuals may feel disconnected from both their own cultural group and the dominant culture. The other options do not accurately reflect the consequences of marginalization.",
+      "domain": "Domain 3: Social Psychology & Cultural Aspects",
+      "knId": "KN3",
+      "source_file": "3-helping-and-hurting.json",
+      "source_folder": "3 Social Psychology",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 105,
+      "question": "Which of the following is a threat to internal validity that occurs when an external event affects the outcome of a study?",
+      "options": [
+        "Maturation",
+        "History",
+        "Statistical Regression",
+        "Differential Selection"
+      ],
+      "correct_answer": "History",
+      "explanation": "History refers to external events that occur during the study that can affect the results, making it difficult to determine if the treatment caused the change. Maturation involves natural changes over time, Differential Selection relates to how participants are assigned to groups, and Statistical Regression deals with the tendency of extreme scores to move closer to the mean over time.",
+      "domain": "Domain 7: Research Methods & Statistics",
+      "knId": "KN6",
+      "source_file": "7-internal-external-validity.json",
+      "source_folder": "7 Research and Stats",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 106,
+      "question": "Which reinforcement schedule is characterized by providing reinforcement after a variable amount of time has passed?",
+      "options": [
+        "Fixed Ratio",
+        "Variable Interval",
+        "Variable Ratio",
+        "Fixed Interval"
+      ],
+      "correct_answer": "Variable Interval",
+      "explanation": "The variable interval schedule provides reinforcement after varying, unpredictable time periods, which leads to a steady rate of response. Fixed interval provides reinforcement after a set time, fixed ratio after a set number of responses, and variable ratio after a varying number of responses.",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
+      "knId": "KN2",
+      "source_file": "2-skinner-and-operant-conditioning.json",
+      "source_folder": "2 Learning and Memory",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": false,
+      "is_org_psych": false
+    },
+    {
+      "id": 107,
+      "question": "A community mental health researcher documents that the prevalence of major depressive disorder, schizophrenia, and anxiety disorders is significantly higher in the lowest income quintile than in the highest. She argues that chronic stress from financial insecurity, restricted access to healthcare, exposure to neighborhood violence, and lack of social capital directly cause the elevated rates of psychiatric disorder in low-SES communities. This argument is most consistent with which theoretical position?",
+      "options": [
+        "The social selection (downward drift) hypothesis, which proposes that mental illness precedes and causes a decline in socioeconomic status",
+        "Relative deprivation theory, which attributes psychiatric risk to perceived inequality rather than to absolute material conditions",
+        "The social causation hypothesis, which proposes that the adversity conditions associated with low SES directly increase vulnerability to mental illness",
+        "Labeling theory, which holds that psychiatric diagnosis is differentially applied to lower-SES individuals who violate dominant cultural norms"
+      ],
+      "correct_answer": "The social causation hypothesis, which proposes that the adversity conditions associated with low SES directly increase vulnerability to mental illness",
+      "explanation": "The social causation (or social stress) hypothesis asserts a direct causal pathway from low-SES conditions—chronic stress, poverty, limited healthcare access, trauma exposure, discrimination—to elevated rates of psychopathology. This matches the researcher's argument that environmental adversity produces disorder. The social selection (downward drift) hypothesis (Option A) offers the competing causal model: that mental illness impairs occupational and social functioning, causing individuals to drift into lower-SES positions. The two hypotheses differ on the direction of the causal arrow and are a classic paired comparison on the EPPP. Labeling theory (Option C) concerns how societal reactions to norm-violating behavior—not stressors per se—generate psychiatric diagnoses disproportionately for marginalized groups. Relative deprivation theory (Option D) focuses on perceived status gaps rather than the absolute adversity conditions the scenario describes.",
+      "domain": "Domain 3: Social Psychology & Cultural Aspects",
+      "knId": "KN3",
+      "source_file": "3-helping-and-hurting.json",
+      "source_folder": "3 Social Psychology",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": false,
+      "is_org_psych": false
+    },
+    {
+      "id": 108,
+      "question": "A 38-year-old graphic designer is referred for neurological evaluation after recurring stereotyped episodes. Each episode begins with a sudden, intense sense of déjà vu and a rising epigastric sensation, followed by approximately 90 seconds of unresponsiveness during which she smacks her lips and makes repetitive picking motions with her right hand. Afterward, she has no recollection of the episode. EEG reveals focal ictal discharge. Which brain lobe is the most probable origin of these seizures?",
+      "options": [
+        "Occipital lobe",
+        "Temporal lobe",
+        "Frontal lobe",
+        "Parietal lobe"
+      ],
+      "correct_answer": "Temporal lobe",
+      "explanation": "The presentation describes focal impaired awareness seizures (previously called partial complex seizures), which most commonly originate in the temporal lobe. Classic features include a psychic or autonomic aura (déjà vu, epigastric rising sensation), followed by automatisms (lip-smacking, purposeless hand movements), impaired awareness during the ictal phase, and postictal amnesia. Frontal lobe seizures typically involve prominent motor features (tonic-clonic or hypermotor activity) and tend to be briefer. Parietal lobe seizures usually present with contralateral somatosensory disturbances such as tingling or numbness. Occipital lobe seizures characteristically produce visual phenomena such as phosphenes or formed hallucinations.",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN1",
+      "source_file": "1-neurological-endocrine-disorders.json",
+      "source_folder": "1 Biopsychology (Neuroscience & Pharmacology)",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": false,
+      "is_org_psych": false
+    },
+    {
+      "id": 109,
+      "question": "A therapist working with a child uses a token economy in which the child earns a sticker after completing a varying number of homework problems—sometimes after 3, sometimes after 8, sometimes after 5. The child works at a consistently high rate and continues working even when stickers are delayed. This pattern of reinforcement is BEST described as a:",
+      "options": [
+        "Fixed ratio schedule, because the child receives reinforcement based on the number of responses",
+        "Fixed interval schedule, because the child receives reinforcement at regular intervals during the session",
+        "Variable ratio schedule, because reinforcement is delivered after an unpredictable number of responses",
+        "Variable interval schedule, because the reinforcement is delivered at unpredictable times"
+      ],
+      "correct_answer": "Variable ratio schedule, because reinforcement is delivered after an unpredictable number of responses",
+      "explanation": "A variable ratio (VR) schedule delivers reinforcement after an unpredictable number of responses. In this scenario, the number of homework problems required for a sticker varies (3, 8, 5), making the reinforcement contingent on a variable number of responses. VR schedules produce the highest response rates and greatest resistance to extinction. Option A is incorrect because a fixed ratio schedule requires a set, unchanging number of responses. Option B is incorrect because variable interval schedules are based on time, not number of responses. Option D is incorrect because fixed interval schedules deliver reinforcement after a fixed time period, regardless of responses.",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
+      "knId": "KN7",
+      "source_file": "2-skinner-and-operant-conditioning.json",
+      "source_folder": "2 Learning and Memory",
+      "difficulty": "easy",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 110,
+      "question": "Research on client-therapist racial/ethnic matching suggests that:",
+      "options": [
+        "Matching consistently improves therapy outcomes across all racial/ethnic groups",
+        "Matching has a stronger effect on client perceptions of the therapist than on outcome measures",
+        "Therapy outcomes improve more when therapists share the same personality traits as clients",
+        "Matching is irrelevant once therapist cultural competence is established"
+      ],
+      "correct_answer": "Matching has a stronger effect on client perceptions of the therapist than on outcome measures",
+      "explanation": "1. The correct answer, \"Matching has a stronger effect on client perceptions of the therapist than on outcome measures,\" is supported by the findings of Cabral and Smith (2011), which reported an effect size of .32 for the impact of racial/ethnic matching on clients’ perceptions of their therapists, but only an effect size of .09 on therapy outcomes. This indicates that while clients may feel more positively about their therapists when there is a match in race or ethnicity, this does not necessarily translate into improved therapy results.\n\n2. The first incorrect option, \"Matching consistently improves therapy outcomes across all racial/ethnic groups,\" is inaccurate because research shows that matching effects vary by racial/ethnic group, with some groups benefiting more than others. The second incorrect option, \"Matching is irrelevant once therapist cultural competence is established,\" is wrong because cultural competence can enhance therapy effectiveness, but matching still plays a role in client perceptions and engagement. Lastly, the option \"Therapy outcomes improve more when therapists share the same personality traits as clients\" is misleading, as research indicates that while personality matching may influence the therapeutic alliance, it is not as consistently impactful on therapy outcomes as racial/ethnic matching.",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN18",
+      "source_file": "6 Prevention and Consultation.json",
+      "source_folder": "6 Clinical Interventions",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": false,
+      "is_org_psych": false
+    },
+    {
+      "id": 111,
+      "question": "What is the definition of client privilege in therapy?",
+      "options": [
+        "The right of the therapist to disclose information for the client's benefit.",
+        "The therapist's obligation to report any illegal activity disclosed by the client.",
+        "The client's right to prevent the therapist from disclosing confidential information.",
+        "The client's ability to access their therapy records at any time."
+      ],
+      "correct_answer": "The client's right to prevent the therapist from disclosing confidential information.",
+      "explanation": "The correct answer defines client privilege accurately, emphasizing the client's control over their confidential information. The other options misrepresent the nature of privilege and confidentiality in therapy.",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN30",
+      "source_file": "8-standards-3-4.json",
+      "source_folder": "8 Ethics",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 112,
+      "question": "Dr. Whitfield has been providing family therapy to both parents and their two children. The parents are now divorcing and in a custody dispute. The mother requests that Dr. Whitfield release the complete family therapy records to her attorney, but the father does not consent to the release. What is Dr. Whitfield's MOST appropriate course of action?",
+      "options": [
+        "Decline to release the records without consent from all parties involved in the family therapy, and seek legal consultation if necessary",
+        "Release only portions of the records that pertain exclusively to the mother's individual statements",
+        "Release the records to the court directly rather than to either party's attorney",
+        "Release the records because the mother has a right to access her own therapy records"
+      ],
+      "correct_answer": "Decline to release the records without consent from all parties involved in the family therapy, and seek legal consultation if necessary",
+      "explanation": "In family therapy, confidentiality belongs to all participants in the treatment. When one party consents to release but another does not, the psychologist cannot release the records because doing so would violate the non-consenting party's confidentiality rights. This is particularly important in custody disputes where released information could be used adversarially. Option A incorrectly treats family therapy records as individual records. Option B attempts a partial solution but family therapy records are intertwined and separating them risks revealing information about the non-consenting party. Option D circumvents the consent issue improperly—the psychologist should instead wait for a court order if the court needs the records.",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN8",
+      "source_file": "8-standards-3-4.json",
+      "source_folder": "8 Ethics",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 113,
+      "question": "In Bronfenbrenner's ecological model, which system directly influences a child's development through immediate interactions with family and peers?",
+      "options": [
+        "Chronosystem",
+        "Mesosystem",
+        "Macrosystem",
+        "Exosystem"
+      ],
+      "correct_answer": "Mesosystem",
+      "explanation": "The Mesosystem refers to the interconnections between the various microsystems, such as family and school, that directly influence a child's development. The Macrosystem encompasses broader cultural values, the Exosystem includes indirect influences, and the Chronosystem refers to the dimension of time in relation to a child's environment.",
+      "domain": "Domain 4: Growth & Lifespan Development",
+      "knId": "KN4",
+      "source_file": "4-heredity-and-environment.json",
+      "source_folder": "4 Development",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 114,
+      "question": "A clinical social worker who completed a doctoral program from a non-regionally accredited institution wants to advertise herself as a 'professional psychologist' in private practice. Under which condition would this be permissible?",
+      "options": [
+        "If she passes the EPPP and obtains professional liability insurance",
+        "If she completed a postdoctoral fellowship at an APA-accredited institution",
+        "If she has accumulated more than 3,000 supervised clinical hours",
+        "If her state licensing board accepted her degree as the basis for a psychology license"
+      ],
+      "correct_answer": "If her state licensing board accepted her degree as the basis for a psychology license",
+      "explanation": "According to the lesson on Standard 5.01, degrees can be used as credentials for mental health services if they are either doctoral degrees from regionally accredited institutions OR degrees that the state licensing board accepted as the basis for the psychology license. Using the title 'professional psychologist' requires licensure, and the degree must meet one of these two criteria. Option A is wrong because supervised hours alone do not confer the right to the title without proper licensure. Option C is wrong because completing a postdoctoral fellowship does not substitute for having an acceptable degree for licensure. Option D is wrong because passing the EPPP alone does not grant the title; state licensure based on an accepted degree is required.",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN62",
+      "source_file": "8-standards-5-6.json",
+      "source_folder": "8 Ethics",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 115,
+      "question": "Cri-du-chat syndrome is primarily caused by a deletion on which chromosome?",
+      "options": [
+        "Chromosome 5",
+        "Chromosome 4",
+        "Chromosome 21",
+        "Chromosome 7"
+      ],
+      "correct_answer": "Chromosome 5",
+      "explanation": "Cri-du-chat syndrome is caused by a deletion on chromosome 5, specifically affecting the 5p region. The other options do not correspond to the genetic basis of this syndrome.",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN1",
+      "source_file": "1-neurological-endocrine-disorders.json",
+      "source_folder": "1 Biopsychology (Neuroscience & Pharmacology)",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 116,
+      "question": "Which of the following best describes cultural syndromes as expressions of distress?",
+      "options": [
+        "Generalized anxiety experienced by all cultures",
+        "Symptoms that are only recognized in Western cultures",
+        "Culturally specific patterns of symptoms and behaviors",
+        "Universal psychological disorders recognized globally"
+      ],
+      "correct_answer": "Culturally specific patterns of symptoms and behaviors",
+      "explanation": "Cultural syndromes refer to culturally specific patterns of symptoms and behaviors that are recognized within particular cultural contexts. They are not universal disorders, nor are they limited to Western cultures. Thus, the correct answer is that they are culturally specific patterns.",
+      "domain": "Domain 3: Social Psychology & Cultural Aspects",
+      "knId": "KN12",
+      "source_file": "3-helping-and-hurting.json",
+      "source_folder": "3 Social Psychology",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 117,
+      "question": "Which principle of item response theory emphasizes the relationship between item characteristics and respondent abilities?",
+      "options": [
+        "Item difficulty",
+        "Guessing parameter",
+        "Test reliability",
+        "Item discrimination"
+      ],
+      "correct_answer": "Item discrimination",
+      "explanation": "The correct answer is 'Item discrimination' as it refers to how well an item differentiates between respondents of varying abilities. The other options do not capture this specific relationship as accurately.",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN18",
+      "source_file": "5-cognitive-tests.json",
+      "source_folder": "5 Assessment",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 118,
+      "question": "What is the primary ethical concern when managing dual relationships with friends in therapy?",
+      "options": [
+        "The potential for financial exploitation.",
+        "The possibility of legal repercussions.",
+        "The need to maintain confidentiality.",
+        "The risk of impaired objectivity and effectiveness in therapy."
+      ],
+      "correct_answer": "The risk of impaired objectivity and effectiveness in therapy.",
+      "explanation": "The correct answer highlights the primary ethical concern regarding dual relationships, which is the potential for compromised objectivity and effectiveness in the therapeutic process. The other options, while relevant, do not capture the core ethical issue as directly.",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN29",
+      "source_file": "8-standards-3-4.json",
+      "source_folder": "8 Ethics",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 119,
+      "question": "Which of the following is a key principle of Multisystemic Therapy (MST) that distinguishes it from other family therapies?",
+      "options": [
+        "Therapy concentrates exclusively on individual insight and cognitive restructuring",
+        "Treatment consists primarily of group sessions with competing adolescents",
+        "The therapist remains neutral and avoids involvement in emotional processes",
+        "Interventions are delivered primarily in the family’s natural environment, such as home and community settings"
+      ],
+      "correct_answer": "Interventions are delivered primarily in the family’s natural environment, such as home and community settings",
+      "explanation": "1. The correct answer, \"Interventions are delivered primarily in the family’s natural environment, such as home and community settings,\" accurately reflects a key principle of Multisystemic Therapy (MST). MST is designed to address the specific individual, family, peer, school, and social network variables contributing to a youth's problems, and it emphasizes delivering therapy in the environments where these issues occur. This approach allows for more relevant and effective interventions that directly target the factors influencing the adolescent's behavior.\n\n2. The option \"Therapy concentrates exclusively on individual insight and cognitive restructuring\" is incorrect because MST focuses on systemic interactions and behaviors rather than solely on individual insight or cognitive changes. The statement \"The therapist remains neutral and avoids involvement in emotional processes\" is also wrong; MST therapists actively engage with families, addressing relational dynamics and behaviors rather than maintaining neutrality. Lastly, \"Treatment consists primarily of group sessions with competing adolescents\" is misleading, as MST is delivered in a family setting and is not centered on group therapy with adolescents, but rather on addressing the family dynamics that contribute to the adolescent's issues.",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN44",
+      "source_file": "6 Family and Group.json",
+      "source_folder": "6 Clinical Interventions",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 120,
+      "question": "A woman collapses in the lobby of a busy urban office building during the lunch hour. Eighteen people are present, but over two minutes pass before anyone calls emergency services. When interviewed afterward, multiple bystanders reported, 'I figured someone with more medical knowledge must have already called.' According to Latané and Darley's five-step model of bystander intervention, the MOST direct explanation for the delayed response is:",
+      "options": [
+        "Stimulus overload prevented bystanders from initially noticing that a medical emergency had occurred",
+        "Evaluation apprehension caused bystanders to fear appearing incompetent or alarmist if they intervened",
+        "Pluralistic ignorance caused bystanders to collectively misinterpret the event as non-urgent based on others' apparent calm",
+        "Diffusion of responsibility decreased each individual's felt obligation to act when others were present"
+      ],
+      "correct_answer": "Diffusion of responsibility decreased each individual's felt obligation to act when others were present",
+      "explanation": "Diffusion of responsibility is the mechanism most directly identified by the bystanders' own accounts — each person assumed someone else had already acted. In Latané and Darley's model, this represents a failure at Step 3 (taking personal responsibility). The bystanders' statements ('someone else must have already called') are the textbook expression of this mechanism. Pluralistic ignorance (Step 2) involves misreading the situation as non-serious based on observing others' apparent calm — it would apply if bystanders thought the person was merely sleeping. Stimulus overload (Step 1) involves failing to notice the event entirely, which is not the case here since all bystanders were aware of the collapse. Evaluation apprehension (Step 5) involves fear of embarrassment about intervening incorrectly, which was not reported by these bystanders.",
+      "domain": "Domain 3: Social Psychology & Cultural Aspects",
+      "knId": "KN3",
+      "source_file": "3-helping-and-hurting.json",
+      "source_folder": "3 Social Psychology",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": false,
+      "is_org_psych": false
+    },
+    {
+      "id": 121,
+      "question": "Dr. Park recently opened a private practice and asks several of her current therapy clients to write positive reviews on her practice's website to attract new clients. She explains that participation is voluntary and that it will not affect their treatment. According to APA Standard 5.05, this action is:",
+      "options": [
+        "Ethical, because she informed clients that participation is voluntary and will not affect treatment",
+        "Unethical only if the clients are in crisis; otherwise, current clients may provide testimonials when asked",
+        "Unethical, because psychologists are prohibited from soliciting testimonials from current therapy clients who are vulnerable to undue influence",
+        "Ethical, as long as the clients provide written consent and the testimonials are anonymous"
+      ],
+      "correct_answer": "Unethical, because psychologists are prohibited from soliciting testimonials from current therapy clients who are vulnerable to undue influence",
+      "explanation": "Standard 5.05 explicitly prohibits soliciting testimonials from current therapy clients or other vulnerable individuals. The therapeutic relationship involves a power imbalance, meaning clients may feel pressured to provide positive feedback even if told it's voluntary. The standard mentions people who 'because of their particular circumstances are vulnerable to undue influence.' Option A is incorrect because voluntariness cannot overcome the inherent power imbalance. Option C is wrong because anonymity does not change the prohibition on solicitation from current clients. Option D incorrectly narrows the prohibition to clients in crisis, when it applies to all current therapy clients.",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN64",
+      "source_file": "8-standards-5-6.json",
+      "source_folder": "8 Ethics",
+      "difficulty": "easy",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 122,
+      "question": "An industrial-organizational psychologist is consulting with a company that wants to add a new cognitive ability test to its hiring process. Using the Taylor-Russell tables, she finds that the test's incremental validity will be maximized when the company has:",
+      "options": [
+        "A moderate base rate, low selection ratio, and a moderate-to-high validity coefficient",
+        "A high base rate, low selection ratio, and low validity coefficient",
+        "A high base rate, high selection ratio, and high validity coefficient",
+        "A low base rate, high selection ratio, and high validity coefficient"
+      ],
+      "correct_answer": "A moderate base rate, low selection ratio, and a moderate-to-high validity coefficient",
+      "explanation": "The Taylor-Russell tables estimate hiring success improvement based on three variables: validity coefficient, selection ratio, and base rate. A moderate base rate (~.50) provides the most room for improvement. A low selection ratio (being highly selective) amplifies even modest validity. A higher validity coefficient always helps. Option A is wrong because a high base rate means the current system already works well, leaving little room for improvement. Option C is wrong because a low base rate suggests systemic problems beyond selection, and a high selection ratio means you're hiring almost everyone, minimizing the test's impact. Option D is wrong because a low validity coefficient provides minimal predictive value.",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN29",
+      "source_file": "5-do-hiring-tools-work.json",
+      "source_folder": "5 Assessment",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 123,
+      "question": "According to Bowen's Extended Family Systems Therapy, what best describes 'differentiation' within family functioning?",
+      "options": [
+        "A person’s ability to distinguish and separate their own emotional and intellectual functioning from that of others",
+        "Rigid family boundaries that prevent emotional expression",
+        "Parents projecting emotional immaturity onto their children",
+        "The formation of a third party to reduce tension in a family dyad"
+      ],
+      "correct_answer": "A person’s ability to distinguish and separate their own emotional and intellectual functioning from that of others",
+      "explanation": "1. The correct answer, \"A person’s ability to distinguish and separate their own emotional and intellectual functioning from that of others,\" accurately describes 'differentiation' as defined by Bowen's Extended Family Systems Therapy. Differentiation involves both intra- and interpersonal aspects, where an individual can recognize their own feelings and thoughts independently of others, enabling them to maintain a sense of self while interacting with family members. This ability is crucial for healthy family functioning, as lower levels of differentiation can lead to emotional fusion and dysfunctional relationships.\n\n2. The first incorrect option, \"The formation of a third party to reduce tension in a family dyad,\" refers to the concept of 'emotional triangles,' which is a separate idea in Bowen's theory; it describes how a third family member may be recruited to alleviate tension between two others, rather than defining differentiation itself. \n\nThe second incorrect option, \"Parents projecting emotional immaturity onto their children,\" describes the 'family projection process,' which explains how parents' emotional issues can affect their children's levels of differentiation, but it does not define differentiation itself. \n\nThe third incorrect option, \"Rigid family boundaries that prevent emotional expression,\" pertains to boundary issues in structural family therapy, emphasizing the importance of clear boundaries for healthy interactions, but it does not relate to the concept of differentiation as defined by Bowen.",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN25",
+      "source_file": "6 Family and Group.json",
+      "source_folder": "6 Clinical Interventions",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 124,
+      "question": "A researcher conducts a 3 × 2 factorial ANOVA examining the effects of therapy type (CBT, ACT, IPT) and session frequency (weekly, biweekly) on depression scores. The results reveal a significant interaction effect but non-significant main effects for both therapy type and session frequency. Which of the following is the BEST interpretation?",
+      "options": [
+        "Session frequency moderates depression scores regardless of therapy type",
+        "Neither therapy type nor session frequency affects depression scores under any conditions",
+        "The effect of therapy type on depression depends on session frequency, even though neither variable has a consistent overall effect",
+        "The results are uninterpretable because main effects must be significant before interactions can be meaningful"
+      ],
+      "correct_answer": "The effect of therapy type on depression depends on session frequency, even though neither variable has a consistent overall effect",
+      "explanation": "The lesson describes this exact pattern: 'Neither therapy nor medication matters alone, but specific combinations work' is listed as an example of 'Interaction only.' A significant interaction means the effect of one IV depends on the level of the other IV. Non-significant main effects mean that neither variable has a consistent overall effect when averaged across levels of the other variable. Option A is incorrect because the significant interaction indicates that certain combinations DO affect depression. Option C is incorrect — main effects do not need to be significant for interactions to be meaningful; in fact, the lesson warns 'When there's a significant interaction, be cautious interpreting main effects – the interaction might tell the more important story.' Option D incorrectly describes moderation as independent of therapy type.",
+      "domain": "Domain 7: Research Methods & Statistics",
+      "knId": "KN55",
+      "source_file": "7-research-designs.json",
+      "source_folder": "7 Research and Stats",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 125,
+      "question": "Dr. Patel is a psychologist in a small rural community where she also serves on the school board. A school board member's teenager is referred to her for therapy. According to the APA Ethics Code, under what condition would this multiple relationship be permissible?",
+      "options": [
+        "Multiple relationships are never permissible under any circumstances according to the Ethics Code",
+        "Only if the relationship would not reasonably be expected to impair her objectivity, competence, or effectiveness or risk exploitation or harm",
+        "Only if another psychologist in the community is unavailable to provide services",
+        "Only if Dr. Patel obtains written informed consent from the school board member"
+      ],
+      "correct_answer": "Only if the relationship would not reasonably be expected to impair her objectivity, competence, or effectiveness or risk exploitation or harm",
+      "explanation": "The APA Ethics Code does not prohibit all multiple relationships—only those that could reasonably be expected to impair objectivity, competence, or effectiveness or risk exploitation or harm. Option A is insufficient because informed consent alone does not make a problematic multiple relationship ethical. Option C incorrectly suggests unavailability of other providers is the standard. Option D is incorrect because the Ethics Code explicitly recognizes that not all multiple relationships are prohibited.",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN8",
+      "source_file": "8-standards-3-4.json",
+      "source_folder": "8 Ethics",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 126,
+      "question": "A combat veteran was involved in an explosion during deployment and now experiences a strong fear response whenever he hears a car backfire. After several months of treatment, he reports that he also experiences notable anxiety when he hears a truck door slam loudly, a sound never directly paired with the original traumatic event. Which classical conditioning process best explains his anxiety to the truck door slam?",
+      "options": [
+        "Higher-order conditioning, because the car backfire has been used to condition the new stimulus",
+        "Spontaneous recovery, because an extinguished conditioned response has re-emerged after a delay",
+        "Stimulus generalization, because a stimulus similar to the original conditioned stimulus elicits the conditioned response",
+        "Stimulus discrimination, because the veteran has learned to differentiate between acoustic cues"
+      ],
+      "correct_answer": "Stimulus generalization, because a stimulus similar to the original conditioned stimulus elicits the conditioned response",
+      "explanation": "Stimulus generalization occurs when stimuli similar to the original conditioned stimulus also elicit the conditioned response, even without direct pairing with the unconditioned stimulus. The truck door slam is acoustically similar to the car backfire (the conditioned stimulus), so it triggers the fear response through generalization. Spontaneous recovery (A) refers to the return of an extinguished CR after a rest period, not the spread of fear to new stimuli. Higher-order conditioning (B) would require the car backfire to be explicitly paired with the truck slam across multiple trials. Stimulus discrimination (D) is the opposite process—it describes learning to respond only to the original CS and not to similar stimuli.",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
+      "knId": "KN6",
+      "source_file": "2-pavlov-and-classical-conditioning.json",
+      "source_folder": "2 Learning and Memory",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 127,
+      "question": "Which stage of group therapy according to Yalom and Leszcz is most likely to feature increased trust and members sharing more deeply personal issues?",
+      "options": [
+        "Initial orientation and hesitant participation stage",
+        "Conflict, dominance, and rebellion stage",
+        "Termination and separation stage",
+        "Development of cohesiveness stage"
+      ],
+      "correct_answer": "Development of cohesiveness stage",
+      "explanation": "1. The \"Development of cohesiveness stage\" is the correct answer because, during this stage, group members experience a decrease in conflict and an increase in trust, leading them to share more deeply personal issues. As cohesiveness develops, members feel more secure and connected, allowing them to reveal their true concerns and emotions, which is essential for effective therapy.\n\n2. The \"Initial orientation and hesitant participation stage\" is incorrect because, during this stage, members are still clarifying the group's purpose and are reliant on the leader, resulting in limited sharing of personal issues. The \"Conflict, dominance, and rebellion stage\" is also incorrect as this stage is characterized by competition for power and control among members, leading to criticism and hostility rather than trust and openness. Lastly, the \"Termination and separation stage\" is incorrect because this stage focuses on reflecting on the group's experiences and preparing for the end of therapy, rather than fostering deep personal sharing, which occurs earlier in the cohesiveness stage.",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN16",
+      "source_file": "6 Family and Group.json",
+      "source_folder": "6 Clinical Interventions",
+      "difficulty": "easy",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 128,
+      "question": "In Functional Family Therapy (FFT), what is the primary focus when replacing problematic behaviors?",
+      "options": [
+        "Changing family structure through boundary realignment",
+        "Complete elimination of all conflict-inducing behaviors regardless of context",
+        "Behaviors that fulfill the same interpersonal and relational functions as the problematic ones",
+        "Focusing exclusively on individual members’ internal motivation"
+      ],
+      "correct_answer": "Behaviors that fulfill the same interpersonal and relational functions as the problematic ones",
+      "explanation": "1. The correct answer, \"Behaviors that fulfill the same interpersonal and relational functions as the problematic ones,\" aligns with the primary goal of Functional Family Therapy (FFT), which is to replace problematic behaviors with nonproblematic behaviors that serve the same relational functions. This approach recognizes that such behaviors are often adaptive within the family context, maintaining interpersonal connections and relational hierarchies, thus emphasizing the importance of addressing the underlying functions rather than simply eliminating the behaviors.\n\n2. The option \"Complete elimination of all conflict-inducing behaviors regardless of context\" is incorrect because FFT does not advocate for the removal of conflict-inducing behaviors in a vacuum; instead, it focuses on transforming these behaviors into more functional ones that still fulfill necessary relational roles. The option \"Changing family structure through boundary realignment\" is wrong because while FFT may address relational dynamics, its primary focus is on modifying behaviors rather than restructuring family boundaries. Lastly, \"Focusing exclusively on individual members’ internal motivation\" is incorrect as FFT emphasizes the relational context and dynamics within the family system rather than isolating individual motivations, which could neglect the collective nature of family interactions.",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN44",
+      "source_file": "6 Family and Group.json",
+      "source_folder": "6 Clinical Interventions",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 129,
+      "question": "In comparing Maslow's hierarchy of needs with Alderfer's ERG theory, which of the following statements is true?",
+      "options": [
+        "B) Alderfer's ERG theory does not recognize the importance of lower-level needs.",
+        "A) Maslow's theory suggests that higher needs must be met before lower needs.",
+        "D) Alderfer's ERG theory allows for movement between needs.",
+        "C) Both theories emphasize the same level of needs in their hierarchy."
+      ],
+      "correct_answer": "D) Alderfer's ERG theory allows for movement between needs.",
+      "explanation": "Option D is correct because Alderfer's ERG theory allows individuals to move between different levels of needs, unlike Maslow's rigid hierarchy. Option A is incorrect as Maslow's theory does suggest a progression. Option B is false; Alderfer recognizes lower-level needs. Option C is misleading as the theories differ in structure.",
+      "domain": "Domain 3: Social Psychology & Cultural Aspects",
+      "knId": "KN3",
+      "source_file": "3-helping-and-hurting.json",
+      "source_folder": "3 Social Psychology",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 130,
+      "question": "Single-subject experimental designs, such as the AB and ABAB designs, are considered examples of which methodological approach?",
+      "options": [
+        "Idiographic methods, because they focus on understanding patterns within a single individual",
+        "Qualitative methods, because they do not involve numerical measurement of behavior",
+        "Nomothetic methods, because they seek to establish general laws of behavior across individuals",
+        "Correlational methods, because they examine relationships between baseline and treatment phases"
+      ],
+      "correct_answer": "Idiographic methods, because they focus on understanding patterns within a single individual",
+      "explanation": "Single-subject designs are classified as idiographic methods because they focus on the intensive study of individual cases rather than deriving general laws from group data. The lesson describes single-subject designs as 'powerful tools for clinical practice' that evaluate individual treatment effects with 'at least two phases: baseline (A) and treatment (B)' and 'multiple measurements during each phase.' This focus on tracking one person's behavior across conditions exemplifies the idiographic approach. Option A is wrong because nomothetic methods seek universal principles using group data and statistical averages. Option C is wrong because single-subject designs use quantitative measurement (e.g., frequency counts, behavioral ratings). Option D is wrong because single-subject designs are experimental (they manipulate an IV), not correlational.",
+      "domain": "Domain 7: Research Methods & Statistics",
+      "knId": "KN54",
+      "source_file": "7-research-designs.json",
+      "source_folder": "7 Research and Stats",
+      "difficulty": "easy",
+      "question_type": "standard",
+      "isScored": false,
+      "is_org_psych": false
+    },
+    {
+      "id": 131,
+      "question": "Which psychotherapy outcome model proposes three distinct phases: remoralization, remediation, and rehabilitation?",
+      "options": [
+        "Common factors model",
+        "Meta-analytic model",
+        "Dosage (dose-effect) model",
+        "Phase model"
+      ],
+      "correct_answer": "Phase model",
+      "explanation": "1. The **Phase model** is the correct answer because it specifically describes three distinct phases of psychotherapy outcomes: remoralization, remediation, and rehabilitation. This model outlines the progression of therapy, starting with an increase in hopefulness during the initial phase, followed by a reduction in symptoms in the second phase, and concluding with the unlearning of maladaptive behaviors and the establishment of new coping strategies in the final phase.\n\n2. The **Dosage (dose-effect) model** is incorrect because it focuses on the relationship between the number of therapy sessions and the probability of improvement, rather than distinct phases of therapy. The **Meta-analytic model** is wrong as it refers to a statistical method used to combine results from multiple studies to assess overall treatment effectiveness, rather than detailing phases of therapy. Lastly, the **Common factors model** is incorrect because it emphasizes the shared elements across different therapeutic approaches that contribute to positive outcomes, rather than defining specific phases of the therapeutic process.",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN44",
+      "source_file": "6 Prevention and Consultation.json",
+      "source_folder": "6 Clinical Interventions",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": false,
+      "is_org_psych": false
+    },
+    {
+      "id": 132,
+      "question": "How is akathisia best defined in the context of movement disorders?",
+      "options": [
+        "Tremors and shaking",
+        "Loss of coordination",
+        "Restlessness and an inability to stay still",
+        "Involuntary muscle contractions"
+      ],
+      "correct_answer": "Restlessness and an inability to stay still",
+      "explanation": "Akathisia is characterized by a subjective feeling of restlessness and an objective inability to sit still, often resulting from certain medications. Involuntary muscle contractions, loss of coordination, and tremors are not accurate definitions of akathisia.",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN5",
+      "source_file": "1-neurological-endocrine-disorders.json",
+      "source_folder": "1 Biopsychology (Neuroscience & Pharmacology)",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 133,
+      "question": "What is the primary challenge in equating scores from non-parallel measures in psychological assessment?",
+      "options": [
+        "Ensuring that both measures assess the same construct.",
+        "Determining the reliability of each measure independently.",
+        "Calculating the mean scores of both measures.",
+        "Adjusting for differences in test administration conditions."
+      ],
+      "correct_answer": "Ensuring that both measures assess the same construct.",
+      "explanation": "The primary challenge in equating scores from non-parallel measures is confirming that they are measuring the same underlying construct, which is essential for valid comparisons. The other options address different aspects of measurement but do not capture the core issue.",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN10",
+      "source_file": "5-cognitive-tests.json",
+      "source_folder": "5 Assessment",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 134,
+      "question": "Which stage of White racial identity development involves a recognition of the impact of racism and a commitment to social justice?",
+      "options": [
+        "A) Pre-Encounter",
+        "C) Immersion-Emersion",
+        "D) Internalization",
+        "B) Encounter"
+      ],
+      "correct_answer": "C) Immersion-Emersion",
+      "explanation": "Option C is correct as the Immersion-Emersion stage is characterized by a deep engagement with issues of race and a commitment to social justice. Option A, Pre-Encounter, involves a lack of awareness of racial issues. Option B, Encounter, is about experiencing a significant event that challenges one's racial identity. Option D, Internalization, refers to a more integrated identity but does not specifically emphasize social justice commitment.",
+      "domain": "Domain 3: Social Psychology & Cultural Aspects",
+      "knId": "KN3",
+      "source_file": "3-helping-and-hurting.json",
+      "source_folder": "3 Social Psychology",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 135,
+      "question": "In operant conditioning, which schedule of reinforcement is characterized by providing reinforcement after a fixed amount of time has passed?",
+      "options": [
+        "Continuous",
+        "Variable Ratio",
+        "Variable Interval",
+        "Fixed Interval"
+      ],
+      "correct_answer": "Fixed Interval",
+      "explanation": "A Fixed Interval schedule provides reinforcement after a set period of time, regardless of the number of responses. Variable Ratio and Variable Interval schedules involve varying times or ratios, while Continuous reinforcement provides reinforcement every time the behavior occurs.",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
+      "knId": "KN6",
+      "source_file": "2-skinner-and-operant-conditioning.json",
+      "source_folder": "2 Learning and Memory",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": false,
+      "is_org_psych": false
+    },
+    {
+      "id": 136,
+      "question": "What does test-retest reliability measure in psychological testing?",
+      "options": [
+        "The accuracy of a test in predicting outcomes",
+        "The degree to which a test measures what it claims to measure",
+        "The agreement between different raters scoring the same test",
+        "The consistency of a test's results over time"
+      ],
+      "correct_answer": "The consistency of a test's results over time",
+      "explanation": "Test-retest reliability specifically assesses how consistent a test's results are when administered at different times. The other options refer to different types of reliability or validity.",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN3",
+      "source_file": "5-cognitive-tests.json",
+      "source_folder": "5 Assessment",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 137,
+      "question": "A psychologist terminated therapy with a client two years ago. The former client, with whom the psychologist had no prior personal relationship, now requests to begin therapy again after having been in an intimate relationship with the psychologist for the past six months. According to APA ethical standards, the psychologist should:",
+      "options": [
+        "Resume therapy only after consulting with a colleague about potential risks",
+        "Resume therapy since the required two-year waiting period has passed",
+        "Resume therapy only if the intimate relationship is formally ended first",
+        "Not resume therapy because the intimate relationship creates a problematic multiple relationship that would likely impair professional objectivity"
+      ],
+      "correct_answer": "Not resume therapy because the intimate relationship creates a problematic multiple relationship that would likely impair professional objectivity",
+      "explanation": "While APA Standard 10.08 establishes a two-year minimum before sexual intimacies with former clients (and even then only under very limited circumstances), resuming a therapeutic relationship with a current or former intimate partner creates a multiple relationship that could reasonably impair objectivity, competence, or effectiveness. The lesson notes that post-therapy relationships 'prevent the former client from returning to therapy.' Option A incorrectly treats the two-year rule as a green light. Option B is insufficient because consultation alone does not resolve the fundamental conflict. Option D is wrong because even ending the relationship does not eliminate the history that would impair objectivity.",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN8",
+      "source_file": "8-standards-3-4.json",
+      "source_folder": "8 Ethics",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 138,
+      "question": "What is the primary goal of administering the Mini-Mental State Examination (MMSE)?",
+      "options": [
+        "To assess personality traits and emotional functioning.",
+        "To evaluate cognitive impairment and screen for dementia.",
+        "To measure intelligence quotient (IQ) levels.",
+        "To determine the effectiveness of psychotherapy."
+      ],
+      "correct_answer": "To evaluate cognitive impairment and screen for dementia.",
+      "explanation": "The MMSE is specifically designed to assess cognitive functioning and identify potential dementia. The other options do not accurately reflect the purpose of the MMSE.",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN8",
+      "source_file": "5-cognitive-tests.json",
+      "source_folder": "5 Assessment",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 139,
+      "question": "What symptom is commonly associated with post-concussion syndrome that overlaps with acute stress disorder?",
+      "options": [
+        "Persistent headaches",
+        "Flashbacks",
+        "Increased appetite",
+        "Memory loss"
+      ],
+      "correct_answer": "Memory loss",
+      "explanation": "The correct answer is memory loss, which is a common symptom in both post-concussion syndrome and acute stress disorder. The other options do not typically overlap between these two conditions.",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN1",
+      "source_file": "1-neurological-endocrine-disorders.json",
+      "source_folder": "1 Biopsychology (Neuroscience & Pharmacology)",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 140,
+      "question": "A psychologist in independent practice needs to transmit client billing information electronically to an insurance company. According to APA ethical standards, what is the MOST appropriate way to protect confidentiality during this transmission?",
+      "options": [
+        "Use coding or other techniques to protect personal identifiers and employ encryption for electronic transmissions",
+        "Verbally communicate the billing information to the insurance company by phone instead",
+        "Use personal email as long as no clinical information is included in the message body",
+        "Include a confidentiality notice at the bottom of the email stating the information is privileged"
+      ],
+      "correct_answer": "Use coding or other techniques to protect personal identifiers and employ encryption for electronic transmissions",
+      "explanation": "Standard 6.02(b) requires 'using coding or other techniques to protect personal identifiers when entering confidential information into databases that unauthorized people might access.' The lesson also lists encryption as a key modern protection strategy for confidential records. Option A is incorrect because personal email is described as inappropriate—the lesson compares it to 'shouting client information across a crowded coffee shop.' Option C is incorrect because while phone communication avoids electronic risks, it is not the standard solution for billing transmissions and introduces its own documentation concerns. Option D is incorrect because a confidentiality notice does not provide actual data protection.",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN71",
+      "source_file": "8-standards-5-6.json",
+      "source_folder": "8 Ethics",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 141,
+      "question": "An I-O psychologist introduces a new cognitive ability test (validity coefficient = .35) to a company's hiring process. According to the Taylor-Russell tables, under which combination of conditions will this test produce the GREATEST incremental validity?",
+      "options": [
+        "Base rate of .80 and selection ratio of .90",
+        "Base rate of .50 and selection ratio of .10",
+        "Base rate of .50 and selection ratio of .90",
+        "Base rate of .80 and selection ratio of .10"
+      ],
+      "correct_answer": "Base rate of .50 and selection ratio of .10",
+      "explanation": "The Taylor-Russell tables show that incremental validity is maximized when the base rate is moderate (around .50, providing maximum room for improvement) and the selection ratio is low (like .10, meaning the organization is highly selective). A high base rate (.80) means the current system already works well, leaving little room for improvement. A high selection ratio (.90) means almost everyone is hired, reducing the test's ability to differentiate. The lesson demonstrates that with a base rate of .50, validity of .30, and selection ratio of .10, success increases to 71% (a 21% improvement), but with a selection ratio of .90, improvement is only 3%.",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN5",
+      "source_file": "5-do-hiring-tools-work.json",
+      "source_folder": "5 Assessment",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 142,
+      "question": "What is the primary mechanism by which classical extinction occurs in classical conditioning?",
+      "options": [
+        "Pairing the conditioned stimulus with a new unconditioned stimulus",
+        "Increasing the intensity of the unconditioned stimulus",
+        "Decreasing the frequency of the conditioned stimulus",
+        "Repeated presentation of the conditioned stimulus without the unconditioned stimulus"
+      ],
+      "correct_answer": "Repeated presentation of the conditioned stimulus without the unconditioned stimulus",
+      "explanation": "The correct answer is that classical extinction occurs through the repeated presentation of the conditioned stimulus (CS) without the unconditioned stimulus (US), leading to a gradual decrease in the conditioned response (CR). The other options do not accurately describe the extinction process; pairing with a new US would lead to a different conditioning process, increasing the intensity of the US does not relate to extinction, and decreasing the frequency of the CS does not directly cause extinction.",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
+      "knId": "KN2",
+      "source_file": "2-pavlov-and-classical-conditioning.json",
+      "source_folder": "2 Learning and Memory",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 143,
+      "question": "In the context of conditioning, how does higher-order conditioning differ from stimulus generalization?",
+      "options": [
+        "Higher-order conditioning is a form of extinction, while generalization is a form of reinforcement.",
+        "Higher-order conditioning can only occur with negative stimuli, while generalization can occur with positive stimuli.",
+        "Higher-order conditioning involves a new conditioned stimulus being paired with an existing conditioned response, while generalization involves similar stimuli eliciting the same response.",
+        "Higher-order conditioning requires a longer time to establish than generalization."
+      ],
+      "correct_answer": "Higher-order conditioning involves a new conditioned stimulus being paired with an existing conditioned response, while generalization involves similar stimuli eliciting the same response.",
+      "explanation": "This option accurately describes the distinction between higher-order conditioning, which builds on existing conditioned responses, and stimulus generalization, which refers to the tendency for similar stimuli to elicit the same response. The other options misrepresent the concepts or introduce inaccuracies.",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
+      "knId": "KN4",
+      "source_file": "2-pavlov-and-classical-conditioning.json",
+      "source_folder": "2 Learning and Memory",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 144,
+      "question": "In Gordon's model of prevention, what type of prevention targets individuals who have minimal signs or symptoms of a disorder but have not yet received a diagnosis?",
+      "options": [
+        "Tertiary prevention",
+        "Indicated prevention",
+        "Selective prevention",
+        "Universal prevention"
+      ],
+      "correct_answer": "Indicated prevention",
+      "explanation": "1. **Indicated prevention** is the correct answer because it specifically targets individuals who exhibit early or minimal signs of a disorder but have not yet received a formal diagnosis. In Gordon's model of prevention, indicated prevention aims to intervene at this initial stage to prevent the development of a full-blown disorder, thereby addressing potential issues before they escalate.\n\n2. The other options are incorrect for the following reasons:\n\n- **Universal prevention** targets entire populations or groups, regardless of their risk status, and is not focused on individuals with any signs of a disorder.\n- **Selective prevention** is aimed at individuals identified as being at increased risk for a disorder due to specific biological, psychological, or social characteristics, rather than those with minimal signs or symptoms.\n- **Tertiary prevention** focuses on individuals who have already been diagnosed with a disorder, aiming to reduce the severity and duration of the condition, which is not applicable to those who have not yet received a diagnosis.",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN45",
+      "source_file": "6 Prevention and Consultation.json",
+      "source_folder": "6 Clinical Interventions",
+      "difficulty": "easy",
+      "question_type": "standard",
+      "isScored": false,
+      "is_org_psych": false
+    },
+    {
+      "id": 145,
+      "question": "What is the ethical stance on sexual relationships with former clients according to the APA Ethics Code?",
+      "options": [
+        "They are permissible after a two-year waiting period.",
+        "They are acceptable if the relationship does not impair professional judgment.",
+        "They are prohibited regardless of the time elapsed since therapy ended.",
+        "They are allowed if the former client consents."
+      ],
+      "correct_answer": "They are prohibited regardless of the time elapsed since therapy ended.",
+      "explanation": "The correct answer reflects the strict ethical prohibition against sexual relationships with former clients to prevent exploitation and maintain professional boundaries. The other options misinterpret the ethical guidelines regarding such relationships.",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN28",
+      "source_file": "8-standards-3-4.json",
+      "source_folder": "8 Ethics",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 146,
+      "question": "How can pseudodementia be differentiated from Alzheimer's disease?",
+      "options": [
+        "Pseudodementia presents with significant personality changes, while Alzheimer's does not.",
+        "Pseudodementia is characterized by gradual memory loss, while Alzheimer's is sudden.",
+        "Pseudodementia is reversible, while Alzheimer's is progressive.",
+        "Pseudodementia affects younger individuals, while Alzheimer's affects older adults."
+      ],
+      "correct_answer": "Pseudodementia is reversible, while Alzheimer's is progressive.",
+      "explanation": "The correct answer highlights that pseudodementia can be reversed with treatment, whereas Alzheimer's disease is a progressive and irreversible condition. The other options provide incorrect or misleading distinctions between the two conditions.",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN1",
+      "source_file": "1-neurological-endocrine-disorders.json",
+      "source_folder": "1 Biopsychology (Neuroscience & Pharmacology)",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 147,
+      "question": "Which of the following best describes negative reinforcement in the context of behavior modification?",
+      "options": [
+        "The removal of an unpleasant stimulus to increase a behavior.",
+        "The addition of an unpleasant stimulus to decrease a behavior.",
+        "The reinforcement of a behavior through positive feedback.",
+        "The introduction of a neutral stimulus to modify behavior."
+      ],
+      "correct_answer": "The removal of an unpleasant stimulus to increase a behavior.",
+      "explanation": "Negative reinforcement involves increasing a behavior by removing an aversive stimulus, thereby providing relief. Option A describes positive punishment, while Option C misrepresents the concept, and Option D refers to positive reinforcement.",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
+      "knId": "KN6",
+      "source_file": "2-skinner-and-operant-conditioning.json",
+      "source_folder": "2 Learning and Memory",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": false,
+      "is_org_psych": false
+    },
+    {
+      "id": 148,
+      "question": "What aspect of a creativity exam is most closely related to its validity?",
+      "options": [
+        "The number of items on the test",
+        "The time allowed for completion",
+        "The diversity of the test-takers",
+        "The alignment of test content with creative tasks"
+      ],
+      "correct_answer": "The alignment of test content with creative tasks",
+      "explanation": "The validity of a creativity exam is primarily determined by how well the test content aligns with actual creative tasks and processes. The other options do not directly influence the validity of the test.",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN4",
+      "source_file": "5-iq-tests.json",
+      "source_folder": "5 Assessment",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": false,
+      "is_org_psych": false
+    },
+    {
+      "id": 149,
+      "question": "Raven's Progressive Matrices is frequently cited in factor-analytic research as one of the strongest available indicators of Spearman's g (general intelligence). Based on the test's core characteristics, which of the following BEST explains why it serves as such a high-loading measure of g?",
+      "options": [
+        "It provides separate composite scores for verbal and nonverbal domains, allowing g to be computed as the shared variance between the two composites",
+        "It uses empirical criterion keying to select items that reliably distinguish individuals across a range of occupational performance levels",
+        "It assesses crystallized intelligence by sampling a wide range of culturally acquired verbal knowledge and reasoning skills",
+        "It measures abstract reasoning and fluid intelligence with minimal dependence on cultural knowledge or formal education, closely approximating pure cognitive processing capacity"
+      ],
+      "correct_answer": "It measures abstract reasoning and fluid intelligence with minimal dependence on cultural knowledge or formal education, closely approximating pure cognitive processing capacity",
+      "explanation": "Raven's Progressive Matrices requires examinees to identify which option completes an incomplete geometric pattern—a task demanding abstract reasoning and fluid intelligence (Gf) rather than accumulated knowledge. Because the test minimizes the role of language, cultural content, and formal educational background, it is considered relatively culture-fair and is thought to tap the core cognitive processing capacity that Spearman conceptualized as g. Factor-analytic studies consistently show Raven's has among the highest g-loadings of any widely used cognitive instrument. Option A is incorrect because Raven's explicitly avoids crystallized content. Option C (empirical criterion keying) describes the construction of the MMPI clinical scales and the Strong Interest Inventory's Occupational Scales, not Raven's. Option D is incorrect because Raven's does not yield separate verbal and nonverbal composites.",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN5",
+      "source_file": "5-cognitive-tests.json",
+      "source_folder": "5 Assessment",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 150,
+      "question": "In Skinner's classic pigeon experiment, food was delivered at fixed 15-second intervals regardless of the pigeons' behavior. Several pigeons developed ritualistic movements such as spinning or head-bobbing that they repeated consistently before each food delivery. This phenomenon is BEST explained as:",
+      "options": [
+        "Fixed interval scalloping, because the pigeons increased responding as the reinforcement time approached",
+        "Superstitious behavior, because the pigeons' actions were accidentally reinforced by coincidental pairing with food delivery",
+        "Respondent conditioning, because the time interval became a conditioned stimulus for salivation",
+        "Operant discrimination, because the pigeons learned to distinguish between reinforced and non-reinforced behaviors"
+      ],
+      "correct_answer": "Superstitious behavior, because the pigeons' actions were accidentally reinforced by coincidental pairing with food delivery",
+      "explanation": "Superstitious behavior occurs when a behavior is accidentally reinforced—when reinforcement happens to follow the behavior by coincidence rather than because the behavior caused it. In Skinner's experiment, food was delivered on a time-based schedule regardless of behavior, but pigeons developed ritualistic actions because whatever they happened to be doing when food arrived was coincidentally reinforced. Option A is incorrect because the pigeons never actually learned a true discrimination—no specific behavior was required for reinforcement. Option B is incorrect because the ritualistic motor behaviors are operant responses, not respondent (classically conditioned) reflexes. Option D is incorrect because while the experiment used a fixed time interval, the phenomenon being described is the development of superstitious ritualistic behavior, not the scalloping response pattern.",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
+      "knId": "KN7",
+      "source_file": "2-skinner-and-operant-conditioning.json",
+      "source_folder": "2 Learning and Memory",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 151,
+      "question": "What ethical consideration must psychologists keep in mind when discussing co-payments with clients?",
+      "options": [
+        "Psychologists can charge whatever they want.",
+        "Co-payments should be kept confidential.",
+        "Co-payments are not relevant to ethical practice.",
+        "Clients should be informed of all fees upfront."
+      ],
+      "correct_answer": "Clients should be informed of all fees upfront.",
+      "explanation": "Ethically, psychologists must provide clear and upfront information about all fees, including co-payments, to ensure transparency and informed consent. Keeping fees confidential is not a standard practice.",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN7",
+      "source_file": "8-standards-5-6.json",
+      "source_folder": "8 Ethics",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": false,
+      "is_org_psych": false
+    },
+    {
+      "id": 152,
+      "question": "A school psychologist implements a new social skills intervention with a student diagnosed with autism spectrum disorder. During the baseline phase, the student's disruptive behavior is stable at approximately 12 incidents per day. After introducing the intervention (Phase B), disruptive behavior drops to 4 incidents per day. However, the school also hired a new, highly engaging classroom aide at the same time the intervention began. Which threat to internal validity is MOST concerning in this AB design?",
+      "options": [
+        "Maturation, because the student may have naturally developed better social skills over time",
+        "Statistical regression, because the student was selected based on high rates of disruptive behavior",
+        "History, because an external event (hiring of the aide) coincided with the introduction of treatment",
+        "Instrumentation, because the observers may have changed their recording criteria over time"
+      ],
+      "correct_answer": "History, because an external event (hiring of the aide) coincided with the introduction of treatment",
+      "explanation": "In AB single-subject designs, history is a primary threat because there is no withdrawal or replication phase to rule out coincidental external events. The lesson explicitly states that the AB design 'doesn't control for history – any one-time event that happens to coincide with treatment.' The hiring of a new aide is a classic history confound. Maturation (A) is actually controlled in AB designs because 'those would show up as gradual trends' during baseline. Statistical regression (C) could be a concern but is less directly relevant here since the baseline was stable. Instrumentation (D) is possible but not the most salient threat given the scenario.",
+      "domain": "Domain 7: Research Methods & Statistics",
+      "knId": "KN54",
+      "source_file": "7-research-designs.json",
+      "source_folder": "7 Research and Stats",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 153,
+      "question": "A client with social anxiety avoids making phone calls because doing so eliminates the distressing feelings of anticipatory anxiety. Over time, the client's avoidance behavior has increased significantly. This pattern is BEST explained by:",
+      "options": [
+        "Positive reinforcement, because the client gains a sense of control by avoiding the situation",
+        "Negative reinforcement, because the avoidance behavior is strengthened by the removal of an aversive stimulus",
+        "Negative punishment, because the client loses social opportunities as a result of avoidance",
+        "Positive punishment, because the anxiety serves as an added consequence that suppresses phone use"
+      ],
+      "correct_answer": "Negative reinforcement, because the avoidance behavior is strengthened by the removal of an aversive stimulus",
+      "explanation": "Negative reinforcement occurs when a behavior increases because it results in the removal of an aversive stimulus. In this case, avoidance of phone calls removes anticipatory anxiety (the aversive stimulus), which strengthens the avoidance behavior. This is a classic example of avoidance conditioning maintained through negative reinforcement. Option A is incorrect because positive reinforcement involves adding a pleasant stimulus, not removing an unpleasant one. Option C is incorrect because positive punishment would decrease behavior, not increase it. Option D is incorrect because negative punishment involves removing a desirable stimulus to decrease behavior, which describes a consequence of avoidance but not the mechanism maintaining it.",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
+      "knId": "KN7",
+      "source_file": "2-skinner-and-operant-conditioning.json",
+      "source_folder": "2 Learning and Memory",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 154,
+      "question": "A clinical psychologist systematically tracks a single client's depressive symptoms across baseline and treatment phases, collecting repeated measurements and analyzing the data by visual inspection of graphed results. This approach is BEST classified as:",
+      "options": [
+        "An idiographic research approach because it focuses on understanding patterns within a single individual",
+        "A nomothetic research approach because it uses standardized symptom measures",
+        "A qualitative research approach because it does not use inferential statistical analysis",
+        "A quasi-experimental approach because it lacks random assignment to conditions"
+      ],
+      "correct_answer": "An idiographic research approach because it focuses on understanding patterns within a single individual",
+      "explanation": "Single-subject designs are the hallmark of idiographic research, which focuses on understanding the individual case in depth. The lesson describes single-subject designs as 'powerful tools for clinical practice' that involve 'at least two phases: baseline (A) and treatment (B)' with 'multiple measurements during each phase.' This individual-focused, repeated-measurement approach exemplifies idiographic methodology. Option A is incorrect because using standardized measures does not make research nomothetic — nomothetic research seeks general laws across groups. Option C is incorrect because single-subject designs are quantitative, using numerical data and systematic measurement. Option D, while technically accurate (single-subject designs lack random assignment), does not best classify the methodology — it describes a limitation rather than the fundamental approach.",
+      "domain": "Domain 7: Research Methods & Statistics",
+      "knId": "KN54",
+      "source_file": "7-research-designs.json",
+      "source_folder": "7 Research and Stats",
+      "difficulty": "easy",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 155,
+      "question": "What is the primary purpose of using ANCOVA in research design?",
+      "options": [
+        "To determine the effect of a single independent variable on a dependent variable.",
+        "To analyze variance within a single group.",
+        "To assess the relationship between two categorical variables.",
+        "To compare means across multiple groups while controlling for covariates."
+      ],
+      "correct_answer": "To compare means across multiple groups while controlling for covariates.",
+      "explanation": "ANCOVA is specifically designed to compare means while controlling for other variables (covariates). The other options describe different statistical methods and do not accurately reflect the purpose of ANCOVA.",
+      "domain": "Domain 7: Research Methods & Statistics",
+      "knId": "KN3",
+      "source_file": "7-research-designs.json",
+      "source_folder": "7 Research and Stats",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": false,
+      "is_org_psych": false
+    },
+    {
+      "id": 156,
+      "question": "Which of the following statements best illustrates the impact of cognitive schemas on an individual's perception of reality in cognitive-behavioral therapy?",
+      "options": [
+        "Cognitive schemas only affect thoughts and have no bearing on behavior.",
+        "Positive cognitive schemas guarantee a person's happiness and success.",
+        "Individuals with negative cognitive schemas may misinterpret neutral situations as threatening.",
+        "Cognitive schemas are flexible and change with every new experience."
+      ],
+      "correct_answer": "Individuals with negative cognitive schemas may misinterpret neutral situations as threatening.",
+      "explanation": "1. The statement \"Individuals with negative cognitive schemas may misinterpret neutral situations as threatening\" is correct because cognitive schemas serve as core beliefs that influence how individuals interpret experiences. Negative cognitive schemas lead to distorted perceptions, causing individuals to view neutral or ambiguous situations through a lens of negativity, which can result in anxiety and emotional distress. This aligns with Beck's assertion that different disorders are associated with distinct maladaptive schemas, affecting how individuals respond to various stimuli.\n\n2. The option \"Cognitive schemas are flexible and change with every new experience\" is incorrect because cognitive schemas are typically stable and enduring, often requiring significant therapeutic intervention to modify. The statement \"Cognitive schemas only affect thoughts and have no bearing on behavior\" is wrong as cognitive schemas influence both thoughts and behaviors, leading to maladaptive emotional responses and actions. Lastly, \"Positive cognitive schemas guarantee a person's happiness and success\" is misleading because while positive schemas can promote well-being, they do not ensure happiness or success, as various external factors and challenges can still impact an individual's life.",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN12",
+      "source_file": "6 CBT.json",
+      "source_folder": "6 Clinical Interventions",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 157,
+      "question": "In criterion-based scoring, which of the following is a primary focus?",
+      "options": [
+        "Evaluating the validity of the test",
+        "Assessing the reliability of the test",
+        "Comparing scores to a normative sample",
+        "Determining the relationship between test items and specific criteria"
+      ],
+      "correct_answer": "Determining the relationship between test items and specific criteria",
+      "explanation": "Criterion-based scoring focuses on how well test items relate to specific criteria or outcomes rather than comparing scores to a normative sample. The other options pertain to different aspects of test evaluation.",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN2",
+      "source_file": "5-cognitive-tests.json",
+      "source_folder": "5 Assessment",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 158,
+      "question": "According to Piaget, how does language influence thought during the preoperational stage of cognitive development?",
+      "options": [
+        "Language shapes thought processes",
+        "Language is merely a tool for communication",
+        "Language and thought are independent",
+        "Thought precedes language development"
+      ],
+      "correct_answer": "Language shapes thought processes",
+      "explanation": "The correct answer is 'Language shapes thought processes' as Piaget believed that language development is closely tied to cognitive development, especially in the preoperational stage. The other options do not accurately reflect Piaget's views.",
+      "domain": "Domain 4: Growth & Lifespan Development",
+      "knId": "KN7",
+      "source_file": "4-language-development.json",
+      "source_folder": "4 Development",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 159,
+      "question": "A researcher is studying a pigeon that has been trained to peck a red key for food on a VI-30 schedule and a green key for food on a separate VI-30 schedule. When the researcher switches the green key to extinction while maintaining the red key schedule, the pigeon's rate of pecking on the red key increases significantly even though its reinforcement schedule has not changed. This phenomenon is called:",
+      "options": [
+        "Positive behavioral contrast, because the behavior with unchanged reinforcement increased",
+        "The matching law, because response rates shifted proportionally to available reinforcement",
+        "Negative behavioral contrast, because the behavior with unchanged reinforcement decreased",
+        "Behavioral momentum, because the more frequently reinforced behavior resisted change"
+      ],
+      "correct_answer": "Positive behavioral contrast, because the behavior with unchanged reinforcement increased",
+      "explanation": "Behavioral contrast occurs when changing reinforcement for one behavior affects another behavior whose reinforcement has not changed. Positive behavioral contrast specifically occurs 'when you decrease reinforcement for Behavior A, Behavior B increases (even though its reinforcement stayed the same).' The lesson clarifies: 'the name refers to what happens to the behavior with *unchanged* reinforcement. If that behavior goes down, it's negative. If it goes up, it's positive.' Since the green key went to extinction and the red key pecking increased (the unchanged behavior went up), this is positive behavioral contrast. Negative behavioral contrast (A) would involve the unchanged behavior decreasing. The matching law (C) predicts proportional allocation but doesn't specifically describe the contrast effect. Behavioral momentum (D) refers to resistance to change for well-reinforced behaviors, a different phenomenon.",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
+      "knId": "KN6",
+      "source_file": "2-skinner-and-operant-conditioning.json",
+      "source_folder": "2 Learning and Memory",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 160,
+      "question": "What psychological effect is commonly associated with the process of acculturation in immigrants?",
+      "options": [
+        "Improved mental health outcomes",
+        "Increased social isolation",
+        "Identity confusion",
+        "Enhanced cultural identity"
+      ],
+      "correct_answer": "Identity confusion",
+      "explanation": "Acculturation can lead to identity confusion as immigrants navigate between their original culture and the new culture, often resulting in a struggle to reconcile different cultural identities. While some may experience enhanced cultural identity or improved mental health outcomes, identity confusion is a common psychological effect. Therefore, the correct answer is identity confusion.",
+      "domain": "Domain 3: Social Psychology & Cultural Aspects",
+      "knId": "KN15",
+      "source_file": "3-helping-and-hurting.json",
+      "source_folder": "3 Social Psychology",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 161,
+      "question": "Multisystemic Therapy (MST) is grounded in which theoretical model emphasizing multiple social systems interacting to influence individual behavior?",
+      "options": [
+        "Bronfenbrenner’s ecological model",
+        "Bowen’s family systems theory",
+        "Narrative therapy’s social constructionism",
+        "Minuchin’s structural family therapy"
+      ],
+      "correct_answer": "Bronfenbrenner’s ecological model",
+      "explanation": "1. \"Bronfenbrenner’s ecological model\" is the correct answer because Multisystemic Therapy (MST) is based on the premise that individuals are influenced by various interconnected systems, including family, peers, school, and community. This model emphasizes the interactions between these multiple layers of influence, which align with MST's focus on addressing the specific individual and environmental factors contributing to a youth's presenting problems.\n\n2. The incorrect options are as follows:  \n- **Bowen’s family systems theory:** This theory focuses on emotional processes and differentiation within family systems rather than the broader ecological interactions among multiple social systems.  \n- **Minuchin’s structural family therapy:** This approach emphasizes family structure and subsystems, concentrating on boundaries and hierarchies within the family unit, not the wider social systems that influence behavior.  \n- **Narrative therapy’s social constructionism:** While this therapy addresses how dominant narratives shape individual experiences, it does not specifically emphasize the interaction of multiple social systems as a framework for understanding behavior, which is central to MST.",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN44",
+      "source_file": "6 Family and Group.json",
+      "source_folder": "6 Clinical Interventions",
+      "difficulty": "easy",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 162,
+      "question": "Which structures are primarily involved in the secretion of hormones in the endocrine system?",
+      "options": [
+        "Pituitary gland and adrenal glands",
+        "Thalamus and hypothalamus",
+        "Cerebellum and brainstem",
+        "Amygdala and hippocampus"
+      ],
+      "correct_answer": "Pituitary gland and adrenal glands",
+      "explanation": "The pituitary gland is often referred to as the 'master gland' of the endocrine system, controlling various hormone functions, while the adrenal glands produce hormones like cortisol. The thalamus and hypothalamus are involved in regulation but not direct secretion, and the cerebellum and brainstem are not involved in hormone secretion.",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN1",
+      "source_file": "1-neurological-endocrine-disorders.json",
+      "source_folder": "1 Biopsychology (Neuroscience & Pharmacology)",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 163,
+      "question": "What does stimulus generalization in traumatic experiences refer to?",
+      "options": [
+        "The tendency to respond similarly to stimuli that resemble the original trauma",
+        "The reduction of anxiety responses to trauma-related stimuli",
+        "The ability to recall specific details of a traumatic event",
+        "The process of forgetting traumatic memories over time"
+      ],
+      "correct_answer": "The tendency to respond similarly to stimuli that resemble the original trauma",
+      "explanation": "The correct answer is B because stimulus generalization refers to the phenomenon where responses to a specific traumatic event extend to similar stimuli. Option A is incorrect as it describes recall, not generalization. Option C is incorrect as it describes forgetting, not generalization. Option D is incorrect as it describes desensitization, not generalization.",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
+      "knId": "KN2",
+      "source_file": "2-pavlov-and-classical-conditioning.json",
+      "source_folder": "2 Learning and Memory",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 164,
+      "question": "E. L. Thorndike's puzzle box experiments with cats demonstrated that over successive trials, the time required to escape the box gradually decreased. Thorndike attributed this learning to the principle that behaviors producing satisfying outcomes are more likely to recur, while behaviors producing discomfort tend to diminish. This foundational principle is known as:",
+      "options": [
+        "The law of effect, which states that consequences determine the future probability of behavior",
+        "The matching law, which states that response rates are proportional to reinforcement rates",
+        "The law of exercise, which states that repeated practice strengthens stimulus-response connections",
+        "The principle of reinforcement, which states that consequences must be immediate to affect behavior"
+      ],
+      "correct_answer": "The law of effect, which states that consequences determine the future probability of behavior",
+      "explanation": "Thorndike's law of effect states that 'behaviors followed by satisfying consequences tend to happen again, while behaviors followed by unsatisfying consequences tend to disappear.' This principle, derived from his puzzle box experiments, was foundational to operant conditioning. The principle of reinforcement (A) is a broader concept and doesn't specifically reference the satisfying/unsatisfying consequence framework. The law of exercise (C) is a different Thorndike principle about practice strengthening connections, not about consequences. The matching law (D) was developed later by Herrnstein and describes proportional response allocation across concurrent schedules.",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
+      "knId": "KN6",
+      "source_file": "2-skinner-and-operant-conditioning.json",
+      "source_folder": "2 Learning and Memory",
+      "difficulty": "easy",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 165,
+      "question": "John Watson's study of Little Albert demonstrated that after conditioning a fear response to a white rat, the infant also exhibited fear toward a white rabbit, a fur coat, and a Santa Claus mask. This spread of the conditioned fear response to stimuli that were never directly paired with the unconditioned stimulus is an example of:",
+      "options": [
+        "Incubation, because the fear response strengthened over time without additional pairings",
+        "Response generalization, because Albert displayed different types of fear behaviors",
+        "Higher-order conditioning, because each new stimulus was paired with the original CS",
+        "Stimulus generalization, because stimuli sharing features with the original CS elicited the CR"
+      ],
+      "correct_answer": "Stimulus generalization, because stimuli sharing features with the original CS elicited the CR",
+      "explanation": "Stimulus generalization occurs when stimuli similar to the original CS also elicit the CR, even though they were never paired with the US. The white rabbit, fur coat, and Santa Claus mask all shared perceptual features (white, furry) with the original CS (white rat). Response generalization (A) refers to reinforcing one behavior increasing similar behaviors — it's about different responses, not different stimuli. Higher-order conditioning (B) requires explicit pairing of the original CS with a new stimulus, which did not occur here. Incubation (D) refers to strengthening of a CR over time, not spread to similar stimuli.",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
+      "knId": "KN6",
+      "source_file": "2-pavlov-and-classical-conditioning.json",
+      "source_folder": "2 Learning and Memory",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 166,
+      "question": "What does the standard error of measurement (SEM) indicate in the context of psychological testing?",
+      "options": [
+        "It determines the average score of a population on a specific test.",
+        "It reflects the degree to which a test score can vary due to measurement error.",
+        "It measures the reliability of a test based on the number of items it contains.",
+        "It indicates the validity of a test by comparing it to other established measures."
+      ],
+      "correct_answer": "It reflects the degree to which a test score can vary due to measurement error.",
+      "explanation": "The SEM quantifies the amount of error associated with a test score, providing insight into the precision of the measurement. The other options misinterpret the purpose of SEM or confuse it with other testing concepts.",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN2",
+      "source_file": "5-cognitive-tests.json",
+      "source_folder": "5 Assessment",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 167,
+      "question": "What does current research suggest about the genetic determination of handedness?",
+      "options": [
+        "It is entirely determined by genetics",
+        "It is determined by birth order",
+        "It is influenced by both genetics and environment",
+        "It is solely a result of environmental factors"
+      ],
+      "correct_answer": "It is influenced by both genetics and environment",
+      "explanation": "The correct answer is 'It is influenced by both genetics and environment', as research indicates that while there is a genetic component to handedness, environmental factors also play a significant role. The other options are incorrect as they oversimplify the complexity of handedness determination.",
+      "domain": "Domain 4: Growth & Lifespan Development",
+      "knId": "KN7",
+      "source_file": "4-heredity-and-environment.json",
+      "source_folder": "4 Development",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 168,
+      "question": "What effect do neurological lesions typically have on motor function?",
+      "options": [
+        "Increase muscle tone",
+        "Enhance motor coordination",
+        "Cause paralysis or weakness",
+        "Improve reflexes"
+      ],
+      "correct_answer": "Cause paralysis or weakness",
+      "explanation": "Neurological lesions often result in paralysis or weakness in the affected areas of the body, depending on the location of the lesion. They do not enhance motor coordination, improve reflexes, or increase muscle tone.",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN10",
+      "source_file": "1-neurological-endocrine-disorders.json",
+      "source_folder": "1 Biopsychology (Neuroscience & Pharmacology)",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 169,
+      "question": "A 32-year-old adult presents for neuropsychological evaluation requesting clarification of a diagnosis. Records show a DSM-IV-TR diagnosis of Asperger's Disorder made in 2009, documented by deficits in social reciprocity and restricted interests in the absence of clinically significant language or intellectual delays. The evaluating psychologist explains that DSM-5 eliminated Asperger's Disorder as a separate diagnostic category. Which of the following best describes how individuals previously diagnosed with Asperger's Disorder should be classified under DSM-5?",
+      "options": [
+        "Unspecified Neurodevelopmental Disorder, pending updated validity evidence for restructured autism criteria",
+        "Autism Spectrum Disorder with specifiers indicating absence of intellectual impairment and absence of language impairment",
+        "High-Functioning Autism Disorder, which is the DSM-5 replacement for the Asperger's Disorder category",
+        "Social (Pragmatic) Communication Disorder, because preserved language ability excludes an autism spectrum diagnosis"
+      ],
+      "correct_answer": "Autism Spectrum Disorder with specifiers indicating absence of intellectual impairment and absence of language impairment",
+      "explanation": "The DSM-5 collapsed the DSM-IV-TR pervasive developmental disorders (Autistic Disorder, Asperger's Disorder, Childhood Disintegrative Disorder, and PDD-NOS) into a single dimensional diagnosis: Autism Spectrum Disorder. Severity and associated features are communicated via specifiers rather than separate categories. An individual previously diagnosed with Asperger's Disorder—who had preserved language and typical intellectual functioning—would now receive ASD Level 1 with specifiers noting 'without accompanying intellectual impairment' and 'without accompanying language impairment.' Option A is incorrect; Social (Pragmatic) Communication Disorder (SCD) was created for individuals with social communication deficits who do NOT meet ASD criteria (i.e., no restricted/repetitive behaviors); prior Asperger's diagnoses typically included restricted interests qualifying for ASD. Option C is incorrect; 'High-Functioning Autism' is not an official DSM-5 diagnostic term. Option D is incorrect; 'Unspecified Neurodevelopmental Disorder' is used when there is insufficient information to specify a diagnosis, not as a reclassification of established diagnoses.",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN5",
+      "source_file": "5-clinical-tests.json",
+      "source_folder": "5 Assessment",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 170,
+      "question": "A psychologist is advising parents who want to foster moral development and prosocial behavior in their 8-year-old child. According to research on discipline approaches and moral development, which parenting strategy would be MOST effective?",
+      "options": [
+        "Withdrawing affection temporarily when the child acts selfishly to motivate better behavior",
+        "Consistently removing privileges when the child misbehaves to reinforce consequences",
+        "Allowing natural consequences to occur without parental discussion or explanation",
+        "Using induction by explaining why a behavior is wrong and how it affects others"
+      ],
+      "correct_answer": "Using induction by explaining why a behavior is wrong and how it affects others",
+      "explanation": "Research shows that induction is the most effective discipline approach for promoting moral development. Induction involves explaining why a behavior is wrong and emphasizing how the behavior affects others, which promotes empathy and helps children understand the reasons behind moral rules. Option A describes power assertion, which is associated with Stage 1 (punishment avoidance) reasoning and is less effective for moral development. Option C describes love withdrawal, which can lead to Stage 3 reasoning (gaining approval) but doesn't promote deeper moral thinking. Option D describes a hands-off approach that misses the opportunity for moral teaching through explanation and perspective-taking.",
+      "domain": "Domain 4: Growth & Lifespan Development",
+      "knId": "KN23",
+      "source_file": "4-morality.json",
+      "source_folder": "4 Development",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": false,
+      "is_org_psych": false
+    },
+    {
+      "id": 171,
+      "question": "A client with social anxiety reports that she frequently makes excuses to leave parties early because doing so immediately reduces her feelings of distress. Over time, she has become increasingly likely to leave social events within the first few minutes. The maintenance of this early-departure behavior is best explained by:",
+      "options": [
+        "Positive punishment, because the social anxiety serves as an aversive consequence for attending parties",
+        "Negative reinforcement, because the behavior is strengthened by the termination of an aversive state",
+        "Avoidance conditioning, because she prevents the anxiety from occurring in the first place",
+        "Positive reinforcement, because leaving the party provides the reward of being alone"
+      ],
+      "correct_answer": "Negative reinforcement, because the behavior is strengthened by the termination of an aversive state",
+      "explanation": "Negative reinforcement occurs when a behavior increases because it removes or terminates an aversive stimulus. The client's leaving behavior is strengthened because it removes the unpleasant anxiety she is currently experiencing. As the lesson states, negative reinforcement involves 'something unpleasant is removed' and the behavior 'increases/maintains.' Positive punishment (A) decreases behavior by adding something aversive — the opposite direction. Positive reinforcement (C) would involve adding a pleasant stimulus; while solitude might be pleasant, the key mechanism here is the relief from distress. Avoidance conditioning (D) involves preventing an aversive event before it starts; since the client is already at the party experiencing distress, this is escape conditioning (a form of negative reinforcement), not avoidance.",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
+      "knId": "KN6",
+      "source_file": "2-skinner-and-operant-conditioning.json",
+      "source_folder": "2 Learning and Memory",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 172,
+      "question": "In the context of psychological evaluations, how should psychologists address language barriers to ensure cultural competence?",
+      "options": [
+        "By using a translator without considering the cultural context of the client.",
+        "By providing assessments only in the client's primary language and ensuring the translator is culturally competent.",
+        "By avoiding testing altogether if the client does not speak English.",
+        "By simplifying the language of the tests to make them more accessible."
+      ],
+      "correct_answer": "By providing assessments only in the client's primary language and ensuring the translator is culturally competent.",
+      "explanation": "The correct answer emphasizes the need for culturally competent practices in psychological evaluations, ensuring that language barriers do not compromise the assessment's validity. The other options either neglect cultural considerations or suggest inadequate practices.",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN3",
+      "source_file": "8-standards-3-4.json",
+      "source_folder": "8 Ethics",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 173,
+      "question": "Which of the following neurological features is commonly associated with Alzheimer's disease?",
+      "options": [
+        "Enhanced memory function",
+        "Neurofibrillary tangles",
+        "Increased dopamine levels",
+        "Cerebellar atrophy"
+      ],
+      "correct_answer": "Neurofibrillary tangles",
+      "explanation": "Neurofibrillary tangles are a hallmark of Alzheimer's disease, resulting from the abnormal accumulation of tau protein. Increased dopamine levels are not characteristic of Alzheimer's, enhanced memory function is not typical, and cerebellar atrophy is more associated with other conditions.",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN9",
+      "source_file": "1-neurological-endocrine-disorders.json",
+      "source_folder": "1 Biopsychology (Neuroscience & Pharmacology)",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 174,
+      "question": "Dr. Okafor serves on the admissions committee for a clinical psychology doctoral program. She learns that her niece has applied to the program. According to Standard 3.06 of the APA Ethics Code regarding conflicts of interest, what should Dr. Okafor do?",
+      "options": [
+        "Resign from the admissions committee entirely for the current application cycle",
+        "Recuse herself from any evaluative role regarding her niece's application to avoid impaired objectivity",
+        "Proceed with the evaluation as long as she discloses the relationship to the committee",
+        "Continue her role on the committee but assign a higher standard of evaluation to her niece to compensate for potential bias"
+      ],
+      "correct_answer": "Recuse herself from any evaluative role regarding her niece's application to avoid impaired objectivity",
+      "explanation": "Standard 3.06 prohibits psychologists from taking on roles where personal, financial, or other interests could reasonably impair their objectivity or risk exploitation or harm. Having a family member's application under review creates a clear conflict of interest. Option A is insufficient because disclosure alone does not eliminate the conflict. Option C introduces an inappropriate compensatory bias that further violates objectivity. Option D is unnecessarily extreme—recusal from the specific application is sufficient without abandoning the entire committee role.",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN8",
+      "source_file": "8-standards-3-4.json",
+      "source_folder": "8 Ethics",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 175,
+      "question": "In Family Therapies, how do therapists typically use the 'genogram' during Bowenian therapy sessions?",
+      "options": [
+        "To identify dysfunctional family games and power struggles between members",
+        "To assign behavioral homework designed to strengthen parental boundaries",
+        "To role-play current family conflicts and practice alternative interactions",
+        "To track intergenerational patterns of emotional functioning and relationships across at least three generations"
+      ],
+      "correct_answer": "To track intergenerational patterns of emotional functioning and relationships across at least three generations",
+      "explanation": "1. The correct answer, \"To track intergenerational patterns of emotional functioning and relationships across at least three generations,\" accurately reflects the purpose of a genogram in Bowenian therapy. Bowenian therapists use the genogram as a tool to depict family relationships and significant life events, which helps identify emotional processes and patterns transmitted across generations. This understanding of intergenerational dynamics is essential in addressing issues related to differentiation and emotional functioning within the family system.\n\n2. The first incorrect option, \"To identify dysfunctional family games and power struggles between members,\" is wrong because this focus is more aligned with Milan systemic family therapy, which emphasizes communication patterns and power dynamics rather than the intergenerational aspects highlighted in Bowenian therapy. The second option, \"To role-play current family conflicts and practice alternative interactions,\" is incorrect as role-playing is a technique more commonly associated with structural family therapy, where the therapist uses enactment to observe and modify interactions, rather than tracking historical patterns. Lastly, the option \"To assign behavioral homework designed to strengthen parental boundaries\" is not correct because while behavioral homework may be used in various therapies, Bowenian therapy specifically prioritizes understanding emotional processes and differentiation rather than direct behavioral assignments focused on boundaries.",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN44",
+      "source_file": "6 Family and Group.json",
+      "source_folder": "6 Clinical Interventions",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 176,
+      "question": "A longitudinal adoption study tracks the IQ scores of children placed with non-biological families at birth. When measured in childhood, adoptees show meaningful IQ correlations with their adoptive parents. When re-assessed in adulthood, which pattern does research most consistently find?",
+      "options": [
+        "IQ correlations with adoptive parents remain stable while biological parent correlations decline",
+        "IQ correlations with adoptive parents strengthen while correlations with biological parents remain unchanged",
+        "IQ correlations with both biological and adoptive parents converge toward a common heritability coefficient",
+        "IQ correlations with biological parents increase while correlations with adoptive parents diminish toward zero"
+      ],
+      "correct_answer": "IQ correlations with biological parents increase while correlations with adoptive parents diminish toward zero",
+      "explanation": "Adoption studies provide some of the strongest evidence for the heritability of intelligence. As adopted children age into adulthood, their IQ scores become progressively more correlated with biological parents — who share genes but not shared environment — while correlations with adoptive parents, who share environment but not genes, diminish substantially toward zero. This developmental pattern suggests that genetic influences on intelligence increase in magnitude over the lifespan, a finding consistent with the active gene-environment correlation in which individuals increasingly select and shape environments that match their genetic predispositions. Options A and D reverse the direction of the finding, and option B describes a theoretical convergence that does not reflect the actual empirical pattern.",
+      "domain": "Domain 4: Growth & Lifespan Development",
+      "knId": "KN4",
+      "source_file": "4-heredity-and-environment.json",
+      "source_folder": "4 Development",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 177,
+      "question": "Which neurotransmitter is primarily involved in the pathophysiology of Alzheimer's disease?",
+      "options": [
+        "B. Dopamine",
+        "C. Acetylcholine",
+        "A. Serotonin",
+        "D. Norepinephrine"
+      ],
+      "correct_answer": "C. Acetylcholine",
+      "explanation": "Acetylcholine is primarily involved in the pathophysiology of Alzheimer's disease, as its levels are significantly reduced in affected individuals. Serotonin and dopamine are involved in other disorders, while norepinephrine is not specifically linked to Alzheimer's. Therefore, acetylcholine is the correct answer.",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN10",
+      "source_file": "1-neurological-endocrine-disorders.json",
+      "source_folder": "1 Biopsychology (Neuroscience & Pharmacology)",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 178,
+      "question": "What diagnostic test is primarily used to assess seizure activity in patients?",
+      "options": [
+        "PET scan",
+        "EEG",
+        "MRI",
+        "CT scan"
+      ],
+      "correct_answer": "EEG",
+      "explanation": "An EEG (electroencephalogram) is the primary diagnostic test used to assess seizure activity by measuring electrical activity in the brain. MRI and CT scans are used for structural imaging, while PET scans assess metabolic activity.",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN4",
+      "source_file": "1-neurological-endocrine-disorders.json",
+      "source_folder": "1 Biopsychology (Neuroscience & Pharmacology)",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 179,
+      "question": "What is likely to happen to a behavior when reinforcement is no longer provided?",
+      "options": [
+        "The behavior will remain unchanged.",
+        "The behavior will become more frequent.",
+        "The behavior will be reinforced more strongly.",
+        "The behavior will likely extinguish over time."
+      ],
+      "correct_answer": "The behavior will likely extinguish over time.",
+      "explanation": "When reinforcement is no longer provided, the behavior is likely to extinguish as the individual no longer receives the positive or negative consequences that maintained it. The other options incorrectly suggest that the behavior would increase or remain the same.",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
+      "knId": "KN6",
+      "source_file": "2-skinner-and-operant-conditioning.json",
+      "source_folder": "2 Learning and Memory",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": false,
+      "is_org_psych": false
+    },
+    {
+      "id": 180,
+      "question": "Which type of seizure is characterized by a sudden loss of consciousness and muscle rigidity followed by rhythmic jerking movements?",
+      "options": [
+        "Tonic-clonic seizure",
+        "Absence seizure",
+        "Atonic seizure",
+        "Myoclonic seizure"
+      ],
+      "correct_answer": "Tonic-clonic seizure",
+      "explanation": "Tonic-clonic seizures involve a combination of muscle rigidity (tonic phase) and rhythmic jerking (clonic phase), making this the correct answer. Absence seizures are brief and involve a loss of awareness, myoclonic seizures involve sudden jerks without loss of consciousness, and atonic seizures involve sudden loss of muscle tone.",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN1",
+      "source_file": "1-neurological-endocrine-disorders.json",
+      "source_folder": "1 Biopsychology (Neuroscience & Pharmacology)",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 181,
+      "question": "A client reports recurrent episodes of heart racing, chest tightness, trembling, and a fear of humiliating herself that last 8 to 12 minutes. Review of her history reveals these episodes occur exclusively when she must speak in front of groups, when she is introduced to new people at social gatherings, and when she believes others are observing her eating. She reports no episodes occurring while alone, during sleep, or without an identifiable social trigger. Which of the following most accurately explains why Panic Disorder is NOT the appropriate primary diagnosis?",
+      "options": [
+        "Her symptoms do not meet the full symptomatic threshold for a panic attack, so they cannot form the basis of any anxiety disorder diagnosis",
+        "Panic attacks in Social Anxiety Disorder produce physiological symptoms that are less severe than those required for Panic Disorder",
+        "Panic Disorder requires a minimum of four panic attacks per month, whereas Social Anxiety Disorder has no such frequency requirement",
+        "Her panic attacks are situationally bound to social-evaluative contexts rather than unexpected and uncued, which is required for Panic Disorder"
+      ],
+      "correct_answer": "Her panic attacks are situationally bound to social-evaluative contexts rather than unexpected and uncued, which is required for Panic Disorder",
+      "explanation": "The defining feature of Panic Disorder is recurrent UNEXPECTED panic attacks—those that arise without an apparent trigger or situational cue—followed by persistent concern about additional attacks or maladaptive behavioral changes. In this vignette, all panic attacks are situationally bound to feared social-evaluative situations, which is characteristic of Social Anxiety Disorder (SAD). DSM-5 explicitly permits panic attacks as a specifier across multiple anxiety disorders; their presence does not automatically indicate Panic Disorder. Option A is incorrect; the client's symptoms (racing heart, chest tightness, trembling, fear) can constitute a full-criteria panic attack regardless of the trigger. Option B is incorrect; DSM-5 does not impose differential symptom severity thresholds between disorder types for panic attacks—both can involve full-symptom panic attacks. Option D is incorrect; DSM-5 does not require a specific frequency of panic attacks (such as four per month) for a Panic Disorder diagnosis.",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN5",
+      "source_file": "5-clinical-tests.json",
+      "source_folder": "5 Assessment",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 182,
+      "question": "Which of the following is considered the analogue of the therapeutic alliance in group therapy according to Yalom and Leszcz?",
+      "options": [
+        "Altruism",
+        "Group cohesiveness",
+        "Catharsis",
+        "Universality"
+      ],
+      "correct_answer": "Group cohesiveness",
+      "explanation": "1. \"Group cohesiveness\" is the correct answer because it is considered the analogue of the therapeutic alliance in group therapy, as noted by Yalom and Leszcz. Group cohesiveness fosters trust and connection among members, which is essential for effective therapy and serves as a foundation for other therapeutic factors to take effect. It is viewed as a precondition for positive outcomes in group therapy.\n\n2. \n- **Universality** is incorrect because it refers to the understanding that others share similar experiences and feelings, which helps members feel less isolated, but it does not serve as the primary foundation for the therapeutic alliance.\n- **Altruism** is incorrect because it involves members helping each other, which can be beneficial but does not represent the core connection or bond that underlies the therapeutic alliance in the group context.\n- **Catharsis** is incorrect because it pertains to the emotional release that members experience during therapy, which is important for healing but is not the same as the foundational relationship that constitutes the therapeutic alliance.",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN16",
+      "source_file": "6 Family and Group.json",
+      "source_folder": "6 Clinical Interventions",
+      "difficulty": "easy",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 183,
+      "question": "What dietary management is essential for individuals with phenylketonuria (PKU)?",
+      "options": [
+        "C. Gluten-free diet",
+        "A. High protein diet",
+        "B. Low phenylalanine diet",
+        "D. High carbohydrate diet"
+      ],
+      "correct_answer": "B. Low phenylalanine diet",
+      "explanation": "Individuals with phenylketonuria (PKU) must adhere to a low phenylalanine diet to prevent cognitive impairment and other health issues. A high protein diet would be harmful as it contains high levels of phenylalanine. A gluten-free diet is not relevant to PKU, and a high carbohydrate diet does not address the metabolic needs of individuals with this condition.",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN7",
+      "source_file": "1-neurological-endocrine-disorders.json",
+      "source_folder": "1 Biopsychology (Neuroscience & Pharmacology)",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 184,
+      "question": "Dr. Wallace has been treating a 22-year-old college student for anxiety. The student's parents, who are paying for therapy, request copies of their daughter's psychological test results. The student has not authorized the release. What should Dr. Wallace do?",
+      "options": [
+        "Release only a summary of results rather than the full test data",
+        "Decline to release the results without the adult client's explicit authorization",
+        "Release the results because the parents are financially responsible for treatment",
+        "Release the results but remove any sensitive information the client might not want shared"
+      ],
+      "correct_answer": "Decline to release the results without the adult client's explicit authorization",
+      "explanation": "The client is a legal adult (age 22), and regardless of who pays for treatment, confidentiality belongs to the client. Standard 4.01 requires psychologists to take reasonable precautions to protect confidential information, and Standard 9.04 addresses the release of test data. Without the adult client's authorization (or a court order or legal mandate), the psychologist must not release confidential information, including test results, to third parties — even parents who are paying for services. Option A is incorrect because financial responsibility does not confer a right to confidential clinical information about an adult client. Option B is incorrect because even a summary constitutes protected confidential information requiring client authorization. Option D is incorrect because selective redaction still constitutes unauthorized disclosure.",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN8",
+      "source_file": "8-standards-3-4.json",
+      "source_folder": "8 Ethics",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 185,
+      "question": "A 68-year-old retired attorney scores at the 80th percentile on a test of legal vocabulary and professional knowledge, yet scores at the 40th percentile compared to younger adults on a novel matrix reasoning task administered under time pressure. This dissociation best illustrates which well-documented pattern in cognitive aging?",
+      "options": [
+        "Crystallized intelligence declines in parallel with working memory capacity, while fluid intelligence remains stable until the 8th decade",
+        "Fluid intelligence declines earlier and more steeply across adulthood than crystallized intelligence, which remains relatively stable or increases",
+        "Fluid intelligence is preserved in professional domains due to expertise effects, while crystallized intelligence shows selective decline",
+        "Both fluid and crystallized intelligence decline uniformly beginning at age 60 due to generalized cortical atrophy"
+      ],
+      "correct_answer": "Fluid intelligence declines earlier and more steeply across adulthood than crystallized intelligence, which remains relatively stable or increases",
+      "explanation": "Research on cognitive aging, drawing on Cattell and Horn's theory of fluid (Gf) and crystallized (Gc) intelligence, consistently shows that these two constructs follow distinct developmental trajectories. Fluid intelligence — reflecting novel problem-solving, processing speed, and abstract reasoning — peaks in early adulthood and shows a gradual, then steeper, decline with age. Crystallized intelligence — reflecting accumulated knowledge, vocabulary, and expertise derived from cultural learning — remains stable and may increase into late middle adulthood before showing modest decline in very old age. The attorney's preserved legal knowledge (Gc) alongside reduced novel reasoning performance (Gf) exemplifies this classic dissociation. Option A incorrectly characterizes the relative trajectories. Option C overstates the uniformity and timing of decline. Option D misattributes preserved Gf to expertise and incorrectly predicts selective Gc decline.",
+      "domain": "Domain 4: Growth & Lifespan Development",
+      "knId": "KN4",
+      "source_file": "4-cognitive-development.json",
+      "source_folder": "4 Development",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 186,
+      "question": "Dr. Nakamura is beginning a therapy group for adults with social anxiety. At the first session, she discusses ground rules with group members. Regarding confidentiality in this setting, which of the following BEST describes Dr. Nakamura's ethical obligation?",
+      "options": [
+        "She has no obligation to discuss confidentiality because group members implicitly consent to shared disclosure by joining a group",
+        "She must guarantee that all group members will maintain confidentiality of information shared in the group",
+        "She should require each group member to sign a legally binding confidentiality agreement before the group begins",
+        "She should inform group members early in therapy about the importance of confidentiality and that she cannot guarantee it will be maintained by all members"
+      ],
+      "correct_answer": "She should inform group members early in therapy about the importance of confidentiality and that she cannot guarantee it will be maintained by all members",
+      "explanation": "The APA Ethics Code requires psychologists to discuss confidentiality at the outset of therapy, including its limitations. In group therapy, the psychologist cannot guarantee confidentiality because other group members are not bound by the same ethical and legal obligations as the therapist. Option A is incorrect because psychologists cannot guarantee other members' behavior. Option C is incorrect because implicit consent does not relieve the psychologist of the duty to discuss confidentiality. Option D is incorrect because while confidentiality agreements may be used, they are not legally binding on group members in the same way, and the ethical obligation is to inform, not to create binding contracts.",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN8",
+      "source_file": "8-standards-3-4.json",
+      "source_folder": "8 Ethics",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 187,
+      "question": "When a psychologist receives a request for information from another psychologist regarding a mutual client, what is the most ethical course of action?",
+      "options": [
+        "Deny the request outright to protect client confidentiality.",
+        "Consult with the client to obtain consent before disclosing any information.",
+        "Provide all requested information immediately to maintain transparency.",
+        "Assume that the other psychologist has the right to access the information without consent."
+      ],
+      "correct_answer": "Consult with the client to obtain consent before disclosing any information.",
+      "explanation": "The correct answer emphasizes the importance of client consent in maintaining confidentiality, which is a fundamental ethical principle. The other options either violate confidentiality or assume rights that do not exist without client authorization.",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN23",
+      "source_file": "8-standards-3-4.json",
+      "source_folder": "8 Ethics",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 188,
+      "question": "A pediatric neuropsychologist is providing psychoeducation to parents of a 9-year-old recently diagnosed with reading disorder (dyslexia). Which statement most accurately represents current research on the long-term prognosis of this condition?",
+      "options": [
+        "Reading disorder typically co-occurs with global intellectual disability and requires lifelong academic support across all domains",
+        "The majority of children with reading disorder will achieve grade-level reading by high school even without formal intervention",
+        "Reading disorder is a persistent condition throughout the lifespan, though individuals can acquire compensatory strategies that improve functional reading",
+        "Pharmacological treatment remains the most evidence-based approach and significantly alters the long-term trajectory of reading disorder"
+      ],
+      "correct_answer": "Reading disorder is a persistent condition throughout the lifespan, though individuals can acquire compensatory strategies that improve functional reading",
+      "explanation": "Reading disorder (dyslexia) is characterized by a persistent phonological processing deficit that does not remit with age, even with effective intervention. The condition is lifelong; however, with early, intensive, evidence-based intervention targeting phonological awareness and decoding, individuals often develop compensatory strategies sufficient for functional literacy. Option A overstates spontaneous improvement and significantly underestimates the persistence of the deficit in the absence of structured intervention. Option C incorrectly associates reading disorder with global intellectual disability; by diagnostic definition, reading disorder occurs in individuals with at least average general intelligence and represents a specific, not global, deficit. Option D is incorrect because there are no approved pharmacological treatments that directly address the core deficits of reading disorder.",
+      "domain": "Domain 4: Growth & Lifespan Development",
+      "knId": "KN4",
+      "source_file": "4-cognitive-development.json",
+      "source_folder": "4 Development",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 189,
+      "question": "In therapy, what is the most ethical approach when a psychologist realizes they lack cultural competence to effectively treat a client?",
+      "options": [
+        "Discuss the psychologist's limitations with the client and seek their input.",
+        "Refer the client to another professional who has the necessary cultural competence.",
+        "Ignore the issue and focus on the therapeutic goals.",
+        "Continue therapy while attempting to learn about the client's culture."
+      ],
+      "correct_answer": "Refer the client to another professional who has the necessary cultural competence.",
+      "explanation": "The correct answer emphasizes the ethical responsibility to ensure clients receive competent care, which may involve referral when a psychologist lacks the necessary cultural understanding. The other options either compromise the client's care or do not adequately address the issue.",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN25",
+      "source_file": "8-standards-3-4.json",
+      "source_folder": "8 Ethics",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 190,
+      "question": "What factor most significantly influences perceptions of justice in mediation outcomes?",
+      "options": [
+        "The cultural background of the participants",
+        "The clarity of communication between parties",
+        "The mediator's personal beliefs",
+        "The perceived fairness of the process"
+      ],
+      "correct_answer": "The perceived fairness of the process",
+      "explanation": "The correct answer is 'The perceived fairness of the process' because perceptions of justice in mediation are heavily influenced by how fair the participants believe the mediation process is, regardless of the outcome. 'The mediator's personal beliefs' may play a role but are not as significant as perceived fairness. 'The clarity of communication between parties' is important but secondary to the overall perception of fairness. 'The cultural background of the participants' can influence perceptions but is not the primary factor.",
+      "domain": "Domain 3: Social Psychology & Cultural Aspects",
+      "knId": "KN5",
+      "source_file": "3-helping-and-hurting.json",
+      "source_folder": "3 Social Psychology",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 191,
+      "question": "Milgram's obedience studies are frequently cited as a landmark example of ethically problematic research in psychology. Which of the following best describes a primary ethical concern raised by these experiments?",
+      "options": [
+        "Participants were recruited through coercion and were unable to withdraw",
+        "Participants experienced significant psychological distress from believing they were harming another person",
+        "The confederate learner was actually subjected to painful electric shocks",
+        "Participants were not debriefed after the study concluded"
+      ],
+      "correct_answer": "Participants experienced significant psychological distress from believing they were harming another person",
+      "explanation": "The primary ethical concern with Milgram's studies was the extreme psychological distress participants experienced. They believed they were delivering painful and potentially lethal shocks to another person, causing them significant emotional turmoil. Option A is incorrect because Milgram did debrief participants. Option C is incorrect because the learner was a confederate who did not actually receive shocks ('The learner wasn't actually receiving shocks, but they acted like they were, screaming, begging to stop, and eventually going silent'). Option D is incorrect because participants were not coerced into participating, though the situational pressures made it psychologically difficult to withdraw once the study began.",
+      "domain": "Domain 3: Social Psychology & Cultural Aspects",
+      "knId": "KN11",
+      "source_file": "3-influence.json",
+      "source_folder": "3 Social Psychology",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": false,
+      "is_org_psych": false
+    },
+    {
+      "id": 192,
+      "question": "A parent has been giving a toddler a cookie every time the child whines at the grocery store. The parent decides to stop providing cookies entirely. In the first few shopping trips after this change, the parent should expect the whining to:",
+      "options": [
+        "Temporarily increase in frequency and intensity before eventually decreasing",
+        "Gradually decrease at a steady, predictable rate from the first trip",
+        "Remain at exactly the same level as before the change",
+        "Immediately cease once the child realizes no cookie is forthcoming"
+      ],
+      "correct_answer": "Temporarily increase in frequency and intensity before eventually decreasing",
+      "explanation": "When reinforcement for a previously reinforced behavior is discontinued, an extinction burst typically occurs—the behavior temporarily increases in frequency and/or intensity before eventually decreasing. This is a well-established operant conditioning principle. Immediate cessation (A) contradicts the extinction burst phenomenon. Remaining at the same level (C) would indicate the reinforcement was not actually maintaining the behavior. A gradual, steady decrease (D) describes what happens after the extinction burst, not the initial response to removal of reinforcement.",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
+      "knId": "KN6",
+      "source_file": "2-skinner-and-operant-conditioning.json",
+      "source_folder": "2 Learning and Memory",
+      "difficulty": "easy",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 193,
+      "question": "In Narrative Family Therapy, what is the primary meaning of 'externalizing questions'?",
+      "options": [
+        "Questions that reinforce family rules and rituals",
+        "Questions that help clients view problems as separate from themselves",
+        "Questions that focus on blame and responsibility",
+        "Questions that analyze family communication patterns"
+      ],
+      "correct_answer": "Questions that help clients view problems as separate from themselves",
+      "explanation": "1. The correct answer, \"Questions that help clients view problems as separate from themselves,\" aligns with the principles of Narrative Family Therapy, which emphasizes that problems are not internal to individuals but exist outside of them. By using externalizing questions, therapists encourage clients to see their issues as separate entities, facilitating a healthier perspective that allows for the construction of alternative, more satisfying narratives.\n\n2. The option \"Questions that focus on blame and responsibility\" is incorrect because externalizing questions aim to distance the individual from the problem rather than assigning blame or responsibility to them. The option \"Questions that reinforce family rules and rituals\" is also wrong, as externalizing questions challenge existing narratives rather than reinforcing the status quo of family dynamics. Finally, \"Questions that analyze family communication patterns\" is not accurate because externalizing questions specifically seek to separate the individual from the problem, rather than focusing on analyzing communication patterns within the family.",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN44",
+      "source_file": "6 Family and Group.json",
+      "source_folder": "6 Clinical Interventions",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 194,
+      "question": "Which of the following factors is most likely to contribute to higher employee turnover rates in an organization?",
+      "options": [
+        "Strong organizational culture and values.",
+        "High levels of employee engagement and satisfaction.",
+        "Effective communication between management and staff.",
+        "Lack of opportunities for career advancement."
+      ],
+      "correct_answer": "Lack of opportunities for career advancement.",
+      "explanation": "The correct answer highlights that a lack of career advancement opportunities can lead to dissatisfaction and increased turnover. The other options are associated with lower turnover rates, as they contribute positively to employee retention.",
+      "domain": "Domain 3: Social Psychology & Cultural Aspects",
+      "knId": "KN6",
+      "source_file": "3-helping-and-hurting.json",
+      "source_folder": "3 Social Psychology",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 195,
+      "question": "Which intervention is an essential and empirically supported component of CBT for suicide prevention used across various client populations?",
+      "options": [
+        "Safety planning intervention involving identification of warning signs and coping strategies",
+        "No-suicide contracts requiring clients to promise abstinence from attempts",
+        "Rational-emotive imagery to dispute irrational beliefs about suicide",
+        "Prolonged exposure therapy focused on traumatic memories"
+      ],
+      "correct_answer": "Safety planning intervention involving identification of warning signs and coping strategies",
+      "explanation": "Safety planning is an evidence-based practice that helps clients identify warning signs, coping strategies, and resources to reduce suicide risk, unlike no-suicide contracts which lack empirical support.",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN44",
+      "source_file": "6 CBT.json",
+      "source_folder": "6 Clinical Interventions",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 196,
+      "question": "A psychologist selects Raven's Standard Progressive Matrices (SPM) to assess a 10-year-old child with autism spectrum disorder who has limited verbal abilities. This choice is most appropriate because Raven's SPM:",
+      "options": [
+        "Is a nonverbal measure of abstract reasoning and fluid intelligence that is less likely than Wechsler tests to underestimate intelligence in individuals with ASD",
+        "Was specifically normed on populations with autism spectrum disorder and intellectual disabilities",
+        "Measures Spearman's g factor by assessing both verbal comprehension and perceptual reasoning equally",
+        "Provides separate scores for crystallized and fluid intelligence, allowing comparison across domains"
+      ],
+      "correct_answer": "Is a nonverbal measure of abstract reasoning and fluid intelligence that is less likely than Wechsler tests to underestimate intelligence in individuals with ASD",
+      "explanation": "Raven's SPM measures abstract reasoning and fluid intelligence through nonverbal pattern completion tasks, making it relatively free from cultural and educational influences. Critically, research shows it is less likely than Wechsler tests to underestimate intelligence in people with ASD. Option A is wrong because Raven's only measures fluid intelligence/abstract reasoning, not crystallized intelligence. Option C is wrong because Raven's was not specifically normed on ASD populations — it simply performs better with this population. Option D is wrong because Raven's does not assess verbal comprehension at all; while it is considered a good measure of Spearman's g, it achieves this through nonverbal means only.",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN35",
+      "source_file": "5-cognitive-tests.json",
+      "source_folder": "5 Assessment",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 197,
+      "question": "Which demographic group is generally associated with the highest life expectancy, according to current trends?",
+      "options": [
+        "Caucasian females",
+        "Asian females",
+        "Hispanic males",
+        "African American males"
+      ],
+      "correct_answer": "Asian females",
+      "explanation": "Current demographic trends indicate that Asian females typically have the highest life expectancy compared to other groups. While Caucasian females also have high life expectancy, Asian females surpass them in longevity.",
+      "domain": "Domain 4: Growth & Lifespan Development",
+      "knId": "KN6",
+      "source_file": "4-heredity-and-environment.json",
+      "source_folder": "4 Development",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 198,
+      "question": "According to social learning theory, which factor is most influential in the development of aggressive behavior?",
+      "options": [
+        "Cognitive appraisal",
+        "Observational learning",
+        "Genetic predisposition",
+        "Direct reinforcement"
+      ],
+      "correct_answer": "Observational learning",
+      "explanation": "Social learning theory posits that aggressive behavior is primarily learned through observational learning, where individuals model behaviors seen in others, especially role models. Genetic predisposition refers to biological factors, direct reinforcement involves rewards for behavior, and cognitive appraisal relates to individual interpretation of situations. Therefore, observational learning is the correct answer.",
+      "domain": "Domain 3: Social Psychology & Cultural Aspects",
+      "knId": "KN3",
+      "source_file": "3-helping-and-hurting.json",
+      "source_folder": "3 Social Psychology",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 199,
+      "question": "A psychologist is explaining test results to the parents of a child who scored 85% correct on a reading mastery assessment. The parents ask whether this means their child is performing better than 85% of other children. Which response BEST clarifies the distinction between the two types of scores?",
+      "options": [
+        "The 85% is equivalent to a percentile rank of 85, meaning the child scored better than 85% of the normative sample",
+        "The 85% represents a norm-referenced standard score that places the child one standard deviation above the mean",
+        "The 85% should be converted to a z-score before any meaningful interpretation can be made",
+        "The 85% represents a criterion-referenced score indicating the proportion of content mastered, not a comparison to other children's performance"
+      ],
+      "correct_answer": "The 85% represents a criterion-referenced score indicating the proportion of content mastered, not a comparison to other children's performance",
+      "explanation": "A percentage score of 85% is a criterion-referenced score indicating the child answered 85% of items correctly—it measures mastery of content, not comparison to others. Option B confuses percentage scores with percentile ranks, which are norm-referenced and indicate standing relative to a comparison group. As the lesson explicitly states: 'A percentile rank of 75 means you scored better than 75% of people. A percentage score of 75 means you answered 75% of questions correctly. These are completely different metrics.' Option C is incorrect because criterion-referenced scores are meaningful without conversion to z-scores. Option D is wrong because 85% correct is not a standard score.",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN5",
+      "source_file": "5-interpreting-scores.json",
+      "source_folder": "5 Assessment",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": false,
+      "is_org_psych": false
+    },
+    {
+      "id": 200,
+      "question": "What is a key characteristic of the forced distribution method in employee performance evaluations?",
+      "options": [
+        "A. It allows for unlimited ratings across all employees.",
+        "C. It focuses solely on qualitative feedback.",
+        "B. It requires employees to be ranked within a predetermined distribution curve.",
+        "D. It eliminates bias in performance ratings."
+      ],
+      "correct_answer": "B. It requires employees to be ranked within a predetermined distribution curve.",
+      "explanation": "Option B is correct because the forced distribution method mandates that employees be ranked according to a specific distribution, often leading to a set percentage of employees being categorized into performance tiers. Options A, C, and D are incorrect as they misrepresent the forced distribution method.",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN5",
+      "source_file": "5-cognitive-tests.json",
+      "source_folder": "5 Assessment",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 201,
+      "question": "How does the standard error of estimate relate to the validity of a psychological test?",
+      "options": [
+        "C. A lower standard error enhances the test's predictive validity.",
+        "B. A lower standard error suggests less reliability.",
+        "D. The standard error is unrelated to validity.",
+        "A. A higher standard error indicates greater validity."
+      ],
+      "correct_answer": "C. A lower standard error enhances the test's predictive validity.",
+      "explanation": "Option C is correct because a lower standard error of estimate indicates that the predictions made by the test are more accurate, thus enhancing its predictive validity. Options A and B are incorrect as they misinterpret the relationship, and D is false as the standard error is indeed related to validity.",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN5",
+      "source_file": "5-cognitive-tests.json",
+      "source_folder": "5 Assessment",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 202,
+      "question": "A school psychologist administers the WISC-V to a 7-year-old child referred for a gifted education evaluation. The child obtains maximum or near-maximum scores on multiple subtests, making it difficult to determine precisely how far above average the child's abilities extend. This limitation is BEST described as:",
+      "options": [
+        "A floor effect indicating the test items are too difficult for the child's developmental level",
+        "A practice effect resulting from the child's prior exposure to similar test items",
+        "A regression to the mean artifact that will resolve upon retesting",
+        "A ceiling effect that restricts the test's ability to differentiate among high-ability examinees"
+      ],
+      "correct_answer": "A ceiling effect that restricts the test's ability to differentiate among high-ability examinees",
+      "explanation": "When a child scores at or near the maximum on test items, the test lacks sufficient difficulty to distinguish among very high-ability examinees—this is a ceiling effect. The test cannot measure how far above the maximum the child's true ability extends. This is a well-known limitation of standard IQ tests for gifted children. Option B (practice effect) refers to score improvement from repeated testing. Option C (floor effect) is the opposite problem—when items are too difficult, scores cluster at the bottom. Option D (regression to the mean) is a statistical phenomenon where extreme scores tend to move toward the average on retesting, unrelated to item difficulty limitations.",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN5",
+      "source_file": "5-iq-tests.json",
+      "source_folder": "5 Assessment",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": false,
+      "is_org_psych": false
+    },
+    {
+      "id": 203,
+      "question": "Which of the following factors is most commonly associated with contributing to aggression in social psychology?",
+      "options": [
+        "Social learning",
+        "Biological predispositions",
+        "Cognitive dissonance",
+        "Cultural norms"
+      ],
+      "correct_answer": "Social learning",
+      "explanation": "Social learning theory posits that aggression is learned through observing and imitating others, making it a key factor in understanding aggressive behavior. The other options are relevant but do not capture the primary mechanism as effectively.",
+      "domain": "Domain 3: Social Psychology & Cultural Aspects",
+      "knId": "KN3",
+      "source_file": "3-helping-and-hurting.json",
+      "source_folder": "3 Social Psychology",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 204,
+      "question": "What demographic factor has been shown to correlate with higher rates of adolescent violence, particularly homicide?",
+      "options": [
+        "Access to mental health services",
+        "Parental education level",
+        "Socioeconomic status",
+        "Urban residency"
+      ],
+      "correct_answer": "Urban residency",
+      "explanation": "Urban residency has been shown to correlate with higher rates of adolescent violence, including homicide, due to factors such as higher population density, increased exposure to violence, and greater social disorganization. Socioeconomic status and parental education level can also play roles, but urban environments are particularly significant. Therefore, the correct answer is urban residency.",
+      "domain": "Domain 3: Social Psychology & Cultural Aspects",
+      "knId": "KN20",
+      "source_file": "3-helping-and-hurting.json",
+      "source_folder": "3 Social Psychology",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 205,
+      "question": "In decision-making, what does approach-avoidance conflict refer to?",
+      "options": [
+        "The tension between wanting to pursue a goal and fearing the potential negative outcomes.",
+        "The struggle between two equally attractive options.",
+        "The choice between a safe option and a risky one.",
+        "The decision to avoid all risks in a situation."
+      ],
+      "correct_answer": "The tension between wanting to pursue a goal and fearing the potential negative outcomes.",
+      "explanation": "Approach-avoidance conflict occurs when an individual is torn between the desire to achieve a goal and the fear of the negative consequences associated with that goal. The other options do not accurately capture this specific type of conflict.",
+      "domain": "Domain 3: Social Psychology & Cultural Aspects",
+      "knId": "KN3",
+      "source_file": "3-helping-and-hurting.json",
+      "source_folder": "3 Social Psychology",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 206,
+      "question": "What aspect of Gilligan's moral development theory highlights gender differences in moral reasoning?",
+      "options": [
+        "The universality of moral principles",
+        "The focus on care as a moral priority",
+        "The emphasis on justice over care",
+        "The role of cognitive development in morality"
+      ],
+      "correct_answer": "The focus on care as a moral priority",
+      "explanation": "This option is correct as Gilligan's theory emphasizes that women often prioritize care and relationships in moral reasoning, contrasting with traditional theories that emphasize justice. The other options do not accurately reflect her perspective on gender differences in moral reasoning.",
+      "domain": "Domain 3: Social Psychology & Cultural Aspects",
+      "knId": "KN3",
+      "source_file": "3-helping-and-hurting.json",
+      "source_folder": "3 Social Psychology",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 207,
+      "question": "Which of the following is a significant risk factor for developing neurocognitive disorders?",
+      "options": [
+        "Low blood pressure",
+        "Hypertension",
+        "Regular physical activity",
+        "High educational attainment"
+      ],
+      "correct_answer": "Hypertension",
+      "explanation": "Hypertension is a well-established risk factor for neurocognitive disorders, particularly vascular dementia. The other options are generally associated with protective factors against cognitive decline.",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN1",
+      "source_file": "1-neurological-endocrine-disorders.json",
+      "source_folder": "1 Biopsychology (Neuroscience & Pharmacology)",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 208,
+      "question": "In Structural Family Therapy, which type of alliance occurs when one parent and a child join together inflexibly against the other parent?",
+      "options": [
+        "Unstable coalition",
+        "Detouring-support coalition",
+        "Detouring-attack coalition",
+        "Stable coalition"
+      ],
+      "correct_answer": "Stable coalition",
+      "explanation": "1. **Correct Answer: Stable Coalition**  \nA \"stable coalition\" occurs in Structural Family Therapy when one parent and a child form a rigid alliance against the other parent. This type of coalition is characterized by its inflexibility, where the dynamics reinforce the exclusion of the other parent, creating a dysfunctional family structure that obscures or denies conflicts between the parents.\n\n2. **Incorrect Options:**\n- **Unstable Coalition:** This coalition, also known as triangulation, occurs when each parent demands that the child side with them, leading to a lack of stability and clarity in alliances rather than a fixed partnership.\n- **Detouring-Attack Coalition:** In this coalition, parents avoid addressing their conflicts by blaming the child for their problems, which does not involve a stable alliance but instead diverts attention from the parental issues.\n- **Detouring-Support Coalition:** This type occurs when parents overprotect a child to avoid confronting their own conflicts, again not forming a stable alliance but rather creating a dynamic that perpetuates avoidance of direct issues.",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN25",
+      "source_file": "6 Family and Group.json",
+      "source_folder": "6 Clinical Interventions",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 209,
+      "question": "Which principle is central to Montessori education?",
+      "options": [
+        "Strict adherence to a standardized curriculum",
+        "Use of traditional lecture-based teaching methods",
+        "Emphasis on child-led learning and exploration",
+        "Focus on competitive academic achievement"
+      ],
+      "correct_answer": "Emphasis on child-led learning and exploration",
+      "explanation": "Montessori education is characterized by its emphasis on child-led learning and exploration, allowing children to learn at their own pace. The other options do not accurately reflect Montessori principles.",
+      "domain": "Domain 4: Growth & Lifespan Development",
+      "knId": "KN5",
+      "source_file": "4-language-development.json",
+      "source_folder": "4 Development",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 210,
+      "question": "In cognitive-behavioral therapy for suicide prevention, what does the 'chain analysis' technique primarily involve?",
+      "options": [
+        "Teaching relaxation skills to manage suicidal urges",
+        "Disputing irrational beliefs about self-worth and hopelessness",
+        "Identifying the series of events and thoughts leading up to the suicide attempt",
+        "Evaluating the efficacy of safety plans after discharge"
+      ],
+      "correct_answer": "Identifying the series of events and thoughts leading up to the suicide attempt",
+      "explanation": "1. The correct answer, \"Identifying the series of events and thoughts leading up to the suicide attempt,\" accurately describes the chain analysis technique used in cognitive-behavioral therapy for suicide prevention (CT-SP). This technique focuses on understanding the specific circumstances and cognitive processes that culminate in a suicidal crisis, allowing both the therapist and client to explore the connections between events and thoughts that contribute to suicidal behavior, thereby informing safety planning and coping strategies.\n\n2. The option \"Evaluating the efficacy of safety plans after discharge\" is incorrect because chain analysis is concerned with understanding the antecedents to a suicide attempt rather than assessing post-discharge interventions. \"Teaching relaxation skills to manage suicidal urges\" is not correct as chain analysis does not focus on skill acquisition but rather on the sequence of events and thoughts leading to the crisis. Lastly, \"Disputing irrational beliefs about self-worth and hopelessness\" is misleading because while addressing irrational beliefs is a component of cognitive therapies, chain analysis specifically aims to map the events and thoughts rather than directly disputing beliefs.",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN44",
+      "source_file": "6 CBT.json",
+      "source_folder": "6 Clinical Interventions",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 211,
+      "question": "A 4-year-old watches as an experimenter pours water from a short, wide beaker into a tall, narrow cylinder and asks whether the amount of water changed. The child says 'there's more now because it's taller,' ignoring that the cylinder is narrower. According to Piaget, the specific cognitive limitation most directly responsible for this error is:",
+      "options": [
+        "Irreversibility, because the child cannot mentally reverse the pouring action to infer the original amount",
+        "Animism, because the child attributes the water's movement to intentional self-directed action",
+        "Centration, because the child focuses on the single dimension of height while ignoring the dimension of width",
+        "Egocentrism, because the child cannot take the experimenter's physical perspective on the containers"
+      ],
+      "correct_answer": "Centration, because the child focuses on the single dimension of height while ignoring the dimension of width",
+      "explanation": "Centration is Piaget's term for the preoperational tendency to focus attention on one salient perceptual dimension of a stimulus while failing to simultaneously consider other relevant dimensions. In this conservation task, the child centers on the height of the water column — the most visually salient change — while ignoring that the narrower width compensates for the increased height. The result is an incorrect judgment about quantity. Egocentrism (A) involves difficulty understanding that others hold different perspectives than oneself, not a failure to integrate multiple physical dimensions. Irreversibility (B) refers to the inability to mentally undo an action and is also implicated in conservation failures, but the specific error described — focusing exclusively on height — is most directly attributed to centration rather than irreversibility. Animism (D) involves attributing life or intention to inanimate objects, which is unrelated to this quantity judgment task.",
+      "domain": "Domain 4: Growth & Lifespan Development",
+      "knId": "KN4",
+      "source_file": "4-cognitive-development.json",
+      "source_folder": "4 Development",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 212,
+      "question": "A 2-year-old child points at a horse and says \"doggie.\" This language error is an example of:",
+      "options": [
+        "Holophrastic speech, in which the child uses a single word to convey an entire sentence",
+        "Overregularization, in which the child misapplies grammatical rules to irregular forms",
+        "Underextension, in which the child applies a word too narrowly to a specific referent",
+        "Overextension, in which the child applies a word too broadly based on shared perceptual features"
+      ],
+      "correct_answer": "Overextension, in which the child applies a word too broadly based on shared perceptual features",
+      "explanation": "Overextension occurs when a child uses a word too broadly, applying it to objects that share similar perceptual features with the original referent. Calling a horse 'doggie' because both are four-legged animals is a classic example. Underextension (A) is the opposite error—using a word too narrowly (e.g., only calling the family pet 'doggie'). Overregularization (B) involves applying grammatical rules to exceptions (e.g., 'goed' instead of 'went'). Holophrastic speech (D) refers to using single words to express complete thoughts but doesn't involve categorization errors.",
+      "domain": "Domain 4: Growth & Lifespan Development",
+      "knId": "KN21",
+      "source_file": "4-language-development.json",
+      "source_folder": "4 Development",
+      "difficulty": "easy",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 213,
+      "question": "What psychological effects are commonly associated with cerebrovascular accidents (strokes)?",
+      "options": [
+        "Impaired motor function",
+        "Improved cognitive flexibility",
+        "Increased memory retention",
+        "Enhanced emotional regulation"
+      ],
+      "correct_answer": "Impaired motor function",
+      "explanation": "Cerebrovascular accidents (strokes) often lead to impaired motor function due to damage to the brain areas responsible for movement control. Increased memory retention, enhanced emotional regulation, and improved cognitive flexibility are not typical effects of strokes.",
+      "domain": "Domain 1: Biological Bases of Behavior",
+      "knId": "KN1",
+      "source_file": "1-neurological-endocrine-disorders.json",
+      "source_folder": "1 Biopsychology (Neuroscience & Pharmacology)",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 214,
+      "question": "In a study examining gender bias in academic evaluation, psychology faculty independently reviewed an identical research manuscript. Half received it attributed to 'Dr. Jennifer Morris' and half received the same manuscript attributed to 'Dr. James Morris.' Faculty who believed the author was male rated the manuscript significantly higher in scientific rigor, methodological sophistication, and overall publication worthiness. This finding MOST directly illustrates:",
+      "options": [
+        "The ultimate attribution error, because evaluators attributed the work's perceived quality to the author's group membership characteristics",
+        "Illusory correlation, because evaluators incorrectly perceived a statistical relationship between gender and scientific quality",
+        "Evaluative gender bias, in which identical intellectual work is judged as lower quality when attributed to a female rather than a male author",
+        "Ingroup favoritism, because male evaluators disproportionately rated the male-attributed manuscript more favorably"
+      ],
+      "correct_answer": "Evaluative gender bias, in which identical intellectual work is judged as lower quality when attributed to a female rather than a male author",
+      "explanation": "This experimental paradigm (originating with Goldberg, 1968) demonstrates evaluative gender bias: objectively identical work is judged as inferior when attributed to a woman. This constitutes a direct form of sex-based discrimination in intellectual evaluation. The ultimate attribution error (Pettigrew, 2001) refers to applying self-serving attributional logic to in-group versus out-group behavior — it concerns explanations for why groups behave as they do, not differential quality ratings of identical products. Illusory correlation describes overestimating the co-occurrence of two unrelated things (e.g., group membership and a behavior); while conceptually adjacent, it does not precisely describe the evaluative mechanism at work. Ingroup favoritism would require that the effect be driven by evaluators sharing the author's gender — but Goldberg's original research and replications showed that both male and female evaluators exhibited the bias, ruling out simple ingroup favoritism.",
+      "domain": "Domain 3: Social Psychology & Cultural Aspects",
+      "knId": "KN3",
+      "source_file": "3-helping-and-hurting.json",
+      "source_folder": "3 Social Psychology",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": false,
+      "is_org_psych": false
+    },
+    {
+      "id": 215,
+      "question": "When discussing a client's medication management, what is the psychologist's ethical responsibility?",
+      "options": [
+        "To make medication recommendations without consulting the prescribing physician.",
+        "To only focus on therapy and ignore medication discussions.",
+        "To collaborate with the client and their prescribing physician when appropriate.",
+        "To discourage clients from taking medication."
+      ],
+      "correct_answer": "To collaborate with the client and their prescribing physician when appropriate.",
+      "explanation": "The correct answer emphasizes the importance of collaboration in client care, ensuring that all aspects of treatment are considered. The other options either promote unethical practices or neglect the client's needs.",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN8",
+      "source_file": "8-standards-3-4.json",
+      "source_folder": "8 Ethics",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 216,
+      "question": "Which family communication style identified by Satir involves changing the subject or making jokes to avoid conflict?",
+      "options": [
+        "Distracting",
+        "Computing",
+        "Blaming",
+        "Placating"
+      ],
+      "correct_answer": "Distracting",
+      "explanation": "1. \"Distracting\" is the correct answer because, according to Satir, this communication style involves changing the subject or making inappropriate jokes to divert attention away from conflict. It serves as a mechanism to avoid addressing uncomfortable emotions or issues, thereby maintaining a superficial sense of harmony within the family dynamic.\n\n2. The incorrect options are as follows:\n\n- **Placating**: This style involves agreeing with or capitulating to others due to fear, dependency, and a desire to be loved and accepted, rather than avoiding conflict through distraction.\n  \n- **Blaming**: This communication style entails accusing, judging, and bullying others to avoid taking responsibility and to conceal feelings of vulnerability, which is different from diverting attention from conflict.\n\n- **Computing**: This style is characterized by an overly intellectual and rational approach to avoid emotional engagement, focusing on logic rather than using distraction techniques to sidestep conflict.",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN25",
+      "source_file": "6 Family and Group.json",
+      "source_folder": "6 Clinical Interventions",
+      "difficulty": "easy",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 217,
+      "question": "When adjusting predictor cutoffs in hiring processes, what is a primary consideration?",
+      "options": [
+        "C. The length of the assessment process",
+        "A. The cost of the testing materials",
+        "D. The popularity of the assessment tool",
+        "B. The potential impact on diversity in hiring"
+      ],
+      "correct_answer": "B. The potential impact on diversity in hiring",
+      "explanation": "Option B is correct because adjusting predictor cutoffs can significantly affect the diversity of candidates selected for hiring. Options A, C, and D are less relevant to the ethical and practical implications of cutoff adjustments.",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN5",
+      "source_file": "5-cognitive-tests.json",
+      "source_folder": "5 Assessment",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 218,
+      "question": "What is the primary purpose of the Kuder-Richardson formula in psychological testing?",
+      "options": [
+        "C. To determine the standard error of measurement",
+        "B. To estimate the reliability of a test with dichotomous choices",
+        "D. To analyze the variance in test scores",
+        "A. To assess the validity of a test"
+      ],
+      "correct_answer": "B. To estimate the reliability of a test with dichotomous choices",
+      "explanation": "Option B is correct because the Kuder-Richardson formula is specifically designed to estimate the reliability of tests that have dichotomous (yes/no) responses. Option A refers to validity, C pertains to standard error, and D relates to variance analysis.",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "knId": "KN5",
+      "source_file": "5-cognitive-tests.json",
+      "source_folder": "5 Assessment",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 219,
+      "question": "A research team examines the correlation between IQ scores and GPA at three educational levels: elementary school, undergraduate college, and doctoral programs. Controlling for potential confounds, which finding would be most consistent with what is known about range restriction and IQ predictive validity?",
+      "options": [
+        "The IQ-GPA correlation is strongest in elementary school and progressively weakens at higher educational levels due to range restriction",
+        "The IQ-GPA correlation is uniform across all three levels, reflecting intelligence as a domain-general capacity",
+        "The IQ-GPA correlation is strongest at the doctoral level because graduate students must use complex reasoning skills daily",
+        "The IQ-GPA correlation reverses at the doctoral level, with lower-IQ students compensating through greater effort and time investment"
+      ],
+      "correct_answer": "The IQ-GPA correlation is strongest in elementary school and progressively weakens at higher educational levels due to range restriction",
+      "explanation": "The predictive validity of IQ scores for academic achievement is substantially affected by the statistical phenomenon of range restriction: at each higher educational level, selective attrition removes lower-performing (and typically lower-IQ) individuals from the pool. In elementary school, the full population-level range of IQ is represented, allowing IQ to be a powerful predictor of academic differences. By undergraduate school, the population has been filtered by graduation and college acceptance processes. By doctoral programs, the remaining students are highly selected, creating a truncated IQ distribution in which the variance needed for strong correlations is substantially reduced. Within a highly homogeneous high-IQ group, other factors — motivation, conscientiousness, mentorship — explain proportionally more variance in academic outcomes. Option A incorrectly predicts that the correlation strengthens with educational level. Option B ignores range restriction. Option D proposes a reversal unsupported by the literature.",
+      "domain": "Domain 4: Growth & Lifespan Development",
+      "knId": "KN4",
+      "source_file": "4-heredity-and-environment.json",
+      "source_folder": "4 Development",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 220,
+      "question": "Within Bowen’s family systems theory, what does the 'family projection process' describe?",
+      "options": [
+        "The process of establishing clear family boundaries between subsystems",
+        "Children forming triangles with their parents to reduce parental conflicts",
+        "Parents projecting their emotional immaturity onto children, lowering the children's level of differentiation",
+        "The transmission of family secrets across generations"
+      ],
+      "correct_answer": "Parents projecting their emotional immaturity onto children, lowering the children's level of differentiation",
+      "explanation": "1. The correct answer, \"Parents projecting their emotional immaturity onto children, lowering the children's level of differentiation,\" accurately reflects Bowen's concept of the family projection process. This process occurs when parents, due to their own emotional struggles, project their unresolved issues onto their children, which results in the children developing lower levels of differentiation. As a consequence, these children may become more emotionally fused with their parents, perpetuating a cycle of emotional immaturity within the family.\n\n2. The first incorrect option, \"Children forming triangles with their parents to reduce parental conflicts,\" is wrong because it describes the concept of emotional triangles, not the family projection process. The second option, \"The transmission of family secrets across generations,\" inaccurately refers to the concept of multigenerational transmission, which involves the passing down of emotional processes rather than secrets. Lastly, the option \"The process of establishing clear family boundaries between subsystems\" is incorrect because it pertains to structural family therapy's focus on boundaries and subsystems, rather than Bowen's family projection process.",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN25",
+      "source_file": "6 Family and Group.json",
+      "source_folder": "6 Clinical Interventions",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 221,
+      "question": "In adoption studies examining the heritability of intelligence, researchers have found that as adopted children grow older, their IQ scores tend to show:",
+      "options": [
+        "Increasing correlation with adoptive parents' IQ and decreasing correlation with biological parents' IQ",
+        "No significant correlation with either biological or adoptive parents' IQ",
+        "Increasing correlation with biological parents' IQ and decreasing correlation with adoptive parents' IQ",
+        "Equal and stable correlations with both biological and adoptive parents' IQ"
+      ],
+      "correct_answer": "Increasing correlation with biological parents' IQ and decreasing correlation with adoptive parents' IQ",
+      "explanation": "Adoption studies consistently demonstrate that as adopted children age, their IQ scores become more similar to their biological parents and less similar to their adoptive parents, supporting a strong genetic contribution to intelligence. This reflects the concept of active gene-environment correlation, where individuals increasingly select environments matching their genetic predispositions. Option A reverses the actual finding. Option C incorrectly suggests equal contributions that remain static. Option D contradicts the well-established finding that IQ has substantial heritability.",
+      "domain": "Domain 4: Growth & Lifespan Development",
+      "knId": "KN23",
+      "source_file": "4-heredity-and-environment.json",
+      "source_folder": "4 Development",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 222,
+      "question": "Which stage in group therapy, according to Yalom and Leszcz, is characterized by group members competing for power, expressing hostility, and establishing a pecking order?",
+      "options": [
+        "Development of cohesiveness stage",
+        "Termination and separation stage",
+        "Conflict, dominance, and rebellion stage",
+        "Initial orientation and hesitant participation stage"
+      ],
+      "correct_answer": "Conflict, dominance, and rebellion stage",
+      "explanation": "1. The \"Conflict, dominance, and rebellion stage\" is the correct answer because, in this stage, group members actively compete for power and control within the group. They often express hostility towards one another and may become critical of each other as they attempt to establish a pecking order, reflecting their struggle for dominance and influence.\n\n2. The \"Initial orientation and hesitant participation stage\" is incorrect because this stage focuses on members clarifying the group's purpose and relying on the leader for guidance, rather than competing for power. The \"Development of cohesiveness stage\" is also incorrect, as it is characterized by decreased conflict and increased trust among members, leading to a supportive and unified group environment. Lastly, the \"Termination and separation stage\" is not applicable here, as it pertains to the conclusion of the group therapy process rather than the dynamics of power struggles and conflict that occur during the earlier stages.",
+      "domain": "Domain 6: Treatment & Intervention",
+      "knId": "KN16",
+      "source_file": "6 Family and Group.json",
+      "source_folder": "6 Clinical Interventions",
+      "difficulty": "easy",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 223,
+      "question": "What cognitive advantage is often associated with bilingualism in children?",
+      "options": [
+        "Better social skills",
+        "Increased vocabulary in both languages",
+        "Enhanced problem-solving skills",
+        "Improved physical coordination"
+      ],
+      "correct_answer": "Enhanced problem-solving skills",
+      "explanation": "Bilingualism is linked to enhanced cognitive flexibility and problem-solving skills due to the mental juggling of two languages. The other options, while potentially true, are not the primary cognitive advantages associated with bilingualism.",
+      "domain": "Domain 4: Growth & Lifespan Development",
+      "knId": "KN6",
+      "source_file": "4-language-development.json",
+      "source_folder": "4 Development",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": false,
+      "is_org_psych": false
+    },
+    {
+      "id": 224,
+      "question": "Dr. Kim, a licensed psychologist, suspects that a 7-year-old client is being physically abused by a parent. Dr. Kim wants to contact the child's pediatrician to gather additional information. Which of the following best describes the consent requirements for this contact?",
+      "options": [
+        "Dr. Kim must obtain written consent from both parents before contacting the pediatrician",
+        "Dr. Kim needs consent from the child's legal guardian but may proceed if only one parent consents",
+        "Dr. Kim must obtain a court order before contacting any third-party provider about suspected abuse",
+        "As a mandated reporter, Dr. Kim may contact the pediatrician without parental consent when gathering information related to a suspected abuse report"
+      ],
+      "correct_answer": "As a mandated reporter, Dr. Kim may contact the pediatrician without parental consent when gathering information related to a suspected abuse report",
+      "explanation": "Mandated reporting laws generally override standard confidentiality and consent requirements. When a psychologist has reasonable suspicion of child abuse, the duty to report and gather relevant information supersedes the typical requirement to obtain parental consent before contacting other providers. Option A is incorrect because mandated reporting obligations override standard consent requirements. Option C is incorrect because court orders are not required for mandated reporting activities. Option D applies to standard treatment situations, not mandated reporting contexts where the suspected abuser may be the guardian whose consent would typically be required.",
+      "domain": "Domain 8: Ethical, Legal & Professional Issues",
+      "knId": "KN8",
+      "source_file": "8-standards-3-4.json",
+      "source_folder": "8 Ethics",
+      "difficulty": "hard",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    },
+    {
+      "id": 225,
+      "question": "A parent in Adlerian family therapy reports that her 9-year-old refuses to bring an umbrella on rainy days despite the parent's repeated warnings. The Adlerian therapist instructs the parent to stop arguing, say nothing further, and allow the child to arrive at school wet. The therapist explains that the child needs to experience the direct outcome of his own choice in order to develop social interest and responsibility. The therapist is recommending which Adlerian concept?",
+      "options": [
+        "Logical consequences, because the child experiences a planned, parent-arranged outcome that is logically connected to the misbehavior",
+        "Mistaken goals correction, because the parent is interrupting the child's pursuit of undue attention through the conflict over the umbrella",
+        "Natural consequences, because the child experiences an outcome that flows directly and automatically from his own decision without parental mediation",
+        "Encouragement, because the parent is withdrawing negative reinforcement in order to build the child's intrinsic motivation"
+      ],
+      "correct_answer": "Natural consequences, because the child experiences an outcome that flows directly and automatically from his own decision without parental mediation",
+      "explanation": "In Adlerian theory, natural consequences are the direct, automatic results of a child's behavior as produced by the physical or social environment without adult intervention (getting wet because one did not bring an umbrella). They are distinguished from logical consequences, which are arranged by a parent or teacher, are logically related to the misbehavior, and require adult action to deliver. Encouragement is a broader Adlerian principle of building self-efficacy and is not a consequence type. Mistaken goals correction refers to identifying and redirecting the mistaken purpose behind misbehavior, which is distinct from the specific disciplinary strategy described.",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
+      "knId": "KN6",
+      "source_file": "2-psychodynamic-and-humanistic.json",
+      "source_folder": "2 Learning and Memory",
+      "difficulty": "medium",
+      "question_type": "standard",
+      "isScored": true,
+      "is_org_psych": false
+    }
+  ]
+}

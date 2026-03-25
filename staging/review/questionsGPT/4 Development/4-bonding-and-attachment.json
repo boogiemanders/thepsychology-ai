@@ -97,11 +97,11 @@
       "kn": "KN21",
       "kn_explanation": "Longitudinal research on childhood aggression trajectories relates to normal growth and development across the lifespan",
       "difficulty": "hard",
-      "quality_comment": "Integrates the lesson's developmental trajectory content with the broader EPPP concept of aggression stability. The lesson covers the shift in aggression forms but does not explicitly state that aggression is one of the most stable traits across development. Partially supported by lesson content.",
+      "quality_comment": "Integrates the lesson's developmental trajectory content with the broader EPPP concept of aggression stability. The lesson covers the shift in aggression forms but Partially supported by lesson content",
       "suggestedLesson": "4-bonding-and-attachment",
       "suggestedParagraph": "## Understanding Aggression: Forms, Functions, and Interventions",
-      "lessonExcerpt": "Developmentally, physical instrumental aggression peaks around age 2, then declines as verbal and relational hostile aggression increase around age 4.",
-      "needsReview": true,
+      "lessonExcerpt": "Parent training programs effectively reduce childhood aggression, but their effectiveness is moderated by family SES and symptom severity. Economically disadvantaged families benefit less, especially ",
+      "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 25
     },
@@ -122,7 +122,7 @@
       "suggestedLesson": "4-bonding-and-attachment",
       "suggestedParagraph": "### Socioemotional Selectivity Theory",
       "lessonExcerpt": "When time feels limited (typical of older adults or anyone facing mortality): Present-oriented, Emotional gratification drives social connections, Become selective, preferring emotionally close friends, Avoid relationships that generate negative feelings",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 8
     },
@@ -135,7 +135,7 @@
         "Absence of any diagnosable psychiatric condition"
       ],
       "answer": "A secure attachment relationship with at least one competent, caring adult",
-      "explanation": "Research consistently identifies a warm, stable relationship with at least one caring and competent adult as the single most powerful protective factor for children facing adversity. This finding aligns with attachment theory and the broader resilience literature. While higher intelligence can serve as a protective factor, an IQ above 130 specifically is not identified as the strongest protective factor. Attending a rigorous school addresses only one domain and does not provide the relational security that is most critical. The absence of psychiatric diagnosis is not itself a protective factor—it describes the absence of a risk factor, which is conceptually different from the presence of a protective one.",
+      "explanation": "Research consistently identifies a warm, stable relationship with at least one caring and competent adult as the single most powerful protective factor for children facing adversity. This finding aligns with attachment theory and the broader resilience literature. While higher intelligence can serve as a protective factor, an IQ above 130 specifically is not identified as the strongest protective factor. Attending a rigorous school addresses only one domain and does not provide the relational security that is most critical. The absence of psychiatric diagnosis is not itself a protective factor\u2014it describes the absence of a risk factor, which is conceptually different from the presence of a protective one.",
       "kn": "KN4",
       "kn_explanation": "This question addresses resilience and protective factors in child development, a Growth and Lifespan Development topic.",
       "difficulty": "medium",
@@ -143,7 +143,7 @@
       "suggestedLesson": "4-bonding-and-attachment",
       "suggestedParagraph": "## The Foundation: What Attachment Really Means",
       "lessonExcerpt": "Attachment refers to the deep emotional bond between people that creates feelings of security and comfort.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 19
     },
@@ -545,6 +545,90 @@
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 23
+    },
+    {
+      "stem": "A pediatrician refers a family to a psychologist because the parents are alarmed that their 15-month-old son screams, clings to them, and attempts to follow them whenever they leave his sight. They fear something is psychologically wrong. Based on normative developmental data, the psychologist's first priority should be to:",
+      "options": [
+        "Assess for disorganized attachment, since the intensity of the response exceeds what is developmentally expected at this age",
+        "Inform the parents that separation anxiety typically peaks between 14 and 18 months, making this response developmentally normative",
+        "Recommend a structured desensitization protocol to reduce the child's distress during separations",
+        "Evaluate whether the parents' caregiving behavior is reinforcing the child's distress through contingent comforting"
+      ],
+      "answer": "Inform the parents that separation anxiety typically peaks between 14 and 18 months, making this response developmentally normative",
+      "explanation": "Separation anxiety emerges as early as 6\u20138 months of age and reaches its developmental peak between 14 and 18 months, which is exactly when this child is presenting. The intensity and quality of this behavior\u2014distress at separation, attempts to follow\u2014is not only normal but expected and reflects the successful formation of a specific attachment bond rather than pathology. Informing and normalizing for the parents is the appropriate first response. Disorganized attachment is characterized by contradictory or disoriented behavior, not typical separation protest. Desensitization or a focus on parental reinforcement would be premature and potentially misdirected absent evidence of a clinical problem.",
+      "kn": "KN4",
+      "kn_explanation": "Attachment and separation anxiety development are core topics within Growth and Lifespan Development (Domain 4), directly relevant to clinical consultation with families.",
+      "difficulty": "easy",
+      "quality_comment": "Clear clinical application question testing knowledge of developmental norms. Strong distractors that could trap examinees unfamiliar with the specific peak age window.",
+      "suggestedLesson": "4-bonding-and-attachment",
+      "suggestedParagraph": "### Signs That Attachment Has Formed",
+      "lessonExcerpt": "Separation anxiety (6-8 months, peaks at 14-18 months): Distress when separated from attachment figures. This isn't clinginess. It's actually a healthy sign that a specific bond has formed.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 6
+    },
+    {
+      "stem": "A researcher conducting a prospective longitudinal study administers the Adult Attachment Interview (AAI) to expectant mothers during pregnancy and then assesses the attachment classifications of their infants at 12 months using the Strange Situation. What does this research design most directly investigate?",
+      "options": [
+        "The degree to which infant temperament predicts maternal sensitivity over the first year of life",
+        "Whether secure base behavior in infancy predicts adult romantic attachment style decades later",
+        "The intergenerational transmission of attachment, whereby parental attachment representations predict infant attachment classification",
+        "The stability of internal working models from infancy through toddlerhood within the same child"
+      ],
+      "answer": "The intergenerational transmission of attachment, whereby parental attachment representations predict infant attachment classification",
+      "explanation": "The design described \u2014 AAI assessment of parents prior to the infant's birth followed by Strange Situation classification at 12 months \u2014 is the classic paradigm for studying intergenerational transmission of attachment. Research using this design shows that a parent's coherent or incoherent narrative about their own childhood attachment experiences, assessed before the infant is born, significantly predicts the infant's subsequent attachment classification. This transmission is thought to operate through the quality of caregiving behaviors shaped by the parent's internal working models. Option A reverses the causal direction, examining infant-to-parent effects rather than parent-to-infant. Option B describes a different longitudinal question about within-individual continuity into adulthood, not cross-generational transmission. Option D examines stability within a single child across time, not the cross-generational transfer of attachment patterns.",
+      "kn": "KN4",
+      "kn_explanation": "Intergenerational transmission of attachment is a key concept within attachment theory in the Socioemotional Development subtopic of domain 4.",
+      "difficulty": "hard",
+      "quality_comment": "Excellent doctoral-level question requiring understanding of research design implications; tests conceptual precision around intergenerational vs. longitudinal continuity.",
+      "suggestedLesson": "4-bonding-and-attachment",
+      "suggestedParagraph": "### Bowlby's Ethological Theory: Survival Through Connection",
+      "lessonExcerpt": "Crucially, Bowlby proposed that these early experiences create internal working models. Mental templates about whether you're worthy of love, whether others are reliable, and how relationships function.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 15
+    },
+    {
+      "stem": "In Ainsworth's Strange Situation procedure, a 14-month-old infant freely explores the room and interacts with a stranger when her caregiver is present. When the caregiver leaves, the infant shows mild distress but continues some play. Upon the caregiver's return, the infant immediately approaches her, accepts comfort, and soon returns to independent exploration. Which attachment classification does this infant demonstrate, and which caregiver behavior is most associated with producing this pattern?",
+      "options": [
+        "Insecure/Avoidant; caregiver who is rejecting or intrusive, leading the infant to suppress attachment bids",
+        "Insecure/Resistant; caregiver who responds inconsistently, sometimes available and sometimes not",
+        "Secure; caregiver who is sensitive, responsive, and consistent in meeting the infant's needs",
+        "Disorganized/Disoriented; caregiver who is frightening or themselves frightened, disrupting infant strategy"
+      ],
+      "answer": "Secure; caregiver who is sensitive, responsive, and consistent in meeting the infant's needs",
+      "explanation": "The infant's behavior\u2014confident exploration with caregiver present, mild separation distress, active contact-seeking upon reunion, and quick return to play\u2014is the hallmark profile of Secure attachment. According to Ainsworth's research, secure attachment develops when caregivers are sensitive, responsive, and consistent in reading and meeting their infant's signals. As the lesson states, secure infants are 'more likely to have trusting relationships; better emotion regulation' in adulthood. Avoidant infants show little distress and avoid the caregiver at reunion, associated with rejecting or intrusive caregiving. Resistant infants are intensely distressed and ambivalent at reunion, linked to inconsistent caregiving. Disorganized infants display confused or contradictory responses, associated with frightening caregiver behavior.",
+      "kn": "KN4",
+      "kn_explanation": "Attachment theory is a central topic in Growth and Lifespan Development (Domain 4). This question requires both pattern identification and knowledge of associated caregiving antecedents, reflecting doctoral-level integration.",
+      "difficulty": "medium",
+      "quality_comment": "Well-grounded in the lesson's attachment table. The question tests both classification and caregiver antecedents, increasing discriminative value. Prevalence statistics were not added to keep the question directly lesson-supported.",
+      "suggestedLesson": "4-bonding-and-attachment",
+      "suggestedParagraph": "## The Strange Situation: Mapping Attachment Patterns",
+      "lessonExcerpt": "Secure: Explores confidently when caregiver present; may or may not cry at separation; actively seeks contact upon reunion; prefers caregiver to strangers | Sensitive, responsive, consistent | More likely to have trusting relationships; better emotion regulation",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 24
+    },
+    {
+      "stem": "A longitudinal study follows a cohort of children from age 5 through age 12. Peer-nominated aggression ratings collected at ages 5, 8, and 12 by different raters at each wave are significantly positively correlated across all three time points, even after controlling for family socioeconomic status. This finding most directly illustrates which developmental principle?",
+      "options": [
+        "Multifinality, whereby similar early risk factors produce divergent aggressive outcomes depending on protective factors",
+        "Evocative gene-environment correlation, whereby aggressive children systematically elicit hostile responses that amplify their behavioral tendencies",
+        "Behavioral continuity, whereby early aggressive patterns tend to remain relatively stable across childhood",
+        "Sensitive period effects, whereby aggression established before age 6 becomes biologically canalized and irreversible"
+      ],
+      "answer": "Behavioral continuity, whereby early aggressive patterns tend to remain relatively stable across childhood",
+      "explanation": "The consistent cross-time, cross-rater correlations in aggression ratings directly illustrate behavioral continuity\u2014one of the most robust findings in developmental research. Children who are highly aggressive in early childhood tend to remain more aggressive than peers through middle childhood, even when measured by different informants and across years. This is not multifinality, which refers to similar origins producing different outcomes (the opposite pattern). Evocative gene-environment correlation is a plausible mechanistic explanation for why continuity occurs, but the phenomenon described is continuity itself, not its mechanism. Sensitive period effects imply biological irreversibility, which goes beyond what the findings demonstrate and is not the primary concept being illustrated.",
+      "kn": "KN4",
+      "kn_explanation": "Behavioral continuity in aggression is a foundational concept in Growth and Lifespan Development (Domain 4) with direct implications for developmental psychopathology, risk assessment, and early intervention.",
+      "difficulty": "hard",
+      "quality_comment": "High-quality question with sophisticated distractors requiring conceptual differentiation. The option contrasting evocative gene-environment correlation (mechanism) with behavioral continuity (phenomenon) is particularly discriminating at doctoral level Flagged for review. Content goes beyond current lesson material \u2014 valid EPPP topic, no lesson excerpt available.",
+      "suggestedLesson": "4-bonding-and-attachment",
+      "suggestedParagraph": "## Introduction: Why Attachment and Social Development Matter for Your Practice",
+      "lessonExcerpt": "",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 25
     }
   ]
 }

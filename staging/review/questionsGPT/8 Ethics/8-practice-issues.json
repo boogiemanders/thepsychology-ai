@@ -9,7 +9,7 @@
         "The defendant is placed on probation with mandatory outpatient treatment instead of incarceration"
       ],
       "answer": "The defendant did commit the act but was not held criminally responsible because they did not understand their actions were wrong at the time of the offense",
-      "explanation": "The lesson content clearly distinguishes insanity from competency: 'Insanity refers to the defendant's mental state at the time of the crime. It's about whether they understood their actions were legally or morally wrong when they committed the offense.' A not guilty by reason of insanity verdict means the defendant committed the criminal act but, due to mental illness, could not appreciate the wrongfulness of their conduct at the time. Typically, this results in commitment to a psychiatric facility, not unconditional release. Option A is wrong because defendants found insane are almost always committed to a mental institution rather than simply released. Option C is wrong because it describes competency to stand trial, not insanity—competency concerns the defendant's current mental state. Option D is wrong because the typical outcome is psychiatric commitment, not probation.",
+      "explanation": "The lesson content clearly distinguishes insanity from competency: 'Insanity refers to the defendant's mental state at the time of the crime. It's about whether they understood their actions were legally or morally wrong when they committed the offense.' A not guilty by reason of insanity verdict means the defendant committed the criminal act but, due to mental illness, could not appreciate the wrongfulness of their conduct at the time. Typically, this results in commitment to a psychiatric facility, not unconditional release. Option A is wrong because defendants found insane are almost always committed to a mental institution rather than simply released. Option C is wrong because it describes competency to stand trial, not insanity\u2014competency concerns the defendant's current mental state. Option D is wrong because the typical outcome is psychiatric commitment, not probation.",
       "kn": "KN63",
       "kn_explanation": "NGRI verdict is a legal/judicial concept affecting psychological practice",
       "difficulty": "medium",
@@ -30,7 +30,7 @@
         "Negligence in clinical practice"
       ],
       "answer": "Unprofessional conduct",
-      "explanation": "The lesson content provides a clear ranking based on ASPPB data from 1974 to 2023, listing unprofessional conduct as the number one reason for disciplinary action, described as 'the catch-all category.' Sexual misconduct ranks second, negligence third, and non-sexual dual relationships fourth. Many examinees assume sexual misconduct is most common because it receives the most attention, but unprofessional conduct—a broad category encompassing various professional violations—actually leads the list. Option A is wrong because sexual misconduct ranks second. Option C is wrong because non-sexual dual relationships rank fourth. Option D is wrong because negligence ranks third.",
+      "explanation": "The lesson content provides a clear ranking based on ASPPB data from 1974 to 2023, listing unprofessional conduct as the number one reason for disciplinary action, described as 'the catch-all category.' Sexual misconduct ranks second, negligence third, and non-sexual dual relationships fourth. Many examinees assume sexual misconduct is most common because it receives the most attention, but unprofessional conduct\u2014a broad category encompassing various professional violations\u2014actually leads the list. Option A is wrong because sexual misconduct ranks second. Option C is wrong because non-sexual dual relationships rank fourth. Option D is wrong because negligence ranks third.",
       "kn": "KN64",
       "kn_explanation": "Disciplinary actions data relates to identification and management of ethical issues",
       "difficulty": "medium",
@@ -51,7 +51,7 @@
         "No, but only because the psychologist recommended a legitimate form of treatment"
       ],
       "answer": "No, because no professional relationship was established, so the first element of malpractice (duty of care) is not met",
-      "explanation": "Malpractice requires all 'Four Ds': Duty of Care, Dereliction of Duty, Damages, and Direct Cause. The first D—Duty of Care—requires that a professional relationship existed. At a neighborhood barbecue, the psychologist was making a casual social remark, not establishing a therapist-client relationship. Without a professional relationship, there is no duty of care, and the malpractice claim fails at the first element. Option A incorrectly assumes a casual suggestion creates professional liability. Option B overstates the scope of duty of care. Option D focuses on the wrong element; the issue is not whether CBT is legitimate but whether a duty existed.",
+      "explanation": "Malpractice requires all 'Four Ds': Duty of Care, Dereliction of Duty, Damages, and Direct Cause. The first D\u2014Duty of Care\u2014requires that a professional relationship existed. At a neighborhood barbecue, the psychologist was making a casual social remark, not establishing a therapist-client relationship. Without a professional relationship, there is no duty of care, and the malpractice claim fails at the first element. Option A incorrectly assumes a casual suggestion creates professional liability. Option B overstates the scope of duty of care. Option D focuses on the wrong element; the issue is not whether CBT is legitimate but whether a duty existed.",
       "kn": "KN61",
       "kn_explanation": "Casual advice-giving implicates APA ethical principles regarding professional boundaries",
       "difficulty": "medium",
@@ -72,7 +72,7 @@
         "Refuse to acknowledge the existence of the records under any circumstances"
       ],
       "answer": "Contact the requesting party to negotiate withdrawal, or file a motion to quash or request a protective order from the court",
-      "explanation": "According to the APA's roadmap for handling subpoenas, after the client refuses to authorize release (Step 3), the psychologist should contact the requesting party to negotiate or withdraw the request. If that fails, Step 4 instructs the psychologist to seek court guidance, either informally through a letter or formally with a motion to quash or a protective order. Option A is incorrect because a subpoena does not automatically override psychotherapist-patient privilege. Option B is incorrect and illegal—destroying records in response to a subpoena could constitute obstruction of justice. Option D is incorrect because outright refusal without taking proper legal steps is not the recommended approach.",
+      "explanation": "According to the APA's roadmap for handling subpoenas, after the client refuses to authorize release (Step 3), the psychologist should contact the requesting party to negotiate or withdraw the request. If that fails, Step 4 instructs the psychologist to seek court guidance, either informally through a letter or formally with a motion to quash or a protective order. Option A is incorrect because a subpoena does not automatically override psychotherapist-patient privilege. Option B is incorrect and illegal\u2014destroying records in response to a subpoena could constitute obstruction of justice. Option D is incorrect because outright refusal without taking proper legal steps is not the recommended approach.",
       "kn": "KN63",
       "kn_explanation": "Subpoena handling involves laws, statutes, and judicial decisions affecting practice",
       "difficulty": "medium",
@@ -1235,7 +1235,7 @@
       "suggestedLesson": "8-practice-issues",
       "suggestedParagraph": "## Understanding Malpractice: The Four Ds You Can't Forget",
       "lessonExcerpt": "The lesson does not specifically address child custody decision-making criteria, indicating a gap in coverage.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 21
     },
@@ -1280,6 +1280,111 @@
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 30
+    },
+    {
+      "stem": "During a therapy session, a client reveals that her previous therapist initiated a sexual relationship with her during treatment. The current therapist's most appropriate first step is to:",
+      "options": [
+        "Immediately file a formal ethics complaint against the previous therapist with the APA Ethics Committee",
+        "Help the client understand her options, which may include filing an ethics complaint, and assist her in addressing the impact of the exploitation",
+        "Contact the previous therapist directly to confirm the client's allegations before taking action",
+        "Advise the client that therapist-client sexual contact is not illegal in most states and therefore cannot be reported"
+      ],
+      "answer": "Help the client understand her options, which may include filing an ethics complaint, and assist her in addressing the impact of the exploitation",
+      "explanation": "APA Standard 10.05 addresses sexual intimacies with current therapy clients, and when a therapist learns of such misconduct by a colleague, the appropriate response prioritizes client welfare. The therapist should help the client explore options including filing an ethics complaint, rather than unilaterally filing on the client's behalf (which could retraumatize). Option A is wrong because immediately filing without client input violates the client's autonomy. Option C is wrong because contacting the previous therapist breaches the current client's confidentiality. Option D is factually incorrect\u2014sexual contact with clients is illegal in many states and always violates ethics standards.",
+      "kn": "KN8",
+      "kn_explanation": "This question addresses obligations when learning of sexual misconduct by colleagues, falling under ethical/legal/professional issues.",
+      "difficulty": "medium",
+      "quality_comment": "Clinically relevant scenario. The lesson discusses sexual misconduct as the #2 reason for disciplinary action but does not provide detailed guidance on how to respond when a client reports a prior therapist's misconduct.",
+      "suggestedLesson": "8-practice-issues",
+      "suggestedParagraph": "## What Actually Gets Psychologists in Trouble",
+      "lessonExcerpt": "Sexual misconduct (any sexual contact with clients)",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 4
+    },
+    {
+      "stem": "A defendant is found not guilty by reason of insanity (NGRI) for a violent felony. This verdict most accurately means that:",
+      "options": [
+        "The defendant is free to return to the community immediately since they were acquitted",
+        "The defendant will serve their full prison sentence in a psychiatric facility instead of a prison",
+        "The defendant committed the act but lacked the required mental state at the time of the crime, and will typically be committed to a psychiatric facility",
+        "The defendant was found incompetent to stand trial and the charges are dismissed pending restoration of competency"
+      ],
+      "answer": "The defendant committed the act but lacked the required mental state at the time of the crime, and will typically be committed to a psychiatric facility",
+      "explanation": "The insanity defense addresses the defendant's mental state at the time of the crime\u2014whether they understood their actions were legally or morally wrong. An NGRI verdict acknowledges the defendant committed the act but lacked the requisite mens rea. It does not result in acquittal with freedom (Option A) nor is it a prison sentence served elsewhere (Option B). Option D confuses insanity (retrospective, at time of crime) with competency (current ability to understand charges and assist counsel), which is a key distinction the lesson emphasizes.",
+      "kn": "KN8",
+      "kn_explanation": "This question tests understanding of the insanity defense, a forensic psychology concept within the ethical/legal/professional domain.",
+      "difficulty": "medium",
+      "quality_comment": "Strong question testing the insanity vs. competency distinction, which is well-covered in the lesson content.",
+      "suggestedLesson": "8-practice-issues",
+      "suggestedParagraph": "### Insanity vs. Competency",
+      "lessonExcerpt": "Insanity refers to the defendant's mental state at the time of the crime. It's about whether they understood their actions were legally or morally wrong when they committed the offense... Competency refers to the defendant's mental state right now. It's about whether they can currently understand the charges against them and cooperate with their attorney.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 5
+    },
+    {
+      "stem": "According to data from the Association of State and Provincial Psychology Boards (ASPPB), which of the following represents the most frequently cited category of disciplinary action against psychologists?",
+      "options": [
+        "Sexual misconduct with clients",
+        "Unprofessional conduct",
+        "Negligence in providing standard of care",
+        "Violations of confidentiality"
+      ],
+      "answer": "Unprofessional conduct",
+      "explanation": "According to ASPPB data from 1974 to 2023 as presented in the lesson, unprofessional conduct is the number one reason psychologists face disciplinary action, followed by sexual misconduct at number two, and negligence at number three. Confidentiality violations are not listed in the top ten. Option A (sexual misconduct) is the second most common. Option C (negligence) is third. Option D (confidentiality violations) is not among the top ten categories listed.",
+      "kn": "KN8",
+      "kn_explanation": "This question tests knowledge of empirical data on ethics complaint trends, a key topic in the ethical/legal/professional domain.",
+      "difficulty": "medium",
+      "quality_comment": "Straightforward factual question directly supported by lesson content with specific ranking data.",
+      "suggestedLesson": "8-practice-issues",
+      "suggestedParagraph": "## What Actually Gets Psychologists in Trouble",
+      "lessonExcerpt": "Based on data from 1974 to 2023, here are the top ten reasons: 1. Unprofessional conduct (the catch-all category) 2. Sexual misconduct (any sexual contact with clients) 3. Negligence (failing to meet standards of care)",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 10
+    },
+    {
+      "stem": "A court mandates that an individual convicted of domestic violence attend therapy as a condition of probation. During the course of treatment, the prosecution subpoenas the therapist's records. In this court-ordered treatment scenario, who holds the therapist-client privilege?",
+      "options": [
+        "The client retains privilege and can prevent disclosure of therapy records",
+        "The therapist holds privilege and decides whether to disclose records",
+        "Privilege is typically waived or significantly limited because treatment was court-ordered",
+        "The client's defense attorney holds privilege on behalf of the client"
+      ],
+      "answer": "Privilege is typically waived or significantly limited because treatment was court-ordered",
+      "explanation": "When treatment is mandated by the court, the usual therapist-client privilege is typically waived or substantially limited. The rationale is that the court ordered the treatment as part of a legal proceeding, and the court retains an interest in knowing whether the individual is complying with and benefiting from the mandated treatment. Option A is incorrect because the client's ability to assert privilege is significantly diminished in court-ordered treatment contexts. Option B is incorrect because the therapist does not independently hold privilege \u2014 privilege belongs to the client, but in mandated treatment it is limited by the court's authority. Option D is incorrect because while the defense attorney represents the client's interests, the attorney does not hold therapeutic privilege, and the court-ordered nature of treatment limits the privilege regardless.",
+      "kn": "KN8",
+      "kn_explanation": "This question addresses privilege in the context of court-ordered treatment, a legal/ethical topic within Domain 8.",
+      "difficulty": "hard",
+      "quality_comment": "Tests a nuanced legal concept frequently appearing on the EPPP. The lesson discusses subpoenas and privilege but",
+      "suggestedLesson": "8-practice-issues",
+      "suggestedParagraph": "## When a Subpoena Lands on Your Desk",
+      "lessonExcerpt": "Assert psychotherapist-patient privilege on behalf of your client. Only reveal information with explicit client authorization or a court order.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 16
+    },
+    {
+      "stem": "Dr. Rivera receives a subpoena requesting her therapy records for a client involved in a civil lawsuit. The client does not authorize release of the records. After contacting the requesting party to negotiate withdrawal of the subpoena unsuccessfully, what should Dr. Rivera do next according to APA guidelines?",
+      "options": [
+        "Release only the records that are directly relevant to the legal matter",
+        "Refuse to comply with the subpoena entirely and inform the court she will not participate",
+        "Seek guidance from the court, such as filing a motion to quash the subpoena or requesting a protective order",
+        "Release the records but redact all information not specifically mentioned in the subpoena"
+      ],
+      "answer": "Seek guidance from the court, such as filing a motion to quash the subpoena or requesting a protective order",
+      "explanation": "According to APA guidelines, when a client does not authorize release and negotiation with the requesting party fails, the psychologist should seek court guidance\u2014either informally through a letter or formally by filing a motion to quash or requesting a protective order. Option A is incorrect because releasing any records without client authorization or court order violates confidentiality. Option B is incorrect because outright refusal to comply may result in contempt of court; the proper approach is to seek legal resolution. Option D is incorrect because redacting records still constitutes unauthorized release without client consent or court order.",
+      "kn": "KN8",
+      "kn_explanation": "This question addresses the procedure for responding to subpoenas when client authorization is not given, a key topic under professional practice issues in Domain 8.",
+      "difficulty": "medium",
+      "quality_comment": "Tests the sequential decision-making process for subpoena response, which is a high-yield EPPP topic. Distractors represent common errors practitioners make.",
+      "suggestedLesson": "8-practice-issues",
+      "suggestedParagraph": "## When a Subpoena Lands on Your Desk",
+      "lessonExcerpt": "Still stuck? Ask the court for help. Either informally through a letter or formally with a motion to quash the subpoena or request a protective order.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 23
     }
   ]
 }

@@ -9,7 +9,7 @@
         "Acetylcholine transmission at the neuromuscular junction"
       ],
       "answer": "Mood, sleep, and appetite regulation",
-      "explanation": "Serotonin is a key neurotransmitter involved in regulating mood, sleep, and appetite, which is why SSRIs—which increase serotonin availability in the synapse by blocking its reuptake—are used to treat depression, anxiety, and sleep disturbances. Motor coordination and procedural memory are primarily associated with the basal ganglia and cerebellum, not serotonin. SSRIs do not work by affecting dopamine synthesis in the mesolimbic pathway. Acetylcholine transmission at the neuromuscular junction is unrelated to serotonin function.",
+      "explanation": "Serotonin is a key neurotransmitter involved in regulating mood, sleep, and appetite, which is why SSRIs\u2014which increase serotonin availability in the synapse by blocking its reuptake\u2014are used to treat depression, anxiety, and sleep disturbances. Motor coordination and procedural memory are primarily associated with the basal ganglia and cerebellum, not serotonin. SSRIs do not work by affecting dopamine synthesis in the mesolimbic pathway. Acetylcholine transmission at the neuromuscular junction is unrelated to serotonin function.",
       "kn": "KN2",
       "kn_explanation": "Asks about SSRI drug classification and mechanism of action, fitting drug mechanisms and desired/adverse effects.",
       "difficulty": "easy",
@@ -32,13 +32,13 @@
       "answer": "Serotonin",
       "explanation": "Serotonin (5-HT) is a neurotransmitter that plays a significant role in regulating both mood and sleep. SSRIs work by blocking the reuptake of serotonin, increasing its availability in the synapse. Low serotonin levels are associated with depression, and serotonin also helps regulate sleep-wake cycles. Dopamine is primarily associated with reward, motivation, and motor control. Norepinephrine is involved in alertness and the stress response. GABA is the brain's primary inhibitory neurotransmitter involved in anxiety reduction and sedation but is not the primary target of SSRIs.",
       "kn": "KN1",
-      "kn_explanation": "Asks about the neurotransmitter (serotonin) and its role in depression/insomnia — neurobiological bases of mood and cognition.",
+      "kn_explanation": "Asks about the neurotransmitter (serotonin) and its role in depression/insomnia \u2014 neurobiological bases of mood and cognition.",
       "difficulty": "easy",
       "quality_comment": "Clinically relevant question connecting neurotransmitter function to pharmacological intervention. The lesson discusses serotonin's roles across multiple files.",
       "suggestedLesson": "1-neurons-and-neurotransmitters",
       "suggestedParagraph": "### Serotonin: The Mood and Sleep Regulator",
       "lessonExcerpt": "Serotonin is involved in mood regulation, sleep, appetite, and pain perception. Low levels are associated with depression, anxiety, and sleep disturbances.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 6
     },
@@ -51,9 +51,9 @@
         "Deficient GABA levels producing chronic insomnia"
       ],
       "answer": "Deficient serotonin levels in specific brain regions",
-      "explanation": "Bulimia nervosa is associated with low serotonin levels in specific brain regions. Option A is incorrect because elevated mesolimbic dopamine is associated with addiction and reward, not bulimia specifically. Option C describes the pattern seen in anorexia nervosa, not bulimia—anorexia involves higher-than-normal brain serotonin, and food restriction temporarily lowers serotonin, creating a negative reinforcement cycle. Option D describes a pattern associated with anxiety and insomnia, not eating disorders specifically.",
+      "explanation": "Bulimia nervosa is associated with low serotonin levels in specific brain regions. Option A is incorrect because elevated mesolimbic dopamine is associated with addiction and reward, not bulimia specifically. Option C describes the pattern seen in anorexia nervosa, not bulimia\u2014anorexia involves higher-than-normal brain serotonin, and food restriction temporarily lowers serotonin, creating a negative reinforcement cycle. Option D describes a pattern associated with anxiety and insomnia, not eating disorders specifically.",
       "kn": "KN1",
-      "kn_explanation": "Asks about neurobiological/neurotransmitter systems implicated in bulimia nervosa — neurobiological bases of behavior in disease.",
+      "kn_explanation": "Asks about neurobiological/neurotransmitter systems implicated in bulimia nervosa \u2014 neurobiological bases of behavior in disease.",
       "difficulty": "medium",
       "quality_comment": "Strong question with a clinically relevant distractor (Option C) that tests the important distinction between serotonin patterns in bulimia vs. anorexia.",
       "suggestedLesson": "1-neurons-and-neurotransmitters",
@@ -74,7 +74,7 @@
       "answer": "Acetylcholine at neuromuscular junctions",
       "explanation": "Myasthenia gravis destroys acetylcholine (ACh) receptors at neuromuscular junctions, causing progressive muscle weakness. ACh is the neurotransmitter responsible for muscle contraction at the neuromuscular junction, making it essential for voluntary motor movement. Option A (dopamine at substantia nigra) is associated with Parkinson's disease. Option B (GABA) is the primary inhibitory neurotransmitter and is not directly involved at the neuromuscular junction. Option D (serotonin) affects mood, appetite, and sleep but is not the primary neurotransmitter at neuromuscular junctions.",
       "kn": "KN1",
-      "kn_explanation": "Asks about the neurotransmitter system (acetylcholine) underlying myasthenia gravis symptoms — neurobiological bases of a neurobehavioral disease process.",
+      "kn_explanation": "Asks about the neurotransmitter system (acetylcholine) underlying myasthenia gravis symptoms \u2014 neurobiological bases of a neurobehavioral disease process.",
       "difficulty": "medium",
       "quality_comment": "Strong clinical application question that directly tests understanding of acetylcholine's role in voluntary movement. Well-supported by lesson content.",
       "suggestedLesson": "1-neurons-and-neurotransmitters",
@@ -93,7 +93,7 @@
         "Serotonin and dopamine"
       ],
       "answer": "Endorphins and enkephalins",
-      "explanation": "Opioids mimic the body's natural pain relievers — endorphins and enkephalins. These are neuropeptides (the brain's natural opioids) that reduce pain and create euphoria. Acetylcholine and norepinephrine (A) are small-molecule neurotransmitters involved in different functions. Glutamate and GABA (C) are the primary excitatory and inhibitory neurotransmitters, respectively. Serotonin and dopamine (D) are involved in mood and reward but are not the endogenous substances that opioids directly mimic.",
+      "explanation": "Opioids mimic the body's natural pain relievers \u2014 endorphins and enkephalins. These are neuropeptides (the brain's natural opioids) that reduce pain and create euphoria. Acetylcholine and norepinephrine (A) are small-molecule neurotransmitters involved in different functions. Glutamate and GABA (C) are the primary excitatory and inhibitory neurotransmitters, respectively. Serotonin and dopamine (D) are involved in mood and reward but are not the endogenous substances that opioids directly mimic.",
       "kn": "KN1",
       "kn_explanation": "This question tests knowledge of neuropeptides and their relationship to exogenous drug effects, a core neurotransmitter topic in biological bases.",
       "difficulty": "easy",
@@ -251,6 +251,69 @@
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 21
+    },
+    {
+      "stem": "A psychopharmacologist teaching a continuing education course explains that a single monoamine neurotransmitter plays a dual role in promoting slow-wave sleep and regulating mood, which is why disruptions to this system are implicated in both insomnia and major depressive disorder, and why medications that potentiate this system are used to treat both conditions. Which neurotransmitter is most likely being described?",
+      "options": [
+        "Dopamine",
+        "Norepinephrine",
+        "Serotonin",
+        "Acetylcholine"
+      ],
+      "answer": "Serotonin",
+      "explanation": "Serotonin (5-HT) plays a well-established dual role in sleep regulation \u2014 particularly in promoting slow-wave sleep and suppressing REM sleep \u2014 and in mood stabilization. Reduced serotonin activity is strongly associated with major depressive disorder, and SSRIs/SNRIs that enhance serotonergic transmission are first-line treatments for both depression and sleep-related mood disturbances. Dopamine is centrally involved in reward, motivation, and movement, with only a secondary role in arousal. Norepinephrine is primarily associated with alertness and the stress response rather than slow-wave sleep promotion. Acetylcholine is most closely linked to REM sleep generation, not slow-wave sleep, and is not the primary neurotransmitter implicated in mood disorders.",
+      "kn": "KN1",
+      "kn_explanation": "The role of neurotransmitters in sleep and mood regulation falls under Domain 1: Biological Bases of Behavior, covering both neurotransmitter systems and psychopharmacology.",
+      "difficulty": "medium",
+      "quality_comment": "Tests knowledge of serotonin's pleiotropic functions beyond mood alone; the sleep angle elevates difficulty beyond standard neurotransmitter recall.",
+      "suggestedLesson": "1-neurons-and-neurotransmitters",
+      "suggestedParagraph": "## Neurotransmitter Systems",
+      "lessonExcerpt": "[Serotonin's dual involvement in slow-wave sleep regulation and mood is covered in the neurotransmitter systems section \u2014 full content extends beyond the provided excerpt]",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 6
+    },
+    {
+      "stem": "A clinical psychologist is reviewing the neurobiological literature in preparation for treating a client with a chronic history of anorexia nervosa and co-occurring mood disturbance. Research consistently implicates a deficiency in which neurotransmitter system as central to the restrictive eating behaviors, distorted body image, and dysphoric mood characteristic of eating disorders?",
+      "options": [
+        "Dopamine, due to its role in reward-based motivation and hedonic eating",
+        "Serotonin, due to its role in appetite regulation, mood, and impulse control",
+        "GABA, due to its primary role as the brain's major inhibitory neurotransmitter",
+        "Norepinephrine, due to its role in the sympathetic fight-or-flight response"
+      ],
+      "answer": "Serotonin, due to its role in appetite regulation, mood, and impulse control",
+      "explanation": "Serotonin deficiency is the neurotransmitter system most consistently implicated in eating disorders, including anorexia nervosa and bulimia nervosa. Serotonin modulates appetite, mood, and impulse control\u2014all of which are disrupted in eating disorders. The effectiveness of SSRIs (selective serotonin reuptake inhibitors) in treating these conditions provides further pharmacological evidence. Dopamine's role is more central to reward processing and is implicated in schizophrenia and substance use disorders. GABA deficiency is associated with anxiety disorders and seizure susceptibility. Norepinephrine is implicated in arousal, attention, and PTSD-related hyperarousal.",
+      "kn": "KN1",
+      "kn_explanation": "Knowledge of how specific neurotransmitter systems contribute to the etiology of psychological disorders falls under Biological Bases of Behavior (Domain 1), specifically neurotransmitters and psychopathology.",
+      "difficulty": "medium",
+      "quality_comment": "Important neurotransmitter-to-disorder mapping question; options include plausible distractors with accurate partial explanations to elevate difficulty",
+      "suggestedLesson": "1-neurons-and-neurotransmitters",
+      "suggestedParagraph": "## Neurotransmitter Systems",
+      "lessonExcerpt": "Neurotransmitter function underlies nearly every question about medication effects, substance use disorders, and neurological conditions you'll encounter on the exam.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 12
+    },
+    {
+      "stem": "A physical medicine specialist consults with a neuropsychologist regarding a client who sustained a peripheral motor neuron injury at the lumbar level, resulting in weakness of the lower extremities. The specialist explains that the disrupted signal occurs at the neuromuscular junction where the motor neuron synaptically communicates with skeletal muscle. Voluntary motor movement via the somatic nervous system is mediated at this junction by which neurotransmitter?",
+      "options": [
+        "Dopamine, which modulates goal-directed movement via the nigrostriatal pathway",
+        "Serotonin, which regulates motor activity via descending raphe spinal projections",
+        "Acetylcholine, which transmits signals from somatic motor neurons to skeletal muscle fibers",
+        "GABA, which inhibits motor neuron firing to prevent excessive muscle contraction"
+      ],
+      "answer": "Acetylcholine, which transmits signals from somatic motor neurons to skeletal muscle fibers",
+      "explanation": "Acetylcholine (ACh) is the neurotransmitter released at the neuromuscular junction to initiate voluntary skeletal muscle contraction via the somatic nervous system. The lesson describes the somatic nervous system as the system that 'handles voluntary actions you consciously control' and 'connects the CNS to skeletal muscles.' ACh binds to nicotinic receptors on muscle fibers to trigger contraction. Dopamine modulates movement at the level of the basal ganglia (nigrostriatal pathway) but does not act at the neuromuscular junction. Serotonin plays a modulatory role in spinal motor circuits but is not the primary neuromuscular junction transmitter. GABA is the primary inhibitory CNS neurotransmitter and does not mediate direct muscle activation.",
+      "kn": "KN1",
+      "kn_explanation": "Identifying the specific neurotransmitter mediating voluntary motor movement at the neuromuscular junction is foundational content in the neurotransmitters subtopic of Biological Bases of Behavior.",
+      "difficulty": "medium",
+      "quality_comment": "Good question; the dopamine distractor appropriately targets the common confusion between dopamine's role in movement regulation at the basal ganglia level versus ACh's role at the muscle level",
+      "suggestedLesson": "1-neurons-and-neurotransmitters",
+      "suggestedParagraph": "### The Peripheral Nervous System's Two Divisions",
+      "lessonExcerpt": "The Somatic Nervous System (SNS) handles voluntary actions you consciously control... This system connects sensory receptors throughout your body to the CNS and connects the CNS to skeletal muscles.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 19
     }
   ]
 }

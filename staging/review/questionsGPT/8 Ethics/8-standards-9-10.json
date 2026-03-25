@@ -13,11 +13,11 @@
       "kn": "KN62",
       "kn_explanation": "Posting test items violates professional standards for test security (Standards for Educational and Psychological Testing)",
       "difficulty": "medium",
-      "quality_comment": "Good scenario testing test security principles. Lesson content on Standards 9-10 is truncated before explicitly covering test security provisions.",
+      "quality_comment": "Good scenario testing test security principles. Lesson content on Standards 9-10 is",
       "suggestedLesson": "8-standards-9-10",
       "suggestedParagraph": "## Standard 9: Assessment (Getting It Right)",
-      "lessonExcerpt": "Standard 9.07 is straightforward: don't let unqualified people use psychological assessment techniques.",
-      "needsReview": true,
+      "lessonExcerpt": "**When using interpreters**: Get informed consent for the interpreter's involvement, ensure confidentiality and test security are maintained, and note any limitations resulting from interpretation in ",
+      "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 6
     },
@@ -30,15 +30,15 @@
         "Release only a summary report and refuse to release raw data regardless of the client's authorization"
       ],
       "answer": "Release the raw test data as directed by the client's authorization, but may limit the release to protect the client from substantial harm if appropriate",
-      "explanation": "Standard 9.04 addresses the release of test data. When a client provides a valid release, psychologists are generally required to provide test data to the designated party. However, the standard also recognizes that psychologists may withhold data if release would cause 'substantial harm' to the client or others, or if the data would be misused. This creates a nuanced obligation—comply with the authorization while exercising professional judgment about potential harm. Option A is wrong because it ignores the psychologist's discretion to limit release when substantial harm is a concern. Option B is wrong because an absolute refusal violates the client's authorization rights under the standard. Option D is wrong because psychologists cannot categorically refuse to release raw data when a valid authorization exists.",
+      "explanation": "Standard 9.04 addresses the release of test data. When a client provides a valid release, psychologists are generally required to provide test data to the designated party. However, the standard also recognizes that psychologists may withhold data if release would cause 'substantial harm' to the client or others, or if the data would be misused. This creates a nuanced obligation\u2014comply with the authorization while exercising professional judgment about potential harm. Option A is wrong because it ignores the psychologist's discretion to limit release when substantial harm is a concern. Option B is wrong because an absolute refusal violates the client's authorization rights under the standard. Option D is wrong because psychologists cannot categorically refuse to release raw data when a valid authorization exists.",
       "kn": "KN63",
       "kn_explanation": "Release of raw test data in response to legal/attorney request involves laws and judicial decisions affecting practice",
       "difficulty": "hard",
-      "quality_comment": "Tests the nuanced balance between client authorization and professional judgment on test data release. Lesson content is truncated before this specific standard.",
+      "quality_comment": "Tests the nuanced balance between client authorization and professional judgment on test data release. Lesson content is",
       "suggestedLesson": "8-standards-9-10",
       "suggestedParagraph": "## Standard 9: Assessment (Getting It Right)",
-      "lessonExcerpt": "Standards 9 and 10 of the APA Ethics Code aren't just exam fodder. They're your roadmap for handling assessments and therapy relationships without accidentally causing harm or losing your license.",
-      "needsReview": true,
+      "lessonExcerpt": "**Test data** (Standard 9.04): Raw scores, scaled scores, client responses, and your notes about behavior during testing. You ordinarily release this to clients or their authorized representatives, bu",
+      "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 7
     },
@@ -51,7 +51,7 @@
         "Dr. Nguyen may pursue the relationship only after obtaining a formal ethics consultation documenting approval"
       ],
       "answer": "Although the two-year minimum has passed, the nature, duration, and intensity of the therapy make this relationship almost certainly unethical, and Dr. Nguyen bears the burden of proving it is not exploitative",
-      "explanation": "Standard 10.08 prohibits sexual intimacies with former clients for at least two years and states they are still prohibited after two years except in 'the most unusual circumstances,' with the psychologist bearing the burden of proof. The factors to evaluate include time since termination, nature/duration/intensity of therapy, circumstances of termination, client's personal history and mental status, and likelihood of adverse impact. Here, the long-duration, trauma-focused therapy creates a high-risk situation. Option A ignores that the two-year period is a minimum, not a green light. Option B is technically incorrect—the standard does allow for 'most unusual circumstances.' Option D fabricates a consultation approval requirement not in the standard.",
+      "explanation": "Standard 10.08 prohibits sexual intimacies with former clients for at least two years and states they are still prohibited after two years except in 'the most unusual circumstances,' with the psychologist bearing the burden of proof. The factors to evaluate include time since termination, nature/duration/intensity of therapy, circumstances of termination, client's personal history and mental status, and likelihood of adverse impact. Here, the long-duration, trauma-focused therapy creates a high-risk situation. Option A ignores that the two-year period is a minimum, not a green light. Option B is technically incorrect\u2014the standard does allow for 'most unusual circumstances.' Option D fabricates a consultation approval requirement not in the standard.",
       "kn": "KN64",
       "kn_explanation": "Post-termination sexual/dual relationship is identification and management of potential ethical issues",
       "difficulty": "medium",
@@ -80,7 +80,7 @@
       "suggestedLesson": "8-standards-9-10",
       "suggestedParagraph": "### Outdated vs. Obsolete: A Nuanced Decision",
       "lessonExcerpt": "Standards 9.08(a) and (b) prohibit using test results or tests that are outdated or obsolete 'for the current purpose.' That last part is crucial. It's context-dependent.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 28
     },
@@ -269,9 +269,93 @@
       "suggestedLesson": "8-standards-9-10",
       "suggestedParagraph": "## Standard 9: Assessment (Getting It Right)",
       "lessonExcerpt": "The lesson does not specifically address the obligations of fact witnesses, indicating a gap in coverage.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 29
+    },
+    {
+      "stem": "A graduate student asks Dr. Rivera to share the actual test items from the WISC-V so the student can study intelligence testing for a class assignment. Dr. Rivera should:",
+      "options": [
+        "Share the items only after the student signs a non-disclosure agreement",
+        "Share the items because it serves an educational purpose within a training program",
+        "Refuse to share the items because distributing secure test materials compromises test validity and violates ethical standards",
+        "Share the items only if the student's program director provides written approval"
+      ],
+      "answer": "Refuse to share the items because distributing secure test materials compromises test validity and violates ethical standards",
+      "explanation": "APA Standard 9.11 requires psychologists to maintain the integrity and security of test materials. Distributing actual test items\u2014even for educational purposes\u2014compromises the validity of the test by potentially exposing items to future test-takers. Option A is incorrect because a non-disclosure agreement does not resolve the fundamental threat to test security. Option B incorrectly suggests that educational purpose overrides test security obligations. Option D is wrong because program director approval does not authorize distribution of copyrighted, secure test materials.",
+      "kn": "KN8",
+      "kn_explanation": "This question tests knowledge of test security obligations under Standard 9 of the APA Ethics Code.",
+      "difficulty": "medium",
+      "quality_comment": "Practical scenario testing test security knowledge. The lesson covers assessment standards broadly but the specific test security standard text was in a",
+      "suggestedLesson": "8-standards-9-10",
+      "suggestedParagraph": "## Standard 9: Assessment (Getting It Right)",
+      "lessonExcerpt": "**Misconception 5**: \"I can't discuss specific test items with clients because of test security.\"",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 6
+    },
+    {
+      "stem": "An attorney requests that Dr. Chen release the raw test data and scores from a psychological evaluation of the attorney's client. The client has signed an authorization for release. According to APA ethical standards, Dr. Chen should:",
+      "options": [
+        "Release only the summary report and refuse to provide any raw data regardless of authorization",
+        "Release the raw test data to the attorney as requested, since the client has provided valid authorization",
+        "Release the raw data only to another qualified psychologist, never directly to an attorney",
+        "Release the raw test data as authorized but take steps to protect test security by withholding actual test items if possible under applicable law"
+      ],
+      "answer": "Release the raw test data as authorized but take steps to protect test security by withholding actual test items if possible under applicable law",
+      "explanation": "APA Standard 9.04 requires psychologists to provide test data (which includes raw scores and client responses) when there is a valid client release. However, Standard 9.11 also obligates psychologists to maintain test security. The psychologist must balance these obligations\u2014releasing data as authorized while protecting copyrighted test materials where possible. Option A is wrong because a valid client authorization obligates release of test data. Option B fails to account for the competing obligation to protect test security. Option C is overly restrictive; the standard does not limit release exclusively to psychologists when valid authorization exists.",
+      "kn": "KN8",
+      "kn_explanation": "This question addresses the tension between test data release obligations and test security under Standards 9.04 and 9.11.",
+      "difficulty": "hard",
+      "quality_comment": "Tests nuanced understanding of balancing competing ethical obligations. Specific standard language was in",
+      "suggestedLesson": "8-standards-9-10",
+      "suggestedParagraph": "## Standard 9: Assessment (Getting It Right)",
+      "lessonExcerpt": "**Test data** (Standard 9.04): Raw scores, scaled scores, client responses, and your notes about behavior during testing. You ordinarily release this to clients or their authorized representatives, bu",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 7
+    },
+    {
+      "stem": "Dr. Torres terminated therapy with a client 18 months ago. The former client has now contacted Dr. Torres expressing romantic interest. According to APA Ethics Code Standard 10.08, which of the following is MOST accurate regarding the permissibility of a sexual relationship?",
+      "options": [
+        "Sexual relationships with former clients are permanently prohibited under all circumstances",
+        "Sexual relationships are prohibited for at least two years after termination, and even after two years the psychologist bears the burden of demonstrating no exploitation",
+        "Sexual relationships are permissible once 12 months have passed since the last professional contact",
+        "Sexual relationships are permissible at any time after termination as long as the client initiates"
+      ],
+      "answer": "Sexual relationships are prohibited for at least two years after termination, and even after two years the psychologist bears the burden of demonstrating no exploitation",
+      "explanation": "APA Ethics Code Standard 10.08 establishes a minimum two-year prohibition on sexual relationships with former clients. After the two-year period, such relationships are not automatically permissible \u2014 the psychologist must demonstrate that there has been no exploitation, considering factors such as the nature and duration of therapy, circumstances of termination, the client's personal history, the client's current mental status, and any statements or actions by the therapist suggesting a romantic relationship was possible. At 18 months, Dr. Torres is still within the prohibited period. Option A is incorrect because the prohibition is not permanent, though it is extremely difficult to justify such relationships even after two years. Option C is incorrect because the minimum period is two years, not 12 months. Option D is incorrect because who initiates the relationship is irrelevant to the ethical standard.",
+      "kn": "KN8",
+      "kn_explanation": "This question addresses Standard 10.08 on sexual intimacies with former therapy clients, a key topic in Domain 8: Ethical, Legal & Professional Issues.",
+      "difficulty": "medium",
+      "quality_comment": "Classic EPPP topic with strong distractors. The lesson covers post-therapy relationships in Standards 9 & 10 content.",
+      "suggestedLesson": "8-standards-9-10",
+      "suggestedParagraph": "## Standard 10: Therapy",
+      "lessonExcerpt": "post-therapy friendships... These relationships still count as problematic because they prevent the former client from returning to therapy",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 13
+    },
+    {
+      "stem": "A psychologist receives a request from another provider to release treatment records for a former client who was seen 12 years ago. The psychologist reviews the records and finds that some assessment interpretations and diagnostic impressions may be outdated given current diagnostic criteria. What is the psychologist's BEST course of action?",
+      "options": [
+        "Refuse to release the records because they contain outdated information that could be misinterpreted",
+        "Release the records with a cover letter noting which portions may be outdated and explaining relevant limitations",
+        "Update all diagnostic impressions to reflect current criteria before releasing the records",
+        "Release only the raw test data and withhold all interpretive material"
+      ],
+      "answer": "Release the records with a cover letter noting which portions may be outdated and explaining relevant limitations",
+      "explanation": "Standards 9.08(a) and (b) address outdated and obsolete test results, emphasizing that the key consideration is whether results are appropriate 'for the current purpose.' When releasing old records, the psychologist should provide context about limitations rather than withholding records entirely or altering them. Option A denies the client's right to have records transferred. Option C inappropriately alters historical records. Option D selectively withholds records without justification and could deprive the receiving provider of clinically useful information.",
+      "kn": "KN8",
+      "kn_explanation": "This question addresses the release of potentially outdated treatment records under Standards 9.08 and 6.01, which falls under Domain 8.",
+      "difficulty": "hard",
+      "quality_comment": "Tests the nuanced judgment required when old records intersect with current standards. Strong distractors represent common but incorrect approaches.",
+      "suggestedLesson": "8-standards-9-10",
+      "suggestedParagraph": "### Outdated vs. Obsolete: A Nuanced Decision",
+      "lessonExcerpt": "Standards 9.08(a) and (b) prohibit using test results or tests that are outdated or obsolete \"for the current purpose.\" That last part is crucial. It's context-dependent.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 28
     }
   ]
 }

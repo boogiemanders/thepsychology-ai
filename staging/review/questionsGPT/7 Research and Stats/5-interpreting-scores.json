@@ -41,6 +41,48 @@
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
       "inspirationIndex": 9
+    },
+    {
+      "stem": "A child obtains an IQ score of 85 on a standardized intelligence test with a mean of 100 and standard deviation of 15. Assuming a normal distribution, which of the following is the BEST estimate of this child's percentile rank?",
+      "options": [
+        "2nd percentile",
+        "10th percentile",
+        "16th percentile",
+        "30th percentile"
+      ],
+      "answer": "16th percentile",
+      "explanation": "An IQ score of 85 falls exactly 1 standard deviation below the mean (100 - 15 = 85). According to the standard score equivalents table, a score at -1 SD corresponds to the 16th percentile rank. The 2nd percentile corresponds to -2 SD (IQ of 70). The 10th and 30th percentiles do not correspond to any whole standard deviation unit. The lesson's critical table explicitly shows: -1 SD = z-score of -1.0 = T-score of 40 = IQ of 85 = percentile rank of 16.",
+      "kn": "KN7",
+      "kn_explanation": "This question tests the ability to convert between standardized score types and percentile ranks using the standard normal distribution, a core research methods and statistics competency.",
+      "difficulty": "medium",
+      "quality_comment": "Straightforward application of the standard score conversion table. Tests a fundamental skill that appears frequently on the EPPP.",
+      "suggestedLesson": "5-interpreting-scores",
+      "suggestedParagraph": "### The Critical Table: Standard Score Equivalents",
+      "lessonExcerpt": "| -1 SD | -1.0 | 40 | 85 | 3 | 16 |",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 2
+    },
+    {
+      "stem": "A set of raw scores on a psychological test has a mean of 75 and a standard deviation of 10. When these scores are converted to z-scores, the resulting distribution will have:",
+      "options": [
+        "A mean of 0, a standard deviation of 1, and the same shape as the original distribution",
+        "A mean of 0, a standard deviation of 1, and a normal (bell-shaped) distribution regardless of the original shape",
+        "A mean of 50, a standard deviation of 10, and the same shape as the original distribution",
+        "A mean of 0, a standard deviation of 1, and a rectangular (flat) distribution"
+      ],
+      "answer": "A mean of 0, a standard deviation of 1, and the same shape as the original distribution",
+      "explanation": "Converting raw scores to z-scores is a linear transformation. The lesson states that 'converting raw scores to standard scores is a linear transformation — the shape of the distribution stays the same. If your raw scores form a bell curve, your standard scores will too.' Z-scores always have a mean of 0 and SD of 1, but the shape is preserved. Option B is incorrect because z-score conversion does not normalize a distribution — only nonlinear normalization does that. Option C describes T-scores, not z-scores. Option D describes percentile ranks, which produce a rectangular distribution through nonlinear transformation.",
+      "kn": "KN7",
+      "kn_explanation": "This question tests understanding of z-score transformation properties relative to raw score distributions, a fundamental score transformation concept.",
+      "difficulty": "medium",
+      "quality_comment": "Targets a critical distinction between linear and nonlinear transformations that is commonly tested on the EPPP.",
+      "suggestedLesson": "5-interpreting-scores",
+      "suggestedParagraph": "### Standard Scores: Speaking the Language of Standard Deviations",
+      "lessonExcerpt": "Unlike percentile ranks, converting raw scores to standard scores is a linear transformation — the shape of the distribution stays the same. If your raw scores form a bell curve, your standard scores will too.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 9
     }
   ]
 }

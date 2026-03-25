@@ -9,7 +9,7 @@
         "Normality, because the satisfaction scores are not normally distributed"
       ],
       "answer": "Homoscedasticity, because the variability in criterion scores differs across levels of the predictor",
-      "explanation": "The scenario describes heteroscedasticity — the variability in criterion scores (client satisfaction) is much larger at low levels of the predictor (few years of experience) than at high levels. The lesson defines homoscedasticity as meaning 'the variability in your criterion scores should be similar across all levels of your predictor scores' and gives a nearly identical example. Linearity (A) is not the issue here since the question describes variability differences, not a curved relationship. Unrestricted range (B) is not violated since both variables span their full range. Normality (D) is not one of the three critical assumptions of correlation listed in the lesson.",
+      "explanation": "The scenario describes heteroscedasticity \u2014 the variability in criterion scores (client satisfaction) is much larger at low levels of the predictor (few years of experience) than at high levels. The lesson defines homoscedasticity as meaning 'the variability in your criterion scores should be similar across all levels of your predictor scores' and gives a nearly identical example. Linearity (A) is not the issue here since the question describes variability differences, not a curved relationship. Unrestricted range (B) is not violated since both variables span their full range. Normality (D) is not one of the three critical assumptions of correlation listed in the lesson.",
       "kn": "KN55",
       "kn_explanation": "Scatterplot analysis of correlation between two variables is a quantitative analytic method",
       "difficulty": "medium",
@@ -51,11 +51,11 @@
         "The correlation would be lower if the full applicant pool had been included in the validation study."
       ],
       "answer": "The true validity of the test is likely higher than .25 because restriction of range attenuates the correlation coefficient.",
-      "explanation": "The correct answer recognizes that validating a test only on hired employees (who scored above a cutoff) restricts the range of scores, which attenuates (reduces) the observed correlation. The lesson explicitly states that restricted range causes correlations to underestimate the true relationship. Option A is incorrect because it fails to account for the range restriction artifact—the low coefficient may not reflect true validity. Option C is incorrect because it confuses the correlation coefficient (.25) with the coefficient of determination; r² = .0625, meaning only 6.25% of variance is explained, not 25%. Option D is incorrect because it reverses the effect—including the full range of scores would increase, not decrease, the correlation.",
+      "explanation": "The correct answer recognizes that validating a test only on hired employees (who scored above a cutoff) restricts the range of scores, which attenuates (reduces) the observed correlation. The lesson explicitly states that restricted range causes correlations to underestimate the true relationship. Option A is incorrect because it fails to account for the range restriction artifact\u2014the low coefficient may not reflect true validity. Option C is incorrect because it confuses the correlation coefficient (.25) with the coefficient of determination; r\u00b2 = .0625, meaning only 6.25% of variance is explained, not 25%. Option D is incorrect because it reverses the effect\u2014including the full range of scores would increase, not decrease, the correlation.",
       "kn": "KN55",
       "kn_explanation": "Correlating test scores with criterion measures involves quantitative analytic methods (correlation/regression)",
       "difficulty": "hard",
-      "quality_comment": "Integrates restricted range with a realistic employment testing scenario. The r²-confusion distractor (C) targets a common EPPP error pattern. Tests both conceptual understanding and practical application.",
+      "quality_comment": "Integrates restricted range with a realistic employment testing scenario. The r\u00b2-confusion distractor (C) targets a common EPPP error pattern. Tests both conceptual understanding and practical application.",
       "suggestedLesson": "7-correlation-and-regression",
       "suggestedParagraph": "### Assumption 2: Unrestricted Range",
       "lessonExcerpt": "This is crucial for employment testing. If you validate a test only on people who were hired (and thus likely scored well), you're missing the lower range of scores, and your correlation will underestimate the test's true predictive power.",
@@ -335,6 +335,48 @@
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
       "inspirationIndex": 9
+    },
+    {
+      "stem": "A researcher creates a scatterplot showing the relationship between therapist experience (X) and client outcome ratings (Y). She notices that clients of therapists with fewer than 5 years of experience show highly variable outcome ratings (ranging from very poor to excellent), while clients of therapists with more than 15 years of experience show consistently high ratings with little variability. This pattern MOST directly indicates a violation of which assumption?",
+      "options": [
+        "Linearity, suggesting a curvilinear relationship between the variables",
+        "Unrestricted range, indicating that extreme scores have been excluded from the sample",
+        "Homoscedasticity, meaning the variability in criterion scores differs across levels of the predictor",
+        "Normality, indicating that the distribution of outcome ratings is skewed"
+      ],
+      "answer": "Homoscedasticity, meaning the variability in criterion scores differs across levels of the predictor",
+      "explanation": "Homoscedasticity requires that the variability in criterion (Y) scores is similar across all levels of the predictor (X) scores. In this scenario, outcome rating variability is high for low-experience therapists but low for high-experience therapists \u2014 a classic violation of homoscedasticity. The lesson states: 'the variability in your criterion scores should be similar across all levels of your predictor scores' and provides a similar example about therapy sessions and satisfaction. Linearity concerns the shape of the relationship, not differential variability. Unrestricted range concerns whether the full range of scores is represented. Normality is not one of the three stated correlation assumptions.",
+      "kn": "KN7",
+      "kn_explanation": "This question assesses understanding of correlation assumptions and how violations of homoscedasticity affect interpretation, a core topic in research methods and statistics.",
+      "difficulty": "medium",
+      "quality_comment": "Applies the homoscedasticity concept to a novel clinical scenario that parallels but does not duplicate the lesson example.",
+      "suggestedLesson": "7-correlation-and-regression",
+      "suggestedParagraph": "### Assumption 3: Homoscedasticity",
+      "lessonExcerpt": "This intimidating term simply means that the variability in your criterion scores should be similar across all levels of your predictor scores.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 3
+    },
+    {
+      "stem": "A psychologist conducts a study examining the correlation between years of clinical experience and client satisfaction ratings across a large, unrestricted sample of therapists ranging from newly licensed to 30+ years of practice. Based on what is typically found in psychological research involving related professional variables, which of the following Pearson r values would be the most realistic estimate of this correlation?",
+      "options": [
+        "r = +0.95",
+        "r = +0.35",
+        "r = -0.72",
+        "r = +0.00"
+      ],
+      "answer": "r = +0.35",
+      "explanation": "A moderate positive correlation of +0.35 is the most realistic estimate. In psychological research, correlations between related professional variables are typically low to moderate in magnitude because human behavior is influenced by many factors simultaneously. An r of +0.95 (A) would indicate a near-perfect relationship, which is virtually never found between distinct psychological or professional variables \u2014 such values are typically only seen in reliability coefficients. An r of -0.72 (C) is unrealistic both in direction (more experience would logically relate positively, not strongly negatively, to satisfaction) and in magnitude for behavioral variables. An r of 0.00 (D) would indicate no relationship whatsoever, which is unlikely given that experience and client satisfaction are conceptually related, though many other factors also influence satisfaction.",
+      "kn": "KN7",
+      "kn_explanation": "This question assesses the ability to interpret and estimate realistic correlation magnitudes in professional/psychological contexts, a key statistical reasoning competency in Research Methods & Statistics.",
+      "difficulty": "medium",
+      "quality_comment": "Tests practical statistical reasoning about effect sizes in psychology. The lesson covers correlation interpretation extensively but does not provide specific benchmark values for professional variable correlations, so the question relies on general principles from the lesson about how correlations work and the multi-determined nature of psychological variables.",
+      "suggestedLesson": "7-correlation-and-regression",
+      "suggestedParagraph": "## The Foundation: What Correlation Actually Tells Us",
+      "lessonExcerpt": "Most correlation coefficients range from -1.0 to +1.0, and they're usually symbolized with the letter 'r.'",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 12
     }
   ]
 }

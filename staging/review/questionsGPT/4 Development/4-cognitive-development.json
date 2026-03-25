@@ -9,9 +9,9 @@
         "Egocentrism, in which the child cannot take another person's perspective"
       ],
       "answer": "Centration, in which the child focuses on one perceptual dimension while ignoring others",
-      "explanation": "The classic conservation task error occurs because preoperational children exhibit centration—they focus on one salient perceptual feature (the height of the water) while ignoring another relevant dimension (the width of the glass). This, combined with irreversibility, prevents them from understanding conservation. Transductive reasoning (A) involves assuming causal relationships between co-occurring events, not perceptual focus. Animism (C) involves attributing life to inanimate objects, which is unrelated to conservation. Egocentrism (D) involves difficulty understanding others' perspectives, not perceptual judgments about quantities.",
+      "explanation": "The classic conservation task error occurs because preoperational children exhibit centration\u2014they focus on one salient perceptual feature (the height of the water) while ignoring another relevant dimension (the width of the glass). This, combined with irreversibility, prevents them from understanding conservation. Transductive reasoning (A) involves assuming causal relationships between co-occurring events, not perceptual focus. Animism (C) involves attributing life to inanimate objects, which is unrelated to conservation. Egocentrism (D) involves difficulty understanding others' perspectives, not perceptual judgments about quantities.",
       "kn": "KN23",
-      "kn_explanation": "Conservation task illustrates Piaget's preoperational stage — a major research-based developmental theory",
+      "kn_explanation": "Conservation task illustrates Piaget's preoperational stage \u2014 a major research-based developmental theory",
       "difficulty": "medium",
       "quality_comment": "Classic conservation task scenario with distractors drawn from other preoperational characteristics to test precise understanding.",
       "suggestedLesson": "4-cognitive-development",
@@ -32,7 +32,7 @@
       "answer": "Assimilation",
       "explanation": "Assimilation involves fitting new information into existing mental frameworks (schemas). The child is applying the existing 'dog' schema to a new but similar stimulus without modifying the schema. Accommodation (A) would involve changing or creating new schemas when existing ones don't work, such as learning that a cat is not a dog and creating a separate 'cat' schema. Equilibration (C) is the broader drive toward cognitive balance that encompasses both assimilation and accommodation. Decentration (D) refers to the ability to focus on multiple aspects of a situation simultaneously, a concrete operational achievement.",
       "kn": "KN23",
-      "kn_explanation": "Assimilation of new exemplar into existing schema is a core Piagetian concept — a major developmental theory",
+      "kn_explanation": "Assimilation of new exemplar into existing schema is a core Piagetian concept \u2014 a major developmental theory",
       "difficulty": "easy",
       "quality_comment": "Classic Piagetian concept with a clear, concrete example. Well-differentiated distractors from within Piaget's framework.",
       "suggestedLesson": "4-cognitive-development",
@@ -53,7 +53,7 @@
       "answer": "Centration",
       "explanation": "Centration is the tendency to focus on one perceptual aspect of a situation while ignoring other relevant dimensions. The child focuses on the spatial extent (how spread out the row is) while ignoring the number of pennies, leading to a failure in conservation. Egocentrism (A) involves difficulty understanding that others experience things differently, not perceptual focusing errors on physical tasks. Transductive reasoning (B) involves believing that events occurring together are causally related. Animism (D) involves attributing life to inanimate objects. While all are preoperational limitations, centration specifically explains conservation failures.",
       "kn": "KN23",
-      "kn_explanation": "Number conservation task is another classic Piagetian preoperational-stage demonstration — a major developmental theory",
+      "kn_explanation": "Number conservation task is another classic Piagetian preoperational-stage demonstration \u2014 a major developmental theory",
       "difficulty": "medium",
       "quality_comment": "Applied scenario requiring identification of the specific cognitive limitation. All distractors are genuine preoperational limitations, increasing discrimination difficulty.",
       "suggestedLesson": "4-cognitive-development",
@@ -114,7 +114,7 @@
         "Formal operational"
       ],
       "answer": "Preoperational",
-      "explanation": "Animistic thinking—attributing emotions and intentions to inanimate objects or natural forces—is a hallmark of the preoperational stage (ages 2-7). The child is attributing anger to the wind. Sensorimotor children (birth to 2) understand the world through sensation and action and have not yet developed symbolic thought to this degree. Concrete operational children (7-12) use logical operations and have largely overcome animistic thinking. Formal operational thinkers (12+) engage in abstract and hypothetical reasoning.",
+      "explanation": "Animistic thinking\u2014attributing emotions and intentions to inanimate objects or natural forces\u2014is a hallmark of the preoperational stage (ages 2-7). The child is attributing anger to the wind. Sensorimotor children (birth to 2) understand the world through sensation and action and have not yet developed symbolic thought to this degree. Concrete operational children (7-12) use logical operations and have largely overcome animistic thinking. Formal operational thinkers (12+) engage in abstract and hypothetical reasoning.",
       "kn": "KN4",
       "kn_explanation": "This question tests knowledge of Piaget's stages, a fundamental Growth and Lifespan Development topic.",
       "difficulty": "easy",
@@ -135,7 +135,7 @@
         "Major neurocognitive disorder due to frontotemporal degeneration"
       ],
       "answer": "Normal age-related cognitive changes",
-      "explanation": "Normal aging is characterized by gradual declines in processing speed, working memory, and new learning (fluid abilities) while crystallized abilities such as vocabulary, accumulated knowledge, and expertise remain intact or even improve. This professor shows exactly this pattern—slower name retrieval and difficulty with novel technology alongside preserved expert knowledge. Alzheimer's disease would involve progressive decline across multiple cognitive domains including episodic memory, eventually impairing daily functioning. Vascular dementia typically presents with stepwise deterioration and focal neurological signs. Frontotemporal degeneration would involve prominent personality changes or language deterioration beyond what is described.",
+      "explanation": "Normal aging is characterized by gradual declines in processing speed, working memory, and new learning (fluid abilities) while crystallized abilities such as vocabulary, accumulated knowledge, and expertise remain intact or even improve. This professor shows exactly this pattern\u2014slower name retrieval and difficulty with novel technology alongside preserved expert knowledge. Alzheimer's disease would involve progressive decline across multiple cognitive domains including episodic memory, eventually impairing daily functioning. Vascular dementia typically presents with stepwise deterioration and focal neurological signs. Frontotemporal degeneration would involve prominent personality changes or language deterioration beyond what is described.",
       "kn": "KN4",
       "kn_explanation": "This question addresses age-related cognitive changes across the lifespan, a core developmental psychology topic.",
       "difficulty": "medium",
@@ -143,7 +143,7 @@
       "suggestedLesson": "4-cognitive-development",
       "suggestedParagraph": "### Adult Brain Changes: The Long Decline",
       "lessonExcerpt": "Brain weight and volume start gradually decreasing around age 30 due to neuron loss. This process accelerates after age 60.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 13
     },
@@ -289,7 +289,7 @@
       "quality_comment": "The question effectively assesses knowledge of Piaget's stages and requires understanding of moral reasoning.",
       "suggestedLesson": "4-cognitive-development",
       "suggestedParagraph": "## The Foundation: Piaget's Three-Stage Theory",
-      "lessonExcerpt": "The key feature of this stage is moral realism – kids judge actions purely by their consequences, not by intentions.",
+      "lessonExcerpt": "The key feature of this stage is moral realism \u2013 kids judge actions purely by their consequences, not by intentions.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 11
@@ -503,6 +503,111 @@
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 24
+    },
+    {
+      "stem": "A developmental psychologist is evaluating a 5-year-old boy. She pours water from a short, wide container into a tall, narrow one and asks which has more. The child points to the tall container and says 'that one, it's higher.' The examiner also notes that the child insists his toy car 'feels sad' when it falls off the table and explains that it rained yesterday 'because I was mad.' According to Piaget, which stage is this child in and which combination of cognitive characteristics best explains these responses?",
+      "options": [
+        "Sensorimotor stage; lack of object permanence and absence of representational thought",
+        "Preoperational stage; centration, irreversibility, and animism",
+        "Concrete operational stage; incomplete decentration and failure to apply reversibility",
+        "Preoperational stage; transductive reasoning and formal operational egocentrism"
+      ],
+      "answer": "Preoperational stage; centration, irreversibility, and animism",
+      "explanation": "The child is in the preoperational stage (ages 2\u20137). Failure to conserve liquid quantity results from centration (focusing only on the height dimension while ignoring width) and irreversibility (inability to mentally undo the pouring action). Attributing feelings to the toy car reflects animism\u2014attributing life or mental states to inanimate objects. The belief that his anger caused the rain reflects magical thinking. These are all defining features of preoperational thought. The sensorimotor stage (birth\u20132 years) precedes representational thought entirely. Concrete operations (7\u201312 years) includes successful conservation due to decentration and reversibility. 'Formal operational egocentrism' is a different construct arising in adolescence.",
+      "kn": "KN4",
+      "kn_explanation": "Piaget's cognitive developmental stages are a foundational topic in Growth and Lifespan Development (Domain 4), frequently tested on the EPPP.",
+      "difficulty": "medium",
+      "quality_comment": "Excellent multi-feature vignette requiring identification of both stage and specific cognitive limitations. Tests depth of knowledge beyond simple stage labeling.",
+      "suggestedLesson": "4-cognitive-development",
+      "suggestedParagraph": "### 2. Preoperational Stage (2 to 7 years)",
+      "lessonExcerpt": "Centration: Focusing on one aspect while ignoring others. Irreversibility: Not understanding that actions can be undone. Animism: Attributing life to inanimate objects. The classic conservation test: Show a child two identical glasses with equal water. Pour one into a tall, narrow glass. The preoperational child will say the tall glass has more water because they focus on the water level, not the total amount.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 2
+    },
+    {
+      "stem": "A child who calls all round objects 'ball' encounters a globe for the first time. After her mother explains it is called a 'globe' and describes how it differs from a toy ball, the child creates a separate mental category for globe-like objects. According to Piaget, which cognitive process does this represent?",
+      "options": [
+        "Assimilation, because the child incorporated new information into an existing schema",
+        "Equilibration, because the child restored cognitive balance through interaction with the environment",
+        "Accommodation, because the child modified her existing schema to incorporate the new information",
+        "Conservation, because the child recognized that the object retained its properties regardless of its label"
+      ],
+      "answer": "Accommodation, because the child modified her existing schema to incorporate the new information",
+      "explanation": "Accommodation is the Piagetian process in which a child changes or creates new mental frameworks when existing schemas prove inadequate. Here, the child's existing 'ball' schema could not successfully incorporate a globe \u2014 the two objects differ in function, label, and purpose \u2014 leading her to restructure her cognitive representation by forming a new category. Assimilation (A) is incorrect because that process involves fitting new information into an existing schema without modifying it; the child initially may have assimilated the globe into 'ball,' but the described outcome is schema revision. Equilibration (B) is the overarching motivational force driving adaptation but is not itself a specific cognitive operation. Conservation (D) refers to understanding that physical quantities remain constant despite perceptual change and is unrelated to this scenario.",
+      "kn": "KN4",
+      "kn_explanation": "Piagetian concepts of assimilation and accommodation are central to the cognitive development subtopic within domain 4.",
+      "difficulty": "medium",
+      "quality_comment": "Strong vignette cleanly distinguishing accommodation from assimilation; the equilibration distractor adds appropriate difficulty.",
+      "suggestedLesson": "4-cognitive-development",
+      "suggestedParagraph": "### Piaget's Constructivist Theory: The Active Builder",
+      "lessonExcerpt": "Accommodation means changing your mental frameworks or creating new ones when the old ones don't work.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 13
+    },
+    {
+      "stem": "A pediatric neuropsychologist is providing psychoeducation to parents of a 9-year-old recently diagnosed with reading disorder (dyslexia). Which statement most accurately represents current research on the long-term prognosis of this condition?",
+      "options": [
+        "The majority of children with reading disorder will achieve grade-level reading by high school even without formal intervention",
+        "Reading disorder is a persistent condition throughout the lifespan, though individuals can acquire compensatory strategies that improve functional reading",
+        "Reading disorder typically co-occurs with global intellectual disability and requires lifelong academic support across all domains",
+        "Pharmacological treatment remains the most evidence-based approach and significantly alters the long-term trajectory of reading disorder"
+      ],
+      "answer": "Reading disorder is a persistent condition throughout the lifespan, though individuals can acquire compensatory strategies that improve functional reading",
+      "explanation": "Reading disorder (dyslexia) is characterized by a persistent phonological processing deficit that does not remit with age, even with effective intervention. The condition is lifelong; however, with early, intensive, evidence-based intervention targeting phonological awareness and decoding, individuals often develop compensatory strategies sufficient for functional literacy. Option A overstates spontaneous improvement and significantly underestimates the persistence of the deficit in the absence of structured intervention. Option C incorrectly associates reading disorder with global intellectual disability; by diagnostic definition, reading disorder occurs in individuals with at least average general intelligence and represents a specific, not global, deficit. Option D is incorrect because there are no approved pharmacological treatments that directly address the core deficits of reading disorder.",
+      "kn": "KN4",
+      "kn_explanation": "Specific learning disorders, including reading disorder, fall within the Growth and Lifespan Development domain of the EPPP.",
+      "difficulty": "hard",
+      "quality_comment": "Clinically important question; requires distinguishing persistence from pervasiveness and knowing the evidence base for intervention.",
+      "suggestedLesson": "4-cognitive-development",
+      "suggestedParagraph": "## Cognitive Development",
+      "lessonExcerpt": "N/A \u2014 specific reading disorder prognosis is not explicitly covered in the provided lesson excerpt.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 14
+    },
+    {
+      "stem": "A 68-year-old retired attorney scores at the 80th percentile on a test of legal vocabulary and professional knowledge, yet scores at the 40th percentile compared to younger adults on a novel matrix reasoning task administered under time pressure. This dissociation best illustrates which well-documented pattern in cognitive aging?",
+      "options": [
+        "Crystallized intelligence declines in parallel with working memory capacity, while fluid intelligence remains stable until the 8th decade",
+        "Fluid intelligence declines earlier and more steeply across adulthood than crystallized intelligence, which remains relatively stable or increases",
+        "Both fluid and crystallized intelligence decline uniformly beginning at age 60 due to generalized cortical atrophy",
+        "Fluid intelligence is preserved in professional domains due to expertise effects, while crystallized intelligence shows selective decline"
+      ],
+      "answer": "Fluid intelligence declines earlier and more steeply across adulthood than crystallized intelligence, which remains relatively stable or increases",
+      "explanation": "Research on cognitive aging, drawing on Cattell and Horn's theory of fluid (Gf) and crystallized (Gc) intelligence, consistently shows that these two constructs follow distinct developmental trajectories. Fluid intelligence \u2014 reflecting novel problem-solving, processing speed, and abstract reasoning \u2014 peaks in early adulthood and shows a gradual, then steeper, decline with age. Crystallized intelligence \u2014 reflecting accumulated knowledge, vocabulary, and expertise derived from cultural learning \u2014 remains stable and may increase into late middle adulthood before showing modest decline in very old age. The attorney's preserved legal knowledge (Gc) alongside reduced novel reasoning performance (Gf) exemplifies this classic dissociation. Option A incorrectly characterizes the relative trajectories. Option C overstates the uniformity and timing of decline. Option D misattributes preserved Gf to expertise and incorrectly predicts selective Gc decline.",
+      "kn": "KN4",
+      "kn_explanation": "Age-related changes in fluid versus crystallized intelligence are central to the cognitive aging subtopic within Growth and Lifespan Development.",
+      "difficulty": "medium",
+      "quality_comment": "Well-constructed clinical vignette; distractors require distinguishing the two constructs rather than guessing based on surface features.",
+      "suggestedLesson": "4-cognitive-development",
+      "suggestedParagraph": "## Cognitive Development",
+      "lessonExcerpt": "N/A \u2014 fluid versus crystallized intelligence decline trajectory is not explicitly covered in the provided lesson excerpt.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 16
+    },
+    {
+      "stem": "A 4-year-old watches as an experimenter pours water from a short, wide beaker into a tall, narrow cylinder and asks whether the amount of water changed. The child says 'there's more now because it's taller,' ignoring that the cylinder is narrower. According to Piaget, the specific cognitive limitation most directly responsible for this error is:",
+      "options": [
+        "Egocentrism, because the child cannot take the experimenter's physical perspective on the containers",
+        "Irreversibility, because the child cannot mentally reverse the pouring action to infer the original amount",
+        "Centration, because the child focuses on the single dimension of height while ignoring the dimension of width",
+        "Animism, because the child attributes the water's movement to intentional self-directed action"
+      ],
+      "answer": "Centration, because the child focuses on the single dimension of height while ignoring the dimension of width",
+      "explanation": "Centration is Piaget's term for the preoperational tendency to focus attention on one salient perceptual dimension of a stimulus while failing to simultaneously consider other relevant dimensions. In this conservation task, the child centers on the height of the water column \u2014 the most visually salient change \u2014 while ignoring that the narrower width compensates for the increased height. The result is an incorrect judgment about quantity. Egocentrism (A) involves difficulty understanding that others hold different perspectives than oneself, not a failure to integrate multiple physical dimensions. Irreversibility (B) refers to the inability to mentally undo an action and is also implicated in conservation failures, but the specific error described \u2014 focusing exclusively on height \u2014 is most directly attributed to centration rather than irreversibility. Animism (D) involves attributing life or intention to inanimate objects, which is unrelated to this quantity judgment task.",
+      "kn": "KN4",
+      "kn_explanation": "Preoperational cognitive limitations including centration are central to Piagetian cognitive development content in domain 4.",
+      "difficulty": "medium",
+      "quality_comment": "Strong vignette cleanly mapping to centration; the irreversibility distractor requires careful conceptual discrimination and adds appropriate challenge.",
+      "suggestedLesson": "4-cognitive-development",
+      "suggestedParagraph": "**2. Preoperational Stage (2 to 7 years)**",
+      "lessonExcerpt": "Centration: Focusing on one aspect while ignoring others",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 20
     }
   ]
 }

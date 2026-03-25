@@ -9,7 +9,7 @@
         "Using circular questioning to reveal each member's perception of the coalition"
       ],
       "answer": "Restructuring the family's boundaries and subsystem organization",
-      "explanation": "Structural family therapy (Minuchin) focuses primarily on the family's organizational structure—specifically subsystems and boundaries. The presenting pattern describes a problematic stable coalition (one parent and child teaming up against the other parent) with rigid boundaries leading to disengagement. The therapist would work to restructure these boundaries using techniques like boundary making, unbalancing, and enactment. Exploring multigenerational transmission (A) is a Bowenian approach. Externalizing narratives (C) is a narrative therapy technique. Circular questioning (D) is associated with Milan systemic therapy.",
+      "explanation": "Structural family therapy (Minuchin) focuses primarily on the family's organizational structure\u2014specifically subsystems and boundaries. The presenting pattern describes a problematic stable coalition (one parent and child teaming up against the other parent) with rigid boundaries leading to disengagement. The therapist would work to restructure these boundaries using techniques like boundary making, unbalancing, and enactment. Exploring multigenerational transmission (A) is a Bowenian approach. Externalizing narratives (C) is a narrative therapy technique. Circular questioning (D) is associated with Milan systemic therapy.",
       "kn": "KN46",
       "kn_explanation": "Structural family therapy (Minuchin) is an intervention technique for families, fitting interventions to enhance functioning of families",
       "difficulty": "medium",
@@ -30,17 +30,59 @@
         "Unbalancing by strategically aligning with the adolescent"
       ],
       "answer": "Paradoxical intervention through prescribing the symptom",
-      "explanation": "Paradoxical intervention involves directing clients to engage in or continue the very behavior that is problematic. By prescribing the symptom—instructing the adolescent to continue his defiance—the therapist uses the family's resistance therapeutically. If the family complies with the directive, the symptom is now under therapeutic control; if they resist the directive, they must change the problematic behavior. This technique was developed within strategic family therapy (Haley). Reframing as positive contribution (A) describes Milan systemic therapy's positive connotation. Enactment (C) is a structural family therapy technique involving in-session role-play. Unbalancing (D) is a structural technique of aligning with a lower-power family member.",
+      "explanation": "Paradoxical intervention involves directing clients to engage in or continue the very behavior that is problematic. By prescribing the symptom\u2014instructing the adolescent to continue his defiance\u2014the therapist uses the family's resistance therapeutically. If the family complies with the directive, the symptom is now under therapeutic control; if they resist the directive, they must change the problematic behavior. This technique was developed within strategic family therapy (Haley). Reframing as positive contribution (A) describes Milan systemic therapy's positive connotation. Enactment (C) is a structural family therapy technique involving in-session role-play. Unbalancing (D) is a structural technique of aligning with a lower-power family member.",
       "kn": "KN44",
       "kn_explanation": "Paradoxical intervention (prescribing the symptom) is a specific treatment technique used in strategic family therapy",
       "difficulty": "medium",
-      "quality_comment": "Well-constructed question testing paradoxical directives. The lesson covers prescribing the symptom in strategic therapy. Note: paradoxical intention (Frankl) is a related but distinct concept not covered in lessons.",
+      "quality_comment": "Tests paradoxical directives in strategic family therapy. Lesson explicitly covers prescribing the symptom.",
       "suggestedLesson": "6-family-and-group",
       "suggestedParagraph": "### 3. Strategic Family Therapy (Haley)",
-      "lessonExcerpt": "Prescribing the symptom: Instruct the family to do the problematic behavior, often exaggerated... This helps them realize they actually control the behavior. Restraining: Encourage the family not to change or warn against changing too quickly. This uses their resistance therapeutically.",
+      "lessonExcerpt": "Prescribing the symptom: Instruct the family to do the problematic behavior, often exaggerated.",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
       "inspirationIndex": 28
+    },
+    {
+      "stem": "A structural family therapist using Minuchin's model begins working with a family in which the mother routinely makes all major decisions together with her 14-year-old son, confides marital problems to him, and seeks his emotional support, while the father remains a peripheral and disengaged figure with minimal involvement in family life. The primary therapeutic focus of structural family therapy in this case would be to:",
+      "options": [
+        "Explore the multigenerational transmission of emotional fusion using a genogram spanning at least three generations",
+        "Identify and restructure the problematic boundaries maintaining enmeshment and disengagement within family subsystems",
+        "Challenge the family's irrational cognitions about appropriate parental and child roles through Socratic dialogue",
+        "Use paradoxical directives to expose the secondary gains that maintain the current dysfunctional family structure"
+      ],
+      "answer": "Identify and restructure the problematic boundaries maintaining enmeshment and disengagement within family subsystems",
+      "explanation": "Structural family therapy, developed by Salvador Minuchin, focuses on the family's organizational structure\u2014specifically the boundaries between subsystems (parental, sibling, individual). When boundaries are overly permeable, enmeshment results, as seen between the mother and son; when too rigid, disengagement results, as seen with the father. The primary therapeutic goal is to reshape these boundaries to establish clearer, more functional structures and restore appropriate hierarchies. Option A describes Bowen's multigenerational approach, which uses genograms\u2014not Minuchin's structural model. Option C reflects a cognitive-behavioral approach rather than a structural/systems one. Option D describes strategic or paradoxical interventions, not the structural model's primary method.",
+      "kn": "KN6",
+      "kn_explanation": "This question tests knowledge of structural family therapy concepts\u2014specifically boundary problems\u2014within the family therapy section of the Treatment domain.",
+      "difficulty": "medium",
+      "quality_comment": "Well-constructed scenario with good discriminating distractors across family therapy orientations. The structural family therapy section of the lesson is",
+      "suggestedLesson": "6-family-and-group",
+      "suggestedParagraph": "### 2. Structural Family Therapy (Minuchin)",
+      "lessonExcerpt": "### 2. Structural Family Therapy (Minuchin)",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 22
+    },
+    {
+      "stem": "A client participates in both weekly individual psychotherapy and an outpatient interpersonal therapy group. After several months, the group therapist notices that whenever another member directly challenges the client's behavior, the client responds, 'That's a good point\u2014I'll definitely bring that up with my individual therapist.' The individual therapist similarly observes that the client consistently avoids discussing interpersonal relationship themes, saying she prefers to work on those in group. This dynamic most clearly illustrates which recognized disadvantage of concurrent individual and group therapy?",
+      "options": [
+        "Role diffusion, in which the client loses clarity about the distinct therapeutic purpose of each modality",
+        "Splitting, in which the client selectively divides therapeutic material between treatment settings to avoid full engagement in either",
+        "Countertransference collusion, in which both therapists unconsciously reinforce the client's avoidance of core material",
+        "Scapegoating, in which the group displaces its collective negative affect onto the client who also receives individual care"
+      ],
+      "answer": "Splitting, in which the client selectively divides therapeutic material between treatment settings to avoid full engagement in either",
+      "explanation": "A recognized disadvantage of concurrent individual and group therapy is that clients may split their therapeutic work\u2014strategically allocating certain issues to individual therapy while reserving others for group\u2014thereby avoiding complete engagement and therapeutic pressure in either setting. This compartmentalization allows the client to deflect difficult material and resist deeper processing. Option A (role diffusion) describes confusion about therapeutic purpose, not avoidance through material division. Option C (countertransference collusion) would be a therapist-driven phenomenon, whereas this dynamic is client-initiated. Option D (scapegoating) is a group process issue unrelated to the concurrent format per se.",
+      "kn": "KN6",
+      "kn_explanation": "This question addresses the limitations of combined individual and group therapy formats, which falls within the group therapy content area of the Treatment domain.",
+      "difficulty": "hard",
+      "quality_comment": "High-quality clinical scenario requiring sophisticated understanding of group therapy limitations. The group therapy section of. Content goes beyond current lesson material \u2014 valid EPPP topic, no lesson excerpt available.",
+      "suggestedLesson": "6-family-and-group",
+      "suggestedParagraph": "## Group Therapy",
+      "lessonExcerpt": "",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 25
     }
   ]
 }

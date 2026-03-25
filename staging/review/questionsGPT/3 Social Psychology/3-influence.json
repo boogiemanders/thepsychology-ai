@@ -272,6 +272,69 @@
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
       "inspirationIndex": 21
+    },
+    {
+      "stem": "A senior charge nurse holds no formal administrative title but is widely admired across the unit. Junior nurses frequently seek her guidance, adopt her patient-care practices, and report wanting to be like her professionally. She does not control rewards or discipline, nor does she hold institutional authority. According to French and Raven's (1959) taxonomy of social power, which type of power does this nurse PRIMARILY exercise?",
+      "options": [
+        "Legitimate power, derived from her institutional seniority and recognized role on the unit",
+        "Expert power, because colleagues defer to her specialized clinical knowledge and judgment",
+        "Referent power, because colleagues identify with and aspire to emulate her as a person",
+        "Informational power, because she controls access to informal knowledge about unit operations"
+      ],
+      "answer": "Referent power, because colleagues identify with and aspire to emulate her as a person",
+      "explanation": "Referent power derives from others' identification with, admiration of, or desire to be like a person \u2014 independent of formal role or specialized knowledge. Although the nurse likely also possesses some expert power, the vignette emphasizes that staff wish to emulate her personally and seek her out as a role model, which is the defining feature of referent power. Expert power would be primary if influence rested solely on deference to her clinical knowledge base. Legitimate power requires a formal authority role, which the vignette explicitly excludes. Informational power involves controlling specific information that others require to complete tasks.",
+      "kn": "KN3",
+      "kn_explanation": "French and Raven's taxonomy of social power is a classic group influence and leadership concept within Domain 3: Social and Multicultural Bases of Behavior.",
+      "difficulty": "hard",
+      "quality_comment": "Expertly constructed vignette requiring discrimination between referent and expert power; the absence of formal authority sharpens the contrast with legitimate power.",
+      "suggestedLesson": "3-influence",
+      "suggestedParagraph": "## The Three Pillars of Social Influence",
+      "lessonExcerpt": "Lesson content covers obedience, conformity, and compliance but does not explicitly enumerate French and Raven's types of social power. Question written from established EPPP knowledge base.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 3
+    },
+    {
+      "stem": "In Sherif's autokinetic studies, participants who first made individual estimates of a stationary light's apparent movement subsequently made estimates alongside small groups over several sessions, during which their individual estimates converged. When these participants were later returned to making judgments alone, they maintained estimates near the group standard rather than reverting to their initial individual responses. This finding MOST directly demonstrates which principle about group norms?",
+      "options": [
+        "Conformity is sustained by ongoing normative social pressure and dissolves once group surveillance is removed",
+        "Ambiguous social situations produce public compliance while leaving private beliefs and standards unchanged",
+        "Group norms emerge through social interaction in ambiguous situations and become internalized as personal standards that persist beyond the group context",
+        "Majority influence requires unanimity within the group to successfully shift an individual's private judgment"
+      ],
+      "answer": "Group norms emerge through social interaction in ambiguous situations and become internalized as personal standards that persist beyond the group context",
+      "explanation": "Sherif's autokinetic research demonstrated that individuals converged on a shared group standard during group sessions, and crucially, they retained that standard when subsequently making judgments alone \u2014 indicating genuine internalization rather than surface compliance. Option A is directly contradicted by the data: if conformity depended on ongoing social pressure, estimates should have reverted to pre-group baselines once participants were alone. Option B also contradicts the finding \u2014 private beliefs were demonstrably altered, not merely surface behavior. Option D describes unanimity as a precondition, which was the focus of Asch's line-judgment paradigm, not Sherif's autokinetic work.",
+      "kn": "KN3",
+      "kn_explanation": "The emergence and internalization of group norms through social interaction is a foundational group dynamics concept in Domain 3: Social and Multicultural Bases of Behavior.",
+      "difficulty": "hard",
+      "quality_comment": "Tests the critical internalization finding and requires discrimination between private acceptance and public compliance \u2014 one of the most commonly misunderstood distinctions in conformity research.",
+      "suggestedLesson": "3-influence",
+      "suggestedParagraph": "## Conformity to Group Norms: Going Along to Get Along",
+      "lessonExcerpt": "Muzafer Sherif was one of the first researchers to study conformity systematically. He used a clever trick of perception: when you stare at a stationary point of light in a completely dark room, it appears to move.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 7
+    },
+    {
+      "stem": "A newly hired staff psychologist at a community mental health center spends the first six months scrupulously following all agency documentation procedures, attending every team meeting, and deferring to senior colleagues on treatment decisions \u2014 even when privately disagreeing. In the seventh month, the psychologist proposes replacing the agency's standard intake protocol with a significantly streamlined alternative. To the psychologist's surprise, senior staff endorse the proposal with little resistance. According to Hollander's idiosyncrasy credit model, this acceptance is BEST explained by:",
+      "options": [
+        "The psychologist's growing seniority and formal status within the agency now confer permission to deviate from established norms",
+        "Informational social influence caused senior staff to genuinely agree that the new protocol was superior on its merits",
+        "Early conformity to agency norms accumulated social capital that legitimizes subsequent deviation without threatening the psychologist's standing",
+        "Normative social influence shifted the group's standards over time toward the psychologist's preferred approach"
+      ],
+      "answer": "Early conformity to agency norms accumulated social capital that legitimizes subsequent deviation without threatening the psychologist's standing",
+      "explanation": "Hollander's idiosyncrasy credit model (1958) holds that group members earn 'credits' through early conformity to group norms and through demonstrated competence. These credits function as social capital that permits the member to later deviate from group expectations without losing status or influence. The psychologist's initial period of scrupulous conformity was credit-building behavior; the tolerance for the later protocol deviation reflects those credits being spent. Formal seniority alone would confer some permission regardless of behavioral history, but the idiosyncrasy credit model specifically explains tolerance for deviation as a function of prior conformity, not mere time elapsed. Informational influence pertains to accepting others' positions as accurate \u2014 it does not explain why the same proposal would be tolerated from this psychologist but might not be from a newcomer. Normative social influence describes pressures toward conformity with existing norms, not the mechanism by which deviance from those norms becomes acceptable.",
+      "kn": "KN3",
+      "kn_explanation": "This question assesses group dynamics and conformity within the Social and Multicultural Bases of Behavior domain, specifically Hollander's idiosyncrasy credit model and the role of initial conformity in legitimizing later norm deviation.",
+      "difficulty": "hard",
+      "quality_comment": "Tests a specific and frequently misunderstood group dynamics concept; requires understanding that idiosyncrasy credits are earned specifically through conformity and that they provide a mechanism for tolerated deviance distinct from formal authority.",
+      "suggestedLesson": "3-influence",
+      "suggestedParagraph": "Conformity to Group Norms: Going Along to Get Along",
+      "lessonExcerpt": "Muzafer Sherif was one of the first researchers to study conformity systematically. He used a clever trick of perception... People were less willing to deviate when they were part of an established group.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 18
     }
   ]
 }

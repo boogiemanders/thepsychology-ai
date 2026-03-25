@@ -11,7 +11,7 @@
       "answer": "Second-order conditioning, because a new neutral stimulus was paired with an established CS and now elicits a conditioned response",
       "explanation": "Higher-order (second-order) conditioning occurs when an established CS is paired with a new neutral stimulus, and the new stimulus eventually elicits a conditioned response without ever being directly paired with the original US. In this case, the red fence (new neutral stimulus) was repeatedly paired with the sight of the dog (CS1), and the fence now elicits anxiety on its own. Option A is incorrect because stimulus generalization involves responding to stimuli similar to the original CS (e.g., other dogs), not a completely different stimulus class (fences). Option C is incorrect because sensory preconditioning requires the two neutral stimuli to be associated before any conditioning occurs. Option D is incorrect because blocking would predict the fence would NOT become a CS, which is the opposite of what happened here.",
       "kn": "KN7",
-      "kn_explanation": "This describes higher-order classical conditioning (CS1 → CS2 chaining), which is a principle of learning, not intelligence.",
+      "kn_explanation": "This describes higher-order classical conditioning (CS1 \u2192 CS2 chaining), which is a principle of learning, not intelligence.",
       "difficulty": "hard",
       "quality_comment": "Good applied question requiring differentiation between higher-order conditioning and commonly confused concepts. Distractors represent genuine alternative explanations students might consider.",
       "suggestedLesson": "2-pavlov-and-classical-conditioning",
@@ -34,11 +34,11 @@
       "kn": "KN6",
       "kn_explanation": "Classical conditioning processes including stimulus generalization are core topics in the Cognitive-Affective Bases domain.",
       "difficulty": "medium",
-      "quality_comment": "Applied clinical scenario distinguishing stimulus generalization from higher-order conditioning—a common EPPP confusion point. Tests understanding that attitudes/emotional responses can spread through classical conditioning principles.",
+      "quality_comment": "Applied clinical scenario distinguishing stimulus generalization from higher-order conditioning\u2014a common EPPP confusion point. Tests understanding that attitudes/emotional responses can spread through classical conditioning principles.",
       "suggestedLesson": "2-pavlov-and-classical-conditioning",
       "suggestedParagraph": "### Stimulus Generalization",
       "lessonExcerpt": "classical conditioning can establish complex emotional responses, physiological reactions, immune responses, and even aspects of social behavior. It's far more pervasive than most people realize.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 5
     },
@@ -51,11 +51,11 @@
         "Conditioned inhibition, because the leash signals the absence of the dog"
       ],
       "answer": "Higher-order conditioning, because a previously established CS was paired with a new neutral stimulus",
-      "explanation": "In higher-order (second-order) conditioning, an established CS is paired with a new neutral stimulus, causing that new stimulus to elicit the CR without ever being directly paired with the US. The dog (CS) was paired with the leash (new neutral stimulus), and now the leash alone triggers anxiety. Stimulus generalization (A) is incorrect because the leash is not physically similar to a dog — generalization requires perceptual similarity to the original CS. Sensory preconditioning (C) involves two neutral stimuli being paired before either is conditioned, which doesn't match this sequence. Conditioned inhibition (D) would involve the leash signaling safety (absence of the US), not triggering fear.",
+      "explanation": "In higher-order (second-order) conditioning, an established CS is paired with a new neutral stimulus, causing that new stimulus to elicit the CR without ever being directly paired with the US. The dog (CS) was paired with the leash (new neutral stimulus), and now the leash alone triggers anxiety. Stimulus generalization (A) is incorrect because the leash is not physically similar to a dog \u2014 generalization requires perceptual similarity to the original CS. Sensory preconditioning (C) involves two neutral stimuli being paired before either is conditioned, which doesn't match this sequence. Conditioned inhibition (D) would involve the leash signaling safety (absence of the US), not triggering fear.",
       "kn": "KN6",
       "kn_explanation": "Higher-order conditioning is a classical conditioning concept within Domain 2: Cognitive-Affective Bases of Behavior.",
       "difficulty": "hard",
-      "quality_comment": "Requires distinguishing higher-order conditioning from stimulus generalization and sensory preconditioning — a frequently tested discrimination.",
+      "quality_comment": "Requires distinguishing higher-order conditioning from stimulus generalization and sensory preconditioning \u2014 a frequently tested discrimination.",
       "suggestedLesson": "2-pavlov-and-classical-conditioning",
       "suggestedParagraph": "### Higher-Order Conditioning",
       "lessonExcerpt": "In higher-order conditioning, a CS is treated as if it were a US and paired with a new neutral stimulus. This allows conditioning to spread without ever presenting the original US again.",
@@ -72,7 +72,7 @@
         "Incubation, because the fear response strengthened over time without additional pairings"
       ],
       "answer": "Stimulus generalization, because stimuli sharing features with the original CS elicited the CR",
-      "explanation": "Stimulus generalization occurs when stimuli similar to the original CS also elicit the CR, even though they were never paired with the US. The white rabbit, fur coat, and Santa Claus mask all shared perceptual features (white, furry) with the original CS (white rat). Response generalization (A) refers to reinforcing one behavior increasing similar behaviors — it's about different responses, not different stimuli. Higher-order conditioning (B) requires explicit pairing of the original CS with a new stimulus, which did not occur here. Incubation (D) refers to strengthening of a CR over time, not spread to similar stimuli.",
+      "explanation": "Stimulus generalization occurs when stimuli similar to the original CS also elicit the CR, even though they were never paired with the US. The white rabbit, fur coat, and Santa Claus mask all shared perceptual features (white, furry) with the original CS (white rat). Response generalization (A) refers to reinforcing one behavior increasing similar behaviors \u2014 it's about different responses, not different stimuli. Higher-order conditioning (B) requires explicit pairing of the original CS with a new stimulus, which did not occur here. Incubation (D) refers to strengthening of a CR over time, not spread to similar stimuli.",
       "kn": "KN6",
       "kn_explanation": "Stimulus generalization is a core classical conditioning concept within Domain 2: Cognitive-Affective Bases of Behavior.",
       "difficulty": "medium",
@@ -93,11 +93,11 @@
         "Sensory preconditioning, because the two stimuli were paired before any conditioning occurred"
       ],
       "answer": "Higher-order conditioning, because an established conditioned stimulus was used to condition a new neutral stimulus",
-      "explanation": "Higher-order (second-order) conditioning occurs when an established CS is paired with a new neutral stimulus, causing the new stimulus to also elicit the CR—without ever being directly paired with the US. In this example, the tone (CS) was paired with the light (new neutral stimulus) without food, and the light came to elicit salivation. Option A is incorrect because stimulus generalization involves responding to stimuli physically similar to the original CS (e.g., similar tones), not a completely different modality (light vs. tone) paired through a new conditioning procedure. Option C is incorrect because spontaneous recovery refers to the return of an extinguished CR after a rest period, not conditioning to a new stimulus. Option D is incorrect because sensory preconditioning involves pairing two neutral stimuli before either is conditioned.",
+      "explanation": "Higher-order (second-order) conditioning occurs when an established CS is paired with a new neutral stimulus, causing the new stimulus to also elicit the CR\u2014without ever being directly paired with the US. In this example, the tone (CS) was paired with the light (new neutral stimulus) without food, and the light came to elicit salivation. Option A is incorrect because stimulus generalization involves responding to stimuli physically similar to the original CS (e.g., similar tones), not a completely different modality (light vs. tone) paired through a new conditioning procedure. Option C is incorrect because spontaneous recovery refers to the return of an extinguished CR after a rest period, not conditioning to a new stimulus. Option D is incorrect because sensory preconditioning involves pairing two neutral stimuli before either is conditioned.",
       "kn": "KN6",
       "kn_explanation": "This question falls under Domain 2: Cognitive-Affective Bases of Behavior, specifically classical conditioning processes.",
       "difficulty": "hard",
-      "quality_comment": "Directly tests the distinction between higher-order conditioning and stimulus generalization—a common EPPP confusion point—using a concrete experimental scenario.",
+      "quality_comment": "Directly tests the distinction between higher-order conditioning and stimulus generalization\u2014a common EPPP confusion point\u2014using a concrete experimental scenario.",
       "suggestedLesson": "2-pavlov-and-classical-conditioning",
       "suggestedParagraph": "### Higher-Order Conditioning: Chaining Responses",
       "lessonExcerpt": "Once you've established a CS, you can use it like a US to condition yet another neutral stimulus. This is higher-order conditioning (also called second-order conditioning when it involves two stimuli, third-order when it involves three, and so on).",
@@ -230,6 +230,48 @@
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 11
+    },
+    {
+      "stem": "A combat veteran was involved in an explosion during deployment and now experiences a strong fear response whenever he hears a car backfire. After several months of treatment, he reports that he also experiences notable anxiety when he hears a truck door slam loudly, a sound never directly paired with the original traumatic event. Which classical conditioning process best explains his anxiety to the truck door slam?",
+      "options": [
+        "Spontaneous recovery, because an extinguished conditioned response has re-emerged after a delay",
+        "Higher-order conditioning, because the car backfire has been used to condition the new stimulus",
+        "Stimulus generalization, because a stimulus similar to the original conditioned stimulus elicits the conditioned response",
+        "Stimulus discrimination, because the veteran has learned to differentiate between acoustic cues"
+      ],
+      "answer": "Stimulus generalization, because a stimulus similar to the original conditioned stimulus elicits the conditioned response",
+      "explanation": "Stimulus generalization occurs when stimuli similar to the original conditioned stimulus also elicit the conditioned response, even without direct pairing with the unconditioned stimulus. The truck door slam is acoustically similar to the car backfire (the conditioned stimulus), so it triggers the fear response through generalization. Spontaneous recovery (A) refers to the return of an extinguished CR after a rest period, not the spread of fear to new stimuli. Higher-order conditioning (B) would require the car backfire to be explicitly paired with the truck slam across multiple trials. Stimulus discrimination (D) is the opposite process\u2014it describes learning to respond only to the original CS and not to similar stimuli.",
+      "kn": "KN6",
+      "kn_explanation": "Stimulus generalization is a foundational process in classical conditioning and falls within Domain 2: Cognitive-Affective Bases of Behavior, particularly relevant to understanding how trauma and phobias spread to new cues.",
+      "difficulty": "medium",
+      "quality_comment": "Clinically grounded scenario using PTSD context; clearly distinguishes generalization from other post-conditioning phenomena.",
+      "suggestedLesson": "2-pavlov-and-classical-conditioning",
+      "suggestedParagraph": "### Stimulus Generalization",
+      "lessonExcerpt": "Stimulus generalization occurs when stimuli similar to the original CS also elicit the [conditioned response].",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 12
+    },
+    {
+      "stem": "During a child's first dental appointment, the sound of the drill (CS1) was paired with the pain of a cavity filling (US), and the child developed a fear response (CR) to the drill sound. On subsequent visits, the dental receptionist greets the child by name before escorting her to the operatory. After several such visits, the child begins showing measurable fear when she hears the receptionist's voice on the phone, even though the receptionist has never been present during any painful procedure. This scenario best illustrates:",
+      "options": [
+        "Stimulus generalization, because the receptionist's voice is acoustically similar to the drill sound and elicits the conditioned response",
+        "Trace conditioning, because there was a temporal gap between the receptionist's greeting and the eventual painful procedure",
+        "Higher-order conditioning, because the drill sound (an established CS) functioned as a US to condition the receptionist's voice as a new CS",
+        "Spontaneous recovery, because a previously extinguished fear response has returned in a new stimulus context"
+      ],
+      "answer": "Higher-order conditioning, because the drill sound (an established CS) functioned as a US to condition the receptionist's voice as a new CS",
+      "explanation": "Higher-order (second-order) conditioning occurs when an already-established conditioned stimulus is used to condition a new neutral stimulus, without any further contact with the original unconditioned stimulus. Here, the drill sound (CS1, which already elicits fear) is systematically followed by or associated with the receptionist's voice across multiple visits. The voice acquires fear-eliciting properties not because it was directly paired with pain, but because it was paired with an established CS. Stimulus generalization (A) would require the receptionist's voice to be acoustically similar to the drill sound; the mechanism here is sequential pairing, not similarity. Trace conditioning (B) describes a timing procedure during original conditioning (gap between CS offset and US onset) and is not relevant to the acquisition of a new CS. Spontaneous recovery (D) refers to the reappearance of an extinguished CR after a rest period, not the acquisition of a new conditioned stimulus.",
+      "kn": "KN6",
+      "kn_explanation": "Higher-order classical conditioning is a tested advanced process in Domain 2: Cognitive-Affective Bases of Behavior, particularly in understanding how conditioned fears can spread to previously neutral cues without direct contact with the original US.",
+      "difficulty": "hard",
+      "quality_comment": "Scenario carefully constructs the necessary conditions for higher-order conditioning and provides plausible distractors that require precise conceptual differentiation.",
+      "suggestedLesson": "2-pavlov-and-classical-conditioning",
+      "suggestedParagraph": "## What Happens After Conditioning: Important Processes",
+      "lessonExcerpt": "The provided file was truncated before reaching the higher-order conditioning section. The foundational conditioning procedures and post-conditioning processes are established in the lesson, but the specific higher-order conditioning subsection was not available in the excerpt provided.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 18
     }
   ]
 }

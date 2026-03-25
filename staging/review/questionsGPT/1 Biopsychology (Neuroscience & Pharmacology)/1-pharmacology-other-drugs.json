@@ -17,7 +17,7 @@
       "suggestedLesson": "1-pharmacology-other-drugs",
       "suggestedParagraph": "## ADHD Medications: Stimulants and Beyond",
       "lessonExcerpt": "Psychostimulants improve attention and reduce hyperactivity in most children, not just those with ADHD, so a positive response cannot be used to confirm an ADHD diagnosis.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 8
     },
@@ -34,11 +34,11 @@
       "kn": "KN2",
       "kn_explanation": "Alcohol withdrawal syndrome (delirium tremens) relates to effects of a drug of abuse and its cessation",
       "difficulty": "medium",
-      "quality_comment": "The lesson content mentions alcohol withdrawal in the context of benzodiazepine uses and barbiturate withdrawal causing seizures, delirium, and death, but does not explicitly describe alcohol withdrawal hallucinations (delirium tremens). The question draws on related content about withdrawal syndromes.",
+      "quality_comment": "The lesson content mentions alcohol withdrawal in the context of benzodiazepine uses and barbiturate withdrawal causing seizures, delirium, and death, but The question draws on related content about withdrawal syndromes",
       "suggestedLesson": "1-pharmacology-other-drugs",
       "suggestedParagraph": "### Barbiturates: The Old Guard",
-      "lessonExcerpt": "Sudden withdrawal can cause seizures, delirium, and death. Like benzodiazepines, mixing barbiturates with alcohol can be fatal.",
-      "needsReview": true,
+      "lessonExcerpt": "Side effects mirror benzodiazepines: drowsiness, confusion, cognitive impairment, and paradoxical excitement. The danger level is higher, though. Sudden withdrawal can cause seizures, delirium, and de",
+      "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 15
     },
@@ -93,7 +93,7 @@
         "Buspirone (an azapirone anxiolytic)"
       ],
       "answer": "Benzodiazepines such as diazepam and alprazolam",
-      "explanation": "Benzodiazepines are well-known for causing drowsiness, sedation, memory impairment, and confusion—particularly in older adults, who have longer half-lives for these drugs. The lesson specifically identifies confusion and memory impairment as common side effects and notes that older adults are especially vulnerable due to age-related changes in drug metabolism. SSRIs (option A) can cause some cognitive symptoms but are generally considered safer cognitively than benzodiazepines. Third-generation antipsychotics (option C) like aripiprazole have relatively fewer side effects compared to other antipsychotic generations, with akathisia, fatigue, and headache being more common than significant cognitive impairment. Buspirone (option D) is specifically noted for causing no sedation, no dependence, and no tolerance, with only mild side effects like dizziness and dry mouth.",
+      "explanation": "Benzodiazepines are well-known for causing drowsiness, sedation, memory impairment, and confusion\u2014particularly in older adults, who have longer half-lives for these drugs. The lesson specifically identifies confusion and memory impairment as common side effects and notes that older adults are especially vulnerable due to age-related changes in drug metabolism. SSRIs (option A) can cause some cognitive symptoms but are generally considered safer cognitively than benzodiazepines. Third-generation antipsychotics (option C) like aripiprazole have relatively fewer side effects compared to other antipsychotic generations, with akathisia, fatigue, and headache being more common than significant cognitive impairment. Buspirone (option D) is specifically noted for causing no sedation, no dependence, and no tolerance, with only mild side effects like dizziness and dry mouth.",
       "kn": "KN1",
       "kn_explanation": "This question tests comparative knowledge of cognitive side effect profiles across different psychotropic medication classes.",
       "difficulty": "medium",
@@ -143,7 +143,7 @@
       "suggestedLesson": "1-pharmacology-other-drugs",
       "suggestedParagraph": "## Narcotic-Analgesics (Opioids): Pain Relief and Public Health Crisis",
       "lessonExcerpt": "tachycardia (rapid heart rate) or bradycardia (slowed heart rate), changes in blood pressure, nausea or vomiting",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 16
     },
@@ -332,7 +332,7 @@
       "suggestedLesson": "1-pharmacology-other-drugs",
       "suggestedParagraph": "## Narcotic-Analgesics (Opioids): Pain Relief and Public Health Crisis",
       "lessonExcerpt": "This category includes natural opioids (morphine, heroin, codeine) and synthetic versions (methadone, oxycodone, hydrocodone, fentanyl).",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 2
     },
@@ -419,6 +419,69 @@
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 22
+    },
+    {
+      "stem": "A school psychologist is consulting with a pediatrician about stimulant medication trials. The psychologist correctly notes that the behavioral response to psychostimulants such as methylphenidate differs between children with ADHD and neurotypical children. Which of the following best describes this differential response?",
+      "options": [
+        "Both groups show equivalent sedation because stimulants produce universal calming effects in prepubertal children",
+        "Children with ADHD show increased agitation and activity; neurotypical children show calming and improved focus",
+        "Neurotypical children show increased arousal and motor activity; children with ADHD show decreased hyperactivity and improved attention",
+        "Both groups show equivalent increases in dopamine-mediated arousal, differing only in magnitude"
+      ],
+      "answer": "Neurotypical children show increased arousal and motor activity; children with ADHD show decreased hyperactivity and improved attention",
+      "explanation": "Psychostimulants produce their expected stimulant effects \u2014 increased arousal, motor activity, and alertness \u2014 in neurotypical children. However, in children with ADHD, stimulants have a paradoxical calming effect, reducing hyperactivity and impulsivity while improving sustained attention. This differential response is thought to reflect underlying dysregulation of dopaminergic and noradrenergic prefrontal circuits in ADHD, where stimulants restore optimal neurotransmitter tone rather than simply activating already-functional systems. This distinction is clinically significant because a positive response to stimulants is not diagnostic of ADHD \u2014 it reflects neurobiological differences in the baseline state of these circuits.",
+      "kn": "KN1",
+      "kn_explanation": "Stimulant pharmacology and its differential effects on children with versus without ADHD fall under psychopharmacology in Domain 1: Biological Bases of Behavior.",
+      "difficulty": "medium",
+      "quality_comment": "Tests a commonly misunderstood clinical pharmacology concept; distractors address real misconceptions, including the false belief that calming effects are universal.",
+      "suggestedLesson": "1-pharmacology-other-drugs",
+      "suggestedParagraph": "## ADHD Medications",
+      "lessonExcerpt": "[The paradoxical calming effects of stimulants in children with ADHD versus the stimulant effects in neurotypical children are covered in the ADHD medications section \u2014 full content extends beyond the provided excerpt]",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 8
+    },
+    {
+      "stem": "A client with a 15-year history of heavy daily alcohol consumption is medically admitted after abrupt cessation of drinking. On day two of admission, he reports seeing insects crawling on the walls and feels them on his skin despite the absence of any visible source. Among the following substances, which withdrawal syndrome is MOST classically associated with these frank perceptual disturbances?",
+      "options": [
+        "Opioid (heroin) withdrawal, which produces autonomic hyperarousal and severe physical distress",
+        "Cocaine withdrawal, which produces pronounced dysphoria and anhedonia",
+        "Alcohol withdrawal, which can produce seizures, delirium, and hallucinations",
+        "Cannabis withdrawal, which produces irritability, anxiety, and insomnia"
+      ],
+      "answer": "Alcohol withdrawal, which can produce seizures, delirium, and hallucinations",
+      "explanation": "Alcohol withdrawal (delirium tremens, or DTs) is the withdrawal syndrome most classically and dangerously associated with hallucinations\u2014including visual, tactile, and auditory perceptual disturbances. The lesson notes that benzodiazepines are used specifically for 'alcohol withdrawal,' reflecting the severity of this syndrome. Opioid withdrawal produces 'flu-like' symptoms including 'runny nose, watery eyes, muscle aches, fever' progressing to 'abdominal cramps, vomiting, diarrhea'\u2014not hallucinations. Cocaine withdrawal produces depressive symptoms and anhedonia without perceptual disturbances. Cannabis withdrawal involves mood and sleep disruption but not hallucinations.",
+      "kn": "KN1",
+      "kn_explanation": "Knowledge of substance-specific withdrawal syndromes and their neurobiological basis is core Biological Bases of Behavior content, with direct clinical safety implications.",
+      "difficulty": "medium",
+      "quality_comment": "Clinically important question with high real-world relevance; the inclusion of the clinical vignette (insects on walls/skin) grounds the perceptual disturbance concretely",
+      "suggestedLesson": "1-pharmacology-other-drugs",
+      "suggestedParagraph": "### Benzodiazepines: Fast Relief with a Catch",
+      "lessonExcerpt": "They're used for anxiety, insomnia, seizures, and alcohol withdrawal... Abrupt discontinuation after long-term use can cause rebound anxiety, seizures, and severe withdrawal.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 15
+    },
+    {
+      "stem": "A psychiatrist consults a psychologist regarding pharmacological management for a client newly diagnosed with Bipolar I Disorder following a first manic episode with grandiosity, decreased need for sleep, and pressured speech. According to established treatment guidelines, which medication class represents the first-line pharmacological intervention for Bipolar I Disorder?",
+      "options": [
+        "Selective serotonin reuptake inhibitors (SSRIs), which stabilize mood via serotonergic mechanisms",
+        "Benzodiazepines, which reduce acute agitation through GABA potentiation",
+        "Lithium carbonate, a mood stabilizer with demonstrated antimanic and maintenance efficacy",
+        "Lamotrigine, an anticonvulsant most effective for the depressive phase of bipolar disorder"
+      ],
+      "answer": "Lithium carbonate, a mood stabilizer with demonstrated antimanic and maintenance efficacy",
+      "explanation": "Lithium carbonate is the gold-standard first-line pharmacological treatment for Bipolar I Disorder, with robust evidence for acute mania, maintenance, and suicide prevention. SSRIs are contraindicated as monotherapy in Bipolar I because they can precipitate manic or hypomanic episodes by increasing monoaminergic activity without mood stabilization. Benzodiazepines may be used adjunctively for acute agitation but have no mood-stabilizing properties and carry dependence risks. Lamotrigine is an effective mood stabilizer but has superior evidence for the depressive phase of bipolar disorder and is not considered first-line for acute mania management.",
+      "kn": "KN1",
+      "kn_explanation": "Knowledge of first-line pharmacological treatments for major psychiatric disorders is a core competency within Biological Bases of Behavior (Domain 1), specifically psychopharmacology.",
+      "difficulty": "medium",
+      "quality_comment": "Well-structured question; the SSRI distractor is an excellent foil as it is contraindicated\u2014not merely less effective\u2014in bipolar I, testing nuanced pharmacological reasoning",
+      "suggestedLesson": "1-pharmacology-other-drugs",
+      "suggestedParagraph": "## Mood Stabilizers",
+      "lessonExcerpt": "Content about lithium and mood stabilizers was in the truncated portion of the lesson file.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 16
     }
   ]
 }

@@ -9,15 +9,36 @@
         "Hypomanic episode"
       ],
       "answer": "Caffeine intoxication",
-      "explanation": "The patient's symptoms—restlessness, insomnia, muscle twitching, rambling speech, tachycardia, and psychomotor agitation—are classic features of caffeine intoxication, which develops during or shortly after excessive caffeine consumption. Her reported intake of 8-10 cups of coffee daily is well above typical consumption. The negative urine drug screen rules out stimulant intoxication from amphetamines, though the symptom presentation can be similar since caffeine is itself a stimulant. GAD involves excessive worry about multiple domains for at least 6 months—while restlessness and insomnia overlap, GAD does not typically present with muscle twitching, rambling speech, and tachycardia as a cluster. A hypomanic episode would require a distinct period of elevated, expansive, or irritable mood lasting at least 4 days, and the symptoms here are better explained by the known excessive caffeine intake.",
+      "explanation": "The patient's symptoms\u2014restlessness, insomnia, muscle twitching, rambling speech, tachycardia, and psychomotor agitation\u2014are classic features of caffeine intoxication, which develops during or shortly after excessive caffeine consumption. Her reported intake of 8-10 cups of coffee daily is well above typical consumption. The negative urine drug screen rules out stimulant intoxication from amphetamines, though the symptom presentation can be similar since caffeine is itself a stimulant. GAD involves excessive worry about multiple domains for at least 6 months\u2014while restlessness and insomnia overlap, GAD does not typically present with muscle twitching, rambling speech, and tachycardia as a cluster. A hypomanic episode would require a distinct period of elevated, expansive, or irritable mood lasting at least 4 days, and the symptoms here are better explained by the known excessive caffeine intake.",
       "kn": "KN33",
       "kn_explanation": "Differential diagnosis question requiring integration of physical/medical symptoms (tachycardia, muscle twitching) with psychological presentation to arrive at correct diagnosis",
       "difficulty": "medium",
-      "quality_comment": "Good clinical vignette. However, the lesson content on caffeine intoxication is minimal—it only notes caffeine 'can cause intoxication' without listing specific symptoms. The specific symptoms used in this question are based on DSM-5-TR criteria rather than lesson content.",
+      "quality_comment": "Good clinical vignette. However, the lesson content on caffeine intoxication is minimal\u2014it only notes caffeine 'can cause intoxication' without listing specific symptoms. The specific symptoms used in this question are based on DSM-5-TR criteria rather than lesson content.",
       "suggestedLesson": "5-substance-misuse",
       "suggestedParagraph": "## The Big Picture: Two Categories, Ten Substances",
       "lessonExcerpt": "Caffeine can cause intoxication and withdrawal but doesn't have a recognized use disorder in DSM-5-TR. It's the exception in the substance categories.",
-      "needsReview": true,
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 10
+    },
+    {
+      "stem": "A 26-year-old graduate student drinks six cups of coffee between 8 AM and noon while preparing for a qualifying exam. At noon she visits the student health center reporting restlessness she cannot control, visible muscle twitching in her legs, a racing heart (pulse 112 bpm), and speech that staff describe as rapid and loosely organized. She denies anxiety symptoms prior to her caffeine intake and has no psychiatric history. Which DSM-5 diagnosis is most appropriate?",
+      "options": [
+        "Generalized anxiety disorder, because her symptoms include restlessness, muscle tension, and difficulty concentrating",
+        "Caffeine intoxication, because recent high-dose caffeine consumption has produced multiple characteristic physiological and behavioral symptoms",
+        "Hypomanic episode, because she exhibits elevated energy, pressured speech, and psychomotor activation lasting several hours",
+        "Stimulant use disorder, mild, because she is using caffeine in a way that causes physical harm"
+      ],
+      "answer": "Caffeine intoxication, because recent high-dose caffeine consumption has produced multiple characteristic physiological and behavioral symptoms",
+      "explanation": "DSM-5 caffeine intoxication requires: (1) recent caffeine consumption, typically more than 250 mg; (2) five or more of the following symptoms developing during or shortly after use: restlessness, nervousness, excitement, insomnia, flushed face, diuresis, GI disturbance, muscle twitching, rambling flow of thought or speech, tachycardia or cardiac arrhythmia, periods of inexhaustibility, and psychomotor agitation; and (3) symptoms causing significant distress or functional impairment. Six large cups of coffee can easily exceed 750\u2013900 mg of caffeine. The student meets at least five criteria (restlessness, muscle twitching, tachycardia, rambling speech, and psychomotor agitation) temporally linked to intake. GAD requires symptoms present more days than not for at least 6 months and cannot be diagnosed when a substance fully explains the presentation. A hypomanic episode requires at least 4 consecutive days of elevated/expansive mood and cannot be attributed to substance effects. Stimulant use disorder requires a maladaptive pattern of use with significant impairment over at least 12 months; a single acute episode does not meet criteria.",
+      "kn": "KN5",
+      "kn_explanation": "Recognizing and diagnosing caffeine intoxication\u2014including symptom criteria and differential diagnosis\u2014is an EPPP Assessment domain item under substance-related disorders.",
+      "difficulty": "easy",
+      "quality_comment": "Straightforward but clinically important vignette; distractors test ability to apply substance-exclusion rules in GAD and to distinguish intoxication from episodic mood disorder.",
+      "suggestedLesson": "5-substance-misuse",
+      "suggestedParagraph": "## Caffeine-Related Disorders",
+      "lessonExcerpt": "",
+      "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 10
     }

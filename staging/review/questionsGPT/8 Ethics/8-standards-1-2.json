@@ -1,27 +1,6 @@
 {
   "questions": [
     {
-      "stem": "During a therapy session, a client reveals that her previous therapist initiated a sexual relationship with her during treatment. According to ethical guidelines, what is the MOST appropriate action for the current therapist to take?",
-      "options": [
-        "File an ethics complaint against the former therapist on behalf of the client immediately",
-        "Assist the client in understanding available options for reporting the misconduct, including filing an ethics complaint or licensing board complaint",
-        "Contact the former therapist directly to confront them about the alleged misconduct",
-        "Document the disclosure in session notes and take no further action unless the client requests it"
-      ],
-      "answer": "Assist the client in understanding available options for reporting the misconduct, including filing an ethics complaint or licensing board complaint",
-      "explanation": "Standard 10.05 addresses sexual intimacies with current therapy clients, and the broader ethics code addresses how psychologists should respond to reports of ethical violations by colleagues. The ethical approach is to help the client understand their options for recourse—including filing complaints with the APA Ethics Committee or the state licensing board—while respecting client autonomy. Option A is wrong because the psychologist should not file on the client's behalf without the client's consent, as this could retraumatize the client and violates their autonomy. Option C is wrong because directly confronting the former therapist would breach the current client's confidentiality. Option D is wrong because merely documenting without helping the client understand options fails the ethical obligation to assist clients who may have been harmed by another professional.",
-      "kn": "KN64",
-      "kn_explanation": "Identifying and managing the ethical issue of a previous therapist's sexual misconduct — requires knowing reporting obligations and how to handle the situation",
-      "difficulty": "hard",
-      "quality_comment": "Tests nuanced understanding of balancing reporting obligations with client autonomy. Lesson content does not explicitly address this scenario.",
-      "suggestedLesson": "8-standards-1-2",
-      "suggestedParagraph": "### Handling Conflicts Between Ethics and Law",
-      "lessonExcerpt": "The APA Ethics Code is organized into sections that build from aspirational ideals down to enforceable rules.",
-      "needsReview": true,
-      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 4
-    },
-    {
       "stem": "A psychology intern is studying for the EPPP and is confused about the difference between the General Principles and the Ethical Standards in the APA Ethics Code. Which of the following MOST accurately describes this distinction?",
       "options": [
         "General Principles are enforceable and address broad professional conduct, while Ethical Standards provide aspirational guidance for specific situations",
@@ -30,7 +9,7 @@
         "General Principles and Ethical Standards are equally enforceable, but General Principles carry less severe sanctions when violated"
       ],
       "answer": "General Principles are aspirational ideals that cannot be used as a basis for sanctions, while Ethical Standards are enforceable rules that can result in disciplinary action",
-      "explanation": "The lesson content explicitly states: 'These are aspirational. They can't be used to sanction you, but they represent the highest ideals of the profession.' In contrast, the Ethical Standards are described as 'the enforceable rules organized into ten categories.' This distinction is fundamental to understanding the structure of the APA Ethics Code. Option A reverses the relationship. Option C is wrong because both principles and standards apply broadly across professional activities. Option D is wrong because General Principles are not enforceable at all—they cannot form the basis for sanctions.",
+      "explanation": "The lesson content explicitly states: 'These are aspirational. They can't be used to sanction you, but they represent the highest ideals of the profession.' In contrast, the Ethical Standards are described as 'the enforceable rules organized into ten categories.' This distinction is fundamental to understanding the structure of the APA Ethics Code. Option A reverses the relationship. Option C is wrong because both principles and standards apply broadly across professional activities. Option D is wrong because General Principles are not enforceable at all\u2014they cannot form the basis for sanctions.",
       "kn": "KN61",
       "kn_explanation": "Understanding the structure of the APA Ethics Code (General Principles vs. Ethical Standards) is core knowledge of current ethical codes",
       "difficulty": "easy",
@@ -53,9 +32,9 @@
       "answer": "Discuss the situation with the client, explain the importance of addressing the violation, and explore options including informal and formal resolution while respecting confidentiality",
       "explanation": "Standard 1.05 requires reporting when a violation has caused or is likely to cause substantial harm, but Standard 1.04 also notes that psychologists only intervene 'when doing so doesn't violate confidentiality rights.' Sexual misconduct clearly causes substantial harm, but the psychologist learned about it through a confidential therapeutic relationship. The best initial step is to discuss options with the client and support them in taking action. Option A ignores the client's confidentiality rights. Option B is too passive given the severity of sexual misconduct. Option D is inappropriate because contacting the other therapist without considering confidentiality could violate the client's rights and the informal approach may not be suitable for sexual misconduct.",
       "kn": "KN64",
-      "kn_explanation": "Managing the ethical dilemma of a client's request not to report a previous therapist's sexual misconduct — identification and management of potential ethical issues",
+      "kn_explanation": "Managing the ethical dilemma of a client's request not to report a previous therapist's sexual misconduct \u2014 identification and management of potential ethical issues",
       "difficulty": "hard",
-      "quality_comment": "Tests the tension between duty to report colleague violations and protecting client confidentiality—a nuanced EPPP topic.",
+      "quality_comment": "Tests the tension between duty to report colleague violations and protecting client confidentiality\u2014a nuanced EPPP topic.",
       "suggestedLesson": "8-standards-1-2",
       "suggestedParagraph": "### Dealing with Colleagues' Ethical Violations",
       "lessonExcerpt": "You must report to an ethics committee, licensing board, or other authority when: The violation has caused or is likely to cause substantial harm... Critical caveat: You only intervene when doing so doesn't violate confidentiality rights.",
@@ -251,6 +230,90 @@
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 8
+    },
+    {
+      "stem": "A psychology intern is studying the APA Ethics Code and asks her supervisor to clarify the difference between the General Principles and the Ethical Standards. The supervisor's most accurate response would be:",
+      "options": [
+        "The General Principles provide specific, enforceable rules, while the Ethical Standards offer broad aspirational guidance",
+        "The General Principles are aspirational ideals that cannot be used as a basis for sanctions, while the Ethical Standards are enforceable rules with specific behavioral requirements",
+        "Both the General Principles and Ethical Standards are equally enforceable and violations of either can result in sanctions",
+        "The General Principles apply only to clinical practice, while the Ethical Standards apply to research and teaching"
+      ],
+      "answer": "The General Principles are aspirational ideals that cannot be used as a basis for sanctions, while the Ethical Standards are enforceable rules with specific behavioral requirements",
+      "explanation": "The APA Ethics Code explicitly distinguishes between aspirational General Principles and enforceable Ethical Standards. The lesson states that 'Guidelines are suggestions... aspirational' while 'Standards are mandatory rules with enforcement mechanisms.' The five General Principles (Beneficence/Nonmaleficence, Fidelity/Responsibility, Integrity, Justice, Respect) 'can't be used to sanction you.' Option A reverses the relationship. Option C incorrectly states both are equally enforceable. Option D incorrectly limits their scope.",
+      "kn": "KN8",
+      "kn_explanation": "This question tests understanding of the structural framework of the APA Ethics Code, a foundational concept in ethical/legal/professional issues.",
+      "difficulty": "easy",
+      "quality_comment": "Fundamental question well-supported by explicit lesson content. Good baseline knowledge test.",
+      "suggestedLesson": "8-standards-1-2",
+      "suggestedParagraph": "### Section C: The Five General Principles",
+      "lessonExcerpt": "These are aspirational. They can't be used to sanction you, but they represent the highest ideals of the profession... Standards are mandatory rules with enforcement mechanisms. Break these, and you could face real consequences from the APA Ethics Committee, your state licensing board, or both.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 8
+    },
+    {
+      "stem": "A client tells Dr. Patel that her previous therapist frequently discussed other clients' cases during their sessions, sharing identifiable details. According to APA ethical guidelines, what is Dr. Patel's most appropriate initial course of action?",
+      "options": [
+        "File a formal complaint with the state licensing board immediately",
+        "Attempt to resolve the issue informally by bringing it to the attention of the previous therapist",
+        "Advise the client to file a complaint with the APA Ethics Committee",
+        "Document the client's report but take no further action due to confidentiality"
+      ],
+      "answer": "Attempt to resolve the issue informally by bringing it to the attention of the previous therapist",
+      "explanation": "Standard 1.04 requires psychologists to first attempt informal resolution when they believe an ethical violation has occurred, provided doing so does not violate confidentiality rights and the issue can be resolved informally. Filing a formal complaint immediately (A) skips the required informal resolution step. Advising the client to file (C) passes responsibility without first attempting informal resolution. Taking no action (D) fails to meet the psychologist's obligation to address apparent ethical violations. The informal resolution attempt is the required first step unless the violation is too serious for informal resolution or confidentiality would be violated.",
+      "kn": "KN8",
+      "kn_explanation": "This question addresses Standard 1.04 of the APA Ethics Code regarding resolving ethical issues, which falls under Domain 8: Ethical, Legal & Professional Issues.",
+      "difficulty": "medium",
+      "quality_comment": "Strong question testing the informal resolution requirement from Standard 1. Well-grounded in lesson content about resolving ethical issues.",
+      "suggestedLesson": "8-standards-1-2",
+      "suggestedParagraph": "## Standard 1: Resolving Ethical Issues",
+      "lessonExcerpt": "Standard 1.02 tells you what to do: 1. Clarify the nature of the conflict. Make sure everyone understands there's an ethical issue 2. Make your commitment to the Ethics Code known",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 11
+    },
+    {
+      "stem": "Dr. Sato casually recommends a colleague, Dr. Fenn, to a friend who mentions needing therapy for marital problems. Dr. Sato has no formal referral arrangement with Dr. Fenn. If Dr. Fenn subsequently provides substandard care that harms the friend, what is Dr. Sato's ethical liability for this outcome?",
+      "options": [
+        "Dr. Sato is equally liable because the referral created a duty of care to the friend",
+        "Dr. Sato is liable only if she received financial compensation for the referral",
+        "Dr. Sato generally has no ethical liability for an informal referral made outside a professional context",
+        "Dr. Sato is liable because psychologists are responsible for the conduct of all colleagues they recommend"
+      ],
+      "answer": "Dr. Sato generally has no ethical liability for an informal referral made outside a professional context",
+      "explanation": "An informal recommendation made in a personal context does not establish a professional duty of care or create ethical liability under the APA Ethics Code. The Ethics Code applies to professional activities, and a casual suggestion to a friend does not constitute a formal professional referral. Option A is incorrect because a casual recommendation does not establish a professional duty of care. Option B is incorrect because while accepting referral fees creates additional ethical obligations (Standard 6.07), the absence of compensation is not what determines liability \u2014 the informal nature of the referral is the key factor. Option D is incorrect because psychologists are not vicariously liable for the conduct of every colleague they mention or recommend informally.",
+      "kn": "KN8",
+      "kn_explanation": "This question addresses the scope of professional responsibility and referral liability under the APA Ethics Code, Domain 8.",
+      "difficulty": "medium",
+      "quality_comment": "Tests understanding of the scope of professional vs. personal conduct. The lesson discusses when the Ethics Code applies to professional activities.",
+      "suggestedLesson": "8-standards-1-2",
+      "suggestedParagraph": "### Section A: Introduction and Applicability",
+      "lessonExcerpt": "The Ethics Code applies to your professional activities as a psychologist. But the APA can also take action against you for things outside your direct professional role... Does this personal action seem at least partially professional?",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 18
+    },
+    {
+      "stem": "A managed care company requires a specific diagnosis code for reimbursement. Dr. Chen's client presents with adjustment difficulties that do not meet criteria for any reimbursable diagnosis. The client cannot afford to pay out of pocket. Dr. Chen is considering assigning a diagnosis of Major Depressive Disorder to secure insurance coverage. This practice is:",
+      "options": [
+        "Ethically acceptable if the client consents to the misdiagnosis and understands the implications",
+        "Ethically acceptable as long as the assigned diagnosis is close to the client's actual presentation",
+        "Ethically prohibited because it constitutes fraud and violates standards of honesty and integrity",
+        "Ethically acceptable if the psychologist documents the clinical rationale for the diagnostic decision"
+      ],
+      "answer": "Ethically prohibited because it constitutes fraud and violates standards of honesty and integrity",
+      "explanation": "Intentionally misrepresenting a client's diagnosis to obtain insurance reimbursement violates multiple APA ethical standards, including Principle C (Integrity) which requires honesty and truthfulness, and Standard 6.06 which prohibits fraud. It also constitutes insurance fraud under law. Option A is incorrect because client consent does not make fraudulent billing ethical or legal. Option B is incorrect because any intentional misrepresentation of diagnosis is prohibited regardless of how 'close' the assigned diagnosis appears to be. Option D is incorrect because documenting a rationale for an intentionally false diagnosis does not transform fraud into acceptable practice.",
+      "kn": "KN8",
+      "kn_explanation": "This question addresses ethical standards regarding honesty in billing and diagnosis, and Principle C (Integrity), within Domain 8.",
+      "difficulty": "easy",
+      "quality_comment": "Tests a fundamental ethical principle with clear lesson support. The distractors reflect common rationalizations practitioners use.",
+      "suggestedLesson": "8-standards-1-2",
+      "suggestedParagraph": "### Section C: The Five General Principles",
+      "lessonExcerpt": "C: Integrity \u2014 Be honest \u2014 Promote accuracy, honesty, and truthfulness in all professional activities",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 19
     }
   ]
 }

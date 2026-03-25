@@ -9,7 +9,7 @@
         "Identity diffusion, because she has not yet engaged in meaningful self-exploration"
       ],
       "answer": "Identity foreclosure, because she has committed to an identity without exploring alternatives",
-      "explanation": "Identity foreclosure is characterized by having made a commitment (Yes) without having experienced an identity crisis or exploration period (No). This adolescent has adopted her family's values and career expectations without considering alternatives, which is the hallmark of foreclosure. Identity achievement (A) requires both exploration AND commitment. Identity moratorium (C) involves active exploration without commitment yet. Identity diffusion (D) involves neither exploration nor commitment—the adolescent here has clearly committed, ruling out diffusion.",
+      "explanation": "Identity foreclosure is characterized by having made a commitment (Yes) without having experienced an identity crisis or exploration period (No). This adolescent has adopted her family's values and career expectations without considering alternatives, which is the hallmark of foreclosure. Identity achievement (A) requires both exploration AND commitment. Identity moratorium (C) involves active exploration without commitment yet. Identity diffusion (D) involves neither exploration nor commitment\u2014the adolescent here has clearly committed, ruling out diffusion.",
       "kn": "KN23",
       "kn_explanation": "Relates to Marcia's identity status theory (foreclosure) - a major developmental theory",
       "difficulty": "medium",
@@ -101,7 +101,7 @@
       "suggestedLesson": "4-temperament-and-personality",
       "suggestedParagraph": "### Freud's Psychosexual Stages",
       "lessonExcerpt": "1-3 years | Anal | Toilet training, control | Obsessiveness or messiness",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 15
     },
@@ -293,6 +293,132 @@
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 21
+    },
+    {
+      "stem": "A 17-year-old reports that she has always planned to become a nurse, just like her mother and aunt, and has never seriously entertained any other career path. She fully endorses her family's religious and political values without ever questioning them. When asked if she ever explored alternatives, she states, 'I just knew what I was supposed to do.' According to Marcia's theory of identity development, this adolescent is best characterized as being in which identity status?",
+      "options": [
+        "Identity diffusion, because she has made no deliberate commitment to any identity",
+        "Identity moratorium, because she is deferring her decision until she feels ready",
+        "Identity foreclosure, because she has committed to an identity without engaging in personal exploration",
+        "Identity achievement, because she has a clear, stable sense of her future direction"
+      ],
+      "answer": "Identity foreclosure, because she has committed to an identity without engaging in personal exploration",
+      "explanation": "Identity foreclosure, in Marcia's framework, is defined by commitment to values, roles, or goals\u2014typically inherited from parents or authority figures\u2014without having undergone a period of active questioning or exploration. This adolescent demonstrates foreclosure through her unexamined adoption of her family's occupational and ideological positions. Identity diffusion involves neither exploration nor commitment. Moratorium involves active, ongoing exploration without yet committing. Achievement requires both prior exploration and subsequent commitment. The absence of any exploratory process is the defining criterion that distinguishes foreclosure from achievement.",
+      "kn": "KN4",
+      "kn_explanation": "Marcia's identity statuses are a core topic within Growth and Lifespan Development (Domain 4), specifically concerning adolescent psychosocial and identity development.",
+      "difficulty": "medium",
+      "quality_comment": "Clear clinical vignette with strong distractors that require distinguishing all four Marcia statuses. Good EPPP-level difficulty.",
+      "suggestedLesson": "4-temperament-and-personality",
+      "suggestedParagraph": "## Personality Development: Classical Theories",
+      "lessonExcerpt": "Lesson content does not explicitly cover Marcia's identity statuses in the provided excerpts; this question is based on standard EPPP domain knowledge for identity development.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 0
+    },
+    {
+      "stem": "In contrast to traditional psychodynamic and Eriksonian frameworks that conceptualize healthy development as culminating in individuation and autonomous selfhood, the Stone Center's self-in-relation theory proposes a fundamentally different model of female identity development. According to this theory, psychological health for women is best characterized by:",
+      "options": [
+        "Successfully separating from early attachment figures to form a bounded, autonomous, and individuated self",
+        "Progressing through a hierarchical sequence of psychosexual stages culminating in mature relational capacity",
+        "Growth through connection, wherein the self develops and is maintained through mutual, empathic relational engagement rather than through separation",
+        "Achieving identity via a moratorium period of exploration followed by commitment to stable occupational and ideological roles"
+      ],
+      "answer": "Growth through connection, wherein the self develops and is maintained through mutual, empathic relational engagement rather than through separation",
+      "explanation": "The Stone Center (Jordan, Miller, Stiver, Surrey) self-in-relation theory challenges the traditional Western developmental emphasis on separation-individuation as the hallmark of psychological maturity. Instead, it proposes that for women, the self is organized around and grows through connection rather than separation. Healthy development is defined by the capacity for mutually empathic, growth-fostering relationships. The model argues that applying separation-based developmental norms to women pathologizes relational orientation. Options A and B reflect traditional frameworks the Stone Center critiques. Option D describes Marcia's identity achievement status, which is a different theoretical tradition.",
+      "kn": "KN4",
+      "kn_explanation": "Feminist developmental theories including the Stone Center model fall within Growth and Lifespan Development (Domain 4) under alternative models of identity and personality development.",
+      "difficulty": "hard",
+      "quality_comment": "Doctoral-level question requiring knowledge of feminist alternatives to mainstream developmental theory. Tests conceptual contrast, which is high-yield EPPP content.",
+      "suggestedLesson": "4-temperament-and-personality",
+      "suggestedParagraph": "## Personality Development: Classical Theories",
+      "lessonExcerpt": "Lesson content does not explicitly address the Stone Center self-in-relation theory in the provided excerpts. Question is based on standard EPPP domain knowledge for feminist developmental theory.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 3
+    },
+    {
+      "stem": "A pediatric psychologist is consulting on the case of a 15-year-old with Type 1 diabetes who has been skipping insulin doses and refusing to check her blood glucose, telling her parents, 'Stop controlling my life\u2014you don't own me.' She monitors her glucose regularly at school when peers are not present. From a developmental perspective, the psychologist would most accurately conceptualize this pattern as:",
+      "options": [
+        "A primary manifestation of illness denial that indicates a need for immediate psychiatric assessment",
+        "A normative expression of adolescent autonomy striving that comes into direct conflict with the self-management demands of chronic illness",
+        "Evidence of oppositional defiant disorder requiring behavioral intervention prior to medical management",
+        "A conditioned avoidance response to pain associated with blood glucose monitoring"
+      ],
+      "answer": "A normative expression of adolescent autonomy striving that comes into direct conflict with the self-management demands of chronic illness",
+      "explanation": "Adolescence is characterized by normative developmental pushes for autonomy, separation from parental authority, and identity formation. Chronic illness management typically requires ongoing parental monitoring and adherence behaviors that can feel antithetical to these developmental imperatives. Adolescents with chronic conditions frequently show reduced compliance precisely because the illness management routine becomes a battleground for autonomy. The fact that the adolescent monitors her glucose at school when peers are not present (where parental authority is absent) supports this interpretation over pathological explanations. This is not evidence of oppositional defiant disorder (which requires a pervasive, cross-situational pattern), illness denial (she monitors in private), or a simple avoidance response.",
+      "kn": "KN4",
+      "kn_explanation": "Chronic illness management in the context of adolescent development falls within Growth and Lifespan Development (Domain 4), integrating lifespan normative development with health psychology applications.",
+      "difficulty": "hard",
+      "quality_comment": "High-quality clinical reasoning question that requires integrating developmental theory with applied health psychology. Distractors are plausible clinical alternatives that require ruling out.",
+      "suggestedLesson": "4-temperament-and-personality",
+      "suggestedParagraph": "## Temperament: The Raw Material of Personality",
+      "lessonExcerpt": "Lesson content does not explicitly address chronic illness management and adolescent autonomy in the provided excerpts. Question is based on standard EPPP domain knowledge for chronic illness in adolescence.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 9
+    },
+    {
+      "stem": "A 2-year-old insists on trying to buckle his own car seat, becoming frustrated and crying when his father intervenes to help him. According to Erikson's theory of psychosocial development, this child is most centrally navigating which stage?",
+      "options": [
+        "Trust vs. Mistrust, characterized by dependence on caregiver reliability",
+        "Autonomy vs. Shame and Doubt, characterized by striving for self-control and independence",
+        "Initiative vs. Guilt, characterized by purposeful goal-directed behavior",
+        "Industry vs. Inferiority, characterized by mastery of culturally valued skills"
+      ],
+      "answer": "Autonomy vs. Shame and Doubt, characterized by striving for self-control and independence",
+      "explanation": "According to Erikson's psychosocial theory, toddlerhood (approximately ages 1-3) corresponds to the Autonomy vs. Shame and Doubt stage. The core developmental task is the child's push to assert self-control and independence over their own actions and body. The toddler's insistence on performing the task himself \u2014 and frustration when that independence is thwarted \u2014 directly illustrates this stage's central conflict. Trust vs. Mistrust (A) is the infancy stage (0-1 year) centered on caregiver consistency. Initiative vs. Guilt (C) emerges during preschool years (3-6) when children begin taking self-directed purposeful action. Industry vs. Inferiority (D) characterizes the school-age years (6-12) focused on skill mastery and peer comparison.",
+      "kn": "KN4",
+      "kn_explanation": "Erikson's psychosocial stages are a core content area within Growth and Lifespan Development, domain 4 of the EPPP.",
+      "difficulty": "medium",
+      "quality_comment": "Well-grounded behavioral vignette testing stage identification; distractors are appropriately adjacent stages.",
+      "suggestedLesson": "4-temperament-and-personality",
+      "suggestedParagraph": "### Erikson's Psychosocial Stages",
+      "lessonExcerpt": "The exam expects you to know two foundational stage theories cold: Freud's and Erikson's.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 11
+    },
+    {
+      "stem": "A geriatric psychologist assessing a 74-year-old widowed woman notes that she reports significantly reduced sexual activity compared to her 60s. The research literature on sexuality in later life most strongly suggests that the primary factor accounting for this decline is:",
+      "options": [
+        "Declining estrogen levels resulting in reduced sexual desire and physical discomfort",
+        "Internalized cultural attitudes that define sexual activity as inappropriate for older adults",
+        "The absence of an available and interested partner, most commonly due to spousal loss",
+        "Decreased tactile sensitivity and genital blood flow associated with normal vascular aging"
+      ],
+      "answer": "The absence of an available and interested partner, most commonly due to spousal loss",
+      "explanation": "Research on sexual activity in older adults consistently identifies partner availability as the single strongest predictor of sexual activity frequency, particularly among older women. Widowhood, partner illness, or partner functional impairment are the primary reasons older adults \u2014 especially women, who outlive men at higher rates \u2014 report reduced or absent sexual activity. While physiological factors such as estrogen decline (A) and vascular changes (D) affect sexual function and comfort, they do not as strongly predict frequency of sexual activity as partner availability does. Cultural attitudes (B) have some influence but are not identified as the primary predictor in the empirical literature. This finding has direct clinical implications for how practitioners assess and address sexual health concerns in older adult populations.",
+      "kn": "KN4",
+      "kn_explanation": "Sexuality in later life, including predictors of sexual activity frequency, falls within the Growth and Lifespan Development domain of the EPPP.",
+      "difficulty": "medium",
+      "quality_comment": "Important clinical question that tests a counterintuitive finding \u2014 partner availability over physiology \u2014 with plausible physiological distractors.",
+      "suggestedLesson": "4-temperament-and-personality",
+      "suggestedParagraph": "## Cognitive Development",
+      "lessonExcerpt": "N/A \u2014 sexuality in later life is not covered in the provided lesson excerpts.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 17
+    },
+    {
+      "stem": "According to Freud's theory of psychosexual development, the Oedipus complex in boys is resolved primarily through which psychological mechanism?",
+      "options": [
+        "Sublimation of libidinal impulses toward the mother into socially acceptable creative pursuits",
+        "Identification with the father, motivated by castration anxiety arising from the perceived threat he poses",
+        "Displacement of competitive impulses onto male peers, resulting in same-sex friendship formation",
+        "Repression of aggressive impulses toward the father combined with idealization of the mother"
+      ],
+      "answer": "Identification with the father, motivated by castration anxiety arising from the perceived threat he poses",
+      "explanation": "According to Freud, during the phallic stage (ages 3-6), the male child develops unconscious sexual desire for the mother and competitive, hostile feelings toward the father. The boy fears that the father, if he discovered these wishes, would retaliate through castration \u2014 a fear Freud termed castration anxiety. This anxiety is resolved through identification with the aggressor: the boy internalizes paternal values, attitudes, and prohibitions, thereby forming the superego. By identifying with the father rather than competing with him, the boy also vicariously 'possesses' the mother through his father's attributes. Sublimation (A) is a defense mechanism operating throughout life but is not the primary mechanism Freud described for Oedipal resolution. Displacement onto peers (C) mischaracterizes the developmental mechanism as social rather than intrapsychic. Repression plus idealization (D) partially captures one element but misses the central role of identification.",
+      "kn": "KN4",
+      "kn_explanation": "Freud's psychosexual stages, including the phallic stage and Oedipus complex resolution, are core content in personality development within domain 4.",
+      "difficulty": "medium",
+      "quality_comment": "Tests mechanism of Oedipal resolution rather than mere stage identification; distractors require knowledge of other Freudian concepts.",
+      "suggestedLesson": "4-temperament-and-personality",
+      "suggestedParagraph": "### Freud's Psychosexual Stages",
+      "lessonExcerpt": "Freud proposed five stages from birth through adolescence, each focused on a different body zone where libido (sexual energy) concentrates... [table shows] 3-6 years | Phallic | [truncated]",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 18
     }
   ]
 }

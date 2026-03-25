@@ -30,7 +30,7 @@
         "The ultimate attribution error"
       ],
       "answer": "The actor-observer effect",
-      "explanation": "The actor-observer effect, described by Jones and Nisbett (1971), is the tendency to attribute our own behaviors to situational factors but others' behaviors to dispositional (personality) factors. The key distinction from the fundamental attribution error is that actor-observer explicitly contrasts how we explain OUR OWN behavior versus OTHERS' behavior for the same type of event. The fundamental attribution error refers only to overweighting dispositional factors when explaining others' behavior, without the self-other comparison. The self-serving bias specifically involves taking credit for successes and blaming failures on external factors—it's about successes vs. failures, not self vs. other. The ultimate attribution error extends attribution biases to in-group vs. out-group dynamics.",
+      "explanation": "The actor-observer effect, described by Jones and Nisbett (1971), is the tendency to attribute our own behaviors to situational factors but others' behaviors to dispositional (personality) factors. The key distinction from the fundamental attribution error is that actor-observer explicitly contrasts how we explain OUR OWN behavior versus OTHERS' behavior for the same type of event. The fundamental attribution error refers only to overweighting dispositional factors when explaining others' behavior, without the self-other comparison. The self-serving bias specifically involves taking credit for successes and blaming failures on external factors\u2014it's about successes vs. failures, not self vs. other. The ultimate attribution error extends attribution biases to in-group vs. out-group dynamics.",
       "kn": "KN3",
       "kn_explanation": "This question tests social cognition and attribution biases, a core area of social psychology.",
       "difficulty": "hard",
@@ -93,7 +93,7 @@
         "The false consensus effect"
       ],
       "answer": "The self-serving bias",
-      "explanation": "The self-serving bias involves taking credit for successes (internal attribution) while blaming external factors for failures (external attribution). Here, the psychologist attributes her successful assessment to internal factors (her training and intuition) but attributes the unsuccessful assessment to external factors (client motivation, referral information). The actor-observer effect (A) involves attributing one's own behavior to situations but others' behavior to personality—it doesn't specifically address the success/failure asymmetry. The fundamental attribution error (C) involves overestimating dispositional factors when explaining others' behavior, not the self-protective pattern of attributing one's own outcomes differently based on valence. The false consensus effect (D) involves overestimating how many others share one's opinions, which is unrelated to this scenario.",
+      "explanation": "The self-serving bias involves taking credit for successes (internal attribution) while blaming external factors for failures (external attribution). Here, the psychologist attributes her successful assessment to internal factors (her training and intuition) but attributes the unsuccessful assessment to external factors (client motivation, referral information). The actor-observer effect (A) involves attributing one's own behavior to situations but others' behavior to personality\u2014it doesn't specifically address the success/failure asymmetry. The fundamental attribution error (C) involves overestimating dispositional factors when explaining others' behavior, not the self-protective pattern of attributing one's own outcomes differently based on valence. The false consensus effect (D) involves overestimating how many others share one's opinions, which is unrelated to this scenario.",
       "kn": "KN12",
       "kn_explanation": "KN12 covers social cognition including attribution processes, which encompasses the self-serving bias as a key attribution error in social psychology.",
       "difficulty": "medium",
@@ -335,6 +335,48 @@
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
       "inspirationIndex": 19
+    },
+    {
+      "stem": "A forensic evaluator reviews a security video showing a convenience store cashier who, without observable provocation, responds sharply to a customer and refuses to complete the transaction. Without reviewing the cashier's work history or the events of that day, the evaluator concludes the cashier has 'an inherently aggressive and confrontational personality.' This reasoning most clearly reflects:",
+      "options": [
+        "The actor-observer effect, because the evaluator and cashier have access to different information about the behavior",
+        "The self-serving bias, because the evaluator is protecting their professional credibility by attributing blame elsewhere",
+        "The fundamental attribution error, because situational factors are underweighted relative to dispositional explanations",
+        "The ultimate attribution error, because the evaluator is attributing negative behavior to an out-group member"
+      ],
+      "answer": "The fundamental attribution error, because situational factors are underweighted relative to dispositional explanations",
+      "explanation": "The fundamental attribution error (Ross, 1977) describes the tendency to overestimate dispositional (personality) factors and underestimate situational factors when explaining others' behavior. The evaluator jumps directly to a character-based conclusion without considering situational causes (e.g., a difficult shift, a prior stressful interaction, physical illness). The actor-observer effect is related but specifically describes how actors explain their own behavior situationally while observers explain it dispositionally \u2014 it would be implicated if the cashier's self-explanation was contrasted with the observer's, but the FAE is the more direct and primary construct here. The self-serving bias involves attributing one's own successes internally and failures externally, which is not operative in this scenario. The ultimate attribution error applies the self-serving logic to in-group vs. out-group behavior, which requires a group membership context not present in this vignette.",
+      "kn": "KN3",
+      "kn_explanation": "This question addresses causal attribution biases within the Social and Multicultural Bases of Behavior domain, specifically the fundamental attribution error as described by Ross in the social cognition literature.",
+      "difficulty": "medium",
+      "quality_comment": "Well-grounded in lesson content with strong distractor differentiation; tests conceptual discrimination between closely related attribution biases rather than simple label recall.",
+      "suggestedLesson": "3-why-people-do-things",
+      "suggestedParagraph": "The Fundamental Attribution Error",
+      "lessonExcerpt": "The fundamental attribution error is our tendency to overestimate personality factors and underestimate situational factors when explaining other people's behavior.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 11
+    },
+    {
+      "stem": "A licensed psychologist begins treatment with a first-generation Korean American client presenting with chronic occupational stress and somatic complaints. The client appears disengaged during open-ended reflective questioning and responds minimally to exploratory affect-focused techniques. However, the client becomes notably more engaged when the psychologist offers concrete coping strategies and a structured plan for managing workplace conflicts. Which adjustment would be MOST consistent with culturally competent practice for this client?",
+      "options": [
+        "Persisting with nondirective, client-centered techniques to respect the client's autonomy and self-determination",
+        "Transitioning to more directive, structured, and problem-focused interventions consistent with the client's cultural expectations",
+        "Increasing emotional exploration exercises to help the client overcome culturally conditioned affect suppression",
+        "Immediately involving the client's family in session, since collectivist cultures uniformly prefer family-based treatment"
+      ],
+      "answer": "Transitioning to more directive, structured, and problem-focused interventions consistent with the client's cultural expectations",
+      "explanation": "Culturally competent practice with many Asian American clients requires recognizing that collectivist values, deference to authority, and pragmatic problem-solving orientation may make structured, directive, and problem-focused approaches more acceptable and effective than nondirective, exploratory techniques. The client's behavioral engagement pattern directly signals this preference. Persisting with nondirective techniques ignores clear cultural and behavioral cues already present in the session. Framing the client's engagement with concrete strategies as 'affect avoidance to overcome' pathologizes a culturally normative presentation. While family involvement may sometimes be relevant, universally mandating it reflects stereotyping rather than culturally informed individualization \u2014 the EPPP consistently distinguishes between cultural generalizations and individualized application.",
+      "kn": "KN3",
+      "kn_explanation": "This question assesses multicultural competence within the Social and Multicultural Bases of Behavior domain, specifically the application of culturally responsive therapeutic adaptations for Asian American clients.",
+      "difficulty": "hard",
+      "quality_comment": "Clinically relevant scenario testing nuanced multicultural competence; requires distinguishing culturally informed individualization from stereotyping, a critical distinction for EPPP-level practice.",
+      "suggestedLesson": "3-why-people-do-things",
+      "suggestedParagraph": "The Fundamental Attribution Error",
+      "lessonExcerpt": "Joan Miller's 1984 research compared North Americans and Asian Indians and found that children from both cultures made similar attributions. But as they grew into adolescence and adulthood, Americans increasingly made dispositional attributions while Indians made more situational attributions. This tells us that the fundamental attribution error isn't hardwired. It's learned through cultural values about individualism versus collectivism.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 12
     }
   ]
 }

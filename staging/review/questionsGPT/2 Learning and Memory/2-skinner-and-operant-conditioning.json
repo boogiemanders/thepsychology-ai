@@ -1,7 +1,7 @@
 {
   "questions": [
     {
-      "stem": "A therapist working with a child uses a token economy in which the child earns a sticker after completing a varying number of homework problems—sometimes after 3, sometimes after 8, sometimes after 5. The child works at a consistently high rate and continues working even when stickers are delayed. This pattern of reinforcement is BEST described as a:",
+      "stem": "A therapist working with a child uses a token economy in which the child earns a sticker after completing a varying number of homework problems\u2014sometimes after 3, sometimes after 8, sometimes after 5. The child works at a consistently high rate and continues working even when stickers are delayed. This pattern of reinforcement is BEST described as a:",
       "options": [
         "Fixed ratio schedule, because the child receives reinforcement based on the number of responses",
         "Variable interval schedule, because the reinforcement is delivered at unpredictable times",
@@ -51,15 +51,15 @@
         "Fixed interval scalloping, because the pigeons increased responding as the reinforcement time approached"
       ],
       "answer": "Superstitious behavior, because the pigeons' actions were accidentally reinforced by coincidental pairing with food delivery",
-      "explanation": "Superstitious behavior occurs when a behavior is accidentally reinforced—when reinforcement happens to follow the behavior by coincidence rather than because the behavior caused it. In Skinner's experiment, food was delivered on a time-based schedule regardless of behavior, but pigeons developed ritualistic actions because whatever they happened to be doing when food arrived was coincidentally reinforced. Option A is incorrect because the pigeons never actually learned a true discrimination—no specific behavior was required for reinforcement. Option B is incorrect because the ritualistic motor behaviors are operant responses, not respondent (classically conditioned) reflexes. Option D is incorrect because while the experiment used a fixed time interval, the phenomenon being described is the development of superstitious ritualistic behavior, not the scalloping response pattern.",
+      "explanation": "Superstitious behavior occurs when a behavior is accidentally reinforced\u2014when reinforcement happens to follow the behavior by coincidence rather than because the behavior caused it. In Skinner's experiment, food was delivered on a time-based schedule regardless of behavior, but pigeons developed ritualistic actions because whatever they happened to be doing when food arrived was coincidentally reinforced. Option A is incorrect because the pigeons never actually learned a true discrimination\u2014no specific behavior was required for reinforcement. Option B is incorrect because the ritualistic motor behaviors are operant responses, not respondent (classically conditioned) reflexes. Option D is incorrect because while the experiment used a fixed time interval, the phenomenon being described is the development of superstitious ritualistic behavior, not the scalloping response pattern.",
       "kn": "KN7",
       "kn_explanation": "Superstitious behavior from non-contingent reinforcement is a learning phenomenon described by Skinner",
       "difficulty": "medium",
-      "quality_comment": "Note: The concept requested was 'superstitious behavior acquired through respondent conditioning,' but the lesson content explicitly describes this as an operant conditioning phenomenon (accidental reinforcement), not respondent conditioning. The question is written to match the lesson content accurately.",
+      "quality_comment": "Classic Skinner superstitious behavior paradigm. Question correctly frames this as operant conditioning (accidental reinforcement), not respondent conditioning.",
       "suggestedLesson": "2-skinner-and-operant-conditioning",
       "suggestedParagraph": "### Superstitious Behavior",
       "lessonExcerpt": "Superstitious behavior develops when a behavior is accidentally reinforced, when reinforcement happens to follow the behavior by coincidence, not because the behavior caused it.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 7
     },
@@ -72,7 +72,7 @@
         "Organisms learn by forming cognitive maps of their environment through latent exploration"
       ],
       "answer": "Whether a voluntary behavior is repeated depends on whether it produces reinforcement or punishment from operating on the environment",
-      "explanation": "Skinner's operant conditioning framework proposes that voluntary behaviors are controlled by their consequences—specifically, whether they produce reinforcement (which increases behavior) or punishment (which decreases behavior). The term 'operant' reflects that the organism 'operates' on the environment. Option A describes Thorndike's law of effect, which was the precursor to Skinner's work but used the language of 'satisfying consequences' and 'stamping in.' Option C incorrectly attributes all behavior to classical conditioning, which Skinner specifically differentiated from operant conditioning. Option D describes Tolman's latent learning and cognitive maps, a cognitive approach that differs from Skinner's behavioral framework.",
+      "explanation": "Skinner's operant conditioning framework proposes that voluntary behaviors are controlled by their consequences\u2014specifically, whether they produce reinforcement (which increases behavior) or punishment (which decreases behavior). The term 'operant' reflects that the organism 'operates' on the environment. Option A describes Thorndike's law of effect, which was the precursor to Skinner's work but used the language of 'satisfying consequences' and 'stamping in.' Option C incorrectly attributes all behavior to classical conditioning, which Skinner specifically differentiated from operant conditioning. Option D describes Tolman's latent learning and cognitive maps, a cognitive approach that differs from Skinner's behavioral framework.",
       "kn": "KN7",
       "kn_explanation": "Skinner's operant conditioning is a major theory/model of learning",
       "difficulty": "medium",
@@ -114,7 +114,7 @@
         "Gradually decrease at a steady, predictable rate from the first trip"
       ],
       "answer": "Temporarily increase in frequency and intensity before eventually decreasing",
-      "explanation": "When reinforcement for a previously reinforced behavior is discontinued, an extinction burst typically occurs—the behavior temporarily increases in frequency and/or intensity before eventually decreasing. This is a well-established operant conditioning principle. Immediate cessation (A) contradicts the extinction burst phenomenon. Remaining at the same level (C) would indicate the reinforcement was not actually maintaining the behavior. A gradual, steady decrease (D) describes what happens after the extinction burst, not the initial response to removal of reinforcement.",
+      "explanation": "When reinforcement for a previously reinforced behavior is discontinued, an extinction burst typically occurs\u2014the behavior temporarily increases in frequency and/or intensity before eventually decreasing. This is a well-established operant conditioning principle. Immediate cessation (A) contradicts the extinction burst phenomenon. Remaining at the same level (C) would indicate the reinforcement was not actually maintaining the behavior. A gradual, steady decrease (D) describes what happens after the extinction burst, not the initial response to removal of reinforcement.",
       "kn": "KN6",
       "kn_explanation": "Extinction burst is an operant conditioning concept within the Cognitive-Affective Bases domain.",
       "difficulty": "easy",
@@ -156,7 +156,7 @@
         "Extinction, because the therapist is no longer reinforcing the profanity"
       ],
       "answer": "Positive punishment, because an aversive stimulus is introduced following the behavior",
-      "explanation": "Positive punishment involves adding an aversive stimulus (the reprimand) after an undesired behavior, which decreases that behavior. This matches the definition: 'Positive Punishment: Decreases behavior. Something unpleasant is added.' Negative reinforcement (A) increases behavior through removal of an aversive stimulus — the opposite of what's happening. Negative punishment (C) would involve removing something desirable (like a privilege), not adding something aversive. Extinction (D) would involve withholding reinforcement that previously maintained the behavior, not introducing a new consequence.",
+      "explanation": "Positive punishment involves adding an aversive stimulus (the reprimand) after an undesired behavior, which decreases that behavior. This matches the definition: 'Positive Punishment: Decreases behavior. Something unpleasant is added.' Negative reinforcement (A) increases behavior through removal of an aversive stimulus \u2014 the opposite of what's happening. Negative punishment (C) would involve removing something desirable (like a privilege), not adding something aversive. Extinction (D) would involve withholding reinforcement that previously maintained the behavior, not introducing a new consequence.",
       "kn": "KN6",
       "kn_explanation": "This question assesses understanding of operant conditioning consequences, which falls under Domain 2: Cognitive-Affective Bases of Behavior.",
       "difficulty": "medium",
@@ -181,7 +181,7 @@
       "kn": "KN6",
       "kn_explanation": "Habituation in the context of punishment effectiveness is a learning concept within Domain 2: Cognitive-Affective Bases of Behavior.",
       "difficulty": "medium",
-      "quality_comment": "Clinically relevant scenario that tests habituation in its most EPPP-relevant context — diminishing effectiveness of punishment.",
+      "quality_comment": "Clinically relevant scenario that tests habituation in its most EPPP-relevant context \u2014 diminishing effectiveness of punishment.",
       "suggestedLesson": "2-skinner-and-operant-conditioning",
       "suggestedParagraph": "### Habituation and the Problem with Punishment",
       "lessonExcerpt": "Habituation refers to a gradual decline in response over time. In operant conditioning contexts, this is particularly relevant to punishment. When punishment is used repeatedly, people often become accustomed to it, and it loses effectiveness.",
@@ -198,7 +198,7 @@
         "Avoidance conditioning, because she prevents the anxiety from occurring in the first place"
       ],
       "answer": "Negative reinforcement, because the behavior is strengthened by the termination of an aversive state",
-      "explanation": "Negative reinforcement occurs when a behavior increases because it removes or terminates an aversive stimulus. The client's leaving behavior is strengthened because it removes the unpleasant anxiety she is currently experiencing. As the lesson states, negative reinforcement involves 'something unpleasant is removed' and the behavior 'increases/maintains.' Positive punishment (A) decreases behavior by adding something aversive — the opposite direction. Positive reinforcement (C) would involve adding a pleasant stimulus; while solitude might be pleasant, the key mechanism here is the relief from distress. Avoidance conditioning (D) involves preventing an aversive event before it starts; since the client is already at the party experiencing distress, this is escape conditioning (a form of negative reinforcement), not avoidance.",
+      "explanation": "Negative reinforcement occurs when a behavior increases because it removes or terminates an aversive stimulus. The client's leaving behavior is strengthened because it removes the unpleasant anxiety she is currently experiencing. As the lesson states, negative reinforcement involves 'something unpleasant is removed' and the behavior 'increases/maintains.' Positive punishment (A) decreases behavior by adding something aversive \u2014 the opposite direction. Positive reinforcement (C) would involve adding a pleasant stimulus; while solitude might be pleasant, the key mechanism here is the relief from distress. Avoidance conditioning (D) involves preventing an aversive event before it starts; since the client is already at the party experiencing distress, this is escape conditioning (a form of negative reinforcement), not avoidance.",
       "kn": "KN6",
       "kn_explanation": "Negative reinforcement is a core operant conditioning concept within Domain 2: Cognitive-Affective Bases of Behavior.",
       "difficulty": "hard",
@@ -244,7 +244,7 @@
       "kn": "KN6",
       "kn_explanation": "Behavioral contrast is an operant conditioning concept within Domain 2: Cognitive-Affective Bases of Behavior.",
       "difficulty": "hard",
-      "quality_comment": "Tests the counterintuitive naming convention of behavioral contrast — positive refers to what happens to the unchanged behavior, not the changed one.",
+      "quality_comment": "Tests the counterintuitive naming convention of behavioral contrast \u2014 positive refers to what happens to the unchanged behavior, not the changed one.",
       "suggestedLesson": "2-skinner-and-operant-conditioning",
       "suggestedParagraph": "### Behavioral Contrast",
       "lessonExcerpt": "Positive behavioral contrast: When you decrease reinforcement for Behavior A, Behavior B increases (even though its reinforcement stayed the same).",
@@ -377,6 +377,216 @@
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 14
+    },
+    {
+      "stem": "In a two-component multiple schedule, a rat is reinforced on a variable-interval 30-second schedule during a green-light component (S1) and on a variable-interval 30-second schedule during a red-light component (S2). The experimenter then changes S2 to extinction while keeping S1 unchanged. The researcher observes that responding during S1 increases substantially above its pre-change baseline. This phenomenon is best described as:",
+      "options": [
+        "Stimulus generalization, because the animal is responding to the red light as though it were similar to the green light",
+        "Behavioral contrast, because a reduction in reinforcement density in one stimulus component produces an inverse increase in responding in the other component",
+        "Spontaneous recovery, because extinguished responding has re-emerged in the S1 component after a rest period",
+        "Resurgence, because a previously reinforced response is reappearing as the S2 reinforcement contingency is disrupted"
+      ],
+      "answer": "Behavioral contrast, because a reduction in reinforcement density in one stimulus component produces an inverse increase in responding in the other component",
+      "explanation": "Behavioral contrast is the phenomenon in which a change in the reinforcement conditions of one component of a multiple schedule produces an opposite change in responding during the other component. Introducing extinction in S2 (reducing its reinforcement density to zero) causes responding in the still-reinforced S1 component to exceed its original baseline\u2014a positive contrast effect. Stimulus generalization refers to responding to novel stimuli that resemble the original discriminative stimulus; it does not predict an above-baseline increase in a previously trained component. Spontaneous recovery involves the return of an extinguished response after a rest interval during the same stimulus, not an increase in a different, still-reinforced component. Resurgence refers to reappearance of a previously reinforced response when a currently reinforced response is placed on extinction, which does not describe the S1 increase.",
+      "kn": "KN6",
+      "kn_explanation": "Behavioral contrast is an advanced operant conditioning phenomenon within Domain 2: Cognitive-Affective Bases of Behavior.",
+      "difficulty": "hard",
+      "quality_comment": "Sophisticated question requiring distinction among four related but distinct operant phenomena. Content goes beyond current lesson material \u2014 valid EPPP topic, no lesson excerpt available.",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "suggestedParagraph": "## Advanced Operant Phenomena",
+      "lessonExcerpt": "",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 8
+    },
+    {
+      "stem": "A special education classroom operates a token economy. A student with a history of verbal outbursts earns tokens throughout the day for appropriate behavior. After each instance of shouting, the teacher removes five tokens from the student's running total. Over the following two weeks, the frequency of shouting decreases significantly. According to the operant conditioning framework described in the lesson, the mechanism producing the behavior reduction is best classified as:",
+      "options": [
+        "Positive punishment, because the act of token removal is itself an unpleasant event that is added following the behavior",
+        "Negative reinforcement, because the student reduces outbursts to avoid the aversive experience of losing tokens",
+        "Negative punishment (response cost), because a desirable stimulus\u2014previously earned tokens\u2014is removed contingent on the target behavior",
+        "Extinction, because the reinforcer that previously maintained the shouting behavior is being withheld"
+      ],
+      "answer": "Negative punishment (response cost), because a desirable stimulus\u2014previously earned tokens\u2014is removed contingent on the target behavior",
+      "explanation": "Response cost is a specific form of negative punishment in which a quantity of a previously earned or available reinforcer (here, tokens) is removed contingent on an undesired behavior, resulting in decreased frequency of that behavior. The lesson defines negative punishment as a consequence in which something desirable is removed and behavior decreases. Positive punishment requires adding an aversive stimulus following the behavior; token removal does not add anything aversive. Negative reinforcement involves the removal of an aversive stimulus to increase behavior, not the removal of a positive reinforcer to decrease it. Extinction involves withholding the reinforcer that functionally maintains the target behavior; because the lesson has not established that tokens were maintaining the shouting, and because the procedure actively removes earned tokens rather than simply withholding a consequence, response cost is the more precise classification.",
+      "kn": "KN6",
+      "kn_explanation": "Response cost as negative punishment is a core operant conditioning classification within Domain 2: Cognitive-Affective Bases of Behavior.",
+      "difficulty": "medium",
+      "quality_comment": "Excellent question testing precise use of the four-consequence taxonomy. Directly supported by the lesson's consequence table.",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "suggestedParagraph": "## The Four Core Consequences",
+      "lessonExcerpt": "Negative Punishment: Decreases | Something desirable is removed | Loss",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 9
+    },
+    {
+      "stem": "A parent repeatedly nags a teenager about completing homework each evening. The teenager eventually shouts at the parent, who immediately leaves the room and stops nagging. Over the following month, the teenager's shouting behavior increases in frequency. Which operant conditioning process best accounts for the maintenance of the shouting behavior?",
+      "options": [
+        "Positive reinforcement, because the parent's attention following the shouting serves as a rewarding stimulus",
+        "Negative reinforcement, because shouting successfully terminated the aversive nagging stimulus",
+        "Positive punishment, because the parent responds to shouting by withdrawing from the situation",
+        "Negative punishment, because the teenager loses access to a pleasant parental relationship"
+      ],
+      "answer": "Negative reinforcement, because shouting successfully terminated the aversive nagging stimulus",
+      "explanation": "Negative reinforcement involves the removal of an aversive stimulus that increases the likelihood a behavior will recur. The teenager's shouting behavior is negatively reinforced because it reliably terminates the aversive nagging. The behavior increases precisely because the unpleasant stimulus is removed. Positive reinforcement (A) would require the addition of something desirable; shouting does not earn a reward, it eliminates a cost. Positive punishment (C) would decrease the behavior by adding something unpleasant, which does not occur here. Negative punishment (D) would decrease the behavior by removing a desirable stimulus, but shouting actually increases, ruling out any punishment process.",
+      "kn": "KN6",
+      "kn_explanation": "Operant conditioning is a core topic within Domain 2: Cognitive-Affective Bases of Behavior, specifically the principles governing how consequences shape voluntary behavior.",
+      "difficulty": "medium",
+      "quality_comment": "Clean scenario with a clear functional relationship; tests the critical distinction between negative reinforcement and punishment that frequently trips up examinees.",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "suggestedParagraph": "## The Four Core Consequences",
+      "lessonExcerpt": "Negative Reinforcement: Increases/maintains behavior. Something unpleasant is removed. 'You have a persistent headache, take ibuprofen, and the pain goes away. You're more likely to take ibuprofen for headaches in the future because it removed the unpleasant sensation.'",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 11
+    },
+    {
+      "stem": "A 45-year-old woman enters therapy reporting no memory of sexual abuse her siblings have independently corroborated occurred during her childhood. She does not report deliberately trying to avoid thinking about the events and shows no conscious awareness of them. According to classical psychoanalytic theory, which defense mechanism most precisely describes this phenomenon, and why is it considered foundational?",
+      "options": [
+        "Suppression, because the patient has made a conscious effort to push threatening memories out of awareness",
+        "Repression, because threatening material has been automatically and unconsciously barred from consciousness, forming the basis from which other defenses operate",
+        "Dissociation, because the patient has fragmented her conscious identity to protect herself from overwhelming affect",
+        "Intellectualization, because the patient has neutralized the emotional impact of the trauma by avoiding its content entirely"
+      ],
+      "answer": "Repression, because threatening material has been automatically and unconsciously barred from consciousness, forming the basis from which other defenses operate",
+      "explanation": "Repression, in classical Freudian theory, is the involuntary and unconscious exclusion of threatening impulses, memories, or affects from conscious awareness. It is considered the prototype or foundational defense mechanism because virtually all other defenses are understood as elaborations upon or supplements to the basic repressive function. Suppression (A) is a conscious, deliberate effort to set aside distressing material\u2014the patient shows no such deliberate effort. Dissociation (C) involves a disruption of normally integrated functions of consciousness, identity, or memory, often in response to acute trauma, and is distinct from the ongoing unconscious barrier described in repression. Intellectualization (D) involves the use of abstract thinking to distance oneself from the emotional component of an experience; it does not explain the absence of the memory itself.",
+      "kn": "KN6",
+      "kn_explanation": "Psychodynamic defense mechanisms fall within Domain 2: Cognitive-Affective Bases of Behavior, which includes psychodynamic and psychoanalytic constructs of personality and emotion regulation.",
+      "difficulty": "hard",
+      "quality_comment": "Tests a nuanced distinction (repression vs. suppression vs. dissociation) at doctoral level; the 'foundational' framing adds conceptual depth.",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "suggestedParagraph": "## The Foundation",
+      "lessonExcerpt": "N/A \u2014 the provided lesson files do not contain explicit coverage of psychodynamic defense mechanisms. This question is grounded in standard EPPP psychodynamic content but cannot be anchored to the provided lesson text.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 13
+    },
+    {
+      "stem": "A behavior analyst working in a substance use treatment program wants to choose a reinforcement schedule that will produce the most persistent behavior and the greatest resistance to extinction after the formal contingency management program ends. Research on reinforcement schedules consistently supports which schedule as producing the highest response rates and the slowest extinction?",
+      "options": [
+        "Fixed ratio, because the predictable response requirement produces efficient, rapid responding",
+        "Fixed interval, because the regular time-based reinforcement creates a reliable and steady behavioral baseline",
+        "Variable interval, because unpredictable timing prevents satiation and maintains moderate consistent responding",
+        "Variable ratio, because unpredictable and varying response requirements produce the highest rates and greatest resistance to extinction"
+      ],
+      "answer": "Variable ratio, because unpredictable and varying response requirements produce the highest rates and greatest resistance to extinction",
+      "explanation": "Variable ratio (VR) schedules, in which reinforcement is delivered after an unpredictable number of responses, consistently produce the highest and most uniform response rates of all four intermittent schedules, as well as the greatest resistance to extinction. Because the organism cannot predict when the next reinforcement will occur, it continues responding at high rates even when reinforcement is withheld\u2014a pattern directly analogous to gambling behavior. Fixed ratio schedules (A) produce high response rates but are subject to post-reinforcement pauses and are more vulnerable to extinction. Fixed interval schedules (B) produce low average response rates with a characteristic 'scalloping' pattern (increased responding near the interval end); they are not optimized for persistence. Variable interval schedules (C) produce steady, moderate response rates but lower overall rates than VR schedules, because responding beyond the elapsed time is not required.",
+      "kn": "KN6",
+      "kn_explanation": "Reinforcement schedules are a heavily tested topic in Domain 2: Cognitive-Affective Bases of Behavior. The distinction between fixed and variable, ratio and interval schedules\u2014and their differential effects on response rate and extinction\u2014is a core EPPP competency.",
+      "difficulty": "medium",
+      "quality_comment": "Applied framing in a clinical context while testing fundamental schedule knowledge; distractors are well-calibrated with plausible partial-knowledge rationales.",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "suggestedParagraph": "### The Four Intermittent Schedules",
+      "lessonExcerpt": "Variable Ratio (VR): The most resistant to extinction schedule. Reinforcement comes after a varying, unpredictable number of responses... Think about slot machines.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 19
+    },
+    {
+      "stem": "A spouse repeatedly asks her partner to put dishes in the dishwasher rather than leaving them in the sink. Each time the partner complies and places the dishes in the dishwasher, the spouse immediately stops asking. Over a period of weeks, the partner's dish-loading behavior increases substantially. According to operant conditioning principles, the partner's behavior is being maintained by:",
+      "options": [
+        "Positive reinforcement, because the partner earns praise and gratitude from the spouse for completing the household task",
+        "Negative reinforcement, because the compliance behavior terminates the aversive nagging, making compliance more likely to recur",
+        "Negative punishment, because the spouse withdraws attention from the partner contingent on noncompliance",
+        "Positive punishment, because the aversive nagging is applied each time the partner fails to load the dishes"
+      ],
+      "answer": "Negative reinforcement, because the compliance behavior terminates the aversive nagging, making compliance more likely to recur",
+      "explanation": "Negative reinforcement occurs when a behavior increases or is maintained because it produces the removal of an aversive stimulus. The partner's dish-loading behavior is followed by the cessation of nagging (an aversive stimulus), and the behavior subsequently increases\u2014this precisely satisfies the definition of negative reinforcement. Note that the reinforcer is the removal of nagging, not any added reward. Positive reinforcement (A) would require the addition of a desired stimulus following the behavior; no praise or reward is described in this scenario. Negative punishment (C) would decrease a behavior by removing a desirable stimulus; here the behavior increases, ruling out any punishment process. Positive punishment (D) would decrease behavior by adding an aversive stimulus; although nagging is aversive, it precedes rather than follows successful compliance, and more importantly, the behavior is increasing, not decreasing.",
+      "kn": "KN6",
+      "kn_explanation": "Negative reinforcement via removal of an aversive stimulus is a core concept in Domain 2: Cognitive-Affective Bases of Behavior, and is frequently tested because examinees confuse it with punishment.",
+      "difficulty": "easy",
+      "quality_comment": "Cleanly illustrates the escape/avoidance mechanism of negative reinforcement in an ecologically valid domestic scenario; the four distractors test precision of the two-step identification process.",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "suggestedParagraph": "## The Four Core Consequences",
+      "lessonExcerpt": "Negative Reinforcement: Increases/maintains behavior. Something unpleasant is removed. 'You're more likely to take ibuprofen for headaches in the future because it removed the unpleasant sensation. Note that the medication itself isn't the reinforcer \u2014 the removal of pain is what reinforces taking the medication.'",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 20
+    },
+    {
+      "stem": "B.F. Skinner observed that pigeons placed in an operant chamber and given food deliveries on a fixed-time schedule \u2014 completely independent of their behavior \u2014 began to repeatedly perform whatever action happened to precede each delivery, such as turning in circles or bobbing their heads. Skinner termed this 'superstitious behavior.' Which mechanism most directly accounts for this phenomenon?",
+      "options": [
+        "Respondent conditioning, because the food (US) was repeatedly paired with the bird's movement (CS), producing a conditioned reflexive response",
+        "Adventitious operant reinforcement, because the food delivery accidentally followed a behavior and thereby strengthened its future frequency",
+        "Stimulus generalization, because the birds generalized the reinforced response to topographically similar behaviors",
+        "Second-order conditioning, because the chamber context became a conditioned reinforcer that sustained the behavior"
+      ],
+      "answer": "Adventitious operant reinforcement, because the food delivery accidentally followed a behavior and thereby strengthened its future frequency",
+      "explanation": "Skinner's concept of superstitious behavior arises from adventitious (accidental) operant reinforcement: a behavior that happened to immediately precede a reinforcer is strengthened even though no true contingency exists between the behavior and the outcome. This is an operant process governed by contiguity rather than contingency. Respondent conditioning involves pairing a neutral stimulus with an unconditioned stimulus to elicit a reflexive, involuntary response \u2014 the pigeon's circling is a voluntary operant behavior, not a reflex. Stimulus generalization describes responding to stimuli resembling the original discriminative stimulus or CS, which is not operative here. Second-order conditioning involves a previously conditioned stimulus acquiring the ability to reinforce new learning, which is also not the mechanism described.",
+      "kn": "KN6",
+      "kn_explanation": "Domain 2 covers operant conditioning principles including how adventitious reinforcement contingencies can generate and maintain behavior in the absence of a true causal relationship.",
+      "difficulty": "hard",
+      "quality_comment": "Tests the critical distinction between operant and respondent mechanisms \u2014 a common source of EPPP errors. Note: the original concept prompt frames superstitious behavior as a respondent phenomenon, which is factually incorrect per standard learning theory; superstitious behavior is an operant process. Question reframed accordingly and flagged for curriculum review.",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "suggestedParagraph": "## Reinforcement Schedules: Timing Is Everything",
+      "lessonExcerpt": "But continuous schedules have problems: people get tired of the reward (satiation), and when reinforcement stops, the behavior disappears rapidly.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 22
+    },
+    {
+      "stem": "A behavior analyst is beginning discrete trial training with a 3-year-old who has autism and has never produced any spontaneous verbal requests. During the first phase of intervention, the analyst delivers a preferred edible immediately every time the child produces the target vocalization, without exception. The analyst plans to transition to a less dense schedule only after the behavior is firmly established. Which schedule is being used in this initial phase, and what is its primary advantage for this clinical context?",
+      "options": [
+        "Fixed ratio 1 schedule; it produces the highest resistance to extinction compared to all other ratio schedules",
+        "Variable ratio schedule; it prevents satiation by delivering reinforcement unpredictably across responses",
+        "Continuous reinforcement schedule; it produces the fastest acquisition of new behavior by maximizing response-consequence clarity",
+        "Fixed interval schedule; it produces a consistent, moderate rate of responding that prevents early behavioral fatigue"
+      ],
+      "answer": "Continuous reinforcement schedule; it produces the fastest acquisition of new behavior by maximizing response-consequence clarity",
+      "explanation": "A continuous reinforcement (CRF) schedule delivers a reinforcer following every correct response and is the schedule of choice during initial skill acquisition precisely because it establishes the clearest contingency between a behavior and its consequence. The lesson states explicitly that 'the fastest way to teach a new behavior is through a continuous schedule, reinforcing every single time the behavior occurs.' Variable ratio schedules optimize resistance to extinction in already-established behaviors but do not produce the fastest initial learning. Fixed interval schedules generate a scalloping response pattern with low rates between deliveries, making them poorly suited to rapid acquisition. While FR-1 is mathematically equivalent to CRF, the designation 'continuous reinforcement' specifically carries the clinical implication of acquisition-phase use and maximum contingency clarity.",
+      "kn": "KN6",
+      "kn_explanation": "Domain 2 covers reinforcement schedules in operant conditioning, including the differential effects of continuous versus intermittent scheduling on the rate of new behavior acquisition.",
+      "difficulty": "medium",
+      "quality_comment": "Vignette effectively anchors the conceptual question in a realistic ABA context. The FR-1 distractor tests whether examinees understand the functional versus definitional distinction between CRF and fixed ratio schedules.",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "suggestedParagraph": "## Reinforcement Schedules: Timing Is Everything",
+      "lessonExcerpt": "Initially, the fastest way to teach a new behavior is through a continuous schedule, reinforcing every single time the behavior occurs. That instant feedback helps you learn quickly.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 23
+    },
+    {
+      "stem": "A practicum student watches a senior clinician skillfully redirect a client's catastrophic thinking using Socratic questioning during a live supervision session. Without ever having practiced the technique directly or receiving any feedback on their own performance, the student begins successfully using Socratic questioning in their own caseload the following week. Which theoretical framework best explains this acquisition, and who is its primary theorist?",
+      "options": [
+        "Operant conditioning; B.F. Skinner, because the student's behavior was shaped by the reinforcing descriptions of the technique's outcomes",
+        "Classical conditioning; Ivan Pavlov, because the student formed an association between the clinical setting and the modeled behavior",
+        "Observational learning; Albert Bandura, because the student acquired the behavior by attending to and retaining a model's performance without direct reinforcement",
+        "Insight learning; Wolfgang K\u00f6hler, because the student perceptually reorganized prior clinical experience into a novel solution"
+      ],
+      "answer": "Observational learning; Albert Bandura, because the student acquired the behavior by attending to and retaining a model's performance without direct reinforcement",
+      "explanation": "Bandura's social learning (social cognitive) theory proposes that new behaviors can be acquired vicariously through observation of a model, without requiring the observer to perform the behavior or receive direct reinforcement. The four subprocesses are attention (observing the model), retention (encoding what was observed), reproduction (executing the behavior), and motivation (having reason to perform it). The student attended to the senior clinician, retained the strategy, and later reproduced it \u2014 a textbook example of observational/vicarious learning. Skinner's operant conditioning requires direct contingencies acting on the learner's own behavior. Pavlov's classical conditioning involves pairing stimuli to elicit reflexive responses. K\u00f6hler's insight learning involves sudden perceptual reorganization of a problem environment, not modeled observation.",
+      "kn": "KN6",
+      "kn_explanation": "Domain 2 covers social learning theory, including Bandura's model of observational and vicarious learning as mechanisms through which behavior is acquired in the absence of direct reinforcement.",
+      "difficulty": "medium",
+      "quality_comment": "Clinical training scenario is realistic and engaging. Content goes beyond current lesson material \u2014 valid EPPP topic, no lesson excerpt available.",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "suggestedParagraph": "## Understanding Operant Conditioning: The Psychology of Consequences",
+      "lessonExcerpt": "",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 24
+    },
+    {
+      "stem": "A psychologist consulted by a treatment program for gambling disorder is asked to explain why individuals who have lost money gambling for weeks continue to return to the casino, and why abstinence is so difficult to maintain even after extended breaks. The psychologist's most accurate explanation for both the persistence and high extinction resistance of gambling behavior is that slot machines operate on a:",
+      "options": [
+        "Fixed ratio schedule, because a payout occurs after a predictable number of lever pulls, creating a strong learned expectancy",
+        "Continuous reinforcement schedule, because every pull of the lever produces some form of outcome feedback that maintains engagement",
+        "Fixed interval schedule, because gamblers learn to concentrate their play around predictable time-based payout cycles",
+        "Variable ratio schedule, because reinforcement is delivered after an unpredictable, variable number of responses, producing the highest resistance to extinction"
+      ],
+      "answer": "Variable ratio schedule, because reinforcement is delivered after an unpredictable, variable number of responses, producing the highest resistance to extinction",
+      "explanation": "Variable ratio (VR) schedules deliver reinforcement after an unpredictable, variable number of responses, producing the highest and most consistent response rates and the greatest resistance to extinction of any reinforcement schedule. Slot machines exemplify VR schedules because the gambler cannot predict which response will produce a payout, preventing the 'post-reinforcement pause' seen with fixed schedules and making the behavior highly resistant to stopping. The lesson contrasts this with continuous reinforcement, which it explicitly notes causes behavior to 'disappear rapidly' when reinforcement stops \u2014 the opposite of what is observed in gambling. Fixed ratio schedules produce predictable pauses after each reinforcement and weaker extinction resistance than VR. Fixed interval schedules produce scalloping and are time-based, not response-based. Continuous reinforcement is the schedule most vulnerable to extinction.",
+      "kn": "KN6",
+      "kn_explanation": "Domain 2 covers reinforcement schedules and their differential effects on response rate and resistance to extinction, with variable ratio schedules producing the greatest extinction resistance.",
+      "difficulty": "medium",
+      "quality_comment": "Classic EPPP scenario anchored in a real-world clinical application. The continuous reinforcement distractor exploits a common misconception. Well-supported by lesson content on intermittent schedules.",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "suggestedParagraph": "### The Four Intermittent Schedules",
+      "lessonExcerpt": "But continuous schedules have problems: people get tired of the reward (satiation), and when reinforcement stops, the behavior disappears rapidly. The solution? Once the behavior is established, switch to an intermittent (partial) schedule, where reinforcement happens only some of the time.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 26
     }
   ]
 }

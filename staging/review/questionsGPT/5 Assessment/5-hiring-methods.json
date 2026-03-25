@@ -16,10 +16,31 @@
       "quality_comment": "Good applied question requiring integration of validity and adverse impact concepts. The lesson clearly establishes GMA as highest adverse impact and work samples as job-relevant for manual jobs.",
       "suggestedLesson": "5-hiring-methods",
       "suggestedParagraph": "### 5. Work Samples: Show, Don't Tell",
-      "lessonExcerpt": "Work samples require applicants to actually perform job tasks under realistic conditions... Work samples were traditionally used for manual skilled jobs (like welding or carpentry), where they work exceptionally well... General Mental Ability Tests: Highest (most valid) — Highest adverse impact risk",
-      "needsReview": true,
+      "lessonExcerpt": "Work samples require applicants to actually perform job tasks under realistic conditions... Work samples were traditionally used for manual skilled jobs (like welding or carpentry), where they work exceptionally well... General Mental Ability Tests: Highest (most valid) \u2014 Highest adverse impact risk",
+      "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 8
+    },
+    {
+      "stem": "In 1971, the U.S. Supreme Court ruled in Griggs v. Duke Power Co. that Duke Power's requirement of a high school diploma and passing scores on two general intelligence tests for internal job transfers was unlawful under Title VII of the Civil Rights Act. The company had not validated these requirements as related to successful job performance, and Black employees were disproportionately excluded. Which of the following most accurately captures the central principle established by this ruling for employment selection testing?",
+      "options": [
+        "Employers must use only content-valid tests developed internally from job task analyses and may not purchase commercially developed assessments for selection purposes",
+        "Employment selection procedures that produce disparate impact on a protected class must be demonstrably job-related and justified by business necessity",
+        "Standardized intelligence tests are categorically prohibited from use in employment selection under federal civil rights law",
+        "Disparate impact in employment testing can only be legally challenged after the EEOC has conducted a formal administrative investigation"
+      ],
+      "answer": "Employment selection procedures that produce disparate impact on a protected class must be demonstrably job-related and justified by business necessity",
+      "explanation": "Griggs v. Duke Power Co. established the legal doctrine of adverse (disparate) impact discrimination in employment. The Supreme Court held unanimously that employment practices neutral on their face\u2014but producing a disproportionate adverse impact on members of a protected class\u2014are unlawful under Title VII unless the employer demonstrates the requirement is job-related and consistent with business necessity. The intelligence tests used by Duke Power had not been validated for the jobs in question, and the company could not demonstrate they predicted job performance. This ruling transformed employment testing by requiring demonstrated job-relatedness for selection tools with adverse impact, laying the groundwork for the Uniform Guidelines on Employee Selection Procedures (1978). Option A is incorrect; the ruling does not mandate internally developed or content-valid-only tests\u2014job-relatedness can be demonstrated through multiple validation strategies. Option C is incorrect; intelligence tests are not categorically prohibited; they must be job-relevant. Option D is incorrect; the ruling established that individual employees and the courts could challenge adverse impact directly; no prerequisite EEOC investigation is required to bring suit.",
+      "kn": "KN8",
+      "kn_explanation": "Griggs v. Duke Power Co. established foundational legal requirements for employment testing under Title VII, which falls within Ethical, Legal, and Professional Issues (KN8) on the EPPP. Psychologists involved in personnel selection must understand disparate impact doctrine and job-relatedness requirements.",
+      "difficulty": "hard",
+      "quality_comment": "Tests a specific landmark legal case with direct implications for psychological testing practice. Distractors probe common misconceptions about what the ruling did and did not prohibit. Appropriate doctoral-level difficulty with real-world practice relevance.",
+      "suggestedLesson": "5-hiring-methods",
+      "suggestedParagraph": "## Legal Foundations of Employment Testing",
+      "lessonExcerpt": "NOT COVERED: The provided lesson files do not address Griggs v. Duke Power Co. or legal requirements for employment selection testing. This content belongs in a lesson on industrial-organizational assessment, personnel selection, or ethical/legal issues in testing. The file 5-hiring-methods (not provided in the lesson content) would be the most appropriate location.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 28
     }
   ]
 }

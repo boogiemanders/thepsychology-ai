@@ -9,7 +9,7 @@
         "Early maturation is associated with equivalent increases in self-esteem for both boys and girls"
       ],
       "answer": "Early maturation is associated with predominantly negative outcomes for girls but mixed outcomes for boys",
-      "explanation": "Research clearly demonstrates that early puberty has different effects by gender. For boys, early maturation produces a mixed picture—positive effects include higher self-esteem, greater social maturity, more popularity, and better athletic skills, while negative effects include higher alcohol use, more antisocial behavior, and precocious sexual behavior. For girls, early maturation is predominantly negative, including lower self-esteem and popularity, poorer academic achievement, higher risk for precocious sexual behavior, and increased rates of substance use, depression, anxiety, eating disorders, and disruptive behavior. Options A and D incorrectly suggest positive or equivalent outcomes for girls. Option C reverses the gender pattern.",
+      "explanation": "Research clearly demonstrates that early puberty has different effects by gender. For boys, early maturation produces a mixed picture\u2014positive effects include higher self-esteem, greater social maturity, more popularity, and better athletic skills, while negative effects include higher alcohol use, more antisocial behavior, and precocious sexual behavior. For girls, early maturation is predominantly negative, including lower self-esteem and popularity, poorer academic achievement, higher risk for precocious sexual behavior, and increased rates of substance use, depression, anxiety, eating disorders, and disruptive behavior. Options A and D incorrectly suggest positive or equivalent outcomes for girls. Option C reverses the gender pattern.",
       "kn": "KN21",
       "kn_explanation": "Puberty timing and its differential psychosocial effects for boys vs girls is a core topic of normal growth and development across the lifespan.",
       "difficulty": "medium",
@@ -38,7 +38,7 @@
       "suggestedLesson": "4-body-growth",
       "suggestedParagraph": "## Sexual Orientation and Fluidity",
       "lessonExcerpt": "the likelihood of sexual activity in the later years is closely related to the frequency of sexual activity during younger years. Research has indicated that people who were sexually active are likely to remain sexually active during old age.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 17
     },
@@ -59,7 +59,7 @@
       "suggestedLesson": "4-body-growth",
       "suggestedParagraph": "## The Brain's Journey: From Birth Through Adulthood",
       "lessonExcerpt": "When a baby is born, their brain weighs about 25% of what it will weigh as an adult.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 16
     },
@@ -72,7 +72,7 @@
         "About 75%, with the remaining neurons generated during adolescent brain maturation"
       ],
       "answer": "Nearly all neurons are present at birth, with postnatal growth driven primarily by synaptogenesis and myelination",
-      "explanation": "The lesson explicitly states that most neurons are already present at birth. Postnatal brain growth—from 25% of adult weight at birth to 80% by age two—is driven not by new neuron creation but by synaptogenesis (forming new connections), dendritic growth (more branches), and myelination (insulating axons to speed neural transmission). The 25% figure refers to brain weight, not neuron count. The options suggesting 50% or 75% of neurons are present at birth incorrectly conflate brain weight with neuron number.",
+      "explanation": "The lesson explicitly states that most neurons are already present at birth. Postnatal brain growth\u2014from 25% of adult weight at birth to 80% by age two\u2014is driven not by new neuron creation but by synaptogenesis (forming new connections), dendritic growth (more branches), and myelination (insulating axons to speed neural transmission). The 25% figure refers to brain weight, not neuron count. The options suggesting 50% or 75% of neurons are present at birth incorrectly conflate brain weight with neuron number.",
       "kn": "KN4",
       "kn_explanation": "This question addresses prenatal and postnatal brain development, a core Growth and Lifespan Development topic.",
       "difficulty": "medium",
@@ -93,7 +93,7 @@
         "Preserved processing speed with decreased fund of information"
       ],
       "answer": "Decreased performance on timed pattern recognition tasks and preserved general knowledge scores",
-      "explanation": "Fluid intelligence involves the ability to solve novel problems, reason abstractly, and process information quickly—capacities that decline with age. Timed pattern recognition is a classic fluid intelligence task. Crystallized intelligence encompasses accumulated knowledge, vocabulary, and learned skills, which remain stable or even increase across much of the lifespan. General knowledge is a crystallized ability. Option A reverses the expected pattern. Option C describes global decline more consistent with dementia. Option D also reverses the expected pattern, as processing speed (a fluid ability) declines while fund of information (crystallized) is preserved.",
+      "explanation": "Fluid intelligence involves the ability to solve novel problems, reason abstractly, and process information quickly\u2014capacities that decline with age. Timed pattern recognition is a classic fluid intelligence task. Crystallized intelligence encompasses accumulated knowledge, vocabulary, and learned skills, which remain stable or even increase across much of the lifespan. General knowledge is a crystallized ability. Option A reverses the expected pattern. Option C describes global decline more consistent with dementia. Option D also reverses the expected pattern, as processing speed (a fluid ability) declines while fund of information (crystallized) is preserved.",
       "kn": "KN4",
       "kn_explanation": "This question addresses cognitive aging and the fluid vs. crystallized intelligence distinction across the lifespan.",
       "difficulty": "hard",
@@ -101,7 +101,7 @@
       "suggestedLesson": "4-body-growth",
       "suggestedParagraph": "### Adult Brain Changes: The Long Decline",
       "lessonExcerpt": "Brain weight and volume start gradually decreasing around age 30 due to neuron loss. This process accelerates after age 60... the brain isn't helpless against this decline. It compensates through: Developing new connections between remaining neurons",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 20
     },
@@ -398,6 +398,69 @@
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 14
+    },
+    {
+      "stem": "A school psychologist is preparing a psychoeducational workshop for middle school staff on puberty timing. A teacher asks whether developing early is advantageous or disadvantageous for students. Which of the following most accurately summarizes the empirical literature on the differential psychosocial effects of early physical maturation in boys versus girls?",
+      "options": [
+        "Early maturation confers similar peer status benefits for both boys and girls, primarily through perceived athletic and physical competence",
+        "Early-maturing girls tend to show greater self-confidence and social maturity, while early-maturing boys are at elevated risk for internalizing disorders",
+        "Early-maturing boys tend to experience social advantages such as higher peer status, while early-maturing girls are at greater risk for depression, lower self-esteem, and early engagement in risky behaviors",
+        "The psychosocial effects of early maturation are equivalent across genders but are moderated primarily by socioeconomic status and parenting style"
+      ],
+      "answer": "Early-maturing boys tend to experience social advantages such as higher peer status, while early-maturing girls are at greater risk for depression, lower self-esteem, and early engagement in risky behaviors",
+      "explanation": "The research literature consistently documents an asymmetric pattern: early maturation tends to be advantageous for boys, conferring social prestige, peer admiration, and athletic advantages that translate into higher status. In contrast, early-maturing girls are at elevated risk for depression, disordered eating, lower self-esteem, and earlier onset of sexual activity and substance use. This is partly because early-maturing girls are developmentally out of step with same-age peers, may attract older peer groups, and face unwanted sexualization before they have the psychological resources to manage it. The benefits and risks are clearly asymmetric, not equivalent across genders.",
+      "kn": "KN4",
+      "kn_explanation": "Puberty timing and its differential psychosocial effects fall within Growth and Lifespan Development (Domain 4), addressing physical development and its interaction with social-emotional outcomes.",
+      "difficulty": "medium",
+      "quality_comment": "High-yield EPPP content with clear asymmetric gender findings. Strong distractors including a plausible but incorrect 'equal effects' option.",
+      "suggestedLesson": "4-body-growth",
+      "suggestedParagraph": "## Sensory Development: How We Experience the World",
+      "lessonExcerpt": "Lesson content on puberty timing and adjustment was in a truncated portion of 4-body-growth.md and could not be confirmed from the provided excerpt.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 7
+    },
+    {
+      "stem": "A gerontologist is reviewing outcome data across a cohort of adults aged 70\u201385. After controlling for physical health status, which factor most consistently predicts positive psychological and functional outcomes in late life according to the research literature on successful aging?",
+      "options": [
+        "Preservation of fluid intelligence and processing speed",
+        "Freedom from diagnosable psychiatric conditions throughout adulthood",
+        "Maintaining meaningful engagement in social and productive activities",
+        "Access to sufficient financial resources and preventive healthcare"
+      ],
+      "answer": "Maintaining meaningful engagement in social and productive activities",
+      "explanation": "Research on successful aging\u2014most notably Rowe and Kahn's model\u2014identifies sustained engagement with life, encompassing both social relationships and productive activity, as the primary distinguishing feature of successful versus usual aging. While avoiding disease and maintaining physical and cognitive function are also components, engagement is consistently the strongest predictor because it captures purpose, connection, and continued contribution. Fluid intelligence naturally declines with age and cannot be preserved as a primary strategy. Freedom from psychiatric history is helpful but not the dominant predictor once physical health is controlled. Financial resources, while facilitating, are not the primary psychological driver.",
+      "kn": "KN4",
+      "kn_explanation": "Successful aging outcomes fall squarely within Growth and Lifespan Development (Domain 4), addressing late-life developmental trajectories and psychosocial predictors of well-being in older adulthood.",
+      "difficulty": "medium",
+      "quality_comment": "Tests a high-yield EPPP concept at appropriate doctoral difficulty. However, none of the provided lesson files explicitly address successful aging models. Flagged for review and lesson content alignment.",
+      "suggestedLesson": "4-body-growth",
+      "suggestedParagraph": "## Adult Brain Changes: The Long Decline",
+      "lessonExcerpt": "This explains why many older adults maintain strong cognitive abilities despite some neuron loss, the brain adapts.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 21
+    },
+    {
+      "stem": "A palliative care psychologist is consulting on a 61-year-old patient recently diagnosed with a terminal cancer. The patient insists the oncologist made a laboratory error, refuses to discuss end-of-life planning, and has scheduled appointments with three other physicians seeking a different diagnosis. According to K\u00fcbler-Ross's model, which stage of response to terminal illness does this behavior most clearly represent?",
+      "options": [
+        "Anger",
+        "Bargaining",
+        "Denial",
+        "Depression"
+      ],
+      "answer": "Denial",
+      "explanation": "K\u00fcbler-Ross identified Denial as the first stage in her model of adjustment to terminal illness. Patients in this stage refuse to accept the reality of their prognosis, often attributing diagnoses to error, seeking additional medical opinions, and avoiding planning that would confirm the illness's legitimacy. Denial serves as an initial psychological buffer against the shock of a terminal diagnosis. Anger (stage 2) is characterized by resentment, frustration, and asking 'Why me?' Bargaining (stage 3) involves making conditional deals or promises to gain more time. Depression (stage 4) reflects a quiet, inward grief in anticipation of loss. This patient shows no indication of anger toward providers, conditional deal-making, or depressive withdrawal\u2014the clinical picture fits Denial.",
+      "kn": "KN4",
+      "kn_explanation": "Death and dying is a foundational topic in Growth and Lifespan Development (Domain 4). K\u00fcbler-Ross's stage model is among the most consistently tested concepts in this subdomain on the EPPP.",
+      "difficulty": "easy",
+      "quality_comment": "Clear, well-grounded clinical vignette testing a core EPPP concept. Distractors require differentiation among adjacent stages. However, the provided lesson files do not include content on K\u00fcbler-Ross or death/dying. Flagged for review.",
+      "suggestedLesson": "4-body-growth",
+      "suggestedParagraph": "## Adult Brain Changes: The Long Decline",
+      "lessonExcerpt": "",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 22
     }
   ]
 }

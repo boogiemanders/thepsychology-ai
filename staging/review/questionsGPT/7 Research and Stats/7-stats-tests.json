@@ -9,7 +9,7 @@
         "The chi-square test assumes that the variables are measured on at least an ordinal scale"
       ],
       "answer": "The chi-square test requires that expected frequencies in each cell be sufficiently large",
-      "explanation": "A key assumption of the chi-square test is that expected cell frequencies must be adequate (typically at least 5). Small expected frequencies can lead to inaccurate results. The lesson notes that chi-square is a nonparametric test used with nominal data and frequencies, and that nonparametric tests are used 'if your sample is small, groups are unequal in size.' When cells have very low frequencies, the chi-square approximation breaks down. Option A is incorrect — chi-square can handle multiple categories. Option C is incorrect — dichotomous variables are appropriate for chi-square. Option D is incorrect — chi-square specifically works with nominal (categorical) data, not ordinal.",
+      "explanation": "A key assumption of the chi-square test is that expected cell frequencies must be adequate (typically at least 5). Small expected frequencies can lead to inaccurate results. The lesson notes that chi-square is a nonparametric test used with nominal data and frequencies, and that nonparametric tests are used 'if your sample is small, groups are unequal in size.' When cells have very low frequencies, the chi-square approximation breaks down. Option A is incorrect \u2014 chi-square can handle multiple categories. Option C is incorrect \u2014 dichotomous variables are appropriate for chi-square. Option D is incorrect \u2014 chi-square specifically works with nominal (categorical) data, not ordinal.",
       "kn": "KN55",
       "kn_explanation": "Chi-square test is a quantitative analytic method (inferential statistics)",
       "difficulty": "medium",
@@ -17,7 +17,7 @@
       "suggestedLesson": "7-stats-tests",
       "suggestedParagraph": "## The Chi-Square Test: Analyzing Categories",
       "lessonExcerpt": "The chi-square test works with nominal data. Frequencies and categories.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
       "inspirationIndex": 8
     },
@@ -30,15 +30,15 @@
         "The assumption that all expected cell frequencies must be equal"
       ],
       "answer": "The assumption of independence of observations, because married couples' responses may be correlated",
-      "explanation": "The chi-square test requires that each observation is independent of every other observation. When married couples are both included, their responses may be correlated — partners often share treatment preferences, diagnostic patterns influenced by shared environment, or may influence each other's responses. This violates independence of observations. Option A is incorrect because homogeneity of variance is an assumption of parametric tests like ANOVA, not chi-square. Option B is wrong because chi-square is a nonparametric test that does not assume normality. Option D is wrong because chi-square does not require equal expected frequencies — it requires adequate expected frequencies (typically at least 5 per cell), not equal ones.",
+      "explanation": "The chi-square test requires that each observation is independent of every other observation. When married couples are both included, their responses may be correlated \u2014 partners often share treatment preferences, diagnostic patterns influenced by shared environment, or may influence each other's responses. This violates independence of observations. Option A is incorrect because homogeneity of variance is an assumption of parametric tests like ANOVA, not chi-square. Option B is wrong because chi-square is a nonparametric test that does not assume normality. Option D is wrong because chi-square does not require equal expected frequencies \u2014 it requires adequate expected frequencies (typically at least 5 per cell), not equal ones.",
       "kn": "KN55",
       "kn_explanation": "Chi-square test is a quantitative analytic method (inferential statistics)",
       "difficulty": "medium",
-      "quality_comment": "Good applied scenario. The lesson covers chi-square basics but does not explicitly discuss the independence of observations assumption, so this draws on standard EPPP knowledge.",
+      "quality_comment": "Good applied scenario. The lesson covers chi-square basics but",
       "suggestedLesson": "7-stats-tests",
       "suggestedParagraph": "## The Chi-Square Test: Analyzing Categories",
-      "lessonExcerpt": "The chi-square test works with nominal data. Frequencies and categories.",
-      "needsReview": true,
+      "lessonExcerpt": "**Nonparametric tests** handle nominal and ordinal data. Categories and rankings. The chi-square test is the main player here. These tests don't require the strict assumptions of parametric tests. Eve",
+      "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
       "inspirationIndex": 8
     },
@@ -188,6 +188,48 @@
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
       "inspirationIndex": 12
+    },
+    {
+      "stem": "A researcher wants to use a chi-square test to examine whether there is an association between therapeutic orientation (psychodynamic, humanistic, cognitive-behavioral) and client dropout (yes/no). The study includes 60 participants, but one cell in the contingency table contains only 3 observations. Which of the following is the PRIMARY concern with this analysis?",
+      "options": [
+        "The chi-square test cannot be used because the dependent variable is dichotomous",
+        "Low expected frequencies in one or more cells may violate the assumptions of the chi-square test, producing unreliable results",
+        "The chi-square test requires interval or ratio data and cannot analyze nominal categories",
+        "The chi-square test is only appropriate for single-sample designs, not for examining associations between two variables"
+      ],
+      "answer": "Low expected frequencies in one or more cells may violate the assumptions of the chi-square test, producing unreliable results",
+      "explanation": "A key limitation of chi-square tests is that they require adequate expected frequencies in each cell (conventionally, 5 or more). When cells have very low frequencies, the chi-square approximation becomes unreliable. The lesson establishes that chi-square 'works with nominal data' and describes the multiple-sample chi-square for examining associations between two categorical variables, so Options C and D are incorrect. Option A is wrong because dichotomous variables are a type of nominal variable, which chi-square handles. The lesson describes chi-square as a nonparametric test that handles 'nominal and ordinal data \u2014 categories and rankings' and does not require normality or homogeneity of variance assumptions that parametric tests need.",
+      "kn": "KN7",
+      "kn_explanation": "This question tests knowledge of chi-square test assumptions and limitations, a core nonparametric statistics topic.",
+      "difficulty": "medium",
+      "quality_comment": "Tests a common and important limitation of chi-square. The expected frequency requirement is standard EPPP content though the lesson mentions it only implicitly.",
+      "suggestedLesson": "7-stats-tests",
+      "suggestedParagraph": "## The Chi-Square Test: Analyzing Categories",
+      "lessonExcerpt": "The chi-square test works with nominal data. Frequencies and categories.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 8
+    },
+    {
+      "stem": "A researcher wants to determine whether there are significant differences in job satisfaction scores (measured on a continuous scale) among employees in four different departments. Each employee belongs to only one department, and the data meet assumptions of normality and homogeneity of variance. Which statistical test is most appropriate?",
+      "options": [
+        "Independent samples t-test",
+        "One-way ANOVA",
+        "Chi-square goodness-of-fit test",
+        "Paired samples t-test"
+      ],
+      "answer": "One-way ANOVA",
+      "explanation": "One-way ANOVA is correct because the study has one independent variable (department) with more than two levels (four departments), one continuous dependent variable (job satisfaction scores), and meets parametric assumptions. A t-test (A) is incorrect because t-tests compare only two means, not four. The chi-square goodness-of-fit test (C) is incorrect because it is used for nominal/categorical data (frequencies in categories), not continuous scores. A paired samples t-test (D) is incorrect both because it is limited to two means and because it requires related samples (same or matched participants measured twice), whereas these are independent groups.",
+      "kn": "KN7",
+      "kn_explanation": "This question tests knowledge of selecting the appropriate inferential statistical test based on number of IV levels and DV measurement scale, a core Research Methods & Statistics competency.",
+      "difficulty": "medium",
+      "quality_comment": "Straightforward application of the statistical test decision framework requiring discrimination between t-test (2 groups) and ANOVA (3+ groups) while also ruling out nonparametric alternatives.",
+      "suggestedLesson": "7-stats-tests",
+      "suggestedParagraph": "## The Selection Process: Your Decision Framework",
+      "lessonExcerpt": "When you have one independent variable with exactly two levels and one dependent variable measured on an interval or ratio scale, you need a t-test.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 11
     }
   ]
 }

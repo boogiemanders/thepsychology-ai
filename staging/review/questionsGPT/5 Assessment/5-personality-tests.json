@@ -122,7 +122,7 @@
       "suggestedLesson": "5-personality-tests",
       "suggestedParagraph": "## Understanding Personality Assessment Tools: Your Guide to Structured and Projective Tests",
       "lessonExcerpt": "The lesson does not explicitly cover empirical criterion keying in personality assessment.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 16
     },
@@ -143,7 +143,7 @@
       "suggestedLesson": "5-personality-tests",
       "suggestedParagraph": "## Understanding Personality Assessment Tools: Your Guide to Structured and Projective Tests",
       "lessonExcerpt": "The lesson does not adequately cover the purpose of projective tests in psychology.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 17
     }

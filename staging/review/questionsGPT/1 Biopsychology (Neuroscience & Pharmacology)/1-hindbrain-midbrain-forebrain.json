@@ -59,7 +59,7 @@
       "suggestedLesson": "1-hindbrain-midbrain-forebrain",
       "suggestedParagraph": "### The Thalamus: Grand Central Station",
       "lessonExcerpt": "The thalamus acts as a relay station, routing incoming sensory information to the appropriate areas of the cerebral cortex",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 3
     },
@@ -80,7 +80,7 @@
       "suggestedLesson": "1-hindbrain-midbrain-forebrain",
       "suggestedParagraph": "### Cerebellum (More Than Just Balance)",
       "lessonExcerpt": "The cerebellum also contributes to: Attention, Language processing, Understanding where things are in space (visuospatial abilities)",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 14
     },
@@ -93,7 +93,7 @@
         "Acetylcholine levels at neuromuscular junctions"
       ],
       "answer": "Cortisol levels",
-      "explanation": "Cortisol is the primary stress hormone released as the end product of HPA axis activation. The hypothalamus initiates the stress response, triggering the pituitary, which triggers the adrenal glands to release cortisol. Option A is incorrect because oxytocin actually inhibits HPA axis responses to stress, reducing cortisol—it would reflect stress buffering, not stress activation. Option C (dopamine) is associated with reward and motivation, not the stress response pathway. Option D (acetylcholine) is associated with muscle contraction and memory, not the HPA stress axis.",
+      "explanation": "Cortisol is the primary stress hormone released as the end product of HPA axis activation. The hypothalamus initiates the stress response, triggering the pituitary, which triggers the adrenal glands to release cortisol. Option A is incorrect because oxytocin actually inhibits HPA axis responses to stress, reducing cortisol\u2014it would reflect stress buffering, not stress activation. Option C (dopamine) is associated with reward and motivation, not the stress response pathway. Option D (acetylcholine) is associated with muscle contraction and memory, not the HPA stress axis.",
       "kn": "KN1",
       "kn_explanation": "HPA axis biomarkers reflect neurobiological determinants of stress response and affect",
       "difficulty": "easy",
@@ -127,7 +127,7 @@
       "inspirationIndex": 1
     },
     {
-      "stem": "A patient presents with unsteady gait, slurred speech, jerky eye movements, and difficulty executing previously mastered guitar fingering patterns—despite being able to verbally describe the correct finger positions. Neuropsychological testing reveals intact declarative memory but impaired procedural memory. Damage to which brain structure BEST accounts for this clinical presentation?",
+      "stem": "A patient presents with unsteady gait, slurred speech, jerky eye movements, and difficulty executing previously mastered guitar fingering patterns\u2014despite being able to verbally describe the correct finger positions. Neuropsychological testing reveals intact declarative memory but impaired procedural memory. Damage to which brain structure BEST accounts for this clinical presentation?",
       "options": [
         "Basal ganglia",
         "Cerebellum",
@@ -135,7 +135,7 @@
         "Substantia nigra"
       ],
       "answer": "Cerebellum",
-      "explanation": "The cerebellum coordinates voluntary movements, maintains posture, and stores procedural memories. Damage causes ataxia (unsteady, clumsy movements), slurred speech, and jerky eye movements—a presentation that resembles intoxication. The key differentiating feature is the dissociation between intact declarative memory (can describe finger positions) and impaired procedural memory (can't execute them), which is characteristic of cerebellar damage. The basal ganglia (option A) are involved in initiating and controlling voluntary movements but are inhibitory ('put the brakes on' movement) and are associated with Parkinson's disease and Huntington's disease—not this ataxic presentation. The hippocampus (option C) handles declarative memory consolidation, which is intact in this patient. The substantia nigra (option D) produces dopamine; its degeneration causes Parkinson's symptoms (slowed movement, tremors, rigidity), a different motor profile.",
+      "explanation": "The cerebellum coordinates voluntary movements, maintains posture, and stores procedural memories. Damage causes ataxia (unsteady, clumsy movements), slurred speech, and jerky eye movements\u2014a presentation that resembles intoxication. The key differentiating feature is the dissociation between intact declarative memory (can describe finger positions) and impaired procedural memory (can't execute them), which is characteristic of cerebellar damage. The basal ganglia (option A) are involved in initiating and controlling voluntary movements but are inhibitory ('put the brakes on' movement) and are associated with Parkinson's disease and Huntington's disease\u2014not this ataxic presentation. The hippocampus (option C) handles declarative memory consolidation, which is intact in this patient. The substantia nigra (option D) produces dopamine; its degeneration causes Parkinson's symptoms (slowed movement, tremors, rigidity), a different motor profile.",
       "kn": "KN1",
       "kn_explanation": "This question tests knowledge of hindbrain structures, specifically the cerebellum's role in balance, motor coordination, and procedural memory.",
       "difficulty": "medium",
@@ -335,6 +335,90 @@
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 24
+    },
+    {
+      "stem": "A patient presents with severely disrupted sleep-wake cycles following a lesion in the anterior hypothalamus. Neuroimaging confirms damage to a small paired structure in this region that synchronizes biological rhythms to the 24-hour light-dark cycle by receiving direct retinal input. Which structure has been damaged?",
+      "options": [
+        "Lateral hypothalamic area",
+        "Suprachiasmatic nucleus",
+        "Mammillary bodies",
+        "Paraventricular nucleus"
+      ],
+      "answer": "Suprachiasmatic nucleus",
+      "explanation": "The suprachiasmatic nucleus (SCN), located in the anterior hypothalamus, is the primary circadian pacemaker, receiving direct photic input from the retina to entrain biological rhythms to the 24-hour cycle. Damage to the SCN disrupts circadian timing entirely. The lateral hypothalamic area regulates hunger and general arousal but does not serve as a circadian clock. Mammillary bodies are primarily involved in episodic memory via the Papez circuit. The paraventricular nucleus regulates stress hormones and fluid balance through the HPA axis and ADH release.",
+      "kn": "KN1",
+      "kn_explanation": "Circadian rhythm regulation and the neuroanatomy of the hypothalamus fall under Domain 1: Biological Bases of Behavior, specifically sleep-wake regulation.",
+      "difficulty": "hard",
+      "quality_comment": "Tests specific hypothalamic neuroanatomy beyond surface-level recall; clinically relevant for understanding circadian rhythm disorders.",
+      "suggestedLesson": "1-hindbrain-midbrain-forebrain",
+      "suggestedParagraph": "## The Three-Story Brain: Location Matters",
+      "lessonExcerpt": "[The hypothalamus and its subcortical forebrain functions including circadian regulation are covered in the forebrain section of this lesson \u2014 full content extends beyond the provided excerpt]",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 1
+    },
+    {
+      "stem": "A patient sustains an infarct involving the thalamus and subsequently presents with contralateral loss of touch, pain, and temperature sensation, despite intact primary somatosensory cortex on neuroimaging. The neurologist explains that the deficit results from disruption of the thalamus's principal role in sensory processing. Which function best accounts for this presentation?",
+      "options": [
+        "Generating emotional salience for incoming sensory stimuli",
+        "Storing sensory representations in long-term implicit memory",
+        "Relaying sensory signals from subcortical pathways to the cerebral cortex",
+        "Coordinating voluntary motor responses to sensory feedback"
+      ],
+      "answer": "Relaying sensory signals from subcortical pathways to the cerebral cortex",
+      "explanation": "The thalamus serves as the brain's primary sensory relay station, routing ascending sensory information (somatosensory, visual, auditory, gustatory) from subcortical tracts to the appropriate cortical processing areas. Disruption of this relay function produces contralateral sensory deficits even when cortical areas are structurally intact, because signals cannot reach them. Emotional salience is primarily an amygdala function. Implicit sensory memory is handled by the basal ganglia and cerebellum. Voluntary motor coordination involves the motor cortex and cerebellum.",
+      "kn": "KN1",
+      "kn_explanation": "The thalamus as a sensory relay station is a foundational neuroanatomy concept in Domain 1: Biological Bases of Behavior under brain structures and functions.",
+      "difficulty": "medium",
+      "quality_comment": "Clinical scenario effectively isolates the relay function of the thalamus and tests mechanistic understanding rather than simple name-function recall.",
+      "suggestedLesson": "1-hindbrain-midbrain-forebrain",
+      "suggestedParagraph": "## The Three-Story Brain: Location Matters",
+      "lessonExcerpt": "The thalamus plays a role in memory processing, and damage here can cause both anterograde amnesia (inability to form new memories) and retrograde amnesia (loss of past memories). [Sensory relay function is covered in the full forebrain section beyond the provided excerpt]",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 3
+    },
+    {
+      "stem": "A 71-year-old client is referred for neuropsychological evaluation. He presents with a resting tremor, cogwheel muscle rigidity, bradykinesia, and a shuffling gait. His neurologist has confirmed a diagnosis of Parkinson's disease. The motor symptoms of this disorder result primarily from the progressive loss of dopaminergic neurons in which brain structure?",
+      "options": [
+        "Caudate nucleus and putamen, which form the dorsal striatum",
+        "Locus coeruleus, the primary norepinephrine-producing nucleus",
+        "Substantia nigra, located in the midbrain",
+        "Cerebellum, which coordinates voluntary movement and balance"
+      ],
+      "answer": "Substantia nigra, located in the midbrain",
+      "explanation": "Parkinson's disease is caused by the degeneration of dopaminergic neurons in the substantia nigra, a midbrain structure. Loss of dopamine output from this region to the striatum disrupts the smooth regulation of voluntary movement, producing the cardinal motor features. Option A (caudate nucleus and putamen) is incorrect\u2014these are the structures destroyed in Huntington's disease, as the lesson notes the disease 'destroys cells in the caudate nucleus and putamen.' Option B (locus coeruleus) is a norepinephrine-producing nucleus unrelated to Parkinson's primary pathology. Option D (cerebellum) damage produces ataxia and unsteady movement, not the rigidity and resting tremor characteristic of Parkinson's.",
+      "kn": "KN1",
+      "kn_explanation": "Identifying the brain regions affected in specific neurological movement disorders is core Biological Bases of Behavior content, linking neuroanatomy to clinical presentation.",
+      "difficulty": "medium",
+      "quality_comment": "Strong question with an excellent distractor in Option A that tests whether examinees can differentiate Parkinson's from Huntington's at the anatomical level",
+      "suggestedLesson": "1-hindbrain-midbrain-forebrain",
+      "suggestedParagraph": "## Midbrain: The Alert System and Movement Moderator",
+      "lessonExcerpt": "The disease destroys cells in the caudate nucleus and putamen (parts of the basal ganglia), plus the cerebral cortex, cerebellum, and thalamus. [Note: this quote describes Huntington's disease; the substantia nigra section in the midbrain was present but truncated in the lesson file.]",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 13
+    },
+    {
+      "stem": "A school psychologist is conducting a cognitive follow-up evaluation of a 10-year-old child who received posterior fossa cranial radiation 18 months ago to treat a medulloblastoma affecting the cerebellum. Based on the known cognitive contributions of the cerebellum, which pattern of neuropsychological deficits would MOST likely be observed as a direct consequence of cerebellar radiation damage?",
+      "options": [
+        "Expressive aphasia with intact comprehension, consistent with Broca's area disruption",
+        "Impaired declarative memory consolidation with preserved procedural skill learning",
+        "Deficits in attention, visuospatial processing, and language, with intact emotional memory",
+        "Anterograde amnesia with spared remote autobiographical memories"
+      ],
+      "answer": "Deficits in attention, visuospatial processing, and language, with intact emotional memory",
+      "explanation": "The lesson explicitly identifies that the cerebellum contributes to 'Attention, Language processing, Understanding where things are in space (visuospatial abilities)' beyond its motor functions. Radiation damage to the cerebellum in children\u2014often resulting in cerebellar cognitive affective syndrome\u2014disrupts these non-motor domains. Option A describes Broca's aphasia, which results from frontal lobe damage. Option B is the reverse of the expected cerebellar pattern: the lesson notes that the cerebellum stores procedural memories, so cerebellar damage would impair procedural learning while leaving hippocampally mediated declarative memory relatively intact. Option D describes hippocampal or thalamic damage, as seen in the H.M. case.",
+      "kn": "KN1",
+      "kn_explanation": "Understanding the cognitive functions of cerebellar structures and the neuropsychological consequences of posterior fossa radiation in pediatric populations falls under Biological Bases of Behavior, specifically neurological disorders and brain damage.",
+      "difficulty": "hard",
+      "quality_comment": "High-quality question that extends cerebellar knowledge to a pediatric clinical context; tests depth of understanding beyond the simple 'cerebellum = balance' heuristic",
+      "suggestedLesson": "1-hindbrain-midbrain-forebrain",
+      "suggestedParagraph": "### Cerebellum (More Than Just Balance)",
+      "lessonExcerpt": "The cerebellum also contributes to: Attention, Language processing, Understanding where things are in space (visuospatial abilities).",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 14
     }
   ]
 }

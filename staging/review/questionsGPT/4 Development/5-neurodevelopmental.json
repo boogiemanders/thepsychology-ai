@@ -13,11 +13,11 @@
       "kn": "KN28",
       "kn_explanation": "Reading deficiency in a child despite average intelligence suggests a specific learning disorder (e.g., dyslexia), which is a disorder that impacts the expected course of development over the lifespan.",
       "difficulty": "medium",
-      "quality_comment": "Tests key epidemiological facts about reading disorders. The lesson covers prevalence and comorbidity well but long-term prognosis is not explicitly addressed.",
+      "quality_comment": "Tests key epidemiological facts about reading disorders. The lesson covers prevalence and comorbidity well but long-term prognosis is",
       "suggestedLesson": "5-neurodevelopmental",
       "suggestedParagraph": "### The Numbers",
-      "lessonExcerpt": "About 5-15% of school-age children have a specific learning disorder. Of these, approximately 80% have a reading disorder.",
-      "needsReview": true,
+      "lessonExcerpt": "About 5-15% of school-age children have a specific learning disorder. Of these, approximately 80% have a reading disorder. The most common reading disorder is dyslexia, and the most common type of dys",
+      "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 14
     }

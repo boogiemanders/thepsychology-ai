@@ -9,7 +9,7 @@
         "Measures Spearman's g factor by assessing both verbal comprehension and perceptual reasoning equally"
       ],
       "answer": "Is a nonverbal measure of abstract reasoning and fluid intelligence that is less likely than Wechsler tests to underestimate intelligence in individuals with ASD",
-      "explanation": "Raven's SPM measures abstract reasoning and fluid intelligence through nonverbal pattern completion tasks, making it relatively free from cultural and educational influences. Critically, research shows it is less likely than Wechsler tests to underestimate intelligence in people with ASD. Option A is wrong because Raven's only measures fluid intelligence/abstract reasoning, not crystallized intelligence. Option C is wrong because Raven's was not specifically normed on ASD populations — it simply performs better with this population. Option D is wrong because Raven's does not assess verbal comprehension at all; while it is considered a good measure of Spearman's g, it achieves this through nonverbal means only.",
+      "explanation": "Raven's SPM measures abstract reasoning and fluid intelligence through nonverbal pattern completion tasks, making it relatively free from cultural and educational influences. Critically, research shows it is less likely than Wechsler tests to underestimate intelligence in people with ASD. Option A is wrong because Raven's only measures fluid intelligence/abstract reasoning, not crystallized intelligence. Option C is wrong because Raven's was not specifically normed on ASD populations \u2014 it simply performs better with this population. Option D is wrong because Raven's does not assess verbal comprehension at all; while it is considered a good measure of Spearman's g, it achieves this through nonverbal means only.",
       "kn": "KN35",
       "kn_explanation": "Selecting an appropriate assessment instrument based on the client's characteristics (ASD, limited verbal ability) involves criteria for selection and adaptation of assessment methods, including cultural appropriateness and accommodations for specific populations.",
       "difficulty": "medium",
@@ -30,14 +30,14 @@
         "Above-average scores at 24 months guarantee placement in gifted programs upon school entry"
       ],
       "answer": "Infant developmental tests are better for identifying delays than for predicting later IQ scores in typically developing children",
-      "explanation": "The lesson explicitly addresses this as a common misconception: 'Infant tests predict adult IQ perfectly—They don't. While tests like the FTII show predictive validity, infant assessment is better for identifying developmental delays than predicting exact future IQ scores.' The Bayley-4 measures cognitive, motor, language, social-emotional, and adaptive behavior domains—these overlap only partially with what school-age IQ tests measure. Option B overstates the predictive correlation. Option C is incorrect because infant tests measure developmental milestones, not the same abilities as later IQ tests. Option D makes an unsupported guarantee about gifted placement.",
+      "explanation": "The lesson explicitly addresses this as a common misconception: 'Infant tests predict adult IQ perfectly\u2014They don't. While tests like the FTII show predictive validity, infant assessment is better for identifying developmental delays than predicting exact future IQ scores.' The Bayley-4 measures cognitive, motor, language, social-emotional, and adaptive behavior domains\u2014these overlap only partially with what school-age IQ tests measure. Option B overstates the predictive correlation. Option C is incorrect because infant tests measure developmental milestones, not the same abilities as later IQ tests. Option D makes an unsupported guarantee about gifted placement.",
       "kn": "KN5",
       "kn_explanation": "This question tests knowledge of the predictive limitations of infant intelligence/developmental tests, a core concept in cognitive assessment.",
       "difficulty": "medium",
       "quality_comment": "Clinically relevant question that addresses a common misconception explicitly identified in the lesson content.",
       "suggestedLesson": "5-cognitive-tests",
       "suggestedParagraph": "## The Youngest Clients: Infant and Toddler Assessment",
-      "lessonExcerpt": "Infant tests predict adult IQ perfectly—They don't. While tests like the FTII show predictive validity, infant assessment is better for identifying developmental delays than predicting exact future IQ scores.",
+      "lessonExcerpt": "Infant tests predict adult IQ perfectly\u2014They don't. While tests like the FTII show predictive validity, infant assessment is better for identifying developmental delays than predicting exact future IQ scores.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 9
@@ -80,7 +80,7 @@
       "suggestedLesson": "5-cognitive-tests",
       "suggestedParagraph": "## Understanding Intelligence: The Theoretical Foundation",
       "lessonExcerpt": "The lesson does not specifically cover item response theory principles, indicating a need for review.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 18
     },
@@ -335,6 +335,48 @@
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 10
+    },
+    {
+      "stem": "Raven's Progressive Matrices is frequently cited in factor-analytic research as one of the strongest available indicators of Spearman's g (general intelligence). Based on the test's core characteristics, which of the following BEST explains why it serves as such a high-loading measure of g?",
+      "options": [
+        "It assesses crystallized intelligence by sampling a wide range of culturally acquired verbal knowledge and reasoning skills",
+        "It measures abstract reasoning and fluid intelligence with minimal dependence on cultural knowledge or formal education, closely approximating pure cognitive processing capacity",
+        "It uses empirical criterion keying to select items that reliably distinguish individuals across a range of occupational performance levels",
+        "It provides separate composite scores for verbal and nonverbal domains, allowing g to be computed as the shared variance between the two composites"
+      ],
+      "answer": "It measures abstract reasoning and fluid intelligence with minimal dependence on cultural knowledge or formal education, closely approximating pure cognitive processing capacity",
+      "explanation": "Raven's Progressive Matrices requires examinees to identify which option completes an incomplete geometric pattern\u2014a task demanding abstract reasoning and fluid intelligence (Gf) rather than accumulated knowledge. Because the test minimizes the role of language, cultural content, and formal educational background, it is considered relatively culture-fair and is thought to tap the core cognitive processing capacity that Spearman conceptualized as g. Factor-analytic studies consistently show Raven's has among the highest g-loadings of any widely used cognitive instrument. Option A is incorrect because Raven's explicitly avoids crystallized content. Option C (empirical criterion keying) describes the construction of the MMPI clinical scales and the Strong Interest Inventory's Occupational Scales, not Raven's. Option D is incorrect because Raven's does not yield separate verbal and nonverbal composites.",
+      "kn": "KN5",
+      "kn_explanation": "Knowledge of specific cognitive assessment instruments, their theoretical rationale, and their relationship to psychometric models of general intelligence is a core Assessment and Diagnosis competency.",
+      "difficulty": "hard",
+      "quality_comment": "Strong conceptual question linking Raven's design features to the construct of g; the distractor referencing empirical criterion keying is an effective high-level foil for well-prepared candidates.",
+      "suggestedLesson": "5-cognitive-tests",
+      "suggestedParagraph": "## Raven's Standard Progressive Matrices (SPM)",
+      "lessonExcerpt": "Raven's SPM is elegant in its simplicity. It shows you 60 incomplete patterns (matrices), and you choose which piece completes each pattern. That's the whole test. But don't let the simplicity fool you \u2013 it's measuring abstract reasoning and fluid intelligence, relatively free from cultural and educational influences.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 19
+    },
+    {
+      "stem": "A genetic counselor consults a psychologist regarding a family in which three male members across two generations have been diagnosed with an X-linked recessive neurodevelopmental condition, while female relatives who carry the pathogenic allele are largely unaffected. The psychologist is asked to explain the fundamental mechanism by which X-linked recessive disorders produce higher prevalence and greater severity in males than in females. Which of the following explanations is most accurate?",
+      "options": [
+        "Males produce higher levels of androgens that increase transcription of recessive alleles on the X chromosome",
+        "Females possess two X chromosomes; a dominant normal allele on one X can compensate for the recessive pathogenic allele on the other, whereas males have only one X chromosome and no compensatory allele",
+        "Random X-inactivation in females preferentially silences the X chromosome carrying the pathogenic allele, providing complete protection from expression",
+        "Males inherit X-linked mutations exclusively from their fathers, who transmit a more severe form of the pathogenic allele than maternal transmissions"
+      ],
+      "answer": "Females possess two X chromosomes; a dominant normal allele on one X can compensate for the recessive pathogenic allele on the other, whereas males have only one X chromosome and no compensatory allele",
+      "explanation": "Males are hemizygous for the X chromosome (XY genotype): they possess only one copy of each X-linked gene. When a male inherits a recessive pathogenic allele on his single X chromosome, there is no second X chromosome providing a normal dominant allele to mask or compensate for the mutation, and the condition is expressed. Females (XX genotype) carrying a single copy of the pathogenic allele on one X chromosome typically have a normal dominant allele on the other X chromosome that masks expression, resulting in unaffected carrier status. This hemizygosity principle explains why X-linked recessive conditions (e.g., hemophilia, Duchenne muscular dystrophy, color blindness) are far more prevalent in males. Option A is incorrect; testosterone does not upregulate transcription of recessive alleles. Option C is partially related but overstates the protection provided by X-inactivation (Lyon hypothesis)\u2014X-inactivation is random and can lead to variable expressivity in carrier females, not complete protection. Option D is incorrect; males inherit their X chromosome from their mothers, not fathers (fathers contribute the Y chromosome).",
+      "kn": "KN1",
+      "kn_explanation": "X-linked inheritance and its mechanism for sex-differentiated disorder prevalence falls under the Biological Bases of Behavior (KN1) domain of the EPPP. Psychologists are expected to understand basic genetic transmission patterns relevant to neurodevelopmental and clinical disorders.",
+      "difficulty": "medium",
+      "quality_comment": "Tests a fundamental genetics principle with clinical relevance. Option C is an excellent distractor that reflects partial knowledge of X-inactivation. Option D tests whether examinees know the directionality of X chromosome inheritance.",
+      "suggestedLesson": "5-cognitive-tests",
+      "suggestedParagraph": "## Biological and Genetic Factors in Cognitive Assessment",
+      "lessonExcerpt": "NOT COVERED: The provided lesson files do not address X-linked inheritance or genetic mechanisms. While 5-cognitive-tests.md references fragile X syndrome briefly, it does not explain X-linked inheritance patterns or sex differences in prevalence. A genetics and biological bases lesson is needed for this content.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 27
     }
   ]
 }

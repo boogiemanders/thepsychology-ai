@@ -13,11 +13,11 @@
       "kn": "KN32",
       "kn_explanation": "The question asks about interpreting validity scale patterns on the MMPI-2, a commonly used psychological instrument and its appropriate use in assessment.",
       "difficulty": "medium",
-      "quality_comment": "The lesson covers K as a validity scale for subtle defensiveness but does not explicitly discuss K-correction as a moderator variable added to clinical scales. The question was adapted to test what the lesson actually covers.",
+      "quality_comment": "Tests K scale as both validity indicator and correction factor. Lesson covers K scale for defensiveness and treatment resistance.",
       "suggestedLesson": "5-mmpi",
       "suggestedParagraph": "### The Main Validity Scales",
-      "lessonExcerpt": "K (Correction): Subtle faking good — Defensiveness, denial, or resistance to evaluation... High L + High K + Low F = Faking Good... High K scale scores often predict resistance to treatment.",
-      "needsReview": true,
+      "lessonExcerpt": "K (Correction): Subtle faking good \u2014 Defensiveness, denial, or resistance to evaluation.",
+      "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 3
     },
@@ -30,14 +30,14 @@
         "A genuinely pathological profile reflecting severe psychopathology consistent with psychotic features"
       ],
       "answer": "A defensive, 'faking good' profile in which the individual is attempting to present themselves in an unrealistically favorable light",
-      "explanation": "The lesson clearly identifies the High L + High K + Low F pattern as indicative of 'faking good': 'This pattern shows up like an overly filtered social media profile—everything looks perfect, no flaws admitted, problems denied. This combination is particularly common in custody evaluations, where parents want to appear flawless.' The L (Lie) scale detects obvious faking good, the K (Correction) scale detects subtle defensiveness, and low F (Infrequency) indicates the person is not endorsing unusual or pathological items. Option B (faking bad) would show high F, not low F. Option C (random responding) would show elevated VRIN. Option D (genuine pathology) would show elevated F and clinical scales.",
+      "explanation": "The lesson clearly identifies the High L + High K + Low F pattern as indicative of 'faking good': 'This pattern shows up like an overly filtered social media profile\u2014everything looks perfect, no flaws admitted, problems denied. This combination is particularly common in custody evaluations, where parents want to appear flawless.' The L (Lie) scale detects obvious faking good, the K (Correction) scale detects subtle defensiveness, and low F (Infrequency) indicates the person is not endorsing unusual or pathological items. Option B (faking bad) would show high F, not low F. Option C (random responding) would show elevated VRIN. Option D (genuine pathology) would show elevated F and clinical scales.",
       "kn": "KN5",
       "kn_explanation": "This question tests knowledge of MMPI-2 validity scale interpretation, specifically the faking good configuration, a core personality assessment concept.",
       "difficulty": "medium",
       "quality_comment": "Excellent applied question with a forensic context. The lesson provides a direct, detailed description of this exact validity scale pattern and its common context in custody evaluations.",
       "suggestedLesson": "5-mmpi",
       "suggestedParagraph": "### Reading Validity Scale Combinations",
-      "lessonExcerpt": "High L + High K + Low F = Faking Good. This pattern shows up like an overly filtered social media profile—everything looks perfect, no flaws admitted, problems denied. This combination is particularly common in custody evaluations, where parents want to appear flawless.",
+      "lessonExcerpt": "High L + High K + Low F = Faking Good. This pattern shows up like an overly filtered social media profile\u2014everything looks perfect, no flaws admitted, problems denied. This combination is particularly common in custody evaluations, where parents want to appear flawless.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 10
@@ -188,6 +188,27 @@
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 28
+    },
+    {
+      "stem": "On the MMPI-2, fractions of the K scale raw score are added to raw scores on Clinical Scales 1, 4, 7, 8, and 9 before converting to T-scores. A client with a highly elevated K score will therefore receive upwardly adjusted scores on those clinical scales compared to a client with a low K score who gave the same item responses. This procedure reflects the K scale's role as a:",
+      "options": [
+        "Suppressor variable that removes irrelevant response-set variance from the clinical scales",
+        "Moderator variable that adjusts the relationship between item responses and clinical scale scores based on the respondent's level of defensiveness",
+        "Content scale that provides thematic information about specific symptom clusters endorsed at low frequency",
+        "Critical items index that flags individual responses associated with serious psychopathology requiring immediate attention"
+      ],
+      "answer": "Moderator variable that adjusts the relationship between item responses and clinical scale scores based on the respondent's level of defensiveness",
+      "explanation": "A moderator variable is one that changes the strength or direction of the relationship between a predictor and an outcome. The K scale measures defensiveness\u2014the tendency to deny psychopathology and present oneself favorably. Because defensive respondents suppress elevations on clinical scales, K corrections are added to Scales 1, 4, 7, 8, and 9 to adjust scores upward in proportion to defensiveness level, thereby modifying how item endorsements translate into clinical scale T-scores. A suppressor variable removes shared irrelevant variance between a predictor and an outcome variable, which is not the mechanism here. Content scales (e.g., ANX, DEP) were developed later to measure specific symptom domains and are not correction variables. Critical items are individual responses flagged for clinical review, not a scoring correction mechanism.",
+      "kn": "KN5",
+      "kn_explanation": "The K scale's function as a correction/moderator variable is a classic EPPP MMPI-2 validity scale question requiring integration of psychometric terminology with test-specific knowledge.",
+      "difficulty": "hard",
+      "quality_comment": "Excellent doctoral-level question requiring application of psychometric vocabulary to a specific MMPI-2 procedure; distractors exploit common confusions about suppressor variables and content scales.",
+      "suggestedLesson": "5-mmpi",
+      "suggestedParagraph": "## What Makes the MMPI-2 Special",
+      "lessonExcerpt": "The MMPI-2 doesn't just measure symptoms. It actively checks whether someone's being honest, exaggerating, or trying to look better than they are.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 3
     }
   ]
 }

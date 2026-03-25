@@ -188,6 +188,48 @@
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
       "inspirationIndex": 9
+    },
+    {
+      "stem": "In Rosenthal and Jacobson's (1968) Pygmalion in the Classroom study, teachers were falsely informed that randomly selected students had been identified by a test as poised for significant intellectual growth. At the end of the academic year, those students showed measurably greater IQ gains than matched controls. Which mechanism MOST accurately explains this outcome?",
+      "options": [
+        "The students identified as high-potential were unconsciously placed into more advanced instructional groups by school administrators",
+        "Teacher expectations altered the frequency and quality of teacher-student interactions, producing a behavioral self-fulfilling prophecy",
+        "The designated students experienced stereotype lift and increased intrinsic motivation after learning of their high-potential identification",
+        "Regression to the mean caused the randomly selected students to score closer to the population ceiling on subsequent testing"
+      ],
+      "answer": "Teacher expectations altered the frequency and quality of teacher-student interactions, producing a behavioral self-fulfilling prophecy",
+      "explanation": "The Pygmalion effect demonstrates that teacher expectancies \u2014 even when experimentally fabricated \u2014 modify teachers' behaviors toward students (greater warmth, more challenging material, more feedback), which in turn produce real gains in student performance. This is the defining mechanism of a behavioral self-fulfilling prophecy. Option A involves administrative tracking, which did not occur in the original study design. Option C (stereotype lift) requires that students be aware of the positive stereotype attributed to them, which was not the case in Rosenthal and Jacobson's design. Option D (regression to the mean) would predict randomly selected students trending toward average scores, not exceeding matched controls.",
+      "kn": "KN3",
+      "kn_explanation": "Teacher expectancy effects and self-fulfilling prophecy are social psychological concepts in education, situated within Domain 3: Social and Multicultural Bases of Behavior.",
+      "difficulty": "hard",
+      "quality_comment": "Classic study with carefully constructed distractors targeting three distinct alternative explanations; tests mechanistic understanding rather than mere study recognition.",
+      "suggestedLesson": "3-errors-and-shortcuts",
+      "suggestedParagraph": "## Confirmation Bias: Your Brain's Echo Chamber",
+      "lessonExcerpt": "Lesson content does not explicitly address the Pygmalion study or teacher expectancy effects. The confirmation bias section provides a related conceptual parallel but does not cover expectancy effects on student performance. Question written from established EPPP knowledge base.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 6
+    },
+    {
+      "stem": "After completing a brief personality inventory, a client receives feedback containing the following statements: 'You sometimes have serious doubts about whether you have made the right decision,' 'You have a great deal of unused capacity that you have not yet fully developed,' and 'You prefer a certain amount of variety and become dissatisfied when hemmed in by restrictions and limitations.' The client responds, 'This is remarkably accurate \u2014 it describes me better than anything I've ever read about myself.' This reaction MOST directly illustrates:",
+      "options": [
+        "Illusory correlation, because the client perceives a meaningful relationship between the test content and their personality where no valid relationship exists",
+        "The Barnum (Forer) effect, because universally applicable, vague statements are accepted as uniquely and personally accurate self-descriptions",
+        "Confirmation bias, because the client is selectively attending to statements that confirm their pre-existing self-concept",
+        "Self-verification theory, because the client is seeking out feedback that is consistent with their prior self-image"
+      ],
+      "answer": "The Barnum (Forer) effect, because universally applicable, vague statements are accepted as uniquely and personally accurate self-descriptions",
+      "explanation": "The Barnum effect (Forer, 1949) describes the tendency for individuals to accept broad, vague, and universally applicable personality descriptions as highly accurate and uniquely self-descriptive characterizations. The statements in the vignette are classic Barnum statements \u2014 each is true of virtually any adult. Illusory correlation involves perceiving a spurious relationship between two distinct things (e.g., group membership and negative behavior) and does not describe the mechanism of accepting vague feedback as self-relevant. Confirmation bias involves selectively attending to confirming information while dismissing disconfirming information \u2014 while superficially related, the Barnum effect specifically operates through the universality of the statements themselves, not through selective attention. Self-verification theory (Swann) describes actively seeking feedback consistent with the existing self-concept, including negative self-views; it would apply if the client sought out negative feedback to confirm a negative self-image, which is not what the vignette describes.",
+      "kn": "KN3",
+      "kn_explanation": "This question assesses social perception and assessment-related cognitive biases within the Social and Multicultural Bases of Behavior domain, specifically the Barnum/Forer effect and its critical implications for psychological assessment.",
+      "difficulty": "hard",
+      "quality_comment": "High clinical relevance for assessment practice; requires precise discrimination among four related but mechanistically distinct cognitive phenomena; the Barnum effect is frequently confused with confirmation bias on the EPPP.",
+      "suggestedLesson": "3-errors-and-shortcuts",
+      "suggestedParagraph": "The Major Players: Errors and Biases",
+      "lessonExcerpt": "Confirmation bias is our tendency to seek out and pay attention to information that confirms what we already believe while ignoring information that challenges those beliefs.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 15
     }
   ]
 }

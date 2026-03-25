@@ -9,7 +9,7 @@
         "Internalization stage"
       ],
       "answer": "Encounter stage",
-      "explanation": "In Cross's Nigrescence model, the Encounter stage occurs when something happens that forces awareness of racism's impact, triggering questioning and interest in one's own culture. The student previously idealized White culture (Pre-Encounter) but a racially motivated incident has shaken her assumptions, leading to new cultural curiosity—hallmarks of the Encounter stage. Pre-Encounter would involve continued idealization of White culture without questioning. Immersion-Emersion involves complete rejection of White culture and intense immersion in Black culture. Internalization involves a secure Black identity with tolerance for racial differences.",
+      "explanation": "In Cross's Nigrescence model, the Encounter stage occurs when something happens that forces awareness of racism's impact, triggering questioning and interest in one's own culture. The student previously idealized White culture (Pre-Encounter) but a racially motivated incident has shaken her assumptions, leading to new cultural curiosity\u2014hallmarks of the Encounter stage. Pre-Encounter would involve continued idealization of White culture without questioning. Immersion-Emersion involves complete rejection of White culture and intense immersion in Black culture. Internalization involves a secure Black identity with tolerance for racial differences.",
       "kn": "KN3",
       "kn_explanation": "This question addresses racial identity development models, a core topic in multicultural psychology.",
       "difficulty": "medium",
@@ -20,6 +20,69 @@
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
       "inspirationIndex": 9
+    },
+    {
+      "stem": "A licensed psychologist at a community mental health clinic consistently interprets Latino clients' somatic complaints as pathological somatization, dismisses spirituality-based explanatory models as irrational, and applies manualized CBT protocols without culturally responsive modification. The clinical supervisor observes that this therapist appears unaware that these worldviews differ from mainstream Western psychological assumptions. This pattern BEST exemplifies which phenomenon?",
+      "options": [
+        "Differential diagnostic error stemming from insufficient clinical training in somatic presentations",
+        "Cultural encapsulation, in which the therapist applies a single cultural framework to all clients",
+        "Negative countertransference arising from unresolved personal biases toward this population",
+        "Practitioner ethnocentrism limited to the diagnostic labeling process but not treatment delivery"
+      ],
+      "answer": "Cultural encapsulation, in which the therapist applies a single cultural framework to all clients",
+      "explanation": "Cultural encapsulation (Wrenn, 1962) describes a clinician who defines reality through a single cultural set of assumptions, ignores cultural variation, and applies techniques without awareness of their cultural embeddedness. The vignette illustrates this pattern across diagnosis, explanatory models, and treatment selection. Option A frames the error as a knowledge deficit about somatic presentations rather than a cultural awareness problem. Option C (countertransference) refers to the therapist's personal emotional reactions projected onto clients, which is not the focus here. Option D incorrectly restricts cultural encapsulation to diagnostic labeling alone; the concept applies across the entire clinical encounter.",
+      "kn": "KN3",
+      "kn_explanation": "Cultural encapsulation is a foundational multicultural competence concept within Domain 3: Social and Multicultural Bases of Behavior, specifically addressing clinician cultural competence.",
+      "difficulty": "hard",
+      "quality_comment": "Strong vignette with multiple behavioral indicators spanning diagnosis, conceptualization, and treatment; distractors target frequent confusions among related multicultural constructs.",
+      "suggestedLesson": "3-cultural-identity",
+      "suggestedParagraph": "## Multicultural Competence",
+      "lessonExcerpt": "Lesson content does not explicitly address cultural encapsulation. Question written from established EPPP knowledge base; needsReview flagged accordingly.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 0
+    },
+    {
+      "stem": "A 26-year-old Black woman reports that a racially charged incident at her graduate program last month prompted her to question assumptions she had long held about racial identity. She has since immersed herself in African American literature and cultural organizations, reports intense anger toward White-dominated institutions, and has begun distancing herself from non-Black social contacts. According to Cross's (1971) Nigrescence model, she is MOST likely in which stage?",
+      "options": [
+        "Pre-encounter, characterized by low racial identity salience and internalized Eurocentric values",
+        "Encounter, in which a catalytic racial event disrupts the person's existing identity framework",
+        "Immersion-Emersion, characterized by idealization of Black culture and rejection of the dominant cultural framework",
+        "Internalization, in which a secure, multidimensional Black identity is stably consolidated"
+      ],
+      "answer": "Immersion-Emersion, characterized by idealization of Black culture and rejection of the dominant cultural framework",
+      "explanation": "The Immersion-Emersion stage of Nigrescence is marked by intense immersion in Black culture, idealization of Blackness, anger toward racism and White institutions, and withdrawal from non-Black social contexts. The Encounter stage is specifically the catalytic event that disrupts the prior framework \u2014 the woman appears to have moved beyond that initial disruption into the active immersion response. Pre-encounter involves acceptance of Eurocentric norms with low racial salience, which contradicts the current presentation. Internalization reflects a stable, non-reactive Black identity that allows positive cross-cultural engagement \u2014 the anger and social withdrawal described indicate the person has not yet reached this consolidation.",
+      "kn": "KN3",
+      "kn_explanation": "Cross's Nigrescence model is a foundational racial identity development framework within Domain 3: Social and Multicultural Bases of Behavior.",
+      "difficulty": "hard",
+      "quality_comment": "Vignette strategically includes both encounter-stage and immersion-stage features to require precise stage discrimination; high clinical relevance for multicultural practice.",
+      "suggestedLesson": "3-cultural-identity",
+      "suggestedParagraph": "## Racial and Cultural Identity Development",
+      "lessonExcerpt": "Lesson content on racial identity development stages was not present in the provided lesson files. Question written from established EPPP knowledge base.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 4
+    },
+    {
+      "stem": "During a home visit, a family therapist observes that an African American family's infant is regularly cared for by the maternal grandmother, two aunts, and an older teenage cousin in addition to the parents, with childcare responsibilities shifting fluidly among all of them across different households. This arrangement is BEST understood as an expression of which characteristic strength consistently identified in the research literature on African American families?",
+      "options": [
+        "Patriarchal authority structures that preserve intergenerational role clarity and parental hierarchy",
+        "Extended family and kinship network support providing flexible, collectively shared caregiving",
+        "Nuclear family self-sufficiency as a primary buffer against institutional racism",
+        "Egalitarian marital role flexibility as the central protective factor against socioeconomic stress"
+      ],
+      "answer": "Extended family and kinship network support providing flexible, collectively shared caregiving",
+      "explanation": "Research by Hill (1972), McAdoo, and Boyd-Franklin consistently identifies strong extended family and kinship bonds \u2014 including shared caregiving across household boundaries \u2014 as a defining resilience-promoting strength of African American families. Option A incorrectly attributes the strength to rigid patriarchal hierarchy, which is not supported by the research literature. Option C misidentifies the mechanism; it is collective extended-network support rather than nuclear-family insularity that functions protectively. Option D refers to marital role flexibility, which is a related but distinct finding and does not capture the cross-household extended kinship arrangement described in the vignette.",
+      "kn": "KN3",
+      "kn_explanation": "Cultural strengths of African American families are a core multicultural competence topic within Domain 3: Social and Multicultural Bases of Behavior.",
+      "difficulty": "medium",
+      "quality_comment": "Grounded in observational clinical vignette; distractors test common stereotypes and partial knowledge that may mislead less-prepared examinees.",
+      "suggestedLesson": "3-cultural-identity",
+      "suggestedParagraph": "## Multicultural Considerations in Family Systems",
+      "lessonExcerpt": "Lesson content on African American family strengths was not present in the provided lesson files. Question written from established EPPP knowledge base.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 5
     }
   ]
 }

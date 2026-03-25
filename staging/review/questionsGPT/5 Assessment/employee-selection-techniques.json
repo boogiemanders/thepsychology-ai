@@ -9,15 +9,36 @@
         "A biodata inventory"
       ],
       "answer": "A work sample test",
-      "explanation": "Work sample tests ask applicants to perform actual job-related tasks under realistic, standardized conditions. They are recommended as alternatives to general mental ability tests when adverse impact is a concern because they directly assess job-relevant skills rather than abstract cognitive ability. The question describes the defining feature of work samples—performing actual job tasks. An assessment center uses multiple methods including simulations but is broader than just task performance and typically used for managerial positions. A structured behavioral interview asks about past behavior but does not have candidates perform tasks. A biodata inventory collects biographical information through multiple-choice questions about life experiences, not task performance.",
+      "explanation": "Work sample tests ask applicants to perform actual job-related tasks under realistic, standardized conditions. They are recommended as alternatives to general mental ability tests when adverse impact is a concern because they directly assess job-relevant skills rather than abstract cognitive ability. The question describes the defining feature of work samples\u2014performing actual job tasks. An assessment center uses multiple methods including simulations but is broader than just task performance and typically used for managerial positions. A structured behavioral interview asks about past behavior but does not have candidates perform tasks. A biodata inventory collects biographical information through multiple-choice questions about life experiences, not task performance.",
       "kn": "KN29",
       "kn_explanation": "Adverse impact from a hiring test is a test fairness and bias issue, which falls under psychometric properties including test fairness and bias.",
       "difficulty": "medium",
-      "quality_comment": "Clear question testing knowledge of work samples. The lesson discusses work samples and adverse impact of GMA tests separately but does not explicitly link work samples as 'fair alternatives' with lower adverse impact.",
+      "quality_comment": "Content is covered in 5-hiring-methods lesson (work samples, adverse impact, GMA tests). Remapped lesson slug.",
       "suggestedLesson": "5-hiring-methods",
       "suggestedParagraph": "## Work Samples: The \"Try Before You Buy\" Approach",
       "lessonExcerpt": "Work samples are exactly what they sound like: you ask applicants to actually perform job-related tasks under realistic conditions... The logic is straightforward: actual performance of job tasks should predict future performance of those same tasks.",
-      "needsReview": true,
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 8
+    },
+    {
+      "stem": "A manufacturing company currently uses a general cognitive ability test for selecting assembly line workers. A civil rights audit reveals significant adverse impact: the test produces substantial mean score differences between racial groups, resulting in proportional hiring rates that violate the 4/5ths rule. An I/O psychologist consultant recommends switching to work sample tests. What is the primary psychometric and legal rationale for this recommendation?",
+      "options": [
+        "Work sample tests eliminate all subgroup differences in test performance and are legally exempt from adverse impact analysis",
+        "Work sample tests directly measure job-relevant behaviors, typically produce smaller subgroup mean score differences than cognitive ability tests, and maintain criterion-related validity for job performance",
+        "Work sample tests are the only legally permissible selection method following a finding of adverse impact under Title VII",
+        "Work sample tests are preferred because they rely on personality traits rather than cognitive ability, which are not subject to adverse impact scrutiny"
+      ],
+      "answer": "Work sample tests directly measure job-relevant behaviors, typically produce smaller subgroup mean score differences than cognitive ability tests, and maintain criterion-related validity for job performance",
+      "explanation": "Work sample tests require applicants to perform actual or simulated tasks from the target job. Because they assess directly observable job behaviors rather than abstract cognitive constructs, they tend to produce smaller mean differences between demographic groups (less adverse impact) while sustaining acceptable levels of criterion-related validity. This combination makes them a legally and psychometrically defensible alternative when adverse impact is a concern. They do not eliminate all subgroup differences and are not exempt from adverse impact analysis. They are not the sole permissible method after an adverse impact finding; other remedies (test modification, job redesign, different predictors) are also available. Work sample tests assess job skills, not personality traits, and cognitive ability is relevant to their performance\u2014the distinction is construct proximity to job tasks, not cognitive vs. personality.",
+      "kn": "KN5",
+      "kn_explanation": "Work sample tests and employment selection fairness, including adverse impact and the 4/5ths rule, are core EPPP Assessment domain topics.",
+      "difficulty": "hard",
+      "quality_comment": "Requires integration of psychometric knowledge, adverse impact law, and comparative validity; Option A is a plausible but legally incorrect distractor.",
+      "suggestedLesson": "5-hiring-methods",
+      "suggestedParagraph": "## Work Sample and Performance Tests",
+      "lessonExcerpt": "",
+      "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 8
     }

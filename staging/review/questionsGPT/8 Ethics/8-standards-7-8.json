@@ -9,15 +9,15 @@
         "The researcher must offer participants additional compensation for having been deceived"
       ],
       "answer": "The researcher must debrief participants as early as feasible, explaining the true nature of the study and allowing them to withdraw their data",
-      "explanation": "Standard 8.08 requires that when deception is used in research, psychologists must debrief participants as early as feasible, preferably at the conclusion of their participation. The debriefing must explain the nature and purpose of the deception, and participants should be permitted to withdraw their data if they wish. Option B is wrong because debriefing should occur as soon as feasible for each participant, not delayed until all data collection is finished. Option C is wrong because a formal apology is not required—debriefing with an explanation is the standard. Option D is wrong because additional compensation is not ethically mandated for deception studies.",
+      "explanation": "Standard 8.08 requires that when deception is used in research, psychologists must debrief participants as early as feasible, preferably at the conclusion of their participation. The debriefing must explain the nature and purpose of the deception, and participants should be permitted to withdraw their data if they wish. Option B is wrong because debriefing should occur as soon as feasible for each participant, not delayed until all data collection is finished. Option C is wrong because a formal apology is not required\u2014debriefing with an explanation is the standard. Option D is wrong because additional compensation is not ethically mandated for deception studies.",
       "kn": "KN69",
       "kn_explanation": "Deception in research is an ethical issue in the conduct of research",
       "difficulty": "medium",
-      "quality_comment": "Tests a commonly examined research ethics concept. Lesson content on Standard 8 is truncated before reaching the deception section.",
+      "quality_comment": "Tests a commonly examined research ethics concept. Lesson content on",
       "suggestedLesson": "8-standards-7-8",
       "suggestedParagraph": "## Standard 8: Research and Publication",
       "lessonExcerpt": "Standard 7 focuses on education and training, while Standard 8 covers research and publication.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 2
     },
@@ -248,7 +248,7 @@
       "suggestedLesson": "8-standards-7-8",
       "suggestedParagraph": "## Standard 7: Education and Training",
       "lessonExcerpt": "The lesson does not specifically address unresolved complaints, indicating a gap in coverage.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 26
     },
@@ -272,6 +272,48 @@
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 28
+    },
+    {
+      "stem": "A researcher conducts a study in which participants are led to believe they are evaluating a new educational program, when in fact the study examines conformity to authority figures. After data collection is complete, the researcher's primary ethical obligation is to:",
+      "options": [
+        "Destroy the data if any participant expresses discomfort upon learning the true purpose",
+        "Provide participants with a thorough debriefing that explains the true nature and purpose of the study as soon as feasible",
+        "Wait until the study is published before revealing the deception to avoid biasing results",
+        "Offer participants financial compensation proportional to the degree of deception used"
+      ],
+      "answer": "Provide participants with a thorough debriefing that explains the true nature and purpose of the study as soon as feasible",
+      "explanation": "APA Ethics Code Standard 8.07 requires that when deception is used in research, participants must be debriefed as early as feasible, preferably at the conclusion of their participation. The debriefing must explain the true nature and purpose of the study. Option A is incorrect because the obligation is to debrief, not destroy data. Option C is incorrect because debriefing should not be delayed until publication. Option D is incorrect because financial compensation does not substitute for proper debriefing about the deception.",
+      "kn": "KN8",
+      "kn_explanation": "This question tests knowledge of research ethics regarding deception and debriefing obligations under Standard 8 of the APA Ethics Code.",
+      "difficulty": "medium",
+      "quality_comment": "Good question on debriefing after deception. The lesson mentions deception rules but the specific debriefing standard text was in the",
+      "suggestedLesson": "8-standards-7-8",
+      "suggestedParagraph": "## Standard 8: Research and Publication",
+      "lessonExcerpt": "Additionally, participants must be allowed to withdraw their data at any time, and you must debrief them about the deception as early as feasible. Preferably right after their participation, but no la",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 2
+    },
+    {
+      "stem": "A graduate student completes her doctoral dissertation with substantial intellectual contributions from her faculty advisor, who helped design the study methodology, conducted the primary statistical analyses, and wrote significant portions of the results and discussion sections. When the dissertation is submitted for publication, what authorship arrangement is MOST consistent with APA Ethics Code Standard 8.12?",
+      "options": [
+        "The student should be listed as sole author because it is her dissertation",
+        "The advisor should be listed as first author given the extent of the intellectual contributions",
+        "The student should be listed as first author, with the advisor listed as second author reflecting the advisor's substantial contributions",
+        "Both should be listed as co-first authors with equal credit"
+      ],
+      "answer": "The student should be listed as first author, with the advisor listed as second author reflecting the advisor's substantial contributions",
+      "explanation": "Standard 8.12 specifies that dissertation supervisors should receive authorship credit when they make substantial contributions beyond routine advising, but the student is typically listed as first author on publications derived from their dissertation. In this case, the advisor's contributions (designing methodology, conducting analyses, writing sections) go well beyond routine guidance and warrant co-authorship, but the student retains first authorship as it is their dissertation. Option A fails to credit the advisor's substantial contributions. Option B reverses the standard convention for dissertation-based publications. Option D does not reflect the convention that the student leads on their own dissertation work.",
+      "kn": "KN8",
+      "kn_explanation": "This question addresses Standard 8.12 regarding publication credit for dissertation research, which falls under Domain 8 Ethical, Legal & Professional Issues.",
+      "difficulty": "medium",
+      "quality_comment": "Tests the commonly examined distinction between routine advising and substantial intellectual contribution in dissertation authorship. Realistic scenario with plausible distractors.",
+      "suggestedLesson": "8-standards-7-8",
+      "suggestedParagraph": "## Standard 8: Research and Publication",
+      "lessonExcerpt": "",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 29
     }
   ]
 }

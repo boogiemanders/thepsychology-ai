@@ -9,7 +9,7 @@
         "Delirium secondary to acute HIV-related medical complications"
       ],
       "answer": "Subcortical neurocognitive disorder characterized by cognitive slowing and apathy",
-      "explanation": "HIV-related neurocognitive disorder produces a subcortical pattern of impairment. The lesson explicitly states: 'HIV infection affecting the brain shows subcortical symptoms: forgetfulness, poor attention, cognitive slowing, psychomotor slowing, apathy, social withdrawal, tremors, clumsiness.' Cortical disorders (A) feature aphasia, agnosia, apraxia, and poor insight—hallmarks of conditions like Alzheimer's disease. Cortico-subcortical disorders (C) such as vascular NCD show variable symptoms depending on affected areas. Delirium (D) is characterized by rapid onset, fluctuating consciousness, and disorientation, which are not described in this presentation.",
+      "explanation": "HIV-related neurocognitive disorder produces a subcortical pattern of impairment. The lesson explicitly states: 'HIV infection affecting the brain shows subcortical symptoms: forgetfulness, poor attention, cognitive slowing, psychomotor slowing, apathy, social withdrawal, tremors, clumsiness.' Cortical disorders (A) feature aphasia, agnosia, apraxia, and poor insight\u2014hallmarks of conditions like Alzheimer's disease. Cortico-subcortical disorders (C) such as vascular NCD show variable symptoms depending on affected areas. Delirium (D) is characterized by rapid onset, fluctuating consciousness, and disorientation, which are not described in this presentation.",
       "kn": "KN45",
       "kn_explanation": "Intervention/rehabilitation for special population (HIV-related cognitive impairment)",
       "difficulty": "medium",
@@ -17,7 +17,7 @@
       "suggestedLesson": "6-prevention-and-consultation",
       "suggestedParagraph": "### HIV-Related NCD",
       "lessonExcerpt": "Caused by HIV infection affecting the brain. Shows subcortical symptoms: forgetfulness, poor attention, cognitive slowing, psychomotor slowing, apathy, social withdrawal, tremors, clumsiness.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
       "inspirationIndex": 4
     },
@@ -72,7 +72,7 @@
         "Mandatory anger management group treatment"
       ],
       "answer": "Arrest of the perpetrator",
-      "explanation": "Research on domestic violence indicates that the best long-term results follow arrest of the perpetrator. The research also suggests that change in the perpetrator occurs only when the victim refuses to tolerate the situation further. Couples therapy (A) is generally contraindicated in active abuse situations. Individual psychotherapy (C) and anger management groups (D) may be components of treatment but have not been shown to produce the best long-term outcomes. The distinction between expressive and instrumental abuse is also relevant—expressive abuse is more amenable to psychological treatment, but left untreated becomes instrumental over time.",
+      "explanation": "Research on domestic violence indicates that the best long-term results follow arrest of the perpetrator. The research also suggests that change in the perpetrator occurs only when the victim refuses to tolerate the situation further. Couples therapy (A) is generally contraindicated in active abuse situations. Individual psychotherapy (C) and anger management groups (D) may be components of treatment but have not been shown to produce the best long-term outcomes. The distinction between expressive and instrumental abuse is also relevant\u2014expressive abuse is more amenable to psychological treatment, but left untreated becomes instrumental over time.",
       "kn": "KN47",
       "kn_explanation": "Consulting with community task force on evidence-based domestic violence intervention",
       "difficulty": "hard",
@@ -80,7 +80,7 @@
       "suggestedLesson": "6-prevention-and-consultation",
       "suggestedParagraph": "## Domestic Violence",
       "lessonExcerpt": "The research suggests that change in the perpetrator of the abuse takes place only when the victim refuses to tolerate the situation any further. The best long-term results seem to follow arrest of the perpetrator.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
       "inspirationIndex": 11
     },
@@ -93,7 +93,7 @@
         "Therapist characteristics and experience level"
       ],
       "answer": "Patient contributions such as motivation and social support",
-      "explanation": "According to Norcross and Lambert's breakdown of factors contributing to therapy outcomes, patient contributions (motivation, resources, social support) account for 30% of variance—the largest identified portion. The therapeutic relationship accounts for 12%, treatment method for only 8%, and therapist characteristics for 7%. While 40% remains unexplained variance, of the identified factors, patient contributions are the most influential. This finding challenges the common assumption that technique or the therapist matters most.",
+      "explanation": "According to Norcross and Lambert's breakdown of factors contributing to therapy outcomes, patient contributions (motivation, resources, social support) account for 30% of variance\u2014the largest identified portion. The therapeutic relationship accounts for 12%, treatment method for only 8%, and therapist characteristics for 7%. While 40% remains unexplained variance, of the identified factors, patient contributions are the most influential. This finding challenges the common assumption that technique or the therapist matters most.",
       "kn": "KN44",
       "kn_explanation": "Common factors research on treatment efficacy and what drives therapy outcomes",
       "difficulty": "medium",
@@ -114,7 +114,7 @@
         "Negative effects on the therapeutic alliance due to assumed similarity"
       ],
       "answer": "Moderate effect on client perceptions of the therapist but minimal effect on actual outcomes",
-      "explanation": "Research on ethnic matching in therapy shows a moderate effect (.32) on how clients perceive their therapists but only a minimal effect (.09) on actual treatment outcomes. This is a nuanced finding—matching influences satisfaction and perception but doesn't substantially change clinical results. Strong effects on both (A) overstates the findings. Option C reverses the actual pattern. Option D contradicts the research showing positive perceptual effects. The research also shows that cultural competence and worldview alignment matter more than ethnic matching itself.",
+      "explanation": "Research on ethnic matching in therapy shows a moderate effect (.32) on how clients perceive their therapists but only a minimal effect (.09) on actual treatment outcomes. This is a nuanced finding\u2014matching influences satisfaction and perception but doesn't substantially change clinical results. Strong effects on both (A) overstates the findings. Option C reverses the actual pattern. Option D contradicts the research showing positive perceptual effects. The research also shows that cultural competence and worldview alignment matter more than ethnic matching itself.",
       "kn": "KN42",
       "kn_explanation": "Matching client-therapist characteristics (ethnic matching) in treatment decision-making",
       "difficulty": "hard",
@@ -135,7 +135,7 @@
         "Therapists achieved positive outcomes with 85% of their caseload on average"
       ],
       "answer": "The average treated person was better off than 80% of untreated individuals",
-      "explanation": "Smith, Glass, and Miller's meta-analysis of 475 studies found an average effect size of .85, which means the average therapy patient was better off than 80% of people who did not receive therapy. This is a specific statistical interpretation—an effect size of .85 standard deviations corresponds to the 80th percentile. Option A misinterprets effect size as a percentage improvement. Option B confuses the finding with dose-effect data (Howard found 50% improved by session 8). Option D confuses effect size with a success rate.",
+      "explanation": "Smith, Glass, and Miller's meta-analysis of 475 studies found an average effect size of .85, which means the average therapy patient was better off than 80% of people who did not receive therapy. This is a specific statistical interpretation\u2014an effect size of .85 standard deviations corresponds to the 80th percentile. Option A misinterprets effect size as a percentage improvement. Option B confuses the finding with dose-effect data (Howard found 50% improved by session 8). Option D confuses effect size with a success rate.",
       "kn": "KN44",
       "kn_explanation": "Landmark meta-analysis on comparative efficacy of psychotherapy (Smith, Glass & Miller)",
       "difficulty": "medium",
@@ -177,7 +177,7 @@
         "Individual therapist characteristics and competence"
       ],
       "answer": "Patient contributions including motivation, resources, and social support",
-      "explanation": "According to Norcross and Lambert's research cited in the lesson, patient contributions account for 30% of therapy outcome variance—the largest identified factor. The therapeutic relationship accounts for 12%, treatment method for 8%, and therapist characteristics for 7%. While 40% remains unexplained variance, of the identified factors, patient contributions are the largest. Option B (therapeutic relationship at 12%) is the second largest identified factor. Option A (treatment method at 8%) is notably smaller than commonly assumed. Option D (therapist characteristics at 7%) is the smallest of the major identified factors.",
+      "explanation": "According to Norcross and Lambert's research cited in the lesson, patient contributions account for 30% of therapy outcome variance\u2014the largest identified factor. The therapeutic relationship accounts for 12%, treatment method for 8%, and therapist characteristics for 7%. While 40% remains unexplained variance, of the identified factors, patient contributions are the largest. Option B (therapeutic relationship at 12%) is the second largest identified factor. Option A (treatment method at 8%) is notably smaller than commonly assumed. Option D (therapist characteristics at 7%) is the smallest of the major identified factors.",
       "kn": "KN44",
       "kn_explanation": "Research on factors contributing to variance in therapy outcomes",
       "difficulty": "medium",
@@ -198,7 +198,7 @@
         "Consultee-centered administrative consultation, focused on building the administrator's program evaluation skills"
       ],
       "answer": "Consultee-centered case consultation, focused on addressing the teacher's theme interference",
-      "explanation": "The lesson identifies theme interference as a key concept within consultee-centered case consultation: 'Caplan identified theme interference as a key obstacle here: when a consultee's biases and unfounded beliefs sabotage their objectivity with certain client types.' The teacher's unfounded belief that children from single-parent homes are destined to fail is a classic example of theme interference—a bias that impairs her professional functioning across multiple cases. Option A is incorrect because client-centered case consultation focuses on helping with a specific client, not on the consultee's broader biases. Option B is incorrect because program-centered administrative consultation addresses existing program problems, not individual consultee beliefs. Option D is incorrect because consultee-centered administrative consultation builds administrative skills, not clinical objectivity.",
+      "explanation": "The lesson identifies theme interference as a key concept within consultee-centered case consultation: 'Caplan identified theme interference as a key obstacle here: when a consultee's biases and unfounded beliefs sabotage their objectivity with certain client types.' The teacher's unfounded belief that children from single-parent homes are destined to fail is a classic example of theme interference\u2014a bias that impairs her professional functioning across multiple cases. Option A is incorrect because client-centered case consultation focuses on helping with a specific client, not on the consultee's broader biases. Option B is incorrect because program-centered administrative consultation addresses existing program problems, not individual consultee beliefs. Option D is incorrect because consultee-centered administrative consultation builds administrative skills, not clinical objectivity.",
       "kn": "KN47",
       "kn_explanation": "Research-based consultation process with a teacher about biased beliefs",
       "difficulty": "hard",
@@ -227,7 +227,7 @@
       "suggestedLesson": "6-prevention-and-consultation",
       "suggestedParagraph": "## The Three Faces of Prevention: Stopping Problems Before They Start",
       "lessonExcerpt": "The research suggests that change in the perpetrator of the abuse takes place only when the victim refuses to tolerate the situation any further. The best long-term results seem to follow arrest of the perpetrator.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
       "inspirationIndex": 11
     },
@@ -261,7 +261,7 @@
         "Ethnic matching improves outcomes for African American clients but not for other ethnic groups"
       ],
       "answer": "Ethnic matching has a moderate effect on client perceptions of the therapist but minimal effect on actual treatment outcomes",
-      "explanation": "Research shows nuanced effects of ethnic matching: a moderate effect (.32) on how clients perceive their therapists but a minimal effect (.09) on actual outcomes. Furthermore, effects vary by ethnicity—matching reduced premature termination for Asian, Hispanic, and European American clients but not African American clients, and only improved outcomes for Hispanic American clients. Option A overstates the benefits across all groups. Option C understates the effect on perceptions. Option D reverses the finding—it was Hispanic American clients, not African American clients, who showed improved outcomes with matching. Cultural competence, compassion, and worldview alignment matter more than ethnic matching itself.",
+      "explanation": "Research shows nuanced effects of ethnic matching: a moderate effect (.32) on how clients perceive their therapists but a minimal effect (.09) on actual outcomes. Furthermore, effects vary by ethnicity\u2014matching reduced premature termination for Asian, Hispanic, and European American clients but not African American clients, and only improved outcomes for Hispanic American clients. Option A overstates the benefits across all groups. Option C understates the effect on perceptions. Option D reverses the finding\u2014it was Hispanic American clients, not African American clients, who showed improved outcomes with matching. Cultural competence, compassion, and worldview alignment matter more than ethnic matching itself.",
       "kn": "KN42",
       "kn_explanation": "Research on client-therapist ethnic matching in treatment decision-making",
       "difficulty": "hard",
@@ -303,7 +303,7 @@
         "Indicated prevention"
       ],
       "answer": "Tertiary prevention",
-      "explanation": "Tertiary prevention targets individuals who already have a diagnosed condition, with goals of reducing severity, preventing relapse, and supporting rehabilitation. A halfway house for individuals transitioning from inpatient psychiatric treatment is a classic example of tertiary prevention—the disorder already exists, and the focus is on reintegration and preventing worsening. Primary prevention (A) targets everyone before problems develop. Secondary prevention (B) involves early identification and intervention for at-risk individuals. Indicated prevention (D) is part of Gordon's framework and targets individuals showing early warning signs but without a formal diagnosis.",
+      "explanation": "Tertiary prevention targets individuals who already have a diagnosed condition, with goals of reducing severity, preventing relapse, and supporting rehabilitation. A halfway house for individuals transitioning from inpatient psychiatric treatment is a classic example of tertiary prevention\u2014the disorder already exists, and the focus is on reintegration and preventing worsening. Primary prevention (A) targets everyone before problems develop. Secondary prevention (B) involves early identification and intervention for at-risk individuals. Indicated prevention (D) is part of Gordon's framework and targets individuals showing early warning signs but without a formal diagnosis.",
       "kn": "KN45",
       "kn_explanation": "Prevention/intervention/rehabilitation for special population (severe mental illness, halfway house)",
       "difficulty": "easy",
@@ -314,6 +314,300 @@
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
       "inspirationIndex": 23
+    },
+    {
+      "stem": "A psychologist in a community health clinic is assigned a client who is HIV-positive, presents with moderate depression, and reports inconsistent adherence to antiretroviral therapy (ART). Which clinical consideration should most directly guide the structure of the psychologist's intervention?",
+      "options": [
+        "Deferring psychological intervention until the client achieves stable viral load, since depression may resolve with medical stabilization",
+        "Addressing depression and ART adherence concurrently, given the bidirectional relationship in which depression reduces adherence and poor adherence worsens depression",
+        "Referring the client to psychiatry for antidepressant evaluation before initiating psychotherapy, since pharmacotherapy must precede behavioral intervention",
+        "Prioritizing existential exploration of HIV-related mortality concerns as the primary barrier to medication adherence"
+      ],
+      "answer": "Addressing depression and ART adherence concurrently, given the bidirectional relationship in which depression reduces adherence and poor adherence worsens depression",
+      "explanation": "Clinical research consistently documents a bidirectional relationship between depression and ART adherence: untreated depression reduces motivation and capacity to adhere to complex medication regimens, and poor adherence leads to worsening health outcomes that further exacerbate depression. Integrated intervention addressing both domains simultaneously is therefore the priority. Deferring psychological treatment until medical stabilization is contraindicated because depression actively undermines the medical stabilization process. Mandating psychiatric consultation before psychotherapy imposes an unnecessary barrier and ignores the psychologist's independent role in addressing adherence-related behavioral factors. Focusing exclusively on existential concerns neglects the most immediately life-threatening clinical problem, which is medication non-adherence.",
+      "kn": "KN6",
+      "kn_explanation": "This question addresses Domain 6: Treatment, Intervention, and Prevention, specifically clinical decision-making when treating clients with co-occurring medical and psychological conditions.",
+      "difficulty": "hard",
+      "quality_comment": "Clinically nuanced question requiring integration of medical and psychological knowledge; lesson",
+      "suggestedLesson": "6-prevention-and-consultation",
+      "suggestedParagraph": "## Understanding Prevention, Consultation, and Psychotherapy Research",
+      "lessonExcerpt": "Whether you're dreaming of private practice, working in a hospital, or joining a community mental health center, this knowledge shapes how you'll help people every single day.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 4
+    },
+    {
+      "stem": "A researcher reviewing meta-analytic studies on psychotherapy outcome finds that one category of variables consistently accounts for the largest proportion of outcome variance across treatment modalities. Which category does the literature most strongly identify as the primary predictor of psychotherapy success?",
+      "options": [
+        "Therapist variables, including years of experience, level of training, and fidelity to the treatment protocol",
+        "Specific technique variables, including the theoretical orientation and structured components of the intervention model",
+        "Client and extratherapeutic variables, including severity of pathology, motivation for change, and external social support",
+        "Therapeutic alliance variables, including empathy, collaborative goal-setting, and bond quality"
+      ],
+      "answer": "Client and extratherapeutic variables, including severity of pathology, motivation for change, and external social support",
+      "explanation": "Lambert's influential common factors research identifies client and extratherapeutic factors as accounting for approximately 40% of outcome variance \u2014 the single largest category \u2014 more than any other set of variables. These factors include what clients bring to therapy: their strengths, social resources, severity of disorder, and motivation. The therapeutic alliance accounts for approximately 30% of variance and is the second strongest predictor, not the first. Expectancy and placebo effects contribute approximately 15%, and specific techniques approximately 15%. This hierarchy is clinically significant because it suggests that assessing and mobilizing client strengths and resources should be a treatment priority regardless of the specific approach employed.",
+      "kn": "KN6",
+      "kn_explanation": "This question addresses Domain 6: Treatment, Intervention, and Prevention, specifically psychotherapy outcome research and the common factors framework.",
+      "difficulty": "hard",
+      "quality_comment": "Tests knowledge of foundational outcome research findings; distractors reflect common misconceptions about what drives therapy success. Lesson content is",
+      "suggestedLesson": "6-prevention-and-consultation",
+      "suggestedParagraph": "## Understanding Prevention, Consultation, and Psychotherapy Research",
+      "lessonExcerpt": "- **Common factors matter more than technique**: Patient contributions (30%) and therapeutic relationship (12%) outweigh specific treatment method (8%) in predicting outcomes",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 5
+    },
+    {
+      "stem": "A psychologist is consulting with a school counselor who consistently reports that students from homes with frequent parental conflict are 'destined to fail' and approaches these students with obvious pessimism, despite no objective evidence supporting this conclusion. The psychologist observes that this rigid belief undermines the counselor's clinical judgment specifically with this population. According to Caplan's consultation model, which type of consultation is indicated, and what is the primary obstacle requiring intervention?",
+      "options": [
+        "Client-centered case consultation, targeting the learning and behavioral needs of the specific students affected by parental conflict",
+        "Consultee-centered case consultation, addressing the counselor's theme interference that is distorting her professional objectivity with a specific client type",
+        "Program-centered administrative consultation, addressing systemic deficiencies in the school's support services for children from high-conflict homes",
+        "Consultee-centered administrative consultation, addressing the counselor's need for additional training in family systems assessment"
+      ],
+      "answer": "Consultee-centered case consultation, addressing the counselor's theme interference that is distorting her professional objectivity with a specific client type",
+      "explanation": "Caplan's consultee-centered case consultation focuses on building the consultee's skills and effectiveness, particularly when a specific obstacle is compromising their work with a client type. The lesson identifies 'theme interference' as precisely this obstacle: 'when a consultee's biases and unfounded beliefs sabotage their objectivity with certain client types.' The counselor's rigid, evidence-free belief that students from high-conflict homes are 'destined to fail' is a defining example of theme interference. Client-centered case consultation would focus on solving the presenting problem of a specific student, not on the counselor's belief system. Program-centered administrative consultation addresses structural problems in existing programs, not an individual consultee's biases. Consultee-centered administrative consultation addresses the consultee's administrative functioning, not clinical biases toward a client type.",
+      "kn": "KN6",
+      "kn_explanation": "This question addresses Domain 6: Treatment, Intervention, and Prevention, specifically Caplan's mental health consultation model and the concept of theme interference.",
+      "difficulty": "hard",
+      "quality_comment": "Directly grounded in lesson content with a precise quote supporting the answer; requires careful discrimination among all four Caplan consultation types.",
+      "suggestedLesson": "6-prevention-and-consultation",
+      "suggestedParagraph": "### Caplan's Four Types of Consultation",
+      "lessonExcerpt": "Caplan identified theme interference as a key obstacle here: when a consultee's biases and unfounded beliefs sabotage their objectivity with certain client types.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 10
+    },
+    {
+      "stem": "A county domestic violence program is evaluating which intervention approach produces the lowest recidivism rates among male perpetrators following a spousal assault conviction. Based on the empirical literature, which of the following interventions is most consistently associated with reduced re-offense rates when implemented as part of a coordinated community response?",
+      "options": [
+        "Couples therapy targeting communication deficits and conflict resolution skills",
+        "Mandatory arrest followed by incarceration without psychoeducational programming",
+        "Batterer intervention programs combined with legal system monitoring",
+        "Individual psychodynamic therapy exploring early attachment disruptions"
+      ],
+      "answer": "Batterer intervention programs combined with legal system monitoring",
+      "explanation": "Research indicates that batterer intervention programs (BIPs), particularly when embedded within a coordinated community response involving legal accountability, are associated with the lowest recidivism rates. Couples therapy is contraindicated in active domestic violence situations because it implicitly assigns mutual responsibility for violence, may endanger the victim by surfacing grievances in session, and provides abusers with new information to exploit coercively. Mandatory arrest alone (without psychoeducational follow-through) has shown inconsistent results across studies \u2014 Sherman et al.'s research found deterrent effects only for employed batterers. Individual psychodynamic therapy lacks adequate evidence for reducing intimate partner violence recidivism and fails to address the power and control dynamics central to this behavior pattern.",
+      "kn": "KN6",
+      "kn_explanation": "This question addresses evidence-based treatment and intervention strategies for domestic violence perpetrators, which falls under domain 6: Treatment, Intervention, and Prevention.",
+      "difficulty": "hard",
+      "quality_comment": "High-quality doctoral-level question requiring discrimination between a contraindicated approach (couples therapy) and evidence-supported ones; tests applied clinical judgment in a forensic context.",
+      "suggestedLesson": "6-prevention-and-consultation",
+      "suggestedParagraph": "## Understanding Prevention, Consultation, and Psychotherapy Research",
+      "lessonExcerpt": "LESSON CONTENT DOES NOT EXPLICITLY ADDRESS DOMESTIC VIOLENCE INTERVENTION OR RECIDIVISM OUTCOMES IN THE PROVIDED EXCERPTS",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 11
+    },
+    {
+      "stem": "A client who recently began attending Alcoholics Anonymous states: 'I used to think I was just weak-willed and could stop if I really tried. Now I understand I have a condition \u2014 I literally cannot drink even one glass of wine without losing control. It's not about willpower.' This statement most directly reflects which foundational premise of AA's theoretical framework?",
+      "options": [
+        "The moral model, which locates the source of addiction in correctable character defects addressed through spiritual inventory",
+        "The disease model, which conceptualizes alcoholism as a chronic, progressive condition characterized by loss of control over substance use",
+        "The biopsychosocial model, which distributes causal weight equally across biological, psychological, and social contributing factors",
+        "The harm reduction model, which supports moderated drinking as a realistic and acceptable treatment goal for most alcoholics"
+      ],
+      "answer": "The disease model, which conceptualizes alcoholism as a chronic, progressive condition characterized by loss of control over substance use",
+      "explanation": "AA was founded on the disease model of alcoholism, and the client's statement captures its central tenets precisely: (1) alcoholism is not a moral failing or willpower deficit but a condition, and (2) even a single drink triggers loss of control \u2014 the 'allergy' conceptualization that underpins AA's insistence on total abstinence. The client explicitly contrasts this view with the moral model (weak-willed), correctly distinguishing between them. The biopsychosocial model is broader and does not mandate abstinence as a universal requirement. The harm reduction model, by definition, accepts reduced drinking as a legitimate goal \u2014 a position fundamentally incompatible with AA's philosophy. AA's alignment with tertiary prevention (managing an existing chronic condition) reflects this disease framing.",
+      "kn": "KN6",
+      "kn_explanation": "This question addresses addiction models underlying AA, which the lesson explicitly places within tertiary prevention under Treatment, Intervention, and Prevention.",
+      "difficulty": "medium",
+      "quality_comment": "Effective use of a client quote to test theoretical model identification; distractors require meaningful discrimination between models that are superficially similar.",
+      "suggestedLesson": "6-prevention-and-consultation",
+      "suggestedParagraph": "## The Three Faces of Prevention: Stopping Problems Before They Start",
+      "lessonExcerpt": "Alcoholics Anonymous meetings all fall under tertiary prevention. You're managing an existing condition and preventing it from getting worse.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 13
+    },
+    {
+      "stem": "A researcher reviewing the common factors literature concludes that one therapist-offered condition consistently accounts for more outcome variance than any specific treatment technique across diverse presenting problems and theoretical orientations. Which variable has been most robustly identified in this role by the empirical literature?",
+      "options": [
+        "Years of clinical experience and postdoctoral specialization in the relevant disorder",
+        "Selection of a treatment protocol empirically validated for the client's specific diagnosis",
+        "Accurate empathy as experienced and reported by the client",
+        "Therapist use of strategic self-disclosure to model vulnerability and reduce power differentials"
+      ],
+      "answer": "Accurate empathy as experienced and reported by the client",
+      "explanation": "The common factors and therapist effect literatures consistently identify accurate empathy \u2014 operationalized as the therapist's capacity to understand and communicate understanding of the client's subjective experience \u2014 as the most reliably predictive therapist-offered variable for positive outcomes. This finding was first articulated by Carl Rogers and rigorously operationalized by Truax and Carkhuff, whose research showed that empathy, warmth, and genuineness predicted outcomes independently of theoretical orientation. Critically, it is the client's perception of empathy that predicts outcome, not the therapist's self-rated empathy \u2014 a distinction that underscores its relational rather than technical nature. Years of experience show surprisingly weak associations with outcome in meta-analyses. Treatment protocol selection reflects specific factors, which account for a smaller proportion of outcome variance than common factors. Strategic self-disclosure has limited empirical support as a primary outcome predictor.",
+      "kn": "KN6",
+      "kn_explanation": "This question addresses common factors research on therapist variables and their relative contribution to psychotherapy outcome, a core topic within Treatment, Intervention, and Prevention.",
+      "difficulty": "hard",
+      "quality_comment": "Requires integration of common factors research, the client-perception nuance, and relative weighting of therapist variables \u2014 well-suited for doctoral-level discrimination.",
+      "suggestedLesson": "6-prevention-and-consultation",
+      "suggestedParagraph": "## Understanding Prevention, Consultation, and Psychotherapy Research",
+      "lessonExcerpt": "LESSON CONTENT IS TRUNCATED \u2014 COMMON FACTORS AND THERAPIST EMPATHY AS OUTCOME VARIABLE ARE LIKELY ADDRESSED IN THE OMITTED PSYCHOTHERAPY RESEARCH SECTIONS",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 15
+    },
+    {
+      "stem": "An organizational psychologist evaluates the effects of implementing a compressed four-day, 40-hour workweek across a mid-sized logistics company. After six months, she compares pre- and post-implementation data. Based on the empirical literature on alternative work schedules, which pattern of outcomes is she most likely to find?",
+      "options": [
+        "Both employee morale and objective productivity measures show significant, sustained improvements",
+        "Employee morale and job satisfaction improve significantly, but productivity gains are modest and inconsistent",
+        "Objective productivity improves substantially while morale effects are neutral or slightly negative due to scheduling complexity",
+        "Neither morale nor productivity shows reliable change at the group level; individual differences overwhelm any schedule effect"
+      ],
+      "answer": "Employee morale and job satisfaction improve significantly, but productivity gains are modest and inconsistent",
+      "explanation": "The I/O psychology literature on alternative work schedules consistently documents robust improvements in attitudinal outcomes \u2014 job satisfaction, morale, sense of autonomy, and reduced absenteeism \u2014 when employees shift to compressed workweeks or flextime arrangements. However, the same literature does not support equally consistent improvements in actual job performance or quantitative productivity. Workers report feeling greater control over their time and work-life balance, producing genuine attitudinal benefits, but the volume and quality of work output are not reliably affected \u2014 particularly in roles with fixed throughput demands (e.g., logistics, manufacturing) that are structurally independent of scheduling. This morale-vs-performance distinction is a canonical finding in I/O psychology and is directly testable on the EPPP.",
+      "kn": "KN6",
+      "kn_explanation": "Alternative work schedules fall under organizational interventions within the Treatment, Intervention, and Prevention domain, addressing applied psychology in workplace settings.",
+      "difficulty": "medium",
+      "quality_comment": "Tests a precise empirical distinction between attitudinal and performance outcomes \u2014 a classic and frequently tested I/O psychology finding; distractors are plausible and require careful discrimination.",
+      "suggestedLesson": "6-prevention-and-consultation",
+      "suggestedParagraph": "## Understanding Prevention, Consultation, and Psychotherapy Research",
+      "lessonExcerpt": "LESSON CONTENT DOES NOT EXPLICITLY ADDRESS ALTERNATIVE WORK SCHEDULES OR I/O ORGANIZATIONAL INTERVENTIONS IN THE PROVIDED EXCERPTS",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 16
+    },
+    {
+      "stem": "A community mental health center serving a racially diverse urban population reviews its utilization data and finds that clients from racial and ethnic minority backgrounds are terminating services significantly earlier than non-minority clients with comparable presenting problems and insurance coverage. Which of the following most accurately characterizes what the empirical literature predicts about this pattern and its etiology?",
+      "options": [
+        "Higher early termination rates among minority clients reflect greater baseline resilience and faster natural symptom resolution in these populations",
+        "Premature termination is primarily explained by logistical barriers such as transportation and scheduling, with therapeutic relationship factors playing a negligible role",
+        "Racial and ethnic minority clients demonstrate higher rates of premature termination and poorer average outcomes in traditional therapy, typically attributed to cultural incompatibility of treatment models and microaggressions within the therapeutic relationship",
+        "Outcome disparities are eliminated when therapists adhere strictly to evidence-based treatment manuals, rendering therapist-client racial matching clinically unnecessary"
+      ],
+      "answer": "Racial and ethnic minority clients demonstrate higher rates of premature termination and poorer average outcomes in traditional therapy, typically attributed to cultural incompatibility of treatment models and microaggressions within the therapeutic relationship",
+      "explanation": "Research by Sue, Zane, and colleagues consistently documents that racial and ethnic minority clients have higher rates of unilateral premature termination and poorer average outcomes in traditional Western psychotherapy models compared to non-minority clients. Contributing factors include cultural incompatibility (Western therapy's individualist assumptions conflicting with collectivist worldviews), cultural mistrust of mental health systems rooted in historical mistreatment, microaggressions in the therapeutic relationship, language barriers, and inadequate cultural adaptation of interventions. The 'natural resilience' explanation is empirically unsupported and clinically harmful. Logistical barriers are real but insufficient to explain the full disparity \u2014 clinical relationship factors contribute independently. Adherence to manualized treatments does not automatically eliminate cultural disparities; ethnic and racial matching of therapist and client has shown some benefit for reducing premature termination in several studies, though effects are not universal.",
+      "kn": "KN6",
+      "kn_explanation": "This question addresses multicultural competence and differential treatment outcomes for racial and ethnic minority populations \u2014 a key area within Treatment, Intervention, and Prevention.",
+      "difficulty": "hard",
+      "quality_comment": "Requires nuanced understanding of the multicultural therapy literature; avoids oversimplification while demanding precise knowledge of etiology and magnitude of disparities.",
+      "suggestedLesson": "6-prevention-and-consultation",
+      "suggestedParagraph": "## Understanding Prevention, Consultation, and Psychotherapy Research",
+      "lessonExcerpt": "LESSON CONTENT IS TRUNCATED \u2014 MULTICULTURAL THERAPY OUTCOMES AND PREMATURE TERMINATION ARE LIKELY ADDRESSED IN OMITTED SECTIONS",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 17
+    },
+    {
+      "stem": "A first-year doctoral student is reviewing Smith, Glass, and Miller's seminal 1980 meta-analysis of psychotherapy outcome research. Her supervisor tells her: 'The average treated client in that study fared better than approximately 80 percent of untreated controls \u2014 a finding that established psychotherapy's overall efficacy beyond reasonable scientific doubt.' Which numerical effect size corresponds to this benchmark?",
+      "options": [
+        "d = 0.20",
+        "d = 0.50",
+        "d = 0.80",
+        "d = 1.20"
+      ],
+      "answer": "d = 0.80",
+      "explanation": "Smith, Glass, and Miller's landmark 1980 meta-analysis synthesized 475 controlled psychotherapy outcome studies and found a mean effect size of approximately d = 0.85, conventionally reported as d = 0.80 in the subsequent literature. An effect size of 0.80 means the average treated client scored approximately 0.80 standard deviations above the mean of the untreated control group \u2014 placing them at roughly the 79th percentile of control group outcomes. By Cohen's conventions, d = 0.20 is small, d = 0.50 is medium, and d = 0.80 is large. d = 1.20 would overestimate the finding. This meta-analysis is historically foundational for the field and is directly tested on the EPPP as a benchmark for psychotherapy's overall efficacy.",
+      "kn": "KN6",
+      "kn_explanation": "This question tests knowledge of foundational psychotherapy outcome meta-analytic data within the Treatment, Intervention, and Prevention domain.",
+      "difficulty": "medium",
+      "quality_comment": "Clean numerical discrimination question anchored to a landmark study; the supervisor's paraphrase provides contextual scaffolding appropriate for doctoral-level test-taking.",
+      "suggestedLesson": "6-prevention-and-consultation",
+      "suggestedParagraph": "## Understanding Prevention, Consultation, and Psychotherapy Research",
+      "lessonExcerpt": "LESSON CONTENT IS TRUNCATED \u2014 PSYCHOTHERAPY META-ANALYSIS EFFECT SIZE DATA ARE LIKELY COVERED IN THE OMITTED PSYCHOTHERAPY RESEARCH SECTIONS",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 18
+    },
+    {
+      "stem": "A 59-year-old woman with a 25-year history of recurrent major depressive disorder has failed three adequate antidepressant trials, including one augmentation strategy with lithium. She is currently experiencing severe neurovegetative symptoms, mood-congruent delusions of guilt, and passive suicidal ideation with a plan. Her psychiatrist is evaluating electroconvulsive therapy. For which clinical profile does ECT have the strongest empirical support as a primary intervention?",
+      "options": [
+        "Schizophrenia with prominent negative symptoms, flat affect, and treatment-resistant social withdrawal",
+        "Severe, treatment-resistant major depressive disorder, particularly when accompanied by psychotic features",
+        "Generalized anxiety disorder with prominent somatic symptoms and medication intolerance",
+        "Bipolar II disorder characterized by recurrent hypomanic episodes and chronic low-grade interepisode depression"
+      ],
+      "answer": "Severe, treatment-resistant major depressive disorder, particularly when accompanied by psychotic features",
+      "explanation": "ECT's strongest empirical support is for severe, treatment-resistant major depressive disorder \u2014 which describes this patient precisely. The presence of mood-congruent psychotic features (delusions of guilt) further strengthens the indication, as response rates for psychotic depression to ECT consistently exceed those for non-psychotic depression (70-90% vs. 50-70%). Additional indications include acute suicidality requiring rapid clinical response (pharmacotherapy typically takes weeks), melancholic features, and cases where medications are contraindicated or poorly tolerated. ECT has modest evidence for catatonia and acute mania but lacks support for negative-symptom schizophrenia or anxiety-spectrum conditions. Bipolar II with hypomania is not a primary ECT indication; ECT is reserved for more severe bipolar presentations such as treatment-resistant bipolar depression or mixed states with psychosis.",
+      "kn": "KN6",
+      "kn_explanation": "ECT is a biological treatment within the Treatment, Intervention, and Prevention domain, and the EPPP tests the clinical indications and hierarchy of evidence for its use.",
+      "difficulty": "medium",
+      "quality_comment": "Realistic clinical vignette with diagnostically specific features that sharpen the indication; distractors span multiple DSM categories requiring precise knowledge of ECT's evidence base.",
+      "suggestedLesson": "6-prevention-and-consultation",
+      "suggestedParagraph": "## Understanding Prevention, Consultation, and Psychotherapy Research",
+      "lessonExcerpt": "LESSON CONTENT DOES NOT ADDRESS ELECTROCONVULSIVE THERAPY IN THE PROVIDED EXCERPTS",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 19
+    },
+    {
+      "stem": "Following a six-month psychiatric hospitalization for treatment-resistant bipolar disorder, a patient is referred to a supported housing program where staff provide daily living skills coaching, facilitate gradual reintegration into community activities, and coordinate outpatient follow-up care. The treatment team explicitly emphasizes relapse prevention and functional rehabilitation as the program's goals. According to Caplan's classic prevention framework, this program is best classified as:",
+      "options": [
+        "Primary prevention, because it aims to reduce the incidence of new episodes across the general population",
+        "Secondary prevention, because it identifies and intervenes with individuals at elevated risk before hospitalization becomes necessary",
+        "Tertiary prevention, because it addresses an established diagnosis with the goal of reducing disability and supporting rehabilitation",
+        "Universal prevention, because the program is available to all recently discharged patients regardless of specific diagnosis"
+      ],
+      "answer": "Tertiary prevention, because it addresses an established diagnosis with the goal of reducing disability and supporting rehabilitation",
+      "explanation": "According to Caplan's model, tertiary prevention applies when a person already carries an established diagnosis. The goal at this stage shifts from preventing disorder to reducing severity, preventing relapse, and supporting rehabilitation and community reintegration. Supported housing and daily living skills coaching after hospitalization are textbook examples of tertiary prevention. Primary prevention (Option A) targets people who do not yet have the disorder and aims to prevent new cases from developing. Secondary prevention (Option B) involves early identification of individuals at elevated risk before a full diagnosis is established. Universal prevention (Option D) belongs to Gordon's alternative framework rather than Caplan's, and refers to population-wide programs delivered without individual risk screening.",
+      "kn": "KN6",
+      "kn_explanation": "This question addresses Caplan's levels of prevention, specifically tertiary prevention applied to community mental health and psychiatric rehabilitation settings\u2014a core area of the Treatment, Intervention, and Prevention domain.",
+      "difficulty": "medium",
+      "quality_comment": "Strong question with direct lesson support. Effectively tests discrimination between Caplan's tertiary prevention and both Gordon's framework and secondary prevention.",
+      "suggestedLesson": "6-prevention-and-consultation",
+      "suggestedParagraph": "### Caplan's Classic Prevention Model",
+      "lessonExcerpt": "Tertiary Prevention comes into play when someone already has a diagnosis. Your goal shifts to reducing severity, preventing relapse, and supporting rehabilitation. Social skills training for patients with schizophrenia, halfway houses for people transitioning from addiction treatment, and Alcoholics Anonymous meetings all fall under tertiary prevention.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 23
+    },
+    {
+      "stem": "An organizational psychologist advises a manufacturing company whose supervisors hold the belief that employees are inherently self-motivated, capable of exercising creativity and self-direction, and will commit to organizational goals when work is meaningful. According to McGregor's Theory Y, this set of management assumptions would most likely result in which organizational practice?",
+      "options": [
+        "Close supervision and detailed performance monitoring to ensure that productivity targets are consistently met",
+        "Centralized decision-making with clearly defined chains of command to maintain operational efficiency",
+        "Participative decision-making and the delegation of meaningful responsibility to employees at multiple levels",
+        "Performance-contingent reward structures designed to externally motivate employee compliance with standards"
+      ],
+      "answer": "Participative decision-making and the delegation of meaningful responsibility to employees at multiple levels",
+      "explanation": "McGregor's Theory Y holds that employees are inherently motivated, creative, and capable of self-direction when given meaningful work. Organizations operating under Theory Y assumptions naturally adopt participative management styles in which employees are involved in decision-making and given real autonomy and responsibility. Theory X, by contrast, assumes employees are passive and require external coercion\u2014leading to close supervision (Option A), centralized authority (Option B), and contingent reward structures (Option D). Under Theory Y, external control is considered unnecessary and counterproductive when employees find their work purposeful.",
+      "kn": "KN6",
+      "kn_explanation": "Theory Y and participative management fall within industrial-organizational psychology as applied to organizational consultation, a topic area covered in the Treatment, Intervention, and Prevention domain.",
+      "difficulty": "medium",
+      "quality_comment": "Clear question with well-differentiated distractors. Theory Y and McGregor's management framework are. Content goes beyond current lesson material \u2014 valid EPPP topic, no lesson excerpt available.",
+      "suggestedLesson": "6-prevention-and-consultation",
+      "suggestedParagraph": "## Organizational Management Theory",
+      "lessonExcerpt": "",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 24
+    },
+    {
+      "stem": "A human resources consultant recommends two separate interventions to a manufacturing company. The first involves adding several assembly steps to each worker's role so that employees rotate through a broader set of tasks, all at the same complexity level. The second involves redesigning positions to include planning, quality inspection, and scheduling responsibilities that were previously handled exclusively by supervisors. Which statement correctly distinguishes job enlargement from job enrichment as illustrated in this scenario?",
+      "options": [
+        "Job enlargement incorporates higher-level managerial responsibilities; job enrichment increases the number of tasks at the worker's existing skill level",
+        "Job enlargement and job enrichment are functionally interchangeable strategies for reducing employee monotony through task variety",
+        "Job enlargement increases task variety horizontally by adding similar-level tasks; job enrichment adds vertical depth by incorporating greater autonomy and responsibility",
+        "Job enrichment expands the number of workers assigned to a role; job enlargement increases the total individual workload without changing task complexity"
+      ],
+      "answer": "Job enlargement increases task variety horizontally by adding similar-level tasks; job enrichment adds vertical depth by incorporating greater autonomy and responsibility",
+      "explanation": "Job enlargement refers to horizontal loading\u2014adding more tasks at the same level of skill and complexity, increasing variety without increasing challenge, decision-making authority, or responsibility. Job enrichment, associated with Herzberg's motivation-hygiene theory, refers to vertical loading\u2014adding higher-level responsibilities such as planning, self-inspection, and decision-making that were previously reserved for supervisors, thereby increasing the meaningfulness and motivating potential of the role. Option A reverses these definitions. Option B incorrectly treats the two as interchangeable. Option D confuses job enrichment with workforce staffing decisions.",
+      "kn": "KN6",
+      "kn_explanation": "Job design concepts including job enrichment and job enlargement belong to industrial-organizational psychology and are tested within the organizational consultation content area of the Treatment, Intervention, and Prevention domain.",
+      "difficulty": "medium",
+      "quality_comment": "Clear scenario with well-differentiated distractors. This topic is not present in the provided lesson files; flagged for verification against the appropriate I/O psychology lesson.",
+      "suggestedLesson": "6-prevention-and-consultation",
+      "suggestedParagraph": "## Job Design",
+      "lessonExcerpt": "Lesson content does not explicitly cover the distinction between job enrichment and job enlargement. Flagged for review.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 27
+    },
+    {
+      "stem": "According to Fiedler's contingency model, a leader with a low LPC (Least Preferred Coworker) score would be MOST effective in which of the following situations?",
+      "options": [
+        "A moderately favorable situation where leader-member relations are good but task structure is low",
+        "A highly favorable or highly unfavorable situation",
+        "A moderately favorable situation regardless of leader-member relations",
+        "Any situation, provided the leader receives leadership training to adapt their style"
+      ],
+      "answer": "A highly favorable or highly unfavorable situation",
+      "explanation": "Fiedler's contingency model posits that low-LPC leaders (task-oriented) perform best in situations that are either very favorable or very unfavorable, while high-LPC leaders (relationship-oriented) perform best in moderately favorable situations. Situational favorability is determined by leader-member relations, task structure, and position power. Option A describes a moderate situation better suited to high-LPC leaders. Option C incorrectly removes leader-member relations from the equation. Option D contradicts Fiedler's core assertion that leadership style is relatively fixed and the situation must be engineered to match the leader, not the other way around.",
+      "kn": "KN6",
+      "kn_explanation": "Although leadership theory overlaps with I/O psychology, this question is categorized under Treatment, Intervention, and Prevention as specified by the inspiration domain assignment.",
+      "difficulty": "hard",
+      "quality_comment": "Solid contingency model question testing the core matching principle. However, the provided domain 6 lesson content does not cover Fiedler's contingency model or leadership theory at all \u2014 this topic typically falls under I/O Psychology. Content goes beyond current lesson material \u2014 valid EPPP topic, no lesson excerpt available.",
+      "suggestedLesson": "6-prevention-and-consultation",
+      "suggestedParagraph": "## Understanding Prevention, Consultation, and Psychotherapy Research: Your Complete Guide",
+      "lessonExcerpt": "",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 31
     }
   ]
 }

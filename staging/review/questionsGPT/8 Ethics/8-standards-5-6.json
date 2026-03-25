@@ -13,7 +13,7 @@
       "kn": "KN64",
       "kn_explanation": "Fee splitting/referral kickbacks is an ethical issue to identify and manage",
       "difficulty": "medium",
-      "quality_comment": "Good applied scenario testing fee-splitting rules. Lesson content on Standard 6 is truncated and does not explicitly cover fee splitting.",
+      "quality_comment": "Good applied scenario testing fee-splitting rules. Lesson content on",
       "suggestedLesson": "8-standards-5-6",
       "suggestedParagraph": "### Referral Fees",
       "lessonExcerpt": "Standard 6.07 states that referral fees must be 'based on the services provided' and not 'on the referral itself.' Prohibited: Paying a colleague $50 for each client they refer to you, regardless of what they did.",
@@ -51,7 +51,7 @@
         "Charging $150 per session, which exceeds what a trainee may ethically charge"
       ],
       "answer": "Using the title 'Dr.' and 'Clinical Psychologist' before earning the doctoral degree and obtaining licensure",
-      "explanation": "Standard 5.01 prohibits false, deceptive, or fraudulent public statements about credentials and licenses. The student has not yet earned her doctoral degree, so claiming 'Dr.' is false. Additionally, claiming the title 'Clinical Psychologist' typically requires licensure, which she does not have. The lesson specifies that acceptable degree credentials are 'Doctoral degrees in psychology from regionally accredited institutions' or 'Degrees that your state licensing board accepted as the basis for your psychology license.' She meets neither criterion. Option A is incorrect—advertising fees is not inherently prohibited for trainees. Option C, while good practice, is not the most clearly problematic element. Option D is incorrect—there is no specific cap on what a trainee may charge.",
+      "explanation": "Standard 5.01 prohibits false, deceptive, or fraudulent public statements about credentials and licenses. The student has not yet earned her doctoral degree, so claiming 'Dr.' is false. Additionally, claiming the title 'Clinical Psychologist' typically requires licensure, which she does not have. The lesson specifies that acceptable degree credentials are 'Doctoral degrees in psychology from regionally accredited institutions' or 'Degrees that your state licensing board accepted as the basis for your psychology license.' She meets neither criterion. Option A is incorrect\u2014advertising fees is not inherently prohibited for trainees. Option C, while good practice, is not the most clearly problematic element. Option D is incorrect\u2014there is no specific cap on what a trainee may charge.",
       "kn": "KN62",
       "kn_explanation": "Proper representation of credentials and training status relates to professional standards",
       "difficulty": "medium",
@@ -72,7 +72,7 @@
         "It is a minor ethical infraction that would result in a warning but no formal sanction"
       ],
       "answer": "It constitutes both an ethical violation of accurate billing standards and insurance fraud, which is also illegal",
-      "explanation": "Standard 6.06 requires providing accurate information about diagnosis codes, types of services, who provided services, and fees charged. The lesson explicitly identifies 'Assigning inaccurate diagnosis for insurance coverage' as a practice that is 'both unethical and illegal (fraud).' No amount of documentation or client consent makes misrepresenting a diagnosis acceptable. Option A is incorrect—documenting rationale does not legitimize a knowingly inaccurate diagnosis. Option B is wrong because client consent cannot authorize fraud. Option D understates the severity; insurance fraud carries serious legal and professional consequences.",
+      "explanation": "Standard 6.06 requires providing accurate information about diagnosis codes, types of services, who provided services, and fees charged. The lesson explicitly identifies 'Assigning inaccurate diagnosis for insurance coverage' as a practice that is 'both unethical and illegal (fraud).' No amount of documentation or client consent makes misrepresenting a diagnosis acceptable. Option A is incorrect\u2014documenting rationale does not legitimize a knowingly inaccurate diagnosis. Option B is wrong because client consent cannot authorize fraud. Option D understates the severity; insurance fraud carries serious legal and professional consequences.",
       "kn": "KN64",
       "kn_explanation": "Fraudulent billing/misdiagnosis for insurance is an ethical issue to identify and manage",
       "difficulty": "easy",
@@ -101,7 +101,7 @@
       "suggestedLesson": "8-standards-5-6",
       "suggestedParagraph": "### The Core Principle: Truth in All Forms",
       "lessonExcerpt": "Acceptable degrees are either: 1. Doctoral degrees in psychology from regionally accredited institutions, OR 2. Degrees (from any institution) that your state licensing board accepted as the basis for your psychology license",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 22
     },
@@ -135,7 +135,7 @@
         "Include a confidentiality notice at the bottom of the email stating the information is privileged"
       ],
       "answer": "Use coding or other techniques to protect personal identifiers and employ encryption for electronic transmissions",
-      "explanation": "Standard 6.02(b) requires 'using coding or other techniques to protect personal identifiers when entering confidential information into databases that unauthorized people might access.' The lesson also lists encryption as a key modern protection strategy for confidential records. Option A is incorrect because personal email is described as inappropriate—the lesson compares it to 'shouting client information across a crowded coffee shop.' Option C is incorrect because while phone communication avoids electronic risks, it is not the standard solution for billing transmissions and introduces its own documentation concerns. Option D is incorrect because a confidentiality notice does not provide actual data protection.",
+      "explanation": "Standard 6.02(b) requires 'using coding or other techniques to protect personal identifiers when entering confidential information into databases that unauthorized people might access.' The lesson also lists encryption as a key modern protection strategy for confidential records. Option A is incorrect because personal email is described as inappropriate\u2014the lesson compares it to 'shouting client information across a crowded coffee shop.' Option C is incorrect because while phone communication avoids electronic risks, it is not the standard solution for billing transmissions and introduces its own documentation concerns. Option D is incorrect because a confidentiality notice does not provide actual data protection.",
       "kn": "KN71",
       "kn_explanation": "Electronic transmission of client data involves technology-assisted psychological services",
       "difficulty": "medium",
@@ -440,6 +440,132 @@
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 27
+    },
+    {
+      "stem": "Dr. Patel refers a client to a colleague for neuropsychological testing. The colleague offers to pay Dr. Patel a percentage of the testing fee as a thank-you for the referral. According to APA ethical standards, Dr. Patel should:",
+      "options": [
+        "Accept the payment as long as it is disclosed to the client",
+        "Accept the payment only if it reflects fair market value for the referral service",
+        "Decline the payment because receiving compensation for referrals is prohibited",
+        "Accept the payment only if the client provides written consent"
+      ],
+      "answer": "Decline the payment because receiving compensation for referrals is prohibited",
+      "explanation": "The APA Ethics Code Standard 6.07 prohibits psychologists from paying, receiving payment, or splitting fees based solely on referrals. This rule exists to ensure that referral decisions are based on client welfare rather than financial incentives. Option A is wrong because disclosure does not make fee splitting ethical. Option B is wrong because no amount makes referral-based compensation acceptable. Option D is wrong because client consent does not override this prohibition.",
+      "kn": "KN8",
+      "kn_explanation": "This question addresses ethical standards regarding fee arrangements under Standard 6, which falls within the Ethical/Legal/Professional Issues domain.",
+      "difficulty": "medium",
+      "quality_comment": "Solid question testing fee-splitting rules. The lesson content on Standard 6 was",
+      "suggestedLesson": "8-standards-5-6",
+      "suggestedParagraph": "## Standard 6: Record Keeping and Fees",
+      "lessonExcerpt": "Standard 6.07 states that referral fees must be \"based on the services provided\" and not \"on the referral itself.\"",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 1
+    },
+    {
+      "stem": "Dr. Nguyen recently opened a private practice and wants to build an online presence. She asks several current therapy clients if they would be willing to write positive reviews on Google. According to APA Ethics Code Standard 5.05, this practice is:",
+      "options": [
+        "Acceptable as long as clients are not compensated for their reviews",
+        "Acceptable as long as clients provide written consent to write the review",
+        "Prohibited because psychologists may not solicit testimonials from current therapy clients",
+        "Acceptable as long as clients are informed that their participation is voluntary"
+      ],
+      "answer": "Prohibited because psychologists may not solicit testimonials from current therapy clients",
+      "explanation": "Standard 5.05 explicitly prohibits soliciting testimonials from current therapy clients or other persons who are vulnerable to undue influence. The therapeutic relationship inherently involves a power imbalance that makes genuine voluntary consent questionable. Option A is incorrect because the prohibition is not about compensation \u2014 it is about the inherent power imbalance in the therapeutic relationship. Option B is incorrect because written consent does not overcome the fundamental problem of the power differential. Option D is incorrect because even informing clients of voluntariness does not eliminate the coercive dynamics inherent in the therapist-client relationship.",
+      "kn": "KN8",
+      "kn_explanation": "This question directly addresses Standard 5.05 on testimonials from current clients, a topic in Domain 8: Ethical, Legal & Professional Issues.",
+      "difficulty": "easy",
+      "quality_comment": "Well-grounded in lesson content with a clear direct quote. Strong distractors that test understanding of WHY testimonials are prohibited.",
+      "suggestedLesson": "8-standards-5-6",
+      "suggestedParagraph": "### The Testimonial Problem",
+      "lessonExcerpt": "Standard 5.05 prohibits soliciting testimonials from current therapy clients or other vulnerable individuals. This one's straightforward but important: don't ask your current clients for reviews or testimonials. Why? Because the therapeutic relationship involves a power imbalance. Clients might feel pressured to provide positive feedback even if that's not their genuine experience.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 15
+    },
+    {
+      "stem": "Dr. Reeves is completing her doctoral dissertation and plans to begin seeing clients under supervision. She creates a website that lists her name followed by 'Doctoral Candidate in Clinical Psychology' and includes her fee schedule. According to APA ethical standards on advertising, this practice is:",
+      "options": [
+        "Prohibited because doctoral candidates cannot advertise services or list fees",
+        "Acceptable as long as her credentials are accurately represented and she discloses her supervised status",
+        "Prohibited because only licensed psychologists may advertise fee schedules",
+        "Acceptable because she is accurately describing her degree status without claiming licensure"
+      ],
+      "answer": "Acceptable as long as her credentials are accurately represented and she discloses her supervised status",
+      "explanation": "Standard 5.01 requires that all public statements about professional activities be accurate and not deceptive. A doctoral candidate may advertise services and fees as long as she accurately represents her status (not claiming to be licensed), discloses that she is working under supervision, and does not misrepresent her credentials. Option A is incorrect because there is no blanket prohibition against doctoral candidates advertising supervised services. Option C is incorrect because non-licensed practitioners working under supervision may advertise fees; the key requirement is accurate representation. Option D, while partially correct about accurate description, is incomplete because it omits the critical requirement to disclose supervised status.",
+      "kn": "KN8",
+      "kn_explanation": "This question addresses Standard 5.01 on accurate advertising and credential representation, within Domain 8.",
+      "difficulty": "medium",
+      "quality_comment": "Good practical question testing advertising standards for pre-licensure professionals. Well-supported by lesson content on Standard 5.01.",
+      "suggestedLesson": "8-standards-5-6",
+      "suggestedParagraph": "### The Core Principle: Truth in All Forms",
+      "lessonExcerpt": "Standard 5.01 establishes the foundation: psychologists cannot knowingly make false, deceptive, or fraudulent public statements about their work. This applies to everything. Your website, your LinkedIn profile, what you say in a lecture, your resume, even your listing in a directory.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 17
+    },
+    {
+      "stem": "A graduate student who earned a master's degree in counseling psychology from a prestigious international university that is not regionally accredited in the United States wants to advertise mental health services using that degree as a credential. According to Standard 5.01 of the APA Ethics Code, under which circumstance would this be permissible?",
+      "options": [
+        "If the student can demonstrate the program was equivalent in rigor to a U.S. program",
+        "If the degree was accepted by the state licensing board as the basis for a psychology license",
+        "If the student completes an additional year of supervised practice in the United States",
+        "If the international university holds accreditation from an internationally recognized body"
+      ],
+      "answer": "If the degree was accepted by the state licensing board as the basis for a psychology license",
+      "explanation": "Standard 5.01 specifies that acceptable degree credentials for mental health services are either doctoral degrees from regionally accredited institutions OR degrees that the state licensing board accepted as the basis for licensure. Option A is incorrect because demonstrated equivalence alone is insufficient without licensing board acceptance. Option C is incorrect because additional supervised practice does not change the credential status of the degree itself. Option D is incorrect because international accreditation is not one of the two recognized pathways.",
+      "kn": "KN8",
+      "kn_explanation": "This question addresses Standard 5.01 regarding advertising and professional credentials, which falls under Ethical, Legal & Professional Issues (Domain 8).",
+      "difficulty": "hard",
+      "quality_comment": "Tests a specific and frequently examined rule about degree credentials. The international degree scenario is a realistic edge case.",
+      "suggestedLesson": "8-standards-5-6",
+      "suggestedParagraph": "### The Core Principle: Truth in All Forms",
+      "lessonExcerpt": "According to Standard 5.01, acceptable degrees are either: 1. Doctoral degrees in psychology from regionally accredited institutions, OR 2. Degrees (from any institution) that your state licensing board accepted as the basis for your psychology license",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 22
+    },
+    {
+      "stem": "Dr. Huang is considering offering a free initial therapy session to prospective clients as a way to attract new business. According to APA Ethics Code Standard 5.06, which of the following considerations is MOST relevant to the ethical permissibility of this practice?",
+      "options": [
+        "Free initial sessions are prohibited because they constitute uninvited in-person solicitation of vulnerable individuals",
+        "Free initial sessions are acceptable only if they are limited to 15 minutes or less",
+        "The ethical concern is whether the offer targets individuals who are vulnerable to undue influence due to their particular circumstances",
+        "Free initial sessions are always acceptable because they allow clients to make informed decisions about treatment"
+      ],
+      "answer": "The ethical concern is whether the offer targets individuals who are vulnerable to undue influence due to their particular circumstances",
+      "explanation": "Standard 5.06 addresses uninvited in-person solicitation of business from people who are vulnerable to undue influence due to their particular circumstances. The key ethical issue with free sessions is whether the offer targets individuals who are in vulnerable states. Option A is overly broad\u2014not all free sessions constitute prohibited solicitation. Option B invents a time limit that does not exist in the Ethics Code. Option D ignores the vulnerability concern entirely and incorrectly claims universal acceptability.",
+      "kn": "KN8",
+      "kn_explanation": "This question addresses Standard 5.06 regarding solicitation of vulnerable individuals, which falls under Domain 8 Ethical, Legal & Professional Issues.",
+      "difficulty": "hard",
+      "quality_comment": "Tests nuanced understanding of solicitation ethics. The question requires distinguishing between general marketing and targeting vulnerable populations.",
+      "suggestedLesson": "8-standards-5-6",
+      "suggestedParagraph": "### In-Person Solicitation",
+      "lessonExcerpt": "Standard 5.06 addresses uninvited in-person solicitation of business from vulnerable",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 25
+    },
+    {
+      "stem": "A psychologist in private practice submits insurance claims electronically and wants to ensure compliance with ethical standards for protecting client confidentiality during billing transmissions. Which of the following practices BEST addresses this obligation?",
+      "options": [
+        "Including only the client's first name and diagnosis code in electronic transmissions",
+        "Sending billing information only through encrypted electronic systems and limiting transmitted information to the minimum necessary for reimbursement",
+        "Requiring clients to submit their own insurance claims to eliminate the psychologist's liability",
+        "Avoiding electronic billing entirely and using only paper claims sent through certified mail"
+      ],
+      "answer": "Sending billing information only through encrypted electronic systems and limiting transmitted information to the minimum necessary for reimbursement",
+      "explanation": "Ethical standards require psychologists to take reasonable precautions to protect confidential information in electronic transmissions, which includes using encryption and limiting disclosed information to only what is necessary. Option A is insufficient because using only a first name does not constitute adequate protection and diagnosis codes still constitute protected information. Option C incorrectly attempts to shift the psychologist's ethical responsibility to the client. Option D is impractical and not required by the Ethics Code, which recognizes electronic communication as acceptable when proper safeguards are in place.",
+      "kn": "KN8",
+      "kn_explanation": "This question addresses confidentiality protections in electronic record transmission under Standard 4 and Standard 6, falling within Domain 8.",
+      "difficulty": "medium",
+      "quality_comment": "Practical question testing application of confidentiality principles to modern billing practices. Distractors represent common misconceptions.",
+      "suggestedLesson": "8-standards-5-6",
+      "suggestedParagraph": "## Standard 6: Record Keeping and Fees",
+      "lessonExcerpt": "",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 26
     }
   ]
 }

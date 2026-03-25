@@ -9,7 +9,7 @@
         "The false consensus effect, in which she overestimates how many others would make the same choice"
       ],
       "answer": "Post-decisional dissonance reduction, in which she spreads apart the alternatives to justify her choice",
-      "explanation": "Cognitive dissonance theory predicts that after choosing between two equally attractive alternatives (an approach-approach conflict), the decision-maker experiences post-decisional dissonance. To reduce this discomfort, she 'spreads apart the alternatives'—enhancing the perceived value of the chosen option and devaluing the rejected option. This is consistent with Festinger's theory that when behavior contradicts or creates tension with attitudes, people adjust their attitudes to restore consistency. Self-perception theory (A) applies when initial attitudes are weak or ambiguous, not when someone is actively rationalizing a difficult decision. The overjustification effect (B) involves external rewards undermining intrinsic motivation, which is irrelevant here. The false consensus effect (D) involves overestimating agreement from others, not changing one's own evaluations.",
+      "explanation": "Cognitive dissonance theory predicts that after choosing between two equally attractive alternatives (an approach-approach conflict), the decision-maker experiences post-decisional dissonance. To reduce this discomfort, she 'spreads apart the alternatives'\u2014enhancing the perceived value of the chosen option and devaluing the rejected option. This is consistent with Festinger's theory that when behavior contradicts or creates tension with attitudes, people adjust their attitudes to restore consistency. Self-perception theory (A) applies when initial attitudes are weak or ambiguous, not when someone is actively rationalizing a difficult decision. The overjustification effect (B) involves external rewards undermining intrinsic motivation, which is irrelevant here. The false consensus effect (D) involves overestimating agreement from others, not changing one's own evaluations.",
       "kn": "KN14",
       "kn_explanation": "This describes cognitive dissonance following a decision (post-decisional dissonance), which falls under social cognition theories and models.",
       "difficulty": "hard",
@@ -122,7 +122,7 @@
       "suggestedLesson": "3-attitudes",
       "suggestedParagraph": "## Why Attitudes Matter More Than You Think",
       "lessonExcerpt": "The lesson does not explicitly cover emic vs. etic approaches.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
       "inspirationIndex": 21
     },
@@ -167,6 +167,48 @@
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
       "inspirationIndex": 11
+    },
+    {
+      "stem": "A community health program aims to increase cervical cancer screening rates among women who already believe the procedure is effective but nonetheless fail to schedule appointments. According to the Theory of Planned Behavior, which intervention MOST directly targets the subjective norm component in order to strengthen behavioral intention?",
+      "options": [
+        "Distributing pamphlets with vivid statistics about cervical cancer incidence and mortality to increase perceived susceptibility",
+        "Providing transportation vouchers and extended clinic hours to eliminate logistical barriers to scheduling",
+        "Disseminating messages emphasizing that physicians, family members, and community leaders strongly encourage regular screening",
+        "Offering guided practice in navigating the online scheduling system to build procedural self-efficacy"
+      ],
+      "answer": "Disseminating messages emphasizing that physicians, family members, and community leaders strongly encourage regular screening",
+      "explanation": "Subjective norms in the Theory of Planned Behavior reflect what a person believes important referent others think she should do. An intervention communicating that trusted social figures (physicians, family, community leaders) endorse the behavior directly strengthens this component and, through it, behavioral intention. Option A targets perceived severity, a component from the Health Belief Model rather than subjective norms. Option B addresses perceived behavioral control by removing structural barriers. Option D also targets perceived behavioral control by building confidence in one's ability to perform the scheduling behavior. All three TPB components contribute to intention, but only Option C specifically addresses subjective norms.",
+      "kn": "KN3",
+      "kn_explanation": "The Theory of Planned Behavior is a core social psychological model of health behavior change, situated within Domain 3: Social and Multicultural Bases of Behavior.",
+      "difficulty": "medium",
+      "quality_comment": "Well-anchored in lesson content; distractors each map to a distinct competing construct, making this an effective test of TPB component differentiation.",
+      "suggestedLesson": "3-attitudes",
+      "suggestedParagraph": "## Three Models for Predicting Behavior from Attitudes",
+      "lessonExcerpt": "Subjective norms | What you believe others think you should do | 'My family and doctor think I should quit' ... All three need to align for strong behavioral intention. It's like needing three keys to open a vault.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 2
+    },
+    {
+      "stem": "A predoctoral intern receives two equally attractive internship offers \u2014 one at a prestigious clinical training site and one at a highly regarded research-focused site. After accepting the clinical position, the intern tells a colleague one week later: 'The more I think about it, the more I realize the research site would have been too narrow for my long-term goals \u2014 clinical training is clearly the stronger choice.' According to cognitive dissonance theory, this post-decisional reevaluation is BEST explained by:",
+      "options": [
+        "Rationalization as a defense mechanism, in which unconscious conflict is managed through logically coherent but post-hoc justifications",
+        "Confirmatory hypothesis testing driven by the self-verification motive to maintain a stable professional identity",
+        "Spreading of alternatives following an approach-approach conflict, in which the chosen option is re-evaluated more positively and the rejected option more negatively to reduce post-decisional dissonance",
+        "Attitude bolstering through an alpha persuasion strategy applied to the intern's own prior decision"
+      ],
+      "answer": "Spreading of alternatives following an approach-approach conflict, in which the chosen option is re-evaluated more positively and the rejected option more negatively to reduce post-decisional dissonance",
+      "explanation": "When two comparably attractive options compete (approach-approach conflict) and a choice must be made, the resulting cognitive dissonance \u2014 having forgone the unchosen option's benefits \u2014 is typically reduced through 'spreading of alternatives': the chosen option is re-evaluated upward and the unchosen option is re-evaluated downward, increasing the psychological distance between them post-decision. The intern's retrospective criticism of the rejected site ('too narrow') illustrates the downward re-evaluation component. Rationalization as a defense mechanism implies unconscious processing \u2014 spreading of alternatives is a conscious cognitive re-evaluation process within dissonance theory. Self-verification theory (Swann) describes actively seeking feedback consistent with the existing self-concept, which is not what is occurring here. Attitude bolstering is an alpha persuasion strategy aimed at strengthening one's own attitude against anticipated counterarguments from others \u2014 it is a persuasion concept, not a post-decisional dissonance reduction mechanism.",
+      "kn": "KN3",
+      "kn_explanation": "This question assesses cognitive dissonance theory within the Social and Multicultural Bases of Behavior domain, specifically post-decisional dissonance reduction through spreading of alternatives following an approach-approach conflict.",
+      "difficulty": "hard",
+      "quality_comment": "Sophisticated question requiring integration of approach-approach conflict, post-decisional dissonance, and spreading of alternatives; distractors require precision in distinguishing cognitive dissonance reduction from defense mechanisms, self-verification, and persuasion constructs.",
+      "suggestedLesson": "3-attitudes",
+      "suggestedParagraph": "When Do Attitudes Actually Predict Behavior?",
+      "lessonExcerpt": "Understanding attitudes and how they change isn't just academic trivia. It's essential for predicting human behavior, creating effective health campaigns, understanding why therapy clients struggle to change, and recognizing your own patterns of behavior change.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 20
     }
   ]
 }

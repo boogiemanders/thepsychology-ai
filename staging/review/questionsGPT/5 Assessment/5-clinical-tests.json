@@ -80,7 +80,7 @@
       "suggestedLesson": "5-clinical-tests",
       "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
       "lessonExcerpt": "The lesson does not specifically address behavior observation methods, indicating a need for review.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 12
     },
@@ -101,7 +101,7 @@
       "suggestedLesson": "5-clinical-tests",
       "suggestedParagraph": "## Why Clinical Tests Matter for Your EPPP Success",
       "lessonExcerpt": "The lesson does not specifically cover bipolar I disorder criteria, indicating a need for review.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 13
     },
@@ -122,7 +122,7 @@
       "suggestedLesson": "5-clinical-tests",
       "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
       "lessonExcerpt": "The lesson does not specifically address Tourette's disorder comorbidities, indicating a need for review.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 14
     },
@@ -143,7 +143,7 @@
       "suggestedLesson": "5-clinical-tests",
       "suggestedParagraph": "## Why Clinical Tests Matter for Your EPPP Success",
       "lessonExcerpt": "The lesson does not specifically cover gender differences in major depressive disorder, indicating a need for review.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 15
     },
@@ -164,7 +164,7 @@
       "suggestedLesson": "5-clinical-tests",
       "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
       "lessonExcerpt": "The lesson does not specifically address optimizing incremental validity, indicating a need for review.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 16
     },
@@ -185,7 +185,7 @@
       "suggestedLesson": "5-clinical-tests",
       "suggestedParagraph": "## Why Clinical Tests Matter for Your EPPP Success",
       "lessonExcerpt": "The lesson does not specifically cover diagnostic overshadowing, indicating a need for review.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 17
     },
@@ -206,7 +206,7 @@
       "suggestedLesson": "5-clinical-tests",
       "suggestedParagraph": "## Why Clinical Tests Matter for Your EPPP Success",
       "lessonExcerpt": "The lesson does not specifically cover OCD prevalence in girls, indicating a need for review.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 19
     },
@@ -227,7 +227,7 @@
       "suggestedLesson": "5-clinical-tests",
       "suggestedParagraph": "## Why Clinical Tests Matter for Your EPPP Success",
       "lessonExcerpt": "The lesson does not specifically cover the halo effect in performance ratings, indicating a need for review.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 20
     },
@@ -1025,7 +1025,7 @@
       "suggestedLesson": "5-clinical-tests",
       "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
       "lessonExcerpt": "The lesson does not specifically cover communication issues in children related to hearing problems.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 21
     },
@@ -1046,7 +1046,7 @@
       "suggestedLesson": "5-clinical-tests",
       "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
       "lessonExcerpt": "The lesson does not specifically cover Taylor-Russell tables.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 23
     },
@@ -1067,7 +1067,7 @@
       "suggestedLesson": "5-clinical-tests",
       "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
       "lessonExcerpt": "The lesson does not specifically cover the purpose of trainability tests.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 25
     },
@@ -1088,7 +1088,7 @@
       "suggestedLesson": "5-clinical-tests",
       "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
       "lessonExcerpt": "The lesson does not specifically cover banding in personnel selection methods.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 26
     },
@@ -1109,7 +1109,7 @@
       "suggestedLesson": "5-clinical-tests",
       "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
       "lessonExcerpt": "The lesson does not specifically cover the multitrait-multimethod matrix.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 28
     },
@@ -1214,7 +1214,7 @@
       "suggestedLesson": "5-clinical-tests",
       "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
       "lessonExcerpt": "The lesson does not explicitly cover false alarms in signal detection theory.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 11
     },
@@ -1235,7 +1235,7 @@
       "suggestedLesson": "5-clinical-tests",
       "suggestedParagraph": "## Why Clinical Tests Matter for Your EPPP Success",
       "lessonExcerpt": "The lesson does not specifically mention common measures of operant behavior.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 12
     },
@@ -1256,7 +1256,7 @@
       "suggestedLesson": "5-clinical-tests",
       "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
       "lessonExcerpt": "The lesson does not adequately cover predictive validity of infant development tests.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 13
     },
@@ -1277,7 +1277,7 @@
       "suggestedLesson": "5-clinical-tests",
       "suggestedParagraph": "## Why Clinical Tests Matter for Your EPPP Success",
       "lessonExcerpt": "The lesson does not specifically address the outcomes of remission of night terrors.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 14
     },
@@ -1298,7 +1298,7 @@
       "suggestedLesson": "5-clinical-tests",
       "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
       "lessonExcerpt": "The lesson does not adequately cover the effects of test difficulty on true and false positives.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 15
     },
@@ -1319,7 +1319,7 @@
       "suggestedLesson": "5-clinical-tests",
       "suggestedParagraph": "## Why Clinical Tests Matter for Your EPPP Success",
       "lessonExcerpt": "The lesson does not adequately cover selective mutism as a disorder.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 18
     },
@@ -1340,7 +1340,7 @@
       "suggestedLesson": "5-clinical-tests",
       "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
       "lessonExcerpt": "The lesson does not adequately cover criterion contamination in validity assessment.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 19
     },
@@ -1361,7 +1361,7 @@
       "suggestedLesson": "5-clinical-tests",
       "suggestedParagraph": "## Why Clinical Tests Matter for Your EPPP Success",
       "lessonExcerpt": "The lesson does not adequately cover the diagnosis of childhood stuttering.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 20
     },
@@ -1532,6 +1532,216 @@
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 30
+    },
+    {
+      "stem": "A 7-year-old boy is hospitalized repeatedly over 14 months with unexplained seizures, vomiting, and lethargy. Extensive neurological and laboratory workups are consistently negative. Hospital staff observe that symptoms arise exclusively when the child's mother is present and resolve when she leaves. Video surveillance confirms the mother administering an unknown substance to the child. Under DSM-5, which of the following best describes the correct diagnosis and its assignment?",
+      "options": [
+        "Somatic symptom disorder, assigned to the child because he is the one experiencing physical symptoms",
+        "Factitious disorder imposed on another, assigned to the mother as the perpetrating caregiver",
+        "Malingering, assigned to the mother because she is deceiving medical staff for secondary gain",
+        "Illness anxiety disorder, assigned to the mother because she is excessively preoccupied with her child's health"
+      ],
+      "answer": "Factitious disorder imposed on another, assigned to the mother as the perpetrating caregiver",
+      "explanation": "In factitious disorder imposed on another (FDIA, formerly Munchausen syndrome by proxy), the DSM-5 assigns the diagnosis to the perpetrating caregiver, not the victim. The caregiver falsifies or induces physical or psychological signs and symptoms in another person under their care, without external incentives. Somatic symptom disorder would be assigned to the person experiencing symptoms who genuinely believes they are ill. Malingering involves external incentives such as financial reward or avoidance of legal responsibility, which are absent here. Illness anxiety disorder involves preoccupation with having or acquiring a disease, not the deliberate induction of illness in another. The critical distinguishing feature of FDIA is intentional deception directed at medical providers through a dependent victim.",
+      "kn": "KN5",
+      "kn_explanation": "Differential diagnosis of factitious disorder imposed on another versus somatic, malingering, and anxiety-based diagnoses is a core Assessment and Diagnosis competency on the EPPP.",
+      "difficulty": "medium",
+      "quality_comment": "Vignette clearly operationalizes the diagnostic criteria; tests the commonly missed rule that the diagnosis is assigned to the perpetrator, not the victim.",
+      "suggestedLesson": "5-clinical-tests",
+      "suggestedParagraph": "## Why Clinical Tests Matter for Your EPPP Success",
+      "lessonExcerpt": "",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 1
+    },
+    {
+      "stem": "A 44-year-old male presents to a cardiologist for the fifth time in eight months complaining of crushing chest pain, left arm numbness, diaphoresis, and an overwhelming sense that he is about to die. Each episode lasts approximately 10\u201315 minutes and then resolves completely. Electrocardiograms, echocardiography, and a cardiac stress test are all normal. He is referred for psychological evaluation. Which diagnosis should be ranked highest in the differential?",
+      "options": [
+        "Somatic symptom disorder, because he has persistent, medically unexplained physical symptoms accompanied by excessive health-related worry",
+        "Panic disorder, because the discrete, time-limited episodes include multiple cardinal panic attack symptoms with no identified medical etiology",
+        "Illness anxiety disorder, because he is preoccupied with having a serious cardiac illness despite normal medical findings",
+        "Conversion disorder (functional neurological symptom disorder), because the arm numbness represents a neurological symptom without a structural cause"
+      ],
+      "answer": "Panic disorder, because the discrete, time-limited episodes include multiple cardinal panic attack symptoms with no identified medical etiology",
+      "explanation": "The presentation describes recurrent discrete episodes of abrupt-onset chest pain, paresthesia, diaphoresis, and fear of dying\u2014symptoms that are among the 13 DSM-5 panic attack criteria\u2014each lasting approximately 10\u201315 minutes and resolving spontaneously, with a recurrence pattern over months and negative cardiac workup. This fits panic disorder's definition of recurrent unexpected panic attacks with persistent concern about additional attacks. Somatic symptom disorder requires persistent physical symptoms (typically present for more than 6 months) accompanied by disproportionate thoughts, feelings, or behaviors about those symptoms, but does not capture the discrete episodic onset and offset characteristic of panic. Illness anxiety disorder centers on preoccupation with having or acquiring illness with few or no somatic symptoms, not acute physical symptom episodes. Conversion disorder involves neurological symptoms (e.g., pseudoseizures, paralysis) that are clearly functional; paresthesia can occur in conversion but the dominant presentation here (chest pain, diaphoresis, fear of death in episodes) is more parsimoniously explained by panic.",
+      "kn": "KN5",
+      "kn_explanation": "Differential diagnosis of medically unexplained physical symptoms\u2014distinguishing panic disorder from somatic symptom disorder, illness anxiety, and conversion disorder\u2014is a core Assessment and Diagnosis competency on the EPPP.",
+      "difficulty": "medium",
+      "quality_comment": "Classic EPPP presentation; the cardiac context is realistic and the episode profile clearly operationalizes panic attack criteria.",
+      "suggestedLesson": "5-clinical-tests",
+      "suggestedParagraph": "## Why Clinical Tests Matter for Your EPPP Success",
+      "lessonExcerpt": "",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 9
+    },
+    {
+      "stem": "A psychiatry resident asks a consulting psychologist about the heritability of bipolar I disorder, noting that twin studies offer the clearest evidence of genetic contribution. Which of the following most accurately characterizes the monozygotic (MZ) twin concordance rate for bipolar I disorder and the appropriate interpretation of this finding?",
+      "options": [
+        "MZ concordance is approximately 5\u201315%, suggesting genetics plays a minimal role and environmental factors predominate",
+        "MZ concordance is approximately 20\u201325%, roughly equivalent to dizygotic (DZ) twin rates, indicating primarily shared environmental influence",
+        "MZ concordance is approximately 40\u201370%, substantially higher than DZ rates, indicating a significant but incomplete genetic contribution",
+        "MZ concordance approaches 95\u2013100%, indicating that bipolar I disorder is almost entirely genetically determined with negligible environmental input"
+      ],
+      "answer": "MZ concordance is approximately 40\u201370%, substantially higher than DZ rates, indicating a significant but incomplete genetic contribution",
+      "explanation": "Twin studies consistently show MZ concordance rates for bipolar I disorder in the range of approximately 40\u201370%, compared to DZ twin rates of approximately 5\u201315%. The substantially higher MZ rate (compared to DZ) confirms a strong genetic contribution, while the fact that concordance falls well below 100% demonstrates that environmental factors also play a meaningful etiological role. A 5\u201315% rate would imply minimal heritability, contradicting the research literature. Nearly identical MZ and DZ rates would suggest that shared environment rather than genetics drives familial aggregation. Near-perfect MZ concordance would imply a purely genetic etiology, which the evidence does not support.",
+      "kn": "KN5",
+      "kn_explanation": "Understanding twin concordance rates for major mood disorders is essential for differential diagnosis, psychoeducation, and risk assessment in the Assessment and Diagnosis domain.",
+      "difficulty": "hard",
+      "quality_comment": "Well-constructed question requiring both factual knowledge and conceptual interpretation of twin study logic; distractors span the plausible range of concordance values and test understanding of what each rate implies.",
+      "suggestedLesson": "5-clinical-tests",
+      "suggestedParagraph": "## Mood Disorders: Heritability",
+      "lessonExcerpt": "Not found in provided lesson content. Needs review.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 14
+    },
+    {
+      "stem": "A clinician conducting a differential diagnosis notes that a patient holds bizarre delusions\u2014beliefs that are clearly implausible and outside ordinary human experience (e.g., believing that interdimensional beings have physically replaced his organs without leaving scars). According to DSM-5 criteria, which of the following conditions specifically EXCLUDES bizarre delusions as part of its defining diagnostic requirements?",
+      "options": [
+        "Schizophrenia",
+        "Brief psychotic disorder",
+        "Delusional disorder",
+        "Schizoaffective disorder"
+      ],
+      "answer": "Delusional disorder",
+      "explanation": "By DSM-5 definition, delusional disorder requires that the delusions be non-bizarre\u2014that is, they must involve situations that could plausibly occur in real life (e.g., being followed, being poisoned, having a disease, being deceived by a partner). Bizarre delusions, which are implausible by any ordinary real-world standard, rule out the diagnosis of delusional disorder. In contrast, schizophrenia, brief psychotic disorder, and schizoaffective disorder may all include bizarre delusions; notably, in schizophrenia, a single bizarre delusion alone can satisfy Criterion A even in the absence of other psychotic symptoms. This distinction between bizarre and non-bizarre delusions is a high-yield differential diagnosis point on the EPPP.",
+      "kn": "KN5",
+      "kn_explanation": "Differential diagnosis of psychotic disorders based on the nature of delusional content is a central Assessment and Diagnosis competency requiring precise knowledge of DSM-5 criteria.",
+      "difficulty": "hard",
+      "quality_comment": "Excellent targeted differential diagnosis question; the clinical vignette grounds the concept, and the four options cover the most commonly confused psychotic disorder categories.",
+      "suggestedLesson": "5-clinical-tests",
+      "suggestedParagraph": "## Psychotic Disorder Differential Diagnosis",
+      "lessonExcerpt": "Not found in provided lesson content. Needs review.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 15
+    },
+    {
+      "stem": "A researcher reviewing epidemiological literature on obsessive-compulsive disorder (OCD) notices a distinctive pattern in how sex differences in prevalence change across development. Which of the following most accurately characterizes the relationship between sex and OCD prevalence from childhood through adulthood?",
+      "options": [
+        "OCD is more prevalent in females across both childhood and adult populations, with the disparity most pronounced during adolescence",
+        "OCD shows male predominance in childhood, but the sex difference diminishes and becomes roughly equal by adulthood",
+        "OCD prevalence is essentially equal across sex at all developmental stages, with no consistent pattern across studies",
+        "OCD shows female predominance in childhood and then shifts to male predominance by middle adulthood"
+      ],
+      "answer": "OCD shows male predominance in childhood, but the sex difference diminishes and becomes roughly equal by adulthood",
+      "explanation": "Epidemiological research consistently finds that childhood and adolescent OCD has a male predominance, with boys being diagnosed at higher rates and at younger ages than girls. By adulthood, this sex difference largely disappears, and adult OCD prevalence approximates equality between men and women (with some community samples showing a slight female preponderance). This developmental shift distinguishes OCD from disorders like major depressive disorder and generalized anxiety disorder, which show female predominance across all age groups, and is an important EPPP epidemiological fact. Option A is incorrect because the childhood male predominance is well established. Option C is incorrect because the childhood male predominance is a reliable cross-study finding. Option D reverses the actual developmental pattern.",
+      "kn": "KN5",
+      "kn_explanation": "OCD epidemiology, including how sex differences in prevalence vary across the developmental span, is a core Assessment and Diagnosis competency relevant to differential diagnosis and clinical decision-making.",
+      "difficulty": "medium",
+      "quality_comment": "Well-crafted epidemiological question targeting a specific, commonly tested developmental pattern; the reversal distractor (Option D) effectively traps candidates who know a sex difference exists but are uncertain about the direction.",
+      "suggestedLesson": "5-clinical-tests",
+      "suggestedParagraph": "## OCD Epidemiology",
+      "lessonExcerpt": "Not found in provided lesson content. Needs review.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 20
+    },
+    {
+      "stem": "A 7-year-old child assigned female at birth has, for the past 8 months, strongly insisted on being called by a male name, expressed a persistent desire to be a boy, preferred rough-and-tumble play exclusively with male peers, and refused to wear feminine clothing. The child's parents report significant distress at school, including refusal to use the girls' restroom and daily crying before school. According to DSM-5, which of the following is required in addition to the specified incongruence criteria to diagnose Gender Dysphoria in Children?",
+      "options": [
+        "Clinically significant distress or impairment in social, school, or other important areas of functioning",
+        "Documented biological evidence of a sex chromosome variation or hormonal atypicality",
+        "Onset of gender incongruence symptoms prior to age 5",
+        "Presence of co-occurring separation anxiety disorder or oppositional defiant disorder"
+      ],
+      "answer": "Clinically significant distress or impairment in social, school, or other important areas of functioning",
+      "explanation": "DSM-5 Gender Dysphoria in Children requires two criteria: Criterion A, a marked incongruence between experienced/expressed gender and assigned gender manifested by at least 6 of 8 specified indicators lasting at least 6 months, AND Criterion B, clinically significant distress or impairment. The distress/impairment criterion (Criterion B) is essential because it distinguishes Gender Dysphoria from gender nonconformity that does not cause distress. The 8-month duration in this vignette satisfies the minimum 6-month threshold. Option B is incorrect because biological sex variations are not required; they may be noted as a specifier if present. Option C is incorrect because DSM-5 imposes no age-of-onset requirement before age 5. Option D is incorrect because comorbid diagnoses are not required for the Gender Dysphoria diagnosis.",
+      "kn": "KN5",
+      "kn_explanation": "This question addresses DSM-5 diagnostic criteria for Gender Dysphoria in Children, which falls under Assessment Domain 5 (Assessment and Diagnosis). Accurate knowledge of DSM-5 diagnostic criteria, including required and specifier criteria, is a core Assessment competency on the EPPP.",
+      "difficulty": "hard",
+      "quality_comment": "Well-grounded in DSM-5 diagnostic criteria. Vignette-based format appropriate for doctoral-level difficulty. Distractors are plausible misconceptions about the diagnosis.",
+      "suggestedLesson": "5-clinical-tests",
+      "suggestedParagraph": "## Clinical Diagnosis and DSM-5 Classification",
+      "lessonExcerpt": "NOT COVERED: The provided lesson files (5-career-interests, 5-clinical-tests, 5-cognitive-tests, 5-iq-tests, 5-mmpi, 5-personality-tests) do not contain content on Gender Dysphoria diagnosis. A dedicated lesson on DSM-5 neurodevelopmental and gender-related diagnoses is needed.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 21
+    },
+    {
+      "stem": "A 5-year-old child recently placed with foster parents after removal from a severely neglectful home readily approaches unfamiliar adults at the park, climbs onto strangers' laps, and agrees to leave with people she has just met without hesitation or glancing back at her caregiver. She shows no stranger wariness and initiates physical contact indiscriminately. The foster parents report this behavior has been consistent across multiple settings since placement. According to DSM-5, which of the following etiological conditions must be present to diagnose Disinhibited Social Engagement Disorder (DSED)?",
+      "options": [
+        "A co-occurring diagnosis of Reactive Attachment Disorder established prior to the current placement",
+        "Documented traumatic exposure to domestic violence or abuse before age 3",
+        "A history of social neglect or other forms of pathogenic care reflecting insufficient caregiving",
+        "Evidence of neurological compromise affecting the orbitofrontal cortex or amygdala"
+      ],
+      "answer": "A history of social neglect or other forms of pathogenic care reflecting insufficient caregiving",
+      "explanation": "DSM-5 Criterion C for Disinhibited Social Engagement Disorder requires that the child experienced a pattern of extremes of insufficient care, which includes social neglect (persistent deprivation of basic emotional needs), repeated changes in primary caregivers, or rearing in settings that severely limit opportunities to form selective attachments (e.g., institutional care). This pathogenic care history is a necessary etiological criterion that distinguishes DSED from disinhibited behavior with other causes. Option A is incorrect; while DSED and RAD can co-occur, a prior RAD diagnosis is not required for DSED. Option B is incorrect; generalized traumatic exposure (e.g., domestic violence, abuse) is not specifically listed in DSM-5 Criterion C\u2014the pathogenic care must involve insufficient caregiving that limits attachment formation. Option D is incorrect; neurological compromise is considered in differential diagnosis but is not a diagnostic criterion for DSED.",
+      "kn": "KN5",
+      "kn_explanation": "DSED is classified under Trauma- and Stressor-Related Disorders in DSM-5 and requires knowledge of required etiological criteria, which is an Assessment and Diagnosis (KN5) competency tested on the EPPP.",
+      "difficulty": "hard",
+      "quality_comment": "High-quality vignette isolating the etiological criterion. Distractors probe common confusions between DSED/RAD and between different types of early adversity. Appropriate doctoral-level difficulty.",
+      "suggestedLesson": "5-clinical-tests",
+      "suggestedParagraph": "## DSM-5 Trauma- and Stressor-Related Disorders",
+      "lessonExcerpt": "NOT COVERED: The provided lesson files do not address Disinhibited Social Engagement Disorder or Reactive Attachment Disorder. A lesson on DSM-5 trauma- and stressor-related disorders diagnoses is needed for this content.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 23
+    },
+    {
+      "stem": "A 32-year-old adult presents for neuropsychological evaluation requesting clarification of a diagnosis. Records show a DSM-IV-TR diagnosis of Asperger's Disorder made in 2009, documented by deficits in social reciprocity and restricted interests in the absence of clinically significant language or intellectual delays. The evaluating psychologist explains that DSM-5 eliminated Asperger's Disorder as a separate diagnostic category. Which of the following best describes how individuals previously diagnosed with Asperger's Disorder should be classified under DSM-5?",
+      "options": [
+        "Social (Pragmatic) Communication Disorder, because preserved language ability excludes an autism spectrum diagnosis",
+        "Autism Spectrum Disorder with specifiers indicating absence of intellectual impairment and absence of language impairment",
+        "High-Functioning Autism Disorder, which is the DSM-5 replacement for the Asperger's Disorder category",
+        "Unspecified Neurodevelopmental Disorder, pending updated validity evidence for restructured autism criteria"
+      ],
+      "answer": "Autism Spectrum Disorder with specifiers indicating absence of intellectual impairment and absence of language impairment",
+      "explanation": "The DSM-5 collapsed the DSM-IV-TR pervasive developmental disorders (Autistic Disorder, Asperger's Disorder, Childhood Disintegrative Disorder, and PDD-NOS) into a single dimensional diagnosis: Autism Spectrum Disorder. Severity and associated features are communicated via specifiers rather than separate categories. An individual previously diagnosed with Asperger's Disorder\u2014who had preserved language and typical intellectual functioning\u2014would now receive ASD Level 1 with specifiers noting 'without accompanying intellectual impairment' and 'without accompanying language impairment.' Option A is incorrect; Social (Pragmatic) Communication Disorder (SCD) was created for individuals with social communication deficits who do NOT meet ASD criteria (i.e., no restricted/repetitive behaviors); prior Asperger's diagnoses typically included restricted interests qualifying for ASD. Option C is incorrect; 'High-Functioning Autism' is not an official DSM-5 diagnostic term. Option D is incorrect; 'Unspecified Neurodevelopmental Disorder' is used when there is insufficient information to specify a diagnosis, not as a reclassification of established diagnoses.",
+      "kn": "KN5",
+      "kn_explanation": "Knowledge of DSM-5 diagnostic classification changes, including the elimination of Asperger's Disorder and its integration into ASD with specifiers, is a core Assessment domain (KN5) competency for the EPPP.",
+      "difficulty": "medium",
+      "quality_comment": "Clinically realistic scenario. Tests precise knowledge of DSM-5 restructuring. The SCD distractor is particularly effective as a sophisticated misconception held by many clinicians.",
+      "suggestedLesson": "5-clinical-tests",
+      "suggestedParagraph": "## DSM-5 Neurodevelopmental Disorder Classification",
+      "lessonExcerpt": "NOT COVERED: The provided lesson files do not cover Autism Spectrum Disorder diagnosis or the DSM-IV to DSM-5 reclassification of Asperger's Disorder. A dedicated lesson on DSM-5 neurodevelopmental disorders is needed for this content. The file 5-clinical-tests.md does reference ASD in the context of WCST performance ('Poor performance connects to frontal lobe dysfunction and appears in autism spectrum disorder') but does not address diagnostic criteria or classification.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 24
+    },
+    {
+      "stem": "A client reports recurrent episodes of heart racing, chest tightness, trembling, and a fear of humiliating herself that last 8 to 12 minutes. Review of her history reveals these episodes occur exclusively when she must speak in front of groups, when she is introduced to new people at social gatherings, and when she believes others are observing her eating. She reports no episodes occurring while alone, during sleep, or without an identifiable social trigger. Which of the following most accurately explains why Panic Disorder is NOT the appropriate primary diagnosis?",
+      "options": [
+        "Her symptoms do not meet the full symptomatic threshold for a panic attack, so they cannot form the basis of any anxiety disorder diagnosis",
+        "Panic attacks in Social Anxiety Disorder produce physiological symptoms that are less severe than those required for Panic Disorder",
+        "Her panic attacks are situationally bound to social-evaluative contexts rather than unexpected and uncued, which is required for Panic Disorder",
+        "Panic Disorder requires a minimum of four panic attacks per month, whereas Social Anxiety Disorder has no such frequency requirement"
+      ],
+      "answer": "Her panic attacks are situationally bound to social-evaluative contexts rather than unexpected and uncued, which is required for Panic Disorder",
+      "explanation": "The defining feature of Panic Disorder is recurrent UNEXPECTED panic attacks\u2014those that arise without an apparent trigger or situational cue\u2014followed by persistent concern about additional attacks or maladaptive behavioral changes. In this vignette, all panic attacks are situationally bound to feared social-evaluative situations, which is characteristic of Social Anxiety Disorder (SAD). DSM-5 explicitly permits panic attacks as a specifier across multiple anxiety disorders; their presence does not automatically indicate Panic Disorder. Option A is incorrect; the client's symptoms (racing heart, chest tightness, trembling, fear) can constitute a full-criteria panic attack regardless of the trigger. Option B is incorrect; DSM-5 does not impose differential symptom severity thresholds between disorder types for panic attacks\u2014both can involve full-symptom panic attacks. Option D is incorrect; DSM-5 does not require a specific frequency of panic attacks (such as four per month) for a Panic Disorder diagnosis.",
+      "kn": "KN5",
+      "kn_explanation": "Differential diagnosis between Social Anxiety Disorder and Panic Disorder, including the role of expected versus unexpected panic attacks, is a core Assessment domain (KN5) competency for the EPPP. Clinicians must distinguish these diagnoses based on the situational or uncued nature of panic attacks.",
+      "difficulty": "hard",
+      "quality_comment": "Excellent differential diagnosis question. The clinical vignette is precisely constructed to highlight the expected/unexpected distinction. Distractors address common misconceptions about panic attack criteria and frequency thresholds.",
+      "suggestedLesson": "5-clinical-tests",
+      "suggestedParagraph": "## Anxiety Disorder Differential Diagnosis",
+      "lessonExcerpt": "NOT COVERED: The provided lesson files do not address anxiety disorder differential diagnosis or the distinction between situationally-bound panic attacks in Social Anxiety Disorder versus unexpected panic attacks in Panic Disorder. A clinical diagnosis lesson is needed for this content.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 25
+    },
+    {
+      "stem": "A longitudinal research team studying Type A behavior pattern and cardiovascular outcomes follows 1,500 middle-aged adults over 22 years. After controlling for traditional cardiovascular risk factors (blood pressure, cholesterol, smoking, BMI), the researchers conduct multivariate analyses to determine which specific Type A component independently predicts incident coronary artery disease. Based on the preponderance of psychophysiological research, which Type A component would most likely emerge as the significant independent predictor?",
+      "options": [
+        "Time urgency and chronic time pressure",
+        "Hostility and cynical mistrust of others",
+        "Achievement striving and competitive drive",
+        "Rapid speech rate and psychomotor agitation"
+      ],
+      "answer": "Hostility and cynical mistrust of others",
+      "explanation": "Research by Williams, Barefoot, Dembroski, and others decomposed the Type A behavior pattern and found that hostility\u2014specifically cynical hostility (distrustful, antagonistic interpersonal orientation and resentful reactivity to others)\u2014is the 'toxic component' most consistently associated with cardiovascular disease risk after controlling for other variables. Hostility is thought to produce heightened sympathetic nervous system reactivity, neuroendocrine dysregulation (elevated cortisol, catecholamines), and greater inflammatory response, all contributing to atherosclerosis. Options A, C, and D (time urgency, achievement striving, rapid speech/psychomotor agitation) have not shown consistent independent predictive validity for coronary artery disease in multivariate studies, and in some research, achievement striving has been associated with lower CVD risk. This finding has clinical implications for health psychology interventions targeting cardiac-prone individuals.",
+      "kn": "KN2",
+      "kn_explanation": "The relationship between Type A personality characteristics and cardiovascular disease falls within the Cognitive-Affective and Biological Bases of Behavior domains (KN2/KN1). The EPPP tests health psychology content including psychophysiological mechanisms linking personality to physical disease outcomes.",
+      "difficulty": "medium",
+      "quality_comment": "Tests a specific and frequently misunderstood nuance within Type A research. The distractors represent the other Type A components that examinees may incorrectly identify as the key predictor. Clinically relevant for health psychology practice.",
+      "suggestedLesson": "5-clinical-tests",
+      "suggestedParagraph": "## Health Psychology and Behavioral Medicine",
+      "lessonExcerpt": "NOT COVERED: The provided lesson files do not address Type A personality, hostility, or cardiovascular disease risk. This content belongs in a health psychology or behavioral medicine lesson, not the assessment files provided.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 26
     }
   ]
 }

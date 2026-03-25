@@ -9,14 +9,14 @@
         "The prefrontal cortex bilaterally"
       ],
       "answer": "Wernicke's area in the left temporal lobe",
-      "explanation": "Wernicke's aphasia (also called receptive or fluent aphasia) results from damage to Wernicke's area in the temporal lobe and is characterized by fluent but meaningless speech with poor comprehension and lack of awareness of deficits. Broca's aphasia produces the opposite pattern—slow, effortful, nonfluent speech with relatively intact comprehension. The angular gyrus is involved in reading and writing rather than speech fluency. Bilateral prefrontal damage would affect executive functions and personality but would not produce this specific pattern of fluent but incomprehensible speech.",
+      "explanation": "Wernicke's aphasia (also called receptive or fluent aphasia) results from damage to Wernicke's area in the temporal lobe and is characterized by fluent but meaningless speech with poor comprehension and lack of awareness of deficits. Broca's aphasia produces the opposite pattern\u2014slow, effortful, nonfluent speech with relatively intact comprehension. The angular gyrus is involved in reading and writing rather than speech fluency. Bilateral prefrontal damage would affect executive functions and personality but would not produce this specific pattern of fluent but incomprehensible speech.",
       "kn": "KN1",
-      "kn_explanation": "Neurobiological bases of behavior pertaining to perception and cognition — localizing speech/language deficits to brain regions (e.g., Wernicke's area) in a neurobehavioral disease process (stroke).",
+      "kn_explanation": "Neurobiological bases of behavior pertaining to perception and cognition \u2014 localizing speech/language deficits to brain regions (e.g., Wernicke's area) in a neurobehavioral disease process (stroke).",
       "difficulty": "medium",
-      "quality_comment": "The lesson clearly describes Broca's aphasia characteristics. Wernicke's area is mentioned in the cerebral cortex lesson under temporal lobe functions, though the detailed description of Wernicke's aphasia was in the truncated portion.",
+      "quality_comment": "The lesson clearly describes Broca's aphasia characteristics. Wernicke's area is mentioned in the cerebral cortex lesson under temporal lobe functions, though the detailed description of Wernicke's aphasia was in the",
       "suggestedLesson": "1-cerebral-cortex",
       "suggestedParagraph": "### Broca's Area: The Speech Production Center",
-      "lessonExcerpt": "people with Broca's aphasia can understand what you're saying. They know what they want to say. But getting the words out? That's the struggle. Their speech becomes slow and effortful, stripped down to mainly nouns and verbs.",
+      "lessonExcerpt": "Located in the dominant hemisphere (usually left), Wernicke's area is where language comprehension happens. Damage produces **Wernicke's aphasia**. Also called receptive or fluent aphasia.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 5
@@ -32,12 +32,12 @@
       "answer": "Occipital lobe for vision; temporal lobe for audition",
       "explanation": "The occipital lobe contains the visual cortex, and damage produces cortical blindness. The temporal lobe contains the auditory cortex, and damage can produce cortical deafness (the ears work fine, but the brain can't process the signals). Option A incorrectly assigns vision to the parietal lobe (which handles somatosensory processing) and audition to the frontal lobe (which handles motor functions and executive processes). Options C and D reverse or misassign the correct localizations.",
       "kn": "KN1",
-      "kn_explanation": "Cortical organization and functional correlates of brain regions (occipital lobe → vision, other lobes → other functions) — directly maps to neurobiological bases of perception and cognition.",
+      "kn_explanation": "Cortical organization and functional correlates of brain regions (occipital lobe \u2192 vision, other lobes \u2192 other functions) \u2014 directly maps to neurobiological bases of perception and cognition.",
       "difficulty": "easy",
       "quality_comment": "Foundational question testing basic cortical localization. Well-supported by both the cerebral cortex and sensory perception lessons.",
       "suggestedLesson": "1-cerebral-cortex",
       "suggestedParagraph": "## The Big Picture: Four Lobes, Each With Its Own Job",
-      "lessonExcerpt": "Temporal: Sides (near temples) — Hearing, language comprehension... Occipital: Very back — Vision processing... Damage can cause: Auditory agnosia, Auditory hallucinations, Cortical deafness... Cortical blindness occurs when the primary visual cortex is damaged.",
+      "lessonExcerpt": "Temporal: Sides (near temples) \u2014 Hearing, language comprehension... Occipital: Very back \u2014 Vision processing... Damage can cause: Auditory agnosia, Auditory hallucinations, Cortical deafness... Cortical blindness occurs when the primary visual cortex is damaged.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 20
@@ -72,7 +72,7 @@
         "The angular gyrus in the parietal lobe"
       ],
       "answer": "Broca's area in the frontal lobe",
-      "explanation": "This presentation is classic Broca's aphasia (expressive/nonfluent aphasia): slow, labored speech consisting mainly of nouns and verbs (telegraphic speech), with comprehension relatively intact. The patient's frustration indicates awareness of her deficit, which is characteristic of Broca's aphasia. Wernicke's area damage (option A) would produce fluent but meaningless speech with impaired comprehension—the opposite pattern. Arcuate fasciculus damage (option C) causes conduction aphasia, characterized by fluent speech with errors and severely impaired repetition, but relatively intact comprehension. Angular gyrus/parietal damage (option D) is associated with anomic aphasia and Gerstmann's syndrome, not the nonfluent pattern described.",
+      "explanation": "This presentation is classic Broca's aphasia (expressive/nonfluent aphasia): slow, labored speech consisting mainly of nouns and verbs (telegraphic speech), with comprehension relatively intact. The patient's frustration indicates awareness of her deficit, which is characteristic of Broca's aphasia. Wernicke's area damage (option A) would produce fluent but meaningless speech with impaired comprehension\u2014the opposite pattern. Arcuate fasciculus damage (option C) causes conduction aphasia, characterized by fluent speech with errors and severely impaired repetition, but relatively intact comprehension. Angular gyrus/parietal damage (option D) is associated with anomic aphasia and Gerstmann's syndrome, not the nonfluent pattern described.",
       "kn": "KN1",
       "kn_explanation": "This question assesses knowledge of cortical language areas and the clinical presentation of Broca's aphasia resulting from frontal lobe damage.",
       "difficulty": "medium",
@@ -156,14 +156,14 @@
         "Inability to comprehend the semantic content of spoken language"
       ],
       "answer": "Loss of ability to convey and interpret emotional tone in speech",
-      "explanation": "The right (nondominant) hemisphere is specialized for processing the emotional 'music' of speech (prosody) and understanding social context in language, including humor, sarcasm, and hyperbole. Damage to this hemisphere results in aprosodia — the inability to express or interpret emotional tone. Option A describes features more consistent with Broca's aphasia (dominant/left hemisphere). Option C describes pseudobulbar affect, not a typical right hemisphere presentation. Option D describes a comprehension deficit associated with Wernicke's aphasia in the dominant hemisphere.",
+      "explanation": "The right (nondominant) hemisphere is specialized for processing the emotional 'music' of speech (prosody) and understanding social context in language, including humor, sarcasm, and hyperbole. Damage to this hemisphere results in aprosodia \u2014 the inability to express or interpret emotional tone. Option A describes features more consistent with Broca's aphasia (dominant/left hemisphere). Option C describes pseudobulbar affect, not a typical right hemisphere presentation. Option D describes a comprehension deficit associated with Wernicke's aphasia in the dominant hemisphere.",
       "kn": "KN1",
       "kn_explanation": "This question tests knowledge of hemispheric lateralization of emotion, a core biological bases concept involving brain structure-function relationships.",
       "difficulty": "medium",
       "quality_comment": "Well-grounded in lesson content about right hemisphere specialization for prosody and emotional processing. Clinical vignette format appropriate for EPPP.",
       "suggestedLesson": "1-cerebral-cortex",
       "suggestedParagraph": "## When the Two Hemispheres Specialize",
-      "lessonExcerpt": "Right Hemisphere (Nondominant for most people): ... Negative emotions ... The emotional 'music' of speech (prosody) ... Understanding social context in language (pragmatics) — humor, sarcasm, hyperbole",
+      "lessonExcerpt": "Right Hemisphere (Nondominant for most people): ... Negative emotions ... The emotional 'music' of speech (prosody) ... Understanding social context in language (pragmatics) \u2014 humor, sarcasm, hyperbole",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 21
@@ -419,6 +419,69 @@
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 1
+    },
+    {
+      "stem": "A developmental neuroscientist is presenting to a group of psychologists about why adolescents and young adults often display poor impulse control, vulnerability to peer influence, and difficulty weighing long-term consequences. She attributes these tendencies to the protracted maturation of one cortical region that is notably underdeveloped at birth and continues myelinating well into the mid-20s. Which region is she describing?",
+      "options": [
+        "Primary visual cortex",
+        "Primary motor cortex",
+        "Prefrontal cortex",
+        "Primary somatosensory cortex"
+      ],
+      "answer": "Prefrontal cortex",
+      "explanation": "The prefrontal cortex (PFC) is the last cortical region to complete myelination and synaptic pruning, a process extending into the mid-20s. It houses executive functions including impulse control, planning, abstract reasoning, social judgment, and working memory. Primary sensory and motor cortices mature considerably earlier in postnatal development. The protracted development of the PFC provides a neurobiological explanation for adolescent risk-taking and immature decision-making that has broad implications for forensic, developmental, and clinical psychology.",
+      "kn": "KN1",
+      "kn_explanation": "The developmental timeline of cortical brain regions, particularly the prefrontal cortex, is a core neurodevelopment topic in Domain 1: Biological Bases of Behavior.",
+      "difficulty": "medium",
+      "quality_comment": "Links PFC functional description directly to developmental trajectory; practical relevance for understanding adolescent behavior and forensic evaluations.",
+      "suggestedLesson": "1-cerebral-cortex",
+      "suggestedParagraph": "### The Prefrontal Cortex: Where Planning Meets Personality",
+      "lessonExcerpt": "The prefrontal cortex (PFC) is where executive functions live. These are the higher-order processes that separate functional adults from people who need significant support: planning, decision-making, working memory, prospective memory (remembering to do things in the future), social judgment, and self-monitoring.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 2
+    },
+    {
+      "stem": "A 68-year-old retired educator is evaluated after a left hemisphere stroke. She produces short, effortful utterances consisting almost entirely of content words ('walk... store... yesterday'), struggles to repeat simple phrases, and becomes visibly frustrated during the session. Despite her difficulty speaking, she accurately follows two-step verbal instructions and nods or shakes her head correctly in response to yes/no questions. This presentation is most consistent with damage to:",
+      "options": [
+        "Wernicke's area in the left temporal lobe",
+        "Broca's area in the left frontal lobe",
+        "The angular gyrus in the left parietal lobe",
+        "The primary auditory cortex in the left temporal lobe"
+      ],
+      "answer": "Broca's area in the left frontal lobe",
+      "explanation": "Broca's aphasia (expressive/nonfluent aphasia) results from damage to Broca's area in the dominant (typically left) frontal lobe. Its hallmark is slow, effortful, telegraphic speech predominantly consisting of nouns and verbs, along with impaired repetition \u2014 with comprehension remaining relatively intact. The patient's preserved ability to follow instructions and respond to yes/no questions confirms intact comprehension, which is the crucial distinguishing feature from Wernicke's aphasia. Wernicke's aphasia produces fluent but semantically empty speech with severely impaired comprehension. The angular gyrus is associated with reading and writing deficits. The primary auditory cortex damage would not produce this expressive-dominant aphasia pattern.",
+      "kn": "KN1",
+      "kn_explanation": "Broca's area, its location in the frontal lobe, and the features of Broca's aphasia are covered under cerebral cortex functions in Domain 1: Biological Bases of Behavior.",
+      "difficulty": "medium",
+      "quality_comment": "Well-crafted vignette that requires applying the comprehension-production dissociation to distinguish Broca's from Wernicke's aphasia; strong distractors.",
+      "suggestedLesson": "1-cerebral-cortex",
+      "suggestedParagraph": "### Broca's Area: The Speech Production Center",
+      "lessonExcerpt": "people with Broca's aphasia can understand what you're saying. They know what they want to say. But getting the words out? That's the struggle. Their speech becomes slow and effortful, stripped down to mainly nouns and verbs... Comprehension relatively intact (this is the crucial distinction)",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 5
+    },
+    {
+      "stem": "A neuropsychologist reviews the imaging report for a client who sustained a focal injury to the most posterior cortical lobe following a motor vehicle accident. The report predicts preserved auditory processing but significant disruption of visual perception. This dissociation of intact auditory function alongside impaired vision is most consistent with damage localized to which cortical lobe?",
+      "options": [
+        "Parietal lobe, which processes touch, body awareness, and skilled movements",
+        "Temporal lobe, which processes hearing and language comprehension",
+        "Frontal lobe, which initiates purposeful movement and executive functions",
+        "Occipital lobe, which is responsible for vision processing"
+      ],
+      "answer": "Occipital lobe, which is responsible for vision processing",
+      "explanation": "The lesson's cortical lobe table explicitly maps the occipital lobe to 'Vision processing' and the temporal lobe to 'Hearing, language comprehension.' Damage isolated to the occipital lobe would therefore produce visual deficits while leaving auditory processing intact\u2014exactly the dissociation described in the stem. The parietal lobe (Option A) handles somatosensory and visuospatial functions but not primary vision. The temporal lobe (Option B) handles auditory processing; damage here would impair hearing and language comprehension, not vision. The frontal lobe (Option C) governs motor initiation, executive function, and language production; damage does not produce primary sensory deficits.",
+      "kn": "KN1",
+      "kn_explanation": "Knowledge of cortical lobe localization for sensory modalities\u2014specifically the occipital lobe for vision and the temporal lobe for hearing\u2014is fundamental Biological Bases of Behavior content tested directly on the EPPP.",
+      "difficulty": "easy",
+      "quality_comment": "Clean, well-grounded question with a direct lesson quote; appropriate foundational difficulty for a lobe localization concept; options are meaningfully differentiated",
+      "suggestedLesson": "1-cerebral-cortex",
+      "suggestedParagraph": "## The Big Picture: Four Lobes, Each With Its Own Job",
+      "lessonExcerpt": "Temporal | Sides (near temples) | Hearing, language comprehension ... Occipital | Very back | Vision processing",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 20
     }
   ]
 }

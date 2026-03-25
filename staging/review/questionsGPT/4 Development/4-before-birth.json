@@ -22,27 +22,6 @@
       "inspirationIndex": 3
     },
     {
-      "stem": "A female infant is born with ambiguous genitalia, including a noticeably enlarged clitoris. Genetic testing confirms a 46,XX karyotype. Which of the following BEST explains this presentation?",
-      "options": [
-        "Turner syndrome (45,X)",
-        "Excessive prenatal androgen exposure",
-        "Klinefelter syndrome (47,XXY)",
-        "Maternal progesterone deficiency"
-      ],
-      "answer": "Excessive prenatal androgen exposure",
-      "explanation": "In genetic females (46,XX), excessive prenatal androgen exposure—most commonly from congenital adrenal hyperplasia (CAH)—can masculinize the external genitalia, resulting in an enlarged clitoris and ambiguous genitalia. The lesson content discusses how prenatal hormonal influences affect fetal development, with androgens playing a key role in sexual differentiation. Turner syndrome (45,X) involves a missing X chromosome and presents differently (short stature, webbed neck) without genital ambiguity from androgen excess. Klinefelter syndrome (47,XXY) affects genetic males. Progesterone deficiency would not cause virilization of female genitalia.",
-      "kn": "KN4",
-      "kn_explanation": "This question addresses prenatal hormonal influences on development, within the Growth and Lifespan Development domain.",
-      "difficulty": "hard",
-      "quality_comment": "Integrates chromosomal and hormonal prenatal development knowledge. The lesson discusses chromosomal conditions and prenatal influences but does not deeply cover CAH specifically.",
-      "suggestedLesson": "4-before-birth",
-      "suggestedParagraph": "## When Chromosomes Tell a Different Story",
-      "lessonExcerpt": "Chromosomes carry our genetic blueprint. 23 Pairs in every cell, with one chromosome from each parent. But sometimes there are copying errors, deletions, or unusual combinations that lead to lifelong conditions.",
-      "needsReview": true,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 14
-    },
-    {
       "stem": "Which of the following is a recognized cause of intellectual disability?",
       "options": [
         "Exposure to teratogens during prenatal development",

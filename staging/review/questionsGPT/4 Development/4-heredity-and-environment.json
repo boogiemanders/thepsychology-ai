@@ -17,7 +17,7 @@
       "suggestedLesson": "4-heredity-and-environment",
       "suggestedParagraph": "### Adoption Studies",
       "lessonExcerpt": "By comparing adopted children to both biological and adoptive parents, researchers can separate genetic from environmental transmission. If adopted children resemble biological parents they never lived with, this suggests genetic influence.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 12
     },
@@ -38,7 +38,7 @@
       "suggestedLesson": "4-heredity-and-environment",
       "suggestedParagraph": "### Twin Studies",
       "lessonExcerpt": "Monozygotic (identical) twins share 100% of their DNA. Dizygotic (fraternal) twins share 50% of their DNA, like regular siblings. If identical twins are more similar than fraternal twins on a trait, this suggests genetic influence.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 5
     },
@@ -209,6 +209,48 @@
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 25
+    },
+    {
+      "stem": "A longitudinal adoption study tracks the IQ scores of children placed with non-biological families at birth. When measured in childhood, adoptees show meaningful IQ correlations with their adoptive parents. When re-assessed in adulthood, which pattern does research most consistently find?",
+      "options": [
+        "IQ correlations with adoptive parents strengthen while correlations with biological parents remain unchanged",
+        "IQ correlations with both biological and adoptive parents converge toward a common heritability coefficient",
+        "IQ correlations with biological parents increase while correlations with adoptive parents diminish toward zero",
+        "IQ correlations with adoptive parents remain stable while biological parent correlations decline"
+      ],
+      "answer": "IQ correlations with biological parents increase while correlations with adoptive parents diminish toward zero",
+      "explanation": "Adoption studies provide some of the strongest evidence for the heritability of intelligence. As adopted children age into adulthood, their IQ scores become progressively more correlated with biological parents \u2014 who share genes but not shared environment \u2014 while correlations with adoptive parents, who share environment but not genes, diminish substantially toward zero. This developmental pattern suggests that genetic influences on intelligence increase in magnitude over the lifespan, a finding consistent with the active gene-environment correlation in which individuals increasingly select and shape environments that match their genetic predispositions. Options A and D reverse the direction of the finding, and option B describes a theoretical convergence that does not reflect the actual empirical pattern.",
+      "kn": "KN4",
+      "kn_explanation": "Heritability of intelligence via adoption study methodology is core content in the Nature vs. Nurture subtopic of Growth and Lifespan Development.",
+      "difficulty": "hard",
+      "quality_comment": "Doctoral-level question requiring understanding of developmental trajectory of heritability estimates, not just static heritability values.",
+      "suggestedLesson": "4-heredity-and-environment",
+      "suggestedParagraph": "## Heritability: Understanding the Numbers",
+      "lessonExcerpt": "A heritability of 0.50 means that approximately 50% of the differences we see between people in intelligence are due to genetic differences... Heritability estimates are population statistics, not individual predictions. They also vary depending on the environment.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 12
+    },
+    {
+      "stem": "A research team examines the correlation between IQ scores and GPA at three educational levels: elementary school, undergraduate college, and doctoral programs. Controlling for potential confounds, which finding would be most consistent with what is known about range restriction and IQ predictive validity?",
+      "options": [
+        "The IQ-GPA correlation is strongest at the doctoral level because graduate students must use complex reasoning skills daily",
+        "The IQ-GPA correlation is uniform across all three levels, reflecting intelligence as a domain-general capacity",
+        "The IQ-GPA correlation is strongest in elementary school and progressively weakens at higher educational levels due to range restriction",
+        "The IQ-GPA correlation reverses at the doctoral level, with lower-IQ students compensating through greater effort and time investment"
+      ],
+      "answer": "The IQ-GPA correlation is strongest in elementary school and progressively weakens at higher educational levels due to range restriction",
+      "explanation": "The predictive validity of IQ scores for academic achievement is substantially affected by the statistical phenomenon of range restriction: at each higher educational level, selective attrition removes lower-performing (and typically lower-IQ) individuals from the pool. In elementary school, the full population-level range of IQ is represented, allowing IQ to be a powerful predictor of academic differences. By undergraduate school, the population has been filtered by graduation and college acceptance processes. By doctoral programs, the remaining students are highly selected, creating a truncated IQ distribution in which the variance needed for strong correlations is substantially reduced. Within a highly homogeneous high-IQ group, other factors \u2014 motivation, conscientiousness, mentorship \u2014 explain proportionally more variance in academic outcomes. Option A incorrectly predicts that the correlation strengthens with educational level. Option B ignores range restriction. Option D proposes a reversal unsupported by the literature.",
+      "kn": "KN4",
+      "kn_explanation": "The relationship between intelligence and academic achievement, including range restriction effects, is relevant to both Growth and Lifespan Development and Assessment domains.",
+      "difficulty": "hard",
+      "quality_comment": "High-quality doctoral-level item requiring integration of psychometric reasoning (range restriction) with developmental and intelligence content.",
+      "suggestedLesson": "4-heredity-and-environment",
+      "suggestedParagraph": "## Heritability: Understanding the Numbers",
+      "lessonExcerpt": "N/A \u2014 IQ-academic achievement relationship across educational levels is not explicitly covered in the provided lesson excerpt.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 19
     }
   ]
 }

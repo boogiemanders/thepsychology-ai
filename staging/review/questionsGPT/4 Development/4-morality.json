@@ -209,6 +209,27 @@
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 5
+    },
+    {
+      "stem": "When asked whether Heinz was right to steal the drug to save his dying wife, a 16-year-old responds: 'He should steal it because a good husband would do everything possible to save his wife. People would lose respect for him if he just let her die when he could have done something.' According to Kohlberg's theory, which level and stage does this reasoning best exemplify?",
+      "options": [
+        "Level 1, Stage 2 (Instrumental Hedonism): reasoning focused on personal benefit and reciprocal exchange",
+        "Level 2, Stage 3 (Good Boy/Good Girl): reasoning focused on gaining interpersonal approval and fulfilling relational role expectations",
+        "Level 2, Stage 4 (Law and Order): reasoning focused on upholding legal systems and formal social institutions",
+        "Level 3, Stage 5 (Social Contract): reasoning based on universal rights and the principles underlying just laws"
+      ],
+      "answer": "Level 2, Stage 3 (Good Boy/Good Girl): reasoning focused on gaining interpersonal approval and fulfilling relational role expectations",
+      "explanation": "The adolescent's reasoning is organized entirely around how others would judge Heinz ('people would lose respect for him') and around conforming to the role of a 'good husband.' This is the hallmark of Kohlberg's Stage 3, within Level 2 Conventional Morality, where moral judgments are driven by the desire for interpersonal approval and living up to role expectations. Critically, Kohlberg evaluated the reasoning process, not the conclusion. Stage 2 would center on personal cost-benefit analysis. Stage 4 would invoke law, institutional duty, or formal obligation. Stage 5 would invoke abstract principles about rights independent of social approval. The Level 2 designation is correct because the adolescent has internalized social norms and cares about maintaining social relationships.",
+      "kn": "KN4",
+      "kn_explanation": "Kohlberg's stages of moral development are core EPPP content within Growth and Lifespan Development (Domain 4).",
+      "difficulty": "medium",
+      "quality_comment": "Well-calibrated vignette. The response is specific enough to differentiate Stage 3 from Stage 4 and avoids ambiguity. Tests the key Kohlberg principle that reasoning—not conclusion—determines stage.",
+      "suggestedLesson": "4-morality",
+      "suggestedParagraph": "### Level 2: Conventional Morality (Typical in Adolescents and Many Adults)",
+      "lessonExcerpt": "At this level, people have internalized social rules and care about maintaining social order. Stage 3, 'Good Boy/Good Girl,' Key Question: 'Will others approve?' Kohlberg didn't care whether people said 'yes, steal' or 'no, don't steal.' He cared about why they gave that answer. The reasoning reveals the stage, not the conclusion.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 4
     }
   ]
 }

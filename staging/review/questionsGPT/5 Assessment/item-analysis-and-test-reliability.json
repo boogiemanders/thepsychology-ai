@@ -1,27 +1,6 @@
 {
   "questions": [
     {
-      "stem": "A psychologist administers an anxiety measure that has a standard deviation of 12 and a reliability coefficient of .91. She calculates the standard error of measurement (SEM) to construct a confidence interval around a client's observed score. The SEM she obtains will be expressed in:",
-      "options": [
-        "Standard deviation units of the normative sample",
-        "The same units as the test's raw scores",
-        "Z-score units",
-        "Percentile rank units"
-      ],
-      "answer": "The same units as the test's raw scores",
-      "explanation": "The standard error of measurement (SEM) is calculated using the formula SEM = SD × √(1 - reliability). Since it is derived by multiplying the test's standard deviation (which is in raw score units) by a constant, the resulting SEM is expressed in the same units as the original test scores. If the test scores are in raw score points, the SEM is in raw score points. It is not converted to z-scores, percentile ranks, or abstract standard deviation units. This is important because the SEM is used to build confidence intervals around an individual's observed score (e.g., score ± 1 SEM for 68% confidence), and those intervals must be in the same metric as the score itself.",
-      "kn": "KN29",
-      "kn_explanation": "Standard error of measurement derives from reliability coefficient and SD — core psychometric/reliability concept",
-      "difficulty": "medium",
-      "quality_comment": "Solid conceptual question. The lesson provides the SEM formula and examples but does not explicitly state the units. The answer is logically derivable from the formula provided.",
-      "suggestedLesson": "5-items-and-reliability",
-      "suggestedParagraph": "## Standard Error of Measurement and Confidence Intervals",
-      "lessonExcerpt": "SEM = SD × √(1 - reliability coefficient)... Example: Someone scores 90 on a test with SEM of 5. 68% confidence interval: 90 ± 5 = 85 to 95",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 4
-    },
-    {
       "stem": "Two clinicians independently review 100 patient records and classify each patient as meeting or not meeting criteria for a specific diagnosis. Their percent agreement is 88%, but when Cohen's Kappa is calculated, the value is .76. The difference between these two values is best explained by the fact that Kappa:",
       "options": [
         "Uses a more lenient threshold for agreement than percent agreement",
@@ -41,6 +20,132 @@
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 7
+    },
+    {
+      "stem": "A psychologist reports that an intelligence test with a standard deviation of 15 and a reliability coefficient of .91 has a standard error of measurement of approximately 4.5 points. A school team uses this value to construct a confidence interval around a student's obtained score of 112. In what metric are both the obtained score and the confidence interval boundaries expressed?",
+      "options": [
+        "Percentile rank units, because the SEM is derived from the normal distribution",
+        "Standard deviation units, because the SEM formula contains the standard deviation",
+        "The same units as the original test scores, because the SEM is computed from the test's own standard deviation",
+        "Z-score units, because SEM standardizes measurement error around a mean of zero"
+      ],
+      "answer": "The same units as the original test scores, because the SEM is computed from the test's own standard deviation",
+      "explanation": "The standard error of measurement (SEM = SD \u00d7 \u221a[1 \u2013 rxx]) is expressed in the same metric as the original test scores because it is derived directly from the test's standard deviation. When the SD is 15 IQ points and reliability is .91, the SEM of approximately 4.5 is also in IQ points. Confidence intervals constructed using the SEM are therefore also expressed in IQ points, allowing direct interpretation. The SEM is not in percentile rank units, which are nonlinear transformations requiring separate conversion. It is not in standard deviation units per se\u2014although it uses the SD in its formula, the product inherits the original scale's unit. It is not in z-score units, which would require dividing by the test SD.",
+      "kn": "KN5",
+      "kn_explanation": "Understanding the unit of the standard error of measurement and its use in constructing confidence intervals is a foundational measurement concept tested in the EPPP Assessment domain.",
+      "difficulty": "medium",
+      "quality_comment": "Tests a frequently confused but clinically important measurement concept; high face validity for applied practice.",
+      "suggestedLesson": "5-items-and-reliability",
+      "suggestedParagraph": "## Measurement Error Statistics",
+      "lessonExcerpt": "",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 4
+    },
+    {
+      "stem": "A researcher validates two cognitive screening tests against the same criterion (clinician-rated functional impairment, SD = 12). Test A has a validity coefficient of .80 and a standard error of estimate of 7.2. Test B has a validity coefficient of .00 and a standard error of estimate of 12.0. Which of the following best explains the difference in these standard errors of estimate?",
+      "options": [
+        "Test A's higher reliability reduces unsystematic error, which lowers the standard error of estimate independently of validity",
+        "The standard error of estimate equals the criterion SD when validity is zero and decreases toward zero as validity approaches 1.0, reflecting the amount of criterion variance left unexplained",
+        "Test B's standard error of estimate is inflated because of restriction of range in the criterion variable",
+        "The standard error of estimate is equivalent to one minus the validity coefficient multiplied by the criterion SD"
+      ],
+      "answer": "The standard error of estimate equals the criterion SD when validity is zero and decreases toward zero as validity approaches 1.0, reflecting the amount of criterion variance left unexplained",
+      "explanation": "The standard error of estimate (SEest = SDy \u00d7 \u221a[1 \u2013 r\u00b2]) quantifies the average prediction error around the regression line. When the validity coefficient r = .00, SEest = SDy \u00d7 \u221a(1 \u2013 0) = SDy = 12, confirming that the test predicts no better than the criterion mean\u2014the entire criterion SD represents residual error. As r approaches 1.0, SEest approaches zero because essentially all criterion variance is explained. Test A's validity of .80 yields SEest = 12 \u00d7 \u221a(1 \u2013 .64) \u2248 12 \u00d7 .60 = 7.2, matching the reported value. Reliability affects validity (through attenuation) but is not the direct cause of SEest differences when validity is the variable under examination. Restriction of range would attenuate both coefficients equally and is not described here. Subtracting r from 1 and multiplying by SDy (option D) conflates SEest with the formula for mean absolute error and yields incorrect values.",
+      "kn": "KN5",
+      "kn_explanation": "The standard error of estimate formula and its relationship to validity and criterion variance is a core EPPP psychometric concept.",
+      "difficulty": "hard",
+      "quality_comment": "Quantitative vignette requiring formula derivation and conceptual understanding; distractors target common computational errors.",
+      "suggestedLesson": "5-items-and-reliability",
+      "suggestedParagraph": "## Standard Error of Estimate",
+      "lessonExcerpt": "",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 5
+    },
+    {
+      "stem": "Two doctoral-level clinicians independently administer and score a structured diagnostic interview with 40 patients. Their raw percentage agreement is 75%. Given the base rates of diagnoses in this clinic population, chance agreement is estimated at 50%. The computed kappa coefficient is .50. Which of the following statements accurately interprets this kappa value?",
+      "options": [
+        "The raters agreed on exactly half of all diagnoses, indicating unacceptable reliability for clinical use",
+        "The raters demonstrated agreement that is 50% greater than what chance alone would predict, indicating moderate reliability",
+        "Kappa of .50 is equivalent to a Pearson r of .50, indicating a moderate linear association between rater scores",
+        "The observed agreement of 75% was reduced to .50 after correcting for the unreliability of the diagnostic instrument"
+      ],
+      "answer": "The raters demonstrated agreement that is 50% greater than what chance alone would predict, indicating moderate reliability",
+      "explanation": "Cohen's kappa is computed as \u03ba = (Po \u2013 Pe) / (1 \u2013 Pe), where Po is observed proportional agreement and Pe is expected chance agreement. Here \u03ba = (.75 \u2013 .50) / (1 \u2013 .50) = .25 / .50 = .50. This means the raters agreed 50% more often than chance would predict\u2014not that they agreed on only 50% of cases, which would imply 50% raw agreement. Kappa values in the range .41\u2013.60 are conventionally classified as moderate agreement. Kappa is not equivalent to Pearson r; they are different statistics serving different purposes and cannot be directly compared. Kappa does not represent a corrected form of percentage agreement; rather, it indexes the proportion of possible beyond-chance agreement that was actually achieved.",
+      "kn": "KN5",
+      "kn_explanation": "Kappa coefficient interpretation is a foundational interrater reliability concept in the EPPP Assessment domain, particularly relevant to diagnostic agreement studies.",
+      "difficulty": "medium",
+      "quality_comment": "Forces students to distinguish between raw agreement rate and the beyond-chance interpretation of kappa; distractors exploit common misreadings of the statistic.",
+      "suggestedLesson": "5-items-and-reliability",
+      "suggestedParagraph": "## Interrater Reliability",
+      "lessonExcerpt": "",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 7
+    },
+    {
+      "stem": "A psychologist is explaining the properties of the standard error of measurement (SEM) to an intern. She notes that regardless of the test being used, the SEM always falls within a predictable range relative to the test's standard deviation (SD). Which of the following most accurately describes the boundaries of this range?",
+      "options": [
+        "The SEM always equals the SD, because both reflect total score variability",
+        "The SEM ranges from zero to a value equal to the full SD of the test",
+        "The SEM can exceed the SD when reliability falls below 0.50",
+        "The SEM is fixed at exactly one-half of the SD for any well-constructed test"
+      ],
+      "answer": "The SEM ranges from zero to a value equal to the full SD of the test",
+      "explanation": "The SEM is calculated as SEM = SD \u00d7 \u221a(1 \u2212 rxx). When reliability (rxx) equals 1.0 (perfect reliability), SEM = SD \u00d7 \u221a0 = 0. When reliability equals 0.0 (completely unreliable), SEM = SD \u00d7 \u221a1 = SD. Therefore, the SEM can range from a minimum of zero to a maximum equal to the full SD, never exceeding it. Option A is incorrect because SEM equals SD only at zero reliability, not universally. Option C is incorrect because the SEM can never mathematically exceed the SD regardless of how low reliability falls. Option D is incorrect because the SEM is not fixed at half the SD; its value depends entirely on the test's specific reliability coefficient.",
+      "kn": "KN5",
+      "kn_explanation": "Standard error of measurement and its relationship to reliability and score variability is a foundational psychometric concept in the Assessment and Diagnosis domain.",
+      "difficulty": "medium",
+      "quality_comment": "Clean conceptual question with plausible numerical distractors; effectively tests understanding of the SEM formula's boundary conditions rather than rote formula recall.",
+      "suggestedLesson": "5-items-and-reliability",
+      "suggestedParagraph": "## Standard Error of Measurement",
+      "lessonExcerpt": "Not found in provided lesson content. Needs review.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 11
+    },
+    {
+      "stem": "In its landmark 1954 ruling in Brown v. Board of Education, the U.S. Supreme Court cited social science research demonstrating the psychological harm caused by racial segregation in public schools. Which psychologist's empirical research on children's racial self-concept was specifically referenced in the Court's decision?",
+      "options": [
+        "Francis Galton, whose work on individual differences in mental ability was reinterpreted as evidence of environmental over hereditary influence",
+        "Kenneth Clark, whose doll studies showed that Black children preferred white dolls and assigned negative characteristics to brown dolls",
+        "Alfred Binet, whose intelligence test was used to document disparate academic outcomes between segregated and integrated schools",
+        "Lewis Terman, whose Stanford-Binet research was cited to demonstrate that educational deprivation suppressed measured intelligence"
+      ],
+      "answer": "Kenneth Clark, whose doll studies showed that Black children preferred white dolls and assigned negative characteristics to brown dolls",
+      "explanation": "Kenneth Clark, working alongside Mamie Clark, conducted doll studies in the 1940s in which Black children were presented with two physically identical dolls\u2014one white, one brown\u2014and asked which was 'nice,' which was 'bad,' and which they preferred. The majority of Black children preferred the white doll and attributed negative qualities to the brown doll. Clark interpreted these findings as evidence that segregation had caused Black children to internalize negative racial self-concepts. Kenneth Clark provided expert testimony in lower court cases leading to Brown, and this research was cited in the Supreme Court's decision in footnote 11. The other psychologists listed made significant contributions to intelligence testing but were not involved in the Brown litigation.",
+      "kn": "KN5",
+      "kn_explanation": "The intersection of psychological testing history with social policy and civil rights\u2014including Clark's doll studies\u2014is foundational knowledge in the Assessment and Diagnosis domain.",
+      "difficulty": "medium",
+      "quality_comment": "Historically rich question with plausible distractors drawn from well-known names in psychometric history; tests specific knowledge of a landmark event in the applied use of psychological research.",
+      "suggestedLesson": "5-items-and-reliability",
+      "suggestedParagraph": "## History of Psychological Testing",
+      "lessonExcerpt": "Not found in provided lesson content. Needs review.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 17
+    },
+    {
+      "stem": "A test developer applies the Spearman-Brown prophecy formula to estimate the effect of doubling the number of items on a 50-item personality scale. She finds that reliability increases substantially. A colleague then cautions that the same doubling may not improve\u2014and could even harm\u2014another psychometric property. Which of the following BEST describes the differential effect of increasing test length on reliability versus validity?",
+      "options": [
+        "Both reliability and validity increase proportionally with each additional item, making longer tests uniformly superior",
+        "Reliability increases predictably with test length, but validity may not improve proportionally and could decrease if added items measure different or weaker constructs",
+        "Validity increases predictably with test length because more items sample the domain more thoroughly, while reliability is largely unaffected by length",
+        "Neither reliability nor validity changes meaningfully when test length is increased by fewer than 100%"
+      ],
+      "answer": "Reliability increases predictably with test length, but validity may not improve proportionally and could decrease if added items measure different or weaker constructs",
+      "explanation": "The Spearman-Brown prophecy formula demonstrates that reliability increases in a predictable, systematic fashion as test length grows\u2014longer tests aggregate more observations, reducing random error. Validity, however, does not follow the same pattern. Adding items improves validity only if the new items tap the same construct and maintain the same relationship to the criterion. If added items introduce construct heterogeneity, measure related but distinct constructs, or have weaker criterion relationships, the test's validity coefficient can remain flat or decrease. This asymmetry is a core psychometric principle: reliability is a necessary but not sufficient condition for validity, and mechanically increasing reliability through length does not guarantee improved predictive or construct validity.",
+      "kn": "KN5",
+      "kn_explanation": "The differential effects of test length on reliability versus validity, including application of the Spearman-Brown formula, are central psychometric competencies in the Assessment and Diagnosis domain.",
+      "difficulty": "hard",
+      "quality_comment": "Sophisticated conceptual question that distinguishes between two frequently conflated psychometric properties; requires understanding beyond formula memorization.",
+      "suggestedLesson": "5-items-and-reliability",
+      "suggestedParagraph": "## Test Length and Psychometric Properties",
+      "lessonExcerpt": "Not found in provided lesson content. Needs review.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 18
     }
   ]
 }

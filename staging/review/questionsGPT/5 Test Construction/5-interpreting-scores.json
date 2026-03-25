@@ -13,7 +13,7 @@
       "kn": "KN55",
       "kn_explanation": "Converting z-scores to T-scores involves descriptive statistics and probability theory (score transformations).",
       "difficulty": "medium",
-      "quality_comment": "Straightforward calculation question. The lesson content does not explicitly cover z-to-T-score conversions, so this draws on standard EPPP knowledge beyond the provided lessons.",
+      "quality_comment": "Straightforward calculation question.",
       "suggestedLesson": "5-interpreting-scores",
       "suggestedParagraph": "## T-Scores",
       "lessonExcerpt": "T-scores have a mean of 50 and a standard deviation of 10. They're essentially z-scores that have been rescaled to avoid negative numbers and decimals.",

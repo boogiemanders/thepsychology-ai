@@ -356,6 +356,27 @@
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
       "inspirationIndex": 10
+    },
+    {
+      "stem": "A researcher draws random samples from a population with a standard deviation of 20. If the researcher increases the sample size from 25 to 100, the standard error of the mean will:",
+      "options": [
+        "Decrease from 4.0 to 2.0",
+        "Decrease from 4.0 to 1.0",
+        "Increase from 2.0 to 4.0",
+        "Remain unchanged because the population standard deviation has not changed"
+      ],
+      "answer": "Decrease from 4.0 to 2.0",
+      "explanation": "The standard error equals the population standard deviation divided by the square root of the sample size. With n=25: SE = 20/√25 = 20/5 = 4.0. With n=100: SE = 20/√100 = 20/10 = 2.0. The standard error decreases from 4.0 to 2.0 when the sample size is quadrupled. This illustrates the lesson's point that 'the standard error gets smaller as sample size increases, meaning your sample means cluster more tightly around the true population mean.' Option B incorrectly calculates the new SE. Option C reverses the direction. Option D ignores the role of sample size in the formula.",
+      "kn": "KN7",
+      "kn_explanation": "This question tests understanding of the standard error formula and its relationship to sample size, a fundamental concept in the sampling distributions topic of research methods.",
+      "difficulty": "medium",
+      "quality_comment": "Requires computation and conceptual understanding. All distractors reflect common errors (miscalculation, direction confusion, ignoring sample size).",
+      "suggestedLesson": "7-inferential-stats",
+      "suggestedParagraph": "### The Central Limit Theorem: Three Critical Predictions",
+      "lessonExcerpt": "The standard deviation of this sampling distribution (called the standard error) equals the population standard deviation divided by the square root of your sample size.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 4
     }
   ]
 }

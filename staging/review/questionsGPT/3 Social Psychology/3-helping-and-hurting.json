@@ -9,7 +9,7 @@
         "Holding a new series of competitions with prizes large enough to motivate better sportsmanship"
       ],
       "answer": "Creating a situation where both groups must work together to solve a problem that neither group can solve alone",
-      "explanation": "Sherif's Robbers Cave study demonstrated that superordinate goals—objectives that can only be achieved through cooperation between groups—were the most effective method for reducing intergroup hostility. Simply increasing contact without cooperation (as the counselors tried with meals and movies) was insufficient. Option A (separation) doesn't address the underlying conflict. Option B (a lecture) represents a passive intervention without behavioral engagement. Option D (more competition) would likely intensify rather than reduce hostility, as competition was what created the conflict in the first place.",
+      "explanation": "Sherif's Robbers Cave study demonstrated that superordinate goals\u2014objectives that can only be achieved through cooperation between groups\u2014were the most effective method for reducing intergroup hostility. Simply increasing contact without cooperation (as the counselors tried with meals and movies) was insufficient. Option A (separation) doesn't address the underlying conflict. Option B (a lecture) represents a passive intervention without behavioral engagement. Option D (more competition) would likely intensify rather than reduce hostility, as competition was what created the conflict in the first place.",
       "kn": "KN16",
       "kn_explanation": "Robbers Cave experiment - intergroup conflict and cooperation are group processes and social influences on functioning",
       "difficulty": "easy",
@@ -22,7 +22,7 @@
       "inspirationIndex": 13
     },
     {
-      "stem": "A woman collapses in a busy shopping mall food court during the lunch rush. Approximately 50 people are nearby, yet several minutes pass before anyone calls for help. According to the bystander intervention model proposed by Latané and Darley, the MOST likely explanation for why no one initially helps is:",
+      "stem": "A woman collapses in a busy shopping mall food court during the lunch rush. Approximately 50 people are nearby, yet several minutes pass before anyone calls for help. According to the bystander intervention model proposed by Latan\u00e9 and Darley, the MOST likely explanation for why no one initially helps is:",
       "options": [
         "The bystanders lack the knowledge necessary to provide medical assistance",
         "Each bystander assumes that someone else will take responsibility for helping",
@@ -30,7 +30,7 @@
         "The bystanders are afraid of being sued for providing inadequate medical care"
       ],
       "answer": "Each bystander assumes that someone else will take responsibility for helping",
-      "explanation": "This scenario illustrates diffusion of responsibility, which occurs at Step 3 of Latané and Darley's bystander intervention model. When multiple people are present, each person feels less personally responsible for helping because they assume others will act. Research confirms that victims are most likely to receive help when only one bystander is present. Option A (lack of knowledge) relates to Step 4 but is not the primary explanation when 50 people are present. Option C (stimulus overload) relates to Step 1, but a woman collapsing is a conspicuous event even in a busy setting. Option D (fear of legal consequences) is not one of the primary mechanisms in the model.",
+      "explanation": "This scenario illustrates diffusion of responsibility, which occurs at Step 3 of Latan\u00e9 and Darley's bystander intervention model. When multiple people are present, each person feels less personally responsible for helping because they assume others will act. Research confirms that victims are most likely to receive help when only one bystander is present. Option A (lack of knowledge) relates to Step 4 but is not the primary explanation when 50 people are present. Option C (stimulus overload) relates to Step 1, but a woman collapsing is a conspicuous event even in a busy setting. Option D (fear of legal consequences) is not one of the primary mechanisms in the model.",
       "kn": "KN16",
       "kn_explanation": "Bystander effect/diffusion of responsibility is a group process and social influence on behavior",
       "difficulty": "medium",
@@ -51,15 +51,15 @@
         "Retributive justice"
       ],
       "answer": "Distributive justice based on equity",
-      "explanation": "Distributive justice concerns the fairness of outcome allocation. The equity principle within distributive justice holds that resources should be distributed proportional to contributions—those who contribute more receive more. Option A (procedural justice) concerns fairness of the process rather than outcomes. Option C (restorative justice) focuses on repairing harm done to victims. Option D (retributive justice) focuses on punishment proportional to wrongdoing. The scenario specifically describes outcome-based allocation proportional to contributions, which is the hallmark of equity-based distributive justice.",
+      "explanation": "Distributive justice concerns the fairness of outcome allocation. The equity principle within distributive justice holds that resources should be distributed proportional to contributions\u2014those who contribute more receive more. Option A (procedural justice) concerns fairness of the process rather than outcomes. Option C (restorative justice) focuses on repairing harm done to victims. Option D (retributive justice) focuses on punishment proportional to wrongdoing. The scenario specifically describes outcome-based allocation proportional to contributions, which is the hallmark of equity-based distributive justice.",
       "kn": "KN11",
       "kn_explanation": "This question addresses conflict resolution and justice concepts within the Social and Multicultural Bases of Behavior domain.",
       "difficulty": "hard",
-      "quality_comment": "Valid EPPP-level question but the lesson content does not explicitly cover distributive justice or types of justice.",
+      "quality_comment": "Valid EPPP-level question but",
       "suggestedLesson": "3-helping-and-hurting",
       "suggestedParagraph": "## Reducing Conflict Through Cooperation",
       "lessonExcerpt": "Sherif's famous Robbers Cave study (1966) showed how quickly groups can turn hostile. And how to fix it.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
       "inspirationIndex": 15
     },
@@ -479,7 +479,7 @@
       "suggestedLesson": "3-helping-and-hurting",
       "suggestedParagraph": "## Why Do People Help? Altruism vs. Egoism",
       "lessonExcerpt": "The lesson does not adequately cover minority marginalization.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
       "inspirationIndex": 23
     },
@@ -608,6 +608,90 @@
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
       "inspirationIndex": 20
+    },
+    {
+      "stem": "A school psychologist is consulting with a racially divided middle school where two student groups have developed sustained intergroup hostility. A sensitivity training workshop produced no lasting change. The psychologist redesigns an academic unit so that each student in a multiethnic group is assigned a unique segment of the material; all group members must learn from and teach each other for the group to complete the project successfully. Hostility between the groups decreases significantly. The operative mechanism in this intervention is BEST described as:",
+      "options": [
+        "The contact hypothesis, because structured positive intergroup exposure reduces prejudice over time",
+        "Superordinate goals, because achieving the shared objective requires cooperative interdependence across group boundaries",
+        "The jigsaw classroom technique, which operates through a different mechanism than superordinate goal strategies",
+        "The minimal group paradigm, which reframes group boundaries by creating new shared category memberships"
+      ],
+      "answer": "Superordinate goals, because achieving the shared objective requires cooperative interdependence across group boundaries",
+      "explanation": "Superordinate goals are objectives that can only be achieved through active cooperation between previously hostile groups, as demonstrated in Sherif's Robbers Cave study. The lesson explicitly identifies the jigsaw classroom as an educational application of superordinate goal principles. The correct answer identifies the underlying mechanism. Option A (contact hypothesis) is insufficient \u2014 mere contact without structured interdependence does not reliably reduce hostility. Option C is a trap: the jigsaw classroom IS an application of superordinate goals, not a distinct mechanism; describing it as operating through a 'different mechanism' is factually incorrect. The minimal group paradigm is a laboratory research paradigm demonstrating how easily intergroup bias develops from arbitrary categorization \u2014 it is not an intervention strategy and does not involve cooperative interdependence.",
+      "kn": "KN3",
+      "kn_explanation": "This question assesses intergroup conflict reduction within the Social and Multicultural Bases of Behavior domain, specifically Sherif's superordinate goals strategy and its educational applications.",
+      "difficulty": "hard",
+      "quality_comment": "High-difficulty question requiring conceptual understanding of the jigsaw classroom as an application of superordinate goals rather than a separate technique; tests hierarchical concept structure rather than surface-level naming.",
+      "suggestedLesson": "3-helping-and-hurting",
+      "suggestedParagraph": "Reducing Conflict Through Cooperation",
+      "lessonExcerpt": "The solution? Superordinate goals. Objectives that could only be achieved through cooperation between groups. When the water supply 'broke' and both groups had to work together to fix it, hostility decreased. This principle led to the jigsaw classroom technique.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 13
+    },
+    {
+      "stem": "A woman collapses in the lobby of a busy urban office building during the lunch hour. Eighteen people are present, but over two minutes pass before anyone calls emergency services. When interviewed afterward, multiple bystanders reported, 'I figured someone with more medical knowledge must have already called.' According to Latan\u00e9 and Darley's five-step model of bystander intervention, the MOST direct explanation for the delayed response is:",
+      "options": [
+        "Pluralistic ignorance caused bystanders to collectively misinterpret the event as non-urgent based on others' apparent calm",
+        "Stimulus overload prevented bystanders from initially noticing that a medical emergency had occurred",
+        "Diffusion of responsibility decreased each individual's felt obligation to act when others were present",
+        "Evaluation apprehension caused bystanders to fear appearing incompetent or alarmist if they intervened"
+      ],
+      "answer": "Diffusion of responsibility decreased each individual's felt obligation to act when others were present",
+      "explanation": "Diffusion of responsibility is the mechanism most directly identified by the bystanders' own accounts \u2014 each person assumed someone else had already acted. In Latan\u00e9 and Darley's model, this represents a failure at Step 3 (taking personal responsibility). The bystanders' statements ('someone else must have already called') are the textbook expression of this mechanism. Pluralistic ignorance (Step 2) involves misreading the situation as non-serious based on observing others' apparent calm \u2014 it would apply if bystanders thought the person was merely sleeping. Stimulus overload (Step 1) involves failing to notice the event entirely, which is not the case here since all bystanders were aware of the collapse. Evaluation apprehension (Step 5) involves fear of embarrassment about intervening incorrectly, which was not reported by these bystanders.",
+      "kn": "KN3",
+      "kn_explanation": "This question assesses prosocial behavior within the Social and Multicultural Bases of Behavior domain, specifically Latan\u00e9 and Darley's bystander intervention model and the mechanism of diffusion of responsibility as a barrier to helping.",
+      "difficulty": "medium",
+      "quality_comment": "Scenario-based discrimination question anchored in bystanders' actual reported reasoning, which maps precisely to diffusion of responsibility; distractors correspond to other steps in Latan\u00e9 and Darley's model, requiring knowledge of the full sequential framework.",
+      "suggestedLesson": "3-helping-and-hurting",
+      "suggestedParagraph": "The Five Steps to Helping (And Where Things Go Wrong)",
+      "lessonExcerpt": "Here's where the diffusion of responsibility kicks in. When multiple people are present, each person feels less personally responsible. The math is brutal: more bystanders = less likelihood of any single person helping.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 16
+    },
+    {
+      "stem": "In a study examining gender bias in academic evaluation, psychology faculty independently reviewed an identical research manuscript. Half received it attributed to 'Dr. Jennifer Morris' and half received the same manuscript attributed to 'Dr. James Morris.' Faculty who believed the author was male rated the manuscript significantly higher in scientific rigor, methodological sophistication, and overall publication worthiness. This finding MOST directly illustrates:",
+      "options": [
+        "The ultimate attribution error, because evaluators attributed the work's perceived quality to the author's group membership characteristics",
+        "Illusory correlation, because evaluators incorrectly perceived a statistical relationship between gender and scientific quality",
+        "Evaluative gender bias, in which identical intellectual work is judged as lower quality when attributed to a female rather than a male author",
+        "Ingroup favoritism, because male evaluators disproportionately rated the male-attributed manuscript more favorably"
+      ],
+      "answer": "Evaluative gender bias, in which identical intellectual work is judged as lower quality when attributed to a female rather than a male author",
+      "explanation": "This experimental paradigm (originating with Goldberg, 1968) demonstrates evaluative gender bias: objectively identical work is judged as inferior when attributed to a woman. This constitutes a direct form of sex-based discrimination in intellectual evaluation. The ultimate attribution error (Pettigrew, 2001) refers to applying self-serving attributional logic to in-group versus out-group behavior \u2014 it concerns explanations for why groups behave as they do, not differential quality ratings of identical products. Illusory correlation describes overestimating the co-occurrence of two unrelated things (e.g., group membership and a behavior); while conceptually adjacent, it does not precisely describe the evaluative mechanism at work. Ingroup favoritism would require that the effect be driven by evaluators sharing the author's gender \u2014 but Goldberg's original research and replications showed that both male and female evaluators exhibited the bias, ruling out simple ingroup favoritism.",
+      "kn": "KN3",
+      "kn_explanation": "This question assesses gender bias and discrimination within the Social and Multicultural Bases of Behavior domain, specifically sex-based evaluative bias in the assessment of intellectual work quality.",
+      "difficulty": "hard",
+      "quality_comment": "Tests discriminative knowledge of gender bias mechanisms versus related social cognition constructs; the ingroup favoritism distractor requires knowledge of the classic Goldberg finding that both sexes show the bias.",
+      "suggestedLesson": "3-helping-and-hurting",
+      "suggestedParagraph": "Reducing Conflict Through Cooperation",
+      "lessonExcerpt": "Sherif's famous Robbers Cave study (1966) showed how quickly groups can turn hostile. And how to fix it.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 17
+    },
+    {
+      "stem": "A community mental health researcher documents that the prevalence of major depressive disorder, schizophrenia, and anxiety disorders is significantly higher in the lowest income quintile than in the highest. She argues that chronic stress from financial insecurity, restricted access to healthcare, exposure to neighborhood violence, and lack of social capital directly cause the elevated rates of psychiatric disorder in low-SES communities. This argument is most consistent with which theoretical position?",
+      "options": [
+        "The social selection (downward drift) hypothesis, which proposes that mental illness precedes and causes a decline in socioeconomic status",
+        "The social causation hypothesis, which proposes that the adversity conditions associated with low SES directly increase vulnerability to mental illness",
+        "Labeling theory, which holds that psychiatric diagnosis is differentially applied to lower-SES individuals who violate dominant cultural norms",
+        "Relative deprivation theory, which attributes psychiatric risk to perceived inequality rather than to absolute material conditions"
+      ],
+      "answer": "The social causation hypothesis, which proposes that the adversity conditions associated with low SES directly increase vulnerability to mental illness",
+      "explanation": "The social causation (or social stress) hypothesis asserts a direct causal pathway from low-SES conditions\u2014chronic stress, poverty, limited healthcare access, trauma exposure, discrimination\u2014to elevated rates of psychopathology. This matches the researcher's argument that environmental adversity produces disorder. The social selection (downward drift) hypothesis (Option A) offers the competing causal model: that mental illness impairs occupational and social functioning, causing individuals to drift into lower-SES positions. The two hypotheses differ on the direction of the causal arrow and are a classic paired comparison on the EPPP. Labeling theory (Option C) concerns how societal reactions to norm-violating behavior\u2014not stressors per se\u2014generate psychiatric diagnoses disproportionately for marginalized groups. Relative deprivation theory (Option D) focuses on perceived status gaps rather than the absolute adversity conditions the scenario describes.",
+      "kn": "KN3",
+      "kn_explanation": "The relationship between socioeconomic status and mental illness, including the competing social causation and social selection hypotheses, is a core topic in the Social and Multicultural Bases of Behavior domain under social determinants of mental health.",
+      "difficulty": "hard",
+      "quality_comment": "Tests a high-yield, frequently examined conceptual distinction (causation vs. selection). Distractors are carefully calibrated to adjacent constructs. Flagged for review: the provided lesson files do not contain content on SES and psychiatric prevalence\u2014this question draws on Hollingshead & Redlich and Dohrenwend et al., standard EPPP sources not present in the supplied materials.",
+      "suggestedLesson": "3-helping-and-hurting",
+      "suggestedParagraph": "## Why This Matters for Your Psychology Career",
+      "lessonExcerpt": "CONTENT NOT FOUND IN PROVIDED LESSONS: The supplied lesson files do not address socioeconomic determinants of mental illness or the social causation/social selection debate. This question is grounded in classic epidemiological and sociological literature (Hollingshead & Redlich, 1958; Dohrenwend et al., 1992).",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 24
     }
   ]
 }

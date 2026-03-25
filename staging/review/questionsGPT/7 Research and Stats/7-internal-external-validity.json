@@ -125,6 +125,27 @@
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
       "inspirationIndex": 11
+    },
+    {
+      "stem": "A researcher uses a quasi-experimental design to evaluate the effectiveness of a new group therapy for social anxiety by comparing an existing therapy group at one clinic with a waitlist control group at another clinic. Six weeks into the study, the clinic housing the control group hosts a community mental health awareness event that several control participants attend. Which threat to internal validity is MOST concerning in this scenario?",
+      "options": [
+        "Maturation, because participants naturally improve over the six-week period",
+        "History, because an external event differentially affected one group during the study",
+        "Statistical regression, because extreme scorers tend to move toward the mean",
+        "Differential selection, because participants were not randomly assigned to groups"
+      ],
+      "answer": "History, because an external event differentially affected one group during the study",
+      "explanation": "History is the most concerning threat here because an outside event (the mental health awareness event) occurred during the study and differentially affected only the control group. While differential selection is also a legitimate concern in quasi-experimental designs (no random assignment), the question specifically asks about the described scenario involving the community event. The lesson describes history as occurring 'when outside events during the study affect the results' and notes the trickier version: 'when you're testing groups separately and something happens to just one group.' Maturation would affect both groups equally. Statistical regression requires selection based on extreme scores, which is not described.",
+      "kn": "KN7",
+      "kn_explanation": "This question addresses internal validity threats in quasi-experimental research designs, which falls under Domain 7: Research Methods and Statistics.",
+      "difficulty": "hard",
+      "quality_comment": "Strong question that requires distinguishing between two co-occurring validity threats (history and differential selection) and identifying the most salient one based on the scenario details.",
+      "suggestedLesson": "7-internal-external-validity",
+      "suggestedParagraph": "### 1. History",
+      "lessonExcerpt": "History occurs when outside events during the study affect the results... There's a trickier version: when you're testing groups separately and something happens to just one group.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 1
     }
   ]
 }

@@ -9,7 +9,7 @@
         "Both men and women experience equivalent patterns of adjustment, with differences attributable solely to custody arrangements"
       ],
       "answer": "Women are more likely to experience chronic economic hardship, while men's negative effects tend to be temporary",
-      "explanation": "Research consistently shows that divorce affects men and women differently. For women, economic hardship is the primary challenge, and these economic consequences tend to be chronic. For men, health problems stem more from risky behaviors, social isolation, and psychological factors, but these negative effects are often temporary rather than chronic. Option B reverses the pattern—men's effects tend to be temporary, not long-term. Option C incorrectly assigns risky behaviors to women and financial challenges to men (the reverse is true). Option D incorrectly claims equivalent patterns.",
+      "explanation": "Research consistently shows that divorce affects men and women differently. For women, economic hardship is the primary challenge, and these economic consequences tend to be chronic. For men, health problems stem more from risky behaviors, social isolation, and psychological factors, but these negative effects are often temporary rather than chronic. Option B reverses the pattern\u2014men's effects tend to be temporary, not long-term. Option C incorrectly assigns risky behaviors to women and financial challenges to men (the reverse is true). Option D incorrectly claims equivalent patterns.",
       "kn": "KN26",
       "kn_explanation": "Divorce is a major life event that influences the course of development across the lifespan, and the question addresses its psychological impact on adults.",
       "difficulty": "medium",
@@ -38,7 +38,7 @@
       "suggestedLesson": "4-school-and-family",
       "suggestedParagraph": "## Violence and Abuse in Families",
       "lessonExcerpt": "Trauma-Focused Cognitive Behavioral Therapy (TF-CBT) for ages 3-18: Treats sexual abuse, maltreatment, domestic violence exposure, traumatic loss",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 1
     },
@@ -80,7 +80,7 @@
       "suggestedLesson": "4-school-and-family",
       "suggestedParagraph": "## School Influences",
       "lessonExcerpt": "MONTESSORI SCHOOLS - The key principle underlying Montessori schools is that maximum learning comes from manipulation of materials (sensory-motor stimuli), rather than through traditional classroom instruction and rote learning. Children in Montessori schools are grouped with peers of different ages and abilities.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 10
     },
@@ -101,7 +101,7 @@
       "suggestedLesson": "4-school-and-family",
       "suggestedParagraph": "## The Foundation: How Relationships Shape Us",
       "lessonExcerpt": "Family and school experiences are the laboratories where people first learn about relationships, conflict, success, and failure.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 17
     },
@@ -314,6 +314,48 @@
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 20
+    },
+    {
+      "stem": "A psychologist is presenting grand rounds on post-divorce adjustment. She summarizes the empirical literature as follows: 'The primary stressor differs by gender, and the chronicity of effects also differs.' Which of the following most accurately captures the gender-differentiated findings on adjustment to divorce?",
+      "options": [
+        "Men experience primarily chronic economic hardship, while women experience primarily social isolation and loss of support networks",
+        "Women with custody of children experience primarily chronic economic hardship, while men more often experience health problems stemming from risky behaviors and social isolation that tend to be temporary",
+        "Both men and women experience equivalent economic decline, but men recover psychologically more quickly due to stronger social networks",
+        "Women primarily experience risky health behaviors, while men experience chronic psychological distress"
+      ],
+      "answer": "Women with custody of children experience primarily chronic economic hardship, while men more often experience health problems stemming from risky behaviors and social isolation that tend to be temporary",
+      "explanation": "Research distinguishes both the nature and chronicity of post-divorce adjustment by gender. Women\u2014particularly custodial mothers\u2014face severe economic decline that tends to be chronic, creating cascading effects on mental and physical health. Men more often experience health problems related to risky behaviors and loss of social support networks, but these effects are more often temporary rather than chronic. The other options incorrectly reverse the gender assignments or erroneously equate outcomes across gender.",
+      "kn": "KN4",
+      "kn_explanation": "Adult relationships, marriage, and divorce outcomes fall within Growth and Lifespan Development (Domain 4), covering adult socioemotional adjustment.",
+      "difficulty": "medium",
+      "quality_comment": "Strong question that tests nuanced understanding of gender-differentiated divorce outcomes including both content and chronicity. Well grounded in lesson text.",
+      "suggestedLesson": "4-school-and-family",
+      "suggestedParagraph": "### The Aftermath: How Divorce Affects Adults",
+      "lessonExcerpt": "For women: Economic hardship is the primary challenge. When women have custody of children, their financial situation typically worsens significantly after divorce. These economic consequences tend to be chronic. For men: Health problems more often stem from risky behaviors, social isolation, and psychological factors. However, these negative effects are often temporary rather than chronic.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 1
+    },
+    {
+      "stem": "A researcher studying sibling relationships across development finds that compared to early childhood, preadolescent sibling dyads show a shift in relational structure. Which of the following most accurately characterizes how sibling relationships typically change during preadolescence?",
+      "options": [
+        "Preadolescent siblings become substantially warmer and more emotionally intimate as their cognitive abilities mature",
+        "Preadolescent sibling relationships become more egalitarian and less asymmetrical, with the older sibling exerting less dominant authority over the younger",
+        "Conflict increases sharply in preadolescence and continues to escalate linearly through late adolescence",
+        "The younger sibling progressively takes on the dominant role in the relationship as the older sibling withdraws into peer relationships"
+      ],
+      "answer": "Preadolescent sibling relationships become more egalitarian and less asymmetrical, with the older sibling exerting less dominant authority over the younger",
+      "explanation": "During preadolescence, sibling relationships characteristically shift toward greater equality. The power differential that typifies early childhood\u2014where the older sibling tends to dominate and direct\u2014diminishes as the younger child develops cognitively and socially. While conflict may remain present, the structural change toward egalitarianism is the defining feature of preadolescent sibling dynamics. Sibling relationships do not simply become warmer or more intimate during this period, and conflict does not necessarily escalate linearly through adolescence. The younger sibling does not typically assume dominance.",
+      "kn": "KN4",
+      "kn_explanation": "Sibling relationships across development are a subtopic within Growth and Lifespan Development (Domain 4), covering family and peer relationship changes.",
+      "difficulty": "hard",
+      "quality_comment": "Tests a nuanced developmental shift in sibling dynamics that requires specific knowledge. High discriminability between distractors.",
+      "suggestedLesson": "4-school-and-family",
+      "suggestedParagraph": "## The Foundation: How Relationships Shape Us",
+      "lessonExcerpt": "Lesson content does not explicitly address preadolescent sibling relationship structure in the provided excerpts. Question is based on standard EPPP developmental knowledge for sibling relationships.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 5
     }
   ]
 }

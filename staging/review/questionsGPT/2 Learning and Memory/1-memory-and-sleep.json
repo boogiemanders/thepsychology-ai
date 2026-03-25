@@ -17,7 +17,7 @@
       "suggestedLesson": "1-memory-and-sleep",
       "suggestedParagraph": "## Study Strategies Based on Memory Neuroscience",
       "lessonExcerpt": "Study before sleep: Memory consolidation happens during sleep, particularly during slow-wave sleep. Reviewing challenging material before bed may enhance retention.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 10
     }

@@ -1,7 +1,7 @@
 {
   "questions": [
     {
-      "stem": "A psychiatrist explains to a psychology intern that the positive symptoms of schizophrenia—such as hallucinations, delusions, and disorganized thinking—are believed to result from excessive activity of a specific neurotransmitter. First-generation antipsychotics were developed to target this system. Which neurotransmitter system is most directly implicated in the positive symptoms of schizophrenia?",
+      "stem": "A psychiatrist explains to a psychology intern that the positive symptoms of schizophrenia\u2014such as hallucinations, delusions, and disorganized thinking\u2014are believed to result from excessive activity of a specific neurotransmitter. First-generation antipsychotics were developed to target this system. Which neurotransmitter system is most directly implicated in the positive symptoms of schizophrenia?",
       "options": [
         "Serotonin",
         "GABA",
@@ -30,7 +30,7 @@
         "Dopamine imbalance causes schizophrenia only when combined with serotonin excess, as shown by the superior efficacy of atypical antipsychotics"
       ],
       "answer": "Excessive dopamine activity in certain brain pathways contributes to schizophrenia, as supported by the fact that effective antipsychotics block dopamine receptors",
-      "explanation": "The dopamine hypothesis of schizophrenia proposes that excessive dopamine activity, particularly in the mesolimbic pathway, contributes to the positive symptoms of schizophrenia. The primary evidence comes from the fact that first-generation antipsychotics are dopamine antagonists — they block D2 receptors and effectively reduce positive symptoms like hallucinations and delusions. Additionally, drugs that increase dopamine activity (such as amphetamines) can produce psychotic symptoms resembling schizophrenia. Option A reverses the hypothesis. Option C is partially true for negative symptoms but does not represent the core dopamine hypothesis. Option D conflates the dopamine hypothesis with the mechanism of atypical antipsychotics.",
+      "explanation": "The dopamine hypothesis of schizophrenia proposes that excessive dopamine activity, particularly in the mesolimbic pathway, contributes to the positive symptoms of schizophrenia. The primary evidence comes from the fact that first-generation antipsychotics are dopamine antagonists \u2014 they block D2 receptors and effectively reduce positive symptoms like hallucinations and delusions. Additionally, drugs that increase dopamine activity (such as amphetamines) can produce psychotic symptoms resembling schizophrenia. Option A reverses the hypothesis. Option C is partially true for negative symptoms but does not represent the core dopamine hypothesis. Option D conflates the dopamine hypothesis with the mechanism of atypical antipsychotics.",
       "kn": "KN1",
       "kn_explanation": "Focus is on the neurochemical/neurobiological basis of schizophrenia (dopamine hypothesis), which is a functional correlate of the neurobiological bases of behavior",
       "difficulty": "medium",
@@ -51,7 +51,7 @@
         "Neuroleptic malignant syndrome"
       ],
       "answer": "Tardive dyskinesia",
-      "explanation": "Tardive dyskinesia typically emerges after long-term use of first-generation antipsychotics like haloperidol and involves involuntary movements usually starting with the tongue, face, and jaw. The presentation of lip smacking and chewing motions after years of treatment is classic. Akathisia involves subjective restlessness and an inability to sit still, not involuntary oral-facial movements. Acute dystonia involves sudden, sustained muscle spasms (e.g., torticollis, oculogyric crisis) and typically occurs early in treatment, not after years. Neuroleptic malignant syndrome presents with muscle rigidity, high fever, confusion, and unstable vital signs—a medical emergency distinct from this gradual-onset movement disorder.",
+      "explanation": "Tardive dyskinesia typically emerges after long-term use of first-generation antipsychotics like haloperidol and involves involuntary movements usually starting with the tongue, face, and jaw. The presentation of lip smacking and chewing motions after years of treatment is classic. Akathisia involves subjective restlessness and an inability to sit still, not involuntary oral-facial movements. Acute dystonia involves sudden, sustained muscle spasms (e.g., torticollis, oculogyric crisis) and typically occurs early in treatment, not after years. Neuroleptic malignant syndrome presents with muscle rigidity, high fever, confusion, and unstable vital signs\u2014a medical emergency distinct from this gradual-onset movement disorder.",
       "kn": "KN1",
       "kn_explanation": "This question tests knowledge of medication-induced movement disorders, specifically the clinical presentation of tardive dyskinesia associated with first-generation antipsychotics.",
       "difficulty": "medium",
@@ -80,7 +80,7 @@
       "suggestedLesson": "1-pharmacology-antidepressants-antipsychotics",
       "suggestedParagraph": "### SSRIs: The First-Line Treatment",
       "lessonExcerpt": "For bipolar disorder, they're used cautiously. Usually combined with a mood stabilizer because SSRIs alone can trigger manic episodes.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 5
     },
@@ -93,7 +93,7 @@
         "Reduced effectiveness for negative symptoms such as flat affect and social withdrawal"
       ],
       "answer": "Reduced effectiveness for negative symptoms such as flat affect and social withdrawal",
-      "explanation": "First-generation (typical) antipsychotics like haloperidol are effective for positive symptoms (hallucinations, delusions, disorganized thinking) but are much less effective for negative symptoms (flat affect, social withdrawal, lack of motivation). Agranulocytosis risk (A) is specifically associated with clozapine, a second-generation antipsychotic. Option B is incorrect because FGAs are effective for positive symptoms. Option C reverses the actual pattern — FGAs are better for positive, not negative, symptoms.",
+      "explanation": "First-generation (typical) antipsychotics like haloperidol are effective for positive symptoms (hallucinations, delusions, disorganized thinking) but are much less effective for negative symptoms (flat affect, social withdrawal, lack of motivation). Agranulocytosis risk (A) is specifically associated with clozapine, a second-generation antipsychotic. Option B is incorrect because FGAs are effective for positive symptoms. Option C reverses the actual pattern \u2014 FGAs are better for positive, not negative, symptoms.",
       "kn": "KN1",
       "kn_explanation": "This question tests knowledge of psychopharmacology, specifically the differential effectiveness of first-generation antipsychotics, a biological bases topic.",
       "difficulty": "medium",
@@ -160,11 +160,11 @@
       "kn": "KN1",
       "kn_explanation": "This question tests psychopharmacology knowledge regarding medication side effects, a core biological bases topic.",
       "difficulty": "hard",
-      "quality_comment": "The lesson lists anticholinergic effects with dry mouth first but does not explicitly state it is the 'most prevalent.' This is standard EPPP knowledge but not directly stated in the lesson text.",
+      "quality_comment": "Tests anticholinergic side effect profile of low-potency FGAs. Lesson covers anticholinergic effects with dry mouth listed first.",
       "suggestedLesson": "1-pharmacology-antidepressants-antipsychotics",
       "suggestedParagraph": "### First-Generation Antipsychotics (FGAs): The Original Heavy Hitters",
-      "lessonExcerpt": "Anticholinergic Effects | Low-potency FGAs (chlorpromazine, thioridazine) | Dry mouth, blurred vision, constipation, urinary retention, rapid heart rate",
-      "needsReview": true,
+      "lessonExcerpt": "Anticholinergic Effects: Low-potency FGAs like chlorpromazine cause dry mouth, blurred vision, urinary retention, and constipation.",
+      "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 24
     },
@@ -524,6 +524,27 @@
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 18
+    },
+    {
+      "stem": "A psychiatric resident reviews a patient's chart and notes that the patient's hallucinations and delusions responded well to treatment with haloperidol, a first-generation antipsychotic. The resident correctly reasons that the mechanism by which this drug alleviates positive symptoms provides the most direct pharmacological evidence for which neurobiological hypothesis of schizophrenia?",
+      "options": [
+        "Deficient serotonergic transmission in mesolimbic circuits",
+        "Excess dopaminergic activity, particularly at D2 receptors",
+        "Reduced glutamatergic (NMDA) activity in the prefrontal cortex",
+        "Overactivation of noradrenergic pathways in the locus coeruleus"
+      ],
+      "answer": "Excess dopaminergic activity, particularly at D2 receptors",
+      "explanation": "First-generation antipsychotics (FGAs) such as haloperidol are dopamine antagonists that primarily block D2 receptors, thereby reducing dopaminergic activity. Their effectiveness in reducing positive symptoms (hallucinations, delusions) directly implicates excess dopaminergic activity at D2 receptors as central to the pathophysiology of schizophrenia \u2014 the core of the dopamine hypothesis. Serotonergic deficiency is more closely associated with major depression; second-generation antipsychotics target both dopamine and serotonin, but FGA efficacy is driven by D2 blockade alone. The glutamate/NMDA hypofunction hypothesis is a complementary model not implicated by FGA mechanisms. Noradrenergic dysregulation is primarily implicated in mood and anxiety disorders.",
+      "kn": "KN1",
+      "kn_explanation": "The dopamine hypothesis of schizophrenia and its pharmacological evidence through antipsychotic mechanisms fall under Domain 1: Biological Bases of Behavior, specifically neurotransmitters and psychopathology.",
+      "difficulty": "medium",
+      "quality_comment": "Reasoning-based question requiring the student to work backward from pharmacological mechanism to etiological inference; strong distractors include other valid but incorrect neurotransmitter hypotheses.",
+      "suggestedLesson": "1-pharmacology-antidepressants-antipsychotics",
+      "suggestedParagraph": "### First-Generation Antipsychotics (FGAs): The Original Heavy Hitters",
+      "lessonExcerpt": "FGAs are dopamine antagonists. They block dopamine receptors, specifically D2 receptors, which reduces the overactivity believed to cause psychotic symptoms.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 10
     }
   ]
 }

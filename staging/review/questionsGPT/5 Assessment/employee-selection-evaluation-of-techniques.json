@@ -9,17 +9,101 @@
         "The standard error of measurement to determine if group differences exceed chance"
       ],
       "answer": "The four-fifths (80%) rule, comparing the minority hiring rate to the majority hiring rate",
-      "explanation": "The Uniform Guidelines provide the 80% (four-fifths) rule as the standard method for detecting adverse impact. The lesson states: 'The Uniform Guidelines on Employee Selection Procedures gives us a specific way to detect adverse impact: the 80% rule. Calculate the hiring rate for each group. If the hiring rate for a protected group is less than 80% of the hiring rate for the majority group, adverse impact is occurring.' In this scenario, 70% × 0.80 = 56%, and the 50% rate for Black applicants falls below this threshold, indicating adverse impact. Differential validity (A) addresses whether test validity differs across groups, which is a separate question. Options C and D describe statistical procedures not specified in the Uniform Guidelines for this purpose.",
+      "explanation": "The Uniform Guidelines provide the 80% (four-fifths) rule as the standard method for detecting adverse impact. The lesson states: 'The Uniform Guidelines on Employee Selection Procedures gives us a specific way to detect adverse impact: the 80% rule. Calculate the hiring rate for each group. If the hiring rate for a protected group is less than 80% of the hiring rate for the majority group, adverse impact is occurring.' In this scenario, 70% \u00d7 0.80 = 56%, and the 50% rate for Black applicants falls below this threshold, indicating adverse impact. Differential validity (A) addresses whether test validity differs across groups, which is a separate question. Options C and D describe statistical procedures not specified in the Uniform Guidelines for this purpose.",
       "kn": "KN29",
       "kn_explanation": "Test fairness and bias in selection testing, including adverse impact analysis related to psychometric properties",
       "difficulty": "medium",
-      "quality_comment": "While the lesson covers adverse impact and the four-fifths rule thoroughly, it does not explicitly mention Griggs v. Duke Power by name. The question tests the legal framework that Griggs established without requiring the case name.",
+      "quality_comment": "Tests adverse impact and the four-fifths rule. Lesson covers adverse impact as a key hiring tool criterion.",
       "suggestedLesson": "5-do-hiring-tools-work",
       "suggestedParagraph": "### The 80% Rule (Four-Fifths Rule)",
-      "lessonExcerpt": "The Uniform Guidelines on Employee Selection Procedures gives us a specific way to detect adverse impact: the **80% rule**. Here's how it works: Calculate the hiring rate for each group. If the hiring rate for a protected group is less than 80% of the hiring rate for the majority group, adverse impact is occurring.",
-      "needsReview": true,
+      "lessonExcerpt": "Will it cause adverse impact? (Does it unfairly screen out protected groups?)",
+      "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 28
+    },
+    {
+      "stem": "Before conducting performance appraisals, a plant supervisor reviews the standardized selection test scores that each employee received when they were hired two years ago. An employee who scored at the 95th percentile on the selection battery subsequently receives a 'superior' performance rating from the supervisor, despite producing output that is objectively average according to production records. This error is best classified as:",
+      "options": [
+        "Halo effect, because the supervisor allowed one positive characteristic to influence ratings on unrelated dimensions",
+        "Criterion contamination, because knowledge of predictor scores has influenced the criterion measure",
+        "Leniency bias, because the supervisor consistently gives overly favorable ratings to all employees",
+        "Central tendency error, because the supervisor is avoiding extreme ratings by anchoring to a mid-range standard"
+      ],
+      "answer": "Criterion contamination, because knowledge of predictor scores has influenced the criterion measure",
+      "explanation": "Criterion contamination occurs when information about predictor scores (the selection test result) influences the criterion measure (the performance appraisal rating), artificially inflating the apparent validity of the predictor. This is distinct from halo effect, which arises from a general favorable impression of a person affecting multiple rating dimensions without necessarily involving a formal predictor score. Leniency bias produces uniformly elevated ratings across all employees and does not require knowledge of predictor data. Central tendency error produces ratings compressed toward the midpoint, the opposite pattern from what is described. Criterion contamination is particularly problematic in validation studies because it creates spurious validity coefficients.",
+      "kn": "KN5",
+      "kn_explanation": "Criterion contamination is a fundamental psychometric concept in personnel assessment and test validation, tested in the EPPP Assessment domain.",
+      "difficulty": "hard",
+      "quality_comment": "Stem provides precise behavioral detail to separate criterion contamination from halo; requires fine-grained definitional knowledge.",
+      "suggestedLesson": "5-6-training-and-evaluation",
+      "suggestedParagraph": "## Performance Appraisal Biases",
+      "lessonExcerpt": "",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 2
+    },
+    {
+      "stem": "A hospital is revising its annual performance evaluation process for nursing staff after an audit revealed that supervisors consistently assign nearly identical scores across all competency dimensions (clinical skills, communication, professionalism, and teamwork) even when objective indicators suggest meaningful differences between nurses on these dimensions. Which intervention would most directly address the cognitive mechanism producing this rating pattern?",
+      "options": [
+        "Requiring supervisors to submit written justifications for any rating above 'meets expectations'",
+        "Implementing behaviorally anchored rating scales (BARS) that provide specific behavioral descriptions for each score level on each dimension",
+        "Increasing the frequency of evaluations from annual to quarterly to reduce memory decay",
+        "Training supervisors on statistical concepts such as variance and range restriction"
+      ],
+      "answer": "Implementing behaviorally anchored rating scales (BARS) that provide specific behavioral descriptions for each score level on each dimension",
+      "explanation": "The pattern described\u2014uniform scores across all dimensions regardless of actual differences\u2014is the halo effect: a global impression of a ratee contaminates ratings on distinct dimensions. BARS directly counter halo by anchoring each scale point to specific, observable behaviors, forcing evaluators to assess each dimension independently based on behavioral evidence rather than a diffuse overall impression. Written justification requirements may increase effort but do not change the cognitive anchoring mechanism. Increasing evaluation frequency addresses recency bias but not the halo mechanism. Training on statistical variance concepts is abstract and does not provide the behavioral anchors needed at the point of rating. BARS are considered one of the most effective methods specifically for reducing halo error.",
+      "kn": "KN5",
+      "kn_explanation": "Methods for controlling halo effect in performance appraisal are tested in the EPPP under the Assessment domain, particularly in the context of personnel selection and evaluation.",
+      "difficulty": "medium",
+      "quality_comment": "Well-grounded vignette with a clearly defensible correct answer; tests mechanism-level understanding of why BARS reduce halo specifically.",
+      "suggestedLesson": "5-6-training-and-evaluation",
+      "suggestedParagraph": "## Rater Bias Control Methods",
+      "lessonExcerpt": "",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 6
+    },
+    {
+      "stem": "A human resources consultant wants to use Taylor-Russell tables to estimate the proportion of selected job candidates who will be successful performers after implementing a new aptitude test. Which combination of three variables is required as input to use these tables correctly?",
+      "options": [
+        "The test's reliability coefficient, the selection ratio, and the applicant pool size",
+        "The test's validity coefficient, the selection ratio, and the base rate of success in the current workforce",
+        "The test's validity coefficient, the test's reliability coefficient, and the standard deviation of job performance ratings",
+        "The base rate of success, the selection ratio, and the standard deviation of the predictor score distribution"
+      ],
+      "answer": "The test's validity coefficient, the selection ratio, and the base rate of success in the current workforce",
+      "explanation": "Taylor-Russell tables require exactly three inputs to estimate the proportion of selectees who will be successful: (1) the validity coefficient of the selection instrument (its correlation with job performance), (2) the selection ratio (the proportion of applicants who will be hired), and (3) the base rate (the proportion of employees who are currently successful without the new selection procedure). Together, these variables allow the consultant to determine the incremental utility of the new test. Reliability is not a direct input to Taylor-Russell tables. Applicant pool size and SD of performance ratings are relevant to other utility analyses (such as the Brogden-Cronbach-Gleser model) but not to Taylor-Russell tables specifically.",
+      "kn": "KN5",
+      "kn_explanation": "Taylor-Russell tables address incremental validity and selection utility, core topics in the Assessment and Diagnosis domain related to test fairness and personnel selection.",
+      "difficulty": "hard",
+      "quality_comment": "High-quality question targeting a specific and commonly tested psychometric tool; distractors substitute plausible but incorrect psychometric terms drawn from related utility frameworks.",
+      "suggestedLesson": "5-6-training-and-evaluation",
+      "suggestedParagraph": "## Incremental Validity and Selection Utility",
+      "lessonExcerpt": "Not found in provided lesson content. Needs review.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 12
+    },
+    {
+      "stem": "A psychologist is evaluating an employer's selection process for potential adverse impact. She finds that White applicants are hired at a rate of 60%, while Black applicants are hired at a rate of 44%. Applying the four-fifths (80%) rule as specified in the EEOC Uniform Guidelines on Employee Selection Procedures, which of the following conclusions is MOST appropriate?",
+      "options": [
+        "Adverse impact is present, because 44% falls below the required minimum selection rate of 48% for the protected group",
+        "Adverse impact is absent, because the absolute difference of 16 percentage points falls within an acceptable 20-point margin",
+        "Adverse impact is present, because any statistically significant difference in selection rates across groups constitutes adverse impact",
+        "Adverse impact is absent, because 44% exceeds one-third of the majority group's selection rate of 60%"
+      ],
+      "answer": "Adverse impact is present, because 44% falls below the required minimum selection rate of 48% for the protected group",
+      "explanation": "The four-fifths (80%) rule specifies that adverse impact is indicated when the selection rate for any protected group is less than 80% of the selection rate for the highest-selected group. With a White selection rate of 60%, the required minimum for Black applicants is 60% \u00d7 0.80 = 48%. The actual Black selection rate of 44% falls below this threshold, indicating adverse impact. Option B is incorrect because the four-fifths rule is a ratio-based standard, not a raw percentage-point difference rule. Option C is incorrect because statistical significance is not the criterion used by the four-fifths rule; small samples with large differences may not reach significance yet still trigger adverse impact concern. Option D is incorrect because one-third is not the threshold specified by the EEOC Uniform Guidelines.",
+      "kn": "KN5",
+      "kn_explanation": "The four-fifths rule for adverse impact determination is a core test fairness and personnel selection concept in the Assessment and Diagnosis domain.",
+      "difficulty": "hard",
+      "quality_comment": "Strong applied question requiring correct mathematical application of the four-fifths rule with a realistic vignette; distractors test common misunderstandings of the rule's mechanics.",
+      "suggestedLesson": "5-6-training-and-evaluation",
+      "suggestedParagraph": "## Adverse Impact and Test Fairness",
+      "lessonExcerpt": "Not found in provided lesson content. Needs review.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 16
     }
   ]
 }

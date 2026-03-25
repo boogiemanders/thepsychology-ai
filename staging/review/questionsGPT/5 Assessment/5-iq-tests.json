@@ -9,15 +9,15 @@
         "A regression to the mean artifact that will resolve upon retesting"
       ],
       "answer": "A ceiling effect that restricts the test's ability to differentiate among high-ability examinees",
-      "explanation": "When a child scores at or near the maximum on test items, the test lacks sufficient difficulty to distinguish among very high-ability examinees—this is a ceiling effect. The test cannot measure how far above the maximum the child's true ability extends. This is a well-known limitation of standard IQ tests for gifted children. Option B (practice effect) refers to score improvement from repeated testing. Option C (floor effect) is the opposite problem—when items are too difficult, scores cluster at the bottom. Option D (regression to the mean) is a statistical phenomenon where extreme scores tend to move toward the average on retesting, unrelated to item difficulty limitations.",
+      "explanation": "When a child scores at or near the maximum on test items, the test lacks sufficient difficulty to distinguish among very high-ability examinees\u2014this is a ceiling effect. The test cannot measure how far above the maximum the child's true ability extends. This is a well-known limitation of standard IQ tests for gifted children. Option B (practice effect) refers to score improvement from repeated testing. Option C (floor effect) is the opposite problem\u2014when items are too difficult, scores cluster at the bottom. Option D (regression to the mean) is a statistical phenomenon where extreme scores tend to move toward the average on retesting, unrelated to item difficulty limitations.",
       "kn": "KN5",
       "kn_explanation": "This question addresses limitations of intelligence tests in assessment, specifically how ceiling effects impact gifted evaluations.",
       "difficulty": "medium",
       "quality_comment": "Good conceptual question about a well-known IQ test limitation. While the lesson doesn't explicitly discuss ceiling effects for gifted children in detail, the SB5 section discusses ceiling levels in test administration, and this is a standard EPPP concept.",
       "suggestedLesson": "5-iq-tests",
       "suggestedParagraph": "## Stanford-Binet Intelligence Scale, 5th Edition (SB5)",
-      "lessonExcerpt": "Testing continues until you reach the ceiling level—the point where they miss 75% of questions at two consecutive age levels.",
-      "needsReview": true,
+      "lessonExcerpt": "Testing continues until you reach the ceiling level\u2014the point where they miss 75% of questions at two consecutive age levels.",
+      "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 7
     },
@@ -206,7 +206,7 @@
       "suggestedLesson": "5-iq-tests",
       "suggestedParagraph": "## Understanding Intelligence: The Theoretical Foundation",
       "lessonExcerpt": "The lesson does not specifically cover verbal intelligence tests for children with disorders.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 24
     },
@@ -230,6 +230,27 @@
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 24
+    },
+    {
+      "stem": "A researcher develops a performance appraisal instrument for hospital-based clinical psychologists that measures only session count, client symptom reduction scores, and therapy completion rates. An expert review panel notes that the measure omits supervisory competence, interdisciplinary consultation skills, administrative contributions, and training program involvement\u2014all of which are established components of the performance domain for this role. The panel's primary psychometric concern regarding this instrument is best described as:",
+      "options": [
+        "Criterion contamination, because extraneous variables have been introduced into the criterion measure",
+        "Criterion deficiency, because the criterion measure fails to capture the full scope of the performance construct",
+        "Predictive bias, because the instrument will underpredict performance for some demographic subgroups",
+        "Convergent invalidity, because the measure correlates too highly with a single dimension of performance"
+      ],
+      "answer": "Criterion deficiency, because the criterion measure fails to capture the full scope of the performance construct",
+      "explanation": "Criterion deficiency occurs when a criterion measure does not assess all relevant dimensions of the construct it is intended to represent, leaving important aspects of the performance domain unmeasured. In this case, supervisory competence, consultation, administrative duties, and training contributions are legitimate components of a clinical psychologist's role that are absent from the appraisal. Option A (criterion contamination) is the opposite problem\u2014variance in the criterion attributable to factors unrelated to true performance, not missing dimensions. Option C (predictive bias) refers to differential prediction of criterion scores across demographic groups, which is a validity generalization issue rather than a domain-coverage issue. Option D is incorrect because convergent invalidity involves pattern-of-correlations evidence and does not describe incomplete domain sampling.",
+      "kn": "KN5",
+      "kn_explanation": "Criterion deficiency is a foundational psychometric concept within the Assessment domain (KN5). Understanding sources of criterion-related validity threats, including criterion deficiency and criterion contamination, is directly tested on the EPPP.",
+      "difficulty": "medium",
+      "quality_comment": "Clear real-world vignette effectively differentiates criterion deficiency from the commonly confused criterion contamination. Distractors test precise conceptual distinctions appropriate for doctoral-level assessment.",
+      "suggestedLesson": "5-iq-tests",
+      "suggestedParagraph": "## Validity and Test Development Concepts",
+      "lessonExcerpt": "NOT COVERED: The provided lesson files do not explicitly address criterion deficiency as a psychometric concept. While empirical criterion keying is mentioned in 5-career-interests.md and 5-mmpi.md, the specific distinction between criterion deficiency and criterion contamination is not covered. A psychometrics or test construction lesson should include this content.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 22
     }
   ]
 }

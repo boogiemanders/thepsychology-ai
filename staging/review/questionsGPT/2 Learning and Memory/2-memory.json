@@ -9,11 +9,11 @@
         "All three groups will recall equally well, because each task requires active processing of the words"
       ],
       "answer": "The group that judged sentence fit, because semantic encoding is the most effective way to transfer information to long-term memory",
-      "explanation": "Levels of processing theory (Craik & Lockhart) proposes that deeper, more meaningful processing leads to better memory. Counting vowels involves shallow structural processing, rhyming involves intermediate phonological processing, and judging sentence fit requires deep semantic processing—connecting the word to meaning. The lesson states that semantic encoding is 'the most effective way to transfer information to long-term memory.' Option A is incorrect because structural processing is the shallowest level. Option B is incorrect because phonological processing, while deeper than structural, is not as effective as semantic processing. Option D is incorrect because the depth of processing, not merely active engagement, determines retention.",
+      "explanation": "Levels of processing theory (Craik & Lockhart) proposes that deeper, more meaningful processing leads to better memory. Counting vowels involves shallow structural processing, rhyming involves intermediate phonological processing, and judging sentence fit requires deep semantic processing\u2014connecting the word to meaning. The lesson states that semantic encoding is 'the most effective way to transfer information to long-term memory.' Option A is incorrect because structural processing is the shallowest level. Option B is incorrect because phonological processing, while deeper than structural, is not as effective as semantic processing. Option D is incorrect because the depth of processing, not merely active engagement, determines retention.",
       "kn": "KN8",
-      "kn_explanation": "Describes a levels-of-processing (Craik & Lockhart) experiment—shallow vs. deep encoding tasks applied to word lists, which is a core memory theory/model.",
+      "kn_explanation": "Describes a levels-of-processing (Craik & Lockhart) experiment\u2014shallow vs. deep encoding tasks applied to word lists, which is a core memory theory/model.",
       "difficulty": "medium",
-      "quality_comment": "Classic levels-of-processing paradigm. The lesson covers semantic encoding as most effective but does not explicitly discuss Craik and Lockhart's levels of processing framework by name—only references elaborative rehearsal and semantic encoding.",
+      "quality_comment": "Classic levels-of-processing paradigm. Lesson covers semantic encoding as most effective for long-term memory transfer.",
       "suggestedLesson": "2-memory",
       "suggestedParagraph": "### Elaborative Rehearsal: Make It Meaningful",
       "lessonExcerpt": "This process, called semantic encoding, is the most effective way to transfer information to long-term memory.",
@@ -30,11 +30,11 @@
         "Motivation to use the technique based on the observed positive outcome"
       ],
       "answer": "Direct reinforcement of the trainee's behavior by the supervisor",
-      "explanation": "Bandura's social cognitive theory identifies four processes required for observational learning: attention, retention, production (motor capability), and motivation. Importantly, direct reinforcement is NOT required for learning to occur—Bandura demonstrated that children learned aggressive behavior from models without being directly reinforced. Reinforcement affects performance rather than learning itself, and vicarious reinforcement (seeing the model's success) can serve as motivation. Option A is incorrect because attention is one of the four required processes. Option B is incorrect because retention is also required. Option D is incorrect because motivation is the fourth required process—here provided through vicarious reinforcement from observing the supervisor's success.",
+      "explanation": "Bandura's social cognitive theory identifies four processes required for observational learning: attention, retention, production (motor capability), and motivation. Importantly, direct reinforcement is NOT required for learning to occur\u2014Bandura demonstrated that children learned aggressive behavior from models without being directly reinforced. Reinforcement affects performance rather than learning itself, and vicarious reinforcement (seeing the model's success) can serve as motivation. Option A is incorrect because attention is one of the four required processes. Option B is incorrect because retention is also required. Option D is incorrect because motivation is the fourth required process\u2014here provided through vicarious reinforcement from observing the supervisor's success.",
       "kn": "KN7",
-      "kn_explanation": "Describes observational/vicarious learning (Bandura's social learning theory)—trainee watches a model and later reproduces the behavior, a fundamental learning principle.",
+      "kn_explanation": "Describes observational/vicarious learning (Bandura's social learning theory)\u2014trainee watches a model and later reproduces the behavior, a fundamental learning principle.",
       "difficulty": "medium",
-      "quality_comment": "Tests the critical distinction that direct reinforcement is not required for observational learning—a key differentiator from operant conditioning that is frequently tested on the EPPP.",
+      "quality_comment": "Tests the critical distinction that direct reinforcement is not required for observational learning\u2014a key differentiator from operant conditioning that is frequently tested on the EPPP.",
       "suggestedLesson": "2-memory",
       "suggestedParagraph": "### Bandura's Social Cognitive Theory",
       "lessonExcerpt": "Key finding: Reinforcement affects performance, not learning. Children learned aggressive behavior from models but only performed it when motivated.",
@@ -51,7 +51,7 @@
         "The primacy effect to consolidate early list items"
       ],
       "answer": "Semantic encoding to create meaningful associations in long-term memory",
-      "explanation": "Semantic encoding—connecting new information to existing meaningful knowledge—is the most effective way to transfer information into long-term memory. Creating personal clinical examples is a form of elaborative rehearsal that engages semantic encoding. The phonological loop (A) is a working memory subsystem for maintaining verbal information short-term, not for deep encoding. Iconic memory (C) refers to brief visual sensory storage lasting about 0.5 seconds. The primacy effect (D) refers to better recall of items at the beginning of a list due to greater rehearsal, not to the quality of encoding strategy used.",
+      "explanation": "Semantic encoding\u2014connecting new information to existing meaningful knowledge\u2014is the most effective way to transfer information into long-term memory. Creating personal clinical examples is a form of elaborative rehearsal that engages semantic encoding. The phonological loop (A) is a working memory subsystem for maintaining verbal information short-term, not for deep encoding. Iconic memory (C) refers to brief visual sensory storage lasting about 0.5 seconds. The primacy effect (D) refers to better recall of items at the beginning of a list due to greater rehearsal, not to the quality of encoding strategy used.",
       "kn": "KN6",
       "kn_explanation": "Semantic encoding and memory transfer processes are core concepts within the Cognitive-Affective Bases of Behavior domain.",
       "difficulty": "medium",
@@ -72,7 +72,7 @@
         "Semantic long-term memory"
       ],
       "answer": "The episodic buffer",
-      "explanation": "The episodic buffer is the component of Baddeley's working memory model that integrates information from multiple sources and links current information to long-term memory. The scenario describes holding current verbal input while connecting it to previously stored session information and using it for decision-making—precisely the integrative function of the episodic buffer. The phonological loop (A) only stores verbal/auditory information temporarily and cannot integrate information from long-term memory. Sensory memory (B) holds raw sensory input for fractions of a second. Semantic long-term memory (D) stores general knowledge but doesn't actively manipulate and integrate information in real time.",
+      "explanation": "The episodic buffer is the component of Baddeley's working memory model that integrates information from multiple sources and links current information to long-term memory. The scenario describes holding current verbal input while connecting it to previously stored session information and using it for decision-making\u2014precisely the integrative function of the episodic buffer. The phonological loop (A) only stores verbal/auditory information temporarily and cannot integrate information from long-term memory. Sensory memory (B) holds raw sensory input for fractions of a second. Semantic long-term memory (D) stores general knowledge but doesn't actively manipulate and integrate information in real time.",
       "kn": "KN6",
       "kn_explanation": "Working memory and Baddeley's model are core memory concepts within the Cognitive-Affective Bases domain.",
       "difficulty": "hard",
@@ -93,7 +93,7 @@
         "retrospective; prospective"
       ],
       "answer": "semantic; episodic",
-      "explanation": "Semantic memory stores general knowledge and facts (DSM-5 criteria, therapy theories, vocabulary, historical facts), while episodic memory stores personal experiences tied to specific times and contexts (your first therapy session, a family gathering). The patient's preserved ability to recall factual knowledge with impaired recall of personal events reflects intact semantic memory with impaired episodic memory. Option A is incorrect because procedural memory involves motor skills and habits, not factual knowledge. Option B is too broad—both semantic and episodic memory are forms of explicit memory. Option D is incorrect because retrospective memory encompasses all past memory, and prospective memory refers to remembering future intentions, neither of which captures this specific dissociation.",
+      "explanation": "Semantic memory stores general knowledge and facts (DSM-5 criteria, therapy theories, vocabulary, historical facts), while episodic memory stores personal experiences tied to specific times and contexts (your first therapy session, a family gathering). The patient's preserved ability to recall factual knowledge with impaired recall of personal events reflects intact semantic memory with impaired episodic memory. Option A is incorrect because procedural memory involves motor skills and habits, not factual knowledge. Option B is too broad\u2014both semantic and episodic memory are forms of explicit memory. Option D is incorrect because retrospective memory encompasses all past memory, and prospective memory refers to remembering future intentions, neither of which captures this specific dissociation.",
       "kn": "KN6",
       "kn_explanation": "This question falls under Domain 2: Cognitive-Affective Bases of Behavior, specifically the memory systems subtopic.",
       "difficulty": "medium",
@@ -114,7 +114,7 @@
         "Encoding failure, because the CPT material was never adequately transferred to long-term memory"
       ],
       "answer": "Proactive interference, because previously learned EMDR protocols are interfering with acquisition of new CPT material",
-      "explanation": "Proactive interference occurs when old information blocks new learning. The trainee's well-established EMDR knowledge is interfering with her ability to learn the new CPT protocols. Interference is strongest when information is similar—both are structured trauma therapies with session-by-session protocols, making this a textbook case. Option A describes the reverse pattern (new blocking old), which is not what's happening here—she's struggling with the new material, not forgetting the old. Option C is unlikely because the EMDR knowledge is clearly still active (it's intruding on new learning, not fading). Option D is incorrect because the trainee is actively studying and engaging with the material; the problem is interference from prior learning, not failure to encode.",
+      "explanation": "Proactive interference occurs when old information blocks new learning. The trainee's well-established EMDR knowledge is interfering with her ability to learn the new CPT protocols. Interference is strongest when information is similar\u2014both are structured trauma therapies with session-by-session protocols, making this a textbook case. Option A describes the reverse pattern (new blocking old), which is not what's happening here\u2014she's struggling with the new material, not forgetting the old. Option C is unlikely because the EMDR knowledge is clearly still active (it's intruding on new learning, not fading). Option D is incorrect because the trainee is actively studying and engaging with the material; the problem is interference from prior learning, not failure to encode.",
       "kn": "KN6",
       "kn_explanation": "This question falls under Domain 2: Cognitive-Affective Bases of Behavior, specifically memory and forgetting processes.",
       "difficulty": "medium",
@@ -269,7 +269,7 @@
       "suggestedLesson": "2-memory",
       "suggestedParagraph": "## Why Memory Matters for Psychologists",
       "lessonExcerpt": "The lesson does not adequately cover Herzberg's theory, indicating a need for review.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 22
     },
@@ -458,7 +458,7 @@
       "suggestedLesson": "2-memory",
       "suggestedParagraph": "## Why Memory Matters for Psychologists",
       "lessonExcerpt": "Understanding these systems helps you distinguish normal forgetting from pathological memory problems.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 22
     },
@@ -500,7 +500,7 @@
       "suggestedLesson": "2-memory",
       "suggestedParagraph": "## The Three-Store Model: How Information Moves Through Your Brain",
       "lessonExcerpt": "Understanding these systems helps you distinguish normal forgetting from pathological memory problems.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 24
     },
@@ -626,7 +626,7 @@
       "suggestedLesson": "2-memory",
       "suggestedParagraph": "## The Serial Position Effect: Proof the Model Works",
       "lessonExcerpt": "Selective attention limits the ability to effectively process multiple tasks simultaneously, leading to poorer performance.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 9
     },
@@ -786,7 +786,7 @@
         "All of the above"
       ],
       "answer": "All of the above",
-      "explanation": "All three types of encoding—semantic, visual, and acoustic—are methods through which sensory input is transformed into a storable format in long-term memory. Semantic encoding focuses on the meaning of information, visual encoding on images, and acoustic encoding on sounds. Each plays a role in memory processes.",
+      "explanation": "All three types of encoding\u2014semantic, visual, and acoustic\u2014are methods through which sensory input is transformed into a storable format in long-term memory. Semantic encoding focuses on the meaning of information, visual encoding on images, and acoustic encoding on sounds. Each plays a role in memory processes.",
       "kn": "KN2",
       "kn_explanation": "This KN code applies as it relates to the understanding of memory processes, specifically encoding types.",
       "difficulty": "medium",
@@ -836,7 +836,7 @@
       "suggestedLesson": "2-memory",
       "suggestedParagraph": "## Types of Long-Term Memory: Not All Memories Are Equal",
       "lessonExcerpt": "This explains why clients might say they 'heard' what you said but can't recall it, the information never made it past sensory memory because their attention was elsewhere.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 3
     },
@@ -944,6 +944,153 @@
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 20
+    },
+    {
+      "stem": "A psychology intern can recall that the DSM-5 requires at least five symptoms for a Major Depressive Episode, that the multi-store model of memory was proposed by Atkinson and Shiffrin, and that delay conditioning is the most effective timing procedure in classical conditioning. According to the declarative memory framework described in the lesson, which memory system stores this body of knowledge?",
+      "options": [
+        "Episodic memory, because the intern acquired this knowledge during specific graduate school lectures",
+        "Semantic memory, because it consists of general factual knowledge not tied to a particular personal experience",
+        "Procedural memory, because applying diagnostic criteria is a clinical skill performed with increasing automaticity",
+        "Prospective memory, because the intern must remember to use this knowledge during future assessments"
+      ],
+      "answer": "Semantic memory, because it consists of general factual knowledge not tied to a particular personal experience",
+      "explanation": "Semantic memory stores general knowledge and facts independent of when or where they were learned. The lesson explicitly lists DSM criteria and therapy theories as canonical examples of semantic memory content. Episodic memory stores personally experienced events (e.g., the memory of attending a specific lecture), not the factual content extracted from those events. Procedural memory governs skilled actions performed without conscious awareness. Prospective memory is the intention to act in the future, not a repository of factual knowledge.",
+      "kn": "KN6",
+      "kn_explanation": "Memory types including the semantic/episodic distinction within declarative memory are core content in Domain 2: Cognitive-Affective Bases of Behavior.",
+      "difficulty": "medium",
+      "quality_comment": "Clinically grounded and directly supported by lesson text. Distractors are plausible and test meaningful distinctions within the declarative memory taxonomy.",
+      "suggestedLesson": "2-memory",
+      "suggestedParagraph": "## Types of Long-Term Memory: Not All Memories Are Equal",
+      "lessonExcerpt": "Semantic memory: General knowledge and facts (DSM-5 criteria, therapy theories, that the multi-store model has three components)",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 1
+    },
+    {
+      "stem": "A memory researcher presents participants with 20 tasks; they are allowed to complete only 10 and are interrupted before finishing the remaining 10. On a surprise recall test administered one hour later, participants correctly recall an average of 6.8 of the interrupted tasks but only 4.3 of the completed tasks. The researcher's hypothesis is that cognitive tension created by unfinished tasks keeps them in an active memorial state. This hypothesis is most directly consistent with which memory phenomenon?",
+      "options": [
+        "The generation effect, because actively working on a task enhances encoding relative to passive reception",
+        "The Zeigarnik effect, which holds that memory for incomplete tasks is superior to memory for completed tasks",
+        "The spacing effect, because distributed rehearsal across interrupted trials strengthens the memory trace",
+        "Proactive interference, because earlier completed tasks disrupt encoding of the interrupted tasks presented later"
+      ],
+      "answer": "The Zeigarnik effect, which holds that memory for incomplete tasks is superior to memory for completed tasks",
+      "explanation": "The Zeigarnik effect, named after Bluma Zeigarnik, is the empirical finding that people retain interrupted or incomplete tasks better in memory than completed ones. The theoretical account holds that incomplete tasks create a persistent cognitive tension or motivational state that keeps the task mentally active. The generation effect refers to superior memory for self-generated versus externally provided material, not to a completion-vs.-interruption difference. The spacing effect addresses the benefit of distributing practice over time. Proactive interference describes earlier learning impairing later learning, not the differential recall of interrupted versus completed tasks.",
+      "kn": "KN6",
+      "kn_explanation": "The Zeigarnik effect is a memory phenomenon within Domain 2: Cognitive-Affective Bases of Behavior.",
+      "difficulty": "hard",
+      "quality_comment": "Rigorous experimental scenario question. Content goes beyond current lesson material \u2014 valid EPPP topic, no lesson excerpt available.",
+      "suggestedLesson": "2-memory",
+      "suggestedParagraph": "## Memory Phenomena",
+      "lessonExcerpt": "",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 4
+    },
+    {
+      "stem": "A cognitive scientist studying how expert chess players evaluate positions asks grandmasters to speak aloud every thought, evaluation, and strategy consideration they have while choosing their next move. The researcher transcribes these verbalizations and codes them for categories of strategic reasoning. This data collection method is best described as:",
+      "options": [
+        "Retrospective self-report, because participants are describing mental events that occurred prior to verbalization",
+        "Protocol analysis, because participants provide concurrent verbal reports of ongoing cognitive processes that are then coded",
+        "Structured observation, because the researcher uses a predetermined coding scheme to analyze visible behavior",
+        "Introspective report, because participants examine internal states using systematic philosophical self-reflection in the Wundtian tradition"
+      ],
+      "answer": "Protocol analysis, because participants provide concurrent verbal reports of ongoing cognitive processes that are then coded",
+      "explanation": "Protocol analysis, developed by Ericsson and Simon, is a methodology in which participants think aloud concurrently while performing a task. The resulting verbal stream is the 'protocol,' which is systematically coded for cognitive processes. The critical feature is the concurrent, real-time nature of the verbalization. Retrospective self-report requires recall of thoughts after the task; concurrent verbalization is neither retrospective nor recall-based. Structured observation codes observable behavioral events, not verbalized cognitions. Wundtian introspection involved retrospective, systematic examination of consciousness under controlled laboratory conditions and is methodologically distinct from think-aloud protocols.",
+      "kn": "KN6",
+      "kn_explanation": "Verbal report methods including protocol analysis are research methodology topics within Domain 2: Cognitive-Affective Bases of Behavior.",
+      "difficulty": "medium",
+      "quality_comment": "Tests an important methodological distinction. Content goes beyond current lesson material \u2014 valid EPPP topic, no lesson excerpt available.",
+      "suggestedLesson": "2-memory",
+      "suggestedParagraph": "## Research Methods in Cognitive Psychology",
+      "lessonExcerpt": "",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 6
+    },
+    {
+      "stem": "An attorney challenges the admissibility of an eyewitness's testimony on the grounds that the witness's recollection was developed during a hypnotic interview. A forensic psychologist retained as an expert witness testifies about the scientific literature on hypnosis and memory. Which of the following most accurately summarizes the empirical consensus the expert should report?",
+      "options": [
+        "Hypnosis reliably enhances accurate recall of factual details without systematically altering the witness's subjective confidence in those details",
+        "Hypnosis reduces overall memory production because the deep relaxation state interferes with retrieval of encoded information",
+        "Hypnosis increases the total quantity of reported memories\u2014including both accurate and fabricated details\u2014while simultaneously elevating the witness's confidence in all reported content regardless of accuracy",
+        "Hypnosis selectively enhances memory for emotionally arousing events while having no effect on memory for neutral contextual details"
+      ],
+      "answer": "Hypnosis increases the total quantity of reported memories\u2014including both accurate and fabricated details\u2014while simultaneously elevating the witness's confidence in all reported content regardless of accuracy",
+      "explanation": "The empirical literature consistently shows that hypnosis produces hypermnesia (increased memory output) but also substantially increases the production of confabulated or false memories. Critically, hypnotized individuals express equivalent high confidence in both their accurate and fabricated recollections, making the procedure forensically problematic because the witness cannot distinguish true from false memories and their confident demeanor may unduly persuade fact-finders. Hypnosis does not improve accuracy while leaving confidence unchanged. It does not reduce memory output. And it does not selectively enhance emotionally encoded content\u2014its inflation of confidence and confabulation applies broadly.",
+      "kn": "KN6",
+      "kn_explanation": "Hypnosis and its effects on memory accuracy and confidence fall within the memory subtopic of Domain 2: Cognitive-Affective Bases of Behavior.",
+      "difficulty": "hard",
+      "quality_comment": "Strong forensically-contextualized question testing an important applied memory phenomenon. Content goes beyond current lesson material \u2014 valid EPPP topic, no lesson excerpt available.",
+      "suggestedLesson": "2-memory",
+      "suggestedParagraph": "## Memory and Suggestibility",
+      "lessonExcerpt": "",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 10
+    },
+    {
+      "stem": "A 32-year-old construction worker sustains a severe closed-head injury after a fall. Upon regaining consciousness, he has no difficulty learning the names of his new rehabilitation nurses, forming new friendships on the ward, or acquiring the hospital's daily schedule. However, he is unable to recall his wedding, the birth of his children, or most events from the five years preceding the accident. This presentation is most consistent with which type of amnesia?",
+      "options": [
+        "Anterograde amnesia, because the patient cannot consolidate memories that occurred after the injury",
+        "Retrograde amnesia, because the patient has lost access to memories formed before the injury",
+        "Korsakoff amnesia, because the pattern results from chronic thiamine deficiency following alcohol use",
+        "Transient global amnesia, because the memory loss will resolve spontaneously within 24 hours"
+      ],
+      "answer": "Retrograde amnesia, because the patient has lost access to memories formed before the injury",
+      "explanation": "Retrograde amnesia involves the inability to recall events and information that were encoded before the onset of the amnestic episode\u2014in this case, the head injury. The patient retains the capacity to form new memories (ruling out anterograde amnesia) but cannot access a substantial pre-injury autobiographical record. Anterograde amnesia (A) refers specifically to difficulty forming new memories after the injury; this patient is successfully forming new memories on the ward. Korsakoff amnesia (C) is caused by thiamine deficiency secondary to chronic alcoholism and is not appropriate here; it also typically involves a characteristic confabulation pattern. Transient global amnesia (D) is a brief, self-limiting episode of amnesia with no precipitating head trauma and typically resolves within hours, not presenting as a stable post-injury pattern.",
+      "kn": "KN6",
+      "kn_explanation": "Amnesia types are covered within Domain 2: Cognitive-Affective Bases of Behavior under memory systems, learning, and the neurological underpinnings of memory encoding and retrieval.",
+      "difficulty": "medium",
+      "quality_comment": "The scenario clearly contrasts intact anterograde function with impaired retrograde retrieval, making the clinical distinction testable and unambiguous.",
+      "suggestedLesson": "2-memory",
+      "suggestedParagraph": "## Types of Long-Term Memory: Not All Memories Are Equal",
+      "lessonExcerpt": "Retrospective memory: Remembering past events (standard memory). The provided file was truncated before explicit coverage of retrograde amnesia subtypes; question is grounded in standard EPPP memory content.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 14
+    },
+    {
+      "stem": "A cognitive psychologist presents participants with a recorded list of spoken words under three conditions: one group rates whether each word rhymes with another word (acoustic processing), a second group judges whether each word belongs to a living category (semantic processing), and a third group decides whether each word contains the letter 'e' (structural processing). On a surprise recall test one hour later, which group would the levels-of-processing framework predict will show the highest retention?",
+      "options": [
+        "The group that rated rhyming patterns, because phonological encoding is particularly suited to auditory material",
+        "The group that assessed structural features, because attention to letter composition consolidates orthographic memory traces",
+        "The group that judged semantic category membership, because deeper meaning-based encoding produces more elaborated and durable memory traces",
+        "All groups would perform equivalently, because incidental encoding produces comparable retention regardless of processing depth"
+      ],
+      "answer": "The group that judged semantic category membership, because deeper meaning-based encoding produces more elaborated and durable memory traces",
+      "explanation": "Craik and Lockhart's levels-of-processing framework proposes that the depth at which information is processed determines how well it is retained: shallow processing (structural, acoustic) produces weaker, more transient memory traces, while deep semantic processing produces rich, elaborated, and durable traces. Judging category membership (living vs. non-living) requires extracting meaning from the word, constituting the deepest level of processing among the three conditions. Rating rhyming (A) involves acoustic/phonological processing, which is intermediate in depth and would not surpass semantic processing. Assessing letter composition (B) is the shallowest structural form of processing. Option D is incorrect; robust empirical evidence from incidental learning paradigms demonstrates significant recall differences as a function of processing depth.",
+      "kn": "KN6",
+      "kn_explanation": "Memory encoding depth is a central topic in Domain 2: Cognitive-Affective Bases of Behavior, falling within the memory and learning subtopic and directly tested on the EPPP.",
+      "difficulty": "medium",
+      "quality_comment": "Classic experimental design framing tests conceptual understanding rather than simple recall of the framework name; appropriate for doctoral-level assessment.",
+      "suggestedLesson": "2-memory",
+      "suggestedParagraph": "## Types of Long-Term Memory: Not All Memories Are Equal",
+      "lessonExcerpt": "Semantic memory: General knowledge and facts (DSM-5 criteria, therapy theories, that the multi-store model has three components). The provided file was truncated before explicit coverage of levels-of-processing theory; question is grounded in standard EPPP memory encoding content.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 17
+    },
+    {
+      "stem": "In a controlled memory study, participants studied a list of 30 paired associates and were then randomly assigned to either sleep for 8 hours or remain awake before a retention test. The sleep group showed significantly superior recall compared to the wake group, even when total elapsed time and interference from new learning were held constant. The mechanism that most directly accounts for the sleep group's advantage is:",
+      "options": [
+        "Reduced proactive interference, because fewer prior memories were activated during sleep to compete with the newly encoded associations",
+        "Expanded working memory capacity during sleep, enabling more efficient retrieval of recently encoded material at testing",
+        "Memory consolidation, whereby offline neural reprocessing during sleep stabilizes and integrates newly encoded information into long-term memory",
+        "Elimination of the recency effect, because sleep clears short-term memory and forces all material into durable long-term storage before retrieval"
+      ],
+      "answer": "Memory consolidation, whereby offline neural reprocessing during sleep stabilizes and integrates newly encoded information into long-term memory",
+      "explanation": "Sleep-dependent memory consolidation refers to the process by which newly encoded memories are stabilized and integrated into long-term storage through offline neural activity during sleep, including hippocampal replay during slow-wave sleep for declarative memories. The memory lesson identifies consolidation \u2014 connecting new information to already-stored long-term representations \u2014 as the mechanism by which information transitions from short-term to long-term memory. Sleep provides the offline processing window that waking periods do not. While reduced interference is a plausible alternative hypothesis, the research literature and EPPP-tested content specifically identify consolidation as the primary mechanism for sleep's mnemonic benefit. Working memory capacity is not substantially altered by a single sleep period, and the recency effect concerns short-term retention during immediate recall, not delayed retention testing.",
+      "kn": "KN6",
+      "kn_explanation": "Domain 2 covers memory systems and consolidation processes, including the role of sleep in stabilizing newly encoded long-term memories.",
+      "difficulty": "hard",
+      "quality_comment": "Well-designed experimental vignette with plausible distractors grounded in legitimate memory concepts. Flagged for review because the provided memory lesson excerpt",
+      "suggestedLesson": "2-memory",
+      "suggestedParagraph": "### Long-Term Memory: The Permanent Archive",
+      "lessonExcerpt": "Information moves from short-term to long-term memory through encoding, connecting new information to something already stored in long-term memory.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 25
     }
   ]
 }

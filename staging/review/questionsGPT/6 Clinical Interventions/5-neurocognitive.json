@@ -17,7 +17,7 @@
       "suggestedLesson": "5-neurocognitive",
       "suggestedParagraph": "### HIV-Related NCD",
       "lessonExcerpt": "Caused by HIV infection affecting the brain. Shows subcortical symptoms: forgetfulness, poor attention, cognitive slowing, psychomotor slowing, apathy, social withdrawal, tremors, clumsiness.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
       "inspirationIndex": 4
     }

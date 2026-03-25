@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "stem": "A parent in Adlerian family therapy reports that her 9-year-old refuses to bring an umbrella on rainy days despite the parent's repeated warnings. The Adlerian therapist instructs the parent to stop arguing, say nothing further, and allow the child to arrive at school wet. The therapist explains that the child needs to experience the direct outcome of his own choice in order to develop social interest and responsibility. The therapist is recommending which Adlerian concept?",
+      "options": [
+        "Logical consequences, because the child experiences a planned, parent-arranged outcome that is logically connected to the misbehavior",
+        "Natural consequences, because the child experiences an outcome that flows directly and automatically from his own decision without parental mediation",
+        "Encouragement, because the parent is withdrawing negative reinforcement in order to build the child's intrinsic motivation",
+        "Mistaken goals correction, because the parent is interrupting the child's pursuit of undue attention through the conflict over the umbrella"
+      ],
+      "answer": "Natural consequences, because the child experiences an outcome that flows directly and automatically from his own decision without parental mediation",
+      "explanation": "In Adlerian theory, natural consequences are the direct, automatic results of a child's behavior as produced by the physical or social environment without adult intervention (getting wet because one did not bring an umbrella). They are distinguished from logical consequences, which are arranged by a parent or teacher, are logically related to the misbehavior, and require adult action to deliver. Encouragement is a broader Adlerian principle of building self-efficacy and is not a consequence type. Mistaken goals correction refers to identifying and redirecting the mistaken purpose behind misbehavior, which is distinct from the specific disciplinary strategy described.",
+      "kn": "KN6",
+      "kn_explanation": "Adlerian parenting principles including natural and logical consequences are covered in the cognitive-affective bases domain under personality theory and therapeutic applications.",
+      "difficulty": "medium",
+      "quality_comment": "Clearly constructed question testing a clinically important Adlerian distinction. Content goes beyond current lesson material \u2014 valid EPPP topic, no lesson excerpt available.",
+      "suggestedLesson": "6-psychodynamic-and-humanistic",
+      "suggestedParagraph": "## Adlerian Theory",
+      "lessonExcerpt": "",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 7
+    }
+  ]
+}

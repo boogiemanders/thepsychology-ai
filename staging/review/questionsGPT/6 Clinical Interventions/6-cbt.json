@@ -30,7 +30,7 @@
         "Stimulus generalization from non-sexual to sexual touching contexts"
       ],
       "answer": "Counterconditioning by replacing performance anxiety with pleasurable sensations",
-      "explanation": "Sensate focus works through counterconditioning (also called reciprocal inhibition): the anxiety associated with sexual performance is gradually replaced by an incompatible response—pleasurable, relaxed sensations. The graduated approach mirrors systematic desensitization, moving from non-sexual touching to sexual touching to intercourse. The lesson explicitly states the technique 'works similarly to exposure therapy. You start with lower-stakes situations to reduce anxiety before moving to higher-stakes ones.' Operant extinction (A) involves removing reinforcement, which is not the primary mechanism. Negative reinforcement (C) would strengthen avoidance behavior, the opposite of the therapeutic goal. Stimulus generalization (D) describes responding similarly across contexts but does not capture the anxiety-replacement mechanism.",
+      "explanation": "Sensate focus works through counterconditioning (also called reciprocal inhibition): the anxiety associated with sexual performance is gradually replaced by an incompatible response\u2014pleasurable, relaxed sensations. The graduated approach mirrors systematic desensitization, moving from non-sexual touching to sexual touching to intercourse. The lesson explicitly states the technique 'works similarly to exposure therapy. You start with lower-stakes situations to reduce anxiety before moving to higher-stakes ones.' Operant extinction (A) involves removing reinforcement, which is not the primary mechanism. Negative reinforcement (C) would strengthen avoidance behavior, the opposite of the therapeutic goal. Stimulus generalization (D) describes responding similarly across contexts but does not capture the anxiety-replacement mechanism.",
       "kn": "KN44",
       "kn_explanation": "Sensate focus is a treatment technique grounded in behavioral principles",
       "difficulty": "medium",
@@ -55,7 +55,7 @@
       "kn": "KN44",
       "kn_explanation": "Behavioral conceptualization of cravings informing treatment intervention",
       "difficulty": "hard",
-      "quality_comment": "Tests integration of two learning paradigms in addiction—a common EPPP application question format.",
+      "quality_comment": "Tests integration of two learning paradigms in addiction\u2014a common EPPP application question format.",
       "suggestedLesson": "6-cbt",
       "suggestedParagraph": "### Cue Exposure Therapy",
       "lessonExcerpt": "With addiction, certain cues become powerfully associated with use. The smell of cigarette smoke in a bar, the sight of friends you used to drink with, even the specific route home that passes your dealer's corner. These become conditioned stimuli that trigger cravings and use.",
@@ -139,11 +139,11 @@
       "kn": "KN42",
       "kn_explanation": "First step in treatment decision-making, matching treatment to assessment",
       "difficulty": "medium",
-      "quality_comment": "Good clinical reasoning question. The lesson discusses chronic pain as multifactorial but doesn't explicitly state 'assess first' as a step—this is implied by general clinical practice principles.",
+      "quality_comment": "Good clinical reasoning question. The lesson discusses chronic pain as multifactorial but doesn't explicitly state 'assess first' as a step\u2014this is implied by general clinical practice principles.",
       "suggestedLesson": "6-cbt",
       "suggestedParagraph": "## Why Cognitive-Behavioral Therapies Matter for Your EPPP",
       "lessonExcerpt": "Chronic pain is a considered to be a multi-factorial process, largely affected by neural memories of previous pain... Chronic pain affects people both physically and emotionally. Physical effects may include tense muscles, limited mobility, and lack of energy. Emotional effects may include depression, anger, and anxiety.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
       "inspirationIndex": 12
     },
@@ -156,7 +156,7 @@
         "Emotional reasoning, because the client is using her feelings as evidence for the conclusion"
       ],
       "answer": "Arbitrary inference, because the client is drawing a negative conclusion without supporting evidence",
-      "explanation": "According to Beck's cognitive therapy as described in the lesson, arbitrary inference involves 'Drawing negative conclusions without evidence.' The client's example—concluding a coworker hates her based solely on not receiving a greeting—perfectly illustrates this distortion. There are many possible reasons the coworker didn't say hello, but the client jumps to a negative conclusion without evidence. Option A (selective abstraction) would involve focusing on one negative detail while ignoring other information. Option C (personalization) involves assuming you caused something—while related, the core distortion here is the unfounded conclusion about hatred, not self-blame for causing it. Option D (emotional reasoning) involves using feelings as facts (e.g., 'I feel anxious so something bad must be happening').",
+      "explanation": "According to Beck's cognitive therapy as described in the lesson, arbitrary inference involves 'Drawing negative conclusions without evidence.' The client's example\u2014concluding a coworker hates her based solely on not receiving a greeting\u2014perfectly illustrates this distortion. There are many possible reasons the coworker didn't say hello, but the client jumps to a negative conclusion without evidence. Option A (selective abstraction) would involve focusing on one negative detail while ignoring other information. Option C (personalization) involves assuming you caused something\u2014while related, the core distortion here is the unfounded conclusion about hatred, not self-blame for causing it. Option D (emotional reasoning) involves using feelings as facts (e.g., 'I feel anxious so something bad must be happening').",
       "kn": "KN43",
       "kn_explanation": "Identifying cognitive distortions within Beck's theoretical model",
       "difficulty": "medium",
@@ -177,7 +177,7 @@
         "Older adults with mild cognitive impairment"
       ],
       "answer": "Impulsive children",
-      "explanation": "The lesson clearly states: 'Donald Meichenbaum developed this approach initially for impulsive children, but it's useful across populations.' The training teaches people to guide their behavior through internal speech, progressing from external modeling through overt self-guidance to covert self-instruction. This was particularly suited to impulsive children who needed to develop internal regulatory speech. Option A is incorrect—while self-instructional training can be used with anxious adults, it was not originally developed for them. Option C is incorrect—conduct disorder populations were not the original target. Option D is incorrect—older adults with cognitive impairment were not the original population.",
+      "explanation": "The lesson clearly states: 'Donald Meichenbaum developed this approach initially for impulsive children, but it's useful across populations.' The training teaches people to guide their behavior through internal speech, progressing from external modeling through overt self-guidance to covert self-instruction. This was particularly suited to impulsive children who needed to develop internal regulatory speech. Option A is incorrect\u2014while self-instructional training can be used with anxious adults, it was not originally developed for them. Option C is incorrect\u2014conduct disorder populations were not the original target. Option D is incorrect\u2014older adults with cognitive impairment were not the original population.",
       "kn": "KN44",
       "kn_explanation": "Self-instructional training is a specific intervention technique for a population",
       "difficulty": "easy",
@@ -198,7 +198,7 @@
         "Refer the client back to the physician for additional medical evaluation"
       ],
       "answer": "Conduct a comprehensive biopsychosocial assessment of the pain experience",
-      "explanation": "When receiving a chronic pain referral, the appropriate first step is always a comprehensive assessment. Chronic pain is considered a multi-factorial process affected by neural memories of previous pain, physical effects (tense muscles, limited mobility), and emotional effects (depression, anger, anxiety). Jumping directly to CBT (A) or relaxation techniques (C) without first understanding the full picture of the client's pain experience would be premature. Referring back to the physician (D) is inappropriate when medical clearance has already been given. A thorough assessment informs the treatment plan and ensures that all contributing factors—biological, psychological, and social—are properly identified before intervention begins.",
+      "explanation": "When receiving a chronic pain referral, the appropriate first step is always a comprehensive assessment. Chronic pain is considered a multi-factorial process affected by neural memories of previous pain, physical effects (tense muscles, limited mobility), and emotional effects (depression, anger, anxiety). Jumping directly to CBT (A) or relaxation techniques (C) without first understanding the full picture of the client's pain experience would be premature. Referring back to the physician (D) is inappropriate when medical clearance has already been given. A thorough assessment informs the treatment plan and ensures that all contributing factors\u2014biological, psychological, and social\u2014are properly identified before intervention begins.",
       "kn": "KN42",
       "kn_explanation": "Treatment decision-making for chronic pain referral, matching treatment to assessment",
       "difficulty": "medium",
@@ -206,9 +206,219 @@
       "suggestedLesson": "6-cbt",
       "suggestedParagraph": "## Why Cognitive-Behavioral Therapies Matter for Your EPPP (and Your Future Practice)",
       "lessonExcerpt": "Chronic pain is a considered to be a multi-factorial process, largely affected by neural memories of previous pain.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
       "inspirationIndex": 12
+    },
+    {
+      "stem": "A therapist is developing a treatment plan for a client diagnosed with obsessive-compulsive disorder who experiences intrusive thoughts about contamination and responds by washing her hands for up to three hours daily. Based on cognitive-behavioral principles, which behavioral intervention has the strongest empirical support as the first-line treatment for this presentation?",
+      "options": [
+        "Applied relaxation training to reduce the anxiety triggered by contamination-related intrusive thoughts",
+        "Exposure and response prevention, in which the client contacts feared contaminants while refraining from washing rituals",
+        "Systematic desensitization pairing progressive muscle relaxation with a graduated hierarchy of contamination stimuli",
+        "Habit reversal training using a competing response to interrupt handwashing behavior at onset"
+      ],
+      "answer": "Exposure and response prevention, in which the client contacts feared contaminants while refraining from washing rituals",
+      "explanation": "Exposure and response prevention (ERP) is the empirically validated first-line behavioral treatment for OCD. The client is systematically exposed to feared stimuli (contamination cues) while being prevented from performing the compulsive ritual (washing) that provides temporary anxiety relief. This breaks the negative reinforcement cycle maintaining the compulsion by allowing the anxiety to habituate naturally. Applied relaxation addresses anxiety but does not target the behavioral reinforcement cycle specific to OCD. Systematic desensitization uses relaxation as an incompatible response, which differs from ERP's approach of tolerating anxiety without relief. Habit reversal training is evidence-based for tic disorders and body-focused repetitive behaviors but is not the primary behavioral intervention for OCD contamination rituals.",
+      "kn": "KN6",
+      "kn_explanation": "This question addresses Domain 6: Treatment, Intervention, and Prevention, specifically evidence-based behavioral treatments for OCD within the cognitive-behavioral framework.",
+      "difficulty": "medium",
+      "quality_comment": "Solid EPPP-level question with plausible distractors representing real behavioral interventions; requires fine discrimination.",
+      "suggestedLesson": "6-cbt",
+      "suggestedParagraph": "## Beck's Cognitive Therapy: The Foundation",
+      "lessonExcerpt": "CBT uses both cognitive techniques (like reframing thoughts and examining evidence) and behavioral techniques (like activity scheduling, exposure therapy, and behavioral rehearsal).",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 1
+    },
+    {
+      "stem": "A sex therapist introduces sensate focus exercises to a couple in which the male partner experiences erectile dysfunction attributed to performance anxiety. The therapist explains that intercourse is temporarily prohibited and partners are asked to focus exclusively on physical sensation during non-genital touch. Which theoretical construct most directly provides the basis for this intervention?",
+      "options": [
+        "Classical conditioning, in which sexual stimuli are systematically re-paired with relaxation rather than anxiety responses",
+        "Elimination of the spectator role, in which anxious self-monitoring and performance evaluation during sexual activity are reduced through attentional redirection",
+        "Stimulus control, in which sexual behavior is restricted to specific situational cues to eliminate conditioned inhibition",
+        "Cognitive restructuring, in which negative automatic thoughts about sexual performance are identified and challenged"
+      ],
+      "answer": "Elimination of the spectator role, in which anxious self-monitoring and performance evaluation during sexual activity are reduced through attentional redirection",
+      "explanation": "Masters and Johnson developed sensate focus around their concept of the 'spectator role' \u2014 the pattern of anxious self-observation in which individuals monitor and evaluate their own sexual performance during the act rather than experiencing sensation. This self-monitoring disrupts natural arousal and response. Sensate focus redirects attention toward immediate sensory experience, eliminating the evaluative stance. Classical conditioning is peripherally involved but does not capture the primary mechanism, which is attentional rather than associative. Stimulus control involves regulating environmental antecedents of behavior, not attentional processes during the activity. Cognitive restructuring involves explicitly disputing thoughts, which is a distinct, adjunctive technique rather than the theoretical foundation of sensate focus itself.",
+      "kn": "KN6",
+      "kn_explanation": "This question addresses Domain 6: Treatment, Intervention, and Prevention, specifically the theoretical underpinnings of sex therapy interventions for sexual dysfunction.",
+      "difficulty": "hard",
+      "quality_comment": "Requires specific knowledge of Masters and Johnson's theoretical constructs; distractors are all plausible CBT mechanisms that require careful discrimination.",
+      "suggestedLesson": "6-cbt",
+      "suggestedParagraph": "## Beck's Cognitive Therapy: The Foundation",
+      "lessonExcerpt": "CBT uses both cognitive techniques (like reframing thoughts and examining evidence) and behavioral techniques (like activity scheduling, exposure therapy, and behavioral rehearsal).",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 2
+    },
+    {
+      "stem": "A behavioral analyst is training a child with autism to use a new functional communication device to request preferred items. To maximize the rate at which this new behavior is acquired during initial training, which schedule of reinforcement should be implemented?",
+      "options": [
+        "Variable-ratio schedule, because it produces the highest sustained response rates and greatest resistance to extinction",
+        "Fixed-ratio schedule, because the predictable contingency clearly signals the response requirement",
+        "Continuous reinforcement, because reinforcing every correct response produces the fastest initial acquisition",
+        "Fixed-interval schedule, because timed delivery allows the trainer to manage reinforcer satiation"
+      ],
+      "answer": "Continuous reinforcement, because reinforcing every correct response produces the fastest initial acquisition",
+      "explanation": "Continuous reinforcement (CRF), in which every correct response is reinforced, is optimal during initial acquisition because the perfect contingency between behavior and consequence makes the response-reinforcement relationship maximally clear and learnable. Although variable-ratio schedules produce the highest response rates and greatest extinction resistance in established behaviors, the unpredictability of reinforcement delivery during acquisition makes it harder for the learner to detect the critical behavioral contingency. Fixed-ratio schedules produce high rates but include post-reinforcement pauses and are better suited once a behavior is established. Fixed-interval schedules produce the lowest overall response rates with a characteristic scallop pattern and are inappropriate for acquisition training.",
+      "kn": "KN6",
+      "kn_explanation": "This question addresses Domain 6: Treatment, Intervention, and Prevention, applying operant conditioning principles to behavioral intervention design.",
+      "difficulty": "medium",
+      "quality_comment": "Requires discriminating between acquisition-phase and maintenance-phase reinforcement considerations; lesson",
+      "suggestedLesson": "6-cbt",
+      "suggestedParagraph": "## Beck's Cognitive Therapy: The Foundation",
+      "lessonExcerpt": "CBT uses both cognitive techniques (like reframing thoughts and examining evidence) and behavioral techniques (like activity scheduling, exposure therapy, and behavioral rehearsal).",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 6
+    },
+    {
+      "stem": "A client successfully completed exposure-based therapy for dog phobia two years ago, reporting no fear during her final session. She encounters a dog unexpectedly at a park and experiences a strong fear response. Her therapist explains this is a predictable phenomenon rooted in classical conditioning principles. Which mechanism best explains what has occurred?",
+      "options": [
+        "Stimulus generalization, in which the fear response has transferred from the original conditioned stimulus to a novel but similar stimulus",
+        "Spontaneous recovery, in which the previously extinguished conditioned response has returned following a rest period without extinction trials",
+        "Higher-order conditioning, in which new stimuli previously associated with the conditioned stimulus have acquired conditioned fear properties",
+        "Disinhibition, in which a novel extraneous stimulus encountered at the park disrupted the inhibitory process maintaining extinction"
+      ],
+      "answer": "Spontaneous recovery, in which the previously extinguished conditioned response has returned following a rest period without extinction trials",
+      "explanation": "Spontaneous recovery is the reappearance of an extinguished conditioned response after a rest interval without additional conditioning or extinction trials. This phenomenon reveals that extinction does not permanently erase the original learning but instead creates new inhibitory learning that competes with the original excitatory conditioned response. Over time, the inhibitory memory fades relative to the original conditioning, allowing the CR to re-emerge. Stimulus generalization involves fear spreading to novel stimuli resembling the CS, not the return of fear to the original CS. Higher-order conditioning involves a CS becoming a UCS for other neutral stimuli, which is a different mechanism. Disinhibition occurs when an extraneous novel stimulus disrupts ongoing extinction during a session, not a return of fear after a two-year gap.",
+      "kn": "KN6",
+      "kn_explanation": "This question addresses Domain 6: Treatment, Intervention, and Prevention, applying classical conditioning principles to understand post-treatment relapse phenomena in behavioral interventions.",
+      "difficulty": "hard",
+      "quality_comment": "Clinically relevant scenario connecting conditioning principles to treatment durability; requires precise discrimination between similar conditioning phenomena. Lesson",
+      "suggestedLesson": "6-cbt",
+      "suggestedParagraph": "## Beck's Cognitive Therapy: The Foundation",
+      "lessonExcerpt": "CBT uses both cognitive techniques (like reframing thoughts and examining evidence) and behavioral techniques (like activity scheduling, exposure therapy, and behavioral rehearsal).",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 7
+    },
+    {
+      "stem": "During a cognitive therapy session, a client who recently received mostly positive performance feedback at work states, 'My supervisor included one critical comment in my evaluation, which proves I'm completely incompetent.' According to Beck's model, this statement most clearly illustrates which cognitive distortion?",
+      "options": [
+        "Arbitrary inference, drawing a negative conclusion about one's competence without sufficient supporting evidence",
+        "Selective abstraction, focusing on a single negative detail while ignoring the predominantly positive context",
+        "Dichotomous thinking, categorizing a complex performance evaluation in absolute all-or-nothing terms",
+        "Personalization, assuming primary responsibility for an external evaluative outcome"
+      ],
+      "answer": "Selective abstraction, focusing on a single negative detail while ignoring the predominantly positive context",
+      "explanation": "Beck defined selective abstraction as 'focusing on one negative detail while ignoring everything else,' with the lesson illustrating this as 'receiving 95% positive feedback and only thinking about the 5% criticism.' The client's statement exemplifies this exactly: the predominantly positive evaluation is discarded entirely in favor of the single critical comment, which is then used to draw a global conclusion about competence. Arbitrary inference involves drawing conclusions without any evidence; the client does have some evidence (the criticism), making this selective abstraction rather than arbitrary inference. Dichotomous thinking involves all-or-nothing categorization ('complete success or complete failure'), which may co-occur but is not the primary distortion illustrated here. Personalization involves attributing external events to oneself without justification, which differs from the selective attentional processing demonstrated.",
+      "kn": "KN6",
+      "kn_explanation": "This question addresses Domain 6: Treatment, Intervention, and Prevention, specifically identification of Beck's cognitive distortions as a core cognitive therapy skill.",
+      "difficulty": "medium",
+      "quality_comment": "Directly grounded in lesson content including the illustrative example; requires fine discrimination between overlapping cognitive distortions at doctoral level.",
+      "suggestedLesson": "6-cbt",
+      "suggestedParagraph": "## Beck's Cognitive Therapy: The Foundation",
+      "lessonExcerpt": "Selective Abstraction: Focusing on one negative detail while ignoring everything else. Receiving 95% positive feedback and only thinking about the 5% criticism.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 8
+    },
+    {
+      "stem": "Meichenbaum's self-instruction training was originally designed to address deficits in the verbal mediation of behavior and has demonstrated the greatest empirical support when applied to which clinical population?",
+      "options": [
+        "Adults with schizophrenia whose disorganized internal monologue disrupts daily task completion",
+        "Children with ADHD and impulsive behavior problems who lack internalized verbal self-regulation",
+        "Adolescents with social anxiety disorder who engage in maladaptive self-focused rumination",
+        "Children with intellectual disability who require simplified verbal cuing to initiate self-care routines"
+      ],
+      "answer": "Children with ADHD and impulsive behavior problems who lack internalized verbal self-regulation",
+      "explanation": "Meichenbaum developed self-instruction training drawing on Luria and Vygotsky's research demonstrating that children learn behavioral self-regulation through a developmental progression from overt other-directed speech to covert self-directed speech. The technique \u2014 which moves from therapist modeling aloud, to client overt verbalization, to whispered, to covert self-instruction \u2014 was most extensively validated with impulsive children, particularly those with ADHD, who fail to develop adequate internalized verbal control over behavior. Adults with schizophrenia have disorganized rather than absent self-talk, requiring different intervention targets. Adolescents with social anxiety engage in excessive rather than deficient self-monitoring. Children with intellectual disability may benefit from simplified prompting but often lack the verbal cognitive foundation required for full self-instruction training.",
+      "kn": "KN6",
+      "kn_explanation": "This question addresses Domain 6: Treatment, Intervention, and Prevention, specifically cognitive-behavioral interventions and their evidence base with specific populations.",
+      "difficulty": "medium",
+      "quality_comment": "Tests specific knowledge of a named CBT technique and its primary target population; lesson content",
+      "suggestedLesson": "6-cbt",
+      "suggestedParagraph": "## Rational Emotive Behavior Therapy (REBT): Ellis's Approach",
+      "lessonExcerpt": "CBT uses both cognitive techniques (like reframing thoughts and examining evidence) and behavioral techniques (like activity scheduling, exposure therapy, and behavioral rehearsal).",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 9
+    },
+    {
+      "stem": "A psychologist is conducting an initial assessment of a 44-year-old patient with a 3-year history of chronic low back pain who is simultaneously pursuing a long-term disability claim. His treating physician's chart notes significant discrepancy between objective imaging findings and the patient's reported functional limitations. What should be the PRIMARY assessment priority before interpreting any self-report data?",
+      "options": [
+        "Identifying specific pain locations and quality using a standardized body diagram and numeric rating scale",
+        "Evaluating response validity and the degree of psychological overlay including secondary gain factors",
+        "Administering a full neuropsychological battery to rule out cognitive contributors to functional impairment",
+        "Obtaining a detailed three-generation family history to assess hereditary musculoskeletal vulnerability"
+      ],
+      "answer": "Evaluating response validity and the degree of psychological overlay including secondary gain factors",
+      "explanation": "When objective medical findings are disproportionate to reported limitations \u2014 especially in the context of pending disability benefits (a clear secondary gain context) \u2014 the psychologist's primary obligation is to establish whether self-report data are valid before drawing any clinical conclusions. Secondary gain refers to external incentives (financial compensation, avoidance of occupational demands, increased social support) that may consciously or unconsciously inflate symptom reporting. Assessment must include symptom validity tests (SVTs), MMPI-2 validity scale interpretation, and clinical observation of functional inconsistencies. Interpreting pain ratings, neuropsychological findings, or family history without first confirming data validity risks generating misleading and potentially harmful conclusions. Pain mapping and neuropsychological testing may follow, but only after validity is established.",
+      "kn": "KN6",
+      "kn_explanation": "This question tests assessment prioritization in pain management with secondary gain considerations, a core clinical competency within the Treatment, Intervention, and Prevention domain.",
+      "difficulty": "hard",
+      "quality_comment": "Well-constructed clinical scenario with clear hierarchy of priorities; tests sophisticated integration of assessment validity and secondary gain knowledge at the doctoral level.",
+      "suggestedLesson": "6-cbt",
+      "suggestedParagraph": "## Beck's Cognitive Therapy: The Foundation",
+      "lessonExcerpt": "LESSON CONTENT DOES NOT EXPLICITLY ADDRESS SECONDARY GAIN ASSESSMENT IN CHRONIC PAIN EVALUATIONS IN THE PROVIDED EXCERPTS",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 12
+    },
+    {
+      "stem": "A forensic psychologist consulting with a prison treatment team is asked which type of consequence most effectively modifies behavior in inmates with antisocial personality disorder (ASPD). Drawing on the treatment literature for personality disorders, the consultant would most accurately advise that this population is most responsive to consequences that are:",
+      "options": [
+        "Internally generated through enhanced empathy training and restorative justice exercises",
+        "Delayed punishments delivered after a structured reflection period to promote insight",
+        "Immediate, concrete, and externally applied, such as loss of privileges tied directly to specific behaviors",
+        "Socially mediated through confrontation by prosocial peers in therapeutic community settings"
+      ],
+      "answer": "Immediate, concrete, and externally applied, such as loss of privileges tied directly to specific behaviors",
+      "explanation": "Individuals with ASPD characteristically lack internalized guilt, empathy, and sensitivity to delayed consequences. The treatment literature consistently indicates they are most responsive to immediate, external, and concrete consequences rather than internally mediated or delayed ones. Option A is incorrect because ASPD is associated with profound empathy deficits that severely limit the effectiveness of empathy-based interventions. Option B is incorrect because delayed consequences are far less effective given ASPD-related deficits in connecting future outcomes to present behavior. Option D is incorrect because peer confrontation alone, without clear external contingencies, is insufficient to modify behavior in this population.",
+      "kn": "KN6",
+      "kn_explanation": "This question addresses treatment approaches for personality disorders, specifically which consequence modalities are effective for ASPD, which falls under the Treatment, Intervention, and Prevention domain.",
+      "difficulty": "hard",
+      "quality_comment": "Doctoral-level question requiring nuanced knowledge of ASPD treatment. Content goes beyond current lesson material \u2014 valid EPPP topic, no lesson excerpt available.",
+      "suggestedLesson": "6-cbt",
+      "suggestedParagraph": "## Personality Disorder Treatment",
+      "lessonExcerpt": "",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 21
+    },
+    {
+      "stem": "A behavior therapist is treating a child who engages in frequent head-banging. Rather than applying punishment contingent on each episode, the therapist implements a protocol in which the child receives a preferred edible reinforcer after any interval of a specified duration during which head-banging does not occur. This procedure is identified as differential reinforcement of other behavior (DRO). In operant conditioning terms, the mechanism by which DRO reduces the target behavior is best described as:",
+      "options": [
+        "Punishment by application, in which an aversive stimulus is contingently delivered following each head-banging episode to suppress the behavior",
+        "Extinction paired with positive reinforcement, in which head-banging receives no reinforcement while its absence is systematically reinforced",
+        "Negative reinforcement, in which removal of the aversive head-banging behavior is itself reinforcing to the supervising therapist",
+        "Stimulus control, in which antecedent cues that previously signaled head-banging are systematically modified to suppress the response"
+      ],
+      "answer": "Extinction paired with positive reinforcement, in which head-banging receives no reinforcement while its absence is systematically reinforced",
+      "explanation": "DRO operates through two complementary operant mechanisms: (1) extinction\u2014the target behavior (head-banging) receives no reinforcement, allowing it to weaken and decrease; and (2) positive reinforcement delivered contingently on the absence of the target behavior during a specified interval. Together these mechanisms reduce the problem behavior while building more adaptive behavioral repertoires. Option A describes punishment by application, a distinct procedure not used in DRO. Option C misapplies the definition of negative reinforcement, which involves removal of an aversive stimulus contingent on a behavior\u2014not applicable here. Option D describes antecedent-based stimulus control interventions, which modify triggers rather than consequences.",
+      "kn": "KN6",
+      "kn_explanation": "DRO is a behavior modification technique grounded in operant conditioning principles and is a core behavioral intervention tested in the Treatment and Intervention domain.",
+      "difficulty": "hard",
+      "quality_comment": "Technically rigorous question requiring precise command of operant conditioning terminology as applied to DRO. Remapped to 2-operant-conditioning-interventions which covers all four DR types in detail.",
+      "suggestedLesson": "2-operant-conditioning-interventions",
+      "suggestedParagraph": "### Differential Reinforcement: The Swiss Army Knife of Behavior Change",
+      "lessonExcerpt": "Differential Reinforcement of Other Behavior (DRO): You reinforce ANY behavior except the target problem behavior during specified time intervals. This is less focused than DRI or DRA but sometimes more practical.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 26
+    },
+    {
+      "stem": "A sex therapist applies aversive counterconditioning to treat a client whose shoe fetish is causing marked personal distress. The therapist repeatedly and systematically pairs visual presentations of the fetish object with a highly aversive stimulus to extinguish the problematic arousal response. In classical conditioning terminology, the fetish object in this procedure is correctly identified as the:",
+      "options": [
+        "Unconditioned stimulus, because it automatically and reflexively elicits sexual arousal independent of any prior learning history",
+        "Conditioned stimulus, because it has acquired its capacity to elicit sexual arousal through prior associative learning experiences",
+        "Unconditioned response, because sexual arousal in the presence of the fetish object is a biologically hardwired reflexive reaction",
+        "Conditioned response, because the pattern of arousal to non-sexual objects developed through a history of conditioning experiences"
+      ],
+      "answer": "Conditioned stimulus, because it has acquired its capacity to elicit sexual arousal through prior associative learning experiences",
+      "explanation": "In the classical conditioning account of paraphilias such as fetishism, a neutral object (e.g., a shoe) acquires sexually arousing properties through repeated pairing with sexual arousal early in the individual's conditioning history. The fetish object thus functions as a conditioned stimulus (CS) that reliably elicits sexual arousal (the conditioned response, CR). In aversive counterconditioning, the CS (fetish object) is paired with an aversive unconditioned stimulus (UCS)\u2014such as chemically induced nausea or aversive imagery\u2014to extinguish or counter-condition the CR. Option A is incorrect because the fetish object does not innately and automatically elicit arousal without prior associative learning. Options C and D confuse stimuli with responses within the classical conditioning framework: arousal to the fetish is the conditioned response, not the object itself.",
+      "kn": "KN6",
+      "kn_explanation": "Aversive counterconditioning as applied to paraphilias requires command of classical conditioning terminology in a clinical context\u2014a core behavioral treatment topic in the Treatment and Intervention domain.",
+      "difficulty": "hard",
+      "quality_comment": "Technically precise question requiring accurate application of classical conditioning terminology. The role of the CS in aversive counterconditioning for paraphilias is. Content goes beyond current lesson material \u2014 valid EPPP topic, no lesson excerpt available.",
+      "suggestedLesson": "6-cbt",
+      "suggestedParagraph": "## Aversive Counterconditioning",
+      "lessonExcerpt": "",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 30
     }
   ]
 }

@@ -22,7 +22,7 @@
       "inspirationIndex": 14
     },
     {
-      "stem": "In Jungian analytical psychology, the process by which an individual attributes qualities from their own unconscious—particularly disowned or unacceptable aspects of the self—onto other people or external situations is most closely associated with which archetype?",
+      "stem": "In Jungian analytical psychology, the process by which an individual attributes qualities from their own unconscious\u2014particularly disowned or unacceptable aspects of the self\u2014onto other people or external situations is most closely associated with which archetype?",
       "options": [
         "The persona",
         "The anima/animus",
@@ -30,7 +30,7 @@
         "The self"
       ],
       "answer": "The shadow",
-      "explanation": "In Jungian psychology, the shadow represents one's hidden, dark, or unacceptable aspects. When individuals project shadow material outward, they attribute their own disowned qualities onto others. Jungians specifically view transference as a projection of the personal and/or collective unconscious. The persona (A) is the social mask—the public face presented to the world, not the source of projected negative material. The anima/animus (B) represents the feminine/masculine aspects of the psyche. The self (C) is the transcendent part of the psyche that encompasses all archetypes and represents the goal of individuation—wholeness and integration.",
+      "explanation": "In Jungian psychology, the shadow represents one's hidden, dark, or unacceptable aspects. When individuals project shadow material outward, they attribute their own disowned qualities onto others. Jungians specifically view transference as a projection of the personal and/or collective unconscious. The persona (A) is the social mask\u2014the public face presented to the world, not the source of projected negative material. The anima/animus (B) represents the feminine/masculine aspects of the psyche. The self (C) is the transcendent part of the psyche that encompasses all archetypes and represents the goal of individuation\u2014wholeness and integration.",
       "kn": "KN43",
       "kn_explanation": "Jungian projection is a theory/model of treatment and intervention",
       "difficulty": "medium",
@@ -72,7 +72,7 @@
         "Repression of the persona archetype"
       ],
       "answer": "Projection of the shadow archetype",
-      "explanation": "In Jungian psychology, the shadow represents one's 'dark side'—hidden, unacknowledged aspects of the personality. When individuals fail to integrate their shadow, they often project these undesirable qualities onto others, perceiving in external people or situations what they cannot accept in themselves. This projection of shadow material is a central concept in Jungian therapy, and individuation requires integrating the shadow rather than projecting it. Reaction formation against the anima (A) conflates Freudian defense mechanisms with a different archetype. Introjection of the collective unconscious (C) misapplies a Gestalt concept to Jungian theory. Repression of the persona (D) is incorrect because the persona is the public mask, not the hidden dark side.",
+      "explanation": "In Jungian psychology, the shadow represents one's 'dark side'\u2014hidden, unacknowledged aspects of the personality. When individuals fail to integrate their shadow, they often project these undesirable qualities onto others, perceiving in external people or situations what they cannot accept in themselves. This projection of shadow material is a central concept in Jungian therapy, and individuation requires integrating the shadow rather than projecting it. Reaction formation against the anima (A) conflates Freudian defense mechanisms with a different archetype. Introjection of the collective unconscious (C) misapplies a Gestalt concept to Jungian theory. Repression of the persona (D) is incorrect because the persona is the public mask, not the hidden dark side.",
       "kn": "KN43",
       "kn_explanation": "Jungian shadow projection is a theoretical model underlying treatment",
       "difficulty": "medium",
@@ -114,7 +114,7 @@
         "Stimulus generalization of relaxation from the therapy setting to real-world situations"
       ],
       "answer": "Extinction of conditioned emotional responses through repeated unreinforced exposure",
-      "explanation": "From a behavioral perspective, the catharsis that occurs in psychoanalysis can be understood as extinction. When clients verbalize previously avoided (repressed) thoughts and feelings during free association, they are exposed to conditioned stimuli (the distressing memories and emotions) without the originally feared negative consequences. Over repeated exposures in the safe therapy environment, the conditioned emotional responses gradually extinguish. Option A is incorrect because systematic desensitization involves a structured anxiety hierarchy and relaxation training, not free association. Option C describes counterconditioning, which requires actively pairing the stimulus with an incompatible positive response—this is a related but distinct mechanism from extinction. Option D describes stimulus generalization, which refers to transfer of learning across contexts rather than the in-session emotional release phenomenon.",
+      "explanation": "From a behavioral perspective, the catharsis that occurs in psychoanalysis can be understood as extinction. When clients verbalize previously avoided (repressed) thoughts and feelings during free association, they are exposed to conditioned stimuli (the distressing memories and emotions) without the originally feared negative consequences. Over repeated exposures in the safe therapy environment, the conditioned emotional responses gradually extinguish. Option A is incorrect because systematic desensitization involves a structured anxiety hierarchy and relaxation training, not free association. Option C describes counterconditioning, which requires actively pairing the stimulus with an incompatible positive response\u2014this is a related but distinct mechanism from extinction. Option D describes stimulus generalization, which refers to transfer of learning across contexts rather than the in-session emotional release phenomenon.",
       "kn": "KN44",
       "kn_explanation": "Behavioral reinterpretation of free association as extinction is about treatment techniques and their mechanisms of efficacy",
       "difficulty": "hard",
@@ -122,7 +122,91 @@
       "suggestedLesson": "6-psychodynamic-and-humanistic",
       "suggestedParagraph": "### Freudian Psychoanalysis: The Original Talk Therapy",
       "lessonExcerpt": "through repeated interpretation, clients experience catharsis (releasing repressed emotions) and insight, which leads to working through. Gradually accepting and integrating these new understandings into their lives.",
-      "needsReview": true,
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 32
+    },
+    {
+      "stem": "A doctoral student is preparing a presentation comparing classical Freudian theory with Neo-Freudian approaches. Her supervisor asks her to identify the most fundamental theoretical shift introduced by Neo-Freudian theorists. Which of the following most accurately characterizes the primary reconceptualization advanced by theorists such as Adler and Horney?",
+      "options": [
+        "Rejection of the unconscious as a clinically meaningful construct in favor of conscious, rational self-determination",
+        "Extension of Freud's psychosexual stage model through late adolescence to capture later developmental conflicts",
+        "De-emphasis of biological, intrapsychic drives in favor of social, cultural, and interpersonal determinants of personality and psychopathology",
+        "Adoption of a conditioning framework that replaced mentalistic unconscious concepts with observable stimulus-response relationships"
+      ],
+      "answer": "De-emphasis of biological, intrapsychic drives in favor of social, cultural, and interpersonal determinants of personality and psychopathology",
+      "explanation": "Neo-Freudian theorists retained the core psychodynamic architecture \u2014 the unconscious, the importance of early development, and the primacy of inner conflict \u2014 but fundamentally repositioned the source of that conflict. Alfred Adler proposed that the primary motivational force is striving for superiority over inferiority feelings, rooted in social relationships, not libido. He introduced 'social interest' (gemeinschaftsgef\u00fchl) as the measure of psychological health. Karen Horney argued that neurosis originates from cultural conditions and disturbed interpersonal relationships, explicitly rejecting Freud's penis envy as a cultural artifact. Neo-Freudians did not abandon the unconscious or adopt behaviorism \u2014 these would describe entirely different theoretical traditions. Extending psychosexual stages captures Erikson's contribution but is secondary to the social-vs-biological shift.",
+      "kn": "KN6",
+      "kn_explanation": "This question addresses psychodynamic theory variants \u2014 specifically the Neo-Freudian reconceptualization \u2014 which appears within the Treatment, Intervention, and Prevention domain under psychodynamic therapies.",
+      "difficulty": "medium",
+      "quality_comment": "Clean conceptual discrimination question; appropriately tests the theoretical core rather than peripheral facts about individual Neo-Freudians.",
+      "suggestedLesson": "6-psychodynamic-and-humanistic",
+      "suggestedParagraph": "## The Psychodynamic Perspective: Understanding the Hidden Forces",
+      "lessonExcerpt": "LESSON CONTENT COVERS FREUD AND JUNG IN DETAIL BUT DOES NOT EXPLICITLY ADDRESS NEO-FREUDIAN THEORISTS SUCH AS ADLER OR HORNEY IN THE PROVIDED EXCERPTS",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 14
+    },
+    {
+      "stem": "During Jungian analysis, a client who consistently presents himself as entirely selfless and accommodating expresses intense, seemingly disproportionate contempt for colleagues he describes as 'exploitative and narcissistic.' His analyst hypothesizes that the client is engaged in shadow projection. Which of the following most accurately describes the theoretical basis for this formulation within Jungian analytical psychology?",
+      "options": [
+        "The client is displacing superego-driven moral condemnation onto external authority figures, re-enacting the relationship with an internalized punitive parental object",
+        "Disowned material from both the personal unconscious \u2014 individually repressed traits \u2014 and the collective unconscious \u2014 universal dark archetypes shared by all humanity \u2014 is being attributed to others rather than recognized in oneself",
+        "The client's anima is in irreconcilable conflict with his persona, generating compensatory idealization of the persona and projection of animus qualities onto male colleagues",
+        "Unresolved transference from early attachment figures is distorting perception of colleagues through the object-relational mechanism of projective identification"
+      ],
+      "answer": "Disowned material from both the personal unconscious \u2014 individually repressed traits \u2014 and the collective unconscious \u2014 universal dark archetypes shared by all humanity \u2014 is being attributed to others rather than recognized in oneself",
+      "explanation": "In Jungian theory, the shadow is the archetype representing the dark, unacceptable, and disowned dimensions of the self that are excluded from the persona (the public identity). The shadow draws from two sources: (1) the personal unconscious, which contains individually repressed memories, impulses, and traits unique to the person's history, and (2) the collective unconscious, which contains universal, inherited archetypal patterns of human darkness shared across all people and cultures. Shadow projection occurs when a person attributes these disowned qualities to external others rather than integrating them. In this case, the client's accommodation persona likely conceals disowned self-serving impulses that he projects as contemptible narcissism in colleagues. The superego/parental object explanation belongs to Freudian object-relations theory. The anima/animus formulation is a distinct Jungian concept involving contrasexual archetypes. Projective identification is an object-relations term (Kleinian) unrelated to Jungian shadow theory.",
+      "kn": "KN6",
+      "kn_explanation": "This question tests Jungian analytical psychology \u2014 specifically the shadow archetype and its dual roots in personal and collective unconscious \u2014 within the psychodynamic therapies section of Treatment, Intervention, and Prevention.",
+      "difficulty": "hard",
+      "quality_comment": "Excellent doctoral-level question requiring integration of multiple Jungian constructs; distractors demand precise discrimination between Jungian, classical Freudian, and object-relational frameworks.",
+      "suggestedLesson": "6-psychodynamic-and-humanistic",
+      "suggestedParagraph": "## Jung's Analytical Psychology: Beyond Freud",
+      "lessonExcerpt": "Personal unconscious: Your own forgotten or repressed memories (similar to Freud's idea). Collective unconscious: Memories shared by all humans, passed down through generations. The collective unconscious contains archetypes. Universal patterns of thought and imagery that predispose us to act in similar ways... Important archetypes include the persona (your public mask), shadow (your dark side), hero, and anima/animus (feminine/masculine aspects).",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 20
+    },
+    {
+      "stem": "A client in Gestalt therapy recounts a recurring dream in which she is relentlessly chased by an enormous shadowy figure who eventually corners her against a solid wall. The therapist asks the client to 'become' each element of the dream in turn\u2014to speak as the pursuer, as the wall, and as the trapped version of herself\u2014and to give each a voice. This technique reflects which foundational Gestalt view of dreams?",
+      "options": [
+        "Dreams represent disguised fulfillments of unconscious wishes whose true meaning is encoded in latent content beneath the manifest narrative",
+        "Dreams are symbolic expressions of the collective unconscious that reflect universal archetypal patterns inherited across generations of human experience",
+        "Every element of a dream is a projection of a different aspect of the dreamer's own personality, inner conflicts, or disowned parts of the self",
+        "Dreams are royal roads to repressed traumatic memories that must be analytically decoded to facilitate abreaction and achieve lasting catharsis"
+      ],
+      "answer": "Every element of a dream is a projection of a different aspect of the dreamer's own personality, inner conflicts, or disowned parts of the self",
+      "explanation": "In Gestalt therapy, Fritz Perls held that every character, object, and setting in a dream represents a projected fragment of the dreamer's own self\u2014including disowned or unacknowledged aspects of personality. Rather than interpreting dreams symbolically or decoding hidden wish content, Gestalt therapists invite clients to 'become' each dream element and speak from its perspective, facilitating integration of split-off parts of the self. Option A describes the Freudian psychoanalytic approach involving latent versus manifest content and wish fulfillment. Option B describes the Jungian analytical approach, specifically the collective unconscious and archetypes. Option D also reflects a Freudian perspective emphasizing abreaction and repressed traumatic memories.",
+      "kn": "KN6",
+      "kn_explanation": "Gestalt therapy dream work techniques are tested within the humanistic and experiential therapy section of the Treatment domain of the EPPP.",
+      "difficulty": "medium",
+      "quality_comment": "Well-constructed question with precisely differentiated distractors across three major theoretical orientations. The psychodynamic and humanistic lesson file is. Content goes beyond current lesson material \u2014 valid EPPP topic, no lesson excerpt available.",
+      "suggestedLesson": "6-psychodynamic-and-humanistic",
+      "suggestedParagraph": "## Gestalt Therapy",
+      "lessonExcerpt": "",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 29
+    },
+    {
+      "stem": "From a behavioral perspective, the psychoanalytic concept of catharsis is BEST understood as:",
+      "options": [
+        "Positive reinforcement of emotional expression in the therapeutic relationship",
+        "Extinction of conditioned emotional responses through repeated exposure to anxiety-provoking material without aversive consequences",
+        "Stimulus generalization of relaxation responses from the therapy setting to everyday situations",
+        "Negative reinforcement through the removal of repressed memories from unconscious awareness"
+      ],
+      "answer": "Extinction of conditioned emotional responses through repeated exposure to anxiety-provoking material without aversive consequences",
+      "explanation": "Behaviorists reinterpret psychoanalytic catharsis as an extinction process: when a client repeatedly discusses anxiety-laden unconscious material in the safe therapeutic environment (a context without punishment or other aversive consequences), the conditioned emotional responses associated with that material gradually extinguish. Option A misidentifies the mechanism as reinforcement of expression rather than extinction of the emotional response itself. Option C describes generalization, which is a different learning principle and does not capture the core mechanism of catharsis. Option D incorrectly frames the process as negative reinforcement and misrepresents what happens to repressed material \u2014 the behavioral account focuses on the emotional response diminishing, not memories being removed.",
+      "kn": "KN6",
+      "kn_explanation": "This question bridges psychodynamic therapy concepts with behavioral learning principles, both core areas of the Treatment, Intervention, and Prevention domain.",
+      "difficulty": "hard",
+      "quality_comment": "Tests a sophisticated cross-theoretical integration that appears on the EPPP. The lesson mentions catharsis ('clients experience catharsis \u2014 releasing repressed emotions \u2014 and insight') but",
+      "suggestedLesson": "6-psychodynamic-and-humanistic",
+      "suggestedParagraph": "### Freudian Psychoanalysis: The Original Talk Therapy",
+      "lessonExcerpt": "clients experience catharsis (releasing repressed emotions) and insight, which leads to working through. Gradually accepting and integrating these new understandings into their lives.",
+      "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
       "inspirationIndex": 32
     }

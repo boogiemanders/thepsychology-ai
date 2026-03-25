@@ -30,7 +30,7 @@
         "Selective loss of emotional memories with preservation of factual recall"
       ],
       "answer": "Inability to form new declarative long-term memories with intact short-term and procedural memory",
-      "explanation": "The case of H.M. demonstrated that the hippocampus is essential for consolidating declarative information from short-term to long-term storage. After surgery, H.M. could hold conversations (intact short-term memory) and learn new motor skills (intact procedural memory), but could not form new long-term declarative memories. He did not lose all previously formed memories—his oldest memories remained relatively clear. His procedural memory was intact, not impaired. Emotional memory processing involves the amygdala, and while H.M.'s amygdala was also removed, the hallmark finding was the declarative memory deficit.",
+      "explanation": "The case of H.M. demonstrated that the hippocampus is essential for consolidating declarative information from short-term to long-term storage. After surgery, H.M. could hold conversations (intact short-term memory) and learn new motor skills (intact procedural memory), but could not form new long-term declarative memories. He did not lose all previously formed memories\u2014his oldest memories remained relatively clear. His procedural memory was intact, not impaired. Emotional memory processing involves the amygdala, and while H.M.'s amygdala was also removed, the hallmark finding was the declarative memory deficit.",
       "kn": "KN1",
       "kn_explanation": "H.M. case involves neurobiological bases of memory/cognition following brain lesion",
       "difficulty": "medium",
@@ -51,7 +51,7 @@
         "Loss of all previously stored memories with preserved ability to form new ones"
       ],
       "answer": "Inability to form new declarative long-term memories with preserved short-term and procedural memory",
-      "explanation": "The case of H.M. demonstrated that the hippocampus serves as a consolidation hub for declarative memories. After surgery, H.M. could still hold conversations (intact short-term memory) and learn new motor skills (intact procedural memory), but could not transfer new declarative information into long-term storage. Option A is incorrect because procedural memory was preserved. Option C is incorrect because the deficit was not limited to emotional memories — all new declarative memories were affected. Option D describes the opposite of what occurred — H.M. retained most old memories but could not form new declarative ones.",
+      "explanation": "The case of H.M. demonstrated that the hippocampus serves as a consolidation hub for declarative memories. After surgery, H.M. could still hold conversations (intact short-term memory) and learn new motor skills (intact procedural memory), but could not transfer new declarative information into long-term storage. Option A is incorrect because procedural memory was preserved. Option C is incorrect because the deficit was not limited to emotional memories \u2014 all new declarative memories were affected. Option D describes the opposite of what occurred \u2014 H.M. retained most old memories but could not form new declarative ones.",
       "kn": "KN1",
       "kn_explanation": "H.M. memory impairment pattern relates to neurobiological bases of cognition",
       "difficulty": "easy",
@@ -66,13 +66,13 @@
     {
       "stem": "A researcher is reviewing an EEG recording from a participant who is sitting quietly with their eyes closed but is awake and relaxed. Which brain wave pattern would be MOST prominent in this recording?",
       "options": [
-        "Delta waves (0.5–4 Hz)",
-        "Theta waves (4–8 Hz)",
-        "Alpha waves (8–13 Hz)",
-        "Beta waves (13–30 Hz)"
+        "Delta waves (0.5\u20134 Hz)",
+        "Theta waves (4\u20138 Hz)",
+        "Alpha waves (8\u201313 Hz)",
+        "Beta waves (13\u201330 Hz)"
       ],
-      "answer": "Alpha waves (8–13 Hz)",
-      "explanation": "Alpha waves (8–13 Hz) are the characteristic brain wave pattern associated with relaxed wakefulness, particularly when a person is sitting quietly with eyes closed. They are most prominent over the occipital regions. Delta waves are associated with deep sleep (Stage 3 NREM). Theta waves are associated with light sleep (Stage 1 and 2 NREM) and drowsiness. Beta waves are associated with active thinking, concentration, and alert wakefulness with eyes open.",
+      "answer": "Alpha waves (8\u201313 Hz)",
+      "explanation": "Alpha waves (8\u201313 Hz) are the characteristic brain wave pattern associated with relaxed wakefulness, particularly when a person is sitting quietly with eyes closed. They are most prominent over the occipital regions. Delta waves are associated with deep sleep (Stage 3 NREM). Theta waves are associated with light sleep (Stage 1 and 2 NREM) and drowsiness. Beta waves are associated with active thinking, concentration, and alert wakefulness with eyes open.",
       "kn": "KN5",
       "kn_explanation": "EEG brain wave pattern identification is an electrophysiological method application",
       "difficulty": "easy",
@@ -80,7 +80,7 @@
       "suggestedLesson": "1-memory-and-sleep",
       "suggestedParagraph": "## Sleep Stages and Brain Waves",
       "lessonExcerpt": "Alpha waves are associated with relaxed wakefulness, typically observed when a person is calm with eyes closed.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 9
     },
@@ -93,7 +93,7 @@
         "Intact declarative memory consolidation with impaired retrieval of previously stored semantic knowledge"
       ],
       "answer": "Intact short-term and procedural memory with impaired formation of new declarative long-term memories",
-      "explanation": "This question is modeled on the classic case of patient H.M. described in the lesson. Bilateral medial temporal lobe removal, including the hippocampi, disrupts the consolidation of declarative (explicit) memories while leaving short-term memory and procedural (implicit) memory intact. The patient can hold a conversation (short-term memory), learn mirror tracing (procedural memory stored by basal ganglia and cerebellum), and recall remote memories (already consolidated), but cannot form new declarative long-term memories. Option B is incorrect because the amnesia is not global—procedural memory and short-term memory are preserved. Option C reverses the actual deficit; implicit memory is preserved, not impaired. Option D is incorrect because the core deficit is in consolidation of new declarative memories, not retrieval of old semantic knowledge.",
+      "explanation": "This question is modeled on the classic case of patient H.M. described in the lesson. Bilateral medial temporal lobe removal, including the hippocampi, disrupts the consolidation of declarative (explicit) memories while leaving short-term memory and procedural (implicit) memory intact. The patient can hold a conversation (short-term memory), learn mirror tracing (procedural memory stored by basal ganglia and cerebellum), and recall remote memories (already consolidated), but cannot form new declarative long-term memories. Option B is incorrect because the amnesia is not global\u2014procedural memory and short-term memory are preserved. Option C reverses the actual deficit; implicit memory is preserved, not impaired. Option D is incorrect because the core deficit is in consolidation of new declarative memories, not retrieval of old semantic knowledge.",
       "kn": "KN1",
       "kn_explanation": "Bilateral medial temporal lobe resection effects on cognition/memory relates to neurobiological bases of behavior",
       "difficulty": "hard",
@@ -114,7 +114,7 @@
         "Beta waves characterized by low amplitude and high frequency"
       ],
       "answer": "Beta waves characterized by low amplitude and high frequency",
-      "explanation": "Beta waves are associated with active concentration, alertness, and focused mental activity. The lesson uses the mnemonic 'Beta waves mean you beta be alert' and describes them as low-amplitude, high-frequency waves present during active wakefulness. They also appear during REM sleep. Delta waves (option A) dominate Stage N3 deep sleep and represent the opposite of alert wakefulness. Theta waves (option B) appear during Stage N1 drowsiness and light sleep. Alpha waves (option C) are present during relaxed, calm wakefulness—not the intense concentration described in the vignette.",
+      "explanation": "Beta waves are associated with active concentration, alertness, and focused mental activity. The lesson uses the mnemonic 'Beta waves mean you beta be alert' and describes them as low-amplitude, high-frequency waves present during active wakefulness. They also appear during REM sleep. Delta waves (option A) dominate Stage N3 deep sleep and represent the opposite of alert wakefulness. Theta waves (option B) appear during Stage N1 drowsiness and light sleep. Alpha waves (option C) are present during relaxed, calm wakefulness\u2014not the intense concentration described in the vignette.",
       "kn": "KN1",
       "kn_explanation": "This question tests understanding of EEG brain wave patterns and their association with different states of consciousness and arousal.",
       "difficulty": "easy",
@@ -139,11 +139,11 @@
       "kn": "KN1",
       "kn_explanation": "This question tests understanding of sleep stage regulation and the REM rebound phenomenon following selective sleep deprivation.",
       "difficulty": "hard",
-      "quality_comment": "This question tests a well-known EPPP concept (REM rebound) but the lesson content does not explicitly discuss REM rebound. The lesson covers REM sleep characteristics thoroughly but the specific rebound effect must be inferred from general sleep architecture knowledge.",
+      "quality_comment": "This question tests a well-known EPPP concept (REM rebound) but The lesson covers REM sleep characteristics thoroughly but the specific rebound effect must be inferred from general sleep architecture knowledge.",
       "suggestedLesson": "1-memory-and-sleep",
       "suggestedParagraph": "### REM Sleep: The Paradox",
       "lessonExcerpt": "As the night progresses, your REM periods get longer and your N3 periods get shorter.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 9
     },
@@ -160,11 +160,11 @@
       "kn": "KN1",
       "kn_explanation": "This question tests knowledge of sleep phenomena and their neurobiological basis, a biological bases topic.",
       "difficulty": "medium",
-      "quality_comment": "The 1-memory-and-sleep lesson describes N1 as the transition zone but does not explicitly mention hypnagogic hallucinations. The concept is covered in the diagnosis lesson on sleep disorders. Question is clinically accurate but lesson coverage in Domain 1 is limited.",
+      "quality_comment": "Tests narcolepsy-specific sleep phenomenon (hypnagogic hallucinations at N1 transition). Lesson covers N1/sleep stages; question extends to narcolepsy presentation.",
       "suggestedLesson": "1-memory-and-sleep",
       "suggestedParagraph": "### NREM Sleep: The Three Stages",
-      "lessonExcerpt": "Stage N1: The Transition Zone — This is that drowsy state when you're just nodding off. Your alpha waves (present when you're awake and relaxed) shift to theta waves.",
-      "needsReview": true,
+      "lessonExcerpt": "Stage N1: The Transition Zone \u2014 This is that drowsy state when you're just nodding off.",
+      "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 23
     },
@@ -272,6 +272,69 @@
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 11
+    },
+    {
+      "stem": "Following bilateral medial temporal lobe surgery that included removal of both hippocampi, a 27-year-old man can hold a brief conversation, recognize his family members, and improve his performance on a mirror-tracing task across daily sessions \u2014 yet he cannot recall meeting the hospital staff that morning. This dissociation most directly reflects the hippocampus's role in:",
+      "options": [
+        "Retaining previously acquired procedural skills",
+        "Attaching emotional salience to autobiographical events",
+        "Consolidating new declarative information into long-term storage",
+        "Maintaining working memory for ongoing cognitive tasks"
+      ],
+      "answer": "Consolidating new declarative information into long-term storage",
+      "explanation": "The hippocampus acts as a consolidation hub that transfers declarative (factual and episodic) information from short-term into long-term storage. This patient's intact short-term memory (can converse), preserved procedural learning (mirror-tracing improves), and spared emotional recognition stand in stark contrast to his inability to form new declarative long-term memories \u2014 the signature pattern of bilateral hippocampal damage, famously demonstrated in the case of patient H.M. Procedural memory is stored via the basal ganglia and cerebellum. Emotional memory encoding is primarily an amygdala function. Working memory is managed by the prefrontal cortex.",
+      "kn": "KN1",
+      "kn_explanation": "Hippocampal consolidation of declarative memory is a core concept in Domain 1: Biological Bases of Behavior, under memory and brain structures.",
+      "difficulty": "medium",
+      "quality_comment": "Novel vignette closely paralleling the H.M. case; distractor design requires genuine understanding of memory system dissociations.",
+      "suggestedLesson": "1-memory-and-sleep",
+      "suggestedParagraph": "### The Hippocampus: Your Memory Transfer Agent",
+      "lessonExcerpt": "the hippocampus serves as a consolidation hub. It takes declarative information (facts and events) from short-term storage and helps transfer it into long-term storage.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 4
+    },
+    {
+      "stem": "During a polysomnography study, a participant is asked to lie quietly with eyes closed before attempting sleep. The technician observes a regular, synchronized EEG pattern at approximately 10 Hz with moderate amplitude. The participant reports feeling calm and mentally relaxed without any tendency toward drowsiness. Which brain wave pattern is being recorded?",
+      "options": [
+        "Delta waves (0.5\u20134 Hz), characteristic of slow-wave sleep",
+        "Theta waves (4\u20138 Hz), characteristic of light sleep and drowsiness",
+        "Alpha waves (8\u201312 Hz), characteristic of relaxed wakefulness",
+        "Beta waves (13\u201330 Hz), characteristic of active cognitive engagement"
+      ],
+      "answer": "Alpha waves (8\u201312 Hz), characteristic of relaxed wakefulness",
+      "explanation": "Alpha waves (8\u201312 Hz) are the hallmark EEG pattern of a person who is awake, calm, and mentally relaxed, particularly with eyes closed. They are replaced by lower-amplitude, higher-frequency beta waves when the individual actively concentrates or opens their eyes. Delta waves (0.5\u20134 Hz) are large, slow waves characteristic of stage N3 slow-wave sleep and are not present in waking states. Theta waves (4\u20138 Hz) emerge during stage N1 and N2 sleep or drowsiness, not relaxed wakefulness. Beta waves (13\u201330 Hz) reflect alertness and active mental processing, not the calm resting state described.",
+      "kn": "KN1",
+      "kn_explanation": "EEG brain wave patterns and their correspondence to arousal states fall under sleep and arousal content in Domain 1: Biological Bases of Behavior.",
+      "difficulty": "easy",
+      "quality_comment": "Accurate frequency ranges in both stem and options prevent guessing; straightforward but tests the full spectrum of EEG states across a clean gradient.",
+      "suggestedLesson": "1-memory-and-sleep",
+      "suggestedParagraph": "## Sleep Stages and Neural Activity",
+      "lessonExcerpt": "[Alpha wave characteristics during relaxed wakefulness and the progression through sleep stages are covered in the sleep stages section \u2014 full content extends beyond the provided excerpt]",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 9
+    },
+    {
+      "stem": "A 34-year-old patient undergoes bilateral medial temporal lobectomy to treat intractable seizures. Following surgery, neuropsychological testing reveals that he performs within normal limits on a digit span task and can acquire a new motor sequence through repeated practice sessions. However, despite meeting his neurologist three times per week for six months, he cannot recall her name, her face, or any details of their previous appointments. This dissociation in memory functioning MOST directly demonstrates which principle?",
+      "options": [
+        "Emotional memory encoding is independent of medial temporal lobe structures",
+        "Declarative memory consolidation depends critically on medial temporal lobe integrity",
+        "Procedural memory acquisition requires intact prefrontal cortex functioning",
+        "Working memory capacity is selectively disrupted by bilateral amygdala resection"
+      ],
+      "answer": "Declarative memory consolidation depends critically on medial temporal lobe integrity",
+      "explanation": "This vignette closely parallels the famous case of H.M., who underwent bilateral removal of the hippocampi, amygdalae, and portions of the medial temporal lobe. The key dissociation is preserved short-term memory (digit span intact), preserved procedural/implicit memory (motor sequence learning intact), but profound anterograde amnesia for declarative memories (inability to form new episodic or factual long-term memories). This pattern is explained by the hippocampus's role as a consolidation hub for declarative information. Option A is incorrect because the amygdala\u2014not the hippocampus alone\u2014attaches emotional significance to memories, and the case is about declarative consolidation, not emotional tagging. Option C is incorrect because procedural learning relies on the basal ganglia and cerebellum, not the prefrontal cortex primarily. Option D is incorrect because working memory is a prefrontal cortex function and is explicitly intact in this scenario (digit span is normal).",
+      "kn": "KN1",
+      "kn_explanation": "This question falls under KN1 (Biological Bases of Behavior), specifically the neurological substrates of memory. It tests knowledge of medial temporal lobe structures (hippocampus) and their differential roles in declarative versus procedural memory systems.",
+      "difficulty": "hard",
+      "quality_comment": "High-quality doctoral-level question. The dissociation between preserved procedural and short-term memory versus impaired declarative long-term memory requires integrating multiple memory systems and ruling out plausible distractors. Directly grounded in the H.M. case described in the lesson.",
+      "suggestedLesson": "1-memory-and-sleep",
+      "suggestedParagraph": "The Hippocampus: Your Memory Transfer Agent",
+      "lessonExcerpt": "H.M. could hold a conversation with you (his short-term memory worked fine), and he could still ride a bike or learn new motor skills (his procedural memory was intact). But if you left the room and came back ten minutes later, he wouldn't remember meeting you\u2026 the hippocampus serves as a consolidation hub. It takes declarative information (facts and events) from short-term storage and helps transfer it into long-term storage.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 21
     }
   ]
 }

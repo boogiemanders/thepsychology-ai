@@ -9,15 +9,15 @@
         "The trimmed mean, because it removes both the highest and lowest scores"
       ],
       "answer": "The median, because it is not distorted by the artificial ceiling on extreme scores",
-      "explanation": "When data is truncated or censored (scores above a threshold are recorded at that threshold), the mean would be artificially lowered because extreme scores are compressed. The lesson states: 'When data is skewed, the median is usually better than the mean for representing a typical score because the mean gets distorted by those extreme values.' The same logic applies to truncated data — the median depends only on the rank order of scores, not their exact values, so it remains accurate even when some extreme values are artificially capped. Option A is wrong because the mean would be systematically biased downward by the truncated values. Option B is incorrect because while the mode is unaffected, it only reflects the most frequent value and provides limited information about central tendency in continuous data. Option D is partially reasonable but removes valid low scores unnecessarily and may still be affected if many scores are at the ceiling.",
+      "explanation": "When data is truncated or censored (scores above a threshold are recorded at that threshold), the mean would be artificially lowered because extreme scores are compressed. The lesson states: 'When data is skewed, the median is usually better than the mean for representing a typical score because the mean gets distorted by those extreme values.' The same logic applies to truncated data \u2014 the median depends only on the rank order of scores, not their exact values, so it remains accurate even when some extreme values are artificially capped. Option A is wrong because the mean would be systematically biased downward by the truncated values. Option B is incorrect because while the mode is unaffected, it only reflects the most frequent value and provides limited information about central tendency in continuous data. Option D is partially reasonable but removes valid low scores unnecessarily and may still be affected if many scores are at the ceiling.",
       "kn": "KN53",
       "kn_explanation": "Equipment malfunction causing censored/truncated data is a data collection methods issue.",
       "difficulty": "medium",
-      "quality_comment": "Good applied question. The lesson covers median superiority for skewed data, and the logic extends to truncated/censored data, though truncation is not explicitly discussed.",
+      "quality_comment": "Good applied question. The lesson covers median superiority for skewed data, and the logic extends to",
       "suggestedLesson": "7-variables",
       "suggestedParagraph": "### Skewed Distributions: When Data Piles to One Side",
-      "lessonExcerpt": "When data is skewed, the median is usually better than the mean for representing a typical score because the mean gets distorted by those extreme values.",
-      "needsReview": true,
+      "lessonExcerpt": "In skewed distributions, the mean, median, and mode separate:",
+      "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
       "inspirationIndex": 7
     },
@@ -30,15 +30,15 @@
         "The distribution will become leptokurtic because z-score conversions compress extreme values"
       ],
       "answer": "The distribution will retain its positively skewed shape but will have a mean of 0 and standard deviation of 1",
-      "explanation": "Converting raw scores to z-scores is a linear transformation that changes the mean to 0 and the standard deviation to 1, but it does NOT change the shape of the distribution. A positively skewed distribution remains positively skewed after z-score conversion. The lesson describes the normal distribution properties (mean, median, and mode equal; 68-95-99 rule) but z-score transformations only produce a normal distribution when the original data are already normally distributed. Option A is a common misconception — z-scores standardize the scale but do not normalize skewed data. Option C is wrong because linear transformations preserve the direction of skew. Option D is wrong because z-scores do not compress extreme values; they merely re-express them on a standardized scale.",
+      "explanation": "Converting raw scores to z-scores is a linear transformation that changes the mean to 0 and the standard deviation to 1, but it does NOT change the shape of the distribution. A positively skewed distribution remains positively skewed after z-score conversion. The lesson describes the normal distribution properties (mean, median, and mode equal; 68-95-99 rule) but z-score transformations only produce a normal distribution when the original data are already normally distributed. Option A is a common misconception \u2014 z-scores standardize the scale but do not normalize skewed data. Option C is wrong because linear transformations preserve the direction of skew. Option D is wrong because z-scores do not compress extreme values; they merely re-express them on a standardized scale.",
       "kn": "KN55",
       "kn_explanation": "Linear transformations of scores and their effects on distribution properties (mean, SD, skewness) fall under descriptive statistics/analytic methods.",
       "difficulty": "medium",
-      "quality_comment": "Tests a very common EPPP misconception. The lesson content discusses normal distributions and skewed distributions but does not explicitly address z-score transformation properties.",
+      "quality_comment": "Tests a very common EPPP misconception. The lesson content discusses normal distributions and skewed distributions but",
       "suggestedLesson": "7-variables",
       "suggestedParagraph": "### The Normal Distribution: The Ideal Bell Curve",
-      "lessonExcerpt": "The mean, median, and mode all equal the same value (they're all at the center peak)",
-      "needsReview": true,
+      "lessonExcerpt": "{{M}}If you measure the wait times for appointments at a large clinic and get a normal distribution with a mean of 15 minutes and standard deviation of 5 minutes, you know that about 68% of clients wa",
+      "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
       "inspirationIndex": 9
     },
@@ -104,6 +104,27 @@
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
       "inspirationIndex": 4
+    },
+    {
+      "stem": "A researcher collects annual income data from a sample of psychologists but many participants at the high end report only that they earn '$200,000 or more' rather than providing exact figures. When selecting a measure of central tendency for this dataset, the researcher should use the:",
+      "options": [
+        "Mean, because income is a ratio-level variable",
+        "Mode, because it is not affected by extreme values",
+        "Median, because the mean would be distorted by the inability to calculate exact values for high earners",
+        "Geometric mean, because income data is always positively skewed"
+      ],
+      "answer": "Median, because the mean would be distorted by the inability to calculate exact values for high earners",
+      "explanation": "When data is censored (exact values unknown above a threshold), the mean cannot be accurately computed because it requires all exact values. The median, which depends only on the rank order of scores, can be determined as long as the median falls below the censoring threshold. The lesson establishes that 'when data is skewed, the median is usually better than the mean for representing a typical score because the mean gets distorted by those extreme values.' Income is specifically cited as an example of positively skewed data where extreme values pull the mean. Censored data at the upper end compounds this problem since exact values cannot even be assigned. The mode would lose too much information. The geometric mean is not discussed in the lesson content.",
+      "kn": "KN7",
+      "kn_explanation": "This question tests selection of appropriate central tendency measures when data is censored/truncated, drawing on descriptive statistics knowledge.",
+      "difficulty": "hard",
+      "quality_comment": "Good applied question. The lesson covers skewed distributions and median as preferred measure but",
+      "suggestedLesson": "7-variables",
+      "suggestedParagraph": "### Skewed Distributions: When Data Piles to One Side",
+      "lessonExcerpt": "When data is skewed, the median is usually better than the mean for representing a typical score because the mean gets distorted by those extreme values.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 7
     }
   ]
 }

@@ -9,20 +9,20 @@
         "Instrumentation, because the observers may have changed their recording criteria over time"
       ],
       "answer": "History, because an external event (hiring of the aide) coincided with the introduction of treatment",
-      "explanation": "In AB single-subject designs, history is a primary threat because there is no withdrawal or replication phase to rule out coincidental external events. The lesson explicitly states that the AB design 'doesn't control for history – any one-time event that happens to coincide with treatment.' The hiring of a new aide is a classic history confound. Maturation (A) is actually controlled in AB designs because 'those would show up as gradual trends' during baseline. Statistical regression (C) could be a concern but is less directly relevant here since the baseline was stable. Instrumentation (D) is possible but not the most salient threat given the scenario.",
+      "explanation": "In AB single-subject designs, history is a primary threat because there is no withdrawal or replication phase to rule out coincidental external events. The lesson explicitly states that the AB design 'doesn't control for history \u2013 any one-time event that happens to coincide with treatment.' The hiring of a new aide is a classic history confound. Maturation (A) is actually controlled in AB designs because 'those would show up as gradual trends' during baseline. Statistical regression (C) could be a concern but is less directly relevant here since the baseline was stable. Instrumentation (D) is possible but not the most salient threat given the scenario.",
       "kn": "KN54",
       "kn_explanation": "Describes a single-subject ABAB reversal design, which is an experimental study design",
       "difficulty": "hard",
       "quality_comment": "Strong application question requiring integration of single-subject design knowledge with internal validity threats. The scenario is realistic and the distractors are plausible.",
       "suggestedLesson": "7-research-designs",
       "suggestedParagraph": "### AB Design: The Basic Version",
-      "lessonExcerpt": "The design controls for maturation (gradual changes over time like fatigue or natural development) because those would show up as gradual trends. However, it doesn't control for history – any one-time event that happens to coincide with treatment.",
+      "lessonExcerpt": "The design controls for maturation (gradual changes over time like fatigue or natural development) because those would show up as gradual trends. However, it doesn't control for history \u2013 any one-time event that happens to coincide with treatment.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
       "inspirationIndex": 1
     },
     {
-      "stem": "A researcher conducts a 3 × 2 factorial ANOVA examining the effects of therapy type (CBT, ACT, IPT) and session frequency (weekly, biweekly) on depression scores. The results reveal a significant interaction effect but non-significant main effects for both therapy type and session frequency. Which of the following is the BEST interpretation?",
+      "stem": "A researcher conducts a 3 \u00d7 2 factorial ANOVA examining the effects of therapy type (CBT, ACT, IPT) and session frequency (weekly, biweekly) on depression scores. The results reveal a significant interaction effect but non-significant main effects for both therapy type and session frequency. Which of the following is the BEST interpretation?",
       "options": [
         "Neither therapy type nor session frequency affects depression scores under any conditions",
         "The effect of therapy type on depression depends on session frequency, even though neither variable has a consistent overall effect",
@@ -30,7 +30,7 @@
         "Session frequency moderates depression scores regardless of therapy type"
       ],
       "answer": "The effect of therapy type on depression depends on session frequency, even though neither variable has a consistent overall effect",
-      "explanation": "The lesson describes this exact pattern: 'Neither therapy nor medication matters alone, but specific combinations work' is listed as an example of 'Interaction only.' A significant interaction means the effect of one IV depends on the level of the other IV. Non-significant main effects mean that neither variable has a consistent overall effect when averaged across levels of the other variable. Option A is incorrect because the significant interaction indicates that certain combinations DO affect depression. Option C is incorrect — main effects do not need to be significant for interactions to be meaningful; in fact, the lesson warns 'When there's a significant interaction, be cautious interpreting main effects – the interaction might tell the more important story.' Option D incorrectly describes moderation as independent of therapy type.",
+      "explanation": "The lesson describes this exact pattern: 'Neither therapy nor medication matters alone, but specific combinations work' is listed as an example of 'Interaction only.' A significant interaction means the effect of one IV depends on the level of the other IV. Non-significant main effects mean that neither variable has a consistent overall effect when averaged across levels of the other variable. Option A is incorrect because the significant interaction indicates that certain combinations DO affect depression. Option C is incorrect \u2014 main effects do not need to be significant for interactions to be meaningful; in fact, the lesson warns 'When there's a significant interaction, be cautious interpreting main effects \u2013 the interaction might tell the more important story.' Option D incorrectly describes moderation as independent of therapy type.",
       "kn": "KN55",
       "kn_explanation": "Factorial ANOVA is an analytic/statistical method",
       "difficulty": "hard",
@@ -51,7 +51,7 @@
         "The design should be abandoned in favor of a multiple baseline design whenever behavior fails to reverse"
       ],
       "answer": "Carryover effects from the treatment may have produced lasting behavioral change that prevents a true return to baseline",
-      "explanation": "The ABAB design relies on behavior returning to baseline levels when treatment is withdrawn to demonstrate experimental control. The lesson states: 'When behavior returns to baseline after treatment withdrawal and improves again when treatment is reintroduced, you have strong evidence the treatment works.' When behavior does NOT reverse, this undermines the logic of the design. The most likely explanation is carryover — the treatment produced learning or behavioral change that persists even after formal treatment withdrawal. Option A is partially correct but doesn't identify the mechanism. Option C is less likely since maturation would produce gradual change, not the pattern described. Option D is too absolute — the design may still provide useful information even without perfect reversal.",
+      "explanation": "The ABAB design relies on behavior returning to baseline levels when treatment is withdrawn to demonstrate experimental control. The lesson states: 'When behavior returns to baseline after treatment withdrawal and improves again when treatment is reintroduced, you have strong evidence the treatment works.' When behavior does NOT reverse, this undermines the logic of the design. The most likely explanation is carryover \u2014 the treatment produced learning or behavioral change that persists even after formal treatment withdrawal. Option A is partially correct but doesn't identify the mechanism. Option C is less likely since maturation would produce gradual change, not the pattern described. Option D is too absolute \u2014 the design may still provide useful information even without perfect reversal.",
       "kn": "KN54",
       "kn_explanation": "ABAB reversal design is an experimental study design",
       "difficulty": "hard",
@@ -72,7 +72,7 @@
         "A quasi-experimental approach because it lacks random assignment to conditions"
       ],
       "answer": "An idiographic research approach because it focuses on understanding patterns within a single individual",
-      "explanation": "Single-subject designs are the hallmark of idiographic research, which focuses on understanding the individual case in depth. The lesson describes single-subject designs as 'powerful tools for clinical practice' that involve 'at least two phases: baseline (A) and treatment (B)' with 'multiple measurements during each phase.' This individual-focused, repeated-measurement approach exemplifies idiographic methodology. Option A is incorrect because using standardized measures does not make research nomothetic — nomothetic research seeks general laws across groups. Option C is incorrect because single-subject designs are quantitative, using numerical data and systematic measurement. Option D, while technically accurate (single-subject designs lack random assignment), does not best classify the methodology — it describes a limitation rather than the fundamental approach.",
+      "explanation": "Single-subject designs are the hallmark of idiographic research, which focuses on understanding the individual case in depth. The lesson describes single-subject designs as 'powerful tools for clinical practice' that involve 'at least two phases: baseline (A) and treatment (B)' with 'multiple measurements during each phase.' This individual-focused, repeated-measurement approach exemplifies idiographic methodology. Option A is incorrect because using standardized measures does not make research nomothetic \u2014 nomothetic research seeks general laws across groups. Option C is incorrect because single-subject designs are quantitative, using numerical data and systematic measurement. Option D, while technically accurate (single-subject designs lack random assignment), does not best classify the methodology \u2014 it describes a limitation rather than the fundamental approach.",
       "kn": "KN54",
       "kn_explanation": "Single-case experimental design with baseline and treatment phases",
       "difficulty": "easy",
@@ -80,7 +80,7 @@
       "suggestedLesson": "7-research-designs",
       "suggestedParagraph": "## Single-Subject Designs: When One Person Is Enough",
       "lessonExcerpt": "Single-subject designs are powerful tools for clinical practice. They share key features: at least two phases: baseline (A) and treatment (B), multiple measurements during each phase, you don't start treatment until baseline is stable.",
-      "needsReview": true,
+      "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
       "inspirationIndex": 10
     },
@@ -93,20 +93,20 @@
         "Statistical regression, because the client's extreme baseline scores would naturally move toward the mean"
       ],
       "answer": "History, because the AB design lacks a second baseline phase to demonstrate that changes are due to the intervention rather than coincidental external events",
-      "explanation": "The AB design is specifically vulnerable to history threats because it has only one baseline and one treatment phase. When an external event (the natural disaster) coincides with the treatment phase, there is no way to disentangle the effects of the intervention from the effects of the external event. The lesson explicitly states the AB design 'doesn't control for history – any one-time event that happens to coincide with treatment.' An ABAB design would better address this by demonstrating the behavior changes with each phase transition. Maturation is incorrect because the AB design does control for maturation (gradual trends would be visible). Differential attrition applies to group designs with dropout. Statistical regression requires selection based on extreme scores.",
+      "explanation": "The AB design is specifically vulnerable to history threats because it has only one baseline and one treatment phase. When an external event (the natural disaster) coincides with the treatment phase, there is no way to disentangle the effects of the intervention from the effects of the external event. The lesson explicitly states the AB design 'doesn't control for history \u2013 any one-time event that happens to coincide with treatment.' An ABAB design would better address this by demonstrating the behavior changes with each phase transition. Maturation is incorrect because the AB design does control for maturation (gradual trends would be visible). Differential attrition applies to group designs with dropout. Statistical regression requires selection based on extreme scores.",
       "kn": "KN57",
       "kn_explanation": "Threat to internal validity (history effect) in a research design",
       "difficulty": "medium",
       "quality_comment": "Strong integration of single-subject design knowledge with internal validity threats. Requires understanding why the AB design specifically fails to control for history.",
       "suggestedLesson": "7-research-designs",
       "suggestedParagraph": "### AB Design: The Basic Version",
-      "lessonExcerpt": "The design controls for maturation (gradual changes over time like fatigue or natural development) because those would show up as gradual trends. However, it doesn't control for history – any one-time event that happens to coincide with treatment.",
+      "lessonExcerpt": "The design controls for maturation (gradual changes over time like fatigue or natural development) because those would show up as gradual trends. However, it doesn't control for history \u2013 any one-time event that happens to coincide with treatment.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
       "inspirationIndex": 1
     },
     {
-      "stem": "A researcher conducts a 2 × 3 factorial ANOVA examining the effects of therapy type (CBT vs. psychodynamic) and session frequency (weekly, biweekly, monthly) on depression scores. The results reveal a significant interaction effect but NO significant main effects. Which interpretation is MOST appropriate?",
+      "stem": "A researcher conducts a 2 \u00d7 3 factorial ANOVA examining the effects of therapy type (CBT vs. psychodynamic) and session frequency (weekly, biweekly, monthly) on depression scores. The results reveal a significant interaction effect but NO significant main effects. Which interpretation is MOST appropriate?",
       "options": [
         "Neither therapy type nor session frequency has any effect on depression scores",
         "The effect of therapy type on depression depends on session frequency, even though neither variable has a consistent overall effect across all conditions",
@@ -114,14 +114,14 @@
         "The study lacked sufficient power to detect main effects, so the interaction is likely a Type I error"
       ],
       "answer": "The effect of therapy type on depression depends on session frequency, even though neither variable has a consistent overall effect across all conditions",
-      "explanation": "A significant interaction without significant main effects means that the effect of one variable depends on the level of the other variable, but neither variable produces a consistent average effect across all levels of the other. For example, CBT might be superior with weekly sessions while psychodynamic might be superior with monthly sessions, with these effects canceling out when averaged. The lesson states: 'When there's a significant interaction, be cautious interpreting main effects – the interaction might tell the more important story.' Option A is wrong because the significant interaction shows the variables DO affect scores, just conditionally. Option C is wrong because interactions can be significant and meaningful without significant main effects. Option D is an unwarranted assumption.",
+      "explanation": "A significant interaction without significant main effects means that the effect of one variable depends on the level of the other variable, but neither variable produces a consistent average effect across all levels of the other. For example, CBT might be superior with weekly sessions while psychodynamic might be superior with monthly sessions, with these effects canceling out when averaged. The lesson states: 'When there's a significant interaction, be cautious interpreting main effects \u2013 the interaction might tell the more important story.' Option A is wrong because the significant interaction shows the variables DO affect scores, just conditionally. Option C is wrong because interactions can be significant and meaningful without significant main effects. Option D is an unwarranted assumption.",
       "kn": "KN55",
       "kn_explanation": "Factorial ANOVA is an analytic/statistical method",
       "difficulty": "hard",
       "quality_comment": "Excellent discriminating question that tests deeper understanding of factorial ANOVA interpretation beyond simple definitions.",
       "suggestedLesson": "7-research-designs",
       "suggestedParagraph": "## Factorial Designs: Testing Multiple Variables at Once",
-      "lessonExcerpt": "When there's a significant interaction, be cautious interpreting main effects – the interaction might tell the more important story.",
+      "lessonExcerpt": "When there's a significant interaction, be cautious interpreting main effects \u2013 the interaction might tell the more important story.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
       "inspirationIndex": 5
@@ -135,11 +135,11 @@
         "The study should be redesigned as a multiple baseline design to eliminate the need for withdrawal"
       ],
       "answer": "The treatment may have produced carryover effects, making it difficult to attribute changes solely to the intervention's presence or absence",
-      "explanation": "The ABAB design's logic depends on behavior returning to baseline levels when treatment is withdrawn, and improving again when treatment is reintroduced. The lesson states: 'When behavior returns to baseline after treatment withdrawal and improves again when treatment is reintroduced, you have strong evidence the treatment works.' When behavior does NOT return to baseline, it suggests carryover effects — the treatment produced lasting changes that persist even after withdrawal. This undermines the design's internal validity because the causal demonstration relies on the behavior tracking with the treatment phases. Option A incorrectly identifies the threat. Option C mistakes a methodological limitation for a strength — while maintenance is clinically desirable, it weakens the design's logic. Option D identifies an alternative design but doesn't address the core concern.",
+      "explanation": "The ABAB design's logic depends on behavior returning to baseline levels when treatment is withdrawn, and improving again when treatment is reintroduced. The lesson states: 'When behavior returns to baseline after treatment withdrawal and improves again when treatment is reintroduced, you have strong evidence the treatment works.' When behavior does NOT return to baseline, it suggests carryover effects \u2014 the treatment produced lasting changes that persist even after withdrawal. This undermines the design's internal validity because the causal demonstration relies on the behavior tracking with the treatment phases. Option A incorrectly identifies the threat. Option C mistakes a methodological limitation for a strength \u2014 while maintenance is clinically desirable, it weakens the design's logic. Option D identifies an alternative design but doesn't address the core concern.",
       "kn": "KN54",
       "kn_explanation": "ABAB withdrawal design is an experimental study design",
       "difficulty": "hard",
-      "quality_comment": "Tests a nuanced understanding of ABAB design logic — the tension between clinical desirability of maintained gains and methodological requirements for demonstrating experimental control.",
+      "quality_comment": "Tests a nuanced understanding of ABAB design logic \u2014 the tension between clinical desirability of maintained gains and methodological requirements for demonstrating experimental control.",
       "suggestedLesson": "7-research-designs",
       "suggestedParagraph": "### ABAB Design: More Convincing",
       "lessonExcerpt": "When behavior returns to baseline after treatment withdrawal and improves again when treatment is reintroduced, you have strong evidence the treatment works.",
@@ -160,11 +160,11 @@
       "kn": "KN54",
       "kn_explanation": "Asking about classification of single-subject experimental designs as a methodological approach",
       "difficulty": "easy",
-      "quality_comment": "Tests fundamental classification knowledge. The lesson covers single-subject designs extensively but does not explicitly use the terms idiographic or nomothetic.",
+      "quality_comment": "Tests fundamental classification knowledge. The lesson covers single-subject designs extensively but",
       "suggestedLesson": "7-research-designs",
       "suggestedParagraph": "## Single-Subject Designs: When One Person Is Enough",
-      "lessonExcerpt": "Single-subject designs are powerful tools for clinical practice. They share key features: at least two phases: baseline (A) and treatment (B), multiple measurements during each phase, you don't start treatment until baseline is stable.",
-      "needsReview": true,
+      "lessonExcerpt": "- **Single-subject designs** (AB, ABAB, multiple baseline) are powerful for evaluating individual treatment effects",
+      "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
       "inspirationIndex": 10
     },
@@ -314,6 +314,69 @@
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
       "inspirationIndex": 8
+    },
+    {
+      "stem": "A 3 \u00d7 2 factorial ANOVA examining the effects of therapy type (CBT, ACT, IPT) and session frequency (weekly vs. biweekly) on depression scores yields a significant interaction effect but no significant main effects. Which of the following is the MOST appropriate interpretation?",
+      "options": [
+        "Neither therapy type nor session frequency has any effect on depression scores",
+        "The effect of therapy type on depression depends on session frequency, even though neither factor independently produces a consistent effect across all levels of the other",
+        "The results are uninterpretable because main effects must be significant for an interaction to be meaningful",
+        "The significant interaction is likely a Type I error because it is not supported by significant main effects"
+      ],
+      "answer": "The effect of therapy type on depression depends on session frequency, even though neither factor independently produces a consistent effect across all levels of the other",
+      "explanation": "An interaction effect means the effect of one IV depends on the level of another IV. A significant interaction without significant main effects is a legitimate and interpretable finding \u2014 it indicates that neither variable has a consistent overall effect, but specific combinations matter. The lesson explicitly states: 'When there's a significant interaction, be cautious interpreting main effects \u2013 the interaction might tell the more important story.' Option A incorrectly equates non-significant main effects with no effect. Option C states a false requirement. Option D incorrectly assumes interactions need main effects to be valid.",
+      "kn": "KN7",
+      "kn_explanation": "This question tests interpretation of factorial ANOVA results including the relationship between main effects and interaction effects, a core inferential statistics topic.",
+      "difficulty": "hard",
+      "quality_comment": "Tests a sophisticated understanding that interaction effects can be significant without main effects \u2014 a common EPPP trap.",
+      "suggestedLesson": "7-research-designs",
+      "suggestedParagraph": "## Factorial Designs: Testing Multiple Variables at Once",
+      "lessonExcerpt": "When there's a significant interaction, be cautious interpreting main effects \u2013 the interaction might tell the more important story.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 5
+    },
+    {
+      "stem": "A clinician uses an ABAB (withdrawal/reversal) design to evaluate a token economy system for reducing aggressive outbursts in a child. After the first treatment phase (B), the child's aggressive behavior decreases substantially. When the treatment is withdrawn for the second baseline phase (A), aggressive outbursts do NOT return to original baseline levels. The MOST likely explanation for this finding is:",
+      "options": [
+        "The treatment effect was due to history rather than the intervention",
+        "Maturation caused the improvement rather than the token economy",
+        "Carryover effects from the treatment persist even after withdrawal, which limits the design's ability to demonstrate experimental control",
+        "The initial baseline was not stable enough to draw meaningful conclusions"
+      ],
+      "answer": "Carryover effects from the treatment persist even after withdrawal, which limits the design's ability to demonstrate experimental control",
+      "explanation": "The ABAB design depends on behavior returning to baseline levels during the withdrawal phase to demonstrate that the treatment \u2014 not extraneous factors \u2014 caused the change. When behavior does not return to baseline, carryover effects are the most likely explanation: the intervention produced learning or changes that persist after withdrawal. This is a fundamental limitation of the withdrawal/reversal design. The lesson states that 'when behavior returns to baseline after treatment withdrawal and improves again when treatment is reintroduced, you have strong evidence the treatment works.' If behavior doesn't return to baseline, that evidence chain is broken. History would be a one-time event, not a sustained change. Maturation would show gradual change, not change aligned with the treatment phase.",
+      "kn": "KN7",
+      "kn_explanation": "This question addresses threats to internal validity specific to withdrawal/reversal single-subject designs, a core research methodology topic.",
+      "difficulty": "hard",
+      "quality_comment": "Tests understanding of a key limitation of the ABAB design \u2014 when treatment effects carry over, the reversal logic breaks down.",
+      "suggestedLesson": "7-research-designs",
+      "suggestedParagraph": "### ABAB Design: More Convincing",
+      "lessonExcerpt": "When behavior returns to baseline after treatment withdrawal and improves again when treatment is reintroduced, you have strong evidence the treatment works.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 6
+    },
+    {
+      "stem": "A behavioral psychologist tracks a single client's frequency of panic attacks across baseline and treatment phases using an ABAB design. A colleague argues that the findings are limited because they cannot be generalized to a broader population. The behavioral psychologist's BEST response would be that single-subject designs:",
+      "options": [
+        "Use random assignment to ensure internal validity, which compensates for limited generalizability",
+        "Are intended to establish population-level norms rather than individual treatment effects",
+        "Prioritize an idiographic approach focused on understanding the individual, with generalizability established through replication across individuals rather than large samples",
+        "Have equivalent external validity to group designs when multiple baseline phases are included"
+      ],
+      "answer": "Prioritize an idiographic approach focused on understanding the individual, with generalizability established through replication across individuals rather than large samples",
+      "explanation": "Single-subject designs reflect an idiographic approach \u2014 they focus on understanding the individual case in depth rather than deriving general laws from group averages (the nomothetic approach). The lesson describes single-subject designs as 'powerful tools for clinical practice' that study one person across phases, while group designs compare across many participants. Generalizability in single-subject research is established through direct and systematic replication across individuals, not through large sample sizes. Option A is incorrect because single-subject designs do not use random assignment. Option B reverses the purpose \u2014 group designs establish norms, not single-subject designs. Option D overstates external validity claims.",
+      "kn": "KN7",
+      "kn_explanation": "This question contrasts idiographic versus nomothetic research approaches in the context of single-subject designs, a core research methodology topic.",
+      "difficulty": "medium",
+      "quality_comment": "The lesson covers single-subject designs thoroughly but does not use the terms 'idiographic' or 'nomothetic' explicitly. The concepts are clearly implied by the distinction between single-subject and group designs.",
+      "suggestedLesson": "7-research-designs",
+      "suggestedParagraph": "## Single-Subject Designs: When One Person Is Enough",
+      "lessonExcerpt": "Single-subject designs are powerful tools for clinical practice. They share key features: at least two phases: baseline (A) and treatment (B), multiple measurements during each phase, you don't start treatment until baseline is stable.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 10
     }
   ]
 }
