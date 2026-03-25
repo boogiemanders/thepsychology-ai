@@ -18,6 +18,12 @@ const APP_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://thepsychology.ai'
 
 const isDryRun = process.argv.includes('--dry-run')
 
+const SKIP_EMAILS = new Set([
+  'support@prepjet.net',
+  'sergioescobedo1992@gmail.co',
+  'israhibrahim23@gmai.com',
+])
+
 if (!RESEND_API_KEY || !SUPABASE_URL || !SUPABASE_KEY) {
   console.error('Missing required env vars: RESEND_API_KEY, NEXT_PUBLIC_SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY')
   process.exit(1)
@@ -51,6 +57,10 @@ async function main() {
 
   for (const user of users) {
     if (!user.email) continue
+    if (SKIP_EMAILS.has(user.email)) {
+      console.log(`[SKIP] ${user.email}`)
+      continue
+    }
 
     const firstName = user.full_name?.split(' ')[0] || 'there'
     const subject = 'Your Pro access has changed'
@@ -75,10 +85,10 @@ async function main() {
 
         <div style="background: #fffbeb; border: 1px solid #fbbf24; border-radius: 8px; padding: 16px; margin: 24px 0;">
           <p style="color: #92400e; margin: 0; font-weight: 600;">
-            Founding price: $20/month — March only
+            Pro is $20/mo exclusively for early members.
           </p>
           <p style="color: #92400e; margin: 4px 0 0 0; font-size: 14px;">
-            Lock in this price forever. After March, Pro is $30/month.
+            This price won't be available for those who join in April.
           </p>
         </div>
 

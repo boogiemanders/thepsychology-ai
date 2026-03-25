@@ -1,0 +1,398 @@
+{
+  "domain": "ASSESSMENT AND DIAGNOSIS",
+  "domainKey": "5-assessment",
+  "questions": [
+    {
+      "originalStem": "You are seeing a woman and her young son in family therapy. Your patient complains that her son suffers from repeated unexplained rashes, and notes that she has taken him to multiple doctors with no result. A collateral interview with her ex-husband who has joint physical custody reveals that when the boy is with him, he never suffers from rashes. This is a possible example of:",
+      "originalOptions": [
+        "illness anxiety disorder.",
+        "factitious disorder imposed on another.",
+        "secondary gain.",
+        "Munchausen\u2019s syndrome."
+      ],
+      "originalAnswer": "B",
+      "originalExplanation": "This scenario represents a possible case of factitious disorder imposed on another (Response 2), previously called factitious disorder by proxy. The major feature of this disorder is the deliberate feigning of medical symptoms or induction or injury or disease in a dependent under the care of the individual with the disorder (the mother, in this case). The goal is to assume the sick role, or in the case of factitious disorder imposed on another, to have the dependent person assume the sick role. Secondary gain (Response 3) is an external motivator such as financial compensation or avoiding/missing work. In contrast to malingering, a diagnosis of factitious disorder can only be made in the absence of secondary gain. Munchausen\u2019s syndrome (Response 4) refers to the most severe and dramatic presentation of factitious disorder. The symptoms are predominantly physical and the syndrome can include seeking of multiple invasive procedures and operations, sometimes with serious risk to life. Illness anxiety disorder (Response 1) involves a preoccupation with having or developing a serious illness. Somatic symptoms are mild or not present, and there is significant anxiety about health.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 2,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "You are involved in your company's assessment center, and are responsible for evaluating managerial level employees for promotion. You are also responsible for the quarterly performance appraisals of management level employees. A potential problem in this situation is:",
+      "originalOptions": [
+        "the halo effect.",
+        "a recency effect.",
+        "criterion contamination.",
+        "a central tendency bias."
+      ],
+      "originalAnswer": "C",
+      "originalExplanation": "Criterion contamination occurs when the criterion is subjectively scored, and the rater has knowledge of the employees' predictor scores. In this case, you are aware of how employees performed in the assessment center (a predictor of future managerial success) and then rate them on the criterion (quarterly performance appraisals). When criterion contamination occurs, scores on the criterion are influenced by one's knowledge of predictor scores. For example, those employees who did well in the assessment center are given higher quarterly appraisals than those who did poorly. Criterion contamination results in a spuriously high criterion-related validity coefficient. The halo effect involves generalizing from one characteristic of the person (e.g., she is attractive) to other aspects (e.g., she performs well at work) (Response 1). Recency biases occur when evaluations cover an extended period of time (e.g., one year) and the evaluator is most influenced by recent performance (e.g., within the last month or two). Quarterly evaluations would actually reduce the likelihood of a recency effect (Response 2). A central tendency bias occurs when a rater tends to rate all employees as about average (Response 4).",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 3,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "On the MMPI-2, which validity scale(s) also serves as a moderator variable?",
+      "originalOptions": [
+        "Scale L.",
+        "Scale F.",
+        "Scale K.",
+        "Scales VRIN and TRIN."
+      ],
+      "originalAnswer": "C",
+      "originalExplanation": "On the MMPI-2, the K scale measures guardedness or defensiveness. The K scale also serves as a moderator variable. Scores on the K scale are used to adjust for defensiveness, by adding points to a number of the clinical scales based on the K scale score. The L scale measures a na\u00efve attempt to present favorably (Response 1). The F scale measures infrequently endorsed items, and can be used to assess overall distress and pathology, attempts to fake bad, or random responding (Response 2). VRIN and TRIN specifically measure response inconsistency or random responding (Response 4).",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 5,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "The standard errors of the mean, measurement, and estimate express error in terms of:",
+      "originalOptions": [
+        "standard deviation.",
+        "sampling error.",
+        "systematic error.",
+        "the testing situation."
+      ],
+      "originalAnswer": "A",
+      "originalExplanation": "All the standard error formulas express error in terms of standard deviation units. Sampling error (Response 2) applies to the standard error of the mean only. Systematic error (Response 3) does not apply to any of the standard error formulas. The testing situation (Response 4) is a source of error taken into account in the standard error of measurement only.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 10,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "The standard error of the estimate has:",
+      "originalOptions": [
+        "a direct relationship with the SD of the predictor and an indirect relationship with validity.",
+        "an indirect relationship with the SD of the predictor and a direct relationship with validity.",
+        "a direct relationship with the SD of the criterion and an indirect relationship with validity.",
+        "an indirect relationship with the SD of the criterion and a direct relationship with validity."
+      ],
+      "originalAnswer": "C",
+      "originalExplanation": "The standard error of estimate is affected by two variables, the standard deviation of the criterion and criterion-related validity. Intuitively, when validity is high, there should be little error in prediction, and when validity is low, there should be a lot of error in prediction. This is an indirect relationship. The standard error of estimate has a direct relationship with the standard deviation, in that the larger the SD, the larger the error, while conversely, the smaller the SD, the smaller the error.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 17,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "The halo effect can be controlled by all of the following except:",
+      "originalOptions": [
+        "training the raters.",
+        "utilizing forced choice.",
+        "utilizing relative methods.",
+        "utilizing BARS."
+      ],
+      "originalAnswer": "C",
+      "originalExplanation": "The halo effect is the tendency to be influenced by only one attribute when giving an overall rating of an individual. Halo effects can be positive, such as giving a positive overall rating because an individual is attractive, or negative, such as giving a negative overall rating because the individual dresses poorly. The following methods can help control for the halo effect: training the raters (Response 1); a forced response format in which the rater is forced to choose between two equally desirable or undesirable attributes (Response 2); and BARS, the Behaviorally Anchored Rating Scale (Response 4), in which performance is based on critical incidents. Relative methods (Response 3), which involve comparing employees with one another, do not control for halo effects.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 21,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "A Kappa coefficient of .95 suggests:",
+      "originalOptions": [
+        "a high degree of interrater reliability.",
+        "a high degree of test-retest reliability.",
+        "a high degree of criterion related validity.",
+        "a high degree of construct validity."
+      ],
+      "originalAnswer": "A",
+      "originalExplanation": "The Kappa coefficient is a measure of interrater reliability. It is the degree of agreement between two or more raters when performance is subjectively scored. Reliability coefficients range from 0.0 to 1.0, and .95 suggests a very high degree of interrater reliability. The test-retest reliability coefficient (Response 2) reflects the degree of relationship between pairs of scores from the same group of people who are administered an identical test at two points in time. The criterion-related validity coefficient (Response 3) indicates the strength of the relationship between a predictor test and criterion outcome (e.g., how well SAT scores predict college GPA). Construct validity (Response 4) is the degree to which a test is actually measuring the construct or trait it is attempting to measure (e.g., aggression). Both convergent and divergent validity are necessary to establish construct validity.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 28,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "In an attempt to minimize discrimination against disadvantaged persons, employment testing has frequently included:",
+      "originalOptions": [
+        "multiple-aptitude batteries.",
+        "work sample tests.",
+        "biodata.",
+        "norm-referenced testing."
+      ],
+      "originalAnswer": "B",
+      "originalExplanation": "To minimize discrimination, employment testing has moved from standardized tests in the direction of work sample tests. Work sample tests are excellent and fair predictors of work performance. Testing in general, such as multiple aptitude batteries (Response 1) and norm-referenced testing (Response 4), tend to unfairly discriminate against disadvantaged individuals. Although biodata (Response 3) are generally good predictors of performance, work samples are even better.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 39,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "An individual presents to a hospital emergency room complaining of sudden onset of chest pains. If a medical diagnosis is ruled out, the most likely mental disorder is:",
+      "originalOptions": [
+        "psychological factors affecting other medical conditions.",
+        "somatic symptom disorder, with predominant pain.",
+        "conversion disorder.",
+        "panic disorder."
+      ],
+      "originalAnswer": "D",
+      "originalExplanation": "The symptoms of a panic attack can mimic those of a heart attack, and may include chest pain, palpitations, shortness of breath, and fear of dying. Panic disorder is characterized by recurrent unexpected panic attacks. The diagnosis of psychological factors affecting other medical conditions (Response 1) requires that a medical symptom or condition is present (e.g., diabetes) and that psychological or behavioral factors adversely affect the medical condition. Somatic symptom disorder, with predominant pain (Response 2) is characterized by one or more somatic symptoms that predominantly involve pain, that are distressing or result in significant disruption of daily life. Additionally, the individual evidences excessive thoughts, feelings, or behaviors related to the somatic symptoms, such as persistent thoughts about the seriousness of one\u2019s symptoms, persistent high levels of anxiety about health or symptoms, or excessive time and energy devoted to symptoms or health concerns. Conversion disorder (Response 3) involves one or more symptoms or deficits affecting voluntary motor or sensory function. The symptoms, which are not intentionally produced, are incompatible with recognized neurological or medical conditions.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 43,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "An individual presents to a hospital emergency room with a flushed face, rambling speech, tachycardia, restlessness, and diuresis. The most likely diagnosis is:",
+      "originalOptions": [
+        "Diabetes.",
+        "Panic disorder.",
+        "Opioid intoxication.",
+        "Caffeine intoxication."
+      ],
+      "originalAnswer": "D",
+      "originalExplanation": "The symptoms described are classic symptoms of caffeine intoxication, which can result from consuming as little as three cups of coffee. Patients with diabetes (Response 1) often complain of diuresis (excessive urination) but not the other symptoms. Individuals with panic disorder (Response 2) may experience tachycardia, but not the other symptoms. Opioid intoxication (Response 3) is characterized by pupillary constriction, drowsiness, and slurred speech -- none of the symptoms presented.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 49,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "Since the standard error of the measurement is significantly influenced by the reliability coefficient, the range of the standard error of the measurement is:",
+      "originalOptions": [
+        "-1 to +1.",
+        "0 to +1.",
+        "0 to SDx.",
+        "0 to SDy."
+      ],
+      "originalAnswer": "C",
+      "originalExplanation": "The range of the standard error of measurement is always from 0 to the standard deviation of the test (SDx). The range of the validity coefficient is from -1 to +1 (Response 1). The range of the reliability coefficient is from 0 to +1 (Response 2). The range of the standard error of estimate is from 0 to the standard deviation of the criterion (SDy) (Response 4).",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 50,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "The Taylor-Russell tables are used to evaluate incremental validity, the benefit of using a test for improving selection decisions. The key variables that the tables take into account include base rate, selection ratio and:",
+      "originalOptions": [
+        "construct validity.",
+        "criterion-related validity.",
+        "test-retest reliability.",
+        "internal consistency reliability."
+      ],
+      "originalAnswer": "B",
+      "originalExplanation": "There are three key variables that affect incremental validity: base rate, selection ratio, and criterion-related validity. Base rate is the rate of successful hiring without using a test. A moderate base rate optimizes incremental validity. Selection ratio is the ratio of number of openings to number of applicants, and a low selection ratio optimizes incremental validity. The criterion-related validity of the test is the correlation between scores on the test and scores on some outcome measure of performance or productivity. The higher the criterion-related validity, the better the incremental validity. While construct validity, test-retest reliability, and internal consistency reliability might all be important, it is specifically criterion-related that directly influences incremental validity.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 51,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "Autism spectrum disorder is diagnosed about:",
+      "originalOptions": [
+        "equally in males and females.",
+        "two times more often in females.",
+        "two times more often in males.",
+        "four times more often in males."
+      ],
+      "originalAnswer": "D",
+      "originalExplanation": "According to the DSM-5, autism spectrum disorder is diagnosed four times more often in males than females. Disorders that are about equally common in males and females include schizophrenia and bipolar I disorder (Response 1). The rate of major depressive disorder is 1.5 to 3 times higher in females than males, beginning in early adolescence (Response 2). According to the DSM-5, ADHD is more common in males than females with a ratio of about 2:1 (Response 3).",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 57,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "The concordance rate for identical twins for bipolar I disorder is about:",
+      "originalOptions": [
+        "10%.",
+        "25%.",
+        "50%.",
+        "75%."
+      ],
+      "originalAnswer": "D",
+      "originalExplanation": "The concordance rate for identical twins with bipolar I disorder ranges from about 75% - 80%. Keep in mind that bipolar I disorder is among the most heavily genetically loaded disorders.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 65,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "The presence of bizarre delusions may suggest:",
+      "originalOptions": [
+        "schizophrenia.",
+        "schizophrenia or schizoaffective disorder.",
+        "schizophrenia or delusional disorder.",
+        "schizophrenia, schizoaffective disorder, or delusional disorder."
+      ],
+      "originalAnswer": "D",
+      "originalExplanation": "Delusions are fixed, false beliefs that are unchangeable. While non-bizarre delusions involve situations that are plausible (e.g., the belief that one\u2019s spouse is unfaithful), bizarre delusions are clearly implausible (e.g., the person believes that aliens have removed his or her internal organs). According to the DSM-5, bizarre delusions may be found in schizophrenia, schizoaffective disorder, or delusional disorder (Response 4). This is a change from the DSM-IV, in which bizarre delusions automatically qualified the individual for either schizophrenia or schizoaffective disorder, but ruled out a diagnosis of delusional disorder (which required that delusions were non-bizarre).",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 73,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "If using a selection test results in 40% of the African American applicants being hired and 45% of the white applicants being hired, you can conclude:",
+      "originalOptions": [
+        "adverse impact has occurred.",
+        "adverse impact has occurred and the test has differential validity.",
+        "the test is unfair.",
+        "the test may or may not have differential validity."
+      ],
+      "originalAnswer": "D",
+      "originalExplanation": "Adverse impact has occurred when the percentage of minorities hired is less than 4/5ths of the percentage of non-minorities hired. The easiest way to calculate this is to multiply the hiring rate for non-minorities by .8. In this case, the percentage of the non-minorities hired is 45%. The 45% is multiplied by .8, and results in 36%. Adverse impact has not occurred since the selection of African American applicants is 40%, which exceeds the minimum requirement of 36%. Responses 1 and 2 are therefore ruled out. We do not have information about unfairness, which occurs when predictor scores (tests) are different, but criterion scores (performance outcome) are similar. Thus Response 3 is eliminated. We also have no information on differential validity, which is defined as different criterion-related validity coefficients for different ethnic groups. Only Response 4 is correct.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 75,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "In Brown vs. Board of Education (1954) the Supreme Court ruled that racial segregation of children in public schools was a violation of the Fourteenth Amendment. Testimony was presented based on innovative psychological tests using dolls to identify harm inflicted on the plaintiff children due to segregation. Who conducted these tests?",
+      "originalOptions": [
+        "Thurgood Marshall.",
+        "John Davis.",
+        "Kenneth Clark.",
+        "Linda Brown."
+      ],
+      "originalAnswer": "C",
+      "originalExplanation": "In Brown vs. Board of Education, the NAACP took up the case on behalf of Linda Brown (Response 4), a black girl attending fifth grade in the public schools in Topeka, Kansas, who was denied admission into a white elementary school. Thurgood Marshall was the NAACP counsel (Response 1), and John Davis (Response 2) argued on behalf of the defendant school officials. It was Professor Kenneth Clark of the City College of New York who created and performed innovative psychological tests using dolls.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 84,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "Increasing test length:",
+      "originalOptions": [
+        "will affect only reliability.",
+        "will affect reliability more than validity.",
+        "will have an equal effect on reliability and validity.",
+        "will affect neither reliability, nor validity."
+      ],
+      "originalAnswer": "B",
+      "originalExplanation": "Increasing test length will have a direct impact on reliability since it is one of the key factors that affect reliability. Everything else being equal, the more items a test has, the more reliable the test is. Since reliability, in turn, puts a ceiling on validity, increasing test length will also affect validity. However, the effect on validity will be less direct. Overall, reliability will be more affected than validity.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 87,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "Raven's Progressive Matrices is thought to be one of the best tests of:",
+      "originalOptions": [
+        "Spearman's \"g\" factor.",
+        "crystallized intelligence.",
+        "visuo-spatial abilities.",
+        "non-verbal memory."
+      ],
+      "originalAnswer": "A",
+      "originalExplanation": "Raven's Progressive Matrices consists of a series of abstract patterns with one piece missing. The test requires the person to pick out the missing piece using a multiple choice format. Raven's Progressive Matrices is thought to be one of the best non-verbal tests of intelligence. Spearman argued that intelligence is based on one factor, general intelligence, or \"g,\" and proposed that intelligence tests should measure intelligence without becoming clouded by specific abilities. Raven's Progressive Matrices accomplishes this task. Crystallized intelligence refers to knowledge gained through experience (e.g., fund of knowledge), and as Raven's Progressive Matrices is a novel task, it does not measure crystallized intelligence (Response 2). Raven's Progressive Matrices does involve some visuo-spatial skills, however, this is not what it is best known for (Response 3). Raven's Progressive Matrices does not measure memory functioning at all (Response 4).",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 96,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "According to the DSM-5, obsessive-compulsive disorder (OCD) usually begins in adolescence or early adulthood, and is overall slightly more common in females than males. Which of the following statements best describes the incidence of OCD in children?",
+      "originalOptions": [
+        "OCD occurs more commonly in males.",
+        "OCD occurs more commonly in females.",
+        "OCD is about equally common in males and females.",
+        "There has not been sufficient research to date to ascertain the incidence of OCD in children."
+      ],
+      "originalAnswer": "A",
+      "originalExplanation": "Males have an earlier age of onset of OCD than females, with nearly 25% of males having an onset before age 10. As a result, males are more commonly affected in childhood.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 100,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "A five-year-old boy strongly desires to be a girl. He exhibits a strong preference for dressing in girls\u2019 clothing, role-paying as female, playing with girls, and playing with stereotypically female toys (e.g., dolls). His presentation is most consist with:",
+      "originalOptions": [
+        "normal childhood exploration.",
+        "a paraphilic disorder.",
+        "gender identity disorder.",
+        "gender dysphoria."
+      ],
+      "originalAnswer": "D",
+      "originalExplanation": "Feedback: CORRECT \u2013 Answer 4. The boy\u2019s presentation is consistent with the DSM-5 diagnosis of gender dysphoria (Response 4), which was called gender identity disorder in the DSM-IV (ruling our Response 3). While it is common for young children to take on opposite sex roles in play and even dress up in clothing of the opposite sex, the boy\u2019s stated desire to be a girl along with his strong preferences for female clothing, playmates, and stereotypically female toys are characteristic of gender dysphoria. A paraphilic disorder (e.g., pedophilic disorder, exhibitionistic disorder) involves intense and persistent sexual urges, fantasies, or behaviors that involve nonhuman objects, the suffering or humiliation of oneself or one\u2019s partner, or children or other non-consenting persons, causing distress, impairment, or harm (ruling out Response 2).",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 109,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "A researcher is interested in the relationship between morality and criminal behavior among Christians. The researcher measures morality based on rate of church attendance, and finds that many of the non churchgoers have no criminal record. The best explanation for this finding is:",
+      "originalOptions": [
+        "criterion contamination.",
+        "criterion deficiency.",
+        "criterion relevance.",
+        "criterion-related validity."
+      ],
+      "originalAnswer": "B",
+      "originalExplanation": "In research, the conceptual criterion is the theoretical construct that the researcher is attempting to measure, in this case, morality. In this research, morality is measured based on rate of church attendance, however, this criterion is deficient or lacking. In other words, as the researcher found, there are many moral people who do not attend church. Criterion relevance (Response 3) is the extent to which the actual criterion (e.g., church attendance) truly measures the conceptual criterion (e.g., morality); the greater the criterion deficiency, the less criterion relevance. Criterion contamination (Response 1) occurs when knowledge of predictor scores (e.g., performance on a pre-employment examination) affects criterion scores that are subjectively rated (e.g., work performance on a scale of 1 to 10). Criterion-related validity (Response 4) is the degree of correlation between the predictor and criterion.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 125,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "Extreme social neglect or deprivation is a characteristic of:",
+      "originalOptions": [
+        "disinhibited social engagement disorder.",
+        "autism spectrum disorder.",
+        "separation anxiety disorder.",
+        "posttraumatic stress disorder."
+      ],
+      "originalAnswer": "A",
+      "originalExplanation": "According to DSM-5, extreme social neglect or deprivation may lead to either disinhibited social engagement disorder (Response 1) or reactive attachment disorder. The hallmark of disinhibited social engagement disorder is behavior in which a child actively approaches and interacts with adult strangers, while the hallmark of reactive attachment disorder is a consistent pattern of inhibited, emotionally withdrawn behavior toward the caregiver. While children with autism spectrum disorder (Response 2) tend to have social deficits as well as restricted interests and ritualized behaviors, autism spectrum disorder is not brought about by extreme neglect and deprivation. Separation anxiety disorder (Response 3) is characterized by inappropriate and excessive anxiety concerning being away from home or away from the primary attachment figure. Posttraumatic stress disorder (Response 4) involves exposure to a traumatic event involving actual or threatened death, serious injury, or sexual violence; however, as detrimental as extreme social neglect/deprivation is to a child, it does not qualify as a traumatic event.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 137,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "According to the DSM-5, the diagnosis for a child who demonstrates significant impairment in social interaction as well as stereotyped or repetitive motor movements and inflexible adherence to routine, with no impairment in language or intellect would be:",
+      "originalOptions": [
+        "autism spectrum disorder.",
+        "Asperger\u2019s disorder.",
+        "social communication disorder.",
+        "stereotypic movement disorder."
+      ],
+      "originalAnswer": "A",
+      "originalExplanation": "In the DSM-5, autism spectrum disorder is a new disorder that encompasses autistic disorder, Asperger\u2019s disorder, and childhood disintegrative disorder. The two essential features are: a) persistent deficits in social communication and social interaction across multiple contexts; and b) restricted, repetitive patterns of behavior, interests, or activities. Specification of with or without accompanying intellectual impairment and with or without accompanying language impairment is also recorded; thus, neither impairment in language nor intellect is not required for the diagnosis. Social communication disorder (Response 3) involves difficulties in the social use of verbal and nonverbal communication, but does not include restrictive, repetitive patterns of behavior. Stereotypic movement disorder (Response 4) involves motor behavior that is repetitive and nonfunctional (e.g., body rocking, head banging, self-biting, etc.), but there are no impairments in social communication and interaction.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 139,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "A high school principal has a history of experiencing panic attacks more often than not when he presents to parents at school. Prior to each parent presentation he worries for several days about the upcoming event. The principal\u2019s most likely diagnosis is:",
+      "originalOptions": [
+        "panic disorder.",
+        "generalized anxiety disorder.",
+        "social anxiety disorder.",
+        "specific phobia."
+      ],
+      "originalAnswer": "C",
+      "originalExplanation": "Social anxiety disorder involves fear of one or more social situations in which the person is exposed to potential scrutiny by others. Some individuals with social anxiety disorder (as described in this scenario) experience panic attacks in the feared social situation. The principal\u2019s presentation is consistent with a diagnosis of social anxiety disorder, performance only (Response 3). Panic disorder (Response 1) is characterized by recurrent unexpected panic attacks, which is not the case here. Generalized anxiety disorder (Response 2) is diagnosed when there is excessive anxiety and worry about a number of events or activities, occurring more days than not for at least 6 months. The principal\u2019s worries are limited to speaking in public, and only occur prior to speaking events. Individuals with specific phobias (Response 4) may also experience panic attacks in response to the feared stimuli. Since the principal\u2019s fear is limited to social situations, specific phobia (e.g., fear of snakes, fear of flying) is not diagnosed.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 144,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "Researchers have found that individuals with Type A personality have a higher incidence of cardiovascular disease than persons with Type B personality. Of the characteristics of the Type A personality, the one that is most predictive of heart disease is:",
+      "originalOptions": [
+        "hostility.",
+        "impatience.",
+        "perfectionism.",
+        "competitiveness."
+      ],
+      "originalAnswer": "A",
+      "originalExplanation": "In the 1950's, Friedman and Rosenham's large scale Framingham studies found that individuals with Type A personalities (stressed, hard-driving, impatient, competitive) were more likely to suffer from heart disease than their more laid back Type B personality counterparts. Subsequent research has suggested that of the various characteristics of individuals with Type A personality, it is level of hostility and conflicts about expressing anger that are most predictive of cardiovascular disease.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 152,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "Diseases that are X-linked are:",
+      "originalOptions": [
+        "more common in men than women.",
+        "more common in women than men.",
+        "about equally prevalent in men and women.",
+        "more common in adults than children."
+      ],
+      "originalAnswer": "A",
+      "originalExplanation": "Diseases that are X-linked (such as color blindness) are much, much more common in males than females. If a mother is a carrier and the father is not color blind, each son has a 50% chance of being color blind. The daughters in this scenario can only be carriers and will not be color blind.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 162,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "Which of the following has significantly affected the use of selection tests in industry?",
+      "originalOptions": [
+        "Larry P. versus Riles (1979).",
+        "Debra versus Turlington (1981).",
+        "Griggs versus Duke Power (1971).",
+        "Hobson versus Hansen (1967)."
+      ],
+      "originalAnswer": "C",
+      "originalExplanation": "The use of selection tests in industry has been influenced by the case of Griggs versus the Duke Power Company, in which it was ruled that certain tests, such as the Wonderlic, were unfair to use in making decisions about hiring and promotion. Broad, general testing was faulted, and testing was required to measure the specific skills required by a particular job. In Larry P. vs. Riles (Response 1), the court ruled that intelligence testing unfairly discriminated against minority students, resulting in too many being labeled as needing special education. As a result, intelligence testing alone can no longer be used in assigning minority students to special education services.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 165,
+      "conceptSummary": null
+    }
+  ]
+}

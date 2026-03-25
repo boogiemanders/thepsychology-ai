@@ -1,0 +1,102 @@
+[
+  {
+    "archived_date": "2026-03-24",
+    "original_file": "4 Development/4-before-birth.json",
+    "original_index": 1,
+    "reason": "Content not found in any lesson or reference material",
+    "stem": "A female infant is born with ambiguous genitalia, including a noticeably enlarged clitoris. Genetic testing confirms a 46,XX karyotype. Which of the following BEST explains this presentation?",
+    "options": [
+      "Turner syndrome (45,X)",
+      "Excessive prenatal androgen exposure",
+      "Klinefelter syndrome (47,XXY)",
+      "Maternal progesterone deficiency"
+    ],
+    "answer": "Excessive prenatal androgen exposure",
+    "explanation": "In genetic females (46,XX), excessive prenatal androgen exposure—most commonly from congenital adrenal hyperplasia (CAH)—can masculinize the external genitalia, resulting in an enlarged clitoris and ambiguous genitalia. The lesson content discusses how prenatal hormonal influences affect fetal development, with androgens playing a key role in sexual differentiation. Turner syndrome (45,X) involves a missing X chromosome and presents differently (short stature, webbed neck) without genital ambiguity from androgen excess. Klinefelter syndrome (47,XXY) affects genetic males. Progesterone deficiency would not cause virilization of female genitalia.",
+    "kn": "KN4",
+    "kn_explanation": "This question addresses prenatal hormonal influences on development, within the Growth and Lifespan Development domain.",
+    "difficulty": "hard",
+    "quality_comment": "Good question integrating chromosomal and hormonal prenatal development. CAH not covered in any current lesson or reference material — content goes beyond lesson scope.",
+    "suggestedLesson": "4-before-birth",
+    "suggestedParagraph": "## When Chromosomes Tell a Different Story",
+    "lessonExcerpt": "Chromosomes carry our genetic blueprint. 23 Pairs in every cell, with one chromosome from each parent. But sometimes there are copying errors, deletions, or unusual combinations that lead to lifelong conditions.",
+    "needsReview": true,
+    "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+    "inspirationIndex": 14
+  },
+  {
+    "archived_date": "2026-03-24",
+    "original_file": "4 Development/5-iq-tests.json",
+    "original_index": 1,
+    "reason": "Content not found in any lesson or reference material",
+    "stem": "Research on the predictive validity of IQ scores for academic achievement indicates that the correlation between IQ and academic performance is BEST characterized as:",
+    "options": [
+      "Strongest at the graduate school level, where cognitive demands are highest",
+      "Roughly equivalent across all levels of education from elementary through graduate school",
+      "Strongest at the elementary school level and decreasing at higher levels of education",
+      "Negligible at all levels, with motivation being the primary predictor of academic success"
+    ],
+    "answer": "Strongest at the elementary school level and decreasing at higher levels of education",
+    "explanation": "IQ scores are the best single predictor of academic achievement, with correlations highest at the elementary school level (approximately .60-.70) and decreasing at higher educational levels (approximately .40-.50 in college, and lower in graduate school). This decline occurs due to restriction of range — students at higher educational levels represent an increasingly select and homogeneous group in terms of cognitive ability. Option A reverses the actual pattern. Option B incorrectly suggests uniform correlations. Option D underestimates IQ's predictive power, which is well-established across educational settings.",
+    "kn": "KN22",
+    "kn_explanation": "IQ-academic achievement correlations across education levels relate to the influence of individual-environment interaction on development over time (KN22).",
+    "difficulty": "medium",
+    "quality_comment": "Good EPPP question testing restriction of range effects on IQ-achievement correlations. Content goes beyond current lesson material — no lesson excerpt available.",
+    "suggestedLesson": "5-iq-tests",
+    "suggestedParagraph": "## The Flynn Effect: Why Test Norms Matter",
+    "lessonExcerpt": "The CogAT7 predicts academic performance and identifies gifted/at-risk students in grades 2-12",
+    "needsReview": true,
+    "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+    "inspirationIndex": 19
+  },
+  {
+    "archived_date": "2026-03-24",
+    "original_file": "5 Assessment/item-analysis-and-test-reliability.json",
+    "original_index": 0,
+    "reason": "Content not found in any lesson or reference material",
+    "stem": "A psychologist administers an anxiety measure that has a standard deviation of 12 and a reliability coefficient of .91. She calculates the standard error of measurement (SEM) to construct a confidence interval around a client's observed score. The SEM she obtains will be expressed in:",
+    "options": [
+      "Standard deviation units of the normative sample",
+      "The same units as the test's raw scores",
+      "Z-score units",
+      "Percentile rank units"
+    ],
+    "answer": "The same units as the test's raw scores",
+    "explanation": "The standard error of measurement (SEM) is calculated using the formula SEM = SD × √(1 - reliability). Since it is derived by multiplying the test's standard deviation (which is in raw score units) by a constant, the resulting SEM is expressed in the same units as the original test scores. If the test scores are in raw score points, the SEM is in raw score points. It is not converted to z-scores, percentile ranks, or abstract standard deviation units. This is important because the SEM is used to build confidence intervals around an individual's observed score (e.g., score ± 1 SEM for 68% confidence), and those intervals must be in the same metric as the score itself.",
+    "kn": "KN29",
+    "kn_explanation": "Standard error of measurement derives from reliability coefficient and SD — core psychometric/reliability concept",
+    "difficulty": "medium",
+    "quality_comment": "Good EPPP question testing SEM units. Content goes beyond current lesson material — no lesson excerpt available.",
+    "suggestedLesson": "5-items-and-reliability",
+    "suggestedParagraph": "## Standard Error of Measurement and Confidence Intervals",
+    "lessonExcerpt": "SEM = SD × √(1 - reliability coefficient)... Example: Someone scores 90 on a test with SEM of 5. 68% confidence interval: 90 ± 5 = 85 to 95",
+    "needsReview": false,
+    "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+    "inspirationIndex": 4
+  },
+  {
+    "archived_date": "2026-03-24",
+    "original_file": "5 Assessment/mmpi-2.json",
+    "original_index": 0,
+    "reason": "Content not found in any lesson or reference material",
+    "stem": "On the MMPI-2, the K scale is sometimes added to certain clinical scales (such as scales 1, 4, 7, 8, and 9) to adjust for the test-taker's level of defensiveness. In statistical terms, when K corrections are applied in this manner, the K scale is functioning as a:",
+    "options": [
+      "Dependent variable",
+      "Confounding variable",
+      "Moderator variable",
+      "Mediator variable"
+    ],
+    "answer": "Moderator variable",
+    "explanation": "When the K scale correction is added to certain clinical scales, it modifies the relationship between the raw clinical scale score and the interpretation of psychopathology. A moderator variable changes the strength or direction of the relationship between a predictor and an outcome. By adjusting clinical scale scores based on the level of defensiveness, K moderates how clinical scale scores are interpreted—a given raw score on Scale 8 means something different depending on the person's K score. A mediator would explain the mechanism through which one variable affects another. A confounding variable is an uncontrolled third variable that creates a spurious relationship. A dependent variable is the outcome being measured.",
+    "kn": "KN32",
+    "kn_explanation": "The MMPI-2 K-correction is a specific feature of a commonly used psychological instrument, fitting KN32's focus on commonly used instruments and their appropriate use.",
+    "difficulty": "hard",
+    "quality_comment": "Good EPPP question testing K-correction as a moderator variable. Content goes beyond current lesson material — no lesson excerpt available.",
+    "suggestedLesson": "5-mmpi",
+    "suggestedParagraph": "## Validity Scales: Your Built-In Lie Detector",
+    "lessonExcerpt": "K (Defensiveness) | Subtle underreporting | More refined attempt to look good; may resist evaluation",
+    "needsReview": true,
+    "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+    "inspirationIndex": 3
+  }
+]

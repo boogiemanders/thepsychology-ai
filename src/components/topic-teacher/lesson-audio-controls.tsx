@@ -7,6 +7,8 @@ import { chunkTextForTts, markdownToSpeakableText, normalizeTextForReadAlong, pr
 import { computeWordProgressMap, findWordIndexForRatio, findWordIndexForEndTimes, countWords, getEffectiveDurationSeconds, estimateSyllables, WORD_REGEX, PLAYBACK_RATE_OPTIONS } from '@/lib/audio-playback-utils'
 import { Highlighter, Pause, Play, Podcast, ScrollText, SkipBack, SkipForward } from 'lucide-react'
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog'
+import { useCustomAudioCheckout } from '@/hooks/use-custom-audio-checkout'
+import { useCustomAudioStatus } from '@/hooks/use-custom-audio-status'
 
 type MetaphorRange = { start: number; end: number }
 type WordTiming = { word: string; start: number; end: number }
@@ -19,6 +21,7 @@ type ManifestChunk = {
   timingsUrl: string | null // null if needs live generation
   duration: number | null // null if needs live generation
   needsLiveGeneration?: boolean // true for metaphors without hobby variant
+  metaphorIndex?: number | null // index into metaphor ranges array (null for stable chunks)
   // Section navigation info
   sectionIdx: number
   sectionTitle: string
@@ -411,6 +414,47 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
   const [podcastUrls, setPodcastUrls] = useState<{ audio: string | null; video: string | null } | null>(null)
   const [showPodcastModal, setShowPodcastModal] = useState(false)
 
+  // Custom audio for personalized content
+  const needsCustomAudio = Boolean(
+    (userInterests && userInterests.trim()) || !isEnglishish(languagePreference)
+  )
+  const [customAudioContentHash, setCustomAudioContentHash] = useState<string | null>(null)
+
+  // Compute content hash for custom audio matching
+  useEffect(() => {
+    if (!needsCustomAudio || !lessonMarkdown) {
+      setCustomAudioContentHash(null)
+      return
+    }
+    const lessonId = lessonSlug || topic
+    const input = [lessonId, userInterests || '', languagePreference || '', lessonMarkdown].join('|')
+    sha256Hex(input).then((hash) => setCustomAudioContentHash(hash))
+  }, [needsCustomAudio, lessonMarkdown, lessonSlug, topic, userInterests, languagePreference])
+
+  const customAudioCheckout = useCustomAudioCheckout()
+  const customAudioStatus = useCustomAudioStatus({
+    userId,
+    lessonId: lessonSlug || topic,
+    currentInterest: userInterests || null,
+    currentLanguage: languagePreference || null,
+    currentContentHash: customAudioContentHash,
+    enabled: needsCustomAudio && Boolean(userId),
+  })
+
+  const handleCustomAudioPurchase = useCallback(async () => {
+    if (!customAudioContentHash) return
+    const result = await customAudioCheckout.startCheckout({
+      lessonId: lessonSlug || topic,
+      interest: userInterests || null,
+      language: languagePreference || null,
+      contentHash: customAudioContentHash,
+      lessonSlug,
+    })
+    if (result?.alreadyGenerated || result?.alreadyGenerating) {
+      customAudioStatus.refetch()
+    }
+  }, [customAudioContentHash, customAudioCheckout, lessonSlug, topic, userInterests, languagePreference, customAudioStatus])
+
   const lessonReady = Boolean(lessonMarkdown && lessonMarkdown.trim())
   const interestsActive = Boolean(userInterests && userInterests.trim())
   const canUsePregen = voice === DEFAULT_VOICE && !interestsActive && isEnglishish(languagePreference)
@@ -668,7 +712,25 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
         if (!allowLiveAudioGeneration) {
           throw new Error(LIVE_TTS_MISSING_CHUNKS_ERROR)
         }
-        console.log('[manifest] Generating live audio for personalized metaphors...')
+
+        // Build personalized metaphor text lookup for live-gen chunks
+        // The manifest returns DEFAULT variant text, but the user sees personalized text
+        const normalizedRanges =
+          baseLessonMarkdown && metaphorRanges.length > 0 && isEnglishish(languagePreference)
+            ? normalizeRanges(baseLessonMarkdown, metaphorRanges)
+            : []
+
+        let personalizedMetaphorTexts: string[] | null = null
+        if (baseLessonMarkdown && normalizedRanges.length > 0) {
+          const staticParts = buildStaticPartsFromRanges(baseLessonMarkdown, normalizedRanges)
+          const extracted = extractMetaphorTextsFromLesson(lessonMarkdown, staticParts)
+          if (extracted && extracted.length === normalizedRanges.length) {
+            personalizedMetaphorTexts = extracted
+          }
+        }
+
+        console.log('[manifest] Generating live audio for personalized metaphors...',
+          { personalizedTexts: personalizedMetaphorTexts?.length ?? 0, metaphorRanges: normalizedRanges.length })
         setProgress({ current: 0, total: chunksNeedingLive.length })
 
         for (let j = 0; j < chunksNeedingLive.length; j++) {
@@ -679,7 +741,16 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
           const { index, chunk } = chunksNeedingLive[j]
           setProgress({ current: j, total: chunksNeedingLive.length })
 
-          const preparedText = prepareTextForTts(chunk.text)
+          // Use personalized metaphor text if available via metaphorIndex
+          let preparedText: string
+          const mi = chunk.metaphorIndex
+          if (mi != null && personalizedMetaphorTexts && mi < personalizedMetaphorTexts.length) {
+            preparedText = prepareTextForTts(markdownToSpeakableText(personalizedMetaphorTexts[mi]))
+            console.log(`[manifest] Chunk ${index}: using personalized text (metaphorIndex=${mi})`)
+          } else {
+            preparedText = prepareTextForTts(chunk.text)
+            console.log(`[manifest] Chunk ${index}: using default text (metaphorIndex=${mi})`)
+          }
 
           // Generate live audio via the audio API
           const audioResponse = await fetch('/api/topic-teacher/audio', {
@@ -825,6 +896,16 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
   useEffect(() => {
     clearAudio()
   }, [lessonMarkdown])
+
+  // Clear pre-generated audio when user adds interests, then auto-regenerate
+  useEffect(() => {
+    if (needsCustomAudio) {
+      clearAudio()
+      if (lessonReady && !isDisabled) {
+        handleGenerateRef.current?.()
+      }
+    }
+  }, [needsCustomAudio, lessonReady, isDisabled])
 
   useEffect(() => {
     audioUrlsRef.current = audioUrls
@@ -1881,6 +1962,68 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
             Audio playback is temporarily unavailable while we improve word synchronization. Check back soon!
           </AlertDescription>
         </Alert>
+      )}
+
+      {/* Custom Audio Purchase CTA - shown when user has personalized content */}
+      {false && needsCustomAudio && lessonReady && !hasAudio && !audioMaintenanceMode && !customAudioStatus.loading && (
+        <div className="mb-3 max-w-2xl">
+          {customAudioStatus.isGenerating && customAudioStatus.progress && (
+            <div className="rounded-md border border-blue-500/30 bg-blue-500/5 px-3 py-2">
+              <div className="flex items-center gap-2 text-sm">
+                <div className="h-3 w-3 animate-spin rounded-full border-2 border-blue-500 border-t-transparent" />
+                <span className="text-muted-foreground">
+                  Generating custom audio... ({customAudioStatus.progress.completed}/{customAudioStatus.progress.total} chunks)
+                </span>
+              </div>
+              {customAudioStatus.progress.total > 0 && (
+                <div className="mt-1.5 h-1 w-full rounded-full bg-border overflow-hidden">
+                  <div
+                    className="h-full rounded-full bg-blue-500 transition-all"
+                    style={{ width: `${(customAudioStatus.progress.completed / customAudioStatus.progress.total) * 100}%` }}
+                  />
+                </div>
+              )}
+            </div>
+          )}
+          {!customAudioStatus.isGenerating && !customAudioStatus.latestCompleted && (
+            <div className="rounded-md border border-border/60 bg-background px-3 py-2 flex items-center justify-between gap-2">
+              <span className="text-xs text-muted-foreground">
+                Generate synced audio for your personalized lesson — $1
+              </span>
+              <Button
+                type="button"
+                size="sm"
+                onClick={handleCustomAudioPurchase}
+                disabled={customAudioCheckout.checkoutLoading || !customAudioContentHash}
+                className="h-7 px-3 text-xs shrink-0"
+              >
+                {customAudioCheckout.checkoutLoading ? 'Loading...' : 'Generate'}
+              </Button>
+            </div>
+          )}
+          {!customAudioStatus.isGenerating && customAudioStatus.latestCompleted && customAudioStatus.isStale && (
+            <div className="rounded-md border border-amber-500/30 bg-amber-500/5 px-3 py-2 flex items-center justify-between gap-2">
+              <span className="text-xs text-muted-foreground">
+                Your settings changed — update audio ($1)
+              </span>
+              <Button
+                type="button"
+                size="sm"
+                variant="outline"
+                onClick={handleCustomAudioPurchase}
+                disabled={customAudioCheckout.checkoutLoading || !customAudioContentHash}
+                className="h-7 px-3 text-xs shrink-0 border-amber-500/30 hover:bg-amber-500/10"
+              >
+                {customAudioCheckout.checkoutLoading ? 'Loading...' : 'Update Audio'}
+              </Button>
+            </div>
+          )}
+          {customAudioCheckout.checkoutError && (
+            <Alert variant="destructive" className="mt-2">
+              <AlertDescription className="text-xs">{customAudioCheckout.checkoutError}</AlertDescription>
+            </Alert>
+          )}
+        </div>
       )}
 
       {/* Initial Settings Panel - only shown when NO audio exists and sticky bar is not visible */}

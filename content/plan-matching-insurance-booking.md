@@ -407,3 +407,193 @@ Provider analytics at `src/app/provider/analytics/page.tsx`:
 9. Westra et al. 2021 — DP workshop trainees showed lasting skill improvement
 10. Goldberg et al. 2016b — agency implementing DP + ROM reversed stagnation
 11. Diamond et al. 2025 — systematic review noting evidence still developing (honest limitation)
+
+---
+
+## Phase 7: Digital Executive Functioning Assessment (Weeks 13-20+)
+
+**Full competitive research + validation roadmap:** `content/competitive-ef-assessment-teardown.md`
+**Positioning angles:** `content/positioning-angles-ef-assessment.md`
+
+### Why This Is Phase 7
+
+The matching + insurance + booking platform (Phases 1-6) must exist first because:
+1. Provider profiles, client intake, and insurance verification are prerequisites for assessment delivery
+2. The booking system handles scheduling assessment sessions
+3. Outcome monitoring (Phase 6) creates the feedback loop for assessment validation
+4. The EPPP pipeline gives us the provider supply that differentiates from BrainCheck/Creyos
+
+### 7A. Assessment Engine (MVP — Wellness/Screening Tier)
+
+Launch as a **wellness/screening tool** (no FDA review needed), then pursue De Novo classification with outcome data.
+
+**Priority tests to build first** (strongest digital validity evidence):
+- Digit span (forward/backward) — verbal working memory
+- Verbal fluency (phonemic + semantic) — executive function
+- Trail Making Test variant (novel stimuli, same construct) — processing speed + set-shifting
+- Stroop-like task (novel design) — inhibition
+
+**Key differentiators vs. CPT-3/TOVA/Pearson:**
+- Web-based, no proprietary hardware
+- Ecologically valid tasks (not just 21 minutes of clicking)
+- Transparent scoring (clinician can verify)
+- Continuous "Living Norms" — norms update as sample grows
+- Remote-capable from day one
+- Integrated with insurance verification + booking (instant copay)
+
+**New tables:**
+- `assessment_batteries` — battery configurations
+- `assessment_sessions` — individual test sessions with timing data
+- `assessment_responses` — per-item response data (RT, accuracy, etc.)
+- `assessment_scores` — computed scores with norms reference
+- `assessment_norms` — normative data (stratified by age, education, sex, ethnicity)
+- `assessment_reports` — AI-generated reports linked to sessions
+
+**Files:**
+- `src/lib/assessment/engine.ts` — test administration engine
+- `src/lib/assessment/scoring.ts` — transparent scoring algorithms
+- `src/lib/assessment/norms.ts` — normative comparison
+- `src/lib/assessment/report-generator.ts` — AI-assisted report generation
+- `src/app/assessment/[batteryId]/page.tsx` — test-taker UI
+- `src/app/provider/assessments/page.tsx` — provider assessment dashboard
+- `src/app/provider/assessments/[sessionId]/report/page.tsx` — report review/edit
+- `src/app/api/assessment/start/route.ts`
+- `src/app/api/assessment/submit-response/route.ts`
+- `src/app/api/assessment/generate-report/route.ts`
+- `supabase/migrations/YYYYMMDD_create_assessment_tables.sql`
+
+### 7B. AI Report Generation
+
+Clinicians spend 5-10 hours writing an 11-page report. We generate a draft in minutes.
+
+- Takes assessment scores + client intake data + referral question
+- Generates structured report following APA neuropsych report format
+- Clinician reviews, edits, and signs off (AI assists, never replaces clinical judgment)
+- Uses existing Anthropic SDK integration
+- Report includes: referral question, background, behavioral observations, test results, interpretation, diagnostic impressions, recommendations
+
+### 7C. Normative Data Strategy
+
+**Phase 7a (launch):** Published norms from validation literature as baseline
+**Phase 7b (growth):** Platform-collected norms, stratified by demographics
+**Phase 7c (scale):** "Living Norms" — continuously updated, always current
+
+### 7D. Validation Plan
+
+- Partner with 2-3 academic medical centers for concurrent validity studies
+- Within-subject crossover design: our digital battery vs. gold-standard paper batteries
+- Target: 50-100 participants per age decade
+- Publish in JINS / Clinical Neuropsychologist / JMIR
+- Full validation roadmap + FDA strategy in `content/competitive-ef-assessment-teardown.md`
+
+### 7E. Market Entry
+
+- **FDA path:** Launch as wellness/screening tool → collect data → De Novo classification
+- **Reimbursement:** Use existing CPT codes (96132, 96136) with telehealth modifiers
+- **Launch markets:** CA + NY (same as matching platform)
+- **Target:** $1.8B cognitive assessment market, 6% CAGR → $2.5B by 2028
+
+---
+
+## Phase 8: AI-Assisted Therapy (Months 12-24+)
+
+**Prerequisite:** Phase 6 outcome monitoring must be generating data before any of this is meaningful.
+
+### The Data Moat
+
+By Phase 8, the platform has what no competitor does:
+- Outcome data correlating interventions → symptom improvement per client profile
+- Session recordings (consented) showing what effective therapists actually do
+- Matching algorithm data on which therapist-client pairings produce best outcomes
+- ROM data flagging which clients are on-track vs. deteriorating
+- EPPP-trained providers who understand the science behind the tools
+
+Woebot/Wysa built AI therapy on CBT workbooks. We'd build on actual outcome data from real therapeutic relationships.
+
+### 8A. Level 1 — Between-Session AI Support (Months 12-15)
+
+**Regulatory:** Wellness tool (no FDA). Same category as meditation apps.
+
+Extends the existing topic-teacher pattern into therapeutic psychoeducation:
+- Between-session exercises tailored to client's treatment plan
+- Homework reminders + guided practice (thought records, behavioral activation logs, exposure hierarchies)
+- Psychoeducation about the client's specific presenting concerns
+- Session prep: "Here's what you might want to discuss next session based on your homework"
+- Mood/symptom tracking between sessions (feeds into Phase 6 ROM)
+
+**New tables:**
+- `therapy_exercises` — exercise library (CBT thought records, DBT skills, BA schedules, etc.)
+- `client_exercise_assignments` — what's assigned per client, linked to provider treatment plan
+- `client_exercise_completions` — completed exercises with responses
+- `client_mood_logs` — between-session mood/symptom tracking
+
+**Files:**
+- `src/lib/therapy-ai/exercise-engine.ts` — selects/adapts exercises based on treatment plan
+- `src/lib/therapy-ai/session-prep.ts` — generates session prep summaries for client + provider
+- `src/app/client/exercises/page.tsx` — client exercise dashboard
+- `src/app/client/exercises/[exerciseId]/page.tsx` — guided exercise completion
+- `src/app/client/mood/page.tsx` — mood tracking
+- `src/app/provider/clients/[clientId]/between-sessions/page.tsx` — provider view of client homework
+- `src/app/api/therapy-ai/assign-exercise/route.ts`
+- `src/app/api/therapy-ai/session-prep/route.ts`
+- `supabase/migrations/YYYYMMDD_create_therapy_exercise_tables.sql`
+
+### 8B. Level 2 — AI Triage & Structured Support (Months 15-18)
+
+**Regulatory:** Clinical Decision Support — may qualify for 21st Century Cures Act exemption if clinician remains decision-maker.
+
+- Crisis screening with validated measures (PHQ-9 item 9, Columbia Protocol) → routes to human immediately
+- Symptom monitoring that flags deterioration to the provider in real-time
+- Structured intake enhancement: AI gathers detailed history before first session, saving 30+ min of clinician time
+- "What to work on next" recommendations based on outcome trajectory + evidence base
+- Provider gets AI-generated session notes draft (from ROM data + exercise completions)
+
+**Key constraint:** AI never makes clinical decisions. It surfaces data and recommendations. The licensed provider decides.
+
+**Files:**
+- `src/lib/therapy-ai/crisis-screen.ts` — validated crisis screening logic (Columbia Protocol)
+- `src/lib/therapy-ai/deterioration-detector.ts` — flags at-risk clients from ROM trends
+- `src/lib/therapy-ai/session-notes-draft.ts` — generates session note drafts from data
+- `src/app/api/therapy-ai/triage/route.ts`
+- `src/app/provider/alerts/page.tsx` — real-time deterioration alerts
+
+### 8C. Level 3 — AI-Delivered Structured Interventions (Months 18-24)
+
+**Regulatory:** Likely needs 510(k) or De Novo. Legal review required before launch.
+
+This is the big one. AI delivers structured portions of evidence-based therapy, supervised by a human clinician:
+
+- **CBT thought challenging** — AI guides client through thought records, Socratic questioning, cognitive restructuring. Provider reviews and adjusts.
+- **Behavioral activation** — AI helps client plan and track activities, provides encouragement, adjusts difficulty. Provider monitors progress.
+- **Exposure hierarchy work** — AI guides graduated exposure exercises between sessions. Provider sets the hierarchy and reviews.
+- **DBT skills training** — AI teaches and practices mindfulness, distress tolerance, emotion regulation, interpersonal effectiveness modules.
+
+**Why this works:**
+- These interventions are manualized and structured — ideal for AI delivery
+- The therapist becomes supervisor/reviewer, not repetitive exercise deliverer
+- Insurance bills under existing CPT codes (therapist is still provider of record)
+- Sidesteps "is AI practicing medicine" — licensed human is in the loop
+- Outcome data tells the AI which interventions to suggest for which client profiles
+- Therapist capacity multiplied: one clinician can effectively serve 3-5x more clients
+
+**Why NOT Level 4 (autonomous AI therapy):**
+- No state licenses AI as a therapist — needs legislative change
+- Malpractice liability unresolved — who's responsible when AI misses suicidal ideation?
+- APA ethics requires a "professional relationship"
+- Crisis management — AI can't call 911 or do welfare checks
+- Therapeutic alliance research shows the relationship IS the intervention for many clients
+- Level 4 is a 5+ year regulatory/legislative play, not a build decision
+
+### 8D. The Flywheel
+
+```
+EPPP Prep → Licensed Provider → Outcome-Monitored Practice
+    ↓                                      ↓
+Provider Supply                    Training Data
+    ↓                                      ↓
+Matching + Booking ← AI-Assisted Therapy → Better Outcomes
+    ↓                                      ↓
+More Clients            More Data → Better AI → More Capacity
+```
+
+Every piece feeds the next. No competitor can replicate the full loop.

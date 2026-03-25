@@ -1,0 +1,314 @@
+{
+  "domain": "BIOLOGICAL BASES OF BEHAVIOR",
+  "domainKey": "1",
+  "questions": [
+    {
+      "originalStem": "The circadian clock is located in the hypothalamus and is responsible for sleep-wake patterns. The circadian clock is the:",
+      "originalOptions": [
+        "pineal gland",
+        "suprachiasmatic nucleus",
+        "substantia nigra",
+        "reticular activating system (RAS)"
+      ],
+      "originalAnswer": "B",
+      "originalExplanation": "It is the cluster of nerves called the suprachiasmatic nucleus (SCN) that functions as the circadian clock. Sleep-wake patterns run on 24-hour cycles with two natural daily peak times for sleeping, at mid-day and at night. The SCN signals the pineal gland to produce melatonin, which in turn causes a drop in body temperature and sleepiness (Response 1). The substantia nigra, specifically loss of cells in this area, has been implicated in Parkinson's disease (Response 3). While the reticular activating system (RAS) filters incoming sensory information, mediates alertness, and is involved in the sleep-wake cycle (Response 4), it consists of a set of cells in the brainstem, and not the hypothalamus.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 4,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "The part of the brain not fully developed at birth is the:",
+      "originalOptions": [
+        "brainstem.",
+        "cerebellum.",
+        "cortex.",
+        "RAS."
+      ],
+      "originalAnswer": "C",
+      "originalExplanation": "The cortex is the part of the brain that is not fully developed at birth. The brainstem (Response 1), cerebellum (Response 2), and RAS (Response 4) all involve functions that are necessary for life, and that are fully developed by the time of birth.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 12,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "The thalamus is best described as:",
+      "originalOptions": [
+        "the master endocrine gland.",
+        "the seat of consciousness.",
+        "the relay station for all senses except olfaction.",
+        "the house of the somatosensory cortex."
+      ],
+      "originalAnswer": "C",
+      "originalExplanation": "An all-time favorite on the licensing exam, the thalamus integrates and processes all sensory information except for olfaction (i.e., smell). The pituitary is considered the master endocrine gland (Response 1), as it releases hormones that activate other endocrine glands. The parietal lobes house the somatosensory cortex (Response 4). There is no one brain structure considered to be the seat of consciousness (Response 2).",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 14,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "The part of the brain responsible for consolidation of long-term memory is:",
+      "originalOptions": [
+        "the medulla.",
+        "the hypothalamus.",
+        "the hippocampus.",
+        "the cerebellum."
+      ],
+      "originalAnswer": "C",
+      "originalExplanation": "The hippocampus, within the temporal lobes, is involved in the consolidation of long-term memory. Response 1, the medulla, is a part of the brainstem, and is involved in basic functions including respiration, cardiovascular activity, sleep, and consciousness. Response 2, the hypothalamus (along with the pituitary), constitutes the master endocrine gland, involved in temperature regulation, the sleep-wake cycle, general arousal, and movement. Response 4, the cerebellum, is involved in movement and balance.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 20,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "Wernicke's is to Broca's as:",
+      "originalOptions": [
+        "expression is to reception.",
+        "reception is to expression.",
+        "agnosia is to aphasia.",
+        "alexia is to agraphia."
+      ],
+      "originalAnswer": "B",
+      "originalExplanation": "Wernicke's area is involved in receptive speech, while Broca's is involved in expressive speech. Agnosia (Response 3) is a failure to recognize sensory stimuli. Aphasia (Response 3) involves a problem with speech. Wernicke's and Broca's are both considered aphasias. Alexia (Response 4) is an acquired reading disorder, while agraphia (Response 4) is an acquired inability to write.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 27,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "The neurotransmitter involved with sleep and mood is:",
+      "originalOptions": [
+        "RAS.",
+        "acetylcholine.",
+        "dopamine.",
+        "serotonin."
+      ],
+      "originalAnswer": "D",
+      "originalExplanation": "Serotonin is involved with both sleep and mood. Although the RAS or reticular activating system (Response 1) is involved in sleep, it is not a neurotransmitter but rather a diffuse set of cells in the medulla, pons, hypothalamus, and thalamus. Acetylcholine (Response 2) is involved in voluntary movement and memory. Dopamine (Response 3) is involved with Schizophrenia.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 32,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "Partial complex seizures typically originate in:",
+      "originalOptions": [
+        "the frontal lobes.",
+        "the brain stem.",
+        "the temporal lobes.",
+        "the limbic system."
+      ],
+      "originalAnswer": "C",
+      "originalExplanation": "The temporal lobes are most commonly the originating site of complex partial seizures. Keep in mind, though, that such seizures can originate in any cortical region. Complex partial seizures are frequently preceded by an aura, and usually include purposeless behavior, lip smacking, unintelligible speech, and impaired consciousness. The frontal lobes (Response 1) are critical to personality, emotionality, inhibition, planning and initiative, abstract thinking, judgment, and higher mental functions. The brain stem (Response 2) includes the pons, medulla, and reticular activating system (RAS). The limbic system (Response 4) is an interconnected group of organs and structures (e.g., amygdala, hippocampus) involved in memory and emotion.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 33,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "A high percentage of children with ADHD are responsive to psychostimulants. When a clinician is uncertain as to whether a child's diagnosis is ADHD, the reason the child should not be given a trial of psychostimulants for purposes of differential diagnosis is because:",
+      "originalOptions": [
+        "the child who does not have ADHD would likely experience some negative side effects of the medication (e.g., increased heart rate).",
+        "the child who does not have ADHD would likely experience a bit of a high.",
+        "the child who does not have ADHD would likely have an increased attention span and improved task performance.",
+        "the child who does not have ADHD would likely exhibit restlessness and distractibility."
+      ],
+      "originalAnswer": "C",
+      "originalExplanation": "Even children without ADHD, when given psychostimulants, have improved attention span and concentration. Therefore, response to such medications would not be useful for differentiating children with ADHD from nonADHD children.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 38,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "Which of the following predominates in a state of relaxed wakefulness?",
+      "originalOptions": [
+        "Theta waves.",
+        "REM sleep.",
+        "Alpha waves.",
+        "Delta waves."
+      ],
+      "originalAnswer": "C",
+      "originalExplanation": "Alpha waves occur during periods of relaxed wakefulness, and are predominant just before falling asleep. Theta waves (Response 1) occur in early stage 1 sleep. Delta waves (Response 4) are slow waves that occur in stages 3 and 4, the deepest, non-dreaming part of sleep. REM sleep (Response 2) is dreaming sleep, during which there is rapid eye movement, increased respiration and heart rate, and relaxed muscle tone.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 45,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "Dopamine is implicated as a causative agent which of the following?",
+      "originalOptions": [
+        "Major depressive disorder.",
+        "Schizophrenia.",
+        "Generalized anxiety disorder.",
+        "Substance use disorder."
+      ],
+      "originalAnswer": "B",
+      "originalExplanation": "The 'dopamine hypothesis' posits that an excess of dopamine results in schizophrenia. The neurotransmitters implicated in depression (Response 1) are norepinephrine and serotonin. Low levels of GABA are linked with anxiety (Response 3) and epilepsy. Some drugs, such as cocaine or methamphetamine, cause the release of abnormally large amounts of natural neurotransmitters (mainly dopamine). Thus, excess dopamine can result from substance use disorders, but dopamine does not cause substance use disorders (ruling out Response 4).",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 55,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "Which of the following terms refers to a disease of unknown origin?",
+      "originalOptions": [
+        "iatrogenic.",
+        "idiopathic.",
+        "idiosyncratic.",
+        "nocebic."
+      ],
+      "originalAnswer": "B",
+      "originalExplanation": "When the cause of a disease is unknown, it is referred to as idiopathic. Iatrogenic (Response 1) is a very important medical term that refers to illness or complications, especially infections, that are caused in the course of receiving medical treatment (e.g., a patient contracts TB while in the hospital). Idiosyncratic (Response 3) is a non-technical term for unusual, eccentric, or unique responses. A nocebo (Response 4) is something that should be ineffective but which causes symptoms of ill health; a nocebo is the opposite of a placebo. A nocebo effect is an ill effect caused by the suggestion or belief that something is harmful (e.g., expectation of unpleasant side effects leading to experiencing them despite receiving a sugar pill).",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 61,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "Neurotransmitter imbalances have been identified in people with eating disorders. Most notably, persons with eating disorders frequently have a deficiency of:",
+      "originalOptions": [
+        "acetylcholine.",
+        "GABA.",
+        "dopamine.",
+        "serotonin."
+      ],
+      "originalAnswer": "D",
+      "originalExplanation": "Serotonin and norepinephrine are significantly involved in regulation of appetite, as well as mood and sleep. Persons with eating disorders as well as depressive disorders commonly have low levels of these neurotransmitters. This may also partly explain the link that frequently exists between eating disorders and depressive illness. Acetylcholine deficiencies are a hallmark of Alzheimer's disease (Response 1). Low levels of GABA have been found in persons with anxiety disorders (Response 2). A decrease in dopamine is common in Parkinson's disease (Response 3).",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 78,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "Parkinson's disease is due to loss of cells in the:",
+      "originalOptions": [
+        "substantia nigra.",
+        "basal ganglia.",
+        "caudate nucleus.",
+        "hippocampus."
+      ],
+      "originalAnswer": "A",
+      "originalExplanation": "The basal ganglia (Response 2) includes, among other structures, the substantia nigra and the caudate nucleus. Thus, although Parkinson's disease is a result of damage to the basal ganglia, it is more specific and accurate to state that it results from a loss of cells in the substantia nigra (Response 1) as well as a decrease in dopamine. Characteristics of Parkinson's disease are resting tremors, akinesia (difficulty initiating movement), and shuffling gait. Huntington\u2019s disease results from degeneration of the caudate nucleus (Response 3). The hippocampus (Response 4) is a limbic structure involved in memory and emotion. Damage to the hippocampus can result in problems with consolidation of memory.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 80,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "Radiation treatment for children with tumors in the cerebellum (cerebellar astrocytomas) may result in:",
+      "originalOptions": [
+        "learning problems.",
+        "impaired visuospatial abilities.",
+        "memory problems.",
+        "apraxias."
+      ],
+      "originalAnswer": "A",
+      "originalExplanation": "Among childhood brain tumors, 15-25% are cerebellar astrocytomas, which can be either benign or malignant. Chemotherapy is usually the preferred mode of treatment to avoid the problematic side effects of radiation. In young children, radiation can cause learning problems as well as reduction in growth. Other common side effects of radiation treatment for cerebellar astrocytomas include fatigue, skin rashes, and decreased appetite.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 103,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "Withdrawal from which substance is most likely to cause hallucinations?",
+      "originalOptions": [
+        "LSD.",
+        "Amphetamines.",
+        "Heroin.",
+        "Phenobarbital."
+      ],
+      "originalAnswer": "D",
+      "originalExplanation": "The substances whose withdrawal syndromes involve hallucinations are alcohol, and the category of sedatives, hypnotics, and anxiolytics. Withdrawal from these substances can potentially be fatal. Phenobarbital is a barbiturate, which is a type of hypnotic. Very commonly used in the 1950s, barbiturates are rarely prescribed as hypnotics now. They still have a prominent place in the treatment of seizures. There is no characteristic withdrawal syndrome for hallucinogens (Response 1). Withdrawal from amphetamines (Response 2) is characterized by dysphoria, fatigue, unpleasant dreams, increased appetite, and psychomotor agitation or retardation. Opioid withdrawal (Response 3) is known for flu-like symptoms.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 121,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "The medication of choice for bipolar I disorder is:",
+      "originalOptions": [
+        "Buspar.",
+        "Prozac.",
+        "Lithium carbonate.",
+        "Haloperidol."
+      ],
+      "originalAnswer": "C",
+      "originalExplanation": "Among those listed, the medication of choice for bipolar I disorder is lithium. Other medications commonly used for bipolar I disorder include the anti-convulsants Tegretol (carbamezapine) and Depakene (valproic acid). Buspar (Response 1) is used in the treatment of anxiety, Prozac (Response 2) in the treatment of depression, and haloperidol (Response 4) is used to treat schizophrenia and tic disorders.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 133,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "A man is undergoing a test of his blood cortisol levels. One reason for this may be:",
+      "originalOptions": [
+        "he is baseball player being tested for recent steroid use.",
+        "his stress level is being monitored.",
+        "his kidney functioning is being monitored.",
+        "he is undergoing a test for illicit drug use."
+      ],
+      "originalAnswer": "B",
+      "originalExplanation": "Cortisol testing measures the level of corticosteroids in the blood, saliva or urine. Blood cortisol tests are used to monitor stress level (Response 2), as well as to test adrenal function in suspected cases of Cushing\u2019s or Addison\u2019s diseases. Cortisol would not be monitored in a test for anabolic steroids (as distinguished from corticosteroids). Anabolic steroids are artificial forms of testosterone which are tested for using urinalysis (ruling out Response 1). Drug tests are usually performed by checking for traces of specific illicit substances such as opiates, amphetamines, or marijuana (ruling out Response 4). Blood cortisol level does not reflect level of kidney functioning (ruling out Response 3).",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 158,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "The brain damage that leads to cerebral palsy happens:",
+      "originalOptions": [
+        "before birth.",
+        "at the time of birth.",
+        "after birth.",
+        "before birth, at the time of birth, or after birth."
+      ],
+      "originalAnswer": "D",
+      "originalExplanation": "Cerebral palsy (CP) is caused by abnormal brain development or brain damage that affects a child\u2019s ability to control his or her muscles. Until recently it was widely believed that CP was most commonly caused by lack of oxygen to the brain (asphyxia) related to difficult labor or delivery. In fact, this is rarely the cause. Common causes of CP include random genetic mutations, maternal infections that affect the fetus, fetal stroke, infections in infancy, and traumatic head injury after birth. Thus, the brain damage that leads to CP may occur before birth, at the time of birth, or after birth (Response 4).",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 161,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "The neurotransmitter associated with voluntary movement is:",
+      "originalOptions": [
+        "acetylcholine.",
+        "serotonin.",
+        "norepinephrine.",
+        "GABA."
+      ],
+      "originalAnswer": "A",
+      "originalExplanation": "Acetylcholine (Response 1) is involved in voluntary movement, as well as learning and memory. Serotonin (Response 2) is involved with mood, sleep, appetite, sex, and aggression. Norepinephrine (Response 3) is also involved with mood, and GABA (Response 4) is associated with anxiety and seizures. Dopamine, while not an option in this question, is also involved with voluntary movement.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 173,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "Vision is to hearing as:",
+      "originalOptions": [
+        "temporal lobe is to occipital lobe.",
+        "occipital lobe is to parietal lobe.",
+        "parietal lobe is to occipital lobe.",
+        "occipital lobe is to temporal lobe. (correct answer, your response)"
+      ],
+      "originalAnswer": "D",
+      "originalExplanation": "The lobes responsible for vision are the occipital lobes. The temporal lobes contain the primary auditory cortex. The parietal lobes process somatosensory information (e.g., touch, pain, temperature, and proprioception).",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 178,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "Damage to the temporal lobe is most likely to affect which type of memory function?",
+      "originalOptions": [
+        "Short-term explicit memory.",
+        "Long-term explicit memory.",
+        "Short-term implicit memory.",
+        "Long-term implicit memory."
+      ],
+      "originalAnswer": "B",
+      "originalExplanation": "It is always difficult to make generalizations about complex functions like memory, but temporal lobe damage (and brain damage in general) does not typically result in damage to implicit memory (Responses 3 and 4). Implicit memory refers to memories that don\u2019t require conscious recollection, like driving a car or playing the piano. Explicit memory involves the conscious recollection of facts and autobiographical events. Temporal lobe damage generally results in problems forming long-term memories. The individual with damage can remember things for a short period of time (Response 1) but cannot hold onto the information or consolidate it into long-term memory. Left temporal lobe lesions result in impaired memory for verbal material, while right temporal lobe lesions result in impaired recall of non-verbal material such as music and drawings.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 187,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "The right hemisphere plays an important role in:",
+      "originalOptions": [
+        "language expression and reception.",
+        "logical analytic functions.",
+        "abstract thinking.",
+        "visuospatial organization."
+      ],
+      "originalAnswer": "D",
+      "originalExplanation": "The right hemisphere is involved with perceptual, visuospatial, artistic, musical, and intuitive activities. The left hemisphere is involved with language (Response 1), as well as with being rational, analytical, logical (Response 2), and abstract (Response 3).",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 193,
+      "conceptSummary": null
+    }
+  ]
+}

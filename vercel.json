@@ -1,6 +1,10 @@
 {
   "crons": [
     {
+      "path": "/api/cron/backfill-referral-source",
+      "schedule": "15 3 * * *"
+    },
+    {
       "path": "/api/cron/recover-digest",
       "schedule": "0 13 * * *"
     },
@@ -14,7 +18,7 @@
     },
     {
       "path": "/api/cron/expire-trials",
-      "schedule": "0 0 * * *"
+      "schedule": "0 6 * * *"
     },
     {
       "path": "/api/cron/activation-nudge",

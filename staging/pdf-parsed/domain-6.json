@@ -1,0 +1,454 @@
+{
+  "domain": "TREATMENT, INTERVENTION, AND PREVENTION",
+  "domainKey": "6",
+  "questions": [
+    {
+      "originalStem": "The treatment of choice for OCD involves:",
+      "originalOptions": [
+        "systematic desensitization.",
+        "exposure with response prevention.",
+        "aversive counterconditioning.",
+        "supportive psychotherapy."
+      ],
+      "originalAnswer": "B",
+      "originalExplanation": "An evidenced-based treatment for OCD with strong research support is exposure with response prevention (Response 2). Cognitive therapy also has strong research support for OCD. Systematic desensitization (Response 1) involves exposing individuals to fear-evoking images and thoughts while pairing the exposure with relaxation. While systematic desensitization is still used in the treatment of specific phobias, it is not recommended as the first line of treatment when a client is willing to try in vivo exposure. Aversive counterconditioning (Response 3), although somewhat controversial, may be used to treat maladaptive behaviors such as excessive drinking or smoking. Antabuse is an example of aversion therapy. Supportive psychotherapy (Response 4) may be useful as an adjunct for patients with chronic mental illness (e.g., schizophrenia) or for patients experiencing life transitions (e.g., a divorce, major medical illness, death of a family member, etc.).",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 13,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "Masters and Johnson's technique of sensate focus is based on:",
+      "originalOptions": [
+        "counterconditioning.",
+        "aversive counterconditioning.",
+        "positive reinforcement.",
+        "negative reinforcement."
+      ],
+      "originalAnswer": "A",
+      "originalExplanation": "Sensate focus is a classical conditioning intervention that involves counterconditioning. In counterconditioning, a person learns a new response (e.g., pleasurable feelings) that is incompatible with a problematic response (e.g., performance anxiety). Aversive counterconditioning (Response 2) involves pairing a pleasurable but problematic conditioned stimulus (e.g., the taste of alcohol) with a more powerful, aversive unconditioned stimulus (e.g., vomiting because the person has taken Antabuse). Positive and negative reinforcement (Responses 3 & 4) are both forms of operant conditioning and are not relevant to the sensate focus technique.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 22,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "The main reason for treatment failure with addictive behaviors is that these behaviors:",
+      "originalOptions": [
+        "are both operantly and classically reinforced.",
+        "are intermittently reinforced.",
+        "are reinforced on a variable ratio schedule.",
+        "are self-reinforcing."
+      ],
+      "originalAnswer": "D",
+      "originalExplanation": "The high failure rate in treating addictive behaviors stems from the fact that many addictions are very powerfully reinforcing. They are considered to be self-reinforcing in that the person does not depend on any external reinforcement. Thus, addictive behaviors are not necessarily both operantly and classically conditioned (Response 1). Because the individual receives self-reinforcement every time the behavior is performed, these behaviors are not being intermittently reinforced (Response 2). The variable ratio schedule (Response 3) is one type of intermittent reinforcement.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 31,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "When working with a client diagnosed HIV+, one should consider:",
+      "originalOptions": [
+        "one's personal safety and issues of risk.",
+        "the individual's health status and common sequelae of the disorder.",
+        "notifying partners of the infected individual.",
+        "the need or priority for individual treatment over group treatment."
+      ],
+      "originalAnswer": "B",
+      "originalExplanation": "Important issues related to individuals diagnosed HIV+ include the individual's current health status as well as an understanding of common sequelae of the disorder. In most states psychologists are not allowed to inform partners of the infected individual (Response 3). Also, group treatment, such as support groups, can be very beneficial to HIV+ individuals (Response 4). One's own safety (Response 1) should not be an issue at all, given what is known about how the virus is transmitted.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 40,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "In psychotherapy outcome research, the factors that appear most responsible for lack of improvement are:",
+      "originalOptions": [
+        "therapist factors.",
+        "therapist-client interactional factors.",
+        "client factors.",
+        "type of treatment factors."
+      ],
+      "originalAnswer": "C",
+      "originalExplanation": "Psychotherapy outcome is most influenced by client factors, e.g., diagnoses, motivation for change, distress, etc.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 60,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "The highest rates of responding during acquisition of a new behavior are associated with which of the following schedules of reinforcement?",
+      "originalOptions": [
+        "Variable interval.",
+        "Variable ratio.",
+        "Continuous.",
+        "Contiguous."
+      ],
+      "originalAnswer": "C",
+      "originalExplanation": "Feedback: CORRECT \u2013 Answer 3. During acquisition of a new behavior, the highest rates of responding are associated with a schedule of continuous reinforcement, i.e., when behavior is reinforced every single time it occurs. Therefore, Response 3 is the correct answer. Keep in mind that problems associated with continuous schedules of reinforcement include satiation (people get so much reinforcement that they 'feel full,' so to speak), as well as the fact that these schedules are very susceptible to extinction (have a low resistance to extinction). Therefore, while people are trained on continuous reinforcement schedules, these schedules are typically 'thinned,' or gradually changed to intermittent schedules of reinforcement. Of all the intermittent schedules, Response 2, the variable ratio, results in the highest rates of responding. Response 4, contiguous, is not a schedule of reinforcement but has to do with classical conditioning and implies two stimuli being presented closely in time.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 81,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "In order to extinguish a classically conditioned response, one should omit the:",
+      "originalOptions": [
+        "conditioned stimulus.",
+        "unconditioned stimulus.",
+        "conditioned response.",
+        "unconditioned response."
+      ],
+      "originalAnswer": "B",
+      "originalExplanation": "Classically conditioned responses are based on pairing initially neutral stimuli with unconditioned stimuli, until the neutral stimulus eventually elicits a conditioned response. To extinguish this conditioned response, one would simply continue to present the conditioned stimulus without the unconditioned stimulus until the pairing is slowly erased.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 82,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "Beck emphasizes:",
+      "originalOptions": [
+        "automatic thinking and logical errors.",
+        "irrational beliefs.",
+        "positive self-statements.",
+        "positive and negative reinforcement."
+      ],
+      "originalAnswer": "A",
+      "originalExplanation": "Although there are similarities in terminology, you need to know which terms apply to which cognitive theory. Beck is the founder of Cognitive Therapy. He is known for \"automatic thinking\" and \"logical errors.\" His contemporary Ellis, the founder of Rational-Emotive Therapy, coined the term \"irrational beliefs\" (Response 2). Positive self-statements (Response 3) are a focus of the Cognitive-Behavioral Therapy of Meichenbaum. Positive and negative reinforcement (Response 4) are most commonly associated with Skinner, and sometimes with Thorndike.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 93,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "Self-instruction is most useful for individuals with:",
+      "originalOptions": [
+        "depression.",
+        "phobias.",
+        "hyperactivity.",
+        "borderline personality disorder."
+      ],
+      "originalAnswer": "C",
+      "originalExplanation": "Self-instructional therapy, developed by Meichenbaum, is an evidenced based cognitive-behavioral treatment. The emphasis is on teaching the individual a variety of self-statements that can be used by the individual to either control his or her behavior or perform certain tasks. The theoretical basis was derived from Lev Vygotsky's and Aleksandr Luria's work in the late 1950s on the functional relationship between language and behavior. This approach has been widely implemented and is especially useful with hyperactive and impulsive individuals.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 99,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "Your expertise is sought to help address theme-interference problems. You would most likely provide:",
+      "originalOptions": [
+        "client-centered case consultation.",
+        "consultee-centered case consultation.",
+        "consultee-centered administrative consultation.",
+        "program-centered administrative consultation."
+      ],
+      "originalAnswer": "B",
+      "originalExplanation": "In providing consultation, theme-interference problems are problems that the supervisee (or consultee) is experiencing, that can affect patients' progress. Thus, the type of consultation needed in this instance is consultee-centered case consultation.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 104,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "Following an incident of spousal abuse, the intervention with the lowest recidivism rate would be:",
+      "originalOptions": [
+        "imprisoning the perpetrator.",
+        "court-ordered group therapy focusing on issues of abuse.",
+        "the woman leaving the husband and going to a shelter.",
+        "crisis marital counseling."
+      ],
+      "originalAnswer": "A",
+      "originalExplanation": "Unfortunately, there is not only a high incidence of spousal abuse, but there is also a high incidence of repeat offenses. Arrest and imprisonment is the intervention that has been demonstrated to have the greatest likelihood of preventing future incidents.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 106,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "A physician refers a patient to a psychologist who specializes in the treatment of pain. The patient has back pain secondary to a serious accident at work six months ago, in which he ruptured several disks. The psychologist should:",
+      "originalOptions": [
+        "use hypnotherapy.",
+        "conduct progressive muscle relaxation.",
+        "use psychodynamic treatment.",
+        "conduct an assessment for malingering."
+      ],
+      "originalAnswer": "A",
+      "originalExplanation": "Of the choices given hypnotherapy is the only acceptable response. Hypnotherapy is one treatment approach that is used for treating chronic pain. Chronic pain is also commonly treated with cognitive-behavioral interventions (e.g., activityrest scheduling). Progressive muscle relaxation (Response 2) could negatively affect the patient's pain in that it involves first tensing, then relaxing each muscle group. Psychodynamic interventions (Response 3) would not be appropriate, since the man's back pain is related to a physical injury caused by an accident. Assessment for malingering (Response 4) is not indicated, as there is no suggestion of malingering.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 113,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "According to the tenets of Alcoholics Anonymous, addiction:",
+      "originalOptions": [
+        "is an overlearned habit.",
+        "is a disease.",
+        "is merely societal mislabeling.",
+        "results from inadequate self worth."
+      ],
+      "originalAnswer": "B",
+      "originalExplanation": "Alcoholics Anonymous adheres to a disease model of addiction. By contrast, Marlatt's approach to managing addiction, which is cognitive behavioral (skills for relapse prevention are taught), views addiction primarily as an overlearned habit (Response 1). The concept of mislabeling (Response 3) is associated with Thomas Szasz, whose somewhat controversial book, \"The Myth of Mental Illness,\" argues that psychiatric diagnoses are labels devoid of significance. While many alcoholics have low self-esteem, it is not believed that low self-esteem causes addiction (Response 4).",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 118,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "The Neo-Freudians emphasize:",
+      "originalOptions": [
+        "underlying unconscious conflicts.",
+        "ego defensive and conflict-free functioning.",
+        "social interactions.",
+        "beliefs."
+      ],
+      "originalAnswer": "C",
+      "originalExplanation": "The focus of the Neo-Freudians is on how social and cultural factors influence and shape personality. Classical analysts focus intensely on underlying unconscious conflicts (Response 1). The ego analysts focus on ego defensive and conflict-free functioning (Response 2), and the cognitive behaviorists focus on beliefs (Response 4).",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 120,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "The therapist ingredient that contributes the most to successful therapy outcome is:",
+      "originalOptions": [
+        "experience.",
+        "personal therapy.",
+        "empathy.",
+        "gender."
+      ],
+      "originalAnswer": "C",
+      "originalExplanation": "Of all the therapist ingredients that contribute to success, empathy has been found to be among the most powerful. Experience (Response 1) does not seem to have too much bearing on outcome, and when you think about it, doing therapy for 10 or 20 years doesn't necessarily make one \"good at it.\"",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 128,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "Alternative work schedules (e.g. flextime, 4-day workweek):",
+      "originalOptions": [
+        "positively affect performance and morale about equally.",
+        "positively affect performance more than morale.",
+        "positively affect morale more than performance.",
+        "have relatively little impact on morale and performance."
+      ],
+      "originalAnswer": "C",
+      "originalExplanation": "Alternative work schedules have been found to have little impact on performance, but to have a significant impact on improving morale.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 134,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "In comparing minorities and non-minorities in terms of therapy:",
+      "originalOptions": [
+        "no differences have been found between minorities and non-minorities.",
+        "no differences have been found in terms of outcome, however, minorities are more likely to prematurely terminate.",
+        "it's best to match the patient with a therapist of the same ethnicity.",
+        "minorities prefer a more directive stance than non-minorities."
+      ],
+      "originalAnswer": "B",
+      "originalExplanation": "Research has found that minorities prematurely terminate more often than non-minorities; however, if minorities stay in treatment, they seem to do as well as non-minorities. There is no clear research support for matching the ethnicity of therapists with that of their patients (Response 3). Different minority groups demonstrate different preferences for degree of directiveness (Response 4).",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 138,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "The average effect size found in psychotherapy outcome research is about:",
+      "originalOptions": [
+        "1.5.",
+        ".9.",
+        ".6.",
+        ".35."
+      ],
+      "originalAnswer": "B",
+      "originalExplanation": "The average effect size found in recent psychotherapy outcome research is about .85. Keep in mind that an effect size is a measure of standard deviation, so .85 means that treated people do about .85 of a standard deviation better than untreated individuals.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 143,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "Electroconvulsive therapy (ECT) is most commonly used in treating:",
+      "originalOptions": [
+        "major depressive disorder, severe, with psychotic features.",
+        "obsessive-compulsive disorder.",
+        "schizophrenia.",
+        "a paraphilic disorder."
+      ],
+      "originalAnswer": "A",
+      "originalExplanation": "Electroconvulsive therapy is one of the most studied and most effective treatments for selected severe mental illness such as major depression with psychotic features. While it has also been shown to be an effective form of treatment for schizophrenia accompanied by catatonia, extreme depression, mania, or other affective components, it is used much less frequently in the treatment of schizophrenia.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 149,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "A Jungian would consider that part of the personal and collective unconscious that is projected out to be:",
+      "originalOptions": [
+        "a defense.",
+        "transference.",
+        "a symptom.",
+        "discomfort with the shadow aspect of personality."
+      ],
+      "originalAnswer": "B",
+      "originalExplanation": "Jungians view transference as a projection of the personal and collective unconscious. For example, one may initially experience one's therapist as a \"godlike\" figure (or archetype). Projection is not seen as a defense (Response 1), a symptom (Response 3), or reflecting discomfort with one's shadow (Response 4).",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 163,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "Individuals with antisocial personality disorder are most influenced by:",
+      "originalOptions": [
+        "physical punishment.",
+        "embarrassment.",
+        "money.",
+        "medications."
+      ],
+      "originalAnswer": "C",
+      "originalExplanation": "It has been found that money is one of the things that most influences a person with antisocial personality disorder. Physical punishment (Response 1) and embarrassment (Response 2) have little impact.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 166,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "A Structural Family Therapist would be most likely to:",
+      "originalOptions": [
+        "work on boundary issues.",
+        "work on differentiation issues.",
+        "prescribe the symptom.",
+        "be concerned with double binds."
+      ],
+      "originalAnswer": "A",
+      "originalExplanation": "Structural Family Therapists follow the work of Minuchin. The key aspect of this treatment is focusing on the family's hierarchy and working on problematic boundary issues. Differentiation issues (Response 2) are addressed by Bowenian family systems therapists. Prescribing the symptom (Response 3) is more typical of a Strategic Therapist (e.g., Haley). Concern for double binds (Response 4) would likely be the focus of a Communications Family Therapist such as Satir, Jackson, and Bateson. These therapists are sometimes known as the Mental Research Institute (MRI) group.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 170,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "After being released from the hospital, a child is returned to her regular classroom, and a supportive counseling program is set up. This is an example of:",
+      "originalOptions": [
+        "primary prevention.",
+        "secondary prevention.",
+        "tertiary prevention.",
+        "community-based intervention."
+      ],
+      "originalAnswer": "C",
+      "originalExplanation": "A supportive program set up after an individual is released from the hospital would be tertiary prevention, which aims to prevent relapse and keep a person functioning at the highest level possible. Other examples of tertiary prevention would include day treatment programs for people with Schizophrenia, or AA for alcoholics.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 172,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "A manager that adhered to Theory Y would tend to:",
+      "originalOptions": [
+        "allow her employees to take part in decision-making.",
+        "set firm rules about tardiness, absenteeism, and loafing.",
+        "believe that workers are primarily motivated by pay.",
+        "follow the premises of scientific management."
+      ],
+      "originalAnswer": "A",
+      "originalExplanation": "While Theory X assumes that workers are lazy and must be coerced, Theory Y contends that people are industrious, creative, and seek responsibility. An adherent of Theory Y would likely allow employees to take part in decision-making. The other responses would typify an adherent of Theory X. Note that one way to approach this question is to recognize that Responses 2, 3, and 4 all reflect a similar theme and that Response 1 does not. Even if one did not know about Theory X and Theory Y, the fact that Response 1 does not fit with the other responses would suggest it is the correct answer.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 174,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "The disadvantage of being in group therapy concurrent with individual therapy is that:",
+      "originalOptions": [
+        "the patient is less likely to reveal in the group.",
+        "the patient is more likely to receive favoritism by the therapist, and thereby alienate group members.",
+        "the patient is more likely to be overwhelmed and possibly decompensate.",
+        "the patient is more likely to experience multiple transferences in the group situation."
+      ],
+      "originalAnswer": "A",
+      "originalExplanation": "One disadvantage of being in both individual and group therapy is the tendency to reveal less in the group and save self-disclosure for what is seen as a less risky situation, namely individual therapy.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 176,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "DRO is based on:",
+      "originalOptions": [
+        "a combination of classical and operant conditioning.",
+        "a combination of punishment and reinforcement.",
+        "a combination of extinction and reinforcement.",
+        "a combination of positive and negative reinforcement."
+      ],
+      "originalAnswer": "C",
+      "originalExplanation": "DRO, or differential reinforcement for other behaviors, combines operant extinction for an undesired behavior with reinforcement for more appropriate behavior. For example a child is ignored when she whines, and complimented when she politely asks for what she wants.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 186,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "In comparing job enrichment to job enlargement:",
+      "originalOptions": [
+        "both would likely satisfy motivator needs.",
+        "job enrichment involves more responsibility while job enlargement increases variety.",
+        "job enrichment increases variety of tasks, while job enlargement increases decisionmaking.",
+        "both are thought to impact satisfaction and performance."
+      ],
+      "originalAnswer": "B",
+      "originalExplanation": "Job enlargement simply involves increasing the variety of tasks, but not responsibility or degree of challenge. Research has found that job enlargement increases satisfaction but does not improve performance. In contrast, job enrichment involves increasing employees' responsibility and involvement. It has been found to increase both satisfaction and performance.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 189,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "An example of paradoxical intention is:",
+      "originalOptions": [
+        "sharing your angry feelings with a client to get him or her to express the same.",
+        "prescribing the symptom.",
+        "getting the client to exaggerate his or her worst fears.",
+        "getting a client with agoraphobia to go to a shopping mall."
+      ],
+      "originalAnswer": "B",
+      "originalExplanation": "Paradoxical intention involves having clients do the opposite of what they might expect. An example of this would be prescribing the symptom. For example, a couple whose primary complaint is that they argue too much may be given the homework of arguing two hours a day for the next week. Encouraging a person with agoraphobia to go to a shopping mall (Response 4) is an example of exposure.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 191,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "Gestalt therapists believe that dreams are reflections of:",
+      "originalOptions": [
+        "unconscious aggressive and libidinal drives.",
+        "the collective unconscious.",
+        "aspects of the client.",
+        "the social environment."
+      ],
+      "originalAnswer": "C",
+      "originalExplanation": "Gestalt therapists believe that different parts of a dream reflect different aspects of the person. They work with dreams by having the patient become each element of the dream. The notion that dreams reflect unconscious aggressive and libidinal drives (Response 1) would be most associated with Freudians or classical psychoanalysts. The collective unconscious (Response 2) would be associated with C. G. Jung.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 195,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "When aversive counterconditioning is used to reduce certain sexual behaviors, the fetish object is:",
+      "originalOptions": [
+        "an unconditioned stimulus.",
+        "a conditioned stimulus.",
+        "an unconditioned response.",
+        "a conditioned response."
+      ],
+      "originalAnswer": "B",
+      "originalExplanation": "This question is specifically asking about the fetish object, e.g., the shoe that someone is turned on by. The fetish object is a stimulus, while the response is most likely sexual excitement. To tease out whether it is an unconditioned or conditioned stimulus, you need only ask yourself whether the response is universal. Does everyone get sexually stimulated when they see a shoe? Clearly not! So the stimulus has been conditioned for that unique individual.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 197,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "According to Fiedler's LPC theory:",
+      "originalOptions": [
+        "high LPCs do best in moderately favorable situations while low LPCs do best in either highly favorable or highly unfavorable situations.",
+        "low LPCs do best in moderately favorable situations while high LPCs do best in either highly favorable or highly unfavorable situations.",
+        "high LPCs do best in highly favorable situations, while low LPCs do best in unfavorable situations.",
+        "high LPCs are better at increasing satisfaction, while low LPCs are better at increasing productivity."
+      ],
+      "originalAnswer": "A",
+      "originalExplanation": "This is another one of those things you just need to know. Fiedler's LPC theory states that high LPCs do best in moderately favorable situations, while low LPCs do best at the extremes (either highly favorable or highly unfavorable situations). This is a curvilinear relationship. An \"LPC\" or \"least preferred coworker\" means the worker with whom the leader works least well. If the leader nevertheless rates these coworkers highly, the leader is considered to be a \"high LPC\" leader and to be relationship-oriented.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 198,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "The phenomenon of catharsis described in psychoanalytic theory, can be explained by behaviorists as:",
+      "originalOptions": [
+        "a decrease in affective response due to the therapist's direction to do so.",
+        "a decrease in affective response because of the therapist's indirect influences.",
+        "inhibited affective responding brought about by developing cognitive controls.",
+        "a decrease in affective response by extinction."
+      ],
+      "originalAnswer": "D",
+      "originalExplanation": "Catharsis involves talking about anxiety-provoking situations and purging the associated emotions. A behaviorist would argue that catharsis works to reduce anxiety by a process of classical extinction. Catharsis would be seen as akin to flooding with response prevention in which the individual is exposed to the feared conditioned stimulus without the unconditioned stimulus being present, until the fear response is extinguished.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 200,
+      "conceptSummary": null
+    }
+  ]
+}

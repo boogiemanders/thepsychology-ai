@@ -1,10 +1,42 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
 import { sendSlackNotification } from '@/lib/notify-slack'
+import { google } from 'googleapis'
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
 const supabaseServiceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY
 const CRON_SECRET = process.env.CRON_SECRET
+
+async function getGA4DailyStats(dateStr: string): Promise<{ sessions: number; users: number; pageviews: number } | null> {
+  try {
+    const keyB64 = process.env.GOOGLE_SERVICE_ACCOUNT_KEY
+    const propertyId = process.env.GA4_PROPERTY_ID
+    if (!keyB64 || !propertyId) return null
+
+    const key = JSON.parse(Buffer.from(keyB64, 'base64').toString())
+    const auth = new google.auth.GoogleAuth({
+      credentials: key,
+      scopes: ['https://www.googleapis.com/auth/analytics.readonly'],
+    })
+    const analyticsData = google.analyticsdata({ version: 'v1beta', auth })
+    const res = await analyticsData.properties.runReport({
+      property: `properties/${propertyId}`,
+      requestBody: {
+        dateRanges: [{ startDate: dateStr, endDate: dateStr }],
+        metrics: [{ name: 'sessions' }, { name: 'activeUsers' }, { name: 'screenPageViews' }],
+      },
+    })
+    const row = res.data.rows?.[0]
+    if (!row) return { sessions: 0, users: 0, pageviews: 0 }
+    return {
+      sessions: parseInt(row.metricValues?.[0]?.value ?? '0'),
+      users: parseInt(row.metricValues?.[1]?.value ?? '0'),
+      pageviews: parseInt(row.metricValues?.[2]?.value ?? '0'),
+    }
+  } catch {
+    return null
+  }
+}
 
 const ERROR_RATE_THRESHOLD = 0.7
 const MIN_ATTEMPTS = 5
@@ -120,6 +152,11 @@ export async function GET(request: NextRequest) {
     todayStart.setHours(0, 0, 0, 0)
     const todayISO = todayStart.toISOString()
 
+    // GA4 yesterday (data has ~24h lag)
+    const yesterday = new Date(now.getTime() - 24 * 60 * 60 * 1000)
+    const ga4Date = yesterday.toISOString().split('T')[0]
+    const ga4Stats = await getGA4DailyStats(ga4Date)
+
     const { count: signupsToday } = await supabase
       .from('users')
       .select('*', { count: 'exact', head: true })
@@ -135,11 +172,11 @@ export async function GET(request: NextRequest) {
       .select('*', { count: 'exact', head: true })
       .gte('created_at', todayISO)
 
-    const yesterday = new Date(now.getTime() - 24 * 60 * 60 * 1000).toISOString()
+    const yesterdayISO = new Date(now.getTime() - 24 * 60 * 60 * 1000).toISOString()
     const { count: activeUsers } = await supabase
       .from('users')
       .select('*', { count: 'exact', head: true })
-      .gte('last_activity_at', yesterday)
+      .gte('last_activity_at', yesterdayISO)
 
     const { data: tierCounts } = await supabase
       .from('users')
@@ -149,6 +186,10 @@ export async function GET(request: NextRequest) {
     const proCount = tiers.filter(u => u.subscription_tier === 'pro').length
     const estimatedMRR = proCount * 20
 
+    const trafficLines = ga4Stats
+      ? [``, `🌐 *Web Traffic* (${ga4Date})`, `👁️ Sessions: ${ga4Stats.sessions} · Users: ${ga4Stats.users} · Pageviews: ${ga4Stats.pageviews}`]
+      : []
+
     const dailyMessage = [
       `📊 *Daily Stats* (${now.toLocaleDateString('en-US', { weekday: 'long', month: 'short', day: 'numeric' })})`,
       '',
@@ -156,6 +197,7 @@ export async function GET(request: NextRequest) {
       `📝 Exams taken: ${examsToday ?? 0}`,
       `❓ Quizzes taken: ${quizzesToday ?? 0}`,
       `👥 Active users (24h): ${activeUsers ?? 0}`,
+      ...trafficLines,
       '',
       `💰 MRR: $${estimatedMRR.toLocaleString()} (${proCount} Pro + ${proCoachingCount} Pro+Coaching)`,
     ].join('\n')

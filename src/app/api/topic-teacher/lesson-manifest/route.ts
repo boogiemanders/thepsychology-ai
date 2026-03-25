@@ -294,6 +294,7 @@ type ResolvedChunk = {
   timingsUrl: string | null // null if needs live generation
   duration: number | null // null if needs live generation
   needsLiveGeneration: boolean // true for metaphors without hobby variant
+  metaphorIndex: number | null // index into metaphor ranges array (null for stable chunks)
   // Section navigation info
   sectionIdx: number
   sectionTitle: string
@@ -426,6 +427,7 @@ function getR2BaseUrl(): string {
 
 function resolveChunks(manifest: LessonManifest, hobby: string | null): ResolvedChunk[] {
   const r2BaseUrl = getR2BaseUrl()
+  let metaphorCounter = 0
 
   return manifest.chunks.map((chunk) => {
     // Base section info (with fallbacks for older manifests without section data)
@@ -444,9 +446,13 @@ function resolveChunks(manifest: LessonManifest, hobby: string | null): Resolved
         timingsUrl: `${r2BaseUrl}/${R2_PREFIX}/timings/${chunk.timingsKey}.words.json`,
         duration: chunk.duration ?? 0,
         needsLiveGeneration: false,
+        metaphorIndex: null,
         ...sectionInfo,
       }
     }
+
+    // Metaphor chunk - assign and increment metaphor index
+    const currentMetaphorIndex = metaphorCounter++
 
     // Metaphor chunk - select variant based on hobby
     const variants = chunk.variants ?? {}
@@ -463,6 +469,7 @@ function resolveChunks(manifest: LessonManifest, hobby: string | null): Resolved
         timingsUrl: `${r2BaseUrl}/${R2_PREFIX}/timings/${selected.timingsKey}.words.json`,
         duration: selected.duration,
         needsLiveGeneration: false,
+        metaphorIndex: currentMetaphorIndex,
         ...sectionInfo,
       }
     }
@@ -478,6 +485,7 @@ function resolveChunks(manifest: LessonManifest, hobby: string | null): Resolved
         timingsUrl: null,
         duration: null,
         needsLiveGeneration: true,
+        metaphorIndex: currentMetaphorIndex,
         ...sectionInfo,
       }
     }
@@ -494,6 +502,7 @@ function resolveChunks(manifest: LessonManifest, hobby: string | null): Resolved
         timingsUrl: null,
         duration: null,
         needsLiveGeneration: false,
+        metaphorIndex: currentMetaphorIndex,
         ...sectionInfo,
       }
     }
@@ -505,6 +514,7 @@ function resolveChunks(manifest: LessonManifest, hobby: string | null): Resolved
       timingsUrl: `${r2BaseUrl}/${R2_PREFIX}/timings/${selected.timingsKey}.words.json`,
       duration: selected.duration,
       needsLiveGeneration: false,
+      metaphorIndex: currentMetaphorIndex,
       ...sectionInfo,
     }
   })

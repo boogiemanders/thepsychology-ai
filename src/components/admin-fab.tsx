@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { useAuth } from '@/context/auth-context'
 import { Button } from '@/components/ui/button'
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
-import { ChevronUp, Users, GraduationCap } from 'lucide-react'
+import { ChevronUp, Users, GraduationCap, Gift } from 'lucide-react'
 
 function getAdminAllowlist(): string[] {
   // Require explicit configuration - no hardcoded fallback for security
@@ -54,6 +54,13 @@ export function AdminFab() {
           >
             <GraduationCap className="w-4 h-4" />
             Graduate Programs
+          </Link>
+          <Link
+            href="/admin/rewards"
+            className="flex items-center gap-2 px-3 py-2 text-sm rounded-md hover:bg-muted transition-colors"
+          >
+            <Gift className="w-4 h-4" />
+            Pro Rewards
           </Link>
         </PopoverContent>
       </Popover>

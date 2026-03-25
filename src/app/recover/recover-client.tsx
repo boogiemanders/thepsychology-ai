@@ -89,6 +89,28 @@ function MarkdownMessage({ content }: { content: string }) {
   )
 }
 
+function TypingIndicator() {
+  return (
+    <div className="flex justify-start" aria-live="polite" aria-label="Recover is typing">
+      <div className="max-w-[85%] rounded-2xl bg-muted px-4 py-3 text-sm">
+        <div className="flex items-center gap-1.5">
+          <span className="sr-only">Recover is typing</span>
+          {[0, 1, 2].map((index) => (
+            <span
+              key={index}
+              className="h-2 w-2 rounded-full bg-muted-foreground/70 animate-bounce"
+              style={{
+                animationDelay: `${index * 120}ms`,
+                animationDuration: '900ms',
+              }}
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+  )
+}
+
 export default function RecoverPage() {
   const router = useRouter()
   const searchParams = useSearchParams()
@@ -207,7 +229,7 @@ export default function RecoverPage() {
 
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: 'smooth', block: 'end' })
-  }, [messages])
+  }, [messages, isSending])
 
   const resetChat = () => {
     setError(null)
@@ -395,6 +417,7 @@ export default function RecoverPage() {
                     </div>
                   </div>
                 ))}
+                {isSending && <TypingIndicator />}
                 <div ref={bottomRef} />
               </div>
             </ScrollArea>

@@ -10,7 +10,7 @@ import { AnimatePresence, motion, useInView } from "motion/react";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
-export function ReasoningBasic() {
+export function ReasoningBasic({ speed = 20 }: { speed?: number } = {}) {
   const reasoningText = `APA's Standard 5 is Integrity. Think of it like holding the Reality Stone — it controls how your professional image shapes the world around you. Use it wrong, and reality bends in harmful ways.
 
 When Tony Stark tells the press, “I am Iron Man,” he’s owning his truth. No fake degrees, no exaggerated claims. That’s 5.01–5.04: be accurate in every public statement and keep your team honest too. If your promo squad yells “Anders cures PTSD in one session!” that’s on you.
@@ -22,13 +22,25 @@ When Tony Stark tells the press, “I am Iron Man,” he’s owning his truth. N
   return (
     <Reasoning>
       <ReasoningContent className="">
-        <ReasoningResponse text={reasoningText} className="[&_p]:m-0" />
+        <ReasoningResponse
+          text={reasoningText}
+          speed={speed}
+          className="[&_p]:m-0"
+        />
       </ReasoningContent>
     </Reasoning>
   );
 }
 
-export function ThirdBentoAnimation() {
+export function ThirdBentoAnimation({
+  responseSpeed = 20,
+  revealDelayMs = 1000,
+  showBottomFade = true,
+}: {
+  responseSpeed?: number;
+  revealDelayMs?: number;
+  showBottomFade?: boolean;
+} = {}) {
   const ref = useRef(null);
   const isInView = useInView(ref);
   const [shouldAnimate, setShouldAnimate] = useState(false);
@@ -38,7 +50,7 @@ export function ThirdBentoAnimation() {
     if (isInView) {
       timeoutId = setTimeout(() => {
         setShouldAnimate(true);
-      }, 1000);
+      }, revealDelayMs);
     } else {
       setShouldAnimate(false);
     }
@@ -46,14 +58,16 @@ export function ThirdBentoAnimation() {
     return () => {
       if (timeoutId) clearTimeout(timeoutId);
     };
-  }, [isInView]);
+  }, [isInView, revealDelayMs]);
 
   return (
     <div
       ref={ref}
       className="w-full h-full p-4 flex flex-col items-center justify-center gap-5"
     >
-      <div className="pointer-events-none absolute bottom-0 left-0 h-20 w-full bg-gradient-to-t from-background to-transparent z-20"></div>
+      {showBottomFade ? (
+        <div className="pointer-events-none absolute bottom-0 left-0 h-20 w-full bg-gradient-to-t from-background to-transparent z-20"></div>
+      ) : null}
       <motion.div
         className="max-w-md mx-auto w-full flex flex-col gap-2"
         animate={{
@@ -144,7 +158,7 @@ export function ThirdBentoAnimation() {
                     ease: "easeOut",
                   }}
                 >
-                  <ReasoningBasic />
+                  <ReasoningBasic speed={responseSpeed} />
                 </motion.div>
               )}
             </AnimatePresence>

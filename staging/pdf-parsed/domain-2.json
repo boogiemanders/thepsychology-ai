@@ -1,0 +1,370 @@
+{
+  "domain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+  "domainKey": "2",
+  "questions": [
+    {
+      "originalStem": "Semantic memory involves:",
+      "originalOptions": [
+        "the transfer from sensory memory to short term memory.",
+        "the transfer from short-term memory to long-term memory.",
+        "the meaning of the words.",
+        "the pronunciation of the words."
+      ],
+      "originalAnswer": "C",
+      "originalExplanation": "Semantic memory is memory that has to do with the meaning of words.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 6,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "Job satisfaction is negatively correlated with:",
+      "originalOptions": [
+        "education.",
+        "intelligence.",
+        "race.",
+        "turnover."
+      ],
+      "originalAnswer": "D",
+      "originalExplanation": "Job satisfaction is negatively correlated with turnover. It tends to be positively correlated with education (Response 1) and intelligence (Response 2), and tends to be higher among Caucasians than minorities (Response 3).",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 8,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "As you start to take this practice test you say to yourself, \"My heart is racing. I must be very nervous.\" This kind of thinking supports:",
+      "originalOptions": [
+        "the Cannon-Bard theory.",
+        "the James-Lange theory.",
+        "Schacter's Two-Factor theory.",
+        "General Adaptation Syndrome."
+      ],
+      "originalAnswer": "B",
+      "originalExplanation": "According to the James-Lange theory, emotions result from perceiving bodily reactions or responses. In this case, you perceived your bodily reaction (heart racing) and concluded you must be very anxious. The Cannon-Bard theory proposes that emotions and bodily reactions occur simultaneously. When an event is perceived (e.g., taking the exam), messages are sent at the same time to the hypothalamus, which arouses the body, and to the limbic system, which causes the subjective experience of anxiety (Response 1). Schacter's Two-Factor theory proposes that emotion results from both internal information (hypothalamus and limbic system) and external information (the context). According to this theory you would be experiencing physiological arousal (racing heart), and would then look to the environment (the licensing exam) to help you label the emotion as anxiety, rather than, for example excitement (Response 3). Selye's General Adaptation Syndrome is a model or response to severe stress consisting of three stages: alarm, resistance, and exhaustion.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 11,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "The Zeigarnik effect refers to:",
+      "originalOptions": [
+        "the tendency of people to rely on the judgments of others when analyzing ambiguous stimuli.",
+        "the improvement in memory that occurs when imagery and visualization are used.",
+        "the tendency to remember uncompleted tasks better than completed ones.",
+        "the increase in obedience that occurs when the person in authority is significantly taller than the subordinate."
+      ],
+      "originalAnswer": "C",
+      "originalExplanation": "The Zeigarnik effect refers to the phenomenon that people are more likely to remember uncompleted tasks than completed tasks. For example, examinees are more likely to remember test items of which they were uncertain (i.e., the task feels uncompleted).",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 16,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "From an operant learning perspective, it is best to manage children\u2019s tantrums through:",
+      "originalOptions": [
+        "positive punishment.",
+        "negative reinforcement.",
+        "extinction.",
+        "shaping."
+      ],
+      "originalAnswer": "C",
+      "originalExplanation": "Children often continue to tantrum because the attention they garner acts as reinforcement for them. A typical behavioral recommendation therefore is extinction, withholding the attention or other reinforcement. After extinction begins, an extinction burst (or response burst) typically occurs, during which the tantrums first intensify. Over time, however, the behavior decreases. Negative reinforcement (Response 2), by virtue of being reinforcement, increases the likelihood of a behavior. Positive punishment (Response 1), which involves some form of pain or aversive stimulus (e.g., hitting a child), is generally discouraged in parenting. Shaping (Response 4) would be appropriate for helping develop a new and desired behavior; in this example, an undesirable behavior is the focus of treatment.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 19,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "Which of the following is an example of a protocol analysis?",
+      "originalOptions": [
+        "A supervisor and a supervisee carefully review the transcript of a psychotherapy session.",
+        "A person is told to verbalize his problem-solving process.",
+        "The human subjects committee reviews a proposed research protocol.",
+        "A researcher attempts to analyze which aspects of an intervention (i.e., treatment protocol) actually account for the treatment outcome."
+      ],
+      "originalAnswer": "B",
+      "originalExplanation": "A protocol analysis involves subjects verbalizing their thought process as they perform a task. The goal is to better understand the person's cognitive process, especially concerning problem-solving, although it is understood that the process of verbalizing may actually alter the cognitive process. Supervisors and supervisees often carefully review process notes, which are a transcript of a session written from the supervisee's memory (Response 1). Understanding which components account for a treatment effect (Response 4) is often accomplished through the use of a dismantling strategy, in which various components of a treatment are analyzed separately.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 29,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "In terms of parenting, which theorist would recommend the use of natural, logical consequences and a focus on the goals of misbehavior?",
+      "originalOptions": [
+        "Adler.",
+        "Minuchin.",
+        "Bowen.",
+        "Haley."
+      ],
+      "originalAnswer": "A",
+      "originalExplanation": "Alfred Adler's Individual Psychology has been widely adapted and used in parenting programs. STEP (Systematic Training in Effective Parenting) helps parents structure family life so that children experience natural and logical consequences of both good behavior and misbehavior. These programs also help parents to identify the goals of their children's misbehavior (e.g., attention) so that they can help their children reach their goals in healthier, more adaptive ways.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 34,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "Whose theory would most likely explain \"behavioral contrast?\"",
+      "originalOptions": [
+        "Beck.",
+        "Pavlov.",
+        "Skinner.",
+        "Watson."
+      ],
+      "originalAnswer": "C",
+      "originalExplanation": "The term behavioral contrast applies to the situation in which two behaviors are initially reinforced at equal levels and then one behavior stops being reinforced. What typically occurs is that the behavior that is no longer being reinforced decreases in frequency, while the behavior that continues to be reinforced increases in frequency. This concept is all about reinforcement, and of the theorists listed only Skinner theorizes about reinforcement. Pavlov and Watson (Responses 2 & 4), while both behaviorists, studied classical conditioning (pairing) rather than operant conditioning (reinforcement). Beck (Response 1) is a cognitive behaviorist.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 37,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "Response cost is an example of:",
+      "originalOptions": [
+        "negative reinforcement.",
+        "negative punishment.",
+        "positive punishment.",
+        "operant extinction."
+      ],
+      "originalAnswer": "B",
+      "originalExplanation": "Response cost occurs when someone loses something (e.g., a token, privileges) for misbehavior. Since response cost involves taking something away, it is considered 'negative.' Since it is designed to decrease an unacceptable behavior, it is 'punishment.' Keep in mind that negative reinforcement (Response 1) involves removing something aversive to increase, not decrease behavior. Positive punishment (Response 3) involves applying something aversive (e.g. a slap, a shock) to decrease behavior. Operant extinction (Response 4) involves withholding reinforcement for a previously reinforced behavior.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 47,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "Compared to subjects who are not hypnotized, subjects in a hypnotic state:",
+      "originalOptions": [
+        "generally have enhanced memory recollection.",
+        "generally produce fewer false memories and more true memories.",
+        "generally produce more false memories with a high degree of confidence.",
+        "show equivalent rates of memory distortion and confabulation."
+      ],
+      "originalAnswer": "C",
+      "originalExplanation": "Hypnosis appears to have no ability to enhance accurate memory recollection (Response 1), but contributes to memory distortions in a variety of ways. Hypnotized subjects tend to produce more false memories (ruling out Responses 2 and 4), are more likely to confabulate (i.e., fill in memory gaps with made-up information), and tend to report their inaccurate memories with a high degree of confidence.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 52,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "A student acts in a disruptive manner and only stops when the teacher yells at her. The teacher's behavior of yelling is under the control of:",
+      "originalOptions": [
+        "positive reinforcement.",
+        "negative reinforcement.",
+        "positive punishment.",
+        "negative punishment."
+      ],
+      "originalAnswer": "B",
+      "originalExplanation": "Feedback: CORRECT \u2013 Answer 2. This question may be a bit tricky because it sounds like it's focusing on the student's behavior, but it's actually asking about the teacher's behavior. The target behavior here is the teacher's yelling. One must always look at whether something is added (positive) or removed (negative) after the target behavior is emitted. In this case, something is removed; the child stops the disruptive behavior. To clarify whether reinforcement or punishment is occurring, we need to know whether the teacher's behavior will increase or continue over time (reinforcement) or will decrease over time (punishment). As any teacher will tell you, if yelling works to reduce disruptive behavior, the teacher is going to yell more! Whenever the teacher yells, an aversive stimulus is removed (i.e., disruptive behavior stops). So what we have is negative reinforcement. The student's behavior, incidentally, is under the control of positive punishment. When the student behaves in a disruptive manner, the teacher yells. Yelling is the addition of an aversive stimulus (positive), and it serves to decrease the disruptive behavior over time (punishment).",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 62,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "A child was classically conditioned to be afraid of a white rat. The child now seems to be fearful of white rabbits as well. This is an example of:",
+      "originalOptions": [
+        "response generalization.",
+        "mediated generalization.",
+        "avoidance behavior.",
+        "Skinnerian conditioning."
+      ],
+      "originalAnswer": "B",
+      "originalExplanation": "Mediated generalization is another name for stimulus generalization. In this example, the white rat is a conditioned stimulus. The child has generalized the response of fear to other similar stimuli such as white rabbits. What has changed? Was it the stimulus or response? The response of fear has remained the same, but there has been generalization from the stimulus that elicits fear. Thus, the phenomenon occurring here is stimulus generalization. Keep in mind that many phobias (e.g., agoraphobia) involve stimulus generalization. Response generalization (Response 1) actually falls into the domain of operant conditioning. Response generalization involves the person or animal displaying responses similar to those that have been reinforced. For example, a dog is reinforced by his owner when he rolls on his back in a rather cute way. The dog then displays other 'cute' behavior in an attempt to get more reinforcement. Avoidance behavior (Response 3) is an operant conditioning paradigm in which a person learns that emitting certain behavior can prevent negative consequences from occurring. For example, you pay your bills on time to avoid paying late fees and penalties. Skinnerian conditioning (Response 4), or operant conditioning, is not relevant here because we are not looking at the contingencies of the behavior (i.e., reward and punishment).",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 68,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "The defense mechanism that is thought to underlie all others is:",
+      "originalOptions": [
+        "repression.",
+        "denial.",
+        "projection.",
+        "reaction formation."
+      ],
+      "originalAnswer": "A",
+      "originalExplanation": "This is one of those concepts that you just need to know. Repression, or making the conscious unconscious, is a fundamental aspect of all the defense mechanisms. All defense mechanisms have the purpose of keeping certain mental contents out of conscious awareness. Denial (Response 2) is the most primitive and refers to a straightforward refusal to accept the existence of the mental content. Projection (Response 3) involves attributing one's own impulses to someone else, as in paranoia. Reaction formation (Response 4) involves transforming an urge into its opposite, such as crusading against pornography when one is attracted to it.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 69,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "While playing baseball, you are struck in the head by a fly ball. You are unable to remember the plays leading up to the time you were struck. Most likely you are suffering from:",
+      "originalOptions": [
+        "proactive inhibition.",
+        "retroactive inhibition.",
+        "anterograde amnesia.",
+        "retrograde amnesia."
+      ],
+      "originalAnswer": "D",
+      "originalExplanation": "For the EPPP, it is important to be very clear about the difference between the two kinds of amnesia. Retrograde amnesia is loss of memory for events occurring before the trauma (retro = backward); anterograde amnesia is loss of memory for events occurring after the trauma (don't think about the prefix 'ante' because it gets very confusing!). Note that amnesia refers to memory loss, and inhibition (Responses 1 & 2) refers to interference in learning.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 85,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "In comparing the relationship between satisfaction and performance, and satisfaction and length of employment:",
+      "originalOptions": [
+        "both correlations are weak and positive.",
+        "both correlations are moderate and positive.",
+        "the first correlation is weak and positive, the second moderate and negative.",
+        "the first correlation is weak and positive, the second moderate and positive."
+      ],
+      "originalAnswer": "D",
+      "originalExplanation": "Keep in mind that there is a weak positive correlation (about .15) between satisfaction and performance, and a moderate negative correlation between satisfaction and turnover. Because the second part of the question is asking about the correlation between satisfaction and length of employment (the reverse of turnover) this correlation would be moderate, but positive.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 98,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "Which of the following theories would see job enrichment as a valuable intervention?",
+      "originalOptions": [
+        "Reinforcement theory.",
+        "Expectancy theory.",
+        "Two-factor theory.",
+        "Equity theory."
+      ],
+      "originalAnswer": "C",
+      "originalExplanation": "Job enrichment involves expanding jobs to give employees a greater role in planning and performing their work, thus providing an opportunity to build motivators or satisfiers into job content. It involves increasing employees' autonomy, authority, and freedom, and encouraging employees to take on challenging tasks. It is partially based on Herzberg's Two-Factor Theory, which predicts that increasing employees' responsibility (a motivator) will result in increased satisfaction and performance. Vroom's Expectancy Theory (Response 2) asserts that people behave in ways that are based on their perceived expectancy that certain rewards will follow. The reinforcement model (Response 1) is not a theory but a set of principles that predicts that people do more of things that have rewarding outcomes, avoid things that have punishing outcomes, and stop doing things that are neither rewarding nor punishing. Finally, Equity Theory (Response 4) looks at the ratio of self inputs/self outcomes versus others' inputs/ others' outcomes, and is based on Social Comparison Theory.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 107,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "The feature of speech that would normally be remembered best by a listener is:",
+      "originalOptions": [
+        "semantic.",
+        "syntactic.",
+        "phonemic.",
+        "acoustic."
+      ],
+      "originalAnswer": "A",
+      "originalExplanation": "Semantic refers to meaning. What we usually remember most is the meaning of what someone has told us. Syntactic (Response 2) refers to grammatical order. Phonemes (Response 3) are the smallest units of sound in a language. Acoustic (Response 4) refers to sound. Acoustic qualities would include pitch, tone, and volume.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 110,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "A dog has learned to jump when he hears a clap because the experimenter had repeatedly clapped right before giving the dog an electric shock. The experimenter now says \"bad dog\" right before clapping. Eventually, the dog will jump whenever he hears the experimenter yell \"bad dog.\" This experiment is a paradigm of:",
+      "originalOptions": [
+        "higher-order conditioning.",
+        "stimulus generalization.",
+        "unethical treatment of animals in research.",
+        "pseudoconditioning."
+      ],
+      "originalAnswer": "A",
+      "originalExplanation": "Higher-order conditioning involves pairing the conditioned stimulus (CS) with another neutral stimulus that is typically unrelated (e.g., pairing the clap with saying bad dog). At this level, it is also referred to as second-order conditioning. Stimulus generalization (Response 2) involves generalizing from the conditioned stimulus (CS) to other similar neutral stimuli (e.g., generalizing from a clap to other loud noises). In stimulus generalization, the response to the similar stimulus is not intentionally trained, as it was in this scenario. Pseudoconditioning (Response 4) occurs when a response is elicited to a neutral stimulus that has not been paired with an unconditioned stimulus (US). It may be the result of inadvertent pairings (e.g., the dog jumping when the experimenter walks into the room). The unethical treatment of animals (Response 3) may or may not be occurring in this example, but this question is not addressing the issue of ethics.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 112,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "A behavior is reinforced on average every third time it occurs. The schedule of reinforcement being used is:",
+      "originalOptions": [
+        "fixed interval.",
+        "variable interval.",
+        "fixed ratio.",
+        "variable ratio."
+      ],
+      "originalAnswer": "D",
+      "originalExplanation": "This is a difficult question that requires careful reading. In a variable ratio schedule, behavior is reinforced after an unpredictable number of responses. Slot machines are an example of a variable ratio schedule. The key words 'on average' should tip you off that it is a variable schedule, because the number of responses that are required for reinforcement keep changing. In a fixed ratio schedule (Response 3), reinforcement would come after exactly the same number of responses each time, and there would be no need for an 'average.' What's also tricky is that the word 'time' is used. Some people will assume that this is an interval schedule, since interval schedules are based on elapsed time. However, the use of 'time' here implies the number of times the behavior is emitted (ratio), and not elapsed time (interval).",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 117,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "A mother continuously nags her son to take out the trash until he finally does. This is an example of:",
+      "originalOptions": [
+        "positive reinforcement.",
+        "positive punishment.",
+        "negative reinforcement.",
+        "negative punishment."
+      ],
+      "originalAnswer": "C",
+      "originalExplanation": "Because the mother nags the child in an attempt to increase the child's behavior (or taking out the garbage), we are looking at a paradigm of reinforcement. Once the child takes out the garbage, it is assumed the mother stops nagging. Because the mother removes an aversive stimulus (nagging), we are looking at negative reinforcement. Negative reinforcement involves the removal of an aversive stimulus of nagging (negative) in an attempt to increase behavior (reinforcement). Negative reinforcement is a form of relief; in this case, the boy is relieved of his mother's nagging.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 130,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "In order to increase studying behavior, you set up a deal with yourself in which you allow yourself to engage in one hour of your favorite activity following a good study session. Underlying your thinking is an understanding of:",
+      "originalOptions": [
+        "generalized conditioned reinforcers.",
+        "the Premack Principle.",
+        "chaining.",
+        "response generalization."
+      ],
+      "originalAnswer": "B",
+      "originalExplanation": "The Premack Principle involves using a high frequency behavior (in this case, a favorite activity) to reinforce a low frequency behavior (in this case, studying). Generalized conditioned reinforcers (Response 1) are a special case of secondary reinforcers that acquire their reinforcing value because they can be exchanged for other reinforcers. Generalized conditioned reinforcers include money and tokens. Chaining (Response 3) is thought to underlie the acquisition of complex behaviors (e.g., driving a car), in which each response serves both as reinforcement for the previous response and as a discriminative stimulus for the next response. Response generalization (Response 4) refers to giving similar but not identical responses to those that have previously been reinforced.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 140,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "A person believes that Friday the 13th is an unlucky day because she got very sick once on Friday the 13th. The best explanation for this phenomenon is:",
+      "originalOptions": [
+        "irrational beliefs.",
+        "respondent conditioning.",
+        "instrumental conditioning.",
+        "a psychotic process."
+      ],
+      "originalAnswer": "B",
+      "originalExplanation": "Feedback: CORRECT \u2013 Answer 2. Although this is rather irrational thinking (Response 1), what would best explain this phenomenon would be pairing Friday the 13th (an initially neutral stimulus) with an aversive unconditioned stimulus (getting sick). This is a classical conditioning phenomenon, also called respondent conditioning. Instrumental conditioning (Response 3) is another name for operant conditioning.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 142,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "Who would likely be a proponent of tipping the waiter after each course?",
+      "originalOptions": [
+        "Skinner.",
+        "Watson.",
+        "Ellis.",
+        "Bandura."
+      ],
+      "originalAnswer": "A",
+      "originalExplanation": "Tipping the waiter after each course would be a form of continuous reinforcement. Of all the individuals listed here, Skinner is the proponent of reinforcement. Remember that Watson (Response 2) is a behaviorist involved with classical conditioning; Ellis (Response 3) is a Rational-Emotive Therapist (cognitive behavioral); and Bandura (Response 4), a social cognitive behaviorist, is most well known for observational learning from a model.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 155,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "The term \"vicarious learning\" is most closely associated with whom?",
+      "originalOptions": [
+        "Skinner.",
+        "Watson.",
+        "Ellis.",
+        "Bandura."
+      ],
+      "originalAnswer": "D",
+      "originalExplanation": "Vicarious learning means that we can learn by watching and imitating others, and by anticipating future reinforcement. This notion is associated with Bandura's model of observational learning. Bandura's theory is usually called Social Learning Theory or Social Cognitive Behaviorism. Skinner (Response 1) is associated with operant or instrumental learning, Watson (Response 2) with classical conditioning, and Ellis (Response 4) with Rational-Emotive Therapy (RET).",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 159,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "You are most likely to remember the answer to these questions if immediately after you take them and review the rationales you:",
+      "originalOptions": [
+        "go over them again.",
+        "relax.",
+        "sleep.",
+        "make flash cards."
+      ],
+      "originalAnswer": "C",
+      "originalExplanation": "The interference theory of memory proposes that we remember best when we minimize interference immediately after we learn something, or in this case, if we sleep.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 169,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "The hardest behaviors to extinguish are those that are:",
+      "originalOptions": [
+        "reinforced on a consistent basis.",
+        "reinforced on a time-contingent basis.",
+        "reinforced on a variable basis.",
+        "reinforced every other time the behavior is emitted."
+      ],
+      "originalAnswer": "C",
+      "originalExplanation": "The hardest behaviors to extinguish are those that are reinforced on an intermittent rather than continuous schedule of reinforcement. Of the intermittent schedules, the variable ratio is the most resistant to extinction, or hardest to extinguish. Assuming reinforcement occurred with every behavior, consistent reinforcement (Response 1) would be the easiest to extinguish. Time-contingent reinforcement (Response 2) typically implies a fixed interval schedule. Reinforcement every other time a behavior is emitted (Response 4) indicates a fixed ratio schedule.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 183,
+      "conceptSummary": null
+    }
+  ]
+}

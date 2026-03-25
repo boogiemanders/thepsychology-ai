@@ -1,0 +1,356 @@
+{
+  "domain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+  "domainKey": "3-social",
+  "questions": [
+    {
+      "originalStem": "A culturally encapsulated therapist:",
+      "originalOptions": [
+        "is mindful and sensitive to race/culture.",
+        "disregards race/culture.",
+        "generalizes based on race/culture.",
+        "typically treats patients who share the same cultural background with the therapist."
+      ],
+      "originalAnswer": "C",
+      "originalExplanation": "A culturally encapsulated therapist is someone who tends to make inappropriate generalizations about a particular group of clients based on race or culture (Response 3). More specifically, the therapist makes narrow assumptions about reality, is insensitive to cultural variations among individuals, disregards evidence disconfirming the superiority of the dominant culture, resorts to technique-oriented strategies and short-term solutions, and judges others according to the encapsulated therapist's self-reference criteria. This is contrasted with culturally competent therapists (Response 1), who are aware of their own cultural values as well as the culture of their patients, and work to acquire the skills and knowledge to provide appropriate and effective treatment.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 1,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "Research on crowding has shown that:",
+      "originalOptions": [
+        "crowding tends to increase arousal for negative emotions but decrease arousal for positive emotions.",
+        "men are more affected by crowding than women.",
+        "the effects of crowding are independent of other variables such as noise and temperature.",
+        "the effects of crowding are not mediated by cultural variables."
+      ],
+      "originalAnswer": "B",
+      "originalExplanation": "Men are generally more affected by crowding than women. Crowding tends to heighten overall arousal for both positive and negative emotions (Response 1). Variables such as noise and temperature do influence the effects of crowding (Response 3). Cultural variables also significantly influence crowding effects (Response 4), in that culture helps determine the amount of personal space with which an individual feels comfortable.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 24,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "In attempting to reduce the incidence of HIV, it should be kept in mind that:",
+      "originalOptions": [
+        "knowledge of facts changes behavior.",
+        "it is harder to change the behavior of a large group than a small group.",
+        "informal norms can play a critical role in behavior.",
+        "negative reinforcement is the underlying principle in the acquisition of HIV."
+      ],
+      "originalAnswer": "C",
+      "originalExplanation": "You might have been able to answer this question correctly just by relying on your own experience and common sense. Individual behavior is highly influenced by the informal norms of the group. For example, a teenager is profoundly influenced by the norms of his/her circle of friends. Research has shown that, unfortunately, increasing a person's factual knowledge is not a potent motivator for change (Response 1). It may be true that it is harder to change the behavior of a large group than a small group, but this fact is not highly relevant to stopping the spread of HIV. Response 4 doesn't really make much sense.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 42,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "A psychological intern leaves a case conference confused because the clinical director, the intern's supervisor, and another staff psychologist all disagree about how she should handle a case. The intern decides to follow the suggestion of the staff psychologist because they share the same theoretical orientation. Her decision is based on what type of power?",
+      "originalOptions": [
+        "Legitimate.",
+        "Expert.",
+        "Referent.",
+        "Coercive."
+      ],
+      "originalAnswer": "C",
+      "originalExplanation": "There are five types of power that have been identified by psychologists: referent, legitimate, coercive, reward, and expert. In this example, the intern appears to like and identify with the staff psychologist whom she considers a role model. Her decision is therefore based on referent power. Her decision would be based on legitimate power (Response 1) if she followed the clinic director, since the director is at the top of the clinic's hierarchy. Following her supervisor's instruction might be an example of coercive power (Response 4) if the decision were due to the intern's fear of a bad evaluation. Finally, although expert power (Response 2) might apply to this situation, it is not as good a response as referent power because the issues of liking and identification have been explicitly stated.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 44,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "According to Sue and Sue's racial/cultural identity development model, the culturally different person is most likely to be critical of dominant culture during the stage of:",
+      "originalOptions": [
+        "resistance and immersion.",
+        "dissonance.",
+        "conformity.",
+        "introspection."
+      ],
+      "originalAnswer": "A",
+      "originalExplanation": "According to Sue & Sue's model of racial/cultural identity development, in the first stage, conformity, the minority person unequivocally prefers the dominant culture's values over his or her own (Response 3). During the second stage, dissonance, the minority person becomes increasingly aware that not all values of dominant culture are beneficial, and certain aspects of minority culture begin to have appeal (Response 2). During the third stage, resistance and immersion, the tides turn and the minority person tends to endorse minority held views, and reject the dominant values of society and culture (Response 1). The fourth stage of introspection involves a deeper analysis of attitudes and feelings (Response 4). During the final stage of integrative awareness, the person can appreciate unique aspects of his or her own culture as well as those of the dominant culture.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 56,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "African American families characteristically:",
+      "originalOptions": [
+        "are matriarchal.",
+        "evidence role flexibility.",
+        "are small and isolated.",
+        "have as many economic opportunities as their Caucasian counterparts."
+      ],
+      "originalAnswer": "B",
+      "originalExplanation": "African American families frequently demonstrate role flexibility. Families tend to be egalitarian and rely on extended family for support. It is a myth that African American families tend to be matriarchal (Response 1).",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 63,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "To optimize the teaching of inner city children by inner city teachers you should:",
+      "originalOptions": [
+        "offer training on the impact of socioeconomics on learning.",
+        "allow teachers flexibility in designing the curriculum.",
+        "focus on increasing teacher's expectancies of children's performance.",
+        "focus on giving teachers a realistic sense of likely performance."
+      ],
+      "originalAnswer": "C",
+      "originalExplanation": "When teachers have a high expectation of students' performance, student performance is maximized. Note that you might have guessed this question correctly by applying your knowledge of self-fulfilling prophecies.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 70,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "A therapist asks the members of a psychotherapy group to refrain from asking questions of others and to speak only about themselves. The group members comply with this request. This scenario is an example of:",
+      "originalOptions": [
+        "a group norm.",
+        "a group task.",
+        "a group expectation.",
+        "social facilitation."
+      ],
+      "originalAnswer": "A",
+      "originalExplanation": "A group norm is a standard of behavior that group members follow. It can be formally initiated by a leader or it can informally emerge from the members\u2019 behavior. A group task (Response 2) is a specific assignment given to a group. Some types of group tasks include conjunctive, disjunctive, and additive. Group expectation (Response 3) is an informally used term that means just what it sounds like, either the expectations that a group has or the expectations that others have for the group. Social facilitation (Response 4) refers to the tendency to perform better on simple, over-learned tasks when one is in the presence of others.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 72,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "When should management reward group performance rather than individual performance?",
+      "originalOptions": [
+        "To reduce social loafing.",
+        "On a task that is high in interdependence.",
+        "On a task that is low in interdependence.",
+        "On a task that is conjunctive."
+      ],
+      "originalAnswer": "B",
+      "originalExplanation": "In an interdependent task, group members need to work together in order to succeed, therefore rewarding group performance is most sensible. In a task that is low in interdependence (Response 3), individual performance is more important; therefore individual rewards would be more useful. Social loafing (Response 1) occurs when people in a group work less hard than they would if they were being evaluated individually. The solution to social loafing is to make individuals more accountable for their contributions. On a conjunctive task (Response 4), the group\u2019s overall functioning is affected by the least effective member (e.g., the one who makes the most errors). Group rewards would be inappropriate here as well.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 77,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "On simple and familiar tasks, the presence of others tends to:",
+      "originalOptions": [
+        "improve performance.",
+        "compromise performance.",
+        "have no significant effect on performance as compared with when others are not present.",
+        "either improve or compromise performance depending on whether others are critical or complimentary."
+      ],
+      "originalAnswer": "A",
+      "originalExplanation": "The presence of others on simple and familiar tasks (e.g., running a marathon) tends to enhance performance. This is termed social facilitation. When the task is novel or complex, social inhibition occurs, and task performance is worsened in the presence of others (Response 2).",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 79,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "You and a colleague both applied for a position and were turned down. You attribute your colleague's failure to his lack of enthusiasm during the interview. This can best be explained by:",
+      "originalOptions": [
+        "the self-serving bias.",
+        "the fundamental attribution error.",
+        "Weiner's theory.",
+        "self-perception theory."
+      ],
+      "originalAnswer": "B",
+      "originalExplanation": "In this question an attribution is made about a colleague's failure. According to the fundamental attribution bias, people explain the failures of others by attributing the failure to internal causes. The self-serving bias (Response 1) relates to the different attributions people make when they themselves succeed or fail. People typically attribute their own success to internal factors but attribute their own failures to external factors. Weiner's theory (Response 3) addresses the stability and instability of internal and external factors. Self-perception theory (Response 4) focuses on people's tendencies to look outside of the self when they don't know the cause of their own behavior.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 88,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "When treating Asian American clients, one should consider that they typically prefer:",
+      "originalOptions": [
+        "an active, directive approach.",
+        "a non-directive approach.",
+        "a focus on separation-individuation issues.",
+        "an emotional-expressive approach."
+      ],
+      "originalAnswer": "A",
+      "originalExplanation": "It is a frequently cited finding that Asian Americans prefer a logical, structured, and directive approach in therapy. Asian Americans, especially if somewhat unacculturated, are likely to seek the services of a psychologist for more practical types of problems, such as vocational selection or evaluation of aptitude rather than for emotional problems. Note that both a focus on separation-individuation issues (Response 3) and an emotional-expressive approach (Response 4) may actually be contraindicated because they may violate significant cultural norms.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 92,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "The best strategy for decreasing tension between opposing factions is to:",
+      "originalOptions": [
+        "provide lectures and discussions about the need for cooperation.",
+        "have both factions participate in a social function together.",
+        "have both factions work together to achieve a goal neither can accomplish alone.",
+        "give both factions sufficient space."
+      ],
+      "originalAnswer": "C",
+      "originalExplanation": "This question is based on Sherif's findings in the Robber's Cave study. The only approach that was found to be successful in decreasing intergroup hostility (i.e., hostility between two opposing factions) was the introduction of a superordinate goal, a goal that could only be achieved with the cooperation of both factions.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 94,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "An attractive 40-year-old man selects as his partner a fairly unattractive 20-year-old woman. What could explain this man's choice?",
+      "originalOptions": [
+        "Matching theory.",
+        "Similarity hypothesis.",
+        "Long-distance relationship.",
+        "Reciprocity hypothesis."
+      ],
+      "originalAnswer": "D",
+      "originalExplanation": "The most likely explanation here is the reciprocity hypothesis, which states that people tend to like others who like them. The matching hypothesis (Response 1) proposes that people of approximately equal physical attractiveness are likely to select each other. The similarity hypothesis (Response 2) posits that people similar to each other (e.g., similar in age, race, or religion) tend to form intimate relationships. Long-distance relationship (Response 3) is not a factor here.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 97,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "A woman goes to a psychic who tells her that she is a very sensitive person. The woman responds enthusiastically, \u201cyou\u2019ve got me pegged!\u201d This interaction is an example of the:",
+      "originalOptions": [
+        "Hawthorne effect.",
+        "Rosenthal effect.",
+        "Barnum effect.",
+        "Law of effect."
+      ],
+      "originalAnswer": "C",
+      "originalExplanation": "The Barnum effect (Response 3) occurs when someone finds personal meaning in a statement that could apply to anyone. In this case, the psychic capitalized on this effect in order to convince her client that she has psychic powers. The Hawthorne effect is associated with a change in behavior that results from being observed (ruling out Response 1). In the original Hawthorne studies (1927 \u2013 1932) experimenters were studying the physical and environmental aspects of the workplace (e.g. lighting) on productivity and discovered that worker productivity increased in all instances simply as a result of observation by the researchers. The Rosenthal effect or experimenter expectancies refers to the cues or clues transmitted by the experimenter to the subjects that results in subjects conforming to the experimenter\u2019s expectations (ruling out Response 2). In the original Rosenthal study (1960s) teachers in an inner-city school were given information about students who were expected to blossom academically. While these students were selected at random, at the end of the year these students did blossom compared with those not on the list. The law of effect, proposed by Thorndike, asserts that people will tend to repeat an action that had a previously pleasurable outcome (ruling out Response 4).",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 102,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "On the way to class, you are attacked in the parking lot. You are most likely to get help if:",
+      "originalOptions": [
+        "one person witnesses the event.",
+        "three people witness the event.",
+        "ten people witness the event.",
+        "you are alone."
+      ],
+      "originalAnswer": "A",
+      "originalExplanation": "In general, the fewer the number of bystanders, the more likely it is that a victim will get help. Other factors that influence the willingness of bystanders to help is whether they themselves have been victims of a violent crime and whether they have training in first aid or other helping skills. \"Bystander apathy\" refers to the failure of bystanders to give assistance. The term is frequently associated with the 1964 murder of Kitty Genovese in New York City, when thirty-eight people witnessed her stabbing without ever calling the police.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 108,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "Research on sex biases has found that, when asked to rate the quality of an essay:",
+      "originalOptions": [
+        "male judges will rate male writers more favorably, while female judges will rate female writers more favorably.",
+        "male judges will rate female writers more favorably, while female judges will rate male writers more favorably.",
+        "both male and female judges will rate female writers more favorably.",
+        "both male and female judges will rate male writers more favorably."
+      ],
+      "originalAnswer": "D",
+      "originalExplanation": "Research on sex bias has found that both male and female judges tend to rate male writers more favorably.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 111,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "A person earns \"idiosyncrasy credits\" by:",
+      "originalOptions": [
+        "being \"likeably eccentric.\"",
+        "initially conforming to group norms.",
+        "reciprocally tolerating idiosyncrasy in colleagues.",
+        "voicing his or her opinion in a consistent, logical manner."
+      ],
+      "originalAnswer": "B",
+      "originalExplanation": "Feedback: CORRECT \u2013 Answer 2. Idiosyncrasy credits refer to a group's tolerance of an individual's disregard for group norms. They can be earned by initially conforming to the group norms (Response 2). Response 4 refers to the manner in which a minority group member can behave in order to maximize the chances of his or her opinion being accepted by the majority.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 127,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "According to Yalom, in which stage of group therapy do members become hostile?",
+      "originalOptions": [
+        "First stage.",
+        "Second stage.",
+        "Third stage.",
+        "In any stage if the leader fails to provide a holding environment."
+      ],
+      "originalAnswer": "B",
+      "originalExplanation": "According to Yalom, the first stage (Response 1) is characterized by hesitant participation, a search for meaning, and dependency. The second stage includes conflicts, efforts at dominance, and rebellion against the leader. The third stage (Response 3) is marked by the development of cohesiveness. Response 4, a holding environment, is a psychoanalytic concept that is not discussed by Yalom.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 129,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "You are offered a choice between two scrumptious desserts, pecan pie and chocolate cake, and you feel quite torn. When pressed to decide, you select the chocolate cake. You then tell your friend that you really aren't that fond of pecan pie. Your behavior can be explained by:",
+      "originalOptions": [
+        "an approach-approach conflict.",
+        "an approach-avoidance conflict.",
+        "the self-serving bias.",
+        "the reciprocity hypothesis."
+      ],
+      "originalAnswer": "A",
+      "originalExplanation": "The approach-approach conflict is one in which the person must choose between two desirable alternatives, and, subsequent to choosing, slightly devalues the alternative not chosen. This is a bit like what one would expect as a result of cognitive dissonance. In an approach-avoidance conflict (Response 2), the individual is both drawn to and repelled by the same alternative. Self-serving bias (Response 3) predicts the kinds of attributions we make for our successes (internal attributions) versus our failures (external attributions). Reciprocity hypothesis (Response 4) explains how people choose their mates.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 136,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "A psychology intern worries that she behaved inappropriately at a clinic staff meeting. She closely observes the behavior of the post-doctoral fellows and decides she has acted appropriately. Her behavior could best be explained by:",
+      "originalOptions": [
+        "the self-serving bias.",
+        "observational learning.",
+        "social comparison theory.",
+        "the fundamental attribution error."
+      ],
+      "originalAnswer": "C",
+      "originalExplanation": "Social comparison theory suggests that when standards are ambiguous and subjective (e.g., \"professionalism\"), we compare ourselves to others (usually but not always those slightly above us), which is what the intern did in this example. Self-serving bias (Response 1) refers to people's tendency to make dispositional attributions for their success and situational attributions for their failure. The fundamental attribution error (Response 4) refers to people's tendency to make dispositional attributions about others' behavior. Observational learning (Response 2) comes from Bandura's Social Learning Theory and is not pertinent here because the intern is observing in order to judge her own behavior, not observing as a method of learning.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 145,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "Research has found that when it comes to the disruptive effects of noise in the workplace:",
+      "originalOptions": [
+        "it is not the noise itself, but whether people think they can turn off the source of the noise.",
+        "intermittent noise is less disruptive than continuous noise.",
+        "noise is especially disruptive with simple, repetitive tasks.",
+        "noise has been found to have little impact in the workplace."
+      ],
+      "originalAnswer": "A",
+      "originalExplanation": "The research on noise in the workplace has found that it is not the noise itself, but rather the perception of control that is important. People who perceive that they have control are not bothered by noise. It has also been found that continuous noise in the workplace is less disruptive than intermittent noise (Response 2), and that noise is generally less disruptive with simple, repetitive tasks (Response 3).",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 160,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "Group polarization occurs when:",
+      "originalOptions": [
+        "a non-cohesive group splits into factions.",
+        "majority members ally against minority members.",
+        "group members make more extreme decisions than they would have individually.",
+        "a new member enters who unbalances the homeostasis."
+      ],
+      "originalAnswer": "C",
+      "originalExplanation": "Response 3 describes group polarization, also known as response polarization. The other responses are distracters.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 177,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "The most accurate statement regarding the relationship between mental illness and socioeconomic status (SES) is:",
+      "originalOptions": [
+        "SES and mental illness are positively correlated.",
+        "SES and mental illness are negatively correlated.",
+        "low SES has been shown to cause poorer mental health.",
+        "more rigorous studies have demonstrated that the supposed correlation between mental illness and SES was an artifact of poor research design."
+      ],
+      "originalAnswer": "B",
+      "originalExplanation": "Not surprisingly, socioeconomic status is negatively correlated with mental illness. In other words, higher SES is associated with less mental illness, and lower SES is associated higher levels of mental illness. It has not been proven that low SES causes poor mental health (Response 3), though some do contend this. Others contend the reverse: poor mental health causes \"downward drift.\"",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 181,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "According to Kohlberg\u2019s stages of gender identity, a child who identifies a boy with long hair as a girl, even though she sees him as a boy when his hair is short, is in what stage?",
+      "originalOptions": [
+        "Gender labeling.",
+        "Gender stability.",
+        "Gender consistency.",
+        "Gender confusion."
+      ],
+      "originalAnswer": "A",
+      "originalExplanation": "Kohlberg outlined three stages of the development of gender identity in children. In the first stage, gender labeling (Response 1, the correct answer), children identify others as male or female based on physical appearances such a clothing or hair style and do not recognize that gender is stable over time. Thus, as physical characteristics change (e.g., hair length), gender changes. In the second stage, gender stability (Response 2), children recognize that gender is stable over time (e.g., boys will grow up to be daddies), however, there is still some confusion as to whether superficial appearance serves as a way of identifying gender. Finally, in the third stage, gender consistency (Response 3), children fully understand the nature of gender as permanent across time and situation. Gender confusion (Response 4) is a non-clinical term that refers to confusion about whether one is truly male or female.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 194,
+      "conceptSummary": null
+    }
+  ]
+}

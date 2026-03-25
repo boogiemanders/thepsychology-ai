@@ -1,0 +1,78 @@
+THE 48-HOUR RETEST LOOP
+A system for turning missed questions into mastered content.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+HOW IT WORKS
+
+Most people review what they got wrong, feel like they understand it,
+and move on. Then they miss the same type of question two weeks later.
+
+This loop forces actual retrieval — not recognition — by retesting
+before the memory fades but after enough time has passed to require
+real recall.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+THE LOOP
+
+STEP 1: TAKE A PRACTICE SET
+  - 20-30 questions from one domain
+  - Time yourself (1.2 min per question)
+  - No notes, no peeking
+
+STEP 2: SCORE IT
+  - Write down your raw score: ___/___
+  - Do not rationalize. Do not explain away.
+
+STEP 3: LOG EVERY MISS
+  - Open your Mistake Log
+  - For each wrong answer, categorize:
+      Content Gap — You didn't know the material
+      Misread — You knew it but read the question wrong
+      Trap — You knew it but picked the distractor
+  - Write what you thought AND what was correct
+
+STEP 4: STUDY ONLY THE MISSES
+  - Content Gaps: Go learn that specific concept (not the whole chapter)
+  - Misreads: Reread the question — what word did you skip?
+  - Traps: What made the wrong answer attractive?
+  - Time limit: 30-45 minutes max
+
+STEP 5: WAIT 48 HOURS
+  - Do not retest tomorrow. Do not retest today.
+  - 48 hours is the minimum spacing for durable retrieval.
+  - Study other domains in the meantime.
+
+STEP 6: RETEST
+  - Take the SAME missed questions + 5 new ones from the same domain
+  - Score it again
+
+STEP 7: EVALUATE
+  - 85% or higher → This domain loop is complete. Move on.
+  - Below 85% → Back to Step 3. Re-log, re-study, wait 48 hours.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+RULES
+
+- Never skip Step 3. The log is where the learning happens.
+- Never retest before 48 hours. Sooner feels productive but builds
+  false confidence.
+- Never study more than 45 minutes per loop. You're fixing gaps,
+  not re-learning the domain.
+- Track your loops: after 3 cycles, most domains stabilize above 85%.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TRACKING TABLE
+
+Copy this into your planner or notebook:
+
+Domain: _______________
+
+  Loop 1   Date: ___   Score: ___/___   Misses logged? [  ]
+  Loop 2   Date: ___   Score: ___/___   Misses logged? [  ]
+  Loop 3   Date: ___   Score: ___/___   Misses logged? [  ]
+
+  Cleared 85%? [  ]   Date cleared: ___________

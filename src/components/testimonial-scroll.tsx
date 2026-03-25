@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import { Marquee } from "@/components/ui/marquee";
 import { cn } from "@/lib/utils";
 
@@ -60,19 +59,91 @@ interface Testimonial {
   description: React.ReactNode;
 }
 
+function isAnonymousTestimonial(testimonial: Testimonial) {
+  return testimonial.name.trim().toLowerCase() === "anonymous";
+}
+
+function buildAnonymousGapSizes(
+  namedCount: number,
+  anonymousCount: number
+) {
+  const gapSizes = Array.from({ length: namedCount }, () => 0);
+  const separableGaps = Math.min(anonymousCount, namedCount - 1);
+
+  for (let index = 0; index < separableGaps; index += 1) {
+    gapSizes[index] = 1;
+  }
+
+  let remainingAnonymous = anonymousCount - separableGaps;
+
+  while (remainingAnonymous > 0) {
+    const smallestGap = Math.min(...gapSizes);
+
+    for (let index = gapSizes.length - 1; index >= 0; index -= 1) {
+      if (gapSizes[index] !== smallestGap) {
+        continue;
+      }
+
+      gapSizes[index] += 1;
+      remainingAnonymous -= 1;
+      break;
+    }
+  }
+
+  return gapSizes;
+}
+
+function spreadNamedTestimonials(testimonials: Testimonial[]) {
+  const namedTestimonials = testimonials.filter(
+    (testimonial) => !isAnonymousTestimonial(testimonial)
+  );
+  const anonymousTestimonials = testimonials.filter(isAnonymousTestimonial);
+
+  if (namedTestimonials.length <= 1 || anonymousTestimonials.length === 0) {
+    return testimonials;
+  }
+
+  const orderedTestimonials: Testimonial[] = [];
+  const remainingAnonymous = [...anonymousTestimonials];
+  const anonymousGapSizes = buildAnonymousGapSizes(
+    namedTestimonials.length,
+    anonymousTestimonials.length
+  );
+
+  // Spread named testimonials across the marquee loop and keep the opening
+  // viewport as trust-heavy as possible.
+  namedTestimonials.forEach((testimonial, index) => {
+    orderedTestimonials.push(testimonial);
+
+    for (let count = 0; count < anonymousGapSizes[index]; count += 1) {
+      const anonymousTestimonial = remainingAnonymous.shift();
+
+      if (!anonymousTestimonial) {
+        break;
+      }
+
+      orderedTestimonials.push(anonymousTestimonial);
+    }
+  });
+
+  return orderedTestimonials;
+}
+
 export function SocialProofTestimonials({
   testimonials,
 }: {
   testimonials: Testimonial[];
 }) {
+  const orderedTestimonials = spreadNamedTestimonials(testimonials);
+
   return (
     <div className="w-full">
       <div className="relative overflow-hidden py-8">
         <Marquee className="[--duration:60s]" dragToScroll>
-          {testimonials.map((card, idx) => {
+          {orderedTestimonials.map((card) => {
             return (
               <div
-                key={idx}
+                key={card.id}
                 className="w-[420px] min-h-[200px] flex justify-center"
               >
                 <TestimonialCard {...card} className="w-full break-words" />

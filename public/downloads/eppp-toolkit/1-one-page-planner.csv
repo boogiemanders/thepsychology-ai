@@ -1,0 +1,9 @@
+Domain,Your Score (%),Exam Weight (%),Gap Score,Priority Rank
+Biological Bases of Behavior,,10,"=C2*(1-B2/100)","=RANK(D2,D$2:D$9)"
+Cognitive-Affective Bases of Behavior,,13,"=C3*(1-B3/100)","=RANK(D3,D$2:D$9)"
+Social and Cultural Bases of Behavior,,11,"=C4*(1-B4/100)","=RANK(D4,D$2:D$9)"
+Growth and Lifespan Development,,12,"=C5*(1-B5/100)","=RANK(D5,D$2:D$9)"
+Assessment and Diagnosis,,16,"=C6*(1-B6/100)","=RANK(D6,D$2:D$9)"
+Treatment / Intervention,,15,"=C7*(1-B7/100)","=RANK(D7,D$2:D$9)"
+Research Methods and Statistics,,7,"=C8*(1-B8/100)","=RANK(D8,D$2:D$9)"
+Ethical / Legal / Professional Issues,,16,"=C9*(1-B9/100)","=RANK(D9,D$2:D$9)"

@@ -4,8 +4,10 @@ import { getOpenAIApiKey } from '@/lib/openai-api-key'
 import crypto from 'node:crypto'
 import fs from 'node:fs'
 import path from 'node:path'
+import { execSync } from 'node:child_process'
 
 const openaiApiKey = getOpenAIApiKey()
+const TTS_PROVIDER = process.env.TOPIC_TEACHER_TTS_PROVIDER || 'openai'
 
 type AudioFormat = 'mp3' | 'wav' | 'aac' | 'opus' | 'flac'
 
@@ -149,13 +151,51 @@ function envFlagEnabled(raw: string | null | undefined): boolean {
   return normalized === '1' || normalized === 'true' || normalized === 'yes' || normalized === 'on'
 }
 
+const EDGE_VOICES: Record<string, string> = {
+  alloy: 'en-US-AriaNeural',
+  echo: 'en-US-GuyNeural',
+  fable: 'en-GB-RyanNeural',
+  onyx: 'en-US-DavisNeural',
+  nova: 'en-US-JennyNeural',
+  shimmer: 'en-US-AmberNeural',
+}
+const EDGE_DEFAULT_VOICE = 'en-US-AriaNeural'
+
+async function generateEdgeTts(text: string, voice: string, format: AudioFormat): Promise<Buffer> {
+  const tmpDir = path.join(AUDIO_CACHE_DIR, 'edge-tmp')
+  fs.mkdirSync(tmpDir, { recursive: true })
+  const id = crypto.randomUUID()
+  const textPath = path.join(tmpDir, `${id}.txt`)
+  const mp3Path = path.join(tmpDir, `${id}.mp3`)
+  const edgeVoice = EDGE_VOICES[voice] || EDGE_DEFAULT_VOICE
+
+  try {
+    fs.writeFileSync(textPath, text)
+    execSync(`edge-tts --voice "${edgeVoice}" --file "${textPath}" --write-media "${mp3Path}"`, {
+      stdio: 'pipe',
+      timeout: 120000,
+    })
+    if (format !== 'mp3') {
+      const outPath = path.join(tmpDir, `${id}.${format}`)
+      execSync(`ffmpeg -y -i "${mp3Path}" "${outPath}"`, { stdio: 'pipe', timeout: 60000 })
+      const buffer = fs.readFileSync(outPath)
+      try { fs.unlinkSync(outPath) } catch {}
+      return buffer
+    }
+    return fs.readFileSync(mp3Path)
+  } finally {
+    try { fs.unlinkSync(textPath) } catch {}
+    try { fs.unlinkSync(mp3Path) } catch {}
+  }
+}
+
 export async function POST(request: NextRequest) {
   const liveTtsEnabled = envFlagEnabled(process.env.TOPIC_TEACHER_ALLOW_LIVE_TTS)
   if (!liveTtsEnabled) {
     return NextResponse.json({ error: LIVE_TTS_DISABLED_ERROR }, { status: 403 })
   }
 
-  if (!openaiApiKey) {
+  if (TTS_PROVIDER !== 'edge' && !openaiApiKey) {
     return NextResponse.json(
       { error: 'Topic Teacher audio is not configured (missing OPENAI_API_KEY).' },
       { status: 500 }
@@ -226,6 +266,47 @@ export async function POST(request: NextRequest) {
     }
   }
 
+  // Edge TTS path (free Microsoft Edge TTS)
+  if (TTS_PROVIDER === 'edge') {
+    try {
+      const audioBuffer = await generateEdgeTts(text, voice, format)
+      const cacheKeyUsed = computeCacheKey({ model: 'edge-tts', voice, format, speed, text })
+      writeAudioToCache(cacheKeyUsed, format, audioBuffer)
+
+      await logUsageEvent({
+        userId,
+        eventName: 'topic-teacher.audio',
+        endpoint: '/api/topic-teacher/audio',
+        model: 'edge-tts',
+        metadata: {
+          voice,
+          format,
+          speed,
+          characters: text.length,
+          topic,
+          domain,
+          mode,
+          languagePreference,
+          cacheable,
+        },
+      })
+
+      return new NextResponse(audioBuffer, {
+        headers: {
+          'Content-Type': contentTypeForFormat(format),
+          'Cache-Control': 'no-store',
+          'Content-Disposition': `inline; filename="topic-teacher.${format}"`,
+          'X-Topic-Teacher-Audio-Key': cacheKeyUsed,
+          'X-Topic-Teacher-Audio-Model': 'edge-tts',
+        },
+      })
+    } catch (err) {
+      const message = err instanceof Error ? err.message : 'Edge TTS failed'
+      return NextResponse.json({ error: message }, { status: 500 })
+    }
+  }
+
+  // OpenAI TTS path
   const requestSpeech = (modelToUse: string) =>
     fetch('https://api.openai.com/v1/audio/speech', {
       method: 'POST',

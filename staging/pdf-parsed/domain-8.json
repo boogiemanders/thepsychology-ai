@@ -1,0 +1,426 @@
+{
+  "domain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+  "domainKey": "8",
+  "questions": [
+    {
+      "originalStem": "According to the American Psychological Association's Ethical Principles of Psychologists and Code of Conduct, which of the following statements is most accurate regarding \"fee splitting\" between a psychologist and other professionals?",
+      "originalOptions": [
+        "Fee splitting is always unethical.",
+        "Fee splitting is permissible if it is based on services provided.",
+        "Fee splitting is permissible if it is fair and non-exploitative.",
+        "Fee splitting between psychologists based on referrals is unethical, but fee splitting with other professionals based on referrals may be acceptable."
+      ],
+      "originalAnswer": "B",
+      "originalExplanation": "The APA Ethics Code explicitly prohibits fee splitting between professionals when it is based on referrals, e.g., a referral source receives 5% of a patient's on-going fees (Response 4). The Ethics Code does not prohibit it in all circumstances (Response 1), however, specifically allowing it when it is based \"on services provided.\" For example, a psychologist and a psychological assistant may engage in fee splitting based on provision of supervision, office space, etc. There is no explicit provision that fee splitting be \"fair and non-exploitative\" (Response 3), although that certainly is the spirit of the code.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 7,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "When deception is used in research:",
+      "originalOptions": [
+        "the researcher must inform subjects of the purpose of the study afterwards.",
+        "the researcher must obtain consent from subjects if they are at high risk.",
+        "it isn't possible to get consent beforehand, but subjects must be debriefed afterwards.",
+        "consent isn't required if subjects are at minimal risk."
+      ],
+      "originalAnswer": "A",
+      "originalExplanation": "When deception is used in research, the deception must be explained to participants as early as is feasible, preferably at the conclusion of their participation, but no later than at the conclusion of the research. Keep in mind that even if deception is involved, consent from subjects must be obtained before they participate in the research.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 9,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "A psychologist works in a small town, where she is the only psychologist. Her exboyfriend requests treatment from her, for a recently developed specific phobia. She has not been intimate with him for over ten years. If she consents to treat him, she:",
+      "originalOptions": [
+        "is acting ethically.",
+        "is acting unethically.",
+        "may be acting unethically, depending on the circumstances.",
+        "this issue is not covered in the ethical principles."
+      ],
+      "originalAnswer": "B",
+      "originalExplanation": "The Ethics Code clearly states that psychologists never accept former sexual partners as therapy patients.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 18,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "During an intake evaluation, a client informs you that she has had sexual relations with her previous therapist. You happen to know this therapist personally. You should:",
+      "originalOptions": [
+        "discuss this with the therapist without revealing the client's name.",
+        "recommend that your client file an ethics complaint.",
+        "discuss available options with your client.",
+        "consider the diagnostic implications of her behavior."
+      ],
+      "originalAnswer": "C",
+      "originalExplanation": "In this scenario, you may have narrowed down your choice to Responses 2 & 3. Discussing available options, which would probably include the option of filing an ethics charge, would be better than a direct recommendation that the person file the complaint (Response 2). Discussing the sexual misconduct directly with the therapist (Response 1) would be a breach of confidentiality. Considering the diagnostic implications (Response 4) insufficiently addresses the ethical issues here.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 26,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "A murderer is found not guilty by reason of insanity. This means:",
+      "originalOptions": [
+        "the person was insane at the time of the murder.",
+        "the person has a history of insanity that predisposed him to this behavior.",
+        "the person is unable to defend himself during the court proceedings.",
+        "the person should be on medication."
+      ],
+      "originalAnswer": "A",
+      "originalExplanation": "When someone is found not guilty by reason of insanity, the conclusion is that the person is not guilty because he was insane at the time the murder was committed. The inability to defend oneself in court proceedings (Response 3) is referred to as incompetency to stand trial.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 30,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "Selling questions from the EPPP is:",
+      "originalOptions": [
+        "unethical but legal.",
+        "illegal but ethical.",
+        "ethical and legal.",
+        "unethical and illegal."
+      ],
+      "originalAnswer": "D",
+      "originalExplanation": "Selling questions from the EPPP is both illegal and unethical. For example, it is illegal and unethical for an organization to steal items by having licensees deliberately memorize items and then recall the items immediately after the exam. Note that this behavior is different from examinees remembering a few items here and there, as well as remembering some of the general content areas asked about.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 41,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "According to the American Psychological Association's Ethical Principles of Psychologists and Code of Conduct (2002), test data such as raw and scaled scores, may be released:",
+      "originalOptions": [
+        "to whomever the patient requests, with an appropriate release.",
+        "to the patient, if the patient insists.",
+        "only to professionals qualified to understand the data.",
+        "only when there is court order that overrides the ethical standard not to release raw"
+      ],
+      "originalAnswer": "A",
+      "originalExplanation": "According to the 2002 APA Ethics Code, test data should be released to the client, or to anyone designated by the client on an appropriate release (ruling out Responses 2 and 3). The psychologist may refuse to release the data only if he or she believes that doing so would cause \"substantial harm, or the misuse or misinterpretation of test data.\" There is no absolute prohibition against the release of raw data (Response 4).",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 48,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "In the American Psychological Association's Ethical Principles of Psychologists and Code of Conduct (2002), the relationship between the standards and general principles is:",
+      "originalOptions": [
+        "the first are aspirational, the second enforceable.",
+        "the first are enforceable, the second aspirational.",
+        "both are enforceable.",
+        "both are aspirational, while laws are enforceable."
+      ],
+      "originalAnswer": "B",
+      "originalExplanation": "In the American Psychological Association's Ethical Principles of Psychologists and Code of Conduct (2002), there are five general principles, which are considered aspirational, and ten standards, which are considered to be the enforceable aspect of the Ethics Code.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 58,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "You are a psychologist who has been licensed for 10 years, and are employed in a hospital setting. The hospital's associate director has just received his doctoral degree in psychology, and requests that you provide him with supervision for some of his post-doctoral hours required for licensure. You should:",
+      "originalOptions": [
+        "consent to supervise him if he has no involvement with or responsibility for evaluating your performance.",
+        "consent to supervise him if he has no involvement with or responsibility for evaluating your performance, and you do not interact with him in any other capacity.",
+        "refuse to supervise him because this arrangement would conflict with organizational structure and hierarchy.",
+        "refuse to supervise him because of the inherent conflict and potential problems that could arise."
+      ],
+      "originalAnswer": "D",
+      "originalExplanation": "Feedback: CORRECT \u2013 Answer 4. According to the Ethics Code a psychologist should refrain from entering into a professional relationship (e.g., providing supervision) if the relationship might impair the psychologist's objectivity, or harm or exploit the other party. Additionally, a psychologist should not take on professional obligations when the pre-existing relationship would create a risk of harm. Based on these provisions, it is clear that the psychologist should refuse the associate director's request, regardless of whether the associate director evaluates the psychologist's performance or interacts with the psychologist in any other capacity (Responses 1 & 2). Potential conflict with the organization's structure and hierarchy should not be the guiding factor in this decision (Response 3).",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 67,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "The most frequently filed ethics charges relate to:",
+      "originalOptions": [
+        "breach of confidentiality.",
+        "sexual misconduct.",
+        "practicing outside of one's area of competence.",
+        "insensitivity to cultural issues."
+      ],
+      "originalAnswer": "B",
+      "originalExplanation": "Of all ethics charges filed against psychologists, sexual misconduct is the most frequent one.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 74,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "In her third session, a client tells you that she is also seeing a sex therapist. Recently, this sex therapist had the client take off her top and then massaged the client's breasts in a demonstration of sensate focus techniques. The best course of action would be to:",
+      "originalOptions": [
+        "recommend that she terminate therapy and file an ethics charge.",
+        "discuss your ethical concerns with the therapist.",
+        "explore the impact this is having on her, and based on her reactions (e.g., her feelings about whether it's therapeutic or not) decide on your course of action.",
+        "discuss her dynamics."
+      ],
+      "originalAnswer": "A",
+      "originalExplanation": "The behavior of the sex therapist is unethical. This is a clear case of a therapist exploiting the client in the guise of doing therapy. Of the responses here, the best one would be to recommend that your client terminate therapy and file an ethics charge. Response 3 may look like a possible alternative; however, even if your patient somehow feels it is therapeutic, the therapist's actions are clearly an abuse of power, are exploitative, and are not part of any reputable treatment protocol. Discussing your concerns with the therapist (Response 2) could constitute a breach of confidentiality. Discussing the patient's dynamics (Response 4) does not sufficiently address the legal and ethical concerns.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 83,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "A family you are treating mentions that the five-year-old daughter has headaches. You notice that there are some bruises on her forehead as well as on her arms, and have some concern about possible child abuse. You wish to contact the child's physician. In order to do so:",
+      "originalOptions": [
+        "you should get written consent from the parents.",
+        "you should get verbal consent from the parents.",
+        "you do not need to get consent from the parents.",
+        "you need consent from the parents and child."
+      ],
+      "originalAnswer": "A",
+      "originalExplanation": "In general, the law mandates that you breach confidentiality to report suspected abuse to child protective services. Such reports are breaches of confidentiality because they are typically made without parental consent. In this situation, you would need written consent from the parents in order to contact the child's physician.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 86,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "As a psychologist, you begin a sexual relationship with one of your former clients. This behavior:",
+      "originalOptions": [
+        "is unethical and illegal.",
+        "is unethical.",
+        "is ethical.",
+        "may be ethical."
+      ],
+      "originalAnswer": "D",
+      "originalExplanation": "The Ethics Code states it may be ethical to engage in sexual intimacies with a former therapy patient provided at least two years have passed since the end of therapy and the psychologist can demonstrate there has been no exploitation in light of seven factors (e.g., nature and duration of therapy, patient's current mental status, etc.).",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 90,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "You are treating a child who is suicidal and needs hospitalization. At a minimum, you should obtain consent from:",
+      "originalOptions": [
+        "both parents.",
+        "one parent.",
+        "the legal guardian.",
+        "the child."
+      ],
+      "originalAnswer": "C",
+      "originalExplanation": "Consent for the treatment of a minor must always be secured from whoever is the minor's legal guardian. The child (Response 4) should provide assent.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 105,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "In regard to testimonials, the APA Ethics Code stipulates that:",
+      "originalOptions": [
+        "testimonials may neither be solicited nor used.",
+        "testimonials may be used, but not solicited.",
+        "testimonials may be used and solicited as long as they are not solicited from current patients or those vulnerable to undue influence.",
+        "testimonials may not be solicited, however they may be used as long as they are not from current patients or those vulnerable to undue influence."
+      ],
+      "originalAnswer": "C",
+      "originalExplanation": "The APA Ethics Code states that it is permissible to solicit and use testimonials as long as they are not solicited from current patients or those vulnerable to undue influence (e.g., a former patient with dependent personality disorder).",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 115,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "The person who holds privilege in court-ordered treatment is:",
+      "originalOptions": [
+        "the client.",
+        "the psychologist.",
+        "the court.",
+        "the judge."
+      ],
+      "originalAnswer": "A",
+      "originalExplanation": "This question is a bit tricky; it requires that you know the difference between evaluations or assessments for the court, as opposed to court-ordered therapy. When a therapist performs evaluations on behest of the court, the client has no privilege and must be informed of the lack of confidentiality at the outset. By contrast, in court-ordered therapy (e.g., for spousal abuse), the client is the holder of privilege and is typically entitled to complete confidentiality. Note that Responses 3 and 4 are virtually identical, indicating that neither is likely to be the correct answer (i.e., they can't both be right).",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 116,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "A doctoral student gets business cards and includes on his cards that he is a Ph.D. candidate and that he accepts patients on a sliding scale. According to the APA Ethics Code:",
+      "originalOptions": [
+        "he can advertise his fee schedule, but listing his candidate status is unethical.",
+        "he can list both his fee schedule and his candidate status.",
+        "it is unethical to list either his fee schedule or his candidate status.",
+        "he can mention his candidate status, but it is unethical to advertise his fee schedule."
+      ],
+      "originalAnswer": "A",
+      "originalExplanation": "According to the APA Ethics Code, Section 5.01, which covers advertising and public statements, psychologists should avoid making false or deceptive public statements. In this case, advertising one\u2019s doctoral status would be considered confusing to the lay public, as they would see the degree and may not know that \u201ccandidate\u201d designates a student. Listing the fee schedule is considered ethical. Therefore, he can advertise his fee schedule but not his candidate status (Response 1).",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 122,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "A lecturer who is a psychologist is asked by a member of the audience for a referral for an alcohol treatment center. The lecturer offers the referral. The person later files ethics charges against the psychologist because the alcohol program was mediocre. The psychologist:",
+      "originalOptions": [
+        "is guilty of an ethics violation.",
+        "may be guilty of an ethics violation.",
+        "is not guilty of an ethics violation.",
+        "is not guilty of an ethics violation only if he made clear initially that the referral was solely informational."
+      ],
+      "originalAnswer": "C",
+      "originalExplanation": "A lecturer who only gives information to an audience member about a program is not responsible for the actual program or its outcome.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 123,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "A patient you have been seeing for three months is switching insurance companies. She asks you if you'd be willing to diagnose her as if this were a new condition. If you comply with this request, you are acting:",
+      "originalOptions": [
+        "illegally.",
+        "ethically but illegally.",
+        "unethically and illegally.",
+        "ethically and legally."
+      ],
+      "originalAnswer": "C",
+      "originalExplanation": "Feedback: CORRECT \u2013 Answer 3\u2013 Answer 3! Providing inaccurate information to the insurance company would constitute insurance fraud. It is both illegal and unethical.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 132,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "After you have tested a 19-year-old college student, his parents request the testing results. Your best course of action would be to:",
+      "originalOptions": [
+        "release the information to the parents since they are the legal guardians.",
+        "get a release signed by the son before releasing the information.",
+        "withhold the information, because of potential misuse by nonprofessionals.",
+        "proceed with caution."
+      ],
+      "originalAnswer": "B",
+      "originalExplanation": "A 19-year-old student is considered to be an adult; therefore information could only be released if he signs a release of information form.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 141,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "Which of the following statements best summarizes the attitude of the APA's Ethical Principles of Psychologists and Code of Conduct (2002) toward multiple relationships?",
+      "originalOptions": [
+        "It is unethical to enter into a multiple relationship that can be avoided.",
+        "Multiple relationships that cannot be avoided may be ethically permissible if they do not impair the psychologist's functioning or risk harm or exploitation.",
+        "Multiple relationships that do not impair the psychologist's functioning or risk harm or exploitation are not unethical.",
+        "Multiple relationships are not inherently unethical unless they violate other ethical standards against risking harm or exploitation to clients."
+      ],
+      "originalAnswer": "C",
+      "originalExplanation": "The 2002 Ethics Code states that \"multiple relationships that would not reasonably be expected to cause impairment or risk exploitation or harm are not unethical.\" There is no stipulation that multiple relationships should generally be avoided (Responses 1 & 2). The ethical standard on multiple relationships specifies the conditions for acceptable multiple relationships and does not refer to other standards (Response 4).",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 146,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "The term professional psychologist is used to describe someone who:",
+      "originalOptions": [
+        "does psychotherapy.",
+        "has a doctorate in psychology from a regionally accredited school.",
+        "has a doctorate in psychology and is licensed in that state.",
+        "is license-eligible."
+      ],
+      "originalAnswer": "B",
+      "originalExplanation": "The term professional psychologist describes a person with a doctorate in psychology from a regionally accredited school. One does not need to be licensed in order to be designated as a professional psychologist. For example, a person may call herself a Social Psychologist or Developmental Psychologist without having a license. Many academicians are designated as psychologists and never get licensed. One may not call oneself a \"clinical psychologist\" without a license.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 150,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "Under what circumstances may a subpoena for treatment records be ignored?",
+      "originalOptions": [
+        "The patient asks the therapist to assert privilege.",
+        "The therapist plans to assert privilege and will only reveal the records if a court order is issued.",
+        "The subpoena is issued in the course of a malpractice lawsuit.",
+        "A subpoena cannot be ignored."
+      ],
+      "originalAnswer": "D",
+      "originalExplanation": "A subpoena is a legal document and may never simply be ignored, including when there is a malpractice lawsuit (Response 3). The psychotherapist must show up at the appointed time with the required documents. Although the therapist may assert privilege (Response 1), this does not mean that the subpoena is ignored.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 151,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "In conducting group therapy, the therapist:",
+      "originalOptions": [
+        "is responsible for ensuring confidentiality among group members.",
+        "plays no role in ensuring confidentiality, as clearly this is not possible to enforce.",
+        "emphasizes the importance of confidentiality initially and periodically during the course of treatment, but keeps in mind that patients are actually on an honor system.",
+        "holds privilege for group members."
+      ],
+      "originalAnswer": "C",
+      "originalExplanation": "Confidentiality is a sticky issue in groups, in that there is no way to actually enforce it or guarantee it to any member. The therapist is responsible for emphasizing the importance of confidentiality at the outset, and periodically reminding patients about it.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 154,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "A therapist advertises that the first therapy session is free. Such practice is:",
+      "originalOptions": [
+        "ethically dubious.",
+        "unethical.",
+        "ethical, provided there is no coercion or undue influence.",
+        "illegal and unethical."
+      ],
+      "originalAnswer": "C",
+      "originalExplanation": "Psychologists are allowed to advertise and offer the first session (consultation) for free, provided that there is then no coercion or undue influence to get the client to continue.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 164,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "In order to adhere to the highest possible standards, when sending patient information electronically to an insurance company for billing, you should:",
+      "originalOptions": [
+        "clearly mark it confidential.",
+        "follow it up with a hard copy in the mail.",
+        "code the client's name.",
+        "refuse to do so."
+      ],
+      "originalAnswer": "A",
+      "originalExplanation": "This question refers to sending confidential patient information by modem, for example. In this situation, it is sufficient to identify the information as confidential.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 171,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "You are on an admissions committee and your husband applies to that program. You should:",
+      "originalOptions": [
+        "proceed with caution.",
+        "withdraw temporarily from the committee.",
+        "withdraw permanently from the committee.",
+        "seek consultation."
+      ],
+      "originalAnswer": "B",
+      "originalExplanation": "If you are on an admissions committee and your husband (or for that matter anyone you know) applies to the program, you should temporarily withdraw from the committee.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 175,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "A psychiatrist requests patient records from a patient you saw seven years ago. The patient has signed the appropriate release. You should:",
+      "originalOptions": [
+        "refuse to send the records because the records are probably obsolete.",
+        "send any testing data, as well as the opening and closing summary, but leave out the session-by-session notes.",
+        "send the records with a note warning that the information may be obsolete.",
+        "attempt to dissuade the client from his request."
+      ],
+      "originalAnswer": "C",
+      "originalExplanation": "Patients are entitled to have their records released to themselves or to someone they specify (e.g., a psychiatrist). The issue here is that the information is seven years old and might therefore be obsolete. So, this possibility should be noted when you send the records.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 179,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "Since you put in a tremendous amount of work, you decide to publish your dissertation as a journal article. You remember that your chairperson was a significant source of both moral and practical support, helping you with the data analysis, the literature review, and the summary of results. According to the Ethics Code, your chair should receive:",
+      "originalOptions": [
+        "first authorship.",
+        "second authorship.",
+        "a footnote.",
+        "an acknowledgment."
+      ],
+      "originalAnswer": "B",
+      "originalExplanation": "Keep in mind when a dissertation is later published as a research article, the graduate student should almost always get first authorship (Response 1). The question here addresses how the chairperson should be recognized, and given the significance of the contributions, the chair warrants a second authorship. Minor contributions to research should be acknowledged in a footnote or introductory statement (Responses 3 and 4).",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 184,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "You have seen a family in treatment. The mother's lawyer contacts you at a later date, with a signed request for release of treatment information to be used in a custody battle. Based on your experience with the father, you know he has abused his children. Your best course of action would be to:",
+      "originalOptions": [
+        "release only the information that is necessary for the custody battle.",
+        "seek a release from the father, but if he refuses, release the information anyway since the children have been abused.",
+        "agree to release the information if you can evaluate the mother and children.",
+        "release the information only if the father consents as well."
+      ],
+      "originalAnswer": "D",
+      "originalExplanation": "According to the Ethics Code, when multiple people have been in treatment, they all need to consent before confidential information may be released. In this scenario, consent from both the husband and wife is required. The abuse issue here is a red herring. When you became aware of the abuse, you would have been mandated to make a report to child protective services. You would not be allowed release any information to the attorney unless you had the consent of the father.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 196,
+      "conceptSummary": null
+    }
+  ]
+}

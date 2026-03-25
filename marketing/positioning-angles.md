@@ -2,20 +2,20 @@
 
 ## Angle 1: The Price Injustice (RECOMMENDED — Lead with this)
 
-- **The angle:** The EPPP prep industry has been exploiting postdocs for decades, charging $1,000+ for materials that haven't been updated since 1976, to an audience earning $54K with massive student debt. We built something better and made it affordable, with a free trial so you can see for yourself before paying a cent.
+- **The angle:** The EPPP prep industry has been exploiting postdocs for decades — charging $1,000+ for materials that haven't been updated since 1976, to an audience earning $54K with massive student debt. We built something better and made it free.
 
-- **Why it works:** This isn't a "deal" angle, it's a righteous anger angle. It positions thePsychology.ai as the correction to an industry that's been ripping people off. $100/mo with a 1-week free trial vs $1,649 one-time is proof that the old model was broken. Early adopters get an even better deal. This works because the audience already FEELS this injustice, they're in forums writing "struggling with the idea of possibly spending hundreds or thousands." You're validating a frustration they already have and offering the solution.
+- **Why it works:** This isn't a "deal" angle — it's a righteous anger angle. It positions thePsychology.ai as the correction to an industry that's been ripping people off. The $0 price isn't charity; it's proof that the old model was broken. This works because the audience already FEELS this injustice — they're in forums writing "struggling with the idea of possibly spending hundreds or thousands." You're validating a frustration they already have and offering the solution.
 
 - **Headline directions:**
   - "EPPP prep shouldn't cost more than your car payment"
-  - "They charge $1,649. We start with a free trial. Same exam."
+  - "They charge $1,649. We charge $0. Same exam."
   - "Stop paying 1976 prices for 1976 materials"
   - "$1,000+ for EPPP prep? That era is over."
-  - "The $100/mo EPPP program that outperforms the $1,649 one"
+  - "The $0 EPPP program that outperforms the $1,649 one"
 
-- **When to use:** Primary positioning for the landing page hero. This is the first thing visitors should feel. Works especially well because the 1-week free trial lets them experience the platform risk-free. Lead with this, then layer in the mechanism (Angle 2) to explain WHY it's better, not just cheaper.
+- **When to use:** Primary positioning for the landing page hero. This is the first thing visitors should feel. Works especially well because the free tier is genuinely free (no credit card), making the claim bulletproof. Lead with this, then layer in the mechanism (Angle 2) to explain WHY it's better, not just cheaper.
 
-- **Risk:** Low price can signal low quality. Immediately counter with credibility signals (UCLA, NYU Langone team; founder's 588 score; real testimonials). The early-bird discount counters the "too good to be true" objection: it's discounted NOW because you're early, not because it's worthless. $100/mo is still a fraction of what competitors charge.
+- **Risk:** "Free" can signal low quality. Immediately counter with credibility signals (UCLA, NYU Langone team; founder's 588 score; real testimonials). The scarcity tiers (first 100 free → then $20 → then $50 → then $100) also counter the "too good to be true" objection — it's free NOW because you're early, not because it's worthless.
 
 ---
 
@@ -86,7 +86,7 @@
 
 ## Recommended Positioning Strategy
 
-**Hero (first impression):** Angle 1 (Price Injustice): hook with the $100/mo vs $1,649 contrast plus the 1-week free trial. Immediately arrests attention and validates the frustration they already feel.
+**Hero (first impression):** Angle 1 (Price Injustice) — hook with the $0 vs $1,649 contrast. Immediately arrests attention and validates the frustration they already feel.
 
 **Mechanism (second scroll):** Angle 2 (Anti-Waste) — explain WHY it's better: the adaptive loop. "Study less. Score higher." This is where the orbiting loop section lives.
 
@@ -100,6 +100,6 @@
 
 If we had to compress thePsychology.ai into one positioning statement:
 
-> **"The most affordable AI-adaptive EPPP prep, built by a psychologist who scored 19% on his first practice exam and passed the real thing on his first try. Try it free for a week."**
+> **"The free, AI-adaptive EPPP prep built by a psychologist who scored 19% on his first practice exam — and passed the real thing on his first try."**
 
-This hits: price (affordable + free trial), mechanism (AI-adaptive), category (EPPP prep), credibility (built by a psychologist), and proof (the founder's story) in one sentence.
+This hits: price ($0), mechanism (AI-adaptive), category (EPPP prep), credibility (built by a psychologist), and proof (the founder's story) — in one sentence.

@@ -4,7 +4,7 @@ import { getAllTopicContentEntries } from "@/lib/seo/topic-content.server"
 
 export const metadata: Metadata = {
   title: "Resources",
-  description: "EPPP study guides, practice questions, and sample exams.",
+  description: "Free EPPP study guides organized by exam domain, practice questions with explanations, and sample exams. Built by psychologists who passed.",
   alternates: {
     canonical: "/resources",
   },

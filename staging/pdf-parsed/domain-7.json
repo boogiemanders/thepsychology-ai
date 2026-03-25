@@ -1,0 +1,174 @@
+{
+  "domain": "RESEARCH METHODS AND STATISTICS",
+  "domainKey": "7",
+  "questions": [
+    {
+      "originalStem": "Which of the following designs is least likely to be threatened by history?",
+      "originalOptions": [
+        "AB.",
+        "ABAB.",
+        "Time series.",
+        "One group pre-post."
+      ],
+      "originalAnswer": "B",
+      "originalExplanation": "History is defined as a coincidentally occurring event that is not part of treatment, which influences outcome. The threat of history is best taken care of by an ABAB design in which the person is first measured over time during a baseline phase (A), then treatment is implemented and the person is once again measured repeatedly during the intervention (B). Treatment is then removed, and the person is measured at baseline again (A). Finally, treatment is implemented once again and the person is measured repeatedly (B). Since measurements of treatment effect are obtained at two different times, this design controls for the possibility that some of the treatment effect was confounded by a historical event. In the other three designs, treatment is only implemented at one point in time and there is no control group. One would not be able to tease out whether changes were caused by treatment or some coincidentally occurring event. For example, in an AB design (Response 1), baseline (A) is followed by treatment (B). Similarly, in a one group pre-posttest design (Response 4), the same group of people is assessed once before and once after treatment. A time series (Response 3) usually involves a group that is measured at several points before and after treatment, however, treatment only occurs once. It therefore remains unclear if the observed effects are due to treatment or history. Note that \"time series\" is often used to refer in a more general (and confusing) way to any single-subject design, including AB and ABAB.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 25,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "A T score of 70 would be equivalent to:",
+      "originalOptions": [
+        "a z score of +1.",
+        "the 70th percentile rank.",
+        "a raw score of about 70.",
+        "a score at about the 98th percentile rank."
+      ],
+      "originalAnswer": "D",
+      "originalExplanation": "Recall that T scores, z scores and percentiles are all norm referenced scores that tell us about a person's relative standing or ranking in a group. These scores can also be compared to one another. The mean of T scores is 50, and the standard deviation is 10. A T score of 70 is two standard deviations above the mean, which corresponds to the 98th percentile rank. A z score of +1 (Response 1), which is one SD above the mean, is equivalent to a T score of 60 and a percentile rank of 84. A raw score (Response 3) is a criterion-referenced score, and gives no indication of the person's relative ranking.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 35,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "For each A score, the variability of B scores is equal to the total variability of B scores. You can conclude that:",
+      "originalOptions": [
+        "an error has been made; this is quite unlikely to occur.",
+        "there is a moderate positive correlation between A and B.",
+        "there is a moderate negative correlation between A and B.",
+        "there is no correlation between A and B."
+      ],
+      "originalAnswer": "D",
+      "originalExplanation": "In this correlation, for any A value, you end up with all possible B values (i.e., total variability of B scores). The graph would look like one giant scatterplot, with dots all over the place. Knowing A tells you nothing about what B could be, since B could be anything. In other words, there is no ability whatsoever to use A to predict B. Thus, the correlation is 0.0. If A and B were correlated, the graph would show dots clustered close to a regression line. The values of B would be limited by the value of A, and it would be possible to predict B if A were known.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 66,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "Which of the following scenarios will tend to increase the standard error of the mean?",
+      "originalOptions": [
+        "Increasing the SD of the population and decreasing sample size.",
+        "Decreasing the SD of the population and increasing sample size.",
+        "Increasing both the SD of the population and sample size.",
+        "Decreasing both the SD of the population and sample size."
+      ],
+      "originalAnswer": "A",
+      "originalExplanation": "Feedback: CORRECT \u2013 Answer 1. The standard error of the mean has a direct relationship with the SD of the population and an indirect relationship with sample size. The standard error of the mean increases when the SD of the population is increased and sample size is reduced.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 76,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "After conducting a two-way ANOVA, you determine significant differences have been found. You are most likely to conclude:",
+      "originalOptions": [
+        "there are main effects and there may or may not be interaction effects.",
+        "there are interaction effects and there may or may not be main effects.",
+        "there can be any combination of main effects and interactions.",
+        "there are probably neither main effects nor interaction effects because the results may be due to chance."
+      ],
+      "originalAnswer": "C",
+      "originalExplanation": "When you conduct a two-way ANOVA, you calculate three F ratios, and therefore there are three possibilities for significance. There are two possible main effects (for Variable A and Variable B), and a possible interaction effect. The important point is that when you get significance in a two-way ANOVA, it can be any combination of main effects and interactions. For example, it's possible that there would be only one main effect. It's equally possible that there would be a significant interaction effect and no main effects, or even that there would be two significant main effects and a significant interaction. Note that one of the advantages of a two-way ANOVA over two separate one-way ANOVAs is the possibility of detecting the interaction effect.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 101,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "In conducting an ABAB design, the researcher would be concerned with:",
+      "originalOptions": [
+        "history and maturation.",
+        "regression and diffusion.",
+        "failure of IV to return to baseline.",
+        "failure of DV to return to baseline."
+      ],
+      "originalAnswer": "D",
+      "originalExplanation": "An ABAB design is a type of single subject design in which the person is first measured over time during a baseline phase (A), then treatment is implemented and the person is once again measured repeatedly during the intervention phase (B). Treatment is then removed, and the person is measured at baseline again (A). Finally, treatment is implemented again and the person is repeatedly measured (B). ABAB designs offer good control over history and maturation (Response 1). Regression and diffusion (Response 2) are not of concern here. A key problem with an ABAB design is the possibility that the outcome measure may fail to return to baseline once the person has been exposed to the first part of treatment.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 119,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "The time required to complete a mechanical test was recorded. About 25% of the people took the maximum allowed amount of time. What would be the best measure of central tendency?",
+      "originalOptions": [
+        "The mean.",
+        "The median.",
+        "The mode.",
+        "The mean, median, and mode would be equally good measures."
+      ],
+      "originalAnswer": "B",
+      "originalExplanation": "Feedback: CORRECT \u2013 Answer 2. In general, the mean is the best measure of central tendency, however, the median is better when there are either some very extreme scores, or a substantial percentage of maximum scores. In this example, a relatively large percentage of people (25%) received the highest possible score, and so the median should be used. Average housing prices are typically reported in terms of the median, because there are some extreme values (e.g., $10,000,000 homes).",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 126,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "In which of the following circumstances would it be problematic to use a chi square?",
+      "originalOptions": [
+        "When looking for differences between groups.",
+        "When the data are ordinal.",
+        "When repeated observations are made.",
+        "When there is more than one independent variable."
+      ],
+      "originalAnswer": "C",
+      "originalExplanation": "Chi square is a non-parametric test of differences (Response 1), used when data are nominal, or categorical. Although there are specific nonparametric tests for ordinal data (e.g., Mann-Whitney), the chi square can accommodate ordinal data (Response 2). When there is more than one independent variable, the multiple sample chi square is run (Response 4). One of the main assumptions of the chi square is independence of observations, thus, a chi square cannot be run when repeated observations are made (e.g., data are collected pre and post).",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 153,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "The shape of a z-score distribution:",
+      "originalOptions": [
+        "is normal.",
+        "is skewed.",
+        "is flat (rectangular).",
+        "cannot be determined, since insufficient information has been given."
+      ],
+      "originalAnswer": "D",
+      "originalExplanation": "To answer this question, you need to keep in mind that the shape of a Z-score distribution is identical to (or follows) the shape of the raw score distribution. Since the shape of the raw score distribution is not given in this example, the best answer is Response 4. Flat or rectangular (Response 3) would be correct if the question asked about the shape of the distribution of percentile ranks.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 157,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "Single subject designs involve an approach that can be described as:",
+      "originalOptions": [
+        "ipsative.",
+        "idiographic.",
+        "normative.",
+        "nomothetic."
+      ],
+      "originalAnswer": "B",
+      "originalExplanation": "Idiographic is the term used to describe single subject approaches while nomothetic (Response 4) describes group approaches. Normative data (Response 3) refer to data that can be compared both within and across subjects. Ipsative data (Response 1), results from a forced-choice format. It can only describe relative strengths or interests within a subject and cannot be used for comparisons across subjects.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 180,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "Data from a study in which there are three levels of the independent variable and one continuous dependent variable should be analyzed using which of the following statistical methods?",
+      "originalOptions": [
+        "One-way anova.",
+        "Factorial anova.",
+        "Chi square.",
+        "Manova."
+      ],
+      "originalAnswer": "A",
+      "originalExplanation": "To select the appropriate test of difference the first step is to get clarification on the independent and dependent variables. In this scenario, there is only one independent variable (IV), and the IV has three levels (e.g., treatment is the IV with three different types of treatment being compared), and there is only one dependent variable (DV) or outcome variable that is continuous; in other words the DV is scored numerically (e.g., Beck Depression Scores). Manova (Response 4) is used when there are multiple dependent variables. Chi square (Response 3) is used when the dependent variable is nominal or categorical. The one-way anova (Response 1, correct response) is used when there is one IV (regardless of the number of levels) and one DV. By extension, the two-way anova is used when there are two IVs (regardless of the number of levels) and one DV; the three way anova is used when there are three IVs and one DV. The factorial anova (Response 2) is used when there is more than one IV (e.g, two IVs, three IVs, etc) and one DV.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 185,
+      "conceptSummary": null
+    },
+    {
+      "originalStem": "The relationship between education and income among clinical psychologists is most likely:",
+      "originalOptions": [
+        "-.7.",
+        "0.0.",
+        ".3.",
+        ".5."
+      ],
+      "originalAnswer": "B",
+      "originalExplanation": "In this situation, there is a full range of values for the variable income, but the variable education has a significantly restricted range, given that all psychologists have approximately 20 years of education. With a severely restricted range, a correlation becomes 0. Note that if this had been a broader question that asked about the overall correlation between education and income, the answer might have been somewhere near .3 to .5.",
+      "examSource": "PsychPrep 2016 Exam A",
+      "questionNum": 199,
+      "conceptSummary": null
+    }
+  ]
+}

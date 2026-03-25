@@ -10,19 +10,31 @@ import { AnimatePresence, motion, useInView } from "motion/react";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
-export function ReasoningBasic() {
+export function ReasoningBasic({ speed = 20 }: { speed?: number } = {}) {
   const reasoningText = `Based on your last quiz, focus on Ethics (53%) and Lifespan (48%) — both are high-weighted and give the best score gain. Next, hit Research/Stats (25%) — small section, but your lowest area`;
 
   return (
     <Reasoning>
       <ReasoningContent className="">
-        <ReasoningResponse text={reasoningText} className="[&_p]:m-0" />
+        <ReasoningResponse
+          text={reasoningText}
+          speed={speed}
+          className="[&_p]:m-0"
+        />
       </ReasoningContent>
     </Reasoning>
   );
 }
 
-export function FirstBentoAnimation() {
+export function FirstBentoAnimation({
+  responseSpeed = 20,
+  revealDelayMs = 1000,
+  showBottomFade = true,
+}: {
+  responseSpeed?: number;
+  revealDelayMs?: number;
+  showBottomFade?: boolean;
+} = {}) {
   const ref = useRef(null);
   const isInView = useInView(ref);
   const [shouldAnimate, setShouldAnimate] = useState(false);
@@ -32,7 +44,7 @@ export function FirstBentoAnimation() {
     if (isInView) {
       timeoutId = setTimeout(() => {
         setShouldAnimate(true);
-      }, 1000);
+      }, revealDelayMs);
     } else {
       setShouldAnimate(false);
     }
@@ -40,14 +52,16 @@ export function FirstBentoAnimation() {
     return () => {
       if (timeoutId) clearTimeout(timeoutId);
     };
-  }, [isInView]);
+  }, [isInView, revealDelayMs]);
 
   return (
     <div
       ref={ref}
       className="w-full h-full p-4 flex flex-col items-center justify-center gap-5"
     >
-      <div className="pointer-events-none absolute bottom-0 left-0 h-20 w-full bg-gradient-to-t from-background to-transparent z-20"></div>
+      {showBottomFade ? (
+        <div className="pointer-events-none absolute bottom-0 left-0 h-20 w-full bg-gradient-to-t from-background to-transparent z-20"></div>
+      ) : null}
       <motion.div
         className="max-w-md mx-auto w-full flex flex-col gap-2"
         animate={{
@@ -138,7 +152,7 @@ export function FirstBentoAnimation() {
                     ease: "easeOut",
                   }}
                 >
-                  <ReasoningBasic />
+                  <ReasoningBasic speed={responseSpeed} />
                 </motion.div>
               )}
             </AnimatePresence>

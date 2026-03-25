@@ -41,20 +41,18 @@ export default function LoginPage() {
     setLoading(true)
 
     try {
-      // Start the sign-in process (don't await it since it hangs)
-      supabase.auth.signInWithPassword({
+      const { error: authError } = await supabase.auth.signInWithPassword({
         email: formData.email,
         password: formData.password,
-      }).catch(err => {
-        setError(err.message || 'Login failed')
-        setLoading(false)
       })
 
-      // Redirect to dashboard after a delay (auth context will handle setting the user)
-      setTimeout(() => {
-        router.push('/dashboard')
-      }, 2000)
+      if (authError) {
+        setError(authError.message || 'Login failed')
+        setLoading(false)
+        return
+      }
 
+      router.push('/dashboard')
     } catch (err) {
       const message = err instanceof Error ? err.message : 'Login failed'
       setError(message)
