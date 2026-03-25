@@ -14,7 +14,7 @@ The exam system generates high-quality practice exams with:
 ### ✅ Comprehensive Question Coverage
 - Uses EXCLUSIVELY the 83 .md files in `/eppp-reference/` folder
 - Covers all 71 Knowledge Statements (KNs) from the official EPPP Part 1 exam
-- Follows official domain weight distributions from KNs.pdf
+- Follows official domain weight distributions from Kns.md
 - Each question traced to source file for educational tracking
 
 ### ✅ Source File Tracking
@@ -35,7 +35,7 @@ The exam system generates high-quality practice exams with:
 - **20% Difficult questions** (45 unscored) - Obscure facts, subtle distinctions, complex integrations
 
 ### ✅ Domain Distribution
-Following KNs.pdf official weights for 225-question practice exam:
+Following Kns.md official weights for 225-question practice exam:
 - Domain 1 (Biological): 10% = 23 questions
 - Domain 2 (Cognitive-Affective): 13% = 29 questions (7 org psych)
 - Domain 3 (Social & Cultural): 11% = 25 questions (9 org psych)
@@ -79,7 +79,7 @@ Your generation of this exam must follow these rules precisely:
    - 20% Distinction questions: Compare/contrast related concepts, differences in application between similar approaches, selecting the most appropriate option between viable alternatives
    - 20% Difficult/Unscored questions: Obscure or secondary facts, extremely subtle distinctions, complex concept integration. MARK AS isScored: false
 
-4. Domain Coverage (follow KNs.pdf percentages)
+4. Domain Coverage (follow Kns.md percentages)
    [For practice exams: Distribute per domain percentages above, with org psych integrated]
    - Ensure coverage of all 71 KNs across all domains
    - Organizational psychology questions should be distributed in domains 2, 3, 5, 6 with approximately 21% total
