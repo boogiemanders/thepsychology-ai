@@ -155,9 +155,8 @@ export async function POST(request: NextRequest) {
  * Now using standardized naming convention (001-004)
  * Matches the exam generation system and allows for quick rotation
  *
- * NOTE: Only practice-exam-001.md is available for practice exams.
- * practice-exam-002.md, 003.md, and 004.md are temporarily disabled due to format issues.
- * They will be regenerated and re-enabled in a future update.
+ * Practice exams 1-8 served from examsGPT/ as JSON.
+ * Diagnostic exams 1-4 served from diagnosticGPT/ as JSON.
  */
 function getAvailableExamFilesList(examType: 'diagnostic' | 'practice'): string[] {
   if (examType === 'diagnostic') {
@@ -171,6 +170,8 @@ function getAvailableExamFilesList(examType: 'diagnostic' | 'practice'): string[
     return [
       'practice-exam-001.md',
       'practice-exam-002.md',
+      'practice-exam-003.md',
+      'practice-exam-004.md',
       'practice-exam-005.md',
       'practice-exam-006.md',
       'practice-exam-007.md',
