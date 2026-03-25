@@ -29,7 +29,7 @@ export const BLUR_FADE_DELAY = 0.15
 export const siteConfig = {
   name: "thePsychology.ai",
   description:
-    "Free AI-adaptive EPPP exam prep. 80+ lessons, realistic practice exams, and high-yield study materials built by psychologists who passed. $0 while others charge $849+.",
+    "AI-adaptive EPPP exam prep. 80+ lessons, realistic practice exams, and high-yield study materials built by psychologists who passed.",
   cta: "Get Started",
   url:
     process.env.NEXT_PUBLIC_APP_URL ||
