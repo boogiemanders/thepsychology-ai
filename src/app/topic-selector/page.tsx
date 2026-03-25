@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useRef, useCallback } from 'react'
+import { Suspense, useState, useEffect, useRef, useCallback } from 'react'
 import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from '@/components/ui/dialog'
@@ -199,7 +199,11 @@ function getTimeAgo(timestamp: number): string {
   return 'Just now'
 }
 
-export default function TopicSelectorPage() {
+function TopicSelectorLoadingFallback() {
+  return <main className="min-h-screen bg-background" />
+}
+
+function TopicSelectorContent() {
   const { user, userProfile, loading } = useAuth()
   const searchParams = useSearchParams()
   const showUpgradeNotice = searchParams.get('upgrade') === '1'
@@ -1143,5 +1147,13 @@ export default function TopicSelectorPage() {
         </DialogContent>
       </Dialog>
     </main>
+  )
+}
+
+export default function TopicSelectorPage() {
+  return (
+    <Suspense fallback={<TopicSelectorLoadingFallback />}>
+      <TopicSelectorContent />
+    </Suspense>
   )
 }
