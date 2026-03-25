@@ -37,6 +37,7 @@ import { CHANGELOG_ENTRIES } from '@/lib/changelog'
 import { StudyProgressChart } from './components/study-progress-chart'
 import { ConsentModal, useConsentModal } from '@/components/consent-modal'
 import { UpgradeBanner } from '@/components/upgrade-banner'
+import { NewExamsBanner } from '@/components/new-exams-banner'
 import { ActivationBanner } from '@/components/activation-banner'
 import { RewardsPanel } from '@/components/rewards-panel'
 import { ExamResultForm } from '@/components/dashboard/exam-result-form'
@@ -967,6 +968,7 @@ export default function DashboardPage() {
     <main className="min-h-screen bg-background">
       <div className="max-w-6xl mx-auto px-4 py-6 md:px-6 md:py-12 space-y-8">
         <UpgradeBanner />
+        <NewExamsBanner />
         <ActivationBanner />
         <RewardsPanel />
 
