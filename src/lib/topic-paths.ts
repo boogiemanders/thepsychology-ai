@@ -36,6 +36,7 @@ export function normalizeTopicName(topicName: string): string {
     .replace(/\//g, '-')
     .replace(/–/g, '-')
     .replace(/&/g, 'and') // normalize ampersand to "and" for matching
+    .replace(/[:(),]/g, ' ')
     .replace(/…/g, '')
     .replace(/\.\.\./g, '')
     .replace(/\s+/g, ' ')
@@ -44,7 +45,10 @@ export function normalizeTopicName(topicName: string): string {
 
 function getSearchDomainIds(preferredDomainId?: string | null): string[] {
   if (preferredDomainId && DOMAIN_FOLDER_MAP[preferredDomainId]) {
-    return [preferredDomainId]
+    return [
+      preferredDomainId,
+      ...Object.keys(DOMAIN_FOLDER_MAP).filter((domainId) => domainId !== preferredDomainId),
+    ]
   }
   return Object.keys(DOMAIN_FOLDER_MAP)
 }
