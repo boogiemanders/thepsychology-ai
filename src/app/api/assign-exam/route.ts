@@ -168,10 +168,13 @@ function getAvailableExamFilesList(examType: 'diagnostic' | 'practice'): string[
       'diagnostic-exam-004.md',
     ]
   } else {
-    // Temporarily only serve practice-exam-001.md
-    // practice-exam-002, 003, 004 will be regenerated
     return [
       'practice-exam-001.md',
+      'practice-exam-002.md',
+      'practice-exam-005.md',
+      'practice-exam-006.md',
+      'practice-exam-007.md',
+      'practice-exam-008.md',
     ]
   }
 }
