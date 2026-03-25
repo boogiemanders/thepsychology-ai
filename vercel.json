@@ -18,7 +18,7 @@
     },
     {
       "path": "/api/cron/activation-nudge",
-      "schedule": "0 * * * *"
+      "schedule": "0 15 * * *"
     }
   ]
 }
