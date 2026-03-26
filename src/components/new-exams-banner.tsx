@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import { X } from 'lucide-react'
 import { useAuth } from '@/context/auth-context'
 
-const DISMISS_KEY = 'new-exams-march-2026-dismissed'
+const DISMISS_KEY = 'new-exams-16-total-march-2026-dismissed'
 
 export function NewExamsBanner() {
   const { userProfile } = useAuth()
@@ -35,10 +35,10 @@ export function NewExamsBanner() {
       </button>
       <div className="pr-8">
         <p className="text-sm font-medium text-foreground">
-          4 new practice exams added
+          12 new practice exams added — 16 total
         </p>
         <p className="text-sm text-muted-foreground mt-0.5">
-          We just added practice exams 5-8 to the pool, each with 225 unique questions across all 8 EPPP domains. Start a new practice exam to try them out.
+          We've expanded the exam pool from 4 to 16 practice exams, each with 225 unique questions across all 8 EPPP domains. Start a new practice exam to try them out.
         </p>
       </div>
     </div>
