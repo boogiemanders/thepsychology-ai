@@ -21,7 +21,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/eppp-sections", changeFrequency: "monthly", priority: 0.6 },
     { path: "/portfolio", changeFrequency: "monthly", priority: 0.4 },
     { path: "/contact", changeFrequency: "yearly", priority: 0.3 },
-    { path: "/blog", changeFrequency: "weekly", priority: 0.4 },
+    { path: "/faq", changeFrequency: "monthly", priority: 0.7 },
+    { path: "/blog", changeFrequency: "weekly", priority: 0.7 },
     { path: "/provider", changeFrequency: "weekly", priority: 0.8 },
     { path: "/client", changeFrequency: "weekly", priority: 0.8 },
   ]

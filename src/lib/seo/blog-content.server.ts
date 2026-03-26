@@ -96,8 +96,16 @@ export function getAllBlogPosts(): BlogPostEntry[] {
     })
   }
 
+  const now = new Date()
+
+  // Filter out future-dated posts (scheduled publishing)
+  const published = entries.filter((e) => {
+    if (!e.publishedAt) return true
+    return new Date(e.publishedAt) <= now
+  })
+
   // Sort by published date descending (newest first)
-  return entries.sort((a, b) => {
+  return published.sort((a, b) => {
     if (!a.publishedAt || !b.publishedAt) return 0
     return new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
   })
