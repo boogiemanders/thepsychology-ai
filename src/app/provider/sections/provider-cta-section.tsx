@@ -8,16 +8,16 @@ export function ProviderCTASection() {
     <section className="flex flex-col items-center justify-center w-full py-16 md:py-24 px-6">
       <div className="max-w-xl mx-auto text-center space-y-6">
         <h2 className="text-3xl md:text-4xl font-medium tracking-tighter text-balance">
-          Your next client is already looking for someone like you.
+          Want to help shape the provider pilot?
         </h2>
         <p className="text-muted-foreground">
-          Takes 5 minutes. Free forever for up to 5 clients. No credit card
-          required.
+          Tell us about your practice, your biggest platform pain points, and
+          what would make a first version genuinely worth switching for.
         </p>
-        <Link href="/provider/onboarding">
+        <Link href="/contact">
           <InteractiveHoverButton
-            text="Set Up Your Profile"
-            hoverText="Let's go"
+            text="Join Early Access"
+            hoverText="Contact us"
             inverted
           />
         </Link>

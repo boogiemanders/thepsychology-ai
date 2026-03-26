@@ -39,6 +39,10 @@ export default function ContactPage() {
             </Link>
             .
           </p>
+          <p className="text-sm text-muted-foreground">
+            Provider or client early access: email us with a short note about
+            what you want the pilot to solve.
+          </p>
         </section>
       </div>
     </main>

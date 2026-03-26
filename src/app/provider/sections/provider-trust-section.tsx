@@ -5,7 +5,7 @@ export function ProviderTrustSection() {
     <section className="flex flex-col items-center justify-center w-full relative">
       <SectionHeader>
         <h2 className="text-3xl md:text-4xl font-medium tracking-tighter text-center text-balance pb-1">
-          I get it. I was there.
+          Why I want to build this next
         </h2>
       </SectionHeader>
 
@@ -22,9 +22,9 @@ export function ProviderTrustSection() {
             Alma&apos;s AI writes things about your clients that never happened.
           </p>
           <p>
-            I built this because I wanted the platform I wish existed when I
-            started my practice. One that treats clinicians like professionals,
-            not revenue units.
+            I want to build this next because I wanted the platform I wish
+            existed when I started my practice. One that treats clinicians like
+            professionals, not revenue units.
           </p>
           <footer className="text-sm text-foreground font-medium pt-2">
             &mdash; Anders Chan, Psy.D.

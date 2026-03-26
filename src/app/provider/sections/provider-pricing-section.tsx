@@ -8,31 +8,28 @@ import Link from "next/link"
 
 const tiers = [
   {
-    name: "Free",
-    price: "$0",
-    period: "/month",
+    name: "Now",
+    price: "Early",
+    period: " access",
     features: [
-      "5 active clients",
-      "AI matching",
-      "Insurance verification",
-      "HIPAA telehealth",
-      "Profile listing",
+      "Tell us your biggest provider-platform pain points",
+      "Get updates as the pilot takes shape",
+      "Help define the first useful workflow",
     ],
-    cta: "Start Free",
+    cta: "Join Early Access",
     highlighted: false,
   },
   {
-    name: "Pro",
-    price: "$99",
-    period: "/month",
+    name: "Later",
+    price: "Pilot",
+    period: " cohort",
     features: [
-      "Unlimited clients",
-      "Priority in matching results",
-      "Analytics dashboard",
-      "Calendar sync",
-      "Everything in Free",
+      "Small first cohort once the workflow is real",
+      "Structured onboarding instead of a fake instant signup",
+      "Pilot pricing only after the product earns it",
+      "Feedback loop with real clinicians",
     ],
-    cta: "Set Up Your Profile",
+    cta: "Request Pilot Info",
     highlighted: true,
   },
 ]
@@ -45,7 +42,7 @@ export function ProviderPricingSection() {
     >
       <SectionHeader>
         <h2 className="text-3xl md:text-4xl font-medium tracking-tighter text-center text-balance pb-1">
-          What it costs. No asterisks.
+          How provider early access works
         </h2>
       </SectionHeader>
 
@@ -86,10 +83,10 @@ export function ProviderPricingSection() {
                 </li>
               ))}
             </ul>
-            <Link href="/provider/onboarding">
+            <Link href="/contact">
               <InteractiveHoverButton
                 text={tier.cta}
-                hoverText="Let's go"
+                hoverText="Contact us"
                 inverted={tier.highlighted}
                 className="w-full justify-center"
               />
@@ -100,10 +97,9 @@ export function ProviderPricingSection() {
 
       <div className="max-w-2xl mx-auto px-6 pb-12 text-sm text-muted-foreground leading-relaxed">
         <p>
-          The catch: there isn&apos;t one. No percentage of your sessions. No
-          rate cuts after you&apos;re dependent on us. Psychology Today charges
-          $29.95/month for 1 referral. Headway takes a cut, then cuts your
-          rates. We charge a flat fee. That&apos;s it.
+          There is no live provider pricing yet. If this becomes a real
+          product, the pricing model should stay simple, flat, and visibly
+          anti-extractive.
         </p>
       </div>
     </section>

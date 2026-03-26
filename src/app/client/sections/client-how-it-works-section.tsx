@@ -9,13 +9,13 @@ const steps = [
     number: "1",
     title: "Tell us what you need",
     description:
-      "What you\u2019re dealing with, what you\u2019ve tried, what matters to you. No jargon. Honest questions. 3 minutes.",
+      "A short intake about what you\u2019re dealing with, what you\u2019ve tried, and what matters to you.",
   },
   {
     number: "2",
     title: "See your matches",
     description:
-      "A ranked list \u2014 not 200 faces in a grid. Each provider scored for your situation, with a clear explanation of why they fit.",
+      "Each provider scored for your situation, with a clear explanation of why they fit.",
   },
   {
     number: "3",
@@ -30,7 +30,7 @@ export function ClientHowItWorksSection() {
     <section className="flex flex-col items-center justify-center w-full relative">
       <SectionHeader>
         <h2 className="text-3xl md:text-4xl font-medium tracking-tighter text-center text-balance pb-1">
-          Three steps. No phone tag.
+          If we do this right, it should be simple
         </h2>
       </SectionHeader>
 

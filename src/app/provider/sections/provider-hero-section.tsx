@@ -10,27 +10,26 @@ export function ProviderHeroSection() {
       <div className="max-w-3xl mx-auto flex flex-col items-center gap-6 text-center">
         <div className="rounded-full border border-border px-4 py-1.5">
           <AnimatedShinyText className="text-sm">
-            From the team that helped you pass the EPPP
+            Provider early access
           </AnimatedShinyText>
         </div>
 
         <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium tracking-tighter text-balance">
-          Psychology Today referrals dropped 90%.{" "}
+          We&apos;re building the therapist platform we wish existed.{" "}
           <span className="text-muted-foreground">
-            Headway cut your rates. Alma fabricated your clinical notes.
+            No rate cuts. No clawbacks. No paying for directory ghosting.
           </span>
         </h1>
 
         <p className="max-w-2xl text-base md:text-lg text-muted-foreground leading-relaxed">
-          There&apos;s a better way to build a practice. No rate cuts. No
-          clawbacks. No $125/month to get ghosted by your own platform. Set up
-          your profile in 5 minutes.
+          If this would help your practice, join early access and tell us what
+          would make the pilot genuinely worth using.
         </p>
 
-        <Link href="/provider/onboarding">
+        <Link href="/contact">
           <InteractiveHoverButton
-            text="Set Up Your Profile"
-            hoverText="Let's go"
+            text="Request Early Access"
+            hoverText="Contact us"
             inverted
           />
         </Link>

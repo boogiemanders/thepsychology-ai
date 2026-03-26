@@ -5,7 +5,7 @@ export function ProviderPipelineSection() {
     <section className="flex flex-col items-center justify-center w-full relative">
       <SectionHeader>
         <h2 className="text-3xl md:text-4xl font-medium tracking-tighter text-center text-balance pb-1">
-          You trained here. Your next clients will find you here.
+          Why provider is the next platform
         </h2>
       </SectionHeader>
 
@@ -21,8 +21,9 @@ export function ProviderPipelineSection() {
         </p>
 
         <p className="text-foreground font-medium">
-          We connect both sides. No directory, no VC-backed platform, and no
-          Google ad can replicate that pipeline.
+          If the company expands well, this is the next honest move: turn the
+          EPPP wedge into a provider platform before trying to market a full
+          client marketplace.
         </p>
       </div>
 
@@ -32,7 +33,7 @@ export function ProviderPipelineSection() {
           {[
             { step: "1", label: "Students study here" },
             { step: "2", label: "Pass EPPP, get licensed" },
-            { step: "3", label: "Clients find them through matching" },
+            { step: "3", label: "Provider platform grows next" },
           ].map((item, i) => (
             <div key={item.step} className="flex items-center gap-4">
               <div className="flex flex-col items-center gap-2 text-center">

@@ -19,7 +19,7 @@ export default function ClientLanding() {
       <ClientHowItWorksSection />
       <ClientTrustSection />
       <ClientCTASection />
-      <FooterSection description="Find a therapist matched to your specific needs. 7-dimension matching, real-time insurance verification, and instant booking." />
+      <FooterSection description="Client early access for a better therapy-search flow: better fit, clearer insurance expectations, and less directory friction." />
     </div>
   )
 }

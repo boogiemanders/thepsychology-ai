@@ -5,29 +5,29 @@ import { motion } from "motion/react"
 
 const features = [
   {
-    title: "Clients who fit your specialization",
+    title: "Fit-aware referrals",
     description:
-      "Not a directory where you pay to be listed and hope. 7-dimension matching scores clients on specialization, modality, style, and cultural fit. You see clients you can actually help.",
+      "A provider platform should send clinicians patients they can actually help, not just charge for a listing and leave everyone guessing.",
   },
   {
-    title: "Real insurance verification",
+    title: "Cleaner insurance workflows",
     description:
-      "Clients see their actual copay amount. Not \u2018accepts Blue Cross.\u2019 The real number, verified in real time through Stedi. No first-session billing surprises.",
+      "Eligibility and coverage should be clearer before the first session, not hidden behind vague directory badges and surprise bills.",
   },
   {
-    title: "Telehealth built in",
+    title: "Simple operations",
     description:
-      "HIPAA-compliant video via Daily.co. No Zoom. No Doxy. No $50/month subscription. Clients click a button and they\u2019re in your session.",
+      "Telehealth, scheduling, and core workflow should feel like infrastructure, not a stack of add-on subscriptions stitched together.",
   },
   {
-    title: "$0 or $99/month. That\u2019s it.",
+    title: "Flat, non-extractive pricing",
     description:
-      "Free: 5 clients, full matching, insurance verification, telehealth. Pro: $99/month, unlimited. No percentage of sessions. No clawbacks. No hidden fees.",
+      "If this launches, pricing should stay simple and flat. No percentage of sessions. No clawbacks. No hidden fees.",
   },
   {
     title: "Your practice. Your rates. Your rules.",
     description:
-      "Set your rates. Choose your hours. Accept or decline referrals. We\u2019re infrastructure, not your employer.",
+      "The platform should support clinician autonomy. Your rates, your hours, your decisions. Infrastructure, not employer behavior.",
   },
 ]
 
@@ -36,7 +36,7 @@ export function ProviderFeaturesSection() {
     <section className="flex flex-col items-center justify-center w-full relative">
       <SectionHeader>
         <h2 className="text-3xl md:text-4xl font-medium tracking-tighter text-center text-balance pb-1">
-          Everything you need to run a practice. Nothing that extracts from it.
+          What we want the provider platform to do
         </h2>
       </SectionHeader>
 

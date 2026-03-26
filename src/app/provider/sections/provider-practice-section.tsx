@@ -8,7 +8,7 @@ const mechanisms = [
   {
     title: "Session recording review",
     description:
-      "The strongest predictor of superior outcomes (Chow et al., 2015). Not watching for mistakes \u2014 watching for patterns. 90% of clients find it useful (Shepherd et al., 2009). Opt-in encrypted recording, private to you, in your dashboard.",
+      "The strongest predictor of superior outcomes (Chow et al., 2015). Not watching for mistakes \u2014 watching for patterns. 90% of clients find it useful (Shepherd et al., 2009). If supported, this should be opt-in, encrypted, and private to the clinician.",
   },
   {
     title: "Routine outcome monitoring",
@@ -27,8 +27,7 @@ export function ProviderPracticeSection() {
     <section className="flex flex-col items-center justify-center w-full relative">
       <SectionHeader>
         <h2 className="text-3xl md:text-4xl font-medium tracking-tighter text-center text-balance pb-1">
-          Experience doesn&apos;t predict outcomes. Practice does. We built the
-          tools.
+          Experience doesn&apos;t predict outcomes. Practice does.
         </h2>
       </SectionHeader>
 
@@ -41,7 +40,8 @@ export function ProviderPracticeSection() {
           </span>
         </p>
         <p className="text-foreground font-medium">
-          What does predict outcomes? Three things.
+          If the provider platform expands beyond referrals, these are three
+          areas worth building toward.
         </p>
       </div>
 
@@ -71,10 +71,8 @@ export function ProviderPracticeSection() {
       <div className="max-w-2xl mx-auto px-6 pb-12 text-sm text-muted-foreground/70 leading-relaxed">
         <p>
           The evidence base for deliberate practice in therapy is still
-          developing (Diamond et al., 2025). We&apos;re not claiming a silver
-          bullet. The best available science points here, and no other platform
-          makes it easy. We&apos;d rather build on promising evidence than
-          ignore it.
+          developing (Diamond et al., 2025). These are future-facing ideas, not
+          live product claims. The basic provider workflow has to exist first.
         </p>
       </div>
     </section>

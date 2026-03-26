@@ -59,7 +59,7 @@ export function ClientInsuranceSection() {
           viewport={{ once: true, amount: 0.3 }}
         >
           <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground/50">
-            This
+            What we want
           </h3>
           <div className="space-y-3">
             <p className="text-base font-semibold tracking-tight">
@@ -80,7 +80,7 @@ export function ClientInsuranceSection() {
             </div>
             <div className="pt-2">
               <div className="inline-flex items-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground">
-                Book Now
+                Example flow
               </div>
             </div>
           </div>
@@ -89,8 +89,8 @@ export function ClientInsuranceSection() {
 
       <div className="max-w-2xl mx-auto px-6 pb-12 text-sm text-muted-foreground leading-relaxed">
         <p>
-          Real-time verification through Stedi. Not a checkbox. Your actual
-          copay, confirmed before you book. No surprise bills.
+          The bar is real insurance clarity before booking, not a vague
+          directory badge. This is a product direction, not a live claim today.
         </p>
       </div>
     </section>

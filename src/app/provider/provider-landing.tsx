@@ -21,7 +21,7 @@ export default function ProviderLanding() {
       <ProviderPracticeSection />
       <ProviderTrustSection />
       <ProviderCTASection />
-      <FooterSection description="The therapist marketplace that doesn't cut your rates. AI-powered client matching, real-time insurance verification, and HIPAA telehealth." />
+      <FooterSection description="Provider early access for the platform we want to build: cleaner referrals, simpler operations, and less extraction from clinicians." />
     </div>
   )
 }

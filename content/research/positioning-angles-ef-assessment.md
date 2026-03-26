@@ -126,4 +126,4 @@ This positioning feeds directly into:
 
 ## Source Research
 - Full competitive teardown: `plans/keen-foraging-tower.md`
-- Existing master plan: `content/plan-matching-insurance-booking.md`
+- Existing master plan: `content/strategy/plan-matching-insurance-booking.md`

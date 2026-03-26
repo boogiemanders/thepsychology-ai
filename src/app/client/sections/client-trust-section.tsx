@@ -22,7 +22,7 @@ const trustPoints = [
   {
     title: "Built by a licensed psychologist",
     description:
-      "Not a VC-backed app chasing engagement metrics. A platform built by someone who\u2019s sat in both chairs.",
+      "Not a VC-backed app chasing engagement metrics. The standard should come from someone who has sat in both chairs.",
   },
 ]
 
@@ -31,8 +31,7 @@ export function ClientTrustSection() {
     <section className="flex flex-col items-center justify-center w-full relative">
       <SectionHeader>
         <h2 className="text-3xl md:text-4xl font-medium tracking-tighter text-center text-balance pb-1">
-          Every provider is licensed. Every session is private. This isn&apos;t
-          BetterHelp.
+          The bar for this platform should be high
         </h2>
       </SectionHeader>
 

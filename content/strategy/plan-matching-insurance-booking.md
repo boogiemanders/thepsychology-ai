@@ -2,7 +2,7 @@
 
 ## Context
 
-thepsychology.ai is currently an EPPP exam prep platform for psychology students. The competitive research (see `content/competitive-pain-points.md`) shows a massive gap in the client-clinician matching market:
+thepsychology.ai is currently an EPPP exam prep platform for psychology students. The competitive research (see `content/research/competitive-pain-points.md`) shows a massive gap in the client-clinician matching market:
 
 - **Directories** (Psychology Today, Mental Health Match) don't book or verify insurance
 - **Insurance platforms** (Headway, Alma, Grow, Rula) bait-and-switch on rates/referrals
@@ -412,8 +412,8 @@ Provider analytics at `src/app/provider/analytics/page.tsx`:
 
 ## Phase 7: Digital Executive Functioning Assessment (Weeks 13-20+)
 
-**Full competitive research + validation roadmap:** `content/competitive-ef-assessment-teardown.md`
-**Positioning angles:** `content/positioning-angles-ef-assessment.md`
+**Full competitive research + validation roadmap:** `content/research/competitive-ef-assessment-teardown.md`
+**Positioning angles:** `content/research/positioning-angles-ef-assessment.md`
 
 ### Why This Is Phase 7
 
@@ -484,7 +484,7 @@ Clinicians spend 5-10 hours writing an 11-page report. We generate a draft in mi
 - Within-subject crossover design: our digital battery vs. gold-standard paper batteries
 - Target: 50-100 participants per age decade
 - Publish in JINS / Clinical Neuropsychologist / JMIR
-- Full validation roadmap + FDA strategy in `content/competitive-ef-assessment-teardown.md`
+- Full validation roadmap + FDA strategy in `content/research/competitive-ef-assessment-teardown.md`
 
 ### 7E. Market Entry
 

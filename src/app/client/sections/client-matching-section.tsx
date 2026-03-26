@@ -45,18 +45,17 @@ export function ClientMatchingSection() {
     <section className="flex flex-col items-center justify-center w-full relative">
       <SectionHeader>
         <h2 className="text-3xl md:text-4xl font-medium tracking-tighter text-center text-balance pb-1">
-          We don&apos;t show you 200 profiles and wish you luck.
+          What the matching flow should do
         </h2>
       </SectionHeader>
 
       <div className="max-w-2xl mx-auto px-6 pt-8 pb-4 space-y-4 text-[0.95rem] leading-[1.9] md:text-base md:leading-relaxed text-muted-foreground">
         <p>
-          Answer a few questions about what you&apos;re dealing with, what
-          you&apos;ve tried, what matters to you. Takes 3 minutes.
+          The goal is a short intake about what you&apos;re dealing with, what
+          you&apos;ve tried, and what matters to you.
         </p>
         <p>
-          We score every provider across 7 dimensions. Not a keyword search.
-          Not a filter. A real match.
+          We score every provider across 7 dimensions. No keyword hunt.
         </p>
       </div>
 
