@@ -31,7 +31,7 @@ export function ProviderPipelineSection() {
       <div className="w-full max-w-3xl mx-auto px-6 pb-12">
         <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-0">
           {[
-            { step: "1", label: "Students study here" },
+            { step: "1", label: "Postdocs study here" },
             { step: "2", label: "Pass EPPP, get licensed" },
             { step: "3", label: "Provider platform grows next" },
           ].map((item, i) => (

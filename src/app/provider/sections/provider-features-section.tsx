@@ -5,29 +5,34 @@ import { motion } from "motion/react"
 
 const features = [
   {
-    title: "Fit-aware referrals",
+    title: "Better-fit referrals",
     description:
-      "A provider platform should send clinicians patients they can actually help, not just charge for a listing and leave everyone guessing.",
+      "The platform should send you clients you can actually help. Not charge you for a listing and leave everyone guessing.",
   },
   {
-    title: "Cleaner insurance workflows",
+    title: "Clear insurance before session one",
     description:
-      "Eligibility and coverage should be clearer before the first session, not hidden behind vague directory badges and surprise bills.",
+      "Clients should know what their plan covers before the first session. Not after a surprise bill.",
   },
   {
-    title: "Simple operations",
+    title: "Simple day-to-day tools",
     description:
-      "Telehealth, scheduling, and core workflow should feel like infrastructure, not a stack of add-on subscriptions stitched together.",
+      "Telehealth, scheduling, and the basics should work together. Not feel like five subscriptions taped together.",
   },
   {
-    title: "Flat, non-extractive pricing",
+    title: "Simple, flat pricing",
     description:
-      "If this launches, pricing should stay simple and flat. No percentage of sessions. No clawbacks. No hidden fees.",
+      "If this launches, pricing should stay simple and flat. No clawbacks. No hidden fees.",
   },
   {
     title: "Your practice. Your rates. Your rules.",
     description:
-      "The platform should support clinician autonomy. Your rates, your hours, your decisions. Infrastructure, not employer behavior.",
+      "You stay in control. Your rates, your hours, your choices. The platform helps. It does not run your practice.",
+  },
+  {
+    title: "Your reviews stay yours",
+    description:
+      "If a client leaves you a review here, you should be able to use it anywhere. Put it on your own website. Keep it if you leave. Your good name should not be trapped inside someone else\u2019s platform.",
   },
 ]
 

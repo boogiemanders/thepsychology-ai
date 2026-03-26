@@ -51,13 +51,14 @@ export function ProviderHeroSection() {
         <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium tracking-tighter text-balance">
           We&apos;re building the therapist platform we wish existed.{" "}
           <span className="text-muted-foreground">
-            No rate cuts. No clawbacks. No paying for directory ghosting.
+            No rate cuts. No surprise take-backs. No paying for a profile that
+            sends you nothing.
           </span>
         </h1>
 
         <p className="max-w-2xl text-base md:text-lg text-muted-foreground leading-relaxed">
           If this would help your practice, join early access and tell us what
-          would make the pilot genuinely worth using.
+          would make the pilot worth joining.
         </p>
 
         {isProvider ? (

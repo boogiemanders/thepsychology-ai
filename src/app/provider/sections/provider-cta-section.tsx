@@ -44,8 +44,8 @@ export function ProviderCTASection() {
           Want to help shape the provider pilot?
         </h2>
         <p className="text-muted-foreground">
-          Tell us about your practice, your biggest platform pain points, and
-          what would make a first version genuinely worth switching for.
+          Tell us about your practice, the biggest problems you have with other
+          platforms, and what would make a first version worth trying.
         </p>
         {isProvider ? (
           <Link href="/provider/onboard">

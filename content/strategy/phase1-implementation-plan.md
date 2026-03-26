@@ -6,6 +6,18 @@ thepsychology.ai is currently an EPPP exam prep platform. Phase 1 adds the found
 
 The existing codebase has marketing landing pages at `/provider` and `/client` but zero functional backend for clinical matching. Stripe subscription infra exists for students but not providers.
 
+## Phase 1 Monetization Non-Goal
+
+Do **not** implement pilot pricing in Phase 1.
+
+The proposed pilot model:
+- client pays $1 when a real first meeting happens on-platform
+- provider pays $1 on that same completed intro
+- provider pays $50 if they want to continue the relationship off-platform
+- provider gets $49 back if the next session is booked on-platform
+
+This does **not** belong in Weeks 1-4 because it depends on completed appointments, payment events, and anti-bypass logic that do not exist until the later booking phases. Phase 1 should only build the foundation needed for those later decisions: user roles, profiles, client intake, consent, and auditability.
+
 ---
 
 ## Implementation Order

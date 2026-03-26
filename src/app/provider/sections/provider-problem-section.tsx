@@ -8,10 +8,10 @@ const competitors = [
   {
     name: "Psychology Today",
     stat: "77–90%",
-    statLabel: "referral decline since 2020",
+    statLabel: "fewer referrals since 2020",
     points: [
       "Monthly inquiries dropped from 8–15 to 1–3. Still charges $29.95/month.",
-      "No scheduling. No insurance verification. No matching intelligence.",
+      "No booking. No real insurance checks. No real matching.",
     ],
     quotes: [
       {
@@ -27,11 +27,11 @@ const competitors = [
   {
     name: "Headway",
     stat: "$41",
-    statLabel: "per-session rate cut on Optum (Jan 2025)",
+    statLabel: "cut rates by $41 per session (Jan 2025)",
     points: [
-      "Rates dropped from $144.27 to $103. Multiply that by 25 clients/week.",
-      "Clawbacks of $2,400+ from sessions they billed on your behalf.",
-      "Class action lawsuit: Google Analytics tracked mental health conditions. LinkedIn Insight Tag shared therapy appointment data.",
+      "Rates dropped from $144.27 to $103. At 25 clients a week, that adds up fast.",
+      "They took back $2,400+ from sessions they billed for you.",
+      "They were sued for sharing therapy search and booking data.",
     ],
     quotes: [
       {
@@ -43,10 +43,10 @@ const competitors = [
   {
     name: "Alma",
     stat: "30%",
-    statLabel: "rate cuts + $125/month membership",
+    statLabel: "rate cuts + $125/month fee",
     points: [
       "BBB rating: 2.6 out of 5. 67% one-star reviews.",
-      "AI note assistant fabricated child abuse history, substance abuse, and suicidal ideation in clinical records. Alma called it a \u20181% error rate.\u2019",
+      "Its AI notes added abuse history, substance use, and suicidal thoughts that were never said. Alma called it a \u20181% error rate.\u2019",
     ],
     quotes: [
       {

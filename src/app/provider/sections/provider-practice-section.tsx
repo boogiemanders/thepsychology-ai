@@ -6,19 +6,19 @@ import { motion } from "motion/react"
 
 const mechanisms = [
   {
-    title: "Session recording review",
+    title: "Review your own sessions",
     description:
-      "The strongest predictor of superior outcomes (Chow et al., 2015). Not watching for mistakes \u2014 watching for patterns. 90% of clients find it useful (Shepherd et al., 2009). If supported, this should be opt-in, encrypted, and private to the clinician.",
+      "The best therapists look back at their own work. Not to hunt for mistakes. To spot patterns they missed in the room. If we build this, it should be optional, secure, and private to the clinician.",
   },
   {
-    title: "Routine outcome monitoring",
+    title: "Simple outcome check-ins",
     description:
-      "Therapists can\u2019t accurately spot deteriorating clients without data (APA 2025; Muir et al., 2019). Outcome monitoring catches at-risk cases early \u2014 effect size 0.36\u20130.53. That\u2019s a 20\u201329% advantage over flying blind (Barkham et al., 2023).",
+      "Short check-ins can show when a client is getting worse before the therapist sees it. That gives you a better chance to step in early instead of guessing.",
   },
   {
-    title: "Targeted skill practice",
+    title: "Practice one skill at a time",
     description:
-      "DP trainees showed better observer-rated skills and higher empathy at 4-month follow-up (Westra et al., 2021). One agency implementing DP + outcome monitoring reversed the stagnation pattern entirely (Goldberg et al., 2016).",
+      "Getting better is usually not about more years. It is about picking one skill, getting feedback, and practicing on purpose.",
   },
 ]
 
@@ -27,21 +27,21 @@ export function ProviderPracticeSection() {
     <section className="flex flex-col items-center justify-center w-full relative">
       <SectionHeader>
         <h2 className="text-3xl md:text-4xl font-medium tracking-tighter text-center text-balance pb-1">
-          Experience doesn&apos;t predict outcomes. Practice does.
+          More years don&apos;t guarantee better care. Practice does.
         </h2>
       </SectionHeader>
 
       <div className="max-w-2xl mx-auto px-6 pt-8 pb-4 space-y-4 text-[0.95rem] leading-[1.9] md:text-base md:leading-relaxed text-muted-foreground">
         <p>
-          Years of experience don&apos;t predict client outcomes. Not at 5
-          years. Not at 20. Most therapists plateau early or decline.{" "}
+          More years in practice do not guarantee better client results. Not at
+          5 years. Not at 20. Many therapists level off early.{" "}
           <span className="text-muted-foreground/60 text-sm">
             (Goldberg et al., 2016; Germer et al., 2022)
           </span>
         </p>
         <p className="text-foreground font-medium">
-          If the provider platform expands beyond referrals, these are three
-          areas worth building toward.
+          If this grows beyond referrals, these are three things worth building
+          next.
         </p>
       </div>
 
@@ -70,9 +70,9 @@ export function ProviderPracticeSection() {
 
       <div className="max-w-2xl mx-auto px-6 pb-12 text-sm text-muted-foreground/70 leading-relaxed">
         <p>
-          The evidence base for deliberate practice in therapy is still
-          developing (Diamond et al., 2025). These are future-facing ideas, not
-          live product claims. The basic provider workflow has to exist first.
+          The research here is promising, but still growing (Diamond et al.,
+          2025). These are later ideas, not live product claims. First we need
+          to build the basic provider tools.
         </p>
       </div>
     </section>

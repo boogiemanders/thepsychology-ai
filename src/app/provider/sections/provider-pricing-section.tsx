@@ -12,9 +12,9 @@ const tiers = [
     price: "Early",
     period: " access",
     features: [
-      "Tell us your biggest provider-platform pain points",
-      "Get updates as the pilot takes shape",
-      "Help define the first useful workflow",
+      "Tell us the biggest problems you have with provider platforms",
+      "Get updates as we build the pilot",
+      "Help us decide what the first useful version should do",
     ],
     cta: "Join Early Access",
     highlighted: false,
@@ -22,12 +22,12 @@ const tiers = [
   {
     name: "Later",
     price: "Pilot",
-    period: " cohort",
+    period: " group",
     features: [
-      "Small first cohort once the workflow is real",
-      "Structured onboarding instead of a fake instant signup",
-      "Pilot pricing only after the product earns it",
-      "Feedback loop with real clinicians",
+      "Small first group once the product is real",
+      "Guided setup instead of fake instant signup",
+      "Your first 5 matched clients are free",
+      "Built with feedback from real clinicians",
     ],
     cta: "Request Pilot Info",
     highlighted: true,
@@ -97,9 +97,8 @@ export function ProviderPricingSection() {
 
       <div className="max-w-2xl mx-auto px-6 pb-12 text-sm text-muted-foreground leading-relaxed">
         <p>
-          There is no live provider pricing yet. If this becomes a real
-          product, the pricing model should stay simple, flat, and visibly
-          anti-extractive.
+          There is no live provider pricing yet. When this becomes a real
+          product, pricing will stay simple, flat, and fair.
         </p>
       </div>
     </section>

@@ -21,7 +21,7 @@ export default function ProviderLanding() {
       <ProviderPracticeSection />
       <ProviderTrustSection />
       <ProviderCTASection />
-      <FooterSection description="Provider early access for the platform we want to build: cleaner referrals, simpler operations, and less extraction from clinicians." />
+      <FooterSection description="Provider early access for the platform we want to build: better-fit referrals, simpler tools, and less extraction from clinicians." />
     </div>
   )
 }

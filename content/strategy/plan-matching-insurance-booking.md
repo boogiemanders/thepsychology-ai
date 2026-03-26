@@ -21,7 +21,8 @@ The strategic advantage: EPPP students who study on the platform graduate, pass 
 
 - **Launch market**: California + New York, **telehealth/remote only** first (no in-person)
 - **MVP matching**: Layers 1+2 only (structured scoring). AI re-ranking (Layer 3) added later with outcome data.
-- **Revenue model**: Freemium + subscription. Free tier (5 client cap) → Pro ($99/mo, unlimited)
+- **Pilot monetization**: Test a meeting-based model first. Client pays $1 and provider pays $1 when a first meeting actually happens on-platform. If the provider wants to continue off-platform after that intro, the provider pays a $50 release fee. If the next session is booked on-platform, credit $49 back to the provider.
+- **Long-term pricing**: Keep open until pilot data exists. Could become flat subscription, hybrid subscription + meeting fees, or stay mostly meeting-based if that proves cleaner.
 - **Video**: Include Daily.co telehealth integration in MVP
 
 ---
@@ -227,11 +228,32 @@ Vercel cron job (same pattern as existing `src/app/api/cron/`) sends 24h and 1h 
 
 ## Phase 5: Revenue Model + EPPP Pipeline (Weeks 9-12)
 
-### Provider Subscription Model
-- **Free**: Profile listing, up to 5 platform clients
-- **Pro ($99/month)**: Unlimited clients, priority matching, calendar sync, insurance verification, analytics
+### Pilot Match Fee Model
 
-Reuses existing Stripe infrastructure. New Price IDs in `PRICE_TO_TIER` map.
+- **Only charge on a real intro**: Client pays $1 and provider pays $1 only when the first appointment is completed through the platform.
+- **Off-platform continuation fee**: If the provider wants to take the relationship off-platform after that first intro, the provider pays a $50 release fee.
+- **Give most of it back for staying on-platform**: If the second appointment is booked on-platform, credit $49 back to the provider. Net effect: leaving costs $50, staying mostly costs $1.
+- **Why this is interesting**: It avoids charging clinicians for a dead listing, keeps price tied to real meetings, and creates a clear anti-bypass rule without taking a percentage of care.
+- **Why this should stay internal for now**: The idea is strategically interesting but still unusual. Do not put it on the public pricing page until the workflow is real and the wording has been tested with clinicians.
+
+### Likely Long-Term Pricing Paths
+
+- **Option A**: Flat provider subscription once the product proves ongoing value
+- **Option B**: Hybrid model with low recurring fee + meeting-based fees
+- **Option C**: Keep the meeting-based model if clinicians clearly prefer paying only when introductions happen
+
+Reuses existing Stripe infrastructure, but this model also needs a fee ledger and credit logic rather than a simple subscription switch.
+
+**New tables:**
+- `platform_fee_events` — every $1 intro fee, $50 release fee, and $49 provider credit
+- `provider_fee_balances` — running provider credit balance and payout adjustments
+- `relationship_release_events` — marks when a provider chooses to continue a relationship off-platform after an on-platform intro
+
+**Files:**
+- `src/app/api/billing/intro-fee/route.ts`
+- `src/app/api/billing/release-fee/route.ts`
+- `src/app/api/billing/provider-credit/route.ts`
+- `src/lib/billing/platform-fees.ts`
 
 ### EPPP Pipeline Feature
 When a student passes the EPPP (tracked in `eppp_exam_results`), show a prompt:
