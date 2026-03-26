@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="popup.css">
+  <title>ZocDoc → SimplePractice</title>
+</head>
+<body>
+  <div class="popup">
+    <h1 class="title">ZocDoc → SP</h1>
+
+    <!-- Empty state -->
+    <div id="empty-state" class="empty-state">
+      <p>No client captured yet.</p>
+      <p class="hint">Go to ZocDoc and click "Capture Client"</p>
+    </div>
+
+    <!-- Client info -->
+    <div id="client-info" class="client-info" style="display: none;">
+      <div class="client-name" id="client-name"></div>
+      <div class="client-meta" id="client-meta"></div>
+
+      <div class="checklist">
+        <div class="check-item" id="check-client">
+          <span class="check-icon">○</span>
+          <span>Client Created</span>
+        </div>
+        <div class="check-item" id="check-appointment">
+          <span class="check-icon">○</span>
+          <span>Appointment Set</span>
+        </div>
+        <div class="check-item" id="check-insurance">
+          <span class="check-icon">○</span>
+          <span>Insurance Added</span>
+        </div>
+        <div class="check-item" id="check-vob">
+          <span class="check-icon">○</span>
+          <span>VOB Email Sent</span>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button id="btn-vob" class="btn btn-primary">Send VOB Email</button>
+        <button id="btn-clear" class="btn btn-secondary">Clear</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

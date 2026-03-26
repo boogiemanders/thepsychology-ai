@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "ZocDoc to SimplePractice",
+  "version": "1.0.0",
+  "description": "Transfer client intake data from ZocDoc to SimplePractice and send VOB emails",
+  "permissions": ["storage", "activeTab", "alarms"],
+  "host_permissions": [
+    "https://*.zocdoc.com/*",
+    "https://*.simplepractice.com/*"
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "assets/icons/icon16.png",
+      "48": "assets/icons/icon48.png",
+      "128": "assets/icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background/service-worker.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.zocdoc.com/*"],
+      "js": ["content/zocdoc.js"],
+      "css": ["content/content.css"]
+    },
+    {
+      "matches": ["https://*.simplepractice.com/*"],
+      "js": ["content/simplepractice.js"],
+      "css": ["content/content.css"]
+    }
+  ],
+  "icons": {
+    "16": "assets/icons/icon16.png",
+    "48": "assets/icons/icon48.png",
+    "128": "assets/icons/icon128.png"
+  }
+}
