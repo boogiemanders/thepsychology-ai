@@ -3,10 +3,12 @@ import Link from "next/link"
 import { siteConfig } from "@/lib/config"
 
 export const metadata: Metadata = {
-  title: "EPPP Passing Score",
-  description: "How EPPP scoring works and what passing score you may need, by jurisdiction.",
-  alternates: {
-    canonical: "/eppp-passing-score",
+  title: "EPPP Passing Score: What Score Do You Need? | thePsychology.ai",
+  description: "How EPPP scoring works, what passing score you need by state, and how scaled scores are calculated.",
+  alternates: { canonical: "/eppp-passing-score" },
+  openGraph: {
+    title: "EPPP Passing Score: What Score Do You Need? | thePsychology.ai",
+    description: "How EPPP scoring works, what passing score you need by state, and how scaled scores are calculated.",
   },
 }
 

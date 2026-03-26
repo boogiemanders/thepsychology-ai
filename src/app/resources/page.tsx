@@ -3,10 +3,12 @@ import Link from "next/link"
 import { getAllTopicContentEntries } from "@/lib/seo/topic-content.server"
 
 export const metadata: Metadata = {
-  title: "Resources",
+  title: "Free EPPP Study Guides & Resources | thePsychology.ai",
   description: "Free EPPP study guides organized by exam domain, practice questions with explanations, and sample exams. Built by psychologists who passed.",
-  alternates: {
-    canonical: "/resources",
+  alternates: { canonical: "/resources" },
+  openGraph: {
+    title: "Free EPPP Study Guides & Resources | thePsychology.ai",
+    description: "Free EPPP study guides organized by exam domain, practice questions with explanations, and sample exams. Built by psychologists who passed.",
   },
 }
 

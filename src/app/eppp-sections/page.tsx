@@ -4,10 +4,12 @@ import { siteConfig } from "@/lib/config"
 import { getAllTopicContentEntries } from "@/lib/seo/topic-content.server"
 
 export const metadata: Metadata = {
-  title: "EPPP Sections (Domains)",
-  description: "An overview of the EPPP content domains and study guide topics for each section.",
-  alternates: {
-    canonical: "/eppp-sections",
+  title: "EPPP Sections & Domains: Complete Breakdown | thePsychology.ai",
+  description: "All 8 EPPP content domains explained with study guides for each section. Domain weights, key topics, and free resources.",
+  alternates: { canonical: "/eppp-sections" },
+  openGraph: {
+    title: "EPPP Sections & Domains: Complete Breakdown | thePsychology.ai",
+    description: "All 8 EPPP content domains explained with study guides for each section. Domain weights, key topics, and free resources.",
   },
 }
 

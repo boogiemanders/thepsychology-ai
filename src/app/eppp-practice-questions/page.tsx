@@ -2,10 +2,12 @@ import type { Metadata } from "next"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "EPPP Practice Questions",
-  description: "EPPP-style practice questions and explanations across domains, with targeted study by topic.",
-  alternates: {
-    canonical: "/eppp-practice-questions",
+  title: "EPPP Practice Questions: Free Samples & Full Exams | thePsychology.ai",
+  description: "Free EPPP practice questions with detailed explanations across all 8 domains. Try sample questions and full-length practice exams.",
+  alternates: { canonical: "/eppp-practice-questions" },
+  openGraph: {
+    title: "EPPP Practice Questions: Free Samples & Full Exams | thePsychology.ai",
+    description: "Free EPPP practice questions with detailed explanations across all 8 domains. Try sample questions and full-length practice exams.",
   },
 }
 

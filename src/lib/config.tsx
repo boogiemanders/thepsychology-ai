@@ -33,7 +33,7 @@ export const siteConfig = {
   cta: "Get Started",
   url:
     process.env.NEXT_PUBLIC_APP_URL ||
-    (process.env.NODE_ENV === "production" ? "https://thepsychology.ai" : "http://localhost:3000"),
+    (process.env.NODE_ENV === "production" ? "https://www.thepsychology.ai" : "http://localhost:3000"),
   keywords: [
     "EPPP",
     "EPPP exam prep",

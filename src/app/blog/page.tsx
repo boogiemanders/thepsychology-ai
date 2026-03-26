@@ -5,8 +5,10 @@ import { getAllBlogPosts } from "@/lib/seo/blog-content.server"
 export const metadata: Metadata = {
   title: "Blog — EPPP Prep Guides & Study Tips",
   description: "EPPP study guides, exam tips, and prep program comparisons from Dr. Anders Chan and the thePsychology.ai team.",
-  alternates: {
-    canonical: "/blog",
+  alternates: { canonical: "/blog" },
+  openGraph: {
+    title: "Blog — EPPP Prep Guides & Study Tips | thePsychology.ai",
+    description: "EPPP study guides, exam tips, and prep program comparisons from Dr. Anders Chan and the thePsychology.ai team.",
   },
 }
 

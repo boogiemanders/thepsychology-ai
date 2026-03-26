@@ -105,7 +105,9 @@ export async function GET(request: NextRequest) {
 
       const tiers = tierCounts || []
       const proCount = tiers.filter(u => u.subscription_tier === 'pro').length
-      const paidCount = proCount
+      // The app currently has one paid tier in active use.
+      const proCoachingCount = 0
+      const paidCount = proCount + proCoachingCount
 
       const { count: newPaidMonth } = await supabase
         .from('users')
@@ -178,12 +180,13 @@ export async function GET(request: NextRequest) {
       .select('*', { count: 'exact', head: true })
       .gte('last_activity_at', yesterdayISO)
 
-    const { data: tierCounts } = await supabase
+      const { data: tierCounts } = await supabase
       .from('users')
       .select('subscription_tier')
 
     const tiers = tierCounts || []
     const proCount = tiers.filter(u => u.subscription_tier === 'pro').length
+    const proCoachingCount = 0
     const estimatedMRR = proCount * 20
 
     const trafficLines = ga4Stats
