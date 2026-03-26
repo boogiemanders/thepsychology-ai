@@ -54,19 +54,20 @@ export default async function BlogPostPage({ params }: PageProps) {
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "BlogPosting",
+    "@type": "Article",
     headline: entry.title,
     description,
     author: {
       "@type": "Person",
       name: entry.author,
+      url: "https://www.thepsychology.ai/about/dr-anders-chan",
     },
     publisher: {
       "@type": "Organization",
       name: "thePsychology.ai",
-      url: "https://thepsychology.ai",
+      url: "https://www.thepsychology.ai",
     },
-    url: `https://thepsychology.ai/blog/${slug}`,
+    url: `https://www.thepsychology.ai/blog/${slug}`,
     ...(entry.publishedAt && { datePublished: entry.publishedAt }),
     ...(entry.updatedAt && { dateModified: entry.updatedAt }),
     ...(entry.tags.length > 0 && { keywords: entry.tags.join(", ") }),
