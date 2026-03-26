@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { CHANGELOG_ENTRIES, type ChangelogEntry } from '@/lib/changelog'
+import { filterAndSanitizeChangelogEntries } from '@/lib/changelog-display'
 
 type ApiChangelogEntry = {
   id: string
@@ -53,6 +54,26 @@ const EXCLUDED_CHANGELOG_KEYWORDS = [
   'testimonial',
 ]
 
+// Hide brand/vendor names that should not appear in the public-facing changelog.
+// Use regex here so exact terms like `GA4` and standalone `GPT` are filtered
+// without accidentally matching folder names such as `examsGPT`.
+const EXCLUDED_CHANGELOG_TEXT_PATTERNS = [
+  /\baatbs\b/i,
+  /\bpsychprep\b/i,
+  /\bprepjet\b/i,
+  /\bmometrix\b/i,
+  /\brula\b/i,
+  /\bsondermind\b/i,
+  /\blyra\b/i,
+  /\bspring health\b/i,
+  /\btwo chairs\b/i,
+  /\bmental health match\b/i,
+  /\bquartet\b/i,
+  /\btava\b/i,
+  /\bga4\b/i,
+  /\bgpt\b/i,
+]
+
 // Also exclude commits that mention lab or SENSE in the title
 const EXCLUDED_CHANGELOG_TITLE_PATTERNS = [
   /\blab\b/i,
@@ -96,9 +117,15 @@ function toApiEntriesFromFallback(entries: ChangelogEntry[]): ApiChangelogEntry[
   return entries.map((entry) => ({
     id: `${entry.date}-${entry.title}`,
     date: entry.date,
-    title: entry.title,
-    body: entry.body,
+    title: sanitizeChangelogText(entry.title),
+    body: sanitizeChangelogText(entry.body),
   }))
+}
+
+function sanitizeChangelogText(text: string): string {
+  return text
+    .replace(/examsGPT\//gi, 'exams folder')
+    .replace(/\bexamsGPT\b/gi, 'exams folder')
 }
 
 function stripClaudeAttribution(message: string): string {
@@ -122,8 +149,8 @@ function normalizeCommitMessage(message: string): { title: string; body?: string
   const trimmed = stripClaudeAttribution(message).trim()
   if (!trimmed) return { title: 'Update' }
   const [firstLine, ...rest] = trimmed.split('\n')
-  const title = (firstLine || '').trim()
-  const body = rest.join('\n').trim()
+  const title = sanitizeChangelogText((firstLine || '').trim())
+  const body = sanitizeChangelogText(rest.join('\n').trim())
   return body ? { title, body } : { title }
 }
 
@@ -133,10 +160,16 @@ function isMergeCommit(title: string): boolean {
 }
 
 function isUserRelevantEntry(entry: ApiChangelogEntry): boolean {
-  const text = `${entry.title} ${entry.body || ''}`.toLowerCase()
+  const text = `${entry.title} ${entry.body || ''}`
+  const normalizedText = text.toLowerCase()
 
   // Check keyword exclusions
-  if (EXCLUDED_CHANGELOG_KEYWORDS.some(keyword => text.includes(keyword))) {
+  if (EXCLUDED_CHANGELOG_KEYWORDS.some(keyword => normalizedText.includes(keyword))) {
+    return false
+  }
+
+  // Check brand/vendor exclusions
+  if (EXCLUDED_CHANGELOG_TEXT_PATTERNS.some((pattern) => pattern.test(text))) {
     return false
   }
 
@@ -174,13 +207,13 @@ export async function GET(request: NextRequest) {
     if (!response.ok) {
       const errorText = await response.text().catch(() => '')
       const payload: ApiChangelogResponse = {
-        entries: toApiEntriesFromFallback(CHANGELOG_ENTRIES).filter(isUserRelevantEntry),
+        entries: filterAndSanitizeChangelogEntries(toApiEntriesFromFallback(CHANGELOG_ENTRIES)),
         source: 'fallback',
         generatedAt: new Date().toISOString(),
         error: errorText || `GitHub API error (${response.status})`,
       }
       return NextResponse.json(payload, {
-        headers: { 'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600' },
+        headers: { 'Cache-Control': 'no-store' },
       })
     }
 
@@ -209,17 +242,17 @@ export async function GET(request: NextRequest) {
     }
 
     return NextResponse.json(payload, {
-      headers: { 'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600' },
+      headers: { 'Cache-Control': 'no-store' },
     })
   } catch (err) {
     const payload: ApiChangelogResponse = {
-      entries: toApiEntriesFromFallback(CHANGELOG_ENTRIES).filter(isUserRelevantEntry),
+      entries: filterAndSanitizeChangelogEntries(toApiEntriesFromFallback(CHANGELOG_ENTRIES)),
       source: 'fallback',
       generatedAt: new Date().toISOString(),
       error: err instanceof Error ? err.message : 'Failed to load changelog',
     }
     return NextResponse.json(payload, {
-      headers: { 'Cache-Control': 'public, s-maxage=60, stale-while-revalidate=300' },
+      headers: { 'Cache-Control': 'no-store' },
     })
   }
 }

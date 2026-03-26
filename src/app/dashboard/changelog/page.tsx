@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { ScrollArea } from '@/components/ui/scroll-area'
 import { Markdown } from '@/components/ui/markdown'
+import { filterAndSanitizeChangelogEntries } from '@/lib/changelog-display'
 import type { Components } from 'react-markdown'
 
 function formatDate(isoDate: string): string {
@@ -65,7 +66,7 @@ export default function DashboardChangelogPage() {
       setIsLoading(true)
       setError(null)
       try {
-        const response = await fetch('/api/changelog?days=31&limit=100')
+        const response = await fetch('/api/changelog?days=31&limit=100', { cache: 'no-store' })
         const data = (await response.json().catch(() => null)) as ApiChangelogResponse | null
         if (cancelled) return
         if (!response.ok || !data || !Array.isArray(data.entries)) {
@@ -91,7 +92,7 @@ export default function DashboardChangelogPage() {
   }, [user])
 
   const displayEntries = useMemo(() => {
-    return entries
+    return filterAndSanitizeChangelogEntries(entries)
       .filter((entry) => entry && typeof entry.title === 'string')
       .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
   }, [entries])

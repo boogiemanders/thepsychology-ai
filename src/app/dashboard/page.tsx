@@ -34,6 +34,7 @@ import { getPricingInfo } from '@/lib/pricing-tiers'
 import { Check as CheckIcon } from 'lucide-react'
 import { FeedbackInputBox } from '@/components/ui/feedback-input-box'
 import { CHANGELOG_ENTRIES } from '@/lib/changelog'
+import { filterAndSanitizeChangelogEntries } from '@/lib/changelog-display'
 import { StudyProgressChart } from './components/study-progress-chart'
 import { ConsentModal, useConsentModal } from '@/components/consent-modal'
 import { UpgradeBanner } from '@/components/upgrade-banner'
@@ -153,7 +154,7 @@ export default function DashboardPage() {
 
     const run = async () => {
       try {
-        const response = await fetch('/api/changelog?days=31&limit=50')
+        const response = await fetch('/api/changelog?days=31&limit=50', { cache: 'no-store' })
         const data = (await response.json().catch(() => null)) as ApiChangelogResponse | null
         if (cancelled) return
         if (!response.ok || !data || !Array.isArray(data.entries)) {
@@ -178,15 +179,15 @@ export default function DashboardPage() {
 
   const effectiveChangelogEntries = useMemo(() => {
     if (Array.isArray(changelogEntries) && changelogEntries.length > 0) {
-      return changelogEntries
+      return filterAndSanitizeChangelogEntries(changelogEntries)
     }
-    return CHANGELOG_ENTRIES.map((entry) => ({
+    return filterAndSanitizeChangelogEntries(CHANGELOG_ENTRIES.map((entry) => ({
       id: `${entry.date}-${entry.title}`,
       date: entry.date,
       title: entry.title,
       body: entry.body,
       author: null,
-    }))
+    })))
   }, [changelogEntries])
 
   const formatChangelogDate = (isoDate: string): string => {
