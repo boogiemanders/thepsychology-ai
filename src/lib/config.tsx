@@ -85,7 +85,7 @@ export const siteConfig = {
     badge: "From 19% to 588 in 30 days",
     title: "Actual EPPP Prep",
     description:
-      "Most programs give you 95% on practice, then you bomb the real thing. We build questions the way the EPPP actually words them, so your practice score means something.",
+      "Most programs give you 95% on practice, but then you bomb the real thing. We build questions the way the EPPP actually words them, so your practice score means something.",
     cta: {
       primary: { text: "Start Free", href: "/#get-started" },
       secondary: { text: "Login", href: "/login" },
@@ -107,21 +107,21 @@ export const siteConfig = {
   },
   bentoSection: {
     title: "Everything you need. Nothing you don’t.",
-    subtitle: "You're carrying a full caseload. 3-hour study blocks aren't realistic. Short sessions, real results.",
+    subtitle: "You're carrying a full caseload, so 3-hour study blocks aren't realistic. Instead, short sessions, real results.",
     description: "80+ focused lessons. Adaptive quizzes after each one. Full-length practice exams that simulate the real thing. And a recovery system for when the anxiety hits.",
     items: [
       {
         id: 1,
         content: <FirstBentoAnimation />,
         title: "Skip the fluff",
-        description: "Most EPPP materials are ‘overly detailed’ because they’re selling pages, not results. We cut to what’s actually on the exam.",
+        description: "Most EPPP materials are ‘overly detailed’ because they’re selling pages, not results. Instead, we cut to what’s actually on the exam.",
       },
       {
         id: 2,
         content: <ThirdBentoAnimation />,
         title: "Remember it on test day",
         description:
-          "Active recall after every lesson. The testing effect is the single most replicated finding in learning science. We built around it.",
+          "Active recall after every lesson. In fact, the testing effect is the single most proven finding in learning science, so we built around it.",
       },
       {
         id: 3,
@@ -134,13 +134,13 @@ export const siteConfig = {
         id: 4,
         content: <SecondBentoAnimation />,
         title: "15 minutes that move the needle",
-        description: "Phone, laptop, lunch break. Short sessions that compound. No 3-hour reading marathons that leave you retaining 15%.",
+        description: "Phone, laptop, lunch break. Short sessions that compound over time. Meanwhile, no 3-hour reading marathons that leave you retaining 15%.",
       },
     ],
   },
   featureSection: {
     title: "Everything I Wish I Had When I Was Studying",
-    description: "Built by someone who was broke, burnt out, and sick of paying $849 for programs that didn't work.",
+    description: "Built by someone who was broke, burnt out, and ultimately sick of paying $849 for programs that didn't work.",
     items: [
       {
         id: 1,
@@ -306,7 +306,7 @@ export const siteConfig = {
         id: 2,
         question: "How is this different from AATBS and other EPPP prep programs?",
         answer:
-          "AATBS charges $849 to $1,799 and gives you dense textbook-style content that many students describe as 'cumbersome, intimidating, and overly detailed.' Their materials are not updated frequently. We focus on adaptive practice testing, the study method research shows actually works, at a fraction of the price. Our questions mirror real exam wording: application-based, not straight definitions.",
+          "AATBS charges $849 to $1,799 and gives you dense textbook-style content that many students describe as 'bulky, overwhelming, and overly detailed.' Their materials are not updated frequently. In contrast, we focus on smart practice testing, the study method research shows actually works, at a fraction of the price. Our questions mirror real exam wording: application-based, not straight definitions.",
       },
       {
         id: 14,
