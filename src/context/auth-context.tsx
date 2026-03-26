@@ -22,6 +22,8 @@ interface UserProfile {
   stripe_customer_id?: string
   trial_ends_at?: string
   referral_code?: string
+  user_role: 'student' | 'client' | 'provider' | 'admin'
+  secondary_roles: string[]
 }
 
 interface ConsentPreferences {
@@ -41,6 +43,9 @@ interface AuthContextType {
   error: string | null
   showSessionWarning: boolean
   sessionExpiresIn: number // seconds until session expires
+  isProvider: boolean
+  isClient: boolean
+  isAdmin: boolean
   signOut: () => Promise<void>
   refreshProfile: () => Promise<void>
   refreshConsent: () => Promise<void>
@@ -262,6 +267,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
                     subscription_tier: 'pro',
                     created_at: new Date().toISOString(),
                     subscription_started_at: new Date().toISOString(),
+                    user_role: 'student',
+                    secondary_roles: [],
                   })
                 } else {
                   console.error('Failed to create profile for orphaned user')
@@ -272,6 +279,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
                     subscription_tier: 'pro',
                     created_at: new Date().toISOString(),
                     subscription_started_at: new Date().toISOString(),
+                    user_role: 'student',
+                    secondary_roles: [],
                   })
                 }
               } catch (createErr) {
@@ -283,6 +292,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
                   subscription_tier: 'pro',
                   created_at: new Date().toISOString(),
                   subscription_started_at: new Date().toISOString(),
+                  user_role: 'student',
+                  secondary_roles: [],
                 })
               }
             } else if (fetchError) {
@@ -333,6 +344,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
                 subscription_tier: 'pro',
                 created_at: new Date().toISOString(),
                 subscription_started_at: new Date().toISOString(),
+                user_role: 'student' as const,
+                secondary_roles: [],
               }
             }
             return prev
@@ -467,6 +480,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         error,
         showSessionWarning,
         sessionExpiresIn,
+        isProvider: userProfile?.user_role === 'provider' || (userProfile?.secondary_roles ?? []).includes('provider'),
+        isClient: userProfile?.user_role === 'client' || (userProfile?.secondary_roles ?? []).includes('client'),
+        isAdmin: userProfile?.user_role === 'admin',
         signOut,
         refreshProfile,
         refreshConsent,

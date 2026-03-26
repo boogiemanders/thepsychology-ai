@@ -68,8 +68,20 @@ async function handleHomepage(request: NextRequest): Promise<NextResponse> {
   return response
 }
 
-export async function middleware(request: NextRequest) {
+// Protected routes that require authentication
+const PROTECTED_PREFIXES = [
+  '/provider/onboard',
+  '/provider/dashboard',
+  '/find-therapist/intake',
+  '/find-therapist/book',
+]
+
+export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl
+
+  // Note: Auth guard for clinical routes is handled client-side (onboard-client.tsx,
+  // intake-client.tsx, dashboard-client.tsx) since Supabase JS stores sessions in
+  // localStorage, not cookies. The proxy cannot see the auth state.
 
   // Homepage personalization
   if (pathname === '/') {
@@ -96,5 +108,8 @@ export async function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/', '/SENSE/:path*'],
+  matcher: [
+    '/',
+    '/SENSE/:path*',
+  ],
 }

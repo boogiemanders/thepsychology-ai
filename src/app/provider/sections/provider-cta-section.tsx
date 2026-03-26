@@ -1,9 +1,42 @@
 "use client"
 
+import { useState } from "react"
+import { useRouter } from "next/navigation"
 import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button"
+import { useAuth } from "@/context/auth-context"
+import { supabase } from "@/lib/supabase"
 import Link from "next/link"
 
 export function ProviderCTASection() {
+  const { user, isProvider } = useAuth()
+  const router = useRouter()
+  const [joining, setJoining] = useState(false)
+
+  const handleJoin = async () => {
+    if (!user) {
+      router.push("/login?next=/provider")
+      return
+    }
+    if (isProvider) {
+      router.push("/provider/onboard")
+      return
+    }
+    setJoining(true)
+    try {
+      const { data: session } = await supabase.auth.getSession()
+      const res = await fetch("/api/provider/join", {
+        method: "POST",
+        headers: { Authorization: `Bearer ${session.session?.access_token}` },
+      })
+      if (res.ok) {
+        await new Promise((r) => setTimeout(r, 500))
+        window.location.href = "/provider/onboard"
+      }
+    } finally {
+      setJoining(false)
+    }
+  }
+
   return (
     <section className="flex flex-col items-center justify-center w-full py-16 md:py-24 px-6">
       <div className="max-w-xl mx-auto text-center space-y-6">
@@ -14,13 +47,23 @@ export function ProviderCTASection() {
           Tell us about your practice, your biggest platform pain points, and
           what would make a first version genuinely worth switching for.
         </p>
-        <Link href="/contact">
-          <InteractiveHoverButton
-            text="Join Early Access"
-            hoverText="Contact us"
-            inverted
-          />
-        </Link>
+        {isProvider ? (
+          <Link href="/provider/onboard">
+            <InteractiveHoverButton
+              text="Continue Onboarding"
+              hoverText="Go to profile"
+              inverted
+            />
+          </Link>
+        ) : (
+          <div onClick={handleJoin} className={joining ? "pointer-events-none opacity-60" : "cursor-pointer"}>
+            <InteractiveHoverButton
+              text={joining ? "Joining..." : "Join Early Access"}
+              hoverText={user ? "Start onboarding" : "Sign in first"}
+              inverted
+            />
+          </div>
+        )}
       </div>
     </section>
   )
