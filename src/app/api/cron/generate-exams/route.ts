@@ -101,7 +101,7 @@ export async function GET(request: NextRequest) {
 
     // Step 3: Clean up expired exams
     console.log('[Cron] Starting cleanup of expired exams...')
-    const cleanupCount = await cleanupExpiredExams()
+    const cleanupCount = await cleanupExpiredExams(supabase)
 
     console.log('[Cron] Scheduled job completed successfully')
 
@@ -162,7 +162,9 @@ async function triggerPreGeneration(userId: string, examType: 'diagnostic' | 'pr
 /**
  * Clean up expired and used exams
  */
-async function cleanupExpiredExams(): Promise<number> {
+async function cleanupExpiredExams(
+  supabase: NonNullable<ReturnType<typeof getSupabaseClient>>
+): Promise<number> {
   try {
     const oneDayAgo = new Date()
     oneDayAgo.setDate(oneDayAgo.getDate() - 1)
@@ -172,6 +174,7 @@ async function cleanupExpiredExams(): Promise<number> {
     const { data: usedDeleted, error: usedError } = await supabase
       .from('pre_generated_exams')
       .delete()
+      .select('id')
       .eq('used', true)
       .lt('created_at', oneDayAgo.toISOString())
 
@@ -179,6 +182,7 @@ async function cleanupExpiredExams(): Promise<number> {
     const { data: expiredDeleted, error: expiredError } = await supabase
       .from('pre_generated_exams')
       .delete()
+      .select('id')
       .lt('expires_at', now.toISOString())
 
     if (usedError) {

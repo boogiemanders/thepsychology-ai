@@ -11,7 +11,14 @@ import { Separator } from '@/components/ui/separator'
 import { Checkbox } from '@/components/ui/checkbox'
 import { motion } from 'motion/react'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
-import { saveQuizResults, getQuizResults, WrongAnswer, getAllQuizResults } from '@/lib/quiz-results-storage'
+import {
+  saveQuizResults,
+  getQuizResults,
+  getAllQuizResults,
+  type CorrectAnswer,
+  type QuizResults,
+  type WrongAnswer,
+} from '@/lib/quiz-results-storage'
 import { PulseSpinner } from '@/components/PulseSpinner'
 import { Confetti, type ConfettiRef } from '@/components/ui/confetti'
 import { useAuth } from '@/context/auth-context'
@@ -504,7 +511,7 @@ export function QuizzerContent() {
       // Calculate score from scratch across ALL questions
       let computedScore = 0
       const wrongAnswers: WrongAnswer[] = []
-      const correctAnswers: { questionId?: number; questionKey: string; question: string; correctAnswer: string; options?: string[]; explanation?: string; isScored: boolean; relatedSections: string[]; wasPreviouslyWrong?: boolean; timestamp: number }[] = []
+      const correctAnswers: CorrectAnswer[] = []
 
       questions.forEach((q, idx) => {
         const selected = state.selectedAnswers[idx] ?? ''
@@ -597,7 +604,7 @@ export function QuizzerContent() {
       })
       const recentSections = Array.from(recentSectionsSet)
 
-      const quizResults = {
+      const quizResults: QuizResults = {
         topic: decodedTopic,
         timestamp: Date.now(),
         score: finalScore,
@@ -1713,27 +1720,37 @@ export function QuizzerContent() {
                   </div>
 
                   {/* Navigation Buttons on Right */}
-                  <div className="flex items-center gap-3">
-                    <Button
-                      onClick={handlePrevious}
-                      disabled={quizState.question === 0}
-                      className="min-w-[120px] rounded-none"
-                      variant="outline"
-                      style={{ fontFamily: 'Tahoma' }}
-                      title={`${modifierLabel} + P`}
-                    >
-                      Previous
-                    </Button>
+                  <div className="flex items-start gap-3">
+                    <div className="flex flex-col items-center gap-1">
+                      <Button
+                        onClick={handlePrevious}
+                        disabled={quizState.question === 0}
+                        className="min-w-[120px] rounded-none"
+                        variant="outline"
+                        style={{ fontFamily: 'Tahoma' }}
+                        title={`${modifierLabel} + P`}
+                      >
+                        Previous
+                      </Button>
+                      <span className="text-xs text-muted-foreground" style={{ fontFamily: 'Tahoma' }}>
+                        {modifierLabel} + P
+                      </span>
+                    </div>
 
-                    <Button
-                      onClick={handleNext}
-                      disabled={!quizState.selectedAnswers[quizState.question]}
-                      className="min-w-[120px] rounded-none"
-                      style={{ fontFamily: 'Tahoma' }}
-                      title={`${modifierLabel} + ${quizState.question === questions.length - 1 ? 'E' : 'N'}`}
-                    >
-                      {quizState.question === questions.length - 1 ? 'Finish Quiz' : 'Next'}
-                    </Button>
+                    <div className="flex flex-col items-center gap-1">
+                      <Button
+                        onClick={handleNext}
+                        disabled={!quizState.selectedAnswers[quizState.question]}
+                        className="min-w-[120px] rounded-none"
+                        style={{ fontFamily: 'Tahoma' }}
+                        title={`${modifierLabel} + ${quizState.question === questions.length - 1 ? 'E' : 'N'}`}
+                      >
+                        {quizState.question === questions.length - 1 ? 'Finish Quiz' : 'Next'}
+                      </Button>
+                      <span className="text-xs text-muted-foreground" style={{ fontFamily: 'Tahoma' }}>
+                        {modifierLabel} + {quizState.question === questions.length - 1 ? 'E' : 'N'}
+                      </span>
+                    </div>
                   </div>
                 </div>
               </motion.div>

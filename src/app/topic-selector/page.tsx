@@ -129,6 +129,21 @@ const TOPIC_DISPLAY_ORDER_OVERRIDES: Record<string, string[]> = {
   ],
 }
 
+type TopicProgress = {
+  id: string
+  name: string
+  progress: number
+  isCompleted: boolean
+  sortIndex: number
+}
+
+type DomainWithProgress = {
+  id: string
+  name: string
+  progress: number
+  topics: TopicProgress[]
+}
+
 const CASE_VIGNETTE_DOMAIN_IDS = new Set(['5-diagnosis', '6', '8'])
 
 function sortTopicsForDisplay<T extends { name: string; sortIndex: number }>(
@@ -210,14 +225,14 @@ function TopicSelectorContent() {
   // Default to 'pro' while loading to prevent flash of locked content
   const entitledTier = loading || !userProfile ? 'pro' : (getEntitledSubscriptionTier(userProfile) ?? 'pro')
   const isFreeTier = entitledTier === 'free'
-  const { startCheckout, loading: checkoutLoading } = useStripeCheckout()
+  const { startCheckout, checkoutLoading } = useStripeCheckout()
   const [lockedTopicName, setLockedTopicName] = useState<string | null>(null)
   const [expandedDomains, setExpandedDomains] = useState<string[]>([])
   const [currentInput, setCurrentInput] = useState<string>('')
   const [savedInterests, setSavedInterests] = useState<string[]>([])
   const [languagePreference, setLanguagePreference] = useState<string | null>(null)
   const [languageInput, setLanguageInput] = useState<string>('')
-  const [domains, setDomains] = useState<any[]>([])
+  const [domains, setDomains] = useState<DomainWithProgress[]>([])
   const [recentActivities, setRecentActivities] = useState<RecentActivity[]>([])
   const [priorityTopicIds, setPriorityTopicIds] = useState<string[]>([])
   const [recommendedDomainIds, setRecommendedDomainIds] = useState<string[]>([])

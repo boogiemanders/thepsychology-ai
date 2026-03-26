@@ -9,6 +9,7 @@ export interface ExamFileMetadata {
   generated_at: string
   question_count: number
   version: number
+  format?: string
 }
 
 export interface Question {

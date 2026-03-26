@@ -240,6 +240,12 @@ function isRecommendedInTopDomains(
 
 const READ_ALONG_SKIP_SELECTOR = Array.from(READ_ALONG_SKIP_TAGS).join(',')
 
+type ReadAlongElementProps = {
+  className?: string
+  children?: React.ReactNode
+  ['data-tt-word-index']?: unknown
+}
+
 function wrapReactNodeWords(node: React.ReactNode, wordIndexRef: { current: number }): React.ReactNode {
   if (node === null || node === undefined || typeof node === 'boolean') return node
 
@@ -287,19 +293,21 @@ function wrapReactNodeWords(node: React.ReactNode, wordIndexRef: { current: numb
   }
 
   if (isValidElement(node)) {
-    const type = node.type
+    const element = node as React.ReactElement<ReadAlongElementProps>
+    const props = (element.props ?? {}) as ReadAlongElementProps
+    const type = element.type
     if (typeof type === 'string') {
       if (READ_ALONG_SKIP_TAGS.has(type)) return node
       if (type === 'span') {
-        const className = typeof node.props?.className === 'string' ? node.props.className : ''
-        if (className.includes('tt-word') || node.props?.['data-tt-word-index'] !== undefined) {
+        const className = typeof props.className === 'string' ? props.className : ''
+        if (className.includes('tt-word') || props['data-tt-word-index'] !== undefined) {
           return node
         }
       }
     }
 
-    const wrappedChildren = wrapReactNodeWords(node.props?.children, wordIndexRef)
-    return cloneElement(node, node.props, wrappedChildren)
+    const wrappedChildren = wrapReactNodeWords(props.children, wordIndexRef)
+    return cloneElement(element, props, wrappedChildren)
   }
 
   return node
@@ -381,7 +389,10 @@ function buildSequentialReadAlongMap(spans: HTMLSpanElement[]): Array<number | n
 function extractTextFromReactNode(node: React.ReactNode): string {
   if (typeof node === 'string' || typeof node === 'number') return String(node)
   if (Array.isArray(node)) return node.map(extractTextFromReactNode).join('')
-  if (isValidElement(node)) return extractTextFromReactNode(node.props.children)
+  if (isValidElement(node)) {
+    const props = (node.props ?? {}) as { children?: React.ReactNode }
+    return extractTextFromReactNode(props.children)
+  }
   return ''
 }
 
@@ -1317,11 +1328,12 @@ export function TopicTeacherContent() {
   }
 
   const queueTranslationTask = (
-    task: (sessionId: number) => Promise<void>
+    task: (sessionId: number) => Promise<unknown>
   ) => {
     const sessionId = translationSessionRef.current
     translationPromiseRef.current = translationPromiseRef.current
       .then(() => task(sessionId))
+      .then(() => undefined)
       .catch((error) => {
         if ((error as Error).name !== 'AbortError') {
           console.error('Translation queue error:', error)
@@ -2534,7 +2546,7 @@ export function TopicTeacherContent() {
       }
 
       setMessages((prev) => {
-        const next = [...prev, { role: 'assistant', content: assistantMessage }]
+        const next = [...prev, { role: 'assistant' as const, content: assistantMessage }]
         const newIndex = next.length - 1
         captureAssistantEnglishContent(newIndex, assistantMessage)
         return next
@@ -4328,16 +4340,17 @@ export function TopicTeacherContent() {
                             )
                           },
                           img: ({ src, alt }) => {
+                            const imageSrc = typeof src === 'string' ? src : null
                             const readAlongAlt =
                               shouldWrapReadAlong && alt ? (
                                 <span className="sr-only">{wrapReadAlongChildren(alt)}</span>
                               ) : null
                             // Use InlineSvg for SVG files to enable theme-aware styling
-                            if (src && src.endsWith('.svg')) {
+                            if (imageSrc && imageSrc.endsWith('.svg')) {
                               return (
                                 <>
                                   <InlineSvg
-                                    src={src}
+                                    src={imageSrc}
                                     alt={alt || ''}
                                     className="my-6 max-w-full"
                                   />
@@ -4346,17 +4359,17 @@ export function TopicTeacherContent() {
                               )
                             }
                             // Add theory-diagram class for images that need dark mode inversion
-                            const needsDarkModeInvert = src && (
-                              src.includes('organizational-theories') ||
-                              src.includes('/images/topics/')
+                            const needsDarkModeInvert = imageSrc && (
+                              imageSrc.includes('organizational-theories') ||
+                              imageSrc.includes('/images/topics/')
                             )
                             // Topic illustration images should be smaller
-                            const isTopicIllustration = src && src.includes('/images/topics/')
+                            const isTopicIllustration = imageSrc && imageSrc.includes('/images/topics/')
                             // Regular images
                             return (
                               <>
                                 <img
-                                  src={src}
+                                  src={imageSrc || ''}
                                   alt={alt || ''}
                                   className={`my-6 ${isTopicIllustration ? 'max-w-[420px]' : 'max-w-full'} ${needsDarkModeInvert ? 'theory-diagram' : ''}`}
                                 />

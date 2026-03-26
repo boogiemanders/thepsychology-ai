@@ -51,7 +51,7 @@ export function getKNFromQuestion(questionId: number, questionText: string): str
  * Counts actual questions from the exam and calculates performance based on responses submitted
  */
 export function calculateDomainPerformance(
-  wrongAnswers: (WrongAnswer & { domain?: string; source_file?: string })[],
+  wrongAnswers: (WrongAnswer & { domain?: string; source_file?: string; is_org_psych?: boolean })[],
   allQuestions?: Array<{ domain?: string; is_org_psych?: boolean; isScored?: boolean; scored?: boolean }>
 ): DomainPerformance[] {
   const domainData: Record<number, { wrong: number; total: number; wrongKNs: Set<string>; wrongFiles: Set<string> }> = {}
@@ -420,6 +420,8 @@ export function buildPriorityRecommendations(
       domainNumber: perf.domainNumber,
       domainName: perf.domainName,
       domainWeight: perf.domainWeight / 100, // Convert back to decimal
+      totalQuestionsInDomain: perf.totalQuestionsInDomain,
+      totalWrongInDomain: perf.totalWrongInDomain,
       percentageWrong: perf.percentageWrong,
       priorityScore: perf.priorityScore,
       wrongKNs,
@@ -444,6 +446,8 @@ export function getAllDomainResults(wrongAnswers: WrongAnswer[]): PriorityDomain
       domainNumber: perf.domainNumber,
       domainName: perf.domainName,
       domainWeight: perf.domainWeight / 100, // Convert back to decimal
+      totalQuestionsInDomain: perf.totalQuestionsInDomain,
+      totalWrongInDomain: perf.totalWrongInDomain,
       percentageWrong: perf.percentageWrong,
       priorityScore: perf.priorityScore,
       wrongKNs,
@@ -502,7 +506,11 @@ export function calculateOrgPsychPerformance(
   const ORG_PSYCH_WEIGHT = 0.21 // 21% of exam
 
   const orgPsychWrong = wrongAnswers.filter((a) => a.is_org_psych === true)
-  const wrongSourceFiles = new Set(orgPsychWrong.map((a) => a.source_file).filter(Boolean))
+  const wrongSourceFiles = new Set(
+    orgPsychWrong
+      .map((a) => a.source_file)
+      .filter((sourceFile): sourceFile is string => typeof sourceFile === 'string' && sourceFile.length > 0)
+  )
 
   // Count total org psych questions from the exam
   let totalOrgPsychQuestions = 0
@@ -593,7 +601,7 @@ export function calculatePriorities(examResults: {
   totalQuestions: number
 }) {
   // Convert exam results to wrong answers format (scored questions only)
-  const wrongAnswers: Array<WrongAnswer & { is_org_psych?: boolean; source_file?: string }> = []
+  const wrongAnswers: Array<WrongAnswer & { domain?: string; is_org_psych?: boolean; source_file?: string; knId?: string }> = []
   let scoredQuestionCount = 0
   let scoredCorrectCount = 0
 
@@ -616,10 +624,23 @@ export function calculatePriorities(examResults: {
       if (!isCorrect) {
         wrongAnswers.push({
           questionId: index + 1,
+          question: typeof question.question === 'string' ? question.question : '',
+          selectedAnswer: selectedAnswer ?? 'skipped',
+          correctAnswer: typeof question.correct_answer === 'string' ? question.correct_answer : '',
+          relatedSections: Array.isArray(question.relatedSections)
+            ? question.relatedSections.filter((section): section is string => typeof section === 'string')
+            : [],
+          timestamp: Date.now(),
+          questionKey: typeof question.questionKey === 'string' ? question.questionKey : undefined,
+          options: Array.isArray(question.options)
+            ? question.options.filter((option): option is string => typeof option === 'string')
+            : undefined,
+          explanation: typeof question.explanation === 'string' ? question.explanation : undefined,
+          isScored,
+          knId: typeof question.knId === 'string' ? question.knId : undefined,
           domain: question.domain,
           is_org_psych: question.is_org_psych,
           source_file: question.source_file,
-          ...question,
         })
       }
     }

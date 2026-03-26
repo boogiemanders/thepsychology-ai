@@ -23,6 +23,8 @@ interface Question {
   correct_answer: string
   explanation?: string
   domain: string
+  isScored?: boolean
+  scored?: boolean
   is_org_psych?: boolean
   source_file?: string
 }

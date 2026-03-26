@@ -68,8 +68,8 @@ export async function POST(request: NextRequest) {
       }
     }
 
-    // Check for existing submission of the same type
-    // Referrals allow up to 4, others allow 1
+    // Check for existing submission of the same type.
+    // This route currently supports only video and testimonial rewards.
     const { data: existing } = await supabase
       .from('user_rewards')
       .select('id')
@@ -77,11 +77,11 @@ export async function POST(request: NextRequest) {
       .eq('reward_type', rewardType)
 
     const existingCount = existing?.length ?? 0
-    const maxAllowed = rewardType === 'referral' ? 4 : 1
+    const maxAllowed = 1
 
     if (existingCount >= maxAllowed) {
       return NextResponse.json(
-        { error: rewardType === 'referral' ? 'You have reached the maximum of 4 referrals.' : 'You have already submitted this type of reward.' },
+        { error: 'You have already submitted this type of reward.' },
         { status: 409 }
       )
     }

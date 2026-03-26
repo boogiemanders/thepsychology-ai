@@ -211,6 +211,7 @@ export async function cleanupExpiredExams(): Promise<number> {
     const { data: usedDeleted, error: usedError } = await supabase
       .from('pre_generated_exams')
       .delete()
+      .select('id')
       .eq('used', true)
       .lt('created_at', oneDayAgo.toISOString())
 
@@ -218,6 +219,7 @@ export async function cleanupExpiredExams(): Promise<number> {
     const { data: expiredDeleted, error: expiredError } = await supabase
       .from('pre_generated_exams')
       .delete()
+      .select('id')
       .lt('expires_at', now.toISOString())
 
     if (usedError) {

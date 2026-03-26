@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev -p 3003",
     "build": "next build",
-    "start": "next start -p 3003"
+    "start": "next start -p 3003",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
     "clsx": "^2.1.1",

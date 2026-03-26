@@ -440,6 +440,7 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
     currentContentHash: customAudioContentHash,
     enabled: needsCustomAudio && Boolean(userId),
   })
+  const customAudioProgress = customAudioStatus.progress ?? { completed: 0, total: 0 }
 
   const handleCustomAudioPurchase = useCallback(async () => {
     if (!customAudioContentHash) return
@@ -994,10 +995,14 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
       const promise = (async (): Promise<boolean> => {
         wordTimingsInFlightRef.current.add(segmentIndex)
         try {
+          const controller = wordTimingsAbortRef.current
+          if (!controller) {
+            return false
+          }
           const response = await fetch('/api/topic-teacher/word-timings', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            signal: wordTimingsAbortRef.current.signal,
+            signal: controller.signal,
             body: JSON.stringify({ audioKey, text }),
           })
 
@@ -1967,19 +1972,19 @@ export const LessonAudioControls = forwardRef<LessonAudioControlsHandle, LessonA
       {/* Custom Audio Purchase CTA - shown when user has personalized content */}
       {false && needsCustomAudio && lessonReady && !hasAudio && !audioMaintenanceMode && !customAudioStatus.loading && (
         <div className="mb-3 max-w-2xl">
-          {customAudioStatus.isGenerating && customAudioStatus.progress && (
+          {customAudioStatus.isGenerating && customAudioProgress && (
             <div className="rounded-md border border-blue-500/30 bg-blue-500/5 px-3 py-2">
               <div className="flex items-center gap-2 text-sm">
                 <div className="h-3 w-3 animate-spin rounded-full border-2 border-blue-500 border-t-transparent" />
                 <span className="text-muted-foreground">
-                  Generating custom audio... ({customAudioStatus.progress.completed}/{customAudioStatus.progress.total} chunks)
+                  Generating custom audio... ({customAudioProgress.completed}/{customAudioProgress.total} chunks)
                 </span>
               </div>
-              {customAudioStatus.progress.total > 0 && (
+              {customAudioProgress.total > 0 && (
                 <div className="mt-1.5 h-1 w-full rounded-full bg-border overflow-hidden">
                   <div
                     className="h-full rounded-full bg-blue-500 transition-all"
-                    style={{ width: `${(customAudioStatus.progress.completed / customAudioStatus.progress.total) * 100}%` }}
+                    style={{ width: `${(customAudioProgress.completed / customAudioProgress.total) * 100}%` }}
                   />
                 </div>
               )}

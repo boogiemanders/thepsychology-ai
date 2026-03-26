@@ -4,7 +4,7 @@ import { SectionHeader } from "@/components/section-header";
 import { siteConfig } from "@/lib/config";
 
 export function GrowthSection() {
-  const { title, description, items } = siteConfig.growthSection;
+  const { title, description, items } = siteConfig.bentoSection;
 
   return (
     <section

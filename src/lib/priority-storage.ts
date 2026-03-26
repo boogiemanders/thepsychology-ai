@@ -19,6 +19,8 @@ export interface PriorityDomainRecommendation {
   domainNumber: number // 1-8
   domainName: string
   domainWeight: number // e.g., 0.10 for 10%
+  totalQuestionsInDomain?: number
+  totalWrongInDomain?: number
   percentageWrong: number // Percentage of domain questions answered wrong
   priorityScore: number // percentageWrong * domainWeight
   wrongKNs: WrongKNInfo[]

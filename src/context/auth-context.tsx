@@ -222,11 +222,13 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         }
 
         // Fetch user profile on auth change (don't await since it can hang)
-        supabase
-          .from('users')
-          .select('*')
-          .eq('id', session.user.id)
-          .single()
+        void Promise.resolve(
+          supabase
+            .from('users')
+            .select('*')
+            .eq('id', session.user.id)
+            .single()
+        )
           .then(async ({ data, error: fetchError }) => {
             if (fetchError?.code === 'PGRST116' && session?.user) {
               // User exists in auth but not in users table - create profile
@@ -289,16 +291,18 @@ export function AuthProvider({ children }: { children: ReactNode }) {
               setUserProfile(data)
             }
           })
-          .catch(err => {
+          .catch((err: unknown) => {
             console.error('Profile fetch failed:', err)
           })
 
         // Fetch consent preferences
-        supabase
-          .from('user_consent_preferences')
-          .select('*')
-          .eq('user_id', session.user.id)
-          .single()
+        void Promise.resolve(
+          supabase
+            .from('user_consent_preferences')
+            .select('*')
+            .eq('user_id', session.user.id)
+            .single()
+        )
           .then(({ data, error: fetchError }) => {
             if (fetchError && fetchError.code !== 'PGRST116') {
               console.error('Error fetching consent preferences:', fetchError)
@@ -315,7 +319,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
               }
             )
           })
-          .catch(err => {
+          .catch((err: unknown) => {
             console.error('Consent fetch failed:', err)
           })
 

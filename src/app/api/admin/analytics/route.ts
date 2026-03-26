@@ -97,14 +97,17 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ error: 'Failed to fetch user data' }, { status: 500 })
     }
 
-    const excludedUserIds = new Set(
+    const excludedUserIds = new Set<string>(
       ((users || []) as UserEmailRow[])
-        .filter((user) => user.email && adminEmails.has(user.email.toLowerCase()))
+        .filter(
+          (user): user is UserEmailRow & { email: string } =>
+            typeof user.email === 'string' && adminEmails.has(user.email.toLowerCase())
+        )
         .map((user) => user.id)
     )
 
     const isIncludedUserId = (userId: string | null | undefined): userId is string =>
-      Boolean(userId) && !excludedUserIds.has(userId)
+      typeof userId === 'string' && !excludedUserIds.has(userId)
 
     const totalUsers = ((users || []) as UserEmailRow[]).filter((user) => !excludedUserIds.has(user.id)).length
 

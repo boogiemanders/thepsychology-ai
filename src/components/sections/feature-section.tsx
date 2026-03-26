@@ -22,7 +22,11 @@ export function FeatureSection() {
         <FeatureComponent
           collapseDelay={5000}
           linePosition="bottom"
-          featureItems={items}
+          featureItems={items.map((item) => ({
+            id: item.id,
+            title: item.title,
+            content: item.description,
+          }))}
           lineColor="bg-secondary"
         />
       </div>

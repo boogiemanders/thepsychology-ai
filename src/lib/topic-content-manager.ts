@@ -1,4 +1,4 @@
-import { readFileSync, readdirSync, existsSync } from 'fs'
+import { readFileSync, readdirSync, type Dirent } from 'fs'
 import path from 'path'
 import { getOpenAIApiKey } from '@/lib/openai-api-key'
 
@@ -32,6 +32,21 @@ const DOMAIN_FOLDER_MAP: Record<string, string> = {
   '8': '8 Ethics',
   '3-5-6': '2 3 5 6 I-O Psychology',
 }
+
+type TopicContentRootKey = 'default' | 'free'
+
+type TopicIndexEntry = {
+  filePath: string
+  folderName: string
+  lookupSlugs: string[]
+}
+
+const TOPIC_CONTENT_ROOTS: Record<TopicContentRootKey, string> = {
+  default: path.join(process.cwd(), 'topic-content-v4'),
+  free: path.join(process.cwd(), 'free-contentGPT'),
+}
+
+const topicIndexCache = new Map<TopicContentRootKey, TopicIndexEntry[]>()
 
 /**
  * Parse YAML frontmatter from markdown file
@@ -67,6 +82,76 @@ function getDomainFolder(domainId: string): string {
   return DOMAIN_FOLDER_MAP[domainId] || domainId
 }
 
+function getTopicIndex(rootKey: TopicContentRootKey): TopicIndexEntry[] {
+  if (process.env.NODE_ENV !== 'production') {
+    topicIndexCache.delete(rootKey)
+  }
+
+  const cached = topicIndexCache.get(rootKey)
+  if (cached) {
+    return cached
+  }
+
+  const rootDir = TOPIC_CONTENT_ROOTS[rootKey]
+  const index: TopicIndexEntry[] = []
+
+  let folderEntries: Dirent[]
+  try {
+    folderEntries = readdirSync(rootDir, { withFileTypes: true })
+  } catch {
+    topicIndexCache.set(rootKey, index)
+    return index
+  }
+
+  for (const folderEntry of folderEntries) {
+    if (!folderEntry.isDirectory()) continue
+
+    const folderName = folderEntry.name
+    const baseDir = path.join(rootDir, folderName)
+
+    let fileEntries: Dirent[]
+    try {
+      fileEntries = readdirSync(baseDir, { withFileTypes: true })
+    } catch {
+      continue
+    }
+
+    for (const fileEntry of fileEntries) {
+      if (!fileEntry.isFile() || !fileEntry.name.endsWith('.md')) continue
+
+      const baseName = fileEntry.name.slice(0, -3)
+      const filePath = path.join(baseDir, fileEntry.name)
+      const lookupSlugs = new Set<string>([slugifyTopicName(baseName)])
+
+      try {
+        const fileContent = readFileSync(filePath, 'utf-8')
+        const { metadata } = parseFrontmatter(fileContent)
+
+        if (typeof metadata.slug === 'string') {
+          lookupSlugs.add(slugifyTopicName(metadata.slug))
+        }
+        if (typeof metadata.topic_name === 'string') {
+          lookupSlugs.add(slugifyTopicName(metadata.topic_name))
+        }
+        if (typeof metadata.title === 'string') {
+          lookupSlugs.add(slugifyTopicName(metadata.title))
+        }
+      } catch {
+        // Ignore malformed files and continue indexing other entries.
+      }
+
+      index.push({
+        filePath,
+        folderName,
+        lookupSlugs: Array.from(lookupSlugs).filter(Boolean),
+      })
+    }
+  }
+
+  topicIndexCache.set(rootKey, index)
+  return index
+}
+
 /**
  * Normalize a topic name or filename to a slug used for lookups.
  * Strips leading numbers and spaces so both:
@@ -95,17 +180,17 @@ function slugifyTopicName(name: string): string {
 function resolveTopicFilePath(
   topicName: string,
   domain?: string | null,
-  rootDirName: string = 'topic-content-v4',
+  rootKey: TopicContentRootKey = 'default',
 ): string | null {
   const slug = slugifyTopicName(topicName)
-  const rootDir = path.join(process.cwd(), rootDirName)
+  const topicIndex = getTopicIndex(rootKey)
 
   // Build ordered list of folders to search: requested domain (if any) first,
   // then all other known domain folders.
   const searchFolders: string[] = []
   let domainFolder: string | null = null
 
-  if (domain) {
+  if (domain && rootKey === 'default') {
     const mapped = getDomainFolder(domain)
     if (mapped) {
       domainFolder = mapped
@@ -120,63 +205,16 @@ function resolveTopicFilePath(
   }
 
   for (const folder of searchFolders) {
-    const baseDir = path.join(rootDir, folder)
-
-    // 1) Direct slug match (for legacy kebab-case filenames)
-    const directPath = path.join(baseDir, `${slug}.md`)
-    if (existsSync(directPath)) {
-      return directPath
-    }
-
-    // 2) Scan directory and match by normalized slug of each filename
-    let entries: ReturnType<typeof readdirSync>
-    try {
-      entries = readdirSync(baseDir, { withFileTypes: true })
-    } catch {
-      continue
-    }
-
-    for (const entry of entries) {
-      if (!entry.isFile() || !entry.name.endsWith('.md')) continue
-      const baseName = entry.name.slice(0, -3) // drop ".md"
-      const candidateSlug = slugifyTopicName(baseName)
-      if (candidateSlug === slug) {
-        return path.join(baseDir, entry.name)
-      }
-
-      // 3) Match by frontmatter metadata so human-facing topic links can
-      // resolve to files whose filenames are shorthand/internal aliases.
-      const candidatePath = path.join(baseDir, entry.name)
-      try {
-        const fileContent = readFileSync(candidatePath, 'utf-8')
-        const { metadata } = parseFrontmatter(fileContent)
-
-        const metadataSlug =
-          typeof metadata.slug === 'string' ? slugifyTopicName(metadata.slug) : ''
-        if (metadataSlug === slug) {
-          return candidatePath
-        }
-
-        const metadataTopicName =
-          typeof metadata.topic_name === 'string'
-            ? slugifyTopicName(metadata.topic_name)
-            : ''
-        if (metadataTopicName === slug) {
-          return candidatePath
-        }
-
-        const metadataTitle =
-          typeof metadata.title === 'string' ? slugifyTopicName(metadata.title) : ''
-        if (metadataTitle === slug) {
-          return candidatePath
-        }
-      } catch {
-        // Ignore malformed files and continue scanning other entries.
-      }
+    const folderMatch = topicIndex.find(
+      (entry) => entry.folderName === folder && entry.lookupSlugs.includes(slug)
+    )
+    if (folderMatch) {
+      return folderMatch.filePath
     }
   }
 
-  return null
+  const fallbackMatch = topicIndex.find((entry) => entry.lookupSlugs.includes(slug))
+  return fallbackMatch?.filePath ?? null
 }
 
 /**
@@ -253,7 +291,7 @@ export function loadTopicContent(
     const { metadata, content } = parseFrontmatter(fileContent)
 
     // Remove personalization placeholder and keep as baseContent
-    const baseContent = content.replace(/\n*## {{PERSONALIZED_EXAMPLES}}.*?(?=##|$)/s, '')
+    const baseContent = content.replace(/\n*## {{PERSONALIZED_EXAMPLES}}[\s\S]*?(?=##|$)/, '')
 
     console.log(`[Topic Content Manager] ✅ Successfully loaded content for ${topicName}`)
 
@@ -342,7 +380,7 @@ export function loadFreeTopicContent(
   domain: string
 ): TopicContent | null {
   try {
-    const filePath = resolveTopicFilePath(topicName, domain, 'free-contentGPT')
+    const filePath = resolveTopicFilePath(topicName, domain, 'free')
     const domainFolder = getDomainFolder(domain)
     const slug = slugifyTopicName(topicName)
 
@@ -361,7 +399,7 @@ export function loadFreeTopicContent(
     const fileContent = readFileSync(filePath, 'utf-8')
     const { metadata, content } = parseFrontmatter(fileContent)
 
-    const baseContent = content.replace(/\n*## {{PERSONALIZED_EXAMPLES}}.*?(?=##|$)/s, '')
+    const baseContent = content.replace(/\n*## {{PERSONALIZED_EXAMPLES}}[\s\S]*?(?=##|$)/, '')
 
     console.log(`[Topic Content Manager] ✅ Successfully loaded FREE content for ${topicName}`)
 
@@ -387,7 +425,7 @@ export function loadFreeTopicContent(
  */
 function extractMarkedMetaphors(content: string): Array<{ text: string; startIndex: number; endIndex: number }> {
   const metaphors: Array<{ text: string; startIndex: number; endIndex: number }> = []
-  const regex = /\{\{M\}\}(.*?)\{\{\/M\}\}/gs
+  const regex = /\{\{M\}\}([\s\S]*?)\{\{\/M\}\}/g
 
   let match
   while ((match = regex.exec(content)) !== null) {

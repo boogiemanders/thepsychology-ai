@@ -1262,7 +1262,7 @@ export default function DashboardPage() {
                       <div key={entry.id} className="border-b border-border/50 pb-4 last:border-0 last:pb-0">
                         <div className="flex items-center justify-between mb-2">
                           <span className="font-medium text-sm">
-                            {entry.url ? (
+                            {'url' in entry && entry.url ? (
                               <a href={entry.url} target="_blank" rel="noreferrer" className="underline underline-offset-2">
                                 {entry.title}
                               </a>

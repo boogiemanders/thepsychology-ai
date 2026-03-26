@@ -1161,7 +1161,7 @@ export default function ExamGeneratorPage() {
       }
       console.timeEnd('[Exam Gen] Question shuffle')
 
-      const enrichedQuestions = questionsToUse.map((question) => {
+      const enrichedQuestions = questionsToUse.map((question: Question) => {
         const meta = deriveTopicMetaFromQuestionSource(question as any)
         const derivedDomainId = meta?.domainId ?? (question.domain ? String(question.domain) : undefined)
         const derivedSections =

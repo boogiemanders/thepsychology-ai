@@ -19,7 +19,10 @@ export function PulsatingButton({
   style,
   ...props
 }: PulsatingButtonProps) {
-  const styleVars: React.CSSProperties = { ...style }
+  const styleVars: React.CSSProperties & {
+    '--pulse-color'?: string
+    '--pulse-duration'?: string
+  } = { ...style }
   if (pulseColor) {
     styleVars['--pulse-color'] = pulseColor
   }

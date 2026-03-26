@@ -48,11 +48,13 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Failed to apply promo code' }, { status: 500 })
     }
 
-    await supabase.rpc('increment_promo_usage', {
+    const { error: usageError } = await supabase.rpc('increment_promo_usage', {
       promo_code: code.toUpperCase(),
-    }).catch(() => {
-      // Ignore errors from the RPC; usage counts can be updated manually.
     })
+    if (usageError) {
+      // Ignore errors from the RPC; usage counts can be updated manually.
+      console.warn('Failed to increment promo usage:', usageError)
+    }
 
     return NextResponse.json({
       success: true,

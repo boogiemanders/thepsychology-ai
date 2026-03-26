@@ -186,7 +186,8 @@ export default function FeedbackInboxPage() {
                         <div className="flex flex-col gap-2">
                           <Button
                             variant="outline"
-                            size="xs"
+                            size="sm"
+                            className="h-7 px-2 text-xs"
                             disabled={updatingId === item.id}
                             onClick={() => handleUpdateStatus(item.id, 'in_progress')}
                           >
@@ -194,7 +195,8 @@ export default function FeedbackInboxPage() {
                           </Button>
                           <Button
                             variant="outline"
-                            size="xs"
+                            size="sm"
+                            className="h-7 px-2 text-xs"
                             disabled={updatingId === item.id}
                             onClick={() => handleUpdateStatus(item.id, 'replied')}
                           >
@@ -233,4 +235,3 @@ export default function FeedbackInboxPage() {
     </main>
   )
 }
-

@@ -217,10 +217,15 @@ export function AnalyticsDashboard() {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">
-              {data?.learning.diagnosticCompletion.avgImprovement > 0 ? '+' : ''}
-              {data?.learning.diagnosticCompletion.avgImprovement ?? 0}%
-            </div>
+            {(() => {
+              const avgImprovement = data?.learning.diagnosticCompletion.avgImprovement ?? 0
+              return (
+                <div className="text-2xl font-bold">
+                  {avgImprovement > 0 ? '+' : ''}
+                  {avgImprovement}%
+                </div>
+              )
+            })()}
             <p className="text-xs text-muted-foreground">
               {data?.learning.diagnosticCompletion.usersWithMultipleDiagnostics ?? 0} users with 2+ diagnostics
             </p>

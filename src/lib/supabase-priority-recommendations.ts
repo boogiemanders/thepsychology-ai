@@ -2,13 +2,36 @@
 // Handles reading/writing priority recommendations from/to Supabase database
 
 import { createClient } from "@supabase/supabase-js"
-import type { PriorityRecommendation } from "./priority-storage"
+import type { PriorityDomainRecommendation, PriorityRecommendation } from "./priority-storage"
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ""
 const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ""
 
 // Create Supabase client (safe to call from client-side)
 const supabase = createClient(supabaseUrl, supabaseKey)
+
+type PriorityRecommendationRow = {
+  id: string
+  exam_type: "diagnostic" | "practice"
+  exam_mode: "study" | "test"
+  recommendation_data: {
+    topPriorities: PriorityDomainRecommendation[]
+    allResults: PriorityDomainRecommendation[]
+  }
+  created_at: string
+}
+
+function isPriorityRecommendationRow(value: unknown): value is PriorityRecommendationRow {
+  if (!value || typeof value !== "object") return false
+  const row = value as Partial<PriorityRecommendationRow>
+  return (
+    typeof row.id === "string" &&
+    (row.exam_type === "diagnostic" || row.exam_type === "practice") &&
+    (row.exam_mode === "study" || row.exam_mode === "test") &&
+    !!row.recommendation_data &&
+    typeof row.created_at === "string"
+  )
+}
 
 /**
  * Save priority recommendation to Supabase
@@ -28,20 +51,20 @@ export async function savePriorityRecommendationToSupabase(
           allResults: recommendation.allResults,
         },
       },
-    ])
+    ]).select("id, exam_type, exam_mode, recommendation_data, created_at").single()
 
     if (error) {
       console.error("Error saving priority recommendation to Supabase:", error)
       return null
     }
 
-    if (data && data.length > 0) {
-      const row = data[0]
+    if (isPriorityRecommendationRow(data)) {
+      const row = data
       return {
         id: row.id,
         userId,
-        examType: recommendation.examType,
-        examMode: recommendation.examMode,
+        examType: row.exam_type,
+        examMode: row.exam_mode,
         topPriorities: row.recommendation_data.topPriorities,
         allResults: row.recommendation_data.allResults,
         timestamp: new Date(row.created_at).getTime(),
@@ -73,9 +96,10 @@ export async function getLatestRecommendationFromSupabase(userId: string, examTy
       return null
     }
 
-    if (!data || data.length === 0) return null
+    const rows = Array.isArray(data) ? data : []
+    const row = rows.find(isPriorityRecommendationRow)
+    if (!row) return null
 
-    const row = data[0]
     return {
       id: row.id,
       userId,
@@ -107,9 +131,9 @@ export async function getRecommendationHistoryFromSupabase(userId: string): Prom
       return []
     }
 
-    if (!data) return []
+    const rows = Array.isArray(data) ? data.filter(isPriorityRecommendationRow) : []
 
-    return data.map((row) => ({
+    return rows.map((row) => ({
       id: row.id,
       userId,
       examType: row.exam_type,

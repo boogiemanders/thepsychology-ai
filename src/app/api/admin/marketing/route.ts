@@ -69,6 +69,14 @@ type MarketingUserRow = {
   created_at: string
 }
 
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return typeof value === 'object' && value !== null
+}
+
+function toNullableString(value: unknown): string | null {
+  return typeof value === 'string' ? value : null
+}
+
 async function fetchMarketingUsers(
   supabase: NonNullable<ReturnType<typeof getSupabaseClient>>,
   rangeStart: Date
@@ -91,19 +99,28 @@ async function fetchMarketingUsers(
       .order('created_at', { ascending: false })
 
     if (!error) {
-      const normalized = (data || []).map((user) => ({
-        id: user.id,
-        email: user.email ?? null,
-        full_name: user.full_name ?? null,
-        referral_source: 'referral_source' in user ? user.referral_source ?? null : null,
-        utm_source: 'utm_source' in user ? user.utm_source ?? null : null,
-        utm_medium: 'utm_medium' in user ? user.utm_medium ?? null : null,
-        utm_campaign: 'utm_campaign' in user ? user.utm_campaign ?? null : null,
-        utm_content: 'utm_content' in user ? user.utm_content ?? null : null,
-        utm_term: 'utm_term' in user ? user.utm_term ?? null : null,
-        signup_device: 'signup_device' in user ? user.signup_device ?? null : null,
-        created_at: user.created_at,
-      }))
+      const normalized = (Array.isArray(data) ? data : []).flatMap((user): MarketingUserRow[] => {
+        if (!isRecord(user)) return []
+
+        const id = typeof user.id === 'string' ? user.id : null
+        const createdAt = typeof user.created_at === 'string' ? user.created_at : null
+
+        if (!id || !createdAt) return []
+
+        return [{
+          id,
+          email: toNullableString(user.email),
+          full_name: toNullableString(user.full_name),
+          referral_source: toNullableString(user.referral_source),
+          utm_source: toNullableString(user.utm_source),
+          utm_medium: toNullableString(user.utm_medium),
+          utm_campaign: toNullableString(user.utm_campaign),
+          utm_content: toNullableString(user.utm_content),
+          utm_term: toNullableString(user.utm_term),
+          signup_device: toNullableString(user.signup_device),
+          created_at: createdAt,
+        }]
+      })
 
       return { data: normalized, error: null }
     }

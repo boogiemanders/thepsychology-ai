@@ -1,4 +1,4 @@
-import { getAllQuizResults, QuizResult } from './quiz-results-storage'
+import { getAllQuizResults, type QuizResults } from './quiz-results-storage'
 
 export interface StudyStats {
   totalQuizzes: number
@@ -83,7 +83,7 @@ export function calculateStudyStats(): StudyStats {
   }
 }
 
-function calculateStreak(results: QuizResult[]): number {
+function calculateStreak(results: QuizResults[]): number {
   if (results.length === 0) return 0
 
   // Get unique study dates (dates with at least one quiz)
@@ -126,7 +126,7 @@ function calculateStreak(results: QuizResult[]): number {
   return streak
 }
 
-function calculateDomainScores(results: QuizResult[]): { domain: string; score: number }[] {
+function calculateDomainScores(results: QuizResults[]): { domain: string; score: number }[] {
   const topicsByDomain: Record<number, string> = {
     0: 'Biological Bases',
     1: 'Cognitive-Affective',
@@ -199,7 +199,7 @@ function calculateDomainScores(results: QuizResult[]): { domain: string; score: 
   }))
 }
 
-function calculateTopicScores(results: QuizResult[]): { topic: string; score: number }[] {
+function calculateTopicScores(results: QuizResults[]): { topic: string; score: number }[] {
   const topicScores: Record<string, { total: number; count: number }> = {}
 
   results.forEach(result => {
@@ -217,7 +217,7 @@ function calculateTopicScores(results: QuizResult[]): { topic: string; score: nu
   }))
 }
 
-function getUniqueStudyDays(results: QuizResult[]): Date[] {
+function getUniqueStudyDays(results: QuizResults[]): Date[] {
   const dates = results
     .map(r => {
       const date = new Date(r.timestamp)

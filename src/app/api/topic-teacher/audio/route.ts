@@ -238,7 +238,7 @@ export async function POST(request: NextRequest) {
     const primaryKey = computeCacheKey({ model, voice, format, speed, text })
     const primaryHit = readAudioFromCache(primaryKey, format)
     if (primaryHit) {
-      return new NextResponse(primaryHit, {
+      return new NextResponse(new Uint8Array(primaryHit), {
         headers: {
           'Content-Type': contentTypeForFormat(format),
           'Cache-Control': 'no-store',
@@ -253,7 +253,7 @@ export async function POST(request: NextRequest) {
       const fallbackKey = computeCacheKey({ model: FALLBACK_TTS_MODEL, voice, format, speed, text })
       const fallbackHit = readAudioFromCache(fallbackKey, format)
       if (fallbackHit) {
-        return new NextResponse(fallbackHit, {
+        return new NextResponse(new Uint8Array(fallbackHit), {
           headers: {
             'Content-Type': contentTypeForFormat(format),
             'Cache-Control': 'no-store',
@@ -291,7 +291,7 @@ export async function POST(request: NextRequest) {
         },
       })
 
-      return new NextResponse(audioBuffer, {
+      return new NextResponse(new Uint8Array(audioBuffer), {
         headers: {
           'Content-Type': contentTypeForFormat(format),
           'Cache-Control': 'no-store',
