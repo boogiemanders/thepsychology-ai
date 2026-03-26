@@ -4,14 +4,14 @@ import ClientLanding from "./client-landing"
 export const metadata: Metadata = {
   title: "Client Matching Early Access | thePsychology.ai",
   description:
-    "We are building a better therapy-search flow. Join early access to shape matching, insurance transparency, and a less frustrating path to finding care.",
+    "We are building a better way to find therapy. Join early access for better matches, clear insurance info, and less frustration.",
   alternates: {
     canonical: "/client",
   },
   openGraph: {
     title: "Client Matching Early Access | thePsychology.ai",
     description:
-      "We are building a better therapy-search flow. Join early access to shape matching, insurance transparency, and a less frustrating path to finding care.",
+      "We are building a better way to find therapy. Join early access for better matches, clear insurance info, and less frustration.",
     url: "/client",
   },
 }

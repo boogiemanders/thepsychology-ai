@@ -9,7 +9,7 @@ const oldWay = [
   "Wait on hold for 20 minutes",
   "Ask if Dr. Smith is in-network",
   "Get transferred",
-  "\u201CThat information isn\u2019t available by phone\u201D",
+  "\"That information isn't available by phone\"",
   "Give up. Pay out of pocket. Hope for the best.",
 ]
 
@@ -89,8 +89,7 @@ export function ClientInsuranceSection() {
 
       <div className="max-w-2xl mx-auto px-6 pb-12 text-sm text-muted-foreground leading-relaxed">
         <p>
-          The bar is real insurance clarity before booking, not a vague
-          directory badge. This is a product direction, not a live claim today.
+          The goal is clear insurance info before you book.
         </p>
       </div>
     </section>

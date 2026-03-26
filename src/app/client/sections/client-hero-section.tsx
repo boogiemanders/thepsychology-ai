@@ -17,13 +17,13 @@ export function ClientHeroSection() {
         <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium tracking-tighter text-balance">
           We&apos;re building a better way to find a therapist.{" "}
           <span className="text-muted-foreground">
-            Better fit, less ghosting, fewer insurance surprises.
+            Better matches, less ghosting, fewer insurance surprises.
           </span>
         </h1>
 
         <p className="max-w-2xl text-base md:text-lg text-muted-foreground leading-relaxed">
           If therapy search has burned you before, join early access and tell
-          us what broke down.
+          us what went wrong.
         </p>
 
         <Link href="/contact">

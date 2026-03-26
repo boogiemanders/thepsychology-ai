@@ -11,8 +11,8 @@ export function ClientCTASection() {
           Want first access when matching opens?
         </h2>
         <p className="text-muted-foreground">
-          Tell us what made your last therapy search frustrating. That input
-          should shape the first real version.
+          Tell us what made your last therapy search hard. That should shape
+          the match you need.
         </p>
         <Link href="/contact">
           <InteractiveHoverButton

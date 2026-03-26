@@ -5,24 +5,24 @@ import { motion } from "motion/react"
 
 const trustPoints = [
   {
-    title: "Verified licenses, not self-reported profiles",
+    title: "Real licenses, not self-written profiles",
     description:
-      "Every provider holds an active state license. Verified by us, not claimed by them.",
+      "Every therapist has an active state license. We check it. They do not just type it into a profile.",
   },
   {
     title: "Your data stays between you and your therapist",
     description:
-      "No Google Analytics tracking your conditions. No LinkedIn sharing your appointments. No selling your mental health data. (Yes, competitors have done all of this.)",
+      "No Google Analytics tracking your conditions. No LinkedIn sharing your appointments. No selling your mental health data. Yes, competitors have done all of this.",
   },
   {
-    title: "Providers who get better over time",
+    title: "Therapists should keep getting better",
     description:
       "Most therapists plateau or decline with experience. Ours use outcome tracking and deliberate practice. Peer-reviewed science, not a marketing claim (Goldberg et al., 2016; Chow et al., 2015).",
   },
   {
     title: "Built by a licensed psychologist",
     description:
-      "Not a VC-backed app chasing engagement metrics. The standard should come from someone who has sat in both chairs.",
+      "Not a VC-backed app keeping you clicking. The standard comes from someone who has sat in both chairs.",
   },
 ]
 
@@ -31,7 +31,7 @@ export function ClientTrustSection() {
     <section className="flex flex-col items-center justify-center w-full relative">
       <SectionHeader>
         <h2 className="text-3xl md:text-4xl font-medium tracking-tighter text-center text-balance pb-1">
-          The bar for this platform should be high
+          The standard should be high
         </h2>
       </SectionHeader>
 

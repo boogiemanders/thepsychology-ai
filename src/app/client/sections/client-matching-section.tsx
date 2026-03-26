@@ -6,33 +6,33 @@ import { motion } from "motion/react"
 
 const dimensions = [
   {
-    title: "What they specialize in",
+    title: "What they help with",
     description:
-      "Your concerns matched against their actual clinical experience.",
+      "Do they really help people with what you are dealing with?",
   },
   {
     title: "How they work",
     description:
-      "CBT, EMDR, psychodynamic \u2014 matched to what you prefer or what works for your situation.",
+      "The kind of therapy they use and whether it fits what you want.",
   },
   {
-    title: "What you described",
+    title: "What you said",
     description:
-      "Your words compared against how they describe their approach.",
+      "Your own words compared with how they describe their work.",
   },
   {
     title: "Their style",
     description:
-      "Structured or exploratory? Warm or direct? Matched to you.",
+      "More structured or more open? Warm or direct? Matched to you.",
   },
   {
     title: "Cultural fit",
     description:
-      "Language, background, LGBTQ+ affirming, faith \u2014 if it matters to you, it matters to the match.",
+      "Language, background, LGBTQ+ support, faith. If it matters to you, it matters to the match.",
   },
   {
-    title: "Practical",
-    description: "Schedule overlap, telehealth, location.",
+    title: "Real-life details",
+    description: "Schedule, video visits, location.",
   },
   {
     title: "Your preferences",
@@ -45,17 +45,18 @@ export function ClientMatchingSection() {
     <section className="flex flex-col items-center justify-center w-full relative">
       <SectionHeader>
         <h2 className="text-3xl md:text-4xl font-medium tracking-tighter text-center text-balance pb-1">
-          What the matching flow should do
+          What matching should do
         </h2>
       </SectionHeader>
 
       <div className="max-w-2xl mx-auto px-6 pt-8 pb-4 space-y-4 text-[0.95rem] leading-[1.9] md:text-base md:leading-relaxed text-muted-foreground">
         <p>
-          The goal is a short intake about what you&apos;re dealing with, what
-          you&apos;ve tried, and what matters to you.
+          The goal is a short set of questions about what you&apos;re dealing
+          with, what you&apos;ve tried, and what matters to you.
         </p>
         <p>
-          We score every provider across 7 dimensions. No keyword hunt.
+          We look at 7 dimensions for every therapist. Not just a few
+          keywords.
         </p>
       </div>
 

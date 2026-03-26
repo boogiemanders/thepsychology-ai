@@ -9,19 +9,19 @@ const steps = [
     number: "1",
     title: "Tell us what you need",
     description:
-      "A short intake about what you\u2019re dealing with, what you\u2019ve tried, and what matters to you.",
+      "A short set of questions about what you are dealing with, what you have tried, and what matters to you.",
   },
   {
     number: "2",
     title: "See your matches",
     description:
-      "Each provider scored for your situation, with a clear explanation of why they fit.",
+      "Each therapist scored for your situation, with a clear reason they may fit.",
   },
   {
     number: "3",
     title: "Book instantly",
     description:
-      "Pick a time. Confirm. Show up. No emails, no voicemails, no \u2018I\u2019ll get back to you in 5\u20137 business days.\u2019",
+      "Pick a time. Confirm. Show up. No emails, no voicemails, no 'I'll get back to you in 5-7 business days.'",
   },
 ]
 

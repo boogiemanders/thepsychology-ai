@@ -19,7 +19,7 @@ export default function ClientLanding() {
       <ClientHowItWorksSection />
       <ClientTrustSection />
       <ClientCTASection />
-      <FooterSection description="Client early access for a better therapy-search flow: better fit, clearer insurance expectations, and less directory friction." />
+      <FooterSection description="Client early access for a better way to find therapy: better matches, clearer insurance info, and less hassle." />
     </div>
   )
 }
