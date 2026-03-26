@@ -12,6 +12,7 @@ import { logUsageEvent } from '@/lib/usage-events'
 import { checkSubscriptionAccess } from '@/lib/subscription-server'
 import { SupabaseClient } from '@supabase/supabase-js'
 import { EPPP_DOMAINS } from '@/lib/eppp-data'
+import { loadTopicQuestions, TopicQuestion } from '@/lib/topic-question-loader'
 
 export const runtime = 'nodejs'
 
@@ -131,7 +132,7 @@ function isQuizNavigationRequest(text: string): boolean {
   if (!hasQuizWord) return false
 
   return (
-    /\b(where|start|open|link|send|do|take|want|lets|let|can|quick|give|make|create|generate|build|write|practice|test|five|5)\b/.test(normalized) ||
+    /\b(where|start|open|link|send|do|take|want|lets|let|can|quick|give|make|create|generate|build|write|practice|test|five|5|find|access|locate|go|navigate|get|try|run|show|pull)\b/.test(normalized) ||
     normalized === 'quiz'
   )
 }
@@ -159,10 +160,18 @@ function isQuizOfferFromAssistant(text: string): boolean {
 }
 
 function isAffirmativeQuizFollowUp(messages: RecoverMessage[], lastUserMessage: string): boolean {
-  if (!isAffirmativeReply(lastUserMessage)) return false
   const previousAssistant = getPreviousAssistantMessage(messages)
   if (!previousAssistant) return false
-  return isQuizOfferFromAssistant(previousAssistant)
+  if (!isQuizOfferFromAssistant(previousAssistant)) return false
+
+  // Affirmative reply ("yes", "ok", "sure", "good", etc.)
+  if (isAffirmativeReply(lastUserMessage)) return true
+
+  // Confusion or navigation reply ("where", "how do I", "where is it", "link")
+  const normalized = normalizeIntentText(lastUserMessage)
+  if (/\b(where|how|link|find|show|go|navigate|access|locate)\b/.test(normalized)) return true
+
+  return false
 }
 
 function isAwaitingQuizTopic(messages: RecoverMessage[]): boolean {
@@ -347,6 +356,71 @@ function resolveRequestedQuestionCount(
   return null
 }
 
+function shuffleArray<T>(arr: T[]): T[] {
+  const shuffled = [...arr]
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
+  }
+  return shuffled
+}
+
+function buildInlineQuiz(topicName: string, domainId: string | undefined, count: number): string | null {
+  const loaded = loadTopicQuestions(topicName, domainId ?? null)
+  if (!loaded || loaded.questions.length === 0) return null
+
+  const validQuestions = loaded.questions.filter(
+    (q: TopicQuestion) =>
+      (q.stem || q.question) &&
+      Array.isArray(q.options) &&
+      q.options.length >= 2 &&
+      (q.answer || q.correct_answer) &&
+      !q.is_lock_in_drill
+  )
+  if (validQuestions.length === 0) return null
+
+  const selected = shuffleArray(validQuestions).slice(0, count)
+  const labels = ['A', 'B', 'C', 'D']
+
+  const questionBlocks: string[] = []
+  const answerBlocks: string[] = []
+
+  for (let i = 0; i < selected.length; i++) {
+    const q: TopicQuestion = selected[i]
+    const stem = q.stem || q.question || ''
+    const correctAnswer = q.answer || q.correct_answer || ''
+    const shuffledOptions = shuffleArray(q.options ?? [])
+    const correctIndex = shuffledOptions.findIndex((opt: string) => opt === correctAnswer)
+    const correctLabel = correctIndex >= 0 ? labels[correctIndex] : '?'
+
+    const optionLines = shuffledOptions
+      .slice(0, 4)
+      .map((opt: string, idx: number) => `- ${labels[idx]}) ${opt}`)
+      .join('\n')
+
+    questionBlocks.push(`**${i + 1}.** ${stem}\n${optionLines}`)
+
+    const explanation = q.explanation ? ` — ${q.explanation}` : ''
+    answerBlocks.push(`${i + 1}. **${correctLabel}**${explanation}`)
+  }
+
+  const availableNote =
+    selected.length < count
+      ? `\n\nI found ${selected.length} questions for ${topicName} (you asked for ${count}).`
+      : ''
+
+  const quizzerHref = `/quizzer?topic=${encodeURIComponent(topicName)}${domainId ? `&domain=${encodeURIComponent(domainId)}` : ''}`
+
+  return [
+    `Here are ${selected.length} questions on ${topicName}:${availableNote}`,
+    questionBlocks.join('\n\n'),
+    '---',
+    '**Answer Key:**',
+    answerBlocks.join('\n'),
+    `\nWant the full 10-question set? [Open Quizzer for ${topicName}](${quizzerHref})`,
+  ].join('\n\n')
+}
+
 function buildQuizRoutingReply(input: {
   messages: RecoverMessage[]
   lastUserMessage: string
@@ -362,6 +436,17 @@ function buildQuizRoutingReply(input: {
   const requestedTopic = resolveRequestedQuizTopic(messages, awaitingTopic)
 
   if (requestedTopic) {
+    // Custom count (not 10) → serve inline quiz from question bank
+    if (requestedQuestionCount !== null && requestedQuestionCount !== 10) {
+      const inlineQuiz = buildInlineQuiz(
+        requestedTopic.topicName,
+        requestedTopic.domainId ?? undefined,
+        requestedQuestionCount
+      )
+      if (inlineQuiz) return inlineQuiz
+      // Fall through to standard routing if no question bank available
+    }
+
     const quizHref = `/quizzer?topic=${encodeURIComponent(requestedTopic.topicName)}${
       requestedTopic.domainId ? `&domain=${encodeURIComponent(requestedTopic.domainId)}` : ''
     }`
@@ -371,12 +456,6 @@ function buildQuizRoutingReply(input: {
       'Need a different topic? Use [Topic Selector](/topic-selector).',
     ]
 
-    if (requestedQuestionCount !== null && requestedQuestionCount !== 10) {
-      lines.push(
-        `Quick note: you asked for ${requestedQuestionCount} questions, but Quizzer currently runs 10 questions (8 scored + 2 experimental). Recover chat cannot create custom ${requestedQuestionCount}-question sets yet.`
-      )
-    }
-
     if (requestedTopic.source === 'custom') {
       lines.push('If we have matching local question-bank content, Quizzer uses it first, then falls back to generation.')
     }
@@ -385,12 +464,6 @@ function buildQuizRoutingReply(input: {
   }
 
   const lines: string[] = ['Which topic do you want the quiz on?']
-
-  if (requestedQuestionCount !== null && requestedQuestionCount !== 10) {
-    lines.push(
-      `Quick note: you asked for ${requestedQuestionCount} questions, but Quizzer currently runs 10 questions (8 scored + 2 experimental). Recover chat cannot create custom ${requestedQuestionCount}-question sets yet.`
-    )
-  }
 
   const priorityOrderText = buildPriorityOrderText(userContext)
   if (priorityOrderText) {
@@ -1013,12 +1086,13 @@ Don't lecture about study methods. Just validate their effort and offer the quiz
 - If Prioritize data is unavailable, say that clearly, then give a provisional order based on their weak areas.
 
 ## Quiz routing rules
-- Never tell users to find an external quiz platform.
+- NEVER tell users to find an external quiz platform. Everything they need is in this app.
 - If they ask for a quiz, first ask what topic they want if none is provided.
 - If topic is known, send them to in-app Quizzer or Topic Selector.
 - Custom topic requests are allowed.
-- If they ask for a specific number of questions, be transparent that Quizzer currently runs 10 questions (8 scored + 2 experimental).
-- Do not claim you created, queued, or attached a custom quiz inside this chat.
+- If they ask for a specific number of questions other than 10, the system will pull questions from the question bank and show them right here in chat.
+- If they ask for 10 questions or just "a quiz", route them to the Quizzer page.
+- CRITICAL: When you mention Quizzer or quizzes, ALWAYS include a markdown link: [Quizzer](/quizzer) or [Topic Selector](/topic-selector). NEVER say "go ahead and try a quiz" without a link in the same message.
 - For short-time requests (e.g., less than 15 minutes), direct them to **Study** (top menu) for lessons and **Quizzer** for questions.
 - If they give a specific time preference (for example 11 minutes 20 seconds), honor that preference when suggesting next steps.
 
@@ -1030,11 +1104,41 @@ Don't lecture about study methods. Just validate their effort and offer the quiz
 - If asked what AI model you are, do not guess a version name.
 - Say you are an OpenAI language model used in this app, and you may not have access to the exact deployed version.
 
+## Values-based motivation (ACT approach)
+Use Acceptance and Commitment Therapy principles naturally throughout conversations:
+
+**Exploring values (do this early, within the first few exchanges):**
+- Ask what matters to them about becoming a psychologist. Examples: "What drew you to psychology in the first place?" or "What kind of psychologist do you want to be?"
+- Listen for core values: helping others, understanding the mind, making a difference, being competent, serving a specific population, etc.
+- Remember their values across the conversation and reference them naturally.
+
+**Connecting study to values:**
+- When they express a value, gently connect studying to it: "Sounds like helping kids through tough times really matters to you. Learning this assessment material is one step closer to being able to do that."
+- Frame study actions as values-aligned choices, not obligations: "This isn't just test prep, it's building the foundation for the work you care about."
+
+**When they are tired, discouraged, or avoidant:**
+- FIRST: validate the emotion. Name it. "That sounds exhausting" or "Makes sense you'd feel discouraged after that."
+- SECOND: normalize it. Struggling does not mean they are failing or don't care.
+- THIRD: gently reconnect to their value. "You mentioned wanting to help people with trauma. That goal hasn't changed, even on a hard day. What's one small thing you could do in the next 10 minutes that moves you toward that?"
+- Do NOT skip the validation to rush to the values reminder. Sit with the feeling first.
+
+**Willingness over motivation:**
+- Don't try to make them feel motivated. Instead, ask if they are willing to take one small step even while feeling tired/anxious/unmotivated.
+- "You don't have to feel ready. Are you willing to try 5 minutes of [Quizzer](/quizzer) and see what happens?"
+
+**What NOT to do with ACT:**
+- Don't use ACT jargon ("cognitive defusion", "experiential avoidance", "hexaflex") with the user
+- Don't turn every response into a values lecture
+- Don't invalidate their feelings by jumping straight to "but remember your values"
+- Keep it natural and conversational, not therapeutic
+
 ## Your approach
 1. Briefly acknowledge what they said (one sentence max)
-2. Ask what they want right now: to vent/talk, to get a concrete study step, or both
-3. Match their choice; avoid pushing
-4. When they are open, offer 2-3 concrete options and help pick one action for the next 24 hours
+2. If early in conversation and you don't know their values yet, ask what matters to them about this path
+3. Ask what they want right now: to vent/talk, to get a concrete study step, or both
+4. Match their choice; avoid pushing
+5. When they are open, offer 2-3 concrete options and help pick one action for the next 24 hours
+6. When possible, frame the suggested action in terms of their stated values
 
 ## If they want to talk about other things
 - It is acceptable to stay with non-study conversation for 1-3 turns.
@@ -1044,15 +1148,16 @@ Don't lecture about study methods. Just validate their effort and offer the quiz
 ## Concrete options to offer when they want study help
 - "Want me to suggest a 15-minute study plan to get started?"
 - "Should we figure out which topic to tackle first based on your weak areas?"
-- "Would a quick Quizzer set on one topic help you warm up?"
+- "Would a quick [Quizzer](/quizzer) set on one topic help you warm up?"
 - "Want to talk through what's blocking you, or just get a concrete next step?"
 
 ## For specific struggles
-- **Motivation/energy**: Suggest starting with just 5-10 minutes, or their easiest weak topic
-- **Overwhelm**: Help them pick ONE topic to focus on today
-- **Procrastination**: Offer a tiny first step (open Topic Teacher, do 3 questions)
-- **ADHD/attention**: Suggest shorter study chunks, the Quizzer for variety, taking breaks
+- **Motivation/energy**: Validate first. Then ask about willingness (not motivation). Suggest starting with just 5-10 minutes, or their easiest weak topic. Connect to their values.
+- **Overwhelm**: Help them pick ONE topic to focus on today. Remind them one topic at a time still moves toward their goal.
+- **Procrastination**: Offer a tiny first step (open Topic Teacher, do 3 questions). Frame as a values-aligned choice, not a should.
+- **ADHD/attention**: Suggest shorter study chunks, the [Quizzer](/quizzer) for variety, taking breaks
 - **Retention**: Recommend spaced practice, mixing topics, sleep before review sessions
+- **Fear of failure**: Normalize it. Remind them that struggling with material is part of learning, not evidence they can't do it. Connect back to why they started.
 - **Anxiety**: Normalize it, suggest starting with familiar material to build momentum
 
 ## Tone mirroring
@@ -1291,7 +1396,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Gate: Recover is Pro only
-    const accessDenied = await checkSubscriptionAccess(parsed.data.userId)
+    const accessDenied = await checkSubscriptionAccess(parsed.data.userId ?? undefined)
     if (accessDenied) return accessDenied
 
     const messages = parsed.data.messages ?? []
@@ -1417,10 +1522,17 @@ export async function POST(request: NextRequest) {
       metadata: { sessionId: parsed.data.sessionId }
     })
 
-    const message = completion.choices[0]?.message?.content?.trim()
-    if (!message) {
+    const rawMessage = completion.choices[0]?.message?.content?.trim()
+    if (!rawMessage) {
       return NextResponse.json({ error: 'No response from model.' }, { status: 502 })
     }
+
+    // Safety net: if LLM mentions quiz without a link, append one
+    const mentionsQuiz = /\bquiz(?:zer|zes|z)?\b/i.test(rawMessage)
+    const hasStudyLink = /\]\(\/(quizzer|topic-selector)/.test(rawMessage)
+    const message = mentionsQuiz && !hasStudyLink
+      ? rawMessage + '\n\n[Start a quiz →](/quizzer)'
+      : rawMessage
 
     const uniqueSources =
       sources.length > 0
