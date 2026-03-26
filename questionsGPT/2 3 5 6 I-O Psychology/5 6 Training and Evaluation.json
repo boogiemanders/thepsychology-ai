@@ -109,8 +109,8 @@
       ],
       "answer": "Usually less costly and enhances transfer of training",
       "explanation": "1. The correct answer, \"Usually less costly and enhances transfer of training,\" highlights two key advantages of on-the-job training. On-the-job training is typically less expensive than off-the-job training, as it utilizes the existing work environment and resources. Additionally, it enhances transfer of training because employees practice in the actual work setting, which aligns closely with their job tasks, thereby facilitating the application of learned skills directly in their roles.\n\n2. The option \"Allows larger groups to be trained simultaneously\" is incorrect because this advantage is characteristic of off-the-job training, where many employees can be trained at once in a controlled environment. \"Provides greater control over the training environment\" is also incorrect, as off-the-job training offers more control by minimizing distractions and ensuring a focused learning atmosphere. Lastly, \"Permits use of multiple training methods\" is incorrect because this advantage applies to off-the-job training, which can integrate various instructional techniques and technologies, unlike on-the-job training, which is more limited in method variety.",
-      "kn": "KN42",
-      "kn_explanation": "This question is best aligned with KN42 because it tests Factors related to treatment or intervention decision-making (e.g., relevant research, matching treatment to assessment/diagnosis, matching client or patient with psychologist characteristics, knowledge and use of allied services, cost and benefit, readiness to change).",
+      "kn": "KN58",
+      "kn_explanation": "This question is best aligned with KN58 because it tests evaluation strategies and techniques, including needs assessment, formative and summative evaluation, outcome evaluation, and cost-benefit analysis.",
       "difficulty": "easy",
       "quality_comment": "The stem is straightforward and the options are balanced, making the correct answer clearly distinguishable for examinees familiar with training methods."
     },
@@ -154,8 +154,8 @@
       ],
       "answer": "Identical elements",
       "explanation": "1. The correct answer, \"Identical elements,\" refers to the principle that the greater the similarity between training and work situations, the more effective the transfer of training will be. This principle encompasses both physical fidelity, which relates to the similarity of the training environment to the actual work environment, and psychological fidelity, which pertains to how well the training helps trainees acquire the necessary knowledge, skills, abilities, and other characteristics (KSAOs) for their job.\n\n2. The incorrect options are as follows:\n- **Stimulus variability**: While stimulus variability maximizes transfer by using a variety of stimuli during training, it does not specifically address the similarity between training and work conditions like \"identical elements\" does.\n- **Overlearning**: Overlearning refers to practicing beyond mastery to achieve automaticity, but it does not focus on the similarity between training and actual work conditions, which is crucial for effective transfer.\n- **Distributed practice**: Distributed practice involves spacing learning sessions for better retention, but it does not directly relate to increasing the similarity of training and work environments, which is the core of the \"identical elements\" principle.",
-      "kn": "KN42",
-      "kn_explanation": "This question is best aligned with KN42 because it tests Factors related to treatment or intervention decision-making (e.g., relevant research, matching treatment to assessment/diagnosis, matching client or patient with psychologist characteristics, knowledge and use of allied services, cost and benefit, readiness to change).",
+      "kn": "KN58",
+      "kn_explanation": "This question is best aligned with KN58 because it tests evaluation strategies and techniques, including needs assessment, formative and summative evaluation, outcome evaluation, and cost-benefit analysis.",
       "difficulty": "medium",
       "quality_comment": "Options include commonly confused training concepts, improving the discriminative value of the question."
     },
@@ -274,8 +274,8 @@
       ],
       "answer": "Confirmative evaluation",
       "explanation": "1. **Confirmative evaluation** is the correct answer because it is specifically conducted at a later time to evaluate the long-term effects of training. This type of evaluation involves administering measures similar to those used in summative evaluation to assess the sustained impact of the training on trainees and the organization.\n\n2. The **summative evaluation** is incorrect because it is conducted soon after the entire training program has been delivered to determine its immediate effects, rather than assessing long-term outcomes. **Formative evaluation** is also incorrect as it occurs during the development of a training program to identify necessary changes for achieving program goals, not after training. Lastly, **meta-evaluation** is incorrect because it is an ongoing process that assesses the reliability and validity of the evaluations rather than focusing on the long-term effects of the training itself.",
-      "kn": "KN43",
-      "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
+      "kn": "KN58",
+      "kn_explanation": "This question is best aligned with KN58 because it tests evaluation strategies and techniques, including needs assessment, formative and summative evaluation, outcome evaluation, and cost-benefit analysis.",
       "difficulty": "hard",
       "quality_comment": "This question addresses a less commonly known evaluation phase, demanding integration of conceptual details with plausible distractors."
     },
@@ -319,8 +319,8 @@
       ],
       "answer": "To assess the reliability and validity of other evaluation phases",
       "explanation": "1. The correct answer, \"To assess the reliability and validity of other evaluation phases,\" accurately reflects the role of meta-evaluation in the Dessinger-Moseley full-scope evaluation model. Meta-evaluation is described as an ongoing process that occurs during and after formative, summative, and confirmative evaluations to ensure that these evaluations are conducted reliably and validly, thereby enhancing the overall quality of the training program assessment.\n\n2. The option \"To monitor fidelity of program implementation\" is incorrect because monitoring fidelity is specifically part of the implementation evaluation component, which focuses on how well the program is delivered. The choice \"To determine program costs relative to benefits\" is wrong as this aspect is covered under the cost-effectiveness and cost-benefit analysis component of summative evaluation, not meta-evaluation. Lastly, \"To confirm long-term effects of training\" is incorrect because confirming long-term effects falls under confirmative evaluation, which occurs after the training has been delivered, rather than the overarching assessment role of meta-evaluation.",
-      "kn": "KN42",
-      "kn_explanation": "This question is best aligned with KN42 because it tests Factors related to treatment or intervention decision-making (e.g., relevant research, matching treatment to assessment/diagnosis, matching client or patient with psychologist characteristics, knowledge and use of allied services, cost and benefit, readiness to change).",
+      "kn": "KN58",
+      "kn_explanation": "This question is best aligned with KN58 because it tests evaluation strategies and techniques, including needs assessment, formative and summative evaluation, outcome evaluation, and cost-benefit analysis.",
       "difficulty": "hard",
       "quality_comment": "This advanced question requires integrative knowledge of evaluation models and quality assurance procedures, enhancing cognitive depth."
     },

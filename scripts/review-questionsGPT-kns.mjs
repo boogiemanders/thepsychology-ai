@@ -119,6 +119,39 @@ const LESSON_DEFAULT_KN = {
   '8-standards-9-10': 'KN61',
 }
 
+const MANUAL_KN_OVERRIDES = {
+  'A psychiatrist consults you regarding a 35-year-old patient recently diagnosed with bipolar I disorder who is experiencing a manic episode with euphoric mood and no rapid cycling features. Which medication would be considered the first-line pharmacological treatment?': 'KN3',
+  'A psychiatrist consults a psychologist regarding pharmacological management for a client newly diagnosed with Bipolar I Disorder following a first manic episode with grandiosity, decreased need for sleep, and pressured speech. According to established treatment guidelines, which medication class represents the first-line pharmacological intervention for Bipolar I Disorder?': 'KN3',
+  'A community health program aims to increase cervical cancer screening rates among women who already believe the procedure is effective but nonetheless fail to schedule appointments. According to the Theory of Planned Behavior, which intervention MOST directly targets the subjective norm component in order to strengthen behavioral intention?': 'KN13',
+  "According to the theory of planned behavior, which factor is NOT considered a determinant of a person's intention to perform a behavior?": 'KN13',
+  'Which of the following statements best reflects the concept of trait theory in personality psychology?': 'KN17',
+  'A community mental health center establishes a halfway house program for individuals with severe mental illness who have completed inpatient psychiatric treatment. Residents receive social skills training, vocational rehabilitation, and ongoing medication management while gradually reintegrating into the community. This program is BEST classified as which level of prevention?': 'KN45',
+  'A community mental health center serving a racially diverse urban population reviews its utilization data and finds that clients from racial and ethnic minority backgrounds are terminating services significantly earlier than non-minority clients with comparable presenting problems and insurance coverage. Which of the following most accurately characterizes what the empirical literature predicts about this pattern and its etiology?': 'KN45',
+  "Following a six-month psychiatric hospitalization for treatment-resistant bipolar disorder, a patient is referred to a supported housing program where staff provide daily living skills coaching, facilitate gradual reintegration into community activities, and coordinate outpatient follow-up care. The treatment team explicitly emphasizes relapse prevention and functional rehabilitation as the program's goals. According to Caplan's classic prevention framework, this program is best classified as:": 'KN45',
+  'What is an important factor psychologists should discuss with managed care patients?': 'KN50',
+  'Which model of stepped care for depression prioritizes the least restrictive but effective treatments first and systematically monitors treatment response to adjust care?': 'KN50',
+  'What is the primary purpose of a formative evaluation in training program development?': 'KN58',
+  "Which evaluation component involves determining if a program's effectiveness can be practically measured before conducting a full evaluation?": 'KN58',
+  'According to the Dessinger-Moseley full-scope evaluation model, what type of evaluation is conducted a significant time after training to assess long-term effects?': 'KN58',
+  'What is the role of a meta-evaluation in the Dessinger-Moseley full-scope evaluation model?': 'KN58',
+  'Which economic evaluation method compares the costs and benefits of interventions by converting both into monetary terms?': 'KN58',
+  'Which of the following best describes the ethical considerations regarding authorship in academic publications?': 'KN60',
+  'What is a key criterion for authorship in research papers according to ethical standards?': 'KN60',
+  'A researcher conducts a study in which participants are led to believe they are evaluating a new educational program, when in fact the study examines conformity to authority figures. After data collection is complete, the researcher\'s primary ethical obligation is to:': 'KN69',
+  'A graduate student completes her doctoral dissertation with substantial intellectual contributions from her faculty advisor, who helped design the study methodology, conducted the primary statistical analyses, and wrote significant portions of the results and discussion sections. When the dissertation is submitted for publication, what authorship arrangement is MOST consistent with APA Ethics Code Standard 8.12?': 'KN60',
+  'When is using deception in research ethically justifiable?': 'KN69',
+  'What must psychologists do about Institutional Review Board approval before starting research with human participants?': 'KN69',
+  'Which statement best describes the APA Ethics Code requirements for informed consent in research involving children who are unable to provide consent themselves?': 'KN69',
+  'According to the Ethics Code, what must psychologists do when they discover significant errors in their published research data?': 'KN60',
+  'What distinguishes duplicate publication from piecemeal publication according to APA guidelines?': 'KN60',
+  "After research is published, what are psychologists' obligations around sharing data for verification?": 'KN60',
+  'As a peer reviewer for manuscripts or grant proposals, what is a key ethical obligation?': 'KN60',
+  'According to the APA Ethics Code, what must psychologists consider when providing telepsychology services in emerging areas with incomplete evidence for effectiveness?': 'KN71',
+  'What is the recommended approach for psychologists using telepsychology services to protect client confidentiality, according to APA Guidelines?': 'KN71',
+  "Which of the following best reflects the psychologist's ethical responsibilities when providing telepsychology services to enhance confidentiality?": 'KN71',
+  'If a psychologist switches a client from in-person therapy to telepsychology, what ethical practice is recommended according to APA Guidelines for the Practice of Telepsychology?': 'KN71',
+}
+
 const KN_RULES = {
   KN1: {
     tokens: [
@@ -856,6 +889,23 @@ function main() {
     for (const question of questions) {
       totalQuestions += 1
       const currentKn = question.kn || question.knId || null
+      const manualKn = MANUAL_KN_OVERRIDES[String(question.stem || '').trim()] ?? null
+      if (manualKn) {
+        const knMeta = kns.get(manualKn)
+        if (!knMeta) continue
+        const nextExplanation = buildKnExplanation(knMeta)
+        if (currentKn !== manualKn || question.kn_explanation !== nextExplanation) {
+          if (currentKn && getDomainFromKn(currentKn) !== getDomainFromKn(manualKn)) {
+            changedFromWrongDomain += 1
+          }
+          question.kn = manualKn
+          question.kn_explanation = nextExplanation
+          fileChanged = true
+          changedQuestions += 1
+        }
+        continue
+      }
+
       const expectedDomain = inferExpectedDomain(filePath, question, lesson)
       if (!expectedDomain) {
         missingExpectedDomain += 1

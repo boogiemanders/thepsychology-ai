@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { existsSync, readFileSync } from 'fs'
+import { existsSync, readFileSync, readdirSync } from 'fs'
 import { join } from 'path'
 import { parseExamFile } from '@/lib/exam-file-manager'
 import { inferIsOrgPsych } from '@/lib/org-psych-utils'
@@ -150,34 +150,74 @@ export async function POST(request: NextRequest) {
   }
 }
 
+const LATEST_PRACTICE_BATCH_SIZE = 4
+
+function extractExamNumber(name: string): number {
+  return Number.parseInt((name.match(/(\d+)/) || [])[1] || '0', 10)
+}
+
+function prioritizeLatestPracticeBatch(files: string[]): string[] {
+  if (files.length <= 1) return files
+
+  const latestNumber = Math.max(...files.map(extractExamNumber))
+  const latestBatchStart = Math.max(1, latestNumber - (LATEST_PRACTICE_BATCH_SIZE - 1))
+
+  return [...files].sort((left, right) => {
+    const leftNumber = extractExamNumber(left)
+    const rightNumber = extractExamNumber(right)
+    const leftIsLatest = leftNumber >= latestBatchStart
+    const rightIsLatest = rightNumber >= latestBatchStart
+
+    if (leftIsLatest !== rightIsLatest) {
+      return leftIsLatest ? -1 : 1
+    }
+
+    return leftNumber - rightNumber
+  })
+}
+
 /**
- * Get list of available exam files for a type
- * Now using standardized naming convention (001-004)
- * Matches the exam generation system and allows for quick rotation
+ * Get list of available exam files for a type.
  *
- * Practice exams 1-8 served from examsGPT/ as JSON.
- * Diagnostic exams 1-4 served from diagnosticGPT/ as JSON.
+ * Practice exams are loaded from examsGPT/ JSON files and the newest generated
+ * batch is prioritized first so new assignments start on the latest bank-only
+ * combinations. Diagnostic exams remain in numeric order.
  */
 function getAvailableExamFilesList(examType: 'diagnostic' | 'practice'): string[] {
-  if (examType === 'diagnostic') {
-    return [
-      'diagnostic-exam-001.md',
-      'diagnostic-exam-002.md',
-      'diagnostic-exam-003.md',
-      'diagnostic-exam-004.md',
-    ]
-  } else {
-    return [
-      'practice-exam-001.md',
-      'practice-exam-002.md',
-      'practice-exam-003.md',
-      'practice-exam-004.md',
-      'practice-exam-005.md',
-      'practice-exam-006.md',
-      'practice-exam-007.md',
-      'practice-exam-008.md',
-    ]
+  const prefix = examType === 'diagnostic' ? 'diagnostic-exam-' : 'practice-exam-'
+  const gptDir =
+    examType === 'diagnostic'
+      ? join(process.cwd(), 'diagnosticGPT')
+      : join(process.cwd(), 'examsGPT')
+
+  if (existsSync(gptDir)) {
+    const gptFiles = readdirSync(gptDir)
+      .filter((name) => name.startsWith(prefix) && name.endsWith('.json'))
+      .map((name) => {
+        const match = name.match(/(\d+)/)
+        if (!match) return null
+        return `${prefix}${String(Number.parseInt(match[1], 10)).padStart(3, '0')}.md`
+      })
+      .filter((name): name is string => Boolean(name))
+      .sort((left, right) => {
+        return extractExamNumber(left) - extractExamNumber(right)
+      })
+
+    if (gptFiles.length > 0) {
+      return examType === 'practice' ? prioritizeLatestPracticeBatch(gptFiles) : gptFiles
+    }
   }
+
+  const legacyDir = join(process.cwd(), 'exams', examType)
+  if (existsSync(legacyDir)) {
+    return readdirSync(legacyDir)
+      .filter((name) => name.startsWith(prefix) && name.endsWith('.md'))
+      .sort((left, right) => {
+        return extractExamNumber(left) - extractExamNumber(right)
+      })
+  }
+
+  return []
 }
 
 /**
