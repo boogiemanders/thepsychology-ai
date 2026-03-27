@@ -102,6 +102,71 @@ function getMonthName(num: number): string {
   return names[num] || ''
 }
 
+/**
+ * Find and click the "Referred by" dropdown, then select "Zoc Doc".
+ * SP's referral source is an Ember select-box. We identify it by:
+ * 1. Finding a label/text containing "Referred by"
+ * 2. Finding the sibling or descendant typeahead trigger
+ * 3. Opening the dropdown and selecting the "Zoc Doc" option
+ */
+/**
+ * Fill "Referred by" with "Zoc Doc".
+ * The actual DOM is: div.select-box__selected-option.typeahead-trigger with a
+ * span.placeholder "Select" inside. Clicking it opens options with role="option".
+ */
+async function fillReferredBy(): Promise<boolean> {
+  // Target the exact Ember select-box trigger for "Referred by"
+  // It's a .select-box__selected-option.typeahead-trigger with placeholder "Select"
+  let targetTrigger: HTMLElement | null = null
+
+  // Strategy 1: Find by label text "Referred by" and get its sibling trigger
+  const allLabels = document.querySelectorAll('label, .form-label, .field-label, .spds-label, [class*="label"]')
+  for (const label of Array.from(allLabels)) {
+    if (label.textContent?.trim().toLowerCase().includes('referred by')) {
+      const parent = label.closest('.form-group, .field-wrapper, [class*="field"], [class*="row"]') || label.parentElement
+      if (parent) {
+        targetTrigger = parent.querySelector('.select-box__selected-option.typeahead-trigger, .typeahead-trigger') as HTMLElement
+      }
+      break
+    }
+  }
+
+  // Strategy 2: Find all select-box__selected-option.typeahead-trigger elements
+  // with placeholder "Select" — skip ones for clinician/office (those have name-based selects)
+  if (!targetTrigger) {
+    const triggers = document.querySelectorAll('.select-box__selected-option.typeahead-trigger')
+    for (const trigger of Array.from(triggers)) {
+      const placeholder = trigger.querySelector('.placeholder')
+      if (placeholder?.textContent?.trim() === 'Select') {
+        targetTrigger = trigger as HTMLElement
+        break
+      }
+    }
+  }
+
+  if (!targetTrigger) {
+    console.log('[ZSP] Referred by trigger not found')
+    return false
+  }
+
+  targetTrigger.click()
+  await new Promise(r => setTimeout(r, 400))
+
+  // Look for "Zoc Doc" in the dropdown options
+  const options = document.querySelectorAll('.select-box__option[role="option"], .ember-power-select-option, [role="option"]')
+  for (const opt of Array.from(options)) {
+    const text = opt.textContent?.trim().toLowerCase() ?? ''
+    if (text.includes('zoc doc') || text.includes('zocdoc') || text === 'zoc doc') {
+      ;(opt as HTMLElement).click()
+      console.log('[ZSP] Set Referred by to Zoc Doc')
+      return true
+    }
+  }
+
+  console.log('[ZSP] "Zoc Doc" option not found in referral dropdown')
+  return false
+}
+
 async function fillClientDemographics(): Promise<void> {
   const client = await getClient().catch((err: unknown) => {
     console.error('[ZSP] fillClientDemographics error:', err)
@@ -201,26 +266,11 @@ async function fillClientDemographics(): Promise<void> {
     }
   }
 
-  // Referred by — Ember select-box, click trigger then pick "Zoc Doc"
-  const referralTriggers = document.querySelectorAll('.typeahead-trigger')
-  for (const trigger of Array.from(referralTriggers)) {
-    const placeholder = trigger.querySelector('.placeholder')
-    if (placeholder?.textContent?.trim() === 'Select') {
-      ;(trigger as HTMLElement).click()
-      await new Promise(r => setTimeout(r, 400))
-      // Look for select-box options or power-select options
-      const options = document.querySelectorAll('.select-box__option[role="option"], .ember-power-select-option, [role="option"]')
-      for (const opt of Array.from(options)) {
-        if (opt.textContent?.trim().toLowerCase().includes('zoc doc') ||
-            opt.textContent?.trim().toLowerCase().includes('zocdoc')) {
-          ;(opt as HTMLElement).click()
-          filled++
-          break
-        }
-      }
-      break
-    }
-  }
+  // Referred by — Ember select-box, find the referral source field specifically.
+  // SP labels the field "Referred by" — look for a label or section heading first,
+  // then find the adjacent typeahead/select trigger.
+  const referralFilled = await fillReferredBy()
+  if (referralFilled) filled++
 
   // Turn on reminder notifications — find toggle switches and enable them
   const toggleSwitches = document.querySelectorAll('input[type="checkbox"][id*="toggle-switch"]') as NodeListOf<HTMLInputElement>
@@ -237,6 +287,91 @@ async function fillClientDemographics(): Promise<void> {
   console.log('[ZSP] Filled client demographics:', { filled, firstName: client.firstName, lastName: client.lastName })
 }
 
+/**
+ * Fill the payer/insurance company via SP's typeahead select-box.
+ * The search input may not exist until the trigger is clicked.
+ */
+async function fillPayerTypeahead(insuranceCompany: string): Promise<number> {
+  // Try to find an existing search input first
+  let payerInput = document.querySelector('.select-box__input[role="searchbox"], input[placeholder*="payer" i], input[placeholder*="insurance" i]') as HTMLInputElement
+
+  // If not found, look for the payer trigger and click it to reveal the search
+  if (!payerInput) {
+    // Find the payer section by label
+    const labels = document.querySelectorAll('label, .form-label, .spds-label, [class*="label"]')
+    for (const label of Array.from(labels)) {
+      const text = label.textContent?.trim().toLowerCase() ?? ''
+      if (text.includes('payer') || text.includes('insurance company') || text.includes('insurance plan')) {
+        const parent = label.closest('.form-group, .field-wrapper, [class*="field"], [class*="row"]') || label.parentElement
+        const trigger = parent?.querySelector('.select-box__trigger, .typeahead-trigger, .ember-power-select-trigger, [role="combobox"]') as HTMLElement
+        if (trigger) {
+          trigger.click()
+          await new Promise(r => setTimeout(r, 400))
+          payerInput = document.querySelector('.select-box__input[role="searchbox"], .ember-power-select-search-input, input[role="searchbox"]') as HTMLInputElement
+          break
+        }
+      }
+    }
+  }
+
+  // Still no input — try clicking any select-box trigger on the insurance page
+  if (!payerInput) {
+    const trigger = document.querySelector('.select-box__trigger, .ember-power-select-trigger') as HTMLElement
+    if (trigger) {
+      trigger.click()
+      await new Promise(r => setTimeout(r, 400))
+      payerInput = document.querySelector('.select-box__input[role="searchbox"], .ember-power-select-search-input') as HTMLInputElement
+    }
+  }
+
+  if (!payerInput) {
+    // Last fallback — standard input
+    if (tryFill(['input[name="insurance_company"]', 'input[name*="payer"]'], insuranceCompany)) return 1
+    console.log('[ZSP] Payer typeahead input not found')
+    return 0
+  }
+
+  // Type the insurance company name
+  payerInput.focus()
+  fillField('.select-box__input[role="searchbox"], .ember-power-select-search-input, input[role="searchbox"]', insuranceCompany)
+  await new Promise(r => setTimeout(r, 1000)) // Wait for typeahead results
+
+  // Select the best matching option
+  const options = document.querySelectorAll('.ember-power-select-option, .select-kit-row, .select-box__option, [role="option"]')
+  const lowerCompany = insuranceCompany.toLowerCase()
+  let bestMatch: HTMLElement | null = null
+
+  for (const opt of Array.from(options)) {
+    const text = opt.textContent?.trim().toLowerCase() ?? ''
+    if (text === lowerCompany) {
+      // Exact match — use immediately
+      ;(opt as HTMLElement).click()
+      console.log('[ZSP] Payer selected (exact):', text)
+      return 1
+    }
+    if (text.includes(lowerCompany) && text.length < (bestMatch?.textContent?.length ?? Infinity)) {
+      bestMatch = opt as HTMLElement
+    }
+  }
+
+  if (bestMatch) {
+    bestMatch.click()
+    console.log('[ZSP] Payer selected (partial):', bestMatch.textContent?.trim())
+    return 1
+  }
+
+  // If no match, just pick the first option (often the closest match)
+  const firstOption = options[0] as HTMLElement
+  if (firstOption) {
+    firstOption.click()
+    console.log('[ZSP] Payer selected (first option):', firstOption.textContent?.trim())
+    return 1
+  }
+
+  console.log('[ZSP] No payer options found for:', insuranceCompany)
+  return 0
+}
+
 async function fillInsurance(): Promise<void> {
   const client = await getClient()
   if (!client) {
@@ -246,38 +381,36 @@ async function fillInsurance(): Promise<void> {
 
   let filled = 0
 
-  // Payer/insurance company — typeahead search box
+  // Payer/insurance company — typeahead search box.
+  // SP's payer field is an Ember select-box. We may need to click the trigger first
+  // to reveal the search input.
   if (client.insuranceCompany) {
-    const payerInput = document.querySelector('.select-box__input[role="searchbox"]') as HTMLInputElement
-    if (payerInput) {
-      payerInput.focus()
-      fillField('.select-box__input[role="searchbox"]', client.insuranceCompany)
-      await new Promise(r => setTimeout(r, 800))
-      const options = document.querySelectorAll('.ember-power-select-option, .select-kit-row, [role="option"]')
-      for (const opt of Array.from(options)) {
-        if (opt.textContent?.trim().toLowerCase().includes(client.insuranceCompany.toLowerCase())) {
-          ;(opt as HTMLElement).click()
-          filled++
-          break
-        }
-      }
-    } else {
-      // Fallback to standard input
-      if (tryFill(['input[name="insurance_company"]', 'input[name*="payer"]'], client.insuranceCompany)) filled++
-    }
+    filled += await fillPayerTypeahead(client.insuranceCompany)
   }
 
-  // Member ID
-  if (tryFill(['input#memberId[name="memberId"]', 'input[name="member_id"]', 'input[name*="member"]'], client.memberId)) filled++
+  // Member ID — SP uses input#memberId or input near a "Member ID" label
+  if (tryFill([
+    'input#memberId', 'input[name="memberId"]', 'input[name="member_id"]',
+    'input[name*="member" i]', 'input[placeholder*="Member" i]'
+  ], client.memberId)) filled++
 
   // Group number
-  if (tryFill(['input[name="group_number"]', 'input[name*="group"]', 'input[placeholder*="Group"]'], client.groupNumber)) filled++
+  if (tryFill([
+    'input[name="groupNumber"]', 'input[name="group_number"]', 'input#groupNumber',
+    'input[name*="group" i]', 'input[placeholder*="Group" i]'
+  ], client.groupNumber)) filled++
 
   // Subscriber name
-  if (tryFill(['input[name="subscriber_name"]', 'input[name*="insured"]', 'input[placeholder*="Subscriber"]'], client.subscriberName)) filled++
+  if (tryFill([
+    'input[name="subscriberName"]', 'input[name="subscriber_name"]',
+    'input[name*="subscriber" i]', 'input[name*="insured" i]', 'input[placeholder*="Subscriber" i]'
+  ], client.subscriberName)) filled++
 
   // Copay
-  if (tryFill(['input[name="copay"]', 'input[name*="copay"]', 'input[placeholder*="Copay"]'], client.copay)) filled++
+  if (tryFill([
+    'input[name="copay"]', 'input#copay',
+    'input[name*="copay" i]', 'input[placeholder*="Copay" i]'
+  ], client.copay)) filled++
 
   // Insurance card images — upload via file input if we have base64 data
   if (client.insuranceCardFront) {
@@ -374,25 +507,16 @@ async function fillAppointment(): Promise<void> {
     if (tryFill(['input[name="startTime"]', 'input[name="time"]'], client.appointmentTime)) filled++
   }
 
-  // Location — typeahead, use preference
+  // Location/Office — native <select id="new-client-office" name="office">
   const prefs = await getPreferences()
-  const locationLabel = document.querySelector('.typeahead-label') as HTMLElement
-  if (locationLabel && prefs.defaultLocation) {
-    locationLabel.click()
-    await new Promise(r => setTimeout(r, 300))
-    const typeaheadInput = document.querySelector('.ember-power-select-search-input, input[placeholder*="location" i], input[placeholder*="search" i]') as HTMLInputElement
-    if (typeaheadInput) {
-      // Use first word of location for search
-      const searchTerm = prefs.defaultLocation.split(' ')[0]
-      fillField('input.ember-power-select-search-input, input[placeholder*="location" i], input[placeholder*="search" i]', searchTerm)
-      await new Promise(r => setTimeout(r, 500))
-      const options = document.querySelectorAll('.ember-power-select-option, [role="option"]')
-      for (const opt of Array.from(options)) {
-        if (opt.textContent?.trim().toLowerCase().includes(prefs.defaultLocation.toLowerCase())) {
-          ;(opt as HTMLElement).click()
-          filled++
-          break
-        }
+  const officeSelect = document.querySelector('select#new-client-office, select[name="office"]') as HTMLSelectElement
+  if (officeSelect && prefs.defaultLocation) {
+    for (const option of Array.from(officeSelect.options)) {
+      if (option.text.trim().toLowerCase() === prefs.defaultLocation.toLowerCase()) {
+        officeSelect.value = option.value
+        officeSelect.dispatchEvent(new Event('change', { bubbles: true }))
+        filled++
+        break
       }
     }
   }
@@ -425,37 +549,59 @@ async function fillAppointment(): Promise<void> {
 async function setupRecurringAppointment(prefs: ProviderPreferences): Promise<number> {
   let filled = 0
 
-  const recurringToggle = document.querySelector('input#recurring-toggle[name="recurringToggle"]') as HTMLInputElement
+  // Find recurring toggle — try multiple selectors since SP may use different names
+  const recurringToggle = document.querySelector(
+    'input#recurring-toggle, input[name="recurringToggle"], input[name="recurring"], input[type="checkbox"][id*="recurring"]'
+  ) as HTMLInputElement
+
   if (!recurringToggle) {
-    console.log('[ZSP] Recurring toggle not found')
-    return 0
-  }
-
-  if (!recurringToggle.checked) {
-    recurringToggle.click()
+    // Also try a toggle switch component (Ember-style)
+    const toggleLabel = Array.from(document.querySelectorAll('label, .toggle-label, [class*="toggle"]'))
+      .find(el => el.textContent?.trim().toLowerCase().includes('recurring'))
+    if (toggleLabel) {
+      ;(toggleLabel as HTMLElement).click()
+      filled++
+      await new Promise(r => setTimeout(r, 600))
+    } else {
+      console.log('[ZSP] Recurring toggle not found')
+      return 0
+    }
+  } else if (!recurringToggle.checked) {
+    // Click the label if available (Ember toggles often need label click)
+    const label = recurringToggle.closest('label') || document.querySelector(`label[for="${recurringToggle.id}"]`)
+    if (label) {
+      ;(label as HTMLElement).click()
+    } else {
+      recurringToggle.click()
+    }
     filled++
-    await new Promise(r => setTimeout(r, 500))
+    await new Promise(r => setTimeout(r, 600))
   }
 
-  // Set follow-up CPT if a recurring code select appears
-  const codeSelect = document.querySelector('select[name="code"]') as HTMLSelectElement
-  if (codeSelect && prefs.followUpCPT) {
-    // The same code select may now need the follow-up CPT for recurring
-    // SP might use the same select or a separate one — try both
-    const recurringCode = document.querySelector('select[name="recurringCode"], select[name="recurring_code"]') as HTMLSelectElement
-    const targetSelect = recurringCode || codeSelect
-    for (const option of Array.from(targetSelect.options)) {
-      if (option.value === prefs.followUpCPT) {
-        targetSelect.value = option.value
-        targetSelect.dispatchEvent(new Event('change', { bubbles: true }))
-        filled++
-        break
+  // After toggling, SP may render additional fields for the recurring series.
+  // Look for a separate code select for recurring appointments first, then fall back
+  // to all code selects on the page.
+  if (prefs.followUpCPT) {
+    const allCodeSelects = document.querySelectorAll('select[name="code"], select[name="recurringCode"], select[name="recurring_code"], select[name*="cpt" i]')
+    // If there are 2+ code selects, the second one is likely the recurring code
+    const targetSelect = allCodeSelects.length > 1
+      ? allCodeSelects[allCodeSelects.length - 1] as HTMLSelectElement
+      : allCodeSelects[0] as HTMLSelectElement
+
+    if (targetSelect) {
+      for (const option of Array.from(targetSelect.options)) {
+        if (option.value === prefs.followUpCPT || option.text.includes(prefs.followUpCPT)) {
+          targetSelect.value = option.value
+          targetSelect.dispatchEvent(new Event('change', { bubbles: true }))
+          filled++
+          break
+        }
       }
     }
   }
 
   // Set frequency to weekly if available
-  const freqSelect = document.querySelector('select[name="frequency"], select[name="recurrenceFrequency"]') as HTMLSelectElement
+  const freqSelect = document.querySelector('select[name="frequency"], select[name="recurrenceFrequency"], select[name*="repeat" i]') as HTMLSelectElement
   if (freqSelect) {
     for (const option of Array.from(freqSelect.options)) {
       if (option.text.toLowerCase().includes('week')) {
@@ -543,10 +689,16 @@ function detectAndInject(): void {
     )
   }
 
+  // Insurance form — detect by member ID input, payer select, or dropzone for card uploads
+  const insuranceForm = document.querySelector('input[name="memberId"], input[name*="member"], .dropzone-inner, .select-box__input[role="searchbox"]')
+  if (insuranceForm && !document.getElementById('zsp-insurance-btn')) {
+    injectButton('Fill Insurance from ZocDoc', fillInsurance, { id: 'zsp-insurance-btn', position: 'bottom-left-high' })
+  }
+
   // Appointment form — detect by startTime input or CPT code select
   const apptForm = document.querySelector('input[name="startTime"], select[name="code"]')
   if (apptForm && !document.getElementById('zsp-appt-btn')) {
-    injectButton('Fill Appointment from ZocDoc', fillAppointment, { id: 'zsp-appt-btn', position: 'bottom-left-high' })
+    injectButton('Fill Appointment from ZocDoc', fillAppointment, { id: 'zsp-appt-btn', position: 'bottom-left-higher' })
   }
 
   // Always have a floating VOB button available
@@ -562,9 +714,11 @@ function watchForForms(): void {
       // Check if we need to inject (form appeared) or clean up (form disappeared)
       const hasClientForm = !!document.querySelector('input[name="firstName"]')
       const hasClientBtn = !!document.getElementById('zsp-fill-btn')
+      const hasInsuranceForm = !!document.querySelector('input[name="memberId"], input[name*="member"], .dropzone-inner')
+      const hasInsuranceBtn = !!document.getElementById('zsp-insurance-btn')
       const hasApptForm = !!document.querySelector('input[name="startTime"], select[name="code"]')
       const hasApptBtn = !!document.getElementById('zsp-appt-btn')
-      if ((hasClientForm && !hasClientBtn) || (hasApptForm && !hasApptBtn)) {
+      if ((hasClientForm && !hasClientBtn) || (hasInsuranceForm && !hasInsuranceBtn) || (hasApptForm && !hasApptBtn)) {
         detectAndInject()
       }
     }, 500)

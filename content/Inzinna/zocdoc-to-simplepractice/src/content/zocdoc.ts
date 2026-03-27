@@ -119,9 +119,12 @@ async function captureClient(): Promise<void> {
       }
     }
 
-    // Insurance card images
+    // Insurance card images — ZocDoc shows download buttons (data-test="download-button").
+    // The images themselves may be behind CORS, so we also try <img> tags as fallback.
     let cardFront = ''
     let cardBack = ''
+
+    // Try direct img src first
     const frontSrc = getImgSrc('[data-test="image-front"]')
     const backSrc = getImgSrc('[data-test="image-back"]')
     if (frontSrc) {
@@ -129,6 +132,26 @@ async function captureClient(): Promise<void> {
     }
     if (backSrc) {
       try { cardBack = await imageToBase64(backSrc) } catch { /* CORS */ }
+    }
+
+    // If img approach failed, try to get URLs from download buttons
+    if (!cardFront || !cardBack) {
+      const downloadBtns = document.querySelectorAll('button[data-test="download-button"]')
+      // Download buttons may have a parent <a> with href, or be near an img
+      for (const btn of Array.from(downloadBtns)) {
+        const container = btn.closest('[class*="card"], [class*="image"], [class*="insurance"]')
+        if (container) {
+          const img = container.querySelector('img')
+          if (img?.src) {
+            const isBack = container.textContent?.toLowerCase().includes('back') ?? false
+            if (isBack && !cardBack) {
+              try { cardBack = await imageToBase64(img.src) } catch { /* CORS */ }
+            } else if (!cardFront) {
+              try { cardFront = await imageToBase64(img.src) } catch { /* CORS */ }
+            }
+          }
+        }
+      }
     }
 
     // Insurance info — the insurance section shows carrier name in network-status area

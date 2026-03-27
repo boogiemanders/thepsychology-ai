@@ -44,7 +44,7 @@ async function populateSettingsForm(): Promise<void> {
   const prefs = await getPreferences()
   ;(document.getElementById('pref-firstName') as HTMLInputElement).value = prefs.providerFirstName
   ;(document.getElementById('pref-lastName') as HTMLInputElement).value = prefs.providerLastName
-  ;(document.getElementById('pref-location') as HTMLInputElement).value = prefs.defaultLocation
+  ;(document.getElementById('pref-location') as HTMLSelectElement).value = prefs.defaultLocation
   ;(document.getElementById('pref-firstCPT') as HTMLInputElement).value = prefs.firstVisitCPT
   ;(document.getElementById('pref-followUpCPT') as HTMLInputElement).value = prefs.followUpCPT
   ;(document.getElementById('pref-vobTo') as HTMLInputElement).value = prefs.vobTo.join(', ')
@@ -56,7 +56,7 @@ function readSettingsForm(): ProviderPreferences {
   return {
     providerFirstName: (document.getElementById('pref-firstName') as HTMLInputElement).value.trim(),
     providerLastName: (document.getElementById('pref-lastName') as HTMLInputElement).value.trim(),
-    defaultLocation: (document.getElementById('pref-location') as HTMLInputElement).value.trim(),
+    defaultLocation: (document.getElementById('pref-location') as HTMLSelectElement).value,
     firstVisitCPT: (document.getElementById('pref-firstCPT') as HTMLInputElement).value.trim(),
     followUpCPT: (document.getElementById('pref-followUpCPT') as HTMLInputElement).value.trim(),
     vobTo: (document.getElementById('pref-vobTo') as HTMLInputElement).value.split(',').map(s => s.trim()).filter(Boolean),

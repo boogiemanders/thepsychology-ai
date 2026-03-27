@@ -4,7 +4,7 @@
 export function injectButton(
   label: string,
   onClick: () => void,
-  options?: { id?: string; position?: 'bottom-right' | 'bottom-left' | 'bottom-left-high' }
+  options?: { id?: string; position?: 'bottom-right' | 'bottom-left' | 'bottom-left-high' | 'bottom-left-higher' }
 ): HTMLButtonElement {
   const id = options?.id ?? 'zsp-action-btn'
 
@@ -23,6 +23,10 @@ export function injectButton(
     btn.style.right = 'auto'
     btn.style.left = '20px'
     btn.style.bottom = '70px'
+  } else if (options?.position === 'bottom-left-higher') {
+    btn.style.right = 'auto'
+    btn.style.left = '20px'
+    btn.style.bottom = '120px'
   }
   btn.addEventListener('click', (e) => {
     e.stopPropagation()
