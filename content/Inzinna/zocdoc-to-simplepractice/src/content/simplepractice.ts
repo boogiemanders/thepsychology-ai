@@ -240,6 +240,32 @@ async function fillAppointment(): Promise<void> {
 
   let filled = 0
 
+  // Client name — typeahead search box
+  const clientName = `${client.firstName} ${client.lastName}`.trim()
+  if (clientName) {
+    const typeaheadTrigger = document.querySelector('.typeahead-trigger') as HTMLElement
+    if (typeaheadTrigger) {
+      typeaheadTrigger.click()
+      await new Promise(r => setTimeout(r, 300))
+      // Find the search input that appears
+      const searchInput = document.querySelector('.ember-power-select-search-input, .select-kit-filter input, input[placeholder*="Search"]') as HTMLInputElement
+      if (searchInput) {
+        fillField('.ember-power-select-search-input, .select-kit-filter input, input[placeholder*="Search"]', client.lastName)
+        await new Promise(r => setTimeout(r, 800))
+        // Click the first matching option
+        const options = document.querySelectorAll('.ember-power-select-option, .select-kit-row, [role="option"]')
+        for (const opt of Array.from(options)) {
+          const text = opt.textContent?.trim().toLowerCase() ?? ''
+          if (text.includes(client.lastName.toLowerCase()) || text.includes(client.firstName.toLowerCase())) {
+            ;(opt as HTMLElement).click()
+            filled++
+            break
+          }
+        }
+      }
+    }
+  }
+
   // Date — input[name="startDate"]
   if (client.appointmentDate) {
     if (tryFill(['input[name="startDate"]', 'input[name="date"]'], client.appointmentDate)) filled++
