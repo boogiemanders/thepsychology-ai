@@ -44,3 +44,31 @@ export const DEFAULT_STATUS: CapturedClient['status'] = {
   insuranceAdded: false,
   vobEmailSent: false,
 }
+
+export interface ProviderPreferences {
+  providerFirstName: string
+  providerLastName: string
+  defaultLocation: string
+  firstVisitCPT: string
+  followUpCPT: string
+  vobTo: string[]
+  vobCc: string[]
+  vobSignature: string
+}
+
+export const DEFAULT_PREFERENCES: ProviderPreferences = {
+  providerFirstName: 'Anders',
+  providerLastName: 'Chan',
+  defaultLocation: 'Video Office',
+  firstVisitCPT: '90791',
+  followUpCPT: '90837',
+  vobTo: ['david@sosapartners.com', 'support@sosapartners.com'],
+  vobCc: ['greg@drinzinna.com', 'carlos@drinzinna.com'],
+  vobSignature: `Regards,
+Anders
+
+Anders H. Chan, PsyD (he/him)
+Postdoctoral Fellow
+DrAnders@DrInzinna.com
+1-516-226-0379`,
+}

@@ -1,5 +1,5 @@
-import { CapturedClient } from '../lib/types'
-import { getClient, updateStatus } from '../lib/storage'
+import { CapturedClient, ProviderPreferences } from '../lib/types'
+import { getClient, updateStatus, getPreferences } from '../lib/storage'
 import { openVobEmail } from '../lib/vob-email'
 import { injectButton, showToast, fillField, selectOptionByText } from './shared'
 
@@ -147,14 +147,17 @@ async function fillClientDemographics(): Promise<void> {
   }
 
   // Select "Insurance" billing type (radio button) — individual and group
+  // Ember uses aria-checked, so click the parent label to ensure state updates
   const insuranceRadio = document.querySelector('input[name="billingType"][value="Insurance"]') as HTMLInputElement
-  if (insuranceRadio && !insuranceRadio.checked) {
-    insuranceRadio.click()
+  if (insuranceRadio) {
+    const label = insuranceRadio.closest('label')
+    if (label) { label.click() } else { insuranceRadio.click() }
     filled++
   }
   const groupInsuranceRadio = document.querySelector('input[name="billingTypeGroupAppt"][value="Insurance"]') as HTMLInputElement
-  if (groupInsuranceRadio && !groupInsuranceRadio.checked) {
-    groupInsuranceRadio.click()
+  if (groupInsuranceRadio) {
+    const label = groupInsuranceRadio.closest('label')
+    if (label) { label.click() } else { groupInsuranceRadio.click() }
     filled++
   }
 
@@ -184,16 +187,41 @@ async function fillClientDemographics(): Promise<void> {
     }
   }
 
-  // Set primary clinician to "Anders Chan"
+  // Set primary clinician from preferences
+  const prefs = await getPreferences()
   const clinicianSelect = document.querySelector('select[name="clinician"], select#new-client-clinician') as HTMLSelectElement
   if (clinicianSelect) {
     for (const option of Array.from(clinicianSelect.options)) {
-      if (option.text.includes('Anders') || option.text.includes('Chan')) {
+      if (option.text.includes(prefs.providerFirstName) || option.text.includes(prefs.providerLastName)) {
         clinicianSelect.value = option.value
         clinicianSelect.dispatchEvent(new Event('change', { bubbles: true }))
         filled++
         break
       }
+    }
+  }
+
+  // Referred by — typeahead, set to "Zocdoc"
+  const referralTriggers = document.querySelectorAll('.typeahead-trigger')
+  for (const trigger of Array.from(referralTriggers)) {
+    const placeholder = trigger.querySelector('.placeholder')
+    if (placeholder?.textContent?.trim() === 'Select') {
+      ;(trigger as HTMLElement).click()
+      await new Promise(r => setTimeout(r, 300))
+      const searchInput = document.querySelector('.ember-power-select-search-input') as HTMLInputElement
+      if (searchInput) {
+        fillField('.ember-power-select-search-input', 'Zocdoc')
+        await new Promise(r => setTimeout(r, 500))
+        const options = document.querySelectorAll('.ember-power-select-option, [role="option"]')
+        for (const opt of Array.from(options)) {
+          if (opt.textContent?.trim().toLowerCase().includes('zocdoc')) {
+            ;(opt as HTMLElement).click()
+            filled++
+            break
+          }
+        }
+      }
+      break
     }
   }
 
@@ -221,14 +249,87 @@ async function fillInsurance(): Promise<void> {
 
   let filled = 0
 
-  if (tryFill(['input[name="insurance_company"]', 'input[name*="payer"]', 'input[placeholder*="Insurance"]'], client.insuranceCompany)) filled++
-  if (tryFill(['input[name="member_id"]', 'input[name*="member"]', 'input[placeholder*="Member"]'], client.memberId)) filled++
+  // Payer/insurance company — typeahead search box
+  if (client.insuranceCompany) {
+    const payerInput = document.querySelector('.select-box__input[role="searchbox"]') as HTMLInputElement
+    if (payerInput) {
+      payerInput.focus()
+      fillField('.select-box__input[role="searchbox"]', client.insuranceCompany)
+      await new Promise(r => setTimeout(r, 800))
+      const options = document.querySelectorAll('.ember-power-select-option, .select-kit-row, [role="option"]')
+      for (const opt of Array.from(options)) {
+        if (opt.textContent?.trim().toLowerCase().includes(client.insuranceCompany.toLowerCase())) {
+          ;(opt as HTMLElement).click()
+          filled++
+          break
+        }
+      }
+    } else {
+      // Fallback to standard input
+      if (tryFill(['input[name="insurance_company"]', 'input[name*="payer"]'], client.insuranceCompany)) filled++
+    }
+  }
+
+  // Member ID
+  if (tryFill(['input#memberId[name="memberId"]', 'input[name="member_id"]', 'input[name*="member"]'], client.memberId)) filled++
+
+  // Group number
   if (tryFill(['input[name="group_number"]', 'input[name*="group"]', 'input[placeholder*="Group"]'], client.groupNumber)) filled++
+
+  // Subscriber name
   if (tryFill(['input[name="subscriber_name"]', 'input[name*="insured"]', 'input[placeholder*="Subscriber"]'], client.subscriberName)) filled++
+
+  // Copay
   if (tryFill(['input[name="copay"]', 'input[name*="copay"]', 'input[placeholder*="Copay"]'], client.copay)) filled++
+
+  // Insurance card images — upload via file input if we have base64 data
+  if (client.insuranceCardFront) {
+    filled += await uploadInsuranceCard(client.insuranceCardFront, 'front')
+  }
+  if (client.insuranceCardBack) {
+    filled += await uploadInsuranceCard(client.insuranceCardBack, 'back')
+  }
 
   await updateStatus({ insuranceAdded: true })
   showToast(`Filled ${filled} insurance fields`, 'success')
+}
+
+async function uploadInsuranceCard(base64Data: string, side: 'front' | 'back'): Promise<number> {
+  try {
+    // Find the dropzone for front or back card
+    const dropzones = document.querySelectorAll('.dropzone-inner')
+    let targetInput: HTMLInputElement | null = null
+    for (const dz of Array.from(dropzones)) {
+      const heading = dz.querySelector('h5')
+      if (side === 'back' && heading?.textContent?.toLowerCase().includes('back')) {
+        targetInput = dz.querySelector('input[type="file"]')
+        break
+      }
+      if (side === 'front' && (!heading || !heading.textContent?.toLowerCase().includes('back'))) {
+        targetInput = dz.querySelector('input[type="file"]')
+        break
+      }
+    }
+
+    if (!targetInput || !base64Data) return 0
+
+    // Convert base64 data URL to File object
+    const response = await fetch(base64Data)
+    const blob = await response.blob()
+    const file = new File([blob], `insurance-card-${side}.png`, { type: 'image/png' })
+
+    // Create a DataTransfer to set files on the input
+    const dt = new DataTransfer()
+    dt.items.add(file)
+    targetInput.files = dt.files
+    targetInput.dispatchEvent(new Event('change', { bubbles: true }))
+
+    console.log(`[ZSP] Uploaded insurance card ${side}`)
+    return 1
+  } catch (err) {
+    console.error(`[ZSP] Failed to upload insurance card ${side}:`, err)
+    return 0
+  }
 }
 
 async function fillAppointment(): Promise<void> {
@@ -276,21 +377,21 @@ async function fillAppointment(): Promise<void> {
     if (tryFill(['input[name="startTime"]', 'input[name="time"]'], client.appointmentTime)) filled++
   }
 
-  // Location — typeahead with class "typeahead-label", set to "Video Office"
-  // Click the current location label to open the typeahead, then find and click "Video Office"
+  // Location — typeahead, use preference
+  const prefs = await getPreferences()
   const locationLabel = document.querySelector('.typeahead-label') as HTMLElement
-  if (locationLabel) {
+  if (locationLabel && prefs.defaultLocation) {
     locationLabel.click()
     await new Promise(r => setTimeout(r, 300))
-    // Look for a typeahead input that appeared
     const typeaheadInput = document.querySelector('.ember-power-select-search-input, input[placeholder*="location" i], input[placeholder*="search" i]') as HTMLInputElement
     if (typeaheadInput) {
-      fillField('input.ember-power-select-search-input, input[placeholder*="location" i], input[placeholder*="search" i]', 'Video')
+      // Use first word of location for search
+      const searchTerm = prefs.defaultLocation.split(' ')[0]
+      fillField('input.ember-power-select-search-input, input[placeholder*="location" i], input[placeholder*="search" i]', searchTerm)
       await new Promise(r => setTimeout(r, 500))
-      // Click the matching option
       const options = document.querySelectorAll('.ember-power-select-option, [role="option"]')
       for (const opt of Array.from(options)) {
-        if (opt.textContent?.trim().toLowerCase().includes('video office')) {
+        if (opt.textContent?.trim().toLowerCase().includes(prefs.defaultLocation.toLowerCase())) {
           ;(opt as HTMLElement).click()
           filled++
           break
@@ -299,13 +400,16 @@ async function fillAppointment(): Promise<void> {
     }
   }
 
-  // CPT code — native <select name="code">, set to 90791
+  // CPT code — native <select name="code">, use first-visit CPT from preferences
   const codeSelect = document.querySelector('select[name="code"]') as HTMLSelectElement
-  if (codeSelect) {
-    codeSelect.value = '90791'
+  if (codeSelect && prefs.firstVisitCPT) {
+    codeSelect.value = prefs.firstVisitCPT
     codeSelect.dispatchEvent(new Event('change', { bubbles: true }))
     filled++
   }
+
+  // Recurring appointment — toggle on, set weekly with follow-up CPT
+  filled += await setupRecurringAppointment(prefs)
 
   // Notes
   const notes = [
@@ -321,6 +425,55 @@ async function fillAppointment(): Promise<void> {
   showToast(`Filled ${filled} appointment fields`, 'success')
 }
 
+async function setupRecurringAppointment(prefs: ProviderPreferences): Promise<number> {
+  let filled = 0
+
+  const recurringToggle = document.querySelector('input#recurring-toggle[name="recurringToggle"]') as HTMLInputElement
+  if (!recurringToggle) {
+    console.log('[ZSP] Recurring toggle not found')
+    return 0
+  }
+
+  if (!recurringToggle.checked) {
+    recurringToggle.click()
+    filled++
+    await new Promise(r => setTimeout(r, 500))
+  }
+
+  // Set follow-up CPT if a recurring code select appears
+  const codeSelect = document.querySelector('select[name="code"]') as HTMLSelectElement
+  if (codeSelect && prefs.followUpCPT) {
+    // The same code select may now need the follow-up CPT for recurring
+    // SP might use the same select or a separate one — try both
+    const recurringCode = document.querySelector('select[name="recurringCode"], select[name="recurring_code"]') as HTMLSelectElement
+    const targetSelect = recurringCode || codeSelect
+    for (const option of Array.from(targetSelect.options)) {
+      if (option.value === prefs.followUpCPT) {
+        targetSelect.value = option.value
+        targetSelect.dispatchEvent(new Event('change', { bubbles: true }))
+        filled++
+        break
+      }
+    }
+  }
+
+  // Set frequency to weekly if available
+  const freqSelect = document.querySelector('select[name="frequency"], select[name="recurrenceFrequency"]') as HTMLSelectElement
+  if (freqSelect) {
+    for (const option of Array.from(freqSelect.options)) {
+      if (option.text.toLowerCase().includes('week')) {
+        freqSelect.value = option.value
+        freqSelect.dispatchEvent(new Event('change', { bubbles: true }))
+        filled++
+        break
+      }
+    }
+  }
+
+  console.log('[ZSP] Recurring appointment setup:', { filled })
+  return filled
+}
+
 async function sendVobEmail(): Promise<void> {
   try {
     const client = await getClient()
@@ -329,7 +482,7 @@ async function sendVobEmail(): Promise<void> {
       return
     }
 
-    openVobEmail(client)
+    await openVobEmail(client)
     await updateStatus({ vobEmailSent: true })
     showToast('VOB email opened in Gmail', 'success')
   } catch (err) {

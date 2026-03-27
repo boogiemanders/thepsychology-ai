@@ -1,15 +1,5 @@
 import { CapturedClient } from './types'
-
-const VOB_TO = ['david@sosapartners.com', 'support@sosapartners.com']
-const VOB_CC = ['greg@drinzinna.com', 'carlos@drinzinna.com']
-
-const SIGNATURE = `Regards,
-Anders
-
-Anders H. Chan, PsyD (he/him)
-Postdoctoral Fellow
-DrAnders@DrInzinna.com
-1-516-226-0379`
+import { getPreferences } from './storage'
 
 function abbreviateName(name: string): string {
   return name.trim().substring(0, 3)
@@ -62,7 +52,8 @@ export function buildVobSubject(client: CapturedClient): string {
   return `VOB – Inzinna - ${first3} ${last3}`
 }
 
-export function buildVobBody(client: CapturedClient): string {
+export async function buildVobBody(client: CapturedClient): Promise<string> {
+  const prefs = await getPreferences()
   const first3 = abbreviateName(client.firstName)
   const last3 = abbreviateName(client.lastName)
   const date = formatDateShort(client.appointmentDate)
@@ -74,16 +65,16 @@ New pt submitted:
 
 ${first3} ${last3} ${date} ${time}
 
-${SIGNATURE}`
+${prefs.vobSignature}`
 }
 
-export function openVobEmail(client: CapturedClient): void {
+export async function openVobEmail(client: CapturedClient): Promise<void> {
+  const prefs = await getPreferences()
   const subject = encodeURIComponent(buildVobSubject(client))
-  const body = encodeURIComponent(buildVobBody(client))
-  const to = VOB_TO.join(',')
-  const cc = VOB_CC.join(',')
+  const body = encodeURIComponent(await buildVobBody(client))
+  const to = prefs.vobTo.join(',')
+  const cc = prefs.vobCc.join(',')
 
-  // Try Gmail compose first, falls back to mailto
   const gmailUrl = `https://mail.google.com/mail/?view=cm&to=${to}&cc=${cc}&su=${subject}&body=${body}`
   window.open(gmailUrl, '_blank')
 }
