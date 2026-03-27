@@ -201,24 +201,21 @@ async function fillClientDemographics(): Promise<void> {
     }
   }
 
-  // Referred by — typeahead, set to "Zocdoc"
+  // Referred by — Ember select-box, click trigger then pick "Zoc Doc"
   const referralTriggers = document.querySelectorAll('.typeahead-trigger')
   for (const trigger of Array.from(referralTriggers)) {
     const placeholder = trigger.querySelector('.placeholder')
     if (placeholder?.textContent?.trim() === 'Select') {
       ;(trigger as HTMLElement).click()
-      await new Promise(r => setTimeout(r, 300))
-      const searchInput = document.querySelector('.ember-power-select-search-input') as HTMLInputElement
-      if (searchInput) {
-        fillField('.ember-power-select-search-input', 'Zocdoc')
-        await new Promise(r => setTimeout(r, 500))
-        const options = document.querySelectorAll('.ember-power-select-option, [role="option"]')
-        for (const opt of Array.from(options)) {
-          if (opt.textContent?.trim().toLowerCase().includes('zocdoc')) {
-            ;(opt as HTMLElement).click()
-            filled++
-            break
-          }
+      await new Promise(r => setTimeout(r, 400))
+      // Look for select-box options or power-select options
+      const options = document.querySelectorAll('.select-box__option[role="option"], .ember-power-select-option, [role="option"]')
+      for (const opt of Array.from(options)) {
+        if (opt.textContent?.trim().toLowerCase().includes('zoc doc') ||
+            opt.textContent?.trim().toLowerCase().includes('zocdoc')) {
+          ;(opt as HTMLElement).click()
+          filled++
+          break
         }
       }
       break
