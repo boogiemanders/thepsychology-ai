@@ -9,19 +9,10 @@ const isWatch = process.argv.includes('--watch')
 const entryPoints = [
   'src/content/zocdoc.ts',
   'src/content/simplepractice.ts',
+  'src/content/gmail.ts',
   'src/background/service-worker.ts',
   'src/popup/popup.ts',
 ]
-
-const buildOptions = {
-  entryPoints,
-  bundle: true,
-  outdir: 'dist',
-  format: 'iife',
-  target: 'chrome120',
-  sourcemap: true,
-  logLevel: 'info',
-}
 
 // Copy static files to dist
 function copyStatic() {
@@ -34,13 +25,31 @@ function copyStatic() {
   }
 }
 
+const buildOptions = {
+  entryPoints,
+  bundle: true,
+  outdir: 'dist',
+  format: 'iife',
+  target: 'chrome120',
+  sourcemap: true,
+  logLevel: 'info',
+  plugins: [{
+    name: 'copy-static',
+    setup(build) {
+      build.onEnd((result) => {
+        if (result.errors.length === 0) {
+          copyStatic()
+        }
+      })
+    },
+  }],
+}
+
 if (isWatch) {
   const ctx = await esbuild.context(buildOptions)
   await ctx.watch()
-  copyStatic()
   console.log('Watching for changes...')
 } else {
   await esbuild.build(buildOptions)
-  copyStatic()
   console.log('Build complete.')
 }

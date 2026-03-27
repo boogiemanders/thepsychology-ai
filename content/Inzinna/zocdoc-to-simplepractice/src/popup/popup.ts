@@ -1,5 +1,5 @@
 import { getClient, clearClient, updateStatus, getPreferences, savePreferences, hasPreferences } from '../lib/storage'
-import { ProviderPreferences } from '../lib/types'
+import { ProviderPreferences, DEFAULT_PREFERENCES } from '../lib/types'
 import { openVobEmail } from '../lib/vob-email'
 
 function formatDate(iso: string): string {
@@ -57,8 +57,8 @@ function readSettingsForm(): ProviderPreferences {
     providerFirstName: (document.getElementById('pref-firstName') as HTMLInputElement).value.trim(),
     providerLastName: (document.getElementById('pref-lastName') as HTMLInputElement).value.trim(),
     defaultLocation: (document.getElementById('pref-location') as HTMLSelectElement).value,
-    firstVisitCPT: (document.getElementById('pref-firstCPT') as HTMLInputElement).value.trim(),
-    followUpCPT: (document.getElementById('pref-followUpCPT') as HTMLInputElement).value.trim(),
+    firstVisitCPT: (document.getElementById('pref-firstCPT') as HTMLInputElement).value.trim() || DEFAULT_PREFERENCES.firstVisitCPT,
+    followUpCPT: (document.getElementById('pref-followUpCPT') as HTMLInputElement).value.trim() || DEFAULT_PREFERENCES.followUpCPT,
     vobTo: (document.getElementById('pref-vobTo') as HTMLInputElement).value.split(',').map(s => s.trim()).filter(Boolean),
     vobCc: (document.getElementById('pref-vobCc') as HTMLInputElement).value.split(',').map(s => s.trim()).filter(Boolean),
     vobSignature: (document.getElementById('pref-signature') as HTMLTextAreaElement).value,

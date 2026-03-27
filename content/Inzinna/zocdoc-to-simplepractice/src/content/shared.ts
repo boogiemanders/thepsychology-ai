@@ -4,7 +4,7 @@
 export function injectButton(
   label: string,
   onClick: () => void,
-  options?: { id?: string; position?: 'bottom-right' | 'bottom-left' | 'bottom-left-high' | 'bottom-left-higher' }
+  options?: { id?: string; position?: 'bottom-right' | 'bottom-right-high' | 'bottom-left' | 'bottom-left-high' | 'bottom-left-higher' }
 ): HTMLButtonElement {
   const id = options?.id ?? 'zsp-action-btn'
 
@@ -16,7 +16,9 @@ export function injectButton(
   btn.id = id
   btn.textContent = label
   btn.className = 'zsp-floating-btn'
-  if (options?.position === 'bottom-left') {
+  if (options?.position === 'bottom-right-high') {
+    btn.style.bottom = '90px'
+  } else if (options?.position === 'bottom-left') {
     btn.style.right = 'auto'
     btn.style.left = '20px'
   } else if (options?.position === 'bottom-left-high') {
@@ -28,6 +30,11 @@ export function injectButton(
     btn.style.left = '20px'
     btn.style.bottom = '120px'
   }
+  btn.addEventListener('pointerdown', (e) => {
+    e.stopPropagation()
+    e.stopImmediatePropagation()
+    e.preventDefault()
+  }, true)
   btn.addEventListener('click', (e) => {
     e.stopPropagation()
     e.stopImmediatePropagation()
@@ -36,6 +43,23 @@ export function injectButton(
   }, true)
   document.body.appendChild(btn)
   return btn
+}
+
+export function isExtensionContextInvalidatedError(err: unknown): boolean {
+  if (!(err instanceof Error)) return false
+  return /Extension context invalidated|Cannot read properties of undefined \(reading 'local'\)|Cannot read properties of undefined \(reading 'session'\)/i
+    .test(err.message)
+}
+
+export function assertExtensionContext(): void {
+  if (
+    typeof chrome === 'undefined' ||
+    !chrome.runtime?.id ||
+    !chrome.storage ||
+    (!chrome.storage.session && !chrome.storage.local)
+  ) {
+    throw new Error('Extension context invalidated.')
+  }
 }
 
 /**
@@ -74,13 +98,14 @@ export function valueFrom(selector: string, root: Element | Document = document)
 }
 
 /**
- * Set a value on a form field and dispatch events so React picks it up.
+ * Set a value on an input/textarea element and dispatch the events SPA forms listen for.
  */
-export function fillField(selector: string, value: string, root: Element | Document = document): boolean {
-  const el = root.querySelector(selector) as HTMLInputElement | HTMLTextAreaElement | null
+export function fillTextLikeField(
+  el: HTMLInputElement | HTMLTextAreaElement | null,
+  value: string
+): boolean {
   if (!el || !value) return false
 
-  // Use React's internal value setter to bypass React's controlled component guard
   const nativeInputValueSetter = Object.getOwnPropertyDescriptor(
     window.HTMLInputElement.prototype, 'value'
   )?.set
@@ -101,6 +126,73 @@ export function fillField(selector: string, value: string, root: Element | Docum
   el.dispatchEvent(new Event('blur', { bubbles: true }))
 
   return true
+}
+
+/**
+ * Set a value on a form field selected from the DOM.
+ */
+export function fillField(selector: string, value: string, root: Element | Document = document): boolean {
+  const el = root.querySelector(selector) as HTMLInputElement | HTMLTextAreaElement | null
+  return fillTextLikeField(el, value)
+}
+
+/**
+ * Set text content on a contenteditable element and dispatch input events.
+ */
+export function fillContentEditableField(
+  el: HTMLElement | null,
+  value: string
+): boolean {
+  if (!el || !value) return false
+
+  el.focus()
+  el.innerHTML = ''
+
+  const lines = value.replace(/\r\n/g, '\n').split('\n')
+  for (const line of lines) {
+    const block = document.createElement('div')
+    if (line.length === 0) {
+      block.appendChild(document.createElement('br'))
+    } else {
+      block.textContent = line
+    }
+    el.appendChild(block)
+  }
+
+  el.dispatchEvent(new Event('input', { bubbles: true }))
+  el.dispatchEvent(new Event('change', { bubbles: true }))
+  el.dispatchEvent(new Event('blur', { bubbles: true }))
+  return true
+}
+
+/**
+ * Convert a blob into a base64 data URL.
+ */
+export async function blobToDataUrl(blob: Blob): Promise<string> {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader()
+    reader.onerror = () => reject(new Error('Failed to read blob'))
+    reader.onload = () => {
+      const result = reader.result
+      if (typeof result === 'string') {
+        resolve(result)
+        return
+      }
+      reject(new Error('Blob did not produce a string result'))
+    }
+    reader.readAsDataURL(blob)
+  })
+}
+
+/**
+ * Fetch a resource URL and convert it into a base64 data URL.
+ */
+export async function urlToBase64(resourceUrl: string): Promise<string> {
+  const response = await fetch(resourceUrl, { credentials: 'include' })
+  if (!response.ok) {
+    throw new Error(`Failed to fetch resource: ${response.status}`)
+  }
+  return blobToDataUrl(await response.blob())
 }
 
 /**

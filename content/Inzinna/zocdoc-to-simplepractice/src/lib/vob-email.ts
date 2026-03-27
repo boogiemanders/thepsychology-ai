@@ -1,5 +1,5 @@
 import { CapturedClient } from './types'
-import { getPreferences } from './storage'
+import { getPreferences, savePendingVobDraft } from './storage'
 
 function abbreviateName(name: string): string {
   return name.trim().substring(0, 3)
@@ -60,21 +60,26 @@ export async function buildVobBody(client: CapturedClient): Promise<string> {
   const time = formatTimeShort(client.appointmentTime)
 
   return `Hello,
-
-New pt submitted:
-
-${first3} ${last3} ${date} ${time}
+New pt submitted: ${first3} ${last3} ${date} ${time}
 
 ${prefs.vobSignature}`
 }
 
 export async function openVobEmail(client: CapturedClient): Promise<void> {
   const prefs = await getPreferences()
-  const subject = encodeURIComponent(buildVobSubject(client))
-  const body = encodeURIComponent(await buildVobBody(client))
+  const subject = buildVobSubject(client)
+  const body = await buildVobBody(client)
   const to = prefs.vobTo.join(',')
   const cc = prefs.vobCc.join(',')
 
-  const gmailUrl = `https://mail.google.com/mail/?view=cm&to=${to}&cc=${cc}&su=${subject}&body=${body}`
+  await savePendingVobDraft({
+    to: prefs.vobTo,
+    cc: prefs.vobCc,
+    subject,
+    body,
+    createdAt: new Date().toISOString(),
+  })
+
+  const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=${encodeURIComponent(to)}&cc=${encodeURIComponent(cc)}`
   window.open(gmailUrl, '_blank')
 }

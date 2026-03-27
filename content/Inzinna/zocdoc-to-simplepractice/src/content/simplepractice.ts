@@ -1,7 +1,15 @@
 import { CapturedClient, ProviderPreferences } from '../lib/types'
 import { getClient, updateStatus, getPreferences } from '../lib/storage'
 import { openVobEmail } from '../lib/vob-email'
-import { injectButton, showToast, fillField, selectOptionByText } from './shared'
+import {
+  injectButton,
+  showToast,
+  fillField,
+  fillTextLikeField,
+  selectOptionByText,
+  assertExtensionContext,
+  isExtensionContextInvalidatedError,
+} from './shared'
 
 /**
  * SimplePractice form field selectors — mapped from actual SP DOM.
@@ -22,6 +30,103 @@ function trySelect(selectors: string[], text: string): boolean {
     if (selectOptionByText(sel, text)) return true
   }
   return false
+}
+
+const wait = (ms: number): Promise<void> =>
+  new Promise((resolve) => window.setTimeout(resolve, ms))
+
+function normalizedText(value: string | null | undefined): string {
+  return (value ?? '').replace(/\s+/g, ' ').trim().toLowerCase()
+}
+
+function isVisible(el: Element): boolean {
+  return !(el instanceof HTMLElement) || el.offsetParent !== null || el.getClientRects().length > 0
+}
+
+function findFieldContainer(labelText: string): HTMLElement | null {
+  const target = normalizedText(labelText)
+  const labels = document.querySelectorAll('label, .form-label, .field-label, .spds-label, [class*="label"]')
+
+  for (const label of Array.from(labels)) {
+    if (!normalizedText(label.textContent).includes(target)) continue
+
+    const container =
+      label.closest('.form-group, .field-wrapper, [class*="field"], [class*="row"], [class*="group"]') ??
+      label.parentElement ??
+      label.nextElementSibling?.parentElement
+
+    if (container instanceof HTMLElement) {
+      return container
+    }
+  }
+
+  return null
+}
+
+function findFieldElement<T extends Element>(labelText: string, selector: string): T | null {
+  const container = findFieldContainer(labelText)
+  if (!container) return null
+  return container.querySelector(selector) as T | null
+}
+
+function findVisibleButtonByText(text: string): HTMLButtonElement | null {
+  const target = normalizedText(text)
+  const buttons = Array.from(document.querySelectorAll('button')).filter(isVisible)
+
+  for (const button of buttons) {
+    if (!(button instanceof HTMLButtonElement)) continue
+    if (normalizedText(button.textContent).includes(target)) {
+      return button
+    }
+  }
+
+  return null
+}
+
+function selectOptionInElement(select: HTMLSelectElement | null, valueOrText: string): boolean {
+  if (!select || !valueOrText) return false
+
+  const target = normalizedText(valueOrText)
+  for (const option of Array.from(select.options)) {
+    const optionValue = normalizedText(option.value)
+    const optionText = normalizedText(option.text)
+    if (
+      optionValue === target ||
+      optionText === target ||
+      optionValue.includes(target) ||
+      optionText.includes(target)
+    ) {
+      select.value = option.value
+      select.dispatchEvent(new Event('change', { bubbles: true }))
+      return true
+    }
+  }
+
+  return false
+}
+
+async function clickDropdownOption(
+  trigger: HTMLElement | null,
+  optionText: string,
+  optionSelector = '.select-box__option[role="option"], .ember-power-select-option, [role="option"], li[role="option"], button[role="option"]'
+): Promise<boolean> {
+  if (!trigger || !optionText) return false
+
+  trigger.click()
+  await wait(300)
+
+  const menuId = trigger.getAttribute('aria-controls')
+  const scope = menuId ? document.getElementById(menuId) ?? document : document
+  const options = Array.from(scope.querySelectorAll(optionSelector)).filter(isVisible)
+  const target = normalizedText(optionText)
+
+  const exact = options.find((opt) => normalizedText(opt.textContent) === target)
+  const partial = options.find((opt) => normalizedText(opt.textContent).includes(target))
+  const match = (exact ?? partial) as HTMLElement | undefined
+  if (!match) return false
+
+  match.click()
+  return true
 }
 
 /**
@@ -102,6 +207,48 @@ function getMonthName(num: number): string {
   return names[num] || ''
 }
 
+function formatDateForSp(date: string): string {
+  const cleaned = date.trim()
+  if (!cleaned) return ''
+
+  const isoMatch = cleaned.match(/^(\d{4})-(\d{1,2})-(\d{1,2})$/)
+  if (isoMatch) {
+    return `${Number(isoMatch[2])}/${Number(isoMatch[3])}/${isoMatch[1]}`
+  }
+
+  const slashMatch = cleaned.match(/^(\d{1,2})\/(\d{1,2})(?:\/(\d{2,4}))?$/)
+  if (slashMatch) {
+    const year = slashMatch[3]
+    return year
+      ? `${Number(slashMatch[1])}/${Number(slashMatch[2])}/${year.length === 2 ? `20${year}` : year}`
+      : `${Number(slashMatch[1])}/${Number(slashMatch[2])}`
+  }
+
+  const monthNames: Record<string, number> = {
+    jan: 1,
+    feb: 2,
+    mar: 3,
+    apr: 4,
+    may: 5,
+    jun: 6,
+    jul: 7,
+    aug: 8,
+    sep: 9,
+    oct: 10,
+    nov: 11,
+    dec: 12,
+  }
+  const namedMatch = cleaned.match(/([A-Za-z]+)\s+(\d{1,2})(?:,\s*(\d{4}))?$/)
+  if (namedMatch) {
+    const month = monthNames[namedMatch[1].slice(0, 3).toLowerCase()]
+    const day = Number(namedMatch[2])
+    const year = namedMatch[3]
+    if (month && day && year) return `${month}/${day}/${year}`
+  }
+
+  return cleaned
+}
+
 /**
  * Find and click the "Referred by" dropdown, then select "Zoc Doc".
  * SP's referral source is an Ember select-box. We identify it by:
@@ -115,59 +262,182 @@ function getMonthName(num: number): string {
  * span.placeholder "Select" inside. Clicking it opens options with role="option".
  */
 async function fillReferredBy(): Promise<boolean> {
-  // Target the exact Ember select-box trigger for "Referred by"
-  // It's a .select-box__selected-option.typeahead-trigger with placeholder "Select"
-  let targetTrigger: HTMLElement | null = null
-
-  // Strategy 1: Find by label text "Referred by" and get its sibling trigger
-  const allLabels = document.querySelectorAll('label, .form-label, .field-label, .spds-label, [class*="label"]')
-  for (const label of Array.from(allLabels)) {
-    if (label.textContent?.trim().toLowerCase().includes('referred by')) {
-      const parent = label.closest('.form-group, .field-wrapper, [class*="field"], [class*="row"]') || label.parentElement
-      if (parent) {
-        targetTrigger = parent.querySelector('.select-box__selected-option.typeahead-trigger, .typeahead-trigger') as HTMLElement
-      }
-      break
-    }
-  }
-
-  // Strategy 2: Find all select-box__selected-option.typeahead-trigger elements
-  // with placeholder "Select" — skip ones for clinician/office (those have name-based selects)
-  if (!targetTrigger) {
-    const triggers = document.querySelectorAll('.select-box__selected-option.typeahead-trigger')
-    for (const trigger of Array.from(triggers)) {
-      const placeholder = trigger.querySelector('.placeholder')
-      if (placeholder?.textContent?.trim() === 'Select') {
-        targetTrigger = trigger as HTMLElement
-        break
-      }
-    }
-  }
+  const targetTrigger =
+    findFieldElement<HTMLElement>('referred by', '.select-box__selected-option.typeahead-trigger, .typeahead-trigger, [role="combobox"]') ??
+    Array.from(document.querySelectorAll('.select-box__selected-option.typeahead-trigger'))
+      .find((trigger) => normalizedText(trigger.textContent) === 'select') as HTMLElement | undefined ??
+    null
 
   if (!targetTrigger) {
     console.log('[ZSP] Referred by trigger not found')
     return false
   }
 
-  targetTrigger.click()
-  await new Promise(r => setTimeout(r, 400))
-
-  // Look for "Zoc Doc" in the dropdown options
-  const options = document.querySelectorAll('.select-box__option[role="option"], .ember-power-select-option, [role="option"]')
-  for (const opt of Array.from(options)) {
-    const text = opt.textContent?.trim().toLowerCase() ?? ''
-    if (text.includes('zoc doc') || text.includes('zocdoc') || text === 'zoc doc') {
-      ;(opt as HTMLElement).click()
-      console.log('[ZSP] Set Referred by to Zoc Doc')
-      return true
-    }
+  if (await clickDropdownOption(targetTrigger, 'Zoc Doc')) {
+    console.log('[ZSP] Set Referred by to Zoc Doc')
+    return true
   }
 
   console.log('[ZSP] "Zoc Doc" option not found in referral dropdown')
   return false
 }
 
+async function fillStatusActive(): Promise<boolean> {
+  const trigger = findFieldElement<HTMLElement>('status', '.spds-input-dropdown-list-trigger, [aria-haspopup="listbox"]')
+  if (!trigger) {
+    console.log('[ZSP] Status dropdown not found')
+    return false
+  }
+
+  return clickDropdownOption(trigger, 'Active')
+}
+
+function enableReminderToggles(): number {
+  const toggles = new Set<HTMLInputElement>()
+  const directMatches = document.querySelectorAll(
+    'input[type="checkbox"][name*="remind" i], input[type="checkbox"][id*="remind" i]'
+  )
+  directMatches.forEach((toggle) => toggles.add(toggle as HTMLInputElement))
+
+  const reminderContainers = Array.from(document.querySelectorAll('section, fieldset, div, label'))
+    .filter((el) => normalizedText(el.textContent).includes('reminder'))
+
+  for (const container of reminderContainers) {
+    container.querySelectorAll('input[type="checkbox"]').forEach((toggle) => {
+      toggles.add(toggle as HTMLInputElement)
+    })
+  }
+
+  let enabled = 0
+  for (const toggle of toggles) {
+    if (toggle.checked) continue
+    const label = toggle.closest('label') ?? document.querySelector(`label[for="${toggle.id}"]`)
+    if (label instanceof HTMLElement) {
+      label.click()
+    } else {
+      toggle.click()
+    }
+    enabled++
+  }
+
+  return enabled
+}
+
+function buildAddressSearchText(address: CapturedClient['address']): string {
+  const parts = [address.street, address.city, address.state, address.zip]
+    .map((part) => part.trim())
+    .filter(Boolean)
+  return parts.join(', ')
+}
+
+function normalizeSexForSp(value: string | undefined): string {
+  const normalized = normalizedText(value)
+  if (normalized === 'male' || normalized === 'm') return 'Male'
+  if (normalized === 'female' || normalized === 'f') return 'Female'
+  return ''
+}
+
+async function trySelectAddressSuggestion(
+  input: HTMLInputElement,
+  query: string
+): Promise<boolean> {
+  input.focus()
+  fillTextLikeField(input, query)
+  await wait(800)
+
+  const options = Array.from(document.querySelectorAll(
+    '.select-box__option[role="option"], .ember-power-select-option, [role="option"], li[role="option"]'
+  )).filter(isVisible)
+
+  const target = normalizedText(query)
+  const exact = options.find((opt) => normalizedText(opt.textContent) === target)
+  const partial = options.find((opt) => normalizedText(opt.textContent).includes(target))
+  const first = options[0] as HTMLElement | undefined
+  const match = (exact ?? partial ?? first) as HTMLElement | undefined
+
+  if (match && !normalizedText(match.textContent).includes('start typing')) {
+    match.click()
+    return true
+  }
+
+  return input.value.trim().length > 0
+}
+
+async function fillClientAddress(address: CapturedClient['address']): Promise<number> {
+  const fullAddress = buildAddressSearchText(address)
+  if (!fullAddress) return 0
+
+  let addressInput = document.querySelector(
+    'input[id^="addressStreet_"][role="searchbox"], input[id^="addressStreet_"]'
+  ) as HTMLInputElement | null
+
+  if (!addressInput || !isVisible(addressInput)) {
+    const addAddressButton = document.querySelector(
+      'button.add-address, button.pill-button.add-address'
+    ) as HTMLButtonElement | null
+
+    if (addAddressButton && isVisible(addAddressButton)) {
+      addAddressButton.click()
+      await wait(300)
+      addressInput = document.querySelector(
+        'input[id^="addressStreet_"][role="searchbox"], input[id^="addressStreet_"], .select-box__input[role="searchbox"]'
+      ) as HTMLInputElement | null
+    }
+  }
+
+  if (!addressInput || !isVisible(addressInput)) {
+    const trigger =
+      findFieldElement<HTMLElement>('address', '.select-box__selected-option.typeahead-trigger, .typeahead-trigger, [role="combobox"]') ??
+      Array.from(document.querySelectorAll('.select-box__selected-option.typeahead-trigger'))
+        .find((el) => normalizedText(el.textContent).includes('search address')) as HTMLElement | undefined ??
+      null
+
+    if (trigger) {
+      trigger.click()
+      await wait(300)
+      addressInput = document.querySelector(
+        'input[id^="addressStreet_"][role="searchbox"], input[id^="addressStreet_"], .select-box__input[role="searchbox"]'
+      ) as HTMLInputElement | null
+    }
+  }
+
+  if (addressInput) {
+    if (await trySelectAddressSuggestion(addressInput, fullAddress)) return 1
+    if (address.street && address.street !== fullAddress) {
+      if (await trySelectAddressSuggestion(addressInput, address.street)) return 1
+    }
+  }
+
+  let filled = 0
+  if (tryFill([
+    'input[name="addressStreet"]',
+    'input[name="street"]',
+    'input[name*="addressStreet" i]',
+    'input[placeholder*="Street" i]',
+  ], address.street)) filled++
+  if (tryFill([
+    'input[name="city"]',
+    'input[name*="city" i]',
+    'input[placeholder*="City" i]',
+  ], address.city)) filled++
+  if (tryFill([
+    'input[name="state"]',
+    'input[name*="state" i]',
+    'input[placeholder*="State" i]',
+  ], address.state)) filled++
+  if (tryFill([
+    'input[name="zip"]',
+    'input[name="postalCode"]',
+    'input[name*="zip" i]',
+    'input[name*="postal" i]',
+    'input[placeholder*="ZIP" i]',
+  ], address.zip)) filled++
+
+  return filled
+}
+
 async function fillClientDemographics(): Promise<void> {
+  assertExtensionContext()
   const client = await getClient().catch((err: unknown) => {
     console.error('[ZSP] fillClientDemographics error:', err)
     showToast('Extension reloaded — please refresh this page.', 'error')
@@ -186,6 +456,14 @@ async function fillClientDemographics(): Promise<void> {
   // Last name
   if (tryFill(['input[name="lastName"]'], client.lastName)) filled++
 
+  const sexValue = normalizeSexForSp(client.sex)
+  if (sexValue && selectOptionInElement(
+    document.querySelector('select[name="sex"]') as HTMLSelectElement | null,
+    sexValue
+  )) {
+    filled++
+  }
+
   // DOB — three separate selects
   filled += fillDob(client.dob)
 
@@ -195,7 +473,7 @@ async function fillClientDemographics(): Promise<void> {
       .find(btn => btn.textContent?.trim().includes('Add email')) as HTMLElement | undefined
     if (addEmailBtn) {
       addEmailBtn.click()
-      await new Promise(r => setTimeout(r, 300))
+      await wait(300)
     }
     if (tryFill(['input[name="email"]', 'input[type="email"]', 'input[placeholder*="Email"]'], client.email)) filled++
   }
@@ -206,10 +484,12 @@ async function fillClientDemographics(): Promise<void> {
       .find(btn => btn.textContent?.trim().includes('Add phone')) as HTMLElement | undefined
     if (addPhoneBtn) {
       addPhoneBtn.click()
-      await new Promise(r => setTimeout(r, 300))
+      await wait(300)
     }
     if (tryFill(['input[name="phone"]', 'input[type="tel"]', 'input[placeholder*="Phone"]'], client.phone)) filled++
   }
+
+  filled += await fillClientAddress(client.address)
 
   // Select "Insurance" billing type (radio button) — individual and group
   // Ember uses aria-checked, so click the parent label to ensure state updates
@@ -226,31 +506,7 @@ async function fillClientDemographics(): Promise<void> {
     filled++
   }
 
-  // Set status to "Active" — SP uses Ember dropdown (spds-input-dropdown-list)
-  // Find the trigger button whose text says "Select" (the status dropdown)
-  const dropdownTriggers = document.querySelectorAll('.spds-input-dropdown-list-trigger')
-  for (const trigger of Array.from(dropdownTriggers)) {
-    const textEl = trigger.querySelector('.spds-input-dropdown-list-trigger-text-container')
-    if (textEl?.textContent?.trim() === 'Select' || textEl?.textContent?.trim() === '') {
-      // Click to open the dropdown
-      ;(trigger as HTMLElement).click()
-      // Wait for menu to appear, then click "Active"
-      await new Promise(r => setTimeout(r, 200))
-      const menuId = trigger.getAttribute('aria-controls')
-      const menu = menuId ? document.getElementById(menuId) : null
-      if (menu) {
-        const options = menu.querySelectorAll('[role="option"], li, button')
-        for (const opt of Array.from(options)) {
-          if (opt.textContent?.trim().toLowerCase() === 'active') {
-            ;(opt as HTMLElement).click()
-            filled++
-            break
-          }
-        }
-      }
-      break
-    }
-  }
+  if (await fillStatusActive()) filled++
 
   // Set primary clinician from preferences
   const prefs = await getPreferences()
@@ -266,6 +522,13 @@ async function fillClientDemographics(): Promise<void> {
     }
   }
 
+  if (selectOptionInElement(
+    document.querySelector('select#new-client-office, select[name="office"]') as HTMLSelectElement | null,
+    prefs.defaultLocation
+  )) {
+    filled++
+  }
+
   // Referred by — Ember select-box, find the referral source field specifically.
   // SP labels the field "Referred by" — look for a label or section heading first,
   // then find the adjacent typeahead/select trigger.
@@ -273,13 +536,7 @@ async function fillClientDemographics(): Promise<void> {
   if (referralFilled) filled++
 
   // Turn on reminder notifications — find toggle switches and enable them
-  const toggleSwitches = document.querySelectorAll('input[type="checkbox"][id*="toggle-switch"]') as NodeListOf<HTMLInputElement>
-  toggleSwitches.forEach((toggle) => {
-    if (!toggle.checked) {
-      toggle.click()
-      filled++
-    }
-  })
+  filled += enableReminderToggles()
 
   await updateStatus({ clientCreated: true })
   showToast(`Filled ${filled} fields for ${client.firstName} ${client.lastName}`, 'success')
@@ -293,35 +550,39 @@ async function fillClientDemographics(): Promise<void> {
  */
 async function fillPayerTypeahead(insuranceCompany: string): Promise<number> {
   // Try to find an existing search input first
-  let payerInput = document.querySelector('.select-box__input[role="searchbox"], input[placeholder*="payer" i], input[placeholder*="insurance" i]') as HTMLInputElement
+  let payerInput =
+    findFieldElement<HTMLInputElement>('payer', '.select-box__input[role="searchbox"], .ember-power-select-search-input, input[role="searchbox"]') ??
+    findFieldElement<HTMLInputElement>('insurance company', '.select-box__input[role="searchbox"], .ember-power-select-search-input, input[role="searchbox"]') ??
+    document.querySelector('.select-box__input[role="searchbox"], input[placeholder*="payer" i], input[placeholder*="insurance" i]') as HTMLInputElement
 
   // If not found, look for the payer trigger and click it to reveal the search
   if (!payerInput) {
-    // Find the payer section by label
-    const labels = document.querySelectorAll('label, .form-label, .spds-label, [class*="label"]')
-    for (const label of Array.from(labels)) {
-      const text = label.textContent?.trim().toLowerCase() ?? ''
-      if (text.includes('payer') || text.includes('insurance company') || text.includes('insurance plan')) {
-        const parent = label.closest('.form-group, .field-wrapper, [class*="field"], [class*="row"]') || label.parentElement
-        const trigger = parent?.querySelector('.select-box__trigger, .typeahead-trigger, .ember-power-select-trigger, [role="combobox"]') as HTMLElement
-        if (trigger) {
-          trigger.click()
-          await new Promise(r => setTimeout(r, 400))
-          payerInput = document.querySelector('.select-box__input[role="searchbox"], .ember-power-select-search-input, input[role="searchbox"]') as HTMLInputElement
-          break
-        }
-      }
+    const trigger =
+      findFieldElement<HTMLElement>('payer', '.select-box__trigger, .typeahead-trigger, .ember-power-select-trigger, [role="combobox"]') ??
+      findFieldElement<HTMLElement>('insurance company', '.select-box__trigger, .typeahead-trigger, .ember-power-select-trigger, [role="combobox"]') ??
+      findFieldElement<HTMLElement>('insurance plan', '.select-box__trigger, .typeahead-trigger, .ember-power-select-trigger, [role="combobox"]')
+    if (trigger) {
+      trigger.click()
+      await wait(400)
+      payerInput = document.querySelector('.select-box__input[role="searchbox"], .ember-power-select-search-input, input[role="searchbox"]') as HTMLInputElement
     }
   }
 
   // Still no input — try clicking any select-box trigger on the insurance page
   if (!payerInput) {
-    const trigger = document.querySelector('.select-box__trigger, .ember-power-select-trigger') as HTMLElement
+    const trigger =
+      findFieldElement<HTMLElement>('payer', '.select-box__trigger, .typeahead-trigger, .ember-power-select-trigger, [role="combobox"]') ??
+      findFieldElement<HTMLElement>('insurance company', '.select-box__trigger, .typeahead-trigger, .ember-power-select-trigger, [role="combobox"]') ??
+      document.querySelector('.select-box__trigger, .ember-power-select-trigger') as HTMLElement | null
     if (trigger) {
       trigger.click()
-      await new Promise(r => setTimeout(r, 400))
+      await wait(400)
       payerInput = document.querySelector('.select-box__input[role="searchbox"], .ember-power-select-search-input') as HTMLInputElement
     }
+  }
+
+  if (payerInput && !isVisible(payerInput)) {
+    payerInput = document.querySelector('.select-box__input[role="searchbox"], .ember-power-select-search-input, input[role="searchbox"]') as HTMLInputElement
   }
 
   if (!payerInput) {
@@ -333,15 +594,16 @@ async function fillPayerTypeahead(insuranceCompany: string): Promise<number> {
 
   // Type the insurance company name
   payerInput.focus()
-  fillField('.select-box__input[role="searchbox"], .ember-power-select-search-input, input[role="searchbox"]', insuranceCompany)
-  await new Promise(r => setTimeout(r, 1000)) // Wait for typeahead results
+  fillTextLikeField(payerInput, insuranceCompany)
+  await wait(1000)
 
   // Select the best matching option
-  const options = document.querySelectorAll('.ember-power-select-option, .select-kit-row, .select-box__option, [role="option"]')
+  const options = Array.from(document.querySelectorAll('.ember-power-select-option, .select-kit-row, .select-box__option, [role="option"]'))
+    .filter(isVisible)
   const lowerCompany = insuranceCompany.toLowerCase()
   let bestMatch: HTMLElement | null = null
 
-  for (const opt of Array.from(options)) {
+  for (const opt of options) {
     const text = opt.textContent?.trim().toLowerCase() ?? ''
     if (text === lowerCompany) {
       // Exact match — use immediately
@@ -361,7 +623,7 @@ async function fillPayerTypeahead(insuranceCompany: string): Promise<number> {
   }
 
   // If no match, just pick the first option (often the closest match)
-  const firstOption = options[0] as HTMLElement
+  const firstOption = options[0] as HTMLElement | undefined
   if (firstOption) {
     firstOption.click()
     console.log('[ZSP] Payer selected (first option):', firstOption.textContent?.trim())
@@ -373,13 +635,36 @@ async function fillPayerTypeahead(insuranceCompany: string): Promise<number> {
 }
 
 async function fillInsurance(): Promise<void> {
-  const client = await getClient()
+  try {
+    assertExtensionContext()
+  } catch (err) {
+    if (isExtensionContextInvalidatedError(err)) {
+      showToast('Extension reloaded — please refresh this page.', 'error')
+      return
+    }
+    throw err
+  }
+
+  const client = await getClient().catch((err: unknown) => {
+    console.error('[ZSP] fillInsurance error:', err)
+    showToast('Extension reloaded — please refresh this page.', 'error')
+    return null
+  })
   if (!client) {
     showToast('No captured client. Capture from ZocDoc first.', 'error')
     return
   }
 
   let filled = 0
+
+  const addInsuranceButton = document.querySelector(
+    'button#add-insurance-info-button, button.add-insurance-info'
+  ) as HTMLButtonElement | null
+
+  if (addInsuranceButton) {
+    addInsuranceButton.click()
+    await wait(500)
+  }
 
   // Payer/insurance company — typeahead search box.
   // SP's payer field is an Ember select-box. We may need to click the trigger first
@@ -420,6 +705,17 @@ async function fillInsurance(): Promise<void> {
     filled += await uploadInsuranceCard(client.insuranceCardBack, 'back')
   }
 
+  await wait(500)
+
+  const saveClientButton =
+    findVisibleButtonByText('Save Client') ??
+    document.querySelector('button[type="submit"]') as HTMLButtonElement | null
+
+  if (saveClientButton) {
+    saveClientButton.click()
+    await wait(500)
+  }
+
   await updateStatus({ insuranceAdded: true })
   showToast(`Filled ${filled} insurance fields`, 'success')
 }
@@ -427,17 +723,31 @@ async function fillInsurance(): Promise<void> {
 async function uploadInsuranceCard(base64Data: string, side: 'front' | 'back'): Promise<number> {
   try {
     // Find the dropzone for front or back card
-    const dropzones = document.querySelectorAll('.dropzone-inner')
+    const dropzones = Array.from(document.querySelectorAll('.dropzone-inner'))
     let targetInput: HTMLInputElement | null = null
-    for (const dz of Array.from(dropzones)) {
+    for (const dz of dropzones) {
       const heading = dz.querySelector('h5')
-      if (side === 'back' && heading?.textContent?.toLowerCase().includes('back')) {
-        targetInput = dz.querySelector('input[type="file"]')
+      const zoneText = `${heading?.textContent ?? ''} ${dz.textContent ?? ''}`.toLowerCase()
+      if (side === 'back' && zoneText.includes('back')) {
+        targetInput =
+          dz.querySelector('input[type="file"]') ??
+          dz.querySelector('label.file-upload input[type="file"]')
         break
       }
-      if (side === 'front' && (!heading || !heading.textContent?.toLowerCase().includes('back'))) {
-        targetInput = dz.querySelector('input[type="file"]')
+      if (side === 'front' && zoneText.includes('front')) {
+        targetInput =
+          dz.querySelector('input[type="file"]') ??
+          dz.querySelector('label.file-upload input[type="file"]')
         break
+      }
+    }
+
+    if (!targetInput) {
+      const fileInputs = Array.from(document.querySelectorAll('input[type="file"]')) as HTMLInputElement[]
+      if (side === 'front') {
+        targetInput = fileInputs[0] ?? null
+      } else {
+        targetInput = fileInputs[fileInputs.length - 1] ?? null
       }
     }
 
@@ -463,7 +773,21 @@ async function uploadInsuranceCard(base64Data: string, side: 'front' | 'back'): 
 }
 
 async function fillAppointment(): Promise<void> {
-  const client = await getClient()
+  try {
+    assertExtensionContext()
+  } catch (err) {
+    if (isExtensionContextInvalidatedError(err)) {
+      showToast('Extension reloaded — please refresh this page.', 'error')
+      return
+    }
+    throw err
+  }
+
+  const client = await getClient().catch((err: unknown) => {
+    console.error('[ZSP] fillAppointment error:', err)
+    showToast('Extension reloaded — please refresh this page.', 'error')
+    return null
+  })
   if (!client) {
     showToast('No captured client. Capture from ZocDoc first.', 'error')
     return
@@ -474,15 +798,17 @@ async function fillAppointment(): Promise<void> {
   // Client name — typeahead search box
   const clientName = `${client.firstName} ${client.lastName}`.trim()
   if (clientName) {
-    const typeaheadTrigger = document.querySelector('.typeahead-trigger') as HTMLElement
+    const typeaheadTrigger =
+      findFieldElement<HTMLElement>('client', '.typeahead-trigger, .ember-power-select-trigger, [role="combobox"]') ??
+      document.querySelector('.typeahead-trigger') as HTMLElement | null
     if (typeaheadTrigger) {
       typeaheadTrigger.click()
-      await new Promise(r => setTimeout(r, 300))
+      await wait(300)
       // Find the search input that appears
       const searchInput = document.querySelector('.ember-power-select-search-input, .select-kit-filter input, input[placeholder*="Search"]') as HTMLInputElement
       if (searchInput) {
-        fillField('.ember-power-select-search-input, .select-kit-filter input, input[placeholder*="Search"]', client.lastName)
-        await new Promise(r => setTimeout(r, 800))
+        fillTextLikeField(searchInput, client.lastName)
+        await wait(800)
         // Click the first matching option
         const options = document.querySelectorAll('.ember-power-select-option, .select-kit-row, [role="option"]')
         for (const opt of Array.from(options)) {
@@ -499,7 +825,8 @@ async function fillAppointment(): Promise<void> {
 
   // Date — input[name="startDate"]
   if (client.appointmentDate) {
-    if (tryFill(['input[name="startDate"]', 'input[name="date"]'], client.appointmentDate)) filled++
+    const formattedDate = formatDateForSp(client.appointmentDate)
+    if (tryFill(['input[name="startDate"]', 'input[name="date"]'], formattedDate)) filled++
   }
 
   // Time — input[name="startTime"] (text input, e.g. "1:00 PM")
@@ -510,24 +837,11 @@ async function fillAppointment(): Promise<void> {
   // Location/Office — native <select id="new-client-office" name="office">
   const prefs = await getPreferences()
   const officeSelect = document.querySelector('select#new-client-office, select[name="office"]') as HTMLSelectElement
-  if (officeSelect && prefs.defaultLocation) {
-    for (const option of Array.from(officeSelect.options)) {
-      if (option.text.trim().toLowerCase() === prefs.defaultLocation.toLowerCase()) {
-        officeSelect.value = option.value
-        officeSelect.dispatchEvent(new Event('change', { bubbles: true }))
-        filled++
-        break
-      }
-    }
-  }
+  if (selectOptionInElement(officeSelect, prefs.defaultLocation)) filled++
 
   // CPT code — native <select name="code">, use first-visit CPT from preferences
   const codeSelect = document.querySelector('select[name="code"]') as HTMLSelectElement
-  if (codeSelect && prefs.firstVisitCPT) {
-    codeSelect.value = prefs.firstVisitCPT
-    codeSelect.dispatchEvent(new Event('change', { bubbles: true }))
-    filled++
-  }
+  if (selectOptionInElement(codeSelect, prefs.firstVisitCPT)) filled++
 
   // Recurring appointment — toggle on, set weekly with follow-up CPT
   filled += await setupRecurringAppointment(prefs)
@@ -561,7 +875,7 @@ async function setupRecurringAppointment(prefs: ProviderPreferences): Promise<nu
     if (toggleLabel) {
       ;(toggleLabel as HTMLElement).click()
       filled++
-      await new Promise(r => setTimeout(r, 600))
+      await wait(600)
     } else {
       console.log('[ZSP] Recurring toggle not found')
       return 0
@@ -575,7 +889,7 @@ async function setupRecurringAppointment(prefs: ProviderPreferences): Promise<nu
       recurringToggle.click()
     }
     filled++
-    await new Promise(r => setTimeout(r, 600))
+    await wait(600)
   }
 
   // After toggling, SP may render additional fields for the recurring series.
@@ -589,14 +903,7 @@ async function setupRecurringAppointment(prefs: ProviderPreferences): Promise<nu
       : allCodeSelects[0] as HTMLSelectElement
 
     if (targetSelect) {
-      for (const option of Array.from(targetSelect.options)) {
-        if (option.value === prefs.followUpCPT || option.text.includes(prefs.followUpCPT)) {
-          targetSelect.value = option.value
-          targetSelect.dispatchEvent(new Event('change', { bubbles: true }))
-          filled++
-          break
-        }
-      }
+      if (selectOptionInElement(targetSelect, prefs.followUpCPT)) filled++
     }
   }
 
@@ -619,6 +926,7 @@ async function setupRecurringAppointment(prefs: ProviderPreferences): Promise<nu
 
 async function sendVobEmail(): Promise<void> {
   try {
+    assertExtensionContext()
     const client = await getClient()
     if (!client) {
       showToast('No captured client. Capture from ZocDoc first.', 'error')
@@ -648,7 +956,7 @@ function injectInlineButton(
   const existing = document.getElementById(id)
   if (existing) existing.remove()
 
-  const anchor = document.querySelector(anchorSelector)
+  const anchor = document.querySelector(anchorSelector) as HTMLElement | null
   if (!anchor) return
 
   const btn = document.createElement('button')
@@ -664,44 +972,50 @@ function injectInlineButton(
   }, true)
 
   // Insert before the anchor element's parent (to appear above the name field)
-  const parent = anchor.closest('.input-module_component__0r299')?.parentElement ||
+  const parent =
+    (anchor.closest('.input-module_component__0r299')?.parentElement as HTMLElement | null) ??
     anchor.parentElement
   if (parent) {
     parent.insertBefore(btn, parent.firstChild)
-  } else {
-    anchor.parentElement?.insertBefore(btn, anchor)
   }
 }
 
-/**
- * Detect the create client form and inject fill button inline.
- */
-function detectAndInject(): void {
+function removeInjectedElement(id: string): void {
+  document.getElementById(id)?.remove()
+}
+
+function syncInjectedUi(): void {
   const firstNameInput = document.querySelector('input[name="firstName"]')
 
   if (firstNameInput) {
-    // Inject inline button near the form fields
     injectInlineButton(
       'Fill from ZocDoc',
       fillClientDemographics,
       'input[name="firstName"]',
       'zsp-fill-btn'
     )
+  } else {
+    removeInjectedElement('zsp-fill-btn')
   }
 
-  // Insurance form — detect by member ID input, payer select, or dropzone for card uploads
-  const insuranceForm = document.querySelector('input[name="memberId"], input[name*="member"], .dropzone-inner, .select-box__input[role="searchbox"]')
-  if (insuranceForm && !document.getElementById('zsp-insurance-btn')) {
+  const insuranceForm =
+    document.querySelector(
+      'button#add-insurance-info-button, button.add-insurance-info, input[name="memberId"], input[name*="member"], .dropzone-inner, .select-box__input[role="searchbox"]'
+    ) ??
+    (window.location.pathname.includes('/edit/billing-insurance') ? document.body : null)
+  if (insuranceForm) {
     injectButton('Fill Insurance from ZocDoc', fillInsurance, { id: 'zsp-insurance-btn', position: 'bottom-left-high' })
+  } else {
+    removeInjectedElement('zsp-insurance-btn')
   }
 
-  // Appointment form — detect by startTime input or CPT code select
   const apptForm = document.querySelector('input[name="startTime"], select[name="code"]')
-  if (apptForm && !document.getElementById('zsp-appt-btn')) {
+  if (apptForm) {
     injectButton('Fill Appointment from ZocDoc', fillAppointment, { id: 'zsp-appt-btn', position: 'bottom-left-higher' })
+  } else {
+    removeInjectedElement('zsp-appt-btn')
   }
 
-  // Always have a floating VOB button available
   injectButton('Send VOB Email', sendVobEmail, { id: 'zsp-vob-btn', position: 'bottom-left' })
 }
 
@@ -711,16 +1025,7 @@ function watchForForms(): void {
   const observer = new MutationObserver(() => {
     if (debounceTimer) clearTimeout(debounceTimer)
     debounceTimer = setTimeout(() => {
-      // Check if we need to inject (form appeared) or clean up (form disappeared)
-      const hasClientForm = !!document.querySelector('input[name="firstName"]')
-      const hasClientBtn = !!document.getElementById('zsp-fill-btn')
-      const hasInsuranceForm = !!document.querySelector('input[name="memberId"], input[name*="member"], .dropzone-inner')
-      const hasInsuranceBtn = !!document.getElementById('zsp-insurance-btn')
-      const hasApptForm = !!document.querySelector('input[name="startTime"], select[name="code"]')
-      const hasApptBtn = !!document.getElementById('zsp-appt-btn')
-      if ((hasClientForm && !hasClientBtn) || (hasInsuranceForm && !hasInsuranceBtn) || (hasApptForm && !hasApptBtn)) {
-        detectAndInject()
-      }
+      syncInjectedUi()
     }, 500)
   })
   observer.observe(document.body, { childList: true, subtree: true })
@@ -729,11 +1034,11 @@ function watchForForms(): void {
 function init(): void {
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
-      detectAndInject()
+      syncInjectedUi()
       watchForForms()
     })
   } else {
-    detectAndInject()
+    syncInjectedUi()
     watchForForms()
   }
 }

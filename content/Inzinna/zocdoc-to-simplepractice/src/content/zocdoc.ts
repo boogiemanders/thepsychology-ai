@@ -1,6 +1,13 @@
 import { CapturedClient, DEFAULT_STATUS } from '../lib/types'
 import { saveClient } from '../lib/storage'
-import { injectButton, showToast, imageToBase64 } from './shared'
+import {
+  injectButton,
+  showToast,
+  imageToBase64,
+  urlToBase64,
+  assertExtensionContext,
+  isExtensionContextInvalidatedError,
+} from './shared'
 
 /**
  * ZocDoc provider portal selectors — mapped from actual DOM data-test attributes.
@@ -12,11 +19,101 @@ function getText(selector: string): string {
   return el?.textContent?.trim() ?? ''
 }
 
+function isVisible(el: Element): boolean {
+  return !(el instanceof HTMLElement) || el.offsetParent !== null || el.getClientRects().length > 0
+}
+
 function getImgSrc(selector: string): string {
   const el = document.querySelector(selector)
   // Could be an img inside the container, or the element itself
   const img = el?.querySelector('img') ?? (el instanceof HTMLImageElement ? el : null)
   return img?.src ?? ''
+}
+
+function textLines(value: string): string[] {
+  return value
+    .split(/\r?\n|,/)
+    .map((line) => line.replace(/\s+/g, ' ').trim())
+    .filter(Boolean)
+}
+
+function getVisibleElement<T extends Element>(selector: string): T | null {
+  const visible = Array.from(document.querySelectorAll(selector)).find(isVisible)
+  return (visible as T | undefined) ?? document.querySelector(selector)
+}
+
+function normalizeWhitespace(value: string): string {
+  return value.replace(/\s+/g, ' ').trim()
+}
+
+function getVisibleText(selectors: string[]): string {
+  for (const selector of selectors) {
+    const visibleMatch = Array.from(document.querySelectorAll(selector))
+      .find((el) => isVisible(el) && normalizeWhitespace(el.textContent ?? '').length > 0)
+    if (visibleMatch) {
+      return normalizeWhitespace(visibleMatch.textContent ?? '')
+    }
+
+    const anyMatch = Array.from(document.querySelectorAll(selector))
+      .find((el) => normalizeWhitespace(el.textContent ?? '').length > 0)
+    if (anyMatch) {
+      return normalizeWhitespace(anyMatch.textContent ?? '')
+    }
+  }
+
+  return ''
+}
+
+function findPatientRecordLink(): HTMLAnchorElement | null {
+  return (
+    getVisibleElement<HTMLAnchorElement>('[data-test="patient-record-link"]') ??
+    getVisibleElement<HTMLAnchorElement>('a[href*="/patient/"][href*="/record"]')
+  )
+}
+
+type ObservedPatientContext = {
+  fullName: string
+  dobRaw: string
+  phone: string
+  email: string
+  addressRaw: string
+  appointmentRaw: string
+  sexRaw: string
+}
+
+const lastObservedContext: ObservedPatientContext = {
+  fullName: '',
+  dobRaw: '',
+  phone: '',
+  email: '',
+  addressRaw: '',
+  appointmentRaw: '',
+  sexRaw: '',
+}
+
+function rememberIfPresent<K extends keyof ObservedPatientContext>(
+  key: K,
+  value: ObservedPatientContext[K]
+): void {
+  if (typeof value === 'string' && value.trim()) {
+    lastObservedContext[key] = value
+  }
+}
+
+function snapshotVisiblePatientContext(): void {
+  const patientLink = findPatientRecordLink()
+
+  rememberIfPresent('fullName', getVisibleText([
+    '[data-test="patient-record-header"]',
+    '[data-test="patient-record-link"]',
+    'a[href*="/patient/"][href*="/record"]',
+  ]) || normalizeWhitespace(patientLink?.textContent ?? ''))
+  rememberIfPresent('dobRaw', getText('[data-test="patient-dob"]') || getText('[data-test="age-content"]'))
+  rememberIfPresent('phone', getText('[data-test="phone-number-content"]'))
+  rememberIfPresent('email', getText('[data-test="email-content"]'))
+  rememberIfPresent('addressRaw', getText('[data-test="address-content"]') || findCalendarCardAddress(patientLink))
+  rememberIfPresent('appointmentRaw', getText('[data-test="appointment-details-section-appointment-time"]'))
+  rememberIfPresent('sexRaw', getText('[data-test="sex-content"]'))
 }
 
 /**
@@ -57,6 +154,170 @@ function parseAddress(text: string): { street: string; city: string; state: stri
   return { street: text, city: '', state: '', zip: '' }
 }
 
+function looksLikeStreetAddress(text: string): boolean {
+  const normalized = normalizeWhitespace(text)
+  return /,\s*[A-Za-z .'-]+,\s*[A-Z]{2},\s*\d{5}(?:-\d{4})?$/.test(normalized)
+}
+
+function findCalendarCardAddress(patientLink: Element | null): string {
+  const knownCalendarAddress = getVisibleElement<HTMLElement>('div.sc-ijDOKB.bmbNov')
+  if (knownCalendarAddress && looksLikeStreetAddress(knownCalendarAddress.textContent ?? '')) {
+    return normalizeWhitespace(knownCalendarAddress.textContent ?? '')
+  }
+
+  let current = patientLink?.parentElement ?? null
+  let depth = 0
+  while (current && depth < 6) {
+    const candidates = current.querySelectorAll('div, span, p')
+    for (const candidate of Array.from(candidates)) {
+      const text = normalizeWhitespace(candidate.textContent ?? '')
+      if (looksLikeStreetAddress(text)) {
+        return text
+      }
+    }
+    current = current.parentElement
+    depth++
+  }
+
+  return ''
+}
+
+function findCardCaptureRoot(start: Element | null): Element | null {
+  let current: Element | null = start
+  let depth = 0
+
+  while (current && depth < 6) {
+    if (current.querySelector('a[href], img')) {
+      return current
+    }
+    current = current.parentElement
+    depth++
+  }
+
+  return start
+}
+
+function pad2(value: number): string {
+  return value.toString().padStart(2, '0')
+}
+
+function toIsoDate(year: number, month: number, day: number): string {
+  return `${year}-${pad2(month)}-${pad2(day)}`
+}
+
+function inferAppointmentYear(month: number, day: number): number {
+  const now = new Date()
+  const currentYear = now.getFullYear()
+  const currentMonth = now.getMonth() + 1
+  const currentDay = now.getDate()
+
+  if (month < currentMonth || (month === currentMonth && day < currentDay - 1)) {
+    return currentYear + 1
+  }
+
+  return currentYear
+}
+
+function normalizeAppointmentDate(text: string): string {
+  const cleaned = text.trim()
+  if (!cleaned) return ''
+
+  const isoMatch = cleaned.match(/^(\d{4})-(\d{1,2})-(\d{1,2})$/)
+  if (isoMatch) {
+    return toIsoDate(Number(isoMatch[1]), Number(isoMatch[2]), Number(isoMatch[3]))
+  }
+
+  const slashMatch = cleaned.match(/^(\d{1,2})\/(\d{1,2})(?:\/(\d{2,4}))?$/)
+  if (slashMatch) {
+    const month = Number(slashMatch[1])
+    const day = Number(slashMatch[2])
+    const yearRaw = slashMatch[3]
+    const year = yearRaw
+      ? yearRaw.length === 2 ? 2000 + Number(yearRaw) : Number(yearRaw)
+      : inferAppointmentYear(month, day)
+    return toIsoDate(year, month, day)
+  }
+
+  const monthNames: Record<string, number> = {
+    jan: 1,
+    feb: 2,
+    mar: 3,
+    apr: 4,
+    may: 5,
+    jun: 6,
+    jul: 7,
+    aug: 8,
+    sep: 9,
+    oct: 10,
+    nov: 11,
+    dec: 12,
+  }
+
+  const namedMatch = cleaned.match(/([A-Za-z]+)\s+(\d{1,2})(?:,\s*(\d{4}))?$/)
+  if (namedMatch) {
+    const month = monthNames[namedMatch[1].slice(0, 3).toLowerCase()]
+    const day = Number(namedMatch[2])
+    if (!month || !day) return cleaned
+    const year = namedMatch[3] ? Number(namedMatch[3]) : inferAppointmentYear(month, day)
+    return toIsoDate(year, month, day)
+  }
+
+  return cleaned
+}
+
+function extractInsuranceCompany(...sources: string[]): string {
+  const ignoredPatterns = [
+    /^insurance$/i,
+    /^view details$/i,
+    /^view card$/i,
+    /^download$/i,
+    /^member/i,
+    /^group/i,
+    /^subscriber/i,
+    /^policy/i,
+    /^copay/i,
+    /^in-network$/i,
+    /^out-of-network$/i,
+  ]
+
+  for (const source of sources) {
+    for (const line of textLines(source)) {
+      if (ignoredPatterns.some((pattern) => pattern.test(line))) continue
+      return line
+    }
+  }
+
+  return ''
+}
+
+async function captureCardFromElement(container: Element | null): Promise<string> {
+  if (!container) return ''
+
+  const link = container.closest('a[href]') ?? container.querySelector('a[href]')
+  if (link instanceof HTMLAnchorElement && link.href) {
+    try {
+      return await urlToBase64(link.href)
+    } catch {
+      // Fall back to img handling below.
+    }
+  }
+
+  const img = container.querySelector('img')
+  if (img?.src) {
+    try {
+      return await urlToBase64(img.src)
+    } catch {
+      try {
+        return await imageToBase64(img.src)
+      } catch {
+        return ''
+      }
+    }
+  }
+
+  return ''
+}
+
 /**
  * Parse appointment time from "Appointment timeMonday Mar 30 at 1:00 PM EDT"
  * or from table column "Mar 30, 2026 at 1:00 PM"
@@ -74,17 +335,26 @@ function parseAppointmentDateTime(text: string): { date: string; time: string } 
     const datePart = atMatch[1]
       .replace(/^(?:Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)\s*/i, '')
       .trim()
-    return { date: datePart, time: atMatch[2].trim() }
+    return { date: normalizeAppointmentDate(datePart), time: atMatch[2].trim() }
   }
 
-  return { date: cleaned, time: '' }
+  return { date: normalizeAppointmentDate(cleaned), time: '' }
 }
 
 async function captureClient(): Promise<void> {
   try {
+    assertExtensionContext()
+    snapshotVisiblePatientContext()
+    const patientLink = findPatientRecordLink()
+
     // Get patient name from the detail panel header or record link
-    const fullName = getText('[data-test="patient-record-header"]') ||
-      getText('[data-test="patient-record-link"]')
+    const fullName = getVisibleText([
+      '[data-test="patient-record-header"]',
+      '[data-test="patient-record-link"]',
+      'a[href*="/patient/"][href*="/record"]',
+    ]) ||
+      normalizeWhitespace(patientLink?.textContent ?? '') ||
+      lastObservedContext.fullName
     const { first, last } = parseName(fullName)
 
     if (!first && !last) {
@@ -94,21 +364,25 @@ async function captureClient(): Promise<void> {
 
     // DOB — from detail panel or flyout
     const dobRaw = getText('[data-test="patient-dob"]') ||
-      getText('[data-test="age-content"]')
+      getText('[data-test="age-content"]') ||
+      lastObservedContext.dobRaw
     const dob = parseDob(dobRaw)
 
     // Contact info
-    const phone = getText('[data-test="phone-number-content"]')
-    const email = getText('[data-test="email-content"]')
+    const phone = getText('[data-test="phone-number-content"]') || lastObservedContext.phone
+    const email = getText('[data-test="email-content"]') || lastObservedContext.email
 
     // Address
-    const addressRaw = getText('[data-test="address-content"]')
+    const addressRaw = getText('[data-test="address-content"]') ||
+      findCalendarCardAddress(patientLink) ||
+      lastObservedContext.addressRaw
     // Strip "Address" prefix if present
     const addressClean = addressRaw.replace(/^Address/i, '').trim()
     const address = parseAddress(addressClean)
 
     // Appointment date/time — try detail section first, then fall back to table column
-    const apptTimeRaw = getText('[data-test="appointment-details-section-appointment-time"]')
+    const apptTimeRaw = getText('[data-test="appointment-details-section-appointment-time"]') ||
+      lastObservedContext.appointmentRaw
     let appt = parseAppointmentDateTime(apptTimeRaw)
 
     // If detail section didn't work, try the table column for the selected row
@@ -134,22 +408,24 @@ async function captureClient(): Promise<void> {
       try { cardBack = await imageToBase64(backSrc) } catch { /* CORS */ }
     }
 
-    // If img approach failed, try to get URLs from download buttons
+    // If img approach failed, try download buttons or linked resources nearby.
     if (!cardFront || !cardBack) {
       const downloadBtns = document.querySelectorAll('button[data-test="download-button"]')
-      // Download buttons may have a parent <a> with href, or be near an img
-      for (const btn of Array.from(downloadBtns)) {
-        const container = btn.closest('[class*="card"], [class*="image"], [class*="insurance"]')
-        if (container) {
-          const img = container.querySelector('img')
-          if (img?.src) {
-            const isBack = container.textContent?.toLowerCase().includes('back') ?? false
-            if (isBack && !cardBack) {
-              try { cardBack = await imageToBase64(img.src) } catch { /* CORS */ }
-            } else if (!cardFront) {
-              try { cardFront = await imageToBase64(img.src) } catch { /* CORS */ }
-            }
-          }
+      for (const [index, btn] of Array.from(downloadBtns).entries()) {
+        const container =
+          findCardCaptureRoot(btn.parentElement) ??
+          btn.closest('[class*="card"], [class*="image"], [class*="insurance"]') ??
+          btn.parentElement
+        const isBack = container?.textContent?.toLowerCase().includes('back') ?? index > 0
+        const captured = await captureCardFromElement(container)
+        if (!captured) continue
+
+        if (isBack && !cardBack) {
+          cardBack = captured
+        } else if (!cardFront) {
+          cardFront = captured
+        } else if (!cardBack) {
+          cardBack = captured
         }
       }
     }
@@ -159,23 +435,16 @@ async function captureClient(): Promise<void> {
     const insuranceRow = getText('[data-test="intake-insurance-row"]')
     const networkStatus = getText('[data-test="network-status"]')
     // Extract carrier name if present (often in the insurance row text)
-    let insuranceCompany = ''
-    if (networkStatus) {
-      // "insurance shield in network iconIn-network" — not the carrier name
-      // The carrier might be in a view-details page. For now capture what's visible.
-      insuranceCompany = networkStatus
-        .replace(/insurance shield.*?icon/gi, '')
-        .replace(/In-network|Out-of-network/gi, '')
-        .trim()
-    }
+    const insuranceCompany = extractInsuranceCompany(insuranceRow, networkStatus)
 
     // Sex
-    const sexRaw = getText('[data-test="sex-content"]')
+    const sexRaw = getText('[data-test="sex-content"]') || lastObservedContext.sexRaw
     const sex = sexRaw.replace(/^Sex/i, '').trim()
 
     const client: CapturedClient = {
       firstName: first,
       lastName: last,
+      sex: sex,
       dob: dob,
       phone: phone.replace(/^Phone\s*number/i, '').trim(),
       email: email.replace(/^Email/i, '').trim(),
@@ -207,7 +476,7 @@ async function captureClient(): Promise<void> {
     await saveClient(client)
 
     const fieldsFound = [
-      client.firstName, client.lastName, client.dob, client.phone,
+      client.firstName, client.lastName, client.sex, client.dob, client.phone,
       client.email, client.address.street, client.appointmentDate,
       client.appointmentTime, client.insuranceCardFront,
     ].filter(Boolean).length
@@ -227,6 +496,7 @@ async function captureClient(): Promise<void> {
     // Log what we found for debugging
     console.log('[ZSP] Captured client:', {
       name: `${client.firstName} ${client.lastName}`,
+      sex: client.sex,
       dob: client.dob,
       phone: client.phone,
       email: client.email,
@@ -237,20 +507,41 @@ async function captureClient(): Promise<void> {
     })
   } catch (err) {
     console.error('[ZSP] Capture error:', err)
+    if (isExtensionContextInvalidatedError(err)) {
+      showToast('Extension reloaded. Refresh this ZocDoc tab and try again.', 'error')
+      return
+    }
     showToast('Error capturing client data. Check console for details.', 'error')
   }
 }
 
 function init() {
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', inject)
+    document.addEventListener('DOMContentLoaded', () => {
+      snapshotVisiblePatientContext()
+      inject()
+      watchPatientContext()
+    })
   } else {
+    snapshotVisiblePatientContext()
     inject()
+    watchPatientContext()
   }
 }
 
 function inject() {
-  injectButton('Capture Client', captureClient, { id: 'zsp-capture-btn' })
+  injectButton('Capture Client', captureClient, { id: 'zsp-capture-btn', position: 'bottom-right-high' })
+}
+
+function watchPatientContext(): void {
+  let debounceTimer: ReturnType<typeof setTimeout> | null = null
+  const observer = new MutationObserver(() => {
+    if (debounceTimer) clearTimeout(debounceTimer)
+    debounceTimer = setTimeout(() => {
+      snapshotVisiblePatientContext()
+    }, 150)
+  })
+  observer.observe(document.body, { childList: true, subtree: true })
 }
 
 init()

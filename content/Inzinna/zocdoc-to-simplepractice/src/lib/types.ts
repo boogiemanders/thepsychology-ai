@@ -1,6 +1,7 @@
 export interface CapturedClient {
   firstName: string
   lastName: string
+  sex: string
   dob: string
   phone: string
   email: string
@@ -36,6 +37,14 @@ export interface CapturedClient {
     insuranceAdded: boolean
     vobEmailSent: boolean
   }
+}
+
+export interface PendingVobDraft {
+  to: string[]
+  cc: string[]
+  subject: string
+  body: string
+  createdAt: string
 }
 
 export const DEFAULT_STATUS: CapturedClient['status'] = {
