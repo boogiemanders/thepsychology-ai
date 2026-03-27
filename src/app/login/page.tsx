@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { Suspense, useState } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import { AnimatePresence, motion } from 'motion/react'
@@ -11,7 +11,11 @@ import { Button } from '@/components/ui/button'
 import { Alert, AlertDescription } from '@/components/ui/alert'
 import { TypographyH1, TypographyMuted } from '@/components/ui/typography'
 
-export default function LoginPage() {
+function LoginPageFallback() {
+  return <main className="min-h-screen bg-background flex items-start justify-center p-4 pt-16" />
+}
+
+function LoginPageContent() {
   const router = useRouter()
   const searchParams = useSearchParams()
   const nextUrl = searchParams.get('next')
@@ -154,5 +158,13 @@ export default function LoginPage() {
         </motion.div>
       </div>
     </main>
+  )
+}
+
+export default function LoginPage() {
+  return (
+    <Suspense fallback={<LoginPageFallback />}>
+      <LoginPageContent />
+    </Suspense>
   )
 }
