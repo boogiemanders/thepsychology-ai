@@ -1,31 +1,26 @@
 /**
  * SimplePractice Notes — Intake Data Extractor
  *
- * Extracts patient intake data from SimplePractice's client profile
- * and intake/assessment pages. Injects a "Capture Intake" button
- * when on a client page.
+ * Extracts patient intake data from SimplePractice's DIPS Intake Form.
  *
- * SimplePractice URL patterns:
- *   Client overview:  /clients/{id}/overview
- *   Client details:   /clients/{id}/details
- *   Intake forms:     /clients/{id}/intake
- *   Documents:        /clients/{id}/documents
+ * The form renders as a Q&A inside `.markdown.intake-answers`:
+ *   <h3>Question text</h3>
+ *   <p>Answer line 1</p>
+ *   <p>Answer line 2</p>
+ *   -- or --
+ *   <ul><li>Answer</li></ul>
+ *
+ * This script parses all Q&A pairs, then maps them to structured IntakeData fields.
  */
 
 import { IntakeData, EMPTY_INTAKE } from '../lib/types'
-import { saveIntake, getIntake } from '../lib/storage'
+import { saveIntake } from '../lib/storage'
 import {
   injectButton,
   showToast,
   assertExtensionContext,
   isExtensionContextInvalidatedError,
-  textFrom,
-  valueFrom,
   normalizedText,
-  isVisible,
-  findFieldContainer,
-  findFieldElement,
-  wait,
 } from './shared'
 
 // ── URL Detection ──
@@ -39,297 +34,313 @@ function isClientPage(): boolean {
   return /\/clients\/\d+/.test(window.location.pathname)
 }
 
-// ── Extraction Helpers ──
+// ── Q&A Parsing ──
 
-/**
- * Extract text from the first matching selector or label.
- * Tries multiple strategies: direct selector, label-based lookup, aria attributes.
- */
-function extractBySelectors(selectors: string[]): string {
-  for (const sel of selectors) {
-    const el = document.querySelector(sel)
-    if (!el) continue
-    if (el instanceof HTMLInputElement || el instanceof HTMLTextAreaElement) {
-      if (el.value.trim()) return el.value.trim()
-    }
-    if (el.textContent?.trim()) return el.textContent.trim()
-  }
-  return ''
+interface QAPair {
+  question: string
+  answer: string
 }
 
 /**
- * Extract value from a field identified by its label text.
- * SP uses various patterns: label + input, label + span, label + div.
+ * Parse all Q&A pairs from the .markdown.intake-answers container.
+ * Questions are <h3> elements. Answers are all sibling <p> and <ul>
+ * elements between one <h3> and the next.
  */
-function extractByLabel(labelText: string): string {
-  const container = findFieldContainer(labelText)
-  if (!container) return ''
+function parseIntakeQA(): QAPair[] {
+  const container = document.querySelector('.markdown.intake-answers')
+  if (!container) return []
 
-  // Try input/textarea first
-  const input = container.querySelector('input, textarea') as HTMLInputElement | HTMLTextAreaElement | null
-  if (input?.value?.trim()) return input.value.trim()
+  const pairs: QAPair[] = []
+  const children = Array.from(container.children)
 
-  // Try span/div with value content (not the label itself)
-  const target = normalizedText(labelText)
-  for (const child of Array.from(container.children)) {
-    const text = child.textContent?.trim() ?? ''
-    if (text && !normalizedText(text).includes(target)) {
-      return text
-    }
-  }
+  let currentQuestion = ''
+  let answerParts: string[] = []
 
-  // Try the next sibling of the label
-  const labels = container.querySelectorAll('label, .form-label, .field-label, .spds-label')
-  for (const label of Array.from(labels)) {
-    if (!normalizedText(label.textContent).includes(target)) continue
-    const sibling = label.nextElementSibling
-    if (sibling?.textContent?.trim()) return sibling.textContent.trim()
-  }
-
-  return ''
-}
-
-/**
- * Extract text content from elements matching a section heading,
- * grabbing the content that follows it.
- */
-function extractSectionContent(sectionHeading: string): string {
-  const target = normalizedText(sectionHeading)
-
-  // Look for headings (h1-h6, strong, .section-title, etc.)
-  const headings = document.querySelectorAll(
-    'h1, h2, h3, h4, h5, h6, strong, .section-title, .section-heading, [class*="heading"], [class*="title"]'
-  )
-
-  for (const heading of Array.from(headings)) {
-    if (!normalizedText(heading.textContent).includes(target)) continue
-
-    // Get the parent section/container
-    const section = heading.closest('section, .section, .card, .panel, [class*="section"], [class*="card"]')
-    if (section) {
-      // Get all text content after the heading
-      const allText = section.textContent?.trim() ?? ''
-      const headingText = heading.textContent?.trim() ?? ''
-      const afterHeading = allText.substring(allText.indexOf(headingText) + headingText.length).trim()
-      if (afterHeading) return afterHeading
-    }
-
-    // Fallback: collect sibling content
-    let content = ''
-    let sibling = heading.nextElementSibling
-    while (sibling && !sibling.matches('h1, h2, h3, h4, h5, h6')) {
-      content += (sibling.textContent?.trim() ?? '') + '\n'
-      sibling = sibling.nextElementSibling
-    }
-    if (content.trim()) return content.trim()
-  }
-
-  return ''
-}
-
-/**
- * Extract text from intake questionnaire responses.
- * SP intake forms often use question/answer pairs.
- */
-function extractQuestionnaireResponse(questionText: string): string {
-  const target = normalizedText(questionText)
-
-  // Look for question elements
-  const questions = document.querySelectorAll(
-    '.question, .intake-question, [class*="question"], dt, .form-group label, td:first-child'
-  )
-
-  for (const question of Array.from(questions)) {
-    if (!normalizedText(question.textContent).includes(target)) continue
-
-    // Answer might be a sibling, next element, or paired element
-    const answer =
-      question.nextElementSibling ??
-      question.closest('tr')?.querySelector('td:last-child') ??
-      question.closest('.form-group')?.querySelector('input, textarea, .response, [class*="answer"]')
-
-    if (answer) {
-      if (answer instanceof HTMLInputElement || answer instanceof HTMLTextAreaElement) {
-        return answer.value.trim()
+  for (const child of children) {
+    if (child.tagName === 'H3') {
+      // Save previous Q&A pair
+      if (currentQuestion) {
+        pairs.push({
+          question: currentQuestion,
+          answer: answerParts.join('\n').trim(),
+        })
       }
-      return answer.textContent?.trim() ?? ''
+      currentQuestion = child.textContent?.trim() ?? ''
+      answerParts = []
+    } else if (currentQuestion) {
+      // Skip signature blocks
+      if (child.classList.contains('signature-header') ||
+          child.classList.contains('signature-content') ||
+          child.classList.contains('signature-info') ||
+          child.classList.contains('signature-ip')) {
+        continue
+      }
+
+      if (child.tagName === 'P') {
+        const text = child.textContent?.trim() ?? ''
+        // Skip signature metadata that doesn't have the class
+        if (text.startsWith('Signed by') || text.startsWith('IP address:')) continue
+        if (text && text !== 'No answer given.') {
+          answerParts.push(text)
+        }
+      } else if (child.tagName === 'UL') {
+        const items = Array.from(child.querySelectorAll('li'))
+          .map(li => li.textContent?.trim() ?? '')
+          .filter(Boolean)
+        answerParts.push(...items)
+      }
     }
   }
 
+  // Save last Q&A pair
+  if (currentQuestion) {
+    pairs.push({
+      question: currentQuestion,
+      answer: answerParts.join('\n').trim(),
+    })
+  }
+
+  return pairs
+}
+
+/**
+ * Find a Q&A pair by matching question text (case-insensitive, partial match).
+ */
+function findAnswer(pairs: QAPair[], ...searchTerms: string[]): string {
+  for (const term of searchTerms) {
+    const target = normalizedText(term)
+    const match = pairs.find(p => normalizedText(p.question).includes(target))
+    if (match?.answer) return match.answer
+  }
   return ''
+}
+
+// ── Form Metadata ──
+
+function extractFormMetadata(): { title: string; date: string; signedBy: string; signedAt: string } {
+  const titleItem = document.querySelector('.title-item h3')
+  const title = titleItem?.childNodes?.[0]?.textContent?.trim() ?? ''
+  const dateText = document.querySelector('.title-item .subtext')?.textContent?.trim() ?? ''
+
+  // Extract signature info
+  const signatureContent = document.querySelector('.signature-content')?.textContent?.trim() ?? ''
+  const signatureInfo = Array.from(document.querySelectorAll('.signature-info'))
+    .map(el => el.textContent?.trim() ?? '')
+    .filter(Boolean)
+
+  const signedBy = signatureInfo.find(s => s.startsWith('Signed by'))?.replace('Signed by ', '') ?? signatureContent
+  const signedAt = signatureInfo.find(s => !s.startsWith('Signed by')) ?? ''
+
+  return { title, date: dateText, signedBy, signedAt }
+}
+
+// ── Address Parsing ──
+
+function parseAddress(raw: string): IntakeData['address'] {
+  const lines = raw.split('\n').map(l => l.trim()).filter(Boolean)
+  const addr: IntakeData['address'] = { street: '', city: '', state: '', zip: '', country: '', raw }
+
+  if (lines.length === 0) return addr
+
+  // First line is usually street
+  addr.street = lines[0] ?? ''
+
+  // Second line might be "City State" or "City, State"
+  if (lines.length >= 2) {
+    const cityLine = lines[1]
+    // Try "City, State ZIP" or "City State ZIP" or "City State"
+    const match = cityLine.match(/^(.+?)[,\s]+([A-Z]{2})\s*(\d{5})?/)
+    if (match) {
+      addr.city = match[1].trim()
+      addr.state = match[2]
+      if (match[3]) addr.zip = match[3]
+    } else {
+      // Just assign as-is
+      addr.city = cityLine
+    }
+  }
+
+  // Third line might be ZIP
+  if (lines.length >= 3) {
+    const zipLine = lines[2]
+    if (/^\d{5}(-\d{4})?$/.test(zipLine)) {
+      addr.zip = zipLine
+    } else if (!addr.zip) {
+      addr.zip = zipLine
+    }
+  }
+
+  // Fourth line might be country
+  if (lines.length >= 4) {
+    addr.country = lines[3]
+  }
+
+  return addr
+}
+
+// ── Name Parsing ──
+
+function parseName(fullName: string): { firstName: string; lastName: string } {
+  const parts = fullName.trim().split(/\s+/)
+  if (parts.length === 0) return { firstName: '', lastName: '' }
+  if (parts.length === 1) return { firstName: parts[0], lastName: '' }
+  return {
+    firstName: parts[0],
+    lastName: parts.slice(1).join(' '),
+  }
 }
 
 // ── Main Extraction ──
 
-async function extractIntakeData(): Promise<IntakeData> {
-  const intake: IntakeData = { ...EMPTY_INTAKE }
+function extractIntakeData(): IntakeData {
+  const intake: IntakeData = {
+    ...EMPTY_INTAKE,
+    address: { ...EMPTY_INTAKE.address },
+    rawQA: [],
+  }
+
   intake.clientId = getClientIdFromUrl()
   intake.capturedAt = new Date().toISOString()
 
-  // Demographics — client details page
-  intake.firstName = extractBySelectors([
-    'input[name="firstName"]',
-    '[data-test="first-name"]',
-  ]) || extractByLabel('first name')
+  // Parse form metadata
+  const meta = extractFormMetadata()
+  intake.formTitle = meta.title
+  intake.formDate = meta.date
+  intake.signedBy = meta.signedBy
+  intake.signedAt = meta.signedAt
 
-  intake.lastName = extractBySelectors([
-    'input[name="lastName"]',
-    '[data-test="last-name"]',
-  ]) || extractByLabel('last name')
+  // Parse all Q&A pairs
+  const pairs = parseIntakeQA()
+  intake.rawQA = pairs.map(p => ({ question: p.question, answer: p.answer }))
 
-  intake.sex = extractBySelectors([
-    'select[name="sex"]',
-  ]) || extractByLabel('sex') || extractByLabel('gender')
+  if (pairs.length === 0) return intake
 
-  intake.dob = extractBySelectors([
-    'input[name="dob"]',
-    '[data-test="dob"]',
-  ]) || extractByLabel('date of birth') || extractByLabel('dob')
+  // ── Map Q&A to structured fields ──
 
-  // If DOB is in 3 separate selects
-  if (!intake.dob) {
-    const month = valueFrom('select[name="month"]')
-    const day = valueFrom('select[name="day"]')
-    const year = valueFrom('select[name="year"]')
-    if (month && day && year) {
-      intake.dob = `${month}/${day}/${year}`
-    }
-  }
+  // Demographics
+  intake.dob = findAnswer(pairs, 'date of birth')
 
-  intake.phone = extractBySelectors([
-    'input[name="phone"]',
-    'input[type="tel"]',
-    '[data-test="phone"]',
-  ]) || extractByLabel('phone')
+  intake.fullName = findAnswer(pairs, 'full legal name', 'full name', 'name')
+  const { firstName, lastName } = parseName(intake.fullName)
+  intake.firstName = firstName
+  intake.lastName = lastName
 
-  intake.email = extractBySelectors([
-    'input[name="email"]',
-    'input[type="email"]',
-    '[data-test="email"]',
-  ]) || extractByLabel('email')
+  intake.phone = findAnswer(pairs, 'phone number')
+  intake.sex = findAnswer(pairs, 'what is your sex')
+  intake.genderIdentity = findAnswer(pairs, 'gender identity')
+  intake.race = findAnswer(pairs, 'indicate your race', 'race')
+  intake.ethnicity = findAnswer(pairs, 'latino or hispanic', 'ethnicity')
 
   // Address
-  intake.address.street = extractBySelectors([
-    'input[name="addressStreet"]',
-    'input[name="street"]',
-  ]) || extractByLabel('street') || extractByLabel('address')
+  const rawAddress = findAnswer(pairs, 'home address', 'address')
+  if (rawAddress) {
+    intake.address = parseAddress(rawAddress)
+  }
 
-  intake.address.city = extractBySelectors([
-    'input[name="city"]',
-  ]) || extractByLabel('city')
+  // Emergency contact
+  intake.emergencyContact = findAnswer(pairs, 'emergency contact')
 
-  intake.address.state = extractBySelectors([
-    'input[name="state"]',
-    'select[name="state"]',
-  ]) || extractByLabel('state')
+  // Clinical
+  intake.chiefComplaint = findAnswer(pairs,
+    'what brings you to counseling',
+    'what brings you to therapy',
+    'what brings you',
+    'reason for seeking',
+    'chief complaint'
+  )
 
-  intake.address.zip = extractBySelectors([
-    'input[name="zip"]',
-    'input[name="postalCode"]',
-  ]) || extractByLabel('zip') || extractByLabel('postal code')
+  intake.counselingGoals = findAnswer(pairs,
+    'goals for counseling',
+    'goals for therapy',
+    'goals for treatment'
+  )
 
-  // Insurance
-  intake.insuranceCompany = extractByLabel('payer') || extractByLabel('insurance company') || extractByLabel('insurance plan')
-  intake.memberId = extractByLabel('member id') || extractByLabel('subscriber id')
-  intake.groupNumber = extractByLabel('group number') || extractByLabel('group #')
+  intake.priorTreatment = findAnswer(pairs,
+    'seen a mental health professional before',
+    'previous mental health',
+    'prior treatment'
+  )
 
-  // Clinical intake — these map to common SP intake form sections
-  intake.chiefComplaint =
-    extractByLabel('chief complaint') ||
-    extractByLabel('reason for seeking treatment') ||
-    extractByLabel('reason for visit') ||
-    extractQuestionnaireResponse('what brings you') ||
-    extractQuestionnaireResponse('reason for seeking') ||
-    extractSectionContent('chief complaint') ||
-    extractSectionContent('reason for visit')
+  intake.medications = findAnswer(pairs,
+    'medications and supplements',
+    'medications',
+    'currently taking'
+  )
 
-  intake.presentingProblems =
-    extractByLabel('presenting problems') ||
-    extractByLabel('presenting concerns') ||
-    extractSectionContent('presenting problems') ||
-    extractSectionContent('presenting concerns') ||
-    extractQuestionnaireResponse('current symptoms') ||
-    extractQuestionnaireResponse('describe your current')
+  intake.prescribingMD = findAnswer(pairs,
+    'prescribing md',
+    'prescribing doctor',
+    'prescribing physician'
+  )
 
-  intake.historyOfPresentIllness =
-    extractByLabel('history of present illness') ||
-    extractSectionContent('history of present illness') ||
-    extractSectionContent('hpi')
+  intake.primaryCarePhysician = findAnswer(pairs,
+    'primary care physician',
+    'primary care doctor',
+    'pcp'
+  )
 
-  intake.pastPsychiatricHistory =
-    extractByLabel('past psychiatric history') ||
-    extractByLabel('previous mental health treatment') ||
-    extractSectionContent('psychiatric history') ||
-    extractQuestionnaireResponse('previous therapy') ||
-    extractQuestionnaireResponse('previous psychiatric')
+  // Substance use
+  intake.alcoholUse = findAnswer(pairs, 'drink alcohol')
+  intake.drugUse = findAnswer(pairs, 'recreational drugs', 'drug use')
 
-  intake.medications =
-    extractByLabel('current medications') ||
-    extractByLabel('medications') ||
-    extractSectionContent('medications') ||
-    extractQuestionnaireResponse('medications')
+  // Risk assessment
+  intake.suicidalIdeation = findAnswer(pairs, 'suicidal thoughts', 'suicidal ideation')
+  intake.suicideAttemptHistory = findAnswer(pairs, 'attempted suicide', 'suicide attempt')
+  intake.homicidalIdeation = findAnswer(pairs, 'thoughts or urges to harm others', 'homicidal')
+  intake.psychiatricHospitalization = findAnswer(pairs, 'hospitalized for a psychiatric', 'psychiatric hospitalization')
 
-  intake.medicalHistory =
-    extractByLabel('medical history') ||
-    extractByLabel('medical conditions') ||
-    extractSectionContent('medical history') ||
-    extractQuestionnaireResponse('medical conditions') ||
-    extractQuestionnaireResponse('health conditions')
+  // Family & mental health history
+  intake.familyPsychiatricHistory = findAnswer(pairs, 'history of mental illness in your family')
+  intake.familyMentalEmotionalHistory = findAnswer(pairs,
+    'family history of mental/emotional',
+    'family history of mental',
+    'emotional disturbance'
+  )
 
-  intake.familyPsychiatricHistory =
-    extractByLabel('family psychiatric history') ||
-    extractByLabel('family mental health history') ||
-    extractSectionContent('family history') ||
-    extractQuestionnaireResponse('family history of mental')
+  // Social history
+  intake.maritalStatus = findAnswer(pairs, 'marital status')
+  intake.relationshipDescription = findAnswer(pairs,
+    'describe the nature of the relationship',
+    'relationship'
+  )
+  intake.livingArrangement = findAnswer(pairs,
+    'current living situation',
+    'living situation',
+    'live alone'
+  )
+  intake.education = findAnswer(pairs,
+    'level of education',
+    'highest grade',
+    'education'
+  )
+  intake.occupation = findAnswer(pairs,
+    'current occupation',
+    'occupation'
+  )
 
-  intake.socialHistory =
-    extractByLabel('social history') ||
-    extractSectionContent('social history') ||
-    extractQuestionnaireResponse('living situation') ||
-    extractQuestionnaireResponse('relationship status')
+  // Trauma
+  intake.physicalSexualAbuseHistory = findAnswer(pairs, 'physical/sexual abuse', 'physical abuse', 'sexual abuse')
+  intake.domesticViolenceHistory = findAnswer(pairs, 'domestic violence')
 
-  intake.substanceUseHistory =
-    extractByLabel('substance use') ||
-    extractByLabel('alcohol and drug use') ||
-    extractSectionContent('substance use') ||
-    extractQuestionnaireResponse('alcohol use') ||
-    extractQuestionnaireResponse('drug use') ||
-    extractQuestionnaireResponse('substance use')
-
-  intake.priorTreatment =
-    extractByLabel('prior treatment') ||
-    extractByLabel('treatment history') ||
-    extractSectionContent('prior treatment') ||
-    extractSectionContent('treatment history')
-
-  intake.suicidalIdeation =
-    extractByLabel('suicidal ideation') ||
-    extractByLabel('suicidal thoughts') ||
-    extractQuestionnaireResponse('suicidal') ||
-    extractQuestionnaireResponse('thoughts of harming yourself')
-
-  intake.homicidalIdeation =
-    extractByLabel('homicidal ideation') ||
-    extractByLabel('homicidal thoughts') ||
-    extractQuestionnaireResponse('homicidal') ||
-    extractQuestionnaireResponse('thoughts of harming others')
+  // Symptom checklists
+  intake.recentSymptoms = findAnswer(pairs, 'experienced in the past six months', 'past six months')
+  intake.additionalSymptoms = findAnswer(pairs, 'following that apply')
+  intake.additionalInfo = findAnswer(pairs, 'what else would you like me to know', 'anything else')
 
   return intake
 }
 
 function countCapturedFields(intake: IntakeData): number {
   let count = 0
-  const skip = new Set(['capturedAt', 'clientId', 'address'])
+  const skip = new Set(['capturedAt', 'clientId', 'address', 'rawQA', 'formTitle', 'formDate', 'signedBy', 'signedAt'])
 
   for (const [key, value] of Object.entries(intake)) {
     if (skip.has(key)) continue
     if (typeof value === 'string' && value.trim()) count++
   }
 
-  // Count address fields separately
-  for (const value of Object.values(intake.address)) {
-    if (value.trim()) count++
-  }
+  // Count address if any part is filled
+  if (intake.address.raw) count++
 
   return count
 }
@@ -341,21 +352,25 @@ async function handleCaptureClick(): Promise<void> {
     assertExtensionContext()
     showToast('Capturing intake data...', 'success')
 
-    const intake = await extractIntakeData()
+    const intake = extractIntakeData()
     const fieldCount = countCapturedFields(intake)
 
     if (fieldCount === 0) {
-      showToast('No intake data found on this page. Navigate to a client profile or intake form.', 'error')
+      showToast('No intake data found. Make sure you are viewing an intake form.', 'error')
       return
     }
 
     await saveIntake(intake)
-    showToast(
-      `Captured ${fieldCount} fields for ${intake.firstName || 'client'} ${intake.lastName || ''}`.trim(),
-      'success'
-    )
 
-    console.log('[SPN] Captured intake data:', { fieldCount, clientId: intake.clientId })
+    const name = `${intake.firstName} ${intake.lastName}`.trim() || 'client'
+    showToast(`Captured ${fieldCount} fields for ${name} (${intake.rawQA.length} Q&A pairs)`, 'success')
+
+    console.log('[SPN] Captured intake data:', {
+      fieldCount,
+      qaCount: intake.rawQA.length,
+      clientId: intake.clientId,
+      name,
+    })
   } catch (err) {
     if (isExtensionContextInvalidatedError(err)) {
       showToast('Extension reloaded — please refresh this page.', 'error')
@@ -366,11 +381,16 @@ async function handleCaptureClick(): Promise<void> {
   }
 }
 
+function hasIntakeForm(): boolean {
+  return !!document.querySelector('.markdown.intake-answers')
+}
+
 function injectCaptureButton(): void {
   if (!isClientPage()) return
-
-  // Don't inject if already present
   if (document.getElementById('spn-capture-btn')) return
+
+  // Only inject if there's an intake form on the page
+  if (!hasIntakeForm()) return
 
   injectButton('Capture Intake', handleCaptureClick, {
     id: 'spn-capture-btn',
@@ -378,13 +398,22 @@ function injectCaptureButton(): void {
   })
 }
 
-// Watch for SPA navigation
+// Watch for SPA navigation and DOM changes (intake form may load async)
 let lastUrl = window.location.href
+let retryCount = 0
+const MAX_RETRIES = 10
+
 const observer = new MutationObserver(() => {
   if (window.location.href !== lastUrl) {
     lastUrl = window.location.href
-    // Re-inject button on navigation
+    retryCount = 0
     setTimeout(injectCaptureButton, 500)
+  }
+
+  // Retry injection if form hasn't loaded yet
+  if (isClientPage() && !document.getElementById('spn-capture-btn') && retryCount < MAX_RETRIES) {
+    retryCount++
+    setTimeout(injectCaptureButton, 1000)
   }
 })
 

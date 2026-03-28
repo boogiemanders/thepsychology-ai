@@ -2,9 +2,11 @@
 
 export interface IntakeData {
   // Demographics
+  fullName: string
   firstName: string
   lastName: string
   sex: string
+  genderIdentity: string
   dob: string
   phone: string
   email: string
@@ -13,7 +15,14 @@ export interface IntakeData {
     city: string
     state: string
     zip: string
+    country: string
+    raw: string // full address as captured
   }
+  race: string
+  ethnicity: string
+
+  // Emergency contact
+  emergencyContact: string
 
   // Insurance
   insuranceCompany: string
@@ -22,17 +31,52 @@ export interface IntakeData {
 
   // Clinical intake
   chiefComplaint: string
+  counselingGoals: string
   presentingProblems: string
   historyOfPresentIllness: string
-  pastPsychiatricHistory: string
+  priorTreatment: string // have you seen a mental health professional before
   medications: string
+  prescribingMD: string
+  primaryCarePhysician: string
   medicalHistory: string
-  familyPsychiatricHistory: string
-  socialHistory: string
-  substanceUseHistory: string
-  priorTreatment: string
+
+  // Risk assessment
   suicidalIdeation: string
+  suicideAttemptHistory: string
   homicidalIdeation: string
+  psychiatricHospitalization: string
+
+  // Substance use
+  alcoholUse: string
+  drugUse: string
+  substanceUseHistory: string
+
+  // Family & social
+  familyPsychiatricHistory: string
+  familyMentalEmotionalHistory: string
+  maritalStatus: string
+  relationshipDescription: string
+  livingArrangement: string
+  education: string
+  occupation: string
+
+  // Trauma history
+  physicalSexualAbuseHistory: string
+  domesticViolenceHistory: string
+
+  // Symptom checklist
+  recentSymptoms: string
+  additionalSymptoms: string
+  additionalInfo: string
+
+  // Form metadata
+  formTitle: string
+  formDate: string
+  signedBy: string
+  signedAt: string
+
+  // Raw Q&A (preserves all questions and answers from the form)
+  rawQA: Array<{ question: string; answer: string }>
 
   // Metadata
   capturedAt: string // ISO timestamp
@@ -40,28 +84,54 @@ export interface IntakeData {
 }
 
 export const EMPTY_INTAKE: IntakeData = {
+  fullName: '',
   firstName: '',
   lastName: '',
   sex: '',
+  genderIdentity: '',
   dob: '',
   phone: '',
   email: '',
-  address: { street: '', city: '', state: '', zip: '' },
+  address: { street: '', city: '', state: '', zip: '', country: '', raw: '' },
+  race: '',
+  ethnicity: '',
+  emergencyContact: '',
   insuranceCompany: '',
   memberId: '',
   groupNumber: '',
   chiefComplaint: '',
+  counselingGoals: '',
   presentingProblems: '',
   historyOfPresentIllness: '',
-  pastPsychiatricHistory: '',
-  medications: '',
-  medicalHistory: '',
-  familyPsychiatricHistory: '',
-  socialHistory: '',
-  substanceUseHistory: '',
   priorTreatment: '',
+  medications: '',
+  prescribingMD: '',
+  primaryCarePhysician: '',
+  medicalHistory: '',
   suicidalIdeation: '',
+  suicideAttemptHistory: '',
   homicidalIdeation: '',
+  psychiatricHospitalization: '',
+  alcoholUse: '',
+  drugUse: '',
+  substanceUseHistory: '',
+  familyPsychiatricHistory: '',
+  familyMentalEmotionalHistory: '',
+  maritalStatus: '',
+  relationshipDescription: '',
+  livingArrangement: '',
+  education: '',
+  occupation: '',
+  physicalSexualAbuseHistory: '',
+  domesticViolenceHistory: '',
+  recentSymptoms: '',
+  additionalSymptoms: '',
+  additionalInfo: '',
+  formTitle: '',
+  formDate: '',
+  signedBy: '',
+  signedAt: '',
+  rawQA: [],
   capturedAt: '',
   clientId: '',
 }
