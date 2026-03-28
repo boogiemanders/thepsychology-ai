@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="popup.css">
+  <title>SimplePractice Notes</title>
+</head>
+<body>
+  <div class="popup">
+    <div class="header">
+      <h1 class="title">SP Notes</h1>
+      <button id="btn-settings" class="btn-icon" title="Settings">&#9881;</button>
+    </div>
+
+    <div id="provider-badge" class="provider-badge"></div>
+
+    <!-- Empty state -->
+    <div id="empty-state" class="empty-state">
+      <p>No intake captured yet.</p>
+      <p class="hint">Go to a SimplePractice client page and click "Capture Intake"</p>
+    </div>
+
+    <!-- Intake captured -->
+    <div id="intake-info" class="section" style="display: none;">
+      <div class="client-name" id="client-name"></div>
+      <div class="client-meta" id="client-meta"></div>
+
+      <div class="checklist">
+        <div class="check-item" id="check-intake">
+          <span class="check-icon">&#9675;</span>
+          <span>Intake Captured</span>
+        </div>
+        <div class="check-item" id="check-note-gen">
+          <span class="check-icon">&#9675;</span>
+          <span>Note Generated</span>
+        </div>
+        <div class="check-item" id="check-note-review">
+          <span class="check-icon">&#9675;</span>
+          <span>Note Reviewed</span>
+        </div>
+        <div class="check-item" id="check-note-submit">
+          <span class="check-icon">&#9675;</span>
+          <span>Submitted to SP</span>
+        </div>
+      </div>
+
+      <!-- Intake summary -->
+      <div id="intake-summary" class="summary-section">
+        <h3 class="section-title">Captured Fields</h3>
+        <div id="intake-fields" class="field-list"></div>
+      </div>
+
+      <!-- Note preview (when generated) -->
+      <div id="note-preview" class="summary-section" style="display: none;">
+        <h3 class="section-title">Progress Note Preview</h3>
+        <div id="note-content" class="note-preview-content"></div>
+      </div>
+
+      <div class="actions">
+        <button id="btn-clear" class="btn btn-secondary">Clear</button>
+      </div>
+    </div>
+
+    <!-- Settings panel -->
+    <div id="settings-panel" class="settings-panel" style="display: none;">
+      <h2 class="section-title">Provider</h2>
+      <label>First Name<input id="pref-firstName" type="text" class="input"></label>
+      <label>Last Name<input id="pref-lastName" type="text" class="input"></label>
+      <label>Default Location
+        <select id="pref-location" class="input">
+          <option value="Video Office">Video Office</option>
+          <option value="New Rochelle">New Rochelle</option>
+          <option value="Manhattan">Manhattan</option>
+        </select>
+      </label>
+      <label>First Visit CPT<input id="pref-firstCPT" type="text" class="input"></label>
+      <label>Follow-up CPT<input id="pref-followUpCPT" type="text" class="input"></label>
+
+      <div class="actions">
+        <button id="btn-save-prefs" class="btn btn-primary">Save</button>
+        <button id="btn-cancel-prefs" class="btn btn-secondary">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
