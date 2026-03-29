@@ -327,6 +327,36 @@ This checklist must be fully cleared before using the extension with real patien
 
 ---
 
+## Future Vision: Facial Expression & Nonverbal Analysis
+
+> This is a longer-term idea to be planned in its own file when ready. Captured here so it doesn't get lost.
+
+**Concept:** After a telehealth session (via Zoom, SimplePractice Telehealth, etc.), Inzinna reviews the recorded video. An AI layer analyzes the recording for nonverbal and affective signals and provides structured clinical feedback.
+
+**What it could detect:**
+- **Facial affect:** Emotion recognition across the session (baseline neutral, moments of distress, flat affect, incongruent affect)
+- **Affect consistency:** Does the patient's expressed emotion match what they're saying? (e.g., laughing while describing grief — clinically significant)
+- **Engagement patterns:** Eye contact, head nods, gaze aversion — can signal dissociation, shame, anxiety
+- **Psychomotor signs:** Restlessness, slowed movement, hand-wringing — relevant to depression, anxiety, mania assessment
+- **Clinician feedback:** How is Inzinna's own body language, tone, and pacing landing? Useful for supervision and skill-building.
+
+**How it would integrate:**
+- Video stays fully local — same HIPAA-safe local processing principle
+- Runs post-session (not real-time) — clinician reviews the analysis report alongside the session transcript
+- Findings feed into the diagnostic impressions (e.g., "flat affect observed — supports MDD criterion B")
+- Could eventually plug into the Post-Session Report as an "Observed Affect" section
+
+**Tools likely needed (all local, all free):**
+- `MediaPipe` or `DeepFace` — facial landmark and emotion detection, runs locally
+- `OpenFace` — action unit analysis (the academic gold standard for clinical affect research)
+- Same local server architecture as the audio pipeline (Phase 4)
+
+**HIPAA note:** Video contains highly identifiable biometric data. Consent language will need to explicitly cover video analysis. Raw video must be auto-deleted after analysis — only the structured report persists.
+
+**Next step when ready:** Create `content/Inzinna/Facial Analysis/PLAN.md` and flesh out the full module design.
+
+---
+
 ## Open Questions
 
 1. **Which local LLM?** Ollama with Llama 3 / Mistral / Phi-3? Needs strong clinical reasoning; should run well on Inzinna's Mac (16GB+ RAM recommended).
