@@ -508,6 +508,50 @@ Aftercare plan:
 
 ---
 
+## Module 18: Medication Tracker
+
+**What:** A living medication log that tracks what the patient reports about their medications across sessions — changes, side effects, compliance, and prescriber updates. Separate from the static intake snapshot, which goes stale.
+
+**Data tracked per entry:**
+- Medication name + dosage
+- Change type: started / dose increased / dose decreased / discontinued / switched
+- Reported by patient (not verified — clinician note only)
+- Side effects reported
+- Compliance (taking as prescribed / partially / stopped)
+- Prescriber name (links to intake prescribing MD field)
+- Session date of report
+
+**Approach:**
+- Visible in side panel as a running log, newest entry on top
+- Clinician adds entries during session (quick-add form: med name, change, notes)
+- Auto-populated from intake if medications were listed there
+- Pre-session brief shows current med list + any changes since last session
+- Flags discrepancies: "Patient reported stopping [med] 2 sessions ago — still listed as current in intake"
+- Feeds directly into prescriber/PCP communication drafts (Module 16)
+- Current med list auto-populates the medications section of the session note
+
+---
+
+## Module 19: Cultural Formulation (DSM-5-TR CFI)
+
+**What:** A structured capture of cultural context using the DSM-5-TR Cultural Formulation Interview (CFI) framework. Completed during the initial evaluation, updated as relevant. Informs diagnosis, formulation, and treatment planning.
+
+**CFI domains (DSM-5-TR):**
+1. **Cultural definition of the problem** — How the patient and family describe and understand the problem in their own terms
+2. **Cultural perceptions of cause, context, and support** — What the patient believes caused it; cultural/social stressors; role of religion, spirituality, family
+3. **Cultural factors affecting self-coping and past help-seeking** — What has been tried before; barriers to care; cultural attitudes toward mental health treatment
+4. **Cultural factors affecting current help-seeking** — Preferences for care; concerns about the clinician-patient relationship; cultural expectations of treatment
+
+**Approach:**
+- Guided interview flow in the side panel during initial evaluation (can be skipped/deferred)
+- Free-text responses per domain, with CFI question prompts visible to clinician
+- Cultural identity fields: language(s), country of origin, generation in US, religious/spiritual affiliation, community ties
+- Completed CFI summary auto-populates the clinical formulation section of the session note (predisposing/perpetuating cultural factors)
+- Flagged in pre-session brief if cultural factors are particularly relevant to the presenting problem
+- All DSM-5-TR CFI supplementary modules available (e.g., Explanatory Model, Psychosocial Stressors, Spirituality)
+
+---
+
 ## HIPAA Compliance Checklist
 
 - [ ] All PHI stored in browser session storage only (never localStorage or disk)
@@ -555,6 +599,10 @@ Aftercare plan:
 │             │   letter      │                          │
 │             │ • Termination │                          │
 │             │   summary     │                          │
+│             │ • Medication  │                          │
+│             │   tracker     │                          │
+│             │ • Cultural    │                          │
+│             │   formulation │                          │
 │             │ • Live        │                          │
 │             │   transcript  │                          │
 │             │ • Clinician   │                          │
@@ -596,7 +644,10 @@ Aftercare plan:
 | 12 | Cross-Session Pattern Detection | Phases 5, 9, 10 | LLM surfaces trends across all sessions |
 | 13 | Prescriber/PCP Communication Draft | Phases 2, 5 | Auto-drafted coordination-of-care letters |
 | 14 | Post-Session Report + Auto-Fill | Phases 2-13 | Generate report, edit, submit to SP |
-| 15 | Termination Summary Generator | Phase 14 | Full treatment episode summary at discharge |
+| 15 | Medication Tracker | Phase 2 | Living med log with changes, side effects, compliance |
+| 16 | Cultural Formulation (CFI) | Phase 2 | DSM-5-TR CFI domains, feeds into formulation + note |
+| 17 | Post-Session Report + Auto-Fill | Phases 2-16 | Generate report, edit, submit to SP |
+| 18 | Termination Summary Generator | Phase 17 | Full treatment episode summary at discharge |
 
 ---
 
