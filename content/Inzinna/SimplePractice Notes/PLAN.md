@@ -271,6 +271,7 @@ Differential: [list]
 ## Open Questions
 
 1. **Which local LLM?** Ollama with Llama 3 / Mistral / Phi-3? Need one that's good at clinical reasoning and runs well on your Mac.
-2. **Consent workflow:** Pop-up before each session? One-time consent per patient?
+2. **Consent workflow:** One-time per patient. Patient signs a consent form in SimplePractice. Recording does not start until consent is confirmed — the extension checks for a completed consent form in SP before enabling audio features.
 3. **Multi-diagnosis support:** Can the clinician have multiple diagnosis checklists open simultaneously (e.g., MDD + GAD differential)?
 4. **Which SimplePractice note forms** should we target for auto-fill? (Progress notes, intake assessments, treatment plans — all of them?)
+5. **Phase 4 cost:** None. faster-whisper, whisperX, pyannote-audio (free HuggingFace model agreement), and Ollama are all free and open source. Runs entirely locally — no API fees.
