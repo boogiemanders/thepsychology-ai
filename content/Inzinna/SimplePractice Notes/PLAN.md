@@ -359,6 +359,106 @@ This checklist must be fully cleared before using the extension with real patien
 
 ---
 
+## Research Foundation
+
+Evidence supporting each module, drawn from OpenEvidence systematic literature review and citations from `content/strategy/plan-matching-insurance-booking.md`.
+
+---
+
+### Module 1 & 5: AI Clinical Documentation & Report Generation
+
+**The case for building it:**
+- AI tools produce a moderate reduction in documentation workload (SMD = -0.71, 95% CI: -0.93 to -0.49) and documentation time (SMD = -0.72) when clinicians review and edit AI-generated drafts. Quality is at least comparable to manually prepared notes. *(Zhao et al., 2025 — BMC Medical Informatics)*
+- Ambient AI scribes reduced EHR time by approximately 2–6 minutes per appointment. ~50% of clinicians reported decreased after-visit documentation time and reduced EHR frustration. *(Pearlman et al., 2025 — JAMA Network Open; Liu et al., 2024 — JAMA Network Open)*
+
+**The case for mandatory clinician review (why we built it that way):**
+- A proof-of-concept study of AI-generated psychiatric interview documentation found AI achieved 78% accuracy vs. 94% for human-written reports (p=.003), struggled with complex psychopathological features, and introduced **clinically relevant inaccuracies** — underscoring that clinical review by a qualified professional is not optional. *(Gülegen et al., 2026 — Frontiers in Psychiatry)*
+- A 2025 review of commercial AI note-writing tools for mental health found most lacked transparency about training methodologies, bias correction, and evidence base. *(Bouguettaya et al., 2025 — General Hospital Psychiatry)*
+
+**Clinical standards:**
+- APA Assessment Guidelines require clinician decision-making authority — AI assists, clinician decides. *(Campbell et al., 2020)*
+- APA Telepsychology Practice Guidelines apply to digital clinical tools and remote documentation workflows. *(Barnwell et al., 2024)*
+
+---
+
+### Module 2: DSM-5 Diagnostic Impressions & Multi-Dx Support
+
+**The case for structured diagnostic support:**
+- Structured diagnostic interviews improve accuracy dramatically: **86% vs. 54%** compared to unstructured clinical interviews in inpatient settings. *(Miller et al., 2001 — Psychiatry Research)*
+- Structured interviews identified **5x as many secondary diagnoses** as routine clinical documentation — directly validating multi-dx support. *(Ramirez Basco et al., 2000 — American Journal of Psychiatry)*
+- SCID-5-CV demonstrated excellent reliability (kappa >0.70 for most diagnoses) and high specificity (>0.70). *(Osório et al., 2019 — Psychiatry and Clinical Neurosciences)*
+- Combining structured interviewing with medical record review produces the most accurate primary diagnoses. *(Ramirez Basco et al., 2000)*
+
+**The case for AI-assisted (not AI-decided) diagnosis:**
+- AI-powered clinical interviews achieved higher agreement, sensitivity, and specificity in identifying clinician-diagnosed disorders vs. established rating scales, with most participants rating the AI interview as **highly empathic and supportive**. *(Sikström et al., 2025 — Scientific Reports)*
+- An AI decision support system achieved 89% accuracy using only 28 questions — far fewer than traditional tools. *(Tutun et al., 2023 — Information Systems Frontiers)*
+- NLP tools showed good depression detection performance (AUC 0.77–0.92), with LLMs outperforming traditional ML. *(Yulianti et al., 2025 — International Journal of Medical Informatics)*
+
+**Key limitations to respect in design:**
+- AI diagnostic tools struggled with cultural adaptability and non-English contexts. *(Yulianti et al., 2025)*
+- Performance varied widely (21–100%) across disorders — clinician override must always be possible. *(Cruz-Gonzalez et al., 2025 — Psychological Medicine)*
+
+---
+
+### Modules 3–4 & Bonus Phases: Session Recording & Deliberate Practice
+
+**The case for session recording:**
+- When therapists reviewed client symptom measures **before** sessions (rather than after), clients showed significantly larger symptom improvement by the next session. *(Li et al., 2025 — Journal of Counseling Psychology)*
+- Progress feedback narrowed the gap between more and less effective therapists by ~18.2%, reducing therapist effects (ICC=0.011 → 0.009). *(Delgadillo et al., 2022 — Journal of Consulting and Clinical Psychology)*
+- Deliberate practice using session recordings produced better observer-rated skills across all performance measures and greater empathy at 4-month follow-up vs. traditional didactic training. *(Westra et al., 2021 — Psychotherapy)*
+- Therapists cannot accurately identify deteriorating clients without objective data. *(Muir et al., 2019)* — validated by the finding that progress feedback meaningfully changes outcomes.
+- Session recording is the single strongest predictor of superior therapist outcomes. *(Chow et al., 2015)*
+
+**Patient attitudes toward recording:**
+- **90% of patients** reported listening to session recordings between sessions; most endorsed positive attitudes and discussed recordings with therapists. *(Shepherd et al., 2009 — Behavioural and Cognitive Psychotherapy)*
+- Clients rated the potential helpfulness of independently reviewing sessions **higher than therapists anticipated**. *(King & Boswell, 2021 — Journal of Clinical Psychology)*
+- Recording for supervision is viewed favorably by both therapists and patients. *(Franzen et al., 2023 — Frontiers in Psychology)*
+
+**Honest limitation:**
+- A 2025 systematic review found wide variability in how deliberate practice has been operationalized — only 3 of 20 studies met contemporary DP definitions. Evidence is promising but still developing. *(Diamond et al., 2025 — Psychotherapy)*
+
+**Clinical standards:**
+- IOPC Teleneuropsychology Guidance covers standards for remote clinical tools generally. *(Bilder et al., 2020)*
+- Routine outcome monitoring (ROM) shows effect sizes of 0.36–0.53 for at-risk clients when clinical support tools flag them early. *(Barkham et al., 2023)*
+
+---
+
+### Full Reference List
+
+1. Zhao J et al. (2025). AI Tools and Clinical Documentation Burden: Systematic Review and Meta-Analysis. *BMC Medical Informatics and Decision Making.*
+2. Pearlman K et al. (2025). Use of an AI Scribe and EHR Efficiency. *JAMA Network Open.* 8(10):e2537000.
+3. Liu TL et al. (2024). AI-Powered Clinical Documentation and Clinicians' EHR Experience. *JAMA Network Open.* 7(9):e2432460.
+4. Stults CD et al. (2025). Evaluation of an Ambient AI Documentation Platform for Clinicians. *JAMA Network Open.* 8(5):e258614.
+5. Gülegen B et al. (2026). AI-generated Documentation of Psychiatric Interviews: Proof-of-Concept. *Frontiers in Psychiatry.* 17:1621532.
+6. Bouguettaya A et al. (2025). AI-driven Report-Generation Tools in Mental Healthcare. *General Hospital Psychiatry.* 94:150–158.
+7. Bracken A et al. (2025). AI-Powered Documentation Systems in Healthcare: Systematic Review. *Journal of Medical Systems.* 49(1):28.
+8. Miller PR et al. (2001). Accuracy of Structured vs. Unstructured Interviews. *Psychiatry Research.* 105(3):255–64.
+9. Osório FL et al. (2019). Clinical Validity and Reliability of SCID-5-CV. *Psychiatry and Clinical Neurosciences.* 73(12):754–760.
+10. Ramirez Basco M et al. (2000). Methods to Improve Diagnostic Accuracy in Community Mental Health. *American Journal of Psychiatry.* 157(10):1599–605.
+11. Saunders EFH et al. (2021). Predictors of Diagnostic Delay in Psychiatric Clinics. *Depression and Anxiety.* 38(5):545–553.
+12. Sikström S et al. (2025). Generative AI-assisted Clinical Interviewing of Mental Health. *Scientific Reports.* 15(1):37737.
+13. Cruz-Gonzalez P et al. (2025). AI in Mental Health Care: Systematic Review. *Psychological Medicine.* 55:e18.
+14. Abd-Alrazaq A et al. (2022). Performance of AI in Diagnosing Mental Disorders: Umbrella Review. *NPJ Digital Medicine.* 5(1):87.
+15. Yulianti EP et al. (2025). NLP-based Assessment for Mental Health Diagnosis. *International Journal of Medical Informatics.* 205:106129.
+16. Tutun S et al. (2023). AI-based Decision Support System for Mental Health Disorders. *Information Systems Frontiers.* 25(3):1261–1276.
+17. Ghorbankhani M & Safara M. (2025). AI in Depression Diagnostics: Systematic Review. *Artificial Intelligence in Medicine.* 172:103320.
+18. Li X et al. (2025). Therapist Review of Client Symptom Measures and Clinical Outcome. *Journal of Counseling Psychology.* 72(2):192–200.
+19. Delgadillo J et al. (2022). Progress Feedback and Therapist Effects Meta-Analysis. *Journal of Consulting and Clinical Psychology.* 90(7):559–567.
+20. Vaz A et al. (2025). Rethinking Psychotherapy Training: The Case for Deliberate Practice. *Journal of Clinical Psychology.* 81(6):393–398.
+21. Westra HA et al. (2021). Deliberate Practice Workshop for Responsivity to Resistance. *Psychotherapy.* 58(2):175–185.
+22. Diamond G et al. (2025). Systematic Review of Deliberate Practice in Psychotherapy. *Psychotherapy.* 62(2):113–131.
+23. Shepherd L et al. (2009). Recording Therapy Sessions: Patient and Therapist Attitudes. *Behavioural and Cognitive Psychotherapy.* 37(2):141–50.
+24. King BR & Boswell JF. (2021). Therapist and Client Attitudes Toward Client Independent Review of Sessions. *Journal of Clinical Psychology.* 77(9):1894–1904.
+25. Franzen MM et al. (2023). Orientation to Being Recorded in Psychotherapeutic Interaction. *Frontiers in Psychology.* 14:1254555.
+26. Campbell et al. (2020). APA Assessment Guidelines.
+27. Barnwell et al. (2024). APA Telepsychology Practice Guidelines.
+28. Bilder et al. (2020). IOPC Teleneuropsychology Guidance. *Archives of Clinical Neuropsychology.*
+29. Chow DL et al. (2015). The Role of Deliberate Practice in the Development of Highly Effective Psychotherapists. *Psychotherapy.*
+30. Barkham M et al. (2023). Routine Outcome Monitoring and Clinical Support Tools. *(cited in matching plan Phase 6)*
+31. Muir HJ et al. (2019). Therapist Self-Assessment of Client Deterioration. *(cited in matching plan Phase 6)*
+
+---
+
 ## Open Questions
 
 1. **Which local LLM?** Ollama with Llama 3 / Mistral / Phi-3? Needs strong clinical reasoning; should run well on Inzinna's Mac (16GB+ RAM recommended).
