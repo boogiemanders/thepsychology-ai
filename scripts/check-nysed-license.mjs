@@ -77,10 +77,26 @@ async function checkLicense() {
   const executablePath =
     process.env.CHROME_PATH ||
     "/Users/anderschan/Library/Caches/ms-playwright/chromium-1208/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing";
-  const browser = await chromium.launch({ headless: false, executablePath });
+  // Build proxy config from environment if available
+  const rawProxy = process.env.HTTPS_PROXY || process.env.https_proxy || process.env.HTTP_PROXY || process.env.http_proxy;
+  let proxyConfig;
+  if (rawProxy) {
+    try {
+      const u = new URL(rawProxy);
+      proxyConfig = {
+        server: `${u.protocol}//${u.hostname}:${u.port}`,
+        username: decodeURIComponent(u.username),
+        password: decodeURIComponent(u.password),
+      };
+    } catch {}
+  }
+
+  const browser = await chromium.launch({ headless: true, executablePath, ...(proxyConfig ? { proxy: proxyConfig } : {}) });
   const context = await browser.newContext({
     userAgent:
       "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+    ignoreHTTPSErrors: true,
+    ...(proxyConfig ? { proxy: proxyConfig } : {}),
   });
   const page = await context.newPage();
 
