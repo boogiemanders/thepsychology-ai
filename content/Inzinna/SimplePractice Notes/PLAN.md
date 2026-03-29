@@ -250,14 +250,21 @@ Differential: [list]
 
 ## Build Order
 
+### Must-Have (MVP)
+
 | Phase | Module | Depends On | Description |
 |-------|--------|------------|-------------|
-| 1 | Local server setup | — | Whisper + diarization + Ollama running on localhost |
-| 2 | Intake Form Extraction | — | Content script extracts intake data from SP |
-| 3 | DSM-5 Diagnostic Impressions | Phase 2 | Local LLM maps intake to DSM-5 criteria |
-| 4 | Session Audio Recording | Phase 1 | Record + transcribe + diarize in real-time |
-| 5 | Live Diagnostic Interview | Phases 1-4 | Side panel with criteria checklist + auto-check |
-| 6 | Post-Session Report + Auto-Fill | Phases 2-5 | Generate report, edit, submit to SP |
+| 1 | Intake Form Extraction | — | Content script extracts intake data from SP |
+| 2 | DSM-5 Diagnostic Impressions | Phase 1 | Local LLM maps intake to DSM-5 criteria |
+| 3 | Post-Session Report + Auto-Fill | Phases 1-2 | Generate report, edit, submit back to SP |
+
+### Bonus (Exciting Extras)
+
+| Phase | Module | Depends On | Description |
+|-------|--------|------------|-------------|
+| 4 | Local server setup | — | Whisper + diarization + Ollama running on localhost |
+| 5 | Session Audio Recording | Phase 4 | Record + transcribe + diarize in real-time |
+| 6 | Live Diagnostic Interview | Phases 4-5 | Side panel with criteria checklist + auto-check |
 
 ---
 
