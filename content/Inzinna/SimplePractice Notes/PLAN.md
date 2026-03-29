@@ -10,6 +10,11 @@ A HIPAA-compliant tool for Inzinna's clinical workflow that extracts SimplePract
 - **Standalone extension** — separate from the ZocDoc-to-SimplePractice extension
 - **Fully local processing** — Whisper local for transcription, local LLM for criteria matching. No PHI leaves the device.
 - **Speaker diarization required** — must distinguish clinician vs patient voice. Only patient statements trigger criteria auto-checks.
+- **Consent:** One-time per patient. Patient signs a consent form in SimplePractice. Recording does not start until consent is confirmed — the extension checks for a completed SP consent form before enabling audio features. No recording is used to capture consent itself.
+- **Data transfer method:** DOM-based (reads from and writes to SimplePractice page structure directly, same approach as ZocDoc extension). No SP API needed for MVP — avoids developer partner approval and BAA negotiation overhead.
+- **Auto-fill targets:** Start with intake forms. Expand to progress notes, treatment plans, and diagnosis codes in later phases.
+- **Report review:** Clinician reviews the full report in the side panel before submitting anything back to SimplePractice.
+- **SP intake URL pattern:** Per-patient URL, but consistent page structure — will be confirmed via Chrome DevTools inspection.
 
 ---
 
@@ -31,6 +36,7 @@ A HIPAA-compliant tool for Inzinna's clinical workflow that extracts SimplePract
 - Content script targeting SimplePractice's client profile / intake pages
 - Mirror the `CapturedClient` type pattern from `zocdoc-to-simplepractice/src/lib/types.ts`, extend with clinical fields
 - Store in session storage with same TTL/auto-cleanup pattern (PHI never persists to disk)
+- Specific intake template fields to be confirmed via Chrome DevTools inspection of SP
 
 ---
 
@@ -44,11 +50,15 @@ A HIPAA-compliant tool for Inzinna's clinical workflow that extracts SimplePract
 
 **Approach:**
 - Local LLM (e.g., Llama 3, Mistral, or Phi-3 via Ollama) maps presenting concerns to DSM-5 categories
-- Generate a ranked list of possible diagnoses with supporting criteria
+- System suggests ranked list of possible diagnoses; clinician confirms or edits — AI suggests, clinician decides
 - Flag rule-outs and differential diagnoses
-- Clinician reviews and confirms/edits — AI suggests, clinician decides
+- **Multi-diagnosis support:**
+  - No hard cap on number of open diagnoses
+  - UI shows up to 3 side-by-side panels; any beyond 3 collapse into tabs
+  - Clinician can add diagnoses mid-session if something unexpected surfaces
+  - Patient statements auto-populate evidence under **all** matching diagnoses simultaneously (not just the active one)
 
-**Output:** Structured diagnostic impression draft:
+**Output:** Structured diagnostic impression draft per diagnosis:
 ```
 Primary: [Diagnosis] — [DSM-5 code]
   Criteria met: [list]
@@ -74,12 +84,13 @@ Differential: [list]
 - Audio NEVER leaves the device — fully local pipeline
 - Auto-delete raw audio after transcription
 - Transcripts stored in session storage with TTL (same pattern as client data)
-- Patient consent workflow required before recording
+- Patient consent confirmed via SP consent form before any recording begins
 
 **Local stack:**
 - `faster-whisper` or `whisper.cpp` — local transcription server
 - `whisperX` or `pyannote-audio` — speaker diarization
 - Runs as a lightweight local service the extension calls via `localhost`
+- **Cost: $0** — all tools are free and open source. pyannote models require accepting a HuggingFace user agreement (no cost).
 
 ---
 
@@ -126,13 +137,13 @@ Differential: [list]
 ```
 
 **How it works:**
-1. Clinician selects a suspected diagnosis (or system suggests based on intake)
-2. DSM-5 criteria load as a scrollable checklist
+1. System suggests diagnoses based on intake data; clinician confirms
+2. DSM-5 criteria load as a scrollable checklist (up to 3 side-by-side; extras in tabs)
 3. As the session audio is transcribed in real-time, NLP analyzes patient statements against each criterion
-4. Criteria auto-check ✅ (met), ❌ (not met), or ❓ (unclear/not discussed)
+4. Criteria auto-check ✅ (met), ❌ (not met), or ❓ (unclear/not discussed) across all open diagnoses simultaneously
 5. Supporting quotes from the patient are displayed under each criterion
 6. System suggests follow-up questions for ❓ criteria
-7. Clinician can switch between diagnoses, explore differentials, or ask the chat for guidance
+7. Clinician can add a new diagnosis mid-session, explore differentials, or ask the chat for guidance
 8. At end of session: generates a diagnostic summary with evidence for each criterion
 
 **Approach:**
@@ -147,7 +158,7 @@ Differential: [list]
 
 ## Module 5: Post-Session Report & Auto-Fill
 
-**What:** After the session ends, the system compiles all captured data (intake, transcript, diagnostic impressions, criteria checklist) into a structured clinical note that the clinician can review, edit, and submit back into SimplePractice with one click.
+**What:** After the session ends, the system compiles all captured data (intake, transcript, diagnostic impressions, criteria checklist) into a structured clinical note that the clinician reviews, edits, and submits back into SimplePractice.
 
 **Report structure:**
 ```
@@ -168,10 +179,10 @@ Differential: [list]
 │  DIAGNOSTIC IMPRESSIONS              │
 │  Primary: [Dx] — [DSM-5 code]       │
 │    Criteria met: [list w/ evidence]  │
-│  Differential: [list]               │
+│  Differential: [list]                │
 │  Rule-outs: [list]                   │
 ├──────────────────────────────────────┤
-│  CLINICAL FORMULATION               │
+│  CLINICAL FORMULATION                │
 │  Predisposing, precipitating,        │
 │  perpetuating, protective factors    │
 ├──────────────────────────────────────┤
@@ -189,15 +200,13 @@ Differential: [list]
 **Workflow:**
 1. Session ends → clinician clicks "Generate Note"
 2. Local LLM synthesizes all data into the structured report
-3. Clinician reviews and edits any section inline
+3. Clinician reviews and edits any section inline in the side panel
 4. Clinician clicks "Submit to SimplePractice"
-5. Content script auto-fills SimplePractice's progress note / clinical documentation forms (same DOM-filling pattern as the existing ZocDoc extension)
+5. Content script auto-fills SimplePractice's intake form fields (DOM-based, same pattern as ZocDoc extension)
 
-**Auto-fill targets in SimplePractice:**
-- Progress notes
-- Treatment plans
-- Diagnosis codes (ICD-10/DSM-5)
-- Clinical documentation forms
+**Auto-fill targets (phased):**
+- **Phase MVP:** Intake forms
+- **Phase 2:** Progress notes, treatment plans, diagnosis codes (ICD-10/DSM-5)
 
 ---
 
@@ -207,7 +216,7 @@ Differential: [list]
 - [ ] Auto-delete with TTL (1 hour default, configurable)
 - [ ] Audio encrypted at rest, auto-deleted after transcription
 - [ ] No PHI transmitted without BAA-covered endpoint
-- [ ] Patient consent captured before audio recording
+- [ ] Patient consent confirmed via SP form before any recording begins
 - [ ] Audit logging (what was accessed, when, by whom)
 - [ ] Extension requires authentication (clinician login)
 
@@ -225,6 +234,8 @@ Differential: [list]
 │ SP Intake   │ • DSM-5       │ (submits completed       │
 │ Extractor   │   criteria    │  report back into SP)    │
 │             │   checklist   │                          │
+│             │ • Multi-dx    │                          │
+│             │   panels/tabs │                          │
 │             │ • Live        │                          │
 │             │   transcript  │                          │
 │             │ • Clinician   │                          │
@@ -238,7 +249,7 @@ Differential: [list]
 │  - Bridges extension ↔ local server                   │
 │  - Consent state management                           │
 ├───────────────────────────────────────────────────────┤
-│              Local Server (localhost)                   │
+│              Local Server (localhost)  [Bonus phases]  │
 │  - faster-whisper / whisper.cpp (transcription)       │
 │  - whisperX / pyannote-audio (speaker diarization)    │
 │  - Ollama + local LLM (criteria matching, note gen)   │
@@ -254,24 +265,25 @@ Differential: [list]
 
 | Phase | Module | Depends On | Description |
 |-------|--------|------------|-------------|
-| 1 | Intake Form Extraction | — | Content script extracts intake data from SP |
-| 2 | DSM-5 Diagnostic Impressions | Phase 1 | Local LLM maps intake to DSM-5 criteria |
-| 3 | Post-Session Report + Auto-Fill | Phases 1-2 | Generate report, edit, submit back to SP |
+| 1 | Intake Form Extraction | — | Content script reads intake data from SP |
+| 2 | DSM-5 Diagnostic Impressions | Phase 1 | Local LLM maps intake → ranked diagnoses; multi-dx support |
+| 3 | Post-Session Report + Auto-Fill | Phases 1-2 | Generate report, clinician reviews, submit to SP intake form |
 
 ### Bonus (Exciting Extras)
 
 | Phase | Module | Depends On | Description |
 |-------|--------|------------|-------------|
-| 4 | Local server setup | — | Whisper + diarization + Ollama running on localhost |
-| 5 | Session Audio Recording | Phase 4 | Record + transcribe + diarize in real-time |
-| 6 | Live Diagnostic Interview | Phases 4-5 | Side panel with criteria checklist + auto-check |
+| 4 | Local server setup | — | Whisper + diarization + Ollama on localhost (free, open source) |
+| 5 | Session Audio Recording | Phase 4 | Record + transcribe + diarize locally; consent gated by SP form |
+| 6 | Live Diagnostic Interview | Phases 4-5 | Real-time criteria checklist, multi-dx auto-check, mid-session adds |
 
 ---
 
 ## Open Questions
 
-1. **Which local LLM?** Ollama with Llama 3 / Mistral / Phi-3? Need one that's good at clinical reasoning and runs well on your Mac.
-2. **Consent workflow:** One-time per patient. Patient signs a consent form in SimplePractice. Recording does not start until consent is confirmed — the extension checks for a completed consent form in SP before enabling audio features.
-3. **Multi-diagnosis support:** Can the clinician have multiple diagnosis checklists open simultaneously (e.g., MDD + GAD differential)?
-4. **Which SimplePractice note forms** should we target for auto-fill? (Progress notes, intake assessments, treatment plans — all of them?)
-5. **Phase 4 cost:** None. faster-whisper, whisperX, pyannote-audio (free HuggingFace model agreement), and Ollama are all free and open source. Runs entirely locally — no API fees.
+1. **Which local LLM?** Ollama with Llama 3 / Mistral / Phi-3? Needs strong clinical reasoning; should run well on Inzinna's Mac (16GB+ RAM recommended).
+2. **Multi-diagnosis support:** ✅ Decided — no hard cap; max 3 side-by-side panels, extras in tabs; mid-session adds supported; shared evidence across all open diagnoses.
+3. **Auto-fill targets:** ✅ Decided — start with intake forms; expand to progress notes, treatment plans, and diagnosis codes in later phases.
+4. **Consent workflow:** ✅ Decided — one-time per patient via existing SP consent form; no recording before consent confirmed; recording is never used to capture consent itself.
+5. **Data transfer method:** ✅ Decided — DOM-based (no SP API needed for MVP); same approach as ZocDoc extension.
+6. **SP intake template fields:** To be confirmed via Chrome DevTools inspection of a live SP intake page.
