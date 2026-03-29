@@ -346,6 +346,168 @@ Differential: [list]
 
 ---
 
+## Module 12: Pre-Session Brief
+
+**What:** A 1-page auto-generated prep card that appears the moment the clinician opens a client's page in SimplePractice — before the session starts. Gives instant context without digging through old notes.
+
+**Contents:**
+```
+┌──────────────────────────────────────────────┐
+│  PRE-SESSION BRIEF — [Patient] — [Date]      │
+├──────────────────────────────────────────────┤
+│  Last session: [date] ([X] days ago)         │
+│  Last session summary: [2-3 sentence recap]  │
+├──────────────────────────────────────────────┤
+│  Homework assigned last session:             │
+│  • [Assignment 1] — check in today           │
+│  • [Assignment 2] — check in today           │
+├──────────────────────────────────────────────┤
+│  Active treatment goals:                     │
+│  • [Goal 1] — In progress                   │
+│  • [Goal 2] — Achieved ✅                   │
+├──────────────────────────────────────────────┤
+│  Last measures:                              │
+│  PHQ-9: 12 (Moderate) ↑ from 9              │
+│  GAD-7: 8 (Mild) → stable                   │
+├──────────────────────────────────────────────┤
+│  Last C-SSRS: Low risk ([date])              │
+├──────────────────────────────────────────────┤
+│  Current medications: [list from intake]     │
+│  Open items: [any flags from prior sessions] │
+└──────────────────────────────────────────────┘
+```
+
+**Approach:**
+- Content script detects when a client's appointment/profile page loads
+- Pulls from session storage (prior session data) and local LLM generates 2-3 sentence summary of last session
+- PHQ-9/GAD-7 trend arrows (↑ ↓ →) calculated automatically
+- Dismisses automatically when the session timer starts, or with a keystroke
+- No new data entry — entirely generated from data already captured by other modules
+
+---
+
+## Module 13: Safety Plan Builder
+
+**What:** A structured Stanley-Brown safety plan workflow triggered when C-SSRS flags moderate or high risk. Produces a completed safety plan the clinician can print or save for the client.
+
+**Stanley-Brown Safety Plan sections:**
+1. Warning signs (thoughts, images, moods, behaviors)
+2. Internal coping strategies (things I can do alone to distract)
+3. Social contacts for distraction (people + places)
+4. People I can ask for help
+5. Professionals/agencies to contact in crisis (with phone numbers)
+6. Making the environment safe (means restriction)
+
+**Approach:**
+- C-SSRS module auto-triggers the safety plan builder when risk level = Moderate or High
+- Clinician can also open it manually at any time from the side panel
+- Free-text fields per section, voice-to-text supported (patient can dictate their own answers)
+- Completed plan exports to printable PDF
+- Copy of completed plan stored in session storage and referenced in the session note's risk section
+- Date/version tracked across sessions so the clinician can see if the plan was updated
+
+---
+
+## Module 14: Between-Session Homework Tracker
+
+**What:** A simple log of between-session assignments given to the patient. Displayed in the pre-session brief next session and prompts the clinician to check in on completion.
+
+**Approach:**
+- Clinician adds assignments at the end of a session (free text or from a preset list: thought record, behavioral activation, sleep diary, exposure practice, journaling, reading, etc.)
+- Assignments stored linked to the patient and session date
+- Next session: pre-session brief shows what was assigned, homework tracker in side panel prompts check-in at session start
+- Clinician marks each as: Completed / Partially completed / Not attempted / Not applicable
+- Completion status + any barriers noted auto-populate the session note
+- Patterns surfaced by cross-session detection (Module 15): consistent non-completion flagged
+
+---
+
+## Module 15: Cross-Session Pattern Detection
+
+**What:** After 3+ sessions, the local LLM analyzes data across all sessions to surface clinically meaningful trends the clinician might not consciously notice.
+
+**Patterns detected:**
+- **Measure trends:** "PHQ-9 has increased 3 sessions in a row despite active treatment"
+- **Symptom recurrence:** "Patient has mentioned sleep difficulties in 4 of 5 sessions — not reflected in treatment goals"
+- **Homework non-completion:** "Assignments have not been completed in 3 consecutive sessions"
+- **Risk escalation:** "C-SSRS score has increased each session for the past month"
+- **Goal stagnation:** "Treatment goal #2 has been 'in progress' for 8 sessions without advancement"
+- **Unaddressed themes:** "Trauma history mentioned in intake but no trauma-focused intervention logged"
+
+**Approach:**
+- Runs locally via Ollama after each session completes (no real-time processing needed)
+- Patterns displayed as a brief alert section in the pre-session brief (Module 12)
+- Clinician can dismiss, snooze, or flag a pattern for supervision
+- All analysis fully local — no PHI leaves the device
+
+---
+
+## Module 16: Prescriber & PCP Communication Draft
+
+**What:** Auto-generate a brief clinical update letter to the prescribing physician or PCP, based on session data. Covers coordination-of-care documentation requirements.
+
+**Letter types:**
+- **Prescriber update** — diagnosis, current functioning, medication response (reported by patient), clinical recommendations
+- **PCP update** — presenting problem, diagnosis, treatment approach, any medical referral needs
+- **Referral letter** — to psychiatrist, specialist, or other provider
+
+**Approach:**
+- Clinician selects letter type and recipient from side panel after session
+- Local LLM drafts the letter using session data (diagnosis, functioning, medications from intake, interventions used)
+- Clinician reviews and edits inline before sending
+- Letter does NOT auto-send — clinician copies/pastes or prints
+- Draft stored in session storage with the session data (same TTL)
+
+---
+
+## Module 17: Termination Summary Generator
+
+**What:** At end of treatment, compiles a comprehensive termination summary from all session data across the entire treatment episode.
+
+**Summary structure:**
+```
+TERMINATION SUMMARY — [Patient] — [Date]
+Treatment dates: [start] to [end] ([X] sessions)
+
+Presenting problem at intake:
+[Chief complaint + intake clinical summary]
+
+Diagnoses:
+Primary: [Dx] — [DSM-5-TR code]
+[Any changes across treatment]
+
+Treatment provided:
+Modalities: [from intervention logs]
+Frequency: [from session data]
+
+Goal achievement:
+• [Goal 1]: Achieved ✅ — [brief note]
+• [Goal 2]: Partially achieved — [brief note]
+• [Goal 3]: Discontinued — [reason]
+
+Symptom trajectory:
+PHQ-9: [intake score] → [final score] ([% change])
+GAD-7: [intake score] → [final score] ([% change])
+[Chart of scores across treatment]
+
+Risk summary:
+[C-SSRS history summary, any safety plans]
+
+Reason for termination:
+[Goals met / patient request / transfer / etc.]
+
+Aftercare plan:
+[Follow-up recommendations, referrals, resources]
+```
+
+**Approach:**
+- Triggered by clinician clicking "Generate Termination Summary" in the side panel
+- Local LLM synthesizes across all stored session data for this patient
+- Clinician reviews, edits, and submits to SimplePractice or exports as PDF
+- PHQ-9/GAD-7 trend chart included as a visual
+
+---
+
 ## HIPAA Compliance Checklist
 
 - [ ] All PHI stored in browser session storage only (never localStorage or disk)
@@ -381,6 +543,18 @@ Differential: [list]
 │             │   lookup      │                          │
 │             │ • Teleprompter│                          │
 │             │   mode        │                          │
+│             │ • Pre-session │                          │
+│             │   brief       │                          │
+│             │ • Homework    │                          │
+│             │   tracker     │                          │
+│             │ • Safety plan │                          │
+│             │   builder     │                          │
+│             │ • Pattern     │                          │
+│             │   detection   │                          │
+│             │ • Prescriber  │                          │
+│             │   letter      │                          │
+│             │ • Termination │                          │
+│             │   summary     │                          │
 │             │ • Live        │                          │
 │             │   transcript  │                          │
 │             │ • Clinician   │                          │
@@ -416,7 +590,13 @@ Differential: [list]
 | 6 | DSM-5-TR Quick Lookup | — | Bundled diagnosis/criteria search, standalone |
 | 7 | Live Diagnostic Interview | Phases 1-4 | Side panel with criteria checklist + auto-check |
 | 8 | Teleprompter Mode | Phase 5 | Floating overlay near webcam for video visits |
-| 9 | Post-Session Report + Auto-Fill | Phases 2-8 | Generate report, edit, submit to SP |
+| 9 | Homework Tracker | Phase 5 | Log assignments, check in next session |
+| 10 | Pre-Session Brief | Phases 2, 5, 9 | Auto-generated prep card on client page load |
+| 11 | Safety Plan Builder | Phase 8 (C-SSRS) | Stanley-Brown plan, PDF export, linked to C-SSRS |
+| 12 | Cross-Session Pattern Detection | Phases 5, 9, 10 | LLM surfaces trends across all sessions |
+| 13 | Prescriber/PCP Communication Draft | Phases 2, 5 | Auto-drafted coordination-of-care letters |
+| 14 | Post-Session Report + Auto-Fill | Phases 2-13 | Generate report, edit, submit to SP |
+| 15 | Termination Summary Generator | Phase 14 | Full treatment episode summary at discharge |
 
 ---
 
