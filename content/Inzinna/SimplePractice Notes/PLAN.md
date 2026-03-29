@@ -330,6 +330,8 @@ This checklist must be fully cleared before using the extension with real patien
 ## Future Vision: Facial Expression & Nonverbal Analysis
 
 > This is a longer-term idea to be planned in its own file when ready. Captured here so it doesn't get lost.
+>
+> **Connection to the bigger plan:** This feature fits directly into Phase 8 of `content/strategy/plan-matching-insurance-booking.md` — the AI-assisted therapy layer (Level 3: AI-delivered structured interventions supervised by a licensed clinician). The clinical tools being built here for Inzinna's practice are the early foundation of that vision: real therapeutic workflow data, real outcome signals, and real clinician feedback loops. The facial analysis layer would eventually power quality monitoring and AI supervision at scale — part of the long-term goal of building a platform that makes ZocDoc and Headway unnecessary.
 
 **Concept:** After a telehealth session (via Zoom, SimplePractice Telehealth, etc.), Inzinna reviews the recorded video. An AI layer analyzes the recording for nonverbal and affective signals and provides structured clinical feedback.
 
