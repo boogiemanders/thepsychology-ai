@@ -263,6 +263,17 @@ This checklist must be fully cleared before using the extension with real patien
 - [ ] No other third-party services receive PHI in this architecture — BAA not required for any other vendor in the MVP
 - [ ] If a cloud LLM is ever added in the future, a BAA must be signed before use
 
+### AI-Specific Consent & Transparency (from Lawrence et al., 2025)
+- [ ] Patient consent form explicitly covers AI-assisted note generation (separate from recording consent)
+- [ ] Patients informed about how AI is used, what data it processes, and opt-out options
+- [ ] Consent language reviewed against Lawrence et al. (2025) findings on ambient AI documentation disclosure gaps
+
+### AI Governance & Clinician Readiness (from Palmieri et al., 2026; Abdulnour et al., 2025)
+- [ ] Inzinna completes minimum Tier 1 AI literacy training before clinical use (APA, ACP, or NYU Langone short course)
+- [ ] Report review UI prompts Inzinna to note corrections made to AI-generated content (creates audit trail, builds critical evaluation habit)
+- [ ] Known LLM limitations (cultural bias, non-English) surfaced as warnings in the report review UI
+- [ ] Process established for logging and reviewing any AI-generated content that required significant clinical correction
+
 ### Pre-Launch Review
 - [ ] Extension code reviewed by a developer for accidental PHI leaks (console logs, error messages, network requests)
 - [ ] Test session run with fake/demo patient data to verify no unexpected data transmission (use Chrome DevTools Network tab to inspect)
@@ -375,6 +386,17 @@ Evidence supporting each module, drawn from OpenEvidence systematic literature r
 - A proof-of-concept study of AI-generated psychiatric interview documentation found AI achieved 78% accuracy vs. 94% for human-written reports (p=.003), struggled with complex psychopathological features, and introduced **clinically relevant inaccuracies** — underscoring that clinical review by a qualified professional is not optional. *(Gülegen et al., 2026 — Frontiers in Psychiatry)*
 - A 2025 review of commercial AI note-writing tools for mental health found most lacked transparency about training methodologies, bias correction, and evidence base. *(Bouguettaya et al., 2025 — General Hospital Psychiatry)*
 
+**The unintended consequences we're designing against:**
+- A study of 20,000+ primary care visits found that while AI scribes increased documentation of neuropsychiatric symptoms, they were associated with a **lesser likelihood of depression intervention** — clinicians became less active in treatment decisions, analogous to reduced pilot proficiency after autopilot adoption. This is the "automation complacency" risk. *(Castro et al., 2026 — JAMA Psychiatry)*
+- AI can embed biases that spread across clinical teams who rely on previous notes, particularly compromising care for vulnerable populations including cognitively impaired or non-English-speaking patients. *(Sun et al., 2025 — Journal of Medical Ethics)*
+- Key aspects of mental health care are relational — AI use may diminish clinicians' ability to provide safe care and push vulnerable patients further from recovery-promoting relationships. *(Woodnutt et al., 2024 — Journal of Psychiatric and Mental Health Nursing)*
+- Experienced clinicians are more skeptical of AI tools. Counterintuitively, the most psychologically vulnerable patients — those with avoidant attachment, low epistemic trust, and high symptomatology — showed **higher acceptance of AI-based interventions** than psychologically healthier individuals who preferred human teletherapy. This means AI therapy tools may reach the patients who most need human connection. *(Békés & Aafjes-van Doorn, 2026 — Psychotherapy Research)*
+- Skill degradation: reliance on AI tools may have unanticipated adverse consequences including diminished human clinician skill over time. *(Perlis, 2026 — JAMA Psychiatry)*
+
+**The one strong positive RCT for AI-assisted therapy support:**
+- An AI platform that provided therapists with feedback on evidence-based practices, session transcription, and automated progress notes led to **67% more session attendance** and superior depression/anxiety outcomes vs. treatment-as-usual. Notes were submitted 55 hours earlier on average. *(Sadeh-Sharvit et al., 2023 — Journal of Medical Internet Research)*
+- This is the model closest to what the SP Notes tool does: AI supports the clinician's workflow without replacing clinical judgment.
+
 **Clinical standards:**
 - APA Assessment Guidelines require clinician decision-making authority — AI assists, clinician decides. *(Campbell et al., 2020)*
 - APA Telepsychology Practice Guidelines apply to digital clinical tools and remote documentation workflows. *(Barnwell et al., 2024)*
@@ -414,12 +436,52 @@ Evidence supporting each module, drawn from OpenEvidence systematic literature r
 - Clients rated the potential helpfulness of independently reviewing sessions **higher than therapists anticipated**. *(King & Boswell, 2021 — Journal of Clinical Psychology)*
 - Recording for supervision is viewed favorably by both therapists and patients. *(Franzen et al., 2023 — Frontiers in Psychology)*
 
+**What true deliberate practice actually requires (design implications):**
+Contemporary DP has 6 required components — this defines what the session recording module must enable to be genuinely useful, not just a recording archive:
+1. Direct observation of performance
+2. Concrete feedback
+3. Specific learning goals defined in advance
+4. Repeated behavioral rehearsal
+5. Ongoing assessment of performance
+6. Focus on expert performance benchmarks
+
+*(Sacks, 2025 — Journal of Clinical Psychology; Husby, 2025 — Journal of Clinical Psychology; Vaz et al., 2025)*
+
+Many "DP" studies actually involved traditional workshops with limited practice or feedback — the label isn't enough. The tool needs to support structured review against benchmarks, not just playback. *(Diamond et al., 2025)*
+
 **Honest limitation:**
 - A 2025 systematic review found wide variability in how deliberate practice has been operationalized — only 3 of 20 studies met contemporary DP definitions. Evidence is promising but still developing. *(Diamond et al., 2025 — Psychotherapy)*
 
 **Clinical standards:**
 - IOPC Teleneuropsychology Guidance covers standards for remote clinical tools generally. *(Bilder et al., 2020)*
 - Routine outcome monitoring (ROM) shows effect sizes of 0.36–0.53 for at-risk clients when clinical support tools flag them early. *(Barkham et al., 2023)*
+
+---
+
+### Implementation Safeguards (Evidence-Based Design Requirements)
+
+This section maps governance research directly to design decisions in the SP Notes tool.
+
+**Mandatory clinician review is not a UX choice — it's a clinical safety requirement:**
+- TJC/CHAI 2025 guidelines require mandatory reporting of AI adverse events, continuous performance monitoring scaled to proximity to patient care, and cross-functional AI oversight. *(Palmieri et al., 2026 — JAMA)*
+- Informed consent for AI ambient documentation varies widely — many patients and clinicians report inadequate information about how the technology works, data handling, and opt-out options. *(Lawrence et al., 2025 — JAMA Network Open)*
+- → **Design decision:** The SP Notes tool must disclose to patients that AI is used to assist note generation. This is a separate consent item from recording consent and needs to be in the SP consent form.
+
+**The DEFT-AI framework for supervising AI use:**
+- NEJM 2025: A structured framework for supervising AI use in clinical settings — Diagnosis, Evidence, Feedback, Teaching — promotes critical thinking and prevents skill degradation. The key question is always: "Did the AI output require correction, and why?" *(Abdulnour et al., 2025 — NEJM)*
+- → **Design decision:** The report review UI should prompt Inzinna to note any corrections made to AI-generated content. This creates a local audit trail and builds the habit of critical evaluation.
+
+**Bias and equity safeguards:**
+- AI documentation may embed biases that spread across teams relying on previous notes — particularly compromising care for non-English-speaking and cognitively impaired patients. *(Sun et al., 2025 — Journal of Medical Ethics)*
+- → **Design decision:** The local LLM must be tested against diverse patient presentations before clinical use. Any known language or cultural limitations should be surfaced as warnings in the UI.
+
+**What clinicians need to know to use this safely (training):**
+A 3-tier AI competency framework for clinicians *(Cao et al., 2026 — JMIR)*:
+- **Tier 1 (Minimum for safe use):** Understand how LLMs work, prompt basics, privacy/security awareness, patient transparency and consent
+- **Tier 2 (Evaluative):** Bias detection, interpreting AI explainability outputs, integrating AI into clinical workflow
+- **Tier 3 (Leadership):** Governing model updates and change protocols
+
+→ **Design decision:** Before Inzinna uses this tool with real patients, she should complete at minimum Tier 1 training. APA, ACP, NYU Langone, and Harvard all offer short courses. This isn't optional — it's part of the pre-launch review.
 
 ---
 
@@ -456,6 +518,23 @@ Evidence supporting each module, drawn from OpenEvidence systematic literature r
 29. Chow DL et al. (2015). The Role of Deliberate Practice in the Development of Highly Effective Psychotherapists. *Psychotherapy.*
 30. Barkham M et al. (2023). Routine Outcome Monitoring and Clinical Support Tools. *(cited in matching plan Phase 6)*
 31. Muir HJ et al. (2019). Therapist Self-Assessment of Client Deterioration. *(cited in matching plan Phase 6)*
+32. Castro VM et al. (2026). Psychiatric Documentation and Management in Primary Care With AI Scribe Use. *JAMA Psychiatry.* doi:10.1001/jamapsychiatry.2025.4303.
+33. Perlis RH. (2026). Artificial Intelligence and the Potential Transformation of Mental Health. *JAMA Psychiatry.* doi:10.1001/jamapsychiatry.2025.4116.
+34. Sun QW, Miller J, Hull SC. (2025). Charting the Ethical Landscape of Generative AI-augmented Clinical Documentation. *Journal of Medical Ethics.* doi:10.1136/jme-2024-110656.
+35. Woodnutt S et al. (2024). Could Artificial Intelligence Write Mental Health Nursing Care Plans? *Journal of Psychiatric and Mental Health Nursing.* 31(1):79–86.
+36. Békés V & Aafjes-van Doorn K. (2026). The Most Vulnerable Are Prone to Use AI Therapists. *Psychotherapy Research.* doi:10.1080/10503307.2026.2615388.
+37. Sadeh-Sharvit S et al. (2023). Effects of an AI Platform for Behavioral Interventions on Depression and Anxiety: RCT. *Journal of Medical Internet Research.* 25:e46781.
+38. Sacks D. (2025). Deliberate Practice Supervision to Enhance Behavioral Activation: Case Study. *Journal of Clinical Psychology.* 81(6):526–537.
+39. Husby VM. (2025). Challenge and Support: Scaffolding the Practicing Therapist in DP Supervision. *Journal of Clinical Psychology.* 81(5):366–378.
+40. Nissen-Lie HA. (2025). Deliberate Practice in Psychotherapy Supervision. *Journal of Clinical Psychology.* doi:10.1002/jclp.70043.
+41. Palmieri S, Robertson CT, Cohen IG. (2026). New Guidance on Responsible Use of AI. *JAMA.* 335(3):207–208.
+42. Abdulnour RE, Gin B, Boscardin CK. (2025). Educational Strategies for Clinical Supervision of AI Use (DEFT-AI). *New England Journal of Medicine.* 393(8):786–797.
+43. Lawrence K et al. (2025). Informed Consent for Ambient Documentation Using Generative AI. *JAMA Network Open.* 8(7):e2522400.
+44. Warraich HJ, Tazbaz T, Califf RM. (2025). FDA Perspective on Regulation of AI in Health Care. *JAMA.* 333(3):241–247.
+45. Morgan DJ, Rodman A, Goodman KE. (2025). How Physicians Can Prepare for Generative AI. *JAMA Internal Medicine.* 185(12):1407–1408.
+46. Cao W et al. (2026). From Agents to Governance: Essential AI Skills for Clinicians. *Journal of Medical Internet Research.* 28:e86550.
+47. Russell RG et al. (2023). Competencies for Use of AI-Based Tools by Health Care Professionals. *Academic Medicine.* 98(3):348–356.
+48. Labkoff S et al. (2024). Toward a Responsible Future: Recommendations for AI-enabled Clinical Decision Support. *JAMIA.* 31(11):2730–2739.
 
 ---
 
