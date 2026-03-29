@@ -209,7 +209,7 @@ Differential: [list]
 **Auto-fill targets in SimplePractice:**
 - Progress notes
 - Treatment plans
-- Diagnosis codes (ICD-10/DSM-5-TR)
+- Diagnosis codes (DSM-5-TR)
 - Clinical documentation forms
 
 ---
@@ -300,15 +300,49 @@ Differential: [list]
 
 ---
 
-## Module 10: ICD-10 Quick Lookup
+## Module 10: DSM-5-TR Quick Lookup
 
-**What:** An in-panel ICD-10 code search so the clinician never has to leave SimplePractice to look up codes.
+**What:** An in-panel DSM-5-TR diagnosis search so the clinician can look up criteria, codes, and specifiers without leaving SimplePractice.
 
 **Approach:**
-- Bundled ICD-10-CM code list (mental health chapters F01–F99 + relevant V/Z codes)
-- Search by name or code prefix — instant filtering
-- Click a code to copy it or insert it directly into the diagnostic impressions section
-- Shows the DSM-5-TR crosswalk (ICD-10 code ↔ DSM-5-TR diagnosis name)
+- Bundled DSM-5-TR diagnosis list with criteria summaries, specifiers, and diagnostic codes
+- Search by diagnosis name or DSM-5-TR code prefix — instant filtering
+- Click a diagnosis to view its full criteria in-panel or insert the code into the diagnostic impressions section
+- Sources from existing DSM-5-TR content in `staging/review/psychprep/5 Assessment/`
+
+---
+
+## Module 11: Teleprompter Mode (Webcam Eye Contact)
+
+**What:** A compact floating overlay that positions the most critical session information near the top of the screen — directly below or beside the webcam — so the clinician appears to maintain natural eye contact during video visits while reading criteria, suggested questions, or the C-SSRS flow.
+
+**The problem it solves:** During telehealth, clinicians look down or to the side to read notes, which patients perceive as inattention. By placing the interface near the webcam, the clinician's gaze stays naturally forward.
+
+**UI Concept:**
+```
+┌─────────────────────────────────────────────────────────┐  ← top of screen (near webcam)
+│  [MDD Criterion A3 ❓]  Weight/appetite change           │
+│  Suggested: "Have you noticed changes in your appetite?" │
+│  ──────────────────────────────  [≡ Full Panel]  [✕]   │
+└─────────────────────────────────────────────────────────┘
+         ↑ webcam is here
+```
+
+**How it works:**
+- Full side panel has a **"Teleprompter Mode"** button
+- Clicking it collapses the interface to a slim, semi-transparent floating bar
+- Bar defaults to top-center of the browser window (directly below the webcam on most laptops)
+- **Draggable** — clinician positions it once, position saved in localStorage per monitor/resolution
+- Displays only the most immediately needed item: current criterion, C-SSRS question, or suggested follow-up
+- Clinician taps a hotkey (e.g., `Alt+N`) to advance to the next item without clicking
+- Clicking **"Full Panel"** restores the complete side panel
+- **Auto-detects video visits:** If the URL matches a telehealth/video pattern in SP, teleprompter mode activates automatically (configurable)
+
+**Display priority in teleprompter mode (in order):**
+1. C-SSRS current question (if risk assessment is in progress)
+2. Current DSM-5-TR criterion being assessed + suggested follow-up question
+3. Active homework check-in prompt (start of session)
+4. Session timer (always visible in corner of bar)
 
 ---
 
@@ -343,8 +377,10 @@ Differential: [list]
 │             │   timer       │                          │
 │             │ • Intervention│                          │
 │             │   logger      │                          │
-│             │ • ICD-10      │                          │
+│             │ • DSM-5-TR    │                          │
 │             │   lookup      │                          │
+│             │ • Teleprompter│                          │
+│             │   mode        │                          │
 │             │ • Live        │                          │
 │             │   transcript  │                          │
 │             │ • Clinician   │                          │
@@ -377,9 +413,10 @@ Differential: [list]
 | 3 | DSM-5-TR Diagnostic Impressions | Phase 2 | Local LLM maps intake to DSM-5-TR criteria |
 | 4 | Session Audio Recording | Phase 1 | Record + transcribe + diarize in real-time |
 | 5 | MSE + C-SSRS + PHQ-9/GAD-7 + Timer + Interventions | — | Side panel session tools (no audio dependency) |
-| 6 | ICD-10 Quick Lookup | — | Bundled code search, standalone |
+| 6 | DSM-5-TR Quick Lookup | — | Bundled diagnosis/criteria search, standalone |
 | 7 | Live Diagnostic Interview | Phases 1-4 | Side panel with criteria checklist + auto-check |
-| 8 | Post-Session Report + Auto-Fill | Phases 2-7 | Generate report, edit, submit to SP |
+| 8 | Teleprompter Mode | Phase 5 | Floating overlay near webcam for video visits |
+| 9 | Post-Session Report + Auto-Fill | Phases 2-8 | Generate report, edit, submit to SP |
 
 ---
 
