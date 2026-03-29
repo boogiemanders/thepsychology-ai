@@ -212,13 +212,61 @@ Differential: [list]
 
 ## HIPAA Compliance Checklist
 
-- [ ] All PHI stored in browser session storage only (never localStorage or disk)
-- [ ] Auto-delete with TTL (1 hour default, configurable)
-- [ ] Audio encrypted at rest, auto-deleted after transcription
-- [ ] No PHI transmitted without BAA-covered endpoint
-- [ ] Patient consent confirmed via SP form before any recording begins
-- [ ] Audit logging (what was accessed, when, by whom)
-- [ ] Extension requires authentication (clinician login)
+This checklist must be fully cleared before using the extension with real patients.
+
+### Device & OS
+- [ ] Mac has FileVault (full-disk encryption) enabled
+- [ ] Mac requires password/Touch ID on wake and screen lock
+- [ ] Auto-lock set to 5 minutes or less
+- [ ] Mac OS is up to date (security patches current)
+- [ ] No other users have accounts on the machine that could access files
+
+### Chrome & Browser
+- [ ] Chrome profile used for clinical work does NOT have Chrome Sync enabled (or is on a HIPAA-covered Google Workspace account with a signed BAA)
+- [ ] Chrome crash reports / usage statistics reporting is disabled
+- [ ] No third-party extensions in the same Chrome profile that could intercept page data
+- [ ] DevTools is never left open during a clinical session (logs can capture PHI)
+- [ ] Extension is installed in developer mode only on Inzinna's machine — not published to Chrome Web Store (which would involve Google review)
+
+### Extension: Data Handling
+- [ ] All PHI stored in `sessionStorage` only — never `localStorage`, IndexedDB, or cookies
+- [ ] Auto-delete TTL confirmed working (default: 1 hour; clears on browser close)
+- [ ] No PHI written to `console.log` statements in production build
+- [ ] Extension background service worker does not persist PHI across sessions
+- [ ] Confirm Chrome does not back up `sessionStorage` to iCloud or Google account
+
+### Audio & Transcription (Bonus phases only)
+- [ ] Audio recording confirmed to stay on-device (MediaRecorder writes to memory, not disk)
+- [ ] Raw audio auto-deleted immediately after transcription completes
+- [ ] Whisper / faster-whisper server only accessible on `localhost` — not exposed on local network
+- [ ] Transcripts stored in `sessionStorage` with same TTL as other PHI
+- [ ] Patient consent form confirmed complete in SP before recording is enabled — extension checks this programmatically
+
+### Local LLM (Bonus phases only)
+- [ ] Ollama server only accessible on `localhost` — firewall blocks external access
+- [ ] Confirm Ollama does not log prompts/responses to disk by default (check Ollama settings)
+- [ ] No patient data sent to any remote LLM API (OpenAI, Anthropic, etc.)
+
+### Consent & Documentation
+- [ ] Patient consent form in SP covers AI-assisted note generation and local audio processing
+- [ ] Consent language reviewed by a healthcare attorney familiar with HIPAA
+- [ ] Consent is documented in SP before first use with each patient — extension verifies this
+
+### Audit & Access
+- [ ] Audit log implemented: records what data was accessed, when, and what actions were taken
+- [ ] Audit logs stored locally (not in session storage — these need to persist), encrypted
+- [ ] Extension requires Inzinna to authenticate before accessing any patient data
+- [ ] Process exists to delete a patient's data from the extension if they revoke consent
+
+### Business Associate Agreements
+- [ ] SimplePractice already has a BAA in place (they are a HIPAA-covered platform) ✅
+- [ ] No other third-party services receive PHI in this architecture — BAA not required for any other vendor in the MVP
+- [ ] If a cloud LLM is ever added in the future, a BAA must be signed before use
+
+### Pre-Launch Review
+- [ ] Extension code reviewed by a developer for accidental PHI leaks (console logs, error messages, network requests)
+- [ ] Test session run with fake/demo patient data to verify no unexpected data transmission (use Chrome DevTools Network tab to inspect)
+- [ ] Legal/compliance review of consent form language before first real patient use
 
 ---
 
