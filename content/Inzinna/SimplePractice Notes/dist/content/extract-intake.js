@@ -406,13 +406,13 @@
     if (title.includes("phq-9") || title.includes("phq 9")) return "PHQ-9";
     return null;
   }
-  function extractAssessment(name) {
+  function extractAssessmentFromRoot(name, root = document) {
     const items = [];
     let difficulty = "";
-    const scoringEl = document.querySelector(".scoring-description");
+    const scoringEl = root.querySelector(".scoring-description");
     const severityMatch = scoringEl?.textContent?.match(/indicate\s+(.+)/i);
     const severity = severityMatch?.[1]?.replace(/\.$/, "").trim() ?? "";
-    const rows = document.querySelectorAll("tbody tr.et-tr");
+    const rows = root.querySelectorAll("tbody tr.et-tr");
     for (const row of Array.from(rows)) {
       const cells = row.querySelectorAll("td");
       if (cells.length < 3) continue;
@@ -435,7 +435,7 @@
         difficulty = cells[1]?.querySelector(".cell-container p")?.textContent?.trim() ?? "";
       }
     }
-    const allRows = document.querySelectorAll("tbody tr.et-tr:not(.intro-row)");
+    const allRows = root.querySelectorAll("tbody tr.et-tr:not(.intro-row)");
     for (const row of Array.from(allRows)) {
       const firstCell = row.querySelector("td");
       if (!firstCell?.querySelector(".question-number") && firstCell?.textContent?.includes("difficult")) {
@@ -444,14 +444,36 @@
       }
     }
     const totalScore = items.reduce((sum, item) => sum + item.score, 0);
-    return {
-      name,
-      totalScore,
-      severity,
-      items,
-      difficulty,
-      capturedAt: (/* @__PURE__ */ new Date()).toISOString()
-    };
+    return { name, totalScore, severity, items, difficulty, capturedAt: (/* @__PURE__ */ new Date()).toISOString() };
+  }
+  async function fetchAssessmentsFromLinks() {
+    const result = { gad7: null, phq9: null };
+    const links = document.querySelectorAll('a[href*="/intake_notes/"]');
+    const assessmentLinks = [];
+    for (const link of Array.from(links)) {
+      const text = link.textContent?.trim().toLowerCase() ?? "";
+      const href = link.href;
+      if (text.includes("gad") && href) assessmentLinks.push({ type: "GAD-7", url: href });
+      else if (text.includes("phq") && href) assessmentLinks.push({ type: "PHQ-9", url: href });
+    }
+    for (const { type, url } of assessmentLinks) {
+      try {
+        const resp = await fetch(url, { credentials: "include" });
+        if (!resp.ok) continue;
+        const html = await resp.text();
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, "text/html");
+        const assessment = extractAssessmentFromRoot(type, doc);
+        if (assessment.items.length > 0) {
+          if (type === "GAD-7") result.gad7 = assessment;
+          else result.phq9 = assessment;
+          console.log(`[SPN] Auto-captured ${type} from ${url}: score ${assessment.totalScore}`);
+        }
+      } catch (err) {
+        console.warn(`[SPN] Failed to fetch ${type} from ${url}:`, err);
+      }
+    }
+    return result;
   }
   function hasAssessmentTable() {
     return !!document.querySelector(".scoring-description") && !!detectAssessmentType();
@@ -464,7 +486,7 @@
         showToast("Not a recognized assessment page.", "error");
         return;
       }
-      const result = extractAssessment(type);
+      const result = extractAssessmentFromRoot(type);
       const key = type === "GAD-7" ? "gad7" : "phq9";
       await mergeIntake({ [key]: result });
       showToast(`Captured ${type}: score ${result.totalScore} (${result.severity})`, "success");
@@ -488,9 +510,16 @@
         showToast("No intake data found. Make sure you are viewing an intake form.", "error");
         return;
       }
+      const assessments = await fetchAssessmentsFromLinks();
+      if (assessments.gad7) intake.gad7 = assessments.gad7;
+      if (assessments.phq9) intake.phq9 = assessments.phq9;
       await saveIntake(intake);
+      const extras = [];
+      if (assessments.gad7) extras.push(`GAD-7: ${assessments.gad7.totalScore}`);
+      if (assessments.phq9) extras.push(`PHQ-9: ${assessments.phq9.totalScore}`);
+      const extraText = extras.length ? ` + ${extras.join(", ")}` : "";
       const name = `${intake.firstName} ${intake.lastName}`.trim() || "client";
-      showToast(`Captured ${fieldCount} fields for ${name} (${intake.rawQA.length} Q&A pairs)`, "success");
+      showToast(`Captured ${fieldCount} fields for ${name}${extraText}`, "success");
       console.log("[SPN] Captured intake data:", {
         fieldCount,
         qaCount: intake.rawQA.length,

@@ -355,17 +355,17 @@ function detectAssessmentType(): 'GAD-7' | 'PHQ-9' | null {
   return null
 }
 
-function extractAssessment(name: 'GAD-7' | 'PHQ-9'): AssessmentResult {
+function extractAssessmentFromRoot(name: 'GAD-7' | 'PHQ-9', root: Document | Element = document): AssessmentResult {
   const items: AssessmentItem[] = []
   let difficulty = ''
 
   // Parse scoring description
-  const scoringEl = document.querySelector('.scoring-description')
+  const scoringEl = root.querySelector('.scoring-description')
   const severityMatch = scoringEl?.textContent?.match(/indicate\s+(.+)/i)
   const severity = severityMatch?.[1]?.replace(/\.$/, '').trim() ?? ''
 
   // Parse table rows
-  const rows = document.querySelectorAll('tbody tr.et-tr')
+  const rows = root.querySelectorAll('tbody tr.et-tr')
   for (const row of Array.from(rows)) {
     const cells = row.querySelectorAll('td')
     if (cells.length < 3) continue
@@ -374,7 +374,6 @@ function extractAssessment(name: 'GAD-7' | 'PHQ-9'): AssessmentResult {
     const questionNumEl = firstCell.querySelector('.question-number')
 
     if (questionNumEl) {
-      // Numbered question row
       const num = parseInt(questionNumEl.textContent?.replace('.', '') ?? '0', 10)
       const questionText = firstCell.querySelector('.question-number + div p')?.textContent?.trim() ?? ''
       const response = cells[1]?.querySelector('.cell-container p')?.textContent?.trim() ?? ''
@@ -389,13 +388,12 @@ function extractAssessment(name: 'GAD-7' | 'PHQ-9'): AssessmentResult {
         maxScore: scoreParts ? parseInt(scoreParts[2], 10) : 3,
       })
     } else if (!firstCell.querySelector('.intro-row') && firstCell.textContent?.includes('difficult')) {
-      // Functional impairment question
       difficulty = cells[1]?.querySelector('.cell-container p')?.textContent?.trim() ?? ''
     }
   }
 
-  // Also check intro-row class on tr itself for the difficulty question
-  const allRows = document.querySelectorAll('tbody tr.et-tr:not(.intro-row)')
+  // Also check non-intro rows for difficulty question
+  const allRows = root.querySelectorAll('tbody tr.et-tr:not(.intro-row)')
   for (const row of Array.from(allRows)) {
     const firstCell = row.querySelector('td')
     if (!firstCell?.querySelector('.question-number') &&
@@ -407,14 +405,45 @@ function extractAssessment(name: 'GAD-7' | 'PHQ-9'): AssessmentResult {
 
   const totalScore = items.reduce((sum, item) => sum + item.score, 0)
 
-  return {
-    name,
-    totalScore,
-    severity,
-    items,
-    difficulty,
-    capturedAt: new Date().toISOString(),
+  return { name, totalScore, severity, items, difficulty, capturedAt: new Date().toISOString() }
+}
+
+/**
+ * Find GAD-7 and PHQ-9 links on the current page, fetch them, and extract scores.
+ */
+async function fetchAssessmentsFromLinks(): Promise<{ gad7: AssessmentResult | null; phq9: AssessmentResult | null }> {
+  const result: { gad7: AssessmentResult | null; phq9: AssessmentResult | null } = { gad7: null, phq9: null }
+
+  // Find links to assessments (e.g. <a href="/clients/.../intake_notes/...">GAD-7</a>)
+  const links = document.querySelectorAll('a[href*="/intake_notes/"]')
+  const assessmentLinks: { type: 'GAD-7' | 'PHQ-9'; url: string }[] = []
+
+  for (const link of Array.from(links)) {
+    const text = link.textContent?.trim().toLowerCase() ?? ''
+    const href = (link as HTMLAnchorElement).href
+    if (text.includes('gad') && href) assessmentLinks.push({ type: 'GAD-7', url: href })
+    else if (text.includes('phq') && href) assessmentLinks.push({ type: 'PHQ-9', url: href })
   }
+
+  for (const { type, url } of assessmentLinks) {
+    try {
+      const resp = await fetch(url, { credentials: 'include' })
+      if (!resp.ok) continue
+      const html = await resp.text()
+      const parser = new DOMParser()
+      const doc = parser.parseFromString(html, 'text/html')
+      const assessment = extractAssessmentFromRoot(type, doc)
+      if (assessment.items.length > 0) {
+        if (type === 'GAD-7') result.gad7 = assessment
+        else result.phq9 = assessment
+        console.log(`[SPN] Auto-captured ${type} from ${url}: score ${assessment.totalScore}`)
+      }
+    } catch (err) {
+      console.warn(`[SPN] Failed to fetch ${type} from ${url}:`, err)
+    }
+  }
+
+  return result
 }
 
 function hasAssessmentTable(): boolean {
@@ -430,7 +459,7 @@ async function handleAssessmentCapture(): Promise<void> {
       return
     }
 
-    const result = extractAssessment(type)
+    const result = extractAssessmentFromRoot(type)
     const key = type === 'GAD-7' ? 'gad7' : 'phq9'
     await mergeIntake({ [key]: result })
 
@@ -461,10 +490,20 @@ async function handleCaptureClick(): Promise<void> {
       return
     }
 
+    // Auto-fetch GAD-7 and PHQ-9 from linked assessment pages
+    const assessments = await fetchAssessmentsFromLinks()
+    if (assessments.gad7) intake.gad7 = assessments.gad7
+    if (assessments.phq9) intake.phq9 = assessments.phq9
+
     await saveIntake(intake)
 
+    const extras: string[] = []
+    if (assessments.gad7) extras.push(`GAD-7: ${assessments.gad7.totalScore}`)
+    if (assessments.phq9) extras.push(`PHQ-9: ${assessments.phq9.totalScore}`)
+    const extraText = extras.length ? ` + ${extras.join(', ')}` : ''
+
     const name = `${intake.firstName} ${intake.lastName}`.trim() || 'client'
-    showToast(`Captured ${fieldCount} fields for ${name} (${intake.rawQA.length} Q&A pairs)`, 'success')
+    showToast(`Captured ${fieldCount} fields for ${name}${extraText}`, 'success')
 
     console.log('[SPN] Captured intake data:', {
       fieldCount,
