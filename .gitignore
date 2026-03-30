@@ -81,6 +81,8 @@ out
 # Nuxt.js build / generate output
 .nuxt
 dist
+!content/Inzinna/SimplePractice Notes/dist/
+!content/Inzinna/zocdoc-to-simplepractice/dist/
 
 # Gatsby files
 .cache/

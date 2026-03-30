@@ -1,0 +1,25 @@
+<!-- Open this file in a browser, right-click each canvas, "Save image as" to create icons -->
+<canvas id="c16" width="16" height="16"></canvas>
+<canvas id="c48" width="48" height="48"></canvas>
+<canvas id="c128" width="128" height="128"></canvas>
+<script>
+function drawIcon(id, size) {
+  const c = document.getElementById(id);
+  const ctx = c.getContext('2d');
+  // Blue rounded square
+  ctx.fillStyle = '#2563eb';
+  const r = size * 0.15;
+  ctx.beginPath();
+  ctx.roundRect(0, 0, size, size, r);
+  ctx.fill();
+  // White arrow
+  ctx.fillStyle = '#fff';
+  ctx.font = `bold ${size * 0.5}px sans-serif`;
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillText('→', size/2, size/2);
+}
+drawIcon('c16', 16);
+drawIcon('c48', 48);
+drawIcon('c128', 128);
+</script>
