@@ -40,7 +40,8 @@ import {
 // ── URL Detection ──
 
 function isNotePage(): boolean {
-  return /\/clients\/\d+\/(notes|appointments)/.test(window.location.pathname) ||
+  return /\/appointments\/\d+/.test(window.location.pathname) ||
+    /\/clients\/\d+\/(notes|appointments)/.test(window.location.pathname) ||
     /\/clients\/\d+\/treatment_plans/.test(window.location.pathname)
 }
 
@@ -431,7 +432,7 @@ function injectFillButton(): void {
 
     injectButton('Fill from Intake', handleFillClick, {
       id: 'spn-fill-btn',
-      position: 'bottom-left',
+      position: 'bottom-left-high',
     })
   }).catch(() => {
     // Extension context invalidated — ignore

@@ -65,7 +65,7 @@
     } else if (options?.position === "bottom-left-high") {
       btn.style.right = "auto";
       btn.style.left = "20px";
-      btn.style.bottom = "70px";
+      btn.style.bottom = "150px";
     }
     btn.addEventListener("pointerdown", (e) => {
       e.stopPropagation();
@@ -213,7 +213,7 @@
 
   // src/content/fill-note.ts
   function isNotePage() {
-    return /\/clients\/\d+\/(notes|appointments)/.test(window.location.pathname) || /\/clients\/\d+\/treatment_plans/.test(window.location.pathname);
+    return /\/appointments\/\d+/.test(window.location.pathname) || /\/clients\/\d+\/(notes|appointments)/.test(window.location.pathname) || /\/clients\/\d+\/treatment_plans/.test(window.location.pathname);
   }
   function fillICEFromIntake(intake) {
     let filled = 0;
@@ -518,7 +518,7 @@
       if (!intake) return;
       injectButton("Fill from Intake", handleFillClick, {
         id: "spn-fill-btn",
-        position: "bottom-left"
+        position: "bottom-left-high"
       });
     }).catch(() => {
     });

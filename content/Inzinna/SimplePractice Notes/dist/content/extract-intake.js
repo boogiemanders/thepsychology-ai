@@ -116,7 +116,7 @@
     } else if (options?.position === "bottom-left-high") {
       btn.style.right = "auto";
       btn.style.left = "20px";
-      btn.style.bottom = "70px";
+      btn.style.bottom = "150px";
     }
     btn.addEventListener("pointerdown", (e) => {
       e.stopPropagation();
