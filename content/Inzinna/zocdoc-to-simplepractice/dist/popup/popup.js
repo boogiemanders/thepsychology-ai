@@ -239,6 +239,20 @@ ${prefs.vobSignature}`;
     updateCheckItem("check-insurance", client.status.insuranceAdded);
     updateCheckItem("check-vob", client.status.vobEmailSent);
   }
+  document.getElementById("btn-toggle-btns")?.addEventListener("click", async () => {
+    const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+    if (!tab?.id) return;
+    chrome.scripting.executeScript({
+      target: { tabId: tab.id },
+      func: () => {
+        const btns = document.querySelectorAll(".spn-floating-btn, .zsp-floating-btn");
+        const anyVisible = Array.from(btns).some((b) => b.style.display !== "none");
+        btns.forEach((b) => {
+          b.style.display = anyVisible ? "none" : "";
+        });
+      }
+    });
+  });
   document.getElementById("btn-settings")?.addEventListener("click", async () => {
     await populateSettingsForm();
     showView("settings");

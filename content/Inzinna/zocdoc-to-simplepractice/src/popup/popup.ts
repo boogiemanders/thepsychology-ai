@@ -100,6 +100,20 @@ async function render(): Promise<void> {
   updateCheckItem('check-vob', client.status.vobEmailSent)
 }
 
+// Toggle floating buttons on page
+document.getElementById('btn-toggle-btns')?.addEventListener('click', async () => {
+  const [tab] = await chrome.tabs.query({ active: true, currentWindow: true })
+  if (!tab?.id) return
+  chrome.scripting.executeScript({
+    target: { tabId: tab.id },
+    func: () => {
+      const btns = document.querySelectorAll('.spn-floating-btn, .zsp-floating-btn') as NodeListOf<HTMLElement>
+      const anyVisible = Array.from(btns).some(b => b.style.display !== 'none')
+      btns.forEach(b => { b.style.display = anyVisible ? 'none' : '' })
+    },
+  })
+})
+
 // Settings toggle
 document.getElementById('btn-settings')?.addEventListener('click', async () => {
   await populateSettingsForm()
