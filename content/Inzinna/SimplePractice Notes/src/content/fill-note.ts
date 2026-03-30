@@ -1,9 +1,18 @@
 /**
- * SimplePractice Notes — Progress Note Auto-Filler
+ * SimplePractice Notes — Initial Clinical Evaluation Auto-Filler
  *
- * Fills SimplePractice's progress note / clinical documentation forms
- * with the generated note data. Injects a "Fill Note" button when
- * on a note-editing page.
+ * Fills SimplePractice's "Initial Clinical Evaluation" note template
+ * with captured intake data. Uses exact DOM selectors mapped from
+ * the real SP form structure.
+ *
+ * Field types in the ICE form:
+ *   - date:          #date-N (date picker input)
+ *   - short-answer:  #short-answer-N (text input)
+ *   - multi-select:  [name="multi-select-N-M"] (checkboxes)
+ *   - single-select: [name="single-select-N"] (radio buttons)
+ *   - free-text:     [aria-label="free-text-N"] (ProseMirror contenteditable)
+ *   - dropdown:      #dropdown-N (select element)
+ *   - combobox:      .select-box__input[aria-label="X"] (searchbox input)
  *
  * SimplePractice note URL patterns:
  *   Progress note:    /clients/{id}/notes/{noteId}/edit
@@ -11,21 +20,20 @@
  *   Treatment plan:   /clients/{id}/treatment_plans/{tpId}/edit
  */
 
-import { ProgressNote } from '../lib/types'
-import { getNote, updateNoteStatus } from '../lib/storage'
+import { IntakeData } from '../lib/types'
+import { getIntake } from '../lib/storage'
 import {
   injectButton,
   showToast,
   assertExtensionContext,
   isExtensionContextInvalidatedError,
-  fillField,
   fillTextLikeField,
-  fillContentEditableField,
-  normalizedText,
-  isVisible,
-  findFieldContainer,
-  findFieldElement,
-  selectOptionByText,
+  fillProseMirrorByLabel,
+  fillCombobox,
+  checkCheckboxByLabel,
+  selectRadio,
+  selectYesNo,
+  selectDropdownById,
   wait,
 } from './shared'
 
@@ -36,305 +44,373 @@ function isNotePage(): boolean {
     /\/clients\/\d+\/treatment_plans/.test(window.location.pathname)
 }
 
-// ── Field Filling Helpers ──
+// ── Intake → ICE Field Mapping ──
 
 /**
- * Fill a field by trying multiple strategies:
- * 1. Direct selector match
- * 2. Label-based lookup → input/textarea
- * 3. Label-based lookup → contenteditable
+ * Fill the "Initial Clinical Evaluation" form from intake data.
+ * Maps IntakeData fields to the specific SP form field selectors.
+ *
+ * Form sections (userAnswer numbers):
+ *   1     Date of assessment
+ *   3-4   Beginning/ending time (not from intake)
+ *   5     Present at session (checkboxes)
+ *   6     Chief complaint (ProseMirror)
+ *   7     History of present illness (ProseMirror)
+ *   9-22  Symptom checklists & risk (checkboxes) — partially from intake
+ *   25-30 Past psychiatric history (radios)
+ *   31    Past psychiatric medication trials (ProseMirror)
+ *   34    Current psychiatric medications (ProseMirror)
+ *   35-36 Substance use (radio + checkboxes)
+ *   39-44 Past medical history (radios + ProseMirror)
+ *   47-53 Social history (radios, checkboxes, ProseMirror)
+ *   56-60 Family history (radios + ProseMirror)
+ *   64-84 Mental status exam (comboboxes, checkboxes, ProseMirror) — session observation
+ *   85-92 Judgment/assessment (dropdowns, checkboxes, ProseMirror) — session observation
+ *   95-103 Review of systems (checkboxes) — session observation
+ *   106-111 Assessment section (ProseMirror) — session observation + clinical judgment
  */
-function fillByLabel(labelText: string, value: string): boolean {
-  if (!value) return false
+function fillICEFromIntake(intake: IntakeData): number {
+  let filled = 0
 
-  const container = findFieldContainer(labelText)
-  if (!container) return false
-
-  // Try input/textarea
-  const input = container.querySelector('input:not([type="checkbox"]):not([type="radio"]), textarea') as HTMLInputElement | HTMLTextAreaElement | null
-  if (input && isVisible(input)) {
-    return fillTextLikeField(input, value)
+  // ── Session info ──
+  // Date of assessment
+  const dateInput = document.querySelector('#date-1') as HTMLInputElement | null
+  if (dateInput && intake.formDate) {
+    if (fillTextLikeField(dateInput, intake.formDate)) filled++
   }
 
-  // Try contenteditable
-  const editable = container.querySelector('[contenteditable="true"]') as HTMLElement | null
-  if (editable && isVisible(editable)) {
-    return fillContentEditableField(editable, value)
+  // Present at session — always check "Patient"
+  if (checkCheckboxByLabel('multi-select-5', 'Patient')) filled++
+
+  // ── Chief complaint & HPI ── (ProseMirror free-text fields)
+  if (fillProseMirrorByLabel('free-text-6', intake.chiefComplaint)) filled++
+  if (fillProseMirrorByLabel('free-text-7', intake.historyOfPresentIllness || intake.presentingProblems)) filled++
+
+  // ── Symptom checklists (9-22) ──
+  // These are clinical observations. We can pre-check from intake symptom data.
+  filled += fillSymptomChecklistsFromIntake(intake)
+
+  // ── Past Psychiatric History (radios 25-30) ──
+  if (selectYesNo('single-select-25', intake.psychiatricHospitalization)) filled++
+  if (selectYesNo('single-select-26', intake.priorTreatment)) filled++
+  if (selectYesNo('single-select-27', intake.suicideAttemptHistory)) filled++
+  // 28: History of SIB — check intake
+  // 29: Access to weapon — not directly in intake
+  // 30: Minor weapon notify — N/A
+
+  // Past psychiatric medication trials
+  if (fillProseMirrorByLabel('free-text-31', intake.medications)) filled++
+
+  // ── Substance Abuse History ──
+  // Current psychiatric medications
+  if (fillProseMirrorByLabel('free-text-34', intake.medications)) filled++
+
+  // Currently using or abusing substances
+  const hasSubstanceUse = intake.alcoholUse || intake.drugUse || intake.substanceUseHistory
+  if (hasSubstanceUse) {
+    const isUsing = /yes|current|daily|weekly|monthly|regular|social|occasional/i.test(
+      `${intake.alcoholUse} ${intake.drugUse} ${intake.substanceUseHistory}`
+    )
+    if (selectRadio('single-select-35', isUsing ? '1' : '2')) filled++
+
+    // Substance specifics (checkboxes 36)
+    if (isUsing) {
+      filled += fillSubstanceCheckboxes(intake)
+    }
   }
 
-  return false
+  // ── Past Medical History ──
+  if (intake.medicalHistory) {
+    const hasMedical = !/none|no|denied|denies/i.test(intake.medicalHistory)
+    if (selectRadio('single-select-39', hasMedical ? '1' : '2')) filled++
+  }
+  // Surgeries free-text
+  // TBI/LOC free-text
+  // Trouble sleeping
+  // Allergies, developmental history — not directly mapped in intake
+
+  // ── Social History ──
+  // History of trauma
+  if (intake.physicalSexualAbuseHistory || intake.domesticViolenceHistory) {
+    const hasTrauma = !/none|no|denied|denies/i.test(
+      `${intake.physicalSexualAbuseHistory} ${intake.domesticViolenceHistory}`
+    )
+    if (selectRadio('single-select-47', hasTrauma ? '1' : '2')) filled++
+  }
+
+  // Marital status (single-select-48)
+  if (intake.maritalStatus) {
+    filled += fillMaritalStatus(intake.maritalStatus)
+  }
+
+  // Living arrangements (multi-select-49)
+  if (intake.livingArrangement) {
+    filled += fillLivingArrangements(intake.livingArrangement)
+  }
+
+  // Employment (multi-select-50)
+  if (intake.occupation) {
+    filled += fillEmployment(intake.occupation)
+  }
+
+  // Education (single-select-51)
+  if (intake.education) {
+    filled += fillEducation(intake.education)
+  }
+
+  // Additional social history notes
+  const socialNotes = buildSocialHistoryNotes(intake)
+  if (fillProseMirrorByLabel('free-text-53', socialNotes)) filled++
+
+  // ── Family History ──
+  // Victim of / witness to DV
+  if (intake.domesticViolenceHistory) {
+    const hasDV = !/none|no|denied|denies/i.test(intake.domesticViolenceHistory)
+    if (selectRadio('single-select-56', hasDV ? '1' : '2')) filled++
+  }
+
+  // Family history of mental health issues
+  if (intake.familyPsychiatricHistory || intake.familyMentalEmotionalHistory) {
+    const hasFamilyMH = !/none|no|denied|denies/i.test(
+      `${intake.familyPsychiatricHistory} ${intake.familyMentalEmotionalHistory}`
+    )
+    if (selectRadio('single-select-57', hasFamilyMH ? '1' : '2')) filled++
+  }
+
+  // Additional family history notes
+  const familyNotes = [intake.familyPsychiatricHistory, intake.familyMentalEmotionalHistory]
+    .filter(Boolean).join('\n')
+  if (fillProseMirrorByLabel('free-text-60', familyNotes)) filled++
+
+  // ── MSE, Assessment, ROS — left empty for clinician ──
+  // These are session observations, not intake data.
+  // Fields 64-111 will be filled by future phases (audio transcription, live interview).
+
+  // ── SI/HI dropdowns — from intake if available ──
+  if (intake.suicidalIdeation) {
+    if (selectDropdownById('dropdown-86', mapSIToDropdown(intake.suicidalIdeation))) filled++
+  }
+  if (intake.homicidalIdeation) {
+    if (selectDropdownById('dropdown-87', mapHIToDropdown(intake.homicidalIdeation))) filled++
+  }
+
+  return filled
 }
 
-/**
- * Fill a rich text editor field (SimplePractice uses contenteditable divs
- * and sometimes embedded editors for note body sections).
- */
-function fillRichTextField(selectors: string[], value: string): boolean {
-  if (!value) return false
+// ── Symptom Checklist Helpers ──
 
-  for (const sel of selectors) {
-    const el = document.querySelector(sel) as HTMLElement | null
-    if (!el || !isVisible(el)) continue
+function fillSymptomChecklistsFromIntake(intake: IntakeData): number {
+  let filled = 0
+  const symptoms = `${intake.recentSymptoms} ${intake.additionalSymptoms}`.toLowerCase()
 
-    if (el.getAttribute('contenteditable') === 'true') {
-      return fillContentEditableField(el, value)
-    }
+  if (!symptoms.trim()) return 0
 
-    if (el instanceof HTMLTextAreaElement || el instanceof HTMLInputElement) {
-      return fillTextLikeField(el, value)
+  // Depression (multi-select-9)
+  const depressionMap: Record<string, string> = {
+    'crying': 'Frequent crying',
+    'sad': 'Feeling sad, empty, or down',
+    'energy': 'Loss of energy',
+    'fatigue': 'Fatigue',
+    'interest': 'Loss of interest',
+    'enjoyment': 'Loss of enjoyment',
+    'hopeless': 'Hopelessness',
+    'helpless': 'Helplessness',
+    'worthless': 'Worthlessness',
+    'concentrat': 'Difficulty concentrating',
+    'suicid': 'Recurrent suicidal ideation',
+    'death': 'Recurrent thoughts about death/dying',
+    'insomnia': 'Insomnia',
+    'hypersomnia': 'Hypersomnia',
+    'appetite': 'Loss of appetite (without weight loss)',
+    'withdrawal': 'Social withdrawal, agitation',
+  }
+  for (const [keyword, label] of Object.entries(depressionMap)) {
+    if (symptoms.includes(keyword)) {
+      if (checkCheckboxByLabel('multi-select-9', label)) filled++
     }
   }
 
-  return false
+  // Anxiety (multi-select-10)
+  const anxietyMap: Record<string, string> = {
+    'worry': 'Excessive worry',
+    'distract': 'Distractibility',
+    'sleep': 'Difficulty falling or staying asleep',
+    'restless': 'Restlessness',
+    'edge': 'Feeling on edge or tense',
+    'tense': 'Feeling on edge or tense',
+  }
+  for (const [keyword, label] of Object.entries(anxietyMap)) {
+    if (symptoms.includes(keyword)) {
+      if (checkCheckboxByLabel('multi-select-10', label)) filled++
+    }
+  }
+
+  // Abuse (multi-select-20) — from intake trauma fields
+  if (intake.physicalSexualAbuseHistory) {
+    const abuse = intake.physicalSexualAbuseHistory.toLowerCase()
+    if (/physical/i.test(abuse)) { if (checkCheckboxByLabel('multi-select-20', 'Physical')) filled++ }
+    if (/sexual/i.test(abuse)) { if (checkCheckboxByLabel('multi-select-20', 'Sexual')) filled++ }
+    if (/emotional/i.test(abuse)) { if (checkCheckboxByLabel('multi-select-20', 'Emotional')) filled++ }
+    if (/neglect/i.test(abuse)) { if (checkCheckboxByLabel('multi-select-20', 'Neglect')) filled++ }
+    if (/none|no|denied|denies/i.test(abuse)) { if (checkCheckboxByLabel('multi-select-20', 'Denies')) filled++ }
+  }
+
+  // Risk factors (multi-select-21) — derived from intake
+  if (intake.suicideAttemptHistory && !/no|denied|denies|none/i.test(intake.suicideAttemptHistory)) {
+    if (checkCheckboxByLabel('multi-select-21', 'History of suicide attempt')) filled++
+  }
+  if (intake.substanceUseHistory && !/no|denied|denies|none/i.test(intake.substanceUseHistory)) {
+    if (checkCheckboxByLabel('multi-select-21', 'History of substance abuse')) filled++
+  }
+  if (intake.physicalSexualAbuseHistory && !/no|denied|denies|none/i.test(intake.physicalSexualAbuseHistory)) {
+    if (checkCheckboxByLabel('multi-select-21', 'History of abuse')) filled++
+  }
+
+  return filled
 }
 
-// ── Note Section Fillers ──
+function fillSubstanceCheckboxes(intake: IntakeData): number {
+  let filled = 0
+  const substance = `${intake.alcoholUse} ${intake.drugUse} ${intake.substanceUseHistory}`.toLowerCase()
 
-function formatMSE(mse: ProgressNote['mentalStatusExam']): string {
+  if (/alcohol/i.test(substance)) { if (checkCheckboxByLabel('multi-select-36', 'Alcohol')) filled++ }
+  if (/tobacco|nicotine|cigarette|vape/i.test(substance)) { if (checkCheckboxByLabel('multi-select-36', 'Tobacco')) filled++ }
+  if (/cannabis|marijuana|weed|thc/i.test(substance)) { if (checkCheckboxByLabel('multi-select-36', 'Cannabis')) filled++ }
+  if (/opioid|heroin|fentanyl|oxy/i.test(substance)) { if (checkCheckboxByLabel('multi-select-36', 'Opioids')) filled++ }
+  if (/cocaine|crack/i.test(substance)) { if (checkCheckboxByLabel('multi-select-36', 'Cocaine')) filled++ }
+  if (/amphetamine|meth|adderall/i.test(substance)) { if (checkCheckboxByLabel('multi-select-36', 'Amphetamines')) filled++ }
+  if (/hallucinogen|lsd|mushroom|psilocybin/i.test(substance)) { if (checkCheckboxByLabel('multi-select-36', 'Hallucinogens')) filled++ }
+
+  return filled
+}
+
+// ── Social History Helpers ──
+
+function fillMaritalStatus(status: string): number {
+  const lower = status.toLowerCase()
+  const map: Record<string, string> = {
+    'married': '1',
+    'domestic': '2',
+    'divorced': '3',
+    'widowed': '4',
+    'single': '5',
+  }
+  for (const [keyword, value] of Object.entries(map)) {
+    if (lower.includes(keyword)) {
+      return selectRadio('single-select-48', value) ? 1 : 0
+    }
+  }
+  // Fallback to "Other"
+  return selectRadio('single-select-48', '6') ? 1 : 0
+}
+
+function fillLivingArrangements(living: string): number {
+  let filled = 0
+  const lower = living.toLowerCase()
+
+  if (/alone/i.test(lower)) { if (checkCheckboxByLabel('multi-select-49', 'Alone')) filled++ }
+  if (/roommate/i.test(lower)) { if (checkCheckboxByLabel('multi-select-49', 'With roommate')) filled++ }
+  if (/family|parent|child|sibling/i.test(lower)) { if (checkCheckboxByLabel('multi-select-49', 'With family')) filled++ }
+  if (/spouse|husband|wife|partner/i.test(lower)) { if (checkCheckboxByLabel('multi-select-49', 'With spouse')) filled++ }
+  if (/group home/i.test(lower)) { if (checkCheckboxByLabel('multi-select-49', 'Group home')) filled++ }
+
+  return filled
+}
+
+function fillEmployment(occupation: string): number {
+  let filled = 0
+  const lower = occupation.toLowerCase()
+
+  if (/unemployed|not working|out of work/i.test(lower)) {
+    if (checkCheckboxByLabel('multi-select-50', 'Currently unemployed')) filled++
+  } else if (occupation.trim()) {
+    if (checkCheckboxByLabel('multi-select-50', 'Currently employed')) filled++
+  }
+
+  return filled
+}
+
+function fillEducation(education: string): number {
+  const lower = education.toLowerCase()
+  const map: Record<string, string> = {
+    'pre-school': '1', 'preschool': '1',
+    'elementary': '2',
+    'middle': '3',
+    'high school': '4', 'hs': '4', 'ged': '4',
+    'associate': '5', '2-year': '5', 'community college': '5',
+    'bachelor': '6', '4-year': '6', 'college': '6', 'university': '6',
+    'graduate': '7', 'master': '7', 'doctoral': '7', 'phd': '7', 'md': '7', 'jd': '7',
+  }
+  for (const [keyword, value] of Object.entries(map)) {
+    if (lower.includes(keyword)) {
+      return selectRadio('single-select-51', value) ? 1 : 0
+    }
+  }
+  return 0
+}
+
+function buildSocialHistoryNotes(intake: IntakeData): string {
   const parts: string[] = []
-
-  if (mse.appearance) parts.push(`Appearance: ${mse.appearance}`)
-  if (mse.behavior) parts.push(`Behavior: ${mse.behavior}`)
-  if (mse.speech) parts.push(`Speech: ${mse.speech}`)
-  if (mse.mood) parts.push(`Mood: ${mse.mood}`)
-  if (mse.affect) parts.push(`Affect: ${mse.affect}`)
-  if (mse.thoughtProcess) parts.push(`Thought Process: ${mse.thoughtProcess}`)
-  if (mse.thoughtContent) parts.push(`Thought Content: ${mse.thoughtContent}`)
-  if (mse.perceptions) parts.push(`Perceptions: ${mse.perceptions}`)
-  if (mse.cognition) parts.push(`Cognition: ${mse.cognition}`)
-  if (mse.insight) parts.push(`Insight: ${mse.insight}`)
-  if (mse.judgment) parts.push(`Judgment: ${mse.judgment}`)
-
+  if (intake.occupation) parts.push(`Occupation: ${intake.occupation}`)
+  if (intake.relationshipDescription) parts.push(`Relationship: ${intake.relationshipDescription}`)
+  if (intake.livingArrangement) parts.push(`Living arrangement: ${intake.livingArrangement}`)
+  if (intake.additionalInfo) parts.push(intake.additionalInfo)
   return parts.join('\n')
 }
 
-function formatDiagnosticImpressions(impressions: ProgressNote['diagnosticImpressions']): string {
-  if (!impressions.length) return ''
+// ── SI/HI Dropdown Mappers ──
 
-  return impressions.map((dx, i) => {
-    const lines = [`${i + 1}. ${dx.name} (${dx.code})`]
-    if (dx.criteriaEvidence.length) {
-      lines.push(`   Evidence: ${dx.criteriaEvidence.join('; ')}`)
-    }
-    if (dx.ruleOuts.length) {
-      lines.push(`   Rule-outs: ${dx.ruleOuts.join(', ')}`)
-    }
-    return lines.join('\n')
-  }).join('\n\n')
+function mapSIToDropdown(si: string): string {
+  const lower = si.toLowerCase()
+  if (/no|denied|denies|none/i.test(lower)) return 'Denies'
+  if (/active.*plan.*intent/i.test(lower)) return 'Active with plan with intent'
+  if (/active.*plan/i.test(lower)) return 'Active with plan but without intent'
+  if (/passive.*plan/i.test(lower)) return 'Passive with plan and without intent'
+  if (/passive/i.test(lower)) return 'Passive without plan or intent'
+  return 'Denies'
 }
 
-function formatTreatmentPlan(plan: ProgressNote['treatmentPlan']): string {
-  const parts: string[] = []
-
-  if (plan.goals.length) {
-    parts.push('Goals:')
-    plan.goals.forEach((g, i) => parts.push(`  ${i + 1}. ${g}`))
-  }
-  if (plan.interventions.length) {
-    parts.push('Interventions:')
-    plan.interventions.forEach((iv, i) => parts.push(`  ${i + 1}. ${iv}`))
-  }
-  if (plan.frequency) parts.push(`Frequency: ${plan.frequency}`)
-  if (plan.referrals) parts.push(`Referrals: ${plan.referrals}`)
-
-  return parts.join('\n')
-}
-
-/**
- * Build the full progress note as a single text block.
- * Used as fallback when SP has a single large text area for the note body.
- */
-function buildFullNoteText(note: ProgressNote): string {
-  const sections: string[] = []
-
-  sections.push(`CLIENT: ${note.clientName}`)
-  sections.push(`DATE: ${note.sessionDate}`)
-  sections.push(`SESSION TYPE: ${note.sessionType}`)
-  if (note.cptCode) sections.push(`CPT: ${note.cptCode}`)
-  if (note.duration) sections.push(`DURATION: ${note.duration}`)
-  sections.push('')
-
-  if (note.chiefComplaint) {
-    sections.push('CHIEF COMPLAINT')
-    sections.push(note.chiefComplaint)
-    sections.push('')
-  }
-
-  if (note.presentingComplaint) {
-    sections.push('PRESENTING COMPLAINT')
-    sections.push(note.presentingComplaint)
-    sections.push('')
-  }
-
-  const mseText = formatMSE(note.mentalStatusExam)
-  if (mseText) {
-    sections.push('MENTAL STATUS EXAM')
-    sections.push(mseText)
-    sections.push('')
-  }
-
-  const dxText = formatDiagnosticImpressions(note.diagnosticImpressions)
-  if (dxText) {
-    sections.push('DIAGNOSTIC IMPRESSIONS')
-    sections.push(dxText)
-    sections.push('')
-  }
-
-  if (note.clinicalFormulation) {
-    sections.push('CLINICAL FORMULATION')
-    sections.push(note.clinicalFormulation)
-    sections.push('')
-  }
-
-  const txPlan = formatTreatmentPlan(note.treatmentPlan)
-  if (txPlan) {
-    sections.push('TREATMENT PLAN')
-    sections.push(txPlan)
-    sections.push('')
-  }
-
-  if (note.plan) {
-    sections.push('PLAN / NEXT STEPS')
-    sections.push(note.plan)
-  }
-
-  return sections.join('\n')
+function mapHIToDropdown(hi: string): string {
+  const lower = hi.toLowerCase()
+  if (/no|denied|denies|none/i.test(lower)) return 'Denies'
+  if (/active.*plan.*intent/i.test(lower)) return 'Yes: Active with plan and with intent'
+  if (/active.*plan/i.test(lower)) return 'Yes: Active with plan but without intent'
+  if (/passive.*plan/i.test(lower)) return 'Yes: Passive with plan and without intent'
+  if (/passive/i.test(lower)) return 'Yes: Passive without plan or intent'
+  if (/specific/i.test(lower)) return 'Yes: Specific person'
+  return 'Denies'
 }
 
 // ── Main Fill Logic ──
 
-async function fillProgressNote(): Promise<void> {
+async function fillInitialClinicalEval(): Promise<void> {
   assertExtensionContext()
 
-  const note = await getNote()
-  if (!note) {
-    showToast('No note data available. Generate a note first.', 'error')
+  const intake = await getIntake()
+  if (!intake) {
+    showToast('No intake data captured. Go to the client\'s intake form and click "Capture Intake" first.', 'error')
     return
   }
 
-  let filled = 0
+  // Wait for ProseMirror editors to initialize (Ember.js rendering)
+  await wait(500)
 
-  // Try to fill individual sections if SP has structured fields
-  // SP progress notes can have different templates — try label-based filling first
-
-  if (fillByLabel('chief complaint', note.chiefComplaint)) filled++
-  if (fillByLabel('presenting complaint', note.presentingComplaint) ||
-      fillByLabel('presenting problem', note.presentingComplaint)) filled++
-
-  // Mental Status Exam — try individual fields
-  const mse = note.mentalStatusExam
-  if (fillByLabel('appearance', mse.appearance)) filled++
-  if (fillByLabel('behavior', mse.behavior)) filled++
-  if (fillByLabel('speech', mse.speech)) filled++
-  if (fillByLabel('mood', mse.mood)) filled++
-  if (fillByLabel('affect', mse.affect)) filled++
-  if (fillByLabel('thought process', mse.thoughtProcess)) filled++
-  if (fillByLabel('thought content', mse.thoughtContent)) filled++
-  if (fillByLabel('perceptions', mse.perceptions)) filled++
-  if (fillByLabel('cognition', mse.cognition)) filled++
-  if (fillByLabel('insight', mse.insight)) filled++
-  if (fillByLabel('judgment', mse.judgment)) filled++
-
-  // MSE as a single block if individual fields didn't work
-  if (filled === 0) {
-    const mseText = formatMSE(mse)
-    if (fillByLabel('mental status', mseText) ||
-        fillByLabel('mental status exam', mseText) ||
-        fillByLabel('mse', mseText)) {
-      filled++
-    }
-  }
-
-  // Diagnostic impressions
-  const dxText = formatDiagnosticImpressions(note.diagnosticImpressions)
-  if (fillByLabel('diagnostic impressions', dxText) ||
-      fillByLabel('diagnosis', dxText) ||
-      fillByLabel('assessment', dxText)) {
-    filled++
-  }
-
-  // Diagnosis codes — try to fill ICD-10 code fields
-  for (const dx of note.diagnosticImpressions) {
-    if (fillByLabel('diagnosis code', dx.code) ||
-        fillByLabel('icd-10', dx.code) ||
-        fillByLabel('icd code', dx.code)) {
-      filled++
-    }
-  }
-
-  // Clinical formulation
-  if (fillByLabel('clinical formulation', note.clinicalFormulation) ||
-      fillByLabel('formulation', note.clinicalFormulation) ||
-      fillByLabel('case conceptualization', note.clinicalFormulation)) {
-    filled++
-  }
-
-  // Treatment plan
-  const txText = formatTreatmentPlan(note.treatmentPlan)
-  if (fillByLabel('treatment plan', txText) ||
-      fillByLabel('plan', txText)) {
-    filled++
-  }
-
-  // Next steps / follow-up
-  if (fillByLabel('plan', note.plan) ||
-      fillByLabel('next steps', note.plan) ||
-      fillByLabel('follow-up', note.plan) ||
-      fillByLabel('follow up', note.plan)) {
-    filled++
-  }
-
-  // CPT code
-  if (note.cptCode) {
-    if (selectOptionByText('select[name*="cpt" i]', note.cptCode) ||
-        fillByLabel('cpt code', note.cptCode) ||
-        fillByLabel('service code', note.cptCode)) {
-      filled++
-    }
-  }
-
-  // Duration
-  if (note.duration) {
-    if (fillByLabel('duration', note.duration) ||
-        fillByLabel('session length', note.duration)) {
-      filled++
-    }
-  }
-
-  // Fallback: if we couldn't fill individual fields, try the main note body
-  if (filled < 3) {
-    const fullText = buildFullNoteText(note)
-
-    // Try common SP note body selectors
-    const bodyFilled = fillRichTextField([
-      '[contenteditable="true"].note-body',
-      '[contenteditable="true"].ql-editor',
-      '.note-content [contenteditable="true"]',
-      'textarea[name*="note" i]',
-      'textarea[name*="body" i]',
-      'textarea[name*="content" i]',
-      '.progress-note-body textarea',
-      '[contenteditable="true"]',
-    ], fullText)
-
-    if (bodyFilled) filled += 10 // bulk fill
-  }
+  const filled = fillICEFromIntake(intake)
 
   if (filled > 0) {
-    await updateNoteStatus({ noteSubmitted: true })
-    showToast(`Filled ${filled} note sections for ${note.clientName}`, 'success')
+    showToast(`Filled ${filled} fields from intake data for ${intake.fullName || 'client'}`, 'success')
   } else {
-    showToast('Could not find note fields on this page. Make sure you are on a note editing page.', 'error')
+    showToast('Could not fill any fields. Make sure you are on the Initial Clinical Evaluation note.', 'error')
   }
 
-  console.log('[SPN] Filled progress note:', { filled, clientName: note.clientName })
+  console.log('[SPN] Filled ICE from intake:', { filled, clientName: intake.fullName })
 }
 
 // ── Button Injection ──
 
 async function handleFillClick(): Promise<void> {
   try {
-    await fillProgressNote()
+    await fillInitialClinicalEval()
   } catch (err) {
     if (isExtensionContextInvalidatedError(err)) {
       showToast('Extension reloaded — please refresh this page.', 'error')
@@ -349,11 +425,11 @@ function injectFillButton(): void {
   if (!isNotePage()) return
   if (document.getElementById('spn-fill-btn')) return
 
-  // Only show if we have note data
-  getNote().then((note) => {
-    if (!note) return
+  // Only show if we have intake data
+  getIntake().then((intake) => {
+    if (!intake) return
 
-    injectButton('Fill Note', handleFillClick, {
+    injectButton('Fill from Intake', handleFillClick, {
       id: 'spn-fill-btn',
       position: 'bottom-left',
     })

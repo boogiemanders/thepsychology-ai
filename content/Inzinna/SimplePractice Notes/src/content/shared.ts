@@ -155,6 +155,124 @@ export function selectOptionByText(selector: string, text: string, root: Element
   return false
 }
 
+/**
+ * Check a checkbox by matching its sibling label text.
+ * SP checkbox pattern: <label class="boolean"><input type="checkbox"> Label Text</label>
+ */
+export function checkCheckboxByLabel(groupName: string, labelText: string): boolean {
+  if (!labelText) return false
+  const target = labelText.toLowerCase().trim()
+
+  // Find all checkboxes whose name starts with the group prefix
+  const checkboxes = document.querySelectorAll(`input[name^="${groupName}"][type="checkbox"]`) as NodeListOf<HTMLInputElement>
+  for (const cb of Array.from(checkboxes)) {
+    const label = cb.closest('label')
+    if (!label) continue
+    const text = label.textContent?.replace(label.querySelector('input')?.value ?? '', '').trim().toLowerCase() ?? ''
+    if (text === target || text.includes(target) || target.includes(text)) {
+      if (!cb.checked) {
+        cb.click()
+        cb.dispatchEvent(new Event('change', { bubbles: true }))
+      }
+      return true
+    }
+  }
+  return false
+}
+
+/**
+ * Check multiple checkboxes in a multi-select group by label text.
+ * Returns count of successfully checked boxes.
+ */
+export function checkMultipleCheckboxes(groupName: string, labels: string[]): number {
+  let count = 0
+  for (const label of labels) {
+    if (checkCheckboxByLabel(groupName, label)) count++
+  }
+  return count
+}
+
+/**
+ * Select a radio button by name and value, or by matching label text.
+ * SP radio pattern: <label class="boolean"><input type="radio" value="1"> Yes</label>
+ */
+export function selectRadio(name: string, valueOrLabel: string): boolean {
+  if (!valueOrLabel) return false
+  const target = valueOrLabel.toLowerCase().trim()
+
+  const radios = document.querySelectorAll(`input[name="${name}"][type="radio"]`) as NodeListOf<HTMLInputElement>
+  for (const radio of Array.from(radios)) {
+    // Match by value
+    if (radio.value === valueOrLabel) {
+      radio.click()
+      radio.dispatchEvent(new Event('change', { bubbles: true }))
+      return true
+    }
+    // Match by label text
+    const label = radio.closest('label')
+    const labelText = label?.textContent?.trim().toLowerCase() ?? ''
+    if (labelText === target || labelText.includes(target)) {
+      radio.click()
+      radio.dispatchEvent(new Event('change', { bubbles: true }))
+      return true
+    }
+  }
+  return false
+}
+
+/**
+ * Select a radio as Yes (value="1") or No (value="2") based on a boolean-ish string.
+ */
+export function selectYesNo(name: string, answer: string): boolean {
+  if (!answer) return false
+  const lower = answer.toLowerCase().trim()
+  const isYes = /^(yes|true|1|positive|confirmed|endorsed|reported)/.test(lower)
+  const isNo = /^(no|false|0|negative|denied|denies|none|n\/a)/.test(lower)
+  if (isYes) return selectRadio(name, '1')
+  if (isNo) return selectRadio(name, '2')
+  return false
+}
+
+/**
+ * Fill a ProseMirror contenteditable field by its aria-label.
+ * SP free-text pattern: <div contenteditable="true" class="ProseMirror ProseMirror-content" aria-label="free-text-N">
+ */
+export function fillProseMirrorByLabel(ariaLabel: string, value: string): boolean {
+  if (!value) return false
+  const el = document.querySelector(`[contenteditable="true"][aria-label="${ariaLabel}"]`) as HTMLElement | null
+  return fillContentEditableField(el, value)
+}
+
+/**
+ * Fill a combobox/searchbox input by its aria-label.
+ * SP combobox pattern: <input class="select-box__input" aria-label="Person" type="text">
+ */
+export function fillCombobox(ariaLabel: string, value: string): boolean {
+  if (!value) return false
+  const input = document.querySelector(`input.select-box__input[aria-label="${ariaLabel}"]`) as HTMLInputElement | null
+  return fillTextLikeField(input, value)
+}
+
+/**
+ * Select a dropdown option by element ID and value text.
+ */
+export function selectDropdownById(id: string, text: string): boolean {
+  if (!text) return false
+  const select = document.getElementById(id) as HTMLSelectElement | null
+  if (!select) return false
+
+  const lowerText = text.toLowerCase().trim()
+  for (const option of Array.from(select.options)) {
+    if (option.text.trim().toLowerCase().includes(lowerText) ||
+        option.value.toLowerCase().includes(lowerText)) {
+      select.value = option.value
+      select.dispatchEvent(new Event('change', { bubbles: true }))
+      return true
+    }
+  }
+  return false
+}
+
 export function normalizedText(value: string | null | undefined): string {
   return (value ?? '').replace(/\s+/g, ' ').trim().toLowerCase()
 }
