@@ -476,5 +476,6 @@ chrome.runtime.onMessage.addListener((msg, _sender, sendResponse) => {
     const anyVisible = Array.from(btns).some(b => b.style.display !== 'none')
     btns.forEach(b => { b.style.display = anyVisible ? 'none' : '' })
     sendResponse({ visible: !anyVisible })
+    return true
   }
 })

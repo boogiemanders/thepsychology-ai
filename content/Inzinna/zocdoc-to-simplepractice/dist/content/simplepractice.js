@@ -1008,6 +1008,7 @@ ${prefs.vobSignature}`;
         b.style.display = anyVisible ? "none" : "";
       });
       sendResponse({ visible: !anyVisible });
+      return true;
     }
   });
 })();
