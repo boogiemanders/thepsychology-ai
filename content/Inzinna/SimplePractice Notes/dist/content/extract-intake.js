@@ -42,6 +42,8 @@
     occupation: "",
     physicalSexualAbuseHistory: "",
     domesticViolenceHistory: "",
+    gad7: null,
+    phq9: null,
     recentSymptoms: "",
     additionalSymptoms: "",
     additionalInfo: "",
@@ -97,6 +99,18 @@
   var INTAKE_KEY = "spn_intake";
   async function saveIntake(intake) {
     await chrome.storage.session.set({ [INTAKE_KEY]: intake });
+  }
+  async function getIntake() {
+    const result = await chrome.storage.session.get(INTAKE_KEY);
+    return result[INTAKE_KEY] ?? null;
+  }
+  async function mergeIntake(partial) {
+    const existing = await getIntake();
+    if (existing) {
+      await saveIntake({ ...existing, ...partial });
+    } else {
+      await saveIntake({ ...{}, ...partial });
+    }
   }
 
   // src/content/shared.ts
@@ -385,6 +399,85 @@
     if (intake.address.raw) count++;
     return count;
   }
+  function detectAssessmentType() {
+    const titleEl = document.querySelector(".title-item h3");
+    const title = titleEl?.textContent?.trim().toLowerCase() ?? "";
+    if (title.includes("gad-7") || title.includes("gad 7")) return "GAD-7";
+    if (title.includes("phq-9") || title.includes("phq 9")) return "PHQ-9";
+    return null;
+  }
+  function extractAssessment(name) {
+    const items = [];
+    let difficulty = "";
+    const scoringEl = document.querySelector(".scoring-description");
+    const severityMatch = scoringEl?.textContent?.match(/indicate\s+(.+)/i);
+    const severity = severityMatch?.[1]?.replace(/\.$/, "").trim() ?? "";
+    const rows = document.querySelectorAll("tbody tr.et-tr");
+    for (const row of Array.from(rows)) {
+      const cells = row.querySelectorAll("td");
+      if (cells.length < 3) continue;
+      const firstCell = cells[0];
+      const questionNumEl = firstCell.querySelector(".question-number");
+      if (questionNumEl) {
+        const num = parseInt(questionNumEl.textContent?.replace(".", "") ?? "0", 10);
+        const questionText = firstCell.querySelector(".question-number + div p")?.textContent?.trim() ?? "";
+        const response = cells[1]?.querySelector(".cell-container p")?.textContent?.trim() ?? "";
+        const scoreText = cells[2]?.querySelector(".cell-container p")?.textContent?.trim() ?? "";
+        const scoreParts = scoreText.match(/^(\d+)\/(\d+)$/);
+        items.push({
+          number: num,
+          question: questionText,
+          response,
+          score: scoreParts ? parseInt(scoreParts[1], 10) : 0,
+          maxScore: scoreParts ? parseInt(scoreParts[2], 10) : 3
+        });
+      } else if (!firstCell.querySelector(".intro-row") && firstCell.textContent?.includes("difficult")) {
+        difficulty = cells[1]?.querySelector(".cell-container p")?.textContent?.trim() ?? "";
+      }
+    }
+    const allRows = document.querySelectorAll("tbody tr.et-tr:not(.intro-row)");
+    for (const row of Array.from(allRows)) {
+      const firstCell = row.querySelector("td");
+      if (!firstCell?.querySelector(".question-number") && firstCell?.textContent?.includes("difficult")) {
+        const cells = row.querySelectorAll("td");
+        difficulty = cells[1]?.querySelector(".cell-container p")?.textContent?.trim() ?? "";
+      }
+    }
+    const totalScore = items.reduce((sum, item) => sum + item.score, 0);
+    return {
+      name,
+      totalScore,
+      severity,
+      items,
+      difficulty,
+      capturedAt: (/* @__PURE__ */ new Date()).toISOString()
+    };
+  }
+  function hasAssessmentTable() {
+    return !!document.querySelector(".scoring-description") && !!detectAssessmentType();
+  }
+  async function handleAssessmentCapture() {
+    try {
+      assertExtensionContext();
+      const type = detectAssessmentType();
+      if (!type) {
+        showToast("Not a recognized assessment page.", "error");
+        return;
+      }
+      const result = extractAssessment(type);
+      const key = type === "GAD-7" ? "gad7" : "phq9";
+      await mergeIntake({ [key]: result });
+      showToast(`Captured ${type}: score ${result.totalScore} (${result.severity})`, "success");
+      console.log(`[SPN] Captured ${type}:`, result);
+    } catch (err) {
+      if (isExtensionContextInvalidatedError(err)) {
+        showToast("Extension reloaded \u2014 please refresh this page.", "error");
+      } else {
+        console.error("[SPN] Assessment capture error:", err);
+        showToast("Failed to capture assessment.", "error");
+      }
+    }
+  }
   async function handleCaptureClick() {
     try {
       assertExtensionContext();
@@ -418,6 +511,15 @@
   }
   function injectCaptureButton() {
     if (!isClientPage()) return;
+    if (hasAssessmentTable()) {
+      if (document.getElementById("spn-assessment-btn")) return;
+      const type = detectAssessmentType();
+      injectButton(`Capture ${type}`, handleAssessmentCapture, {
+        id: "spn-assessment-btn",
+        position: "bottom-right"
+      });
+      return;
+    }
     if (document.getElementById("spn-capture-btn")) return;
     if (!hasIntakeForm()) return;
     injectButton("Capture Intake", handleCaptureClick, {

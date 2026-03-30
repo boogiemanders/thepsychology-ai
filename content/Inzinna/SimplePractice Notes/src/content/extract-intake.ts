@@ -13,8 +13,8 @@
  * This script parses all Q&A pairs, then maps them to structured IntakeData fields.
  */
 
-import { IntakeData, EMPTY_INTAKE } from '../lib/types'
-import { saveIntake } from '../lib/storage'
+import { IntakeData, EMPTY_INTAKE, AssessmentResult, AssessmentItem } from '../lib/types'
+import { saveIntake, mergeIntake, getIntake } from '../lib/storage'
 import {
   injectButton,
   showToast,
@@ -345,6 +345,107 @@ function countCapturedFields(intake: IntakeData): number {
   return count
 }
 
+// ── Assessment Extraction (GAD-7, PHQ-9) ──
+
+function detectAssessmentType(): 'GAD-7' | 'PHQ-9' | null {
+  const titleEl = document.querySelector('.title-item h3')
+  const title = titleEl?.textContent?.trim().toLowerCase() ?? ''
+  if (title.includes('gad-7') || title.includes('gad 7')) return 'GAD-7'
+  if (title.includes('phq-9') || title.includes('phq 9')) return 'PHQ-9'
+  return null
+}
+
+function extractAssessment(name: 'GAD-7' | 'PHQ-9'): AssessmentResult {
+  const items: AssessmentItem[] = []
+  let difficulty = ''
+
+  // Parse scoring description
+  const scoringEl = document.querySelector('.scoring-description')
+  const severityMatch = scoringEl?.textContent?.match(/indicate\s+(.+)/i)
+  const severity = severityMatch?.[1]?.replace(/\.$/, '').trim() ?? ''
+
+  // Parse table rows
+  const rows = document.querySelectorAll('tbody tr.et-tr')
+  for (const row of Array.from(rows)) {
+    const cells = row.querySelectorAll('td')
+    if (cells.length < 3) continue
+
+    const firstCell = cells[0]
+    const questionNumEl = firstCell.querySelector('.question-number')
+
+    if (questionNumEl) {
+      // Numbered question row
+      const num = parseInt(questionNumEl.textContent?.replace('.', '') ?? '0', 10)
+      const questionText = firstCell.querySelector('.question-number + div p')?.textContent?.trim() ?? ''
+      const response = cells[1]?.querySelector('.cell-container p')?.textContent?.trim() ?? ''
+      const scoreText = cells[2]?.querySelector('.cell-container p')?.textContent?.trim() ?? ''
+      const scoreParts = scoreText.match(/^(\d+)\/(\d+)$/)
+
+      items.push({
+        number: num,
+        question: questionText,
+        response,
+        score: scoreParts ? parseInt(scoreParts[1], 10) : 0,
+        maxScore: scoreParts ? parseInt(scoreParts[2], 10) : 3,
+      })
+    } else if (!firstCell.querySelector('.intro-row') && firstCell.textContent?.includes('difficult')) {
+      // Functional impairment question
+      difficulty = cells[1]?.querySelector('.cell-container p')?.textContent?.trim() ?? ''
+    }
+  }
+
+  // Also check intro-row class on tr itself for the difficulty question
+  const allRows = document.querySelectorAll('tbody tr.et-tr:not(.intro-row)')
+  for (const row of Array.from(allRows)) {
+    const firstCell = row.querySelector('td')
+    if (!firstCell?.querySelector('.question-number') &&
+        firstCell?.textContent?.includes('difficult')) {
+      const cells = row.querySelectorAll('td')
+      difficulty = cells[1]?.querySelector('.cell-container p')?.textContent?.trim() ?? ''
+    }
+  }
+
+  const totalScore = items.reduce((sum, item) => sum + item.score, 0)
+
+  return {
+    name,
+    totalScore,
+    severity,
+    items,
+    difficulty,
+    capturedAt: new Date().toISOString(),
+  }
+}
+
+function hasAssessmentTable(): boolean {
+  return !!document.querySelector('.scoring-description') && !!detectAssessmentType()
+}
+
+async function handleAssessmentCapture(): Promise<void> {
+  try {
+    assertExtensionContext()
+    const type = detectAssessmentType()
+    if (!type) {
+      showToast('Not a recognized assessment page.', 'error')
+      return
+    }
+
+    const result = extractAssessment(type)
+    const key = type === 'GAD-7' ? 'gad7' : 'phq9'
+    await mergeIntake({ [key]: result })
+
+    showToast(`Captured ${type}: score ${result.totalScore} (${result.severity})`, 'success')
+    console.log(`[SPN] Captured ${type}:`, result)
+  } catch (err) {
+    if (isExtensionContextInvalidatedError(err)) {
+      showToast('Extension reloaded — please refresh this page.', 'error')
+    } else {
+      console.error('[SPN] Assessment capture error:', err)
+      showToast('Failed to capture assessment.', 'error')
+    }
+  }
+}
+
 // ── Button Injection & Main Loop ──
 
 async function handleCaptureClick(): Promise<void> {
@@ -387,9 +488,20 @@ function hasIntakeForm(): boolean {
 
 function injectCaptureButton(): void {
   if (!isClientPage()) return
-  if (document.getElementById('spn-capture-btn')) return
 
-  // Only inject if there's an intake form on the page
+  // Assessment page (GAD-7 / PHQ-9) — show assessment capture button
+  if (hasAssessmentTable()) {
+    if (document.getElementById('spn-assessment-btn')) return
+    const type = detectAssessmentType()!
+    injectButton(`Capture ${type}`, handleAssessmentCapture, {
+      id: 'spn-assessment-btn',
+      position: 'bottom-right',
+    })
+    return
+  }
+
+  // Intake form page — show intake capture button
+  if (document.getElementById('spn-capture-btn')) return
   if (!hasIntakeForm()) return
 
   injectButton('Capture Intake', handleCaptureClick, {

@@ -24,6 +24,15 @@ export async function clearIntake(): Promise<void> {
   await chrome.storage.session.remove(INTAKE_KEY)
 }
 
+export async function mergeIntake(partial: Partial<IntakeData>): Promise<void> {
+  const existing = await getIntake()
+  if (existing) {
+    await saveIntake({ ...existing, ...partial })
+  } else {
+    await saveIntake({ ...({} as IntakeData), ...partial })
+  }
+}
+
 // ── Progress Note (session storage — PHI with TTL) ──
 
 export async function saveNote(note: ProgressNote): Promise<void> {

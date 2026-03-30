@@ -1,5 +1,22 @@
 // ── Intake Data (extracted from SimplePractice client profile / intake forms) ──
 
+export interface AssessmentItem {
+  number: number
+  question: string
+  response: string
+  score: number
+  maxScore: number
+}
+
+export interface AssessmentResult {
+  name: string // "GAD-7" or "PHQ-9"
+  totalScore: number
+  severity: string // e.g. "minimal or no anxiety"
+  items: AssessmentItem[]
+  difficulty: string // functional impairment question
+  capturedAt: string
+}
+
 export interface IntakeData {
   // Demographics
   fullName: string
@@ -64,6 +81,10 @@ export interface IntakeData {
   physicalSexualAbuseHistory: string
   domesticViolenceHistory: string
 
+  // Standardized assessments
+  gad7: AssessmentResult | null
+  phq9: AssessmentResult | null
+
   // Symptom checklist
   recentSymptoms: string
   additionalSymptoms: string
@@ -124,6 +145,8 @@ export const EMPTY_INTAKE: IntakeData = {
   occupation: '',
   physicalSexualAbuseHistory: '',
   domesticViolenceHistory: '',
+  gad7: null,
+  phq9: null,
   recentSymptoms: '',
   additionalSymptoms: '',
   additionalInfo: '',
