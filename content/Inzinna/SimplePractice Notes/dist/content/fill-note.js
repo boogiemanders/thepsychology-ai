@@ -294,11 +294,46 @@
     }
     return filled;
   }
-  function fillSymptomChecklistsFromIntake(intake) {
+  function fillDepressionFromPHQ9(phq9) {
+    let filled = 0;
+    const endorsed = phq9.items.filter((i) => i.score > 0);
+    if (endorsed.length === 0) {
+      if (checkCheckboxByLabel("multi-select-9", "Denies")) filled++;
+      return filled;
+    }
+    const phqToDepression = {
+      1: ["Loss of interest", "Loss of enjoyment"],
+      2: ["Feeling sad, empty, or down", "Hopelessness"],
+      3: ["Insomnia"],
+      // "sleeping too much" → Hypersomnia handled below
+      4: ["Loss of energy", "Fatigue"],
+      5: ["Loss of appetite (without weight loss)"],
+      // overeating handled below
+      6: ["Worthlessness"],
+      7: ["Difficulty concentrating"],
+      8: ["Social withdrawal, agitation"],
+      9: ["Recurrent suicidal ideation", "Recurrent thoughts about death/dying"]
+    };
+    for (const item of endorsed) {
+      const labels = phqToDepression[item.number];
+      if (!labels) continue;
+      for (const label of labels) {
+        if (checkCheckboxByLabel("multi-select-9", label)) filled++;
+      }
+      if (item.number === 3 && /too much|hypersomnia/i.test(item.response)) {
+        if (checkCheckboxByLabel("multi-select-9", "Hypersomnia")) filled++;
+      }
+      if (item.number === 5 && /overeat/i.test(item.response)) {
+        if (checkCheckboxByLabel("multi-select-9", "Increased appetite (without weight gain)")) filled++;
+      }
+    }
+    return filled;
+  }
+  function fillDepressionFromKeywords(intake) {
     let filled = 0;
     const symptoms = `${intake.recentSymptoms} ${intake.additionalSymptoms}`.toLowerCase();
     if (!symptoms.trim()) return 0;
-    const depressionMap = {
+    const map = {
       "crying": "Frequent crying",
       "sad": "Feeling sad, empty, or down",
       "energy": "Loss of energy",
@@ -316,12 +351,54 @@
       "appetite": "Loss of appetite (without weight loss)",
       "withdrawal": "Social withdrawal, agitation"
     };
-    for (const [keyword, label] of Object.entries(depressionMap)) {
+    for (const [keyword, label] of Object.entries(map)) {
       if (symptoms.includes(keyword)) {
         if (checkCheckboxByLabel("multi-select-9", label)) filled++;
       }
     }
-    const anxietyMap = {
+    return filled;
+  }
+  function fillAnxietyFromGAD7(gad7) {
+    let filled = 0;
+    const endorsed = gad7.items.filter((i) => i.score > 0);
+    if (endorsed.length === 0) {
+      if (checkCheckboxByLabel("multi-select-10", "Denies")) filled++;
+      return filled;
+    }
+    const gadToAnxiety = {
+      1: ["Feeling on edge or tense"],
+      2: ["Difficulty controlling worry, difficulty concentrating"],
+      3: ["Excessive worry"],
+      4: ["Feeling on edge or tense"],
+      5: ["Restlessness"],
+      6: ["Feeling on edge or tense"],
+      7: ["Excessive worry"]
+    };
+    const checked = /* @__PURE__ */ new Set();
+    for (const item of endorsed) {
+      const labels = gadToAnxiety[item.number];
+      if (!labels) continue;
+      for (const label of labels) {
+        if (checked.has(label)) continue;
+        if (checkCheckboxByLabel("multi-select-10", label)) {
+          filled++;
+          checked.add(label);
+        }
+      }
+    }
+    const sleepItem = gad7.items.find((i) => i.number === 4 || i.number === 5);
+    if (sleepItem && sleepItem.score > 0) {
+      if (!checked.has("Difficulty falling or staying asleep")) {
+        if (checkCheckboxByLabel("multi-select-10", "Difficulty falling or staying asleep")) filled++;
+      }
+    }
+    return filled;
+  }
+  function fillAnxietyFromKeywords(intake) {
+    let filled = 0;
+    const symptoms = `${intake.recentSymptoms} ${intake.additionalSymptoms}`.toLowerCase();
+    if (!symptoms.trim()) return 0;
+    const map = {
       "worry": "Excessive worry",
       "distract": "Distractibility",
       "sleep": "Difficulty falling or staying asleep",
@@ -329,10 +406,24 @@
       "edge": "Feeling on edge or tense",
       "tense": "Feeling on edge or tense"
     };
-    for (const [keyword, label] of Object.entries(anxietyMap)) {
+    for (const [keyword, label] of Object.entries(map)) {
       if (symptoms.includes(keyword)) {
         if (checkCheckboxByLabel("multi-select-10", label)) filled++;
       }
+    }
+    return filled;
+  }
+  function fillSymptomChecklistsFromIntake(intake) {
+    let filled = 0;
+    if (intake.phq9 && intake.phq9.items.length > 0) {
+      filled += fillDepressionFromPHQ9(intake.phq9);
+    } else {
+      filled += fillDepressionFromKeywords(intake);
+    }
+    if (intake.gad7 && intake.gad7.items.length > 0) {
+      filled += fillAnxietyFromGAD7(intake.gad7);
+    } else {
+      filled += fillAnxietyFromKeywords(intake);
     }
     if (intake.physicalSexualAbuseHistory) {
       const abuse = intake.physicalSexualAbuseHistory.toLowerCase();

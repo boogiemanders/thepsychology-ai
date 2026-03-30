@@ -20,7 +20,7 @@
  *   Treatment plan:   /clients/{id}/treatment_plans/{tpId}/edit
  */
 
-import { IntakeData } from '../lib/types'
+import { IntakeData, AssessmentResult } from '../lib/types'
 import { getIntake } from '../lib/storage'
 import {
   injectButton,
@@ -212,50 +212,153 @@ function fillICEFromIntake(intake: IntakeData): number {
 
 // ── Symptom Checklist Helpers ──
 
-function fillSymptomChecklistsFromIntake(intake: IntakeData): number {
+// PHQ-9 item → Depression checkbox mapping (multi-select-9)
+// Only checks boxes for items the patient endorsed (score > 0)
+function fillDepressionFromPHQ9(phq9: AssessmentResult): number {
+  let filled = 0
+  const endorsed = phq9.items.filter(i => i.score > 0)
+
+  if (endorsed.length === 0) {
+    if (checkCheckboxByLabel('multi-select-9', 'Denies')) filled++
+    return filled
+  }
+
+  // PHQ-9 item number → ICE depression checkbox labels
+  const phqToDepression: Record<number, string[]> = {
+    1: ['Loss of interest', 'Loss of enjoyment'],
+    2: ['Feeling sad, empty, or down', 'Hopelessness'],
+    3: ['Insomnia'],  // "sleeping too much" → Hypersomnia handled below
+    4: ['Loss of energy', 'Fatigue'],
+    5: ['Loss of appetite (without weight loss)'], // overeating handled below
+    6: ['Worthlessness'],
+    7: ['Difficulty concentrating'],
+    8: ['Social withdrawal, agitation'],
+    9: ['Recurrent suicidal ideation', 'Recurrent thoughts about death/dying'],
+  }
+
+  for (const item of endorsed) {
+    const labels = phqToDepression[item.number]
+    if (!labels) continue
+    for (const label of labels) {
+      if (checkCheckboxByLabel('multi-select-9', label)) filled++
+    }
+
+    // Special handling for item 3: check response text for hypersomnia
+    if (item.number === 3 && /too much|hypersomnia/i.test(item.response)) {
+      if (checkCheckboxByLabel('multi-select-9', 'Hypersomnia')) filled++
+    }
+    // Special handling for item 5: check for overeating
+    if (item.number === 5 && /overeat/i.test(item.response)) {
+      if (checkCheckboxByLabel('multi-select-9', 'Increased appetite (without weight gain)')) filled++
+    }
+  }
+
+  return filled
+}
+
+function fillDepressionFromKeywords(intake: IntakeData): number {
   let filled = 0
   const symptoms = `${intake.recentSymptoms} ${intake.additionalSymptoms}`.toLowerCase()
-
   if (!symptoms.trim()) return 0
 
-  // Depression (multi-select-9)
-  const depressionMap: Record<string, string> = {
-    'crying': 'Frequent crying',
-    'sad': 'Feeling sad, empty, or down',
-    'energy': 'Loss of energy',
-    'fatigue': 'Fatigue',
-    'interest': 'Loss of interest',
-    'enjoyment': 'Loss of enjoyment',
-    'hopeless': 'Hopelessness',
-    'helpless': 'Helplessness',
-    'worthless': 'Worthlessness',
-    'concentrat': 'Difficulty concentrating',
-    'suicid': 'Recurrent suicidal ideation',
-    'death': 'Recurrent thoughts about death/dying',
-    'insomnia': 'Insomnia',
-    'hypersomnia': 'Hypersomnia',
+  const map: Record<string, string> = {
+    'crying': 'Frequent crying', 'sad': 'Feeling sad, empty, or down',
+    'energy': 'Loss of energy', 'fatigue': 'Fatigue',
+    'interest': 'Loss of interest', 'enjoyment': 'Loss of enjoyment',
+    'hopeless': 'Hopelessness', 'helpless': 'Helplessness',
+    'worthless': 'Worthlessness', 'concentrat': 'Difficulty concentrating',
+    'suicid': 'Recurrent suicidal ideation', 'death': 'Recurrent thoughts about death/dying',
+    'insomnia': 'Insomnia', 'hypersomnia': 'Hypersomnia',
     'appetite': 'Loss of appetite (without weight loss)',
     'withdrawal': 'Social withdrawal, agitation',
   }
-  for (const [keyword, label] of Object.entries(depressionMap)) {
+  for (const [keyword, label] of Object.entries(map)) {
     if (symptoms.includes(keyword)) {
       if (checkCheckboxByLabel('multi-select-9', label)) filled++
     }
   }
+  return filled
+}
 
-  // Anxiety (multi-select-10)
-  const anxietyMap: Record<string, string> = {
-    'worry': 'Excessive worry',
-    'distract': 'Distractibility',
+// GAD-7 item → Anxiety checkbox mapping (multi-select-10)
+function fillAnxietyFromGAD7(gad7: AssessmentResult): number {
+  let filled = 0
+  const endorsed = gad7.items.filter(i => i.score > 0)
+
+  if (endorsed.length === 0) {
+    if (checkCheckboxByLabel('multi-select-10', 'Denies')) filled++
+    return filled
+  }
+
+  // GAD-7 item number → ICE anxiety checkbox labels
+  const gadToAnxiety: Record<number, string[]> = {
+    1: ['Feeling on edge or tense'],
+    2: ['Difficulty controlling worry, difficulty concentrating'],
+    3: ['Excessive worry'],
+    4: ['Feeling on edge or tense'],
+    5: ['Restlessness'],
+    6: ['Feeling on edge or tense'],
+    7: ['Excessive worry'],
+  }
+
+  const checked = new Set<string>()
+  for (const item of endorsed) {
+    const labels = gadToAnxiety[item.number]
+    if (!labels) continue
+    for (const label of labels) {
+      if (checked.has(label)) continue
+      if (checkCheckboxByLabel('multi-select-10', label)) {
+        filled++
+        checked.add(label)
+      }
+    }
+  }
+
+  // If sleep issues endorsed on GAD, also check sleep checkbox
+  const sleepItem = gad7.items.find(i => i.number === 4 || i.number === 5)
+  if (sleepItem && sleepItem.score > 0) {
+    if (!checked.has('Difficulty falling or staying asleep')) {
+      if (checkCheckboxByLabel('multi-select-10', 'Difficulty falling or staying asleep')) filled++
+    }
+  }
+
+  return filled
+}
+
+function fillAnxietyFromKeywords(intake: IntakeData): number {
+  let filled = 0
+  const symptoms = `${intake.recentSymptoms} ${intake.additionalSymptoms}`.toLowerCase()
+  if (!symptoms.trim()) return 0
+
+  const map: Record<string, string> = {
+    'worry': 'Excessive worry', 'distract': 'Distractibility',
     'sleep': 'Difficulty falling or staying asleep',
-    'restless': 'Restlessness',
-    'edge': 'Feeling on edge or tense',
+    'restless': 'Restlessness', 'edge': 'Feeling on edge or tense',
     'tense': 'Feeling on edge or tense',
   }
-  for (const [keyword, label] of Object.entries(anxietyMap)) {
+  for (const [keyword, label] of Object.entries(map)) {
     if (symptoms.includes(keyword)) {
       if (checkCheckboxByLabel('multi-select-10', label)) filled++
     }
+  }
+  return filled
+}
+
+function fillSymptomChecklistsFromIntake(intake: IntakeData): number {
+  let filled = 0
+
+  // ── Depression (multi-select-9) — use PHQ-9 if available ──
+  if (intake.phq9 && intake.phq9.items.length > 0) {
+    filled += fillDepressionFromPHQ9(intake.phq9)
+  } else {
+    filled += fillDepressionFromKeywords(intake)
+  }
+
+  // ── Anxiety (multi-select-10) — use GAD-7 if available ──
+  if (intake.gad7 && intake.gad7.items.length > 0) {
+    filled += fillAnxietyFromGAD7(intake.gad7)
+  } else {
+    filled += fillAnxietyFromKeywords(intake)
   }
 
   // Abuse (multi-select-20) — from intake trauma fields
