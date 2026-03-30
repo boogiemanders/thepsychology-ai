@@ -3,7 +3,7 @@
   "name": "SimplePractice Notes",
   "version": "1.0.0",
   "description": "HIPAA-compliant clinical notes: extract intake data, generate diagnostic impressions, record sessions, and auto-fill progress notes",
-  "permissions": ["storage", "activeTab", "alarms", "sidePanel", "scripting"],
+  "permissions": ["storage", "activeTab", "alarms", "sidePanel"],
   "host_permissions": [
     "https://*.simplepractice.com/*"
   ],

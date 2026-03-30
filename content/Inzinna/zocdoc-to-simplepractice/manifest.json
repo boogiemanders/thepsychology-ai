@@ -3,7 +3,7 @@
   "name": "ZocDoc to SimplePractice",
   "version": "1.0.0",
   "description": "Transfer client intake data from ZocDoc to SimplePractice and send VOB emails",
-  "permissions": ["storage", "activeTab", "alarms", "scripting"],
+  "permissions": ["storage", "activeTab", "alarms"],
   "host_permissions": [
     "https://*.zocdoc.com/*",
     "https://*.simplepractice.com/*",

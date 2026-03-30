@@ -536,5 +536,15 @@
   } else {
     setTimeout(injectFillButton, 500);
   }
+  chrome.runtime.onMessage.addListener((msg, _sender, sendResponse) => {
+    if (msg?.type === "toggle-floating-buttons") {
+      const btns = document.querySelectorAll(".spn-floating-btn, .zsp-floating-btn");
+      const anyVisible = Array.from(btns).some((b) => b.style.display !== "none");
+      btns.forEach((b) => {
+        b.style.display = anyVisible ? "none" : "";
+      });
+      sendResponse({ visible: !anyVisible });
+    }
+  });
 })();
 //# sourceMappingURL=fill-note.js.map

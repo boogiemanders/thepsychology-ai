@@ -243,20 +243,11 @@ ${prefs.vobSignature}`;
   toggleBtn.addEventListener("click", async () => {
     const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
     if (!tab?.id) return;
-    const results = await chrome.scripting.executeScript({
-      target: { tabId: tab.id },
-      func: () => {
-        const btns = document.querySelectorAll(".spn-floating-btn, .zsp-floating-btn");
-        const anyVisible = Array.from(btns).some((b) => b.style.display !== "none");
-        btns.forEach((b) => {
-          b.style.display = anyVisible ? "none" : "";
-        });
-        return !anyVisible;
-      }
+    chrome.tabs.sendMessage(tab.id, { type: "toggle-floating-buttons" }, (response) => {
+      const nowVisible = response?.visible ?? true;
+      toggleBtn.textContent = nowVisible ? "\u{1F441}" : "\u{1F6AB}";
+      toggleBtn.title = nowVisible ? "Hide page buttons" : "Show page buttons";
     });
-    const nowVisible = results?.[0]?.result ?? true;
-    toggleBtn.textContent = nowVisible ? "\u{1F441}" : "\u{1F6AB}";
-    toggleBtn.title = nowVisible ? "Hide page buttons" : "Show page buttons";
   });
   document.getElementById("btn-settings")?.addEventListener("click", async () => {
     await populateSettingsForm();

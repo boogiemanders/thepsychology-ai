@@ -1044,3 +1044,13 @@ function init(): void {
 }
 
 init()
+
+// Listen for toggle-buttons message from popup
+chrome.runtime.onMessage.addListener((msg, _sender, sendResponse) => {
+  if (msg?.type === 'toggle-floating-buttons') {
+    const btns = document.querySelectorAll('.spn-floating-btn, .zsp-floating-btn') as NodeListOf<HTMLElement>
+    const anyVisible = Array.from(btns).some(b => b.style.display !== 'none')
+    btns.forEach(b => { b.style.display = anyVisible ? 'none' : '' })
+    sendResponse({ visible: !anyVisible })
+  }
+})
