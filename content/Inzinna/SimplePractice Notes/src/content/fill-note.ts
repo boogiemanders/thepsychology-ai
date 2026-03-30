@@ -80,6 +80,18 @@ function fillICEFromIntake(intake: IntakeData): number {
     if (fillTextLikeField(dateInput, intake.formDate)) filled++
   }
 
+  // Beginning / ending time from appointment header
+  const timeSpan = document.querySelector('.start-end-time')
+  if (timeSpan) {
+    const timeParts = timeSpan.textContent?.trim().split(/\s*-\s*/)
+    if (timeParts && timeParts.length === 2) {
+      const startInput = document.querySelector('#short-answer-3') as HTMLInputElement | null
+      const endInput = document.querySelector('#short-answer-4') as HTMLInputElement | null
+      if (fillTextLikeField(startInput, timeParts[0].trim())) filled++
+      if (fillTextLikeField(endInput, timeParts[1].trim())) filled++
+    }
+  }
+
   // Present at session — always check "Patient"
   if (checkCheckboxByLabel('multi-select-5', 'Patient')) filled++
 

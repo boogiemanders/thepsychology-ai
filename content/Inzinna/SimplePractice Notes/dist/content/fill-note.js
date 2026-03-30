@@ -221,6 +221,16 @@
     if (dateInput && intake.formDate) {
       if (fillTextLikeField(dateInput, intake.formDate)) filled++;
     }
+    const timeSpan = document.querySelector(".start-end-time");
+    if (timeSpan) {
+      const timeParts = timeSpan.textContent?.trim().split(/\s*-\s*/);
+      if (timeParts && timeParts.length === 2) {
+        const startInput = document.querySelector("#short-answer-3");
+        const endInput = document.querySelector("#short-answer-4");
+        if (fillTextLikeField(startInput, timeParts[0].trim())) filled++;
+        if (fillTextLikeField(endInput, timeParts[1].trim())) filled++;
+      }
+    }
     if (checkCheckboxByLabel("multi-select-5", "Patient")) filled++;
     if (fillProseMirrorByLabel("free-text-6", intake.chiefComplaint)) filled++;
     if (fillProseMirrorByLabel("free-text-7", intake.historyOfPresentIllness || intake.presentingProblems)) filled++;
