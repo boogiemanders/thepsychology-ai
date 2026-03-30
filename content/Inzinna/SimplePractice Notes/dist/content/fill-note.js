@@ -286,6 +286,14 @@
     }
     const familyNotes = [intake.familyPsychiatricHistory, intake.familyMentalEmotionalHistory].filter(Boolean).join("\n");
     if (fillProseMirrorByLabel("free-text-60", familyNotes)) filled++;
+    if (intake.phq9) {
+      const phqText = `PHQ-9: ${intake.phq9.totalScore}/27 \u2014 ${intake.phq9.severity}. Functional difficulty: ${intake.phq9.difficulty || "N/A"}`;
+      if (fillProseMirrorByLabel("free-text-90", phqText)) filled++;
+    }
+    if (intake.gad7) {
+      const gadText = `GAD-7: ${intake.gad7.totalScore}/21 \u2014 ${intake.gad7.severity}. Functional difficulty: ${intake.gad7.difficulty || "N/A"}`;
+      if (fillProseMirrorByLabel("free-text-91", gadText)) filled++;
+    }
     if (intake.suicidalIdeation) {
       if (selectDropdownById("dropdown-86", mapSIToDropdown(intake.suicidalIdeation))) filled++;
     }

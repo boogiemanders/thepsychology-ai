@@ -199,6 +199,16 @@ function fillICEFromIntake(intake: IntakeData): number {
   // These are session observations, not intake data.
   // Fields 64-111 will be filled by future phases (audio transcription, live interview).
 
+  // ── PHQ-9 / GAD-7 scores ──
+  if (intake.phq9) {
+    const phqText = `PHQ-9: ${intake.phq9.totalScore}/27 — ${intake.phq9.severity}. Functional difficulty: ${intake.phq9.difficulty || 'N/A'}`
+    if (fillProseMirrorByLabel('free-text-90', phqText)) filled++
+  }
+  if (intake.gad7) {
+    const gadText = `GAD-7: ${intake.gad7.totalScore}/21 — ${intake.gad7.severity}. Functional difficulty: ${intake.gad7.difficulty || 'N/A'}`
+    if (fillProseMirrorByLabel('free-text-91', gadText)) filled++
+  }
+
   // ── SI/HI dropdowns — from intake if available ──
   if (intake.suicidalIdeation) {
     if (selectDropdownById('dropdown-86', mapSIToDropdown(intake.suicidalIdeation))) filled++
