@@ -101,17 +101,22 @@ async function render(): Promise<void> {
 }
 
 // Toggle floating buttons on page
-document.getElementById('btn-toggle-btns')?.addEventListener('click', async () => {
+const toggleBtn = document.getElementById('btn-toggle-btns')!
+toggleBtn.addEventListener('click', async () => {
   const [tab] = await chrome.tabs.query({ active: true, currentWindow: true })
   if (!tab?.id) return
-  chrome.scripting.executeScript({
+  const results = await chrome.scripting.executeScript({
     target: { tabId: tab.id },
     func: () => {
       const btns = document.querySelectorAll('.spn-floating-btn, .zsp-floating-btn') as NodeListOf<HTMLElement>
       const anyVisible = Array.from(btns).some(b => b.style.display !== 'none')
       btns.forEach(b => { b.style.display = anyVisible ? 'none' : '' })
+      return !anyVisible
     },
   })
+  const nowVisible = results?.[0]?.result ?? true
+  toggleBtn.textContent = nowVisible ? '\u{1F441}' : '\u{1F6AB}'
+  toggleBtn.title = nowVisible ? 'Hide page buttons' : 'Show page buttons'
 })
 
 // Settings toggle

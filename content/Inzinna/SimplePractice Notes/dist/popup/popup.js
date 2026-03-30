@@ -229,10 +229,11 @@
       notePreview.style.display = "none";
     }
   }
-  document.getElementById("btn-toggle-btns")?.addEventListener("click", async () => {
+  var toggleBtn = document.getElementById("btn-toggle-btns");
+  toggleBtn.addEventListener("click", async () => {
     const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
     if (!tab?.id) return;
-    chrome.scripting.executeScript({
+    const results = await chrome.scripting.executeScript({
       target: { tabId: tab.id },
       func: () => {
         const btns = document.querySelectorAll(".spn-floating-btn, .zsp-floating-btn");
@@ -240,8 +241,12 @@
         btns.forEach((b) => {
           b.style.display = anyVisible ? "none" : "";
         });
+        return !anyVisible;
       }
     });
+    const nowVisible = results?.[0]?.result ?? true;
+    toggleBtn.textContent = nowVisible ? "\u{1F441}" : "\u{1F6AB}";
+    toggleBtn.title = nowVisible ? "Hide page buttons" : "Show page buttons";
   });
   document.getElementById("btn-settings")?.addEventListener("click", async () => {
     await populateSettingsForm();
