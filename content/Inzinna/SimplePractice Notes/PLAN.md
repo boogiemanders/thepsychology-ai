@@ -551,6 +551,105 @@ Aftercare plan:
 
 ---
 
+## Module 20: Deliberate Practice / Session Review Mode
+
+**What:** A structured post-session review workflow that closes the loop between session recording and actual skill development. Based on the 6-component DP framework from your research citations (Chow 2015, Westra 2021, Diamond 2025) — not just playback, but structured review against benchmarks.
+
+**The 6 DP components this module satisfies:**
+1. Direct observation of performance → session recording playback with transcript
+2. Concrete feedback → self-rating + auto-flagged moments
+3. Specific learning goals defined in advance → pre-session goal set, reviewed post-session
+4. Repeated behavioral rehearsal → drill on flagged segments
+5. Ongoing assessment of performance → skill ratings tracked over time
+6. Focus on expert performance benchmarks → published MI/CBT adherence scales
+
+**How it works:**
+- After session ends, clinician enters Review Mode in the side panel
+- Transcript is displayed with audio scrubbing — click any line to jump to that moment
+- **Auto-flagged moments:** Local LLM flags segments worth reviewing (long clinician monologues, missed reflection opportunities, strong empathic responses, topic avoidance)
+- **Skill rating:** Clinician rates their performance on 3–5 dimensions per session (e.g., empathic attunement, MI-consistent responding, pacing, staying on treatment goals) — simple 1–5 scale
+- **Pre-session learning goal:** Set one specific skill focus before each session ("I want to use more open-ended questions"). Reviewed at the end: did the transcript show improvement?
+- **Skill trend charts:** Ratings tracked across sessions — clinician sees their own trajectory over weeks/months
+- **Supervision flag integration:** Flag specific transcript moments to bring to supervision (links to Module — supervision case flagging if added)
+
+**Benchmarks bundled:**
+- Motivational Interviewing Treatment Integrity (MITI) scale items
+- Cognitive Therapy Scale (CTS-R) items for CBT
+- General therapeutic skills (empathy, collaboration, goal focus)
+
+**HIPAA note:** Recordings never leave the device. Review Mode is local-only.
+
+---
+
+## Module 21: Crisis Quick-Access Panel
+
+**What:** A persistent, one-click emergency resource panel that surfaces automatically when C-SSRS flags high risk, or can be opened manually at any time. In an active crisis the clinician should never be searching.
+
+**Contents (pre-populated from patient data):**
+```
+┌─────────────────────────────────────────────┐
+│  CRISIS RESOURCES — [Patient Name]          │
+├─────────────────────────────────────────────┤
+│  Emergency Contact                          │
+│  [Name] ([Relationship]) — [Phone]          │
+│  [Pulled from intake automatically]         │
+├─────────────────────────────────────────────┤
+│  Patient's Safety Plan                      │
+│  [Link to Module 13 safety plan]            │
+│  Last updated: [date]                       │
+├─────────────────────────────────────────────┤
+│  Crisis Lines                               │
+│  988 Suicide & Crisis Lifeline              │
+│  Crisis Text Line: Text HOME to 741741      │
+│  Local ER: [configurable by clinician]      │
+├─────────────────────────────────────────────┤
+│  Mobile Crisis Teams                        │
+│  [Clinician-configured local resources]     │
+├─────────────────────────────────────────────┤
+│  Document This Interaction →                │
+└─────────────────────────────────────────────┘
+```
+
+**Approach:**
+- Auto-triggers as an overlay when C-SSRS result = High risk
+- Manually accessible via a persistent "Crisis" button always visible in the side panel header
+- Emergency contact populated automatically from intake data (Module 1)
+- Safety plan link opens the patient's current plan (Module 13) — shows last updated date
+- Local resources (ER, mobile crisis team) configured once by the clinician in settings, saved in localStorage
+- "Document This Interaction" button opens a quick crisis contact note form — timestamps automatically, logs to session record
+- Phone numbers shown as `tel:` links — one tap to call on a phone or via Bluetooth
+
+---
+
+## Module 22: Outcome Benchmarking
+
+**What:** A local, de-identified aggregate view comparing Inzinna's outcome data against published benchmarks for her modality. Clinician-level insight separate from individual patient tracking.
+
+**What it tracks (aggregate, never patient-identifiable):**
+- Average PHQ-9 change per treatment episode (intake → termination)
+- Average GAD-7 change per treatment episode
+- Reliable Change Index (RCI) — % of patients showing reliable improvement vs. deterioration vs. no change (Jacobson & Truax method)
+- Average session count to reliable improvement
+- Dropout rate (% of patients who terminated before planned)
+- No-show rate
+
+**Benchmarks shown alongside (from published literature):**
+- Expected PHQ-9 reduction for CBT/general outpatient therapy (~5–6 points, Delgadillo 2022)
+- Reliable improvement rates (~50% of patients in routine care)
+- Average treatment length benchmarks by diagnosis
+
+**Approach:**
+- All calculations done locally from stored session data — no PHI in the aggregate view
+- Dashboard shown in a separate "Practice Outcomes" panel (not tied to any specific patient)
+- Updated automatically after each termination summary is generated
+- Visualized as bar charts, histograms, and a scatter plot (sessions vs. outcome)
+- "Compared to benchmark" delta shown in green/yellow/red
+- Clinician can filter by diagnosis, date range, or intervention type
+
+**Research basis:** Directly implements the progress feedback approach from Delgadillo et al. (2022) in your Research Foundation — "progress feedback narrowed the gap between more and less effective therapists by ~18.2%."
+
+---
+
 ## HIPAA Compliance Checklist
 
 This checklist must be fully cleared before using the extension with real patients.
@@ -692,6 +791,9 @@ This checklist must be fully cleared before using the extension with real patien
 | 15 | Cultural Formulation (CFI) | Phase 1 | DSM-5 CFI domains, feeds into formulation + note |
 | 16 | Prescriber/PCP Communication Draft | Phases 1, 7 | Auto-drafted coordination-of-care letters |
 | 17 | Termination Summary Generator | Phases 3, 7-16 | Full treatment episode summary at discharge |
+| 18 | Deliberate Practice / Session Review | Phases 4-5 | Structured post-session review against DP benchmarks |
+| 19 | Crisis Quick-Access Panel | Phases 1, 7 | Auto-triggered on high C-SSRS; one-click emergency resources |
+| 20 | Outcome Benchmarking | Phase 17 | Aggregate practice outcomes vs. published benchmarks |
 
 ---
 
