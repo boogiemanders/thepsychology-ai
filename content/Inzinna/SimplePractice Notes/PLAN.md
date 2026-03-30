@@ -853,8 +853,13 @@ Evidence supporting each module, drawn from OpenEvidence systematic literature r
 - Skill degradation: reliance on AI tools may have unanticipated adverse consequences including diminished human clinician skill over time. *(Perlis, 2026 — JAMA Psychiatry)*
 
 **The one strong positive RCT for AI-assisted therapy support:**
-- An AI platform that provided therapists with feedback on evidence-based practices, session transcription, and automated progress notes led to **67% more session attendance** and superior depression/anxiety outcomes vs. treatment-as-usual. Notes were submitted 55 hours earlier on average. *(Sadeh-Sharvit et al., 2023 — Journal of Medical Internet Research)*
+- An AI platform that provided therapists with feedback on evidence-based practices, session transcription, and automated progress notes led to **67% more session attendance** and superior depression/anxiety outcomes vs. treatment-as-usual. Notes were submitted **55 hours earlier on average**. *(Sadeh-Sharvit et al., 2023 — Journal of Medical Internet Research)*
 - This is the model closest to what the SP Notes tool does: AI supports the clinician's workflow without replacing clinical judgment.
+
+**Evidence quality note — how these time-saving figures were measured:**
+- **55 hours earlier (Sadeh-Sharvit 2023):** Objective, hard measurement — actual note submission timestamps pulled from EHR system logs, compared between AI-assisted group and treatment-as-usual control in an RCT. Not self-report. This is the figure to cite when pitching this tool.
+- **2–6 minutes per appointment (Pearlman 2025; Liu 2024):** Soft measurement — clinician self-report survey. ~50% of clinicians *perceived* decreased documentation time. Not a controlled timestamp comparison. Directionally useful but less rigorous than the Sadeh-Sharvit figure.
+- **Bottom line for this tool:** The 55-hour stat is the strongest evidence. For a therapist doing 5 progress notes/day, that's the difference between same-day charting and weekend catch-up.
 
 **Clinical standards:**
 - APA Assessment Guidelines require clinician decision-making authority — AI assists, clinician decides. *(Campbell et al., 2020)*
@@ -1005,3 +1010,77 @@ A 3-tier AI competency framework for clinicians *(Cao et al., 2026 — JMIR)*:
 4. **Consent workflow:** ✅ Decided — one-time per patient via existing SP consent form; no recording before consent confirmed; recording is never used to capture consent itself.
 5. **Data transfer method:** ✅ Decided — DOM-based (no SP API needed for MVP); same approach as ZocDoc extension.
 6. **SP intake template fields:** To be confirmed via Chrome DevTools inspection of a live SP intake page.
+
+---
+
+## Platform Decision: Chrome Extension vs. Desktop App
+
+**Current state:** Chrome extension (Manifest V3). Good for MVP.
+
+**The case for staying as a Chrome extension:**
+- Already built this way — no rewrite needed
+- DOM access to SimplePractice is the core mechanic — extensions do this natively
+- No app store approval process
+- Fully local; no server costs; no BAA complexity
+- SimplePractice is desktop-browser-first — clinicians are already in Chrome
+
+**The case for migrating to an Electron desktop app (later):**
+- Local server management (Whisper, Ollama) is awkward to set up manually — an Electron app can install, start, and monitor the local server automatically
+- Native system audio access — cleaner than browser MediaRecorder for recording
+- Background operation — runs between sessions without a browser tab open
+- Auto-updates via Squirrel or electron-updater — no manual reinstall
+- Can be distributed via direct download (no Chrome Web Store review, which involves Google seeing your extension code)
+
+**Recommendation:**
+- **Phase 1–3 (MVP):** Stay as a Chrome extension. Faster to build, already started, no new infrastructure.
+- **Phase 4+ (audio + local LLM):** Consider an Electron "companion app" that manages the local server, with the Chrome extension communicating to it via `localhost`. This hybrid avoids a full rewrite while gaining the desktop app benefits.
+- **If/when selling at scale:** Full Electron app with extension bundled, distributed via direct download + auto-update.
+
+---
+
+## Business: HIPAA Compliance Verification & Funding
+
+### What HIPAA compliance actually requires (no official certification exists)
+
+The US government does not issue HIPAA certifications. HHS has never created one. What the market recognizes instead:
+
+| Option | Cost | What it gets you | When to pursue |
+|--------|------|-----------------|----------------|
+| Self-attestation + documented policies | ~$0–2K (attorney review) | Legally sufficient for private practice use | Now / MVP |
+| Third-party HIPAA risk assessment | $5–15K | Formal audit report from a compliance firm (Coalfire, Schellman, etc.) | Before selling to group practices |
+| SOC 2 Type II with HIPAA criteria | $20–50K + 6–12 months | Gold standard for health tech SaaS | Before selling to DSOs, health systems |
+| HITRUST CSF | $50–150K | Enterprise gold standard | If selling to hospitals or large health networks |
+
+**Practical path for this tool:**
+1. **Launch:** Self-attestation. Document your safeguards (all fully local, no PHI leaves device, TTL auto-delete, etc.). Have a healthcare attorney review consent language (~$1–3K). This is legally sufficient for a solo/group practice tool.
+2. **First 10–20 paying customers:** Revenue funds the next step.
+3. **Scaling:** Third-party HIPAA risk assessment ($5–15K). Gives you a report you can show to buyers.
+4. **Enterprise sales:** SOC 2 Type II if needed.
+
+### How to fund the $5–150K without upfront capital
+
+**Revenue first (most realistic):**
+- Launch with self-attestation to a small cohort of therapists (5–10) at a founding-member discount ($49–79/mo)
+- $500–800/mo MRR covers attorney fees within 2–3 months
+- $5K MRR (25–30 users) funds a third-party risk assessment
+
+**Grants (free money, slow):**
+- **NIH SBIR Phase I** — up to $300K for health tech innovation. Competitive but available. Relevant program: NIMH (mental health tools), AHRQ (clinical workflow/safety). Application takes 3–6 months.
+- **AHRQ Digital Healthcare Research funding** — specifically for tools that improve clinical workflow and patient safety
+- **NY state:** Empire State Development grants, NYC SBDC consulting (free) to identify matching programs
+- **APA Foundation / mental health nonprofit grants** — smaller ($10–50K) but faster
+
+**Angel / early investors:**
+- Health tech angels familiar with HIPAA are common in NYC
+- The research foundation in this plan + a working MVP is a strong pitch
+- A solo therapist with a working tool, real usage data, and 48 research citations is a credible founder story
+
+### Pricing if fully built
+
+| Tier | Price | Target |
+|------|-------|--------|
+| Solo Practice | $149–199/mo | Private practice therapists |
+| Group Practice | $99/clinician/mo | Multi-clinician practices, 5+ seats |
+| Enterprise | Custom ($500–2K/mo per location) | DSOs, health systems, training programs |
+
+Comparable tools (Freed $99, Heidi $100, Nabla $119) do notes only. This tool does notes + C-SSRS + MSE + PHQ/GAD tracking + safety plans + deliberate practice + outcome benchmarking. Premium pricing is justified. At $179/mo, a therapist recoups cost in less than one 50-minute session.
