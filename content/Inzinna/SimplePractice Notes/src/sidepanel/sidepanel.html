@@ -27,53 +27,104 @@
         <div id="patient-meta" class="patient-meta"></div>
       </section>
 
-      <section class="card">
-        <div class="section-header">
-          <h2>Screening Scores</h2>
-        </div>
-        <div id="score-grid" class="score-grid"></div>
+      <div class="panel-tabs">
+        <button id="tab-soap" class="tab active" data-panel="soap">SOAP Draft</button>
+        <button id="tab-diagnostics" class="tab" data-panel="diagnostics">Diagnostics</button>
+      </div>
+
+      <section id="soap-panel" class="panel-section">
+        <section class="card">
+          <div class="action-row">
+            <button id="btn-generate-soap" class="button primary">Regenerate SOAP</button>
+            <button id="btn-save-soap" class="button secondary">Save Draft</button>
+            <button id="btn-fill-soap" class="button secondary">Fill Note</button>
+          </div>
+          <div id="soap-status" class="summary-status"></div>
+        </section>
+
+        <section class="card">
+          <div class="section-header">
+            <h2>SOAP Sections</h2>
+          </div>
+          <div class="soap-fields">
+            <label class="soap-label" for="soap-subjective">Subjective (S)</label>
+            <textarea id="soap-subjective" class="soap-textarea"></textarea>
+
+            <label class="soap-label" for="soap-objective">Objective (O)</label>
+            <textarea id="soap-objective" class="soap-textarea"></textarea>
+
+            <label class="soap-label" for="soap-assessment">Assessment (A)</label>
+            <textarea id="soap-assessment" class="soap-textarea"></textarea>
+
+            <label class="soap-label" for="soap-plan">Plan (P)</label>
+            <textarea id="soap-plan" class="soap-textarea"></textarea>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="section-header">
+            <h2>Treatment Plan Reference</h2>
+          </div>
+          <div id="soap-treatment-plan" class="reference-block"></div>
+        </section>
+
+        <section class="card">
+          <div class="section-header">
+            <h2>Session Notes Reference</h2>
+          </div>
+          <div id="soap-session-notes" class="reference-block"></div>
+        </section>
       </section>
 
-      <section class="card">
-        <div class="section-header">
-          <h2>Pinned Review Tabs</h2>
-        </div>
-        <div id="pinned-tabs" class="pinned-tabs"></div>
-      </section>
+      <section id="diagnostics-panel" class="panel-section" hidden>
+        <section class="card">
+          <div class="section-header">
+            <h2>Screening Scores</h2>
+          </div>
+          <div id="score-grid" class="score-grid"></div>
+        </section>
 
-      <section class="card">
-        <div class="section-header">
-          <h2>Diagnoses</h2>
-        </div>
-        <div class="add-row">
-          <select id="add-diagnosis-select" class="select"></select>
-          <button id="btn-add-diagnosis" class="button secondary">Add Diagnosis</button>
-        </div>
-        <div id="suggestion-list" class="suggestion-list"></div>
-      </section>
+        <section class="card">
+          <div class="section-header">
+            <h2>Pinned Review Tabs</h2>
+          </div>
+          <div id="pinned-tabs" class="pinned-tabs"></div>
+        </section>
 
-      <section class="card">
-        <div class="section-header">
-          <h2>Active Checklist</h2>
-        </div>
-        <div id="active-review" class="active-review"></div>
-      </section>
+        <section class="card">
+          <div class="section-header">
+            <h2>Diagnoses</h2>
+          </div>
+          <div class="add-row">
+            <select id="add-diagnosis-select" class="select"></select>
+            <button id="btn-add-diagnosis" class="button secondary">Add Diagnosis</button>
+          </div>
+          <div id="suggestion-list" class="suggestion-list"></div>
+        </section>
 
-      <section class="card">
-        <div class="action-row">
-          <button id="btn-generate-summary" class="button primary">Generate Diagnostic Summary</button>
-          <button id="btn-write-note" class="button secondary">Write to Note Draft</button>
-        </div>
-        <div id="summary-status" class="summary-status"></div>
-        <div id="generated-summary" class="generated-summary"></div>
-      </section>
+        <section class="card">
+          <div class="section-header">
+            <h2>Active Checklist</h2>
+          </div>
+          <div id="active-review" class="active-review"></div>
+        </section>
 
-      <section class="card">
-        <div class="section-header">
-          <h2>Formulation + Plan Support</h2>
-        </div>
-        <div id="guidance-status" class="summary-status"></div>
-        <div id="knowledge-guidance" class="knowledge-guidance"></div>
+        <section class="card">
+          <div class="action-row">
+            <button id="btn-generate-summary" class="button primary">Generate Diagnostic Summary</button>
+            <button id="btn-write-note" class="button secondary">Write to Note Draft</button>
+          </div>
+          <div id="summary-status" class="summary-status"></div>
+          <div id="generated-summary" class="generated-summary"></div>
+        </section>
+
+        <section class="card">
+          <div class="section-header">
+            <h2>Formulation + Plan Support</h2>
+          </div>
+          <div id="guidance-status" class="summary-status"></div>
+          <div id="knowledge-guidance" class="knowledge-guidance"></div>
+        </section>
       </section>
     </main>
   </div>

@@ -10,13 +10,19 @@ import {
 } from '../lib/diagnostic-engine'
 import { buildClinicalGuidance, ClinicalGuidance } from '../lib/clinical-guidance'
 import { buildDraftNote } from '../lib/note-draft'
+import { buildSoapDraft } from '../lib/soap-builder'
 import {
   getDiagnosticWorkspace,
   getIntake,
   getNote,
   getPreferences,
+  getSessionNotes,
+  getSoapDraft,
+  getTranscript,
+  getTreatmentPlan,
   saveDiagnosticWorkspace,
   saveNote,
+  saveSoapDraft,
 } from '../lib/storage'
 import {
   CriterionEvaluation,
@@ -25,6 +31,8 @@ import {
   EMPTY_DIAGNOSTIC_WORKSPACE,
   IntakeData,
   ProgressNote,
+  SoapDraft,
+  TreatmentPlanData,
 } from '../lib/types'
 
 function formatDate(iso: string): string {
@@ -39,6 +47,47 @@ function formatDate(iso: string): string {
   })
 }
 
+let activePanel: 'soap' | 'diagnostics' = 'soap'
+
+async function getActiveTab(): Promise<chrome.tabs.Tab | null> {
+  const [tab] = await chrome.tabs.query({ active: true, currentWindow: true })
+  return tab ?? null
+}
+
+async function getActiveTabId(): Promise<number | null> {
+  const tab = await getActiveTab()
+  return tab?.id ?? null
+}
+
+function sendTabMessage<T>(tabId: number, message: object): Promise<T | null> {
+  return new Promise((resolve) => {
+    chrome.tabs.sendMessage(tabId, message, (response) => {
+      if (chrome.runtime.lastError) {
+        resolve(null)
+        return
+      }
+      resolve((response as T | undefined) ?? null)
+    })
+  })
+}
+
+async function detectApptContext(): Promise<{ isAppt: boolean; apptId: string }> {
+  const tab = await getActiveTab()
+  if (!tab?.url) return { isAppt: false, apptId: '' }
+
+  try {
+    const url = new URL(tab.url)
+    const videoMatch = url.pathname.match(/\/appt-([a-f0-9]+)\/room/)
+    if (videoMatch) return { isAppt: true, apptId: videoMatch[1] }
+    const apptMatch = url.pathname.match(/\/appointments\/(\d+)/)
+    if (apptMatch) return { isAppt: true, apptId: apptMatch[1] }
+  } catch {
+    // Ignore malformed tab URLs.
+  }
+
+  return { isAppt: false, apptId: '' }
+}
+
 function escapeHtml(value: string): string {
   return value
     .replaceAll('&', '&amp;')
@@ -46,6 +95,101 @@ function escapeHtml(value: string): string {
     .replaceAll('>', '&gt;')
     .replaceAll('"', '&quot;')
     .replaceAll("'", '&#39;')
+}
+
+function firstNonEmpty(...values: Array<string | null | undefined>): string {
+  for (const value of values) {
+    const trimmed = value?.trim()
+    if (trimmed) return trimmed
+  }
+  return ''
+}
+
+function buildTreatmentPlanReference(plan: TreatmentPlanData | null): string {
+  if (!plan) {
+    return 'No treatment plan captured yet. Open the client treatment plan page and click "Capture Treatment Plan" first.'
+  }
+
+  const sections: string[] = []
+
+  if (plan.diagnoses.length) {
+    sections.push(`Dx: ${plan.diagnoses.map((entry) => `${entry.description}${entry.code ? ` (${entry.code})` : ''}`).join(', ')}`)
+  }
+  if (plan.presentingProblem) {
+    sections.push(`Presenting problem: ${plan.presentingProblem}`)
+  }
+  if (plan.goals.length) {
+    sections.push(plan.goals.map((goal) => {
+      const objectives = goal.objectives.length
+        ? `\n${goal.objectives.map((objective) => `  - ${objective.id}: ${objective.objective}`).join('\n')}`
+        : ''
+      return `Goal ${goal.goalNumber}: ${goal.goal}${objectives}`
+    }).join('\n\n'))
+  }
+  if (plan.interventions.length) {
+    sections.push(`Interventions: ${plan.interventions.join(', ')}`)
+  }
+  if (plan.treatmentFrequency) {
+    sections.push(`Frequency: ${plan.treatmentFrequency}`)
+  }
+
+  return sections.join('\n\n')
+}
+
+function buildSessionNotesReference(notes: string): string {
+  return notes.trim() || 'No session notes saved for this appointment yet.'
+}
+
+function setSoapTextareaValue(id: string, value: string): void {
+  const el = document.getElementById(id) as HTMLTextAreaElement | null
+  if (el) el.value = value
+}
+
+function readSoapDraftFromFields(existing: SoapDraft | null): SoapDraft {
+  const now = new Date().toISOString()
+  return {
+    ...(existing ?? {
+      apptId: '',
+      clientName: '',
+      sessionDate: '',
+      cptCode: '90837',
+      subjective: '',
+      objective: '',
+      assessment: '',
+      plan: '',
+      sessionNotes: '',
+      transcript: '',
+      treatmentPlanId: '',
+      generatedAt: now,
+      editedAt: now,
+      status: 'draft' as const,
+    }),
+    subjective: (document.getElementById('soap-subjective') as HTMLTextAreaElement | null)?.value.trim() ?? '',
+    objective: (document.getElementById('soap-objective') as HTMLTextAreaElement | null)?.value.trim() ?? '',
+    assessment: (document.getElementById('soap-assessment') as HTMLTextAreaElement | null)?.value.trim() ?? '',
+    plan: (document.getElementById('soap-plan') as HTMLTextAreaElement | null)?.value.trim() ?? '',
+    editedAt: now,
+    status: 'draft',
+  }
+}
+
+function setSoapStatus(message: string): void {
+  const el = document.getElementById('soap-status')
+  if (el) el.textContent = message
+}
+
+function switchPanel(panel: 'soap' | 'diagnostics'): void {
+  activePanel = panel
+
+  const soapPanel = document.getElementById('soap-panel')
+  const diagnosticsPanel = document.getElementById('diagnostics-panel')
+  const soapTab = document.getElementById('tab-soap')
+  const diagnosticsTab = document.getElementById('tab-diagnostics')
+
+  if (soapPanel) soapPanel.hidden = panel !== 'soap'
+  if (diagnosticsPanel) diagnosticsPanel.hidden = panel !== 'diagnostics'
+  soapTab?.classList.toggle('active', panel === 'soap')
+  diagnosticsTab?.classList.toggle('active', panel === 'diagnostics')
 }
 
 function statusLabel(status: CriterionMatchStatus): string {
@@ -523,14 +667,103 @@ async function generateSummary(writeToNote: boolean): Promise<void> {
   await render()
 }
 
+async function regenerateSoapDraftFromSavedNotes(): Promise<void> {
+  const apptCtx = await detectApptContext()
+  if (!apptCtx.isAppt) {
+    setSoapStatus('Open an appointment page first.')
+    return
+  }
+
+  const treatmentPlan = await getTreatmentPlan()
+  if (!treatmentPlan) {
+    setSoapStatus('Capture a treatment plan first on the client treatment plan page.')
+    return
+  }
+
+  const sessionNotes = (await getSessionNotes(apptCtx.apptId))?.notes ?? ''
+  if (!sessionNotes.trim()) {
+    setSoapStatus('Save session notes first from the popup or video room notes panel.')
+    return
+  }
+
+  const intake = await getIntake()
+  const note = await getNote()
+  const workspace = await getDiagnosticWorkspace()
+  const transcript = await getTranscript(apptCtx.apptId)
+  const prefs = await getPreferences()
+  const diagnosticImpressions = workspace?.finalizedImpressions?.length
+    ? workspace.finalizedImpressions
+    : (note?.diagnosticImpressions ?? [])
+
+  const draft = buildSoapDraft(
+    sessionNotes,
+    transcript,
+    treatmentPlan,
+    intake,
+    diagnosticImpressions,
+    prefs,
+    { apptId: apptCtx.apptId }
+  )
+
+  await saveSoapDraft(draft)
+  activePanel = 'soap'
+  setSoapStatus('SOAP draft generated from saved session notes.')
+  await render()
+}
+
+async function saveSoapDraftFromPanel(): Promise<SoapDraft | null> {
+  const existing = await getSoapDraft()
+  const next = readSoapDraftFromFields(existing)
+
+  if (!next.subjective && !next.objective && !next.assessment && !next.plan) {
+    setSoapStatus('SOAP draft is empty. Generate it first or add content before saving.')
+    return null
+  }
+
+  await saveSoapDraft(next)
+  setSoapStatus('SOAP draft saved.')
+  return next
+}
+
+async function fillSoapDraftIntoPage(): Promise<void> {
+  const draft = await saveSoapDraftFromPanel()
+  if (!draft) return
+
+  const tabId = await getActiveTabId()
+  if (!tabId) {
+    setSoapStatus('No active appointment tab found.')
+    return
+  }
+
+  const response = await sendTabMessage<{ ok?: boolean; filled?: number; error?: string }>(tabId, {
+    type: 'SPN_FILL_SOAP_DRAFT',
+    draft,
+  })
+
+  if (response?.ok) {
+    setSoapStatus(`Filled ${response.filled ?? 0} SOAP fields in SimplePractice.`)
+    return
+  }
+
+  setSoapStatus(response?.error ?? 'Unable to fill the SOAP form. Open the progress note tab first.')
+}
+
 async function render(): Promise<void> {
   const intake = await getIntake()
   let workspace = await getDiagnosticWorkspace()
+  const soapDraft = await getSoapDraft()
+  const treatmentPlan = await getTreatmentPlan()
+  const apptCtx = await detectApptContext()
+  const sessionNotes = apptCtx.isAppt
+    ? (await getSessionNotes(apptCtx.apptId))?.notes ?? soapDraft?.sessionNotes ?? ''
+    : (soapDraft?.sessionNotes ?? '')
 
   const emptyState = document.getElementById('empty-state')!
   const content = document.getElementById('content')!
+  const diagnosticsTab = document.getElementById('tab-diagnostics') as HTMLButtonElement | null
+  const hasSoapContext = !!soapDraft || !!treatmentPlan || !!sessionNotes || apptCtx.isAppt
 
-  if (!intake) {
+  if (!intake && !hasSoapContext) {
     emptyState.hidden = false
     content.hidden = true
     return
@@ -538,6 +771,54 @@ async function render(): Promise<void> {
 
   emptyState.hidden = true
   content.hidden = false
+
+  document.getElementById('patient-name')!.textContent =
+    firstNonEmpty(
+      intake?.fullName,
+      `${intake?.firstName ?? ''} ${intake?.lastName ?? ''}`.trim(),
+      soapDraft?.clientName,
+      apptCtx.isAppt ? 'Current Appointment' : 'Client'
+    )
+
+  document.getElementById('patient-meta')!.textContent =
+    [
+      intake?.clientId ? `Client ${intake.clientId}` : '',
+      soapDraft?.sessionDate ? `Session ${soapDraft.sessionDate}` : '',
+      treatmentPlan?.capturedAt ? `Plan ${formatDate(treatmentPlan.capturedAt)}` : '',
+    ]
+      .filter(Boolean)
+      .join(' · ')
+
+  setSoapTextareaValue('soap-subjective', soapDraft?.subjective ?? '')
+  setSoapTextareaValue('soap-objective', soapDraft?.objective ?? '')
+  setSoapTextareaValue('soap-assessment', soapDraft?.assessment ?? '')
+  setSoapTextareaValue('soap-plan', soapDraft?.plan ?? '')
+  document.getElementById('soap-treatment-plan')!.textContent = buildTreatmentPlanReference(treatmentPlan)
+  document.getElementById('soap-session-notes')!.textContent = buildSessionNotesReference(sessionNotes)
+
+  if (!soapDraft) {
+    if (!treatmentPlan) {
+      setSoapStatus('Capture a treatment plan first, then generate a SOAP draft from session notes.')
+    } else if (!sessionNotes.trim()) {
+      setSoapStatus('No session notes saved for this appointment yet.')
+    } else {
+      setSoapStatus('SOAP draft not generated yet. Click "Regenerate SOAP" to build one from the saved session notes and treatment plan.')
+    }
+  } else {
+    setSoapStatus(`Draft updated ${formatDate(soapDraft.editedAt || soapDraft.generatedAt)}`)
+  }
+
+  if (!intake) {
+    if (diagnosticsTab) diagnosticsTab.disabled = true
+    if (activePanel === 'diagnostics') {
+      switchPanel('soap')
+    } else {
+      switchPanel(activePanel)
+    }
+    return
+  }
+
+  if (diagnosticsTab) diagnosticsTab.disabled = false
 
   const suggestions = getDiagnosticSuggestions(intake)
   const staleFinalizedImpressions = workspace?.finalizedImpressions.length
@@ -556,13 +837,6 @@ async function render(): Promise<void> {
     ? workspace.finalizedImpressions
     : buildDiagnosticImpressions(intake, suggestions, buildWorkspaceBase(workspace))
   const guidance = await buildClinicalGuidance(intake, draftImpressions)
-
-  document.getElementById('patient-name')!.textContent =
-    intake.fullName || `${intake.firstName} ${intake.lastName}`.trim() || 'Client'
-  document.getElementById('patient-meta')!.textContent =
-    [`Client ${intake.clientId || 'unknown'}`, intake.capturedAt ? `Captured ${formatDate(intake.capturedAt)}` : '']
-      .filter(Boolean)
-      .join(' · ')
 
   document.getElementById('score-grid')!.innerHTML = buildScoreCards(intake)
   document.getElementById('pinned-tabs')!.innerHTML = renderPinnedTabs(workspace, activeDisorderId)
@@ -588,6 +862,8 @@ async function render(): Promise<void> {
     : '<option value="">All 15 diagnoses are already pinned.</option>'
   addSelect.disabled = options.length === 0
   ;(document.getElementById('btn-add-diagnosis') as HTMLButtonElement).disabled = options.length === 0
+
+  switchPanel(activePanel)
 }
 
 document.addEventListener('click', async (event) => {
@@ -694,6 +970,31 @@ document.getElementById('btn-generate-summary')?.addEventListener('click', async
 
 document.getElementById('btn-write-note')?.addEventListener('click', async () => {
   await generateSummary(true)
+})
+
+document.getElementById('tab-soap')?.addEventListener('click', () => {
+  switchPanel('soap')
+})
+
+document.getElementById('tab-diagnostics')?.addEventListener('click', () => {
+  const tab = document.getElementById('tab-diagnostics') as HTMLButtonElement | null
+  if (tab?.disabled) return
+  switchPanel('diagnostics')
+})
+
+document.getElementById('btn-generate-soap')?.addEventListener('click', async () => {
+  await regenerateSoapDraftFromSavedNotes()
+})
+
+document.getElementById('btn-save-soap')?.addEventListener('click', async () => {
+  const saved = await saveSoapDraftFromPanel()
+  if (saved) {
+    await render()
+  }
+})
+
+document.getElementById('btn-fill-soap')?.addEventListener('click', async () => {
+  await fillSoapDraftIntoPage()
 })
 
 chrome.storage.onChanged.addListener(() => render())

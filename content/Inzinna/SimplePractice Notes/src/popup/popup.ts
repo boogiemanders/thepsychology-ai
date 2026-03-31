@@ -1,6 +1,23 @@
-import { getIntake, getNote, saveNote, clearAll, getPreferences, savePreferences, hasPreferences, mergeIntake, getSessionNotes, saveSessionNotes } from '../lib/storage'
-import { IntakeData, ProviderPreferences, DEFAULT_PREFERENCES, SessionNotes } from '../lib/types'
+import {
+  getIntake,
+  getNote,
+  saveNote,
+  clearAll,
+  getPreferences,
+  savePreferences,
+  hasPreferences,
+  mergeIntake,
+  getSessionNotes,
+  saveSessionNotes,
+  getTreatmentPlan,
+  getSoapDraft,
+  saveSoapDraft,
+  getDiagnosticWorkspace,
+  getTranscript,
+} from '../lib/storage'
+import { IntakeData, ProviderPreferences, DEFAULT_PREFERENCES, SoapDraft, TreatmentPlanData } from '../lib/types'
 import { buildDraftNote } from '../lib/note-draft'
+import { buildSoapDraft } from '../lib/soap-builder'
 
 function formatDate(iso: string): string {
   const d = new Date(iso)
@@ -85,11 +102,17 @@ function showView(view: 'main' | 'settings'): void {
   const intakeInfo = document.getElementById('intake-info')!
   const manualNotesSection = document.getElementById('manual-notes-section')!
   const settingsPanel = document.getElementById('settings-panel')!
+  const popupStatus = document.getElementById('popup-status') as HTMLDivElement | null
+  const treatmentPlanSection = document.getElementById('treatment-plan-section') as HTMLDivElement | null
+  const soapPreviewSection = document.getElementById('soap-preview-section') as HTMLDivElement | null
 
   if (view === 'settings') {
     emptyState.style.display = 'none'
     intakeInfo.style.display = 'none'
     manualNotesSection.style.display = 'none'
+    if (popupStatus) popupStatus.style.display = 'none'
+    if (treatmentPlanSection) treatmentPlanSection.style.display = 'none'
+    if (soapPreviewSection) soapPreviewSection.style.display = 'none'
     settingsPanel.style.display = 'flex'
   } else {
     settingsPanel.style.display = 'none'
@@ -185,6 +208,100 @@ function buildNotePreview(note: Awaited<ReturnType<typeof getNote>>): string {
   return lines.join('\n\n')
 }
 
+function buildTreatmentPlanPreview(plan: TreatmentPlanData | null): string {
+  if (!plan) {
+    return 'No treatment plan captured yet. Open the client treatment plan page and click "Capture Treatment Plan" first.'
+  }
+
+  const lines: string[] = []
+  if (plan.diagnoses.length) {
+    lines.push(`Dx: ${plan.diagnoses.map((entry) => `${entry.description}${entry.code ? ` (${entry.code})` : ''}`).join(', ')}`)
+  }
+  if (plan.presentingProblem) lines.push(`Problem: ${plan.presentingProblem}`)
+  if (plan.goals.length) {
+    lines.push(`Goals:\n${plan.goals.map((goal) => `- Goal ${goal.goalNumber}: ${goal.goal}`).join('\n')}`)
+  }
+  if (plan.interventions.length) {
+    lines.push(`Interventions: ${plan.interventions.join(', ')}`)
+  }
+  if (plan.treatmentFrequency) {
+    lines.push(`Frequency: ${plan.treatmentFrequency}`)
+  }
+  return lines.join('\n\n')
+}
+
+function buildSoapPreview(draft: SoapDraft | null): string {
+  if (!draft) return ''
+
+  return [
+    `S: ${draft.subjective}`,
+    `O: ${draft.objective}`,
+    `A: ${draft.assessment}`,
+    `P: ${draft.plan}`,
+  ].join('\n\n')
+}
+
+function setStatus(
+  message: string,
+  type: 'success' | 'error' | 'neutral' = 'neutral'
+): void {
+  const el = document.getElementById('popup-status')
+  if (!el) return
+
+  if (!message.trim()) {
+    el.textContent = ''
+    ;(el as HTMLElement).style.display = 'none'
+    el.className = 'status-banner'
+    return
+  }
+
+  el.textContent = message
+  ;(el as HTMLElement).style.display = 'block'
+  el.className = `status-banner${type === 'neutral' ? '' : ` ${type}`}`
+}
+
+async function generateSoapDraftForAppointment(
+  apptId: string,
+  sessionNotes: string
+): Promise<{ draft: SoapDraft | null; error?: string }> {
+  const treatmentPlan = await getTreatmentPlan()
+  if (!treatmentPlan) {
+    return {
+      draft: null,
+      error: 'Capture a treatment plan first on the client treatment plan page.',
+    }
+  }
+
+  const intake = await getIntake()
+  if (intake?.clientId && treatmentPlan.clientId && intake.clientId !== treatmentPlan.clientId) {
+    return {
+      draft: null,
+      error: 'The captured treatment plan appears to belong to a different client. Re-capture the correct treatment plan first.',
+    }
+  }
+
+  const prefs = await getPreferences()
+  const note = await getNote()
+  const workspace = await getDiagnosticWorkspace()
+  const transcript = await getTranscript(apptId)
+  const diagnosticImpressions = workspace?.finalizedImpressions?.length
+    ? workspace.finalizedImpressions
+    : (note?.diagnosticImpressions ?? [])
+
+  const draft = buildSoapDraft(
+    sessionNotes,
+    transcript,
+    treatmentPlan,
+    intake,
+    diagnosticImpressions,
+    prefs,
+    { apptId }
+  )
+
+  await saveSoapDraft(draft)
+  return { draft }
+}
+
 async function populateSettingsForm(): Promise<void> {
   const prefs = await getPreferences()
   ;(document.getElementById('pref-firstName') as HTMLInputElement).value = prefs.providerFirstName
@@ -207,12 +324,20 @@ function readSettingsForm(): ProviderPreferences {
 async function render(): Promise<void> {
   const intake = await getIntake()
   const note = await getNote()
+  const soapDraft = await getSoapDraft()
+  const treatmentPlan = await getTreatmentPlan()
   const prefs = await getPreferences()
   const apptCtx = await detectApptContext()
+  const isSessionMode = apptCtx.isAppt
   const draftBtn = document.getElementById('btn-generate-draft') as HTMLButtonElement | null
   const manualNotesInput = document.getElementById('manual-notes-input') as HTMLTextAreaElement | null
   const manualNotesHint = document.getElementById('manual-notes-hint') as HTMLParagraphElement | null
   const soapBtn = document.getElementById('btn-save-session-notes') as HTMLButtonElement | null
+  const saveManualBtn = document.getElementById('btn-save-manual-notes') as HTMLButtonElement | null
+  const treatmentPlanSection = document.getElementById('treatment-plan-section') as HTMLDivElement | null
+  const treatmentPlanContent = document.getElementById('treatment-plan-content') as HTMLDivElement | null
+  const soapPreviewSection = document.getElementById('soap-preview-section') as HTMLDivElement | null
+  const soapPreviewContent = document.getElementById('soap-preview-content') as HTMLDivElement | null
 
   document.getElementById('provider-badge')!.textContent =
     `Provider: ${prefs.providerFirstName} ${prefs.providerLastName}`
@@ -220,39 +345,61 @@ async function render(): Promise<void> {
   const emptyState = document.getElementById('empty-state')!
   const intakeInfo = document.getElementById('intake-info')!
 
-  // Show/hide SOAP button based on appointment context
-  if (soapBtn) soapBtn.style.display = apptCtx.isAppt ? 'block' : 'none'
+  if (saveManualBtn) saveManualBtn.style.display = isSessionMode ? 'none' : 'block'
+  if (soapBtn) soapBtn.style.display = isSessionMode ? 'block' : 'none'
+  if (draftBtn) {
+    draftBtn.textContent = isSessionMode
+      ? 'Generate SOAP Draft'
+      : (note ? 'Regenerate Draft' : 'Generate Draft')
+  }
 
-  // If on appointment page, populate textarea with session notes
-  if (apptCtx.isAppt && manualNotesInput) {
+  if (treatmentPlanSection && treatmentPlanContent) {
+    treatmentPlanSection.style.display = isSessionMode ? 'block' : 'none'
+    treatmentPlanContent.textContent = isSessionMode ? buildTreatmentPlanPreview(treatmentPlan) : ''
+  }
+
+  if (soapPreviewSection && soapPreviewContent) {
+    const showSoapPreview = isSessionMode && !!soapDraft
+    soapPreviewSection.style.display = showSoapPreview ? 'block' : 'none'
+    soapPreviewContent.textContent = showSoapPreview ? buildSoapPreview(soapDraft) : ''
+  }
+
+  if (isSessionMode && manualNotesInput) {
     const sessionNotes = await getSessionNotes(apptCtx.apptId)
     if (sessionNotes?.notes && !manualNotesInput.dataset.userEdited) {
       manualNotesInput.value = sessionNotes.notes
+    } else if (soapDraft?.sessionNotes && !manualNotesInput.dataset.userEdited) {
+      manualNotesInput.value = soapDraft.sessionNotes
     }
     if (manualNotesHint) {
       manualNotesHint.textContent =
-        'Session notes for SOAP progress note (90837). Also saves to intake if needed.'
+        'Paste follow-up session notes here. "Save Notes for SOAP" will save them, generate a SOAP draft from the captured treatment plan, and auto-fill the SOAP form if it is open.'
     }
+  } else if (manualNotesHint) {
+    manualNotesHint.textContent =
+      intake
+        ? 'Paste your own notes here to augment the captured intake, diagnostics, and draft note.'
+        : 'Paste your own notes here to create a manual intake when SimplePractice intake data is not available.'
   }
 
-  if (!intake) {
+  if (!intake && !isSessionMode) {
     emptyState.style.display = 'block'
     intakeInfo.style.display = 'none'
-    if (!apptCtx.isAppt && manualNotesInput) manualNotesInput.value = ''
-    if (!apptCtx.isAppt && manualNotesHint) {
-      manualNotesHint.textContent =
-        'Paste your own notes here to create a manual intake when SimplePractice intake data is not available.'
+    if (manualNotesInput && !manualNotesInput.dataset.userEdited) {
+      manualNotesInput.value = ''
     }
-    if (draftBtn) draftBtn.textContent = 'Generate Draft'
+    return
+  }
+
+  emptyState.style.display = 'none'
+
+  if (isSessionMode && !intake) {
+    intakeInfo.style.display = 'none'
     return
   }
 
   emptyState.style.display = 'none'
   intakeInfo.style.display = 'flex'
-  if (manualNotesHint) {
-    manualNotesHint.textContent =
-      'Paste your own notes here to augment the captured intake, diagnostics, and draft note.'
-  }
 
   document.getElementById('client-name')!.textContent =
     `${intake.firstName} ${intake.lastName}`.trim() || 'Client'
@@ -273,19 +420,26 @@ async function render(): Promise<void> {
 
   // Intake fields
   renderIntakeFields(intake)
-  if (manualNotesInput) manualNotesInput.value = intake.manualNotes
-  if (draftBtn) draftBtn.textContent = note ? 'Regenerate Draft' : 'Generate Draft'
+  if (!isSessionMode && manualNotesInput && !manualNotesInput.dataset.userEdited) {
+    manualNotesInput.value = intake.manualNotes
+  }
 
   // Note preview
   const notePreview = document.getElementById('note-preview')!
   const noteContent = document.getElementById('note-content')!
-  if (note) {
+  if (!isSessionMode && note) {
     notePreview.style.display = 'block'
     noteContent.textContent = buildNotePreview(note) || 'Draft generated from intake data.'
   } else {
     notePreview.style.display = 'none'
   }
 }
+
+document.getElementById('manual-notes-input')?.addEventListener('input', (event) => {
+  const target = event.currentTarget as HTMLTextAreaElement | null
+  if (!target) return
+  target.dataset.userEdited = '1'
+})
 
 // Toggle floating buttons on page
 const toggleBtn = document.getElementById('btn-toggle-btns')!
@@ -319,6 +473,7 @@ document.getElementById('btn-cancel-prefs')?.addEventListener('click', () => {
 
 document.getElementById('btn-clear')?.addEventListener('click', async () => {
   await clearAll()
+  setStatus('', 'neutral')
   render()
 })
 
@@ -333,16 +488,52 @@ document.getElementById('btn-save-manual-notes')?.addEventListener('click', asyn
     manualNotes,
     capturedAt: intake?.capturedAt || new Date().toISOString(),
   })
+  if (input) delete input.dataset.userEdited
+  setStatus('Intake notes saved.', 'success')
   render()
 })
 
 document.getElementById('btn-save-session-notes')?.addEventListener('click', async () => {
   const ctx = await detectApptContext()
-  if (!ctx.isAppt) return
+  if (!ctx.isAppt) {
+    setStatus('Open an appointment page first.', 'error')
+    return
+  }
   const input = document.getElementById('manual-notes-input') as HTMLTextAreaElement | null
   const notes = input?.value.replace(/\r\n/g, '\n').trim() ?? ''
-  if (!notes) return
+  if (!notes) {
+    setStatus('Paste session notes first.', 'error')
+    return
+  }
   await saveSessionNotes({ apptId: ctx.apptId, notes, updatedAt: new Date().toISOString() })
+
+  const { draft, error } = await generateSoapDraftForAppointment(ctx.apptId, notes)
+  if (!draft) {
+    if (input) delete input.dataset.userEdited
+    setStatus(`Session notes saved. ${error ?? 'Failed to generate SOAP draft.'}`, 'error')
+    await render()
+    return
+  }
+
+  const tabId = await getActiveTabId()
+  const fillResponse = tabId
+    ? await sendTabMessage<{ ok?: boolean; filled?: number; error?: string }>(tabId, {
+        type: 'SPN_FILL_SOAP_DRAFT',
+        draft,
+      })
+    : null
+
+  if (input) delete input.dataset.userEdited
+
+  if (fillResponse?.ok) {
+    setStatus('Session notes saved, SOAP draft generated, and SOAP fields filled.', 'success')
+  } else if (fillResponse?.error) {
+    setStatus(`Session notes saved and SOAP draft generated. ${fillResponse.error}`, 'neutral')
+  } else {
+    setStatus('Session notes saved and SOAP draft generated. Open the SOAP progress note form to fill automatically.', 'neutral')
+  }
+
+  await render()
 })
 
 document.getElementById('btn-open-diagnostics')?.addEventListener('click', async () => {
@@ -359,6 +550,28 @@ document.getElementById('btn-open-diagnostics')?.addEventListener('click', async
 })
 
 document.getElementById('btn-generate-draft')?.addEventListener('click', async () => {
+  const apptCtx = await detectApptContext()
+  if (apptCtx.isAppt) {
+    const input = document.getElementById('manual-notes-input') as HTMLTextAreaElement | null
+    const notes = input?.value.replace(/\r\n/g, '\n').trim() ?? ''
+    if (!notes) {
+      setStatus('Paste session notes first.', 'error')
+      return
+    }
+
+    await saveSessionNotes({ apptId: apptCtx.apptId, notes, updatedAt: new Date().toISOString() })
+    const { draft, error } = await generateSoapDraftForAppointment(apptCtx.apptId, notes)
+    if (!draft) {
+      setStatus(error ?? 'Failed to generate SOAP draft.', 'error')
+      return
+    }
+
+    if (input) delete input.dataset.userEdited
+    setStatus('SOAP draft generated. Open the side panel to review and edit it.', 'success')
+    await render()
+    return
+  }
+
   const intake = await getIntake()
   if (!intake) {
     render()
@@ -369,6 +582,7 @@ document.getElementById('btn-generate-draft')?.addEventListener('click', async (
   const existingNote = await getNote()
   const note = await buildDraftNote(intake, prefs, existingNote?.diagnosticImpressions ?? [])
   await saveNote(note)
+  setStatus('Intake draft generated.', 'success')
   render()
 })
 
