@@ -12,6 +12,29 @@ function formatDate(iso: string): string {
   })
 }
 
+function setToggleButtonState(visible: boolean): void {
+  const toggleBtn = document.getElementById('btn-toggle-btns')!
+  toggleBtn.textContent = visible ? '\u{1F441}' : '\u{1F6AB}'
+  toggleBtn.title = visible ? 'Hide page buttons' : 'Show page buttons'
+}
+
+async function getActiveTabId(): Promise<number | null> {
+  const [tab] = await chrome.tabs.query({ active: true, currentWindow: true })
+  return tab?.id ?? null
+}
+
+function sendTabMessage<T>(tabId: number, message: object): Promise<T | null> {
+  return new Promise((resolve) => {
+    chrome.tabs.sendMessage(tabId, message, (response) => {
+      if (chrome.runtime.lastError) {
+        resolve(null)
+        return
+      }
+      resolve((response as T | undefined) ?? null)
+    })
+  })
+}
+
 function updateCheckItem(id: string, done: boolean): void {
   const el = document.getElementById(id)
   if (!el) return
@@ -103,13 +126,13 @@ async function render(): Promise<void> {
 // Toggle floating buttons on page
 const toggleBtn = document.getElementById('btn-toggle-btns')!
 toggleBtn.addEventListener('click', async () => {
-  const [tab] = await chrome.tabs.query({ active: true, currentWindow: true })
-  if (!tab?.id) return
-  chrome.tabs.sendMessage(tab.id, { type: 'toggle-floating-buttons' }, (response) => {
-    const nowVisible = response?.visible ?? true
-    toggleBtn.textContent = nowVisible ? '\u{1F441}' : '\u{1F6AB}'
-    toggleBtn.title = nowVisible ? 'Hide page buttons' : 'Show page buttons'
+  const tabId = await getActiveTabId()
+  if (!tabId) return
+
+  const response = await sendTabMessage<{ visible: boolean }>(tabId, {
+    type: 'toggle-floating-buttons',
   })
+  setToggleButtonState(response?.visible ?? true)
 })
 
 // Settings toggle
