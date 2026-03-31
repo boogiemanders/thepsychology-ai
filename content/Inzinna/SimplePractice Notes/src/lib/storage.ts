@@ -8,6 +8,15 @@ import {
   EMPTY_PROGRESS_NOTE,
   ProviderPreferences,
   DEFAULT_PREFERENCES,
+  SessionNotes,
+  EMPTY_SESSION_NOTES,
+  TreatmentPlanData,
+  EMPTY_TREATMENT_PLAN,
+  SoapDraft,
+  EMPTY_SOAP_DRAFT,
+  SessionTranscript,
+  EMPTY_SESSION_TRANSCRIPT,
+  TranscriptEntry,
 } from './types'
 import { augmentIntakeWithManualNotes } from './intake-augmentation'
 
@@ -15,6 +24,10 @@ const INTAKE_KEY = 'spn_intake'
 const NOTE_KEY = 'spn_note'
 const DIAGNOSTIC_WORKSPACE_KEY = 'spn_diagnostic_workspace'
 const PREFS_KEY = 'spn_preferences'
+const SESSION_NOTES_KEY = 'spn_session_notes'
+const TREATMENT_PLAN_KEY = 'spn_treatment_plan'
+const SOAP_DRAFT_KEY = 'spn_soap_draft'
+const TRANSCRIPT_KEY = 'spn_transcript'
 
 // ── Intake Data (session storage — PHI with TTL) ──
 
@@ -42,6 +55,7 @@ function normalizeDiagnosticImpression(
     code: impression?.code ?? '',
     name: impression?.name ?? '',
     confidence: impression?.confidence ?? 'low',
+    diagnosticReasoning: impression?.diagnosticReasoning?.trim() ?? '',
     criteriaEvidence: Array.isArray(impression?.criteriaEvidence) ? impression.criteriaEvidence : [],
     criteriaSummary: Array.isArray(impression?.criteriaSummary) ? impression.criteriaSummary : [],
     ruleOuts: Array.isArray(impression?.ruleOuts) ? impression.ruleOuts : [],
@@ -101,6 +115,48 @@ function normalizeDiagnosticWorkspace(
       : [],
     finalizedImpressions: Array.isArray(workspace?.finalizedImpressions)
       ? workspace.finalizedImpressions.map((impression) => normalizeDiagnosticImpression(impression))
+      : [],
+  }
+}
+
+function normalizeSoapDraft(
+  draft: Partial<SoapDraft> | undefined
+): SoapDraft {
+  return {
+    ...EMPTY_SOAP_DRAFT,
+    ...draft,
+    sessionNotes: draft?.sessionNotes?.trim() ?? '',
+    transcript: draft?.transcript?.trim() ?? '',
+    subjective: draft?.subjective?.trim() ?? '',
+    objective: draft?.objective?.trim() ?? '',
+    assessment: draft?.assessment?.trim() ?? '',
+    plan: draft?.plan?.trim() ?? '',
+    generatedAt: draft?.generatedAt ?? '',
+    editedAt: draft?.editedAt ?? draft?.generatedAt ?? '',
+    status: draft?.status ?? 'draft',
+  }
+}
+
+function normalizeTranscriptEntry(
+  entry: Partial<TranscriptEntry> | undefined
+): TranscriptEntry {
+  return {
+    speaker: entry?.speaker ?? 'unknown',
+    text: entry?.text?.trim() ?? '',
+    timestamp: entry?.timestamp ?? '',
+  }
+}
+
+function normalizeTranscript(
+  transcript: Partial<SessionTranscript> | undefined
+): SessionTranscript {
+  return {
+    ...EMPTY_SESSION_TRANSCRIPT,
+    ...transcript,
+    entries: Array.isArray(transcript?.entries)
+      ? transcript.entries
+          .map((entry) => normalizeTranscriptEntry(entry))
+          .filter((entry) => entry.text)
       : [],
   }
 }
@@ -229,8 +285,93 @@ export async function hasPreferences(): Promise<boolean> {
   return !!result[PREFS_KEY]
 }
 
+// ── Treatment Plan (session storage — PHI with TTL) ──
+
+export async function saveTreatmentPlan(plan: TreatmentPlanData): Promise<void> {
+  await chrome.storage.session.set({ [TREATMENT_PLAN_KEY]: plan })
+}
+
+export async function getTreatmentPlan(): Promise<TreatmentPlanData | null> {
+  const result = await chrome.storage.session.get(TREATMENT_PLAN_KEY)
+  const plan = result[TREATMENT_PLAN_KEY] as TreatmentPlanData | undefined
+  return plan ? { ...EMPTY_TREATMENT_PLAN, ...plan } : null
+}
+
+export async function clearTreatmentPlan(): Promise<void> {
+  await chrome.storage.session.remove(TREATMENT_PLAN_KEY)
+}
+
+// ── SOAP Draft (session storage — PHI with TTL) ──
+
+export async function saveSoapDraft(draft: SoapDraft): Promise<void> {
+  await chrome.storage.session.set({ [SOAP_DRAFT_KEY]: normalizeSoapDraft(draft) })
+}
+
+export async function getSoapDraft(): Promise<SoapDraft | null> {
+  const result = await chrome.storage.session.get(SOAP_DRAFT_KEY)
+  const draft = result[SOAP_DRAFT_KEY] as Partial<SoapDraft> | undefined
+  return draft ? normalizeSoapDraft(draft) : null
+}
+
+export async function clearSoapDraft(): Promise<void> {
+  await chrome.storage.session.remove(SOAP_DRAFT_KEY)
+}
+
+// ── Session Transcript (session storage — PHI with TTL) ──
+
+export async function saveTranscript(transcript: SessionTranscript): Promise<void> {
+  await chrome.storage.session.set({ [TRANSCRIPT_KEY]: normalizeTranscript(transcript) })
+}
+
+export async function getTranscript(apptId: string): Promise<SessionTranscript | null> {
+  const result = await chrome.storage.session.get(TRANSCRIPT_KEY)
+  const transcript = result[TRANSCRIPT_KEY] as Partial<SessionTranscript> | undefined
+  if (!transcript || transcript.apptId !== apptId) return null
+  return normalizeTranscript(transcript)
+}
+
+export async function appendTranscriptEntry(
+  apptId: string,
+  entry: TranscriptEntry
+): Promise<SessionTranscript> {
+  const existing = await getTranscript(apptId)
+  const next = normalizeTranscript({
+    ...(existing ?? EMPTY_SESSION_TRANSCRIPT),
+    apptId,
+    entries: [...(existing?.entries ?? []), normalizeTranscriptEntry(entry)],
+    updatedAt: new Date().toISOString(),
+  })
+  await saveTranscript(next)
+  return next
+}
+
+export async function clearTranscript(): Promise<void> {
+  await chrome.storage.session.remove(TRANSCRIPT_KEY)
+}
+
+// ── Session Notes (live note-taking during video appointments) ──
+
+export async function getSessionNotes(apptId: string): Promise<SessionNotes | null> {
+  const result = await chrome.storage.session.get(SESSION_NOTES_KEY)
+  const notes = result[SESSION_NOTES_KEY] as SessionNotes | undefined
+  if (!notes || notes.apptId !== apptId) return null
+  return { ...EMPTY_SESSION_NOTES, ...notes }
+}
+
+export async function saveSessionNotes(notes: SessionNotes): Promise<void> {
+  await chrome.storage.session.set({ [SESSION_NOTES_KEY]: notes })
+}
+
 // ── Cleanup ──
 
 export async function clearAll(): Promise<void> {
-  await chrome.storage.session.remove([INTAKE_KEY, NOTE_KEY, DIAGNOSTIC_WORKSPACE_KEY])
+  await chrome.storage.session.remove([
+    INTAKE_KEY,
+    NOTE_KEY,
+    DIAGNOSTIC_WORKSPACE_KEY,
+    SESSION_NOTES_KEY,
+    TREATMENT_PLAN_KEY,
+    SOAP_DRAFT_KEY,
+    TRANSCRIPT_KEY,
+  ])
 }

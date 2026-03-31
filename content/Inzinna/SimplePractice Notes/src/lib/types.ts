@@ -303,6 +303,7 @@ export interface DiagnosticImpression {
   code: string // ICD-10 / DSM-5 code
   name: string // e.g. "Major Depressive Disorder, Single Episode, Moderate"
   confidence: DiagnosticConfidence
+  diagnosticReasoning?: string
   criteriaEvidence: string[] // supporting evidence from session
   criteriaSummary: string[]
   ruleOuts: string[]
@@ -383,6 +384,122 @@ export interface ProviderPreferences {
   defaultLocation: string
   firstVisitCPT: string
   followUpCPT: string
+}
+
+// ── Treatment Plan (extracted from SimplePractice treatment plan page) ──
+
+export interface TreatmentPlanGoal {
+  goalNumber: number
+  goal: string
+  estimatedCompletion: string
+  status: string
+  objectives: Array<{
+    id: string // e.g. "1A", "2B"
+    objective: string
+    estimatedCompletion: string
+  }>
+}
+
+export interface TreatmentPlanData {
+  clientId: string
+  diagnoses: Array<{ code: string; description: string }>
+  presentingProblem: string
+  clientStrengths: string
+  clientRisks: string
+  goals: TreatmentPlanGoal[]
+  interventions: string[]
+  treatmentType: string
+  estimatedLength: string
+  medicalNecessity: string[]
+  treatmentFrequency: string
+  dateAssigned: string
+  capturedAt: string
+  sourceUrl: string
+}
+
+export const EMPTY_TREATMENT_PLAN: TreatmentPlanData = {
+  clientId: '',
+  diagnoses: [],
+  presentingProblem: '',
+  clientStrengths: '',
+  clientRisks: '',
+  goals: [],
+  interventions: [],
+  treatmentType: '',
+  estimatedLength: '',
+  medicalNecessity: [],
+  treatmentFrequency: '',
+  dateAssigned: '',
+  capturedAt: '',
+  sourceUrl: '',
+}
+
+// ── SOAP Draft + Session Transcript ──
+
+export interface TranscriptEntry {
+  speaker: 'clinician' | 'client' | 'unknown'
+  text: string
+  timestamp: string
+}
+
+export interface SessionTranscript {
+  apptId: string
+  entries: TranscriptEntry[]
+  updatedAt: string
+}
+
+export interface SoapDraft {
+  apptId: string
+  clientName: string
+  sessionDate: string
+  cptCode: string
+  subjective: string
+  objective: string
+  assessment: string
+  plan: string
+  sessionNotes: string
+  transcript: string
+  treatmentPlanId: string
+  generatedAt: string
+  editedAt: string
+  status: 'draft' | 'reviewed' | 'submitted'
+}
+
+export const EMPTY_SESSION_TRANSCRIPT: SessionTranscript = {
+  apptId: '',
+  entries: [],
+  updatedAt: '',
+}
+
+export const EMPTY_SOAP_DRAFT: SoapDraft = {
+  apptId: '',
+  clientName: '',
+  sessionDate: '',
+  cptCode: '90837',
+  subjective: '',
+  objective: '',
+  assessment: '',
+  plan: '',
+  sessionNotes: '',
+  transcript: '',
+  treatmentPlanId: '',
+  generatedAt: '',
+  editedAt: '',
+  status: 'draft',
+}
+
+// ── Session Notes (live note-taking during video appointments) ──
+
+export interface SessionNotes {
+  apptId: string // extracted from /appt-{id}/room URL
+  notes: string
+  updatedAt: string
+}
+
+export const EMPTY_SESSION_NOTES: SessionNotes = {
+  apptId: '',
+  notes: '',
+  updatedAt: '',
 }
 
 export const DEFAULT_PREFERENCES: ProviderPreferences = {

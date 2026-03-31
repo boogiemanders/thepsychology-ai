@@ -1,5 +1,5 @@
-import { getIntake, getNote, saveNote, clearAll, getPreferences, savePreferences, hasPreferences, mergeIntake } from '../lib/storage'
-import { IntakeData, ProviderPreferences, DEFAULT_PREFERENCES } from '../lib/types'
+import { getIntake, getNote, saveNote, clearAll, getPreferences, savePreferences, hasPreferences, mergeIntake, getSessionNotes, saveSessionNotes } from '../lib/storage'
+import { IntakeData, ProviderPreferences, DEFAULT_PREFERENCES, SessionNotes } from '../lib/types'
 import { buildDraftNote } from '../lib/note-draft'
 
 function formatDate(iso: string): string {
@@ -39,6 +39,19 @@ function sendTabMessage<T>(tabId: number, message: object): Promise<T | null> {
       resolve((response as T | undefined) ?? null)
     })
   })
+}
+
+async function detectApptContext(): Promise<{ isAppt: boolean; apptId: string }> {
+  const tab = await getActiveTab()
+  if (!tab?.url) return { isAppt: false, apptId: '' }
+  try {
+    const url = new URL(tab.url)
+    const videoMatch = url.pathname.match(/\/appt-([a-f0-9]+)\/room/)
+    if (videoMatch) return { isAppt: true, apptId: videoMatch[1] }
+    const apptMatch = url.pathname.match(/\/appointments\/(\d+)/)
+    if (apptMatch) return { isAppt: true, apptId: apptMatch[1] }
+  } catch {}
+  return { isAppt: false, apptId: '' }
 }
 
 async function syncToggleButtonState(): Promise<void> {
@@ -195,9 +208,11 @@ async function render(): Promise<void> {
   const intake = await getIntake()
   const note = await getNote()
   const prefs = await getPreferences()
+  const apptCtx = await detectApptContext()
   const draftBtn = document.getElementById('btn-generate-draft') as HTMLButtonElement | null
   const manualNotesInput = document.getElementById('manual-notes-input') as HTMLTextAreaElement | null
   const manualNotesHint = document.getElementById('manual-notes-hint') as HTMLParagraphElement | null
+  const soapBtn = document.getElementById('btn-save-session-notes') as HTMLButtonElement | null
 
   document.getElementById('provider-badge')!.textContent =
     `Provider: ${prefs.providerFirstName} ${prefs.providerLastName}`
@@ -205,11 +220,26 @@ async function render(): Promise<void> {
   const emptyState = document.getElementById('empty-state')!
   const intakeInfo = document.getElementById('intake-info')!
 
+  // Show/hide SOAP button based on appointment context
+  if (soapBtn) soapBtn.style.display = apptCtx.isAppt ? 'block' : 'none'
+
+  // If on appointment page, populate textarea with session notes
+  if (apptCtx.isAppt && manualNotesInput) {
+    const sessionNotes = await getSessionNotes(apptCtx.apptId)
+    if (sessionNotes?.notes && !manualNotesInput.dataset.userEdited) {
+      manualNotesInput.value = sessionNotes.notes
+    }
+    if (manualNotesHint) {
+      manualNotesHint.textContent =
+        'Session notes for SOAP progress note (90837). Also saves to intake if needed.'
+    }
+  }
+
   if (!intake) {
     emptyState.style.display = 'block'
     intakeInfo.style.display = 'none'
-    if (manualNotesInput) manualNotesInput.value = ''
-    if (manualNotesHint) {
+    if (!apptCtx.isAppt && manualNotesInput) manualNotesInput.value = ''
+    if (!apptCtx.isAppt && manualNotesHint) {
       manualNotesHint.textContent =
         'Paste your own notes here to create a manual intake when SimplePractice intake data is not available.'
     }
@@ -304,6 +334,15 @@ document.getElementById('btn-save-manual-notes')?.addEventListener('click', asyn
     capturedAt: intake?.capturedAt || new Date().toISOString(),
   })
   render()
+})
+
+document.getElementById('btn-save-session-notes')?.addEventListener('click', async () => {
+  const ctx = await detectApptContext()
+  if (!ctx.isAppt) return
+  const input = document.getElementById('manual-notes-input') as HTMLTextAreaElement | null
+  const notes = input?.value.replace(/\r\n/g, '\n').trim() ?? ''
+  if (!notes) return
+  await saveSessionNotes({ apptId: ctx.apptId, notes, updatedAt: new Date().toISOString() })
 })
 
 document.getElementById('btn-open-diagnostics')?.addEventListener('click', async () => {

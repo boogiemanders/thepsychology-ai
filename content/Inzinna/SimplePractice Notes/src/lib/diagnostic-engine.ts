@@ -95,7 +95,7 @@ function buildCombinedNarrative(intake: IntakeData): string {
     intake.occupation,
     intake.physicalSexualAbuseHistory,
     intake.domesticViolenceHistory,
-    ...intake.rawQA.map((pair) => `${pair.question} ${pair.answer}`),
+    ...intake.rawQA.map((pair) => pair.answer).filter(Boolean),
     ...(intake.phq9?.items.map((item) => `${item.question} ${item.response}`) ?? []),
     ...(intake.gad7?.items.map((item) => `${item.question} ${item.response}`) ?? []),
   ]
@@ -108,12 +108,44 @@ function clipEvidence(value: string, max = 140): string {
   return trimmed.length > max ? `${trimmed.slice(0, max - 1)}…` : trimmed
 }
 
+function splitEvidenceFragments(value: string): string[] {
+  return value
+    .replace(/\r/g, '\n')
+    .split(/(?:\n+|(?<=[.!?])\s+|[;•]+(?:\s+|$))/)
+    .map((fragment) => fragment.replace(/\s+/g, ' ').trim())
+    .filter(Boolean)
+}
+
+function extractBestEvidenceSentence(value: string, keywords: string[]): string {
+  const fragments = splitEvidenceFragments(value)
+  if (!fragments.length) return clipEvidence(value, 180)
+
+  const match = fragments.find((fragment) => {
+    const normalized = normalizeText(fragment)
+    return keywords.some((keyword) => matchesKeyword(normalized, keyword))
+  })
+
+  return clipEvidence(match ?? fragments[0], 180)
+}
+
+function joinList(items: string[]): string {
+  if (items.length === 0) return ''
+  if (items.length === 1) return items[0]
+  if (items.length === 2) return `${items[0]} and ${items[1]}`
+  return `${items.slice(0, -1).join(', ')}, and ${items[items.length - 1]}`
+}
+
+function lowerCaseFirst(value: string): string {
+  if (!value) return value
+  return value.charAt(0).toLowerCase() + value.slice(1)
+}
+
 function getFieldValues(intake: IntakeData, field: IntakeEvidenceField): string[] {
   switch (field) {
     case 'rawQA':
       return intake.rawQA
-        .map((pair) => `${pair.question}: ${pair.answer}`)
-        .filter(Boolean)
+        .map((pair) => pair.answer)
+        .filter((answer) => answer.trim().length > 0)
     case 'combinedSymptoms':
       return [intake.recentSymptoms, intake.additionalSymptoms].filter(Boolean)
     case 'combinedNarrative':
@@ -135,7 +167,12 @@ function getAssessmentItemEvidence(
     if (item) {
       if (item.score > 0) {
         return {
-          evidence: [`PHQ-9 item ${item.number}: ${item.response}`],
+          evidence: [
+            clipEvidence(
+              `PHQ-9 item ${item.number} endorsed "${item.question.replace(/[.]+$/, '')}" as ${item.response.replace(/[.]+$/, '')}.`,
+              180
+            ),
+          ],
           sources: [`PHQ-9 item ${item.number}`],
           status: 'met',
         }
@@ -149,7 +186,12 @@ function getAssessmentItemEvidence(
     if (item) {
       if (item.score > 0) {
         return {
-          evidence: [`GAD-7 item ${item.number}: ${item.response}`],
+          evidence: [
+            clipEvidence(
+              `GAD-7 item ${item.number} endorsed "${item.question.replace(/[.]+$/, '')}" as ${item.response.replace(/[.]+$/, '')}.`,
+              180
+            ),
+          ],
           sources: [`GAD-7 item ${item.number}`],
           status: 'met',
         }
@@ -181,7 +223,7 @@ function evaluateGenericCriterion(
       const matchingKeywords = (criterion.keywords ?? []).filter((keyword) => matchesKeyword(normalized, keyword))
       if (matchingKeywords.length > 0) {
         matchedKeywords.push(...matchingKeywords)
-        evidence.push(`${label}: ${clipEvidence(value)}`)
+        evidence.push(extractBestEvidenceSentence(value, matchingKeywords))
         sources.push(label)
         break
       }
@@ -235,16 +277,16 @@ function overrideCriterionEvaluation(
 ): CriterionEvaluation {
   if (criterion.id === 'mdd.B' && intake.phq9?.difficulty) {
     if (/not difficult at all/i.test(intake.phq9.difficulty)) {
-      return { ...evaluation, status: 'likely', evidence: [`PHQ-9 difficulty: ${intake.phq9.difficulty}`], sources: ['PHQ-9 impairment'], rationale: 'Symptoms are present, but the recorded functional difficulty is limited.' }
+      return { ...evaluation, status: 'likely', evidence: [`PHQ-9 functional difficulty was rated "${intake.phq9.difficulty.replace(/[.]+$/, '')}".`], sources: ['PHQ-9 impairment'], rationale: 'Symptoms are present, but the recorded functional difficulty is limited.' }
     }
-    return { ...evaluation, status: 'met', evidence: [`PHQ-9 difficulty: ${intake.phq9.difficulty}`], sources: ['PHQ-9 impairment'], rationale: 'The PHQ-9 functional difficulty item suggests clinically meaningful impairment.' }
+    return { ...evaluation, status: 'met', evidence: [`PHQ-9 functional difficulty was rated "${intake.phq9.difficulty.replace(/[.]+$/, '')}".`], sources: ['PHQ-9 impairment'], rationale: 'The PHQ-9 functional difficulty item suggests clinically meaningful impairment.' }
   }
 
   if (criterion.id === 'gad.D' && intake.gad7?.difficulty) {
     if (/not difficult at all/i.test(intake.gad7.difficulty)) {
-      return { ...evaluation, status: 'likely', evidence: [`GAD-7 difficulty: ${intake.gad7.difficulty}`], sources: ['GAD-7 impairment'], rationale: 'Anxiety symptoms are present, but the recorded functional difficulty is limited.' }
+      return { ...evaluation, status: 'likely', evidence: [`GAD-7 functional difficulty was rated "${intake.gad7.difficulty.replace(/[.]+$/, '')}".`], sources: ['GAD-7 impairment'], rationale: 'Anxiety symptoms are present, but the recorded functional difficulty is limited.' }
     }
-    return { ...evaluation, status: 'met', evidence: [`GAD-7 difficulty: ${intake.gad7.difficulty}`], sources: ['GAD-7 impairment'], rationale: 'The GAD-7 functional difficulty item suggests clinically meaningful impairment.' }
+    return { ...evaluation, status: 'met', evidence: [`GAD-7 functional difficulty was rated "${intake.gad7.difficulty.replace(/[.]+$/, '')}".`], sources: ['GAD-7 impairment'], rationale: 'The GAD-7 functional difficulty item suggests clinically meaningful impairment.' }
   }
 
   if (criterion.id === 'mdd.E' || criterion.id === 'pdd.E') {
@@ -253,7 +295,7 @@ function overrideCriterionEvaluation(
       return {
         ...evaluation,
         status: 'not_met',
-        evidence: ['Intake narrative includes possible manic/hypomanic language.'],
+        evidence: ['The intake narrative includes possible manic or hypomanic language.'],
         sources: ['Combined intake narrative'],
         rationale: 'Possible manic or hypomanic history blocks automatic satisfaction of this exclusion criterion.',
       }
@@ -280,18 +322,37 @@ function overrideCriterionEvaluation(
   }
 
   if (criterion.id === 'ptsd.A' || criterion.id === 'acute_stress.A') {
-    const traumaText = [
+    // Only consider trauma fields that have affirmative (non-negative, non-empty) answers.
+    // Previously, empty or prompt-only field values (e.g. "History of physical/sexual abuse
+    // (leave blank if none)::") would match TRAUMA_PATTERN on the question text itself.
+    const traumaFields = [
       intake.physicalSexualAbuseHistory,
       intake.domesticViolenceHistory,
-      buildCombinedNarrative(intake),
-    ].join('\n')
-    if (TRAUMA_PATTERN.test(traumaText)) {
+    ].filter((value) => value.trim() && !NEGATIVE_PATTERN.test(value))
+
+    const traumaText = traumaFields.length > 0
+      ? traumaFields.join('\n')
+      : buildCombinedNarrative(intake)
+
+    if (traumaFields.length > 0 && TRAUMA_PATTERN.test(traumaText)) {
       return {
         ...evaluation,
         status: 'met',
-        evidence: evaluation.evidence.length ? evaluation.evidence : ['Trauma exposure language appears in intake history.'],
+        evidence: evaluation.evidence.length ? evaluation.evidence : [`${traumaFields[0].slice(0, 140).trim()}`],
         sources: evaluation.sources.length ? evaluation.sources : ['Trauma history'],
         rationale: 'The intake packet documents trauma exposure relevant to this criterion.',
+      }
+    }
+
+    // Fallback: check the broader narrative, but only mark as "likely" since
+    // combined narrative evidence is less specific than a direct trauma field
+    if (TRAUMA_PATTERN.test(buildCombinedNarrative(intake))) {
+      return {
+        ...evaluation,
+        status: 'likely',
+        evidence: evaluation.evidence.length ? evaluation.evidence : ['Possible trauma-related language appears in the intake narrative.'],
+        sources: evaluation.sources.length ? evaluation.sources : ['Combined intake narrative'],
+        rationale: 'The broader intake narrative contains trauma-related language, but the specific trauma history fields are empty or denied. Clinician confirmation needed.',
       }
     }
   }
@@ -318,7 +379,7 @@ function overrideCriterionEvaluation(
       return {
         ...evaluation,
         status: 'likely',
-        evidence: [clipEvidence(substanceText)],
+        evidence: [extractBestEvidenceSentence(substanceText, ['daily', 'weekly', 'weekends', 'regular', 'often', 'frequent', 'binge', 'heavy', 'abuse', 'misuse', 'depend', 'dependent', 'withdrawal', 'craving'])],
         sources: ['Substance use history'],
         rationale: 'Frequency or intensity language suggests the use pattern may exceed intended or casual use.',
       }
@@ -707,13 +768,133 @@ function buildEvidenceSummary(
   criteria: CriterionEvaluation[],
   workspace: DiagnosticWorkspaceState | null | undefined
 ): string[] {
+  return Array.from(
+    new Set(
+      criteria
+        .filter((criterion) => isPositive(getEffectiveCriterionStatus(workspace, disorderId, criterion)))
+        .flatMap((criterion) => criterion.evidence.length ? [criterion.evidence[0]] : [])
+    )
+  )
+    .slice(0, 6)
+}
+
+function getCriterionDefinition(
+  disorderId: string,
+  criterionId: string
+): DSM5CriterionDefinition | undefined {
+  return DSM5_DISORDER_MAP[disorderId]?.criteria.find((criterion) => criterion.id === criterionId)
+}
+
+function summarizePositiveCriterionTexts(
+  disorderId: string,
+  criteria: CriterionEvaluation[],
+  workspace: DiagnosticWorkspaceState | null | undefined,
+  prefix: string,
+  limit = 5
+): string[] {
   return criteria
     .filter((criterion) => isPositive(getEffectiveCriterionStatus(workspace, disorderId, criterion)))
-    .slice(0, 6)
-    .map((criterion) => {
-      const detail = criterion.evidence[0] ?? criterion.rationale
-      return `${criterion.criterionId}: ${detail}`
-    })
+    .filter((criterion) => criterion.criterionId.startsWith(prefix))
+    .map((criterion) => getCriterionDefinition(disorderId, criterion.criterionId)?.text ?? '')
+    .map((text) => lowerCaseFirst(text.replace(/[.]+$/, '')))
+    .filter(Boolean)
+    .slice(0, limit)
+}
+
+function buildDiagnosticReasoning(
+  intake: IntakeData,
+  suggestion: DiagnosticSuggestion,
+  workspace: DiagnosticWorkspaceState | null | undefined
+): string {
+  const criteria = suggestion.criteria
+
+  switch (suggestion.disorderId) {
+    case 'mdd': {
+      const symptoms = summarizePositiveCriterionTexts('mdd', criteria, workspace, 'mdd.A.')
+      const impairment = criteria.find((criterion) => criterion.criterionId === 'mdd.B')
+      const substanceMedical = criteria.find((criterion) => criterion.criterionId === 'mdd.C')
+      const bipolarExclusion = criteria.find((criterion) => criterion.criterionId === 'mdd.E')
+      const parts = [
+        `MDD is the leading working diagnosis because the intake supports ${joinList(symptoms.length ? symptoms : ['multiple depressive symptoms'])}${intake.phq9 ? ` and PHQ-9 ${intake.phq9.totalScore}/27` : ''}.`,
+      ]
+
+      if (impairment && isPositive(getEffectiveCriterionStatus(workspace, 'mdd', impairment))) {
+        parts.push('The presentation also includes clinically meaningful distress or functional impairment.')
+      }
+
+      if (
+        (substanceMedical && getEffectiveCriterionStatus(workspace, 'mdd', substanceMedical) === 'unclear') ||
+        (bipolarExclusion && getEffectiveCriterionStatus(workspace, 'mdd', bipolarExclusion) === 'unclear')
+      ) {
+        parts.push('Substance, medical, and bipolar-spectrum exclusions still need direct follow-up before the diagnosis is treated as fully confirmed.')
+      }
+
+      return parts.join(' ')
+    }
+
+    case 'ptsd': {
+      const trauma = criteria.find((criterion) => criterion.criterionId === 'ptsd.A')
+      const intrusion = countStatuses(criteria.map((criterion) => ({
+        ...criterion,
+        status: getEffectiveCriterionStatus(workspace, 'ptsd', criterion),
+      })), 'ptsd.B.')
+      const avoidance = countStatuses(criteria.map((criterion) => ({
+        ...criterion,
+        status: getEffectiveCriterionStatus(workspace, 'ptsd', criterion),
+      })), 'ptsd.C.')
+      const mood = countStatuses(criteria.map((criterion) => ({
+        ...criterion,
+        status: getEffectiveCriterionStatus(workspace, 'ptsd', criterion),
+      })), 'ptsd.D.')
+      const arousal = countStatuses(criteria.map((criterion) => ({
+        ...criterion,
+        status: getEffectiveCriterionStatus(workspace, 'ptsd', criterion),
+      })), 'ptsd.E.')
+
+      const fullySupported =
+        trauma && isPositive(getEffectiveCriterionStatus(workspace, 'ptsd', trauma)) &&
+        intrusion.positive >= 1 &&
+        avoidance.positive >= 1 &&
+        mood.positive >= 2 &&
+        arousal.positive >= 2
+
+      const parts = [
+        fullySupported
+          ? 'PTSD is supported because trauma exposure is documented and the intake contains intrusion, avoidance, negative mood/cognition, and arousal symptoms across the required clusters.'
+          : `PTSD remains provisional because trauma exposure is documented, but the current intake only supports ${intrusion.positive} intrusion, ${avoidance.positive} avoidance, ${mood.positive} negative mood/cognition, and ${arousal.positive} arousal criteria from the required cluster pattern.`,
+      ]
+
+      parts.push('Duration, functional impact, and rule-outs should be confirmed directly in follow-up.')
+
+      return parts.join(' ')
+    }
+
+    case 'gad': {
+      const symptoms = summarizePositiveCriterionTexts('gad', criteria, workspace, 'gad.C.')
+      const parts = [
+        `GAD is being considered because the intake supports ${joinList(symptoms.length ? symptoms : ['multiple anxiety symptoms'])}${intake.gad7 ? ` and GAD-7 ${intake.gad7.totalScore}/21` : ''}.`,
+      ]
+      const impairment = criteria.find((criterion) => criterion.criterionId === 'gad.D')
+      if (impairment && isPositive(getEffectiveCriterionStatus(workspace, 'gad', impairment))) {
+        parts.push('The presentation also appears to create clinically meaningful impairment.')
+      }
+      return parts.join(' ')
+    }
+
+    default: {
+      const supportedCriteria = summarizePositiveCriterionTexts(
+        suggestion.disorderId,
+        criteria,
+        workspace,
+        `${suggestion.disorderId}.`,
+        4
+      )
+      const parts = [
+        `${suggestion.disorderName} is under consideration because the intake supports ${joinList(supportedCriteria.length ? supportedCriteria : ['multiple relevant criteria'])}.`,
+      ]
+      return parts.join(' ')
+    }
+  }
 }
 
 export function buildDiagnosticImpressions(
@@ -744,6 +925,7 @@ export function buildDiagnosticImpressions(
         code: suggestion.code,
         name,
         confidence: suggestion.confidence,
+        diagnosticReasoning: buildDiagnosticReasoning(intake, suggestion, workspace),
         criteriaEvidence: buildEvidenceSummary(disorderId, suggestion.criteria, workspace),
         criteriaSummary: buildCriteriaSummary(disorder, suggestion.criteria, workspace),
         ruleOuts: suggestion.ruleOuts,

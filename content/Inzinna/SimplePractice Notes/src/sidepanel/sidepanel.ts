@@ -322,8 +322,19 @@ function renderGeneratedSummary(workspace: DiagnosticWorkspaceState | null): str
       <article class="summary-card">
         <h3>${escapeHtml(impression.name)}</h3>
         <p>${escapeHtml(impression.code)} · ${escapeHtml(impression.confidence.toUpperCase())}</p>
-        ${impression.criteriaSummary.length ? `<ul>${impression.criteriaSummary.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul>` : ''}
-        ${impression.criteriaEvidence.length ? `<ul>${impression.criteriaEvidence.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul>` : ''}
+        ${impression.diagnosticReasoning ? `<p>${escapeHtml(impression.diagnosticReasoning)}</p>` : ''}
+        ${impression.criteriaEvidence.length ? `
+          <div class="criterion-evidence"><strong>Supporting sentences</strong></div>
+          <ul>${impression.criteriaEvidence.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul>
+        ` : ''}
+        ${impression.criteriaSummary.length ? `
+          <div class="criterion-evidence"><strong>Criteria snapshot</strong></div>
+          <ul>${impression.criteriaSummary.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul>
+        ` : ''}
+        ${impression.ruleOuts.length ? `
+          <div class="criterion-evidence"><strong>Rule-outs / follow-up</strong></div>
+          <ul>${impression.ruleOuts.slice(0, 4).map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul>
+        ` : ''}
         ${impression.clinicianNotes ? `<p>${escapeHtml(impression.clinicianNotes)}</p>` : ''}
       </article>
     `)
@@ -356,16 +367,16 @@ function renderGuidance(guidance: ClinicalGuidance | null): string {
   return `
     ${modalityPills}
     <article class="knowledge-block">
-      <h3>Working Formulation</h3>
+      <h3>Diagnostic Formulation</h3>
       <p>${escapeHtml(guidance.formulation)}</p>
     </article>
     <article class="knowledge-block">
       <h3>Suggested Goals</h3>
-      <ul>${guidance.goals.map((goal) => `<li>${escapeHtml(goal)}</li>`).join('')}</ul>
+      <pre style="white-space:pre-wrap;font-family:inherit;">${escapeHtml(guidance.goals)}</pre>
     </article>
     <article class="knowledge-block">
       <h3>Suggested Interventions</h3>
-      <ul>${guidance.interventions.map((intervention) => `<li>${escapeHtml(intervention)}</li>`).join('')}</ul>
+      <pre style="white-space:pre-wrap;font-family:inherit;">${escapeHtml(guidance.interventions)}</pre>
     </article>
     <article class="knowledge-block">
       <h3>Scheduling / Coordination</h3>
@@ -514,7 +525,7 @@ async function generateSummary(writeToNote: boolean): Promise<void> {
 
 async function render(): Promise<void> {
   const intake = await getIntake()
-  const workspace = await getDiagnosticWorkspace()
+  let workspace = await getDiagnosticWorkspace()
 
   const emptyState = document.getElementById('empty-state')!
   const content = document.getElementById('content')!
@@ -529,6 +540,17 @@ async function render(): Promise<void> {
   content.hidden = false
 
   const suggestions = getDiagnosticSuggestions(intake)
+  const staleFinalizedImpressions = workspace?.finalizedImpressions.length
+    ? workspace.finalizedImpressions.some((impression) => !(impression.diagnosticReasoning ?? '').trim())
+    : false
+
+  if (staleFinalizedImpressions) {
+    workspace = await updateWorkspace((current) => ({
+      ...current,
+      finalizedImpressions: buildDiagnosticImpressions(intake, suggestions, current),
+    }))
+  }
+
   const activeDisorderId = resolveActiveDisorderId(workspace, suggestions.map((suggestion) => suggestion.disorderId))
   const draftImpressions = workspace?.finalizedImpressions.length
     ? workspace.finalizedImpressions

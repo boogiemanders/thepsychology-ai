@@ -143,17 +143,25 @@ export async function buildDraftNote(
   )
   const guidance = await buildClinicalGuidance(intake, diagnosticImpressions)
 
+  const guidanceGoalLines = guidance.goals
+    .split('\n')
+    .map(l => l.trim())
+    .filter(l => l && !l.endsWith(':'))
   const mergedGoals = Array.from(
     new Set([
       ...(goals.length ? goals : ['Clarify presenting concerns and establish treatment goals.']),
-      ...guidance.goals,
+      ...guidanceGoalLines,
     ])
   ).slice(0, 5)
 
+  const guidanceInterventionLines = guidance.interventions
+    .split('\n')
+    .map(l => l.replace(/^\d+\.\s*/, '').trim())
+    .filter(l => l && !l.endsWith(':'))
   const mergedInterventions = Array.from(
     new Set([
       ...buildInterventions(intake),
-      ...guidance.interventions,
+      ...guidanceInterventionLines,
     ])
   ).slice(0, 6)
 

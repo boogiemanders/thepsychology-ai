@@ -13,8 +13,8 @@
  * This script parses all Q&A pairs, then maps them to structured IntakeData fields.
  */
 
-import { IntakeData, EMPTY_INTAKE, AssessmentResult, AssessmentItem } from '../lib/types'
-import { mergeIntake } from '../lib/storage'
+import { IntakeData, EMPTY_INTAKE, AssessmentResult, AssessmentItem, TreatmentPlanData, TreatmentPlanGoal, EMPTY_TREATMENT_PLAN } from '../lib/types'
+import { mergeIntake, saveTreatmentPlan } from '../lib/storage'
 import {
   injectButton,
   showToast,
@@ -682,6 +682,248 @@ async function handleAssessmentCapture(): Promise<void> {
   }
 }
 
+// ── Treatment Plan Extraction ──
+
+function isTreatmentPlanPage(): boolean {
+  return /\/clients\/[^/]+\/diagnosis_treatment_plans\//.test(window.location.pathname)
+}
+
+function extractTreatmentPlanData(): TreatmentPlanData {
+  const plan: TreatmentPlanData = { ...EMPTY_TREATMENT_PLAN }
+  plan.clientId = getClientIdFromUrl()
+  plan.sourceUrl = window.location.href
+
+  // Extract diagnoses from ul.diagnoses
+  const diagEls = document.querySelectorAll('ul.diagnoses li div')
+  plan.diagnoses = Array.from(diagEls).map((el) => {
+    const text = (el.textContent ?? '').trim()
+    const match = text.match(/^([A-Z]\d[\d.]*)\s*-\s*(.+)$/)
+    return match
+      ? { code: match[1], description: match[2].trim() }
+      : { code: '', description: text }
+  }).filter((d) => d.description)
+
+  // Extract structured content from .markdown
+  const markdown = document.querySelector('.markdown')
+  if (markdown) {
+    const sections = parseTreatmentPlanMarkdown(markdown)
+    plan.presentingProblem = sections.presentingProblem
+    plan.clientStrengths = sections.clientStrengths
+    plan.clientRisks = sections.clientRisks
+    plan.goals = sections.goals
+    plan.interventions = sections.interventions
+    plan.treatmentType = sections.treatmentType
+    plan.estimatedLength = sections.estimatedLength
+    plan.medicalNecessity = sections.medicalNecessity
+  }
+
+  // Extract treatment frequency
+  const freqEl = document.querySelector('.treatment-frequency .field span')
+  plan.treatmentFrequency = freqEl?.textContent?.trim() ?? ''
+
+  // Extract date assigned
+  const dateEl = document.querySelector('.date-time span')
+  plan.dateAssigned = dateEl?.textContent?.trim() ?? ''
+
+  plan.capturedAt = new Date().toISOString()
+  return plan
+}
+
+interface ParsedTreatmentPlanSections {
+  presentingProblem: string
+  clientStrengths: string
+  clientRisks: string
+  goals: TreatmentPlanGoal[]
+  interventions: string[]
+  treatmentType: string
+  estimatedLength: string
+  medicalNecessity: string[]
+}
+
+function parseTreatmentPlanMarkdown(container: Element): ParsedTreatmentPlanSections {
+  const result: ParsedTreatmentPlanSections = {
+    presentingProblem: '',
+    clientStrengths: '',
+    clientRisks: '',
+    goals: [],
+    interventions: [],
+    treatmentType: '',
+    estimatedLength: '',
+    medicalNecessity: [],
+  }
+
+  // Walk through headings and collect content after each
+  const children = Array.from(container.children)
+  let currentSection = ''
+  let currentGoal: TreatmentPlanGoal | null = null
+  let currentObjectiveId = ''
+
+  for (let i = 0; i < children.length; i++) {
+    const el = children[i]
+    const tag = el.tagName.toLowerCase()
+    const text = (el.textContent ?? '').trim()
+    const id = el.id || ''
+
+    // Detect section headings
+    if (tag === 'h3' || tag === 'h2') {
+      const lower = text.toLowerCase().replace(/:$/, '')
+
+      if (lower.includes('presenting problem')) {
+        currentSection = 'presenting-problem'
+        continue
+      }
+      if (lower.includes('client strengths')) {
+        currentSection = 'strengths'
+        continue
+      }
+      if (lower.includes('client risks')) {
+        currentSection = 'risks'
+        continue
+      }
+      if (lower.includes('interventions')) {
+        currentSection = 'interventions'
+        continue
+      }
+      if (lower.includes('treatment approach')) {
+        currentSection = 'treatment-approach'
+        continue
+      }
+      if (lower.includes('medical necessity')) {
+        currentSection = 'medical-necessity'
+        continue
+      }
+
+      // Goal heading: "Goal 1", "Goal 2:", etc.
+      const goalMatch = lower.match(/^goal\s*(\d+)/)
+      if (goalMatch) {
+        if (currentGoal) result.goals.push(currentGoal)
+        currentGoal = {
+          goalNumber: parseInt(goalMatch[1]),
+          goal: '',
+          estimatedCompletion: '',
+          status: '',
+          objectives: [],
+        }
+        currentSection = 'goal'
+        continue
+      }
+
+      // Objective heading: "Objective 1A:", "Objective 2B:", etc.
+      const objMatch = lower.match(/^objective\s*(\d+[a-z])/)
+      if (objMatch) {
+        currentObjectiveId = objMatch[1].toUpperCase()
+        currentSection = 'objective'
+        continue
+      }
+
+      if (lower.includes('goals and objectives')) {
+        currentSection = 'goals-header'
+        continue
+      }
+    }
+
+    // Collect content based on current section
+    if (tag === 'p') {
+      const pText = text
+
+      // Check for labeled content: "Goal: ...", "Estimated date of completion: ..."
+      const labelMatch = pText.match(/^(.+?):\s*(.+)$/)
+      if (labelMatch) {
+        const label = labelMatch[1].toLowerCase()
+        const value = labelMatch[2].trim()
+
+        if (currentSection === 'goal' && currentGoal) {
+          if (label === 'goal') currentGoal.goal = value
+          else if (label.includes('estimated')) currentGoal.estimatedCompletion = value
+          else if (label === 'status') currentGoal.status = value
+          continue
+        }
+
+        if (currentSection === 'objective' && currentGoal) {
+          if (label === 'objective') {
+            currentGoal.objectives.push({
+              id: currentObjectiveId,
+              objective: value,
+              estimatedCompletion: '',
+            })
+          } else if (label.includes('estimated') && currentGoal.objectives.length > 0) {
+            currentGoal.objectives[currentGoal.objectives.length - 1].estimatedCompletion = value
+          }
+          continue
+        }
+
+        if (currentSection === 'treatment-approach') {
+          if (label.includes('treatment type')) result.treatmentType = value
+          else if (label.includes('estimated length')) result.estimatedLength = value
+          continue
+        }
+      }
+
+      if (currentSection === 'presenting-problem') {
+        result.presentingProblem += (result.presentingProblem ? '\n' : '') + pText
+      }
+    }
+
+    if (tag === 'ul') {
+      const items = Array.from(el.querySelectorAll('li')).map((li) => (li.textContent ?? '').trim()).filter(Boolean)
+
+      if (currentSection === 'strengths') {
+        result.clientStrengths = items.join('\n')
+      } else if (currentSection === 'risks') {
+        result.clientRisks = items.join('\n')
+      } else if (currentSection === 'interventions') {
+        result.interventions = items.map((item) => {
+          // Split "Therapy Name\ndescription" into just the name for the list
+          return item.split('\n')[0].trim()
+        })
+      } else if (currentSection === 'medical-necessity') {
+        result.medicalNecessity = items
+      }
+    }
+  }
+
+  // Push last goal
+  if (currentGoal) result.goals.push(currentGoal)
+
+  return result
+}
+
+async function handleCaptureTreatmentPlan(): Promise<void> {
+  try {
+    assertExtensionContext()
+    showToast('Capturing treatment plan...', 'success')
+
+    const plan = extractTreatmentPlanData()
+    const diagCount = plan.diagnoses.length
+    const goalCount = plan.goals.length
+
+    if (diagCount === 0 && goalCount === 0 && !plan.presentingProblem) {
+      showToast('No treatment plan data found on this page.', 'error')
+      return
+    }
+
+    await saveTreatmentPlan(plan)
+
+    const parts: string[] = []
+    if (diagCount) parts.push(`${diagCount} diagnoses`)
+    if (goalCount) parts.push(`${goalCount} goals`)
+    if (plan.interventions.length) parts.push(`${plan.interventions.length} interventions`)
+
+    showToast(`Captured treatment plan: ${parts.join(', ')}`, 'success')
+
+    console.groupCollapsed(`[SPN] Captured treatment plan (${parts.join(', ')})`)
+    console.log('[SPN] Treatment plan:', plan)
+    console.groupEnd()
+  } catch (err) {
+    if (isExtensionContextInvalidatedError(err)) {
+      showToast('Extension reloaded — please refresh this page.', 'error')
+    } else {
+      console.error('[SPN] Treatment plan capture error:', err)
+      showToast('Failed to capture treatment plan.', 'error')
+    }
+  }
+}
+
 // ── Button Injection & Main Loop ──
 
 async function handleCaptureClick(): Promise<void> {
@@ -750,6 +992,17 @@ function injectCaptureButton(): void {
     return
   }
 
+  // Treatment plan page — show treatment-plan capture button
+  if (isTreatmentPlanPage()) {
+    if (document.getElementById('spn-treatment-plan-btn')) return
+
+    injectButton('Capture Treatment Plan', handleCaptureTreatmentPlan, {
+      id: 'spn-treatment-plan-btn',
+      position: 'bottom-right',
+    })
+    return
+  }
+
   // Intake form page — show intake capture button
   if (document.getElementById('spn-capture-btn')) return
   if (!hasIntakeForm()) return
@@ -773,7 +1026,12 @@ const observer = new MutationObserver(() => {
   }
 
   // Retry injection if form hasn't loaded yet
-  if (isClientPage() && !document.getElementById('spn-capture-btn') && retryCount < MAX_RETRIES) {
+  const hasAnyCaptureButton =
+    !!document.getElementById('spn-capture-btn') ||
+    !!document.getElementById('spn-treatment-plan-btn') ||
+    !!document.getElementById('spn-assessment-btn')
+
+  if (isClientPage() && !hasAnyCaptureButton && retryCount < MAX_RETRIES) {
     retryCount++
     setTimeout(injectCaptureButton, 1000)
   }

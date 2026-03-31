@@ -89,6 +89,13 @@ function tokenize(query: string): string[] {
 }
 
 async function loadJson<T>(path: string): Promise<T> {
+  if (!chrome.runtime?.id) {
+    // Clear caches so a retry after page reload doesn't use stale promises
+    delete manifestCache.promise
+    delete indexCache.promise
+    resourceCache.clear()
+    throw new Error('Extension context invalidated — reload the page to retry')
+  }
   const url = chrome.runtime.getURL(path)
   const resp = await fetch(url, { cache: 'no-store' })
   if (!resp.ok) {

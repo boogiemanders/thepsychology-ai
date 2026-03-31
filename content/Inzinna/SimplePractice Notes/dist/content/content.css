@@ -72,3 +72,104 @@
     transform: translateY(0);
   }
 }
+
+/* Video Room Session Notes Panel */
+#spn-video-notes {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 340px;
+  z-index: 999999;
+  border-radius: 12px;
+  background: #1e1b2e;
+  border: 1px solid rgba(124, 58, 237, 0.4);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #e2e0ea;
+  overflow: hidden;
+  animation: spn-slide-in 0.3s ease-out;
+}
+
+#spn-video-notes.spn-video-notes-minimized {
+  width: auto;
+}
+
+.spn-video-notes-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  background: rgba(124, 58, 237, 0.15);
+  border-bottom: 1px solid rgba(124, 58, 237, 0.25);
+  cursor: default;
+  user-select: none;
+}
+
+.spn-video-notes-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #c4b5fd;
+  letter-spacing: 0.02em;
+}
+
+.spn-video-notes-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.spn-video-notes-status {
+  font-size: 11px;
+  color: #8b7fb8;
+  transition: opacity 0.2s;
+}
+
+.spn-video-notes-toggle {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 6px;
+  background: rgba(124, 58, 237, 0.25);
+  color: #c4b5fd;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+  line-height: 1;
+}
+
+.spn-video-notes-toggle:hover {
+  background: rgba(124, 58, 237, 0.45);
+}
+
+.spn-video-notes-body {
+  padding: 10px;
+}
+
+.spn-video-notes-textarea {
+  width: 100%;
+  height: 220px;
+  padding: 10px 12px;
+  border: 1px solid rgba(124, 58, 237, 0.2);
+  border-radius: 8px;
+  background: #141121;
+  color: #e2e0ea;
+  font-size: 13px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.5;
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.15s;
+  box-sizing: border-box;
+}
+
+.spn-video-notes-textarea::placeholder {
+  color: #5b5478;
+}
+
+.spn-video-notes-textarea:focus {
+  border-color: rgba(124, 58, 237, 0.5);
+}

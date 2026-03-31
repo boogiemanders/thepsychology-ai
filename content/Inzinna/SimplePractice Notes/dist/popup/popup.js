@@ -100,6 +100,11 @@
     generatedAt: "",
     status: { ...DEFAULT_NOTE_STATUS }
   };
+  var EMPTY_SESSION_NOTES = {
+    apptId: "",
+    notes: "",
+    updatedAt: ""
+  };
   var DEFAULT_PREFERENCES = {
     providerFirstName: "Anders",
     providerLastName: "Chan",
@@ -286,6 +291,10 @@
   var NOTE_KEY = "spn_note";
   var DIAGNOSTIC_WORKSPACE_KEY = "spn_diagnostic_workspace";
   var PREFS_KEY = "spn_preferences";
+  var SESSION_NOTES_KEY = "spn_session_notes";
+  var TREATMENT_PLAN_KEY = "spn_treatment_plan";
+  var SOAP_DRAFT_KEY = "spn_soap_draft";
+  var TRANSCRIPT_KEY = "spn_transcript";
   function normalizeIntake(intake) {
     return {
       ...EMPTY_INTAKE,
@@ -305,6 +314,7 @@
       code: impression?.code ?? "",
       name: impression?.name ?? "",
       confidence: impression?.confidence ?? "low",
+      diagnosticReasoning: impression?.diagnosticReasoning?.trim() ?? "",
       criteriaEvidence: Array.isArray(impression?.criteriaEvidence) ? impression.criteriaEvidence : [],
       criteriaSummary: Array.isArray(impression?.criteriaSummary) ? impression.criteriaSummary : [],
       ruleOuts: Array.isArray(impression?.ruleOuts) ? impression.ruleOuts : [],
@@ -389,13 +399,32 @@
     const result = await chrome.storage.local.get(PREFS_KEY);
     return !!result[PREFS_KEY];
   }
+  async function getSessionNotes(apptId) {
+    const result = await chrome.storage.session.get(SESSION_NOTES_KEY);
+    const notes = result[SESSION_NOTES_KEY];
+    if (!notes || notes.apptId !== apptId) return null;
+    return { ...EMPTY_SESSION_NOTES, ...notes };
+  }
+  async function saveSessionNotes(notes) {
+    await chrome.storage.session.set({ [SESSION_NOTES_KEY]: notes });
+  }
   async function clearAll() {
-    await chrome.storage.session.remove([INTAKE_KEY, NOTE_KEY, DIAGNOSTIC_WORKSPACE_KEY]);
+    await chrome.storage.session.remove([
+      INTAKE_KEY,
+      NOTE_KEY,
+      DIAGNOSTIC_WORKSPACE_KEY,
+      SESSION_NOTES_KEY,
+      TREATMENT_PLAN_KEY,
+      SOAP_DRAFT_KEY,
+      TRANSCRIPT_KEY
+    ]);
   }
 
   // src/lib/clinical-knowledge.ts
   var INDEX_PATH = "assets/clinical-knowledge/index.json";
+  var manifestCache = {};
   var indexCache = {};
+  var resourceCache = /* @__PURE__ */ new Map();
   function normalizeTerm(term) {
     return term.toLowerCase().replace(/[^a-z0-9\s-]/g, " ").replace(/\s+/g, " ").trim();
   }
@@ -403,6 +432,12 @@
     return normalizeTerm(query).split(" ").filter((term) => term.length >= 3);
   }
   async function loadJson(path) {
+    if (!chrome.runtime?.id) {
+      delete manifestCache.promise;
+      delete indexCache.promise;
+      resourceCache.clear();
+      throw new Error("Extension context invalidated \u2014 reload the page to retry");
+    }
     const url = chrome.runtime.getURL(path);
     const resp = await fetch(url, { cache: "no-store" });
     if (!resp.ok) {
@@ -525,6 +560,34 @@
   function pickFactors(values, max = 3) {
     return values.map((value) => clip(value ?? "")).filter(Boolean).slice(0, max);
   }
+  function normalizeGenderLabel(raw) {
+    const lower = raw.trim().toLowerCase();
+    if (/\b(male|man|boy)\b/.test(lower)) return "male";
+    if (/\b(female|woman|girl)\b/.test(lower)) return "female";
+    if (/\b(non-?binary|genderqueer|genderfluid)\b/.test(lower)) return "non-binary";
+    return "";
+  }
+  function buildEthnicityLabel(ethnicity, race) {
+    const eth = ethnicity.trim();
+    const r = race.trim();
+    if (/^yes$/i.test(eth)) return r ? `${r} Hispanic/Latino` : "Hispanic/Latino";
+    if (/^no$/i.test(eth)) return r;
+    return eth || r;
+  }
+  function buildOccupationContext(occupation) {
+    const trimmed = occupation.trim();
+    if (!trimmed) return "";
+    if (/unemployed|not working|out of work/i.test(trimmed)) return "currently unemployed";
+    const cleaned = trimmed.replace(/^(a|an)\s+/i, "").replace(/[.]+$/, "").trim();
+    if (cleaned.length > 3 && cleaned.length < 60) return `with stable employment as a ${cleaned.toLowerCase()}`;
+    return "with stable employment";
+  }
+  function buildSubstanceContext(alcohol, drug, history) {
+    const negative = /^(no|none|n\/a|na|denied|denies|negative)$/i;
+    const parts = [alcohol, drug, history].map((v) => v.trim()).filter((v) => v && !negative.test(v));
+    if (!parts.length) return "";
+    return unique2(parts).slice(0, 2).join("; ");
+  }
   function buildProfile(intake, diagnosticImpressions) {
     const diagnosisText = normalizeText(
       diagnosticImpressions.map((impression) => `${impression.name} ${impression.disorderId}`).join(" ")
@@ -613,7 +676,22 @@
       hasInterpersonalStrain,
       hasSleepIssue,
       hasAdolescentPresentation: age !== null && age <= 19,
-      needsMedicalCoordination
+      needsMedicalCoordination,
+      // Demographics for biopsychosocial narrative
+      clientName: firstNonEmpty(intake.firstName, intake.fullName) || "Patient",
+      age,
+      genderLabel: normalizeGenderLabel(firstNonEmpty(intake.genderIdentity, intake.sex)),
+      ethnicityLabel: buildEthnicityLabel(intake.ethnicity, intake.race),
+      occupationContext: buildOccupationContext(intake.occupation),
+      relationshipContext: clip(intake.relationshipDescription.trim(), 80),
+      livingContext: intake.livingArrangement.trim().toLowerCase(),
+      hasMedicalIssues: Boolean(
+        intake.medicalHistory.trim() && !/^(none|no|denied|denies|n\/a|na)$/i.test(intake.medicalHistory.trim())
+      ),
+      medicationContext: intake.medications.trim() && !/^(none|no|denied|denies|n\/a|na)$/i.test(intake.medications.trim()) ? clip(intake.medications.trim(), 80) : "",
+      substanceContext: buildSubstanceContext(intake.alcoholUse, intake.drugUse, intake.substanceUseHistory),
+      phq9Score: intake.phq9?.totalScore ?? null,
+      gad7Score: intake.gad7?.totalScore ?? null
     };
   }
   function selectResourceIds(profile) {
@@ -638,13 +716,33 @@
   function buildQueries(profile) {
     const diagnosisClause = profile.diagnoses.length ? profile.diagnoses.join(" ") : [profile.hasDepression ? "depression" : "", profile.hasAnxiety ? "anxiety" : "", profile.hasSubstance ? "substance use" : ""].filter(Boolean).join(" ");
     const queries = unique2([
-      `case formulation ${diagnosisClause} ${profile.primaryConcern}`.trim(),
       `treatment plan interventions ${diagnosisClause} ${profile.patientGoals.join(" ")}`.trim(),
       profile.hasSubstance ? "motivational interviewing relapse prevention ambivalence substance use" : "",
       profile.hasEmotionDysregulation || profile.hasSelfHarmRisk ? "dbt distress tolerance emotion regulation chain analysis safety planning" : "",
       profile.hasTrauma || profile.hasPersonality || profile.hasInterpersonalStrain ? "psychodynamic formulation attachment personality functioning relationship patterns" : ""
     ]);
     return queries.slice(0, 5);
+  }
+  function buildFormulationQueries(profile, diagnosticImpressions) {
+    const diagnosisClause = diagnosticImpressions.length ? diagnosticImpressions.map((impression) => impression.name).join(" ") : profile.diagnoses.join(" ");
+    const queries = [
+      `case formulation ${diagnosisClause} mechanisms precipitants origins treatment planning`.trim(),
+      "elements of a case formulation symptoms problems mechanisms precipitants origins",
+      "using the formulation to develop a treatment plan diagnosis goals"
+    ];
+    if (profile.hasPersonality || profile.hasTrauma || profile.hasInterpersonalStrain) {
+      queries.push("psychodynamic formulation attachment defenses personality functioning relationship patterns");
+      queries.push("case formulation psychodynamic trauma personality disrupted safety defenses coping");
+    }
+    return unique2(queries).slice(0, 5);
+  }
+  function selectFormulationResourceIds(profile) {
+    const ids = [RESOURCE_IDS.caseFormulationCbt];
+    if (profile.hasPersonality || profile.hasTrauma || profile.hasInterpersonalStrain) {
+      ids.push(RESOURCE_IDS.psychoanalytic);
+      ids.push(RESOURCE_IDS.pdm);
+    }
+    return ids;
   }
   function dedupeReferences(results) {
     const seen = /* @__PURE__ */ new Set();
@@ -661,7 +759,7 @@
         preview: result.chunk.preview,
         score: result.score
       });
-      if (references.length >= 6) break;
+      if (references.length >= 5) break;
     }
     return references;
   }
@@ -682,85 +780,382 @@
     }
     return unique2(modalities).slice(0, 4);
   }
-  function buildFormulation(profile, modalities) {
-    const sentences = [];
-    if (profile.diagnoses.length) {
-      sentences.push(`Working diagnostic focus currently centers on ${joinList(profile.diagnoses)}.`);
-    } else if (profile.primaryConcern) {
-      sentences.push(`Current presentation is organized around ${profile.primaryConcern.replace(/[.]+$/, "")}.`);
+  function buildProblemList(profile) {
+    const problems = [];
+    if (profile.hasDepression) problems.push("depressed mood and reduced interest/pleasure");
+    if (profile.hasAnxiety) problems.push("anxiety, worry, and physiological tension");
+    if (profile.hasTrauma) problems.push("trauma-related symptoms and cue sensitivity");
+    if (profile.hasSleepIssue) problems.push("sleep disruption");
+    if (profile.hasInterpersonalStrain) problems.push("interpersonal strain");
+    if (profile.hasSubstance) problems.push("substance-related coping or harm");
+    if (profile.primaryConcern) problems.push(profile.primaryConcern.replace(/[.]+$/, ""));
+    return unique2(problems).slice(0, 5);
+  }
+  function inferPronoun(genderLabel) {
+    if (genderLabel === "male") return { subject: "he", possessive: "his" };
+    if (genderLabel === "female") return { subject: "she", possessive: "her" };
+    return { subject: "they", possessive: "their" };
+  }
+  function summarizePresentingConcern(profile) {
+    const symptoms = [];
+    if (profile.hasAnxiety) symptoms.push("anxiety");
+    if (profile.hasDepression) symptoms.push("depression");
+    if (profile.hasTrauma) symptoms.push("trauma-related distress");
+    if (profile.hasSubstance) symptoms.push("substance use concerns");
+    if (profile.hasEmotionDysregulation) symptoms.push("difficulty managing emotions");
+    if (!symptoms.length && profile.primaryConcern) {
+      return profile.primaryConcern.replace(/[.]+$/, "").toLowerCase();
     }
-    if (profile.predisposingFactors.length) {
-      sentences.push(`Predisposing factors include ${joinList(profile.predisposingFactors)}.`);
-    }
-    if (profile.precipitatingFactors.length) {
-      sentences.push(`Precipitating factors include ${joinList(profile.precipitatingFactors)}.`);
-    }
-    if (profile.perpetuatingFactors.length) {
-      sentences.push(`Perpetuating factors likely include ${joinList(profile.perpetuatingFactors)}.`);
-    }
-    if (profile.protectiveFactors.length) {
-      sentences.push(`Protective factors include ${joinList(profile.protectiveFactors)}.`);
+    return symptoms.length ? `symptoms of ${joinList(symptoms)}` : "presenting concerns";
+  }
+  function normalizeRelationshipForNarrative(raw) {
+    if (!raw) return "";
+    return raw.replace(/^(Girlfriend|Boyfriend|Partner|Spouse|Wife|Husband)/i, (m) => m.toLowerCase()).replace(/,\s*/, " of ").trim();
+  }
+  function buildOpeningSentence(profile) {
+    const parts = [profile.clientName];
+    parts.push("is a");
+    const descriptors = [];
+    if (profile.age) descriptors.push(`${profile.age}-year-old`);
+    if (profile.ethnicityLabel) descriptors.push(profile.ethnicityLabel);
+    if (profile.genderLabel) descriptors.push(profile.genderLabel);
+    if (descriptors.length) {
+      parts.push(descriptors.join(" "));
     } else {
-      sentences.push("Protective factors need direct clarification during follow-up.");
+      parts.push("patient");
     }
-    sentences.push(`Initial formulation and treatment planning are best anchored in ${joinList(modalities)}.`);
-    return sentences.join(" ");
+    const context = [];
+    if (profile.occupationContext) context.push(profile.occupationContext);
+    const relNarrative = normalizeRelationshipForNarrative(profile.relationshipContext);
+    if (relNarrative) context.push(`${relNarrative}`);
+    if (context.length) parts.push(context.join(" and "));
+    const concern = summarizePresentingConcern(profile);
+    const precipitant = profile.primaryConcern.match(/(?:following|after|relating to|due to)\s+(.+)/i)?.[1]?.replace(/[.]+$/, "");
+    if (precipitant) {
+      parts.push(`who presents with ${concern} relating to ${precipitant.toLowerCase()}`);
+    } else if (profile.precipitatingFactors.length) {
+      parts.push(`who presents with ${concern} relating to ${clip(profile.precipitatingFactors[0], 80).toLowerCase().replace(/[.]+$/, "")}`);
+    } else {
+      parts.push(`who presents with ${concern}`);
+    }
+    return `${parts.join(" ")}.`;
+  }
+  function buildBiologicalParagraph(profile) {
+    const { possessive } = inferPronoun(profile.genderLabel);
+    const capPossessive = possessive.charAt(0).toUpperCase() + possessive.slice(1);
+    const lines = [];
+    if (profile.hasMedicalIssues) {
+      lines.push(`${profile.clientName} has a history of medical issues that may be playing a role.`);
+    } else {
+      lines.push(`${profile.clientName} has no major medical issues reported.`);
+    }
+    if (profile.medicationContext) {
+      lines.push(`Current medications include ${profile.medicationContext}.`);
+    }
+    const somatic = [];
+    if (profile.hasSleepIssue) somatic.push("trouble sleeping");
+    if (profile.hasDepression) somatic.push("low energy");
+    if (profile.hasAnxiety) somatic.push("physical tension");
+    if (somatic.length) {
+      lines.push(`${capPossessive} body is showing signs of stress: ${joinList(somatic)}.`);
+    }
+    return lines.join(" ");
+  }
+  function buildPsychologicalParagraphs(profile, diagnosticImpressions) {
+    const { subject } = inferPronoun(profile.genderLabel);
+    const capSubject = subject.charAt(0).toUpperCase() + subject.slice(1);
+    const paragraphs = [];
+    const problemList = buildProblemList(profile);
+    if (problemList.length) {
+      const scores = [];
+      if (profile.phq9Score !== null) scores.push(`PHQ-9: ${profile.phq9Score}`);
+      if (profile.gad7Score !== null) scores.push(`GAD-7: ${profile.gad7Score}`);
+      const scoreNote = scores.length ? ` (in clinical interview, ${scores.join(", and ")})` : "";
+      paragraphs.push(`${capSubject} reported ${joinList(problemList)}${scoreNote}.`);
+    }
+    if (profile.hasDepression && profile.hasAnxiety) {
+      paragraphs.push("From a CBT lens, catastrophic interpretations and somatic vigilance may be maintaining anxiety, while behavioral withdrawal reinforces low mood.");
+    } else if (profile.hasDepression) {
+      paragraphs.push("From a CBT lens, doing less and pulling away from daily routines reinforces the low mood over time.");
+    } else if (profile.hasAnxiety) {
+      paragraphs.push("From a CBT lens, avoiding the things that cause worry gives short-term relief but makes the anxiety stronger over time.");
+    } else {
+      paragraphs.push("From a CBT lens, avoidance and withdrawal patterns may be keeping the current problems in place.");
+    }
+    if (profile.hasTrauma) {
+      const traumaLines = [
+        "From a trauma-focused view, avoiding reminders of what happened may feel safer in the short term but keeps the fear response active."
+      ];
+      if (profile.hasEmotionDysregulation || profile.hasSelfHarmRisk) {
+        traumaLines.push(`${capSubject} may also struggle to handle strong feelings, which can lead to risky or impulsive ways of coping when stress gets too high.`);
+      }
+      paragraphs.push(traumaLines.join(" "));
+    } else if (profile.hasEmotionDysregulation || profile.hasSelfHarmRisk) {
+      paragraphs.push(`${capSubject} may also struggle to handle strong feelings, which can lead to risky or impulsive ways of coping when stress gets too high.`);
+    }
+    if (profile.hasTrauma && (profile.hasPersonality || profile.hasInterpersonalStrain)) {
+      paragraphs.push(`From a psychodynamic view, the trauma can change ${profile.clientName}'s earlier sense of safety and control, overwhelming coping strategies that used to work. Relationship patterns may reflect old ways of protecting against feeling helpless or unsafe.`);
+    } else if (profile.hasTrauma) {
+      paragraphs.push(`From a psychodynamic view, the trauma can change ${profile.clientName}'s earlier sense of safety and control, overwhelming coping strategies that used to work.`);
+    } else if (profile.hasPersonality || profile.hasInterpersonalStrain) {
+      paragraphs.push(`From a psychodynamic view, repeating patterns in relationships, like expecting rejection or needing constant reassurance, may trace back to earlier experiences that shaped how ${subject} relates to others.`);
+    }
+    return paragraphs;
+  }
+  function buildSocialParagraph(profile) {
+    const lines = [];
+    const strengths = [];
+    if (profile.occupationContext && profile.occupationContext !== "currently unemployed") {
+      strengths.push("employment");
+    }
+    const relNarrative = normalizeRelationshipForNarrative(profile.relationshipContext);
+    if (relNarrative) strengths.push(`a relationship (${relNarrative})`);
+    if (profile.livingContext && !/alone/i.test(profile.livingContext)) {
+      strengths.push(`housing (${profile.livingContext})`);
+    }
+    if (strengths.length) {
+      lines.push(`On the social side, ${profile.clientName} has some important supports in place: ${joinList(strengths)}.`);
+    } else {
+      lines.push(`Social supports are limited and should be explored more in follow-up.`);
+    }
+    if (profile.hasDepression || profile.hasInterpersonalStrain) {
+      lines.push(`However, pulling away from people and activities is a concern that could weaken these supports over time.`);
+    }
+    return lines.join(" ");
+  }
+  function buildFormulation(profile, modalities, diagnosticImpressions) {
+    const paragraphs = [];
+    paragraphs.push(buildOpeningSentence(profile));
+    paragraphs.push(buildBiologicalParagraph(profile));
+    paragraphs.push(...buildPsychologicalParagraphs(profile, diagnosticImpressions));
+    paragraphs.push(buildSocialParagraph(profile));
+    if (profile.hasSubstance && profile.substanceContext) {
+      const isVague = /^(yes|y)$/i.test(profile.substanceContext.trim());
+      if (isVague) {
+        paragraphs.push(`${profile.clientName} reported substance use in the intake form, which could be a way of coping with distress and raise the risk that symptoms stick around longer. More assessment for type of substances is needed.`);
+      } else {
+        paragraphs.push(`${profile.clientName} reported substance use (${profile.substanceContext}), which could be a way of coping with distress and raise the risk that symptoms stick around longer.`);
+      }
+    } else if (profile.hasSubstance) {
+      paragraphs.push(`${profile.clientName} reported substance use in the intake form, which could be a way of coping with distress and raise the risk that symptoms stick around longer. More assessment for type of substances is needed.`);
+    }
+    paragraphs.push(`Treatment can start with ${joinList(modalities)}.`);
+    return paragraphs.join("\n\n");
   }
   function buildGoals(profile) {
-    const goals = [...profile.patientGoals];
-    if (!goals.length) {
-      goals.push("Clarify the symptom pattern and improve day-to-day functioning.");
+    const goals = [];
+    const objectives = [];
+    if (profile.hasTrauma && profile.hasAnxiety) {
+      goals.push("Reduce anxiety symptoms related to trauma");
+    } else if (profile.hasAnxiety) {
+      goals.push("Reduce anxiety symptoms and worry");
+    } else if (profile.hasTrauma) {
+      goals.push("Process trauma-related distress and restore safety");
     }
-    if (profile.hasDepression || profile.hasAnxiety) {
-      goals.push("Reduce mood and anxiety symptom burden while restoring routine functioning.");
+    if (profile.hasDepression) {
+      goals.push("Improve mood and energy");
     }
-    if (profile.hasSelfHarmRisk || profile.hasEmotionDysregulation) {
-      goals.push("Increase safety, distress tolerance, and use of non-harm coping responses.");
-    }
-    if (profile.hasTrauma) {
-      goals.push("Strengthen grounding, stabilization, and trauma-informed coping.");
+    if (profile.hasAnxiety || profile.hasTrauma) {
+      goals.push("Decrease avoidance and increase functioning");
     }
     if (profile.hasSubstance) {
-      goals.push("Reduce substance-related harm and strengthen relapse-prevention planning.");
-    }
-    if (profile.hasInterpersonalStrain || profile.hasPersonality) {
-      goals.push("Improve interpersonal stability and reflective capacity in relationships.");
-    }
-    return unique2(goals).slice(0, 5);
-  }
-  function buildInterventions(profile) {
-    const interventions = [
-      "Complete diagnostic clarification, timeline review, and measurement-based monitoring at follow-up visits."
-    ];
-    if (profile.hasDepression) {
-      interventions.push("Use behavioral activation and routine-building to increase reinforcement and daily structure.");
-    }
-    if (profile.hasAnxiety) {
-      interventions.push("Use CBT skills to target worry, avoidance, and graduated behavioral practice.");
+      goals.push("Address substance use as coping");
     }
     if (profile.hasEmotionDysregulation || profile.hasSelfHarmRisk) {
-      interventions.push("Teach DBT distress-tolerance and emotion-regulation skills, and use chain analysis for high-risk behaviors.");
+      goals.push("Strengthen distress tolerance and reduce self-harm risk");
+    }
+    if (profile.hasInterpersonalStrain || profile.hasPersonality) {
+      goals.push("Improve relational stability and reflective capacity");
+    }
+    for (const g of profile.patientGoals) {
+      if (!goals.some((existing) => existing.toLowerCase().includes(g.toLowerCase().slice(0, 20)))) {
+        goals.push(g);
+      }
+    }
+    if (!goals.length) {
+      goals.push("Clarify the symptom pattern and restore baseline functioning");
+    }
+    goals.push("Restore baseline functioning");
+    objectives.push("Identify and track triggers (week 1-2)");
+    if (profile.hasDepression) {
+      objectives.push("Increase 2-3 pleasurable or meaningful activities weekly");
+    }
+    if (profile.hasAnxiety || profile.hasTrauma) {
+      objectives.push("Learn 2 grounding skills");
+    }
+    if (profile.hasAnxiety || profile.hasDepression) {
+      objectives.push("Begin cognitive restructuring of unhelpful thought patterns");
     }
     if (profile.hasSubstance) {
-      interventions.push("Use motivational interviewing to explore ambivalence, strengthen change talk, and build relapse-prevention steps.");
-      interventions.push("Review ASAM-informed level-of-care, withdrawal-risk, and recovery-support needs.");
+      objectives.push("Explore substance use patterns and motivation for change");
     }
+    if (profile.hasEmotionDysregulation || profile.hasSelfHarmRisk) {
+      objectives.push("Practice one distress tolerance skill between sessions");
+    }
+    if (profile.hasInterpersonalStrain || profile.hasPersonality) {
+      objectives.push("Identify one recurring relational pattern to explore");
+    }
+    objectives.push("Finalize measurable treatment goals (session 2-3)");
+    const lines = [];
+    lines.push("Goals:");
+    for (const g of unique2(goals).slice(0, 6)) {
+      lines.push(`  ${g}`);
+    }
+    lines.push("");
+    lines.push("Objectives:");
+    for (const o of unique2(objectives).slice(0, 6)) {
+      lines.push(`  ${o}`);
+    }
+    return lines.join("\n");
+  }
+  function buildInterventions(profile) {
+    const domains = [];
+    let domainNum = 0;
     if (profile.hasTrauma) {
-      interventions.push("Prioritize stabilization, grounding, and pacing before deeper trauma processing.");
+      const items = [];
+      items.push("Trauma-focused CBT");
+      items.push("Psychoeducation on trauma response");
+      items.push("Gradual exposure to trauma-related cues (as appropriate)");
+      if (profile.hasAnxiety) {
+        items.push("Grounding and stabilization before deeper processing");
+      }
+      domains.push({ title: "Trauma + Anxiety Focus", items });
     }
-    if (profile.hasPersonality || profile.hasInterpersonalStrain) {
-      interventions.push("Track recurrent relational patterns, attachment themes, and therapy-interfering behaviors in treatment.");
+    if (profile.hasDepression) {
+      const items = [];
+      items.push("Behavioral activation (increase engagement, reduce withdrawal)");
+      items.push("Monitor sleep and appetite");
+      if (profile.hasSleepIssue) {
+        items.push("Behavioral sleep-routine interventions");
+      }
+      domains.push({ title: "Depression Interventions", items });
     }
-    if (profile.hasSleepIssue) {
-      interventions.push("Address sleep disruption with behavioral sleep-routine interventions and symptom monitoring.");
+    if (profile.hasAnxiety) {
+      const items = [];
+      items.push("CBT for anxiety (cognitive restructuring, interoceptive awareness)");
+      items.push("Teach grounding and distress tolerance (DBT-informed skills)");
+      domains.push({ title: "Anxiety / Somatic Symptoms", items });
     }
-    return unique2(interventions).slice(0, 6);
+    if (profile.hasEmotionDysregulation || profile.hasSelfHarmRisk) {
+      const items = [];
+      items.push("DBT distress-tolerance and emotion-regulation skills");
+      items.push("Chain analysis for high-risk behaviors");
+      if (profile.hasSelfHarmRisk) {
+        items.push("Safety planning and crisis resource review");
+      }
+      domains.push({ title: "Emotion Regulation / Safety", items });
+    }
+    if (profile.hasSubstance) {
+      const items = [];
+      items.push("Motivational Interviewing to explore ambivalence and function of use");
+      items.push("Harm reduction vs abstinence planning based on readiness");
+      items.push("Review ASAM dimensions for level of care adjustment");
+      domains.push({ title: "Substance Use", items });
+    }
+    if (profile.hasPersonality || profile.hasTrauma || profile.hasInterpersonalStrain) {
+      const items = [];
+      if (profile.hasTrauma) {
+        items.push("Explore meaning of trauma (control, vulnerability)");
+      }
+      items.push("Assess emotional avoidance patterns");
+      if (profile.hasInterpersonalStrain || profile.hasPersonality) {
+        items.push("Track recurrent relational patterns and attachment themes");
+      }
+      domains.push({ title: "Psychodynamic / Insight Work", items });
+    }
+    if (profile.needsMedicalCoordination || profile.severeSymptoms) {
+      const items = [];
+      items.push("Consider consulting with a psychiatrist if symptoms persist or worsen");
+      if (profile.hasSleepIssue) {
+        items.push("Sleep support if insomnia emerges");
+      }
+      if (profile.hasSubstance) {
+        items.push("Medication evaluation for co-occurring substance use");
+      }
+      domains.push({ title: "Medication Evaluation", items });
+    }
+    if (!domains.length) {
+      domains.push({
+        title: "Assessment and Monitoring",
+        items: [
+          "Complete diagnostic clarification and timeline review",
+          "Measurement-based monitoring at follow-up visits"
+        ]
+      });
+    }
+    const lines = [];
+    for (const domain of domains) {
+      domainNum++;
+      lines.push(`${domainNum}. ${domain.title}`);
+      for (const item of domain.items) {
+        lines.push(`   ${item}`);
+      }
+      lines.push("");
+    }
+    return lines.join("\n").trim();
   }
   function buildFrequency(profile) {
-    if (profile.hasSelfHarmRisk || profile.hasSubstance || profile.severeSymptoms) {
-      return "Recommend weekly psychotherapy initially, with higher-contact follow-up or higher level of care if risk, withdrawal, or impairment escalates.";
+    const lines = [];
+    if (profile.hasSelfHarmRisk || profile.severeSymptoms) {
+      lines.push("Frequency: Weekly outpatient therapy (consider twice weekly if risk escalates)");
+    } else {
+      lines.push("Frequency: Weekly outpatient therapy");
     }
-    return "Recommend weekly psychotherapy initially, then adjust frequency based on symptom change and functional improvement.";
+    lines.push("");
+    lines.push("Monitoring:");
+    const monitors = [];
+    if (profile.hasDepression || profile.hasAnxiety) {
+      monitors.push("PHQ-9 / GAD-7 every 2-4 weeks");
+    }
+    if (profile.hasSubstance) {
+      monitors.push("Substance use tracking");
+    }
+    if (profile.hasSelfHarmRisk) {
+      monitors.push("Safety plan review each session");
+    }
+    if (!monitors.length) {
+      monitors.push("Symptom and functioning check-in each session");
+    }
+    for (const m of monitors) {
+      lines.push(`  ${m}`);
+    }
+    lines.push("");
+    lines.push("Reassessment:");
+    const reassess = [];
+    if (profile.hasTrauma) {
+      reassess.push("Evaluate PTSD criteria next session and after 1 month");
+    }
+    if (profile.hasSubstance) {
+      reassess.push("Reassess ASAM dimensions for level of care adjustment");
+    }
+    if (profile.diagnoses.length) {
+      const dxList = profile.diagnoses.slice(0, 3).join(", ");
+      reassess.push(`Review diagnostic accuracy for ${dxList} after 4-6 sessions`);
+    }
+    if (!reassess.length) {
+      reassess.push("Re-evaluate diagnostic impressions after 4-6 sessions");
+    }
+    for (const r of reassess) {
+      lines.push(`  ${r}`);
+    }
+    lines.push("");
+    lines.push("Referral:");
+    if (profile.needsMedicalCoordination || profile.severeSymptoms) {
+      lines.push("  Psychiatry if symptoms persist or escalate");
+    } else {
+      lines.push("  Psychiatry if symptoms escalate");
+    }
+    if (profile.hasSubstance) {
+      lines.push("  SUD specialty services if relapse severity warrants");
+    }
+    lines.push("");
+    lines.push("Safety:");
+    if (profile.hasSelfHarmRisk) {
+      lines.push("  Continue monitoring SI/HI each session: update safety plan as needed");
+    } else {
+      lines.push("  Continue monitoring SI (currently denied)");
+    }
+    return lines.join("\n");
   }
   function buildReferrals(intake, profile) {
     const referrals = [];
@@ -779,39 +1174,90 @@
     return referrals.join(" ");
   }
   function buildPlan(profile) {
-    const steps = [
-      "review the diagnostic timeline and current impairment",
-      profile.hasSelfHarmRisk ? "update safety planning" : "",
-      profile.hasSubstance ? "assess motivation, use pattern, and relapse risk" : "",
-      profile.hasEmotionDysregulation ? "introduce one concrete DBT coping skill for between-session use" : "",
-      profile.hasDepression || profile.hasAnxiety ? "assign one behavioral practice or symptom-monitoring task" : "",
-      "finalize measurable treatment goals"
-    ].filter(Boolean);
-    return `Next session: ${steps.join(", ")}.`;
+    const goals = [];
+    const objectives = [];
+    if (profile.hasTrauma && profile.hasAnxiety) {
+      goals.push("Reduce anxiety symptoms related to trauma");
+    } else if (profile.hasAnxiety) {
+      goals.push("Reduce anxiety and worry");
+    }
+    if (profile.hasDepression) {
+      goals.push("Improve mood and energy");
+    }
+    if (profile.hasAnxiety || profile.hasTrauma) {
+      goals.push("Decrease avoidance and increase functioning");
+    }
+    if (profile.hasSubstance) {
+      goals.push("Address substance use as coping");
+    }
+    if (profile.hasSelfHarmRisk || profile.hasEmotionDysregulation) {
+      goals.push("Strengthen distress tolerance and safety");
+    }
+    if (!goals.length) {
+      goals.push("Clarify symptom pattern and restore functioning");
+    }
+    goals.push("Restore baseline functioning");
+    objectives.push("Review diagnostic timeline and current impairment (session 1-2)");
+    if (profile.hasSelfHarmRisk) {
+      objectives.push("Update safety plan (each session)");
+    }
+    if (profile.hasSubstance) {
+      objectives.push("Assess motivation, use pattern, and relapse risk (session 1-2)");
+    }
+    if (profile.hasEmotionDysregulation) {
+      objectives.push("Introduce one DBT coping skill for between-session use (session 2)");
+    }
+    if (profile.hasDepression || profile.hasAnxiety) {
+      objectives.push("Assign one behavioral practice or symptom-monitoring task (session 2)");
+    }
+    objectives.push("Finalize measurable treatment goals (session 2-3)");
+    const lines = [];
+    lines.push("Goals:");
+    for (const g of unique2(goals).slice(0, 6)) {
+      lines.push(`  ${g}`);
+    }
+    lines.push("");
+    lines.push("Objectives:");
+    for (const o of unique2(objectives).slice(0, 6)) {
+      lines.push(`  ${o}`);
+    }
+    return lines.join("\n");
   }
   async function computeGuidance(intake, diagnosticImpressions) {
     const profile = buildProfile(intake, diagnosticImpressions);
     const resourceIds = selectResourceIds(profile);
-    const queries = buildQueries(profile);
-    const searchResults = (await Promise.all(
-      queries.map(
-        (query) => searchClinicalKnowledge(query, {
-          limit: 4,
-          resourceIds
-        })
-      )
-    )).flat().sort((a, b) => b.score - a.score);
+    const treatmentQueries = buildQueries(profile);
+    const formulationQueries = buildFormulationQueries(profile, diagnosticImpressions);
+    const [formulationResults, treatmentResults] = await Promise.all([
+      Promise.all(
+        formulationQueries.map(
+          (query) => searchClinicalKnowledge(query, {
+            limit: 3,
+            resourceIds: selectFormulationResourceIds(profile)
+          })
+        )
+      ).then((results) => results.flat()),
+      Promise.all(
+        treatmentQueries.map(
+          (query) => searchClinicalKnowledge(query, {
+            limit: 4,
+            resourceIds
+          })
+        )
+      ).then((results) => results.flat())
+    ]);
+    const searchResults = [...formulationResults, ...treatmentResults].sort((a, b) => b.score - a.score);
     const modalities = recommendModalities(profile);
     return {
       modalities,
-      formulation: buildFormulation(profile, modalities),
+      formulation: buildFormulation(profile, modalities, diagnosticImpressions),
       goals: buildGoals(profile),
       interventions: buildInterventions(profile),
       frequency: buildFrequency(profile),
       referrals: buildReferrals(intake, profile),
       plan: buildPlan(profile),
       references: dedupeReferences(searchResults),
-      queries
+      queries: [...formulationQueries, ...treatmentQueries]
     };
   }
   function buildCacheKey(intake, diagnosticImpressions) {
@@ -824,7 +1270,14 @@
       manualNotes: intake.manualNotes,
       phq9: intake.phq9?.totalScore ?? null,
       gad7: intake.gad7?.totalScore ?? null,
-      diagnoses: diagnosticImpressions.map((impression) => `${impression.disorderId}:${impression.name}`)
+      diagnoses: diagnosticImpressions.map((impression) => ({
+        id: impression.disorderId,
+        name: impression.name,
+        confidence: impression.confidence,
+        reasoning: impression.diagnosticReasoning ?? "",
+        evidence: impression.criteriaEvidence,
+        notes: impression.clinicianNotes ?? ""
+      }))
     });
   }
   async function buildClinicalGuidance(intake, diagnosticImpressions = []) {
@@ -940,16 +1393,18 @@
       intake.capturedAt ? new Date(intake.capturedAt).toLocaleDateString("en-US") : ""
     );
     const guidance = await buildClinicalGuidance(intake, diagnosticImpressions);
+    const guidanceGoalLines = guidance.goals.split("\n").map((l) => l.trim()).filter((l) => l && !l.endsWith(":"));
     const mergedGoals = Array.from(
       /* @__PURE__ */ new Set([
         ...goals.length ? goals : ["Clarify presenting concerns and establish treatment goals."],
-        ...guidance.goals
+        ...guidanceGoalLines
       ])
     ).slice(0, 5);
+    const guidanceInterventionLines = guidance.interventions.split("\n").map((l) => l.replace(/^\d+\.\s*/, "").trim()).filter((l) => l && !l.endsWith(":"));
     const mergedInterventions = Array.from(
       /* @__PURE__ */ new Set([
         ...buildInterventions2(intake),
-        ...guidance.interventions
+        ...guidanceInterventionLines
       ])
     ).slice(0, 6);
     return {
@@ -1018,6 +1473,19 @@
         resolve(response ?? null);
       });
     });
+  }
+  async function detectApptContext() {
+    const tab = await getActiveTab();
+    if (!tab?.url) return { isAppt: false, apptId: "" };
+    try {
+      const url = new URL(tab.url);
+      const videoMatch = url.pathname.match(/\/appt-([a-f0-9]+)\/room/);
+      if (videoMatch) return { isAppt: true, apptId: videoMatch[1] };
+      const apptMatch = url.pathname.match(/\/appointments\/(\d+)/);
+      if (apptMatch) return { isAppt: true, apptId: apptMatch[1] };
+    } catch {
+    }
+    return { isAppt: false, apptId: "" };
   }
   async function syncToggleButtonState() {
     const tabId = await getActiveTabId();
@@ -1151,17 +1619,29 @@
     const intake = await getIntake();
     const note = await getNote();
     const prefs = await getPreferences();
+    const apptCtx = await detectApptContext();
     const draftBtn = document.getElementById("btn-generate-draft");
     const manualNotesInput = document.getElementById("manual-notes-input");
     const manualNotesHint = document.getElementById("manual-notes-hint");
+    const soapBtn = document.getElementById("btn-save-session-notes");
     document.getElementById("provider-badge").textContent = `Provider: ${prefs.providerFirstName} ${prefs.providerLastName}`;
     const emptyState = document.getElementById("empty-state");
     const intakeInfo = document.getElementById("intake-info");
+    if (soapBtn) soapBtn.style.display = apptCtx.isAppt ? "block" : "none";
+    if (apptCtx.isAppt && manualNotesInput) {
+      const sessionNotes = await getSessionNotes(apptCtx.apptId);
+      if (sessionNotes?.notes && !manualNotesInput.dataset.userEdited) {
+        manualNotesInput.value = sessionNotes.notes;
+      }
+      if (manualNotesHint) {
+        manualNotesHint.textContent = "Session notes for SOAP progress note (90837). Also saves to intake if needed.";
+      }
+    }
     if (!intake) {
       emptyState.style.display = "block";
       intakeInfo.style.display = "none";
-      if (manualNotesInput) manualNotesInput.value = "";
-      if (manualNotesHint) {
+      if (!apptCtx.isAppt && manualNotesInput) manualNotesInput.value = "";
+      if (!apptCtx.isAppt && manualNotesHint) {
         manualNotesHint.textContent = "Paste your own notes here to create a manual intake when SimplePractice intake data is not available.";
       }
       if (draftBtn) draftBtn.textContent = "Generate Draft";
@@ -1233,6 +1713,14 @@
       capturedAt: intake?.capturedAt || (/* @__PURE__ */ new Date()).toISOString()
     });
     render();
+  });
+  document.getElementById("btn-save-session-notes")?.addEventListener("click", async () => {
+    const ctx = await detectApptContext();
+    if (!ctx.isAppt) return;
+    const input = document.getElementById("manual-notes-input");
+    const notes = input?.value.replace(/\r\n/g, "\n").trim() ?? "";
+    if (!notes) return;
+    await saveSessionNotes({ apptId: ctx.apptId, notes, updatedAt: (/* @__PURE__ */ new Date()).toISOString() });
   });
   document.getElementById("btn-open-diagnostics")?.addEventListener("click", async () => {
     const tab = await getActiveTab();

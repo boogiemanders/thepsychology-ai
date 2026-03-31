@@ -20,8 +20,10 @@
  *   Treatment plan:   /clients/{id}/treatment_plans/{tpId}/edit
  */
 
-import { IntakeData, AssessmentResult } from '../lib/types'
-import { getIntake } from '../lib/storage'
+import { IntakeData, AssessmentResult, DiagnosticImpression, SessionNotes } from '../lib/types'
+import { getIntake, getNote, getDiagnosticWorkspace, getPreferences, getSessionNotes, saveSessionNotes } from '../lib/storage'
+import { buildDraftNote } from '../lib/note-draft'
+import { buildClinicalGuidance } from '../lib/clinical-guidance'
 import {
   injectButton,
   showToast,
@@ -47,6 +49,102 @@ function isNotePage(): boolean {
   return /\/appointments\/\d+/.test(window.location.pathname) ||
     /\/clients\/\d+\/(notes|appointments)/.test(window.location.pathname) ||
     /\/clients\/\d+\/treatment_plans/.test(window.location.pathname)
+}
+
+function isVideoRoom(): boolean {
+  return /\/appt-[a-f0-9]+\/room/.test(window.location.pathname)
+}
+
+function getVideoApptId(): string {
+  const match = window.location.pathname.match(/\/appt-([a-f0-9]+)\/room/)
+  return match ? match[1] : ''
+}
+
+// ── Video Room Session Notes ──
+
+let saveTimeout: ReturnType<typeof setTimeout> | null = null
+
+function handleSessionNotesInput(textarea: HTMLTextAreaElement): void {
+  const apptId = getVideoApptId()
+  if (!apptId) return
+
+  if (saveTimeout) clearTimeout(saveTimeout)
+  saveTimeout = setTimeout(() => {
+    saveSessionNotes({
+      apptId,
+      notes: textarea.value,
+      updatedAt: new Date().toISOString(),
+    }).catch(() => {})
+  }, 500)
+}
+
+function injectVideoNotePanel(): void {
+  if (!isVideoRoom()) return
+  if (document.getElementById('spn-video-notes')) return
+
+  const apptId = getVideoApptId()
+  if (!apptId) return
+
+  const panel = document.createElement('div')
+  panel.id = 'spn-video-notes'
+  panel.innerHTML = `
+    <div class="spn-video-notes-header">
+      <span class="spn-video-notes-title">Session Notes</span>
+      <div class="spn-video-notes-actions">
+        <span class="spn-video-notes-status" id="spn-notes-status"></span>
+        <button class="spn-video-notes-toggle" id="spn-notes-toggle" title="Minimize">−</button>
+      </div>
+    </div>
+    <div class="spn-video-notes-body" id="spn-notes-body">
+      <textarea
+        id="spn-session-textarea"
+        class="spn-video-notes-textarea"
+        placeholder="Type session notes here..."
+        spellcheck="true"
+      ></textarea>
+    </div>
+  `
+  document.body.appendChild(panel)
+
+  const textarea = document.getElementById('spn-session-textarea') as HTMLTextAreaElement
+  const toggle = document.getElementById('spn-notes-toggle') as HTMLButtonElement
+  const body = document.getElementById('spn-notes-body') as HTMLDivElement
+  const status = document.getElementById('spn-notes-status') as HTMLSpanElement
+
+  // Load existing notes
+  getSessionNotes(apptId).then((existing) => {
+    if (existing?.notes) {
+      textarea.value = existing.notes
+    }
+  }).catch(() => {})
+
+  // Auto-save on input
+  textarea.addEventListener('input', () => {
+    status.textContent = 'Saving...'
+    handleSessionNotesInput(textarea)
+    setTimeout(() => { status.textContent = 'Saved' }, 600)
+    setTimeout(() => { status.textContent = '' }, 2000)
+  })
+
+  // Sync from popup or other sources writing to session notes
+  chrome.storage.onChanged.addListener((changes) => {
+    if (!changes['spn_session_notes']) return
+    const updated = changes['spn_session_notes'].newValue as SessionNotes | undefined
+    if (!updated || updated.apptId !== apptId) return
+    if (document.activeElement !== textarea) {
+      textarea.value = updated.notes
+    }
+  })
+
+  // Minimize/expand toggle
+  let minimized = false
+  toggle.addEventListener('click', () => {
+    minimized = !minimized
+    body.style.display = minimized ? 'none' : 'block'
+    toggle.textContent = minimized ? '+' : '−'
+    toggle.title = minimized ? 'Expand' : 'Minimize'
+    panel.classList.toggle('spn-video-notes-minimized', minimized)
+  })
 }
 
 function capitalize(value: string): string {
@@ -996,6 +1094,147 @@ function mapHIToDropdown(hi: string): string {
   return 'Denies'
 }
 
+// ── Assessment Section (106-111) ──
+
+function formatImpressionsList(impressions: DiagnosticImpression[]): string {
+  if (!impressions.length) return ''
+  return impressions
+    .map((imp, i) => {
+      const code = imp.code ? ` (${imp.code})` : ''
+      const lines: string[] = [`${i + 1}. ${imp.name}${code}`]
+
+      // Diagnostic reasoning — the narrative explaining how this diagnosis formed
+      if (imp.diagnosticReasoning) {
+        lines.push(imp.diagnosticReasoning)
+      }
+
+      // Criteria evidence — the specific patient statements/data that support each criterion
+      if (imp.criteriaEvidence.length) {
+        lines.push(`Supporting evidence: ${imp.criteriaEvidence.join('; ')}.`)
+      }
+
+      // Criteria summary — how many criteria met vs required
+      if (imp.criteriaSummary.length) {
+        lines.push(imp.criteriaSummary.join(' '))
+      }
+
+      if (imp.ruleOuts.length) {
+        lines.push(`Rule out: ${imp.ruleOuts.join(', ')}.`)
+      }
+
+      return lines.join('\n')
+    })
+    .join('\n\n')
+}
+
+function formatStrengthsWeaknesses(intake: IntakeData): string {
+  const strengths: string[] = []
+  const weaknesses: string[] = []
+
+  // Protective / strength factors
+  if (intake.counselingGoals.trim()) strengths.push(`Treatment motivation: ${intake.counselingGoals.trim()}`)
+  if (intake.priorTreatment.trim() && !/none|no|denied|denies/i.test(intake.priorTreatment))
+    strengths.push(`Prior treatment engagement: ${intake.priorTreatment.trim()}`)
+  if (intake.livingArrangement.trim() && !/alone/i.test(intake.livingArrangement))
+    strengths.push(`Social support: ${intake.livingArrangement.trim()}`)
+  if (intake.primaryCarePhysician.trim())
+    strengths.push(`Established medical care: PCP ${intake.primaryCarePhysician.trim()}`)
+  if (intake.occupation.trim() && !/unemployed|not working/i.test(intake.occupation))
+    strengths.push(`Employment: ${intake.occupation.trim()}`)
+
+  // Risk / weakness factors
+  if (intake.suicidalIdeation.trim() && !/no|denied|denies|none/i.test(intake.suicidalIdeation))
+    weaknesses.push(`Suicidal ideation: ${intake.suicidalIdeation.trim()}`)
+  if (intake.suicideAttemptHistory.trim() && !/no|denied|denies|none/i.test(intake.suicideAttemptHistory))
+    weaknesses.push(`History of suicide attempts: ${intake.suicideAttemptHistory.trim()}`)
+  if (intake.homicidalIdeation.trim() && !/no|denied|denies|none/i.test(intake.homicidalIdeation))
+    weaknesses.push(`Homicidal ideation: ${intake.homicidalIdeation.trim()}`)
+  if (intake.psychiatricHospitalization.trim() && !/no|denied|denies|none/i.test(intake.psychiatricHospitalization))
+    weaknesses.push(`Psychiatric hospitalization: ${intake.psychiatricHospitalization.trim()}`)
+  if (intake.physicalSexualAbuseHistory.trim() && !/no|denied|denies|none/i.test(intake.physicalSexualAbuseHistory))
+    weaknesses.push(`Abuse history: ${intake.physicalSexualAbuseHistory.trim()}`)
+  if (intake.domesticViolenceHistory.trim() && !/no|denied|denies|none/i.test(intake.domesticViolenceHistory))
+    weaknesses.push(`DV history: ${intake.domesticViolenceHistory.trim()}`)
+  const substanceText = [intake.alcoholUse, intake.drugUse, intake.substanceUseHistory]
+    .filter(v => v.trim() && !/no|denied|denies|none/i.test(v)).join('; ')
+  if (substanceText) weaknesses.push(`Substance use: ${substanceText}`)
+
+  const parts: string[] = []
+  if (strengths.length) parts.push(`Strengths/Protective Factors:\n${strengths.map(s => `• ${s}`).join('\n')}`)
+  if (weaknesses.length) parts.push(`Risk Factors/Weaknesses:\n${weaknesses.map(w => `• ${w}`).join('\n')}`)
+
+  return parts.join('\n\n')
+}
+
+function formatTreatmentRecommendations(
+  interventions: string,
+  modalities: string[]
+): string {
+  const parts: string[] = []
+  if (modalities.length) {
+    parts.push(`Recommended modalities: ${modalities.join(', ')}.`)
+  }
+  if (interventions) {
+    parts.push(interventions)
+  }
+  return parts.join('\n\n')
+}
+
+function formatFollowUp(frequency: string, plan: string): string {
+  return [frequency, plan].filter(Boolean).join('\n\n')
+}
+
+async function fillAssessmentSection(intake: IntakeData): Promise<number> {
+  let filled = 0
+
+  // Load workspace for finalized impressions
+  const workspace = await getDiagnosticWorkspace()
+  const impressions = workspace?.finalizedImpressions ?? []
+
+  // Load existing note or build one for formulation/guidance data
+  let note = await getNote()
+  if (!note) {
+    const prefs = await getPreferences()
+    note = await buildDraftNote(intake, prefs, impressions)
+  }
+
+  // Build clinical guidance — this produces the Persons-style case formulation
+  // with problem list, mechanism hypotheses, precipitants, and diagnostic reasoning
+  const guidance = await buildClinicalGuidance(intake, impressions)
+
+  // 106: Formulation — always prefer guidance.formulation (mechanism-based)
+  // over note.clinicalFormulation (which may just list factors without explaining how
+  // the diagnosis formed)
+  const formulation = guidance.formulation || note.clinicalFormulation
+  if (formulation && fillProseMirrorByLabel('free-text-106', formulation)) filled++
+
+  // 107: Diagnosis and impression — evidence-based, not just a name list
+  const diagSource = impressions.length ? impressions : note.diagnosticImpressions
+  const diagText = formatImpressionsList(diagSource)
+  if (diagText && fillProseMirrorByLabel('free-text-107', diagText)) filled++
+
+  // 108: Patient's strengths/weaknesses
+  const strengthsText = formatStrengthsWeaknesses(intake)
+  if (strengthsText && fillProseMirrorByLabel('free-text-108', strengthsText)) filled++
+
+  // 109: Treatment recommendations
+  const interventionsText = guidance.interventions || note.treatmentPlan.interventions.map(i => `• ${i}`).join('\n')
+  const txRecsText = formatTreatmentRecommendations(
+    interventionsText,
+    guidance.modalities
+  )
+  if (txRecsText && fillProseMirrorByLabel('free-text-109', txRecsText)) filled++
+
+  // 111: Follow up
+  const followUpText = formatFollowUp(
+    guidance.frequency || note.treatmentPlan.frequency,
+    guidance.plan || note.plan
+  )
+  if (followUpText && fillProseMirrorByLabel('free-text-111', followUpText)) filled++
+
+  return filled
+}
+
 // ── Main Fill Logic ──
 
 async function fillInitialClinicalEval(): Promise<void> {
@@ -1010,9 +1249,16 @@ async function fillInitialClinicalEval(): Promise<void> {
   // Wait for ProseMirror editors to initialize (Ember.js rendering)
   await wait(500)
 
-  const filled = fillICEFromIntake(intake)
+  let filled = fillICEFromIntake(intake)
   await flushBooleanSyncOperations()
   await wait(200)
+
+  // Fill assessment section (106-111) from note draft + guidance + workspace
+  try {
+    filled += await fillAssessmentSection(intake)
+  } catch (err) {
+    console.warn('[SPN] Assessment section fill failed:', err)
+  }
 
   if (filled > 0) {
     showToast(`Filled ${filled} fields from intake data for ${intake.fullName || 'client'}`, 'success')
@@ -1061,6 +1307,7 @@ const observer = new MutationObserver(() => {
   if (window.location.href !== lastUrl) {
     lastUrl = window.location.href
     setTimeout(injectFillButton, 500)
+    setTimeout(injectVideoNotePanel, 500)
   }
 })
 
@@ -1068,9 +1315,13 @@ observer.observe(document.body, { childList: true, subtree: true })
 
 // Initial injection
 if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', () => setTimeout(injectFillButton, 500))
+  document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(injectFillButton, 500)
+    setTimeout(injectVideoNotePanel, 500)
+  })
 } else {
   setTimeout(injectFillButton, 500)
+  setTimeout(injectVideoNotePanel, 500)
 }
 
 registerFloatingButtonsController(() => {
