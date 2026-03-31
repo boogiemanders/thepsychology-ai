@@ -192,6 +192,18 @@ body {
   min-height: 60px;
 }
 
+/* Usage banner */
+.usage-banner {
+  font-size: 11px;
+  color: #1d4ed8;
+  background: #eff6ff;
+  border-radius: 6px;
+  padding: 4px 8px;
+  margin-bottom: 8px;
+  text-align: center;
+  font-weight: 500;
+}
+
 /* License gate */
 .gate-hint {
   font-size: 11px;

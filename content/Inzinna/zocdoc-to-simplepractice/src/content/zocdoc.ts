@@ -1,5 +1,6 @@
 import { CapturedClient, DEFAULT_STATUS } from '../lib/types'
 import { saveClient } from '../lib/storage'
+import { trackAction } from '../lib/usage'
 import {
   injectButton,
   showToast,
@@ -474,6 +475,7 @@ async function captureClient(): Promise<void> {
     }
 
     await saveClient(client)
+    void trackAction('captureClient')
 
     const fieldsFound = [
       client.firstName, client.lastName, client.sex, client.dob, client.phone,

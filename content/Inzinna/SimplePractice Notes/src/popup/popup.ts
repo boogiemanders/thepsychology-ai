@@ -1,6 +1,7 @@
 import { getIntake, getNote, clearAll, getPreferences, savePreferences, hasPreferences } from '../lib/storage'
 import { IntakeData, ProviderPreferences, DEFAULT_PREFERENCES } from '../lib/types'
 import { isLicenseValid, validateAndSaveLicense, submitFeedback } from '../lib/license'
+import { getTotalMinutesSaved, formatTimeSaved } from '../lib/usage'
 
 function formatDate(iso: string): string {
   const d = new Date(iso)
@@ -140,6 +141,15 @@ async function render(): Promise<void> {
 
   document.getElementById('provider-badge')!.textContent =
     `Provider: ${prefs.providerFirstName} ${prefs.providerLastName}`
+
+  const minutesSaved = await getTotalMinutesSaved()
+  const usageBanner = document.getElementById('usage-banner')!
+  if (minutesSaved > 0) {
+    usageBanner.textContent = `${formatTimeSaved(minutesSaved)} saved this month`
+    usageBanner.style.display = 'block'
+  } else {
+    usageBanner.style.display = 'none'
+  }
 
   const emptyState = document.getElementById('empty-state')!
   const intakeInfo = document.getElementById('intake-info')!

@@ -2,6 +2,7 @@ import { getClient, clearClient, updateStatus, getPreferences, savePreferences, 
 import { ProviderPreferences, DEFAULT_PREFERENCES } from '../lib/types'
 import { openVobEmail } from '../lib/vob-email'
 import { isLicenseValid, validateAndSaveLicense, submitFeedback } from '../lib/license'
+import { getTotalMinutesSaved, formatTimeSaved, trackAction } from '../lib/usage'
 
 function formatDate(iso: string): string {
   const d = new Date(iso)
@@ -87,6 +88,15 @@ async function render(): Promise<void> {
   document.getElementById('provider-badge')!.textContent =
     `Provider: ${prefs.providerFirstName} ${prefs.providerLastName}`
 
+  const minutesSaved = await getTotalMinutesSaved()
+  const usageBanner = document.getElementById('usage-banner')!
+  if (minutesSaved > 0) {
+    usageBanner.textContent = `${formatTimeSaved(minutesSaved)} saved this month`
+    usageBanner.style.display = 'block'
+  } else {
+    usageBanner.style.display = 'none'
+  }
+
   const emptyState = document.getElementById('empty-state')!
   const clientInfo = document.getElementById('client-info')!
 
@@ -152,6 +162,7 @@ document.getElementById('btn-vob')?.addEventListener('click', async () => {
   if (!client) return
   await openVobEmail(client)
   await updateStatus({ vobEmailSent: true })
+  void trackAction('sendVob')
   render()
 })
 

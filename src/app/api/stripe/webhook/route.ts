@@ -4,6 +4,7 @@ import Stripe from 'stripe'
 import { getSupabaseClient } from '@/lib/supabase-server'
 import { sendSlackNotification } from '@/lib/notify-slack'
 import { sendNotificationEmail, isNotificationEmailConfigured } from '@/lib/notify-email'
+import { sendLicenseKeyEmail } from '@/lib/user-email'
 
 export const dynamic = 'force-dynamic'
 
@@ -339,7 +340,7 @@ export async function POST(request: Request) {
       await updateUserSubscription(userId, planTier, stripeCustomerId)
       console.log('[Stripe] Subscription updated successfully', { userId, planTier, stripeCustomerId })
 
-      // Generate extension license key if the user doesn't have one yet
+      // Generate extension license key if the user doesn't have one yet, then email it
       try {
         const supabase = getSupabaseClient(undefined, { requireServiceRole: true })
         if (supabase) {
@@ -348,13 +349,22 @@ export async function POST(request: Request) {
             .select('extension_license_key')
             .eq('id', userId)
             .single()
-          if (!userData?.extension_license_key) {
-            const licenseKey = crypto.randomUUID()
+
+          let licenseKey = userData?.extension_license_key as string | null | undefined
+          if (!licenseKey) {
+            licenseKey = crypto.randomUUID()
             await supabase
               .from('users')
               .update({ extension_license_key: licenseKey })
               .eq('id', userId)
             console.log('[Stripe] Generated extension license key for user:', userId)
+          }
+
+          // Email the license key to the customer (non-blocking)
+          if (licenseKey && session.customer_email) {
+            sendLicenseKeyEmail({ to: session.customer_email, licenseKey }).catch((err) => {
+              console.warn('[Stripe] Could not send license key email:', err)
+            })
           }
         }
       } catch (err) {

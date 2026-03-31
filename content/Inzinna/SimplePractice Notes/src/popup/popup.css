@@ -236,6 +236,18 @@ body {
   border-color: #7c3aed;
 }
 
+/* Usage banner */
+.usage-banner {
+  font-size: 11px;
+  color: #6d28d9;
+  background: #f3e8ff;
+  border-radius: 6px;
+  padding: 4px 8px;
+  margin-bottom: 8px;
+  text-align: center;
+  font-weight: 500;
+}
+
 /* License gate */
 .gate-hint {
   font-size: 11px;

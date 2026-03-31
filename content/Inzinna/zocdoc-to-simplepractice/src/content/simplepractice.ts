@@ -1,6 +1,7 @@
 import { CapturedClient, ProviderPreferences } from '../lib/types'
 import { getClient, updateStatus, getPreferences } from '../lib/storage'
 import { openVobEmail } from '../lib/vob-email'
+import { trackAction } from '../lib/usage'
 import {
   injectButton,
   showToast,
@@ -539,6 +540,7 @@ async function fillClientDemographics(): Promise<void> {
   filled += enableReminderToggles()
 
   await updateStatus({ clientCreated: true })
+  void trackAction('fillDemographics')
   showToast(`Filled ${filled} fields for ${client.firstName} ${client.lastName}`, 'success')
 
   console.log('[ZSP] Filled client demographics:', { filled, firstName: client.firstName, lastName: client.lastName })
@@ -717,6 +719,7 @@ async function fillInsurance(): Promise<void> {
   }
 
   await updateStatus({ insuranceAdded: true })
+  void trackAction('fillInsurance')
   showToast(`Filled ${filled} insurance fields`, 'success')
 }
 
@@ -857,6 +860,7 @@ async function fillAppointment(): Promise<void> {
   if (notes && tryFill(['textarea[name*="note"]', 'textarea[name*="reason"]'], notes)) filled++
 
   await updateStatus({ appointmentSet: true })
+  void trackAction('fillAppointment')
   showToast(`Filled ${filled} appointment fields`, 'success')
 }
 

@@ -22,6 +22,7 @@
 
 import { IntakeData, AssessmentResult } from '../lib/types'
 import { getIntake } from '../lib/storage'
+import { trackAction } from '../lib/usage'
 import {
   injectButton,
   showToast,
@@ -524,6 +525,7 @@ async function fillInitialClinicalEval(): Promise<void> {
   const filled = fillICEFromIntake(intake)
 
   if (filled > 0) {
+    void trackAction('fillNote')
     showToast(`Filled ${filled} fields from intake data for ${intake.fullName || 'client'}`, 'success')
   } else {
     showToast('Could not fill any fields. Make sure you are on the Initial Clinical Evaluation note.', 'error')

@@ -15,6 +15,7 @@
 
 import { IntakeData, EMPTY_INTAKE, AssessmentResult, AssessmentItem } from '../lib/types'
 import { saveIntake, mergeIntake, getIntake } from '../lib/storage'
+import { trackAction } from '../lib/usage'
 import {
   injectButton,
   showToast,
@@ -496,6 +497,7 @@ async function handleCaptureClick(): Promise<void> {
     if (assessments.phq9) intake.phq9 = assessments.phq9
 
     await saveIntake(intake)
+    void trackAction('captureIntake')
 
     const extras: string[] = []
     if (assessments.gad7) extras.push(`GAD-7: ${assessments.gad7.totalScore}`)
