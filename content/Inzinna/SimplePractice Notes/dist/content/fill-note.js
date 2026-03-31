@@ -108,6 +108,22 @@
     finalizedImpressions: [],
     updatedAt: ""
   };
+  var EMPTY_SOAP_DRAFT = {
+    apptId: "",
+    clientName: "",
+    sessionDate: "",
+    cptCode: "90837",
+    subjective: "",
+    objective: "",
+    assessment: "",
+    plan: "",
+    sessionNotes: "",
+    transcript: "",
+    treatmentPlanId: "",
+    generatedAt: "",
+    editedAt: "",
+    status: "draft"
+  };
   var EMPTY_SESSION_NOTES = {
     apptId: "",
     notes: "",
@@ -300,6 +316,7 @@
   var DIAGNOSTIC_WORKSPACE_KEY = "spn_diagnostic_workspace";
   var PREFS_KEY = "spn_preferences";
   var SESSION_NOTES_KEY = "spn_session_notes";
+  var SOAP_DRAFT_KEY = "spn_soap_draft";
   function normalizeIntake(intake) {
     return {
       ...EMPTY_INTAKE,
@@ -368,6 +385,21 @@
       finalizedImpressions: Array.isArray(workspace?.finalizedImpressions) ? workspace.finalizedImpressions.map((impression) => normalizeDiagnosticImpression(impression)) : []
     };
   }
+  function normalizeSoapDraft(draft) {
+    return {
+      ...EMPTY_SOAP_DRAFT,
+      ...draft,
+      sessionNotes: draft?.sessionNotes?.trim() ?? "",
+      transcript: draft?.transcript?.trim() ?? "",
+      subjective: draft?.subjective?.trim() ?? "",
+      objective: draft?.objective?.trim() ?? "",
+      assessment: draft?.assessment?.trim() ?? "",
+      plan: draft?.plan?.trim() ?? "",
+      generatedAt: draft?.generatedAt ?? "",
+      editedAt: draft?.editedAt ?? draft?.generatedAt ?? "",
+      status: draft?.status ?? "draft"
+    };
+  }
   async function getStoredIntake() {
     const result = await chrome.storage.session.get(INTAKE_KEY);
     const intake = result[INTAKE_KEY];
@@ -401,6 +433,11 @@
   async function getPreferences() {
     const result = await chrome.storage.local.get(PREFS_KEY);
     return normalizePreferences(result[PREFS_KEY]);
+  }
+  async function getSoapDraft() {
+    const result = await chrome.storage.session.get(SOAP_DRAFT_KEY);
+    const draft = result[SOAP_DRAFT_KEY];
+    return draft ? normalizeSoapDraft(draft) : null;
   }
   async function getSessionNotes(apptId) {
     const result = await chrome.storage.session.get(SESSION_NOTES_KEY);
@@ -1679,12 +1716,42 @@
   function isNotePage() {
     return /\/appointments\/\d+/.test(window.location.pathname) || /\/clients\/\d+\/(notes|appointments)/.test(window.location.pathname) || /\/clients\/\d+\/treatment_plans/.test(window.location.pathname);
   }
+  function isAppointmentPage() {
+    return /\/appointments\/\d+/.test(window.location.pathname);
+  }
   function isVideoRoom() {
     return /\/appt-[a-f0-9]+\/room/.test(window.location.pathname);
   }
   function getVideoApptId() {
     const match = window.location.pathname.match(/\/appt-([a-f0-9]+)\/room/);
     return match ? match[1] : "";
+  }
+  function detectSoapForm() {
+    const labels = ["free-text-1", "free-text-2", "free-text-3", "free-text-4"];
+    return !!document.querySelector(".progress-individual-note-container") && labels.every((label) => !!document.querySelector(`[contenteditable="true"][aria-label="${label}"]`));
+  }
+  function fillSoapNote(draft) {
+    let filled = 0;
+    if (fillProseMirrorByLabel("free-text-1", draft.subjective)) filled++;
+    if (fillProseMirrorByLabel("free-text-2", draft.objective)) filled++;
+    if (fillProseMirrorByLabel("free-text-3", draft.assessment)) filled++;
+    if (fillProseMirrorByLabel("free-text-4", draft.plan)) filled++;
+    return filled;
+  }
+  async function fillSavedSoapDraft(providedDraft) {
+    const draft = providedDraft ?? await getSoapDraft();
+    if (!draft) {
+      return { ok: false, error: "No saved SOAP draft found. Save notes for SOAP first." };
+    }
+    if (!detectSoapForm()) {
+      return { ok: false, error: "SOAP progress note form is not open on this page." };
+    }
+    await wait(300);
+    const filled = fillSoapNote(draft);
+    if (filled === 0) {
+      return { ok: false, error: "SOAP fields were found, but no draft content could be filled." };
+    }
+    return { ok: true, filled };
   }
   var saveTimeout = null;
   function handleSessionNotesInput(textarea) {
@@ -2680,7 +2747,14 @@ ${weaknesses.map((w) => `\u2022 ${w}`).join("\n")}`);
     }
   }
   function injectFillButton() {
-    if (!isNotePage()) return;
+    if (!isNotePage()) {
+      document.getElementById("spn-fill-btn")?.remove();
+      return;
+    }
+    if (detectSoapForm()) {
+      document.getElementById("spn-fill-btn")?.remove();
+      return;
+    }
     if (document.getElementById("spn-fill-btn")) return;
     getIntake().then((intake) => {
       if (!intake) return;
@@ -2691,11 +2765,44 @@ ${weaknesses.map((w) => `\u2022 ${w}`).join("\n")}`);
     }).catch(() => {
     });
   }
+  async function handleFillSoapClick() {
+    try {
+      const result = await fillSavedSoapDraft();
+      if (!result.ok) {
+        showToast(result.error ?? "Failed to fill SOAP note.", "error");
+        return;
+      }
+      showToast(`Filled ${result.filled ?? 0} SOAP fields from saved session notes`, "success");
+    } catch (err) {
+      if (isExtensionContextInvalidatedError(err)) {
+        showToast("Extension reloaded \u2014 please refresh this page.", "error");
+      } else {
+        console.error("[SPN] Fill SOAP error:", err);
+        showToast("Failed to fill SOAP note.", "error");
+      }
+    }
+  }
+  function injectFillSoapButton() {
+    if (!isAppointmentPage()) {
+      document.getElementById("spn-fill-soap-btn")?.remove();
+      return;
+    }
+    if (!detectSoapForm()) {
+      document.getElementById("spn-fill-soap-btn")?.remove();
+      return;
+    }
+    if (document.getElementById("spn-fill-soap-btn")) return;
+    injectButton("Fill SOAP from Notes", handleFillSoapClick, {
+      id: "spn-fill-soap-btn",
+      position: "bottom-left-high"
+    });
+  }
   var lastUrl = window.location.href;
   var observer = new MutationObserver(() => {
     if (window.location.href !== lastUrl) {
       lastUrl = window.location.href;
       setTimeout(injectFillButton, 500);
+      setTimeout(injectFillSoapButton, 500);
       setTimeout(injectVideoNotePanel, 500);
     }
   });
@@ -2703,14 +2810,35 @@ ${weaknesses.map((w) => `\u2022 ${w}`).join("\n")}`);
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", () => {
       setTimeout(injectFillButton, 500);
+      setTimeout(injectFillSoapButton, 500);
       setTimeout(injectVideoNotePanel, 500);
     });
   } else {
     setTimeout(injectFillButton, 500);
+    setTimeout(injectFillSoapButton, 500);
     setTimeout(injectVideoNotePanel, 500);
   }
   registerFloatingButtonsController(() => {
     setTimeout(injectFillButton, 0);
+    setTimeout(injectFillSoapButton, 0);
+  });
+  chrome.storage.onChanged.addListener((changes, area) => {
+    if (area !== "session") return;
+    if (changes["spn_soap_draft"]) {
+      setTimeout(injectFillSoapButton, 0);
+    }
+  });
+  chrome.runtime.onMessage.addListener((msg, _sender, sendResponse) => {
+    if (msg?.type === "SPN_FILL_SOAP_DRAFT") {
+      void (async () => {
+        const result = await fillSavedSoapDraft(msg.draft ?? null);
+        if (result.ok) {
+          showToast(`Filled ${result.filled ?? 0} SOAP fields from saved session notes`, "success");
+        }
+        sendResponse(result);
+      })();
+      return true;
+    }
   });
 })();
 //# sourceMappingURL=fill-note.js.map

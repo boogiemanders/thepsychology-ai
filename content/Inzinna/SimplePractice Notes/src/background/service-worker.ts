@@ -4,6 +4,10 @@
 const INTAKE_KEY = 'spn_intake'
 const NOTE_KEY = 'spn_note'
 const DIAGNOSTIC_WORKSPACE_KEY = 'spn_diagnostic_workspace'
+const SESSION_NOTES_KEY = 'spn_session_notes'
+const TREATMENT_PLAN_KEY = 'spn_treatment_plan'
+const SOAP_DRAFT_KEY = 'spn_soap_draft'
+const TRANSCRIPT_KEY = 'spn_transcript'
 const TTL_MS = 60 * 60 * 1000 // 1 hour
 
 type BooleanFieldSyncOperation =
@@ -18,7 +22,15 @@ async function configureSessionStorageAccess(): Promise<void> {
 
 /** Remove captured PHI if older than the secure TTL */
 async function cleanupExpiredData(): Promise<void> {
-  const result = await chrome.storage.session.get([INTAKE_KEY, NOTE_KEY, DIAGNOSTIC_WORKSPACE_KEY])
+  const result = await chrome.storage.session.get([
+    INTAKE_KEY,
+    NOTE_KEY,
+    DIAGNOSTIC_WORKSPACE_KEY,
+    SESSION_NOTES_KEY,
+    TREATMENT_PLAN_KEY,
+    SOAP_DRAFT_KEY,
+    TRANSCRIPT_KEY,
+  ])
 
   const intake = result[INTAKE_KEY]
   if (intake?.capturedAt) {
@@ -44,6 +56,42 @@ async function cleanupExpiredData(): Promise<void> {
     if (age > TTL_MS) {
       await chrome.storage.session.remove(DIAGNOSTIC_WORKSPACE_KEY)
       console.log('[SPN] Auto-cleared expired diagnostic workspace')
+    }
+  }
+
+  const sessionNotes = result[SESSION_NOTES_KEY]
+  if (sessionNotes?.updatedAt) {
+    const age = Date.now() - new Date(sessionNotes.updatedAt).getTime()
+    if (age > TTL_MS) {
+      await chrome.storage.session.remove(SESSION_NOTES_KEY)
+      console.log('[SPN] Auto-cleared expired session notes')
+    }
+  }
+
+  const treatmentPlan = result[TREATMENT_PLAN_KEY]
+  if (treatmentPlan?.capturedAt) {
+    const age = Date.now() - new Date(treatmentPlan.capturedAt).getTime()
+    if (age > TTL_MS) {
+      await chrome.storage.session.remove(TREATMENT_PLAN_KEY)
+      console.log('[SPN] Auto-cleared expired treatment plan')
+    }
+  }
+
+  const soapDraft = result[SOAP_DRAFT_KEY]
+  if (soapDraft?.generatedAt) {
+    const age = Date.now() - new Date(soapDraft.generatedAt).getTime()
+    if (age > TTL_MS) {
+      await chrome.storage.session.remove(SOAP_DRAFT_KEY)
+      console.log('[SPN] Auto-cleared expired SOAP draft')
+    }
+  }
+
+  const transcript = result[TRANSCRIPT_KEY]
+  if (transcript?.updatedAt) {
+    const age = Date.now() - new Date(transcript.updatedAt).getTime()
+    if (age > TTL_MS) {
+      await chrome.storage.session.remove(TRANSCRIPT_KEY)
+      console.log('[SPN] Auto-cleared expired transcript')
     }
   }
 }
@@ -331,7 +379,15 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   }
 
   if (message.type === 'CLEAR_ALL') {
-    chrome.storage.session.remove([INTAKE_KEY, NOTE_KEY, DIAGNOSTIC_WORKSPACE_KEY], () => {
+    chrome.storage.session.remove([
+      INTAKE_KEY,
+      NOTE_KEY,
+      DIAGNOSTIC_WORKSPACE_KEY,
+      SESSION_NOTES_KEY,
+      TREATMENT_PLAN_KEY,
+      SOAP_DRAFT_KEY,
+      TRANSCRIPT_KEY,
+    ], () => {
       sendResponse({ ok: true })
     })
     return true

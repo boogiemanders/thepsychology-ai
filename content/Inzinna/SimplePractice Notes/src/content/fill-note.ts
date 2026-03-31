@@ -20,8 +20,8 @@
  *   Treatment plan:   /clients/{id}/treatment_plans/{tpId}/edit
  */
 
-import { IntakeData, AssessmentResult, DiagnosticImpression, SessionNotes } from '../lib/types'
-import { getIntake, getNote, getDiagnosticWorkspace, getPreferences, getSessionNotes, saveSessionNotes } from '../lib/storage'
+import { IntakeData, AssessmentResult, DiagnosticImpression, SessionNotes, SoapDraft } from '../lib/types'
+import { getIntake, getNote, getDiagnosticWorkspace, getPreferences, getSessionNotes, saveSessionNotes, getSoapDraft } from '../lib/storage'
 import { buildDraftNote } from '../lib/note-draft'
 import { buildClinicalGuidance } from '../lib/clinical-guidance'
 import {
@@ -51,6 +51,10 @@ function isNotePage(): boolean {
     /\/clients\/\d+\/treatment_plans/.test(window.location.pathname)
 }
 
+function isAppointmentPage(): boolean {
+  return /\/appointments\/\d+/.test(window.location.pathname)
+}
+
 function isVideoRoom(): boolean {
   return /\/appt-[a-f0-9]+\/room/.test(window.location.pathname)
 }
@@ -58,6 +62,41 @@ function isVideoRoom(): boolean {
 function getVideoApptId(): string {
   const match = window.location.pathname.match(/\/appt-([a-f0-9]+)\/room/)
   return match ? match[1] : ''
+}
+
+function detectSoapForm(): boolean {
+  const labels = ['free-text-1', 'free-text-2', 'free-text-3', 'free-text-4']
+  return !!document.querySelector('.progress-individual-note-container') &&
+    labels.every((label) => !!document.querySelector(`[contenteditable="true"][aria-label="${label}"]`))
+}
+
+function fillSoapNote(draft: SoapDraft): number {
+  let filled = 0
+  if (fillProseMirrorByLabel('free-text-1', draft.subjective)) filled++
+  if (fillProseMirrorByLabel('free-text-2', draft.objective)) filled++
+  if (fillProseMirrorByLabel('free-text-3', draft.assessment)) filled++
+  if (fillProseMirrorByLabel('free-text-4', draft.plan)) filled++
+  return filled
+}
+
+async function fillSavedSoapDraft(providedDraft?: SoapDraft | null): Promise<{ ok: boolean; filled?: number; error?: string }> {
+  const draft = providedDraft ?? await getSoapDraft()
+  if (!draft) {
+    return { ok: false, error: 'No saved SOAP draft found. Save notes for SOAP first.' }
+  }
+
+  if (!detectSoapForm()) {
+    return { ok: false, error: 'SOAP progress note form is not open on this page.' }
+  }
+
+  await wait(300)
+  const filled = fillSoapNote(draft)
+
+  if (filled === 0) {
+    return { ok: false, error: 'SOAP fields were found, but no draft content could be filled.' }
+  }
+
+  return { ok: true, filled }
 }
 
 // ── Video Room Session Notes ──
@@ -1285,7 +1324,14 @@ async function handleFillClick(): Promise<void> {
 }
 
 function injectFillButton(): void {
-  if (!isNotePage()) return
+  if (!isNotePage()) {
+    document.getElementById('spn-fill-btn')?.remove()
+    return
+  }
+  if (detectSoapForm()) {
+    document.getElementById('spn-fill-btn')?.remove()
+    return
+  }
   if (document.getElementById('spn-fill-btn')) return
 
   // Only show if we have intake data
@@ -1301,12 +1347,49 @@ function injectFillButton(): void {
   })
 }
 
+async function handleFillSoapClick(): Promise<void> {
+  try {
+    const result = await fillSavedSoapDraft()
+    if (!result.ok) {
+      showToast(result.error ?? 'Failed to fill SOAP note.', 'error')
+      return
+    }
+
+    showToast(`Filled ${result.filled ?? 0} SOAP fields from saved session notes`, 'success')
+  } catch (err) {
+    if (isExtensionContextInvalidatedError(err)) {
+      showToast('Extension reloaded — please refresh this page.', 'error')
+    } else {
+      console.error('[SPN] Fill SOAP error:', err)
+      showToast('Failed to fill SOAP note.', 'error')
+    }
+  }
+}
+
+function injectFillSoapButton(): void {
+  if (!isAppointmentPage()) {
+    document.getElementById('spn-fill-soap-btn')?.remove()
+    return
+  }
+  if (!detectSoapForm()) {
+    document.getElementById('spn-fill-soap-btn')?.remove()
+    return
+  }
+  if (document.getElementById('spn-fill-soap-btn')) return
+
+  injectButton('Fill SOAP from Notes', handleFillSoapClick, {
+    id: 'spn-fill-soap-btn',
+    position: 'bottom-left-high',
+  })
+}
+
 // Watch for SPA navigation
 let lastUrl = window.location.href
 const observer = new MutationObserver(() => {
   if (window.location.href !== lastUrl) {
     lastUrl = window.location.href
     setTimeout(injectFillButton, 500)
+    setTimeout(injectFillSoapButton, 500)
     setTimeout(injectVideoNotePanel, 500)
   }
 })
@@ -1317,13 +1400,36 @@ observer.observe(document.body, { childList: true, subtree: true })
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', () => {
     setTimeout(injectFillButton, 500)
+    setTimeout(injectFillSoapButton, 500)
     setTimeout(injectVideoNotePanel, 500)
   })
 } else {
   setTimeout(injectFillButton, 500)
+  setTimeout(injectFillSoapButton, 500)
   setTimeout(injectVideoNotePanel, 500)
 }
 
 registerFloatingButtonsController(() => {
   setTimeout(injectFillButton, 0)
+  setTimeout(injectFillSoapButton, 0)
+})
+
+chrome.storage.onChanged.addListener((changes, area) => {
+  if (area !== 'session') return
+  if (changes['spn_soap_draft']) {
+    setTimeout(injectFillSoapButton, 0)
+  }
+})
+
+chrome.runtime.onMessage.addListener((msg, _sender, sendResponse) => {
+  if (msg?.type === 'SPN_FILL_SOAP_DRAFT') {
+    void (async () => {
+      const result = await fillSavedSoapDraft((msg.draft as SoapDraft | undefined) ?? null)
+      if (result.ok) {
+        showToast(`Filled ${result.filled ?? 0} SOAP fields from saved session notes`, 'success')
+      }
+      sendResponse(result)
+    })()
+    return true
+  }
 })
