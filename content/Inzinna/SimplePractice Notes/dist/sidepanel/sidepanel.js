@@ -81,6 +81,7 @@
         }),
         criterion("mdd.A.5", "A", "Psychomotor agitation or retardation observable by others.", "Has anyone noticed they are moving or speaking much faster or slower than usual?", {
           number: 5,
+          phqItem: 8,
           keywords: ["psychomotor", "slowed down", "restless", "agitated"]
         }),
         criterion("mdd.A.6", "A", "Fatigue or loss of energy nearly every day.", "Have they been tired or low-energy most days during the episode?", {
@@ -96,7 +97,7 @@
         criterion("mdd.A.8", "A", "Diminished ability to think, concentrate, or make decisions.", "Have concentration or decision-making become noticeably harder?", {
           number: 8,
           phqItem: 7,
-          keywords: ["concentration", "can\u2019t focus", "indecisive", "mind goes blank"]
+          keywords: ["concentration", "can", ", ", ", "]
         }),
         criterion("mdd.A.9", "A", "Recurrent thoughts of death or suicidal ideation/behavior.", "Have there been recurrent thoughts of death, suicidal thoughts, or suicidal behavior?", {
           number: 9,
@@ -106,7 +107,7 @@
         }),
         criterion("mdd.B", "B", "Symptoms cause clinically significant distress or impairment.", "How much are the symptoms affecting work, school, relationships, or daily functioning?", {
           intakeFields: ["historyOfPresentIllness", "additionalInfo", "rawQA"],
-          keywords: ["can\u2019t function", "missed work", "impaired", "struggling at work", "struggling at school"]
+          keywords: ["can", ", ", ", ", ", ", ", "]
         }),
         criterion("mdd.C", "C", "Episode is not better explained by substances or another medical condition.", "Could substances or a medical condition better account for the depressive symptoms?", {
           intakeFields: ["medicalHistory", "alcoholUse", "drugUse", "substanceUseHistory", "rawQA"]
@@ -209,7 +210,7 @@
         }),
         criterion("gad.B", "B", "The person finds it difficult to control the worry.", "Can they turn the worry off, or does it feel hard to control?", {
           gadItem: 2,
-          keywords: ["can\u2019t stop worrying", "hard to control worry", "worry spiral"]
+          keywords: ["can", ", ", ", "]
         }),
         criterion("gad.C.1", "C", "Restlessness or feeling keyed up/on edge.", "Do they feel on edge, restless, or keyed up much of the time?", {
           number: 1,
@@ -218,17 +219,16 @@
         }),
         criterion("gad.C.2", "C", "Being easily fatigued.", "Do they become tired easily from the anxiety or worrying?", {
           number: 2,
-          gadItem: 6,
           keywords: ["fatigued", "tired", "drained"]
         }),
         criterion("gad.C.3", "C", "Difficulty concentrating or mind going blank.", "Does worry interfere with concentration or make the mind go blank?", {
           number: 3,
-          gadItem: 2,
           keywords: ["concentration", "mind going blank", "can\u2019t focus"]
         }),
         criterion("gad.C.4", "C", "Irritability.", "Has the person been more irritable because of the anxiety?", {
           number: 4,
           gadItem: 6,
+          // GAD-7 item 6: "Becoming easily annoyed or irritable"
           keywords: ["irritable", "snappy"]
         }),
         criterion("gad.C.5", "C", "Muscle tension.", "Is muscle tension, tightness, or physical tension part of the anxiety?", {
@@ -237,7 +237,6 @@
         }),
         criterion("gad.C.6", "C", "Sleep disturbance.", "Has the anxiety affected sleep?", {
           number: 6,
-          gadItem: 7,
           keywords: ["sleep", "can\u2019t sleep", "trouble sleeping"]
         }),
         criterion("gad.D", "D", "Symptoms cause clinically significant distress or impairment.", "How much does the anxiety interfere with daily responsibilities or relationships?", {
@@ -329,7 +328,7 @@
         }),
         criterion("panic.A.4", "A", "Shortness of breath or smothering sensations.", "Do panic episodes include feeling short of breath or smothered?", {
           number: 4,
-          keywords: ["shortness of breath", "can\u2019t breathe", "smothering"]
+          keywords: ["shortness of breath", "can", ", "]
         }),
         criterion("panic.A.5", "A", "Feelings of choking.", "Do panic episodes include a choking sensation?", {
           number: 5,
@@ -408,7 +407,7 @@
         criterion("ptsd.B.1", "B", "Recurrent, involuntary, intrusive memories.", "Are there intrusive memories of the traumatic event?", {
           number: 1,
           intakeFields: TRAUMA_FIELDS,
-          keywords: ["intrusive memories", "can\u2019t stop thinking about it", "flashbacks"]
+          keywords: ["intrusive memories", "can", ", "]
         }),
         criterion("ptsd.B.2", "B", "Recurrent distressing dreams related to the trauma.", "Are there trauma-related nightmares or distressing dreams?", {
           number: 2,
@@ -443,12 +442,12 @@
         criterion("ptsd.D.1", "D", "Inability to remember an important aspect of the trauma.", "Is there trauma-related amnesia or fragmented recall?", {
           number: 1,
           intakeFields: TRAUMA_FIELDS,
-          keywords: ["can\u2019t remember", "blank spots", "amnesia"]
+          keywords: ["can", ", ", ", "]
         }),
         criterion("ptsd.D.2", "D", "Persistent exaggerated negative beliefs or expectations.", "Are there enduring negative beliefs about self, others, or the world since the trauma?", {
           number: 2,
           intakeFields: TRAUMA_FIELDS,
-          keywords: ["can\u2019t trust anyone", "world is unsafe", "i am ruined"]
+          keywords: ["can", ", ", ", "]
         }),
         criterion("ptsd.D.3", "D", "Persistent distorted blame of self or others.", "Is there persistent self-blame or blame of others related to the trauma?", {
           number: 3,
@@ -473,7 +472,7 @@
         criterion("ptsd.D.7", "D", "Persistent inability to experience positive emotions.", "Is there difficulty feeling positive emotions such as happiness or love?", {
           number: 7,
           intakeFields: TRAUMA_FIELDS,
-          keywords: ["can\u2019t feel happy", "numb", "unable to feel positive emotions"]
+          keywords: ["can", ", ", ", "]
         }),
         criterion("ptsd.E.1", "E", "Irritable behavior or angry outbursts.", "Have there been angry outbursts or increased irritability since the trauma?", {
           number: 1,
@@ -498,12 +497,12 @@
         criterion("ptsd.E.5", "E", "Problems with concentration.", "Has concentration worsened since the trauma?", {
           number: 5,
           intakeFields: TRAUMA_FIELDS,
-          keywords: ["concentration", "can\u2019t focus"]
+          keywords: ["concentration", "can"]
         }),
         criterion("ptsd.E.6", "E", "Sleep disturbance.", "Has trauma-related distress affected sleep?", {
           number: 6,
           intakeFields: TRAUMA_FIELDS,
-          keywords: ["sleep disturbance", "can\u2019t sleep", "insomnia", "nightmares"]
+          keywords: ["sleep disturbance", "can", ", ", ", "]
         }),
         criterion("ptsd.F", "F", "Duration is more than 1 month.", "How long have the trauma symptoms been present?", {
           intakeFields: TRAUMA_FIELDS
@@ -567,7 +566,7 @@
         criterion("acute_stress.B.6", "B", "Persistent inability to experience positive emotions.", "Since the event, is it hard to feel positive emotions?", {
           number: 6,
           intakeFields: TRAUMA_FIELDS,
-          keywords: ["numb", "can\u2019t feel positive emotions"]
+          keywords: ["numb", "can"]
         }),
         criterion("acute_stress.B.7", "B", "Altered sense of reality.", "Have there been episodes of feeling dazed, detached, or in a fog?", {
           number: 7,
@@ -577,7 +576,7 @@
         criterion("acute_stress.B.8", "B", "Inability to remember an important aspect of the trauma.", "Is there trauma-related amnesia?", {
           number: 8,
           intakeFields: TRAUMA_FIELDS,
-          keywords: ["can\u2019t remember", "amnesia"]
+          keywords: ["can", ", "]
         }),
         criterion("acute_stress.B.9", "B", "Avoidance of distressing memories, thoughts, or feelings.", "Are trauma-related thoughts or feelings being avoided?", {
           number: 9,
@@ -725,15 +724,15 @@
         }),
         criterion("adhd.A1.2", "A1", "Often has difficulty sustaining attention.", "Is sustained attention difficult in work, school, or conversations?", {
           number: 2,
-          keywords: ["difficulty paying attention", "can\u2019t sustain attention", "loses focus"]
+          keywords: ["difficulty paying attention", "can", ", "]
         }),
         criterion("adhd.A1.3", "A1", "Often does not seem to listen when spoken to directly.", "Do others report that the person seems not to listen?", {
           number: 3,
-          keywords: ["doesn\u2019t listen", "zones out"]
+          keywords: ["doesn", ", "]
         }),
         criterion("adhd.A1.4", "A1", "Often does not follow through on instructions and fails to finish tasks.", "Do they start tasks and fail to finish them?", {
           number: 4,
-          keywords: ["doesn\u2019t finish", "fails to follow through"]
+          keywords: ["doesn", ", "]
         }),
         criterion("adhd.A1.5", "A1", "Often has difficulty organizing tasks and activities.", "Are organizing tasks, time, or materials persistent problems?", {
           number: 5,
@@ -757,7 +756,7 @@
         }),
         criterion("adhd.A2.1", "A2", "Often fidgets or taps hands/feet or squirms in seat.", "Is there noticeable fidgeting or restlessness?", {
           number: 1,
-          keywords: ["fidget", "restless", "can\u2019t sit still"]
+          keywords: ["fidget", "restless", "can"]
         }),
         criterion("adhd.A2.2", "A2", "Often leaves seat when remaining seated is expected.", "Do they have trouble staying seated when expected?", {
           number: 2,
@@ -769,7 +768,7 @@
         }),
         criterion("adhd.A2.4", "A2", "Often unable to play or engage quietly.", "Is quiet leisure difficult?", {
           number: 4,
-          keywords: ["can\u2019t relax", "can\u2019t do quiet activities"]
+          keywords: ["can", ", ", "t do quiet activities"]
         }),
         criterion("adhd.A2.5", "A2", "Is often on the go or acts as if driven by a motor.", "Do others describe them as always on the go?", {
           number: 5,
@@ -785,7 +784,7 @@
         }),
         criterion("adhd.A2.8", "A2", "Often has difficulty waiting their turn.", "Is waiting their turn unusually hard?", {
           number: 8,
-          keywords: ["can\u2019t wait turn", "impatient"]
+          keywords: ["can", ", "]
         }),
         criterion("adhd.A2.9", "A2", "Often interrupts or intrudes on others.", "Do they interrupt or intrude on other people regularly?", {
           number: 9,
@@ -837,7 +836,7 @@
         criterion("bipolar_i.B.2", "B", "Decreased need for sleep.", "During the elevated period, did they need far less sleep without feeling tired?", {
           number: 2,
           intakeFields: [...NARRATIVE_FIELDS, ...FAMILY_AND_HISTORY_FIELDS],
-          keywords: ["decreased need for sleep", "slept 2 hours", "didn\u2019t need sleep"]
+          keywords: ["decreased need for sleep", "slept 2 hours", "didn"]
         }),
         criterion("bipolar_i.B.3", "B", "More talkative than usual or pressure to keep talking.", "During the elevated period, was there pressured or excessive talking?", {
           number: 3,
@@ -852,7 +851,7 @@
         criterion("bipolar_i.B.5", "B", "Distractibility.", "Did distractibility increase markedly during the elevated period?", {
           number: 5,
           intakeFields: [...NARRATIVE_FIELDS, ...FAMILY_AND_HISTORY_FIELDS],
-          keywords: ["distractible", "can\u2019t stay on one thing"]
+          keywords: ["distractible", "can"]
         }),
         criterion("bipolar_i.B.6", "B", "Increase in goal-directed activity or psychomotor agitation.", "Was there a major increase in projects, productivity, agitation, or goal-directed activity?", {
           number: 6,
@@ -866,7 +865,7 @@
         }),
         criterion("bipolar_i.C", "C", "The mood disturbance is severe enough to cause marked impairment, require hospitalization, or include psychotic features.", "Did the period cause major impairment, require hospitalization, or include psychosis?", {
           intakeFields: ["psychiatricHospitalization", "additionalSymptoms", "additionalInfo", "rawQA"],
-          keywords: ["hospitalized", "psychosis", "couldn\u2019t function"]
+          keywords: ["hospitalized", "psychosis", "couldn"]
         }),
         criterion("bipolar_i.D", "D", "The episode is not attributable to substances or another medical condition.", "Could substances or a medical condition better explain the elevated mood episode?", {
           intakeFields: ["medicalHistory", "alcoholUse", "drugUse", "substanceUseHistory", "rawQA"]
@@ -926,12 +925,12 @@
         criterion("alcohol_use.A.1", "A", "Alcohol is often taken in larger amounts or over a longer period than intended.", "Does drinking often go further than planned?", {
           number: 1,
           intakeFields: SUBSTANCE_FIELDS,
-          keywords: ["drink more than intended", "can\u2019t stop once i start"]
+          keywords: ["drink more than intended", "can"]
         }),
         criterion("alcohol_use.A.2", "A", "Persistent desire or unsuccessful efforts to cut down or control use.", "Have there been unsuccessful attempts to cut down or stop drinking?", {
           number: 2,
           intakeFields: SUBSTANCE_FIELDS,
-          keywords: ["tried to cut down", "couldn\u2019t stop drinking"]
+          keywords: ["tried to cut down", "couldn"]
         }),
         criterion("alcohol_use.A.3", "A", "A great deal of time is spent obtaining, using, or recovering from alcohol.", "Is a lot of time spent drinking or recovering from drinking?", {
           number: 3,
@@ -997,12 +996,12 @@
         criterion("cannabis_use.A.1", "A", "Cannabis is often taken in larger amounts or over a longer period than intended.", "Does cannabis use often go further than planned?", {
           number: 1,
           intakeFields: SUBSTANCE_FIELDS,
-          keywords: ["use more weed than intended", "can\u2019t stop smoking once i start"]
+          keywords: ["use more weed than intended", "can"]
         }),
         criterion("cannabis_use.A.2", "A", "Persistent desire or unsuccessful efforts to cut down or control use.", "Have there been unsuccessful attempts to cut down or stop cannabis use?", {
           number: 2,
           intakeFields: SUBSTANCE_FIELDS,
-          keywords: ["tried to cut down weed", "couldn\u2019t stop cannabis"]
+          keywords: ["tried to cut down weed", "couldn"]
         }),
         criterion("cannabis_use.A.3", "A", "A great deal of time is spent obtaining, using, or recovering from cannabis.", "Is a lot of time spent using cannabis or recovering from it?", {
           number: 3,
@@ -1081,7 +1080,7 @@
         criterion("borderline.B.3", "B", "Identity disturbance with markedly unstable self-image or sense of self.", "Is there a markedly unstable sense of self or identity?", {
           number: 3,
           intakeFields: NARRATIVE_FIELDS,
-          keywords: ["don\u2019t know who i am", "identity disturbance", "unstable self-image"]
+          keywords: ["don", ", ", ", "]
         }),
         criterion("borderline.B.4", "B", "Impulsivity in at least two potentially self-damaging areas.", "Are there impulsive behaviors in self-damaging areas such as spending, sex, substances, driving, or binge eating?", {
           number: 4,
@@ -1106,7 +1105,7 @@
         criterion("borderline.B.8", "B", "Inappropriate, intense anger or difficulty controlling anger.", "Is anger intense, hard to regulate, or disproportionate?", {
           number: 8,
           intakeFields: NARRATIVE_FIELDS,
-          keywords: ["intense anger", "rage", "can\u2019t control anger"]
+          keywords: ["intense anger", "rage", "can"]
         }),
         criterion("borderline.B.9", "B", "Transient stress-related paranoid ideation or severe dissociative symptoms.", "Under stress, are there brief paranoid ideas or dissociative symptoms?", {
           number: 9,

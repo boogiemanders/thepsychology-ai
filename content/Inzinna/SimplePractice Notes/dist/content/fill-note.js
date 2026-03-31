@@ -395,10 +395,26 @@
     el.dispatchEvent(new Event("blur", { bubbles: true }));
     return true;
   }
+  var pendingBooleanSyncOperations = [];
+  async function flushBooleanSyncOperations() {
+    if (pendingBooleanSyncOperations.length === 0) return;
+    const operations = pendingBooleanSyncOperations.splice(0, pendingBooleanSyncOperations.length);
+    try {
+      const response = await chrome.runtime.sendMessage({
+        type: "SPN_SYNC_BOOLEAN_FIELDS",
+        operations
+      });
+      if (!response?.ok) {
+        console.warn("[SPN] Boolean field sync was not acknowledged:", response?.error ?? "unknown error");
+      }
+    } catch (error) {
+      console.warn("[SPN] Failed to sync boolean fields in the page world:", error);
+    }
+  }
   function checkCheckboxByLabel(groupName, labelText) {
     if (!labelText) return false;
     const target = labelText.toLowerCase().trim();
-    const checkboxes = document.querySelectorAll(`input[name^="${groupName}"][type="checkbox"]`);
+    const checkboxes = document.querySelectorAll(`input[name^="${groupName}-"][type="checkbox"]`);
     for (const cb of Array.from(checkboxes)) {
       const label = cb.closest("label");
       if (!label) continue;
@@ -406,7 +422,6 @@
       if (text === target || text.includes(target) || target.includes(text)) {
         if (!cb.checked) {
           cb.click();
-          cb.dispatchEvent(new Event("change", { bubbles: true }));
         }
         return true;
       }
@@ -419,15 +434,17 @@
     const radios = document.querySelectorAll(`input[name="${name}"][type="radio"]`);
     for (const radio of Array.from(radios)) {
       if (radio.value === valueOrLabel) {
-        radio.click();
-        radio.dispatchEvent(new Event("change", { bubbles: true }));
+        if (!radio.checked) {
+          radio.click();
+        }
         return true;
       }
       const label = radio.closest("label");
       const labelText = label?.textContent?.trim().toLowerCase() ?? "";
       if (labelText === target || labelText.includes(target)) {
-        radio.click();
-        radio.dispatchEvent(new Event("change", { bubbles: true }));
+        if (!radio.checked) {
+          radio.click();
+        }
         return true;
       }
     }
@@ -990,8 +1007,8 @@
       { label: "Sensation of choking", patterns: [/sensation of choking|choking/] },
       { label: "Trembling or shaking", patterns: [/trembling|shaking|shaky/] },
       { label: "Chest pain or discomfort", patterns: [/chest pain|chest discomfort/] },
-      { label: "Nausea or abdominal distress", patterns: [/nausea|abdominal distress|stomach distress/] },
-      { label: "Abdominal pain or discomfort", patterns: [/abdominal pain|abdominal discomfort|stomach pain/] },
+      { label: "Nausea or abdominal distress", patterns: [/nausea|nauseous|queasy|queasiness|abdominal distress|stomach distress|upset stomach/] },
+      { label: "Abdominal pain or discomfort", patterns: [/abdominal pain|abdominal discomfort|stomach pain|stomach pains|stomach ache|stomach discomfort/] },
       { label: "Feeling dizzy, unsteady, lightheaded, or faint", patterns: [/dizzy|unsteady|lightheaded|faint/] },
       { label: "Chills or heat sensations", patterns: [/chills|heat sensations?|hot flashes?/] },
       { label: "Paresthesias", patterns: [/paresthesia|tingling|numbness/] },
@@ -1325,6 +1342,8 @@
     }
     await wait(500);
     const filled = fillICEFromIntake(intake);
+    await flushBooleanSyncOperations();
+    await wait(200);
     if (filled > 0) {
       showToast(`Filled ${filled} fields from intake data for ${intake.fullName || "client"}`, "success");
     } else {

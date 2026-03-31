@@ -32,6 +32,7 @@ import {
   fillContentEditableField,
   fillCombobox,
   checkCheckboxByLabel,
+  flushBooleanSyncOperations,
   selectRadio,
   selectYesNo,
   selectDropdownById,
@@ -692,8 +693,8 @@ function fillSymptomChecklistsFromIntake(intake: IntakeData): number {
     { label: 'Sensation of choking', patterns: [/sensation of choking|choking/] },
     { label: 'Trembling or shaking', patterns: [/trembling|shaking|shaky/] },
     { label: 'Chest pain or discomfort', patterns: [/chest pain|chest discomfort/] },
-    { label: 'Nausea or abdominal distress', patterns: [/nausea|abdominal distress|stomach distress/] },
-    { label: 'Abdominal pain or discomfort', patterns: [/abdominal pain|abdominal discomfort|stomach pain/] },
+    { label: 'Nausea or abdominal distress', patterns: [/nausea|nauseous|queasy|queasiness|abdominal distress|stomach distress|upset stomach/] },
+    { label: 'Abdominal pain or discomfort', patterns: [/abdominal pain|abdominal discomfort|stomach pain|stomach pains|stomach ache|stomach discomfort/] },
     { label: 'Feeling dizzy, unsteady, lightheaded, or faint', patterns: [/dizzy|unsteady|lightheaded|faint/] },
     { label: 'Chills or heat sensations', patterns: [/chills|heat sensations?|hot flashes?/] },
     { label: 'Paresthesias', patterns: [/paresthesia|tingling|numbness/] },
@@ -1010,6 +1011,8 @@ async function fillInitialClinicalEval(): Promise<void> {
   await wait(500)
 
   const filled = fillICEFromIntake(intake)
+  await flushBooleanSyncOperations()
+  await wait(200)
 
   if (filled > 0) {
     showToast(`Filled ${filled} fields from intake data for ${intake.fullName || 'client'}`, 'success')

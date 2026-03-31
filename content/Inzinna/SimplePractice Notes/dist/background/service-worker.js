@@ -100,6 +100,114 @@
       }
     }
   }
+  async function syncBooleanFieldsInPageWorld(tabId, operations) {
+    if (operations.length === 0) {
+      return { applied: 0 };
+    }
+    const [result] = await chrome.scripting.executeScript({
+      target: { tabId },
+      world: "MAIN",
+      args: [operations],
+      func: async (ops) => {
+        const waitFor = (ms) => new Promise((resolve) => window.setTimeout(resolve, ms));
+        const setCheckedState = (input, checked) => {
+          const nativeCheckedSetter = Object.getOwnPropertyDescriptor(
+            window.HTMLInputElement.prototype,
+            "checked"
+          )?.set;
+          if (nativeCheckedSetter) {
+            nativeCheckedSetter.call(input, checked);
+            return;
+          }
+          input.checked = checked;
+        };
+        const dispatchBooleanEvents = (input) => {
+          input.focus();
+          if ("PointerEvent" in window) {
+            input.dispatchEvent(new PointerEvent("pointerdown", {
+              bubbles: true,
+              cancelable: true,
+              composed: true,
+              pointerId: 1,
+              pointerType: "mouse",
+              isPrimary: true,
+              button: 0,
+              buttons: 1
+            }));
+          }
+          input.dispatchEvent(new MouseEvent("mousedown", {
+            bubbles: true,
+            cancelable: true,
+            composed: true,
+            button: 0,
+            buttons: 1,
+            view: window
+          }));
+          if ("PointerEvent" in window) {
+            input.dispatchEvent(new PointerEvent("pointerup", {
+              bubbles: true,
+              cancelable: true,
+              composed: true,
+              pointerId: 1,
+              pointerType: "mouse",
+              isPrimary: true,
+              button: 0,
+              buttons: 0
+            }));
+          }
+          input.dispatchEvent(new MouseEvent("mouseup", {
+            bubbles: true,
+            cancelable: true,
+            composed: true,
+            button: 0,
+            buttons: 0,
+            view: window
+          }));
+          input.dispatchEvent(new MouseEvent("click", {
+            bubbles: true,
+            cancelable: true,
+            composed: true,
+            button: 0,
+            buttons: 0,
+            view: window
+          }));
+          input.dispatchEvent(new Event("input", { bubbles: true, composed: true }));
+          input.dispatchEvent(new Event("change", { bubbles: true, composed: true }));
+          input.dispatchEvent(new FocusEvent("blur", { composed: true }));
+          input.dispatchEvent(new FocusEvent("focusout", { bubbles: true, composed: true }));
+        };
+        const findCheckbox = (name) => {
+          for (const input of Array.from(document.querySelectorAll('input[type="checkbox"]'))) {
+            if (input instanceof HTMLInputElement && input.name === name) {
+              return input;
+            }
+          }
+          return null;
+        };
+        const findRadio = (name, value) => {
+          for (const input of Array.from(document.querySelectorAll(`input[type="radio"][name="${name}"]`))) {
+            if (input instanceof HTMLInputElement && input.value === value) {
+              return input;
+            }
+          }
+          return null;
+        };
+        let applied = 0;
+        for (const operation of ops) {
+          const input = operation.kind === "checkbox" ? findCheckbox(operation.name) : findRadio(operation.name, operation.value);
+          if (!input) continue;
+          setCheckedState(input, true);
+          dispatchBooleanEvents(input);
+          if (input.checked) {
+            applied += 1;
+          }
+          await waitFor(20);
+        }
+        return { applied };
+      }
+    });
+    return { applied: result?.result?.applied ?? 0 };
+  }
   chrome.runtime.onInstalled.addListener(() => {
     console.log("[SPN] SimplePractice Notes extension installed");
     initialize();
@@ -114,7 +222,7 @@
     }
   });
   void initialize();
-  var DEV_RELOAD = true;
+  var DEV_RELOAD = false;
   if (DEV_RELOAD) {
     let lastModified = 0;
     const checkForChanges = async () => {
@@ -133,7 +241,7 @@
     };
     setInterval(checkForChanges, 1e3);
   }
-  chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
+  chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     if (message.type === "GET_INTAKE") {
       chrome.storage.session.get(INTAKE_KEY, (result) => {
         sendResponse(result[INTAKE_KEY] ?? null);
@@ -160,6 +268,20 @@
     }
     if (message.type === "SPN_DISCOVER_INTAKE_NOTE_URLS") {
       discoverIntakeNoteUrlsViaTab(message.clientId).then((urls) => sendResponse({ urls })).catch(() => sendResponse({ urls: [] }));
+      return true;
+    }
+    if (message.type === "SPN_SYNC_BOOLEAN_FIELDS") {
+      const tabId = sender.tab?.id;
+      const operations = Array.isArray(message.operations) ? message.operations : [];
+      if (!tabId) {
+        sendResponse({ ok: false, error: "No sender tab available for boolean sync." });
+        return false;
+      }
+      syncBooleanFieldsInPageWorld(tabId, operations).then(({ applied }) => sendResponse({ ok: true, applied })).catch((error) => {
+        const messageText = error instanceof Error ? error.message : String(error);
+        console.warn("[SPN] Boolean field sync failed:", error);
+        sendResponse({ ok: false, error: messageText });
+      });
       return true;
     }
   });

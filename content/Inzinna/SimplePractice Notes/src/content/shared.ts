@@ -156,6 +156,57 @@ export function selectOptionByText(selector: string, text: string, root: Element
   return false
 }
 
+type BooleanSyncOperation =
+  | { kind: 'checkbox'; name: string }
+  | { kind: 'radio'; name: string; value: string }
+
+const pendingBooleanSyncOperations: BooleanSyncOperation[] = []
+
+function setCheckedState(input: HTMLInputElement, checked: boolean): void {
+  const nativeCheckedSetter = Object.getOwnPropertyDescriptor(
+    window.HTMLInputElement.prototype,
+    'checked'
+  )?.set
+
+  if (nativeCheckedSetter) {
+    nativeCheckedSetter.call(input, checked)
+    return
+  }
+
+  input.checked = checked
+}
+
+function queueBooleanSyncOperation(operation: BooleanSyncOperation): void {
+  const alreadyQueued = pendingBooleanSyncOperations.some((existing) => {
+    if (existing.kind !== operation.kind) return false
+    if (existing.name !== operation.name) return false
+    return existing.kind === 'checkbox' || existing.value === operation.value
+  })
+
+  if (!alreadyQueued) {
+    pendingBooleanSyncOperations.push(operation)
+  }
+}
+
+export async function flushBooleanSyncOperations(): Promise<void> {
+  if (pendingBooleanSyncOperations.length === 0) return
+
+  const operations = pendingBooleanSyncOperations.splice(0, pendingBooleanSyncOperations.length)
+
+  try {
+    const response = await chrome.runtime.sendMessage({
+      type: 'SPN_SYNC_BOOLEAN_FIELDS',
+      operations,
+    }) as { ok?: boolean; applied?: number; error?: string } | undefined
+
+    if (!response?.ok) {
+      console.warn('[SPN] Boolean field sync was not acknowledged:', response?.error ?? 'unknown error')
+    }
+  } catch (error) {
+    console.warn('[SPN] Failed to sync boolean fields in the page world:', error)
+  }
+}
+
 /**
  * Check a checkbox by matching its sibling label text.
  * SP checkbox pattern: <label class="boolean"><input type="checkbox"> Label Text</label>
@@ -164,8 +215,8 @@ export function checkCheckboxByLabel(groupName: string, labelText: string): bool
   if (!labelText) return false
   const target = labelText.toLowerCase().trim()
 
-  // Find all checkboxes whose name starts with the group prefix
-  const checkboxes = document.querySelectorAll(`input[name^="${groupName}"][type="checkbox"]`) as NodeListOf<HTMLInputElement>
+  // Match the exact multi-select group prefix, e.g. multi-select-11-*
+  const checkboxes = document.querySelectorAll(`input[name^="${groupName}-"][type="checkbox"]`) as NodeListOf<HTMLInputElement>
   for (const cb of Array.from(checkboxes)) {
     const label = cb.closest('label')
     if (!label) continue
@@ -173,7 +224,6 @@ export function checkCheckboxByLabel(groupName: string, labelText: string): bool
     if (text === target || text.includes(target) || target.includes(text)) {
       if (!cb.checked) {
         cb.click()
-        cb.dispatchEvent(new Event('change', { bubbles: true }))
       }
       return true
     }
@@ -205,16 +255,18 @@ export function selectRadio(name: string, valueOrLabel: string): boolean {
   for (const radio of Array.from(radios)) {
     // Match by value
     if (radio.value === valueOrLabel) {
-      radio.click()
-      radio.dispatchEvent(new Event('change', { bubbles: true }))
+      if (!radio.checked) {
+        radio.click()
+      }
       return true
     }
     // Match by label text
     const label = radio.closest('label')
     const labelText = label?.textContent?.trim().toLowerCase() ?? ''
     if (labelText === target || labelText.includes(target)) {
-      radio.click()
-      radio.dispatchEvent(new Event('change', { bubbles: true }))
+      if (!radio.checked) {
+        radio.click()
+      }
       return true
     }
   }
