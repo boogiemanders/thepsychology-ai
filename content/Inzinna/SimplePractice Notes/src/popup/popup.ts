@@ -1,5 +1,6 @@
 import { getIntake, getNote, clearAll, getPreferences, savePreferences, hasPreferences } from '../lib/storage'
 import { IntakeData, ProviderPreferences, DEFAULT_PREFERENCES } from '../lib/types'
+import { isLicenseValid, validateAndSaveLicense, submitFeedback } from '../lib/license'
 
 function formatDate(iso: string): string {
   const d = new Date(iso)
@@ -24,18 +25,26 @@ function updateCheckItem(id: string, done: boolean): void {
   }
 }
 
-function showView(view: 'main' | 'settings'): void {
-  const emptyState = document.getElementById('empty-state')!
-  const intakeInfo = document.getElementById('intake-info')!
-  const settingsPanel = document.getElementById('settings-panel')!
+function showView(view: 'main' | 'settings' | 'license' | 'feedback'): void {
+  // Hide all overlay panels
+  document.getElementById('settings-panel')!.style.display = 'none'
+  document.getElementById('license-gate')!.style.display = 'none'
+  document.getElementById('feedback-panel')!.style.display = 'none'
 
   if (view === 'settings') {
-    emptyState.style.display = 'none'
-    intakeInfo.style.display = 'none'
-    settingsPanel.style.display = 'flex'
-  } else {
-    settingsPanel.style.display = 'none'
+    document.getElementById('empty-state')!.style.display = 'none'
+    document.getElementById('intake-info')!.style.display = 'none'
+    document.getElementById('settings-panel')!.style.display = 'flex'
+  } else if (view === 'license') {
+    document.getElementById('empty-state')!.style.display = 'none'
+    document.getElementById('intake-info')!.style.display = 'none'
+    document.getElementById('license-gate')!.style.display = 'flex'
+  } else if (view === 'feedback') {
+    document.getElementById('empty-state')!.style.display = 'none'
+    document.getElementById('intake-info')!.style.display = 'none'
+    document.getElementById('feedback-panel')!.style.display = 'flex'
   }
+  // For 'main': all panels hidden, render() controls empty-state/intake-info visibility
 }
 
 function renderIntakeFields(intake: IntakeData): void {
@@ -119,6 +128,12 @@ function readSettingsForm(): ProviderPreferences {
 }
 
 async function render(): Promise<void> {
+  const licenseValid = await isLicenseValid()
+  if (!licenseValid) {
+    showView('license')
+    return
+  }
+
   const intake = await getIntake()
   const note = await getNote()
   const prefs = await getPreferences()
@@ -207,9 +222,90 @@ document.getElementById('btn-clear')?.addEventListener('click', async () => {
   render()
 })
 
+// License gate: activate button
+document.getElementById('btn-activate')?.addEventListener('click', async () => {
+  const input = document.getElementById('license-key-input') as HTMLInputElement
+  const errorEl = document.getElementById('license-error')!
+  const btn = document.getElementById('btn-activate') as HTMLButtonElement
+
+  btn.disabled = true
+  btn.textContent = 'Checking...'
+  errorEl.style.display = 'none'
+
+  const result = await validateAndSaveLicense(input.value)
+
+  if (result.valid) {
+    showView('main')
+    render()
+  } else {
+    errorEl.textContent = result.error ?? 'Invalid license key.'
+    errorEl.style.display = 'block'
+    btn.disabled = false
+    btn.textContent = 'Activate'
+  }
+})
+
+// Feedback button (footer)
+document.getElementById('btn-feedback')?.addEventListener('click', () => {
+  const statusEl = document.getElementById('feedback-status')!
+  statusEl.style.display = 'none'
+  ;(document.getElementById('feedback-message') as HTMLTextAreaElement).value = ''
+  showView('feedback')
+})
+
+// Feedback submit
+document.getElementById('btn-feedback-submit')?.addEventListener('click', async () => {
+  const category = (document.getElementById('feedback-category') as HTMLSelectElement).value
+  const message = (document.getElementById('feedback-message') as HTMLTextAreaElement).value.trim()
+  const statusEl = document.getElementById('feedback-status')!
+  const btn = document.getElementById('btn-feedback-submit') as HTMLButtonElement
+
+  if (!message) {
+    statusEl.textContent = 'Please enter a message.'
+    statusEl.className = 'feedback-status feedback-error'
+    statusEl.style.display = 'block'
+    return
+  }
+
+  btn.disabled = true
+  btn.textContent = 'Sending...'
+  statusEl.style.display = 'none'
+
+  try {
+    const { version } = chrome.runtime.getManifest()
+    await submitFeedback('SimplePractice Notes', version, category, message)
+    statusEl.textContent = 'Thanks! We\'ll review your feedback.'
+    statusEl.className = 'feedback-status feedback-success'
+    statusEl.style.display = 'block'
+    btn.textContent = 'Sent'
+    setTimeout(() => {
+      showView('main')
+      render()
+    }, 1500)
+  } catch {
+    statusEl.textContent = 'Failed to send. Please try again.'
+    statusEl.className = 'feedback-status feedback-error'
+    statusEl.style.display = 'block'
+    btn.disabled = false
+    btn.textContent = 'Send'
+  }
+})
+
+// Feedback cancel
+document.getElementById('btn-feedback-cancel')?.addEventListener('click', () => {
+  showView('main')
+  render()
+})
+
 chrome.storage.onChanged.addListener(() => render())
 
 async function init(): Promise<void> {
+  const licenseValid = await isLicenseValid()
+  if (!licenseValid) {
+    showView('license')
+    return
+  }
+
   const hasPrefs = await hasPreferences()
   if (!hasPrefs) {
     await populateSettingsForm()

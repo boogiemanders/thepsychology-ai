@@ -70,12 +70,51 @@
       <h2 class="section-title">VOB Email</h2>
       <label>To (comma-separated)<input id="pref-vobTo" type="text" class="input"></label>
       <label>CC (comma-separated)<input id="pref-vobCc" type="text" class="input"></label>
-      <label>Signature<textarea id="pref-signature" class="input textarea" rows="5"></textarea></label>
+      <label>Signature<textarea id="pref-signature" class="input" rows="5"></textarea></label>
 
       <div class="actions">
         <button id="btn-save-prefs" class="btn btn-primary">Save</button>
         <button id="btn-cancel-prefs" class="btn btn-secondary">Cancel</button>
       </div>
+    </div>
+
+    <!-- License gate (shown when no valid license) -->
+    <div id="license-gate" class="settings-panel" style="display: none;">
+      <h2 class="section-title">Activate License</h2>
+      <p class="gate-hint">Enter your license key to use ZocDoc → SP.</p>
+      <label>License Key
+        <input id="license-key-input" type="text" class="input" placeholder="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx">
+      </label>
+      <p id="license-error" class="license-error" style="display: none;"></p>
+      <div class="actions">
+        <button id="btn-activate" class="btn btn-primary">Activate</button>
+      </div>
+      <p class="gate-link">Need a license? <a href="https://thepsychology.ai" target="_blank">Subscribe at thepsychology.ai</a></p>
+    </div>
+
+    <!-- Feedback panel -->
+    <div id="feedback-panel" class="settings-panel" style="display: none;">
+      <h2 class="section-title">Send Feedback</h2>
+      <label>Type
+        <select id="feedback-category" class="input">
+          <option value="bug">Bug Report</option>
+          <option value="feature">Feature Request</option>
+          <option value="question">Question</option>
+        </select>
+      </label>
+      <label>Message
+        <textarea id="feedback-message" class="input" rows="4" maxlength="1000" placeholder="Describe the issue or feature..."></textarea>
+      </label>
+      <p id="feedback-status" class="feedback-status" style="display: none;"></p>
+      <div class="actions">
+        <button id="btn-feedback-submit" class="btn btn-primary">Send</button>
+        <button id="btn-feedback-cancel" class="btn btn-secondary">Cancel</button>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="popup-footer">
+      <button id="btn-feedback" class="btn-link">Send feedback</button>
     </div>
   </div>
 

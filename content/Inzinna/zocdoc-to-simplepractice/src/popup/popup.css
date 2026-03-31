@@ -191,3 +191,64 @@ body {
   resize: vertical;
   min-height: 60px;
 }
+
+/* License gate */
+.gate-hint {
+  font-size: 11px;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.gate-link {
+  font-size: 11px;
+  color: #888;
+  text-align: center;
+  margin-top: 4px;
+}
+
+.gate-link a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.gate-link a:hover {
+  text-decoration: underline;
+}
+
+.license-error {
+  font-size: 11px;
+  color: #dc2626;
+}
+
+/* Feedback */
+.feedback-status {
+  font-size: 11px;
+}
+
+.feedback-success {
+  color: #16a34a;
+}
+
+.feedback-error {
+  color: #dc2626;
+}
+
+/* Footer */
+.popup-footer {
+  margin-top: 12px;
+  text-align: center;
+}
+
+.btn-link {
+  background: none;
+  border: none;
+  color: #999;
+  font-size: 11px;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+}
+
+.btn-link:hover {
+  color: #666;
+}

@@ -1,6 +1,8 @@
 // Background service worker for ZocDoc to SimplePractice extension
 // Handles extension lifecycle events and PHI auto-cleanup
 
+import { refreshLicenseInBackground } from '../lib/license'
+
 const CLIENT_STORAGE_KEY = 'capturedClient'
 const PENDING_VOB_KEY = 'pendingVobDraft'
 const LEGACY_LOCAL_CLIENT_KEY = CLIENT_STORAGE_KEY
@@ -58,17 +60,23 @@ chrome.runtime.onInstalled.addListener(() => {
 
   // Set up periodic cleanup alarm (every 1 hour)
   chrome.alarms.create('phi-cleanup', { periodInMinutes: 60 })
+  chrome.alarms.create('license-check', { periodInMinutes: 60 * 24 })
+  void refreshLicenseInBackground()
 })
 
 // Also clean up on startup
 chrome.runtime.onStartup.addListener(() => {
   initializeSecureStorage()
+  void refreshLicenseInBackground()
 })
 
-// Alarm-based periodic cleanup
+// Alarm-based periodic cleanup and license refresh
 chrome.alarms.onAlarm.addListener((alarm) => {
   if (alarm.name === 'phi-cleanup') {
     cleanupExpiredData()
+  }
+  if (alarm.name === 'license-check') {
+    void refreshLicenseInBackground()
   }
 })
 

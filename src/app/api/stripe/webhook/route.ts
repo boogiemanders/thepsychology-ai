@@ -339,6 +339,29 @@ export async function POST(request: Request) {
       await updateUserSubscription(userId, planTier, stripeCustomerId)
       console.log('[Stripe] Subscription updated successfully', { userId, planTier, stripeCustomerId })
 
+      // Generate extension license key if the user doesn't have one yet
+      try {
+        const supabase = getSupabaseClient(undefined, { requireServiceRole: true })
+        if (supabase) {
+          const { data: userData } = await supabase
+            .from('users')
+            .select('extension_license_key')
+            .eq('id', userId)
+            .single()
+          if (!userData?.extension_license_key) {
+            const licenseKey = crypto.randomUUID()
+            await supabase
+              .from('users')
+              .update({ extension_license_key: licenseKey })
+              .eq('id', userId)
+            console.log('[Stripe] Generated extension license key for user:', userId)
+          }
+        }
+      } catch (err) {
+        // Non-blocking: don't fail the webhook if license key generation fails
+        console.warn('[Stripe] Could not generate extension license key:', err)
+      }
+
       await logFunnelEvent(userId ?? null, 'checkout_completed', {
         planTier,
         stripeCustomerId,

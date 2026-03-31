@@ -1,6 +1,8 @@
 // Background service worker for SimplePractice Notes extension
 // Handles extension lifecycle, PHI auto-cleanup, and message routing
 
+import { refreshLicenseInBackground } from '../lib/license'
+
 const INTAKE_KEY = 'spn_intake'
 const NOTE_KEY = 'spn_note'
 const TTL_MS = 60 * 60 * 1000 // 1 hour
@@ -44,17 +46,23 @@ chrome.runtime.onInstalled.addListener(() => {
   console.log('[SPN] SimplePractice Notes extension installed')
   initialize()
   chrome.alarms.create('phi-cleanup', { periodInMinutes: 60 })
+  chrome.alarms.create('license-check', { periodInMinutes: 60 * 24 })
+  void refreshLicenseInBackground()
 })
 
 // Run on startup
 chrome.runtime.onStartup.addListener(() => {
   initialize()
+  void refreshLicenseInBackground()
 })
 
-// Periodic cleanup
+// Periodic cleanup and license refresh
 chrome.alarms.onAlarm.addListener((alarm) => {
   if (alarm.name === 'phi-cleanup') {
     cleanupExpiredData()
+  }
+  if (alarm.name === 'license-check') {
+    void refreshLicenseInBackground()
   }
 })
 
