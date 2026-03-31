@@ -603,6 +603,11 @@
     const cleaned = trimmed.replace(/^(a|an)\s+/i, "").toLowerCase();
     return cleaned ? `a ${cleaned}` : "";
   }
+  function normalizeEducationForNarrative(education) {
+    const trimmed = education.trim();
+    if (!trimmed) return "";
+    return trimmed.replace(/^education[:\s-]*/i, "").replace(/^i\s+(?:am|have|completed|finished|earned)\s+/i, "").replace(/[.]+$/, "").trim().toLowerCase();
+  }
   function inferSubjectPronoun(intake) {
     const genderText = `${intake.genderIdentity} ${intake.sex}`.toLowerCase();
     if (/\b(male|man|boy|he|him)\b/.test(genderText)) return "he";
@@ -635,16 +640,17 @@
     const age = calculateAge(intake.dob) || getManualAgeLabel(intake.manualNotes);
     const identity = buildIdentityDescriptor(intake);
     const livingArrangement = normalizeLivingArrangement(intake.livingArrangement);
+    const education = normalizeEducationForNarrative(intake.education);
     const occupation = normalizeOccupation(intake.occupation);
     const pronoun = capitalize(inferSubjectPronoun(intake));
     const descriptor = [age, identity].filter(Boolean).join(", ");
     let intro = descriptor ? `${name} is a ${descriptor}` : `${name} is a patient`;
-    if (livingArrangement && occupation) {
-      intro += ` living ${livingArrangement} and working as ${occupation}`;
-    } else if (livingArrangement) {
-      intro += ` living ${livingArrangement}`;
-    } else if (occupation) {
-      intro += ` working as ${occupation}`;
+    const contextualClauses = [];
+    if (livingArrangement) contextualClauses.push(`living ${livingArrangement}`);
+    if (education) contextualClauses.push(`with education history of ${education}`);
+    if (occupation) contextualClauses.push(`working as ${occupation}`);
+    if (contextualClauses.length) {
+      intro += ` ${contextualClauses.join(", ")}`;
     }
     intro += ".";
     const sentences = [intro];

@@ -1165,7 +1165,16 @@
   var MANIA_PATTERN = /\b(manic|mania|hypomanic|euphoric|grandiose|decreased need for sleep|little sleep|pressured speech|racing thoughts|spending spree|reckless)\b/i;
   var TRAUMA_PATTERN = /\b(trauma|abuse|assault|violence|accident|witnessed|rape|sexual assault)\b/i;
   function normalizeText(value) {
-    return value.toLowerCase().replace(/\s+/g, " ").trim();
+    return value.normalize("NFKC").replace(/[’‘]/g, "'").replace(/[“”]/g, '"').toLowerCase().replace(/\s+/g, " ").trim();
+  }
+  function escapeRegExp(value) {
+    return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  }
+  function matchesKeyword(text, keyword) {
+    const normalizedKeyword = normalizeText(keyword);
+    if (!normalizedKeyword) return false;
+    const pattern = escapeRegExp(normalizedKeyword).replace(/\s+/g, "\\s+");
+    return new RegExp(`(^|[^a-z0-9])${pattern}($|[^a-z0-9])`, "i").test(text);
   }
   function buildCombinedNarrative(intake) {
     return [
@@ -1256,8 +1265,9 @@
       for (const value of values) {
         const normalized = normalizeText(value);
         if (!normalized) continue;
-        if (criterion2.keywords?.some((keyword) => normalized.includes(keyword.toLowerCase()))) {
-          matchedKeywords.push(...(criterion2.keywords ?? []).filter((keyword) => normalized.includes(keyword.toLowerCase())));
+        const matchingKeywords = (criterion2.keywords ?? []).filter((keyword) => matchesKeyword(normalized, keyword));
+        if (matchingKeywords.length > 0) {
+          matchedKeywords.push(...matchingKeywords);
           evidence.push(`${label}: ${clipEvidence(value)}`);
           sources.push(label);
           break;

@@ -146,6 +146,18 @@ function normalizeOccupation(occupation: string): string {
   return cleaned ? `a ${cleaned}` : ''
 }
 
+function normalizeEducationForNarrative(education: string): string {
+  const trimmed = education.trim()
+  if (!trimmed) return ''
+
+  return trimmed
+    .replace(/^education[:\s-]*/i, '')
+    .replace(/^i\s+(?:am|have|completed|finished|earned)\s+/i, '')
+    .replace(/[.]+$/, '')
+    .trim()
+    .toLowerCase()
+}
+
 function inferSubjectPronoun(intake: IntakeData): string {
   const genderText = `${intake.genderIdentity} ${intake.sex}`.toLowerCase()
   if (/\b(male|man|boy|he|him)\b/.test(genderText)) return 'he'
@@ -189,17 +201,18 @@ function buildChiefComplaintNarrative(intake: IntakeData): string {
   const age = calculateAge(intake.dob) || getManualAgeLabel(intake.manualNotes)
   const identity = buildIdentityDescriptor(intake)
   const livingArrangement = normalizeLivingArrangement(intake.livingArrangement)
+  const education = normalizeEducationForNarrative(intake.education)
   const occupation = normalizeOccupation(intake.occupation)
   const pronoun = capitalize(inferSubjectPronoun(intake))
 
   const descriptor = [age, identity].filter(Boolean).join(', ')
   let intro = descriptor ? `${name} is a ${descriptor}` : `${name} is a patient`
-  if (livingArrangement && occupation) {
-    intro += ` living ${livingArrangement} and working as ${occupation}`
-  } else if (livingArrangement) {
-    intro += ` living ${livingArrangement}`
-  } else if (occupation) {
-    intro += ` working as ${occupation}`
+  const contextualClauses: string[] = []
+  if (livingArrangement) contextualClauses.push(`living ${livingArrangement}`)
+  if (education) contextualClauses.push(`with education history of ${education}`)
+  if (occupation) contextualClauses.push(`working as ${occupation}`)
+  if (contextualClauses.length) {
+    intro += ` ${contextualClauses.join(', ')}`
   }
   intro += '.'
 
