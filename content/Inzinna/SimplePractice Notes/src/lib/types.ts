@@ -56,6 +56,11 @@ export interface IntakeData {
   prescribingMD: string
   primaryCarePhysician: string
   medicalHistory: string
+  allergies: string
+  surgeries: string
+  troubleSleeping: string
+  developmentalHistory: string
+  tbiLoc: string
 
   // Risk assessment
   suicidalIdeation: string
@@ -89,6 +94,7 @@ export interface IntakeData {
   recentSymptoms: string
   additionalSymptoms: string
   additionalInfo: string
+  manualNotes: string
 
   // Form metadata
   formTitle: string
@@ -129,6 +135,11 @@ export const EMPTY_INTAKE: IntakeData = {
   prescribingMD: '',
   primaryCarePhysician: '',
   medicalHistory: '',
+  allergies: '',
+  surgeries: '',
+  troubleSleeping: '',
+  developmentalHistory: '',
+  tbiLoc: '',
   suicidalIdeation: '',
   suicideAttemptHistory: '',
   homicidalIdeation: '',
@@ -150,6 +161,7 @@ export const EMPTY_INTAKE: IntakeData = {
   recentSymptoms: '',
   additionalSymptoms: '',
   additionalInfo: '',
+  manualNotes: '',
   formTitle: '',
   formDate: '',
   signedBy: '',
@@ -200,11 +212,110 @@ export interface ProgressNote {
   status: NoteStatus
 }
 
+export type CriterionMatchStatus =
+  | 'met'
+  | 'likely'
+  | 'unclear'
+  | 'not_assessed'
+  | 'not_met'
+
+export type DiagnosticConfidence = 'high' | 'moderate' | 'low'
+
+export type IntakeEvidenceField =
+  | keyof IntakeData
+  | 'rawQA'
+  | 'combinedSymptoms'
+  | 'combinedNarrative'
+
+export interface DSM5CriterionDefinition {
+  id: string
+  letter: string
+  number?: number
+  text: string
+  followUpQuestion: string
+  intakeFields: IntakeEvidenceField[]
+  keywords?: string[]
+  phqItem?: number
+  gadItem?: number
+}
+
+export interface DSM5RequiredCount {
+  criterion: string
+  required: number
+  total: number
+  mustInclude?: string[]
+}
+
+export interface DSM5DisorderDefinition {
+  id: string
+  name: string
+  chapter: string
+  icd10Codes: string[]
+  sourcePages: [number, number]
+  criteria: DSM5CriterionDefinition[]
+  requiredCounts: DSM5RequiredCount[]
+  durationRequirement?: string
+  exclusions: string[]
+  specifierOptions: string[]
+  ruleOuts: string[]
+}
+
+export interface CriterionEvaluation {
+  criterionId: string
+  status: CriterionMatchStatus
+  evidence: string[]
+  sources: string[]
+  rationale: string
+  followUpQuestion: string
+}
+
+export interface DiagnosticSuggestion {
+  disorderId: string
+  disorderName: string
+  code: string
+  confidence: DiagnosticConfidence
+  reason: string
+  score: number
+  criteria: CriterionEvaluation[]
+  metCount: number
+  likelyCount: number
+  unresolvedCount: number
+  requiredCount: number
+  suggestedSpecifier?: string
+  ruleOuts: string[]
+}
+
+export interface ManualCriterionOverride {
+  disorderId: string
+  criterionId: string
+  status: CriterionMatchStatus
+  notes: string
+  updatedAt: string
+}
+
+export interface DisorderNotes {
+  disorderId: string
+  notes: string
+}
+
 export interface DiagnosticImpression {
+  disorderId: string
   code: string // ICD-10 / DSM-5 code
   name: string // e.g. "Major Depressive Disorder, Single Episode, Moderate"
+  confidence: DiagnosticConfidence
   criteriaEvidence: string[] // supporting evidence from session
+  criteriaSummary: string[]
   ruleOuts: string[]
+  clinicianNotes?: string
+}
+
+export interface DiagnosticWorkspaceState {
+  pinnedDisorderIds: string[]
+  activeDisorderId: string | null
+  overrides: ManualCriterionOverride[]
+  disorderNotes: DisorderNotes[]
+  finalizedImpressions: DiagnosticImpression[]
+  updatedAt: string
 }
 
 export interface NoteStatus {
@@ -253,6 +364,15 @@ export const EMPTY_PROGRESS_NOTE: ProgressNote = {
   plan: '',
   generatedAt: '',
   status: { ...DEFAULT_NOTE_STATUS },
+}
+
+export const EMPTY_DIAGNOSTIC_WORKSPACE: DiagnosticWorkspaceState = {
+  pinnedDisorderIds: [],
+  activeDisorderId: null,
+  overrides: [],
+  disorderNotes: [],
+  finalizedImpressions: [],
+  updatedAt: '',
 }
 
 // ── Provider Preferences ──

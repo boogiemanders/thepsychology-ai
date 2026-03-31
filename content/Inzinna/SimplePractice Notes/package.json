@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "extract:dsm": "bash ./scripts/extract-dsm-pages.sh",
+    "extract:clinical-knowledge": "python3 ./scripts/extract-clinical-knowledge.py",
     "build": "node build.mjs",
     "watch": "node build.mjs --watch"
   },

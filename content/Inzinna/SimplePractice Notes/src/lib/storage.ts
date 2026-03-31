@@ -1,23 +1,123 @@
 import {
   IntakeData,
+  EMPTY_INTAKE,
   ProgressNote,
+  DiagnosticImpression,
+  DiagnosticWorkspaceState,
+  EMPTY_DIAGNOSTIC_WORKSPACE,
+  EMPTY_PROGRESS_NOTE,
   ProviderPreferences,
   DEFAULT_PREFERENCES,
 } from './types'
+import { augmentIntakeWithManualNotes } from './intake-augmentation'
 
 const INTAKE_KEY = 'spn_intake'
 const NOTE_KEY = 'spn_note'
+const DIAGNOSTIC_WORKSPACE_KEY = 'spn_diagnostic_workspace'
 const PREFS_KEY = 'spn_preferences'
 
 // ── Intake Data (session storage — PHI with TTL) ──
 
+function normalizeIntake(
+  intake: Partial<IntakeData> | undefined
+): IntakeData {
+  return {
+    ...EMPTY_INTAKE,
+    ...intake,
+    address: {
+      ...EMPTY_INTAKE.address,
+      ...(intake?.address ?? {}),
+    },
+    rawQA: Array.isArray(intake?.rawQA) ? intake.rawQA : [],
+    gad7: intake?.gad7 ?? null,
+    phq9: intake?.phq9 ?? null,
+  }
+}
+
+function normalizeDiagnosticImpression(
+  impression: Partial<DiagnosticImpression> | undefined
+): DiagnosticImpression {
+  return {
+    disorderId: impression?.disorderId ?? '',
+    code: impression?.code ?? '',
+    name: impression?.name ?? '',
+    confidence: impression?.confidence ?? 'low',
+    criteriaEvidence: Array.isArray(impression?.criteriaEvidence) ? impression.criteriaEvidence : [],
+    criteriaSummary: Array.isArray(impression?.criteriaSummary) ? impression.criteriaSummary : [],
+    ruleOuts: Array.isArray(impression?.ruleOuts) ? impression.ruleOuts : [],
+    clinicianNotes: impression?.clinicianNotes?.trim() ?? '',
+  }
+}
+
+function normalizeNote(
+  note: Partial<ProgressNote> | undefined
+): ProgressNote {
+  const treatmentPlan = note?.treatmentPlan
+  return {
+    ...EMPTY_PROGRESS_NOTE,
+    ...note,
+    mentalStatusExam: {
+      ...EMPTY_PROGRESS_NOTE.mentalStatusExam,
+      ...(note?.mentalStatusExam ?? {}),
+    },
+    treatmentPlan: {
+      ...EMPTY_PROGRESS_NOTE.treatmentPlan,
+      ...(treatmentPlan ?? {}),
+      goals: Array.isArray(treatmentPlan?.goals) ? treatmentPlan.goals : [],
+      interventions: Array.isArray(treatmentPlan?.interventions) ? treatmentPlan.interventions : [],
+    },
+    diagnosticImpressions: Array.isArray(note?.diagnosticImpressions)
+      ? note.diagnosticImpressions.map((impression) => normalizeDiagnosticImpression(impression))
+      : [],
+    status: {
+      ...EMPTY_PROGRESS_NOTE.status,
+      ...(note?.status ?? {}),
+    },
+  }
+}
+
+function normalizeDiagnosticWorkspace(
+  workspace: Partial<DiagnosticWorkspaceState> | undefined
+): DiagnosticWorkspaceState {
+  return {
+    ...EMPTY_DIAGNOSTIC_WORKSPACE,
+    ...workspace,
+    pinnedDisorderIds: Array.isArray(workspace?.pinnedDisorderIds) ? workspace.pinnedDisorderIds : [],
+    activeDisorderId: workspace?.activeDisorderId ?? null,
+    overrides: Array.isArray(workspace?.overrides)
+      ? workspace.overrides.map((override) => ({
+          disorderId: override?.disorderId ?? '',
+          criterionId: override?.criterionId ?? '',
+          status: override?.status ?? 'not_assessed',
+          notes: override?.notes?.trim() ?? '',
+          updatedAt: override?.updatedAt ?? '',
+        }))
+      : [],
+    disorderNotes: Array.isArray(workspace?.disorderNotes)
+      ? workspace.disorderNotes.map((entry) => ({
+          disorderId: entry?.disorderId ?? '',
+          notes: entry?.notes?.trim() ?? '',
+        }))
+      : [],
+    finalizedImpressions: Array.isArray(workspace?.finalizedImpressions)
+      ? workspace.finalizedImpressions.map((impression) => normalizeDiagnosticImpression(impression))
+      : [],
+  }
+}
+
 export async function saveIntake(intake: IntakeData): Promise<void> {
-  await chrome.storage.session.set({ [INTAKE_KEY]: intake })
+  await chrome.storage.session.set({ [INTAKE_KEY]: normalizeIntake(intake) })
+}
+
+async function getStoredIntake(): Promise<IntakeData | null> {
+  const result = await chrome.storage.session.get(INTAKE_KEY)
+  const intake = result[INTAKE_KEY] as Partial<IntakeData> | undefined
+  return intake ? normalizeIntake(intake) : null
 }
 
 export async function getIntake(): Promise<IntakeData | null> {
-  const result = await chrome.storage.session.get(INTAKE_KEY)
-  return (result[INTAKE_KEY] as IntakeData | undefined) ?? null
+  const intake = await getStoredIntake()
+  return intake ? augmentIntakeWithManualNotes(intake) : null
 }
 
 export async function clearIntake(): Promise<void> {
@@ -25,23 +125,30 @@ export async function clearIntake(): Promise<void> {
 }
 
 export async function mergeIntake(partial: Partial<IntakeData>): Promise<void> {
-  const existing = await getIntake()
-  if (existing) {
-    await saveIntake({ ...existing, ...partial })
-  } else {
-    await saveIntake({ ...({} as IntakeData), ...partial })
-  }
+  const existing = await getStoredIntake()
+  await saveIntake({
+    ...(existing ?? EMPTY_INTAKE),
+    ...partial,
+    address: {
+      ...(existing?.address ?? EMPTY_INTAKE.address),
+      ...(partial.address ?? {}),
+    },
+    rawQA: partial.rawQA ?? existing?.rawQA ?? EMPTY_INTAKE.rawQA,
+    gad7: partial.gad7 ?? existing?.gad7 ?? null,
+    phq9: partial.phq9 ?? existing?.phq9 ?? null,
+  })
 }
 
 // ── Progress Note (session storage — PHI with TTL) ──
 
 export async function saveNote(note: ProgressNote): Promise<void> {
-  await chrome.storage.session.set({ [NOTE_KEY]: note })
+  await chrome.storage.session.set({ [NOTE_KEY]: normalizeNote(note) })
 }
 
 export async function getNote(): Promise<ProgressNote | null> {
   const result = await chrome.storage.session.get(NOTE_KEY)
-  return (result[NOTE_KEY] as ProgressNote | undefined) ?? null
+  const note = result[NOTE_KEY] as Partial<ProgressNote> | undefined
+  return note ? normalizeNote(note) : null
 }
 
 export async function clearNote(): Promise<void> {
@@ -55,6 +162,41 @@ export async function updateNoteStatus(
   if (!note) return
   note.status = { ...note.status, ...updates }
   await saveNote(note)
+}
+
+// ── Diagnostic Workspace (session storage — PHI with TTL) ──
+
+export async function saveDiagnosticWorkspace(workspace: DiagnosticWorkspaceState): Promise<void> {
+  await chrome.storage.session.set({
+    [DIAGNOSTIC_WORKSPACE_KEY]: normalizeDiagnosticWorkspace(workspace),
+  })
+}
+
+export async function getDiagnosticWorkspace(): Promise<DiagnosticWorkspaceState | null> {
+  const result = await chrome.storage.session.get(DIAGNOSTIC_WORKSPACE_KEY)
+  const workspace = result[DIAGNOSTIC_WORKSPACE_KEY] as Partial<DiagnosticWorkspaceState> | undefined
+  return workspace ? normalizeDiagnosticWorkspace(workspace) : null
+}
+
+export async function clearDiagnosticWorkspace(): Promise<void> {
+  await chrome.storage.session.remove(DIAGNOSTIC_WORKSPACE_KEY)
+}
+
+export async function updateDiagnosticWorkspace(
+  updates: Partial<DiagnosticWorkspaceState>
+): Promise<DiagnosticWorkspaceState> {
+  const existing = await getDiagnosticWorkspace()
+  const next = normalizeDiagnosticWorkspace({
+    ...(existing ?? EMPTY_DIAGNOSTIC_WORKSPACE),
+    ...updates,
+    pinnedDisorderIds: updates.pinnedDisorderIds ?? existing?.pinnedDisorderIds ?? [],
+    overrides: updates.overrides ?? existing?.overrides ?? [],
+    disorderNotes: updates.disorderNotes ?? existing?.disorderNotes ?? [],
+    finalizedImpressions: updates.finalizedImpressions ?? existing?.finalizedImpressions ?? [],
+    updatedAt: updates.updatedAt ?? new Date().toISOString(),
+  })
+  await saveDiagnosticWorkspace(next)
+  return next
 }
 
 // ── Provider Preferences (local storage — not PHI) ──
@@ -90,5 +232,5 @@ export async function hasPreferences(): Promise<boolean> {
 // ── Cleanup ──
 
 export async function clearAll(): Promise<void> {
-  await chrome.storage.session.remove([INTAKE_KEY, NOTE_KEY])
+  await chrome.storage.session.remove([INTAKE_KEY, NOTE_KEY, DIAGNOSTIC_WORKSPACE_KEY])
 }

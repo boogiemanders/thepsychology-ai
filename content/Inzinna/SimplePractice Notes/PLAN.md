@@ -201,6 +201,36 @@ Differential: [list]
 
 ---
 
+## Phase 7: Diagnostic Coverage Expansion
+
+**What:** Expand the diagnostic workspace beyond the initial high-frequency outpatient diagnosis set after the core intake, side panel, and note-generation flows are stable.
+
+**Why:** The first pass is intentionally narrow so the diagnostic review workflow is usable quickly. Once that base is working reliably, the system should broaden to cover additional disorders that matter in real outpatient practice and differential diagnosis.
+
+**Expansion principles:**
+- Add diagnoses in curated packs, not the entire DSM at once
+- Keep the system rules-first by default; only use local LLM support where it adds clear value
+- Do not auto-suggest low-signal diagnoses from weak intake cues alone
+- Require targeted follow-up prompts for diagnoses that need longitudinal or specialized assessment
+
+**Priority expansion packs:**
+- **Dissociative disorders:** Dissociative Identity Disorder, Depersonalization/Derealization Disorder, Dissociative Amnesia
+- **Additional personality disorders:** Narcissistic Personality Disorder, Histrionic Personality Disorder, Avoidant Personality Disorder, Dependent Personality Disorder, Obsessive-Compulsive Personality Disorder, Antisocial Personality Disorder
+- **Neurodevelopmental disorders:** Autism Spectrum Disorder (especially adult presentations that may overlap with anxiety, trauma, or ADHD), broader ADHD subtype refinement
+- **Eating disorders:** Anorexia Nervosa, Bulimia Nervosa, Binge-Eating Disorder
+- **Psychotic-spectrum / differential review:** Schizophrenia-spectrum rule-outs, Delusional Disorder, Schizoaffective Disorder
+
+**Implementation approach:**
+- Extend the DSM criteria data module with additional curated diagnosis definitions
+- Add diagnosis-specific evidence mappings from intake, PHQ-9, GAD-7, raw Q&A, and future transcript data
+- Introduce targeted clinician prompts for low-base-rate or high-complexity diagnoses before surfacing them as meaningful suggestions
+- Keep personality and dissociative disorders in a conservative review tier unless the intake packet contains strong supporting signals
+- Expand the side panel so clinicians can manually add these diagnoses even when auto-suggestion confidence is low
+
+**Expected outcome:** A broader but still clinically controlled diagnostic system that can support more real-world cases without turning the suggestion engine into a noisy DSM keyword matcher.
+
+---
+
 ## HIPAA Compliance Checklist
 
 - [ ] All PHI stored in browser session storage only (never localStorage or disk)
@@ -258,6 +288,7 @@ Differential: [list]
 | 4 | Session Audio Recording | Phase 1 | Record + transcribe + diarize in real-time |
 | 5 | Live Diagnostic Interview | Phases 1-4 | Side panel with criteria checklist + auto-check |
 | 6 | Post-Session Report + Auto-Fill | Phases 2-5 | Generate report, edit, submit to SP |
+| 7 | Diagnostic Coverage Expansion | Phases 3-6 | Add dissociative, additional personality, autism, eating, and psychotic-spectrum differentials |
 
 ---
 

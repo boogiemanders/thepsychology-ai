@@ -22,6 +22,19 @@
       <p class="hint">Go to a SimplePractice client page and click "Capture Intake"</p>
     </div>
 
+    <div id="manual-notes-section" class="summary-section">
+      <h3 class="section-title">Clinician Notes</h3>
+      <p id="manual-notes-hint" class="section-hint">Paste your own notes here to augment the captured intake, diagnostics, and draft note.</p>
+      <textarea
+        id="manual-notes-input"
+        class="input notes-textarea"
+        placeholder="Paste session or intake notes here..."
+      ></textarea>
+      <div class="actions">
+        <button id="btn-save-manual-notes" class="btn btn-secondary">Save Notes to Intake</button>
+      </div>
+    </div>
+
     <!-- Intake captured -->
     <div id="intake-info" class="section" style="display: none;">
       <div class="client-name" id="client-name"></div>
@@ -54,11 +67,13 @@
 
       <!-- Note preview (when generated) -->
       <div id="note-preview" class="summary-section" style="display: none;">
-        <h3 class="section-title">Progress Note Preview</h3>
+        <h3 class="section-title">Draft Note Preview</h3>
         <div id="note-content" class="note-preview-content"></div>
       </div>
 
       <div class="actions">
+        <button id="btn-open-diagnostics" class="btn btn-secondary">Open Diagnostics</button>
+        <button id="btn-generate-draft" class="btn btn-primary">Generate Draft</button>
         <button id="btn-clear" class="btn btn-secondary">Clear</button>
       </div>
     </div>

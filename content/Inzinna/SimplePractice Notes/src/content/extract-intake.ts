@@ -14,24 +14,148 @@
  */
 
 import { IntakeData, EMPTY_INTAKE, AssessmentResult, AssessmentItem } from '../lib/types'
-import { saveIntake, mergeIntake, getIntake } from '../lib/storage'
+import { mergeIntake } from '../lib/storage'
 import {
   injectButton,
   showToast,
   assertExtensionContext,
   isExtensionContextInvalidatedError,
   normalizedText,
+  registerFloatingButtonsController,
 } from './shared'
 
 // ── URL Detection ──
 
+const CLIENT_PATH_RE = /\/clients\/([^/]+)/
+
 function getClientIdFromUrl(): string {
-  const match = window.location.pathname.match(/\/clients\/(\d+)/)
+  const match = window.location.pathname.match(CLIENT_PATH_RE)
   return match?.[1] ?? ''
 }
 
 function isClientPage(): boolean {
-  return /\/clients\/\d+/.test(window.location.pathname)
+  return CLIENT_PATH_RE.test(window.location.pathname)
+}
+
+function escapeRegExp(value: string): string {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+}
+
+function toAbsoluteUrl(value: string): string {
+  try {
+    return new URL(value, window.location.origin).href
+  } catch {
+    return ''
+  }
+}
+
+function isSameClientUrl(url: string, clientId = getClientIdFromUrl()): boolean {
+  if (!clientId) return false
+
+  try {
+    const parsed = new URL(url)
+    return parsed.origin === window.location.origin && parsed.pathname.startsWith(`/clients/${clientId}`)
+  } catch {
+    return false
+  }
+}
+
+function extractIntakeNoteUrlsFromText(text: string, clientId = getClientIdFromUrl()): string[] {
+  const pattern = clientId
+    ? new RegExp(`/clients/${escapeRegExp(clientId)}/intake_notes/\\d+`, 'g')
+    : /\/clients\/[^/]+\/intake_notes\/\d+/g
+
+  const normalizedTextCandidates = [
+    text,
+    text.replace(/\\\//g, '/'),
+  ]
+
+  return Array.from(new Set(
+    normalizedTextCandidates.flatMap((candidate) => candidate.match(pattern) ?? [])
+      .map((match) => toAbsoluteUrl(match))
+      .filter(Boolean)
+  ))
+}
+
+function extractSameClientPageUrlsFromRoot(root: ParentNode, clientId = getClientIdFromUrl()): string[] {
+  const urls = new Set<string>()
+
+  for (const link of Array.from(root.querySelectorAll<HTMLAnchorElement>('a[href]'))) {
+    const href = link.getAttribute('href') ?? ''
+    const url = toAbsoluteUrl(href)
+    if (!url) continue
+    if (!isSameClientUrl(url, clientId)) continue
+    urls.add(url)
+  }
+
+  return Array.from(urls)
+}
+
+function collectRenderedIntakeNoteUrls(clientId = getClientIdFromUrl()): string[] {
+  return Array.from(new Set([
+    ...extractIntakeNoteUrlsFromText(document.documentElement.outerHTML, clientId),
+    ...extractSameClientPageUrlsFromRoot(document, clientId).filter((url) => url.includes('/intake_notes/')),
+  ]))
+}
+
+async function discoverIntakeNoteUrlsViaBackground(clientId: string): Promise<string[]> {
+  try {
+    const response = await chrome.runtime.sendMessage({
+      type: 'SPN_DISCOVER_INTAKE_NOTE_URLS',
+      clientId,
+    })
+    return Array.isArray(response?.urls) ? response.urls : []
+  } catch (err) {
+    console.warn('[SPN] Background intake-note discovery failed:', err)
+    return []
+  }
+}
+
+async function discoverIntakeNoteUrls(): Promise<string[]> {
+  const noteUrls = new Set<string>()
+  const clientId = getClientIdFromUrl()
+  const candidatePages = new Set<string>()
+
+  const addNoteUrls = (urls: string[]) => {
+    for (const url of urls) {
+      if (!clientId || isSameClientUrl(url, clientId)) {
+        noteUrls.add(url)
+      }
+    }
+  }
+
+  addNoteUrls(collectRenderedIntakeNoteUrls(clientId))
+
+  if (clientId) {
+    candidatePages.add(toAbsoluteUrl(`/clients/${clientId}/intake_notes`))
+  }
+
+  const parser = new DOMParser()
+
+  for (const url of candidatePages) {
+    try {
+      const resp = await fetch(url, { credentials: 'include' })
+      if (!resp.ok) {
+        console.log(`[SPN] Intake-notes index returned ${resp.status} for ${url}`)
+        continue
+      }
+
+      const html = await resp.text()
+      addNoteUrls(extractIntakeNoteUrlsFromText(html, clientId))
+
+      const doc = parser.parseFromString(html, 'text/html')
+      addNoteUrls(extractSameClientPageUrlsFromRoot(doc, clientId).filter((candidate) => candidate.includes('/intake_notes/')))
+    } catch (err) {
+      console.warn(`[SPN] Failed to inspect intake-notes index ${url}:`, err)
+    }
+  }
+
+  if (noteUrls.size === 0 && clientId) {
+    console.log('[SPN] Falling back to background-tab intake-note discovery')
+    addNoteUrls(await discoverIntakeNoteUrlsViaBackground(clientId))
+  }
+
+  return Array.from(noteUrls)
 }
 
 // ── Q&A Parsing ──
@@ -279,9 +403,51 @@ function extractIntakeData(): IntakeData {
     'pcp'
   )
 
+  intake.medicalHistory = findAnswer(pairs,
+    'medical conditions',
+    'medical history',
+    'current medical conditions',
+    'current health conditions'
+  )
+
+  intake.allergies = findAnswer(pairs,
+    'allergies',
+    'allergy'
+  )
+
+  intake.surgeries = findAnswer(pairs,
+    'surgeries',
+    'surgery history',
+    'surgical history'
+  )
+
+  intake.troubleSleeping = findAnswer(pairs,
+    'trouble sleeping',
+    'sleep problems',
+    'sleep issues',
+    'difficulty sleeping'
+  )
+
+  intake.developmentalHistory = findAnswer(pairs,
+    'developmental history',
+    'within normal limits'
+  )
+
+  intake.tbiLoc = findAnswer(pairs,
+    'tbi',
+    'traumatic brain injury',
+    'loss of consciousness',
+    'loc'
+  )
+
   // Substance use
   intake.alcoholUse = findAnswer(pairs, 'drink alcohol')
   intake.drugUse = findAnswer(pairs, 'recreational drugs', 'drug use')
+  intake.substanceUseHistory = findAnswer(pairs,
+    'using or abusing substances',
+    'substance use',
+    'substance abuse'
+  )
 
   // Risk assessment
   intake.suicidalIdeation = findAnswer(pairs, 'suicidal thoughts', 'suicidal ideation')
@@ -347,12 +513,37 @@ function countCapturedFields(intake: IntakeData): number {
 
 // ── Assessment Extraction (GAD-7, PHQ-9) ──
 
-function detectAssessmentType(): 'GAD-7' | 'PHQ-9' | null {
-  const titleEl = document.querySelector('.title-item h3')
-  const title = titleEl?.textContent?.trim().toLowerCase() ?? ''
-  if (title.includes('gad-7') || title.includes('gad 7')) return 'GAD-7'
-  if (title.includes('phq-9') || title.includes('phq 9')) return 'PHQ-9'
+function detectAssessmentTypeFromQuestions(root: Document | Element = document): 'GAD-7' | 'PHQ-9' | null {
+  const questionTexts = Array.from(root.querySelectorAll('tbody tr.et-tr td:first-child'))
+    .map((cell) => normalizedText(cell.textContent))
+    .filter(Boolean)
+
+  const combined = questionTexts.join(' ')
+  if (/nervous anxious or on edge|unable to stop or control worrying|worrying too much about different things/.test(combined)) {
+    return 'GAD-7'
+  }
+  if (/little interest or pleasure in doing things|feeling down depressed or hopeless|poor appetite or overeating/.test(combined)) {
+    return 'PHQ-9'
+  }
+
+  const numberedQuestions = root.querySelectorAll('tbody tr.et-tr .question-number').length
+  if (numberedQuestions === 7) return 'GAD-7'
+  if (numberedQuestions === 9) return 'PHQ-9'
+
   return null
+}
+
+function detectAssessmentType(root: Document | Element = document): 'GAD-7' | 'PHQ-9' | null {
+  const docTitle = root instanceof Document ? root.title : root.ownerDocument?.title ?? ''
+  const title = normalizedText([
+    root.querySelector('.title-item h3')?.textContent ?? '',
+    root.querySelector('h1')?.textContent ?? '',
+    docTitle,
+  ].join(' '))
+
+  if (title.includes('gad 7')) return 'GAD-7'
+  if (title.includes('phq 9')) return 'PHQ-9'
+  return detectAssessmentTypeFromQuestions(root)
 }
 
 function extractAssessmentFromRoot(name: 'GAD-7' | 'PHQ-9', root: Document | Element = document): AssessmentResult {
@@ -414,40 +605,56 @@ function extractAssessmentFromRoot(name: 'GAD-7' | 'PHQ-9', root: Document | Ele
 async function fetchAssessmentsFromLinks(): Promise<{ gad7: AssessmentResult | null; phq9: AssessmentResult | null }> {
   const result: { gad7: AssessmentResult | null; phq9: AssessmentResult | null } = { gad7: null, phq9: null }
 
-  // Find links to assessments (e.g. <a href="/clients/.../intake_notes/...">GAD-7</a>)
-  const links = document.querySelectorAll('a[href*="/intake_notes/"]')
-  const assessmentLinks: { type: 'GAD-7' | 'PHQ-9'; url: string }[] = []
-
-  for (const link of Array.from(links)) {
-    const text = link.textContent?.trim().toLowerCase() ?? ''
-    const href = (link as HTMLAnchorElement).href
-    if (text.includes('gad') && href) assessmentLinks.push({ type: 'GAD-7', url: href })
-    else if (text.includes('phq') && href) assessmentLinks.push({ type: 'PHQ-9', url: href })
+  // Fetch all linked intake-note pages, then classify by the fetched page title.
+  // This is more reliable than depending on the visible anchor text to contain
+  // "PHQ" or "GAD".
+  const uniqueLinks = await discoverIntakeNoteUrls()
+  if (uniqueLinks.length === 0) {
+    console.log('[SPN] Auto-capture found no sibling intake-note URLs on this page')
+    return result
   }
 
-  for (const { type, url } of assessmentLinks) {
+  console.log('[SPN] Auto-capture candidate intake-note URLs:', uniqueLinks)
+
+  for (const url of uniqueLinks) {
     try {
       const resp = await fetch(url, { credentials: 'include' })
       if (!resp.ok) continue
       const html = await resp.text()
       const parser = new DOMParser()
       const doc = parser.parseFromString(html, 'text/html')
+      const type = detectAssessmentType(doc)
+      if (!type) {
+        console.log(`[SPN] Skipping non-assessment intake note ${url}`)
+        continue
+      }
       const assessment = extractAssessmentFromRoot(type, doc)
       if (assessment.items.length > 0) {
         if (type === 'GAD-7') result.gad7 = assessment
         else result.phq9 = assessment
         console.log(`[SPN] Auto-captured ${type} from ${url}: score ${assessment.totalScore}`)
       }
+
+      if (result.gad7 && result.phq9) break
     } catch (err) {
-      console.warn(`[SPN] Failed to fetch ${type} from ${url}:`, err)
+      console.warn(`[SPN] Failed to fetch linked intake note ${url}:`, err)
     }
+  }
+
+  if (!result.gad7 || !result.phq9) {
+    console.log('[SPN] Auto-capture missing assessments after sibling-note scan:', {
+      missing: [
+        !result.gad7 ? 'GAD-7' : '',
+        !result.phq9 ? 'PHQ-9' : '',
+      ].filter(Boolean),
+    })
   }
 
   return result
 }
 
 function hasAssessmentTable(): boolean {
-  return !!document.querySelector('.scoring-description') && !!detectAssessmentType()
+  return !!document.querySelector('tbody tr.et-tr') && !!detectAssessmentType()
 }
 
 async function handleAssessmentCapture(): Promise<void> {
@@ -495,7 +702,7 @@ async function handleCaptureClick(): Promise<void> {
     if (assessments.gad7) intake.gad7 = assessments.gad7
     if (assessments.phq9) intake.phq9 = assessments.phq9
 
-    await saveIntake(intake)
+    await mergeIntake(intake)
 
     const extras: string[] = []
     if (assessments.gad7) extras.push(`GAD-7: ${assessments.gad7.totalScore}`)
@@ -505,12 +712,16 @@ async function handleCaptureClick(): Promise<void> {
     const name = `${intake.firstName} ${intake.lastName}`.trim() || 'client'
     showToast(`Captured ${fieldCount} fields for ${name}${extraText}`, 'success')
 
-    console.log('[SPN] Captured intake data:', {
+    console.groupCollapsed(`[SPN] Captured intake data for ${name} (${fieldCount} fields, ${intake.rawQA.length} Q&A)`)
+    console.log('[SPN] Intake summary:', {
       fieldCount,
       qaCount: intake.rawQA.length,
       clientId: intake.clientId,
       name,
     })
+    console.log('[SPN] Full intake object:', intake)
+    console.log('[SPN] rawQA:', intake.rawQA)
+    console.groupEnd()
   } catch (err) {
     if (isExtensionContextInvalidatedError(err)) {
       showToast('Extension reloaded — please refresh this page.', 'error')
@@ -576,3 +787,14 @@ if (document.readyState === 'loading') {
 } else {
   setTimeout(injectCaptureButton, 500)
 }
+
+registerFloatingButtonsController(() => {
+  setTimeout(injectCaptureButton, 0)
+})
+
+chrome.runtime.onMessage.addListener((msg, _sender, sendResponse) => {
+  if (msg?.type === 'SPN_COLLECT_INTAKE_NOTE_URLS') {
+    sendResponse({ urls: collectRenderedIntakeNoteUrls(msg.clientId || getClientIdFromUrl()) })
+    return true
+  }
+})

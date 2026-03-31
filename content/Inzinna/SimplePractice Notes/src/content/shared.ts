@@ -38,6 +38,7 @@ export function injectButton(
     onClick()
   }, true)
   document.body.appendChild(btn)
+  btn.style.display = areFloatingButtonsVisible() ? '' : 'none'
   return btn
 }
 
@@ -307,4 +308,64 @@ export function findFieldElement<T extends Element>(labelText: string, selector:
   const container = findFieldContainer(labelText)
   if (!container) return null
   return container.querySelector(selector) as T | null
+}
+
+type FloatingButtonsStateWindow = Window & typeof globalThis & {
+  __spnFloatingButtonsVisible?: boolean
+  __spnFloatingButtonsListenerRegistered?: boolean
+  __spnFloatingButtonsOnShow?: Array<() => void>
+}
+
+function floatingButtonsState(): FloatingButtonsStateWindow {
+  return window as FloatingButtonsStateWindow
+}
+
+export function areFloatingButtonsVisible(): boolean {
+  const state = floatingButtonsState()
+  if (typeof state.__spnFloatingButtonsVisible !== 'boolean') {
+    state.__spnFloatingButtonsVisible = true
+  }
+  return state.__spnFloatingButtonsVisible
+}
+
+export function setFloatingButtonsVisible(visible: boolean): boolean {
+  const state = floatingButtonsState()
+  state.__spnFloatingButtonsVisible = visible
+
+  const buttons = document.querySelectorAll('.spn-floating-btn, .zsp-floating-btn') as NodeListOf<HTMLElement>
+  buttons.forEach((button) => {
+    button.style.display = visible ? '' : 'none'
+  })
+
+  if (visible) {
+    for (const callback of state.__spnFloatingButtonsOnShow ?? []) {
+      callback()
+    }
+  }
+
+  return visible
+}
+
+export function registerFloatingButtonsController(onShow?: () => void): void {
+  const state = floatingButtonsState()
+
+  if (onShow) {
+    state.__spnFloatingButtonsOnShow ??= []
+    state.__spnFloatingButtonsOnShow.push(onShow)
+  }
+
+  if (state.__spnFloatingButtonsListenerRegistered) return
+  state.__spnFloatingButtonsListenerRegistered = true
+
+  chrome.runtime.onMessage.addListener((msg, _sender, sendResponse) => {
+    if (msg?.type === 'get-floating-buttons-visibility') {
+      sendResponse({ visible: areFloatingButtonsVisible() })
+      return true
+    }
+
+    if (msg?.type === 'toggle-floating-buttons') {
+      sendResponse({ visible: setFloatingButtonsVisible(!areFloatingButtonsVisible()) })
+      return true
+    }
+  })
 }

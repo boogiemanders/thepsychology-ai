@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="sidepanel.css">
+  <title>Diagnostics</title>
+</head>
+<body>
+  <div class="shell">
+    <header class="header">
+      <div>
+        <div class="eyebrow">SimplePractice Notes</div>
+        <h1 class="title">Diagnostic Impressions</h1>
+      </div>
+      <button id="btn-refresh" class="icon-button" title="Refresh">↻</button>
+    </header>
+
+    <div id="empty-state" class="empty-state">
+      <p>No intake captured yet.</p>
+      <p class="hint">Capture intake and assessments first, then reopen Diagnostics.</p>
+    </div>
+
+    <main id="content" class="content" hidden>
+      <section class="card patient-card">
+        <div id="patient-name" class="patient-name"></div>
+        <div id="patient-meta" class="patient-meta"></div>
+      </section>
+
+      <section class="card">
+        <div class="section-header">
+          <h2>Screening Scores</h2>
+        </div>
+        <div id="score-grid" class="score-grid"></div>
+      </section>
+
+      <section class="card">
+        <div class="section-header">
+          <h2>Pinned Review Tabs</h2>
+        </div>
+        <div id="pinned-tabs" class="pinned-tabs"></div>
+      </section>
+
+      <section class="card">
+        <div class="section-header">
+          <h2>Diagnoses</h2>
+        </div>
+        <div class="add-row">
+          <select id="add-diagnosis-select" class="select"></select>
+          <button id="btn-add-diagnosis" class="button secondary">Add Diagnosis</button>
+        </div>
+        <div id="suggestion-list" class="suggestion-list"></div>
+      </section>
+
+      <section class="card">
+        <div class="section-header">
+          <h2>Active Checklist</h2>
+        </div>
+        <div id="active-review" class="active-review"></div>
+      </section>
+
+      <section class="card">
+        <div class="action-row">
+          <button id="btn-generate-summary" class="button primary">Generate Diagnostic Summary</button>
+          <button id="btn-write-note" class="button secondary">Write to Note Draft</button>
+        </div>
+        <div id="summary-status" class="summary-status"></div>
+        <div id="generated-summary" class="generated-summary"></div>
+      </section>
+
+      <section class="card">
+        <div class="section-header">
+          <h2>Formulation + Plan Support</h2>
+        </div>
+        <div id="guidance-status" class="summary-status"></div>
+        <div id="knowledge-guidance" class="knowledge-guidance"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="sidepanel.js"></script>
+</body>
+</html>

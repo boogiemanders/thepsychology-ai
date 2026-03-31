@@ -26,6 +26,11 @@
     prescribingMD: "",
     primaryCarePhysician: "",
     medicalHistory: "",
+    allergies: "",
+    surgeries: "",
+    troubleSleeping: "",
+    developmentalHistory: "",
+    tbiLoc: "",
     suicidalIdeation: "",
     suicideAttemptHistory: "",
     homicidalIdeation: "",
@@ -47,6 +52,7 @@
     recentSymptoms: "",
     additionalSymptoms: "",
     additionalInfo: "",
+    manualNotes: "",
     formTitle: "",
     formDate: "",
     signedBy: "",
@@ -97,20 +103,40 @@
 
   // src/lib/storage.ts
   var INTAKE_KEY = "spn_intake";
-  async function saveIntake(intake) {
-    await chrome.storage.session.set({ [INTAKE_KEY]: intake });
+  function normalizeIntake(intake) {
+    return {
+      ...EMPTY_INTAKE,
+      ...intake,
+      address: {
+        ...EMPTY_INTAKE.address,
+        ...intake?.address ?? {}
+      },
+      rawQA: Array.isArray(intake?.rawQA) ? intake.rawQA : [],
+      gad7: intake?.gad7 ?? null,
+      phq9: intake?.phq9 ?? null
+    };
   }
-  async function getIntake() {
+  async function saveIntake(intake) {
+    await chrome.storage.session.set({ [INTAKE_KEY]: normalizeIntake(intake) });
+  }
+  async function getStoredIntake() {
     const result = await chrome.storage.session.get(INTAKE_KEY);
-    return result[INTAKE_KEY] ?? null;
+    const intake = result[INTAKE_KEY];
+    return intake ? normalizeIntake(intake) : null;
   }
   async function mergeIntake(partial) {
-    const existing = await getIntake();
-    if (existing) {
-      await saveIntake({ ...existing, ...partial });
-    } else {
-      await saveIntake({ ...{}, ...partial });
-    }
+    const existing = await getStoredIntake();
+    await saveIntake({
+      ...existing ?? EMPTY_INTAKE,
+      ...partial,
+      address: {
+        ...existing?.address ?? EMPTY_INTAKE.address,
+        ...partial.address ?? {}
+      },
+      rawQA: partial.rawQA ?? existing?.rawQA ?? EMPTY_INTAKE.rawQA,
+      gad7: partial.gad7 ?? existing?.gad7 ?? null,
+      phq9: partial.phq9 ?? existing?.phq9 ?? null
+    });
   }
 
   // src/content/shared.ts
@@ -144,6 +170,7 @@
       onClick();
     }, true);
     document.body.appendChild(btn);
+    btn.style.display = areFloatingButtonsVisible() ? "" : "none";
     return btn;
   }
   function showToast(message, type = "success") {
@@ -171,14 +198,153 @@
   function normalizedText(value) {
     return (value ?? "").replace(/\s+/g, " ").trim().toLowerCase();
   }
+  function floatingButtonsState() {
+    return window;
+  }
+  function areFloatingButtonsVisible() {
+    const state = floatingButtonsState();
+    if (typeof state.__spnFloatingButtonsVisible !== "boolean") {
+      state.__spnFloatingButtonsVisible = true;
+    }
+    return state.__spnFloatingButtonsVisible;
+  }
+  function setFloatingButtonsVisible(visible) {
+    const state = floatingButtonsState();
+    state.__spnFloatingButtonsVisible = visible;
+    const buttons = document.querySelectorAll(".spn-floating-btn, .zsp-floating-btn");
+    buttons.forEach((button) => {
+      button.style.display = visible ? "" : "none";
+    });
+    if (visible) {
+      for (const callback of state.__spnFloatingButtonsOnShow ?? []) {
+        callback();
+      }
+    }
+    return visible;
+  }
+  function registerFloatingButtonsController(onShow) {
+    const state = floatingButtonsState();
+    if (onShow) {
+      state.__spnFloatingButtonsOnShow ??= [];
+      state.__spnFloatingButtonsOnShow.push(onShow);
+    }
+    if (state.__spnFloatingButtonsListenerRegistered) return;
+    state.__spnFloatingButtonsListenerRegistered = true;
+    chrome.runtime.onMessage.addListener((msg, _sender, sendResponse) => {
+      if (msg?.type === "get-floating-buttons-visibility") {
+        sendResponse({ visible: areFloatingButtonsVisible() });
+        return true;
+      }
+      if (msg?.type === "toggle-floating-buttons") {
+        sendResponse({ visible: setFloatingButtonsVisible(!areFloatingButtonsVisible()) });
+        return true;
+      }
+    });
+  }
 
   // src/content/extract-intake.ts
+  var CLIENT_PATH_RE = /\/clients\/([^/]+)/;
   function getClientIdFromUrl() {
-    const match = window.location.pathname.match(/\/clients\/(\d+)/);
+    const match = window.location.pathname.match(CLIENT_PATH_RE);
     return match?.[1] ?? "";
   }
   function isClientPage() {
-    return /\/clients\/\d+/.test(window.location.pathname);
+    return CLIENT_PATH_RE.test(window.location.pathname);
+  }
+  function escapeRegExp(value) {
+    return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  }
+  function toAbsoluteUrl(value) {
+    try {
+      return new URL(value, window.location.origin).href;
+    } catch {
+      return "";
+    }
+  }
+  function isSameClientUrl(url, clientId = getClientIdFromUrl()) {
+    if (!clientId) return false;
+    try {
+      const parsed = new URL(url);
+      return parsed.origin === window.location.origin && parsed.pathname.startsWith(`/clients/${clientId}`);
+    } catch {
+      return false;
+    }
+  }
+  function extractIntakeNoteUrlsFromText(text, clientId = getClientIdFromUrl()) {
+    const pattern = clientId ? new RegExp(`/clients/${escapeRegExp(clientId)}/intake_notes/\\d+`, "g") : /\/clients\/[^/]+\/intake_notes\/\d+/g;
+    const normalizedTextCandidates = [
+      text,
+      text.replace(/\\\//g, "/")
+    ];
+    return Array.from(new Set(
+      normalizedTextCandidates.flatMap((candidate) => candidate.match(pattern) ?? []).map((match) => toAbsoluteUrl(match)).filter(Boolean)
+    ));
+  }
+  function extractSameClientPageUrlsFromRoot(root, clientId = getClientIdFromUrl()) {
+    const urls = /* @__PURE__ */ new Set();
+    for (const link of Array.from(root.querySelectorAll("a[href]"))) {
+      const href = link.getAttribute("href") ?? "";
+      const url = toAbsoluteUrl(href);
+      if (!url) continue;
+      if (!isSameClientUrl(url, clientId)) continue;
+      urls.add(url);
+    }
+    return Array.from(urls);
+  }
+  function collectRenderedIntakeNoteUrls(clientId = getClientIdFromUrl()) {
+    return Array.from(/* @__PURE__ */ new Set([
+      ...extractIntakeNoteUrlsFromText(document.documentElement.outerHTML, clientId),
+      ...extractSameClientPageUrlsFromRoot(document, clientId).filter((url) => url.includes("/intake_notes/"))
+    ]));
+  }
+  async function discoverIntakeNoteUrlsViaBackground(clientId) {
+    try {
+      const response = await chrome.runtime.sendMessage({
+        type: "SPN_DISCOVER_INTAKE_NOTE_URLS",
+        clientId
+      });
+      return Array.isArray(response?.urls) ? response.urls : [];
+    } catch (err) {
+      console.warn("[SPN] Background intake-note discovery failed:", err);
+      return [];
+    }
+  }
+  async function discoverIntakeNoteUrls() {
+    const noteUrls = /* @__PURE__ */ new Set();
+    const clientId = getClientIdFromUrl();
+    const candidatePages = /* @__PURE__ */ new Set();
+    const addNoteUrls = (urls) => {
+      for (const url of urls) {
+        if (!clientId || isSameClientUrl(url, clientId)) {
+          noteUrls.add(url);
+        }
+      }
+    };
+    addNoteUrls(collectRenderedIntakeNoteUrls(clientId));
+    if (clientId) {
+      candidatePages.add(toAbsoluteUrl(`/clients/${clientId}/intake_notes`));
+    }
+    const parser = new DOMParser();
+    for (const url of candidatePages) {
+      try {
+        const resp = await fetch(url, { credentials: "include" });
+        if (!resp.ok) {
+          console.log(`[SPN] Intake-notes index returned ${resp.status} for ${url}`);
+          continue;
+        }
+        const html = await resp.text();
+        addNoteUrls(extractIntakeNoteUrlsFromText(html, clientId));
+        const doc = parser.parseFromString(html, "text/html");
+        addNoteUrls(extractSameClientPageUrlsFromRoot(doc, clientId).filter((candidate) => candidate.includes("/intake_notes/")));
+      } catch (err) {
+        console.warn(`[SPN] Failed to inspect intake-notes index ${url}:`, err);
+      }
+    }
+    if (noteUrls.size === 0 && clientId) {
+      console.log("[SPN] Falling back to background-tab intake-note discovery");
+      addNoteUrls(await discoverIntakeNoteUrlsViaBackground(clientId));
+    }
+    return Array.from(noteUrls);
   }
   function parseIntakeQA() {
     const container = document.querySelector(".markdown.intake-answers");
@@ -346,8 +512,51 @@
       "primary care doctor",
       "pcp"
     );
+    intake.medicalHistory = findAnswer(
+      pairs,
+      "medical conditions",
+      "medical history",
+      "current medical conditions",
+      "current health conditions"
+    );
+    intake.allergies = findAnswer(
+      pairs,
+      "allergies",
+      "allergy"
+    );
+    intake.surgeries = findAnswer(
+      pairs,
+      "surgeries",
+      "surgery history",
+      "surgical history"
+    );
+    intake.troubleSleeping = findAnswer(
+      pairs,
+      "trouble sleeping",
+      "sleep problems",
+      "sleep issues",
+      "difficulty sleeping"
+    );
+    intake.developmentalHistory = findAnswer(
+      pairs,
+      "developmental history",
+      "within normal limits"
+    );
+    intake.tbiLoc = findAnswer(
+      pairs,
+      "tbi",
+      "traumatic brain injury",
+      "loss of consciousness",
+      "loc"
+    );
     intake.alcoholUse = findAnswer(pairs, "drink alcohol");
     intake.drugUse = findAnswer(pairs, "recreational drugs", "drug use");
+    intake.substanceUseHistory = findAnswer(
+      pairs,
+      "using or abusing substances",
+      "substance use",
+      "substance abuse"
+    );
     intake.suicidalIdeation = findAnswer(pairs, "suicidal thoughts", "suicidal ideation");
     intake.suicideAttemptHistory = findAnswer(pairs, "attempted suicide", "suicide attempt");
     intake.homicidalIdeation = findAnswer(pairs, "thoughts or urges to harm others", "homicidal");
@@ -399,12 +608,30 @@
     if (intake.address.raw) count++;
     return count;
   }
-  function detectAssessmentType() {
-    const titleEl = document.querySelector(".title-item h3");
-    const title = titleEl?.textContent?.trim().toLowerCase() ?? "";
-    if (title.includes("gad-7") || title.includes("gad 7")) return "GAD-7";
-    if (title.includes("phq-9") || title.includes("phq 9")) return "PHQ-9";
+  function detectAssessmentTypeFromQuestions(root = document) {
+    const questionTexts = Array.from(root.querySelectorAll("tbody tr.et-tr td:first-child")).map((cell) => normalizedText(cell.textContent)).filter(Boolean);
+    const combined = questionTexts.join(" ");
+    if (/nervous anxious or on edge|unable to stop or control worrying|worrying too much about different things/.test(combined)) {
+      return "GAD-7";
+    }
+    if (/little interest or pleasure in doing things|feeling down depressed or hopeless|poor appetite or overeating/.test(combined)) {
+      return "PHQ-9";
+    }
+    const numberedQuestions = root.querySelectorAll("tbody tr.et-tr .question-number").length;
+    if (numberedQuestions === 7) return "GAD-7";
+    if (numberedQuestions === 9) return "PHQ-9";
     return null;
+  }
+  function detectAssessmentType(root = document) {
+    const docTitle = root instanceof Document ? root.title : root.ownerDocument?.title ?? "";
+    const title = normalizedText([
+      root.querySelector(".title-item h3")?.textContent ?? "",
+      root.querySelector("h1")?.textContent ?? "",
+      docTitle
+    ].join(" "));
+    if (title.includes("gad 7")) return "GAD-7";
+    if (title.includes("phq 9")) return "PHQ-9";
+    return detectAssessmentTypeFromQuestions(root);
   }
   function extractAssessmentFromRoot(name, root = document) {
     const items = [];
@@ -448,35 +675,47 @@
   }
   async function fetchAssessmentsFromLinks() {
     const result = { gad7: null, phq9: null };
-    const links = document.querySelectorAll('a[href*="/intake_notes/"]');
-    const assessmentLinks = [];
-    for (const link of Array.from(links)) {
-      const text = link.textContent?.trim().toLowerCase() ?? "";
-      const href = link.href;
-      if (text.includes("gad") && href) assessmentLinks.push({ type: "GAD-7", url: href });
-      else if (text.includes("phq") && href) assessmentLinks.push({ type: "PHQ-9", url: href });
+    const uniqueLinks = await discoverIntakeNoteUrls();
+    if (uniqueLinks.length === 0) {
+      console.log("[SPN] Auto-capture found no sibling intake-note URLs on this page");
+      return result;
     }
-    for (const { type, url } of assessmentLinks) {
+    console.log("[SPN] Auto-capture candidate intake-note URLs:", uniqueLinks);
+    for (const url of uniqueLinks) {
       try {
         const resp = await fetch(url, { credentials: "include" });
         if (!resp.ok) continue;
         const html = await resp.text();
         const parser = new DOMParser();
         const doc = parser.parseFromString(html, "text/html");
+        const type = detectAssessmentType(doc);
+        if (!type) {
+          console.log(`[SPN] Skipping non-assessment intake note ${url}`);
+          continue;
+        }
         const assessment = extractAssessmentFromRoot(type, doc);
         if (assessment.items.length > 0) {
           if (type === "GAD-7") result.gad7 = assessment;
           else result.phq9 = assessment;
           console.log(`[SPN] Auto-captured ${type} from ${url}: score ${assessment.totalScore}`);
         }
+        if (result.gad7 && result.phq9) break;
       } catch (err) {
-        console.warn(`[SPN] Failed to fetch ${type} from ${url}:`, err);
+        console.warn(`[SPN] Failed to fetch linked intake note ${url}:`, err);
       }
+    }
+    if (!result.gad7 || !result.phq9) {
+      console.log("[SPN] Auto-capture missing assessments after sibling-note scan:", {
+        missing: [
+          !result.gad7 ? "GAD-7" : "",
+          !result.phq9 ? "PHQ-9" : ""
+        ].filter(Boolean)
+      });
     }
     return result;
   }
   function hasAssessmentTable() {
-    return !!document.querySelector(".scoring-description") && !!detectAssessmentType();
+    return !!document.querySelector("tbody tr.et-tr") && !!detectAssessmentType();
   }
   async function handleAssessmentCapture() {
     try {
@@ -513,19 +752,23 @@
       const assessments = await fetchAssessmentsFromLinks();
       if (assessments.gad7) intake.gad7 = assessments.gad7;
       if (assessments.phq9) intake.phq9 = assessments.phq9;
-      await saveIntake(intake);
+      await mergeIntake(intake);
       const extras = [];
       if (assessments.gad7) extras.push(`GAD-7: ${assessments.gad7.totalScore}`);
       if (assessments.phq9) extras.push(`PHQ-9: ${assessments.phq9.totalScore}`);
       const extraText = extras.length ? ` + ${extras.join(", ")}` : "";
       const name = `${intake.firstName} ${intake.lastName}`.trim() || "client";
       showToast(`Captured ${fieldCount} fields for ${name}${extraText}`, "success");
-      console.log("[SPN] Captured intake data:", {
+      console.groupCollapsed(`[SPN] Captured intake data for ${name} (${fieldCount} fields, ${intake.rawQA.length} Q&A)`);
+      console.log("[SPN] Intake summary:", {
         fieldCount,
         qaCount: intake.rawQA.length,
         clientId: intake.clientId,
         name
       });
+      console.log("[SPN] Full intake object:", intake);
+      console.log("[SPN] rawQA:", intake.rawQA);
+      console.groupEnd();
     } catch (err) {
       if (isExtensionContextInvalidatedError(err)) {
         showToast("Extension reloaded \u2014 please refresh this page.", "error");
@@ -576,5 +819,14 @@
   } else {
     setTimeout(injectCaptureButton, 500);
   }
+  registerFloatingButtonsController(() => {
+    setTimeout(injectCaptureButton, 0);
+  });
+  chrome.runtime.onMessage.addListener((msg, _sender, sendResponse) => {
+    if (msg?.type === "SPN_COLLECT_INTAKE_NOTE_URLS") {
+      sendResponse({ urls: collectRenderedIntakeNoteUrls(msg.clientId || getClientIdFromUrl()) });
+      return true;
+    }
+  });
 })();
 //# sourceMappingURL=extract-intake.js.map

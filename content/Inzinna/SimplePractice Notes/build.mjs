@@ -11,12 +11,15 @@ const entryPoints = [
   'src/content/fill-note.ts',
   'src/background/service-worker.ts',
   'src/popup/popup.ts',
+  'src/sidepanel/sidepanel.ts',
 ]
 
 function copyStatic() {
   cpSync(resolve(__dirname, 'manifest.json'), resolve(__dirname, 'dist/manifest.json'))
   cpSync(resolve(__dirname, 'src/popup/popup.html'), resolve(__dirname, 'dist/popup/popup.html'))
   cpSync(resolve(__dirname, 'src/popup/popup.css'), resolve(__dirname, 'dist/popup/popup.css'))
+  cpSync(resolve(__dirname, 'src/sidepanel/sidepanel.html'), resolve(__dirname, 'dist/sidepanel/sidepanel.html'))
+  cpSync(resolve(__dirname, 'src/sidepanel/sidepanel.css'), resolve(__dirname, 'dist/sidepanel/sidepanel.css'))
   cpSync(resolve(__dirname, 'src/content/content.css'), resolve(__dirname, 'dist/content/content.css'))
   if (existsSync(resolve(__dirname, 'src/assets'))) {
     cpSync(resolve(__dirname, 'src/assets'), resolve(__dirname, 'dist/assets'), { recursive: true })

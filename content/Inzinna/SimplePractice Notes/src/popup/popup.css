@@ -129,6 +129,13 @@ body {
   margin-bottom: 6px;
 }
 
+.section-hint {
+  font-size: 11px;
+  line-height: 1.4;
+  color: #777;
+  margin-bottom: 8px;
+}
+
 .field-list {
   display: flex;
   flex-direction: column;
@@ -174,12 +181,13 @@ body {
 /* Actions */
 .actions {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   margin-top: 4px;
 }
 
 .btn {
-  flex: 1;
+  flex: 1 1 0;
   padding: 8px 12px;
   border: none;
   border-radius: 6px;
@@ -234,4 +242,10 @@ body {
 .input:focus {
   outline: none;
   border-color: #7c3aed;
+}
+
+.notes-textarea {
+  min-height: 140px;
+  resize: vertical;
+  line-height: 1.45;
 }
