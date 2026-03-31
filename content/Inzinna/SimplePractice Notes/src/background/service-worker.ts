@@ -61,6 +61,26 @@ chrome.alarms.onAlarm.addListener((alarm) => {
 // Initialize immediately
 void initialize()
 
+// ── Dev hot-reload: polls dist/ for changes every 1s ──
+const DEV_RELOAD = true
+if (DEV_RELOAD) {
+  let lastModified = 0
+  const checkForChanges = async () => {
+    try {
+      const url = chrome.runtime.getURL('content/fill-note.js')
+      const resp = await fetch(url, { cache: 'no-store' })
+      const text = await resp.text()
+      const hash = text.length // simple size-based change detection
+      if (lastModified && hash !== lastModified) {
+        console.log('[SPN] File change detected, reloading...')
+        chrome.runtime.reload()
+      }
+      lastModified = hash
+    } catch { /* ignore */ }
+  }
+  setInterval(checkForChanges, 1000)
+}
+
 // Message routing
 chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
   if (message.type === 'GET_INTAKE') {

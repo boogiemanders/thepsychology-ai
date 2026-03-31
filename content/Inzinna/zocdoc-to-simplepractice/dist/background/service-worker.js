@@ -56,6 +56,25 @@
     }
   });
   void initializeSecureStorage();
+  var DEV_RELOAD = true;
+  if (DEV_RELOAD) {
+    let lastModified = 0;
+    const checkForChanges = async () => {
+      try {
+        const url = chrome.runtime.getURL("content/simplepractice.js");
+        const resp = await fetch(url, { cache: "no-store" });
+        const text = await resp.text();
+        const hash = text.length;
+        if (lastModified && hash !== lastModified) {
+          console.log("[ZSP] File change detected, reloading...");
+          chrome.runtime.reload();
+        }
+        lastModified = hash;
+      } catch {
+      }
+    };
+    setInterval(checkForChanges, 1e3);
+  }
   chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
     if (message.type === "GET_CLIENT") {
       chrome.storage.session.get(CLIENT_STORAGE_KEY, (result) => {

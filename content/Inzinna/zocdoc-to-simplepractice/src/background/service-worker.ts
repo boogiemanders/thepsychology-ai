@@ -74,6 +74,26 @@ chrome.alarms.onAlarm.addListener((alarm) => {
 
 void initializeSecureStorage()
 
+// ── Dev hot-reload: polls dist/ for changes every 1s ──
+const DEV_RELOAD = true
+if (DEV_RELOAD) {
+  let lastModified = 0
+  const checkForChanges = async () => {
+    try {
+      const url = chrome.runtime.getURL('content/simplepractice.js')
+      const resp = await fetch(url, { cache: 'no-store' })
+      const text = await resp.text()
+      const hash = text.length
+      if (lastModified && hash !== lastModified) {
+        console.log('[ZSP] File change detected, reloading...')
+        chrome.runtime.reload()
+      }
+      lastModified = hash
+    } catch { /* ignore */ }
+  }
+  setInterval(checkForChanges, 1000)
+}
+
 // Listen for messages from content scripts if needed
 chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
   if (message.type === 'GET_CLIENT') {
