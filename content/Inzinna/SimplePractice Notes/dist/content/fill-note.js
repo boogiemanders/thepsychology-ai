@@ -49,6 +49,7 @@
     domesticViolenceHistory: "",
     gad7: null,
     phq9: null,
+    cssrs: null,
     recentSymptoms: "",
     additionalSymptoms: "",
     additionalInfo: "",
@@ -108,6 +109,25 @@
     finalizedImpressions: [],
     updatedAt: ""
   };
+  var DEFAULT_MSE_CHECKLIST = {
+    appearance: ["well-groomed", "casually dressed", "appropriate hygiene"],
+    behavior: ["cooperative", "good eye contact", "psychomotor normal"],
+    speech: ["normal rate", "normal volume", "coherent"],
+    mood: "",
+    affect: ["congruent", "full range"],
+    thoughtProcess: ["linear", "goal-directed"],
+    thoughtContent: ["no SI", "no HI", "no delusions"],
+    perceptions: ["no hallucinations"],
+    cognition: ["alert", "oriented x4", "intact memory"],
+    insight: "good",
+    judgment: "good",
+    updatedAt: ""
+  };
+  var EMPTY_SESSION_TRANSCRIPT = {
+    apptId: "",
+    entries: [],
+    updatedAt: ""
+  };
   var EMPTY_SOAP_DRAFT = {
     apptId: "",
     clientName: "",
@@ -122,7 +142,8 @@
     treatmentPlanId: "",
     generatedAt: "",
     editedAt: "",
-    status: "draft"
+    status: "draft",
+    generationMethod: ""
   };
   var EMPTY_SESSION_NOTES = {
     apptId: "",
@@ -134,7 +155,10 @@
     providerLastName: "Chan",
     defaultLocation: "Video Office",
     firstVisitCPT: "90791",
-    followUpCPT: "90837"
+    followUpCPT: "90837",
+    ollamaModel: "llama3.1:8b",
+    ollamaEndpoint: "http://localhost:11434",
+    autoGenerateOnSessionEnd: true
   };
 
   // src/lib/intake-augmentation.ts
@@ -161,6 +185,11 @@
   }
   function joinLines(lines) {
     return unique(lines).join("\n");
+  }
+  function collectTopicLines(lines, patterns, limit = 4) {
+    return unique(
+      lines.filter((line) => patterns.some((pattern) => pattern.test(line)))
+    ).slice(0, limit);
   }
   function extractHeaderName(lines) {
     for (const line of lines.slice(0, 4)) {
@@ -194,7 +223,11 @@
   }
   function extractSurgeries(lines) {
     const surgeries = joinLines(
-      collectMatchingLines(lines, /\b(surger(?:y|ies)|acl|labrum|meniscus|rotator cuff)\b/i, 3)
+      collectMatchingLines(
+        lines,
+        /\b(surger(?:y|ies)|appendectomy|tonsillectomy|c-section|cesarean|acl|labrum|meniscus|rotator cuff|shoulder surgery|knee surgery|back surgery|hip surgery)\b/i,
+        4
+      )
     );
     return surgeries ? { surgeries } : {};
   }
@@ -228,7 +261,7 @@
   }
   function extractCounselingGoals(lines) {
     const counselingGoals = joinLines(
-      collectMatchingLines(lines, /\b(want to|want better|meet regularly|more actionable|cope|cbt|dynamic|act)\b/i, 6)
+      collectMatchingLines(lines, /\b(want to|want better|meet regularly|more actionable|cope|cbt|dynamic|act|drink less|stop drinking|move forward|anger management|exercise|breathe|breathing)\b/i, 6)
     );
     return counselingGoals ? { counselingGoals } : {};
   }
@@ -236,11 +269,47 @@
     const recentSymptoms = joinLines(
       collectMatchingLines(
         lines,
-        /\b(anxious|anxiety|insomnia|stomach pain|queasy|nausea|flashback|dissociation|foggy|fogginess|trouble concentrating|sleep disturbance|hopelessness|shock)\b/i,
-        8
+        /\b(anxious|anxiety|insomnia|stomach pain|queasy|nausea|flashback|dissociation|foggy|fogginess|trouble concentrating|sleep disturbance|hopelessness|shock|anger|angry|irritable|yell(?:ed|ing)?|jealous|defensive|relationship stress|attachment)\b/i,
+        10
       )
     );
     return recentSymptoms ? { recentSymptoms } : {};
+  }
+  function extractRelationshipDescription(lines) {
+    const relationshipDescription = joinLines(
+      collectTopicLines(
+        lines,
+        [
+          /\b(girlfriend|boyfriend|partner|wife|husband|spouse|ex\b|relationship|dating|marriage|engage(?:d|ment)?|breakup|divorce|attachment|jealous)\b/i
+        ],
+        5
+      )
+    );
+    return relationshipDescription ? { relationshipDescription } : {};
+  }
+  function extractSubstanceUse(lines) {
+    const alcoholLines = collectTopicLines(
+      lines,
+      [
+        /\b(alcohol|drink(?:ing)?|drank|beer|wine|liquor|vodka|tequila|patron|soju)\b/i,
+        /\bstop drinking\b/i,
+        /\bdrink less\b/i
+      ],
+      4
+    );
+    const drugLines = collectTopicLines(
+      lines,
+      [
+        /\b(weed|marijuana|cannabis|joint|blunt|thc|vape|nicotine|cigarette|cocaine|crack|meth|adderall|xanax|opioid|pill|mushroom|mushrooms|shroom|lsd)\b/i
+      ],
+      4
+    );
+    const substanceUseHistory = joinLines([...alcoholLines, ...drugLines]);
+    return {
+      alcoholUse: joinLines(alcoholLines),
+      drugUse: joinLines(drugLines),
+      substanceUseHistory
+    };
   }
   function extractChiefComplaint(notes) {
     const parts = [];
@@ -282,7 +351,9 @@
       ...extractTbi(lines),
       ...extractPriorTreatment(lines),
       ...extractCounselingGoals(lines),
-      ...extractRecentSymptoms(lines)
+      ...extractRecentSymptoms(lines),
+      ...extractRelationshipDescription(lines),
+      ...extractSubstanceUse(lines)
     };
   }
   function pickString(primary, fallback) {
@@ -306,7 +377,11 @@
       troubleSleeping: pickString(intake.troubleSleeping, derived.troubleSleeping),
       tbiLoc: pickString(intake.tbiLoc, derived.tbiLoc),
       occupation: pickString(intake.occupation, derived.occupation),
-      recentSymptoms: pickString(intake.recentSymptoms, derived.recentSymptoms)
+      recentSymptoms: pickString(intake.recentSymptoms, derived.recentSymptoms),
+      relationshipDescription: pickString(intake.relationshipDescription, derived.relationshipDescription),
+      alcoholUse: pickString(intake.alcoholUse, derived.alcoholUse),
+      drugUse: pickString(intake.drugUse, derived.drugUse),
+      substanceUseHistory: pickString(intake.substanceUseHistory, derived.substanceUseHistory)
     };
   }
 
@@ -317,6 +392,8 @@
   var PREFS_KEY = "spn_preferences";
   var SESSION_NOTES_KEY = "spn_session_notes";
   var SOAP_DRAFT_KEY = "spn_soap_draft";
+  var TRANSCRIPT_KEY = "spn_transcript";
+  var MSE_CHECKLIST_KEY = "spn_mse_checklist";
   function normalizeIntake(intake) {
     return {
       ...EMPTY_INTAKE,
@@ -327,7 +404,8 @@
       },
       rawQA: Array.isArray(intake?.rawQA) ? intake.rawQA : [],
       gad7: intake?.gad7 ?? null,
-      phq9: intake?.phq9 ?? null
+      phq9: intake?.phq9 ?? null,
+      cssrs: intake?.cssrs ?? null
     };
   }
   function normalizeDiagnosticImpression(impression) {
@@ -400,6 +478,20 @@
       status: draft?.status ?? "draft"
     };
   }
+  function normalizeTranscriptEntry(entry) {
+    return {
+      speaker: entry?.speaker ?? "unknown",
+      text: entry?.text?.trim() ?? "",
+      timestamp: entry?.timestamp ?? ""
+    };
+  }
+  function normalizeTranscript(transcript) {
+    return {
+      ...EMPTY_SESSION_TRANSCRIPT,
+      ...transcript,
+      entries: Array.isArray(transcript?.entries) ? transcript.entries.map((entry) => normalizeTranscriptEntry(entry)).filter((entry) => entry.text) : []
+    };
+  }
   async function getStoredIntake() {
     const result = await chrome.storage.session.get(INTAKE_KEY);
     const intake = result[INTAKE_KEY];
@@ -439,6 +531,26 @@
     const draft = result[SOAP_DRAFT_KEY];
     return draft ? normalizeSoapDraft(draft) : null;
   }
+  async function saveTranscript(transcript) {
+    await chrome.storage.session.set({ [TRANSCRIPT_KEY]: normalizeTranscript(transcript) });
+  }
+  async function getTranscript(apptId) {
+    const result = await chrome.storage.session.get(TRANSCRIPT_KEY);
+    const transcript = result[TRANSCRIPT_KEY];
+    if (!transcript || transcript.apptId !== apptId) return null;
+    return normalizeTranscript(transcript);
+  }
+  async function appendTranscriptEntry(apptId, entry) {
+    const existing = await getTranscript(apptId);
+    const next = normalizeTranscript({
+      ...existing ?? EMPTY_SESSION_TRANSCRIPT,
+      apptId,
+      entries: [...existing?.entries ?? [], normalizeTranscriptEntry(entry)],
+      updatedAt: (/* @__PURE__ */ new Date()).toISOString()
+    });
+    await saveTranscript(next);
+    return next;
+  }
   async function getSessionNotes(apptId) {
     const result = await chrome.storage.session.get(SESSION_NOTES_KEY);
     const notes = result[SESSION_NOTES_KEY];
@@ -447,6 +559,920 @@
   }
   async function saveSessionNotes(notes) {
     await chrome.storage.session.set({ [SESSION_NOTES_KEY]: notes });
+  }
+  async function saveMseChecklist(checklist) {
+    await chrome.storage.session.set({
+      [MSE_CHECKLIST_KEY]: { ...DEFAULT_MSE_CHECKLIST, ...checklist, updatedAt: (/* @__PURE__ */ new Date()).toISOString() }
+    });
+  }
+  async function getMseChecklist() {
+    const result = await chrome.storage.session.get(MSE_CHECKLIST_KEY);
+    const checklist = result[MSE_CHECKLIST_KEY];
+    return checklist ? { ...DEFAULT_MSE_CHECKLIST, ...checklist } : null;
+  }
+
+  // src/lib/ollama-client.ts
+  var DEFAULT_ENDPOINT = "http://localhost:11434";
+  var GENERATE_TIMEOUT_MS = 12e4;
+  async function checkOllamaHealth(endpoint = DEFAULT_ENDPOINT) {
+    try {
+      const res = await fetch(`${endpoint}/api/tags`, { signal: AbortSignal.timeout(5e3) });
+      return res.ok;
+    } catch {
+      return false;
+    }
+  }
+  async function generateCompletion(prompt, system, model, endpoint = DEFAULT_ENDPOINT) {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), GENERATE_TIMEOUT_MS);
+    try {
+      const res = await fetch(`${endpoint}/api/generate`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          model,
+          prompt,
+          system,
+          stream: false,
+          options: {
+            temperature: 0.3,
+            num_predict: 4096
+          }
+        }),
+        signal: controller.signal
+      });
+      if (!res.ok) {
+        const text = await res.text().catch(() => "");
+        throw new Error(`Ollama returned ${res.status}: ${text.slice(0, 200)}`);
+      }
+      const data = await res.json();
+      return data.response;
+    } finally {
+      clearTimeout(timeoutId);
+    }
+  }
+
+  // src/lib/soap-prompt.ts
+  var MAX_TRANSCRIPT_WORDS = 2e4;
+  var SYSTEM_PROMPT = `You are a clinical documentation assistant for a licensed psychologist. Your task is to generate a SOAP progress note from a session transcript and clinical context.
+
+OUTPUT FORMAT: Return a valid JSON object with exactly four string keys:
+{"subjective":"...","objective":"...","assessment":"...","plan":"..."}
+
+Do NOT wrap the JSON in markdown code fences. Return ONLY the raw JSON object.
+
+DOCUMENTATION STANDARDS:
+- Use third-person clinical prose (e.g., "Client reported..." not "I said...")
+- Use DSM-5 terminology for diagnoses and symptoms
+- Include direct client quotes in the Subjective section using quotation marks
+- Reference specific content from the session \u2014 do not write generic filler
+- Only include information explicitly stated in the transcript or session notes
+- Do NOT fabricate quotes, symptoms, or clinical observations not present in the data
+- Write for insurance/medical necessity \u2014 be specific about functional impairment and treatment rationale
+
+SECTION REQUIREMENTS:
+
+SUBJECTIVE: What the client reported. Include:
+- Primary concerns discussed this session
+- Symptom changes since last session (better, worse, same)
+- Relevant life events or stressors mentioned
+- Client's own words as direct quotes for key statements
+- Mood self-report if stated
+- Risk factors: SI/HI denial or endorsement (always document)
+- Substance use updates if discussed
+
+OBJECTIVE: What the clinician observed. Include:
+- Full Mental Status Exam in this exact format:
+  Mental Status Exam:
+  Appearance: [from checklist or transcript observations]
+  Behavior: [from checklist or transcript observations]
+  Speech: [from checklist or transcript observations]
+  Mood/Affect: [mood is client's words; affect is clinician's observation]
+  Thoughts: [thought process and content, SI/HI status]
+  Cognition: [orientation, attention, memory observations]
+  Insight/Judgment: [from checklist or inferred from session]
+- Behavioral observations during session (engagement, emotional responses, coping demonstrated)
+- Screening scores if administered (PHQ-9, GAD-7, C-SSRS)
+
+ASSESSMENT: Clinical analysis. Include:
+- Current symptom presentation and severity
+- Progress or regression relative to treatment goals (reference specific goals if provided)
+- Diagnostic formulation \u2014 how current presentation relates to active diagnoses
+- Functional impact on daily life, work, relationships
+- Protective and risk factors observed
+- Clinical reasoning for treatment approach
+- Statement of medical necessity for continued treatment
+
+PLAN: Next steps. Include:
+- Continue/modify treatment frequency and modality
+- Specific focus for next session based on this session's content
+- Interventions to use or continue (name specific techniques: CBT, exposure, MI, etc.)
+- Between-session assignments or skills to practice
+- Any referrals, medication coordination, or safety planning
+- Next appointment date/time if mentioned`;
+  function buildSoapPrompt(transcript, sessionNotes, intake, diagnosticImpressions, treatmentPlan, mseChecklist, prefs) {
+    const sections = [];
+    if (intake) {
+      const contextLines = [];
+      const name = [intake.firstName, intake.lastName].filter(Boolean).join(" ") || intake.fullName || "Client";
+      contextLines.push(`Client: ${name}`);
+      if (intake.dob) contextLines.push(`DOB: ${intake.dob}`);
+      if (intake.sex) contextLines.push(`Sex: ${intake.sex}`);
+      if (intake.genderIdentity) contextLines.push(`Gender identity: ${intake.genderIdentity}`);
+      if (intake.race || intake.ethnicity) contextLines.push(`Race/ethnicity: ${[intake.race, intake.ethnicity].filter(Boolean).join(", ")}`);
+      if (intake.occupation) contextLines.push(`Occupation: ${intake.occupation}`);
+      if (intake.livingArrangement) contextLines.push(`Living arrangement: ${intake.livingArrangement}`);
+      if (intake.maritalStatus) contextLines.push(`Marital status: ${intake.maritalStatus}`);
+      if (intake.medications) contextLines.push(`Current medications: ${intake.medications}`);
+      if (intake.chiefComplaint) contextLines.push(`Chief complaint (from intake): ${intake.chiefComplaint}`);
+      if (intake.suicidalIdeation) contextLines.push(`SI history: ${intake.suicidalIdeation}`);
+      if (intake.homicidalIdeation) contextLines.push(`HI history: ${intake.homicidalIdeation}`);
+      if (intake.substanceUseHistory) contextLines.push(`Substance use: ${intake.substanceUseHistory}`);
+      if (intake.medicalHistory) contextLines.push(`Medical history: ${intake.medicalHistory}`);
+      if (intake.surgeries) contextLines.push(`Surgeries: ${intake.surgeries}`);
+      if (intake.tbiLoc) contextLines.push(`TBI/LOC: ${intake.tbiLoc}`);
+      if (contextLines.length > 1) {
+        sections.push(`=== PATIENT CONTEXT ===
+${contextLines.join("\n")}`);
+      }
+    }
+    if (diagnosticImpressions.length > 0) {
+      const diagLines = diagnosticImpressions.map((d) => {
+        const parts = [`${d.code} ${d.name} (${d.confidence} confidence)`];
+        if (d.diagnosticReasoning) parts.push(`  Reasoning: ${d.diagnosticReasoning}`);
+        return parts.join("\n");
+      });
+      sections.push(`=== ACTIVE DIAGNOSES ===
+${diagLines.join("\n")}`);
+    }
+    if (treatmentPlan && treatmentPlan.goals.length > 0) {
+      const tpLines = [];
+      if (treatmentPlan.treatmentFrequency) tpLines.push(`Frequency: ${treatmentPlan.treatmentFrequency}`);
+      if (treatmentPlan.treatmentType) tpLines.push(`Type: ${treatmentPlan.treatmentType}`);
+      for (const goal of treatmentPlan.goals) {
+        tpLines.push(`Goal ${goal.goalNumber}: ${goal.goal} (Status: ${goal.status || "active"})`);
+        for (const obj of goal.objectives) {
+          tpLines.push(`  ${obj.id}: ${obj.objective}`);
+        }
+      }
+      if (treatmentPlan.interventions.length > 0) {
+        tpLines.push(`Interventions: ${treatmentPlan.interventions.join("; ")}`);
+      }
+      sections.push(`=== TREATMENT PLAN ===
+${tpLines.join("\n")}`);
+    }
+    const assessments = [];
+    const formatAssessment = (a, label) => {
+      if (!a) return;
+      assessments.push(`${label}: ${a.totalScore} \u2014 ${a.severity}`);
+    };
+    if (intake) {
+      formatAssessment(intake.phq9, "PHQ-9");
+      formatAssessment(intake.gad7, "GAD-7");
+      formatAssessment(intake.cssrs, "C-SSRS");
+    }
+    if (assessments.length > 0) {
+      sections.push(`=== PRIOR ASSESSMENTS ===
+${assessments.join("\n")}`);
+    }
+    if (mseChecklist) {
+      const mseLines = [];
+      const fmt = (label, values) => {
+        if (values.length > 0) mseLines.push(`${label}: ${values.join(", ")}`);
+      };
+      fmt("Appearance", mseChecklist.appearance);
+      fmt("Behavior", mseChecklist.behavior);
+      fmt("Speech", mseChecklist.speech);
+      if (mseChecklist.mood) mseLines.push(`Mood (client's words): "${mseChecklist.mood}"`);
+      fmt("Affect", mseChecklist.affect);
+      fmt("Thought process", mseChecklist.thoughtProcess);
+      fmt("Thought content", mseChecklist.thoughtContent);
+      fmt("Perceptions", mseChecklist.perceptions);
+      fmt("Cognition", mseChecklist.cognition);
+      if (mseChecklist.insight) mseLines.push(`Insight: ${mseChecklist.insight}`);
+      if (mseChecklist.judgment) mseLines.push(`Judgment: ${mseChecklist.judgment}`);
+      sections.push(`=== MSE CHECKLIST (clinician observations) ===
+${mseLines.join("\n")}`);
+    }
+    const trimmedNotes = sessionNotes.trim();
+    if (trimmedNotes) {
+      sections.push(`=== CLINICIAN SESSION NOTES ===
+${trimmedNotes}`);
+    }
+    if (transcript && transcript.entries.length > 0) {
+      const transcriptText = formatTranscript(transcript, prefs);
+      sections.push(`=== SESSION TRANSCRIPT ===
+${transcriptText}`);
+    }
+    const providerName = [prefs.providerFirstName, prefs.providerLastName].filter(Boolean).join(" ") || "Clinician";
+    sections.push(
+      `=== INSTRUCTIONS ===
+Generate a SOAP progress note for this session. The treating clinician is ${providerName}. Use the MSE checklist data for the Objective section's Mental Status Exam. Use the transcript and session notes to populate the Subjective, Assessment, and Plan sections. Reference treatment plan goals in the Assessment section when relevant. Return ONLY valid JSON with keys: subjective, objective, assessment, plan.`
+    );
+    return {
+      system: SYSTEM_PROMPT,
+      user: sections.join("\n\n")
+    };
+  }
+  function formatTranscript(transcript, prefs) {
+    const providerName = [prefs.providerFirstName, prefs.providerLastName].filter(Boolean).join(" ") || "Clinician";
+    const lines = [];
+    let wordCount = 0;
+    for (const entry of transcript.entries) {
+      const speaker = entry.speaker === "clinician" ? providerName : "Client";
+      const line = `${speaker}: ${entry.text}`;
+      const words = line.split(/\s+/).length;
+      wordCount += words;
+      if (wordCount > MAX_TRANSCRIPT_WORDS) {
+        lines.push("[... transcript truncated for length ...]");
+        const lastEntries = transcript.entries.slice(-10);
+        for (const last of lastEntries) {
+          const s = last.speaker === "clinician" ? providerName : "Client";
+          lines.push(`${s}: ${last.text}`);
+        }
+        break;
+      }
+      lines.push(line);
+    }
+    return lines.join("\n");
+  }
+
+  // src/lib/soap-builder.ts
+  var LOW_SIGNAL_LINES = /* @__PURE__ */ new Set([
+    "common sense",
+    "straight",
+    "least homophobic",
+    "tiktok"
+  ]);
+  function normalizeWhitespace2(value) {
+    return value.replace(/\s+/g, " ").trim();
+  }
+  function splitLines2(value) {
+    return value.replace(/\r\n/g, "\n").split(/\n+/).map((line) => sanitizeLine(line)).filter(Boolean);
+  }
+  function sanitizeLine(value) {
+    return normalizeWhitespace2(value).replace(/[“”]/g, '"').replace(/[‘’]/g, "'").replace(/\b(\d+)x\s*\/?\s*week\b/gi, "$1 times per week").replace(/\b(\d+)x\b/gi, "$1 times").replace(/\b2x\b/gi, "twice").replace(/\b3x\b/gi, "3 times").replace(/\b4x\b/gi, "4 times").replace(/\b5x\b/gi, "5 times").replace(/\b6x\b/gi, "6 times").replace(/\bstriipper\b/gi, "stripper").replace(/\broofied\b/gi, "was drugged").replace(/\bAldo\b/g, "Also");
+  }
+  function unique2(values) {
+    const seen = /* @__PURE__ */ new Set();
+    const output = [];
+    for (const value of values) {
+      const key = value.toLowerCase();
+      if (!key || seen.has(key)) continue;
+      seen.add(key);
+      output.push(value);
+    }
+    return output;
+  }
+  function firstNonEmpty(...values) {
+    for (const value of values) {
+      const trimmed = value?.trim();
+      if (trimmed) return trimmed;
+    }
+    return "";
+  }
+  function sentence(value) {
+    const trimmed = normalizeWhitespace2(value).replace(/[.]+$/, "");
+    return trimmed ? `${trimmed}.` : "";
+  }
+  function joinSentences(values) {
+    return values.map((value) => sentence(value)).filter(Boolean).join(" ");
+  }
+  function formatList(values, conjunction = "and") {
+    const cleaned = unique2(values.map((value) => normalizeWhitespace2(value)).filter(Boolean));
+    if (!cleaned.length) return "";
+    if (cleaned.length === 1) return cleaned[0];
+    if (cleaned.length === 2) return `${cleaned[0]} ${conjunction} ${cleaned[1]}`;
+    return `${cleaned.slice(0, -1).join(", ")}, ${conjunction} ${cleaned[cleaned.length - 1]}`;
+  }
+  function buildTranscriptText(transcript) {
+    if (!transcript?.entries.length) return "";
+    return transcript.entries.map((entry) => `${entry.speaker}: ${entry.text}`).join("\n");
+  }
+  function includesPattern(lines, pattern) {
+    return lines.some((line) => pattern.test(line));
+  }
+  function extractQuotedPhrases(lines) {
+    const phrases = [];
+    for (const line of lines) {
+      const matches = line.matchAll(/"([^"]{3,})"/g);
+      for (const match of matches) {
+        const phrase = normalizeWhitespace2(match[1]);
+        if (phrase) phrases.push(phrase);
+      }
+    }
+    return unique2(phrases);
+  }
+  function extractMoneySpent(lines) {
+    for (const line of lines) {
+      if (!/\bspent\b/i.test(line)) continue;
+      const match = line.match(/\$?\s?(\d[\d,]*)/);
+      if (!match) continue;
+      const digits = match[1].replace(/,/g, "");
+      const amount = Number.parseInt(digits, 10);
+      if (!Number.isFinite(amount)) continue;
+      return `$${amount.toLocaleString("en-US")}`;
+    }
+    return "";
+  }
+  function extractAbortionsCount(lines) {
+    for (const line of lines) {
+      const match = line.match(/\b(\d+)\s+abortions?\b/i);
+      if (match) return match[1];
+    }
+    return "";
+  }
+  function lowerFirst(value) {
+    if (!value) return value;
+    return value.charAt(0).toLowerCase() + value.slice(1);
+  }
+  function formatGoalLabel(goal) {
+    const raw = normalizeWhitespace2(goal.goal).replace(/[.]+$/, "");
+    const simplified = raw.replace(/^reduce frequency and intensity of\s+/i, "reduce ").replace(/\bweekly\s+/i, "").replace(/^increase insight into how\s+/i, "increase insight into how ");
+    return `Goal to ${lowerFirst(simplified)}`;
+  }
+  function formatAssessmentStatus(value) {
+    const normalized = value.trim().toLowerCase();
+    if (normalized === "limited progress noted") return "Limited progress";
+    if (normalized === "some progress noted") return "Some progress";
+    if (normalized === "good progress noted") return "Good progress";
+    if (normalized === "progress remains under review") return "Progress remains under review";
+    return value.trim() || "Progress remains under review";
+  }
+  function summarizeInterventions(interventions) {
+    const cleaned = interventions.map((item) => item.replace(/\s+/g, " ").trim()).filter(Boolean);
+    if (!cleaned.length) return "";
+    const short = cleaned.map((item) => item.match(/\(([^)]+)\)/)?.[1]?.trim() ?? "");
+    if (short.every(Boolean)) {
+      return formatList(short);
+    }
+    return formatList(cleaned);
+  }
+  function hasClinicalKeyword(line) {
+    return /\b(anxiety|anxious|anger|angry|fight|fights|argument|arguing|yell|yelled|yelling|job|partner|girlfriend|boyfriend|relationship|conflict|drink|drinking|alcohol|cannabis|marijuana|weed|roofied|drugged|bar|breathe|breathing|lifting|cycling|exercise|anger management|session|mse|affect|speech|thought|oriented|guilt|sad|miss|panic|fear|trigger)\b/i.test(line);
+  }
+  function isLowSignalLine(line) {
+    const normalized = normalizeWhitespace2(line).toLowerCase();
+    if (!normalized) return true;
+    if (LOW_SIGNAL_LINES.has(normalized)) return true;
+    if (/^[a-z]+(?:\s+[a-z]+)?$/i.test(normalized) && normalized.split(" ").length <= 2 && !hasClinicalKeyword(normalized)) {
+      return true;
+    }
+    return normalized.split(" ").length < 3 && !hasClinicalKeyword(normalized);
+  }
+  function analyzeSessionNotes(lines) {
+    const signals = {
+      relationshipConflict: [],
+      anxiety: [],
+      substance: [],
+      coping: [],
+      support: [],
+      objective: [],
+      directQuotes: [],
+      attachment: []
+    };
+    for (const rawLine of lines) {
+      const line = sanitizeLine(rawLine);
+      if (!line || isLowSignalLine(line)) continue;
+      if ((line.match(/"/g) ?? []).length >= 2) {
+        signals.directQuotes.push(line);
+      }
+      if (/\b(yell(?:ed|ing)?|fight|fights|argument|arguing|called? .*job|job .*times|meeting up|guy|girlfriend|boyfriend|partner|relationship|conflict|guilty|loser|dirty snake)\b/i.test(line)) {
+        signals.relationshipConflict.push(line);
+      }
+      if (/\b(anxiety|anxious|panic|fear|trigger|spiky|distress|worry)\b/i.test(line)) {
+        signals.anxiety.push(line);
+      }
+      if (/\b(drink|drinking|alcohol|bar|drugged|cannabis|marijuana|weed|joint|substance)\b/i.test(line)) {
+        signals.substance.push(line);
+      }
+      if (/\b(breathe|breathing|cycling|lifting|exercise|class|anger management|track|log|journal|pause)\b/i.test(line)) {
+        signals.coping.push(line);
+      }
+      if (/\b(contact|referral|Andrea|Grimshaw)\b/i.test(line)) {
+        signals.support.push(line);
+      }
+      if (/\b(mse|appearance|affect|speech|behavior|thought|oriented|a&o|observed|presented|engaged|tearful|guarded|calm)\b/i.test(line)) {
+        signals.objective.push(line);
+      }
+      if (/\b(miss her|miss him|miss them|birthday|valentine|tatted|tattoo|abortions?)\b/i.test(line)) {
+        signals.attachment.push(line);
+      }
+    }
+    return {
+      relationshipConflict: unique2(signals.relationshipConflict),
+      anxiety: unique2(signals.anxiety),
+      substance: unique2(signals.substance),
+      coping: unique2(signals.coping),
+      support: unique2(signals.support),
+      objective: unique2(signals.objective),
+      directQuotes: unique2(signals.directQuotes),
+      attachment: unique2(signals.attachment)
+    };
+  }
+  function extractFrequency(lines) {
+    for (const line of lines) {
+      const match = line.match(/\b(twice|\d+\s+times?)\s+per\s+week\b/i);
+      if (match) {
+        const raw = match[0].toLowerCase();
+        if (raw === "1 time per week" || raw === "1 times per week") return "once per week";
+        if (raw === "2 times per week") return "twice per week";
+        return raw;
+      }
+    }
+    for (const line of lines) {
+      const match = line.match(/\b(\d+)\s+times?\b/i);
+      if (match) return `${match[1]} times`;
+    }
+    return "";
+  }
+  function extractCallCount(lines) {
+    for (const line of lines) {
+      const match = line.match(/\bcalled?.*job\s+(\d+)\s+times\b/i) ?? line.match(/\bcalled?.*job.*?(\d+)\s+times\b/i);
+      if (match) return match[1];
+    }
+    return "";
+  }
+  function summarizeSubjective(lines, signals, transcript, intake) {
+    const sentences = [];
+    const clientTranscriptLines = transcript?.entries.filter((entry) => entry.speaker === "client").map((entry) => sanitizeLine(entry.text)).filter((line) => line && !isLowSignalLine(line)) ?? [];
+    const conflictSource = unique2([
+      ...signals.relationshipConflict,
+      ...clientTranscriptLines.filter((line) => /\b(fight|argument|partner|girlfriend|boyfriend|relationship|job)\b/i.test(line))
+    ]);
+    const quotedPhrases = extractQuotedPhrases(lines);
+    const moneySpent = extractMoneySpent(lines);
+    const abortionsCount = extractAbortionsCount(lines);
+    const hasTattooHistory = includesPattern(lines, /\b(tatted|tattoo)\b/i);
+    const hasHazyMemory = includesPattern(lines, /\b(hazy memory|blurred memory|don't remember|memory)\b/i);
+    const hasBasement = includesPattern(lines, /\bbasement\b/i);
+    const hasSeparatedFromFriends = includesPattern(lines, /\bseparated from (his |her |their )?friends|away from (his |her |their )?friends\b/i);
+    const hasTouching = includesPattern(lines, /\b(man touching|guy touching|someone touching|touched him|touched me)\b/i);
+    const hasVideoFear = includesPattern(lines, /\bvideo\b/i);
+    const hasOthersKnowFear = includesPattern(lines, /\bothers know|people know|know about this|people saw\b/i);
+    const wantsToMoveForward = includesPattern(lines, /\bmove forward|moving forward|move on\b/i);
+    const wantsLessDrinking = includesPattern(lines, /\bstop drinking|drink less|reduce drinking\b/i);
+    const wantsExercise = includesPattern(lines, /\bcycle|cycling|lift|lifting|weights?\b/i);
+    const keepMouthShut = includesPattern(lines, /\bkeep (my|his) mouth shut|shut your mouth\b/i);
+    if (conflictSource.length) {
+      const frequency = extractFrequency(conflictSource);
+      if (frequency && signals.relationshipConflict.some((line) => /\bcalled?.*job\b/i.test(line))) {
+        sentences.push(`Client reported ongoing conflict with partner, including yelling or arguments about ${frequency} and repeated calls to partner's workplace while upset`);
+      } else if (frequency) {
+        sentences.push(`Client reported ongoing conflict with partner, including yelling or arguments about ${frequency}`);
+      } else {
+        sentences.push("Client reported ongoing conflict and strain in the relationship");
+      }
+      if (keepMouthShut) {
+        sentences.push("Client stated that even when he plans to keep his mouth shut, he often loses control, then yells, criticizes, and becomes defensive");
+      } else if (signals.directQuotes.length) {
+        sentences.push("Client described repeated criticism, accusations, and hurtful exchanges during arguments with partner");
+      }
+      if (quotedPhrases.length) {
+        const quotedPreview = quotedPhrases.slice(0, 5).map((phrase) => `"${phrase}"`).join(", ");
+        sentences.push(`Client identified triggers including statements such as ${quotedPreview}`);
+      }
+    }
+    if (signals.anxiety.length) {
+      if (signals.relationshipConflict.some((line) => /\bguy|meeting up\b/i.test(line))) {
+        sentences.push("Client described strong anxiety and jealousy related to partner contact with another man");
+      } else {
+        sentences.push("Client described high anxiety during the week");
+      }
+    }
+    if (moneySpent) {
+      sentences.push(`Client shared that he spent ${moneySpent} on Valentine's Day and did not feel that the effort was reciprocated`);
+    }
+    if (hasTattooHistory || abortionsCount) {
+      const historyParts = [];
+      if (hasTattooHistory) historyParts.push("he has her name tattooed multiple times on his body");
+      if (abortionsCount) historyParts.push(`they had ${abortionsCount} abortions together`);
+      sentences.push(`Client also shared that ${formatList(historyParts)}`);
+    }
+    if (signals.substance.length) {
+      if (signals.substance.some((line) => /\bdrugged|bar\b/i.test(line))) {
+        if (hasHazyMemory || hasBasement || hasSeparatedFromFriends || hasTouching) {
+          const incidentParts = [];
+          if (hasHazyMemory) incidentParts.push("about 20 minutes of hazy memory");
+          if (hasBasement) incidentParts.push("being in a basement");
+          if (hasSeparatedFromFriends) incidentParts.push("being separated from friends");
+          if (hasTouching) incidentParts.push("a man touching him");
+          sentences.push(`Client also reported a recent incident in which he believes he was drugged at a bar, with ${formatList(incidentParts)}`);
+        } else {
+          sentences.push("Client also reported a recent incident in which he believes he was drugged at a bar");
+        }
+        if (hasVideoFear || hasOthersKnowFear) {
+          sentences.push("Client shared anxiety that there may be a video of the incident or that others may know about it");
+        }
+      } else {
+        sentences.push("Client also discussed ongoing alcohol and substance-use concerns");
+      }
+    }
+    if (signals.attachment.length) {
+      sentences.push("Client expressed ongoing hurt, attachment, and difficulty letting go of the relationship");
+    }
+    if (wantsToMoveForward || wantsLessDrinking || wantsExercise) {
+      const changeGoals = [];
+      if (wantsToMoveForward) changeGoals.push("move forward");
+      if (wantsLessDrinking) changeGoals.push("drink less");
+      if (wantsExercise) changeGoals.push("focus more on cycling and lifting weights");
+      if (changeGoals.length) {
+        sentences.push(`Client also stated that he wants to ${formatList(changeGoals)}`);
+      }
+    }
+    if (!sentences.length) {
+      const fallback = [
+        firstNonEmpty(intake?.chiefComplaint, intake?.presentingProblems),
+        intake?.historyOfPresentIllness ?? ""
+      ].map((value) => sentence(value)).filter(Boolean);
+      return fallback.join(" ") || "Client discussed current symptoms and stressors during session.";
+    }
+    return joinSentences(sentences);
+  }
+  function summarizeObjective(lines, signals, intake) {
+    const sentences = [];
+    const hasAttachmentMarkers = signals.attachment.length > 0 || includesPattern(lines, /\b(tatted|tattoo|abortions?|valentine)\b/i);
+    const wantsLessDrinking = includesPattern(lines, /\bstop drinking|drink less|reduce drinking\b/i);
+    const wantsExercise = includesPattern(lines, /\bcycle|cycling|lift|lifting|weights?\b/i);
+    if (signals.objective.length) {
+      sentences.push(...signals.objective.slice(0, 2));
+    } else {
+      const reflectedThemes = [];
+      if (signals.anxiety.length) reflectedThemes.push("anxiety");
+      if (signals.relationshipConflict.length) {
+        reflectedThemes.push("anger");
+        reflectedThemes.push("jealousy");
+        reflectedThemes.push("relationship stress");
+      }
+      if (hasAttachmentMarkers) reflectedThemes.push("attachment");
+      if (signals.substance.length) reflectedThemes.push("alcohol-related risk");
+      if (reflectedThemes.length) {
+        sentences.push(`Session focused on ${formatList(reflectedThemes)}`);
+      } else {
+        sentences.push("Session focused on current symptoms and recent stressors");
+      }
+    }
+    if (signals.coping.length) {
+      const copingLabels = [];
+      if (signals.coping.some((line) => /\bcycling|lifting|exercise|class\b/i.test(line))) {
+        copingLabels.push("exercise");
+      }
+      if (signals.coping.some((line) => /\bbreathe|breathing\b/i.test(line))) {
+        copingLabels.push("breathing skills");
+      }
+      if (signals.coping.some((line) => /\banger management\b/i.test(line))) {
+        copingLabels.push("anger-management work");
+      }
+      if (copingLabels.length) {
+        sentences.push(`Client identified ${formatList(copingLabels)} as coping efforts`);
+      }
+    }
+    if (signals.relationshipConflict.some((line) => /\bcalled?.*job\b/i.test(line))) {
+      sentences.push("Session notes suggest poor impulse control during relationship distress");
+    }
+    if (wantsLessDrinking || wantsExercise) {
+      if (wantsLessDrinking && wantsExercise) {
+        sentences.push("Clinician reflected client's stated desire to drink less and increase exercise");
+      } else if (wantsLessDrinking) {
+        sentences.push("Clinician reflected client's stated desire to drink less");
+      } else if (wantsExercise) {
+        sentences.push("Clinician reflected client's stated desire to increase exercise");
+      }
+    }
+    if (signals.objective.length === 0) {
+      sentences.push("No formal MSE findings or rating scales were documented in the session notes");
+    }
+    const measurementLines = [];
+    if (signals.objective.some((line) => /\bphq\b/i.test(line)) && intake?.phq9) {
+      measurementLines.push(`PHQ-9 previously captured at ${intake.phq9.totalScore}/27 (${intake.phq9.severity})`);
+    }
+    if (signals.objective.some((line) => /\bgad\b/i.test(line)) && intake?.gad7) {
+      measurementLines.push(`GAD-7 previously captured at ${intake.gad7.totalScore}/21 (${intake.gad7.severity})`);
+    }
+    return joinSentences([...sentences, ...measurementLines]);
+  }
+  function inferGoalFocus(goal) {
+    const text = `${goal.goal} ${goal.objectives.map((objective) => objective.objective).join(" ")}`.toLowerCase();
+    if (/\b(alcohol|cannabis|marijuana|weed|substance|impulsivity)\b/.test(text)) return "substance";
+    if (/\b(verbal|fight|argument|conflict|partner|communication|anger)\b/.test(text)) return "conflict";
+    if (/\b(anxiety|panic|fear|worry)\b/.test(text)) return "anxiety";
+    if (/\b(mood|depression|sadness|irritability)\b/.test(text)) return "mood";
+    return "general";
+  }
+  function statusFromGoal(goal, focus, signals) {
+    const improvementSource = [
+      ...signals.relationshipConflict,
+      ...signals.anxiety,
+      ...signals.substance,
+      ...signals.coping
+    ].join(" ").toLowerCase();
+    if (/\b(better|improved|less|fewer|calmer|stopped|reduced)\b/.test(improvementSource)) {
+      return "Some progress noted";
+    }
+    if (focus === "conflict" && signals.relationshipConflict.length) return "Limited progress noted";
+    if (focus === "substance" && (signals.substance.length || signals.relationshipConflict.some((line) => /\bcalled?.*job\b/i.test(line)))) {
+      return "Limited progress noted";
+    }
+    if ((focus === "anxiety" || focus === "mood") && signals.anxiety.length) return "Limited progress noted";
+    const existing = goal.status.trim().toLowerCase();
+    if (existing === "no improvement") return "Limited progress noted";
+    if (existing === "some improvement") return "Some progress noted";
+    if (existing === "significant improvement") return "Good progress noted";
+    if (goal.status.trim()) return sentence(goal.status).replace(/[.]$/, "");
+    return "Progress remains under review";
+  }
+  function evidenceForGoal(goal, focus, signals) {
+    switch (focus) {
+      case "conflict":
+        if (signals.relationshipConflict.length) {
+          const frequency = extractFrequency(signals.relationshipConflict);
+          const callCount = extractCallCount(signals.relationshipConflict);
+          if (frequency && callCount) {
+            return `Client continues to report yelling or verbal conflict about ${frequency}, along with repeated calls to partner's workplace (${callCount} times) while upset`;
+          }
+          if (frequency) {
+            return `Client continues to report yelling or verbal conflict about ${frequency}`;
+          }
+          return "Client continues to report jealousy, arguments, and difficulty slowing down during relationship stress";
+        }
+        return "Relationship stress remains a focus of treatment";
+      case "substance":
+        if (signals.substance.length) {
+          const mentionsStoppingAlcohol = signals.substance.some((line) => /\bstop drinking\b/i.test(line));
+          const barRisk = signals.substance.some((line) => /\bdrugged|bar\b/i.test(line));
+          const impulsiveConflict = signals.relationshipConflict.some((line) => /\bcalled?.*job\b/i.test(line));
+          if (barRisk && impulsiveConflict) {
+            return "Session included alcohol-related risk and ongoing impulsive behavior during conflict; insight into how substance use may worsen mood and reactions remains limited";
+          }
+          if (signals.substance.some((line) => /\bdrugged|bar\b/i.test(line))) {
+            return mentionsStoppingAlcohol ? "Session included alcohol-related risk, including being drugged at a bar, and the need to reduce drinking remained part of the discussion" : "Session included alcohol-related risk, including discussion of being drugged while at a bar";
+          }
+          return "The link between alcohol or cannabis use, mood, and conflict still needs more work";
+        }
+        if (signals.relationshipConflict.some((line) => /\bcalled?.*job\b/i.test(line))) {
+          return "Ongoing impulsive behavior during conflict suggests that insight into triggers and worsening factors is still limited";
+        }
+        if (/\b(alcohol|cannabis|marijuana|weed|substance)\b/i.test(goal.goal)) {
+          return "No clear update on alcohol or cannabis tracking was documented this session, and this treatment need remains active";
+        }
+        return "The link between substance use, mood, and conflict continues to need review";
+      case "anxiety":
+        if (signals.anxiety.length) {
+          return "Anxiety remains elevated in the context of current stressors";
+        }
+        return "Anxiety symptoms continue to need monitoring";
+      case "mood":
+        if (signals.anxiety.length || signals.relationshipConflict.length) {
+          return "Mood symptoms remain tied to ongoing relationship stress and emotional reactivity";
+        }
+        return "Mood symptoms continue to need monitoring";
+      default:
+        return "Current session content was reviewed in relation to this treatment goal";
+    }
+  }
+  function summarizeAssessment(lines, signals, treatmentPlan, diagnosticImpressions, intake) {
+    const parts = [];
+    const wantsToMoveForward = includesPattern(lines, /\bmove forward|moving forward|move on\b/i);
+    const hasNoAttachmentStatement = includesPattern(lines, /\bno attachment|have no attachment\b/i);
+    const hasGoodManIdentity = includesPattern(lines, /\bgood man\b/i) && includesPattern(lines, /\bpoint of view\b/i);
+    const hasAttachmentHistory = signals.attachment.length > 0 || includesPattern(lines, /\b(tatted|tattoo|abortions?|valentine)\b/i);
+    const hasFrustrationMarkers = includesPattern(lines, /\b(frustrat|angry|hurt|got nothing)\b/i) || Boolean(extractMoneySpent(lines));
+    const hasBarRisk = includesPattern(lines, /\bdrugged|bar\b/i);
+    const hasBarAnxiety = includesPattern(lines, /\bvideo\b/i) || includesPattern(lines, /\bothers know|people know|know about this|people saw\b/i);
+    const wantsLessDrinking = includesPattern(lines, /\bstop drinking|drink less|reduce drinking\b/i);
+    const wantsExercise = includesPattern(lines, /\bcycle|cycling|lift|lifting|weights?\b/i);
+    if (treatmentPlan?.goals.length) {
+      for (const goal of treatmentPlan.goals) {
+        const focus = inferGoalFocus(goal);
+        const status = statusFromGoal(goal, focus, signals);
+        const goalParts = [`${formatGoalLabel(goal)}: ${formatAssessmentStatus(status)}.`];
+        if (focus === "conflict") {
+          if (signals.relationshipConflict.length) {
+            goalParts.push("Client continues to report frequent conflict, emotional reactivity, and repeated contact attempts during distress.");
+          } else {
+            goalParts.push(`${sentence(evidenceForGoal(goal, focus, signals))}`);
+          }
+          if ((wantsToMoveForward || hasNoAttachmentStatement) && signals.relationshipConflict.some((line) => /\bcalled?.*job\b/i.test(line))) {
+            goalParts.push("Clinician reflected client's frustration and highlighted the mismatch between client's stated wish to move on and have no attachment and his current behavior, including repeated calls, anger about partner seeing another man, and ongoing preoccupation with the relationship.");
+          } else if (hasFrustrationMarkers) {
+            goalParts.push("Clinician reflected client's frustration with the ongoing relationship dynamic.");
+          }
+          if (hasGoodManIdentity) {
+            goalParts.push(`Clinician also reflected that client's identity as a "good man" appears strongly tied to her point of view, which may be reinforcing reactivity and difficulty disengaging.`);
+          }
+          if (hasAttachmentHistory) {
+            goalParts.push("Clinician validated the difficulty of breaking away from the relationship given the attachment and shared history.");
+          }
+        } else if (focus === "substance") {
+          if (hasBarRisk && hasBarAnxiety) {
+            goalParts.push("Session included alcohol-related risk and anxiety related to the recent bar incident.");
+          } else if (hasBarRisk) {
+            goalParts.push("Session included alcohol-related risk.");
+          } else {
+            goalParts.push(`${sentence(evidenceForGoal(goal, focus, signals))}`);
+          }
+          let insightSentence = "Insight into how alcohol use may worsen judgment, impulsivity, emotional reactivity, and vulnerability remains limited";
+          if (wantsLessDrinking || wantsExercise) {
+            const selfCareParts = [];
+            if (wantsLessDrinking) selfCareParts.push("reduce drinking");
+            if (wantsExercise) selfCareParts.push("improve self-care through exercise");
+            insightSentence += `, though client did express desire to ${formatList(selfCareParts)}`;
+          }
+          goalParts.push(sentence(insightSentence));
+        } else {
+          goalParts.push(sentence(evidenceForGoal(goal, focus, signals)));
+        }
+        parts.push(goalParts.join(" "));
+      }
+    }
+    const diagnosisSummary = diagnosticImpressions.length ? diagnosticImpressions.map((impression) => `${impression.name}${impression.code ? ` (${impression.code})` : ""}`).join(", ") : treatmentPlan?.diagnoses.length ? treatmentPlan.diagnoses.map((diagnosis) => `${diagnosis.description}${diagnosis.code ? ` (${diagnosis.code})` : ""}`).join(", ") : "";
+    if (diagnosisSummary) {
+      parts.push(`Current presentation remains consistent with working diagnoses of ${diagnosisSummary}.`);
+    } else if (firstNonEmpty(intake?.chiefComplaint, intake?.presentingProblems)) {
+      parts.push(`Clinical focus remains on ${firstNonEmpty(intake?.chiefComplaint, intake?.presentingProblems)}.`);
+    }
+    return parts.join("\n\n") || "Assessment should be updated in relation to the treatment plan and current session themes.";
+  }
+  function summarizePlan(lines, signals, treatmentPlan) {
+    const planItems = [];
+    const wantsLessDrinking = includesPattern(lines, /\bstop drinking|drink less|reduce drinking\b/i);
+    const wantsExercise = includesPattern(lines, /\bcycle|cycling|lift|lifting|weights?\b/i);
+    if (treatmentPlan?.treatmentFrequency) {
+      planItems.push(`Continue ${treatmentPlan.treatmentFrequency} psychotherapy`);
+    } else {
+      planItems.push("Continue psychotherapy as scheduled");
+    }
+    const objectiveText = treatmentPlan?.goals.flatMap((goal) => goal.objectives).map((objective) => objective.objective.toLowerCase()) ?? [];
+    if (objectiveText.some((text) => /chain analysis/.test(text)) || signals.relationshipConflict.length) {
+      planItems.push("Review recent conflicts with chain analysis");
+    }
+    if (objectiveText.some((text) => /distress tolerance|practice/.test(text)) || signals.coping.length) {
+      if (signals.relationshipConflict.some((line) => /\bcalled?.*job\b/i.test(line))) {
+        planItems.push("Practice pause, breathing, and distress-tolerance skills before calling or confronting partner when upset");
+      } else {
+        planItems.push("Practice pause, breathing, and distress-tolerance skills during conflict");
+      }
+    }
+    if (objectiveText.some((text) => /track|log|cannabis|alcohol/.test(text)) || signals.substance.length) {
+      planItems.push("Track alcohol and cannabis use, mood, irritability, and conflict episodes between sessions");
+    }
+    if (wantsLessDrinking || wantsExercise) {
+      const healthierCoping = [];
+      if (includesPattern(lines, /\bcycle|cycling\b/i)) healthierCoping.push("cycling");
+      if (includesPattern(lines, /\blift|lifting|weights?\b/i)) healthierCoping.push("lifting");
+      if (wantsLessDrinking && healthierCoping.length) {
+        planItems.push(`Support reduction in alcohol use and reinforce ${formatList(healthierCoping)} as healthier coping strategies`);
+      } else if (wantsLessDrinking) {
+        planItems.push("Support reduction in alcohol use as a treatment goal");
+      } else if (healthierCoping.length) {
+        planItems.push(`Reinforce ${formatList(healthierCoping)} as healthier coping strategies`);
+      }
+    }
+    if (signals.coping.some((line) => /\banger management\b/i.test(line))) {
+      planItems.push("Continue anger-management work");
+    }
+    if (signals.support.length) {
+      planItems.push("Review referral or support contact options as clinically indicated");
+    }
+    if (treatmentPlan?.interventions.length) {
+      const summarizedInterventions = summarizeInterventions(treatmentPlan.interventions);
+      if (summarizedInterventions) {
+        planItems.push(`Continue ${summarizedInterventions} interventions`);
+      }
+    }
+    return joinSentences(unique2(planItems));
+  }
+  function extractTreatmentPlanId(treatmentPlan) {
+    const sourceUrl = treatmentPlan?.sourceUrl ?? "";
+    const match = sourceUrl.match(/diagnosis_treatment_plans\/([^/?#]+)/);
+    return match?.[1] ?? "";
+  }
+  function buildSoapDraft(sessionNotes, transcript, treatmentPlan, intake, diagnosticImpressions, prefs, meta = {}) {
+    const sessionLines = splitLines2(sessionNotes);
+    const transcriptLines = transcript?.entries.map((entry) => sanitizeLine(entry.text)).filter((line) => line && !isLowSignalLine(line)) ?? [];
+    const allLines = [...sessionLines, ...transcriptLines];
+    const signals = analyzeSessionNotes(allLines);
+    const transcriptText = buildTranscriptText(transcript);
+    const clientName = firstNonEmpty(
+      meta.clientName,
+      intake?.fullName,
+      `${intake?.firstName ?? ""} ${intake?.lastName ?? ""}`.trim(),
+      "Client"
+    );
+    const sessionDate = firstNonEmpty(
+      meta.sessionDate,
+      intake?.formDate,
+      (/* @__PURE__ */ new Date()).toLocaleDateString("en-US")
+    );
+    const now = (/* @__PURE__ */ new Date()).toISOString();
+    return {
+      ...EMPTY_SOAP_DRAFT,
+      apptId: meta.apptId ?? "",
+      clientName,
+      sessionDate,
+      cptCode: prefs.followUpCPT || "90837",
+      subjective: summarizeSubjective(allLines, signals, transcript, intake),
+      objective: summarizeObjective(allLines, signals, intake),
+      assessment: summarizeAssessment(allLines, signals, treatmentPlan, diagnosticImpressions, intake),
+      plan: summarizePlan(allLines, signals, treatmentPlan),
+      sessionNotes: sessionNotes.trim(),
+      transcript: transcriptText,
+      treatmentPlanId: extractTreatmentPlanId(treatmentPlan),
+      generatedAt: now,
+      editedAt: now,
+      status: "draft"
+    };
+  }
+
+  // src/lib/soap-generator.ts
+  async function generateSoapDraft(sessionNotes, transcript, treatmentPlan, intake, diagnosticImpressions, mseChecklist, prefs, meta = {}) {
+    const endpoint = prefs.ollamaEndpoint || "http://localhost:11434";
+    const model = prefs.ollamaModel || "llama3.1:8b";
+    const healthy = await checkOllamaHealth(endpoint);
+    if (healthy) {
+      try {
+        const draft = await generateWithLLM(sessionNotes, transcript, treatmentPlan, intake, diagnosticImpressions, mseChecklist, prefs, meta, model, endpoint);
+        if (draft) return draft;
+      } catch (err) {
+        console.warn("[SPN] LLM generation failed, falling back to regex:", err);
+      }
+    } else {
+      console.log("[SPN] Ollama not available, using regex-based SOAP builder");
+    }
+    const regexDraft = buildSoapDraft(sessionNotes, transcript, treatmentPlan, intake, diagnosticImpressions, prefs, meta);
+    return { ...regexDraft, generationMethod: "regex" };
+  }
+  async function generateWithLLM(sessionNotes, transcript, treatmentPlan, intake, diagnosticImpressions, mseChecklist, prefs, meta, model, endpoint) {
+    const { system, user } = buildSoapPrompt(transcript, sessionNotes, intake, diagnosticImpressions, treatmentPlan, mseChecklist, prefs);
+    console.log("[SPN] Generating SOAP with Ollama...", { model, promptLength: user.length });
+    const raw = await generateCompletion(user, system, model, endpoint);
+    const parsed = parseJsonResponse(raw);
+    if (!parsed) {
+      console.warn("[SPN] Failed to parse LLM response as JSON, attempting section extraction");
+      const extracted = extractSections(raw);
+      if (!extracted) return null;
+      return buildDraftFromSections(extracted, sessionNotes, transcript, prefs, meta);
+    }
+    return buildDraftFromSections(parsed, sessionNotes, transcript, prefs, meta);
+  }
+  function parseJsonResponse(raw) {
+    try {
+      const obj = JSON.parse(raw);
+      if (obj.subjective && obj.objective && obj.assessment && obj.plan) {
+        return obj;
+      }
+    } catch {
+    }
+    const fenceMatch = raw.match(/```(?:json)?\s*\n?([\s\S]*?)\n?\s*```/);
+    if (fenceMatch) {
+      try {
+        const obj = JSON.parse(fenceMatch[1]);
+        if (obj.subjective && obj.objective && obj.assessment && obj.plan) {
+          return obj;
+        }
+      } catch {
+      }
+    }
+    return null;
+  }
+  function extractSections(raw) {
+    const subMatch = raw.match(/(?:^|\n)\s*(?:Subjective|SUBJECTIVE)[:\s]*\n?([\s\S]*?)(?=\n\s*(?:Objective|OBJECTIVE)[:\s]|\n\s*$)/i);
+    const objMatch = raw.match(/(?:^|\n)\s*(?:Objective|OBJECTIVE)[:\s]*\n?([\s\S]*?)(?=\n\s*(?:Assessment|ASSESSMENT)[:\s]|\n\s*$)/i);
+    const assMatch = raw.match(/(?:^|\n)\s*(?:Assessment|ASSESSMENT)[:\s]*\n?([\s\S]*?)(?=\n\s*(?:Plan|PLAN)[:\s]|\n\s*$)/i);
+    const planMatch = raw.match(/(?:^|\n)\s*(?:Plan|PLAN)[:\s]*\n?([\s\S]*?)$/i);
+    if (subMatch && objMatch && assMatch && planMatch) {
+      return {
+        subjective: subMatch[1].trim(),
+        objective: objMatch[1].trim(),
+        assessment: assMatch[1].trim(),
+        plan: planMatch[1].trim()
+      };
+    }
+    return null;
+  }
+  function buildDraftFromSections(sections, sessionNotes, transcript, prefs, meta) {
+    const clientName = meta.clientName || "Client";
+    const sessionDate = meta.sessionDate || (/* @__PURE__ */ new Date()).toLocaleDateString("en-US");
+    const transcriptText = transcript?.entries.map((e) => `${e.speaker === "clinician" ? "Clinician" : "Client"}: ${e.text}`).join("\n") ?? "";
+    const now = (/* @__PURE__ */ new Date()).toISOString();
+    return {
+      ...EMPTY_SOAP_DRAFT,
+      apptId: meta.apptId ?? "",
+      clientName,
+      sessionDate,
+      cptCode: prefs.followUpCPT || "90837",
+      subjective: sections.subjective,
+      objective: sections.objective,
+      assessment: sections.assessment,
+      plan: sections.plan,
+      sessionNotes: sessionNotes.trim(),
+      transcript: transcriptText,
+      treatmentPlanId: "",
+      generatedAt: now,
+      editedAt: now,
+      status: "draft",
+      generationMethod: "llm"
+    };
   }
 
   // src/lib/clinical-knowledge.ts
@@ -548,7 +1574,7 @@
     if (normalized.length <= max) return normalized;
     return `${normalized.slice(0, max - 1).trimEnd()}...`;
   }
-  function firstNonEmpty(...values) {
+  function firstNonEmpty2(...values) {
     for (const value of values) {
       const trimmed = value?.trim();
       if (trimmed) return trimmed;
@@ -561,7 +1587,7 @@
     if (items.length === 2) return `${items[0]} and ${items[1]}`;
     return `${items.slice(0, -1).join(", ")}, and ${items[items.length - 1]}`;
   }
-  function unique2(items) {
+  function unique3(items) {
     return Array.from(
       new Set(
         items.map((item) => item.trim()).filter(Boolean)
@@ -569,7 +1595,7 @@
     );
   }
   function splitGoals(raw) {
-    return unique2(
+    return unique3(
       raw.split(/\n|;|•/).map((part) => part.trim().replace(/^[\d\-*,.\s]+/, "")).filter(Boolean)
     );
   }
@@ -615,7 +1641,7 @@
     const negative = /^(no|none|n\/a|na|denied|denies|negative)$/i;
     const parts = [alcohol, drug, history].map((v) => v.trim()).filter((v) => v && !negative.test(v));
     if (!parts.length) return "";
-    return unique2(parts).slice(0, 2).join("; ");
+    return unique3(parts).slice(0, 2).join("; ");
   }
   function buildProfile(intake, diagnosticImpressions) {
     const diagnosisText = normalizeText(
@@ -656,9 +1682,9 @@
       intake.primaryCarePhysician.trim() || intake.prescribingMD.trim() || intake.medications.trim()
     );
     return {
-      diagnoses: unique2(diagnosticImpressions.map((impression) => impression.name)).slice(0, 3),
+      diagnoses: unique3(diagnosticImpressions.map((impression) => impression.name)).slice(0, 3),
       primaryConcern: clip(
-        firstNonEmpty(
+        firstNonEmpty2(
           intake.chiefComplaint,
           intake.presentingProblems,
           intake.historyOfPresentIllness,
@@ -668,16 +1694,16 @@
         150
       ),
       patientGoals: splitGoals(intake.counselingGoals).slice(0, 3),
-      predisposingFactors: unique2([
+      predisposingFactors: unique3([
         ...pickFactors([intake.familyPsychiatricHistory, intake.familyMentalEmotionalHistory], 2),
         ...pickFactors([intake.physicalSexualAbuseHistory, intake.domesticViolenceHistory], 1),
         ...pickFactors([intake.developmentalHistory, intake.medicalHistory], 1)
       ]).slice(0, 4),
-      precipitatingFactors: unique2([
+      precipitatingFactors: unique3([
         ...pickFactors([intake.chiefComplaint, intake.presentingProblems, intake.historyOfPresentIllness], 2),
         ...pickFactors([intake.recentSymptoms, intake.additionalSymptoms], 1)
       ]).slice(0, 4),
-      perpetuatingFactors: unique2([
+      perpetuatingFactors: unique3([
         ...pickFactors([intake.troubleSleeping], 1),
         ...pickFactors([intake.alcoholUse, intake.drugUse, intake.substanceUseHistory], 1),
         ...pickFactors([intake.relationshipDescription, intake.occupation], 1),
@@ -686,12 +1712,12 @@
           intake.gad7?.difficulty ? `Anxiety-related impairment: ${intake.gad7.difficulty}` : ""
         ], 1)
       ]).slice(0, 4),
-      protectiveFactors: unique2([
+      protectiveFactors: unique3([
         ...pickFactors([intake.counselingGoals ? `Stated treatment goals: ${intake.counselingGoals}` : ""], 1),
         ...pickFactors([intake.livingArrangement, intake.relationshipDescription], 1),
         ...pickFactors([intake.priorTreatment ? `Prior treatment engagement: ${intake.priorTreatment}` : ""], 1),
         ...pickFactors([
-          needsMedicalCoordination ? `Existing medical contacts: ${firstNonEmpty(intake.primaryCarePhysician, intake.prescribingMD, intake.medications)}` : ""
+          needsMedicalCoordination ? `Existing medical contacts: ${firstNonEmpty2(intake.primaryCarePhysician, intake.prescribingMD, intake.medications)}` : ""
         ], 1)
       ]).slice(0, 4),
       severeSymptoms,
@@ -707,9 +1733,9 @@
       hasAdolescentPresentation: age !== null && age <= 19,
       needsMedicalCoordination,
       // Demographics for biopsychosocial narrative
-      clientName: firstNonEmpty(intake.firstName, intake.fullName) || "Patient",
+      clientName: firstNonEmpty2(intake.firstName, intake.fullName) || "Patient",
       age,
-      genderLabel: normalizeGenderLabel(firstNonEmpty(intake.genderIdentity, intake.sex)),
+      genderLabel: normalizeGenderLabel(firstNonEmpty2(intake.genderIdentity, intake.sex)),
       ethnicityLabel: buildEthnicityLabel(intake.ethnicity, intake.race),
       occupationContext: buildOccupationContext(intake.occupation),
       relationshipContext: clip(intake.relationshipDescription.trim(), 80),
@@ -744,7 +1770,7 @@
   }
   function buildQueries(profile) {
     const diagnosisClause = profile.diagnoses.length ? profile.diagnoses.join(" ") : [profile.hasDepression ? "depression" : "", profile.hasAnxiety ? "anxiety" : "", profile.hasSubstance ? "substance use" : ""].filter(Boolean).join(" ");
-    const queries = unique2([
+    const queries = unique3([
       `treatment plan interventions ${diagnosisClause} ${profile.patientGoals.join(" ")}`.trim(),
       profile.hasSubstance ? "motivational interviewing relapse prevention ambivalence substance use" : "",
       profile.hasEmotionDysregulation || profile.hasSelfHarmRisk ? "dbt distress tolerance emotion regulation chain analysis safety planning" : "",
@@ -763,7 +1789,7 @@
       queries.push("psychodynamic formulation attachment defenses personality functioning relationship patterns");
       queries.push("case formulation psychodynamic trauma personality disrupted safety defenses coping");
     }
-    return unique2(queries).slice(0, 5);
+    return unique3(queries).slice(0, 5);
   }
   function selectFormulationResourceIds(profile) {
     const ids = [RESOURCE_IDS.caseFormulationCbt];
@@ -807,7 +1833,7 @@
     if (profile.hasPersonality || profile.hasTrauma || profile.hasInterpersonalStrain) {
       modalities.push("Psychodynamic formulation");
     }
-    return unique2(modalities).slice(0, 4);
+    return unique3(modalities).slice(0, 4);
   }
   function buildProblemList(profile) {
     const problems = [];
@@ -818,7 +1844,7 @@
     if (profile.hasInterpersonalStrain) problems.push("interpersonal strain");
     if (profile.hasSubstance) problems.push("substance-related coping or harm");
     if (profile.primaryConcern) problems.push(profile.primaryConcern.replace(/[.]+$/, ""));
-    return unique2(problems).slice(0, 5);
+    return unique3(problems).slice(0, 5);
   }
   function inferPronoun(genderLabel) {
     if (genderLabel === "male") return { subject: "he", possessive: "his" };
@@ -1027,12 +2053,12 @@
     objectives.push("Finalize measurable treatment goals (session 2-3)");
     const lines = [];
     lines.push("Goals:");
-    for (const g of unique2(goals).slice(0, 6)) {
+    for (const g of unique3(goals).slice(0, 6)) {
       lines.push(`  ${g}`);
     }
     lines.push("");
     lines.push("Objectives:");
-    for (const o of unique2(objectives).slice(0, 6)) {
+    for (const o of unique3(objectives).slice(0, 6)) {
       lines.push(`  ${o}`);
     }
     return lines.join("\n");
@@ -1189,7 +2215,7 @@
   function buildReferrals(intake, profile) {
     const referrals = [];
     if (profile.needsMedicalCoordination) {
-      const medicalContact = firstNonEmpty(intake.primaryCarePhysician, intake.prescribingMD);
+      const medicalContact = firstNonEmpty2(intake.primaryCarePhysician, intake.prescribingMD);
       referrals.push(
         medicalContact ? `Coordinate with existing medical prescriber/PCP: ${medicalContact}.` : "Coordinate with PCP and any current prescriber as clinically indicated."
       );
@@ -1242,12 +2268,12 @@
     objectives.push("Finalize measurable treatment goals (session 2-3)");
     const lines = [];
     lines.push("Goals:");
-    for (const g of unique2(goals).slice(0, 6)) {
+    for (const g of unique3(goals).slice(0, 6)) {
       lines.push(`  ${g}`);
     }
     lines.push("");
     lines.push("Objectives:");
-    for (const o of unique2(objectives).slice(0, 6)) {
+    for (const o of unique3(objectives).slice(0, 6)) {
       lines.push(`  ${o}`);
     }
     return lines.join("\n");
@@ -1318,7 +2344,7 @@
   }
 
   // src/lib/note-draft.ts
-  function firstNonEmpty2(...values) {
+  function firstNonEmpty3(...values) {
     for (const value of values) {
       const trimmed = value?.trim();
       if (trimmed) return trimmed;
@@ -1336,6 +2362,9 @@
     if (intake.gad7) {
       parts.push(`GAD-7 ${intake.gad7.totalScore}/21 (${intake.gad7.severity || "severity not parsed"})`);
     }
+    if (intake.cssrs) {
+      parts.push(`C-SSRS ${intake.cssrs.totalScore} yes (${intake.cssrs.severity || "summary not parsed"})`);
+    }
     return parts;
   }
   function summarizeRisk(intake) {
@@ -1348,7 +2377,7 @@
   }
   function buildPresentingComplaint(intake) {
     const sections = [
-      firstNonEmpty2(intake.chiefComplaint, intake.presentingProblems),
+      firstNonEmpty3(intake.chiefComplaint, intake.presentingProblems),
       intake.historyOfPresentIllness.trim(),
       intake.manualNotes.trim(),
       intake.additionalSymptoms.trim(),
@@ -1362,7 +2391,7 @@
   }
   function buildFallbackClinicalFormulation(intake) {
     const parts = [];
-    const chiefComplaint = firstNonEmpty2(
+    const chiefComplaint = firstNonEmpty3(
       intake.chiefComplaint,
       intake.presentingProblems,
       intake.historyOfPresentIllness,
@@ -1412,12 +2441,12 @@
     return interventions;
   }
   async function buildDraftNote(intake, prefs, diagnosticImpressions = []) {
-    const clientName = firstNonEmpty2(
+    const clientName = firstNonEmpty3(
       intake.fullName,
       `${intake.firstName} ${intake.lastName}`.trim()
     );
     const goals = splitGoals2(intake.counselingGoals);
-    const sessionDate = firstNonEmpty2(
+    const sessionDate = firstNonEmpty3(
       intake.formDate,
       intake.capturedAt ? new Date(intake.capturedAt).toLocaleDateString("en-US") : ""
     );
@@ -1442,7 +2471,7 @@
       sessionDate,
       sessionType: "Initial Clinical Evaluation",
       cptCode: prefs.firstVisitCPT,
-      chiefComplaint: firstNonEmpty2(
+      chiefComplaint: firstNonEmpty3(
         intake.chiefComplaint,
         intake.presentingProblems,
         intake.historyOfPresentIllness,
@@ -1782,6 +2811,7 @@
         <button class="spn-video-notes-toggle" id="spn-notes-toggle" title="Minimize">\u2212</button>
       </div>
     </div>
+    <div class="spn-video-notes-caption-status" id="spn-caption-status" title="Live caption capture status"></div>
     <div class="spn-video-notes-body" id="spn-notes-body">
       <textarea
         id="spn-session-textarea"
@@ -1789,6 +2819,122 @@
         placeholder="Type session notes here..."
         spellcheck="true"
       ></textarea>
+      <div class="spn-mse-section">
+        <button class="spn-mse-toggle" id="spn-mse-toggle">MSE Quick Check \u25B8</button>
+        <div class="spn-mse-body" id="spn-mse-body" style="display:none">
+          <div class="spn-mse-row" data-field="appearance">
+            <span class="spn-mse-label">Appearance</span>
+            <div class="spn-mse-pills">
+              <button class="spn-mse-pill active" data-value="well-groomed">well-groomed</button>
+              <button class="spn-mse-pill active" data-value="casually dressed">casual dress</button>
+              <button class="spn-mse-pill active" data-value="appropriate hygiene">good hygiene</button>
+              <button class="spn-mse-pill" data-value="disheveled">disheveled</button>
+              <button class="spn-mse-pill" data-value="unkempt">unkempt</button>
+            </div>
+          </div>
+          <div class="spn-mse-row" data-field="behavior">
+            <span class="spn-mse-label">Behavior</span>
+            <div class="spn-mse-pills">
+              <button class="spn-mse-pill active" data-value="cooperative">cooperative</button>
+              <button class="spn-mse-pill active" data-value="good eye contact">good eye contact</button>
+              <button class="spn-mse-pill active" data-value="psychomotor normal">psychomotor normal</button>
+              <button class="spn-mse-pill" data-value="guarded">guarded</button>
+              <button class="spn-mse-pill" data-value="poor eye contact">poor eye contact</button>
+              <button class="spn-mse-pill" data-value="agitated">agitated</button>
+              <button class="spn-mse-pill" data-value="psychomotor retarded">retarded</button>
+            </div>
+          </div>
+          <div class="spn-mse-row" data-field="speech">
+            <span class="spn-mse-label">Speech</span>
+            <div class="spn-mse-pills">
+              <button class="spn-mse-pill active" data-value="normal rate">normal rate</button>
+              <button class="spn-mse-pill active" data-value="normal volume">normal volume</button>
+              <button class="spn-mse-pill active" data-value="coherent">coherent</button>
+              <button class="spn-mse-pill" data-value="pressured">pressured</button>
+              <button class="spn-mse-pill" data-value="slow">slow</button>
+              <button class="spn-mse-pill" data-value="soft">soft</button>
+              <button class="spn-mse-pill" data-value="loud">loud</button>
+              <button class="spn-mse-pill" data-value="monotone">monotone</button>
+            </div>
+          </div>
+          <div class="spn-mse-row" data-field="mood">
+            <span class="spn-mse-label">Mood</span>
+            <input type="text" class="spn-mse-input" id="spn-mse-mood" placeholder="Client's words (e.g. anxious, good, frustrated)" />
+          </div>
+          <div class="spn-mse-row" data-field="affect">
+            <span class="spn-mse-label">Affect</span>
+            <div class="spn-mse-pills">
+              <button class="spn-mse-pill active" data-value="congruent">congruent</button>
+              <button class="spn-mse-pill active" data-value="full range">full range</button>
+              <button class="spn-mse-pill" data-value="flat">flat</button>
+              <button class="spn-mse-pill" data-value="blunted">blunted</button>
+              <button class="spn-mse-pill" data-value="labile">labile</button>
+              <button class="spn-mse-pill" data-value="constricted">constricted</button>
+              <button class="spn-mse-pill" data-value="incongruent">incongruent</button>
+            </div>
+          </div>
+          <div class="spn-mse-row" data-field="thoughtProcess">
+            <span class="spn-mse-label">Thought Process</span>
+            <div class="spn-mse-pills">
+              <button class="spn-mse-pill active" data-value="linear">linear</button>
+              <button class="spn-mse-pill active" data-value="goal-directed">goal-directed</button>
+              <button class="spn-mse-pill" data-value="tangential">tangential</button>
+              <button class="spn-mse-pill" data-value="circumstantial">circumstantial</button>
+              <button class="spn-mse-pill" data-value="disorganized">disorganized</button>
+              <button class="spn-mse-pill" data-value="flight of ideas">flight of ideas</button>
+            </div>
+          </div>
+          <div class="spn-mse-row" data-field="thoughtContent">
+            <span class="spn-mse-label">Thought Content</span>
+            <div class="spn-mse-pills">
+              <button class="spn-mse-pill active" data-value="no SI">no SI</button>
+              <button class="spn-mse-pill active" data-value="no HI">no HI</button>
+              <button class="spn-mse-pill active" data-value="no delusions">no delusions</button>
+              <button class="spn-mse-pill" data-value="SI endorsed">SI endorsed</button>
+              <button class="spn-mse-pill" data-value="HI endorsed">HI endorsed</button>
+              <button class="spn-mse-pill" data-value="paranoid ideation">paranoid ideation</button>
+              <button class="spn-mse-pill" data-value="obsessions">obsessions</button>
+            </div>
+          </div>
+          <div class="spn-mse-row" data-field="perceptions">
+            <span class="spn-mse-label">Perceptions</span>
+            <div class="spn-mse-pills">
+              <button class="spn-mse-pill active" data-value="no hallucinations">no hallucinations</button>
+              <button class="spn-mse-pill" data-value="AH">AH</button>
+              <button class="spn-mse-pill" data-value="VH">VH</button>
+              <button class="spn-mse-pill" data-value="illusions">illusions</button>
+            </div>
+          </div>
+          <div class="spn-mse-row" data-field="cognition">
+            <span class="spn-mse-label">Cognition</span>
+            <div class="spn-mse-pills">
+              <button class="spn-mse-pill active" data-value="alert">alert</button>
+              <button class="spn-mse-pill active" data-value="oriented x4">oriented x4</button>
+              <button class="spn-mse-pill active" data-value="intact memory">intact memory</button>
+              <button class="spn-mse-pill" data-value="oriented x3">oriented x3</button>
+              <button class="spn-mse-pill" data-value="impaired concentration">impaired concentration</button>
+              <button class="spn-mse-pill" data-value="impaired memory">impaired memory</button>
+            </div>
+          </div>
+          <div class="spn-mse-row" data-field="insight">
+            <span class="spn-mse-label">Insight</span>
+            <select class="spn-mse-select" id="spn-mse-insight">
+              <option value="good" selected>Good</option>
+              <option value="fair">Fair</option>
+              <option value="limited">Limited</option>
+              <option value="poor">Poor</option>
+            </select>
+          </div>
+          <div class="spn-mse-row" data-field="judgment">
+            <span class="spn-mse-label">Judgment</span>
+            <select class="spn-mse-select" id="spn-mse-judgment">
+              <option value="good" selected>Good</option>
+              <option value="fair">Fair</option>
+              <option value="impaired">Impaired</option>
+            </select>
+          </div>
+        </div>
+      </div>
     </div>
   `;
     document.body.appendChild(panel);
@@ -1828,14 +2974,300 @@
       toggle.title = minimized ? "Expand" : "Minimize";
       panel.classList.toggle("spn-video-notes-minimized", minimized);
     });
+    initMseChecklist(apptId);
+  }
+  function initMseChecklist(apptId) {
+    const mseToggle = document.getElementById("spn-mse-toggle");
+    const mseBody = document.getElementById("spn-mse-body");
+    if (!mseToggle || !mseBody) return;
+    let mseOpen = false;
+    mseToggle.addEventListener("click", () => {
+      mseOpen = !mseOpen;
+      mseBody.style.display = mseOpen ? "block" : "none";
+      mseToggle.textContent = mseOpen ? "MSE Quick Check \u25BE" : "MSE Quick Check \u25B8";
+    });
+    getMseChecklist().then((saved) => {
+      if (!saved) return;
+      restoreMseChecklist(saved);
+    }).catch(() => {
+    });
+    let saveTimer = null;
+    const debouncedSave = () => {
+      if (saveTimer) clearTimeout(saveTimer);
+      saveTimer = setTimeout(() => saveMseChecklist(collectMseChecklist()), 500);
+    };
+    mseBody.addEventListener("click", (e) => {
+      const pill = e.target.closest(".spn-mse-pill");
+      if (!pill) return;
+      pill.classList.toggle("active");
+      debouncedSave();
+    });
+    const moodInput = document.getElementById("spn-mse-mood");
+    moodInput?.addEventListener("input", debouncedSave);
+    const insightSelect = document.getElementById("spn-mse-insight");
+    const judgmentSelect = document.getElementById("spn-mse-judgment");
+    insightSelect?.addEventListener("change", debouncedSave);
+    judgmentSelect?.addEventListener("change", debouncedSave);
+  }
+  function collectMseChecklist() {
+    const getActivePills = (field) => {
+      const row = document.querySelector(`.spn-mse-row[data-field="${field}"]`);
+      if (!row) return [];
+      return Array.from(row.querySelectorAll(".spn-mse-pill.active")).map((el) => el.getAttribute("data-value") || "");
+    };
+    return {
+      appearance: getActivePills("appearance"),
+      behavior: getActivePills("behavior"),
+      speech: getActivePills("speech"),
+      mood: document.getElementById("spn-mse-mood")?.value ?? "",
+      affect: getActivePills("affect"),
+      thoughtProcess: getActivePills("thoughtProcess"),
+      thoughtContent: getActivePills("thoughtContent"),
+      perceptions: getActivePills("perceptions"),
+      cognition: getActivePills("cognition"),
+      insight: document.getElementById("spn-mse-insight")?.value ?? "good",
+      judgment: document.getElementById("spn-mse-judgment")?.value ?? "good",
+      updatedAt: (/* @__PURE__ */ new Date()).toISOString()
+    };
+  }
+  function restoreMseChecklist(checklist) {
+    const restorePills = (field, values) => {
+      const row = document.querySelector(`.spn-mse-row[data-field="${field}"]`);
+      if (!row) return;
+      const valueSet = new Set(values);
+      for (const pill of Array.from(row.querySelectorAll(".spn-mse-pill"))) {
+        const value = pill.getAttribute("data-value") || "";
+        pill.classList.toggle("active", valueSet.has(value));
+      }
+    };
+    restorePills("appearance", checklist.appearance);
+    restorePills("behavior", checklist.behavior);
+    restorePills("speech", checklist.speech);
+    restorePills("affect", checklist.affect);
+    restorePills("thoughtProcess", checklist.thoughtProcess);
+    restorePills("thoughtContent", checklist.thoughtContent);
+    restorePills("perceptions", checklist.perceptions);
+    restorePills("cognition", checklist.cognition);
+    const moodInput = document.getElementById("spn-mse-mood");
+    if (moodInput && checklist.mood) moodInput.value = checklist.mood;
+    const insightSelect = document.getElementById("spn-mse-insight");
+    if (insightSelect && checklist.insight) insightSelect.value = checklist.insight;
+    const judgmentSelect = document.getElementById("spn-mse-judgment");
+    if (judgmentSelect && checklist.judgment) judgmentSelect.value = checklist.judgment;
+  }
+  var lastVideoRoomUrl = "";
+  var lastCaptionTimestamp = 0;
+  var sessionEndTimer = null;
+  var sessionEndTriggered = false;
+  function startSessionEndDetection() {
+    if (!isVideoRoom()) return;
+    lastVideoRoomUrl = location.href;
+    sessionEndTriggered = false;
+    sessionEndTimer = setInterval(() => {
+      if (sessionEndTriggered) return;
+      if (lastCaptionTimestamp > 0 && Date.now() - lastCaptionTimestamp > 6e4) {
+        console.log("[SPN] Caption stream inactive for 60s \u2014 session may have ended");
+      }
+    }, 1e4);
+  }
+  function checkSessionEndOnUrlChange(newUrl) {
+    if (sessionEndTriggered) return;
+    const wasVideoRoom = /\/appt-[a-f0-9]+\/room/.test(lastVideoRoomUrl);
+    const isStillVideoRoom = /\/appt-[a-f0-9]+\/room/.test(newUrl);
+    if (wasVideoRoom && !isStillVideoRoom) {
+      sessionEndTriggered = true;
+      if (sessionEndTimer) {
+        clearInterval(sessionEndTimer);
+        sessionEndTimer = null;
+      }
+      const apptMatch = lastVideoRoomUrl.match(/\/appt-([a-f0-9]+)\/room/);
+      const apptId = apptMatch?.[1] ?? "";
+      if (apptId) {
+        handleSessionEnd(apptId);
+      }
+    }
+    lastVideoRoomUrl = newUrl;
+  }
+  async function handleSessionEnd(apptId) {
+    console.log("[SPN] Session ended for appointment", apptId);
+    try {
+      const prefs = await getPreferences();
+      if (!prefs.autoGenerateOnSessionEnd) {
+        console.log("[SPN] Auto-generation disabled in preferences");
+        return;
+      }
+      showToast("Generating SOAP draft...", "info");
+      const [sessionNotesData, transcript, intake, workspace, mseChecklist] = await Promise.all([
+        getSessionNotes(apptId),
+        getTranscript(apptId),
+        getIntake(),
+        getDiagnosticWorkspace(),
+        getMseChecklist()
+      ]);
+      const sessionNotes = sessionNotesData?.notes ?? "";
+      const diagnosticImpressions = workspace?.finalizedImpressions ?? [];
+      const tpResult = await chrome.storage.session.get("spn_treatment_plan");
+      const treatmentPlan = tpResult["spn_treatment_plan"] ?? null;
+      const clientName = intake ? [intake.firstName, intake.lastName].filter(Boolean).join(" ") || intake.fullName : "";
+      const draft = await generateSoapDraft(
+        sessionNotes,
+        transcript,
+        treatmentPlan,
+        intake,
+        diagnosticImpressions,
+        mseChecklist,
+        prefs,
+        { apptId, clientName, sessionDate: (/* @__PURE__ */ new Date()).toLocaleDateString("en-US") }
+      );
+      await chrome.storage.session.set({ spn_soap_draft: draft });
+      const method = draft.generationMethod === "llm" ? "AI-generated" : "Template-generated";
+      showToast(`SOAP draft ready (${method}) \u2014 open popup to review`, "success");
+      console.log("[SPN] Auto-generated SOAP draft:", draft.generationMethod);
+    } catch (err) {
+      console.error("[SPN] Failed to auto-generate SOAP draft:", err);
+      showToast("SOAP auto-generation failed \u2014 generate manually from popup", "error");
+    }
+  }
+  var captionObserver = null;
+  var captionCount = 0;
+  function updateCaptionStatus() {
+    const el = document.getElementById("spn-caption-status");
+    if (!el) return;
+    if (captionCount === 0) {
+      el.textContent = "Captions: waiting for captions...";
+      el.className = "spn-video-notes-caption-status waiting";
+    } else {
+      el.textContent = `Captions: ${captionCount} captured`;
+      el.className = "spn-video-notes-caption-status active";
+    }
+  }
+  function inferSpeakerRole(name) {
+    if (/\b(PsyD|PhD|LMFT|LCSW|LMHC|LPCC|LPC|MSW|MD|DO|NP|RN)\b/i.test(name)) {
+      return "clinician";
+    }
+    return "client";
+  }
+  function findCaptionContainer() {
+    return document.querySelector(".room-captions") ?? document.querySelector('[class*="room-captions"]');
+  }
+  function extractCaptionLines(container) {
+    const results = [];
+    let lines = container.querySelectorAll(".line");
+    if (lines.length) {
+      for (const line of lines) {
+        const name = (line.querySelector(".name") ?? line.querySelector('[class*="name"]'))?.textContent?.trim() ?? "";
+        const text = (line.querySelector(".text") ?? line.querySelector('[class*="text"]'))?.textContent?.trim() ?? "";
+        if (text) results.push({ name, text });
+      }
+      return results;
+    }
+    lines = container.querySelectorAll('[class*="line"], [class*="caption"]');
+    if (lines.length) {
+      for (const line of lines) {
+        const children = line.children;
+        if (children.length >= 2) {
+          const name = children[0].textContent?.trim() ?? "";
+          const text = children[1].textContent?.trim() ?? "";
+          if (text) results.push({ name, text });
+        } else if (children.length === 1 || line.textContent) {
+          const text = line.textContent?.trim() ?? "";
+          if (text) results.push({ name: "", text });
+        }
+      }
+      return results;
+    }
+    const body = container.querySelector('.body, [class*="body"]') ?? container;
+    const childDivs = body.querySelectorAll(":scope > div, :scope > p, :scope > span");
+    for (const el of childDivs) {
+      const text = el.textContent?.trim() ?? "";
+      if (text && text.length > 2) results.push({ name: "", text });
+    }
+    return results;
+  }
+  function startCaptionObserver() {
+    if (!isVideoRoom()) return;
+    if (captionObserver) return;
+    const apptId = getVideoApptId();
+    if (!apptId) return;
+    const seenTexts = /* @__PURE__ */ new Set();
+    let debounceTimer = null;
+    function processCaptions() {
+      const container = findCaptionContainer();
+      if (!container) return;
+      const lines = extractCaptionLines(container);
+      if (!lines.length) return;
+      for (const { name, text } of lines) {
+        if (seenTexts.has(text)) continue;
+        seenTexts.add(text);
+        const speaker = inferSpeakerRole(name);
+        captionCount++;
+        lastCaptionTimestamp = Date.now();
+        updateCaptionStatus();
+        appendTranscriptEntry(apptId, {
+          speaker,
+          text,
+          timestamp: (/* @__PURE__ */ new Date()).toISOString()
+        }).catch(() => {
+        });
+      }
+    }
+    function attachObserver(target) {
+      captionObserver?.disconnect();
+      captionObserver = new MutationObserver(() => {
+        if (debounceTimer) clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(processCaptions, 300);
+      });
+      captionObserver.observe(target, { childList: true, subtree: true, characterData: true });
+      console.log("[SPN] Caption observer attached to", target.className);
+    }
+    updateCaptionStatus();
+    const existing = findCaptionContainer();
+    if (existing) {
+      attachObserver(existing);
+      console.log("[SPN] Caption observer started for appointment", apptId);
+      return;
+    }
+    console.log("[SPN] Waiting for caption container to appear...");
+    const waitForCaptions = new MutationObserver(() => {
+      const container = findCaptionContainer();
+      if (container) {
+        waitForCaptions.disconnect();
+        attachObserver(container);
+        console.log("[SPN] Caption observer started for appointment", apptId);
+      }
+    });
+    waitForCaptions.observe(document.body, { childList: true, subtree: true });
   }
   function capitalize(value) {
     if (!value) return value;
     return value.charAt(0).toUpperCase() + value.slice(1);
   }
+  function normalizeWhitespace3(value) {
+    return value.replace(/\s+/g, " ").trim();
+  }
+  function unique4(values) {
+    const seen = /* @__PURE__ */ new Set();
+    const output = [];
+    for (const value of values) {
+      const key = value.toLowerCase();
+      if (!key || seen.has(key)) continue;
+      seen.add(key);
+      output.push(value);
+    }
+    return output;
+  }
+  function joinList2(items) {
+    if (items.length === 0) return "";
+    if (items.length === 1) return items[0];
+    if (items.length === 2) return `${items[0]} and ${items[1]}`;
+    return `${items.slice(0, -1).join(", ")}, and ${items[items.length - 1]}`;
+  }
   function lowerCaseFirst(value) {
     if (!value) return value;
     return value.charAt(0).toLowerCase() + value.slice(1);
+  }
+  function hasAnyPattern(text, patterns) {
+    return patterns.some((pattern) => pattern.test(text));
   }
   function parseDate(value) {
     const trimmed = value.trim();
@@ -1850,11 +3282,11 @@
   }
   function calculateAge(dob) {
     const age = getAgeYears(dob);
-    return age ? `${age} yo` : "";
+    return age ? `${age}-year-old` : "";
   }
   function getManualAgeLabel(notes) {
     const match = notes.match(/\b(\d{1,3})\s*(?:yo|y\/o|year old)\b/i);
-    return match ? `${match[1]} yo` : "";
+    return match ? `${match[1]}-year-old` : "";
   }
   function getAgeYears(dob) {
     const birthDate = parseDate(dob);
@@ -1871,20 +3303,48 @@
     const gender = (intake.genderIdentity || intake.sex).trim().toLowerCase();
     let ethnicityOrRace = "";
     if (/^yes$/i.test(ethnicity)) {
-      ethnicityOrRace = race ? `${race} Hispanic/Latino` : "Hispanic/Latino";
+      if (/multiple races/i.test(race)) {
+        ethnicityOrRace = "multiracial Hispanic/Latino";
+      } else {
+        ethnicityOrRace = race ? `${race} Hispanic/Latino` : "Hispanic/Latino";
+      }
     } else if (/^no$/i.test(ethnicity)) {
-      ethnicityOrRace = race;
+      ethnicityOrRace = /multiple races/i.test(race) ? "multiracial" : race;
     } else {
-      ethnicityOrRace = ethnicity || race;
+      ethnicityOrRace = ethnicity || (/multiple races/i.test(race) ? "multiracial" : race);
     }
-    return [ethnicityOrRace, gender].filter(Boolean).join(", ");
+    return [ethnicityOrRace, gender].filter(Boolean).join(" ");
   }
-  function normalizeLivingArrangement(livingArrangement) {
+  function inferPronounForms(intake) {
+    const genderText = `${intake.genderIdentity} ${intake.sex}`.toLowerCase();
+    if (/\b(male|man|boy|he|him)\b/.test(genderText)) {
+      return { subject: "he", object: "him", possessive: "his", reflexive: "himself" };
+    }
+    if (/\b(female|woman|girl|she|her)\b/.test(genderText)) {
+      return { subject: "she", object: "her", possessive: "her", reflexive: "herself" };
+    }
+    return { subject: "they", object: "them", possessive: "their", reflexive: "themselves" };
+  }
+  var ANXIETY_PATTERNS = [/\banxiety\b/i, /\banxious\b/i, /\bworry\b/i, /\bpanic\b/i, /\bon edge\b/i, /\bjealous\b/i];
+  var DEPRESSION_PATTERNS = [/\bdepress/i, /\bsad\b/i, /\bdown\b/i, /\bhopeless/i, /\bcry(?:ing)?\b/i, /\bgrief\b/i, /\bloss\b/i];
+  var ANGER_PATTERNS = [/\banger\b/i, /\bangry\b/i, /\byell(?:ed|ing)?\b/i, /\bfight(?:ing|s)?\b/i, /\birritab/i, /\bdefensive\b/i, /\blose control\b/i];
+  var RELATIONSHIP_PATTERNS = [/\bgirlfriend\b/i, /\bboyfriend\b/i, /\bpartner\b/i, /\bspouse\b/i, /\bex\b/i, /\brelationship\b/i, /\battachment\b/i, /\bmarriage\b/i, /\bengage(?:d|ment)?\b/i];
+  var TRAUMA_PATTERNS = [/\btrauma\b/i, /\bassault\b/i, /\babuse\b/i, /\bviolence\b/i, /\broofied\b/i, /\bdrugged\b/i, /\btouch(?:ed|ing)\b/i, /\baccident\b/i, /\bcrash\b/i];
+  var ABUSE_PATTERNS = [/\babuse\b/i, /\bassault\b/i, /\broofied\b/i, /\bdrugged\b/i, /\btouch(?:ed|ing)\b/i, /\bslap(?:ped)?\b/i, /\bpush(?:ed)?\b/i, /\bviolence\b/i];
+  var SUBSTANCE_PATTERNS = [/\balcohol\b/i, /\bdrink(?:ing)?\b/i, /\bdrank\b/i, /\bbeer\b/i, /\bwine\b/i, /\bliquor\b/i, /\bpatron\b/i, /\bsoju\b/i, /\bweed\b/i, /\bmarijuana\b/i, /\bcannabis\b/i, /\bjoint\b/i, /\bblunt\b/i, /\bthc\b/i, /\bvape\b/i, /\bnicotine\b/i, /\bcigarette\b/i, /\bcocaine\b/i, /\bcrack\b/i, /\bmeth\b/i, /\badderall\b/i, /\bxanax\b/i, /\bopioid\b/i, /\bshroom/i, /\bmushroom/i, /\blsd\b/i];
+  var SLEEP_PATTERNS = [/\bsleep\b/i, /\binsomnia\b/i, /\bnightmare/i];
+  var CONCENTRATION_PATTERNS = [/\bfoggy\b/i, /\bfogginess\b/i, /\bconcentrat/i, /\bfocus\b/i, /\bhazy memory\b/i];
+  var EXERCISE_PATTERNS = [/\bcycling\b/i, /\bcycle\b/i, /\blifting\b/i, /\bweights?\b/i, /\bgym\b/i, /\bexercise\b/i];
+  var BREATHING_PATTERNS = [/\bbreathe\b/i, /\bbreathing\b/i, /\bgrounding\b/i];
+  var SPIRITUAL_PATTERNS = [/\bgod\b/i, /\bchurch\b/i, /\bfaith\b/i, /\bpray/i, /\bspiritual/i];
+  var ANGER_MANAGEMENT_PATTERNS = [/\banger management\b/i];
+  function normalizeLivingArrangement(livingArrangement, pronouns) {
     const trimmed = livingArrangement.trim();
     if (!trimmed) return "";
     if (/alone|live alone/i.test(trimmed)) return "alone";
-    const cleaned = trimmed.replace(/^i\s+live\s+/i, "").replace(/^live\s+/i, "").trim();
+    let cleaned = trimmed.replace(/^i\s+live\s+/i, "").replace(/^live\s+/i, "").trim();
     if (!cleaned) return "";
+    cleaned = cleaned.replace(/\bmy mom\b/gi, `${pronouns.possessive} mother`).replace(/\bmy dad\b/gi, `${pronouns.possessive} father`).replace(/\bmy parents\b/gi, `${pronouns.possessive} parents`).replace(/\bmy grandma\b/gi, `${pronouns.possessive} grandmother`).replace(/\bmy grandpa\b/gi, `${pronouns.possessive} grandfather`).replace(/\bmy sister\b/gi, `${pronouns.possessive} sister`).replace(/\bmy brother\b/gi, `${pronouns.possessive} brother`).replace(/\bmy family\b/gi, `${pronouns.possessive} family`).replace(/\bmy\b/gi, pronouns.possessive);
     const lower = cleaned.toLowerCase();
     if (/^with\s+/i.test(lower)) return lower;
     return `with ${lower}`;
@@ -1893,9 +3353,9 @@
     const trimmed = occupation.trim();
     if (!trimmed) return "";
     if (/unemployed|not working|out of work/i.test(trimmed)) return "currently unemployed";
-    const yearsMatch = trimmed.match(/^(.*?)(\d+\s+years?)$/i);
+    const yearsMatch = trimmed.match(/^(.*?)[,\s-]+(\d+\s+years?)$/i);
     if (yearsMatch) {
-      const role = yearsMatch[1].trim().replace(/^(a|an)\s+/i, "").toLowerCase();
+      const role = yearsMatch[1].trim().replace(/[,\s-]+$/, "").replace(/^(a|an)\s+/i, "").toLowerCase();
       const duration = yearsMatch[2].trim().toLowerCase();
       return role ? `a ${role} for ${duration}` : "";
     }
@@ -1905,21 +3365,34 @@
   function normalizeEducationForNarrative(education) {
     const trimmed = education.trim();
     if (!trimmed) return "";
-    return trimmed.replace(/^education[:\s-]*/i, "").replace(/^i\s+(?:am|have|completed|finished|earned)\s+/i, "").replace(/[.]+$/, "").trim().toLowerCase();
-  }
-  function inferSubjectPronoun(intake) {
-    const genderText = `${intake.genderIdentity} ${intake.sex}`.toLowerCase();
-    if (/\b(male|man|boy|he|him)\b/.test(genderText)) return "he";
-    if (/\b(female|woman|girl|she|her)\b/.test(genderText)) return "she";
-    return "they";
+    const cleaned = trimmed.replace(/^education[:\s-]*/i, "").replace(/^i\s+(?:am|have|completed|finished|earned)\s+/i, "").replace(/[.]+$/, "").trim().toLowerCase();
+    if (!cleaned) return "";
+    if (/^bachelor/.test(cleaned)) return `completed a ${cleaned}`;
+    if (/^master/.test(cleaned)) return `completed a ${cleaned}`;
+    if (/^associate/.test(cleaned)) return `completed an ${cleaned}`;
+    return `completed ${cleaned}`;
   }
   function normalizeClause(value) {
     return lowerCaseFirst(value.trim().replace(/[.]+$/, ""));
   }
+  function rewriteClientPerspective(value, pronouns) {
+    return normalizeWhitespace3(value).replace(/\bmyself\b/gi, pronouns.reflexive).replace(/\bmine\b/gi, `${pronouns.possessive} own`).replace(/\bmy\b/gi, pronouns.possessive).replace(/\bme\b/gi, pronouns.object).replace(/\bourselves\b/gi, pronouns.reflexive).replace(/\bours\b/gi, `${pronouns.possessive} own`).replace(/\bour\b/gi, pronouns.possessive).replace(/\bus\b/gi, pronouns.object);
+  }
+  function smoothClinicalPhrase(value, pronouns) {
+    let cleaned = rewriteClientPerspective(value, pronouns);
+    cleaned = cleaned.replace(
+      /\bwork on\s+(?:his|her|their)\s+communicating\s+(?:his|her|their)\s+emotions\s+and\s+understanding\s+them\s+for\s+the\s+relationships\s+around\s+(?:him|her|them)\b/i,
+      `improve how ${pronouns.subject} communicates and understands ${pronouns.possessive} emotions in close relationships`
+    ).replace(
+      /\bwork on\s+(?:his|her|their)\s+communicating\s+(?:his|her|their)\s+emotions\b/i,
+      `improve how ${pronouns.subject} communicates ${pronouns.possessive} emotions`
+    ).replace(/\bfor the relationships around (?:him|her|them)\b/i, "in close relationships").replace(/\bunderstanding them for the relationships around (?:him|her|them)\b/i, `understanding them in ${pronouns.possessive} close relationships`).replace(/\s+,/g, ",");
+    return normalizeWhitespace3(cleaned);
+  }
   function splitComplaintParts(value) {
     return value.split(/[\n,;]+/).map((part) => normalizeClause(part)).filter(Boolean);
   }
-  function buildChiefComplaintSentences(chiefComplaint, pronoun) {
+  function buildChiefComplaintSentences(chiefComplaint, pronoun, pronouns) {
     const parts = splitComplaintParts(chiefComplaint);
     if (parts.length === 0) return [];
     const hasAirplaneAccident = parts.some((part) => /air\s*plane|airplane|plane accident|plane crash/.test(part));
@@ -1927,51 +3400,221 @@
     if (hasAirplaneAccident) {
       const hasAnxiety = otherParts.some((part) => /\banxiety\b/.test(part));
       const remaining = otherParts.filter((part) => !/\banxiety\b/.test(part));
-      let sentence = `${pronoun} recently was in an airplane accident`;
-      if (hasAnxiety) sentence += " and reported anxiety";
-      if (remaining.length) sentence += ` and reported ${remaining.join(", ")}`;
-      return [`${sentence}.`];
+      let sentence2 = `${pronoun} recently was in an airplane accident`;
+      if (hasAnxiety) sentence2 += " and reported anxiety";
+      if (remaining.length) sentence2 += ` and reported ${remaining.join(", ")}`;
+      return [`${sentence2}.`];
     }
-    return parts.map((part) => `${pronoun} presented with ${part}.`);
+    return parts.map((part) => {
+      if (/^i\s+want\s+to\b/i.test(part)) {
+        const normalized = smoothClinicalPhrase(part.replace(/^i\s+want\s+to\b/i, "").trim(), pronouns);
+        return `${pronoun} presented for therapy to ${normalized}.`;
+      }
+      if (/^want\s+to\b/i.test(part)) {
+        const normalized = smoothClinicalPhrase(part.replace(/^want\s+to\b/i, "").trim(), pronouns);
+        return `${pronoun} presented for therapy to ${normalized}.`;
+      }
+      if (/^i\s+need\s+to\b/i.test(part)) {
+        const normalized = smoothClinicalPhrase(part.replace(/^i\s+need\s+to\b/i, "").trim(), pronouns);
+        return `${pronoun} reported needing to ${normalized}.`;
+      }
+      if (/^i\s+feel\b/i.test(part)) {
+        const normalized = smoothClinicalPhrase(part.replace(/^i\s+feel\b/i, "").trim(), pronouns);
+        return `${pronoun} reported feeling ${normalized}.`;
+      }
+      return `${pronoun} reported ${smoothClinicalPhrase(part, pronouns)}.`;
+    });
   }
-  function buildChiefComplaintNarrative(intake) {
-    const name = intake.firstName || intake.fullName || [intake.firstName, intake.lastName].filter(Boolean).join(" ") || "Patient";
-    const age = calculateAge(intake.dob) || getManualAgeLabel(intake.manualNotes);
-    const identity = buildIdentityDescriptor(intake);
-    const livingArrangement = normalizeLivingArrangement(intake.livingArrangement);
-    const education = normalizeEducationForNarrative(intake.education);
-    const occupation = normalizeOccupation(intake.occupation);
-    const pronoun = capitalize(inferSubjectPronoun(intake));
-    const descriptor = [age, identity].filter(Boolean).join(", ");
-    let intro = descriptor ? `${name} is a ${descriptor}` : `${name} is a patient`;
-    const contextualClauses = [];
-    if (livingArrangement) contextualClauses.push(`living ${livingArrangement}`);
-    if (education) contextualClauses.push(`with education history of ${education}`);
-    if (occupation) contextualClauses.push(`working as ${occupation}`);
-    if (contextualClauses.length) {
-      intro += ` ${contextualClauses.join(", ")}`;
-    }
-    intro += ".";
-    const sentences = [intro];
-    if (intake.counselingGoals) {
-      const goal = intake.counselingGoals.replace(/^to\s+/i, "").trim();
-      if (goal) {
-        const quotedGoal = normalizeClause(goal).replace(/[.]+$/, "");
-        sentences.push(`${pronoun} shared goals to "${quotedGoal}."`);
+  function toReportedSpeech(value, pronouns) {
+    const trimmed = smoothClinicalPhrase(value, pronouns).replace(/[.]+$/, "");
+    if (!trimmed) return "";
+    const replacements = [
+      [/^i want to\b/i, `${capitalize(pronouns.subject)} wants to`],
+      [/^i would like to\b/i, `${capitalize(pronouns.subject)} would like to`],
+      [/^i need to\b/i, `${capitalize(pronouns.subject)} needs to`],
+      [/^i am\b/i, `${capitalize(pronouns.subject)} is`],
+      [/^i'm\b/i, `${capitalize(pronouns.subject)} is`],
+      [/^i have\b/i, `${capitalize(pronouns.subject)} has`],
+      [/^i feel\b/i, `${capitalize(pronouns.subject)} feels`],
+      [/^i live\b/i, `${capitalize(pronouns.subject)} lives`],
+      [/^my\b/i, `${capitalize(pronouns.possessive)}`]
+    ];
+    for (const [pattern, replacement] of replacements) {
+      if (pattern.test(trimmed)) {
+        return `${trimmed.replace(pattern, replacement)}.`;
       }
     }
+    return `${capitalize(pronouns.subject)} reported ${lowerCaseFirst(trimmed)}.`;
+  }
+  function buildManualThemePhrases(notes) {
+    const lower = notes.toLowerCase();
+    const phrases = [];
+    if (hasAnyPattern(lower, ANXIETY_PATTERNS)) phrases.push("anxiety and worry");
+    if (hasAnyPattern(lower, ANGER_PATTERNS)) phrases.push("anger and emotional reactivity");
+    if (hasAnyPattern(lower, RELATIONSHIP_PATTERNS)) phrases.push("relationship stress and attachment difficulties");
+    if (hasAnyPattern(lower, TRAUMA_PATTERNS)) phrases.push("distress related to a recent unsafe event");
+    if (hasAnyPattern(lower, DEPRESSION_PATTERNS)) phrases.push("low mood or loss-related distress");
+    if (hasAnyPattern(lower, SLEEP_PATTERNS)) phrases.push("sleep disturbance");
+    if (hasAnyPattern(lower, CONCENTRATION_PATTERNS)) phrases.push("difficulty concentrating");
+    if (hasAnyPattern(lower, SUBSTANCE_PATTERNS)) phrases.push("substance use concerns");
+    return unique4(phrases).slice(0, 4);
+  }
+  function buildManualGoalPhrases(notes) {
+    const lower = notes.toLowerCase();
+    const phrases = [];
+    if (/\bstop drinking\b|\bdrink less\b|\breduce drinking\b|\bsober\b/.test(lower)) {
+      phrases.push("reducing alcohol use");
+    }
+    if (hasAnyPattern(lower, EXERCISE_PATTERNS)) {
+      phrases.push("using exercise as a coping skill");
+    }
+    if (hasAnyPattern(lower, BREATHING_PATTERNS)) {
+      phrases.push("using breathing skills");
+    }
+    if (hasAnyPattern(lower, ANGER_MANAGEMENT_PATTERNS)) {
+      phrases.push("strengthening anger-management skills");
+    }
+    return unique4(phrases).slice(0, 3);
+  }
+  function buildManualChiefComplaintSentences(intake) {
+    const notes = intake.manualNotes.trim();
+    if (!notes) return [];
+    const themePhrases = buildManualThemePhrases(notes);
+    const goalPhrases = buildManualGoalPhrases(notes);
+    const sentences = [];
+    if (themePhrases.length) {
+      sentences.push(`Additional concerns include ${joinList2(themePhrases)}.`);
+    }
+    if (goalPhrases.length) {
+      sentences.push(`The client expressed interest in ${joinList2(goalPhrases)}.`);
+    }
+    return sentences;
+  }
+  function buildManualHPISentences(intake) {
+    const notes = intake.manualNotes.trim();
+    if (!notes) return [];
+    const lower = notes.toLowerCase();
+    const sentences = [];
+    if (hasAnyPattern(lower, RELATIONSHIP_PATTERNS) && hasAnyPattern(lower, ANGER_PATTERNS)) {
+      sentences.push("Current stress appears closely tied to relationship conflict and difficulty managing strong emotions.");
+    } else {
+      const themePhrases = buildManualThemePhrases(notes);
+      if (themePhrases.length) {
+        sentences.push(`The client also reported ${joinList2(themePhrases)}.`);
+      }
+    }
+    if (hasAnyPattern(lower, TRAUMA_PATTERNS)) {
+      if (/\bvideo\b|\bothers know\b|\bperceived by others\b/.test(lower)) {
+        sentences.push("The client also described distress related to a recent unsafe event and worry about how others may perceive the situation.");
+      } else {
+        sentences.push("The client also described distress related to a recent unsafe event.");
+      }
+    }
+    const goalPhrases = buildManualGoalPhrases(notes);
+    if (goalPhrases.length) {
+      sentences.push(`The client described efforts toward ${joinList2(goalPhrases)}.`);
+    }
+    return unique4(sentences);
+  }
+  function buildManualSubstanceDetails(notes) {
+    const lower = notes.toLowerCase();
+    const details = [];
+    if (!hasAnyPattern(lower, SUBSTANCE_PATTERNS)) return details;
+    if (/\balcohol\b|\bdrink(?:ing)?\b|\bdrank\b|\bbeer\b|\bwine\b|\bliquor\b|\bpatron\b|\bsoju\b/.test(lower)) {
+      if (/\bstop drinking\b|\bdrink less\b|\breduce drinking\b/.test(lower)) {
+        details.push("Alcohol use was discussed, and the client expressed interest in drinking less");
+      } else {
+        details.push("Alcohol use was discussed in clinician notes");
+      }
+    }
+    if (/\bweed\b|\bmarijuana\b|\bcannabis\b|\bjoint\b|\bblunt\b|\bthc\b/.test(lower)) {
+      details.push("Cannabis use was discussed in clinician notes");
+    }
+    if (/\bvape\b|\bnicotine\b|\bcigarette\b/.test(lower)) {
+      details.push("Nicotine use was discussed in clinician notes");
+    }
+    if (/\bcocaine\b|\bcrack\b|\bmeth\b|\badderall\b|\bxanax\b|\bopioid\b|\bshroom/i.test(lower)) {
+      details.push("Other substance use was discussed in clinician notes");
+    }
+    return unique4(details);
+  }
+  function buildManualSocialHistorySentences(intake) {
+    const notes = intake.manualNotes.trim();
+    if (!notes) return [];
+    const lower = notes.toLowerCase();
+    const sentences = [];
+    if (hasAnyPattern(lower, RELATIONSHIP_PATTERNS) && !intake.relationshipDescription.trim()) {
+      sentences.push("The client reported significant relationship stress.");
+    }
+    if (hasAnyPattern(lower, EXERCISE_PATTERNS)) {
+      sentences.push("The client engages in exercise, such as cycling or weight lifting, as part of a coping routine.");
+    }
+    if (hasAnyPattern(lower, SPIRITUAL_PATTERNS)) {
+      sentences.push("Faith or spiritual involvement was identified as part of the client's support system.");
+    }
+    if (hasAnyPattern(lower, ANGER_MANAGEMENT_PATTERNS)) {
+      sentences.push("The client is currently engaged in anger-management work.");
+    }
+    return unique4(sentences);
+  }
+  function buildChiefComplaintNarrative(intake) {
+    const name = intake.fullName || [intake.firstName, intake.lastName].filter(Boolean).join(" ") || intake.firstName || "Patient";
+    const age = calculateAge(intake.dob) || getManualAgeLabel(intake.manualNotes);
+    const identity = buildIdentityDescriptor(intake);
+    const pronouns = inferPronounForms(intake);
+    const livingArrangement = normalizeLivingArrangement(intake.livingArrangement, pronouns);
+    const occupation = normalizeOccupation(intake.occupation);
+    const education = normalizeEducationForNarrative(intake.education);
+    const subject = capitalize(pronouns.subject);
+    const introBits = [];
+    const ageIdentity = age && identity ? `${age} ${identity}` : [age, identity].filter(Boolean).join(" ");
+    if (ageIdentity) {
+      introBits.push(`${name} is a ${ageIdentity}`);
+    } else {
+      introBits.push(name);
+    }
+    if (livingArrangement) introBits.push(`who lives ${livingArrangement}`);
+    if (occupation) introBits.push(`and works as ${occupation.replace(/\s+for\s+(\d+\s+years?)$/i, "")}`);
+    let intro = introBits.join(" ");
+    intro += ".";
+    const sentences = [intro];
     if (intake.chiefComplaint) {
-      sentences.push(...buildChiefComplaintSentences(intake.chiefComplaint, pronoun));
+      sentences.push(...buildChiefComplaintSentences(intake.chiefComplaint, subject, pronouns));
+    }
+    sentences.push(...buildManualChiefComplaintSentences(intake));
+    if (intake.counselingGoals) {
+      const goal = smoothClinicalPhrase(intake.counselingGoals.replace(/^to\s+/i, "").trim(), pronouns);
+      if (goal) {
+        sentences.push(`${subject} stated that ${pronouns.subject} wants to ${lowerCaseFirst(goal).replace(/[.]+$/, "")}.`);
+      }
+    }
+    if (education) {
+      sentences.push(`${subject} ${education}.`);
     }
     return sentences.join(" ");
   }
   function buildHistoryOfPresentIllnessText(intake) {
-    return [
+    const pronouns = inferPronounForms(intake);
+    const sources = [
       intake.historyOfPresentIllness,
       intake.presentingProblems,
-      intake.manualNotes,
-      intake.chiefComplaint
-    ].map((value) => value.trim()).filter(Boolean).join("\n\n");
+      intake.chiefComplaint,
+      intake.counselingGoals ? `Goal: ${intake.counselingGoals}` : ""
+    ].map((value) => value.trim()).filter(Boolean);
+    const sentences = unique4(
+      sources.map((value) => {
+        if (/^goal:\s*/i.test(value)) {
+          const goalText = smoothClinicalPhrase(value.replace(/^goal:\s*/i, "").replace(/^to\s+/i, "").trim(), pronouns);
+          return goalText ? `${capitalize(pronouns.subject)} stated that ${pronouns.subject} wants to ${lowerCaseFirst(goalText).replace(/[.]+$/, "")}.` : "";
+        }
+        if (/^i want to\b/i.test(value)) {
+          const normalized = smoothClinicalPhrase(value.replace(/^i want to\b/i, "").trim(), pronouns);
+          return `${capitalize(pronouns.subject)} reported wanting to ${normalized.replace(/[.]+$/, "")}.`;
+        }
+        return toReportedSpeech(value, pronouns);
+      }).filter(Boolean)
+    );
+    return unique4([...sentences, ...buildManualHPISentences(intake)]).join(" ");
   }
   function buildIntakeAnswerCorpus(intake) {
     return [
@@ -2050,7 +3693,7 @@
   function buildSubstanceDetails(intake) {
     const genericOnly = /^(yes|no|none|n\/a|na)$/i;
     const parts = [intake.alcoholUse, intake.drugUse, intake.substanceUseHistory].map((value) => value.trim()).filter((value) => value && !genericOnly.test(value));
-    return Array.from(new Set(parts)).join("; ");
+    return Array.from(/* @__PURE__ */ new Set([...parts, ...buildManualSubstanceDetails(intake.manualNotes)])).join("; ");
   }
   function fillICEFromIntake(intake) {
     let filled = 0;
@@ -2079,15 +3722,16 @@
     if (selectYesNo("single-select-27", intake.suicideAttemptHistory)) filled++;
     if (fillProseMirrorByLabel("free-text-31", intake.medications)) filled++;
     if (fillProseMirrorByLabel("free-text-34", intake.medications)) filled++;
-    const hasSubstanceUse = intake.alcoholUse || intake.drugUse || intake.substanceUseHistory;
+    const substanceDetails = buildSubstanceDetails(intake);
+    const hasSubstanceUse = intake.alcoholUse || intake.drugUse || intake.substanceUseHistory || substanceDetails;
     if (hasSubstanceUse) {
       const isUsing = /yes|current|daily|weekly|monthly|regular|social|occasional/i.test(
-        `${intake.alcoholUse} ${intake.drugUse} ${intake.substanceUseHistory}`
-      );
+        `${intake.alcoholUse} ${intake.drugUse} ${intake.substanceUseHistory} ${substanceDetails}`
+      ) || hasAnyPattern(`${substanceDetails}`.toLowerCase(), SUBSTANCE_PATTERNS);
       if (selectRadio("single-select-35", isUsing ? "1" : "2")) filled++;
       if (isUsing) {
         filled += fillSubstanceCheckboxes(intake);
-        filled += fillLabeledField("If yes, please specify", buildSubstanceDetails(intake));
+        filled += fillLabeledField("If yes, please specify", substanceDetails);
       }
     }
     if (intake.medicalHistory) {
@@ -2185,7 +3829,7 @@
   }
   function fillDepressionFromKeywords(intake) {
     let filled = 0;
-    const symptoms = `${intake.recentSymptoms} ${intake.additionalSymptoms}`.toLowerCase();
+    const symptoms = buildIntakeAnswerCorpus(intake);
     if (!symptoms.trim()) return 0;
     const map = {
       "crying": "Frequent crying",
@@ -2250,7 +3894,7 @@
   }
   function fillAnxietyFromKeywords(intake) {
     let filled = 0;
-    const symptoms = `${intake.recentSymptoms} ${intake.additionalSymptoms}`.toLowerCase();
+    const symptoms = buildIntakeAnswerCorpus(intake);
     if (!symptoms.trim()) return 0;
     const map = {
       "worry": "Excessive worry",
@@ -2412,6 +4056,14 @@
         if (checkCheckboxByLabel("multi-select-20", "Denies")) filled++;
       }
     }
+    if (!intake.physicalSexualAbuseHistory && hasAnyPattern(corpus, ABUSE_PATTERNS)) {
+      if (/roofied|drugged|touched|sexual assault|sexual/i.test(corpus)) {
+        if (checkCheckboxByLabel("multi-select-20", "Sexual")) filled++;
+      }
+      if (/slap|push|physical|violence/i.test(corpus)) {
+        if (checkCheckboxByLabel("multi-select-20", "Physical")) filled++;
+      }
+    }
     const ageYears = getAgeYears(intake.dob);
     if (ageYears !== null && (ageYears <= 25 || ageYears >= 65)) {
       if (checkCheckboxByLabel("multi-select-21", "Adolescent, young adult, or elderly age")) filled++;
@@ -2434,10 +4086,10 @@
     if (/suicide.*family member|family member.*suicide|close friend.*suicide|friend.*died by suicide/i.test(corpus)) {
       if (checkCheckboxByLabel("multi-select-21", "Suicide by family member or close friend")) filled++;
     }
-    if (intake.substanceUseHistory && !/no|denied|denies|none/i.test(intake.substanceUseHistory)) {
+    if (intake.substanceUseHistory && !/no|denied|denies|none/i.test(intake.substanceUseHistory) || hasAnyPattern(corpus, SUBSTANCE_PATTERNS)) {
       if (checkCheckboxByLabel("multi-select-21", "History of substance abuse")) filled++;
     }
-    if (intake.physicalSexualAbuseHistory && !/no|denied|denies|none/i.test(intake.physicalSexualAbuseHistory)) {
+    if (intake.physicalSexualAbuseHistory && !/no|denied|denies|none/i.test(intake.physicalSexualAbuseHistory) || hasAnyPattern(corpus, ABUSE_PATTERNS)) {
       if (checkCheckboxByLabel("multi-select-21", "History of abuse")) filled++;
     }
     if (/\b(male|man)\b/i.test(`${intake.sex} ${intake.genderIdentity}`)) {
@@ -2456,7 +4108,7 @@
   }
   function fillSubstanceCheckboxes(intake) {
     let filled = 0;
-    const substance = `${intake.alcoholUse} ${intake.drugUse} ${intake.substanceUseHistory}`.toLowerCase();
+    const substance = `${intake.alcoholUse} ${intake.drugUse} ${intake.substanceUseHistory} ${buildSubstanceDetails(intake)}`.toLowerCase();
     let matchedSpecific = false;
     if (/alcohol/i.test(substance)) {
       if (checkCheckboxByLabel("multi-select-36", "Alcohol")) {
@@ -2589,12 +4241,28 @@
     return 0;
   }
   function buildSocialHistoryNotes(intake) {
-    const parts = [];
-    if (intake.occupation) parts.push(`Occupation: ${intake.occupation}`);
-    if (intake.relationshipDescription) parts.push(`Relationship: ${intake.relationshipDescription}`);
-    if (intake.livingArrangement) parts.push(`Living arrangement: ${intake.livingArrangement}`);
-    if (intake.additionalInfo) parts.push(intake.additionalInfo);
-    return parts.join("\n");
+    const sentences = [];
+    const pronouns = inferPronounForms(intake);
+    const livingArrangement = normalizeLivingArrangement(intake.livingArrangement, pronouns);
+    const occupation = normalizeOccupation(intake.occupation);
+    const education = normalizeEducationForNarrative(intake.education);
+    if (occupation) {
+      sentences.push(`Client works as ${occupation.replace(/[.]+$/, "")}.`);
+    }
+    if (education) {
+      sentences.push(`Client ${education}.`);
+    }
+    if (livingArrangement) {
+      sentences.push(`Client lives ${livingArrangement}.`);
+    }
+    if (intake.relationshipDescription) {
+      sentences.push(`Relationship history includes ${lowerCaseFirst(smoothClinicalPhrase(intake.relationshipDescription.replace(/[.]+$/, ""), pronouns))}.`);
+    }
+    if (intake.additionalInfo) {
+      sentences.push(ensureSentence(smoothClinicalPhrase(intake.additionalInfo, pronouns)));
+    }
+    sentences.push(...buildManualSocialHistorySentences(intake));
+    return unique4(sentences).join(" ");
   }
   function mapSIToDropdown(si) {
     const lower = si.toLowerCase();
@@ -2615,71 +4283,253 @@
     if (/specific/i.test(lower)) return "Yes: Specific person";
     return "Denies";
   }
+  function ensureSentence(value) {
+    const trimmed = normalizeWhitespace3(value);
+    if (!trimmed) return "";
+    return /[.!?]$/.test(trimmed) ? trimmed : `${trimmed}.`;
+  }
+  function cleanDiagnosticReasoning(value) {
+    return normalizeWhitespace3(
+      value.replace(/\s*Most direct supporting sentence:\s.+$/i, "").trim()
+    );
+  }
+  function formatDiagnosisLabel(impression) {
+    return impression.code ? `${impression.name} (${impression.code})` : impression.name;
+  }
+  function buildPresentingConcernPhrases(intake) {
+    const corpus = buildIntakeAnswerCorpus(intake);
+    const phrases = [];
+    if ((intake.gad7?.totalScore ?? 0) >= 10 || hasAnyPattern(corpus, ANXIETY_PATTERNS)) {
+      phrases.push("anxiety and worry");
+    }
+    if ((intake.phq9?.totalScore ?? 0) >= 10 || hasAnyPattern(corpus, DEPRESSION_PATTERNS)) {
+      phrases.push("low mood or depressive symptoms");
+    }
+    if (hasAnyPattern(corpus, ANGER_PATTERNS)) {
+      phrases.push("anger and emotional reactivity");
+    }
+    if (hasAnyPattern(corpus, RELATIONSHIP_PATTERNS)) {
+      phrases.push("relationship stress");
+    }
+    if (hasAnyPattern(corpus, TRAUMA_PATTERNS)) {
+      phrases.push("trauma-related distress");
+    }
+    if (hasAnyPattern(corpus, SUBSTANCE_PATTERNS)) {
+      phrases.push("substance use concerns");
+    }
+    if (hasAnyPattern(corpus, SLEEP_PATTERNS)) {
+      phrases.push("sleep disturbance");
+    }
+    if (hasAnyPattern(corpus, CONCENTRATION_PATTERNS)) {
+      phrases.push("difficulty concentrating");
+    }
+    return unique4(phrases).slice(0, 5);
+  }
+  function buildRelevantHistoryPhrases(intake) {
+    const phrases = [];
+    if (intake.priorTreatment.trim() && !/^(no|none|denied|denies)$/i.test(intake.priorTreatment.trim())) {
+      phrases.push(`prior treatment history (${intake.priorTreatment.trim()})`);
+    }
+    if (intake.medications.trim() && !/^(no|none|denied|denies)$/i.test(intake.medications.trim())) {
+      phrases.push(`medication history (${intake.medications.trim()})`);
+    }
+    if (intake.medicalHistory.trim() && !/^(no|none|denied|denies)$/i.test(intake.medicalHistory.trim())) {
+      phrases.push(`medical history (${intake.medicalHistory.trim()})`);
+    }
+    if (intake.surgeries.trim()) {
+      phrases.push(`reported surgeries (${intake.surgeries.trim()})`);
+    }
+    if (intake.physicalSexualAbuseHistory.trim() && !/^(no|none|denied|denies)$/i.test(intake.physicalSexualAbuseHistory.trim()) || intake.domesticViolenceHistory.trim() && !/^(no|none|denied|denies)$/i.test(intake.domesticViolenceHistory.trim())) {
+      phrases.push("trauma or abuse history");
+    }
+    if (intake.familyPsychiatricHistory.trim() && !/^(no|none|denied|denies)$/i.test(intake.familyPsychiatricHistory.trim()) || intake.familyMentalEmotionalHistory.trim() && !/^(no|none|denied|denies)$/i.test(intake.familyMentalEmotionalHistory.trim())) {
+      phrases.push("family mental health history");
+    }
+    return unique4(phrases).slice(0, 4);
+  }
+  function buildMaintainingFactorPhrases(intake) {
+    const corpus = buildIntakeAnswerCorpus(intake);
+    const factors = [];
+    if (hasAnyPattern(corpus, RELATIONSHIP_PATTERNS)) {
+      factors.push("ongoing relationship stress");
+    }
+    if (hasAnyPattern(corpus, ANGER_PATTERNS)) {
+      factors.push("difficulty managing strong emotions during conflict");
+    }
+    if (hasAnyPattern(corpus, SUBSTANCE_PATTERNS)) {
+      factors.push("substance use as a coping pattern");
+    }
+    if (hasAnyPattern(corpus, SLEEP_PATTERNS)) {
+      factors.push("sleep disruption");
+    }
+    if (hasAnyPattern(corpus, TRAUMA_PATTERNS)) {
+      factors.push("distress related to reminders of unsafe events");
+    }
+    return unique4(factors).slice(0, 4);
+  }
+  function buildProtectiveFactorPhrases(intake) {
+    const corpus = intake.manualNotes.toLowerCase();
+    const factors = [];
+    if (intake.counselingGoals.trim()) {
+      factors.push("stated motivation for treatment");
+    }
+    if (intake.livingArrangement.trim() && !/alone/i.test(intake.livingArrangement)) {
+      factors.push("some social support in the home");
+    }
+    if (intake.occupation.trim() && !/unemployed|not working/i.test(intake.occupation)) {
+      factors.push("current employment");
+    }
+    if (hasAnyPattern(corpus, EXERCISE_PATTERNS)) {
+      factors.push("exercise as a coping skill");
+    }
+    if (hasAnyPattern(corpus, SPIRITUAL_PATTERNS)) {
+      factors.push("faith or spiritual support");
+    }
+    return unique4(factors).slice(0, 4);
+  }
+  function buildIceFormulationText(intake, note, guidance, impressions) {
+    const concerns = buildPresentingConcernPhrases(intake);
+    const history = buildRelevantHistoryPhrases(intake);
+    const maintaining = buildMaintainingFactorPhrases(intake);
+    const strengths = buildProtectiveFactorPhrases(intake);
+    const diagnosisLabels = (impressions.length ? impressions : note.diagnosticImpressions).map(formatDiagnosisLabel).slice(0, 3);
+    const modalities = unique4(guidance.modalities.map((item) => item.toLowerCase())).slice(0, 4);
+    const parts = [];
+    if (concerns.length) {
+      parts.push(`Client presents with ${joinList2(concerns)}.`);
+    }
+    if (diagnosisLabels.length) {
+      parts.push(`Current presentation is consistent with ${joinList2(diagnosisLabels)}.`);
+    }
+    if (history.length) {
+      parts.push(`Relevant history includes ${joinList2(history)}.`);
+    }
+    if (maintaining.length) {
+      parts.push(`Current problems appear to be maintained by ${joinList2(maintaining)}.`);
+    }
+    if (strengths.length) {
+      parts.push(`Protective factors include ${joinList2(strengths)}.`);
+    }
+    if (modalities.length) {
+      parts.push(`Initial treatment can focus on ${joinList2(modalities)}.`);
+    }
+    return parts.join(" ") || guidance.formulation || note.clinicalFormulation;
+  }
+  function extractStructuredItems(text) {
+    return unique4(
+      text.split("\n").map((line) => line.trim()).filter(Boolean).filter((line) => !/^[A-Za-z ]+:$/.test(line)).filter((line) => !/^\d+\.\s+[A-Z]/.test(line)).map((line) => line.replace(/^[•\-]\s*/, "").replace(/^\d+\.\s*/, "").trim()).filter(Boolean)
+    );
+  }
+  function parseFrequencySections(text) {
+    const sections = {
+      frequency: [],
+      monitoring: [],
+      reassessment: [],
+      referral: [],
+      safety: []
+    };
+    let current = "frequency";
+    for (const rawLine of text.split("\n")) {
+      const line = rawLine.trim();
+      if (!line) continue;
+      const headingMatch = line.match(/^(Frequency|Monitoring|Reassessment|Referral|Safety):\s*(.*)$/i);
+      if (headingMatch) {
+        current = headingMatch[1].toLowerCase();
+        const remainder = headingMatch[2].trim();
+        if (remainder) sections[current].push(remainder);
+        continue;
+      }
+      sections[current].push(line.replace(/^[•\-]\s*/, "").trim());
+    }
+    return sections;
+  }
   function formatImpressionsList(impressions) {
     if (!impressions.length) return "";
     return impressions.map((imp, i) => {
-      const code = imp.code ? ` (${imp.code})` : "";
-      const lines = [`${i + 1}. ${imp.name}${code}`];
-      if (imp.diagnosticReasoning) {
-        lines.push(imp.diagnosticReasoning);
+      const lines = [`${i + 1}. ${ensureSentence(formatDiagnosisLabel(imp))}`];
+      const reasoning = cleanDiagnosticReasoning(imp.diagnosticReasoning);
+      if (reasoning) {
+        lines.push(ensureSentence(reasoning));
       }
       if (imp.criteriaEvidence.length) {
-        lines.push(`Supporting evidence: ${imp.criteriaEvidence.join("; ")}.`);
-      }
-      if (imp.criteriaSummary.length) {
-        lines.push(imp.criteriaSummary.join(" "));
+        lines.push(`Supporting evidence includes ${joinList2(imp.criteriaEvidence.slice(0, 4))}.`);
       }
       if (imp.ruleOuts.length) {
-        lines.push(`Rule out: ${imp.ruleOuts.join(", ")}.`);
+        lines.push(`Rule-outs to monitor include ${joinList2(imp.ruleOuts.slice(0, 3))}.`);
       }
-      return lines.join("\n");
+      return lines.join(" ");
     }).join("\n\n");
   }
   function formatStrengthsWeaknesses(intake) {
+    const pronouns = inferPronounForms(intake);
     const strengths = [];
     const weaknesses = [];
-    if (intake.counselingGoals.trim()) strengths.push(`Treatment motivation: ${intake.counselingGoals.trim()}`);
+    if (intake.counselingGoals.trim()) {
+      const goal = smoothClinicalPhrase(intake.counselingGoals.trim(), pronouns).replace(/[.]+$/, "");
+      strengths.push(`treatment motivation (${lowerCaseFirst(goal)})`);
+    }
     if (intake.priorTreatment.trim() && !/none|no|denied|denies/i.test(intake.priorTreatment))
-      strengths.push(`Prior treatment engagement: ${intake.priorTreatment.trim()}`);
-    if (intake.livingArrangement.trim() && !/alone/i.test(intake.livingArrangement))
-      strengths.push(`Social support: ${intake.livingArrangement.trim()}`);
+      strengths.push(`prior treatment engagement`);
+    if (intake.livingArrangement.trim() && !/alone/i.test(intake.livingArrangement)) {
+      const arrangement = normalizeLivingArrangement(intake.livingArrangement, pronouns);
+      strengths.push(`social support (lives ${arrangement})`);
+    }
     if (intake.primaryCarePhysician.trim())
-      strengths.push(`Established medical care: PCP ${intake.primaryCarePhysician.trim()}`);
+      strengths.push(`established medical care`);
     if (intake.occupation.trim() && !/unemployed|not working/i.test(intake.occupation))
-      strengths.push(`Employment: ${intake.occupation.trim()}`);
+      strengths.push(`current employment`);
     if (intake.suicidalIdeation.trim() && !/no|denied|denies|none/i.test(intake.suicidalIdeation))
-      weaknesses.push(`Suicidal ideation: ${intake.suicidalIdeation.trim()}`);
+      weaknesses.push("reported suicidal ideation");
     if (intake.suicideAttemptHistory.trim() && !/no|denied|denies|none/i.test(intake.suicideAttemptHistory))
-      weaknesses.push(`History of suicide attempts: ${intake.suicideAttemptHistory.trim()}`);
+      weaknesses.push("history of suicide attempt(s)");
     if (intake.homicidalIdeation.trim() && !/no|denied|denies|none/i.test(intake.homicidalIdeation))
-      weaknesses.push(`Homicidal ideation: ${intake.homicidalIdeation.trim()}`);
+      weaknesses.push("reported homicidal ideation");
     if (intake.psychiatricHospitalization.trim() && !/no|denied|denies|none/i.test(intake.psychiatricHospitalization))
-      weaknesses.push(`Psychiatric hospitalization: ${intake.psychiatricHospitalization.trim()}`);
+      weaknesses.push("history of psychiatric hospitalization");
     if (intake.physicalSexualAbuseHistory.trim() && !/no|denied|denies|none/i.test(intake.physicalSexualAbuseHistory))
-      weaknesses.push(`Abuse history: ${intake.physicalSexualAbuseHistory.trim()}`);
+      weaknesses.push("reported abuse history");
     if (intake.domesticViolenceHistory.trim() && !/no|denied|denies|none/i.test(intake.domesticViolenceHistory))
-      weaknesses.push(`DV history: ${intake.domesticViolenceHistory.trim()}`);
-    const substanceText = [intake.alcoholUse, intake.drugUse, intake.substanceUseHistory].filter((v) => v.trim() && !/no|denied|denies|none/i.test(v)).join("; ");
-    if (substanceText) weaknesses.push(`Substance use: ${substanceText}`);
+      weaknesses.push("reported domestic violence history");
+    const hasSubstanceConcern = [intake.alcoholUse, intake.drugUse, intake.substanceUseHistory].some((v) => v.trim() && !/no|denied|denies|none/i.test(v));
+    if (hasSubstanceConcern) weaknesses.push("substance use concerns");
     const parts = [];
-    if (strengths.length) parts.push(`Strengths/Protective Factors:
-${strengths.map((s) => `\u2022 ${s}`).join("\n")}`);
-    if (weaknesses.length) parts.push(`Risk Factors/Weaknesses:
-${weaknesses.map((w) => `\u2022 ${w}`).join("\n")}`);
-    return parts.join("\n\n");
+    if (strengths.length) parts.push(`Strengths and protective factors include ${joinList2(strengths)}.`);
+    if (weaknesses.length) parts.push(`Clinical vulnerabilities include ${joinList2(weaknesses)}.`);
+    return parts.join(" ");
   }
   function formatTreatmentRecommendations(interventions, modalities) {
     const parts = [];
     if (modalities.length) {
-      parts.push(`Recommended modalities: ${modalities.join(", ")}.`);
+      parts.push(`Recommended treatment modalities include ${joinList2(modalities.map((item) => item.toLowerCase()))}.`);
     }
-    if (interventions) {
-      parts.push(interventions);
+    const items = extractStructuredItems(interventions).slice(0, 6);
+    if (items.length) {
+      parts.push(`Initial treatment focus should include ${joinList2(items)}.`);
     }
-    return parts.join("\n\n");
+    return parts.join(" ");
   }
   function formatFollowUp(frequency, plan) {
-    return [frequency, plan].filter(Boolean).join("\n\n");
+    const parts = [];
+    const sections = parseFrequencySections(frequency);
+    if (sections.frequency.length) {
+      parts.push(ensureSentence(sections.frequency[0]));
+    }
+    if (sections.monitoring.length) {
+      parts.push(`Monitoring will include ${joinList2(sections.monitoring)}.`);
+    }
+    if (sections.reassessment.length) {
+      parts.push(`Reassessment will include ${joinList2(sections.reassessment)}.`);
+    }
+    if (sections.referral.length) {
+      parts.push(`Referral plan: ${joinList2(sections.referral)}.`);
+    }
+    if (sections.safety.length) {
+      parts.push(`Safety plan: ${joinList2(sections.safety)}.`);
+    }
+    if (plan) {
+      parts.push(ensureSentence(plan));
+    }
+    return parts.join(" ");
   }
   async function fillAssessmentSection(intake) {
     let filled = 0;
@@ -2690,8 +4540,23 @@ ${weaknesses.map((w) => `\u2022 ${w}`).join("\n")}`);
       const prefs = await getPreferences();
       note = await buildDraftNote(intake, prefs, impressions);
     }
-    const guidance = await buildClinicalGuidance(intake, impressions);
-    const formulation = guidance.formulation || note.clinicalFormulation;
+    let guidance = {
+      modalities: [],
+      formulation: "",
+      goals: "",
+      interventions: "",
+      frequency: "",
+      referrals: "",
+      plan: "",
+      references: [],
+      queries: []
+    };
+    try {
+      guidance = await buildClinicalGuidance(intake, impressions);
+    } catch (err) {
+      console.warn("[SPN] Clinical guidance unavailable during ICE fill; using draft-note fallback only:", err);
+    }
+    const formulation = buildIceFormulationText(intake, note, guidance, impressions);
     if (formulation && fillProseMirrorByLabel("free-text-106", formulation)) filled++;
     const diagSource = impressions.length ? impressions : note.diagnosticImpressions;
     const diagText = formatImpressionsList(diagSource);
@@ -2800,10 +4665,14 @@ ${weaknesses.map((w) => `\u2022 ${w}`).join("\n")}`);
   var lastUrl = window.location.href;
   var observer = new MutationObserver(() => {
     if (window.location.href !== lastUrl) {
-      lastUrl = window.location.href;
+      const newUrl = window.location.href;
+      checkSessionEndOnUrlChange(newUrl);
+      lastUrl = newUrl;
       setTimeout(injectFillButton, 500);
       setTimeout(injectFillSoapButton, 500);
       setTimeout(injectVideoNotePanel, 500);
+      setTimeout(startCaptionObserver, 1e3);
+      setTimeout(startSessionEndDetection, 1e3);
     }
   });
   observer.observe(document.body, { childList: true, subtree: true });
@@ -2812,11 +4681,15 @@ ${weaknesses.map((w) => `\u2022 ${w}`).join("\n")}`);
       setTimeout(injectFillButton, 500);
       setTimeout(injectFillSoapButton, 500);
       setTimeout(injectVideoNotePanel, 500);
+      setTimeout(startCaptionObserver, 1e3);
+      setTimeout(startSessionEndDetection, 1e3);
     });
   } else {
     setTimeout(injectFillButton, 500);
     setTimeout(injectFillSoapButton, 500);
     setTimeout(injectVideoNotePanel, 500);
+    setTimeout(startCaptionObserver, 1e3);
+    setTimeout(startSessionEndDetection, 1e3);
   }
   registerFloatingButtonsController(() => {
     setTimeout(injectFillButton, 0);

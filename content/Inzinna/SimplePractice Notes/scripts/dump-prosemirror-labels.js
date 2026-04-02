@@ -1,0 +1,1 @@
+document.querySelectorAll('[contenteditable="true"][aria-label]').forEach(e=>{const ua=e.closest(".user-answer");const labels=ua?[...ua.querySelectorAll("h3,h4,label,.spds-label,[class*=label]:not(.boolean)")].map(l=>l.textContent.trim()).filter(Boolean):[];console.log(e.getAttribute("aria-label"),"=>",labels.join(" / ")||"(no heading found)")})

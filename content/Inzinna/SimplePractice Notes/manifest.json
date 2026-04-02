@@ -5,7 +5,8 @@
   "description": "HIPAA-compliant clinical notes: extract intake data, generate diagnostic impressions, record sessions, and auto-fill progress notes",
   "permissions": ["storage", "activeTab", "tabs", "alarms", "sidePanel", "scripting"],
   "host_permissions": [
-    "https://*.simplepractice.com/*"
+    "https://*.simplepractice.com/*",
+    "http://localhost:11434/*"
   ],
   "action": {
     "default_popup": "popup/popup.html",
@@ -26,6 +27,12 @@
       "matches": ["https://*.simplepractice.com/*"],
       "js": ["content/extract-intake.js", "content/fill-note.js"],
       "css": ["content/content.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["assets/clinical-knowledge/*"],
+      "matches": ["https://*.simplepractice.com/*"]
     }
   ],
   "icons": {

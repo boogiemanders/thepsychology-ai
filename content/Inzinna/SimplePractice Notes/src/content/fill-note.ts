@@ -20,8 +20,9 @@
  *   Treatment plan:   /clients/{id}/treatment_plans/{tpId}/edit
  */
 
-import { IntakeData, AssessmentResult, DiagnosticImpression, SessionNotes, SoapDraft } from '../lib/types'
-import { getIntake, getNote, getDiagnosticWorkspace, getPreferences, getSessionNotes, saveSessionNotes, getSoapDraft } from '../lib/storage'
+import { IntakeData, AssessmentResult, DiagnosticImpression, ProgressNote, SessionNotes, SoapDraft, TranscriptEntry, MseChecklist, DEFAULT_MSE_CHECKLIST } from '../lib/types'
+import { getIntake, getNote, getDiagnosticWorkspace, getPreferences, getSessionNotes, saveSessionNotes, getSoapDraft, appendTranscriptEntry, saveMseChecklist, getMseChecklist, getTranscript } from '../lib/storage'
+import { generateSoapDraft } from '../lib/soap-generator'
 import { buildDraftNote } from '../lib/note-draft'
 import { buildClinicalGuidance } from '../lib/clinical-guidance'
 import {
@@ -134,6 +135,7 @@ function injectVideoNotePanel(): void {
         <button class="spn-video-notes-toggle" id="spn-notes-toggle" title="Minimize">−</button>
       </div>
     </div>
+    <div class="spn-video-notes-caption-status" id="spn-caption-status" title="Live caption capture status"></div>
     <div class="spn-video-notes-body" id="spn-notes-body">
       <textarea
         id="spn-session-textarea"
@@ -141,6 +143,122 @@ function injectVideoNotePanel(): void {
         placeholder="Type session notes here..."
         spellcheck="true"
       ></textarea>
+      <div class="spn-mse-section">
+        <button class="spn-mse-toggle" id="spn-mse-toggle">MSE Quick Check ▸</button>
+        <div class="spn-mse-body" id="spn-mse-body" style="display:none">
+          <div class="spn-mse-row" data-field="appearance">
+            <span class="spn-mse-label">Appearance</span>
+            <div class="spn-mse-pills">
+              <button class="spn-mse-pill active" data-value="well-groomed">well-groomed</button>
+              <button class="spn-mse-pill active" data-value="casually dressed">casual dress</button>
+              <button class="spn-mse-pill active" data-value="appropriate hygiene">good hygiene</button>
+              <button class="spn-mse-pill" data-value="disheveled">disheveled</button>
+              <button class="spn-mse-pill" data-value="unkempt">unkempt</button>
+            </div>
+          </div>
+          <div class="spn-mse-row" data-field="behavior">
+            <span class="spn-mse-label">Behavior</span>
+            <div class="spn-mse-pills">
+              <button class="spn-mse-pill active" data-value="cooperative">cooperative</button>
+              <button class="spn-mse-pill active" data-value="good eye contact">good eye contact</button>
+              <button class="spn-mse-pill active" data-value="psychomotor normal">psychomotor normal</button>
+              <button class="spn-mse-pill" data-value="guarded">guarded</button>
+              <button class="spn-mse-pill" data-value="poor eye contact">poor eye contact</button>
+              <button class="spn-mse-pill" data-value="agitated">agitated</button>
+              <button class="spn-mse-pill" data-value="psychomotor retarded">retarded</button>
+            </div>
+          </div>
+          <div class="spn-mse-row" data-field="speech">
+            <span class="spn-mse-label">Speech</span>
+            <div class="spn-mse-pills">
+              <button class="spn-mse-pill active" data-value="normal rate">normal rate</button>
+              <button class="spn-mse-pill active" data-value="normal volume">normal volume</button>
+              <button class="spn-mse-pill active" data-value="coherent">coherent</button>
+              <button class="spn-mse-pill" data-value="pressured">pressured</button>
+              <button class="spn-mse-pill" data-value="slow">slow</button>
+              <button class="spn-mse-pill" data-value="soft">soft</button>
+              <button class="spn-mse-pill" data-value="loud">loud</button>
+              <button class="spn-mse-pill" data-value="monotone">monotone</button>
+            </div>
+          </div>
+          <div class="spn-mse-row" data-field="mood">
+            <span class="spn-mse-label">Mood</span>
+            <input type="text" class="spn-mse-input" id="spn-mse-mood" placeholder="Client's words (e.g. anxious, good, frustrated)" />
+          </div>
+          <div class="spn-mse-row" data-field="affect">
+            <span class="spn-mse-label">Affect</span>
+            <div class="spn-mse-pills">
+              <button class="spn-mse-pill active" data-value="congruent">congruent</button>
+              <button class="spn-mse-pill active" data-value="full range">full range</button>
+              <button class="spn-mse-pill" data-value="flat">flat</button>
+              <button class="spn-mse-pill" data-value="blunted">blunted</button>
+              <button class="spn-mse-pill" data-value="labile">labile</button>
+              <button class="spn-mse-pill" data-value="constricted">constricted</button>
+              <button class="spn-mse-pill" data-value="incongruent">incongruent</button>
+            </div>
+          </div>
+          <div class="spn-mse-row" data-field="thoughtProcess">
+            <span class="spn-mse-label">Thought Process</span>
+            <div class="spn-mse-pills">
+              <button class="spn-mse-pill active" data-value="linear">linear</button>
+              <button class="spn-mse-pill active" data-value="goal-directed">goal-directed</button>
+              <button class="spn-mse-pill" data-value="tangential">tangential</button>
+              <button class="spn-mse-pill" data-value="circumstantial">circumstantial</button>
+              <button class="spn-mse-pill" data-value="disorganized">disorganized</button>
+              <button class="spn-mse-pill" data-value="flight of ideas">flight of ideas</button>
+            </div>
+          </div>
+          <div class="spn-mse-row" data-field="thoughtContent">
+            <span class="spn-mse-label">Thought Content</span>
+            <div class="spn-mse-pills">
+              <button class="spn-mse-pill active" data-value="no SI">no SI</button>
+              <button class="spn-mse-pill active" data-value="no HI">no HI</button>
+              <button class="spn-mse-pill active" data-value="no delusions">no delusions</button>
+              <button class="spn-mse-pill" data-value="SI endorsed">SI endorsed</button>
+              <button class="spn-mse-pill" data-value="HI endorsed">HI endorsed</button>
+              <button class="spn-mse-pill" data-value="paranoid ideation">paranoid ideation</button>
+              <button class="spn-mse-pill" data-value="obsessions">obsessions</button>
+            </div>
+          </div>
+          <div class="spn-mse-row" data-field="perceptions">
+            <span class="spn-mse-label">Perceptions</span>
+            <div class="spn-mse-pills">
+              <button class="spn-mse-pill active" data-value="no hallucinations">no hallucinations</button>
+              <button class="spn-mse-pill" data-value="AH">AH</button>
+              <button class="spn-mse-pill" data-value="VH">VH</button>
+              <button class="spn-mse-pill" data-value="illusions">illusions</button>
+            </div>
+          </div>
+          <div class="spn-mse-row" data-field="cognition">
+            <span class="spn-mse-label">Cognition</span>
+            <div class="spn-mse-pills">
+              <button class="spn-mse-pill active" data-value="alert">alert</button>
+              <button class="spn-mse-pill active" data-value="oriented x4">oriented x4</button>
+              <button class="spn-mse-pill active" data-value="intact memory">intact memory</button>
+              <button class="spn-mse-pill" data-value="oriented x3">oriented x3</button>
+              <button class="spn-mse-pill" data-value="impaired concentration">impaired concentration</button>
+              <button class="spn-mse-pill" data-value="impaired memory">impaired memory</button>
+            </div>
+          </div>
+          <div class="spn-mse-row" data-field="insight">
+            <span class="spn-mse-label">Insight</span>
+            <select class="spn-mse-select" id="spn-mse-insight">
+              <option value="good" selected>Good</option>
+              <option value="fair">Fair</option>
+              <option value="limited">Limited</option>
+              <option value="poor">Poor</option>
+            </select>
+          </div>
+          <div class="spn-mse-row" data-field="judgment">
+            <span class="spn-mse-label">Judgment</span>
+            <select class="spn-mse-select" id="spn-mse-judgment">
+              <option value="good" selected>Good</option>
+              <option value="fair">Fair</option>
+              <option value="impaired">Impaired</option>
+            </select>
+          </div>
+        </div>
+      </div>
     </div>
   `
   document.body.appendChild(panel)
@@ -184,6 +302,344 @@ function injectVideoNotePanel(): void {
     toggle.title = minimized ? 'Expand' : 'Minimize'
     panel.classList.toggle('spn-video-notes-minimized', minimized)
   })
+
+  // MSE checklist behavior
+  initMseChecklist(apptId)
+}
+
+// ── MSE Checklist ──
+
+function initMseChecklist(apptId: string): void {
+  const mseToggle = document.getElementById('spn-mse-toggle')
+  const mseBody = document.getElementById('spn-mse-body')
+  if (!mseToggle || !mseBody) return
+
+  let mseOpen = false
+  mseToggle.addEventListener('click', () => {
+    mseOpen = !mseOpen
+    mseBody.style.display = mseOpen ? 'block' : 'none'
+    mseToggle.textContent = mseOpen ? 'MSE Quick Check ▾' : 'MSE Quick Check ▸'
+  })
+
+  // Load saved checklist
+  getMseChecklist().then((saved) => {
+    if (!saved) return
+    restoreMseChecklist(saved)
+  }).catch(() => {})
+
+  // Pill toggle behavior
+  let saveTimer: ReturnType<typeof setTimeout> | null = null
+  const debouncedSave = () => {
+    if (saveTimer) clearTimeout(saveTimer)
+    saveTimer = setTimeout(() => saveMseChecklist(collectMseChecklist()), 500)
+  }
+
+  mseBody.addEventListener('click', (e) => {
+    const pill = (e.target as HTMLElement).closest('.spn-mse-pill') as HTMLButtonElement | null
+    if (!pill) return
+    pill.classList.toggle('active')
+    debouncedSave()
+  })
+
+  // Mood input
+  const moodInput = document.getElementById('spn-mse-mood') as HTMLInputElement | null
+  moodInput?.addEventListener('input', debouncedSave)
+
+  // Select dropdowns
+  const insightSelect = document.getElementById('spn-mse-insight') as HTMLSelectElement | null
+  const judgmentSelect = document.getElementById('spn-mse-judgment') as HTMLSelectElement | null
+  insightSelect?.addEventListener('change', debouncedSave)
+  judgmentSelect?.addEventListener('change', debouncedSave)
+}
+
+function collectMseChecklist(): MseChecklist {
+  const getActivePills = (field: string): string[] => {
+    const row = document.querySelector(`.spn-mse-row[data-field="${field}"]`)
+    if (!row) return []
+    return Array.from(row.querySelectorAll('.spn-mse-pill.active')).map((el) => el.getAttribute('data-value') || '')
+  }
+
+  return {
+    appearance: getActivePills('appearance'),
+    behavior: getActivePills('behavior'),
+    speech: getActivePills('speech'),
+    mood: (document.getElementById('spn-mse-mood') as HTMLInputElement)?.value ?? '',
+    affect: getActivePills('affect'),
+    thoughtProcess: getActivePills('thoughtProcess'),
+    thoughtContent: getActivePills('thoughtContent'),
+    perceptions: getActivePills('perceptions'),
+    cognition: getActivePills('cognition'),
+    insight: (document.getElementById('spn-mse-insight') as HTMLSelectElement)?.value ?? 'good',
+    judgment: (document.getElementById('spn-mse-judgment') as HTMLSelectElement)?.value ?? 'good',
+    updatedAt: new Date().toISOString(),
+  }
+}
+
+function restoreMseChecklist(checklist: MseChecklist): void {
+  const restorePills = (field: string, values: string[]) => {
+    const row = document.querySelector(`.spn-mse-row[data-field="${field}"]`)
+    if (!row) return
+    const valueSet = new Set(values)
+    for (const pill of Array.from(row.querySelectorAll('.spn-mse-pill'))) {
+      const value = pill.getAttribute('data-value') || ''
+      pill.classList.toggle('active', valueSet.has(value))
+    }
+  }
+
+  restorePills('appearance', checklist.appearance)
+  restorePills('behavior', checklist.behavior)
+  restorePills('speech', checklist.speech)
+  restorePills('affect', checklist.affect)
+  restorePills('thoughtProcess', checklist.thoughtProcess)
+  restorePills('thoughtContent', checklist.thoughtContent)
+  restorePills('perceptions', checklist.perceptions)
+  restorePills('cognition', checklist.cognition)
+
+  const moodInput = document.getElementById('spn-mse-mood') as HTMLInputElement | null
+  if (moodInput && checklist.mood) moodInput.value = checklist.mood
+
+  const insightSelect = document.getElementById('spn-mse-insight') as HTMLSelectElement | null
+  if (insightSelect && checklist.insight) insightSelect.value = checklist.insight
+
+  const judgmentSelect = document.getElementById('spn-mse-judgment') as HTMLSelectElement | null
+  if (judgmentSelect && checklist.judgment) judgmentSelect.value = checklist.judgment
+}
+
+// ── Session End Detection + Auto-Generation ──
+
+let lastVideoRoomUrl = ''
+let lastCaptionTimestamp = 0
+let sessionEndTimer: ReturnType<typeof setInterval> | null = null
+let sessionEndTriggered = false
+
+function startSessionEndDetection(): void {
+  if (!isVideoRoom()) return
+  lastVideoRoomUrl = location.href
+  sessionEndTriggered = false
+
+  // Caption timeout detection: if captions were active and stop for 60s, session likely ended
+  sessionEndTimer = setInterval(() => {
+    if (sessionEndTriggered) return
+    if (lastCaptionTimestamp > 0 && Date.now() - lastCaptionTimestamp > 60_000) {
+      console.log('[SPN] Caption stream inactive for 60s — session may have ended')
+      // Don't auto-trigger on caption timeout alone — too noisy. Only on URL change.
+    }
+  }, 10_000)
+}
+
+function checkSessionEndOnUrlChange(newUrl: string): void {
+  if (sessionEndTriggered) return
+  const wasVideoRoom = /\/appt-[a-f0-9]+\/room/.test(lastVideoRoomUrl)
+  const isStillVideoRoom = /\/appt-[a-f0-9]+\/room/.test(newUrl)
+
+  if (wasVideoRoom && !isStillVideoRoom) {
+    sessionEndTriggered = true
+    if (sessionEndTimer) {
+      clearInterval(sessionEndTimer)
+      sessionEndTimer = null
+    }
+    const apptMatch = lastVideoRoomUrl.match(/\/appt-([a-f0-9]+)\/room/)
+    const apptId = apptMatch?.[1] ?? ''
+    if (apptId) {
+      handleSessionEnd(apptId)
+    }
+  }
+  lastVideoRoomUrl = newUrl
+}
+
+async function handleSessionEnd(apptId: string): Promise<void> {
+  console.log('[SPN] Session ended for appointment', apptId)
+
+  try {
+    const prefs = await getPreferences()
+    if (!prefs.autoGenerateOnSessionEnd) {
+      console.log('[SPN] Auto-generation disabled in preferences')
+      return
+    }
+
+    showToast('Generating SOAP draft...', 'info')
+
+    const [sessionNotesData, transcript, intake, workspace, mseChecklist] = await Promise.all([
+      getSessionNotes(apptId),
+      getTranscript(apptId),
+      getIntake(),
+      getDiagnosticWorkspace(),
+      getMseChecklist(),
+    ])
+
+    const sessionNotes = sessionNotesData?.notes ?? ''
+    const diagnosticImpressions = workspace?.finalizedImpressions ?? []
+
+    // Try to get treatment plan from storage
+    const tpResult = await chrome.storage.session.get('spn_treatment_plan')
+    const treatmentPlan = tpResult['spn_treatment_plan'] ?? null
+
+    const clientName = intake
+      ? [intake.firstName, intake.lastName].filter(Boolean).join(' ') || intake.fullName
+      : ''
+
+    const draft = await generateSoapDraft(
+      sessionNotes,
+      transcript,
+      treatmentPlan,
+      intake,
+      diagnosticImpressions,
+      mseChecklist,
+      prefs,
+      { apptId, clientName, sessionDate: new Date().toLocaleDateString('en-US') }
+    )
+
+    await chrome.storage.session.set({ spn_soap_draft: draft })
+
+    const method = draft.generationMethod === 'llm' ? 'AI-generated' : 'Template-generated'
+    showToast(`SOAP draft ready (${method}) — open popup to review`, 'success')
+    console.log('[SPN] Auto-generated SOAP draft:', draft.generationMethod)
+  } catch (err) {
+    console.error('[SPN] Failed to auto-generate SOAP draft:', err)
+    showToast('SOAP auto-generation failed — generate manually from popup', 'error')
+  }
+}
+
+// ── Live Caption Observer ──
+
+let captionObserver: MutationObserver | null = null
+let captionCount = 0
+
+function updateCaptionStatus(): void {
+  const el = document.getElementById('spn-caption-status')
+  if (!el) return
+  if (captionCount === 0) {
+    el.textContent = 'Captions: waiting for captions...'
+    el.className = 'spn-video-notes-caption-status waiting'
+  } else {
+    el.textContent = `Captions: ${captionCount} captured`
+    el.className = 'spn-video-notes-caption-status active'
+  }
+}
+
+function inferSpeakerRole(name: string): TranscriptEntry['speaker'] {
+  // SimplePractice shows the clinician's name with credentials (e.g. "Anders Chan, PsyD")
+  // Clients typically don't have credential suffixes
+  if (/\b(PsyD|PhD|LMFT|LCSW|LMHC|LPCC|LPC|MSW|MD|DO|NP|RN)\b/i.test(name)) {
+    return 'clinician'
+  }
+  return 'client'
+}
+
+function findCaptionContainer(): Element | null {
+  // SimplePractice uses class "HDRTV room-captions" on the caption container
+  return document.querySelector('.room-captions') ?? document.querySelector('[class*="room-captions"]')
+}
+
+function extractCaptionLines(container: Element): Array<{ name: string; text: string }> {
+  const results: Array<{ name: string; text: string }> = []
+
+  // Try known selector patterns for SimplePractice caption lines
+  // Pattern 1: .line elements with .name and .text children
+  let lines = container.querySelectorAll('.line')
+  if (lines.length) {
+    for (const line of lines) {
+      const name = (line.querySelector('.name') ?? line.querySelector('[class*="name"]'))?.textContent?.trim() ?? ''
+      const text = (line.querySelector('.text') ?? line.querySelector('[class*="text"]'))?.textContent?.trim() ?? ''
+      if (text) results.push({ name, text })
+    }
+    return results
+  }
+
+  // Pattern 2: direct children divs/spans that contain speaker text
+  lines = container.querySelectorAll('[class*="line"], [class*="caption"]')
+  if (lines.length) {
+    for (const line of lines) {
+      const children = line.children
+      if (children.length >= 2) {
+        const name = children[0].textContent?.trim() ?? ''
+        const text = children[1].textContent?.trim() ?? ''
+        if (text) results.push({ name, text })
+      } else if (children.length === 1 || line.textContent) {
+        const text = line.textContent?.trim() ?? ''
+        if (text) results.push({ name: '', text })
+      }
+    }
+    return results
+  }
+
+  // Pattern 3: fallback — grab all text nodes with meaningful content from the body area
+  const body = container.querySelector('.body, [class*="body"]') ?? container
+  const childDivs = body.querySelectorAll(':scope > div, :scope > p, :scope > span')
+  for (const el of childDivs) {
+    const text = el.textContent?.trim() ?? ''
+    if (text && text.length > 2) results.push({ name: '', text })
+  }
+
+  return results
+}
+
+function startCaptionObserver(): void {
+  if (!isVideoRoom()) return
+  if (captionObserver) return
+
+  const apptId = getVideoApptId()
+  if (!apptId) return
+
+  const seenTexts = new Set<string>()
+  let debounceTimer: ReturnType<typeof setTimeout> | null = null
+
+  function processCaptions(): void {
+    const container = findCaptionContainer()
+    if (!container) return
+
+    const lines = extractCaptionLines(container)
+    if (!lines.length) return
+
+    for (const { name, text } of lines) {
+      // Deduplicate by exact text to avoid storing the same caption twice
+      // (SimplePractice updates caption text in-place as speech is recognized)
+      if (seenTexts.has(text)) continue
+      seenTexts.add(text)
+
+      const speaker = inferSpeakerRole(name)
+      captionCount++
+      lastCaptionTimestamp = Date.now()
+      updateCaptionStatus()
+      appendTranscriptEntry(apptId, {
+        speaker,
+        text,
+        timestamp: new Date().toISOString(),
+      }).catch(() => {})
+    }
+  }
+
+  function attachObserver(target: Element): void {
+    captionObserver?.disconnect()
+    captionObserver = new MutationObserver(() => {
+      if (debounceTimer) clearTimeout(debounceTimer)
+      debounceTimer = setTimeout(processCaptions, 300)
+    })
+    captionObserver.observe(target, { childList: true, subtree: true, characterData: true })
+    console.log('[SPN] Caption observer attached to', target.className)
+  }
+
+  updateCaptionStatus()
+
+  // If caption container already exists, attach directly
+  const existing = findCaptionContainer()
+  if (existing) {
+    attachObserver(existing)
+    console.log('[SPN] Caption observer started for appointment', apptId)
+    return
+  }
+
+  // Otherwise watch for the caption container to appear (user toggles captions on later)
+  console.log('[SPN] Waiting for caption container to appear...')
+  const waitForCaptions = new MutationObserver(() => {
+    const container = findCaptionContainer()
+    if (container) {
+      waitForCaptions.disconnect()
+      attachObserver(container)
+      console.log('[SPN] Caption observer started for appointment', apptId)
+    }
+  })
+  waitForCaptions.observe(document.body, { childList: true, subtree: true })
 }
 
 function capitalize(value: string): string {
@@ -191,9 +647,53 @@ function capitalize(value: string): string {
   return value.charAt(0).toUpperCase() + value.slice(1)
 }
 
+function normalizeWhitespace(value: string): string {
+  return value.replace(/\s+/g, ' ').trim()
+}
+
+function unique(values: string[]): string[] {
+  const seen = new Set<string>()
+  const output: string[] = []
+
+  for (const value of values) {
+    const key = value.toLowerCase()
+    if (!key || seen.has(key)) continue
+    seen.add(key)
+    output.push(value)
+  }
+
+  return output
+}
+
+function joinList(items: string[]): string {
+  if (items.length === 0) return ''
+  if (items.length === 1) return items[0]
+  if (items.length === 2) return `${items[0]} and ${items[1]}`
+  return `${items.slice(0, -1).join(', ')}, and ${items[items.length - 1]}`
+}
+
 function lowerCaseFirst(value: string): string {
   if (!value) return value
   return value.charAt(0).toLowerCase() + value.slice(1)
+}
+
+function splitManualNoteLines(notes: string): string[] {
+  return unique(
+    notes
+      .split(/\n+/)
+      .map((line) => normalizeWhitespace(line))
+      .filter(Boolean)
+  )
+}
+
+function collectManualNoteLines(notes: string, patterns: RegExp[], limit = 4): string[] {
+  return splitManualNoteLines(notes)
+    .filter((line) => patterns.some((pattern) => pattern.test(line)))
+    .slice(0, limit)
+}
+
+function hasAnyPattern(text: string, patterns: RegExp[]): boolean {
+  return patterns.some((pattern) => pattern.test(text))
 }
 
 function parseDate(value: string): Date | null {
@@ -213,12 +713,12 @@ function parseDate(value: string): Date | null {
 
 function calculateAge(dob: string): string {
   const age = getAgeYears(dob)
-  return age ? `${age} yo` : ''
+  return age ? `${age}-year-old` : ''
 }
 
 function getManualAgeLabel(notes: string): string {
   const match = notes.match(/\b(\d{1,3})\s*(?:yo|y\/o|year old)\b/i)
-  return match ? `${match[1]} yo` : ''
+  return match ? `${match[1]}-year-old` : ''
 }
 
 function getAgeYears(dob: string): number | null {
@@ -242,27 +742,74 @@ function buildIdentityDescriptor(intake: IntakeData): string {
 
   let ethnicityOrRace = ''
   if (/^yes$/i.test(ethnicity)) {
-    ethnicityOrRace = race ? `${race} Hispanic/Latino` : 'Hispanic/Latino'
+    if (/multiple races/i.test(race)) {
+      ethnicityOrRace = 'multiracial Hispanic/Latino'
+    } else {
+      ethnicityOrRace = race ? `${race} Hispanic/Latino` : 'Hispanic/Latino'
+    }
   } else if (/^no$/i.test(ethnicity)) {
-    ethnicityOrRace = race
+    ethnicityOrRace = /multiple races/i.test(race) ? 'multiracial' : race
   } else {
-    ethnicityOrRace = ethnicity || race
+    ethnicityOrRace = ethnicity || (/multiple races/i.test(race) ? 'multiracial' : race)
   }
 
-  return [ethnicityOrRace, gender].filter(Boolean).join(', ')
+  return [ethnicityOrRace, gender].filter(Boolean).join(' ')
 }
 
-function normalizeLivingArrangement(livingArrangement: string): string {
+type PronounForms = {
+  subject: string
+  object: string
+  possessive: string
+  reflexive: string
+}
+
+function inferPronounForms(intake: IntakeData): PronounForms {
+  const genderText = `${intake.genderIdentity} ${intake.sex}`.toLowerCase()
+  if (/\b(male|man|boy|he|him)\b/.test(genderText)) {
+    return { subject: 'he', object: 'him', possessive: 'his', reflexive: 'himself' }
+  }
+  if (/\b(female|woman|girl|she|her)\b/.test(genderText)) {
+    return { subject: 'she', object: 'her', possessive: 'her', reflexive: 'herself' }
+  }
+  return { subject: 'they', object: 'them', possessive: 'their', reflexive: 'themselves' }
+}
+
+const ANXIETY_PATTERNS = [/\banxiety\b/i, /\banxious\b/i, /\bworry\b/i, /\bpanic\b/i, /\bon edge\b/i, /\bjealous\b/i]
+const DEPRESSION_PATTERNS = [/\bdepress/i, /\bsad\b/i, /\bdown\b/i, /\bhopeless/i, /\bcry(?:ing)?\b/i, /\bgrief\b/i, /\bloss\b/i]
+const ANGER_PATTERNS = [/\banger\b/i, /\bangry\b/i, /\byell(?:ed|ing)?\b/i, /\bfight(?:ing|s)?\b/i, /\birritab/i, /\bdefensive\b/i, /\blose control\b/i]
+const RELATIONSHIP_PATTERNS = [/\bgirlfriend\b/i, /\bboyfriend\b/i, /\bpartner\b/i, /\bspouse\b/i, /\bex\b/i, /\brelationship\b/i, /\battachment\b/i, /\bmarriage\b/i, /\bengage(?:d|ment)?\b/i]
+const TRAUMA_PATTERNS = [/\btrauma\b/i, /\bassault\b/i, /\babuse\b/i, /\bviolence\b/i, /\broofied\b/i, /\bdrugged\b/i, /\btouch(?:ed|ing)\b/i, /\baccident\b/i, /\bcrash\b/i]
+const ABUSE_PATTERNS = [/\babuse\b/i, /\bassault\b/i, /\broofied\b/i, /\bdrugged\b/i, /\btouch(?:ed|ing)\b/i, /\bslap(?:ped)?\b/i, /\bpush(?:ed)?\b/i, /\bviolence\b/i]
+const SUBSTANCE_PATTERNS = [/\balcohol\b/i, /\bdrink(?:ing)?\b/i, /\bdrank\b/i, /\bbeer\b/i, /\bwine\b/i, /\bliquor\b/i, /\bpatron\b/i, /\bsoju\b/i, /\bweed\b/i, /\bmarijuana\b/i, /\bcannabis\b/i, /\bjoint\b/i, /\bblunt\b/i, /\bthc\b/i, /\bvape\b/i, /\bnicotine\b/i, /\bcigarette\b/i, /\bcocaine\b/i, /\bcrack\b/i, /\bmeth\b/i, /\badderall\b/i, /\bxanax\b/i, /\bopioid\b/i, /\bshroom/i, /\bmushroom/i, /\blsd\b/i]
+const SLEEP_PATTERNS = [/\bsleep\b/i, /\binsomnia\b/i, /\bnightmare/i]
+const CONCENTRATION_PATTERNS = [/\bfoggy\b/i, /\bfogginess\b/i, /\bconcentrat/i, /\bfocus\b/i, /\bhazy memory\b/i]
+const EXERCISE_PATTERNS = [/\bcycling\b/i, /\bcycle\b/i, /\blifting\b/i, /\bweights?\b/i, /\bgym\b/i, /\bexercise\b/i]
+const BREATHING_PATTERNS = [/\bbreathe\b/i, /\bbreathing\b/i, /\bgrounding\b/i]
+const SPIRITUAL_PATTERNS = [/\bgod\b/i, /\bchurch\b/i, /\bfaith\b/i, /\bpray/i, /\bspiritual/i]
+const ANGER_MANAGEMENT_PATTERNS = [/\banger management\b/i]
+
+function normalizeLivingArrangement(livingArrangement: string, pronouns: PronounForms): string {
   const trimmed = livingArrangement.trim()
   if (!trimmed) return ''
   if (/alone|live alone/i.test(trimmed)) return 'alone'
 
-  const cleaned = trimmed
+  let cleaned = trimmed
     .replace(/^i\s+live\s+/i, '')
     .replace(/^live\s+/i, '')
     .trim()
 
   if (!cleaned) return ''
+  cleaned = cleaned
+    .replace(/\bmy mom\b/gi, `${pronouns.possessive} mother`)
+    .replace(/\bmy dad\b/gi, `${pronouns.possessive} father`)
+    .replace(/\bmy parents\b/gi, `${pronouns.possessive} parents`)
+    .replace(/\bmy grandma\b/gi, `${pronouns.possessive} grandmother`)
+    .replace(/\bmy grandpa\b/gi, `${pronouns.possessive} grandfather`)
+    .replace(/\bmy sister\b/gi, `${pronouns.possessive} sister`)
+    .replace(/\bmy brother\b/gi, `${pronouns.possessive} brother`)
+    .replace(/\bmy family\b/gi, `${pronouns.possessive} family`)
+    .replace(/\bmy\b/gi, pronouns.possessive)
+
   const lower = cleaned.toLowerCase()
   if (/^with\s+/i.test(lower)) return lower
   return `with ${lower}`
@@ -273,9 +820,13 @@ function normalizeOccupation(occupation: string): string {
   if (!trimmed) return ''
   if (/unemployed|not working|out of work/i.test(trimmed)) return 'currently unemployed'
 
-  const yearsMatch = trimmed.match(/^(.*?)(\d+\s+years?)$/i)
+  const yearsMatch = trimmed.match(/^(.*?)[,\s-]+(\d+\s+years?)$/i)
   if (yearsMatch) {
-    const role = yearsMatch[1].trim().replace(/^(a|an)\s+/i, '').toLowerCase()
+    const role = yearsMatch[1]
+      .trim()
+      .replace(/[,\s-]+$/, '')
+      .replace(/^(a|an)\s+/i, '')
+      .toLowerCase()
     const duration = yearsMatch[2].trim().toLowerCase()
     return role ? `a ${role} for ${duration}` : ''
   }
@@ -288,23 +839,53 @@ function normalizeEducationForNarrative(education: string): string {
   const trimmed = education.trim()
   if (!trimmed) return ''
 
-  return trimmed
+  const cleaned = trimmed
     .replace(/^education[:\s-]*/i, '')
     .replace(/^i\s+(?:am|have|completed|finished|earned)\s+/i, '')
     .replace(/[.]+$/, '')
     .trim()
     .toLowerCase()
-}
 
-function inferSubjectPronoun(intake: IntakeData): string {
-  const genderText = `${intake.genderIdentity} ${intake.sex}`.toLowerCase()
-  if (/\b(male|man|boy|he|him)\b/.test(genderText)) return 'he'
-  if (/\b(female|woman|girl|she|her)\b/.test(genderText)) return 'she'
-  return 'they'
+  if (!cleaned) return ''
+  if (/^bachelor/.test(cleaned)) return `completed a ${cleaned}`
+  if (/^master/.test(cleaned)) return `completed a ${cleaned}`
+  if (/^associate/.test(cleaned)) return `completed an ${cleaned}`
+  return `completed ${cleaned}`
 }
 
 function normalizeClause(value: string): string {
   return lowerCaseFirst(value.trim().replace(/[.]+$/, ''))
+}
+
+function rewriteClientPerspective(value: string, pronouns: PronounForms): string {
+  return normalizeWhitespace(value)
+    .replace(/\bmyself\b/gi, pronouns.reflexive)
+    .replace(/\bmine\b/gi, `${pronouns.possessive} own`)
+    .replace(/\bmy\b/gi, pronouns.possessive)
+    .replace(/\bme\b/gi, pronouns.object)
+    .replace(/\bourselves\b/gi, pronouns.reflexive)
+    .replace(/\bours\b/gi, `${pronouns.possessive} own`)
+    .replace(/\bour\b/gi, pronouns.possessive)
+    .replace(/\bus\b/gi, pronouns.object)
+}
+
+function smoothClinicalPhrase(value: string, pronouns: PronounForms): string {
+  let cleaned = rewriteClientPerspective(value, pronouns)
+
+  cleaned = cleaned
+    .replace(
+      /\bwork on\s+(?:his|her|their)\s+communicating\s+(?:his|her|their)\s+emotions\s+and\s+understanding\s+them\s+for\s+the\s+relationships\s+around\s+(?:him|her|them)\b/i,
+      `improve how ${pronouns.subject} communicates and understands ${pronouns.possessive} emotions in close relationships`
+    )
+    .replace(
+      /\bwork on\s+(?:his|her|their)\s+communicating\s+(?:his|her|their)\s+emotions\b/i,
+      `improve how ${pronouns.subject} communicates ${pronouns.possessive} emotions`
+    )
+    .replace(/\bfor the relationships around (?:him|her|them)\b/i, 'in close relationships')
+    .replace(/\bunderstanding them for the relationships around (?:him|her|them)\b/i, `understanding them in ${pronouns.possessive} close relationships`)
+    .replace(/\s+,/g, ',')
+
+  return normalizeWhitespace(cleaned)
 }
 
 function splitComplaintParts(value: string): string[] {
@@ -314,7 +895,7 @@ function splitComplaintParts(value: string): string[] {
     .filter(Boolean)
 }
 
-function buildChiefComplaintSentences(chiefComplaint: string, pronoun: string): string[] {
+function buildChiefComplaintSentences(chiefComplaint: string, pronoun: string, pronouns: PronounForms): string[] {
   const parts = splitComplaintParts(chiefComplaint)
   if (parts.length === 0) return []
 
@@ -331,54 +912,261 @@ function buildChiefComplaintSentences(chiefComplaint: string, pronoun: string): 
     return [`${sentence}.`]
   }
 
-  return parts.map((part) => `${pronoun} presented with ${part}.`)
+  return parts.map((part) => {
+    if (/^i\s+want\s+to\b/i.test(part)) {
+      const normalized = smoothClinicalPhrase(part.replace(/^i\s+want\s+to\b/i, '').trim(), pronouns)
+      return `${pronoun} presented for therapy to ${normalized}.`
+    }
+    if (/^want\s+to\b/i.test(part)) {
+      const normalized = smoothClinicalPhrase(part.replace(/^want\s+to\b/i, '').trim(), pronouns)
+      return `${pronoun} presented for therapy to ${normalized}.`
+    }
+    if (/^i\s+need\s+to\b/i.test(part)) {
+      const normalized = smoothClinicalPhrase(part.replace(/^i\s+need\s+to\b/i, '').trim(), pronouns)
+      return `${pronoun} reported needing to ${normalized}.`
+    }
+    if (/^i\s+feel\b/i.test(part)) {
+      const normalized = smoothClinicalPhrase(part.replace(/^i\s+feel\b/i, '').trim(), pronouns)
+      return `${pronoun} reported feeling ${normalized}.`
+    }
+    return `${pronoun} reported ${smoothClinicalPhrase(part, pronouns)}.`
+  })
+}
+
+function toReportedSpeech(value: string, pronouns: PronounForms): string {
+  const trimmed = smoothClinicalPhrase(value, pronouns).replace(/[.]+$/, '')
+  if (!trimmed) return ''
+
+  const replacements: Array<[RegExp, string]> = [
+    [/^i want to\b/i, `${capitalize(pronouns.subject)} wants to`],
+    [/^i would like to\b/i, `${capitalize(pronouns.subject)} would like to`],
+    [/^i need to\b/i, `${capitalize(pronouns.subject)} needs to`],
+    [/^i am\b/i, `${capitalize(pronouns.subject)} is`],
+    [/^i'm\b/i, `${capitalize(pronouns.subject)} is`],
+    [/^i have\b/i, `${capitalize(pronouns.subject)} has`],
+    [/^i feel\b/i, `${capitalize(pronouns.subject)} feels`],
+    [/^i live\b/i, `${capitalize(pronouns.subject)} lives`],
+    [/^my\b/i, `${capitalize(pronouns.possessive)}`],
+  ]
+
+  for (const [pattern, replacement] of replacements) {
+    if (pattern.test(trimmed)) {
+      return `${trimmed.replace(pattern, replacement)}.`
+    }
+  }
+
+  return `${capitalize(pronouns.subject)} reported ${lowerCaseFirst(trimmed)}.`
+}
+
+function buildManualThemePhrases(notes: string): string[] {
+  const lower = notes.toLowerCase()
+  const phrases: string[] = []
+
+  if (hasAnyPattern(lower, ANXIETY_PATTERNS)) phrases.push('anxiety and worry')
+  if (hasAnyPattern(lower, ANGER_PATTERNS)) phrases.push('anger and emotional reactivity')
+  if (hasAnyPattern(lower, RELATIONSHIP_PATTERNS)) phrases.push('relationship stress and attachment difficulties')
+  if (hasAnyPattern(lower, TRAUMA_PATTERNS)) phrases.push('distress related to a recent unsafe event')
+  if (hasAnyPattern(lower, DEPRESSION_PATTERNS)) phrases.push('low mood or loss-related distress')
+  if (hasAnyPattern(lower, SLEEP_PATTERNS)) phrases.push('sleep disturbance')
+  if (hasAnyPattern(lower, CONCENTRATION_PATTERNS)) phrases.push('difficulty concentrating')
+  if (hasAnyPattern(lower, SUBSTANCE_PATTERNS)) phrases.push('substance use concerns')
+
+  return unique(phrases).slice(0, 4)
+}
+
+function buildManualGoalPhrases(notes: string): string[] {
+  const lower = notes.toLowerCase()
+  const phrases: string[] = []
+
+  if (/\bstop drinking\b|\bdrink less\b|\breduce drinking\b|\bsober\b/.test(lower)) {
+    phrases.push('reducing alcohol use')
+  }
+  if (hasAnyPattern(lower, EXERCISE_PATTERNS)) {
+    phrases.push('using exercise as a coping skill')
+  }
+  if (hasAnyPattern(lower, BREATHING_PATTERNS)) {
+    phrases.push('using breathing skills')
+  }
+  if (hasAnyPattern(lower, ANGER_MANAGEMENT_PATTERNS)) {
+    phrases.push('strengthening anger-management skills')
+  }
+
+  return unique(phrases).slice(0, 3)
+}
+
+function buildManualChiefComplaintSentences(intake: IntakeData): string[] {
+  const notes = intake.manualNotes.trim()
+  if (!notes) return []
+
+  const themePhrases = buildManualThemePhrases(notes)
+  const goalPhrases = buildManualGoalPhrases(notes)
+  const sentences: string[] = []
+
+  if (themePhrases.length) {
+    sentences.push(`Additional concerns include ${joinList(themePhrases)}.`)
+  }
+  if (goalPhrases.length) {
+    sentences.push(`The client expressed interest in ${joinList(goalPhrases)}.`)
+  }
+
+  return sentences
+}
+
+function buildManualHPISentences(intake: IntakeData): string[] {
+  const notes = intake.manualNotes.trim()
+  if (!notes) return []
+
+  const lower = notes.toLowerCase()
+  const sentences: string[] = []
+
+  if (hasAnyPattern(lower, RELATIONSHIP_PATTERNS) && hasAnyPattern(lower, ANGER_PATTERNS)) {
+    sentences.push('Current stress appears closely tied to relationship conflict and difficulty managing strong emotions.')
+  } else {
+    const themePhrases = buildManualThemePhrases(notes)
+    if (themePhrases.length) {
+      sentences.push(`The client also reported ${joinList(themePhrases)}.`)
+    }
+  }
+
+  if (hasAnyPattern(lower, TRAUMA_PATTERNS)) {
+    if (/\bvideo\b|\bothers know\b|\bperceived by others\b/.test(lower)) {
+      sentences.push('The client also described distress related to a recent unsafe event and worry about how others may perceive the situation.')
+    } else {
+      sentences.push('The client also described distress related to a recent unsafe event.')
+    }
+  }
+
+  const goalPhrases = buildManualGoalPhrases(notes)
+  if (goalPhrases.length) {
+    sentences.push(`The client described efforts toward ${joinList(goalPhrases)}.`)
+  }
+
+  return unique(sentences)
+}
+
+function buildManualSubstanceDetails(notes: string): string[] {
+  const lower = notes.toLowerCase()
+  const details: string[] = []
+
+  if (!hasAnyPattern(lower, SUBSTANCE_PATTERNS)) return details
+
+  if (/\balcohol\b|\bdrink(?:ing)?\b|\bdrank\b|\bbeer\b|\bwine\b|\bliquor\b|\bpatron\b|\bsoju\b/.test(lower)) {
+    if (/\bstop drinking\b|\bdrink less\b|\breduce drinking\b/.test(lower)) {
+      details.push('Alcohol use was discussed, and the client expressed interest in drinking less')
+    } else {
+      details.push('Alcohol use was discussed in clinician notes')
+    }
+  }
+
+  if (/\bweed\b|\bmarijuana\b|\bcannabis\b|\bjoint\b|\bblunt\b|\bthc\b/.test(lower)) {
+    details.push('Cannabis use was discussed in clinician notes')
+  }
+
+  if (/\bvape\b|\bnicotine\b|\bcigarette\b/.test(lower)) {
+    details.push('Nicotine use was discussed in clinician notes')
+  }
+
+  if (/\bcocaine\b|\bcrack\b|\bmeth\b|\badderall\b|\bxanax\b|\bopioid\b|\bshroom/i.test(lower)) {
+    details.push('Other substance use was discussed in clinician notes')
+  }
+
+  return unique(details)
+}
+
+function buildManualSocialHistorySentences(intake: IntakeData): string[] {
+  const notes = intake.manualNotes.trim()
+  if (!notes) return []
+
+  const lower = notes.toLowerCase()
+  const sentences: string[] = []
+
+  if (hasAnyPattern(lower, RELATIONSHIP_PATTERNS) && !intake.relationshipDescription.trim()) {
+    sentences.push('The client reported significant relationship stress.')
+  }
+  if (hasAnyPattern(lower, EXERCISE_PATTERNS)) {
+    sentences.push('The client engages in exercise, such as cycling or weight lifting, as part of a coping routine.')
+  }
+  if (hasAnyPattern(lower, SPIRITUAL_PATTERNS)) {
+    sentences.push('Faith or spiritual involvement was identified as part of the client\'s support system.')
+  }
+  if (hasAnyPattern(lower, ANGER_MANAGEMENT_PATTERNS)) {
+    sentences.push('The client is currently engaged in anger-management work.')
+  }
+
+  return unique(sentences)
 }
 
 function buildChiefComplaintNarrative(intake: IntakeData): string {
-  const name = intake.firstName || intake.fullName || [intake.firstName, intake.lastName].filter(Boolean).join(' ') || 'Patient'
+  const name = intake.fullName || [intake.firstName, intake.lastName].filter(Boolean).join(' ') || intake.firstName || 'Patient'
   const age = calculateAge(intake.dob) || getManualAgeLabel(intake.manualNotes)
   const identity = buildIdentityDescriptor(intake)
-  const livingArrangement = normalizeLivingArrangement(intake.livingArrangement)
-  const education = normalizeEducationForNarrative(intake.education)
+  const pronouns = inferPronounForms(intake)
+  const livingArrangement = normalizeLivingArrangement(intake.livingArrangement, pronouns)
   const occupation = normalizeOccupation(intake.occupation)
-  const pronoun = capitalize(inferSubjectPronoun(intake))
+  const education = normalizeEducationForNarrative(intake.education)
+  const subject = capitalize(pronouns.subject)
 
-  const descriptor = [age, identity].filter(Boolean).join(', ')
-  let intro = descriptor ? `${name} is a ${descriptor}` : `${name} is a patient`
-  const contextualClauses: string[] = []
-  if (livingArrangement) contextualClauses.push(`living ${livingArrangement}`)
-  if (education) contextualClauses.push(`with education history of ${education}`)
-  if (occupation) contextualClauses.push(`working as ${occupation}`)
-  if (contextualClauses.length) {
-    intro += ` ${contextualClauses.join(', ')}`
+  const introBits: string[] = []
+  const ageIdentity = age && identity ? `${age} ${identity}` : [age, identity].filter(Boolean).join(' ')
+  if (ageIdentity) {
+    introBits.push(`${name} is a ${ageIdentity}`)
+  } else {
+    introBits.push(name)
   }
+  if (livingArrangement) introBits.push(`who lives ${livingArrangement}`)
+  if (occupation) introBits.push(`and works as ${occupation.replace(/\s+for\s+(\d+\s+years?)$/i, '')}`)
+
+  let intro = introBits.join(' ')
   intro += '.'
 
   const sentences = [intro]
+  if (intake.chiefComplaint) {
+    sentences.push(...buildChiefComplaintSentences(intake.chiefComplaint, subject, pronouns))
+  }
+  sentences.push(...buildManualChiefComplaintSentences(intake))
   if (intake.counselingGoals) {
-    const goal = intake.counselingGoals.replace(/^to\s+/i, '').trim()
+    const goal = smoothClinicalPhrase(intake.counselingGoals.replace(/^to\s+/i, '').trim(), pronouns)
     if (goal) {
-      const quotedGoal = normalizeClause(goal).replace(/[.]+$/, '')
-      sentences.push(`${pronoun} shared goals to "${quotedGoal}."`)
+      sentences.push(`${subject} stated that ${pronouns.subject} wants to ${lowerCaseFirst(goal).replace(/[.]+$/, '')}.`)
     }
   }
-  if (intake.chiefComplaint) {
-    sentences.push(...buildChiefComplaintSentences(intake.chiefComplaint, pronoun))
+  if (education) {
+    sentences.push(`${subject} ${education}.`)
   }
 
   return sentences.join(' ')
 }
 
 function buildHistoryOfPresentIllnessText(intake: IntakeData): string {
-  return [
+  const pronouns = inferPronounForms(intake)
+  const sources = [
     intake.historyOfPresentIllness,
     intake.presentingProblems,
-    intake.manualNotes,
     intake.chiefComplaint,
+    intake.counselingGoals ? `Goal: ${intake.counselingGoals}` : '',
   ]
     .map((value) => value.trim())
     .filter(Boolean)
-    .join('\n\n')
+
+  const sentences = unique(
+    sources.map((value) => {
+      if (/^goal:\s*/i.test(value)) {
+        const goalText = smoothClinicalPhrase(value.replace(/^goal:\s*/i, '').replace(/^to\s+/i, '').trim(), pronouns)
+        return goalText
+          ? `${capitalize(pronouns.subject)} stated that ${pronouns.subject} wants to ${lowerCaseFirst(goalText).replace(/[.]+$/, '')}.`
+          : ''
+      }
+
+      if (/^i want to\b/i.test(value)) {
+        const normalized = smoothClinicalPhrase(value.replace(/^i want to\b/i, '').trim(), pronouns)
+        return `${capitalize(pronouns.subject)} reported wanting to ${normalized.replace(/[.]+$/, '')}.`
+      }
+
+      return toReportedSpeech(value, pronouns)
+    }).filter(Boolean)
+  )
+
+  return unique([...sentences, ...buildManualHPISentences(intake)]).join(' ')
 }
 
 type KeywordRule = {
@@ -485,7 +1273,7 @@ function buildSubstanceDetails(intake: IntakeData): string {
     .map((value) => value.trim())
     .filter((value) => value && !genericOnly.test(value))
 
-  return Array.from(new Set(parts)).join('; ')
+  return Array.from(new Set([...parts, ...buildManualSubstanceDetails(intake.manualNotes)])).join('; ')
 }
 
 // ── Intake → ICE Field Mapping ──
@@ -564,17 +1352,19 @@ function fillICEFromIntake(intake: IntakeData): number {
   if (fillProseMirrorByLabel('free-text-34', intake.medications)) filled++
 
   // Currently using or abusing substances
-  const hasSubstanceUse = intake.alcoholUse || intake.drugUse || intake.substanceUseHistory
+  const substanceDetails = buildSubstanceDetails(intake)
+  const hasSubstanceUse = intake.alcoholUse || intake.drugUse || intake.substanceUseHistory || substanceDetails
   if (hasSubstanceUse) {
     const isUsing = /yes|current|daily|weekly|monthly|regular|social|occasional/i.test(
-      `${intake.alcoholUse} ${intake.drugUse} ${intake.substanceUseHistory}`
+      `${intake.alcoholUse} ${intake.drugUse} ${intake.substanceUseHistory} ${substanceDetails}`
     )
+      || hasAnyPattern(`${substanceDetails}`.toLowerCase(), SUBSTANCE_PATTERNS)
     if (selectRadio('single-select-35', isUsing ? '1' : '2')) filled++
 
     // Substance specifics (checkboxes 36)
     if (isUsing) {
       filled += fillSubstanceCheckboxes(intake)
-      filled += fillLabeledField('If yes, please specify', buildSubstanceDetails(intake))
+      filled += fillLabeledField('If yes, please specify', substanceDetails)
     }
   }
 
@@ -716,7 +1506,7 @@ function fillDepressionFromPHQ9(phq9: AssessmentResult): number {
 
 function fillDepressionFromKeywords(intake: IntakeData): number {
   let filled = 0
-  const symptoms = `${intake.recentSymptoms} ${intake.additionalSymptoms}`.toLowerCase()
+  const symptoms = buildIntakeAnswerCorpus(intake)
   if (!symptoms.trim()) return 0
 
   const map: Record<string, string> = {
@@ -785,7 +1575,7 @@ function fillAnxietyFromGAD7(gad7: AssessmentResult): number {
 
 function fillAnxietyFromKeywords(intake: IntakeData): number {
   let filled = 0
-  const symptoms = `${intake.recentSymptoms} ${intake.additionalSymptoms}`.toLowerCase()
+  const symptoms = buildIntakeAnswerCorpus(intake)
   if (!symptoms.trim()) return 0
 
   const map: Record<string, string> = {
@@ -959,6 +1749,14 @@ function fillSymptomChecklistsFromIntake(intake: IntakeData): number {
     if (/neglect/i.test(abuse)) { if (checkCheckboxByLabel('multi-select-20', 'Neglect')) filled++ }
     if (/none|no|denied|denies/i.test(abuse)) { if (checkCheckboxByLabel('multi-select-20', 'Denies')) filled++ }
   }
+  if (!intake.physicalSexualAbuseHistory && hasAnyPattern(corpus, ABUSE_PATTERNS)) {
+    if (/roofied|drugged|touched|sexual assault|sexual/i.test(corpus)) {
+      if (checkCheckboxByLabel('multi-select-20', 'Sexual')) filled++
+    }
+    if (/slap|push|physical|violence/i.test(corpus)) {
+      if (checkCheckboxByLabel('multi-select-20', 'Physical')) filled++
+    }
+  }
 
   // Risk factors (multi-select-21) — derived from intake
   const ageYears = getAgeYears(intake.dob)
@@ -983,10 +1781,12 @@ function fillSymptomChecklistsFromIntake(intake: IntakeData): number {
   if (/suicide.*family member|family member.*suicide|close friend.*suicide|friend.*died by suicide/i.test(corpus)) {
     if (checkCheckboxByLabel('multi-select-21', 'Suicide by family member or close friend')) filled++
   }
-  if (intake.substanceUseHistory && !/no|denied|denies|none/i.test(intake.substanceUseHistory)) {
+  if ((intake.substanceUseHistory && !/no|denied|denies|none/i.test(intake.substanceUseHistory)) ||
+      hasAnyPattern(corpus, SUBSTANCE_PATTERNS)) {
     if (checkCheckboxByLabel('multi-select-21', 'History of substance abuse')) filled++
   }
-  if (intake.physicalSexualAbuseHistory && !/no|denied|denies|none/i.test(intake.physicalSexualAbuseHistory)) {
+  if ((intake.physicalSexualAbuseHistory && !/no|denied|denies|none/i.test(intake.physicalSexualAbuseHistory)) ||
+      hasAnyPattern(corpus, ABUSE_PATTERNS)) {
     if (checkCheckboxByLabel('multi-select-21', 'History of abuse')) filled++
   }
   if (/\b(male|man)\b/i.test(`${intake.sex} ${intake.genderIdentity}`)) {
@@ -1011,7 +1811,7 @@ function fillSymptomChecklistsFromIntake(intake: IntakeData): number {
 
 function fillSubstanceCheckboxes(intake: IntakeData): number {
   let filled = 0
-  const substance = `${intake.alcoholUse} ${intake.drugUse} ${intake.substanceUseHistory}`.toLowerCase()
+  const substance = `${intake.alcoholUse} ${intake.drugUse} ${intake.substanceUseHistory} ${buildSubstanceDetails(intake)}`.toLowerCase()
   let matchedSpecific = false
 
   if (/alcohol/i.test(substance)) { if (checkCheckboxByLabel('multi-select-36', 'Alcohol')) { filled++; matchedSpecific = true } }
@@ -1102,12 +1902,31 @@ function fillEducation(education: string): number {
 }
 
 function buildSocialHistoryNotes(intake: IntakeData): string {
-  const parts: string[] = []
-  if (intake.occupation) parts.push(`Occupation: ${intake.occupation}`)
-  if (intake.relationshipDescription) parts.push(`Relationship: ${intake.relationshipDescription}`)
-  if (intake.livingArrangement) parts.push(`Living arrangement: ${intake.livingArrangement}`)
-  if (intake.additionalInfo) parts.push(intake.additionalInfo)
-  return parts.join('\n')
+  const sentences: string[] = []
+  const pronouns = inferPronounForms(intake)
+  const livingArrangement = normalizeLivingArrangement(intake.livingArrangement, pronouns)
+  const occupation = normalizeOccupation(intake.occupation)
+  const education = normalizeEducationForNarrative(intake.education)
+
+  if (occupation) {
+    sentences.push(`Client works as ${occupation.replace(/[.]+$/, '')}.`)
+  }
+  if (education) {
+    sentences.push(`Client ${education}.`)
+  }
+  if (livingArrangement) {
+    sentences.push(`Client lives ${livingArrangement}.`)
+  }
+  if (intake.relationshipDescription) {
+    sentences.push(`Relationship history includes ${lowerCaseFirst(smoothClinicalPhrase(intake.relationshipDescription.replace(/[.]+$/, ''), pronouns))}.`)
+  }
+  if (intake.additionalInfo) {
+    sentences.push(ensureSentence(smoothClinicalPhrase(intake.additionalInfo, pronouns)))
+  }
+
+  sentences.push(...buildManualSocialHistorySentences(intake))
+
+  return unique(sentences).join(' ')
 }
 
 // ── SI/HI Dropdown Mappers ──
@@ -1135,74 +1954,275 @@ function mapHIToDropdown(hi: string): string {
 
 // ── Assessment Section (106-111) ──
 
+function ensureSentence(value: string): string {
+  const trimmed = normalizeWhitespace(value)
+  if (!trimmed) return ''
+  return /[.!?]$/.test(trimmed) ? trimmed : `${trimmed}.`
+}
+
+function cleanDiagnosticReasoning(value: string): string {
+  return normalizeWhitespace(
+    value.replace(/\s*Most direct supporting sentence:\s.+$/i, '').trim()
+  )
+}
+
+function formatDiagnosisLabel(impression: DiagnosticImpression): string {
+  return impression.code ? `${impression.name} (${impression.code})` : impression.name
+}
+
+function buildPresentingConcernPhrases(intake: IntakeData): string[] {
+  const corpus = buildIntakeAnswerCorpus(intake)
+  const phrases: string[] = []
+
+  if ((intake.gad7?.totalScore ?? 0) >= 10 || hasAnyPattern(corpus, ANXIETY_PATTERNS)) {
+    phrases.push('anxiety and worry')
+  }
+  if ((intake.phq9?.totalScore ?? 0) >= 10 || hasAnyPattern(corpus, DEPRESSION_PATTERNS)) {
+    phrases.push('low mood or depressive symptoms')
+  }
+  if (hasAnyPattern(corpus, ANGER_PATTERNS)) {
+    phrases.push('anger and emotional reactivity')
+  }
+  if (hasAnyPattern(corpus, RELATIONSHIP_PATTERNS)) {
+    phrases.push('relationship stress')
+  }
+  if (hasAnyPattern(corpus, TRAUMA_PATTERNS)) {
+    phrases.push('trauma-related distress')
+  }
+  if (hasAnyPattern(corpus, SUBSTANCE_PATTERNS)) {
+    phrases.push('substance use concerns')
+  }
+  if (hasAnyPattern(corpus, SLEEP_PATTERNS)) {
+    phrases.push('sleep disturbance')
+  }
+  if (hasAnyPattern(corpus, CONCENTRATION_PATTERNS)) {
+    phrases.push('difficulty concentrating')
+  }
+
+  return unique(phrases).slice(0, 5)
+}
+
+function buildRelevantHistoryPhrases(intake: IntakeData): string[] {
+  const phrases: string[] = []
+
+  if (intake.priorTreatment.trim() && !/^(no|none|denied|denies)$/i.test(intake.priorTreatment.trim())) {
+    phrases.push(`prior treatment history (${intake.priorTreatment.trim()})`)
+  }
+  if (intake.medications.trim() && !/^(no|none|denied|denies)$/i.test(intake.medications.trim())) {
+    phrases.push(`medication history (${intake.medications.trim()})`)
+  }
+  if (intake.medicalHistory.trim() && !/^(no|none|denied|denies)$/i.test(intake.medicalHistory.trim())) {
+    phrases.push(`medical history (${intake.medicalHistory.trim()})`)
+  }
+  if (intake.surgeries.trim()) {
+    phrases.push(`reported surgeries (${intake.surgeries.trim()})`)
+  }
+  if (
+    (intake.physicalSexualAbuseHistory.trim() && !/^(no|none|denied|denies)$/i.test(intake.physicalSexualAbuseHistory.trim())) ||
+    (intake.domesticViolenceHistory.trim() && !/^(no|none|denied|denies)$/i.test(intake.domesticViolenceHistory.trim()))
+  ) {
+    phrases.push('trauma or abuse history')
+  }
+  if (
+    (intake.familyPsychiatricHistory.trim() && !/^(no|none|denied|denies)$/i.test(intake.familyPsychiatricHistory.trim())) ||
+    (intake.familyMentalEmotionalHistory.trim() && !/^(no|none|denied|denies)$/i.test(intake.familyMentalEmotionalHistory.trim()))
+  ) {
+    phrases.push('family mental health history')
+  }
+
+  return unique(phrases).slice(0, 4)
+}
+
+function buildMaintainingFactorPhrases(intake: IntakeData): string[] {
+  const corpus = buildIntakeAnswerCorpus(intake)
+  const factors: string[] = []
+
+  if (hasAnyPattern(corpus, RELATIONSHIP_PATTERNS)) {
+    factors.push('ongoing relationship stress')
+  }
+  if (hasAnyPattern(corpus, ANGER_PATTERNS)) {
+    factors.push('difficulty managing strong emotions during conflict')
+  }
+  if (hasAnyPattern(corpus, SUBSTANCE_PATTERNS)) {
+    factors.push('substance use as a coping pattern')
+  }
+  if (hasAnyPattern(corpus, SLEEP_PATTERNS)) {
+    factors.push('sleep disruption')
+  }
+  if (hasAnyPattern(corpus, TRAUMA_PATTERNS)) {
+    factors.push('distress related to reminders of unsafe events')
+  }
+
+  return unique(factors).slice(0, 4)
+}
+
+function buildProtectiveFactorPhrases(intake: IntakeData): string[] {
+  const corpus = intake.manualNotes.toLowerCase()
+  const factors: string[] = []
+
+  if (intake.counselingGoals.trim()) {
+    factors.push('stated motivation for treatment')
+  }
+  if (intake.livingArrangement.trim() && !/alone/i.test(intake.livingArrangement)) {
+    factors.push('some social support in the home')
+  }
+  if (intake.occupation.trim() && !/unemployed|not working/i.test(intake.occupation)) {
+    factors.push('current employment')
+  }
+  if (hasAnyPattern(corpus, EXERCISE_PATTERNS)) {
+    factors.push('exercise as a coping skill')
+  }
+  if (hasAnyPattern(corpus, SPIRITUAL_PATTERNS)) {
+    factors.push('faith or spiritual support')
+  }
+
+  return unique(factors).slice(0, 4)
+}
+
+function buildIceFormulationText(
+  intake: IntakeData,
+  note: ProgressNote,
+  guidance: Awaited<ReturnType<typeof buildClinicalGuidance>>,
+  impressions: DiagnosticImpression[]
+): string {
+  const concerns = buildPresentingConcernPhrases(intake)
+  const history = buildRelevantHistoryPhrases(intake)
+  const maintaining = buildMaintainingFactorPhrases(intake)
+  const strengths = buildProtectiveFactorPhrases(intake)
+  const diagnosisLabels = (impressions.length ? impressions : note.diagnosticImpressions)
+    .map(formatDiagnosisLabel)
+    .slice(0, 3)
+  const modalities = unique(guidance.modalities.map((item) => item.toLowerCase())).slice(0, 4)
+
+  const parts: string[] = []
+
+  if (concerns.length) {
+    parts.push(`Client presents with ${joinList(concerns)}.`)
+  }
+  if (diagnosisLabels.length) {
+    parts.push(`Current presentation is consistent with ${joinList(diagnosisLabels)}.`)
+  }
+  if (history.length) {
+    parts.push(`Relevant history includes ${joinList(history)}.`)
+  }
+  if (maintaining.length) {
+    parts.push(`Current problems appear to be maintained by ${joinList(maintaining)}.`)
+  }
+  if (strengths.length) {
+    parts.push(`Protective factors include ${joinList(strengths)}.`)
+  }
+  if (modalities.length) {
+    parts.push(`Initial treatment can focus on ${joinList(modalities)}.`)
+  }
+
+  return parts.join(' ') || guidance.formulation || note.clinicalFormulation
+}
+
+function extractStructuredItems(text: string): string[] {
+  return unique(
+    text
+      .split('\n')
+      .map((line) => line.trim())
+      .filter(Boolean)
+      .filter((line) => !/^[A-Za-z ]+:$/.test(line))
+      .filter((line) => !/^\d+\.\s+[A-Z]/.test(line))
+      .map((line) => line.replace(/^[•\-]\s*/, '').replace(/^\d+\.\s*/, '').trim())
+      .filter(Boolean)
+  )
+}
+
+function parseFrequencySections(text: string): Record<string, string[]> {
+  const sections: Record<string, string[]> = {
+    frequency: [],
+    monitoring: [],
+    reassessment: [],
+    referral: [],
+    safety: [],
+  }
+
+  let current: keyof typeof sections = 'frequency'
+
+  for (const rawLine of text.split('\n')) {
+    const line = rawLine.trim()
+    if (!line) continue
+
+    const headingMatch = line.match(/^(Frequency|Monitoring|Reassessment|Referral|Safety):\s*(.*)$/i)
+    if (headingMatch) {
+      current = headingMatch[1].toLowerCase() as keyof typeof sections
+      const remainder = headingMatch[2].trim()
+      if (remainder) sections[current].push(remainder)
+      continue
+    }
+
+    sections[current].push(line.replace(/^[•\-]\s*/, '').trim())
+  }
+
+  return sections
+}
+
 function formatImpressionsList(impressions: DiagnosticImpression[]): string {
   if (!impressions.length) return ''
   return impressions
     .map((imp, i) => {
-      const code = imp.code ? ` (${imp.code})` : ''
-      const lines: string[] = [`${i + 1}. ${imp.name}${code}`]
-
-      // Diagnostic reasoning — the narrative explaining how this diagnosis formed
-      if (imp.diagnosticReasoning) {
-        lines.push(imp.diagnosticReasoning)
+      const lines: string[] = [`${i + 1}. ${ensureSentence(formatDiagnosisLabel(imp))}`]
+      const reasoning = cleanDiagnosticReasoning(imp.diagnosticReasoning)
+      if (reasoning) {
+        lines.push(ensureSentence(reasoning))
       }
-
-      // Criteria evidence — the specific patient statements/data that support each criterion
       if (imp.criteriaEvidence.length) {
-        lines.push(`Supporting evidence: ${imp.criteriaEvidence.join('; ')}.`)
+        lines.push(`Supporting evidence includes ${joinList(imp.criteriaEvidence.slice(0, 4))}.`)
       }
-
-      // Criteria summary — how many criteria met vs required
-      if (imp.criteriaSummary.length) {
-        lines.push(imp.criteriaSummary.join(' '))
-      }
-
       if (imp.ruleOuts.length) {
-        lines.push(`Rule out: ${imp.ruleOuts.join(', ')}.`)
+        lines.push(`Rule-outs to monitor include ${joinList(imp.ruleOuts.slice(0, 3))}.`)
       }
-
-      return lines.join('\n')
+      return lines.join(' ')
     })
     .join('\n\n')
 }
 
 function formatStrengthsWeaknesses(intake: IntakeData): string {
+  const pronouns = inferPronounForms(intake)
   const strengths: string[] = []
   const weaknesses: string[] = []
 
   // Protective / strength factors
-  if (intake.counselingGoals.trim()) strengths.push(`Treatment motivation: ${intake.counselingGoals.trim()}`)
+  if (intake.counselingGoals.trim()) {
+    const goal = smoothClinicalPhrase(intake.counselingGoals.trim(), pronouns).replace(/[.]+$/, '')
+    strengths.push(`treatment motivation (${lowerCaseFirst(goal)})`)
+  }
   if (intake.priorTreatment.trim() && !/none|no|denied|denies/i.test(intake.priorTreatment))
-    strengths.push(`Prior treatment engagement: ${intake.priorTreatment.trim()}`)
-  if (intake.livingArrangement.trim() && !/alone/i.test(intake.livingArrangement))
-    strengths.push(`Social support: ${intake.livingArrangement.trim()}`)
+    strengths.push(`prior treatment engagement`)
+  if (intake.livingArrangement.trim() && !/alone/i.test(intake.livingArrangement)) {
+    const arrangement = normalizeLivingArrangement(intake.livingArrangement, pronouns)
+    strengths.push(`social support (lives ${arrangement})`)
+  }
   if (intake.primaryCarePhysician.trim())
-    strengths.push(`Established medical care: PCP ${intake.primaryCarePhysician.trim()}`)
+    strengths.push(`established medical care`)
   if (intake.occupation.trim() && !/unemployed|not working/i.test(intake.occupation))
-    strengths.push(`Employment: ${intake.occupation.trim()}`)
+    strengths.push(`current employment`)
 
   // Risk / weakness factors
   if (intake.suicidalIdeation.trim() && !/no|denied|denies|none/i.test(intake.suicidalIdeation))
-    weaknesses.push(`Suicidal ideation: ${intake.suicidalIdeation.trim()}`)
+    weaknesses.push('reported suicidal ideation')
   if (intake.suicideAttemptHistory.trim() && !/no|denied|denies|none/i.test(intake.suicideAttemptHistory))
-    weaknesses.push(`History of suicide attempts: ${intake.suicideAttemptHistory.trim()}`)
+    weaknesses.push('history of suicide attempt(s)')
   if (intake.homicidalIdeation.trim() && !/no|denied|denies|none/i.test(intake.homicidalIdeation))
-    weaknesses.push(`Homicidal ideation: ${intake.homicidalIdeation.trim()}`)
+    weaknesses.push('reported homicidal ideation')
   if (intake.psychiatricHospitalization.trim() && !/no|denied|denies|none/i.test(intake.psychiatricHospitalization))
-    weaknesses.push(`Psychiatric hospitalization: ${intake.psychiatricHospitalization.trim()}`)
+    weaknesses.push('history of psychiatric hospitalization')
   if (intake.physicalSexualAbuseHistory.trim() && !/no|denied|denies|none/i.test(intake.physicalSexualAbuseHistory))
-    weaknesses.push(`Abuse history: ${intake.physicalSexualAbuseHistory.trim()}`)
+    weaknesses.push('reported abuse history')
   if (intake.domesticViolenceHistory.trim() && !/no|denied|denies|none/i.test(intake.domesticViolenceHistory))
-    weaknesses.push(`DV history: ${intake.domesticViolenceHistory.trim()}`)
-  const substanceText = [intake.alcoholUse, intake.drugUse, intake.substanceUseHistory]
-    .filter(v => v.trim() && !/no|denied|denies|none/i.test(v)).join('; ')
-  if (substanceText) weaknesses.push(`Substance use: ${substanceText}`)
+    weaknesses.push('reported domestic violence history')
+  const hasSubstanceConcern = [intake.alcoholUse, intake.drugUse, intake.substanceUseHistory]
+    .some(v => v.trim() && !/no|denied|denies|none/i.test(v))
+  if (hasSubstanceConcern) weaknesses.push('substance use concerns')
 
   const parts: string[] = []
-  if (strengths.length) parts.push(`Strengths/Protective Factors:\n${strengths.map(s => `• ${s}`).join('\n')}`)
-  if (weaknesses.length) parts.push(`Risk Factors/Weaknesses:\n${weaknesses.map(w => `• ${w}`).join('\n')}`)
+  if (strengths.length) parts.push(`Strengths and protective factors include ${joinList(strengths)}.`)
+  if (weaknesses.length) parts.push(`Clinical vulnerabilities include ${joinList(weaknesses)}.`)
 
-  return parts.join('\n\n')
+  return parts.join(' ')
 }
 
 function formatTreatmentRecommendations(
@@ -1211,16 +2231,39 @@ function formatTreatmentRecommendations(
 ): string {
   const parts: string[] = []
   if (modalities.length) {
-    parts.push(`Recommended modalities: ${modalities.join(', ')}.`)
+    parts.push(`Recommended treatment modalities include ${joinList(modalities.map((item) => item.toLowerCase()))}.`)
   }
-  if (interventions) {
-    parts.push(interventions)
+  const items = extractStructuredItems(interventions).slice(0, 6)
+  if (items.length) {
+    parts.push(`Initial treatment focus should include ${joinList(items)}.`)
   }
-  return parts.join('\n\n')
+  return parts.join(' ')
 }
 
 function formatFollowUp(frequency: string, plan: string): string {
-  return [frequency, plan].filter(Boolean).join('\n\n')
+  const parts: string[] = []
+  const sections = parseFrequencySections(frequency)
+
+  if (sections.frequency.length) {
+    parts.push(ensureSentence(sections.frequency[0]))
+  }
+  if (sections.monitoring.length) {
+    parts.push(`Monitoring will include ${joinList(sections.monitoring)}.`)
+  }
+  if (sections.reassessment.length) {
+    parts.push(`Reassessment will include ${joinList(sections.reassessment)}.`)
+  }
+  if (sections.referral.length) {
+    parts.push(`Referral plan: ${joinList(sections.referral)}.`)
+  }
+  if (sections.safety.length) {
+    parts.push(`Safety plan: ${joinList(sections.safety)}.`)
+  }
+  if (plan) {
+    parts.push(ensureSentence(plan))
+  }
+
+  return parts.join(' ')
 }
 
 async function fillAssessmentSection(intake: IntakeData): Promise<number> {
@@ -1237,14 +2280,38 @@ async function fillAssessmentSection(intake: IntakeData): Promise<number> {
     note = await buildDraftNote(intake, prefs, impressions)
   }
 
-  // Build clinical guidance — this produces the Persons-style case formulation
-  // with problem list, mechanism hypotheses, precipitants, and diagnostic reasoning
-  const guidance = await buildClinicalGuidance(intake, impressions)
+  // Build clinical guidance when extension assets are available. If they fail to
+  // load in the content-script context, fall back to the saved draft note so the
+  // ICE assessment fields can still be populated.
+  let guidance = {
+    modalities: [] as string[],
+    formulation: '',
+    goals: '',
+    interventions: '',
+    frequency: '',
+    referrals: '',
+    plan: '',
+    references: [] as Array<{
+      resourceId: string
+      resourceTitle: string
+      pageStart: number
+      heading: string
+      preview: string
+      score: number
+    }>,
+    queries: [] as string[],
+  }
+
+  try {
+    guidance = await buildClinicalGuidance(intake, impressions)
+  } catch (err) {
+    console.warn('[SPN] Clinical guidance unavailable during ICE fill; using draft-note fallback only:', err)
+  }
 
   // 106: Formulation — always prefer guidance.formulation (mechanism-based)
   // over note.clinicalFormulation (which may just list factors without explaining how
   // the diagnosis formed)
-  const formulation = guidance.formulation || note.clinicalFormulation
+  const formulation = buildIceFormulationText(intake, note, guidance, impressions)
   if (formulation && fillProseMirrorByLabel('free-text-106', formulation)) filled++
 
   // 107: Diagnosis and impression — evidence-based, not just a name list
@@ -1387,10 +2454,14 @@ function injectFillSoapButton(): void {
 let lastUrl = window.location.href
 const observer = new MutationObserver(() => {
   if (window.location.href !== lastUrl) {
-    lastUrl = window.location.href
+    const newUrl = window.location.href
+    checkSessionEndOnUrlChange(newUrl)
+    lastUrl = newUrl
     setTimeout(injectFillButton, 500)
     setTimeout(injectFillSoapButton, 500)
     setTimeout(injectVideoNotePanel, 500)
+    setTimeout(startCaptionObserver, 1000)
+    setTimeout(startSessionEndDetection, 1000)
   }
 })
 
@@ -1402,11 +2473,15 @@ if (document.readyState === 'loading') {
     setTimeout(injectFillButton, 500)
     setTimeout(injectFillSoapButton, 500)
     setTimeout(injectVideoNotePanel, 500)
+    setTimeout(startCaptionObserver, 1000)
+    setTimeout(startSessionEndDetection, 1000)
   })
 } else {
   setTimeout(injectFillButton, 500)
   setTimeout(injectFillSoapButton, 500)
   setTimeout(injectVideoNotePanel, 500)
+  setTimeout(startCaptionObserver, 1000)
+  setTimeout(startSessionEndDetection, 1000)
 }
 
 registerFloatingButtonsController(() => {

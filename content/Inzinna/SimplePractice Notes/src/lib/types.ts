@@ -6,14 +6,15 @@ export interface AssessmentItem {
   response: string
   score: number
   maxScore: number
+  lastResponse?: string
 }
 
 export interface AssessmentResult {
-  name: string // "GAD-7" or "PHQ-9"
-  totalScore: number
-  severity: string // e.g. "minimal or no anxiety"
+  name: string // e.g. "GAD-7", "PHQ-9", "C-SSRS"
+  totalScore: number // scored total or count of endorsed yes/no items
+  severity: string // e.g. severity label or assessment summary
   items: AssessmentItem[]
-  difficulty: string // functional impairment question
+  difficulty: string // functional impairment question or secondary summary
   capturedAt: string
 }
 
@@ -89,6 +90,7 @@ export interface IntakeData {
   // Standardized assessments
   gad7: AssessmentResult | null
   phq9: AssessmentResult | null
+  cssrs: AssessmentResult | null
 
   // Symptom checklist
   recentSymptoms: string
@@ -158,6 +160,7 @@ export const EMPTY_INTAKE: IntakeData = {
   domesticViolenceHistory: '',
   gad7: null,
   phq9: null,
+  cssrs: null,
   recentSymptoms: '',
   additionalSymptoms: '',
   additionalInfo: '',
@@ -376,6 +379,38 @@ export const EMPTY_DIAGNOSTIC_WORKSPACE: DiagnosticWorkspaceState = {
   updatedAt: '',
 }
 
+// ── MSE Checklist (clinician observations during session) ──
+
+export interface MseChecklist {
+  appearance: string[]
+  behavior: string[]
+  speech: string[]
+  mood: string
+  affect: string[]
+  thoughtProcess: string[]
+  thoughtContent: string[]
+  perceptions: string[]
+  cognition: string[]
+  insight: string
+  judgment: string
+  updatedAt: string
+}
+
+export const DEFAULT_MSE_CHECKLIST: MseChecklist = {
+  appearance: ['well-groomed', 'casually dressed', 'appropriate hygiene'],
+  behavior: ['cooperative', 'good eye contact', 'psychomotor normal'],
+  speech: ['normal rate', 'normal volume', 'coherent'],
+  mood: '',
+  affect: ['congruent', 'full range'],
+  thoughtProcess: ['linear', 'goal-directed'],
+  thoughtContent: ['no SI', 'no HI', 'no delusions'],
+  perceptions: ['no hallucinations'],
+  cognition: ['alert', 'oriented x4', 'intact memory'],
+  insight: 'good',
+  judgment: 'good',
+  updatedAt: '',
+}
+
 // ── Provider Preferences ──
 
 export interface ProviderPreferences {
@@ -384,6 +419,9 @@ export interface ProviderPreferences {
   defaultLocation: string
   firstVisitCPT: string
   followUpCPT: string
+  ollamaModel: string
+  ollamaEndpoint: string
+  autoGenerateOnSessionEnd: boolean
 }
 
 // ── Treatment Plan (extracted from SimplePractice treatment plan page) ──
@@ -463,6 +501,7 @@ export interface SoapDraft {
   generatedAt: string
   editedAt: string
   status: 'draft' | 'reviewed' | 'submitted'
+  generationMethod: 'llm' | 'regex' | ''
 }
 
 export const EMPTY_SESSION_TRANSCRIPT: SessionTranscript = {
@@ -486,6 +525,7 @@ export const EMPTY_SOAP_DRAFT: SoapDraft = {
   generatedAt: '',
   editedAt: '',
   status: 'draft',
+  generationMethod: '',
 }
 
 // ── Session Notes (live note-taking during video appointments) ──
@@ -508,4 +548,7 @@ export const DEFAULT_PREFERENCES: ProviderPreferences = {
   defaultLocation: 'Video Office',
   firstVisitCPT: '90791',
   followUpCPT: '90837',
+  ollamaModel: 'llama3.1:8b',
+  ollamaEndpoint: 'http://localhost:11434',
+  autoGenerateOnSessionEnd: true,
 }

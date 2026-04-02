@@ -733,7 +733,11 @@ export function buildSoapDraft(
   } = {}
 ): SoapDraft {
   const sessionLines = splitLines(sessionNotes)
-  const signals = analyzeSessionNotes(sessionLines)
+  const transcriptLines = transcript?.entries
+    .map((entry) => sanitizeLine(entry.text))
+    .filter((line) => line && !isLowSignalLine(line)) ?? []
+  const allLines = [...sessionLines, ...transcriptLines]
+  const signals = analyzeSessionNotes(allLines)
   const transcriptText = buildTranscriptText(transcript)
   const clientName = firstNonEmpty(
     meta.clientName,
@@ -754,10 +758,10 @@ export function buildSoapDraft(
     clientName,
     sessionDate,
     cptCode: prefs.followUpCPT || '90837',
-    subjective: summarizeSubjective(sessionLines, signals, transcript, intake),
-    objective: summarizeObjective(sessionLines, signals, intake),
-    assessment: summarizeAssessment(sessionLines, signals, treatmentPlan, diagnosticImpressions, intake),
-    plan: summarizePlan(sessionLines, signals, treatmentPlan),
+    subjective: summarizeSubjective(allLines, signals, transcript, intake),
+    objective: summarizeObjective(allLines, signals, intake),
+    assessment: summarizeAssessment(allLines, signals, treatmentPlan, diagnosticImpressions, intake),
+    plan: summarizePlan(allLines, signals, treatmentPlan),
     sessionNotes: sessionNotes.trim(),
     transcript: transcriptText,
     treatmentPlanId: extractTreatmentPlanId(treatmentPlan),

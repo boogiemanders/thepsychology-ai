@@ -1,11 +1,40 @@
 # SimplePractice Notes — Session Handoff
 
-> Last updated: 2026-03-31
+> Last updated: 2026-04-02
 
 ## What This Is
 A standalone Chrome extension (Manifest V3) for Inzinna's clinical workflow. It extracts patient intake data from SimplePractice, and will eventually generate DSM-5 diagnostic impressions, record session audio, and auto-fill progress notes back into SimplePractice.
 
 ## Where We Left Off
+
+### LLM-Powered SOAP Note Generation via Local Ollama
+Replaced the regex-driven `buildSoapDraft()` with an LLM pipeline that sends session transcripts + clinical context to a local Ollama instance (`localhost:11434`, `llama3.1:8b`). All PHI stays on device. Falls back to regex builder if Ollama is unavailable.
+
+**New files:**
+- `src/lib/ollama-client.ts` — Ollama HTTP client (health check, model check, generate)
+- `src/lib/soap-prompt.ts` — Builds system + user prompt from transcript, intake, diagnoses, treatment plan, MSE checklist
+- `src/lib/soap-generator.ts` — Orchestrator: tries LLM first, falls back to regex `buildSoapDraft()`
+
+**Supporting changes:**
+- `types.ts` — Added `MseChecklist`, `ProviderPreferences` with Ollama settings, `SoapDraft.generationMethod` field
+- `storage.ts` — MSE checklist CRUD operations
+- `manifest.json` — Added `localhost` host permission for Ollama API
+- `popup.ts` — Switched draft generation to use LLM generator pipeline
+
+### MSE Quick Check UI
+Collapsible pill-toggle checklist in the video notes panel for clinicians to tap MSE (Mental Status Exam) observations during session: appearance, behavior, speech, mood, affect, thought process/content, perceptions, cognition, insight, judgment. Auto-saves to session storage.
+
+### Session End Auto-Detection
+Detects when clinician leaves the video room (URL change from `/appt-{id}/room`) and auto-triggers SOAP generation via Ollama.
+
+### C-SSRS Assessment Support
+Added Columbia Suicide Severity Rating Scale alongside GAD-7/PHQ-9 — extract, score, store, auto-fetch from linked intake notes.
+
+### Pronoun-Aware Clinical Narrative
+Full `PronounForms` (subject/object/possessive/reflexive). Rewrites first-person client language to third-person clinical prose throughout generated notes.
+
+### Manual Notes → Structured Extraction
+Pattern-based functions mine clinician notes for themes (anxiety, anger, trauma, relationships, substances) and generate additional SOAP content from unstructured text.
 
 ### ICE Auto-Filler — Working Against Real DOM
 `fill-note.ts` has been fully rewritten to map intake data to the exact **Initial Clinical Evaluation** (ICE) form fields. All 111 fields have been mapped by type:
@@ -70,8 +99,11 @@ Both service workers poll their dist/ files every 1s. When a file size change is
 | File | What It Does |
 |------|-------------|
 | `manifest.json` | Manifest V3, targets `*.simplepractice.com`, permissions for storage/alarms/sidePanel |
-| `src/lib/types.ts` | `IntakeData` (30+ fields), `AssessmentResult`/`AssessmentItem` (GAD-7/PHQ-9), `ProgressNote`, `NoteStatus` |
-| `src/lib/storage.ts` | Session storage for PHI (1hr TTL), `mergeIntake()` for assessment data, local storage for provider prefs |
+| `src/lib/types.ts` | `IntakeData` (30+ fields), `AssessmentResult`/`AssessmentItem` (GAD-7/PHQ-9/C-SSRS), `MseChecklist`, `ProviderPreferences`, `ProgressNote`, `NoteStatus` |
+| `src/lib/storage.ts` | Session storage for PHI (1hr TTL), `mergeIntake()` for assessment data, MSE checklist CRUD, local storage for provider prefs |
+| `src/lib/ollama-client.ts` | Ollama HTTP client — health check, model availability, text generation |
+| `src/lib/soap-prompt.ts` | Builds system + user prompts from transcript, intake, diagnoses, treatment plan, MSE |
+| `src/lib/soap-generator.ts` | SOAP generation orchestrator — LLM-first with regex fallback |
 | `src/lib/diagnostic-engine.ts` | Intake-driven diagnostic scoring, criterion evaluation, and impression generation |
 | `src/lib/note-draft.ts` | Async draft-note generator that now pulls knowledge-backed formulation / treatment guidance |
 | `src/lib/clinical-knowledge.ts` | Corpus manifest/index loader plus lightweight search over bundled clinical references |
@@ -99,15 +131,54 @@ Both service workers poll their dist/ files every 1s. When a file size change is
 ## What's Next (from PLAN.md)
 
 ### Immediate Next Steps
+
+#### D&TP (Diagnosis & Treatment Plan) Auto-Filler — READY TO BUILD
+Full field map captured. URL pattern: `/clients/{id}/diagnosis_treatment_plans/{tpId}/edit`
+
+**D&TP form field map:**
+| Section | Field IDs | Fill from |
+|---------|-----------|-----------|
+| Clinical summary | `free-text-1` | Chief complaint narrative |
+| Strengths | `multi-select-2` (13 items) | Intake protective factors |
+| Barriers | `multi-select-3` (18 items) | Intake risk factors, substance use, etc. |
+| Risk | `multi-select-4` (5 items: Suicide, Homicide, Assault, Other, No risk) | SI/HI from intake |
+| Interventions | `multi-select-14` (58 therapy modalities) | Clinical guidance engine |
+| Treatment goals | `multi-select-20` (8 items) | Presentation severity |
+| Goal/Status combos | dynamic comboboxes (aria-label "Goal:", "Status:") | Counseling goals |
+| ProseMirror `free-text-16` | **TBD — need visual label** | ? |
+| ProseMirror `free-text-17` | **TBD — need visual label** | ? |
+| `frequency` | text input | Clinical guidance |
+| `diagnosisDescription` | text input | Diagnostic workspace |
+| Diagnosis search | `spds-input-search-container-6-trigger-input` | Diagnostic workspace |
+| Treatment type combo | aria-label "Treatment type:" | From session type |
+
+**Page header scraping (no intake needed):**
+- Client name from `h1.name` → `short-answer-3` equivalent
+- DOB from `.item` span containing "DOB" → `short-answer-4` equivalent
+
+**Helper scripts:** `scripts/dump-fields.js`, `scripts/dump-labels.js`, `scripts/dump-pm-context.js` for future DOM inspection.
+
+#### Diagnostic Engine Bug — FIXED
+PTSD criterion A was false-positive matching because:
+1. `buildCombinedNarrative` joined question+answer text from rawQA — question prompts like "physical/sexual abuse" always matched `TRAUMA_PATTERN`
+2. `getFieldValues` for rawQA returned question text as evidence
+3. PTSD override didn't check for negative/empty answers before matching
+
+**Fix (committed in `7abcedd`):**
+- rawQA corpus now uses only answer text, not question+answer
+- PTSD criterion A override requires affirmative trauma field answers
+- Broader narrative match downgrades to "likely" instead of "met"
+
+#### Other Pending
 - **Test the full workflow end-to-end:** Capture Intake → navigate to ICE note → Fill from Intake
 - **Test the new note-generation path live:** Capture Intake → Generate Draft → Open Diagnostics → Generate Summary / Write to Note Draft
 - **Verify guidance quality on real intakes:** sanity-check whether the formulation / interventions match the intake and pinned diagnoses, especially with substance-use, trauma, and personality presentations
 - **MSE, ROS, Assessment sections** (fields 64-111) need session observation data — these are Phase 4-6
 
 ### High-Leverage Next Thread Targets
+- **Build `fillDTPFromIntake()` in `fill-note.ts`** — all field IDs mapped above, just need `free-text-16`/`free-text-17` labels
 - **Tighten corpus retrieval quality:** remove more front matter/index hits from `clinical-knowledge` extraction and improve ranking in `clinical-guidance.ts`
 - **Make source support more actionable:** add deep-linkable references or expandable excerpts in the sidepanel instead of preview-only cards
-- **Map guidance into actual SP fields:** make sure generated formulation / treatment-plan sections can be pushed into the correct SimplePractice note fields, not just saved in the draft object
 - **Add clinician controls:** allow accepting/rejecting suggested goals and interventions before writing them into the note draft
 - **Broaden diagnostic / guidance coupling:** use pinned diagnosis selection to steer which modalities/resources are prioritized instead of only using broad symptom heuristics
 - **Add tests for note generation:** the async `buildDraftNote()` path and clinical-guidance heuristics now need coverage so future changes do not silently regress note quality
@@ -151,8 +222,8 @@ Chrome Extension (Manifest V3)
 └── (Future) Real-Time Session Layer
     └── Live diagnostic interview UI fed by transcript / diarization
 
-Local Server (Future — localhost)
-├── faster-whisper (transcription)
-├── whisperX (speaker diarization)
-└── Ollama + local LLM (criteria matching, note generation)
+Local Server (localhost)
+├── Ollama (llama3.1:8b) — SOAP note generation, criteria matching
+├── faster-whisper (transcription — future)
+└── whisperX (speaker diarization — future)
 ```

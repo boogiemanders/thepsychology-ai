@@ -49,6 +49,7 @@
     domesticViolenceHistory: "",
     gad7: null,
     phq9: null,
+    cssrs: null,
     recentSymptoms: "",
     additionalSymptoms: "",
     additionalInfo: "",
@@ -108,6 +109,20 @@
     finalizedImpressions: [],
     updatedAt: ""
   };
+  var DEFAULT_MSE_CHECKLIST = {
+    appearance: ["well-groomed", "casually dressed", "appropriate hygiene"],
+    behavior: ["cooperative", "good eye contact", "psychomotor normal"],
+    speech: ["normal rate", "normal volume", "coherent"],
+    mood: "",
+    affect: ["congruent", "full range"],
+    thoughtProcess: ["linear", "goal-directed"],
+    thoughtContent: ["no SI", "no HI", "no delusions"],
+    perceptions: ["no hallucinations"],
+    cognition: ["alert", "oriented x4", "intact memory"],
+    insight: "good",
+    judgment: "good",
+    updatedAt: ""
+  };
   var EMPTY_TREATMENT_PLAN = {
     clientId: "",
     diagnoses: [],
@@ -143,7 +158,8 @@
     treatmentPlanId: "",
     generatedAt: "",
     editedAt: "",
-    status: "draft"
+    status: "draft",
+    generationMethod: ""
   };
   var EMPTY_SESSION_NOTES = {
     apptId: "",
@@ -155,7 +171,10 @@
     providerLastName: "Chan",
     defaultLocation: "Video Office",
     firstVisitCPT: "90791",
-    followUpCPT: "90837"
+    followUpCPT: "90837",
+    ollamaModel: "llama3.1:8b",
+    ollamaEndpoint: "http://localhost:11434",
+    autoGenerateOnSessionEnd: true
   };
 
   // src/lib/intake-augmentation.ts
@@ -182,6 +201,11 @@
   }
   function joinLines(lines) {
     return unique(lines).join("\n");
+  }
+  function collectTopicLines(lines, patterns, limit = 4) {
+    return unique(
+      lines.filter((line) => patterns.some((pattern) => pattern.test(line)))
+    ).slice(0, limit);
   }
   function extractHeaderName(lines) {
     for (const line of lines.slice(0, 4)) {
@@ -215,7 +239,11 @@
   }
   function extractSurgeries(lines) {
     const surgeries = joinLines(
-      collectMatchingLines(lines, /\b(surger(?:y|ies)|acl|labrum|meniscus|rotator cuff)\b/i, 3)
+      collectMatchingLines(
+        lines,
+        /\b(surger(?:y|ies)|appendectomy|tonsillectomy|c-section|cesarean|acl|labrum|meniscus|rotator cuff|shoulder surgery|knee surgery|back surgery|hip surgery)\b/i,
+        4
+      )
     );
     return surgeries ? { surgeries } : {};
   }
@@ -249,7 +277,7 @@
   }
   function extractCounselingGoals(lines) {
     const counselingGoals = joinLines(
-      collectMatchingLines(lines, /\b(want to|want better|meet regularly|more actionable|cope|cbt|dynamic|act)\b/i, 6)
+      collectMatchingLines(lines, /\b(want to|want better|meet regularly|more actionable|cope|cbt|dynamic|act|drink less|stop drinking|move forward|anger management|exercise|breathe|breathing)\b/i, 6)
     );
     return counselingGoals ? { counselingGoals } : {};
   }
@@ -257,11 +285,47 @@
     const recentSymptoms = joinLines(
       collectMatchingLines(
         lines,
-        /\b(anxious|anxiety|insomnia|stomach pain|queasy|nausea|flashback|dissociation|foggy|fogginess|trouble concentrating|sleep disturbance|hopelessness|shock)\b/i,
-        8
+        /\b(anxious|anxiety|insomnia|stomach pain|queasy|nausea|flashback|dissociation|foggy|fogginess|trouble concentrating|sleep disturbance|hopelessness|shock|anger|angry|irritable|yell(?:ed|ing)?|jealous|defensive|relationship stress|attachment)\b/i,
+        10
       )
     );
     return recentSymptoms ? { recentSymptoms } : {};
+  }
+  function extractRelationshipDescription(lines) {
+    const relationshipDescription = joinLines(
+      collectTopicLines(
+        lines,
+        [
+          /\b(girlfriend|boyfriend|partner|wife|husband|spouse|ex\b|relationship|dating|marriage|engage(?:d|ment)?|breakup|divorce|attachment|jealous)\b/i
+        ],
+        5
+      )
+    );
+    return relationshipDescription ? { relationshipDescription } : {};
+  }
+  function extractSubstanceUse(lines) {
+    const alcoholLines = collectTopicLines(
+      lines,
+      [
+        /\b(alcohol|drink(?:ing)?|drank|beer|wine|liquor|vodka|tequila|patron|soju)\b/i,
+        /\bstop drinking\b/i,
+        /\bdrink less\b/i
+      ],
+      4
+    );
+    const drugLines = collectTopicLines(
+      lines,
+      [
+        /\b(weed|marijuana|cannabis|joint|blunt|thc|vape|nicotine|cigarette|cocaine|crack|meth|adderall|xanax|opioid|pill|mushroom|mushrooms|shroom|lsd)\b/i
+      ],
+      4
+    );
+    const substanceUseHistory = joinLines([...alcoholLines, ...drugLines]);
+    return {
+      alcoholUse: joinLines(alcoholLines),
+      drugUse: joinLines(drugLines),
+      substanceUseHistory
+    };
   }
   function extractChiefComplaint(notes) {
     const parts = [];
@@ -303,7 +367,9 @@
       ...extractTbi(lines),
       ...extractPriorTreatment(lines),
       ...extractCounselingGoals(lines),
-      ...extractRecentSymptoms(lines)
+      ...extractRecentSymptoms(lines),
+      ...extractRelationshipDescription(lines),
+      ...extractSubstanceUse(lines)
     };
   }
   function pickString(primary, fallback) {
@@ -327,7 +393,11 @@
       troubleSleeping: pickString(intake.troubleSleeping, derived.troubleSleeping),
       tbiLoc: pickString(intake.tbiLoc, derived.tbiLoc),
       occupation: pickString(intake.occupation, derived.occupation),
-      recentSymptoms: pickString(intake.recentSymptoms, derived.recentSymptoms)
+      recentSymptoms: pickString(intake.recentSymptoms, derived.recentSymptoms),
+      relationshipDescription: pickString(intake.relationshipDescription, derived.relationshipDescription),
+      alcoholUse: pickString(intake.alcoholUse, derived.alcoholUse),
+      drugUse: pickString(intake.drugUse, derived.drugUse),
+      substanceUseHistory: pickString(intake.substanceUseHistory, derived.substanceUseHistory)
     };
   }
 
@@ -340,6 +410,7 @@
   var TREATMENT_PLAN_KEY = "spn_treatment_plan";
   var SOAP_DRAFT_KEY = "spn_soap_draft";
   var TRANSCRIPT_KEY = "spn_transcript";
+  var MSE_CHECKLIST_KEY = "spn_mse_checklist";
   function normalizeIntake(intake) {
     return {
       ...EMPTY_INTAKE,
@@ -350,7 +421,8 @@
       },
       rawQA: Array.isArray(intake?.rawQA) ? intake.rawQA : [],
       gad7: intake?.gad7 ?? null,
-      phq9: intake?.phq9 ?? null
+      phq9: intake?.phq9 ?? null,
+      cssrs: intake?.cssrs ?? null
     };
   }
   function normalizeDiagnosticImpression(impression) {
@@ -460,7 +532,8 @@
       },
       rawQA: partial.rawQA ?? existing?.rawQA ?? EMPTY_INTAKE.rawQA,
       gad7: partial.gad7 ?? existing?.gad7 ?? null,
-      phq9: partial.phq9 ?? existing?.phq9 ?? null
+      phq9: partial.phq9 ?? existing?.phq9 ?? null,
+      cssrs: partial.cssrs ?? existing?.cssrs ?? null
     });
   }
   async function saveNote(note) {
@@ -526,6 +599,11 @@
   async function saveSessionNotes(notes) {
     await chrome.storage.session.set({ [SESSION_NOTES_KEY]: notes });
   }
+  async function getMseChecklist() {
+    const result = await chrome.storage.session.get(MSE_CHECKLIST_KEY);
+    const checklist = result[MSE_CHECKLIST_KEY];
+    return checklist ? { ...DEFAULT_MSE_CHECKLIST, ...checklist } : null;
+  }
   async function clearAll() {
     await chrome.storage.session.remove([
       INTAKE_KEY,
@@ -534,7 +612,8 @@
       SESSION_NOTES_KEY,
       TREATMENT_PLAN_KEY,
       SOAP_DRAFT_KEY,
-      TRANSCRIPT_KEY
+      TRANSCRIPT_KEY,
+      MSE_CHECKLIST_KEY
     ]);
   }
 
@@ -1425,6 +1504,9 @@
     if (intake.gad7) {
       parts.push(`GAD-7 ${intake.gad7.totalScore}/21 (${intake.gad7.severity || "severity not parsed"})`);
     }
+    if (intake.cssrs) {
+      parts.push(`C-SSRS ${intake.cssrs.totalScore} yes (${intake.cssrs.severity || "summary not parsed"})`);
+    }
     return parts;
   }
   function summarizeRisk(intake) {
@@ -1555,6 +1637,232 @@
         noteSubmitted: false
       }
     };
+  }
+
+  // src/lib/ollama-client.ts
+  var DEFAULT_ENDPOINT = "http://localhost:11434";
+  var GENERATE_TIMEOUT_MS = 12e4;
+  async function checkOllamaHealth(endpoint = DEFAULT_ENDPOINT) {
+    try {
+      const res = await fetch(`${endpoint}/api/tags`, { signal: AbortSignal.timeout(5e3) });
+      return res.ok;
+    } catch {
+      return false;
+    }
+  }
+  async function generateCompletion(prompt, system, model, endpoint = DEFAULT_ENDPOINT) {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), GENERATE_TIMEOUT_MS);
+    try {
+      const res = await fetch(`${endpoint}/api/generate`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          model,
+          prompt,
+          system,
+          stream: false,
+          options: {
+            temperature: 0.3,
+            num_predict: 4096
+          }
+        }),
+        signal: controller.signal
+      });
+      if (!res.ok) {
+        const text = await res.text().catch(() => "");
+        throw new Error(`Ollama returned ${res.status}: ${text.slice(0, 200)}`);
+      }
+      const data = await res.json();
+      return data.response;
+    } finally {
+      clearTimeout(timeoutId);
+    }
+  }
+
+  // src/lib/soap-prompt.ts
+  var MAX_TRANSCRIPT_WORDS = 2e4;
+  var SYSTEM_PROMPT = `You are a clinical documentation assistant for a licensed psychologist. Your task is to generate a SOAP progress note from a session transcript and clinical context.
+
+OUTPUT FORMAT: Return a valid JSON object with exactly four string keys:
+{"subjective":"...","objective":"...","assessment":"...","plan":"..."}
+
+Do NOT wrap the JSON in markdown code fences. Return ONLY the raw JSON object.
+
+DOCUMENTATION STANDARDS:
+- Use third-person clinical prose (e.g., "Client reported..." not "I said...")
+- Use DSM-5 terminology for diagnoses and symptoms
+- Include direct client quotes in the Subjective section using quotation marks
+- Reference specific content from the session \u2014 do not write generic filler
+- Only include information explicitly stated in the transcript or session notes
+- Do NOT fabricate quotes, symptoms, or clinical observations not present in the data
+- Write for insurance/medical necessity \u2014 be specific about functional impairment and treatment rationale
+
+SECTION REQUIREMENTS:
+
+SUBJECTIVE: What the client reported. Include:
+- Primary concerns discussed this session
+- Symptom changes since last session (better, worse, same)
+- Relevant life events or stressors mentioned
+- Client's own words as direct quotes for key statements
+- Mood self-report if stated
+- Risk factors: SI/HI denial or endorsement (always document)
+- Substance use updates if discussed
+
+OBJECTIVE: What the clinician observed. Include:
+- Full Mental Status Exam in this exact format:
+  Mental Status Exam:
+  Appearance: [from checklist or transcript observations]
+  Behavior: [from checklist or transcript observations]
+  Speech: [from checklist or transcript observations]
+  Mood/Affect: [mood is client's words; affect is clinician's observation]
+  Thoughts: [thought process and content, SI/HI status]
+  Cognition: [orientation, attention, memory observations]
+  Insight/Judgment: [from checklist or inferred from session]
+- Behavioral observations during session (engagement, emotional responses, coping demonstrated)
+- Screening scores if administered (PHQ-9, GAD-7, C-SSRS)
+
+ASSESSMENT: Clinical analysis. Include:
+- Current symptom presentation and severity
+- Progress or regression relative to treatment goals (reference specific goals if provided)
+- Diagnostic formulation \u2014 how current presentation relates to active diagnoses
+- Functional impact on daily life, work, relationships
+- Protective and risk factors observed
+- Clinical reasoning for treatment approach
+- Statement of medical necessity for continued treatment
+
+PLAN: Next steps. Include:
+- Continue/modify treatment frequency and modality
+- Specific focus for next session based on this session's content
+- Interventions to use or continue (name specific techniques: CBT, exposure, MI, etc.)
+- Between-session assignments or skills to practice
+- Any referrals, medication coordination, or safety planning
+- Next appointment date/time if mentioned`;
+  function buildSoapPrompt(transcript, sessionNotes, intake, diagnosticImpressions, treatmentPlan, mseChecklist, prefs) {
+    const sections = [];
+    if (intake) {
+      const contextLines = [];
+      const name = [intake.firstName, intake.lastName].filter(Boolean).join(" ") || intake.fullName || "Client";
+      contextLines.push(`Client: ${name}`);
+      if (intake.dob) contextLines.push(`DOB: ${intake.dob}`);
+      if (intake.sex) contextLines.push(`Sex: ${intake.sex}`);
+      if (intake.genderIdentity) contextLines.push(`Gender identity: ${intake.genderIdentity}`);
+      if (intake.race || intake.ethnicity) contextLines.push(`Race/ethnicity: ${[intake.race, intake.ethnicity].filter(Boolean).join(", ")}`);
+      if (intake.occupation) contextLines.push(`Occupation: ${intake.occupation}`);
+      if (intake.livingArrangement) contextLines.push(`Living arrangement: ${intake.livingArrangement}`);
+      if (intake.maritalStatus) contextLines.push(`Marital status: ${intake.maritalStatus}`);
+      if (intake.medications) contextLines.push(`Current medications: ${intake.medications}`);
+      if (intake.chiefComplaint) contextLines.push(`Chief complaint (from intake): ${intake.chiefComplaint}`);
+      if (intake.suicidalIdeation) contextLines.push(`SI history: ${intake.suicidalIdeation}`);
+      if (intake.homicidalIdeation) contextLines.push(`HI history: ${intake.homicidalIdeation}`);
+      if (intake.substanceUseHistory) contextLines.push(`Substance use: ${intake.substanceUseHistory}`);
+      if (intake.medicalHistory) contextLines.push(`Medical history: ${intake.medicalHistory}`);
+      if (intake.surgeries) contextLines.push(`Surgeries: ${intake.surgeries}`);
+      if (intake.tbiLoc) contextLines.push(`TBI/LOC: ${intake.tbiLoc}`);
+      if (contextLines.length > 1) {
+        sections.push(`=== PATIENT CONTEXT ===
+${contextLines.join("\n")}`);
+      }
+    }
+    if (diagnosticImpressions.length > 0) {
+      const diagLines = diagnosticImpressions.map((d) => {
+        const parts = [`${d.code} ${d.name} (${d.confidence} confidence)`];
+        if (d.diagnosticReasoning) parts.push(`  Reasoning: ${d.diagnosticReasoning}`);
+        return parts.join("\n");
+      });
+      sections.push(`=== ACTIVE DIAGNOSES ===
+${diagLines.join("\n")}`);
+    }
+    if (treatmentPlan && treatmentPlan.goals.length > 0) {
+      const tpLines = [];
+      if (treatmentPlan.treatmentFrequency) tpLines.push(`Frequency: ${treatmentPlan.treatmentFrequency}`);
+      if (treatmentPlan.treatmentType) tpLines.push(`Type: ${treatmentPlan.treatmentType}`);
+      for (const goal of treatmentPlan.goals) {
+        tpLines.push(`Goal ${goal.goalNumber}: ${goal.goal} (Status: ${goal.status || "active"})`);
+        for (const obj of goal.objectives) {
+          tpLines.push(`  ${obj.id}: ${obj.objective}`);
+        }
+      }
+      if (treatmentPlan.interventions.length > 0) {
+        tpLines.push(`Interventions: ${treatmentPlan.interventions.join("; ")}`);
+      }
+      sections.push(`=== TREATMENT PLAN ===
+${tpLines.join("\n")}`);
+    }
+    const assessments = [];
+    const formatAssessment = (a, label) => {
+      if (!a) return;
+      assessments.push(`${label}: ${a.totalScore} \u2014 ${a.severity}`);
+    };
+    if (intake) {
+      formatAssessment(intake.phq9, "PHQ-9");
+      formatAssessment(intake.gad7, "GAD-7");
+      formatAssessment(intake.cssrs, "C-SSRS");
+    }
+    if (assessments.length > 0) {
+      sections.push(`=== PRIOR ASSESSMENTS ===
+${assessments.join("\n")}`);
+    }
+    if (mseChecklist) {
+      const mseLines = [];
+      const fmt = (label, values) => {
+        if (values.length > 0) mseLines.push(`${label}: ${values.join(", ")}`);
+      };
+      fmt("Appearance", mseChecklist.appearance);
+      fmt("Behavior", mseChecklist.behavior);
+      fmt("Speech", mseChecklist.speech);
+      if (mseChecklist.mood) mseLines.push(`Mood (client's words): "${mseChecklist.mood}"`);
+      fmt("Affect", mseChecklist.affect);
+      fmt("Thought process", mseChecklist.thoughtProcess);
+      fmt("Thought content", mseChecklist.thoughtContent);
+      fmt("Perceptions", mseChecklist.perceptions);
+      fmt("Cognition", mseChecklist.cognition);
+      if (mseChecklist.insight) mseLines.push(`Insight: ${mseChecklist.insight}`);
+      if (mseChecklist.judgment) mseLines.push(`Judgment: ${mseChecklist.judgment}`);
+      sections.push(`=== MSE CHECKLIST (clinician observations) ===
+${mseLines.join("\n")}`);
+    }
+    const trimmedNotes = sessionNotes.trim();
+    if (trimmedNotes) {
+      sections.push(`=== CLINICIAN SESSION NOTES ===
+${trimmedNotes}`);
+    }
+    if (transcript && transcript.entries.length > 0) {
+      const transcriptText = formatTranscript(transcript, prefs);
+      sections.push(`=== SESSION TRANSCRIPT ===
+${transcriptText}`);
+    }
+    const providerName = [prefs.providerFirstName, prefs.providerLastName].filter(Boolean).join(" ") || "Clinician";
+    sections.push(
+      `=== INSTRUCTIONS ===
+Generate a SOAP progress note for this session. The treating clinician is ${providerName}. Use the MSE checklist data for the Objective section's Mental Status Exam. Use the transcript and session notes to populate the Subjective, Assessment, and Plan sections. Reference treatment plan goals in the Assessment section when relevant. Return ONLY valid JSON with keys: subjective, objective, assessment, plan.`
+    );
+    return {
+      system: SYSTEM_PROMPT,
+      user: sections.join("\n\n")
+    };
+  }
+  function formatTranscript(transcript, prefs) {
+    const providerName = [prefs.providerFirstName, prefs.providerLastName].filter(Boolean).join(" ") || "Clinician";
+    const lines = [];
+    let wordCount = 0;
+    for (const entry of transcript.entries) {
+      const speaker = entry.speaker === "clinician" ? providerName : "Client";
+      const line = `${speaker}: ${entry.text}`;
+      const words = line.split(/\s+/).length;
+      wordCount += words;
+      if (wordCount > MAX_TRANSCRIPT_WORDS) {
+        lines.push("[... transcript truncated for length ...]");
+        const lastEntries = transcript.entries.slice(-10);
+        for (const last of lastEntries) {
+          const s = last.speaker === "clinician" ? providerName : "Client";
+          lines.push(`${s}: ${last.text}`);
+        }
+        break;
+      }
+      lines.push(line);
+    }
+    return lines.join("\n");
   }
 
   // src/lib/soap-builder.ts
@@ -2109,7 +2417,9 @@
   }
   function buildSoapDraft(sessionNotes, transcript, treatmentPlan, intake, diagnosticImpressions, prefs, meta = {}) {
     const sessionLines = splitLines2(sessionNotes);
-    const signals = analyzeSessionNotes(sessionLines);
+    const transcriptLines = transcript?.entries.map((entry) => sanitizeLine(entry.text)).filter((line) => line && !isLowSignalLine(line)) ?? [];
+    const allLines = [...sessionLines, ...transcriptLines];
+    const signals = analyzeSessionNotes(allLines);
     const transcriptText = buildTranscriptText(transcript);
     const clientName = firstNonEmpty3(
       meta.clientName,
@@ -2129,16 +2439,107 @@
       clientName,
       sessionDate,
       cptCode: prefs.followUpCPT || "90837",
-      subjective: summarizeSubjective(sessionLines, signals, transcript, intake),
-      objective: summarizeObjective(sessionLines, signals, intake),
-      assessment: summarizeAssessment(sessionLines, signals, treatmentPlan, diagnosticImpressions, intake),
-      plan: summarizePlan(sessionLines, signals, treatmentPlan),
+      subjective: summarizeSubjective(allLines, signals, transcript, intake),
+      objective: summarizeObjective(allLines, signals, intake),
+      assessment: summarizeAssessment(allLines, signals, treatmentPlan, diagnosticImpressions, intake),
+      plan: summarizePlan(allLines, signals, treatmentPlan),
       sessionNotes: sessionNotes.trim(),
       transcript: transcriptText,
       treatmentPlanId: extractTreatmentPlanId(treatmentPlan),
       generatedAt: now,
       editedAt: now,
       status: "draft"
+    };
+  }
+
+  // src/lib/soap-generator.ts
+  async function generateSoapDraft(sessionNotes, transcript, treatmentPlan, intake, diagnosticImpressions, mseChecklist, prefs, meta = {}) {
+    const endpoint = prefs.ollamaEndpoint || "http://localhost:11434";
+    const model = prefs.ollamaModel || "llama3.1:8b";
+    const healthy = await checkOllamaHealth(endpoint);
+    if (healthy) {
+      try {
+        const draft = await generateWithLLM(sessionNotes, transcript, treatmentPlan, intake, diagnosticImpressions, mseChecklist, prefs, meta, model, endpoint);
+        if (draft) return draft;
+      } catch (err) {
+        console.warn("[SPN] LLM generation failed, falling back to regex:", err);
+      }
+    } else {
+      console.log("[SPN] Ollama not available, using regex-based SOAP builder");
+    }
+    const regexDraft = buildSoapDraft(sessionNotes, transcript, treatmentPlan, intake, diagnosticImpressions, prefs, meta);
+    return { ...regexDraft, generationMethod: "regex" };
+  }
+  async function generateWithLLM(sessionNotes, transcript, treatmentPlan, intake, diagnosticImpressions, mseChecklist, prefs, meta, model, endpoint) {
+    const { system, user } = buildSoapPrompt(transcript, sessionNotes, intake, diagnosticImpressions, treatmentPlan, mseChecklist, prefs);
+    console.log("[SPN] Generating SOAP with Ollama...", { model, promptLength: user.length });
+    const raw = await generateCompletion(user, system, model, endpoint);
+    const parsed = parseJsonResponse(raw);
+    if (!parsed) {
+      console.warn("[SPN] Failed to parse LLM response as JSON, attempting section extraction");
+      const extracted = extractSections(raw);
+      if (!extracted) return null;
+      return buildDraftFromSections(extracted, sessionNotes, transcript, prefs, meta);
+    }
+    return buildDraftFromSections(parsed, sessionNotes, transcript, prefs, meta);
+  }
+  function parseJsonResponse(raw) {
+    try {
+      const obj = JSON.parse(raw);
+      if (obj.subjective && obj.objective && obj.assessment && obj.plan) {
+        return obj;
+      }
+    } catch {
+    }
+    const fenceMatch = raw.match(/```(?:json)?\s*\n?([\s\S]*?)\n?\s*```/);
+    if (fenceMatch) {
+      try {
+        const obj = JSON.parse(fenceMatch[1]);
+        if (obj.subjective && obj.objective && obj.assessment && obj.plan) {
+          return obj;
+        }
+      } catch {
+      }
+    }
+    return null;
+  }
+  function extractSections(raw) {
+    const subMatch = raw.match(/(?:^|\n)\s*(?:Subjective|SUBJECTIVE)[:\s]*\n?([\s\S]*?)(?=\n\s*(?:Objective|OBJECTIVE)[:\s]|\n\s*$)/i);
+    const objMatch = raw.match(/(?:^|\n)\s*(?:Objective|OBJECTIVE)[:\s]*\n?([\s\S]*?)(?=\n\s*(?:Assessment|ASSESSMENT)[:\s]|\n\s*$)/i);
+    const assMatch = raw.match(/(?:^|\n)\s*(?:Assessment|ASSESSMENT)[:\s]*\n?([\s\S]*?)(?=\n\s*(?:Plan|PLAN)[:\s]|\n\s*$)/i);
+    const planMatch = raw.match(/(?:^|\n)\s*(?:Plan|PLAN)[:\s]*\n?([\s\S]*?)$/i);
+    if (subMatch && objMatch && assMatch && planMatch) {
+      return {
+        subjective: subMatch[1].trim(),
+        objective: objMatch[1].trim(),
+        assessment: assMatch[1].trim(),
+        plan: planMatch[1].trim()
+      };
+    }
+    return null;
+  }
+  function buildDraftFromSections(sections, sessionNotes, transcript, prefs, meta) {
+    const clientName = meta.clientName || "Client";
+    const sessionDate = meta.sessionDate || (/* @__PURE__ */ new Date()).toLocaleDateString("en-US");
+    const transcriptText = transcript?.entries.map((e) => `${e.speaker === "clinician" ? "Clinician" : "Client"}: ${e.text}`).join("\n") ?? "";
+    const now = (/* @__PURE__ */ new Date()).toISOString();
+    return {
+      ...EMPTY_SOAP_DRAFT,
+      apptId: meta.apptId ?? "",
+      clientName,
+      sessionDate,
+      cptCode: prefs.followUpCPT || "90837",
+      subjective: sections.subjective,
+      objective: sections.objective,
+      assessment: sections.assessment,
+      plan: sections.plan,
+      sessionNotes: sessionNotes.trim(),
+      transcript: transcriptText,
+      treatmentPlanId: "",
+      generatedAt: now,
+      editedAt: now,
+      status: "draft",
+      generationMethod: "llm"
     };
   }
 
@@ -2254,6 +2655,7 @@
       ["PCP", intake.primaryCarePhysician],
       ["Alcohol", intake.alcoholUse],
       ["Drugs", intake.drugUse],
+      ["C-SSRS", intake.cssrs?.severity ?? ""],
       ["SI", intake.suicidalIdeation],
       ["Suicide Attempts", intake.suicideAttemptHistory],
       ["HI", intake.homicidalIdeation],
@@ -2352,14 +2754,8 @@ ${plan.goals.map((goal) => `- Goal ${goal.goalNumber}: ${goal.goal}`).join("\n")
   }
   async function generateSoapDraftForAppointment(apptId, sessionNotes) {
     const treatmentPlan = await getTreatmentPlan();
-    if (!treatmentPlan) {
-      return {
-        draft: null,
-        error: "Capture a treatment plan first on the client treatment plan page."
-      };
-    }
     const intake = await getIntake();
-    if (intake?.clientId && treatmentPlan.clientId && intake.clientId !== treatmentPlan.clientId) {
+    if (intake?.clientId && treatmentPlan?.clientId && intake.clientId !== treatmentPlan.clientId) {
       return {
         draft: null,
         error: "The captured treatment plan appears to belong to a different client. Re-capture the correct treatment plan first."
@@ -2369,18 +2765,24 @@ ${plan.goals.map((goal) => `- Goal ${goal.goalNumber}: ${goal.goal}`).join("\n")
     const note = await getNote();
     const workspace = await getDiagnosticWorkspace();
     const transcript = await getTranscript(apptId);
+    const mseChecklist = await getMseChecklist();
     const diagnosticImpressions = workspace?.finalizedImpressions?.length ? workspace.finalizedImpressions : note?.diagnosticImpressions ?? [];
-    const draft = buildSoapDraft(
+    const clientName = intake ? [intake.firstName, intake.lastName].filter(Boolean).join(" ") || intake.fullName : "";
+    const draft = await generateSoapDraft(
       sessionNotes,
       transcript,
       treatmentPlan,
       intake,
       diagnosticImpressions,
+      mseChecklist,
       prefs,
-      { apptId }
+      { apptId, clientName }
     );
     await saveSoapDraft(draft);
-    return { draft };
+    const warnings = [];
+    if (!treatmentPlan) warnings.push("No treatment plan captured \u2014 Assessment section will be limited.");
+    if (draft.generationMethod === "regex") warnings.push("Ollama not available \u2014 used template-based generation.");
+    return { draft, error: warnings.join(" ") || void 0 };
   }
   async function populateSettingsForm() {
     const prefs = await getPreferences();
@@ -2421,8 +2823,10 @@ ${plan.goals.map((goal) => `- Goal ${goal.goalNumber}: ${goal.goal}`).join("\n")
     const intakeInfo = document.getElementById("intake-info");
     if (saveManualBtn) saveManualBtn.style.display = isSessionMode ? "none" : "block";
     if (soapBtn) soapBtn.style.display = isSessionMode ? "block" : "none";
+    const diagSessionBtn = document.getElementById("btn-open-diagnostics-session");
+    if (diagSessionBtn) diagSessionBtn.style.display = isSessionMode ? "block" : "none";
     if (draftBtn) {
-      draftBtn.textContent = isSessionMode ? "Generate SOAP Draft" : note ? "Regenerate Draft" : "Generate Draft";
+      draftBtn.textContent = isSessionMode ? soapDraft ? "Regenerate SOAP Draft" : "Generate SOAP Draft" : note ? "Regenerate Draft" : "Generate Draft";
     }
     if (treatmentPlanSection && treatmentPlanContent) {
       treatmentPlanSection.style.display = isSessionMode ? "block" : "none";
@@ -2540,11 +2944,14 @@ ${plan.goals.map((goal) => `- Goal ${goal.goalNumber}: ${goal.goal}`).join("\n")
     }
     const input = document.getElementById("manual-notes-input");
     const notes = input?.value.replace(/\r\n/g, "\n").trim() ?? "";
-    if (!notes) {
-      setStatus("Paste session notes first.", "error");
+    const transcript = await getTranscript(ctx.apptId);
+    if (!notes && !transcript?.entries.length) {
+      setStatus("Type session notes or enable captions first.", "error");
       return;
     }
-    await saveSessionNotes({ apptId: ctx.apptId, notes, updatedAt: (/* @__PURE__ */ new Date()).toISOString() });
+    if (notes) {
+      await saveSessionNotes({ apptId: ctx.apptId, notes, updatedAt: (/* @__PURE__ */ new Date()).toISOString() });
+    }
     const { draft, error } = await generateSoapDraftForAppointment(ctx.apptId, notes);
     if (!draft) {
       if (input) delete input.dataset.userEdited;
@@ -2558,16 +2965,17 @@ ${plan.goals.map((goal) => `- Goal ${goal.goalNumber}: ${goal.goal}`).join("\n")
       draft
     }) : null;
     if (input) delete input.dataset.userEdited;
+    const suffix = error ?? "";
     if (fillResponse?.ok) {
-      setStatus("Session notes saved, SOAP draft generated, and SOAP fields filled.", "success");
+      setStatus(`Session notes saved, SOAP draft generated, and SOAP fields filled.${suffix}`, "success");
     } else if (fillResponse?.error) {
-      setStatus(`Session notes saved and SOAP draft generated. ${fillResponse.error}`, "neutral");
+      setStatus(`Session notes saved and SOAP draft generated. ${fillResponse.error}${suffix}`, "neutral");
     } else {
-      setStatus("Session notes saved and SOAP draft generated. Open the SOAP progress note form to fill automatically.", "neutral");
+      setStatus(`Session notes saved and SOAP draft generated. Open the SOAP progress note form to fill automatically.${suffix}`, "neutral");
     }
     await render();
   });
-  document.getElementById("btn-open-diagnostics")?.addEventListener("click", async () => {
+  async function openDiagnosticsSidePanel() {
     const tab = await getActiveTab();
     if (!tab?.id || !chrome.sidePanel) return;
     await chrome.sidePanel.setOptions({
@@ -2577,17 +2985,22 @@ ${plan.goals.map((goal) => `- Goal ${goal.goalNumber}: ${goal.goal}`).join("\n")
     });
     await chrome.sidePanel.open({ tabId: tab.id });
     window.close();
-  });
+  }
+  document.getElementById("btn-open-diagnostics")?.addEventListener("click", openDiagnosticsSidePanel);
+  document.getElementById("btn-open-diagnostics-session")?.addEventListener("click", openDiagnosticsSidePanel);
   document.getElementById("btn-generate-draft")?.addEventListener("click", async () => {
     const apptCtx = await detectApptContext();
     if (apptCtx.isAppt) {
       const input = document.getElementById("manual-notes-input");
       const notes = input?.value.replace(/\r\n/g, "\n").trim() ?? "";
-      if (!notes) {
-        setStatus("Paste session notes first.", "error");
+      const transcript = await getTranscript(apptCtx.apptId);
+      if (!notes && !transcript?.entries.length) {
+        setStatus("Type session notes or enable captions first.", "error");
         return;
       }
-      await saveSessionNotes({ apptId: apptCtx.apptId, notes, updatedAt: (/* @__PURE__ */ new Date()).toISOString() });
+      if (notes) {
+        await saveSessionNotes({ apptId: apptCtx.apptId, notes, updatedAt: (/* @__PURE__ */ new Date()).toISOString() });
+      }
       const { draft, error } = await generateSoapDraftForAppointment(apptCtx.apptId, notes);
       if (!draft) {
         setStatus(error ?? "Failed to generate SOAP draft.", "error");

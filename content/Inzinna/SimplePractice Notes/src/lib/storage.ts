@@ -17,6 +17,8 @@ import {
   SessionTranscript,
   EMPTY_SESSION_TRANSCRIPT,
   TranscriptEntry,
+  MseChecklist,
+  DEFAULT_MSE_CHECKLIST,
 } from './types'
 import { augmentIntakeWithManualNotes } from './intake-augmentation'
 
@@ -28,6 +30,7 @@ const SESSION_NOTES_KEY = 'spn_session_notes'
 const TREATMENT_PLAN_KEY = 'spn_treatment_plan'
 const SOAP_DRAFT_KEY = 'spn_soap_draft'
 const TRANSCRIPT_KEY = 'spn_transcript'
+const MSE_CHECKLIST_KEY = 'spn_mse_checklist'
 
 // ── Intake Data (session storage — PHI with TTL) ──
 
@@ -44,6 +47,7 @@ function normalizeIntake(
     rawQA: Array.isArray(intake?.rawQA) ? intake.rawQA : [],
     gad7: intake?.gad7 ?? null,
     phq9: intake?.phq9 ?? null,
+    cssrs: intake?.cssrs ?? null,
   }
 }
 
@@ -192,6 +196,7 @@ export async function mergeIntake(partial: Partial<IntakeData>): Promise<void> {
     rawQA: partial.rawQA ?? existing?.rawQA ?? EMPTY_INTAKE.rawQA,
     gad7: partial.gad7 ?? existing?.gad7 ?? null,
     phq9: partial.phq9 ?? existing?.phq9 ?? null,
+    cssrs: partial.cssrs ?? existing?.cssrs ?? null,
   })
 }
 
@@ -362,6 +367,24 @@ export async function saveSessionNotes(notes: SessionNotes): Promise<void> {
   await chrome.storage.session.set({ [SESSION_NOTES_KEY]: notes })
 }
 
+// ── MSE Checklist (session storage — clinician observations during video) ──
+
+export async function saveMseChecklist(checklist: MseChecklist): Promise<void> {
+  await chrome.storage.session.set({
+    [MSE_CHECKLIST_KEY]: { ...DEFAULT_MSE_CHECKLIST, ...checklist, updatedAt: new Date().toISOString() },
+  })
+}
+
+export async function getMseChecklist(): Promise<MseChecklist | null> {
+  const result = await chrome.storage.session.get(MSE_CHECKLIST_KEY)
+  const checklist = result[MSE_CHECKLIST_KEY] as Partial<MseChecklist> | undefined
+  return checklist ? { ...DEFAULT_MSE_CHECKLIST, ...checklist } : null
+}
+
+export async function clearMseChecklist(): Promise<void> {
+  await chrome.storage.session.remove(MSE_CHECKLIST_KEY)
+}
+
 // ── Cleanup ──
 
 export async function clearAll(): Promise<void> {
@@ -373,5 +396,6 @@ export async function clearAll(): Promise<void> {
     TREATMENT_PLAN_KEY,
     SOAP_DRAFT_KEY,
     TRANSCRIPT_KEY,
+    MSE_CHECKLIST_KEY,
   ])
 }

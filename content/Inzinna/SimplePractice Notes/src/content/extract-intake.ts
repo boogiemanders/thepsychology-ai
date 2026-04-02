@@ -165,6 +165,8 @@ interface QAPair {
   answer: string
 }
 
+type AssessmentName = 'GAD-7' | 'PHQ-9' | 'C-SSRS'
+
 /**
  * Parse all Q&A pairs from the .markdown.intake-answers container.
  * Questions are <h3> elements. Answers are all sibling <p> and <ul>
@@ -511,9 +513,9 @@ function countCapturedFields(intake: IntakeData): number {
   return count
 }
 
-// ── Assessment Extraction (GAD-7, PHQ-9) ──
+// ── Assessment Extraction (GAD-7, PHQ-9, C-SSRS) ──
 
-function detectAssessmentTypeFromQuestions(root: Document | Element = document): 'GAD-7' | 'PHQ-9' | null {
+function detectAssessmentTypeFromQuestions(root: Document | Element = document): AssessmentName | null {
   const questionTexts = Array.from(root.querySelectorAll('tbody tr.et-tr td:first-child'))
     .map((cell) => normalizedText(cell.textContent))
     .filter(Boolean)
@@ -525,15 +527,21 @@ function detectAssessmentTypeFromQuestions(root: Document | Element = document):
   if (/little interest or pleasure in doing things|feeling down depressed or hopeless|poor appetite or overeating/.test(combined)) {
     return 'PHQ-9'
   }
+  if (/wished you were dead|thoughts of killing yourself|prepared to do anything to end your life/.test(combined)) {
+    return 'C-SSRS'
+  }
 
   const numberedQuestions = root.querySelectorAll('tbody tr.et-tr .question-number').length
   if (numberedQuestions === 7) return 'GAD-7'
   if (numberedQuestions === 9) return 'PHQ-9'
+  if (numberedQuestions === 6 && /kill yourself|end your life|wished you were dead/.test(combined)) {
+    return 'C-SSRS'
+  }
 
   return null
 }
 
-function detectAssessmentType(root: Document | Element = document): 'GAD-7' | 'PHQ-9' | null {
+function detectAssessmentType(root: Document | Element = document): AssessmentName | null {
   const docTitle = root instanceof Document ? root.title : root.ownerDocument?.title ?? ''
   const title = normalizedText([
     root.querySelector('.title-item h3')?.textContent ?? '',
@@ -543,10 +551,94 @@ function detectAssessmentType(root: Document | Element = document): 'GAD-7' | 'P
 
   if (title.includes('gad 7')) return 'GAD-7'
   if (title.includes('phq 9')) return 'PHQ-9'
+  if (
+    title.includes('c-ssrs') ||
+    title.includes('cssrs') ||
+    title.includes('columbia-suicide severity rating scale') ||
+    title.includes('columbia suicide severity rating scale')
+  ) {
+    return 'C-SSRS'
+  }
   return detectAssessmentTypeFromQuestions(root)
 }
 
-function extractAssessmentFromRoot(name: 'GAD-7' | 'PHQ-9', root: Document | Element = document): AssessmentResult {
+function isAffirmativeAssessmentResponse(value: string): boolean {
+  return /^(yes|y|true)$/i.test(value.trim())
+}
+
+function summarizeCssrs(items: AssessmentItem[]): { totalScore: number; severity: string; difficulty: string } {
+  const yesItems = items.filter((item) => isAffirmativeAssessmentResponse(item.response))
+  const yesNumbers = new Set(yesItems.map((item) => item.number))
+  const totalScore = yesItems.length
+  const highestIdeationLevel = [5, 4, 3, 2, 1].find((number) => yesNumbers.has(number)) ?? 0
+  const suicidalBehavior = yesNumbers.has(6)
+
+  let severity = 'No recent suicidal ideation or behavior endorsed'
+  if (highestIdeationLevel === 1) severity = 'Passive wish to be dead endorsed'
+  if (highestIdeationLevel === 2) severity = 'Active suicidal ideation endorsed'
+  if (highestIdeationLevel === 3) severity = 'Suicidal ideation with method endorsed'
+  if (highestIdeationLevel === 4) severity = 'Suicidal ideation with intent endorsed'
+  if (highestIdeationLevel === 5) severity = 'Suicidal ideation with plan and intent endorsed'
+  if (suicidalBehavior) {
+    severity =
+      highestIdeationLevel > 0
+        ? `${severity}; suicidal behavior/preparation also endorsed`
+        : 'Suicidal behavior/preparation endorsed without current ideation items'
+  }
+
+  const difficulty = [
+    `Highest recent ideation level: ${highestIdeationLevel}/5`,
+    suicidalBehavior ? 'Behavior item 6: Yes' : 'Behavior item 6: No',
+  ].join(' · ')
+
+  return { totalScore, severity, difficulty }
+}
+
+function extractCssrsFromRoot(root: Document | Element = document): AssessmentResult {
+  const items: AssessmentItem[] = []
+
+  const rows = root.querySelectorAll('tbody tr.et-tr')
+  for (const row of Array.from(rows)) {
+    const cells = row.querySelectorAll('td')
+    if (cells.length < 3) continue
+
+    const firstCell = cells[0]
+    const questionNumEl = firstCell.querySelector('.question-number')
+    if (!questionNumEl) continue
+
+    const number = parseInt(questionNumEl.textContent?.replace('.', '') ?? '0', 10)
+    if (!number) continue
+
+    const questionText = firstCell.querySelector('.question-number + div p')?.textContent?.trim() ?? ''
+    const response = cells[1]?.querySelector('.cell-container p')?.textContent?.trim() ?? ''
+    const lastResponse = cells[2]?.querySelector('.cell-container p')?.textContent?.trim() ?? ''
+
+    items.push({
+      number,
+      question: questionText,
+      response,
+      score: isAffirmativeAssessmentResponse(response) ? 1 : 0,
+      maxScore: 1,
+      lastResponse: lastResponse === '--' ? '' : lastResponse,
+    })
+  }
+
+  const summary = summarizeCssrs(items)
+  return {
+    name: 'C-SSRS',
+    totalScore: summary.totalScore,
+    severity: summary.severity,
+    items,
+    difficulty: summary.difficulty,
+    capturedAt: new Date().toISOString(),
+  }
+}
+
+function extractAssessmentFromRoot(name: AssessmentName, root: Document | Element = document): AssessmentResult {
+  if (name === 'C-SSRS') {
+    return extractCssrsFromRoot(root)
+  }
+
   const items: AssessmentItem[] = []
   let difficulty = ''
 
@@ -602,8 +694,20 @@ function extractAssessmentFromRoot(name: 'GAD-7' | 'PHQ-9', root: Document | Ele
 /**
  * Find GAD-7 and PHQ-9 links on the current page, fetch them, and extract scores.
  */
-async function fetchAssessmentsFromLinks(): Promise<{ gad7: AssessmentResult | null; phq9: AssessmentResult | null }> {
-  const result: { gad7: AssessmentResult | null; phq9: AssessmentResult | null } = { gad7: null, phq9: null }
+async function fetchAssessmentsFromLinks(): Promise<{
+  gad7: AssessmentResult | null
+  phq9: AssessmentResult | null
+  cssrs: AssessmentResult | null
+}> {
+  const result: {
+    gad7: AssessmentResult | null
+    phq9: AssessmentResult | null
+    cssrs: AssessmentResult | null
+  } = {
+    gad7: null,
+    phq9: null,
+    cssrs: null,
+  }
 
   // Fetch all linked intake-note pages, then classify by the fetched page title.
   // This is more reliable than depending on the visible anchor text to contain
@@ -631,21 +735,27 @@ async function fetchAssessmentsFromLinks(): Promise<{ gad7: AssessmentResult | n
       const assessment = extractAssessmentFromRoot(type, doc)
       if (assessment.items.length > 0) {
         if (type === 'GAD-7') result.gad7 = assessment
-        else result.phq9 = assessment
-        console.log(`[SPN] Auto-captured ${type} from ${url}: score ${assessment.totalScore}`)
+        else if (type === 'PHQ-9') result.phq9 = assessment
+        else result.cssrs = assessment
+
+        const detail = type === 'C-SSRS'
+          ? assessment.severity
+          : `score ${assessment.totalScore}`
+        console.log(`[SPN] Auto-captured ${type} from ${url}: ${detail}`)
       }
 
-      if (result.gad7 && result.phq9) break
+      if (result.gad7 && result.phq9 && result.cssrs) break
     } catch (err) {
       console.warn(`[SPN] Failed to fetch linked intake note ${url}:`, err)
     }
   }
 
-  if (!result.gad7 || !result.phq9) {
+  if (!result.gad7 || !result.phq9 || !result.cssrs) {
     console.log('[SPN] Auto-capture missing assessments after sibling-note scan:', {
       missing: [
         !result.gad7 ? 'GAD-7' : '',
         !result.phq9 ? 'PHQ-9' : '',
+        !result.cssrs ? 'C-SSRS' : '',
       ].filter(Boolean),
     })
   }
@@ -667,10 +777,17 @@ async function handleAssessmentCapture(): Promise<void> {
     }
 
     const result = extractAssessmentFromRoot(type)
-    const key = type === 'GAD-7' ? 'gad7' : 'phq9'
-    await mergeIntake({ [key]: result })
+    const updates = type === 'GAD-7'
+      ? { gad7: result }
+      : type === 'PHQ-9'
+        ? { phq9: result }
+        : { cssrs: result }
+    await mergeIntake(updates)
 
-    showToast(`Captured ${type}: score ${result.totalScore} (${result.severity})`, 'success')
+    const message = type === 'C-SSRS'
+      ? `Captured ${type}: ${result.severity}`
+      : `Captured ${type}: score ${result.totalScore} (${result.severity})`
+    showToast(message, 'success')
     console.log(`[SPN] Captured ${type}:`, result)
   } catch (err) {
     if (isExtensionContextInvalidatedError(err)) {
@@ -943,12 +1060,14 @@ async function handleCaptureClick(): Promise<void> {
     const assessments = await fetchAssessmentsFromLinks()
     if (assessments.gad7) intake.gad7 = assessments.gad7
     if (assessments.phq9) intake.phq9 = assessments.phq9
+    if (assessments.cssrs) intake.cssrs = assessments.cssrs
 
     await mergeIntake(intake)
 
     const extras: string[] = []
     if (assessments.gad7) extras.push(`GAD-7: ${assessments.gad7.totalScore}`)
     if (assessments.phq9) extras.push(`PHQ-9: ${assessments.phq9.totalScore}`)
+    if (assessments.cssrs) extras.push(`C-SSRS: ${assessments.cssrs.totalScore} yes`)
     const extraText = extras.length ? ` + ${extras.join(', ')}` : ''
 
     const name = `${intake.firstName} ${intake.lastName}`.trim() || 'client'

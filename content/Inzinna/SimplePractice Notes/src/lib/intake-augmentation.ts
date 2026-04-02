@@ -35,6 +35,12 @@ function joinLines(lines: string[]): string {
   return unique(lines).join('\n')
 }
 
+function collectTopicLines(lines: string[], patterns: RegExp[], limit = 4): string[] {
+  return unique(
+    lines.filter((line) => patterns.some((pattern) => pattern.test(line)))
+  ).slice(0, limit)
+}
+
 function extractHeaderName(lines: string[]): Partial<IntakeData> {
   for (const line of lines.slice(0, 4)) {
     const match = line.match(/^(?:\d{1,2}\/\d{1,2}(?:\/\d{2,4})?\s+)?([A-Z][a-z]+(?:\s+[A-Z][a-z]+){0,2})$/)
@@ -74,7 +80,11 @@ function extractOccupation(lines: string[]): Partial<IntakeData> {
 
 function extractSurgeries(lines: string[]): Partial<IntakeData> {
   const surgeries = joinLines(
-    collectMatchingLines(lines, /\b(surger(?:y|ies)|acl|labrum|meniscus|rotator cuff)\b/i, 3)
+    collectMatchingLines(
+      lines,
+      /\b(surger(?:y|ies)|appendectomy|tonsillectomy|c-section|cesarean|acl|labrum|meniscus|rotator cuff|shoulder surgery|knee surgery|back surgery|hip surgery)\b/i,
+      4
+    )
   )
   return surgeries ? { surgeries } : {}
 }
@@ -113,7 +123,7 @@ function extractPriorTreatment(lines: string[]): Partial<IntakeData> {
 
 function extractCounselingGoals(lines: string[]): Partial<IntakeData> {
   const counselingGoals = joinLines(
-    collectMatchingLines(lines, /\b(want to|want better|meet regularly|more actionable|cope|cbt|dynamic|act)\b/i, 6)
+    collectMatchingLines(lines, /\b(want to|want better|meet regularly|more actionable|cope|cbt|dynamic|act|drink less|stop drinking|move forward|anger management|exercise|breathe|breathing)\b/i, 6)
   )
   return counselingGoals ? { counselingGoals } : {}
 }
@@ -122,11 +132,50 @@ function extractRecentSymptoms(lines: string[]): Partial<IntakeData> {
   const recentSymptoms = joinLines(
     collectMatchingLines(
       lines,
-      /\b(anxious|anxiety|insomnia|stomach pain|queasy|nausea|flashback|dissociation|foggy|fogginess|trouble concentrating|sleep disturbance|hopelessness|shock)\b/i,
-      8
+      /\b(anxious|anxiety|insomnia|stomach pain|queasy|nausea|flashback|dissociation|foggy|fogginess|trouble concentrating|sleep disturbance|hopelessness|shock|anger|angry|irritable|yell(?:ed|ing)?|jealous|defensive|relationship stress|attachment)\b/i,
+      10
     )
   )
   return recentSymptoms ? { recentSymptoms } : {}
+}
+
+function extractRelationshipDescription(lines: string[]): Partial<IntakeData> {
+  const relationshipDescription = joinLines(
+    collectTopicLines(
+      lines,
+      [
+        /\b(girlfriend|boyfriend|partner|wife|husband|spouse|ex\b|relationship|dating|marriage|engage(?:d|ment)?|breakup|divorce|attachment|jealous)\b/i,
+      ],
+      5
+    )
+  )
+  return relationshipDescription ? { relationshipDescription } : {}
+}
+
+function extractSubstanceUse(lines: string[]): Partial<IntakeData> {
+  const alcoholLines = collectTopicLines(
+    lines,
+    [
+      /\b(alcohol|drink(?:ing)?|drank|beer|wine|liquor|vodka|tequila|patron|soju)\b/i,
+      /\bstop drinking\b/i,
+      /\bdrink less\b/i,
+    ],
+    4
+  )
+  const drugLines = collectTopicLines(
+    lines,
+    [
+      /\b(weed|marijuana|cannabis|joint|blunt|thc|vape|nicotine|cigarette|cocaine|crack|meth|adderall|xanax|opioid|pill|mushroom|mushrooms|shroom|lsd)\b/i,
+    ],
+    4
+  )
+  const substanceUseHistory = joinLines([...alcoholLines, ...drugLines])
+
+  return {
+    alcoholUse: joinLines(alcoholLines),
+    drugUse: joinLines(drugLines),
+    substanceUseHistory,
+  }
 }
 
 function extractChiefComplaint(notes: string): Partial<IntakeData> {
@@ -180,6 +229,8 @@ export function deriveIntakeFromManualNotes(notes: string): Partial<IntakeData> 
     ...extractPriorTreatment(lines),
     ...extractCounselingGoals(lines),
     ...extractRecentSymptoms(lines),
+    ...extractRelationshipDescription(lines),
+    ...extractSubstanceUse(lines),
   }
 }
 
@@ -208,5 +259,9 @@ export function augmentIntakeWithManualNotes(intake: IntakeData): IntakeData {
     tbiLoc: pickString(intake.tbiLoc, derived.tbiLoc),
     occupation: pickString(intake.occupation, derived.occupation),
     recentSymptoms: pickString(intake.recentSymptoms, derived.recentSymptoms),
+    relationshipDescription: pickString(intake.relationshipDescription, derived.relationshipDescription),
+    alcoholUse: pickString(intake.alcoholUse, derived.alcoholUse),
+    drugUse: pickString(intake.drugUse, derived.drugUse),
+    substanceUseHistory: pickString(intake.substanceUseHistory, derived.substanceUseHistory),
   }
 }

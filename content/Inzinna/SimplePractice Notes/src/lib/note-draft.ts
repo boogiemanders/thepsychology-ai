@@ -33,6 +33,10 @@ function summarizeAssessments(intake: IntakeData): string[] {
     parts.push(`GAD-7 ${intake.gad7.totalScore}/21 (${intake.gad7.severity || 'severity not parsed'})`)
   }
 
+  if (intake.cssrs) {
+    parts.push(`C-SSRS ${intake.cssrs.totalScore} yes (${intake.cssrs.severity || 'summary not parsed'})`)
+  }
+
   return parts
 }
 

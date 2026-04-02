@@ -284,6 +284,22 @@ function buildScoreCards(intake: IntakeData): string {
           <div class="score-subtext">No GAD-7 assessment in session storage.</div>
         </div>
       `,
+    intake.cssrs
+      ? `
+        <div class="score-card">
+          <div class="score-label">C-SSRS</div>
+          <div class="score-value">${intake.cssrs.totalScore} yes</div>
+          <div class="score-subtext">${escapeHtml(intake.cssrs.severity || 'Summary unavailable')}</div>
+          <div class="score-subtext">${escapeHtml(intake.cssrs.difficulty || 'No C-SSRS detail captured')}</div>
+        </div>
+      `
+      : `
+        <div class="score-card">
+          <div class="score-label">C-SSRS</div>
+          <div class="score-value">Not captured</div>
+          <div class="score-subtext">No C-SSRS assessment in session storage.</div>
+        </div>
+      `,
   ]
 
   return cards.join('')

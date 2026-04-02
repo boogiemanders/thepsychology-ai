@@ -49,6 +49,7 @@
     domesticViolenceHistory: "",
     gad7: null,
     phq9: null,
+    cssrs: null,
     recentSymptoms: "",
     additionalSymptoms: "",
     additionalInfo: "",
@@ -130,7 +131,8 @@
       },
       rawQA: Array.isArray(intake?.rawQA) ? intake.rawQA : [],
       gad7: intake?.gad7 ?? null,
-      phq9: intake?.phq9 ?? null
+      phq9: intake?.phq9 ?? null,
+      cssrs: intake?.cssrs ?? null
     };
   }
   async function saveIntake(intake) {
@@ -152,7 +154,8 @@
       },
       rawQA: partial.rawQA ?? existing?.rawQA ?? EMPTY_INTAKE.rawQA,
       gad7: partial.gad7 ?? existing?.gad7 ?? null,
-      phq9: partial.phq9 ?? existing?.phq9 ?? null
+      phq9: partial.phq9 ?? existing?.phq9 ?? null,
+      cssrs: partial.cssrs ?? existing?.cssrs ?? null
     });
   }
   async function saveTreatmentPlan(plan) {
@@ -637,9 +640,15 @@
     if (/little interest or pleasure in doing things|feeling down depressed or hopeless|poor appetite or overeating/.test(combined)) {
       return "PHQ-9";
     }
+    if (/wished you were dead|thoughts of killing yourself|prepared to do anything to end your life/.test(combined)) {
+      return "C-SSRS";
+    }
     const numberedQuestions = root.querySelectorAll("tbody tr.et-tr .question-number").length;
     if (numberedQuestions === 7) return "GAD-7";
     if (numberedQuestions === 9) return "PHQ-9";
+    if (numberedQuestions === 6 && /kill yourself|end your life|wished you were dead/.test(combined)) {
+      return "C-SSRS";
+    }
     return null;
   }
   function detectAssessmentType(root = document) {
@@ -651,9 +660,72 @@
     ].join(" "));
     if (title.includes("gad 7")) return "GAD-7";
     if (title.includes("phq 9")) return "PHQ-9";
+    if (title.includes("c-ssrs") || title.includes("cssrs") || title.includes("columbia-suicide severity rating scale") || title.includes("columbia suicide severity rating scale")) {
+      return "C-SSRS";
+    }
     return detectAssessmentTypeFromQuestions(root);
   }
+  function isAffirmativeAssessmentResponse(value) {
+    return /^(yes|y|true)$/i.test(value.trim());
+  }
+  function summarizeCssrs(items) {
+    const yesItems = items.filter((item) => isAffirmativeAssessmentResponse(item.response));
+    const yesNumbers = new Set(yesItems.map((item) => item.number));
+    const totalScore = yesItems.length;
+    const highestIdeationLevel = [5, 4, 3, 2, 1].find((number) => yesNumbers.has(number)) ?? 0;
+    const suicidalBehavior = yesNumbers.has(6);
+    let severity = "No recent suicidal ideation or behavior endorsed";
+    if (highestIdeationLevel === 1) severity = "Passive wish to be dead endorsed";
+    if (highestIdeationLevel === 2) severity = "Active suicidal ideation endorsed";
+    if (highestIdeationLevel === 3) severity = "Suicidal ideation with method endorsed";
+    if (highestIdeationLevel === 4) severity = "Suicidal ideation with intent endorsed";
+    if (highestIdeationLevel === 5) severity = "Suicidal ideation with plan and intent endorsed";
+    if (suicidalBehavior) {
+      severity = highestIdeationLevel > 0 ? `${severity}; suicidal behavior/preparation also endorsed` : "Suicidal behavior/preparation endorsed without current ideation items";
+    }
+    const difficulty = [
+      `Highest recent ideation level: ${highestIdeationLevel}/5`,
+      suicidalBehavior ? "Behavior item 6: Yes" : "Behavior item 6: No"
+    ].join(" \xB7 ");
+    return { totalScore, severity, difficulty };
+  }
+  function extractCssrsFromRoot(root = document) {
+    const items = [];
+    const rows = root.querySelectorAll("tbody tr.et-tr");
+    for (const row of Array.from(rows)) {
+      const cells = row.querySelectorAll("td");
+      if (cells.length < 3) continue;
+      const firstCell = cells[0];
+      const questionNumEl = firstCell.querySelector(".question-number");
+      if (!questionNumEl) continue;
+      const number = parseInt(questionNumEl.textContent?.replace(".", "") ?? "0", 10);
+      if (!number) continue;
+      const questionText = firstCell.querySelector(".question-number + div p")?.textContent?.trim() ?? "";
+      const response = cells[1]?.querySelector(".cell-container p")?.textContent?.trim() ?? "";
+      const lastResponse = cells[2]?.querySelector(".cell-container p")?.textContent?.trim() ?? "";
+      items.push({
+        number,
+        question: questionText,
+        response,
+        score: isAffirmativeAssessmentResponse(response) ? 1 : 0,
+        maxScore: 1,
+        lastResponse: lastResponse === "--" ? "" : lastResponse
+      });
+    }
+    const summary = summarizeCssrs(items);
+    return {
+      name: "C-SSRS",
+      totalScore: summary.totalScore,
+      severity: summary.severity,
+      items,
+      difficulty: summary.difficulty,
+      capturedAt: (/* @__PURE__ */ new Date()).toISOString()
+    };
+  }
   function extractAssessmentFromRoot(name, root = document) {
+    if (name === "C-SSRS") {
+      return extractCssrsFromRoot(root);
+    }
     const items = [];
     let difficulty = "";
     const scoringEl = root.querySelector(".scoring-description");
@@ -694,7 +766,11 @@
     return { name, totalScore, severity, items, difficulty, capturedAt: (/* @__PURE__ */ new Date()).toISOString() };
   }
   async function fetchAssessmentsFromLinks() {
-    const result = { gad7: null, phq9: null };
+    const result = {
+      gad7: null,
+      phq9: null,
+      cssrs: null
+    };
     const uniqueLinks = await discoverIntakeNoteUrls();
     if (uniqueLinks.length === 0) {
       console.log("[SPN] Auto-capture found no sibling intake-note URLs on this page");
@@ -716,19 +792,22 @@
         const assessment = extractAssessmentFromRoot(type, doc);
         if (assessment.items.length > 0) {
           if (type === "GAD-7") result.gad7 = assessment;
-          else result.phq9 = assessment;
-          console.log(`[SPN] Auto-captured ${type} from ${url}: score ${assessment.totalScore}`);
+          else if (type === "PHQ-9") result.phq9 = assessment;
+          else result.cssrs = assessment;
+          const detail = type === "C-SSRS" ? assessment.severity : `score ${assessment.totalScore}`;
+          console.log(`[SPN] Auto-captured ${type} from ${url}: ${detail}`);
         }
-        if (result.gad7 && result.phq9) break;
+        if (result.gad7 && result.phq9 && result.cssrs) break;
       } catch (err) {
         console.warn(`[SPN] Failed to fetch linked intake note ${url}:`, err);
       }
     }
-    if (!result.gad7 || !result.phq9) {
+    if (!result.gad7 || !result.phq9 || !result.cssrs) {
       console.log("[SPN] Auto-capture missing assessments after sibling-note scan:", {
         missing: [
           !result.gad7 ? "GAD-7" : "",
-          !result.phq9 ? "PHQ-9" : ""
+          !result.phq9 ? "PHQ-9" : "",
+          !result.cssrs ? "C-SSRS" : ""
         ].filter(Boolean)
       });
     }
@@ -746,9 +825,10 @@
         return;
       }
       const result = extractAssessmentFromRoot(type);
-      const key = type === "GAD-7" ? "gad7" : "phq9";
-      await mergeIntake({ [key]: result });
-      showToast(`Captured ${type}: score ${result.totalScore} (${result.severity})`, "success");
+      const updates = type === "GAD-7" ? { gad7: result } : type === "PHQ-9" ? { phq9: result } : { cssrs: result };
+      await mergeIntake(updates);
+      const message = type === "C-SSRS" ? `Captured ${type}: ${result.severity}` : `Captured ${type}: score ${result.totalScore} (${result.severity})`;
+      showToast(message, "success");
       console.log(`[SPN] Captured ${type}:`, result);
     } catch (err) {
       if (isExtensionContextInvalidatedError(err)) {
@@ -955,10 +1035,12 @@
       const assessments = await fetchAssessmentsFromLinks();
       if (assessments.gad7) intake.gad7 = assessments.gad7;
       if (assessments.phq9) intake.phq9 = assessments.phq9;
+      if (assessments.cssrs) intake.cssrs = assessments.cssrs;
       await mergeIntake(intake);
       const extras = [];
       if (assessments.gad7) extras.push(`GAD-7: ${assessments.gad7.totalScore}`);
       if (assessments.phq9) extras.push(`PHQ-9: ${assessments.phq9.totalScore}`);
+      if (assessments.cssrs) extras.push(`C-SSRS: ${assessments.cssrs.totalScore} yes`);
       const extraText = extras.length ? ` + ${extras.join(", ")}` : "";
       const name = `${intake.firstName} ${intake.lastName}`.trim() || "client";
       showToast(`Captured ${fieldCount} fields for ${name}${extraText}`, "success");

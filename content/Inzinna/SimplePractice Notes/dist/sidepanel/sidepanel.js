@@ -2716,6 +2716,7 @@
     domesticViolenceHistory: "",
     gad7: null,
     phq9: null,
+    cssrs: null,
     recentSymptoms: "",
     additionalSymptoms: "",
     additionalInfo: "",
@@ -2810,7 +2811,8 @@
     treatmentPlanId: "",
     generatedAt: "",
     editedAt: "",
-    status: "draft"
+    status: "draft",
+    generationMethod: ""
   };
   var EMPTY_SESSION_NOTES = {
     apptId: "",
@@ -2822,7 +2824,10 @@
     providerLastName: "Chan",
     defaultLocation: "Video Office",
     firstVisitCPT: "90791",
-    followUpCPT: "90837"
+    followUpCPT: "90837",
+    ollamaModel: "llama3.1:8b",
+    ollamaEndpoint: "http://localhost:11434",
+    autoGenerateOnSessionEnd: true
   };
 
   // src/lib/note-draft.ts
@@ -2843,6 +2848,9 @@
     }
     if (intake.gad7) {
       parts.push(`GAD-7 ${intake.gad7.totalScore}/21 (${intake.gad7.severity || "severity not parsed"})`);
+    }
+    if (intake.cssrs) {
+      parts.push(`C-SSRS ${intake.cssrs.totalScore} yes (${intake.cssrs.severity || "summary not parsed"})`);
     }
     return parts;
   }
@@ -3528,7 +3536,9 @@
   }
   function buildSoapDraft(sessionNotes, transcript, treatmentPlan, intake, diagnosticImpressions, prefs, meta = {}) {
     const sessionLines = splitLines(sessionNotes);
-    const signals = analyzeSessionNotes(sessionLines);
+    const transcriptLines = transcript?.entries.map((entry) => sanitizeLine(entry.text)).filter((line) => line && !isLowSignalLine(line)) ?? [];
+    const allLines = [...sessionLines, ...transcriptLines];
+    const signals = analyzeSessionNotes(allLines);
     const transcriptText = buildTranscriptText(transcript);
     const clientName = firstNonEmpty3(
       meta.clientName,
@@ -3548,10 +3558,10 @@
       clientName,
       sessionDate,
       cptCode: prefs.followUpCPT || "90837",
-      subjective: summarizeSubjective(sessionLines, signals, transcript, intake),
-      objective: summarizeObjective(sessionLines, signals, intake),
-      assessment: summarizeAssessment(sessionLines, signals, treatmentPlan, diagnosticImpressions, intake),
-      plan: summarizePlan(sessionLines, signals, treatmentPlan),
+      subjective: summarizeSubjective(allLines, signals, transcript, intake),
+      objective: summarizeObjective(allLines, signals, intake),
+      assessment: summarizeAssessment(allLines, signals, treatmentPlan, diagnosticImpressions, intake),
+      plan: summarizePlan(allLines, signals, treatmentPlan),
       sessionNotes: sessionNotes.trim(),
       transcript: transcriptText,
       treatmentPlanId: extractTreatmentPlanId(treatmentPlan),
@@ -3586,6 +3596,11 @@
   function joinLines(lines) {
     return unique3(lines).join("\n");
   }
+  function collectTopicLines(lines, patterns, limit = 4) {
+    return unique3(
+      lines.filter((line) => patterns.some((pattern) => pattern.test(line)))
+    ).slice(0, limit);
+  }
   function extractHeaderName(lines) {
     for (const line of lines.slice(0, 4)) {
       const match = line.match(/^(?:\d{1,2}\/\d{1,2}(?:\/\d{2,4})?\s+)?([A-Z][a-z]+(?:\s+[A-Z][a-z]+){0,2})$/);
@@ -3618,7 +3633,11 @@
   }
   function extractSurgeries(lines) {
     const surgeries = joinLines(
-      collectMatchingLines(lines, /\b(surger(?:y|ies)|acl|labrum|meniscus|rotator cuff)\b/i, 3)
+      collectMatchingLines(
+        lines,
+        /\b(surger(?:y|ies)|appendectomy|tonsillectomy|c-section|cesarean|acl|labrum|meniscus|rotator cuff|shoulder surgery|knee surgery|back surgery|hip surgery)\b/i,
+        4
+      )
     );
     return surgeries ? { surgeries } : {};
   }
@@ -3652,7 +3671,7 @@
   }
   function extractCounselingGoals(lines) {
     const counselingGoals = joinLines(
-      collectMatchingLines(lines, /\b(want to|want better|meet regularly|more actionable|cope|cbt|dynamic|act)\b/i, 6)
+      collectMatchingLines(lines, /\b(want to|want better|meet regularly|more actionable|cope|cbt|dynamic|act|drink less|stop drinking|move forward|anger management|exercise|breathe|breathing)\b/i, 6)
     );
     return counselingGoals ? { counselingGoals } : {};
   }
@@ -3660,11 +3679,47 @@
     const recentSymptoms = joinLines(
       collectMatchingLines(
         lines,
-        /\b(anxious|anxiety|insomnia|stomach pain|queasy|nausea|flashback|dissociation|foggy|fogginess|trouble concentrating|sleep disturbance|hopelessness|shock)\b/i,
-        8
+        /\b(anxious|anxiety|insomnia|stomach pain|queasy|nausea|flashback|dissociation|foggy|fogginess|trouble concentrating|sleep disturbance|hopelessness|shock|anger|angry|irritable|yell(?:ed|ing)?|jealous|defensive|relationship stress|attachment)\b/i,
+        10
       )
     );
     return recentSymptoms ? { recentSymptoms } : {};
+  }
+  function extractRelationshipDescription(lines) {
+    const relationshipDescription = joinLines(
+      collectTopicLines(
+        lines,
+        [
+          /\b(girlfriend|boyfriend|partner|wife|husband|spouse|ex\b|relationship|dating|marriage|engage(?:d|ment)?|breakup|divorce|attachment|jealous)\b/i
+        ],
+        5
+      )
+    );
+    return relationshipDescription ? { relationshipDescription } : {};
+  }
+  function extractSubstanceUse(lines) {
+    const alcoholLines = collectTopicLines(
+      lines,
+      [
+        /\b(alcohol|drink(?:ing)?|drank|beer|wine|liquor|vodka|tequila|patron|soju)\b/i,
+        /\bstop drinking\b/i,
+        /\bdrink less\b/i
+      ],
+      4
+    );
+    const drugLines = collectTopicLines(
+      lines,
+      [
+        /\b(weed|marijuana|cannabis|joint|blunt|thc|vape|nicotine|cigarette|cocaine|crack|meth|adderall|xanax|opioid|pill|mushroom|mushrooms|shroom|lsd)\b/i
+      ],
+      4
+    );
+    const substanceUseHistory = joinLines([...alcoholLines, ...drugLines]);
+    return {
+      alcoholUse: joinLines(alcoholLines),
+      drugUse: joinLines(drugLines),
+      substanceUseHistory
+    };
   }
   function extractChiefComplaint(notes) {
     const parts = [];
@@ -3706,7 +3761,9 @@
       ...extractTbi(lines),
       ...extractPriorTreatment(lines),
       ...extractCounselingGoals(lines),
-      ...extractRecentSymptoms(lines)
+      ...extractRecentSymptoms(lines),
+      ...extractRelationshipDescription(lines),
+      ...extractSubstanceUse(lines)
     };
   }
   function pickString(primary, fallback) {
@@ -3730,7 +3787,11 @@
       troubleSleeping: pickString(intake.troubleSleeping, derived.troubleSleeping),
       tbiLoc: pickString(intake.tbiLoc, derived.tbiLoc),
       occupation: pickString(intake.occupation, derived.occupation),
-      recentSymptoms: pickString(intake.recentSymptoms, derived.recentSymptoms)
+      recentSymptoms: pickString(intake.recentSymptoms, derived.recentSymptoms),
+      relationshipDescription: pickString(intake.relationshipDescription, derived.relationshipDescription),
+      alcoholUse: pickString(intake.alcoholUse, derived.alcoholUse),
+      drugUse: pickString(intake.drugUse, derived.drugUse),
+      substanceUseHistory: pickString(intake.substanceUseHistory, derived.substanceUseHistory)
     };
   }
 
@@ -3753,7 +3814,8 @@
       },
       rawQA: Array.isArray(intake?.rawQA) ? intake.rawQA : [],
       gad7: intake?.gad7 ?? null,
-      phq9: intake?.phq9 ?? null
+      phq9: intake?.phq9 ?? null,
+      cssrs: intake?.cssrs ?? null
     };
   }
   function normalizeDiagnosticImpression(impression) {
@@ -4111,6 +4173,20 @@ ${goal.objectives.map((objective) => `  - ${objective.id}: ${objective.objective
           <div class="score-label">GAD-7</div>
           <div class="score-value">Not captured</div>
           <div class="score-subtext">No GAD-7 assessment in session storage.</div>
+        </div>
+      `,
+      intake.cssrs ? `
+        <div class="score-card">
+          <div class="score-label">C-SSRS</div>
+          <div class="score-value">${intake.cssrs.totalScore} yes</div>
+          <div class="score-subtext">${escapeHtml(intake.cssrs.severity || "Summary unavailable")}</div>
+          <div class="score-subtext">${escapeHtml(intake.cssrs.difficulty || "No C-SSRS detail captured")}</div>
+        </div>
+      ` : `
+        <div class="score-card">
+          <div class="score-label">C-SSRS</div>
+          <div class="score-value">Not captured</div>
+          <div class="score-subtext">No C-SSRS assessment in session storage.</div>
         </div>
       `
     ];
