@@ -261,6 +261,54 @@ When a student passes the EPPP (tracked in `eppp_exam_results`), show a prompt:
 
 Pre-fills provider profile from student's `graduate_program_id` and `user_research_profile` data.
 
+### Postdoc Supervision Pipeline
+
+**The trigger:** When a licensed provider on the platform (starting with Inzinna) reaches capacity — more patients than they can see — the platform surfaces a pathway to scale through supervised postdoctoral clinicians rather than simply closing a waitlist.
+
+**Why this works:**
+- Postdoctoral clinicians need supervised hours to obtain full licensure. They are actively looking for supervision placements.
+- The EPPP pipeline already feeds the platform with newly passing psychologists who need exactly this.
+- The supervisor gets capacity without fully delegating clinical responsibility.
+- The platform gets more providers, more outcome data, and a deeper loyalty loop.
+- When postdocs get licensed, they become supervisors themselves — the flywheel self-perpetuates.
+
+**The lifecycle on platform:**
+```
+Study for EPPP → Pass EPPP → Postdoc (needs supervised hours)
+    ↓
+Apply for supervision placement via platform
+    ↓
+Matched with licensed supervisor (e.g., Inzinna) who has overflow capacity
+    ↓
+Supervised clinician sees patients under supervisor's license
+    ↓
+Accumulates hours → Gets licensed
+    ↓
+Sets up own provider profile → Gets matched with own clients
+    ↓
+Eventually: supervisor themselves → recruits next cohort of postdocs
+```
+
+**Platform features needed:**
+- `supervision_placements` table — postdoc applications, supervisor matches, hours tracking
+- `supervised_sessions` table — sessions conducted under supervision, linked to supervisor and supervisee provider profiles
+- Supervision dashboard for supervisors: caseload overview, hours log, notes on supervisee progress
+- Supervision dashboard for postdocs: hours toward licensure, supervisor feedback, session log
+- Hour tracking per state licensing board requirements (varies by state — CA, NY first)
+- Supervisor capacity indicator on provider profiles — "accepting postdoc supervision placements"
+
+**Strategic importance:**
+- No competitor offers the full loop: study → supervised practice → license → supervise → repeat
+- This is the deepest possible moat — the platform is embedded in the entire career arc, not just one moment
+- Outcome data from supervised sessions feeds Phase 6 (deliberate practice) and Phase 8 (AI-assisted therapy) with high-quality labeled training data
+- Supervision is billable — supervisors charge postdocs for supervision hours (typically $100-300/hour). Platform can facilitate this payment and take a small fee.
+
+**Licensing board compliance:**
+- Supervision requirements vary by state and license type (psychologist vs. LCSW vs. MFT)
+- MVP: California and New York only (matching platform launch states)
+- Each state's hour requirements and supervisor qualifications must be verified and displayed clearly
+- Platform does not certify supervisors — it connects them. Supervisor credentials and active license status are verified same as provider profiles.
+
 ### Embeddable Review Badge (Clinician Marketing Tool)
 
 Give clinicians the power to showcase their reviews outside thepsychology.ai. This is a clinician-first feature that also serves as organic advertising for the platform.

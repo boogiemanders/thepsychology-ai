@@ -15,8 +15,9 @@ Your current docs point to one clear company sequence:
 1. EPPP prep is the wedge
 2. provider growth is the first real expansion
 3. therapy matching is the demand-side marketplace layer
-4. assessment is the research-heavy next pillar
-5. AI-assisted therapy comes after you have outcome data
+4. postdoc supervision pipeline bridges EPPP → licensure → provider, and scales capacity for licensed supervisors
+5. assessment is the research-heavy next pillar
+6. AI-assisted therapy comes after you have outcome data
 
 That means the company is not:
 
@@ -104,10 +105,15 @@ Greg Inzinna is the most obvious **commercial loop partner**.
 
 The cleanest version is:
 
-1. his brand/company sends trainees and early-career clinicians to thePsychology.ai for EPPP prep
-2. your platform helps them pass and stay in your ecosystem
-3. after licensure, qualified clinicians are routed back into his practice or network
-4. over time, you power selected services for his company under a co-brand or "powered by" structure
+1. His brand/company sends trainees and early-career clinicians to thePsychology.ai for EPPP prep
+2. The platform helps them pass and stay in the ecosystem
+3. After passing the EPPP, postdocs who need supervised hours are matched to licensed supervisors — starting with Inzinna — who have more patients than they can see
+4. Supervised clinicians see patients under Inzinna's license, expanding her capacity without her seeing every patient herself
+5. When postdocs get licensed, they become supervisors themselves — recruiting the next cohort of postdocs from the EPPP pipeline
+6. Over time, the platform powers selected services for his company under a co-brand or "powered by" structure
+
+**Why the supervision layer matters strategically:**
+The postdoc supervision pipeline is the bridge between "EPPP prep" and "provider on the platform." Without it, new graduates pass the EPPP and then disappear for 1-2 years of supervised practice somewhere else. With it, those supervised hours happen on the platform — generating outcome data, building loyalty, and filling Inzinna's (and other supervisors') capacity gap simultaneously.
 
 This is strong because it matches the lifecycle story already in your homepage and product docs.
 
