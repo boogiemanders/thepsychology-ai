@@ -24,6 +24,8 @@ The strategic advantage: EPPP students who study on the platform graduate, pass 
 - **Pilot monetization**: Test a meeting-based model first. Client pays $1 and provider pays $1 when a first meeting actually happens on-platform. If the provider wants to continue off-platform after that intro, the provider pays a $50 release fee. If the next session is booked on-platform, credit $49 back to the provider.
 - **Long-term pricing**: Keep open until pilot data exists. Could become flat subscription, hybrid subscription + meeting fees, or stay mostly meeting-based if that proves cleaner.
 - **Video**: Include Daily.co telehealth integration in MVP
+- **First provider on the platform**: The founder. Licensure expected April 2026 — this is the trigger to begin building the matching MVP in earnest. The EPPP platform is already live at ~$230/month, proving the wedge. Matching is the next unlock.
+- **EF assessment sequence**: Build for Inzinna Psychology Group first (under the discovery memo), refine in real clinical use, then generalize into the platform Phase 7 version. Inzinna gets internal-use rights; generalized IP stays with the founder.
 
 ---
 
@@ -497,6 +499,19 @@ Provider analytics at `src/app/provider/analytics/page.tsx`:
 
 **Full competitive research + validation roadmap:** `content/research/competitive-ef-assessment-teardown.md`
 **Positioning angles:** `content/research/positioning-angles-ef-assessment.md`
+
+### Build sequence: Inzinna first, then generalize
+
+The EF assessment tool will be built for Inzinna Psychology Group first — as a deliverable under the discovery and development memo — then generalized into the platform version. This mirrors how Nike started: build for one real user in a real clinical environment, refine it there, then scale.
+
+**What this means in practice:**
+- The Inzinna-specific implementation is scoped and compensated under the memo with Greg
+- The underlying scoring logic, framework, and generalized tool remain Anders Chan's IP (per the memo)
+- Inzinna gets a perpetual internal-use license to the delivered version
+- The platform version (Phase 7) is built from that generalized framework — not from scratch
+- Real clinical use at Inzinna generates the validity data and workflow feedback that makes the platform version credible
+
+**Founder note:** The founder is expected to be licensed within weeks of this document being written (April 2026). Once licensed, the founder becomes the first psychologist on the platform and the first to use the EF assessment in independent clinical practice — meaning the tool will be validated by the person who built it, in real patient care.
 
 ### Why This Is Phase 7
 
