@@ -1114,6 +1114,10 @@ export default function ExamGeneratorPage() {
         params.set('type', chosenExamType)
         if (isFreeTier) {
           params.set('source', 'free')
+          // Free-tier diagnostic is the short 8-question (1 per domain) version
+          if (chosenExamType === 'diagnostic') {
+            params.set('length', 'short')
+          }
         }
         const response = await fetch(`/api/exam-generator?${params.toString()}`, {
           method: 'POST',

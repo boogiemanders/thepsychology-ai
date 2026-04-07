@@ -1,0 +1,174 @@
+{
+  "meta": {
+    "examId": "short-1",
+    "totalQuestions": 8,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 1,
+      "7": 1,
+      "8": 1
+    },
+    "orgPsychCount": 0,
+    "orgPsychPercentage": 0,
+    "generatedAt": "2026-04-07T14:07:24.057Z",
+    "variant": "short"
+  },
+  "questions": [
+    {
+      "stem": "Which of the following best describes the neuronal function of the primary motor cortex in the frontal lobe?",
+      "options": [
+        "Processes sensory input from the body including touch and temperature",
+        "Initiates voluntary movements and activates during movement imagination or observation",
+        "Processes auditory information and language comprehension",
+        "Regulates emotional responses and social behavior"
+      ],
+      "answer": "Initiates voluntary movements and activates during movement imagination or observation",
+      "explanation": "The primary motor cortex initiates purposeful, voluntary movements and is active during both movement execution and motor imagery or observation.",
+      "kn": "KN1",
+      "kn_explanation": "This question evaluates understanding of motor cortex function in movement control, a core biological bases of behavior content (KN1).",
+      "difficulty": "easy",
+      "quality_comment": "Simple yet important question that clearly distinguishes motor from sensory and higher-order cortical functions.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/1 Biological Bases of Behavior : Physiological Psychology and Psychopharmacology/1 Brain Regions-Functions – Cerebral Cortex.json",
+      "sourceFolder": "1 Biological Bases of Behavior : Physiological Psychology and Psychopharmacology",
+      "domain": 1,
+      "isOrgPsych": false
+    },
+    {
+      "stem": "Which phenomenon occurs when a previously extinguished conditioned response (CR) reappears after a rest period without further conditioning?",
+      "options": [
+        "Stimulus generalization",
+        "Classical extinction",
+        "Spontaneous recovery",
+        "Conditioned inhibition"
+      ],
+      "answer": "Spontaneous recovery",
+      "explanation": "Spontaneous recovery refers to the return of a CR in a less intense form after extinction when the CS is presented again following a pause.",
+      "kn": "KN7",
+      "kn_explanation": "Spontaneous recovery is a key concept in learning theory relating to how conditioned responses change over time, fitting under major theories of learning (KN7).",
+      "difficulty": "easy",
+      "quality_comment": "This straightforward question effectively distinguishes key classical conditioning terms, with distractors that are often confused concepts, making it a solid foundational question.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/2 Cognitive-Affective Bases : Learning and Memory/2 Classical Conditioning.json",
+      "sourceFolder": "2 Cognitive-Affective Bases : Learning and Memory",
+      "domain": 2,
+      "isOrgPsych": false
+    },
+    {
+      "stem": "According to Helms's WRID Model, which status is characterized by denial of racism and satisfaction with the racial status quo, often accompanied by limited contact with racial minorities?",
+      "options": [
+        "Contact",
+        "Reintegration",
+        "Disintegration",
+        "Autonomy"
+      ],
+      "answer": "Contact",
+      "explanation": "The Contact status reflects limited awareness of racism and acceptance of the racial status quo, often from limited interracial contact.",
+      "kn": "KN19",
+      "kn_explanation": "This question tests understanding of stages in racial identity development in White individuals, relevant to cultural and social psychology.",
+      "difficulty": "easy",
+      "quality_comment": "Clear distinction between statuses in the WRID model and concise stem make this question straightforward and useful for foundational knowledge.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/3 Cultural/3 Cross-Cultural Issues – Identity Development Models.json",
+      "sourceFolder": "3 Cultural",
+      "domain": 3,
+      "isOrgPsych": false
+    },
+    {
+      "stem": "According to Vygotsky's sociocultural theory, the 'zone of proximal development' refers to:",
+      "options": [
+        "The gap between a child’s actual development level and their potential development with support",
+        "The stage when language development fully supports cognitive growth",
+        "The range of social behaviors a child can perform independently",
+        "A child’s ability to imitate adults without assistance"
+      ],
+      "answer": "The gap between a child’s actual development level and their potential development with support",
+      "explanation": "The zone of proximal development is the difference between what children can do alone versus with guidance from adults or more capable peers.",
+      "kn": "KN23",
+      "kn_explanation": "This concept is a central part of Vygotsky’s developmental theory, encompassing social and cultural influences on cognitive growth, relevant to KN23.",
+      "difficulty": "easy",
+      "quality_comment": "The stem is concise and the distractors are related but incorrect definitions, making it straightforward for exam-level learners.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/4 Growth & Lifespan Development/4 Cognitive Development.json",
+      "sourceFolder": "4 Growth & Lifespan Development",
+      "domain": 4,
+      "isOrgPsych": false
+    },
+    {
+      "stem": "A 72-year-old patient with suspected neurocognitive disorder obtains a score of 22 on the Mini-Mental State Exam (MMSE). How should this score be interpreted?",
+      "options": [
+        "Indicates intact cognitive functioning",
+        "Suggests moderate cognitive impairment",
+        "Demonstrates mild cognitive impairment",
+        "Falls within normal limits for age"
+      ],
+      "answer": "Suggests moderate cognitive impairment",
+      "explanation": "Scores below 24 on the MMSE suggest cognitive impairment; a score of 22 falls in the range indicating moderate impairment.",
+      "kn": "KN32",
+      "kn_explanation": "This question tests the interpretation of a common cognitive screening measure and the significance of cutoff scores (KN32).",
+      "difficulty": "easy",
+      "quality_comment": "The question is direct and focused on interpreting a widely used tool, appropriate for foundational assessment knowledge.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/5 Assessment/5 Clinical Tests.json",
+      "sourceFolder": "5 Assessment",
+      "domain": 5,
+      "isOrgPsych": false
+    },
+    {
+      "stem": "Which of these statements best exemplifies 'change talk' in Motivational Interviewing?",
+      "options": [
+        "\"I'm just not ready to quit smoking.\"",
+        "\"If I stopped smoking, I’d probably feel much better.\"",
+        "\"You don’t understand what I’m going through.\"",
+        "\"I don’t think changing will make a difference.\""
+      ],
+      "answer": "\"If I stopped smoking, I’d probably feel much better.\"",
+      "explanation": "Change talk involves statements favoring change, reflecting motivation to alter current behavior.",
+      "kn": "KN44",
+      "kn_explanation": "This question focuses on verbal indicators of client motivation within treatment strategies (KN44).",
+      "difficulty": "easy",
+      "quality_comment": "Options represent distinct client attitudes, making the correct answer clear to those familiar with MI concepts.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/6 Treatment, Intervention, and Prevention : Clinical Psychology/6 Brief Therapies.json",
+      "sourceFolder": "6 Treatment, Intervention, and Prevention : Clinical Psychology",
+      "domain": 6,
+      "isOrgPsych": false
+    },
+    {
+      "stem": "The Pearson product-moment correlation coefficient (Pearson r) is most appropriate when:",
+      "options": [
+        "Both variables are measured on a nominal scale with two categories each",
+        "One variable is continuous and the other is an artificial dichotomy",
+        "Two continuous variables have a linear relationship",
+        "Two ranked variables are being compared"
+      ],
+      "answer": "Two continuous variables have a linear relationship",
+      "explanation": "Pearson r is used when both variables are continuous (interval or ratio) and related linearly; nonlinear relationships are not well captured.",
+      "kn": "KN53",
+      "kn_explanation": "This question pertains to choosing statistical tests based on measurement scales, a topic central to research methods and statistics (KN53).",
+      "difficulty": "easy",
+      "quality_comment": "Options represent common correlation types, making the correct choice clear but requiring knowledge of variable measurement and relationships.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/7 Research Methods & Statistics/7 Correlation and Regression.json",
+      "sourceFolder": "7 Research Methods & Statistics",
+      "domain": 7,
+      "isOrgPsych": false
+    },
+    {
+      "stem": "Which of the following best illustrates the principle of Fidelity and Responsibility (Principle B) outlined in the APA General Principles?",
+      "options": [
+        "Psychologists strive to benefit those they work with and avoid harm",
+        "Psychologists establish trust, fulfill professional responsibilities, and contribute pro bono work",
+        "Psychologists maintain honesty and accuracy in teaching and research",
+        "Psychologists ensure fairness and equal access to psychological services"
+      ],
+      "answer": "Psychologists establish trust, fulfill professional responsibilities, and contribute pro bono work",
+      "explanation": "Principle B emphasizes trustworthiness, responsibility, and contribution of some professional time with little or no compensation.",
+      "kn": "KN61",
+      "kn_explanation": "This question covers understanding of the APA General Principles, specifically Principle B, which is foundational ethical knowledge.",
+      "difficulty": "easy",
+      "quality_comment": "Clear options representing different principles, making the question straightforward and well suited for foundational knowledge.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/free-questionsGPT/8 Ethical : Legal : Professional Issues/8 APA Ethics Code Over and Standards 1 & 2.json",
+      "sourceFolder": "8 Ethical : Legal : Professional Issues",
+      "domain": 8,
+      "isOrgPsych": false
+    }
+  ]
+}

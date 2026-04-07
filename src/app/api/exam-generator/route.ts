@@ -329,11 +329,15 @@ export async function POST(request: NextRequest) {
     const { searchParams } = new URL(request.url)
     const examType = searchParams.get('type') || 'practice' // 'diagnostic' or 'practice'
     const source = searchParams.get('source') || 'default'
+    const length = searchParams.get('length') || 'default' // 'short' | 'default'
 
     // Free-tier exams: always load from free-examsGPT and never call Anthropic
     if (source === 'free') {
       try {
-        const examData = loadFreeExamFromGpt(examType === 'diagnostic' ? 'diagnostic' : 'practice')
+        const examData = loadFreeExamFromGpt(
+          examType === 'diagnostic' ? 'diagnostic' : 'practice',
+          length === 'short' ? 'short' : 'default',
+        )
         return NextResponse.json(examData)
       } catch (freeError) {
         console.error('[Exam Generator] Failed to load free exam from free-examsGPT:', freeError)
@@ -488,7 +492,10 @@ function validateQuestionOptions(
  * This is used for the "free" subscription tier so they never hit Anthropic
  * or the full examsGPT pool.
  */
-function loadFreeExamFromGpt(examType: 'diagnostic' | 'practice') {
+function loadFreeExamFromGpt(
+  examType: 'diagnostic' | 'practice',
+  length: 'short' | 'default' = 'default',
+) {
   const freeDir = join(process.cwd(), 'free-examsGPT')
   if (!existsSync(freeDir)) {
     throw new Error(`free-examsGPT directory not found at ${freeDir}`)
@@ -500,9 +507,15 @@ function loadFreeExamFromGpt(examType: 'diagnostic' | 'practice') {
   const typePrefix =
     examType === 'practice'
       ? 'practice-exam-'
+      : length === 'short'
+      ? 'diagnostic-exam-short-'
       : 'diagnostic-exam-'
 
-  const typeSpecific = files.filter((name) => name.startsWith(typePrefix))
+  let typeSpecific = files.filter((name) => name.startsWith(typePrefix))
+  // For default diagnostic, exclude the short variant so it isn't picked randomly
+  if (examType === 'diagnostic' && length !== 'short') {
+    typeSpecific = typeSpecific.filter((name) => !name.startsWith('diagnostic-exam-short-'))
+  }
   if (typeSpecific.length > 0) {
     files = typeSpecific
   }
