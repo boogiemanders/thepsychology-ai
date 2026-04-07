@@ -18,19 +18,43 @@ The test for every product decision is the same: does this make things faster, c
 - **Listed:** Fast automated verification — active license confirmed, malpractice insurance on file, no open board complaints. Clinician can be listed and matched immediately.
 - **Verified badge:** Fuller process — onboarding orientation covering platform standards, clinical vignette or interview, confirmation of specialization claims. Badge displayed prominently on profile. Patients can filter to verified-only.
 
-Scales supply quickly while giving patients a meaningful trust signal. Quality pressure increases over time as the verified badge becomes the norm.
+The founder does all verified reviews personally at first. The criteria isn't just credentials — it's values alignment:
+- Passionate about the work
+- Strong training background
+- Results: personal projects, practice-building, evidence of initiative
+- Building toward their own practice — the platform supports their vision, not just fills a slot
 
-**Insurance:** Play the insurance game. Help patients use their benefits. Real-time insurance verification (Stedi API) is in the plan. Access and affordability are core to the mission — cutting insurance out would undermine that.
+This matters because the platform is for clinicians who want to build something, not just collect patients. A clinician who is building their own practice is more invested, more likely to stay, and more aligned with the mission. Verified badge = quality AND values fit.
+
+Scales to trained reviewers once volume demands it. Reviewer criteria should mirror the above.
+
+**Rankings:** Results are never paid for. No sponsored placements, no boosted listings, no way to buy a higher position. Publicly stated commitment: *"Your results are sorted by fit, not by who paid us."* No competitor can say this cleanly. It's a trust signal that compounds over time.
 
 **AI in therapy:** Both. AI makes human clinicians better (deliberate practice, outcome monitoring, diagnostic support) AND can eventually replace some session types for patients who can't otherwise afford or access care. Phase 8 starts supervised — AI assists, clinician decides — but the philosophy allows for AI-delivered care at appropriate levels with appropriate oversight.
 
 **Data transparency:** How patient data is used — including whether it trains AI models — is disclosed clearly at the point of consent. No hidden data extraction. Patients know what they're consenting to before they consent to it.
 
+**Sliding scale:** Clinicians can flag that they offer sliding scale. This feeds into matching as a filter patients can apply — not a ranking signal. Patients who need it can find clinicians who offer it without it affecting fit order.
+
+**Patient intake — progressive disclosure:**
+- Most important questions first (presenting concern, basic preferences, insurance)
+- Patient can submit early and get results — imperfect match but fast
+- Or keep going for increasingly specific fit — modality preferences, style, cultural factors, detailed history
+- No pressure to finish. The platform meets them where they are.
+- Better answers = better match, but a partial answer is still useful
+
+**AI session responsibility (Phase 8):**
+- Under the founder's license initially, the founder is clinically responsible for AI-delivered sessions
+- That means: reading every session transcript the day it happens
+- Being alerted immediately to any risk flags (crisis language, suicidal ideation, clinical deterioration)
+- No AI session goes unreviewed. This is the non-negotiable safety floor.
+- As the platform scales, this model defines the standard for all supervisors overseeing AI sessions
+
 **Ranking and filtering:**
 - Search results are ranked by **best clinical fit first** — the matching algorithm score, not sponsored listings, not availability, not price
 - Patients can then apply **price filters** to narrow results to what's affordable for them
+- Sliding scale filter available separately
 - Price is a patient tool, not a platform ranking signal — the best match shows up first regardless of what they charge
-- **Results are never paid for.** No sponsored placements, no boosted listings, no way to buy a higher position. Publicly stated commitment: *"Your results are sorted by fit, not by who paid us."* No competitor can say this cleanly — they all have some version of sponsored placement. This trust signal compounds over time.
 
 ---
 
