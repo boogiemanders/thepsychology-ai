@@ -1,5 +1,17 @@
 # Company Future Plan
 
+## The why
+
+The mental health system is full of middlemen who slow things down and take a cut without adding value. Directories charge monthly fees and show ads. Insurance platforms take 30-40% of every session. Booking tools charge per referral. Patients wait months and pay thousands just to find someone. Clinicians spend hours on paperwork and give away a third of their income to platforms that didn't do the clinical work.
+
+This company exists to cut all of that out.
+
+No ads. No fluff. No rent-extracting middlemen. Just the best match, the fastest path to care, and the lowest possible cost for everyone involved. Patients find a therapist for free. Clinicians keep their rate. The platform takes $8 to cover its costs and keep the lights on.
+
+The test for every product decision is the same: does this make things faster, cheaper, and more direct — or does it add friction and extract value? If it's the latter, it doesn't belong here.
+
+---
+
 ## Founder context
 
 The founder is employed at Greg Inzinna's practice, has submitted supervised hours and EPPP results, and expects licensure within weeks. This matters for the strategy because:
