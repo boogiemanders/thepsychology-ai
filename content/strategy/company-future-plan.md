@@ -1,5 +1,27 @@
 # Company Future Plan
 
+## North star
+
+**A patient who finally got the right fit after years of wrong ones.**
+
+Not a revenue number. Not a user count. That moment — when someone who has tried and been disappointed and tried again finally lands with the right person — is what the platform is for. Everything else is in service of making that happen more often and more reliably.
+
+---
+
+## Platform design
+
+**Warm, human, and polished. Minimal. Calming to look at.**
+
+The platform should feel like a relief to open — not clinical and sterile, not corporate and cold, not busy with features competing for attention. Something that communicates: we took care with this, and we'll take care of you. Design decisions filter through that. If it adds noise, it doesn't belong.
+
+---
+
+## Language
+
+**Clinicians are called psychologists.** That's the credential at launch — doctoral-level, licensed. It signals quality and rigor without needing to explain it. Social workers and other licensed clinicians join later as the platform expands, with clear credential labeling. The word "provider" doesn't appear on patient-facing surfaces — it's cold and insurance-brained.
+
+---
+
 ## The why
 
 The mental health system is full of middlemen who slow things down and take a cut without adding value. Directories charge monthly fees and show ads. Insurance platforms take 30-40% of every session. Booking tools charge per referral. Patients wait months and pay thousands just to find someone. Clinicians spend hours on paperwork and give away a third of their income to platforms that didn't do the clinical work.
