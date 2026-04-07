@@ -18,7 +18,9 @@ The platform should feel like a relief to open — not clinical and sterile, not
 
 ## Language
 
-**Clinicians are called psychologists.** That's the credential at launch — doctoral-level, licensed. It signals quality and rigor without needing to explain it. Social workers and other licensed clinicians join later as the platform expands, with clear credential labeling. The word "provider" doesn't appear on patient-facing surfaces — it's cold and insurance-brained.
+**Clinicians are called psychologists.** That's the credential at launch — doctoral-level, licensed. It signals quality and rigor without needing to explain it. Social workers and other licensed clinicians join later as the platform expands, with clear credential labeling. The word "provider" never appears on patient-facing surfaces — it's cold and insurance-brained.
+
+**People seeking care are called clients** in clinician-facing surfaces and internal language — standard clinical terminology psychologists already use. On patient-facing surfaces, the platform speaks directly: "Find your psychologist." "Your first session." "What are you looking for?" The word "client" lives in the psychologist's dashboard. The person using the platform to find care never sees themselves reduced to a label — the platform just talks to them. "Member" is never used — it sounds like a gym or an insurance plan.
 
 ---
 
