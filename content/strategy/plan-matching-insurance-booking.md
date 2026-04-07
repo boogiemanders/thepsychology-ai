@@ -667,3 +667,5 @@ More Clients            More Data → Better AI → More Capacity
 ```
 
 Every piece feeds the next. No competitor can replicate the full loop.
+
+**Founder note:** The founder is currently in supervised practice (employed at a clinical practice), working toward licensure. Upon licensure, the founder becomes the **first provider on the platform** — personally matched with patients through thepsychology.ai. The postdoc supervision pipeline is not hypothetical; the founder is living it. The SP Notes and clinical tools being built now are informed by direct clinical workflow experience, which is the core credibility differentiator vs. tech companies guessing at clinician needs.

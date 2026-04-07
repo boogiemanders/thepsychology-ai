@@ -1,5 +1,18 @@
 # Company Future Plan
 
+## Founder context
+
+The founder is currently employed at Greg Inzinna's practice while working toward licensure. This matters for the strategy because:
+
+- The SP Notes Chrome extension is being built **for Inzinna's practice** as an employer relationship, not a co-founder relationship
+- The founder is **currently living the postdoc supervision pipeline** — accumulating supervised hours toward licensure
+- When licensed, the founder becomes the **first provider on the platform** — personally matched with patients through thepsychology.ai
+- This is not a company being built by someone adjacent to the field. The founder is the target user at every stage: student, supervisee, licensed provider, and eventually supervisor.
+
+This changes how the Greg Inzinna relationship should be framed: it is an employment and tools-partnership relationship, not a commercial loop co-venture. The clinical tools built for his practice (SP Notes, ZocDoc extension) are custom work. The platform itself (thepsychology.ai) is wholly the founder's company.
+
+---
+
 ## Why this document exists
 
 You already have several good strategy documents. The problem is not lack of ideas. The problem is that too many ideas are sitting at the same priority level in your head.
@@ -66,7 +79,7 @@ People who help the main company loop work faster.
 
 Examples:
 
-- Greg Inzinna
+- Greg Inzinna — employer and early tools partner. The SP Notes and ZocDoc extensions are built for his practice. He is not a co-owner of thepsychology.ai. Custom work for his practice is billed or scoped separately from the platform.
 
 ### 2. Research and validation partners
 
