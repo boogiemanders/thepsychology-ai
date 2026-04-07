@@ -122,13 +122,15 @@ Results are ranked by **best clinical fit only** — the matching score is the s
 
 | Dimension | Weight | Method |
 |---|---|---|
-| Specialization match | 0.25 | Jaccard similarity: client concerns vs provider specializations |
+| Specialization match | 0.25 | Jaccard similarity: client concerns vs provider specializations. **Niche matches score disproportionately high** — a rare specialization that exactly fits a patient's need is worth more than a generic overlap. |
+| Semantic concern match | 0.20 | Cosine similarity: concern_embedding vs bio/approach embeddings. Captures niche expertise described in free text that structured tags miss. |
 | Modality match | 0.15 | Jaccard similarity: preferred vs offered modalities |
-| Semantic concern match | 0.20 | Cosine similarity: concern_embedding vs bio/approach embeddings |
 | Style compatibility | 0.15 | Inverted Euclidean distance on 4 style dimensions |
 | Cultural fit | 0.10 | Weighted match on language, competencies, faith preference |
 | Practical convenience | 0.10 | Distance/telehealth + availability overlap |
 | Demographic preference | 0.05 | Gender/age preference match |
+
+**On niche specializations:** The platform's taxonomy of specializations should be far richer than competitors' 20-checkbox systems. Clinicians should be able to capture overlapping, specific, and unusual expertise (e.g., trauma + competitive athletes + chronic illness; religious trauma + LGBTQ+ affirming + immigration; gifted adults + ADHD + perfectionism). A patient with a rare or specific need finding a clinician with exactly that background is the highest-value match the algorithm produces — and the one no other platform can reliably make.
 
 **Layer 3 — AI Re-ranking** (DEFERRED — post-MVP, after 200+ outcomes):
 - Send client free-text + provider bios/approaches + Layer 2 scores to Claude

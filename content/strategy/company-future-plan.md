@@ -23,8 +23,13 @@ The founder does all verified reviews personally at first. The criteria isn't ju
 - Strong training background
 - Results: personal projects, practice-building, evidence of initiative
 - Building toward their own practice — the platform supports their vision, not just fills a slot
+- **Has real niche skills** — specific specializations, overlapping competencies, unusual expertise that creates genuinely rare matches
 
 This matters because the platform is for clinicians who want to build something, not just collect patients. A clinician who is building their own practice is more invested, more likely to stay, and more aligned with the mission. Verified badge = quality AND values fit.
+
+**Niche specializations are a core asset.** A patient with a specific, hard-to-match need — religious trauma, competitive athletes, chronic illness, polyamorous relationships, gifted adults, immigration stress, specific phobias, eating disorders in athletes — can't find the right person on any existing platform because everyone checks the same 20 generic boxes. A clinician with real depth in one of these areas is the highest-value match the algorithm can produce. Both sides win: the patient finally feels understood, the clinician gets the cases they're built for.
+
+The platform actively recruits for niche. A clinician with three overlapping unusual specialties (e.g., trauma + LGBTQ+ + religious communities) serves a patient population that almost no other platform can reach. That's irreplaceable.
 
 Scales to trained reviewers once volume demands it. Reviewer criteria should mirror the above.
 
