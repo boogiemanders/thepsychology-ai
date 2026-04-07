@@ -18,14 +18,27 @@ The test for every product decision is the same: does this make things faster, c
 - **Listed:** Fast automated verification — active license confirmed, malpractice insurance on file, no open board complaints. Clinician can be listed and matched immediately.
 - **Verified badge:** Fuller process — onboarding orientation covering platform standards, clinical vignette or interview, confirmation of specialization claims. Badge displayed prominently on profile. Patients can filter to verified-only.
 
-The founder does all verified reviews personally at first. The criteria isn't just credentials — it's values alignment:
-- Passionate about the work
-- Strong training background
-- Results: personal projects, practice-building, evidence of initiative
-- Building toward their own practice — the platform supports their vision, not just fills a slot
-- **Has real niche skills** — specific specializations, overlapping competencies, unusual expertise that creates genuinely rare matches
+The founder does all verified reviews personally at first. The criteria isn't just credentials — it's values alignment and self-awareness. The interview is designed to surface four things:
 
-This matters because the platform is for clinicians who want to build something, not just collect patients. A clinician who is building their own practice is more invested, more likely to stay, and more aligned with the mission. Verified badge = quality AND values fit.
+**1. Blind spot awareness**
+Can they name something they're genuinely not good at yet — without deflecting, performing humility, or giving a rehearsed "weakness that's secretly a strength" answer? Clinicians who don't know what they don't know are the dangerous ones. The ones who can name their edges clearly are the ones who grow.
+
+**2. Learning edges**
+Not just "I'm working on X" but real engagement with it. Are they reading, seeking supervision, noticing patterns in their own countertransference? This connects directly to deliberate practice research — self-awareness is a prerequisite for improvement. Clinicians who plateau are the ones who stop seeing their edges.
+
+**3. Knowing what they don't want**
+A clinician who says "I don't work well with high-conflict presentations and I've learned to refer those out" is more trustworthy than one who claims they can work with everyone. Clarity about fit protects patients. Generic availability is a red flag.
+
+**4. Aliveness about what excites them**
+Tone shifts. They go longer. They get specific. That's the real signal. Generic enthusiasm is easy to perform — specific, lively excitement about a niche, a modality, a population, a clinical puzzle is not. The interview is looking for the moment where they stop answering and start talking.
+
+**What disqualifies:**
+- Generic answers to any of the above
+- No awareness of blind spots or learning edges
+- Claiming to work well with everyone
+- Flat affect when asked what excites them
+
+This matters because the platform is for clinicians who want to build something, not just collect patients. Verified badge = quality AND self-awareness AND genuine passion.
 
 **Niche specializations are a core asset.** A patient with a specific, hard-to-match need — religious trauma, competitive athletes, chronic illness, polyamorous relationships, gifted adults, immigration stress, specific phobias, eating disorders in athletes — can't find the right person on any existing platform because everyone checks the same 20 generic boxes. A clinician with real depth in one of these areas is the highest-value match the algorithm can produce. Both sides win: the patient finally feels understood, the clinician gets the cases they're built for.
 
