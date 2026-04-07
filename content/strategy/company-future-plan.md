@@ -48,7 +48,16 @@ Scales to trained reviewers once volume demands it. Reviewer criteria should mir
 
 **Clinician character — what fits here:**
 - **Community and independence both welcome.** Independent practitioners who use the platform as infrastructure are fine. A loose, warm community of people who are genuinely fun and enjoyable to talk with would also be great — not forced culture, just real people who like each other.
-- **Supervision groups organized by shared interests, not just clinical specialty.** People who are into music, art, dance, film, literature — group them together. The conversation before and after the clinical work has texture. Shared cultural life creates a different kind of connection than shared diagnosis lists. The founder personally wants to be in a group with people into music, art, and movement. Clinicians who are passively consuming — reality TV, scrolling — tend to bring a flatness into the room. The ones who are making things, moving, engaging with something that demands something back from them bring that aliveness into sessions too. This isn't a rule, it's a culture signal.
+- **Supervision groups organized by matching, not just clinical specialty.** The same matching engine used for patient-clinician matching gets pointed at clinicians for group supervision. Dimensions:
+  - Clinical specialty and population focus (so case discussion is relevant)
+  - Shared interests — music, art, dance, film, literature (the cultural layer that makes the group actually enjoyable)
+  - Career orientation — practice-builders vs. writer/researcher/builder types
+  - Experience level — can be mixed with intention, but not randomly
+  - Modality alignment — a group needs enough common language to be useful
+
+  The founder personally wants to be in a group with people into music, art, and movement. Clinicians who are making things and engaging actively bring that aliveness into sessions. This isn't a rule imposed on everyone — it's a culture signal the matching system surfaces naturally.
+
+  **Platform implication:** Clinician onboarding profile captures personal interests alongside clinical specializations. This feeds supervision group matching AND eventually patient matching — some patients specifically want a therapist who gets their world (a musician dealing with performance anxiety, a dancer navigating injury identity loss).
 - **Warmth and technique both valued.** Ideally both. Either alone is fine. A cold technician and a warm-but-directionless clinician are both misses.
 - **Ambition:** Fine with clinicians focused on building a solid private practice OR clinicians who are also writing, teaching, researching, building their own things. The founder personally gravitates toward the latter — people who are creating something beyond the session — but both are welcome as long as they're genuinely excited about it, not just checking a box.
 - **Disagreement:** Acknowledgment is what's wanted. Not justification, not explanation, not a defense of why they were right. Just: "I hear that, I missed that." Clinicians who can't receive feedback without defending themselves are not a fit — and it's a meaningful clinical signal too.
