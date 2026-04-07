@@ -21,9 +21,9 @@ The strategic advantage: EPPP students who study on the platform graduate, pass 
 
 - **Launch market**: California + New York, **telehealth/remote only** first (no in-person)
 - **MVP matching**: Layers 1+2 only (structured scoring). AI re-ranking (Layer 3) added later with outcome data.
-- **Monetization model**: Matching and browsing are free for patients — no cost to find a therapist. Patients pay only when they book an appointment (normal session fee to the clinician). The platform takes $1 per completed appointment from the clinician; the clinician keeps everything else. No percentage cuts, no release fees, no per-referral charges.
-- **Why this works**: $1/appointment is negligible vs. what Headway (20-40% cut) or ZocDoc ($35/booking) charge. Clinicians keep their full rate. Patients face zero barrier to access. Platform revenue scales with appointment volume — incentives align with real matches, not just sign-ups.
-- **Long-term pricing**: $1/appointment stays the model unless volume data suggests a flat monthly subscription would be preferable for high-volume providers. Keep it simple until there's data.
+- **Monetization model**: Matching and browsing are free for patients. Patients pay the clinician's normal session rate directly. Platform charges clinicians $8 flat per completed appointment as a platform fee — clinician keeps everything else. No percentage cuts, no release fees, no per-referral charges.
+- **Why $8**: Covers ~$6 Stripe processing cost, leaves margin for the platform, and is still far cheaper than Headway (~$60/session), ZocDoc ($35/booking), or Psychology Today (monthly flat with no patient guarantee).
+- **Long-term pricing**: $8/appointment or optional flat monthly subscription for high-volume providers once there's enough data to price it.
 - **Video**: Include Daily.co telehealth integration in MVP
 - **First provider on the platform**: The founder. Licensure expected April 2026 — this is the trigger to begin building the matching MVP in earnest. The EPPP platform is already live at ~$230/month, proving the wedge. Matching is the next unlock.
 - **EF assessment sequence**: Build for Inzinna Psychology Group first (under the discovery memo), refine in real clinical use, then generalize into the platform Phase 7 version. Inzinna gets internal-use rights; generalized IP stays with the founder.
@@ -233,17 +233,25 @@ Vercel cron job (same pattern as existing `src/app/api/cron/`) sends 24h and 1h 
 
 ### Revenue Model
 
-**For patients:** Free to browse, match, and find a therapist. Patients pay only when they book an appointment — and they pay the clinician's normal session rate, not the platform. No sign-up fees, no matching fees, no dollar to get started.
+**For patients:** Free to browse, match, and find a therapist. Patients pay only when they book an appointment — and they pay the clinician's normal session rate directly. No sign-up fees, no matching fees, nothing to get started.
 
-**For clinicians:** $1 per completed appointment goes to the platform. The clinician keeps everything else — their full session rate, directly. No percentage cuts, no release fees, no per-referral charges.
+**For clinicians:** $8 flat platform fee per completed appointment, charged to the clinician. The clinician keeps everything else — their full session rate minus $8. No percentage cuts, no release fees, no per-referral charges.
+
+**Why $8:**
+- Covers Stripe's ~$6 processing fee on a typical session, so the platform isn't subsidizing transactions
+- Still far cheaper than every competitor: $8 flat vs. Headway's ~$60 on a $200 session (30% cut), ZocDoc's $35/booking, or Psychology Today's monthly fee with no patient guarantee
+- Simple to explain: "You set your rate. You keep your rate minus $8 per appointment."
 
 **Why this is the right model:**
 - Patients face zero barrier to finding care — directly addresses the access problem every competitor fails on
-- Clinicians keep their full rate — vs. Headway/Alma (20-40% cut), ZocDoc ($35/booking), Psychology Today (monthly fee with no guarantee of patients)
+- Clinicians keep the vast majority of their rate — the fee structure is the competitive moat
 - Platform revenue is tied to real appointments happening, not listings or clicks — incentives align with good matches
-- Simple enough to explain in one sentence: "Free to find a therapist. $1 per appointment to the platform, rest goes to your clinician."
 
-**At scale:** A provider seeing 20 patients/week generates ~$1,000/year in platform fees. At 100 active providers that's $100k/year. At 1,000 providers it's $1M. The model works at scale, not at launch — which is fine because the goal at launch is to attract clinicians with the best fee structure in the market.
+**At scale:**
+- Provider seeing 20 patients/week → ~$7,680/year in platform fees
+- 100 active providers → ~$768k/year
+- 1,000 active providers → ~$7.68M/year
+- The model works at scale, not at launch — which is fine because the goal at launch is to fill the platform with clinicians who trust the fee structure
 
 **Long-term option:** If high-volume providers prefer a flat monthly subscription over per-appointment fees, offer that as an alternative once there's enough data to price it fairly.
 
