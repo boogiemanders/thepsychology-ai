@@ -21,8 +21,9 @@ The strategic advantage: EPPP students who study on the platform graduate, pass 
 
 - **Launch market**: California + New York, **telehealth/remote only** first (no in-person)
 - **MVP matching**: Layers 1+2 only (structured scoring). AI re-ranking (Layer 3) added later with outcome data.
-- **Pilot monetization**: Test a meeting-based model first. Client pays $1 and provider pays $1 when a first meeting actually happens on-platform. If the provider wants to continue off-platform after that intro, the provider pays a $50 release fee. If the next session is booked on-platform, credit $49 back to the provider.
-- **Long-term pricing**: Keep open until pilot data exists. Could become flat subscription, hybrid subscription + meeting fees, or stay mostly meeting-based if that proves cleaner.
+- **Monetization model**: Matching and browsing are free for patients — no cost to find a therapist. Patients pay only when they book an appointment (normal session fee to the clinician). The platform takes $1 per completed appointment from the clinician; the clinician keeps everything else. No percentage cuts, no release fees, no per-referral charges.
+- **Why this works**: $1/appointment is negligible vs. what Headway (20-40% cut) or ZocDoc ($35/booking) charge. Clinicians keep their full rate. Patients face zero barrier to access. Platform revenue scales with appointment volume — incentives align with real matches, not just sign-ups.
+- **Long-term pricing**: $1/appointment stays the model unless volume data suggests a flat monthly subscription would be preferable for high-volume providers. Keep it simple until there's data.
 - **Video**: Include Daily.co telehealth integration in MVP
 - **First provider on the platform**: The founder. Licensure expected April 2026 — this is the trigger to begin building the matching MVP in earnest. The EPPP platform is already live at ~$230/month, proving the wedge. Matching is the next unlock.
 - **EF assessment sequence**: Build for Inzinna Psychology Group first (under the discovery memo), refine in real clinical use, then generalize into the platform Phase 7 version. Inzinna gets internal-use rights; generalized IP stays with the founder.
@@ -230,31 +231,30 @@ Vercel cron job (same pattern as existing `src/app/api/cron/`) sends 24h and 1h 
 
 ## Phase 5: Revenue Model + EPPP Pipeline (Weeks 9-12)
 
-### Pilot Match Fee Model
+### Revenue Model
 
-- **Only charge on a real intro**: Client pays $1 and provider pays $1 only when the first appointment is completed through the platform.
-- **Off-platform continuation fee**: If the provider wants to take the relationship off-platform after that first intro, the provider pays a $50 release fee.
-- **Give most of it back for staying on-platform**: If the second appointment is booked on-platform, credit $49 back to the provider. Net effect: leaving costs $50, staying mostly costs $1.
-- **Why this is interesting**: It avoids charging clinicians for a dead listing, keeps price tied to real meetings, and creates a clear anti-bypass rule without taking a percentage of care.
-- **Why this should stay internal for now**: The idea is strategically interesting but still unusual. Do not put it on the public pricing page until the workflow is real and the wording has been tested with clinicians.
+**For patients:** Free to browse, match, and find a therapist. Patients pay only when they book an appointment — and they pay the clinician's normal session rate, not the platform. No sign-up fees, no matching fees, no dollar to get started.
 
-### Likely Long-Term Pricing Paths
+**For clinicians:** $1 per completed appointment goes to the platform. The clinician keeps everything else — their full session rate, directly. No percentage cuts, no release fees, no per-referral charges.
 
-- **Option A**: Flat provider subscription once the product proves ongoing value
-- **Option B**: Hybrid model with low recurring fee + meeting-based fees
-- **Option C**: Keep the meeting-based model if clinicians clearly prefer paying only when introductions happen
+**Why this is the right model:**
+- Patients face zero barrier to finding care — directly addresses the access problem every competitor fails on
+- Clinicians keep their full rate — vs. Headway/Alma (20-40% cut), ZocDoc ($35/booking), Psychology Today (monthly fee with no guarantee of patients)
+- Platform revenue is tied to real appointments happening, not listings or clicks — incentives align with good matches
+- Simple enough to explain in one sentence: "Free to find a therapist. $1 per appointment to the platform, rest goes to your clinician."
 
-Reuses existing Stripe infrastructure, but this model also needs a fee ledger and credit logic rather than a simple subscription switch.
+**At scale:** A provider seeing 20 patients/week generates ~$1,000/year in platform fees. At 100 active providers that's $100k/year. At 1,000 providers it's $1M. The model works at scale, not at launch — which is fine because the goal at launch is to attract clinicians with the best fee structure in the market.
+
+**Long-term option:** If high-volume providers prefer a flat monthly subscription over per-appointment fees, offer that as an alternative once there's enough data to price it fairly.
+
+Reuses existing Stripe infrastructure.
 
 **New tables:**
-- `platform_fee_events` — every $1 intro fee, $50 release fee, and $49 provider credit
-- `provider_fee_balances` — running provider credit balance and payout adjustments
-- `relationship_release_events` — marks when a provider chooses to continue a relationship off-platform after an on-platform intro
+- `platform_fee_events` — every $1 appointment fee logged per completed session
+- `provider_fee_balances` — running balance and payout tracking per provider
 
 **Files:**
-- `src/app/api/billing/intro-fee/route.ts`
-- `src/app/api/billing/release-fee/route.ts`
-- `src/app/api/billing/provider-credit/route.ts`
+- `src/app/api/billing/appointment-fee/route.ts`
 - `src/lib/billing/platform-fees.ts`
 
 ### EPPP Pipeline Feature
