@@ -1153,7 +1153,7 @@ function TopicSelectorContent() {
               }}
               disabled={checkoutLoading}
             >
-              {checkoutLoading ? 'Redirecting…' : 'Upgrade to Pro — $20/mo'}
+              {checkoutLoading ? 'Redirecting…' : 'Upgrade to Pro — $30/mo'}
             </Button>
             <Button variant="ghost" className="w-full" onClick={() => setLockedTopicName(null)}>
               Maybe later

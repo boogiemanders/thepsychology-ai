@@ -120,7 +120,7 @@ export function JoinSection() {
                 onChange={() => togglePlan("pro-20")}
                 className="w-4 h-4 text-primary focus:ring-2 focus:ring-primary rounded"
               />
-              <span className="text-sm">Pro - $20/month</span>
+              <span className="text-sm">Pro - $30/month</span>
             </label>
 
             <label

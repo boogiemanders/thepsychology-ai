@@ -197,7 +197,7 @@ export const siteConfig = {
   },
   pricing: {
     title: "7 days free. Because $849 upfront is insane.",
-    description: "Start here for free. See if it works before spending a dollar. $20/mo after your trial.",
+    description: "Start here for free. See if it works before spending a dollar. $30/mo after your trial.",
     pricingItems: [
       {
         name: "Pro",
@@ -410,7 +410,7 @@ export const siteConfig = {
         id: 20,
         question: "I can't afford another expensive study program.",
         answer:
-          "That's why we offer 7 days free with no credit card required. The full cost after the trial is $20/month, a fraction of AATBS. You should be able to try a prep program and see real results before spending money, especially when early-career psychologists are already financially stretched.",
+          "That's why we offer 7 days free with no credit card required. The full cost after the trial is $30/month, a fraction of AATBS. You should be able to try a prep program and see real results before spending money, especially when early-career psychologists are already financially stretched.",
       },
       {
         id: 21,
@@ -422,7 +422,7 @@ export const siteConfig = {
         id: 15,
         question: "What happens after my 7-day trial?",
         answer:
-          "After 7 days, Pro is $20/month. Cancel anytime. No contracts, no cancellation fees. You keep access to everything as long as you’re subscribed.",
+          "After 7 days, Pro is $30/month. Cancel anytime. No contracts, no cancellation fees. You keep access to everything as long as you’re subscribed.",
       },
       {
         id: 16,
