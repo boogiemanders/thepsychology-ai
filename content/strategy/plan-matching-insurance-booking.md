@@ -38,7 +38,7 @@ Keep as a single Next.js app. The EPPP-to-provider pipeline is the moat — spli
 - `/provider/*` — therapist dashboard, profile, calendar, clients
 - `/api/matching/*`, `/api/insurance/*`, `/api/booking/*` — new API groups
 - Existing routes (`/dashboard`, `/admin`, `/quizzer`, etc.) remain untouched
-- **Launch scope**: CA + NY licensed providers, telehealth only (no office addresses in MVP)
+- **Launch scope**: CA + NY licensed providers, telehealth only, adults/outpatient only. No kids, no in-person neuropsych assessment at launch — both require in-person and don't work well remotely. Manhattan office (in-person assessment, kids) added as platform grows.
 
 ---
 

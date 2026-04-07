@@ -81,9 +81,27 @@ Scales to trained reviewers once volume demands it. Reviewer criteria should mir
 - Sliding scale filter available separately
 - Price is a patient tool, not a platform ranking signal — the best match shows up first regardless of what they charge
 
----
+**Platform scope — build sequence:**
 
-## Founder context
+**Phase 1 (now): Virtual/telehealth only**
+- Adults, outpatient, remote sessions
+- No kids, no in-person neuropsych assessment — both require in-person and are harder to do well virtually
+- CA + NY from day one, no office overhead, fastest to scale
+- Digital EF assessment (being built with Bret at Inzinna's) works remotely and bridges the gap
+
+**Phase 2 (as platform grows): Manhattan office**
+- In-person sessions and full neuropsych assessment batteries become possible
+- Kids and adolescents open up as a population
+- Physical presence in the highest-density therapy market in the country
+- Assessment suites require dedicated space and hardware — not viable remotely at full capacity
+
+**Digital assessment thread:**
+- Built first for Inzinna's practice (with Bret), validated in a real clinical setting
+- Feeds directly into Platform Phase 7 (digital EF assessment) — not built from scratch, generalized from the Inzinna version
+- Remote-capable from day one, so it serves the virtual phase immediately
+- In-person assessment expands what's possible once the Manhattan office exists
+
+---
 
 The founder is employed at Greg Inzinna's practice, has submitted supervised hours and EPPP results, and expects licensure within weeks. This matters for the strategy because:
 
