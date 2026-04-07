@@ -393,6 +393,40 @@ Give clinicians the power to showcase their reviews outside thepsychology.ai. Th
 
 ---
 
+## Phase 6D: Group Supervision Data
+
+Group supervision is where clinicians think out loud — what they tried, what worked, what they're stuck on. That's some of the richest clinical signal on the platform and it should be captured systematically.
+
+**What to capture:**
+- Interventions discussed and recommended per presenting problem type
+- Consultation outcomes — did the recommended approach work? (tracked via follow-up in next session or next supervision)
+- What clinicians are collectively stuck on — surfaces training gaps and future tool needs
+- Which supervision group formats produce the most useful discussion
+- Frequency patterns — which presentations come up most, which interventions are most commonly recommended
+
+**Privacy:** Supervision case material is de-identified as standard clinical practice. Data captured is about clinical reasoning and intervention patterns, not patient PHI. Standard consent at onboarding covers participation in de-identified group learning data.
+
+**What it feeds:**
+- **Phase 7 (assessment):** Which assessment tools are supervision groups recommending and why
+- **Phase 8 (AI-assisted therapy):** Intervention recommendation data trains the AI on what good consultation actually looks like — not just published literature, but real clinical judgment in real cases
+- **Matching algorithm:** Patterns in what consultation clinicians seek can refine specialty matching — if a clinician keeps bringing the same type of case to supervision, that's signal about their actual caseload and expertise
+- **NYU research partnership:** De-identified supervision data is a novel dataset for studying naturalistic clinical consultation — underresearched and publishable
+
+**New tables:**
+- `supervision_sessions` — group, date, format, facilitator
+- `supervision_cases` — de-identified case presentations, presenting problem tags, interventions discussed
+- `supervision_recommendations` — specific interventions recommended, rationale, follow-up outcome if tracked
+- `supervision_patterns` — aggregated intervention frequency by presentation type (analytics layer)
+
+**Files:**
+- `src/app/provider/supervision/page.tsx` — supervision group dashboard
+- `src/app/provider/supervision/[groupId]/session/page.tsx` — session log and case entry
+- `src/app/api/supervision/log-session/route.ts`
+- `src/app/api/supervision/log-case/route.ts`
+- `src/app/admin/supervision/analytics/page.tsx` — platform-level supervision patterns
+
+---
+
 ## Reusable Existing Patterns
 
 | What | Where | How It's Reused |
