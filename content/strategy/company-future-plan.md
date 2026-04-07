@@ -14,7 +14,11 @@ The test for every product decision is the same: does this make things faster, c
 
 ## Product philosophy decisions
 
-**Clinician vetting:** Yes — quality matters more than speed of supply. Vetting approach TBD (see open questions), but license verification alone is not enough. Bad matches are worse than no match.
+**Clinician vetting:** Two-tier system:
+- **Listed:** Fast automated verification — active license confirmed, malpractice insurance on file, no open board complaints. Clinician can be listed and matched immediately.
+- **Verified badge:** Fuller process — onboarding orientation covering platform standards, clinical vignette or interview, confirmation of specialization claims. Badge displayed prominently on profile. Patients can filter to verified-only.
+
+Scales supply quickly while giving patients a meaningful trust signal. Quality pressure increases over time as the verified badge becomes the norm.
 
 **Insurance:** Play the insurance game. Help patients use their benefits. Real-time insurance verification (Stedi API) is in the plan. Access and affordability are core to the mission — cutting insurance out would undermine that.
 
@@ -26,8 +30,7 @@ The test for every product decision is the same: does this make things faster, c
 - Search results are ranked by **best clinical fit first** — the matching algorithm score, not sponsored listings, not availability, not price
 - Patients can then apply **price filters** to narrow results to what's affordable for them
 - Price is a patient tool, not a platform ranking signal — the best match shows up first regardless of what they charge
-
-**Open question:** What does clinician vetting actually involve? TBD — see open questions section.
+- **Results are never paid for.** No sponsored placements, no boosted listings, no way to buy a higher position. Publicly stated commitment: *"Your results are sorted by fit, not by who paid us."* No competitor can say this cleanly — they all have some version of sponsored placement. This trust signal compounds over time.
 
 ---
 

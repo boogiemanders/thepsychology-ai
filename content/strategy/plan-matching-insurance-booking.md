@@ -67,6 +67,9 @@ New `provider_profiles` table with:
 - **Practical**: insurance networks, self-pay rate, sliding scale, telehealth states (CA, NY for MVP — no office address needed)
 - **Semantic matching fields**: `bio_embedding` and `approach_embedding` (pgvector, reusing existing pattern from `recover_chunks`)
 - **Status lifecycle**: draft → pending_review → active → suspended/inactive
+- **Verification tier**: `listed` (fast automated check) or `verified` (fuller vetting, badge displayed)
+  - *Listed:* active license confirmed, malpractice insurance on file, no open board complaints
+  - *Verified badge:* above + onboarding orientation, clinical vignette or interview, specialization claims confirmed. Patients can filter to verified-only.
 
 RLS policies: providers manage their own profile; active profiles publicly readable for matching.
 
