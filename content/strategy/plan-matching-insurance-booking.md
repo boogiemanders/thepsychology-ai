@@ -104,13 +104,16 @@ New `phi_access_log` table — every time PHI is accessed (matching, profile vie
 
 ## Phase 2: Matching Algorithm (Weeks 3-6)
 
+### Philosophy
+Results are ranked by **best clinical fit only** — the matching score is the sole ranking signal. No sponsored listings, no availability bias, no price-based ranking. Price is a **patient-controlled filter**, not a platform sorting mechanism. The best match shows up first regardless of what they charge; the patient narrows by price from there if needed.
+
 ### Three-Layer Scoring Pipeline
 
 **Layer 1 — Hard Filters** (eliminate non-viable):
 - Provider licensed in client's state
 - Accepting new clients
 - At least one session format overlap
-- (Insurance match is a soft filter — OON providers shown lower, not eliminated)
+- Insurance match is a **patient-applied filter**, not a hard elimination — out-of-network providers remain visible if the patient chooses to see them
 
 **Layer 2 — Weighted Multi-Dimensional Scoring** (0-100):
 

@@ -12,6 +12,25 @@ The test for every product decision is the same: does this make things faster, c
 
 ---
 
+## Product philosophy decisions
+
+**Clinician vetting:** Yes — quality matters more than speed of supply. Vetting approach TBD (see open questions), but license verification alone is not enough. Bad matches are worse than no match.
+
+**Insurance:** Play the insurance game. Help patients use their benefits. Real-time insurance verification (Stedi API) is in the plan. Access and affordability are core to the mission — cutting insurance out would undermine that.
+
+**AI in therapy:** Both. AI makes human clinicians better (deliberate practice, outcome monitoring, diagnostic support) AND can eventually replace some session types for patients who can't otherwise afford or access care. Phase 8 starts supervised — AI assists, clinician decides — but the philosophy allows for AI-delivered care at appropriate levels with appropriate oversight.
+
+**Data transparency:** How patient data is used — including whether it trains AI models — is disclosed clearly at the point of consent. No hidden data extraction. Patients know what they're consenting to before they consent to it.
+
+**Ranking and filtering:**
+- Search results are ranked by **best clinical fit first** — the matching algorithm score, not sponsored listings, not availability, not price
+- Patients can then apply **price filters** to narrow results to what's affordable for them
+- Price is a patient tool, not a platform ranking signal — the best match shows up first regardless of what they charge
+
+**Open question:** What does clinician vetting actually involve? TBD — see open questions section.
+
+---
+
 ## Founder context
 
 The founder is employed at Greg Inzinna's practice, has submitted supervised hours and EPPP results, and expects licensure within weeks. This matters for the strategy because:
