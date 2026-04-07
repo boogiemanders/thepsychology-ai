@@ -46,6 +46,13 @@ The platform actively recruits for niche. A clinician with three overlapping unu
 
 Scales to trained reviewers once volume demands it. Reviewer criteria should mirror the above.
 
+**Clinician character — what fits here:**
+- **Community and independence both welcome.** Independent practitioners who use the platform as infrastructure are fine. A loose, warm community of people who are genuinely fun and enjoyable to talk with would also be great — not forced culture, just real people who like each other.
+- **Warmth and technique both valued.** Ideally both. Either alone is fine. A cold technician and a warm-but-directionless clinician are both misses.
+- **Ambition:** Fine with clinicians focused on building a solid private practice OR clinicians who are also writing, teaching, researching, building their own things. The founder personally gravitates toward the latter — people who are creating something beyond the session — but both are welcome as long as they're genuinely excited about it, not just checking a box.
+- **Disagreement:** Acknowledgment is what's wanted. Not justification, not explanation, not a defense of why they were right. Just: "I hear that, I missed that." Clinicians who can't receive feedback without defending themselves are not a fit — and it's a meaningful clinical signal too.
+- **Patient population:** Outpatient only to start. No inpatient, no high-acuity or high-risk primary presentations at launch. Clinicians can come alive with different patient types — no preference on that — as long as they're working within an outpatient scope.
+
 **Rankings:** Results are never paid for. No sponsored placements, no boosted listings, no way to buy a higher position. Publicly stated commitment: *"Your results are sorted by fit, not by who paid us."* No competitor can say this cleanly. It's a trust signal that compounds over time.
 
 **AI in therapy:** Both. AI makes human clinicians better (deliberate practice, outcome monitoring, diagnostic support) AND can eventually replace some session types for patients who can't otherwise afford or access care. Phase 8 starts supervised — AI assists, clinician decides — but the philosophy allows for AI-delivered care at appropriate levels with appropriate oversight.
