@@ -2,12 +2,13 @@
 
 ## Founder context
 
-The founder is currently employed at Greg Inzinna's practice while working toward licensure. This matters for the strategy because:
+The founder is employed at Greg Inzinna's practice, has submitted supervised hours and EPPP results, and expects licensure within weeks. This matters for the strategy because:
 
 - The SP Notes Chrome extension is being built **for Inzinna's practice** as an employer relationship, not a co-founder relationship
-- The founder is **currently living the postdoc supervision pipeline** — accumulating supervised hours toward licensure
-- When licensed, the founder becomes the **first provider on the platform** — personally matched with patients through thepsychology.ai
-- This is not a company being built by someone adjacent to the field. The founder is the target user at every stage: student, supervisee, licensed provider, and eventually supervisor.
+- The founder has **lived the postdoc supervision pipeline firsthand** — the product is built from direct experience, not guesswork
+- Upon licensure, the founder becomes the **first provider on the platform** — personally matched with patients through thepsychology.ai — and **private practice is the primary income path**, not academic employment
+- This is not a company being built by someone adjacent to the field. The founder is the target user at every stage: student, supervisee, licensed provider, and eventually supervisor
+- The EPPP platform is live and generating ~$230/month in revenue — the wedge is working at small scale; matching is the next unlock
 
 This changes how the Greg Inzinna relationship should be framed: it is an employment and tools-partnership relationship, not a commercial loop co-venture. The clinical tools built for his practice (SP Notes, ZocDoc extension) are custom work. The platform itself (thepsychology.ai) is wholly the founder's company.
 
@@ -175,13 +176,16 @@ That gives you the Intel/Dell energy without giving away the company.
 
 ## What NYU should be
 
+**NYU is not an employment option.** Private practice as a licensed psychologist is the income path — both for personal earnings and because seeing patients on the platform is what makes the founder the first real node in the matching flywheel. Academic salaries don't compete with that trajectory.
+
+NYU's value is purely as a **research and validation partner** — institutional credibility, publication pathway, and study design rigor for the assessment and AI tools. Nothing more.
+
 NYU should not be pitched as "please help me with everything."
 
-NYU should be pitched as a **research and validation partner**.
+That means the ask is not:
 
-That means the ask is not mainly:
-
-- brand
+- employment
+- brand affiliation
 - referrals
 - ownership
 - general collaboration
@@ -195,7 +199,7 @@ The ask is:
 - IRB / methods support
 - possible student or research assistant involvement
 
-This fits your roadmap exactly. Your current product docs already place assessment and AI-assisted therapy after the main platform exists, and your codebase already includes consent, research profile, and export infrastructure.
+This fits the roadmap exactly. Assessment and AI-assisted therapy come after the main platform exists, and the codebase already includes consent, research profile, and export infrastructure.
 
 ### Best NYU framing
 
