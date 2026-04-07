@@ -297,17 +297,30 @@ Eventually: supervisor themselves → recruits next cohort of postdocs
 - Hour tracking per state licensing board requirements (varies by state — CA, NY first)
 - Supervisor capacity indicator on provider profiles — "accepting postdoc supervision placements"
 
+**How it works legally:**
+- Supervised postdocs see patients **under the supervising psychologist's license** — the supervisor carries clinical and legal responsibility for those sessions
+- This is standard postdoctoral supervised practice, not a gray area — it is the defined pathway to licensure in every state
+- The supervisor decides who they accept as supervisees. The platform facilitates the match but does not override the supervisor's judgment.
+
+**Who can join as a supervisor:**
+- The founder (upon licensure) is the first supervisor on the platform
+- Additional supervisors must be approved — this is a curated network, not an open marketplace
+- Supervisor vetting: active license verification, malpractice coverage confirmed, no board complaints, interview/fit assessment
+- Quality matters more than quantity here — the platform's reputation depends on the supervisors it admits
+
 **Strategic importance:**
 - No competitor offers the full loop: study → supervised practice → license → supervise → repeat
 - This is the deepest possible moat — the platform is embedded in the entire career arc, not just one moment
 - Outcome data from supervised sessions feeds Phase 6 (deliberate practice) and Phase 8 (AI-assisted therapy) with high-quality labeled training data
 - Supervision is billable — supervisors charge postdocs for supervision hours (typically $100-300/hour). Platform can facilitate this payment and take a small fee.
+- The founder starts this personally: takes on postdocs when patient load exceeds personal capacity, supervises their sessions, and builds the quality bar the platform will enforce for all future supervisors.
 
 **Licensing board compliance:**
+- Supervised postdocs see patients under supervisor's license — fully standard, legally defined pathway
 - Supervision requirements vary by state and license type (psychologist vs. LCSW vs. MFT)
 - MVP: California and New York only (matching platform launch states)
 - Each state's hour requirements and supervisor qualifications must be verified and displayed clearly
-- Platform does not certify supervisors — it connects them. Supervisor credentials and active license status are verified same as provider profiles.
+- Platform does not certify supervisors — it connects and vets them. Supervisor credentials, active license, and malpractice coverage verified same as provider profiles.
 
 ### Embeddable Review Badge (Clinician Marketing Tool)
 
