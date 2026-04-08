@@ -80,6 +80,11 @@ export const siteConfig = {
       { id: 2, name: "How it Works", href: "#bento" },
       { id: 4, name: "Pricing", href: "#get-started" },
     ],
+    labLinks: [
+      { id: 1, name: "Main", href: "/" },
+      { id: 2, name: "Projects", href: "#projects" },
+      { id: 3, name: "About", href: "/portfolio" },
+    ],
   },
   hero: {
     badgeIcon: (

@@ -103,7 +103,7 @@ export function Navbar() {
   const toggleDrawer = () => setIsDrawerOpen((prev) => !prev);
   const handleOverlayClick = () => setIsDrawerOpen(false);
 
-  const mobileNavItems = user ? LOGGED_IN_NAVS : siteConfig.nav.links;
+  const mobileNavItems = user ? LOGGED_IN_NAVS : isLabRoute ? siteConfig.nav.labLinks : siteConfig.nav.links;
 
   const handleStartFree = useCallback(() => {
     setIsDrawerOpen(false); // Close mobile drawer if open
@@ -203,7 +203,7 @@ export function Navbar() {
               {renderBrandLockup()}
             </Link>
 
-            <NavMenu isLoggedIn={!!user} />
+            <NavMenu isLoggedIn={!!user} isLabRoute={isLabRoute} />
 
             <div className="flex flex-row items-center gap-1 md:gap-3 shrink-0">
               <div className="flex items-center space-x-6">

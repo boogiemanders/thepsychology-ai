@@ -13,6 +13,7 @@ import {
   TooltipTrigger,
 } from '@/components/ui/tooltip'
 import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from '@/components/ui/sheet'
+import { Accordion, AccordionContent, AccordionItem } from '@/components/ui/accordion'
 import { cn } from '@/lib/utils'
 import {
   BAARS_NORM_CITATION,
@@ -45,6 +46,8 @@ interface ScoreTableRow {
 }
 
 type PronounChoice = 'she' | 'he' | 'they'
+type SctCdsDimension = 'Cognitive Disengagement' | 'Motor Hypoactivity'
+type SctCdsCoverage = 'direct' | 'partial' | 'not_assessed'
 
 export interface BaarsAdhdCriteriaMeta {
   disorderId: string
@@ -56,6 +59,158 @@ export interface BaarsAdhdCriteriaMeta {
 }
 
 const BAARS_RESPONDENT_STORAGE_KEY = 'baars:respondent-draft:v1'
+
+const SHORT_LABELS: Record<string, string> = {
+  '1': 'Never',
+  '2': 'Some.',
+  '3': 'Often',
+  '4': 'V. often',
+}
+
+const DSM_CRITERION_MAP: Record<string, { domain: string; code: string }> = {
+  q1: { domain: 'Inattention (A1)', code: 'A1.1' },
+  q2: { domain: 'Inattention (A1)', code: 'A1.2' },
+  q3: { domain: 'Inattention (A1)', code: 'A1.3' },
+  q4: { domain: 'Inattention (A1)', code: 'A1.4' },
+  q5: { domain: 'Inattention (A1)', code: 'A1.5' },
+  q6: { domain: 'Inattention (A1)', code: 'A1.6' },
+  q7: { domain: 'Inattention (A1)', code: 'A1.7' },
+  q8: { domain: 'Inattention (A1)', code: 'A1.8' },
+  q9: { domain: 'Inattention (A1)', code: 'A1.9' },
+  q10: { domain: 'Hyperactivity-Impulsivity (A2)', code: 'A2.1' },
+  q11: { domain: 'Hyperactivity-Impulsivity (A2)', code: 'A2.2' },
+  q12: { domain: 'Hyperactivity-Impulsivity (A2)', code: 'A2.3' },
+  q13: { domain: 'Hyperactivity-Impulsivity (A2)', code: 'A2.4' },
+  q14: { domain: 'Hyperactivity-Impulsivity (A2)', code: 'A2.5' },
+  q15: { domain: 'Hyperactivity-Impulsivity (A2)', code: 'A2.6' },
+  q16: { domain: 'Hyperactivity-Impulsivity (A2)', code: 'A2.7' },
+  q17: { domain: 'Hyperactivity-Impulsivity (A2)', code: 'A2.8' },
+  q18: { domain: 'Hyperactivity-Impulsivity (A2)', code: 'A2.9' },
+}
+
+interface SctCdsCriterionDefinition {
+  code: string
+  dimension: SctCdsDimension
+  criterion: string
+  reportLabel: string
+  questionIds: string[]
+  coverage: SctCdsCoverage
+}
+
+const SCT_CDS_CRITERIA: SctCdsCriterionDefinition[] = [
+  {
+    code: 'CD1',
+    dimension: 'Cognitive Disengagement',
+    criterion: 'Excessive or maladaptive daydreaming (task-unrelated thought intrusions during goal-directed activity)',
+    reportLabel: 'daydreaming during tasks',
+    questionIds: ['q19'],
+    coverage: 'direct',
+  },
+  {
+    code: 'CD2',
+    dimension: 'Cognitive Disengagement',
+    criterion: 'Prolonged episodes of blank staring unrelated to absence seizure activity',
+    reportLabel: 'blank staring episodes',
+    questionIds: [],
+    coverage: 'not_assessed',
+  },
+  {
+    code: 'CD3',
+    dimension: 'Cognitive Disengagement',
+    criterion: 'Persistent mental fogginess or clouded sensorium',
+    reportLabel: 'mental fog or feeling spacey',
+    questionIds: ['q23'],
+    coverage: 'direct',
+  },
+  {
+    code: 'CD4',
+    dimension: 'Cognitive Disengagement',
+    criterion: 'Absorption in internal mentation (frequently "lost in thought" to the exclusion of environmental awareness)',
+    reportLabel: 'getting lost in thought',
+    questionIds: ['q19'],
+    coverage: 'partial',
+  },
+  {
+    code: 'CD5',
+    dimension: 'Cognitive Disengagement',
+    criterion: 'Recurrent episodes of cognitive disengagement from the immediate external context ("spacing out" or "zoning out")',
+    reportLabel: 'spacing out or zoning out',
+    questionIds: ['q23'],
+    coverage: 'partial',
+  },
+  {
+    code: 'CD6',
+    dimension: 'Cognitive Disengagement',
+    criterion: 'Frequent loss of cognitive set or train of thought',
+    reportLabel: 'losing track of thoughts',
+    questionIds: [],
+    coverage: 'not_assessed',
+  },
+  {
+    code: 'CD7',
+    dimension: 'Cognitive Disengagement',
+    criterion: 'Impaired thought formulation or verbal expression (difficulty organizing and articulating thoughts)',
+    reportLabel: 'trouble putting thoughts into words',
+    questionIds: [],
+    coverage: 'not_assessed',
+  },
+  {
+    code: 'CD8',
+    dimension: 'Cognitive Disengagement',
+    criterion: 'Easily confused; difficulty with rapid or accurate comprehension of novel information',
+    reportLabel: 'getting confused easily or having trouble taking in new information quickly',
+    questionIds: ['q21', 'q27'],
+    coverage: 'direct',
+  },
+  {
+    code: 'CD9',
+    dimension: 'Cognitive Disengagement',
+    criterion: 'Slowed cognitive processing speed',
+    reportLabel: 'slower thinking speed',
+    questionIds: ['q27'],
+    coverage: 'direct',
+  },
+  {
+    code: 'CD10',
+    dimension: 'Cognitive Disengagement',
+    criterion: 'Frequent retrieval failures during active discourse (e.g., forgetting intended verbalizations mid-conversation)',
+    reportLabel: 'forgetting what one was about to say mid-conversation',
+    questionIds: [],
+    coverage: 'not_assessed',
+  },
+  {
+    code: 'MH1',
+    dimension: 'Motor Hypoactivity',
+    criterion: 'Diminished spontaneous motor activity; hypoactivity',
+    reportLabel: 'being underactive or not moving much',
+    questionIds: ['q25'],
+    coverage: 'direct',
+  },
+  {
+    code: 'MH2',
+    dimension: 'Motor Hypoactivity',
+    criterion: 'Excessive daytime somnolence not attributable to a primary sleep disorder',
+    reportLabel: 'trouble staying awake or alert in boring situations',
+    questionIds: ['q20'],
+    coverage: 'partial',
+  },
+  {
+    code: 'MH3',
+    dimension: 'Motor Hypoactivity',
+    criterion: 'Chronic fatigue or low energy disproportionate to activity level and not attributable to a medical condition',
+    reportLabel: 'low energy or tiredness',
+    questionIds: ['q24', 'q25'],
+    coverage: 'direct',
+  },
+  {
+    code: 'MH4',
+    dimension: 'Motor Hypoactivity',
+    criterion: 'Psychomotor retardation',
+    reportLabel: 'slow moving behavior that may reflect psychomotor slowing',
+    questionIds: ['q26'],
+    coverage: 'partial',
+  },
+]
 
 function getTodayDateValue(): string {
   const now = new Date()
@@ -204,6 +359,136 @@ function getAdhdPresentationLabel(inattentionCount: number, hyperImpCount: numbe
   if (meetsInattention) return 'predominantly inattentive'
   if (meetsHyperImp) return 'predominantly hyperactive-impulsive'
   return null
+}
+
+function formatReportList(items: string[]): string {
+  if (items.length === 0) return ''
+  if (items.length === 1) return items[0]
+  if (items.length === 2) return `${items[0]} and ${items[1]}`
+  return `${items.slice(0, -1).join(', ')}, and ${items[items.length - 1]}`
+}
+
+function formatCriterionEvidence(
+  instrument: InstrumentDefinition,
+  answers: Record<string, QuestionValue>,
+  questionIds: string[],
+): string[] {
+  return questionIds.flatMap(questionId => {
+    const value = answers[questionId]
+    if (typeof value !== 'string' || Number(value) < 3) return []
+
+    const question = getQuestionById(instrument, questionId)
+    if (!question) return []
+
+    const responseLabel = instrument.responseScale?.find(option => option.value === value)?.label ?? value
+    return [`Item ${question.number} (${responseLabel})`]
+  })
+}
+
+function buildEndorsedSymptomsSection(
+  instrument: InstrumentDefinition,
+  answers: Record<string, QuestionValue>,
+): string | null {
+  const groupedSymptoms = new Map<string, string[]>()
+
+  for (const section of instrument.sections) {
+    if (section.id === 'follow_up') continue
+
+    const normalizedSectionTitle = section.title.replace(/^Section \d+:?\s*/, '').trim()
+    const fallbackDomain = section.id === 'sluggish_cognitive_tempo'
+      ? 'Sluggish Cognitive Tempo'
+      : normalizedSectionTitle || section.title
+
+    for (const question of section.questions) {
+      const value = answers[question.id]
+      if (typeof value !== 'string' || Number(value) < 3) continue
+
+      const dsmCriterion = DSM_CRITERION_MAP[question.id]
+      const domain = dsmCriterion?.domain ?? fallbackDomain
+      const responseLabel = instrument.responseScale?.find(option => option.value === value)?.label ?? value
+      const criterionLabel = dsmCriterion ? ` (${dsmCriterion.code})` : ''
+      const line = `Item ${question.number}${criterionLabel}, "${question.prompt}" (${responseLabel})`
+
+      if (groupedSymptoms.has(domain)) {
+        groupedSymptoms.get(domain)?.push(line)
+      } else {
+        groupedSymptoms.set(domain, [line])
+      }
+    }
+  }
+
+  if (groupedSymptoms.size === 0) return null
+
+  const groupedNarrative = Array.from(groupedSymptoms.entries()).map(([domain, items]) => {
+    const lead = domain === 'Inattention (A1)'
+      ? 'Inattention symptoms rated this high included'
+      : domain === 'Hyperactivity-Impulsivity (A2)'
+        ? 'Hyperactivity-impulsivity symptoms rated this high included'
+        : 'Sluggish cognitive tempo symptoms rated this high included'
+
+    return `${lead} ${formatReportList(items)}.`
+  })
+
+  return `Symptoms rated "Often" or "Very Often" were strongest in these areas. ${groupedNarrative.join(' ')}`
+}
+
+function buildSctCriteriaSummary(
+  instrument: InstrumentDefinition,
+  answers: Record<string, QuestionValue>,
+): string | null {
+  if (instrument.id !== 'baars_iv_self_report_current_symptoms') return null
+
+  const directByDimension = new Map<SctCdsDimension, string[]>()
+  const partialByDimension = new Map<SctCdsDimension, string[]>()
+
+  for (const criterion of SCT_CDS_CRITERIA) {
+    if (criterion.coverage === 'not_assessed') continue
+
+    const evidence = formatCriterionEvidence(instrument, answers, criterion.questionIds)
+    if (evidence.length === 0) continue
+
+    const detail = `${criterion.reportLabel} (${formatReportList(evidence)})`
+    const bucket = criterion.coverage === 'direct' ? directByDimension : partialByDimension
+    const currentItems = bucket.get(criterion.dimension) ?? []
+    currentItems.push(detail)
+    bucket.set(criterion.dimension, currentItems)
+  }
+
+  const directCognitive = directByDimension.get('Cognitive Disengagement') ?? []
+  const directMotor = directByDimension.get('Motor Hypoactivity') ?? []
+  const partialCognitive = partialByDimension.get('Cognitive Disengagement') ?? []
+  const partialMotor = partialByDimension.get('Motor Hypoactivity') ?? []
+  const notAssessed = SCT_CDS_CRITERIA
+    .filter(criterion => criterion.coverage === 'not_assessed')
+    .map(criterion => criterion.reportLabel)
+
+  const parts: string[] = [
+    'The SCT/CDS items were also compared with the broader cognitive disengagement and motor hypoactivity criteria list.'
+  ]
+
+  if (directCognitive.length > 0) {
+    parts.push(`Within cognitive disengagement, the response pattern was most consistent with ${formatReportList(directCognitive)}.`)
+  }
+
+  if (directMotor.length > 0) {
+    parts.push(`Within motor hypoactivity, the response pattern was most consistent with ${formatReportList(directMotor)}.`)
+  }
+
+  if (directCognitive.length === 0 && directMotor.length === 0) {
+    parts.push('No SCT/CDS features that are directly measured by the BAARS SCT items were endorsed at the "Often" or "Very Often" level.')
+  }
+
+  if (partialCognitive.length > 0) {
+    parts.push(`The same pattern may also fit other cognitive disengagement features, including ${formatReportList(partialCognitive)}.`)
+  }
+
+  if (partialMotor.length > 0) {
+    parts.push(`The same pattern may also fit other motor hypoactivity features, including ${formatReportList(partialMotor)}.`)
+  }
+
+  parts.push(`This BAARS form does not directly test ${formatReportList(notAssessed)}.`)
+
+  return parts.join(' ')
 }
 
 function buildCurrentCriteriaSuggestion(
@@ -393,6 +678,8 @@ function buildCurrentNarrative(
   const intro = `${name}${demographic ? `, a ${demographic},` : ''} completed the BAARS-IV Self-Report (Current Symptoms) on ${header.date || 'today'}.${ageBand ? ` Raw scores were compared against the ${ageBand} age band.` : ''}`
   const subscales = `On the symptom items, ${pronounLower} obtained the following subscale raw scores: Inattention (${fmt(inattention)}); Hyperactivity (${fmt(hyperactivity)}); Impulsivity (${fmt(impulsivity)}); and Sluggish Cognitive Tempo (${fmt(sct)}). ${possessive} Total ADHD raw score was ${fmt(totalAdhd)}.`
   const counts = `At the DSM symptom-count threshold (items rated "Often" or "Very Often"), ${pronounLower} endorsed ${inattCount?.value ?? 0}/9 inattention symptoms and ${hyperImpCount.value}/9 hyperactivity-impulsivity symptoms (${totalSymptomCount.value}/18 total).`
+  const endorsedSymptoms = buildEndorsedSymptomsSection(instrument, answers)
+  const sctCriteriaSummary = buildSctCriteriaSummary(instrument, answers)
   const criteriaSuggestion = buildCurrentCriteriaSuggestion(adhdCriteria, instrument, scores, answers, age)
 
   const followUpParts: string[] = []
@@ -410,7 +697,7 @@ function buildCurrentNarrative(
 
   const footer = 'Results should be interpreted in the context of clinical interview, developmental history, and collateral information.'
 
-  return [intro, subscales, counts, criteriaSuggestion, followUpParts.join(' '), footer].filter(Boolean).join('\n\n')
+  return [intro, subscales, counts, endorsedSymptoms, sctCriteriaSummary, criteriaSuggestion, followUpParts.join(' '), footer].filter(Boolean).join('\n\n')
 }
 
 function buildChildhoodNarrative(
@@ -457,6 +744,7 @@ function buildChildhoodNarrative(
   const intro = `${name}${demographic ? `, a ${demographic},` : ''} completed the BAARS-IV Self-Report (Childhood Symptoms) on ${header.date || 'today'}. Ratings reflect recalled behavior between ages 5 and 12.${ageBand ? ` Raw scores were compared against the ${ageBand} age band.` : ''}`
   const subscales = `On the retrospective childhood symptom items, ${pronounLower} obtained the following raw scores: Inattention (${fmt(inattention)}) and Hyperactivity-Impulsivity (${fmt(hyperImp)}). ${possessive} Total ADHD raw score was ${fmt(totalAdhd)}.`
   const counts = `At the DSM symptom-count threshold (items rated "Often" or "Very Often"), ${pronounLower} endorsed ${inattCount.value}/9 inattention symptoms and ${hyperImpCount.value}/9 hyperactivity-impulsivity symptoms (${totalSymptomCount.value}/18 total).`
+  const endorsedSymptoms = buildEndorsedSymptomsSection(instrument, answers)
   const criteriaSuggestion = buildChildhoodCriteriaSuggestion(adhdCriteria, instrument, scores, answers)
 
   const followUpParts: string[] = []
@@ -471,7 +759,7 @@ function buildChildhoodNarrative(
 
   const footer = 'Results should be interpreted alongside developmental history, collateral information, and the limits of retrospective recall.'
 
-  return [intro, subscales, counts, criteriaSuggestion, followUpParts.join(' '), footer].filter(Boolean).join('\n\n')
+  return [intro, subscales, counts, endorsedSymptoms, criteriaSuggestion, followUpParts.join(' '), footer].filter(Boolean).join('\n\n')
 }
 
 function buildNarrative(
@@ -520,6 +808,7 @@ export function BaarsDemo({
   const [collapsedSections, setCollapsedSections] = useState<Set<string>>(new Set())
   const userExpandedRef = useRef<Set<string>>(new Set())
   const answerHistoryRef = useRef<Array<{ id: string; prev: QuestionValue | undefined }>>([])
+  const hasInitializedActiveQuestionRef = useRef(false)
   const [mobileSheetOpen, setMobileSheetOpen] = useState(false)
   const [respondentDraftLoaded, setRespondentDraftLoaded] = useState(false)
   const ageValue = Number(headerValues.age)
@@ -625,6 +914,9 @@ export function BaarsDemo({
     symptomQuestionIds[0] ?? null,
   )
   const responseScale = instrument.responseScale ?? []
+  const DESKTOP_STICKY_SCALE_TOP = 24
+  const DESKTOP_STICKY_SCALE_HEIGHT = 36
+  const desktopQuestionScrollMargin = DESKTOP_STICKY_SCALE_TOP + DESKTOP_STICKY_SCALE_HEIGHT + 16
 
   const setQuestionRef = (questionId: string, element: HTMLDivElement | null) => {
     if (!element) return
@@ -655,6 +947,10 @@ export function BaarsDemo({
   // When active question changes, scroll it into view
   useEffect(() => {
     if (!activeQuestionId) return
+    if (!hasInitializedActiveQuestionRef.current) {
+      hasInitializedActiveQuestionRef.current = true
+      return
+    }
     const el = questionRefs.current[activeQuestionId]
     if (el) {
       el.scrollIntoView({ behavior: 'smooth', block: 'center' })
@@ -946,185 +1242,180 @@ export function BaarsDemo({
         </p>
       </motion.section>
 
-      {/* --- Keyboard legend (Item 9) --- */}
-      <div className="mt-12 hidden md:flex items-center gap-3 text-[10px] uppercase tracking-[0.12em] text-zinc-400 dark:text-zinc-500">
-        <span className="font-mono">Keys</span>
-        {responseScale.map(opt => (
-          <span key={opt.value} className="flex items-center gap-1.5">
-            <kbd className="font-mono border border-zinc-200 dark:border-zinc-800 rounded px-1.5 py-0.5 text-[10px] text-zinc-600 dark:text-zinc-400 bg-zinc-50 dark:bg-zinc-900">{opt.value}</kbd>
-            <span>{opt.label}</span>
-          </span>
-        ))}
-        <span className="ml-auto flex items-center gap-1.5">
-          <kbd className="font-mono border border-zinc-200 dark:border-zinc-800 rounded px-1.5 py-0.5 text-[10px] bg-zinc-50 dark:bg-zinc-900">↑↓</kbd>
-          <span>navigate</span>
-          <kbd className="font-mono border border-zinc-200 dark:border-zinc-800 rounded px-1.5 py-0.5 text-[10px] bg-zinc-50 dark:bg-zinc-900">⌘Z</kbd>
-          <span>undo</span>
-        </span>
-      </div>
-
       {/* --- Symptom Sections --- */}
       {symptomSections.map((section, sIndex) => {
         const progress = sectionProgress.find(p => p.id === section.id)
         const isCollapsed = collapsedSections.has(section.id)
-        if (isCollapsed) {
-          return (
-            <motion.section
-              key={section.id}
-              {...motionSection(2 + sIndex)}
-              className="mt-12 flex items-center justify-between rounded-lg border border-zinc-100 dark:border-zinc-800/70 bg-zinc-50/60 dark:bg-zinc-900/30 px-5 py-3"
-            >
-              <span className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
-                {section.title} <span className="font-mono text-[11px] text-zinc-400 ml-2">{progress?.answered}/{progress?.total}</span>
-              </span>
-              <button
-                type="button"
-                onClick={() => expandSection(section.id)}
-                className="text-[11px] font-medium uppercase tracking-[0.12em] text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors active:scale-[0.97]"
-              >
-                Edit
-              </button>
-            </motion.section>
-          )
-        }
         return (
-        <motion.section key={section.id} {...motionSection(2 + sIndex)} className="mt-24 border-t border-zinc-100 dark:border-zinc-800/50 pt-12">
-          <div className="flex items-center justify-between mb-6">
-            <h2 className="text-xs font-medium uppercase tracking-[0.15em] text-zinc-900 dark:text-zinc-100">
-              {section.title}
-            </h2>
-            <p className="text-[11px] font-mono text-zinc-400 dark:text-zinc-500">
-              {section.questions.filter(q => typeof answers[q.id] === 'string' && answers[q.id] !== '').length}/{section.questions.length}
-            </p>
-          </div>
-          <div className="hidden rounded-xl border border-zinc-200 dark:border-zinc-800 md:block">
-            <div className="sticky top-24 z-30 grid grid-cols-[minmax(0,1fr)_72px_72px_72px_72px] border-b border-zinc-200 bg-zinc-50/95 shadow-sm backdrop-blur supports-[backdrop-filter]:bg-zinc-50/80 dark:border-zinc-800 dark:bg-zinc-950/95 dark:supports-[backdrop-filter]:bg-zinc-950/80">
-              <div className="flex min-h-[68px] items-center px-4 text-[11px] font-medium uppercase tracking-[0.12em] text-zinc-400 dark:text-zinc-500">
-                Item
-              </div>
-              {responseScale.map(opt => (
-                <div
-                  key={opt.value}
-                  className="flex min-h-[68px] flex-col items-center justify-center gap-1 border-l border-zinc-200 px-2 text-center dark:border-zinc-800"
+          <motion.section
+            key={section.id}
+            layout={!prefersReducedMotion}
+            {...motionSection(2 + sIndex)}
+            className={cn(
+              'border-zinc-100 dark:border-zinc-800/50',
+              isCollapsed
+                ? 'mt-12'
+                : 'mt-24 border-t pt-12',
+            )}
+          >
+            {isCollapsed && (
+              <div className="flex items-center justify-between rounded-lg border border-zinc-100 dark:border-zinc-800/70 bg-zinc-50/60 dark:bg-zinc-900/30 px-5 py-3">
+                <span className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
+                  {section.title} <span className="font-mono text-[11px] text-zinc-400 ml-2">{progress?.answered}/{progress?.total}</span>
+                </span>
+                <button
+                  type="button"
+                  onClick={() => expandSection(section.id)}
+                  className="text-[11px] font-medium uppercase tracking-[0.12em] text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors active:scale-[0.97]"
                 >
-                  <span className="font-mono text-[13px] leading-none text-zinc-900 dark:text-zinc-100">
-                    {opt.value}
-                  </span>
-                  <span className="text-[10px] leading-[1.15] text-zinc-400 dark:text-zinc-500 text-balance">
-                    {opt.label}
-                  </span>
-                </div>
-              ))}
-            </div>
-            <div>
-              {section.questions.map(question => {
-                const isActive = activeQuestionId === question.id
-                return (
-                  <div
-                    key={question.id}
-                    ref={el => setQuestionRef(question.id, el)}
-                    onClick={() => setActiveQuestionId(question.id)}
-                    className={cn(
-                      'relative grid grid-cols-[minmax(0,1fr)_72px_72px_72px_72px] border-b border-zinc-100 transition-all duration-200 ease-out last:border-b-0 dark:border-zinc-800/70 scroll-mt-28 md:scroll-mt-32',
-                      isActive && 'bg-zinc-50 dark:bg-zinc-900/50',
-                    )}
-                  >
-                    {isActive && (
-                      <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-zinc-900 dark:bg-zinc-100 origin-top animate-[scaleY_180ms_ease-out]" />
-                    )}
-                    <div className="flex items-start gap-3 px-4 py-3">
-                      <span className="pt-0.5 font-mono text-[11px] text-zinc-300 dark:text-zinc-600">
-                        {question.number}.
-                      </span>
-                      <div className="min-w-0">
-                        <p className="text-[13px] leading-relaxed text-zinc-700 dark:text-zinc-300">
-                          {question.prompt}
-                        </p>
-                        {isActive && (
-                          <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.12em] text-zinc-400 dark:text-zinc-500">
-                            Press 1-4
-                          </p>
-                        )}
+                  Edit
+                </button>
+              </div>
+            )}
+
+            <Accordion type="single" collapsible value={isCollapsed ? undefined : section.id}>
+              <AccordionItem value={section.id} className="border-none">
+                <AccordionContent className="pb-0">
+                  <div className="flex items-center justify-between mb-6">
+                    <h2 className="text-xs font-medium uppercase tracking-[0.15em] text-zinc-900 dark:text-zinc-100">
+                      {section.title}
+                    </h2>
+                    <p className="text-[11px] font-mono text-zinc-400 dark:text-zinc-500">
+                      {section.questions.filter(q => typeof answers[q.id] === 'string' && answers[q.id] !== '').length}/{section.questions.length}
+                    </p>
+                  </div>
+                  <div className="hidden rounded-xl border border-zinc-200 dark:border-zinc-800 md:block">
+                    <div
+                      className="sticky z-30 grid grid-cols-[minmax(0,1fr)_84px_84px_84px_84px] border-b border-zinc-200 bg-transparent dark:border-zinc-800"
+                      style={{ top: DESKTOP_STICKY_SCALE_TOP }}
+                    >
+                      <div className="flex min-h-[36px] flex-col items-start justify-center gap-0 px-4">
+                        <span className="text-[11px] font-medium uppercase tracking-[0.12em] text-zinc-400 dark:text-zinc-500">
+                          Item
+                        </span>
+                        <span className="font-mono text-[8px] uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400">
+                          Keys 1-4
+                        </span>
                       </div>
-                    </div>
-                    {responseScale.map(opt => {
-                      const isSelected = answers[question.id] === opt.value
-                      return (
-                        <button
+                      {responseScale.map(opt => (
+                        <div
                           key={opt.value}
-                          type="button"
-                          onClick={event => {
-                            event.stopPropagation()
-                            selectSymptomAnswer(question.id, opt.value)
-                          }}
-                          className={cn(
-                            'border-l border-zinc-100 text-center font-mono text-sm transition-all duration-100 dark:border-zinc-800/70 active:scale-[0.97]',
-                            isSelected
-                              ? 'bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-900'
-                              : 'text-zinc-400 hover:bg-zinc-100 hover:text-zinc-900 dark:text-zinc-500 dark:hover:bg-zinc-900 dark:hover:text-zinc-100',
-                          )}
-                          aria-pressed={isSelected}
-                          aria-label={`Set question ${question.number} to ${opt.label}`}
+                          className="flex min-h-[36px] items-center justify-center border-l border-zinc-200 px-2 text-center dark:border-zinc-800"
                         >
-                          {opt.value}
-                        </button>
+                          <span className="font-mono text-[14px] leading-none text-zinc-900 dark:text-zinc-100">
+                            {opt.value}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                    <div>
+                      {section.questions.map(question => {
+                        const isActive = activeQuestionId === question.id
+                        return (
+                          <div
+                            key={question.id}
+                            ref={el => setQuestionRef(question.id, el)}
+                            onClick={() => setActiveQuestionId(question.id)}
+                            style={{ scrollMarginTop: desktopQuestionScrollMargin }}
+                            className={cn(
+                              'relative grid grid-cols-[minmax(0,1fr)_84px_84px_84px_84px] border-b border-zinc-100 transition-all duration-200 ease-out last:border-b-0 dark:border-zinc-800/70 scroll-mt-28',
+                              isActive && 'bg-zinc-50 dark:bg-zinc-900/50',
+                            )}
+                          >
+                            {isActive && (
+                              <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-zinc-900 dark:bg-zinc-100 origin-top animate-[scaleY_180ms_ease-out]" />
+                            )}
+                            <div className="flex items-start gap-3 px-4 py-3">
+                              <span className="pt-0.5 font-mono text-[11px] text-zinc-300 dark:text-zinc-600">
+                                {question.number}.
+                              </span>
+                              <div className="min-w-0">
+                                <p className="text-[13px] leading-relaxed text-zinc-700 dark:text-zinc-300">
+                                  {question.prompt}
+                                </p>
+                              </div>
+                            </div>
+                            {responseScale.map(opt => {
+                              const isSelected = answers[question.id] === opt.value
+                              return (
+                                <button
+                                  key={opt.value}
+                                  type="button"
+                                  onClick={event => {
+                                    event.stopPropagation()
+                                    selectSymptomAnswer(question.id, opt.value)
+                                  }}
+                                  className={cn(
+                                    'border-l border-zinc-100 px-1 text-center text-[11px] font-medium leading-tight transition-all duration-100 dark:border-zinc-800/70 active:scale-[0.97]',
+                                    isSelected
+                                      ? 'bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-900'
+                                      : 'text-zinc-400 hover:bg-zinc-100 hover:text-zinc-900 dark:text-zinc-500 dark:hover:bg-zinc-900 dark:hover:text-zinc-100',
+                                  )}
+                                  aria-pressed={isSelected}
+                                  aria-label={`Set question ${question.number} to ${opt.label}`}
+                                >
+                                  {opt.label}
+                                </button>
+                              )
+                            })}
+                          </div>
+                        )
+                      })}
+                    </div>
+                  </div>
+                  <div className="space-y-5 md:hidden">
+                    {section.questions.map(question => {
+                      const isActive = activeQuestionId === question.id
+                      return (
+                        <div
+                          key={question.id}
+                          ref={el => setQuestionRef(question.id, el)}
+                          onClick={() => setActiveQuestionId(question.id)}
+                          className={cn(
+                            'relative rounded-lg transition-all duration-200 ease-out scroll-mt-28',
+                            isActive && 'bg-zinc-50 dark:bg-zinc-900/40 -mx-3 px-3 py-3',
+                          )}
+                        >
+                          {isActive && (
+                            <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-zinc-900 dark:bg-zinc-100 rounded-full origin-top animate-[scaleY_180ms_ease-out]" />
+                          )}
+                          <div className="mb-3">
+                            <span className="block font-mono text-[11px] text-zinc-300 dark:text-zinc-600 mb-1">{question.number}.</span>
+                            <span className="block text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed">{question.prompt}</span>
+                          </div>
+                          <RadioGroup
+                            value={typeof answers[question.id] === 'string' ? (answers[question.id] as string) : ''}
+                            onValueChange={v => selectSymptomAnswer(question.id, v)}
+                            className="flex gap-1"
+                          >
+                            {responseScale.map(opt => {
+                              const isSelected = answers[question.id] === opt.value
+                              return (
+                                <label
+                                  key={opt.value}
+                                  htmlFor={`${question.id}-${opt.value}`}
+                                  className={cn(
+                                    'flex-1 cursor-pointer rounded-md border min-h-[44px] flex items-center justify-center text-center text-[12px] transition-all duration-100 active:scale-[0.97]',
+                                    isSelected
+                                      ? 'border-zinc-900 dark:border-zinc-100 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 font-medium'
+                                      : 'border-zinc-200 dark:border-zinc-800 text-zinc-500 dark:text-zinc-400',
+                                  )}
+                                >
+                                  <RadioGroupItem value={opt.value} id={`${question.id}-${opt.value}`} className="sr-only" />
+                                  <span className="hidden sm:inline">{opt.label}</span>
+                                  <span className="sm:hidden">{SHORT_LABELS[opt.value] ?? opt.value}</span>
+                                </label>
+                              )
+                            })}
+                          </RadioGroup>
+                        </div>
                       )
                     })}
                   </div>
-                )
-              })}
-            </div>
-          </div>
-          <div className="space-y-5 md:hidden">
-            {section.questions.map(question => {
-              const isActive = activeQuestionId === question.id
-              return (
-              <div
-                key={question.id}
-                ref={el => setQuestionRef(question.id, el)}
-                onClick={() => setActiveQuestionId(question.id)}
-                className={cn(
-                  'relative rounded-lg transition-all duration-200 ease-out scroll-mt-28',
-                  isActive && 'bg-zinc-50 dark:bg-zinc-900/40 -mx-3 px-3 py-3',
-                )}
-              >
-                {isActive && (
-                  <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-zinc-900 dark:bg-zinc-100 rounded-full origin-top animate-[scaleY_180ms_ease-out]" />
-                )}
-                <div className="mb-3">
-                  <span className="block font-mono text-[11px] text-zinc-300 dark:text-zinc-600 mb-1">{question.number}.</span>
-                  <span className="block text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed">{question.prompt}</span>
-                </div>
-                <RadioGroup
-                  value={typeof answers[question.id] === 'string' ? (answers[question.id] as string) : ''}
-                  onValueChange={v => selectSymptomAnswer(question.id, v)}
-                  className="flex gap-1"
-                >
-                  {responseScale.map(opt => {
-                    const isSelected = answers[question.id] === opt.value
-                    return (
-                      <label
-                        key={opt.value}
-                        htmlFor={`${question.id}-${opt.value}`}
-                        className={cn(
-                          'flex-1 cursor-pointer rounded-md border min-h-[44px] flex items-center justify-center text-center text-[12px] transition-all duration-100 active:scale-[0.97]',
-                          isSelected
-                            ? 'border-zinc-900 dark:border-zinc-100 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 font-medium'
-                            : 'border-zinc-200 dark:border-zinc-800 text-zinc-500 dark:text-zinc-400',
-                        )}
-                      >
-                        <RadioGroupItem value={opt.value} id={`${question.id}-${opt.value}`} className="sr-only" />
-                        <span className="hidden sm:inline">{opt.label}</span>
-                        <span className="sm:hidden">{opt.value}</span>
-                      </label>
-                    )
-                  })}
-                </RadioGroup>
-              </div>
-              )
-            })}
-          </div>
-        </motion.section>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </motion.section>
         )
       })}
 

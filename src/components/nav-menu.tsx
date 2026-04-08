@@ -19,7 +19,9 @@ export const LOGGED_IN_NAVS: NavItem[] = [
   { name: "Study", href: "/topic-selector" },
 ];
 
-export function NavMenu({ isLoggedIn }: { isLoggedIn?: boolean }) {
+const labNavs: NavItem[] = siteConfig.nav.labLinks;
+
+export function NavMenu({ isLoggedIn, isLabRoute }: { isLoggedIn?: boolean; isLabRoute?: boolean }) {
   const ref = useRef<HTMLUListElement>(null);
   const [left, setLeft] = useState(0);
   const [width, setWidth] = useState(0);
@@ -30,7 +32,7 @@ export function NavMenu({ isLoggedIn }: { isLoggedIn?: boolean }) {
   const pathname = usePathname();
 
   // Prevent hydration mismatch by only showing logged-in state after mount
-  const currentNavs = mounted && isLoggedIn ? LOGGED_IN_NAVS : navs;
+  const currentNavs = mounted && isLoggedIn ? LOGGED_IN_NAVS : isLabRoute ? labNavs : navs;
 
   React.useEffect(() => {
     setMounted(true);

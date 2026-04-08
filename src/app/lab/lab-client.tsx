@@ -42,7 +42,7 @@ function StatusBadge({ status }: { status: Project['status'] }) {
   const s = statusConfig[status]
   return (
     <span className="inline-flex items-center gap-1.5">
-      <span className={`inline-block h-1.5 w-1.5 rounded-full ${s.dot}`} />
+      <span className={`inline-block h-2 w-2 rounded-full ${s.dot}`} />
       <span
         className={cn(
           'text-[10px] font-mono uppercase tracking-[0.14em]',
@@ -159,7 +159,7 @@ export default function LabClient({ projects }: { projects: Project[] }) {
             Laboratory
           </h1>
           <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">
-            Tools that save you time.
+            Clinical tools, creative experiments, and side projects.
           </p>
         </div>
 
@@ -189,7 +189,7 @@ export default function LabClient({ projects }: { projects: Project[] }) {
       </section>
 
       {/* Desktop: Orbital timeline */}
-      <div ref={orbitalTimelineRef} className="hidden md:block">
+      <div id="projects" ref={orbitalTimelineRef} className="hidden md:block">
         <RadialOrbitalTimeline projects={orbitalProjects} />
       </div>
 
