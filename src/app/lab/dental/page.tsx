@@ -49,7 +49,7 @@ export default function DentalPage() {
           </li>
           <li className="flex gap-3">
             <span className="font-mono text-[11px] text-zinc-300 dark:text-zinc-600 mt-0.5 shrink-0">03</span>
-            <span>You get a PowerPoint emailed to you — one slide per figure, ready to drag into your own decks</span>
+            <span>You get a PowerPoint emailed to you, one slide per figure, ready to drag into your own decks</span>
           </li>
         </ol>
       </div>

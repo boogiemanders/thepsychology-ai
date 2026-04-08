@@ -26,7 +26,7 @@ export default function LicenseWatchPage() {
           NYSED Psych License Check
         </h1>
         <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">
-          Passed the EPPP and finished your hours? Stop refreshing the NYSED site.
+          Free. Passed the EPPP and finished your hours? Stop refreshing the NYSED site.
           We&apos;ll email you the moment your license is posted.
         </p>
       </div>

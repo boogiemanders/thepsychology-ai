@@ -402,7 +402,7 @@ export default function SenseSurvey() {
           <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-400 dark:text-zinc-500 mb-[13px]">Mind-Body Assessment</p>
           <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50 mb-[8px]">SENSE</h1>
           <p className="text-[14px] text-zinc-500 dark:text-zinc-400 leading-relaxed max-w-lg">
-            Developed by Dr. Neha Menon. Rate each statement on a frequency scale. There are no trick questions.
+            Developed by Dr. Neha Menon. Free to use. Rate each statement on a frequency scale. There are no trick questions.
           </p>
         </motion.div>
 
