@@ -18,11 +18,15 @@ function LoginPageFallback() {
 function LoginPageContent() {
   const router = useRouter()
   const searchParams = useSearchParams()
-  const nextUrl = searchParams.get('next')
+  const nextUrl = searchParams.get('next') || searchParams.get('redirect')
+  const email = searchParams.get('email') || ''
+  const signupHref = nextUrl?.startsWith('/lab/dental')
+    ? `/lab/dental/signup?next=${encodeURIComponent(nextUrl)}`
+    : '/signup'
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [formData, setFormData] = useState({
-    email: '',
+    email,
     password: '',
   })
 
@@ -148,7 +152,7 @@ function LoginPageContent() {
               <div className="text-center">
                 <TypographyMuted>
                   Don&apos;t have an account?{' '}
-                  <Link href="/signup" className="text-primary hover:underline font-medium">
+                  <Link href={signupHref} className="text-primary hover:underline font-medium">
                     Sign up
                   </Link>
                 </TypographyMuted>

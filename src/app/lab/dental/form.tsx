@@ -111,12 +111,20 @@ export function DentalExtractorForm() {
         <p className="text-[13px] text-zinc-500 dark:text-zinc-400 mb-4">
           We email the PowerPoint to your account, so we need you logged in.
         </p>
-        <Link
-          href="/login?redirect=/lab/dental"
-          className="inline-block rounded-md bg-zinc-900 dark:bg-zinc-100 px-4 py-2 text-sm font-medium text-white dark:text-zinc-900 transition-opacity duration-150 hover:opacity-80"
-        >
-          Sign in
-        </Link>
+        <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+          <Link
+            href="/login?next=/lab/dental"
+            className="inline-block rounded-md bg-zinc-900 dark:bg-zinc-100 px-4 py-2 text-sm font-medium text-white dark:text-zinc-900 transition-opacity duration-150 hover:opacity-80"
+          >
+            Sign in
+          </Link>
+          <Link
+            href="/lab/dental/signup?next=/lab/dental"
+            className="inline-block rounded-md border border-zinc-300 dark:border-zinc-700 px-4 py-2 text-sm font-medium text-zinc-900 dark:text-zinc-100 transition-colors duration-150 hover:border-zinc-900 hover:text-zinc-900 dark:hover:border-zinc-100 dark:hover:text-zinc-100"
+          >
+            Create free account
+          </Link>
+        </div>
       </div>
     )
   }

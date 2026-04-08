@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { timingSafeEqual } from 'crypto'
 import { sendNotificationEmail } from '@/lib/notify-email'
 import { sendSlackNotification, SlackChannel } from '@/lib/notify-slack'
+import { getSignupProvisioning } from '@/lib/signup-provisioning'
 import { getSupabaseClient } from '@/lib/supabase-server'
 
 type SupabaseWebhookPayload = {
@@ -48,14 +49,6 @@ async function repairIncompleteSignupRecord(
   const trialEndsAt = asNonEmptyString(record.trial_ends_at)
   const referralSource = asNonEmptyString(record.referral_source)
 
-  const needsRepair =
-    tier !== 'pro' ||
-    !subscriptionStartedAt ||
-    !trialEndsAt ||
-    !referralSource
-
-  if (!needsRepair) return null
-
   const supabase = getSupabaseClient(undefined, { requireServiceRole: true })
   if (!supabase) {
     console.warn('[supabase-webhook] Skipping signup repair: Supabase service client unavailable')
@@ -82,16 +75,29 @@ async function repairIncompleteSignupRecord(
     authCreatedAt ||
     asNonEmptyString(record.created_at) ||
     new Date().toISOString()
+  const provisioning = getSignupProvisioning({
+    subscriptionTier: tier,
+    signupSource: metadata.signup_source,
+    skipTrial: metadata.skip_trial,
+  })
+  const expectedReferralSource =
+    provisioning.defaultReferralSource || asNonEmptyString(metadata.referral_source)
 
   const updateData: Record<string, unknown> = {}
 
-  if (tier !== 'pro') updateData.subscription_tier = 'pro'
-  if (!subscriptionStartedAt) updateData.subscription_started_at = derivedCreatedAt
-  if (!trialEndsAt) updateData.trial_ends_at = plusSevenDaysIso(derivedCreatedAt)
+  if (tier !== provisioning.subscriptionTier) {
+    updateData.subscription_tier = provisioning.subscriptionTier
+  }
+  if (provisioning.skipTrial) {
+    if (subscriptionStartedAt) updateData.subscription_started_at = null
+    if (trialEndsAt) updateData.trial_ends_at = null
+  } else {
+    if (!subscriptionStartedAt) updateData.subscription_started_at = derivedCreatedAt
+    if (!trialEndsAt) updateData.trial_ends_at = plusSevenDaysIso(derivedCreatedAt)
+  }
 
   if (!referralSource) {
-    const metadataReferral = asNonEmptyString(metadata.referral_source)
-    if (metadataReferral) updateData.referral_source = metadataReferral
+    if (expectedReferralSource) updateData.referral_source = expectedReferralSource
   }
 
   if (!asNonEmptyString(record.full_name)) {

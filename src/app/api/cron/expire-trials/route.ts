@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
 import { sendSlackNotification } from '@/lib/notify-slack'
+import { getSignupProvisioning } from '@/lib/signup-provisioning'
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
 const supabaseServiceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY
@@ -62,11 +63,13 @@ export async function GET(request: NextRequest) {
 
     let repairedCount = 0
     for (const candidate of repairCandidates || []) {
-      const updateData: Record<string, string> = {}
+      const updateData: Record<string, string | null> = {}
 
       let subscriptionStartedAt = asNonEmptyString(candidate.subscription_started_at)
       let referralSource = asNonEmptyString(candidate.referral_source)
       let fullName = asNonEmptyString(candidate.full_name)
+      let signupSource: string | null = null
+      let metadataSkipTrial: boolean | null = null
 
       try {
         const { data: authUserData, error: authUserError } = await supabase.auth.admin.getUserById(candidate.id)
@@ -78,6 +81,9 @@ export async function GET(request: NextRequest) {
             asNonEmptyString(candidate.created_at)
           referralSource = referralSource || asNonEmptyString(meta.referral_source)
           fullName = fullName || asNonEmptyString(meta.full_name)
+          signupSource = asNonEmptyString(meta.signup_source)
+          metadataSkipTrial =
+            typeof meta.skip_trial === 'boolean' ? meta.skip_trial : metadataSkipTrial
         }
       } catch (metadataError) {
         console.warn('[Expire Trials] Metadata lookup failed during trial repair:', {
@@ -86,13 +92,57 @@ export async function GET(request: NextRequest) {
         })
       }
 
+      const provisioning = getSignupProvisioning({
+        subscriptionTier: candidate.subscription_tier,
+        signupSource,
+        skipTrial: metadataSkipTrial,
+      })
+      const expectedReferralSource = provisioning.defaultReferralSource || referralSource
+
+      if (provisioning.skipTrial) {
+        if (candidate.subscription_tier !== provisioning.subscriptionTier) {
+          updateData.subscription_tier = provisioning.subscriptionTier
+        }
+        if (asNonEmptyString(candidate.subscription_started_at)) {
+          updateData.subscription_started_at = null
+        }
+        if (!asNonEmptyString(candidate.referral_source) && expectedReferralSource) {
+          updateData.referral_source = expectedReferralSource
+        }
+        if (!asNonEmptyString(candidate.full_name) && fullName) {
+          updateData.full_name = fullName
+        }
+
+        if (Object.keys(updateData).length === 0) continue
+
+        const { error: repairUpdateError } = await supabase
+          .from('users')
+          .update(updateData)
+          .eq('id', candidate.id)
+
+        if (repairUpdateError) {
+          console.warn('[Expire Trials] Failed to repair standalone lab defaults:', {
+            userId: candidate.id,
+            repairUpdateError,
+          })
+          continue
+        }
+
+        repairedCount += 1
+        continue
+      }
+
       subscriptionStartedAt = subscriptionStartedAt || asNonEmptyString(candidate.created_at) || nowIso
       const repairedTrialEndsAt = addDaysIso(subscriptionStartedAt, TRIAL_DAYS)
 
-      if (candidate.subscription_tier !== 'pro') updateData.subscription_tier = 'pro'
+      if (candidate.subscription_tier !== provisioning.subscriptionTier) {
+        updateData.subscription_tier = provisioning.subscriptionTier
+      }
       if (!asNonEmptyString(candidate.subscription_started_at)) updateData.subscription_started_at = subscriptionStartedAt
       if (repairedTrialEndsAt) updateData.trial_ends_at = repairedTrialEndsAt
-      if (!asNonEmptyString(candidate.referral_source) && referralSource) updateData.referral_source = referralSource
+      if (!asNonEmptyString(candidate.referral_source) && expectedReferralSource) {
+        updateData.referral_source = expectedReferralSource
+      }
       if (!asNonEmptyString(candidate.full_name) && fullName) updateData.full_name = fullName
 
       if (Object.keys(updateData).length === 0) continue

@@ -1,5 +1,6 @@
 import { getSupabaseClient } from '@/lib/supabase-server'
 import { sendSlackNotification } from '@/lib/notify-slack'
+import { getSignupProvisioning } from '@/lib/signup-provisioning'
 import { NextRequest, NextResponse } from 'next/server'
 import crypto from 'crypto'
 
@@ -33,6 +34,8 @@ export async function POST(request: NextRequest) {
       email,
       fullName,
       subscriptionTier,
+      signupSource,
+      skipTrial,
       promoCodeUsed,
       referralSource,
       referredByCode,
@@ -117,6 +120,10 @@ export async function POST(request: NextRequest) {
     let resolvedAuthCreatedAt = (typeof authCreatedAt === 'string' && authCreatedAt.trim().length > 0)
       ? authCreatedAt.trim()
       : null
+    let resolvedSignupSource = (typeof signupSource === 'string' && signupSource.trim().length > 0)
+      ? signupSource.trim()
+      : null
+    let resolvedSkipTrial = typeof skipTrial === 'boolean' ? skipTrial : null
 
     if (
       !resolvedFullName ||
@@ -126,7 +133,9 @@ export async function POST(request: NextRequest) {
       !resolvedUtmCampaign ||
       !resolvedUtmContent ||
       !resolvedUtmTerm ||
-      !resolvedAuthCreatedAt
+      !resolvedAuthCreatedAt ||
+      !resolvedSignupSource ||
+      resolvedSkipTrial === null
     ) {
       try {
         const { data: adminUserData, error: adminUserError } = await supabase.auth.admin.getUserById(userId)
@@ -140,6 +149,10 @@ export async function POST(request: NextRequest) {
           resolvedUtmCampaign = resolvedUtmCampaign || (typeof meta.utm_campaign === 'string' ? meta.utm_campaign : null)
           resolvedUtmContent = resolvedUtmContent || (typeof meta.utm_content === 'string' ? meta.utm_content : null)
           resolvedUtmTerm = resolvedUtmTerm || (typeof meta.utm_term === 'string' ? meta.utm_term : null)
+          resolvedSignupSource =
+            resolvedSignupSource || (typeof meta.signup_source === 'string' ? meta.signup_source : null)
+          resolvedSkipTrial =
+            resolvedSkipTrial === null && typeof meta.skip_trial === 'boolean' ? meta.skip_trial : resolvedSkipTrial
           resolvedAuthCreatedAt =
             resolvedAuthCreatedAt ||
             (typeof adminUserData.user.created_at === 'string' ? adminUserData.user.created_at : null)
@@ -151,11 +164,19 @@ export async function POST(request: NextRequest) {
 
     const { device: signupDevice, userAgent: signupUserAgent } = inferSignupDevice(request.headers)
 
-    // All new signups get 7-day Pro trial
+    // Default signups get the standard 7-day Pro trial unless the signup flow opts out.
     const now = new Date()
     const subscriptionStart = resolvedAuthCreatedAt ? new Date(resolvedAuthCreatedAt) : now
     const safeSubscriptionStart = Number.isNaN(subscriptionStart.getTime()) ? now : subscriptionStart
     const trialEndsAt = new Date(safeSubscriptionStart.getTime() + 7 * 24 * 60 * 60 * 1000)
+    const provisioning = getSignupProvisioning({
+      subscriptionTier,
+      signupSource: resolvedSignupSource,
+      skipTrial: resolvedSkipTrial,
+    })
+    if (!resolvedReferralSource && provisioning.defaultReferralSource) {
+      resolvedReferralSource = provisioning.defaultReferralSource
+    }
 
     // Generate referral code for new user
     const referralCode = crypto
@@ -188,13 +209,13 @@ export async function POST(request: NextRequest) {
           id: userId,
           email,
           full_name: resolvedFullName,
-          subscription_tier: 'pro',
-          trial_ends_at: trialEndsAt.toISOString(),
+          subscription_tier: provisioning.subscriptionTier,
+          trial_ends_at: provisioning.skipTrial ? null : trialEndsAt.toISOString(),
           promo_code_used: promoCodeUsed || null,
           referral_source: resolvedReferralSource,
           referred_by: referredBy,
           referral_code: referralCode,
-          subscription_started_at: safeSubscriptionStart.toISOString(),
+          subscription_started_at: provisioning.skipTrial ? null : safeSubscriptionStart.toISOString(),
           signup_device: signupDevice,
           signup_user_agent: signupUserAgent,
           // UTM tracking for marketing attribution

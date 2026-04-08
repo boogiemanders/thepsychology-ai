@@ -5,6 +5,7 @@ import { User as SupabaseUser } from '@supabase/supabase-js'
 import { supabase } from '@/lib/supabase'
 import { handleUserSwitch, hydrateQuizDataFromServer } from '@/lib/local-study-storage'
 import { safeSessionStorageSetItem } from '@/lib/safe-storage'
+import { getSignupProvisioning } from '@/lib/signup-provisioning'
 
 // Session timeout configuration (in milliseconds)
 const IDLE_TIMEOUT_MS = 2 * 60 * 60 * 1000 // 2 hours idle timeout
@@ -242,6 +243,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
               try {
                 // Read referral + UTM data from auth user_metadata (stored during signUp)
                 const meta = session.user.user_metadata || {}
+                const provisioning = getSignupProvisioning({
+                  subscriptionTier: (meta as { subscription_tier?: unknown }).subscription_tier,
+                  signupSource: (meta as { signup_source?: unknown }).signup_source,
+                  skipTrial: (meta as { skip_trial?: unknown }).skip_trial,
+                })
                 const res = await fetch('/api/auth/create-profile', {
                   method: 'POST',
                   headers: { 'Content-Type': 'application/json' },
@@ -249,9 +255,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
                     userId: session.user.id,
                     email: session.user.email,
                     fullName: meta.full_name || null,
-                    subscriptionTier: 'pro',
+                    subscriptionTier: provisioning.subscriptionTier,
+                    signupSource: provisioning.signupSource,
+                    skipTrial: provisioning.skipTrial,
                     authCreatedAt: session.user.created_at || null,
-                    referralSource: meta.referral_source || null,
+                    referralSource: meta.referral_source || provisioning.defaultReferralSource || null,
                     utm_source: meta.utm_source || null,
                     utm_medium: meta.utm_medium || null,
                     utm_campaign: meta.utm_campaign || null,
@@ -264,9 +272,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
                   setUserProfile(newProfile?.[0] || {
                     id: session.user.id,
                     email: session.user.email || '',
-                    subscription_tier: 'pro',
+                    subscription_tier: provisioning.subscriptionTier,
                     created_at: new Date().toISOString(),
-                    subscription_started_at: new Date().toISOString(),
+                    subscription_started_at: provisioning.skipTrial ? undefined : new Date().toISOString(),
                     user_role: 'student',
                     secondary_roles: [],
                   })
@@ -276,22 +284,28 @@ export function AuthProvider({ children }: { children: ReactNode }) {
                   setUserProfile({
                     id: session.user.id,
                     email: session.user.email || '',
-                    subscription_tier: 'pro',
+                    subscription_tier: provisioning.subscriptionTier,
                     created_at: new Date().toISOString(),
-                    subscription_started_at: new Date().toISOString(),
+                    subscription_started_at: provisioning.skipTrial ? undefined : new Date().toISOString(),
                     user_role: 'student',
                     secondary_roles: [],
                   })
                 }
               } catch (createErr) {
                 console.error('Error creating profile for orphaned user:', createErr)
+                const meta = session.user.user_metadata || {}
+                const provisioning = getSignupProvisioning({
+                  subscriptionTier: (meta as { subscription_tier?: unknown }).subscription_tier,
+                  signupSource: (meta as { signup_source?: unknown }).signup_source,
+                  skipTrial: (meta as { skip_trial?: unknown }).skip_trial,
+                })
                 // Fall back to local state
                 setUserProfile({
                   id: session.user.id,
                   email: session.user.email || '',
-                  subscription_tier: 'pro',
+                  subscription_tier: provisioning.subscriptionTier,
                   created_at: new Date().toISOString(),
-                  subscription_started_at: new Date().toISOString(),
+                  subscription_started_at: provisioning.skipTrial ? undefined : new Date().toISOString(),
                   user_role: 'student',
                   secondary_roles: [],
                 })
@@ -338,12 +352,18 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         setTimeout(() => {
           setUserProfile(prev => {
             if (!prev && session?.user) {
+              const meta = session.user.user_metadata || {}
+              const provisioning = getSignupProvisioning({
+                subscriptionTier: (meta as { subscription_tier?: unknown }).subscription_tier,
+                signupSource: (meta as { signup_source?: unknown }).signup_source,
+                skipTrial: (meta as { skip_trial?: unknown }).skip_trial,
+              })
               return {
                 id: session.user.id,
                 email: session.user.email || '',
-                subscription_tier: 'pro',
+                subscription_tier: provisioning.subscriptionTier,
                 created_at: new Date().toISOString(),
-                subscription_started_at: new Date().toISOString(),
+                subscription_started_at: provisioning.skipTrial ? undefined : new Date().toISOString(),
                 user_role: 'student' as const,
                 secondary_roles: [],
               }
