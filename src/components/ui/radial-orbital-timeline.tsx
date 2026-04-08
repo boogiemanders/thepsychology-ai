@@ -411,7 +411,7 @@ function ClusterNode({
       {/* Dropdown menu panel */}
       <div
         className={cn(
-          'absolute top-20 left-1/2 w-80 bg-white/95 dark:bg-zinc-950/95 backdrop-blur-md',
+          'absolute top-20 left-1/2 w-80 bg-white/88 dark:bg-zinc-950/88 backdrop-blur-xl',
           'border border-zinc-200 dark:border-zinc-800 rounded-xl shadow-2xl shadow-black/20 overflow-hidden z-50',
           'transition-all duration-300 origin-top',
           isOpen
@@ -423,14 +423,14 @@ function ClusterNode({
         <div className="absolute -top-px left-1/2 -translate-x-1/2 w-10 h-px bg-zinc-900 dark:bg-zinc-100" />
 
         {/* Header */}
-        <div className="px-5 pt-4 pb-3 border-b border-zinc-100 dark:border-zinc-900">
+        <div className="px-5 pt-4 pb-3 border-b border-zinc-200/70 dark:border-zinc-800/70">
           <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-zinc-400 dark:text-zinc-500">
             Psychologist Tools
           </p>
         </div>
 
         {/* Rows */}
-        <ul className="divide-y divide-zinc-100 dark:divide-zinc-900">
+        <ul className="divide-y divide-zinc-200/70 dark:divide-zinc-800/70">
           {entry.children.map((child, childIndex) => {
             const s = statusConfig[child.status]
             const isClickable = !!child.href && child.status !== 'soon'
@@ -447,8 +447,8 @@ function ClusterNode({
                   className={cn(
                     'group w-full text-left flex items-start gap-3 px-5 py-4 transition-colors duration-150',
                     isActive
-                      ? 'bg-zinc-50 dark:bg-zinc-900/80'
-                      : 'hover:bg-zinc-50 dark:hover:bg-zinc-900/60',
+                      ? 'bg-zinc-50/70 dark:bg-zinc-900/55'
+                      : 'hover:bg-zinc-50/55 dark:hover:bg-zinc-900/40',
                   )}
                 >
                   <span className="mt-[3px] font-mono text-[12px] text-zinc-400 dark:text-zinc-600 shrink-0">
@@ -478,7 +478,7 @@ function ClusterNode({
                           {child.tags.map(tag => (
                             <span
                               key={tag}
-                              className="inline-block rounded px-2 py-0.5 text-[11px] font-medium text-zinc-400 dark:text-zinc-500 bg-zinc-100 dark:bg-zinc-800/60"
+                              className="inline-block rounded px-2 py-0.5 text-[11px] font-medium text-zinc-400 dark:text-zinc-500 bg-zinc-100/80 dark:bg-zinc-800/50"
                             >
                               {tag}
                             </span>
