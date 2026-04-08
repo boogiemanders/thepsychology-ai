@@ -6,7 +6,7 @@ interface FeaturedPreviewProps {
 
 export function FeaturedPreview({ text, fontFamily, model }: FeaturedPreviewProps) {
   return (
-    <>
+    <div className="cs-featured-sticky">
       <div className="cs-section-heading">
         <p className="cs-section-label">Featured Preview</p>
         <p className="cs-model-badge">{model ? `Translated with ${model}` : 'No translation yet'}</p>
@@ -21,6 +21,6 @@ export function FeaturedPreview({ text, fontFamily, model }: FeaturedPreviewProp
           {text}
         </div>
       </article>
-    </>
+    </div>
   )
 }

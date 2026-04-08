@@ -3,24 +3,21 @@
 import { useEffect, useState } from 'react'
 import type { CalligraphyFont } from './fonts'
 
-const R2_BASE = process.env.NEXT_PUBLIC_CLOUDFLARE_R2_PUBLIC_URL || ''
-const FONT_PREFIX = 'calligraphy-fonts'
-const MAX_CONCURRENT_FONT_LOADS = 2
+const MAX_CONCURRENT_FONT_LOADS = 1
+const LOCAL_FONT_PREFIX = 'calligraphy-fonts-woff'
 
+const loadedFontFamilies = new Set<string>()
 const fontLoaders = new Map<string, Promise<boolean>>()
 const pendingFontLoads: Array<() => void> = []
 let activeFontLoads = 0
 
 function getFontSource(font: CalligraphyFont) {
-  return `url("${R2_BASE}/${FONT_PREFIX}/${encodeURIComponent(font.file)}") format("${font.format}")`
-}
-
-function isFontAvailable(family: string) {
-  if (typeof document === 'undefined' || !('fonts' in document)) {
-    return false
+  if (font.storage === 'local') {
+    return `url("/${LOCAL_FONT_PREFIX}/${encodeURIComponent(font.file)}") format("${font.format}")`
   }
 
-  return document.fonts.check(`16px "${family}"`)
+  const params = new URLSearchParams({ file: font.file })
+  return `url("/api/lab/calligraphy/font?${params.toString()}") format("${font.format}")`
 }
 
 function runNextFontLoad() {
@@ -65,11 +62,11 @@ export async function loadCalligraphyFont(
   font: CalligraphyFont,
   options: { priority?: boolean } = {},
 ) {
-  if (typeof window === 'undefined' || !R2_BASE) {
+  if (typeof window === 'undefined') {
     return false
   }
 
-  if (isFontAvailable(font.family)) {
+  if (loadedFontFamilies.has(font.family)) {
     return true
   }
 
@@ -81,13 +78,14 @@ export async function loadCalligraphyFont(
   // Keep the queue short so mobile Safari is not asked to fetch and parse the full wall at once.
   const promise = scheduleFontLoad(async () => {
     try {
-      if (isFontAvailable(font.family)) {
+      if (loadedFontFamilies.has(font.family)) {
         return true
       }
 
       const fontFace = new FontFace(font.family, getFontSource(font))
       const loadedFace = await fontFace.load()
       document.fonts.add(loadedFace)
+      loadedFontFamilies.add(font.family)
       return true
     } catch {
       fontLoaders.delete(font.family)
@@ -105,8 +103,7 @@ export function useCalligraphyFont(
 ) {
   const enabled = options.enabled ?? true
   const priority = options.priority ?? false
-  const family = font?.family ?? null
-  const [isLoaded, setIsLoaded] = useState(() => (family ? isFontAvailable(family) : false))
+  const [isLoaded, setIsLoaded] = useState(false)
 
   useEffect(() => {
     if (!enabled || !font) {
@@ -114,8 +111,13 @@ export function useCalligraphyFont(
       return
     }
 
+    if (loadedFontFamilies.has(font.family)) {
+      setIsLoaded(true)
+      return
+    }
+
     let isActive = true
-    setIsLoaded(isFontAvailable(font.family))
+    setIsLoaded(false)
 
     void loadCalligraphyFont(font, { priority }).then(loaded => {
       if (isActive) {

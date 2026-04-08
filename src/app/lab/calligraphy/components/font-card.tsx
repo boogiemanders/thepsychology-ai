@@ -1,7 +1,6 @@
 'use client'
 
-import { useInView } from 'motion/react'
-import { useCallback, useRef, type DragEvent } from 'react'
+import { useCallback, type DragEvent, type KeyboardEvent } from 'react'
 import type { CalligraphyFont } from './fonts'
 import { loadCalligraphyFont, useCalligraphyFont } from './use-calligraphy-font'
 
@@ -71,10 +70,7 @@ async function downloadFontImage(font: CalligraphyFont, text: string) {
 }
 
 export function FontCard({ font, text, isSelected, onSelect }: FontCardProps) {
-  const cardRef = useRef<HTMLButtonElement | null>(null)
-  const isInView = useInView(cardRef, { once: true, margin: '200px 0px 200px 0px' })
-  const shouldLoadFont = isSelected || isInView
-  const isFontLoaded = useCalligraphyFont(font, { enabled: shouldLoadFont, priority: isSelected })
+  const isFontLoaded = useCalligraphyFont(font, { enabled: true, priority: isSelected })
 
   const handleDragStart = useCallback(
     (e: DragEvent) => {
@@ -90,15 +86,27 @@ export function FontCard({ font, text, isSelected, onSelect }: FontCardProps) {
     document.querySelectorAll('.cs-font-grid.drag-over').forEach(el => el.classList.remove('drag-over'))
   }, [])
 
+  const handleKeyDown = useCallback(
+    (e: KeyboardEvent<HTMLDivElement>) => {
+      if (e.target !== e.currentTarget) return
+      if (e.key !== 'Enter' && e.key !== ' ') return
+
+      e.preventDefault()
+      onSelect(font.family)
+    },
+    [font.family, onSelect],
+  )
+
   return (
-    <button
-      ref={cardRef}
-      type="button"
-      className={`cs-font-card${isSelected ? ' is-selected' : ''}${shouldLoadFont && !isFontLoaded ? ' is-font-loading' : ''}`}
+    <div
+      role="button"
+      tabIndex={0}
+      className={`cs-font-card${isSelected ? ' is-selected' : ''}${!isFontLoaded ? ' is-font-loading' : ''}`}
       draggable
       aria-pressed={isSelected}
-      aria-busy={shouldLoadFont && !isFontLoaded}
+      aria-busy={!isFontLoaded}
       onClick={() => onSelect(font.family)}
+      onKeyDown={handleKeyDown}
       onDragStart={handleDragStart}
       onDragEnd={handleDragEnd}
     >
@@ -122,6 +130,6 @@ export function FontCard({ font, text, isSelected, onSelect }: FontCardProps) {
           PNG
         </button>
       </div>
-    </button>
+    </div>
   )
 }

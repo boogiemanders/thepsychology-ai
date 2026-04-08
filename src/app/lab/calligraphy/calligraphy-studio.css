@@ -362,6 +362,13 @@
 
 /* ── Featured card ── */
 
+.cs-featured-sticky {
+  position: sticky;
+  top: var(--cs-sp-md);
+  z-index: 5;
+  background: var(--cs-bg);
+}
+
 .cs-featured-card {
   margin: var(--cs-sp-sm) 0 var(--cs-sp-lg);
   padding: var(--cs-sp-md) 0;
@@ -560,6 +567,10 @@
   }
 
   .cs-controls-panel {
+    position: static;
+  }
+
+  .cs-featured-sticky {
     position: static;
   }
 }
