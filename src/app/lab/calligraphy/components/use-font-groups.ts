@@ -4,6 +4,8 @@ import { useState, useCallback, useEffect } from 'react'
 import type { CalligraphyFont } from './fonts'
 
 const STORAGE_KEY = 'calligraphy-font-groups'
+const MIGRATION_KEY = 'calligraphy-font-groups-v2'
+const ZHANGYU_FAMILY = 'ZhangYuXiaoRouWan'
 
 export function useFontGroups(fonts: CalligraphyFont[]) {
   const [groupMap, setGroupMap] = useState<Record<string, 'brush' | 'pen'>>(() => {
@@ -18,6 +20,16 @@ export function useFontGroups(fonts: CalligraphyFont[]) {
       const raw = localStorage.getItem(STORAGE_KEY)
       if (!raw) return
       const saved = JSON.parse(raw) as Record<string, string>
+      const needsZhangYuMigration =
+        localStorage.getItem(MIGRATION_KEY) !== '1' && saved[ZHANGYU_FAMILY] === 'brush'
+
+      if (needsZhangYuMigration) {
+        saved[ZHANGYU_FAMILY] = 'pen'
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(saved))
+      }
+
+      localStorage.setItem(MIGRATION_KEY, '1')
+
       setGroupMap(prev => {
         const next = { ...prev }
         for (const [family, style] of Object.entries(saved)) {

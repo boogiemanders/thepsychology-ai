@@ -20,7 +20,6 @@ export const FONT_GROUPS: FontGroup[] = [
 
 export const FONTS: CalligraphyFont[] = [
   // Brush
-  { label: 'ZhangYu XiaoRouWan', family: 'ZhangYuXiaoRouWan', file: 'ZhangYuXiaoRouWan-2.ttf', format: 'truetype', style: 'brush' },
   { label: 'Sun GuoTing ShuPu', family: 'SunGuoTingShuPu', file: '\u5b59\u8fc7\u5ead\u4e66\u8c31\u4f53.ttf', format: 'truetype', style: 'brush', note: 'Limited charset \u2014 classical text only' },
   { label: 'ZhiMang Xing', family: 'ZhiMangXing', file: 'ZhiMangXing-Regular.ttf', format: 'truetype', style: 'brush' },
   { label: 'SuXin ShiShuBiao', family: 'SuXinShiShuBiao', file: 'SuXinShiShuBiaoXingShuJian-1.ttf', format: 'truetype', style: 'brush' },
@@ -36,6 +35,7 @@ export const FONTS: CalligraphyFont[] = [
   { label: 'FangZheng XingTi CaoShu', family: 'FangZhengXingTiCaoShu', file: 'FangZhengXingTiCaoShu.ttf', format: 'truetype', style: 'brush' },
   { label: 'FangZheng XingTi CaoShu Jian', family: 'FangZhengXingTiCaoShuJian', file: 'FangZhengXingTiCaoShuJian.ttf', format: 'truetype', style: 'brush' },
   // Pen
+  { label: 'ZhangYu XiaoRouWan', family: 'ZhangYuXiaoRouWan', file: 'ZhangYuXiaoRouWan-2.ttf', format: 'truetype', style: 'pen' },
   { label: 'YingZhang XingShu', family: 'YingZhangXingShu', file: '\u82f1\u7ae0\u884c\u4e66.ttf', format: 'truetype', style: 'pen' },
   { label: 'TianWei LiangNiWeiXiao', family: 'TianWeiLiangNiWeiXiao', file: 'TianWeiLiangNiWeiXiao-2.ttf', format: 'truetype', style: 'pen' },
   { label: 'XiaoDouDao QiuRiHeJianFan', family: 'XiaoDouDaoQiuRiHeJianFan', file: 'XiaoDouDaoQiuRiHeJianFan-Shan(REEJI-Xiaodou-AutumnGBT-Flash)-2.ttf', format: 'truetype', style: 'pen' },
