@@ -21,9 +21,12 @@ The strategic advantage: EPPP students who study on the platform graduate, pass 
 
 - **Launch market**: California + New York, **telehealth/remote only** first (no in-person)
 - **MVP matching**: Layers 1+2 only (structured scoring). AI re-ranking (Layer 3) added later with outcome data.
-- **Pilot monetization**: Test a meeting-based model first. Client pays $1 and provider pays $1 when a first meeting actually happens on-platform. If the provider wants to continue off-platform after that intro, the provider pays a $50 release fee. If the next session is booked on-platform, credit $49 back to the provider.
-- **Long-term pricing**: Keep open until pilot data exists. Could become flat subscription, hybrid subscription + meeting fees, or stay mostly meeting-based if that proves cleaner.
+- **Monetization model**: Matching and browsing are free for patients. Patients pay the clinician's normal session rate directly. Platform charges clinicians $8 flat per completed appointment as a platform fee — clinician keeps everything else. No percentage cuts, no release fees, no per-referral charges.
+- **Why $8**: Covers ~$6 Stripe processing cost, leaves margin for the platform, and is still far cheaper than Headway (~$60/session), ZocDoc ($35/booking), or Psychology Today (monthly flat with no patient guarantee).
+- **Long-term pricing**: $8/appointment or optional flat monthly subscription for high-volume providers once there's enough data to price it.
 - **Video**: Include Daily.co telehealth integration in MVP
+- **First provider on the platform**: The founder. Licensure expected April 2026 — this is the trigger to begin building the matching MVP in earnest. The EPPP platform is already live at ~$230/month, proving the wedge. Matching is the next unlock.
+- **EF assessment sequence**: Build for Inzinna Psychology Group first (under the discovery memo), refine in real clinical use, then generalize into the platform Phase 7 version. Inzinna gets internal-use rights; generalized IP stays with the founder.
 
 ---
 
@@ -35,7 +38,7 @@ Keep as a single Next.js app. The EPPP-to-provider pipeline is the moat — spli
 - `/provider/*` — therapist dashboard, profile, calendar, clients
 - `/api/matching/*`, `/api/insurance/*`, `/api/booking/*` — new API groups
 - Existing routes (`/dashboard`, `/admin`, `/quizzer`, etc.) remain untouched
-- **Launch scope**: CA + NY licensed providers, telehealth only (no office addresses in MVP)
+- **Launch scope**: CA + NY licensed providers, telehealth only, adults/outpatient only. No kids, no in-person neuropsych assessment at launch — both require in-person and don't work well remotely. Manhattan office (in-person assessment, kids) added as platform grows.
 
 ---
 
@@ -64,6 +67,9 @@ New `provider_profiles` table with:
 - **Practical**: insurance networks, self-pay rate, sliding scale, telehealth states (CA, NY for MVP — no office address needed)
 - **Semantic matching fields**: `bio_embedding` and `approach_embedding` (pgvector, reusing existing pattern from `recover_chunks`)
 - **Status lifecycle**: draft → pending_review → active → suspended/inactive
+- **Verification tier**: `listed` (fast automated check) or `verified` (fuller vetting, badge displayed)
+  - *Listed:* active license confirmed, malpractice insurance on file, no open board complaints
+  - *Verified badge:* above + onboarding orientation, clinical vignette or interview, specialization claims confirmed. Patients can filter to verified-only.
 
 RLS policies: providers manage their own profile; active profiles publicly readable for matching.
 
@@ -101,25 +107,30 @@ New `phi_access_log` table — every time PHI is accessed (matching, profile vie
 
 ## Phase 2: Matching Algorithm (Weeks 3-6)
 
+### Philosophy
+Results are ranked by **best clinical fit only** — the matching score is the sole ranking signal. No sponsored listings, no availability bias, no price-based ranking. Price is a **patient-controlled filter**, not a platform sorting mechanism. The best match shows up first regardless of what they charge; the patient narrows by price from there if needed.
+
 ### Three-Layer Scoring Pipeline
 
 **Layer 1 — Hard Filters** (eliminate non-viable):
 - Provider licensed in client's state
 - Accepting new clients
 - At least one session format overlap
-- (Insurance match is a soft filter — OON providers shown lower, not eliminated)
+- Insurance match is a **patient-applied filter**, not a hard elimination — out-of-network providers remain visible if the patient chooses to see them
 
 **Layer 2 — Weighted Multi-Dimensional Scoring** (0-100):
 
 | Dimension | Weight | Method |
 |---|---|---|
-| Specialization match | 0.25 | Jaccard similarity: client concerns vs provider specializations |
+| Specialization match | 0.25 | Jaccard similarity: client concerns vs provider specializations. **Niche matches score disproportionately high** — a rare specialization that exactly fits a patient's need is worth more than a generic overlap. |
+| Semantic concern match | 0.20 | Cosine similarity: concern_embedding vs bio/approach embeddings. Captures niche expertise described in free text that structured tags miss. |
 | Modality match | 0.15 | Jaccard similarity: preferred vs offered modalities |
-| Semantic concern match | 0.20 | Cosine similarity: concern_embedding vs bio/approach embeddings |
 | Style compatibility | 0.15 | Inverted Euclidean distance on 4 style dimensions |
 | Cultural fit | 0.10 | Weighted match on language, competencies, faith preference |
 | Practical convenience | 0.10 | Distance/telehealth + availability overlap |
 | Demographic preference | 0.05 | Gender/age preference match |
+
+**On niche specializations:** The platform's taxonomy of specializations should be far richer than competitors' 20-checkbox systems. Clinicians should be able to capture overlapping, specific, and unusual expertise (e.g., trauma + competitive athletes + chronic illness; religious trauma + LGBTQ+ affirming + immigration; gifted adults + ADHD + perfectionism). A patient with a rare or specific need finding a clinician with exactly that background is the highest-value match the algorithm produces — and the one no other platform can reliably make.
 
 **Layer 3 — AI Re-ranking** (DEFERRED — post-MVP, after 200+ outcomes):
 - Send client free-text + provider bios/approaches + Layer 2 scores to Claude
@@ -228,31 +239,38 @@ Vercel cron job (same pattern as existing `src/app/api/cron/`) sends 24h and 1h 
 
 ## Phase 5: Revenue Model + EPPP Pipeline (Weeks 9-12)
 
-### Pilot Match Fee Model
+### Revenue Model
 
-- **Only charge on a real intro**: Client pays $1 and provider pays $1 only when the first appointment is completed through the platform.
-- **Off-platform continuation fee**: If the provider wants to take the relationship off-platform after that first intro, the provider pays a $50 release fee.
-- **Give most of it back for staying on-platform**: If the second appointment is booked on-platform, credit $49 back to the provider. Net effect: leaving costs $50, staying mostly costs $1.
-- **Why this is interesting**: It avoids charging clinicians for a dead listing, keeps price tied to real meetings, and creates a clear anti-bypass rule without taking a percentage of care.
-- **Why this should stay internal for now**: The idea is strategically interesting but still unusual. Do not put it on the public pricing page until the workflow is real and the wording has been tested with clinicians.
+**For patients:** Free to browse, match, and find a therapist. Patients pay only when they book an appointment — and they pay the clinician's normal session rate directly. No sign-up fees, no matching fees, nothing to get started.
 
-### Likely Long-Term Pricing Paths
+**For clinicians:** $8 flat platform fee per completed appointment, charged to the clinician. The clinician keeps everything else — their full session rate minus $8. No percentage cuts, no release fees, no per-referral charges.
 
-- **Option A**: Flat provider subscription once the product proves ongoing value
-- **Option B**: Hybrid model with low recurring fee + meeting-based fees
-- **Option C**: Keep the meeting-based model if clinicians clearly prefer paying only when introductions happen
+**Why $8:**
+- Covers Stripe's ~$6 processing fee on a typical session, so the platform isn't subsidizing transactions
+- Still far cheaper than every competitor: $8 flat vs. Headway's ~$60 on a $200 session (30% cut), ZocDoc's $35/booking, or Psychology Today's monthly fee with no patient guarantee
+- Simple to explain: "You set your rate. You keep your rate minus $8 per appointment."
 
-Reuses existing Stripe infrastructure, but this model also needs a fee ledger and credit logic rather than a simple subscription switch.
+**Why this is the right model:**
+- Patients face zero barrier to finding care — directly addresses the access problem every competitor fails on
+- Clinicians keep the vast majority of their rate — the fee structure is the competitive moat
+- Platform revenue is tied to real appointments happening, not listings or clicks — incentives align with good matches
+
+**At scale:**
+- Provider seeing 20 patients/week → ~$7,680/year in platform fees
+- 100 active providers → ~$768k/year
+- 1,000 active providers → ~$7.68M/year
+- The model works at scale, not at launch — which is fine because the goal at launch is to fill the platform with clinicians who trust the fee structure
+
+**Long-term option:** If high-volume providers prefer a flat monthly subscription over per-appointment fees, offer that as an alternative once there's enough data to price it fairly.
+
+Reuses existing Stripe infrastructure.
 
 **New tables:**
-- `platform_fee_events` — every $1 intro fee, $50 release fee, and $49 provider credit
-- `provider_fee_balances` — running provider credit balance and payout adjustments
-- `relationship_release_events` — marks when a provider chooses to continue a relationship off-platform after an on-platform intro
+- `platform_fee_events` — every $1 appointment fee logged per completed session
+- `provider_fee_balances` — running balance and payout tracking per provider
 
 **Files:**
-- `src/app/api/billing/intro-fee/route.ts`
-- `src/app/api/billing/release-fee/route.ts`
-- `src/app/api/billing/provider-credit/route.ts`
+- `src/app/api/billing/appointment-fee/route.ts`
 - `src/lib/billing/platform-fees.ts`
 
 ### EPPP Pipeline Feature
@@ -260,6 +278,67 @@ When a student passes the EPPP (tracked in `eppp_exam_results`), show a prompt:
 > "Congratulations on passing! Set up your provider profile and get matched with clients."
 
 Pre-fills provider profile from student's `graduate_program_id` and `user_research_profile` data.
+
+### Postdoc Supervision Pipeline
+
+**The trigger:** When a licensed provider on the platform (starting with Inzinna) reaches capacity — more patients than they can see — the platform surfaces a pathway to scale through supervised postdoctoral clinicians rather than simply closing a waitlist.
+
+**Why this works:**
+- Postdoctoral clinicians need supervised hours to obtain full licensure. They are actively looking for supervision placements.
+- The EPPP pipeline already feeds the platform with newly passing psychologists who need exactly this.
+- The supervisor gets capacity without fully delegating clinical responsibility.
+- The platform gets more providers, more outcome data, and a deeper loyalty loop.
+- When postdocs get licensed, they become supervisors themselves — the flywheel self-perpetuates.
+
+**The lifecycle on platform:**
+```
+Study for EPPP → Pass EPPP → Postdoc (needs supervised hours)
+    ↓
+Apply for supervision placement via platform
+    ↓
+Matched with licensed supervisor (e.g., Inzinna) who has overflow capacity
+    ↓
+Supervised clinician sees patients under supervisor's license
+    ↓
+Accumulates hours → Gets licensed
+    ↓
+Sets up own provider profile → Gets matched with own clients
+    ↓
+Eventually: supervisor themselves → recruits next cohort of postdocs
+```
+
+**Platform features needed:**
+- `supervision_placements` table — postdoc applications, supervisor matches, hours tracking
+- `supervised_sessions` table — sessions conducted under supervision, linked to supervisor and supervisee provider profiles
+- Supervision dashboard for supervisors: caseload overview, hours log, notes on supervisee progress
+- Supervision dashboard for postdocs: hours toward licensure, supervisor feedback, session log
+- Hour tracking per state licensing board requirements (varies by state — CA, NY first)
+- Supervisor capacity indicator on provider profiles — "accepting postdoc supervision placements"
+
+**How it works legally:**
+- Supervised postdocs see patients **under the supervising psychologist's license** — the supervisor carries clinical and legal responsibility for those sessions
+- This is standard postdoctoral supervised practice, not a gray area — it is the defined pathway to licensure in every state
+- The supervisor decides who they accept as supervisees. The platform facilitates the match but does not override the supervisor's judgment.
+
+**Who can join as a supervisor:**
+- The founder (upon licensure) is the first supervisor on the platform
+- Additional supervisors must be approved — this is a curated network, not an open marketplace
+- Supervisor vetting: active license verification, malpractice coverage confirmed, no board complaints, interview/fit assessment
+- Quality matters more than quantity here — the platform's reputation depends on the supervisors it admits
+
+**Strategic importance:**
+- No competitor offers the full loop: study → supervised practice → license → supervise → repeat
+- This is the deepest possible moat — the platform is embedded in the entire career arc, not just one moment
+- Outcome data from supervised sessions feeds Phase 6 (deliberate practice) and Phase 8 (AI-assisted therapy) with high-quality labeled training data
+- Supervision is billable — supervisors charge postdocs for supervision hours (typically $100-300/hour). Platform can facilitate this payment and take a small fee.
+- The founder starts this personally: takes on postdocs when patient load exceeds personal capacity, supervises their sessions, and builds the quality bar the platform will enforce for all future supervisors.
+
+**Licensing board compliance:**
+- Supervised postdocs see patients under supervisor's license — fully standard, legally defined pathway
+- Supervision requirements vary by state and license type (psychologist vs. LCSW vs. MFT)
+- MVP: California and New York only (matching platform launch states)
+- Each state's hour requirements and supervisor qualifications must be verified and displayed clearly
+- Platform does not certify supervisors — it connects and vets them. Supervisor credentials, active license, and malpractice coverage verified same as provider profiles.
 
 ### Embeddable Review Badge (Clinician Marketing Tool)
 
@@ -311,6 +390,40 @@ Give clinicians the power to showcase their reviews outside thepsychology.ai. Th
 - `src/app/admin/matching/page.tsx` — matching analytics, weight tuning
 - `src/app/admin/appointments/page.tsx` — volume, no-show rates, revenue
 - `src/app/admin/reviews/page.tsx` — flagged review moderation
+
+---
+
+## Phase 6D: Group Supervision Data
+
+Group supervision is where clinicians think out loud — what they tried, what worked, what they're stuck on. That's some of the richest clinical signal on the platform and it should be captured systematically.
+
+**What to capture:**
+- Interventions discussed and recommended per presenting problem type
+- Consultation outcomes — did the recommended approach work? (tracked via follow-up in next session or next supervision)
+- What clinicians are collectively stuck on — surfaces training gaps and future tool needs
+- Which supervision group formats produce the most useful discussion
+- Frequency patterns — which presentations come up most, which interventions are most commonly recommended
+
+**Privacy:** Supervision case material is de-identified as standard clinical practice. Data captured is about clinical reasoning and intervention patterns, not patient PHI. Standard consent at onboarding covers participation in de-identified group learning data.
+
+**What it feeds:**
+- **Phase 7 (assessment):** Which assessment tools are supervision groups recommending and why
+- **Phase 8 (AI-assisted therapy):** Intervention recommendation data trains the AI on what good consultation actually looks like — not just published literature, but real clinical judgment in real cases
+- **Matching algorithm:** Patterns in what consultation clinicians seek can refine specialty matching — if a clinician keeps bringing the same type of case to supervision, that's signal about their actual caseload and expertise
+- **NYU research partnership:** De-identified supervision data is a novel dataset for studying naturalistic clinical consultation — underresearched and publishable
+
+**New tables:**
+- `supervision_sessions` — group, date, format, facilitator
+- `supervision_cases` — de-identified case presentations, presenting problem tags, interventions discussed
+- `supervision_recommendations` — specific interventions recommended, rationale, follow-up outcome if tracked
+- `supervision_patterns` — aggregated intervention frequency by presentation type (analytics layer)
+
+**Files:**
+- `src/app/provider/supervision/page.tsx` — supervision group dashboard
+- `src/app/provider/supervision/[groupId]/session/page.tsx` — session log and case entry
+- `src/app/api/supervision/log-session/route.ts`
+- `src/app/api/supervision/log-case/route.ts`
+- `src/app/admin/supervision/analytics/page.tsx` — platform-level supervision patterns
 
 ---
 
@@ -436,6 +549,19 @@ Provider analytics at `src/app/provider/analytics/page.tsx`:
 
 **Full competitive research + validation roadmap:** `content/research/competitive-ef-assessment-teardown.md`
 **Positioning angles:** `content/research/positioning-angles-ef-assessment.md`
+
+### Build sequence: Inzinna first, then generalize
+
+The EF assessment tool will be built for Inzinna Psychology Group first — as a deliverable under the discovery and development memo — then generalized into the platform version. This mirrors how Nike started: build for one real user in a real clinical environment, refine it there, then scale.
+
+**What this means in practice:**
+- The Inzinna-specific implementation is scoped and compensated under the memo with Greg
+- The underlying scoring logic, framework, and generalized tool remain Anders Chan's IP (per the memo)
+- Inzinna gets a perpetual internal-use license to the delivered version
+- The platform version (Phase 7) is built from that generalized framework — not from scratch
+- Real clinical use at Inzinna generates the validity data and workflow feedback that makes the platform version credible
+
+**Founder note:** The founder is expected to be licensed within weeks of this document being written (April 2026). Once licensed, the founder becomes the first psychologist on the platform and the first to use the EF assessment in independent clinical practice — meaning the tool will be validated by the person who built it, in real patient care.
 
 ### Why This Is Phase 7
 
@@ -619,3 +745,5 @@ More Clients            More Data → Better AI → More Capacity
 ```
 
 Every piece feeds the next. No competitor can replicate the full loop.
+
+**Founder note:** The founder is currently in supervised practice (employed at a clinical practice), working toward licensure. Upon licensure, the founder becomes the **first provider on the platform** — personally matched with patients through thepsychology.ai. The postdoc supervision pipeline is not hypothetical; the founder is living it. The SP Notes and clinical tools being built now are informed by direct clinical workflow experience, which is the core credibility differentiator vs. tech companies guessing at clinician needs.

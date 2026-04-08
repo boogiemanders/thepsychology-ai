@@ -1,5 +1,157 @@
 # Company Future Plan
 
+## North star
+
+**A patient who finally got the right fit after years of wrong ones.**
+
+Not a revenue number. Not a user count. That moment — when someone who has tried and been disappointed and tried again finally lands with the right person — is what the platform is for. Everything else is in service of making that happen more often and more reliably.
+
+---
+
+## Platform design
+
+**Warm, human, and polished. Minimal. Calming to look at.**
+
+The platform should feel like a relief to open — not clinical and sterile, not corporate and cold, not busy with features competing for attention. Something that communicates: we took care with this, and we'll take care of you. Design decisions filter through that. If it adds noise, it doesn't belong.
+
+---
+
+## Language
+
+**Clinicians are called psychologists.** That's the credential at launch — doctoral-level, licensed. It signals quality and rigor without needing to explain it. Social workers and other licensed clinicians join later as the platform expands, with clear credential labeling. The word "provider" never appears on patient-facing surfaces — it's cold and insurance-brained.
+
+**People seeking care are called clients** in clinician-facing surfaces and internal language — standard clinical terminology psychologists already use. On patient-facing surfaces, the platform speaks directly: "Find your psychologist." "Your first session." "What are you looking for?" The word "client" lives in the psychologist's dashboard. The person using the platform to find care never sees themselves reduced to a label — the platform just talks to them. "Member" is never used — it sounds like a gym or an insurance plan.
+
+---
+
+## The why
+
+The mental health system is full of middlemen who slow things down and take a cut without adding value. Directories charge monthly fees and show ads. Insurance platforms take 30-40% of every session. Booking tools charge per referral. Patients wait months and pay thousands just to find someone. Clinicians spend hours on paperwork and give away a third of their income to platforms that didn't do the clinical work.
+
+This company exists to cut all of that out.
+
+No ads. No fluff. No rent-extracting middlemen. Just the best match, the fastest path to care, and the lowest possible cost for everyone involved. Patients find a therapist for free. Clinicians keep their rate. The platform takes $8 to cover its costs and keep the lights on.
+
+The test for every product decision is the same: does this make things faster, cheaper, and more direct — or does it add friction and extract value? If it's the latter, it doesn't belong here.
+
+---
+
+## Product philosophy decisions
+
+**Clinician vetting:** Two-tier system:
+- **Listed:** Fast automated verification — active license confirmed, malpractice insurance on file, no open board complaints. Clinician can be listed and matched immediately.
+- **Verified badge:** Fuller process — onboarding orientation covering platform standards, clinical vignette or interview, confirmation of specialization claims. Badge displayed prominently on profile. Patients can filter to verified-only.
+
+The founder does all verified reviews personally at first. The criteria isn't just credentials — it's values alignment and self-awareness. The interview is designed to surface four things:
+
+**1. Blind spot awareness**
+Can they name something they're genuinely not good at yet — without deflecting, performing humility, or giving a rehearsed "weakness that's secretly a strength" answer? Clinicians who don't know what they don't know are the dangerous ones. The ones who can name their edges clearly are the ones who grow.
+
+**2. Learning edges**
+Not just "I'm working on X" but real engagement with it. Are they reading, seeking supervision, noticing patterns in their own countertransference? This connects directly to deliberate practice research — self-awareness is a prerequisite for improvement. Clinicians who plateau are the ones who stop seeing their edges.
+
+**3. Knowing what they don't want**
+A clinician who says "I don't work well with high-conflict presentations and I've learned to refer those out" is more trustworthy than one who claims they can work with everyone. Clarity about fit protects patients. Generic availability is a red flag.
+
+**4. Aliveness about what excites them**
+Tone shifts. They go longer. They get specific. That's the real signal. Generic enthusiasm is easy to perform — specific, lively excitement about a niche, a modality, a population, a clinical puzzle is not. The interview is looking for the moment where they stop answering and start talking.
+
+**What disqualifies:**
+- Generic answers to any of the above
+- No awareness of blind spots or learning edges
+- Claiming to work well with everyone
+- Flat affect when asked what excites them
+
+This matters because the platform is for clinicians who want to build something, not just collect patients. Verified badge = quality AND self-awareness AND genuine passion.
+
+**Niche specializations are a core asset.** A patient with a specific, hard-to-match need — religious trauma, competitive athletes, chronic illness, polyamorous relationships, gifted adults, immigration stress, specific phobias, eating disorders in athletes — can't find the right person on any existing platform because everyone checks the same 20 generic boxes. A clinician with real depth in one of these areas is the highest-value match the algorithm can produce. Both sides win: the patient finally feels understood, the clinician gets the cases they're built for.
+
+The platform actively recruits for niche. A clinician with three overlapping unusual specialties (e.g., trauma + LGBTQ+ + religious communities) serves a patient population that almost no other platform can reach. That's irreplaceable.
+
+Scales to trained reviewers once volume demands it. Reviewer criteria should mirror the above.
+
+**Clinician character — what fits here:**
+- **Community and independence both welcome.** Independent practitioners who use the platform as infrastructure are fine. A loose, warm community of people who are genuinely fun and enjoyable to talk with would also be great — not forced culture, just real people who like each other.
+- **Supervision groups organized by matching, not just clinical specialty.** The same matching engine used for patient-clinician matching gets pointed at clinicians for group supervision. Dimensions:
+  - Clinical specialty and population focus (so case discussion is relevant)
+  - Shared interests — music, art, dance, film, literature (the cultural layer that makes the group actually enjoyable)
+  - Career orientation — practice-builders vs. writer/researcher/builder types
+  - Experience level — can be mixed with intention, but not randomly
+  - Modality alignment — a group needs enough common language to be useful
+
+  The founder personally wants to be in a group with people into music, art, and movement. Clinicians who are making things and engaging actively bring that aliveness into sessions. This isn't a rule imposed on everyone — it's a culture signal the matching system surfaces naturally.
+
+  **Platform implication:** Clinician onboarding profile captures personal interests alongside clinical specializations. This feeds supervision group matching AND eventually patient matching — some patients specifically want a therapist who gets their world (a musician dealing with performance anxiety, a dancer navigating injury identity loss).
+- **Warmth and technique both valued.** Ideally both. Either alone is fine. A cold technician and a warm-but-directionless clinician are both misses.
+- **Ambition:** Fine with clinicians focused on building a solid private practice OR clinicians who are also writing, teaching, researching, building their own things. The founder personally gravitates toward the latter — people who are creating something beyond the session — but both are welcome as long as they're genuinely excited about it, not just checking a box.
+- **Disagreement:** Acknowledgment is what's wanted. Not justification, not explanation, not a defense of why they were right. Just: "I hear that, I missed that." Clinicians who can't receive feedback without defending themselves are not a fit — and it's a meaningful clinical signal too.
+- **Patient population:** Outpatient only to start. No inpatient, no high-acuity or high-risk primary presentations at launch. Clinicians can come alive with different patient types — no preference on that — as long as they're working within an outpatient scope.
+- **Self-investment:** Clinicians who are actively investing in themselves — their own therapy, supervision beyond minimums, continuing education they actually care about — are preferred. Outcomes matter, but a clinician who is genuinely growing is more likely to produce good outcomes over time than one who just tracks numbers.
+- **How they talk about patients:** Curiosity and warmth in consultation. Honest, not rude or critical. A clinician who says "I'm genuinely puzzled by what's happening with this person and I want to understand it better" is the right register. Clinical cynicism or detachment is a disqualifier.
+- **Caseload limits:** Clinicians should know their caseload limit before the interview — not figure it out during it. That self-knowledge is part of the fit. If hired, availability is shown transparently on the platform. Patients see real availability, not a false "accepting new clients" flag from someone already stretched thin.
+
+**Rankings:** Results are never paid for. No sponsored placements, no boosted listings, no way to buy a higher position. Publicly stated commitment: *"Your results are sorted by fit, not by who paid us."* No competitor can say this cleanly. It's a trust signal that compounds over time.
+
+**AI in therapy:** Both. AI makes human clinicians better (deliberate practice, outcome monitoring, diagnostic support) AND can eventually replace some session types for patients who can't otherwise afford or access care. Phase 8 starts supervised — AI assists, clinician decides — but the philosophy allows for AI-delivered care at appropriate levels with appropriate oversight.
+
+**Data transparency:** How patient data is used — including whether it trains AI models — is disclosed clearly at the point of consent. No hidden data extraction. Patients know what they're consenting to before they consent to it.
+
+**Sliding scale:** Clinicians can flag that they offer sliding scale. This feeds into matching as a filter patients can apply — not a ranking signal. Patients who need it can find clinicians who offer it without it affecting fit order.
+
+**Patient intake — progressive disclosure:**
+- Most important questions first (presenting concern, basic preferences, insurance)
+- Patient can submit early and get results — imperfect match but fast
+- Or keep going for increasingly specific fit — modality preferences, style, cultural factors, detailed history
+- No pressure to finish. The platform meets them where they are.
+- Better answers = better match, but a partial answer is still useful
+
+**AI session responsibility (Phase 8):**
+- Under the founder's license initially, the founder is clinically responsible for AI-delivered sessions
+- That means: reading every session transcript the day it happens
+- Being alerted immediately to any risk flags (crisis language, suicidal ideation, clinical deterioration)
+- No AI session goes unreviewed. This is the non-negotiable safety floor.
+- As the platform scales, this model defines the standard for all supervisors overseeing AI sessions
+
+**Ranking and filtering:**
+- Search results are ranked by **best clinical fit first** — the matching algorithm score, not sponsored listings, not availability, not price
+- Patients can then apply **price filters** to narrow results to what's affordable for them
+- Sliding scale filter available separately
+- Price is a patient tool, not a platform ranking signal — the best match shows up first regardless of what they charge
+
+**Platform scope — build sequence:**
+
+**Phase 1 (now): Virtual/telehealth only**
+- Adults, outpatient, remote sessions
+- No kids, no in-person neuropsych assessment — both require in-person and are harder to do well virtually
+- CA + NY from day one, no office overhead, fastest to scale
+- Digital EF assessment (being built with Bret at Inzinna's) works remotely and bridges the gap
+
+**Phase 2 (as platform grows): Manhattan office**
+- In-person sessions and full neuropsych assessment batteries become possible
+- Kids and adolescents open up as a population
+- Physical presence in the highest-density therapy market in the country
+- Assessment suites require dedicated space and hardware — not viable remotely at full capacity
+
+**Digital assessment thread:**
+- Built first for Inzinna's practice (with Bret), validated in a real clinical setting
+- Feeds directly into Platform Phase 7 (digital EF assessment) — not built from scratch, generalized from the Inzinna version
+- Remote-capable from day one, so it serves the virtual phase immediately
+- In-person assessment expands what's possible once the Manhattan office exists
+
+---
+
+The founder is employed at Greg Inzinna's practice, has submitted supervised hours and EPPP results, and expects licensure within weeks. This matters for the strategy because:
+
+- The SP Notes Chrome extension is being built **for Inzinna's practice** as an employer relationship, not a co-founder relationship
+- The founder has **lived the postdoc supervision pipeline firsthand** — the product is built from direct experience, not guesswork
+- Upon licensure, the founder becomes the **first provider on the platform** — personally matched with patients through thepsychology.ai — and **private practice is the primary income path**, not academic employment
+- This is not a company being built by someone adjacent to the field. The founder is the target user at every stage: student, supervisee, licensed provider, and eventually supervisor
+- The EPPP platform is live and generating ~$230/month in revenue — the wedge is working at small scale; matching is the next unlock
+
+This changes how the Greg Inzinna relationship should be framed: it is an employment and tools-partnership relationship, not a commercial loop co-venture. The clinical tools built for his practice (SP Notes, ZocDoc extension) are custom work. The platform itself (thepsychology.ai) is wholly the founder's company.
+
+---
+
 ## Why this document exists
 
 You already have several good strategy documents. The problem is not lack of ideas. The problem is that too many ideas are sitting at the same priority level in your head.
@@ -15,8 +167,9 @@ Your current docs point to one clear company sequence:
 1. EPPP prep is the wedge
 2. provider growth is the first real expansion
 3. therapy matching is the demand-side marketplace layer
-4. assessment is the research-heavy next pillar
-5. AI-assisted therapy comes after you have outcome data
+4. postdoc supervision pipeline bridges EPPP → licensure → provider, and scales capacity for licensed supervisors
+5. assessment is the research-heavy next pillar
+6. AI-assisted therapy comes after you have outcome data
 
 That means the company is not:
 
@@ -65,7 +218,7 @@ People who help the main company loop work faster.
 
 Examples:
 
-- Greg Inzinna
+- Greg Inzinna — employer and early tools partner. The SP Notes and ZocDoc extensions are built for his practice. He is not a co-owner of thepsychology.ai. Custom work for his practice is billed or scoped separately from the platform.
 
 ### 2. Research and validation partners
 
@@ -104,10 +257,15 @@ Greg Inzinna is the most obvious **commercial loop partner**.
 
 The cleanest version is:
 
-1. his brand/company sends trainees and early-career clinicians to thePsychology.ai for EPPP prep
-2. your platform helps them pass and stay in your ecosystem
-3. after licensure, qualified clinicians are routed back into his practice or network
-4. over time, you power selected services for his company under a co-brand or "powered by" structure
+1. His brand/company sends trainees and early-career clinicians to thePsychology.ai for EPPP prep
+2. The platform helps them pass and stay in the ecosystem
+3. After passing the EPPP, postdocs who need supervised hours are matched to licensed supervisors — starting with Inzinna — who have more patients than they can see
+4. Supervised clinicians see patients under Inzinna's license, expanding her capacity without her seeing every patient herself
+5. When postdocs get licensed, they become supervisors themselves — recruiting the next cohort of postdocs from the EPPP pipeline
+6. Over time, the platform powers selected services for his company under a co-brand or "powered by" structure
+
+**Why the supervision layer matters strategically:**
+The postdoc supervision pipeline is the bridge between "EPPP prep" and "provider on the platform." Without it, new graduates pass the EPPP and then disappear for 1-2 years of supervised practice somewhere else. With it, those supervised hours happen on the platform — generating outcome data, building loyalty, and filling Inzinna's (and other supervisors') capacity gap simultaneously.
 
 This is strong because it matches the lifecycle story already in your homepage and product docs.
 
@@ -156,13 +314,16 @@ That gives you the Intel/Dell energy without giving away the company.
 
 ## What NYU should be
 
+**NYU is not an employment option.** Private practice as a licensed psychologist is the income path — both for personal earnings and because seeing patients on the platform is what makes the founder the first real node in the matching flywheel. Academic salaries don't compete with that trajectory.
+
+NYU's value is purely as a **research and validation partner** — institutional credibility, publication pathway, and study design rigor for the assessment and AI tools. Nothing more.
+
 NYU should not be pitched as "please help me with everything."
 
-NYU should be pitched as a **research and validation partner**.
+That means the ask is not:
 
-That means the ask is not mainly:
-
-- brand
+- employment
+- brand affiliation
 - referrals
 - ownership
 - general collaboration
@@ -176,7 +337,7 @@ The ask is:
 - IRB / methods support
 - possible student or research assistant involvement
 
-This fits your roadmap exactly. Your current product docs already place assessment and AI-assisted therapy after the main platform exists, and your codebase already includes consent, research profile, and export infrastructure.
+This fits the roadmap exactly. Assessment and AI-assisted therapy come after the main platform exists, and the codebase already includes consent, research profile, and export infrastructure.
 
 ### Best NYU framing
 
