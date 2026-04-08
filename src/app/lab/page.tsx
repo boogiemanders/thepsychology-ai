@@ -57,11 +57,12 @@ const projects = [
   {
     id: 6,
     title: 'Dental Figure Extractor',
-    description: 'The best figures in dental school are trapped inside 400-page PDFs. This pulls them out so you can actually study them.',
+    description: 'Upload a textbook PDF. Get a PowerPoint with every figure on its own slide, captions included. Drag them into your study decks.',
     category: 'dental',
     categoryLabel: '04 Dental',
-    status: 'dev' as const,
-    tags: ['Python', 'Dental Students', 'Study Tool'],
+    href: '/lab/dental',
+    status: 'beta' as const,
+    tags: ['PyMuPDF', 'PowerPoint', 'Dental Students'],
   },
 ]
 

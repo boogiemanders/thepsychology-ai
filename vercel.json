@@ -7,6 +7,12 @@
       "permanent": true
     }
   ],
+  "functions": {
+    "api/dental/extract.py": {
+      "memory": 1024,
+      "maxDuration": 300
+    }
+  },
   "crons": [
     {
       "path": "/api/cron/backfill-referral-source",
