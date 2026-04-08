@@ -1,3 +1,4 @@
+import { Suspense } from 'react'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { DentalSignupForm } from './form'
@@ -6,6 +7,14 @@ export const metadata: Metadata = {
   title: 'Create Dental Account | thePsychology.ai',
   description:
     'Create a free account for Dental Figure Extractor and return directly to your upload flow.',
+}
+
+function DentalSignupFormFallback() {
+  return (
+    <div className="border-t border-zinc-200 dark:border-zinc-800 pt-6">
+      <p className="text-[13px] text-zinc-400 dark:text-zinc-500">Loading signup form…</p>
+    </div>
+  )
 }
 
 export default function DentalSignupPage() {
@@ -30,7 +39,9 @@ export default function DentalSignupPage() {
         </p>
       </div>
 
-      <DentalSignupForm />
+      <Suspense fallback={<DentalSignupFormFallback />}>
+        <DentalSignupForm />
+      </Suspense>
     </main>
   )
 }
