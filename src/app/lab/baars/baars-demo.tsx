@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
+import { cn } from '@/lib/utils'
 import {
   getBaarsAgeBand,
   lookupBaarsChildhoodPercentile,
@@ -25,6 +26,21 @@ interface ComputedGroupScore {
   total: number
   severityLabel: string | null
   percentileBand: string | null
+}
+
+interface ScoreTableRow {
+  label: string
+  rawScore: ComputedGroupScore | null
+  symptomCount: ComputedGroupScore | null
+}
+
+export interface BaarsAdhdCriteriaMeta {
+  disorderId: string
+  disorderName: string
+  durationRequirement: string | null
+  childhoodThreshold: number
+  adultThreshold: number
+  exclusions: string[]
 }
 
 function getTodayDateValue(): string {
@@ -79,13 +95,187 @@ function formatPercentileBand(percentileBand: string): string {
   return `${percentileBand} percentile band`
 }
 
+function getQuestionById(instrument: InstrumentDefinition, questionId: string) {
+  return instrument.sections.flatMap(section => section.questions).find(question => question.id === questionId)
+}
+
+function formatSelectedOptionLabels(
+  instrument: InstrumentDefinition,
+  questionId: string,
+  value: QuestionValue | undefined,
+): string | null {
+  if (!Array.isArray(value) || value.length === 0) return null
+
+  const question = getQuestionById(instrument, questionId)
+  if (!question?.options) return value.join(', ')
+
+  return value
+    .map(optionValue => question.options?.find(option => option.value === optionValue)?.label ?? optionValue)
+    .join(', ')
+}
+
+function getScoreById(scores: ComputedGroupScore[], scoreId: string): ComputedGroupScore | null {
+  return scores.find(score => score.group.id === scoreId) ?? null
+}
+
+function getAdhdPresentationLabel(inattentionCount: number, hyperImpCount: number, threshold: number): string | null {
+  const meetsInattention = inattentionCount >= threshold
+  const meetsHyperImp = hyperImpCount >= threshold
+
+  if (meetsInattention && meetsHyperImp) return 'combined'
+  if (meetsInattention) return 'predominantly inattentive'
+  if (meetsHyperImp) return 'predominantly hyperactive-impulsive'
+  return null
+}
+
+function buildCurrentCriteriaSuggestion(
+  adhdCriteria: BaarsAdhdCriteriaMeta,
+  instrument: InstrumentDefinition,
+  scores: ComputedGroupScore[],
+  answers: Record<string, QuestionValue>,
+  age: number | null,
+): string | null {
+  const inattentionCount = getScoreById(scores, 'inattention_symptom_count')
+  const hyperImpCount = getScoreById(scores, 'hyperactivity_impulsivity_symptom_count')
+
+  if (!inattentionCount || inattentionCount.value === null || !hyperImpCount || hyperImpCount.value === null) {
+    return null
+  }
+
+  const threshold = age !== null && age <= 16 ? adhdCriteria.childhoodThreshold : adhdCriteria.adultThreshold
+  const presentation = getAdhdPresentationLabel(inattentionCount.value, hyperImpCount.value, threshold)
+  const onsetValue = typeof answers.q29 === 'string' && answers.q29.trim() !== '' ? Number(answers.q29) : null
+  const onsetBeforeTwelve = onsetValue !== null && Number.isFinite(onsetValue) ? onsetValue <= 12 : null
+  const settings = Array.isArray(answers.q30) ? answers.q30 : []
+  const settingsMet = settings.length > 0 ? settings.length >= 2 : null
+  const settingsText = formatSelectedOptionLabels(instrument, 'q30', answers.q30)
+  const durationText = adhdCriteria.durationRequirement ? `${adhdCriteria.durationRequirement.toLowerCase()}` : 'at least 6 months'
+
+  if (!presentation) {
+    return `DSM-5 screening suggestion: current self-report does not reach the ${adhdCriteria.disorderName} symptom threshold on this administration (${threshold}+ symptoms in either the inattention or hyperactivity-impulsivity domain for this age band).`
+  }
+
+  const missingParts: string[] = []
+  if (onsetBeforeTwelve !== true) {
+    missingParts.push(
+      onsetBeforeTwelve === false
+        ? `reported onset before age 12 was not met (onset entered as age ${onsetValue})`
+        : 'reported onset before age 12'
+    )
+  }
+  if (settingsMet !== true) {
+    missingParts.push(
+      settingsMet === false
+        ? 'impairment in at least two settings'
+        : 'cross-setting impairment data'
+    )
+  }
+
+  if (missingParts.length === 0) {
+    return `DSM-5 screening suggestion: current self-report is consistent with ${adhdCriteria.disorderName}, ${presentation} presentation, because the symptom threshold is met (${threshold}+ symptoms for this age band), the rating window reflects ${durationText}, onset was reported by age 12, and impairment was endorsed in ${settings.length} settings${settingsText ? ` (${settingsText})` : ''}. Exclusion review is still required, so this remains a screening inference rather than a standalone diagnosis.`
+  }
+
+  return `DSM-5 screening suggestion: current self-report reaches the ${adhdCriteria.disorderName} symptom threshold for ${presentation} presentation, but this form does not fully establish ${missingParts.join(' and ')}. The DSM duration window is ${durationText}, and final diagnosis still requires exclusion review and clinical rule-outs.`
+}
+
+function buildChildhoodCriteriaSuggestion(
+  adhdCriteria: BaarsAdhdCriteriaMeta,
+  instrument: InstrumentDefinition,
+  scores: ComputedGroupScore[],
+  answers: Record<string, QuestionValue>,
+): string | null {
+  const inattentionCount = getScoreById(scores, 'inattention_symptom_count')
+  const hyperImpCount = getScoreById(scores, 'hyperactivity_impulsivity_symptom_count')
+
+  if (!inattentionCount || inattentionCount.value === null || !hyperImpCount || hyperImpCount.value === null) {
+    return null
+  }
+
+  const threshold = adhdCriteria.childhoodThreshold
+  const presentation = getAdhdPresentationLabel(inattentionCount.value, hyperImpCount.value, threshold)
+  const settings = Array.isArray(answers.q20) ? answers.q20 : []
+  const settingsMet = settings.length > 0 ? settings.length >= 2 : null
+  const settingsText = formatSelectedOptionLabels(instrument, 'q20', answers.q20)
+
+  if (!presentation) {
+    return `DSM-5 screening suggestion: retrospective childhood ratings do not reach the ${adhdCriteria.disorderName} childhood symptom threshold on this administration (${threshold}+ symptoms in either domain).`
+  }
+
+  if (settingsMet === true) {
+    return `DSM-5 screening suggestion: retrospective childhood ratings suggest the childhood symptom threshold is met for ${adhdCriteria.disorderName}, ${presentation} presentation, with impairment endorsed in ${settings.length} settings${settingsText ? ` (${settingsText})` : ''}. This form still does not independently confirm ${adhdCriteria.durationRequirement?.toLowerCase() ?? 'the full DSM duration requirement'} or current adult persistence.`
+  }
+
+  return `DSM-5 screening suggestion: retrospective childhood ratings reach the childhood symptom threshold for ${adhdCriteria.disorderName}, ${presentation} presentation, but cross-setting impairment is not fully documented on this form. This form also does not independently confirm ${adhdCriteria.durationRequirement?.toLowerCase() ?? 'the full DSM duration requirement'} or current adult persistence.`
+}
+
+function buildScoreTableRows(
+  instrument: InstrumentDefinition,
+  scores: ComputedGroupScore[],
+): ScoreTableRow[] {
+  if (instrument.id === 'baars_iv_self_report_childhood_symptoms') {
+    return [
+      {
+        label: 'Inattention',
+        rawScore: getScoreById(scores, 'inattention_raw'),
+        symptomCount: getScoreById(scores, 'inattention_symptom_count'),
+      },
+      {
+        label: 'Hyperactivity-Impulsivity',
+        rawScore: getScoreById(scores, 'hyperactivity_impulsivity_raw'),
+        symptomCount: getScoreById(scores, 'hyperactivity_impulsivity_symptom_count'),
+      },
+      {
+        label: 'Total ADHD',
+        rawScore: getScoreById(scores, 'total_adhd_raw'),
+        symptomCount: getScoreById(scores, 'total_adhd_symptom_count'),
+      },
+    ]
+  }
+
+  return [
+    {
+      label: 'Inattention',
+      rawScore: getScoreById(scores, 'inattention_raw'),
+      symptomCount: getScoreById(scores, 'inattention_symptom_count'),
+    },
+    {
+      label: 'Hyperactivity',
+      rawScore: getScoreById(scores, 'hyperactivity_raw'),
+      symptomCount: getScoreById(scores, 'hyperactivity_symptom_count'),
+    },
+    {
+      label: 'Impulsivity',
+      rawScore: getScoreById(scores, 'impulsivity_raw'),
+      symptomCount: getScoreById(scores, 'impulsivity_symptom_count'),
+    },
+    {
+      label: 'Hyperactivity + Impulsivity',
+      rawScore: null,
+      symptomCount: getScoreById(scores, 'hyperactivity_impulsivity_symptom_count'),
+    },
+    {
+      label: 'Total ADHD',
+      rawScore: getScoreById(scores, 'total_adhd_raw'),
+      symptomCount: getScoreById(scores, 'total_adhd_symptom_count'),
+    },
+    {
+      label: 'Sluggish Cognitive Tempo',
+      rawScore: getScoreById(scores, 'sct_raw'),
+      symptomCount: getScoreById(scores, 'sct_symptom_count'),
+    },
+  ]
+}
+
 function buildCurrentNarrative(
+  adhdCriteria: BaarsAdhdCriteriaMeta,
+  instrument: InstrumentDefinition,
   scores: ComputedGroupScore[],
   answers: Record<string, QuestionValue>,
   ageBand: string | null,
   header: Record<string, string>,
   pronounChoice: 'she' | 'he' | 'they',
   followUpPositive: 'yes' | 'no' | null,
+  age: number | null,
 ): string | null {
   const totalAdhd = scores.find(s => s.group.id === 'total_adhd_raw')
   const inattention = scores.find(s => s.group.id === 'inattention_raw')
@@ -96,7 +286,7 @@ function buildCurrentNarrative(
   const hyperImpCount = scores.find(s => s.group.id === 'hyperactivity_impulsivity_symptom_count')
   const inattCount = scores.find(s => s.group.id === 'inattention_symptom_count')
   const onset = answers.q29
-  const settings = answers.q30
+  const settingsText = formatSelectedOptionLabels(instrument, 'q30', answers.q30)
 
   if (
     !totalAdhd || totalAdhd.value === null ||
@@ -125,6 +315,7 @@ function buildCurrentNarrative(
   const intro = `${name}${demographic ? `, a ${demographic},` : ''} completed the BAARS-IV Self-Report (Current Symptoms) on ${header.date || 'today'}.${ageBand ? ` Raw scores were compared against the ${ageBand} age band.` : ''}`
   const subscales = `On the symptom items, ${pronounLower} obtained the following subscale raw scores: Inattention (${fmt(inattention)}); Hyperactivity (${fmt(hyperactivity)}); Impulsivity (${fmt(impulsivity)}); and Sluggish Cognitive Tempo (${fmt(sct)}). ${possessive} Total ADHD raw score was ${fmt(totalAdhd)}.`
   const counts = `At the DSM symptom-count threshold (items rated "Often" or "Very Often"), ${pronounLower} endorsed ${inattCount?.value ?? 0}/9 inattention symptoms and ${hyperImpCount.value}/9 hyperactivity-impulsivity symptoms (${totalSymptomCount.value}/18 total).`
+  const criteriaSuggestion = buildCurrentCriteriaSuggestion(adhdCriteria, instrument, scores, answers, age)
 
   const followUpParts: string[] = []
   if (followUpPositive === 'yes') {
@@ -132,8 +323,8 @@ function buildCurrentNarrative(
     if (typeof onset === 'string' && onset.trim()) {
       followUpParts.push(`Reported age of symptom onset: ${onset.trim()}.`)
     }
-    if (Array.isArray(settings) && settings.length > 0) {
-      followUpParts.push(`Impairment was reported in the following settings: ${settings.join(', ')}.`)
+    if (settingsText) {
+      followUpParts.push(`Impairment was reported in the following settings: ${settingsText}.`)
     }
   } else if (followUpPositive === 'no') {
     followUpParts.push(`${pronoun} did not endorse any symptoms at an "Often" frequency or higher.`)
@@ -141,10 +332,12 @@ function buildCurrentNarrative(
 
   const footer = 'Results should be interpreted in the context of clinical interview, developmental history, and collateral information.'
 
-  return [intro, subscales, counts, followUpParts.join(' '), footer].filter(Boolean).join('\n\n')
+  return [intro, subscales, counts, criteriaSuggestion, followUpParts.join(' '), footer].filter(Boolean).join('\n\n')
 }
 
 function buildChildhoodNarrative(
+  adhdCriteria: BaarsAdhdCriteriaMeta,
+  instrument: InstrumentDefinition,
   scores: ComputedGroupScore[],
   answers: Record<string, QuestionValue>,
   ageBand: string | null,
@@ -158,7 +351,7 @@ function buildChildhoodNarrative(
   const totalSymptomCount = scores.find(s => s.group.id === 'total_adhd_symptom_count')
   const hyperImpCount = scores.find(s => s.group.id === 'hyperactivity_impulsivity_symptom_count')
   const inattCount = scores.find(s => s.group.id === 'inattention_symptom_count')
-  const settings = answers.q20
+  const settingsText = formatSelectedOptionLabels(instrument, 'q20', answers.q20)
 
   if (
     !totalAdhd || totalAdhd.value === null ||
@@ -186,12 +379,13 @@ function buildChildhoodNarrative(
   const intro = `${name}${demographic ? `, a ${demographic},` : ''} completed the BAARS-IV Self-Report (Childhood Symptoms) on ${header.date || 'today'}. Ratings reflect recalled behavior between ages 5 and 12.${ageBand ? ` Raw scores were compared against the ${ageBand} age band.` : ''}`
   const subscales = `On the retrospective childhood symptom items, ${pronounLower} obtained the following raw scores: Inattention (${fmt(inattention)}) and Hyperactivity-Impulsivity (${fmt(hyperImp)}). ${possessive} Total ADHD raw score was ${fmt(totalAdhd)}.`
   const counts = `At the DSM symptom-count threshold (items rated "Often" or "Very Often"), ${pronounLower} endorsed ${inattCount.value}/9 inattention symptoms and ${hyperImpCount.value}/9 hyperactivity-impulsivity symptoms (${totalSymptomCount.value}/18 total).`
+  const criteriaSuggestion = buildChildhoodCriteriaSuggestion(adhdCriteria, instrument, scores, answers)
 
   const followUpParts: string[] = []
   if (followUpPositive === 'yes') {
     followUpParts.push(`${pronoun} endorsed experiencing at least one childhood symptom at an "Often" frequency or higher.`)
-    if (Array.isArray(settings) && settings.length > 0) {
-      followUpParts.push(`Impairment was reported in the following settings: ${settings.join(', ')}.`)
+    if (settingsText) {
+      followUpParts.push(`Impairment was reported in the following settings: ${settingsText}.`)
     }
   } else if (followUpPositive === 'no') {
     followUpParts.push(`${pronoun} did not endorse any childhood symptoms at an "Often" frequency or higher.`)
@@ -199,10 +393,11 @@ function buildChildhoodNarrative(
 
   const footer = 'Results should be interpreted alongside developmental history, collateral information, and the limits of retrospective recall.'
 
-  return [intro, subscales, counts, followUpParts.join(' '), footer].filter(Boolean).join('\n\n')
+  return [intro, subscales, counts, criteriaSuggestion, followUpParts.join(' '), footer].filter(Boolean).join('\n\n')
 }
 
 function buildNarrative(
+  adhdCriteria: BaarsAdhdCriteriaMeta,
   instrument: InstrumentDefinition,
   scores: ComputedGroupScore[],
   answers: Record<string, QuestionValue>,
@@ -210,12 +405,13 @@ function buildNarrative(
   header: Record<string, string>,
   pronounChoice: 'she' | 'he' | 'they',
   followUpPositive: 'yes' | 'no' | null,
+  age: number | null,
 ): string | null {
   if (instrument.id === 'baars_iv_self_report_childhood_symptoms') {
-    return buildChildhoodNarrative(scores, answers, ageBand, header, pronounChoice, followUpPositive)
+    return buildChildhoodNarrative(adhdCriteria, instrument, scores, answers, ageBand, header, pronounChoice, followUpPositive)
   }
 
-  return buildCurrentNarrative(scores, answers, ageBand, header, pronounChoice, followUpPositive)
+  return buildCurrentNarrative(adhdCriteria, instrument, scores, answers, ageBand, header, pronounChoice, followUpPositive, age)
 }
 
 // --- Severity color coding ---
@@ -226,7 +422,13 @@ const severityColor: Record<string, string> = {
   'High': 'text-red-600 dark:text-red-400',
 }
 
-export function BaarsDemo({ instrument }: { instrument: InstrumentDefinition }) {
+export function BaarsDemo({
+  instrument,
+  adhdCriteria,
+}: {
+  instrument: InstrumentDefinition
+  adhdCriteria: BaarsAdhdCriteriaMeta
+}) {
   const [headerValues, setHeaderValues] = useState<Record<string, string>>(
     () => buildInitialHeaderValues(instrument.headerFields),
   )
@@ -300,6 +502,7 @@ export function BaarsDemo({ instrument }: { instrument: InstrumentDefinition }) 
   }, [followUpPositive, remainingFollowUpQuestions])
 
   const narrative = buildNarrative(
+    adhdCriteria,
     instrument,
     computedScores,
     answers,
@@ -307,6 +510,7 @@ export function BaarsDemo({ instrument }: { instrument: InstrumentDefinition }) 
     headerValues,
     pronounChoice,
     followUpPositive,
+    age,
   )
   const [copied, setCopied] = useState(false)
 
@@ -314,6 +518,24 @@ export function BaarsDemo({ instrument }: { instrument: InstrumentDefinition }) 
   const [activeQuestionId, setActiveQuestionId] = useState<string | null>(
     symptomQuestionIds[0] ?? null,
   )
+  const responseScale = instrument.responseScale ?? []
+
+  const setQuestionRef = (questionId: string, element: HTMLDivElement | null) => {
+    if (!element) return
+    if (element.offsetParent === null) return
+    questionRefs.current[questionId] = element
+  }
+
+  const selectSymptomAnswer = (questionId: string, value: string) => {
+    setAnswers(current => ({ ...current, [questionId]: value }))
+    const idx = symptomQuestionIds.indexOf(questionId)
+    const next = symptomQuestionIds[idx + 1]
+    if (next) {
+      setTimeout(() => setActiveQuestionId(next), 80)
+    } else {
+      setActiveQuestionId(questionId)
+    }
+  }
 
   // When active question changes, scroll it into view
   useEffect(() => {
@@ -358,9 +580,10 @@ export function BaarsDemo({ instrument }: { instrument: InstrumentDefinition }) 
   }
   const resetDemo = () => { setHeaderValues(buildInitialHeaderValues(instrument.headerFields)); setAnswers({}) }
 
-  // Separate raw-sum scores from symptom counts for display
-  const rawSumScores = computedScores.filter(s => s.group.scoringType === 'raw_sum')
-  const symptomCountScores = computedScores.filter(s => s.group.scoringType === 'count_at_or_above')
+  const scoreTableRows = useMemo(
+    () => buildScoreTableRows(instrument, computedScores),
+    [instrument, computedScores],
+  )
 
   return (
     <div className="space-y-16">
@@ -416,6 +639,13 @@ export function BaarsDemo({ instrument }: { instrument: InstrumentDefinition }) 
                   onChange={e => updateHeader(field.id, e.target.value)}
                   className="h-9"
                 />
+                {field.id === 'age' && (
+                  <p className="text-[11px] text-zinc-400 dark:text-zinc-500">
+                    {ageBand
+                      ? `Using ${ageBand} percentile norms`
+                      : 'Percentile norms available for ages 18-89'}
+                  </p>
+                )}
               </div>
             )
           })}
@@ -486,13 +716,88 @@ export function BaarsDemo({ instrument }: { instrument: InstrumentDefinition }) 
               {section.questions.filter(q => typeof answers[q.id] === 'string' && answers[q.id] !== '').length}/{section.questions.length}
             </p>
           </div>
-          <div className="space-y-5">
+          <div className="hidden rounded-xl border border-zinc-200 dark:border-zinc-800 md:block">
+            <div className="sticky top-24 z-30 grid grid-cols-[minmax(0,1fr)_72px_72px_72px_72px] border-b border-zinc-200 bg-zinc-50/95 shadow-sm backdrop-blur supports-[backdrop-filter]:bg-zinc-50/80 dark:border-zinc-800 dark:bg-zinc-950/95 dark:supports-[backdrop-filter]:bg-zinc-950/80">
+              <div className="flex min-h-[68px] items-start px-4 pt-[14px] text-[11px] font-medium uppercase tracking-[0.12em] text-zinc-400 dark:text-zinc-500">
+                Item
+              </div>
+              {responseScale.map(opt => (
+                <div
+                  key={opt.value}
+                  className="flex min-h-[68px] flex-col items-center justify-start gap-1.5 border-l border-zinc-200 px-2 pt-3 pb-2 text-center dark:border-zinc-800"
+                >
+                  <span className="font-mono text-[13px] leading-none text-zinc-900 dark:text-zinc-100">
+                    {opt.value}
+                  </span>
+                  <span className="text-[10px] leading-[1.15] text-zinc-400 dark:text-zinc-500 text-balance">
+                    {opt.label}
+                  </span>
+                </div>
+              ))}
+            </div>
+            <div>
+              {section.questions.map(question => {
+                const isActive = activeQuestionId === question.id
+                return (
+                  <div
+                    key={question.id}
+                    ref={el => setQuestionRef(question.id, el)}
+                    onClick={() => setActiveQuestionId(question.id)}
+                    className={cn(
+                      'grid grid-cols-[minmax(0,1fr)_72px_72px_72px_72px] border-b border-zinc-100 transition-colors last:border-b-0 dark:border-zinc-800/70',
+                      isActive && 'bg-zinc-50 dark:bg-zinc-900/50',
+                    )}
+                  >
+                    <div className="flex items-start gap-3 px-4 py-3">
+                      <span className="pt-0.5 font-mono text-[11px] text-zinc-300 dark:text-zinc-600">
+                        {question.number}.
+                      </span>
+                      <div className="min-w-0">
+                        <p className="text-[13px] leading-relaxed text-zinc-700 dark:text-zinc-300">
+                          {question.prompt}
+                        </p>
+                        {isActive && (
+                          <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.12em] text-zinc-400 dark:text-zinc-500">
+                            Press 1-4
+                          </p>
+                        )}
+                      </div>
+                    </div>
+                    {responseScale.map(opt => {
+                      const isSelected = answers[question.id] === opt.value
+                      return (
+                        <button
+                          key={opt.value}
+                          type="button"
+                          onClick={event => {
+                            event.stopPropagation()
+                            selectSymptomAnswer(question.id, opt.value)
+                          }}
+                          className={cn(
+                            'border-l border-zinc-100 text-center font-mono text-sm transition-colors dark:border-zinc-800/70',
+                            isSelected
+                              ? 'bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-900'
+                              : 'text-zinc-400 hover:bg-zinc-100 hover:text-zinc-900 dark:text-zinc-500 dark:hover:bg-zinc-900 dark:hover:text-zinc-100',
+                          )}
+                          aria-pressed={isSelected}
+                          aria-label={`Set question ${question.number} to ${opt.label}`}
+                        >
+                          {opt.value}
+                        </button>
+                      )
+                    })}
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+          <div className="space-y-5 md:hidden">
             {section.questions.map(question => {
               const isActive = activeQuestionId === question.id
               return (
               <div
                 key={question.id}
-                ref={el => { questionRefs.current[question.id] = el }}
+                ref={el => setQuestionRef(question.id, el)}
                 onClick={() => setActiveQuestionId(question.id)}
                 className={`group rounded-lg transition-all duration-150 ${isActive ? 'bg-zinc-50 dark:bg-zinc-900/40 -mx-3 px-3 py-3' : ''}`}
               >
@@ -507,10 +812,10 @@ export function BaarsDemo({ instrument }: { instrument: InstrumentDefinition }) 
                 </p>
                 <RadioGroup
                   value={typeof answers[question.id] === 'string' ? (answers[question.id] as string) : ''}
-                  onValueChange={v => updateSingleValue(question.id, v)}
+                  onValueChange={v => selectSymptomAnswer(question.id, v)}
                   className="flex gap-1"
                 >
-                  {instrument.responseScale?.map(opt => {
+                  {responseScale.map(opt => {
                     const isSelected = answers[question.id] === opt.value
                     return (
                       <label
@@ -643,62 +948,91 @@ export function BaarsDemo({ instrument }: { instrument: InstrumentDefinition }) 
           {ageBand ? `Percentiles using ${ageBand} norms.` : 'Enter age for percentile lookup.'}
           {age !== null && age > 39 && ' Severity labels normed for ages 18-39.'}
         </p>
-
-        {/* Raw sum scores */}
-        <div className="mb-8">
-          <p className="text-[10px] font-mono uppercase tracking-[0.14em] text-zinc-400 dark:text-zinc-500 mb-3">
-            Raw Scores
-          </p>
-          <div className="divide-y divide-zinc-100 dark:divide-zinc-800/50">
-            {rawSumScores.map(score => (
-              <div key={score.group.id} className="flex items-center justify-between py-3">
-                <div>
-                  <p className="text-sm text-zinc-700 dark:text-zinc-300">{score.group.label.replace(' Raw Score', '')}</p>
-                  {score.value === null && (
-                    <p className="text-[11px] text-zinc-400 dark:text-zinc-500 mt-0.5">
-                      {score.answered}/{score.total} items
-                    </p>
-                  )}
-                </div>
-                <div className="text-right">
-                  <p className="text-lg font-semibold tabular-nums text-zinc-900 dark:text-zinc-100">
-                    {score.value ?? '\u2014'}
-                  </p>
-                  <div className="flex items-center gap-2 justify-end">
-                    {score.severityLabel && (
-                      <p className={`text-[11px] font-medium ${severityColor[score.severityLabel] ?? 'text-zinc-500'}`}>
-                        {score.severityLabel}
-                      </p>
+        <div className="overflow-x-auto rounded-xl border border-zinc-200 dark:border-zinc-800">
+          <table className="min-w-full border-collapse">
+            <thead>
+              <tr className="border-b border-zinc-200 bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-900/40">
+                <th className="px-4 py-3 text-left text-[11px] font-medium uppercase tracking-[0.12em] text-zinc-400 dark:text-zinc-500">
+                  Domain
+                </th>
+                <th className="px-4 py-3 text-right text-[11px] font-medium uppercase tracking-[0.12em] text-zinc-400 dark:text-zinc-500">
+                  Raw
+                </th>
+                <th className="px-4 py-3 text-right text-[11px] font-medium uppercase tracking-[0.12em] text-zinc-400 dark:text-zinc-500">
+                  Severity
+                </th>
+                <th className="px-4 py-3 text-right text-[11px] font-medium uppercase tracking-[0.12em] text-zinc-400 dark:text-zinc-500">
+                  Percentile
+                </th>
+                <th className="px-4 py-3 text-right text-[11px] font-medium uppercase tracking-[0.12em] text-zinc-400 dark:text-zinc-500">
+                  Often+
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {scoreTableRows.map(row => (
+                <tr key={row.label} className="border-b border-zinc-100 last:border-b-0 dark:border-zinc-800/70">
+                  <td className="px-4 py-3 align-top text-sm text-zinc-700 dark:text-zinc-300">
+                    {row.label}
+                  </td>
+                  <td className="px-4 py-3 align-top text-right">
+                    {row.rawScore ? (
+                      row.rawScore.value !== null ? (
+                        <span className="text-base font-semibold tabular-nums text-zinc-900 dark:text-zinc-100">
+                          {row.rawScore.value}
+                        </span>
+                      ) : (
+                        <div className="space-y-0.5">
+                          <p className="text-base font-semibold tabular-nums text-zinc-300 dark:text-zinc-600">—</p>
+                          <p className="text-[10px] text-zinc-400 dark:text-zinc-500">
+                            {row.rawScore.answered}/{row.rawScore.total}
+                          </p>
+                        </div>
+                      )
+                    ) : (
+                      <span className="text-base font-semibold tabular-nums text-zinc-300 dark:text-zinc-600">—</span>
                     )}
-                    {score.percentileBand && (
-                      <p className="text-[11px] text-zinc-400 dark:text-zinc-500">
-                        {formatPercentileBand(score.percentileBand)}
-                      </p>
+                  </td>
+                  <td className="px-4 py-3 align-top text-right">
+                    {row.rawScore?.severityLabel ? (
+                      <span className={`text-[11px] font-medium ${severityColor[row.rawScore.severityLabel] ?? 'text-zinc-500'}`}>
+                        {row.rawScore.severityLabel}
+                      </span>
+                    ) : (
+                      <span className="text-[11px] text-zinc-300 dark:text-zinc-600">—</span>
                     )}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Symptom counts */}
-        <div>
-          <p className="text-[10px] font-mono uppercase tracking-[0.14em] text-zinc-400 dark:text-zinc-500 mb-3">
-            Symptom Counts (Often+)
-          </p>
-          <div className="divide-y divide-zinc-100 dark:divide-zinc-800/50">
-            {symptomCountScores.map(score => (
-              <div key={score.group.id} className="flex items-center justify-between py-3">
-                <p className="text-sm text-zinc-700 dark:text-zinc-300">
-                  {score.group.label.replace(' Symptom Count', '')}
-                </p>
-                <p className="text-lg font-semibold tabular-nums text-zinc-900 dark:text-zinc-100">
-                  {score.value !== null ? `${score.value}/${score.total}` : '\u2014'}
-                </p>
-              </div>
-            ))}
-          </div>
+                  </td>
+                  <td className="px-4 py-3 align-top text-right">
+                    {row.rawScore?.percentileBand ? (
+                      <span className="text-[11px] text-zinc-500 dark:text-zinc-400">
+                        {formatPercentileBand(row.rawScore.percentileBand)}
+                      </span>
+                    ) : (
+                      <span className="text-[11px] text-zinc-300 dark:text-zinc-600">—</span>
+                    )}
+                  </td>
+                  <td className="px-4 py-3 align-top text-right">
+                    {row.symptomCount ? (
+                      row.symptomCount.value !== null ? (
+                        <span className="text-base font-semibold tabular-nums text-zinc-900 dark:text-zinc-100">
+                          {row.symptomCount.value}/{row.symptomCount.total}
+                        </span>
+                      ) : (
+                        <div className="space-y-0.5">
+                          <p className="text-base font-semibold tabular-nums text-zinc-300 dark:text-zinc-600">—</p>
+                          <p className="text-[10px] text-zinc-400 dark:text-zinc-500">
+                            {row.symptomCount.answered}/{row.symptomCount.total}
+                          </p>
+                        </div>
+                      )
+                    ) : (
+                      <span className="text-base font-semibold tabular-nums text-zinc-300 dark:text-zinc-600">—</span>
+                    )}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </section>
 
