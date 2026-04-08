@@ -37,10 +37,16 @@ const CONSTELLATIONS: { x: number; y: number }[][] = [
   [{x:10,y:8},{x:22,y:4},{x:36,y:10},{x:6,y:22},{x:18,y:18},{x:30,y:20},{x:42,y:28},{x:12,y:36},{x:26,y:38},{x:40,y:44}],
 ]
 
-function ConstellationMap({ subscaleIndex, answeredMask, chakra }: {
+function ConstellationMap({
+  subscaleIndex,
+  answeredMask,
+  chakra,
+  className,
+}: {
   subscaleIndex: number
   answeredMask: boolean[]
   chakra: ChakraColor
+  className?: string
 }) {
   const pts = CONSTELLATIONS[subscaleIndex % CONSTELLATIONS.length]
   const answeredCount = answeredMask.filter(Boolean).length
@@ -61,7 +67,7 @@ function ConstellationMap({ subscaleIndex, answeredMask, chakra }: {
   return (
     <svg
       viewBox="0 0 48 48"
-      className={cn('w-10 h-10 shrink-0', allDone && 'animate-[pulse_3s_ease-in-out_2]')}
+      className={cn('w-10 h-10 shrink-0', allDone && 'animate-[pulse_3s_ease-in-out_2]', className)}
       aria-hidden
     >
       {lines.map((l, i) => (
@@ -85,6 +91,27 @@ function ConstellationMap({ subscaleIndex, answeredMask, chakra }: {
         />
       ))}
     </svg>
+  )
+}
+
+function StickyConstellationBeacon({
+  subscaleIndex,
+  answeredMask,
+  chakra,
+}: {
+  subscaleIndex: number
+  answeredMask: boolean[]
+  chakra: ChakraColor
+}) {
+  return (
+    <div className="sticky top-24 z-20 mb-4 flex justify-end pointer-events-none">
+      <ConstellationMap
+        subscaleIndex={subscaleIndex}
+        answeredMask={answeredMask}
+        chakra={chakra}
+        className="h-12 w-12"
+      />
+    </div>
   )
 }
 
@@ -402,7 +429,7 @@ export default function SenseSurvey() {
           <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-400 dark:text-zinc-500 mb-[13px]">Mind-Body Assessment</p>
           <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50 mb-[8px]">SENSE</h1>
           <p className="text-[14px] text-zinc-500 dark:text-zinc-400 leading-relaxed max-w-lg">
-            Developed by Dr. Neha Menon. Free to use. Rate each statement on a frequency scale. There are no trick questions.
+            Developed by Dr. Neha Menon. Rate each statement on a frequency scale. There are no trick questions.
           </p>
         </motion.div>
 
@@ -474,14 +501,19 @@ export default function SenseSurvey() {
 
                         return (
                           <div key={subscale.id}>
-                            {/* Subscale header with constellation */}
-                            <div className="flex items-start justify-between mb-[21px]">
+                            {/* Subscale header */}
+                            <div className="mb-[21px]">
                               <div className="flex-1 min-w-0">
                                 <h3 className="text-[13px] font-semibold text-zinc-700 dark:text-zinc-300 mb-0.5">{subscale.name}</h3>
                                 <p className="text-[10px] text-zinc-400 dark:text-zinc-600 italic leading-relaxed">{subscale.citation}</p>
                               </div>
-                              <ConstellationMap subscaleIndex={subIdx} answeredMask={answeredMask} chakra={chakra} />
                             </div>
+
+                            <StickyConstellationBeacon
+                              subscaleIndex={subIdx}
+                              answeredMask={answeredMask}
+                              chakra={chakra}
+                            />
 
                             {/* Items */}
                             <div className="space-y-[8px]">
@@ -521,6 +553,10 @@ export default function SenseSurvey() {
                   </section>
                 )
               })}
+
+              <div className="pt-2">
+                <DomainOrbs completionMap={completionMap} onSelect={scrollToDomain} />
+              </div>
 
               {/* Submit */}
               <div className="pt-4 pb-24">
