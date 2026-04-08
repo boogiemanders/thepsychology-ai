@@ -33,7 +33,7 @@ const statusConfig = {
 const CATEGORY_DESCRIPTIONS: Record<string, string> = {
   'getting-licensed': 'You passed the EPPP. Now you wait. These tools make the wait shorter.',
   'clinical-practice': 'You became a psychologist to help people. Not to copy-paste intake forms.',
-  'creative': 'Side projects. Language, art, culture. No clinical utility. Just interesting.',
+  'creative': 'Language, art, culture. No clinical utility. Just interesting.',
   'dental': 'For dental students. Textbook figures, pulled out and organized so you can study the pictures, not the page numbers.',
 }
 

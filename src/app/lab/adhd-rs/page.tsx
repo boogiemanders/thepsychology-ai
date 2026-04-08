@@ -2,27 +2,28 @@ import type { Metadata } from 'next'
 import { AssessmentToolPlaceholder } from '../_components/assessment-tool-placeholder'
 
 export const metadata: Metadata = {
-  title: 'ADHD-RS 2D | thePsychology.ai',
-  description: 'Placeholder route for the lab ADHD Rating Scale workflow.',
+  title: 'ADHD-RS | thePsychology.ai',
+  description: 'Digital ADHD Rating Scale scorer with automated subscale scoring, norm lookup, and report-ready clinical summaries.',
 }
 
 export default function AdhdRsPage() {
   return (
     <AssessmentToolPlaceholder
-      title="ADHD-RS 2D"
-      description="A planned ADHD Rating Scale workflow for the lab site. The goal is fast administration, deterministic scoring, and a clinician-ready summary without manual table lookups."
-      versionLabel="2D"
-      audienceLabel="Parent, teacher, clinician, or other structured ADHD rating workflows inside the lab site."
+      title="ADHD Rating Scale"
+      description="18 items. 5 minutes. No more hand-summing raw scores or cross-referencing printed norm tables by age, gender, and informant type. Enter responses and get inattention, hyperactivity-impulsivity, and total scores with DSM-style symptom counts — instantly."
+      versionLabel="ADHD-RS-5"
+      audienceLabel="Parent, teacher, or clinician completing a structured ADHD rating."
       buildItems={[
-        'Render the assessment from a reusable schema instead of hardcoding one-off UI.',
-        'Auto-score inattentive, hyperactive-impulsive, and total values with a clean result summary.',
-        'Support side-by-side informant comparisons and make repeat administrations trackable over time.',
+        'Auto-score inattention and hyperactivity-impulsivity subscales with zero manual calculation.',
+        'Count symptoms at or above clinical threshold for DSM-aligned reporting.',
+        'Compare parent vs. teacher ratings side by side with agreement flags.',
+        'Track scores across sessions to monitor treatment response over time.',
       ]}
       differentiators={[
-        'The manual workflow today is still paper-heavy and fragmented across scoring, writeup, and charting.',
-        'This lab version is intended to turn the scale into an in-product assessment pipeline, not just a static form.',
+        'No digital ADHD-RS scoring platform exists. Every competitor — Vanderbilt, Conners 4, ASRS — has gone digital. The ADHD-RS is still paper and pencil.',
+        'This tool turns the gold-standard pharma trial measure into something you can actually use in a modern clinical workflow.',
       ]}
-      note="Status: placeholder route only. Assessment content, scoring details, and licensing constraints still need to be finalized."
+      note="Assessment content and scoring logic in development. The ADHD-RS is published by Guilford Press."
     />
   )
 }
