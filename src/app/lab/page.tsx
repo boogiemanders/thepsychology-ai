@@ -37,7 +37,7 @@ const projects = [
   },
   {
     id: 4,
-    title: 'Mind-Body Assessment Tool',
+    title: 'SENSE',
     description: 'A mind-body assessment tool developed by Dr. Neha Menon.',
     category: 'clinical-practice',
     categoryLabel: '02 Psychologist Tools',

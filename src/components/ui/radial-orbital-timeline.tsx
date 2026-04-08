@@ -45,6 +45,10 @@ function statusLabelClass(status: ProjectNode['status']) {
     : 'text-zinc-400 dark:text-zinc-500'
 }
 
+function formatClusterChildLabel(position: number, childIndex: number) {
+  return `${position}${String.fromCharCode(97 + childIndex)}`
+}
+
 // Derive 3 orbital entries from the flat project list:
 // a license leaf, a psychologist-tools cluster, and a creative leaf.
 type OrbitalEntry =
@@ -427,7 +431,7 @@ function ClusterNode({
 
         {/* Rows */}
         <ul className="divide-y divide-zinc-100 dark:divide-zinc-900">
-          {entry.children.map((child) => {
+          {entry.children.map((child, childIndex) => {
             const s = statusConfig[child.status]
             const isClickable = !!child.href && child.status !== 'soon'
             const isActive = activeChildId === child.id
@@ -448,7 +452,7 @@ function ClusterNode({
                   )}
                 >
                   <span className="mt-[3px] font-mono text-[12px] text-zinc-400 dark:text-zinc-600 shrink-0">
-                    {String(child.id).padStart(2, '0')}
+                    {formatClusterChildLabel(position, childIndex)}
                   </span>
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 mb-1.5">
