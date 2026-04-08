@@ -23,12 +23,30 @@ interface RadialOrbitalTimelineProps {
 const statusConfig = {
   live: { label: 'Live', dot: 'bg-zinc-900 dark:bg-zinc-100' },
   beta: { label: 'Beta', dot: 'bg-zinc-400' },
-  dev: { label: 'In Development', dot: 'bg-zinc-300 dark:bg-zinc-600' },
+  dev: { label: 'Building', dot: 'bg-amber-500' },
   soon: { label: 'Coming Soon', dot: 'bg-zinc-200 dark:bg-zinc-700' },
 } as const
 
+function StatusDot({ status }: { status: ProjectNode['status'] }) {
+  if (status === 'dev') {
+    return (
+      <span className="relative inline-flex h-1.5 w-1.5 shrink-0">
+        <span className="absolute inset-0 rounded-full bg-amber-400 animate-ping opacity-75" />
+        <span className="relative inline-block h-full w-full rounded-full bg-amber-500" />
+      </span>
+    )
+  }
+  return <span className={`inline-block h-1.5 w-1.5 rounded-full ${statusConfig[status].dot} shrink-0`} />
+}
+
+function statusLabelClass(status: ProjectNode['status']) {
+  return status === 'dev'
+    ? 'text-amber-600 dark:text-amber-400'
+    : 'text-zinc-400 dark:text-zinc-500'
+}
+
 // Derive 3 orbital entries from the flat project list:
-// a license leaf, a clinical-practice cluster, and a creative leaf.
+// a license leaf, a psychologist-tools cluster, and a creative leaf.
 type OrbitalEntry =
   | { kind: 'leaf'; id: string; label: string; project: ProjectNode }
   | { kind: 'cluster'; id: string; label: string; children: ProjectNode[] }
@@ -37,12 +55,14 @@ function buildEntries(projects: ProjectNode[]): OrbitalEntry[] {
   const license = projects.find(p => p.category === 'getting-licensed')
   const practice = projects.filter(p => p.category === 'clinical-practice')
   const creative = projects.find(p => p.category === 'creative')
+  const dental = projects.find(p => p.category === 'dental')
 
   const entries: OrbitalEntry[] = []
   if (license) entries.push({ kind: 'leaf', id: 'license', label: license.title, project: license })
   if (practice.length)
-    entries.push({ kind: 'cluster', id: 'practice', label: 'Clinical Practice', children: practice })
+    entries.push({ kind: 'cluster', id: 'practice', label: 'Psychologist Tools', children: practice })
   if (creative) entries.push({ kind: 'leaf', id: 'creative', label: creative.title, project: creative })
+  if (dental) entries.push({ kind: 'leaf', id: 'dental', label: dental.title, project: dental })
   return entries
 }
 
@@ -181,10 +201,13 @@ export default function RadialOrbitalTimeline({ projects }: RadialOrbitalTimelin
     const angle = ((index / entries.length) * 360 + rotationAngle) % 360
     const radius = 180
     const radian = (angle * Math.PI) / 180
-    const x = radius * Math.cos(radian)
-    const y = radius * Math.sin(radian)
+    // Round to integers / fixed precision so server and client serialize
+    // style values identically and React doesn't flag a hydration mismatch.
+    const x = Math.round(radius * Math.cos(radian))
+    const y = Math.round(radius * Math.sin(radian))
     const zIndex = Math.round(100 + 50 * Math.cos(radian))
-    const opacity = Math.max(0.5, Math.min(1, 0.5 + 0.5 * ((1 + Math.sin(radian)) / 2)))
+    const rawOpacity = Math.max(0.5, Math.min(1, 0.5 + 0.5 * ((1 + Math.sin(radian)) / 2)))
+    const opacity = Math.round(rawOpacity * 100) / 100
     return { x, y, angle, radian, zIndex, opacity }
   }
 
@@ -308,8 +331,10 @@ function LeafNode({
           <div className="p-5">
             <div className="flex items-center justify-between mb-3">
               <span className="flex items-center gap-1.5">
-                <span className={`inline-block h-1.5 w-1.5 rounded-full ${s.dot}`} />
-                <span className="text-[11px] text-zinc-400 dark:text-zinc-500">{s.label}</span>
+                <StatusDot status={project.status} />
+                <span className={cn('text-[10px] font-mono uppercase tracking-[0.14em]', statusLabelClass(project.status))}>
+                  {s.label}
+                </span>
               </span>
               <span className="text-[11px] text-zinc-400 dark:text-zinc-500">{project.categoryLabel}</span>
             </div>
@@ -400,7 +425,7 @@ function ClusterNode({
         {/* Header */}
         <div className="px-5 pt-4 pb-3 border-b border-zinc-100 dark:border-zinc-900">
           <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-zinc-400 dark:text-zinc-500">
-            Clinical Practice
+            Psychologist Tools
           </p>
         </div>
 
@@ -434,8 +459,8 @@ function ClusterNode({
                       <h4 className="text-[15px] font-medium tracking-tight text-zinc-900 dark:text-zinc-100 truncate">
                         {child.title}
                       </h4>
-                      <span className={`inline-block h-1.5 w-1.5 rounded-full ${s.dot} shrink-0`} />
-                      <span className="text-[11px] uppercase tracking-wider text-zinc-400 dark:text-zinc-500">
+                      <StatusDot status={child.status} />
+                      <span className={cn('text-[10px] font-mono uppercase tracking-[0.14em]', statusLabelClass(child.status))}>
                         {s.label}
                       </span>
                     </div>
