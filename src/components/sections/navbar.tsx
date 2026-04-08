@@ -58,6 +58,7 @@ export function Navbar() {
   const { user, signOut } = useAuth();
   const pathname = usePathname();
   const isLabRoute = pathname?.startsWith("/lab") ?? false;
+  const isBaarsRoute = pathname?.startsWith("/lab/baars") ?? false;
   const [hasScrolled, setHasScrolled] = useState(false);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("hero");
@@ -121,6 +122,55 @@ export function Navbar() {
     window.dispatchEvent(event)
   }, []);
 
+  const renderBrandLockup = () => {
+    if (isBaarsRoute) {
+      // Proportions tuned to the golden ratio (φ ≈ 1.618):
+      // - Separator height ≈ logo height / φ²  (≈ 38% of logo)
+      // - Gap between mark and separator ≈ logo height / φ³ (≈ 24% of logo)
+      return (
+        <>
+          <Image
+            src="/images/inzinna-brain-logo.png"
+            alt="Inzinna"
+            width={198}
+            height={234}
+            className="h-8 sm:h-9 md:h-10 w-auto shrink-0 rounded-sm"
+            priority
+          />
+          <span
+            aria-hidden="true"
+            className="select-none font-light leading-none text-foreground/30 text-[12px] sm:text-[13px] md:text-[15px] tracking-tight translate-y-[0.5px]"
+          >
+            ×
+          </span>
+          <Image
+            src="/images/logo.png"
+            alt="thePsychology.ai"
+            width={420}
+            height={535}
+            className="h-8 sm:h-9 md:h-10 w-auto shrink-0 object-contain invert dark:invert-0"
+            priority
+          />
+        </>
+      );
+    }
+
+    return (
+      <>
+        <Image
+          src="/images/logo.png"
+          alt="Logo"
+          width={420}
+          height={535}
+          className="h-10 md:h-14 w-auto shrink-0 object-contain invert dark:invert-0"
+        />
+        {!isLabRoute && (
+          <p className="text-lg font-semibold text-primary">thePsychology.ai</p>
+        )}
+      </>
+    );
+  };
+
   return (
     <header
       data-site-navbar="true"
@@ -143,17 +193,14 @@ export function Navbar() {
           )}
         >
           <div className="flex h-[60px] sm:h-[64px] items-center justify-between px-4 sm:px-5">
-            <Link href={user ? "/dashboard" : "/"} className="flex items-center gap-3">
-              <Image
-                src="/images/logo.png"
-                alt="Logo"
-                width={420}
-                height={535}
-                className="h-10 md:h-14 w-auto shrink-0 object-contain invert dark:invert-0"
-              />
-              {!isLabRoute && (
-                <p className="text-lg font-semibold text-primary">thePsychology.ai</p>
+            <Link
+              href={user ? "/dashboard" : "/"}
+              className={cn(
+                "flex items-center",
+                isBaarsRoute ? "gap-[9px] sm:gap-[10px] md:gap-[11px]" : "gap-3",
               )}
+            >
+              {renderBrandLockup()}
             </Link>
 
             <NavMenu isLoggedIn={!!user} />
@@ -225,17 +272,14 @@ export function Navbar() {
               {/* Mobile menu content */}
               <div className="flex flex-col gap-4">
                 <div className="flex items-center justify-between">
-                  <Link href="/" className="flex items-center gap-3">
-                    <Image
-                      src="/images/logo.png"
-                      alt="Logo"
-                      width={420}
-                      height={535}
-                      className="h-10 md:h-14 w-auto shrink-0 object-contain invert dark:invert-0"
-                    />
-                    <p className="text-lg font-semibold text-primary">
-                      thePsychology.ai
-                    </p>
+                  <Link
+                    href="/"
+                    className={cn(
+                      "flex items-center",
+                      isBaarsRoute ? "gap-2" : "gap-3",
+                    )}
+                  >
+                    {renderBrandLockup()}
                   </Link>
                   <button
                     onClick={toggleDrawer}
