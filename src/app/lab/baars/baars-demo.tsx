@@ -60,6 +60,7 @@ function buildNarrative(
   answers: Record<string, QuestionValue>,
   ageBand: string | null,
   header: Record<string, string>,
+  pronounChoice: 'she' | 'he' | 'they',
 ): string | null {
   const totalAdhd = scores.find(s => s.group.id === 'total_adhd_raw')
   const inattention = scores.find(s => s.group.id === 'inattention_raw')
@@ -86,12 +87,11 @@ function buildNarrative(
   }
 
   const name = (header.name || '').trim() || 'The respondent'
-  const pronoun = header.sex === 'Female' ? 'She' : header.sex === 'Male' ? 'He' : 'They'
+  const pronoun = pronounChoice === 'she' ? 'She' : pronounChoice === 'he' ? 'He' : 'They'
   const pronounLower = pronoun.toLowerCase()
   const possessive = pronoun === 'She' ? 'Her' : pronoun === 'He' ? 'His' : 'Their'
   const ageText = header.age ? `${header.age}-year-old` : ''
-  const sexText = header.sex ? header.sex.toLowerCase() : ''
-  const demographic = [ageText, sexText].filter(Boolean).join(' ')
+  const demographic = ageText
 
   const fmt = (s: ComputedGroupScore) => {
     const base = `${s.value}${s.severityLabel ? `, ${s.severityLabel}` : ''}`
@@ -190,7 +190,8 @@ export function BaarsDemo({ instrument }: { instrument: InstrumentDefinition }) 
     }
   }, [derivedQ28])
 
-  const narrative = buildNarrative(computedScores, answers, ageBand, headerValues)
+  const [pronounChoice, setPronounChoice] = useState<'she' | 'he' | 'they'>('they')
+  const narrative = buildNarrative(computedScores, answers, ageBand, headerValues, pronounChoice)
   const [copied, setCopied] = useState(false)
 
   // Flat ordered list of symptom question ids for keyboard nav + auto-advance
@@ -555,9 +556,39 @@ export function BaarsDemo({ instrument }: { instrument: InstrumentDefinition }) 
 
       {/* --- Clinical Summary --- */}
       <section>
-        <h2 className="text-xs font-medium uppercase tracking-[0.15em] text-zinc-900 dark:text-zinc-100 mb-4">
-          Clinical Summary
-        </h2>
+        <div className="flex items-center justify-between mb-4 flex-wrap gap-3">
+          <h2 className="text-xs font-medium uppercase tracking-[0.15em] text-zinc-900 dark:text-zinc-100">
+            Clinical Summary
+          </h2>
+          <div className="flex items-center gap-2">
+            <span className="text-[10px] font-mono uppercase tracking-[0.14em] text-zinc-400 dark:text-zinc-500">
+              Pronouns
+            </span>
+            <div className="flex gap-1">
+              {([
+                { v: 'she', label: 'She/Her' },
+                { v: 'he', label: 'He/Him' },
+                { v: 'they', label: 'They/Them' },
+              ] as const).map(opt => {
+                const isSelected = pronounChoice === opt.v
+                return (
+                  <button
+                    key={opt.v}
+                    type="button"
+                    onClick={() => setPronounChoice(opt.v)}
+                    className={`rounded-md border px-2.5 py-1 text-[11px] transition-all duration-150 cursor-pointer ${
+                      isSelected
+                        ? 'border-zinc-900 dark:border-zinc-100 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 font-medium'
+                        : 'border-zinc-200 dark:border-zinc-800 text-zinc-500 dark:text-zinc-400 hover:border-zinc-300 dark:hover:border-zinc-700'
+                    }`}
+                  >
+                    {opt.label}
+                  </button>
+                )
+              })}
+            </div>
+          </div>
+        </div>
         {narrative ? (
           <div className="relative">
             <textarea
