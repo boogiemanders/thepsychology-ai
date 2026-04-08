@@ -149,13 +149,13 @@ export default function LabClient({ projects }: { projects: Project[] }) {
       {/* Hero text */}
       <section role="banner" className="relative w-full h-[70vh] min-h-[480px] flex flex-col items-center justify-center text-center px-4 pointer-events-none">
         <div className="flex flex-col items-center">
-          <p className="italic font-thin text-4xl sm:text-5xl tracking-tight text-zinc-100 mb-2">
+          <p className="italic font-thin text-4xl sm:text-5xl tracking-tight text-zinc-700 dark:text-zinc-200 mb-2">
             thePsychology.ai
           </p>
-          <h1 className="font-bold text-6xl sm:text-7xl tracking-tight text-zinc-50 mb-6">
+          <h1 className="font-bold text-6xl sm:text-7xl tracking-tight text-zinc-900 dark:text-zinc-50 mb-6">
             Laboratory
           </h1>
-          <p className="text-sm text-zinc-400 leading-relaxed">
+          <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">
             Tools that save you time.
           </p>
         </div>
@@ -192,11 +192,11 @@ export default function LabClient({ projects }: { projects: Project[] }) {
             const label = projects.find(p => p.category === key)?.categoryLabel
             if (!label) return null
             return (
-              <div key={key} className="border-l border-zinc-700/60 pl-5">
-                <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-300 mb-2">
+              <div key={key} className="border-l border-zinc-300 dark:border-zinc-700/60 pl-5">
+                <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-800 dark:text-zinc-300 mb-2">
                   {label}
                 </p>
-                <p className="text-[13px] text-zinc-400 leading-relaxed">
+                <p className="text-[13px] text-zinc-600 dark:text-zinc-400 leading-relaxed">
                   {desc}
                 </p>
               </div>
