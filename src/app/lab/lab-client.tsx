@@ -25,12 +25,43 @@ export interface Project {
 const statusConfig = {
   live: { label: 'Live', dot: 'bg-zinc-900 dark:bg-zinc-100' },
   beta: { label: 'Beta', dot: 'bg-zinc-400' },
-  dev: { label: 'In Development', dot: 'bg-zinc-300 dark:bg-zinc-600' },
+  dev: { label: 'Building', dot: 'bg-amber-500' },
   soon: { label: 'Coming Soon', dot: 'bg-zinc-200 dark:bg-zinc-700' },
 } as const
 
+const CATEGORY_DESCRIPTIONS: Record<string, string> = {
+  'getting-licensed': 'You passed the EPPP. Now you wait. These tools make the wait shorter.',
+  'clinical-practice': 'You became a psychologist to help people. Not to copy-paste intake forms.',
+  'creative': 'Side projects. Language, art, culture. No clinical utility. Just interesting.',
+  'dental': 'For dental students. Textbook figures, pulled out and organized so you can study the pictures, not the page numbers.',
+}
+
+// Shared status pill. `dev` gets an animated amber ping to signal active work.
+function StatusBadge({ status }: { status: Project['status'] }) {
+  const s = statusConfig[status]
+  return (
+    <span className="inline-flex items-center gap-1.5">
+      {status === 'dev' ? (
+        <span className="relative inline-flex h-1.5 w-1.5 shrink-0">
+          <span className="absolute inset-0 rounded-full bg-amber-400 animate-ping opacity-75" />
+          <span className="relative inline-block h-full w-full rounded-full bg-amber-500" />
+        </span>
+      ) : (
+        <span className={`inline-block h-1.5 w-1.5 rounded-full ${s.dot}`} />
+      )}
+      <span
+        className={cn(
+          'text-[10px] font-mono uppercase tracking-[0.14em]',
+          status === 'dev' ? 'text-amber-600 dark:text-amber-400' : 'text-zinc-400 dark:text-zinc-500',
+        )}
+      >
+        {s.label}
+      </span>
+    </span>
+  )
+}
+
 function ProjectCard({ project }: { project: Project }) {
-  const s = statusConfig[project.status]
   const isClickable = !!project.href && project.status !== 'soon'
 
   const inner = (
@@ -39,10 +70,7 @@ function ProjectCard({ project }: { project: Project }) {
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 mb-1.5">
             <h3 className="text-sm font-medium tracking-tight">{project.title}</h3>
-            <span className="flex items-center gap-1.5">
-              <span className={`inline-block h-1.5 w-1.5 rounded-full ${s.dot}`} />
-              <span className="text-[11px] text-zinc-400 dark:text-zinc-500">{s.label}</span>
-            </span>
+            <StatusBadge status={project.status} />
           </div>
           <p className="text-[13px] text-zinc-500 dark:text-zinc-400 leading-relaxed">{project.description}</p>
           <div className="flex flex-wrap gap-1.5 mt-3">
@@ -81,13 +109,6 @@ function MobileProjectList({ projects }: { projects: Project[] }) {
     return acc
   }, {})
 
-  // Set descriptions
-  const descriptions: Record<string, string> = {
-    'getting-licensed': 'You passed the EPPP. Now you wait. These tools make the wait shorter.',
-    'clinical-practice': 'You became a psychologist to help people. Not to copy-paste intake forms.',
-    'creative': 'Side projects. Language, art, culture. No clinical utility. Just interesting.',
-  }
-
   return (
     <div className="space-y-12 px-4 max-w-2xl mx-auto">
       {Object.entries(categories).map(([key, cat]) => (
@@ -97,7 +118,7 @@ function MobileProjectList({ projects }: { projects: Project[] }) {
               {cat.label}
             </h2>
             <p className="text-[13px] text-zinc-400 dark:text-zinc-500 leading-relaxed">
-              {descriptions[key] || ''}
+              {CATEGORY_DESCRIPTIONS[key] || ''}
             </p>
           </div>
           <div>
@@ -163,6 +184,26 @@ export default function LabClient({ projects }: { projects: Project[] }) {
       <div className="hidden md:block">
         <RadialOrbitalTimeline projects={orbitalProjects} />
       </div>
+
+      {/* Desktop: category captions */}
+      <section className="hidden md:block max-w-4xl mx-auto px-8 pb-20 pt-4">
+        <div className="grid grid-cols-2 gap-x-16 gap-y-10">
+          {Object.entries(CATEGORY_DESCRIPTIONS).map(([key, desc]) => {
+            const label = projects.find(p => p.category === key)?.categoryLabel
+            if (!label) return null
+            return (
+              <div key={key} className="border-l border-zinc-700/60 pl-5">
+                <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-300 mb-2">
+                  {label}
+                </p>
+                <p className="text-[13px] text-zinc-400 leading-relaxed">
+                  {desc}
+                </p>
+              </div>
+            )
+          })}
+        </div>
+      </section>
 
       {/* Mobile: Clean list */}
       <div className="block md:hidden py-12">
