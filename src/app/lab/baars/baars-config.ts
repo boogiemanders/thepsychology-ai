@@ -386,7 +386,6 @@ export const BAARS_SELF_REPORT_CURRENT_SYMPTOMS: InstrumentDefinition = {
   headerFields: [
     { id: 'name', label: 'Name', type: 'text' },
     { id: 'date', label: 'Date', type: 'date' },
-    { id: 'sex', label: 'Sex', type: 'single_select', options: SEX_OPTIONS },
     { id: 'age', label: 'Age', type: 'number', helpText: 'Age in years.' },
   ],
   instructions: 'For the first 27 items, please circle the number next to each item below that best describes your behavior DURING THE PAST 6 MONTHS. Then answer the remaining three questions. Please ignore the sections marked "Office Use Only."',
