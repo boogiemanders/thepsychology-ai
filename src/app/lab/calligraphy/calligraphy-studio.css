@@ -1,0 +1,554 @@
+/* ── Chinese Calligraphy Studio — scoped styles ── */
+/* "Ink on White Paper" — xuan paper + red seal stamp */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+/* Break out of parent max-w container */
+.calligraphy-layout-root {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* ── Light mode (default) ── */
+.calligraphy-studio {
+  --cs-bg: #ffffff;
+  --cs-bg-subtle: #fafaf8;
+  --cs-ink: #1a1a1a;
+  --cs-ink-soft: #6b6b6b;
+  --cs-ink-light: #a0a0a0;
+  --cs-accent: #c03020;
+  --cs-accent-soft: rgba(192, 48, 32, 0.07);
+  --cs-line: rgba(0, 0, 0, 0.06);
+  --cs-panel: #ffffff;
+  --cs-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  --cs-body-font: "Cormorant Garamond", "Georgia", serif;
+  --cs-success: #2d6a30;
+
+  --cs-sp-xs: 10px;
+  --cs-sp-sm: 16px;
+  --cs-sp-md: 26px;
+  --cs-sp-lg: 42px;
+  --cs-sp-xl: 68px;
+
+  font-family: var(--cs-body-font);
+  font-size: 16px;
+  color: var(--cs-ink);
+  background: var(--cs-bg);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+/* ── Dark mode ── */
+:root.dark .calligraphy-studio {
+  --cs-bg: #0a0a0a;
+  --cs-bg-subtle: #141414;
+  --cs-ink: #f0f0f0;
+  --cs-ink-soft: #a0a0a0;
+  --cs-ink-light: #6b6b6b;
+  --cs-accent: #e04030;
+  --cs-accent-soft: rgba(224, 64, 48, 0.1);
+  --cs-line: rgba(255, 255, 255, 0.08);
+  --cs-panel: #111111;
+  --cs-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --cs-success: #4ade80;
+}
+
+/* ── Page shell ── */
+
+.cs-page-shell {
+  width: min(1200px, calc(100% - var(--cs-sp-lg)));
+  margin: 0 auto;
+  padding: var(--cs-sp-xl) 0;
+}
+
+/* ── Hero ── */
+
+.cs-hero {
+  max-width: 720px;
+  margin-bottom: var(--cs-sp-xl);
+}
+
+.cs-hero-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cs-eyebrow,
+.cs-section-label {
+  margin: 0 0 var(--cs-sp-xs);
+  color: var(--cs-ink-light);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  font-weight: 500;
+}
+
+.cs-hero-title-row {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--cs-sp-md);
+}
+
+.cs-hero-title-row h1 {
+  margin: 0;
+  font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+  line-height: 1.08;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: var(--cs-ink);
+  font-family: var(--cs-body-font);
+}
+
+.cs-seal {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-top: 6px;
+  background: var(--cs-accent);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1;
+  border-radius: 3px;
+  transform: rotate(-3deg);
+  box-shadow: 0 1px 4px rgba(192, 48, 32, 0.25);
+  user-select: none;
+}
+
+.cs-hero-copy {
+  max-width: 540px;
+  margin: var(--cs-sp-sm) 0 0;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--cs-ink-soft);
+}
+
+/* ── Layout ── */
+
+.cs-layout {
+  display: grid;
+  grid-template-columns: 382fr 618fr;
+  gap: var(--cs-sp-lg);
+  align-items: start;
+}
+
+/* ── Panels ── */
+
+.cs-panel {
+  background: var(--cs-panel);
+  border: 1px solid var(--cs-line);
+  border-radius: 12px;
+  box-shadow: var(--cs-shadow);
+}
+
+.cs-controls-panel {
+  padding: var(--cs-sp-md);
+  position: sticky;
+  top: var(--cs-sp-md);
+}
+
+.cs-preview-panel {
+  padding: var(--cs-sp-md);
+  border: none;
+  box-shadow: none;
+  background: transparent;
+}
+
+/* ── Form elements ── */
+
+.cs-stack {
+  display: grid;
+  gap: var(--cs-sp-sm);
+}
+
+.cs-controls-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.cs-field {
+  display: grid;
+  gap: 6px;
+}
+
+.cs-field span {
+  font-size: 0.88rem;
+  color: var(--cs-ink-soft);
+  font-weight: 500;
+}
+
+.calligraphy-studio textarea,
+.calligraphy-studio select {
+  font-family: var(--cs-body-font);
+  width: 100%;
+  border: 1px solid var(--cs-line);
+  border-radius: 8px;
+  background: var(--cs-bg);
+  color: var(--cs-ink);
+  padding: 12px 14px;
+  outline: none;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.calligraphy-studio textarea:focus,
+.calligraphy-studio select:focus {
+  border-color: rgba(192, 48, 32, 0.3);
+  box-shadow: 0 0 0 3px var(--cs-accent-soft);
+}
+
+.calligraphy-studio textarea {
+  resize: vertical;
+  min-height: 160px;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.calligraphy-studio select {
+  font-size: 0.92rem;
+  cursor: pointer;
+}
+
+/* ── Actions ── */
+
+.cs-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.cs-btn-primary,
+.cs-btn-secondary {
+  font-family: var(--cs-body-font);
+  border: 0;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 0.92rem;
+  font-weight: 500;
+  transition: transform 120ms ease, opacity 120ms ease, background 120ms ease;
+}
+
+.cs-btn-primary:hover,
+.cs-btn-secondary:hover {
+  transform: translateY(-1px);
+}
+
+.cs-btn-primary:active,
+.cs-btn-secondary:active {
+  transform: translateY(0);
+}
+
+.cs-btn-primary:disabled,
+.cs-btn-secondary:disabled {
+  cursor: progress;
+  opacity: 0.6;
+}
+
+.cs-btn-primary {
+  background: var(--cs-accent);
+  color: #fff;
+  min-width: 150px;
+}
+
+.cs-btn-primary:hover {
+  background: #a82818;
+}
+
+:root.dark .cs-btn-primary:hover {
+  background: #c83828;
+}
+
+.cs-btn-secondary {
+  background: transparent;
+  color: var(--cs-ink);
+  border: 1px solid var(--cs-line);
+}
+
+.cs-btn-secondary:hover {
+  border-color: rgba(0, 0, 0, 0.15);
+  background: var(--cs-bg-subtle);
+}
+
+:root.dark .cs-btn-secondary:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* ── Status ── */
+
+.cs-status {
+  margin: 0;
+  min-height: 1.3em;
+  font-size: 0.85rem;
+  color: var(--cs-ink-light);
+}
+
+.cs-status.error {
+  color: var(--cs-accent);
+}
+
+.cs-status.success {
+  color: var(--cs-success);
+}
+
+/* ── Preview section ── */
+
+.cs-section-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.cs-section-note {
+  color: var(--cs-ink-light);
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.cs-model-badge {
+  margin: 0;
+  padding: 4px 10px;
+  border-radius: 4px;
+  background: var(--cs-accent-soft);
+  color: var(--cs-accent);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+/* ── Featured card ── */
+
+.cs-featured-card {
+  margin: var(--cs-sp-sm) 0 var(--cs-sp-lg);
+  padding: var(--cs-sp-md) 0;
+  border-bottom: 1px solid var(--cs-line);
+}
+
+.cs-preview-label {
+  margin: 0 0 var(--cs-sp-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.68rem;
+  color: var(--cs-ink-light);
+  font-weight: 500;
+}
+
+.cs-featured-preview {
+  min-height: 140px;
+  font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+/* ── Font wall ── */
+
+.cs-font-wall {
+  display: grid;
+  gap: var(--cs-sp-lg);
+}
+
+.cs-font-group-header {
+  display: flex;
+  align-items: baseline;
+  gap: var(--cs-sp-sm);
+  border-bottom: 1px solid var(--cs-line);
+  padding-bottom: var(--cs-sp-xs);
+}
+
+.cs-font-group-label {
+  margin: 0;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--cs-ink);
+  letter-spacing: 0.02em;
+}
+
+.cs-font-group-note {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--cs-ink-light);
+}
+
+.cs-font-group-count {
+  margin-left: auto;
+  font-size: 0.72rem;
+  color: var(--cs-ink-light);
+}
+
+.cs-font-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 14px;
+  min-height: 60px;
+  border-radius: 10px;
+  border: 2px dashed transparent;
+  transition: border-color 160ms ease, background 160ms ease;
+  margin-top: 14px;
+}
+
+.cs-font-grid.drag-over {
+  border-color: var(--cs-accent);
+  background: var(--cs-accent-soft);
+}
+
+.cs-font-grid-empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: var(--cs-sp-md);
+  color: var(--cs-ink-light);
+  font-size: 0.88rem;
+  font-style: italic;
+}
+
+.cs-font-card[draggable="true"] {
+  cursor: grab;
+}
+
+.cs-font-card[draggable="true"]:active {
+  cursor: grabbing;
+}
+
+.cs-font-card.is-dragging {
+  opacity: 0.4;
+}
+
+.cs-font-card {
+  width: 100%;
+  min-width: 0;
+  padding: var(--cs-sp-sm);
+  border-radius: 8px;
+  background: var(--cs-bg);
+  border: 1px solid var(--cs-line);
+  color: var(--cs-ink);
+  text-align: left;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  font-family: var(--cs-body-font);
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.cs-font-card:hover {
+  border-color: rgba(192, 48, 32, 0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+:root.dark .cs-font-card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.cs-font-card:focus-visible {
+  outline: none;
+  border-color: rgba(192, 48, 32, 0.4);
+  box-shadow: 0 0 0 3px var(--cs-accent-soft);
+}
+
+.cs-font-card.is-selected {
+  border-color: var(--cs-accent);
+  background: var(--cs-bg-subtle);
+}
+
+.cs-font-card h3 {
+  margin: 0 0 8px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--cs-ink-soft);
+  letter-spacing: 0.01em;
+}
+
+.cs-font-card-note {
+  margin: 2px 0 0;
+  font-size: 0.68rem;
+  color: var(--cs-ink-light);
+  font-weight: 400;
+  font-style: italic;
+}
+
+.cs-font-card-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+.cs-font-card-download {
+  padding: 3px 10px;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--cs-ink-light);
+  background: transparent;
+  border: 1px solid var(--cs-line);
+  border-radius: 4px;
+  min-width: auto;
+  opacity: 0;
+  cursor: pointer;
+  font-family: var(--cs-body-font);
+  transition: opacity 160ms ease, color 160ms ease, border-color 160ms ease;
+}
+
+.cs-font-card:hover .cs-font-card-download {
+  opacity: 1;
+}
+
+.cs-font-card-download:hover {
+  color: var(--cs-accent);
+  border-color: rgba(192, 48, 32, 0.3);
+  transform: none;
+}
+
+.cs-font-sample {
+  min-height: 100px;
+  font-size: 1.7rem;
+  line-height: 1.5;
+  word-break: break-word;
+  color: var(--cs-ink);
+}
+
+/* ── Responsive ── */
+
+@media (max-width: 960px) {
+  .cs-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .cs-controls-panel {
+    position: static;
+  }
+}
+
+@media (max-width: 640px) {
+  .cs-page-shell {
+    width: min(100% - 20px, 1200px);
+    padding-top: var(--cs-sp-lg);
+  }
+
+  .cs-hero-title-row {
+    gap: var(--cs-sp-sm);
+  }
+
+  .cs-seal {
+    width: 32px;
+    height: 32px;
+    font-size: 15px;
+  }
+
+  .cs-panel,
+  .cs-controls-panel,
+  .cs-featured-card,
+  .cs-font-card {
+    border-radius: 10px;
+  }
+
+  .cs-featured-preview {
+    min-height: 100px;
+    font-size: 1.8rem;
+  }
+}
