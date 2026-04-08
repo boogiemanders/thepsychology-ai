@@ -41,6 +41,7 @@ const projects = [
     description: 'A mind-body assessment tool developed by Dr. Neha Menon.',
     category: 'clinical-practice',
     categoryLabel: '02 Psychologist Tools',
+    href: '/lab/sense',
     status: 'dev' as const,
     tags: ['Next.js App', 'Prisma', 'Clinical'],
   },
