@@ -571,7 +571,9 @@
   }
 
   .cs-featured-sticky {
-    position: static;
+    top: 0;
+    z-index: 10;
+    padding-top: var(--cs-sp-sm);
   }
 }
 
