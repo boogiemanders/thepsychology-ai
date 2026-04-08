@@ -80,19 +80,21 @@ function buildNarrative(
   const name = (header.name || '').trim() || 'The respondent'
   const pronoun = header.sex === 'Female' ? 'She' : header.sex === 'Male' ? 'He' : 'They'
   const pronounLower = pronoun.toLowerCase()
-  const verb = pronoun === 'They' ? 'were' : 'was'
+  const possessive = pronoun === 'She' ? 'Her' : pronoun === 'He' ? 'His' : 'Their'
   const ageText = header.age ? `${header.age}-year-old` : ''
   const sexText = header.sex ? header.sex.toLowerCase() : ''
   const demographic = [ageText, sexText].filter(Boolean).join(' ')
 
-  const fmt = (s: ComputedGroupScore) => `${s.value}${s.severityLabel ? ` (${s.severityLabel})` : ''}`
-  const pct = (s: ComputedGroupScore) => s.percentileBand ? ` [${s.percentileBand}%ile]` : ''
+  const fmt = (s: ComputedGroupScore) => {
+    const base = `${s.value}${s.severityLabel ? `, ${s.severityLabel}` : ''}`
+    return s.percentileBand ? `${base}, ${s.percentileBand}th percentile` : base
+  }
 
   // Paragraph 1: header
-  const intro = `${name}${demographic ? `, a ${demographic},` : ''} completed the BAARS-IV Self-Report (Current Symptoms) on ${header.date || 'today'}.`
+  const intro = `${name}${demographic ? `, a ${demographic},` : ''} completed the BAARS-IV Self-Report (Current Symptoms) on ${header.date || 'today'}.${ageBand ? ` Raw scores were compared against the ${ageBand} age band.` : ''}`
 
   // Paragraph 2: subscales
-  const subscales = `On the symptom items, ${pronounLower} obtained the following raw scores: Inattention ${fmt(inattention)}${pct(inattention)}, Hyperactivity ${fmt(hyperactivity)}${pct(hyperactivity)}, Impulsivity ${fmt(impulsivity)}${pct(impulsivity)}, and Sluggish Cognitive Tempo ${fmt(sct)}${pct(sct)}. ${pronoun}${verb === 'were' ? "'re" : "'s"} Total ADHD raw score was ${fmt(totalAdhd)}${pct(totalAdhd)}${ageBand ? `, compared against the ${ageBand} age band` : ''}.`
+  const subscales = `On the symptom items, ${pronounLower} obtained the following subscale raw scores: Inattention (${fmt(inattention)}); Hyperactivity (${fmt(hyperactivity)}); Impulsivity (${fmt(impulsivity)}); and Sluggish Cognitive Tempo (${fmt(sct)}). ${possessive} Total ADHD raw score was ${fmt(totalAdhd)}.`
 
   // Paragraph 3: symptom counts
   const counts = `At the DSM symptom-count threshold (items rated "Often" or "Very Often"), ${pronounLower} endorsed ${inattCount?.value ?? 0}/9 inattention symptoms and ${hyperImpCount.value}/9 hyperactivity-impulsivity symptoms (${totalSymptomCount.value}/18 total).`
