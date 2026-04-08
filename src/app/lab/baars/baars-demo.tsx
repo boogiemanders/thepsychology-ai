@@ -1,11 +1,21 @@
 'use client'
 
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { motion, useReducedMotion } from 'motion/react'
+import { Info, Lock } from 'lucide-react'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from '@/components/ui/tooltip'
+import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from '@/components/ui/sheet'
 import { cn } from '@/lib/utils'
 import {
+  BAARS_NORM_CITATION,
   getBaarsAgeBand,
   lookupBaarsChildhoodPercentile,
   lookupBaarsCurrentPercentile,
@@ -429,11 +439,16 @@ export function BaarsDemo({
   instrument: InstrumentDefinition
   adhdCriteria: BaarsAdhdCriteriaMeta
 }) {
+  const prefersReducedMotion = useReducedMotion()
   const [headerValues, setHeaderValues] = useState<Record<string, string>>(
     () => buildInitialHeaderValues(instrument.headerFields),
   )
   const [answers, setAnswers] = useState<Record<string, QuestionValue>>({})
   const [pronounChoice, setPronounChoice] = useState<'she' | 'he' | 'they'>('they')
+  const [collapsedSections, setCollapsedSections] = useState<Set<string>>(new Set())
+  const userExpandedRef = useRef<Set<string>>(new Set())
+  const answerHistoryRef = useRef<Array<{ id: string; prev: QuestionValue | undefined }>>([])
+  const [mobileSheetOpen, setMobileSheetOpen] = useState(false)
   const ageValue = Number(headerValues.age)
   const age = Number.isFinite(ageValue) ? ageValue : null
   const ageBand = age !== null ? getBaarsAgeBand(age) : null
@@ -526,8 +541,17 @@ export function BaarsDemo({
     questionRefs.current[questionId] = element
   }
 
+  const pushHistory = useCallback((id: string, prev: QuestionValue | undefined) => {
+    const stack = answerHistoryRef.current
+    stack.push({ id, prev })
+    if (stack.length > 50) stack.shift()
+  }, [])
+
   const selectSymptomAnswer = (questionId: string, value: string) => {
-    setAnswers(current => ({ ...current, [questionId]: value }))
+    setAnswers(current => {
+      pushHistory(questionId, current[questionId])
+      return { ...current, [questionId]: value }
+    })
     const idx = symptomQuestionIds.indexOf(questionId)
     const next = symptomQuestionIds[idx + 1]
     if (next) {
@@ -546,49 +570,173 @@ export function BaarsDemo({
     }
   }, [activeQuestionId])
 
-  // Global keydown: 1-4 fills active question then advances
+  // Global keydown: 1-4 fills active question then advances; arrows navigate/cycle; cmd+z undo
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
-      if (!activeQuestionId) return
-      // Ignore when user is typing in an input/textarea/contenteditable
       const target = e.target as HTMLElement | null
-      if (target) {
-        const tag = target.tagName
-        if (tag === 'INPUT' || tag === 'TEXTAREA' || target.isContentEditable) return
+      const inField = !!target && (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || target.isContentEditable)
+
+      // Undo
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'z' && !inField) {
+        const stack = answerHistoryRef.current
+        const last = stack.pop()
+        if (last) {
+          e.preventDefault()
+          setAnswers(c => {
+            const next = { ...c }
+            if (last.prev === undefined) delete next[last.id]
+            else next[last.id] = last.prev
+            return next
+          })
+          setActiveQuestionId(last.id)
+        }
+        return
       }
-      if (!['1', '2', '3', '4'].includes(e.key)) return
-      e.preventDefault()
-      setAnswers(c => ({ ...c, [activeQuestionId]: e.key }))
+
+      if (!activeQuestionId) return
+      if (inField) return
+
+      // 1-4: fill + advance
+      if (['1', '2', '3', '4'].includes(e.key)) {
+        e.preventDefault()
+        setAnswers(c => {
+          pushHistory(activeQuestionId, c[activeQuestionId])
+          return { ...c, [activeQuestionId]: e.key }
+        })
+        const idx = symptomQuestionIds.indexOf(activeQuestionId)
+        const next = symptomQuestionIds[idx + 1]
+        if (next) setTimeout(() => setActiveQuestionId(next), 120)
+        return
+      }
+
+      // Arrow navigation (no auto-advance)
       const idx = symptomQuestionIds.indexOf(activeQuestionId)
-      const next = symptomQuestionIds[idx + 1]
-      if (next) {
-        // small delay so the fill animates before scroll
-        setTimeout(() => setActiveQuestionId(next), 120)
+      if (e.key === 'ArrowDown') {
+        e.preventDefault()
+        const next = symptomQuestionIds[idx + 1]
+        if (next) setActiveQuestionId(next)
+        return
+      }
+      if (e.key === 'ArrowUp') {
+        e.preventDefault()
+        const prev = symptomQuestionIds[idx - 1]
+        if (prev) setActiveQuestionId(prev)
+        return
+      }
+      if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+        e.preventDefault()
+        setAnswers(c => {
+          const cur = typeof c[activeQuestionId] === 'string' ? Number(c[activeQuestionId]) : null
+          let nextVal: number
+          if (cur === null || Number.isNaN(cur)) {
+            nextVal = e.key === 'ArrowRight' ? 1 : 4
+          } else {
+            nextVal = e.key === 'ArrowRight' ? (cur === 4 ? 1 : cur + 1) : (cur === 1 ? 4 : cur - 1)
+          }
+          pushHistory(activeQuestionId, c[activeQuestionId])
+          return { ...c, [activeQuestionId]: String(nextVal) }
+        })
       }
     }
     window.addEventListener('keydown', handler)
     return () => window.removeEventListener('keydown', handler)
-  }, [activeQuestionId, symptomQuestionIds])
+  }, [activeQuestionId, symptomQuestionIds, pushHistory])
 
   const updateHeader = (id: string, value: string) => setHeaderValues(c => ({ ...c, [id]: value }))
-  const updateSingleValue = (id: string, value: string) => setAnswers(c => ({ ...c, [id]: value }))
+  const updateSingleValue = (id: string, value: string) => setAnswers(c => {
+    pushHistory(id, c[id])
+    return { ...c, [id]: value }
+  })
   const updateMultiValue = (id: string, val: string, checked: boolean) => {
     setAnswers(c => {
+      pushHistory(id, c[id])
       const existing = Array.isArray(c[id]) ? c[id] : []
       return { ...c, [id]: checked ? [...existing, val] : existing.filter(v => v !== val) }
     })
   }
-  const resetDemo = () => { setHeaderValues(buildInitialHeaderValues(instrument.headerFields)); setAnswers({}) }
+  const resetDemo = () => {
+    setHeaderValues(buildInitialHeaderValues(instrument.headerFields))
+    setAnswers({})
+    answerHistoryRef.current = []
+    setCollapsedSections(new Set())
+    userExpandedRef.current = new Set()
+  }
+
+  // Auto-collapse fully-answered sections (Item 17)
+  useEffect(() => {
+    setCollapsedSections(prev => {
+      const next = new Set(prev)
+      let changed = false
+      for (const section of symptomSections) {
+        if (section.id === activeQuestionId) continue
+        const allAnswered = section.questions.every(q => typeof answers[q.id] === 'string' && answers[q.id] !== '')
+        const containsActive = section.questions.some(q => q.id === activeQuestionId)
+        if (allAnswered && !next.has(section.id) && !userExpandedRef.current.has(section.id) && !containsActive) {
+          next.add(section.id)
+          changed = true
+        }
+      }
+      return changed ? next : prev
+    })
+  }, [answers, symptomSections, activeQuestionId])
+
+  const expandSection = (id: string) => {
+    userExpandedRef.current.add(id)
+    setCollapsedSections(prev => {
+      const next = new Set(prev)
+      next.delete(id)
+      return next
+    })
+  }
 
   const scoreTableRows = useMemo(
     () => buildScoreTableRows(instrument, computedScores),
     [instrument, computedScores],
   )
 
+  // Section progress map for collapsed-summary chip + checklist (Item 15, 17)
+  const sectionProgress = useMemo(() => {
+    return symptomSections.map(section => {
+      const answered = section.questions.filter(q => typeof answers[q.id] === 'string' && answers[q.id] !== '').length
+      return { id: section.id, title: section.title, answered, total: section.questions.length, complete: answered === section.questions.length }
+    })
+  }, [symptomSections, answers])
+
+  // Build empty-state checklist when narrative is null (Item 15)
+  const requirementsChecklist = useMemo(() => {
+    const items: Array<{ label: string; satisfied: boolean }> = []
+    items.push({ label: 'Age entered', satisfied: !!headerValues.age && headerValues.age.trim() !== '' })
+    sectionProgress.forEach(s => {
+      items.push({ label: `${s.title} ${s.answered}/${s.total}`, satisfied: s.complete })
+    })
+    if (followUpPositive === 'yes') {
+      // Q29 onset (current form) or equivalent
+      const onsetQ = remainingFollowUpQuestions.find(q => q.type === 'number')
+      if (onsetQ) {
+        items.push({ label: 'Onset age', satisfied: typeof answers[onsetQ.id] === 'string' && (answers[onsetQ.id] as string).trim() !== '' })
+      }
+      const settingsQ = remainingFollowUpQuestions.find(q => q.type === 'multi_select')
+      if (settingsQ) {
+        const sel = answers[settingsQ.id]
+        items.push({ label: 'Impairment settings', satisfied: Array.isArray(sel) && sel.length > 0 })
+      }
+    }
+    return items
+  }, [headerValues.age, sectionProgress, followUpPositive, remainingFollowUpQuestions, answers])
+
+  const motionSection = (index: number) => prefersReducedMotion
+    ? {}
+    : {
+        initial: { opacity: 0, y: 8 },
+        animate: { opacity: 1, y: 0 },
+        transition: { duration: 0.35, delay: index * 0.04, ease: [0.25, 0.1, 0.25, 1] as const },
+      }
+
   return (
-    <div className="space-y-16">
+    <TooltipProvider delayDuration={150}>
+    <div>
       {/* --- Header Fields --- */}
-      <section>
+      <motion.section {...motionSection(0)}>
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-xs font-medium uppercase tracking-[0.15em] text-zinc-900 dark:text-zinc-100">
             Respondent
@@ -615,7 +763,7 @@ export function BaarsDemo({
                           key={opt.value}
                           type="button"
                           onClick={() => updateHeader(field.id, opt.value)}
-                          className={`rounded-md border px-4 py-1.5 text-[12px] transition-all duration-150 cursor-pointer ${
+                          className={`rounded-md border px-4 py-1.5 text-[12px] transition-all duration-100 cursor-pointer active:scale-[0.97] ${
                             isSelected
                               ? 'border-zinc-900 dark:border-zinc-100 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 font-medium'
                               : 'border-zinc-200 dark:border-zinc-800 text-zinc-500 dark:text-zinc-400 hover:border-zinc-300 dark:hover:border-zinc-700'
@@ -663,7 +811,7 @@ export function BaarsDemo({
                     key={opt.v}
                     type="button"
                     onClick={() => setPronounChoice(opt.v)}
-                    className={`rounded-md border px-3 py-1.5 text-[12px] transition-all duration-150 cursor-pointer ${
+                    className={`rounded-md border px-3 py-1.5 text-[12px] transition-all duration-100 cursor-pointer active:scale-[0.97] ${
                       isSelected
                         ? 'border-zinc-900 dark:border-zinc-100 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 font-medium'
                         : 'border-zinc-200 dark:border-zinc-800 text-zinc-500 dark:text-zinc-400 hover:border-zinc-300 dark:hover:border-zinc-700'
@@ -676,10 +824,10 @@ export function BaarsDemo({
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* --- Progress bar --- */}
-      <div>
+      <div className="mt-12 border-t border-zinc-100 dark:border-zinc-800/50 pt-12">
         <div className="flex items-center justify-between mb-2">
           <p className="text-[11px] font-mono text-zinc-400 dark:text-zinc-500">
             {answeredCount} / {totalLikert} items
@@ -696,18 +844,58 @@ export function BaarsDemo({
         </div>
       </div>
 
-      <section>
+      <motion.section {...motionSection(1)} className="mt-24 border-t border-zinc-100 dark:border-zinc-800/50 pt-12">
         <h2 className="text-xs font-medium uppercase tracking-[0.15em] text-zinc-900 dark:text-zinc-100 mb-4">
           Instructions
         </h2>
         <p className="whitespace-pre-line text-sm leading-relaxed text-zinc-500 dark:text-zinc-400">
           {instrument.instructions}
         </p>
-      </section>
+      </motion.section>
+
+      {/* --- Keyboard legend (Item 9) --- */}
+      <div className="mt-12 hidden md:flex items-center gap-3 text-[10px] uppercase tracking-[0.12em] text-zinc-400 dark:text-zinc-500">
+        <span className="font-mono">Keys</span>
+        {responseScale.map(opt => (
+          <span key={opt.value} className="flex items-center gap-1.5">
+            <kbd className="font-mono border border-zinc-200 dark:border-zinc-800 rounded px-1.5 py-0.5 text-[10px] text-zinc-600 dark:text-zinc-400 bg-zinc-50 dark:bg-zinc-900">{opt.value}</kbd>
+            <span>{opt.label}</span>
+          </span>
+        ))}
+        <span className="ml-auto flex items-center gap-1.5">
+          <kbd className="font-mono border border-zinc-200 dark:border-zinc-800 rounded px-1.5 py-0.5 text-[10px] bg-zinc-50 dark:bg-zinc-900">↑↓</kbd>
+          <span>navigate</span>
+          <kbd className="font-mono border border-zinc-200 dark:border-zinc-800 rounded px-1.5 py-0.5 text-[10px] bg-zinc-50 dark:bg-zinc-900">⌘Z</kbd>
+          <span>undo</span>
+        </span>
+      </div>
 
       {/* --- Symptom Sections --- */}
-      {symptomSections.map(section => (
-        <section key={section.id}>
+      {symptomSections.map((section, sIndex) => {
+        const progress = sectionProgress.find(p => p.id === section.id)
+        const isCollapsed = collapsedSections.has(section.id)
+        if (isCollapsed) {
+          return (
+            <motion.section
+              key={section.id}
+              {...motionSection(2 + sIndex)}
+              className="mt-12 flex items-center justify-between rounded-lg border border-zinc-100 dark:border-zinc-800/70 bg-zinc-50/60 dark:bg-zinc-900/30 px-5 py-3"
+            >
+              <span className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
+                {section.title} <span className="font-mono text-[11px] text-zinc-400 ml-2">{progress?.answered}/{progress?.total}</span>
+              </span>
+              <button
+                type="button"
+                onClick={() => expandSection(section.id)}
+                className="text-[11px] font-medium uppercase tracking-[0.12em] text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors active:scale-[0.97]"
+              >
+                Edit
+              </button>
+            </motion.section>
+          )
+        }
+        return (
+        <motion.section key={section.id} {...motionSection(2 + sIndex)} className="mt-24 border-t border-zinc-100 dark:border-zinc-800/50 pt-12">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-xs font-medium uppercase tracking-[0.15em] text-zinc-900 dark:text-zinc-100">
               {section.title}
@@ -744,10 +932,13 @@ export function BaarsDemo({
                     ref={el => setQuestionRef(question.id, el)}
                     onClick={() => setActiveQuestionId(question.id)}
                     className={cn(
-                      'grid grid-cols-[minmax(0,1fr)_72px_72px_72px_72px] border-b border-zinc-100 transition-colors last:border-b-0 dark:border-zinc-800/70',
+                      'relative grid grid-cols-[minmax(0,1fr)_72px_72px_72px_72px] border-b border-zinc-100 transition-all duration-200 ease-out last:border-b-0 dark:border-zinc-800/70 scroll-mt-28 md:scroll-mt-32',
                       isActive && 'bg-zinc-50 dark:bg-zinc-900/50',
                     )}
                   >
+                    {isActive && (
+                      <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-zinc-900 dark:bg-zinc-100 origin-top animate-[scaleY_180ms_ease-out]" />
+                    )}
                     <div className="flex items-start gap-3 px-4 py-3">
                       <span className="pt-0.5 font-mono text-[11px] text-zinc-300 dark:text-zinc-600">
                         {question.number}.
@@ -774,7 +965,7 @@ export function BaarsDemo({
                             selectSymptomAnswer(question.id, opt.value)
                           }}
                           className={cn(
-                            'border-l border-zinc-100 text-center font-mono text-sm transition-colors dark:border-zinc-800/70',
+                            'border-l border-zinc-100 text-center font-mono text-sm transition-all duration-100 dark:border-zinc-800/70 active:scale-[0.97]',
                             isSelected
                               ? 'bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-900'
                               : 'text-zinc-400 hover:bg-zinc-100 hover:text-zinc-900 dark:text-zinc-500 dark:hover:bg-zinc-900 dark:hover:text-zinc-100',
@@ -799,17 +990,18 @@ export function BaarsDemo({
                 key={question.id}
                 ref={el => setQuestionRef(question.id, el)}
                 onClick={() => setActiveQuestionId(question.id)}
-                className={`group rounded-lg transition-all duration-150 ${isActive ? 'bg-zinc-50 dark:bg-zinc-900/40 -mx-3 px-3 py-3' : ''}`}
+                className={cn(
+                  'relative rounded-lg transition-all duration-200 ease-out scroll-mt-28',
+                  isActive && 'bg-zinc-50 dark:bg-zinc-900/40 -mx-3 px-3 py-3',
+                )}
               >
-                <p className="text-sm text-zinc-700 dark:text-zinc-300 mb-3 flex items-start gap-2">
-                  <span className="font-mono text-[11px] text-zinc-300 dark:text-zinc-600">{question.number}.</span>
-                  <span className="flex-1">{question.prompt}</span>
-                  {isActive && (
-                    <span className="font-mono text-[10px] text-zinc-400 dark:text-zinc-500 shrink-0">
-                      press 1&ndash;4
-                    </span>
-                  )}
-                </p>
+                {isActive && (
+                  <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-zinc-900 dark:bg-zinc-100 rounded-full origin-top animate-[scaleY_180ms_ease-out]" />
+                )}
+                <div className="mb-3">
+                  <span className="block font-mono text-[11px] text-zinc-300 dark:text-zinc-600 mb-1">{question.number}.</span>
+                  <span className="block text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed">{question.prompt}</span>
+                </div>
                 <RadioGroup
                   value={typeof answers[question.id] === 'string' ? (answers[question.id] as string) : ''}
                   onValueChange={v => selectSymptomAnswer(question.id, v)}
@@ -821,11 +1013,12 @@ export function BaarsDemo({
                       <label
                         key={opt.value}
                         htmlFor={`${question.id}-${opt.value}`}
-                        className={`flex-1 cursor-pointer rounded-md border px-2 py-2 text-center text-[12px] transition-all duration-150 ${
+                        className={cn(
+                          'flex-1 cursor-pointer rounded-md border min-h-[44px] flex items-center justify-center text-center text-[12px] transition-all duration-100 active:scale-[0.97]',
                           isSelected
                             ? 'border-zinc-900 dark:border-zinc-100 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 font-medium'
-                            : 'border-zinc-200 dark:border-zinc-800 text-zinc-500 dark:text-zinc-400 hover:border-zinc-300 dark:hover:border-zinc-700'
-                        }`}
+                            : 'border-zinc-200 dark:border-zinc-800 text-zinc-500 dark:text-zinc-400',
+                        )}
                       >
                         <RadioGroupItem value={opt.value} id={`${question.id}-${opt.value}`} className="sr-only" />
                         <span className="hidden sm:inline">{opt.label}</span>
@@ -838,12 +1031,13 @@ export function BaarsDemo({
               )
             })}
           </div>
-        </section>
-      ))}
+        </motion.section>
+        )
+      })}
 
       {/* --- Follow-Up --- */}
       {followUpSection && (
-        <section>
+        <motion.section {...motionSection(symptomSections.length + 2)} className="mt-24 border-t border-zinc-100 dark:border-zinc-800/50 pt-12">
           <h2 className="text-xs font-medium uppercase tracking-[0.15em] text-zinc-900 dark:text-zinc-100 mb-6">
             {followUpSection.title}
           </h2>
@@ -904,7 +1098,7 @@ export function BaarsDemo({
                             key={opt.value}
                             type="button"
                             onClick={() => updateMultiValue(question.id, opt.value, !isSelected)}
-                            className={`rounded-md border px-3 py-1.5 text-[12px] transition-all duration-150 cursor-pointer ${
+                            className={`rounded-md border px-3 py-1.5 text-[12px] transition-all duration-100 cursor-pointer active:scale-[0.97] ${
                               isSelected
                                 ? 'border-zinc-900 dark:border-zinc-100 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 font-medium'
                                 : 'border-zinc-200 dark:border-zinc-800 text-zinc-500 dark:text-zinc-400 hover:border-zinc-300 dark:hover:border-zinc-700'
@@ -936,17 +1130,27 @@ export function BaarsDemo({
               )
             })}
           </div>
-        </section>
+        </motion.section>
       )}
 
       {/* --- Scores --- */}
-      <section>
+      <motion.section {...motionSection(symptomSections.length + 3)} className="mt-24 border-t border-zinc-100 dark:border-zinc-800/50 pt-12">
         <h2 className="text-xs font-medium uppercase tracking-[0.15em] text-zinc-900 dark:text-zinc-100 mb-1">
           Scores
         </h2>
-        <p className="text-[11px] text-zinc-400 dark:text-zinc-500 mb-6">
-          {ageBand ? `Percentiles using ${ageBand} norms.` : 'Enter age for percentile lookup.'}
-          {age !== null && age > 39 && ' Severity labels normed for ages 18-39.'}
+        <p className="text-[11px] text-zinc-400 dark:text-zinc-500 mb-6 flex items-center gap-2">
+          <span>
+            {ageBand ? `Percentiles using ${ageBand} norms.` : 'Enter age for percentile lookup.'}
+            {age !== null && age > 39 && ' Severity labels normed for ages 18-39.'}
+          </span>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <button type="button" aria-label="Norm citation" className="text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-200 transition-colors">
+                <Info className="h-3 w-3" strokeWidth={1.75} />
+              </button>
+            </TooltipTrigger>
+            <TooltipContent>{BAARS_NORM_CITATION}</TooltipContent>
+          </Tooltip>
         </p>
         <div className="overflow-x-auto rounded-xl border border-zinc-200 dark:border-zinc-800">
           <table className="min-w-full border-collapse">
@@ -978,24 +1182,24 @@ export function BaarsDemo({
                   <td className="px-4 py-3 align-top text-right">
                     {row.rawScore ? (
                       row.rawScore.value !== null ? (
-                        <span className="text-base font-semibold tabular-nums text-zinc-900 dark:text-zinc-100">
+                        <span className="text-sm font-semibold tabular-nums text-zinc-900 dark:text-zinc-100">
                           {row.rawScore.value}
                         </span>
                       ) : (
                         <div className="space-y-0.5">
-                          <p className="text-base font-semibold tabular-nums text-zinc-300 dark:text-zinc-600">—</p>
+                          <p className="text-sm tabular-nums text-zinc-300 dark:text-zinc-600">—</p>
                           <p className="text-[10px] text-zinc-400 dark:text-zinc-500">
                             {row.rawScore.answered}/{row.rawScore.total}
                           </p>
                         </div>
                       )
                     ) : (
-                      <span className="text-base font-semibold tabular-nums text-zinc-300 dark:text-zinc-600">—</span>
+                      <span className="text-sm tabular-nums text-zinc-300 dark:text-zinc-600">—</span>
                     )}
                   </td>
                   <td className="px-4 py-3 align-top text-right">
                     {row.rawScore?.severityLabel ? (
-                      <span className={`text-[11px] font-medium ${severityColor[row.rawScore.severityLabel] ?? 'text-zinc-500'}`}>
+                      <span className={`text-[10px] uppercase tracking-[0.12em] font-medium ${severityColor[row.rawScore.severityLabel] ?? 'text-zinc-500'}`}>
                         {row.rawScore.severityLabel}
                       </span>
                     ) : (
@@ -1014,19 +1218,19 @@ export function BaarsDemo({
                   <td className="px-4 py-3 align-top text-right">
                     {row.symptomCount ? (
                       row.symptomCount.value !== null ? (
-                        <span className="text-base font-semibold tabular-nums text-zinc-900 dark:text-zinc-100">
+                        <span className="text-sm font-semibold tabular-nums text-zinc-900 dark:text-zinc-100">
                           {row.symptomCount.value}/{row.symptomCount.total}
                         </span>
                       ) : (
                         <div className="space-y-0.5">
-                          <p className="text-base font-semibold tabular-nums text-zinc-300 dark:text-zinc-600">—</p>
+                          <p className="text-sm tabular-nums text-zinc-300 dark:text-zinc-600">—</p>
                           <p className="text-[10px] text-zinc-400 dark:text-zinc-500">
                             {row.symptomCount.answered}/{row.symptomCount.total}
                           </p>
                         </div>
                       )
                     ) : (
-                      <span className="text-base font-semibold tabular-nums text-zinc-300 dark:text-zinc-600">—</span>
+                      <span className="text-sm tabular-nums text-zinc-300 dark:text-zinc-600">—</span>
                     )}
                   </td>
                 </tr>
@@ -1034,39 +1238,129 @@ export function BaarsDemo({
             </tbody>
           </table>
         </div>
-      </section>
+      </motion.section>
 
       {/* --- Clinical Summary --- */}
-      <section>
+      <motion.section {...motionSection(symptomSections.length + 4)} className="mt-24 hidden md:block border-t border-zinc-100 dark:border-zinc-800/50 pt-12">
         <h2 className="text-xs font-medium uppercase tracking-[0.15em] text-zinc-900 dark:text-zinc-100 mb-4">
           Clinical Summary
         </h2>
         {narrative ? (
-          <div className="relative">
-            <textarea
-              readOnly
-              value={narrative}
-              rows={14}
-              className="w-full resize-y rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 p-5 pr-24 text-[13px] leading-relaxed text-zinc-700 dark:text-zinc-300 font-serif focus:outline-none focus:ring-1 focus:ring-zinc-900 dark:focus:ring-zinc-100"
-            />
-            <button
-              type="button"
-              onClick={() => {
-                navigator.clipboard.writeText(narrative)
-                setCopied(true)
-                setTimeout(() => setCopied(false), 1800)
-              }}
-              className="absolute top-3 right-3 rounded-md border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 px-2.5 py-1 text-[10px] font-medium uppercase tracking-[0.12em] text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 hover:border-zinc-400 dark:hover:border-zinc-600 transition-colors cursor-pointer"
-            >
-              {copied ? 'Copied' : 'Copy'}
-            </button>
+          <div>
+            <div className="mb-2 flex items-center gap-1.5 text-[11px] text-zinc-400 dark:text-zinc-500">
+              <Lock className="h-3 w-3" strokeWidth={1.75} />
+              <span>Runs entirely in your browser. No PHI transmitted.</span>
+            </div>
+            <div className="relative">
+              <textarea
+                readOnly
+                value={narrative}
+                rows={14}
+                className="w-full resize-y rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 p-5 pr-24 text-[13px] leading-relaxed text-zinc-700 dark:text-zinc-300 focus:outline-none focus:ring-1 focus:ring-zinc-900 dark:focus:ring-zinc-100"
+              />
+              <button
+                type="button"
+                onClick={() => {
+                  navigator.clipboard.writeText(narrative)
+                  setCopied(true)
+                  setTimeout(() => setCopied(false), 1800)
+                }}
+                className={cn(
+                  'absolute top-3 right-3 rounded-md border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 px-2.5 py-1 text-[10px] font-medium uppercase tracking-[0.12em] text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 hover:border-zinc-400 dark:hover:border-zinc-600 cursor-pointer transition-transform duration-150 active:scale-95',
+                  copied && 'scale-105',
+                )}
+              >
+                {copied ? 'Copied' : 'Copy'}
+              </button>
+            </div>
           </div>
         ) : (
-          <p className="text-sm text-zinc-400 dark:text-zinc-500">
-            Complete all symptom items to generate the summary.
-          </p>
+          <div className="rounded-lg border border-dashed border-zinc-200 dark:border-zinc-800 p-5">
+            <p className="mb-3 text-[11px] uppercase tracking-[0.12em] text-zinc-400 dark:text-zinc-500">
+              Required to generate
+            </p>
+            <ul className="space-y-1.5">
+              {requirementsChecklist.map(item => (
+                <li key={item.label} className="flex items-center gap-2 text-[13px]">
+                  <span className={cn('font-mono text-base leading-none', item.satisfied ? 'text-zinc-900 dark:text-zinc-100' : 'text-zinc-400 dark:text-zinc-600')}>
+                    {item.satisfied ? '✓' : '○'}
+                  </span>
+                  <span className={cn(item.satisfied ? 'text-zinc-700 dark:text-zinc-300' : 'text-zinc-400 dark:text-zinc-500')}>
+                    {item.label}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
         )}
-      </section>
+      </motion.section>
+
+      {/* --- Mobile sticky View Summary (Item 31) --- */}
+      <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 border-t border-zinc-200 dark:border-zinc-800 bg-white/95 dark:bg-zinc-950/95 backdrop-blur px-4 py-3">
+        <Sheet open={mobileSheetOpen} onOpenChange={setMobileSheetOpen}>
+          <SheetTrigger asChild>
+            <button
+              type="button"
+              disabled={!narrative}
+              className="w-full rounded-md border border-zinc-900 dark:border-zinc-100 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 py-3 text-[12px] font-medium uppercase tracking-[0.12em] disabled:opacity-40 transition-transform active:scale-[0.98]"
+            >
+              {narrative ? 'View Summary' : `Complete (${answeredCount}/${totalLikert})`}
+            </button>
+          </SheetTrigger>
+          <SheetContent side="bottom" className="max-h-[90vh] overflow-y-auto">
+            <SheetHeader>
+              <SheetTitle className="text-lg font-semibold tracking-tight">Clinical Summary</SheetTitle>
+            </SheetHeader>
+            {narrative && (
+              <div className="mt-4 space-y-3">
+                <div className="flex flex-wrap gap-1.5">
+                  {([
+                    { v: 'she', label: 'She/Her' },
+                    { v: 'he', label: 'He/Him' },
+                    { v: 'they', label: 'They/Them' },
+                  ] as const).map(opt => (
+                    <button
+                      key={opt.v}
+                      type="button"
+                      onClick={() => setPronounChoice(opt.v)}
+                      className={cn(
+                        'rounded-md border px-3 py-1.5 text-[12px] transition-transform active:scale-[0.97]',
+                        pronounChoice === opt.v
+                          ? 'border-zinc-900 dark:border-zinc-100 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900'
+                          : 'border-zinc-200 dark:border-zinc-800 text-zinc-500',
+                      )}
+                    >
+                      {opt.label}
+                    </button>
+                  ))}
+                </div>
+                <div className="flex items-center gap-1.5 text-[11px] text-zinc-400 dark:text-zinc-500">
+                  <Lock className="h-3 w-3" strokeWidth={1.75} />
+                  <span>Runs entirely in your browser. No PHI transmitted.</span>
+                </div>
+                <textarea
+                  readOnly
+                  value={narrative}
+                  rows={16}
+                  className="w-full resize-y rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 p-4 text-[13px] leading-relaxed text-zinc-700 dark:text-zinc-300"
+                />
+                <button
+                  type="button"
+                  onClick={() => {
+                    navigator.clipboard.writeText(narrative)
+                    setCopied(true)
+                    setTimeout(() => setCopied(false), 1800)
+                  }}
+                  className="w-full rounded-md border border-zinc-900 dark:border-zinc-100 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 py-3 text-[12px] font-medium uppercase tracking-[0.12em] transition-transform active:scale-[0.98]"
+                >
+                  {copied ? 'Copied' : 'Copy Summary'}
+                </button>
+              </div>
+            )}
+          </SheetContent>
+        </Sheet>
+      </div>
     </div>
+    </TooltipProvider>
   )
 }

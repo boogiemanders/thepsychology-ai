@@ -111,6 +111,12 @@ main {
   gap: 4px;
 }
 
+/* BAARS active question accent bar */
+@keyframes scaleY {
+  from { transform: scaleY(0); }
+  to { transform: scaleY(1); }
+}
+
 /* Key term emphasis - only bold, no other styling */
 strong, b {
   font-weight: 600;

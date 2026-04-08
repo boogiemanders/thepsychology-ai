@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { DSM5_DISORDER_MAP } from '../../../../content/Inzinna/SimplePractice Notes/src/data/dsm5-criteria'
 import { BaarsDemo } from './baars-demo'
+import type { BaarsAdhdCriteriaMeta } from './baars-demo'
 import {
   BAARS_SELF_REPORT_CHILDHOOD_SYMPTOMS,
   BAARS_SELF_REPORT_CURRENT_SYMPTOMS,
@@ -17,16 +19,42 @@ const FORM_OPTIONS = [
     href: '/lab/baars',
     label: 'Current Symptoms',
     instrument: BAARS_SELF_REPORT_CURRENT_SYMPTOMS,
-    summary: '27 symptom items. 3 follow-ups. Auto-scored subscales, SCT, symptom counts, and age-banded percentiles.',
+    summary: 'Fill in 27 items, get subscale scores with age-banded percentiles, and copy a ready-to-paste clinical summary straight into your notes.',
   },
   {
     id: 'childhood',
     href: '/lab/baars?form=childhood',
     label: 'Childhood Symptoms',
     instrument: BAARS_SELF_REPORT_CHILDHOOD_SYMPTOMS,
-    summary: '18 retrospective symptom items. 2 follow-ups. Auto-scored inattention, hyperactivity-impulsivity, total ADHD, and age-banded percentiles.',
+    summary: 'Fill in 18 retrospective items for childhood inattention and hyperactivity-impulsivity, get age-banded percentiles, and copy a clinical summary into your notes.',
   },
 ] as const
+
+const ADHD_DSM = DSM5_DISORDER_MAP.adhd
+const ADHD_INATTENTION_THRESHOLD = ADHD_DSM.requiredCounts.find(
+  requirement => requirement.criterion === 'A1',
+)?.required ?? 6
+const ADHD_HYPERIMP_THRESHOLD = ADHD_DSM.requiredCounts.find(
+  requirement => requirement.criterion === 'A2',
+)?.required ?? 6
+const ADHD_ADULT_ADJUSTMENT = ADHD_DSM.requiredCountAdjustments?.find(
+  adjustment => adjustment.minAge === 17 && adjustment.requiredCounts.some(requirement => requirement.criterion === 'A1' || requirement.criterion === 'A2'),
+)
+const ADHD_ADULT_INATTENTION_THRESHOLD = ADHD_ADULT_ADJUSTMENT?.requiredCounts.find(
+  requirement => requirement.criterion === 'A1',
+)?.required ?? ADHD_INATTENTION_THRESHOLD
+const ADHD_ADULT_HYPERIMP_THRESHOLD = ADHD_ADULT_ADJUSTMENT?.requiredCounts.find(
+  requirement => requirement.criterion === 'A2',
+)?.required ?? ADHD_HYPERIMP_THRESHOLD
+
+const BAARS_ADHD_CRITERIA: BaarsAdhdCriteriaMeta = {
+  disorderId: ADHD_DSM.id,
+  disorderName: ADHD_DSM.name,
+  durationRequirement: ADHD_DSM.durationRequirement ?? null,
+  childhoodThreshold: Math.max(ADHD_INATTENTION_THRESHOLD, ADHD_HYPERIMP_THRESHOLD),
+  adultThreshold: Math.max(ADHD_ADULT_INATTENTION_THRESHOLD, ADHD_ADULT_HYPERIMP_THRESHOLD),
+  exclusions: ADHD_DSM.exclusions,
+}
 
 export default async function BaarsPage({
   searchParams,
@@ -80,14 +108,14 @@ export default async function BaarsPage({
           })}
         </div>
         <p className="text-[15px] leading-relaxed text-zinc-500 dark:text-zinc-400 max-w-xl">
-          {activeForm.summary} Generates a clinical summary you can drop straight into your notes.
+          {activeForm.summary}
         </p>
         <p className="mt-3 text-[11px] uppercase tracking-[0.14em] text-zinc-400 dark:text-zinc-500">
           {instrument.respondentType}
         </p>
       </header>
 
-      <BaarsDemo key={instrument.id} instrument={instrument} />
+      <BaarsDemo key={instrument.id} instrument={instrument} adhdCriteria={BAARS_ADHD_CRITERIA} />
 
       <footer className="mt-16 pt-8 border-t border-zinc-100 dark:border-zinc-800/50">
         <p className="text-[11px] text-zinc-400 dark:text-zinc-500 leading-relaxed">

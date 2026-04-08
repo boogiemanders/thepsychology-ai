@@ -36,6 +36,9 @@ interface BaarsChildhoodPercentileRow {
   total_adhd_raw?: string
 }
 
+export const BAARS_NORM_CITATION =
+  'Barkley (2011). BAARS-IV normative sample: N=1,249 adults aged 18–89. Guilford Press.'
+
 const BAARS_RESPONSE_SCALE: AssessmentOption[] = [
   { value: '1', label: 'Never/Rarely', numericValue: 1 },
   { value: '2', label: 'Sometimes', numericValue: 2 },
