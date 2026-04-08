@@ -11,7 +11,7 @@
     "api/dental/extract.py": {
       "memory": 1024,
       "maxDuration": 300,
-      "excludeFiles": "{lab/**,public/**,content/**,podcast-output/**,podcast-upload/**,tools-generation/**,staging/**,exams/**,examsGPT/**,questionsGPT/**,topic-content/**,topic-content-v3-test/**,topic-content-v4/**,topic-content-v4 copy/**,eppp-reference/**,eppp-reference og/**,src/**,.next/**,node_modules/**,homepage-full.png}"
+      "excludeFiles": "{lab,public,content,podcast-*,tools-generation,staging,exams*,questionsGPT,topic-content*,eppp-reference*,src,.next,node_modules}/**"
     }
   },
   "crons": [
