@@ -1,7 +1,9 @@
 'use client'
 
-import { useCallback, type DragEvent } from 'react'
+import { useInView } from 'motion/react'
+import { useCallback, useRef, type DragEvent } from 'react'
 import type { CalligraphyFont } from './fonts'
+import { loadCalligraphyFont, useCalligraphyFont } from './use-calligraphy-font'
 
 interface FontCardProps {
   font: CalligraphyFont
@@ -10,7 +12,10 @@ interface FontCardProps {
   onSelect: (family: string) => void
 }
 
-function downloadFontImage(font: CalligraphyFont, text: string) {
+async function downloadFontImage(font: CalligraphyFont, text: string) {
+  const isReady = await loadCalligraphyFont(font, { priority: true })
+  if (!isReady) return
+
   const canvas = document.createElement('canvas')
   const ctx = canvas.getContext('2d')
   if (!ctx) return
@@ -66,6 +71,11 @@ function downloadFontImage(font: CalligraphyFont, text: string) {
 }
 
 export function FontCard({ font, text, isSelected, onSelect }: FontCardProps) {
+  const cardRef = useRef<HTMLButtonElement | null>(null)
+  const isInView = useInView(cardRef, { once: true, margin: '200px 0px 200px 0px' })
+  const shouldLoadFont = isSelected || isInView
+  const isFontLoaded = useCalligraphyFont(font, { enabled: shouldLoadFont, priority: isSelected })
+
   const handleDragStart = useCallback(
     (e: DragEvent) => {
       e.dataTransfer.effectAllowed = 'move'
@@ -82,10 +92,12 @@ export function FontCard({ font, text, isSelected, onSelect }: FontCardProps) {
 
   return (
     <button
+      ref={cardRef}
       type="button"
-      className={`cs-font-card${isSelected ? ' is-selected' : ''}`}
+      className={`cs-font-card${isSelected ? ' is-selected' : ''}${shouldLoadFont && !isFontLoaded ? ' is-font-loading' : ''}`}
       draggable
       aria-pressed={isSelected}
+      aria-busy={shouldLoadFont && !isFontLoaded}
       onClick={() => onSelect(font.family)}
       onDragStart={handleDragStart}
       onDragEnd={handleDragEnd}
@@ -102,9 +114,9 @@ export function FontCard({ font, text, isSelected, onSelect }: FontCardProps) {
           type="button"
           className="cs-font-card-download"
           title="Download as PNG"
-          onClick={e => {
+          onClick={async e => {
             e.stopPropagation()
-            downloadFontImage(font, text)
+            await downloadFontImage(font, text)
           }}
         >
           PNG

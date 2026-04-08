@@ -1,11 +1,11 @@
-import { ThemeToggle } from '@/components/theme-toggle'
+import { AnimatedThemeToggler } from '@/components/ui/animated-theme-toggler'
 
 export function HeroSection() {
   return (
     <header className="cs-hero">
       <div className="cs-hero-top">
         <p className="cs-eyebrow">Chinese Calligraphy Studio</p>
-        <ThemeToggle />
+        <AnimatedThemeToggler className="cs-theme-toggle" />
       </div>
       <div className="cs-hero-title-row">
         <h1>Type in English.<br />Preview in brush-style fonts.</h1>

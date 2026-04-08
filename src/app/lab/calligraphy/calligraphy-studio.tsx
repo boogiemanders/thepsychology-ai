@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { useState, useEffect, useCallback } from 'react'
 import { FONTS, FONT_GROUPS } from './components/fonts'
 import { SAMPLE_INPUTS } from './components/sample-inputs'
@@ -9,10 +10,8 @@ import { HeroSection } from './components/hero-section'
 import { ControlsPanel } from './components/controls-panel'
 import { FeaturedPreview } from './components/featured-preview'
 import { FontWall } from './components/font-wall'
+import { useCalligraphyFont } from './components/use-calligraphy-font'
 import './calligraphy-studio.css'
-
-const R2_BASE = process.env.NEXT_PUBLIC_CLOUDFLARE_R2_PUBLIC_URL || ''
-const FONT_PREFIX = 'calligraphy-fonts'
 
 const DEFAULT_CHINESE = '\u4eca\u665a\u7684\u6708\u8272\u771f\u7f8e\uff0c\u6211\u4e00\u76f4\u5728\u60f3\u7740\u4f60\u3002'
 
@@ -29,19 +28,9 @@ export default function CalligraphyStudio() {
 
   const { getFontsByGroup, moveFont } = useFontGroups(FONTS)
   const { translate, isTranslating, error: translateError } = useTranslate()
+  const selectedFontConfig = FONTS.find(font => font.family === selectedFont) ?? null
 
-  // Inject @font-face declarations pointing to R2
-  useEffect(() => {
-    const style = document.createElement('style')
-    style.textContent = FONTS.map(
-      f =>
-        `@font-face { font-family: "${f.family}"; src: url("${R2_BASE}/${FONT_PREFIX}/${encodeURIComponent(f.file)}") format("${f.format}"); font-display: swap; }`,
-    ).join('\n')
-    document.head.append(style)
-    return () => {
-      style.remove()
-    }
-  }, [])
+  useCalligraphyFont(selectedFontConfig, { priority: true })
 
   const handleTranslate = useCallback(async () => {
     const text = englishInput.trim()
@@ -88,6 +77,11 @@ export default function CalligraphyStudio() {
   return (
     <div className="calligraphy-studio">
       <div className="cs-page-shell">
+        <div className="cs-breadcrumb">
+          <Link href="/lab" className="cs-breadcrumb-link">
+            &larr; Lab
+          </Link>
+        </div>
         <HeroSection />
         <main className="cs-layout">
           <ControlsPanel

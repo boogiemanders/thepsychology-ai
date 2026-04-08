@@ -64,6 +64,24 @@
   padding: var(--cs-sp-xl) 0;
 }
 
+.cs-breadcrumb {
+  margin-bottom: var(--cs-sp-md);
+}
+
+.cs-breadcrumb-link {
+  color: var(--cs-ink-light);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 160ms ease;
+}
+
+.cs-breadcrumb-link:hover {
+  color: var(--cs-ink);
+}
+
 /* ── Hero ── */
 
 .cs-hero {
@@ -75,6 +93,24 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: var(--cs-sp-sm);
+}
+
+.calligraphy-studio .cs-theme-toggle {
+  flex-shrink: 0;
+  border-color: var(--cs-line);
+  background: var(--cs-bg);
+  color: var(--cs-ink);
+  box-shadow: none;
+}
+
+.calligraphy-studio .cs-theme-toggle:hover {
+  background: var(--cs-bg-subtle);
+  color: var(--cs-ink);
+}
+
+.calligraphy-studio .cs-theme-toggle svg {
+  color: var(--cs-ink);
 }
 
 .cs-eyebrow,
@@ -454,6 +490,10 @@
 .cs-font-card.is-selected {
   border-color: var(--cs-accent);
   background: var(--cs-bg-subtle);
+}
+
+.cs-font-card.is-font-loading .cs-font-sample {
+  opacity: 0.6;
 }
 
 .cs-font-card h3 {
