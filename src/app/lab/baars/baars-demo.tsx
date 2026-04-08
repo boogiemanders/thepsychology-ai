@@ -73,7 +73,15 @@ function buildNarrative(
   const onset = answers.q29
   const settings = answers.q30
 
-  if (!totalAdhd?.value || !inattention?.value || !hyperactivity?.value || !impulsivity?.value || !sct?.value || !totalSymptomCount?.value || !hyperImpCount?.value) {
+  if (
+    !totalAdhd || totalAdhd.value === null ||
+    !inattention || inattention.value === null ||
+    !hyperactivity || hyperactivity.value === null ||
+    !impulsivity || impulsivity.value === null ||
+    !sct || sct.value === null ||
+    !totalSymptomCount || totalSymptomCount.value === null ||
+    !hyperImpCount || hyperImpCount.value === null
+  ) {
     return null
   }
 
