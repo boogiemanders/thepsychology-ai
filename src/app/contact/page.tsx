@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 }
 
 export default function ContactPage() {
-  const supportEmail = "DrChan@thepsychology.ai"
+  const supportEmail = "drchan@thepsychology.ai"
 
   return (
     <main className="w-full px-6 py-16">
