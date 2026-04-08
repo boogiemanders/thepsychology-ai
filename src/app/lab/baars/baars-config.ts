@@ -37,7 +37,7 @@ interface BaarsChildhoodPercentileRow {
 }
 
 const BAARS_RESPONSE_SCALE: AssessmentOption[] = [
-  { value: '1', label: 'Never or rarely', numericValue: 1 },
+  { value: '1', label: 'Never/Rarely', numericValue: 1 },
   { value: '2', label: 'Sometimes', numericValue: 2 },
   { value: '3', label: 'Often', numericValue: 3 },
   { value: '4', label: 'Very often', numericValue: 4 },

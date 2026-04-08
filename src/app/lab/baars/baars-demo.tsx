@@ -718,13 +718,13 @@ export function BaarsDemo({
           </div>
           <div className="hidden rounded-xl border border-zinc-200 dark:border-zinc-800 md:block">
             <div className="sticky top-24 z-30 grid grid-cols-[minmax(0,1fr)_72px_72px_72px_72px] border-b border-zinc-200 bg-zinc-50/95 shadow-sm backdrop-blur supports-[backdrop-filter]:bg-zinc-50/80 dark:border-zinc-800 dark:bg-zinc-950/95 dark:supports-[backdrop-filter]:bg-zinc-950/80">
-              <div className="flex min-h-[68px] items-start px-4 pt-[14px] text-[11px] font-medium uppercase tracking-[0.12em] text-zinc-400 dark:text-zinc-500">
+              <div className="flex min-h-[68px] items-center px-4 text-[11px] font-medium uppercase tracking-[0.12em] text-zinc-400 dark:text-zinc-500">
                 Item
               </div>
               {responseScale.map(opt => (
                 <div
                   key={opt.value}
-                  className="flex min-h-[68px] flex-col items-center justify-start gap-1.5 border-l border-zinc-200 px-2 pt-3 pb-2 text-center dark:border-zinc-800"
+                  className="flex min-h-[68px] flex-col items-center justify-center gap-1 border-l border-zinc-200 px-2 text-center dark:border-zinc-800"
                 >
                   <span className="font-mono text-[13px] leading-none text-zinc-900 dark:text-zinc-100">
                     {opt.value}
