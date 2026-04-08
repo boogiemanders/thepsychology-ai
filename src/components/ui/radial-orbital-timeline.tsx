@@ -66,16 +66,6 @@ function buildEntries(projects: ProjectNode[]): OrbitalEntry[] {
   return entries
 }
 
-function StackedDotsIcon() {
-  return (
-    <span className="flex flex-col gap-[2px] items-center justify-center">
-      <span className="block w-1 h-1 rounded-full bg-current" />
-      <span className="block w-1 h-1 rounded-full bg-current" />
-      <span className="block w-1 h-1 rounded-full bg-current" />
-    </span>
-  )
-}
-
 export default function RadialOrbitalTimeline({ projects }: RadialOrbitalTimelineProps) {
   const entries = buildEntries(projects)
 
@@ -262,6 +252,7 @@ export default function RadialOrbitalTimeline({ projects }: RadialOrbitalTimelin
             {entry.kind === 'leaf' ? (
               <LeafNode
                 entry={entry}
+                position={index + 1}
                 isActive={isLeafActive}
                 onClick={(e) => {
                   e.stopPropagation()
@@ -271,6 +262,7 @@ export default function RadialOrbitalTimeline({ projects }: RadialOrbitalTimelin
             ) : (
               <ClusterNode
                 entry={entry}
+                position={index + 1}
                 isOpen={isClusterOpen}
                 activeChildId={activeChildId}
                 onTap={(e) => {
@@ -289,10 +281,12 @@ export default function RadialOrbitalTimeline({ projects }: RadialOrbitalTimelin
 
 function LeafNode({
   entry,
+  position,
   isActive,
   onClick,
 }: {
   entry: Extract<OrbitalEntry, { kind: 'leaf' }>
+  position: number
   isActive: boolean
   onClick: (e: React.MouseEvent) => void
 }) {
@@ -310,8 +304,8 @@ function LeafNode({
             : 'bg-white dark:bg-zinc-900 border-zinc-300 dark:border-zinc-700 hover:border-zinc-500 dark:hover:border-zinc-400',
         )}
       >
-        <span className={cn('text-sm', isActive ? 'text-white dark:text-zinc-900' : 'text-zinc-500 dark:text-zinc-400')}>
-          {project.icon}
+        <span className={cn('text-[10px] font-mono', isActive ? 'text-white dark:text-zinc-900' : 'text-zinc-500 dark:text-zinc-400')}>
+          {String(position).padStart(2, '0')}
         </span>
       </div>
 
@@ -369,12 +363,14 @@ function LeafNode({
 
 function ClusterNode({
   entry,
+  position,
   isOpen,
   activeChildId,
   onTap,
   onChildClick,
 }: {
   entry: Extract<OrbitalEntry, { kind: 'cluster' }>
+  position: number
   isOpen: boolean
   activeChildId: number | null
   onTap: (e: React.MouseEvent) => void
@@ -392,8 +388,8 @@ function ClusterNode({
               : 'bg-white dark:bg-zinc-900 border-zinc-300 dark:border-zinc-700 hover:border-zinc-500 dark:hover:border-zinc-400',
           )}
         >
-          <span className={cn(isOpen ? 'text-white dark:text-zinc-900' : 'text-zinc-500 dark:text-zinc-400')}>
-            <StackedDotsIcon />
+          <span className={cn('text-[10px] font-mono', isOpen ? 'text-white dark:text-zinc-900' : 'text-zinc-500 dark:text-zinc-400')}>
+            {String(position).padStart(2, '0')}
           </span>
         </div>
 
