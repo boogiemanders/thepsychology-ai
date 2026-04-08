@@ -3,7 +3,7 @@ import { Suspense } from "react"
 import PortfolioClient from "./portfolio-client"
 
 export const metadata: Metadata = {
-  title: "About",
+  title: "Our Team",
   alternates: {
     canonical: "/portfolio",
   },
