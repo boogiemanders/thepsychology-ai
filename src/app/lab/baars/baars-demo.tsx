@@ -1,14 +1,16 @@
 'use client'
 
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
-import { getBaarsAgeBand, lookupBaarsCurrentPercentile } from './baars-config'
+import {
+  getBaarsAgeBand,
+  lookupBaarsChildhoodPercentile,
+  lookupBaarsCurrentPercentile,
+} from './baars-config'
 import type {
   AssessmentField,
-  AssessmentQuestion,
   AssessmentScoringGroup,
   AssessmentSeverityBand,
   InstrumentDefinition,
@@ -37,8 +39,10 @@ function buildInitialHeaderValues(fields: AssessmentField[]): Record<string, str
   }, {})
 }
 
-function deriveQ28(answers: Record<string, QuestionValue>): 'yes' | 'no' | null {
-  const symptomIds = Array.from({ length: 27 }, (_, i) => `q${i + 1}`)
+function deriveFollowUpPositive(
+  symptomIds: string[],
+  answers: Record<string, QuestionValue>,
+): 'yes' | 'no' | null {
   const answered = symptomIds
     .map(id => answers[id])
     .filter((v): v is string => typeof v === 'string' && v !== '')
@@ -55,12 +59,33 @@ function getSeverityLabel(value: number, bands?: AssessmentSeverityBand[]): stri
   return null
 }
 
-function buildNarrative(
+function formatPercentileBand(percentileBand: string): string {
+  if (/^\d+$/.test(percentileBand)) {
+    const value = Number(percentileBand)
+    const teen = value % 100
+    const suffix = teen >= 11 && teen <= 13
+      ? 'th'
+      : value % 10 === 1
+        ? 'st'
+        : value % 10 === 2
+          ? 'nd'
+          : value % 10 === 3
+            ? 'rd'
+            : 'th'
+
+    return `${value}${suffix} percentile`
+  }
+
+  return `${percentileBand} percentile band`
+}
+
+function buildCurrentNarrative(
   scores: ComputedGroupScore[],
   answers: Record<string, QuestionValue>,
   ageBand: string | null,
   header: Record<string, string>,
   pronounChoice: 'she' | 'he' | 'they',
+  followUpPositive: 'yes' | 'no' | null,
 ): string | null {
   const totalAdhd = scores.find(s => s.group.id === 'total_adhd_raw')
   const inattention = scores.find(s => s.group.id === 'inattention_raw')
@@ -70,7 +95,6 @@ function buildNarrative(
   const totalSymptomCount = scores.find(s => s.group.id === 'total_adhd_symptom_count')
   const hyperImpCount = scores.find(s => s.group.id === 'hyperactivity_impulsivity_symptom_count')
   const inattCount = scores.find(s => s.group.id === 'inattention_symptom_count')
-  const yesNo = deriveQ28(answers)
   const onset = answers.q29
   const settings = answers.q30
 
@@ -95,21 +119,15 @@ function buildNarrative(
 
   const fmt = (s: ComputedGroupScore) => {
     const base = `${s.value}${s.severityLabel ? `, ${s.severityLabel}` : ''}`
-    return s.percentileBand ? `${base}, ${s.percentileBand}th percentile` : base
+    return s.percentileBand ? `${base}, ${formatPercentileBand(s.percentileBand)}` : base
   }
 
-  // Paragraph 1: header
   const intro = `${name}${demographic ? `, a ${demographic},` : ''} completed the BAARS-IV Self-Report (Current Symptoms) on ${header.date || 'today'}.${ageBand ? ` Raw scores were compared against the ${ageBand} age band.` : ''}`
-
-  // Paragraph 2: subscales
   const subscales = `On the symptom items, ${pronounLower} obtained the following subscale raw scores: Inattention (${fmt(inattention)}); Hyperactivity (${fmt(hyperactivity)}); Impulsivity (${fmt(impulsivity)}); and Sluggish Cognitive Tempo (${fmt(sct)}). ${possessive} Total ADHD raw score was ${fmt(totalAdhd)}.`
-
-  // Paragraph 3: symptom counts
   const counts = `At the DSM symptom-count threshold (items rated "Often" or "Very Often"), ${pronounLower} endorsed ${inattCount?.value ?? 0}/9 inattention symptoms and ${hyperImpCount.value}/9 hyperactivity-impulsivity symptoms (${totalSymptomCount.value}/18 total).`
 
-  // Paragraph 4: follow-up
   const followUpParts: string[] = []
-  if (yesNo === 'yes') {
+  if (followUpPositive === 'yes') {
     followUpParts.push(`${pronoun} endorsed experiencing at least one symptom at an "Often" frequency or higher.`)
     if (typeof onset === 'string' && onset.trim()) {
       followUpParts.push(`Reported age of symptom onset: ${onset.trim()}.`)
@@ -117,15 +135,87 @@ function buildNarrative(
     if (Array.isArray(settings) && settings.length > 0) {
       followUpParts.push(`Impairment was reported in the following settings: ${settings.join(', ')}.`)
     }
-  } else if (yesNo === 'no') {
+  } else if (followUpPositive === 'no') {
     followUpParts.push(`${pronoun} did not endorse any symptoms at an "Often" frequency or higher.`)
   }
-  const followUp = followUpParts.join(' ')
 
-  // Paragraph 5: interpretation footer
   const footer = 'Results should be interpreted in the context of clinical interview, developmental history, and collateral information.'
 
-  return [intro, subscales, counts, followUp, footer].filter(Boolean).join('\n\n')
+  return [intro, subscales, counts, followUpParts.join(' '), footer].filter(Boolean).join('\n\n')
+}
+
+function buildChildhoodNarrative(
+  scores: ComputedGroupScore[],
+  answers: Record<string, QuestionValue>,
+  ageBand: string | null,
+  header: Record<string, string>,
+  pronounChoice: 'she' | 'he' | 'they',
+  followUpPositive: 'yes' | 'no' | null,
+): string | null {
+  const totalAdhd = scores.find(s => s.group.id === 'total_adhd_raw')
+  const inattention = scores.find(s => s.group.id === 'inattention_raw')
+  const hyperImp = scores.find(s => s.group.id === 'hyperactivity_impulsivity_raw')
+  const totalSymptomCount = scores.find(s => s.group.id === 'total_adhd_symptom_count')
+  const hyperImpCount = scores.find(s => s.group.id === 'hyperactivity_impulsivity_symptom_count')
+  const inattCount = scores.find(s => s.group.id === 'inattention_symptom_count')
+  const settings = answers.q20
+
+  if (
+    !totalAdhd || totalAdhd.value === null ||
+    !inattention || inattention.value === null ||
+    !hyperImp || hyperImp.value === null ||
+    !totalSymptomCount || totalSymptomCount.value === null ||
+    !hyperImpCount || hyperImpCount.value === null ||
+    !inattCount || inattCount.value === null
+  ) {
+    return null
+  }
+
+  const name = (header.name || '').trim() || 'The respondent'
+  const pronoun = pronounChoice === 'she' ? 'She' : pronounChoice === 'he' ? 'He' : 'They'
+  const pronounLower = pronoun.toLowerCase()
+  const possessive = pronoun === 'She' ? 'Her' : pronoun === 'He' ? 'His' : 'Their'
+  const ageText = header.age ? `${header.age}-year-old` : ''
+  const demographic = ageText
+
+  const fmt = (s: ComputedGroupScore) => {
+    const base = `${s.value}${s.severityLabel ? `, ${s.severityLabel}` : ''}`
+    return s.percentileBand ? `${base}, ${formatPercentileBand(s.percentileBand)}` : base
+  }
+
+  const intro = `${name}${demographic ? `, a ${demographic},` : ''} completed the BAARS-IV Self-Report (Childhood Symptoms) on ${header.date || 'today'}. Ratings reflect recalled behavior between ages 5 and 12.${ageBand ? ` Raw scores were compared against the ${ageBand} age band.` : ''}`
+  const subscales = `On the retrospective childhood symptom items, ${pronounLower} obtained the following raw scores: Inattention (${fmt(inattention)}) and Hyperactivity-Impulsivity (${fmt(hyperImp)}). ${possessive} Total ADHD raw score was ${fmt(totalAdhd)}.`
+  const counts = `At the DSM symptom-count threshold (items rated "Often" or "Very Often"), ${pronounLower} endorsed ${inattCount.value}/9 inattention symptoms and ${hyperImpCount.value}/9 hyperactivity-impulsivity symptoms (${totalSymptomCount.value}/18 total).`
+
+  const followUpParts: string[] = []
+  if (followUpPositive === 'yes') {
+    followUpParts.push(`${pronoun} endorsed experiencing at least one childhood symptom at an "Often" frequency or higher.`)
+    if (Array.isArray(settings) && settings.length > 0) {
+      followUpParts.push(`Impairment was reported in the following settings: ${settings.join(', ')}.`)
+    }
+  } else if (followUpPositive === 'no') {
+    followUpParts.push(`${pronoun} did not endorse any childhood symptoms at an "Often" frequency or higher.`)
+  }
+
+  const footer = 'Results should be interpreted alongside developmental history, collateral information, and the limits of retrospective recall.'
+
+  return [intro, subscales, counts, followUpParts.join(' '), footer].filter(Boolean).join('\n\n')
+}
+
+function buildNarrative(
+  instrument: InstrumentDefinition,
+  scores: ComputedGroupScore[],
+  answers: Record<string, QuestionValue>,
+  ageBand: string | null,
+  header: Record<string, string>,
+  pronounChoice: 'she' | 'he' | 'they',
+  followUpPositive: 'yes' | 'no' | null,
+): string | null {
+  if (instrument.id === 'baars_iv_self_report_childhood_symptoms') {
+    return buildChildhoodNarrative(scores, answers, ageBand, header, pronounChoice, followUpPositive)
+  }
+
+  return buildCurrentNarrative(scores, answers, ageBand, header, pronounChoice, followUpPositive)
 }
 
 // --- Severity color coding ---
@@ -141,12 +231,28 @@ export function BaarsDemo({ instrument }: { instrument: InstrumentDefinition }) 
     () => buildInitialHeaderValues(instrument.headerFields),
   )
   const [answers, setAnswers] = useState<Record<string, QuestionValue>>({})
+  const [pronounChoice, setPronounChoice] = useState<'she' | 'he' | 'they'>('they')
   const ageValue = Number(headerValues.age)
   const age = Number.isFinite(ageValue) ? ageValue : null
   const ageBand = age !== null ? getBaarsAgeBand(age) : null
 
   const symptomSections = instrument.sections.filter(s => s.id !== 'follow_up')
   const followUpSection = instrument.sections.find(s => s.id === 'follow_up')
+  const symptomQuestionIds = useMemo(
+    () => symptomSections.flatMap(section => section.questions.map(question => question.id)),
+    [symptomSections],
+  )
+  const firstFollowUpQuestion = useMemo(
+    () => followUpSection?.questions[0] ?? null,
+    [followUpSection],
+  )
+  const remainingFollowUpQuestions = useMemo(
+    () => followUpSection?.questions.slice(1) ?? [],
+    [followUpSection],
+  )
+  const followUpPositive = firstFollowUpQuestion
+    ? deriveFollowUpPositive(symptomQuestionIds, answers)
+    : null
 
   const answeredCount = symptomSections.reduce((sum, section) =>
     sum + section.questions.filter(q => typeof answers[q.id] === 'string' && answers[q.id] !== '').length, 0)
@@ -168,37 +274,42 @@ export function BaarsDemo({ instrument }: { instrument: InstrumentDefinition }) 
       : numericAnswers.filter(v => v >= (group.positiveThresholdValue ?? Infinity)).length
 
     const percentileBand = group.scoringType === 'raw_sum' && age !== null
-      ? lookupBaarsCurrentPercentile(group.id, value, age)
+      ? instrument.id === 'baars_iv_self_report_childhood_symptoms'
+        ? lookupBaarsChildhoodPercentile(group.id, value, age)
+        : lookupBaarsCurrentPercentile(group.id, value, age)
       : null
 
     return { group, value, answered: numericAnswers.length, total: group.questionIds.length, severityLabel: getSeverityLabel(value, group.severityBands), percentileBand }
   })
 
-  const derivedQ28 = deriveQ28(answers)
-  const followUpsDisabled = derivedQ28 !== 'yes'
+  const followUpsDisabled = followUpPositive !== 'yes'
 
-  // Clear stale q29/q30 values if the derived Q28 flips to "no"
+  // Clear stale follow-up values if the derived first follow-up question flips to "no"
   useEffect(() => {
-    if (derivedQ28 === 'no') {
+    if (followUpPositive === 'no' && remainingFollowUpQuestions.length > 0) {
       setAnswers(c => {
-        if (c.q29 === undefined && c.q30 === undefined) return c
+        const shouldClear = remainingFollowUpQuestions.some(question => c[question.id] !== undefined)
+        if (!shouldClear) return c
         const next = { ...c }
-        delete next.q29
-        delete next.q30
+        remainingFollowUpQuestions.forEach(question => {
+          delete next[question.id]
+        })
         return next
       })
     }
-  }, [derivedQ28])
+  }, [followUpPositive, remainingFollowUpQuestions])
 
-  const [pronounChoice, setPronounChoice] = useState<'she' | 'he' | 'they'>('they')
-  const narrative = buildNarrative(computedScores, answers, ageBand, headerValues, pronounChoice)
+  const narrative = buildNarrative(
+    instrument,
+    computedScores,
+    answers,
+    ageBand,
+    headerValues,
+    pronounChoice,
+    followUpPositive,
+  )
   const [copied, setCopied] = useState(false)
 
-  // Flat ordered list of symptom question ids for keyboard nav + auto-advance
-  const symptomQuestionIds = useMemo(
-    () => symptomSections.flatMap(s => s.questions.map(q => q.id)),
-    [symptomSections],
-  )
   const questionRefs = useRef<Record<string, HTMLDivElement | null>>({})
   const [activeQuestionId, setActiveQuestionId] = useState<string | null>(
     symptomQuestionIds[0] ?? null,
@@ -308,6 +419,32 @@ export function BaarsDemo({ instrument }: { instrument: InstrumentDefinition }) 
               </div>
             )
           })}
+          <div className="space-y-2">
+            <Label className="text-[12px] font-medium text-zinc-500 dark:text-zinc-400">Pronouns</Label>
+            <div className="flex flex-wrap gap-1.5">
+              {([
+                { v: 'she', label: 'She/Her' },
+                { v: 'he', label: 'He/Him' },
+                { v: 'they', label: 'They/Them' },
+              ] as const).map(opt => {
+                const isSelected = pronounChoice === opt.v
+                return (
+                  <button
+                    key={opt.v}
+                    type="button"
+                    onClick={() => setPronounChoice(opt.v)}
+                    className={`rounded-md border px-3 py-1.5 text-[12px] transition-all duration-150 cursor-pointer ${
+                      isSelected
+                        ? 'border-zinc-900 dark:border-zinc-100 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 font-medium'
+                        : 'border-zinc-200 dark:border-zinc-800 text-zinc-500 dark:text-zinc-400 hover:border-zinc-300 dark:hover:border-zinc-700'
+                    }`}
+                  >
+                    {opt.label}
+                  </button>
+                )
+              })}
+            </div>
+          </div>
         </div>
       </section>
 
@@ -328,6 +465,15 @@ export function BaarsDemo({ instrument }: { instrument: InstrumentDefinition }) 
           />
         </div>
       </div>
+
+      <section>
+        <h2 className="text-xs font-medium uppercase tracking-[0.15em] text-zinc-900 dark:text-zinc-100 mb-4">
+          Instructions
+        </h2>
+        <p className="whitespace-pre-line text-sm leading-relaxed text-zinc-500 dark:text-zinc-400">
+          {instrument.instructions}
+        </p>
+      </section>
 
       {/* --- Symptom Sections --- */}
       {symptomSections.map(section => (
@@ -397,20 +543,22 @@ export function BaarsDemo({ instrument }: { instrument: InstrumentDefinition }) 
             {followUpSection.title}
           </h2>
           <div className="space-y-5">
-            <div>
-              <p className="text-sm text-zinc-700 dark:text-zinc-300 mb-2">
-                <span className="font-mono text-[11px] text-zinc-300 dark:text-zinc-600 mr-2">28.</span>
-                Experienced any symptom at &ldquo;Often&rdquo; or higher?
-              </p>
-              <p className="text-sm font-medium text-zinc-900 dark:text-zinc-100">
-                {derivedQ28 === null ? '\u2014' : derivedQ28 === 'yes' ? 'Yes' : 'No'}
-                <span className="ml-2 text-[11px] font-normal text-zinc-400 dark:text-zinc-500">
-                  Auto-filled from items 1&ndash;27
-                </span>
-              </p>
-            </div>
+            {firstFollowUpQuestion && (
+              <div>
+                <p className="text-sm text-zinc-700 dark:text-zinc-300 mb-2">
+                  <span className="font-mono text-[11px] text-zinc-300 dark:text-zinc-600 mr-2">{firstFollowUpQuestion.number}.</span>
+                  {firstFollowUpQuestion.prompt}
+                </p>
+                <p className="text-sm font-medium text-zinc-900 dark:text-zinc-100">
+                  {followUpPositive === null ? '\u2014' : followUpPositive === 'yes' ? 'Yes' : 'No'}
+                  <span className="ml-2 text-[11px] font-normal text-zinc-400 dark:text-zinc-500">
+                    Auto-filled from symptom items
+                  </span>
+                </p>
+              </div>
+            )}
 
-            {followUpSection.questions.filter(q => q.id !== 'q28').map(question => {
+            {remainingFollowUpQuestions.map(question => {
               const gatedClass = followUpsDisabled ? 'opacity-40 pointer-events-none' : ''
               if (question.type === 'single_select' && question.options) {
                 return (
@@ -524,7 +672,7 @@ export function BaarsDemo({ instrument }: { instrument: InstrumentDefinition }) 
                     )}
                     {score.percentileBand && (
                       <p className="text-[11px] text-zinc-400 dark:text-zinc-500">
-                        {score.percentileBand}%ile
+                        {formatPercentileBand(score.percentileBand)}
                       </p>
                     )}
                   </div>
@@ -556,39 +704,9 @@ export function BaarsDemo({ instrument }: { instrument: InstrumentDefinition }) 
 
       {/* --- Clinical Summary --- */}
       <section>
-        <div className="flex items-center justify-between mb-4 flex-wrap gap-3">
-          <h2 className="text-xs font-medium uppercase tracking-[0.15em] text-zinc-900 dark:text-zinc-100">
-            Clinical Summary
-          </h2>
-          <div className="flex items-center gap-2">
-            <span className="text-[10px] font-mono uppercase tracking-[0.14em] text-zinc-400 dark:text-zinc-500">
-              Pronouns
-            </span>
-            <div className="flex gap-1">
-              {([
-                { v: 'she', label: 'She/Her' },
-                { v: 'he', label: 'He/Him' },
-                { v: 'they', label: 'They/Them' },
-              ] as const).map(opt => {
-                const isSelected = pronounChoice === opt.v
-                return (
-                  <button
-                    key={opt.v}
-                    type="button"
-                    onClick={() => setPronounChoice(opt.v)}
-                    className={`rounded-md border px-2.5 py-1 text-[11px] transition-all duration-150 cursor-pointer ${
-                      isSelected
-                        ? 'border-zinc-900 dark:border-zinc-100 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 font-medium'
-                        : 'border-zinc-200 dark:border-zinc-800 text-zinc-500 dark:text-zinc-400 hover:border-zinc-300 dark:hover:border-zinc-700'
-                    }`}
-                  >
-                    {opt.label}
-                  </button>
-                )
-              })}
-            </div>
-          </div>
-        </div>
+        <h2 className="text-xs font-medium uppercase tracking-[0.15em] text-zinc-900 dark:text-zinc-100 mb-4">
+          Clinical Summary
+        </h2>
         {narrative ? (
           <div className="relative">
             <textarea
