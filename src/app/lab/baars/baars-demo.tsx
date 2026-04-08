@@ -44,6 +44,8 @@ interface ScoreTableRow {
   symptomCount: ComputedGroupScore | null
 }
 
+type PronounChoice = 'she' | 'he' | 'they'
+
 export interface BaarsAdhdCriteriaMeta {
   disorderId: string
   disorderName: string
@@ -52,6 +54,8 @@ export interface BaarsAdhdCriteriaMeta {
   adultThreshold: number
   exclusions: string[]
 }
+
+const BAARS_RESPONDENT_STORAGE_KEY = 'baars:respondent-draft:v1'
 
 function getTodayDateValue(): string {
   const now = new Date()
@@ -63,6 +67,70 @@ function buildInitialHeaderValues(fields: AssessmentField[]): Record<string, str
     if (field.type === 'date') values[field.id] = getTodayDateValue()
     return values
   }, {})
+}
+
+function readBaarsRespondentDraft(fields: AssessmentField[]): {
+  headerValues: Record<string, string>
+  pronounChoice: PronounChoice
+} | null {
+  if (typeof window === 'undefined') return null
+
+  try {
+    const storedDraft = window.sessionStorage.getItem(BAARS_RESPONDENT_STORAGE_KEY)
+    if (!storedDraft) return null
+
+    const parsed = JSON.parse(storedDraft) as {
+      headerValues?: Record<string, unknown>
+      pronounChoice?: unknown
+    }
+    const initialHeaderValues = buildInitialHeaderValues(fields)
+    const headerValues = fields.reduce<Record<string, string>>((values, field) => {
+      const storedValue = parsed.headerValues?.[field.id]
+      if (typeof storedValue === 'string') {
+        values[field.id] = storedValue
+      }
+      return values
+    }, { ...initialHeaderValues })
+    const pronounChoice = parsed.pronounChoice === 'she' || parsed.pronounChoice === 'he' || parsed.pronounChoice === 'they'
+      ? parsed.pronounChoice
+      : 'they'
+
+    return { headerValues, pronounChoice }
+  } catch {
+    return null
+  }
+}
+
+function writeBaarsRespondentDraft(
+  fields: AssessmentField[],
+  headerValues: Record<string, string>,
+  pronounChoice: PronounChoice,
+) {
+  if (typeof window === 'undefined') return
+
+  try {
+    const serializedHeaderValues = fields.reduce<Record<string, string>>((values, field) => {
+      values[field.id] = headerValues[field.id] ?? ''
+      return values
+    }, {})
+
+    window.sessionStorage.setItem(
+      BAARS_RESPONDENT_STORAGE_KEY,
+      JSON.stringify({ headerValues: serializedHeaderValues, pronounChoice }),
+    )
+  } catch {
+    // Ignore storage failures so the form still works in restricted browser contexts.
+  }
+}
+
+function clearBaarsRespondentDraft() {
+  if (typeof window === 'undefined') return
+
+  try {
+    window.sessionStorage.removeItem(BAARS_RESPONDENT_STORAGE_KEY)
+  } catch {
+    // Ignore storage failures so reset still clears in-memory state.
+  }
 }
 
 function deriveFollowUpPositive(
@@ -283,7 +351,7 @@ function buildCurrentNarrative(
   answers: Record<string, QuestionValue>,
   ageBand: string | null,
   header: Record<string, string>,
-  pronounChoice: 'she' | 'he' | 'they',
+  pronounChoice: PronounChoice,
   followUpPositive: 'yes' | 'no' | null,
   age: number | null,
 ): string | null {
@@ -352,7 +420,7 @@ function buildChildhoodNarrative(
   answers: Record<string, QuestionValue>,
   ageBand: string | null,
   header: Record<string, string>,
-  pronounChoice: 'she' | 'he' | 'they',
+  pronounChoice: PronounChoice,
   followUpPositive: 'yes' | 'no' | null,
 ): string | null {
   const totalAdhd = scores.find(s => s.group.id === 'total_adhd_raw')
@@ -413,7 +481,7 @@ function buildNarrative(
   answers: Record<string, QuestionValue>,
   ageBand: string | null,
   header: Record<string, string>,
-  pronounChoice: 'she' | 'he' | 'they',
+  pronounChoice: PronounChoice,
   followUpPositive: 'yes' | 'no' | null,
   age: number | null,
 ): string | null {
@@ -440,15 +508,20 @@ export function BaarsDemo({
   adhdCriteria: BaarsAdhdCriteriaMeta
 }) {
   const prefersReducedMotion = useReducedMotion()
-  const [headerValues, setHeaderValues] = useState<Record<string, string>>(
+  const initialHeaderValues = useMemo(
     () => buildInitialHeaderValues(instrument.headerFields),
+    [instrument.headerFields],
+  )
+  const [headerValues, setHeaderValues] = useState<Record<string, string>>(
+    initialHeaderValues,
   )
   const [answers, setAnswers] = useState<Record<string, QuestionValue>>({})
-  const [pronounChoice, setPronounChoice] = useState<'she' | 'he' | 'they'>('they')
+  const [pronounChoice, setPronounChoice] = useState<PronounChoice>('they')
   const [collapsedSections, setCollapsedSections] = useState<Set<string>>(new Set())
   const userExpandedRef = useRef<Set<string>>(new Set())
   const answerHistoryRef = useRef<Array<{ id: string; prev: QuestionValue | undefined }>>([])
   const [mobileSheetOpen, setMobileSheetOpen] = useState(false)
+  const [respondentDraftLoaded, setRespondentDraftLoaded] = useState(false)
   const ageValue = Number(headerValues.age)
   const age = Number.isFinite(ageValue) ? ageValue : null
   const ageBand = age !== null ? getBaarsAgeBand(age) : null
@@ -515,6 +588,24 @@ export function BaarsDemo({
       })
     }
   }, [followUpPositive, remainingFollowUpQuestions])
+
+  useEffect(() => {
+    const storedDraft = readBaarsRespondentDraft(instrument.headerFields)
+    if (storedDraft) {
+      setHeaderValues(storedDraft.headerValues)
+      setPronounChoice(storedDraft.pronounChoice)
+    } else {
+      setHeaderValues(initialHeaderValues)
+      setPronounChoice('they')
+    }
+
+    setRespondentDraftLoaded(true)
+  }, [initialHeaderValues, instrument.headerFields])
+
+  useEffect(() => {
+    if (!respondentDraftLoaded) return
+    writeBaarsRespondentDraft(instrument.headerFields, headerValues, pronounChoice)
+  }, [headerValues, instrument.headerFields, pronounChoice, respondentDraftLoaded])
 
   const narrative = buildNarrative(
     adhdCriteria,
@@ -655,8 +746,10 @@ export function BaarsDemo({
     })
   }
   const resetDemo = () => {
-    setHeaderValues(buildInitialHeaderValues(instrument.headerFields))
+    clearBaarsRespondentDraft()
+    setHeaderValues(initialHeaderValues)
     setAnswers({})
+    setPronounChoice('they')
     answerHistoryRef.current = []
     setCollapsedSections(new Set())
     userExpandedRef.current = new Set()
