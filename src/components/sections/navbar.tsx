@@ -10,6 +10,7 @@ import { Menu, X } from "lucide-react";
 import { AnimatePresence, motion, useScroll } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState, useCallback } from "react";
 
 const INITIAL_WIDTH = "70rem";
@@ -55,6 +56,8 @@ const drawerMenuVariants = {
 export function Navbar() {
   const { scrollY } = useScroll();
   const { user, signOut } = useAuth();
+  const pathname = usePathname();
+  const isLabRoute = pathname?.startsWith("/lab") ?? false;
   const [hasScrolled, setHasScrolled] = useState(false);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("hero");
@@ -146,9 +149,11 @@ export function Navbar() {
                 alt="Logo"
                 width={420}
                 height={535}
-                className="h-7 w-auto md:h-10 md:w-auto invert dark:invert-0"
+                className="h-10 md:h-14 w-auto shrink-0 object-contain invert dark:invert-0"
               />
-              <p className="text-lg font-semibold text-primary">thePsychology.ai</p>
+              {!isLabRoute && (
+                <p className="text-lg font-semibold text-primary">thePsychology.ai</p>
+              )}
             </Link>
 
             <NavMenu isLoggedIn={!!user} />
@@ -226,7 +231,7 @@ export function Navbar() {
                       alt="Logo"
                       width={420}
                       height={535}
-                      className="h-7 w-auto md:h-10 md:w-auto invert dark:invert-0"
+                      className="h-10 md:h-14 w-auto shrink-0 object-contain invert dark:invert-0"
                     />
                     <p className="text-lg font-semibold text-primary">
                       thePsychology.ai

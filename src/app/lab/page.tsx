@@ -1,36 +1,61 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
+import LabClient from './lab-client'
 
 export const metadata: Metadata = {
   title: 'Lab | thePsychology.ai',
-  description: 'Experimental tools and creative projects.',
+  description: 'Clinical tools, practice automations, and experimental projects from thePsychology.ai.',
 }
 
-const tools = [
+const projects = [
   {
-    href: '/lab/calligraphy',
+    id: 1,
+    title: 'NYSED License Notification',
+    description: 'We check NYSED daily. The second your license posts, you get an email. No more refreshing.',
+    category: 'getting-licensed',
+    categoryLabel: '01 Getting Licensed',
+    href: '/lab/license-watch',
+    status: 'live' as const,
+    tags: ['Email Alerts', 'NYSED', 'Free'],
+  },
+  {
+    id: 2,
+    title: 'SimplePractice Notes',
+    description: 'Local AI writes your progress notes. Intake data, diagnostic impressions, session records. PHI never leaves your device.',
+    category: 'clinical-practice',
+    categoryLabel: '02 Clinical Practice',
+    status: 'beta' as const,
+    tags: ['Chrome Extension', 'Ollama', 'HIPAA'],
+  },
+  {
+    id: 3,
+    title: 'ZocDoc to SimplePractice',
+    description: 'ZocDoc referral comes in. SimplePractice intake fills itself. Your front desk stops typing things twice.',
+    category: 'clinical-practice',
+    categoryLabel: '02 Clinical Practice',
+    status: 'dev' as const,
+    tags: ['Chrome Extension', 'Automation'],
+  },
+  {
+    id: 4,
+    title: 'SENSE Lens',
+    description: 'Sensory-informed clinical framework. Client tracking, interventions, and pattern recognition. Built for your phone, built for sessions.',
+    category: 'clinical-practice',
+    categoryLabel: '02 Clinical Practice',
+    status: 'dev' as const,
+    tags: ['Next.js App', 'Prisma', 'Clinical'],
+  },
+  {
+    id: 5,
     title: 'Chinese Calligraphy Studio',
-    description: 'Type in English, translate to Chinese, and preview across brush-style calligraphy fonts.',
+    description: 'Type English. Get Chinese. See it in real calligraphy fonts.',
+    category: 'creative',
+    categoryLabel: '03 Creative',
+    href: '/lab/calligraphy',
+    status: 'live' as const,
+    tags: ['Interactive', 'Translation'],
   },
 ]
 
 export default function LabPage() {
-  return (
-    <main className="mx-auto max-w-3xl px-4 py-16">
-      <h1 className="text-3xl font-semibold tracking-tight mb-2">Lab</h1>
-      <p className="text-muted-foreground mb-10">Experimental tools and creative projects.</p>
-      <div className="grid gap-4">
-        {tools.map(tool => (
-          <Link
-            key={tool.href}
-            href={tool.href}
-            className="block rounded-xl border border-border p-5 transition-colors hover:bg-muted/50"
-          >
-            <h2 className="text-lg font-medium mb-1">{tool.title}</h2>
-            <p className="text-sm text-muted-foreground">{tool.description}</p>
-          </Link>
-        ))}
-      </div>
-    </main>
-  )
+  return <LabClient projects={projects} />
 }
