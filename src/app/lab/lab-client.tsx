@@ -1,5 +1,6 @@
 'use client'
 
+import { useRef } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import dynamic from 'next/dynamic'
@@ -133,11 +134,20 @@ function MobileProjectList({ projects }: { projects: Project[] }) {
 }
 
 export default function LabClient({ projects }: { projects: Project[] }) {
+  const orbitalTimelineRef = useRef<HTMLDivElement | null>(null)
+
   // Map projects to orbital nodes with simple number icons
   const orbitalProjects = projects.map(p => ({
     ...p,
     icon: <span className="text-[10px] font-mono">{String(p.id).padStart(2, '0')}</span>,
   }))
+
+  const scrollToOrbitalTimeline = () => {
+    orbitalTimelineRef.current?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'center',
+    })
+  }
 
   return (
     <div className="relative">
@@ -161,7 +171,12 @@ export default function LabClient({ projects }: { projects: Project[] }) {
         </div>
 
         {/* Scroll hint — clean chevron, sits above the hills valley */}
-        <div className="hidden md:block absolute left-1/2 -translate-x-1/2 bottom-[32%] animate-bounce pointer-events-none">
+        <button
+          type="button"
+          onClick={scrollToOrbitalTimeline}
+          className="hidden md:block absolute left-1/2 -translate-x-1/2 bottom-[32%] animate-bounce pointer-events-auto cursor-pointer text-zinc-400/70 dark:text-zinc-500/70 transition-colors hover:text-zinc-700 dark:hover:text-zinc-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-500/40 rounded-sm"
+          aria-label="Scroll to lab projects"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="22"
@@ -172,16 +187,16 @@ export default function LabClient({ projects }: { projects: Project[] }) {
             strokeWidth="1.25"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="text-zinc-400/70 dark:text-zinc-500/70"
+            className="block"
             aria-hidden="true"
           >
             <path d="M1 1l10 10L21 1" />
           </svg>
-        </div>
+        </button>
       </section>
 
       {/* Desktop: Orbital timeline */}
-      <div className="hidden md:block">
+      <div ref={orbitalTimelineRef} className="hidden md:block">
         <RadialOrbitalTimeline projects={orbitalProjects} />
       </div>
 
