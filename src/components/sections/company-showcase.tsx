@@ -6,7 +6,7 @@ import Link from "next/link"
 import { Marquee } from "@/components/ui/marquee"
 import { TextRotate } from "@/components/ui/text-rotate"
 
-const ROLES = ["psychologists", "researchers", "neuroscientists"]
+const ROLES = ["psychologists"]
 
 type CompanyLogo = {
   id: number
