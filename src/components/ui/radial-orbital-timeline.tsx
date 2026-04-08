@@ -21,27 +21,22 @@ interface RadialOrbitalTimelineProps {
 }
 
 const statusConfig = {
-  live: { label: 'Live', dot: 'bg-zinc-900 dark:bg-zinc-100' },
+  live: { label: 'Live', dot: 'bg-emerald-600 dark:bg-emerald-500' },
   beta: { label: 'Beta', dot: 'bg-zinc-400' },
-  dev: { label: 'Building', dot: 'bg-amber-500' },
+  dev: { label: 'Building', dot: 'bg-zinc-400 dark:bg-zinc-600' },
   soon: { label: 'Coming Soon', dot: 'bg-zinc-200 dark:bg-zinc-700' },
 } as const
 
+const RING_FADE_IN_START = 32
+const RING_FADE_IN_DISTANCE = 320
+
 function StatusDot({ status }: { status: ProjectNode['status'] }) {
-  if (status === 'dev') {
-    return (
-      <span className="relative inline-flex h-1.5 w-1.5 shrink-0">
-        <span className="absolute inset-0 rounded-full bg-amber-400 animate-ping opacity-75" />
-        <span className="relative inline-block h-full w-full rounded-full bg-amber-500" />
-      </span>
-    )
-  }
   return <span className={`inline-block h-1.5 w-1.5 rounded-full ${statusConfig[status].dot} shrink-0`} />
 }
 
 function statusLabelClass(status: ProjectNode['status']) {
-  return status === 'dev'
-    ? 'text-amber-600 dark:text-amber-400'
+  return status === 'live'
+    ? 'text-emerald-600 dark:text-emerald-500'
     : 'text-zinc-400 dark:text-zinc-500'
 }
 
@@ -99,26 +94,31 @@ export default function RadialOrbitalTimeline({ projects }: RadialOrbitalTimelin
     }
   }, [])
 
-  // Scroll-linked fade in as the ring enters the viewport
+  // Fade the ring in based on page scroll, not just viewport intersection.
   useEffect(() => {
-    const el = containerRef.current
-    if (!el) return
+    let frameId: number | null = null
+
     const compute = () => {
-      const rect = el.getBoundingClientRect()
-      const vh = window.innerHeight
-      // 0 when container top is at bottom of viewport, 1 when top reaches ~40% of viewport
-      const start = vh
-      const end = vh * 0.4
-      const raw = (start - rect.top) / (start - end)
+      frameId = null
+      const distance = Math.max(RING_FADE_IN_DISTANCE, Math.round(window.innerHeight * 0.35))
+      const raw = (window.scrollY - RING_FADE_IN_START) / distance
       const clamped = Math.max(0, Math.min(1, raw))
       setScrollProgress(clamped)
     }
-    compute()
-    window.addEventListener('scroll', compute, { passive: true })
-    window.addEventListener('resize', compute)
+
+    const requestCompute = () => {
+      if (frameId !== null) return
+      frameId = window.requestAnimationFrame(compute)
+    }
+
+    requestCompute()
+    window.addEventListener('scroll', requestCompute, { passive: true })
+    window.addEventListener('resize', requestCompute)
+
     return () => {
-      window.removeEventListener('scroll', compute)
-      window.removeEventListener('resize', compute)
+      if (frameId !== null) window.cancelAnimationFrame(frameId)
+      window.removeEventListener('scroll', requestCompute)
+      window.removeEventListener('resize', requestCompute)
     }
   }, [])
 

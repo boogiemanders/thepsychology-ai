@@ -24,9 +24,9 @@ export interface Project {
 }
 
 const statusConfig = {
-  live: { label: 'Live', dot: 'bg-zinc-900 dark:bg-zinc-100' },
+  live: { label: 'Live', dot: 'bg-emerald-600 dark:bg-emerald-500' },
   beta: { label: 'Beta', dot: 'bg-zinc-400' },
-  dev: { label: 'Building', dot: 'bg-amber-500' },
+  dev: { label: 'Building', dot: 'bg-zinc-400 dark:bg-zinc-600' },
   soon: { label: 'Coming Soon', dot: 'bg-zinc-200 dark:bg-zinc-700' },
 } as const
 
@@ -42,18 +42,11 @@ function StatusBadge({ status }: { status: Project['status'] }) {
   const s = statusConfig[status]
   return (
     <span className="inline-flex items-center gap-1.5">
-      {status === 'dev' ? (
-        <span className="relative inline-flex h-1.5 w-1.5 shrink-0">
-          <span className="absolute inset-0 rounded-full bg-amber-400 animate-ping opacity-75" />
-          <span className="relative inline-block h-full w-full rounded-full bg-amber-500" />
-        </span>
-      ) : (
-        <span className={`inline-block h-1.5 w-1.5 rounded-full ${s.dot}`} />
-      )}
+      <span className={`inline-block h-1.5 w-1.5 rounded-full ${s.dot}`} />
       <span
         className={cn(
           'text-[10px] font-mono uppercase tracking-[0.14em]',
-          status === 'dev' ? 'text-amber-600 dark:text-amber-400' : 'text-zinc-400 dark:text-zinc-500',
+          status === 'live' ? 'text-emerald-600 dark:text-emerald-500' : 'text-zinc-400 dark:text-zinc-500',
         )}
       >
         {s.label}
