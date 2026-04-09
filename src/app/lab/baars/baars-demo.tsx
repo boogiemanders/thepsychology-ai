@@ -1368,7 +1368,7 @@ export function BaarsDemo({
                 </div>
                 <div className="hidden md:block border-y border-zinc-200 dark:border-zinc-800/70">
                     <div
-                      className="sticky z-30 grid grid-cols-[minmax(0,1fr)_96px_96px_96px_96px] border-b border-zinc-200 bg-white/90 backdrop-blur-md supports-[backdrop-filter]:bg-white/75 dark:border-zinc-800/70 dark:bg-zinc-950/90 dark:supports-[backdrop-filter]:bg-zinc-950/75"
+                      className="sticky z-30 grid grid-cols-[minmax(0,1fr)_96px_96px_96px_96px] border-b border-zinc-200 bg-background dark:border-zinc-800/70"
                       style={{ top: DESKTOP_STICKY_SCALE_TOP }}
                     >
                       <div className="min-h-[36px]" />
