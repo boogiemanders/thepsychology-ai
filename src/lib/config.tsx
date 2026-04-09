@@ -441,6 +441,54 @@ export const siteConfig = {
         answer:
           "Yes. thePsychology.ai works in any mobile browser. No app download needed. Study on the train, between sessions, wherever.",
       },
+      {
+        id: 22,
+        question: "How does the AI adaptive learning actually work?",
+        answer:
+          "The system tracks which questions you get wrong and which domains you struggle with. It then generates more practice in those areas and less in areas you've already mastered. Every session is personalized to your current knowledge gaps.",
+      },
+      {
+        id: 23,
+        question: "When should I start studying before my EPPP exam date?",
+        answer:
+          "Most of our users who passed started 1-2 months before their exam date. If you're studying 15-30 minutes a day consistently, that's enough time. The platform tells you when you're scoring at passing level.",
+      },
+      {
+        id: 24,
+        question: "Do you cover EPPP Part 2 (Skills)?",
+        answer:
+          "Not yet. thePsychology.ai currently covers EPPP Part 1 (Knowledge) only. Part 2 (Skills) prep is on our roadmap.",
+      },
+      {
+        id: 25,
+        question: "How many practice exams and questions are included?",
+        answer:
+          "16 full-length practice exams and unlimited adaptive quizzes across all 8 EPPP content domains. Every quiz is generated based on your weak areas, so no two sessions are the same.",
+      },
+      {
+        id: 26,
+        question: "What if I'm working full-time during my postdoc, how much time do I need?",
+        answer:
+          "The platform is built for people with full caseloads. Sessions are 15 minutes. Most users study during commutes, lunch breaks, or before bed. Consistency matters more than long sessions.",
+      },
+      {
+        id: 27,
+        question: "Do you serve students outside the United States?",
+        answer:
+          "The platform is accessible worldwide, but the content is designed specifically for the US EPPP administered by ASPPB. If your jurisdiction uses the EPPP for licensure, it will work for you.",
+      },
+      {
+        id: 28,
+        question: "How is thePsychology.ai different from free EPPP resources on YouTube or Quizlet?",
+        answer:
+          "Free resources don't adapt to your weak areas, don't simulate real exam question formats, and aren't organized around the current ASPPB blueprint. Our questions mirror actual EPPP wording (application-based, not definitions) and the system builds every session around what you specifically need to learn.",
+      },
+      {
+        id: 29,
+        question: "Why is this so much cheaper than other EPPP prep programs?",
+        answer:
+          "No physical materials, no large staff, no corporate overhead. The founder built this as a solo psychologist using AI tools. AATBS charges $849-$1,799. We charge $30/month because passing the EPPP shouldn't require going into more debt.",
+      },
     ],
   },
   ctaSection: {
