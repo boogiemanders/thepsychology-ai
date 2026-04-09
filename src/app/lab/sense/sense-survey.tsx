@@ -104,7 +104,7 @@ function StickyConstellationBeacon({
   chakra: ChakraColor
 }) {
   return (
-    <div className="sticky top-24 z-20 mb-4 flex justify-end pointer-events-none">
+    <div className="sticky top-36 md:top-40 z-20 mb-4 flex justify-end pointer-events-none">
       <ConstellationMap
         subscaleIndex={subscaleIndex}
         answeredMask={answeredMask}
