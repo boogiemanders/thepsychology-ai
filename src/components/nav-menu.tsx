@@ -21,6 +21,21 @@ export const LOGGED_IN_NAVS: NavItem[] = [
 
 const labNavs: NavItem[] = siteConfig.nav.labLinks;
 
+function getHashTarget(href: string): string | null {
+  const hashIndex = href.indexOf("#");
+  if (hashIndex === -1) return null;
+
+  const hash = href.slice(hashIndex + 1);
+  return hash || null;
+}
+
+function getPathTarget(href: string): string | null {
+  if (href.startsWith("#")) return null;
+
+  const [path] = href.split("#");
+  return path || null;
+}
+
 export function NavMenu({ isLoggedIn, isLabRoute }: { isLoggedIn?: boolean; isLabRoute?: boolean }) {
   const ref = useRef<HTMLUListElement>(null);
   const [left, setLeft] = useState(0);
@@ -40,56 +55,79 @@ export function NavMenu({ isLoggedIn, isLabRoute }: { isLoggedIn?: boolean; isLa
 
   React.useEffect(() => {
     // Initialize with active nav item based on current path or first item
-    let activeSelector: string;
+    let activeHref = currentNavs[0]?.href;
 
     if (mounted && isLoggedIn) {
       // Find the nav item that matches current pathname
       const activeNav = currentNavs.find(nav => nav.href === pathname);
-      activeSelector = activeNav ? `[href="${activeNav.href}"]` : `[href="${currentNavs[0].href}"]`;
+      activeHref = activeNav?.href ?? currentNavs[0]?.href;
     } else {
-      activeSelector = `[href="#${currentNavs[0].href.substring(1)}"]`;
+      const activeNav = currentNavs.find((nav) => {
+        const hashTarget = getHashTarget(nav.href);
+        const pathTarget = getPathTarget(nav.href);
+
+        if (hashTarget && hashTarget === activeSection) {
+          return !pathTarget || pathTarget === pathname;
+        }
+
+        return !hashTarget && pathTarget === pathname;
+      }) ?? currentNavs.find((nav) => getPathTarget(nav.href) === pathname) ?? currentNavs[0];
+
+      activeHref = activeNav?.href;
     }
 
-    const activeItem = ref.current?.querySelector(activeSelector)?.parentElement;
+    if (!activeHref) return;
+
+    const activeItem = ref.current?.querySelector(`[href="${activeHref}"]`)?.parentElement;
     if (activeItem) {
       const rect = activeItem.getBoundingClientRect();
       setLeft(activeItem.offsetLeft);
       setWidth(rect.width);
       setIsReady(true);
     }
-  }, [mounted, isLoggedIn, currentNavs, pathname]);
+  }, [activeSection, mounted, isLoggedIn, currentNavs, pathname]);
 
   React.useEffect(() => {
     // Skip scroll handling for logged in users (they're on tools page)
     if (isLoggedIn) return;
 
+    const sectionNavs = currentNavs
+      .map((item) => ({
+        href: item.href,
+        target: getHashTarget(item.href),
+        path: getPathTarget(item.href),
+      }))
+      .filter((item): item is { href: string; target: string; path: string | null } => Boolean(item.target))
+      .filter((item) => !item.path || item.path === pathname);
+
+    if (!sectionNavs.length) return;
+
     const handleScroll = () => {
       // Skip scroll handling during manual click scrolling
       if (isManualScroll) return;
 
-      const sections = currentNavs.map((item) => item.href.substring(1));
-
       // Find the section closest to viewport top
-      let closestSection = sections[0];
+      let closestSection = sectionNavs[0].target;
       let minDistance = Infinity;
 
-      for (const section of sections) {
-        const element = document.getElementById(section);
+      for (const sectionNav of sectionNavs) {
+        const element = document.getElementById(sectionNav.target);
         if (element) {
           const rect = element.getBoundingClientRect();
           const distance = Math.abs(rect.top - 100); // Offset by 100px to trigger earlier
           if (distance < minDistance) {
             minDistance = distance;
-            closestSection = section;
+            closestSection = sectionNav.target;
           }
         }
       }
 
       // Update active section and nav indicator
       setActiveSection(closestSection);
-      const navItem = ref.current?.querySelector(
-        `[href="#${closestSection}"]`,
-      )?.parentElement;
+      const activeNav = sectionNavs.find((item) => item.target === closestSection);
+      const navItem = activeNav
+        ? ref.current?.querySelector(`[href="${activeNav.href}"]`)?.parentElement
+        : null;
       if (navItem) {
         const rect = navItem.getBoundingClientRect();
         setLeft(navItem.offsetLeft);
@@ -100,7 +138,7 @@ export function NavMenu({ isLoggedIn, isLabRoute }: { isLoggedIn?: boolean; isLa
     window.addEventListener("scroll", handleScroll);
     handleScroll(); // Initial check
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [isManualScroll, isLoggedIn, currentNavs]);
+  }, [isManualScroll, isLoggedIn, currentNavs, pathname]);
 
   const handleClick = (
     e: React.MouseEvent<HTMLAnchorElement>,
@@ -111,50 +149,62 @@ export function NavMenu({ isLoggedIn, isLabRoute }: { isLoggedIn?: boolean; isLa
       return;
     }
 
-    // If href doesn't start with #, let it navigate normally (e.g., /portfolio)
-    if (!item.href.startsWith("#")) {
+    const hashTarget = getHashTarget(item.href);
+    const pathTarget = getPathTarget(item.href);
+
+    // If there's no hash target, let it navigate normally (e.g., /portfolio)
+    if (!hashTarget) {
+      return;
+    }
+
+    const isSamePageTarget = !pathTarget || pathTarget === pathname;
+
+    // Let the browser navigate to the correct route when the section lives elsewhere.
+    if (!isSamePageTarget) {
       return;
     }
 
     e.preventDefault();
 
-    const targetId = item.href.substring(1);
-    const element = document.getElementById(targetId);
+    const element = document.getElementById(hashTarget);
 
-    // If element doesn't exist on current page, navigate to home page with hash
+    // Hash-only links should still fall back to the homepage if the section is not on the current route.
     if (!element) {
-      window.location.href = "/" + item.href;
+      if (!pathTarget) {
+        window.location.href = "/" + item.href;
+      }
       return;
     }
 
-    if (element) {
-      // Set manual scroll flag
-      setIsManualScroll(true);
+    // Set manual scroll flag
+    setIsManualScroll(true);
 
-      // Immediately update nav state
-      setActiveSection(targetId);
-      const navItem = e.currentTarget.parentElement;
-      if (navItem) {
-        const rect = navItem.getBoundingClientRect();
-        setLeft(navItem.offsetLeft);
-        setWidth(rect.width);
-      }
-
-      // Calculate exact scroll position
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - 100; // 100px offset
-
-      // Smooth scroll to exact position
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
-
-      // Reset manual scroll flag after animation completes
-      setTimeout(() => {
-        setIsManualScroll(false);
-      }, 500); // Adjust timing to match scroll animation duration
+    // Immediately update nav state
+    setActiveSection(hashTarget);
+    const navItem = e.currentTarget.parentElement;
+    if (navItem) {
+      const rect = navItem.getBoundingClientRect();
+      setLeft(navItem.offsetLeft);
+      setWidth(rect.width);
     }
+
+    const nextHashUrl = pathTarget ? `${pathTarget}#${hashTarget}` : item.href;
+    window.history.replaceState(null, "", nextHashUrl);
+
+    // Calculate exact scroll position
+    const elementPosition = element.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.pageYOffset - 100; // 100px offset
+
+    // Smooth scroll to exact position
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth",
+    });
+
+    // Reset manual scroll flag after animation completes
+    setTimeout(() => {
+      setIsManualScroll(false);
+    }, 500); // Adjust timing to match scroll animation duration
   };
 
   return (
@@ -164,9 +214,13 @@ export function NavMenu({ isLoggedIn, isLabRoute }: { isLoggedIn?: boolean; isLa
         ref={ref}
       >
         {currentNavs.map((item) => {
+          const itemHashTarget = getHashTarget(item.href);
+          const itemPathTarget = getPathTarget(item.href);
           const isActive = mounted && isLoggedIn
             ? pathname === item.href
-            : activeSection === item.href.substring(1);
+            : itemHashTarget
+              ? activeSection === itemHashTarget && (!itemPathTarget || itemPathTarget === pathname)
+              : pathname === itemPathTarget;
 
           return (
             <li

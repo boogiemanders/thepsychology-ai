@@ -82,7 +82,7 @@ export const siteConfig = {
     ],
     labLinks: [
       { id: 1, name: "Main", href: "/" },
-      { id: 2, name: "Projects", href: "#projects" },
+      { id: 2, name: "Projects", href: "/lab#projects" },
       { id: 3, name: "About", href: "/portfolio" },
     ],
   },

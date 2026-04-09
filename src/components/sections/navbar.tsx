@@ -53,6 +53,21 @@ const drawerMenuVariants = {
   visible: { opacity: 1 },
 };
 
+const getHashTarget = (href: string): string | null => {
+  const hashIndex = href.indexOf("#");
+  if (hashIndex === -1) return null;
+
+  const hash = href.slice(hashIndex + 1);
+  return hash || null;
+};
+
+const getPathTarget = (href: string): string | null => {
+  if (href.startsWith("#")) return null;
+
+  const [path] = href.split("#");
+  return path || null;
+};
+
 export function Navbar() {
   const { scrollY } = useScroll();
   const { user, signOut } = useAuth();
@@ -63,6 +78,7 @@ export function Navbar() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("hero");
   const [mounted, setMounted] = useState(false);
+  const mobileNavItems = user ? LOGGED_IN_NAVS : isLabRoute ? siteConfig.nav.labLinks : siteConfig.nav.links;
 
   // Set mounted flag to prevent hydration mismatch
   useEffect(() => {
@@ -71,9 +87,11 @@ export function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = siteConfig.nav.links.map((item) =>
-        item.href.substring(1),
-      );
+      const sections = mobileNavItems
+        .map((item) => getHashTarget(item.href))
+        .filter((section): section is string => Boolean(section));
+
+      if (!sections.length) return;
 
       for (const section of sections) {
         const element = document.getElementById(section);
@@ -91,7 +109,7 @@ export function Navbar() {
     handleScroll();
 
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [mobileNavItems]);
 
   useEffect(() => {
     const unsubscribe = scrollY.on("change", (latest) => {
@@ -102,8 +120,6 @@ export function Navbar() {
 
   const toggleDrawer = () => setIsDrawerOpen((prev) => !prev);
   const handleOverlayClick = () => setIsDrawerOpen(false);
-
-  const mobileNavItems = user ? LOGGED_IN_NAVS : isLabRoute ? siteConfig.nav.labLinks : siteConfig.nav.links;
 
   const handleStartFree = useCallback(() => {
     setIsDrawerOpen(false); // Close mobile drawer if open
@@ -303,28 +319,50 @@ export function Navbar() {
                         <a
                           href={item.href}
                           onClick={(e) => {
-                            // Logged-in items are normal routes; let them navigate.
-                            if (!item.href?.startsWith("#")) {
+                            const hashTarget = getHashTarget(item.href);
+                            const pathTarget = getPathTarget(item.href);
+
+                            // Logged-in or route-only items are normal routes; let them navigate.
+                            if (!hashTarget) {
+                              setIsDrawerOpen(false);
+                              return;
+                            }
+
+                            const isSamePageTarget = !pathTarget || pathTarget === pathname;
+
+                            if (!isSamePageTarget) {
                               setIsDrawerOpen(false);
                               return;
                             }
 
                             e.preventDefault();
 
-                            const targetId = item.href.substring(1);
-                            const element = document.getElementById(targetId);
+                            const element = document.getElementById(hashTarget);
 
                             // If element doesn't exist on current page, navigate to home page with hash.
                             if (!element) {
-                              window.location.href = "/" + item.href;
+                              if (!pathTarget) {
+                                window.location.href = "/" + item.href;
+                              }
+                              setIsDrawerOpen(false);
                               return;
                             }
 
-                            element.scrollIntoView({ behavior: "smooth" });
+                            const nextHashUrl = pathTarget ? `${pathTarget}#${hashTarget}` : item.href;
+                            window.history.replaceState(null, "", nextHashUrl);
+                            setActiveSection(hashTarget);
+                            element.scrollIntoView({ behavior: "smooth", block: pathTarget === "/lab" ? "center" : "start" });
                             setIsDrawerOpen(false);
                           }}
                           className={`underline-offset-4 hover:text-primary/80 transition-colors ${
-                            activeSection === item.href.substring(1)
+                            (() => {
+                              const hashTarget = getHashTarget(item.href);
+                              const pathTarget = getPathTarget(item.href);
+                              if (hashTarget) {
+                                return activeSection === hashTarget && (!pathTarget || pathTarget === pathname);
+                              }
+                              return pathname === pathTarget;
+                            })()
                               ? "text-primary font-medium"
                               : "text-primary/60"
                           }`}

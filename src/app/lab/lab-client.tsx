@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import dynamic from 'next/dynamic'
@@ -127,6 +127,7 @@ function MobileProjectList({ projects }: { projects: Project[] }) {
 }
 
 export default function LabClient({ projects }: { projects: Project[] }) {
+  const projectsSectionRef = useRef<HTMLDivElement | null>(null)
   const orbitalTimelineRef = useRef<HTMLDivElement | null>(null)
 
   // Map projects to orbital nodes with simple number icons
@@ -141,6 +142,33 @@ export default function LabClient({ projects }: { projects: Project[] }) {
       block: 'center',
     })
   }
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+
+    const scrollToProjectsFromHash = () => {
+      if (window.location.hash !== '#projects') return
+
+      const scrollTarget = window.matchMedia('(min-width: 768px)').matches
+        ? orbitalTimelineRef.current
+        : projectsSectionRef.current
+
+      scrollTarget?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+      })
+    }
+
+    const frameId = window.requestAnimationFrame(scrollToProjectsFromHash)
+    const timeoutId = window.setTimeout(scrollToProjectsFromHash, 180)
+    window.addEventListener('hashchange', scrollToProjectsFromHash)
+
+    return () => {
+      window.cancelAnimationFrame(frameId)
+      window.clearTimeout(timeoutId)
+      window.removeEventListener('hashchange', scrollToProjectsFromHash)
+    }
+  }, [])
 
   return (
     <div className="relative">
@@ -188,34 +216,36 @@ export default function LabClient({ projects }: { projects: Project[] }) {
         </button>
       </section>
 
-      {/* Desktop: Orbital timeline */}
-      <div id="projects" ref={orbitalTimelineRef} className="hidden md:block">
-        <RadialOrbitalTimeline projects={orbitalProjects} />
-      </div>
-
-      {/* Desktop: category captions */}
-      <section className="hidden md:block max-w-4xl mx-auto px-8 pb-20 pt-4">
-        <div className="grid grid-cols-2 gap-x-16 gap-y-10">
-          {Object.entries(CATEGORY_DESCRIPTIONS).map(([key, desc]) => {
-            const label = projects.find(p => p.category === key)?.categoryLabel
-            if (!label) return null
-            return (
-              <div key={key} className="border-l border-zinc-300 dark:border-zinc-700/60 pl-5">
-                <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-800 dark:text-zinc-300 mb-2">
-                  {label}
-                </p>
-                <p className="text-[13px] text-zinc-600 dark:text-zinc-400 leading-relaxed">
-                  {desc}
-                </p>
-              </div>
-            )
-          })}
+      <div id="projects" ref={projectsSectionRef}>
+        {/* Desktop: Orbital timeline */}
+        <div ref={orbitalTimelineRef} className="hidden md:block">
+          <RadialOrbitalTimeline projects={orbitalProjects} />
         </div>
-      </section>
 
-      {/* Mobile: Clean list */}
-      <div className="block md:hidden py-12">
-        <MobileProjectList projects={projects} />
+        {/* Desktop: category captions */}
+        <section className="hidden md:block max-w-4xl mx-auto px-8 pb-20 pt-4">
+          <div className="grid grid-cols-2 gap-x-16 gap-y-10">
+            {Object.entries(CATEGORY_DESCRIPTIONS).map(([key, desc]) => {
+              const label = projects.find(p => p.category === key)?.categoryLabel
+              if (!label) return null
+              return (
+                <div key={key} className="border-l border-zinc-300 dark:border-zinc-700/60 pl-5">
+                  <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-800 dark:text-zinc-300 mb-2">
+                    {label}
+                  </p>
+                  <p className="text-[13px] text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                    {desc}
+                  </p>
+                </div>
+              )
+            })}
+          </div>
+        </section>
+
+        {/* Mobile: Clean list */}
+        <div className="block md:hidden py-12">
+          <MobileProjectList projects={projects} />
+        </div>
       </div>
 
       {/* Footer */}
