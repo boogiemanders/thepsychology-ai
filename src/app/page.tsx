@@ -148,7 +148,61 @@ export default async function Home({
     },
   ]
 
-  const homepageSchemas = [faqJsonLd, educationalOrgJsonLd, courseJsonLd, ...servicesJsonLd]
+  const personJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Anders Chan",
+    honorificSuffix: "PsyD",
+    jobTitle: "Founder",
+    url: `${baseUrl}/about/dr-anders-chan`,
+    worksFor: {
+      "@type": "EducationalOrganization",
+      name: "thePsychology.ai",
+      url: baseUrl,
+    },
+    alumniOf: [
+      { "@type": "CollegeOrUniversity", name: "LIU Post (Long Island University)" },
+      { "@type": "CollegeOrUniversity", name: "UCLA David Geffen School of Medicine" },
+    ],
+    knowsAbout: ["EPPP", "Psychology Licensure", "Clinical Psychology", "Neuropsychology"],
+    description: "Licensed psychologist and founder of thePsychology.ai. Passed the EPPP on his first attempt with a score of 588 after 1 month of preparation. PsyD from LIU Post, postdoctoral training at UCLA David Geffen School of Medicine.",
+  }
+
+  const reviewsJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: "thePsychology.ai EPPP Prep",
+    description: "AI-adaptive EPPP exam prep platform",
+    brand: { "@type": "Brand", name: "thePsychology.ai" },
+    review: [
+      {
+        "@type": "Review",
+        author: { "@type": "Person", name: "Dr. Menon" },
+        reviewBody: "thePsychology.ai is truly one-of-a-kind. It's an innovative, effective, and affordable tool for EPPP preparation. The platform makes dense material feel engaging and manageable.",
+        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      },
+      {
+        "@type": "Review",
+        author: { "@type": "Person", name: "Lorin Singh, PsyD" },
+        reviewBody: "It was pretty helpful and had information that I didn't see in Psych Prep. I did like that I was able to ask questions directly underneath the chapter for explanations.",
+        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      },
+      {
+        "@type": "Review",
+        author: { "@type": "Person", name: "Anonymous User" },
+        reviewBody: "Out of all the programs I looked at, this one comes the closest to how the EPPP actually words its questions. My test didn't have any straight definition questions, it was all application based, and this program is set up the same way.",
+        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      },
+      {
+        "@type": "Review",
+        author: { "@type": "Person", name: "Anonymous User" },
+        reviewBody: "Information like PrepJet, but much easier to digest and at a fraction of the cost. Overall good program and would recommend to peers.",
+        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      },
+    ],
+  }
+
+  const homepageSchemas = [faqJsonLd, educationalOrgJsonLd, courseJsonLd, personJsonLd, reviewsJsonLd, ...servicesJsonLd]
 
   return (
     <>

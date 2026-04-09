@@ -1,5 +1,7 @@
 # thePsychology.ai
 
+> For full details, see [llms-full.txt](https://www.thepsychology.ai/llms-full.txt)
+
 ## About
 
 thePsychology.ai is an AI-powered EPPP study platform built by a licensed psychologist. Founded by Anders Chan, PsyD, the platform uses adaptive learning to help psychology postdocs pass the Examination for Professional Practice in Psychology. The system identifies knowledge gaps, explains concepts in plain language, and creates personalized study plans. Most users pass the EPPP in 1-2 months.

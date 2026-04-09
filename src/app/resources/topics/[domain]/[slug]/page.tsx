@@ -46,8 +46,41 @@ export default async function ResourceTopicPage({ params }: PageProps) {
 
   const { entry, content } = topic
 
+  const learningResourceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    name: entry.topicName,
+    description: getPlainTextExcerpt(content, 175),
+    url: `https://www.thepsychology.ai/resources/topics/${entry.domainDir}/${entry.slug}`,
+    educationalLevel: "Postdoctoral",
+    learningResourceType: "Study Guide",
+    about: {
+      "@type": "Thing",
+      name: entry.domainLabel,
+    },
+    provider: {
+      "@type": "EducationalOrganization",
+      name: "thePsychology.ai",
+      url: "https://www.thepsychology.ai",
+    },
+    isPartOf: {
+      "@type": "Course",
+      name: "EPPP Exam Prep",
+      provider: {
+        "@type": "EducationalOrganization",
+        name: "thePsychology.ai",
+      },
+    },
+    inLanguage: "en",
+    isAccessibleForFree: true,
+  }
+
   return (
     <main className="w-full px-6 py-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(learningResourceJsonLd) }}
+      />
       <div className="mx-auto w-full max-w-3xl space-y-10">
         <header className="space-y-3">
           <p className="text-sm text-muted-foreground">

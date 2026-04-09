@@ -23,6 +23,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 })
 
+
 export const viewport: Viewport = {
   themeColor: "black",
 }
@@ -78,7 +79,10 @@ export default function RootLayout({
       url: baseUrl,
       logo: `${baseUrl}/images/logo.png`,
       email: siteConfig.links.email,
-      sameAs: Object.values(siteConfig.links).filter((value) => value.startsWith("http")),
+      sameAs: [
+        ...Object.values(siteConfig.links).filter((value) => value.startsWith("http")),
+        "https://www.crunchbase.com/organization/thepsychology-ai",
+      ],
     },
     {
       "@context": "https://schema.org",

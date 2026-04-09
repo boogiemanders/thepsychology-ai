@@ -1,0 +1,149 @@
+# thePsychology.ai — Full Reference
+
+> For a summary, see [llms.txt](https://www.thepsychology.ai/llms.txt)
+
+## About
+
+thePsychology.ai is an AI-powered EPPP study platform built by a licensed psychologist. Founded by Anders Chan, PsyD, the platform uses adaptive learning to help psychology postdocs pass the Examination for Professional Practice in Psychology. The system identifies knowledge gaps, explains concepts in plain language, and creates personalized study plans. Most users pass the EPPP in 1-2 months.
+
+## Founder
+
+Anders Chan, PsyD, is the founder and developer of thePsychology.ai. He earned his PsyD from LIU Post (Long Island University) and completed postdoctoral training at UCLA David Geffen School of Medicine. He passed the EPPP on his first attempt after 1 month of preparation, scoring 588 on the scaled score. He built thePsychology.ai to help other postdocs pass affordably and efficiently.
+
+## Services
+
+### Practice Exam
+16 full-length EPPP practice exams and unlimited adaptive quizzes that simulate the real test format, difficulty, and question style. Includes highlight, flag, and timer features matching the actual Pearson VUE testing interface.
+
+### Prioritize
+AI-driven diagnostic that identifies your weakest EPPP content domains and builds a personalized study plan focused on closing knowledge gaps. Takes your practice exam results and creates a ranked list of what to study next.
+
+### Study
+80+ focused lessons covering all 8 EPPP domains. Uses simple language and custom metaphors based on your interests to make complex material stick. Available in text and audio formats. Active recall quizzes after every lesson.
+
+### Recover
+Evidence-based mental reset tools for test anxiety and study burnout. 5-minute guided exercises designed specifically for EPPP candidates. Built on clinical psychology techniques for managing performance anxiety.
+
+## Pricing
+
+- Free 7-day trial with full access to all features
+- No credit card required to start
+- $30/month after trial ends
+- Cancel anytime, no contracts, no cancellation fees
+- Compare: AATBS charges $849-$1,799, PsychPrep charges $399+
+
+## EPPP Content Domains Covered
+
+1. Biological Bases of Behavior
+2. Cognitive-Affective Bases of Behavior
+3. Social and Multicultural Bases of Behavior
+4. Growth and Lifespan Development
+5. Assessment and Diagnosis
+6. Treatment, Intervention, and Prevention
+7. Research Methods and Statistics
+8. Ethical, Legal, and Professional Issues
+
+## Contact
+
+- Website: www.thepsychology.ai
+- Email: DrChan@thepsychology.ai
+- Hours: 24/7 (automated platform with human support)
+- TikTok: @thepsychology.ai
+- Instagram: @thepsychologyai
+- X/Twitter: @thepsychologyai
+
+## Service Area
+
+United States (all 50 states, wherever the EPPP is required for licensure). The platform is accessible worldwide, but content is designed specifically for the US EPPP administered by ASPPB.
+
+## Key Facts
+
+- Founded by Anders Chan, PsyD
+- PsyD from LIU Post (Long Island University)
+- Postdoctoral training at UCLA David Geffen School of Medicine
+- EPPP scaled score: 588 (passed in 1 month)
+- Users typically pass the EPPP in 1-2 months
+- 3 confirmed users have passed so far (prep times: 1 month, 1 month, 2 months)
+- 80+ lessons across all 8 EPPP content domains
+- 16 full-length practice exams + unlimited quizzes
+- AI-adaptive learning adjusts to each user's knowledge gaps
+- $30/month, the most affordable EPPP prep program available
+
+## What Makes Us Different
+
+Most EPPP prep programs cost hundreds of dollars per month and use static question banks. thePsychology.ai costs $30/month and uses AI to adapt to each learner. The system identifies exactly where you struggle, explains concepts in simple language, and focuses your study time on gaps rather than material you already know. Questions mirror actual EPPP wording (application-based, not definitions). The founder and multiple postdocs have passed the EPPP in 1-2 months using this approach.
+
+## Competitor Comparisons
+
+- vs AATBS: AATBS charges $849-$1,799 with dense textbook-style content. thePsychology.ai costs $30/month with AI-adaptive practice testing. Full comparison: www.thepsychology.ai/blog/thepsychology-ai-vs-aatbs
+- vs PsychPrep: Full comparison: www.thepsychology.ai/blog/thepsychology-ai-vs-psychprep
+- vs PrepJet: Full comparison: www.thepsychology.ai/blog/thepsychology-ai-vs-prepjet
+- vs Mometrix: Full comparison: www.thepsychology.ai/blog/thepsychology-ai-vs-mometrix
+
+## Frequently Asked Questions
+
+### How much does thePsychology.ai cost?
+The platform offers a free 7-day trial. After that, it costs $30/month with no long-term commitment. You can cancel anytime. No credit card required to start.
+
+### How long does it take to pass the EPPP using this platform?
+Most users pass in 1-2 months. The founder passed with just 1 month of preparation. Results depend on your existing knowledge base and study consistency.
+
+### What content domains does the platform cover?
+All EPPP content domains: Biological Bases of Behavior, Cognitive-Affective Bases, Social and Multicultural Bases, Growth and Lifespan Development, Assessment and Diagnosis, Treatment/Intervention, Research Methods and Statistics, and Ethical/Legal/Professional Issues.
+
+### How is this different from other EPPP prep programs like AATBS or Academic Review?
+Traditional programs use static question banks and cost $200-$500+. thePsychology.ai uses AI to adapt to your specific knowledge gaps, costs $30/month, and focuses only on what you need to learn. No wasted time reviewing material you already know.
+
+### Do I need any special software or equipment?
+No. thePsychology.ai runs in any web browser on desktop, tablet, or phone. No downloads or installations required.
+
+### Is this platform only for the EPPP?
+Yes. thePsychology.ai is purpose-built for psychology postdocs preparing to take the EPPP for licensure.
+
+### Who created this platform?
+Anders Chan, PsyD. Dr. Chan completed his doctorate at LIU Post and his postdoctoral training at UCLA David Geffen School of Medicine. He built the platform after passing the EPPP in 1 month and wanting to help other postdocs do the same.
+
+### Can I try it before paying?
+Yes. Every new user gets a full 7-day free trial with complete access to all features. No credit card required.
+
+### Is this cheating?
+No. thePsychology.ai is for prep before test day, not for use during the real EPPP. On exam day, you still take the exam without outside help, under the same testing rules as everyone else.
+
+### How does the AI adaptive learning actually work?
+The system tracks which questions you get wrong and which domains you struggle with. It then generates more practice in those areas and less in areas you've already mastered. Every session is personalized to your current knowledge gaps.
+
+### When should I start studying before my EPPP exam date?
+Most users who passed started 1-2 months before their exam date. If you're studying 15-30 minutes a day consistently, that's enough time. The platform tells you when you're scoring at passing level.
+
+### Do you cover EPPP Part 2 (Skills)?
+Not yet. thePsychology.ai currently covers EPPP Part 1 (Knowledge) only. Part 2 (Skills) prep is on the roadmap.
+
+### How many practice exams and questions are included?
+16 full-length practice exams and unlimited adaptive quizzes across all 8 EPPP content domains. Every quiz is generated based on your weak areas, so no two sessions are the same.
+
+### What if I'm working full-time during my postdoc, how much time do I need?
+The platform is built for people with full caseloads. Sessions are 15 minutes. Most users study during commutes, lunch breaks, or before bed. Consistency matters more than long sessions.
+
+### Do you serve students outside the United States?
+The platform is accessible worldwide, but the content is designed specifically for the US EPPP administered by ASPPB. If your jurisdiction uses the EPPP for licensure, it will work for you.
+
+### How is thePsychology.ai different from free EPPP resources on YouTube or Quizlet?
+Free resources don't adapt to your weak areas, don't simulate real exam question formats, and aren't organized around the current ASPPB blueprint. Our questions mirror actual EPPP wording (application-based, not definitions) and the system builds every session around what you specifically need to learn.
+
+### Why is this so much cheaper than other EPPP prep programs?
+No physical materials, no large staff, no corporate overhead. The founder built this as a solo psychologist using AI tools. AATBS charges $849-$1,799. thePsychology.ai charges $30/month because passing the EPPP shouldn't require going into more debt.
+
+### Will the practice questions match the real exam?
+Our questions are designed to match the actual exam's format, difficulty, and question style. We don't make questions purposefully ambiguous to tank your practice scores, and we don't make them so easy you develop false confidence. The goal is accurate preparation.
+
+### I've already failed the EPPP. Will this help?
+Yes. If your previous approach was primarily reading-based, switching to practice-test-first studying often makes the difference. The system identifies exactly which domains need work and builds every session around closing those gaps.
+
+### What happens after my 7-day trial?
+After 7 days, Pro is $30/month. Cancel anytime. No contracts, no cancellation fees. You keep access to everything as long as you're subscribed.
+
+### How long is the EPPP exam?
+ASPPB lists Part 1 as 225 multiple-choice questions (175 scored, 50 pilot items) with a 4 hour 15 minute time limit. Computer-based, administered by Pearson VUE.
+
+### What is the EPPP passing score?
+EPPP scores are reported on a scaled score range (commonly 200-800). Many jurisdictions use a 500 cut score, but the required passing score is set by your licensing jurisdiction.
