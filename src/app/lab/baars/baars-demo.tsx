@@ -13,7 +13,6 @@ import {
   TooltipTrigger,
 } from '@/components/ui/tooltip'
 import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from '@/components/ui/sheet'
-import { Accordion, AccordionContent, AccordionItem } from '@/components/ui/accordion'
 import { cn } from '@/lib/utils'
 import {
   BAARS_NORM_CITATION,
@@ -368,28 +367,100 @@ function formatReportList(items: string[]): string {
   return `${items.slice(0, -1).join(', ')}, and ${items[items.length - 1]}`
 }
 
-function formatCriterionEvidence(
-  instrument: InstrumentDefinition,
+function lowercaseFirst(text: string): string {
+  if (!text) return text
+  return `${text.charAt(0).toLowerCase()}${text.slice(1)}`
+}
+
+function formatSymptomPhrase(prompt: string): string {
+  const trimmed = prompt.trim().replace(/[.:;!?]+$/, '')
+
+  return lowercaseFirst(
+    trimmed
+      .replace(/^don['’]t listen when spoken to directly$/i, 'not listening when spoken to directly')
+      .replace(/^didn['’]t listen when spoken to directly$/i, 'not listening when spoken to directly')
+      .replace(/^don['’]t follow through on instructions and fail to finish work or chores$/i, 'not following through on instructions and failing to finish work or chores')
+      .replace(/^didn['’]t follow through on instructions and failed to finish work or chores$/i, 'not following through on instructions and failing to finish work or chores')
+      .replace(/^avoid, dislike, or am reluctant to engage in tasks that require sustained mental effort$/i, 'avoiding or disliking tasks that require sustained mental effort')
+      .replace(/^avoided, disliked, or was reluctant to engage in tasks that required sustained mental effort$/i, 'avoiding or disliking tasks that required sustained mental effort')
+      .replace(/^have difficulty engaging in leisure activities quietly \(feel uncomfortable, or am loud or noisy\)$/i, 'having difficulty doing leisure activities quietly')
+      .replace(/^had difficulty engaging in leisure activities quietly \(felt uncomfortable, or was loud or noisy\)$/i, 'having difficulty doing leisure activities quietly')
+      .replace(/^i am ["“]on the go["”] or act as if ["“]driven by a motor["”].*$/i, 'being "on the go" or acting as if "driven by a motor"')
+      .replace(/^was ["“]on the go["”] or acted as if ["“]driven by a motor["”]$/i, 'being "on the go" or acting as if "driven by a motor"')
+      .replace(/^talk(?:ed)? excessively(?: \(in social situations\))?$/i, 'talking excessively')
+      .replace(/^blurt(?:ed)? out answers before questions (?:have|had) been completed, complete(?:d)? others['’] sentences, or jump(?:ed)? the gun$/i, "blurting out answers before questions are finished, completing others' sentences, or jumping the gun")
+      .replace(/^interrupt(?:ed)? or intrud(?:e|ed) on others .*$/i, 'interrupting or intruding on others')
+      .replace(/^fidget(?:ed)? with hands or feet or squirm(?:ed)? in seat$/i, 'fidgeting with hands or feet or squirming in seat')
+      .replace(/^shift(?:ed)? around excessively or feel(?:t)? restless or hemmed in$/i, 'shifting around excessively or feeling restless or hemmed in')
+      .replace(/^prone to daydreaming when i should be concentrating on something or working$/i, 'daydreaming when attention should be on a task or work')
+      .replace(/^i don['’]t seem to process information as quickly or as accurately as others$/i, 'processing information more slowly or less accurately than others')
+      .replace(/^I\s+/i, '')
+      .replace(/\bmy\b\s+/gi, '')
+      .replace(/^don['’]t\s+/i, 'not ')
+      .replace(/^doesn['’]t\s+/i, 'not ')
+      .replace(/^didn['’]t\s+/i, 'not ')
+      .replace(/^have difficulty\s+/i, 'having difficulty ')
+      .replace(/^have trouble\s+/i, 'having trouble ')
+      .replace(/^had difficulty\s+/i, 'having difficulty ')
+      .replace(/^had trouble\s+/i, 'having trouble ')
+      .replace(/^fail to\s+/i, 'failing to ')
+      .replace(/^failed to\s+/i, 'failing to ')
+      .replace(/^avoid\s+/i, 'avoiding ')
+      .replace(/^avoided\s+/i, 'avoiding ')
+      .replace(/^lose\s+/i, 'losing ')
+      .replace(/^lost\s+/i, 'losing ')
+      .replace(/^was easily distracted by\s+/i, 'easily distracted by ')
+      .replace(/^was forgetful in\s+/i, 'forgetful in ')
+      .replace(/^am\s+/i, 'being ')
+      .replace(/^was\s+/i, 'being ')
+      .replace(/^feel\s+/i, 'feeling ')
+      .replace(/^felt\s+/i, 'feeling ')
+      .replace(/^fidget\s+/i, 'fidgeting ')
+      .replace(/^fidgeted\s+/i, 'fidgeting ')
+      .replace(/^leave\s+/i, 'leaving ')
+      .replace(/^left\s+/i, 'leaving ')
+      .replace(/^shift\s+/i, 'shifting ')
+      .replace(/^shifted\s+/i, 'shifting ')
+      .replace(/^run about\s+/i, 'running about ')
+      .replace(/^run around\s+/i, 'running around ')
+      .replace(/^talk excessively\s*/i, 'talking excessively')
+      .replace(/^talked\s+/i, 'talking ')
+      .replace(/^interrupt\s+/i, 'interrupting ')
+      .replace(/^interrupted\s+/i, 'interrupting ')
+      .replace(/^blurt out\s+/i, 'blurting out ')
+      .replace(/^blurted out\s+/i, 'blurting out ')
+      .replace(/^blurts out\s+/i, 'blurting out ')
+  )
+}
+
+function joinNarrativeClauses(clauses: string[]): string {
+  if (clauses.length === 0) return ''
+  if (clauses.length === 1) return clauses[0]
+  if (clauses.length === 2) return `${clauses[0]}, and ${clauses[1]}`
+  return `${clauses.slice(0, -1).join(', ')}, and ${clauses[clauses.length - 1]}`
+}
+
+function hasEndorsedCriterionEvidence(
   answers: Record<string, QuestionValue>,
   questionIds: string[],
-): string[] {
-  return questionIds.flatMap(questionId => {
+): boolean {
+  return questionIds.some(questionId => {
     const value = answers[questionId]
-    if (typeof value !== 'string' || Number(value) < 3) return []
-
-    const question = getQuestionById(instrument, questionId)
-    if (!question) return []
-
-    const responseLabel = instrument.responseScale?.find(option => option.value === value)?.label ?? value
-    return [`Item ${question.number} (${responseLabel})`]
+    return typeof value === 'string' && Number(value) >= 3
   })
+}
+
+function formatPossessiveName(name: string): string {
+  const trimmed = name.trim()
+  if (!trimmed) return "the respondent's"
+  return /s$/i.test(trimmed) ? `${trimmed}'` : `${trimmed}'s`
 }
 
 function buildEndorsedSymptomsSection(
   instrument: InstrumentDefinition,
   answers: Record<string, QuestionValue>,
 ): string | null {
-  const groupedSymptoms = new Map<string, string[]>()
+  const groupedSymptoms = new Map<string, Map<string, string[]>>()
 
   for (const section of instrument.sections) {
     if (section.id === 'follow_up') continue
@@ -405,31 +476,40 @@ function buildEndorsedSymptomsSection(
 
       const dsmCriterion = DSM_CRITERION_MAP[question.id]
       const domain = dsmCriterion?.domain ?? fallbackDomain
-      const responseLabel = instrument.responseScale?.find(option => option.value === value)?.label ?? value
-      const criterionLabel = dsmCriterion ? ` (${dsmCriterion.code})` : ''
-      const line = `Item ${question.number}${criterionLabel}, "${question.prompt}" (${responseLabel})`
+      const responseLabel = (instrument.responseScale?.find(option => option.value === value)?.label ?? value).toLowerCase()
+      const line = formatSymptomPhrase(question.prompt)
 
-      if (groupedSymptoms.has(domain)) {
-        groupedSymptoms.get(domain)?.push(line)
-      } else {
-        groupedSymptoms.set(domain, [line])
-      }
+      const domainMap = groupedSymptoms.get(domain) ?? new Map<string, string[]>()
+      const responseLines = domainMap.get(responseLabel) ?? []
+      responseLines.push(line)
+      domainMap.set(responseLabel, responseLines)
+      groupedSymptoms.set(domain, domainMap)
     }
   }
 
   if (groupedSymptoms.size === 0) return null
 
-  const groupedNarrative = Array.from(groupedSymptoms.entries()).map(([domain, items]) => {
-    const lead = domain === 'Inattention (A1)'
-      ? 'Inattention symptoms rated this high included'
-      : domain === 'Hyperactivity-Impulsivity (A2)'
-        ? 'Hyperactivity-impulsivity symptoms rated this high included'
-        : 'Sluggish cognitive tempo symptoms rated this high included'
+  const responseOrder = ['very often', 'often']
 
-    return `${lead} ${formatReportList(items)}.`
+  const groupedNarrative = Array.from(groupedSymptoms.entries()).map(([domain, responseGroups]) => {
+    const lead = domain === 'Inattention (A1)'
+      ? instrument.id === 'baars_iv_self_report_childhood_symptoms'
+        ? 'Respondent described childhood inattention symptoms including'
+        : 'Respondent reported inattention symptoms including'
+      : domain === 'Hyperactivity-Impulsivity (A2)'
+        ? instrument.id === 'baars_iv_self_report_childhood_symptoms'
+          ? 'Respondent described childhood hyperactivity and impulsivity symptoms including'
+          : 'Respondent reported hyperactivity and impulsivity symptoms including'
+        : 'Respondent reported sluggish cognitive tempo symptoms including'
+
+    const clauses = responseOrder
+      .filter(responseLabel => (responseGroups.get(responseLabel) ?? []).length > 0)
+      .map(responseLabel => `${formatReportList(responseGroups.get(responseLabel) ?? [])} ${responseLabel}`)
+
+    return `${lead} ${joinNarrativeClauses(clauses)}.`
   })
 
-  return `Symptoms rated "Often" or "Very Often" were strongest in these areas. ${groupedNarrative.join(' ')}`
+  return groupedNarrative.join(' ')
 }
 
 function buildSctCriteriaSummary(
@@ -444,10 +524,9 @@ function buildSctCriteriaSummary(
   for (const criterion of SCT_CDS_CRITERIA) {
     if (criterion.coverage === 'not_assessed') continue
 
-    const evidence = formatCriterionEvidence(instrument, answers, criterion.questionIds)
-    if (evidence.length === 0) continue
+    if (!hasEndorsedCriterionEvidence(answers, criterion.questionIds)) continue
 
-    const detail = `${criterion.reportLabel} (${formatReportList(evidence)})`
+    const detail = criterion.reportLabel
     const bucket = criterion.coverage === 'direct' ? directByDimension : partialByDimension
     const currentItems = bucket.get(criterion.dimension) ?? []
     currentItems.push(detail)
@@ -497,6 +576,7 @@ function buildCurrentCriteriaSuggestion(
   scores: ComputedGroupScore[],
   answers: Record<string, QuestionValue>,
   age: number | null,
+  respondentName: string,
 ): string | null {
   const inattentionCount = getScoreById(scores, 'inattention_symptom_count')
   const hyperImpCount = getScoreById(scores, 'hyperactivity_impulsivity_symptom_count')
@@ -513,9 +593,10 @@ function buildCurrentCriteriaSuggestion(
   const settingsMet = settings.length > 0 ? settings.length >= 2 : null
   const settingsText = formatSelectedOptionLabels(instrument, 'q30', answers.q30)
   const durationText = adhdCriteria.durationRequirement ? `${adhdCriteria.durationRequirement.toLowerCase()}` : 'at least 6 months'
+  const reportLead = `According to the DSM-5-TR, ${formatPossessiveName(respondentName)} self-report`
 
   if (!presentation) {
-    return `DSM-5 screening suggestion: current self-report does not reach the ${adhdCriteria.disorderName} symptom threshold on this administration (${threshold}+ symptoms in either the inattention or hyperactivity-impulsivity domain for this age band).`
+    return `${reportLead} does not reach the ${adhdCriteria.disorderName} symptom threshold on this administration (${threshold}+ symptoms in either the inattention or hyperactivity-impulsivity domain for this age band).`
   }
 
   const missingParts: string[] = []
@@ -535,10 +616,10 @@ function buildCurrentCriteriaSuggestion(
   }
 
   if (missingParts.length === 0) {
-    return `DSM-5 screening suggestion: current self-report is consistent with ${adhdCriteria.disorderName}, ${presentation} presentation, because the symptom threshold is met (${threshold}+ symptoms for this age band), the rating window reflects ${durationText}, onset was reported by age 12, and impairment was endorsed in ${settings.length} settings${settingsText ? ` (${settingsText})` : ''}. Exclusion review is still required, so this remains a screening inference rather than a standalone diagnosis.`
+    return `${reportLead} is consistent with ${adhdCriteria.disorderName}, ${presentation} presentation, because the symptom threshold is met (${threshold}+ symptoms for this age band), the rating window reflects ${durationText}, onset was reported by age 12, and impairment was endorsed in ${settings.length} settings${settingsText ? ` (${settingsText})` : ''}. Exclusion review is still required, so this remains a screening inference rather than a standalone diagnosis.`
   }
 
-  return `DSM-5 screening suggestion: current self-report reaches the ${adhdCriteria.disorderName} symptom threshold for ${presentation} presentation, but this form does not fully establish ${missingParts.join(' and ')}. The DSM duration window is ${durationText}, and final diagnosis still requires exclusion review and clinical rule-outs.`
+  return `${reportLead} reaches the ${adhdCriteria.disorderName} symptom threshold for ${presentation} presentation, but this form does not fully establish ${missingParts.join(' and ')}. The DSM duration window is ${durationText}, and final diagnosis still requires exclusion review and clinical rule-outs.`
 }
 
 function buildChildhoodCriteriaSuggestion(
@@ -546,6 +627,7 @@ function buildChildhoodCriteriaSuggestion(
   instrument: InstrumentDefinition,
   scores: ComputedGroupScore[],
   answers: Record<string, QuestionValue>,
+  respondentName: string,
 ): string | null {
   const inattentionCount = getScoreById(scores, 'inattention_symptom_count')
   const hyperImpCount = getScoreById(scores, 'hyperactivity_impulsivity_symptom_count')
@@ -559,16 +641,17 @@ function buildChildhoodCriteriaSuggestion(
   const settings = Array.isArray(answers.q20) ? answers.q20 : []
   const settingsMet = settings.length > 0 ? settings.length >= 2 : null
   const settingsText = formatSelectedOptionLabels(instrument, 'q20', answers.q20)
+  const reportLead = `According to the DSM-5-TR, ${formatPossessiveName(respondentName)} self-report`
 
   if (!presentation) {
-    return `DSM-5 screening suggestion: retrospective childhood ratings do not reach the ${adhdCriteria.disorderName} childhood symptom threshold on this administration (${threshold}+ symptoms in either domain).`
+    return `${reportLead} of childhood symptoms does not reach the ${adhdCriteria.disorderName} childhood symptom threshold on this administration (${threshold}+ symptoms in either domain).`
   }
 
   if (settingsMet === true) {
-    return `DSM-5 screening suggestion: retrospective childhood ratings suggest the childhood symptom threshold is met for ${adhdCriteria.disorderName}, ${presentation} presentation, with impairment endorsed in ${settings.length} settings${settingsText ? ` (${settingsText})` : ''}. This form still does not independently confirm ${adhdCriteria.durationRequirement?.toLowerCase() ?? 'the full DSM duration requirement'} or current adult persistence.`
+    return `${reportLead} of childhood symptoms suggests the childhood symptom threshold is met for ${adhdCriteria.disorderName}, ${presentation} presentation, with impairment endorsed in ${settings.length} settings${settingsText ? ` (${settingsText})` : ''}. This form still does not independently confirm ${adhdCriteria.durationRequirement?.toLowerCase() ?? 'the full DSM duration requirement'} or current adult persistence.`
   }
 
-  return `DSM-5 screening suggestion: retrospective childhood ratings reach the childhood symptom threshold for ${adhdCriteria.disorderName}, ${presentation} presentation, but cross-setting impairment is not fully documented on this form. This form also does not independently confirm ${adhdCriteria.durationRequirement?.toLowerCase() ?? 'the full DSM duration requirement'} or current adult persistence.`
+  return `${reportLead} of childhood symptoms reaches the childhood symptom threshold for ${adhdCriteria.disorderName}, ${presentation} presentation, but cross-setting impairment is not fully documented on this form. This form also does not independently confirm ${adhdCriteria.durationRequirement?.toLowerCase() ?? 'the full DSM duration requirement'} or current adult persistence.`
 }
 
 function buildScoreTableRows(
@@ -680,7 +763,7 @@ function buildCurrentNarrative(
   const counts = `At the DSM symptom-count threshold (items rated "Often" or "Very Often"), ${pronounLower} endorsed ${inattCount?.value ?? 0}/9 inattention symptoms and ${hyperImpCount.value}/9 hyperactivity-impulsivity symptoms (${totalSymptomCount.value}/18 total).`
   const endorsedSymptoms = buildEndorsedSymptomsSection(instrument, answers)
   const sctCriteriaSummary = buildSctCriteriaSummary(instrument, answers)
-  const criteriaSuggestion = buildCurrentCriteriaSuggestion(adhdCriteria, instrument, scores, answers, age)
+  const criteriaSuggestion = buildCurrentCriteriaSuggestion(adhdCriteria, instrument, scores, answers, age, name)
 
   const followUpParts: string[] = []
   if (followUpPositive === 'yes') {
@@ -745,7 +828,7 @@ function buildChildhoodNarrative(
   const subscales = `On the retrospective childhood symptom items, ${pronounLower} obtained the following raw scores: Inattention (${fmt(inattention)}) and Hyperactivity-Impulsivity (${fmt(hyperImp)}). ${possessive} Total ADHD raw score was ${fmt(totalAdhd)}.`
   const counts = `At the DSM symptom-count threshold (items rated "Often" or "Very Often"), ${pronounLower} endorsed ${inattCount.value}/9 inattention symptoms and ${hyperImpCount.value}/9 hyperactivity-impulsivity symptoms (${totalSymptomCount.value}/18 total).`
   const endorsedSymptoms = buildEndorsedSymptomsSection(instrument, answers)
-  const criteriaSuggestion = buildChildhoodCriteriaSuggestion(adhdCriteria, instrument, scores, answers)
+  const criteriaSuggestion = buildChildhoodCriteriaSuggestion(adhdCriteria, instrument, scores, answers, name)
 
   const followUpParts: string[] = []
   if (followUpPositive === 'yes') {
@@ -1273,36 +1356,28 @@ export function BaarsDemo({
               </div>
             )}
 
-            <Accordion type="single" collapsible value={isCollapsed ? undefined : section.id}>
-              <AccordionItem value={section.id} className="border-none">
-                <AccordionContent className="pb-0">
-                  <div className="flex items-center justify-between mb-6">
-                    <h2 className="text-xs font-medium uppercase tracking-[0.15em] text-zinc-900 dark:text-zinc-100">
-                      {section.title}
-                    </h2>
-                    <p className="text-[11px] font-mono text-zinc-400 dark:text-zinc-500">
-                      {section.questions.filter(q => typeof answers[q.id] === 'string' && answers[q.id] !== '').length}/{section.questions.length}
-                    </p>
-                  </div>
-                  <div className="hidden rounded-xl border border-zinc-200 dark:border-zinc-800 md:block">
+            {!isCollapsed && (
+              <div>
+                <div className="flex items-center justify-between mb-4">
+                  <h2 className="text-xs font-medium uppercase tracking-[0.15em] text-zinc-900 dark:text-zinc-100">
+                    {section.title}
+                  </h2>
+                  <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-zinc-400 dark:text-zinc-500">
+                    {section.questions.filter(q => typeof answers[q.id] === 'string' && answers[q.id] !== '').length}/{section.questions.length}
+                  </p>
+                </div>
+                <div className="hidden md:block border-y border-zinc-200 dark:border-zinc-800/70">
                     <div
-                      className="sticky z-30 grid grid-cols-[minmax(0,1fr)_84px_84px_84px_84px] border-b border-zinc-200 bg-transparent dark:border-zinc-800"
+                      className="sticky z-30 grid grid-cols-[minmax(0,1fr)_96px_96px_96px_96px] border-b border-zinc-200 bg-white/90 backdrop-blur-md supports-[backdrop-filter]:bg-white/75 dark:border-zinc-800/70 dark:bg-zinc-950/90 dark:supports-[backdrop-filter]:bg-zinc-950/75"
                       style={{ top: DESKTOP_STICKY_SCALE_TOP }}
                     >
-                      <div className="flex min-h-[36px] flex-col items-start justify-center gap-0 px-4">
-                        <span className="text-[11px] font-medium uppercase tracking-[0.12em] text-zinc-400 dark:text-zinc-500">
-                          Item
-                        </span>
-                        <span className="font-mono text-[8px] uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400">
-                          Keys 1-4
-                        </span>
-                      </div>
+                      <div className="min-h-[36px]" />
                       {responseScale.map(opt => (
                         <div
                           key={opt.value}
-                          className="flex min-h-[36px] items-center justify-center border-l border-zinc-200 px-2 text-center dark:border-zinc-800"
+                          className="flex min-h-[36px] items-center justify-center px-2"
                         >
-                          <span className="font-mono text-[14px] leading-none text-zinc-900 dark:text-zinc-100">
+                          <span className="font-mono text-[11px] uppercase tracking-[0.12em] text-zinc-400 dark:text-zinc-500">
                             {opt.value}
                           </span>
                         </div>
@@ -1318,19 +1393,18 @@ export function BaarsDemo({
                             onClick={() => setActiveQuestionId(question.id)}
                             style={{ scrollMarginTop: desktopQuestionScrollMargin }}
                             className={cn(
-                              'relative grid grid-cols-[minmax(0,1fr)_84px_84px_84px_84px] border-b border-zinc-100 transition-all duration-200 ease-out last:border-b-0 dark:border-zinc-800/70 scroll-mt-28',
-                              isActive && 'bg-zinc-50 dark:bg-zinc-900/50',
+                              'group relative grid grid-cols-[minmax(0,1fr)_96px_96px_96px_96px] items-center border-b border-dashed border-zinc-100 last:border-b-0 dark:border-zinc-900 transition-colors duration-150 hover:bg-zinc-50/40 dark:hover:bg-zinc-900/30 scroll-mt-28',
                             )}
                           >
                             {isActive && (
-                              <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-zinc-900 dark:bg-zinc-100 origin-top animate-[scaleY_180ms_ease-out]" />
+                              <div className="absolute left-0 top-1.5 bottom-1.5 w-px bg-zinc-900 dark:bg-zinc-100" />
                             )}
-                            <div className="flex items-start gap-3 px-4 py-3">
-                              <span className="pt-0.5 font-mono text-[11px] text-zinc-300 dark:text-zinc-600">
+                            <div className="flex items-start gap-3 px-5 py-4">
+                              <span className="pt-0.5 font-mono text-[10px] uppercase tracking-[0.1em] text-zinc-300 dark:text-zinc-600">
                                 {question.number}.
                               </span>
                               <div className="min-w-0">
-                                <p className="text-[13px] leading-relaxed text-zinc-700 dark:text-zinc-300">
+                                <p className="text-[13.5px] leading-[1.55] text-zinc-600 dark:text-zinc-300">
                                   {question.prompt}
                                 </p>
                               </div>
@@ -1346,15 +1420,21 @@ export function BaarsDemo({
                                     selectSymptomAnswer(question.id, opt.value)
                                   }}
                                   className={cn(
-                                    'border-l border-zinc-100 px-1 text-center text-[11px] font-medium leading-tight transition-all duration-100 dark:border-zinc-800/70 active:scale-[0.97]',
-                                    isSelected
-                                      ? 'bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-900'
-                                      : 'text-zinc-400 hover:bg-zinc-100 hover:text-zinc-900 dark:text-zinc-500 dark:hover:bg-zinc-900 dark:hover:text-zinc-100',
+                                    'flex items-center justify-center px-2 py-3 transition-colors duration-100 active:scale-[0.97]',
                                   )}
                                   aria-pressed={isSelected}
                                   aria-label={`Set question ${question.number} to ${opt.label}`}
                                 >
-                                  {opt.label}
+                                  <span
+                                    className={cn(
+                                      'inline-flex min-h-[28px] w-full items-center justify-center rounded-md border px-2 text-[11px] leading-tight transition-all duration-150',
+                                      isSelected
+                                        ? 'border-zinc-900 text-zinc-900 font-medium dark:border-zinc-100 dark:text-zinc-100'
+                                        : 'border-transparent text-zinc-400 hover:border-zinc-200 hover:text-zinc-900 dark:text-zinc-500 dark:hover:border-zinc-800 dark:hover:text-zinc-100',
+                                    )}
+                                  >
+                                    {opt.label}
+                                  </span>
                                 </button>
                               )
                             })}
@@ -1412,9 +1492,8 @@ export function BaarsDemo({
                       )
                     })}
                   </div>
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
+              </div>
+            )}
           </motion.section>
         )
       })}
