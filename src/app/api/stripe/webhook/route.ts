@@ -431,8 +431,8 @@ export async function POST(request: Request) {
         }
       }
 
-      // Atomically look up user name and interest in a single query
-      let userInterest: string | null = null
+      // Look up user name and recent topic for personalization
+      let recentTopic: string | null = null
       let firstName: string | null = null
       if (stripeCustomerId) {
         try {
@@ -440,15 +440,19 @@ export async function POST(request: Request) {
           if (supabase) {
             const { data: userData } = await supabase
               .from('users')
-              .select('full_name, user_current_interest(interest)')
+              .select('id, full_name')
               .eq('stripe_customer_id', stripeCustomerId)
               .single()
             if (userData) {
               firstName = userData.full_name?.split(' ')[0] ?? null
-              const interestRows = userData.user_current_interest
-              userInterest = Array.isArray(interestRows)
-                ? (interestRows[0]?.interest ?? null)
-                : ((interestRows as { interest?: string } | null)?.interest ?? null)
+              const { data: topicRow } = await supabase
+                .from('topic_mastery')
+                .select('topic')
+                .eq('user_id', userData.id)
+                .order('last_attempted', { ascending: false, nullsFirst: false })
+                .limit(1)
+                .single()
+              recentTopic = topicRow?.topic ?? null
             }
           }
         } catch (userErr) {
@@ -459,17 +463,16 @@ export async function POST(request: Request) {
       // Send customer-facing email
       if (customerEmail !== 'Unknown' && isNotificationEmailConfigured(customerEmail)) {
         const greeting = firstName ? `Hi ${firstName},` : 'Hi,'
-        const interestLine = userInterest
-          ? `<p>We know you've been using thePsychology.ai to explore topics connected to <strong>${userInterest}</strong>, and we'd hate for you to lose access.</p>`
+        const topicLine = recentTopic
+          ? `<p>Your lessons on <strong>${recentTopic}</strong> have been tailored to your interests. We'd love to keep that going.</p>`
           : ''
 
         const html = `
 <p>${greeting}</p>
-<p>We weren't able to process your payment for your <strong>thePsychology.ai Pro</strong> subscription.</p>
-${interestLine}
-<p>To keep your Pro access, please update your payment method within the next 7 days:</p>
+<p>We weren't able to process your payment for your <strong>thePsychology.ai Pro</strong> subscription. You have 7 days to update your payment method before your account is downgraded to the free plan.</p>
+${topicLine}
+<p>To keep your Pro access, please update your payment method:</p>
 <p><a href="${portalUrl}" style="display:inline-block;padding:10px 20px;background:#000;color:#fff;text-decoration:none;border-radius:6px;font-weight:bold;">Update Payment Method</a></p>
-<p>After 7 days without a successful payment, your account will be automatically downgraded to the free plan.</p>
 <p>This is an automated message. If you have any questions, you can reply to this email and Anders will get back to you.</p>
 <p>The thePsychology.ai Team</p>
 `.trim()
@@ -477,15 +480,13 @@ ${interestLine}
         const text = [
           greeting,
           '',
-          "We weren't able to process your payment for your thePsychology.ai Pro subscription.",
-          ...(userInterest
-            ? [`We know you've been using thePsychology.ai to explore topics connected to ${userInterest}, and we'd hate for you to lose access.`]
+          "We weren't able to process your payment for your thePsychology.ai Pro subscription. You have 7 days to update your payment method before your account is downgraded to the free plan.",
+          ...(recentTopic
+            ? [`Your lessons on ${recentTopic} have been tailored to your interests. We'd love to keep that going.`]
             : []),
           '',
-          'To keep your Pro access, please update your payment method within the next 7 days:',
+          'To keep your Pro access, please update your payment method:',
           portalUrl,
-          '',
-          'After 7 days without a successful payment, your account will be automatically downgraded to the free plan.',
           '',
           'This is an automated message. If you have any questions, you can reply to this email and Anders will get back to you.',
           '',
@@ -494,6 +495,7 @@ ${interestLine}
 
         await sendNotificationEmail({
           to: customerEmail,
+          cc: 'DrChan@thepsychology.ai',
           subject: 'Action required: Payment failed for your thePsychology.ai Pro subscription',
           text,
           html,

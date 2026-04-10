@@ -3,6 +3,7 @@ type SendEmailArgs = {
   text: string
   html?: string
   to?: string | string[]
+  cc?: string | string[]
 }
 
 const RESEND_API_KEY = process.env.RESEND_API_KEY
@@ -16,7 +17,7 @@ export function isNotificationEmailConfigured(toOverride?: string | string[]): b
   return Boolean(RESEND_API_KEY && resolvedTo && NOTIFY_EMAIL_FROM)
 }
 
-export async function sendNotificationEmail({ subject, text, html, to }: SendEmailArgs): Promise<void> {
+export async function sendNotificationEmail({ subject, text, html, to, cc }: SendEmailArgs): Promise<void> {
   const resolvedTo = to ?? NOTIFY_EMAIL_TO
 
   if (!RESEND_API_KEY || !resolvedTo || !NOTIFY_EMAIL_FROM) {
@@ -34,6 +35,7 @@ export async function sendNotificationEmail({ subject, text, html, to }: SendEma
     body: JSON.stringify({
       from: NOTIFY_EMAIL_FROM,
       to: toList,
+      ...(cc ? { cc: Array.isArray(cc) ? cc : [cc] } : {}),
       subject,
       text,
       html: html || text.replace(/\n/g, '<br/>'),

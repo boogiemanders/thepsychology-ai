@@ -58,9 +58,11 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Cancel immediately in Stripe — this triggers customer.subscription.deleted webhook
-    // which the existing handler uses to downgrade the user in the DB
-    await stripe.subscriptions.cancel(subscription.id)
+    // Schedule cancellation in 7 days — gives the customer a grace period to update payment.
+    // When the date arrives, Stripe fires customer.subscription.deleted and the existing
+    // webhook handler downgrades the user in the DB.
+    const cancelAt = Math.floor(Date.now() / 1000) + 7 * 24 * 60 * 60
+    await stripe.subscriptions.update(subscription.id, { cancel_at: cancelAt })
 
     // Generate billing portal URL for the email
     let portalUrl = 'https://thepsychology.ai'
@@ -74,36 +76,40 @@ export async function POST(request: NextRequest) {
       // Portal not configured — fall back to site URL
     }
 
-    // Atomically look up user name and interest in a single query
-    let userInterest: string | null = null
+    // Look up user name and recent topic
+    let recentTopic: string | null = null
     let firstName: string | null = null
     const { data: dbUser } = await supabase
       .from('users')
-      .select('full_name, user_current_interest(interest)')
+      .select('id, full_name')
       .eq('email', email)
       .single()
 
     if (dbUser) {
       firstName = dbUser.full_name?.split(' ')[0] ?? null
-      const interestRows = dbUser.user_current_interest
-      userInterest = Array.isArray(interestRows)
-        ? (interestRows[0]?.interest ?? null)
-        : ((interestRows as { interest?: string } | null)?.interest ?? null)
+      const { data: topicRow } = await supabase
+        .from('topic_mastery')
+        .select('topic')
+        .eq('user_id', dbUser.id)
+        .order('last_attempted', { ascending: false, nullsFirst: false })
+        .limit(1)
+        .single()
+      recentTopic = topicRow?.topic ?? null
     }
 
     // Send customer-facing email
     if (sendEmail && isNotificationEmailConfigured(email)) {
       const greeting = firstName ? `Hi ${firstName},` : 'Hi,'
-      const interestLine = userInterest
-        ? `<p>We know you've been using thePsychology.ai to explore topics connected to <strong>${userInterest}</strong>, and we'd hate to lose you.</p>`
+      const topicLine = recentTopic
+        ? `<p>Your lessons on <strong>${recentTopic}</strong> have been tailored to your interests. We'd love to keep that going.</p>`
         : ''
 
       const html = `
 <p>${greeting}</p>
-<p>We weren't able to process your payment for your <strong>thePsychology.ai Pro</strong> subscription, so your account has been downgraded to the free plan.</p>
-${interestLine}
-<p>If you'd like to reactivate your Pro access, you can update your payment method and resubscribe:</p>
-<p><a href="${portalUrl}" style="display:inline-block;padding:10px 20px;background:#000;color:#fff;text-decoration:none;border-radius:6px;font-weight:bold;">Manage Billing</a></p>
+<p>We weren't able to process your payment for your <strong>thePsychology.ai Pro</strong> subscription. You have 7 days to update your payment method before your account is downgraded to the free plan.</p>
+${topicLine}
+<p>To keep your Pro access, please update your payment method:</p>
+<p><a href="${portalUrl}" style="display:inline-block;padding:10px 20px;background:#000;color:#fff;text-decoration:none;border-radius:6px;font-weight:bold;">Update Payment Method</a></p>
 <p>This is an automated message. If you have any questions, you can reply to this email and Anders will get back to you.</p>
 <p>The thePsychology.ai Team</p>
 `.trim()
@@ -111,12 +117,12 @@ ${interestLine}
       const text = [
         greeting,
         '',
-        "We weren't able to process your payment for your thePsychology.ai Pro subscription, so your account has been downgraded to the free plan.",
-        ...(userInterest
-          ? [`We know you've been using thePsychology.ai to explore topics connected to ${userInterest}, and we'd hate to lose you.`]
+        "We weren't able to process your payment for your thePsychology.ai Pro subscription. You have 7 days to update your payment method before your account is downgraded to the free plan.",
+        ...(recentTopic
+          ? [`Your lessons on ${recentTopic} have been tailored to your interests. We'd love to keep that going.`]
           : []),
         '',
-        "If you'd like to reactivate your Pro access, you can update your payment method and resubscribe:",
+        'To keep your Pro access, please update your payment method:',
         portalUrl,
         '',
         'This is an automated message. If you have any questions, you can reply to this email and Anders will get back to you.',
@@ -126,7 +132,8 @@ ${interestLine}
 
       await sendNotificationEmail({
         to: email,
-        subject: 'Your thePsychology.ai Pro subscription has been cancelled',
+        cc: 'DrChan@thepsychology.ai',
+        subject: 'Action required: Payment failed for your thePsychology.ai Pro subscription',
         text,
         html,
       })
@@ -141,6 +148,7 @@ ${interestLine}
       success: true,
       email,
       subscriptionId: subscription.id,
+      scheduledCancelAt: new Date(cancelAt * 1000).toISOString(),
       emailSent: sendEmail,
     })
   } catch (error) {
