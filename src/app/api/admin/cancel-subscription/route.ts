@@ -140,7 +140,7 @@ ${topicLine}
     }
 
     await sendSlackNotification(
-      `🚫 Admin manually cancelled subscription for ${email} (sub: ${subscription.id})`,
+      `⚠️ Payment failure: scheduled cancellation for ${email} in 7 days (sub: ${subscription.id}, cancels ${new Date(cancelAt * 1000).toISOString().split('T')[0]})`,
       'payments'
     )
 
