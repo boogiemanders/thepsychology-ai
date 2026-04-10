@@ -431,55 +431,60 @@ export async function POST(request: Request) {
         }
       }
 
-      // Look up user interest for personalized email
+      // Atomically look up user name and interest in a single query
       let userInterest: string | null = null
+      let firstName: string | null = null
       if (stripeCustomerId) {
         try {
-          const user = await findUserForStripeCustomer(stripeCustomerId)
-          if (user?.id) {
-            const supabase = getSupabaseClient(undefined, { requireServiceRole: true })
-            if (supabase) {
-              const { data: interestData } = await supabase
-                .from('user_current_interest')
-                .select('interest')
-                .eq('user_id', user.id)
-                .single()
-              userInterest = interestData?.interest ?? null
+          const supabase = getSupabaseClient(undefined, { requireServiceRole: true })
+          if (supabase) {
+            const { data: userData } = await supabase
+              .from('users')
+              .select('full_name, user_current_interest(interest)')
+              .eq('stripe_customer_id', stripeCustomerId)
+              .single()
+            if (userData) {
+              firstName = userData.full_name?.split(' ')[0] ?? null
+              const interestRows = userData.user_current_interest
+              userInterest = Array.isArray(interestRows)
+                ? (interestRows[0]?.interest ?? null)
+                : ((interestRows as { interest?: string } | null)?.interest ?? null)
             }
           }
-        } catch (interestErr) {
-          console.warn('[Stripe] Could not look up user interest for payment failure email', interestErr)
+        } catch (userErr) {
+          console.warn('[Stripe] Could not look up user data for payment failure email', userErr)
         }
       }
 
       // Send customer-facing email
       if (customerEmail !== 'Unknown' && isNotificationEmailConfigured(customerEmail)) {
+        const greeting = firstName ? `Hi ${firstName},` : 'Hi,'
         const interestLine = userInterest
           ? `<p>We know you've been using thePsychology.ai to explore topics connected to <strong>${userInterest}</strong> — we'd hate for you to lose access.</p>`
           : ''
 
         const html = `
-<p>Hi,</p>
+<p>${greeting}</p>
 <p>We weren't able to process your payment for your <strong>thePsychology.ai Pro</strong> subscription.</p>
 ${interestLine}
-<p>To keep your Pro access, please update your payment method:</p>
+<p>To keep your Pro access, please update your payment method within the next 7 days:</p>
 <p><a href="${portalUrl}" style="display:inline-block;padding:10px 20px;background:#000;color:#fff;text-decoration:none;border-radius:6px;font-weight:bold;">Update Payment Method →</a></p>
-<p>If your payment isn't resolved, your account will be automatically downgraded to the free plan.</p>
+<p>After 7 days without a successful payment, your account will be automatically downgraded to the free plan.</p>
 <p>– The thePsychology.ai Team</p>
 `.trim()
 
         const text = [
-          'Hi,',
+          greeting,
           '',
           "We weren't able to process your payment for your thePsychology.ai Pro subscription.",
           ...(userInterest
             ? [`We know you've been using thePsychology.ai to explore topics connected to ${userInterest} — we'd hate for you to lose access.`]
             : []),
           '',
-          'To keep your Pro access, please update your payment method:',
+          'To keep your Pro access, please update your payment method within the next 7 days:',
           portalUrl,
           '',
-          "If your payment isn't resolved, your account will be automatically downgraded to the free plan.",
+          'After 7 days without a successful payment, your account will be automatically downgraded to the free plan.',
           '',
           '– The thePsychology.ai Team',
         ].join('\n')

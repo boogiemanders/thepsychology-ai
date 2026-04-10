@@ -74,31 +74,32 @@ export async function POST(request: NextRequest) {
       // Portal not configured — fall back to site URL
     }
 
-    // Look up user interest for personalized email
+    // Atomically look up user name and interest in a single query
     let userInterest: string | null = null
+    let firstName: string | null = null
     const { data: dbUser } = await supabase
       .from('users')
-      .select('id')
+      .select('full_name, user_current_interest(interest)')
       .eq('email', email)
       .single()
 
-    if (dbUser?.id) {
-      const { data: interestData } = await supabase
-        .from('user_current_interest')
-        .select('interest')
-        .eq('user_id', dbUser.id)
-        .single()
-      userInterest = interestData?.interest ?? null
+    if (dbUser) {
+      firstName = dbUser.full_name?.split(' ')[0] ?? null
+      const interestRows = dbUser.user_current_interest
+      userInterest = Array.isArray(interestRows)
+        ? (interestRows[0]?.interest ?? null)
+        : ((interestRows as { interest?: string } | null)?.interest ?? null)
     }
 
     // Send customer-facing email
     if (sendEmail && isNotificationEmailConfigured(email)) {
+      const greeting = firstName ? `Hi ${firstName},` : 'Hi,'
       const interestLine = userInterest
         ? `<p>We know you've been using thePsychology.ai to explore topics connected to <strong>${userInterest}</strong> — we'd hate to lose you.</p>`
         : ''
 
       const html = `
-<p>Hi,</p>
+<p>${greeting}</p>
 <p>We weren't able to process your payment for your <strong>thePsychology.ai Pro</strong> subscription, so your account has been downgraded to the free plan.</p>
 ${interestLine}
 <p>If you'd like to reactivate your Pro access, you can update your payment method and resubscribe:</p>
@@ -107,7 +108,7 @@ ${interestLine}
 `.trim()
 
       const text = [
-        'Hi,',
+        greeting,
         '',
         "We weren't able to process your payment for your thePsychology.ai Pro subscription, so your account has been downgraded to the free plan.",
         ...(userInterest
