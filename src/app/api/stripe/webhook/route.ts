@@ -414,9 +414,86 @@ export async function POST(request: Request) {
       const invoice = event.data.object as Stripe.Invoice
       const customerEmail = invoice.customer_email || 'Unknown'
       const attemptCount = invoice.attempt_count || 1
+      const stripeCustomerId =
+        typeof invoice.customer === 'string' ? invoice.customer : (invoice.customer as { id?: string } | null)?.id
+
+      // Generate billing portal URL so customer can update payment method
+      let portalUrl = 'https://thepsychology.ai'
+      if (stripe && stripeCustomerId) {
+        try {
+          const portalSession = await stripe.billingPortal.sessions.create({
+            customer: stripeCustomerId,
+            return_url: 'https://thepsychology.ai/dashboard',
+          })
+          portalUrl = portalSession.url
+        } catch (portalErr) {
+          console.warn('[Stripe] Could not create billing portal session for payment failure email', portalErr)
+        }
+      }
+
+      // Look up user interest for personalized email
+      let userInterest: string | null = null
+      if (stripeCustomerId) {
+        try {
+          const user = await findUserForStripeCustomer(stripeCustomerId)
+          if (user?.id) {
+            const supabase = getSupabaseClient(undefined, { requireServiceRole: true })
+            if (supabase) {
+              const { data: interestData } = await supabase
+                .from('user_current_interest')
+                .select('interest')
+                .eq('user_id', user.id)
+                .single()
+              userInterest = interestData?.interest ?? null
+            }
+          }
+        } catch (interestErr) {
+          console.warn('[Stripe] Could not look up user interest for payment failure email', interestErr)
+        }
+      }
+
+      // Send customer-facing email
+      if (customerEmail !== 'Unknown' && isNotificationEmailConfigured(customerEmail)) {
+        const interestLine = userInterest
+          ? `<p>We know you've been using thePsychology.ai to explore topics connected to <strong>${userInterest}</strong> — we'd hate for you to lose access.</p>`
+          : ''
+
+        const html = `
+<p>Hi,</p>
+<p>We weren't able to process your payment for your <strong>thePsychology.ai Pro</strong> subscription.</p>
+${interestLine}
+<p>To keep your Pro access, please update your payment method:</p>
+<p><a href="${portalUrl}" style="display:inline-block;padding:10px 20px;background:#000;color:#fff;text-decoration:none;border-radius:6px;font-weight:bold;">Update Payment Method →</a></p>
+<p>If your payment isn't resolved, your account will be automatically downgraded to the free plan.</p>
+<p>– The thePsychology.ai Team</p>
+`.trim()
+
+        const text = [
+          'Hi,',
+          '',
+          "We weren't able to process your payment for your thePsychology.ai Pro subscription.",
+          ...(userInterest
+            ? [`We know you've been using thePsychology.ai to explore topics connected to ${userInterest} — we'd hate for you to lose access.`]
+            : []),
+          '',
+          'To keep your Pro access, please update your payment method:',
+          portalUrl,
+          '',
+          "If your payment isn't resolved, your account will be automatically downgraded to the free plan.",
+          '',
+          '– The thePsychology.ai Team',
+        ].join('\n')
+
+        await sendNotificationEmail({
+          to: customerEmail,
+          subject: 'Action required: Payment failed for your thePsychology.ai Pro subscription',
+          text,
+          html,
+        })
+      }
 
       await sendSlackNotification(
-        `⚠️ Payment failed for ${customerEmail} (attempt ${attemptCount})`,
+        `⚠️ Payment failed for ${customerEmail} (attempt ${attemptCount}) — portal: ${portalUrl}`,
         'payments'
       )
     }
