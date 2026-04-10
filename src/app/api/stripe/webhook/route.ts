@@ -460,7 +460,7 @@ export async function POST(request: Request) {
       if (customerEmail !== 'Unknown' && isNotificationEmailConfigured(customerEmail)) {
         const greeting = firstName ? `Hi ${firstName},` : 'Hi,'
         const interestLine = userInterest
-          ? `<p>We know you've been using thePsychology.ai to explore topics connected to <strong>${userInterest}</strong> — we'd hate for you to lose access.</p>`
+          ? `<p>We know you've been using thePsychology.ai to explore topics connected to <strong>${userInterest}</strong>, and we'd hate for you to lose access.</p>`
           : ''
 
         const html = `
@@ -468,9 +468,10 @@ export async function POST(request: Request) {
 <p>We weren't able to process your payment for your <strong>thePsychology.ai Pro</strong> subscription.</p>
 ${interestLine}
 <p>To keep your Pro access, please update your payment method within the next 7 days:</p>
-<p><a href="${portalUrl}" style="display:inline-block;padding:10px 20px;background:#000;color:#fff;text-decoration:none;border-radius:6px;font-weight:bold;">Update Payment Method →</a></p>
+<p><a href="${portalUrl}" style="display:inline-block;padding:10px 20px;background:#000;color:#fff;text-decoration:none;border-radius:6px;font-weight:bold;">Update Payment Method</a></p>
 <p>After 7 days without a successful payment, your account will be automatically downgraded to the free plan.</p>
-<p>– The thePsychology.ai Team</p>
+<p>This is an automated message. If you have any questions, you can reply to this email and Anders will get back to you.</p>
+<p>The thePsychology.ai Team</p>
 `.trim()
 
         const text = [
@@ -478,7 +479,7 @@ ${interestLine}
           '',
           "We weren't able to process your payment for your thePsychology.ai Pro subscription.",
           ...(userInterest
-            ? [`We know you've been using thePsychology.ai to explore topics connected to ${userInterest} — we'd hate for you to lose access.`]
+            ? [`We know you've been using thePsychology.ai to explore topics connected to ${userInterest}, and we'd hate for you to lose access.`]
             : []),
           '',
           'To keep your Pro access, please update your payment method within the next 7 days:',
@@ -486,7 +487,9 @@ ${interestLine}
           '',
           'After 7 days without a successful payment, your account will be automatically downgraded to the free plan.',
           '',
-          '– The thePsychology.ai Team',
+          'This is an automated message. If you have any questions, you can reply to this email and Anders will get back to you.',
+          '',
+          'The thePsychology.ai Team',
         ].join('\n')
 
         await sendNotificationEmail({

@@ -95,7 +95,7 @@ export async function POST(request: NextRequest) {
     if (sendEmail && isNotificationEmailConfigured(email)) {
       const greeting = firstName ? `Hi ${firstName},` : 'Hi,'
       const interestLine = userInterest
-        ? `<p>We know you've been using thePsychology.ai to explore topics connected to <strong>${userInterest}</strong> — we'd hate to lose you.</p>`
+        ? `<p>We know you've been using thePsychology.ai to explore topics connected to <strong>${userInterest}</strong>, and we'd hate to lose you.</p>`
         : ''
 
       const html = `
@@ -103,8 +103,9 @@ export async function POST(request: NextRequest) {
 <p>We weren't able to process your payment for your <strong>thePsychology.ai Pro</strong> subscription, so your account has been downgraded to the free plan.</p>
 ${interestLine}
 <p>If you'd like to reactivate your Pro access, you can update your payment method and resubscribe:</p>
-<p><a href="${portalUrl}" style="display:inline-block;padding:10px 20px;background:#000;color:#fff;text-decoration:none;border-radius:6px;font-weight:bold;">Manage Billing →</a></p>
-<p>– The thePsychology.ai Team</p>
+<p><a href="${portalUrl}" style="display:inline-block;padding:10px 20px;background:#000;color:#fff;text-decoration:none;border-radius:6px;font-weight:bold;">Manage Billing</a></p>
+<p>This is an automated message. If you have any questions, you can reply to this email and Anders will get back to you.</p>
+<p>The thePsychology.ai Team</p>
 `.trim()
 
       const text = [
@@ -112,13 +113,15 @@ ${interestLine}
         '',
         "We weren't able to process your payment for your thePsychology.ai Pro subscription, so your account has been downgraded to the free plan.",
         ...(userInterest
-          ? [`We know you've been using thePsychology.ai to explore topics connected to ${userInterest} — we'd hate to lose you.`]
+          ? [`We know you've been using thePsychology.ai to explore topics connected to ${userInterest}, and we'd hate to lose you.`]
           : []),
         '',
         "If you'd like to reactivate your Pro access, you can update your payment method and resubscribe:",
         portalUrl,
         '',
-        '– The thePsychology.ai Team',
+        'This is an automated message. If you have any questions, you can reply to this email and Anders will get back to you.',
+        '',
+        'The thePsychology.ai Team',
       ].join('\n')
 
       await sendNotificationEmail({
