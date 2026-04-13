@@ -418,24 +418,24 @@ const demoSimplePracticeGuidance: DemoClinicalGuidance = {
 }
 
 const demoZocdocClient: CapturedClient = {
-  firstName: 'Marisol',
-  lastName: 'Hernandez',
+  firstName: 'Sample',
+  lastName: 'Patient',
   sex: 'Female',
-  dob: '1991-09-04',
-  phone: '(718) 555-0178',
-  email: 'marisol.h@example.test',
+  dob: '1990-01-01',
+  phone: '(555) 555-0100',
+  email: 'sample.patient@example.test',
   address: {
-    street: '88 37th Avenue',
-    city: 'Jackson Heights',
+    street: '123 Example Street',
+    city: 'Anytown',
     state: 'NY',
-    zip: '11372',
+    zip: '10001',
   },
-  insuranceCompany: 'Blue Cross Blue Shield',
-  memberId: 'BCBS-309118',
-  groupNumber: 'GRP-8124',
-  subscriberName: 'Marisol Hernandez',
+  insuranceCompany: 'Sample Insurance Co.',
+  memberId: 'DEMO-000000',
+  groupNumber: 'GRP-0000',
+  subscriberName: 'Sample Patient',
   subscriberRelationship: 'Self',
-  copay: '$35',
+  copay: '$0',
   insuranceCardFront: 'data:image/png;base64,front-card-demo',
   insuranceCardBack: 'data:image/png;base64,back-card-demo',
   appointmentDate: '2026-04-09',
@@ -456,20 +456,20 @@ const demoZocdocClient: CapturedClient = {
 }
 
 const demoVobDraft: PendingVobDraft = {
-  to: ['david@sosapartners.com', 'support@sosapartners.com'],
-  cc: ['greg@drinzinna.com', 'carlos@drinzinna.com'],
-  subject: 'VOB Needed — M.H. — 2026-04-09 9:00 AM',
+  to: ['billing@example.test'],
+  cc: ['provider@example.test'],
+  subject: 'VOB Needed — S.P. — 2026-04-09 9:00 AM',
   body: `Hi team,
 
-Please verify benefits for M.H. before the initial evaluation on 2026-04-09 at 9:00 AM.
+Please verify benefits for S.P. before the initial evaluation on 2026-04-09 at 9:00 AM.
 
-Carrier: Blue Cross Blue Shield
-Member ID: BCBS-309118
-Group #: GRP-8124
-Copay shown in Zocdoc: $35
+Carrier: Sample Insurance Co.
+Member ID: DEMO-000000
+Group #: GRP-0000
+Copay shown in Zocdoc: $0
 
 Regards,
-Anders`,
+Provider`,
   createdAt: '2026-04-08T13:24:00Z',
 }
 
@@ -767,43 +767,42 @@ const zocdocSimplePracticeConfig: LabDetailConfig = {
   slug: 'zocdoc-simplepractice',
   title: 'ZocDoc to SimplePractice',
   description:
-    'A browser-side intake automation flow that captures referral data from ZocDoc and fills SimplePractice demographics, insurance, appointments, and VOB email drafts without retyping.',
+    'Capture a new referral on ZocDoc once. The extension fills SimplePractice — demographics, insurance, appointment, VOB email — without retyping a field.',
   categoryLabel: 'Psychologist Tools',
   statusLabel: 'Building',
   accent: 'emerald',
   tags: ['Chrome Extension', 'No Backend', 'Intake Automation', 'Insurance Fill', 'VOB Email'],
-  audience:
-    'Therapists and practice staff moving new patient referrals from ZocDoc into SimplePractice.',
+  audience: 'Therapists and front-desk staff moving new referrals from ZocDoc into SimplePractice.',
   whyItExists:
-    'The administrative cost of a single referral is higher than it looks. The tool exists to eliminate double entry, reduce insurance intake friction, and keep front-desk work inside the browser.',
+    'A single referral gets retyped three or four times before it becomes a chart. This takes it down to zero.',
   heroFacts: [
     {
       label: 'Workflow Surface',
-      value: 'ZocDoc provider portal capture plus SimplePractice client, insurance, and appointment forms.',
+      value: 'ZocDoc provider portal → SimplePractice client, insurance, and scheduling forms.',
     },
     {
       label: 'Automation Style',
-      value: 'Browser-side capture and fill with popup settings, content scripts, and timed cleanup. No backend required.',
+      value: 'Content scripts and a background worker. No backend, no API keys, no data leaves the browser.',
     },
     {
       label: 'Lab Demo',
-      value: 'Mock referral data only. No live ZocDoc, Gmail, or SimplePractice connection exists on this page.',
+      value: 'Mock data only. Nothing on this page touches a real chart.',
     },
   ],
   workflowHeading: 'Interactive Demo',
   workflowIntro:
-    'The current extension already covers the full intake handoff: capture from the ZocDoc provider portal, fill the SimplePractice client record, set insurance, create the appointment, and draft the VOB email. The walkthrough below mirrors that sequence with a demo referral.',
+    'One capture on ZocDoc feeds every downstream form — demographics, insurance, appointment, VOB email — from the same object.',
   steps: [
     {
       id: 'zocdoc-capture',
       label: 'ZocDoc Capture',
-      title: 'Capture the referral once from the provider portal',
+      title: 'Capture the referral once',
       summary:
-        'The capture step pulls patient demographics, appointment timing, insurance details, presenting concerns, and card images into a single browser-side client object.',
+        'Demographics, appointment timing, insurance, presenting concerns, and both card images — pulled in a single click.',
       bullets: [
-        'The extension targets the real ZocDoc provider portal detail view rather than a copy-pasted spreadsheet workflow.',
-        'Insurance card images, appointment context, and basic presenting concerns are captured at the same time.',
-        'The captured payload becomes the source of truth for every later step in SimplePractice.',
+        'Runs against the real ZocDoc provider portal — not a spreadsheet copy-paste.',
+        'Card images, appointment context, and presenting concerns come along in the same grab.',
+        'This payload becomes the source of truth for every step that follows.',
       ],
       blocks: [
         {
@@ -831,13 +830,13 @@ const zocdocSimplePracticeConfig: LabDetailConfig = {
     {
       id: 'sp-demographics',
       label: 'Demographics Fill',
-      title: 'Populate the SimplePractice client record without typing it twice',
+      title: 'Fill the SimplePractice client record',
       summary:
-        'The demographic fill step targets the real SimplePractice form structure, including billing type, status, office, referred-by, and reminder toggles.',
+        'Billing type, status, office, referred-by, and reminder toggles — all set the way Ember expects.',
       bullets: [
-        'The form filler uses DOM selectors and SPA-friendly input events so Ember-driven form state updates correctly.',
-        'Office selection, referred-by mapping, and reminder toggles are part of the workflow, not afterthoughts.',
-        'The same captured client payload keeps all downstream steps consistent.',
+        'SPA-safe input events so Ember-driven form state actually updates.',
+        'Office, referred-by, and reminders are part of the flow — not a manual cleanup pass.',
+        'Same captured payload feeds every downstream step, so nothing drifts.',
       ],
       blocks: [
         {
@@ -863,13 +862,13 @@ const zocdocSimplePracticeConfig: LabDetailConfig = {
     {
       id: 'insurance-fill',
       label: 'Insurance Fill',
-      title: 'Carry the carrier, member data, and card images into the billing screen',
+      title: 'Drop in insurance without retyping',
       summary:
-        'The insurance step handles payer typeahead, member identifiers, subscriber fields, copay, and card upload from the previously captured referral object.',
+        'Payer typeahead, member IDs, subscriber fields, copay, and both card uploads — from the same captured referral.',
       bullets: [
-        'The workflow is built for the actual SimplePractice insurance form, including payer search and file upload behavior.',
-        'Insurance-card capture matters because it removes another staff handoff.',
-        'This is where the value becomes obvious: the patient already typed this once.',
+        'Built for the real SimplePractice insurance form, including payer search and card upload.',
+        'Card images auto-attach, removing another handoff between clinician and front desk.',
+        'The patient already typed this once. Nobody should type it again.',
       ],
       blocks: [
         {
@@ -894,13 +893,13 @@ const zocdocSimplePracticeConfig: LabDetailConfig = {
     {
       id: 'appointment-fill',
       label: 'Appointment Fill',
-      title: 'Set the evaluation appointment with office and CPT defaults already applied',
+      title: 'Schedule with defaults already applied',
       summary:
-        'The appointment step fills date, time, office, CPT code, notes, and recurring follow-up setup from stored provider preferences and captured referral data.',
+        'Date, time, office, CPT code, notes, and recurring follow-up — pulled from provider prefs and the captured referral.',
       bullets: [
-        'Provider preferences control the default office and CPT values for first visits and follow-ups.',
-        'Recurring appointment setup is part of the flow, not a separate manual cleanup step.',
-        'Client search, scheduling, and visit note context all stay tied to the captured client.',
+        'Provider defaults drive office and CPT picks for initials and follow-ups.',
+        'Recurring follow-ups are set up in the same pass — no second trip to the calendar.',
+        'Client search, scheduling, and visit notes all stay tied to one captured client.',
       ],
       blocks: [
         {
@@ -925,13 +924,13 @@ const zocdocSimplePracticeConfig: LabDetailConfig = {
     {
       id: 'vob-email',
       label: 'VOB Draft',
-      title: 'Generate the VOB email draft from the same intake object',
+      title: 'Draft the VOB email from the same intake',
       summary:
-        'Once capture is complete, the extension can draft a benefits-verification email with the correct client abbreviations, timing, carrier details, and saved recipient lists.',
+        'Subject, body, recipients, CCs, and signature — generated from the captured referral and stored provider prefs.',
       bullets: [
-        'The VOB draft keeps the staff workflow inside the browser instead of relying on a separate intake checklist.',
-        'Provider preferences carry the default recipients, CCs, and signature block.',
-        'The email step is generated from captured data rather than re-keyed from the patient chart.',
+        'Keeps VOB inside the browser instead of a separate intake checklist.',
+        'Provider prefs carry default recipients, CCs, and signature block.',
+        'Generated from captured data — not re-keyed from the chart.',
       ],
       blocks: [
         {
@@ -954,13 +953,13 @@ const zocdocSimplePracticeConfig: LabDetailConfig = {
     {
       id: 'phi-cleanup',
       label: 'PHI Cleanup',
-      title: 'Keep the intake in browser storage only, then clear it on a timer',
+      title: 'Clear PHI on a timer',
       summary:
-        'The background service worker enforces timed cleanup so referral PHI does not sit around indefinitely after the handoff is done.',
+        'Referral data sits in browser storage only, then a background worker sweeps it on a fixed TTL.',
       bullets: [
-        'The current service worker uses a one-hour TTL plus an hourly cleanup alarm.',
-        'Status flags make it clear which handoff steps are done and which still need staff action.',
-        'The lab demo shows the behavior with mock data only; it does not store anything in the visitor’s browser.',
+        'One-hour TTL plus an hourly cleanup alarm in the service worker.',
+        'Status flags show which handoff steps are done and which still need a human.',
+        'This demo page stores nothing in your browser — mock data lives on the page only.',
       ],
       blocks: [
         {
@@ -1001,35 +1000,35 @@ const zocdocSimplePracticeConfig: LabDetailConfig = {
       ],
     },
   ],
-  proofHeading: 'Concrete Capabilities',
+  proofHeading: 'What It Does',
   proofBullets: [
-    'Captures patient demographics, appointment timing, insurance details, presenting concerns, and card images from the ZocDoc provider portal.',
-    'Fills SimplePractice client demographics, insurance, appointment data, office defaults, referred-by, and reminders through DOM automation.',
-    'Builds a VOB email draft from stored provider preferences and captured intake details.',
-    'Uses a background service worker plus timed cleanup so captured referral PHI is not left sitting in storage indefinitely.',
+    'Captures demographics, timing, insurance, presenting concerns, and card images from the ZocDoc portal.',
+    'Fills SimplePractice client, insurance, appointment, and office defaults through the live DOM.',
+    'Drafts the VOB email from provider preferences and captured intake — no retyping.',
+    'One-hour TTL plus hourly cleanup keeps referral PHI from sitting in storage.',
   ],
   architectureHeading: 'Privacy + Architecture',
   architectureBullets: [
-    'Manifest V3 extension with two content scripts, popup settings, and a background service worker.',
-    'The handoff is browser-side and DOM-based. No backend or SimplePractice API integration is required for the current flow.',
-    'This lab page is a demo only. It does not connect to ZocDoc, Gmail, or SimplePractice, and it does not persist patient data.',
+    'Manifest V3 extension: two content scripts, popup settings, background service worker.',
+    'Browser-side DOM automation. No backend, no SimplePractice API integration.',
+    'This page is a demo. It does not connect to ZocDoc, Gmail, or SimplePractice, and it stores nothing.',
   ],
   researchHeading: 'Why This Matters',
   researchCards: [
     {
-      title: 'Per-booking economics are brutal',
+      title: 'Per-booking math hurts',
       body:
-        'The competitive-pain-points research shows why a bad referral workflow stings: therapists are paying ZocDoc per booking, even when referrals no-show or never convert into ongoing care.',
+        'ZocDoc charges per booking. No-shows and non-converters still cost money. A slow intake makes every referral more expensive.',
     },
     {
       title: 'Booking is not matching',
       body:
-        'The research also shows the gap between a generic booking layer and a mental-health intake flow. Providers still need the patient properly entered, scheduled, and contextualized in the EHR.',
+        'A generic booking layer does not hand you a chart. The patient still needs to be entered, scheduled, and contextualized in the EHR.',
     },
     {
-      title: 'Insurance mismatch creates double work',
+      title: 'Wrong insurance creates double work',
       body:
-        'When directory insurance data is wrong, staff still have to correct the intake by hand. This tool is aimed at shrinking that correction loop once the referral lands.',
+        'Directory carrier data is often wrong. Staff fix it by hand after the fact. This tool shrinks that correction loop.',
     },
   ],
   statusHeading: 'Current Status',
@@ -1037,22 +1036,22 @@ const zocdocSimplePracticeConfig: LabDetailConfig = {
     {
       title: 'Built Now',
       items: [
-        'ZocDoc capture for demographics, appointment details, presenting concerns, and insurance-card images.',
-        'SimplePractice client-demographics fill, insurance fill, appointment fill, and VOB email draft.',
+        'ZocDoc capture for demographics, timing, presenting concerns, and card images.',
+        'SimplePractice fill for client, insurance, appointments, and the VOB email draft.',
         'Popup settings for provider defaults and timed PHI cleanup in the background worker.',
       ],
     },
     {
       title: 'Planned Next',
       items: [
-        'More testing against the live ZocDoc provider portal and current SimplePractice DOM.',
-        'Verification of payer typeahead matching, insurance-card fallback capture, and recurring appointment behavior.',
-        'Mapping any missing selectors discovered during real portal testing.',
+        'More testing against the live ZocDoc portal and the current SimplePractice DOM.',
+        'Payer typeahead matching, card fallback capture, and recurring-appointment verification.',
+        'Mapping selectors exposed by real portal testing.',
       ],
     },
   ],
   note:
-    'Demo only. This page uses a mock referral object shaped after the extension types and current implementation notes. No live patient data or third-party account access is involved.',
+    'Demo only. Mock referral data shaped after the real extension types. No live patient data or third-party access on this page.',
 }
 
 const configs = {

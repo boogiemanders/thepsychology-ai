@@ -52,16 +52,16 @@ export function LabDetailPage({ config }: { config: LabDetailConfig }) {
 
   return (
     <main className="mx-auto max-w-6xl px-4 py-16 sm:py-24">
-      <div className="mb-10">
+      <div className="mb-10 animate-in fade-in duration-500">
         <Link
           href="/lab"
-          className="text-[11px] font-medium uppercase tracking-[0.15em] text-zinc-400 transition-colors duration-150 hover:text-zinc-900 dark:text-zinc-500 dark:hover:text-zinc-100"
+          className="inline-block text-[11px] font-medium uppercase tracking-[0.15em] text-zinc-400 transition-[color,transform] duration-150 ease-out hover:text-zinc-900 active:scale-[0.97] dark:text-zinc-500 dark:hover:text-zinc-100"
         >
           &larr; Lab
         </Link>
       </div>
 
-      <header className="mb-16 grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
+      <header className="mb-16 grid animate-in fade-in slide-in-from-bottom-2 gap-8 duration-500 ease-out lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
         <div>
           <div className="mb-4 flex flex-wrap gap-2">
             <span className="inline-flex items-center rounded-full border border-zinc-200 px-2.5 py-1 text-[10px] font-mono uppercase tracking-[0.16em] text-zinc-500 dark:border-zinc-800 dark:text-zinc-400">
@@ -131,7 +131,7 @@ export function LabDetailPage({ config }: { config: LabDetailConfig }) {
         </div>
       </header>
 
-      <section className="mb-16">
+      <section className="mb-16 animate-in fade-in slide-in-from-bottom-2 duration-500 ease-out [animation-delay:120ms] [animation-fill-mode:backwards]">
         <div className="mb-8">
           <h2 className="text-xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">
             {config.workflowHeading}
@@ -143,7 +143,7 @@ export function LabDetailPage({ config }: { config: LabDetailConfig }) {
         <LabWorkflowDemo accent={config.accent} steps={config.steps} />
       </section>
 
-      <section className="grid gap-8 lg:grid-cols-3">
+      <section className="grid animate-in fade-in slide-in-from-bottom-2 gap-8 duration-500 ease-out [animation-delay:200ms] [animation-fill-mode:backwards] lg:grid-cols-3">
         <div className="rounded-3xl border border-zinc-200 bg-white/80 p-6 dark:border-zinc-800 dark:bg-zinc-950/70">
           <h2 className="text-lg font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">
             {config.proofHeading}
@@ -200,7 +200,7 @@ export function LabDetailPage({ config }: { config: LabDetailConfig }) {
         </div>
       </section>
 
-      <section className="mt-16">
+      <section className="mt-16 animate-in fade-in slide-in-from-bottom-2 duration-500 ease-out [animation-delay:280ms] [animation-fill-mode:backwards]">
         <div className="mb-6">
           <h2 className="text-xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">
             {config.statusHeading}
