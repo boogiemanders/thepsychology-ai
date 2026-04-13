@@ -64,6 +64,15 @@ const CHILDHOOD_IMPAIRMENT_SETTING_OPTIONS: AssessmentOption[] = [
   { value: 'social_relationships', label: 'Social Relationships' },
 ]
 
+const OTHER_REPORT_RELATIONSHIP_OPTIONS: AssessmentOption[] = [
+  { value: 'mother', label: 'Mother' },
+  { value: 'father', label: 'Father' },
+  { value: 'brother_sister', label: 'Brother/Sister' },
+  { value: 'spouse_partner', label: 'Spouse/Partner' },
+  { value: 'friend', label: 'Friend' },
+  { value: 'other', label: 'Other' },
+]
+
 const BAARS_CURRENT_PERCENTILE_ROWS: Record<BaarsAgeBand, BaarsCurrentPercentileRow[]> = {
   '18-39': [
     { percentile: '99+', inattention_raw: '29-36', hyperactivity_raw: '17-20', impulsivity_raw: '14-16', total_adhd_raw: '54-72', sct_raw: '32-36' },
@@ -367,6 +376,88 @@ const currentSections: AssessmentSection[] = [
   },
 ]
 
+const currentOtherReportSections: AssessmentSection[] = [
+  {
+    id: 'inattention',
+    title: 'Section 1: Inattention',
+    questions: [
+      likertQuestion(1, 'Fails to give close attention to details or makes careless mistakes in his/her work or other activities'),
+      likertQuestion(2, 'Has difficulty sustaining his/her attention in tasks or fun activities'),
+      likertQuestion(3, "Doesn't listen when spoken to directly"),
+      likertQuestion(4, "Doesn't follow through on instructions and fails to finish work or chores"),
+      likertQuestion(5, 'Has difficulty organizing tasks and activities'),
+      likertQuestion(6, 'Avoids, dislikes, or is reluctant to engage in tasks that require sustained mental effort'),
+      likertQuestion(7, 'Loses things necessary for tasks or activities'),
+      likertQuestion(8, 'Is easily distracted by extraneous stimuli or irrelevant thoughts'),
+      likertQuestion(9, 'Is forgetful in daily activities'),
+    ],
+  },
+  {
+    id: 'hyperactivity',
+    title: 'Section 2: Hyperactivity',
+    questions: [
+      likertQuestion(10, 'Fidgets with hands or feet or squirms in seat'),
+      likertQuestion(11, 'Leaves his/her seat in classrooms or in other situations in which remaining seated is expected'),
+      likertQuestion(12, 'Shifts around excessively or feels restless or hemmed in'),
+      likertQuestion(13, 'Has difficulty engaging in leisure activities quietly (feels uncomfortable, or is loud or noisy)'),
+      likertQuestion(14, 'Is "on the go" or acts as if "driven by a motor" (or he/she feels like he/she has to be busy or always doing something)'),
+    ],
+  },
+  {
+    id: 'impulsivity',
+    title: 'Section 3: Impulsivity',
+    questions: [
+      likertQuestion(15, 'Talks excessively (in social situations)'),
+      likertQuestion(16, "Blurts out answers before questions have been completed, completes others' sentences, or jumps the gun"),
+      likertQuestion(17, 'Has difficulty awaiting his/her turn'),
+      likertQuestion(18, 'Interrupts or intrudes on others (butts into conversations or activities without permission or takes over what others are doing)'),
+    ],
+  },
+  {
+    id: 'sluggish_cognitive_tempo',
+    title: 'Section 4: Sluggish Cognitive Tempo',
+    questions: [
+      likertQuestion(19, 'Is prone to daydreaming when he/she should be concentrating on something or working'),
+      likertQuestion(20, 'Has trouble staying alert or awake in boring situations'),
+      likertQuestion(21, 'Is easily confused'),
+      likertQuestion(22, 'Is easily bored'),
+      likertQuestion(23, 'Is spacey or "in a fog"'),
+      likertQuestion(24, 'Is lethargic, more tired than others'),
+      likertQuestion(25, 'Is underactive or has less energy than others'),
+      likertQuestion(26, 'Is slow moving'),
+      likertQuestion(27, "Doesn't seem to process information as quickly or as accurately as others"),
+    ],
+  },
+  {
+    id: 'follow_up',
+    title: 'Section 5: Follow-Up Questions',
+    questions: [
+      {
+        id: 'q28',
+        number: 28,
+        prompt: 'Did this person experience any of these 27 symptoms at least "Often" or more frequently (Did you circle a 3 or a 4 above)?',
+        type: 'single_select',
+        required: true,
+        options: YES_NO_OPTIONS,
+      },
+      {
+        id: 'q29',
+        number: 29,
+        prompt: 'If so, how old was the person when those symptoms began? Leave blank if unknown.',
+        type: 'number',
+        helpText: 'Enter age in years.',
+      },
+      {
+        id: 'q30',
+        number: 30,
+        prompt: 'If so, in which of these settings did those symptoms impair the person\'s functioning?',
+        type: 'multi_select',
+        options: IMPAIRMENT_SETTING_OPTIONS,
+      },
+    ],
+  },
+]
+
 const currentScoringGroups: AssessmentScoringGroup[] = [
   {
     id: 'inattention_raw',
@@ -513,6 +604,39 @@ Then answer the remaining three questions.`,
   ],
 }
 
+export const BAARS_OTHER_REPORT_CURRENT_SYMPTOMS: InstrumentDefinition = {
+  id: 'baars_iv_other_report_current_symptoms',
+  slug: 'baars',
+  title: 'BAARS-IV Other-Report: Current Symptoms',
+  shortTitle: 'BAARS-IV',
+  description: 'Source-backed config for the BAARS-IV other-report current symptoms questionnaire, structured for the lab demo form.',
+  versionLabel: 'BAARS-IV',
+  respondentType: 'Observer / informant report',
+  sourceFiles: [
+    '/Users/anderschan/Downloads/BAARS Observer.pdf',
+    '/Users/anderschan/Downloads/BAARS_IV_SR_Scorer.corrected.xlsx',
+    '/Users/anderschan/Downloads/BAARS Norms.pdf',
+  ],
+  headerFields: [
+    { id: 'name', label: 'Person Being Rated', type: 'text' },
+    { id: 'date', label: 'Date', type: 'date' },
+    { id: 'age', label: 'Age', type: 'number', helpText: 'Age of person being rated in years.' },
+    { id: 'raterName', label: 'Rater Name', type: 'text' },
+    { id: 'relationship', label: 'Relationship', type: 'single_select', options: OTHER_REPORT_RELATIONSHIP_OPTIONS },
+  ],
+  instructions: `You are being asked to describe the behavior of someone whom you know well. How often does that person experience each of these problems? For the first 27 items, please circle the number next to each item below that best describes the person's behavior DURING THE PAST 6 MONTHS.
+Then answer the remaining three questions.`,
+  responseScale: BAARS_RESPONSE_SCALE,
+  sections: currentOtherReportSections,
+  scoringGroups: currentScoringGroups,
+  notes: [
+    'Question text was OCR-extracted and visually verified against pages 1-3 of the observer questionnaire PDF.',
+    'Per Bret, observer forms should be scored the same way as the self-report tabs for this implementation.',
+    'The corrected local scorer workbook fixes Item Entry row offsets that were present in the original spreadsheet.',
+    'Percentile and descriptive category output currently reuses the same BAARS current-symptoms lookup model used for self-report.',
+  ],
+}
+
 const childhoodSections: AssessmentSection[] = [
   {
     id: 'inattention',
@@ -560,6 +684,60 @@ const childhoodSections: AssessmentSection[] = [
         id: 'q20',
         number: 20,
         prompt: 'If so, in which of these settings did those symptoms impair your functioning?',
+        type: 'multi_select',
+        options: CHILDHOOD_IMPAIRMENT_SETTING_OPTIONS,
+      },
+    ],
+  },
+]
+
+const childhoodOtherReportSections: AssessmentSection[] = [
+  {
+    id: 'inattention',
+    title: 'Section 1: Inattention',
+    questions: [
+      likertQuestion(1, 'Failed to give close attention to details or made careless mistakes in his/her work or other activities'),
+      likertQuestion(2, 'Had difficulty sustaining his/her attention in tasks or fun activities'),
+      likertQuestion(3, "Didn't listen when spoken to directly"),
+      likertQuestion(4, "Didn't follow through on instructions and failed to finish work or chores"),
+      likertQuestion(5, 'Had difficulty organizing tasks and activities'),
+      likertQuestion(6, 'Avoided, disliked, or was reluctant to engage in tasks that required sustained mental effort'),
+      likertQuestion(7, 'Lost things necessary for tasks or activities'),
+      likertQuestion(8, 'Was easily distracted by extraneous stimuli or irrelevant thoughts'),
+      likertQuestion(9, 'Was forgetful in daily activities'),
+    ],
+  },
+  {
+    id: 'hyperactivity_impulsivity',
+    title: 'Section 2: Hyperactivity-Impulsivity',
+    questions: [
+      likertQuestion(10, 'Fidgeted with his/her hands or feet or squirmed in his/her seat'),
+      likertQuestion(11, 'Left his/her seat in classrooms or in other situations in which remaining seated was expected'),
+      likertQuestion(12, 'Shifted around excessively or felt restless or hemmed in'),
+      likertQuestion(13, 'Had difficulty engaging in leisure activities quietly (felt uncomfortable, or was loud or noisy)'),
+      likertQuestion(14, 'Was "on the go" or acted as if "driven by a motor"'),
+      likertQuestion(15, 'Talked excessively'),
+      likertQuestion(16, "Blurted out answers before questions had been completed, completed others' sentences, or jumped the gun"),
+      likertQuestion(17, 'Had difficulty awaiting his/her turn'),
+      likertQuestion(18, 'Interrupted or intruded on others (butted into conversations or activities without permission or took over what others were doing)'),
+    ],
+  },
+  {
+    id: 'follow_up',
+    title: 'Section 3',
+    questions: [
+      {
+        id: 'q19',
+        number: 19,
+        prompt: 'Did the person experience any of these 18 symptoms at least "Often" or more frequently (Did you circle a 3 or a 4 above)?',
+        type: 'single_select',
+        required: true,
+        options: YES_NO_OPTIONS,
+      },
+      {
+        id: 'q20',
+        number: 20,
+        prompt: 'If so, in which of these settings did those symptoms impair the person\'s functioning?',
         type: 'multi_select',
         options: CHILDHOOD_IMPAIRMENT_SETTING_OPTIONS,
       },
@@ -661,5 +839,38 @@ Then answer the remaining two questions.`,
     'The corrected local childhood scorer workbook fixes Item Entry row offsets that were present in the original spreadsheet.',
     'Severity ranges come from the local childhood scorer workbook and are intended for ages 18-39 only.',
     'Percentile lookup is sourced from the BAARS norms PDF for ages 18-39, 40-59, and 60-89.',
+  ],
+}
+
+export const BAARS_OTHER_REPORT_CHILDHOOD_SYMPTOMS: InstrumentDefinition = {
+  id: 'baars_iv_other_report_childhood_symptoms',
+  slug: 'baars',
+  title: 'BAARS-IV Other-Report: Childhood Symptoms',
+  shortTitle: 'BAARS-IV',
+  description: 'Source-backed config for the BAARS-IV other-report childhood symptoms form, structured for the lab demo form.',
+  versionLabel: 'BAARS-IV',
+  respondentType: 'Observer / informant childhood report',
+  sourceFiles: [
+    '/Users/anderschan/Downloads/BAARS Childhood Observer.pdf',
+    '/Users/anderschan/Downloads/BAARS_IV_Childhood_Scorer.corrected.xlsx',
+    '/Users/anderschan/Downloads/BAARS Norms.pdf',
+  ],
+  headerFields: [
+    { id: 'name', label: 'Person Being Rated', type: 'text' },
+    { id: 'date', label: 'Date', type: 'date' },
+    { id: 'age', label: 'Current Age', type: 'number', helpText: 'Current age of person being rated in years.' },
+    { id: 'raterName', label: 'Rater Name', type: 'text' },
+    { id: 'relationship', label: 'Relationship', type: 'single_select', options: OTHER_REPORT_RELATIONSHIP_OPTIONS },
+  ],
+  instructions: `You are being asked to describe the childhood behavior of someone whom you know well. How often did that person experience each of these problems? For the first 18 items, please circle the number next to each item below that best describes their behavior when they were a child BETWEEN 5 AND 12 YEARS OF AGE.
+Then answer the remaining two questions.`,
+  responseScale: BAARS_RESPONSE_SCALE,
+  sections: childhoodOtherReportSections,
+  scoringGroups: childhoodScoringGroups,
+  notes: [
+    'Question text was OCR-extracted and visually verified against pages 1-2 of the observer childhood questionnaire PDF.',
+    'Per Bret, observer forms should be scored the same way as the self-report tabs for this implementation.',
+    'The corrected local childhood scorer workbook fixes Item Entry row offsets that were present in the original spreadsheet.',
+    'Percentile and descriptive category output currently reuses the same BAARS childhood lookup model used for self-report.',
   ],
 }

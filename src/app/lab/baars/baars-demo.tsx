@@ -16,6 +16,10 @@ import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from '@/co
 import { cn } from '@/lib/utils'
 import {
   BAARS_NORM_CITATION,
+  BAARS_OTHER_REPORT_CHILDHOOD_SYMPTOMS,
+  BAARS_OTHER_REPORT_CURRENT_SYMPTOMS,
+  BAARS_SELF_REPORT_CHILDHOOD_SYMPTOMS,
+  BAARS_SELF_REPORT_CURRENT_SYMPTOMS,
   getBaarsAgeBand,
   lookupBaarsChildhoodPercentile,
   lookupBaarsCurrentPercentile,
@@ -23,7 +27,6 @@ import {
 import type {
   AssessmentField,
   AssessmentScoringGroup,
-  AssessmentSeverityBand,
   InstrumentDefinition,
 } from '../_lib/assessment-types'
 
@@ -48,6 +51,24 @@ type PronounChoice = 'she' | 'he' | 'they'
 type SctCdsDimension = 'Cognitive Disengagement' | 'Motor Hypoactivity'
 type SctCdsCoverage = 'direct' | 'partial' | 'not_assessed'
 
+interface BaarsDraftState {
+  headerValues: Record<string, string>
+  answers: Record<string, QuestionValue>
+  pronounChoice: PronounChoice
+}
+
+interface BaarsMasterFormSummary {
+  instrument: InstrumentDefinition
+  timeframe: 'current' | 'childhood'
+  rater: 'self' | 'observer'
+  label: string
+  completed: boolean
+  sentence: string
+  thresholdMet: boolean | null
+  presentation: string | null
+  raterDescriptor: string | null
+}
+
 export interface BaarsAdhdCriteriaMeta {
   disorderId: string
   disorderName: string
@@ -57,7 +78,7 @@ export interface BaarsAdhdCriteriaMeta {
   exclusions: string[]
 }
 
-const BAARS_RESPONDENT_STORAGE_KEY = 'baars:respondent-draft:v1'
+const baarsDraftStore = new Map<string, BaarsDraftState>()
 
 const SHORT_LABELS: Record<string, string> = {
   '1': 'Never',
@@ -211,6 +232,22 @@ const SCT_CDS_CRITERIA: SctCdsCriterionDefinition[] = [
   },
 ]
 
+const OTHER_REPORT_RELATIONSHIP_LABELS: Record<string, string> = {
+  mother: 'Mother',
+  father: 'Father',
+  brother_sister: 'Brother/Sister',
+  spouse_partner: 'Spouse/Partner',
+  friend: 'Friend',
+  other: 'Other',
+}
+
+const BAARS_MASTER_SUMMARY_INSTRUMENTS: InstrumentDefinition[] = [
+  BAARS_SELF_REPORT_CURRENT_SYMPTOMS,
+  BAARS_SELF_REPORT_CHILDHOOD_SYMPTOMS,
+  BAARS_OTHER_REPORT_CURRENT_SYMPTOMS,
+  BAARS_OTHER_REPORT_CHILDHOOD_SYMPTOMS,
+]
+
 function getTodayDateValue(): string {
   const now = new Date()
   return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`
@@ -223,68 +260,70 @@ function buildInitialHeaderValues(fields: AssessmentField[]): Record<string, str
   }, {})
 }
 
-function readBaarsRespondentDraft(fields: AssessmentField[]): {
-  headerValues: Record<string, string>
-  pronounChoice: PronounChoice
-} | null {
-  if (typeof window === 'undefined') return null
+function cloneDraftAnswers(answers: Record<string, QuestionValue>): Record<string, QuestionValue> {
+  return Object.fromEntries(
+    Object.entries(answers).map(([key, value]) => [
+      key,
+      Array.isArray(value) ? [...value] : value,
+    ]),
+  )
+}
 
-  try {
-    const storedDraft = window.sessionStorage.getItem(BAARS_RESPONDENT_STORAGE_KEY)
-    if (!storedDraft) return null
+function readBaarsDraft(
+  instrumentId: string,
+  fields: AssessmentField[],
+): BaarsDraftState | null {
+  const draft = baarsDraftStore.get(instrumentId)
+  if (!draft) return null
 
-    const parsed = JSON.parse(storedDraft) as {
-      headerValues?: Record<string, unknown>
-      pronounChoice?: unknown
+  const initialHeaderValues = buildInitialHeaderValues(fields)
+  const headerValues = fields.reduce<Record<string, string>>((values, field) => {
+    const storedValue = draft.headerValues[field.id]
+    if (typeof storedValue === 'string') {
+      values[field.id] = storedValue
     }
-    const initialHeaderValues = buildInitialHeaderValues(fields)
-    const headerValues = fields.reduce<Record<string, string>>((values, field) => {
-      const storedValue = parsed.headerValues?.[field.id]
-      if (typeof storedValue === 'string') {
-        values[field.id] = storedValue
-      }
-      return values
-    }, { ...initialHeaderValues })
-    const pronounChoice = parsed.pronounChoice === 'she' || parsed.pronounChoice === 'he' || parsed.pronounChoice === 'they'
-      ? parsed.pronounChoice
-      : 'they'
+    return values
+  }, { ...initialHeaderValues })
 
-    return { headerValues, pronounChoice }
-  } catch {
-    return null
+  return {
+    headerValues,
+    answers: cloneDraftAnswers(draft.answers),
+    pronounChoice: draft.pronounChoice,
   }
 }
 
-function writeBaarsRespondentDraft(
+function writeBaarsDraft(
+  instrumentId: string,
   fields: AssessmentField[],
   headerValues: Record<string, string>,
   pronounChoice: PronounChoice,
+  answers: Record<string, QuestionValue>,
 ) {
-  if (typeof window === 'undefined') return
+  const serializedHeaderValues = fields.reduce<Record<string, string>>((values, field) => {
+    values[field.id] = headerValues[field.id] ?? ''
+    return values
+  }, {})
 
-  try {
-    const serializedHeaderValues = fields.reduce<Record<string, string>>((values, field) => {
-      values[field.id] = headerValues[field.id] ?? ''
-      return values
-    }, {})
-
-    window.sessionStorage.setItem(
-      BAARS_RESPONDENT_STORAGE_KEY,
-      JSON.stringify({ headerValues: serializedHeaderValues, pronounChoice }),
-    )
-  } catch {
-    // Ignore storage failures so the form still works in restricted browser contexts.
-  }
+  baarsDraftStore.set(instrumentId, {
+    headerValues: serializedHeaderValues,
+    answers: cloneDraftAnswers(answers),
+    pronounChoice,
+  })
 }
 
-function clearBaarsRespondentDraft() {
-  if (typeof window === 'undefined') return
+function clearBaarsDraft(instrumentId: string) {
+  baarsDraftStore.delete(instrumentId)
+}
 
-  try {
-    window.sessionStorage.removeItem(BAARS_RESPONDENT_STORAGE_KEY)
-  } catch {
-    // Ignore storage failures so reset still clears in-memory state.
-  }
+function getBaarsDraftEntries(): Array<[string, BaarsDraftState]> {
+  return Array.from(baarsDraftStore.entries()).map(([instrumentId, draft]) => [
+    instrumentId,
+    {
+      headerValues: { ...draft.headerValues },
+      answers: cloneDraftAnswers(draft.answers),
+      pronounChoice: draft.pronounChoice,
+    },
+  ])
 }
 
 function deriveFollowUpPositive(
@@ -298,12 +337,39 @@ function deriveFollowUpPositive(
   return answered.some(v => Number(v) >= 3) ? 'yes' : 'no'
 }
 
-function getSeverityLabel(value: number, bands?: AssessmentSeverityBand[]): string | null {
-  if (!bands) return null
-  for (const band of bands) {
-    const max = band.max ?? Number.POSITIVE_INFINITY
-    if (value >= band.min && value <= max) return band.label
+function parsePercentileBand(percentileBand: string): { min: number; max: number } | null {
+  if (/^\d+\+$/.test(percentileBand)) {
+    const value = Number(percentileBand.slice(0, -1))
+    return Number.isFinite(value) ? { min: value, max: Number.POSITIVE_INFINITY } : null
   }
+
+  if (/^\d+$/.test(percentileBand)) {
+    const value = Number(percentileBand)
+    return Number.isFinite(value) ? { min: value, max: value } : null
+  }
+
+  const rangeMatch = percentileBand.match(/^(\d+)-(\d+)$/)
+  if (!rangeMatch) return null
+
+  const min = Number(rangeMatch[1])
+  const max = Number(rangeMatch[2])
+  if (!Number.isFinite(min) || !Number.isFinite(max)) return null
+
+  return { min, max }
+}
+
+function getDescriptiveCategoryFromPercentileBand(percentileBand: string | null): string | null {
+  if (!percentileBand) return null
+
+  const parsedBand = parsePercentileBand(percentileBand)
+  if (!parsedBand) return null
+
+  if (parsedBand.min >= 99) return 'High'
+  if (parsedBand.min >= 97 && parsedBand.max <= 98) return 'Moderate'
+  if (parsedBand.min >= 93 && parsedBand.max <= 96) return 'Mild'
+  if (parsedBand.min >= 84 && parsedBand.max <= 92) return 'Subclinical'
+  if (parsedBand.min >= 1 && parsedBand.max <= 83) return 'Normal'
+
   return null
 }
 
@@ -339,11 +405,11 @@ function formatSelectedOptionLabels(
   if (!Array.isArray(value) || value.length === 0) return null
 
   const question = getQuestionById(instrument, questionId)
-  if (!question?.options) return value.join(', ')
+  if (!question?.options) return formatReportList(value)
 
-  return value
+  const labels = value
     .map(optionValue => question.options?.find(option => option.value === optionValue)?.label ?? optionValue)
-    .join(', ')
+  return formatReportList(labels)
 }
 
 function getScoreById(scores: ComputedGroupScore[], scoreId: string): ComputedGroupScore | null {
@@ -383,61 +449,73 @@ function formatSymptomPhrase(prompt: string): string {
       .replace(/^didn['’]t follow through on instructions and failed to finish work or chores$/i, 'not following through on instructions and failing to finish work or chores')
       .replace(/^avoid, dislike, or am reluctant to engage in tasks that require sustained mental effort$/i, 'avoiding or disliking tasks that require sustained mental effort')
       .replace(/^avoided, disliked, or was reluctant to engage in tasks that required sustained mental effort$/i, 'avoiding or disliking tasks that required sustained mental effort')
+      .replace(/^has difficulty engaging in leisure activities quietly \(feels uncomfortable, or is loud or noisy\)$/i, 'having difficulty doing leisure activities quietly')
       .replace(/^have difficulty engaging in leisure activities quietly \(feel uncomfortable, or am loud or noisy\)$/i, 'having difficulty doing leisure activities quietly')
       .replace(/^had difficulty engaging in leisure activities quietly \(felt uncomfortable, or was loud or noisy\)$/i, 'having difficulty doing leisure activities quietly')
+      .replace(/^is ["“]on the go["”] or acts as if ["“]driven by a motor["”].*$/i, 'being "on the go" or acting as if "driven by a motor"')
       .replace(/^i am ["“]on the go["”] or act as if ["“]driven by a motor["”].*$/i, 'being "on the go" or acting as if "driven by a motor"')
       .replace(/^was ["“]on the go["”] or acted as if ["“]driven by a motor["”]$/i, 'being "on the go" or acting as if "driven by a motor"')
-      .replace(/^talk(?:ed)? excessively(?: \(in social situations\))?$/i, 'talking excessively')
-      .replace(/^blurt(?:ed)? out answers before questions (?:have|had) been completed, complete(?:d)? others['’] sentences, or jump(?:ed)? the gun$/i, "blurting out answers before questions are finished, completing others' sentences, or jumping the gun")
-      .replace(/^interrupt(?:ed)? or intrud(?:e|ed) on others .*$/i, 'interrupting or intruding on others')
-      .replace(/^fidget(?:ed)? with hands or feet or squirm(?:ed)? in seat$/i, 'fidgeting with hands or feet or squirming in seat')
-      .replace(/^shift(?:ed)? around excessively or feel(?:t)? restless or hemmed in$/i, 'shifting around excessively or feeling restless or hemmed in')
+      .replace(/^talk(?:s|ed)? excessively(?: \(in social situations\))?$/i, 'talking excessively')
+      .replace(/^blurt(?:s|ed)? out answers before questions (?:have|had) been completed, complete(?:s|d)? others['’] sentences, or jump(?:s|ed)? the gun$/i, "blurting out answers before questions are finished, completing others' sentences, or jumping the gun")
+      .replace(/^interrupt(?:s|ed)? or intrud(?:e|es|ed) on others .*$/i, 'interrupting or intruding on others')
+      .replace(/^fidget(?:s|ed)? with hands or feet or squirm(?:s|ed)? in seat$/i, 'fidgeting with hands or feet or squirming in seat')
+      .replace(/^fidget(?:s|ed)? with his\/her hands or feet or squirm(?:s|ed)? in his\/her seat$/i, 'fidgeting with hands or feet or squirming in seat')
+      .replace(/^shift(?:s|ed)? around excessively or feel(?:s|t)? restless or hemmed in$/i, 'shifting around excessively or feeling restless or hemmed in')
+      .replace(/^is prone to daydreaming when he\/she should be concentrating on something or working$/i, 'daydreaming when attention should be on a task or work')
       .replace(/^prone to daydreaming when i should be concentrating on something or working$/i, 'daydreaming when attention should be on a task or work')
+      .replace(/^doesn['’]t seem to process information as quickly or as accurately as others$/i, 'processing information more slowly or less accurately than others')
       .replace(/^i don['’]t seem to process information as quickly or as accurately as others$/i, 'processing information more slowly or less accurately than others')
       .replace(/^I\s+/i, '')
       .replace(/\bmy\b\s+/gi, '')
       .replace(/^don['’]t\s+/i, 'not ')
       .replace(/^doesn['’]t\s+/i, 'not ')
       .replace(/^didn['’]t\s+/i, 'not ')
+      .replace(/^has difficulty\s+/i, 'having difficulty ')
       .replace(/^have difficulty\s+/i, 'having difficulty ')
+      .replace(/^has trouble\s+/i, 'having trouble ')
       .replace(/^have trouble\s+/i, 'having trouble ')
       .replace(/^had difficulty\s+/i, 'having difficulty ')
       .replace(/^had trouble\s+/i, 'having trouble ')
+      .replace(/^fails to\s+/i, 'failing to ')
       .replace(/^fail to\s+/i, 'failing to ')
       .replace(/^failed to\s+/i, 'failing to ')
+      .replace(/^avoids\s+/i, 'avoiding ')
       .replace(/^avoid\s+/i, 'avoiding ')
       .replace(/^avoided\s+/i, 'avoiding ')
+      .replace(/^loses\s+/i, 'losing ')
       .replace(/^lose\s+/i, 'losing ')
       .replace(/^lost\s+/i, 'losing ')
+      .replace(/^is easily distracted by\s+/i, 'easily distracted by ')
       .replace(/^was easily distracted by\s+/i, 'easily distracted by ')
+      .replace(/^is forgetful in\s+/i, 'forgetful in ')
       .replace(/^was forgetful in\s+/i, 'forgetful in ')
       .replace(/^am\s+/i, 'being ')
+      .replace(/^is\s+/i, 'being ')
       .replace(/^was\s+/i, 'being ')
       .replace(/^feel\s+/i, 'feeling ')
       .replace(/^felt\s+/i, 'feeling ')
+      .replace(/^fidgets\s+/i, 'fidgeting ')
       .replace(/^fidget\s+/i, 'fidgeting ')
       .replace(/^fidgeted\s+/i, 'fidgeting ')
+      .replace(/^leaves\s+/i, 'leaving ')
       .replace(/^leave\s+/i, 'leaving ')
       .replace(/^left\s+/i, 'leaving ')
+      .replace(/^shifts\s+/i, 'shifting ')
       .replace(/^shift\s+/i, 'shifting ')
       .replace(/^shifted\s+/i, 'shifting ')
       .replace(/^run about\s+/i, 'running about ')
       .replace(/^run around\s+/i, 'running around ')
+      .replace(/^talks excessively\s*/i, 'talking excessively')
       .replace(/^talk excessively\s*/i, 'talking excessively')
       .replace(/^talked\s+/i, 'talking ')
+      .replace(/^interrupts\s+/i, 'interrupting ')
       .replace(/^interrupt\s+/i, 'interrupting ')
       .replace(/^interrupted\s+/i, 'interrupting ')
+      .replace(/^blurts out\s+/i, 'blurting out ')
       .replace(/^blurt out\s+/i, 'blurting out ')
       .replace(/^blurted out\s+/i, 'blurting out ')
       .replace(/^blurts out\s+/i, 'blurting out ')
   )
-}
-
-function joinNarrativeClauses(clauses: string[]): string {
-  if (clauses.length === 0) return ''
-  if (clauses.length === 1) return clauses[0]
-  if (clauses.length === 2) return `${clauses[0]}, and ${clauses[1]}`
-  return `${clauses.slice(0, -1).join(', ')}, and ${clauses[clauses.length - 1]}`
 }
 
 function hasEndorsedCriterionEvidence(
@@ -454,6 +532,67 @@ function formatPossessiveName(name: string): string {
   const trimmed = name.trim()
   if (!trimmed) return "the respondent's"
   return /s$/i.test(trimmed) ? `${trimmed}'` : `${trimmed}'s`
+}
+
+function isBaarsOtherReportInstrument(instrument: InstrumentDefinition): boolean {
+  return instrument.id.includes('other_report')
+}
+
+function isBaarsChildhoodInstrument(instrument: InstrumentDefinition): boolean {
+  return instrument.id.includes('childhood_symptoms')
+}
+
+function isBaarsCurrentInstrument(instrument: InstrumentDefinition): boolean {
+  return instrument.id.includes('current_symptoms')
+}
+
+function getBaarsSubjectName(
+  instrument: InstrumentDefinition,
+  header: Record<string, string>,
+): string {
+  const name = (header.name || '').trim()
+  if (name) return name
+  return isBaarsOtherReportInstrument(instrument) ? 'The rated person' : 'The respondent'
+}
+
+function getBaarsPronounSet(pronounChoice: PronounChoice): {
+  subject: string
+  subjectLower: string
+  possessive: string
+} {
+  if (pronounChoice === 'she') {
+    return { subject: 'She', subjectLower: 'she', possessive: 'Her' }
+  }
+
+  if (pronounChoice === 'he') {
+    return { subject: 'He', subjectLower: 'he', possessive: 'His' }
+  }
+
+  return { subject: 'They', subjectLower: 'they', possessive: 'Their' }
+}
+
+function formatBaarsRaterDescriptor(header: Record<string, string>): string | null {
+  const raterName = (header.raterName || '').trim()
+  const relationshipValue = (header.relationship || '').trim()
+  const relationshipLabel = relationshipValue ? (OTHER_REPORT_RELATIONSHIP_LABELS[relationshipValue] ?? relationshipValue) : ''
+
+  if (raterName && relationshipLabel) return `${raterName} (${relationshipLabel})`
+  if (raterName) return raterName
+  if (relationshipLabel) return relationshipLabel
+  return null
+}
+
+function buildBaarsReportLead(
+  instrument: InstrumentDefinition,
+  header: Record<string, string>,
+  subjectName: string,
+): string {
+  if (isBaarsOtherReportInstrument(instrument)) {
+    const raterDescriptor = formatBaarsRaterDescriptor(header)
+    return `According to the DSM-5-TR, the observer report for ${subjectName}${raterDescriptor ? ` from ${raterDescriptor}` : ''}`
+  }
+
+  return `According to the DSM-5-TR, ${formatPossessiveName(subjectName)} self-report`
 }
 
 function buildEndorsedSymptomsSection(
@@ -490,33 +629,43 @@ function buildEndorsedSymptomsSection(
   if (groupedSymptoms.size === 0) return null
 
   const responseOrder = ['very often', 'often']
-
-  const groupedNarrative = Array.from(groupedSymptoms.entries()).map(([domain, responseGroups]) => {
-    const lead = domain === 'Inattention (A1)'
-      ? instrument.id === 'baars_iv_self_report_childhood_symptoms'
-        ? 'Respondent described childhood inattention symptoms including'
-        : 'Respondent reported inattention symptoms including'
+  const isChildhoodInstrument = isBaarsChildhoodInstrument(instrument)
+  const ratingVerb = isBaarsOtherReportInstrument(instrument)
+    ? 'rated at "Often" or "Very Often"'
+    : 'endorsed at "Often" or "Very Often"'
+  const bulletLines = Array.from(groupedSymptoms.entries()).map(([domain, responseGroups]) => {
+    const label = domain === 'Inattention (A1)'
+      ? isChildhoodInstrument
+        ? 'Childhood Inattention'
+        : 'Inattention'
       : domain === 'Hyperactivity-Impulsivity (A2)'
-        ? instrument.id === 'baars_iv_self_report_childhood_symptoms'
-          ? 'Respondent described childhood hyperactivity and impulsivity symptoms including'
-          : 'Respondent reported hyperactivity and impulsivity symptoms including'
-        : 'Respondent reported sluggish cognitive tempo symptoms including'
+        ? isChildhoodInstrument
+          ? 'Childhood Hyperactivity-Impulsivity'
+          : 'Hyperactivity-Impulsivity'
+        : 'SCT/CDS'
 
-    const clauses = responseOrder
+    const details = responseOrder
       .filter(responseLabel => (responseGroups.get(responseLabel) ?? []).length > 0)
-      .map(responseLabel => `${formatReportList(responseGroups.get(responseLabel) ?? [])} ${responseLabel}`)
+      .map(responseLabel => `${formatReportList(responseGroups.get(responseLabel) ?? [])} (${responseLabel})`)
+      .join('; ')
 
-    return `${lead} ${joinNarrativeClauses(clauses)}.`
+    return `- ${label}: ${details}.`
   })
 
-  return groupedNarrative.join(' ')
+  const heading = isChildhoodInstrument
+    ? `ADHD symptoms ${ratingVerb}:`
+    : groupedSymptoms.has('Sluggish Cognitive Tempo')
+      ? `ADHD and SCT/CDS symptoms ${ratingVerb}:`
+      : `ADHD symptoms ${ratingVerb}:`
+
+  return [heading, ...bulletLines].join('\n')
 }
 
 function buildSctCriteriaSummary(
   instrument: InstrumentDefinition,
   answers: Record<string, QuestionValue>,
 ): string | null {
-  if (instrument.id !== 'baars_iv_self_report_current_symptoms') return null
+  if (!isBaarsCurrentInstrument(instrument)) return null
 
   const directByDimension = new Map<SctCdsDimension, string[]>()
   const partialByDimension = new Map<SctCdsDimension, string[]>()
@@ -542,32 +691,36 @@ function buildSctCriteriaSummary(
     .map(criterion => criterion.reportLabel)
 
   const parts: string[] = [
-    'The SCT/CDS items were also compared with the broader cognitive disengagement and motor hypoactivity criteria list.'
+    'SCT/CDS criteria coverage across the BAARS items:'
   ]
 
   if (directCognitive.length > 0) {
-    parts.push(`Within cognitive disengagement, the response pattern was most consistent with ${formatReportList(directCognitive)}.`)
+    parts.push(`- Direct cognitive disengagement features: ${formatReportList(directCognitive)}.`)
   }
 
   if (directMotor.length > 0) {
-    parts.push(`Within motor hypoactivity, the response pattern was most consistent with ${formatReportList(directMotor)}.`)
+    parts.push(`- Direct motor hypoactivity features: ${formatReportList(directMotor)}.`)
   }
 
   if (directCognitive.length === 0 && directMotor.length === 0) {
-    parts.push('No SCT/CDS features that are directly measured by the BAARS SCT items were endorsed at the "Often" or "Very Often" level.')
+    parts.push(
+      isBaarsOtherReportInstrument(instrument)
+        ? '- No directly measured SCT/CDS features were rated at the "Often" or "Very Often" level.'
+        : '- No directly measured SCT/CDS features were endorsed at the "Often" or "Very Often" level.',
+    )
   }
 
   if (partialCognitive.length > 0) {
-    parts.push(`The same pattern may also fit other cognitive disengagement features, including ${formatReportList(partialCognitive)}.`)
+    parts.push(`- Partial cognitive disengagement overlap: ${formatReportList(partialCognitive)}.`)
   }
 
   if (partialMotor.length > 0) {
-    parts.push(`The same pattern may also fit other motor hypoactivity features, including ${formatReportList(partialMotor)}.`)
+    parts.push(`- Partial motor hypoactivity overlap: ${formatReportList(partialMotor)}.`)
   }
 
-  parts.push(`This BAARS form does not directly test ${formatReportList(notAssessed)}.`)
+  parts.push(`- Not directly assessed by this BAARS form: ${formatReportList(notAssessed)}.`)
 
-  return parts.join(' ')
+  return parts.join('\n')
 }
 
 function buildCurrentCriteriaSuggestion(
@@ -576,7 +729,7 @@ function buildCurrentCriteriaSuggestion(
   scores: ComputedGroupScore[],
   answers: Record<string, QuestionValue>,
   age: number | null,
-  respondentName: string,
+  header: Record<string, string>,
 ): string | null {
   const inattentionCount = getScoreById(scores, 'inattention_symptom_count')
   const hyperImpCount = getScoreById(scores, 'hyperactivity_impulsivity_symptom_count')
@@ -593,7 +746,9 @@ function buildCurrentCriteriaSuggestion(
   const settingsMet = settings.length > 0 ? settings.length >= 2 : null
   const settingsText = formatSelectedOptionLabels(instrument, 'q30', answers.q30)
   const durationText = adhdCriteria.durationRequirement ? `${adhdCriteria.durationRequirement.toLowerCase()}` : 'at least 6 months'
-  const reportLead = `According to the DSM-5-TR, ${formatPossessiveName(respondentName)} self-report`
+  const subjectName = getBaarsSubjectName(instrument, header)
+  const reportLead = buildBaarsReportLead(instrument, header, subjectName)
+  const impairmentVerb = isBaarsOtherReportInstrument(instrument) ? 'reported' : 'endorsed'
 
   if (!presentation) {
     return `${reportLead} does not reach the ${adhdCriteria.disorderName} symptom threshold on this administration (${threshold}+ symptoms in either the inattention or hyperactivity-impulsivity domain for this age band).`
@@ -616,7 +771,7 @@ function buildCurrentCriteriaSuggestion(
   }
 
   if (missingParts.length === 0) {
-    return `${reportLead} is consistent with ${adhdCriteria.disorderName}, ${presentation} presentation, because the symptom threshold is met (${threshold}+ symptoms for this age band), the rating window reflects ${durationText}, onset was reported by age 12, and impairment was endorsed in ${settings.length} settings${settingsText ? ` (${settingsText})` : ''}. Exclusion review is still required, so this remains a screening inference rather than a standalone diagnosis.`
+    return `${reportLead} is consistent with ${adhdCriteria.disorderName}, ${presentation} presentation, because the symptom threshold is met (${threshold}+ symptoms for this age band), the rating window reflects ${durationText}, onset was reported by age 12, and impairment was ${impairmentVerb} in ${settings.length} settings${settingsText ? ` (${settingsText})` : ''}. Exclusion review is still required, so this remains a screening inference rather than a standalone diagnosis.`
   }
 
   return `${reportLead} reaches the ${adhdCriteria.disorderName} symptom threshold for ${presentation} presentation, but this form does not fully establish ${missingParts.join(' and ')}. The DSM duration window is ${durationText}, and final diagnosis still requires exclusion review and clinical rule-outs.`
@@ -627,7 +782,7 @@ function buildChildhoodCriteriaSuggestion(
   instrument: InstrumentDefinition,
   scores: ComputedGroupScore[],
   answers: Record<string, QuestionValue>,
-  respondentName: string,
+  header: Record<string, string>,
 ): string | null {
   const inattentionCount = getScoreById(scores, 'inattention_symptom_count')
   const hyperImpCount = getScoreById(scores, 'hyperactivity_impulsivity_symptom_count')
@@ -641,14 +796,16 @@ function buildChildhoodCriteriaSuggestion(
   const settings = Array.isArray(answers.q20) ? answers.q20 : []
   const settingsMet = settings.length > 0 ? settings.length >= 2 : null
   const settingsText = formatSelectedOptionLabels(instrument, 'q20', answers.q20)
-  const reportLead = `According to the DSM-5-TR, ${formatPossessiveName(respondentName)} self-report`
+  const subjectName = getBaarsSubjectName(instrument, header)
+  const reportLead = buildBaarsReportLead(instrument, header, subjectName)
+  const impairmentVerb = isBaarsOtherReportInstrument(instrument) ? 'reported' : 'endorsed'
 
   if (!presentation) {
     return `${reportLead} of childhood symptoms does not reach the ${adhdCriteria.disorderName} childhood symptom threshold on this administration (${threshold}+ symptoms in either domain).`
   }
 
   if (settingsMet === true) {
-    return `${reportLead} of childhood symptoms suggests the childhood symptom threshold is met for ${adhdCriteria.disorderName}, ${presentation} presentation, with impairment endorsed in ${settings.length} settings${settingsText ? ` (${settingsText})` : ''}. This form still does not independently confirm ${adhdCriteria.durationRequirement?.toLowerCase() ?? 'the full DSM duration requirement'} or current adult persistence.`
+    return `${reportLead} of childhood symptoms suggests the childhood symptom threshold is met for ${adhdCriteria.disorderName}, ${presentation} presentation, with impairment ${impairmentVerb} in ${settings.length} settings${settingsText ? ` (${settingsText})` : ''}. This form still does not independently confirm ${adhdCriteria.durationRequirement?.toLowerCase() ?? 'the full DSM duration requirement'} or current adult persistence.`
   }
 
   return `${reportLead} of childhood symptoms reaches the childhood symptom threshold for ${adhdCriteria.disorderName}, ${presentation} presentation, but cross-setting impairment is not fully documented on this form. This form also does not independently confirm ${adhdCriteria.durationRequirement?.toLowerCase() ?? 'the full DSM duration requirement'} or current adult persistence.`
@@ -658,7 +815,7 @@ function buildScoreTableRows(
   instrument: InstrumentDefinition,
   scores: ComputedGroupScore[],
 ): ScoreTableRow[] {
-  if (instrument.id === 'baars_iv_self_report_childhood_symptoms') {
+  if (isBaarsChildhoodInstrument(instrument)) {
     return [
       {
         label: 'Inattention',
@@ -746,28 +903,38 @@ function buildCurrentNarrative(
     return null
   }
 
-  const name = (header.name || '').trim() || 'The respondent'
-  const pronoun = pronounChoice === 'she' ? 'She' : pronounChoice === 'he' ? 'He' : 'They'
-  const pronounLower = pronoun.toLowerCase()
-  const possessive = pronoun === 'She' ? 'Her' : pronoun === 'He' ? 'His' : 'Their'
   const ageText = header.age ? `${header.age}-year-old` : ''
   const demographic = ageText
+  const subjectName = getBaarsSubjectName(instrument, header)
+  const { subject: pronoun, subjectLower: pronounLower, possessive } = getBaarsPronounSet(pronounChoice)
+  const raterDescriptor = formatBaarsRaterDescriptor(header)
+  const isOtherReport = isBaarsOtherReportInstrument(instrument)
 
   const fmt = (s: ComputedGroupScore) => {
     const base = `${s.value}${s.severityLabel ? `, ${s.severityLabel}` : ''}`
     return s.percentileBand ? `${base}, ${formatPercentileBand(s.percentileBand)}` : base
   }
 
-  const intro = `${name}${demographic ? `, a ${demographic},` : ''} completed the BAARS-IV Self-Report (Current Symptoms) on ${header.date || 'today'}.${ageBand ? ` Raw scores were compared against the ${ageBand} age band.` : ''}`
-  const subscales = `On the symptom items, ${pronounLower} obtained the following subscale raw scores: Inattention (${fmt(inattention)}); Hyperactivity (${fmt(hyperactivity)}); Impulsivity (${fmt(impulsivity)}); and Sluggish Cognitive Tempo (${fmt(sct)}). ${possessive} Total ADHD raw score was ${fmt(totalAdhd)}.`
-  const counts = `At the DSM symptom-count threshold (items rated "Often" or "Very Often"), ${pronounLower} endorsed ${inattCount?.value ?? 0}/9 inattention symptoms and ${hyperImpCount.value}/9 hyperactivity-impulsivity symptoms (${totalSymptomCount.value}/18 total).`
+  const intro = isOtherReport
+    ? `${subjectName}${demographic ? `, a ${demographic},` : ''} was rated on the ${instrument.title} on ${header.date || 'today'}${raterDescriptor ? ` by ${raterDescriptor}` : ''}.${ageBand ? ` Raw scores were compared against the ${ageBand} age band.` : ''}`
+    : `${subjectName}${demographic ? `, a ${demographic},` : ''} completed the ${instrument.title} on ${header.date || 'today'}.${ageBand ? ` Raw scores were compared against the ${ageBand} age band.` : ''}`
+  const subscales = isOtherReport
+    ? `On the symptom items, ${subjectName} was rated with the following subscale raw scores: Inattention (${fmt(inattention)}); Hyperactivity (${fmt(hyperactivity)}); Impulsivity (${fmt(impulsivity)}); and Sluggish Cognitive Tempo (${fmt(sct)}). ${possessive} Total ADHD raw score was ${fmt(totalAdhd)}.`
+    : `On the symptom items, ${pronounLower} obtained the following subscale raw scores: Inattention (${fmt(inattention)}); Hyperactivity (${fmt(hyperactivity)}); Impulsivity (${fmt(impulsivity)}); and Sluggish Cognitive Tempo (${fmt(sct)}). ${possessive} Total ADHD raw score was ${fmt(totalAdhd)}.`
+  const counts = isOtherReport
+    ? `At the DSM symptom-count threshold (items rated "Often" or "Very Often"), the rater marked ${inattCount?.value ?? 0}/9 inattention symptoms and ${hyperImpCount.value}/9 hyperactivity-impulsivity symptoms for ${subjectName} (${totalSymptomCount.value}/18 total).`
+    : `At the DSM symptom-count threshold (items rated "Often" or "Very Often"), ${pronounLower} endorsed ${inattCount?.value ?? 0}/9 inattention symptoms and ${hyperImpCount.value}/9 hyperactivity-impulsivity symptoms (${totalSymptomCount.value}/18 total).`
   const endorsedSymptoms = buildEndorsedSymptomsSection(instrument, answers)
   const sctCriteriaSummary = buildSctCriteriaSummary(instrument, answers)
-  const criteriaSuggestion = buildCurrentCriteriaSuggestion(adhdCriteria, instrument, scores, answers, age, name)
+  const criteriaSuggestion = buildCurrentCriteriaSuggestion(adhdCriteria, instrument, scores, answers, age, header)
 
   const followUpParts: string[] = []
   if (followUpPositive === 'yes') {
-    followUpParts.push(`${pronoun} endorsed experiencing at least one symptom at an "Often" frequency or higher.`)
+    followUpParts.push(
+      isOtherReport
+        ? `${subjectName} was rated as experiencing at least one symptom at an "Often" frequency or higher.`
+        : `${pronoun} endorsed experiencing at least one symptom at an "Often" frequency or higher.`,
+    )
     if (typeof onset === 'string' && onset.trim()) {
       followUpParts.push(`Reported age of symptom onset: ${onset.trim()}.`)
     }
@@ -775,7 +942,11 @@ function buildCurrentNarrative(
       followUpParts.push(`Impairment was reported in the following settings: ${settingsText}.`)
     }
   } else if (followUpPositive === 'no') {
-    followUpParts.push(`${pronoun} did not endorse any symptoms at an "Often" frequency or higher.`)
+    followUpParts.push(
+      isOtherReport
+        ? `${subjectName} was not rated as showing any symptoms at an "Often" frequency or higher.`
+        : `${pronoun} did not endorse any symptoms at an "Often" frequency or higher.`,
+    )
   }
 
   const footer = 'Results should be interpreted in the context of clinical interview, developmental history, and collateral information.'
@@ -812,32 +983,46 @@ function buildChildhoodNarrative(
     return null
   }
 
-  const name = (header.name || '').trim() || 'The respondent'
-  const pronoun = pronounChoice === 'she' ? 'She' : pronounChoice === 'he' ? 'He' : 'They'
-  const pronounLower = pronoun.toLowerCase()
-  const possessive = pronoun === 'She' ? 'Her' : pronoun === 'He' ? 'His' : 'Their'
   const ageText = header.age ? `${header.age}-year-old` : ''
   const demographic = ageText
+  const subjectName = getBaarsSubjectName(instrument, header)
+  const { subject: pronoun, subjectLower: pronounLower, possessive } = getBaarsPronounSet(pronounChoice)
+  const raterDescriptor = formatBaarsRaterDescriptor(header)
+  const isOtherReport = isBaarsOtherReportInstrument(instrument)
 
   const fmt = (s: ComputedGroupScore) => {
     const base = `${s.value}${s.severityLabel ? `, ${s.severityLabel}` : ''}`
     return s.percentileBand ? `${base}, ${formatPercentileBand(s.percentileBand)}` : base
   }
 
-  const intro = `${name}${demographic ? `, a ${demographic},` : ''} completed the BAARS-IV Self-Report (Childhood Symptoms) on ${header.date || 'today'}. Ratings reflect recalled behavior between ages 5 and 12.${ageBand ? ` Raw scores were compared against the ${ageBand} age band.` : ''}`
-  const subscales = `On the retrospective childhood symptom items, ${pronounLower} obtained the following raw scores: Inattention (${fmt(inattention)}) and Hyperactivity-Impulsivity (${fmt(hyperImp)}). ${possessive} Total ADHD raw score was ${fmt(totalAdhd)}.`
-  const counts = `At the DSM symptom-count threshold (items rated "Often" or "Very Often"), ${pronounLower} endorsed ${inattCount.value}/9 inattention symptoms and ${hyperImpCount.value}/9 hyperactivity-impulsivity symptoms (${totalSymptomCount.value}/18 total).`
+  const intro = isOtherReport
+    ? `${subjectName}${demographic ? `, a ${demographic},` : ''} was rated on the ${instrument.title} on ${header.date || 'today'}${raterDescriptor ? ` by ${raterDescriptor}` : ''}. Ratings reflect reported childhood behavior between ages 5 and 12.${ageBand ? ` Raw scores were compared against the ${ageBand} age band.` : ''}`
+    : `${subjectName}${demographic ? `, a ${demographic},` : ''} completed the ${instrument.title} on ${header.date || 'today'}. Ratings reflect recalled behavior between ages 5 and 12.${ageBand ? ` Raw scores were compared against the ${ageBand} age band.` : ''}`
+  const subscales = isOtherReport
+    ? `On the retrospective childhood symptom items, ${subjectName} was rated with the following raw scores: Inattention (${fmt(inattention)}) and Hyperactivity-Impulsivity (${fmt(hyperImp)}). ${possessive} Total ADHD raw score was ${fmt(totalAdhd)}.`
+    : `On the retrospective childhood symptom items, ${pronounLower} obtained the following raw scores: Inattention (${fmt(inattention)}) and Hyperactivity-Impulsivity (${fmt(hyperImp)}). ${possessive} Total ADHD raw score was ${fmt(totalAdhd)}.`
+  const counts = isOtherReport
+    ? `At the DSM symptom-count threshold (items rated "Often" or "Very Often"), the rater marked ${inattCount.value}/9 inattention symptoms and ${hyperImpCount.value}/9 hyperactivity-impulsivity symptoms for ${subjectName} (${totalSymptomCount.value}/18 total).`
+    : `At the DSM symptom-count threshold (items rated "Often" or "Very Often"), ${pronounLower} endorsed ${inattCount.value}/9 inattention symptoms and ${hyperImpCount.value}/9 hyperactivity-impulsivity symptoms (${totalSymptomCount.value}/18 total).`
   const endorsedSymptoms = buildEndorsedSymptomsSection(instrument, answers)
-  const criteriaSuggestion = buildChildhoodCriteriaSuggestion(adhdCriteria, instrument, scores, answers, name)
+  const criteriaSuggestion = buildChildhoodCriteriaSuggestion(adhdCriteria, instrument, scores, answers, header)
 
   const followUpParts: string[] = []
   if (followUpPositive === 'yes') {
-    followUpParts.push(`${pronoun} endorsed experiencing at least one childhood symptom at an "Often" frequency or higher.`)
+    followUpParts.push(
+      isOtherReport
+        ? `${subjectName} was rated as experiencing at least one childhood symptom at an "Often" frequency or higher.`
+        : `${pronoun} endorsed experiencing at least one childhood symptom at an "Often" frequency or higher.`,
+    )
     if (settingsText) {
       followUpParts.push(`Impairment was reported in the following settings: ${settingsText}.`)
     }
   } else if (followUpPositive === 'no') {
-    followUpParts.push(`${pronoun} did not endorse any childhood symptoms at an "Often" frequency or higher.`)
+    followUpParts.push(
+      isOtherReport
+        ? `${subjectName} was not rated as showing any childhood symptoms at an "Often" frequency or higher.`
+        : `${pronoun} did not endorse any childhood symptoms at an "Often" frequency or higher.`,
+    )
   }
 
   const footer = 'Results should be interpreted alongside developmental history, collateral information, and the limits of retrospective recall.'
@@ -856,15 +1041,433 @@ function buildNarrative(
   followUpPositive: 'yes' | 'no' | null,
   age: number | null,
 ): string | null {
-  if (instrument.id === 'baars_iv_self_report_childhood_symptoms') {
+  if (isBaarsChildhoodInstrument(instrument)) {
     return buildChildhoodNarrative(adhdCriteria, instrument, scores, answers, ageBand, header, pronounChoice, followUpPositive)
   }
 
   return buildCurrentNarrative(adhdCriteria, instrument, scores, answers, ageBand, header, pronounChoice, followUpPositive, age)
 }
 
+function getBaarsSymptomSections(instrument: InstrumentDefinition): typeof instrument.sections {
+  return instrument.sections.filter(section => section.id !== 'follow_up')
+}
+
+function computeBaarsScores(
+  instrument: InstrumentDefinition,
+  answers: Record<string, QuestionValue>,
+  age: number | null,
+): ComputedGroupScore[] {
+  return instrument.scoringGroups.map(group => {
+    const numericAnswers = group.questionIds
+      .map(qid => answers[qid])
+      .filter((v): v is string => typeof v === 'string' && v.trim() !== '')
+      .map(Number)
+      .filter(Number.isFinite)
+
+    if (numericAnswers.length !== group.questionIds.length) {
+      return { group, value: null, answered: numericAnswers.length, total: group.questionIds.length, severityLabel: null, percentileBand: null }
+    }
+
+    const value = group.scoringType === 'raw_sum'
+      ? numericAnswers.reduce((a, b) => a + b, 0)
+      : numericAnswers.filter(v => v >= (group.positiveThresholdValue ?? Infinity)).length
+
+    const percentileBand = group.scoringType === 'raw_sum' && age !== null
+      ? isBaarsChildhoodInstrument(instrument)
+        ? lookupBaarsChildhoodPercentile(group.id, value, age)
+        : lookupBaarsCurrentPercentile(group.id, value, age)
+      : null
+
+    const severityLabel = group.scoringType === 'raw_sum'
+      ? getDescriptiveCategoryFromPercentileBand(percentileBand)
+      : null
+
+    return { group, value, answered: numericAnswers.length, total: group.questionIds.length, severityLabel, percentileBand }
+  })
+}
+
+function hasMeaningfulBaarsDraft(draft: BaarsDraftState): boolean {
+  const hasAnswers = Object.values(draft.answers).some(value =>
+    Array.isArray(value)
+      ? value.length > 0
+      : typeof value === 'string' && value.trim() !== '',
+  )
+  const hasHeaders = Object.entries(draft.headerValues).some(([key, value]) =>
+    key !== 'date' && value.trim() !== '',
+  )
+
+  return hasAnswers || hasHeaders
+}
+
+function getBaarsMasterFormLabel(instrument: InstrumentDefinition): string {
+  const timeframe = isBaarsChildhoodInstrument(instrument) ? 'Childhood' : 'Current'
+  const rater = isBaarsOtherReportInstrument(instrument) ? 'observer report' : 'self-report'
+  return `${timeframe} ${rater}`
+}
+
+function formatBaarsMasterScore(score: ComputedGroupScore | null): string {
+  if (!score || score.value === null) return 'unavailable'
+
+  const details: string[] = []
+  if (score.severityLabel) details.push(score.severityLabel)
+  if (score.percentileBand) details.push(formatPercentileBand(score.percentileBand))
+
+  return details.length > 0 ? `${score.value} (${details.join(', ')})` : `${score.value}`
+}
+
+function buildBaarsDraftProgressNote(
+  instrument: InstrumentDefinition,
+  draft: BaarsDraftState,
+): string {
+  const raterDescriptor = formatBaarsRaterDescriptor(draft.headerValues)
+  const symptomSections = getBaarsSymptomSections(instrument)
+  const totalLikert = symptomSections.reduce((sum, section) => sum + section.questions.length, 0)
+  const answeredCount = symptomSections.reduce((sum, section) =>
+    sum + section.questions.filter(question => typeof draft.answers[question.id] === 'string' && draft.answers[question.id] !== '').length,
+  0)
+  const label = getBaarsMasterFormLabel(instrument)
+  const labelWithSource = isBaarsOtherReportInstrument(instrument) && raterDescriptor
+    ? `${label} from ${raterDescriptor}`
+    : label
+
+  return `${labelWithSource} is in progress (${answeredCount}/${totalLikert} symptom items completed).`
+}
+
+function buildBaarsMasterFormSummary(
+  adhdCriteria: BaarsAdhdCriteriaMeta,
+  instrument: InstrumentDefinition,
+  draft: BaarsDraftState,
+): BaarsMasterFormSummary {
+  const ageValue = Number(draft.headerValues.age)
+  const age = Number.isFinite(ageValue) ? ageValue : null
+  const ageBand = age !== null ? getBaarsAgeBand(age) : null
+  const symptomSections = getBaarsSymptomSections(instrument)
+  const symptomQuestionIds = symptomSections.flatMap(section => section.questions.map(question => question.id))
+  const firstFollowUpQuestion = instrument.sections.find(section => section.id === 'follow_up')?.questions[0] ?? null
+  const followUpPositive = firstFollowUpQuestion
+    ? deriveFollowUpPositive(symptomQuestionIds, draft.answers)
+    : null
+  const computedScores = computeBaarsScores(instrument, draft.answers, age)
+  const raterDescriptor = formatBaarsRaterDescriptor(draft.headerValues)
+  const label = getBaarsMasterFormLabel(instrument)
+  const labelWithSource = isBaarsOtherReportInstrument(instrument) && raterDescriptor
+    ? `${label} from ${raterDescriptor}`
+    : label
+  const timeframe = isBaarsChildhoodInstrument(instrument) ? 'childhood' : 'current'
+  const rater = isBaarsOtherReportInstrument(instrument) ? 'observer' : 'self'
+
+  const narrative = buildNarrative(
+    adhdCriteria,
+    instrument,
+    computedScores,
+    draft.answers,
+    ageBand,
+    draft.headerValues,
+    draft.pronounChoice,
+    followUpPositive,
+    age,
+  )
+
+  if (!narrative) {
+    return {
+      instrument,
+      timeframe,
+      rater,
+      label,
+      completed: false,
+      sentence: buildBaarsDraftProgressNote(instrument, draft),
+      thresholdMet: null,
+      presentation: null,
+      raterDescriptor,
+    }
+  }
+
+  const inattentionCount = getScoreById(computedScores, 'inattention_symptom_count')
+  const hyperImpCount = getScoreById(computedScores, 'hyperactivity_impulsivity_symptom_count')
+  const totalAdhd = getScoreById(computedScores, 'total_adhd_raw')
+  const settingsValue = isBaarsChildhoodInstrument(instrument) ? draft.answers.q20 : draft.answers.q30
+  const settings = Array.isArray(settingsValue) ? settingsValue : []
+  const settingsText = isBaarsChildhoodInstrument(instrument)
+    ? formatSelectedOptionLabels(instrument, 'q20', draft.answers.q20)
+    : formatSelectedOptionLabels(instrument, 'q30', draft.answers.q30)
+
+  if (
+    !inattentionCount ||
+    inattentionCount.value === null ||
+    !hyperImpCount ||
+    hyperImpCount.value === null ||
+    !totalAdhd ||
+    totalAdhd.value === null
+  ) {
+    return {
+      instrument,
+      timeframe,
+      rater,
+      label,
+      completed: false,
+      sentence: buildBaarsDraftProgressNote(instrument, draft),
+      thresholdMet: null,
+      presentation: null,
+      raterDescriptor,
+    }
+  }
+
+  if (isBaarsChildhoodInstrument(instrument)) {
+    const threshold = adhdCriteria.childhoodThreshold
+    const presentation = getAdhdPresentationLabel(inattentionCount.value, hyperImpCount.value, threshold)
+    const thresholdMet = presentation !== null
+    const hyperImpRaw = getScoreById(computedScores, 'hyperactivity_impulsivity_raw')
+
+    const sentenceParts = [
+      `${labelWithSource} showed ${inattentionCount.value}/9 inattention symptoms and ${hyperImpCount.value}/9 hyperactivity-impulsivity symptoms, with a Total ADHD raw score of ${formatBaarsMasterScore(totalAdhd)}${hyperImpRaw ? ` and a Hyperactivity-Impulsivity raw score of ${formatBaarsMasterScore(hyperImpRaw)}` : ''}.`,
+    ]
+
+    if (presentation) {
+      if (settings.length >= 2) {
+        sentenceParts.push(
+          `On this retrospective form, the pattern is consistent with childhood ADHD ${presentation} presentation, with impairment reported in ${settingsText}.`,
+        )
+      } else {
+        sentenceParts.push(
+          settings.length === 1 && settingsText
+            ? `On this retrospective form, symptom counts reach the childhood ADHD ${presentation} presentation threshold, though cross-setting impairment was only reported in ${settingsText}.`
+            : `On this retrospective form, symptom counts reach the childhood ADHD ${presentation} presentation threshold, though cross-setting impairment was not fully documented.`,
+        )
+      }
+    } else {
+      sentenceParts.push('This form does not reach the childhood ADHD symptom threshold.')
+    }
+
+    return {
+      instrument,
+      timeframe,
+      rater,
+      label,
+      completed: true,
+      sentence: sentenceParts.join(' '),
+      thresholdMet,
+      presentation,
+      raterDescriptor,
+    }
+  }
+
+  const threshold = age !== null && age <= 16 ? adhdCriteria.childhoodThreshold : adhdCriteria.adultThreshold
+  const presentation = getAdhdPresentationLabel(inattentionCount.value, hyperImpCount.value, threshold)
+  const thresholdMet = presentation !== null
+  const onsetValue = typeof draft.answers.q29 === 'string' && draft.answers.q29.trim() !== ''
+    ? Number(draft.answers.q29)
+    : null
+  const onsetBeforeTwelve = onsetValue !== null && Number.isFinite(onsetValue) ? onsetValue <= 12 : null
+  const sctRaw = getScoreById(computedScores, 'sct_raw')
+  const sentenceParts = [
+    `${labelWithSource} showed ${inattentionCount.value}/9 inattention symptoms and ${hyperImpCount.value}/9 hyperactivity-impulsivity symptoms, with a Total ADHD raw score of ${formatBaarsMasterScore(totalAdhd)}${sctRaw ? ` and an SCT raw score of ${formatBaarsMasterScore(sctRaw)}` : ''}.`,
+  ]
+
+  if (presentation) {
+    if (onsetBeforeTwelve === true && settings.length >= 2) {
+      sentenceParts.push(
+        `On this form, the pattern is consistent with an ADHD ${presentation} presentation screening profile, with onset reported at age ${onsetValue} and impairment reported in ${settingsText}.`,
+      )
+    } else {
+      const caveats: string[] = []
+      if (onsetBeforeTwelve !== true) {
+        caveats.push(
+          onsetBeforeTwelve === false && onsetValue !== null
+            ? `onset was entered as age ${onsetValue}`
+            : 'onset before age 12 was not documented',
+        )
+      }
+      if (settings.length < 2) {
+        caveats.push(
+          settings.length === 1 && settingsText
+            ? `impairment was only reported in ${settingsText}`
+            : 'cross-setting impairment was not fully documented',
+        )
+      }
+
+      sentenceParts.push(
+        `On this form, symptom counts reach the ADHD ${presentation} presentation threshold, though ${caveats.join(' and ')}.`,
+      )
+    }
+  } else {
+    sentenceParts.push('This form does not reach the ADHD symptom threshold.')
+  }
+
+  return {
+    instrument,
+    timeframe,
+    rater,
+    label,
+    completed: true,
+    sentence: sentenceParts.join(' '),
+    thresholdMet,
+    presentation,
+    raterDescriptor,
+  }
+}
+
+function buildBaarsMasterOverview(
+  formSummaries: BaarsMasterFormSummary[],
+  draftEntries: Array<[string, BaarsDraftState]>,
+): string {
+  const subjectName = draftEntries
+    .map(([, draft]) => (draft.headerValues.name || '').trim())
+    .find(name => name.length > 0)
+    ?? (formSummaries.some(summary => summary.rater === 'observer') ? 'The rated person' : 'The respondent')
+  const age = draftEntries
+    .map(([, draft]) => Number(draft.headerValues.age))
+    .find(value => Number.isFinite(value))
+  const ageText = typeof age === 'number' ? `, a ${age}-year-old,` : ''
+  const observerSources = Array.from(
+    new Set(
+      formSummaries
+        .map(summary => summary.raterDescriptor)
+        .filter((value): value is string => Boolean(value)),
+    ),
+  )
+  const completedLabels = formSummaries.filter(summary => summary.completed).map(summary => summary.label)
+  const draftLabels = formSummaries.filter(summary => !summary.completed).map(summary => summary.label)
+  const sentences = [
+    `${subjectName}${ageText} has BAARS-IV data across the available self-report and observer forms.`,
+  ]
+
+  if (observerSources.length > 0) {
+    sentences.push(`Collateral input in this session comes from ${formatReportList(observerSources)}.`)
+  }
+  if (completedLabels.length > 0) {
+    sentences.push(`Completed forms: ${formatReportList(completedLabels)}.`)
+  }
+  if (draftLabels.length > 0) {
+    sentences.push(`Forms still in progress: ${formatReportList(draftLabels)}.`)
+  }
+
+  return sentences.join(' ')
+}
+
+function buildBaarsMasterTimeframeParagraph(
+  prefix: string,
+  formSummaries: BaarsMasterFormSummary[],
+): string | null {
+  if (formSummaries.length === 0) return null
+  return `${prefix}: ${formSummaries.map(summary => summary.sentence).join(' ')}`
+}
+
+function buildBaarsConcordanceSentence(
+  label: string,
+  selfSummary: BaarsMasterFormSummary | undefined,
+  observerSummary: BaarsMasterFormSummary | undefined,
+): string | null {
+  if (!selfSummary || !observerSummary) return null
+  if (selfSummary.thresholdMet === null || observerSummary.thresholdMet === null) return null
+
+  if (selfSummary.thresholdMet === observerSummary.thresholdMet) {
+    if (!selfSummary.thresholdMet) {
+      return `${label} self- and observer ratings are concordant in remaining below the ADHD symptom threshold.`
+    }
+
+    if (
+      selfSummary.presentation &&
+      observerSummary.presentation &&
+      selfSummary.presentation === observerSummary.presentation
+    ) {
+      return `${label} self- and observer ratings are concordant for an ADHD ${selfSummary.presentation} presentation pattern.`
+    }
+
+    return `${label} self- and observer ratings are directionally concordant for clinically significant ADHD symptom elevation.`
+  }
+
+  return `${label} self- and observer ratings are not fully concordant, so cross-informant interpretation remains mixed.`
+}
+
+function buildBaarsMasterIntegratedImpression(formSummaries: BaarsMasterFormSummary[]): string {
+  const completed = formSummaries.filter(summary => summary.completed)
+  if (completed.length === 0) {
+    return 'Integrated impression: No BAARS form is complete enough yet for score-based interpretation. Finish at least one form to generate an integrated clinical summary.'
+  }
+
+  const currentCompleted = completed.filter(summary => summary.timeframe === 'current')
+  const childhoodCompleted = completed.filter(summary => summary.timeframe === 'childhood')
+  const currentThresholdMet = currentCompleted.filter(summary => summary.thresholdMet === true)
+  const childhoodThresholdMet = childhoodCompleted.filter(summary => summary.thresholdMet === true)
+  const currentSelf = currentCompleted.find(summary => summary.rater === 'self')
+  const currentObserver = currentCompleted.find(summary => summary.rater === 'observer')
+  const childhoodSelf = childhoodCompleted.find(summary => summary.rater === 'self')
+  const childhoodObserver = childhoodCompleted.find(summary => summary.rater === 'observer')
+  const sentences: string[] = []
+
+  if (currentThresholdMet.length > 0 && childhoodThresholdMet.length > 0) {
+    sentences.push('Completed BAARS data show elevated ADHD symptoms in both current and retrospective childhood timeframes, supporting a persistent developmental pattern on screening.')
+  } else if (currentThresholdMet.length > 0) {
+    sentences.push(
+      childhoodCompleted.length > 0
+        ? 'Completed BAARS data show elevated current ADHD symptoms, while retrospective childhood threshold evidence is not established on the completed forms.'
+        : 'Completed BAARS data show elevated current ADHD symptoms, while retrospective childhood forms are not yet complete.',
+    )
+  } else if (childhoodThresholdMet.length > 0) {
+    sentences.push(
+      currentCompleted.length > 0
+        ? 'Completed BAARS data support retrospective childhood ADHD symptom elevation, while current adult threshold evidence is not established on the completed forms.'
+        : 'Completed BAARS data support retrospective childhood ADHD symptom elevation, while current adult forms are not yet complete.',
+    )
+  } else {
+    sentences.push('Completed BAARS forms do not currently reach ADHD symptom thresholds across the available timeframes.')
+  }
+
+  const currentConcordance = buildBaarsConcordanceSentence('Current', currentSelf, currentObserver)
+  if (currentConcordance) sentences.push(currentConcordance)
+
+  const childhoodConcordance = buildBaarsConcordanceSentence('Childhood', childhoodSelf, childhoodObserver)
+  if (childhoodConcordance) sentences.push(childhoodConcordance)
+
+  if (formSummaries.some(summary => !summary.completed)) {
+    sentences.push('Some BAARS forms remain in progress, so the integrated cross-informant picture is still provisional.')
+  }
+
+  sentences.push('These findings should be interpreted alongside clinical interview, developmental history, collateral information, and differential diagnosis.')
+
+  return `Integrated impression: ${sentences.join(' ')}`
+}
+
+function buildBaarsMasterSummary(
+  adhdCriteria: BaarsAdhdCriteriaMeta,
+  draftEntries: Array<[string, BaarsDraftState]>,
+): string | null {
+  const draftMap = new Map(draftEntries)
+  const formStates = BAARS_MASTER_SUMMARY_INSTRUMENTS
+    .map(instrument => {
+      const draft = draftMap.get(instrument.id)
+      if (!draft || !hasMeaningfulBaarsDraft(draft)) return null
+      return { instrument, draft }
+    })
+    .filter((value): value is { instrument: InstrumentDefinition; draft: BaarsDraftState } => value !== null)
+
+  if (formStates.length === 0) return null
+
+  const formSummaries = formStates.map(({ instrument, draft }) =>
+    buildBaarsMasterFormSummary(adhdCriteria, instrument, draft),
+  )
+  const currentParagraph = buildBaarsMasterTimeframeParagraph(
+    'Current findings',
+    formSummaries.filter(summary => summary.timeframe === 'current'),
+  )
+  const childhoodParagraph = buildBaarsMasterTimeframeParagraph(
+    'Childhood findings',
+    formSummaries.filter(summary => summary.timeframe === 'childhood'),
+  )
+  const integratedImpression = buildBaarsMasterIntegratedImpression(formSummaries)
+
+  return [
+    'BAARS Master Summary',
+    buildBaarsMasterOverview(formSummaries, formStates.map(({ instrument, draft }) => [instrument.id, draft])),
+    currentParagraph,
+    childhoodParagraph,
+    integratedImpression,
+  ].filter(Boolean).join('\n\n')
+}
+
 // --- Severity color coding ---
 const severityColor: Record<string, string> = {
+  'Normal': 'text-zinc-400 dark:text-zinc-500',
   'Subclinical': 'text-zinc-500 dark:text-zinc-400',
   'Mild': 'text-amber-600 dark:text-amber-400',
   'Moderate': 'text-orange-600 dark:text-orange-400',
@@ -883,17 +1486,24 @@ export function BaarsDemo({
     () => buildInitialHeaderValues(instrument.headerFields),
     [instrument.headerFields],
   )
-  const [headerValues, setHeaderValues] = useState<Record<string, string>>(
-    initialHeaderValues,
+  const initialDraft = useMemo(
+    () => readBaarsDraft(instrument.id, instrument.headerFields),
+    [instrument.id, instrument.headerFields],
   )
-  const [answers, setAnswers] = useState<Record<string, QuestionValue>>({})
-  const [pronounChoice, setPronounChoice] = useState<PronounChoice>('they')
+  const [headerValues, setHeaderValues] = useState<Record<string, string>>(
+    () => initialDraft?.headerValues ?? initialHeaderValues,
+  )
+  const [answers, setAnswers] = useState<Record<string, QuestionValue>>(
+    () => initialDraft?.answers ?? {},
+  )
+  const [pronounChoice, setPronounChoice] = useState<PronounChoice>(
+    () => initialDraft?.pronounChoice ?? 'they',
+  )
   const [collapsedSections, setCollapsedSections] = useState<Set<string>>(new Set())
   const userExpandedRef = useRef<Set<string>>(new Set())
   const answerHistoryRef = useRef<Array<{ id: string; prev: QuestionValue | undefined }>>([])
   const hasInitializedActiveQuestionRef = useRef(false)
   const [mobileSheetOpen, setMobileSheetOpen] = useState(false)
-  const [respondentDraftLoaded, setRespondentDraftLoaded] = useState(false)
   const ageValue = Number(headerValues.age)
   const age = Number.isFinite(ageValue) ? ageValue : null
   const ageBand = age !== null ? getBaarsAgeBand(age) : null
@@ -919,30 +1529,10 @@ export function BaarsDemo({
   const answeredCount = symptomSections.reduce((sum, section) =>
     sum + section.questions.filter(q => typeof answers[q.id] === 'string' && answers[q.id] !== '').length, 0)
   const totalLikert = symptomSections.reduce((sum, s) => sum + s.questions.length, 0)
-
-  const computedScores: ComputedGroupScore[] = instrument.scoringGroups.map(group => {
-    const numericAnswers = group.questionIds
-      .map(qid => answers[qid])
-      .filter((v): v is string => typeof v === 'string' && v.trim() !== '')
-      .map(Number)
-      .filter(Number.isFinite)
-
-    if (numericAnswers.length !== group.questionIds.length) {
-      return { group, value: null, answered: numericAnswers.length, total: group.questionIds.length, severityLabel: null, percentileBand: null }
-    }
-
-    const value = group.scoringType === 'raw_sum'
-      ? numericAnswers.reduce((a, b) => a + b, 0)
-      : numericAnswers.filter(v => v >= (group.positiveThresholdValue ?? Infinity)).length
-
-    const percentileBand = group.scoringType === 'raw_sum' && age !== null
-      ? instrument.id === 'baars_iv_self_report_childhood_symptoms'
-        ? lookupBaarsChildhoodPercentile(group.id, value, age)
-        : lookupBaarsCurrentPercentile(group.id, value, age)
-      : null
-
-    return { group, value, answered: numericAnswers.length, total: group.questionIds.length, severityLabel: getSeverityLabel(value, group.severityBands), percentileBand }
-  })
+  const computedScores = useMemo(
+    () => computeBaarsScores(instrument, answers, age),
+    [instrument, answers, age],
+  )
 
   const followUpsDisabled = followUpPositive !== 'yes'
 
@@ -962,22 +1552,8 @@ export function BaarsDemo({
   }, [followUpPositive, remainingFollowUpQuestions])
 
   useEffect(() => {
-    const storedDraft = readBaarsRespondentDraft(instrument.headerFields)
-    if (storedDraft) {
-      setHeaderValues(storedDraft.headerValues)
-      setPronounChoice(storedDraft.pronounChoice)
-    } else {
-      setHeaderValues(initialHeaderValues)
-      setPronounChoice('they')
-    }
-
-    setRespondentDraftLoaded(true)
-  }, [initialHeaderValues, instrument.headerFields])
-
-  useEffect(() => {
-    if (!respondentDraftLoaded) return
-    writeBaarsRespondentDraft(instrument.headerFields, headerValues, pronounChoice)
-  }, [headerValues, instrument.headerFields, pronounChoice, respondentDraftLoaded])
+    writeBaarsDraft(instrument.id, instrument.headerFields, headerValues, pronounChoice, answers)
+  }, [instrument.id, instrument.headerFields, headerValues, pronounChoice, answers])
 
   const narrative = buildNarrative(
     adhdCriteria,
@@ -990,7 +1566,24 @@ export function BaarsDemo({
     followUpPositive,
     age,
   )
-  const [copied, setCopied] = useState(false)
+  const masterDraftEntries = useMemo(() => {
+    const otherEntries = getBaarsDraftEntries().filter(([draftInstrumentId]) => draftInstrumentId !== instrument.id)
+    otherEntries.push([
+      instrument.id,
+      {
+        headerValues: { ...headerValues },
+        answers: cloneDraftAnswers(answers),
+        pronounChoice,
+      },
+    ])
+    return otherEntries
+  }, [instrument.id, headerValues, answers, pronounChoice])
+  const masterNarrative = useMemo(
+    () => buildBaarsMasterSummary(adhdCriteria, masterDraftEntries),
+    [adhdCriteria, masterDraftEntries],
+  )
+  const [summaryCopied, setSummaryCopied] = useState(false)
+  const [masterCopied, setMasterCopied] = useState(false)
 
   const questionRefs = useRef<Record<string, HTMLDivElement | null>>({})
   const [activeQuestionId, setActiveQuestionId] = useState<string | null>(
@@ -1125,7 +1718,7 @@ export function BaarsDemo({
     })
   }
   const resetDemo = () => {
-    clearBaarsRespondentDraft()
+    clearBaarsDraft(instrument.id)
     setHeaderValues(initialHeaderValues)
     setAnswers({})
     setPronounChoice('they')
@@ -1195,6 +1788,9 @@ export function BaarsDemo({
     }
     return items
   }, [headerValues.age, sectionProgress, followUpPositive, remainingFollowUpQuestions, answers])
+  const pronounFieldLabel = isBaarsOtherReportInstrument(instrument)
+    ? "Rated Person's Pronouns"
+    : 'Pronouns'
 
   const motionSection = (index: number) => prefersReducedMotion
     ? {}
@@ -1211,7 +1807,7 @@ export function BaarsDemo({
       <motion.section {...motionSection(0)}>
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-xs font-medium uppercase tracking-[0.15em] text-zinc-900 dark:text-zinc-100">
-            Respondent
+            Details
           </h2>
           <button
             type="button"
@@ -1227,7 +1823,7 @@ export function BaarsDemo({
               return (
                 <div key={field.id} className="space-y-2">
                   <Label className="text-[12px] font-medium text-zinc-500 dark:text-zinc-400">{field.label}</Label>
-                  <div className="flex gap-1.5">
+                  <div className="flex flex-wrap gap-1.5">
                     {field.options.map(opt => {
                       const isSelected = headerValues[field.id] === opt.value
                       return (
@@ -1270,7 +1866,7 @@ export function BaarsDemo({
             )
           })}
           <div className="space-y-2">
-            <Label className="text-[12px] font-medium text-zinc-500 dark:text-zinc-400">Pronouns</Label>
+            <Label className="text-[12px] font-medium text-zinc-500 dark:text-zinc-400">{pronounFieldLabel}</Label>
             <div className="flex flex-wrap gap-1.5">
               {([
                 { v: 'she', label: 'She/Her' },
@@ -1604,7 +2200,7 @@ export function BaarsDemo({
         <p className="text-[11px] text-zinc-400 dark:text-zinc-500 mb-6 flex items-center gap-2">
           <span>
             {ageBand ? `Percentiles using ${ageBand} norms.` : 'Enter age for percentile lookup.'}
-            {age !== null && age > 39 && ' Severity labels normed for ages 18-39.'}
+            {ageBand && ' Descriptive categories derived from percentile bands: Normal 1-83, Subclinical 84-92, Mild 93-96, Moderate 97-98, High 99+.'}
           </span>
           <Tooltip>
             <TooltipTrigger asChild>
@@ -1626,7 +2222,7 @@ export function BaarsDemo({
                   Raw
                 </th>
                 <th className="px-4 py-3 text-right text-[11px] font-medium uppercase tracking-[0.12em] text-zinc-400 dark:text-zinc-500">
-                  Severity
+                  Category
                 </th>
                 <th className="px-4 py-3 text-right text-[11px] font-medium uppercase tracking-[0.12em] text-zinc-400 dark:text-zinc-500">
                   Percentile
@@ -1703,10 +2299,10 @@ export function BaarsDemo({
         </div>
       </motion.section>
 
-      {/* --- Clinical Summary --- */}
+      {/* --- Current Form Summary --- */}
       <motion.section {...motionSection(symptomSections.length + 4)} className="mt-24 hidden md:block border-t border-zinc-100 dark:border-zinc-800/50 pt-12">
         <h2 className="text-xs font-medium uppercase tracking-[0.15em] text-zinc-900 dark:text-zinc-100 mb-4">
-          Clinical Summary
+          Current Form Summary
         </h2>
         {narrative ? (
           <div>
@@ -1725,15 +2321,15 @@ export function BaarsDemo({
                 type="button"
                 onClick={() => {
                   navigator.clipboard.writeText(narrative)
-                  setCopied(true)
-                  setTimeout(() => setCopied(false), 1800)
+                  setSummaryCopied(true)
+                  setTimeout(() => setSummaryCopied(false), 1800)
                 }}
                 className={cn(
                   'absolute top-3 right-3 rounded-md border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 px-2.5 py-1 text-[10px] font-medium uppercase tracking-[0.12em] text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 hover:border-zinc-400 dark:hover:border-zinc-600 cursor-pointer transition-transform duration-150 active:scale-95',
-                  copied && 'scale-105',
+                  summaryCopied && 'scale-105',
                 )}
               >
-                {copied ? 'Copied' : 'Copy'}
+                {summaryCopied ? 'Copied' : 'Copy'}
               </button>
             </div>
           </div>
@@ -1758,23 +2354,60 @@ export function BaarsDemo({
         )}
       </motion.section>
 
+      {/* --- Master Summary --- */}
+      {masterNarrative && (
+        <motion.section {...motionSection(symptomSections.length + 5)} className="mt-24 hidden md:block border-t border-zinc-100 dark:border-zinc-800/50 pt-12">
+          <h2 className="text-xs font-medium uppercase tracking-[0.15em] text-zinc-900 dark:text-zinc-100 mb-4">
+            Master Summary
+          </h2>
+          <div>
+            <div className="mb-2 flex items-center gap-1.5 text-[11px] text-zinc-400 dark:text-zinc-500">
+              <Lock className="h-3 w-3" strokeWidth={1.75} />
+              <span>Aggregates saved drafts across all BAARS tabs in this browser session.</span>
+            </div>
+            <div className="relative">
+              <textarea
+                readOnly
+                value={masterNarrative}
+                rows={24}
+                className="w-full resize-y rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 p-5 pr-24 text-[13px] leading-relaxed text-zinc-700 dark:text-zinc-300 focus:outline-none focus:ring-1 focus:ring-zinc-900 dark:focus:ring-zinc-100"
+              />
+              <button
+                type="button"
+                onClick={() => {
+                  navigator.clipboard.writeText(masterNarrative)
+                  setMasterCopied(true)
+                  setTimeout(() => setMasterCopied(false), 1800)
+                }}
+                className={cn(
+                  'absolute top-3 right-3 rounded-md border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 px-2.5 py-1 text-[10px] font-medium uppercase tracking-[0.12em] text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 hover:border-zinc-400 dark:hover:border-zinc-600 cursor-pointer transition-transform duration-150 active:scale-95',
+                  masterCopied && 'scale-105',
+                )}
+              >
+                {masterCopied ? 'Copied' : 'Copy'}
+              </button>
+            </div>
+          </div>
+        </motion.section>
+      )}
+
       {/* --- Mobile sticky View Summary (Item 31) --- */}
       <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 border-t border-zinc-200 dark:border-zinc-800 bg-white/95 dark:bg-zinc-950/95 backdrop-blur px-4 py-3">
         <Sheet open={mobileSheetOpen} onOpenChange={setMobileSheetOpen}>
           <SheetTrigger asChild>
             <button
               type="button"
-              disabled={!narrative}
+              disabled={!narrative && !masterNarrative}
               className="w-full rounded-md border border-zinc-900 dark:border-zinc-100 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 py-3 text-[12px] font-medium uppercase tracking-[0.12em] disabled:opacity-40 transition-transform active:scale-[0.98]"
             >
-              {narrative ? 'View Summary' : `Complete (${answeredCount}/${totalLikert})`}
+              {narrative || masterNarrative ? 'View Summaries' : `Complete (${answeredCount}/${totalLikert})`}
             </button>
           </SheetTrigger>
           <SheetContent side="bottom" className="max-h-[90vh] overflow-y-auto">
             <SheetHeader>
-              <SheetTitle className="text-lg font-semibold tracking-tight">Clinical Summary</SheetTitle>
+              <SheetTitle className="text-lg font-semibold tracking-tight">BAARS Summaries</SheetTitle>
             </SheetHeader>
-            {narrative && (
+            {(narrative || masterNarrative) && (
               <div className="mt-4 space-y-3">
                 <div className="flex flex-wrap gap-1.5">
                   {([
@@ -1801,23 +2434,54 @@ export function BaarsDemo({
                   <Lock className="h-3 w-3" strokeWidth={1.75} />
                   <span>Runs entirely in your browser. No PHI transmitted.</span>
                 </div>
-                <textarea
-                  readOnly
-                  value={narrative}
-                  rows={16}
-                  className="w-full resize-y rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 p-4 text-[13px] leading-relaxed text-zinc-700 dark:text-zinc-300"
-                />
-                <button
-                  type="button"
-                  onClick={() => {
-                    navigator.clipboard.writeText(narrative)
-                    setCopied(true)
-                    setTimeout(() => setCopied(false), 1800)
-                  }}
-                  className="w-full rounded-md border border-zinc-900 dark:border-zinc-100 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 py-3 text-[12px] font-medium uppercase tracking-[0.12em] transition-transform active:scale-[0.98]"
-                >
-                  {copied ? 'Copied' : 'Copy Summary'}
-                </button>
+                {narrative && (
+                  <>
+                    <p className="text-[11px] uppercase tracking-[0.12em] text-zinc-400 dark:text-zinc-500">
+                      Current Form Summary
+                    </p>
+                    <textarea
+                      readOnly
+                      value={narrative}
+                      rows={16}
+                      className="w-full resize-y rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 p-4 text-[13px] leading-relaxed text-zinc-700 dark:text-zinc-300"
+                    />
+                    <button
+                      type="button"
+                      onClick={() => {
+                        navigator.clipboard.writeText(narrative)
+                        setSummaryCopied(true)
+                        setTimeout(() => setSummaryCopied(false), 1800)
+                      }}
+                      className="w-full rounded-md border border-zinc-900 dark:border-zinc-100 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 py-3 text-[12px] font-medium uppercase tracking-[0.12em] transition-transform active:scale-[0.98]"
+                    >
+                      {summaryCopied ? 'Copied' : 'Copy Current Form Summary'}
+                    </button>
+                  </>
+                )}
+                {masterNarrative && (
+                  <>
+                    <p className="pt-2 text-[11px] uppercase tracking-[0.12em] text-zinc-400 dark:text-zinc-500">
+                      Master Summary
+                    </p>
+                    <textarea
+                      readOnly
+                      value={masterNarrative}
+                      rows={22}
+                      className="w-full resize-y rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 p-4 text-[13px] leading-relaxed text-zinc-700 dark:text-zinc-300"
+                    />
+                    <button
+                      type="button"
+                      onClick={() => {
+                        navigator.clipboard.writeText(masterNarrative)
+                        setMasterCopied(true)
+                        setTimeout(() => setMasterCopied(false), 1800)
+                      }}
+                      className="w-full rounded-md border border-zinc-900 dark:border-zinc-100 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 py-3 text-[12px] font-medium uppercase tracking-[0.12em] transition-transform active:scale-[0.98]"
+                    >
+                      {masterCopied ? 'Copied' : 'Copy Master Summary'}
+                    </button>
+                  </>
+                )}
               </div>
             )}
           </SheetContent>
