@@ -74,7 +74,12 @@ export function Navbar() {
   const pathname = usePathname();
   const isLabRoute = pathname?.startsWith("/lab") ?? false;
   const isAssessmentCollabRoute =
-    pathname?.startsWith("/lab/baars") || pathname?.startsWith("/lab/adhd-rs") || false;
+    pathname?.startsWith("/lab/baars") ||
+    pathname?.startsWith("/lab/adhd-rs") ||
+    pathname?.startsWith("/lab/simplepractice-notes") ||
+    pathname?.startsWith("/lab/zocdoc-simplepractice") ||
+    pathname?.startsWith("/lab/inzinna") ||
+    false;
   const [hasScrolled, setHasScrolled] = useState(false);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("hero");
