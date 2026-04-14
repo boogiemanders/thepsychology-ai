@@ -73,7 +73,8 @@ export function Navbar() {
   const { user, signOut } = useAuth();
   const pathname = usePathname();
   const isLabRoute = pathname?.startsWith("/lab") ?? false;
-  const isBaarsRoute = pathname?.startsWith("/lab/baars") ?? false;
+  const isAssessmentCollabRoute =
+    pathname?.startsWith("/lab/baars") || pathname?.startsWith("/lab/adhd-rs") || false;
   const [hasScrolled, setHasScrolled] = useState(false);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("hero");
@@ -139,7 +140,7 @@ export function Navbar() {
   }, []);
 
   const renderBrandLockup = () => {
-    if (isBaarsRoute) {
+    if (isAssessmentCollabRoute) {
       // Proportions tuned to the golden ratio (φ ≈ 1.618):
       // - Separator height ≈ logo height / φ²  (≈ 38% of logo)
       // - Gap between mark and separator ≈ logo height / φ³ (≈ 24% of logo)
@@ -150,7 +151,7 @@ export function Navbar() {
             alt="Inzinna"
             width={198}
             height={234}
-            className="h-8 sm:h-9 md:h-10 w-auto shrink-0 rounded-sm"
+            className="h-8 sm:h-9 md:h-10 w-auto shrink-0 rounded-sm invert dark:invert-0"
             priority
           />
           <span
@@ -213,7 +214,7 @@ export function Navbar() {
               href={user ? "/dashboard" : "/"}
               className={cn(
                 "flex items-center",
-                isBaarsRoute ? "gap-[9px] sm:gap-[10px] md:gap-[11px]" : "gap-3",
+                isAssessmentCollabRoute ? "gap-[9px] sm:gap-[10px] md:gap-[11px]" : "gap-3",
               )}
             >
               {renderBrandLockup()}
@@ -292,7 +293,7 @@ export function Navbar() {
                     href="/"
                     className={cn(
                       "flex items-center",
-                      isBaarsRoute ? "gap-2" : "gap-3",
+                      isAssessmentCollabRoute ? "gap-2" : "gap-3",
                     )}
                   >
                     {renderBrandLockup()}
