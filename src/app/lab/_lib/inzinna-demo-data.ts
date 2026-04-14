@@ -474,8 +474,8 @@ Provider`,
 }
 
 const simplePracticeNotesConfig: LabDetailConfig = {
-  slug: 'simplepractice-notes',
-  title: 'SimplePractice Notes',
+  slug: 'inzinna-sp-notes',
+  title: 'Inzinna SP Notes',
   description:
     'Chart work takes too long. This Chrome extension captures intakes, reviews diagnoses, drafts SOAP notes, and preps for supervision. Patient data stays on your machine.',
   categoryLabel: 'Psychologist Tools',
@@ -837,6 +837,7 @@ const simplePracticeNotesConfig: LabDetailConfig = {
   ],
   note:
     'Demo only. This page uses mock data shaped after the current extension types and planning docs. No real PHI, SimplePractice session, or LLM request is used here.',
+  privacyUrl: '/lab/inzinna-sp-notes/privacy',
 }
 
 const zocdocSimplePracticeConfig: LabDetailConfig = {
@@ -1131,7 +1132,7 @@ const zocdocSimplePracticeConfig: LabDetailConfig = {
 }
 
 const configs = {
-  'simplepractice-notes': simplePracticeNotesConfig,
+  'inzinna-sp-notes': simplePracticeNotesConfig,
   'zocdoc-simplepractice': zocdocSimplePracticeConfig,
 } satisfies Record<LabDetailConfig['slug'], LabDetailConfig>
 

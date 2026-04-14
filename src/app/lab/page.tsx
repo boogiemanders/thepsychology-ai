@@ -19,13 +19,14 @@ const projects = [
   },
   {
     id: 2,
-    title: 'SimplePractice Notes',
-    description: 'Local-first SimplePractice copilot for intake capture, diagnostic review, SOAP drafts, and treatment-plan support before anything touches the chart.',
+    title: 'Inzinna SP Notes',
+    description: 'Local-first clinical documentation copilot for intake capture, diagnostic review, SOAP drafts, and treatment-plan support before anything touches the chart.',
     category: 'clinical-practice',
     categoryLabel: '02 Psychologist Tools',
-    href: '/lab/simplepractice-notes',
+    href: '/lab/inzinna-sp-notes',
     status: 'beta' as const,
     tags: ['Chrome Extension', 'Local AI', 'SOAP Draft', 'Diagnostics'],
+    group: 'inzinna' as const,
   },
   {
     id: 3,
@@ -36,6 +37,7 @@ const projects = [
     href: '/lab/zocdoc-simplepractice',
     status: 'dev' as const,
     tags: ['Chrome Extension', 'Intake Automation', 'Insurance', 'VOB'],
+    group: 'inzinna' as const,
   },
   {
     id: 4,
@@ -56,6 +58,7 @@ const projects = [
     href: '/lab/adhd-rs',
     status: 'dev' as const,
     tags: ['Assessment', 'Auto-Scoring', 'ADHD'],
+    group: 'inzinna' as const,
   },
   {
     id: 6,
@@ -66,6 +69,18 @@ const projects = [
     href: '/lab/baars',
     status: 'dev' as const,
     tags: ['Assessment', 'Auto-Scoring', 'ADHD'],
+    group: 'inzinna' as const,
+  },
+  {
+    id: 9,
+    title: 'Clinician Survey',
+    description: 'Native slide deck presenting findings from the Inzinna clinician needs-assessment survey: priorities, AI use-case demand, barriers, and privacy dealbreakers.',
+    category: 'clinical-practice',
+    categoryLabel: '02 Psychologist Tools',
+    href: '/lab/inzinna/clinician-survey',
+    status: 'live' as const,
+    tags: ['Survey', 'Slide Deck', 'Needs Assessment'],
+    group: 'inzinna' as const,
   },
   {
     id: 7,

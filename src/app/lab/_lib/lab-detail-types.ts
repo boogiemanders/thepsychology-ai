@@ -100,7 +100,7 @@ export interface LabBrandLogo {
 }
 
 export interface LabDetailConfig {
-  slug: 'simplepractice-notes' | 'zocdoc-simplepractice'
+  slug: 'inzinna-sp-notes' | 'zocdoc-simplepractice'
   title: string
   description: string
   categoryLabel: string
@@ -123,4 +123,5 @@ export interface LabDetailConfig {
   statusHeading: string
   statusColumns: LabStatusColumn[]
   note: string
+  privacyUrl?: string
 }

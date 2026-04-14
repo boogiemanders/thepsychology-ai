@@ -50,6 +50,16 @@ export function LabDetailPage({ config }: { config: LabDetailConfig }) {
         <p className="max-w-2xl text-xs leading-relaxed text-zinc-400 dark:text-zinc-500">
           {config.note}
         </p>
+        {config.privacyUrl && (
+          <p className="mt-3">
+            <Link
+              href={config.privacyUrl}
+              className="text-[11px] font-mono uppercase tracking-[0.16em] text-zinc-400 transition-colors hover:text-zinc-900 dark:text-zinc-500 dark:hover:text-zinc-100"
+            >
+              Privacy Policy
+            </Link>
+          </p>
+        )}
       </footer>
     </main>
   )

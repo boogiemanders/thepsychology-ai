@@ -19,7 +19,7 @@
     <!-- Empty state -->
     <div id="empty-state" class="empty-state">
       <p>No intake captured yet.</p>
-      <p class="hint">Go to a SimplePractice client page and click "Capture Intake"</p>
+      <p class="hint">Go to a SimplePractice client page and click "Capture Intake" or "Capture Overview Prep"</p>
     </div>
 
     <div id="manual-notes-section" class="summary-section">
@@ -33,7 +33,7 @@
       <div class="actions">
         <button id="btn-save-manual-notes" class="btn btn-secondary">Save Notes to Intake</button>
         <button id="btn-save-session-notes" class="btn btn-primary" style="display:none">Save Notes for SOAP</button>
-        <button id="btn-open-diagnostics-session" class="btn btn-secondary" style="display:none">Open Diagnostics</button>
+        <button id="btn-open-diagnostics-session" class="btn btn-secondary">Open Diagnostics</button>
       </div>
     </div>
 
@@ -86,9 +86,10 @@
       </div>
 
       <div class="actions">
-        <button id="btn-open-diagnostics" class="btn btn-secondary">Open Side Panel</button>
+        <button id="btn-open-diagnostics" class="btn btn-secondary">Open Diagnostics</button>
         <button id="btn-generate-draft" class="btn btn-primary">Generate Draft</button>
         <button id="btn-clear" class="btn btn-secondary">Clear</button>
+        <button id="btn-new-patient" class="btn btn-secondary" title="Clear all captured data for a new patient">New Patient</button>
       </div>
     </div>
 
@@ -106,6 +107,31 @@
       </label>
       <label>First Visit CPT<input id="pref-firstCPT" type="text" class="input"></label>
       <label>Follow-up CPT<input id="pref-followUpCPT" type="text" class="input"></label>
+
+      <h2 class="section-title" style="margin-top: 12px;">SOAP Generation</h2>
+      <label>LLM Provider
+        <select id="pref-llmProvider" class="input">
+          <option value="openai">OpenAI (cloud, de-identified)</option>
+          <option value="ollama">Ollama (local)</option>
+        </select>
+      </label>
+      <div id="openai-settings">
+        <label>OpenAI API Key<input id="pref-openaiApiKey" type="password" class="input" placeholder="sk-..."></label>
+        <label>OpenAI Model<input id="pref-openaiModel" type="text" class="input" placeholder="gpt-4o-mini"></label>
+        <p class="hint" style="margin: 4px 0 0; font-size: 11px; color: #888;">PHI is de-identified before sending. Only anonymized clinical data reaches OpenAI.</p>
+      </div>
+      <div id="ollama-settings" style="display: none;">
+        <label>Ollama Endpoint<input id="pref-ollamaEndpoint" type="text" class="input" placeholder="http://localhost:11434"></label>
+        <label>Ollama Model<input id="pref-ollamaModel" type="text" class="input" placeholder="llama3.1:8b"></label>
+      </div>
+
+      <h2 class="section-title" style="margin-top: 12px;">Reference Library</h2>
+      <p class="section-hint">Upload your own .md reference files for clinical guidance lookups. These stay local on your device.</p>
+      <div id="ref-file-list" class="ref-file-list"></div>
+      <label class="ref-upload-label">
+        <span class="btn btn-secondary ref-upload-btn">Upload .md file</span>
+        <input id="ref-file-input" type="file" accept=".md,.txt" multiple style="display:none">
+      </label>
 
       <div class="actions">
         <button id="btn-save-prefs" class="btn btn-primary">Save</button>

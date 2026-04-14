@@ -76,7 +76,7 @@ export function Navbar() {
   const isAssessmentCollabRoute =
     pathname?.startsWith("/lab/baars") ||
     pathname?.startsWith("/lab/adhd-rs") ||
-    pathname?.startsWith("/lab/simplepractice-notes") ||
+    pathname?.startsWith("/lab/inzinna-sp-notes") ||
     pathname?.startsWith("/lab/zocdoc-simplepractice") ||
     pathname?.startsWith("/lab/inzinna") ||
     false;

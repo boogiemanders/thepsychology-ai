@@ -1,12 +1,13 @@
 {
   "manifest_version": 3,
-  "name": "SimplePractice Notes",
+  "name": "Inzinna SP Intake/ICE",
   "version": "1.0.0",
   "description": "HIPAA-compliant clinical notes: extract intake data, generate diagnostic impressions, record sessions, and auto-fill progress notes",
   "permissions": ["storage", "activeTab", "tabs", "alarms", "sidePanel", "scripting"],
   "host_permissions": [
     "https://*.simplepractice.com/*",
-    "http://localhost:11434/*"
+    "http://localhost:11434/*",
+    "https://api.openai.com/*"
   ],
   "action": {
     "default_popup": "popup/popup.html",

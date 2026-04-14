@@ -31,6 +31,8 @@ const TREATMENT_PLAN_KEY = 'spn_treatment_plan'
 const SOAP_DRAFT_KEY = 'spn_soap_draft'
 const TRANSCRIPT_KEY = 'spn_transcript'
 const MSE_CHECKLIST_KEY = 'spn_mse_checklist'
+const DEID_MAPPING_KEY = 'spn_deid_mapping'
+const SUPERVISION_PREP_KEY = 'spn_supervision_prep'
 
 // ── Intake Data (session storage — PHI with TTL) ──
 
@@ -48,6 +50,7 @@ function normalizeIntake(
     gad7: intake?.gad7 ?? null,
     phq9: intake?.phq9 ?? null,
     cssrs: intake?.cssrs ?? null,
+    dass21: intake?.dass21 ?? null,
   }
 }
 
@@ -197,6 +200,7 @@ export async function mergeIntake(partial: Partial<IntakeData>): Promise<void> {
     gad7: partial.gad7 ?? existing?.gad7 ?? null,
     phq9: partial.phq9 ?? existing?.phq9 ?? null,
     cssrs: partial.cssrs ?? existing?.cssrs ?? null,
+    dass21: partial.dass21 ?? existing?.dass21 ?? null,
   })
 }
 
@@ -273,6 +277,9 @@ function normalizePreferences(
     defaultLocation: prefs?.defaultLocation?.trim() || DEFAULT_PREFERENCES.defaultLocation,
     firstVisitCPT: prefs?.firstVisitCPT?.trim() || DEFAULT_PREFERENCES.firstVisitCPT,
     followUpCPT: prefs?.followUpCPT?.trim() || DEFAULT_PREFERENCES.followUpCPT,
+    llmProvider: prefs?.llmProvider || DEFAULT_PREFERENCES.llmProvider,
+    openaiApiKey: prefs?.openaiApiKey?.trim() || '',
+    openaiModel: prefs?.openaiModel?.trim() || DEFAULT_PREFERENCES.openaiModel,
   }
 }
 
@@ -385,6 +392,61 @@ export async function clearMseChecklist(): Promise<void> {
   await chrome.storage.session.remove(MSE_CHECKLIST_KEY)
 }
 
+// ── Supervision Prep (session storage — on-demand, PHI with TTL) ──
+
+export interface SupervisionPrepData {
+  caseSummary: string
+  discussionQuestions: string[]
+  blindSpotFlags: string[]
+  modalityPrompts: string[]
+  generatedAt: string
+  generationMethod: string
+}
+
+export async function saveSupervisionPrep(prep: SupervisionPrepData): Promise<void> {
+  await chrome.storage.session.set({ [SUPERVISION_PREP_KEY]: prep })
+}
+
+export async function getSupervisionPrep(): Promise<SupervisionPrepData | null> {
+  const result = await chrome.storage.session.get(SUPERVISION_PREP_KEY)
+  return (result[SUPERVISION_PREP_KEY] as SupervisionPrepData) ?? null
+}
+
+export async function clearSupervisionPrep(): Promise<void> {
+  await chrome.storage.session.remove(SUPERVISION_PREP_KEY)
+}
+
+// ── User Reference Library (local storage — not PHI, persistent) ──
+
+const REFERENCE_LIBRARY_KEY = 'spn_reference_library'
+
+export interface UserReferenceFile {
+  id: string
+  filename: string
+  content: string
+  uploadedAt: string
+}
+
+export async function getReferenceLibrary(): Promise<UserReferenceFile[]> {
+  const result = await chrome.storage.local.get(REFERENCE_LIBRARY_KEY)
+  const files = result[REFERENCE_LIBRARY_KEY] as UserReferenceFile[] | undefined
+  return Array.isArray(files) ? files : []
+}
+
+export async function addReferenceFile(file: UserReferenceFile): Promise<void> {
+  const existing = await getReferenceLibrary()
+  const filtered = existing.filter((f) => f.id !== file.id)
+  filtered.push(file)
+  await chrome.storage.local.set({ [REFERENCE_LIBRARY_KEY]: filtered })
+}
+
+export async function removeReferenceFile(id: string): Promise<void> {
+  const existing = await getReferenceLibrary()
+  await chrome.storage.local.set({
+    [REFERENCE_LIBRARY_KEY]: existing.filter((f) => f.id !== id),
+  })
+}
+
 // ── Cleanup ──
 
 export async function clearAll(): Promise<void> {
@@ -397,5 +459,7 @@ export async function clearAll(): Promise<void> {
     SOAP_DRAFT_KEY,
     TRANSCRIPT_KEY,
     MSE_CHECKLIST_KEY,
+    DEID_MAPPING_KEY,
+    SUPERVISION_PREP_KEY,
   ])
 }

@@ -161,11 +161,68 @@ function scoreIndexEntry(
   return score
 }
 
+// ── User-uploaded reference file support ──
+
+import { getReferenceLibrary, UserReferenceFile } from './storage'
+
+function chunkMarkdown(file: UserReferenceFile): ClinicalKnowledgeIndexEntry[] {
+  const lines = file.content.split('\n')
+  const entries: ClinicalKnowledgeIndexEntry[] = []
+  let currentHeading = file.filename.replace(/\.[^.]+$/, '')
+  let currentText: string[] = []
+  let chunkIndex = 0
+
+  function flushChunk(): void {
+    const text = currentText.join('\n').trim()
+    if (!text) return
+    const preview = text.slice(0, 200)
+    const tags = normalizeTerm(currentHeading)
+      .split(' ')
+      .filter((w) => w.length >= 3)
+    entries.push({
+      resourceId: file.id,
+      resourceTitle: file.filename,
+      resourceModality: 'user-upload',
+      chunk: {
+        id: `${file.id}-c${chunkIndex}`,
+        pageStart: chunkIndex,
+        pageEnd: chunkIndex,
+        heading: currentHeading,
+        preview,
+        tags,
+        estimatedTokens: Math.ceil(text.length / 4),
+      },
+    })
+    chunkIndex++
+  }
+
+  for (const line of lines) {
+    const headingMatch = line.match(/^#{1,3}\s+(.+)/)
+    if (headingMatch) {
+      flushChunk()
+      currentHeading = headingMatch[1].trim()
+      currentText = []
+    } else {
+      currentText.push(line)
+    }
+  }
+  flushChunk()
+  return entries
+}
+
+async function getUserUploadEntries(): Promise<ClinicalKnowledgeIndexEntry[]> {
+  try {
+    const files = await getReferenceLibrary()
+    return files.flatMap((file) => chunkMarkdown(file))
+  } catch {
+    return []
+  }
+}
+
 export async function searchClinicalKnowledge(
   query: string,
   options: { limit?: number; resourceIds?: string[] } = {}
 ): Promise<ClinicalKnowledgeSearchResult[]> {
-  const index = await loadClinicalKnowledgeIndex()
   const tokens = tokenize(query)
   if (!tokens.length) return []
 
@@ -174,7 +231,28 @@ export async function searchClinicalKnowledge(
     : null
   const results: ClinicalKnowledgeSearchResult[] = []
 
-  for (const entry of index.entries) {
+  // Search bundled index (may not exist in distributed builds)
+  try {
+    const index = await loadClinicalKnowledgeIndex()
+    for (const entry of index.entries) {
+      if (resourceIds && !resourceIds.includes(entry.resourceId)) continue
+      const chunk = { ...entry.chunk, text: '' }
+      const score = scoreIndexEntry(tokens, entry)
+      if (score <= 0) continue
+      results.push({
+        resourceId: entry.resourceId,
+        resourceTitle: entry.resourceTitle,
+        chunk,
+        score,
+      })
+    }
+  } catch {
+    // Bundled clinical knowledge not available — that's fine
+  }
+
+  // Search user-uploaded references
+  const userEntries = await getUserUploadEntries()
+  for (const entry of userEntries) {
     if (resourceIds && !resourceIds.includes(entry.resourceId)) continue
     const chunk = { ...entry.chunk, text: '' }
     const score = scoreIndexEntry(tokens, entry)

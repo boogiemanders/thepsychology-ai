@@ -50,10 +50,13 @@
     gad7: null,
     phq9: null,
     cssrs: null,
+    dass21: null,
     recentSymptoms: "",
     additionalSymptoms: "",
     additionalInfo: "",
     manualNotes: "",
+    overviewClinicalNote: "",
+    spSoapNote: "",
     formTitle: "",
     formDate: "",
     signedBy: "",
@@ -172,8 +175,11 @@
     defaultLocation: "Video Office",
     firstVisitCPT: "90791",
     followUpCPT: "90837",
-    ollamaModel: "llama3.1:8b",
+    llmProvider: "ollama",
+    ollamaModel: "llama3.2:3b",
     ollamaEndpoint: "http://localhost:11434",
+    openaiApiKey: "",
+    openaiModel: "gpt-4o-mini",
     autoGenerateOnSessionEnd: true
   };
 
@@ -411,6 +417,8 @@
   var SOAP_DRAFT_KEY = "spn_soap_draft";
   var TRANSCRIPT_KEY = "spn_transcript";
   var MSE_CHECKLIST_KEY = "spn_mse_checklist";
+  var DEID_MAPPING_KEY = "spn_deid_mapping";
+  var SUPERVISION_PREP_KEY = "spn_supervision_prep";
   function normalizeIntake(intake) {
     return {
       ...EMPTY_INTAKE,
@@ -422,7 +430,8 @@
       rawQA: Array.isArray(intake?.rawQA) ? intake.rawQA : [],
       gad7: intake?.gad7 ?? null,
       phq9: intake?.phq9 ?? null,
-      cssrs: intake?.cssrs ?? null
+      cssrs: intake?.cssrs ?? null,
+      dass21: intake?.dass21 ?? null
     };
   }
   function normalizeDiagnosticImpression(impression) {
@@ -533,7 +542,8 @@
       rawQA: partial.rawQA ?? existing?.rawQA ?? EMPTY_INTAKE.rawQA,
       gad7: partial.gad7 ?? existing?.gad7 ?? null,
       phq9: partial.phq9 ?? existing?.phq9 ?? null,
-      cssrs: partial.cssrs ?? existing?.cssrs ?? null
+      cssrs: partial.cssrs ?? existing?.cssrs ?? null,
+      dass21: partial.dass21 ?? existing?.dass21 ?? null
     });
   }
   async function saveNote(note) {
@@ -557,7 +567,10 @@
       providerLastName: prefs?.providerLastName?.trim() || DEFAULT_PREFERENCES.providerLastName,
       defaultLocation: prefs?.defaultLocation?.trim() || DEFAULT_PREFERENCES.defaultLocation,
       firstVisitCPT: prefs?.firstVisitCPT?.trim() || DEFAULT_PREFERENCES.firstVisitCPT,
-      followUpCPT: prefs?.followUpCPT?.trim() || DEFAULT_PREFERENCES.followUpCPT
+      followUpCPT: prefs?.followUpCPT?.trim() || DEFAULT_PREFERENCES.followUpCPT,
+      llmProvider: prefs?.llmProvider || DEFAULT_PREFERENCES.llmProvider,
+      openaiApiKey: prefs?.openaiApiKey?.trim() || "",
+      openaiModel: prefs?.openaiModel?.trim() || DEFAULT_PREFERENCES.openaiModel
     };
   }
   async function getPreferences() {
@@ -604,6 +617,24 @@
     const checklist = result[MSE_CHECKLIST_KEY];
     return checklist ? { ...DEFAULT_MSE_CHECKLIST, ...checklist } : null;
   }
+  var REFERENCE_LIBRARY_KEY = "spn_reference_library";
+  async function getReferenceLibrary() {
+    const result = await chrome.storage.local.get(REFERENCE_LIBRARY_KEY);
+    const files = result[REFERENCE_LIBRARY_KEY];
+    return Array.isArray(files) ? files : [];
+  }
+  async function addReferenceFile(file) {
+    const existing = await getReferenceLibrary();
+    const filtered = existing.filter((f) => f.id !== file.id);
+    filtered.push(file);
+    await chrome.storage.local.set({ [REFERENCE_LIBRARY_KEY]: filtered });
+  }
+  async function removeReferenceFile(id) {
+    const existing = await getReferenceLibrary();
+    await chrome.storage.local.set({
+      [REFERENCE_LIBRARY_KEY]: existing.filter((f) => f.id !== id)
+    });
+  }
   async function clearAll() {
     await chrome.storage.session.remove([
       INTAKE_KEY,
@@ -613,7 +644,9 @@
       TREATMENT_PLAN_KEY,
       SOAP_DRAFT_KEY,
       TRANSCRIPT_KEY,
-      MSE_CHECKLIST_KEY
+      MSE_CHECKLIST_KEY,
+      DEID_MAPPING_KEY,
+      SUPERVISION_PREP_KEY
     ]);
   }
 
@@ -672,13 +705,77 @@
     }
     return score;
   }
+  function chunkMarkdown(file) {
+    const lines = file.content.split("\n");
+    const entries = [];
+    let currentHeading = file.filename.replace(/\.[^.]+$/, "");
+    let currentText = [];
+    let chunkIndex = 0;
+    function flushChunk() {
+      const text = currentText.join("\n").trim();
+      if (!text) return;
+      const preview = text.slice(0, 200);
+      const tags = normalizeTerm(currentHeading).split(" ").filter((w) => w.length >= 3);
+      entries.push({
+        resourceId: file.id,
+        resourceTitle: file.filename,
+        resourceModality: "user-upload",
+        chunk: {
+          id: `${file.id}-c${chunkIndex}`,
+          pageStart: chunkIndex,
+          pageEnd: chunkIndex,
+          heading: currentHeading,
+          preview,
+          tags,
+          estimatedTokens: Math.ceil(text.length / 4)
+        }
+      });
+      chunkIndex++;
+    }
+    for (const line of lines) {
+      const headingMatch = line.match(/^#{1,3}\s+(.+)/);
+      if (headingMatch) {
+        flushChunk();
+        currentHeading = headingMatch[1].trim();
+        currentText = [];
+      } else {
+        currentText.push(line);
+      }
+    }
+    flushChunk();
+    return entries;
+  }
+  async function getUserUploadEntries() {
+    try {
+      const files = await getReferenceLibrary();
+      return files.flatMap((file) => chunkMarkdown(file));
+    } catch {
+      return [];
+    }
+  }
   async function searchClinicalKnowledge(query, options = {}) {
-    const index = await loadClinicalKnowledgeIndex();
     const tokens = tokenize(query);
     if (!tokens.length) return [];
     const resourceIds = options.resourceIds?.length ? options.resourceIds : null;
     const results = [];
-    for (const entry of index.entries) {
+    try {
+      const index = await loadClinicalKnowledgeIndex();
+      for (const entry of index.entries) {
+        if (resourceIds && !resourceIds.includes(entry.resourceId)) continue;
+        const chunk = { ...entry.chunk, text: "" };
+        const score = scoreIndexEntry(tokens, entry);
+        if (score <= 0) continue;
+        results.push({
+          resourceId: entry.resourceId,
+          resourceTitle: entry.resourceTitle,
+          chunk,
+          score
+        });
+      }
+    } catch {
+    }
+    const userEntries = await getUserUploadEntries();
+    for (const entry of userEntries) {
       if (resourceIds && !resourceIds.includes(entry.resourceId)) continue;
       const chunk = { ...entry.chunk, text: "" };
       const score = scoreIndexEntry(tokens, entry);
@@ -819,6 +916,7 @@
     const hasEmotionDysregulation = hasSelfHarmRisk || /emotion regulation|mood swings|labile|anger|impulsive/.test(narrativeText);
     const hasInterpersonalStrain = hasAny(narrativeText, [/relationship/, /conflict/, /attachment/, /interpersonal/]);
     const hasSleepIssue = /sleep|insomnia|hypersomnia/.test(normalizeText(`${intake.troubleSleeping} ${intake.additionalSymptoms}`));
+    const hasSexualHealthConcern = /sexual dysfunction|erectile|sex therap|libido|orgasm|premature ejaculation|vaginismus|dyspareunia/.test(narrativeText) || /sexual dysfunction|erectile|sex therap/.test(diagnosisText);
     const severeSymptoms = (intake.phq9?.totalScore ?? 0) >= 15 || (intake.gad7?.totalScore ?? 0) >= 15;
     const needsMedicalCoordination = Boolean(
       intake.primaryCarePhysician.trim() || intake.prescribingMD.trim() || intake.medications.trim()
@@ -872,6 +970,7 @@
       hasEmotionDysregulation,
       hasInterpersonalStrain,
       hasSleepIssue,
+      hasSexualHealthConcern,
       hasAdolescentPresentation: age !== null && age <= 19,
       needsMedicalCoordination,
       // Demographics for biopsychosocial narrative
@@ -974,6 +1073,9 @@
     }
     if (profile.hasPersonality || profile.hasTrauma || profile.hasInterpersonalStrain) {
       modalities.push("Psychodynamic formulation");
+    }
+    if (profile.hasSexualHealthConcern) {
+      modalities.push("Sex therapy (sensate focus, psychoeducation)");
     }
     return unique2(modalities).slice(0, 4);
   }
@@ -1260,6 +1362,21 @@
       }
       domains.push({ title: "Psychodynamic / Insight Work", items });
     }
+    if (profile.hasSexualHealthConcern) {
+      const items = [];
+      items.push("Comprehensive sexual health assessment (medical, psychological, relational factors)");
+      items.push("Psychoeducation on sexual response cycle and contributing factors");
+      items.push("Sensate focus exercises to reduce performance anxiety");
+      items.push("Cognitive restructuring of maladaptive beliefs about sexual performance");
+      if (profile.hasAnxiety) {
+        items.push("Address performance anxiety and anticipatory avoidance");
+      }
+      if (profile.hasInterpersonalStrain) {
+        items.push("Couples communication skills around intimacy");
+      }
+      items.push("Coordinate with medical provider to rule out physiological contributors");
+      domains.push({ title: "Sexual Health", items });
+    }
     if (profile.needsMedicalCoordination || profile.severeSymptoms) {
       const items = [];
       items.push("Consider consulting with a psychiatrist if symptoms persist or worsen");
@@ -1507,6 +1624,9 @@
     if (intake.cssrs) {
       parts.push(`C-SSRS ${intake.cssrs.totalScore} yes (${intake.cssrs.severity || "summary not parsed"})`);
     }
+    if (intake.dass21) {
+      parts.push(`DASS-21 ${intake.dass21.totalScore} (${intake.dass21.severity || "summary not parsed"})`);
+    }
     return parts;
   }
   function summarizeRisk(intake) {
@@ -1521,6 +1641,7 @@
     const sections = [
       firstNonEmpty2(intake.chiefComplaint, intake.presentingProblems),
       intake.historyOfPresentIllness.trim(),
+      intake.overviewClinicalNote.trim(),
       intake.manualNotes.trim(),
       intake.additionalSymptoms.trim(),
       intake.recentSymptoms.trim()
@@ -1537,6 +1658,7 @@
       intake.chiefComplaint,
       intake.presentingProblems,
       intake.historyOfPresentIllness,
+      intake.overviewClinicalNote,
       intake.manualNotes
     );
     if (chiefComplaint) {
@@ -1617,6 +1739,7 @@
         intake.chiefComplaint,
         intake.presentingProblems,
         intake.historyOfPresentIllness,
+        intake.overviewClinicalNote,
         intake.manualNotes
       ),
       presentingComplaint: buildPresentingComplaint(intake),
@@ -1641,14 +1764,45 @@
 
   // src/lib/ollama-client.ts
   var DEFAULT_ENDPOINT = "http://localhost:11434";
-  var GENERATE_TIMEOUT_MS = 12e4;
-  async function checkOllamaHealth(endpoint = DEFAULT_ENDPOINT) {
+  var GENERATE_TIMEOUT_MS = 3e5;
+  function buildOllamaErrorMessage(status, endpoint, details = "") {
+    if (status === 403) {
+      return [
+        `Ollama blocked this Chrome extension at ${endpoint}.`,
+        "Allow browser-extension origins by setting",
+        "OLLAMA_ORIGINS=chrome-extension://*,moz-extension://*,safari-web-extension://*",
+        "and restart Ollama."
+      ].join(" ");
+    }
+    if (status === null) {
+      return `Could not reach Ollama at ${endpoint}. Make sure Ollama is running and listening on that URL.`;
+    }
+    const suffix = details ? ` ${details}` : "";
+    return `Ollama returned ${status} at ${endpoint}.${suffix}`.trim();
+  }
+  async function diagnoseOllamaEndpoint(endpoint = DEFAULT_ENDPOINT) {
     try {
       const res = await fetch(`${endpoint}/api/tags`, { signal: AbortSignal.timeout(5e3) });
-      return res.ok;
+      if (res.ok) {
+        return { ok: true, status: res.status };
+      }
+      const text = await res.text().catch(() => "");
+      return {
+        ok: false,
+        status: res.status,
+        error: buildOllamaErrorMessage(res.status, endpoint, text.slice(0, 200))
+      };
     } catch {
-      return false;
+      return {
+        ok: false,
+        status: null,
+        error: buildOllamaErrorMessage(null, endpoint)
+      };
     }
+  }
+  async function checkOllamaHealth(endpoint = DEFAULT_ENDPOINT) {
+    const diagnostic = await diagnoseOllamaEndpoint(endpoint);
+    return diagnostic.ok;
   }
   async function generateCompletion(prompt, system, model, endpoint = DEFAULT_ENDPOINT) {
     const controller = new AbortController();
@@ -1661,83 +1815,315 @@
           model,
           prompt,
           system,
-          stream: false,
+          stream: true,
           options: {
-            temperature: 0.3,
-            num_predict: 4096
+            temperature: 0.2,
+            num_predict: 4096,
+            num_ctx: 16384
           }
         }),
         signal: controller.signal
       });
       if (!res.ok) {
         const text = await res.text().catch(() => "");
-        throw new Error(`Ollama returned ${res.status}: ${text.slice(0, 200)}`);
+        throw new Error(buildOllamaErrorMessage(res.status, endpoint, text.slice(0, 200)));
       }
-      const data = await res.json();
-      return data.response;
+      const reader = res.body?.getReader();
+      if (!reader) throw new Error("No response body from Ollama");
+      const decoder = new TextDecoder();
+      let fullResponse = "";
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        const text = decoder.decode(value, { stream: true });
+        for (const line of text.split("\n")) {
+          if (!line.trim()) continue;
+          try {
+            const chunk = JSON.parse(line);
+            fullResponse += chunk.response;
+            if (chunk.done) return fullResponse;
+          } catch {
+          }
+        }
+      }
+      return fullResponse;
     } finally {
       clearTimeout(timeoutId);
     }
   }
 
+  // src/lib/openai-client.ts
+  var OPENAI_API_URL = "https://api.openai.com/v1/chat/completions";
+  var GENERATE_TIMEOUT_MS2 = 12e4;
+  async function checkOpenAIHealth(apiKey) {
+    if (!apiKey) return false;
+    try {
+      const res = await fetch("https://api.openai.com/v1/models", {
+        headers: { Authorization: `Bearer ${apiKey}` },
+        signal: AbortSignal.timeout(5e3)
+      });
+      return res.ok;
+    } catch {
+      return false;
+    }
+  }
+  async function generateOpenAICompletion(prompt, system, model, apiKey) {
+    const messages = [
+      { role: "system", content: system },
+      { role: "user", content: prompt }
+    ];
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), GENERATE_TIMEOUT_MS2);
+    try {
+      const res = await fetch(OPENAI_API_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${apiKey}`
+        },
+        body: JSON.stringify({
+          model,
+          messages,
+          temperature: 0.2,
+          max_tokens: 4096,
+          stream: true
+        }),
+        signal: controller.signal
+      });
+      if (!res.ok) {
+        const text = await res.text().catch(() => "");
+        throw new Error(`OpenAI returned ${res.status}: ${text.slice(0, 200)}`);
+      }
+      const reader = res.body?.getReader();
+      if (!reader) throw new Error("No response body from OpenAI");
+      const decoder = new TextDecoder();
+      let fullResponse = "";
+      let buffer = "";
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        buffer += decoder.decode(value, { stream: true });
+        const lines = buffer.split("\n");
+        buffer = lines.pop() ?? "";
+        for (const line of lines) {
+          if (!line.startsWith("data: ")) continue;
+          const data = line.slice(6).trim();
+          if (data === "[DONE]") return fullResponse;
+          try {
+            const chunk = JSON.parse(data);
+            const content = chunk.choices?.[0]?.delta?.content;
+            if (content) fullResponse += content;
+          } catch {
+          }
+        }
+      }
+      return fullResponse;
+    } finally {
+      clearTimeout(timeoutId);
+    }
+  }
+
+  // src/lib/deidentify.ts
+  function buildPhiPatterns(intake) {
+    const patterns = [];
+    let dateCounter = 0;
+    function addIfPresent(value, token) {
+      const trimmed = value?.trim();
+      if (!trimmed || trimmed.length < 2) return;
+      if (/^(no|none|n\/a|na|denied|denies|negative|yes|y)$/i.test(trimmed)) return;
+      patterns.push({ pattern: trimmed, token });
+    }
+    const fullName = [intake.firstName, intake.lastName].filter(Boolean).join(" ").trim();
+    if (fullName) addIfPresent(fullName, "[CLIENT_1]");
+    if (intake.fullName && intake.fullName !== fullName) addIfPresent(intake.fullName, "[CLIENT_1]");
+    if (intake.firstName && intake.firstName.length >= 2) addIfPresent(intake.firstName, "[CLIENT_FIRST]");
+    if (intake.lastName && intake.lastName.length >= 2) addIfPresent(intake.lastName, "[CLIENT_LAST]");
+    if (intake.dob) {
+      addIfPresent(intake.dob, "[DOB_1]");
+      const dobDate = new Date(intake.dob);
+      if (!Number.isNaN(dobDate.getTime())) {
+        const isoDate = dobDate.toISOString().split("T")[0];
+        addIfPresent(isoDate, "[DOB_1]");
+        const mmddyyyy = `${String(dobDate.getMonth() + 1).padStart(2, "0")}/${String(dobDate.getDate()).padStart(2, "0")}/${dobDate.getFullYear()}`;
+        addIfPresent(mmddyyyy, "[DOB_1]");
+      }
+    }
+    if (intake.address.raw) addIfPresent(intake.address.raw, "[LOCATION_1]");
+    if (intake.address.street) addIfPresent(intake.address.street, "[LOCATION_STREET]");
+    if (intake.address.city && intake.address.city.length >= 3) addIfPresent(intake.address.city, "[LOCATION_CITY]");
+    if (intake.address.zip) addIfPresent(intake.address.zip, "[LOCATION_ZIP]");
+    if (intake.phone) addIfPresent(intake.phone, "[PHONE_STRIPPED]");
+    if (intake.email) addIfPresent(intake.email, "[EMAIL_STRIPPED]");
+    if (intake.emergencyContact) addIfPresent(intake.emergencyContact, "[EMERGENCY_CONTACT_STRIPPED]");
+    if (intake.insuranceCompany) addIfPresent(intake.insuranceCompany, "[INSURANCE_STRIPPED]");
+    if (intake.memberId) addIfPresent(intake.memberId, "[MRN_STRIPPED]");
+    if (intake.groupNumber) addIfPresent(intake.groupNumber, "[GROUP_STRIPPED]");
+    if (intake.occupation && intake.occupation.length > 20) {
+      addIfPresent(intake.occupation, "[EMPLOYER_1]");
+    }
+    if (intake.signedBy) addIfPresent(intake.signedBy, "[PROVIDER_1]");
+    if (intake.formDate) {
+      dateCounter++;
+      addIfPresent(intake.formDate, `[DATE_${dateCounter}]`);
+    }
+    if (intake.signedAt) {
+      dateCounter++;
+      addIfPresent(intake.signedAt, `[DATE_${dateCounter}]`);
+    }
+    if (intake.clientId) addIfPresent(intake.clientId, "[CLIENT_ID_STRIPPED]");
+    if (intake.prescribingMD) addIfPresent(intake.prescribingMD, "[PROVIDER_MD]");
+    if (intake.primaryCarePhysician) addIfPresent(intake.primaryCarePhysician, "[PROVIDER_PCP]");
+    patterns.sort((a, b) => b.pattern.length - a.pattern.length);
+    return patterns;
+  }
+  var DATE_PATTERN = /\b(\d{1,2}\/\d{1,2}\/\d{2,4}|\d{4}-\d{2}-\d{2}|\w+ \d{1,2},?\s*\d{4})\b/g;
+  var PHONE_PATTERN = /\b(\+?1?[-.\s]?\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4})\b/g;
+  var EMAIL_PATTERN = /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b/g;
+  var SSN_PATTERN = /\b\d{3}[-\s]?\d{2}[-\s]?\d{4}\b/g;
+  function deidentify(text, intake) {
+    if (!text) return { sanitized: "", mapping: {} };
+    const mapping = {};
+    let sanitized = text;
+    if (intake) {
+      const patterns = buildPhiPatterns(intake);
+      for (const { pattern, token } of patterns) {
+        const escaped = pattern.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+        const regex = new RegExp(escaped, "gi");
+        if (regex.test(sanitized)) {
+          if (!token.includes("STRIPPED")) {
+            mapping[token] = pattern;
+          }
+          sanitized = sanitized.replace(regex, token);
+        }
+      }
+    }
+    let dateCounter = Object.keys(mapping).filter((k) => k.startsWith("[DATE_")).length;
+    sanitized = sanitized.replace(DATE_PATTERN, (match) => {
+      if (match.startsWith("[")) return match;
+      dateCounter++;
+      const token = `[DATE_${dateCounter}]`;
+      mapping[token] = match;
+      return token;
+    });
+    sanitized = sanitized.replace(PHONE_PATTERN, "[PHONE_STRIPPED]");
+    sanitized = sanitized.replace(EMAIL_PATTERN, "[EMAIL_STRIPPED]");
+    sanitized = sanitized.replace(SSN_PATTERN, "[SSN_STRIPPED]");
+    sanitized = sanitized.replace(/\[PHONE_STRIPPED\]/g, "").replace(/\[EMAIL_STRIPPED\]/g, "").replace(/\[SSN_STRIPPED\]/g, "").replace(/\[MRN_STRIPPED\]/g, "").replace(/\[GROUP_STRIPPED\]/g, "").replace(/\[INSURANCE_STRIPPED\]/g, "").replace(/\[EMERGENCY_CONTACT_STRIPPED\]/g, "").replace(/\[CLIENT_ID_STRIPPED\]/g, "").replace(/\s{2,}/g, " ").trim();
+    return { sanitized, mapping };
+  }
+  function reidentify(text, mapping) {
+    if (!text || !Object.keys(mapping).length) return text;
+    let result = text;
+    const tokens = Object.keys(mapping).sort((a, b) => b.length - a.length);
+    for (const token of tokens) {
+      const escaped = token.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+      result = result.replace(new RegExp(escaped, "g"), mapping[token]);
+    }
+    return result;
+  }
+  async function saveDeidentifyMapping(mapping) {
+    await chrome.storage.session.set({ spn_deid_mapping: mapping });
+  }
+
   // src/lib/soap-prompt.ts
-  var MAX_TRANSCRIPT_WORDS = 2e4;
+  var MAX_TRANSCRIPT_WORDS = 4e3;
+  var MAX_TOTAL_PROMPT_CHARS = 36e3;
   var SYSTEM_PROMPT = `You are a clinical documentation assistant for a licensed psychologist. Your task is to generate a SOAP progress note from a session transcript and clinical context.
 
 OUTPUT FORMAT: Return a valid JSON object with exactly four string keys:
 {"subjective":"...","objective":"...","assessment":"...","plan":"..."}
 
 Do NOT wrap the JSON in markdown code fences. Return ONLY the raw JSON object.
+Do NOT include leading labels like "Subjective:" or "Plan:" inside the string values. The app already labels each section.
+
+STYLE TARGET:
+- Write like an insurance-ready SimplePractice follow-up note: dense, concrete, clinically grounded, and easy to skim.
+- Use paragraph prose, not bullets.
+- Group content by theme, not by transcript order.
+- Prefer "Client reported," "Client described," "Client expressed," "Clinician provided," and "Client responded" style sentences.
+- Pack in useful details, but keep every sentence anchored to material actually present in the transcript, session notes, intake, MSE checklist, diagnoses, or treatment plan.
+- Keep the tone clinical and practical, not literary, not robotic, and not overly polished.
+
+HOW TO EXTRACT FROM A TRANSCRIPT:
+1. Read the entire transcript and identify the KEY THEMES discussed (e.g., anxiety, parenting stress, work conflict, trauma history). Do NOT retell the conversation chronologically.
+2. For each theme, extract: (a) what the client reported, (b) specific details and numbers (scores, frequencies, dates), (c) notable quotes that capture the client's experience.
+3. Note what the clinician assessed or screened for (e.g., "clinician conducted PTSD criteria screening" or "clinician explored substance use history").
+4. Identify trajectory: did the client report improvement, worsening, or no change on any symptoms?
+5. Extract any scheduling, homework, or next-step decisions made during the session.
+6. Convert raw client language to clinical prose: "my stomach hurts when I'm worried" \u2192 "Client reports somatic manifestation of anxiety (GI distress)."
+7. When the session includes dreams, family stories, political stress, body symptoms, or other indirect material, document both the content and the connection the client or clinician made to current stressors.
+8. When the clinician taught or reviewed a skill, name it clearly and note how the client engaged with it.
 
 DOCUMENTATION STANDARDS:
 - Use third-person clinical prose (e.g., "Client reported..." not "I said...")
 - Use DSM-5 terminology for diagnoses and symptoms
-- Include direct client quotes in the Subjective section using quotation marks
+- Use plain, direct language at about an early-teen reading level when possible
+- Prefer simple words over formal or academic wording (e.g., "worry" over "apprehension," "got worse" over "exacerbated")
+- Keep the note sounding clinical, but not polished or overly literary
 - Reference specific content from the session \u2014 do not write generic filler
 - Only include information explicitly stated in the transcript or session notes
 - Do NOT fabricate quotes, symptoms, or clinical observations not present in the data
 - Write for insurance/medical necessity \u2014 be specific about functional impairment and treatment rationale
+- Organize by theme, not chronologically
+- If a detail is missing, leave it out or use a cautious neutral statement based on supplied checklist data. Do not invent.
 
 SECTION REQUIREMENTS:
 
-SUBJECTIVE: What the client reported. Include:
-- Primary concerns discussed this session
-- Symptom changes since last session (better, worse, same)
-- Relevant life events or stressors mentioned
-- Client's own words as direct quotes for key statements
-- Mood self-report if stated
-- Risk factors: SI/HI denial or endorsement (always document)
-- Substance use updates if discussed
+SUBJECTIVE: What the client reported. Organize by THEME, not chronology:
+- Primary concerns discussed this session (group related topics together)
+- Symptom changes since last session (better, worse, same) \u2014 quantify when possible
+- Relevant life events or stressors mentioned (with dates/details from transcript)
+- Mood self-report if stated (use client's words)
+- Risk factors: SI/HI denial or endorsement (ALWAYS document \u2014 write "denied SI/HI" if not discussed)
+- Substance use updates if discussed (quantify: frequency, amount)
+- Include functional details when relevant: work strain, family stress, sleep disruption, appetite changes, social avoidance, exercise changes, or deadline pressure
+- If dream content or imagery was discussed, document the dream details briefly and link them to waking stressors only if the transcript supports that link
+- Keep it concise, but not skeletal \u2014 this should read like a real therapy note, not a shorthand fragment
 
-OBJECTIVE: What the clinician observed. Include:
-- Full Mental Status Exam in this exact format:
-  Mental Status Exam:
-  Appearance: [from checklist or transcript observations]
-  Behavior: [from checklist or transcript observations]
-  Speech: [from checklist or transcript observations]
-  Mood/Affect: [mood is client's words; affect is clinician's observation]
-  Thoughts: [thought process and content, SI/HI status]
-  Cognition: [orientation, attention, memory observations]
-  Insight/Judgment: [from checklist or inferred from session]
+OBJECTIVE: What the clinician observed and assessed. Include:
+- Diagnostic assessment activities conducted this session (e.g., "Clinician assessed for PTSD criteria; client does not meet full criteria at this time")
+- Clinical data points extracted during the interview: substance use quantified, injury/medical history, self-report scales or ratings
 - Behavioral observations during session (engagement, emotional responses, coping demonstrated)
+- Interventions or psychoeducation delivered this session and the client's response to them
+- End the Objective section with an embedded Mental Status Exam block using exactly this layout:
+  Mental Status Exam:
+  Appearance: ...
+  Behavior: ...
+  Speech: ...
+  Mood/Affect: ...
+  Thoughts: ...
+  Cognition: ...
+  Insight/Judgment: ...
 - Screening scores if administered (PHQ-9, GAD-7, C-SSRS)
 
-ASSESSMENT: Clinical analysis. Include:
-- Current symptom presentation and severity
-- Progress or regression relative to treatment goals (reference specific goals if provided)
-- Diagnostic formulation \u2014 how current presentation relates to active diagnoses
-- Functional impact on daily life, work, relationships
-- Protective and risk factors observed
-- Clinical reasoning for treatment approach
+ASSESSMENT: Clinical synthesis (NOT a summary \u2014 this is your ANALYSIS):
+- Current symptom presentation and severity \u2014 note what improved vs worsened
+- Diagnostic formulation: does the presentation fit the active diagnoses? Any rule-outs explored?
+- Historical patterns identified (e.g., "long-standing performance anxiety with somatic manifestations predates current stressors")
+- Functional impact on daily life, work, relationships \u2014 be specific
+- Protective factors (support system, insight, motivation) and risk factors
+- How the client's treatment preferences/style should inform the approach
 - Statement of medical necessity for continued treatment
+- If the session revealed family-of-origin, intergenerational, or longstanding coping patterns, include that synthesis here
+- If the client prefers logic/problem-solving, structure, or a certain treatment style, note how that should shape treatment
 
-PLAN: Next steps. Include:
-- Continue/modify treatment frequency and modality
+PLAN: Actionable next steps (3-5 bullet points max):
+- Treatment frequency, modality, and scheduling changes (include specific day/time if discussed)
 - Specific focus for next session based on this session's content
 - Interventions to use or continue (name specific techniques: CBT, exposure, MI, etc.)
 - Between-session assignments or skills to practice
 - Any referrals, medication coordination, or safety planning
-- Next appointment date/time if mentioned`;
+- Next appointment date/time if mentioned
+- Each bullet should reference a specific data point from the session, not generic advice
+- If the clinician introduced a specific skill in session, carry that into the plan as practice between sessions when supported by the transcript
+
+CONCISENESS RULES (apply to ALL sections):
+- Each section should be 3-5 dense sentences or bullet points. Not 1-2, not 8-10.
+- Every sentence must be anchored to something specific from the session data.
+- Do NOT write generic filler like "Consider exploring the client's feelings about..." or "Continue to monitor..."
+- Do NOT repeat the same observation across sections.
+- Prefer concrete details (scores, dates, quotes, specific behaviors) over vague descriptors.
+- If a detail is not in the data, leave it out entirely \u2014 do not pad with boilerplate.`;
   function buildSoapPrompt(transcript, sessionNotes, intake, diagnosticImpressions, treatmentPlan, mseChecklist, prefs) {
     const sections = [];
     if (intake) {
@@ -1798,10 +2184,15 @@ ${tpLines.join("\n")}`);
       formatAssessment(intake.phq9, "PHQ-9");
       formatAssessment(intake.gad7, "GAD-7");
       formatAssessment(intake.cssrs, "C-SSRS");
+      formatAssessment(intake.dass21, "DASS-21");
     }
     if (assessments.length > 0) {
       sections.push(`=== PRIOR ASSESSMENTS ===
 ${assessments.join("\n")}`);
+    }
+    if (intake?.overviewClinicalNote.trim()) {
+      sections.push(`=== RECENT CLINICAL NOTE FROM PROFILE OVERVIEW ===
+${intake.overviewClinicalNote.trim()}`);
     }
     if (mseChecklist) {
       const mseLines = [];
@@ -1835,34 +2226,43 @@ ${transcriptText}`);
     const providerName = [prefs.providerFirstName, prefs.providerLastName].filter(Boolean).join(" ") || "Clinician";
     sections.push(
       `=== INSTRUCTIONS ===
-Generate a SOAP progress note for this session. The treating clinician is ${providerName}. Use the MSE checklist data for the Objective section's Mental Status Exam. Use the transcript and session notes to populate the Subjective, Assessment, and Plan sections. Reference treatment plan goals in the Assessment section when relevant. Return ONLY valid JSON with keys: subjective, objective, assessment, plan.`
+Generate a SOAP progress note for this session. The treating clinician is ${providerName}. Use the MSE checklist data for the Objective section's Mental Status Exam. Use the transcript and session notes to populate the Subjective, Assessment, and Plan sections. Aim for a dense, insurance-ready SimplePractice follow-up note rather than brief SOAP fragments. Objective should include both session interventions/observations and the exact "Mental Status Exam:" block. Assessment should explicitly state why continued treatment is medically necessary when the data supports that. Reference treatment plan goals in the Assessment section when relevant. Write in plain, simple clinical language rather than formal or academic language. Return ONLY valid JSON with keys: subjective, objective, assessment, plan.`
     );
+    let userPrompt = sections.join("\n\n");
+    if (userPrompt.length > MAX_TOTAL_PROMPT_CHARS) {
+      const transcriptIdx = sections.findIndex((s) => s.startsWith("=== SESSION TRANSCRIPT"));
+      if (transcriptIdx >= 0) {
+        sections[transcriptIdx] = "=== SESSION TRANSCRIPT ===\n[Transcript omitted \u2014 too large for context window. SOAP generated from session notes, MSE, and clinical context only.]";
+        userPrompt = sections.join("\n\n");
+      }
+    }
     return {
       system: SYSTEM_PROMPT,
-      user: sections.join("\n\n")
+      user: userPrompt
     };
   }
   function formatTranscript(transcript, prefs) {
     const providerName = [prefs.providerFirstName, prefs.providerLastName].filter(Boolean).join(" ") || "Clinician";
-    const lines = [];
-    let wordCount = 0;
-    for (const entry of transcript.entries) {
+    const allLines = transcript.entries.map((entry) => {
       const speaker = entry.speaker === "clinician" ? providerName : "Client";
-      const line = `${speaker}: ${entry.text}`;
-      const words = line.split(/\s+/).length;
-      wordCount += words;
-      if (wordCount > MAX_TRANSCRIPT_WORDS) {
-        lines.push("[... transcript truncated for length ...]");
-        const lastEntries = transcript.entries.slice(-10);
-        for (const last of lastEntries) {
-          const s = last.speaker === "clinician" ? providerName : "Client";
-          lines.push(`${s}: ${last.text}`);
-        }
-        break;
-      }
-      lines.push(line);
+      return `${speaker}: ${entry.text}`;
+    });
+    const totalWords = allLines.reduce((sum, line) => sum + line.split(/\s+/).length, 0);
+    if (totalWords <= MAX_TRANSCRIPT_WORDS) {
+      return allLines.join("\n");
     }
-    return lines.join("\n");
+    const keepStart = Math.floor(allLines.length * 0.2);
+    const keepEnd = Math.floor(allLines.length * 0.3);
+    const startLines = allLines.slice(0, keepStart);
+    const endLines = allLines.slice(-keepEnd);
+    const skipped = allLines.length - keepStart - keepEnd;
+    return [
+      ...startLines,
+      `
+[... ${skipped} transcript lines omitted for length \u2014 focus on opening context above and session content below ...]
+`,
+      ...endLines
+    ].join("\n");
   }
 
   // src/lib/soap-builder.ts
@@ -2453,7 +2853,23 @@ Generate a SOAP progress note for this session. The treating clinician is ${prov
   }
 
   // src/lib/soap-generator.ts
+  function getErrorMessage(err) {
+    if (err instanceof Error) return err.message;
+    return String(err);
+  }
   async function generateSoapDraft(sessionNotes, transcript, treatmentPlan, intake, diagnosticImpressions, mseChecklist, prefs, meta = {}) {
+    const provider = prefs.llmProvider || "ollama";
+    if (provider === "openai" && prefs.openaiApiKey) {
+      const healthy2 = await checkOpenAIHealth(prefs.openaiApiKey);
+      if (healthy2) {
+        try {
+          const draft = await generateWithOpenAI(sessionNotes, transcript, treatmentPlan, intake, diagnosticImpressions, mseChecklist, prefs, meta);
+          if (draft) return draft;
+        } catch (err) {
+          console.info("[SPN] OpenAI generation failed, falling back:", getErrorMessage(err));
+        }
+      }
+    }
     const endpoint = prefs.ollamaEndpoint || "http://localhost:11434";
     const model = prefs.ollamaModel || "llama3.1:8b";
     const healthy = await checkOllamaHealth(endpoint);
@@ -2462,13 +2878,38 @@ Generate a SOAP progress note for this session. The treating clinician is ${prov
         const draft = await generateWithLLM(sessionNotes, transcript, treatmentPlan, intake, diagnosticImpressions, mseChecklist, prefs, meta, model, endpoint);
         if (draft) return draft;
       } catch (err) {
-        console.warn("[SPN] LLM generation failed, falling back to regex:", err);
+        const message = getErrorMessage(err);
+        if (!message.includes("Ollama blocked this Chrome extension")) {
+          console.info("[SPN] Ollama generation fell back to regex:", message);
+        }
       }
-    } else {
-      console.log("[SPN] Ollama not available, using regex-based SOAP builder");
     }
     const regexDraft = buildSoapDraft(sessionNotes, transcript, treatmentPlan, intake, diagnosticImpressions, prefs, meta);
     return { ...regexDraft, generationMethod: "regex" };
+  }
+  async function generateWithOpenAI(sessionNotes, transcript, treatmentPlan, intake, diagnosticImpressions, mseChecklist, prefs, meta) {
+    const model = prefs.openaiModel || "gpt-4o-mini";
+    const { system, user } = buildSoapPrompt(transcript, sessionNotes, intake, diagnosticImpressions, treatmentPlan, mseChecklist, prefs);
+    const { sanitized: sanitizedUser, mapping: userMapping } = deidentify(user, intake);
+    const { sanitized: sanitizedSystem, mapping: systemMapping } = deidentify(system, intake);
+    const fullMapping = { ...systemMapping, ...userMapping };
+    await saveDeidentifyMapping(fullMapping);
+    console.log("[SPN] Generating SOAP with OpenAI (de-identified)...", {
+      model,
+      originalLength: user.length,
+      sanitizedLength: sanitizedUser.length,
+      tokensReplaced: Object.keys(fullMapping).length
+    });
+    const raw = await generateOpenAICompletion(sanitizedUser, sanitizedSystem, model, prefs.openaiApiKey);
+    const reidentified = reidentify(raw, fullMapping);
+    const parsed = parseJsonResponse(reidentified);
+    if (!parsed) {
+      console.warn("[SPN] Failed to parse OpenAI response as JSON, attempting section extraction");
+      const extracted = extractSections(reidentified);
+      if (!extracted) return null;
+      return buildDraftFromSections(extracted, sessionNotes, transcript, prefs, meta, "openai");
+    }
+    return buildDraftFromSections(parsed, sessionNotes, transcript, prefs, meta, "openai");
   }
   async function generateWithLLM(sessionNotes, transcript, treatmentPlan, intake, diagnosticImpressions, mseChecklist, prefs, meta, model, endpoint) {
     const { system, user } = buildSoapPrompt(transcript, sessionNotes, intake, diagnosticImpressions, treatmentPlan, mseChecklist, prefs);
@@ -2518,7 +2959,7 @@ Generate a SOAP progress note for this session. The treating clinician is ${prov
     }
     return null;
   }
-  function buildDraftFromSections(sections, sessionNotes, transcript, prefs, meta) {
+  function buildDraftFromSections(sections, sessionNotes, transcript, prefs, meta, method = "llm") {
     const clientName = meta.clientName || "Client";
     const sessionDate = meta.sessionDate || (/* @__PURE__ */ new Date()).toLocaleDateString("en-US");
     const transcriptText = transcript?.entries.map((e) => `${e.speaker === "clinician" ? "Clinician" : "Client"}: ${e.text}`).join("\n") ?? "";
@@ -2539,7 +2980,7 @@ Generate a SOAP progress note for this session. The treating clinician is ${prov
       generatedAt: now,
       editedAt: now,
       status: "draft",
-      generationMethod: "llm"
+      generationMethod: method
     };
   }
 
@@ -2655,6 +3096,7 @@ Generate a SOAP progress note for this session. The treating clinician is ${prov
       ["PCP", intake.primaryCarePhysician],
       ["Alcohol", intake.alcoholUse],
       ["Drugs", intake.drugUse],
+      ["DASS-21", intake.dass21?.severity ?? ""],
       ["C-SSRS", intake.cssrs?.severity ?? ""],
       ["SI", intake.suicidalIdeation],
       ["Suicide Attempts", intake.suicideAttemptHistory],
@@ -2670,6 +3112,7 @@ Generate a SOAP progress note for this session. The treating clinician is ${prov
       ["DV Hx", intake.domesticViolenceHistory],
       ["Recent Symptoms", intake.recentSymptoms],
       ["Additional Info", intake.additionalInfo],
+      ["Overview Clinical Note", intake.overviewClinicalNote],
       ["Clinician Notes", intake.manualNotes]
     ];
     for (const [label, value] of fields) {
@@ -2781,8 +3224,21 @@ ${plan.goals.map((goal) => `- Goal ${goal.goalNumber}: ${goal.goal}`).join("\n")
     await saveSoapDraft(draft);
     const warnings = [];
     if (!treatmentPlan) warnings.push("No treatment plan captured \u2014 Assessment section will be limited.");
-    if (draft.generationMethod === "regex") warnings.push("Ollama not available \u2014 used template-based generation.");
+    if (draft.generationMethod === "regex") {
+      if (prefs.llmProvider === "openai" && prefs.openaiApiKey) {
+        warnings.push("OpenAI and Ollama unavailable \u2014 fell back to template-based generation.");
+      } else {
+        const diagnostic = await diagnoseOllamaEndpoint(prefs.ollamaEndpoint || DEFAULT_PREFERENCES.ollamaEndpoint);
+        warnings.push(diagnostic.error ?? "AI SOAP generation fell back to template-based generation.");
+      }
+    }
     return { draft, error: warnings.join(" ") || void 0 };
+  }
+  function toggleProviderSettings(provider) {
+    const openaiEl = document.getElementById("openai-settings");
+    const ollamaEl = document.getElementById("ollama-settings");
+    if (openaiEl) openaiEl.style.display = provider === "openai" ? "" : "none";
+    if (ollamaEl) ollamaEl.style.display = provider === "ollama" ? "" : "none";
   }
   async function populateSettingsForm() {
     const prefs = await getPreferences();
@@ -2791,6 +3247,60 @@ ${plan.goals.map((goal) => `- Goal ${goal.goalNumber}: ${goal.goal}`).join("\n")
     document.getElementById("pref-location").value = prefs.defaultLocation;
     document.getElementById("pref-firstCPT").value = prefs.firstVisitCPT;
     document.getElementById("pref-followUpCPT").value = prefs.followUpCPT;
+    document.getElementById("pref-llmProvider").value = prefs.llmProvider || DEFAULT_PREFERENCES.llmProvider;
+    document.getElementById("pref-openaiApiKey").value = prefs.openaiApiKey || "";
+    document.getElementById("pref-openaiModel").value = prefs.openaiModel || DEFAULT_PREFERENCES.openaiModel;
+    document.getElementById("pref-ollamaEndpoint").value = prefs.ollamaEndpoint || DEFAULT_PREFERENCES.ollamaEndpoint;
+    document.getElementById("pref-ollamaModel").value = prefs.ollamaModel || DEFAULT_PREFERENCES.ollamaModel;
+    toggleProviderSettings(prefs.llmProvider || DEFAULT_PREFERENCES.llmProvider);
+    document.getElementById("pref-llmProvider")?.addEventListener("change", (e) => {
+      toggleProviderSettings(e.target.value);
+    });
+    await renderReferenceLibrary();
+    setupReferenceUpload();
+  }
+  async function renderReferenceLibrary() {
+    const list = document.getElementById("ref-file-list");
+    if (!list) return;
+    const files = await getReferenceLibrary();
+    if (!files.length) {
+      list.innerHTML = '<div style="font-size:11px;color:#999;">No files uploaded yet.</div>';
+      return;
+    }
+    list.innerHTML = files.map(
+      (f) => `<div class="ref-file-item">
+          <span class="ref-file-name" title="${f.filename}">${f.filename}</span>
+          <button class="ref-file-delete" data-ref-id="${f.id}">remove</button>
+        </div>`
+    ).join("");
+    list.querySelectorAll(".ref-file-delete").forEach((btn) => {
+      btn.addEventListener("click", async (e) => {
+        const id = e.currentTarget.dataset.refId;
+        if (!id) return;
+        await removeReferenceFile(id);
+        await renderReferenceLibrary();
+      });
+    });
+  }
+  function setupReferenceUpload() {
+    const input = document.getElementById("ref-file-input");
+    if (!input) return;
+    input.addEventListener("change", async () => {
+      const files = input.files;
+      if (!files?.length) return;
+      for (const file of Array.from(files)) {
+        const content = await file.text();
+        const id = file.name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+        await addReferenceFile({
+          id,
+          filename: file.name,
+          content,
+          uploadedAt: (/* @__PURE__ */ new Date()).toISOString()
+        });
+      }
+      input.value = "";
+      await renderReferenceLibrary();
+    });
   }
   function readSettingsForm() {
     return {
@@ -2798,7 +3308,13 @@ ${plan.goals.map((goal) => `- Goal ${goal.goalNumber}: ${goal.goal}`).join("\n")
       providerLastName: document.getElementById("pref-lastName").value.trim(),
       defaultLocation: document.getElementById("pref-location").value,
       firstVisitCPT: document.getElementById("pref-firstCPT").value.trim() || DEFAULT_PREFERENCES.firstVisitCPT,
-      followUpCPT: document.getElementById("pref-followUpCPT").value.trim() || DEFAULT_PREFERENCES.followUpCPT
+      followUpCPT: document.getElementById("pref-followUpCPT").value.trim() || DEFAULT_PREFERENCES.followUpCPT,
+      llmProvider: document.getElementById("pref-llmProvider").value,
+      openaiApiKey: document.getElementById("pref-openaiApiKey").value.trim(),
+      openaiModel: document.getElementById("pref-openaiModel").value.trim() || DEFAULT_PREFERENCES.openaiModel,
+      ollamaEndpoint: document.getElementById("pref-ollamaEndpoint").value.trim() || DEFAULT_PREFERENCES.ollamaEndpoint,
+      ollamaModel: document.getElementById("pref-ollamaModel").value.trim() || DEFAULT_PREFERENCES.ollamaModel,
+      autoGenerateOnSessionEnd: true
     };
   }
   async function render() {
@@ -2824,7 +3340,7 @@ ${plan.goals.map((goal) => `- Goal ${goal.goalNumber}: ${goal.goal}`).join("\n")
     if (saveManualBtn) saveManualBtn.style.display = isSessionMode ? "none" : "block";
     if (soapBtn) soapBtn.style.display = isSessionMode ? "block" : "none";
     const diagSessionBtn = document.getElementById("btn-open-diagnostics-session");
-    if (diagSessionBtn) diagSessionBtn.style.display = isSessionMode ? "block" : "none";
+    if (diagSessionBtn) diagSessionBtn.style.display = "block";
     if (draftBtn) {
       draftBtn.textContent = isSessionMode ? soapDraft ? "Regenerate SOAP Draft" : "Generate SOAP Draft" : note ? "Regenerate Draft" : "Generate Draft";
     }
@@ -2921,6 +3437,17 @@ ${plan.goals.map((goal) => `- Goal ${goal.goalNumber}: ${goal.goal}`).join("\n")
   document.getElementById("btn-clear")?.addEventListener("click", async () => {
     await clearAll();
     setStatus("", "neutral");
+    render();
+  });
+  document.getElementById("btn-new-patient")?.addEventListener("click", async () => {
+    if (!confirm("Clear all captured data (intake, notes, transcript, SOAP draft, diagnostics) for a new patient?")) return;
+    await clearAll();
+    const input = document.getElementById("manual-notes-input");
+    if (input) {
+      input.value = "";
+      delete input.dataset.userEdited;
+    }
+    setStatus("Ready for new patient.", "success");
     render();
   });
   document.getElementById("btn-save-manual-notes")?.addEventListener("click", async () => {

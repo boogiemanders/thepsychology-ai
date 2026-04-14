@@ -273,3 +273,54 @@ body {
   resize: vertical;
   line-height: 1.45;
 }
+
+/* Reference Library */
+.ref-file-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-height: 120px;
+  overflow-y: auto;
+}
+
+.ref-file-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 8px;
+  background: #f5f3ff;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+.ref-file-name {
+  color: #4c1d95;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 220px;
+}
+
+.ref-file-delete {
+  background: none;
+  border: none;
+  color: #991b1b;
+  cursor: pointer;
+  font-size: 11px;
+  padding: 0 2px;
+}
+
+.ref-file-delete:hover {
+  text-decoration: underline;
+}
+
+.ref-upload-label {
+  display: inline-block;
+}
+
+.ref-upload-btn {
+  display: inline-block;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 11px;
+}

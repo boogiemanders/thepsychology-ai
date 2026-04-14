@@ -15,10 +15,15 @@ import {
   getDiagnosticWorkspace,
   getTranscript,
   getMseChecklist,
+  getReferenceLibrary,
+  addReferenceFile,
+  removeReferenceFile,
+  UserReferenceFile,
 } from '../lib/storage'
 import { IntakeData, ProviderPreferences, DEFAULT_PREFERENCES, SoapDraft, TreatmentPlanData } from '../lib/types'
 import { buildDraftNote } from '../lib/note-draft'
 import { generateSoapDraft as generateSoapDraftLLM } from '../lib/soap-generator'
+import { diagnoseOllamaEndpoint } from '../lib/ollama-client'
 
 function formatDate(iso: string): string {
   const d = new Date(iso)
@@ -142,6 +147,7 @@ function renderIntakeFields(intake: IntakeData): void {
     ['PCP', intake.primaryCarePhysician],
     ['Alcohol', intake.alcoholUse],
     ['Drugs', intake.drugUse],
+    ['DASS-21', intake.dass21?.severity ?? ''],
     ['C-SSRS', intake.cssrs?.severity ?? ''],
     ['SI', intake.suicidalIdeation],
     ['Suicide Attempts', intake.suicideAttemptHistory],
@@ -157,6 +163,7 @@ function renderIntakeFields(intake: IntakeData): void {
     ['DV Hx', intake.domesticViolenceHistory],
     ['Recent Symptoms', intake.recentSymptoms],
     ['Additional Info', intake.additionalInfo],
+    ['Overview Clinical Note', intake.overviewClinicalNote],
     ['Clinician Notes', intake.manualNotes],
   ]
 
@@ -302,8 +309,22 @@ async function generateSoapDraftForAppointment(
   await saveSoapDraft(draft)
   const warnings: string[] = []
   if (!treatmentPlan) warnings.push('No treatment plan captured — Assessment section will be limited.')
-  if (draft.generationMethod === 'regex') warnings.push('Ollama not available — used template-based generation.')
+  if (draft.generationMethod === 'regex') {
+    if (prefs.llmProvider === 'openai' && prefs.openaiApiKey) {
+      warnings.push('OpenAI and Ollama unavailable — fell back to template-based generation.')
+    } else {
+      const diagnostic = await diagnoseOllamaEndpoint(prefs.ollamaEndpoint || DEFAULT_PREFERENCES.ollamaEndpoint)
+      warnings.push(diagnostic.error ?? 'AI SOAP generation fell back to template-based generation.')
+    }
+  }
   return { draft, error: warnings.join(' ') || undefined }
+}
+
+function toggleProviderSettings(provider: string): void {
+  const openaiEl = document.getElementById('openai-settings')
+  const ollamaEl = document.getElementById('ollama-settings')
+  if (openaiEl) openaiEl.style.display = provider === 'openai' ? '' : 'none'
+  if (ollamaEl) ollamaEl.style.display = provider === 'ollama' ? '' : 'none'
 }
 
 async function populateSettingsForm(): Promise<void> {
@@ -313,6 +334,71 @@ async function populateSettingsForm(): Promise<void> {
   ;(document.getElementById('pref-location') as HTMLSelectElement).value = prefs.defaultLocation
   ;(document.getElementById('pref-firstCPT') as HTMLInputElement).value = prefs.firstVisitCPT
   ;(document.getElementById('pref-followUpCPT') as HTMLInputElement).value = prefs.followUpCPT
+  ;(document.getElementById('pref-llmProvider') as HTMLSelectElement).value = prefs.llmProvider || DEFAULT_PREFERENCES.llmProvider
+  ;(document.getElementById('pref-openaiApiKey') as HTMLInputElement).value = prefs.openaiApiKey || ''
+  ;(document.getElementById('pref-openaiModel') as HTMLInputElement).value = prefs.openaiModel || DEFAULT_PREFERENCES.openaiModel
+  ;(document.getElementById('pref-ollamaEndpoint') as HTMLInputElement).value = prefs.ollamaEndpoint || DEFAULT_PREFERENCES.ollamaEndpoint
+  ;(document.getElementById('pref-ollamaModel') as HTMLInputElement).value = prefs.ollamaModel || DEFAULT_PREFERENCES.ollamaModel
+  toggleProviderSettings(prefs.llmProvider || DEFAULT_PREFERENCES.llmProvider)
+
+  document.getElementById('pref-llmProvider')?.addEventListener('change', (e) => {
+    toggleProviderSettings((e.target as HTMLSelectElement).value)
+  })
+
+  await renderReferenceLibrary()
+  setupReferenceUpload()
+}
+
+async function renderReferenceLibrary(): Promise<void> {
+  const list = document.getElementById('ref-file-list')
+  if (!list) return
+  const files = await getReferenceLibrary()
+  if (!files.length) {
+    list.innerHTML = '<div style="font-size:11px;color:#999;">No files uploaded yet.</div>'
+    return
+  }
+  list.innerHTML = files
+    .map(
+      (f) =>
+        `<div class="ref-file-item">
+          <span class="ref-file-name" title="${f.filename}">${f.filename}</span>
+          <button class="ref-file-delete" data-ref-id="${f.id}">remove</button>
+        </div>`
+    )
+    .join('')
+
+  list.querySelectorAll('.ref-file-delete').forEach((btn) => {
+    btn.addEventListener('click', async (e) => {
+      const id = (e.currentTarget as HTMLElement).dataset.refId
+      if (!id) return
+      await removeReferenceFile(id)
+      await renderReferenceLibrary()
+    })
+  })
+}
+
+function setupReferenceUpload(): void {
+  const input = document.getElementById('ref-file-input') as HTMLInputElement | null
+  if (!input) return
+  input.addEventListener('change', async () => {
+    const files = input.files
+    if (!files?.length) return
+    for (const file of Array.from(files)) {
+      const content = await file.text()
+      const id = file.name
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-|-$/g, '')
+      await addReferenceFile({
+        id,
+        filename: file.name,
+        content,
+        uploadedAt: new Date().toISOString(),
+      })
+    }
+    input.value = ''
+    await renderReferenceLibrary()
+  })
 }
 
 function readSettingsForm(): ProviderPreferences {
@@ -322,6 +408,12 @@ function readSettingsForm(): ProviderPreferences {
     defaultLocation: (document.getElementById('pref-location') as HTMLSelectElement).value,
     firstVisitCPT: (document.getElementById('pref-firstCPT') as HTMLInputElement).value.trim() || DEFAULT_PREFERENCES.firstVisitCPT,
     followUpCPT: (document.getElementById('pref-followUpCPT') as HTMLInputElement).value.trim() || DEFAULT_PREFERENCES.followUpCPT,
+    llmProvider: (document.getElementById('pref-llmProvider') as HTMLSelectElement).value as 'ollama' | 'openai',
+    openaiApiKey: (document.getElementById('pref-openaiApiKey') as HTMLInputElement).value.trim(),
+    openaiModel: (document.getElementById('pref-openaiModel') as HTMLInputElement).value.trim() || DEFAULT_PREFERENCES.openaiModel,
+    ollamaEndpoint: (document.getElementById('pref-ollamaEndpoint') as HTMLInputElement).value.trim() || DEFAULT_PREFERENCES.ollamaEndpoint,
+    ollamaModel: (document.getElementById('pref-ollamaModel') as HTMLInputElement).value.trim() || DEFAULT_PREFERENCES.ollamaModel,
+    autoGenerateOnSessionEnd: true,
   }
 }
 
@@ -352,7 +444,7 @@ async function render(): Promise<void> {
   if (saveManualBtn) saveManualBtn.style.display = isSessionMode ? 'none' : 'block'
   if (soapBtn) soapBtn.style.display = isSessionMode ? 'block' : 'none'
   const diagSessionBtn = document.getElementById('btn-open-diagnostics-session') as HTMLButtonElement | null
-  if (diagSessionBtn) diagSessionBtn.style.display = isSessionMode ? 'block' : 'none'
+  if (diagSessionBtn) diagSessionBtn.style.display = 'block'
   if (draftBtn) {
     draftBtn.textContent = isSessionMode
       ? (soapDraft ? 'Regenerate SOAP Draft' : 'Generate SOAP Draft')
@@ -480,6 +572,18 @@ document.getElementById('btn-cancel-prefs')?.addEventListener('click', () => {
 document.getElementById('btn-clear')?.addEventListener('click', async () => {
   await clearAll()
   setStatus('', 'neutral')
+  render()
+})
+
+document.getElementById('btn-new-patient')?.addEventListener('click', async () => {
+  if (!confirm('Clear all captured data (intake, notes, transcript, SOAP draft, diagnostics) for a new patient?')) return
+  await clearAll()
+  const input = document.getElementById('manual-notes-input') as HTMLTextAreaElement | null
+  if (input) {
+    input.value = ''
+    delete input.dataset.userEdited
+  }
+  setStatus('Ready for new patient.', 'success')
   render()
 })
 
