@@ -329,6 +329,17 @@ export const siteConfig = {
         </p>
       ),
     },
+    {
+      id: "14",
+      name: "Anonymous",
+      role: "User",
+      img: "/images/user-icon.svg",
+      description: (
+        <p>
+          Appreciated the use of <Highlight className="text-brand-soft-blue dark:text-brand-coral">culturally diverse names</Highlight> in the test questions, it feels <Highlight className="text-brand-soft-blue dark:text-brand-coral">meaningful to see my own last name</Highlight> :)
+        </p>
+      ),
+    },
   ],
   faqSection: {
     title: "Questions People Actually Ask",
