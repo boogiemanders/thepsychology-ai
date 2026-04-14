@@ -142,7 +142,7 @@ const demoSimplePracticeIntake: IntakeData = {
   },
   race: 'White',
   ethnicity: 'No',
-  emergencyContact: 'Miguel Rivera (brother) — (917) 555-0188',
+  emergencyContact: 'Miguel Rivera (brother), (917) 555-0188',
   insuranceCompany: 'Aetna',
   memberId: 'AET-441902',
   groupNumber: 'G-39018',
@@ -458,7 +458,7 @@ const demoZocdocClient: CapturedClient = {
 const demoVobDraft: PendingVobDraft = {
   to: ['billing@example.test'],
   cc: ['provider@example.test'],
-  subject: 'VOB Needed — S.P. — 2026-04-09 9:00 AM',
+  subject: 'VOB Needed: S.P. 2026-04-09 9:00 AM',
   body: `Hi team,
 
 Please verify benefits for S.P. before the initial evaluation on 2026-04-09 at 9:00 AM.
@@ -767,10 +767,14 @@ const zocdocSimplePracticeConfig: LabDetailConfig = {
   slug: 'zocdoc-simplepractice',
   title: 'ZocDoc to SimplePractice',
   description:
-    'Capture a new referral on ZocDoc once. The extension fills SimplePractice — demographics, insurance, appointment, VOB email — without retyping a field.',
+    'Capture a new referral on ZocDoc once. The extension fills SimplePractice: demographics, insurance, appointment, VOB email. No retyping.',
   categoryLabel: 'Psychologist Tools',
   statusLabel: 'Building',
-  accent: 'emerald',
+  accent: 'amber',
+  brandLogos: [
+    { src: '/lab/zocdoc.png', alt: 'ZocDoc logo', label: 'ZocDoc' },
+    { src: '/lab/simplepractice.png', alt: 'SimplePractice logo', label: 'SimplePractice' },
+  ],
   tags: ['Chrome Extension', 'No Backend', 'Intake Automation', 'Insurance Fill', 'VOB Email'],
   audience: 'Therapists and front-desk staff moving new referrals from ZocDoc into SimplePractice.',
   whyItExists:
@@ -791,16 +795,16 @@ const zocdocSimplePracticeConfig: LabDetailConfig = {
   ],
   workflowHeading: 'Interactive Demo',
   workflowIntro:
-    'One capture on ZocDoc feeds every downstream form — demographics, insurance, appointment, VOB email — from the same object.',
+    'One capture on ZocDoc feeds every downstream form: demographics, insurance, appointment, VOB email. Same object throughout.',
   steps: [
     {
       id: 'zocdoc-capture',
       label: 'ZocDoc Capture',
       title: 'Capture the referral once',
       summary:
-        'Demographics, appointment timing, insurance, presenting concerns, and both card images — pulled in a single click.',
+        'Demographics, appointment timing, insurance, presenting concerns, and both card images, all in one click.',
       bullets: [
-        'Runs against the real ZocDoc provider portal — not a spreadsheet copy-paste.',
+        'Runs against the real ZocDoc provider portal, not a spreadsheet copy-paste.',
         'Card images, appointment context, and presenting concerns come along in the same grab.',
         'This payload becomes the source of truth for every step that follows.',
       ],
@@ -830,12 +834,11 @@ const zocdocSimplePracticeConfig: LabDetailConfig = {
     {
       id: 'sp-demographics',
       label: 'Demographics Fill',
-      title: 'Fill the SimplePractice client record',
-      summary:
-        'Billing type, status, office, referred-by, and reminder toggles — all set the way Ember expects.',
+      title: 'Autofill the SimplePractice client record',
+      summary: '',
       bullets: [
         'SPA-safe input events so Ember-driven form state actually updates.',
-        'Office, referred-by, and reminders are part of the flow — not a manual cleanup pass.',
+        'Office, referred-by, and reminders are part of the flow, not a manual cleanup pass.',
         'Same captured payload feeds every downstream step, so nothing drifts.',
       ],
       blocks: [
@@ -862,9 +865,8 @@ const zocdocSimplePracticeConfig: LabDetailConfig = {
     {
       id: 'insurance-fill',
       label: 'Insurance Fill',
-      title: 'Drop in insurance without retyping',
-      summary:
-        'Payer typeahead, member IDs, subscriber fields, copay, and both card uploads — from the same captured referral.',
+      title: 'Autofill insurance into SimplePractice',
+      summary: '',
       bullets: [
         'Built for the real SimplePractice insurance form, including payer search and card upload.',
         'Card images auto-attach, removing another handoff between clinician and front desk.',
@@ -893,12 +895,11 @@ const zocdocSimplePracticeConfig: LabDetailConfig = {
     {
       id: 'appointment-fill',
       label: 'Appointment Fill',
-      title: 'Schedule with defaults already applied',
-      summary:
-        'Date, time, office, CPT code, notes, and recurring follow-up — pulled from provider prefs and the captured referral.',
+      title: 'Autofill the appointment into SimplePractice',
+      summary: '',
       bullets: [
         'Provider defaults drive office and CPT picks for initials and follow-ups.',
-        'Recurring follow-ups are set up in the same pass — no second trip to the calendar.',
+        'Recurring follow-ups happen in the same pass. No second trip to the calendar.',
         'Client search, scheduling, and visit notes all stay tied to one captured client.',
       ],
       blocks: [
@@ -925,12 +926,11 @@ const zocdocSimplePracticeConfig: LabDetailConfig = {
       id: 'vob-email',
       label: 'VOB Draft',
       title: 'Draft the VOB email from the same intake',
-      summary:
-        'Subject, body, recipients, CCs, and signature — generated from the captured referral and stored provider prefs.',
+      summary: '',
       bullets: [
         'Keeps VOB inside the browser instead of a separate intake checklist.',
         'Provider prefs carry default recipients, CCs, and signature block.',
-        'Generated from captured data — not re-keyed from the chart.',
+        'Generated from captured data, not re-keyed from the chart.',
       ],
       blocks: [
         {
@@ -952,23 +952,23 @@ const zocdocSimplePracticeConfig: LabDetailConfig = {
     },
     {
       id: 'phi-cleanup',
-      label: 'PHI Cleanup',
-      title: 'Clear PHI on a timer',
+      label: 'Data Cleanup',
+      title: 'Patient data stays local and clears itself',
       summary:
-        'Referral data sits in browser storage only, then a background worker sweeps it on a fixed TTL.',
+        'Nothing leaves the browser. Referral data is automatically wiped after one hour so sensitive information never lingers.',
       bullets: [
-        'One-hour TTL plus an hourly cleanup alarm in the service worker.',
-        'Status flags show which handoff steps are done and which still need a human.',
-        'This demo page stores nothing in your browser — mock data lives on the page only.',
+        'All data lives in the browser only. No server, no cloud, no external calls.',
+        'An automatic timer wipes everything after one hour.',
+        'Status flags track which steps are done so nothing gets missed before cleanup.',
       ],
       blocks: [
         {
           type: 'metrics',
           items: [
-            { label: 'Storage posture', value: 'Browser only' },
-            { label: 'TTL', value: '1 hour', tone: 'amber' },
-            { label: 'Cleanup trigger', value: 'Hourly alarm' },
-            { label: 'Backend', value: 'None', tone: 'emerald' },
+            { label: 'Where data lives', value: 'Your browser only' },
+            { label: 'Auto-clears after', value: '1 hour', tone: 'amber' },
+            { label: 'How it clears', value: 'Background timer' },
+            { label: 'Server or cloud', value: 'None', tone: 'emerald' },
           ],
         },
         {
@@ -1004,7 +1004,7 @@ const zocdocSimplePracticeConfig: LabDetailConfig = {
   proofBullets: [
     'Captures demographics, timing, insurance, presenting concerns, and card images from the ZocDoc portal.',
     'Fills SimplePractice client, insurance, appointment, and office defaults through the live DOM.',
-    'Drafts the VOB email from provider preferences and captured intake — no retyping.',
+    'Drafts the VOB email from provider preferences and captured intake. No retyping.',
     'One-hour TTL plus hourly cleanup keeps referral PHI from sitting in storage.',
   ],
   architectureHeading: 'Privacy + Architecture',

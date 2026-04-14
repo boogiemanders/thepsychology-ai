@@ -93,6 +93,12 @@ export interface LabStatusColumn {
   items: string[]
 }
 
+export interface LabBrandLogo {
+  src: string
+  alt: string
+  label: string
+}
+
 export interface LabDetailConfig {
   slug: 'simplepractice-notes' | 'zocdoc-simplepractice'
   title: string
@@ -100,6 +106,7 @@ export interface LabDetailConfig {
   categoryLabel: string
   statusLabel: string
   accent: LabDetailTone
+  brandLogos?: LabBrandLogo[]
   tags: string[]
   audience: string
   whyItExists: string

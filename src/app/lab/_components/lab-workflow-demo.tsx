@@ -1,95 +1,60 @@
 'use client'
 
-import { startTransition, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import { AnimatePresence, motion } from 'motion/react'
 import { cn } from '@/lib/utils'
 import type {
   LabDetailTone,
   WorkflowBlock,
-  WorkflowFieldState,
   WorkflowStep,
 } from '../_lib/lab-detail-types'
 
 const toneClasses: Record<
   LabDetailTone,
   {
-    buttonActive: string
-    buttonIdle: string
+    accentText: string
+    accentBar: string
     chip: string
-    stat: string
-    panel: string
   }
 > = {
   blue: {
-    buttonActive:
-      'border-sky-300 bg-sky-50 text-sky-700 dark:border-sky-800 dark:bg-sky-950/40 dark:text-sky-300',
-    buttonIdle:
-      'border-zinc-200 text-zinc-500 hover:border-zinc-300 hover:text-zinc-900 dark:border-zinc-800 dark:text-zinc-400 dark:hover:border-zinc-700 dark:hover:text-zinc-100',
+    accentText: 'text-sky-700 dark:text-sky-300',
+    accentBar: 'bg-sky-500 dark:bg-sky-400',
     chip:
       'border-sky-200 bg-sky-50 text-sky-700 dark:border-sky-900/60 dark:bg-sky-950/40 dark:text-sky-300',
-    stat:
-      'border-sky-200/70 bg-sky-50/70 dark:border-sky-900/50 dark:bg-sky-950/20',
-    panel:
-      'border-sky-200/70 bg-sky-50/50 dark:border-sky-900/40 dark:bg-sky-950/15',
   },
   emerald: {
-    buttonActive:
-      'border-emerald-300 bg-emerald-50 text-emerald-700 dark:border-emerald-800 dark:bg-emerald-950/40 dark:text-emerald-300',
-    buttonIdle:
-      'border-zinc-200 text-zinc-500 hover:border-zinc-300 hover:text-zinc-900 dark:border-zinc-800 dark:text-zinc-400 dark:hover:border-zinc-700 dark:hover:text-zinc-100',
+    accentText: 'text-emerald-700 dark:text-emerald-300',
+    accentBar: 'bg-emerald-500 dark:bg-emerald-400',
     chip:
       'border-emerald-200 bg-emerald-50 text-emerald-700 dark:border-emerald-900/60 dark:bg-emerald-950/40 dark:text-emerald-300',
-    stat:
-      'border-emerald-200/70 bg-emerald-50/70 dark:border-emerald-900/50 dark:bg-emerald-950/20',
-    panel:
-      'border-emerald-200/70 bg-emerald-50/50 dark:border-emerald-900/40 dark:bg-emerald-950/15',
   },
   amber: {
-    buttonActive:
-      'border-amber-300 bg-amber-50 text-amber-700 dark:border-amber-800 dark:bg-amber-950/40 dark:text-amber-300',
-    buttonIdle:
-      'border-zinc-200 text-zinc-500 hover:border-zinc-300 hover:text-zinc-900 dark:border-zinc-800 dark:text-zinc-400 dark:hover:border-zinc-700 dark:hover:text-zinc-100',
+    accentText: 'text-amber-700 dark:text-amber-300',
+    accentBar: 'bg-amber-500 dark:bg-amber-400',
     chip:
       'border-amber-200 bg-amber-50 text-amber-700 dark:border-amber-900/60 dark:bg-amber-950/40 dark:text-amber-300',
-    stat:
-      'border-amber-200/70 bg-amber-50/70 dark:border-amber-900/50 dark:bg-amber-950/20',
-    panel:
-      'border-amber-200/70 bg-amber-50/50 dark:border-amber-900/40 dark:bg-amber-950/15',
   },
   rose: {
-    buttonActive:
-      'border-rose-300 bg-rose-50 text-rose-700 dark:border-rose-800 dark:bg-rose-950/40 dark:text-rose-300',
-    buttonIdle:
-      'border-zinc-200 text-zinc-500 hover:border-zinc-300 hover:text-zinc-900 dark:border-zinc-800 dark:text-zinc-400 dark:hover:border-zinc-700 dark:hover:text-zinc-100',
+    accentText: 'text-rose-700 dark:text-rose-300',
+    accentBar: 'bg-rose-500 dark:bg-rose-400',
     chip:
       'border-rose-200 bg-rose-50 text-rose-700 dark:border-rose-900/60 dark:bg-rose-950/40 dark:text-rose-300',
-    stat:
-      'border-rose-200/70 bg-rose-50/70 dark:border-rose-900/50 dark:bg-rose-950/20',
-    panel:
-      'border-rose-200/70 bg-rose-50/50 dark:border-rose-900/40 dark:bg-rose-950/15',
   },
   zinc: {
-    buttonActive:
-      'border-zinc-300 bg-zinc-100 text-zinc-900 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100',
-    buttonIdle:
-      'border-zinc-200 text-zinc-500 hover:border-zinc-300 hover:text-zinc-900 dark:border-zinc-800 dark:text-zinc-400 dark:hover:border-zinc-700 dark:hover:text-zinc-100',
+    accentText: 'text-zinc-900 dark:text-zinc-100',
+    accentBar: 'bg-zinc-500 dark:bg-zinc-400',
     chip:
       'border-zinc-200 bg-zinc-50 text-zinc-700 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-300',
-    stat:
-      'border-zinc-200/70 bg-zinc-50/80 dark:border-zinc-800/60 dark:bg-zinc-900/60',
-    panel:
-      'border-zinc-200/70 bg-zinc-50/70 dark:border-zinc-800/60 dark:bg-zinc-900/50',
   },
 }
 
-const fieldStateClasses: Record<WorkflowFieldState, string> = {
-  complete:
-    'border-emerald-200 bg-emerald-50 text-emerald-700 dark:border-emerald-900/50 dark:bg-emerald-950/30 dark:text-emerald-300',
-  active:
-    'border-sky-200 bg-sky-50 text-sky-700 dark:border-sky-900/50 dark:bg-sky-950/30 dark:text-sky-300',
-  pending:
-    'border-zinc-200 bg-zinc-50 text-zinc-600 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-400',
-  watch:
-    'border-amber-200 bg-amber-50 text-amber-700 dark:border-amber-900/50 dark:bg-amber-950/30 dark:text-amber-300',
+function BlockTitle({ children }: { children: React.ReactNode }) {
+  return (
+    <h4 className="mb-3 text-[10px] font-mono uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400">
+      {children}
+    </h4>
+  )
 }
 
 function renderBlock(block: WorkflowBlock, accent: LabDetailTone) {
@@ -100,10 +65,7 @@ function renderBlock(block: WorkflowBlock, accent: LabDetailTone) {
           {block.items.map(item => (
             <div
               key={`${block.title ?? 'metric'}-${item.label}`}
-              className={cn(
-                'rounded-2xl border px-4 py-3',
-                toneClasses[item.tone ?? accent].stat
-              )}
+              className="rounded-xl border border-zinc-200 bg-zinc-50/50 px-4 py-3 dark:border-zinc-800 dark:bg-zinc-900/40"
             >
               <p className="text-[10px] font-mono uppercase tracking-[0.16em] text-zinc-400 dark:text-zinc-500">
                 {item.label}
@@ -118,17 +80,17 @@ function renderBlock(block: WorkflowBlock, accent: LabDetailTone) {
 
     case 'fields':
       return (
-        <div className="rounded-2xl border border-zinc-200 bg-white/80 dark:border-zinc-800 dark:bg-zinc-950/70">
-          <div className="border-b border-zinc-200 px-4 py-3 dark:border-zinc-800">
-            <h4 className="text-[11px] font-mono uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400">
+        <div className="rounded-xl border border-zinc-200 dark:border-zinc-800">
+          <div className="border-b border-zinc-200 px-4 py-2.5 dark:border-zinc-800">
+            <h4 className="text-[10px] font-mono uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400">
               {block.title}
             </h4>
           </div>
-          <div className="divide-y divide-zinc-200 dark:divide-zinc-800">
+          <div className="divide-y divide-zinc-100 dark:divide-zinc-800/60">
             {block.items.map(item => (
               <div
                 key={`${block.title}-${item.label}`}
-                className="grid gap-3 px-4 py-3 sm:grid-cols-[1.1fr_1.6fr_auto] sm:items-center"
+                className="grid gap-3 px-4 py-2.5 sm:grid-cols-[1.1fr_1.6fr] sm:items-baseline"
               >
                 <div className="text-xs font-medium text-zinc-500 dark:text-zinc-400">
                   {item.label}
@@ -136,16 +98,6 @@ function renderBlock(block: WorkflowBlock, accent: LabDetailTone) {
                 <div className="text-sm text-zinc-900 dark:text-zinc-100">
                   {item.value}
                 </div>
-                {item.state ? (
-                  <span
-                    className={cn(
-                      'inline-flex w-fit items-center rounded-full border px-2 py-0.5 text-[10px] font-mono uppercase tracking-[0.14em]',
-                      fieldStateClasses[item.state]
-                    )}
-                  >
-                    {item.state}
-                  </span>
-                ) : null}
               </div>
             ))}
           </div>
@@ -154,10 +106,8 @@ function renderBlock(block: WorkflowBlock, accent: LabDetailTone) {
 
     case 'pills':
       return (
-        <div className="rounded-2xl border border-zinc-200 bg-white/80 px-4 py-4 dark:border-zinc-800 dark:bg-zinc-950/70">
-          <h4 className="mb-3 text-[11px] font-mono uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400">
-            {block.title}
-          </h4>
+        <div className="rounded-xl border border-zinc-200 px-4 py-3 dark:border-zinc-800">
+          <BlockTitle>{block.title}</BlockTitle>
           <div className="flex flex-wrap gap-2">
             {block.items.map(item => (
               <span
@@ -176,10 +126,8 @@ function renderBlock(block: WorkflowBlock, accent: LabDetailTone) {
 
     case 'text':
       return (
-        <div className="rounded-2xl border border-zinc-200 bg-white/80 px-4 py-4 dark:border-zinc-800 dark:bg-zinc-950/70">
-          <h4 className="mb-3 text-[11px] font-mono uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400">
-            {block.title}
-          </h4>
+        <div className="rounded-xl border border-zinc-200 px-4 py-3 dark:border-zinc-800">
+          <BlockTitle>{block.title}</BlockTitle>
           <p
             className={cn(
               'whitespace-pre-wrap text-sm leading-relaxed text-zinc-700 dark:text-zinc-300',
@@ -193,31 +141,18 @@ function renderBlock(block: WorkflowBlock, accent: LabDetailTone) {
 
     case 'transcript':
       return (
-        <div className="rounded-2xl border border-zinc-200 bg-white/80 px-4 py-4 dark:border-zinc-800 dark:bg-zinc-950/70">
-          <h4 className="mb-3 text-[11px] font-mono uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400">
-            {block.title}
-          </h4>
-          <div className="space-y-3">
+        <div>
+          <BlockTitle>{block.title}</BlockTitle>
+          <div className="space-y-4">
             {block.items.map((item, index) => (
               <div
                 key={`${block.title}-${index}-${item.time ?? 'na'}`}
-                className="rounded-2xl border border-zinc-200/80 bg-zinc-50/80 px-3 py-3 dark:border-zinc-800 dark:bg-zinc-900/60"
+                className="border-l border-zinc-200 pl-4 dark:border-zinc-800"
               >
-                <div className="mb-1 flex items-center gap-2">
-                  <span
-                    className={cn(
-                      'rounded-full border px-2 py-0.5 text-[10px] font-mono uppercase tracking-[0.14em]',
-                      item.speaker === 'client'
-                        ? 'border-sky-200 bg-sky-50 text-sky-700 dark:border-sky-900/50 dark:bg-sky-950/30 dark:text-sky-300'
-                        : item.speaker === 'clinician'
-                          ? 'border-emerald-200 bg-emerald-50 text-emerald-700 dark:border-emerald-900/50 dark:bg-emerald-950/30 dark:text-emerald-300'
-                          : 'border-zinc-200 bg-zinc-50 text-zinc-600 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-400'
-                    )}
-                  >
-                    {item.speaker}
-                  </span>
+                <div className="mb-1 flex items-center gap-2 text-[10px] font-mono uppercase tracking-[0.14em] text-zinc-500 dark:text-zinc-400">
+                  <span>{item.speaker}</span>
                   {item.time ? (
-                    <span className="text-[11px] text-zinc-400 dark:text-zinc-500">
+                    <span className="text-zinc-300 dark:text-zinc-700">
                       {item.time}
                     </span>
                   ) : null}
@@ -234,21 +169,14 @@ function renderBlock(block: WorkflowBlock, accent: LabDetailTone) {
     case 'sections':
       return (
         <div className="space-y-3">
-          {block.title ? (
-            <h4 className="text-[11px] font-mono uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400">
-              {block.title}
-            </h4>
-          ) : null}
-          <div className="grid gap-3 lg:grid-cols-2">
+          {block.title ? <BlockTitle>{block.title}</BlockTitle> : null}
+          <div className="grid gap-6 lg:grid-cols-2">
             {block.items.map(item => (
               <div
                 key={`${item.label}-${item.body.slice(0, 24)}`}
-                className={cn(
-                  'rounded-2xl border px-4 py-4',
-                  toneClasses[accent].panel
-                )}
+                className="border-l border-zinc-200 pl-4 dark:border-zinc-800"
               >
-                <p className="mb-2 text-[11px] font-mono uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400">
+                <p className="mb-2 text-[10px] font-mono uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400">
                   {item.label}
                 </p>
                 <p className="whitespace-pre-wrap text-sm leading-relaxed text-zinc-700 dark:text-zinc-300">
@@ -262,20 +190,18 @@ function renderBlock(block: WorkflowBlock, accent: LabDetailTone) {
 
     case 'references':
       return (
-        <div className="rounded-2xl border border-zinc-200 bg-white/80 px-4 py-4 dark:border-zinc-800 dark:bg-zinc-950/70">
-          <h4 className="mb-3 text-[11px] font-mono uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400">
-            {block.title}
-          </h4>
-          <div className="space-y-3">
+        <div>
+          <BlockTitle>{block.title}</BlockTitle>
+          <div className="space-y-4">
             {block.items.map(item => (
               <article
                 key={`${item.title}-${item.meta}`}
-                className="rounded-2xl border border-zinc-200/80 bg-zinc-50/80 px-3 py-3 dark:border-zinc-800 dark:bg-zinc-900/60"
+                className="border-l border-zinc-200 pl-4 dark:border-zinc-800"
               >
-                <div className="mb-1 text-sm font-medium text-zinc-900 dark:text-zinc-100">
+                <div className="text-sm font-medium text-zinc-900 dark:text-zinc-100">
                   {item.title}
                 </div>
-                <div className="mb-2 text-[11px] uppercase tracking-[0.14em] text-zinc-400 dark:text-zinc-500">
+                <div className="mb-2 text-[10px] font-mono uppercase tracking-[0.14em] text-zinc-400 dark:text-zinc-500">
                   {item.meta}
                 </div>
                 <p className="text-sm leading-relaxed text-zinc-700 dark:text-zinc-300">
@@ -296,70 +222,157 @@ export function LabWorkflowDemo({
   accent: LabDetailTone
   steps: WorkflowStep[]
 }) {
-  const [activeStepId, setActiveStepId] = useState(steps[0]?.id ?? '')
-  const activeStep = steps.find(step => step.id === activeStepId) ?? steps[0]
+  const containerRef = useRef<HTMLDivElement>(null)
+  const [active, setActive] = useState(0)
 
+  useEffect(() => {
+    if (steps.length === 0) return
+    const compute = () => {
+      const el = containerRef.current
+      if (!el) return
+      const rect = el.getBoundingClientRect()
+      const viewportH = window.innerHeight
+      const total = rect.height - viewportH
+      if (total <= 0) return
+      const scrolled = Math.min(Math.max(-rect.top, 0), total)
+      const progress = scrolled / total
+      const idx = Math.min(
+        steps.length - 1,
+        Math.max(0, Math.floor(progress * steps.length * 0.9999))
+      )
+      setActive(prev => (prev !== idx ? idx : prev))
+    }
+    let raf = 0
+    const onScroll = () => {
+      cancelAnimationFrame(raf)
+      raf = requestAnimationFrame(compute)
+    }
+    compute()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    window.addEventListener('resize', onScroll)
+    return () => {
+      cancelAnimationFrame(raf)
+      window.removeEventListener('scroll', onScroll)
+      window.removeEventListener('resize', onScroll)
+    }
+  }, [steps.length])
+
+  const jumpToStep = (i: number) => {
+    const el = containerRef.current
+    if (!el) return
+    const rect = el.getBoundingClientRect()
+    const total = rect.height - window.innerHeight
+    if (total <= 0) return
+    const target =
+      window.scrollY + rect.top + (i + 0.5) * (total / steps.length)
+    window.scrollTo({ top: target, behavior: 'smooth' })
+  }
+
+  const activeStep = steps[active] ?? steps[0]
   if (!activeStep) return null
+  const tone = toneClasses[accent]
 
   return (
-    <div className="grid gap-8 xl:grid-cols-[0.85fr_1.15fr]">
-      <div>
-        <div className="mb-4 flex gap-2 overflow-x-auto pb-1 xl:block xl:space-y-2 xl:overflow-visible xl:pb-0">
-          {steps.map((step, index) => {
-            const active = step.id === activeStep.id
-            return (
+    <div
+      ref={containerRef}
+      className="relative"
+      style={{ height: `${steps.length * 85}vh` }}
+    >
+      <div className="sticky top-32 py-4">
+        <div className="mb-10">
+          <div className="relative h-[2px] w-full bg-zinc-200 dark:bg-zinc-800">
+            <motion.div
+              className={cn('absolute left-0 top-0 h-full w-full origin-left', tone.accentBar)}
+              animate={{
+                transform: `scaleX(${(active + 1) / steps.length})`,
+              }}
+              transition={{ type: 'spring', stiffness: 160, damping: 24, mass: 0.6 }}
+            />
+            <div className="absolute inset-x-0 top-0 flex justify-between">
+              {steps.map((step, i) => {
+                const done = i <= active
+                return (
+                  <button
+                    key={step.id}
+                    type="button"
+                    onClick={() => jumpToStep(i)}
+                    aria-label={`Jump to step ${i + 1}: ${step.label}`}
+                    className="group relative -mt-[5px] flex flex-col items-center outline-none active:[&>span]:scale-[0.85]"
+                  >
+                    <span
+                      className={cn(
+                        'h-3 w-3 rounded-full border-2 transition-[background-color,border-color,transform] duration-150 ease-out',
+                        done
+                          ? cn(tone.accentBar, 'border-transparent')
+                          : 'border-zinc-300 bg-white group-hover:border-zinc-400 dark:border-zinc-700 dark:bg-zinc-950 dark:group-hover:border-zinc-500'
+                      )}
+                    />
+                  </button>
+                )
+              })}
+            </div>
+          </div>
+
+          <div className="mt-4 hidden justify-between text-[10px] font-mono uppercase tracking-[0.14em] sm:flex">
+            {steps.map((step, i) => (
               <button
-                key={step.id}
+                key={`${step.id}-label`}
                 type="button"
-                onClick={() => {
-                  startTransition(() => {
-                    setActiveStepId(step.id)
-                  })
-                }}
+                onClick={() => jumpToStep(i)}
                 className={cn(
-                  'min-w-[180px] rounded-2xl border px-4 py-3 text-left transition-colors xl:w-full',
-                  active ? toneClasses[accent].buttonActive : toneClasses[accent].buttonIdle
+                  'max-w-[15ch] truncate transition-[color,transform] duration-150 ease-out active:scale-[0.97]',
+                  i === active
+                    ? tone.accentText
+                    : 'text-zinc-400 hover:text-zinc-600 dark:text-zinc-600 dark:hover:text-zinc-400'
+                )}
+                style={{
+                  textAlign:
+                    i === 0 ? 'left' : i === steps.length - 1 ? 'right' : 'center',
+                }}
+              >
+                {String(i + 1).padStart(2, '0')} {step.label}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div className="relative max-h-[calc(100vh-11rem)] overflow-y-auto pr-1">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeStep.id}
+              initial={{ opacity: 0, transform: 'translateY(10px)', filter: 'blur(6px)' }}
+              animate={{ opacity: 1, transform: 'translateY(0px)', filter: 'blur(0px)' }}
+              exit={{ opacity: 0, transform: 'translateY(-8px)', filter: 'blur(6px)' }}
+              transition={{ duration: 0.22, ease: [0.23, 1, 0.32, 1] }}
+            >
+              <div
+                className={cn(
+                  'mb-2 text-[10px] font-mono uppercase tracking-[0.16em]',
+                  tone.accentText
                 )}
               >
-                <div className="mb-1 text-[10px] font-mono uppercase tracking-[0.16em]">
-                  {String(index + 1).padStart(2, '0')}
-                </div>
-                <div className="text-sm font-medium">{step.label}</div>
-              </button>
-            )
-          })}
+                Step {String(active + 1).padStart(2, '0')} · {activeStep.label}
+              </div>
+              <h3 className="text-xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">
+                {activeStep.title}
+              </h3>
+              {activeStep.summary ? (
+                <p className="mt-2 mb-8 max-w-2xl text-sm leading-relaxed text-zinc-500 dark:text-zinc-400">
+                  {activeStep.summary}
+                </p>
+              ) : (
+                <div className="mb-6" />
+              )}
+              <div className="space-y-5">
+                {activeStep.blocks.map((block, index) => (
+                  <div key={`${activeStep.id}-block-${index}`}>
+                    {renderBlock(block, accent)}
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          </AnimatePresence>
         </div>
-
-        <div className="rounded-3xl border border-zinc-200 bg-white/80 p-6 dark:border-zinc-800 dark:bg-zinc-950/70">
-          <p className="mb-2 text-[10px] font-mono uppercase tracking-[0.16em] text-zinc-400 dark:text-zinc-500">
-            {activeStep.label}
-          </p>
-          <h3 className="text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">
-            {activeStep.title}
-          </h3>
-          <p className="mt-3 text-sm leading-relaxed text-zinc-500 dark:text-zinc-400">
-            {activeStep.summary}
-          </p>
-          <ul className="mt-5 space-y-3">
-            {activeStep.bullets.map(item => (
-              <li
-                key={item}
-                className="flex gap-3 text-sm leading-relaxed text-zinc-600 dark:text-zinc-300"
-              >
-                <span className="mt-1.5 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-zinc-300 dark:bg-zinc-700" />
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-
-      <div className="space-y-4">
-        {activeStep.blocks.map((block, index) => (
-          <div key={`${activeStep.id}-block-${index}`}>
-            {renderBlock(block, accent)}
-          </div>
-        ))}
       </div>
     </div>
   )
