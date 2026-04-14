@@ -477,15 +477,15 @@ const simplePracticeNotesConfig: LabDetailConfig = {
   slug: 'simplepractice-notes',
   title: 'SimplePractice Notes',
   description:
-    'A local-first SimplePractice copilot for intake capture, diagnostic review, transcript-assisted SOAP drafting, and knowledge-backed treatment planning.',
+    'Chart work takes too long. This Chrome extension captures intakes, reviews diagnoses, drafts SOAP notes, and preps for supervision. Patient data stays on your machine.',
   categoryLabel: 'Psychologist Tools',
   statusLabel: 'Beta Demo',
   accent: 'blue',
-  tags: ['Chrome Extension', 'Local AI', 'SOAP Draft', 'Diagnostics', 'Treatment Plan'],
+  tags: ['Chrome Extension', 'Local AI', 'SOAP Draft', 'Diagnostics', 'Treatment Plan', 'De-Identification', 'Supervision Prep', 'OpenAI Hybrid'],
   audience:
     'Psychologists and psychotherapists already documenting care inside SimplePractice.',
   whyItExists:
-    'The documentation burden is real. The goal is to reduce repetitive chart work without sending sensitive clinical material to a generic cloud note writer.',
+    'Clinicians spend hours on notes that could take minutes. This tool handles the repetitive parts without sending patient data to a generic cloud writer.',
   heroFacts: [
     {
       label: 'Workflow Surface',
@@ -502,18 +502,18 @@ const simplePracticeNotesConfig: LabDetailConfig = {
   ],
   workflowHeading: 'Interactive Demo',
   workflowIntro:
-    'The extension already spans intake capture, diagnostic review, transcript/session support, SOAP drafting, and knowledge-backed planning. The walkthrough below mirrors that flow with demo data shaped after the current extension types.',
+    'Six steps from intake to supervision prep. The walkthrough below uses mock data shaped after the real extension.',
   steps: [
     {
       id: 'intake-capture',
       label: 'Intake Capture',
-      title: 'Capture the intake packet already sitting in the chart',
+      title: 'Pull the intake packet straight from the chart',
       summary:
-        'The extension reads the SimplePractice intake content, preserves raw Q&A, and normalizes it into a structured intake object ready for later note generation.',
+        'One click captures the full intake: demographics, assessments, history, medications. Everything downstream reads from this single source.',
       bullets: [
-        'Demographics, insurance, symptoms, trauma history, medications, and narrative fields are captured into one intake payload.',
-        'Standardized assessment results like GAD-7, PHQ-9, and C-SSRS are preserved alongside the narrative intake.',
-        'The same data becomes the source for diagnostic review, SOAP drafting, and later form filling.',
+        'Demographics, insurance, symptoms, trauma history, medications, and narrative fields in one grab.',
+        'GAD-7, PHQ-9, C-SSRS scores preserved alongside the narrative intake.',
+        'Same data feeds diagnostic review, SOAP drafting, and form filling. No re-entry.',
       ],
       blocks: [
         {
@@ -550,13 +550,13 @@ const simplePracticeNotesConfig: LabDetailConfig = {
     {
       id: 'diagnostic-review',
       label: 'Diagnostic Review',
-      title: 'Work diagnosis in a side panel, not across scattered note fields',
+      title: 'Work diagnosis in a side panel, not scattered note fields',
       summary:
-        'The diagnostic workspace surfaces ranked diagnoses, lets the clinician pin disorders for review, and records criterion evidence, rule-outs, and overrides before anything is pushed into a note.',
+        'Pin diagnoses, review criteria, record evidence and rule-outs. All in one place before anything hits the note.',
       bullets: [
-        'Multiple diagnoses can stay open at once so the clinician can compare rule-outs and differentials.',
-        'Evidence and reasoning are stored in structured impressions, not buried in a paragraph.',
-        'The clinician remains the decision-maker. The tool suggests, summarizes, and organizes.',
+        'Multiple diagnoses open at once for comparing rule-outs and differentials.',
+        'Evidence and reasoning live in structured impressions, not buried in a paragraph.',
+        'You stay the decision-maker. The tool suggests, summarizes, and organizes.',
       ],
       blocks: [
         {
@@ -588,13 +588,13 @@ const simplePracticeNotesConfig: LabDetailConfig = {
     {
       id: 'transcript-session',
       label: 'Transcript + Notes',
-      title: 'Blend session notes, transcript capture, and treatment-plan context',
+      title: 'Session notes, transcript, and treatment plan in one view',
       summary:
-        'The current extension can keep manual session notes, transcript entries, and treatment-plan context in one workspace before the SOAP note is generated.',
+        'Your shorthand, transcript excerpts, and active treatment goals sit together before the SOAP draft runs.',
       bullets: [
-        'Transcript capture is used as supporting input, not as an auto-filed note.',
-        'Session notes still matter. The clinician’s own shorthand becomes part of the draft pipeline.',
-        'Treatment-plan goals and objectives stay visible so the note can document progress instead of rehashing the intake.',
+        'Transcript capture feeds the draft as supporting context, not an auto-filed note.',
+        'Your own session shorthand stays in the pipeline. The AI adds to it, not over it.',
+        'Treatment goals stay visible so the note documents progress, not a rehash of the intake.',
       ],
       blocks: [
         {
@@ -640,13 +640,13 @@ const simplePracticeNotesConfig: LabDetailConfig = {
     {
       id: 'soap-draft',
       label: 'SOAP Draft',
-      title: 'Generate an editable note draft before touching the chart',
+      title: 'Draft the SOAP note before touching the chart',
       summary:
-        'SOAP generation already has a structured path: intake, session notes, transcript context, diagnoses, treatment plan, and MSE-informed content all feed a draft the clinician can edit before fill.',
+        'Intake, session notes, transcript, diagnoses, and treatment plan all feed one editable draft. You review it before anything gets written back.',
       bullets: [
-        'The current workflow supports local Ollama as the default generation path, with clinician review before anything is written back.',
-        'Each section stays editable instead of becoming a locked AI paragraph.',
-        'The output is built for follow-up psychotherapy notes, not generic summarization.',
+        'Runs locally by default. Nothing leaves your machine unless you configure a cloud model.',
+        'Every section stays editable. No locked AI paragraphs.',
+        'Built for follow-up psychotherapy notes, not generic summarization.',
       ],
       blocks: [
         {
@@ -673,15 +673,33 @@ const simplePracticeNotesConfig: LabDetailConfig = {
     {
       id: 'guidance',
       label: 'Formulation Support',
-      title: 'Pull formulation and intervention guidance from a bundled knowledge corpus',
+      title: 'Better treatment suggestions without exposing patient data',
       summary:
-        'The extension already includes a bundled clinical-knowledge search layer. The side panel uses it to suggest formulation language, goals, interventions, referrals, and next steps tied to the current case picture.',
+        'Ollama strips identifiers locally. OpenAI reasons on anonymized data. Ollama puts the names back. Patient info never leaves your machine.',
       bullets: [
-        'The knowledge layer is used as clinical support, not as an autonomous treatment planner.',
-        'Search results remain inspectable with page/heading context instead of black-box recommendations.',
-        'This is where the note workflow starts to feel like a serious clinician tool, not just a text generator.',
+        'Names, dates, locations, and contact info get replaced with tokens before any cloud call. The mapping lives in session-only browser storage.',
+        'GPT-4o-mini handles clinical reasoning for pennies per month. Way better than a 3B local model for treatment planning.',
+        'No API key? No internet? Ollama-only fallback still works. You pick the path.',
       ],
       blocks: [
+        {
+          type: 'sections',
+          title: 'De-Identification Pipeline',
+          items: [
+            {
+              label: 'Step 1 · Ollama (local)',
+              body: 'Scans for PHI: names, DOB, dates, locations, contact info, employer, MRN. Replaces them with tokens like [CLIENT_1], [DATE_1]. The mapping stays in your browser.',
+            },
+            {
+              label: 'Step 2 · OpenAI (cloud)',
+              body: 'Receives only anonymized data: age range, diagnoses, symptoms, modalities, assessment scores, session themes. Does the clinical reasoning a 3B local model cannot.',
+            },
+            {
+              label: 'Step 3 · Ollama (local)',
+              body: 'Swaps tokens back with real values from the local mapping. Full clinical context restored. Nothing identifiable ever left the device.',
+            },
+          ],
+        },
         {
           type: 'pills',
           title: 'Suggested Modalities',
@@ -707,36 +725,93 @@ const simplePracticeNotesConfig: LabDetailConfig = {
         },
       ],
     },
+    {
+      id: 'supervision-prep',
+      label: 'Supervision Prep',
+      title: 'Walk into supervision with a prepared agenda',
+      summary:
+        'Discussion questions, blind-spot flags, and modality prompts pulled from your actual session data. Private to you. Not a supervisor dashboard.',
+      bullets: [
+        'Nothing is shared unless you copy and share it. Your supervisor never sees this unless you choose.',
+        'Asks questions, not recommendations. Avoids the ethics issues flagged in recent AI supervision research.',
+        'Every question and flag cites a specific session observation. No generic templates.',
+        'On-demand only. You click a button, it generates. Stored in session-only browser storage.',
+      ],
+      blocks: [
+        {
+          type: 'sections',
+          title: 'Supervision Agenda Preview',
+          items: [
+            {
+              label: 'Case Summary',
+              body: '31-year-old woman presenting with generalized anxiety (GAD-7: 15), panic-like surges in evaluative work situations, and adjustment-related depressive symptoms (PHQ-9: 12) following a recent breakup. Current treatment: weekly CBT-oriented psychotherapy with graded exposure. Medications: Sertraline 50 mg daily. No current suicide risk endorsed.',
+            },
+            {
+              label: 'Discussion Questions',
+              body: '1. Client\'s avoidance of team meetings has persisted despite insight into the panic cycle. What exposure pacing would balance therapeutic challenge with session retention?\n\n2. Post-event rumination and replay at night appear to reinforce the avoidance loop independently of the panic itself. Should rumination-focused work (e.g., metacognitive strategies) be introduced alongside exposure, or would that dilute the current focus?\n\n3. The breakup appears temporally tied to symptom escalation, but client minimizes its impact in session. How directly should grief and relationship loss be explored given the current anxiety-first treatment frame?\n\n4. Sertraline 50 mg has been stable. At what point should coordination with the prescriber be initiated if sleep disruption and panic intensity do not improve with behavioral intervention?',
+            },
+            {
+              label: 'Blind-Spot Flags',
+              body: '• Perfectionism and fear of disappointing others may be maintaining avoidance independently of panic symptoms. Consider whether schema-level work is needed beyond exposure.\n\n• Family described as "emotionally avoidant and conflict-averse." Client\'s avoidance pattern may have relational roots that exposure alone will not reach.\n\n• Sleep disruption is tracked as a symptom but not yet targeted with a structured intervention. 4 nights/week of difficulty falling asleep may warrant dedicated sleep-focused work.',
+            },
+            {
+              label: 'Modality Prompts',
+              body: 'CBT: Is the current maintaining-cycle formulation capturing the role of self-critical cognitions, or is it over-indexing on the panic-avoidance loop?\n\nExposure: The graded hierarchy targets presentations. Should social situations outside work (e.g., friend gatherings the client has been avoiding) be added to generalize gains?\n\nBehavioral Activation: Post-work withdrawal is documented but not yet on the activation schedule. What low-effort valued activities could counter the evening shutdown pattern?',
+            },
+          ],
+        },
+        {
+          type: 'pills',
+          title: 'Privacy Safeguards',
+          items: [
+            'Session-only storage (auto-deleted on browser close)',
+            'On-demand generation only',
+            'No telemetry or logging',
+            'No sharing mechanism beyond clipboard',
+            'De-identified before any cloud call',
+            'Cleared on New Patient',
+          ],
+        },
+      ],
+    },
   ],
   proofHeading: 'Concrete Capabilities',
   proofBullets: [
-    'Captures intake demographics, history, symptoms, assessments, and raw Q&A from SimplePractice intake material.',
-    'Runs a structured diagnostic workspace with pinned diagnoses, criterion review, clinician notes, and rule-outs.',
-    'Builds editable SOAP drafts from session notes, transcript context, treatment-plan data, and diagnostic impressions.',
-    'Uses bundled clinical-knowledge resources to suggest formulation, interventions, referrals, and next steps.',
+    'Captures demographics, history, symptoms, assessments, and raw Q&A from SimplePractice intakes.',
+    'Diagnostic workspace with pinned diagnoses, criterion review, clinician notes, and rule-outs.',
+    'Editable SOAP drafts built from session notes, transcript, treatment plan, and diagnostic impressions.',
+    'Patient identifiers stripped locally before any cloud call. Names, dates, and locations never leave the browser.',
+    'Treatment suggestions grounded in a bundled clinical knowledge corpus and cloud reasoning.',
+    'Supervision agendas with discussion questions, blind-spot flags, and modality prompts from real session data.',
   ],
   architectureHeading: 'Privacy + Architecture',
   architectureBullets: [
-    'Manifest V3 extension with DOM-based extraction and fill. The MVP does not depend on a vendor API.',
-    'The active workflow is local-first. The current extension defaults to local Ollama for SOAP generation, with clinician review before fill.',
-    'This lab page is a demo only. It does not connect to SimplePractice, store PHI, or call any model endpoint.',
+    'Manifest V3 Chrome extension. DOM-based extraction and fill. No vendor API required.',
+    'Ollama strips identifiers locally, OpenAI reasons on anonymized data, Ollama re-identifies the output. Patient info never leaves the device.',
+    'Works fully offline with Ollama only. Cloud path is optional and clinician-controlled.',
+    'This lab page is a demo. No SimplePractice connection, no stored PHI, no model calls.',
   ],
   researchHeading: 'Why This Matters',
   researchCards: [
     {
       title: 'Price creep, same core jobs',
       body:
-        'The research folder shows repeated therapist frustration with SimplePractice price increases and feature gating. The demo positions this tool as workflow relief, not another monetized add-on.',
+        'Therapists keep paying more for SimplePractice while the core documentation work stays the same. This tool is workflow relief, not another add-on.',
     },
     {
-      title: 'Reliability still matters during sessions',
+      title: 'Reliability during sessions',
       body:
-        'Complaints about telehealth issues, freezing, and chart friction point to the same core demand: notes and chart access have to stay dependable while the session is happening.',
+        'Chart friction, telehealth bugs, freezing. Notes and chart access have to stay dependable while the session is happening.',
     },
     {
-      title: 'Clinicians want time back, not feature sprawl',
+      title: 'Clinicians want time back, not features',
       body:
-        'The most useful pitch is not “more AI.” It is faster documentation, cleaner treatment planning, and a better review surface before anything reaches the clinical record.',
+        'The pitch is not "more AI." It is faster notes, cleaner treatment planning, and a better review surface before anything hits the record.',
+    },
+    {
+      title: 'No one builds clinician-facing supervision prep',
+      body:
+        'Eleos, Lyssn, and Upheal give supervisors dashboards. No competitor generates a supervision agenda for the clinician. You walk in prepared, not observed.',
     },
   ],
   statusHeading: 'Current Status',
@@ -753,9 +828,10 @@ const simplePracticeNotesConfig: LabDetailConfig = {
     {
       title: 'Planned Next',
       items: [
-        'More live testing against current SimplePractice DOM patterns and appointment flows.',
-        'Better caption mapping during active video sessions for transcript capture.',
-        'Additional diagnostic coverage packs after the core workflow is stable.',
+        'Local de-identification pipeline: Ollama strips PHI, OpenAI reasons on anonymized data, Ollama re-identifies. Better treatment suggestions, same privacy.',
+        'Supervision Prep tab: case summary, discussion questions, blind-spot flags, modality prompts.',
+        'OpenAI API key configuration in popup settings with per-key usage tracking.',
+        'Tighter treatment planning output. 3-5 specific bullets per section, no filler.',
       ],
     },
   ],
