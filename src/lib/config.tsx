@@ -221,6 +221,7 @@ export const siteConfig = {
     ],
   },
   testimonials: [
+    // ── Named[0] → render pos 1 ──
     {
       id: "6",
       name: "Dr. Menon",
@@ -228,10 +229,23 @@ export const siteConfig = {
       img: "/images/user-icon.svg",
       description: (
         <p>
-          thePsychology.ai is truly <Highlight className="text-brand-olive dark:text-brand-lavender-gray">one-of-a-kind</Highlight>. It's an <Highlight className="text-brand-olive dark:text-brand-lavender-gray">innovative, effective, and affordable</Highlight> tool for EPPP preparation. The platform makes dense material feel <Highlight className="text-brand-olive dark:text-brand-lavender-gray">engaging</Highlight> and <Highlight className="text-brand-olive dark:text-brand-lavender-gray">manageable</Highlight>, and it clearly reflects a design philosophy of being <Highlight className="text-brand-olive dark:text-brand-lavender-gray">'for the people, by the people'</Highlight>.
+          thePsychology.ai is truly <Highlight className="text-brand-olive dark:text-brand-lavender-gray">one-of-a-kind</Highlight>. It’s an <Highlight className="text-brand-olive dark:text-brand-lavender-gray">innovative, effective, and affordable</Highlight> tool for EPPP preparation. The platform makes dense material feel <Highlight className="text-brand-olive dark:text-brand-lavender-gray">engaging</Highlight> and <Highlight className="text-brand-olive dark:text-brand-lavender-gray">manageable</Highlight>, and it clearly reflects a design philosophy of being <Highlight className="text-brand-olive dark:text-brand-lavender-gray">’for the people, by the people’</Highlight>.
         </p>
       ),
     },
+    // ── Named[1] → render pos 3 ──
+    {
+      id: "9",
+      name: "De-identified",
+      role: "Facebook Group Comment",
+      img: "/images/user-icon.svg",
+      description: (
+        <p>
+          I came here ready to <Highlight className="text-brand-dusty-rose dark:text-brand-sage">recommend this program</Highlight> and I signed up for it myself. Out of all the programs I looked at, this one comes <Highlight className="text-brand-dusty-rose dark:text-brand-sage">the closest to how the EPPP actually words its questions</Highlight>. My test didn’t have any straight definition questions, it was all application based, and <Highlight className="text-brand-dusty-rose dark:text-brand-sage">this program is set up the same way</Highlight>.
+        </p>
+      ),
+    },
+    // ── Named[2] → render pos 5 ──
     {
       id: "4",
       name: "Anders Chan",
@@ -244,17 +258,31 @@ export const siteConfig = {
         </p>
       ),
     },
+    // ── Named[3] → render pos 6 ──
     {
-      id: "9",
-      name: "Anonymous",
-      role: "User",
+      id: "8",
+      name: "De-identified User",
+      role: "LinkedIn Message",
       img: "/images/user-icon.svg",
       description: (
         <p>
-          I came here ready to <Highlight className="text-brand-olive dark:text-brand-lavender-gray">recommend this program</Highlight> and I signed up for it myself. Out of all the programs I looked at, this one comes <Highlight className="text-brand-olive dark:text-brand-lavender-gray">the closest to how the EPPP actually words its questions</Highlight>. My test didn't have any straight definition questions, it was all application based, and <Highlight className="text-brand-olive dark:text-brand-lavender-gray">this program is set up the same way</Highlight>.
+          thepsychology.ai is <Highlight className="text-brand-dusty-rose dark:text-brand-sage">insanely impressive work</Highlight>! I’m taking my EPPP next month and have been struggling to <Highlight className="text-brand-dusty-rose dark:text-brand-sage">find motivation</Highlight> to study. Thank you for the tips on how to <Highlight className="text-brand-dusty-rose dark:text-brand-sage">get creative with studying</Highlight>! Sending good vibes for this project, all the best!!
         </p>
       ),
     },
+    // ── Named[4] → render pos 7 ──
+    {
+      id: "10",
+      name: "De-identified Psychologist",
+      role: "TikTok Comment",
+      img: "/images/user-icon.svg",
+      description: (
+        <p>
+          I wish I would have had this <Highlight className="text-brand-olive dark:text-brand-lavender-gray">years ago</Highlight>!
+        </p>
+      ),
+    },
+    // ── Named[5] → render pos 8 ──
     {
       id: "7",
       name: "Lorin Singh, PsyD",
@@ -262,32 +290,23 @@ export const siteConfig = {
       img: "/images/user-icon.svg",
       description: (
         <p>
-          I used the program more so for the assessments and stats section. It was pretty <Highlight className="text-brand-soft-blue dark:text-brand-coral">helpful</Highlight> and had <Highlight className="text-brand-soft-blue dark:text-brand-coral">information that I didn't see in Psych Prep</Highlight>. I did like that I was able to <Highlight className="text-brand-soft-blue dark:text-brand-coral">ask questions directly</Highlight> underneath the chapter <Highlight className="text-brand-soft-blue dark:text-brand-coral">for explanations</Highlight>.
+          I used the program more so for the assessments and stats section. It was pretty <Highlight className="text-brand-soft-blue dark:text-brand-coral">helpful</Highlight> and had <Highlight className="text-brand-soft-blue dark:text-brand-coral">information that I didn’t see in Psych Prep</Highlight>. I did like that I was able to <Highlight className="text-brand-soft-blue dark:text-brand-coral">ask questions directly</Highlight> underneath the chapter <Highlight className="text-brand-soft-blue dark:text-brand-coral">for explanations</Highlight>.
         </p>
       ),
     },
+    // ── Named[6] → render pos 9 ──
     {
-      id: "8",
-      name: "Anonymous",
-      role: "Postdoc",
+      id: "13",
+      name: "De-identified Customer",
+      role: "Email",
       img: "/images/user-icon.svg",
       description: (
         <p>
-          thepsychology.ai is <Highlight className="text-brand-dusty-rose dark:text-brand-sage">insanely impressive work</Highlight>! I'm taking my EPPP next month and have been struggling to <Highlight className="text-brand-dusty-rose dark:text-brand-sage">find motivation</Highlight> to study. Thank you for the tips on how to <Highlight className="text-brand-dusty-rose dark:text-brand-sage">get creative with studying</Highlight>! Sending good vibes for this project, all the best!!
+          I sincerely <Highlight className="text-brand-dusty-rose dark:text-brand-sage">respect and appreciate</Highlight> your product, after trying other methods, this is by far the one that <Highlight className="text-brand-dusty-rose dark:text-brand-sage">tailor fits my needs</Highlight>. Thank you for your time and consideration!
         </p>
       ),
     },
-    {
-      id: "10",
-      name: "Anonymous",
-      role: "Psychologist (TikTok comment)",
-      img: "/images/user-icon.svg",
-      description: (
-        <p>
-          I wish I would have had this <Highlight className="text-brand-soft-blue dark:text-brand-coral">years ago</Highlight>!
-        </p>
-      ),
-    },
+    // ── Anonymous (inserted at render pos 2 & 4) ──
     {
       id: "11",
       name: "Anonymous",
@@ -295,7 +314,7 @@ export const siteConfig = {
       img: "/images/user-icon.svg",
       description: (
         <p>
-          Those are great and <Highlight className="text-brand-dusty-rose dark:text-brand-sage">much needed tools</Highlight>! Hope it goes well with all the great ideas you have! As a person who is always on the go, I’m always wishing I could use <Highlight className="text-brand-dusty-rose dark:text-brand-sage">a tool to study while in between places</Highlight> on my phone.
+          Those are great and <Highlight className="text-brand-soft-blue dark:text-brand-coral">much needed tools</Highlight>! Hope it goes well with all the great ideas you have! As a person who is always on the go, I’m always wishing I could use <Highlight className="text-brand-soft-blue dark:text-brand-coral">a tool to study while in between places</Highlight> on my phone.
         </p>
       ),
     },
