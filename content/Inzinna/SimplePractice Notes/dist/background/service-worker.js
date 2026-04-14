@@ -9,81 +9,117 @@
   var SOAP_DRAFT_KEY = "spn_soap_draft";
   var TRANSCRIPT_KEY = "spn_transcript";
   var TTL_MS = 60 * 60 * 1e3;
+  var runtimeApi = globalThis.chrome?.runtime;
+  var alarmsApi = globalThis.chrome?.alarms;
+  var sessionStorageApi = globalThis.chrome?.storage?.session;
+  function getErrorMessage(error) {
+    return error instanceof Error ? error.message : String(error);
+  }
+  function isTransientSessionStorageError(error) {
+    const message = getErrorMessage(error);
+    return /\bNo SW\b|Extension context invalidated/i.test(message);
+  }
   async function configureSessionStorageAccess() {
-    await chrome.storage.session.setAccessLevel({
-      accessLevel: "TRUSTED_AND_UNTRUSTED_CONTEXTS"
-    });
+    if (!sessionStorageApi?.setAccessLevel) return;
+    try {
+      await sessionStorageApi.setAccessLevel({
+        accessLevel: "TRUSTED_AND_UNTRUSTED_CONTEXTS"
+      });
+    } catch (error) {
+      if (isTransientSessionStorageError(error)) {
+        console.info("[SPN] Skipping session storage access-level setup during transient worker startup:", getErrorMessage(error));
+        return;
+      }
+      throw error;
+    }
   }
   async function cleanupExpiredData() {
-    const result = await chrome.storage.session.get([
-      INTAKE_KEY,
-      NOTE_KEY,
-      DIAGNOSTIC_WORKSPACE_KEY,
-      SESSION_NOTES_KEY,
-      TREATMENT_PLAN_KEY,
-      SOAP_DRAFT_KEY,
-      TRANSCRIPT_KEY
-    ]);
-    const intake = result[INTAKE_KEY];
-    if (intake?.capturedAt) {
-      const age = Date.now() - new Date(intake.capturedAt).getTime();
-      if (age > TTL_MS) {
-        await chrome.storage.session.remove(INTAKE_KEY);
-        console.log("[SPN] Auto-cleared expired intake data");
+    if (!sessionStorageApi) return;
+    try {
+      const result = await sessionStorageApi.get([
+        INTAKE_KEY,
+        NOTE_KEY,
+        DIAGNOSTIC_WORKSPACE_KEY,
+        SESSION_NOTES_KEY,
+        TREATMENT_PLAN_KEY,
+        SOAP_DRAFT_KEY,
+        TRANSCRIPT_KEY
+      ]);
+      const intake = result[INTAKE_KEY];
+      if (intake?.capturedAt) {
+        const age = Date.now() - new Date(intake.capturedAt).getTime();
+        if (age > TTL_MS) {
+          await sessionStorageApi.remove(INTAKE_KEY);
+          console.log("[SPN] Auto-cleared expired intake data");
+        }
       }
-    }
-    const note = result[NOTE_KEY];
-    if (note?.generatedAt) {
-      const age = Date.now() - new Date(note.generatedAt).getTime();
-      if (age > TTL_MS) {
-        await chrome.storage.session.remove(NOTE_KEY);
-        console.log("[SPN] Auto-cleared expired note data");
+      const note = result[NOTE_KEY];
+      if (note?.generatedAt) {
+        const age = Date.now() - new Date(note.generatedAt).getTime();
+        if (age > TTL_MS) {
+          await sessionStorageApi.remove(NOTE_KEY);
+          console.log("[SPN] Auto-cleared expired note data");
+        }
       }
-    }
-    const workspace = result[DIAGNOSTIC_WORKSPACE_KEY];
-    if (workspace?.updatedAt) {
-      const age = Date.now() - new Date(workspace.updatedAt).getTime();
-      if (age > TTL_MS) {
-        await chrome.storage.session.remove(DIAGNOSTIC_WORKSPACE_KEY);
-        console.log("[SPN] Auto-cleared expired diagnostic workspace");
+      const workspace = result[DIAGNOSTIC_WORKSPACE_KEY];
+      if (workspace?.updatedAt) {
+        const age = Date.now() - new Date(workspace.updatedAt).getTime();
+        if (age > TTL_MS) {
+          await sessionStorageApi.remove(DIAGNOSTIC_WORKSPACE_KEY);
+          console.log("[SPN] Auto-cleared expired diagnostic workspace");
+        }
       }
-    }
-    const sessionNotes = result[SESSION_NOTES_KEY];
-    if (sessionNotes?.updatedAt) {
-      const age = Date.now() - new Date(sessionNotes.updatedAt).getTime();
-      if (age > TTL_MS) {
-        await chrome.storage.session.remove(SESSION_NOTES_KEY);
-        console.log("[SPN] Auto-cleared expired session notes");
+      const sessionNotes = result[SESSION_NOTES_KEY];
+      if (sessionNotes?.updatedAt) {
+        const age = Date.now() - new Date(sessionNotes.updatedAt).getTime();
+        if (age > TTL_MS) {
+          await sessionStorageApi.remove(SESSION_NOTES_KEY);
+          console.log("[SPN] Auto-cleared expired session notes");
+        }
       }
-    }
-    const treatmentPlan = result[TREATMENT_PLAN_KEY];
-    if (treatmentPlan?.capturedAt) {
-      const age = Date.now() - new Date(treatmentPlan.capturedAt).getTime();
-      if (age > TTL_MS) {
-        await chrome.storage.session.remove(TREATMENT_PLAN_KEY);
-        console.log("[SPN] Auto-cleared expired treatment plan");
+      const treatmentPlan = result[TREATMENT_PLAN_KEY];
+      if (treatmentPlan?.capturedAt) {
+        const age = Date.now() - new Date(treatmentPlan.capturedAt).getTime();
+        if (age > TTL_MS) {
+          await sessionStorageApi.remove(TREATMENT_PLAN_KEY);
+          console.log("[SPN] Auto-cleared expired treatment plan");
+        }
       }
-    }
-    const soapDraft = result[SOAP_DRAFT_KEY];
-    if (soapDraft?.generatedAt) {
-      const age = Date.now() - new Date(soapDraft.generatedAt).getTime();
-      if (age > TTL_MS) {
-        await chrome.storage.session.remove(SOAP_DRAFT_KEY);
-        console.log("[SPN] Auto-cleared expired SOAP draft");
+      const soapDraft = result[SOAP_DRAFT_KEY];
+      if (soapDraft?.generatedAt) {
+        const age = Date.now() - new Date(soapDraft.generatedAt).getTime();
+        if (age > TTL_MS) {
+          await sessionStorageApi.remove(SOAP_DRAFT_KEY);
+          console.log("[SPN] Auto-cleared expired SOAP draft");
+        }
       }
-    }
-    const transcript = result[TRANSCRIPT_KEY];
-    if (transcript?.updatedAt) {
-      const age = Date.now() - new Date(transcript.updatedAt).getTime();
-      if (age > TTL_MS) {
-        await chrome.storage.session.remove(TRANSCRIPT_KEY);
-        console.log("[SPN] Auto-cleared expired transcript");
+      const transcript = result[TRANSCRIPT_KEY];
+      if (transcript?.updatedAt) {
+        const age = Date.now() - new Date(transcript.updatedAt).getTime();
+        if (age > TTL_MS) {
+          await sessionStorageApi.remove(TRANSCRIPT_KEY);
+          console.log("[SPN] Auto-cleared expired transcript");
+        }
       }
+    } catch (error) {
+      if (isTransientSessionStorageError(error)) {
+        console.info("[SPN] Skipping startup PHI cleanup during transient worker startup:", getErrorMessage(error));
+        return;
+      }
+      throw error;
     }
   }
   async function initialize() {
-    await configureSessionStorageAccess();
-    await cleanupExpiredData();
+    try {
+      await configureSessionStorageAccess();
+      await cleanupExpiredData();
+    } catch (error) {
+      if (isTransientSessionStorageError(error)) {
+        console.info("[SPN] Initialization skipped \u2014 service worker not fully ready:", getErrorMessage(error));
+        return;
+      }
+      console.error("[SPN] Initialization failed:", error);
+    }
   }
   function wait(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
@@ -137,6 +173,60 @@
     } catch (err) {
       console.warn("[SPN] Background-tab intake-note discovery failed:", err);
       return [];
+    } finally {
+      try {
+        await chrome.tabs.remove(tab.id);
+      } catch {
+      }
+    }
+  }
+  async function fetchIntakeViaTab(url) {
+    const tab = await chrome.tabs.create({ url, active: false });
+    if (!tab.id) return { intake: null };
+    try {
+      await waitForTabComplete(tab.id);
+      const deadline = Date.now() + 15e3;
+      while (Date.now() < deadline) {
+        const response = await sendMessageToTabWithRetries(tab.id, {
+          type: "SPN_EXTRACT_INTAKE"
+        }, 3);
+        if (response?.intake) {
+          return response;
+        }
+        await wait(750);
+      }
+      console.log("[SPN] Timed out waiting for rendered intake form in background tab:", url);
+      return { intake: null };
+    } catch (err) {
+      console.warn("[SPN] Background-tab intake extraction failed:", err);
+      return { intake: null };
+    } finally {
+      try {
+        await chrome.tabs.remove(tab.id);
+      } catch {
+      }
+    }
+  }
+  async function fetchAssessmentViaTab(url) {
+    const tab = await chrome.tabs.create({ url, active: false });
+    if (!tab.id) return { type: null, assessment: null };
+    try {
+      await waitForTabComplete(tab.id);
+      const deadline = Date.now() + 15e3;
+      while (Date.now() < deadline) {
+        const response = await sendMessageToTabWithRetries(tab.id, {
+          type: "SPN_EXTRACT_ASSESSMENT"
+        }, 3);
+        if (response?.type && response.assessment) {
+          return response;
+        }
+        await wait(750);
+      }
+      console.log("[SPN] Timed out waiting for rendered assessment in background tab:", url);
+      return { type: null, assessment: null };
+    } catch (err) {
+      console.warn("[SPN] Background-tab assessment extraction failed:", err);
+      return { type: null, assessment: null };
     } finally {
       try {
         await chrome.tabs.remove(tab.id);
@@ -252,20 +342,22 @@
     });
     return { applied: result?.result?.applied ?? 0 };
   }
-  chrome.runtime.onInstalled.addListener(() => {
+  runtimeApi?.onInstalled?.addListener(() => {
     console.log("[SPN] SimplePractice Notes extension installed");
-    initialize();
-    chrome.alarms.create("phi-cleanup", { periodInMinutes: 60 });
+    void initialize();
+    alarmsApi?.create?.("phi-cleanup", { periodInMinutes: 60 });
   });
-  chrome.runtime.onStartup.addListener(() => {
-    initialize();
+  runtimeApi?.onStartup?.addListener(() => {
+    void initialize();
   });
-  chrome.alarms.onAlarm.addListener((alarm) => {
+  alarmsApi?.onAlarm?.addListener((alarm) => {
     if (alarm.name === "phi-cleanup") {
-      cleanupExpiredData();
+      void cleanupExpiredData();
     }
   });
-  void initialize();
+  if (sessionStorageApi) {
+    void initialize();
+  }
   var DEV_RELOAD = false;
   if (DEV_RELOAD) {
     let lastModified = 0;
@@ -285,7 +377,7 @@
     };
     setInterval(checkForChanges, 1e3);
   }
-  chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  runtimeApi?.onMessage?.addListener((message, sender, sendResponse) => {
     if (message.type === "GET_INTAKE") {
       chrome.storage.session.get(INTAKE_KEY, (result) => {
         sendResponse(result[INTAKE_KEY] ?? null);
@@ -316,6 +408,14 @@
       ], () => {
         sendResponse({ ok: true });
       });
+      return true;
+    }
+    if (message.type === "SPN_FETCH_INTAKE_VIA_TAB") {
+      fetchIntakeViaTab(message.url).then((result) => sendResponse(result)).catch(() => sendResponse({ intake: null }));
+      return true;
+    }
+    if (message.type === "SPN_FETCH_ASSESSMENT_VIA_TAB") {
+      fetchAssessmentViaTab(message.url).then((result) => sendResponse(result)).catch(() => sendResponse({ type: null, assessment: null }));
       return true;
     }
     if (message.type === "SPN_DISCOVER_INTAKE_NOTE_URLS") {

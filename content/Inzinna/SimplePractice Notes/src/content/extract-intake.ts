@@ -21,6 +21,8 @@ import {
   assertExtensionContext,
   isExtensionContextInvalidatedError,
   normalizedText,
+  isVisible,
+  wait,
   registerFloatingButtonsController,
 } from './shared'
 
@@ -35,6 +37,10 @@ function getClientIdFromUrl(): string {
 
 function isClientPage(): boolean {
   return CLIENT_PATH_RE.test(window.location.pathname)
+}
+
+function isClientOverviewPage(): boolean {
+  return /\/clients\/[^/]+\/overview(?:$|[/?#])/.test(window.location.pathname)
 }
 
 function escapeRegExp(value: string): string {
@@ -165,7 +171,7 @@ interface QAPair {
   answer: string
 }
 
-type AssessmentName = 'GAD-7' | 'PHQ-9' | 'C-SSRS'
+type AssessmentName = 'GAD-7' | 'PHQ-9' | 'C-SSRS' | 'DASS-21'
 
 /**
  * Parse all Q&A pairs from the .markdown.intake-answers container.
@@ -239,6 +245,100 @@ function findAnswer(pairs: QAPair[], ...searchTerms: string[]): string {
     if (match?.answer) return match.answer
   }
   return ''
+}
+
+function extractClientNameFromPage(): Partial<IntakeData> {
+  const name = [
+    document.querySelector('h1.name')?.textContent?.trim() ?? '',
+    document.querySelector('h1[data-test-client-name]')?.textContent?.trim() ?? '',
+    document.querySelector('main h1')?.textContent?.trim() ?? '',
+  ].find(Boolean) ?? ''
+
+  if (!name) return {}
+  const [firstName, ...rest] = name.split(/\s+/)
+  return {
+    fullName: name,
+    firstName,
+    lastName: rest.join(' '),
+  }
+}
+
+function extractDobFromPage(): string {
+  const candidates = Array.from(document.querySelectorAll<HTMLElement>('.item, [class*="item"], [class*="meta"], [class*="demographic"]'))
+    .map((el) => el.textContent?.trim() ?? '')
+    .filter(Boolean)
+
+  const dobText = candidates.find((text) => /\bDOB\b/i.test(text)) ?? ''
+  const match = dobText.match(/\bDOB\b[:\s-]*([A-Za-z]{3,9}\s+\d{1,2},\s+\d{4}|\d{1,2}\/\d{1,2}\/\d{2,4})/i)
+  return match?.[1]?.trim() ?? ''
+}
+
+function formatReadMoreParagraph(paragraph: Element): string {
+  const strong = paragraph.querySelector('strong')
+  const raw = paragraph.textContent?.replace(/\s+/g, ' ').trim() ?? ''
+  if (!raw) return ''
+  if (!strong?.textContent) return raw
+
+  const label = strong.textContent.replace(/:\s*$/, '').trim()
+  const remainder = raw.replace(strong.textContent, '').replace(/^:\s*/, '').trim()
+  return remainder ? `${label}: ${remainder}` : label
+}
+
+function formatReadMoreBlock(block: Element): string {
+  const lines: string[] = []
+
+  for (const child of Array.from(block.children)) {
+    const tag = child.tagName.toLowerCase()
+    if (tag === 'p') {
+      const line = formatReadMoreParagraph(child)
+      if (line) lines.push(line)
+      continue
+    }
+
+    if (tag === 'ul' || tag === 'ol') {
+      const items = Array.from(child.querySelectorAll('li'))
+        .map((item) => item.textContent?.replace(/\s+/g, ' ').trim() ?? '')
+        .filter(Boolean)
+      if (items.length) lines.push(...items.map((item) => `- ${item}`))
+      continue
+    }
+
+    const text = child.textContent?.replace(/\s+/g, ' ').trim() ?? ''
+    if (text) lines.push(text)
+  }
+
+  return lines.join('\n').trim()
+}
+
+async function expandReadMoreSections(): Promise<number> {
+  const toggles = Array.from(document.querySelectorAll<HTMLElement>('[data-readmore-toggle]'))
+    .filter((toggle) => isVisible(toggle))
+    .filter((toggle) => /read more/i.test(toggle.textContent ?? '') || toggle.getAttribute('aria-expanded') === 'false')
+
+  let clicked = 0
+  for (const toggle of toggles) {
+    toggle.click()
+    clicked++
+    await wait(60)
+  }
+
+  if (clicked > 0) {
+    await wait(120)
+  }
+
+  return clicked
+}
+
+function collectOverviewClinicalNotes(): string {
+  const blocks = Array.from(document.querySelectorAll<HTMLElement>('[data-test-shared-read-more], [data-readmore].markdown'))
+    .map((block) => formatReadMoreBlock(block))
+    .filter((text) => text.length >= 40)
+
+  const uniqueBlocks = Array.from(new Set(blocks))
+  return uniqueBlocks
+    .slice(0, 3)
+    .map((text, index) => `Overview note ${index + 1}:\n${text}`)
+    .join('\n\n')
 }
 
 // ── Form Metadata ──
@@ -530,12 +630,18 @@ function detectAssessmentTypeFromQuestions(root: Document | Element = document):
   if (/wished you were dead|thoughts of killing yourself|prepared to do anything to end your life/.test(combined)) {
     return 'C-SSRS'
   }
+  if (/hard to wind down|dryness of my mouth|close to panic|could not seem to experience any positive feeling/.test(combined)) {
+    return 'DASS-21'
+  }
 
   const numberedQuestions = root.querySelectorAll('tbody tr.et-tr .question-number').length
   if (numberedQuestions === 7) return 'GAD-7'
   if (numberedQuestions === 9) return 'PHQ-9'
   if (numberedQuestions === 6 && /kill yourself|end your life|wished you were dead/.test(combined)) {
     return 'C-SSRS'
+  }
+  if (numberedQuestions === 21 && /stress|panic|wind down|positive feeling/.test(combined)) {
+    return 'DASS-21'
   }
 
   return null
@@ -558,6 +664,13 @@ function detectAssessmentType(root: Document | Element = document): AssessmentNa
     title.includes('columbia suicide severity rating scale')
   ) {
     return 'C-SSRS'
+  }
+  if (
+    title.includes('dass 21') ||
+    title.includes('dass-21') ||
+    title.includes('depression anxiety stress scales')
+  ) {
+    return 'DASS-21'
   }
   return detectAssessmentTypeFromQuestions(root)
 }
@@ -634,6 +747,44 @@ function extractCssrsFromRoot(root: Document | Element = document): AssessmentRe
   }
 }
 
+function classifyDassSeverity(
+  score: number,
+  thresholds: [number, number, number, number]
+): string {
+  if (score <= thresholds[0]) return 'normal'
+  if (score <= thresholds[1]) return 'mild'
+  if (score <= thresholds[2]) return 'moderate'
+  if (score <= thresholds[3]) return 'severe'
+  return 'extremely severe'
+}
+
+function summarizeDass21(items: AssessmentItem[]): { totalScore: number; severity: string; difficulty: string } {
+  const groups = {
+    Depression: [3, 5, 10, 13, 16, 17, 21],
+    Anxiety: [2, 4, 7, 9, 15, 19, 20],
+    Stress: [1, 6, 8, 11, 12, 14, 18],
+  } as const
+
+  const totals = Object.entries(groups).map(([label, itemNumbers]) => {
+    const raw = items
+      .filter((item) => itemNumbers.includes(item.number))
+      .reduce((sum, item) => sum + item.score, 0)
+    const scaled = raw * 2
+    const severity = label === 'Depression'
+      ? classifyDassSeverity(scaled, [9, 13, 20, 27])
+      : label === 'Anxiety'
+        ? classifyDassSeverity(scaled, [7, 9, 14, 19])
+        : classifyDassSeverity(scaled, [14, 18, 25, 33])
+    return { label, raw, scaled, severity }
+  })
+
+  return {
+    totalScore: items.reduce((sum, item) => sum + item.score, 0),
+    severity: totals.map((entry) => `${entry.label} ${entry.severity}`).join(' · '),
+    difficulty: totals.map((entry) => `${entry.label}: ${entry.scaled}`).join(' · '),
+  }
+}
+
 function extractAssessmentFromRoot(name: AssessmentName, root: Document | Element = document): AssessmentResult {
   if (name === 'C-SSRS') {
     return extractCssrsFromRoot(root)
@@ -688,6 +839,18 @@ function extractAssessmentFromRoot(name: AssessmentName, root: Document | Elemen
 
   const totalScore = items.reduce((sum, item) => sum + item.score, 0)
 
+  if (name === 'DASS-21') {
+    const summary = summarizeDass21(items)
+    return {
+      name,
+      totalScore: summary.totalScore,
+      severity: summary.severity,
+      items,
+      difficulty: summary.difficulty,
+      capturedAt: new Date().toISOString(),
+    }
+  }
+
   return { name, totalScore, severity, items, difficulty, capturedAt: new Date().toISOString() }
 }
 
@@ -698,15 +861,18 @@ async function fetchAssessmentsFromLinks(): Promise<{
   gad7: AssessmentResult | null
   phq9: AssessmentResult | null
   cssrs: AssessmentResult | null
+  dass21: AssessmentResult | null
 }> {
   const result: {
     gad7: AssessmentResult | null
     phq9: AssessmentResult | null
     cssrs: AssessmentResult | null
+    dass21: AssessmentResult | null
   } = {
     gad7: null,
     phq9: null,
     cssrs: null,
+    dass21: null,
   }
 
   // Fetch all linked intake-note pages, then classify by the fetched page title.
@@ -720,41 +886,45 @@ async function fetchAssessmentsFromLinks(): Promise<{
 
   console.log('[SPN] Auto-capture candidate intake-note URLs:', uniqueLinks)
 
+  // SimplePractice uses Ember.js — intake_notes pages return 400 on direct fetch().
+  // Open each URL in a background tab so Ember renders, then extract from live DOM.
   for (const url of uniqueLinks) {
+    if (result.gad7 && result.phq9 && result.cssrs && result.dass21) break
     try {
-      const resp = await fetch(url, { credentials: 'include' })
-      if (!resp.ok) continue
-      const html = await resp.text()
-      const parser = new DOMParser()
-      const doc = parser.parseFromString(html, 'text/html')
-      const type = detectAssessmentType(doc)
-      if (!type) {
-        console.log(`[SPN] Skipping non-assessment intake note ${url}`)
+      const absUrl = toAbsoluteUrl(url)
+      if (!absUrl) continue
+      console.log(`[SPN] Opening background tab for assessment: ${absUrl}`)
+      const response = await chrome.runtime.sendMessage({
+        type: 'SPN_FETCH_ASSESSMENT_VIA_TAB',
+        url: absUrl,
+      }) as { type: string | null; assessment: AssessmentResult | null } | null
+
+      if (!response?.type || !response.assessment) {
+        console.log(`[SPN] No assessment found in background tab for ${url}`)
         continue
       }
-      const assessment = extractAssessmentFromRoot(type, doc)
-      if (assessment.items.length > 0) {
-        if (type === 'GAD-7') result.gad7 = assessment
-        else if (type === 'PHQ-9') result.phq9 = assessment
-        else result.cssrs = assessment
 
-        const detail = type === 'C-SSRS'
-          ? assessment.severity
-          : `score ${assessment.totalScore}`
-        console.log(`[SPN] Auto-captured ${type} from ${url}: ${detail}`)
-      }
+      const { type, assessment } = response
+      if (type === 'GAD-7' && !result.gad7) result.gad7 = assessment
+      else if (type === 'PHQ-9' && !result.phq9) result.phq9 = assessment
+      else if (type === 'DASS-21' && !result.dass21) result.dass21 = assessment
+      else if (type === 'C-SSRS' && !result.cssrs) result.cssrs = assessment
 
-      if (result.gad7 && result.phq9 && result.cssrs) break
+      const detail = type === 'C-SSRS'
+        ? assessment.severity
+        : `score ${assessment.totalScore}`
+      console.log(`[SPN] Captured ${type} from background tab: ${detail}`)
     } catch (err) {
-      console.warn(`[SPN] Failed to fetch linked intake note ${url}:`, err)
+      console.warn(`[SPN] Background-tab assessment extraction failed for ${url}:`, err)
     }
   }
 
-  if (!result.gad7 || !result.phq9 || !result.cssrs) {
-    console.log('[SPN] Auto-capture missing assessments after sibling-note scan:', {
+  if (!result.gad7 || !result.phq9 || !result.cssrs || !result.dass21) {
+    console.log('[SPN] Auto-capture missing assessments:', {
       missing: [
         !result.gad7 ? 'GAD-7' : '',
         !result.phq9 ? 'PHQ-9' : '',
+        !result.dass21 ? 'DASS-21' : '',
         !result.cssrs ? 'C-SSRS' : '',
       ].filter(Boolean),
     })
@@ -781,7 +951,9 @@ async function handleAssessmentCapture(): Promise<void> {
       ? { gad7: result }
       : type === 'PHQ-9'
         ? { phq9: result }
-        : { cssrs: result }
+        : type === 'DASS-21'
+          ? { dass21: result }
+          : { cssrs: result }
     await mergeIntake(updates)
 
     const message = type === 'C-SSRS'
@@ -1061,12 +1233,14 @@ async function handleCaptureClick(): Promise<void> {
     if (assessments.gad7) intake.gad7 = assessments.gad7
     if (assessments.phq9) intake.phq9 = assessments.phq9
     if (assessments.cssrs) intake.cssrs = assessments.cssrs
+    if (assessments.dass21) intake.dass21 = assessments.dass21
 
     await mergeIntake(intake)
 
     const extras: string[] = []
     if (assessments.gad7) extras.push(`GAD-7: ${assessments.gad7.totalScore}`)
     if (assessments.phq9) extras.push(`PHQ-9: ${assessments.phq9.totalScore}`)
+    if (assessments.dass21) extras.push(`DASS-21: ${assessments.dass21.totalScore}`)
     if (assessments.cssrs) extras.push(`C-SSRS: ${assessments.cssrs.totalScore} yes`)
     const extraText = extras.length ? ` + ${extras.join(', ')}` : ''
 
@@ -1093,15 +1267,153 @@ async function handleCaptureClick(): Promise<void> {
   }
 }
 
+async function handleOverviewCaptureClick(): Promise<void> {
+  try {
+    assertExtensionContext()
+    showToast('Capturing overview, intake form, and assessments...', 'success')
+
+    const clicked = await expandReadMoreSections()
+    const overviewClinicalNote = collectOverviewClinicalNotes()
+
+    // Fetch assessments and intake form data in parallel via background tabs
+    const intakeNoteUrls = await discoverIntakeNoteUrls()
+    const [assessments, intakeFromTab] = await Promise.all([
+      fetchAssessmentsFromLinks(),
+      fetchIntakeFormViaTab(intakeNoteUrls),
+    ])
+
+    // Start with intake form data if we got it (has the full Q&A, demographics, etc.)
+    // Only use overview page name/DOB as fallbacks — intake form data is more reliable
+    const overviewName = extractClientNameFromPage()
+    const overviewDob = extractDobFromPage()
+    const partial: Partial<IntakeData> = {
+      ...(intakeFromTab ?? {}),
+      clientId: getClientIdFromUrl(),
+      capturedAt: new Date().toISOString(),
+      overviewClinicalNote,
+    }
+    // Use overview name/DOB only if intake form didn't provide them
+    if (!partial.fullName && overviewName.fullName) partial.fullName = overviewName.fullName
+    if (!partial.firstName && overviewName.firstName) partial.firstName = overviewName.firstName
+    if (!partial.lastName && overviewName.lastName) partial.lastName = overviewName.lastName
+    if (!partial.dob && overviewDob) partial.dob = overviewDob
+
+    if (assessments.gad7) partial.gad7 = assessments.gad7
+    if (assessments.phq9) partial.phq9 = assessments.phq9
+    if (assessments.cssrs) partial.cssrs = assessments.cssrs
+    if (assessments.dass21) partial.dass21 = assessments.dass21
+
+    const hasProfileData =
+      !!partial.fullName ||
+      !!partial.firstName ||
+      !!partial.dob ||
+      !!overviewClinicalNote ||
+      !!intakeFromTab ||
+      !!assessments.gad7 ||
+      !!assessments.phq9 ||
+      !!assessments.dass21 ||
+      !!assessments.cssrs
+
+    if (!hasProfileData) {
+      showToast('No overview note or assessment data found on this page.', 'error')
+      return
+    }
+
+    await mergeIntake(partial)
+
+    const extras: string[] = []
+    if (intakeFromTab) extras.push(`intake form (${intakeFromTab.rawQA?.length ?? 0} Q&A)`)
+    if (overviewClinicalNote) extras.push(`${overviewClinicalNote.split(/\n\n+/).length} note block(s)`)
+    if (assessments.gad7) extras.push(`GAD-7 ${assessments.gad7.totalScore}`)
+    if (assessments.phq9) extras.push(`PHQ-9 ${assessments.phq9.totalScore}`)
+    if (assessments.dass21) extras.push(`DASS-21 ${assessments.dass21.totalScore}`)
+    if (assessments.cssrs) extras.push(`C-SSRS ${assessments.cssrs.totalScore} yes`)
+    if (clicked) extras.push(`expanded ${clicked} "Read More" section(s)`)
+
+    const name = partial.fullName || [partial.firstName, partial.lastName].filter(Boolean).join(' ') || 'client'
+    showToast(`Captured overview prep for ${name}${extras.length ? `: ${extras.join(', ')}` : ''}`, 'success')
+
+    console.groupCollapsed(`[SPN] Captured overview prep for ${name}`)
+    console.log('[SPN] Overview partial:', partial)
+    console.log('[SPN] Overview clinical note:', overviewClinicalNote)
+    console.log('[SPN] Intake from background tab:', intakeFromTab)
+    console.log('[SPN] Assessments:', assessments)
+    console.groupEnd()
+  } catch (err) {
+    if (isExtensionContextInvalidatedError(err)) {
+      showToast('Extension reloaded — please refresh this page.', 'error')
+    } else {
+      console.error('[SPN] Overview capture error:', err)
+      showToast('Failed to capture overview prep.', 'error')
+    }
+  }
+}
+
+async function fetchIntakeFormViaTab(intakeNoteUrls: string[]): Promise<IntakeData | null> {
+  // Try all intake note URLs and return the one with the most Q&A data (the DIPS form)
+  let best: IntakeData | null = null
+  let bestQACount = 0
+
+  for (const url of intakeNoteUrls) {
+    try {
+      const absUrl = toAbsoluteUrl(url)
+      if (!absUrl) continue
+      console.log(`[SPN] Trying to extract intake form from background tab: ${absUrl}`)
+      const response = await chrome.runtime.sendMessage({
+        type: 'SPN_FETCH_INTAKE_VIA_TAB',
+        url: absUrl,
+      }) as { intake: IntakeData | null } | null
+
+      if (response?.intake) {
+        const qaCount = response.intake.rawQA?.length ?? 0
+        console.log(`[SPN] Got intake form data from ${absUrl}: ${qaCount} Q&A pairs`)
+        if (qaCount > bestQACount) {
+          best = response.intake
+          bestQACount = qaCount
+        }
+      }
+    } catch (err) {
+      console.warn(`[SPN] Background-tab intake extraction failed for ${url}:`, err)
+    }
+  }
+
+  if (best) {
+    console.log(`[SPN] Selected intake form with ${bestQACount} Q&A pairs`)
+  }
+  return best
+}
+
 function hasIntakeForm(): boolean {
   return !!document.querySelector('.markdown.intake-answers')
 }
 
+function hasOverviewReadMoreContent(): boolean {
+  return isClientOverviewPage() && !!document.querySelector('[data-readmore-toggle], [data-test-shared-read-more], [data-readmore].markdown')
+}
+
+const CAPTURE_BUTTON_IDS = [
+  'spn-capture-btn',
+  'spn-treatment-plan-btn',
+  'spn-assessment-btn',
+  'spn-overview-btn',
+]
+
+function removeCaptureButtons(exceptId = ''): void {
+  for (const id of CAPTURE_BUTTON_IDS) {
+    if (id === exceptId) continue
+    document.getElementById(id)?.remove()
+  }
+}
+
 function injectCaptureButton(): void {
-  if (!isClientPage()) return
+  if (!isClientPage()) {
+    removeCaptureButtons()
+    return
+  }
 
   // Assessment page (GAD-7 / PHQ-9) — show assessment capture button
   if (hasAssessmentTable()) {
+    removeCaptureButtons('spn-assessment-btn')
     if (document.getElementById('spn-assessment-btn')) return
     const type = detectAssessmentType()!
     injectButton(`Capture ${type}`, handleAssessmentCapture, {
@@ -1113,6 +1425,7 @@ function injectCaptureButton(): void {
 
   // Treatment plan page — show treatment-plan capture button
   if (isTreatmentPlanPage()) {
+    removeCaptureButtons('spn-treatment-plan-btn')
     if (document.getElementById('spn-treatment-plan-btn')) return
 
     injectButton('Capture Treatment Plan', handleCaptureTreatmentPlan, {
@@ -1122,9 +1435,24 @@ function injectCaptureButton(): void {
     return
   }
 
+  if (hasOverviewReadMoreContent()) {
+    removeCaptureButtons('spn-overview-btn')
+    if (document.getElementById('spn-overview-btn')) return
+
+    injectButton('Capture Overview Prep', handleOverviewCaptureClick, {
+      id: 'spn-overview-btn',
+      position: 'bottom-right',
+    })
+    return
+  }
+
   // Intake form page — show intake capture button
+  removeCaptureButtons('spn-capture-btn')
   if (document.getElementById('spn-capture-btn')) return
-  if (!hasIntakeForm()) return
+  if (!hasIntakeForm()) {
+    removeCaptureButtons()
+    return
+  }
 
   injectButton('Capture Intake', handleCaptureClick, {
     id: 'spn-capture-btn',
@@ -1148,7 +1476,8 @@ const observer = new MutationObserver(() => {
   const hasAnyCaptureButton =
     !!document.getElementById('spn-capture-btn') ||
     !!document.getElementById('spn-treatment-plan-btn') ||
-    !!document.getElementById('spn-assessment-btn')
+    !!document.getElementById('spn-assessment-btn') ||
+    !!document.getElementById('spn-overview-btn')
 
   if (isClientPage() && !hasAnyCaptureButton && retryCount < MAX_RETRIES) {
     retryCount++
@@ -1172,6 +1501,28 @@ registerFloatingButtonsController(() => {
 chrome.runtime.onMessage.addListener((msg, _sender, sendResponse) => {
   if (msg?.type === 'SPN_COLLECT_INTAKE_NOTE_URLS') {
     sendResponse({ urls: collectRenderedIntakeNoteUrls(msg.clientId || getClientIdFromUrl()) })
+    return true
+  }
+
+  if (msg?.type === 'SPN_EXTRACT_ASSESSMENT') {
+    const type = detectAssessmentType()
+    if (!type) {
+      sendResponse({ type: null, assessment: null })
+      return true
+    }
+    const assessment = extractAssessmentFromRoot(type)
+    sendResponse({ type, assessment: assessment.items.length > 0 ? assessment : null })
+    return true
+  }
+
+  if (msg?.type === 'SPN_EXTRACT_INTAKE') {
+    if (!hasIntakeForm()) {
+      sendResponse({ intake: null })
+      return true
+    }
+    const intake = extractIntakeData()
+    const fieldCount = countCapturedFields(intake)
+    sendResponse({ intake: fieldCount > 0 ? intake : null })
     return true
   }
 })

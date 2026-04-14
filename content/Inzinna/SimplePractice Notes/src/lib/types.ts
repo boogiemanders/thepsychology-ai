@@ -10,7 +10,7 @@ export interface AssessmentItem {
 }
 
 export interface AssessmentResult {
-  name: string // e.g. "GAD-7", "PHQ-9", "C-SSRS"
+  name: string // e.g. "GAD-7", "PHQ-9", "C-SSRS", "DASS-21"
   totalScore: number // scored total or count of endorsed yes/no items
   severity: string // e.g. severity label or assessment summary
   items: AssessmentItem[]
@@ -91,12 +91,15 @@ export interface IntakeData {
   gad7: AssessmentResult | null
   phq9: AssessmentResult | null
   cssrs: AssessmentResult | null
+  dass21: AssessmentResult | null
 
   // Symptom checklist
   recentSymptoms: string
   additionalSymptoms: string
   additionalInfo: string
   manualNotes: string
+  overviewClinicalNote: string
+  spSoapNote: string
 
   // Form metadata
   formTitle: string
@@ -161,10 +164,13 @@ export const EMPTY_INTAKE: IntakeData = {
   gad7: null,
   phq9: null,
   cssrs: null,
+  dass21: null,
   recentSymptoms: '',
   additionalSymptoms: '',
   additionalInfo: '',
   manualNotes: '',
+  overviewClinicalNote: '',
+  spSoapNote: '',
   formTitle: '',
   formDate: '',
   signedBy: '',
@@ -249,6 +255,13 @@ export interface DSM5RequiredCount {
   mustInclude?: string[]
 }
 
+export interface DSM5RequiredCountAdjustment {
+  minAge?: number
+  maxAge?: number
+  note?: string
+  requiredCounts: DSM5RequiredCount[]
+}
+
 export interface DSM5DisorderDefinition {
   id: string
   name: string
@@ -257,6 +270,7 @@ export interface DSM5DisorderDefinition {
   sourcePages: [number, number]
   criteria: DSM5CriterionDefinition[]
   requiredCounts: DSM5RequiredCount[]
+  requiredCountAdjustments?: DSM5RequiredCountAdjustment[]
   durationRequirement?: string
   exclusions: string[]
   specifierOptions: string[]
@@ -419,8 +433,11 @@ export interface ProviderPreferences {
   defaultLocation: string
   firstVisitCPT: string
   followUpCPT: string
+  llmProvider: 'ollama' | 'openai'
   ollamaModel: string
   ollamaEndpoint: string
+  openaiApiKey: string
+  openaiModel: string
   autoGenerateOnSessionEnd: boolean
 }
 
@@ -501,7 +518,7 @@ export interface SoapDraft {
   generatedAt: string
   editedAt: string
   status: 'draft' | 'reviewed' | 'submitted'
-  generationMethod: 'llm' | 'regex' | ''
+  generationMethod: 'llm' | 'openai' | 'regex' | ''
 }
 
 export const EMPTY_SESSION_TRANSCRIPT: SessionTranscript = {
@@ -548,7 +565,10 @@ export const DEFAULT_PREFERENCES: ProviderPreferences = {
   defaultLocation: 'Video Office',
   firstVisitCPT: '90791',
   followUpCPT: '90837',
-  ollamaModel: 'llama3.1:8b',
+  llmProvider: 'ollama',
+  ollamaModel: 'llama3.2:3b',
   ollamaEndpoint: 'http://localhost:11434',
+  openaiApiKey: '',
+  openaiModel: 'gpt-4o-mini',
   autoGenerateOnSessionEnd: true,
 }

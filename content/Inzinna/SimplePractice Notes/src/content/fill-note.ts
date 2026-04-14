@@ -21,7 +21,7 @@
  */
 
 import { IntakeData, AssessmentResult, DiagnosticImpression, ProgressNote, SessionNotes, SoapDraft, TranscriptEntry, MseChecklist, DEFAULT_MSE_CHECKLIST } from '../lib/types'
-import { getIntake, getNote, getDiagnosticWorkspace, getPreferences, getSessionNotes, saveSessionNotes, getSoapDraft, appendTranscriptEntry, saveMseChecklist, getMseChecklist, getTranscript } from '../lib/storage'
+import { getIntake, getNote, getDiagnosticWorkspace, getPreferences, getSessionNotes, saveSessionNotes, getSoapDraft, saveSoapDraft, clearSoapDraft, appendTranscriptEntry, saveMseChecklist, getMseChecklist, clearMseChecklist, getTranscript, clearTranscript } from '../lib/storage'
 import { generateSoapDraft } from '../lib/soap-generator'
 import { buildDraftNote } from '../lib/note-draft'
 import { buildClinicalGuidance } from '../lib/clinical-guidance'
@@ -67,8 +67,12 @@ function getVideoApptId(): string {
 
 function detectSoapForm(): boolean {
   const labels = ['free-text-1', 'free-text-2', 'free-text-3', 'free-text-4']
-  return !!document.querySelector('.progress-individual-note-container') &&
+  const hasSoapFields = !!document.querySelector('.progress-individual-note-container') &&
     labels.every((label) => !!document.querySelector(`[contenteditable="true"][aria-label="${label}"]`))
+  if (!hasSoapFields) return false
+  // SOAP notes have exactly 4 free-text fields (S/O/A/P); ICE and other forms have many more
+  const totalFreeText = document.querySelectorAll('[contenteditable="true"][aria-label^="free-text-"]').length
+  return totalFreeText <= 5
 }
 
 function fillSoapNote(draft: SoapDraft): number {
@@ -118,12 +122,31 @@ function handleSessionNotesInput(textarea: HTMLTextAreaElement): void {
   }, 500)
 }
 
+/** Track which apptId we've initialized the video panel for, to avoid re-clearing on re-inject */
+let videoRoomInitApptId = ''
+
 function injectVideoNotePanel(): void {
   if (!isVideoRoom()) return
   if (document.getElementById('spn-video-notes')) return
 
   const apptId = getVideoApptId()
   if (!apptId) return
+
+  // Clear stale data from previous session when entering a new video room
+  if (apptId !== videoRoomInitApptId) {
+    videoRoomInitApptId = apptId
+    clearSoapDraft().catch(() => {})
+    clearMseChecklist().catch(() => {})
+    clearTranscript().catch(() => {})
+    // Reset caption + incremental generation state for the new session
+    captionCount = 0
+    stopIncrementalGeneration()
+    if (captionObserver) {
+      captionObserver.disconnect()
+      captionObserver = null
+    }
+    console.log('[SPN] Cleared stale session data for new appointment', apptId)
+  }
 
   const panel = document.createElement('div')
   panel.id = 'spn-video-notes'
@@ -434,6 +457,7 @@ function checkSessionEndOnUrlChange(newUrl: string): void {
 
   if (wasVideoRoom && !isStillVideoRoom) {
     sessionEndTriggered = true
+    stopIncrementalGeneration()
     if (sessionEndTimer) {
       clearInterval(sessionEndTimer)
       sessionEndTimer = null
@@ -642,6 +666,80 @@ function startCaptionObserver(): void {
   waitForCaptions.observe(document.body, { childList: true, subtree: true })
 }
 
+// ── Incremental SOAP Generation During Session ──
+
+let incrementalGenTimer: ReturnType<typeof setInterval> | null = null
+let lastIncrementalCaptionCount = 0
+let incrementalGenerating = false
+
+function startIncrementalGeneration(): void {
+  if (!isVideoRoom()) return
+  if (incrementalGenTimer) return
+
+  const apptId = getVideoApptId()
+  if (!apptId) return
+
+  // Check every 90s if new captions arrived, and regenerate SOAP draft
+  incrementalGenTimer = setInterval(async () => {
+    if (incrementalGenerating) return
+    if (captionCount <= lastIncrementalCaptionCount) return
+    // Need at least 10 new captions before regenerating
+    if (captionCount - lastIncrementalCaptionCount < 10) return
+
+    incrementalGenerating = true
+    lastIncrementalCaptionCount = captionCount
+
+    try {
+      const prefs = await getPreferences()
+      const [sessionNotesData, transcript, intake, workspace, mseChecklist] = await Promise.all([
+        getSessionNotes(apptId),
+        getTranscript(apptId),
+        getIntake(),
+        getDiagnosticWorkspace(),
+        getMseChecklist(),
+      ])
+
+      if (!transcript?.entries.length) return
+
+      const sessionNotes = sessionNotesData?.notes ?? ''
+      const diagnosticImpressions = workspace?.finalizedImpressions ?? []
+      const treatmentPlan = await chrome.storage.session.get('spn_treatment_plan').then((r) => r['spn_treatment_plan'] ?? null)
+      const clientName = intake ? [intake.firstName, intake.lastName].filter(Boolean).join(' ') || intake.fullName : ''
+
+      console.log('[SPN] Incremental SOAP generation...', { captionCount, transcriptEntries: transcript.entries.length })
+
+      const draft = await generateSoapDraft(
+        sessionNotes,
+        transcript,
+        treatmentPlan,
+        intake,
+        diagnosticImpressions,
+        mseChecklist,
+        prefs,
+        { apptId, clientName, sessionDate: new Date().toLocaleDateString('en-US') }
+      )
+
+      await saveSoapDraft(draft)
+      console.log('[SPN] Incremental SOAP draft updated:', draft.generationMethod)
+    } catch (err) {
+      console.warn('[SPN] Incremental SOAP generation failed:', err)
+    } finally {
+      incrementalGenerating = false
+    }
+  }, 90_000) // every 90 seconds
+
+  console.log('[SPN] Incremental SOAP generation started for', apptId)
+}
+
+function stopIncrementalGeneration(): void {
+  if (incrementalGenTimer) {
+    clearInterval(incrementalGenTimer)
+    incrementalGenTimer = null
+  }
+  lastIncrementalCaptionCount = 0
+  incrementalGenerating = false
+}
+
 function capitalize(value: string): string {
   if (!value) return value
   return value.charAt(0).toUpperCase() + value.slice(1)
@@ -795,7 +893,9 @@ function normalizeLivingArrangement(livingArrangement: string, pronouns: Pronoun
 
   let cleaned = trimmed
     .replace(/^i\s+live\s+/i, '')
+    .replace(/^i\s+love\s+/i, '')
     .replace(/^live\s+/i, '')
+    .replace(/^love\s+/i, '')
     .trim()
 
   if (!cleaned) return ''
@@ -928,6 +1028,10 @@ function buildChiefComplaintSentences(chiefComplaint: string, pronoun: string, p
     if (/^i\s+feel\b/i.test(part)) {
       const normalized = smoothClinicalPhrase(part.replace(/^i\s+feel\b/i, '').trim(), pronouns)
       return `${pronoun} reported feeling ${normalized}.`
+    }
+    // Therapy-type complaints: "sex therapy", "couples therapy", "grief counseling", etc.
+    if (/\btherap(y|ist)\b|\bcounseling\b|\btreatment\b/i.test(part)) {
+      return `${pronoun} presented for ${smoothClinicalPhrase(part, pronouns)}.`
     }
     return `${pronoun} reported ${smoothClinicalPhrase(part, pronouns)}.`
   })
@@ -1113,8 +1217,18 @@ function buildChiefComplaintNarrative(intake: IntakeData): string {
   } else {
     introBits.push(name)
   }
-  if (livingArrangement) introBits.push(`who lives ${livingArrangement}`)
-  if (occupation) introBits.push(`and works as ${occupation.replace(/\s+for\s+(\d+\s+years?)$/i, '')}`)
+  // Weave education, living arrangement, and occupation into the intro clause
+  const whoClause: string[] = []
+  if (education) whoClause.push(education)
+  if (livingArrangement) whoClause.push(`lives ${livingArrangement}`)
+  if (occupation) whoClause.push(`works as ${occupation.replace(/\s+for\s+(\d+\s+years?)$/i, '')}`)
+  if (whoClause.length === 1) {
+    introBits.push(`who ${whoClause[0]}`)
+  } else if (whoClause.length === 2) {
+    introBits.push(`who ${whoClause[0]} and ${whoClause[1]}`)
+  } else if (whoClause.length >= 3) {
+    introBits.push(`who ${whoClause.slice(0, -1).join(', ')}, and ${whoClause[whoClause.length - 1]}`)
+  }
 
   let intro = introBits.join(' ')
   intro += '.'
@@ -1129,9 +1243,6 @@ function buildChiefComplaintNarrative(intake: IntakeData): string {
     if (goal) {
       sentences.push(`${subject} stated that ${pronouns.subject} wants to ${lowerCaseFirst(goal).replace(/[.]+$/, '')}.`)
     }
-  }
-  if (education) {
-    sentences.push(`${subject} ${education}.`)
   }
 
   return sentences.join(' ')
@@ -2341,6 +2452,79 @@ async function fillAssessmentSection(intake: IntakeData): Promise<number> {
   return filled
 }
 
+// ── SimplePractice AI SOAP Note Enrichment ──
+
+function enrichIntakeFromSoapCopyArea(intake: IntakeData): void {
+  const aiContent = document.querySelector('.ai-note-content')
+  if (!aiContent) return
+
+  // Parse all sections by their h3.section-title headers
+  const sections = new Map<string, string>()
+  const headers = aiContent.querySelectorAll('h3.section-title')
+  for (const h3 of headers) {
+    const title = h3.textContent?.trim().toLowerCase() ?? ''
+    const copyArea = h3.nextElementSibling
+    if (copyArea?.classList.contains('copy-area')) {
+      sections.set(title, copyArea.textContent?.replace(/\s*Copy\s*$/, '').trim() ?? '')
+    }
+  }
+
+  if (sections.size === 0) return
+  console.log('[SPN] Found SimplePractice AI note sections:', [...sections.keys()])
+
+  const bpsText = sections.get('biopsychosocial assessment') ?? ''
+  const subjective = sections.get('subjective') ?? ''
+  const objective = sections.get('objective') ?? ''
+  const assessment = sections.get('assessment') ?? ''
+  const plan = sections.get('plan') ?? ''
+
+  // Store full note
+  intake.spSoapNote = [...sections.entries()].map(([k, v]) => `${k}:\n${v}`).join('\n\n')
+
+  // Parse Bio/Psych/Social from biopsychosocial assessment
+  const bioMatch = bpsText.match(/Biological:\s*([\s\S]*?)(?=Psychological:|Social:|$)/i)
+  const psychMatch = bpsText.match(/Psychological:\s*([\s\S]*?)(?=Biological:|Social:|$)/i)
+  const socialMatch = bpsText.match(/Social:\s*([\s\S]*?)(?=Biological:|Psychological:|$)/i)
+
+  const bio = bioMatch?.[1]?.trim() ?? ''
+  const psych = psychMatch?.[1]?.trim() ?? ''
+  const social = socialMatch?.[1]?.trim() ?? ''
+
+  // Enrich HPI: combine psychological section + subjective for richest narrative
+  const hpiCandidate = [psych, subjective].filter(Boolean).join(' ')
+  if (hpiCandidate && intake.historyOfPresentIllness.length < hpiCandidate.length) {
+    intake.historyOfPresentIllness = hpiCandidate
+  }
+
+  // Enrich medical history from biological section
+  if (bio && intake.medicalHistory.length < bio.length) {
+    intake.medicalHistory = bio
+  }
+
+  // Enrich social context
+  if (social) {
+    if (!intake.livingArrangement.trim() || intake.livingArrangement.length < 10) {
+      const livingMatch = social.match(/living\s+(?:with|alone|independently)[\s\S]*?[.]/i)
+      if (livingMatch) intake.livingArrangement = livingMatch[0].replace(/[.]+$/, '')
+    }
+    if (!intake.relationshipDescription.trim()) {
+      const relMatch = social.match(/(?:girlfriend|boyfriend|partner|spouse|wife|husband|married|dating|relationship)[\s\S]*?[.]/i)
+      if (relMatch) intake.relationshipDescription = relMatch[0]
+    }
+  }
+
+  // Enrich assessment/presenting problems from the Assessment section
+  if (assessment && intake.presentingProblems.length < assessment.length) {
+    intake.presentingProblems = assessment
+  }
+
+  // Extract MSE from objective section if present
+  const mseMatch = objective.match(/Mental Status Exam:\s*([\s\S]*?)$/i)
+  if (mseMatch) {
+    intake.additionalInfo = [intake.additionalInfo, mseMatch[1].trim()].filter(Boolean).join('\n\n')
+  }
+}
+
 // ── Main Fill Logic ──
 
 async function fillInitialClinicalEval(): Promise<void> {
@@ -2351,6 +2535,9 @@ async function fillInitialClinicalEval(): Promise<void> {
     showToast('No intake data captured. Go to the client\'s intake form and click "Capture Intake" first.', 'error')
     return
   }
+
+  // Extract SimplePractice AI SOAP note if present on the page
+  enrichIntakeFromSoapCopyArea(intake)
 
   // Wait for ProseMirror editors to initialize (Ember.js rendering)
   await wait(500)
@@ -2462,6 +2649,7 @@ const observer = new MutationObserver(() => {
     setTimeout(injectVideoNotePanel, 500)
     setTimeout(startCaptionObserver, 1000)
     setTimeout(startSessionEndDetection, 1000)
+    setTimeout(startIncrementalGeneration, 2000)
   }
 })
 
@@ -2475,6 +2663,7 @@ if (document.readyState === 'loading') {
     setTimeout(injectVideoNotePanel, 500)
     setTimeout(startCaptionObserver, 1000)
     setTimeout(startSessionEndDetection, 1000)
+    setTimeout(startIncrementalGeneration, 2000)
   })
 } else {
   setTimeout(injectFillButton, 500)

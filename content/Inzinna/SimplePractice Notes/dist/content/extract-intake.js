@@ -50,10 +50,13 @@
     gad7: null,
     phq9: null,
     cssrs: null,
+    dass21: null,
     recentSymptoms: "",
     additionalSymptoms: "",
     additionalInfo: "",
     manualNotes: "",
+    overviewClinicalNote: "",
+    spSoapNote: "",
     formTitle: "",
     formDate: "",
     signedBy: "",
@@ -132,7 +135,8 @@
       rawQA: Array.isArray(intake?.rawQA) ? intake.rawQA : [],
       gad7: intake?.gad7 ?? null,
       phq9: intake?.phq9 ?? null,
-      cssrs: intake?.cssrs ?? null
+      cssrs: intake?.cssrs ?? null,
+      dass21: intake?.dass21 ?? null
     };
   }
   async function saveIntake(intake) {
@@ -155,7 +159,8 @@
       rawQA: partial.rawQA ?? existing?.rawQA ?? EMPTY_INTAKE.rawQA,
       gad7: partial.gad7 ?? existing?.gad7 ?? null,
       phq9: partial.phq9 ?? existing?.phq9 ?? null,
-      cssrs: partial.cssrs ?? existing?.cssrs ?? null
+      cssrs: partial.cssrs ?? existing?.cssrs ?? null,
+      dass21: partial.dass21 ?? existing?.dass21 ?? null
     });
   }
   async function saveTreatmentPlan(plan) {
@@ -221,6 +226,10 @@
   function normalizedText(value) {
     return (value ?? "").replace(/\s+/g, " ").trim().toLowerCase();
   }
+  function isVisible(el) {
+    return !(el instanceof HTMLElement) || el.offsetParent !== null || el.getClientRects().length > 0;
+  }
+  var wait = (ms) => new Promise((resolve) => window.setTimeout(resolve, ms));
   function floatingButtonsState() {
     return window;
   }
@@ -273,6 +282,9 @@
   }
   function isClientPage() {
     return CLIENT_PATH_RE.test(window.location.pathname);
+  }
+  function isClientOverviewPage() {
+    return /\/clients\/[^/]+\/overview(?:$|[/?#])/.test(window.location.pathname);
   }
   function escapeRegExp(value) {
     return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -417,6 +429,73 @@
       if (match?.answer) return match.answer;
     }
     return "";
+  }
+  function extractClientNameFromPage() {
+    const name = [
+      document.querySelector("h1.name")?.textContent?.trim() ?? "",
+      document.querySelector("h1[data-test-client-name]")?.textContent?.trim() ?? "",
+      document.querySelector("main h1")?.textContent?.trim() ?? ""
+    ].find(Boolean) ?? "";
+    if (!name) return {};
+    const [firstName, ...rest] = name.split(/\s+/);
+    return {
+      fullName: name,
+      firstName,
+      lastName: rest.join(" ")
+    };
+  }
+  function extractDobFromPage() {
+    const candidates = Array.from(document.querySelectorAll('.item, [class*="item"], [class*="meta"], [class*="demographic"]')).map((el) => el.textContent?.trim() ?? "").filter(Boolean);
+    const dobText = candidates.find((text) => /\bDOB\b/i.test(text)) ?? "";
+    const match = dobText.match(/\bDOB\b[:\s-]*([A-Za-z]{3,9}\s+\d{1,2},\s+\d{4}|\d{1,2}\/\d{1,2}\/\d{2,4})/i);
+    return match?.[1]?.trim() ?? "";
+  }
+  function formatReadMoreParagraph(paragraph) {
+    const strong = paragraph.querySelector("strong");
+    const raw = paragraph.textContent?.replace(/\s+/g, " ").trim() ?? "";
+    if (!raw) return "";
+    if (!strong?.textContent) return raw;
+    const label = strong.textContent.replace(/:\s*$/, "").trim();
+    const remainder = raw.replace(strong.textContent, "").replace(/^:\s*/, "").trim();
+    return remainder ? `${label}: ${remainder}` : label;
+  }
+  function formatReadMoreBlock(block) {
+    const lines = [];
+    for (const child of Array.from(block.children)) {
+      const tag = child.tagName.toLowerCase();
+      if (tag === "p") {
+        const line = formatReadMoreParagraph(child);
+        if (line) lines.push(line);
+        continue;
+      }
+      if (tag === "ul" || tag === "ol") {
+        const items = Array.from(child.querySelectorAll("li")).map((item) => item.textContent?.replace(/\s+/g, " ").trim() ?? "").filter(Boolean);
+        if (items.length) lines.push(...items.map((item) => `- ${item}`));
+        continue;
+      }
+      const text = child.textContent?.replace(/\s+/g, " ").trim() ?? "";
+      if (text) lines.push(text);
+    }
+    return lines.join("\n").trim();
+  }
+  async function expandReadMoreSections() {
+    const toggles = Array.from(document.querySelectorAll("[data-readmore-toggle]")).filter((toggle) => isVisible(toggle)).filter((toggle) => /read more/i.test(toggle.textContent ?? "") || toggle.getAttribute("aria-expanded") === "false");
+    let clicked = 0;
+    for (const toggle of toggles) {
+      toggle.click();
+      clicked++;
+      await wait(60);
+    }
+    if (clicked > 0) {
+      await wait(120);
+    }
+    return clicked;
+  }
+  function collectOverviewClinicalNotes() {
+    const blocks = Array.from(document.querySelectorAll("[data-test-shared-read-more], [data-readmore].markdown")).map((block) => formatReadMoreBlock(block)).filter((text) => text.length >= 40);
+    const uniqueBlocks = Array.from(new Set(blocks));
+    return uniqueBlocks.slice(0, 3).map((text, index) => `Overview note ${index + 1}:
+${text}`).join("\n\n");
   }
   function extractFormMetadata() {
     const titleItem = document.querySelector(".title-item h3");
@@ -643,11 +722,17 @@
     if (/wished you were dead|thoughts of killing yourself|prepared to do anything to end your life/.test(combined)) {
       return "C-SSRS";
     }
+    if (/hard to wind down|dryness of my mouth|close to panic|could not seem to experience any positive feeling/.test(combined)) {
+      return "DASS-21";
+    }
     const numberedQuestions = root.querySelectorAll("tbody tr.et-tr .question-number").length;
     if (numberedQuestions === 7) return "GAD-7";
     if (numberedQuestions === 9) return "PHQ-9";
     if (numberedQuestions === 6 && /kill yourself|end your life|wished you were dead/.test(combined)) {
       return "C-SSRS";
+    }
+    if (numberedQuestions === 21 && /stress|panic|wind down|positive feeling/.test(combined)) {
+      return "DASS-21";
     }
     return null;
   }
@@ -662,6 +747,9 @@
     if (title.includes("phq 9")) return "PHQ-9";
     if (title.includes("c-ssrs") || title.includes("cssrs") || title.includes("columbia-suicide severity rating scale") || title.includes("columbia suicide severity rating scale")) {
       return "C-SSRS";
+    }
+    if (title.includes("dass 21") || title.includes("dass-21") || title.includes("depression anxiety stress scales")) {
+      return "DASS-21";
     }
     return detectAssessmentTypeFromQuestions(root);
   }
@@ -722,6 +810,31 @@
       capturedAt: (/* @__PURE__ */ new Date()).toISOString()
     };
   }
+  function classifyDassSeverity(score, thresholds) {
+    if (score <= thresholds[0]) return "normal";
+    if (score <= thresholds[1]) return "mild";
+    if (score <= thresholds[2]) return "moderate";
+    if (score <= thresholds[3]) return "severe";
+    return "extremely severe";
+  }
+  function summarizeDass21(items) {
+    const groups = {
+      Depression: [3, 5, 10, 13, 16, 17, 21],
+      Anxiety: [2, 4, 7, 9, 15, 19, 20],
+      Stress: [1, 6, 8, 11, 12, 14, 18]
+    };
+    const totals = Object.entries(groups).map(([label, itemNumbers]) => {
+      const raw = items.filter((item) => itemNumbers.includes(item.number)).reduce((sum, item) => sum + item.score, 0);
+      const scaled = raw * 2;
+      const severity = label === "Depression" ? classifyDassSeverity(scaled, [9, 13, 20, 27]) : label === "Anxiety" ? classifyDassSeverity(scaled, [7, 9, 14, 19]) : classifyDassSeverity(scaled, [14, 18, 25, 33]);
+      return { label, raw, scaled, severity };
+    });
+    return {
+      totalScore: items.reduce((sum, item) => sum + item.score, 0),
+      severity: totals.map((entry) => `${entry.label} ${entry.severity}`).join(" \xB7 "),
+      difficulty: totals.map((entry) => `${entry.label}: ${entry.scaled}`).join(" \xB7 ")
+    };
+  }
   function extractAssessmentFromRoot(name, root = document) {
     if (name === "C-SSRS") {
       return extractCssrsFromRoot(root);
@@ -763,13 +876,25 @@
       }
     }
     const totalScore = items.reduce((sum, item) => sum + item.score, 0);
+    if (name === "DASS-21") {
+      const summary = summarizeDass21(items);
+      return {
+        name,
+        totalScore: summary.totalScore,
+        severity: summary.severity,
+        items,
+        difficulty: summary.difficulty,
+        capturedAt: (/* @__PURE__ */ new Date()).toISOString()
+      };
+    }
     return { name, totalScore, severity, items, difficulty, capturedAt: (/* @__PURE__ */ new Date()).toISOString() };
   }
   async function fetchAssessmentsFromLinks() {
     const result = {
       gad7: null,
       phq9: null,
-      cssrs: null
+      cssrs: null,
+      dass21: null
     };
     const uniqueLinks = await discoverIntakeNoteUrls();
     if (uniqueLinks.length === 0) {
@@ -778,35 +903,36 @@
     }
     console.log("[SPN] Auto-capture candidate intake-note URLs:", uniqueLinks);
     for (const url of uniqueLinks) {
+      if (result.gad7 && result.phq9 && result.cssrs && result.dass21) break;
       try {
-        const resp = await fetch(url, { credentials: "include" });
-        if (!resp.ok) continue;
-        const html = await resp.text();
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(html, "text/html");
-        const type = detectAssessmentType(doc);
-        if (!type) {
-          console.log(`[SPN] Skipping non-assessment intake note ${url}`);
+        const absUrl = toAbsoluteUrl(url);
+        if (!absUrl) continue;
+        console.log(`[SPN] Opening background tab for assessment: ${absUrl}`);
+        const response = await chrome.runtime.sendMessage({
+          type: "SPN_FETCH_ASSESSMENT_VIA_TAB",
+          url: absUrl
+        });
+        if (!response?.type || !response.assessment) {
+          console.log(`[SPN] No assessment found in background tab for ${url}`);
           continue;
         }
-        const assessment = extractAssessmentFromRoot(type, doc);
-        if (assessment.items.length > 0) {
-          if (type === "GAD-7") result.gad7 = assessment;
-          else if (type === "PHQ-9") result.phq9 = assessment;
-          else result.cssrs = assessment;
-          const detail = type === "C-SSRS" ? assessment.severity : `score ${assessment.totalScore}`;
-          console.log(`[SPN] Auto-captured ${type} from ${url}: ${detail}`);
-        }
-        if (result.gad7 && result.phq9 && result.cssrs) break;
+        const { type, assessment } = response;
+        if (type === "GAD-7" && !result.gad7) result.gad7 = assessment;
+        else if (type === "PHQ-9" && !result.phq9) result.phq9 = assessment;
+        else if (type === "DASS-21" && !result.dass21) result.dass21 = assessment;
+        else if (type === "C-SSRS" && !result.cssrs) result.cssrs = assessment;
+        const detail = type === "C-SSRS" ? assessment.severity : `score ${assessment.totalScore}`;
+        console.log(`[SPN] Captured ${type} from background tab: ${detail}`);
       } catch (err) {
-        console.warn(`[SPN] Failed to fetch linked intake note ${url}:`, err);
+        console.warn(`[SPN] Background-tab assessment extraction failed for ${url}:`, err);
       }
     }
-    if (!result.gad7 || !result.phq9 || !result.cssrs) {
-      console.log("[SPN] Auto-capture missing assessments after sibling-note scan:", {
+    if (!result.gad7 || !result.phq9 || !result.cssrs || !result.dass21) {
+      console.log("[SPN] Auto-capture missing assessments:", {
         missing: [
           !result.gad7 ? "GAD-7" : "",
           !result.phq9 ? "PHQ-9" : "",
+          !result.dass21 ? "DASS-21" : "",
           !result.cssrs ? "C-SSRS" : ""
         ].filter(Boolean)
       });
@@ -825,7 +951,7 @@
         return;
       }
       const result = extractAssessmentFromRoot(type);
-      const updates = type === "GAD-7" ? { gad7: result } : type === "PHQ-9" ? { phq9: result } : { cssrs: result };
+      const updates = type === "GAD-7" ? { gad7: result } : type === "PHQ-9" ? { phq9: result } : type === "DASS-21" ? { dass21: result } : { cssrs: result };
       await mergeIntake(updates);
       const message = type === "C-SSRS" ? `Captured ${type}: ${result.severity}` : `Captured ${type}: score ${result.totalScore} (${result.severity})`;
       showToast(message, "success");
@@ -1036,10 +1162,12 @@
       if (assessments.gad7) intake.gad7 = assessments.gad7;
       if (assessments.phq9) intake.phq9 = assessments.phq9;
       if (assessments.cssrs) intake.cssrs = assessments.cssrs;
+      if (assessments.dass21) intake.dass21 = assessments.dass21;
       await mergeIntake(intake);
       const extras = [];
       if (assessments.gad7) extras.push(`GAD-7: ${assessments.gad7.totalScore}`);
       if (assessments.phq9) extras.push(`PHQ-9: ${assessments.phq9.totalScore}`);
+      if (assessments.dass21) extras.push(`DASS-21: ${assessments.dass21.totalScore}`);
       if (assessments.cssrs) extras.push(`C-SSRS: ${assessments.cssrs.totalScore} yes`);
       const extraText = extras.length ? ` + ${extras.join(", ")}` : "";
       const name = `${intake.firstName} ${intake.lastName}`.trim() || "client";
@@ -1063,12 +1191,118 @@
       }
     }
   }
+  async function handleOverviewCaptureClick() {
+    try {
+      assertExtensionContext();
+      showToast("Capturing overview, intake form, and assessments...", "success");
+      const clicked = await expandReadMoreSections();
+      const overviewClinicalNote = collectOverviewClinicalNotes();
+      const intakeNoteUrls = await discoverIntakeNoteUrls();
+      const [assessments, intakeFromTab] = await Promise.all([
+        fetchAssessmentsFromLinks(),
+        fetchIntakeFormViaTab(intakeNoteUrls)
+      ]);
+      const overviewName = extractClientNameFromPage();
+      const overviewDob = extractDobFromPage();
+      const partial = {
+        ...intakeFromTab ?? {},
+        clientId: getClientIdFromUrl(),
+        capturedAt: (/* @__PURE__ */ new Date()).toISOString(),
+        overviewClinicalNote
+      };
+      if (!partial.fullName && overviewName.fullName) partial.fullName = overviewName.fullName;
+      if (!partial.firstName && overviewName.firstName) partial.firstName = overviewName.firstName;
+      if (!partial.lastName && overviewName.lastName) partial.lastName = overviewName.lastName;
+      if (!partial.dob && overviewDob) partial.dob = overviewDob;
+      if (assessments.gad7) partial.gad7 = assessments.gad7;
+      if (assessments.phq9) partial.phq9 = assessments.phq9;
+      if (assessments.cssrs) partial.cssrs = assessments.cssrs;
+      if (assessments.dass21) partial.dass21 = assessments.dass21;
+      const hasProfileData = !!partial.fullName || !!partial.firstName || !!partial.dob || !!overviewClinicalNote || !!intakeFromTab || !!assessments.gad7 || !!assessments.phq9 || !!assessments.dass21 || !!assessments.cssrs;
+      if (!hasProfileData) {
+        showToast("No overview note or assessment data found on this page.", "error");
+        return;
+      }
+      await mergeIntake(partial);
+      const extras = [];
+      if (intakeFromTab) extras.push(`intake form (${intakeFromTab.rawQA?.length ?? 0} Q&A)`);
+      if (overviewClinicalNote) extras.push(`${overviewClinicalNote.split(/\n\n+/).length} note block(s)`);
+      if (assessments.gad7) extras.push(`GAD-7 ${assessments.gad7.totalScore}`);
+      if (assessments.phq9) extras.push(`PHQ-9 ${assessments.phq9.totalScore}`);
+      if (assessments.dass21) extras.push(`DASS-21 ${assessments.dass21.totalScore}`);
+      if (assessments.cssrs) extras.push(`C-SSRS ${assessments.cssrs.totalScore} yes`);
+      if (clicked) extras.push(`expanded ${clicked} "Read More" section(s)`);
+      const name = partial.fullName || [partial.firstName, partial.lastName].filter(Boolean).join(" ") || "client";
+      showToast(`Captured overview prep for ${name}${extras.length ? `: ${extras.join(", ")}` : ""}`, "success");
+      console.groupCollapsed(`[SPN] Captured overview prep for ${name}`);
+      console.log("[SPN] Overview partial:", partial);
+      console.log("[SPN] Overview clinical note:", overviewClinicalNote);
+      console.log("[SPN] Intake from background tab:", intakeFromTab);
+      console.log("[SPN] Assessments:", assessments);
+      console.groupEnd();
+    } catch (err) {
+      if (isExtensionContextInvalidatedError(err)) {
+        showToast("Extension reloaded \u2014 please refresh this page.", "error");
+      } else {
+        console.error("[SPN] Overview capture error:", err);
+        showToast("Failed to capture overview prep.", "error");
+      }
+    }
+  }
+  async function fetchIntakeFormViaTab(intakeNoteUrls) {
+    let best = null;
+    let bestQACount = 0;
+    for (const url of intakeNoteUrls) {
+      try {
+        const absUrl = toAbsoluteUrl(url);
+        if (!absUrl) continue;
+        console.log(`[SPN] Trying to extract intake form from background tab: ${absUrl}`);
+        const response = await chrome.runtime.sendMessage({
+          type: "SPN_FETCH_INTAKE_VIA_TAB",
+          url: absUrl
+        });
+        if (response?.intake) {
+          const qaCount = response.intake.rawQA?.length ?? 0;
+          console.log(`[SPN] Got intake form data from ${absUrl}: ${qaCount} Q&A pairs`);
+          if (qaCount > bestQACount) {
+            best = response.intake;
+            bestQACount = qaCount;
+          }
+        }
+      } catch (err) {
+        console.warn(`[SPN] Background-tab intake extraction failed for ${url}:`, err);
+      }
+    }
+    if (best) {
+      console.log(`[SPN] Selected intake form with ${bestQACount} Q&A pairs`);
+    }
+    return best;
+  }
   function hasIntakeForm() {
     return !!document.querySelector(".markdown.intake-answers");
   }
+  function hasOverviewReadMoreContent() {
+    return isClientOverviewPage() && !!document.querySelector("[data-readmore-toggle], [data-test-shared-read-more], [data-readmore].markdown");
+  }
+  var CAPTURE_BUTTON_IDS = [
+    "spn-capture-btn",
+    "spn-treatment-plan-btn",
+    "spn-assessment-btn",
+    "spn-overview-btn"
+  ];
+  function removeCaptureButtons(exceptId = "") {
+    for (const id of CAPTURE_BUTTON_IDS) {
+      if (id === exceptId) continue;
+      document.getElementById(id)?.remove();
+    }
+  }
   function injectCaptureButton() {
-    if (!isClientPage()) return;
+    if (!isClientPage()) {
+      removeCaptureButtons();
+      return;
+    }
     if (hasAssessmentTable()) {
+      removeCaptureButtons("spn-assessment-btn");
       if (document.getElementById("spn-assessment-btn")) return;
       const type = detectAssessmentType();
       injectButton(`Capture ${type}`, handleAssessmentCapture, {
@@ -1078,6 +1312,7 @@
       return;
     }
     if (isTreatmentPlanPage()) {
+      removeCaptureButtons("spn-treatment-plan-btn");
       if (document.getElementById("spn-treatment-plan-btn")) return;
       injectButton("Capture Treatment Plan", handleCaptureTreatmentPlan, {
         id: "spn-treatment-plan-btn",
@@ -1085,8 +1320,21 @@
       });
       return;
     }
+    if (hasOverviewReadMoreContent()) {
+      removeCaptureButtons("spn-overview-btn");
+      if (document.getElementById("spn-overview-btn")) return;
+      injectButton("Capture Overview Prep", handleOverviewCaptureClick, {
+        id: "spn-overview-btn",
+        position: "bottom-right"
+      });
+      return;
+    }
+    removeCaptureButtons("spn-capture-btn");
     if (document.getElementById("spn-capture-btn")) return;
-    if (!hasIntakeForm()) return;
+    if (!hasIntakeForm()) {
+      removeCaptureButtons();
+      return;
+    }
     injectButton("Capture Intake", handleCaptureClick, {
       id: "spn-capture-btn",
       position: "bottom-right"
@@ -1101,7 +1349,7 @@
       retryCount = 0;
       setTimeout(injectCaptureButton, 500);
     }
-    const hasAnyCaptureButton = !!document.getElementById("spn-capture-btn") || !!document.getElementById("spn-treatment-plan-btn") || !!document.getElementById("spn-assessment-btn");
+    const hasAnyCaptureButton = !!document.getElementById("spn-capture-btn") || !!document.getElementById("spn-treatment-plan-btn") || !!document.getElementById("spn-assessment-btn") || !!document.getElementById("spn-overview-btn");
     if (isClientPage() && !hasAnyCaptureButton && retryCount < MAX_RETRIES) {
       retryCount++;
       setTimeout(injectCaptureButton, 1e3);
@@ -1119,6 +1367,26 @@
   chrome.runtime.onMessage.addListener((msg, _sender, sendResponse) => {
     if (msg?.type === "SPN_COLLECT_INTAKE_NOTE_URLS") {
       sendResponse({ urls: collectRenderedIntakeNoteUrls(msg.clientId || getClientIdFromUrl()) });
+      return true;
+    }
+    if (msg?.type === "SPN_EXTRACT_ASSESSMENT") {
+      const type = detectAssessmentType();
+      if (!type) {
+        sendResponse({ type: null, assessment: null });
+        return true;
+      }
+      const assessment = extractAssessmentFromRoot(type);
+      sendResponse({ type, assessment: assessment.items.length > 0 ? assessment : null });
+      return true;
+    }
+    if (msg?.type === "SPN_EXTRACT_INTAKE") {
+      if (!hasIntakeForm()) {
+        sendResponse({ intake: null });
+        return true;
+      }
+      const intake = extractIntakeData();
+      const fieldCount = countCapturedFields(intake);
+      sendResponse({ intake: fieldCount > 0 ? intake : null });
       return true;
     }
   });

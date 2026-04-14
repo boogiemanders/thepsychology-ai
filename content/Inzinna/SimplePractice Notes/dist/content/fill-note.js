@@ -50,10 +50,13 @@
     gad7: null,
     phq9: null,
     cssrs: null,
+    dass21: null,
     recentSymptoms: "",
     additionalSymptoms: "",
     additionalInfo: "",
     manualNotes: "",
+    overviewClinicalNote: "",
+    spSoapNote: "",
     formTitle: "",
     formDate: "",
     signedBy: "",
@@ -156,8 +159,11 @@
     defaultLocation: "Video Office",
     firstVisitCPT: "90791",
     followUpCPT: "90837",
-    ollamaModel: "llama3.1:8b",
+    llmProvider: "ollama",
+    ollamaModel: "llama3.2:3b",
     ollamaEndpoint: "http://localhost:11434",
+    openaiApiKey: "",
+    openaiModel: "gpt-4o-mini",
     autoGenerateOnSessionEnd: true
   };
 
@@ -405,7 +411,8 @@
       rawQA: Array.isArray(intake?.rawQA) ? intake.rawQA : [],
       gad7: intake?.gad7 ?? null,
       phq9: intake?.phq9 ?? null,
-      cssrs: intake?.cssrs ?? null
+      cssrs: intake?.cssrs ?? null,
+      dass21: intake?.dass21 ?? null
     };
   }
   function normalizeDiagnosticImpression(impression) {
@@ -519,17 +526,26 @@
       providerLastName: prefs?.providerLastName?.trim() || DEFAULT_PREFERENCES.providerLastName,
       defaultLocation: prefs?.defaultLocation?.trim() || DEFAULT_PREFERENCES.defaultLocation,
       firstVisitCPT: prefs?.firstVisitCPT?.trim() || DEFAULT_PREFERENCES.firstVisitCPT,
-      followUpCPT: prefs?.followUpCPT?.trim() || DEFAULT_PREFERENCES.followUpCPT
+      followUpCPT: prefs?.followUpCPT?.trim() || DEFAULT_PREFERENCES.followUpCPT,
+      llmProvider: prefs?.llmProvider || DEFAULT_PREFERENCES.llmProvider,
+      openaiApiKey: prefs?.openaiApiKey?.trim() || "",
+      openaiModel: prefs?.openaiModel?.trim() || DEFAULT_PREFERENCES.openaiModel
     };
   }
   async function getPreferences() {
     const result = await chrome.storage.local.get(PREFS_KEY);
     return normalizePreferences(result[PREFS_KEY]);
   }
+  async function saveSoapDraft(draft) {
+    await chrome.storage.session.set({ [SOAP_DRAFT_KEY]: normalizeSoapDraft(draft) });
+  }
   async function getSoapDraft() {
     const result = await chrome.storage.session.get(SOAP_DRAFT_KEY);
     const draft = result[SOAP_DRAFT_KEY];
     return draft ? normalizeSoapDraft(draft) : null;
+  }
+  async function clearSoapDraft() {
+    await chrome.storage.session.remove(SOAP_DRAFT_KEY);
   }
   async function saveTranscript(transcript) {
     await chrome.storage.session.set({ [TRANSCRIPT_KEY]: normalizeTranscript(transcript) });
@@ -551,6 +567,9 @@
     await saveTranscript(next);
     return next;
   }
+  async function clearTranscript() {
+    await chrome.storage.session.remove(TRANSCRIPT_KEY);
+  }
   async function getSessionNotes(apptId) {
     const result = await chrome.storage.session.get(SESSION_NOTES_KEY);
     const notes = result[SESSION_NOTES_KEY];
@@ -570,17 +589,51 @@
     const checklist = result[MSE_CHECKLIST_KEY];
     return checklist ? { ...DEFAULT_MSE_CHECKLIST, ...checklist } : null;
   }
+  async function clearMseChecklist() {
+    await chrome.storage.session.remove(MSE_CHECKLIST_KEY);
+  }
 
   // src/lib/ollama-client.ts
   var DEFAULT_ENDPOINT = "http://localhost:11434";
-  var GENERATE_TIMEOUT_MS = 12e4;
-  async function checkOllamaHealth(endpoint = DEFAULT_ENDPOINT) {
+  var GENERATE_TIMEOUT_MS = 3e5;
+  function buildOllamaErrorMessage(status, endpoint, details = "") {
+    if (status === 403) {
+      return [
+        `Ollama blocked this Chrome extension at ${endpoint}.`,
+        "Allow browser-extension origins by setting",
+        "OLLAMA_ORIGINS=chrome-extension://*,moz-extension://*,safari-web-extension://*",
+        "and restart Ollama."
+      ].join(" ");
+    }
+    if (status === null) {
+      return `Could not reach Ollama at ${endpoint}. Make sure Ollama is running and listening on that URL.`;
+    }
+    const suffix = details ? ` ${details}` : "";
+    return `Ollama returned ${status} at ${endpoint}.${suffix}`.trim();
+  }
+  async function diagnoseOllamaEndpoint(endpoint = DEFAULT_ENDPOINT) {
     try {
       const res = await fetch(`${endpoint}/api/tags`, { signal: AbortSignal.timeout(5e3) });
-      return res.ok;
+      if (res.ok) {
+        return { ok: true, status: res.status };
+      }
+      const text = await res.text().catch(() => "");
+      return {
+        ok: false,
+        status: res.status,
+        error: buildOllamaErrorMessage(res.status, endpoint, text.slice(0, 200))
+      };
     } catch {
-      return false;
+      return {
+        ok: false,
+        status: null,
+        error: buildOllamaErrorMessage(null, endpoint)
+      };
     }
+  }
+  async function checkOllamaHealth(endpoint = DEFAULT_ENDPOINT) {
+    const diagnostic = await diagnoseOllamaEndpoint(endpoint);
+    return diagnostic.ok;
   }
   async function generateCompletion(prompt, system, model, endpoint = DEFAULT_ENDPOINT) {
     const controller = new AbortController();
@@ -593,83 +646,315 @@
           model,
           prompt,
           system,
-          stream: false,
+          stream: true,
           options: {
-            temperature: 0.3,
-            num_predict: 4096
+            temperature: 0.2,
+            num_predict: 4096,
+            num_ctx: 16384
           }
         }),
         signal: controller.signal
       });
       if (!res.ok) {
         const text = await res.text().catch(() => "");
-        throw new Error(`Ollama returned ${res.status}: ${text.slice(0, 200)}`);
+        throw new Error(buildOllamaErrorMessage(res.status, endpoint, text.slice(0, 200)));
       }
-      const data = await res.json();
-      return data.response;
+      const reader = res.body?.getReader();
+      if (!reader) throw new Error("No response body from Ollama");
+      const decoder = new TextDecoder();
+      let fullResponse = "";
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        const text = decoder.decode(value, { stream: true });
+        for (const line of text.split("\n")) {
+          if (!line.trim()) continue;
+          try {
+            const chunk = JSON.parse(line);
+            fullResponse += chunk.response;
+            if (chunk.done) return fullResponse;
+          } catch {
+          }
+        }
+      }
+      return fullResponse;
     } finally {
       clearTimeout(timeoutId);
     }
   }
 
+  // src/lib/openai-client.ts
+  var OPENAI_API_URL = "https://api.openai.com/v1/chat/completions";
+  var GENERATE_TIMEOUT_MS2 = 12e4;
+  async function checkOpenAIHealth(apiKey) {
+    if (!apiKey) return false;
+    try {
+      const res = await fetch("https://api.openai.com/v1/models", {
+        headers: { Authorization: `Bearer ${apiKey}` },
+        signal: AbortSignal.timeout(5e3)
+      });
+      return res.ok;
+    } catch {
+      return false;
+    }
+  }
+  async function generateOpenAICompletion(prompt, system, model, apiKey) {
+    const messages = [
+      { role: "system", content: system },
+      { role: "user", content: prompt }
+    ];
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), GENERATE_TIMEOUT_MS2);
+    try {
+      const res = await fetch(OPENAI_API_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${apiKey}`
+        },
+        body: JSON.stringify({
+          model,
+          messages,
+          temperature: 0.2,
+          max_tokens: 4096,
+          stream: true
+        }),
+        signal: controller.signal
+      });
+      if (!res.ok) {
+        const text = await res.text().catch(() => "");
+        throw new Error(`OpenAI returned ${res.status}: ${text.slice(0, 200)}`);
+      }
+      const reader = res.body?.getReader();
+      if (!reader) throw new Error("No response body from OpenAI");
+      const decoder = new TextDecoder();
+      let fullResponse = "";
+      let buffer = "";
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        buffer += decoder.decode(value, { stream: true });
+        const lines = buffer.split("\n");
+        buffer = lines.pop() ?? "";
+        for (const line of lines) {
+          if (!line.startsWith("data: ")) continue;
+          const data = line.slice(6).trim();
+          if (data === "[DONE]") return fullResponse;
+          try {
+            const chunk = JSON.parse(data);
+            const content = chunk.choices?.[0]?.delta?.content;
+            if (content) fullResponse += content;
+          } catch {
+          }
+        }
+      }
+      return fullResponse;
+    } finally {
+      clearTimeout(timeoutId);
+    }
+  }
+
+  // src/lib/deidentify.ts
+  function buildPhiPatterns(intake) {
+    const patterns = [];
+    let dateCounter = 0;
+    function addIfPresent(value, token) {
+      const trimmed = value?.trim();
+      if (!trimmed || trimmed.length < 2) return;
+      if (/^(no|none|n\/a|na|denied|denies|negative|yes|y)$/i.test(trimmed)) return;
+      patterns.push({ pattern: trimmed, token });
+    }
+    const fullName = [intake.firstName, intake.lastName].filter(Boolean).join(" ").trim();
+    if (fullName) addIfPresent(fullName, "[CLIENT_1]");
+    if (intake.fullName && intake.fullName !== fullName) addIfPresent(intake.fullName, "[CLIENT_1]");
+    if (intake.firstName && intake.firstName.length >= 2) addIfPresent(intake.firstName, "[CLIENT_FIRST]");
+    if (intake.lastName && intake.lastName.length >= 2) addIfPresent(intake.lastName, "[CLIENT_LAST]");
+    if (intake.dob) {
+      addIfPresent(intake.dob, "[DOB_1]");
+      const dobDate = new Date(intake.dob);
+      if (!Number.isNaN(dobDate.getTime())) {
+        const isoDate = dobDate.toISOString().split("T")[0];
+        addIfPresent(isoDate, "[DOB_1]");
+        const mmddyyyy = `${String(dobDate.getMonth() + 1).padStart(2, "0")}/${String(dobDate.getDate()).padStart(2, "0")}/${dobDate.getFullYear()}`;
+        addIfPresent(mmddyyyy, "[DOB_1]");
+      }
+    }
+    if (intake.address.raw) addIfPresent(intake.address.raw, "[LOCATION_1]");
+    if (intake.address.street) addIfPresent(intake.address.street, "[LOCATION_STREET]");
+    if (intake.address.city && intake.address.city.length >= 3) addIfPresent(intake.address.city, "[LOCATION_CITY]");
+    if (intake.address.zip) addIfPresent(intake.address.zip, "[LOCATION_ZIP]");
+    if (intake.phone) addIfPresent(intake.phone, "[PHONE_STRIPPED]");
+    if (intake.email) addIfPresent(intake.email, "[EMAIL_STRIPPED]");
+    if (intake.emergencyContact) addIfPresent(intake.emergencyContact, "[EMERGENCY_CONTACT_STRIPPED]");
+    if (intake.insuranceCompany) addIfPresent(intake.insuranceCompany, "[INSURANCE_STRIPPED]");
+    if (intake.memberId) addIfPresent(intake.memberId, "[MRN_STRIPPED]");
+    if (intake.groupNumber) addIfPresent(intake.groupNumber, "[GROUP_STRIPPED]");
+    if (intake.occupation && intake.occupation.length > 20) {
+      addIfPresent(intake.occupation, "[EMPLOYER_1]");
+    }
+    if (intake.signedBy) addIfPresent(intake.signedBy, "[PROVIDER_1]");
+    if (intake.formDate) {
+      dateCounter++;
+      addIfPresent(intake.formDate, `[DATE_${dateCounter}]`);
+    }
+    if (intake.signedAt) {
+      dateCounter++;
+      addIfPresent(intake.signedAt, `[DATE_${dateCounter}]`);
+    }
+    if (intake.clientId) addIfPresent(intake.clientId, "[CLIENT_ID_STRIPPED]");
+    if (intake.prescribingMD) addIfPresent(intake.prescribingMD, "[PROVIDER_MD]");
+    if (intake.primaryCarePhysician) addIfPresent(intake.primaryCarePhysician, "[PROVIDER_PCP]");
+    patterns.sort((a, b) => b.pattern.length - a.pattern.length);
+    return patterns;
+  }
+  var DATE_PATTERN = /\b(\d{1,2}\/\d{1,2}\/\d{2,4}|\d{4}-\d{2}-\d{2}|\w+ \d{1,2},?\s*\d{4})\b/g;
+  var PHONE_PATTERN = /\b(\+?1?[-.\s]?\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4})\b/g;
+  var EMAIL_PATTERN = /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b/g;
+  var SSN_PATTERN = /\b\d{3}[-\s]?\d{2}[-\s]?\d{4}\b/g;
+  function deidentify(text, intake) {
+    if (!text) return { sanitized: "", mapping: {} };
+    const mapping = {};
+    let sanitized = text;
+    if (intake) {
+      const patterns = buildPhiPatterns(intake);
+      for (const { pattern, token } of patterns) {
+        const escaped = pattern.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+        const regex = new RegExp(escaped, "gi");
+        if (regex.test(sanitized)) {
+          if (!token.includes("STRIPPED")) {
+            mapping[token] = pattern;
+          }
+          sanitized = sanitized.replace(regex, token);
+        }
+      }
+    }
+    let dateCounter = Object.keys(mapping).filter((k) => k.startsWith("[DATE_")).length;
+    sanitized = sanitized.replace(DATE_PATTERN, (match) => {
+      if (match.startsWith("[")) return match;
+      dateCounter++;
+      const token = `[DATE_${dateCounter}]`;
+      mapping[token] = match;
+      return token;
+    });
+    sanitized = sanitized.replace(PHONE_PATTERN, "[PHONE_STRIPPED]");
+    sanitized = sanitized.replace(EMAIL_PATTERN, "[EMAIL_STRIPPED]");
+    sanitized = sanitized.replace(SSN_PATTERN, "[SSN_STRIPPED]");
+    sanitized = sanitized.replace(/\[PHONE_STRIPPED\]/g, "").replace(/\[EMAIL_STRIPPED\]/g, "").replace(/\[SSN_STRIPPED\]/g, "").replace(/\[MRN_STRIPPED\]/g, "").replace(/\[GROUP_STRIPPED\]/g, "").replace(/\[INSURANCE_STRIPPED\]/g, "").replace(/\[EMERGENCY_CONTACT_STRIPPED\]/g, "").replace(/\[CLIENT_ID_STRIPPED\]/g, "").replace(/\s{2,}/g, " ").trim();
+    return { sanitized, mapping };
+  }
+  function reidentify(text, mapping) {
+    if (!text || !Object.keys(mapping).length) return text;
+    let result = text;
+    const tokens = Object.keys(mapping).sort((a, b) => b.length - a.length);
+    for (const token of tokens) {
+      const escaped = token.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+      result = result.replace(new RegExp(escaped, "g"), mapping[token]);
+    }
+    return result;
+  }
+  async function saveDeidentifyMapping(mapping) {
+    await chrome.storage.session.set({ spn_deid_mapping: mapping });
+  }
+
   // src/lib/soap-prompt.ts
-  var MAX_TRANSCRIPT_WORDS = 2e4;
+  var MAX_TRANSCRIPT_WORDS = 4e3;
+  var MAX_TOTAL_PROMPT_CHARS = 36e3;
   var SYSTEM_PROMPT = `You are a clinical documentation assistant for a licensed psychologist. Your task is to generate a SOAP progress note from a session transcript and clinical context.
 
 OUTPUT FORMAT: Return a valid JSON object with exactly four string keys:
 {"subjective":"...","objective":"...","assessment":"...","plan":"..."}
 
 Do NOT wrap the JSON in markdown code fences. Return ONLY the raw JSON object.
+Do NOT include leading labels like "Subjective:" or "Plan:" inside the string values. The app already labels each section.
+
+STYLE TARGET:
+- Write like an insurance-ready SimplePractice follow-up note: dense, concrete, clinically grounded, and easy to skim.
+- Use paragraph prose, not bullets.
+- Group content by theme, not by transcript order.
+- Prefer "Client reported," "Client described," "Client expressed," "Clinician provided," and "Client responded" style sentences.
+- Pack in useful details, but keep every sentence anchored to material actually present in the transcript, session notes, intake, MSE checklist, diagnoses, or treatment plan.
+- Keep the tone clinical and practical, not literary, not robotic, and not overly polished.
+
+HOW TO EXTRACT FROM A TRANSCRIPT:
+1. Read the entire transcript and identify the KEY THEMES discussed (e.g., anxiety, parenting stress, work conflict, trauma history). Do NOT retell the conversation chronologically.
+2. For each theme, extract: (a) what the client reported, (b) specific details and numbers (scores, frequencies, dates), (c) notable quotes that capture the client's experience.
+3. Note what the clinician assessed or screened for (e.g., "clinician conducted PTSD criteria screening" or "clinician explored substance use history").
+4. Identify trajectory: did the client report improvement, worsening, or no change on any symptoms?
+5. Extract any scheduling, homework, or next-step decisions made during the session.
+6. Convert raw client language to clinical prose: "my stomach hurts when I'm worried" \u2192 "Client reports somatic manifestation of anxiety (GI distress)."
+7. When the session includes dreams, family stories, political stress, body symptoms, or other indirect material, document both the content and the connection the client or clinician made to current stressors.
+8. When the clinician taught or reviewed a skill, name it clearly and note how the client engaged with it.
 
 DOCUMENTATION STANDARDS:
 - Use third-person clinical prose (e.g., "Client reported..." not "I said...")
 - Use DSM-5 terminology for diagnoses and symptoms
-- Include direct client quotes in the Subjective section using quotation marks
+- Use plain, direct language at about an early-teen reading level when possible
+- Prefer simple words over formal or academic wording (e.g., "worry" over "apprehension," "got worse" over "exacerbated")
+- Keep the note sounding clinical, but not polished or overly literary
 - Reference specific content from the session \u2014 do not write generic filler
 - Only include information explicitly stated in the transcript or session notes
 - Do NOT fabricate quotes, symptoms, or clinical observations not present in the data
 - Write for insurance/medical necessity \u2014 be specific about functional impairment and treatment rationale
+- Organize by theme, not chronologically
+- If a detail is missing, leave it out or use a cautious neutral statement based on supplied checklist data. Do not invent.
 
 SECTION REQUIREMENTS:
 
-SUBJECTIVE: What the client reported. Include:
-- Primary concerns discussed this session
-- Symptom changes since last session (better, worse, same)
-- Relevant life events or stressors mentioned
-- Client's own words as direct quotes for key statements
-- Mood self-report if stated
-- Risk factors: SI/HI denial or endorsement (always document)
-- Substance use updates if discussed
+SUBJECTIVE: What the client reported. Organize by THEME, not chronology:
+- Primary concerns discussed this session (group related topics together)
+- Symptom changes since last session (better, worse, same) \u2014 quantify when possible
+- Relevant life events or stressors mentioned (with dates/details from transcript)
+- Mood self-report if stated (use client's words)
+- Risk factors: SI/HI denial or endorsement (ALWAYS document \u2014 write "denied SI/HI" if not discussed)
+- Substance use updates if discussed (quantify: frequency, amount)
+- Include functional details when relevant: work strain, family stress, sleep disruption, appetite changes, social avoidance, exercise changes, or deadline pressure
+- If dream content or imagery was discussed, document the dream details briefly and link them to waking stressors only if the transcript supports that link
+- Keep it concise, but not skeletal \u2014 this should read like a real therapy note, not a shorthand fragment
 
-OBJECTIVE: What the clinician observed. Include:
-- Full Mental Status Exam in this exact format:
-  Mental Status Exam:
-  Appearance: [from checklist or transcript observations]
-  Behavior: [from checklist or transcript observations]
-  Speech: [from checklist or transcript observations]
-  Mood/Affect: [mood is client's words; affect is clinician's observation]
-  Thoughts: [thought process and content, SI/HI status]
-  Cognition: [orientation, attention, memory observations]
-  Insight/Judgment: [from checklist or inferred from session]
+OBJECTIVE: What the clinician observed and assessed. Include:
+- Diagnostic assessment activities conducted this session (e.g., "Clinician assessed for PTSD criteria; client does not meet full criteria at this time")
+- Clinical data points extracted during the interview: substance use quantified, injury/medical history, self-report scales or ratings
 - Behavioral observations during session (engagement, emotional responses, coping demonstrated)
+- Interventions or psychoeducation delivered this session and the client's response to them
+- End the Objective section with an embedded Mental Status Exam block using exactly this layout:
+  Mental Status Exam:
+  Appearance: ...
+  Behavior: ...
+  Speech: ...
+  Mood/Affect: ...
+  Thoughts: ...
+  Cognition: ...
+  Insight/Judgment: ...
 - Screening scores if administered (PHQ-9, GAD-7, C-SSRS)
 
-ASSESSMENT: Clinical analysis. Include:
-- Current symptom presentation and severity
-- Progress or regression relative to treatment goals (reference specific goals if provided)
-- Diagnostic formulation \u2014 how current presentation relates to active diagnoses
-- Functional impact on daily life, work, relationships
-- Protective and risk factors observed
-- Clinical reasoning for treatment approach
+ASSESSMENT: Clinical synthesis (NOT a summary \u2014 this is your ANALYSIS):
+- Current symptom presentation and severity \u2014 note what improved vs worsened
+- Diagnostic formulation: does the presentation fit the active diagnoses? Any rule-outs explored?
+- Historical patterns identified (e.g., "long-standing performance anxiety with somatic manifestations predates current stressors")
+- Functional impact on daily life, work, relationships \u2014 be specific
+- Protective factors (support system, insight, motivation) and risk factors
+- How the client's treatment preferences/style should inform the approach
 - Statement of medical necessity for continued treatment
+- If the session revealed family-of-origin, intergenerational, or longstanding coping patterns, include that synthesis here
+- If the client prefers logic/problem-solving, structure, or a certain treatment style, note how that should shape treatment
 
-PLAN: Next steps. Include:
-- Continue/modify treatment frequency and modality
+PLAN: Actionable next steps (3-5 bullet points max):
+- Treatment frequency, modality, and scheduling changes (include specific day/time if discussed)
 - Specific focus for next session based on this session's content
 - Interventions to use or continue (name specific techniques: CBT, exposure, MI, etc.)
 - Between-session assignments or skills to practice
 - Any referrals, medication coordination, or safety planning
-- Next appointment date/time if mentioned`;
+- Next appointment date/time if mentioned
+- Each bullet should reference a specific data point from the session, not generic advice
+- If the clinician introduced a specific skill in session, carry that into the plan as practice between sessions when supported by the transcript
+
+CONCISENESS RULES (apply to ALL sections):
+- Each section should be 3-5 dense sentences or bullet points. Not 1-2, not 8-10.
+- Every sentence must be anchored to something specific from the session data.
+- Do NOT write generic filler like "Consider exploring the client's feelings about..." or "Continue to monitor..."
+- Do NOT repeat the same observation across sections.
+- Prefer concrete details (scores, dates, quotes, specific behaviors) over vague descriptors.
+- If a detail is not in the data, leave it out entirely \u2014 do not pad with boilerplate.`;
   function buildSoapPrompt(transcript, sessionNotes, intake, diagnosticImpressions, treatmentPlan, mseChecklist, prefs) {
     const sections = [];
     if (intake) {
@@ -730,10 +1015,15 @@ ${tpLines.join("\n")}`);
       formatAssessment(intake.phq9, "PHQ-9");
       formatAssessment(intake.gad7, "GAD-7");
       formatAssessment(intake.cssrs, "C-SSRS");
+      formatAssessment(intake.dass21, "DASS-21");
     }
     if (assessments.length > 0) {
       sections.push(`=== PRIOR ASSESSMENTS ===
 ${assessments.join("\n")}`);
+    }
+    if (intake?.overviewClinicalNote.trim()) {
+      sections.push(`=== RECENT CLINICAL NOTE FROM PROFILE OVERVIEW ===
+${intake.overviewClinicalNote.trim()}`);
     }
     if (mseChecklist) {
       const mseLines = [];
@@ -767,34 +1057,43 @@ ${transcriptText}`);
     const providerName = [prefs.providerFirstName, prefs.providerLastName].filter(Boolean).join(" ") || "Clinician";
     sections.push(
       `=== INSTRUCTIONS ===
-Generate a SOAP progress note for this session. The treating clinician is ${providerName}. Use the MSE checklist data for the Objective section's Mental Status Exam. Use the transcript and session notes to populate the Subjective, Assessment, and Plan sections. Reference treatment plan goals in the Assessment section when relevant. Return ONLY valid JSON with keys: subjective, objective, assessment, plan.`
+Generate a SOAP progress note for this session. The treating clinician is ${providerName}. Use the MSE checklist data for the Objective section's Mental Status Exam. Use the transcript and session notes to populate the Subjective, Assessment, and Plan sections. Aim for a dense, insurance-ready SimplePractice follow-up note rather than brief SOAP fragments. Objective should include both session interventions/observations and the exact "Mental Status Exam:" block. Assessment should explicitly state why continued treatment is medically necessary when the data supports that. Reference treatment plan goals in the Assessment section when relevant. Write in plain, simple clinical language rather than formal or academic language. Return ONLY valid JSON with keys: subjective, objective, assessment, plan.`
     );
+    let userPrompt = sections.join("\n\n");
+    if (userPrompt.length > MAX_TOTAL_PROMPT_CHARS) {
+      const transcriptIdx = sections.findIndex((s) => s.startsWith("=== SESSION TRANSCRIPT"));
+      if (transcriptIdx >= 0) {
+        sections[transcriptIdx] = "=== SESSION TRANSCRIPT ===\n[Transcript omitted \u2014 too large for context window. SOAP generated from session notes, MSE, and clinical context only.]";
+        userPrompt = sections.join("\n\n");
+      }
+    }
     return {
       system: SYSTEM_PROMPT,
-      user: sections.join("\n\n")
+      user: userPrompt
     };
   }
   function formatTranscript(transcript, prefs) {
     const providerName = [prefs.providerFirstName, prefs.providerLastName].filter(Boolean).join(" ") || "Clinician";
-    const lines = [];
-    let wordCount = 0;
-    for (const entry of transcript.entries) {
+    const allLines = transcript.entries.map((entry) => {
       const speaker = entry.speaker === "clinician" ? providerName : "Client";
-      const line = `${speaker}: ${entry.text}`;
-      const words = line.split(/\s+/).length;
-      wordCount += words;
-      if (wordCount > MAX_TRANSCRIPT_WORDS) {
-        lines.push("[... transcript truncated for length ...]");
-        const lastEntries = transcript.entries.slice(-10);
-        for (const last of lastEntries) {
-          const s = last.speaker === "clinician" ? providerName : "Client";
-          lines.push(`${s}: ${last.text}`);
-        }
-        break;
-      }
-      lines.push(line);
+      return `${speaker}: ${entry.text}`;
+    });
+    const totalWords = allLines.reduce((sum, line) => sum + line.split(/\s+/).length, 0);
+    if (totalWords <= MAX_TRANSCRIPT_WORDS) {
+      return allLines.join("\n");
     }
-    return lines.join("\n");
+    const keepStart = Math.floor(allLines.length * 0.2);
+    const keepEnd = Math.floor(allLines.length * 0.3);
+    const startLines = allLines.slice(0, keepStart);
+    const endLines = allLines.slice(-keepEnd);
+    const skipped = allLines.length - keepStart - keepEnd;
+    return [
+      ...startLines,
+      `
+[... ${skipped} transcript lines omitted for length \u2014 focus on opening context above and session content below ...]
+`,
+      ...endLines
+    ].join("\n");
   }
 
   // src/lib/soap-builder.ts
@@ -1385,7 +1684,23 @@ Generate a SOAP progress note for this session. The treating clinician is ${prov
   }
 
   // src/lib/soap-generator.ts
+  function getErrorMessage(err) {
+    if (err instanceof Error) return err.message;
+    return String(err);
+  }
   async function generateSoapDraft(sessionNotes, transcript, treatmentPlan, intake, diagnosticImpressions, mseChecklist, prefs, meta = {}) {
+    const provider = prefs.llmProvider || "ollama";
+    if (provider === "openai" && prefs.openaiApiKey) {
+      const healthy2 = await checkOpenAIHealth(prefs.openaiApiKey);
+      if (healthy2) {
+        try {
+          const draft = await generateWithOpenAI(sessionNotes, transcript, treatmentPlan, intake, diagnosticImpressions, mseChecklist, prefs, meta);
+          if (draft) return draft;
+        } catch (err) {
+          console.info("[SPN] OpenAI generation failed, falling back:", getErrorMessage(err));
+        }
+      }
+    }
     const endpoint = prefs.ollamaEndpoint || "http://localhost:11434";
     const model = prefs.ollamaModel || "llama3.1:8b";
     const healthy = await checkOllamaHealth(endpoint);
@@ -1394,13 +1709,38 @@ Generate a SOAP progress note for this session. The treating clinician is ${prov
         const draft = await generateWithLLM(sessionNotes, transcript, treatmentPlan, intake, diagnosticImpressions, mseChecklist, prefs, meta, model, endpoint);
         if (draft) return draft;
       } catch (err) {
-        console.warn("[SPN] LLM generation failed, falling back to regex:", err);
+        const message = getErrorMessage(err);
+        if (!message.includes("Ollama blocked this Chrome extension")) {
+          console.info("[SPN] Ollama generation fell back to regex:", message);
+        }
       }
-    } else {
-      console.log("[SPN] Ollama not available, using regex-based SOAP builder");
     }
     const regexDraft = buildSoapDraft(sessionNotes, transcript, treatmentPlan, intake, diagnosticImpressions, prefs, meta);
     return { ...regexDraft, generationMethod: "regex" };
+  }
+  async function generateWithOpenAI(sessionNotes, transcript, treatmentPlan, intake, diagnosticImpressions, mseChecklist, prefs, meta) {
+    const model = prefs.openaiModel || "gpt-4o-mini";
+    const { system, user } = buildSoapPrompt(transcript, sessionNotes, intake, diagnosticImpressions, treatmentPlan, mseChecklist, prefs);
+    const { sanitized: sanitizedUser, mapping: userMapping } = deidentify(user, intake);
+    const { sanitized: sanitizedSystem, mapping: systemMapping } = deidentify(system, intake);
+    const fullMapping = { ...systemMapping, ...userMapping };
+    await saveDeidentifyMapping(fullMapping);
+    console.log("[SPN] Generating SOAP with OpenAI (de-identified)...", {
+      model,
+      originalLength: user.length,
+      sanitizedLength: sanitizedUser.length,
+      tokensReplaced: Object.keys(fullMapping).length
+    });
+    const raw = await generateOpenAICompletion(sanitizedUser, sanitizedSystem, model, prefs.openaiApiKey);
+    const reidentified = reidentify(raw, fullMapping);
+    const parsed = parseJsonResponse(reidentified);
+    if (!parsed) {
+      console.warn("[SPN] Failed to parse OpenAI response as JSON, attempting section extraction");
+      const extracted = extractSections(reidentified);
+      if (!extracted) return null;
+      return buildDraftFromSections(extracted, sessionNotes, transcript, prefs, meta, "openai");
+    }
+    return buildDraftFromSections(parsed, sessionNotes, transcript, prefs, meta, "openai");
   }
   async function generateWithLLM(sessionNotes, transcript, treatmentPlan, intake, diagnosticImpressions, mseChecklist, prefs, meta, model, endpoint) {
     const { system, user } = buildSoapPrompt(transcript, sessionNotes, intake, diagnosticImpressions, treatmentPlan, mseChecklist, prefs);
@@ -1450,7 +1790,7 @@ Generate a SOAP progress note for this session. The treating clinician is ${prov
     }
     return null;
   }
-  function buildDraftFromSections(sections, sessionNotes, transcript, prefs, meta) {
+  function buildDraftFromSections(sections, sessionNotes, transcript, prefs, meta, method = "llm") {
     const clientName = meta.clientName || "Client";
     const sessionDate = meta.sessionDate || (/* @__PURE__ */ new Date()).toLocaleDateString("en-US");
     const transcriptText = transcript?.entries.map((e) => `${e.speaker === "clinician" ? "Clinician" : "Client"}: ${e.text}`).join("\n") ?? "";
@@ -1471,7 +1811,7 @@ Generate a SOAP progress note for this session. The treating clinician is ${prov
       generatedAt: now,
       editedAt: now,
       status: "draft",
-      generationMethod: "llm"
+      generationMethod: method
     };
   }
 
@@ -1677,6 +2017,7 @@ Generate a SOAP progress note for this session. The treating clinician is ${prov
     const hasEmotionDysregulation = hasSelfHarmRisk || /emotion regulation|mood swings|labile|anger|impulsive/.test(narrativeText);
     const hasInterpersonalStrain = hasAny(narrativeText, [/relationship/, /conflict/, /attachment/, /interpersonal/]);
     const hasSleepIssue = /sleep|insomnia|hypersomnia/.test(normalizeText(`${intake.troubleSleeping} ${intake.additionalSymptoms}`));
+    const hasSexualHealthConcern = /sexual dysfunction|erectile|sex therap|libido|orgasm|premature ejaculation|vaginismus|dyspareunia/.test(narrativeText) || /sexual dysfunction|erectile|sex therap/.test(diagnosisText);
     const severeSymptoms = (intake.phq9?.totalScore ?? 0) >= 15 || (intake.gad7?.totalScore ?? 0) >= 15;
     const needsMedicalCoordination = Boolean(
       intake.primaryCarePhysician.trim() || intake.prescribingMD.trim() || intake.medications.trim()
@@ -1730,6 +2071,7 @@ Generate a SOAP progress note for this session. The treating clinician is ${prov
       hasEmotionDysregulation,
       hasInterpersonalStrain,
       hasSleepIssue,
+      hasSexualHealthConcern,
       hasAdolescentPresentation: age !== null && age <= 19,
       needsMedicalCoordination,
       // Demographics for biopsychosocial narrative
@@ -1832,6 +2174,9 @@ Generate a SOAP progress note for this session. The treating clinician is ${prov
     }
     if (profile.hasPersonality || profile.hasTrauma || profile.hasInterpersonalStrain) {
       modalities.push("Psychodynamic formulation");
+    }
+    if (profile.hasSexualHealthConcern) {
+      modalities.push("Sex therapy (sensate focus, psychoeducation)");
     }
     return unique3(modalities).slice(0, 4);
   }
@@ -2118,6 +2463,21 @@ Generate a SOAP progress note for this session. The treating clinician is ${prov
       }
       domains.push({ title: "Psychodynamic / Insight Work", items });
     }
+    if (profile.hasSexualHealthConcern) {
+      const items = [];
+      items.push("Comprehensive sexual health assessment (medical, psychological, relational factors)");
+      items.push("Psychoeducation on sexual response cycle and contributing factors");
+      items.push("Sensate focus exercises to reduce performance anxiety");
+      items.push("Cognitive restructuring of maladaptive beliefs about sexual performance");
+      if (profile.hasAnxiety) {
+        items.push("Address performance anxiety and anticipatory avoidance");
+      }
+      if (profile.hasInterpersonalStrain) {
+        items.push("Couples communication skills around intimacy");
+      }
+      items.push("Coordinate with medical provider to rule out physiological contributors");
+      domains.push({ title: "Sexual Health", items });
+    }
     if (profile.needsMedicalCoordination || profile.severeSymptoms) {
       const items = [];
       items.push("Consider consulting with a psychiatrist if symptoms persist or worsen");
@@ -2365,6 +2725,9 @@ Generate a SOAP progress note for this session. The treating clinician is ${prov
     if (intake.cssrs) {
       parts.push(`C-SSRS ${intake.cssrs.totalScore} yes (${intake.cssrs.severity || "summary not parsed"})`);
     }
+    if (intake.dass21) {
+      parts.push(`DASS-21 ${intake.dass21.totalScore} (${intake.dass21.severity || "summary not parsed"})`);
+    }
     return parts;
   }
   function summarizeRisk(intake) {
@@ -2379,6 +2742,7 @@ Generate a SOAP progress note for this session. The treating clinician is ${prov
     const sections = [
       firstNonEmpty3(intake.chiefComplaint, intake.presentingProblems),
       intake.historyOfPresentIllness.trim(),
+      intake.overviewClinicalNote.trim(),
       intake.manualNotes.trim(),
       intake.additionalSymptoms.trim(),
       intake.recentSymptoms.trim()
@@ -2395,6 +2759,7 @@ Generate a SOAP progress note for this session. The treating clinician is ${prov
       intake.chiefComplaint,
       intake.presentingProblems,
       intake.historyOfPresentIllness,
+      intake.overviewClinicalNote,
       intake.manualNotes
     );
     if (chiefComplaint) {
@@ -2475,6 +2840,7 @@ Generate a SOAP progress note for this session. The treating clinician is ${prov
         intake.chiefComplaint,
         intake.presentingProblems,
         intake.historyOfPresentIllness,
+        intake.overviewClinicalNote,
         intake.manualNotes
       ),
       presentingComplaint: buildPresentingComplaint(intake),
@@ -2757,7 +3123,10 @@ Generate a SOAP progress note for this session. The treating clinician is ${prov
   }
   function detectSoapForm() {
     const labels = ["free-text-1", "free-text-2", "free-text-3", "free-text-4"];
-    return !!document.querySelector(".progress-individual-note-container") && labels.every((label) => !!document.querySelector(`[contenteditable="true"][aria-label="${label}"]`));
+    const hasSoapFields = !!document.querySelector(".progress-individual-note-container") && labels.every((label) => !!document.querySelector(`[contenteditable="true"][aria-label="${label}"]`));
+    if (!hasSoapFields) return false;
+    const totalFreeText = document.querySelectorAll('[contenteditable="true"][aria-label^="free-text-"]').length;
+    return totalFreeText <= 5;
   }
   function fillSoapNote(draft) {
     let filled = 0;
@@ -2796,11 +3165,28 @@ Generate a SOAP progress note for this session. The treating clinician is ${prov
       });
     }, 500);
   }
+  var videoRoomInitApptId = "";
   function injectVideoNotePanel() {
     if (!isVideoRoom()) return;
     if (document.getElementById("spn-video-notes")) return;
     const apptId = getVideoApptId();
     if (!apptId) return;
+    if (apptId !== videoRoomInitApptId) {
+      videoRoomInitApptId = apptId;
+      clearSoapDraft().catch(() => {
+      });
+      clearMseChecklist().catch(() => {
+      });
+      clearTranscript().catch(() => {
+      });
+      captionCount = 0;
+      stopIncrementalGeneration();
+      if (captionObserver) {
+        captionObserver.disconnect();
+        captionObserver = null;
+      }
+      console.log("[SPN] Cleared stale session data for new appointment", apptId);
+    }
     const panel = document.createElement("div");
     panel.id = "spn-video-notes";
     panel.innerHTML = `
@@ -3076,6 +3462,7 @@ Generate a SOAP progress note for this session. The treating clinician is ${prov
     const isStillVideoRoom = /\/appt-[a-f0-9]+\/room/.test(newUrl);
     if (wasVideoRoom && !isStillVideoRoom) {
       sessionEndTriggered = true;
+      stopIncrementalGeneration();
       if (sessionEndTimer) {
         clearInterval(sessionEndTimer);
         sessionEndTimer = null;
@@ -3238,6 +3625,63 @@ Generate a SOAP progress note for this session. The treating clinician is ${prov
     });
     waitForCaptions.observe(document.body, { childList: true, subtree: true });
   }
+  var incrementalGenTimer = null;
+  var lastIncrementalCaptionCount = 0;
+  var incrementalGenerating = false;
+  function startIncrementalGeneration() {
+    if (!isVideoRoom()) return;
+    if (incrementalGenTimer) return;
+    const apptId = getVideoApptId();
+    if (!apptId) return;
+    incrementalGenTimer = setInterval(async () => {
+      if (incrementalGenerating) return;
+      if (captionCount <= lastIncrementalCaptionCount) return;
+      if (captionCount - lastIncrementalCaptionCount < 10) return;
+      incrementalGenerating = true;
+      lastIncrementalCaptionCount = captionCount;
+      try {
+        const prefs = await getPreferences();
+        const [sessionNotesData, transcript, intake, workspace, mseChecklist] = await Promise.all([
+          getSessionNotes(apptId),
+          getTranscript(apptId),
+          getIntake(),
+          getDiagnosticWorkspace(),
+          getMseChecklist()
+        ]);
+        if (!transcript?.entries.length) return;
+        const sessionNotes = sessionNotesData?.notes ?? "";
+        const diagnosticImpressions = workspace?.finalizedImpressions ?? [];
+        const treatmentPlan = await chrome.storage.session.get("spn_treatment_plan").then((r) => r["spn_treatment_plan"] ?? null);
+        const clientName = intake ? [intake.firstName, intake.lastName].filter(Boolean).join(" ") || intake.fullName : "";
+        console.log("[SPN] Incremental SOAP generation...", { captionCount, transcriptEntries: transcript.entries.length });
+        const draft = await generateSoapDraft(
+          sessionNotes,
+          transcript,
+          treatmentPlan,
+          intake,
+          diagnosticImpressions,
+          mseChecklist,
+          prefs,
+          { apptId, clientName, sessionDate: (/* @__PURE__ */ new Date()).toLocaleDateString("en-US") }
+        );
+        await saveSoapDraft(draft);
+        console.log("[SPN] Incremental SOAP draft updated:", draft.generationMethod);
+      } catch (err) {
+        console.warn("[SPN] Incremental SOAP generation failed:", err);
+      } finally {
+        incrementalGenerating = false;
+      }
+    }, 9e4);
+    console.log("[SPN] Incremental SOAP generation started for", apptId);
+  }
+  function stopIncrementalGeneration() {
+    if (incrementalGenTimer) {
+      clearInterval(incrementalGenTimer);
+      incrementalGenTimer = null;
+    }
+    lastIncrementalCaptionCount = 0;
+    incrementalGenerating = false;
+  }
   function capitalize(value) {
     if (!value) return value;
     return value.charAt(0).toUpperCase() + value.slice(1);
@@ -3342,7 +3786,7 @@ Generate a SOAP progress note for this session. The treating clinician is ${prov
     const trimmed = livingArrangement.trim();
     if (!trimmed) return "";
     if (/alone|live alone/i.test(trimmed)) return "alone";
-    let cleaned = trimmed.replace(/^i\s+live\s+/i, "").replace(/^live\s+/i, "").trim();
+    let cleaned = trimmed.replace(/^i\s+live\s+/i, "").replace(/^i\s+love\s+/i, "").replace(/^live\s+/i, "").replace(/^love\s+/i, "").trim();
     if (!cleaned) return "";
     cleaned = cleaned.replace(/\bmy mom\b/gi, `${pronouns.possessive} mother`).replace(/\bmy dad\b/gi, `${pronouns.possessive} father`).replace(/\bmy parents\b/gi, `${pronouns.possessive} parents`).replace(/\bmy grandma\b/gi, `${pronouns.possessive} grandmother`).replace(/\bmy grandpa\b/gi, `${pronouns.possessive} grandfather`).replace(/\bmy sister\b/gi, `${pronouns.possessive} sister`).replace(/\bmy brother\b/gi, `${pronouns.possessive} brother`).replace(/\bmy family\b/gi, `${pronouns.possessive} family`).replace(/\bmy\b/gi, pronouns.possessive);
     const lower = cleaned.toLowerCase();
@@ -3421,6 +3865,9 @@ Generate a SOAP progress note for this session. The treating clinician is ${prov
       if (/^i\s+feel\b/i.test(part)) {
         const normalized = smoothClinicalPhrase(part.replace(/^i\s+feel\b/i, "").trim(), pronouns);
         return `${pronoun} reported feeling ${normalized}.`;
+      }
+      if (/\btherap(y|ist)\b|\bcounseling\b|\btreatment\b/i.test(part)) {
+        return `${pronoun} presented for ${smoothClinicalPhrase(part, pronouns)}.`;
       }
       return `${pronoun} reported ${smoothClinicalPhrase(part, pronouns)}.`;
     });
@@ -3573,8 +4020,17 @@ Generate a SOAP progress note for this session. The treating clinician is ${prov
     } else {
       introBits.push(name);
     }
-    if (livingArrangement) introBits.push(`who lives ${livingArrangement}`);
-    if (occupation) introBits.push(`and works as ${occupation.replace(/\s+for\s+(\d+\s+years?)$/i, "")}`);
+    const whoClause = [];
+    if (education) whoClause.push(education);
+    if (livingArrangement) whoClause.push(`lives ${livingArrangement}`);
+    if (occupation) whoClause.push(`works as ${occupation.replace(/\s+for\s+(\d+\s+years?)$/i, "")}`);
+    if (whoClause.length === 1) {
+      introBits.push(`who ${whoClause[0]}`);
+    } else if (whoClause.length === 2) {
+      introBits.push(`who ${whoClause[0]} and ${whoClause[1]}`);
+    } else if (whoClause.length >= 3) {
+      introBits.push(`who ${whoClause.slice(0, -1).join(", ")}, and ${whoClause[whoClause.length - 1]}`);
+    }
     let intro = introBits.join(" ");
     intro += ".";
     const sentences = [intro];
@@ -3587,9 +4043,6 @@ Generate a SOAP progress note for this session. The treating clinician is ${prov
       if (goal) {
         sentences.push(`${subject} stated that ${pronouns.subject} wants to ${lowerCaseFirst(goal).replace(/[.]+$/, "")}.`);
       }
-    }
-    if (education) {
-      sentences.push(`${subject} ${education}.`);
     }
     return sentences.join(" ");
   }
@@ -4576,6 +5029,58 @@ Generate a SOAP progress note for this session. The treating clinician is ${prov
     if (followUpText && fillProseMirrorByLabel("free-text-111", followUpText)) filled++;
     return filled;
   }
+  function enrichIntakeFromSoapCopyArea(intake) {
+    const aiContent = document.querySelector(".ai-note-content");
+    if (!aiContent) return;
+    const sections = /* @__PURE__ */ new Map();
+    const headers = aiContent.querySelectorAll("h3.section-title");
+    for (const h3 of headers) {
+      const title = h3.textContent?.trim().toLowerCase() ?? "";
+      const copyArea = h3.nextElementSibling;
+      if (copyArea?.classList.contains("copy-area")) {
+        sections.set(title, copyArea.textContent?.replace(/\s*Copy\s*$/, "").trim() ?? "");
+      }
+    }
+    if (sections.size === 0) return;
+    console.log("[SPN] Found SimplePractice AI note sections:", [...sections.keys()]);
+    const bpsText = sections.get("biopsychosocial assessment") ?? "";
+    const subjective = sections.get("subjective") ?? "";
+    const objective = sections.get("objective") ?? "";
+    const assessment = sections.get("assessment") ?? "";
+    const plan = sections.get("plan") ?? "";
+    intake.spSoapNote = [...sections.entries()].map(([k, v]) => `${k}:
+${v}`).join("\n\n");
+    const bioMatch = bpsText.match(/Biological:\s*([\s\S]*?)(?=Psychological:|Social:|$)/i);
+    const psychMatch = bpsText.match(/Psychological:\s*([\s\S]*?)(?=Biological:|Social:|$)/i);
+    const socialMatch = bpsText.match(/Social:\s*([\s\S]*?)(?=Biological:|Psychological:|$)/i);
+    const bio = bioMatch?.[1]?.trim() ?? "";
+    const psych = psychMatch?.[1]?.trim() ?? "";
+    const social = socialMatch?.[1]?.trim() ?? "";
+    const hpiCandidate = [psych, subjective].filter(Boolean).join(" ");
+    if (hpiCandidate && intake.historyOfPresentIllness.length < hpiCandidate.length) {
+      intake.historyOfPresentIllness = hpiCandidate;
+    }
+    if (bio && intake.medicalHistory.length < bio.length) {
+      intake.medicalHistory = bio;
+    }
+    if (social) {
+      if (!intake.livingArrangement.trim() || intake.livingArrangement.length < 10) {
+        const livingMatch = social.match(/living\s+(?:with|alone|independently)[\s\S]*?[.]/i);
+        if (livingMatch) intake.livingArrangement = livingMatch[0].replace(/[.]+$/, "");
+      }
+      if (!intake.relationshipDescription.trim()) {
+        const relMatch = social.match(/(?:girlfriend|boyfriend|partner|spouse|wife|husband|married|dating|relationship)[\s\S]*?[.]/i);
+        if (relMatch) intake.relationshipDescription = relMatch[0];
+      }
+    }
+    if (assessment && intake.presentingProblems.length < assessment.length) {
+      intake.presentingProblems = assessment;
+    }
+    const mseMatch = objective.match(/Mental Status Exam:\s*([\s\S]*?)$/i);
+    if (mseMatch) {
+      intake.additionalInfo = [intake.additionalInfo, mseMatch[1].trim()].filter(Boolean).join("\n\n");
+    }
+  }
   async function fillInitialClinicalEval() {
     assertExtensionContext();
     const intake = await getIntake();
@@ -4583,6 +5088,7 @@ Generate a SOAP progress note for this session. The treating clinician is ${prov
       showToast(`No intake data captured. Go to the client's intake form and click "Capture Intake" first.`, "error");
       return;
     }
+    enrichIntakeFromSoapCopyArea(intake);
     await wait(500);
     let filled = fillICEFromIntake(intake);
     await flushBooleanSyncOperations();
@@ -4673,6 +5179,7 @@ Generate a SOAP progress note for this session. The treating clinician is ${prov
       setTimeout(injectVideoNotePanel, 500);
       setTimeout(startCaptionObserver, 1e3);
       setTimeout(startSessionEndDetection, 1e3);
+      setTimeout(startIncrementalGeneration, 2e3);
     }
   });
   observer.observe(document.body, { childList: true, subtree: true });
@@ -4683,6 +5190,7 @@ Generate a SOAP progress note for this session. The treating clinician is ${prov
       setTimeout(injectVideoNotePanel, 500);
       setTimeout(startCaptionObserver, 1e3);
       setTimeout(startSessionEndDetection, 1e3);
+      setTimeout(startIncrementalGeneration, 2e3);
     });
   } else {
     setTimeout(injectFillButton, 500);

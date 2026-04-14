@@ -43,6 +43,7 @@ type ClinicalProfile = {
   hasEmotionDysregulation: boolean
   hasInterpersonalStrain: boolean
   hasSleepIssue: boolean
+  hasSexualHealthConcern: boolean
   hasAdolescentPresentation: boolean
   needsMedicalCoordination: boolean
   // Demographics for biopsychosocial narrative
@@ -229,6 +230,9 @@ function buildProfile(
     /emotion regulation|mood swings|labile|anger|impulsive/.test(narrativeText)
   const hasInterpersonalStrain = hasAny(narrativeText, [/relationship/, /conflict/, /attachment/, /interpersonal/])
   const hasSleepIssue = /sleep|insomnia|hypersomnia/.test(normalizeText(`${intake.troubleSleeping} ${intake.additionalSymptoms}`))
+  const hasSexualHealthConcern =
+    /sexual dysfunction|erectile|sex therap|libido|orgasm|premature ejaculation|vaginismus|dyspareunia/.test(narrativeText) ||
+    /sexual dysfunction|erectile|sex therap/.test(diagnosisText)
   const severeSymptoms = (intake.phq9?.totalScore ?? 0) >= 15 || (intake.gad7?.totalScore ?? 0) >= 15
   const needsMedicalCoordination = Boolean(
     intake.primaryCarePhysician.trim() ||
@@ -287,6 +291,7 @@ function buildProfile(
     hasEmotionDysregulation,
     hasInterpersonalStrain,
     hasSleepIssue,
+    hasSexualHealthConcern,
     hasAdolescentPresentation: age !== null && age <= 19,
     needsMedicalCoordination,
     // Demographics for biopsychosocial narrative
@@ -429,6 +434,10 @@ function recommendModalities(profile: ClinicalProfile): string[] {
 
   if (profile.hasPersonality || profile.hasTrauma || profile.hasInterpersonalStrain) {
     modalities.push('Psychodynamic formulation')
+  }
+
+  if (profile.hasSexualHealthConcern) {
+    modalities.push('Sex therapy (sensate focus, psychoeducation)')
   }
 
   return unique(modalities).slice(0, 4)
@@ -855,7 +864,24 @@ function buildInterventions(profile: ClinicalProfile): string {
     domains.push({ title: 'Psychodynamic / Insight Work', items })
   }
 
-  // 7. Medication Evaluation
+  // 7. Sexual Health
+  if (profile.hasSexualHealthConcern) {
+    const items: string[] = []
+    items.push('Comprehensive sexual health assessment (medical, psychological, relational factors)')
+    items.push('Psychoeducation on sexual response cycle and contributing factors')
+    items.push('Sensate focus exercises to reduce performance anxiety')
+    items.push('Cognitive restructuring of maladaptive beliefs about sexual performance')
+    if (profile.hasAnxiety) {
+      items.push('Address performance anxiety and anticipatory avoidance')
+    }
+    if (profile.hasInterpersonalStrain) {
+      items.push('Couples communication skills around intimacy')
+    }
+    items.push('Coordinate with medical provider to rule out physiological contributors')
+    domains.push({ title: 'Sexual Health', items })
+  }
+
+  // 8. Medication Evaluation
   if (profile.needsMedicalCoordination || profile.severeSymptoms) {
     const items: string[] = []
     items.push('Consider consulting with a psychiatrist if symptoms persist or worsen')
