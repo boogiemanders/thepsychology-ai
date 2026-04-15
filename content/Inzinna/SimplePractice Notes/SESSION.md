@@ -7,7 +7,35 @@ A standalone Chrome extension (Manifest V3) for Inzinna's clinical workflow. It 
 
 ## Where We Left Off
 
-### ICE Fill + Diagnostics Overhaul (2026-04-14)
+### OpenAI-Powered ICE Enrichment (2026-04-14, uncommitted)
+
+**LLM ICE field routing:** `enrichIntakeFromSoapCopyArea()` in `fill-note.ts` now sends SP's AI note sections to OpenAI (gpt-4o-mini) for structured extraction into ICE fields. PHI is de-identified before sending via existing `deidentify()` and re-identified on return. Returns JSON with: chiefComplaint, hpiNarrative, medicalHistory, socialContext, presentingProblems, mse. Falls back to regex enrichment if no OpenAI API key is configured.
+
+**Why OpenAI, not Ollama:** Tested llama3.1:8b (5+ min timeout, never completed) and llama3.2:3b (also timed out) on CPU. OpenAI returns in ~2 seconds with much better field routing, simpler language, and thorough presenting problems. Ollama stays default for SOAP generation (different flow).
+
+**Prompt design:** System prompt asks for early-teen reading level, patient pronouns (not "Client"), and specific routing rules — HPI must include medical workup results (e.g. "urologist found no physical cause"), presentingProblems must be thorough (all co-occurring issues), MSE looks in Objective section.
+
+**Other fixes in this session:**
+- Education normalizer: "High" -> "completed high school" (line ~950)
+- Goal template: "he wants to" -> "his goal was to" (line ~1306)
+- `Client's` regex now case-insensitive `/\bclient's\b/gi` — fixes lowercase "client's" from AI notes (line ~1374)
+- `_llmEnrichedHpi` flag on IntakeData (types.ts) — when LLM writes the HPI, `buildHistoryOfPresentIllnessText` skips appending chiefComplaint/counselingGoals (no more "He reported sex therapy." duplication)
+
+**Files changed (uncommitted):**
+- `src/content/fill-note.ts` — new imports (openai-client, deidentify), ICE enrichment prompt + LLM call + regex fallback, education fix, goal template, case-insensitive Client's
+- `src/lib/types.ts` — `_llmEnrichedHpi?: boolean` on IntakeData
+
+**Known issues for next session:**
+- Need live Chrome test: load extension, open ICE form with AI note visible, hit Fill, check console for `[SPN] LLM ICE enrichment succeeded`
+- Verify OpenAI API key is set in extension popup settings (Chrome storage, not env vars)
+- Re-test that "urologist/endocrinologist found no physical cause" lands in hpiNarrative (prompt updated but not re-tested with final prompt)
+- Verify regex fallback still works when OpenAI key is missing
+- `intake.fullName` garbled ("Davif Barayev\n(David Barayev)") — fix `extractClientNameFromPage()`
+- Debug log `[SPN] HPI fallback check:` in fill-note.ts — remove after confirming
+- Background tabs sequential (~3s each) — could parallelize
+- Test v2 disorder pinning: unpin, summary generation, note draft writing
+
+### ICE Fill + Diagnostics Overhaul (2026-04-14, earlier commits)
 
 **Overview note fallback for thin intakes:** DIPS intake forms only have consent Q&A. Added `extractClinicalFromOverviewNote()` in `fill-note.ts` that parses overview clinical note as fallback for chief complaint + HPI when structured intake fields are empty.
 
@@ -16,12 +44,6 @@ A standalone Chrome extension (Manifest V3) for Inzinna's clinical workflow. It 
 **Background tab rendering:** `createRenderableTab()` in service-worker.ts creates tabs as `active: true`, waits for load + 1.5s render, then refocuses caller.
 
 **Diagnosis search (161 disorders):** Replaced `<select>` with search autocomplete. Wired `dsm5-criteria-v2.ts` (161 from Codex) + v1 (15 detailed). v2 disorders show criteria text in review panel.
-
-**Known issues for next session:**
-- `intake.fullName` garbled ("Davif Barayev\n(David Barayev)") — fix `extractClientNameFromPage()`
-- Debug log `[SPN] HPI fallback check:` in fill-note.ts — remove after confirming
-- Background tabs sequential (~3s each) — could parallelize
-- Test v2 disorder pinning: unpin, summary generation, note draft writing
 
 ### LLM-Powered SOAP Note Generation via Local Ollama
 Replaced the regex-driven `buildSoapDraft()` with an LLM pipeline that sends session transcripts + clinical context to a local Ollama instance (`localhost:11434`). All PHI stays on device. Falls back to regex builder if Ollama is unavailable.

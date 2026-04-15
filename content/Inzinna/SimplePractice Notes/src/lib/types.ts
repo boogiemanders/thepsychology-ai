@@ -100,6 +100,7 @@ export interface IntakeData {
   manualNotes: string
   overviewClinicalNote: string
   spSoapNote: string
+  _llmEnrichedHpi?: boolean
 
   // Form metadata
   formTitle: string

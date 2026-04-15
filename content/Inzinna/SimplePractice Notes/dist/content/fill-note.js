@@ -3881,6 +3881,7 @@ Generate a SOAP progress note for this session. The treating clinician is ${prov
     if (!trimmed) return "";
     const cleaned = trimmed.replace(/^education[:\s-]*/i, "").replace(/^i\s+(?:am|have|completed|finished|earned)\s+/i, "").replace(/[.]+$/, "").trim().toLowerCase();
     if (!cleaned) return "";
+    if (/^high$/i.test(cleaned)) return "completed high school";
     if (/^bachelor/.test(cleaned)) return `completed a ${cleaned}`;
     if (/^master/.test(cleaned)) return `completed a ${cleaned}`;
     if (/^associate/.test(cleaned)) return `completed an ${cleaned}`;
@@ -4133,7 +4134,7 @@ Generate a SOAP progress note for this session. The treating clinician is ${prov
     if (intake.counselingGoals) {
       const goal = smoothClinicalPhrase(intake.counselingGoals.replace(/^to\s+/i, "").trim(), pronouns);
       if (goal) {
-        sentences.push(`${subject} stated that ${pronouns.subject} wants to ${lowerCaseFirst(goal).replace(/[.]+$/, "")}.`);
+        sentences.push(`${subject} stated that ${pronouns.possessive} goal was to ${lowerCaseFirst(goal).replace(/[.]+$/, "")}.`);
       }
     }
     if (sentences.length === 1 && intake.overviewClinicalNote?.trim()) {
@@ -4150,6 +4151,10 @@ Generate a SOAP progress note for this session. The treating clinician is ${prov
   function buildHistoryOfPresentIllnessText(intake) {
     const pronouns = inferPronounForms(intake);
     const hpi = intake.historyOfPresentIllness.trim();
+    if (intake._llmEnrichedHpi && hpi) {
+      const result2 = [hpi, ...buildManualHPISentences(intake)];
+      return unique4(result2).join(" ");
+    }
     const hpiLower = hpi.toLowerCase();
     const isRedundant = (value) => {
       if (!hpi || hpi.length < 200) return false;
@@ -4175,8 +4180,8 @@ Generate a SOAP progress note for this session. The treating clinician is ${prov
           const normalized = smoothClinicalPhrase(value.replace(/^i want to\b/i, "").trim(), pronouns);
           return `${subject} reported wanting to ${normalized.replace(/[.]+$/, "")}.`;
         }
-        if (/\bClient\b/.test(value)) {
-          return value.replace(/\bClient's\b/g, capitalize(pronouns.possessive)).replace(/\bClient\b/g, subject);
+        if (/\bclient\b/i.test(value)) {
+          return value.replace(/\bclient's\b/gi, capitalize(pronouns.possessive)).replace(/\bclient\b/gi, subject);
         }
         return toReportedSpeech(value, pronouns);
       }).filter(Boolean)
@@ -5155,7 +5160,78 @@ Generate a SOAP progress note for this session. The treating clinician is ${prov
     if (followUpText && fillProseMirrorByLabel("free-text-111", followUpText)) filled++;
     return filled;
   }
-  function enrichIntakeFromSoapCopyArea(intake) {
+  var ICE_ENRICHMENT_SYSTEM = `You are a clinical documentation assistant. You will receive sections from a SimplePractice AI-generated note about a therapy session.
+
+Your job: extract and rewrite the clinical content into structured fields for an Initial Clinical Evaluation (ICE) form. Each field serves a different purpose \u2014 route the right information to the right field, don't dump everything into one place.
+
+WRITING STYLE:
+- Write in simple, clear clinical prose \u2014 early-teen reading level
+- Use short sentences. Avoid jargon when a plain word works
+- Keep third-person perspective ("He reported..." not "Client reported...")
+- Use the patient's pronouns (provided in the prompt)
+- Be specific \u2014 include durations, frequencies, and concrete details
+- Don't pad with filler or repeat yourself across fields
+
+OUTPUT: Return ONLY a valid JSON object with these string keys:
+{
+  "chiefComplaint": "1-2 sentence summary of why the patient is seeking treatment. Include duration and main concern.",
+  "hpiNarrative": "3-5 sentence paragraph covering: what's happening, how long, what makes it worse/better, functional impact, AND relevant medical context (medications, medical workup results like 'urologist found no physical cause', physical health factors). Include all clinically relevant medical details here \u2014 don't leave them only in medicalHistory. Written as a narrative, not a list.",
+  "medicalHistory": "Relevant medical conditions, medications, and physical health details. Only what's clinically relevant.",
+  "socialContext": "Living situation, occupation, relationship status, cultural factors. Brief.",
+  "presentingProblems": "Complete list of ALL clinical problems identified in the note. Include primary complaints, co-occurring issues, contributing factors, and relevant history (e.g. 'situational erectile dysfunction, performance anxiety, relationship distress, secret medication use, trauma history related to STD acquisition, substance use concerns'). Be thorough \u2014 don't just list the top 2. Comma-separated.",
+  "mse": "Mental status exam findings. Look in the Objective section for a Mental Status Exam block. Include all MSE categories found (Appearance, Behavior, Speech, Mood/Affect, Thoughts, Cognition, Insight/Judgment). If no MSE data exists anywhere in the note, return empty string."
+}
+
+Do NOT wrap in markdown fences. Return ONLY the raw JSON.`;
+  function buildIceEnrichmentPrompt(sections, pronouns, clientName) {
+    const parts = [];
+    parts.push(`Patient: ${clientName}`);
+    parts.push(`Pronouns: ${pronouns.subject}/${pronouns.object}/${pronouns.possessive}`);
+    parts.push("");
+    for (const [title, content] of sections) {
+      if (content) parts.push(`=== ${title.toUpperCase()} ===
+${content}`);
+    }
+    parts.push("");
+    parts.push(`Extract and rewrite these sections into the ICE form fields. Use the patient's pronouns, not "Client." Keep language simple and direct.`);
+    return parts.join("\n");
+  }
+  async function enrichIntakeWithLLM(sections, intake, pronouns) {
+    const prefs = await getPreferences();
+    const clientName = intake.fullName || [intake.firstName, intake.lastName].filter(Boolean).join(" ") || "Patient";
+    const userPrompt = buildIceEnrichmentPrompt(sections, pronouns, clientName);
+    if (!prefs.openaiApiKey) {
+      console.info("[SPN] No OpenAI API key configured \u2014 skipping LLM ICE enrichment");
+      return null;
+    }
+    const healthy = await checkOpenAIHealth(prefs.openaiApiKey);
+    if (!healthy) {
+      console.info("[SPN] OpenAI not reachable \u2014 skipping LLM ICE enrichment");
+      return null;
+    }
+    let raw = null;
+    try {
+      const { sanitized, mapping } = deidentify(userPrompt, intake);
+      console.log("[SPN] Sending de-identified AI note to OpenAI for ICE enrichment...");
+      const response = await generateOpenAICompletion(sanitized, ICE_ENRICHMENT_SYSTEM, prefs.openaiModel || "gpt-4o-mini", prefs.openaiApiKey);
+      raw = reidentify(response, mapping);
+    } catch (err) {
+      console.info("[SPN] OpenAI ICE enrichment failed:", err);
+      return null;
+    }
+    if (!raw) return null;
+    const jsonStr = raw.replace(/^```(?:json)?\s*/m, "").replace(/\s*```\s*$/m, "").trim();
+    try {
+      const parsed = JSON.parse(jsonStr);
+      if (typeof parsed.hpiNarrative !== "string") return null;
+      console.log("[SPN] LLM ICE enrichment succeeded:", Object.keys(parsed));
+      return parsed;
+    } catch {
+      console.warn("[SPN] Failed to parse LLM ICE enrichment response:", jsonStr.slice(0, 200));
+      return null;
+    }
+  }
+  async function enrichIntakeFromSoapCopyArea(intake) {
     const aiContent = document.querySelector(".ai-note-content");
     if (!aiContent) return;
     const sections = /* @__PURE__ */ new Map();
@@ -5169,18 +5245,39 @@ Generate a SOAP progress note for this session. The treating clinician is ${prov
     }
     if (sections.size === 0) return;
     console.log("[SPN] Found SimplePractice AI note sections:", [...sections.keys()]);
-    const bpsText = sections.get("biopsychosocial assessment") ?? "";
-    const subjective = sections.get("subjective") ?? "";
-    const objective = sections.get("objective") ?? "";
-    const assessment = sections.get("assessment") ?? "";
-    const plan = sections.get("plan") ?? "";
     intake.spSoapNote = [...sections.entries()].map(([k, v]) => `${k}:
 ${v}`).join("\n\n");
+    const pronouns = inferPronounForms(intake);
+    const llmResult = await enrichIntakeWithLLM(sections, intake, pronouns);
+    if (llmResult) {
+      console.log("[SPN] Using LLM-enriched ICE fields");
+      if (llmResult.hpiNarrative && llmResult.hpiNarrative.length > intake.historyOfPresentIllness.length) {
+        intake.historyOfPresentIllness = llmResult.hpiNarrative;
+      }
+      if (llmResult.medicalHistory && llmResult.medicalHistory.length > intake.medicalHistory.length) {
+        intake.medicalHistory = llmResult.medicalHistory;
+      }
+      if (llmResult.presentingProblems && intake.presentingProblems.length < llmResult.presentingProblems.length) {
+        intake.presentingProblems = llmResult.presentingProblems;
+      }
+      if (llmResult.socialContext) {
+        if (!intake.livingArrangement.trim() || intake.livingArrangement.length < 10) {
+          intake.livingArrangement = llmResult.socialContext;
+        }
+      }
+      if (llmResult.mse) {
+        intake.additionalInfo = [intake.additionalInfo, llmResult.mse].filter(Boolean).join("\n\n");
+      }
+      intake._llmEnrichedHpi = true;
+      return;
+    }
+    console.log("[SPN] LLM unavailable, using regex enrichment");
+    const bpsText = sections.get("biopsychosocial assessment") ?? "";
+    const objective = sections.get("objective") ?? "";
+    const assessment = sections.get("assessment") ?? "";
     const bioMatch = bpsText.match(/Biological:\s*([\s\S]*?)(?=Psychological:|Social:|$)/i);
-    const psychMatch = bpsText.match(/Psychological:\s*([\s\S]*?)(?=Biological:|Social:|$)/i);
     const socialMatch = bpsText.match(/Social:\s*([\s\S]*?)(?=Biological:|Psychological:|$)/i);
     const bio = bioMatch?.[1]?.trim() ?? "";
-    const psych = psychMatch?.[1]?.trim() ?? "";
     const social = socialMatch?.[1]?.trim() ?? "";
     const hpiCandidate = [assessment, bio].filter(Boolean).join(" ");
     let usedAssessmentForHpi = false;
@@ -5226,7 +5323,7 @@ ${v}`).join("\n\n");
         }
       }
     }
-    enrichIntakeFromSoapCopyArea(intake);
+    await enrichIntakeFromSoapCopyArea(intake);
     await wait(500);
     let filled = fillICEFromIntake(intake);
     await flushBooleanSyncOperations();
