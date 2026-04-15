@@ -52,6 +52,12 @@ body {
   border-bottom: 1px solid var(--border);
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .eyebrow {
   font-size: 11px;
   letter-spacing: 0.04em;
@@ -99,6 +105,10 @@ body {
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+
+.panel-section[hidden] {
+  display: none;
 }
 
 .panel-tabs {
@@ -241,6 +251,78 @@ body {
 .diagnosis-notes:focus {
   outline: none;
   border-color: var(--accent);
+}
+
+/* ── Diagnosis Search Autocomplete ── */
+
+.diagnosis-search-wrap {
+  position: relative;
+}
+
+.diagnosis-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  max-height: 260px;
+  overflow-y: auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-top: none;
+  border-radius: 0 0 6px 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.diagnosis-dropdown.hidden {
+  display: none;
+}
+
+.diagnosis-dropdown-item {
+  padding: 7px 10px;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 1.4;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.1s;
+}
+
+.diagnosis-dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.diagnosis-dropdown-item:hover,
+.diagnosis-dropdown-item.active {
+  background: var(--neutral-bg);
+}
+
+.diagnosis-dropdown-item .dx-name {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.diagnosis-dropdown-item .dx-code {
+  color: var(--text-secondary);
+  font-size: 11px;
+  margin-left: 6px;
+}
+
+.diagnosis-dropdown-item .dx-suggested {
+  display: inline-block;
+  font-size: 10px;
+  color: var(--success-text);
+  background: var(--success-bg);
+  border: 1px solid var(--success-border);
+  border-radius: 3px;
+  padding: 0 4px;
+  margin-left: 6px;
+}
+
+.diagnosis-dropdown-empty {
+  padding: 10px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  text-align: center;
 }
 
 .diagnosis-notes,
@@ -632,4 +714,105 @@ body {
 .hint {
   font-size: 12px;
   margin-top: 6px;
+}
+
+/* ── Transcript ── */
+
+.transcript-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.transcript-count {
+  font-size: 11px;
+  color: var(--text-secondary);
+  font-variant-numeric: tabular-nums;
+}
+
+.transcript-entries {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 8px;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.transcript-entry {
+  padding: 6px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.transcript-entry.clinician {
+  background: var(--neutral-bg);
+  border-left: 3px solid var(--accent);
+}
+
+.transcript-entry.client {
+  background: #f5f3ff;
+  border-left: 3px solid #7c3aed;
+}
+
+.transcript-entry.unknown {
+  background: var(--bg);
+  border-left: 3px solid var(--border);
+}
+
+.transcript-speaker {
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.transcript-entry.clinician .transcript-speaker {
+  color: var(--accent);
+}
+
+.transcript-entry.client .transcript-speaker {
+  color: #7c3aed;
+}
+
+.transcript-time {
+  font-size: 10px;
+  color: var(--text-secondary);
+  margin-left: 6px;
+  font-variant-numeric: tabular-nums;
+}
+
+.transcript-text {
+  margin-top: 2px;
+}
+
+/* ── Supervision Prep ── */
+
+.supervision-disclaimer {
+  font-size: 11px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0 0 10px;
+  padding: 8px 10px;
+  background: var(--warn-bg);
+  border: 1px solid var(--warn-border);
+  border-radius: 6px;
+  color: var(--warn-text);
+}
+
+.supervision-block {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  white-space: pre-wrap;
+}
+
+.supervision-block ul {
+  margin: 0;
+  padding-left: 16px;
+}
+
+.supervision-block li {
+  margin-bottom: 4px;
 }

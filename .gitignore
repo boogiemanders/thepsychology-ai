@@ -170,3 +170,9 @@ public/topic-teacher-audio/
 
 # MCP config (contains API keys)
 .mcp.json
+
+# iOS / Xcode
+ios/**/*.xcodeproj
+ios/**/xcuserdata/
+ios/**/DerivedData/
+.build/

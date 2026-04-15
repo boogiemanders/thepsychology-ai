@@ -592,6 +592,12 @@
   async function clearMseChecklist() {
     await chrome.storage.session.remove(MSE_CHECKLIST_KEY);
   }
+  var REFERENCE_LIBRARY_KEY = "spn_reference_library";
+  async function getReferenceLibrary() {
+    const result = await chrome.storage.local.get(REFERENCE_LIBRARY_KEY);
+    const files = result[REFERENCE_LIBRARY_KEY];
+    return Array.isArray(files) ? files : [];
+  }
 
   // src/lib/ollama-client.ts
   var DEFAULT_ENDPOINT = "http://localhost:11434";
@@ -1870,13 +1876,77 @@ Generate a SOAP progress note for this session. The treating clinician is ${prov
     }
     return score;
   }
+  function chunkMarkdown(file) {
+    const lines = file.content.split("\n");
+    const entries = [];
+    let currentHeading = file.filename.replace(/\.[^.]+$/, "");
+    let currentText = [];
+    let chunkIndex = 0;
+    function flushChunk() {
+      const text = currentText.join("\n").trim();
+      if (!text) return;
+      const preview = text.slice(0, 200);
+      const tags = normalizeTerm(currentHeading).split(" ").filter((w) => w.length >= 3);
+      entries.push({
+        resourceId: file.id,
+        resourceTitle: file.filename,
+        resourceModality: "user-upload",
+        chunk: {
+          id: `${file.id}-c${chunkIndex}`,
+          pageStart: chunkIndex,
+          pageEnd: chunkIndex,
+          heading: currentHeading,
+          preview,
+          tags,
+          estimatedTokens: Math.ceil(text.length / 4)
+        }
+      });
+      chunkIndex++;
+    }
+    for (const line of lines) {
+      const headingMatch = line.match(/^#{1,3}\s+(.+)/);
+      if (headingMatch) {
+        flushChunk();
+        currentHeading = headingMatch[1].trim();
+        currentText = [];
+      } else {
+        currentText.push(line);
+      }
+    }
+    flushChunk();
+    return entries;
+  }
+  async function getUserUploadEntries() {
+    try {
+      const files = await getReferenceLibrary();
+      return files.flatMap((file) => chunkMarkdown(file));
+    } catch {
+      return [];
+    }
+  }
   async function searchClinicalKnowledge(query, options = {}) {
-    const index = await loadClinicalKnowledgeIndex();
     const tokens = tokenize(query);
     if (!tokens.length) return [];
     const resourceIds = options.resourceIds?.length ? options.resourceIds : null;
     const results = [];
-    for (const entry of index.entries) {
+    try {
+      const index = await loadClinicalKnowledgeIndex();
+      for (const entry of index.entries) {
+        if (resourceIds && !resourceIds.includes(entry.resourceId)) continue;
+        const chunk = { ...entry.chunk, text: "" };
+        const score = scoreIndexEntry(tokens, entry);
+        if (score <= 0) continue;
+        results.push({
+          resourceId: entry.resourceId,
+          resourceTitle: entry.resourceTitle,
+          chunk,
+          score
+        });
+      }
+    } catch {
+    }
+    const userEntries = await getUserUploadEntries();
+    for (const entry of userEntries) {
       if (resourceIds && !resourceIds.includes(entry.resourceId)) continue;
       const chunk = { ...entry.chunk, text: "" };
       const score = scoreIndexEntry(tokens, entry);
@@ -4004,8 +4074,30 @@ Generate a SOAP progress note for this session. The treating clinician is ${prov
     }
     return unique4(sentences);
   }
+  function extractClinicalFromOverviewNote(note, clientName, pronouns) {
+    const clean = note.replace(/^overview note \d+:\s*/gim, "").replace(/^\d+ min (?:phone )?consultation\s*/gim, "").trim();
+    if (!clean) return { introParagraph: "", clinicalParagraphs: [] };
+    const paragraphs = clean.split(/\n\n+/).map((p) => p.trim()).filter(Boolean);
+    const subject = capitalize(pronouns.subject);
+    const cleanName = clientName.replace(/\s*\(.*?\)/g, "").replace(/\s+/g, " ").trim();
+    const skipSentence = (s) => {
+      const t = s.trim();
+      return /^plan\b/i.test(t) || /sliding scale/i.test(t) || /per session/i.test(t) || /paneled with/i.test(t) || /will look into/i.test(t) || /^psychoeducation was provided/i.test(t) || /^discussed introduction of/i.test(t) || /agreement for/i.test(t) || /until clinician/i.test(t) || /shared agreement/i.test(t);
+    };
+    const filterParagraph = (p) => {
+      const sentences = p.split(/(?<=\.)\s+/);
+      return sentences.filter((s) => !skipSentence(s)).join(" ").trim();
+    };
+    const introRaw = paragraphs[0] ? filterParagraph(paragraphs[0]) : "";
+    const introParagraph = introRaw.replace(/\bClient's\b/g, `${cleanName}'s`).replace(/\bClient\b/g, cleanName);
+    const clinicalParagraphs = paragraphs.slice(1).map(filterParagraph).filter(Boolean).map(
+      (p) => p.replace(/\bClient's\b/g, capitalize(pronouns.possessive)).replace(/\bClient\b/g, subject)
+    );
+    return { introParagraph, clinicalParagraphs };
+  }
   function buildChiefComplaintNarrative(intake) {
-    const name = intake.fullName || [intake.firstName, intake.lastName].filter(Boolean).join(" ") || intake.firstName || "Patient";
+    const rawName = intake.fullName || [intake.firstName, intake.lastName].filter(Boolean).join(" ") || intake.firstName || "Patient";
+    const name = rawName.replace(/\s*\(.*?\)/g, "").replace(/\s+/g, " ").trim();
     const age = calculateAge(intake.dob) || getManualAgeLabel(intake.manualNotes);
     const identity = buildIdentityDescriptor(intake);
     const pronouns = inferPronounForms(intake);
@@ -4044,30 +4136,64 @@ Generate a SOAP progress note for this session. The treating clinician is ${prov
         sentences.push(`${subject} stated that ${pronouns.subject} wants to ${lowerCaseFirst(goal).replace(/[.]+$/, "")}.`);
       }
     }
+    if (sentences.length === 1 && intake.overviewClinicalNote?.trim()) {
+      const { introParagraph, clinicalParagraphs } = extractClinicalFromOverviewNote(
+        intake.overviewClinicalNote,
+        name,
+        pronouns
+      );
+      if (introParagraph) sentences[0] = introParagraph;
+      if (clinicalParagraphs.length) sentences.push(...clinicalParagraphs);
+    }
     return sentences.join(" ");
   }
   function buildHistoryOfPresentIllnessText(intake) {
     const pronouns = inferPronounForms(intake);
-    const sources = [
-      intake.historyOfPresentIllness,
-      intake.presentingProblems,
-      intake.chiefComplaint,
-      intake.counselingGoals ? `Goal: ${intake.counselingGoals}` : ""
-    ].map((value) => value.trim()).filter(Boolean);
+    const hpi = intake.historyOfPresentIllness.trim();
+    const hpiLower = hpi.toLowerCase();
+    const isRedundant = (value) => {
+      if (!hpi || hpi.length < 200) return false;
+      const words = value.toLowerCase().replace(/[^a-z0-9\s]/g, "").split(/\s+/).filter((w) => w.length > 4);
+      if (words.length < 3) return false;
+      const matchCount = words.filter((w) => hpiLower.includes(w)).length;
+      return matchCount / words.length > 0.6;
+    };
+    const candidateSources = [
+      intake.presentingProblems.trim(),
+      intake.chiefComplaint.trim(),
+      intake.counselingGoals ? `Goal: ${intake.counselingGoals}`.trim() : ""
+    ].filter((value) => Boolean(value) && !isRedundant(value));
+    const sources = [hpi, ...candidateSources].filter(Boolean);
+    const subject = capitalize(pronouns.subject);
     const sentences = unique4(
       sources.map((value) => {
         if (/^goal:\s*/i.test(value)) {
           const goalText = smoothClinicalPhrase(value.replace(/^goal:\s*/i, "").replace(/^to\s+/i, "").trim(), pronouns);
-          return goalText ? `${capitalize(pronouns.subject)} stated that ${pronouns.subject} wants to ${lowerCaseFirst(goalText).replace(/[.]+$/, "")}.` : "";
+          return goalText ? `${subject} stated that ${pronouns.subject} wants to ${lowerCaseFirst(goalText).replace(/[.]+$/, "")}.` : "";
         }
         if (/^i want to\b/i.test(value)) {
           const normalized = smoothClinicalPhrase(value.replace(/^i want to\b/i, "").trim(), pronouns);
-          return `${capitalize(pronouns.subject)} reported wanting to ${normalized.replace(/[.]+$/, "")}.`;
+          return `${subject} reported wanting to ${normalized.replace(/[.]+$/, "")}.`;
+        }
+        if (/\bClient\b/.test(value)) {
+          return value.replace(/\bClient's\b/g, capitalize(pronouns.possessive)).replace(/\bClient\b/g, subject);
         }
         return toReportedSpeech(value, pronouns);
       }).filter(Boolean)
     );
-    return unique4([...sentences, ...buildManualHPISentences(intake)]).join(" ");
+    const hasStructuredSources = sources.length > 0;
+    const result = unique4([...sentences, ...buildManualHPISentences(intake)]);
+    console.log("[SPN] HPI fallback check:", { hasStructuredSources, overviewNoteLength: intake.overviewClinicalNote?.length ?? 0, resultSoFar: result.length });
+    if (!hasStructuredSources && intake.overviewClinicalNote?.trim()) {
+      const name = intake.fullName || [intake.firstName, intake.lastName].filter(Boolean).join(" ") || "Patient";
+      const { clinicalParagraphs } = extractClinicalFromOverviewNote(
+        intake.overviewClinicalNote,
+        name,
+        pronouns
+      );
+      if (clinicalParagraphs.length) result.push(...clinicalParagraphs);
+    }
+    return result.join(" ");
   }
   function buildIntakeAnswerCorpus(intake) {
     return [
@@ -5056,9 +5182,11 @@ ${v}`).join("\n\n");
     const bio = bioMatch?.[1]?.trim() ?? "";
     const psych = psychMatch?.[1]?.trim() ?? "";
     const social = socialMatch?.[1]?.trim() ?? "";
-    const hpiCandidate = [psych, subjective].filter(Boolean).join(" ");
+    const hpiCandidate = [assessment, bio].filter(Boolean).join(" ");
+    let usedAssessmentForHpi = false;
     if (hpiCandidate && intake.historyOfPresentIllness.length < hpiCandidate.length) {
       intake.historyOfPresentIllness = hpiCandidate;
+      usedAssessmentForHpi = true;
     }
     if (bio && intake.medicalHistory.length < bio.length) {
       intake.medicalHistory = bio;
@@ -5073,7 +5201,7 @@ ${v}`).join("\n\n");
         if (relMatch) intake.relationshipDescription = relMatch[0];
       }
     }
-    if (assessment && intake.presentingProblems.length < assessment.length) {
+    if (assessment && !usedAssessmentForHpi && intake.presentingProblems.length < assessment.length) {
       intake.presentingProblems = assessment;
     }
     const mseMatch = objective.match(/Mental Status Exam:\s*([\s\S]*?)$/i);
@@ -5087,6 +5215,16 @@ ${v}`).join("\n\n");
     if (!intake) {
       showToast(`No intake data captured. Go to the client's intake form and click "Capture Intake" first.`, "error");
       return;
+    }
+    if (!document.querySelector(".ai-note-content")) {
+      const noteTakerBtn = document.querySelector("button.note-taker");
+      if (noteTakerBtn) {
+        noteTakerBtn.click();
+        const deadline = Date.now() + 5e3;
+        while (!document.querySelector(".ai-note-content") && Date.now() < deadline) {
+          await wait(300);
+        }
+      }
     }
     enrichIntakeFromSoapCopyArea(intake);
     await wait(500);

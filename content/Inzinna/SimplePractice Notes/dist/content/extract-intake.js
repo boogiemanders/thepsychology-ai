@@ -1192,6 +1192,12 @@ ${text}`).join("\n\n");
     }
   }
   async function handleOverviewCaptureClick() {
+    const btn = document.getElementById("spn-overview-btn");
+    const originalLabel = btn?.textContent ?? "";
+    if (btn) {
+      btn.classList.add("spn-btn-loading");
+      btn.textContent = "Capturing...";
+    }
     try {
       assertExtensionContext();
       showToast("Capturing overview, intake form, and assessments...", "success");
@@ -1240,7 +1246,16 @@ ${text}`).join("\n\n");
       console.log("[SPN] Intake from background tab:", intakeFromTab);
       console.log("[SPN] Assessments:", assessments);
       console.groupEnd();
+      if (btn) {
+        btn.classList.remove("spn-btn-loading");
+        btn.classList.add("spn-btn-success");
+        btn.textContent = "Captured";
+      }
     } catch (err) {
+      if (btn) {
+        btn.classList.remove("spn-btn-loading");
+        btn.textContent = originalLabel;
+      }
       if (isExtensionContextInvalidatedError(err)) {
         showToast("Extension reloaded \u2014 please refresh this page.", "error");
       } else {

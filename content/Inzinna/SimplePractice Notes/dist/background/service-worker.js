@@ -124,6 +124,34 @@
   function wait(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
   }
+  async function getCallerTabId() {
+    try {
+      const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+      return tab?.id ?? null;
+    } catch {
+      return null;
+    }
+  }
+  async function refocusTab(tabId) {
+    if (tabId == null) return;
+    try {
+      await chrome.tabs.update(tabId, { active: true });
+    } catch {
+    }
+  }
+  async function createRenderableTab(url) {
+    const callerTabId = await getCallerTabId();
+    const tab = await chrome.tabs.create({ url, active: true });
+    if (tab.id) {
+      try {
+        await waitForTabComplete(tab.id);
+      } catch {
+      }
+      await wait(1500);
+    }
+    await refocusTab(callerTabId);
+    return { tab, callerTabId };
+  }
   function waitForTabComplete(tabId, timeoutMs = 15e3) {
     return new Promise((resolve, reject) => {
       const timeout = setTimeout(() => {
@@ -160,7 +188,7 @@
   }
   async function discoverIntakeNoteUrlsViaTab(clientId) {
     const url = `https://secure.simplepractice.com/clients/${clientId}/intake_notes`;
-    const tab = await chrome.tabs.create({ url, active: false });
+    const { tab } = await createRenderableTab(url);
     if (!tab.id) return [];
     try {
       await waitForTabComplete(tab.id);
@@ -181,7 +209,7 @@
     }
   }
   async function fetchIntakeViaTab(url) {
-    const tab = await chrome.tabs.create({ url, active: false });
+    const { tab } = await createRenderableTab(url);
     if (!tab.id) return { intake: null };
     try {
       await waitForTabComplete(tab.id);
@@ -208,7 +236,7 @@
     }
   }
   async function fetchAssessmentViaTab(url) {
-    const tab = await chrome.tabs.create({ url, active: false });
+    const { tab } = await createRenderableTab(url);
     if (!tab.id) return { type: null, assessment: null };
     try {
       await waitForTabComplete(tab.id);

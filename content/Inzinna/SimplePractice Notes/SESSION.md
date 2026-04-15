@@ -7,19 +7,75 @@ A standalone Chrome extension (Manifest V3) for Inzinna's clinical workflow. It 
 
 ## Where We Left Off
 
+### ICE Fill + Diagnostics Overhaul (2026-04-14)
+
+**Overview note fallback for thin intakes:** DIPS intake forms only have consent Q&A. Added `extractClinicalFromOverviewNote()` in `fill-note.ts` that parses overview clinical note as fallback for chief complaint + HPI when structured intake fields are empty.
+
+**AI Note Taker auto-click:** `fill-note.ts` auto-clicks SP's Note Taker button and waits for `.ai-note-content` to render. HPI enrichment uses assessment+bio (not psych+subjective). Fixed double-attribution.
+
+**Background tab rendering:** `createRenderableTab()` in service-worker.ts creates tabs as `active: true`, waits for load + 1.5s render, then refocuses caller.
+
+**Diagnosis search (161 disorders):** Replaced `<select>` with search autocomplete. Wired `dsm5-criteria-v2.ts` (161 from Codex) + v1 (15 detailed). v2 disorders show criteria text in review panel.
+
+**Known issues for next session:**
+- `intake.fullName` garbled ("Davif Barayev\n(David Barayev)") — fix `extractClientNameFromPage()`
+- Debug log `[SPN] HPI fallback check:` in fill-note.ts — remove after confirming
+- Background tabs sequential (~3s each) — could parallelize
+- Test v2 disorder pinning: unpin, summary generation, note draft writing
+
 ### LLM-Powered SOAP Note Generation via Local Ollama
-Replaced the regex-driven `buildSoapDraft()` with an LLM pipeline that sends session transcripts + clinical context to a local Ollama instance (`localhost:11434`, `llama3.1:8b`). All PHI stays on device. Falls back to regex builder if Ollama is unavailable.
+Replaced the regex-driven `buildSoapDraft()` with an LLM pipeline that sends session transcripts + clinical context to a local Ollama instance (`localhost:11434`). All PHI stays on device. Falls back to regex builder if Ollama is unavailable.
+
+**Default model: `llama3.2:3b`** (~2GB, ~5.5 tok/s on Intel iMac Pro CPU-only). Switched from `llama3.1:8b` (~2.7 tok/s) for usable generation speed on CPU hardware without Metal GPU support. Context window set to `num_ctx: 16384` to fit full transcripts.
+
+**Streaming NDJSON mode:** Ollama client uses `stream: true` to avoid Node.js undici `HeadersTimeoutError` (non-streaming mode doesn't send HTTP headers until generation completes, which exceeds the 300s default on CPU). Collects chunks via `res.body.getReader()` with a 5-minute timeout.
+
+**Groq cloud provider (optional, not default):** Added Groq API support as a secondary provider. User explicitly rejected cloud APIs for PHI — Groq is available in settings but default remains local Ollama. Groq client at `src/lib/groq-client.ts` uses OpenAI-compatible API.
 
 **New files:**
-- `src/lib/ollama-client.ts` — Ollama HTTP client (health check, model check, generate)
+- `src/lib/ollama-client.ts` — Ollama HTTP client with NDJSON streaming, health check, model check
 - `src/lib/soap-prompt.ts` — Builds system + user prompt from transcript, intake, diagnoses, treatment plan, MSE checklist
-- `src/lib/soap-generator.ts` — Orchestrator: tries LLM first, falls back to regex `buildSoapDraft()`
+- `src/lib/soap-generator.ts` — Orchestrator: tries Groq (if configured) → Ollama → regex fallback
+- `src/lib/groq-client.ts` — Thin Groq API client (OpenAI-compatible)
+- `scripts/test-soap-generation.mjs` — Local SOAP test harness for running real transcript samples against Ollama outside the extension UI
 
 **Supporting changes:**
-- `types.ts` — Added `MseChecklist`, `ProviderPreferences` with Ollama settings, `SoapDraft.generationMethod` field
-- `storage.ts` — MSE checklist CRUD operations
-- `manifest.json` — Added `localhost` host permission for Ollama API
-- `popup.ts` — Switched draft generation to use LLM generator pipeline
+- `types.ts` — Added `MseChecklist`, `ProviderPreferences` with Ollama + Groq settings, `SoapDraft.generationMethod` field
+- `storage.ts` — MSE checklist CRUD operations, updated `normalizePreferences()` with LLM provider fields
+- `manifest.json` — Added `localhost` + `https://api.groq.com/*` host permissions
+- `popup.ts` — Switched draft generation to use LLM generator pipeline, added LLM provider settings (Groq/Ollama toggle)
+- `popup.html` — Added SOAP Generation settings section with provider toggle and conditional fields
+- `scripts/test-soap-generation.mjs` now uses `node:http` streaming instead of plain `fetch`, which avoids the same `HeadersTimeoutError` seen with slow CPU-only Ollama runs
+
+### SOAP Prompt Methodology (Reverse-Engineered from Expert Example)
+The system prompt in `soap-prompt.ts` was updated based on analysis of a high-quality clinician-written SOAP note. Key methodology principles embedded:
+
+1. **Theme-based extraction, not chronological retelling** — Read full transcript, identify key themes (anxiety, trauma, work conflict), organize Subjective by theme
+2. **Clinical translation** — Convert raw client language to clinical prose (e.g., "my stomach hurts when I'm worried" → "somatic manifestation of anxiety (GI distress)")
+3. **Diagnostic assessment documentation** — Objective section captures what the clinician screened for and assessed, not just what the client said
+4. **Historical pattern identification** — Assessment synthesizes patterns across time, not just this session
+5. **Treatment preference integration** — Notes how client's style/preferences should inform approach
+6. **Trajectory tracking** — Document whether symptoms improved, worsened, or stayed the same
+7. **Specific detail extraction** — Scores, frequencies, dates, notable quotes from the transcript
+8. **Plain-language drafting** — Prompt now asks for simple, direct clinical language at roughly an early-teen reading level instead of formal or academic phrasing
+
+**Transcript truncation:** When transcript exceeds `MAX_TRANSCRIPT_WORDS` (4,000), keeps first 20% (opening context) + last 30% (closing/plan). Total prompt capped at `MAX_TOTAL_PROMPT_CHARS` (36,000 chars, ~9k tokens).
+
+**Tone adjustment:** The SOAP system prompt was explicitly tuned to avoid overly polished insurance-sounding prose. Current target is clear, clinical, lower-reading-level language that still documents medical necessity and uses DSM terms when needed.
+
+### Incremental SOAP Generation During Session
+SOAP drafts are now generated incrementally every 90 seconds during live caption capture in the video room. Requires 10+ new captions since last generation to trigger. Draft is progressively refined as more transcript accumulates.
+
+- Timer starts 2 seconds after video room panel injection
+- Stops on session end detection or new video room entry
+- Each generation pulls current transcript, session notes, intake, diagnostics, treatment plan, and MSE
+- Draft saved to storage after each successful generation
+
+### New Patient Button
+Added "New Patient" button to popup UI. Clears all captured data (intake, diagnostics, treatment plan, MSE, SOAP draft, transcript, session notes) with a confirmation dialog. Ensures clean state between patients.
+
+### Session Data Isolation Fix
+Fixed critical bug where SOAP notes used previous session's data. Root cause: intake/diagnostics/MSE/SOAP draft are not scoped by appointment ID. Fix: `injectVideoNotePanel()` now tracks `videoRoomInitApptId` and clears stale session data (SOAP draft, MSE checklist, transcript, caption count) when entering a new video room.
 
 ### MSE Quick Check UI
 Collapsible pill-toggle checklist in the video notes panel for clinicians to tap MSE (Mental Status Exam) observations during session: appearance, behavior, speech, mood, affect, thought process/content, perceptions, cognition, insight, judgment. Auto-saves to session storage.
@@ -101,9 +157,11 @@ Both service workers poll their dist/ files every 1s. When a file size change is
 | `manifest.json` | Manifest V3, targets `*.simplepractice.com`, permissions for storage/alarms/sidePanel |
 | `src/lib/types.ts` | `IntakeData` (30+ fields), `AssessmentResult`/`AssessmentItem` (GAD-7/PHQ-9/C-SSRS), `MseChecklist`, `ProviderPreferences`, `ProgressNote`, `NoteStatus` |
 | `src/lib/storage.ts` | Session storage for PHI (1hr TTL), `mergeIntake()` for assessment data, MSE checklist CRUD, local storage for provider prefs |
-| `src/lib/ollama-client.ts` | Ollama HTTP client — health check, model availability, text generation |
-| `src/lib/soap-prompt.ts` | Builds system + user prompts from transcript, intake, diagnoses, treatment plan, MSE |
-| `src/lib/soap-generator.ts` | SOAP generation orchestrator — LLM-first with regex fallback |
+| `src/lib/ollama-client.ts` | Ollama HTTP client — NDJSON streaming, health check, model check, 5-min timeout |
+| `src/lib/soap-prompt.ts` | Builds system + user prompts with theme-based extraction methodology |
+| `src/lib/soap-generator.ts` | SOAP generation orchestrator — Groq → Ollama → regex fallback |
+| `src/lib/groq-client.ts` | Thin Groq API client (OpenAI-compatible, optional cloud provider) |
+| `scripts/test-soap-generation.mjs` | Standalone local runner for testing SOAP prompts against Ollama with real transcript samples |
 | `src/lib/diagnostic-engine.ts` | Intake-driven diagnostic scoring, criterion evaluation, and impression generation |
 | `src/lib/note-draft.ts` | Async draft-note generator that now pulls knowledge-backed formulation / treatment guidance |
 | `src/lib/clinical-knowledge.ts` | Corpus manifest/index loader plus lightweight search over bundled clinical references |
@@ -223,7 +281,7 @@ Chrome Extension (Manifest V3)
     └── Live diagnostic interview UI fed by transcript / diarization
 
 Local Server (localhost)
-├── Ollama (llama3.1:8b) — SOAP note generation, criteria matching
+├── Ollama (llama3.2:3b default, CPU-only) — SOAP note generation via NDJSON streaming
 ├── faster-whisper (transcription — future)
 └── whisperX (speaker diarization — future)
 ```

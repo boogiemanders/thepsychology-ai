@@ -146,6 +146,41 @@ function wait(ms: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, ms))
 }
 
+async function getCallerTabId(): Promise<number | null> {
+  try {
+    const [tab] = await chrome.tabs.query({ active: true, currentWindow: true })
+    return tab?.id ?? null
+  } catch {
+    return null
+  }
+}
+
+async function refocusTab(tabId: number | null): Promise<void> {
+  if (tabId == null) return
+  try {
+    await chrome.tabs.update(tabId, { active: true })
+  } catch {
+    // Tab may have closed.
+  }
+}
+
+/** Create a tab that's active long enough for SP to render, then refocus the caller. */
+async function createRenderableTab(url: string): Promise<{ tab: chrome.tabs.Tab; callerTabId: number | null }> {
+  const callerTabId = await getCallerTabId()
+  const tab = await chrome.tabs.create({ url, active: true })
+  // Wait for page load + give SP's Ember app time to render
+  if (tab.id) {
+    try {
+      await waitForTabComplete(tab.id)
+    } catch {
+      // Continue even if timeout — content script retries will handle it
+    }
+    await wait(1500)
+  }
+  await refocusTab(callerTabId)
+  return { tab, callerTabId }
+}
+
 function waitForTabComplete(tabId: number, timeoutMs = 15000): Promise<void> {
   return new Promise((resolve, reject) => {
     const timeout = setTimeout(() => {
@@ -193,7 +228,7 @@ async function sendMessageToTabWithRetries(
 
 async function discoverIntakeNoteUrlsViaTab(clientId: string): Promise<string[]> {
   const url = `https://secure.simplepractice.com/clients/${clientId}/intake_notes`
-  const tab = await chrome.tabs.create({ url, active: false })
+  const { tab } = await createRenderableTab(url)
 
   if (!tab.id) return []
 
@@ -221,7 +256,7 @@ async function discoverIntakeNoteUrlsViaTab(clientId: string): Promise<string[]>
 async function fetchIntakeViaTab(
   url: string
 ): Promise<{ intake: unknown }> {
-  const tab = await chrome.tabs.create({ url, active: false })
+  const { tab } = await createRenderableTab(url)
   if (!tab.id) return { intake: null }
 
   try {
@@ -257,7 +292,7 @@ async function fetchIntakeViaTab(
 async function fetchAssessmentViaTab(
   url: string
 ): Promise<{ type: string | null; assessment: unknown }> {
-  const tab = await chrome.tabs.create({ url, active: false })
+  const { tab } = await createRenderableTab(url)
   if (!tab.id) return { type: null, assessment: null }
 
   try {

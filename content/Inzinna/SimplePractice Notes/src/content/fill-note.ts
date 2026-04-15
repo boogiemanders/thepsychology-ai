@@ -1200,8 +1200,70 @@ function buildManualSocialHistorySentences(intake: IntakeData): string[] {
   return unique(sentences)
 }
 
+/**
+ * When structured intake fields are empty (e.g. DIPS forms with only consent Q&A),
+ * extract clinical content from the overview clinical note as a fallback.
+ * Filters out logistics (plan, fees, scheduling) and psychoeducation paragraphs.
+ */
+function extractClinicalFromOverviewNote(
+  note: string,
+  clientName: string,
+  pronouns: PronounForms,
+): { introParagraph: string; clinicalParagraphs: string[] } {
+  const clean = note
+    .replace(/^overview note \d+:\s*/gim, '')
+    .replace(/^\d+ min (?:phone )?consultation\s*/gim, '')
+    .trim()
+
+  if (!clean) return { introParagraph: '', clinicalParagraphs: [] }
+
+  const paragraphs = clean.split(/\n\n+/).map((p) => p.trim()).filter(Boolean)
+  const subject = capitalize(pronouns.subject)
+  // Clean the name: take just "First Last", strip any parenthetical or whitespace junk
+  const cleanName = clientName.replace(/\s*\(.*?\)/g, '').replace(/\s+/g, ' ').trim()
+
+  // Sentence-level skip patterns for logistics, psychoeducation, plan
+  const skipSentence = (s: string): boolean => {
+    const t = s.trim()
+    return /^plan\b/i.test(t) ||
+      /sliding scale/i.test(t) ||
+      /per session/i.test(t) ||
+      /paneled with/i.test(t) ||
+      /will look into/i.test(t) ||
+      /^psychoeducation was provided/i.test(t) ||
+      /^discussed introduction of/i.test(t) ||
+      /agreement for/i.test(t) ||
+      /until clinician/i.test(t) ||
+      /shared agreement/i.test(t)
+  }
+
+  // Filter sentences within each paragraph, then reassemble
+  const filterParagraph = (p: string): string => {
+    const sentences = p.split(/(?<=\.)\s+/)
+    return sentences.filter((s) => !skipSentence(s)).join(' ').trim()
+  }
+
+  // First paragraph is usually demographics — replace "Client" with clean name
+  const introRaw = paragraphs[0] ? filterParagraph(paragraphs[0]) : ''
+  const introParagraph = introRaw
+    .replace(/\bClient's\b/g, `${cleanName}'s`)
+    .replace(/\bClient\b/g, cleanName)
+
+  // Remaining paragraphs: filter sentences, replace "Client" with pronoun
+  const clinicalParagraphs = paragraphs.slice(1)
+    .map(filterParagraph)
+    .filter(Boolean)
+    .map((p) => p
+      .replace(/\bClient's\b/g, capitalize(pronouns.possessive))
+      .replace(/\bClient\b/g, subject)
+    )
+
+  return { introParagraph, clinicalParagraphs }
+}
+
 function buildChiefComplaintNarrative(intake: IntakeData): string {
-  const name = intake.fullName || [intake.firstName, intake.lastName].filter(Boolean).join(' ') || intake.firstName || 'Patient'
+  const rawName = intake.fullName || [intake.firstName, intake.lastName].filter(Boolean).join(' ') || intake.firstName || 'Patient'
+  const name = rawName.replace(/\s*\(.*?\)/g, '').replace(/\s+/g, ' ').trim()
   const age = calculateAge(intake.dob) || getManualAgeLabel(intake.manualNotes)
   const identity = buildIdentityDescriptor(intake)
   const pronouns = inferPronounForms(intake)
@@ -1245,39 +1307,83 @@ function buildChiefComplaintNarrative(intake: IntakeData): string {
     }
   }
 
+  // Fallback: if structured fields produced only the intro, use overview clinical note
+  if (sentences.length === 1 && intake.overviewClinicalNote?.trim()) {
+    const { introParagraph, clinicalParagraphs } = extractClinicalFromOverviewNote(
+      intake.overviewClinicalNote, name, pronouns
+    )
+    // Replace the thin intro with the richer overview note intro (has occupation, identity, etc.)
+    if (introParagraph) sentences[0] = introParagraph
+    if (clinicalParagraphs.length) sentences.push(...clinicalParagraphs)
+  }
+
   return sentences.join(' ')
 }
 
 function buildHistoryOfPresentIllnessText(intake: IntakeData): string {
   const pronouns = inferPronounForms(intake)
-  const sources = [
-    intake.historyOfPresentIllness,
-    intake.presentingProblems,
-    intake.chiefComplaint,
-    intake.counselingGoals ? `Goal: ${intake.counselingGoals}` : '',
-  ]
-    .map((value) => value.trim())
-    .filter(Boolean)
+  const hpi = intake.historyOfPresentIllness.trim()
+  const hpiLower = hpi.toLowerCase()
 
+  // When HPI is AI-enriched (long, multi-sentence), skip other sources whose
+  // content is already covered — prevents near-duplicate paragraphs
+  const isRedundant = (value: string): boolean => {
+    if (!hpi || hpi.length < 200) return false
+    const words = value.toLowerCase().replace(/[^a-z0-9\s]/g, '').split(/\s+/).filter((w) => w.length > 4)
+    if (words.length < 3) return false
+    const matchCount = words.filter((w) => hpiLower.includes(w)).length
+    return matchCount / words.length > 0.6
+  }
+
+  const candidateSources = [
+    intake.presentingProblems.trim(),
+    intake.chiefComplaint.trim(),
+    intake.counselingGoals ? `Goal: ${intake.counselingGoals}`.trim() : '',
+  ].filter((value) => Boolean(value) && !isRedundant(value))
+
+  const sources = [hpi, ...candidateSources].filter(Boolean)
+
+  const subject = capitalize(pronouns.subject)
   const sentences = unique(
     sources.map((value) => {
       if (/^goal:\s*/i.test(value)) {
         const goalText = smoothClinicalPhrase(value.replace(/^goal:\s*/i, '').replace(/^to\s+/i, '').trim(), pronouns)
         return goalText
-          ? `${capitalize(pronouns.subject)} stated that ${pronouns.subject} wants to ${lowerCaseFirst(goalText).replace(/[.]+$/, '')}.`
+          ? `${subject} stated that ${pronouns.subject} wants to ${lowerCaseFirst(goalText).replace(/[.]+$/, '')}.`
           : ''
       }
 
       if (/^i want to\b/i.test(value)) {
         const normalized = smoothClinicalPhrase(value.replace(/^i want to\b/i, '').trim(), pronouns)
-        return `${capitalize(pronouns.subject)} reported wanting to ${normalized.replace(/[.]+$/, '')}.`
+        return `${subject} reported wanting to ${normalized.replace(/[.]+$/, '')}.`
+      }
+
+      // If already in third-person clinical prose (from AI note), replace "Client" with pronoun
+      if (/\bClient\b/.test(value)) {
+        return value
+          .replace(/\bClient's\b/g, capitalize(pronouns.possessive))
+          .replace(/\bClient\b/g, subject)
       }
 
       return toReportedSpeech(value, pronouns)
     }).filter(Boolean)
   )
 
-  return unique([...sentences, ...buildManualHPISentences(intake)]).join(' ')
+  const hasStructuredSources = sources.length > 0
+
+  const result = unique([...sentences, ...buildManualHPISentences(intake)])
+
+  // Fallback: if no structured intake fields matched, use overview clinical note
+  console.log('[SPN] HPI fallback check:', { hasStructuredSources, overviewNoteLength: intake.overviewClinicalNote?.length ?? 0, resultSoFar: result.length })
+  if (!hasStructuredSources && intake.overviewClinicalNote?.trim()) {
+    const name = intake.fullName || [intake.firstName, intake.lastName].filter(Boolean).join(' ') || 'Patient'
+    const { clinicalParagraphs } = extractClinicalFromOverviewNote(
+      intake.overviewClinicalNote, name, pronouns
+    )
+    if (clinicalParagraphs.length) result.push(...clinicalParagraphs)
+  }
+
+  return result.join(' ')
 }
 
 type KeywordRule = {
@@ -2490,10 +2596,13 @@ function enrichIntakeFromSoapCopyArea(intake: IntakeData): void {
   const psych = psychMatch?.[1]?.trim() ?? ''
   const social = socialMatch?.[1]?.trim() ?? ''
 
-  // Enrich HPI: combine psychological section + subjective for richest narrative
-  const hpiCandidate = [psych, subjective].filter(Boolean).join(' ')
+  // Enrich HPI: assessment is the concise synthesis; bio adds medical context
+  // Skip psych/subjective — they overlap heavily with assessment and create repetition
+  const hpiCandidate = [assessment, bio].filter(Boolean).join(' ')
+  let usedAssessmentForHpi = false
   if (hpiCandidate && intake.historyOfPresentIllness.length < hpiCandidate.length) {
     intake.historyOfPresentIllness = hpiCandidate
+    usedAssessmentForHpi = true
   }
 
   // Enrich medical history from biological section
@@ -2514,7 +2623,8 @@ function enrichIntakeFromSoapCopyArea(intake: IntakeData): void {
   }
 
   // Enrich assessment/presenting problems from the Assessment section
-  if (assessment && intake.presentingProblems.length < assessment.length) {
+  // Skip if assessment was already used for HPI — avoids duplication in buildHistoryOfPresentIllnessText
+  if (assessment && !usedAssessmentForHpi && intake.presentingProblems.length < assessment.length) {
     intake.presentingProblems = assessment
   }
 
@@ -2534,6 +2644,19 @@ async function fillInitialClinicalEval(): Promise<void> {
   if (!intake) {
     showToast('No intake data captured. Go to the client\'s intake form and click "Capture Intake" first.', 'error')
     return
+  }
+
+  // Auto-click Note Taker if AI content isn't already visible
+  if (!document.querySelector('.ai-note-content')) {
+    const noteTakerBtn = document.querySelector<HTMLButtonElement>('button.note-taker')
+    if (noteTakerBtn) {
+      noteTakerBtn.click()
+      // Wait for SP to render the AI note content
+      const deadline = Date.now() + 5000
+      while (!document.querySelector('.ai-note-content') && Date.now() < deadline) {
+        await wait(300)
+      }
+    }
   }
 
   // Extract SimplePractice AI SOAP note if present on the page

@@ -13,12 +13,15 @@
         <div class="eyebrow">SimplePractice Notes</div>
         <h1 class="title">Diagnostic Impressions</h1>
       </div>
-      <button id="btn-refresh" class="icon-button" title="Refresh">↻</button>
+      <div class="header-actions">
+        <button id="btn-new-patient" class="button secondary" title="Clear all captured data for a new patient">New Patient</button>
+        <button id="btn-refresh" class="icon-button" title="Refresh">↻</button>
+      </div>
     </header>
 
     <div id="empty-state" class="empty-state">
       <p>No intake captured yet.</p>
-      <p class="hint">Capture intake and assessments first, then reopen Diagnostics.</p>
+      <p class="hint">Capture intake or overview prep first, then reopen Diagnostics.</p>
     </div>
 
     <main id="content" class="content" hidden>
@@ -28,11 +31,64 @@
       </section>
 
       <div class="panel-tabs">
-        <button id="tab-soap" class="tab active" data-panel="soap">SOAP Draft</button>
-        <button id="tab-diagnostics" class="tab" data-panel="diagnostics">Diagnostics</button>
+        <button id="tab-diagnostics" class="tab active" data-panel="diagnostics">Diagnostics</button>
+        <button id="tab-soap" class="tab" data-panel="soap">SOAP Draft</button>
+        <button id="tab-treatment-plan" class="tab" data-panel="treatment-plan">Treatment Plan</button>
+        <button id="tab-transcript" class="tab" data-panel="transcript">Transcript</button>
+        <button id="tab-supervision" class="tab" data-panel="supervision">Supervision</button>
       </div>
 
-      <section id="soap-panel" class="panel-section">
+      <section id="diagnostics-panel" class="panel-section">
+        <section class="card">
+          <div class="section-header">
+            <h2>Screening Scores</h2>
+          </div>
+          <div id="score-grid" class="score-grid"></div>
+        </section>
+
+        <section class="card">
+          <div class="section-header">
+            <h2>Overview Clinical Note</h2>
+          </div>
+          <div id="overview-note-reference" class="reference-block"></div>
+        </section>
+
+        <section class="card">
+          <div class="section-header">
+            <h2>Pinned Review Tabs</h2>
+          </div>
+          <div id="pinned-tabs" class="pinned-tabs"></div>
+        </section>
+
+        <section class="card">
+          <div class="section-header">
+            <h2>Diagnoses</h2>
+          </div>
+          <div class="diagnosis-search-wrap">
+            <input id="diagnosis-search" class="select" type="text" placeholder="Search diagnoses by name or ICD code..." autocomplete="off" />
+            <div id="diagnosis-dropdown" class="diagnosis-dropdown hidden"></div>
+          </div>
+          <div id="suggestion-list" class="suggestion-list"></div>
+        </section>
+
+        <section class="card">
+          <div class="section-header">
+            <h2>Active Checklist</h2>
+          </div>
+          <div id="active-review" class="active-review"></div>
+        </section>
+
+        <section class="card">
+          <div class="action-row">
+            <button id="btn-generate-summary" class="button primary">Generate Diagnostic Summary</button>
+            <button id="btn-write-note" class="button secondary">Write to Note Draft</button>
+          </div>
+          <div id="summary-status" class="summary-status"></div>
+          <div id="generated-summary" class="generated-summary"></div>
+        </section>
+      </section>
+
+      <section id="soap-panel" class="panel-section" hidden>
         <section class="card">
           <div class="action-row">
             <button id="btn-generate-soap" class="button primary">Regenerate SOAP</button>
@@ -76,46 +132,12 @@
         </section>
       </section>
 
-      <section id="diagnostics-panel" class="panel-section" hidden>
+      <section id="treatment-plan-panel" class="panel-section" hidden>
         <section class="card">
           <div class="section-header">
-            <h2>Screening Scores</h2>
+            <h2>Treatment Plan Reference</h2>
           </div>
-          <div id="score-grid" class="score-grid"></div>
-        </section>
-
-        <section class="card">
-          <div class="section-header">
-            <h2>Pinned Review Tabs</h2>
-          </div>
-          <div id="pinned-tabs" class="pinned-tabs"></div>
-        </section>
-
-        <section class="card">
-          <div class="section-header">
-            <h2>Diagnoses</h2>
-          </div>
-          <div class="add-row">
-            <select id="add-diagnosis-select" class="select"></select>
-            <button id="btn-add-diagnosis" class="button secondary">Add Diagnosis</button>
-          </div>
-          <div id="suggestion-list" class="suggestion-list"></div>
-        </section>
-
-        <section class="card">
-          <div class="section-header">
-            <h2>Active Checklist</h2>
-          </div>
-          <div id="active-review" class="active-review"></div>
-        </section>
-
-        <section class="card">
-          <div class="action-row">
-            <button id="btn-generate-summary" class="button primary">Generate Diagnostic Summary</button>
-            <button id="btn-write-note" class="button secondary">Write to Note Draft</button>
-          </div>
-          <div id="summary-status" class="summary-status"></div>
-          <div id="generated-summary" class="generated-summary"></div>
+          <div id="treatment-plan-reference" class="reference-block"></div>
         </section>
 
         <section class="card">
@@ -124,6 +146,60 @@
           </div>
           <div id="guidance-status" class="summary-status"></div>
           <div id="knowledge-guidance" class="knowledge-guidance"></div>
+        </section>
+      </section>
+
+      <section id="transcript-panel" class="panel-section" hidden>
+        <section class="card">
+          <div class="section-header">
+            <h2>Session Transcript</h2>
+            <div class="transcript-actions">
+              <span id="transcript-count" class="transcript-count"></span>
+              <button id="btn-copy-transcript" class="button secondary">Copy</button>
+              <button id="btn-refresh-transcript" class="icon-button" title="Refresh">↻</button>
+            </div>
+          </div>
+          <div id="transcript-status" class="summary-status"></div>
+          <div id="transcript-entries" class="transcript-entries"></div>
+        </section>
+      </section>
+
+      <section id="supervision-panel" class="panel-section" hidden>
+        <section class="card">
+          <p class="supervision-disclaimer">A thinking aid to help you prepare for supervision. Not a substitute for clinical supervision. Nothing here is shared with your supervisor unless you choose to share it.</p>
+          <div class="action-row">
+            <button id="btn-generate-supervision" class="button primary">Generate Supervision Prep</button>
+            <button id="btn-copy-supervision" class="button secondary">Copy</button>
+          </div>
+          <div id="supervision-status" class="summary-status">Click "Generate Supervision Prep" to create a supervision agenda from current session data.</div>
+        </section>
+
+        <section class="card">
+          <div class="section-header">
+            <h2>Case Summary</h2>
+          </div>
+          <div id="supervision-case-summary" class="supervision-block"></div>
+        </section>
+
+        <section class="card">
+          <div class="section-header">
+            <h2>Discussion Questions</h2>
+          </div>
+          <div id="supervision-discussion-questions" class="supervision-block"></div>
+        </section>
+
+        <section class="card">
+          <div class="section-header">
+            <h2>Blind Spot Flags</h2>
+          </div>
+          <div id="supervision-blind-spot-flags" class="supervision-block"></div>
+        </section>
+
+        <section class="card">
+          <div class="section-header">
+            <h2>Modality Prompts</h2>
+          </div>
+          <div id="supervision-modality-prompts" class="supervision-block"></div>
         </section>
       </section>
     </main>

@@ -1,4 +1,5 @@
-import { DSM5_DISORDER_MAP } from '../data/dsm5-criteria'
+import { DSM5_DISORDER_MAP, DSM5_DISORDERS } from '../data/dsm5-criteria'
+import { DSM5_DIAGNOSES_V2 } from '../data/dsm5-criteria-v2'
 import {
   buildDiagnosticImpressions,
   findSuggestion,
@@ -9,29 +10,36 @@ import {
   getOverride,
 } from '../lib/diagnostic-engine'
 import { buildClinicalGuidance, ClinicalGuidance } from '../lib/clinical-guidance'
+import { generateSupervisionPrep } from '../lib/supervision-generator'
 import { buildDraftNote } from '../lib/note-draft'
 import { buildSoapDraft } from '../lib/soap-builder'
 import {
+  clearAll,
   getDiagnosticWorkspace,
   getIntake,
+  getMseChecklist,
   getNote,
   getPreferences,
   getSessionNotes,
   getSoapDraft,
+  getSupervisionPrep,
   getTranscript,
   getTreatmentPlan,
   saveDiagnosticWorkspace,
   saveNote,
   saveSoapDraft,
+  saveSupervisionPrep,
 } from '../lib/storage'
 import {
   CriterionEvaluation,
   CriterionMatchStatus,
   DiagnosticWorkspaceState,
+  DSM5DisorderDefinition,
   EMPTY_DIAGNOSTIC_WORKSPACE,
   IntakeData,
   ProgressNote,
   SoapDraft,
+  TranscriptEntry,
   TreatmentPlanData,
 } from '../lib/types'
 
@@ -47,7 +55,7 @@ function formatDate(iso: string): string {
   })
 }
 
-let activePanel: 'soap' | 'diagnostics' = 'soap'
+let activePanel: 'soap' | 'diagnostics' | 'treatment-plan' | 'transcript' | 'supervision' = 'diagnostics'
 
 async function getActiveTab(): Promise<chrome.tabs.Tab | null> {
   const [tab] = await chrome.tabs.query({ active: true, currentWindow: true })
@@ -97,6 +105,50 @@ function escapeHtml(value: string): string {
     .replaceAll("'", '&#39;')
 }
 
+function deduplicateTranscript(entries: TranscriptEntry[]): TranscriptEntry[] {
+  if (entries.length === 0) return []
+  const norm = (t: string) => t.toLowerCase().replace(/[.,!?;:]+$/, '').trim()
+  const result: TranscriptEntry[] = []
+  let cur = entries[0]
+  for (let i = 1; i < entries.length; i++) {
+    const e = entries[i]
+    if (e.speaker === cur.speaker && norm(e.text).startsWith(norm(cur.text))) {
+      cur = e
+    } else {
+      result.push(cur)
+      cur = e
+    }
+  }
+  result.push(cur)
+  return result
+}
+
+function renderTranscriptEntries(entries: TranscriptEntry[]): string {
+  if (!entries.length) return '<div class="empty-copy">No captions captured yet.</div>'
+  return entries
+    .map((e) => {
+      const label =
+        e.speaker === 'clinician' ? 'Clinician' : e.speaker === 'client' ? 'Client' : 'Unknown'
+      const time = e.timestamp ? formatDate(e.timestamp) : ''
+      return `<div class="transcript-entry ${e.speaker}">
+      <span class="transcript-speaker">${label}</span>${time ? `<span class="transcript-time">${escapeHtml(time)}</span>` : ''}
+      <div class="transcript-text">${escapeHtml(e.text)}</div>
+    </div>`
+    })
+    .join('')
+}
+
+function formatTranscriptForClipboard(entries: TranscriptEntry[]): string {
+  return entries
+    .map((e) => {
+      const speaker =
+        e.speaker === 'clinician' ? 'Clinician' : e.speaker === 'client' ? 'Client' : 'Unknown'
+      const time = e.timestamp ? ` [${formatDate(e.timestamp)}]` : ''
+      return `${speaker}${time}: ${e.text}`
+    })
+    .join('\n\n')
+}
+
 function firstNonEmpty(...values: Array<string | null | undefined>): string {
   for (const value of values) {
     const trimmed = value?.trim()
@@ -140,6 +192,10 @@ function buildSessionNotesReference(notes: string): string {
   return notes.trim() || 'No session notes saved for this appointment yet.'
 }
 
+function buildOverviewNoteReference(note: string): string {
+  return note.trim() || 'No overview clinical note captured yet. Open the client overview page and click "Capture Overview Prep".'
+}
+
 function setSoapTextareaValue(id: string, value: string): void {
   const el = document.getElementById(id) as HTMLTextAreaElement | null
   if (el) el.value = value
@@ -178,18 +234,52 @@ function setSoapStatus(message: string): void {
   if (el) el.textContent = message
 }
 
-function switchPanel(panel: 'soap' | 'diagnostics'): void {
+function clearDiagnosticUi(): void {
+  const setHtml = (id: string, html: string): void => {
+    const el = document.getElementById(id)
+    if (el) el.innerHTML = html
+  }
+
+  const setText = (id: string, text: string): void => {
+    const el = document.getElementById(id)
+    if (el) el.textContent = text
+  }
+
+  setHtml('score-grid', '<div class="empty-copy">No intake captured yet.</div>')
+  setText('overview-note-reference', buildOverviewNoteReference(''))
+  setHtml('pinned-tabs', '<div class="empty-copy">Capture intake first to review diagnoses.</div>')
+  setHtml('suggestion-list', '<div class="empty-copy">Capture intake first to see diagnostic suggestions.</div>')
+  setHtml('active-review', '<div class="empty-copy">Capture intake first to review diagnostic criteria.</div>')
+  setHtml('generated-summary', '<div class="empty-copy">No diagnostic summary generated yet.</div>')
+  setText('summary-status', 'Capture intake first to generate a diagnostic summary.')
+  setHtml('knowledge-guidance', '<div class="empty-copy">No formulation or treatment-plan support generated yet.</div>')
+  setText('guidance-status', 'Capture intake first to generate formulation and treatment guidance.')
+
+  const searchInput = document.getElementById('diagnosis-search') as HTMLInputElement | null
+  if (searchInput) {
+    searchInput.value = ''
+    searchInput.disabled = true
+    searchInput.placeholder = 'Capture intake first.'
+  }
+
+  // Clear supervision
+  setText('supervision-case-summary', '')
+  setHtml('supervision-discussion-questions', '')
+  setHtml('supervision-blind-spot-flags', '')
+  setHtml('supervision-modality-prompts', '')
+  setText('supervision-status', 'Click "Generate Supervision Prep" to create a supervision agenda from current session data.')
+}
+
+function switchPanel(panel: 'soap' | 'diagnostics' | 'treatment-plan' | 'transcript' | 'supervision'): void {
   activePanel = panel
 
-  const soapPanel = document.getElementById('soap-panel')
-  const diagnosticsPanel = document.getElementById('diagnostics-panel')
-  const soapTab = document.getElementById('tab-soap')
-  const diagnosticsTab = document.getElementById('tab-diagnostics')
-
-  if (soapPanel) soapPanel.hidden = panel !== 'soap'
-  if (diagnosticsPanel) diagnosticsPanel.hidden = panel !== 'diagnostics'
-  soapTab?.classList.toggle('active', panel === 'soap')
-  diagnosticsTab?.classList.toggle('active', panel === 'diagnostics')
+  const panels = ['soap', 'diagnostics', 'treatment-plan', 'transcript', 'supervision']
+  for (const p of panels) {
+    const panelEl = document.getElementById(`${p}-panel`)
+    const tabEl = document.getElementById(`tab-${p}`)
+    if (panelEl) panelEl.hidden = p !== panel
+    tabEl?.classList.toggle('active', p === panel)
+  }
 }
 
 function statusLabel(status: CriterionMatchStatus): string {
@@ -300,6 +390,22 @@ function buildScoreCards(intake: IntakeData): string {
           <div class="score-subtext">No C-SSRS assessment in session storage.</div>
         </div>
       `,
+    intake.dass21
+      ? `
+        <div class="score-card">
+          <div class="score-label">DASS-21</div>
+          <div class="score-value">${intake.dass21.totalScore}</div>
+          <div class="score-subtext">${escapeHtml(intake.dass21.severity || 'Summary unavailable')}</div>
+          <div class="score-subtext">${escapeHtml(intake.dass21.difficulty || 'No DASS detail captured')}</div>
+        </div>
+      `
+      : `
+        <div class="score-card">
+          <div class="score-label">DASS-21</div>
+          <div class="score-value">Not captured</div>
+          <div class="score-subtext">No DASS-21 assessment in session storage.</div>
+        </div>
+      `,
   ]
 
   return cards.join('')
@@ -316,10 +422,12 @@ function renderPinnedTabs(
   return workspace.pinnedDisorderIds
     .map((disorderId) => {
       const disorder = DSM5_DISORDER_MAP[disorderId]
-      if (!disorder) return ''
+      const v2 = !disorder ? DSM5_DIAGNOSES_V2.find((d) => d.id === disorderId) : null
+      const name = disorder?.name ?? v2?.name
+      if (!name) return ''
       return `
         <button class="tab ${activeDisorderId === disorderId ? 'active' : ''}" data-action="activate-tab" data-disorder-id="${disorderId}">
-          ${escapeHtml(disorder.name)}
+          ${escapeHtml(name)}
         </button>
       `
     })
@@ -419,7 +527,19 @@ function renderActiveReview(
 
   const suggestion = findSuggestion(getDiagnosticSuggestions(intake), activeDisorderId)
   const disorder = suggestion ? DSM5_DISORDER_MAP[suggestion.disorderId] : null
-  if (!suggestion || !disorder) {
+
+  // v2-only disorder: show criteria text instead of structured checklist
+  if (!disorder) {
+    const v2 = DSM5_DIAGNOSES_V2.find((d) => d.id === activeDisorderId)
+    if (!v2) return '<div class="empty-copy">The selected diagnosis is no longer available.</div>'
+    const code = v2.icd10Code ? ` (${v2.icd10Code})` : ''
+    return `
+      <div class="criterion-group">${escapeHtml(v2.name)}${code}</div>
+      <div class="diagnosis-notes" style="white-space:pre-wrap;font-size:12px;margin-top:8px;padding:10px;background:var(--neutral-bg);border-radius:6px;">${escapeHtml(v2.criteriaText)}</div>
+    `
+  }
+
+  if (!suggestion) {
     return '<div class="empty-copy">The selected diagnosis is no longer available.</div>'
   }
 
@@ -764,6 +884,100 @@ async function fillSoapDraftIntoPage(): Promise<void> {
   setSoapStatus(response?.error ?? 'Unable to fill the SOAP form. Open the progress note tab first.')
 }
 
+function renderSupervisionPrep(prep: Awaited<ReturnType<typeof getSupervisionPrep>>): void {
+  const caseSummaryEl = document.getElementById('supervision-case-summary')
+  const questionsEl = document.getElementById('supervision-discussion-questions')
+  const blindSpotsEl = document.getElementById('supervision-blind-spot-flags')
+  const modalityEl = document.getElementById('supervision-modality-prompts')
+  const statusEl = document.getElementById('supervision-status')
+
+  if (!prep) {
+    if (caseSummaryEl) caseSummaryEl.textContent = ''
+    if (questionsEl) questionsEl.innerHTML = ''
+    if (blindSpotsEl) blindSpotsEl.innerHTML = ''
+    if (modalityEl) modalityEl.innerHTML = ''
+    if (statusEl) statusEl.textContent = 'Click "Generate Supervision Prep" to create a supervision agenda from current session data.'
+    return
+  }
+
+  if (caseSummaryEl) caseSummaryEl.textContent = prep.caseSummary || 'No case summary generated.'
+  if (questionsEl) questionsEl.innerHTML = renderBulletList(prep.discussionQuestions)
+  if (blindSpotsEl) blindSpotsEl.innerHTML = renderBulletList(prep.blindSpotFlags)
+  if (modalityEl) modalityEl.innerHTML = renderBulletList(prep.modalityPrompts)
+  if (statusEl) statusEl.textContent = `Generated ${formatDate(prep.generatedAt)} (${prep.generationMethod})`
+}
+
+function renderBulletList(items: string[]): string {
+  if (!items?.length) return '<div class="empty-copy">None generated.</div>'
+  return `<ul>${items.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul>`
+}
+
+async function generateAndSaveSupervisionPrep(): Promise<void> {
+  const statusEl = document.getElementById('supervision-status')
+  if (statusEl) statusEl.textContent = 'Generating supervision prep...'
+
+  const intake = await getIntake()
+  const workspace = await getDiagnosticWorkspace()
+  const treatmentPlan = await getTreatmentPlan()
+  const prefs = await getPreferences()
+  const apptCtx = await detectApptContext()
+  const soapDraft = await getSoapDraft()
+  const sessionNotes = apptCtx.isAppt
+    ? (await getSessionNotes(apptCtx.apptId))?.notes ?? soapDraft?.sessionNotes ?? ''
+    : (soapDraft?.sessionNotes ?? '')
+  const transcript = apptCtx.isAppt ? await getTranscript(apptCtx.apptId) : null
+  const mseChecklist = await getMseChecklist()
+  const diagnosticImpressions = workspace?.finalizedImpressions ?? []
+
+  try {
+    const prep = await generateSupervisionPrep(
+      sessionNotes,
+      transcript,
+      treatmentPlan,
+      intake,
+      diagnosticImpressions,
+      mseChecklist,
+      prefs
+    )
+    await saveSupervisionPrep(prep)
+    renderSupervisionPrep(prep)
+  } catch (err) {
+    if (statusEl) statusEl.textContent = `Generation failed: ${err instanceof Error ? err.message : String(err)}`
+  }
+}
+
+async function copySupervisionToClipboard(): Promise<void> {
+  const prep = await getSupervisionPrep()
+  if (!prep) return
+
+  const lines: string[] = []
+  if (prep.caseSummary) {
+    lines.push('CASE SUMMARY', prep.caseSummary, '')
+  }
+  if (prep.discussionQuestions.length) {
+    lines.push('DISCUSSION QUESTIONS')
+    prep.discussionQuestions.forEach((q, i) => lines.push(`${i + 1}. ${q}`))
+    lines.push('')
+  }
+  if (prep.blindSpotFlags.length) {
+    lines.push('BLIND SPOT FLAGS')
+    prep.blindSpotFlags.forEach((f, i) => lines.push(`${i + 1}. ${f}`))
+    lines.push('')
+  }
+  if (prep.modalityPrompts.length) {
+    lines.push('MODALITY PROMPTS')
+    prep.modalityPrompts.forEach((p, i) => lines.push(`${i + 1}. ${p}`))
+  }
+
+  await navigator.clipboard.writeText(lines.join('\n'))
+  const btn = document.getElementById('btn-copy-supervision')
+  if (btn) {
+    const original = btn.textContent
+    btn.textContent = 'Copied!'
+    setTimeout(() => { btn.textContent = original }, 1500)
+  }
+}
+
 async function render(): Promise<void> {
   const intake = await getIntake()
   let workspace = await getDiagnosticWorkspace()
@@ -773,13 +987,16 @@ async function render(): Promise<void> {
   const sessionNotes = apptCtx.isAppt
     ? (await getSessionNotes(apptCtx.apptId))?.notes ?? soapDraft?.sessionNotes ?? ''
     : (soapDraft?.sessionNotes ?? '')
+  const transcript = apptCtx.isAppt ? await getTranscript(apptCtx.apptId) : null
 
   const emptyState = document.getElementById('empty-state')!
   const content = document.getElementById('content')!
   const diagnosticsTab = document.getElementById('tab-diagnostics') as HTMLButtonElement | null
-  const hasSoapContext = !!soapDraft || !!treatmentPlan || !!sessionNotes || apptCtx.isAppt
+  const treatmentPlanTab = document.getElementById('tab-treatment-plan') as HTMLButtonElement | null
+  const hasSoapContext = !!soapDraft || !!treatmentPlan || !!sessionNotes || !!transcript
 
   if (!intake && !hasSoapContext) {
+    clearDiagnosticUi()
     emptyState.hidden = false
     content.hidden = true
     return
@@ -809,8 +1026,17 @@ async function render(): Promise<void> {
   setSoapTextareaValue('soap-objective', soapDraft?.objective ?? '')
   setSoapTextareaValue('soap-assessment', soapDraft?.assessment ?? '')
   setSoapTextareaValue('soap-plan', soapDraft?.plan ?? '')
-  document.getElementById('soap-treatment-plan')!.textContent = buildTreatmentPlanReference(treatmentPlan)
+  const treatmentPlanReference = buildTreatmentPlanReference(treatmentPlan)
+  document.getElementById('soap-treatment-plan')!.textContent = treatmentPlanReference
+  const treatmentPlanRef = document.getElementById('treatment-plan-reference')
+  if (treatmentPlanRef) {
+    treatmentPlanRef.textContent = treatmentPlanReference
+  }
   document.getElementById('soap-session-notes')!.textContent = buildSessionNotesReference(sessionNotes)
+  const overviewNoteRef = document.getElementById('overview-note-reference')
+  if (overviewNoteRef) {
+    overviewNoteRef.textContent = buildOverviewNoteReference(intake?.overviewClinicalNote ?? '')
+  }
 
   if (!soapDraft) {
     if (!treatmentPlan) {
@@ -824,10 +1050,36 @@ async function render(): Promise<void> {
     setSoapStatus(`Draft updated ${formatDate(soapDraft.editedAt || soapDraft.generatedAt)}`)
   }
 
+  // ── Transcript panel ──
+  const transcriptEntriesEl = document.getElementById('transcript-entries')
+  const transcriptCountEl = document.getElementById('transcript-count')
+  const transcriptStatusEl = document.getElementById('transcript-status')
+  if (transcriptEntriesEl && transcriptCountEl && transcriptStatusEl) {
+    if (!transcript || transcript.entries.length === 0) {
+      transcriptEntriesEl.innerHTML =
+        '<div class="empty-copy">No captions captured yet. Start a video session with captions enabled.</div>'
+      transcriptCountEl.textContent = ''
+      transcriptStatusEl.textContent = apptCtx.isAppt
+        ? 'Listening for captions…'
+        : 'Open a video appointment to capture transcript.'
+    } else {
+      const deduped = deduplicateTranscript(transcript.entries)
+      transcriptEntriesEl.innerHTML = renderTranscriptEntries(deduped)
+      transcriptCountEl.textContent = `${deduped.length} entries`
+      transcriptStatusEl.textContent = `Last updated ${formatDate(transcript.updatedAt)} · ${transcript.entries.length} raw → ${deduped.length} deduped`
+    }
+  }
+
+  // ── Supervision panel ──
+  const supervisionPrep = await getSupervisionPrep()
+  renderSupervisionPrep(supervisionPrep)
+
   if (!intake) {
+    clearDiagnosticUi()
     if (diagnosticsTab) diagnosticsTab.disabled = true
+    if (treatmentPlanTab) treatmentPlanTab.disabled = false
     if (activePanel === 'diagnostics') {
-      switchPanel('soap')
+      switchPanel(treatmentPlan ? 'treatment-plan' : 'soap')
     } else {
       switchPanel(activePanel)
     }
@@ -835,6 +1087,7 @@ async function render(): Promise<void> {
   }
 
   if (diagnosticsTab) diagnosticsTab.disabled = false
+  if (treatmentPlanTab) treatmentPlanTab.disabled = false
 
   const suggestions = getDiagnosticSuggestions(intake)
   const staleFinalizedImpressions = workspace?.finalizedImpressions.length
@@ -871,13 +1124,12 @@ async function render(): Promise<void> {
     ? `Knowledge support is using the finalized diagnostic summary and current intake evidence.`
     : 'Knowledge support is using provisional intake-driven diagnoses until a summary is finalized.'
 
-  const addSelect = document.getElementById('add-diagnosis-select') as HTMLSelectElement
-  const options = getAvailableDiagnosisOptions(workspace)
-  addSelect.innerHTML = options.length
-    ? options.map((disorder) => `<option value="${disorder.id}">${escapeHtml(disorder.name)}</option>`).join('')
-    : '<option value="">All 15 diagnoses are already pinned.</option>'
-  addSelect.disabled = options.length === 0
-  ;(document.getElementById('btn-add-diagnosis') as HTMLButtonElement).disabled = options.length === 0
+  const searchInput = document.getElementById('diagnosis-search') as HTMLInputElement
+  const availableOptions = getAvailableDiagnosisOptions(workspace)
+  searchInput.disabled = false
+  searchInput.placeholder = availableOptions.length
+    ? 'Search diagnoses by name or ICD code...'
+    : 'All diagnoses are already pinned.'
 
   switchPanel(activePanel)
 }
@@ -912,8 +1164,6 @@ document.addEventListener('click', async (event) => {
 document.addEventListener('change', async (event) => {
   const target = event.target as HTMLElement | null
   if (!target) return
-
-  if (target.id === 'add-diagnosis-select') return
 
   if (target instanceof HTMLSelectElement && target.dataset.role === 'criterion-status') {
     const disorderId = target.dataset.disorderId
@@ -973,12 +1223,203 @@ document.getElementById('btn-refresh')?.addEventListener('click', () => {
   render()
 })
 
-document.getElementById('btn-add-diagnosis')?.addEventListener('click', async () => {
-  const select = document.getElementById('add-diagnosis-select') as HTMLSelectElement
-  if (!select.value) return
-  await pinDiagnosis(select.value)
+document.getElementById('btn-new-patient')?.addEventListener('click', async () => {
+  if (!confirm('Clear all captured data for a new patient?')) return
+  await clearAll()
+  activePanel = 'diagnostics'
   await render()
 })
+
+// ── Diagnosis Search Autocomplete ──
+
+// Unified search item for both v1 (detailed criteria) and v2 (full DSM catalog)
+type SearchableDiagnosis = {
+  id: string
+  name: string
+  chapter: string
+  codes: string[]
+  hasDetailedCriteria: boolean
+}
+
+function buildSearchableDiagnoses(): SearchableDiagnosis[] {
+  const seen = new Set<string>()
+  const items: SearchableDiagnosis[] = []
+
+  // v1 disorders first (they have full criterion checklists)
+  for (const d of DSM5_DISORDERS) {
+    seen.add(d.id)
+    items.push({ id: d.id, name: d.name, chapter: d.chapter, codes: d.icd10Codes, hasDetailedCriteria: true })
+  }
+
+  // v2 disorders that aren't already in v1
+  for (const d of DSM5_DIAGNOSES_V2) {
+    if (seen.has(d.id)) continue
+    seen.add(d.id)
+    items.push({ id: d.id, name: d.name, chapter: d.chapter, codes: d.icd10Code ? [d.icd10Code] : [], hasDetailedCriteria: false })
+  }
+
+  return items
+}
+
+const ALL_DIAGNOSES = buildSearchableDiagnoses()
+
+function getSuggestedDiagnosisIds(intake: IntakeData): Set<string> {
+  const corpus = [
+    intake.chiefComplaint,
+    intake.presentingProblems,
+    intake.historyOfPresentIllness,
+    intake.counselingGoals,
+    intake.recentSymptoms,
+    intake.additionalSymptoms,
+    intake.additionalInfo,
+    intake.manualNotes,
+    intake.overviewClinicalNote,
+    intake.spSoapNote,
+    ...(intake.rawQA ?? []).map((qa) => `${qa.question} ${qa.answer}`),
+  ].join(' ').toLowerCase()
+
+  if (!corpus.trim()) return new Set()
+
+  const ids = new Set<string>()
+
+  // Check v1 disorders (have keyword data)
+  for (const disorder of DSM5_DISORDERS) {
+    const nameWords = disorder.name.toLowerCase().split(/\s+/)
+    if (nameWords.some((w) => w.length > 3 && corpus.includes(w))) {
+      ids.add(disorder.id)
+      continue
+    }
+    const hasKeywordMatch = disorder.criteria.some((c) =>
+      c.keywords?.some((kw) => corpus.includes(kw.toLowerCase()))
+    )
+    if (hasKeywordMatch) ids.add(disorder.id)
+  }
+
+  // Check v2 disorders by name fragments
+  for (const d of DSM5_DIAGNOSES_V2) {
+    if (ids.has(d.id)) continue
+    const nameWords = d.name.toLowerCase().split(/[\s()/-]+/)
+    if (nameWords.some((w) => w.length > 4 && corpus.includes(w))) {
+      ids.add(d.id)
+    }
+  }
+
+  return ids
+}
+
+;(function initDiagnosisSearch() {
+  const searchInput = document.getElementById('diagnosis-search') as HTMLInputElement
+  const dropdown = document.getElementById('diagnosis-dropdown') as HTMLElement
+  let activeIndex = -1
+  let currentItems: SearchableDiagnosis[] = []
+
+  function showDropdown(items: SearchableDiagnosis[], intake: IntakeData | null) {
+    currentItems = items
+    activeIndex = -1
+    if (items.length === 0) {
+      dropdown.innerHTML = '<div class="diagnosis-dropdown-empty">No matches found.</div>'
+      dropdown.classList.remove('hidden')
+      return
+    }
+
+    const suggestedIds = intake ? getSuggestedDiagnosisIds(intake) : new Set<string>()
+
+    dropdown.innerHTML = items.slice(0, 30).map((d, i) => {
+      const codes = d.codes.slice(0, 3).join(', ')
+      const suggested = suggestedIds.has(d.id) ? '<span class="dx-suggested">suggested</span>' : ''
+      const detailed = d.hasDetailedCriteria ? '' : '<span class="dx-code"> (criteria only)</span>'
+      return `<div class="diagnosis-dropdown-item${i === activeIndex ? ' active' : ''}" data-index="${i}" data-id="${d.id}">` +
+        `<span class="dx-name">${escapeHtml(d.name)}</span>` +
+        `<span class="dx-code">${codes}</span>` +
+        suggested + detailed +
+        `</div>`
+    }).join('')
+    dropdown.classList.remove('hidden')
+  }
+
+  function hideDropdown() {
+    dropdown.classList.add('hidden')
+    activeIndex = -1
+  }
+
+  async function selectItem(id: string) {
+    searchInput.value = ''
+    hideDropdown()
+    await pinDiagnosis(id)
+    await render()
+  }
+
+  searchInput.addEventListener('input', async () => {
+    const query = searchInput.value.trim().toLowerCase()
+    const workspace = await getDiagnosticWorkspace()
+    const pinned = new Set(workspace?.pinnedDisorderIds ?? [])
+    const intake = await getIntake()
+
+    // Filter out already-pinned from full catalog
+    const available = ALL_DIAGNOSES.filter((d) => !pinned.has(d.id))
+
+    if (!query) {
+      const suggestedIds = intake ? getSuggestedDiagnosisIds(intake) : new Set<string>()
+      const suggested = available.filter((d) => suggestedIds.has(d.id))
+      if (suggested.length) {
+        showDropdown(suggested, intake)
+      } else {
+        showDropdown(available.slice(0, 15), intake)
+      }
+      return
+    }
+
+    const filtered = available.filter((d) => {
+      const nameMatch = d.name.toLowerCase().includes(query)
+      const codeMatch = d.codes.some((c) => c.toLowerCase().includes(query))
+      const chapterMatch = d.chapter.toLowerCase().includes(query)
+      return nameMatch || codeMatch || chapterMatch
+    })
+    showDropdown(filtered, intake)
+  })
+
+  searchInput.addEventListener('focus', () => {
+    // Trigger the input handler to show suggestions on focus
+    searchInput.dispatchEvent(new Event('input'))
+  })
+
+  searchInput.addEventListener('keydown', (e) => {
+    if (dropdown.classList.contains('hidden')) return
+
+    if (e.key === 'ArrowDown') {
+      e.preventDefault()
+      activeIndex = Math.min(activeIndex + 1, currentItems.length - 1)
+      updateActiveItem()
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault()
+      activeIndex = Math.max(activeIndex - 1, 0)
+      updateActiveItem()
+    } else if (e.key === 'Enter' && activeIndex >= 0 && currentItems[activeIndex]) {
+      e.preventDefault()
+      selectItem(currentItems[activeIndex].id)
+    } else if (e.key === 'Escape') {
+      hideDropdown()
+    }
+  })
+
+  function updateActiveItem() {
+    dropdown.querySelectorAll('.diagnosis-dropdown-item').forEach((el, i) => {
+      el.classList.toggle('active', i === activeIndex)
+      if (i === activeIndex) el.scrollIntoView({ block: 'nearest' })
+    })
+  }
+
+  dropdown.addEventListener('click', (e) => {
+    const item = (e.target as HTMLElement).closest<HTMLElement>('.diagnosis-dropdown-item')
+    if (item?.dataset.id) selectItem(item.dataset.id)
+  })
+
+  document.addEventListener('click', (e) => {
+    if (!(e.target as HTMLElement).closest('.diagnosis-search-wrap')) {
+      hideDropdown()
+    }
+  })
+})()
 
 document.getElementById('btn-generate-summary')?.addEventListener('click', async () => {
   await generateSummary(false)
@@ -998,6 +1439,37 @@ document.getElementById('tab-diagnostics')?.addEventListener('click', () => {
   switchPanel('diagnostics')
 })
 
+document.getElementById('tab-treatment-plan')?.addEventListener('click', () => {
+  const tab = document.getElementById('tab-treatment-plan') as HTMLButtonElement | null
+  if (tab?.disabled) return
+  switchPanel('treatment-plan')
+})
+
+document.getElementById('tab-transcript')?.addEventListener('click', () => {
+  switchPanel('transcript')
+})
+
+document.getElementById('btn-copy-transcript')?.addEventListener('click', async () => {
+  const apptCtx = await detectApptContext()
+  const transcript = apptCtx.isAppt ? await getTranscript(apptCtx.apptId) : null
+  if (!transcript || transcript.entries.length === 0) return
+  const deduped = deduplicateTranscript(transcript.entries)
+  const text = formatTranscriptForClipboard(deduped)
+  await navigator.clipboard.writeText(text)
+  const btn = document.getElementById('btn-copy-transcript')
+  if (btn) {
+    const original = btn.textContent
+    btn.textContent = 'Copied!'
+    setTimeout(() => {
+      btn.textContent = original
+    }, 1500)
+  }
+})
+
+document.getElementById('btn-refresh-transcript')?.addEventListener('click', () => {
+  render()
+})
+
 document.getElementById('btn-generate-soap')?.addEventListener('click', async () => {
   await regenerateSoapDraftFromSavedNotes()
 })
@@ -1011,6 +1483,18 @@ document.getElementById('btn-save-soap')?.addEventListener('click', async () => 
 
 document.getElementById('btn-fill-soap')?.addEventListener('click', async () => {
   await fillSoapDraftIntoPage()
+})
+
+document.getElementById('tab-supervision')?.addEventListener('click', () => {
+  switchPanel('supervision')
+})
+
+document.getElementById('btn-generate-supervision')?.addEventListener('click', async () => {
+  await generateAndSaveSupervisionPrep()
+})
+
+document.getElementById('btn-copy-supervision')?.addEventListener('click', async () => {
+  await copySupervisionToClipboard()
 })
 
 chrome.storage.onChanged.addListener(() => render())
