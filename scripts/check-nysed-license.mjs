@@ -171,19 +171,41 @@ async function checkLicense() {
     // Step 3: Fill name
     console.log(`Entering name: ${name}`);
     const nameField = page.locator("#searchInput");
-    await nameField.waitFor({ state: "visible", timeout: 5000 });
-    await nameField.click();
-    await nameField.fill(name);
+    // Wait longer and scroll into view — the field may be hidden until dropdowns are set
+    await page.waitForTimeout(1500);
+    await nameField.scrollIntoViewIfNeeded().catch(() => {});
+    await nameField.waitFor({ state: "attached", timeout: 10000 });
+    // Use JS to force-fill in case the element is CSS-hidden by the Vue form
+    await page.evaluate((val) => {
+      const el = document.querySelector("#searchInput");
+      if (el) {
+        el.removeAttribute("style");
+        el.style.display = "block";
+        el.style.visibility = "visible";
+        el.value = val;
+        el.dispatchEvent(new Event("input", { bubbles: true }));
+        el.dispatchEvent(new Event("change", { bubbles: true }));
+      }
+    }, name);
+    await page.waitForTimeout(300);
     await page.waitForTimeout(300);
 
     // Step 4: Click GO
     console.log("Clicking GO...");
     const goBtn = page.locator("#goButton");
+    // Wait up to 5s for enabled, but proceed regardless
     await page.waitForFunction(() => {
       const btn = document.querySelector("#goButton");
       return btn && !btn.disabled;
-    }, { timeout: 5000 });
-    await goBtn.click();
+    }, { timeout: 5000 }).catch(() => {
+      console.log("GO button still disabled — clicking anyway via JS");
+    });
+    // Use JS click to bypass disabled state if needed
+    await page.evaluate(() => {
+      const btn = document.querySelector("#goButton");
+      if (btn) btn.removeAttribute("disabled");
+    });
+    await goBtn.click({ force: true });
 
     // Wait for API response
     console.log("Waiting for results...\n");
