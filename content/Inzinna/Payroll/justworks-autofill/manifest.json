@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Inzinna JW Autofill",
+  "version": "1.0.0",
+  "description": "Calculate clinician pay from SimplePractice CSV and autofill JustWorks time cards",
+  "permissions": ["storage", "activeTab"],
+  "host_permissions": [
+    "https://*.justworks.com/*"
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "assets/icons/icon16.png",
+      "48": "assets/icons/icon48.png",
+      "128": "assets/icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background/service-worker.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.justworks.com/*"],
+      "js": ["content/justworks.js"],
+      "css": ["content/content.css"]
+    }
+  ],
+  "icons": {
+    "16": "assets/icons/icon16.png",
+    "48": "assets/icons/icon48.png",
+    "128": "assets/icons/icon128.png"
+  }
+}

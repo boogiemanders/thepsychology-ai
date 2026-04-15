@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head><title>Generate JW Payroll Icons</title></head>
+<body>
+<canvas id="c128" width="128" height="128"></canvas>
+<canvas id="c48" width="48" height="48"></canvas>
+<canvas id="c16" width="16" height="16"></canvas>
+<script>
+function draw(canvas) {
+  const s = canvas.width;
+  const ctx = canvas.getContext('2d');
+
+  // Background
+  ctx.fillStyle = '#4f46e5';
+  const r = s * 0.15;
+  ctx.beginPath();
+  ctx.roundRect(0, 0, s, s, r);
+  ctx.fill();
+
+  // Dollar sign
+  ctx.fillStyle = '#ffffff';
+  ctx.font = `bold ${s * 0.55}px -apple-system, sans-serif`;
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillText('$', s / 2, s / 2 + s * 0.02);
+
+  // Small arrow (autofill indicator)
+  const ax = s * 0.78;
+  const ay = s * 0.22;
+  const as = s * 0.12;
+  ctx.strokeStyle = '#a5f3fc';
+  ctx.lineWidth = Math.max(1, s * 0.03);
+  ctx.lineCap = 'round';
+  ctx.beginPath();
+  ctx.moveTo(ax - as, ay);
+  ctx.lineTo(ax + as, ay);
+  ctx.lineTo(ax, ay + as);
+  ctx.stroke();
+}
+
+['c128', 'c48', 'c16'].forEach(id => {
+  const canvas = document.getElementById(id);
+  draw(canvas);
+
+  const link = document.createElement('a');
+  link.download = `icon${canvas.width}.png`;
+  link.href = canvas.toDataURL();
+  link.textContent = `Download ${canvas.width}x${canvas.width}`;
+  document.body.appendChild(link);
+  document.body.appendChild(document.createElement('br'));
+});
+</script>
+</body>
+</html>

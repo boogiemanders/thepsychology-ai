@@ -14,6 +14,7 @@ interface ProjectNode {
   status: 'live' | 'beta' | 'dev' | 'soon'
   tags: string[]
   icon: React.ReactNode
+  group?: 'inzinna'
 }
 
 interface RadialOrbitalTimelineProps {
@@ -47,21 +48,28 @@ function formatClusterChildLabel(position: number, childIndex: number) {
 // Derive 3 orbital entries from the flat project list:
 // a license leaf, a psychologist-tools cluster, and a creative leaf.
 type OrbitalEntry =
-  | { kind: 'leaf'; id: string; label: string; project: ProjectNode }
-  | { kind: 'cluster'; id: string; label: string; children: ProjectNode[] }
+  | { kind: 'leaf'; id: string; label: string; project: ProjectNode; displayNum?: number }
+  | { kind: 'cluster'; id: string; label: string; children: ProjectNode[]; displayNum?: number }
 
 function buildEntries(projects: ProjectNode[]): OrbitalEntry[] {
   const license = projects.find(p => p.category === 'getting-licensed')
   const practice = projects.filter(p => p.category === 'clinical-practice')
-  const creative = projects.find(p => p.category === 'creative')
+  const inzinnaTools = practice.filter(p => p.group === 'inzinna')
+  const otherTools = practice.filter(p => p.group !== 'inzinna')
+  const creativeProjects = projects.filter(p => p.category === 'creative')
   const dental = projects.find(p => p.category === 'dental')
 
   const entries: OrbitalEntry[] = []
-  if (license) entries.push({ kind: 'leaf', id: 'license', label: license.title, project: license })
-  if (practice.length)
-    entries.push({ kind: 'cluster', id: 'practice', label: 'Psychologist Tools', children: practice })
-  if (creative) entries.push({ kind: 'leaf', id: 'creative', label: creative.title, project: creative })
-  if (dental) entries.push({ kind: 'leaf', id: 'dental', label: dental.title, project: dental })
+  if (license) entries.push({ kind: 'leaf', id: 'license', label: license.title, project: license, displayNum: 1 })
+  if (otherTools.length)
+    entries.push({ kind: 'cluster', id: 'practice', label: 'Psychologist Tools', children: otherTools, displayNum: 2 })
+  if (inzinnaTools.length)
+    entries.push({ kind: 'cluster', id: 'inzinna', label: 'Inzinna', children: inzinnaTools, displayNum: 2 })
+  if (creativeProjects.length === 1)
+    entries.push({ kind: 'leaf', id: 'creative', label: creativeProjects[0].title, project: creativeProjects[0], displayNum: 3 })
+  else if (creativeProjects.length > 1)
+    entries.push({ kind: 'cluster', id: 'creative', label: 'Creative', children: creativeProjects, displayNum: 3 })
+  if (dental) entries.push({ kind: 'leaf', id: 'dental', label: dental.title, project: dental, displayNum: 4 })
   return entries
 }
 
@@ -256,7 +264,7 @@ export default function RadialOrbitalTimeline({ projects }: RadialOrbitalTimelin
             {entry.kind === 'leaf' ? (
               <LeafNode
                 entry={entry}
-                position={index + 1}
+                position={entry.displayNum ?? index + 1}
                 isActive={isLeafActive}
                 onClick={(e) => {
                   e.stopPropagation()
@@ -266,7 +274,7 @@ export default function RadialOrbitalTimeline({ projects }: RadialOrbitalTimelin
             ) : (
               <ClusterNode
                 entry={entry}
-                position={index + 1}
+                position={entry.displayNum ?? index + 1}
                 isOpen={isClusterOpen}
                 activeChildId={activeChildId}
                 onTap={(e) => {
@@ -425,7 +433,7 @@ function ClusterNode({
         {/* Header */}
         <div className="px-5 pt-4 pb-3 border-b border-zinc-200/70 dark:border-zinc-800/70">
           <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-zinc-400 dark:text-zinc-500">
-            Psychologist Tools
+            {entry.label}
           </p>
         </div>
 

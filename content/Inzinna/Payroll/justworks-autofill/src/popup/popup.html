@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup">
+    <h1>Payroll Autofill</h1>
+    <p class="subtitle">SimplePractice CSV &rarr; JustWorks</p>
+
+    <div id="upload-section">
+      <label for="csv-input" class="upload-label">
+        <span class="upload-icon">+</span>
+        <span>Drop CSV or click to upload</span>
+      </label>
+      <input type="file" id="csv-input" accept=".csv" />
+    </div>
+
+    <div id="results-section" class="hidden">
+      <div id="summary-header">
+        <h2>Pay Period Summary</h2>
+        <button id="clear-btn" class="btn-small">Clear</button>
+      </div>
+
+      <div id="clinician-list"></div>
+
+      <div id="bret-section" class="bret-calc hidden">
+        <h3>Bret Boatwright -- Full Calc</h3>
+        <div id="bret-details"></div>
+      </div>
+
+      <div class="actions">
+        <button id="send-to-justworks" class="btn-primary">
+          Send to JustWorks
+        </button>
+        <button id="copy-json" class="btn-secondary">
+          Copy JSON
+        </button>
+      </div>
+    </div>
+
+    <div id="status" class="hidden"></div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
