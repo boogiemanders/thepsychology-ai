@@ -1,4 +1,5 @@
 import type { PayrollResultWithHours, JustWorksFillData } from '../lib/types'
+import { formatShortDate } from '../lib/date-utils'
 
 let panel: HTMLElement | null = null
 let currentResult: PayrollResultWithHours | null = null
@@ -222,11 +223,6 @@ function mapInputsToDays(
   })
 
   return pairs
-}
-
-function formatShortDate(dateStr: string): string {
-  const parts = dateStr.split('/')
-  return `${parseInt(parts[0])}/${parseInt(parts[1])}`  // "4/6" from "04/06/2026"
 }
 
 // -- Panel UI --

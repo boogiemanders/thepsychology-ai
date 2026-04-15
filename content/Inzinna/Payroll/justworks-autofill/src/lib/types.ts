@@ -59,11 +59,14 @@ export interface PayrollResult {
 
 export type ClinicianType = 'flat' | 'cpt_based' | 'payer_dependent'
 
+export type ManualAdditionKind = 'didactic' | 'fusion'
+
 export interface FlatConfig {
   type: 'flat'
   rate: number
   noShow?: Record<string, number>
   supervision?: Record<string, number>
+  manualRates?: Partial<Record<ManualAdditionKind, number>>
 }
 
 export interface CptBasedConfig {
@@ -73,12 +76,14 @@ export interface CptBasedConfig {
   overrides?: Record<string, number>
   noShow?: Record<string, number>
   supervision?: Record<string, number>
+  manualRates?: Partial<Record<ManualAdditionKind, number>>
 }
 
 export interface PayerDependentConfig {
   type: 'payer_dependent'
   note: string
   noShow?: Record<string, number>
+  manualRates?: Partial<Record<ManualAdditionKind, number>>
 }
 
 export type ClinicianConfig = FlatConfig | CptBasedConfig | PayerDependentConfig

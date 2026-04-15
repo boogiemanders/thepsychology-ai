@@ -148,13 +148,91 @@ export function calculatePayrollWithHours(rows: SessionRow[]): PayrollResultWith
 }
 
 /**
+ * Apply a manual hours+rate addition to a clinician after-the-fact.
+ * Used for things like didactic/fusion that aren't in the SimplePractice CSV.
+ *
+ * The date (MM/DD/YYYY) determines where the hours land in the daily breakdown
+ * -- if a matching day exists, minutes are merged; otherwise a new day is inserted.
+ * Without a correct date, JustWorks can't place the hours in the right column.
+ *
+ * Returns a new result with the clinician's sessionPay, rows, and fillData updated.
+ */
+export function applyManualAddition(
+  result: PayrollResultWithHours,
+  clinicianName: string,
+  hours: number,
+  rate: number,
+  label: string,
+  date: string
+): PayrollResultWithHours {
+  if (hours <= 0 || rate <= 0 || !date) return result
+
+  const clone: PayrollResultWithHours = JSON.parse(JSON.stringify(result))
+  const clinician = clone.clinicians.find(c => c.name === clinicianName)
+  const fill = clone.fillData.find(f => f.clinicianName === clinicianName)
+  if (!clinician || !fill) return result
+
+  const addedMinutes = Math.round(hours * 60)
+  const addedPay = Math.round(hours * rate * 100) / 100
+
+  clinician.sessionPay += addedPay
+  clinician.sessionCount += 1
+  clinician.rows.push({
+    date,
+    client: label,
+    code: label.toUpperCase(),
+    pay: addedPay,
+    supervisionValue: 0,
+    durationMinutes: addedMinutes,
+  })
+
+  // Strip old nudge from the last day (where it was applied by the initial calc)
+  if (fill.minuteAdjustment !== 0 && fill.dailyBreakdown.length > 0) {
+    fill.dailyBreakdown[fill.dailyBreakdown.length - 1].totalMinutes -= fill.minuteAdjustment
+  }
+
+  // Merge into existing day if date matches, else insert + resort
+  const existing = fill.dailyBreakdown.find(d => d.date === date)
+  if (existing) {
+    existing.totalMinutes += addedMinutes
+    existing.sessionCount += 1
+  } else {
+    fill.dailyBreakdown.push({
+      date,
+      dayOfWeek: getDayOfWeek(date),
+      totalMinutes: addedMinutes,
+      sessionCount: 1,
+    })
+    fill.dailyBreakdown.sort((a, b) => parseDate(a.date).getTime() - parseDate(b.date).getTime())
+  }
+
+  // Recompute from clean totals
+  const newRawMinutes = fill.dailyBreakdown.reduce((s, d) => s + d.totalMinutes, 0)
+  const newTotalPay = Math.round((fill.totalPay + addedPay) * 100) / 100
+
+  const { adjustedRate, finalMinutes, nudge } = findExactMatch(newTotalPay, newRawMinutes)
+
+  fill.totalPay = newTotalPay
+  fill.totalMinutes = finalMinutes
+  fill.adjustedHourlyRate = adjustedRate
+  fill.minuteAdjustment = nudge
+
+  // Apply new nudge to last day
+  if (nudge !== 0) {
+    fill.dailyBreakdown[fill.dailyBreakdown.length - 1].totalMinutes += nudge
+  }
+
+  return clone
+}
+
+/**
  * Find rate + minute nudge where rate * (minutes/60) = totalPay exactly.
  *
  * Math: we need rateCents * minutes = totalPay * 6000 (all integers).
  * Search outward from rawMinutes for a divisor that works.
  * Tries +/-30 minutes and both floor/ceil rounding on rate.
  */
-function findExactMatch(totalPay: number, rawMinutes: number): {
+export function findExactMatch(totalPay: number, rawMinutes: number): {
   adjustedRate: number
   finalMinutes: number
   nudge: number

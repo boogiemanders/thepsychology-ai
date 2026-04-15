@@ -1,4 +1,4 @@
-import type { ClinicianConfig, PayResult } from './types'
+import type { ClinicianConfig, PayResult, ManualAdditionKind } from './types'
 
 /**
  * Billing code -> session duration in minutes.
@@ -40,6 +40,7 @@ export const legend: Record<string, ClinicianConfig> = {
     rates: { '90791': 75, '90837': 75 },
     default: 50,
     noShow: { '00001': 40, '00002': 40 },
+    manualRates: { didactic: 75 },
   },
   'Bret Boatwright': {
     type: 'payer_dependent',
@@ -70,11 +71,13 @@ export const legend: Record<string, ClinicianConfig> = {
   'Isabelle Feinstein': {
     type: 'flat',
     rate: 50,
+    noShow: { '00001': 25, '00002': 25 },
     supervision: {
       '90791': 160, '90837': 140, '90834': 120, '90846': 120,
       '90847': 120, '90832': 70,
       '96132': 93.53, '96138': 93.53, '96139': 93.53,
     },
+    manualRates: { fusion: 50 },
   },
   'Joelle Gill': {
     type: 'flat',
@@ -84,7 +87,7 @@ export const legend: Record<string, ClinicianConfig> = {
   'Karen Terry': {
     type: 'cpt_based',
     rates: { '90791': 80, '90837': 75, '90834': 65, '90847': 65, '90832': 40 },
-    noShow: {},
+    noShow: { '00001': 40, '00002': 40 },
     supervision: {
       '90791': 160, '90837': 140, '90834': 120,
       '90847': 120, '90832': 70,
@@ -100,7 +103,22 @@ export const legend: Record<string, ClinicianConfig> = {
   'Rachel Beyer': {
     type: 'flat',
     rate: 50,
+    noShow: { '00001': 25, '00002': 25 },
+    manualRates: { fusion: 50 },
   },
+}
+
+/**
+ * Look up the rate for a manual addition (didactic, fusion).
+ * Returns null if no rate is configured for that clinician + kind.
+ */
+export function getManualRate(
+  clinicianName: string,
+  kind: ManualAdditionKind
+): number | null {
+  const cfg = legend[clinicianName]
+  if (!cfg) return null
+  return cfg.manualRates?.[kind] ?? null
 }
 
 /**
