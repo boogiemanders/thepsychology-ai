@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { DentalExtractorForm } from './form'
+import { ProcessVisual } from './process-visual'
 
 export const metadata: Metadata = {
   title: 'Dental Figure Extractor | thePsychology.ai',
@@ -32,6 +33,9 @@ export default function DentalPage() {
           on its own slide, captions included. Move them into your study decks.
         </p>
       </div>
+
+      {/* Process visual */}
+      <ProcessVisual />
 
       {/* How it works */}
       <div className="border-t border-zinc-200 dark:border-zinc-800 pt-6 mb-8">
