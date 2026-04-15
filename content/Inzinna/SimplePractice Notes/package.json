@@ -6,7 +6,8 @@
     "extract:dsm": "bash ./scripts/extract-dsm-pages.sh",
     "extract:clinical-knowledge": "python3 ./scripts/extract-clinical-knowledge.py",
     "build": "node build.mjs",
-    "watch": "node build.mjs --watch"
+    "watch": "node build.mjs --watch",
+    "test:llm-diagnostic": "npx tsx scripts/test-llm-diagnostic.ts"
   },
   "devDependencies": {
     "@types/chrome": "^0.0.287",

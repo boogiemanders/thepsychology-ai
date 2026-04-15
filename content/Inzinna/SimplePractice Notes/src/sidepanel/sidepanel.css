@@ -829,3 +829,50 @@ body {
 .supervision-block li {
   margin-bottom: 4px;
 }
+
+.section-subtitle {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.llm-criteria-details {
+  margin: 8px 0;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 6px 8px;
+  background: var(--surface-muted, rgba(124, 58, 237, 0.04));
+}
+
+.llm-criteria-details summary {
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.criterion-row {
+  display: grid;
+  grid-template-columns: 20px auto 1fr;
+  gap: 6px;
+  align-items: start;
+  padding: 6px 0;
+  border-top: 1px dashed var(--border);
+}
+
+.criterion-row:first-of-type {
+  border-top: 0;
+}
+
+.criterion-letter {
+  font-weight: 700;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.criterion-evidence-inline {
+  grid-column: 2 / -1;
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}

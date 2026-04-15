@@ -10,6 +10,7 @@ import {
   getOverride,
 } from '../lib/diagnostic-engine'
 import { buildClinicalGuidance, ClinicalGuidance } from '../lib/clinical-guidance'
+import { getLLMDiagnosticSuggestions, type LLMDiagnosticSuggestion } from '../lib/diagnostic-llm'
 import { generateSupervisionPrep } from '../lib/supervision-generator'
 import { buildDraftNote } from '../lib/note-draft'
 import { buildSoapDraft } from '../lib/soap-builder'
@@ -56,6 +57,11 @@ function formatDate(iso: string): string {
 }
 
 let activePanel: 'soap' | 'diagnostics' | 'treatment-plan' | 'transcript' | 'supervision' = 'diagnostics'
+
+// LLM suggestions are ephemeral per panel session — regenerate on demand.
+let llmSuggestions: LLMDiagnosticSuggestion[] | null = null
+let llmStatus = ''
+let llmGenerating = false
 
 async function getActiveTab(): Promise<chrome.tabs.Tab | null> {
   const [tab] = await chrome.tabs.query({ active: true, currentWindow: true })
@@ -467,6 +473,114 @@ function renderSuggestionList(
       `
     })
     .join('')
+}
+
+function statusPillLabel(status: 'met' | 'likely' | 'unclear' | 'not_met'): string {
+  switch (status) {
+    case 'met': return 'Met'
+    case 'likely': return 'Likely'
+    case 'unclear': return 'Unclear'
+    case 'not_met': return 'Not met'
+  }
+}
+
+function renderLLMSuggestionList(workspace: DiagnosticWorkspaceState | null): string {
+  if (llmGenerating) {
+    return '<div class="empty-copy">Generating — pass 1 picks candidates, pass 2 evaluates DSM-5-TR criteria. Takes ~30s.</div>'
+  }
+  if (!llmSuggestions) {
+    return '<div class="empty-copy">Click Generate to run the two-pass RAG diagnostic suggester.</div>'
+  }
+  if (!llmSuggestions.length) {
+    return '<div class="empty-copy">LLM returned no candidates — check console.</div>'
+  }
+
+  return llmSuggestions
+    .map((suggestion) => {
+      const pinned = workspace?.pinnedDisorderIds.includes(suggestion.disorderId) ?? false
+      const code = suggestion.code ? ` · ${escapeHtml(suggestion.code)}` : ''
+      const ruleOuts = suggestion.ruleOuts.length
+        ? `<div class="suggestion-meta"><strong>Rule-outs:</strong> ${escapeHtml(suggestion.ruleOuts.join('; '))}</div>`
+        : ''
+      const criteriaRows = suggestion.criteriaEval
+        .map(
+          (c) => `
+            <div class="criterion-row">
+              <span class="criterion-letter">${escapeHtml(c.letter || '?')}</span>
+              <span class="pill status ${c.status}">${statusPillLabel(c.status)}</span>
+              <span class="criterion-text">${escapeHtml(c.criterionText)}</span>
+              ${c.evidence ? `<div class="criterion-evidence-inline"><em>${escapeHtml(c.evidence)}</em></div>` : ''}
+            </div>
+          `
+        )
+        .join('')
+      return `
+        <article class="suggestion-card">
+          <div class="suggestion-top">
+            <div>
+              <div class="suggestion-name">${escapeHtml(suggestion.disorderName)}</div>
+              <div class="suggestion-meta">${escapeHtml(suggestion.chapter)}${code}</div>
+            </div>
+            <span class="pill ${suggestion.confidence}">${suggestion.confidence.toUpperCase()}</span>
+          </div>
+          <div class="suggestion-reason">${escapeHtml(suggestion.reasoning)}</div>
+          ${ruleOuts}
+          <details class="llm-criteria-details">
+            <summary>Criterion-by-criterion (${suggestion.criteriaEval.length})</summary>
+            ${criteriaRows}
+          </details>
+          <div class="suggestion-actions">
+            <button class="button ${pinned ? 'secondary' : 'primary'}" data-action="${pinned ? 'unpin' : 'pin'}" data-disorder-id="${suggestion.disorderId}">
+              ${pinned ? 'Unpin' : 'Pin diagnosis'}
+            </button>
+          </div>
+        </article>
+      `
+    })
+    .join('')
+}
+
+async function generateLLMSuggestions(): Promise<void> {
+  if (llmGenerating) return
+  const intake = await getIntake()
+  if (!intake) {
+    llmStatus = 'Capture intake first.'
+    await render()
+    return
+  }
+  const prefs = await getPreferences()
+  if (!prefs.openaiApiKey) {
+    llmStatus = 'No OpenAI API key in settings — open the popup and paste one.'
+    await render()
+    return
+  }
+
+  llmGenerating = true
+  llmStatus = 'Calling OpenAI (pass 1 of 2)...'
+  await render()
+
+  try {
+    const started = Date.now()
+    const suggestions = await getLLMDiagnosticSuggestions(intake, {
+      apiKey: prefs.openaiApiKey,
+      model: prefs.openaiModel || 'gpt-4o-mini',
+      onProgress: (msg) => {
+        llmStatus = msg
+        // Fire and forget — don't await inside onProgress.
+        void render()
+      },
+    })
+    const elapsed = ((Date.now() - started) / 1000).toFixed(1)
+    llmSuggestions = suggestions
+    llmStatus = `${suggestions.length} suggestions in ${elapsed}s.`
+  } catch (err) {
+    console.error('[SPN] LLM diagnostic failed:', err)
+    llmStatus = `Failed: ${err instanceof Error ? err.message : String(err)}`
+    llmSuggestions = null
+  } finally {
+    llmGenerating = false
+    await render()
+  }
 }
 
 function renderCriterionCard(
@@ -1110,6 +1224,14 @@ async function render(): Promise<void> {
   document.getElementById('score-grid')!.innerHTML = buildScoreCards(intake)
   document.getElementById('pinned-tabs')!.innerHTML = renderPinnedTabs(workspace, activeDisorderId)
   document.getElementById('suggestion-list')!.innerHTML = renderSuggestionList(intake, workspace, activeDisorderId)
+  document.getElementById('llm-suggestion-list')!.innerHTML = renderLLMSuggestionList(workspace)
+  const llmStatusEl = document.getElementById('llm-suggestion-status')
+  if (llmStatusEl) llmStatusEl.textContent = llmStatus
+  const llmGenBtn = document.getElementById('btn-generate-llm-suggestions') as HTMLButtonElement | null
+  if (llmGenBtn) {
+    llmGenBtn.disabled = llmGenerating
+    llmGenBtn.textContent = llmGenerating ? 'Generating…' : llmSuggestions ? 'Regenerate' : 'Generate'
+  }
   document.getElementById('active-review')!.innerHTML = renderActiveReview(intake, workspace, activeDisorderId)
   document.getElementById('generated-summary')!.innerHTML = renderGeneratedSummary(workspace)
   document.getElementById('knowledge-guidance')!.innerHTML = renderGuidance(guidance)
@@ -1141,6 +1263,11 @@ document.addEventListener('click', async (event) => {
   const actionTarget = target.closest<HTMLElement>('[data-action]')
   const action = actionTarget?.dataset.action
   const disorderId = actionTarget?.dataset.disorderId
+
+  if (action === 'generate-llm-suggestions') {
+    await generateLLMSuggestions()
+    return
+  }
 
   if (action === 'pin' && disorderId) {
     await pinDiagnosis(disorderId)

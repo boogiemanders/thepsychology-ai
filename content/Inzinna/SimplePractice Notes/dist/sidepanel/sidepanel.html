@@ -73,6 +73,16 @@
 
         <section class="card">
           <div class="section-header">
+            <h2>AI Suggestions</h2>
+            <button id="btn-generate-llm-suggestions" class="button primary" data-action="generate-llm-suggestions">Generate</button>
+          </div>
+          <div class="section-subtitle">DSM-5-TR differential from LLM (two-pass RAG). Requires OpenAI key in settings.</div>
+          <div id="llm-suggestion-status" class="summary-status"></div>
+          <div id="llm-suggestion-list" class="suggestion-list"></div>
+        </section>
+
+        <section class="card">
+          <div class="section-header">
             <h2>Active Checklist</h2>
           </div>
           <div id="active-review" class="active-review"></div>

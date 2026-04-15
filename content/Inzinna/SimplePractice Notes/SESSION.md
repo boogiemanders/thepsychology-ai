@@ -7,6 +7,28 @@ A standalone Chrome extension (Manifest V3) for Inzinna's clinical workflow. It 
 
 ## Where We Left Off
 
+### Two-Pass RAG Diagnostic Suggester (built 2026-04-15, not yet committed)
+
+**Why:** Rules engine (`diagnostic-engine.ts`) failed on real David Barayev case — missed Erectile Disorder (not in v1's 15 disorders), false-positive PTSD moderate, false-positive MDD moderate, 8+ noise dx. LLM with no grounding hallucinated "6 months" criteria. Solution: RAG using `dsm5-criteria-v2.ts` (161 disorders) as ground truth.
+
+**How:** Two-pass LLM pipeline in `src/lib/diagnostic-llm.ts`:
+1. Pass 1: de-identified intake + 161-disorder roster (id/name/chapter/icd10) → LLM returns 3-5 candidate IDs (JSON).
+2. Pass 2: verbatim `criteriaText` for those candidates → LLM returns criterion-by-criterion met/likely/unclear/not_met + 1-sentence evidence (JSON).
+3. `reidentify()` on output.
+
+Entry point: `getLLMDiagnosticSuggestions(intake, { apiKey, model?, onProgress? })`. Rules engine stays intact (accurate for PHQ-9/GAD-7 scoring).
+
+**Sidepanel:** new "AI Suggestions" card under Diagnostics. Generate button calls the engine (~30s, ~$0.002/patient on gpt-4o-mini). Each suggestion has a Pin button that writes to the same `pinnedDisorderIds` as rules. Criterion-by-criterion evaluations live in a collapsible `<details>`.
+
+**Validated (David Barayev, 2026-04-15):** Erectile Disorder F52.21, GAD F41.1, MDD, Adjustment Disorders. Zero PTSD. Zero duration hallucinations (LLM correctly flagged 4mo < 6mo for ED).
+
+**Test:** `OPENAI_API_KEY=sk-... npm run test:llm-diagnostic` (uses David fixture in `scripts/test-llm-diagnostic.ts`).
+
+**Still TODO:**
+- Live Chrome test: load extension, Capture Intake, open sidepanel, click Generate under AI Suggestions, verify pin writes to workspace.
+- Consider persisting LLM results to `chrome.storage.session` so reopening sidepanel doesn't re-cost $0.002 (currently ephemeral in module state).
+- Pre-existing TS strict errors in `diagnostic-engine.ts` lines 916/938 and `sidepanel.ts` line 212 — unrelated to this work, esbuild builds clean.
+
 ### OpenAI-Powered ICE Enrichment (committed 2026-04-14, prompt v2 2026-04-15)
 
 **LLM ICE field routing:** `enrichIntakeFromSoapCopyArea()` in `fill-note.ts` sends SP's AI note sections + prior intake data to OpenAI (gpt-4o-mini) for structured extraction into ICE fields. PHI is de-identified before sending via `deidentify()` and re-identified on return. Returns JSON with: chiefComplaint, hpiNarrative, medicalHistory, socialContext, presentingProblems, mse. Falls back to regex enrichment if no OpenAI API key is configured.

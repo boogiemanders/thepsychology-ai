@@ -5104,167 +5104,6 @@
     return guidanceCache.get(key);
   }
 
-  // src/lib/ollama-client.ts
-  var DEFAULT_ENDPOINT = "http://localhost:11434";
-  var GENERATE_TIMEOUT_MS = 3e5;
-  function buildOllamaErrorMessage(status, endpoint, details = "") {
-    if (status === 403) {
-      return [
-        `Ollama blocked this Chrome extension at ${endpoint}.`,
-        "Allow browser-extension origins by setting",
-        "OLLAMA_ORIGINS=chrome-extension://*,moz-extension://*,safari-web-extension://*",
-        "and restart Ollama."
-      ].join(" ");
-    }
-    if (status === null) {
-      return `Could not reach Ollama at ${endpoint}. Make sure Ollama is running and listening on that URL.`;
-    }
-    const suffix = details ? ` ${details}` : "";
-    return `Ollama returned ${status} at ${endpoint}.${suffix}`.trim();
-  }
-  async function diagnoseOllamaEndpoint(endpoint = DEFAULT_ENDPOINT) {
-    try {
-      const res = await fetch(`${endpoint}/api/tags`, { signal: AbortSignal.timeout(5e3) });
-      if (res.ok) {
-        return { ok: true, status: res.status };
-      }
-      const text = await res.text().catch(() => "");
-      return {
-        ok: false,
-        status: res.status,
-        error: buildOllamaErrorMessage(res.status, endpoint, text.slice(0, 200))
-      };
-    } catch {
-      return {
-        ok: false,
-        status: null,
-        error: buildOllamaErrorMessage(null, endpoint)
-      };
-    }
-  }
-  async function checkOllamaHealth(endpoint = DEFAULT_ENDPOINT) {
-    const diagnostic = await diagnoseOllamaEndpoint(endpoint);
-    return diagnostic.ok;
-  }
-  async function generateCompletion(prompt, system, model, endpoint = DEFAULT_ENDPOINT) {
-    const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), GENERATE_TIMEOUT_MS);
-    try {
-      const res = await fetch(`${endpoint}/api/generate`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          model,
-          prompt,
-          system,
-          stream: true,
-          options: {
-            temperature: 0.2,
-            num_predict: 4096,
-            num_ctx: 16384
-          }
-        }),
-        signal: controller.signal
-      });
-      if (!res.ok) {
-        const text = await res.text().catch(() => "");
-        throw new Error(buildOllamaErrorMessage(res.status, endpoint, text.slice(0, 200)));
-      }
-      const reader = res.body?.getReader();
-      if (!reader) throw new Error("No response body from Ollama");
-      const decoder = new TextDecoder();
-      let fullResponse = "";
-      while (true) {
-        const { done, value } = await reader.read();
-        if (done) break;
-        const text = decoder.decode(value, { stream: true });
-        for (const line of text.split("\n")) {
-          if (!line.trim()) continue;
-          try {
-            const chunk = JSON.parse(line);
-            fullResponse += chunk.response;
-            if (chunk.done) return fullResponse;
-          } catch {
-          }
-        }
-      }
-      return fullResponse;
-    } finally {
-      clearTimeout(timeoutId);
-    }
-  }
-
-  // src/lib/openai-client.ts
-  var OPENAI_API_URL = "https://api.openai.com/v1/chat/completions";
-  var GENERATE_TIMEOUT_MS2 = 12e4;
-  async function checkOpenAIHealth(apiKey) {
-    if (!apiKey) return false;
-    try {
-      const res = await fetch("https://api.openai.com/v1/models", {
-        headers: { Authorization: `Bearer ${apiKey}` },
-        signal: AbortSignal.timeout(5e3)
-      });
-      return res.ok;
-    } catch {
-      return false;
-    }
-  }
-  async function generateOpenAICompletion(prompt, system, model, apiKey) {
-    const messages = [
-      { role: "system", content: system },
-      { role: "user", content: prompt }
-    ];
-    const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), GENERATE_TIMEOUT_MS2);
-    try {
-      const res = await fetch(OPENAI_API_URL, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${apiKey}`
-        },
-        body: JSON.stringify({
-          model,
-          messages,
-          temperature: 0.2,
-          max_tokens: 4096,
-          stream: true
-        }),
-        signal: controller.signal
-      });
-      if (!res.ok) {
-        const text = await res.text().catch(() => "");
-        throw new Error(`OpenAI returned ${res.status}: ${text.slice(0, 200)}`);
-      }
-      const reader = res.body?.getReader();
-      if (!reader) throw new Error("No response body from OpenAI");
-      const decoder = new TextDecoder();
-      let fullResponse = "";
-      let buffer = "";
-      while (true) {
-        const { done, value } = await reader.read();
-        if (done) break;
-        buffer += decoder.decode(value, { stream: true });
-        const lines = buffer.split("\n");
-        buffer = lines.pop() ?? "";
-        for (const line of lines) {
-          if (!line.startsWith("data: ")) continue;
-          const data = line.slice(6).trim();
-          if (data === "[DONE]") return fullResponse;
-          try {
-            const chunk = JSON.parse(data);
-            const content = chunk.choices?.[0]?.delta?.content;
-            if (content) fullResponse += content;
-          } catch {
-          }
-        }
-      }
-      return fullResponse;
-    } finally {
-      clearTimeout(timeoutId);
-    }
-  }
-
   // src/lib/deidentify.ts
   function buildPhiPatterns(intake) {
     const patterns = [];
@@ -5365,6 +5204,441 @@
   }
   async function saveDeidentifyMapping(mapping) {
     await chrome.storage.session.set({ spn_deid_mapping: mapping });
+  }
+
+  // src/lib/openai-client.ts
+  var OPENAI_API_URL = "https://api.openai.com/v1/chat/completions";
+  var GENERATE_TIMEOUT_MS = 12e4;
+  async function checkOpenAIHealth(apiKey) {
+    if (!apiKey) return false;
+    try {
+      const res = await fetch("https://api.openai.com/v1/models", {
+        headers: { Authorization: `Bearer ${apiKey}` },
+        signal: AbortSignal.timeout(5e3)
+      });
+      return res.ok;
+    } catch {
+      return false;
+    }
+  }
+  async function generateOpenAICompletion(prompt, system, model, apiKey) {
+    const messages = [
+      { role: "system", content: system },
+      { role: "user", content: prompt }
+    ];
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), GENERATE_TIMEOUT_MS);
+    try {
+      const res = await fetch(OPENAI_API_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${apiKey}`
+        },
+        body: JSON.stringify({
+          model,
+          messages,
+          temperature: 0.2,
+          max_tokens: 4096,
+          stream: true
+        }),
+        signal: controller.signal
+      });
+      if (!res.ok) {
+        const text = await res.text().catch(() => "");
+        throw new Error(`OpenAI returned ${res.status}: ${text.slice(0, 200)}`);
+      }
+      const reader = res.body?.getReader();
+      if (!reader) throw new Error("No response body from OpenAI");
+      const decoder = new TextDecoder();
+      let fullResponse = "";
+      let buffer = "";
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        buffer += decoder.decode(value, { stream: true });
+        const lines = buffer.split("\n");
+        buffer = lines.pop() ?? "";
+        for (const line of lines) {
+          if (!line.startsWith("data: ")) continue;
+          const data = line.slice(6).trim();
+          if (data === "[DONE]") return fullResponse;
+          try {
+            const chunk = JSON.parse(data);
+            const content = chunk.choices?.[0]?.delta?.content;
+            if (content) fullResponse += content;
+          } catch {
+          }
+        }
+      }
+      return fullResponse;
+    } finally {
+      clearTimeout(timeoutId);
+    }
+  }
+  async function generateOpenAICompletionSync(prompt, system, model, apiKey) {
+    const messages = [
+      { role: "system", content: system },
+      { role: "user", content: prompt }
+    ];
+    const res = await fetch(OPENAI_API_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${apiKey}`
+      },
+      body: JSON.stringify({
+        model,
+        messages,
+        temperature: 0.2,
+        max_tokens: 4096
+      }),
+      signal: AbortSignal.timeout(GENERATE_TIMEOUT_MS)
+    });
+    if (!res.ok) {
+      const text = await res.text().catch(() => "");
+      throw new Error(`OpenAI returned ${res.status}: ${text.slice(0, 200)}`);
+    }
+    const data = await res.json();
+    const content = data.choices?.[0]?.message?.content;
+    if (!content) throw new Error("OpenAI returned empty response");
+    if (data.usage) {
+      console.log("[SPN] OpenAI usage:", data.usage);
+    }
+    return content;
+  }
+
+  // src/lib/diagnostic-llm.ts
+  var DEFAULT_MODEL = "gpt-4o-mini";
+  var DEFAULT_MAX_CRITERIA_CHARS = 4e3;
+  var PICK_SYSTEM = `You are a licensed clinical psychologist doing DSM-5-TR differential diagnosis from an intake packet.
+
+You will receive:
+1. Patient intake + SimplePractice AI note content (de-identified; names and dates replaced with tokens).
+2. A roster of 161 DSM-5-TR disorders (id, name, chapter, ICD-10 code).
+
+Pick 3-5 disorders that best fit this presentation. Return strict JSON only:
+
+{
+  "candidates": [
+    { "disorderId": "<exact id from roster>", "confidence": "high" | "moderate" | "low", "reasoning": "<one sentence>" }
+  ]
+}
+
+Hard rules:
+- Only use disorderIds that appear in the roster. No inventions.
+- Do NOT diagnose from a single symptom. Require a coherent clinical pattern.
+- Cap at 5 candidates. Prefer fewer strong picks over many weak ones.
+- If the intake suggests a medical workup is still relevant (sexual, somatic, neurologic), you may still list the disorder \u2014 note rule-outs in the reasoning.
+- If trauma-related symptoms are present but trauma exposure is not clearly documented, do NOT include PTSD.
+- Respond with JSON only. No prose outside the JSON. No markdown fences.`;
+  var MATCH_SYSTEM = `You are a licensed clinical psychologist doing DSM-5-TR criterion-by-criterion evaluation.
+
+You will receive:
+1. Patient intake + AI note content (de-identified).
+2. A short list of candidate disorders, each with verbatim DSM-5-TR criteria text.
+
+For each disorder, evaluate each lettered criterion (A, B, C, \u2026) and return strict JSON only:
+
+{
+  "results": [
+    {
+      "disorderId": "<id>",
+      "confidence": "high" | "moderate" | "low",
+      "reasoning": "<2-3 sentences synthesizing the evidence>",
+      "criteriaEval": [
+        {
+          "letter": "A",
+          "criterionText": "<short paraphrase or first sentence of the criterion, <= 160 chars>",
+          "status": "met" | "likely" | "unclear" | "not_met",
+          "evidence": "<one sentence from intake, <= 200 chars, or 'No evidence in intake'>"
+        }
+      ],
+      "ruleOuts": ["<differential 1>", "<differential 2>"]
+    }
+  ]
+}
+
+Status rules:
+- "met": direct intake or assessment evidence clearly satisfies the criterion.
+- "likely": partial or inferred evidence; needs clinician confirmation.
+- "unclear": intake is silent; a direct question is needed.
+- "not_met": intake contradicts, denies, or fails a required threshold.
+
+Do NOT hallucinate durations or thresholds. If the DSM criterion requires "6 months or more" and the intake says "4 months", mark the duration criterion "not_met" (or "unclear" if duration is not stated).
+
+Confidence calibration:
+- "high" requires the majority of required criteria rated "met" with supporting evidence.
+- "moderate" requires most criteria met or likely with minor gaps.
+- "low" is appropriate when trauma exposure, duration, or functional impairment is unclear.
+
+Respond with JSON only. No prose outside the JSON. No markdown fences.`;
+  function formatAssessment(label, assessment, maxScore) {
+    if (!assessment) return null;
+    const score = maxScore ? `${assessment.totalScore}/${maxScore}` : `${assessment.totalScore}`;
+    const sev = assessment.severity ? ` (${assessment.severity})` : "";
+    const diff = assessment.difficulty ? `, impairment: ${assessment.difficulty}` : "";
+    return `${label}: ${score}${sev}${diff}`;
+  }
+  function buildIntakeNarrative(intake) {
+    const parts = [];
+    const age = intake.age;
+    if (age) parts.push(`Age: ${age}`);
+    if (intake.sex) parts.push(`Sex: ${intake.sex}`);
+    if (intake.genderIdentity) parts.push(`Gender identity: ${intake.genderIdentity}`);
+    if (intake.chiefComplaint) parts.push(`Chief complaint: ${intake.chiefComplaint}`);
+    if (intake.presentingProblems) parts.push(`Presenting problems: ${intake.presentingProblems}`);
+    if (intake.historyOfPresentIllness) parts.push(`HPI: ${intake.historyOfPresentIllness}`);
+    if (intake.medicalHistory) parts.push(`Medical history: ${intake.medicalHistory}`);
+    if (intake.priorTreatment) parts.push(`Prior mental-health treatment: ${intake.priorTreatment}`);
+    if (intake.counselingGoals) parts.push(`Counseling goals: ${intake.counselingGoals}`);
+    if (intake.suicidalIdeation) parts.push(`SI: ${intake.suicidalIdeation}`);
+    if (intake.suicideAttemptHistory) parts.push(`Suicide attempt history: ${intake.suicideAttemptHistory}`);
+    if (intake.homicidalIdeation) parts.push(`HI: ${intake.homicidalIdeation}`);
+    if (intake.psychiatricHospitalization) parts.push(`Psychiatric hospitalization: ${intake.psychiatricHospitalization}`);
+    if (intake.alcoholUse) parts.push(`Alcohol use: ${intake.alcoholUse}`);
+    if (intake.drugUse) parts.push(`Drug use: ${intake.drugUse}`);
+    if (intake.substanceUseHistory) parts.push(`Substance use history: ${intake.substanceUseHistory}`);
+    if (intake.familyPsychiatricHistory) parts.push(`Family psychiatric history: ${intake.familyPsychiatricHistory}`);
+    if (intake.familyMentalEmotionalHistory) parts.push(`Family mental/emotional history: ${intake.familyMentalEmotionalHistory}`);
+    if (intake.maritalStatus) parts.push(`Marital status: ${intake.maritalStatus}`);
+    if (intake.relationshipDescription) parts.push(`Relationship: ${intake.relationshipDescription}`);
+    if (intake.livingArrangement) parts.push(`Living arrangement: ${intake.livingArrangement}`);
+    if (intake.education) parts.push(`Education: ${intake.education}`);
+    if (intake.occupation) parts.push(`Occupation: ${intake.occupation}`);
+    if (intake.physicalSexualAbuseHistory) parts.push(`Physical/sexual abuse history: ${intake.physicalSexualAbuseHistory}`);
+    if (intake.domesticViolenceHistory) parts.push(`Domestic violence history: ${intake.domesticViolenceHistory}`);
+    if (intake.recentSymptoms) parts.push(`Recent symptoms: ${intake.recentSymptoms}`);
+    if (intake.additionalSymptoms) parts.push(`Additional symptoms: ${intake.additionalSymptoms}`);
+    if (intake.additionalInfo) parts.push(`Additional info / MSE: ${intake.additionalInfo}`);
+    if (intake.overviewClinicalNote) parts.push(`Overview clinical note: ${intake.overviewClinicalNote}`);
+    if (intake.manualNotes) parts.push(`Clinician manual notes: ${intake.manualNotes}`);
+    const phq = formatAssessment("PHQ-9", intake.phq9, 27);
+    if (phq) parts.push(phq);
+    const gad = formatAssessment("GAD-7", intake.gad7, 21);
+    if (gad) parts.push(gad);
+    const cssrs = formatAssessment("C-SSRS", intake.cssrs);
+    if (cssrs) parts.push(cssrs);
+    const dass21 = formatAssessment("DASS-21", intake.dass21, 63);
+    if (dass21) parts.push(dass21);
+    if (intake.phq9?.items?.length) {
+      const items = intake.phq9.items.filter((item) => item.score > 0).map((item) => `  - item ${item.number}: ${item.question.trim()} \u2014 ${item.response}`);
+      if (items.length) parts.push(`PHQ-9 endorsed items:
+${items.join("\n")}`);
+    }
+    if (intake.gad7?.items?.length) {
+      const items = intake.gad7.items.filter((item) => item.score > 0).map((item) => `  - item ${item.number}: ${item.question.trim()} \u2014 ${item.response}`);
+      if (items.length) parts.push(`GAD-7 endorsed items:
+${items.join("\n")}`);
+    }
+    if (intake.rawQA?.length) {
+      const bits = intake.rawQA.filter((p) => p.answer?.trim()).map((p) => `  - ${p.question}: ${p.answer}`);
+      if (bits.length) parts.push(`Raw intake Q&A:
+${bits.join("\n")}`);
+    }
+    return parts.join("\n");
+  }
+  function buildDisorderRoster() {
+    return DSM5_DIAGNOSES_V2.map((d) => {
+      const icd = d.icd10Code ? ` | ${d.icd10Code}` : "";
+      return `- ${d.id} | ${d.name} | ${d.chapter}${icd}`;
+    }).join("\n");
+  }
+  function clipCriteria(text, max) {
+    if (text.length <= max) return text;
+    return `${text.slice(0, max).trimEnd()}
+... [truncated]`;
+  }
+  function extractJson(raw) {
+    const stripped = raw.replace(/^```(?:json)?\s*/m, "").replace(/\s*```\s*$/m, "").trim();
+    try {
+      return JSON.parse(stripped);
+    } catch {
+      const match = stripped.match(/\{[\s\S]*\}/);
+      if (!match) return null;
+      try {
+        return JSON.parse(match[0]);
+      } catch {
+        return null;
+      }
+    }
+  }
+  function sanitizeConfidence(value) {
+    if (value === "high" || value === "moderate" || value === "low") return value;
+    return "low";
+  }
+  function sanitizeStatus(value) {
+    if (value === "met" || value === "likely" || value === "unclear" || value === "not_met") return value;
+    return "unclear";
+  }
+  async function getLLMDiagnosticSuggestions(intake, opts) {
+    if (!opts.apiKey) throw new Error("OpenAI API key is required");
+    const model = opts.model || DEFAULT_MODEL;
+    const maxCriteriaChars = opts.maxCriteriaChars ?? DEFAULT_MAX_CRITERIA_CHARS;
+    const progress = opts.onProgress ?? (() => {
+    });
+    const narrative = buildIntakeNarrative(intake);
+    const { sanitized, mapping } = deidentify(narrative, intake);
+    progress("Pass 1: picking candidate disorders...");
+    const roster = buildDisorderRoster();
+    const pickUser = `=== PATIENT INTAKE (de-identified) ===
+${sanitized}
+
+=== DSM-5-TR DISORDER ROSTER (${DSM5_DIAGNOSES_V2.length} entries) ===
+${roster}
+
+Return JSON with 3-5 candidate disorderIds from the roster above.`;
+    const pickRaw = await generateOpenAICompletionSync(pickUser, PICK_SYSTEM, model, opts.apiKey);
+    const pickJson = extractJson(pickRaw);
+    const candidates = (pickJson?.candidates ?? []).filter(
+      (c) => typeof c?.disorderId === "string" && c.disorderId.length > 0
+    );
+    if (!candidates.length) {
+      throw new Error(`Pass 1 returned no candidates. Raw output: ${pickRaw.slice(0, 300)}`);
+    }
+    const candidateEntries = candidates.map((c) => {
+      const disorder = DSM5_DIAGNOSES_V2.find((d) => d.id === c.disorderId);
+      return disorder ? { candidate: c, disorder } : null;
+    }).filter((x) => x !== null);
+    if (!candidateEntries.length) {
+      throw new Error(`Pass 1 returned candidates but none matched the v2 roster: ${candidates.map((c) => c.disorderId).join(", ")}`);
+    }
+    progress(`Pass 1 got ${candidateEntries.length} matched candidates: ${candidateEntries.map((e) => e.disorder.id).join(", ")}`);
+    const disordersSection = candidateEntries.map(
+      (e) => `=== ${e.disorder.id} \u2014 ${e.disorder.name}${e.disorder.icd10Code ? " (" + e.disorder.icd10Code + ")" : ""} ===
+${clipCriteria(e.disorder.criteriaText, maxCriteriaChars)}`
+    ).join("\n\n");
+    const matchUser = `=== PATIENT INTAKE (de-identified) ===
+${sanitized}
+
+=== CANDIDATE DISORDERS WITH DSM-5-TR CRITERIA ===
+${disordersSection}
+
+Evaluate each disorder criterion-by-criterion. Return JSON matching the schema in the system prompt.`;
+    progress("Pass 2: evaluating criteria...");
+    const matchRaw = await generateOpenAICompletionSync(matchUser, MATCH_SYSTEM, model, opts.apiKey);
+    const matchJson = extractJson(matchRaw);
+    const rawResults = matchJson?.results ?? [];
+    if (!rawResults.length) {
+      throw new Error(`Pass 2 returned no results. Raw output: ${matchRaw.slice(0, 300)}`);
+    }
+    const suggestions = [];
+    for (const r of rawResults) {
+      if (!r.disorderId) continue;
+      const entry = candidateEntries.find((e) => e.disorder.id === r.disorderId);
+      if (!entry) continue;
+      const criteriaEval = (r.criteriaEval ?? []).map((c) => ({
+        letter: typeof c.letter === "string" ? c.letter : "",
+        criterionText: reidentify(typeof c.criterionText === "string" ? c.criterionText : "", mapping),
+        status: sanitizeStatus(c.status),
+        evidence: reidentify(typeof c.evidence === "string" ? c.evidence : "", mapping)
+      }));
+      suggestions.push({
+        disorderId: r.disorderId,
+        disorderName: entry.disorder.name,
+        code: entry.disorder.icd10Code,
+        chapter: entry.disorder.chapter,
+        confidence: sanitizeConfidence(r.confidence),
+        reasoning: reidentify(typeof r.reasoning === "string" ? r.reasoning : "", mapping),
+        criteriaEval,
+        ruleOuts: Array.isArray(r.ruleOuts) ? r.ruleOuts.filter((x) => typeof x === "string") : []
+      });
+    }
+    if (!suggestions.length) {
+      throw new Error("Pass 2 returned results but none could be mapped to candidates");
+    }
+    progress(`Done: ${suggestions.length} suggestions`);
+    return suggestions;
+  }
+
+  // src/lib/ollama-client.ts
+  var DEFAULT_ENDPOINT = "http://localhost:11434";
+  var GENERATE_TIMEOUT_MS2 = 3e5;
+  function buildOllamaErrorMessage(status, endpoint, details = "") {
+    if (status === 403) {
+      return [
+        `Ollama blocked this Chrome extension at ${endpoint}.`,
+        "Allow browser-extension origins by setting",
+        "OLLAMA_ORIGINS=chrome-extension://*,moz-extension://*,safari-web-extension://*",
+        "and restart Ollama."
+      ].join(" ");
+    }
+    if (status === null) {
+      return `Could not reach Ollama at ${endpoint}. Make sure Ollama is running and listening on that URL.`;
+    }
+    const suffix = details ? ` ${details}` : "";
+    return `Ollama returned ${status} at ${endpoint}.${suffix}`.trim();
+  }
+  async function diagnoseOllamaEndpoint(endpoint = DEFAULT_ENDPOINT) {
+    try {
+      const res = await fetch(`${endpoint}/api/tags`, { signal: AbortSignal.timeout(5e3) });
+      if (res.ok) {
+        return { ok: true, status: res.status };
+      }
+      const text = await res.text().catch(() => "");
+      return {
+        ok: false,
+        status: res.status,
+        error: buildOllamaErrorMessage(res.status, endpoint, text.slice(0, 200))
+      };
+    } catch {
+      return {
+        ok: false,
+        status: null,
+        error: buildOllamaErrorMessage(null, endpoint)
+      };
+    }
+  }
+  async function checkOllamaHealth(endpoint = DEFAULT_ENDPOINT) {
+    const diagnostic = await diagnoseOllamaEndpoint(endpoint);
+    return diagnostic.ok;
+  }
+  async function generateCompletion(prompt, system, model, endpoint = DEFAULT_ENDPOINT) {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), GENERATE_TIMEOUT_MS2);
+    try {
+      const res = await fetch(`${endpoint}/api/generate`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          model,
+          prompt,
+          system,
+          stream: true,
+          options: {
+            temperature: 0.2,
+            num_predict: 4096,
+            num_ctx: 16384
+          }
+        }),
+        signal: controller.signal
+      });
+      if (!res.ok) {
+        const text = await res.text().catch(() => "");
+        throw new Error(buildOllamaErrorMessage(res.status, endpoint, text.slice(0, 200)));
+      }
+      const reader = res.body?.getReader();
+      if (!reader) throw new Error("No response body from Ollama");
+      const decoder = new TextDecoder();
+      let fullResponse = "";
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        const text = decoder.decode(value, { stream: true });
+        for (const line of text.split("\n")) {
+          if (!line.trim()) continue;
+          try {
+            const chunk = JSON.parse(line);
+            fullResponse += chunk.response;
+            if (chunk.done) return fullResponse;
+          } catch {
+          }
+        }
+      }
+      return fullResponse;
+    } finally {
+      clearTimeout(timeoutId);
+    }
   }
 
   // src/lib/supervision-prompt.ts
@@ -6551,6 +6825,9 @@ Generate a supervision prep agenda for this session. The treating clinician is $
     });
   }
   var activePanel = "diagnostics";
+  var llmSuggestions = null;
+  var llmStatus = "";
+  var llmGenerating = false;
   async function getActiveTab() {
     const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
     return tab ?? null;
@@ -6883,6 +7160,105 @@ ${goal.objectives.map((objective) => `  - ${objective.id}: ${objective.objective
         </article>
       `;
     }).join("");
+  }
+  function statusPillLabel(status) {
+    switch (status) {
+      case "met":
+        return "Met";
+      case "likely":
+        return "Likely";
+      case "unclear":
+        return "Unclear";
+      case "not_met":
+        return "Not met";
+    }
+  }
+  function renderLLMSuggestionList(workspace) {
+    if (llmGenerating) {
+      return '<div class="empty-copy">Generating \u2014 pass 1 picks candidates, pass 2 evaluates DSM-5-TR criteria. Takes ~30s.</div>';
+    }
+    if (!llmSuggestions) {
+      return '<div class="empty-copy">Click Generate to run the two-pass RAG diagnostic suggester.</div>';
+    }
+    if (!llmSuggestions.length) {
+      return '<div class="empty-copy">LLM returned no candidates \u2014 check console.</div>';
+    }
+    return llmSuggestions.map((suggestion) => {
+      const pinned = workspace?.pinnedDisorderIds.includes(suggestion.disorderId) ?? false;
+      const code = suggestion.code ? ` \xB7 ${escapeHtml(suggestion.code)}` : "";
+      const ruleOuts = suggestion.ruleOuts.length ? `<div class="suggestion-meta"><strong>Rule-outs:</strong> ${escapeHtml(suggestion.ruleOuts.join("; "))}</div>` : "";
+      const criteriaRows = suggestion.criteriaEval.map(
+        (c) => `
+            <div class="criterion-row">
+              <span class="criterion-letter">${escapeHtml(c.letter || "?")}</span>
+              <span class="pill status ${c.status}">${statusPillLabel(c.status)}</span>
+              <span class="criterion-text">${escapeHtml(c.criterionText)}</span>
+              ${c.evidence ? `<div class="criterion-evidence-inline"><em>${escapeHtml(c.evidence)}</em></div>` : ""}
+            </div>
+          `
+      ).join("");
+      return `
+        <article class="suggestion-card">
+          <div class="suggestion-top">
+            <div>
+              <div class="suggestion-name">${escapeHtml(suggestion.disorderName)}</div>
+              <div class="suggestion-meta">${escapeHtml(suggestion.chapter)}${code}</div>
+            </div>
+            <span class="pill ${suggestion.confidence}">${suggestion.confidence.toUpperCase()}</span>
+          </div>
+          <div class="suggestion-reason">${escapeHtml(suggestion.reasoning)}</div>
+          ${ruleOuts}
+          <details class="llm-criteria-details">
+            <summary>Criterion-by-criterion (${suggestion.criteriaEval.length})</summary>
+            ${criteriaRows}
+          </details>
+          <div class="suggestion-actions">
+            <button class="button ${pinned ? "secondary" : "primary"}" data-action="${pinned ? "unpin" : "pin"}" data-disorder-id="${suggestion.disorderId}">
+              ${pinned ? "Unpin" : "Pin diagnosis"}
+            </button>
+          </div>
+        </article>
+      `;
+    }).join("");
+  }
+  async function generateLLMSuggestions() {
+    if (llmGenerating) return;
+    const intake = await getIntake();
+    if (!intake) {
+      llmStatus = "Capture intake first.";
+      await render();
+      return;
+    }
+    const prefs = await getPreferences();
+    if (!prefs.openaiApiKey) {
+      llmStatus = "No OpenAI API key in settings \u2014 open the popup and paste one.";
+      await render();
+      return;
+    }
+    llmGenerating = true;
+    llmStatus = "Calling OpenAI (pass 1 of 2)...";
+    await render();
+    try {
+      const started = Date.now();
+      const suggestions = await getLLMDiagnosticSuggestions(intake, {
+        apiKey: prefs.openaiApiKey,
+        model: prefs.openaiModel || "gpt-4o-mini",
+        onProgress: (msg) => {
+          llmStatus = msg;
+          void render();
+        }
+      });
+      const elapsed = ((Date.now() - started) / 1e3).toFixed(1);
+      llmSuggestions = suggestions;
+      llmStatus = `${suggestions.length} suggestions in ${elapsed}s.`;
+    } catch (err) {
+      console.error("[SPN] LLM diagnostic failed:", err);
+      llmStatus = `Failed: ${err instanceof Error ? err.message : String(err)}`;
+      llmSuggestions = null;
+    } finally {
+      llmGenerating = false;
+      await render();
+    }
   }
   function renderCriterionCard(disorderId, evaluation, workspace) {
     const status = getEffectiveCriterionStatus(workspace, disorderId, evaluation);
@@ -7401,6 +7777,14 @@ ${goal.objectives.map((objective) => `  - ${objective.id}: ${objective.objective
     document.getElementById("score-grid").innerHTML = buildScoreCards(intake);
     document.getElementById("pinned-tabs").innerHTML = renderPinnedTabs(workspace, activeDisorderId);
     document.getElementById("suggestion-list").innerHTML = renderSuggestionList(intake, workspace, activeDisorderId);
+    document.getElementById("llm-suggestion-list").innerHTML = renderLLMSuggestionList(workspace);
+    const llmStatusEl = document.getElementById("llm-suggestion-status");
+    if (llmStatusEl) llmStatusEl.textContent = llmStatus;
+    const llmGenBtn = document.getElementById("btn-generate-llm-suggestions");
+    if (llmGenBtn) {
+      llmGenBtn.disabled = llmGenerating;
+      llmGenBtn.textContent = llmGenerating ? "Generating\u2026" : llmSuggestions ? "Regenerate" : "Generate";
+    }
     document.getElementById("active-review").innerHTML = renderActiveReview(intake, workspace, activeDisorderId);
     document.getElementById("generated-summary").innerHTML = renderGeneratedSummary(workspace);
     document.getElementById("knowledge-guidance").innerHTML = renderGuidance(guidance);
@@ -7420,6 +7804,10 @@ ${goal.objectives.map((objective) => `  - ${objective.id}: ${objective.objective
     const actionTarget = target.closest("[data-action]");
     const action = actionTarget?.dataset.action;
     const disorderId = actionTarget?.dataset.disorderId;
+    if (action === "generate-llm-suggestions") {
+      await generateLLMSuggestions();
+      return;
+    }
     if (action === "pin" && disorderId) {
       await pinDiagnosis(disorderId);
       await render();
