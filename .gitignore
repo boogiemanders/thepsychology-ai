@@ -1,3 +1,8 @@
+# Patient data — never commit
+*.xlsx
+*.xls
+appointment-status-report*.csv
+
 # Logs
 logs
 *.log
