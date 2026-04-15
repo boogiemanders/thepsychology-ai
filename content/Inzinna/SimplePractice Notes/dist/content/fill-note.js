@@ -5160,9 +5160,9 @@ Generate a SOAP progress note for this session. The treating clinician is ${prov
     if (followUpText && fillProseMirrorByLabel("free-text-111", followUpText)) filled++;
     return filled;
   }
-  var ICE_ENRICHMENT_SYSTEM = `You are a clinical documentation assistant. You will receive sections from a SimplePractice AI-generated note about a therapy session.
+  var ICE_ENRICHMENT_SYSTEM = `You are a clinical documentation assistant. You will receive sections from a therapy session note, and optionally prior intake/overview data that was already collected.
 
-Your job: extract and rewrite the clinical content into structured fields for an Initial Clinical Evaluation (ICE) form. Each field serves a different purpose \u2014 route the right information to the right field, don't dump everything into one place.
+Your job: extract and rewrite the clinical content into structured fields for an Initial Clinical Evaluation (ICE) form. Merge ALL sources \u2014 the AI note sections AND any prior data provided. Each field serves a different purpose \u2014 route the right information to the right field, don't dump everything into one place.
 
 WRITING STYLE:
 - Write in simple, clear clinical prose \u2014 early-teen reading level
@@ -5172,34 +5172,51 @@ WRITING STYLE:
 - Be specific \u2014 include durations, frequencies, and concrete details
 - Don't pad with filler or repeat yourself across fields
 
+IMPORTANT \u2014 DON'T DROP DETAILS:
+- Weight changes (gain or loss) belong in hpiNarrative AND medicalHistory
+- Medical workups (urologist, endocrinologist, lab results, testosterone panels) belong in hpiNarrative
+- Relationship dynamics (partner's reactions, expressed dissatisfaction) count as presenting problems
+- Medication dependence/secret use counts as a substance concern in presentingProblems
+- If the prior data mentions something the AI note doesn't, still include it
+
 OUTPUT: Return ONLY a valid JSON object with these string keys:
 {
   "chiefComplaint": "1-2 sentence summary of why the patient is seeking treatment. Include duration and main concern.",
-  "hpiNarrative": "3-5 sentence paragraph covering: what's happening, how long, what makes it worse/better, functional impact, AND relevant medical context (medications, medical workup results like 'urologist found no physical cause', physical health factors). Include all clinically relevant medical details here \u2014 don't leave them only in medicalHistory. Written as a narrative, not a list.",
-  "medicalHistory": "Relevant medical conditions, medications, and physical health details. Only what's clinically relevant.",
+  "hpiNarrative": "3-5 sentence paragraph covering: what's happening, how long, what makes it worse/better, functional impact, medical workup results (e.g. 'urologist found no physical cause', normal testosterone), medications, and physical health changes (weight loss/gain). Written as a narrative, not a list.",
+  "medicalHistory": "Relevant medical conditions, medications, physical health details, and recent health changes (weight, lab results). Only what's clinically relevant.",
   "socialContext": "Living situation, occupation, relationship status, cultural factors. Brief.",
-  "presentingProblems": "Complete list of ALL clinical problems identified in the note. Include primary complaints, co-occurring issues, contributing factors, and relevant history (e.g. 'situational erectile dysfunction, performance anxiety, relationship distress, secret medication use, trauma history related to STD acquisition, substance use concerns'). Be thorough \u2014 don't just list the top 2. Comma-separated.",
+  "presentingProblems": "Complete list of ALL clinical problems. Include: primary complaints, co-occurring issues, relationship dynamics (partner distress, expressed dissatisfaction), substance/medication concerns, trauma history, contributing factors, and relevant history. Be thorough \u2014 err on the side of listing too many rather than too few. Never drop items that appeared in the prior data. Comma-separated.",
   "mse": "Mental status exam findings. Look in the Objective section for a Mental Status Exam block. Include all MSE categories found (Appearance, Behavior, Speech, Mood/Affect, Thoughts, Cognition, Insight/Judgment). If no MSE data exists anywhere in the note, return empty string."
 }
 
 Do NOT wrap in markdown fences. Return ONLY the raw JSON.`;
-  function buildIceEnrichmentPrompt(sections, pronouns, clientName) {
+  function buildIceEnrichmentPrompt(sections, pronouns, clientName, intake) {
     const parts = [];
     parts.push(`Patient: ${clientName}`);
     parts.push(`Pronouns: ${pronouns.subject}/${pronouns.object}/${pronouns.possessive}`);
     parts.push("");
+    const priorContext = [];
+    if (intake.historyOfPresentIllness) priorContext.push(`Prior HPI: ${intake.historyOfPresentIllness}`);
+    if (intake.medicalHistory) priorContext.push(`Prior Medical History: ${intake.medicalHistory}`);
+    if (intake.chiefComplaint) priorContext.push(`Prior Chief Complaint: ${intake.chiefComplaint}`);
+    if (intake.presentingProblems.length) priorContext.push(`Prior Presenting Problems: ${intake.presentingProblems.join(", ")}`);
+    if (priorContext.length) {
+      parts.push("=== PRIOR INTAKE DATA (from overview/phone consult) ===");
+      parts.push(priorContext.join("\n"));
+      parts.push("");
+    }
     for (const [title, content] of sections) {
       if (content) parts.push(`=== ${title.toUpperCase()} ===
 ${content}`);
     }
     parts.push("");
-    parts.push(`Extract and rewrite these sections into the ICE form fields. Use the patient's pronouns, not "Client." Keep language simple and direct.`);
+    parts.push(`Merge the prior data with the AI note sections above. Use the patient's pronouns, not "Client." Keep language simple and direct.`);
     return parts.join("\n");
   }
   async function enrichIntakeWithLLM(sections, intake, pronouns) {
     const prefs = await getPreferences();
     const clientName = intake.fullName || [intake.firstName, intake.lastName].filter(Boolean).join(" ") || "Patient";
-    const userPrompt = buildIceEnrichmentPrompt(sections, pronouns, clientName);
+    const userPrompt = buildIceEnrichmentPrompt(sections, pronouns, clientName, intake);
     if (!prefs.openaiApiKey) {
       console.info("[SPN] No OpenAI API key configured \u2014 skipping LLM ICE enrichment");
       return null;

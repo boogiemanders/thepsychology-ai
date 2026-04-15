@@ -2579,9 +2579,9 @@ interface IceEnrichmentResult {
   mse: string
 }
 
-const ICE_ENRICHMENT_SYSTEM = `You are a clinical documentation assistant. You will receive sections from a SimplePractice AI-generated note about a therapy session.
+const ICE_ENRICHMENT_SYSTEM = `You are a clinical documentation assistant. You will receive sections from a therapy session note, and optionally prior intake/overview data that was already collected.
 
-Your job: extract and rewrite the clinical content into structured fields for an Initial Clinical Evaluation (ICE) form. Each field serves a different purpose — route the right information to the right field, don't dump everything into one place.
+Your job: extract and rewrite the clinical content into structured fields for an Initial Clinical Evaluation (ICE) form. Merge ALL sources — the AI note sections AND any prior data provided. Each field serves a different purpose — route the right information to the right field, don't dump everything into one place.
 
 WRITING STYLE:
 - Write in simple, clear clinical prose — early-teen reading level
@@ -2591,13 +2591,20 @@ WRITING STYLE:
 - Be specific — include durations, frequencies, and concrete details
 - Don't pad with filler or repeat yourself across fields
 
+IMPORTANT — DON'T DROP DETAILS:
+- Weight changes (gain or loss) belong in hpiNarrative AND medicalHistory
+- Medical workups (urologist, endocrinologist, lab results, testosterone panels) belong in hpiNarrative
+- Relationship dynamics (partner's reactions, expressed dissatisfaction) count as presenting problems
+- Medication dependence/secret use counts as a substance concern in presentingProblems
+- If the prior data mentions something the AI note doesn't, still include it
+
 OUTPUT: Return ONLY a valid JSON object with these string keys:
 {
   "chiefComplaint": "1-2 sentence summary of why the patient is seeking treatment. Include duration and main concern.",
-  "hpiNarrative": "3-5 sentence paragraph covering: what's happening, how long, what makes it worse/better, functional impact, AND relevant medical context (medications, medical workup results like 'urologist found no physical cause', physical health factors). Include all clinically relevant medical details here — don't leave them only in medicalHistory. Written as a narrative, not a list.",
-  "medicalHistory": "Relevant medical conditions, medications, and physical health details. Only what's clinically relevant.",
+  "hpiNarrative": "3-5 sentence paragraph covering: what's happening, how long, what makes it worse/better, functional impact, medical workup results (e.g. 'urologist found no physical cause', normal testosterone), medications, and physical health changes (weight loss/gain). Written as a narrative, not a list.",
+  "medicalHistory": "Relevant medical conditions, medications, physical health details, and recent health changes (weight, lab results). Only what's clinically relevant.",
   "socialContext": "Living situation, occupation, relationship status, cultural factors. Brief.",
-  "presentingProblems": "Complete list of ALL clinical problems identified in the note. Include primary complaints, co-occurring issues, contributing factors, and relevant history (e.g. 'situational erectile dysfunction, performance anxiety, relationship distress, secret medication use, trauma history related to STD acquisition, substance use concerns'). Be thorough — don't just list the top 2. Comma-separated.",
+  "presentingProblems": "Complete list of ALL clinical problems. Include: primary complaints, co-occurring issues, relationship dynamics (partner distress, expressed dissatisfaction), substance/medication concerns, trauma history, contributing factors, and relevant history. Be thorough — err on the side of listing too many rather than too few. Never drop items that appeared in the prior data. Comma-separated.",
   "mse": "Mental status exam findings. Look in the Objective section for a Mental Status Exam block. Include all MSE categories found (Appearance, Behavior, Speech, Mood/Affect, Thoughts, Cognition, Insight/Judgment). If no MSE data exists anywhere in the note, return empty string."
 }
 
@@ -2606,19 +2613,33 @@ Do NOT wrap in markdown fences. Return ONLY the raw JSON.`
 function buildIceEnrichmentPrompt(
   sections: Map<string, string>,
   pronouns: PronounForms,
-  clientName: string
+  clientName: string,
+  intake: IntakeData
 ): string {
   const parts: string[] = []
   parts.push(`Patient: ${clientName}`)
   parts.push(`Pronouns: ${pronouns.subject}/${pronouns.object}/${pronouns.possessive}`)
   parts.push('')
 
+  // Include existing intake data so the LLM can merge both sources
+  const priorContext: string[] = []
+  if (intake.historyOfPresentIllness) priorContext.push(`Prior HPI: ${intake.historyOfPresentIllness}`)
+  if (intake.medicalHistory) priorContext.push(`Prior Medical History: ${intake.medicalHistory}`)
+  if (intake.chiefComplaint) priorContext.push(`Prior Chief Complaint: ${intake.chiefComplaint}`)
+  if (intake.presentingProblems.length) priorContext.push(`Prior Presenting Problems: ${intake.presentingProblems.join(', ')}`)
+
+  if (priorContext.length) {
+    parts.push('=== PRIOR INTAKE DATA (from overview/phone consult) ===')
+    parts.push(priorContext.join('\n'))
+    parts.push('')
+  }
+
   for (const [title, content] of sections) {
     if (content) parts.push(`=== ${title.toUpperCase()} ===\n${content}`)
   }
 
   parts.push('')
-  parts.push('Extract and rewrite these sections into the ICE form fields. Use the patient\'s pronouns, not "Client." Keep language simple and direct.')
+  parts.push('Merge the prior data with the AI note sections above. Use the patient\'s pronouns, not "Client." Keep language simple and direct.')
 
   return parts.join('\n')
 }
@@ -2630,7 +2651,7 @@ async function enrichIntakeWithLLM(
 ): Promise<IceEnrichmentResult | null> {
   const prefs = await getPreferences()
   const clientName = intake.fullName || [intake.firstName, intake.lastName].filter(Boolean).join(' ') || 'Patient'
-  const userPrompt = buildIceEnrichmentPrompt(sections, pronouns, clientName)
+  const userPrompt = buildIceEnrichmentPrompt(sections, pronouns, clientName, intake)
 
   // Always use OpenAI for ICE enrichment — de-identify first, then send
   // Ollama is too slow/unreliable for this task on CPU
