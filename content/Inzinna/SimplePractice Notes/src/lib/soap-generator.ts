@@ -1,6 +1,7 @@
 /**
  * SOAP note generation orchestrator.
- * Tries local Ollama LLM first, falls back to regex-based builder.
+ * Provider chain: OpenAI (de-ID → cloud → re-ID) → Ollama → regex fallback.
+ * OpenAI path de-identifies PHI before sending, re-identifies after receiving.
  */
 
 import {
@@ -14,6 +15,8 @@ import {
   EMPTY_SOAP_DRAFT,
 } from './types'
 import { checkOllamaHealth, generateCompletion } from './ollama-client'
+import { checkOpenAIHealth, generateOpenAICompletion } from './openai-client'
+import { deidentify, reidentify, saveDeidentifyMapping } from './deidentify'
 import { buildSoapPrompt } from './soap-prompt'
 import { buildSoapDraft as buildSoapDraftRegex } from './soap-builder'
 
@@ -21,6 +24,11 @@ interface GenerationMeta {
   apptId?: string
   clientName?: string
   sessionDate?: string
+}
+
+function getErrorMessage(err: unknown): string {
+  if (err instanceof Error) return err.message
+  return String(err)
 }
 
 export async function generateSoapDraft(
@@ -33,25 +41,86 @@ export async function generateSoapDraft(
   prefs: ProviderPreferences,
   meta: GenerationMeta = {}
 ): Promise<SoapDraft> {
+  const provider = prefs.llmProvider || 'ollama'
+
+  // Try OpenAI first if configured (de-identifies PHI before sending)
+  if (provider === 'openai' && prefs.openaiApiKey) {
+    const healthy = await checkOpenAIHealth(prefs.openaiApiKey)
+    if (healthy) {
+      try {
+        const draft = await generateWithOpenAI(sessionNotes, transcript, treatmentPlan, intake, diagnosticImpressions, mseChecklist, prefs, meta)
+        if (draft) return draft
+      } catch (err) {
+        console.info('[SPN] OpenAI generation failed, falling back:', getErrorMessage(err))
+      }
+    }
+  }
+
+  // Try Ollama
   const endpoint = prefs.ollamaEndpoint || 'http://localhost:11434'
   const model = prefs.ollamaModel || 'llama3.1:8b'
-
-  // Try LLM path
   const healthy = await checkOllamaHealth(endpoint)
   if (healthy) {
     try {
       const draft = await generateWithLLM(sessionNotes, transcript, treatmentPlan, intake, diagnosticImpressions, mseChecklist, prefs, meta, model, endpoint)
       if (draft) return draft
     } catch (err) {
-      console.warn('[SPN] LLM generation failed, falling back to regex:', err)
+      const message = getErrorMessage(err)
+      if (!message.includes('Ollama blocked this Chrome extension')) {
+        console.info('[SPN] Ollama generation fell back to regex:', message)
+      }
     }
-  } else {
-    console.log('[SPN] Ollama not available, using regex-based SOAP builder')
   }
 
   // Fallback to regex builder
   const regexDraft = buildSoapDraftRegex(sessionNotes, transcript, treatmentPlan, intake, diagnosticImpressions, prefs, meta)
   return { ...regexDraft, generationMethod: 'regex' }
+}
+
+async function generateWithOpenAI(
+  sessionNotes: string,
+  transcript: SessionTranscript | null,
+  treatmentPlan: TreatmentPlanData | null,
+  intake: IntakeData | null,
+  diagnosticImpressions: DiagnosticImpression[],
+  mseChecklist: MseChecklist | null,
+  prefs: ProviderPreferences,
+  meta: GenerationMeta
+): Promise<SoapDraft | null> {
+  const model = prefs.openaiModel || 'gpt-4o-mini'
+  const { system, user } = buildSoapPrompt(transcript, sessionNotes, intake, diagnosticImpressions, treatmentPlan, mseChecklist, prefs)
+
+  // De-identify the prompt before sending to OpenAI
+  const { sanitized: sanitizedUser, mapping: userMapping } = deidentify(user, intake)
+  const { sanitized: sanitizedSystem, mapping: systemMapping } = deidentify(system, intake)
+
+  // Merge mappings
+  const fullMapping = { ...systemMapping, ...userMapping }
+
+  // Save mapping to session storage for debugging/audit
+  await saveDeidentifyMapping(fullMapping)
+
+  console.log('[SPN] Generating SOAP with OpenAI (de-identified)...', {
+    model,
+    originalLength: user.length,
+    sanitizedLength: sanitizedUser.length,
+    tokensReplaced: Object.keys(fullMapping).length,
+  })
+
+  const raw = await generateOpenAICompletion(sanitizedUser, sanitizedSystem, model, prefs.openaiApiKey)
+
+  // Re-identify the response
+  const reidentified = reidentify(raw, fullMapping)
+
+  const parsed = parseJsonResponse(reidentified)
+  if (!parsed) {
+    console.warn('[SPN] Failed to parse OpenAI response as JSON, attempting section extraction')
+    const extracted = extractSections(reidentified)
+    if (!extracted) return null
+    return buildDraftFromSections(extracted, sessionNotes, transcript, prefs, meta, 'openai')
+  }
+
+  return buildDraftFromSections(parsed, sessionNotes, transcript, prefs, meta, 'openai')
 }
 
 async function generateWithLLM(
@@ -118,7 +187,6 @@ function parseJsonResponse(raw: string): SoapSections | null {
 }
 
 function extractSections(raw: string): SoapSections | null {
-  // Try to extract labeled sections from free text
   const subMatch = raw.match(/(?:^|\n)\s*(?:Subjective|SUBJECTIVE)[:\s]*\n?([\s\S]*?)(?=\n\s*(?:Objective|OBJECTIVE)[:\s]|\n\s*$)/i)
   const objMatch = raw.match(/(?:^|\n)\s*(?:Objective|OBJECTIVE)[:\s]*\n?([\s\S]*?)(?=\n\s*(?:Assessment|ASSESSMENT)[:\s]|\n\s*$)/i)
   const assMatch = raw.match(/(?:^|\n)\s*(?:Assessment|ASSESSMENT)[:\s]*\n?([\s\S]*?)(?=\n\s*(?:Plan|PLAN)[:\s]|\n\s*$)/i)
@@ -141,7 +209,8 @@ function buildDraftFromSections(
   sessionNotes: string,
   transcript: SessionTranscript | null,
   prefs: ProviderPreferences,
-  meta: GenerationMeta
+  meta: GenerationMeta,
+  method: string = 'llm'
 ): SoapDraft {
   const clientName = meta.clientName || 'Client'
   const sessionDate = meta.sessionDate || new Date().toLocaleDateString('en-US')
@@ -166,6 +235,6 @@ function buildDraftFromSections(
     generatedAt: now,
     editedAt: now,
     status: 'draft',
-    generationMethod: 'llm',
+    generationMethod: method as SoapDraft['generationMethod'],
   }
 }

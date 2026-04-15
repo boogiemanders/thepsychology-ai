@@ -5,6 +5,61 @@ A HIPAA-compliant tool for Inzinna's clinical workflow that extracts SimplePract
 
 ---
 
+## Survey-Driven Priorities (April 2026)
+
+The Inzinna clinician survey (n=7) directly maps to this plan. See `content/Inzinna/Clinician Survey/FEEDBACK-SYNTHESIS.md` for the full prioritization. Key signals:
+
+- **100% (7/7)** want after-session note drafts — already built (Phase 3.5 SOAP generation)
+- **86% (6/7)** want supervision prep (agenda + questions) — **new Phase 3.9 below**
+- **86% (6/7)** want treatment planning suggestions — already in sidepanel; D&TP auto-filler (Phase 4) extends this
+- **Highest Likert (4.14/5):** "helps identify blind spots" — positioning anchor
+- **Lowest Likert (3.29/5):** "timely feedback when supervisor unavailable" — do NOT lead with this
+- **Dealbreakers** (P01, P03, P05): no supervisor-visible telemetry on accept/reject, no auto-shared AI feedback to supervision, no training-data collection without opt-in
+
+Cross-cutting requirements (apply to every phase going forward):
+
+1. **Accuracy transparency** — every AI suggestion shows its source (intake field, DSM criterion, knowledge-base chunk). Addresses 6/7 accuracy barrier.
+2. **UI reliability** — error boundaries, graceful degradation, one-click "report a problem" button. Addresses 5/7 UI barrier.
+3. **Privacy-by-default** — no telemetry on follow/ignore. Codify in `PRIVACY-MODEL.md`. Addresses the 3 dealbreaker respondents.
+4. **"Complement, not replace" copy** — every suggestion-label is advisory ("Consider asking...") not imperative.
+5. **Autosave note drafts** on a timer (P01's only specific verbatim ask: "autosave on its own").
+
+Pilots: P07 (licensed psychologist, already uses AI note-taker, most enthusiastic) and P08 (LMHC, no concerns stated, building caseload). See `content/Inzinna/Clinician Survey/pilot-outreach-P07-P08.md`.
+
+---
+
+## Phase 3.9 — Supervision Agenda Generator (new)
+
+**Trigger:** 6/7 demand + highest-Likert value prop ("identify blind spots").
+
+**Reuse, don't recreate:**
+
+- Input: `diagnostic-engine.ts` output (pinned diagnoses + criterion evidence), latest `soap-generator.ts` draft, `clinical-knowledge.ts` corpus
+- Pipeline: same Ollama→Groq→regex fallback chain as Phase 3.5
+
+**Output (new sidepanel "Supervision Agenda" tab):**
+
+- **Case summary** — 2–3 sentences, clinician-facing
+- **Three discussion questions** — phrased as questions the supervisor might prompt, derived from weak/uncertain DSM-5 criteria and case-conceptualization gaps. Questions, not answers.
+- **Blind-spot flags** — missed risk domains (SI/HI/substance), unscreened differentials given the intake, countertransference-adjacent patterns in the SOAP draft
+- **Modality-specific prompts** — pulled from the clinical-knowledge corpus (DBT, MI, CBT, psychodynamic, PDM-3, ASAM) based on the clinician's declared orientation setting
+
+**Privacy guardrails (non-negotiable):**
+
+- Generated only on clinician demand (explicit button click); never auto-generated
+- No logging of which questions the clinician uses vs. discards
+- Never auto-shared; output is clinician-facing only
+- "Export to supervisor" is a manual per-session action with a visible confirmation
+
+**UI:**
+
+- New tab alongside Diagnostics / SOAP in `src/sidepanel/`
+- No new shell work; reuses existing sidepanel components
+
+**Build order:** After Phase 3.8 (clinical-knowledge corpus), before Phase 4 (D&TP auto-filler).
+
+---
+
 ## Decisions
 
 - **Standalone extension** — separate from the ZocDoc-to-SimplePractice extension

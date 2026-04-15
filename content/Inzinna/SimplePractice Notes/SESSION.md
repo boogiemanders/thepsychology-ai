@@ -1,34 +1,29 @@
 # SimplePractice Notes — Session Handoff
 
-> Last updated: 2026-04-02
+> Last updated: 2026-04-15
 
 ## What This Is
 A standalone Chrome extension (Manifest V3) for Inzinna's clinical workflow. It extracts patient intake data from SimplePractice, and will eventually generate DSM-5 diagnostic impressions, record session audio, and auto-fill progress notes back into SimplePractice.
 
 ## Where We Left Off
 
-### OpenAI-Powered ICE Enrichment (2026-04-14, uncommitted)
+### OpenAI-Powered ICE Enrichment (committed 2026-04-14, prompt v2 2026-04-15)
 
-**LLM ICE field routing:** `enrichIntakeFromSoapCopyArea()` in `fill-note.ts` now sends SP's AI note sections to OpenAI (gpt-4o-mini) for structured extraction into ICE fields. PHI is de-identified before sending via existing `deidentify()` and re-identified on return. Returns JSON with: chiefComplaint, hpiNarrative, medicalHistory, socialContext, presentingProblems, mse. Falls back to regex enrichment if no OpenAI API key is configured.
+**LLM ICE field routing:** `enrichIntakeFromSoapCopyArea()` in `fill-note.ts` sends SP's AI note sections + prior intake data to OpenAI (gpt-4o-mini) for structured extraction into ICE fields. PHI is de-identified before sending via `deidentify()` and re-identified on return. Returns JSON with: chiefComplaint, hpiNarrative, medicalHistory, socialContext, presentingProblems, mse. Falls back to regex enrichment if no OpenAI API key is configured.
 
 **Why OpenAI, not Ollama:** Tested llama3.1:8b (5+ min timeout, never completed) and llama3.2:3b (also timed out) on CPU. OpenAI returns in ~2 seconds with much better field routing, simpler language, and thorough presenting problems. Ollama stays default for SOAP generation (different flow).
 
-**Prompt design:** System prompt asks for early-teen reading level, patient pronouns (not "Client"), and specific routing rules — HPI must include medical workup results (e.g. "urologist found no physical cause"), presentingProblems must be thorough (all co-occurring issues), MSE looks in Objective section.
+**Prompt v2 improvements (2026-04-15):** System prompt now instructs the LLM to merge ALL sources (AI note + prior data). `buildIceEnrichmentPrompt()` now takes `intake` and includes existing HPI, medical history, chief complaint, and presenting problems from the overview/phone consult as a `=== PRIOR INTAKE DATA ===` section. Added explicit "DON'T DROP DETAILS" instructions for: weight changes, medical workups (urologist, testosterone panels), relationship dynamics, medication dependence, and trauma history. Tested against real capture data — output went from 6 to 10 presenting problems, hpiNarrative now includes urologist workup and weight loss context. Cost: ~2,100 tokens (~$0.0004).
 
-**Other fixes in this session:**
+**Other fixes (2026-04-14):**
 - Education normalizer: "High" -> "completed high school" (line ~950)
 - Goal template: "he wants to" -> "his goal was to" (line ~1306)
 - `Client's` regex now case-insensitive `/\bclient's\b/gi` — fixes lowercase "client's" from AI notes (line ~1374)
 - `_llmEnrichedHpi` flag on IntakeData (types.ts) — when LLM writes the HPI, `buildHistoryOfPresentIllnessText` skips appending chiefComplaint/counselingGoals (no more "He reported sex therapy." duplication)
 
-**Files changed (uncommitted):**
-- `src/content/fill-note.ts` — new imports (openai-client, deidentify), ICE enrichment prompt + LLM call + regex fallback, education fix, goal template, case-insensitive Client's
-- `src/lib/types.ts` — `_llmEnrichedHpi?: boolean` on IntakeData
-
-**Known issues for next session:**
-- Need live Chrome test: load extension, open ICE form with AI note visible, hit Fill, check console for `[SPN] LLM ICE enrichment succeeded`
+**Still needs testing:**
+- Live Chrome test: load extension, open ICE form with AI note visible, hit Fill, check console for `[SPN] LLM ICE enrichment succeeded` then `[SPN] Using LLM-enriched ICE fields`
 - Verify OpenAI API key is set in extension popup settings (Chrome storage, not env vars)
-- Re-test that "urologist/endocrinologist found no physical cause" lands in hpiNarrative (prompt updated but not re-tested with final prompt)
 - Verify regex fallback still works when OpenAI key is missing
 - `intake.fullName` garbled ("Davif Barayev\n(David Barayev)") — fix `extractClientNameFromPage()`
 - Debug log `[SPN] HPI fallback check:` in fill-note.ts — remove after confirming
@@ -182,6 +177,8 @@ Both service workers poll their dist/ files every 1s. When a file size change is
 | `src/lib/ollama-client.ts` | Ollama HTTP client — NDJSON streaming, health check, model check, 5-min timeout |
 | `src/lib/soap-prompt.ts` | Builds system + user prompts with theme-based extraction methodology |
 | `src/lib/soap-generator.ts` | SOAP generation orchestrator — Groq → Ollama → regex fallback |
+| `src/lib/openai-client.ts` | OpenAI API client — used for ICE enrichment (gpt-4o-mini), de-identified calls only |
+| `src/lib/deidentify.ts` | PHI de-identification/re-identification — strips names, DOB, address, phone, email, SSN, insurance before cloud API calls |
 | `src/lib/groq-client.ts` | Thin Groq API client (OpenAI-compatible, optional cloud provider) |
 | `scripts/test-soap-generation.mjs` | Standalone local runner for testing SOAP prompts against Ollama with real transcript samples |
 | `src/lib/diagnostic-engine.ts` | Intake-driven diagnostic scoring, criterion evaluation, and impression generation |

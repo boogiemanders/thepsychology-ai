@@ -38,6 +38,7 @@ const FIELD_LABELS: Partial<Record<IntakeEvidenceField, string>> = {
   additionalSymptoms: 'Additional symptoms',
   additionalInfo: 'Additional info',
   manualNotes: 'Clinician notes',
+  overviewClinicalNote: 'Overview clinical note',
   rawQA: 'Raw intake Q&A',
   combinedSymptoms: 'Combined symptoms',
   combinedNarrative: 'Combined intake narrative',
@@ -78,6 +79,7 @@ function buildCombinedNarrative(intake: IntakeData): string {
     intake.recentSymptoms,
     intake.additionalSymptoms,
     intake.additionalInfo,
+    intake.overviewClinicalNote,
     intake.manualNotes,
     intake.priorTreatment,
     intake.medicalHistory,
@@ -98,6 +100,7 @@ function buildCombinedNarrative(intake: IntakeData): string {
     ...intake.rawQA.map((pair) => pair.answer).filter(Boolean),
     ...(intake.phq9?.items.map((item) => `${item.question} ${item.response}`) ?? []),
     ...(intake.gad7?.items.map((item) => `${item.question} ${item.response}`) ?? []),
+    ...(intake.dass21?.items.map((item) => `${item.question} ${item.response}`) ?? []),
   ]
     .filter(Boolean)
     .join('\n')

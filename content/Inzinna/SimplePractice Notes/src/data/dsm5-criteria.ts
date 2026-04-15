@@ -830,6 +830,16 @@ export const DSM5_DISORDERS: DSM5DisorderDefinition[] = [
       { criterion: 'A1', required: 6, total: 9 },
       { criterion: 'A2', required: 6, total: 9 },
     ],
+    requiredCountAdjustments: [
+      {
+        minAge: 17,
+        note: 'For adolescents age 17 and older and adults, five symptoms are required in either domain.',
+        requiredCounts: [
+          { criterion: 'A1', required: 5, total: 9 },
+          { criterion: 'A2', required: 5, total: 9 },
+        ],
+      },
+    ],
     durationRequirement: 'At least 6 months',
     exclusions: [
       'Symptoms present before age 12.',

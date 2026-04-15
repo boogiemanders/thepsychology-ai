@@ -37,6 +37,10 @@ function summarizeAssessments(intake: IntakeData): string[] {
     parts.push(`C-SSRS ${intake.cssrs.totalScore} yes (${intake.cssrs.severity || 'summary not parsed'})`)
   }
 
+  if (intake.dass21) {
+    parts.push(`DASS-21 ${intake.dass21.totalScore} (${intake.dass21.severity || 'summary not parsed'})`)
+  }
+
   return parts
 }
 
@@ -55,6 +59,7 @@ function buildPresentingComplaint(intake: IntakeData): string {
   const sections = [
     firstNonEmpty(intake.chiefComplaint, intake.presentingProblems),
     intake.historyOfPresentIllness.trim(),
+    intake.overviewClinicalNote.trim(),
     intake.manualNotes.trim(),
     intake.additionalSymptoms.trim(),
     intake.recentSymptoms.trim(),
@@ -75,6 +80,7 @@ function buildFallbackClinicalFormulation(intake: IntakeData): string {
     intake.chiefComplaint,
     intake.presentingProblems,
     intake.historyOfPresentIllness,
+    intake.overviewClinicalNote,
     intake.manualNotes
   )
   if (chiefComplaint) {
@@ -179,6 +185,7 @@ export async function buildDraftNote(
       intake.chiefComplaint,
       intake.presentingProblems,
       intake.historyOfPresentIllness,
+      intake.overviewClinicalNote,
       intake.manualNotes
     ),
     presentingComplaint: buildPresentingComplaint(intake),

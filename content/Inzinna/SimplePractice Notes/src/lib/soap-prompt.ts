@@ -6,7 +6,10 @@
 
 import { IntakeData, DiagnosticImpression, TreatmentPlanData, MseChecklist, SessionTranscript, ProviderPreferences, AssessmentResult } from './types'
 
-const MAX_TRANSCRIPT_WORDS = 20_000
+// ~16k context with ~4k reserved for system prompt + output = ~12k tokens for user prompt
+// Rough estimate: 1 token ≈ 0.75 words, so ~9000 words max for user prompt
+const MAX_TRANSCRIPT_WORDS = 4_000 // leave room for context sections + system prompt + output
+const MAX_TOTAL_PROMPT_CHARS = 36_000 // ~9k tokens worth of chars
 
 const SYSTEM_PROMPT = `You are a clinical documentation assistant for a licensed psychologist. Your task is to generate a SOAP progress note from a session transcript and clinical context.
 
@@ -14,56 +17,96 @@ OUTPUT FORMAT: Return a valid JSON object with exactly four string keys:
 {"subjective":"...","objective":"...","assessment":"...","plan":"..."}
 
 Do NOT wrap the JSON in markdown code fences. Return ONLY the raw JSON object.
+Do NOT include leading labels like "Subjective:" or "Plan:" inside the string values. The app already labels each section.
+
+STYLE TARGET:
+- Write like an insurance-ready SimplePractice follow-up note: dense, concrete, clinically grounded, and easy to skim.
+- Use paragraph prose, not bullets.
+- Group content by theme, not by transcript order.
+- Prefer "Client reported," "Client described," "Client expressed," "Clinician provided," and "Client responded" style sentences.
+- Pack in useful details, but keep every sentence anchored to material actually present in the transcript, session notes, intake, MSE checklist, diagnoses, or treatment plan.
+- Keep the tone clinical and practical, not literary, not robotic, and not overly polished.
+
+HOW TO EXTRACT FROM A TRANSCRIPT:
+1. Read the entire transcript and identify the KEY THEMES discussed (e.g., anxiety, parenting stress, work conflict, trauma history). Do NOT retell the conversation chronologically.
+2. For each theme, extract: (a) what the client reported, (b) specific details and numbers (scores, frequencies, dates), (c) notable quotes that capture the client's experience.
+3. Note what the clinician assessed or screened for (e.g., "clinician conducted PTSD criteria screening" or "clinician explored substance use history").
+4. Identify trajectory: did the client report improvement, worsening, or no change on any symptoms?
+5. Extract any scheduling, homework, or next-step decisions made during the session.
+6. Convert raw client language to clinical prose: "my stomach hurts when I'm worried" → "Client reports somatic manifestation of anxiety (GI distress)."
+7. When the session includes dreams, family stories, political stress, body symptoms, or other indirect material, document both the content and the connection the client or clinician made to current stressors.
+8. When the clinician taught or reviewed a skill, name it clearly and note how the client engaged with it.
 
 DOCUMENTATION STANDARDS:
 - Use third-person clinical prose (e.g., "Client reported..." not "I said...")
 - Use DSM-5 terminology for diagnoses and symptoms
-- Include direct client quotes in the Subjective section using quotation marks
+- Use plain, direct language at about an early-teen reading level when possible
+- Prefer simple words over formal or academic wording (e.g., "worry" over "apprehension," "got worse" over "exacerbated")
+- Keep the note sounding clinical, but not polished or overly literary
 - Reference specific content from the session — do not write generic filler
 - Only include information explicitly stated in the transcript or session notes
 - Do NOT fabricate quotes, symptoms, or clinical observations not present in the data
 - Write for insurance/medical necessity — be specific about functional impairment and treatment rationale
+- Organize by theme, not chronologically
+- If a detail is missing, leave it out or use a cautious neutral statement based on supplied checklist data. Do not invent.
 
 SECTION REQUIREMENTS:
 
-SUBJECTIVE: What the client reported. Include:
-- Primary concerns discussed this session
-- Symptom changes since last session (better, worse, same)
-- Relevant life events or stressors mentioned
-- Client's own words as direct quotes for key statements
-- Mood self-report if stated
-- Risk factors: SI/HI denial or endorsement (always document)
-- Substance use updates if discussed
+SUBJECTIVE: What the client reported. Organize by THEME, not chronology:
+- Primary concerns discussed this session (group related topics together)
+- Symptom changes since last session (better, worse, same) — quantify when possible
+- Relevant life events or stressors mentioned (with dates/details from transcript)
+- Mood self-report if stated (use client's words)
+- Risk factors: SI/HI denial or endorsement (ALWAYS document — write "denied SI/HI" if not discussed)
+- Substance use updates if discussed (quantify: frequency, amount)
+- Include functional details when relevant: work strain, family stress, sleep disruption, appetite changes, social avoidance, exercise changes, or deadline pressure
+- If dream content or imagery was discussed, document the dream details briefly and link them to waking stressors only if the transcript supports that link
+- Keep it concise, but not skeletal — this should read like a real therapy note, not a shorthand fragment
 
-OBJECTIVE: What the clinician observed. Include:
-- Full Mental Status Exam in this exact format:
-  Mental Status Exam:
-  Appearance: [from checklist or transcript observations]
-  Behavior: [from checklist or transcript observations]
-  Speech: [from checklist or transcript observations]
-  Mood/Affect: [mood is client's words; affect is clinician's observation]
-  Thoughts: [thought process and content, SI/HI status]
-  Cognition: [orientation, attention, memory observations]
-  Insight/Judgment: [from checklist or inferred from session]
+OBJECTIVE: What the clinician observed and assessed. Include:
+- Diagnostic assessment activities conducted this session (e.g., "Clinician assessed for PTSD criteria; client does not meet full criteria at this time")
+- Clinical data points extracted during the interview: substance use quantified, injury/medical history, self-report scales or ratings
 - Behavioral observations during session (engagement, emotional responses, coping demonstrated)
+- Interventions or psychoeducation delivered this session and the client's response to them
+- End the Objective section with an embedded Mental Status Exam block using exactly this layout:
+  Mental Status Exam:
+  Appearance: ...
+  Behavior: ...
+  Speech: ...
+  Mood/Affect: ...
+  Thoughts: ...
+  Cognition: ...
+  Insight/Judgment: ...
 - Screening scores if administered (PHQ-9, GAD-7, C-SSRS)
 
-ASSESSMENT: Clinical analysis. Include:
-- Current symptom presentation and severity
-- Progress or regression relative to treatment goals (reference specific goals if provided)
-- Diagnostic formulation — how current presentation relates to active diagnoses
-- Functional impact on daily life, work, relationships
-- Protective and risk factors observed
-- Clinical reasoning for treatment approach
+ASSESSMENT: Clinical synthesis (NOT a summary — this is your ANALYSIS):
+- Current symptom presentation and severity — note what improved vs worsened
+- Diagnostic formulation: does the presentation fit the active diagnoses? Any rule-outs explored?
+- Historical patterns identified (e.g., "long-standing performance anxiety with somatic manifestations predates current stressors")
+- Functional impact on daily life, work, relationships — be specific
+- Protective factors (support system, insight, motivation) and risk factors
+- How the client's treatment preferences/style should inform the approach
 - Statement of medical necessity for continued treatment
+- If the session revealed family-of-origin, intergenerational, or longstanding coping patterns, include that synthesis here
+- If the client prefers logic/problem-solving, structure, or a certain treatment style, note how that should shape treatment
 
-PLAN: Next steps. Include:
-- Continue/modify treatment frequency and modality
+PLAN: Actionable next steps (3-5 bullet points max):
+- Treatment frequency, modality, and scheduling changes (include specific day/time if discussed)
 - Specific focus for next session based on this session's content
 - Interventions to use or continue (name specific techniques: CBT, exposure, MI, etc.)
 - Between-session assignments or skills to practice
 - Any referrals, medication coordination, or safety planning
-- Next appointment date/time if mentioned`
+- Next appointment date/time if mentioned
+- Each bullet should reference a specific data point from the session, not generic advice
+- If the clinician introduced a specific skill in session, carry that into the plan as practice between sessions when supported by the transcript
+
+CONCISENESS RULES (apply to ALL sections):
+- Each section should be 3-5 dense sentences or bullet points. Not 1-2, not 8-10.
+- Every sentence must be anchored to something specific from the session data.
+- Do NOT write generic filler like "Consider exploring the client's feelings about..." or "Continue to monitor..."
+- Do NOT repeat the same observation across sections.
+- Prefer concrete details (scores, dates, quotes, specific behaviors) over vague descriptors.
+- If a detail is not in the data, leave it out entirely — do not pad with boilerplate.`
 
 export function buildSoapPrompt(
   transcript: SessionTranscript | null,
@@ -139,9 +182,14 @@ export function buildSoapPrompt(
     formatAssessment(intake.phq9, 'PHQ-9')
     formatAssessment(intake.gad7, 'GAD-7')
     formatAssessment(intake.cssrs, 'C-SSRS')
+    formatAssessment(intake.dass21, 'DASS-21')
   }
   if (assessments.length > 0) {
     sections.push(`=== PRIOR ASSESSMENTS ===\n${assessments.join('\n')}`)
+  }
+
+  if (intake?.overviewClinicalNote.trim()) {
+    sections.push(`=== RECENT CLINICAL NOTE FROM PROFILE OVERVIEW ===\n${intake.overviewClinicalNote.trim()}`)
   }
 
   // === MSE CHECKLIST ===
@@ -182,40 +230,58 @@ export function buildSoapPrompt(
     `=== INSTRUCTIONS ===\nGenerate a SOAP progress note for this session. The treating clinician is ${providerName}. ` +
       `Use the MSE checklist data for the Objective section's Mental Status Exam. ` +
       `Use the transcript and session notes to populate the Subjective, Assessment, and Plan sections. ` +
+      `Aim for a dense, insurance-ready SimplePractice follow-up note rather than brief SOAP fragments. ` +
+      `Objective should include both session interventions/observations and the exact "Mental Status Exam:" block. ` +
+      `Assessment should explicitly state why continued treatment is medically necessary when the data supports that. ` +
       `Reference treatment plan goals in the Assessment section when relevant. ` +
+      `Write in plain, simple clinical language rather than formal or academic language. ` +
       `Return ONLY valid JSON with keys: subjective, objective, assessment, plan.`
   )
 
+  let userPrompt = sections.join('\n\n')
+
+  // Final safety: if the total prompt is still too large, trim the transcript section
+  if (userPrompt.length > MAX_TOTAL_PROMPT_CHARS) {
+    const transcriptIdx = sections.findIndex((s) => s.startsWith('=== SESSION TRANSCRIPT'))
+    if (transcriptIdx >= 0) {
+      // Remove transcript and add a note
+      sections[transcriptIdx] = '=== SESSION TRANSCRIPT ===\n[Transcript omitted — too large for context window. SOAP generated from session notes, MSE, and clinical context only.]'
+      userPrompt = sections.join('\n\n')
+    }
+  }
+
   return {
     system: SYSTEM_PROMPT,
-    user: sections.join('\n\n'),
+    user: userPrompt,
   }
 }
 
 function formatTranscript(transcript: SessionTranscript, prefs: ProviderPreferences): string {
   const providerName = [prefs.providerFirstName, prefs.providerLastName].filter(Boolean).join(' ') || 'Clinician'
-  const lines: string[] = []
-  let wordCount = 0
 
-  for (const entry of transcript.entries) {
+  // Format all entries
+  const allLines = transcript.entries.map((entry) => {
     const speaker = entry.speaker === 'clinician' ? providerName : 'Client'
-    const line = `${speaker}: ${entry.text}`
-    const words = line.split(/\s+/).length
-    wordCount += words
+    return `${speaker}: ${entry.text}`
+  })
 
-    if (wordCount > MAX_TRANSCRIPT_WORDS) {
-      lines.push('[... transcript truncated for length ...]')
-      // Add last few entries to capture session closing
-      const lastEntries = transcript.entries.slice(-10)
-      for (const last of lastEntries) {
-        const s = last.speaker === 'clinician' ? providerName : 'Client'
-        lines.push(`${s}: ${last.text}`)
-      }
-      break
-    }
+  const totalWords = allLines.reduce((sum, line) => sum + line.split(/\s+/).length, 0)
 
-    lines.push(line)
+  // If it fits, return everything
+  if (totalWords <= MAX_TRANSCRIPT_WORDS) {
+    return allLines.join('\n')
   }
 
-  return lines.join('\n')
+  // Otherwise: keep first 20% (opening context) + last 30% (closing/plan) + note the gap
+  const keepStart = Math.floor(allLines.length * 0.2)
+  const keepEnd = Math.floor(allLines.length * 0.3)
+  const startLines = allLines.slice(0, keepStart)
+  const endLines = allLines.slice(-keepEnd)
+  const skipped = allLines.length - keepStart - keepEnd
+
+  return [
+    ...startLines,
+    `\n[... ${skipped} transcript lines omitted for length — focus on opening context above and session content below ...]\n`,
+    ...endLines,
+  ].join('\n')
 }
