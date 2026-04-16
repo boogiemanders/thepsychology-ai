@@ -3,6 +3,19 @@
 import { cn } from '@/lib/utils'
 import type { TimelineCollaborator } from './use-timeline'
 
+const COLLAB_COLORS: Record<string, string> = {
+  AC: '#F39E3A', BR: '#E7437D', CA: '#F5ED43', FI: '#4EBFD4',
+  GI: '#B6D458', LO: '#AC80AF', TM: '#F5ED43', JC: '#AC80AF',
+}
+
+function isLightHex(hex: string): boolean {
+  const h = hex.replace('#', '')
+  const r = parseInt(h.slice(0, 2), 16)
+  const g = parseInt(h.slice(2, 4), 16)
+  const b = parseInt(h.slice(4, 6), 16)
+  return (0.299 * r + 0.587 * g + 0.114 * b) > 160
+}
+
 interface UserPickerProps {
   collaborators: TimelineCollaborator[]
   activeUser: string | null
@@ -20,10 +33,17 @@ export function UserPicker({ collaborators, activeUser, onPick }: UserPickerProp
       <div className="flex items-center gap-1">
         {collaborators.map(c => {
           const isActive = c.initials === activeUser
-          const bgLight = c.neutral ? 'hsl(0 0% 88%)' : `hsl(${c.hue} 32% 82%)`
-          const bgDark = c.neutral ? 'hsl(0 0% 22%)' : `hsl(${c.hue} 26% 28%)`
-          const fgLight = c.neutral ? 'hsl(0 0% 28%)' : `hsl(${c.hue} 38% 26%)`
-          const fgDark = c.neutral ? 'hsl(0 0% 78%)' : `hsl(${c.hue} 34% 82%)`
+          const hex = COLLAB_COLORS[c.initials]
+          const bgDark = c.neutral
+            ? 'hsl(0 0% 22%)'
+            : hex
+              ? hex
+              : `hsl(${c.hue} 26% 28%)`
+          const fgDark = c.neutral
+            ? 'hsl(0 0% 78%)'
+            : hex
+              ? (isLightHex(hex) ? '#111' : '#fff')
+              : `hsl(${c.hue} 34% 82%)`
 
           return (
             <button

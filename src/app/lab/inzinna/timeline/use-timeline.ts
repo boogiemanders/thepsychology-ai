@@ -20,6 +20,7 @@ export interface TimelinePhase {
   start: number
   end: number
   label?: string
+  description?: string
 }
 
 export interface TimelineMilestone {
@@ -257,6 +258,25 @@ export function useTimeline(
     }
   }, [activeUser, apiFetch])
 
+  /** Update project contributors. */
+  const updateContributors = useCallback(async (projectId: string, contributors: string[]) => {
+    if (!activeUser) return
+
+    setProjects(prev =>
+      prev.map(p => (p.id === projectId ? { ...p, contributors, updated_by: activeUser, updated_at: new Date().toISOString() } : p))
+    )
+
+    try {
+      await apiFetch(`/api/timeline/${projectId}`, {
+        method: 'PATCH',
+        body: JSON.stringify({ contributors, contributor: activeUser }),
+      })
+    } catch (err) {
+      console.error('[timeline] updateContributors error:', err)
+      refreshProjects()
+    }
+  }, [activeUser, apiFetch])
+
   /** Update project status. */
   const updateStatus = useCallback(async (projectId: string, status: TimelineProject['status']) => {
     if (!activeUser) return
@@ -327,6 +347,7 @@ export function useTimeline(
     updateMilestone,
     updatePriority,
     updateStatus,
+    updateContributors,
     addProject,
     refreshProjects,
   }

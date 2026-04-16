@@ -2,9 +2,12 @@
 
 import { useMemo, useRef, useState } from 'react'
 import Link from 'next/link'
+import * as AccordionPrimitive from '@radix-ui/react-accordion'
 import { cn } from '@/lib/utils'
+import { Accordion, AccordionItem, AccordionContent } from '@/components/ui/accordion'
 import { Popover, PopoverTrigger, PopoverContent } from '@/components/ui/popover'
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '@/components/ui/select'
+import { Hammer, FlaskConical, Rocket, Radio, Clock } from 'lucide-react'
 import { useTimeline, type TimelineProject, type TimelineCollaborator, type TimelinePhase, type TimelineStep } from './use-timeline'
 import { MONTH_META, fractionToDate, dateToFraction, daysInMonth } from './date-utils'
 import { UserPicker } from './user-picker'
@@ -41,6 +44,26 @@ function priorityBorderColor(p: PriorityLevel): string {
   return p === 'high' ? '#d87758' : p === 'medium' ? '#788c5d' : '#6a9bcc'
 }
 
+// Brand palette — overrides hue-based colors when initials match.
+const COLLAB_COLORS: Record<string, string> = {
+  AC: '#F39E3A', // orange
+  BR: '#E7437D', // pink
+  CA: '#F5ED43', // yellow
+  FI: '#4EBFD4', // cyan
+  GI: '#B6D458', // lime
+  LO: '#AC80AF', // purple
+  TM: '#F5ED43', // yellow (reuse)
+  JC: '#AC80AF', // purple (reuse)
+}
+
+function isLightHex(hex: string): boolean {
+  const h = hex.replace('#', '')
+  const r = parseInt(h.slice(0, 2), 16)
+  const g = parseInt(h.slice(2, 4), 16)
+  const b = parseInt(h.slice(4, 6), 16)
+  return (0.299 * r + 0.587 * g + 0.114 * b) > 160
+}
+
 function leadColors(lead: TimelineCollaborator | null) {
   if (!lead || lead.neutral) {
     return {
@@ -49,6 +72,21 @@ function leadColors(lead: TimelineCollaborator | null) {
       border: 'hsl(0 0% 55%)',
       text: 'hsl(0 0% 85%)',
       solid: 'hsl(0 0% 55%)',
+      hoverBg: 'hsl(0 0% 55%)',
+      hoverText: '#fff',
+    }
+  }
+  const hex = COLLAB_COLORS[lead.initials]
+  if (hex) {
+    const contrast = isLightHex(hex) ? '#111' : '#fff'
+    return {
+      bg: hex,
+      bgOpaque: hex,
+      border: hex,
+      text: contrast,
+      solid: hex,
+      hoverBg: hex,
+      hoverText: contrast,
     }
   }
   return {
@@ -57,6 +95,8 @@ function leadColors(lead: TimelineCollaborator | null) {
     border: `hsl(${lead.hue} 42% 55%)`,
     text: `hsl(${lead.hue} 45% 85%)`,
     solid: `hsl(${lead.hue} 42% 55%)`,
+    hoverBg: `hsl(${lead.hue} 42% 55%)`,
+    hoverText: '#fff',
   }
 }
 
@@ -83,7 +123,6 @@ interface ShellProps {
 
 export function TimelineShell({ initialProjects, initialCollaborators, months, todayIso }: ShellProps) {
   const timeline = useTimeline(initialProjects, initialCollaborators)
-  const [expandedId, setExpandedId] = useState<string | null>(null)
   const [showAddForm, setShowAddForm] = useState(false)
   const [myOnly, setMyOnly] = useState(false)
 
@@ -163,21 +202,31 @@ export function TimelineShell({ initialProjects, initialCollaborators, months, t
         </header>
 
         {/* Add project form */}
-        {showAddForm && timeline.activeUser && (
-          <div className="mb-8">
-            <AddProjectForm
-              collaborators={timeline.collaborators}
-              activeUser={timeline.activeUser}
-              onSubmit={timeline.addProject}
-              onClose={() => setShowAddForm(false)}
-            />
-          </div>
+        {timeline.activeUser && (
+          <Accordion
+            type="single"
+            collapsible
+            value={showAddForm ? 'add' : ''}
+            onValueChange={(v) => setShowAddForm(v === 'add')}
+            className="mb-8"
+          >
+            <AccordionItem value="add" className="border-0">
+              <AccordionContent className="pt-0 pb-0">
+                <AddProjectForm
+                  collaborators={timeline.collaborators}
+                  activeUser={timeline.activeUser}
+                  onSubmit={timeline.addProject}
+                  onClose={() => setShowAddForm(false)}
+                />
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         )}
 
         {/* Desktop timeline grid */}
         <div className="hidden md:block">
           <MonthHeader months={months} today={today} />
-          <ul className="divide-y divide-zinc-200 dark:divide-zinc-800 border-b border-zinc-200 dark:border-zinc-800">
+          <Accordion type="single" collapsible className="border-b border-zinc-200 dark:border-zinc-800">
             {visible.map(p => (
               <TimelineRow
                 key={p.id}
@@ -185,17 +234,17 @@ export function TimelineShell({ initialProjects, initialCollaborators, months, t
                 months={months}
                 today={today}
                 collabLookup={collabLookup}
-                isExpanded={expandedId === p.id}
                 canEdit={!!timeline.activeUser}
-                onToggle={() => setExpandedId(prev => (prev === p.id ? null : p.id))}
                 onToggleStep={(idx) => timeline.toggleStep(p.id, idx)}
                 onUpdateStep={(idx, patch) => timeline.updateStep(p.id, idx, patch)}
                 onPhasesCommit={(phases) => timeline.updatePhases(p.id, phases)}
                 onMilestoneCommit={(ms) => timeline.updateMilestone(p.id, ms)}
                 onPriorityCommit={(priority) => timeline.updatePriority(p.id, priority)}
+                onContributorsCommit={(contributors) => timeline.updateContributors(p.id, contributors)}
+                allCollaborators={timeline.collaborators}
               />
             ))}
-          </ul>
+          </Accordion>
         </div>
 
         {/* Mobile month-stacked */}
@@ -260,21 +309,22 @@ function MonthHeader({ months, today }: { months: Month[]; today: number }) {
 // ---------- Row ----------
 
 function TimelineRow({
-  project, months, today, collabLookup, isExpanded, canEdit,
-  onToggle, onToggleStep, onUpdateStep, onPhasesCommit, onMilestoneCommit, onPriorityCommit,
+  project, months, today, collabLookup, canEdit,
+  onToggleStep, onUpdateStep, onPhasesCommit, onMilestoneCommit, onPriorityCommit, onContributorsCommit,
+  allCollaborators,
 }: {
   project: TimelineProject
   months: Month[]
   today: number
   collabLookup: Record<string, TimelineCollaborator>
-  isExpanded: boolean
   canEdit: boolean
-  onToggle: () => void
   onToggleStep: (idx: number) => void
   onUpdateStep: (idx: number, patch: Partial<TimelineStep>) => void
   onPhasesCommit: (phases: TimelinePhase[]) => void
   onMilestoneCommit: (ms: { at: number; label: string } | null) => void
   onPriorityCommit: (priority: PriorityLevel) => void
+  onContributorsCommit: (contributors: string[]) => void
+  allCollaborators: TimelineCollaborator[]
 }) {
   const pri = PRIORITY[project.priority as PriorityLevel] ?? PRIORITY.medium
   const status = STATUS_CFG[project.status] ?? STATUS_CFG.idea
@@ -284,38 +334,46 @@ function TimelineRow({
   const leadCol = leadColors(lead)
 
   return (
-    <li className={cn('transition-colors', isExpanded ? 'bg-zinc-50 dark:bg-zinc-900/40' : 'hover:bg-zinc-50/60 dark:hover:bg-zinc-900/25')}>
+    <AccordionItem
+      value={project.id}
+      className="border-b-0 border-t border-zinc-200 dark:border-zinc-800 first:border-t-0 transition-colors hover:bg-zinc-50/60 dark:hover:bg-zinc-900/25 data-[state=open]:bg-zinc-50 dark:data-[state=open]:bg-zinc-900/40"
+    >
       <div className="grid grid-cols-[320px_1fr]">
-        {/* Label */}
-        <button type="button" onClick={onToggle} className="group text-left px-4 py-4 flex items-start gap-3 min-w-0 border-l-2 cursor-pointer" style={{ borderLeftColor: leadCol.solid }}>
-          <span className="font-mono text-[11px] text-zinc-300 dark:text-zinc-700 mt-[2px] shrink-0">{project.num}</span>
-          <div className="flex-1 min-w-0">
-            <div className="flex items-center gap-2 mb-1">
-              <h3 className="text-[14px] font-medium tracking-tight text-zinc-900 dark:text-zinc-100 leading-snug line-clamp-2" title={project.name}>{project.name}</h3>
-              <span className={cn('inline-block h-1.5 w-1.5 rounded-full shrink-0', status.dot)} />
-              {totalSteps > 0 && (
-                <span className={cn(
-                  'text-[10px] font-mono tabular-nums',
-                  doneCount === totalSteps ? 'text-emerald-600 dark:text-emerald-500' : 'text-zinc-400 dark:text-zinc-500'
-                )}>
-                  {doneCount}/{totalSteps}
-                </span>
-              )}
+        {/* Label (accordion trigger) */}
+        <AccordionPrimitive.Header className="flex">
+          <AccordionPrimitive.Trigger
+            className="group/trigger flex-1 text-left px-4 py-5 flex items-start gap-3 min-w-0 border-l-2 cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-zinc-500/40"
+            style={{ borderLeftColor: leadCol.solid }}
+          >
+            <span className="font-mono text-[11px] text-zinc-300 dark:text-zinc-700 mt-[2px] shrink-0">{project.num}</span>
+            <div className="flex-1 min-w-0">
+              <div className="flex items-center gap-2 mb-1">
+                <h3 className="text-[14px] font-medium tracking-tight text-zinc-900 dark:text-zinc-100 leading-snug line-clamp-2" title={project.name}>{project.name}</h3>
+                <span className={cn('inline-block h-1.5 w-1.5 rounded-full shrink-0', status.dot)} />
+                {totalSteps > 0 && (
+                  <span className={cn(
+                    'text-[10px] font-mono tabular-nums',
+                    doneCount === totalSteps ? 'text-emerald-600 dark:text-emerald-500' : 'text-zinc-400 dark:text-zinc-500'
+                  )}>
+                    {doneCount}/{totalSteps}
+                  </span>
+                )}
+              </div>
+              <div className="mt-1.5">
+                <ContribStack ids={project.contributors} lookup={collabLookup} />
+              </div>
             </div>
-            <div className="mt-1.5">
-              <ContribStack ids={project.contributors} lookup={collabLookup} />
-            </div>
-          </div>
-          <span className={cn('text-zinc-300 dark:text-zinc-700 mt-0.5 shrink-0 transition-transform', isExpanded && 'rotate-90')} aria-hidden="true">›</span>
-        </button>
+            <span className="text-zinc-300 dark:text-zinc-700 mt-0.5 shrink-0 transition-transform duration-200 group-data-[state=open]/trigger:rotate-90" aria-hidden="true">›</span>
+          </AccordionPrimitive.Trigger>
+        </AccordionPrimitive.Header>
 
         {/* Timeline track */}
-        <div className="relative border-l border-zinc-200 dark:border-zinc-800" style={{ minHeight: '76px' }}>
+        <div className="relative border-l border-zinc-200 dark:border-zinc-800" style={{ minHeight: '88px' }}>
           <div className="absolute inset-0 grid" style={{ gridTemplateColumns: `repeat(${months.length}, minmax(0, 1fr))` }} aria-hidden="true">
             {months.map((m, i) => (<div key={m.key} className={cn('h-full', i > 0 && 'border-l border-zinc-200/70 dark:border-zinc-800/70')} />))}
           </div>
           <TodayMarker position={today} variant="row" />
-          <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-9 mx-1">
+          <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-9">
             {project.phases.map((ph, phIdx) => {
               if (ph.kind === 'rollout' || ph.kind === 'live') return null
               return (
@@ -330,25 +388,25 @@ function TimelineRow({
                 />
               )
             })}
-          </div>
-          {/* Step due dots */}
-          <div className="absolute inset-x-0 bottom-1 h-2.5 mx-1 pointer-events-none">
             {project.steps.map((step, i) => (
               step.due_at !== undefined ? (
-                <StepDot key={i} step={step} leadCol={leadCol} />
+                <StepDot
+                  key={`step-${i}`}
+                  step={step}
+                  leadCol={leadCol}
+                  canEdit={canEdit}
+                  onUpdateStep={(patch) => onUpdateStep(i, patch)}
+                />
               ) : null
             ))}
           </div>
         </div>
       </div>
 
-      {/* Expanded detail */}
-      {isExpanded && (
-        <div className="border-t border-zinc-200 dark:border-zinc-800 px-6 py-5 bg-white/40 dark:bg-zinc-950/40">
-          <ExpandedDetail project={project} collabLookup={collabLookup} canEdit={canEdit} onToggleStep={onToggleStep} onUpdateStep={onUpdateStep} onPriorityCommit={onPriorityCommit} />
-        </div>
-      )}
-    </li>
+      <AccordionContent className="border-t border-zinc-200 dark:border-zinc-800 px-6 py-5 bg-white/40 dark:bg-zinc-950/40">
+        <ExpandedDetail project={project} collabLookup={collabLookup} canEdit={canEdit} onToggleStep={onToggleStep} onUpdateStep={onUpdateStep} onPriorityCommit={onPriorityCommit} onContributorsCommit={onContributorsCommit} allCollaborators={allCollaborators} />
+      </AccordionContent>
+    </AccordionItem>
   )
 }
 
@@ -360,7 +418,7 @@ function PhaseBar({
   phase: TimelinePhase
   phases: TimelinePhase[]
   phaseIndex: number
-  leadCol: { bg: string; bgOpaque: string; border: string; text: string; solid: string }
+  leadCol: { bg: string; bgOpaque: string; border: string; text: string; solid: string; hoverBg: string; hoverText: string }
   canEdit: boolean
   onCommit: (phases: TimelinePhase[]) => void
 }) {
@@ -376,13 +434,15 @@ function PhaseBar({
   const widthTransition = prefersReduced ? 'none' : 'width 180ms cubic-bezier(0.25, 1, 0.5, 1)'
 
   const handleMouseEnter = () => {
-    const span = labelRef.current
-    if (span && span.scrollWidth > span.clientWidth + 1) {
-      setExpandedPx(span.scrollWidth + 18)
-    } else {
-      setExpandedPx(null)
-    }
     setHovered(true)
+    requestAnimationFrame(() => {
+      const span = labelRef.current
+      if (span && span.scrollWidth > span.clientWidth + 1) {
+        setExpandedPx(span.scrollWidth + 18)
+      } else {
+        setExpandedPx(null)
+      }
+    })
   }
   const handleMouseLeave = () => setHovered(false)
 
@@ -392,9 +452,9 @@ function PhaseBar({
     isWait && 'border-dashed'
   )
   const kindStyle: React.CSSProperties = {
-    backgroundColor: isWait ? 'transparent' : (hovered ? leadCol.bgOpaque : leadCol.bg),
+    backgroundColor: isWait ? 'transparent' : (hovered ? leadCol.hoverBg : leadCol.bg),
     borderColor: leadCol.border,
-    color: leadCol.text,
+    color: isWait ? leadCol.solid : (hovered ? leadCol.hoverText : leadCol.text),
   }
 
   const startDate = fractionToDate(phase.start)
@@ -418,6 +478,12 @@ function PhaseBar({
     transition: widthTransition,
   }
 
+  const KindIcon = phase.kind === 'build' ? Hammer
+    : phase.kind === 'test' ? FlaskConical
+    : phase.kind === 'rollout' ? Rocket
+    : phase.kind === 'live' ? Radio
+    : Clock
+
   const bar = (
     <div
       className={cn(base, kindClass, canEdit && 'cursor-pointer hover:brightness-110')}
@@ -425,7 +491,8 @@ function PhaseBar({
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <span ref={labelRef} className={cn('px-2', hovered ? 'whitespace-nowrap' : 'truncate')}>{phase.label}</span>
+      <KindIcon className="size-[10px] shrink-0 ml-1.5 opacity-80" aria-hidden="true" />
+      <span ref={labelRef} className={cn('pl-1 pr-2', hovered ? 'whitespace-nowrap' : 'truncate')}>{hovered && phase.description ? phase.description : phase.label}</span>
     </div>
   )
 
@@ -560,12 +627,17 @@ function MilestoneMarker({
 function TodayMarker({ position, variant }: { position: number; variant: 'header' | 'row' }) {
   return (
     <div
-      className={cn('absolute top-0 bottom-0 w-px z-[3] pointer-events-none', variant === 'header' ? 'bg-[#d87758]/70' : 'bg-[#d87758]/40')}
+      className={cn(
+        'absolute top-0 bottom-0 z-[3] pointer-events-none border-l border-dashed',
+        variant === 'header' ? 'border-[#d87758]/80' : 'border-[#d87758]/35'
+      )}
       style={{ left: `${position * 100}%` }}
       aria-hidden="true"
     >
       {variant === 'header' && (
-        <span className="absolute -top-[2px] left-1/2 -translate-x-1/2 -translate-y-full text-[9px] font-mono uppercase tracking-[0.14em] text-[#b3563a] dark:text-[#e89477] whitespace-nowrap">today</span>
+        <span className="absolute -top-[4px] left-1/2 -translate-x-1/2 -translate-y-full px-1.5 py-0.5 rounded-[3px] bg-[#d87758] text-[8px] font-mono uppercase tracking-[0.16em] text-white whitespace-nowrap shadow-sm">
+          Today
+        </span>
       )}
     </div>
   )
@@ -574,7 +646,7 @@ function TodayMarker({ position, variant }: { position: number; variant: 'header
 // ---------- Expanded detail with checkboxes ----------
 
 function ExpandedDetail({
-  project, collabLookup, canEdit, onToggleStep, onUpdateStep, onPriorityCommit,
+  project, collabLookup, canEdit, onToggleStep, onUpdateStep, onPriorityCommit, onContributorsCommit, allCollaborators,
 }: {
   project: TimelineProject
   collabLookup: Record<string, TimelineCollaborator>
@@ -582,6 +654,8 @@ function ExpandedDetail({
   onToggleStep: (idx: number) => void
   onUpdateStep: (idx: number, patch: Partial<TimelineStep>) => void
   onPriorityCommit: (priority: PriorityLevel) => void
+  onContributorsCommit: (contributors: string[]) => void
+  allCollaborators: TimelineCollaborator[]
 }) {
   return (
     <div className="space-y-4">
@@ -601,6 +675,38 @@ function ExpandedDetail({
               <SelectItem value="low" className="text-[12px] font-mono">Low</SelectItem>
             </SelectContent>
           </Select>
+        </div>
+      )}
+      {canEdit && (
+        <div>
+          <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-400 dark:text-zinc-500 mb-2">Collaborators</p>
+          <div className="flex flex-wrap gap-1.5">
+            {allCollaborators.filter(c => !c.neutral).map(c => {
+              const active = project.contributors.includes(c.initials)
+              const leadCol = leadColors(c)
+              return (
+                <button
+                  key={c.initials}
+                  type="button"
+                  onClick={() => {
+                    const next = active
+                      ? project.contributors.filter(id => id !== c.initials)
+                      : [...project.contributors, c.initials]
+                    onContributorsCommit(next)
+                  }}
+                  className={cn(
+                    'px-2.5 py-1 text-[11px] font-mono rounded-full border transition-colors cursor-pointer',
+                    active
+                      ? ''
+                      : 'border-zinc-200 dark:border-zinc-800 text-zinc-400 dark:text-zinc-500 hover:border-zinc-400 dark:hover:border-zinc-600'
+                  )}
+                  style={active ? { borderColor: leadCol.solid, color: leadCol.solid, backgroundColor: leadCol.bg } : undefined}
+                >
+                  {c.initials} {c.name}
+                </button>
+              )
+            })}
+          </div>
         </div>
       )}
       <div>
@@ -751,38 +857,100 @@ function StepRow({
 
 // ---------- Step dot on timeline ----------
 
-function StepDot({ step, leadCol }: { step: TimelineStep; leadCol: { bg: string; bgOpaque: string; border: string; text: string; solid: string } }) {
+function StepDot({ step, leadCol, canEdit, onUpdateStep }: {
+  step: TimelineStep
+  leadCol: { bg: string; bgOpaque: string; border: string; text: string; solid: string; hoverBg: string; hoverText: string }
+  canEdit: boolean
+  onUpdateStep: (patch: Partial<TimelineStep>) => void
+}) {
+  const [hovered, setHovered] = useState(false)
+  const [open, setOpen] = useState(false)
+  const [expandedPx, setExpandedPx] = useState<number | null>(null)
+  const labelRef = useRef<HTMLSpanElement>(null)
+
   if (step.due_at === undefined) return null
   const hasRange = step.start_at !== undefined && step.start_at < step.due_at
   const doneColor = 'rgb(16 185 129)'
+  const fill = step.done ? doneColor : leadCol.solid
+  const edge = step.done ? doneColor : leadCol.border
+  const fillBg = step.done ? 'rgb(16 185 129 / 0.18)' : leadCol.bg
+  const startObj = step.start_at !== undefined ? fractionToDate(step.start_at) : null
+  const dueObj = fractionToDate(step.due_at)
+
+  const handleMouseEnter = () => {
+    setHovered(true)
+    requestAnimationFrame(() => {
+      const span = labelRef.current
+      if (span && span.scrollWidth > span.clientWidth + 1) {
+        setExpandedPx(span.scrollWidth + 16)
+      } else {
+        setExpandedPx(null)
+      }
+    })
+  }
+  const handleMouseLeave = () => setHovered(false)
 
   if (hasRange) {
     const left = `${step.start_at! * 100}%`
     const width = `${(step.due_at - step.start_at!) * 100}%`
-    return (
+    const bar = (
       <div
-        className="absolute top-0 h-2 rounded-full"
+        className={cn(
+          'absolute inset-y-0 rounded-[3px] border flex items-center text-[10px] font-mono overflow-hidden transition-[background-color,width] duration-200',
+          canEdit ? 'cursor-pointer hover:brightness-110' : 'cursor-default'
+        )}
         style={{
           left,
-          width,
-          backgroundColor: step.done ? doneColor : leadCol.solid,
-          opacity: 0.85,
+          width: hovered && expandedPx ? `${expandedPx}px` : width,
+          backgroundColor: hovered && !step.done ? leadCol.hoverBg : fillBg,
+          borderColor: edge,
+          color: hovered && !step.done ? leadCol.hoverText : leadCol.text,
+          zIndex: hovered ? 20 : undefined,
         }}
-      />
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+        <span ref={labelRef} className={cn('px-2', hovered ? 'whitespace-nowrap' : 'truncate')}>{step.text}</span>
+      </div>
+    )
+
+    if (!canEdit) return bar
+
+    return (
+      <Popover open={open} onOpenChange={setOpen}>
+        <PopoverTrigger asChild>{bar}</PopoverTrigger>
+        <PopoverContent className="w-auto p-3" side="top" align="center">
+          <div className="space-y-2">
+            <p className="text-[11px] font-mono uppercase tracking-[0.12em] text-zinc-500 dark:text-zinc-400">{step.text}</p>
+            <DateRow
+              label="Start"
+              edge="start"
+              monthNum={startObj?.monthNum ?? 4}
+              day={startObj?.day ?? 1}
+              onChange={(m, d) => onUpdateStep({ start_at: dateToFraction(m, d) })}
+            />
+            <DateRow
+              label="Due"
+              edge="end"
+              monthNum={dueObj.monthNum}
+              day={dueObj.day}
+              onChange={(m, d) => onUpdateStep({ due_at: dateToFraction(m, d) })}
+            />
+          </div>
+        </PopoverContent>
+      </Popover>
     )
   }
 
   return (
     <div
-      className="absolute top-0 -translate-x-1/2"
+      className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2"
       style={{ left: `${step.due_at * 100}%` }}
+      title={step.text}
     >
       <div
         className="h-2 w-2 rounded-full border"
-        style={{
-          backgroundColor: step.done ? doneColor : leadCol.solid,
-          borderColor: step.done ? doneColor : leadCol.border,
-        }}
+        style={{ backgroundColor: fill, borderColor: edge }}
       />
     </div>
   )
@@ -846,16 +1014,23 @@ function ContribStack({ ids, lookup }: { ids: string[]; lookup: Record<string, T
 
 function ContribChip({ c, size = 'sm' }: { c: TimelineCollaborator; size?: 'sm' | 'md' }) {
   const dim = size === 'sm' ? 'h-5 w-5 text-[9px]' : 'h-6 w-6 text-[10px]'
-  const bgLight = c.neutral ? 'hsl(0 0% 88%)' : `hsl(${c.hue} 32% 82%)`
-  const bgDark  = c.neutral ? 'hsl(0 0% 22%)' : `hsl(${c.hue} 26% 28%)`
-  const fgLight = c.neutral ? 'hsl(0 0% 28%)' : `hsl(${c.hue} 38% 26%)`
-  const fgDark  = c.neutral ? 'hsl(0 0% 78%)' : `hsl(${c.hue} 34% 82%)`
+  const hex = COLLAB_COLORS[c.initials]
+  let bg: string
+  let fg: string
+  if (c.neutral) {
+    bg = 'hsl(0 0% 22%)'
+    fg = 'hsl(0 0% 78%)'
+  } else if (hex) {
+    bg = hex
+    fg = isLightHex(hex) ? '#111' : '#fff'
+  } else {
+    bg = `hsl(${c.hue} 26% 28%)`
+    fg = `hsl(${c.hue} 34% 82%)`
+  }
   const base = 'items-center justify-center rounded-full font-mono uppercase tracking-[0.04em] border'
 
   return (
-    <>
-      <span className={cn('inline-flex border-zinc-950', base, dim)} style={{ backgroundColor: bgDark, color: fgDark }} aria-label={c.name}>{c.initials}</span>
-    </>
+    <span className={cn('inline-flex border-zinc-950', base, dim)} style={{ backgroundColor: bg, color: fg }} aria-label={c.name}>{c.initials}</span>
   )
 }
 
