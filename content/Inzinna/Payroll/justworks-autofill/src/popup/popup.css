@@ -522,6 +522,252 @@ h1 {
   color: var(--ink);
 }
 
+/* ---------- Bret insurance picker ---------- */
+.ins-block {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+}
+
+.ins-title {
+  font-size: 9px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-faint);
+  margin-bottom: 6px;
+}
+
+.ins-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ins-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+}
+
+.ins-client {
+  flex: 1;
+  color: var(--ink-soft);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ins-controls {
+  display: inline-flex;
+  gap: 2px;
+}
+
+.ins-btn {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  font-size: 10.5px;
+  cursor: pointer;
+  transition: background 0.12s ease, color 0.12s ease, border-color 0.12s ease;
+}
+
+.ins-btn:hover {
+  background: var(--surface-muted);
+  color: var(--ink);
+  border-color: var(--border-strong);
+}
+
+.ins-btn.active {
+  background: var(--ink);
+  color: #fff;
+  border-color: var(--ink);
+}
+
+.ins-unset {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  color: var(--pale-yellow-ink);
+  background: var(--pale-yellow-bg);
+  padding: 1px 5px;
+  border-radius: 3px;
+}
+
+.ins-note {
+  font-size: 9.5px;
+  color: var(--text-faint);
+  margin-top: 6px;
+  font-style: italic;
+}
+
+/* ---------- Pending sessions (Emily's Friday placeholders) ---------- */
+.pending-block {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+}
+
+.pending-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 6px;
+}
+
+.pending-title {
+  font-size: 9px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-faint);
+}
+
+.pending-subtotal {
+  font-family: var(--mono);
+  font-weight: 600;
+  font-size: 11.5px;
+  color: var(--ink);
+}
+
+.pending-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.pending-row {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.pending-date {
+  width: 104px;
+  padding: 3px 5px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 10.5px;
+  font-family: var(--mono);
+  color: var(--ink-soft);
+  background: var(--surface);
+}
+
+.pending-client {
+  flex: 1;
+  min-width: 0;
+  padding: 3px 6px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 11px;
+  background: var(--surface);
+  color: var(--ink-soft);
+  font-family: inherit;
+}
+
+.pending-code {
+  width: 68px;
+  padding: 3px 4px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 10.5px;
+  font-family: var(--mono);
+  background: var(--surface);
+  color: var(--ink-soft);
+}
+
+.pending-date:focus,
+.pending-client:focus,
+.pending-code:focus {
+  outline: none;
+  border-color: var(--ink);
+}
+
+.pending-status-group {
+  display: inline-flex;
+  gap: 1px;
+}
+
+.pending-status-btn {
+  width: 20px;
+  height: 22px;
+  padding: 0;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-faint);
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: background 0.12s ease, color 0.12s ease, border-color 0.12s ease;
+}
+
+.pending-status-btn:hover {
+  background: var(--surface-muted);
+  color: var(--ink);
+}
+
+.pending-status-btn.active.pending {
+  background: var(--pale-yellow-bg);
+  color: var(--pale-yellow-ink);
+  border-color: var(--pale-yellow-bg);
+}
+
+.pending-status-btn.active.completed {
+  background: var(--pale-green-bg);
+  color: var(--pale-green-ink);
+  border-color: var(--pale-green-bg);
+}
+
+.pending-status-btn.active.no-show {
+  background: var(--pale-red-bg);
+  color: var(--pale-red-ink);
+  border-color: var(--pale-red-bg);
+}
+
+.pending-delete {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-faint);
+  width: 22px;
+  height: 22px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 13px;
+  line-height: 1;
+  padding: 0;
+  transition: background 0.12s ease, color 0.12s ease, border-color 0.12s ease;
+}
+
+.pending-delete:hover {
+  background: var(--pale-red-bg);
+  border-color: var(--pale-red-bg);
+  color: var(--pale-red-ink);
+}
+
+.pending-add {
+  background: transparent;
+  border: 1px dashed var(--border-strong);
+  color: var(--text-muted);
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  font-size: 10.5px;
+  cursor: pointer;
+  margin-top: 6px;
+  font-family: inherit;
+  transition: background 0.12s ease, color 0.12s ease, border-color 0.12s ease;
+}
+
+.pending-add:hover {
+  background: var(--surface-muted);
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
 /* ---------- Legacy Bret section (hidden by popup.ts, keep styles safe) ---------- */
 .bret-calc {
   background: var(--surface);

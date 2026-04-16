@@ -96,3 +96,16 @@ export interface StoredPayroll {
   timestamp: number
   result: PayrollResultWithHours
 }
+
+export type PendingSessionStatus = 'pending' | 'completed' | 'no-show'
+
+export interface PendingSession {
+  id: string
+  clinician: string
+  date: string  // YYYY-MM-DD (HTML date input format)
+  client: string
+  code: string
+  status: PendingSessionStatus
+}
+
+export type BretInsurance = 'united' | 'aetna'

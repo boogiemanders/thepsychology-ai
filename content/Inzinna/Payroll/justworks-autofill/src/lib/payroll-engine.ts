@@ -1,4 +1,4 @@
-import type { SessionRow, ClinicianSummary, PayrollResult, PayrollResultWithHours, JustWorksFillData, DailyHours } from './types'
+import type { SessionRow, ClinicianSummary, PayrollResult, PayrollResultWithHours, JustWorksFillData, DailyHours, PendingSessionStatus } from './types'
 import { getPayRate, getCodeDurationMinutes } from './compensation-legend'
 
 /**
@@ -220,6 +220,120 @@ export function applyManualAddition(
   // Apply new nudge to last day
   if (nudge !== 0) {
     fill.dailyBreakdown[fill.dailyBreakdown.length - 1].totalMinutes += nudge
+  }
+
+  return clone
+}
+
+/**
+ * Apply a pending session (code-based, with confirmation status) to a clinician.
+ * Used for sessions not yet in the SimplePractice CSV — e.g. Emily's Friday
+ * sessions when Carlos runs payroll Friday morning. Carlos toggles each at
+ * end of Friday: completed (pay CPT rate), no-show (pay no-show rate),
+ * pending (treat as completed for optimistic preview).
+ *
+ * Returns a new result with the clinician's sessionPay, rows, and fillData updated.
+ */
+export function applyPendingSession(
+  result: PayrollResultWithHours,
+  clinicianName: string,
+  dateCsv: string,     // MM/DD/YYYY
+  client: string,
+  code: string,
+  status: PendingSessionStatus
+): PayrollResultWithHours {
+  if (!dateCsv || !client || !code) return result
+
+  // no-show → compute pay via '00001' lookup; pending/completed → use actual code
+  const effectiveCode = status === 'no-show' ? '00001' : code
+  const { pay } = getPayRate(clinicianName, effectiveCode)
+  if (pay === null || pay === 0) return result
+
+  const durationMinutes = status === 'no-show' ? 0 : getCodeDurationMinutes(code)
+
+  const clone: PayrollResultWithHours = JSON.parse(JSON.stringify(result))
+  const clinician = clone.clinicians.find(c => c.name === clinicianName)
+  const fill = clone.fillData.find(f => f.clinicianName === clinicianName)
+
+  // If the clinician wasn't in the base result (e.g. no CSV rows this week),
+  // seed a summary + fill entry so pending sessions still compute.
+  let clinicianRef = clinician
+  let fillRef = fill
+  if (!clinicianRef) {
+    clinicianRef = {
+      name: clinicianName,
+      sessionPay: 0,
+      supervisionTotal: 0,
+      supervisionForBret: 0,
+      sessionCount: 0,
+      rows: [],
+    }
+    clone.clinicians.push(clinicianRef)
+    clone.clinicians.sort((a, b) => a.name.localeCompare(b.name))
+  }
+  if (!fillRef) {
+    fillRef = {
+      clinicianName,
+      totalPay: 0,
+      totalMinutes: 0,
+      adjustedHourlyRate: 0,
+      dailyBreakdown: [],
+      minuteAdjustment: 0,
+    }
+    clone.fillData.push(fillRef)
+  }
+
+  const statusTag = status === 'completed' ? '' : ` (${status})`
+  clinicianRef.sessionPay += pay
+  clinicianRef.sessionCount += 1
+  clinicianRef.rows.push({
+    date: dateCsv,
+    client: `${client}${statusTag}`,
+    code: effectiveCode,
+    pay,
+    supervisionValue: 0,
+    durationMinutes,
+  })
+
+  // Strip old nudge before merging
+  if (fillRef.minuteAdjustment !== 0 && fillRef.dailyBreakdown.length > 0) {
+    fillRef.dailyBreakdown[fillRef.dailyBreakdown.length - 1].totalMinutes -= fillRef.minuteAdjustment
+  }
+
+  const existing = fillRef.dailyBreakdown.find(d => d.date === dateCsv)
+  if (existing) {
+    existing.totalMinutes += durationMinutes
+    existing.sessionCount += 1
+  } else {
+    fillRef.dailyBreakdown.push({
+      date: dateCsv,
+      dayOfWeek: getDayOfWeek(dateCsv),
+      totalMinutes: durationMinutes,
+      sessionCount: 1,
+    })
+    fillRef.dailyBreakdown.sort((a, b) => parseDate(a.date).getTime() - parseDate(b.date).getTime())
+  }
+
+  const newRawMinutes = fillRef.dailyBreakdown.reduce((s, d) => s + d.totalMinutes, 0)
+  const newTotalPay = Math.round((fillRef.totalPay + pay) * 100) / 100
+
+  if (newRawMinutes === 0 || newTotalPay === 0) {
+    fillRef.totalPay = newTotalPay
+    fillRef.totalMinutes = newRawMinutes
+    fillRef.adjustedHourlyRate = 0
+    fillRef.minuteAdjustment = 0
+    return clone
+  }
+
+  const { adjustedRate, finalMinutes, nudge } = findExactMatch(newTotalPay, newRawMinutes)
+
+  fillRef.totalPay = newTotalPay
+  fillRef.totalMinutes = finalMinutes
+  fillRef.adjustedHourlyRate = adjustedRate
+  fillRef.minuteAdjustment = nudge
+
+  if (nudge !== 0) {
+    fillRef.dailyBreakdown[fillRef.dailyBreakdown.length - 1].totalMinutes += nudge
   }
 
   return clone

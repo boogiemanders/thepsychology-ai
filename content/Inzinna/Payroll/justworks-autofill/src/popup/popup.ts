@@ -1,10 +1,10 @@
 import { parseCSV } from '../lib/csv-parser'
-import { calculatePayrollWithHours, applyManualAddition } from '../lib/payroll-engine'
+import { calculatePayrollWithHours, applyManualAddition, applyPendingSession } from '../lib/payroll-engine'
 import { getManualRate, legend } from '../lib/compensation-legend'
 import { formatShortDate } from '../lib/date-utils'
 import { buildPayrollWorkbook, suggestFilename } from '../lib/xlsx-exporter'
 import { buildJustWorksCSV, suggestJustWorksFilename } from '../lib/justworks-csv-exporter'
-import type { PayrollResultWithHours, ManualAdditionKind, ClinicianSummary } from '../lib/types'
+import type { PayrollResultWithHours, ManualAdditionKind, ClinicianSummary, PendingSession, PendingSessionStatus, BretInsurance } from '../lib/types'
 
 const csvInput = document.getElementById('csv-input') as HTMLInputElement
 const uploadLabel = document.querySelector('.upload-label') as HTMLLabelElement
@@ -44,6 +44,36 @@ interface ManualEntry {
 }
 
 let manualEntries: ManualEntry[] = []
+
+// Pending sessions — placeholders Carlos adds Friday morning for Emily's
+// afternoon sessions. Each has a status toggle he flips at end of Friday.
+const PENDING_CLINICIANS = ['Emily Underwood']
+
+// Which CPT codes to offer in the dropdown per clinician (from legend.rates keys)
+function availableCodesFor(clinicianName: string): string[] {
+  const cfg = legend[clinicianName]
+  if (!cfg) return []
+  if (cfg.type === 'cpt_based') return Object.keys(cfg.rates).filter(c => (cfg.rates as Record<string, number>)[c] > 0)
+  return []
+}
+
+let pendingSessions: PendingSession[] = []
+
+// Bret per-client insurance — persists across payroll runs so Carlos only
+// picks once per patient. Keyed by exact client name as it appears in CSV.
+let bretInsuranceMap: Record<string, BretInsurance> = {}
+
+function newPendingId(): string {
+  return `p${Date.now()}-${Math.floor(Math.random() * 10000)}`
+}
+
+function isValidPendingStatus(s: unknown): s is PendingSessionStatus {
+  return s === 'pending' || s === 'completed' || s === 'no-show'
+}
+
+function saveBretInsuranceMap() {
+  chrome.storage.local.set({ bretInsuranceMap })
+}
 
 // HTML date input gives YYYY-MM-DD; the engine uses MM/DD/YYYY
 const HTML_DATE_RE = /^\d{4}-\d{2}-\d{2}$/
@@ -113,6 +143,91 @@ function codesForDate(summary: ClinicianSummary, date: string): string[] {
     .filter(Boolean)
 }
 
+// Escape HTML so client names / codes can't break the DOM
+function esc(s: string): string {
+  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;')
+}
+
+// List of unique Bret clients from current CSV, sorted alpha
+function uniqueBretClients(summary: ClinicianSummary): string[] {
+  const set = new Set<string>()
+  for (const r of summary.rows) {
+    if (r.client) set.add(r.client)
+  }
+  return Array.from(set).sort((a, b) => a.localeCompare(b))
+}
+
+function buildBretInsuranceHtml(summary: ClinicianSummary): string {
+  const clients = uniqueBretClients(summary)
+  if (clients.length === 0) return ''
+
+  const rowsHtml = clients.map(c => {
+    const current = bretInsuranceMap[c]
+    const mkBtn = (value: BretInsurance, label: string) =>
+      `<button class="ins-btn${current === value ? ' active' : ''}" data-client="${esc(c)}" data-value="${value}">${label}</button>`
+    const unsetMark = !current ? '<span class="ins-unset">pick insurance</span>' : ''
+    return `
+      <div class="ins-row">
+        <span class="ins-client">${esc(c)}</span>
+        <span class="ins-controls">
+          ${mkBtn('united', 'United')}
+          ${mkBtn('aetna', 'Aetna')}
+        </span>
+        ${unsetMark}
+      </div>
+    `
+  }).join('')
+
+  return `
+    <div class="ins-block">
+      <div class="ins-title">Insurance per client</div>
+      <div class="ins-rows">${rowsHtml}</div>
+      <div class="ins-note">Informational. Pay math unchanged (80% of CSV rate).</div>
+    </div>
+  `
+}
+
+function buildPendingSessionsHtml(clinicianName: string): string {
+  const mine = pendingSessions.filter(p => p.clinician === clinicianName)
+  const codes = availableCodesFor(clinicianName)
+  const subtotal = mine.reduce((sum, p) => {
+    const cfg = legend[p.clinician]
+    if (!cfg || cfg.type !== 'cpt_based') return sum
+    if (p.status === 'no-show') {
+      return sum + (cfg.noShow?.['00001'] ?? 0)
+    }
+    return sum + (cfg.rates[p.code] ?? 0)
+  }, 0)
+
+  const rowsHtml = mine.map(p => `
+    <div class="pending-row" data-pending-id="${p.id}">
+      <input type="date" class="pending-date" value="${sanitizeHtmlDate(p.date)}" />
+      <input type="text" class="pending-client" placeholder="client" value="${esc(p.client)}" />
+      <select class="pending-code">
+        <option value="">code</option>
+        ${codes.map(c => `<option value="${c}"${p.code === c ? ' selected' : ''}>${c}</option>`).join('')}
+      </select>
+      <span class="pending-status-group">
+        <button class="pending-status-btn${p.status === 'pending' ? ' active pending' : ''}" data-status="pending" title="Pending (counts as completed)">P</button>
+        <button class="pending-status-btn${p.status === 'completed' ? ' active completed' : ''}" data-status="completed" title="Completed">C</button>
+        <button class="pending-status-btn${p.status === 'no-show' ? ' active no-show' : ''}" data-status="no-show" title="No-show">N</button>
+      </span>
+      <button class="pending-delete" title="Remove">×</button>
+    </div>
+  `).join('')
+
+  return `
+    <div class="pending-block" data-clinician="${esc(clinicianName)}">
+      <div class="pending-header">
+        <span class="pending-title">Pending Sessions</span>
+        <span class="pending-subtotal">$${subtotal.toFixed(2)}</span>
+      </div>
+      <div class="pending-rows">${rowsHtml}</div>
+      <button class="pending-add" data-clinician="${esc(clinicianName)}">+ add pending session</button>
+    </div>
+  `
+}
+
 function buildManualGroupHtml(g: ManualGroup): string {
   const rate = getManualRate(g.clinician, g.kind)
   const entries = manualEntries.filter(e => e.groupId === g.id)
@@ -167,35 +282,134 @@ clinicianList.addEventListener('click', (e) => {
       manualEntries = manualEntries.filter(e => e.id !== entryId)
       recomputeFromBase()
     }
+    return
+  }
+
+  // Bret insurance picker — stored globally, does NOT trigger recompute
+  // (math unchanged, but we re-render the card to show active state)
+  if (target.classList.contains('ins-btn')) {
+    const client = target.dataset.client
+    const value = target.dataset.value as BretInsurance | undefined
+    if (!client || !value) return
+    // Toggle off if clicking the active one
+    if (bretInsuranceMap[client] === value) {
+      delete bretInsuranceMap[client]
+    } else {
+      bretInsuranceMap[client] = value
+    }
+    saveBretInsuranceMap()
+    if (currentResult) renderResults(currentResult)
+    return
+  }
+
+  if (target.classList.contains('pending-add')) {
+    const clinician = target.dataset.clinician!
+    pendingSessions.push({
+      id: newPendingId(),
+      clinician,
+      date: defaultDateForNewEntry(),
+      client: '',
+      code: '',
+      status: 'pending',
+    })
+    recomputeFromBase()
+    return
+  }
+
+  if (target.classList.contains('pending-delete')) {
+    const rowEl = target.closest('.pending-row') as HTMLElement
+    const id = rowEl?.dataset.pendingId
+    if (id) {
+      pendingSessions = pendingSessions.filter(p => p.id !== id)
+      recomputeFromBase()
+    }
+    return
+  }
+
+  if (target.classList.contains('pending-status-btn')) {
+    const rowEl = target.closest('.pending-row') as HTMLElement
+    const id = rowEl?.dataset.pendingId
+    const status = target.dataset.status
+    if (id && isValidPendingStatus(status)) {
+      const p = pendingSessions.find(x => x.id === id)
+      if (p) {
+        p.status = status
+        recomputeFromBase()
+      }
+    }
+    return
   }
 })
 
 clinicianList.addEventListener('input', (e) => {
   const target = e.target as HTMLInputElement
-  const entryEl = target.closest('.manual-entry') as HTMLElement
-  if (!entryEl) return
-  const entryId = entryEl.dataset.entryId
-  const entry = manualEntries.find(x => x.id === entryId)
-  if (!entry) return
+  const manualEl = target.closest('.manual-entry') as HTMLElement | null
+  const pendingEl = target.closest('.pending-row') as HTMLElement | null
 
-  if (target.classList.contains('manual-date')) {
-    entry.date = sanitizeHtmlDate(target.value)
-  } else if (target.classList.contains('manual-input')) {
-    const v = parseFloat(target.value)
-    entry.hours = isNaN(v) || v < 0 ? 0 : v
+  if (manualEl) {
+    const entryId = manualEl.dataset.entryId
+    const entry = manualEntries.find(x => x.id === entryId)
+    if (!entry) return
+
+    if (target.classList.contains('manual-date')) {
+      entry.date = sanitizeHtmlDate(target.value)
+    } else if (target.classList.contains('manual-input')) {
+      const v = parseFloat(target.value)
+      entry.hours = isNaN(v) || v < 0 ? 0 : v
+    }
+    recomputeFromBase()
+    return
   }
-  recomputeFromBase()
+
+  if (pendingEl) {
+    const id = pendingEl.dataset.pendingId
+    const p = pendingSessions.find(x => x.id === id)
+    if (!p) return
+
+    if (target.classList.contains('pending-date')) {
+      p.date = sanitizeHtmlDate(target.value)
+      recomputeFromBase()
+    } else if (target.classList.contains('pending-client')) {
+      // Don't re-render on every keystroke — would kill input focus.
+      // State update only; blur/change will trigger recompute.
+      p.client = target.value
+    } else if (target.classList.contains('pending-code')) {
+      p.code = target.value
+      recomputeFromBase()
+    }
+  }
 })
 
 clinicianList.addEventListener('change', (e) => {
-  // Date inputs often fire 'change' not 'input' in some browsers
-  const target = e.target as HTMLInputElement
-  if (target.classList.contains('manual-date')) {
-    const entryEl = target.closest('.manual-entry') as HTMLElement
-    const entryId = entryEl?.dataset.entryId
+  // Date + select inputs often fire 'change' not 'input' in some browsers
+  const target = e.target as HTMLInputElement | HTMLSelectElement
+  const manualEl = target.closest('.manual-entry') as HTMLElement | null
+  const pendingEl = target.closest('.pending-row') as HTMLElement | null
+
+  if (manualEl && target.classList.contains('manual-date')) {
+    const entryId = manualEl.dataset.entryId
     const entry = manualEntries.find(x => x.id === entryId)
     if (entry) {
-      entry.date = sanitizeHtmlDate(target.value)
+      entry.date = sanitizeHtmlDate((target as HTMLInputElement).value)
+      recomputeFromBase()
+    }
+    return
+  }
+
+  if (pendingEl) {
+    const id = pendingEl.dataset.pendingId
+    const p = pendingSessions.find(x => x.id === id)
+    if (!p) return
+
+    if (target.classList.contains('pending-date')) {
+      p.date = sanitizeHtmlDate((target as HTMLInputElement).value)
+      recomputeFromBase()
+    } else if (target.classList.contains('pending-code')) {
+      p.code = (target as HTMLSelectElement).value
+      recomputeFromBase()
+    } else if (target.classList.contains('pending-client')) {
+      // Finalize after blur — persists state and triggers recompute
+      p.client = (target as HTMLInputElement).value
       recomputeFromBase()
     }
   }
@@ -228,6 +442,13 @@ function recomputeFromBase() {
     result = applyManualAddition(result, group.clinician, entry.hours, rate, group.label.split(' ')[0], csvDate)
   }
 
+  for (const p of pendingSessions) {
+    if (!p.date || !p.client || !p.code) continue
+    const csvDate = htmlDateToCsv(p.date)
+    if (!csvDate) continue
+    result = applyPendingSession(result, p.clinician, csvDate, p.client, p.code, p.status)
+  }
+
   currentResult = result
   renderResults(currentResult)
   updateManualSubtotals()
@@ -237,6 +458,7 @@ function recomputeFromBase() {
       timestamp: Date.now(),
       result: baseResult,
       manualEntries,
+      pendingSessions,
     },
   })
 }
@@ -294,11 +516,13 @@ clearBtn.addEventListener('click', () => {
   baseResult = null
   currentResult = null
   manualEntries = []
+  pendingSessions = []
   csvInput.value = ''
   renderManualSection()
   resultsSection.classList.add('hidden')
   uploadSection.classList.remove('hidden')
   statusEl.classList.add('hidden')
+  // NOTE: bretInsuranceMap intentionally persists — it's long-lived user prefs
   chrome.storage.local.remove('payrollData')
 })
 
@@ -496,6 +720,14 @@ function renderResults(result: PayrollResultWithHours) {
       ? `<div class="manual-in-card">${myGroups.map(buildManualGroupHtml).join('')}${grandTotalHtml}</div>`
       : ''
 
+    // Pending sessions UI — currently only for clinicians in PENDING_CLINICIANS (Emily)
+    const pendingHtml = PENDING_CLINICIANS.includes(c.name)
+      ? buildPendingSessionsHtml(c.name)
+      : ''
+
+    // Bret per-client insurance picker — informational, persists across payroll runs
+    const bretInsHtml = isBret ? buildBretInsuranceHtml(c) : ''
+
     const rateLegend = summarizeClinicianRate(c.name)
     const legendHtml = rateLegend
       ? `<span class="rate-legend">${rateLegend}</span>`
@@ -512,8 +744,10 @@ function renderResults(result: PayrollResultWithHours) {
         ${supeHtml}
       </div>
       ${fillHtml}
+      ${pendingHtml}
       ${manualHtml}
       ${breakdownHtml}
+      ${bretInsHtml}
     `
     clinicianList.appendChild(card)
   }
@@ -528,7 +762,15 @@ function showStatus(msg: string, type: 'success' | 'error' | 'info') {
   statusEl.className = type
 }
 
-chrome.storage.local.get('payrollData', (data) => {
+chrome.storage.local.get(['payrollData', 'bretInsuranceMap'], (data) => {
+  // Long-lived Bret insurance map — load first so renders see it
+  if (data.bretInsuranceMap && typeof data.bretInsuranceMap === 'object') {
+    bretInsuranceMap = {}
+    for (const [k, v] of Object.entries(data.bretInsuranceMap)) {
+      if (v === 'united' || v === 'aetna') bretInsuranceMap[k] = v
+    }
+  }
+
   if (data.payrollData?.result) {
     baseResult = data.payrollData.result
     const saved = data.payrollData.manualEntries
@@ -544,6 +786,26 @@ chrome.storage.local.get('payrollData', (data) => {
     } else {
       manualEntries = []
     }
+
+    const savedPending = data.payrollData.pendingSessions
+    if (Array.isArray(savedPending)) {
+      pendingSessions = savedPending
+        .filter((p): p is PendingSession =>
+          !!p && typeof p === 'object' &&
+          typeof p.clinician === 'string' &&
+          isValidPendingStatus(p.status))
+        .map(p => ({
+          id: typeof p.id === 'string' ? p.id : newPendingId(),
+          clinician: p.clinician,
+          date: sanitizeHtmlDate(p.date),
+          client: typeof p.client === 'string' ? p.client : '',
+          code: typeof p.code === 'string' ? p.code : '',
+          status: p.status,
+        }))
+    } else {
+      pendingSessions = []
+    }
+
     renderManualSection()
     recomputeFromBase()
   } else {
