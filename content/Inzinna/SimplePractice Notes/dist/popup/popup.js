@@ -1922,6 +1922,37 @@
       clearTimeout(timeoutId);
     }
   }
+  async function generateOpenAICompletionSync(prompt, system, model, apiKey) {
+    const messages = [
+      { role: "system", content: system },
+      { role: "user", content: prompt }
+    ];
+    const res = await fetch(OPENAI_API_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${apiKey}`
+      },
+      body: JSON.stringify({
+        model,
+        messages,
+        temperature: 0.2,
+        max_tokens: 4096
+      }),
+      signal: AbortSignal.timeout(GENERATE_TIMEOUT_MS2)
+    });
+    if (!res.ok) {
+      const text = await res.text().catch(() => "");
+      throw new Error(`OpenAI returned ${res.status}: ${text.slice(0, 200)}`);
+    }
+    const data = await res.json();
+    const content = data.choices?.[0]?.message?.content;
+    if (!content) throw new Error("OpenAI returned empty response");
+    if (data.usage) {
+      console.log("[SPN] OpenAI usage:", data.usage);
+    }
+    return content;
+  }
 
   // src/lib/deidentify.ts
   function buildPhiPatterns(intake) {
@@ -2123,7 +2154,21 @@ CONCISENESS RULES (apply to ALL sections):
 - Do NOT write generic filler like "Consider exploring the client's feelings about..." or "Continue to monitor..."
 - Do NOT repeat the same observation across sections.
 - Prefer concrete details (scores, dates, quotes, specific behaviors) over vague descriptors.
-- If a detail is not in the data, leave it out entirely \u2014 do not pad with boilerplate.`;
+- If a detail is not in the data, leave it out entirely \u2014 do not pad with boilerplate.
+
+EXAMPLE OUTPUT (synthetic, for STYLE/DEPTH reference only \u2014 do NOT copy any content from this example into real notes):
+{"subjective":"Client reported increased work stress and ongoing anxiety since last session. He has applied behavioral experiments from previous session, reducing overwork by approximately 1% weekly and increasing enjoyable activities including tennis and gym. Client resumed physical exercise for first time since recent medical event, noting 30-minute cardio session improved mood. He described morning anxiety with intrusive work-related thoughts upon waking, possibly dream-related. Client wrote a full-page private journal entry when overwhelmed this morning, then used behavioral activation via midday walk. He reported feeling urges to scream and tear up during work interactions due to repeated direct messages from a former supervisor. Client advocated for himself by speaking candidly with current supervisor, presenting concerns about project pressure and productivity impact. He connected former supervisor's communication style to early family anxiety patterns, identifying a deja vu response. Client expressed values conflict between financial optimization and meaningful work aligned with his morals, noting comparison with peers and industry growth contributes to self-esteem strain and affects relationship with partner. Client denied SI/HI.","objective":"Client was cooperative and engaged throughout session. He demonstrated self-advocacy by writing down overwhelming thoughts and communicating professionally with his supervisor despite emotional distress. Client showed insight connecting workplace dynamics to family-of-origin anxiety patterns. He problem-solved actively by using physical activity and expressive writing as coping strategies. Client read portions of journal entry aloud, demonstrating trust. He showed values clarity around integrity and working with passionate colleagues versus purely financial optimization.
+
+Mental Status Exam:
+Appearance: Casually dressed, appropriate grooming
+Behavior: Cooperative, engaged, emotionally expressive
+Speech: Normal rate and volume
+Mood/Affect: Anxious and frustrated initially, more balanced by session end
+Thoughts: Linear and goal-directed, no SI/HI, preoccupied with work pressure and peer comparisons
+Cognition: Alert, oriented x3, strong abstract reasoning
+Insight/Judgment: Excellent insight into anxiety triggers and values conflicts; judgment intact","assessment":"Client presents with generalized anxiety with somatic features including morning anxiety, intrusive work-related thoughts on waking, and urges to cry or scream under pressure, consistent with active GAD diagnosis. He demonstrates adaptive coping via behavioral activation, expressive writing, and professional self-advocacy, indicating good engagement with prior interventions. Anxiety is triggered by former supervisor's communication pattern, which the client identified as mirroring family-of-origin anxiety patterns \u2014 a significant insight gain. Client shows a values conflict between financial optimization and meaningful work, with comparison-driven self-esteem concerns affecting his romantic relationship. Client's strong self-awareness, willingness to advocate for needs, and ability to distinguish emotion from professional behavior support a positive prognosis. Continued treatment is medically necessary to address anxiety symptoms, values clarification, self-esteem concerns tied to financial comparisons, and further emotion-regulation skill building.","plan":"Continue weekly individual therapy. Validated client's self-advocacy with current supervisor as a wise-mind application. Provided psychoeducation on anxiety as a physical information system using an ancestral fight-or-flight frame. Offered a visualization technique of imagining frustrating work problems under bike pedals during exercise. Encouraged continued expressive writing and behavioral activation via gym and tennis. Client will continue the 1% behavioral experiment, prioritizing enjoyable activities over overwork. Discussed bringing a notebook to work for in-the-moment journaling. Next session will explore self-esteem concerns related to financial comparisons and values conflicts."}
+
+Note how the example: (a) organizes Subjective by THEME (stress \u2192 coping \u2192 advocacy \u2192 family link \u2192 values/FOMO \u2192 SI denial), not chronology; (b) embeds the Mental Status Exam at the end of Objective with the exact labeled layout; (c) ties Assessment to specific session content AND names medical necessity; (d) makes every Plan item concrete and session-specific. Match this depth and structure \u2014 but with the current session's actual content, not this example's content.`;
   function buildSoapPrompt(transcript, sessionNotes, intake, diagnosticImpressions, treatmentPlan, mseChecklist, prefs) {
     const sections = [];
     if (intake) {
@@ -2266,31 +2311,8 @@ Generate a SOAP progress note for this session. The treating clinician is ${prov
   }
 
   // src/lib/soap-builder.ts
-  var LOW_SIGNAL_LINES = /* @__PURE__ */ new Set([
-    "common sense",
-    "straight",
-    "least homophobic",
-    "tiktok"
-  ]);
   function normalizeWhitespace2(value) {
     return value.replace(/\s+/g, " ").trim();
-  }
-  function splitLines2(value) {
-    return value.replace(/\r\n/g, "\n").split(/\n+/).map((line) => sanitizeLine(line)).filter(Boolean);
-  }
-  function sanitizeLine(value) {
-    return normalizeWhitespace2(value).replace(/[“”]/g, '"').replace(/[‘’]/g, "'").replace(/\b(\d+)x\s*\/?\s*week\b/gi, "$1 times per week").replace(/\b(\d+)x\b/gi, "$1 times").replace(/\b2x\b/gi, "twice").replace(/\b3x\b/gi, "3 times").replace(/\b4x\b/gi, "4 times").replace(/\b5x\b/gi, "5 times").replace(/\b6x\b/gi, "6 times").replace(/\bstriipper\b/gi, "stripper").replace(/\broofied\b/gi, "was drugged").replace(/\bAldo\b/g, "Also");
-  }
-  function unique3(values) {
-    const seen = /* @__PURE__ */ new Set();
-    const output = [];
-    for (const value of values) {
-      const key = value.toLowerCase();
-      if (!key || seen.has(key)) continue;
-      seen.add(key);
-      output.push(value);
-    }
-    return output;
   }
   function firstNonEmpty3(...values) {
     for (const value of values) {
@@ -2299,527 +2321,94 @@ Generate a SOAP progress note for this session. The treating clinician is ${prov
     }
     return "";
   }
-  function sentence(value) {
-    const trimmed = normalizeWhitespace2(value).replace(/[.]+$/, "");
-    return trimmed ? `${trimmed}.` : "";
-  }
-  function joinSentences(values) {
-    return values.map((value) => sentence(value)).filter(Boolean).join(" ");
-  }
-  function formatList(values, conjunction = "and") {
-    const cleaned = unique3(values.map((value) => normalizeWhitespace2(value)).filter(Boolean));
-    if (!cleaned.length) return "";
-    if (cleaned.length === 1) return cleaned[0];
-    if (cleaned.length === 2) return `${cleaned[0]} ${conjunction} ${cleaned[1]}`;
-    return `${cleaned.slice(0, -1).join(", ")}, ${conjunction} ${cleaned[cleaned.length - 1]}`;
-  }
   function buildTranscriptText(transcript) {
     if (!transcript?.entries.length) return "";
     return transcript.entries.map((entry) => `${entry.speaker}: ${entry.text}`).join("\n");
-  }
-  function includesPattern(lines, pattern) {
-    return lines.some((line) => pattern.test(line));
-  }
-  function extractQuotedPhrases(lines) {
-    const phrases = [];
-    for (const line of lines) {
-      const matches = line.matchAll(/"([^"]{3,})"/g);
-      for (const match of matches) {
-        const phrase = normalizeWhitespace2(match[1]);
-        if (phrase) phrases.push(phrase);
-      }
-    }
-    return unique3(phrases);
-  }
-  function extractMoneySpent(lines) {
-    for (const line of lines) {
-      if (!/\bspent\b/i.test(line)) continue;
-      const match = line.match(/\$?\s?(\d[\d,]*)/);
-      if (!match) continue;
-      const digits = match[1].replace(/,/g, "");
-      const amount = Number.parseInt(digits, 10);
-      if (!Number.isFinite(amount)) continue;
-      return `$${amount.toLocaleString("en-US")}`;
-    }
-    return "";
-  }
-  function extractAbortionsCount(lines) {
-    for (const line of lines) {
-      const match = line.match(/\b(\d+)\s+abortions?\b/i);
-      if (match) return match[1];
-    }
-    return "";
-  }
-  function lowerFirst(value) {
-    if (!value) return value;
-    return value.charAt(0).toLowerCase() + value.slice(1);
-  }
-  function formatGoalLabel(goal) {
-    const raw = normalizeWhitespace2(goal.goal).replace(/[.]+$/, "");
-    const simplified = raw.replace(/^reduce frequency and intensity of\s+/i, "reduce ").replace(/\bweekly\s+/i, "").replace(/^increase insight into how\s+/i, "increase insight into how ");
-    return `Goal to ${lowerFirst(simplified)}`;
-  }
-  function formatAssessmentStatus(value) {
-    const normalized = value.trim().toLowerCase();
-    if (normalized === "limited progress noted") return "Limited progress";
-    if (normalized === "some progress noted") return "Some progress";
-    if (normalized === "good progress noted") return "Good progress";
-    if (normalized === "progress remains under review") return "Progress remains under review";
-    return value.trim() || "Progress remains under review";
-  }
-  function summarizeInterventions(interventions) {
-    const cleaned = interventions.map((item) => item.replace(/\s+/g, " ").trim()).filter(Boolean);
-    if (!cleaned.length) return "";
-    const short = cleaned.map((item) => item.match(/\(([^)]+)\)/)?.[1]?.trim() ?? "");
-    if (short.every(Boolean)) {
-      return formatList(short);
-    }
-    return formatList(cleaned);
-  }
-  function hasClinicalKeyword(line) {
-    return /\b(anxiety|anxious|anger|angry|fight|fights|argument|arguing|yell|yelled|yelling|job|partner|girlfriend|boyfriend|relationship|conflict|drink|drinking|alcohol|cannabis|marijuana|weed|roofied|drugged|bar|breathe|breathing|lifting|cycling|exercise|anger management|session|mse|affect|speech|thought|oriented|guilt|sad|miss|panic|fear|trigger)\b/i.test(line);
-  }
-  function isLowSignalLine(line) {
-    const normalized = normalizeWhitespace2(line).toLowerCase();
-    if (!normalized) return true;
-    if (LOW_SIGNAL_LINES.has(normalized)) return true;
-    if (/^[a-z]+(?:\s+[a-z]+)?$/i.test(normalized) && normalized.split(" ").length <= 2 && !hasClinicalKeyword(normalized)) {
-      return true;
-    }
-    return normalized.split(" ").length < 3 && !hasClinicalKeyword(normalized);
-  }
-  function analyzeSessionNotes(lines) {
-    const signals = {
-      relationshipConflict: [],
-      anxiety: [],
-      substance: [],
-      coping: [],
-      support: [],
-      objective: [],
-      directQuotes: [],
-      attachment: []
-    };
-    for (const rawLine of lines) {
-      const line = sanitizeLine(rawLine);
-      if (!line || isLowSignalLine(line)) continue;
-      if ((line.match(/"/g) ?? []).length >= 2) {
-        signals.directQuotes.push(line);
-      }
-      if (/\b(yell(?:ed|ing)?|fight|fights|argument|arguing|called? .*job|job .*times|meeting up|guy|girlfriend|boyfriend|partner|relationship|conflict|guilty|loser|dirty snake)\b/i.test(line)) {
-        signals.relationshipConflict.push(line);
-      }
-      if (/\b(anxiety|anxious|panic|fear|trigger|spiky|distress|worry)\b/i.test(line)) {
-        signals.anxiety.push(line);
-      }
-      if (/\b(drink|drinking|alcohol|bar|drugged|cannabis|marijuana|weed|joint|substance)\b/i.test(line)) {
-        signals.substance.push(line);
-      }
-      if (/\b(breathe|breathing|cycling|lifting|exercise|class|anger management|track|log|journal|pause)\b/i.test(line)) {
-        signals.coping.push(line);
-      }
-      if (/\b(contact|referral|Andrea|Grimshaw)\b/i.test(line)) {
-        signals.support.push(line);
-      }
-      if (/\b(mse|appearance|affect|speech|behavior|thought|oriented|a&o|observed|presented|engaged|tearful|guarded|calm)\b/i.test(line)) {
-        signals.objective.push(line);
-      }
-      if (/\b(miss her|miss him|miss them|birthday|valentine|tatted|tattoo|abortions?)\b/i.test(line)) {
-        signals.attachment.push(line);
-      }
-    }
-    return {
-      relationshipConflict: unique3(signals.relationshipConflict),
-      anxiety: unique3(signals.anxiety),
-      substance: unique3(signals.substance),
-      coping: unique3(signals.coping),
-      support: unique3(signals.support),
-      objective: unique3(signals.objective),
-      directQuotes: unique3(signals.directQuotes),
-      attachment: unique3(signals.attachment)
-    };
-  }
-  function extractFrequency(lines) {
-    for (const line of lines) {
-      const match = line.match(/\b(twice|\d+\s+times?)\s+per\s+week\b/i);
-      if (match) {
-        const raw = match[0].toLowerCase();
-        if (raw === "1 time per week" || raw === "1 times per week") return "once per week";
-        if (raw === "2 times per week") return "twice per week";
-        return raw;
-      }
-    }
-    for (const line of lines) {
-      const match = line.match(/\b(\d+)\s+times?\b/i);
-      if (match) return `${match[1]} times`;
-    }
-    return "";
-  }
-  function extractCallCount(lines) {
-    for (const line of lines) {
-      const match = line.match(/\bcalled?.*job\s+(\d+)\s+times\b/i) ?? line.match(/\bcalled?.*job.*?(\d+)\s+times\b/i);
-      if (match) return match[1];
-    }
-    return "";
-  }
-  function summarizeSubjective(lines, signals, transcript, intake) {
-    const sentences = [];
-    const clientTranscriptLines = transcript?.entries.filter((entry) => entry.speaker === "client").map((entry) => sanitizeLine(entry.text)).filter((line) => line && !isLowSignalLine(line)) ?? [];
-    const conflictSource = unique3([
-      ...signals.relationshipConflict,
-      ...clientTranscriptLines.filter((line) => /\b(fight|argument|partner|girlfriend|boyfriend|relationship|job)\b/i.test(line))
-    ]);
-    const quotedPhrases = extractQuotedPhrases(lines);
-    const moneySpent = extractMoneySpent(lines);
-    const abortionsCount = extractAbortionsCount(lines);
-    const hasTattooHistory = includesPattern(lines, /\b(tatted|tattoo)\b/i);
-    const hasHazyMemory = includesPattern(lines, /\b(hazy memory|blurred memory|don't remember|memory)\b/i);
-    const hasBasement = includesPattern(lines, /\bbasement\b/i);
-    const hasSeparatedFromFriends = includesPattern(lines, /\bseparated from (his |her |their )?friends|away from (his |her |their )?friends\b/i);
-    const hasTouching = includesPattern(lines, /\b(man touching|guy touching|someone touching|touched him|touched me)\b/i);
-    const hasVideoFear = includesPattern(lines, /\bvideo\b/i);
-    const hasOthersKnowFear = includesPattern(lines, /\bothers know|people know|know about this|people saw\b/i);
-    const wantsToMoveForward = includesPattern(lines, /\bmove forward|moving forward|move on\b/i);
-    const wantsLessDrinking = includesPattern(lines, /\bstop drinking|drink less|reduce drinking\b/i);
-    const wantsExercise = includesPattern(lines, /\bcycle|cycling|lift|lifting|weights?\b/i);
-    const keepMouthShut = includesPattern(lines, /\bkeep (my|his) mouth shut|shut your mouth\b/i);
-    if (conflictSource.length) {
-      const frequency = extractFrequency(conflictSource);
-      if (frequency && signals.relationshipConflict.some((line) => /\bcalled?.*job\b/i.test(line))) {
-        sentences.push(`Client reported ongoing conflict with partner, including yelling or arguments about ${frequency} and repeated calls to partner's workplace while upset`);
-      } else if (frequency) {
-        sentences.push(`Client reported ongoing conflict with partner, including yelling or arguments about ${frequency}`);
-      } else {
-        sentences.push("Client reported ongoing conflict and strain in the relationship");
-      }
-      if (keepMouthShut) {
-        sentences.push("Client stated that even when he plans to keep his mouth shut, he often loses control, then yells, criticizes, and becomes defensive");
-      } else if (signals.directQuotes.length) {
-        sentences.push("Client described repeated criticism, accusations, and hurtful exchanges during arguments with partner");
-      }
-      if (quotedPhrases.length) {
-        const quotedPreview = quotedPhrases.slice(0, 5).map((phrase) => `"${phrase}"`).join(", ");
-        sentences.push(`Client identified triggers including statements such as ${quotedPreview}`);
-      }
-    }
-    if (signals.anxiety.length) {
-      if (signals.relationshipConflict.some((line) => /\bguy|meeting up\b/i.test(line))) {
-        sentences.push("Client described strong anxiety and jealousy related to partner contact with another man");
-      } else {
-        sentences.push("Client described high anxiety during the week");
-      }
-    }
-    if (moneySpent) {
-      sentences.push(`Client shared that he spent ${moneySpent} on Valentine's Day and did not feel that the effort was reciprocated`);
-    }
-    if (hasTattooHistory || abortionsCount) {
-      const historyParts = [];
-      if (hasTattooHistory) historyParts.push("he has her name tattooed multiple times on his body");
-      if (abortionsCount) historyParts.push(`they had ${abortionsCount} abortions together`);
-      sentences.push(`Client also shared that ${formatList(historyParts)}`);
-    }
-    if (signals.substance.length) {
-      if (signals.substance.some((line) => /\bdrugged|bar\b/i.test(line))) {
-        if (hasHazyMemory || hasBasement || hasSeparatedFromFriends || hasTouching) {
-          const incidentParts = [];
-          if (hasHazyMemory) incidentParts.push("about 20 minutes of hazy memory");
-          if (hasBasement) incidentParts.push("being in a basement");
-          if (hasSeparatedFromFriends) incidentParts.push("being separated from friends");
-          if (hasTouching) incidentParts.push("a man touching him");
-          sentences.push(`Client also reported a recent incident in which he believes he was drugged at a bar, with ${formatList(incidentParts)}`);
-        } else {
-          sentences.push("Client also reported a recent incident in which he believes he was drugged at a bar");
-        }
-        if (hasVideoFear || hasOthersKnowFear) {
-          sentences.push("Client shared anxiety that there may be a video of the incident or that others may know about it");
-        }
-      } else {
-        sentences.push("Client also discussed ongoing alcohol and substance-use concerns");
-      }
-    }
-    if (signals.attachment.length) {
-      sentences.push("Client expressed ongoing hurt, attachment, and difficulty letting go of the relationship");
-    }
-    if (wantsToMoveForward || wantsLessDrinking || wantsExercise) {
-      const changeGoals = [];
-      if (wantsToMoveForward) changeGoals.push("move forward");
-      if (wantsLessDrinking) changeGoals.push("drink less");
-      if (wantsExercise) changeGoals.push("focus more on cycling and lifting weights");
-      if (changeGoals.length) {
-        sentences.push(`Client also stated that he wants to ${formatList(changeGoals)}`);
-      }
-    }
-    if (!sentences.length) {
-      const fallback = [
-        firstNonEmpty3(intake?.chiefComplaint, intake?.presentingProblems),
-        intake?.historyOfPresentIllness ?? ""
-      ].map((value) => sentence(value)).filter(Boolean);
-      return fallback.join(" ") || "Client discussed current symptoms and stressors during session.";
-    }
-    return joinSentences(sentences);
-  }
-  function summarizeObjective(lines, signals, intake) {
-    const sentences = [];
-    const hasAttachmentMarkers = signals.attachment.length > 0 || includesPattern(lines, /\b(tatted|tattoo|abortions?|valentine)\b/i);
-    const wantsLessDrinking = includesPattern(lines, /\bstop drinking|drink less|reduce drinking\b/i);
-    const wantsExercise = includesPattern(lines, /\bcycle|cycling|lift|lifting|weights?\b/i);
-    if (signals.objective.length) {
-      sentences.push(...signals.objective.slice(0, 2));
-    } else {
-      const reflectedThemes = [];
-      if (signals.anxiety.length) reflectedThemes.push("anxiety");
-      if (signals.relationshipConflict.length) {
-        reflectedThemes.push("anger");
-        reflectedThemes.push("jealousy");
-        reflectedThemes.push("relationship stress");
-      }
-      if (hasAttachmentMarkers) reflectedThemes.push("attachment");
-      if (signals.substance.length) reflectedThemes.push("alcohol-related risk");
-      if (reflectedThemes.length) {
-        sentences.push(`Session focused on ${formatList(reflectedThemes)}`);
-      } else {
-        sentences.push("Session focused on current symptoms and recent stressors");
-      }
-    }
-    if (signals.coping.length) {
-      const copingLabels = [];
-      if (signals.coping.some((line) => /\bcycling|lifting|exercise|class\b/i.test(line))) {
-        copingLabels.push("exercise");
-      }
-      if (signals.coping.some((line) => /\bbreathe|breathing\b/i.test(line))) {
-        copingLabels.push("breathing skills");
-      }
-      if (signals.coping.some((line) => /\banger management\b/i.test(line))) {
-        copingLabels.push("anger-management work");
-      }
-      if (copingLabels.length) {
-        sentences.push(`Client identified ${formatList(copingLabels)} as coping efforts`);
-      }
-    }
-    if (signals.relationshipConflict.some((line) => /\bcalled?.*job\b/i.test(line))) {
-      sentences.push("Session notes suggest poor impulse control during relationship distress");
-    }
-    if (wantsLessDrinking || wantsExercise) {
-      if (wantsLessDrinking && wantsExercise) {
-        sentences.push("Clinician reflected client's stated desire to drink less and increase exercise");
-      } else if (wantsLessDrinking) {
-        sentences.push("Clinician reflected client's stated desire to drink less");
-      } else if (wantsExercise) {
-        sentences.push("Clinician reflected client's stated desire to increase exercise");
-      }
-    }
-    if (signals.objective.length === 0) {
-      sentences.push("No formal MSE findings or rating scales were documented in the session notes");
-    }
-    const measurementLines = [];
-    if (signals.objective.some((line) => /\bphq\b/i.test(line)) && intake?.phq9) {
-      measurementLines.push(`PHQ-9 previously captured at ${intake.phq9.totalScore}/27 (${intake.phq9.severity})`);
-    }
-    if (signals.objective.some((line) => /\bgad\b/i.test(line)) && intake?.gad7) {
-      measurementLines.push(`GAD-7 previously captured at ${intake.gad7.totalScore}/21 (${intake.gad7.severity})`);
-    }
-    return joinSentences([...sentences, ...measurementLines]);
-  }
-  function inferGoalFocus(goal) {
-    const text = `${goal.goal} ${goal.objectives.map((objective) => objective.objective).join(" ")}`.toLowerCase();
-    if (/\b(alcohol|cannabis|marijuana|weed|substance|impulsivity)\b/.test(text)) return "substance";
-    if (/\b(verbal|fight|argument|conflict|partner|communication|anger)\b/.test(text)) return "conflict";
-    if (/\b(anxiety|panic|fear|worry)\b/.test(text)) return "anxiety";
-    if (/\b(mood|depression|sadness|irritability)\b/.test(text)) return "mood";
-    return "general";
-  }
-  function statusFromGoal(goal, focus, signals) {
-    const improvementSource = [
-      ...signals.relationshipConflict,
-      ...signals.anxiety,
-      ...signals.substance,
-      ...signals.coping
-    ].join(" ").toLowerCase();
-    if (/\b(better|improved|less|fewer|calmer|stopped|reduced)\b/.test(improvementSource)) {
-      return "Some progress noted";
-    }
-    if (focus === "conflict" && signals.relationshipConflict.length) return "Limited progress noted";
-    if (focus === "substance" && (signals.substance.length || signals.relationshipConflict.some((line) => /\bcalled?.*job\b/i.test(line)))) {
-      return "Limited progress noted";
-    }
-    if ((focus === "anxiety" || focus === "mood") && signals.anxiety.length) return "Limited progress noted";
-    const existing = goal.status.trim().toLowerCase();
-    if (existing === "no improvement") return "Limited progress noted";
-    if (existing === "some improvement") return "Some progress noted";
-    if (existing === "significant improvement") return "Good progress noted";
-    if (goal.status.trim()) return sentence(goal.status).replace(/[.]$/, "");
-    return "Progress remains under review";
-  }
-  function evidenceForGoal(goal, focus, signals) {
-    switch (focus) {
-      case "conflict":
-        if (signals.relationshipConflict.length) {
-          const frequency = extractFrequency(signals.relationshipConflict);
-          const callCount = extractCallCount(signals.relationshipConflict);
-          if (frequency && callCount) {
-            return `Client continues to report yelling or verbal conflict about ${frequency}, along with repeated calls to partner's workplace (${callCount} times) while upset`;
-          }
-          if (frequency) {
-            return `Client continues to report yelling or verbal conflict about ${frequency}`;
-          }
-          return "Client continues to report jealousy, arguments, and difficulty slowing down during relationship stress";
-        }
-        return "Relationship stress remains a focus of treatment";
-      case "substance":
-        if (signals.substance.length) {
-          const mentionsStoppingAlcohol = signals.substance.some((line) => /\bstop drinking\b/i.test(line));
-          const barRisk = signals.substance.some((line) => /\bdrugged|bar\b/i.test(line));
-          const impulsiveConflict = signals.relationshipConflict.some((line) => /\bcalled?.*job\b/i.test(line));
-          if (barRisk && impulsiveConflict) {
-            return "Session included alcohol-related risk and ongoing impulsive behavior during conflict; insight into how substance use may worsen mood and reactions remains limited";
-          }
-          if (signals.substance.some((line) => /\bdrugged|bar\b/i.test(line))) {
-            return mentionsStoppingAlcohol ? "Session included alcohol-related risk, including being drugged at a bar, and the need to reduce drinking remained part of the discussion" : "Session included alcohol-related risk, including discussion of being drugged while at a bar";
-          }
-          return "The link between alcohol or cannabis use, mood, and conflict still needs more work";
-        }
-        if (signals.relationshipConflict.some((line) => /\bcalled?.*job\b/i.test(line))) {
-          return "Ongoing impulsive behavior during conflict suggests that insight into triggers and worsening factors is still limited";
-        }
-        if (/\b(alcohol|cannabis|marijuana|weed|substance)\b/i.test(goal.goal)) {
-          return "No clear update on alcohol or cannabis tracking was documented this session, and this treatment need remains active";
-        }
-        return "The link between substance use, mood, and conflict continues to need review";
-      case "anxiety":
-        if (signals.anxiety.length) {
-          return "Anxiety remains elevated in the context of current stressors";
-        }
-        return "Anxiety symptoms continue to need monitoring";
-      case "mood":
-        if (signals.anxiety.length || signals.relationshipConflict.length) {
-          return "Mood symptoms remain tied to ongoing relationship stress and emotional reactivity";
-        }
-        return "Mood symptoms continue to need monitoring";
-      default:
-        return "Current session content was reviewed in relation to this treatment goal";
-    }
-  }
-  function summarizeAssessment(lines, signals, treatmentPlan, diagnosticImpressions, intake) {
-    const parts = [];
-    const wantsToMoveForward = includesPattern(lines, /\bmove forward|moving forward|move on\b/i);
-    const hasNoAttachmentStatement = includesPattern(lines, /\bno attachment|have no attachment\b/i);
-    const hasGoodManIdentity = includesPattern(lines, /\bgood man\b/i) && includesPattern(lines, /\bpoint of view\b/i);
-    const hasAttachmentHistory = signals.attachment.length > 0 || includesPattern(lines, /\b(tatted|tattoo|abortions?|valentine)\b/i);
-    const hasFrustrationMarkers = includesPattern(lines, /\b(frustrat|angry|hurt|got nothing)\b/i) || Boolean(extractMoneySpent(lines));
-    const hasBarRisk = includesPattern(lines, /\bdrugged|bar\b/i);
-    const hasBarAnxiety = includesPattern(lines, /\bvideo\b/i) || includesPattern(lines, /\bothers know|people know|know about this|people saw\b/i);
-    const wantsLessDrinking = includesPattern(lines, /\bstop drinking|drink less|reduce drinking\b/i);
-    const wantsExercise = includesPattern(lines, /\bcycle|cycling|lift|lifting|weights?\b/i);
-    if (treatmentPlan?.goals.length) {
-      for (const goal of treatmentPlan.goals) {
-        const focus = inferGoalFocus(goal);
-        const status = statusFromGoal(goal, focus, signals);
-        const goalParts = [`${formatGoalLabel(goal)}: ${formatAssessmentStatus(status)}.`];
-        if (focus === "conflict") {
-          if (signals.relationshipConflict.length) {
-            goalParts.push("Client continues to report frequent conflict, emotional reactivity, and repeated contact attempts during distress.");
-          } else {
-            goalParts.push(`${sentence(evidenceForGoal(goal, focus, signals))}`);
-          }
-          if ((wantsToMoveForward || hasNoAttachmentStatement) && signals.relationshipConflict.some((line) => /\bcalled?.*job\b/i.test(line))) {
-            goalParts.push("Clinician reflected client's frustration and highlighted the mismatch between client's stated wish to move on and have no attachment and his current behavior, including repeated calls, anger about partner seeing another man, and ongoing preoccupation with the relationship.");
-          } else if (hasFrustrationMarkers) {
-            goalParts.push("Clinician reflected client's frustration with the ongoing relationship dynamic.");
-          }
-          if (hasGoodManIdentity) {
-            goalParts.push(`Clinician also reflected that client's identity as a "good man" appears strongly tied to her point of view, which may be reinforcing reactivity and difficulty disengaging.`);
-          }
-          if (hasAttachmentHistory) {
-            goalParts.push("Clinician validated the difficulty of breaking away from the relationship given the attachment and shared history.");
-          }
-        } else if (focus === "substance") {
-          if (hasBarRisk && hasBarAnxiety) {
-            goalParts.push("Session included alcohol-related risk and anxiety related to the recent bar incident.");
-          } else if (hasBarRisk) {
-            goalParts.push("Session included alcohol-related risk.");
-          } else {
-            goalParts.push(`${sentence(evidenceForGoal(goal, focus, signals))}`);
-          }
-          let insightSentence = "Insight into how alcohol use may worsen judgment, impulsivity, emotional reactivity, and vulnerability remains limited";
-          if (wantsLessDrinking || wantsExercise) {
-            const selfCareParts = [];
-            if (wantsLessDrinking) selfCareParts.push("reduce drinking");
-            if (wantsExercise) selfCareParts.push("improve self-care through exercise");
-            insightSentence += `, though client did express desire to ${formatList(selfCareParts)}`;
-          }
-          goalParts.push(sentence(insightSentence));
-        } else {
-          goalParts.push(sentence(evidenceForGoal(goal, focus, signals)));
-        }
-        parts.push(goalParts.join(" "));
-      }
-    }
-    const diagnosisSummary = diagnosticImpressions.length ? diagnosticImpressions.map((impression) => `${impression.name}${impression.code ? ` (${impression.code})` : ""}`).join(", ") : treatmentPlan?.diagnoses.length ? treatmentPlan.diagnoses.map((diagnosis) => `${diagnosis.description}${diagnosis.code ? ` (${diagnosis.code})` : ""}`).join(", ") : "";
-    if (diagnosisSummary) {
-      parts.push(`Current presentation remains consistent with working diagnoses of ${diagnosisSummary}.`);
-    } else if (firstNonEmpty3(intake?.chiefComplaint, intake?.presentingProblems)) {
-      parts.push(`Clinical focus remains on ${firstNonEmpty3(intake?.chiefComplaint, intake?.presentingProblems)}.`);
-    }
-    return parts.join("\n\n") || "Assessment should be updated in relation to the treatment plan and current session themes.";
-  }
-  function summarizePlan(lines, signals, treatmentPlan) {
-    const planItems = [];
-    const wantsLessDrinking = includesPattern(lines, /\bstop drinking|drink less|reduce drinking\b/i);
-    const wantsExercise = includesPattern(lines, /\bcycle|cycling|lift|lifting|weights?\b/i);
-    if (treatmentPlan?.treatmentFrequency) {
-      planItems.push(`Continue ${treatmentPlan.treatmentFrequency} psychotherapy`);
-    } else {
-      planItems.push("Continue psychotherapy as scheduled");
-    }
-    const objectiveText = treatmentPlan?.goals.flatMap((goal) => goal.objectives).map((objective) => objective.objective.toLowerCase()) ?? [];
-    if (objectiveText.some((text) => /chain analysis/.test(text)) || signals.relationshipConflict.length) {
-      planItems.push("Review recent conflicts with chain analysis");
-    }
-    if (objectiveText.some((text) => /distress tolerance|practice/.test(text)) || signals.coping.length) {
-      if (signals.relationshipConflict.some((line) => /\bcalled?.*job\b/i.test(line))) {
-        planItems.push("Practice pause, breathing, and distress-tolerance skills before calling or confronting partner when upset");
-      } else {
-        planItems.push("Practice pause, breathing, and distress-tolerance skills during conflict");
-      }
-    }
-    if (objectiveText.some((text) => /track|log|cannabis|alcohol/.test(text)) || signals.substance.length) {
-      planItems.push("Track alcohol and cannabis use, mood, irritability, and conflict episodes between sessions");
-    }
-    if (wantsLessDrinking || wantsExercise) {
-      const healthierCoping = [];
-      if (includesPattern(lines, /\bcycle|cycling\b/i)) healthierCoping.push("cycling");
-      if (includesPattern(lines, /\blift|lifting|weights?\b/i)) healthierCoping.push("lifting");
-      if (wantsLessDrinking && healthierCoping.length) {
-        planItems.push(`Support reduction in alcohol use and reinforce ${formatList(healthierCoping)} as healthier coping strategies`);
-      } else if (wantsLessDrinking) {
-        planItems.push("Support reduction in alcohol use as a treatment goal");
-      } else if (healthierCoping.length) {
-        planItems.push(`Reinforce ${formatList(healthierCoping)} as healthier coping strategies`);
-      }
-    }
-    if (signals.coping.some((line) => /\banger management\b/i.test(line))) {
-      planItems.push("Continue anger-management work");
-    }
-    if (signals.support.length) {
-      planItems.push("Review referral or support contact options as clinically indicated");
-    }
-    if (treatmentPlan?.interventions.length) {
-      const summarizedInterventions = summarizeInterventions(treatmentPlan.interventions);
-      if (summarizedInterventions) {
-        planItems.push(`Continue ${summarizedInterventions} interventions`);
-      }
-    }
-    return joinSentences(unique3(planItems));
   }
   function extractTreatmentPlanId(treatmentPlan) {
     const sourceUrl = treatmentPlan?.sourceUrl ?? "";
     const match = sourceUrl.match(/diagnosis_treatment_plans\/([^/?#]+)/);
     return match?.[1] ?? "";
   }
+  var FALLBACK_NOTICE = "[LLM unavailable \u2014 this is a skeleton draft. Edit manually before submitting.]";
+  function buildSubjective(sessionNotes, intake) {
+    const parts = [FALLBACK_NOTICE];
+    const notes = sessionNotes.trim();
+    if (notes) {
+      parts.push(`Clinician session notes (verbatim):
+${notes}`);
+    }
+    const chief = firstNonEmpty3(intake?.chiefComplaint, intake?.presentingProblems);
+    if (chief) {
+      parts.push(`Chief complaint (from intake): ${normalizeWhitespace2(chief)}.`);
+    }
+    if (!notes && !chief) {
+      parts.push("No session notes or intake chief complaint captured. Add manually.");
+    }
+    return parts.join("\n\n");
+  }
+  function buildObjective(transcript, intake) {
+    const parts = [];
+    const transcriptLineCount = transcript?.entries.length ?? 0;
+    if (transcriptLineCount > 0) {
+      parts.push(
+        `Session transcript captured (${transcriptLineCount} caption lines). LLM synthesis unavailable \u2014 review transcript manually.`
+      );
+    } else {
+      parts.push("No session transcript or formal MSE documented. Add manually.");
+    }
+    const measurementLines = [];
+    if (intake?.phq9) {
+      measurementLines.push(`PHQ-9 (intake): ${intake.phq9.totalScore}/27 \u2014 ${intake.phq9.severity}`);
+    }
+    if (intake?.gad7) {
+      measurementLines.push(`GAD-7 (intake): ${intake.gad7.totalScore}/21 \u2014 ${intake.gad7.severity}`);
+    }
+    if (measurementLines.length) {
+      parts.push(measurementLines.join("\n"));
+    }
+    parts.push(
+      "Mental Status Exam:\nAppearance: \nBehavior: \nSpeech: \nMood/Affect: \nThoughts: \nCognition: \nInsight/Judgment: "
+    );
+    return parts.join("\n\n");
+  }
+  function buildAssessment(treatmentPlan, diagnosticImpressions, intake) {
+    const parts = [];
+    const diagnosisList = diagnosticImpressions.length ? diagnosticImpressions.map((d) => `${d.name}${d.code ? ` (${d.code})` : ""}`).join(", ") : (treatmentPlan?.diagnoses ?? []).map((d) => `${d.description}${d.code ? ` (${d.code})` : ""}`).join(", ");
+    if (diagnosisList) {
+      parts.push(`Active diagnoses: ${diagnosisList}.`);
+    }
+    if (treatmentPlan?.goals?.length) {
+      const goalLines = treatmentPlan.goals.map(
+        (goal) => `- Goal ${goal.goalNumber}: ${normalizeWhitespace2(goal.goal)} (status: ${goal.status || "active"})`
+      );
+      parts.push(`Treatment plan goals under review:
+${goalLines.join("\n")}`);
+    }
+    const chief = firstNonEmpty3(intake?.chiefComplaint, intake?.presentingProblems);
+    if (chief && !diagnosisList) {
+      parts.push(`Clinical focus: ${normalizeWhitespace2(chief)}.`);
+    }
+    parts.push(
+      "Clinical synthesis, symptom trajectory, medical necessity, and protective/risk factors need manual completion."
+    );
+    return parts.join("\n\n");
+  }
+  function buildPlan2(treatmentPlan) {
+    const items = [];
+    if (treatmentPlan?.treatmentFrequency) {
+      items.push(`Continue ${treatmentPlan.treatmentFrequency} psychotherapy.`);
+    } else {
+      items.push("Continue psychotherapy as scheduled.");
+    }
+    if (treatmentPlan?.interventions?.length) {
+      const summary = treatmentPlan.interventions.map((x) => normalizeWhitespace2(x)).filter(Boolean).join("; ");
+      if (summary) items.push(`Continue interventions: ${summary}.`);
+    }
+    items.push("Add session-specific focus, homework, and next appointment manually.");
+    return items.join(" ");
+  }
   function buildSoapDraft(sessionNotes, transcript, treatmentPlan, intake, diagnosticImpressions, prefs, meta = {}) {
-    const sessionLines = splitLines2(sessionNotes);
-    const transcriptLines = transcript?.entries.map((entry) => sanitizeLine(entry.text)).filter((line) => line && !isLowSignalLine(line)) ?? [];
-    const allLines = [...sessionLines, ...transcriptLines];
-    const signals = analyzeSessionNotes(allLines);
     const transcriptText = buildTranscriptText(transcript);
     const clientName = firstNonEmpty3(
       meta.clientName,
@@ -2839,10 +2428,10 @@ Generate a SOAP progress note for this session. The treating clinician is ${prov
       clientName,
       sessionDate,
       cptCode: prefs.followUpCPT || "90837",
-      subjective: summarizeSubjective(allLines, signals, transcript, intake),
-      objective: summarizeObjective(allLines, signals, intake),
-      assessment: summarizeAssessment(allLines, signals, treatmentPlan, diagnosticImpressions, intake),
-      plan: summarizePlan(allLines, signals, treatmentPlan),
+      subjective: buildSubjective(sessionNotes, intake),
+      objective: buildObjective(transcript, intake),
+      assessment: buildAssessment(treatmentPlan, diagnosticImpressions, intake),
+      plan: buildPlan2(treatmentPlan),
       sessionNotes: sessionNotes.trim(),
       transcript: transcriptText,
       treatmentPlanId: extractTreatmentPlanId(treatmentPlan),
@@ -2850,6 +2439,149 @@ Generate a SOAP progress note for this session. The treating clinician is ${prov
       editedAt: now,
       status: "draft"
     };
+  }
+
+  // src/lib/soap-llm.ts
+  var DEFAULT_MODEL = "gpt-4o-mini";
+  var THEMES_SYSTEM = `You are a clinical documentation assistant helping a licensed psychologist prepare a SOAP note.
+
+You will receive:
+1. The clinician's raw loose notes from this session (may be fragmentary bullet points).
+2. A session transcript (captions from the video visit).
+
+Your job: identify the 4-8 most clinically meaningful THEMES discussed this session. For each theme, return 1-3 short supporting quotes taken verbatim from the transcript (or from the clinician notes when nothing in the transcript matches), and tag which SOAP sections the theme is most relevant to.
+
+Return STRICT JSON only. No markdown. No prose before or after the JSON.
+
+{
+  "themes": [
+    {
+      "theme": "<short label, e.g. 'work stress', 'values conflict', 'FOMO about peer growth'>",
+      "supportingQuotes": ["<verbatim quote 1>", "<verbatim quote 2>"],
+      "relevantSections": ["subjective", "assessment"]
+    }
+  ]
+}
+
+Rules:
+- Prefer themes that the CLINICIAN'S LOOSE NOTES flag, even if the transcript mentions them only briefly.
+- Do NOT invent themes or quotes. Every quote must appear in the inputs.
+- Cap at 8 themes. Prefer fewer strong themes over many weak ones.
+- "relevantSections" values must be from this exact set: "subjective", "objective", "assessment", "plan".
+- Quotes should be <= 160 characters. Trim with an ellipsis if needed.
+- Skip small talk, scheduling, and filler (e.g. "hi, how are you", "see you next week").`;
+  function extractJson(raw) {
+    const stripped = raw.replace(/^```(?:json)?\s*/m, "").replace(/\s*```\s*$/m, "").trim();
+    try {
+      return JSON.parse(stripped);
+    } catch {
+      const match = stripped.match(/\{[\s\S]*\}/);
+      if (!match) return null;
+      try {
+        return JSON.parse(match[0]);
+      } catch {
+        return null;
+      }
+    }
+  }
+  function sanitizeThemes(raw) {
+    const parsed = raw;
+    if (!parsed?.themes || !Array.isArray(parsed.themes)) return [];
+    const validSections = [
+      "subjective",
+      "objective",
+      "assessment",
+      "plan"
+    ];
+    return parsed.themes.map((t) => {
+      const theme = typeof t?.theme === "string" ? t.theme.trim() : "";
+      if (!theme) return null;
+      const quotes = Array.isArray(t.supportingQuotes) ? t.supportingQuotes.filter((q) => typeof q === "string").map((q) => q.trim()).filter(Boolean).slice(0, 3) : [];
+      const sections = Array.isArray(t.relevantSections) ? t.relevantSections.filter(
+        (s) => validSections.includes(s)
+      ).filter((s, i, arr) => arr.indexOf(s) === i) : [];
+      return {
+        theme,
+        supportingQuotes: quotes,
+        relevantSections: sections.length ? sections : ["subjective"]
+      };
+    }).filter((x) => x !== null).slice(0, 8);
+  }
+  function formatTranscriptForThemes(transcript, prefs) {
+    if (!transcript?.entries.length) return "[No transcript captured.]";
+    const providerName = [prefs.providerFirstName, prefs.providerLastName].filter(Boolean).join(" ") || "Clinician";
+    return transcript.entries.map((e) => `${e.speaker === "clinician" ? providerName : "Client"}: ${e.text}`).join("\n");
+  }
+  function renderThemesBlock(themes) {
+    if (!themes.length) return "";
+    const lines = themes.map((t, i) => {
+      const sections = t.relevantSections.join(", ");
+      const quotes = t.supportingQuotes.map((q) => `    \u2022 "${q}"`).join("\n");
+      return `${i + 1}. ${t.theme} [sections: ${sections}]${quotes ? `
+${quotes}` : ""}`;
+    });
+    return `=== SESSION THEMES (from pass 1 \u2014 USE ALL OF THESE) ===
+${lines.join("\n")}`;
+  }
+  function parseSoapJson(raw) {
+    const json = extractJson(raw);
+    if (!json) return null;
+    const { subjective, objective, assessment, plan } = json;
+    if (typeof subjective === "string" && typeof objective === "string" && typeof assessment === "string" && typeof plan === "string") {
+      return { subjective, objective, assessment, plan };
+    }
+    return null;
+  }
+  async function generateSoapTwoPass(sessionNotes, transcript, intake, diagnosticImpressions, treatmentPlan, mseChecklist, prefs, opts) {
+    if (!opts.apiKey) throw new Error("OpenAI API key is required");
+    const model = opts.model || DEFAULT_MODEL;
+    const progress = opts.onProgress ?? (() => {
+    });
+    const rawTranscript = formatTranscriptForThemes(transcript, prefs);
+    const combinedForDeid = `=== CLINICIAN LOOSE NOTES ===
+${sessionNotes.trim() || "[none]"}
+
+=== TRANSCRIPT ===
+${rawTranscript}`;
+    const { sanitized: sanitizedCombined, mapping } = deidentify(combinedForDeid, intake);
+    await saveDeidentifyMapping(mapping);
+    progress("Pass 1: extracting session themes...");
+    const themesUser = `${sanitizedCombined}
+
+Extract the 4-8 most clinically meaningful themes and return strict JSON.`;
+    const themesRaw = await generateOpenAICompletionSync(themesUser, THEMES_SYSTEM, model, opts.apiKey);
+    const themes = sanitizeThemes(extractJson(themesRaw));
+    if (!themes.length) {
+      throw new Error(`Pass 1 returned no themes. Raw output: ${themesRaw.slice(0, 300)}`);
+    }
+    progress(`Pass 2: synthesizing SOAP (${themes.length} themes)...`);
+    const { system, user } = buildSoapPrompt(
+      transcript,
+      sessionNotes,
+      intake,
+      diagnosticImpressions,
+      treatmentPlan,
+      mseChecklist,
+      prefs
+    );
+    const themesBlock = renderThemesBlock(themes);
+    const { sanitized: sanitizedUser, mapping: userMapping } = deidentify(user, intake);
+    const { sanitized: sanitizedSystem, mapping: systemMapping } = deidentify(system, intake);
+    const fullMapping = { ...systemMapping, ...userMapping, ...mapping };
+    await saveDeidentifyMapping(fullMapping);
+    const augmentedUser = `${themesBlock}
+
+${sanitizedUser}
+
+=== THEME COVERAGE REQUIREMENT ===
+Every theme above MUST be reflected in at least one SOAP section matching its "sections" tag. Do not drop themes. Do not invent themes beyond the list.`;
+    const soapRaw = await generateOpenAICompletion(augmentedUser, sanitizedSystem, model, opts.apiKey);
+    const reidentified = reidentify(soapRaw, fullMapping);
+    const parsed = parseSoapJson(reidentified);
+    if (!parsed) {
+      throw new Error(`Pass 2 returned unparseable SOAP JSON. Raw output: ${reidentified.slice(0, 300)}`);
+    }
+    return { themes, soap: parsed };
   }
 
   // src/lib/soap-generator.ts
@@ -2889,12 +2621,36 @@ Generate a SOAP progress note for this session. The treating clinician is ${prov
   }
   async function generateWithOpenAI(sessionNotes, transcript, treatmentPlan, intake, diagnosticImpressions, mseChecklist, prefs, meta) {
     const model = prefs.openaiModel || "gpt-4o-mini";
+    if (transcript?.entries.length && sessionNotes.trim()) {
+      try {
+        console.log("[SPN] Generating SOAP with OpenAI two-pass (de-identified)...", { model });
+        const result = await generateSoapTwoPass(
+          sessionNotes,
+          transcript,
+          intake,
+          diagnosticImpressions,
+          treatmentPlan,
+          mseChecklist,
+          prefs,
+          {
+            apiKey: prefs.openaiApiKey,
+            model,
+            onProgress: (msg) => console.log(`[SPN] ${msg}`)
+          }
+        );
+        console.log(`[SPN] Two-pass produced ${result.themes.length} themes:`, result.themes.map((t) => t.theme).join(", "));
+        return buildDraftFromSections(result.soap, sessionNotes, transcript, prefs, meta, "openai");
+      } catch (err) {
+        const msg = err instanceof Error ? err.message : String(err);
+        console.info("[SPN] Two-pass failed, falling through to single-pass:", msg);
+      }
+    }
     const { system, user } = buildSoapPrompt(transcript, sessionNotes, intake, diagnosticImpressions, treatmentPlan, mseChecklist, prefs);
     const { sanitized: sanitizedUser, mapping: userMapping } = deidentify(user, intake);
     const { sanitized: sanitizedSystem, mapping: systemMapping } = deidentify(system, intake);
     const fullMapping = { ...systemMapping, ...userMapping };
     await saveDeidentifyMapping(fullMapping);
-    console.log("[SPN] Generating SOAP with OpenAI (de-identified)...", {
+    console.log("[SPN] Generating SOAP with OpenAI single-pass (de-identified)...", {
       model,
       originalLength: user.length,
       sanitizedLength: sanitizedUser.length,
