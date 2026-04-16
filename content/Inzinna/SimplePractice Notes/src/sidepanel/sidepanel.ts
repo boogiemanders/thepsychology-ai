@@ -13,7 +13,7 @@ import { buildClinicalGuidance, ClinicalGuidance } from '../lib/clinical-guidanc
 import { getLLMDiagnosticSuggestions, type LLMDiagnosticSuggestion } from '../lib/diagnostic-llm'
 import { generateSupervisionPrep } from '../lib/supervision-generator'
 import { buildDraftNote } from '../lib/note-draft'
-import { buildSoapDraft } from '../lib/soap-builder'
+import { generateSoapDraft } from '../lib/soap-generator'
 import {
   clearAll,
   getDiagnosticWorkspace,
@@ -573,6 +573,9 @@ async function generateLLMSuggestions(): Promise<void> {
     const elapsed = ((Date.now() - started) / 1000).toFixed(1)
     llmSuggestions = suggestions
     llmStatus = `${suggestions.length} suggestions in ${elapsed}s.`
+    // Persist to session storage so reopening sidepanel doesn't re-cost $0.002
+    const cacheKey = `llm_dx_${intake.clientId}`
+    chrome.storage.session.set({ [cacheKey]: suggestions })
   } catch (err) {
     console.error('[SPN] LLM diagnostic failed:', err)
     llmStatus = `Failed: ${err instanceof Error ? err.message : String(err)}`
@@ -941,23 +944,42 @@ async function regenerateSoapDraftFromSavedNotes(): Promise<void> {
   const workspace = await getDiagnosticWorkspace()
   const transcript = await getTranscript(apptCtx.apptId)
   const prefs = await getPreferences()
+  const mseChecklist = await getMseChecklist()
   const diagnosticImpressions = workspace?.finalizedImpressions?.length
     ? workspace.finalizedImpressions
     : (note?.diagnosticImpressions ?? [])
 
-  const draft = buildSoapDraft(
-    sessionNotes,
-    transcript,
-    treatmentPlan,
-    intake,
-    diagnosticImpressions,
-    prefs,
-    { apptId: apptCtx.apptId }
-  )
+  const clientName = [intake?.firstName, intake?.lastName].filter(Boolean).join(' ')
+    || intake?.fullName
+    || 'Client'
+  const sessionDate = new Date().toLocaleDateString('en-US')
 
-  await saveSoapDraft(draft)
+  setSoapStatus('Generating SOAP with LLM (this can take 10-60 seconds)...')
   activePanel = 'soap'
-  setSoapStatus('SOAP draft generated from saved session notes.')
+  await render()
+
+  try {
+    const draft = await generateSoapDraft(
+      sessionNotes,
+      transcript,
+      treatmentPlan,
+      intake,
+      diagnosticImpressions,
+      mseChecklist,
+      prefs,
+      { apptId: apptCtx.apptId, clientName, sessionDate }
+    )
+
+    await saveSoapDraft(draft)
+    const method = draft.generationMethod === 'regex'
+      ? 'LLM unavailable — generic draft produced. Edit manually.'
+      : `SOAP draft generated via ${draft.generationMethod}.`
+    setSoapStatus(method)
+  } catch (err) {
+    const message = err instanceof Error ? err.message : String(err)
+    setSoapStatus(`SOAP generation failed: ${message}`)
+  }
+
   await render()
 }
 
@@ -1626,4 +1648,16 @@ document.getElementById('btn-copy-supervision')?.addEventListener('click', async
 
 chrome.storage.onChanged.addListener(() => render())
 
-render()
+// Restore cached LLM suggestions from session storage
+getIntake().then((intake) => {
+  if (!intake?.clientId) return render()
+  const cacheKey = `llm_dx_${intake.clientId}`
+  chrome.storage.session.get(cacheKey).then((result) => {
+    const cached = result[cacheKey] as LLMDiagnosticSuggestion[] | undefined
+    if (cached?.length) {
+      llmSuggestions = cached
+      llmStatus = `${cached.length} suggestions (cached).`
+    }
+    render()
+  })
+}).catch(() => render())

@@ -19,6 +19,7 @@ import { checkOpenAIHealth, generateOpenAICompletion } from './openai-client'
 import { deidentify, reidentify, saveDeidentifyMapping } from './deidentify'
 import { buildSoapPrompt } from './soap-prompt'
 import { buildSoapDraft as buildSoapDraftRegex } from './soap-builder'
+import { generateSoapTwoPass } from './soap-llm'
 
 interface GenerationMeta {
   apptId?: string
@@ -88,6 +89,36 @@ async function generateWithOpenAI(
   meta: GenerationMeta
 ): Promise<SoapDraft | null> {
   const model = prefs.openaiModel || 'gpt-4o-mini'
+
+  // Two-pass (theme extraction → synthesis) when both transcript and notes
+  // are present — this is the quality path. Falls through to single-pass if
+  // two-pass throws (e.g. no themes returned, network blip).
+  if (transcript?.entries.length && sessionNotes.trim()) {
+    try {
+      console.log('[SPN] Generating SOAP with OpenAI two-pass (de-identified)...', { model })
+      const result = await generateSoapTwoPass(
+        sessionNotes,
+        transcript,
+        intake,
+        diagnosticImpressions,
+        treatmentPlan,
+        mseChecklist,
+        prefs,
+        {
+          apiKey: prefs.openaiApiKey,
+          model,
+          onProgress: (msg) => console.log(`[SPN] ${msg}`),
+        }
+      )
+      console.log(`[SPN] Two-pass produced ${result.themes.length} themes:`, result.themes.map((t) => t.theme).join(', '))
+      return buildDraftFromSections(result.soap, sessionNotes, transcript, prefs, meta, 'openai')
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : String(err)
+      console.info('[SPN] Two-pass failed, falling through to single-pass:', msg)
+    }
+  }
+
+  // Single-pass fallback (also used when transcript or notes are missing)
   const { system, user } = buildSoapPrompt(transcript, sessionNotes, intake, diagnosticImpressions, treatmentPlan, mseChecklist, prefs)
 
   // De-identify the prompt before sending to OpenAI
@@ -100,7 +131,7 @@ async function generateWithOpenAI(
   // Save mapping to session storage for debugging/audit
   await saveDeidentifyMapping(fullMapping)
 
-  console.log('[SPN] Generating SOAP with OpenAI (de-identified)...', {
+  console.log('[SPN] Generating SOAP with OpenAI single-pass (de-identified)...', {
     model,
     originalLength: user.length,
     sanitizedLength: sanitizedUser.length,
