@@ -26,16 +26,16 @@ const steps = [
 ]
 
 const insuranceMock = [
-  { client: 'Amara Osei', ins: 'united' as const },
-  { client: 'Sinjun Strom', ins: 'aetna' as const },
-  { client: 'T. Mendez', ins: 'united' as const },
-  { client: 'Kev Lynch', ins: null },
+  { client: 'Client A', ins: 'united' as const },
+  { client: 'Client B', ins: 'aetna' as const },
+  { client: 'Client C', ins: 'united' as const },
+  { client: 'Client D', ins: null },
 ]
 
 const pendingMock = [
-  { date: 'Fri 4/18', client: 'Hana P.', code: '90837', status: 'completed' as const },
-  { date: 'Fri 4/18', client: 'Jesse R.', code: '90834', status: 'pending' as const },
-  { date: 'Fri 4/18', client: 'Morgan D.', code: '90837', status: 'no-show' as const },
+  { date: 'Fri 4/18', client: 'Client E', code: '90837', status: 'completed' as const },
+  { date: 'Fri 4/18', client: 'Client F', code: '90834', status: 'pending' as const },
+  { date: 'Fri 4/18', client: 'Client G', code: '90837', status: 'no-show' as const },
 ]
 
 const statusColors = {
@@ -118,7 +118,7 @@ export default function PayrollPage() {
             {/* Mock card header */}
             <div className="px-5 pt-4 pb-3 border-b border-zinc-200 dark:border-zinc-800 flex items-baseline justify-between">
               <div className="flex items-baseline gap-3">
-                <span className="text-sm font-semibold">Bret Boatwright</span>
+                <span className="text-sm font-semibold">Bret</span>
                 <span className="text-[10px] font-mono bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded px-1.5 py-0.5 text-zinc-500">
                   80% of billing
                 </span>
@@ -189,7 +189,7 @@ export default function PayrollPage() {
             {/* Mock card header */}
             <div className="px-5 pt-4 pb-3 border-b border-zinc-200 dark:border-zinc-800 flex items-baseline justify-between">
               <div className="flex items-baseline gap-3">
-                <span className="text-sm font-semibold">Emily Underwood</span>
+                <span className="text-sm font-semibold">Emily</span>
                 <span className="text-[10px] font-mono bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded px-1.5 py-0.5 text-zinc-500">
                   CPT-based
                 </span>
