@@ -9,6 +9,8 @@ import type { RealtimeChannel } from '@supabase/supabase-js'
 export interface TimelineStep {
   text: string
   done: boolean
+  start_at?: number  // fractional position on timeline (0-1)
+  due_at?: number    // fractional position on timeline (0-1)
   done_by?: string   // contributor initials
   done_at?: string   // ISO timestamp
 }
@@ -212,6 +214,49 @@ export function useTimeline(
     }
   }, [activeUser, apiFetch])
 
+  /** Update a single step (e.g. due_at, text). */
+  const updateStep = useCallback(async (projectId: string, stepIndex: number, patch: Partial<TimelineStep>) => {
+    if (!activeUser) return
+
+    const project = projects.find(p => p.id === projectId)
+    if (!project) return
+    const steps = [...project.steps]
+    steps[stepIndex] = { ...steps[stepIndex], ...patch }
+
+    setProjects(prev =>
+      prev.map(p => (p.id === projectId ? { ...p, steps, updated_by: activeUser, updated_at: new Date().toISOString() } : p))
+    )
+
+    try {
+      await apiFetch(`/api/timeline/${projectId}`, {
+        method: 'PATCH',
+        body: JSON.stringify({ steps, contributor: activeUser }),
+      })
+    } catch (err) {
+      console.error('[timeline] updateStep error:', err)
+      refreshProjects()
+    }
+  }, [activeUser, projects, apiFetch])
+
+  /** Update project priority. */
+  const updatePriority = useCallback(async (projectId: string, priority: TimelineProject['priority']) => {
+    if (!activeUser) return
+
+    setProjects(prev =>
+      prev.map(p => (p.id === projectId ? { ...p, priority, updated_by: activeUser, updated_at: new Date().toISOString() } : p))
+    )
+
+    try {
+      await apiFetch(`/api/timeline/${projectId}`, {
+        method: 'PATCH',
+        body: JSON.stringify({ priority, contributor: activeUser }),
+      })
+    } catch (err) {
+      console.error('[timeline] updatePriority error:', err)
+      refreshProjects()
+    }
+  }, [activeUser, apiFetch])
+
   /** Update project status. */
   const updateStatus = useCallback(async (projectId: string, status: TimelineProject['status']) => {
     if (!activeUser) return
@@ -277,8 +322,10 @@ export function useTimeline(
     pickUser,
     loading,
     toggleStep,
+    updateStep,
     updatePhases,
     updateMilestone,
+    updatePriority,
     updateStatus,
     addProject,
     refreshProjects,

@@ -1,6 +1,6 @@
 'use client'
 
-import { useMemo, useState } from 'react'
+import { useMemo, useRef, useState } from 'react'
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
 import { Popover, PopoverTrigger, PopoverContent } from '@/components/ui/popover'
@@ -13,7 +13,6 @@ import { AddProjectForm } from './add-project-form'
 // ---------- Types ----------
 
 type PriorityLevel = 'high' | 'medium' | 'low'
-type PhaseKind = 'build' | 'test' | 'rollout' | 'live' | 'wait'
 
 interface Month {
   key: string
@@ -42,6 +41,25 @@ function priorityBorderColor(p: PriorityLevel): string {
   return p === 'high' ? '#d87758' : p === 'medium' ? '#788c5d' : '#6a9bcc'
 }
 
+function leadColors(lead: TimelineCollaborator | null) {
+  if (!lead || lead.neutral) {
+    return {
+      bg: 'hsl(0 0% 50% / 0.25)',
+      bgOpaque: 'hsl(0 0% 22%)',
+      border: 'hsl(0 0% 55%)',
+      text: 'hsl(0 0% 85%)',
+      solid: 'hsl(0 0% 55%)',
+    }
+  }
+  return {
+    bg: `hsl(${lead.hue} 32% 40% / 0.35)`,
+    bgOpaque: `hsl(${lead.hue} 32% 22%)`,
+    border: `hsl(${lead.hue} 42% 55%)`,
+    text: `hsl(${lead.hue} 45% 85%)`,
+    solid: `hsl(${lead.hue} 42% 55%)`,
+  }
+}
+
 function isoToPosition(iso: string, months: Month[]): number {
   const parts = iso.split('-')
   const m = parseInt(parts[1], 10)
@@ -66,11 +84,18 @@ interface ShellProps {
 export function TimelineShell({ initialProjects, initialCollaborators, months, todayIso }: ShellProps) {
   const timeline = useTimeline(initialProjects, initialCollaborators)
   const [expandedId, setExpandedId] = useState<string | null>(null)
-  const [priorityFilter, setPriorityFilter] = useState<PriorityLevel | 'all'>('all')
   const [showAddForm, setShowAddForm] = useState(false)
+  const [myOnly, setMyOnly] = useState(false)
 
   const today = useMemo(() => isoToPosition(todayIso, months), [todayIso, months])
-  const visible = timeline.projects.filter(p => priorityFilter === 'all' || p.priority === priorityFilter)
+
+  const PRIORITY_ORDER: Record<string, number> = { high: 0, medium: 1, low: 2 }
+  const visible = useMemo(() => {
+    const filtered = myOnly && timeline.activeUser
+      ? timeline.projects.filter(p => p.contributors.includes(timeline.activeUser!))
+      : timeline.projects
+    return [...filtered].sort((a, b) => (PRIORITY_ORDER[a.priority] ?? 2) - (PRIORITY_ORDER[b.priority] ?? 2))
+  }, [timeline.projects, timeline.activeUser, myOnly])
 
   // Build contributor lookup for chips
   const collabLookup = useMemo(() => {
@@ -78,9 +103,6 @@ export function TimelineShell({ initialProjects, initialCollaborators, months, t
     for (const c of timeline.collaborators) map[c.initials] = c
     return map
   }, [timeline.collaborators])
-
-  const stepsDone = timeline.projects.reduce((sum, p) => sum + p.steps.filter(s => s.done).length, 0)
-  const stepsTotal = timeline.projects.reduce((sum, p) => sum + p.steps.length, 0)
 
   return (
     <div className="min-h-screen">
@@ -105,13 +127,27 @@ export function TimelineShell({ initialProjects, initialCollaborators, months, t
               </p>
             </div>
             {timeline.activeUser && (
-              <button
-                type="button"
-                onClick={() => setShowAddForm(v => !v)}
-                className="shrink-0 px-4 py-2 text-[12px] font-mono border border-zinc-200 dark:border-zinc-800 rounded-md hover:border-zinc-400 dark:hover:border-zinc-600 transition-colors cursor-pointer"
-              >
-                + Add project
-              </button>
+              <div className="flex items-center gap-2 shrink-0">
+                <button
+                  type="button"
+                  onClick={() => setMyOnly(v => !v)}
+                  className={cn(
+                    'px-4 py-2 text-[12px] font-mono border rounded-md transition-colors cursor-pointer',
+                    myOnly
+                      ? 'border-zinc-900 dark:border-zinc-100 text-zinc-900 dark:text-zinc-100'
+                      : 'border-zinc-200 dark:border-zinc-800 text-zinc-400 dark:text-zinc-500 hover:border-zinc-400 dark:hover:border-zinc-600'
+                  )}
+                >
+                  My projects
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setShowAddForm(v => !v)}
+                  className="px-4 py-2 text-[12px] font-mono border border-zinc-200 dark:border-zinc-800 rounded-md hover:border-zinc-400 dark:hover:border-zinc-600 transition-colors cursor-pointer"
+                >
+                  + Add project
+                </button>
+              </div>
             )}
           </div>
 
@@ -124,13 +160,6 @@ export function TimelineShell({ initialProjects, initialCollaborators, months, t
             />
           </div>
 
-          {/* Stats */}
-          <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-x-8 gap-y-3">
-            <Stat label="Projects" value={String(timeline.projects.length)} />
-            <Stat label="Steps done" value={`${stepsDone} / ${stepsTotal}`} mono />
-            <Stat label="Window" value="Apr – Jul 2026" mono />
-            <Stat label="High priority" value={String(timeline.projects.filter(p => p.priority === 'high').length)} />
-          </div>
         </header>
 
         {/* Add project form */}
@@ -144,36 +173,6 @@ export function TimelineShell({ initialProjects, initialCollaborators, months, t
             />
           </div>
         )}
-
-        {/* Legend + filter */}
-        <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
-          <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-[11px]">
-            <LegendSwatch cls={PRIORITY.high.bar} label="High" />
-            <LegendSwatch cls={PRIORITY.medium.bar} label="Medium" />
-            <LegendSwatch cls={PRIORITY.low.bar} label="Low" />
-            <span className="h-3 w-px bg-zinc-200 dark:bg-zinc-800 mx-1" />
-            <PhaseSwatchLegend kind="build" label="Build" />
-            <PhaseSwatchLegend kind="test" label="Test" />
-            <PhaseSwatchLegend kind="rollout" label="Rollout" />
-            <PhaseSwatchLegend kind="wait" label="Waiting" />
-          </div>
-          <div className="flex items-center gap-1 text-[11px] font-mono uppercase tracking-[0.12em]">
-            {(['all', 'high', 'medium', 'low'] as const).map(f => (
-              <button
-                key={f}
-                onClick={() => setPriorityFilter(f)}
-                className={cn(
-                  'px-2.5 py-1 rounded-sm border transition-colors cursor-pointer',
-                  priorityFilter === f
-                    ? 'border-zinc-900 dark:border-zinc-100 text-zinc-900 dark:text-zinc-100'
-                    : 'border-zinc-200 dark:border-zinc-800 text-zinc-400 dark:text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-300'
-                )}
-              >
-                {f}
-              </button>
-            ))}
-          </div>
-        </div>
 
         {/* Desktop timeline grid */}
         <div className="hidden md:block">
@@ -190,8 +189,10 @@ export function TimelineShell({ initialProjects, initialCollaborators, months, t
                 canEdit={!!timeline.activeUser}
                 onToggle={() => setExpandedId(prev => (prev === p.id ? null : p.id))}
                 onToggleStep={(idx) => timeline.toggleStep(p.id, idx)}
+                onUpdateStep={(idx, patch) => timeline.updateStep(p.id, idx, patch)}
                 onPhasesCommit={(phases) => timeline.updatePhases(p.id, phases)}
                 onMilestoneCommit={(ms) => timeline.updateMilestone(p.id, ms)}
+                onPriorityCommit={(priority) => timeline.updatePriority(p.id, priority)}
               />
             ))}
           </ul>
@@ -239,42 +240,9 @@ export function TimelineShell({ initialProjects, initialCollaborators, months, t
 
 // ---------- Small pieces ----------
 
-function Stat({ label, value, mono }: { label: string; value: string; mono?: boolean }) {
-  return (
-    <div>
-      <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-400 dark:text-zinc-500 mb-1">{label}</p>
-      <p className={cn('text-[15px] text-zinc-900 dark:text-zinc-100 tabular-nums', mono && 'font-mono')}>{value}</p>
-    </div>
-  )
-}
-
-function LegendSwatch({ cls, label }: { cls: string; label: string }) {
-  return (
-    <span className="inline-flex items-center gap-1.5 text-zinc-500 dark:text-zinc-400">
-      <span className={cn('inline-block h-2 w-4 rounded-[1px]', cls)} />
-      {label}
-    </span>
-  )
-}
-
-function PhaseSwatchLegend({ kind, label }: { kind: PhaseKind; label: string }) {
-  const cls =
-    kind === 'build'   ? 'bg-zinc-800 dark:bg-zinc-200' :
-    kind === 'test'    ? 'border border-zinc-800 dark:border-zinc-200 border-dashed' :
-    kind === 'rollout' ? 'bg-zinc-800 dark:bg-zinc-200 opacity-60' :
-    kind === 'live'    ? 'bg-emerald-500' :
-    'border border-zinc-400 dark:border-zinc-600 border-dashed'
-  return (
-    <span className="inline-flex items-center gap-1.5 text-zinc-500 dark:text-zinc-400">
-      <span className={cn('inline-block h-2 w-4', cls)} />
-      {label}
-    </span>
-  )
-}
-
 function MonthHeader({ months, today }: { months: Month[]; today: number }) {
   return (
-    <div className="grid grid-cols-[260px_1fr] border-y border-zinc-200 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-950/50">
+    <div className="grid grid-cols-[320px_1fr] border-y border-zinc-200 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-950/50">
       <div className="px-4 py-3 text-[10px] font-mono uppercase tracking-[0.18em] text-zinc-400 dark:text-zinc-500">Project</div>
       <div className="relative grid" style={{ gridTemplateColumns: `repeat(${months.length}, minmax(0, 1fr))` }}>
         {months.map(m => (
@@ -293,7 +261,7 @@ function MonthHeader({ months, today }: { months: Month[]; today: number }) {
 
 function TimelineRow({
   project, months, today, collabLookup, isExpanded, canEdit,
-  onToggle, onToggleStep, onPhasesCommit, onMilestoneCommit,
+  onToggle, onToggleStep, onUpdateStep, onPhasesCommit, onMilestoneCommit, onPriorityCommit,
 }: {
   project: TimelineProject
   months: Month[]
@@ -303,23 +271,27 @@ function TimelineRow({
   canEdit: boolean
   onToggle: () => void
   onToggleStep: (idx: number) => void
+  onUpdateStep: (idx: number, patch: Partial<TimelineStep>) => void
   onPhasesCommit: (phases: TimelinePhase[]) => void
   onMilestoneCommit: (ms: { at: number; label: string } | null) => void
+  onPriorityCommit: (priority: PriorityLevel) => void
 }) {
   const pri = PRIORITY[project.priority as PriorityLevel] ?? PRIORITY.medium
   const status = STATUS_CFG[project.status] ?? STATUS_CFG.idea
   const doneCount = project.steps.filter(s => s.done).length
   const totalSteps = project.steps.length
+  const lead = project.contributors[0] ? collabLookup[project.contributors[0]] ?? null : null
+  const leadCol = leadColors(lead)
 
   return (
     <li className={cn('transition-colors', isExpanded ? 'bg-zinc-50 dark:bg-zinc-900/40' : 'hover:bg-zinc-50/60 dark:hover:bg-zinc-900/25')}>
-      <div className="grid grid-cols-[260px_1fr]">
+      <div className="grid grid-cols-[320px_1fr]">
         {/* Label */}
-        <button type="button" onClick={onToggle} className="group text-left px-4 py-4 flex items-start gap-3 min-w-0 border-l-2 cursor-pointer" style={{ borderLeftColor: priorityBorderColor(project.priority as PriorityLevel) }}>
+        <button type="button" onClick={onToggle} className="group text-left px-4 py-4 flex items-start gap-3 min-w-0 border-l-2 cursor-pointer" style={{ borderLeftColor: leadCol.solid }}>
           <span className="font-mono text-[11px] text-zinc-300 dark:text-zinc-700 mt-[2px] shrink-0">{project.num}</span>
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-2 mb-1">
-              <h3 className="text-[14px] font-medium tracking-tight text-zinc-900 dark:text-zinc-100 truncate">{project.name}</h3>
+              <h3 className="text-[14px] font-medium tracking-tight text-zinc-900 dark:text-zinc-100 leading-snug line-clamp-2" title={project.name}>{project.name}</h3>
               <span className={cn('inline-block h-1.5 w-1.5 rounded-full shrink-0', status.dot)} />
               {totalSteps > 0 && (
                 <span className={cn(
@@ -330,12 +302,7 @@ function TimelineRow({
                 </span>
               )}
             </div>
-            <div className="flex items-center gap-2 text-[10px] font-mono uppercase tracking-[0.12em]">
-              <span className={pri.text}>{pri.label}</span>
-              <span className="text-zinc-300 dark:text-zinc-700">·</span>
-              <span className={status.text}>{status.label}</span>
-            </div>
-            <div className="mt-2">
+            <div className="mt-1.5">
               <ContribStack ids={project.contributors} lookup={collabLookup} />
             </div>
           </div>
@@ -348,26 +315,29 @@ function TimelineRow({
             {months.map((m, i) => (<div key={m.key} className={cn('h-full', i > 0 && 'border-l border-zinc-200/70 dark:border-zinc-800/70')} />))}
           </div>
           <TodayMarker position={today} variant="row" />
-          <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-7 mx-1">
-            {project.phases.map((ph, phIdx) => (
-              <PhaseBar
-                key={phIdx}
-                phase={ph}
-                phases={project.phases}
-                phaseIndex={phIdx}
-                priority={project.priority as PriorityLevel}
-                canEdit={canEdit}
-                onCommit={onPhasesCommit}
-              />
+          <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-9 mx-1">
+            {project.phases.map((ph, phIdx) => {
+              if (ph.kind === 'rollout' || ph.kind === 'live') return null
+              return (
+                <PhaseBar
+                  key={phIdx}
+                  phase={ph}
+                  phases={project.phases}
+                  phaseIndex={phIdx}
+                  leadCol={leadCol}
+                  canEdit={canEdit}
+                  onCommit={onPhasesCommit}
+                />
+              )
+            })}
+          </div>
+          {/* Step due dots */}
+          <div className="absolute inset-x-0 bottom-1 h-2.5 mx-1 pointer-events-none">
+            {project.steps.map((step, i) => (
+              step.due_at !== undefined ? (
+                <StepDot key={i} step={step} leadCol={leadCol} />
+              ) : null
             ))}
-            {project.milestone && (
-              <MilestoneMarker
-                milestone={project.milestone}
-                priority={project.priority as PriorityLevel}
-                canEdit={canEdit}
-                onCommit={onMilestoneCommit}
-              />
-            )}
           </div>
         </div>
       </div>
@@ -375,7 +345,7 @@ function TimelineRow({
       {/* Expanded detail */}
       {isExpanded && (
         <div className="border-t border-zinc-200 dark:border-zinc-800 px-6 py-5 bg-white/40 dark:bg-zinc-950/40">
-          <ExpandedDetail project={project} collabLookup={collabLookup} canEdit={canEdit} onToggleStep={onToggleStep} />
+          <ExpandedDetail project={project} collabLookup={collabLookup} canEdit={canEdit} onToggleStep={onToggleStep} onUpdateStep={onUpdateStep} onPriorityCommit={onPriorityCommit} />
         </div>
       )}
     </li>
@@ -385,26 +355,47 @@ function TimelineRow({
 // ---------- Phase bar with click-to-edit popover ----------
 
 function PhaseBar({
-  phase, phases, phaseIndex, priority, canEdit, onCommit,
+  phase, phases, phaseIndex, leadCol, canEdit, onCommit,
 }: {
   phase: TimelinePhase
   phases: TimelinePhase[]
   phaseIndex: number
-  priority: PriorityLevel
+  leadCol: { bg: string; bgOpaque: string; border: string; text: string; solid: string }
   canEdit: boolean
   onCommit: (phases: TimelinePhase[]) => void
 }) {
   const [open, setOpen] = useState(false)
-  const pri = PRIORITY[priority]
+  const [hovered, setHovered] = useState(false)
+  const [expandedPx, setExpandedPx] = useState<number | null>(null)
+  const labelRef = useRef<HTMLSpanElement>(null)
   const left = `${phase.start * 100}%`
   const width = `${(phase.end - phase.start) * 100}%`
-  const base = 'absolute inset-y-0 flex items-center justify-center transition-[background-color,border-color] duration-200'
+  const base = 'absolute inset-y-0 flex items-center justify-start transition-[background-color,border-color] duration-200'
 
-  const kindClass =
-    phase.kind === 'wait'    ? 'border border-dashed border-zinc-300 dark:border-zinc-700 rounded-[3px] text-[10px] font-mono text-zinc-400 dark:text-zinc-600 overflow-hidden' :
-    phase.kind === 'test'    ? cn('border border-dashed rounded-[3px] overflow-hidden text-[10px] font-mono', pri.border, pri.text) :
-    phase.kind === 'live'    ? 'rounded-[3px] overflow-hidden text-[10px] font-mono text-emerald-900 dark:text-emerald-100 bg-emerald-500/30 border border-emerald-500/70' :
-    cn('rounded-[3px] overflow-hidden text-[10px] font-mono border', pri.fill, pri.border, pri.text, phase.kind === 'rollout' ? 'opacity-70' : '')
+  const prefersReduced = typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  const widthTransition = prefersReduced ? 'none' : 'width 180ms cubic-bezier(0.25, 1, 0.5, 1)'
+
+  const handleMouseEnter = () => {
+    const span = labelRef.current
+    if (span && span.scrollWidth > span.clientWidth + 1) {
+      setExpandedPx(span.scrollWidth + 18)
+    } else {
+      setExpandedPx(null)
+    }
+    setHovered(true)
+  }
+  const handleMouseLeave = () => setHovered(false)
+
+  const isWait = phase.kind === 'wait'
+  const kindClass = cn(
+    'rounded-[3px] overflow-hidden text-[10px] font-mono border',
+    isWait && 'border-dashed'
+  )
+  const kindStyle: React.CSSProperties = {
+    backgroundColor: isWait ? 'transparent' : (hovered ? leadCol.bgOpaque : leadCol.bg),
+    borderColor: leadCol.border,
+    color: leadCol.text,
+  }
 
   const startDate = fractionToDate(phase.start)
   const endDate = fractionToDate(phase.end)
@@ -419,94 +410,98 @@ function PhaseBar({
     onCommit(next)
   }
 
+  const barStyle: React.CSSProperties = {
+    ...kindStyle,
+    left,
+    width: hovered && expandedPx ? `${expandedPx}px` : width,
+    zIndex: hovered ? 20 : undefined,
+    transition: widthTransition,
+  }
+
   const bar = (
-    <div className={cn(base, kindClass, canEdit && 'cursor-pointer hover:brightness-110')} style={{ left, width }} title={phase.label}>
-      <span className="px-2 truncate">{phase.label}</span>
+    <div
+      className={cn(base, kindClass, canEdit && 'cursor-pointer hover:brightness-110')}
+      style={barStyle}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      <span ref={labelRef} className={cn('px-2', hovered ? 'whitespace-nowrap' : 'truncate')}>{phase.label}</span>
     </div>
   )
 
   if (!canEdit) return bar
 
   return (
-    <Popover open={open} onOpenChange={setOpen}>
-      <PopoverTrigger asChild>{bar}</PopoverTrigger>
-      <PopoverContent className="w-auto p-3" side="top" align="center">
-        <div className="space-y-3">
-          {phase.label && (
-            <p className="text-[11px] font-mono uppercase tracking-[0.12em] text-zinc-500 dark:text-zinc-400">{phase.label}</p>
-          )}
-          <DateRow label="Start" monthNum={startDate.monthNum} day={startDate.day} onChange={(m, d) => handleDateChange('start', m, d)} />
-          <DateRow label="End" monthNum={endDate.monthNum} day={endDate.day} onChange={(m, d) => handleDateChange('end', m, d)} />
-          <div className="flex items-center gap-2 pt-1 border-t border-zinc-200 dark:border-zinc-800">
-            <button
-              type="button"
-              onClick={() => {
-                const next = [...phases]
-                const afterEnd = phase.end
-                const nextPhaseStart = phaseIndex < phases.length - 1 ? phases[phaseIndex + 1].start : 1
-                const gap = nextPhaseStart - afterEnd
-                const newEnd = gap > 0.02 ? afterEnd + gap / 2 : Math.min(afterEnd + 0.06, 1)
-                next.splice(phaseIndex + 1, 0, { kind: 'build', start: afterEnd, end: newEnd, label: 'Build' })
-                onCommit(next)
-                setOpen(false)
-              }}
-              className="text-[10px] font-mono text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors cursor-pointer"
-            >
-              + Add stage after
-            </button>
-            {phases.length > 1 && (
+    <>
+      <Popover open={open} onOpenChange={setOpen}>
+        <PopoverTrigger asChild>{bar}</PopoverTrigger>
+        <PopoverContent className="w-auto p-3" side="top" align="center">
+          <div className="space-y-3">
+            {phase.label && (
+              <p className="text-[11px] font-mono uppercase tracking-[0.12em] text-zinc-500 dark:text-zinc-400">{phase.label}</p>
+            )}
+            <DateRow label="Start" edge="start" monthNum={startDate.monthNum} day={startDate.day} onChange={(m, d) => handleDateChange('start', m, d)} />
+            <DateRow label="End" edge="end" monthNum={endDate.monthNum} day={endDate.day} onChange={(m, d) => handleDateChange('end', m, d)} />
+            <div className="flex items-center gap-2 pt-1 border-t border-zinc-200 dark:border-zinc-800">
               <button
                 type="button"
                 onClick={() => {
-                  const next = phases.filter((_, i) => i !== phaseIndex)
+                  const next = [...phases]
+                  const afterEnd = phase.end
+                  const nextPhaseStart = phaseIndex < phases.length - 1 ? phases[phaseIndex + 1].start : 1
+                  const gap = nextPhaseStart - afterEnd
+                  const newEnd = gap > 0.02 ? afterEnd + gap / 2 : Math.min(afterEnd + 0.06, 1)
+                  next.splice(phaseIndex + 1, 0, { kind: 'build', start: afterEnd, end: newEnd, label: 'Build' })
                   onCommit(next)
                   setOpen(false)
                 }}
-                className="text-[10px] font-mono text-red-400 hover:text-red-600 dark:hover:text-red-300 transition-colors cursor-pointer"
+                className="text-[10px] font-mono text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors cursor-pointer"
               >
-                Remove
+                + Add stage after
               </button>
-            )}
+              {phases.length > 1 && (
+                <button
+                  type="button"
+                  onClick={() => {
+                    const next = phases.filter((_, i) => i !== phaseIndex)
+                    onCommit(next)
+                    setOpen(false)
+                  }}
+                  className="text-[10px] font-mono text-red-400 hover:text-red-600 dark:hover:text-red-300 transition-colors cursor-pointer"
+                >
+                  Remove
+                </button>
+              )}
+            </div>
           </div>
-        </div>
-      </PopoverContent>
-    </Popover>
+        </PopoverContent>
+      </Popover>
+    </>
   )
 }
 
-/** Shared month + day select row */
-function DateRow({ label, monthNum, day, onChange }: {
+/** Month-only row — edge decides day-1 (start) vs last-day (end) */
+function DateRow({ label, monthNum, day: _day, onChange, edge = 'start' }: {
   label: string
   monthNum: number
   day: number
   onChange: (monthNum: number, day: number) => void
+  edge?: 'start' | 'end'
 }) {
-  const maxDay = daysInMonth(monthNum)
-
   return (
     <div className="flex items-center gap-2">
-      <span className="text-[10px] font-mono uppercase tracking-[0.12em] text-zinc-400 dark:text-zinc-500 w-8">{label}</span>
+      <span className="text-[10px] font-mono uppercase tracking-[0.12em] text-zinc-400 dark:text-zinc-500 w-10">{label}</span>
       <Select value={String(monthNum)} onValueChange={(v) => {
-        const newMonth = Number(v)
-        const clampedDay = Math.min(day, daysInMonth(newMonth))
-        onChange(newMonth, clampedDay)
+        const m = Number(v)
+        const d = edge === 'end' ? daysInMonth(m) : 1
+        onChange(m, d)
       }}>
-        <SelectTrigger className="h-7 w-[72px] text-[12px] font-mono">
+        <SelectTrigger className="h-7 w-[120px] text-[12px] font-mono">
           <SelectValue />
         </SelectTrigger>
         <SelectContent>
           {MONTH_META.map(m => (
             <SelectItem key={m.num} value={String(m.num)} className="text-[12px] font-mono">{m.label}</SelectItem>
-          ))}
-        </SelectContent>
-      </Select>
-      <Select value={String(day)} onValueChange={(v) => onChange(monthNum, Number(v))}>
-        <SelectTrigger className="h-7 w-[56px] text-[12px] font-mono">
-          <SelectValue />
-        </SelectTrigger>
-        <SelectContent>
-          {Array.from({ length: maxDay }, (_, i) => i + 1).map(d => (
-            <SelectItem key={d} value={String(d)} className="text-[12px] font-mono">{d}</SelectItem>
           ))}
         </SelectContent>
       </Select>
@@ -535,6 +530,11 @@ function MilestoneMarker({
       title={milestone.label}
     >
       <div className={cn('w-2.5 h-2.5 rotate-45 border', pri.bar, pri.border)} />
+      {milestone.label && (
+        <span className="absolute left-1/2 -translate-x-1/2 top-full mt-1 text-[9px] font-mono uppercase tracking-[0.08em] text-zinc-500 dark:text-zinc-400 whitespace-nowrap pointer-events-none">
+          {milestone.label}
+        </span>
+      )}
     </div>
   )
 
@@ -574,68 +574,73 @@ function TodayMarker({ position, variant }: { position: number; variant: 'header
 // ---------- Expanded detail with checkboxes ----------
 
 function ExpandedDetail({
-  project, collabLookup, canEdit, onToggleStep,
+  project, collabLookup, canEdit, onToggleStep, onUpdateStep, onPriorityCommit,
 }: {
   project: TimelineProject
   collabLookup: Record<string, TimelineCollaborator>
   canEdit: boolean
   onToggleStep: (idx: number) => void
+  onUpdateStep: (idx: number, patch: Partial<TimelineStep>) => void
+  onPriorityCommit: (priority: PriorityLevel) => void
 }) {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div className="md:col-span-2">
-        {project.one_liner && (
-          <p className="text-[13px] text-zinc-600 dark:text-zinc-300 leading-relaxed mb-4">{project.one_liner}</p>
-        )}
-        {project.stage_line && (
-          <p className="text-[12px] text-zinc-500 dark:text-zinc-400 leading-relaxed mb-5">
-            <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-zinc-400 dark:text-zinc-500 mr-2">Stage</span>
-            {project.stage_line}
-          </p>
-        )}
-        <div className="mb-4">
-          <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-400 dark:text-zinc-500 mb-2">Action Steps</p>
-          <ul className="space-y-1">
-            {project.steps.map((step, i) => (
-              <StepRow
-                key={i}
-                step={step}
-                index={i}
-                canEdit={canEdit}
-                collabLookup={collabLookup}
-                onToggle={() => onToggleStep(i)}
-              />
-            ))}
-          </ul>
+    <div className="space-y-4">
+      {project.one_liner && (
+        <p className="text-[13px] text-zinc-600 dark:text-zinc-300 leading-relaxed">{project.one_liner}</p>
+      )}
+      {canEdit && (
+        <div className="flex items-center gap-3">
+          <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-400 dark:text-zinc-500">Priority</span>
+          <Select value={project.priority} onValueChange={(v) => onPriorityCommit(v as PriorityLevel)}>
+            <SelectTrigger className="h-7 w-[110px] text-[12px] font-mono">
+              <SelectValue />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="high" className="text-[12px] font-mono">High</SelectItem>
+              <SelectItem value="medium" className="text-[12px] font-mono">Medium</SelectItem>
+              <SelectItem value="low" className="text-[12px] font-mono">Low</SelectItem>
+            </SelectContent>
+          </Select>
         </div>
-        {project.href && (
-          <Link href={project.href} className="inline-flex items-center gap-1 text-[13px] font-medium text-zinc-900 dark:text-zinc-100 hover:opacity-70 transition-opacity">
-            Open project <span>&rarr;</span>
-          </Link>
-        )}
+      )}
+      <div>
+        <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-400 dark:text-zinc-500 mb-2">Action Steps</p>
+        <ul className="space-y-1">
+          {project.steps.map((step, i) => (
+            <StepRow
+              key={i}
+              step={step}
+              index={i}
+              canEdit={canEdit}
+              collabLookup={collabLookup}
+              onToggle={() => onToggleStep(i)}
+              onUpdateStep={(patch) => onUpdateStep(i, patch)}
+            />
+          ))}
+        </ul>
       </div>
-      <aside className="md:border-l md:border-zinc-200 md:dark:border-zinc-800 md:pl-6">
-        {project.support && (
-          <div className="mb-4">
-            <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-400 dark:text-zinc-500 mb-2">Support Needed</p>
-            <p className="text-[12px] text-zinc-600 dark:text-zinc-400 leading-relaxed">{project.support}</p>
-          </div>
-        )}
-        {project.milestone && (
-          <div className="mb-4">
-            <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-400 dark:text-zinc-500 mb-2">Milestone</p>
-            <p className="text-[13px] text-zinc-900 dark:text-zinc-100">{project.milestone.label}</p>
-          </div>
-        )}
-        {project.updated_by && (
-          <div>
-            <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-400 dark:text-zinc-500 mb-2">Last edit</p>
-            <p className="text-[12px] text-zinc-500 dark:text-zinc-400">
-              {project.updated_by} · {relativeTime(project.updated_at)}
-            </p>
-          </div>
-        )}
-      </aside>
+      {project.support && (
+        <div>
+          <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-400 dark:text-zinc-500 mb-1">Support Needed</p>
+          <p className="text-[12px] text-zinc-600 dark:text-zinc-400 leading-relaxed">{project.support}</p>
+        </div>
+      )}
+      {project.milestone && (
+        <div>
+          <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-400 dark:text-zinc-500 mb-1">Milestone</p>
+          <p className="text-[13px] text-zinc-900 dark:text-zinc-100">{project.milestone.label}</p>
+        </div>
+      )}
+      {project.href && (
+        <Link href={project.href} className="inline-flex items-center gap-1 text-[13px] font-medium text-zinc-900 dark:text-zinc-100 hover:opacity-70 transition-opacity">
+          Open project <span>&rarr;</span>
+        </Link>
+      )}
+      {project.updated_by && (
+        <p className="text-[11px] text-zinc-400 dark:text-zinc-600">
+          Last edit: {project.updated_by} · {relativeTime(project.updated_at)}
+        </p>
+      )}
     </div>
   )
 }
@@ -643,15 +648,18 @@ function ExpandedDetail({
 // ---------- Step row with checkbox ----------
 
 function StepRow({
-  step, index, canEdit, collabLookup, onToggle,
+  step, index, canEdit, collabLookup, onToggle, onUpdateStep,
 }: {
   step: TimelineStep
   index: number
   canEdit: boolean
   collabLookup: Record<string, TimelineCollaborator>
   onToggle: () => void
+  onUpdateStep: (patch: Partial<TimelineStep>) => void
 }) {
   const doneByCollab = step.done_by ? collabLookup[step.done_by] : null
+  const dateObj = step.due_at !== undefined ? fractionToDate(step.due_at) : null
+  const startObj = step.start_at !== undefined ? fractionToDate(step.start_at) : null
 
   return (
     <li className="flex items-start gap-3">
@@ -687,12 +695,96 @@ function StepRow({
       <span className={cn('flex-1 text-[13px]', step.done ? 'line-through text-zinc-400 dark:text-zinc-600' : 'text-zinc-600 dark:text-zinc-300')}>
         {step.text}
       </span>
+      {canEdit ? (
+        <Popover>
+          <PopoverTrigger asChild>
+            <button
+              type="button"
+              className="shrink-0 text-[10px] font-mono text-zinc-400 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors cursor-pointer px-2 py-0.5 border border-zinc-200 dark:border-zinc-800 rounded hover:border-zinc-400 dark:hover:border-zinc-600"
+            >
+              {dateObj ? `${MONTH_META[dateObj.monthNum - 4]?.label ?? ''} ${dateObj.day}` : '+ date'}
+            </button>
+          </PopoverTrigger>
+          <PopoverContent className="w-auto p-3" side="top" align="end">
+            <div className="space-y-2">
+              <DateRow
+                label="Start"
+                edge="start"
+                monthNum={startObj?.monthNum ?? 4}
+                day={startObj?.day ?? 1}
+                onChange={(m, d) => onUpdateStep({ start_at: dateToFraction(m, d) })}
+              />
+              <DateRow
+                label="Due"
+                edge="end"
+                monthNum={dateObj?.monthNum ?? 4}
+                day={dateObj?.day ?? daysInMonth(4)}
+                onChange={(m, d) => onUpdateStep({ due_at: dateToFraction(m, d) })}
+              />
+              {(startObj || dateObj) && (
+                <button
+                  type="button"
+                  className="text-[10px] font-mono text-red-400 hover:text-red-600 cursor-pointer pt-1 border-t border-zinc-200 dark:border-zinc-800 w-full text-left"
+                  onClick={() => onUpdateStep({ start_at: undefined, due_at: undefined })}
+                >
+                  Clear dates
+                </button>
+              )}
+            </div>
+          </PopoverContent>
+        </Popover>
+      ) : (
+        dateObj && (
+          <span className="shrink-0 text-[10px] font-mono text-zinc-400 dark:text-zinc-500">
+            {MONTH_META[dateObj.monthNum - 4]?.label} {dateObj.day}
+          </span>
+        )
+      )}
       {doneByCollab && (
         <span className="shrink-0">
           <ContribChip c={doneByCollab} size="sm" />
         </span>
       )}
     </li>
+  )
+}
+
+// ---------- Step dot on timeline ----------
+
+function StepDot({ step, leadCol }: { step: TimelineStep; leadCol: { bg: string; bgOpaque: string; border: string; text: string; solid: string } }) {
+  if (step.due_at === undefined) return null
+  const hasRange = step.start_at !== undefined && step.start_at < step.due_at
+  const doneColor = 'rgb(16 185 129)'
+
+  if (hasRange) {
+    const left = `${step.start_at! * 100}%`
+    const width = `${(step.due_at - step.start_at!) * 100}%`
+    return (
+      <div
+        className="absolute top-0 h-2 rounded-full"
+        style={{
+          left,
+          width,
+          backgroundColor: step.done ? doneColor : leadCol.solid,
+          opacity: 0.85,
+        }}
+      />
+    )
+  }
+
+  return (
+    <div
+      className="absolute top-0 -translate-x-1/2"
+      style={{ left: `${step.due_at * 100}%` }}
+    >
+      <div
+        className="h-2 w-2 rounded-full border"
+        style={{
+          backgroundColor: step.done ? doneColor : leadCol.solid,
+          borderColor: step.done ? doneColor : leadCol.border,
+        }}
+      />
+    </div>
   )
 }
 
@@ -704,33 +796,30 @@ function MobileRow({ project, collabLookup, monthStart, monthEnd }: {
   monthStart: number
   monthEnd: number
 }) {
-  const pri = PRIORITY[project.priority as PriorityLevel] ?? PRIORITY.medium
   const status = STATUS_CFG[project.status] ?? STATUS_CFG.idea
   const monthSpan = monthEnd - monthStart
+  const lead = project.contributors[0] ? collabLookup[project.contributors[0]] ?? null : null
+  const leadCol = leadColors(lead)
   const clipped = project.phases
+    .filter(ph => ph.kind !== 'rollout' && ph.kind !== 'live')
     .map(ph => ({ ...ph, start: Math.max(ph.start, monthStart), end: Math.min(ph.end, monthEnd) }))
     .filter(ph => ph.end > ph.start)
 
   return (
-    <li className="border-l-2 pl-3 py-2" style={{ borderLeftColor: priorityBorderColor(project.priority as PriorityLevel) }}>
+    <li className="border-l-2 pl-3 py-2" style={{ borderLeftColor: leadCol.solid }}>
       <div className="flex items-center gap-2 mb-1">
         <span className="font-mono text-[10px] text-zinc-300 dark:text-zinc-700">{project.num}</span>
-        <h3 className="text-[14px] font-medium tracking-tight text-zinc-900 dark:text-zinc-100">{project.name}</h3>
+        <h3 className="text-[14px] font-medium tracking-tight text-zinc-900 dark:text-zinc-100" title={project.name}>{project.name}</h3>
         <span className={cn('inline-block h-1.5 w-1.5 rounded-full', status.dot)} />
       </div>
       {project.one_liner && <p className="text-[12px] text-zinc-500 dark:text-zinc-400 leading-relaxed mb-2">{project.one_liner}</p>}
-      <div className="flex items-center gap-2 text-[10px] font-mono uppercase tracking-[0.12em] mb-2">
-        <span className={pri.text}>{pri.label}</span>
-        <span className="text-zinc-300 dark:text-zinc-700">·</span>
-        <span className={status.text}>{status.label}</span>
-      </div>
       <ContribStack ids={project.contributors} lookup={collabLookup} />
       <div className="relative mt-2 h-2 bg-zinc-100 dark:bg-zinc-800/60 rounded-sm overflow-hidden">
         {clipped.map((ph, i) => {
           const l = ((ph.start - monthStart) / monthSpan) * 100
           const w = ((ph.end - ph.start) / monthSpan) * 100
-          const bg = ph.kind === 'wait' ? 'bg-zinc-300/60 dark:bg-zinc-700/60' : ph.kind === 'live' ? 'bg-emerald-500/60' : pri.bar + ' opacity-70'
-          return <div key={i} className={cn('absolute inset-y-0', bg)} style={{ left: `${l}%`, width: `${w}%` }} />
+          const bgColor = ph.kind === 'wait' ? 'hsl(0 0% 60% / 0.4)' : leadCol.solid
+          return <div key={i} className="absolute inset-y-0 opacity-80" style={{ left: `${l}%`, width: `${w}%`, backgroundColor: bgColor }} />
         })}
       </div>
     </li>
