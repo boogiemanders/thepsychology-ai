@@ -10,12 +10,16 @@ struct EPPPStudyApp: App {
     @State private var apiClient: APIClient?
     @State private var contentManager: ContentManager?
     @State private var syncEngine: SyncEngine?
+    @State private var quizProgressService: QuizProgressService?
 
     var body: some Scene {
         WindowGroup {
             Group {
                 if authService.isAuthenticated {
-                    if let contentManager, let syncEngine, let apiClient {
+                    if let contentManager, let syncEngine, let apiClient, let quizProgressService {
+                        // Hybrid: native tab bar + native content + WKWebView only
+                        // for rich flows (Recover chat). Web design tokens ported
+                        // into Theme.swift so native matches the web aesthetic.
                         MainTabView()
                             .environment(authService)
                             .environment(networkMonitor)
@@ -24,6 +28,7 @@ struct EPPPStudyApp: App {
                             .environment(apiClient)
                             .environment(contentManager)
                             .environment(syncEngine)
+                            .environment(quizProgressService)
                     } else {
                         ProgressView("Loading...")
                             .task { initializeServices() }
@@ -50,10 +55,12 @@ struct EPPPStudyApp: App {
         let client = APIClient(authService: authService)
         let content = ContentManager(apiClient: client, localStore: localStore)
         let sync = SyncEngine(apiClient: client, localStore: localStore, networkMonitor: networkMonitor)
+        let quizProgress = QuizProgressService(authService: authService)
 
         self.apiClient = client
         self.contentManager = content
         self.syncEngine = sync
+        self.quizProgressService = quizProgress
 
         sync.startPeriodicSync()
     }
@@ -63,6 +70,7 @@ struct EPPPStudyApp: App {
         apiClient = nil
         contentManager = nil
         syncEngine = nil
+        quizProgressService = nil
     }
 
     private func performInitialSync() async {

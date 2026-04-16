@@ -105,6 +105,11 @@ const escapeHtml = (value: string): string => {
     .replace(/'/g, '&#39;')
 }
 
+/** Strip leading letter prefix like "A. " or "D. " from option text to avoid
+ *  doubling when the renderer already prepends its own A/B/C/D label. */
+const stripOptionLetterPrefix = (text: string): string =>
+  text.replace(/^[A-Da-d]\.\s*/, '')
+
 const normalizeQuestionText = (value: string): string => {
   return value
     .toLowerCase()
@@ -1429,7 +1434,7 @@ export function QuizzerContent() {
                                 >
                                   <div className="flex items-start gap-2">
                                     <span className="font-semibold">{optionLetter}.</span>
-                                    <span className="flex-1">{option}</span>
+                                    <span className="flex-1">{stripOptionLetterPrefix(option)}</span>
                                     {isThisCorrect && (
                                       <Badge
                                         variant="outline"
@@ -1617,7 +1622,7 @@ export function QuizzerContent() {
                           {questions[quizState.question]?.options.map((option, idx) => {
                             const isSelected = quizState.selectedAnswers[quizState.question] === option
                             const optionLetter = String.fromCharCode(65 + idx)
-                            const optionContent = optionHtml[idx] ?? escapeHtml(option)
+                            const optionContent = optionHtml[idx] ?? escapeHtml(stripOptionLetterPrefix(option))
 
                             return (
                               <div key={idx} className="flex items-start gap-3 p-2">
