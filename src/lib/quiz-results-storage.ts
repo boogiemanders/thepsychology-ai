@@ -1,5 +1,10 @@
 // This utility handles quiz results storage and retrieval
 // Stores which questions were answered incorrectly, correctly, and previously correct
+//
+// Dual-write: localStorage (always) + Supabase quiz_results (signed-in users).
+// Supabase is source of truth for cross-device sync; localStorage is offline cache.
+
+import { supabase } from '@/lib/supabase'
 
 export interface WrongAnswer {
   questionId: number
@@ -61,10 +66,115 @@ export function saveQuizResults(results: QuizResults): void {
     console.error('[quiz-results-storage] Failed to save quiz results:', error)
   }
 
+  // Fire-and-forget Supabase write for signed-in users
+  saveQuizResultsToSupabase(results)
+
   // Dispatch a custom event to notify listeners of quiz results update
   window.dispatchEvent(new CustomEvent('quiz-results-updated', {
     detail: { topic: results.topic, results }
   }))
+}
+
+/**
+ * Async Supabase insert — best-effort, never blocks UI.
+ * Appends a new row per attempt (table is append-only).
+ */
+async function saveQuizResultsToSupabase(results: QuizResults): Promise<void> {
+  try {
+    const { data: { user } } = await supabase.auth.getUser()
+    if (!user) return
+
+    const { error } = await supabase.from('quiz_results').insert({
+      user_id: user.id,
+      topic_name: results.topic,
+      domain_id: results.domain ?? null,
+      score: results.score,
+      total_questions: results.totalQuestions,
+      wrong_answers: results.wrongAnswers,
+      correct_answers: results.correctAnswers,
+      source: 'web',
+      completed_at: new Date(results.timestamp).toISOString(),
+    })
+
+    if (error) {
+      console.error('[quiz-results-storage] Supabase write failed:', error.message)
+    }
+  } catch (error) {
+    console.error('[quiz-results-storage] Supabase write failed:', error)
+  }
+}
+
+/**
+ * Fetch all quiz results from Supabase for a signed-in user.
+ * Returns empty array if not signed in or on error.
+ */
+export async function fetchSupabaseQuizResults(): Promise<QuizResults[]> {
+  try {
+    const { data: { user } } = await supabase.auth.getUser()
+    if (!user) return []
+
+    const { data, error } = await supabase
+      .from('quiz_results')
+      .select('topic_name, domain_id, score, total_questions, percentage, wrong_answers, correct_answers, completed_at')
+      .eq('user_id', user.id)
+      .order('completed_at', { ascending: false })
+
+    if (error || !data) return []
+
+    return data.map((row) => ({
+      topic: row.topic_name,
+      domain: row.domain_id ?? undefined,
+      timestamp: new Date(row.completed_at).getTime(),
+      score: row.score,
+      totalQuestions: row.total_questions,
+      wrongAnswers: row.wrong_answers ?? [],
+      correctAnswers: row.correct_answers ?? [],
+    }))
+  } catch {
+    return []
+  }
+}
+
+/**
+ * One-time backfill: push localStorage quiz results to Supabase.
+ * Skips topics that already exist remotely. Call once on sign-in.
+ */
+export async function backfillLocalToSupabase(): Promise<void> {
+  try {
+    const { data: { user } } = await supabase.auth.getUser()
+    if (!user) return
+
+    const localResults = getAllQuizResults()
+    if (localResults.length === 0) return
+
+    // Fetch existing remote topics to avoid duplicates
+    const { data: existing } = await supabase
+      .from('quiz_results')
+      .select('topic_name')
+      .eq('user_id', user.id)
+
+    const remoteTopics = new Set((existing ?? []).map((r: { topic_name: string }) => r.topic_name))
+
+    const toInsert = localResults
+      .filter((r) => !remoteTopics.has(r.topic))
+      .map((r) => ({
+        user_id: user.id,
+        topic_name: r.topic,
+        domain_id: r.domain ?? null,
+        score: r.score,
+        total_questions: r.totalQuestions,
+        wrong_answers: r.wrongAnswers,
+        correct_answers: r.correctAnswers,
+        source: 'web' as const,
+        completed_at: new Date(r.timestamp).toISOString(),
+      }))
+
+    if (toInsert.length > 0) {
+      await supabase.from('quiz_results').insert(toInsert)
+    }
+  } catch (error) {
+    console.error('[quiz-results-storage] Backfill failed:', error)
+  }
 }
 
 export function getQuizResults(topic: string): QuizResults | null {

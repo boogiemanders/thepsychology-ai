@@ -26,5 +26,6 @@
 - Execute directly by default. Don't write plans unless I ask for one
 - Small tasks (1-2 files): just do it. 3+ files: confirm approach first
 - When there are multiple approaches, show 2-3 options briefly before picking one
+- When explaining technical decisions or plans, use plain-language analogies (Google Docs vs Word, sticky notes, shared scoreboards). Make it feel like explaining to a smart friend, not reading docs
 - If you go down a wrong path, just fix it silently — don't explain the detour
 - Proactively flag anything you notice: bugs, security issues, tech debt, patterns that'll break later

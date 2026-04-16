@@ -15,7 +15,7 @@ import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbP
 import { motion, AnimatePresence } from 'motion/react'
 import { RecoverNudge } from '@/components/recover-nudge'
 import { useStripeCheckout } from '@/hooks/use-stripe-checkout'
-import { getAllQuizResults } from '@/lib/quiz-results-storage'
+import { getAllQuizResults, fetchSupabaseQuizResults, backfillLocalToSupabase } from '@/lib/quiz-results-storage'
 import { calculateStudyStats } from '@/lib/dashboard-utils'
 import { EPPP_DOMAINS } from '@/lib/eppp-data'
 import { QUIZ_PASS_PERCENT } from '@/lib/quiz-passing'
@@ -261,19 +261,31 @@ function TopicSelectorContent() {
     return trimmed
   }
 
-  const refreshTopicProgress = useCallback(() => {
-    const allResults = getAllQuizResults()
+  const refreshTopicProgress = useCallback(async () => {
+    // Merge localStorage (offline cache) + Supabase (source of truth)
+    const localResults = getAllQuizResults()
+    const remoteResults = user ? await fetchSupabaseQuizResults() : []
+    const allResults = [...localResults, ...remoteResults]
 
     // Get recent activities (last 5 topics)
     const sortedResults = [...allResults].sort((a, b) => b.timestamp - a.timestamp)
-    const recentTopics = sortedResults.slice(0, 5).map(result => ({
-      topic: result.topic,
-      timestamp: result.timestamp,
-      score: Math.round((result.score / result.totalQuestions) * 100)
-    }))
+    // Dedupe by topic — keep only most recent per topic for activity feed
+    const seenTopics = new Set<string>()
+    const recentTopics = sortedResults
+      .filter((r) => {
+        if (seenTopics.has(r.topic)) return false
+        seenTopics.add(r.topic)
+        return true
+      })
+      .slice(0, 5)
+      .map(result => ({
+        topic: result.topic,
+        timestamp: result.timestamp,
+        score: Math.round((result.score / result.totalQuestions) * 100)
+      }))
     setRecentActivities(recentTopics)
 
-    // Create a map of topic scores
+    // Create a map of topic scores (best score wins)
     const topicScores: Record<string, number> = {}
     allResults.forEach((result) => {
       const percentage = (result.score / result.totalQuestions) * 100
@@ -311,7 +323,7 @@ function TopicSelectorContent() {
     })
 
     setDomains(domainsWithProgress)
-  }, [])
+  }, [user])
 
   const mapDomainNumberToIds = useCallback((domainNumber?: number | null) => {
     if (!domainNumber) return []
@@ -424,16 +436,50 @@ function TopicSelectorContent() {
   useEffect(() => {
     refreshTopicProgress()
 
-    window.addEventListener('storage', refreshTopicProgress)
-    window.addEventListener('quiz-results-updated', refreshTopicProgress)
-    window.addEventListener('quiz-data-hydrated', refreshTopicProgress)
+    const handler = () => { refreshTopicProgress() }
+    window.addEventListener('storage', handler)
+    window.addEventListener('quiz-results-updated', handler)
+    window.addEventListener('quiz-data-hydrated', handler)
 
     return () => {
-      window.removeEventListener('storage', refreshTopicProgress)
-      window.removeEventListener('quiz-results-updated', refreshTopicProgress)
-      window.removeEventListener('quiz-data-hydrated', refreshTopicProgress)
+      window.removeEventListener('storage', handler)
+      window.removeEventListener('quiz-results-updated', handler)
+      window.removeEventListener('quiz-data-hydrated', handler)
     }
   }, [refreshTopicProgress])
+
+  // Supabase realtime: refresh when quiz_results changes from another device
+  useEffect(() => {
+    if (!user) return
+
+    const channel = supabase
+      .channel('quiz-progress-sync')
+      .on(
+        'postgres_changes',
+        {
+          event: 'INSERT',
+          schema: 'public',
+          table: 'quiz_results',
+          filter: `user_id=eq.${user.id}`,
+        },
+        () => { refreshTopicProgress() }
+      )
+      .subscribe()
+
+    return () => { supabase.removeChannel(channel) }
+  }, [user, refreshTopicProgress])
+
+  // One-time backfill: push localStorage quiz data to Supabase on sign-in
+  useEffect(() => {
+    if (!user) return
+    const key = `quiz_backfill_done_${user.id}`
+    if (sessionStorage.getItem(key)) return
+
+    backfillLocalToSupabase().then(() => {
+      sessionStorage.setItem(key, '1')
+      refreshTopicProgress()
+    })
+  }, [user, refreshTopicProgress])
 
   useEffect(() => {
     loadPriorities().catch((error) => {

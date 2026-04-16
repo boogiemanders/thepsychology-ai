@@ -89,21 +89,20 @@ export async function POST(request: NextRequest) {
         failed.push({ id: op.operation_id, error: errorMsg })
 
         // Record failure in audit trail
-        await supabase
-          .from('mobile_sync_queue')
-          .insert({
-            operation_id: op.operation_id,
-            user_id: userId,
-            operation_type: op.operation_type,
-            payload: op.payload,
-            client_timestamp: op.timestamp,
-            processed_at: new Date().toISOString(),
-            status: 'failed',
-            error_message: errorMsg,
-          })
-          .catch((auditErr: any) => {
-            console.error('[mobile/sync/push] Audit trail insert failed:', auditErr)
-          })
+        const { error: auditError } = await supabase.from('mobile_sync_queue').insert({
+          operation_id: op.operation_id,
+          user_id: userId,
+          operation_type: op.operation_type,
+          payload: op.payload,
+          client_timestamp: op.timestamp,
+          processed_at: new Date().toISOString(),
+          status: 'failed',
+          error_message: errorMsg,
+        })
+
+        if (auditError) {
+          console.error('[mobile/sync/push] Audit trail insert failed:', auditError)
+        }
       }
     }
 
@@ -334,16 +333,19 @@ async function handleQuizResultUpsert(
   userId: string,
   payload: Record<string, any>
 ): Promise<void> {
-  const { quiz_slug, score, total_questions, answers, completed_at } = payload
+  const { topic_name, domain_id, score, total_questions, wrong_answers, correct_answers, completed_at, source } = payload
 
   const { error } = await supabase
     .from('quiz_results')
     .insert({
       user_id: userId,
-      quiz_slug,
+      topic_name,
+      domain_id: domain_id ?? null,
       score,
       total_questions,
-      answers: answers ?? null,
+      wrong_answers: wrong_answers ?? null,
+      correct_answers: correct_answers ?? null,
+      source: source ?? 'ios',
       completed_at: completed_at ?? new Date().toISOString(),
     })
 
