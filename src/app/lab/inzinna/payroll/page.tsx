@@ -18,10 +18,43 @@ const clinicians = [
 const steps = [
   { num: '01', title: 'Export CSV', desc: 'Pull the appointment status report from SimplePractice.' },
   { num: '02', title: 'Upload to Extension', desc: 'Click the brain icon in Chrome, drop in the CSV.' },
-  { num: '03', title: 'Review Totals', desc: 'See per-clinician pay, adjusted hourly rate, daily hours breakdown.' },
-  { num: '04', title: 'Fill JustWorks', desc: 'Navigate to each time card, click Fill. Rate and hours auto-populate.' },
-  { num: '05', title: 'Verify', desc: 'Extension checks the JustWorks pay total matches. Green = exact.' },
+  { num: '03', title: 'Tag Insurance', desc: 'For payer-dependent clinicians, pick each patient\'s insurance. Remembered across payroll runs.' },
+  { num: '04', title: 'Add Pending Sessions', desc: 'Pre-fill expected sessions not yet in the CSV (e.g. Friday mornings). Confirm or mark no-show later.' },
+  { num: '05', title: 'Review Totals', desc: 'See per-clinician pay, adjusted hourly rate, daily hours breakdown.' },
+  { num: '06', title: 'Fill JustWorks', desc: 'Navigate to each time card, click Fill. Rate and hours auto-populate.' },
+  { num: '07', title: 'Verify', desc: 'Extension checks the JustWorks pay total matches. Green = exact.' },
 ]
+
+const insuranceMock = [
+  { client: 'Amara Osei', ins: 'united' as const },
+  { client: 'Sinjun Strom', ins: 'aetna' as const },
+  { client: 'T. Mendez', ins: 'united' as const },
+  { client: 'Kev Lynch', ins: null },
+]
+
+const pendingMock = [
+  { date: 'Fri 4/18', client: 'Hana P.', code: '90837', status: 'completed' as const },
+  { date: 'Fri 4/18', client: 'Jesse R.', code: '90834', status: 'pending' as const },
+  { date: 'Fri 4/18', client: 'Morgan D.', code: '90837', status: 'no-show' as const },
+]
+
+const statusColors = {
+  pending:   { bg: 'bg-amber-50 dark:bg-amber-950/30', text: 'text-amber-700 dark:text-amber-400', border: 'border-amber-200 dark:border-amber-800' },
+  completed: { bg: 'bg-emerald-50 dark:bg-emerald-950/30', text: 'text-emerald-700 dark:text-emerald-400', border: 'border-emerald-200 dark:border-emerald-800' },
+  'no-show': { bg: 'bg-red-50 dark:bg-red-950/30', text: 'text-red-700 dark:text-red-400', border: 'border-red-200 dark:border-red-800' },
+}
+
+function StatusPill({ status, label, active }: { status: keyof typeof statusColors; label: string; active: boolean }) {
+  const c = statusColors[status]
+  return (
+    <span className={`
+      inline-flex items-center justify-center w-5 h-5 rounded text-[10px] font-mono font-semibold
+      ${active ? `${c.bg} ${c.text} ${c.border} border` : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-400 dark:text-zinc-600 border border-zinc-200 dark:border-zinc-700'}
+    `}>
+      {label}
+    </span>
+  )
+}
 
 export default function PayrollPage() {
   return (
@@ -67,6 +100,162 @@ export default function PayrollPage() {
                 </div>
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* Insurance per patient — Bret */}
+        <section className="mb-16">
+          <h2 className="text-xs font-mono uppercase tracking-[0.2em] text-zinc-400 dark:text-zinc-500 mb-4">
+            Insurance Tagging
+          </h2>
+          <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed mb-6">
+            Payer-dependent clinicians get paid differently based on the patient's insurance.
+            The CSV doesn't include payer info, so the extension lets you tag each patient once.
+            It remembers your picks across payroll runs.
+          </p>
+
+          <div className="bg-zinc-50 dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800 rounded-lg overflow-hidden">
+            {/* Mock card header */}
+            <div className="px-5 pt-4 pb-3 border-b border-zinc-200 dark:border-zinc-800 flex items-baseline justify-between">
+              <div className="flex items-baseline gap-3">
+                <span className="text-sm font-semibold">Bret Boatwright</span>
+                <span className="text-[10px] font-mono bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded px-1.5 py-0.5 text-zinc-500">
+                  80% of billing
+                </span>
+              </div>
+              <span className="text-sm font-mono font-semibold text-sky-600 dark:text-sky-400">$4,200.00</span>
+            </div>
+
+            {/* Insurance list */}
+            <div className="px-5 py-4">
+              <p className="text-[9px] font-mono uppercase tracking-[0.15em] text-zinc-400 dark:text-zinc-500 mb-3">
+                Insurance per client
+              </p>
+              <div className="space-y-2">
+                {insuranceMock.map((row) => (
+                  <div key={row.client} className="flex items-center gap-3">
+                    <span className="flex-1 text-[13px] text-zinc-700 dark:text-zinc-300 truncate">
+                      {row.client}
+                    </span>
+                    <span className="inline-flex gap-0.5">
+                      <span className={`
+                        inline-block text-[10.5px] px-2.5 py-0.5 rounded-l border font-medium
+                        ${row.ins === 'united'
+                          ? 'bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 border-zinc-900 dark:border-zinc-100'
+                          : 'bg-white dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400 border-zinc-200 dark:border-zinc-700'
+                        }
+                      `}>
+                        United
+                      </span>
+                      <span className={`
+                        inline-block text-[10.5px] px-2.5 py-0.5 rounded-r border font-medium
+                        ${row.ins === 'aetna'
+                          ? 'bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 border-zinc-900 dark:border-zinc-100'
+                          : 'bg-white dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400 border-zinc-200 dark:border-zinc-700'
+                        }
+                      `}>
+                        Aetna
+                      </span>
+                    </span>
+                    {!row.ins && (
+                      <span className="text-[9.5px] font-mono bg-amber-50 dark:bg-amber-950/30 text-amber-700 dark:text-amber-400 px-1.5 py-0.5 rounded">
+                        pick insurance
+                      </span>
+                    )}
+                  </div>
+                ))}
+              </div>
+              <p className="text-[10px] text-zinc-400 dark:text-zinc-500 italic mt-3">
+                Selections persist across payroll runs. New patients show up untagged.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Pending Friday sessions — Emily */}
+        <section className="mb-16">
+          <h2 className="text-xs font-mono uppercase tracking-[0.2em] text-zinc-400 dark:text-zinc-500 mb-4">
+            Pending Sessions
+          </h2>
+          <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed mb-2">
+            Payroll runs Friday morning. Some clinicians still have sessions that afternoon.
+          </p>
+          <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed mb-6">
+            Pre-fill expected sessions as placeholders. At end of day, confirm each one or mark it no-show.
+            Pay adjusts automatically.
+          </p>
+
+          <div className="bg-zinc-50 dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800 rounded-lg overflow-hidden">
+            {/* Mock card header */}
+            <div className="px-5 pt-4 pb-3 border-b border-zinc-200 dark:border-zinc-800 flex items-baseline justify-between">
+              <div className="flex items-baseline gap-3">
+                <span className="text-sm font-semibold">Emily Underwood</span>
+                <span className="text-[10px] font-mono bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded px-1.5 py-0.5 text-zinc-500">
+                  CPT-based
+                </span>
+              </div>
+              <span className="text-sm font-mono font-semibold text-sky-600 dark:text-sky-400">$1,080.00</span>
+            </div>
+
+            <div className="px-5 py-4">
+              <div className="flex items-baseline justify-between mb-3">
+                <p className="text-[9px] font-mono uppercase tracking-[0.15em] text-zinc-400 dark:text-zinc-500">
+                  Pending Sessions
+                </p>
+                <span className="text-[11.5px] font-mono font-semibold">$200.00</span>
+              </div>
+
+              <div className="space-y-2">
+                {pendingMock.map((row, i) => {
+                  const sc = statusColors[row.status]
+                  return (
+                    <div key={i} className={`
+                      flex items-center gap-2 rounded border px-3 py-2
+                      ${row.status === 'no-show'
+                        ? `${sc.bg} ${sc.border}`
+                        : 'bg-white dark:bg-zinc-900 border-zinc-200 dark:border-zinc-800'
+                      }
+                    `}>
+                      <span className="text-[10.5px] font-mono text-zinc-400 dark:text-zinc-500 shrink-0 w-16">
+                        {row.date}
+                      </span>
+                      <span className="flex-1 text-[13px] text-zinc-700 dark:text-zinc-300 truncate">
+                        {row.client}
+                      </span>
+                      <span className="text-[10.5px] font-mono text-zinc-500 dark:text-zinc-400 shrink-0">
+                        {row.code}
+                      </span>
+                      <span className="inline-flex gap-0.5 shrink-0">
+                        <StatusPill status="pending" label="P" active={row.status === 'pending'} />
+                        <StatusPill status="completed" label="C" active={row.status === 'completed'} />
+                        <StatusPill status="no-show" label="N" active={row.status === 'no-show'} />
+                      </span>
+                    </div>
+                  )
+                })}
+              </div>
+
+              {/* Add button mock */}
+              <div className="mt-3 border border-dashed border-zinc-300 dark:border-zinc-700 rounded px-3 py-2 text-center">
+                <span className="text-[10.5px] text-zinc-400 dark:text-zinc-500">+ add pending session</span>
+              </div>
+
+              {/* Legend */}
+              <div className="mt-4 flex gap-4 text-[10px] text-zinc-400 dark:text-zinc-500">
+                <span className="flex items-center gap-1.5">
+                  <StatusPill status="pending" label="P" active={true} />
+                  Counts at full rate
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <StatusPill status="completed" label="C" active={true} />
+                  Confirmed
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <StatusPill status="no-show" label="N" active={true} />
+                  No-show rate ($40)
+                </span>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -200,8 +389,8 @@ export default function PayrollPage() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-zinc-200 dark:divide-zinc-800">
-                {clinicians.map((c) => (
-                  <tr key={c.name}>
+                {clinicians.map((c, i) => (
+                  <tr key={i}>
                     <td className="px-4 py-3 font-medium">{c.name}</td>
                     <td className="px-4 py-3 text-zinc-500 dark:text-zinc-400">{c.type}</td>
                     <td className="px-4 py-3 text-right text-sky-600 dark:text-sky-400 font-medium">
@@ -237,13 +426,13 @@ export default function PayrollPage() {
         {/* Status */}
         <div className="border-t border-zinc-200 dark:border-zinc-800 pt-6">
           <div className="flex items-center gap-2">
-            <span className="inline-block h-2 w-2 rounded-full bg-zinc-400 dark:bg-zinc-600" />
+            <span className="inline-block h-2 w-2 rounded-full bg-amber-400 dark:bg-amber-500" />
             <span className="text-[10px] font-mono uppercase tracking-[0.14em] text-zinc-400 dark:text-zinc-500">
-              Building
+              Testing
             </span>
           </div>
           <p className="text-[13px] text-zinc-400 dark:text-zinc-500 mt-2">
-            Testing in parallel with manual payroll for 2-3 cycles. Target: production-ready by July 2026.
+            Running in parallel with manual payroll for 2-3 cycles. Target: production-ready by July 2026.
           </p>
         </div>
       </div>
