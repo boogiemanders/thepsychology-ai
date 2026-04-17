@@ -657,6 +657,11 @@ function ExpandedDetail({
   onContributorsCommit: (contributors: string[]) => void
   allCollaborators: TimelineCollaborator[]
 }) {
+  const projectStartFrac = project.phases.length ? Math.min(...project.phases.map(p => p.start)) : 0
+  const projectEndFrac = project.phases.length ? Math.max(...project.phases.map(p => p.end)) : 1
+  const projectStart = fractionToDate(projectStartFrac)
+  const projectEnd = fractionToDate(projectEndFrac)
+
   return (
     <div className="space-y-4">
       {project.one_liner && (
@@ -700,7 +705,7 @@ function ExpandedDetail({
                       ? ''
                       : 'border-zinc-200 dark:border-zinc-800 text-zinc-400 dark:text-zinc-500 hover:border-zinc-400 dark:hover:border-zinc-600'
                   )}
-                  style={active ? { borderColor: leadCol.solid, color: leadCol.solid, backgroundColor: leadCol.bg } : undefined}
+                  style={active ? { borderColor: leadCol.solid, color: leadCol.text, backgroundColor: leadCol.bg } : undefined}
                 >
                   {c.initials} {c.name}
                 </button>
@@ -721,6 +726,8 @@ function ExpandedDetail({
               collabLookup={collabLookup}
               onToggle={() => onToggleStep(i)}
               onUpdateStep={(patch) => onUpdateStep(i, patch)}
+              defaultStart={projectStart}
+              defaultDue={projectEnd}
             />
           ))}
         </ul>
@@ -754,7 +761,7 @@ function ExpandedDetail({
 // ---------- Step row with checkbox ----------
 
 function StepRow({
-  step, index, canEdit, collabLookup, onToggle, onUpdateStep,
+  step, index, canEdit, collabLookup, onToggle, onUpdateStep, defaultStart, defaultDue,
 }: {
   step: TimelineStep
   index: number
@@ -762,6 +769,8 @@ function StepRow({
   collabLookup: Record<string, TimelineCollaborator>
   onToggle: () => void
   onUpdateStep: (patch: Partial<TimelineStep>) => void
+  defaultStart: { monthNum: number; day: number }
+  defaultDue: { monthNum: number; day: number }
 }) {
   const doneByCollab = step.done_by ? collabLookup[step.done_by] : null
   const dateObj = step.due_at !== undefined ? fractionToDate(step.due_at) : null
@@ -826,9 +835,17 @@ function StepRow({
           <PopoverTrigger asChild>
             <button
               type="button"
-              className="shrink-0 text-[10px] font-mono text-zinc-400 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors cursor-pointer px-2 py-0.5 border border-zinc-200 dark:border-zinc-800 rounded hover:border-zinc-400 dark:hover:border-zinc-600"
+              title={dateObj ? 'Edit date' : 'Inherited from project range — click to set'}
+              className={cn(
+                'shrink-0 text-[10px] font-mono transition-colors cursor-pointer px-2 py-0.5 border rounded',
+                dateObj
+                  ? 'text-zinc-400 dark:text-zinc-500 border-zinc-200 dark:border-zinc-800 hover:text-zinc-900 dark:hover:text-zinc-100 hover:border-zinc-400 dark:hover:border-zinc-600'
+                  : 'text-zinc-300 dark:text-zinc-600 italic border-dashed border-zinc-200/60 dark:border-zinc-800/60 hover:text-zinc-900 dark:hover:text-zinc-100 hover:border-zinc-400 dark:hover:border-zinc-600 hover:not-italic'
+              )}
             >
-              {dateObj ? `${MONTH_META[dateObj.monthNum - 4]?.label ?? ''} ${dateObj.day}` : '+ date'}
+              {dateObj
+                ? `${MONTH_META[dateObj.monthNum - 4]?.label ?? ''} ${dateObj.day}`
+                : `${MONTH_META[defaultDue.monthNum - 4]?.label ?? ''} ${defaultDue.day}`}
             </button>
           </PopoverTrigger>
           <PopoverContent className="w-auto p-3" side="top" align="end">
@@ -836,15 +853,15 @@ function StepRow({
               <DateRow
                 label="Start"
                 edge="start"
-                monthNum={startObj?.monthNum ?? 4}
-                day={startObj?.day ?? 1}
+                monthNum={startObj?.monthNum ?? defaultStart.monthNum}
+                day={startObj?.day ?? defaultStart.day}
                 onChange={(m, d) => onUpdateStep({ start_at: dateToFraction(m, d) })}
               />
               <DateRow
                 label="Due"
                 edge="end"
-                monthNum={dateObj?.monthNum ?? 4}
-                day={dateObj?.day ?? daysInMonth(4)}
+                monthNum={dateObj?.monthNum ?? defaultDue.monthNum}
+                day={dateObj?.day ?? defaultDue.day}
                 onChange={(m, d) => onUpdateStep({ due_at: dateToFraction(m, d) })}
               />
               {(startObj || dateObj) && (
