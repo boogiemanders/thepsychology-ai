@@ -14,6 +14,7 @@ options:
   createIntermediateGroups: true
   groupSortPosition: top
   generateEmptyDirectories: true
+  xcodeVersion: "26.3"
 
 settings:
   base:
@@ -25,6 +26,7 @@ settings:
     CURRENT_PROJECT_VERSION: "1"
     LOCALIZATION_PREFERS_STRING_CATALOGS: YES
     STRING_CATALOG_GENERATE_SYMBOLS: YES
+    ASSETCATALOG_COMPILER_GENERATE_ASSET_SYMBOL_EXTENSIONS: YES
 
 # =============================================================================
 # Targets
