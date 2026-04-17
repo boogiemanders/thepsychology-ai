@@ -798,9 +798,29 @@ function StepRow({
           )}
         </span>
       )}
-      <span className={cn('flex-1 text-[13px]', step.done ? 'line-through text-zinc-400 dark:text-zinc-600' : 'text-zinc-600 dark:text-zinc-300')}>
-        {step.text}
-      </span>
+      {canEdit ? (
+        <input
+          type="text"
+          defaultValue={step.text}
+          onBlur={(e) => {
+            const v = e.target.value.trim()
+            if (v && v !== step.text) onUpdateStep({ text: v })
+          }}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter') (e.target as HTMLInputElement).blur()
+            if (e.key === 'Escape') { (e.target as HTMLInputElement).value = step.text; (e.target as HTMLInputElement).blur() }
+          }}
+          className={cn(
+            'flex-1 text-[13px] bg-transparent border-none outline-none focus:ring-0 px-0 py-0',
+            'hover:bg-zinc-100 dark:hover:bg-zinc-900 focus:bg-zinc-100 dark:focus:bg-zinc-900 rounded-sm transition-colors',
+            step.done ? 'line-through text-zinc-400 dark:text-zinc-600' : 'text-zinc-600 dark:text-zinc-300'
+          )}
+        />
+      ) : (
+        <span className={cn('flex-1 text-[13px]', step.done ? 'line-through text-zinc-400 dark:text-zinc-600' : 'text-zinc-600 dark:text-zinc-300')}>
+          {step.text}
+        </span>
+      )}
       {canEdit ? (
         <Popover>
           <PopoverTrigger asChild>
