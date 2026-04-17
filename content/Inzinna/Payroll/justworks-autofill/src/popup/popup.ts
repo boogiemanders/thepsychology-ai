@@ -14,6 +14,7 @@ const clinicianList = document.getElementById('clinician-list')!
 const bretSection = document.getElementById('bret-section')!
 const bretDetails = document.getElementById('bret-details')!
 const clearBtn = document.getElementById('clear-btn')!
+const wipeAllBtn = document.getElementById('wipe-all-btn')!
 const sendBtn = document.getElementById('send-to-justworks')!
 const copyBtn = document.getElementById('copy-json')!
 const downloadBtn = document.getElementById('download-xlsx')!
@@ -60,8 +61,34 @@ function availableCodesFor(clinicianName: string): string[] {
 let pendingSessions: PendingSession[] = []
 
 // Bret per-client insurance — persists across payroll runs so Carlos only
-// picks once per patient. Keyed by exact client name as it appears in CSV.
+// picks once per patient. Keyed by SHA-256 hash of client name (not raw name)
+// so anyone reading chrome.storage.local sees opaque hex, not patient names.
 let bretInsuranceMap: Record<string, BretInsurance> = {}
+
+// Memo: raw client name -> 16-char hex hash. Lets render path stay sync after
+// an async warmup pass. Cleared on "Clear saved data".
+const hashMemo = new Map<string, string>()
+
+async function hashClient(name: string): Promise<string> {
+  if (hashMemo.has(name)) return hashMemo.get(name)!
+  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(name))
+  const hex = Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('').slice(0, 16)
+  hashMemo.set(name, hex)
+  return hex
+}
+
+// Sync memo read — only call after warmBretHashes has awaited all clients.
+function hashClientSync(name: string): string {
+  const h = hashMemo.get(name)
+  if (!h) throw new Error(`hashClientSync called for un-warmed client: ${name}`)
+  return h
+}
+
+async function warmBretHashes(result: PayrollResultWithHours) {
+  const bret = result.clinicians.find(c => c.name === 'Bret Boatwright')
+  if (!bret) return
+  await Promise.all(uniqueBretClients(bret).map(c => hashClient(c)))
+}
 
 function newPendingId(): string {
   return `p${Date.now()}-${Math.floor(Math.random() * 10000)}`
@@ -72,7 +99,7 @@ function isValidPendingStatus(s: unknown): s is PendingSessionStatus {
 }
 
 function saveBretInsuranceMap() {
-  chrome.storage.local.set({ bretInsuranceMap })
+  chrome.storage.local.set({ bretInsuranceMapV2: bretInsuranceMap })
 }
 
 // HTML date input gives YYYY-MM-DD; the engine uses MM/DD/YYYY
@@ -260,7 +287,8 @@ function buildBretInsuranceHtml(summary: ClinicianSummary): string {
   if (clients.length === 0) return ''
 
   const rowsHtml = clients.map(c => {
-    const current = bretInsuranceMap[c]
+    // data-client stays the raw display name; we hash before using as map key
+    const current = bretInsuranceMap[hashClientSync(c)]
     const mkBtn = (value: BretInsurance, label: string) =>
       `<button class="ins-btn${current === value ? ' active' : ''}" data-client="${esc(c)}" data-value="${value}">${label}</button>`
     const unsetMark = !current ? '<span class="ins-unset">pick insurance</span>' : ''
@@ -381,7 +409,7 @@ function renderManualSection() {
 }
 
 // Delegated event handlers on the clinician list (manual groups now live inside cards)
-clinicianList.addEventListener('click', (e) => {
+clinicianList.addEventListener('click', async (e) => {
   const target = e.target as HTMLElement
 
   if (target.classList.contains('manual-add-day')) {
@@ -435,11 +463,12 @@ clinicianList.addEventListener('click', (e) => {
     const client = target.dataset.client
     const value = target.dataset.value as BretInsurance | undefined
     if (!client || !value) return
+    const key = await hashClient(client)
     // Toggle off if clicking the active one
-    if (bretInsuranceMap[client] === value) {
-      delete bretInsuranceMap[client]
+    if (bretInsuranceMap[key] === value) {
+      delete bretInsuranceMap[key]
     } else {
-      bretInsuranceMap[client] = value
+      bretInsuranceMap[key] = value
     }
     saveBretInsuranceMap()
     if (currentResult) renderResults(currentResult)
@@ -571,7 +600,7 @@ function updateManualSubtotals() {
   }
 }
 
-function recomputeFromBase() {
+async function recomputeFromBase() {
   if (!baseResult) return
   let result = baseResult
 
@@ -594,6 +623,9 @@ function recomputeFromBase() {
   }
 
   currentResult = result
+  // Warm the hash memo for any Bret clients BEFORE render so the sync
+  // buildBretInsuranceHtml lookup works.
+  await warmBretHashes(currentResult)
   renderResults(currentResult)
   updateManualSubtotals()
 
@@ -669,6 +701,25 @@ clearBtn.addEventListener('click', () => {
   statusEl.classList.add('hidden')
   // NOTE: bretInsuranceMap intentionally persists — it's long-lived user prefs
   chrome.storage.local.remove('payrollData')
+})
+
+// Wipe all button — nukes everything in chrome.storage.local (payroll + insurance).
+// For end-of-session PHI hygiene.
+wipeAllBtn.addEventListener('click', () => {
+  if (!confirm('Wipe all payroll + insurance data from this browser?')) return
+  chrome.storage.local.clear(() => {
+    baseResult = null
+    currentResult = null
+    manualEntries = []
+    pendingSessions = []
+    bretInsuranceMap = {}
+    hashMemo.clear()
+    csvInput.value = ''
+    resultsSection.classList.add('hidden')
+    uploadSection.classList.remove('hidden')
+    clinicianList.innerHTML = ''
+    showStatus('Saved data cleared.', 'success')
+  })
 })
 
 sendBtn.addEventListener('click', async () => {
@@ -907,13 +958,27 @@ function showStatus(msg: string, type: 'success' | 'error' | 'info') {
   statusEl.className = type
 }
 
-chrome.storage.local.get(['payrollData', 'bretInsuranceMap'], (data) => {
-  // Long-lived Bret insurance map — load first so renders see it
-  if (data.bretInsuranceMap && typeof data.bretInsuranceMap === 'object') {
+chrome.storage.local.get(['payrollData', 'bretInsuranceMap', 'bretInsuranceMapV2'], async (data) => {
+  // Long-lived Bret insurance map — load V2 (hashed keys) first.
+  if (data.bretInsuranceMapV2 && typeof data.bretInsuranceMapV2 === 'object') {
     bretInsuranceMap = {}
-    for (const [k, v] of Object.entries(data.bretInsuranceMap)) {
+    for (const [k, v] of Object.entries(data.bretInsuranceMapV2)) {
       if (v === 'united' || v === 'aetna') bretInsuranceMap[k] = v
     }
+  } else if (data.bretInsuranceMap && typeof data.bretInsuranceMap === 'object') {
+    // One-time migration: old map was keyed by raw client name. Hash each key,
+    // save under V2, then drop the old key.
+    bretInsuranceMap = {}
+    for (const [rawName, v] of Object.entries(data.bretInsuranceMap)) {
+      if (v === 'united' || v === 'aetna') {
+        const key = await hashClient(rawName)
+        bretInsuranceMap[key] = v
+      }
+    }
+    if (Object.keys(bretInsuranceMap).length > 0) {
+      saveBretInsuranceMap()
+    }
+    chrome.storage.local.remove('bretInsuranceMap')
   }
 
   if (data.payrollData?.result) {

@@ -909,6 +909,24 @@ h1 {
   border-color: var(--border-strong);
 }
 
+.header-actions {
+  display: inline-flex;
+  gap: 4px;
+  align-items: center;
+}
+
+/* "Clear saved data" nukes everything — slightly quieter than Clear by default,
+   hovers to red since it's destructive. */
+#wipe-all-btn {
+  color: var(--text-faint);
+}
+
+#wipe-all-btn:hover {
+  background: var(--pale-red-bg);
+  color: var(--pale-red-ink);
+  border-color: var(--pale-red-bg);
+}
+
 /* ---------- Status ---------- */
 #status {
   margin-top: 12px;
