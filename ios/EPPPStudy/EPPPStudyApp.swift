@@ -11,12 +11,13 @@ struct EPPPStudyApp: App {
     @State private var contentManager: ContentManager?
     @State private var syncEngine: SyncEngine?
     @State private var quizProgressService: QuizProgressService?
+    @State private var subscriptionService: SubscriptionService?
 
     var body: some Scene {
         WindowGroup {
             Group {
                 if authService.isAuthenticated {
-                    if let contentManager, let syncEngine, let apiClient, let quizProgressService {
+                    if let contentManager, let syncEngine, let apiClient, let quizProgressService, let subscriptionService {
                         // Hybrid: native tab bar + native content + WKWebView only
                         // for rich flows (Recover chat). Web design tokens ported
                         // into Theme.swift so native matches the web aesthetic.
@@ -29,6 +30,7 @@ struct EPPPStudyApp: App {
                             .environment(contentManager)
                             .environment(syncEngine)
                             .environment(quizProgressService)
+                            .environment(subscriptionService)
                     } else {
                         ProgressView("Loading...")
                             .task { initializeServices() }
@@ -56,13 +58,16 @@ struct EPPPStudyApp: App {
         let content = ContentManager(apiClient: client, localStore: localStore)
         let sync = SyncEngine(apiClient: client, localStore: localStore, networkMonitor: networkMonitor)
         let quizProgress = QuizProgressService(authService: authService)
+        let subscription = SubscriptionService(authService: authService)
 
         self.apiClient = client
         self.contentManager = content
         self.syncEngine = sync
         self.quizProgressService = quizProgress
+        self.subscriptionService = subscription
 
         sync.startPeriodicSync()
+        Task { await subscription.refresh() }
     }
 
     private func teardownServices() {
@@ -71,6 +76,7 @@ struct EPPPStudyApp: App {
         contentManager = nil
         syncEngine = nil
         quizProgressService = nil
+        subscriptionService = nil
     }
 
     private func performInitialSync() async {

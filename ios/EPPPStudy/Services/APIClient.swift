@@ -1,6 +1,8 @@
 import Foundation
+import Observation
 
-actor APIClient {
+@Observable
+final class APIClient: @unchecked Sendable {
     private let baseURL: String
     private let authService: AuthService
     private let decoder: JSONDecoder
@@ -72,6 +74,18 @@ actor APIClient {
         var path = "/questions/quick?count=\(count)"
         if let domain { path += "&domain=\(domain)" }
         return try await request(.get, path: path)
+    }
+
+    // MARK: - Exam Generator
+
+    struct GenerateExamRequest: Encodable {
+        let examType: String
+    }
+
+    /// Hits `/api/mobile/generate-exam` (POST) which loads pre-made exam JSON
+    /// from disk and returns it in iOS `Exam` shape.
+    func generateExam(examType: String) async throws -> Exam {
+        try await request(.post, path: "/generate-exam", body: GenerateExamRequest(examType: examType))
     }
 
     // MARK: - HTTP

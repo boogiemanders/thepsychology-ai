@@ -2,6 +2,13 @@ import SwiftUI
 
 struct ExamSessionView: View {
     let exam: Exam
+    let preselectedMode: ExamSession.ExamMode?
+
+    init(exam: Exam, preselectedMode: ExamSession.ExamMode? = nil) {
+        self.exam = exam
+        self.preselectedMode = preselectedMode
+        _showModeSelection = State(initialValue: preselectedMode == nil)
+    }
 
     @Environment(LocalStore.self) private var localStore
     @Environment(SyncEngine.self) private var syncEngine
@@ -9,7 +16,7 @@ struct ExamSessionView: View {
     @Environment(\.dismiss) private var dismiss
 
     @State private var session: ExamSession?
-    @State private var showModeSelection = true
+    @State private var showModeSelection: Bool
     @State private var questionStartTime = Date()
     @State private var timerSeconds = 0
     @State private var timer: Timer?
@@ -55,6 +62,11 @@ struct ExamSessionView: View {
         }
         .navigationTitle(exam.title)
         .navigationBarTitleDisplayMode(.inline)
+        .onAppear {
+            if let mode = preselectedMode, session == nil {
+                startExam(mode: mode)
+            }
+        }
     }
 
     // MARK: - Mode Selection
