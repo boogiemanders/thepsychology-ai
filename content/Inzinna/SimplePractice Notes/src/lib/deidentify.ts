@@ -19,6 +19,7 @@
  */
 
 import { IntakeData } from './types'
+import { FIRST_NAMES, AMBIGUOUS_NAMES } from './first-names'
 
 export interface DeidentifyMapping {
   [token: string]: string
@@ -171,6 +172,23 @@ export function deidentify(text: string, intake: IntakeData | null): DeidentifyR
 
   // SSNs
   sanitized = sanitized.replace(SSN_PATTERN, '[SSN_STRIPPED]')
+
+  // Step 3: Scrub unknown first names mentioned in the text (partners, kids,
+  // co-workers, etc. that aren't in intake). Only matches capitalized tokens
+  // against a curated dictionary to avoid false positives on lowercase words.
+  let personCounter = 0
+  const personTokenByName: Record<string, string> = {}
+  sanitized = sanitized.replace(/\b[A-Z][a-z]{1,19}\b/g, (match) => {
+    const lower = match.toLowerCase()
+    if (AMBIGUOUS_NAMES.has(lower)) return match
+    if (!FIRST_NAMES.has(lower)) return match
+    if (personTokenByName[lower]) return personTokenByName[lower]
+    personCounter++
+    const token = `[PERSON_${personCounter}]`
+    personTokenByName[lower] = token
+    mapping[token] = match
+    return token
+  })
 
   // Clean up: remove stripped tokens (they leave no trace)
   sanitized = sanitized
