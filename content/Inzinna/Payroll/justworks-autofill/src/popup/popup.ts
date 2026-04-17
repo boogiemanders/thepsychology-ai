@@ -115,6 +115,104 @@ function defaultDateForNewEntry(): string {
   return latest
 }
 
+// Every Tuesday (HTML dates YYYY-MM-DD) within the current pay period.
+// Period = min..max date across ALL session rows (not just fillData, which can be
+// empty for clinicians whose work isn't in the SimplePractice CSV — e.g. Anders
+// didactic). We look at clinicians[].rows first, then fall back to fillData.
+let didacticDebugLogged = false
+
+function tuesdaysInPeriod(): string[] {
+  const result = baseResult || currentResult
+
+  let minT = Infinity, maxT = -Infinity
+  const consider = (csvDate: string) => {
+    if (!csvDate) return
+    // SimplePractice exports "MM/DD/YYYY HH:MM" — strip the time suffix
+    const datePart = csvDate.split(' ')[0]
+    const parts = datePart.split('/').map(Number)
+    if (parts.length !== 3 || parts.some(isNaN)) return
+    const [m, dd, y] = parts
+    const t = new Date(y, m - 1, dd).getTime()
+    if (!isFinite(t)) return
+    if (t < minT) minT = t
+    if (t > maxT) maxT = t
+  }
+
+  let cliniciansWithRows = 0
+  let sampleRowDate = ''
+  let fillWithDays = 0
+  let sampleFillDate = ''
+
+  if (result) {
+    for (const c of result.clinicians) {
+      if (c.rows.length > 0) {
+        cliniciansWithRows++
+        if (!sampleRowDate) sampleRowDate = c.rows[0].date
+      }
+      for (const r of c.rows) consider(r.date)
+    }
+    if (!isFinite(minT)) {
+      for (const f of result.fillData) {
+        if (f.dailyBreakdown.length > 0) {
+          fillWithDays++
+          if (!sampleFillDate) sampleFillDate = f.dailyBreakdown[0].date
+        }
+        for (const d of f.dailyBreakdown) consider(d.date)
+      }
+    }
+  }
+
+  // Fallback: no parseable dates found -> use last 14 days ending today.
+  // Keeps the Didactic checklist usable even when data structure is unexpected.
+  let usedFallback = false
+  if (!isFinite(minT)) {
+    usedFallback = true
+    const today = new Date()
+    today.setHours(0, 0, 0, 0)
+    maxT = today.getTime()
+    const start = new Date(today)
+    start.setDate(start.getDate() - 13)
+    minT = start.getTime()
+  }
+
+  const out: string[] = []
+  const cursor = new Date(minT)
+  while (cursor.getDay() !== 2 && cursor.getTime() <= maxT) {
+    cursor.setDate(cursor.getDate() + 1)
+  }
+  while (cursor.getTime() <= maxT) {
+    const y = cursor.getFullYear()
+    const m = String(cursor.getMonth() + 1).padStart(2, '0')
+    const dd = String(cursor.getDate()).padStart(2, '0')
+    out.push(`${y}-${m}-${dd}`)
+    cursor.setDate(cursor.getDate() + 7)
+  }
+
+  if (!didacticDebugLogged) {
+    didacticDebugLogged = true
+    console.log('[didactic-tuesdays]', {
+      hasBaseResult: !!baseResult,
+      hasCurrentResult: !!currentResult,
+      cliniciansWithRows,
+      sampleRowDate,
+      fillWithDays,
+      sampleFillDate,
+      minISO: isFinite(minT) ? new Date(minT).toISOString().slice(0, 10) : null,
+      maxISO: isFinite(maxT) ? new Date(maxT).toISOString().slice(0, 10) : null,
+      usedFallback,
+      tuesdays: out,
+    })
+  }
+
+  return out
+}
+
+function formatShortFromHtml(html: string): string {
+  if (!isValidHtmlDate(html)) return ''
+  const [, m, d] = html.split('-')
+  return `${parseInt(m)}/${parseInt(d)}`
+}
+
 function newEntryId(): string {
   return `e${Date.now()}-${Math.floor(Math.random() * 10000)}`
 }
@@ -233,13 +331,11 @@ function buildManualGroupHtml(g: ManualGroup): string {
   const entries = manualEntries.filter(e => e.groupId === g.id)
   const subtotal = entries.reduce((s, e) => s + (e.hours > 0 && e.date ? e.hours * (rate ?? 0) : 0), 0)
 
-  const rowsHtml = entries.map(e => `
-    <div class="manual-entry" data-entry-id="${e.id}">
-      <input type="date" class="manual-date" value="${sanitizeHtmlDate(e.date)}" />
-      <input type="number" class="manual-input" step="0.25" min="0" placeholder="hrs" value="${e.hours > 0 ? e.hours : ''}" />
-      <button class="manual-delete" title="Remove">×</button>
-    </div>
-  `).join('')
+  // Didactic (Anders) is always 1h per Tuesday. Render as checkbox list instead of
+  // free-form date+hours rows to make it click-once.
+  const bodyHtml = g.kind === 'didactic'
+    ? buildDidacticTuesdaysHtml(g, entries)
+    : buildManualFreeformRowsHtml(g, entries)
 
   return `
     <div class="manual-group" data-group-id="${g.id}">
@@ -247,10 +343,35 @@ function buildManualGroupHtml(g: ManualGroup): string {
         <span class="manual-group-label">${g.label.split(' ')[0]} <em>${rate !== null ? `$${rate}/hr` : 'no rate'}</em></span>
         <span class="manual-group-subtotal">$${subtotal.toFixed(2)}</span>
       </div>
-      <div class="manual-group-rows">${rowsHtml}</div>
-      <button class="manual-add-day" data-group-id="${g.id}">+ add day</button>
+      ${bodyHtml}
     </div>
   `
+}
+
+function buildManualFreeformRowsHtml(g: ManualGroup, entries: ManualEntry[]): string {
+  const rowsHtml = entries.map(e => `
+    <div class="manual-entry" data-entry-id="${e.id}">
+      <input type="date" class="manual-date" value="${sanitizeHtmlDate(e.date)}" />
+      <input type="number" class="manual-input" step="0.25" min="0" placeholder="hrs" value="${e.hours > 0 ? e.hours : ''}" />
+      <button class="manual-delete" title="Remove">×</button>
+    </div>
+  `).join('')
+  return `
+    <div class="manual-group-rows">${rowsHtml}</div>
+    <button class="manual-add-day" data-group-id="${g.id}">+ add day</button>
+  `
+}
+
+function buildDidacticTuesdaysHtml(g: ManualGroup, entries: ManualEntry[]): string {
+  const tuesdays = tuesdaysInPeriod()
+  const checkedDates = new Set(entries.filter(e => e.hours > 0 && e.date).map(e => e.date))
+  const itemsHtml = tuesdays.map(t => `
+    <label class="didactic-tue${checkedDates.has(t) ? ' checked' : ''}">
+      <input type="checkbox" class="didactic-check" data-group-id="${g.id}" data-date="${t}" ${checkedDates.has(t) ? 'checked' : ''} />
+      <span>Tue ${formatShortFromHtml(t)}</span>
+    </label>
+  `).join('')
+  return `<div class="didactic-tuesdays">${itemsHtml}</div>`
 }
 
 function renderManualSection() {
@@ -271,6 +392,29 @@ clinicianList.addEventListener('click', (e) => {
       date: defaultDateForNewEntry(),
       hours: 0,
     })
+    recomputeFromBase()
+    return
+  }
+
+  // Didactic Tuesday checkbox — always 1h per checked Tuesday
+  if (target.classList.contains('didactic-check')) {
+    const input = target as HTMLInputElement
+    const groupId = input.dataset.groupId!
+    const date = input.dataset.date!
+    if (!groupId || !date) return
+    if (input.checked) {
+      const exists = manualEntries.some(e => e.groupId === groupId && e.date === date && e.hours > 0)
+      if (!exists) {
+        manualEntries.push({
+          id: newEntryId(),
+          groupId,
+          date,
+          hours: 1,
+        })
+      }
+    } else {
+      manualEntries = manualEntries.filter(e => !(e.groupId === groupId && e.date === date))
+    }
     recomputeFromBase()
     return
   }
@@ -479,6 +623,7 @@ async function processCsvFile(file: File) {
 
   baseResult = calculatePayrollWithHours(rows)
   manualEntries = []
+  didacticDebugLogged = false
   renderManualSection()
   recomputeFromBase()
 }
@@ -561,7 +706,7 @@ copyBtn.addEventListener('click', () => {
 
   const lines: string[] = []
   for (const f of currentResult.fillData) {
-    const hours = (f.totalMinutes / 60).toFixed(1)
+    const hours = (f.totalMinutes / 60).toFixed(2)
     const nudge = f.minuteAdjustment ? ` (${f.minuteAdjustment > 0 ? '+' : ''}${f.minuteAdjustment}m)` : ''
     lines.push(`${f.clinicianName}: $${f.totalPay.toFixed(2)} | $${f.adjustedHourlyRate.toFixed(2)}/hr x ${hours}h${nudge}`)
   }
@@ -626,7 +771,7 @@ function renderResults(result: PayrollResultWithHours) {
 
     let fillHtml = ''
     if (fill && fill.totalMinutes > 0) {
-      const hours = (fill.totalMinutes / 60).toFixed(1)
+      const hours = (fill.totalMinutes / 60).toFixed(2)
       const nudge = fill.minuteAdjustment
         ? ` <span class="nudge">${fill.minuteAdjustment > 0 ? '+' : ''}${fill.minuteAdjustment}m adj</span>`
         : ''

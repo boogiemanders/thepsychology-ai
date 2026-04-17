@@ -522,6 +522,50 @@ h1 {
   color: var(--ink);
 }
 
+/* ---------- Didactic Tuesday checklist ---------- */
+.didactic-tuesdays {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.didactic-tue {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 9px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 11px;
+  cursor: pointer;
+  user-select: none;
+  background: var(--surface);
+  transition: background 0.12s ease, border-color 0.12s ease, color 0.12s ease;
+}
+
+.didactic-tue:hover {
+  border-color: var(--ink);
+}
+
+.didactic-tue.checked {
+  background: var(--pale-green-bg, #e7f7ee);
+  border-color: var(--pale-green-border, #6aaf87);
+  color: var(--pale-green-ink, #1a5a34);
+}
+
+.didactic-tue input[type="checkbox"] {
+  margin: 0;
+  cursor: pointer;
+}
+
+.didactic-empty {
+  font-size: 10.5px;
+  color: var(--text-muted);
+  font-style: italic;
+  padding: 6px 0;
+}
+
 /* ---------- Bret insurance picker ---------- */
 .ins-block {
   margin-top: 10px;

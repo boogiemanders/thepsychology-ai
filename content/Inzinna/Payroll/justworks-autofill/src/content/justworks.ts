@@ -116,18 +116,38 @@ async function fillTimeCard(fillData: JustWorksFillData) {
   // Map inputs to days: try to find day labels near each input
   const dayInputPairs = mapInputsToDays(hoursInputs, minutesInputs)
 
+  console.log('[jw-autofill] inputs found:', { hours: hoursInputs.length, minutes: minutesInputs.length })
+  console.log('[jw-autofill] day pairs (label -> input):', dayInputPairs.map(p => p.dayLabel))
+  console.log('[jw-autofill] dailyBreakdown:', fillData.dailyBreakdown.map(d => ({
+    date: d.date,
+    dayOfWeek: d.dayOfWeek,
+    shortDate: formatShortDate(d.date),
+    minutes: d.totalMinutes,
+  })))
+
   let filledDays = 0
+  const unmatched: string[] = []
   for (const day of fillData.dailyBreakdown) {
     if (day.totalMinutes === 0) continue
 
     const hours = Math.floor(day.totalMinutes / 60)
     const mins = day.totalMinutes % 60
+    const shortDate = formatShortDate(day.date)
+    const dowPrefix = day.dayOfWeek.substring(0, 3).toUpperCase()
 
-    // Try to find matching day input pair
-    const pair = dayInputPairs.find(p =>
-      p.dayLabel.includes(day.dayOfWeek.substring(0, 3))
-      || p.dayLabel.includes(formatShortDate(day.date))
-    )
+    // Match by date first (unique), fall back to day-of-week only if no date collision
+    // Case-insensitive: JustWorks headers are "SUN 4/5" all-caps
+    let pair = dayInputPairs.find(p => {
+      const label = p.dayLabel.toUpperCase()
+      return shortDate && label.includes(shortDate)
+    })
+    if (!pair) {
+      // No date match — try day-of-week, but only if it's unambiguous (1 match)
+      const dowMatches = dayInputPairs.filter(p =>
+        p.dayLabel.toUpperCase().includes(dowPrefix)
+      )
+      if (dowMatches.length === 1) pair = dowMatches[0]
+    }
 
     if (pair) {
       if (pair.hoursInput) {
@@ -139,19 +159,15 @@ async function fillTimeCard(fillData: JustWorksFillData) {
         flashElement(pair.minutesInput, '#059669')
       }
       filledDays++
-    } else if (filledDays < minutesInputs.length) {
-      // Fallback: fill inputs in order
-      const idx = filledDays
-      if (hoursInputs[idx]) {
-        setInputValue(hoursInputs[idx], String(hours))
-        flashElement(hoursInputs[idx], '#059669')
-      }
-      if (minutesInputs[idx]) {
-        setInputValue(minutesInputs[idx], String(mins).padStart(2, '0'))
-        flashElement(minutesInputs[idx], '#059669')
-      }
-      filledDays++
+      console.log(`[jw-autofill] MATCH ${day.date} (${day.dayOfWeek}) ${hours}h ${mins}m -> "${pair.dayLabel}"`)
+    } else {
+      unmatched.push(`${day.date} (${day.dayOfWeek}) ${hours}h${mins}m`)
+      console.warn(`[jw-autofill] NO MATCH for ${day.date} (${day.dayOfWeek}) ${hours}h${mins}m -- skipping (was previously filled in DOM order)`)
     }
+  }
+
+  if (unmatched.length) {
+    showToast(`Skipped ${unmatched.length} days -- open devtools console for details`)
   }
 
   // Step 3: Verify total
@@ -185,34 +201,44 @@ function mapInputsToDays(
   const pairs: DayInputPair[] = []
   const allInputs = minutesInputs.length > 0 ? minutesInputs : hoursInputs
 
+  // Regex for M/D or MM/DD date format
+  const DATE_RE = /\b\d{1,2}\/\d{1,2}\b/
+
   allInputs.forEach((input, idx) => {
-    // Walk up to find a day label: column header, parent text, aria-label
     let dayLabel = ''
 
-    // Check column header (table layout)
-    const cell = input.closest('td, [role="cell"]')
-    if (cell) {
-      const colIdx = Array.from(cell.parentElement?.children || []).indexOf(cell)
-      const table = cell.closest('table, [role="grid"]')
-      const headerRow = table?.querySelector('thead tr, [role="row"]:first-child')
-      if (headerRow && colIdx >= 0) {
-        const headerCell = headerRow.children[colIdx]
-        if (headerCell) dayLabel = headerCell.textContent?.trim() || ''
+    // Strategy 1: walk up ancestors, at each level scan preceding siblings (and their
+    // text) for a "M/D" date or a weekday token. JustWorks renders day headers above
+    // the input cell in a separate row, so this usually finds them.
+    let node: Element | null = input
+    for (let depth = 0; depth < 6 && node && !dayLabel; depth++) {
+      // Check self's text first (e.g., aria-label, wrapper label text)
+      const selfText = node.textContent?.trim() || ''
+      if (DATE_RE.test(selfText) && selfText.length < 40) {
+        const m = selfText.match(DATE_RE)
+        if (m) { dayLabel = selfText; break }
       }
+      // Check preceding siblings at this level
+      let sib: Element | null = node.previousElementSibling
+      let scanned = 0
+      while (sib && scanned < 8) {
+        const txt = (sib.textContent || '').trim()
+        if (DATE_RE.test(txt) || /\b(SUN|MON|TUE|WED|THU|FRI|SAT)\b/i.test(txt)) {
+          // Extract compact label
+          const dateMatch = txt.match(DATE_RE)
+          const dowMatch = txt.match(/\b(SUN|MON|TUE|WED|THU|FRI|SAT)\b/i)
+          const parts = [dowMatch?.[0], dateMatch?.[0]].filter(Boolean)
+          if (parts.length) { dayLabel = parts.join(' '); break }
+        }
+        sib = sib.previousElementSibling
+        scanned++
+      }
+      node = node.parentElement
     }
 
-    // Check parent/sibling for day text
+    // Strategy 2: aria-label or title on the input itself
     if (!dayLabel) {
-      const parent = input.closest('[class*="day"], [class*="column"], [class*="col"]')
-      if (parent) {
-        const label = parent.querySelector('label, .label, [class*="header"], [class*="day-name"]')
-        if (label) dayLabel = label.textContent?.trim() || ''
-      }
-    }
-
-    // Check aria-label on input or wrapper
-    if (!dayLabel) {
-      dayLabel = input.getAttribute('aria-label') || ''
+      dayLabel = input.getAttribute('aria-label') || input.getAttribute('title') || ''
     }
 
     pairs.push({
@@ -280,7 +306,7 @@ function buildPanelHTML(result: PayrollResultWithHours): string {
   const rows = result.fillData.map((f) => {
     const isBret = f.clinicianName === 'Bret Boatwright'
     const estLabel = isBret ? ' <span class="jw-est">EST</span>' : ''
-    const totalHours = (f.totalMinutes / 60).toFixed(1)
+    const totalHours = (f.totalMinutes / 60).toFixed(2)
     const nudgeNote = f.minuteAdjustment !== 0
       ? `<span class="jw-nudge">${f.minuteAdjustment > 0 ? '+' : ''}${f.minuteAdjustment}m</span>`
       : ''
