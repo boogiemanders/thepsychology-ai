@@ -15,17 +15,24 @@ struct SignInView: View {
                 Spacer()
 
                 // Logo and title
-                VStack(spacing: 16) {
-                    Image(systemName: "brain.head.profile")
-                        .font(.system(size: 56))
+                VStack(spacing: 12) {
+                    if let logo = UIImage(named: "BunnyLogo") {
+                        Image(uiImage: logo)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 120, height: 120)
+                    } else {
+                        Image(systemName: "pawprint.fill")
+                            .font(.system(size: 56))
+                            .foregroundStyle(.white)
+                    }
+
+                    Text("thePsychology.ai")
+                        .font(.custom("HelveticaNeue-Bold", size: 28))
                         .foregroundStyle(.white)
 
-                    Text("EPPP Study")
-                        .font(.system(size: 32, weight: .bold, design: .default))
-                        .foregroundStyle(.white)
-
-                    Text("Prepare with confidence")
-                        .font(.subheadline)
+                    Text("EPPP Prep")
+                        .font(.custom("HelveticaNeue", size: 14))
                         .foregroundStyle(.secondary)
                 }
                 .padding(.bottom, 48)
