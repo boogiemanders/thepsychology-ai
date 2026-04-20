@@ -2,8 +2,8 @@
 /**
  * NYSED License Verification
  *
- * Queries the NY State Education Department license verification site
- * via Playwright browser automation.
+ * Queries the NY State Education Department ROSA API directly via HTTP/1.1.
+ * (NYSED's WAF blocks HTTP/2 from headless browsers and curl by default.)
  *
  * Usage:
  *   node scripts/check-nysed-license.mjs "Anders Chan"
@@ -11,7 +11,6 @@
  *   node scripts/check-nysed-license.mjs "Anders Chan" --notify   # sends email if full license found
  */
 
-import { chromium } from "playwright-core";
 import { config } from "dotenv";
 import { resolve, dirname } from "path";
 import { fileURLToPath } from "url";
@@ -73,205 +72,89 @@ async function sendEmail(subject, text) {
   }
 }
 
+const ROSA_BASE = "https://api.nysed.gov/rosa/";
+const ROSA_KEY = "BRJF4D6U646A5PNMIB77AAW9544QFQKAYAEWI9EPU0TNP72CEEO3L4KGVN5K3R44";
+const ROSA_HEADERS = {
+  "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+  "Referer": "https://eservices.nysed.gov/professions/verification-search",
+  "Origin": "https://eservices.nysed.gov",
+  "Accept": "application/json, text/plain, */*",
+  "x-oapi-key": ROSA_KEY,
+};
+
+// NYSED's WAF blocks HTTP/2 (used by headless Chromium and node fetch by default).
+// HTTP/1.1 via curl works. We shell out to curl as the reliable path, with Playwright as fallback.
+async function queryRosaApi(endpoint, params) {
+  const qs = new URLSearchParams({ ...params, pageNumber: 0, pageSize: 25 }).toString();
+  const url = `${ROSA_BASE}${endpoint}?${qs}`;
+  const headerArgs = Object.entries(ROSA_HEADERS).flatMap(([k, v]) => ["-H", `${k}: ${v}`]);
+  const { execFileSync } = await import("child_process");
+  const result = execFileSync("curl", ["--http1.1", "-s", url, ...headerArgs, "--max-time", "20"], {
+    encoding: "utf8",
+    timeout: 25000,
+  });
+  return JSON.parse(result);
+}
+
 async function checkLicense() {
-  const executablePath =
-    process.env.CHROME_PATH ||
-    "/Users/anderschan/Library/Caches/ms-playwright/chromium-1208/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing";
-  // Build proxy config from environment if available
-  const rawProxy = process.env.HTTPS_PROXY || process.env.https_proxy || process.env.HTTP_PROXY || process.env.http_proxy;
-  let proxyConfig;
-  if (rawProxy) {
-    try {
-      const u = new URL(rawProxy);
-      proxyConfig = {
-        server: `${u.protocol}//${u.hostname}:${u.port}`,
-        username: decodeURIComponent(u.username),
-        password: decodeURIComponent(u.password),
-      };
-    } catch {}
-  }
-
-  const browser = await chromium.launch({
-    headless: true,
-    executablePath,
-    args: ["--ignore-certificate-errors"],
-    ...(proxyConfig ? { proxy: proxyConfig } : {}),
-  });
-  const context = await browser.newContext({
-    userAgent:
-      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
-    ignoreHTTPSErrors: true,
-    ...(proxyConfig ? { proxy: proxyConfig } : {}),
-  });
-  const page = await context.newPage();
-
-  // Intercept the API response
-  let resolveApi;
-  const apiResponsePromise = new Promise((resolve) => { resolveApi = resolve; });
-
-  page.on("response", async (response) => {
-    const url = response.url();
-    if (url.includes("api.nysed.gov/rosa") && url.includes("byProfession") && response.status() === 200) {
-      try {
-        const json = await response.json();
-        resolveApi(json);
-      } catch {}
-    }
-  });
-
+  let data;
   try {
-    console.log("Loading NYSED verification page...");
-    await page.goto(
-      "https://eservices.nysed.gov/professions/verification-search",
-      { waitUntil: "load", timeout: 30000 }
-    );
-
-    // Wait for the Vue dropdowns to render
-    await page.waitForSelector('input[aria-autocomplete="list"]', { timeout: 15000 });
-    await page.waitForTimeout(1500);
-
-    const dropdowns = page.locator('input[aria-autocomplete="list"]');
-
-    // Step 1: Select "Search By" = "Name"
-    console.log('Setting Search By = "Name"...');
-    const searchByInput = dropdowns.nth(0);
-    await searchByInput.click();
-    await page.waitForTimeout(300);
-    await searchByInput.pressSequentially("Name", { delay: 50 });
-    await page.waitForTimeout(800);
-
-    const nameOption = page.locator('[role="option"]').filter({ hasText: /^Name$/i }).first();
-    if (await nameOption.isVisible({ timeout: 2000 }).catch(() => false)) {
-      await nameOption.click();
-    } else {
-      await page.keyboard.press("ArrowDown");
-      await page.waitForTimeout(200);
-      await page.keyboard.press("Enter");
-    }
-    await page.waitForTimeout(500);
-
-    // Step 2: Select Profession = "Psychologist (068)"
-    console.log("Setting Profession = Psychologist...");
-    const profInput = dropdowns.nth(1);
-    await profInput.click();
-    await page.waitForTimeout(300);
-    await profInput.pressSequentially("Psychologist", { delay: 50 });
-    await page.waitForTimeout(800);
-
-    const psychOption = page.locator('[role="option"]').filter({ hasText: /Psychologist/i }).first();
-    if (await psychOption.isVisible({ timeout: 2000 }).catch(() => false)) {
-      await psychOption.click();
-    } else {
-      await page.keyboard.press("ArrowDown");
-      await page.waitForTimeout(200);
-      await page.keyboard.press("Enter");
-    }
-    await page.waitForTimeout(500);
-
-    // Step 3: Fill name
-    console.log(`Entering name: ${name}`);
-    const nameField = page.locator("#searchInput");
-    // Wait longer and scroll into view — the field may be hidden until dropdowns are set
-    await page.waitForTimeout(1500);
-    await nameField.scrollIntoViewIfNeeded().catch(() => {});
-    await nameField.waitFor({ state: "attached", timeout: 10000 });
-    // Use JS to force-fill in case the element is CSS-hidden by the Vue form
-    await page.evaluate((val) => {
-      const el = document.querySelector("#searchInput");
-      if (el) {
-        el.removeAttribute("style");
-        el.style.display = "block";
-        el.style.visibility = "visible";
-        el.value = val;
-        el.dispatchEvent(new Event("input", { bubbles: true }));
-        el.dispatchEvent(new Event("change", { bubbles: true }));
-      }
-    }, name);
-    await page.waitForTimeout(300);
-    await page.waitForTimeout(300);
-
-    // Step 4: Click GO
-    console.log("Clicking GO...");
-    const goBtn = page.locator("#goButton");
-    // Wait up to 5s for enabled, but proceed regardless
-    await page.waitForFunction(() => {
-      const btn = document.querySelector("#goButton");
-      return btn && !btn.disabled;
-    }, { timeout: 5000 }).catch(() => {
-      console.log("GO button still disabled — clicking anyway via JS");
+    console.log("Querying NYSED ROSA API (permit search)...");
+    data = await queryRosaApi("V2/byProfessionAndPermitteeName", {
+      permitteeName: name,
+      professionCode,
     });
-    // Use JS click to bypass disabled state if needed
-    await page.evaluate(() => {
-      const btn = document.querySelector("#goButton");
-      if (btn) btn.removeAttribute("disabled");
-    });
-    await goBtn.click({ force: true });
-
-    // Wait for API response
-    console.log("Waiting for results...\n");
-    const data = await Promise.race([
-      apiResponsePromise,
-      new Promise((_, reject) =>
-        setTimeout(() => reject(new Error("No API response within 30s")), 30000)
-      ),
-    ]);
-
-    const results = data?.content || [];
-    printResults(results);
-
-    // Check if a full license (not Limited Permit) exists
-    if (notifyMode) {
-      const fullLicense = results.find((item) => {
-        const permitType = item.permitType?.value || "";
-        const permitStatus = item.permitStatus?.value || "";
-        const licenseStatus = item.licenseStatus?.value || item.status?.value || "";
-        // A full license won't say "Limited Permit"
-        const isLimited = permitType.toLowerCase().includes("limited");
-        const isValid = permitStatus.toLowerCase().includes("valid") || licenseStatus.toLowerCase().includes("active");
-        return !isLimited && isValid;
-      });
-
-      // Also check if there are multiple records — one might be the full license
-      const hasFullLicense = results.some((item) => {
-        const type = item.permitType?.value || item.licenseType?.value || "";
-        return (
-          !type.toLowerCase().includes("limited") &&
-          type !== "" &&
-          (item.permitStatus?.value || "").toLowerCase().includes("valid")
-        );
-      });
-
-      if (fullLicense || hasFullLicense) {
-        const record = fullLicense || results.find(r => !r.permitType?.value?.toLowerCase().includes("limited"));
-        const subject = "Your NY Psychology License Has Arrived!";
-        const text = [
-          `Your NYSED license status has changed!\n`,
-          `Name: ${record?.name?.value || name}`,
-          `Profession: ${record?.profession?.value || "Psychology (068)"}`,
-          `Type: ${record?.permitType?.value || "Licensed"}`,
-          `Status: ${record?.permitStatus?.value || record?.licenseStatus?.value || ""}`,
-          `Permit #: ${record?.formattedPermitNumber || record?.permitNumber?.value || ""}`,
-          record?.issueDate?.value ? `Issued: ${record.issueDate.value}` : "",
-          record?.expireDate?.value ? `Valid Through: ${record.expireDate.value}` : "",
-          `\nChecked: ${new Date().toLocaleString("en-US", { timeZone: "America/New_York" })}`,
-          `\nVerify at: https://eservices.nysed.gov/professions/verification-search`,
-        ].filter(Boolean).join("\n");
-
-        console.log("\n*** FULL LICENSE DETECTED! Sending email... ***\n");
-        await sendEmail(subject, text);
-      } else {
-        console.log("\nNo full license yet — still Limited Permit. Will check again tomorrow.");
-      }
-    }
-
-    return data;
   } catch (err) {
-    console.error("\nError:", err.message);
-    await page.screenshot({ path: "/tmp/nysed-debug.png" }).catch(() => {});
+    console.error("Direct API query failed:", err.message);
     process.exit(1);
-  } finally {
-    await browser.close();
   }
+
+  const results = data?.content || [];
+  printResults(results);
+
+  if (notifyMode) {
+    const fullLicense = results.find((item) => {
+      const permitType = item.permitType?.value || "";
+      const permitStatus = item.permitStatus?.value || "";
+      const licenseStatus = item.licenseStatus?.value || item.status?.value || "";
+      const isLimited = permitType.toLowerCase().includes("limited");
+      const isValid = permitStatus.toLowerCase().includes("valid") || licenseStatus.toLowerCase().includes("active");
+      return !isLimited && isValid;
+    });
+
+    const hasFullLicense = results.some((item) => {
+      const type = item.permitType?.value || item.licenseType?.value || "";
+      return (
+        !type.toLowerCase().includes("limited") &&
+        type !== "" &&
+        (item.permitStatus?.value || "").toLowerCase().includes("valid")
+      );
+    });
+
+    if (fullLicense || hasFullLicense) {
+      const record = fullLicense || results.find(r => !r.permitType?.value?.toLowerCase().includes("limited"));
+      const subject = "Your NY Psychology License Has Arrived!";
+      const text = [
+        `Your NYSED license status has changed!\n`,
+        `Name: ${record?.name?.value || name}`,
+        `Profession: ${record?.profession?.value || "Psychology (068)"}`,
+        `Type: ${record?.permitType?.value || "Licensed"}`,
+        `Status: ${record?.permitStatus?.value || record?.licenseStatus?.value || ""}`,
+        `Permit #: ${record?.formattedPermitNumber || record?.permitNumber?.value || ""}`,
+        record?.issueDate?.value ? `Issued: ${record.issueDate.value}` : "",
+        record?.expireDate?.value ? `Valid Through: ${record.expireDate.value}` : "",
+        `\nChecked: ${new Date().toLocaleString("en-US", { timeZone: "America/New_York" })}`,
+        `\nVerify at: https://eservices.nysed.gov/professions/verification-search`,
+      ].filter(Boolean).join("\n");
+
+      console.log("\n*** FULL LICENSE DETECTED! Sending email... ***\n");
+      await sendEmail(subject, text);
+    } else {
+      console.log("\nNo full license yet — still Limited Permit. Will check again tomorrow.");
+    }
+  }
+
+  return data;
 }
 
 function printResults(results) {
