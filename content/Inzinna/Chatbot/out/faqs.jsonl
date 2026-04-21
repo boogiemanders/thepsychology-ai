@@ -1,0 +1,30 @@
+{"q":"How do I book a new Zocdoc lead?","expected":"patient-bookings","acceptable":["patient-bookings","1-receive-booking","2-create-client-in-simple-practice"],"category":"booking"}
+{"q":"What are the 7 steps in the booking workflow?","expected":"patient-bookings","acceptable":["patient-bookings"],"category":"booking"}
+{"q":"What is our cancellation policy?","expected":"cancellation-policy","acceptable":["cancellation-policy","sample-script-for-explaining-the-cancellation-policy"],"category":"billing"}
+{"q":"Can I take this client if they have active self-harm or substance use?","expected":"referral-and-exclusion-criteria","acceptable":["referral-and-exclusion-criteria","scope-of-care"],"category":"compliance"}
+{"q":"What is the minimum caseload for full-time clinicians?","expected":"4.1-attendance","acceptable":["4.1-attendance"],"category":"hr"}
+{"q":"What CPT code do I use for a 45-minute session?","expected":"guide-to-cpt-codes","acceptable":["guide-to-cpt-codes"],"category":"billing"}
+{"q":"What CPT code do I use for an intake evaluation?","expected":"guide-to-cpt-codes","acceptable":["guide-to-cpt-codes"],"category":"billing"}
+{"q":"How do I send a Verification of Benefits request?","expected":"7-send-verification-of-benefits-vob-request","acceptable":["7-send-verification-of-benefits-vob-request","patient-bookings"],"category":"booking"}
+{"q":"Do we charge clients for no-shows?","expected":"cancellation-policy","acceptable":["cancellation-policy","sample-script-for-explaining-the-cancellation-policy"],"category":"billing"}
+{"q":"Is there a sample script for explaining the cancellation fee?","expected":"sample-script-for-explaining-the-cancellation-policy","acceptable":["sample-script-for-explaining-the-cancellation-policy","cancellation-policy"],"category":"billing"}
+{"q":"A client is expressing suicidal ideation. What do I do?","expected":"emergency-and-crisis-procedures","acceptable":["emergency-and-crisis-procedures","1-immediate-action","crisis-protocols-beyond-emergencies-","psychiatric-consultation"],"category":"crisis"}
+{"q":"Do I need to make a mandated report for this?","expected":"mandated-reporting","acceptable":["mandated-reporting"],"category":"crisis"}
+{"q":"What is the NY Child Abuse Hotline number?","expected":"1-child-abuse-or-maltreatment","acceptable":["1-child-abuse-or-maltreatment","mandated-reporting"],"category":"crisis"}
+{"q":"What is the Adult Protective Services phone number?","expected":"2-adult-protective-services-for-vulnerable-adults-elder-abuse-etc-","acceptable":["2-adult-protective-services-for-vulnerable-adults-elder-abuse-etc-","mandated-reporting"],"category":"crisis"}
+{"q":"A client reported domestic violence. What are the steps?","expected":"emergency-and-crisis-procedures","acceptable":["emergency-and-crisis-procedures","mandated-reporting","1-immediate-action","crisis-protocols-beyond-emergencies-"],"category":"crisis"}
+{"q":"Can I use ChatGPT with client information?","expected":"dips-ai-usage-policy","acceptable":["dips-ai-usage-policy","permitted-uses-no-phi-","prohibited-uses-strictly-forbidden-","confidentiality-and-privacy-practices"],"category":"compliance"}
+{"q":"What platforms at DIPS are HIPAA-compliant?","expected":"hipaa-privacy-and-security-practices","acceptable":["hipaa-privacy-and-security-practices","security-guidelines-for-clinicians-at-dips","electronic-health-records-ehr-","simple-practice"],"category":"compliance"}
+{"q":"Can I see a former client socially?","expected":"professional-boundaries-and-dual-relationships","acceptable":["professional-boundaries-and-dual-relationships","prohibited-relationships","social-media-and-public-boundaries"],"category":"compliance"}
+{"q":"What are the ROI (release of information) requirements?","expected":"confidentiality-information-sharing","acceptable":["confidentiality-information-sharing","confidentiality-and-privacy-practices"],"category":"compliance"}
+{"q":"How long are we required to keep client records?","expected":"record-retention-access","acceptable":["record-retention-access"],"category":"compliance"}
+{"q":"How much paid sick leave do I get per year?","expected":"ny-paid-sick-leave-(accrual-method)","acceptable":["ny-paid-sick-leave-(accrual-method)","ny-paid-sick-leave-(frontloading-method)"],"category":"benefits"}
+{"q":"Am I eligible for Paid Family Leave?","expected":"ny-paid-family-leave","acceptable":["ny-paid-family-leave"],"category":"benefits"}
+{"q":"What is the 401(k) plan vesting schedule?","expected":"7.1-401(k)-plan","acceptable":["7.1-401(k)-plan"],"category":"benefits"}
+{"q":"How do I request time off or report an absence?","expected":"4.1-attendance","acceptable":["4.1-attendance","ny-paid-sick-leave-(accrual-method)","ny-paid-family-leave"],"category":"hr"}
+{"q":"How many hours of Paid Prenatal Leave do I get?","expected":"ny-paid-prenatal-personal-leave","acceptable":["ny-paid-prenatal-personal-leave"],"category":"benefits"}
+{"q":"How do I schedule supervision?","expected":"supervision-structure","acceptable":["supervision-structure"],"category":"faq"}
+{"q":"What are the scope limits for pre-licensed providers?","expected":"supervision-for-pre-licensed-providers","acceptable":["supervision-for-pre-licensed-providers"],"category":"faq"}
+{"q":"How often do we do performance evaluations?","expected":"evaluation-and-professional-growth","acceptable":["evaluation-and-professional-growth"],"category":"faq"}
+{"q":"Who do I call for clinical questions versus admin questions?","expected":"contacts","acceptable":["contacts"],"category":"faq"}
+{"q":"What training do I have to complete before seeing clients?","expected":"mandated-reporting","acceptable":["mandated-reporting","new-clinician-welcome"],"category":"crisis"}
