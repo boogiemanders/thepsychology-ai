@@ -1,0 +1,50 @@
+# XcodeGen project spec for the Monikas host app.
+# Regenerate the .xcodeproj from this file:
+#   brew install xcodegen
+#   cd ios/MonikasHost && xcodegen generate
+#   open MonikasHost.xcodeproj
+# The generated .xcodeproj is gitignored.
+
+name: MonikasHost
+options:
+  bundleIdPrefix: ai.thepsychology
+  deploymentTarget:
+    iOS: "17.0"
+  createIntermediateGroups: true
+  groupSortPosition: top
+  generateEmptyDirectories: true
+
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    DEVELOPMENT_TEAM: TMSBWAXF25
+    CODE_SIGN_STYLE: Automatic
+    ENABLE_USER_SCRIPT_SANDBOXING: NO
+    MARKETING_VERSION: "0.1.0"
+    CURRENT_PROJECT_VERSION: "1"
+    LOCALIZATION_PREFERS_STRING_CATALOGS: YES
+    STRING_CATALOG_GENERATE_SYMBOLS: YES
+    ASSETCATALOG_COMPILER_GENERATE_ASSET_SYMBOL_EXTENSIONS: YES
+
+targets:
+
+  MonikasHost:
+    type: application
+    platform: iOS
+    bundleId: ai.thepsychology.monikas
+    sources:
+      - path: MonikasHost
+        excludes:
+          - "Info.plist"
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: ai.thepsychology.monikas
+        INFOPLIST_FILE: MonikasHost/Info.plist
+        CODE_SIGN_ENTITLEMENTS: MonikasHost/MonikasHost.entitlements
+        TARGETED_DEVICE_FAMILY: "1,2"
+        SUPPORTS_MACCATALYST: NO
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone: "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
+        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad: "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
