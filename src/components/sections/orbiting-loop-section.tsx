@@ -268,7 +268,7 @@ export function OrbitingLoopSection() {
             className="orbit-frame order-1 lg:order-2 relative flex w-[calc(100vw-2rem)] md:w-full md:max-w-[560px] mx-auto items-center justify-center aspect-[4/3] md:aspect-auto md:h-[420px] overflow-hidden bg-background"
             style={frameVars}
           >
-            <style>{`
+            <style suppressHydrationWarning>{`
               .orbit-frame {
                 clip-path: inset(
                   var(--orbit-crop-top)
