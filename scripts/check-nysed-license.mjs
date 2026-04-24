@@ -84,12 +84,30 @@ const ROSA_HEADERS = {
 
 // NYSED's WAF blocks HTTP/2 (used by headless Chromium and node fetch by default).
 // HTTP/1.1 via curl works. We shell out to curl as the reliable path, with Playwright as fallback.
+async function resolveHost(hostname) {
+  const { execFileSync } = await import("child_process");
+  try {
+    const out = execFileSync("getent", ["hosts", hostname], { encoding: "utf8" });
+    const ip = out.trim().split(/\s+/)[0];
+    return ip || null;
+  } catch {
+    return null;
+  }
+}
+
 async function queryRosaApi(endpoint, params) {
   const qs = new URLSearchParams({ ...params, pageNumber: 0, pageSize: 25 }).toString();
   const url = `${ROSA_BASE}${endpoint}?${qs}`;
   const headerArgs = Object.entries(ROSA_HEADERS).flatMap(([k, v]) => ["-H", `${k}: ${v}`]);
   const { execFileSync } = await import("child_process");
-  const result = execFileSync("curl", ["--http1.1", "-s", url, ...headerArgs, "--max-time", "20"], {
+
+  // curl's internal DNS resolver can fail with "DNS cache overflow" in some envs;
+  // pre-resolve via getent and pass --resolve to bypass it.
+  const hostname = new URL(ROSA_BASE).hostname;
+  const ip = await resolveHost(hostname);
+  const resolveArgs = ip ? ["--resolve", `${hostname}:443:${ip}`] : [];
+
+  const result = execFileSync("curl", ["--http1.1", "-s", url, ...resolveArgs, ...headerArgs, "--max-time", "20"], {
     encoding: "utf8",
     timeout: 25000,
   });
