@@ -37,7 +37,7 @@ export function NewExamsBanner() {
           Shorter quizzes. You asked, we shipped.
         </p>
         <p className="text-sm text-muted-foreground mt-0.5">
-          Warm Up gives you 8 or 12 questions, one from each domain. Try it on the exam page next to Practice.
+          Warm Up gives you 8 or 12 questions, one from each domain. Try it in Practice.
         </p>
       </div>
     </div>
