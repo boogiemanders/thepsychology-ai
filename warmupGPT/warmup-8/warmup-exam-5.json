@@ -1,0 +1,197 @@
+{
+  "meta": {
+    "examId": "warmup-8-5",
+    "totalQuestions": 8,
+    "examType": "warmup",
+    "warmupLength": 8,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 1,
+      "7": 1,
+      "8": 1
+    },
+    "generatedAt": "2026-04-25T05:44:14.610Z"
+  },
+  "questions": [
+    {
+      "stem": "A clinician observes that a patient with Tourette's disorder involuntarily repeats the last several words spoken by the examiner during a clinical interview. This phenomenon is best described as:",
+      "options": [
+        "Echopraxia",
+        "Palilalia",
+        "Echolalia",
+        "Coprolalia"
+      ],
+      "answer": "Echolalia",
+      "explanation": "Echolalia is the involuntary repetition of another person's speech (repeating others' words). It is classified as a vocal tic in Tourette's disorder. Echopraxia (A) involves imitating others' movements, not speech. Palilalia (B) involves involuntary repetition of one's own words or phrases, not another person's. Coprolalia (D) involves involuntary swearing or use of obscene language.",
+      "kn": "KN1",
+      "kn_explanation": "This question tests knowledge of speech and language pathology terminology relevant to neurological and neurodevelopmental conditions within biological bases.",
+      "difficulty": "medium",
+      "quality_comment": "Good discrimination between similar-sounding terms. All distractors are plausible phenomena seen in tic disorders or neurological conditions.",
+      "suggestedLesson": "1-cerebral-cortex",
+      "suggestedParagraph": "### Understanding Tics",
+      "lessonExcerpt": "Vocal tics include throat clearing, barking, and echolalia (repeating others' words).",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 17,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Cerebral Cortex.json",
+      "domain": 1,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Cerebral Cortex.json::5",
+      "isScored": true
+    },
+    {
+      "stem": "Exposure with response prevention decreases anxiety by preventing the client from performing which of the following during exposure to the feared stimulus?",
+      "options": [
+        "Avoidance response",
+        "Relaxation response",
+        "Safety behavior",
+        "Conditioned inhibition"
+      ],
+      "answer": "Avoidance response",
+      "explanation": "1. **Correct Answer: Avoidance response**  \n\"Avoidance response\" is the correct answer because exposure with response prevention aims to eliminate the anxiety response by preventing the client from engaging in their usual avoidance behaviors when exposed to the feared stimulus. By confronting the feared situation without avoidance, the client has the opportunity to experience the anxiety and ultimately allow the conditioned fear response to extinguish.\n\n2. **Incorrect Options:**\n- **Relaxation response:** This option is incorrect because exposure with response prevention does not aim to prevent a relaxation response; rather, it focuses on eliminating avoidance behaviors in order to address the anxiety directly.\n- **Safety behavior:** This option is wrong because safety behaviors are actions taken to prevent anxiety, and while they may be present during exposure, the goal of exposure with response prevention is to eliminate avoidance, not to prevent safety behaviors.\n- **Conditioned inhibition:** This option is incorrect because conditioned inhibition refers to behaviors that signal the absence of anxiety in specific situations; it is not the behavior that is prevented during exposure with response prevention, which specifically targets avoidance responses.",
+      "kn": "KN7",
+      "kn_explanation": "This question focuses on the classical conditioning principles underlying exposure therapy, thus aligns with theories and principles of learning (KN7).",
+      "difficulty": "medium",
+      "quality_comment": "The question clearly targets a key mechanism in exposure therapy, and the distractors are related concepts, creating plausible distractors that test conceptual understanding.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Classical Conditioning Interventions.json",
+      "domain": 2,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Classical Conditioning Interventions.json::8",
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following best describes how cultural expectations shape gender roles in society?",
+      "options": [
+        "Cultural expectations have no impact on gender roles.",
+        "Cultural expectations dictate specific behaviors and responsibilities for men and women.",
+        "Gender roles are solely determined by biological factors.",
+        "Cultural expectations only affect gender roles in certain societies."
+      ],
+      "answer": "Cultural expectations dictate specific behaviors and responsibilities for men and women.",
+      "explanation": "Cultural expectations significantly influence how society defines and enforces gender roles, dictating specific behaviors and responsibilities assigned to men and women. The other options either downplay the role of culture or incorrectly attribute gender roles solely to biology or specific contexts.",
+      "kn": "KN14",
+      "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of cultural influences on gender roles.",
+      "suggestedLesson": "3-attitudes",
+      "suggestedParagraph": "## Why Attitudes Matter More Than You Think",
+      "lessonExcerpt": "Cultural expectations dictate specific behaviors and responsibilities for men and women.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 21,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Attitudes.json",
+      "domain": 3,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Attitudes.json::5",
+      "isScored": true
+    },
+    {
+      "stem": "Prenatal exposure to which substance is most strongly associated with fetal alcohol syndrome, characterized by facial anomalies, growth retardation, CNS dysfunction, and organ defects?",
+      "options": [
+        "Nicotine",
+        "Cocaine",
+        "Alcohol",
+        "Valproic acid"
+      ],
+      "answer": "Alcohol",
+      "explanation": "1. **Correct Answer: Alcohol**  \nAlcohol is the substance most strongly associated with fetal alcohol syndrome (FAS), which is characterized by distinct facial anomalies, growth retardation, central nervous system dysfunction, and various organ defects. Prenatal exposure to alcohol can lead to FAS and other disorders within the fetal alcohol spectrum, particularly during the embryonic period when major organs and structures are forming most rapidly.\n\n2. **Incorrect Options:**\n- **Nicotine:** While prenatal exposure to nicotine can have harmful effects, it is not specifically linked to the distinct features of fetal alcohol syndrome, which include the specific facial anomalies and CNS dysfunction associated with alcohol exposure.\n- **Cocaine:** Prenatal exposure to cocaine is associated with issues such as low birth weight and irritability in infants but does not cause the characteristic facial anomalies and organ defects seen in fetal alcohol syndrome.\n- **Valproic acid:** This teratogen can cause developmental defects, but it is not specifically associated with the symptoms of fetal alcohol syndrome, which are unique to alcohol exposure during pregnancy.",
+      "kn": "KN27",
+      "kn_explanation": "This question is best aligned with KN27 because it tests Risk and protective factors that may impact a developmental course (e.g., nutrition, prenatal care, health care, social support, socioeconomic status, abuse, victimization, and resiliency).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors include other teratogens or drugs of abuse, creating plausible alternatives and requiring precise knowledge of prenatal teratogens.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Before Birth.json",
+      "domain": 4,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Before Birth.json::12",
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following statements regarding intermittent explosive disorder (IED) is TRUE?",
+      "options": [
+        "IED involves premeditated aggressive acts aimed at achieving tangible outcomes.",
+        "Verbal or physical aggression occurs on average twice weekly for at least three months without causing injury or property damage.",
+        "Aggressive outbursts in IED are proportional to the provocation or social stressor.",
+        "The disorder can be diagnosed in children younger than six years old."
+      ],
+      "answer": "Verbal or physical aggression occurs on average twice weekly for at least three months without causing injury or property damage.",
+      "explanation": "1. The statement \"Verbal or physical aggression occurs on average twice weekly for at least three months without causing injury or property damage\" is correct because it aligns with the diagnostic criteria for intermittent explosive disorder (IED). According to the reference material, IED is characterized by recurrent behavioral outbursts due to a failure to control aggressive impulses, which can manifest as verbal or physical aggression occurring at least twice weekly for a minimum of three months. Importantly, these outbursts do not result in damage or destruction to property or physical injury to others.\n\n2. The incorrect options are as follows:\n- \"IED involves premeditated aggressive acts aimed at achieving tangible outcomes\": This is incorrect because IED requires that outbursts are not premeditated and are not committed with the intention of achieving a tangible outcome.\n- \"Aggressive outbursts in IED are proportional to the provocation or social stressor\": This statement is false because the level of aggressiveness in IED must not be proportional to the provocation or any precipitating social stressor, indicating a disproportionate response.\n- \"The disorder can be diagnosed in children younger than six years old\": This is incorrect as the diagnosis of IED requires that the individual be at least six years old or at the equivalent developmental level, thus excluding younger children.",
+      "kn": "KN36",
+      "kn_explanation": "This question tests knowledge of classification criteria and diagnostic thresholds for impulse-control disorders (KN36).",
+      "difficulty": "medium",
+      "quality_comment": "Options include common misconceptions and diagnostic nuances, effectively assessing detailed knowledge of IED diagnostic criteria.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Acting Out.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Acting Out.json::5",
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following best describes the primary goal of Interpersonal Psychotherapy (IPT)?",
+      "options": [
+        "Identifying unconscious conflicts to improve insight",
+        "Symptom relief and improved interpersonal functioning",
+        "Changing maladaptive behavior patterns through reinforcement",
+        "Focusing on future-oriented solutions rather than past problems"
+      ],
+      "answer": "Symptom relief and improved interpersonal functioning",
+      "explanation": "1. The correct answer, \"Symptom relief and improved interpersonal functioning,\" accurately reflects the primary goals of Interpersonal Psychotherapy (IPT). IPT is designed to address the interpersonal factors contributing to a client’s symptoms, particularly in the context of depression and other mental disorders, and aims to alleviate these symptoms while enhancing the client's ability to function in their interpersonal relationships.\n\n2. The first incorrect option, \"Identifying unconscious conflicts to improve insight,\" is wrong because IPT focuses on interpersonal issues rather than unconscious conflicts, which are more characteristic of traditional psychodynamic therapies. The second incorrect option, \"Changing maladaptive behavior patterns through reinforcement,\" is incorrect as IPT does not primarily utilize behavioral reinforcement techniques; instead, it centers on improving interpersonal relationships and functioning. Lastly, the option \"Focusing on future-oriented solutions rather than past problems\" is misleading because, while IPT does have a future-oriented aspect in terms of improving functioning, it specifically addresses current interpersonal issues rather than focusing on solutions without considering the interpersonal context of the client’s symptoms.",
+      "kn": "KN43",
+      "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
+      "difficulty": "medium",
+      "quality_comment": "The distractors are plausible therapy goals but differ clearly from IPT’s focus, providing a good test of conceptual understanding.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Brief Therapies.json",
+      "domain": 6,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Brief Therapies.json::4",
+      "isScored": true
+    },
+    {
+      "stem": "What does the biserial coefficient primarily measure?",
+      "options": [
+        "The strength of the relationship between two continuous variables",
+        "The strength of the relationship between a continuous variable and a dichotomous variable",
+        "The difference between two means",
+        "The variance within a single group"
+      ],
+      "answer": "The strength of the relationship between a continuous variable and a dichotomous variable",
+      "explanation": "The correct answer is 'The strength of the relationship between a continuous variable and a dichotomous variable' because the biserial coefficient is specifically used to assess the correlation between these types of variables. The other options do not accurately describe the purpose of the biserial coefficient.",
+      "kn": "KN55",
+      "kn_explanation": "This question is best aligned with KN55 because it tests Analytic methods, including qualitative (e.g., thematic, phenomenological) and quantitative (e.g., probability theory; descriptive, inferential, and parametric statistics; meta-analysis; factor analysis; causal modeling).",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests knowledge of correlation coefficients.",
+      "suggestedLesson": "7-correlation-and-regression",
+      "suggestedParagraph": "## Choosing the Right Correlation Coefficient",
+      "lessonExcerpt": "The biserial coefficient measures the strength of the relationship between a continuous variable and a dichotomous variable.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 8,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Correlation and Regression.json",
+      "domain": 7,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Correlation and Regression.json::10",
+      "isScored": true
+    },
+    {
+      "stem": "What should a psychologist do first upon receiving a subpoena to testify in a divorce proceeding?",
+      "options": [
+        "Contact the court to confirm the details of the subpoena.",
+        "Reach out to the client to discuss the implications of the subpoena.",
+        "Prepare to testify without consulting anyone.",
+        "Ignore the subpoena if it seems invalid."
+      ],
+      "answer": "Reach out to the client to discuss the implications of the subpoena.",
+      "explanation": "The correct answer is to reach out to the client because they have a right to know what's being requested and to make informed decisions about their confidential information. The other options either involve unnecessary actions or neglect the client's rights.",
+      "kn": "KN63",
+      "kn_explanation": "This question is best aligned with KN63 because it tests Laws, statutes, and judicial decisions that affect psychological practice.",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and directly relates to the ethical and legal responsibilities of psychologists.",
+      "suggestedLesson": "8-practice-issues",
+      "suggestedParagraph": "## When a Subpoena Lands on Your Desk",
+      "lessonExcerpt": "Before doing anything else, reach out to your client to discuss the implications.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 1,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json",
+      "domain": 8,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json::4",
+      "isScored": true
+    }
+  ]
+}

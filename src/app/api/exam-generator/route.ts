@@ -327,9 +327,24 @@ export async function POST(request: NextRequest) {
     }
 
     const { searchParams } = new URL(request.url)
-    const examType = searchParams.get('type') || 'practice' // 'diagnostic' or 'practice'
+    const examType = searchParams.get('type') || 'practice' // 'diagnostic' | 'practice' | 'warmup'
     const source = searchParams.get('source') || 'default'
-    const length = searchParams.get('length') || 'default' // 'short' | 'default'
+    const length = searchParams.get('length') || 'default' // 'short' | 'default' for diagnostic; '8' | '12' for warmup
+
+    // Warm Up exams: short sample, ungated, always load from warmupGPT
+    if (examType === 'warmup') {
+      try {
+        const warmupLength: 8 | 12 = length === '12' ? 12 : 8
+        const examData = loadWarmupFromGpt(warmupLength)
+        return NextResponse.json(examData)
+      } catch (warmupError) {
+        console.error('[Exam Generator] Failed to load warmup exam from warmupGPT:', warmupError)
+        return NextResponse.json(
+          { error: 'Failed to load warmup exam' },
+          { status: 500 },
+        )
+      }
+    }
 
     // Free-tier exams: always load from free-examsGPT and never call Anthropic
     if (source === 'free') {
@@ -674,6 +689,82 @@ function loadDiagnosticFromGpt() {
 
   return {
     questions: mappedQuestions,
+  }
+}
+
+/**
+ * Load a warmup exam from the warmupGPT folder.
+ * Warm Up is a short sample: 8 or 12 questions, one per domain.
+ */
+function loadWarmupFromGpt(length: 8 | 12) {
+  const warmupDir = join(process.cwd(), 'warmupGPT', `warmup-${length}`)
+  if (!existsSync(warmupDir)) {
+    throw new Error(`warmupGPT subdir not found at ${warmupDir}`)
+  }
+
+  const files = readdirSync(warmupDir).filter(
+    (name) => name.startsWith('warmup-exam-') && name.endsWith('.json')
+  )
+  if (files.length === 0) {
+    throw new Error(`No warmup exam files found in ${warmupDir}`)
+  }
+
+  // Pick a random warmup exam so attempts stay fresh
+  const chosen = files[Math.floor(Math.random() * files.length)]
+  const fullPath = join(warmupDir, chosen)
+
+  const raw = readFileSync(fullPath, 'utf-8')
+  const parsed = JSON.parse(raw)
+  const questions = Array.isArray(parsed.questions) ? parsed.questions : []
+
+  const mappedQuestions = questions.map((q: any, idx: number) => {
+    const domainNumber =
+      typeof q.domain === 'number'
+        ? q.domain
+        : typeof q.domain === 'string'
+        ? parseInt(q.domain, 10)
+        : undefined
+
+    const questionId = typeof q.id === 'number' ? q.id : idx + 1
+    const sourceFile = q.sourceFile ?? q.source_file
+    const sourceFolder = q.sourceFolder ?? q.source_folder
+
+    const validatedOptions = validateQuestionOptions(q.options, questionId, sourceFile)
+    if (!validatedOptions) {
+      return null
+    }
+
+    const isOrgPsych = inferIsOrgPsych({
+      explicitFlag: typeof q.is_org_psych === 'boolean' ? q.is_org_psych : undefined,
+      sourceFile,
+      sourceFolder,
+    })
+
+    const mapped = {
+      id: questionId,
+      question: q.stem ?? q.question ?? '',
+      options: validatedOptions,
+      correct_answer: q.answer ?? q.correct_answer ?? '',
+      explanation: q.explanation ?? '',
+      domain: domainNumber && !Number.isNaN(domainNumber) ? `Domain ${domainNumber}` : q.domain ?? '',
+      difficulty:
+        q.difficulty === 'easy' || q.difficulty === 'medium' || q.difficulty === 'hard'
+          ? q.difficulty
+          : 'medium',
+      isScored: true,
+      knId: q.kn ?? q.knId,
+      type: q.type ?? 'standard',
+      source_file: sourceFile,
+      source_folder: sourceFolder,
+      is_org_psych: isOrgPsych,
+    }
+
+    return attachRelatedSections(mapped)
+  }).filter(Boolean) as any[]
+
+  return {
+    questions: mappedQuestions,
+    metadata: parsed.meta ?? null,
   }
 }
 

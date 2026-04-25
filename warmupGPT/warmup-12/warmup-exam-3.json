@@ -1,0 +1,292 @@
+{
+  "meta": {
+    "examId": "warmup-12-3",
+    "totalQuestions": 12,
+    "examType": "warmup",
+    "warmupLength": 12,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 2,
+      "4": 1,
+      "5": 3,
+      "6": 1,
+      "7": 1,
+      "8": 1,
+      "3-5-6": 1
+    },
+    "generatedAt": "2026-04-25T05:44:14.542Z"
+  },
+  "questions": [
+    {
+      "stem": "A 62-year-old woman is referred for neuropsychological evaluation following a left-hemisphere stroke. During the interview, she appears to understand questions and nods appropriately, but her verbal responses are extremely slow and labored, consisting primarily of single nouns and verbs. She becomes visibly frustrated when unable to produce complete sentences. Which brain region was MOST likely damaged by the stroke?",
+      "options": [
+        "Wernicke's area in the temporal lobe",
+        "Broca's area in the frontal lobe",
+        "The arcuate fasciculus connecting language regions",
+        "The angular gyrus in the parietal lobe"
+      ],
+      "answer": "Broca's area in the frontal lobe",
+      "explanation": "This presentation is classic Broca's aphasia (expressive/nonfluent aphasia): slow, labored speech consisting mainly of nouns and verbs (telegraphic speech), with comprehension relatively intact. The patient's frustration indicates awareness of her deficit, which is characteristic of Broca's aphasia. Wernicke's area damage (option A) would produce fluent but meaningless speech with impaired comprehension—the opposite pattern. Arcuate fasciculus damage (option C) causes conduction aphasia, characterized by fluent speech with errors and severely impaired repetition, but relatively intact comprehension. Angular gyrus/parietal damage (option D) is associated with anomic aphasia and Gerstmann's syndrome, not the nonfluent pattern described.",
+      "kn": "KN1",
+      "kn_explanation": "This question assesses knowledge of cortical language areas and the clinical presentation of Broca's aphasia resulting from frontal lobe damage.",
+      "difficulty": "medium",
+      "quality_comment": "Well-constructed clinical vignette with key distinguishing features (intact comprehension, telegraphic speech, frustration) that point specifically to Broca's aphasia.",
+      "suggestedLesson": "1-cerebral-cortex",
+      "suggestedParagraph": "### Broca's Area: The Speech Production Center",
+      "lessonExcerpt": "When it's damaged, you get Broca's aphasia. Also called expressive or nonfluent aphasia... people with Broca's aphasia can understand what you're saying. They know what they want to say. But getting the words out? That's the struggle. Their speech becomes slow and effortful, stripped down to mainly nouns and verbs.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 7,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Cerebral Cortex.json",
+      "domain": 1,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Cerebral Cortex.json::3",
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following environmental factors is most likely to influence eating behavior according to behavioral psychology?",
+      "options": [
+        "The presence of food cues in the environment",
+        "The time of day when meals are consumed",
+        "The emotional state of the individual",
+        "The nutritional value of the food"
+      ],
+      "answer": "The presence of food cues in the environment",
+      "explanation": "The presence of food cues in the environment can trigger eating behaviors, as these cues can evoke conditioned responses related to hunger and eating. The other options, while relevant to eating behavior, do not specifically highlight the environmental influence as strongly as food cues do.",
+      "kn": "KN7",
+      "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of behavioral psychology in relation to environmental influences on eating.",
+      "suggestedLesson": "2-classical-conditioning-interventions",
+      "suggestedParagraph": "## Why Classical Conditioning Interventions Matter for Your Career",
+      "lessonExcerpt": "These aren't problems of logic or willpower. They're learned responses (automatic reactions the brain picked up through experience).",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 21,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Classical Conditioning Interventions.json",
+      "domain": 2,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Classical Conditioning Interventions.json::5",
+      "isScored": true
+    },
+    {
+      "stem": "In a replication of Festinger and Carlsmith's classic experiment, participants perform a tedious task and are then paid either $2 or $50 to tell the next participant the task was enjoyable. According to cognitive dissonance theory, which group will subsequently rate the task as MORE enjoyable, and why?",
+      "options": [
+        "The $50 group, because receiving a large reward creates positive associations with the task",
+        "The $2 group, because insufficient external justification for lying creates dissonance that is reduced by changing their attitude about the task",
+        "The $50 group, because the larger payment reinforces their behavior through operant conditioning",
+        "Both groups equally, because the act of telling someone the task was enjoyable changes attitudes regardless of payment"
+      ],
+      "answer": "The $2 group, because insufficient external justification for lying creates dissonance that is reduced by changing their attitude about the task",
+      "explanation": "According to cognitive dissonance theory, the $2 group experiences dissonance because they lied about the task being enjoyable without sufficient external justification. The lesson explains: 'The $1 participants experienced dissonance: \"I told someone this boring task was fun, but I only got a dollar for lying.\" They had insufficient justification for their behavior. To reduce dissonance, they changed their attitude.' The $50 group has sufficient justification ('I lied, but hey, I got paid well for it'), so they experience no dissonance and don't need to change their attitude. Option A incorrectly applies reinforcement principles. Option C confuses operant conditioning with dissonance. Option D ignores the critical role of justification magnitude.",
+      "kn": "KN14",
+      "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
+      "difficulty": "medium",
+      "quality_comment": "Directly tests the classic Festinger and Carlsmith paradigm with updated dollar amounts to ensure originality.",
+      "suggestedLesson": "3-attitudes",
+      "suggestedParagraph": "### Cognitive Dissonance Theory: The Discomfort of Inconsistency",
+      "lessonExcerpt": "The $1 participants experienced dissonance: 'I told someone this boring task was fun, but I only got a dollar for lying.' They had insufficient justification for their behavior. To reduce dissonance, they changed their attitude.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 16,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Attitudes.json",
+      "domain": 3,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Attitudes.json::3",
+      "isScored": true
+    },
+    {
+      "stem": "A psychologist who assumes that all clients share the same worldview and applies a single theoretical framework regardless of the client's cultural background is best demonstrating which of the following?",
+      "options": [
+        "Ethnocentric monoculturalism",
+        "Cultural encapsulation",
+        "Etic perspective bias",
+        "Stereotype threat"
+      ],
+      "answer": "Cultural encapsulation",
+      "explanation": "Cultural encapsulation, a term coined by Wrenn, refers to therapists who operate from a narrow, culturally bound perspective, substituting their own values and assumptions for those of the client without awareness. Ethnocentric monoculturalism (A) refers to a broader societal-level phenomenon where one cultural group's values dominate. An etic perspective bias (C) involves applying universal frameworks across cultures but does not specifically describe the clinical insularity described. Stereotype threat (D) refers to anxiety about confirming negative stereotypes and is unrelated to therapist behavior.",
+      "kn": "KN18",
+      "kn_explanation": "Applying a single framework regardless of cultural background relates to cultural psychology and cross-cultural comparisons.",
+      "difficulty": "medium",
+      "quality_comment": "Tests a key multicultural counseling concept. Well-supported by lesson content on cultural encapsulation.",
+      "suggestedLesson": "3-cultural-concepts",
+      "suggestedParagraph": "## Cultural Encapsulation",
+      "lessonExcerpt": "Wrenn coined this term to describe mental health professionals who can't work effectively across cultures. Culturally encapsulated therapists assume their cultural assumptions about mental health apply universally.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 1,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Concepts.json",
+      "domain": 3,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Concepts.json::3",
+      "isScored": true
+    },
+    {
+      "stem": "During which period of prenatal development is exposure to teratogens most likely to produce major structural defects?",
+      "options": [
+        "Germinal period (conception to week 2)",
+        "Embryonic period (weeks 3 through 8)",
+        "Fetal period (weeks 9 through birth)",
+        "First trimester (weeks 1 through 13)"
+      ],
+      "answer": "Embryonic period (weeks 3 through 8)",
+      "explanation": "1. The correct answer is the **embryonic period (weeks 3 through 8)** because this is the stage during which major organs and structures are forming, and exposure to teratogens is most likely to cause significant defects. The reference material indicates that the likelihood of major structural damage from teratogens peaks during this critical period of rapid development.\n\n2. The **germinal period (conception to week 2)** is incorrect because it involves initial cell division and implantation, where exposure to teratogens typically results in an \"all-or-none\" effect, meaning significant damage would prevent implantation altogether. The **fetal period (weeks 9 through birth)** is also incorrect as this stage is characterized by the growth and maturation of already formed organs and structures, where exposure to teratogens generally causes minor defects rather than major structural issues. Lastly, the **first trimester (weeks 1 through 13)** includes the embryonic period, but it is too broad; while teratogen exposure during the embryonic phase is critical, the first trimester also encompasses the germinal period where the risk of major defects is lower.",
+      "kn": "KN21",
+      "kn_explanation": "This question tests knowledge of normal developmental stages and timing of vulnerability, which falls under normal growth and development across the lifespan (KN21).",
+      "difficulty": "medium",
+      "quality_comment": "The options are clearly defined and plausible; the stem focuses specifically on timing, which is important for prenatal development understanding.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Before Birth.json",
+      "domain": 4,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Before Birth.json::7",
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following scales on the Strong Interest Inventory (SII) provides scores based on Holland's six occupational themes such as realistic and investigative?",
+      "options": [
+        "Basic Interest Scales (BISs)",
+        "General Occupational Themes (GOTs)",
+        "Occupational Scales (OSs)",
+        "Personal Styles Scales (PSSs)"
+      ],
+      "answer": "General Occupational Themes (GOTs)",
+      "explanation": "1. The correct answer is \"General Occupational Themes (GOTs)\" because this scale of the Strong Interest Inventory (SII) specifically provides scores based on Holland's six occupational themes, which include realistic, investigative, artistic, social, enterprising, and conventional. This allows examinees to understand their interests in relation to these established categories of occupations.\n\n2. The \"Basic Interest Scales (BISs)\" are incorrect because they provide scores on 30 specific interests that represent the six occupational themes, rather than directly scoring on the themes themselves. The \"Occupational Scales (OSs)\" are also incorrect as they indicate the similarity of the examinee's interests to those of individuals in specific occupations, rather than categorizing them into Holland's themes. Lastly, the \"Personal Styles Scales (PSSs)\" are incorrect because they focus on the examinee’s preferences regarding personal work styles and environments, rather than on the occupational themes defined by Holland.",
+      "kn": "KN32",
+      "kn_explanation": "KN32 relates to commonly used instruments and their scales, here focusing on the SII and its components for vocational assessment.",
+      "difficulty": "medium",
+      "quality_comment": "The question clearly contrasts different SII scales, with plausible distractors referencing other legitimate scales, enhancing content validity for EPPP level.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Career Interests.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Career Interests.json::6",
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following is an evidence-based parent-focused intervention designed to replace coercive parenting practices with positive reinforcement in children with conduct disorder?",
+      "options": [
+        "Multisystemic therapy (MST)",
+        "Parent management training - Oregon model (PMTO)",
+        "Functional family therapy (FFT)",
+        "Problem-solving skills training (PSST)"
+      ],
+      "answer": "Parent management training - Oregon model (PMTO)",
+      "explanation": "1. **Correct Answer Explanation:** The \"Parent management training - Oregon model (PMTO)\" is the correct answer because it is specifically designed to help parents of children with conduct disorder replace coercive parenting practices with positive reinforcement strategies. PMTO focuses on enhancing positive parenting behaviors, such as positive reinforcement and non-coercive discipline, which is essential for addressing the behavioral issues associated with conduct disorder.\n\n2. **Incorrect Options Explanation:**\n   - **Multisystemic therapy (MST):** MST is an intensive, community-based intervention aimed at adolescents with antisocial behaviors and their families, but it is not specifically a parent-focused intervention that targets parenting practices.\n   - **Functional family therapy (FFT):** FFT is designed for families with a child exhibiting externalizing behaviors and focuses on improving family dynamics, rather than specifically training parents to replace coercive practices with positive reinforcement.\n   - **Problem-solving skills training (PSST):** PSST is a child-focused intervention that aims to enhance children's cognitive processes and social skills, rather than addressing parenting practices directly.",
+      "kn": "KN33",
+      "kn_explanation": "This question is best aligned with KN33 because it tests Issues of differential diagnosis and integration of non-psychological information into psychological assessment.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are other empirically supported treatments for conduct disorder, which adds complexity, while the stem clearly focuses on parental coercion replacement.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Acting Out.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Acting Out.json::2",
+      "isScored": true
+    },
+    {
+      "stem": "What happens to the criterion-related validity coefficient when a predictor test is cross-validated on a new sample?",
+      "options": [
+        "It tends to shrink due to reduction of chance correlations",
+        "It increases because the new sample is independent",
+        "It remains exactly the same as in the original study",
+        "It doubles as new variability is accounted for"
+      ],
+      "answer": "It tends to shrink due to reduction of chance correlations",
+      "explanation": "1. The correct answer, \"It tends to shrink due to reduction of chance correlations,\" reflects the phenomenon known as shrinkage in criterion-related validity. When a predictor test is cross-validated on a new sample, the initial high correlations observed may have been influenced by chance factors unique to the original sample, which are not present in the new sample. As a result, the validity coefficient is likely to decrease as it provides a more accurate estimate of the true relationship between the predictor and criterion.\n\n2. \n- **It increases because the new sample is independent:** This option is incorrect because, while the new sample is indeed independent, the presence of chance correlations in the original sample can lead to an overestimation of the validity coefficient, which is more accurately reflected in the cross-validated sample.\n  \n- **It remains exactly the same as in the original study:** This option is wrong because the validity coefficient is expected to change upon cross-validation; it is unlikely to remain the same due to the reduction of chance factors that may have inflated the original coefficient.\n\n- **It doubles as new variability is accounted for:** This statement is incorrect because the validity coefficient does not double; instead, it typically decreases due to the elimination of chance correlations, rather than increasing from accounting for new variability.",
+      "kn": "KN29",
+      "kn_explanation": "This question covers an important psychometric concept about validity coefficient stability and generalizability, relevant to understanding test validation procedures.",
+      "difficulty": "medium",
+      "quality_comment": "The stem is clear and the distractors are plausible misconceptions, offering a solid test of understanding of cross-validation effects.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Can Tests Predict.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Can Tests Predict.json::5",
+      "isScored": true
+    },
+    {
+      "stem": "A client in alcohol use disorder treatment has maintained sobriety for eight months but describes an intensifying internal pull toward drinking whenever he passes bars on his commute. According to the Transtheoretical Model, which variable most directly accounts for his elevated relapse risk at this stage?",
+      "options": [
+        "Declining self-efficacy caused by the duration of maintenance demands exceeding his coping resources",
+        "Unfavorable decisional balance in which the perceived costs of sobriety now outweigh the benefits",
+        "Temptation, defined as the urge to engage in the previously problematic behavior, which remains active even during sustained change",
+        "Insufficient use of counterconditioning strategies recommended for the maintenance stage"
+      ],
+      "answer": "Temptation, defined as the urge to engage in the previously problematic behavior, which remains active even during sustained change",
+      "explanation": "The Transtheoretical Model identifies temptation — the urge to engage in the old behavior — as one of three key factors affecting motivation and relapse risk. The lesson explicitly states that temptation is 'strongest in early stages' but continues to represent a direct relapse risk throughout maintenance. The client's pull toward drinking when exposed to bar-related stimuli is a direct instance of ongoing temptation. Declining self-efficacy would be a relapse risk but is described as the client's confidence in ability to change, which is protective when high. Unfavorable decisional balance is most salient during the contemplation stage, not maintenance. Counterconditioning is indeed a maintenance-stage strategy, but its underuse is a secondary factor; the proximate driver of relapse risk in the scenario is the temptation experience itself.",
+      "kn": "KN42",
+      "kn_explanation": "This question is best aligned with KN42 because it tests Factors related to treatment or intervention decision-making (e.g., relevant research, matching treatment to assessment/diagnosis, matching client or patient with psychologist characteristics, knowledge and use of allied services, cost and benefit, readiness to change).",
+      "difficulty": "medium",
+      "quality_comment": "Well-grounded in lesson content; requires discriminating between TTM constructs rather than surface recognition.",
+      "suggestedLesson": "6-brief-therapies",
+      "suggestedParagraph": "## Transtheoretical Model (Stages of Change)",
+      "lessonExcerpt": "Temptation. Urge to engage in the old behavior; strongest in early stages.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 3,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Brief Therapies.json",
+      "domain": 6,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Brief Therapies.json::2",
+      "isScored": true
+    },
+    {
+      "stem": "What is a significant limitation of the Pearson correlation coefficient?",
+      "options": [
+        "It can only be used with nominal data",
+        "It assumes a linear relationship between variables",
+        "It provides information about causation",
+        "It requires a large sample size"
+      ],
+      "answer": "It assumes a linear relationship between variables",
+      "explanation": "The Pearson correlation coefficient assumes a linear relationship, which is a significant limitation. The other options are incorrect as Pearson can be used with interval data, does not imply causation, and does not specifically require a large sample size.",
+      "kn": "KN55",
+      "kn_explanation": "This question is best aligned with KN55 because it tests Analytic methods, including qualitative (e.g., thematic, phenomenological) and quantitative (e.g., probability theory; descriptive, inferential, and parametric statistics; meta-analysis; factor analysis; causal modeling).",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively highlights a key limitation of the Pearson correlation.",
+      "suggestedLesson": "7-correlation-and-regression",
+      "suggestedParagraph": "### The Three Critical Assumptions",
+      "lessonExcerpt": "The relationship between your variables needs to be linear.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 4,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Correlation and Regression.json",
+      "domain": 7,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Correlation and Regression.json::7",
+      "isScored": true
+    },
+    {
+      "stem": "At a neighborhood barbecue, a licensed psychologist casually tells an acquaintance, 'You should really see a cognitive-behavioral therapist for that anxiety you mentioned.' The acquaintance follows this advice, sees a CBT therapist, and experiences a worsening of symptoms due to an undiagnosed bipolar disorder. Could the psychologist be held liable for malpractice?",
+      "options": [
+        "Yes, because the psychologist provided a professional recommendation that caused harm",
+        "Yes, because all licensed psychologists have a duty of care to anyone they interact with",
+        "No, because no professional relationship was established, so the first element of malpractice (duty of care) is not met",
+        "No, but only because the psychologist recommended a legitimate form of treatment"
+      ],
+      "answer": "No, because no professional relationship was established, so the first element of malpractice (duty of care) is not met",
+      "explanation": "Malpractice requires all 'Four Ds': Duty of Care, Dereliction of Duty, Damages, and Direct Cause. The first D—Duty of Care—requires that a professional relationship existed. At a neighborhood barbecue, the psychologist was making a casual social remark, not establishing a therapist-client relationship. Without a professional relationship, there is no duty of care, and the malpractice claim fails at the first element. Option A incorrectly assumes a casual suggestion creates professional liability. Option B overstates the scope of duty of care. Option D focuses on the wrong element; the issue is not whether CBT is legitimate but whether a duty existed.",
+      "kn": "KN62",
+      "kn_explanation": "This question is best aligned with KN62 because it tests Professional standards and relevant guidelines for the practice of psychology (e.g., standards for educational and psychological testing).",
+      "difficulty": "medium",
+      "quality_comment": "Tests the practical limits of malpractice liability in informal settings, grounded in the Four Ds framework.",
+      "suggestedLesson": "8-practice-issues",
+      "suggestedParagraph": "## Understanding Malpractice: The Four Ds You Can't Forget",
+      "lessonExcerpt": "Duty of Care: A professional relationship existed where you owed the client a standard of care... if even one D is missing, the malpractice claim typically fails.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 18,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json",
+      "domain": 8,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json::2",
+      "isScored": true
+    },
+    {
+      "stem": "Which hormone is released by the adrenal cortex during the general adaptation syndrome and helps maintain energy during prolonged stress?",
+      "options": [
+        "Adrenocorticotropic hormone (ACTH)",
+        "Cortisol",
+        "Epinephrine",
+        "Norepinephrine"
+      ],
+      "answer": "Cortisol",
+      "explanation": "1. **Cortisol** is the correct answer because it is released by the adrenal cortex during the resistance stage of the general adaptation syndrome (GAS) to help maintain energy levels as the body copes with prolonged stress. Elevated cortisol levels allow the body to sustain high energy and manage stressors effectively, as outlined in the reference material.\n\n2. The other options are incorrect for the following reasons:\n   - **Adrenocorticotropic hormone (ACTH)**: Although ACTH is involved in the stress response by stimulating the adrenal cortex to release cortisol, it is not the hormone that directly helps maintain energy; rather, it acts as a trigger for cortisol release.\n   - **Epinephrine**: This hormone is released by the adrenal medulla during the alarm reaction stage of GAS and is primarily responsible for the immediate fight-or-flight response, rather than sustaining energy during prolonged stress.\n   - **Norepinephrine**: Similar to epinephrine, norepinephrine is released during the alarm reaction stage and contributes to the initial stress response, but it does not play a role in maintaining energy levels during the resistance stage.",
+      "kn": "KN16",
+      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors include hormones related to stress but with different roles, making the question both challenging and clear.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/2 3 Work Satisfaction.json",
+      "domain": "3-5-6",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/2 3 Work Satisfaction.json::4",
+      "isScored": true
+    }
+  ]
+}

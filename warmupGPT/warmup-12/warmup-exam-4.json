@@ -1,0 +1,292 @@
+{
+  "meta": {
+    "examId": "warmup-12-4",
+    "totalQuestions": 12,
+    "examType": "warmup",
+    "warmupLength": 12,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 2,
+      "4": 1,
+      "5": 3,
+      "6": 1,
+      "7": 1,
+      "8": 1,
+      "3-5-6": 1
+    },
+    "generatedAt": "2026-04-25T05:44:14.589Z"
+  },
+  "questions": [
+    {
+      "stem": "A 45-year-old construction foreman sustains a traumatic brain injury affecting the orbitofrontal cortex. Which behavioral change would his coworkers most likely observe following the injury?",
+      "options": [
+        "Difficulty forming new declarative memories",
+        "Inability to produce fluent speech",
+        "Socially inappropriate comments and impulsive behavior",
+        "Persistent repetition of the same motor response"
+      ],
+      "answer": "Socially inappropriate comments and impulsive behavior",
+      "explanation": "Orbitofrontal cortex (OFC) damage causes impulsivity, social inappropriateness, lack of empathy, aggressive behaviors, and emotion dysregulation. The OFC manages response inhibition and social behaviors, acting as an 'internal social filter.' Difficulty forming new declarative memories (A) would indicate hippocampal damage. Inability to produce fluent speech (B) would suggest Broca's area damage. Persistent repetition of the same motor response (D) describes perseveration, which is associated with dorsolateral prefrontal cortex damage.",
+      "kn": "KN1",
+      "kn_explanation": "This question tests knowledge of frontal lobe neuroanatomy and the behavioral consequences of orbitofrontal cortex damage, a core biological bases topic.",
+      "difficulty": "medium",
+      "quality_comment": "Strong clinical vignette that requires differentiating OFC damage from other prefrontal and cortical regions. Well-supported by lesson content.",
+      "suggestedLesson": "1-cerebral-cortex",
+      "suggestedParagraph": "### The Prefrontal Cortex: Where Planning Meets Personality",
+      "lessonExcerpt": "Orbitofrontal Cortex (OFC) - The OFC manages emotion regulation, response inhibition, and social behaviors... Damage causes: Impulsivity, Social inappropriateness (immature behavior, inappropriate jocularity, oversharing), Lack of empathy, Aggressive or abusive behaviors, Emotion dysregulation",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 11,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Cerebral Cortex.json",
+      "domain": 1,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Cerebral Cortex.json::4",
+      "isScored": true
+    },
+    {
+      "stem": "A therapist is conducting aversion therapy with a client who has a fetishistic disorder. In this counterconditioning paradigm, the fetish object (e.g., a specific article of clothing) is repeatedly presented immediately before an aversive stimulus such as a mild electric shock. In classical conditioning terms, the fetish object serves as the:",
+      "options": [
+        "Unconditioned stimulus (US)",
+        "Conditioned stimulus (CS)",
+        "Conditioned response (CR)",
+        "Unconditioned response (UR)"
+      ],
+      "answer": "Conditioned stimulus (CS)",
+      "explanation": "In aversion therapy, the stimuli associated with the problem behavior serve as the conditioned stimulus (CS). The fetish object is a previously learned stimulus that currently elicits a pleasurable response; the goal of aversion therapy is to pair it with an unconditioned stimulus (electric shock, which naturally produces pain/discomfort as the UR) so that the fetish object eventually elicits an aversive conditioned response (CR) instead of pleasure. The unconditioned stimulus (A) is the aversive stimulus itself (shock). The conditioned response (C) is the new aversive reaction to the fetish object after conditioning. The unconditioned response (D) is the natural pain reaction to the shock.",
+      "kn": "KN44",
+      "kn_explanation": "Aversion therapy is a specific treatment technique (counterconditioning paradigm) for a diagnosed disorder, fitting KN44's focus on treatment techniques/interventions and their efficacy.",
+      "difficulty": "medium",
+      "quality_comment": "Directly supported by lesson content which explicitly lists the fetish object as a CS example. Clear, unambiguous answer.",
+      "suggestedLesson": "2-classical-conditioning-interventions",
+      "suggestedParagraph": "### Aversion Therapy",
+      "lessonExcerpt": "Conditioned Stimulus (CS): Stimuli associated with the problem behavior (alcohol, cigarettes, fetish object). Unconditioned Stimulus (US): Something naturally unpleasant (electric shock, nausea-inducing drug, foul odor).",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 30,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Classical Conditioning Interventions.json",
+      "domain": 2,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Classical Conditioning Interventions.json::7",
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following ethical concerns is most directly associated with the potential for harm to participants in psychological experiments?",
+      "options": [
+        "Informed consent",
+        "Confidentiality",
+        "Deception",
+        "Risk of harm"
+      ],
+      "answer": "Risk of harm",
+      "explanation": "The correct answer is 'Risk of harm' because ethical concerns in psychological experiments often focus on ensuring that participants are not exposed to unnecessary risks or harm. 'Informed consent' relates to participants being aware of the study, 'confidentiality' pertains to protecting participant information, and 'deception' involves misleading participants about the study's purpose, which can also raise ethical issues but is not as directly linked to harm as the risk of harm itself.",
+      "kn": "KN14",
+      "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of research ethics.",
+      "suggestedLesson": "3-attitudes",
+      "suggestedParagraph": "## Why Attitudes Matter More Than You Think",
+      "lessonExcerpt": "The lesson discusses the importance of ethical considerations in psychological research, particularly the risk of harm to participants.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 11,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Attitudes.json",
+      "domain": 3,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Attitudes.json::4",
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following is MOST characteristic of the structural organization found in many African American family systems?",
+      "options": [
+        "A strict patriarchal hierarchy with clearly delineated gender roles",
+        "An extended kinship network with flexible family boundaries and role sharing",
+        "A nuclear family structure emphasizing individual autonomy and independence",
+        "A matriarchal system in which all decision-making authority rests with the eldest female"
+      ],
+      "answer": "An extended kinship network with flexible family boundaries and role sharing",
+      "explanation": "Research on African American family systems highlights the importance of extended kinship networks, flexible family roles, and permeable household boundaries as key structural characteristics. Option A is incorrect because African American families tend to have more egalitarian role structures rather than strict patriarchy. Option C describes an individualistic nuclear family model more typical of European American norms. Option D is a stereotype; while women play important roles, characterizing the system as exclusively matriarchal with all decision-making power in one person oversimplifies the reality of shared responsibilities across the kinship network.",
+      "kn": "KN16",
+      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
+      "difficulty": "medium",
+      "quality_comment": "Tests understanding of cultural family structures while challenging common stereotypes. Supported by cultural concepts lesson.",
+      "suggestedLesson": "3-cultural-concepts",
+      "suggestedParagraph": "### African American Clients",
+      "lessonExcerpt": "Extended kinship networks often include friends and church community, not just family. Family roles are often flexible and egalitarian.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 6,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Concepts.json",
+      "domain": 3,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Concepts.json::4",
+      "isScored": true
+    },
+    {
+      "stem": "Which chromosomal abnormality is associated with males having two or more X chromosomes and symptoms including gynecomastia, taller stature, impaired executive functions, and social cognitive deficits?",
+      "options": [
+        "Klinefelter syndrome",
+        "Turner syndrome",
+        "Down syndrome",
+        "Fragile X syndrome"
+      ],
+      "answer": "Klinefelter syndrome",
+      "explanation": "1. **Klinefelter syndrome** is the correct answer because it is characterized by males having two or more X chromosomes in addition to a single Y chromosome. Symptoms include gynecomastia (breast enlargement), taller stature, incomplete development of secondary sex characteristics, and various cognitive and social difficulties stemming from impaired executive functions and social cognitive deficits.\n\n2. **Turner syndrome** is incorrect because it affects females and is caused by the partial or complete deletion of one X chromosome, leading to symptoms such as short stature and lack of secondary sex characteristics, not excess X chromosomes in males. **Down syndrome** is also incorrect as it is an autosomal disorder caused by an extra chromosome 21, leading to intellectual disability and distinct physical features, which do not include the symptoms associated with Klinefelter syndrome. Finally, **Fragile X syndrome** is incorrect because it is an X-linked dominant disorder that affects both males and females, primarily characterized by intellectual disabilities and specific physical features, rather than the presence of multiple X chromosomes in males.",
+      "kn": "KN28",
+      "kn_explanation": "This question is best aligned with KN28 because it tests Disorders and diseases that impact the expected course of development over the lifespan.",
+      "difficulty": "medium",
+      "quality_comment": "Options are plausible chromosomal disorders, and the stem includes multiple distinguishing features that require specific knowledge.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Before Birth.json",
+      "domain": 4,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Before Birth.json::10",
+      "isScored": true
+    },
+    {
+      "stem": "What type of scoring does the Kuder Occupational Interest Survey (KOIS) use given its forced-choice item format?",
+      "options": [
+        "Norm-referenced scoring",
+        "Ipsative scoring",
+        "Criterion-referenced scoring",
+        "Percentile scoring"
+      ],
+      "answer": "Ipsative scoring",
+      "explanation": "1. **Ipsative scoring** is the correct answer for the Kuder Occupational Interest Survey (KOIS) because the test employs a forced-choice format where examinees select their most and least preferred activities from sets of three options. This method yields ipsative scores that allow for comparisons of an individual's preferences within themselves, rather than against a normative group, which is characteristic of ipsative scoring.\n\n2. The other options are incorrect for the following reasons:\n\n- **Norm-referenced scoring** compares an individual's scores to a normative sample, which is not applicable in the KOIS due to its ipsative nature that focuses on individual preferences rather than group comparisons.\n  \n- **Criterion-referenced scoring** evaluates an individual's performance against a specific criterion or standard, rather than comparing preferences within the individual, which does not align with the KOIS's forced-choice design.\n  \n- **Percentile scoring** indicates the percentage of scores in a normative sample that fall below a given score, which is not relevant for the KOIS as it does not provide comparisons to a normative group but rather focuses on intra-individual comparisons.",
+      "kn": "KN29",
+      "kn_explanation": "This question addresses test scoring methods and characteristics of specific assessments, central to psychometric theories and test interpretation (KN29).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors correctly represent other common scoring methods, making the distractors credible and the question effective for testing knowledge of scoring types.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Career Interests.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Career Interests.json::7",
+      "isScored": true
+    },
+    {
+      "stem": "According to Moffitt’s developmental taxonomy, which type of antisocial behavior is characterized by a temporary pattern related to a 'maturity gap' during adolescence?",
+      "options": [
+        "Life-course-persistent type",
+        "Adolescence-limited type",
+        "Childhood-onset type",
+        "Late-onset type"
+      ],
+      "answer": "Adolescence-limited type",
+      "explanation": "1. The \"Adolescence-limited type\" is the correct answer because it represents a temporary and situational pattern of antisocial behavior that arises due to a \"maturity gap\" between an adolescent's biological and social maturity. This type of behavior is not consistent across situations and typically resolves as the individual matures, distinguishing it from more chronic forms of antisocial behavior.\n\n2. The \"Life-course-persistent type\" is incorrect because it refers to a pattern of increasingly serious antisocial behaviors that begins in early childhood and continues into adulthood, indicating a stable trajectory rather than a temporary one. The \"Childhood-onset type\" is also incorrect as it involves symptoms appearing before age 10 and is associated with a higher degree of aggressiveness and a greater likelihood of ongoing antisocial behavior into adulthood. Finally, the \"Late-onset type\" is not a recognized category in Moffitt’s taxonomy; the correct terms are \"childhood-onset\" and \"adolescence-limited,\" making \"late-onset\" an invalid choice.",
+      "kn": "KN33",
+      "kn_explanation": "This question is best aligned with KN33 because it tests Issues of differential diagnosis and integration of non-psychological information into psychological assessment.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors include related but incorrect options which require understanding Moffitt’s theory, making this question effective for EPPP-level testing.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Acting Out.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Acting Out.json::3",
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following describes the standard error of estimate (SEE) in a criterion-related validity study?",
+      "options": [
+        "An index of the average amount by which predicted criterion scores deviate from actual scores",
+        "A measure of internal consistency reliability of the predictor",
+        "The correlation between predictor and criterion scores",
+        "The effect size of the predictor on the criterion"
+      ],
+      "answer": "An index of the average amount by which predicted criterion scores deviate from actual scores",
+      "explanation": "1. \"An index of the average amount by which predicted criterion scores deviate from actual scores\" is the correct answer because the standard error of estimate (SEE) quantifies the prediction error in a criterion-related validity study. It indicates how much a person's predicted score on a criterion is likely to differ from their true score, reflecting the accuracy of the predictor in estimating the criterion.\n\n2. The first incorrect option, \"A measure of internal consistency reliability of the predictor,\" is wrong because internal consistency reliability refers to how well the items on a test measure the same construct, not the prediction error associated with criterion scores. The second incorrect option, \"The correlation between predictor and criterion scores,\" is incorrect as it defines the criterion-related validity coefficient, not the standard error of estimate, which focuses on prediction accuracy. Lastly, \"The effect size of the predictor on the criterion\" is incorrect because effect size measures the strength of a relationship between variables, whereas the SEE specifically addresses the average deviation of predicted scores from actual scores, rather than the strength of that relationship.",
+      "kn": "KN29",
+      "kn_explanation": "The question focuses on interpretation of psychometric indices used in prediction studies, essential for understanding test accuracy and confidence intervals.",
+      "difficulty": "medium",
+      "quality_comment": "The distractors represent related but distinct concepts, making the question both clear and challenging for EPPP candidates.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Can Tests Predict.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Can Tests Predict.json::6",
+      "isScored": true
+    },
+    {
+      "stem": "A therapist treating a client with chronic insomnia instructs her: 'Tonight, instead of trying to force yourself to fall asleep, I want you to lie in bed in the dark and deliberately try to stay awake as long as you possibly can. Do not try to sleep.' The therapist explains that attempting to follow this instruction will interrupt the performance anxiety that is perpetuating the insomnia. This intervention is best identified as:",
+      "options": [
+        "Systematic desensitization, in which graduated exposure to the feared situation of lying awake reduces conditioned anxiety over repeated trials",
+        "Paradoxical intention, in which the client is instructed to deliberately attempt to produce or amplify the very symptom causing distress",
+        "Stimulus control therapy, in which environmental and behavioral cues that have become associated with wakefulness are identified and modified",
+        "Cognitive restructuring, in which the client's dysfunctional beliefs about the consequences of insufficient sleep are explicitly challenged"
+      ],
+      "answer": "Paradoxical intention, in which the client is instructed to deliberately attempt to produce or amplify the very symptom causing distress",
+      "explanation": "Paradoxical intention, originally developed by Viktor Frankl and later incorporated into strategic and brief therapy models, involves directing clients to intentionally attempt to produce or exaggerate the symptom they dread. For insomnia, prescribing wakefulness paradoxically reduces the anticipatory anxiety and performance pressure around falling asleep, thereby disrupting the self-reinforcing cycle maintaining the disorder. Systematic desensitization (Option A) uses graduated hierarchical exposure paired with relaxation and does not prescribe the symptom. Stimulus control therapy (Option C) restructures behavioral and environmental antecedents of sleep but does not direct symptom production. Cognitive restructuring (Option D) targets and disputes maladaptive beliefs through verbal techniques rather than behavioral prescription.",
+      "kn": "KN44",
+      "kn_explanation": "This question is best aligned with KN44 because it tests Treatment techniques and interventions, and the evidence for their comparative efficacy and effectiveness.",
+      "difficulty": "medium",
+      "quality_comment": "Clinically grounded question with clearly differentiated distractors. The brief therapies lesson likely covers paradoxical interventions in a",
+      "suggestedLesson": "6-brief-therapies",
+      "suggestedParagraph": "## Paradoxical Interventions",
+      "lessonExcerpt": "Developed by Klerman and Weissman originally for depression, IPT operates from a medical model perspective. It views mental disorders as treatable illnesses and focuses on how interpersonal factors co",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 28,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Brief Therapies.json",
+      "domain": 6,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Brief Therapies.json::3",
+      "isScored": true
+    },
+    {
+      "stem": "What does a correlation of 0.85 between IQ scores suggest about the relationship between the two variables?",
+      "options": [
+        "There is a strong positive relationship",
+        "There is a weak negative relationship",
+        "There is no relationship",
+        "There is a strong negative relationship"
+      ],
+      "answer": "There is a strong positive relationship",
+      "explanation": "A correlation of 0.85 indicates a strong positive relationship between the two variables, meaning as one increases, the other tends to increase as well. The other options misinterpret the strength and direction of the correlation.",
+      "kn": "KN55",
+      "kn_explanation": "This question is best aligned with KN55 because it tests Analytic methods, including qualitative (e.g., thematic, phenomenological) and quantitative (e.g., probability theory; descriptive, inferential, and parametric statistics; meta-analysis; factor analysis; causal modeling).",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of correlation interpretation.",
+      "suggestedLesson": "7-correlation-and-regression",
+      "suggestedParagraph": "## The Foundation: What Correlation Actually Tells Us",
+      "lessonExcerpt": "Most correlation coefficients range from -1.0 to +1.0, and a perfect positive correlation means as one variable increases, the other increases.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 6,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Correlation and Regression.json",
+      "domain": 7,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Correlation and Regression.json::8",
+      "isScored": true
+    },
+    {
+      "stem": "A psychologist receives a subpoena demanding her client's therapy records for an upcoming civil trial. After contacting her client, the client refuses to authorize release of the records. What is the psychologist's MOST appropriate next step?",
+      "options": [
+        "Comply with the subpoena since it is a legal document that must be obeyed",
+        "Destroy the records to protect the client's confidentiality",
+        "Contact the requesting party to negotiate withdrawal, or file a motion to quash or request a protective order from the court",
+        "Refuse to acknowledge the existence of the records under any circumstances"
+      ],
+      "answer": "Contact the requesting party to negotiate withdrawal, or file a motion to quash or request a protective order from the court",
+      "explanation": "According to the APA's roadmap for handling subpoenas, after the client refuses to authorize release (Step 3), the psychologist should contact the requesting party to negotiate or withdraw the request. If that fails, Step 4 instructs the psychologist to seek court guidance, either informally through a letter or formally with a motion to quash or a protective order. Option A is incorrect because a subpoena does not automatically override psychotherapist-patient privilege. Option B is incorrect and illegal—destroying records in response to a subpoena could constitute obstruction of justice. Option D is incorrect because outright refusal without taking proper legal steps is not the recommended approach.",
+      "kn": "KN63",
+      "kn_explanation": "Subpoena handling involves laws, statutes, and judicial decisions affecting practice",
+      "difficulty": "medium",
+      "quality_comment": "Well-grounded in the lesson's step-by-step subpoena response protocol with clear distractors.",
+      "suggestedLesson": "8-practice-issues",
+      "suggestedParagraph": "## When a Subpoena Lands on Your Desk",
+      "lessonExcerpt": "If they don't authorize? Contact the requesting party to negotiate or withdraw the request... Ask the court for help. Either informally through a letter or formally with a motion to quash the subpoena or request a protective order.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 23,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json",
+      "domain": 8,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json::3",
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following best describes the 'survivor syndrome' observed in employees who remain after organizational downsizing?",
+      "options": [
+        "Increased motivation and commitment due to survival",
+        "Elevated job satisfaction and sense of security",
+        "Reduced commitment, loss of control, anxiety, and guilt",
+        "Indifference about organizational changes"
+      ],
+      "answer": "Reduced commitment, loss of control, anxiety, and guilt",
+      "explanation": "1. The correct answer, \"Reduced commitment, loss of control, anxiety, and guilt,\" accurately describes the survivor syndrome observed in employees who remain after organizational downsizing. Research indicates that survivors often experience decreased job satisfaction and organizational commitment, a sense of loss of control, and emotional distress, including anxiety and guilt related to being a survivor amidst job losses (Muchinsky, 2012).\n\n2. The option \"Increased motivation and commitment due to survival\" is incorrect because survivor syndrome typically leads to reduced commitment rather than increased motivation. \"Elevated job satisfaction and sense of security\" is also wrong, as survivors often report lower job satisfaction and feelings of insecurity post-downsizing. Finally, \"Indifference about organizational changes\" does not reflect survivor syndrome, as affected employees usually exhibit emotional responses such as anxiety and guilt, rather than indifference.",
+      "kn": "KN16",
+      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
+      "difficulty": "medium",
+      "quality_comment": "The distractors are plausible reactions to organizational change; the correct answer clearly reflects the syndrome described.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/2 3 Work Satisfaction.json",
+      "domain": "3-5-6",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/2 3 Work Satisfaction.json::6",
+      "isScored": true
+    }
+  ]
+}
