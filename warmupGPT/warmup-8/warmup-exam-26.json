@@ -1,0 +1,191 @@
+{
+  "meta": {
+    "examId": "warmup-8-26",
+    "totalQuestions": 8,
+    "examType": "warmup",
+    "warmupLength": 8,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 1,
+      "7": 1,
+      "8": 1
+    },
+    "generatedAt": "2026-04-25T05:56:49.914421Z"
+  },
+  "questions": [
+    {
+      "stem": "Patient H.M. underwent bilateral removal of the hippocampus to treat severe seizures. Following surgery, which pattern of memory impairment was observed?",
+      "options": [
+        "Complete inability to form any new memories, including procedural skills",
+        "Inability to form new declarative long-term memories with preserved short-term and procedural memory",
+        "Selective loss of emotional memories with intact episodic and semantic memory",
+        "Loss of all previously stored memories with preserved ability to form new ones"
+      ],
+      "answer": "Inability to form new declarative long-term memories with preserved short-term and procedural memory",
+      "explanation": "The case of H.M. demonstrated that the hippocampus serves as a consolidation hub for declarative memories. After surgery, H.M. could still hold conversations (intact short-term memory) and learn new motor skills (intact procedural memory), but could not transfer new declarative information into long-term storage. Option A is incorrect because procedural memory was preserved. Option C is incorrect because the deficit was not limited to emotional memories — all new declarative memories were affected. Option D describes the opposite of what occurred — H.M. retained most old memories but could not form new declarative ones.",
+      "kn": "KN1",
+      "kn_explanation": "H.M. memory impairment pattern relates to neurobiological bases of cognition",
+      "difficulty": "easy",
+      "quality_comment": "Classic EPPP topic directly supported by detailed lesson content about patient H.M. Tests understanding of hippocampal function in memory consolidation.",
+      "suggestedLesson": "1-memory-and-sleep",
+      "suggestedParagraph": "### The Hippocampus: Your Memory Transfer Agent",
+      "lessonExcerpt": "H.M. could hold a conversation with you (his short-term memory worked fine), and he could still ride a bike or learn new motor skills (his procedural memory was intact). But if you left the room and came back ten minutes later, he wouldn't remember meeting you.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 4,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Memory and Sleep.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Memory and Sleep.json::2",
+      "domain": 1,
+      "isScored": true
+    },
+    {
+      "stem": "In aversion therapy, the fetish object serves as which of the following in classical conditioning terms?",
+      "options": [
+        "Conditioned stimulus (CS)",
+        "Unconditioned stimulus (US)",
+        "Unconditioned response (UR)",
+        "Conditioned response (CR)"
+      ],
+      "answer": "Conditioned stimulus (CS)",
+      "explanation": "1. The correct answer is \"Conditioned stimulus (CS)\" because in aversion therapy, the fetish object is initially a neutral stimulus that becomes associated with an unconditioned stimulus (US), such as electric shock. As a result of this pairing, the fetish object elicits a conditioned response (CR) of pain or discomfort rather than the original self-reinforcing response, making it a conditioned stimulus.\n\n2. The option \"Unconditioned stimulus (US)\" is incorrect because the US is the stimulus that naturally elicits an unlearned response, such as the electric shock, not the fetish object. \"Unconditioned response (UR)\" is wrong because the UR is the natural reaction to the unconditioned stimulus, which in this case would be the pain from the shock, not the fetish object. Finally, \"Conditioned response (CR)\" is incorrect because the CR is the learned response to the conditioned stimulus, which is the pain or discomfort elicited by the fetish object after conditioning, rather than the fetish object itself.",
+      "kn": "KN7",
+      "kn_explanation": "This question assesses knowledge of classical conditioning terminology as applied to behavioral interventions (KN7).",
+      "difficulty": "easy",
+      "quality_comment": "This is a straightforward, well-constructed question testing fundamental classical conditioning concepts in treatment context.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Classical Conditioning Interventions.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Classical Conditioning Interventions.json::15",
+      "domain": 2,
+      "isScored": true
+    },
+    {
+      "stem": "What does the term 'scarcity trap' refer to in behavioral economics?",
+      "options": [
+        "A situation where abundance leads to poor decision-making due to complacency",
+        "A mental state where preoccupation with unfulfilled needs leads to self-defeating behaviors perpetuating scarcity",
+        "A condition where sudden availability of resources increases risky behaviors",
+        "A form of cognitive overload caused by too many options"
+      ],
+      "answer": "A mental state where preoccupation with unfulfilled needs leads to self-defeating behaviors perpetuating scarcity",
+      "explanation": "1. The correct answer, \"A mental state where preoccupation with unfulfilled needs leads to self-defeating behaviors perpetuating scarcity,\" accurately reflects the concept of a \"scarcity trap\" as described by Mullainathan and Shafir (2014). In this state, individuals become so focused on their unmet needs that they engage in behaviors that ultimately worsen their situation, such as postponing necessary repairs, which can lead to additional costs and further scarcity.\n\n2. The first incorrect option, \"A situation where abundance leads to poor decision-making due to complacency,\" is wrong because it misrepresents the concept; a scarcity trap specifically involves a lack of resources rather than abundance. The second incorrect option, \"A condition where sudden availability of resources increases risky behaviors,\" is incorrect because it suggests that the presence of resources leads to risk-taking, while a scarcity trap focuses on the negative consequences of lacking resources. Lastly, the option \"A form of cognitive overload caused by too many options,\" is incorrect because it conflates scarcity with the abundance of choices, whereas a scarcity trap is about the cognitive limitations imposed by unmet needs, not by having too many options.",
+      "kn": "KN16",
+      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
+      "difficulty": "hard",
+      "quality_comment": "The question captures a complex concept with well-balanced answer choices, requiring integration of multiple ideas.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Persuasion.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Persuasion.json::13",
+      "domain": 3,
+      "isScored": true
+    },
+    {
+      "stem": "A researcher conducting a prospective longitudinal study administers the Adult Attachment Interview (AAI) to expectant mothers during pregnancy and then assesses the attachment classifications of their infants at 12 months using the Strange Situation. What does this research design most directly investigate?",
+      "options": [
+        "The degree to which infant temperament predicts maternal sensitivity over the first year of life",
+        "Whether secure base behavior in infancy predicts adult romantic attachment style decades later",
+        "The intergenerational transmission of attachment, whereby parental attachment representations predict infant attachment classification",
+        "The stability of internal working models from infancy through toddlerhood within the same child"
+      ],
+      "answer": "The intergenerational transmission of attachment, whereby parental attachment representations predict infant attachment classification",
+      "explanation": "The design described — AAI assessment of parents prior to the infant's birth followed by Strange Situation classification at 12 months — is the classic paradigm for studying intergenerational transmission of attachment. Research using this design shows that a parent's coherent or incoherent narrative about their own childhood attachment experiences, assessed before the infant is born, significantly predicts the infant's subsequent attachment classification. This transmission is thought to operate through the quality of caregiving behaviors shaped by the parent's internal working models. Option A reverses the causal direction, examining infant-to-parent effects rather than parent-to-infant. Option B describes a different longitudinal question about within-individual continuity into adulthood, not cross-generational transmission. Option D examines stability within a single child across time, not the cross-generational transfer of attachment patterns.",
+      "kn": "KN25",
+      "kn_explanation": "This question is best aligned with KN25 because it tests Family development, configuration, and functioning and their impact on the individual across the lifespan.",
+      "difficulty": "hard",
+      "quality_comment": "Excellent doctoral-level question requiring understanding of research design implications; tests conceptual precision around intergenerational vs. longitudinal continuity.",
+      "suggestedLesson": "4-bonding-and-attachment",
+      "suggestedParagraph": "### Bowlby's Ethological Theory: Survival Through Connection",
+      "lessonExcerpt": "Crucially, Bowlby proposed that these early experiences create internal working models. Mental templates about whether you're worthy of love, whether others are reliable, and how relationships function.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 15,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Bonding and Attachment.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Bonding and Attachment.json::27",
+      "domain": 4,
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following best describes the recommended treatment for preschool children diagnosed with ADHD according to American Academy of Pediatrics guidelines?",
+      "options": [
+        "Medication alone without behavioral interventions",
+        "Parent- and teacher-administered behavioral interventions as first-line treatment",
+        "Combined medication and behavioral interventions immediately",
+        "No treatment until school entry"
+      ],
+      "answer": "Parent- and teacher-administered behavioral interventions as first-line treatment",
+      "explanation": "1. The correct answer, \"Parent- and teacher-administered behavioral interventions as first-line treatment,\" is supported by the American Academy of Pediatrics guidelines, which recommend these interventions for preschool children with ADHD as the primary approach. These behavioral strategies, such as parent training in behavioral management, are tailored to improve the child's behavior effectively before considering medication.\n\n2. The option \"Medication alone without behavioral interventions\" is incorrect because the guidelines emphasize that medication should only be prescribed when behavioral interventions do not lead to adequate improvement. \"Combined medication and behavioral interventions immediately\" is wrong because the guidelines suggest starting with behavioral interventions first, rather than jumping to a combination treatment. Lastly, \"No treatment until school entry\" is incorrect as the guidelines advocate for early intervention, highlighting that preschool children should receive behavioral support rather than delaying treatment until they enter school.",
+      "kn": "KN37",
+      "kn_explanation": "This question is best aligned with KN37 because it tests Factors influencing evidence-based interpretation of data and decision-making (e.g., base rates, group differences, cultural biases and differences, heuristics).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors include common misconceptions and opposites of guidelines, requiring knowledge of age-specific treatment recommendations.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Neurodevelopmental.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Neurodevelopmental.json::11",
+      "domain": 5,
+      "isScored": true
+    },
+    {
+      "stem": "Within Bowen’s family systems theory, what does the 'family projection process' describe?",
+      "options": [
+        "Parents projecting their emotional immaturity onto children, lowering the children's level of differentiation",
+        "Children forming triangles with their parents to reduce parental conflicts",
+        "The transmission of family secrets across generations",
+        "The process of establishing clear family boundaries between subsystems"
+      ],
+      "answer": "Parents projecting their emotional immaturity onto children, lowering the children's level of differentiation",
+      "explanation": "1. The correct answer, \"Parents projecting their emotional immaturity onto children, lowering the children's level of differentiation,\" accurately reflects Bowen's concept of the family projection process. This process occurs when parents, due to their own emotional struggles, project their unresolved issues onto their children, which results in the children developing lower levels of differentiation. As a consequence, these children may become more emotionally fused with their parents, perpetuating a cycle of emotional immaturity within the family.\n\n2. The first incorrect option, \"Children forming triangles with their parents to reduce parental conflicts,\" is wrong because it describes the concept of emotional triangles, not the family projection process. The second option, \"The transmission of family secrets across generations,\" inaccurately refers to the concept of multigenerational transmission, which involves the passing down of emotional processes rather than secrets. Lastly, the option \"The process of establishing clear family boundaries between subsystems\" is incorrect because it pertains to structural family therapy's focus on boundaries and subsystems, rather than Bowen's family projection process.",
+      "kn": "KN46",
+      "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are related concepts from Bowenian theory, enhancing validity and discrimination for testing family systems knowledge.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Family and Group.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Family and Group.json::17",
+      "domain": 6,
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following factors increases the statistical power of a study?",
+      "options": [
+        "Using a smaller sample size to reduce variability",
+        "Decreasing the alpha level from .05 to .01",
+        "Increasing the effect size of the independent variable",
+        "Using a nonparametric test instead of a parametric test"
+      ],
+      "answer": "Increasing the effect size of the independent variable",
+      "explanation": "1. **Correct Answer Explanation**: Increasing the effect size of the independent variable enhances the statistical power of a study because a larger effect size makes it easier to detect a significant difference between groups. When the effect size is substantial, the likelihood of rejecting a false null hypothesis increases, thereby improving the study's ability to identify true effects.\n\n2. **Incorrect Options**:\n   - **Using a smaller sample size to reduce variability**: This option is incorrect because a smaller sample size actually decreases statistical power, making it harder to detect significant effects due to increased sampling error and variability in the data.\n   - **Decreasing the alpha level from .05 to .01**: This option is wrong because lowering the alpha level reduces the probability of making a Type I error, but it also decreases the power of the study, as it becomes more difficult to reject the null hypothesis.\n   - **Using a nonparametric test instead of a parametric test**: This is incorrect because nonparametric tests are generally less powerful than parametric tests, meaning they are less likely to detect significant effects when the assumptions for parametric tests are met.",
+      "kn": "KN56",
+      "kn_explanation": "This question addresses factors influencing power and error rates, focusing on statistical interpretation (KN56).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are plausible, but only one correctly identifies a factor that increases power, making this question effective for EPPP preparation.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Inferential Stats.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Inferential Stats.json::23",
+      "domain": 7,
+      "isScored": true
+    },
+    {
+      "stem": "Dr. Torres is the clinical director of a community mental health center. She is asked to provide individual clinical supervision to Dr. Reyes, a newly licensed psychologist at the center, over whom she also has direct hiring and firing authority. According to ethical considerations regarding multiple relationships in supervision, which factor creates the GREATEST ethical concern in this arrangement?",
+      "options": [
+        "The supervision is occurring within an institutional rather than private practice setting",
+        "Dr. Reyes is newly licensed rather than a pre-doctoral trainee",
+        "The combination of evaluative supervisory power and administrative authority over employment creates a significant power differential",
+        "Dr. Torres may not have expertise in all areas of Dr. Reyes's clinical work"
+      ],
+      "answer": "The combination of evaluative supervisory power and administrative authority over employment creates a significant power differential",
+      "explanation": "The lesson content on multiple relationships, particularly Gottlieb's decision-making model, identifies power differential as a key risk factor. The lesson states that a 'Large gap (supervisor-supervisee)' represents higher risk, and when the supervisor also controls hiring and firing decisions, the power differential is compounded. This creates a situation where the supervisee may not feel safe disclosing clinical struggles or disagreeing with the supervisor, undermining the purpose of supervision. Option A is wrong because the institutional setting is not the primary ethical concern. Option B is wrong because licensure status is less relevant than the power dynamic. Option D is wrong because competence concerns, while valid, are a separate issue from the multiple relationship created by the dual authority role.",
+      "kn": "KN64",
+      "kn_explanation": "This question is best aligned with KN64 because it tests Identification and management of potential ethical issues.",
+      "difficulty": "hard",
+      "quality_comment": "Tests application of Gottlieb's model to a supervisory context. Supported by lesson content on power differentials in multiple relationships.",
+      "suggestedLesson": "8-standards-3-4",
+      "suggestedParagraph": "#### Gottlieb's Decision-Making Model",
+      "lessonExcerpt": "Large gap (supervisor-supervisee) [represents] Higher Risk",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 9,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 3 and 4.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 3 and 4.json::1",
+      "domain": 8,
+      "isScored": true
+    }
+  ]
+}

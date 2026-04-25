@@ -1,0 +1,285 @@
+{
+  "meta": {
+    "examId": "warmup-12-22",
+    "totalQuestions": 12,
+    "examType": "warmup",
+    "warmupLength": 12,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 2,
+      "4": 1,
+      "5": 3,
+      "6": 1,
+      "7": 1,
+      "8": 1,
+      "3-5-6": 1
+    },
+    "generatedAt": "2026-04-25T05:56:49.914421Z"
+  },
+  "questions": [
+    {
+      "stem": "A genetic counselor explains to a couple that the husband has been diagnosed with Huntington's disease. When asked about the probability of their future children developing the condition, the counselor should explain that each child has a:",
+      "options": [
+        "25% chance of developing the disease, as it follows an autosomal recessive pattern",
+        "50% chance of developing the disease, as it follows an autosomal dominant pattern",
+        "Variable risk depending on the child's sex, as it is an X-linked dominant condition",
+        "Nearly 100% chance if the father is homozygous, as the gene shows incomplete penetrance"
+      ],
+      "answer": "50% chance of developing the disease, as it follows an autosomal dominant pattern",
+      "explanation": "Huntington's disease is an autosomal dominant genetic disorder caused by a mutated gene on chromosome 4. Because only one copy of the mutated gene is needed to develop the disease, each child of an affected parent has a 50% chance of inheriting it. Option A is incorrect because Huntington's is dominant, not recessive (a recessive pattern would require both parents to carry the gene). Option C is incorrect because Huntington's is autosomal (chromosome 4), not X-linked, so sex does not affect transmission. Option D introduces concepts of incomplete penetrance that do not apply — Huntington's shows essentially complete penetrance.",
+      "kn": "KN4",
+      "kn_explanation": "This question is best aligned with KN4 because it tests Behavioral genetics, transmission and expression of genetic information, and its modification, and the role and limitations of this information in understanding disorders.",
+      "difficulty": "medium",
+      "quality_comment": "Directly and strongly supported by lesson content with explicit statements about autosomal dominant inheritance and 50% risk.",
+      "suggestedLesson": "1-neurological-endocrine-disorders",
+      "suggestedParagraph": "### Huntington's Disease: The Genetic Movement Disorder",
+      "lessonExcerpt": "Huntington's disease is a devastating hereditary condition caused by a mutated gene on chromosome 4. Because it's autosomal dominant, each child of an affected parent has a 50% chance of inheriting it.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 25,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Neurological and Endocrine Disorders.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Neurological and Endocrine Disorders.json::10",
+      "domain": 1,
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following best describes the Rosenthal effect in the context of expectations influencing performance?",
+      "options": [
+        "The tendency for individuals to perform better when they believe they are being observed.",
+        "The phenomenon where higher expectations lead to improved performance due to increased motivation.",
+        "The effect where individuals perform worse when they are aware of being evaluated.",
+        "The impact of external rewards on intrinsic motivation."
+      ],
+      "answer": "The phenomenon where higher expectations lead to improved performance due to increased motivation.",
+      "explanation": "The Rosenthal effect, or Pygmalion effect, refers to the idea that higher expectations from others can lead to improved performance. Option A describes observation effects, which are not specific to expectations. Option C refers to a different phenomenon related to evaluation apprehension, and Option D discusses external rewards, which is unrelated to the Rosenthal effect.",
+      "kn": "KN7",
+      "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and directly assesses knowledge of the Rosenthal effect.",
+      "suggestedLesson": "2-classical-conditioning-interventions",
+      "suggestedParagraph": "## Why Classical Conditioning Interventions Matter for Your Career",
+      "lessonExcerpt": "Understanding these techniques will give you practical tools for treating anxiety disorders, phobias, PTSD, and addictive behaviors.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 1,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Classical Conditioning Interventions.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Classical Conditioning Interventions.json::0",
+      "domain": 2,
+      "isScored": true
+    },
+    {
+      "stem": "In Sherif’s Robbers Cave study, which intervention was found to most effectively reduce intergroup hostility between competing groups?",
+      "options": [
+        "Establishing equal status contact",
+        "Introducing superordinate goals",
+        "Increasing competition within groups",
+        "Separating groups physically"
+      ],
+      "answer": "Introducing superordinate goals",
+      "explanation": "1. **Correct Answer: Introducing superordinate goals**  \nIn Sherif’s Robbers Cave study, the introduction of superordinate goals was found to be the most effective intervention for reducing intergroup hostility. Superordinate goals are objectives that can only be achieved through cooperation between competing groups, which fosters collaboration and reduces animosity, as demonstrated by the boys in the study who were able to work together towards common goals after initially being hostile towards one another.\n\n2. **Incorrect Options:**\n- **Establishing equal status contact:** While equal status contact is an important factor in reducing prejudice, it was not the primary intervention that effectively reduced hostility in the Robbers Cave study; it was the cooperation towards superordinate goals that proved most effective.\n- **Increasing competition within groups:** This option is incorrect because increasing competition only heightened hostility between the groups, as evidenced by the initial phase of the study where competition led to increased aggression and antagonism.\n- **Separating groups physically:** Separating groups physically does not address the underlying hostility and may reinforce divisions; the study showed that bringing the groups together to work towards common goals was essential for reducing intergroup conflict.",
+      "kn": "KN15",
+      "kn_explanation": "This question is best aligned with KN15 because it tests Social interaction and relationships (e.g., attraction, aggression, altruism, organizational justice, verbal and non-verbal communication, internet communication, mate selection, empathy).",
+      "difficulty": "easy",
+      "quality_comment": "This item is clear and has one well-supported correct answer with plausible distractors reflective of related constructs.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Helping and Hurting.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Helping and Hurting.json::34",
+      "domain": 3,
+      "isScored": true
+    },
+    {
+      "stem": "According to Gelfand's research, which characteristic is more likely in individuals from tight cultures compared to loose cultures?",
+      "options": [
+        "Lower conscientiousness and higher openness to experience",
+        "Higher conformity to social norms and preference for stability",
+        "Higher tolerance for deviant behavior and risk-taking",
+        "Greater willingness to innovate and challenge social norms"
+      ],
+      "answer": "Higher conformity to social norms and preference for stability",
+      "explanation": "1. The correct answer, \"Higher conformity to social norms and preference for stability,\" reflects Gelfand's findings that individuals in tight cultures exhibit stronger adherence to social norms and lower tolerance for deviant behaviors. These cultures often develop strict social norms as a response to ecological and human-made challenges, necessitating conformity to maintain order and stability within the society.\n\n2. The option \"Lower conscientiousness and higher openness to experience\" is incorrect because Gelfand's research indicates that individuals in tight cultures tend to have higher levels of conscientiousness and lower levels of openness to experience, contrasting with loose cultures. The statement \"Higher tolerance for deviant behavior and risk-taking\" is also wrong, as tight cultures are characterized by low tolerance for deviant behaviors, not higher. The option \"Greater willingness to innovate and challenge social norms\" is incorrect because individuals in tight cultures are less likely to innovate or challenge established norms, in contrast to those in loose cultures who are more open to such behaviors.",
+      "kn": "KN18",
+      "kn_explanation": "This question is best aligned with KN18 because it tests Cultural and sociopolitical psychology (e.g., privilege, cross-cultural comparisons, political differences, international and global awareness, religiosity and spirituality, acculturation).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors represent opposite traits of tight vs loose cultures, requiring examinees to know the conceptual framework for effective elimination.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Concepts.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Concepts.json::17",
+      "domain": 3,
+      "isScored": true
+    },
+    {
+      "stem": "At approximately what age do infants typically begin to use telegraphic speech characterized by two-word phrases?",
+      "options": [
+        "6 to 8 weeks",
+        "3 to 6 months",
+        "12 to 15 months",
+        "18 to 24 months"
+      ],
+      "answer": "18 to 24 months",
+      "explanation": "1. The correct answer, \"18 to 24 months,\" is based on the language development milestones outlined in the reference material. During this period, children begin to use telegraphic speech, which consists of two-word phrases that convey meaning, such as \"want juice\" or \"doggie gone.\" This stage represents an important advancement in language development as children start to express more complex thoughts using minimal words.\n\n2. The option \"6 to 8 weeks\" is incorrect because, at this age, infants are in the cooing stage, producing vowel-like sounds rather than forming words or phrases. The option \"3 to 6 months\" is also wrong since infants are typically babbling during this stage, which involves consonant-vowel combinations rather than meaningful speech. Lastly, \"12 to 15 months\" is incorrect because, although children may say their first words around this age, telegraphic speech does not begin until they are 18 to 24 months old.",
+      "kn": "KN21",
+      "kn_explanation": "The question pertains to language development milestones within normal growth across the lifespan.",
+      "difficulty": "easy",
+      "quality_comment": "The time frames are distinct and well chosen, making the question suitable for assessing milestone knowledge.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Language Development.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Language Development.json::13",
+      "domain": 4,
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following best describes the clinical utility of the Vineland Adaptive Behavior Scales, 3rd Edition (Vineland-3) in assessment?",
+      "options": [
+        "It provides quantitative data on depressive symptom severity over two weeks.",
+        "It offers a comprehensive assessment of adaptive behavior domains necessary for diagnosis and treatment planning.",
+        "It is a performance-based test requiring direct patient interaction with visual stimuli.",
+        "It screens for cognitive impairment through immediate and delayed recall tasks."
+      ],
+      "answer": "It offers a comprehensive assessment of adaptive behavior domains necessary for diagnosis and treatment planning.",
+      "explanation": "1. The statement \"It offers a comprehensive assessment of adaptive behavior domains necessary for diagnosis and treatment planning\" is correct because the Vineland Adaptive Behavior Scales, 3rd Edition (Vineland-3) is specifically designed to evaluate adaptive functioning across various domains, including Communication, Daily Living Skills, and Socialization. This comprehensive assessment aids in diagnosing conditions such as intellectual disability and autism spectrum disorder and assists in treatment planning based on the individual's adaptive behavior profile.\n\n2. The incorrect options are as follows:\n- \"It provides quantitative data on depressive symptom severity over two weeks.\" This statement is incorrect because it describes the Beck Depression Inventory-II (BDI-II), which specifically measures depressive symptoms rather than adaptive behavior.\n- \"It is a performance-based test requiring direct patient interaction with visual stimuli.\" This is inaccurate as the Vineland-3 primarily gathers information through caregiver or teacher reports rather than direct performance-based assessments.\n- \"It screens for cognitive impairment through immediate and delayed recall tasks.\" This option is wrong because it refers to tests like the Wechsler Memory Scale, which assess memory functions, not the adaptive behaviors evaluated by the Vineland-3.",
+      "kn": "KN32",
+      "kn_explanation": "This question relates to the practical use of adaptive behavior measures in clinical assessment frameworks, matching the knowledge area on test applications (KN32).",
+      "difficulty": "easy",
+      "quality_comment": "The item clearly contrasts different types of assessments, making it suitable for assessing real-world clinical decision-making knowledge.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Clinical Tests.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Clinical Tests.json::99",
+      "domain": 5,
+      "isScored": true
+    },
+    {
+      "stem": "In the context of disruptive behavior disorders, which of the following symptoms would be indicative of a diagnosis of conduct disorder rather than oppositional defiant disorder?",
+      "options": [
+        "Often loses temper",
+        "Engaging in physical fights",
+        "Argues actively with adults",
+        "Has a negative attitude towards authority"
+      ],
+      "answer": "Engaging in physical fights",
+      "explanation": "1. \"Engaging in physical fights\" is indicative of conduct disorder (CD) because it falls under the category of aggression towards people, which is a characteristic symptom required for a CD diagnosis. Conduct disorder is defined by a persistent pattern of behavior that violates the rights of others or social norms, and physical aggression is a clear violation of these rights. In contrast, oppositional defiant disorder (ODD) primarily involves angry/irritable moods and argumentative behaviors without the severe aggression that characterizes CD.\n\n2. \n- **Often loses temper:** This symptom is associated with oppositional defiant disorder, where individuals frequently exhibit irritability and anger but do not necessarily engage in aggressive behaviors that violate others' rights.\n- **Argues actively with adults:** This behavior is characteristic of ODD, indicating a defiant attitude towards authority figures, rather than the more severe and aggressive behaviors seen in conduct disorder.\n- **Has a negative attitude towards authority:** This symptom reflects the defiant and oppositional nature of ODD, which involves challenging authority without the significant aggression or rule-breaking behaviors required for a diagnosis of conduct disorder.",
+      "difficulty": "hard",
+      "kn": "KN36",
+      "kn_explanation": "This question tests knowledge of classification systems and differential diagnosis (KN36) by distinguishing features of ODD versus conduct disorder.",
+      "quality_comment": "This question challenges the test-taker to apply their understanding of the distinctions between conduct disorder and oppositional defiant disorder in a nuanced way.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "harder",
+      "tags": [
+        "lock_in_drill"
+      ],
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Acting Out.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Acting Out.json::16",
+      "domain": 5,
+      "isScored": true
+    },
+    {
+      "stem": "When the reliability of the predictor and/or the criterion measure decreases, what is the effect on the criterion-related validity coefficient if uncorrected for attenuation?",
+      "options": [
+        "It is reduced and underestimates the true relationship due to measurement error",
+        "It increases because more variability is accounted for",
+        "It remains unaffected since reliability does not influence validity",
+        "It becomes exactly equal to the predictor’s reliability coefficient"
+      ],
+      "answer": "It is reduced and underestimates the true relationship due to measurement error",
+      "explanation": "1. The correct answer, \"It is reduced and underestimates the true relationship due to measurement error,\" is accurate because when the reliability of the predictor and/or criterion decreases, the criterion-related validity coefficient is negatively affected. This occurs because lower reliability introduces measurement error, which attenuates the correlation between the predictor and criterion, leading to an underestimation of the true relationship between them.\n\n2. The first incorrect option, \"It increases because more variability is accounted for,\" is wrong because a decrease in reliability does not lead to an increase in variability accounted for; rather, it introduces more error, diminishing the validity coefficient. \n\nThe second incorrect option, \"It remains unaffected since reliability does not influence validity,\" is incorrect because reliability directly impacts validity; a predictor’s validity cannot exceed its reliability, meaning that decreased reliability will affect the validity coefficient. \n\nThe third incorrect option, \"It becomes exactly equal to the predictor’s reliability coefficient,\" is misleading because while the criterion-related validity coefficient cannot exceed the reliability coefficient, a decrease in reliability does not automatically equate the validity coefficient to the reliability; it would likely be lower due to measurement error.",
+      "kn": "KN29",
+      "kn_explanation": "Understanding correction for attenuation involves concepts of reliability affecting validity coefficients, core to psychometric knowledge in assessment and diagnosis.",
+      "difficulty": "medium",
+      "quality_comment": "The stem clearly presents a common pitfall; the distractors test common misunderstandings about relationships between reliability and validity.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Can Tests Predict.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Can Tests Predict.json::7",
+      "domain": 5,
+      "isScored": true
+    },
+    {
+      "stem": "A client participates in both weekly individual psychotherapy and an outpatient interpersonal therapy group. After several months, the group therapist notices that whenever another member directly challenges the client's behavior, the client responds, 'That's a good point—I'll definitely bring that up with my individual therapist.' The individual therapist similarly observes that the client consistently avoids discussing interpersonal relationship themes, saying she prefers to work on those in group. This dynamic most clearly illustrates which recognized disadvantage of concurrent individual and group therapy?",
+      "options": [
+        "Role diffusion, in which the client loses clarity about the distinct therapeutic purpose of each modality",
+        "Splitting, in which the client selectively divides therapeutic material between treatment settings to avoid full engagement in either",
+        "Countertransference collusion, in which both therapists unconsciously reinforce the client's avoidance of core material",
+        "Scapegoating, in which the group displaces its collective negative affect onto the client who also receives individual care"
+      ],
+      "answer": "Splitting, in which the client selectively divides therapeutic material between treatment settings to avoid full engagement in either",
+      "explanation": "A recognized disadvantage of concurrent individual and group therapy is that clients may split their therapeutic work—strategically allocating certain issues to individual therapy while reserving others for group—thereby avoiding complete engagement and therapeutic pressure in either setting. This compartmentalization allows the client to deflect difficult material and resist deeper processing. Option A (role diffusion) describes confusion about therapeutic purpose, not avoidance through material division. Option C (countertransference collusion) would be a therapist-driven phenomenon, whereas this dynamic is client-initiated. Option D (scapegoating) is a group process issue unrelated to the concurrent format per se.",
+      "kn": "KN46",
+      "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
+      "difficulty": "hard",
+      "quality_comment": "High-quality clinical scenario requiring sophisticated understanding of group therapy limitations. The group therapy section of. Content goes beyond current lesson material — valid EPPP topic, no lesson excerpt available.",
+      "suggestedLesson": "6-family-and-group",
+      "suggestedParagraph": "## Group Therapy",
+      "lessonExcerpt": "",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 25,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Family and Group.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Family and Group.json::3",
+      "domain": 6,
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following best describes ecological validity?",
+      "options": [
+        "Generalizability of results to different people in the population",
+        "Generalizability of results across multiple time periods",
+        "Generalizability of results to real-world settings or environments",
+        "Generalizability of results to various outcome measures"
+      ],
+      "answer": "Generalizability of results to real-world settings or environments",
+      "explanation": "1. The correct answer, \"Generalizability of results to real-world settings or environments,\" accurately describes ecological validity, which is a subcategory of external validity. Ecological validity specifically assesses whether the findings of a study can be applied to everyday situations outside of the controlled experimental conditions, emphasizing the relevance and applicability of the results in practical, real-world contexts.\n\n2. The incorrect options are as follows:\n   - \"Generalizability of results to different people in the population\" describes population validity, which focuses on how well study results can apply to a broader demographic beyond the sample used.\n   - \"Generalizability of results across multiple time periods\" refers to temporal validity, which assesses whether findings remain applicable over different times or historical contexts.\n   - \"Generalizability of results to various outcome measures\" pertains to outcome validity, which evaluates whether results can be extended to different but related dependent variables.",
+      "kn": "KN57",
+      "kn_explanation": "Ecological validity is a subcategory of external validity concerned with applicability to practical settings, making it important to understand in research evaluation.",
+      "difficulty": "easy",
+      "quality_comment": "This straightforward item supplements existing external validity questions by focusing on a key subcategory that is well covered in the source content.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Internal and External Validity.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Internal and External Validity.json::22",
+      "domain": 7,
+      "isScored": true
+    },
+    {
+      "stem": "What is the ethical stance on providing pro bono services in psychology?",
+      "options": [
+        "Psychologists are required to provide pro bono services.",
+        "Psychologists are encouraged to contribute professional time for little or no compensation.",
+        "Psychologists must only work for financial gain.",
+        "Psychologists should avoid pro bono work to maintain professionalism."
+      ],
+      "answer": "Psychologists are encouraged to contribute professional time for little or no compensation.",
+      "explanation": "The correct answer reflects the aspirational nature of pro bono work in the ethics code, which encourages but does not mandate such contributions. The other options misrepresent the ethical guidelines.",
+      "kn": "KN61",
+      "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests understanding of ethical practice regarding pro bono work.",
+      "suggestedLesson": "8-standards-1-2",
+      "suggestedParagraph": "## The Five General Principles",
+      "lessonExcerpt": "Psychologists are encouraged to contribute professional time for little or no compensation.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 29,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 1 and 2.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 1 and 2.json::9",
+      "domain": 8,
+      "isScored": true
+    },
+    {
+      "stem": "A multidisciplinary treatment team at a prestigious hospital is discussing discharge planning for a high-risk patient. The team is highly cohesive and led by an attending physician who states her preference for early discharge before inviting input. Team members privately have concerns but remain silent, interpreting others' silence as agreement. One senior nurse redirects conversations away from a junior staff member's attempt to raise safety data. Which combination of groupthink symptoms is MOST evident in this scenario?",
+      "options": [
+        "Illusion of invulnerability, collective rationalization, and excessive stereotyping",
+        "Self-censorship, illusion of unanimity, and mindguards",
+        "Belief in inherent morality, collective rationalization, and self-censorship",
+        "Excessive stereotyping, illusion of invulnerability, and mindguards"
+      ],
+      "answer": "Self-censorship, illusion of unanimity, and mindguards",
+      "explanation": "The scenario illustrates three specific groupthink symptoms identified by Janis: (1) Self-censorship—members suppress their private doubts to maintain harmony; (2) Illusion of unanimity—silence is interpreted as agreement, when in fact members have unexpressed concerns; (3) Mindguards—the senior nurse acts as a self-appointed protector who shields the group from contradictory information by redirecting away from the junior staff member's safety data. Option A is incorrect because the scenario does not describe the group feeling invulnerable to failure or dismissing warnings as irrelevant, nor stereotyping critics. Option C is incorrect because there is no mention of the group believing their decisions are inherently ethical (belief in inherent morality) or dismissing external warnings (collective rationalization). Option D is incorrect because there is no evidence of the group viewing critics as incompetent or feeling invulnerable.",
+      "kn": "KN16",
+      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
+      "difficulty": "hard",
+      "quality_comment": "Complex scenario requiring examinees to match specific observable behaviors to Janis's groupthink symptoms rather than simply recognizing the concept. Tests discrimination among symptom clusters.",
+      "suggestedLesson": "5-6-workplace-decisions",
+      "suggestedParagraph": "### Symptoms of Groupthink",
+      "lessonExcerpt": "Self-censorship: Members suppress doubts to maintain harmony. Illusion of unanimity: Silence is interpreted as agreement. Mindguards: Self-appointed members shield the group from contradictory information.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 22,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/5 6 Workplace Decisions.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/5 6 Workplace Decisions.json::3",
+      "domain": "3-5-6",
+      "isScored": true
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "meta": {
+    "examId": "warmup-8-39",
+    "totalQuestions": 8,
+    "examType": "warmup",
+    "warmupLength": 8,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 1,
+      "7": 1,
+      "8": 1
+    },
+    "generatedAt": "2026-04-25T05:56:49.914421Z"
+  },
+  "questions": [
+    {
+      "stem": "During the fight-or-flight response, which of the following physiological changes is primarily mediated by the sympathetic nervous system?",
+      "options": [
+        "Increased digestion",
+        "Pupil constriction",
+        "Decreased heart rate",
+        "Sweating"
+      ],
+      "answer": "Sweating",
+      "explanation": "1. \"Sweating\" is the correct answer because it is a physiological change primarily mediated by the sympathetic nervous system during the fight-or-flight response. The sympathetic nervous system activates bodily functions that prepare the body for action, which includes increasing perspiration to help cool the body during stressful situations.\n\n2. The option \"Increased digestion\" is incorrect because the sympathetic nervous system inhibits digestion to conserve energy for immediate physical responses. \"Pupil constriction\" is also incorrect, as the sympathetic nervous system causes pupil dilation to enhance vision and allow more light during emergencies. Lastly, \"Decreased heart rate\" is wrong because the sympathetic nervous system increases heart rate to pump more blood and oxygen to muscles, facilitating a quick reaction to threats.",
+      "kn": "KN1",
+      "kn_explanation": "The item focuses on autonomic nervous system functions, specifically sympathetic responses, relating to biological bases of behavior (KN1).",
+      "difficulty": "medium",
+      "quality_comment": "Options are reasonably balanced, and the question clearly assesses physiological responses controlled by the sympathetic nervous system.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Neurons and Neurotransmitters.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Neurons and Neurotransmitters.json::16",
+      "domain": 1,
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following is a core assumption of the adaptive information processing (AIP) model upon which EMDR is based?",
+      "options": [
+        "Pathology results from traumatic memories that are unprocessed or maladaptively processed by the brain’s information system",
+        "Anxiety responses are solely conditioned and extinguished through repeated exposure",
+        "Relaxation response inhibits fear through reciprocal inhibition",
+        "Addictions arise only from operant conditioning mechanisms"
+      ],
+      "answer": "Pathology results from traumatic memories that are unprocessed or maladaptively processed by the brain’s information system",
+      "explanation": "1. The correct answer, \"Pathology results from traumatic memories that are unprocessed or maladaptively processed by the brain’s information system,\" aligns with the adaptive information processing (AIP) model on which EMDR is based. This model posits that psychological issues arise when traumatic experiences are not fully processed or are processed in a way that leads to maladaptive responses, hindering the brain's natural ability to integrate these memories effectively.\n\n2. The incorrect options are as follows:\n\n- \"Anxiety responses are solely conditioned and extinguished through repeated exposure\": This statement is inaccurate because it oversimplifies anxiety responses by ignoring the role of unprocessed traumatic memories as described in the AIP model, which emphasizes the importance of processing these memories rather than just conditioning and extinction.\n\n- \"Relaxation response inhibits fear through reciprocal inhibition\": This option is incorrect as it pertains to systematic desensitization rather than EMDR. The AIP model does not focus on reciprocal inhibition but rather on the processing of traumatic memories.\n\n- \"Addictions arise only from operant conditioning mechanisms\": This statement is misleading because it suggests a sole basis for addiction in operant conditioning, whereas the AIP model and cue exposure therapy highlight the significance of conditioned stimuli and the role of unprocessed memories in addiction.",
+      "kn": "KN7",
+      "kn_explanation": "This question targets theoretical foundations of EMDR, a classical conditioning-related intervention, fitting learning theories in KN7.",
+      "difficulty": "medium",
+      "quality_comment": "Well-formulated question testing understanding of a model underlying an intervention, with plausible and distinct distractors.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Classical Conditioning Interventions.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Classical Conditioning Interventions.json::18",
+      "domain": 2,
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following statements accurately reflects cultural differences in the fundamental attribution error as found by Miller (1984)?",
+      "options": [
+        "North American adults and Asian Indian adults make equally dispositional attributions for negative events",
+        "Both North American and Asian Indian adolescents make predominantly situational attributions for negative events",
+        "North American adults tend to make more dispositional attributions than Asian Indian adults for negative events",
+        "Asian Indian children make more dispositional attributions than North American children"
+      ],
+      "answer": "North American adults tend to make more dispositional attributions than Asian Indian adults for negative events",
+      "explanation": "Miller's study found cultural differences arise in adolescence and adulthood, with North Americans favoring dispositional attributions and Asian Indians favoring situational explanations for negative events.",
+      "kn": "KN14",
+      "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
+      "difficulty": "medium",
+      "quality_comment": "The question is well constructed to distinguish knowledge of cultural variations in attribution, with credible distractors reflecting common misconceptions.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Why People Do Things.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Why People Do Things.json::23",
+      "domain": 3,
+      "isScored": true
+    },
+    {
+      "stem": "Which prenatal period corresponds to the second trimester, and what major developmental processes occur during this time?",
+      "options": [
+        "Weeks 1–13; organ formation and implantation",
+        "Weeks 14–27; growth and maturation of organs and structures",
+        "Weeks 28–birth; initial cellular differentiation",
+        "Weeks 3–8; establishment of major organ systems"
+      ],
+      "answer": "Weeks 14–27; growth and maturation of organs and structures",
+      "explanation": "1. The correct answer, \"Weeks 14–27; growth and maturation of organs and structures,\" accurately describes the second trimester of prenatal development. During this period, the major organs and structures formed in the embryonic period continue to grow and mature, preparing the fetus for survival outside the womb.\n\n2. The first incorrect option, \"Weeks 1–13; organ formation and implantation,\" refers to the first trimester, which is characterized by the germinal and early embryonic periods where implantation and initial organ formation occur, not growth and maturation. The second incorrect option, \"Weeks 28–birth; initial cellular differentiation,\" incorrectly identifies the third trimester, which primarily involves further growth and maturation rather than initial differentiation. Lastly, the option \"Weeks 3–8; establishment of major organ systems\" describes the embryonic period when major organs are forming, rather than the growth and maturation processes that occur in the second trimester.",
+      "kn": "KN21",
+      "kn_explanation": "This question assesses precise knowledge of prenatal trimester timing and associated developmental processes, relevant to normal growth and development (KN21).",
+      "difficulty": "easy",
+      "quality_comment": "Clear and straightforward item that reinforces basic knowledge of prenatal developmental periods; distractors are conceptually related but incorrect.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Before Birth.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Before Birth.json::21",
+      "domain": 4,
+      "isScored": true
+    },
+    {
+      "stem": "Which cognitive theory of depression emphasizes the role of negative thoughts about oneself, the world, and the future?",
+      "options": [
+        "Beck's cognitive theory",
+        "Lewinsohn's social reinforcement theory",
+        "Seligman’s original learned helplessness model",
+        "Hopelessness theory"
+      ],
+      "answer": "Beck's cognitive theory",
+      "explanation": "1. \"Beck's cognitive theory\" is the correct answer because it specifically attributes depression to a negative cognitive triad that consists of negative thoughts about oneself, the world, and the future. This theory posits that these pervasive negative thoughts contribute significantly to the development and maintenance of depressive symptoms.\n\n2. The incorrect options are as follows:\n- **Lewinsohn's social reinforcement theory** focuses on the lack of response-contingent reinforcement for social behaviors, leading to social isolation and depression, rather than specifically addressing negative thoughts about oneself or the future.\n- **Seligman’s original learned helplessness model** links depression to repeated exposure to uncontrollable negative life events, emphasizing helplessness rather than a cognitive triad of negative thoughts.\n- **Hopelessness theory** describes hopelessness as a proximal cause of depression but does not specifically emphasize the triad of negative thoughts about oneself, the world, and the future that Beck's theory highlights.",
+      "kn": "KN32",
+      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
+      "difficulty": "easy",
+      "quality_comment": "Clear stem with distinct and well-known theoretical options, ideal for exam preparation.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Mood.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Mood.json::18",
+      "domain": 5,
+      "isScored": true
+    },
+    {
+      "stem": "In Gordon's model of prevention, what type of prevention targets individuals who have minimal signs or symptoms of a disorder but have not yet received a diagnosis?",
+      "options": [
+        "Universal prevention",
+        "Selective prevention",
+        "Indicated prevention",
+        "Tertiary prevention"
+      ],
+      "answer": "Indicated prevention",
+      "explanation": "1. **Indicated prevention** is the correct answer because it specifically targets individuals who exhibit early or minimal signs of a disorder but have not yet received a formal diagnosis. In Gordon's model of prevention, indicated prevention aims to intervene at this initial stage to prevent the development of a full-blown disorder, thereby addressing potential issues before they escalate.\n\n2. The other options are incorrect for the following reasons:\n\n- **Universal prevention** targets entire populations or groups, regardless of their risk status, and is not focused on individuals with any signs of a disorder.\n- **Selective prevention** is aimed at individuals identified as being at increased risk for a disorder due to specific biological, psychological, or social characteristics, rather than those with minimal signs or symptoms.\n- **Tertiary prevention** focuses on individuals who have already been diagnosed with a disorder, aiming to reduce the severity and duration of the condition, which is not applicable to those who have not yet received a diagnosis.",
+      "kn": "KN51",
+      "kn_explanation": "This question is best aligned with KN51 because it tests Approaches to health promotion, risk reduction, resilience, and wellness.",
+      "difficulty": "easy",
+      "quality_comment": "Clear presentation with distractors varying in prevention type and level of risk, effective for EPPP learners.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Prevention and Consultation.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Prevention and Consultation.json::32",
+      "domain": 6,
+      "isScored": true
+    },
+    {
+      "stem": "Stepwise multiple regression differs from simultaneous multiple regression in that it:",
+      "options": [
+        "Includes all predictors at once to assess their combined predictive power",
+        "Adds or removes predictors one at a time to find the most parsimonious model",
+        "Is limited to only two predictor variables",
+        "Disregards multicollinearity among predictors"
+      ],
+      "answer": "Adds or removes predictors one at a time to find the most parsimonious model",
+      "explanation": "1. The correct answer, \"Adds or removes predictors one at a time to find the most parsimonious model,\" accurately describes stepwise multiple regression, which involves a systematic approach to include or exclude predictors based on their contribution to the predictive power of the model. This method aims to identify the fewest number of predictors necessary for accurate predictions, enhancing model simplicity and interpretability.\n\n2. The option \"Includes all predictors at once to assess their combined predictive power\" is incorrect because that describes simultaneous multiple regression, which evaluates all predictors together without sequentially adding or removing them. The statement \"Is limited to only two predictor variables\" is wrong because stepwise multiple regression can involve any number of predictor variables, not just two. Lastly, \"Disregards multicollinearity among predictors\" is inaccurate since stepwise regression can still be affected by multicollinearity; it aims to minimize this by selecting the best combination of predictors.",
+      "kn": "KN55",
+      "kn_explanation": "This question is best aligned with KN55 because it tests Analytic methods, including qualitative (e.g., thematic, phenomenological) and quantitative (e.g., probability theory; descriptive, inferential, and parametric statistics; meta-analysis; factor analysis; causal modeling).",
+      "difficulty": "medium",
+      "quality_comment": "Options cover common regression methods and misinterpretations, promoting discrimination of concepts related to regression procedures.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Correlation and Regression.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Correlation and Regression.json::26",
+      "domain": 7,
+      "isScored": true
+    },
+    {
+      "stem": "A graduate student who earned a master's degree in counseling psychology from a prestigious international university that is not regionally accredited in the United States wants to advertise mental health services using that degree as a credential. According to Standard 5.01 of the APA Ethics Code, under which circumstance would this be permissible?",
+      "options": [
+        "If the student can demonstrate the program was equivalent in rigor to a U.S. program",
+        "If the degree was accepted by the state licensing board as the basis for a psychology license",
+        "If the student completes an additional year of supervised practice in the United States",
+        "If the international university holds accreditation from an internationally recognized body"
+      ],
+      "answer": "If the degree was accepted by the state licensing board as the basis for a psychology license",
+      "explanation": "Standard 5.01 specifies that acceptable degree credentials for mental health services are either doctoral degrees from regionally accredited institutions OR degrees that the state licensing board accepted as the basis for licensure. Option A is incorrect because demonstrated equivalence alone is insufficient without licensing board acceptance. Option C is incorrect because additional supervised practice does not change the credential status of the degree itself. Option D is incorrect because international accreditation is not one of the two recognized pathways.",
+      "kn": "KN61",
+      "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
+      "difficulty": "hard",
+      "quality_comment": "Tests a specific and frequently examined rule about degree credentials. The international degree scenario is a realistic edge case.",
+      "suggestedLesson": "8-standards-5-6",
+      "suggestedParagraph": "### The Core Principle: Truth in All Forms",
+      "lessonExcerpt": "According to Standard 5.01, acceptable degrees are either: 1. Doctoral degrees in psychology from regionally accredited institutions, OR 2. Degrees (from any institution) that your state licensing board accepted as the basis for your psychology license",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 22,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 5 and 6.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 5 and 6.json::24",
+      "domain": 8,
+      "isScored": true
+    }
+  ]
+}

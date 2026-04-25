@@ -1,0 +1,191 @@
+{
+  "meta": {
+    "examId": "warmup-8-36",
+    "totalQuestions": 8,
+    "examType": "warmup",
+    "warmupLength": 8,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 1,
+      "7": 1,
+      "8": 1
+    },
+    "generatedAt": "2026-04-25T05:56:49.914421Z"
+  },
+  "questions": [
+    {
+      "stem": "Which of the following is a key risk factor for developing type 2 diabetes mellitus?",
+      "options": [
+        "Autoimmune destruction of pancreatic beta cells",
+        "Genetic predisposition, being overweight, sedentary lifestyle, and age over 45",
+        "Primary insulin overproduction leading to hypoglycemia",
+        "Excessive antidiuretic hormone secretion"
+      ],
+      "answer": "Genetic predisposition, being overweight, sedentary lifestyle, and age over 45",
+      "explanation": "1. The correct answer, \"Genetic predisposition, being overweight, sedentary lifestyle, and age over 45,\" identifies key risk factors for developing type 2 diabetes mellitus. The reference material states that type 2 diabetes occurs when the pancreas produces insufficient insulin or the body cannot effectively use the insulin produced. Risk factors include genetic predisposition, obesity, a lack of physical activity, and being over 45 years of age, all of which contribute to insulin resistance and impaired glucose metabolism.\n\n2. The option \"Autoimmune destruction of pancreatic beta cells\" is incorrect because this describes type 1 diabetes, where the immune system attacks insulin-producing cells, rather than type 2 diabetes. \"Primary insulin overproduction leading to hypoglycemia\" is also wrong, as type 2 diabetes is characterized by insufficient insulin production or resistance, not overproduction. Lastly, \"Excessive antidiuretic hormone secretion\" is not relevant to diabetes mellitus; it relates to conditions like diabetes insipidus, which affects water regulation rather than blood glucose levels.",
+      "kn": "KN1",
+      "kn_explanation": "This question relates to endocrine system disorders and their neurobiological and physiological risk factors, consistent with KN1.",
+      "difficulty": "easy",
+      "quality_comment": "Options contrast type 1 and type 2 diabetes features well, facilitating clear understanding of disease epidemiology.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Neurological and Endocrine Disorders.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Neurological and Endocrine Disorders.json::53",
+      "domain": 1,
+      "isScored": true
+    },
+    {
+      "stem": "What does stimulus generalization in traumatic experiences refer to?",
+      "options": [
+        "The ability to recall specific details of a traumatic event",
+        "The tendency to respond similarly to stimuli that resemble the original trauma",
+        "The process of forgetting traumatic memories over time",
+        "The reduction of anxiety responses to trauma-related stimuli"
+      ],
+      "answer": "The tendency to respond similarly to stimuli that resemble the original trauma",
+      "explanation": "The correct answer is B because stimulus generalization refers to the phenomenon where responses to a specific traumatic event extend to similar stimuli. Option A is incorrect as it describes recall, not generalization. Option C is incorrect as it describes forgetting, not generalization. Option D is incorrect as it describes desensitization, not generalization.",
+      "kn": "KN7",
+      "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests knowledge of learning theories related to trauma.",
+      "suggestedLesson": "2-pavlov-and-classical-conditioning",
+      "suggestedParagraph": "## What Happens After Conditioning: Important Processes",
+      "lessonExcerpt": "Stimulus generalization occurs when stimuli similar to the original CS also elicit the conditioned response.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 20,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Pavlov and Classical Conditioning.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Pavlov and Classical Conditioning.json::9",
+      "domain": 2,
+      "isScored": true
+    },
+    {
+      "stem": "After a political election, individuals' recollections of their pre-election predictions become closer to the actual results than originally predicted. This is an example of:",
+      "options": [
+        "Hindsight bias",
+        "Base rate fallacy",
+        "Illusory correlation",
+        "Sunk-cost fallacy"
+      ],
+      "answer": "Hindsight bias",
+      "explanation": "1. **Hindsight bias** is the correct answer because it refers to the tendency of individuals to believe they predicted an event after it has occurred, leading them to inaccurately recall their pre-election predictions as being closer to the actual outcomes. This phenomenon occurs as people reconstruct their memories to align with the known results, making it seem as if they had a better understanding of the situation beforehand than they actually did.\n\n2. The **base rate fallacy** is incorrect because it involves ignoring or underusing statistical information about the general population in favor of specific case details; it does not pertain to the distortion of memory after an event. **Illusory correlation** is also wrong, as it refers to the overestimation of the relationship between two unrelated variables, which does not apply to the context of memory and prediction accuracy following an event. Lastly, the **sunk-cost fallacy** is not applicable here because it relates to the tendency to continue investing in a failing endeavor due to prior investments, rather than the retrospective evaluation of predictions after an event has occurred.",
+      "kn": "KN14",
+      "kn_explanation": "The question addresses memory distortions and judgment errors related to event outcome evaluations within social cognition.",
+      "difficulty": "medium",
+      "quality_comment": "The scenario is distinct and the distractors are other known biases, fostering precise knowledge assessment.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Errors and Shortcuts.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Errors and Shortcuts.json::20",
+      "domain": 3,
+      "isScored": true
+    },
+    {
+      "stem": "Which term best describes variations in sexual attractions and behaviors over time that differ from a person's stable sexual orientation labels?",
+      "options": [
+        "Bisexuality",
+        "Sexual fluidity",
+        "Sexual identity confusion",
+        "Gender dysphoria"
+      ],
+      "answer": "Sexual fluidity",
+      "explanation": "1. \"Sexual fluidity\" is the correct answer because it refers to changes in a person's sexual attractions and/or behaviors over time that are inconsistent with their self-described sexual orientation. This concept highlights the dynamic nature of sexual attraction, which can vary based on different situations and does not adhere to a fixed label.\n\n2. **Bisexuality** is incorrect because it describes a stable and persistent pattern of sexual attraction to both men and women, rather than variations over time. **Sexual identity confusion** is not the correct term as it refers to uncertainty or conflict regarding one's sexual orientation, rather than the variability of attractions and behaviors. **Gender dysphoria** is also incorrect because it pertains to the psychological distress experienced when a person's gender identity does not align with their biological sex, rather than variations in sexual attraction or behavior.",
+      "kn": "KN21",
+      "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
+      "difficulty": "medium",
+      "quality_comment": "The question distinguishes nuanced terminology relevant to sexual orientation and identity, suitable for graduate-level understanding.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Body Growth.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Body Growth.json::33",
+      "domain": 4,
+      "isScored": true
+    },
+    {
+      "stem": "Research investigating \"Scared Straight\" programs for youth with conduct disorder has generally found that these programs:",
+      "options": [
+        "Are effective in reducing future criminal behaviors.",
+        "Have no significant impact compared to no intervention.",
+        "Increase the likelihood of future delinquent behaviors.",
+        "Are recommended as first-line prevention interventions."
+      ],
+      "answer": "Increase the likelihood of future delinquent behaviors.",
+      "explanation": "1. The correct answer, \"Increase the likelihood of future delinquent behaviors,\" is supported by research indicating that \"Scared Straight\" programs have harmful effects on youth with conduct disorder. Studies have shown that participation in these programs tends to increase the likelihood that juvenile offenders and at-risk juveniles will engage in criminal behaviors in the future, contradicting the intended purpose of these interventions.\n\n2. The option \"Are effective in reducing future criminal behaviors\" is incorrect because research consistently shows that these programs do not achieve their goal of reducing criminal behavior; rather, they have the opposite effect. The option \"Have no significant impact compared to no intervention\" is wrong because the evidence suggests that these programs actually lead to negative outcomes, rather than having a neutral effect. Lastly, \"Are recommended as first-line prevention interventions\" is incorrect as the literature indicates that \"Scared Straight\" programs are not recommended; instead, they have been shown to be counterproductive for at-risk youth.",
+      "kn": "KN33",
+      "kn_explanation": "This question is best aligned with KN33 because it tests Issues of differential diagnosis and integration of non-psychological information into psychological assessment.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors represent common assumptions and recommendations, highlighting the importance of research evidence and making this a good item.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Acting Out.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Acting Out.json::9",
+      "domain": 5,
+      "isScored": true
+    },
+    {
+      "stem": "Which defense mechanism involves attributing one's own unacceptable impulses to another person?",
+      "options": [
+        "Reaction formation",
+        "Projection",
+        "Sublimation",
+        "Denial"
+      ],
+      "answer": "Projection",
+      "explanation": "1. **Projection** is the correct answer because it is defined as a defense mechanism where an individual attributes their own unacceptable impulses or feelings to another person. This mechanism allows individuals to avoid facing their own undesirable traits by perceiving them in others, thus alleviating their own anxiety related to those impulses.\n\n2. The incorrect options are as follows:\n- **Reaction formation** involves defending against an unacceptable impulse by expressing its opposite, rather than attributing it to another person.\n- **Sublimation** refers to channeling unacceptable impulses into socially acceptable activities or behaviors, which does not involve projection onto others.\n- **Denial** is an immature defense mechanism that entails refusing to acknowledge distressing aspects of reality, rather than attributing one’s feelings to someone else.",
+      "kn": "KN43",
+      "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
+      "difficulty": "easy",
+      "quality_comment": "Options are well balanced and reflect commonly tested defense mechanisms, ensuring test-taker differentiation.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Psychodynamic and Humanistic Therapies.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Psychodynamic and Humanistic Therapies.json::13",
+      "domain": 6,
+      "isScored": true
+    },
+    {
+      "stem": "When comparing multiple outcome measures, which statistical test is most appropriate to use?",
+      "options": [
+        "ANOVA",
+        "MANOVA",
+        "t-test",
+        "Chi-square test"
+      ],
+      "answer": "MANOVA",
+      "explanation": "The correct answer is 'MANOVA' because it is specifically designed to handle multiple dependent variables simultaneously, allowing researchers to assess the impact of independent variables on several outcomes at once. ANOVA is limited to one dependent variable, while t-tests and Chi-square tests are not suitable for multiple outcomes.",
+      "kn": "KN54",
+      "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
+      "difficulty": "hard",
+      "quality_comment": "The question challenges the test-taker's understanding of statistical tests.",
+      "suggestedLesson": "7-stats-tests",
+      "suggestedParagraph": "## The Selection Process: Your Decision Framework",
+      "lessonExcerpt": "MANOVA is used for multiple outcome measures.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 2,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Stats Tests.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Stats Tests.json::5",
+      "domain": 7,
+      "isScored": true
+    },
+    {
+      "stem": "A managed care company requires a specific diagnosis code for reimbursement. Dr. Chen's client presents with adjustment difficulties that do not meet criteria for any reimbursable diagnosis. The client cannot afford to pay out of pocket. Dr. Chen is considering assigning a diagnosis of Major Depressive Disorder to secure insurance coverage. This practice is:",
+      "options": [
+        "Ethically acceptable if the client consents to the misdiagnosis and understands the implications",
+        "Ethically acceptable as long as the assigned diagnosis is close to the client's actual presentation",
+        "Ethically prohibited because it constitutes fraud and violates standards of honesty and integrity",
+        "Ethically acceptable if the psychologist documents the clinical rationale for the diagnostic decision"
+      ],
+      "answer": "Ethically prohibited because it constitutes fraud and violates standards of honesty and integrity",
+      "explanation": "Intentionally misrepresenting a client's diagnosis to obtain insurance reimbursement violates multiple APA ethical standards, including Principle C (Integrity) which requires honesty and truthfulness, and Standard 6.06 which prohibits fraud. It also constitutes insurance fraud under law. Option A is incorrect because client consent does not make fraudulent billing ethical or legal. Option B is incorrect because any intentional misrepresentation of diagnosis is prohibited regardless of how 'close' the assigned diagnosis appears to be. Option D is incorrect because documenting a rationale for an intentionally false diagnosis does not transform fraud into acceptable practice.",
+      "kn": "KN61",
+      "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
+      "difficulty": "easy",
+      "quality_comment": "Tests a fundamental ethical principle with clear lesson support. The distractors reflect common rationalizations practitioners use.",
+      "suggestedLesson": "8-standards-1-2",
+      "suggestedParagraph": "### Section C: The Five General Principles",
+      "lessonExcerpt": "C: Integrity — Be honest — Promote accuracy, honesty, and truthfulness in all professional activities",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 19,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 1 and 2.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 1 and 2.json::17",
+      "domain": 8,
+      "isScored": true
+    }
+  ]
+}

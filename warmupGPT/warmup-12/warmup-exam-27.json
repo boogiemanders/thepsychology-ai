@@ -1,0 +1,279 @@
+{
+  "meta": {
+    "examId": "warmup-12-27",
+    "totalQuestions": 12,
+    "examType": "warmup",
+    "warmupLength": 12,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 2,
+      "4": 1,
+      "5": 3,
+      "6": 1,
+      "7": 1,
+      "8": 1,
+      "3-5-6": 1
+    },
+    "generatedAt": "2026-04-25T05:56:49.914421Z"
+  },
+  "questions": [
+    {
+      "stem": "Third-generation antipsychotics such as aripiprazole differ from second-generation antipsychotics primarily because they:",
+      "options": [
+        "Are pure dopamine D2 antagonists",
+        "Act as partial agonists at dopamine D2 receptors",
+        "Cause more extrapyramidal side effects",
+        "Block norepinephrine reuptake"
+      ],
+      "answer": "Act as partial agonists at dopamine D2 receptors",
+      "explanation": "1. The correct answer, \"Act as partial agonists at dopamine D2 receptors,\" accurately describes the mechanism of action of third-generation antipsychotics (TGAs) like aripiprazole. Unlike second-generation antipsychotics (SGAs), which primarily act as dopamine-serotonin antagonists, TGAs have a dual action: they can reduce dopamine levels in areas of the brain where they are too high (acting as antagonists) and increase dopamine levels in areas where they are too low (acting as partial agonists). This unique mechanism allows TGAs to effectively manage both positive and negative symptoms of schizophrenia with potentially fewer side effects.\n\n2. The option \"Are pure dopamine D2 antagonists\" is incorrect because TGAs do not function solely as antagonists; they exhibit partial agonist activity at D2 receptors. \"Cause more extrapyramidal side effects\" is also wrong, as TGAs are less likely than both FGAs and SGAs to produce extrapyramidal side effects. Lastly, \"Block norepinephrine reuptake\" is incorrect because TGAs primarily target dopamine and serotonin receptors rather than blocking norepinephrine reuptake, which is characteristic of other antidepressants like SNRIs and NDRIs.",
+      "kn": "KN2",
+      "kn_explanation": "This question tests knowledge of the mechanisms of action of different classes of antipsychotic medications, which is under KN2.",
+      "difficulty": "hard",
+      "quality_comment": "The question clearly distinguishes a nuanced pharmacological mechanism with distractors serving as common misconceptions, suitable for higher-difficulty items.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Pharmacology Antidepressants and Antipsychotics.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Pharmacology Antidepressants and Antipsychotics.json::28",
+      "domain": 1,
+      "isScored": true
+    },
+    {
+      "stem": "In backward chaining, teaching a complex task differs from forward chaining because:",
+      "options": [
+        "Training begins with the last behavior in the sequence and moves backward",
+        "Each response is reinforced only after the entire sequence is completed",
+        "Only the final target behavior is important, intermediate behaviors are ignored",
+        "Reinforcement is omitted until all behaviors are mastered"
+      ],
+      "answer": "Training begins with the last behavior in the sequence and moves backward",
+      "explanation": "1. The correct answer, \"Training begins with the last behavior in the sequence and moves backward,\" accurately describes backward chaining because this method starts with teaching the final response in a behavior chain first. Once the learner masters this last step, the trainer then teaches the preceding step in the sequence, continuing backward until the entire behavior chain is learned. This approach emphasizes the importance of the final behavior as a reinforcement for learning the earlier steps.\n\n2. The option \"Each response is reinforced only after the entire sequence is completed\" is incorrect because, in backward chaining, each response is reinforced immediately after it is mastered, not after the entire sequence is performed. The statement \"Only the final target behavior is important, intermediate behaviors are ignored\" is misleading; while the final behavior is crucial, each intermediate behavior is also essential as it contributes to the overall sequence. Finally, \"Reinforcement is omitted until all behaviors are mastered\" is inaccurate because reinforcement is provided after each individual response is learned, not withheld until the entire chain is completed.",
+      "kn": "KN7",
+      "kn_explanation": "This question targets chaining methods, a specialized operant conditioning technique within learning models, making KN7 most relevant.",
+      "difficulty": "medium",
+      "quality_comment": "The item clearly contrasts chaining methods with plausible distractors that reflect basic misunderstandings.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Operant Conditioning Interventions.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Operant Conditioning Interventions.json::33",
+      "domain": 2,
+      "isScored": true
+    },
+    {
+      "stem": "In Burger’s 2009 replication of Milgram's obedience experiment, which of the following was found?",
+      "options": [
+        "Participants were significantly less likely to deliver shocks at 150 volts compared to Milgram’s original study",
+        "The majority of participants continued delivering shocks at 150 volts, with no significant gender differences",
+        "The study found that informing participants fully decreased obedience",
+        "Participants refused to continue once shocks reached 100 volts"
+      ],
+      "answer": "The majority of participants continued delivering shocks at 150 volts, with no significant gender differences",
+      "explanation": "1. The correct answer, \"The majority of participants continued delivering shocks at 150 volts, with no significant gender differences,\" reflects Burger's (2009) findings that closely mirrored Milgram's original results. Specifically, Burger found that 70% of participants delivered shocks at 150 volts, which is similar to the 82.5% in Milgram's study, indicating that the tendency to obey authority persists even in more ethically guided research. Additionally, there were no significant differences between male and female participants in their willingness to deliver shocks, aligning with Milgram’s original findings.\n\n2. The option stating \"Participants were significantly less likely to deliver shocks at 150 volts compared to Milgram’s original study\" is incorrect because Burger's results showed no statistically significant difference in obedience levels at that voltage. The statement \"The study found that informing participants fully decreased obedience\" is wrong because Burger's adherence to ethical guidelines did not lead to a decrease in the percentage of participants willing to shock the learner. Lastly, the option \"Participants refused to continue once shocks reached 100 volts\" is incorrect as the data indicated that many participants continued to deliver shocks beyond that point, specifically up to 150 volts.",
+      "kn": "KN16",
+      "kn_explanation": "This examines knowledge of updated research on obedience to authority, a key aspect of social influence and group dynamics (KN16).",
+      "difficulty": "hard",
+      "quality_comment": "The question tests detailed recall of replication research, with distractors reflecting common misunderstandings about gender and obedience studies.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Influence.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Influence.json::22",
+      "domain": 3,
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following comments is the best example of a microinvalidation rather than a microinsult or microassault?",
+      "options": [
+        "A supervisor tells an Asian American employee, \"You speak English so well.\"",
+        "A coworker says, \"I do not see color. We are all just human.\"",
+        "A manager assumes a Black applicant was hired only because of affirmative action.",
+        "A student intentionally uses a racial slur in class discussion."
+      ],
+      "answer": "A coworker says, \"I do not see color. We are all just human.\"",
+      "explanation": "This is the best answer because claiming not to see color dismisses and negates the lived significance of race in a person's experience, which is the defining feature of a microinvalidation. The English comment is wrong because it is more consistent with a microinsult that implies foreignness. The affirmative-action assumption is also a microinsult because it demeans competence. The racial-slur example is a microassault because it is explicit and overtly discriminatory.",
+      "kn": "KN18",
+      "kn_explanation": "This question is best aligned with KN18 because it tests Cultural and sociopolitical psychology (e.g., privilege, cross-cultural comparisons, political differences, international and global awareness, religiosity and spirituality, acculturation).",
+      "difficulty": "medium",
+      "quality_comment": "Useful subtype-discrimination item built from common real-world examples.",
+      "suggestedLesson": "3-cultural-concepts",
+      "suggestedParagraph": "## Racial Microaggressions: Death by a Thousand Cuts",
+      "lessonExcerpt": "Microinvalidations dismiss or negate the experiences of people of color: Claiming \"I don't see color\" (denying that race affects experience)",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL PSYCHOLOGY",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Concepts.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Concepts.json::2",
+      "domain": 3,
+      "isScored": true
+    },
+    {
+      "stem": "Gilligan critiqued Kohlberg's moral development theory primarily because:",
+      "options": [
+        "It was androcentric and did not adequately represent women's moral perspectives.",
+        "It overgeneralized moral development across different cultures.",
+        "It ignored the role of cognitive development in moral reasoning.",
+        "It relied exclusively on stage theory and hypothetical dilemmas."
+      ],
+      "answer": "It was androcentric and did not adequately represent women's moral perspectives.",
+      "explanation": "1. The correct answer, \"It was androcentric and did not adequately represent women's moral perspectives,\" reflects Gilligan's critique of Kohlberg's theory, as she pointed out that his research predominantly included male subjects. She argued that Kohlberg's focus on justice and individual rights in moral reasoning overlooks the moral judgments of women, which are often based on care and responsibility, thereby failing to represent the full spectrum of moral development across genders.\n\n2. The option \"It overgeneralized moral development across different cultures\" is incorrect because while Kohlberg's stages have been criticized for being culturally biased, Gilligan specifically focused on gender differences rather than cultural generalizations. The statement \"It ignored the role of cognitive development in moral reasoning\" is also incorrect; both Kohlberg and Piaget acknowledged the relationship between cognitive development and moral reasoning, with Kohlberg building on Piaget's ideas. Lastly, the option \"It relied exclusively on stage theory and hypothetical dilemmas\" is misleading because while Kohlberg's theory is stage-based, it does not rely exclusively on hypothetical dilemmas; it also emphasizes the reasoning behind moral judgments, which is integral to understanding moral development.",
+      "kn": "KN23",
+      "kn_explanation": "The question examines critiques related to cultural and gender influences on moral development theory, which falls under developmental theory models (KN23).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are credible critiques but only one directly addresses Gilligan's key argument, making this a targeted and fair question.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Morality.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Morality.json::16",
+      "domain": 4,
+      "isScored": true
+    },
+    {
+      "stem": "What is the primary purpose of the Kuder-Richardson formula in psychological testing?",
+      "options": [
+        "A. To assess the validity of a test",
+        "B. To estimate the reliability of a test with dichotomous choices",
+        "C. To determine the standard error of measurement",
+        "D. To analyze the variance in test scores"
+      ],
+      "answer": "B. To estimate the reliability of a test with dichotomous choices",
+      "explanation": "Option B is correct because the Kuder-Richardson formula is specifically designed to estimate the reliability of tests that have dichotomous (yes/no) responses. Option A refers to validity, C pertains to standard error, and D relates to variance analysis.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and tests knowledge of reliability estimation.",
+      "suggestedLesson": "5-cognitive-tests",
+      "suggestedParagraph": "## Individual Tests: Matching the Right Tool to the Right Person",
+      "lessonExcerpt": "The Kuder-Richardson formula is used to estimate the reliability of tests with dichotomous choices.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 3,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Cognitive Tests.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Cognitive Tests.json::8",
+      "domain": 5,
+      "isScored": true
+    },
+    {
+      "stem": "In Project MATCH, which treatment showed a slight advantage in reducing drinking in clients diagnosed with alcohol dependence or abuse at one- and three-year follow-up?",
+      "options": [
+        "Twelve-step facilitation",
+        "Cognitive behavioral coping skills therapy",
+        "Community reinforcement approach",
+        "Voucher-based reinforcement therapy"
+      ],
+      "answer": "Twelve-step facilitation",
+      "explanation": "1. \"Twelve-step facilitation\" is the correct answer because, according to the results of Project MATCH, it demonstrated a slight advantage over cognitive behavioral coping skills therapy and motivational enhancement therapy in reducing drinking among clients diagnosed with alcohol dependence or abuse at both the one-year and three-year follow-ups. This finding suggests that twelve-step facilitation may be particularly effective for certain individuals, especially those whose social networks support drinking.\n\n2. The option \"Cognitive behavioral coping skills therapy\" is incorrect because, while it was one of the treatments evaluated in Project MATCH, it did not show the same level of effectiveness in reducing drinking as twelve-step facilitation. \"Community reinforcement approach\" is not listed as a treatment in Project MATCH, making it irrelevant to the question. Lastly, \"Voucher-based reinforcement therapy\" was not part of the treatments compared in Project MATCH, so it cannot be considered correct in this context.",
+      "kn": "KN40",
+      "kn_explanation": "This question is best aligned with KN40 because it tests Measurement of outcomes and changes due to prevention or intervention efforts with individuals, couples, families, groups, and organizations.",
+      "difficulty": "medium",
+      "quality_comment": "Options include well-known treatments in the field; this item requires recall of specific research findings, suitable for EPPP context.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Substance Misuse.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Substance Misuse.json::12",
+      "domain": 5,
+      "isScored": true
+    },
+    {
+      "stem": "In diagnostic efficiency studies, which formula correctly calculates the sensitivity of a screening test?",
+      "options": [
+        "True positives divided by true positives plus false negatives (TP / [TP + FN])",
+        "True negatives divided by true negatives plus false positives (TN / [TN + FP])",
+        "True positives divided by total sample size (TP / N)",
+        "False positives divided by false positives plus true negatives (FP / [FP + TN])"
+      ],
+      "answer": "True positives divided by true positives plus false negatives (TP / [TP + FN])",
+      "explanation": "1. The correct formula for calculating the sensitivity of a screening test is \"True positives divided by true positives plus false negatives (TP / [TP + FN])\" because sensitivity measures the proportion of individuals with the disorder who are correctly identified by the test. This formula captures the relationship between true positives (those correctly identified) and the total number of individuals who actually have the disorder (true positives plus false negatives).\n\n2. The option \"True negatives divided by true negatives plus false positives (TN / [TN + FP])\" is incorrect because it calculates specificity, which measures the proportion of individuals without the disorder who are correctly identified, not those with it. The option \"True positives divided by total sample size (TP / N)\" is wrong because it does not account for false negatives, which are essential for determining the sensitivity of a test. Lastly, the option \"False positives divided by false positives plus true negatives (FP / [FP + TN])\" is incorrect because it measures the false positive rate, not the sensitivity of the test, which focuses on true positives and false negatives.",
+      "kn": "KN29",
+      "kn_explanation": "This item covers knowledge of sensitivity, a central concept in test diagnostics and validity within assessment and diagnosis.",
+      "difficulty": "easy",
+      "quality_comment": "The question is clear with well-constructed distractors involving related but incorrect ratios, promoting solid understanding.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Can Tests Predict.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Can Tests Predict.json::10",
+      "domain": 5,
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following is NOT a typical component of Motivational Interviewing (MI)?",
+      "options": [
+        "Developing discrepancy between current behavior and values",
+        "Eliciting and strengthening change talk",
+        "Assigning the sick role to reduce self-blame",
+        "Resolving discord in the therapeutic relationship"
+      ],
+      "answer": "Assigning the sick role to reduce self-blame",
+      "explanation": "1. \"Assigning the sick role to reduce self-blame\" is the correct answer because it is a technique associated with Interpersonal Psychotherapy (IPT), not Motivational Interviewing (MI). MI focuses on enhancing intrinsic motivation by exploring ambivalence and does not involve assigning roles to clients. Instead, MI emphasizes building the client's self-efficacy and motivation for change through collaborative dialogue.\n\n2. \n- **Developing discrepancy between current behavior and values**: This is a core strategy in MI, where the therapist helps the client recognize the gap between their current behaviors and their personal values or goals, fostering motivation for change.\n- **Eliciting and strengthening change talk**: This is another fundamental component of MI, where the therapist encourages clients to articulate their desires, reasons, and needs for change, which enhances their motivation to make those changes.\n- **Resolving discord in the therapeutic relationship**: MI aims to address and resolve any discord between the therapist and the client to maintain a positive and collaborative therapeutic relationship, which is essential for effective intervention.",
+      "kn": "KN43",
+      "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are closely related techniques used in MI, ensuring examinees must know therapy-specific components.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Brief Therapies.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Brief Therapies.json::8",
+      "domain": 6,
+      "isScored": true
+    },
+    {
+      "stem": "A researcher is evaluating a new behavioral intervention for a single client using an AB design. During the treatment phase, a natural disaster occurs in the client's community, leading to a noticeable increase in stress-related behaviors. Which threat to internal validity is MOST relevant in this scenario, and why is this design particularly vulnerable to it?",
+      "options": [
+        "Maturation, because the AB design cannot account for natural developmental changes over time",
+        "History, because the AB design lacks a second baseline phase to demonstrate that changes are due to the intervention rather than coincidental external events",
+        "Differential attrition, because the participant may drop out of the study due to the disaster",
+        "Statistical regression, because the client's extreme baseline scores would naturally move toward the mean"
+      ],
+      "answer": "History, because the AB design lacks a second baseline phase to demonstrate that changes are due to the intervention rather than coincidental external events",
+      "explanation": "The AB design is specifically vulnerable to history threats because it has only one baseline and one treatment phase. When an external event (the natural disaster) coincides with the treatment phase, there is no way to disentangle the effects of the intervention from the effects of the external event. The lesson explicitly states the AB design 'doesn't control for history – any one-time event that happens to coincide with treatment.' An ABAB design would better address this by demonstrating the behavior changes with each phase transition. Maturation is incorrect because the AB design does control for maturation (gradual trends would be visible). Differential attrition applies to group designs with dropout. Statistical regression requires selection based on extreme scores.",
+      "kn": "KN57",
+      "kn_explanation": "Threat to internal validity (history effect) in a research design",
+      "difficulty": "medium",
+      "quality_comment": "Strong integration of single-subject design knowledge with internal validity threats. Requires understanding why the AB design specifically fails to control for history.",
+      "suggestedLesson": "7-research-designs",
+      "suggestedParagraph": "### AB Design: The Basic Version",
+      "lessonExcerpt": "The design controls for maturation (gradual changes over time like fatigue or natural development) because those would show up as gradual trends. However, it doesn't control for history – any one-time event that happens to coincide with treatment.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 1,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Research Designs.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Research Designs.json::6",
+      "domain": 7,
+      "isScored": true
+    },
+    {
+      "stem": "What is a common complaint that interns have about their supervisors?",
+      "options": [
+        "Lack of feedback on performance",
+        "Too much supervision",
+        "Inconsistent scheduling of sessions",
+        "Overly supportive relationships"
+      ],
+      "answer": "Lack of feedback on performance",
+      "explanation": "Interns often express dissatisfaction with the lack of constructive feedback, which is crucial for their development. The other options do not typically reflect common complaints; interns generally appreciate guidance but may feel overwhelmed by excessive supervision or inconsistent scheduling.",
+      "kn": "KN70",
+      "kn_explanation": "This question is best aligned with KN70 because it tests Ethical issues in supervision.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively captures a common concern among interns regarding supervision.",
+      "suggestedLesson": "8-practice-issues",
+      "suggestedParagraph": "## What Actually Gets Psychologists in Trouble",
+      "lessonExcerpt": "Improper supervision (not adequately overseeing trainees).",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 7,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json::40",
+      "domain": 8,
+      "isScored": true
+    },
+    {
+      "stem": "An I/O psychologist is advising a manufacturing company on implementing a compressed workweek schedule (four 10-hour days). Based on the research literature, what outcome pattern should the psychologist predict?",
+      "options": [
+        "Strong improvements in both job satisfaction and productivity",
+        "Strong improvement in job satisfaction with a weaker effect on productivity",
+        "Strong improvement in productivity with a weaker effect on job satisfaction",
+        "Strong reduction in absenteeism with minimal effects on satisfaction or productivity"
+      ],
+      "answer": "Strong improvement in job satisfaction with a weaker effect on productivity",
+      "explanation": "Research on compressed workweeks consistently shows a strong positive effect on job satisfaction but a positive yet weaker effect on productivity, with unclear effects on absenteeism. This pattern is distinct from flextime, which shows its strongest effect on reducing absenteeism and its weakest effect on self-rated performance. Option A overstates the productivity effect. Option C reverses the pattern. Option D describes the pattern more associated with flextime (strongest effect on reducing absenteeism). The key exam takeaway is knowing that different alternative work schedules produce different patterns of outcomes.",
+      "kn": "KN46",
+      "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
+      "difficulty": "hard",
+      "quality_comment": "Tests nuanced knowledge of specific research findings. Requires distinguishing between compressed workweek and flextime effects.",
+      "suggestedLesson": "6-how-orgs-change",
+      "suggestedParagraph": "### Alternative Work Schedules",
+      "lessonExcerpt": "Compressed Workweek: Fewer days with longer hours (e.g., four 10-hour days) | Strong positive effect on job satisfaction; positive but weaker effect on productivity; unclear effects on absenteeism",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 16,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/6 How Orgs Change.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/6 How Orgs Change.json::1",
+      "domain": "3-5-6",
+      "isScored": true
+    }
+  ]
+}

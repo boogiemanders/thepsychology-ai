@@ -1,0 +1,285 @@
+{
+  "meta": {
+    "examId": "warmup-12-31",
+    "totalQuestions": 12,
+    "examType": "warmup",
+    "warmupLength": 12,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 2,
+      "4": 1,
+      "5": 3,
+      "6": 1,
+      "7": 1,
+      "8": 1,
+      "3-5-6": 1
+    },
+    "generatedAt": "2026-04-25T05:56:49.914421Z"
+  },
+  "questions": [
+    {
+      "stem": "Which of the following antipsychotic drugs is FDA-approved specifically for treatment-resistant schizophrenia and requires regular blood monitoring due to risk of neutropenia?",
+      "options": [
+        "Risperidone",
+        "Haloperidol",
+        "Clozapine",
+        "Olanzapine"
+      ],
+      "answer": "Clozapine",
+      "explanation": "1. **Clozapine** is the correct answer because it is the only FDA-approved antipsychotic specifically indicated for treatment-resistant schizophrenia. It requires regular blood monitoring due to the risk of neutropenia and agranulocytosis, which are potentially life-threatening conditions characterized by dangerously low levels of neutrophils, a type of white blood cell essential for immune function.\n\n2. **Risperidone** is incorrect because, while it is an atypical antipsychotic used to treat schizophrenia, it is not specifically approved for treatment-resistant cases and does not require regular blood monitoring for neutropenia. **Haloperidol** is also incorrect because it is a first-generation antipsychotic primarily effective for positive symptoms of schizophrenia but lacks the specific indication for treatment-resistant cases and does not have the same blood monitoring requirements as clozapine. **Olanzapine**, while an effective atypical antipsychotic for schizophrenia, is not specifically approved for treatment-resistant schizophrenia and does not necessitate regular blood tests for neutropenia.",
+      "kn": "KN2",
+      "kn_explanation": "Understanding specific drug indications, side effects, and monitoring protocols fits within the drug classification and adverse effects knowledge area (KN2).",
+      "difficulty": "medium",
+      "quality_comment": "The question focuses on a clinically important unique feature of clozapine with options including other well-known antipsychotics, providing good discriminative power.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Pharmacology Antidepressants and Antipsychotics.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Pharmacology Antidepressants and Antipsychotics.json::27",
+      "domain": 1,
+      "isScored": true
+    },
+    {
+      "stem": "Which intermittent reinforcement schedule typically produces the highest rate of responding and the greatest resistance to extinction?",
+      "options": [
+        "Fixed ratio schedule",
+        "Fixed interval schedule",
+        "Variable ratio schedule",
+        "Variable interval schedule"
+      ],
+      "answer": "Variable ratio schedule",
+      "explanation": "1. The \"Variable ratio schedule\" is the correct answer because it provides reinforcement after a varying number of responses, which leads to a high and steady rate of responding. This schedule creates unpredictability in reinforcement, making the behavior more resistant to extinction compared to other schedules, as individuals continue to respond in anticipation of a reward.\n\n2. The \"Fixed ratio schedule\" is incorrect because, although it produces a steady and relatively high rate of responding, it does not offer the same level of unpredictability as the variable ratio schedule, making it less resistant to extinction. The \"Fixed interval schedule\" is also incorrect, as it results in a low rate of responding, with behavior typically increasing only just before the reinforcement period, leading to less overall engagement. Lastly, the \"Variable interval schedule\" is incorrect because, while it produces a steady rate of responding, it does not achieve the same high rate of response as the variable ratio schedule, which is more effective at maintaining behavior over time.",
+      "kn": "KN7",
+      "kn_explanation": "This question assesses knowledge of reinforcement schedules and their effects on behavior, a foundational part of operant conditioning (KN7).",
+      "difficulty": "hard",
+      "quality_comment": "Distractors are all plausible types of reinforcement schedules, requiring solid content knowledge to select the correct option.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Skinner and Operant Conditioning.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Skinner and Operant Conditioning.json::32",
+      "domain": 2,
+      "isScored": true
+    },
+    {
+      "stem": "Which factor most strongly influences the strength of the relationship between attitudes and behavior?",
+      "options": [
+        "The general positivity of the attitude",
+        "The strength of the attitude derived from direct experience",
+        "The amount of time elapsed since attitude formation",
+        "The number of different attitudes held by the person"
+      ],
+      "answer": "The strength of the attitude derived from direct experience",
+      "explanation": "1. \"The strength of the attitude derived from direct experience\" is the correct answer because attitudes are better predictors of behavior when they are strong. According to the reference material, attitudinal strength is greater when the attitude is based on direct experience and is relevant to the individual's self-interests, making it more likely to influence behavior.\n\n2. The option \"The general positivity of the attitude\" is incorrect because the mere positivity of an attitude does not guarantee its strength or predictive power regarding behavior; it is the strength and relevance of the attitude that matter. \"The amount of time elapsed since attitude formation\" is also wrong, as the reference material does not indicate that time alone affects the strength of the attitude-behavior relationship; rather, it emphasizes the strength and accessibility of the attitude. Lastly, \"The number of different attitudes held by the person\" is incorrect because having multiple attitudes does not inherently strengthen the relationship between any specific attitude and behavior; the focus is on the strength and specificity of individual attitudes.",
+      "kn": "KN14",
+      "kn_explanation": "KN14 includes knowledge of social and cultural bases of behavior such as factors influencing attitude-behavior consistency; attitude strength from direct experience is a key factor.",
+      "difficulty": "medium",
+      "quality_comment": "This question complements existing items by emphasizing an important factor affecting the attitude-behavior link, broadening coverage within this topic.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Attitudes.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Attitudes.json::22",
+      "domain": 3,
+      "isScored": true
+    },
+    {
+      "stem": "A Black client is guarded with a White therapist during the first several sessions but is generally open and relaxed with Black professionals in other settings. There is no evidence of broad distrust toward everyone. Ridley would most likely describe this as:",
+      "options": [
+        "Functional paranoia",
+        "Healthy cultural paranoia",
+        "Diagnostic overshadowing",
+        "Cultural encapsulation"
+      ],
+      "answer": "Healthy cultural paranoia",
+      "explanation": "Healthy cultural paranoia is the best answer because the client's caution is selective and grounded in real experiences of prejudice rather than being pervasive distrust toward everyone. Functional paranoia is wrong because that would involve broad, maladaptive distrust across people and contexts. Diagnostic overshadowing is wrong because it refers to overattributing problems to one salient identity or diagnosis. Cultural encapsulation is wrong because it refers to the therapist's inability to work effectively across cultures.",
+      "kn": "KN18",
+      "kn_explanation": "This question is best aligned with KN18 because it tests Cultural and sociopolitical psychology (e.g., privilege, cross-cultural comparisons, political differences, international and global awareness, religiosity and spirituality, acculturation).",
+      "difficulty": "medium",
+      "quality_comment": "Good culture-and-clinical-formulation item that distinguishes adaptive caution from psychopathology.",
+      "suggestedLesson": "3-cultural-concepts",
+      "suggestedParagraph": "## Healthy Cultural Paranoia: When Distrust Makes Sense",
+      "lessonExcerpt": "Healthy cultural paranoia is different. It's a rational response to real experiences of prejudice and discrimination.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL PSYCHOLOGY",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Concepts.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Concepts.json::1",
+      "domain": 3,
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following has research shown to mediate the relationship between childhood maltreatment and adult obesity?",
+      "options": [
+        "Posttraumatic stress disorder (PTSD)",
+        "Depression",
+        "Socioeconomic status",
+        "Genetic predisposition to obesity"
+      ],
+      "answer": "Depression",
+      "explanation": "1. **Correct Answer - Depression**: Research indicates that childhood maltreatment is linked to an increased risk of obesity in adulthood, and this relationship is mediated by depression. Specifically, Danese and Tan (2014) found that when they adjusted their data for current depression, the link between childhood maltreatment and adult obesity was no longer statistically significant, suggesting that depression plays a critical role in this relationship.\n\n2. **Incorrect Options**:\n   - **Posttraumatic Stress Disorder (PTSD)**: While PTSD can result from childhood maltreatment and may contribute to various health issues, the reference material specifically highlights depression as the mediating factor for the relationship between maltreatment and obesity.\n   - **Socioeconomic Status**: Although socioeconomic status can influence various outcomes, the provided material does not indicate that it mediates the relationship between childhood maltreatment and obesity; instead, it focuses on depression as the primary mediator.\n   - **Genetic Predisposition to Obesity**: Genetic factors may play a role in obesity, but the reference material does not support the idea that genetic predisposition mediates the relationship between childhood maltreatment and obesity, emphasizing depression as the key mediator instead.",
+      "kn": "KN22",
+      "kn_explanation": "This question is best aligned with KN22 because it tests Influence of individual-environment interaction on development over time (e.g., the relationship between the individual and the social, academic, work, community environment).",
+      "difficulty": "hard",
+      "quality_comment": "Challenging question that integrates research findings on mediation, requiring nuanced understanding of developmental psychopathology.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 School and Family.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 School and Family.json::32",
+      "domain": 4,
+      "isScored": true
+    },
+    {
+      "stem": "In premenstrual dysphoric disorder (PMDD), when do symptoms typically begin in relation to the menstrual cycle?",
+      "options": [
+        "During the luteal phase, approximately one week before menstruation.",
+        "At the onset of menstruation.",
+        "In the follicular phase, after menstruation has ended.",
+        "Immediately after ovulation."
+      ],
+      "answer": "During the luteal phase, approximately one week before menstruation.",
+      "explanation": "PMDD symptoms typically arise during the luteal phase of the menstrual cycle, which is about one week before menstruation begins. The other options incorrectly place the timing of symptoms either at the wrong phase or at the wrong time in relation to the menstrual cycle.",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and tests knowledge of a specific aspect of PMDD.",
+      "suggestedLesson": "5-clinical-tests",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "Symptoms of PMDD typically begin during the luteal phase, approximately one week before menstruation.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 22,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Clinical Tests.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Clinical Tests.json::67",
+      "domain": 5,
+      "isScored": true
+    },
+    {
+      "stem": "A 26-year-old graduate student drinks six cups of coffee between 8 AM and noon while preparing for a qualifying exam. At noon she visits the student health center reporting restlessness she cannot control, visible muscle twitching in her legs, a racing heart (pulse 112 bpm), and speech that staff describe as rapid and loosely organized. She denies anxiety symptoms prior to her caffeine intake and has no psychiatric history. Which DSM-5 diagnosis is most appropriate?",
+      "options": [
+        "Generalized anxiety disorder, because her symptoms include restlessness, muscle tension, and difficulty concentrating",
+        "Caffeine intoxication, because recent high-dose caffeine consumption has produced multiple characteristic physiological and behavioral symptoms",
+        "Hypomanic episode, because she exhibits elevated energy, pressured speech, and psychomotor activation lasting several hours",
+        "Stimulant use disorder, mild, because she is using caffeine in a way that causes physical harm"
+      ],
+      "answer": "Caffeine intoxication, because recent high-dose caffeine consumption has produced multiple characteristic physiological and behavioral symptoms",
+      "explanation": "DSM-5 caffeine intoxication requires: (1) recent caffeine consumption, typically more than 250 mg; (2) five or more of the following symptoms developing during or shortly after use: restlessness, nervousness, excitement, insomnia, flushed face, diuresis, GI disturbance, muscle twitching, rambling flow of thought or speech, tachycardia or cardiac arrhythmia, periods of inexhaustibility, and psychomotor agitation; and (3) symptoms causing significant distress or functional impairment. Six large cups of coffee can easily exceed 750–900 mg of caffeine. The student meets at least five criteria (restlessness, muscle twitching, tachycardia, rambling speech, and psychomotor agitation) temporally linked to intake. GAD requires symptoms present more days than not for at least 6 months and cannot be diagnosed when a substance fully explains the presentation. A hypomanic episode requires at least 4 consecutive days of elevated/expansive mood and cannot be attributed to substance effects. Stimulant use disorder requires a maladaptive pattern of use with significant impairment over at least 12 months; a single acute episode does not meet criteria.",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
+      "difficulty": "easy",
+      "quality_comment": "Straightforward but clinically important vignette; distractors test ability to apply substance-exclusion rules in GAD and to distinguish intoxication from episodic mood disorder.",
+      "suggestedLesson": "5-substance-misuse",
+      "suggestedParagraph": "## Caffeine-Related Disorders",
+      "lessonExcerpt": "",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 10,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Substance Misuse.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Substance Misuse.json::2",
+      "domain": 5,
+      "isScored": true
+    },
+    {
+      "stem": "A psychologist administers an IQ test that has a standard deviation of 15 and a reliability coefficient of .91. She calculates the standard error of measurement (SEM) to be 4.5. The SEM value of 4.5 is expressed in:",
+      "options": [
+        "Standard deviation units",
+        "The same units as the test's raw or standard scores",
+        "Percentile rank units",
+        "Correlation coefficient units"
+      ],
+      "answer": "The same units as the test's raw or standard scores",
+      "explanation": "The SEM is calculated using the formula SEM = SD × √(1 - reliability). Since it is derived by multiplying the test's standard deviation by a scalar value, the resulting SEM is expressed in the same metric (units) as the test scores themselves. In this case, the test uses IQ points with SD = 15, so the SEM of 4.5 is in IQ points. It is not in standard deviation units (which would be a z-score-like metric), not in percentile ranks (a different scale entirely), and not in correlation coefficient units (which are dimensionless values between -1 and +1).",
+      "kn": "KN29",
+      "kn_explanation": "Standard error of measurement is a core psychometric concept related to reliability and test characteristics.",
+      "difficulty": "medium",
+      "quality_comment": "Good conceptual question grounded in the SEM formula from the lesson. The lesson clearly shows SEM derived from the SD, implying shared units.",
+      "suggestedLesson": "5-items-and-reliability",
+      "suggestedParagraph": "## Standard Error of Measurement: Embracing Uncertainty",
+      "lessonExcerpt": "SEM = SD × √(1 - Reliability coefficient)... Example calculation: Test has SD = 15 and reliability = .91, SEM = 15 × √(1 - .91) = 15 × √.09 = 15 × .3 = 4.5",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 4,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Items and Reliability.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Items and Reliability.json::3",
+      "domain": 5,
+      "isScored": true
+    },
+    {
+      "stem": "George Kelly's Personal Construct Theory is based on the fundamental postulate that people's psychological processes are directed by the ways they anticipate events. Kelly's central metaphor for understanding human cognition was that ordinary people function as:",
+      "options": [
+        "Philosophers seeking meaning",
+        "Scientists forming and testing hypotheses",
+        "Artists interpreting reality creatively",
+        "Computers processing information"
+      ],
+      "answer": "Scientists forming and testing hypotheses",
+      "explanation": "Kelly described ordinary people as scientists who are constantly forming, testing, and revising hypotheses about the world around them. His theory views people as active and future-oriented, using personal constructs (bipolar dimensions of meaning) to anticipate events. 'Philosophers seeking meaning' better describes existential approaches. 'Artists interpreting reality creatively' does not capture Kelly's emphasis on hypothesis testing. 'Computers processing information' describes the information processing approach, not Kelly's constructivist framework.",
+      "kn": "KN14",
+      "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
+      "difficulty": "medium",
+      "quality_comment": "Directly supported by reference text and lesson content with clear correct answer.",
+      "suggestedLesson": "6-psychodynamic-and-humanistic",
+      "suggestedParagraph": "### Personal Construct Therapy: Changing How You See Things",
+      "lessonExcerpt": "George Kelly is known for describing ordinary people as scientists, who are constantly forming, testing, and revising hypotheses about the world around them.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 6,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Psychodynamic and Humanistic Therapies.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Psychodynamic and Humanistic Therapies.json::1",
+      "domain": 6,
+      "isScored": true
+    },
+    {
+      "stem": "Which statement best characterizes the Jacobson-Truax method for evaluating clinical significance of treatment outcomes?",
+      "options": [
+        "It combines a reliable change index to assess statistical change with a cutoff score to classify recovery based on functional status",
+        "It uses only group mean differences to determine if treatment is clinically effective",
+        "It relies solely on statistical significance to assess treatment outcomes",
+        "It evaluates clinical significance using chi-square tests on categorical outcome data"
+      ],
+      "answer": "It combines a reliable change index to assess statistical change with a cutoff score to classify recovery based on functional status",
+      "explanation": "The Jacobson-Truax method involves two steps—calculating a reliable change index (RCI) to detect statistically reliable individual change, and comparing posttreatment scores to a cutoff separating functional and dysfunctional populations.",
+      "kn": "KN56",
+      "kn_explanation": "Evaluating clinical versus statistical significance and interpreting outcome measures aligns with statistical interpretation and outcome evaluation in KN56.",
+      "difficulty": "hard",
+      "quality_comment": "The question probes detailed understanding of clinical significance methods, differentiating sophisticated concepts relevant for advanced test takers.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Stats Tests.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Stats Tests.json::18",
+      "domain": 7,
+      "isScored": true
+    },
+    {
+      "stem": "What ethical considerations must psychologists keep in mind when administering psychological tests?",
+      "options": [
+        "Tests should only be administered if the psychologist is familiar with the client.",
+        "Tests must be used for their intended purpose and with established validity.",
+        "Psychologists can modify tests as they see fit.",
+        "Tests can be administered without supervision."
+      ],
+      "answer": "Tests must be used for their intended purpose and with established validity.",
+      "explanation": "The correct answer emphasizes the ethical obligation to use tests appropriately and based on established research. The other options either suggest unethical practices or misunderstand the requirements for test administration.",
+      "kn": "KN61",
+      "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively challenges understanding of ethical testing practices.",
+      "suggestedLesson": "8-standards-9-10",
+      "suggestedParagraph": "## Standard 9: Assessment (Getting It Right)",
+      "lessonExcerpt": "You need enough information to support your conclusions.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 17,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 9 and 10.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 9 and 10.json::11",
+      "domain": 8,
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following individual characteristics is associated with increased susceptibility to the negative effects of stress and an elevated risk for coronary heart disease?",
+      "options": [
+        "Hardiness",
+        "Type A behavior pattern",
+        "Organization-based self-esteem",
+        "Neuroticism"
+      ],
+      "answer": "Type A behavior pattern",
+      "explanation": "1. **Type A behavior pattern** is the correct answer because it is characterized by a chronic sense of time urgency, excessive competitiveness, and hostility, which are linked to increased susceptibility to the negative effects of stress. Research indicates that this behavior pattern is associated with a higher risk for coronary heart disease, particularly due to the hostility component (Friedman & Rosenman, 1959; Krantz & McCeney, 2002).\n\n2. The incorrect options are:\n\n- **Hardiness**: This personality trait is associated with increased resistance to stress, as hardy individuals perceive challenges positively and maintain a sense of control, thus reducing the likelihood of negative health outcomes.\n  \n- **Organization-based self-esteem (OBSE)**: OBSE relates to employees’ perceptions of their value within an organization and is linked to higher job satisfaction and commitment, but low OBSE can make individuals more passive in coping with stress rather than increasing susceptibility.\n\n- **Neuroticism**: While neuroticism is associated with emotional instability and higher stress levels, it is not specifically mentioned in the provided material as a direct contributor to increased susceptibility to stress or coronary heart disease compared to the Type A behavior pattern.",
+      "kn": "KN16",
+      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
+      "difficulty": "medium",
+      "quality_comment": "The distractors are plausible resilience or unrelated traits; the item assesses important associations in stress-health research.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/2 3 Work Satisfaction.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/2 3 Work Satisfaction.json::13",
+      "domain": "3-5-6",
+      "isScored": true
+    }
+  ]
+}

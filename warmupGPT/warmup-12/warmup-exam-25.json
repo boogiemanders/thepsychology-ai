@@ -1,0 +1,284 @@
+{
+  "meta": {
+    "examId": "warmup-12-25",
+    "totalQuestions": 12,
+    "examType": "warmup",
+    "warmupLength": 12,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 2,
+      "4": 1,
+      "5": 3,
+      "6": 1,
+      "7": 1,
+      "8": 1,
+      "3-5-6": 1
+    },
+    "generatedAt": "2026-04-25T05:56:49.914421Z"
+  },
+  "questions": [
+    {
+      "stem": "A psychiatrist is considering prescribing a selective serotonin reuptake inhibitor (SSRI) for a patient with comorbid depression and insomnia. The rationale for this medication choice is based on the understanding that serotonin plays a regulatory role in which of the following?",
+      "options": [
+        "Motor coordination and procedural memory",
+        "Mood, sleep, and appetite regulation",
+        "Dopamine synthesis and release in the mesolimbic pathway",
+        "Acetylcholine transmission at the neuromuscular junction"
+      ],
+      "answer": "Mood, sleep, and appetite regulation",
+      "explanation": "Serotonin is a key neurotransmitter involved in regulating mood, sleep, and appetite, which is why SSRIs—which increase serotonin availability in the synapse by blocking its reuptake—are used to treat depression, anxiety, and sleep disturbances. Motor coordination and procedural memory are primarily associated with the basal ganglia and cerebellum, not serotonin. SSRIs do not work by affecting dopamine synthesis in the mesolimbic pathway. Acetylcholine transmission at the neuromuscular junction is unrelated to serotonin function.",
+      "kn": "KN1",
+      "kn_explanation": "This question is best aligned with KN1 because it tests Functional correlates and determinants of the neurobiological and genetic bases of behavior pertaining to perception, cognition, personality, and mood and affect in normal, acute and chronic neurobehavioral disease processes and disease, comorbidities.",
+      "difficulty": "easy",
+      "quality_comment": "Supported by the pharmacology lesson's discussion of SSRIs and their mechanism of action as reuptake inhibitors affecting serotonin.",
+      "suggestedLesson": "1-neurons-and-neurotransmitters",
+      "suggestedParagraph": "## The Foundation: How These Medications Work",
+      "lessonExcerpt": "Reuptake inhibitors prevent neurotransmitters from being sucked back up by the sending neuron, leaving more available in the synapse",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 6,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Neurons and Neurotransmitters.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Neurons and Neurotransmitters.json::0",
+      "domain": 1,
+      "isScored": true
+    },
+    {
+      "stem": "A child who was once stung by a bee develops a fear response to bees. Over time, the child also begins to feel anxious when seeing the yellow and black striped pattern on a sports jersey. This expansion of the fear response to new stimuli that were never directly paired with pain is BEST explained by:",
+      "options": [
+        "Operant generalization",
+        "Higher-order conditioning",
+        "Stimulus generalization in classical conditioning",
+        "The overjustification effect"
+      ],
+      "answer": "Stimulus generalization in classical conditioning",
+      "explanation": "Stimulus generalization occurs when stimuli similar to the original conditioned stimulus (the bee) also elicit the conditioned response (fear). The yellow-black pattern on the jersey is perceptually similar to the bee's coloring, triggering anxiety without any direct pairing with the painful sting. Higher-order conditioning (B) involves pairing a new neutral stimulus with an established CS, not a stimulus that merely resembles the CS. Operant generalization (A) involves voluntary behaviors, not automatic fear responses. The overjustification effect (D) relates to the decrease in intrinsic motivation when external rewards are provided and is unrelated to fear acquisition.",
+      "kn": "KN7",
+      "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
+      "difficulty": "medium",
+      "quality_comment": "Applied clinical scenario distinguishing stimulus generalization from higher-order conditioning—a common EPPP confusion point. Tests understanding that attitudes/emotional responses can spread through classical conditioning principles.",
+      "suggestedLesson": "2-pavlov-and-classical-conditioning",
+      "suggestedParagraph": "### Stimulus Generalization",
+      "lessonExcerpt": "classical conditioning can establish complex emotional responses, physiological reactions, immune responses, and even aspects of social behavior. It's far more pervasive than most people realize.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 5,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Pavlov and Classical Conditioning.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Pavlov and Classical Conditioning.json::1",
+      "domain": 2,
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following best defines 'materialism' as studied in behavioral economics and psychology?",
+      "options": [
+        "The focus on acquiring wealth and possessions at the expense of personal and spiritual well-being",
+        "A preference for money over other forms of rewards in decision-making scenarios",
+        "The tendency to save money rather than spend",
+        "An intrinsic motivation to achieve status through social connections"
+      ],
+      "answer": "The focus on acquiring wealth and possessions at the expense of personal and spiritual well-being",
+      "explanation": "1. \"The focus on acquiring wealth and possessions at the expense of personal and spiritual well-being\" is the correct answer because materialism is defined as a set of values and goals centered on wealth, possessions, image, and status, which can conflict with personal well-being and spiritual growth (Kasser, 2016). Research has shown that prioritizing materialistic values negatively correlates with various aspects of personal well-being, highlighting the detrimental effects of such a focus (Dittmar et al., 2014).\n\n2. The first incorrect option, \"A preference for money over other forms of rewards in decision-making scenarios,\" is wrong because it does not capture the broader concept of materialism, which encompasses values related to possessions and status, not just money. The second option, \"The tendency to save money rather than spend,\" is incorrect as materialism is more about the desire for possessions and wealth rather than merely saving money. Lastly, \"An intrinsic motivation to achieve status through social connections\" is not accurate because materialism specifically relates to the acquisition of possessions and wealth, rather than social connections or status derived from them.",
+      "kn": "KN16",
+      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
+      "difficulty": "medium",
+      "quality_comment": "Good conceptual clarity; distractors are plausible but clearly different constructs from materialism.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Persuasion.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Persuasion.json::16",
+      "domain": 3,
+      "isScored": true
+    },
+    {
+      "stem": "When a therapist assumes that all presenting problems of a gay client are due to sexual orientation and overlooks other causes, this is an example of what phenomenon?",
+      "options": [
+        "Diagnostic overshadowing",
+        "Confirmation bias",
+        "Own-race bias",
+        "Cultural encapsulation"
+      ],
+      "answer": "Diagnostic overshadowing",
+      "explanation": "1. **Diagnostic overshadowing** is the correct answer because it refers to the tendency of mental health professionals to attribute all problems of clients with a specific diagnosis, such as a gay client’s issues being solely linked to their sexual orientation, while overlooking other potential causes. This phenomenon can lead to an incomplete understanding of the client’s presenting problems and may hinder effective treatment, as it fails to consider the broader context of the client’s experiences and challenges.\n\n2. The other options are incorrect for the following reasons:\n   - **Confirmation bias** refers to the tendency to search for, interpret, and remember information in a way that confirms one’s pre-existing beliefs, not specifically about attributing all problems to one factor.\n   - **Own-race bias** (ORB) is the tendency to more accurately perceive and identify faces of individuals of one's own race compared to others, which does not relate to the misattribution of causes for a client’s problems.\n   - **Cultural encapsulation** describes the inability of mental health professionals to work effectively across cultures due to insensitivity to cultural differences, but it does not specifically address the misattribution of problems based on a single characteristic like sexual orientation.",
+      "kn": "KN19",
+      "kn_explanation": "This question is best aligned with KN19 because it tests Identity diversity and intersectionality (e.g., psychological impact of diversity on individuals, families, and systems).",
+      "difficulty": "medium",
+      "quality_comment": "Options include related bias and cultural concepts but only diagnostic overshadowing accurately describes the diagnostic error.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Concepts.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Concepts.json::21",
+      "domain": 3,
+      "isScored": true
+    },
+    {
+      "stem": "What term describes the genetic contribution to traits that are influenced by more than one gene, such as skin color or eye color?",
+      "options": [
+        "Polygenic inheritance",
+        "Mendelian inheritance",
+        "Chromosomal inheritance",
+        "Autosomal inheritance"
+      ],
+      "answer": "Polygenic inheritance",
+      "explanation": "1. **Correct Answer: Polygenic inheritance**  \n\"Polygenic inheritance\" is the correct term because it refers to traits influenced by multiple genes, such as skin color and eye color. The reference material states that most characteristics, including these traits, are polygenic, meaning their expression results from the cumulative effects of several different genes.\n\n2. **Incorrect Options:**\n- **Mendelian inheritance:** This term describes traits influenced by a single gene pair, following the inheritance patterns established by Gregor Mendel, and does not apply to traits influenced by multiple genes.\n- **Chromosomal inheritance:** This term refers to the inheritance of traits related to the structure and number of chromosomes, rather than the influence of multiple genes on specific traits.\n- **Autosomal inheritance:** This term pertains to traits carried on non-sex chromosomes (autosomes) and does not specifically denote the involvement of multiple genes in trait expression.",
+      "difficulty": "easy",
+      "kn": "KN22",
+      "kn_explanation": "This question is best aligned with KN22 because it tests Influence of individual-environment interaction on development over time (e.g., the relationship between the individual and the social, academic, work, community environment).",
+      "quality_comment": "This question effectively tests understanding of polygenic traits in a straightforward manner.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "easier",
+      "tags": [
+        "lock_in_drill"
+      ],
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Heredity and Environment.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Heredity and Environment.json::30",
+      "domain": 4,
+      "isScored": true
+    },
+    {
+      "stem": "When adjusting predictor cutoffs in hiring processes, what is a primary consideration?",
+      "options": [
+        "A. The cost of the testing materials",
+        "B. The potential impact on diversity in hiring",
+        "C. The length of the assessment process",
+        "D. The popularity of the assessment tool"
+      ],
+      "answer": "B. The potential impact on diversity in hiring",
+      "explanation": "Option B is correct because adjusting predictor cutoffs can significantly affect the diversity of candidates selected for hiring. Options A, C, and D are less relevant to the ethical and practical implications of cutoff adjustments.",
+      "kn": "KN32",
+      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of hiring practices and diversity considerations.",
+      "suggestedLesson": "5-cognitive-tests",
+      "suggestedParagraph": "## Individual Tests: Matching the Right Tool to the Right Person",
+      "lessonExcerpt": "Adjusting predictor cutoffs in hiring processes requires consideration of the potential impact on diversity.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 10,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Cognitive Tests.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Cognitive Tests.json::13",
+      "domain": 5,
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following is a key characteristic that differentiates major depressive disorder from persistent depressive disorder (dysthymia) according to DSM-5-TR criteria?",
+      "options": [
+        "Major depressive disorder requires a minimum duration of two weeks, while persistent depressive disorder lasts for at least two years.",
+        "Major depressive disorder includes only emotional symptoms, while persistent depressive disorder includes only physical symptoms.",
+        "Major depressive disorder can occur without any prior episodes, while persistent depressive disorder cannot.",
+        "Major depressive disorder requires hospitalization, while persistent depressive disorder does not."
+      ],
+      "answer": "Major depressive disorder requires a minimum duration of two weeks, while persistent depressive disorder lasts for at least two years.",
+      "explanation": "Major depressive disorder is characterized by a duration of at least two weeks for a major depressive episode, whereas persistent depressive disorder involves depressive symptoms lasting for at least two years.",
+      "difficulty": "easy",
+      "kn": "KN36",
+      "kn_explanation": "This question assesses knowledge of diagnostic criteria for mood episodes, which involves understanding DSM-5-TR classification systems and diagnostic criteria (KN36).",
+      "quality_comment": "This question effectively tests the understanding of the duration criteria for different depressive disorders.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "easier",
+      "tags": [
+        "lock_in_drill"
+      ],
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Mood.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Mood.json::22",
+      "domain": 5,
+      "isScored": true
+    },
+    {
+      "stem": "Which validity evidence source focuses on how respondents engage with test items during administration to ensure accurate construct measurement?",
+      "options": [
+        "Evidence based on response process",
+        "Evidence based on test content",
+        "Evidence based on internal structure",
+        "Evidence based on consequences of testing"
+      ],
+      "answer": "Evidence based on response process",
+      "explanation": "1. \"Evidence based on response process\" is the correct answer because it specifically examines how respondents interact with test items during administration, which is crucial for ensuring that a test accurately measures the intended construct. This source of validity evidence focuses on the cognitive and emotional processes that respondents use while answering, thereby providing insights into whether the test is effectively capturing the underlying traits it aims to assess.\n\n2. \n- **Evidence based on test content:** This option is incorrect because it pertains to the relevance and representativeness of test items in relation to the domain being measured, rather than how respondents engage with those items during the test.\n- **Evidence based on internal structure:** This option is wrong because it focuses on the relationships among test items and the underlying dimensions they measure, rather than the processes respondents use to answer the items.\n- **Evidence based on consequences of testing:** This option is incorrect as it relates to the outcomes and impacts of the testing process on individuals and society, rather than the immediate response behaviors of test-takers during the test administration.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
+      "difficulty": "medium",
+      "quality_comment": "This question adds coverage on validity evidence related to response processes, filling an underrepresented validity source area with clear distractors.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 What Tests Measure.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 What Tests Measure.json::13",
+      "domain": 5,
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following is considered the analogue of the therapeutic alliance in group therapy according to Yalom and Leszcz?",
+      "options": [
+        "Group cohesiveness",
+        "Universality",
+        "Altruism",
+        "Catharsis"
+      ],
+      "answer": "Group cohesiveness",
+      "explanation": "1. \"Group cohesiveness\" is the correct answer because it is considered the analogue of the therapeutic alliance in group therapy, as noted by Yalom and Leszcz. Group cohesiveness fosters trust and connection among members, which is essential for effective therapy and serves as a foundation for other therapeutic factors to take effect. It is viewed as a precondition for positive outcomes in group therapy.\n\n2. \n- **Universality** is incorrect because it refers to the understanding that others share similar experiences and feelings, which helps members feel less isolated, but it does not serve as the primary foundation for the therapeutic alliance.\n- **Altruism** is incorrect because it involves members helping each other, which can be beneficial but does not represent the core connection or bond that underlies the therapeutic alliance in the group context.\n- **Catharsis** is incorrect because it pertains to the emotional release that members experience during therapy, which is important for healing but is not the same as the foundational relationship that constitutes the therapeutic alliance.",
+      "kn": "KN46",
+      "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
+      "difficulty": "easy",
+      "quality_comment": "Distractors are well-known therapeutic factors, making the question straightforward while testing important group therapy knowledge.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Family and Group.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Family and Group.json::15",
+      "domain": 6,
+      "isScored": true
+    },
+    {
+      "stem": "Bayesian analysis differs from frequentist analysis primarily in which way?",
+      "options": [
+        "Bayesian analysis does not require prior information about parameters.",
+        "Frequentist probability is the subjective degree of belief in an event, whereas Bayesian probability is based on data frequencies.",
+        "Bayesian analysis combines prior knowledge with current data to update beliefs about parameters.",
+        "Frequentist methods allow direct testing of research hypotheses, while Bayesian methods only reject null hypotheses."
+      ],
+      "answer": "Bayesian analysis combines prior knowledge with current data to update beliefs about parameters.",
+      "explanation": "1. The correct answer, \"Bayesian analysis combines prior knowledge with current data to update beliefs about parameters,\" accurately reflects the fundamental principle of Bayesian statistics. According to the reference material, Bayesian analysis utilizes Bayes’ theorem to synthesize prior information (the prior) with data collected in the current study (the likelihood function) to derive an updated understanding (the posterior) of a parameter. This process allows researchers to incorporate previous findings into their current analysis, providing a more comprehensive view of the parameter in question.\n\n2. The first incorrect option, \"Bayesian analysis does not require prior information about parameters,\" is wrong because Bayesian analysis explicitly relies on prior knowledge to inform the analysis and update beliefs. The second incorrect option, \"Frequentist probability is the subjective degree of belief in an event, whereas Bayesian probability is based on data frequencies,\" misrepresents the definitions; frequentist statistics defines probability based on data frequencies, while Bayesian probability is indeed the degree of belief about parameters. Lastly, the option, \"Frequentist methods allow direct testing of research hypotheses, while Bayesian methods only reject null hypotheses,\" is incorrect because Bayesian methods also allow for direct hypothesis testing, contrary to the assertion that they only focus on rejecting null hypotheses.",
+      "kn": "KN55",
+      "kn_explanation": "This question evaluates comprehension of Bayesian versus frequentist statistical approaches, which is part of analytic methods (KN55).",
+      "difficulty": "hard",
+      "quality_comment": "Options target common confusions about Bayesian concepts, making this a high-quality question on a complex topic.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Inferential Stats.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Inferential Stats.json::33",
+      "domain": 7,
+      "isScored": true
+    },
+    {
+      "stem": "An attorney requests that Dr. Chen release the raw test data and scores from a psychological evaluation of the attorney's client. The client has signed an authorization for release. According to APA ethical standards, Dr. Chen should:",
+      "options": [
+        "Release only the summary report and refuse to provide any raw data regardless of authorization",
+        "Release the raw test data to the attorney as requested, since the client has provided valid authorization",
+        "Release the raw data only to another qualified psychologist, never directly to an attorney",
+        "Release the raw test data as authorized but take steps to protect test security by withholding actual test items if possible under applicable law"
+      ],
+      "answer": "Release the raw test data as authorized but take steps to protect test security by withholding actual test items if possible under applicable law",
+      "explanation": "APA Standard 9.04 requires psychologists to provide test data (which includes raw scores and client responses) when there is a valid client release. However, Standard 9.11 also obligates psychologists to maintain test security. The psychologist must balance these obligations—releasing data as authorized while protecting copyrighted test materials where possible. Option A is wrong because a valid client authorization obligates release of test data. Option B fails to account for the competing obligation to protect test security. Option C is overly restrictive; the standard does not limit release exclusively to psychologists when valid authorization exists.",
+      "kn": "KN61",
+      "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
+      "difficulty": "hard",
+      "quality_comment": "Tests nuanced understanding of balancing competing ethical obligations. Specific standard language was in",
+      "suggestedLesson": "8-standards-9-10",
+      "suggestedParagraph": "## Standard 9: Assessment (Getting It Right)",
+      "lessonExcerpt": "**Test data** (Standard 9.04): Raw scores, scaled scores, client responses, and your notes about behavior during testing. You ordinarily release this to clients or their authorized representatives, bu",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 7,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 9 and 10.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 9 and 10.json::14",
+      "domain": 8,
+      "isScored": true
+    },
+    {
+      "stem": "According to French and Raven’s bases of social power, which type of power is most likely to foster commitment rather than mere compliance or resistance?",
+      "options": [
+        "Coercive power",
+        "Legitimate power",
+        "Expert and referent power",
+        "Reward power"
+      ],
+      "answer": "Expert and referent power",
+      "explanation": "1. **Correct Answer Explanation**: \"Expert and referent power\" are identified by French and Raven as the types of power most likely to foster commitment among subordinates. Expert power stems from a leader's knowledge and expertise, which can inspire trust and admiration, while referent power arises from a leader being respected and liked. Both forms of power encourage subordinates to engage willingly and commit to the leader’s vision and goals, rather than merely complying with demands or resisting authority.\n\n2. **Incorrect Options Explanation**:\n   - **Coercive power**: This type of power relies on the ability to impose punishments, which typically leads to resistance rather than commitment.\n   - **Legitimate power**: While based on formal authority and roles, it often results in compliance due to obligation rather than genuine commitment, as subordinates may follow orders without personal investment.\n   - **Reward power**: Although it can elicit compliance through financial or non-financial incentives, it does not inherently foster deep commitment, as subordinates may only perform tasks to gain rewards rather than being motivated by a shared vision or respect for the leader.",
+      "kn": "KN46",
+      "kn_explanation": "Understanding leadership power bases and their effects on subordinate motivation is important for intervention strategies covered in KN46.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are all plausible types of power; correct answer requires specific recall of power outcomes.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/5 6 Leadership.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/5 6 Leadership.json::5",
+      "domain": "3-5-6",
+      "isScored": true
+    }
+  ]
+}

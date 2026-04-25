@@ -1,0 +1,190 @@
+{
+  "meta": {
+    "examId": "warmup-8-28",
+    "totalQuestions": 8,
+    "examType": "warmup",
+    "warmupLength": 8,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 1,
+      "7": 1,
+      "8": 1
+    },
+    "generatedAt": "2026-04-25T05:56:49.914421Z"
+  },
+  "questions": [
+    {
+      "stem": "What neurological structure is primarily associated with the regulation of tics and OCD?",
+      "options": [
+        "A. Hippocampus",
+        "B. Basal ganglia",
+        "C. Cerebellum",
+        "D. Medulla"
+      ],
+      "answer": "B. Basal ganglia",
+      "explanation": "The basal ganglia are primarily involved in the regulation of motor control and are implicated in the pathophysiology of tics and OCD. The hippocampus is involved in memory, the cerebellum in coordination and balance, and the medulla in autonomic functions.",
+      "kn": "KN1",
+      "kn_explanation": "This question is best aligned with KN1 because it tests Functional correlates and determinants of the neurobiological and genetic bases of behavior pertaining to perception, cognition, personality, and mood and affect in normal, acute and chronic neurobehavioral disease processes and disease, comorbidities.",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests knowledge of the neurological underpinnings of tics and OCD.",
+      "suggestedLesson": "1-hindbrain-midbrain-forebrain",
+      "suggestedParagraph": "## The Basal Ganglia and Cerebellum: Your Skill Keepers",
+      "lessonExcerpt": "The basal ganglia are involved in the regulation of movement and are implicated in disorders such as OCD.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 4,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Hindbrain, Midbrain, and Forebrain.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Hindbrain, Midbrain, and Forebrain.json::12",
+      "domain": 1,
+      "isScored": true
+    },
+    {
+      "stem": "What is the optimal time interval between the conditioned stimulus (CS) and unconditioned stimulus (US) presentation during delay conditioning?",
+      "options": [
+        "About one-half second delay between CS onset and US onset",
+        "US is presented immediately before the CS",
+        "CS and US presented simultaneously",
+        "Several seconds between CS termination and US onset"
+      ],
+      "answer": "About one-half second delay between CS onset and US onset",
+      "explanation": "1. The correct answer, \"About one-half second delay between CS onset and US onset,\" is optimal for delay conditioning because this timing allows the conditioned stimulus (CS) to precede and overlap with the unconditioned stimulus (US), enhancing the association between the two stimuli. This optimal delay facilitates effective learning, as it reinforces the connection between the CS and the US, leading to a stronger conditioned response (CR).\n\n2. The option \"US is presented immediately before the CS\" is incorrect because this describes backward conditioning, which is generally ineffective as it fails to establish the necessary contingency between the CS and US. The option \"CS and US presented simultaneously\" is wrong because simultaneous conditioning does not allow for the CS to predict the US effectively, leading to weaker conditioning. Lastly, \"Several seconds between CS termination and US onset\" is incorrect because such a long interval disrupts the association, making it difficult for the CS to signal the impending US, thus diminishing the likelihood of a strong CR.",
+      "kn": "KN7",
+      "kn_explanation": "This item probes specific parameters influencing conditioning strength, emphasizing procedural nuances recognized in classical conditioning research (KN7).",
+      "difficulty": "medium",
+      "quality_comment": "This focused question reinforces knowledge of timing critical to optimal conditioning, balancing specificity with plausible distractors.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Pavlov and Classical Conditioning.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Pavlov and Classical Conditioning.json::27",
+      "domain": 2,
+      "isScored": true
+    },
+    {
+      "stem": "What is a significant adverse effect on group decision-making that can occur when individuals feel less accountable for their contributions?",
+      "options": [
+        "Increased creativity and innovation in problem-solving.",
+        "Enhanced group cohesion and collaboration.",
+        "Social loafing leading to reduced individual effort.",
+        "Improved decision accuracy through diverse perspectives."
+      ],
+      "answer": "Social loafing leading to reduced individual effort.",
+      "explanation": "Social loafing occurs when individuals in a group contribute less effort due to a diffusion of responsibility, leading to poorer group performance. The other options suggest positive outcomes that do not align with the concept of social loafing.",
+      "kn": "KN16",
+      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively evaluates knowledge of group dynamics and decision-making processes.",
+      "suggestedLesson": "3-group-influences",
+      "suggestedParagraph": "## The Free Rider Effect: Social Loafing",
+      "lessonExcerpt": "Social loafing happens when people in groups contribute less than they would working alone.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 22,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Group Influences.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Group Influences.json::8",
+      "domain": 3,
+      "isScored": true
+    },
+    {
+      "stem": "What term describes the process by which the brain strengthens synaptic connections that are frequently used while eliminating those that are not?",
+      "options": [
+        "Neuroplasticity",
+        "Synaptic pruning",
+        "Myelination",
+        "Synaptogenesis"
+      ],
+      "answer": "Synaptic pruning",
+      "explanation": "1. \"Synaptic pruning\" is the correct answer because it refers to the process by which the brain eliminates synapses that are not frequently used, while simultaneously strengthening those that are used often. This process ensures that the brain becomes more efficient by maintaining only the most relevant and frequently activated neural connections, which is crucial for cognitive development and functioning.\n\n2. The option \"Neuroplasticity\" is incorrect because it refers to the brain's ability to reorganize itself by forming new neural connections throughout life, rather than specifically focusing on the elimination of unused synapses. \"Myelination\" is also incorrect as it pertains to the process of coating axons with myelin, which enhances the speed of nerve impulse transmission, rather than the strengthening or pruning of synapses. Lastly, \"Synaptogenesis\" is incorrect because it describes the formation of new synapses, which is the opposite of what occurs during synaptic pruning, where existing synapses are eliminated.",
+      "difficulty": "easy",
+      "kn": "KN21",
+      "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
+      "quality_comment": "This question effectively tests understanding of synaptic pruning in a clear and straightforward manner.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "easier",
+      "tags": [
+        "lock_in_drill"
+      ],
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Body Growth.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Body Growth.json::36",
+      "domain": 4,
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following diagnostic features distinguishes Generalized Anxiety Disorder (GAD) from nonpathological anxiety?",
+      "options": [
+        "Excessive anxiety and difficulty controlling worry about multiple events occurring most days for at least six months",
+        "Short periods of intense fear that peak within minutes along with physical symptoms",
+        "Fear or anxiety focused on specific social situations with avoidance or distress",
+        "Persistent and excessive fear of separation from attachment figures"
+      ],
+      "answer": "Excessive anxiety and difficulty controlling worry about multiple events occurring most days for at least six months",
+      "explanation": "1. The correct answer, \"Excessive anxiety and difficulty controlling worry about multiple events occurring most days for at least six months,\" accurately distinguishes Generalized Anxiety Disorder (GAD) from nonpathological anxiety because it highlights the chronic nature of the anxiety and the individual's struggle to manage their worries. In GAD, this excessive anxiety occurs consistently over a significant duration (at least six months) and leads to significant distress or impaired functioning, which is not characteristic of nonpathological anxiety.\n\n2. The first incorrect option, \"Short periods of intense fear that peak within minutes along with physical symptoms,\" describes panic attacks, which are a feature of Panic Disorder rather than GAD. The second incorrect option, \"Fear or anxiety focused on specific social situations with avoidance or distress,\" pertains to Social Anxiety Disorder, where the anxiety is specifically linked to social interactions rather than a general pattern of worry. The third incorrect option, \"Persistent and excessive fear of separation from attachment figures,\" refers to Separation Anxiety Disorder, which involves anxiety related to separation rather than the broad, uncontrollable worry characteristic of GAD.",
+      "kn": "KN36",
+      "kn_explanation": "This question focuses on diagnostic criteria, classifying GAD accurately relative to other anxiety disorders, within classification and diagnosis knowledge.",
+      "difficulty": "easy",
+      "quality_comment": "Question is straightforward with clearly differentiable options for other anxiety disorders, enhancing clarity and suitability for EPPP.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Anxiety and OCD.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Anxiety and OCD.json::15",
+      "domain": 5,
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following is an important benefit of interprofessional collaboration (IPC) in primary care settings?",
+      "options": [
+        "Consistently improves quality of life and health behaviors for all patients",
+        "Generally increases patient satisfaction and access to care for older adults",
+        "Requires no special coordination among health providers",
+        "Reduces the need for mental health professionals in primary care"
+      ],
+      "answer": "Generally increases patient satisfaction and access to care for older adults",
+      "explanation": "1. The correct answer, \"Generally increases patient satisfaction and access to care for older adults,\" is supported by research indicating that interprofessional collaboration (IPC) is particularly beneficial for addressing the complex healthcare needs of older patients. Studies have shown that integrated care models, which involve collaboration among various healthcare providers, can improve access to services and enhance patient satisfaction, ultimately leading to better health outcomes for this demographic.\n\n2. The option \"Consistently improves quality of life and health behaviors for all patients\" is incorrect because research on IPC has produced mixed results regarding its effects on quality of life and health behaviors, indicating that improvements are not guaranteed for all patients. The statement \"Requires no special coordination among health providers\" is false as effective IPC necessitates careful coordination and communication among team members to ensure comprehensive care. Lastly, the option \"Reduces the need for mental health professionals in primary care\" is misleading because IPC does not eliminate the need for mental health professionals; rather, it aims to enhance collaboration and integrate their expertise into patient care.",
+      "kn": "KN51",
+      "kn_explanation": "This question is best aligned with KN51 because it tests Approaches to health promotion, risk reduction, resilience, and wellness.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors include plausible but incorrect ideas about IPC, requiring examinees to understand nuanced research outcomes.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Prevention and Consultation.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Prevention and Consultation.json::44",
+      "domain": 6,
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following triangulation types involves using multiple methods like interviews, questionnaires, and observations to collect data in order to increase the credibility of qualitative research findings?",
+      "options": [
+        "Data Triangulation",
+        "Investigator Triangulation",
+        "Methodological Triangulation",
+        "Theory Triangulation"
+      ],
+      "answer": "Methodological Triangulation",
+      "explanation": "1. **Why \"Methodological Triangulation\" is Correct**: Methodological triangulation involves using multiple methods to collect data, such as interviews, questionnaires, and observations, which enhances the credibility and validity of qualitative research findings. By combining different data collection techniques, researchers can cross-verify results and gain a more comprehensive understanding of the research topic.\n\n2. **Why Each Incorrect Option is Wrong**:\n   - **Data Triangulation**: This type involves using the same method to collect data at different times, in different settings, or from different people, rather than employing multiple methods.\n   - **Investigator Triangulation**: This approach refers to using two or more researchers to collect and analyze data, focusing on the diversity of perspectives rather than the methods of data collection.\n   - **Theory Triangulation**: This type involves interpreting data using multiple theories or perspectives, which does not pertain to the use of various data collection methods.",
+      "kn": "KN54",
+      "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors represent real triangulation types, requiring test-takers to carefully differentiate their definitions, making this a challenging but fair item.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Research Designs.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Research Designs.json::23",
+      "domain": 7,
+      "isScored": true
+    },
+    {
+      "stem": "According to APA’s Supervision Guidelines, what is the supervisor’s responsibility regarding confidentiality in supervision?",
+      "options": [
+        "Keep supervisee’s personal disclosures confidential with no exceptions",
+        "Inform supervisees about limits of confidentiality and be responsible for supervisee’s client records",
+        "Share supervisee disclosures freely with other staff members for feedback purposes",
+        "Disclose supervisee’s client data only with supervisee’s verbal consent"
+      ],
+      "answer": "Inform supervisees about limits of confidentiality and be responsible for supervisee’s client records",
+      "explanation": "1. The correct answer, \"Inform supervisees about limits of confidentiality and be responsible for supervisee’s client records,\" aligns with the ASPPB’s Supervision Guidelines, which state that supervisors must inform supervisees of the limits of confidentiality regarding personal disclosures and evaluations. Additionally, supervisors are responsible for ensuring that supervisees' clients are aware of the supervisee's status as a trainee and that the supervisor has access to all client records, thereby maintaining accountability and protecting client welfare.\n\n2. The incorrect options are as follows:\n\n- **Keep supervisee’s personal disclosures confidential with no exceptions:** This is incorrect because supervisors must inform supervisees of the limits of confidentiality, indicating that there are circumstances under which disclosures may not remain confidential.\n  \n- **Share supervisee disclosures freely with other staff members for feedback purposes:** This option is wrong as it violates confidentiality principles; supervisors should not disclose supervisee information without appropriate limits and considerations for confidentiality.\n  \n- **Disclose supervisee’s client data only with supervisee’s verbal consent:** This is incorrect because while consent is important, supervisors must also ensure that they have access to client records for oversight and accountability, which may not always be contingent on verbal consent alone.",
+      "kn": "KN70",
+      "kn_explanation": "This question addresses ethical issues specific to supervision, including confidentiality responsibilities.",
+      "difficulty": "medium",
+      "quality_comment": "Well-constructed item with clear alternatives; tests knowledge of supervisor ethical duties.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json::74",
+      "domain": 8,
+      "isScored": true
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "meta": {
+    "examId": "warmup-8-29",
+    "totalQuestions": 8,
+    "examType": "warmup",
+    "warmupLength": 8,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 1,
+      "7": 1,
+      "8": 1
+    },
+    "generatedAt": "2026-04-25T05:56:49.914421Z"
+  },
+  "questions": [
+    {
+      "stem": "Which side effect is unique to clozapine among second-generation antipsychotics and necessitates frequent blood monitoring?",
+      "options": [
+        "Metabolic syndrome",
+        "Neuroleptic malignant syndrome",
+        "Agranulocytosis",
+        "Tardive dyskinesia"
+      ],
+      "answer": "Agranulocytosis",
+      "explanation": "1. \"Agranulocytosis\" is the correct answer because it is a severe form of neutropenia specifically associated with clozapine, a second-generation antipsychotic. This condition involves dangerously low levels of neutrophils, which are crucial for the immune system, and necessitates regular blood monitoring to ensure patient safety and manage potential complications.\n\n2. The option \"Metabolic syndrome\" is incorrect because, while it can occur with several second-generation antipsychotics, it is not unique to clozapine. \"Neuroleptic malignant syndrome\" is also incorrect as it is a rare life-threatening side effect that can occur with both first and second-generation antipsychotics, not just clozapine. Lastly, \"Tardive dyskinesia\" is incorrect because it is primarily associated with first-generation antipsychotics and can occur with long-term use of any antipsychotic, but is not uniquely linked to clozapine.",
+      "kn": "KN2",
+      "kn_explanation": "The question targets a uniquely serious adverse effect related to clozapine treatment, a core component of drug side effects knowledge (KN2).",
+      "difficulty": "medium",
+      "quality_comment": "This item focuses on an important safety consideration with distinct distractors, making it clinically meaningful.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Pharmacology Antidepressants and Antipsychotics.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Pharmacology Antidepressants and Antipsychotics.json::40",
+      "domain": 1,
+      "isScored": true
+    },
+    {
+      "stem": "According to Acquired Needs Theory, which of the following statements best describes the stability of work-related needs over time?",
+      "options": [
+        "Work-related needs are fixed and do not change throughout a person's career.",
+        "Work-related needs can evolve based on life experiences and personal growth.",
+        "Work-related needs are solely determined by external factors such as salary.",
+        "Work-related needs are only relevant during the initial stages of a career."
+      ],
+      "answer": "Work-related needs can evolve based on life experiences and personal growth.",
+      "explanation": "The correct answer reflects the idea that individuals' needs can change as they gain new experiences and insights over time. The other options suggest a static view of needs or limit their relevance, which does not align with the dynamic nature of human motivation.",
+      "kn": "KN7",
+      "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of a complex psychological theory.",
+      "suggestedLesson": "2-classical-conditioning-interventions",
+      "suggestedParagraph": "## Why Classical Conditioning Interventions Matter for Your Career",
+      "lessonExcerpt": "The lesson does not specifically address Acquired Needs Theory, indicating a need for review.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 21,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Classical Conditioning Interventions.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Classical Conditioning Interventions.json::3",
+      "domain": 2,
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following best illustrates the group attribution error?",
+      "options": [
+        "Believing an individual group member’s views reflect the entire group’s attitudes",
+        "Attributing a group’s decision to individual members’ unanimous agreement despite dissent",
+        "Attributing personal failures to situational factors",
+        "Explaining one’s own behavior in terms of distinctiveness"
+      ],
+      "answer": "Attributing a group’s decision to individual members’ unanimous agreement despite dissent",
+      "explanation": "1. \"Attributing a group’s decision to individual members’ unanimous agreement despite dissent\" is the correct answer because it exemplifies the group attribution error, which occurs when people mistakenly believe that a group's decision reflects the consensus of all its members, ignoring any dissenting opinions. This aligns with the second version of the group attribution error described by Allison and Messick (1985), where individuals attribute a group's conclusion to each member's agreement, even when there is evidence of disagreement.\n\n2. The option \"Believing an individual group member’s views reflect the entire group’s attitudes\" is incorrect because it describes the first version of the group attribution error, which focuses on assuming that an individual’s beliefs mirror those of the group rather than on group decisions. \"Attributing personal failures to situational factors\" is wrong as it pertains to the self-serving bias, where individuals attribute undesirable outcomes to external factors, not a group decision. Lastly, \"Explaining one’s own behavior in terms of distinctiveness\" is incorrect because it relates to Kelley’s covariation model, specifically the distinctiveness component, rather than addressing group attributions.",
+      "kn": "KN14",
+      "kn_explanation": "This question probes understanding of group-level attribution biases, a key topic in social cognition in KN14.",
+      "difficulty": "medium",
+      "quality_comment": "The options are balanced and the question requires careful differentiation of group versus individual attributions.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Why People Do Things.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Why People Do Things.json::28",
+      "domain": 3,
+      "isScored": true
+    },
+    {
+      "stem": "The earliest age at which a premature baby can survive outside the womb, typically occurring between 22 and 26 weeks gestation, is known as the:",
+      "options": [
+        "Embryonic period",
+        "Age of viability",
+        "Fetal period",
+        "Second trimester"
+      ],
+      "answer": "Age of viability",
+      "explanation": "1. The correct answer, \"age of viability,\" refers to the earliest point in gestation, typically between 22 and 26 weeks, at which a premature baby has a reasonable chance of surviving outside the womb. This term is significant because it marks the transition from a fetus that is unlikely to survive without intensive medical intervention to one that can potentially thrive with appropriate care.\n\n2. The option \"embryonic period\" is incorrect because it refers to the stage of prenatal development from the third through the eighth weeks, during which major organs and structures are forming, not the viability of the fetus. \"Fetal period\" is also incorrect as it describes the time from week 9 until birth, focusing on the growth and maturation of already formed structures rather than the specific milestone of survival outside the womb. Lastly, the \"second trimester\" is wrong because it spans weeks 14 through 27 of gestation and does not specifically denote the age at which a fetus can survive outside the womb; it simply describes a broader timeframe in prenatal development.",
+      "kn": "KN21",
+      "kn_explanation": "This question pertains to prenatal developmental milestones and survival thresholds, an element of normal growth and development (KN21).",
+      "difficulty": "easy",
+      "quality_comment": "Clear question with plausible options related to prenatal periods; a good recall-level question for foundational knowledge.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Before Birth.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Before Birth.json::13",
+      "domain": 4,
+      "isScored": true
+    },
+    {
+      "stem": "Which bipolar disorder diagnosis requires the presence of at least one hypomanic episode and at least one major depressive episode?",
+      "options": [
+        "Bipolar I disorder",
+        "Bipolar II disorder",
+        "Cyclothymic disorder",
+        "Major depressive disorder with mixed features"
+      ],
+      "answer": "Bipolar II disorder",
+      "explanation": "1. **Correct Answer: Bipolar II Disorder**  \nBipolar II disorder is characterized by the presence of at least one hypomanic episode and at least one major depressive episode. This diagnosis specifically requires the occurrence of these two types of mood episodes, distinguishing it from other bipolar disorders.\n\n2. **Incorrect Options:**  \n- **Bipolar I Disorder:** This disorder requires at least one manic episode, which may be preceded or followed by hypomanic or major depressive episodes, but does not necessitate the presence of a hypomanic episode.  \n- **Cyclothymic Disorder:** This diagnosis involves numerous periods of hypomanic symptoms that do not meet the criteria for a hypomanic episode and depressive symptoms that do not meet the criteria for a major depressive episode, thus it does not require a major depressive episode.  \n- **Major Depressive Disorder with Mixed Features:** This is a depressive disorder that includes mixed features of mania but does not meet the criteria for bipolar disorder, as it focuses solely on depressive episodes rather than the specific requirements of bipolar disorders.",
+      "kn": "KN36",
+      "kn_explanation": "This question focuses on the diagnostic distinctions within bipolar disorders per DSM-5-TR criteria, falling under classification systems and diagnostic criteria (KN36).",
+      "difficulty": "easy",
+      "quality_comment": "Clear and straightforward question with plausible distractors; appropriate for foundational understanding.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Mood.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Mood.json::5",
+      "domain": 5,
+      "isScored": true
+    },
+    {
+      "stem": "What is the primary focus of treatment fidelity in psychotherapy research and practice?",
+      "options": [
+        "Ensuring therapists deliver treatment protocols consistently and competently",
+        "Matching therapist and client personality traits for optimal outcomes",
+        "Providing feedback to clients about session progress and alliance quality",
+        "Measuring the economic costs and benefits of treatments"
+      ],
+      "answer": "Ensuring therapists deliver treatment protocols consistently and competently",
+      "explanation": "1. The correct answer, \"Ensuring therapists deliver treatment protocols consistently and competently,\" reflects the primary focus of treatment fidelity in psychotherapy research and practice. Treatment fidelity, also known as intervention fidelity, is crucial for evaluating a treatment's effectiveness, as it ensures that the therapy is delivered as intended according to the established protocols. High fidelity is essential for determining whether treatment outcomes are due to the intervention itself or other extraneous factors, thereby enhancing the validity of research findings and clinical practice.\n\n2. The option \"Matching therapist and client personality traits for optimal outcomes\" is incorrect because while client-therapist matching can influence therapy outcomes, it does not address the consistency and competence of how treatments are delivered, which is the essence of treatment fidelity. \n\nThe option \"Providing feedback to clients about session progress and alliance quality\" is also incorrect as it pertains to the therapeutic process and client engagement rather than the adherence to treatment protocols, which is the focus of treatment fidelity. \n\nLastly, \"Measuring the economic costs and benefits of treatments\" is incorrect because this option relates to economic evaluation rather than the fidelity of treatment delivery, which emphasizes the importance of how well the therapy is implemented rather than its financial implications.",
+      "kn": "KN44",
+      "kn_explanation": "This question is best aligned with KN44 because it tests Treatment techniques and interventions, and the evidence for their comparative efficacy and effectiveness.",
+      "difficulty": "easy",
+      "quality_comment": "The stem is clear and straightforward; distractors are related concepts but clearly distinct.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Prevention and Consultation.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Prevention and Consultation.json::42",
+      "domain": 6,
+      "isScored": true
+    },
+    {
+      "stem": "Which type of graph is most appropriate for displaying data measured on a nominal scale, such as eye color categories?",
+      "options": [
+        "Histogram",
+        "Bar graph",
+        "Frequency polygon",
+        "Scatterplot"
+      ],
+      "answer": "Bar graph",
+      "explanation": "1. The correct answer is \"Bar graph\" because bar graphs are specifically designed to represent nominal and ordinal data by categorizing them into unordered groups. In the case of eye color, each color represents a distinct category, and a bar graph visually depicts the number or percentage of observations for each category, with bars separated by spaces to emphasize the distinctness of each category.\n\n2. The incorrect options are as follows:\n\n- **Histogram:** A histogram is used for interval and ratio data, where the data is continuous and the bars are not separated, making it inappropriate for nominal data like eye color categories.\n  \n- **Frequency polygon:** Similar to histograms, frequency polygons are also used for interval and ratio data and require continuous data points, which does not apply to nominal categories such as eye color.\n  \n- **Scatterplot:** A scatterplot is used to display the relationship between two continuous variables, making it unsuitable for nominal data, which consists of discrete categories without a meaningful relationship to plot.",
+      "kn": "KN54",
+      "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
+      "difficulty": "easy",
+      "quality_comment": "The question is clear and tests common knowledge; distractors are typical graph types but less suitable for nominal data.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Variables.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Variables.json::12",
+      "domain": 7,
+      "isScored": true
+    },
+    {
+      "stem": "What is the appropriate way for psychologists to represent their professional experience in advertisements?",
+      "options": [
+        "A. Psychologists should only include experiences that are directly relevant to their current practice.",
+        "B. Psychologists can exaggerate their past experiences to make their services more appealing.",
+        "C. Psychologists may include any work experience, regardless of its relevance to their practice.",
+        "D. Psychologists are permitted to list volunteer experiences as if they were formal employment."
+      ],
+      "answer": "A. Psychologists should only include experiences that are directly relevant to their current practice.",
+      "explanation": "1. The correct answer, \"A. Psychologists should only include experiences that are directly relevant to their current practice,\" aligns with Standard 5.01 of the APA Ethics Code, which prohibits psychologists from making false, deceptive, or fraudulent public statements about their qualifications. Including only relevant experiences ensures that psychologists accurately represent their training and expertise, thereby maintaining ethical standards in advertising.\n\n2. \n- **B. Psychologists can exaggerate their past experiences to make their services more appealing.** This option is incorrect because exaggerating experiences violates the ethical mandate to provide truthful and accurate information about one’s qualifications, as stated in Standard 5.01. \n\n- **C. Psychologists may include any work experience, regardless of its relevance to their practice.** This is wrong because including irrelevant work experience could mislead clients about the psychologist's qualifications, contradicting the requirement of truthful representation in advertisements.\n\n- **D. Psychologists are permitted to list volunteer experiences as if they were formal employment.** This option is incorrect as it misrepresents the nature of volunteer work, which could be considered deceptive and misleading in advertisements, violating the ethical standards of accurate representation outlined in Standard 5.01.",
+      "difficulty": "easy",
+      "kn": "KN62",
+      "kn_explanation": "This question is best aligned with KN62 because it tests Professional standards and relevant guidelines for the practice of psychology (e.g., standards for educational and psychological testing).",
+      "quality_comment": "This question effectively assesses understanding of ethical representation of professional experience.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "easier",
+      "tags": [
+        "lock_in_drill"
+      ],
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 5 and 6.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 5 and 6.json::41",
+      "domain": 8,
+      "isScored": true
+    }
+  ]
+}
