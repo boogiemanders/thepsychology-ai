@@ -1,0 +1,286 @@
+{
+  "meta": {
+    "examId": "warmup-12-12",
+    "totalQuestions": 12,
+    "examType": "warmup",
+    "warmupLength": 12,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 2,
+      "4": 1,
+      "5": 3,
+      "6": 1,
+      "7": 1,
+      "8": 1,
+      "3-5-6": 1
+    },
+    "generatedAt": "2026-04-25T05:50:04.487Z"
+  },
+  "questions": [
+    {
+      "stem": "Which neurotransmitter is primarily involved in the pathophysiology of Alzheimer's disease?",
+      "options": [
+        "A. Serotonin",
+        "B. Dopamine",
+        "C. Acetylcholine",
+        "D. Norepinephrine"
+      ],
+      "answer": "C. Acetylcholine",
+      "explanation": "Acetylcholine is primarily involved in the pathophysiology of Alzheimer's disease, as its levels are significantly reduced in affected individuals. Serotonin and dopamine are involved in other disorders, while norepinephrine is not specifically linked to Alzheimer's. Therefore, acetylcholine is the correct answer.",
+      "kn": "KN1",
+      "kn_explanation": "This question is best aligned with KN1 because it tests Functional correlates and determinants of the neurobiological and genetic bases of behavior pertaining to perception, cognition, personality, and mood and affect in normal, acute and chronic neurobehavioral disease processes and disease, comorbidities.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of neurotransmitter roles in Alzheimer's disease.",
+      "suggestedLesson": "1-neurological-endocrine-disorders",
+      "suggestedParagraph": "## Neurotransmitter Involvement in Alzheimer's Disease",
+      "lessonExcerpt": "Acetylcholine levels are significantly reduced in individuals with Alzheimer's disease.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 10,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Neurological and Endocrine Disorders.json",
+      "domain": 1,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Neurological and Endocrine Disorders.json::33",
+      "isScored": true
+    },
+    {
+      "stem": "According to equity theory, what motivates individuals to maintain their level of effort in a workplace?",
+      "options": [
+        "Perceived fairness in rewards compared to others",
+        "Personal ambition to excel",
+        "Desire for recognition from peers",
+        "Fear of job loss"
+      ],
+      "answer": "Perceived fairness in rewards compared to others",
+      "explanation": "Equity theory posits that individuals are motivated to maintain their effort based on their perception of fairness in the distribution of rewards compared to others. The other options do not directly relate to the core principle of equity theory.",
+      "kn": "KN10",
+      "kn_explanation": "This question is best aligned with KN10 because it tests Major research-based theories and models of emotion and their application.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of equity theory.",
+      "suggestedLesson": "2-stress-and-emotion",
+      "suggestedParagraph": "## Why Understanding Emotions and Stress Matters for Your EPPP Success",
+      "lessonExcerpt": "Understanding these systems helps you distinguish normal forgetting from pathological memory problems, and it explains why certain therapeutic techniques work better than others.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 18,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Stress and Emotion.json",
+      "domain": 2,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Stress and Emotion.json::17",
+      "isScored": true
+    },
+    {
+      "stem": "A public health official wants to create the most effective anti-vaping campaign for teenagers. Based on persuasion research, which combination of elements would produce the STRONGEST persuasive effect?",
+      "options": [
+        "A moderately frightening message delivered by a celebrity endorser without any action steps",
+        "A low-fear message emphasizing only the statistical risks of vaping, delivered by an unknown source",
+        "A high-fear message describing health consequences paired with clear efficacy information about how teens can quit, delivered by a credible medical expert",
+        "A high-fear message delivered by a low-credibility source with no efficacy component"
+      ],
+      "answer": "A high-fear message describing health consequences paired with clear efficacy information about how teens can quit, delivered by a credible medical expert",
+      "explanation": "Research on persuasion identifies three ingredients for effective fear appeals: high fear arousal, an efficacy message assuring people they can take effective action, and a clear risk description. The lesson states: 'fear appeals work best when they're high in fear BUT they must also include an efficacy message.' Additionally, communicator credibility (expertise + trustworthiness) enhances persuasion. Option A lacks efficacy information and relies on peripheral cues. Option B uses low fear, which is less effective. Option D lacks efficacy and uses a low-credibility source, which would likely produce defensiveness rather than attitude change.",
+      "kn": "KN16",
+      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
+      "difficulty": "medium",
+      "quality_comment": "Integrates multiple persuasion concepts (fear appeals, efficacy, credibility) in an applied scenario.",
+      "suggestedLesson": "3-persuasion",
+      "suggestedParagraph": "### Fear Appeals: How Scared Should People Be?",
+      "lessonExcerpt": "Fear appeals work best when they're high in fear BUT (and this is crucial) they must also include an efficacy message... Three ingredients make fear appeals effective: 1. High fear arousal 2. Efficacy message 3. Clear risk description.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 17,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Persuasion.json",
+      "domain": 3,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Persuasion.json::0",
+      "isScored": true
+    },
+    {
+      "stem": "In Atkinson, Morten, and Sue’s Racial/Cultural Identity Development (R/CID) Model, which stage is characterized by positive attitudes toward one's own minority group, negative attitudes toward the majority group, and suspicion of mental health services?",
+      "options": [
+        "Dissonance",
+        "Resistance and Immersion",
+        "Conformity",
+        "Integrative Awareness"
+      ],
+      "answer": "Resistance and Immersion",
+      "explanation": "The Resistance and Immersion stage involves positive attitudes toward the individual's own minority group and negative attitudes toward the majority group, with associated suspicion of mental health services.",
+      "kn": "KN19",
+      "kn_explanation": "This question assesses knowledge of cultural and sociopolitical psychology and identity development among minority groups, aligning with identity diversity and intersectionality topics.",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and tests recognition of specific stage characteristics, with plausible distractors representing other stages in the model.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Identity.json",
+      "domain": 3,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Identity.json::5",
+      "isScored": true
+    },
+    {
+      "stem": "A 2-year-old insists on trying to buckle his own car seat, becoming frustrated and crying when his father intervenes to help him. According to Erikson's theory of psychosocial development, this child is most centrally navigating which stage?",
+      "options": [
+        "Trust vs. Mistrust, characterized by dependence on caregiver reliability",
+        "Autonomy vs. Shame and Doubt, characterized by striving for self-control and independence",
+        "Initiative vs. Guilt, characterized by purposeful goal-directed behavior",
+        "Industry vs. Inferiority, characterized by mastery of culturally valued skills"
+      ],
+      "answer": "Autonomy vs. Shame and Doubt, characterized by striving for self-control and independence",
+      "explanation": "According to Erikson's psychosocial theory, toddlerhood (approximately ages 1-3) corresponds to the Autonomy vs. Shame and Doubt stage. The core developmental task is the child's push to assert self-control and independence over their own actions and body. The toddler's insistence on performing the task himself — and frustration when that independence is thwarted — directly illustrates this stage's central conflict. Trust vs. Mistrust (A) is the infancy stage (0-1 year) centered on caregiver consistency. Initiative vs. Guilt (C) emerges during preschool years (3-6) when children begin taking self-directed purposeful action. Industry vs. Inferiority (D) characterizes the school-age years (6-12) focused on skill mastery and peer comparison.",
+      "kn": "KN21",
+      "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
+      "difficulty": "medium",
+      "quality_comment": "Well-grounded behavioral vignette testing stage identification; distractors are appropriately adjacent stages.",
+      "suggestedLesson": "4-temperament-and-personality",
+      "suggestedParagraph": "### Erikson's Psychosocial Stages",
+      "lessonExcerpt": "The exam expects you to know two foundational stage theories cold: Freud's and Erikson's.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 11,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Temperament and Personality.json",
+      "domain": 4,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Temperament and Personality.json::17",
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following methods is most effective for increasing the sensitivity of a psychological test?",
+      "options": [
+        "Reducing the number of items",
+        "Using a forced-choice format",
+        "Increasing the test length",
+        "Employing a Likert scale"
+      ],
+      "answer": "Using a forced-choice format",
+      "explanation": "A forced-choice format can increase sensitivity by requiring respondents to make a choice between two equally appealing options, thus providing clearer distinctions in responses. The other options may not effectively enhance sensitivity.",
+      "kn": "KN41",
+      "kn_explanation": "This question is best aligned with KN41 because it tests Use of technology in implementing tests, surveys, and other forms of assessment and diagnostic evaluation (e.g., validity, cost-effectiveness, consumer acceptability).",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests knowledge of test development strategies.",
+      "suggestedLesson": "5-personality-tests",
+      "suggestedParagraph": "## Understanding Personality Assessment Tools: Your Guide to Structured and Projective Tests",
+      "lessonExcerpt": "Using a forced-choice format can increase the sensitivity of a psychological test.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 3,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Personality Tests.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Personality Tests.json::0",
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following best describes the theoretical basis for the forced-choice method in malingering assessment?",
+      "options": [
+        "It assumes individuals who are malingering will perform at or above chance levels to appear competent",
+        "It relies on the idea that genuine impairment leads to inconsistent responding",
+        "It is based on the assumption that malingerers deliberately choose incorrect answers more than would be expected by chance",
+        "It presumes that malingering individuals will guess randomly due to lack of knowledge"
+      ],
+      "answer": "It is based on the assumption that malingerers deliberately choose incorrect answers more than would be expected by chance",
+      "explanation": "1. The correct answer, \"It is based on the assumption that malingerers deliberately choose incorrect answers more than would be expected by chance,\" accurately reflects the principle behind the forced-choice method in malingering assessment. This method operates on the premise that individuals who are feigning symptoms will intentionally answer questions incorrectly at a higher rate than expected, indicating their lack of genuine impairment and revealing their deceptive behavior.\n\n2. The option \"It assumes individuals who are malingering will perform at or above chance levels to appear competent\" is incorrect because the forced-choice method specifically predicts that malingerers will perform below chance levels due to their intentional incorrect responses. The statement \"It relies on the idea that genuine impairment leads to inconsistent responding\" is misleading, as the forced-choice method is designed to detect deliberate deception rather than inconsistencies arising from genuine impairment. Lastly, the option \"It presumes that malingering individuals will guess randomly due to lack of knowledge\" is inaccurate because the method does not assume random guessing; rather, it posits that malingerers will consciously choose incorrect answers, thereby skewing their performance below what would be expected by chance.",
+      "kn": "KN37",
+      "kn_explanation": "This question addresses evidence-based interpretation of data and biases in clinical assessment, fitting under evidence-based interpretation of data and heuristics (KN37).",
+      "difficulty": "medium",
+      "quality_comment": "This item clarifies the theoretical rationale behind a common malingering detection method, reinforcing understanding of assessment biases and interpretation.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Trauma, Dissociation, and Somatic.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Trauma, Dissociation, and Somatic.json::17",
+      "isScored": true
+    },
+    {
+      "stem": "In a multitrait-multimethod matrix, a low correlation between the target test and a different trait measured by the same method provides evidence of:",
+      "options": [
+        "Divergent validity",
+        "Convergent validity",
+        "Content validity",
+        "Face validity"
+      ],
+      "answer": "Divergent validity",
+      "explanation": "1. **Divergent validity** is the correct answer because it refers to the degree to which scores on a test correlate low with scores on measures of unrelated constructs. In the context of a multitrait-multimethod matrix, a low correlation between the target test and a different trait measured by the same method indicates that the test is not measuring the unrelated trait, thereby supporting its divergent validity.\n\n2. **Convergent validity** is incorrect because it pertains to high correlations between the target test and measures of the same or related constructs, not low correlations with unrelated traits. **Content validity** is also incorrect, as it focuses on whether the test items adequately represent the domain being measured, rather than the relationships between different traits. Finally, **face validity** is not applicable here because it refers to how valid a test appears to be to examinees, which does not involve statistical correlations or the relationships between constructs.",
+      "kn": "KN29",
+      "kn_explanation": "This question concerns construct validity components and their statistical indicators, fundamental in test psychometric theory (KN29).",
+      "difficulty": "medium",
+      "quality_comment": "The question clearly distinguishes divergent from convergent and content validity, with plausible distractors, suitable for intermediate learners.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 What Tests Measure.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 What Tests Measure.json::4",
+      "isScored": true
+    },
+    {
+      "stem": "Mindfulness-Based Cognitive Therapy (MBCT) primarily seeks to help clients:",
+      "options": [
+        "Develop rigid cognitive structures to eliminate emotional distress",
+        "Become self-aware and de-center from distressing thoughts, feelings, and behaviors through combining mindfulness and CBT techniques",
+        "Focus exclusively on physical symptoms of stress while ignoring cognitive processes",
+        "Replace negative automatic thoughts with positive ones using cognitive restructuring"
+      ],
+      "answer": "Become self-aware and de-center from distressing thoughts, feelings, and behaviors through combining mindfulness and CBT techniques",
+      "explanation": "1. The correct answer, \"Become self-aware and de-center from distressing thoughts, feelings, and behaviors through combining mindfulness and CBT techniques,\" accurately reflects the primary goal of Mindfulness-Based Cognitive Therapy (MBCT). MBCT aims to enable clients to develop self-awareness, allowing them to distance themselves from distressing thoughts and emotions, which aligns with the therapy's integration of mindfulness practices with cognitive-behavioral techniques to facilitate this process.\n\n2. The first incorrect option, \"Develop rigid cognitive structures to eliminate emotional distress,\" is wrong because MBCT promotes flexibility and self-awareness rather than rigidity in cognitive structures. The second option, \"Focus exclusively on physical symptoms of stress while ignoring cognitive processes,\" is incorrect as MBCT emphasizes the importance of both cognitive and emotional awareness, not just physical symptoms. Lastly, the third option, \"Replace negative automatic thoughts with positive ones using cognitive restructuring,\" is misleading because MBCT does not solely focus on replacing negative thoughts but rather encourages clients to observe and accept their thoughts without judgment, fostering a more adaptive relationship with their experiences rather than simply restructuring them.",
+      "kn": "KN43",
+      "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors describe plausible but inaccurate mechanisms, requiring an understanding of MBCT’s unique therapeutic goals.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 CBT.json",
+      "domain": 6,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 CBT.json::32",
+      "isScored": true
+    },
+    {
+      "stem": "A study’s results are threatened by history when:",
+      "options": [
+        "Measurement instruments change during the study, affecting results",
+        "An unrelated event occurs during the study and affects participants differently across groups",
+        "Participants improve on a task simply due to repeated testing",
+        "Participants drop out at different rates across groups"
+      ],
+      "answer": "An unrelated event occurs during the study and affects participants differently across groups",
+      "explanation": "1. The correct answer, \"An unrelated event occurs during the study and affects participants differently across groups,\" accurately describes a threat to internal validity known as history. This occurs when external events, not controlled by the study, influence the outcomes differently for participants in various groups, potentially skewing the results and leading to incorrect conclusions about the cause-effect relationship between the independent and dependent variables.\n\n2. The option \"Measurement instruments change during the study, affecting results\" is incorrect because it describes a threat to internal validity known as instrumentation, which involves changes in the measurement tools rather than external events. The option \"Participants improve on a task simply due to repeated testing\" is wrong as it refers to the testing threat, where prior exposure to a test affects performance, not an unrelated event impacting different groups. Lastly, \"Participants drop out at different rates across groups\" is incorrect because it pertains to differential attrition, which affects the composition of groups rather than the influence of external events on the results.",
+      "kn": "KN57",
+      "kn_explanation": "Understanding threats to internal validity, such as history effects, is a critical component of research methods and interpretation of study findings.",
+      "difficulty": "medium",
+      "quality_comment": "The stem clearly targets a major threat to validity, and answer options cover common internal validity threats, making distractors plausible and relevant.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Internal and External Validity.json",
+      "domain": 7,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Internal and External Validity.json::8",
+      "isScored": true
+    },
+    {
+      "stem": "Which standard emphasizes the necessity of competence in assessment practices for psychologists?",
+      "options": [
+        "Standard 1: Resolving Ethical Issues",
+        "Standard 2: Competence",
+        "Standard 3: Human Relations",
+        "Standard 4: Privacy and Confidentiality"
+      ],
+      "answer": "Standard 2: Competence",
+      "explanation": "Standard 2 specifically addresses the necessity of maintaining competence in all professional activities, including assessment practices. The other standards focus on different aspects of ethical practice.",
+      "kn": "KN61",
+      "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively highlights a key ethical standard relevant to assessment practices.",
+      "suggestedLesson": "8-standards-1-2",
+      "suggestedParagraph": "## Standard 2: Competence",
+      "lessonExcerpt": "Standard 2 emphasizes the necessity of maintaining competence in all professional activities.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 8,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 1 and 2.json",
+      "domain": 8,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 1 and 2.json::13",
+      "isScored": true
+    },
+    {
+      "stem": "According to Equity Theory, what is the most likely reaction of a worker who perceives overpayment inequity?",
+      "options": [
+        "Reducing work effort to match outcomes",
+        "Increasing work quality or quantity to justify higher reward",
+        "Seeking to obtain better outcomes through negotiation",
+        "Experiencing dissatisfaction but maintaining work levels"
+      ],
+      "answer": "Increasing work quality or quantity to justify higher reward",
+      "explanation": "1. The correct answer, \"Increasing work quality or quantity to justify higher reward,\" aligns with Equity Theory, which posits that when a worker perceives overpayment inequity—meaning they believe their input/output ratio is less favorable compared to others—they are motivated to enhance their performance. This reaction stems from a desire to restore equity by justifying the higher reward they are receiving, thus aligning their efforts with the perceived fairness of their compensation.\n\n2. The option \"Reducing work effort to match outcomes\" is incorrect because it describes a response to underpayment inequity, where a worker feels they are putting in more effort than they are compensated for and thus reduces their effort. \"Seeking to obtain better outcomes through negotiation\" is also incorrect as it suggests a proactive approach to improve outcomes rather than adjusting performance, which is not typical of overpayment inequity reactions. Lastly, \"Experiencing dissatisfaction but maintaining work levels\" fails to recognize that overpayment inequity typically leads to increased effort rather than dissatisfaction without change, as workers strive to justify their higher rewards.",
+      "kn": "KN9",
+      "kn_explanation": "The question focuses on the motivational responses to perceived social inequities in the workplace, a key element of Equity Theory (KN9).",
+      "difficulty": "medium",
+      "quality_comment": "The options are balanced and test application of theory to worker behavior, enhancing conceptual learning.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/2 Work Motivation.json",
+      "domain": "3-5-6",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/2 Work Motivation.json::26",
+      "isScored": true
+    }
+  ]
+}

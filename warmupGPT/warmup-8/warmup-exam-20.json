@@ -1,0 +1,191 @@
+{
+  "meta": {
+    "examId": "warmup-8-20",
+    "totalQuestions": 8,
+    "examType": "warmup",
+    "warmupLength": 8,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 1,
+      "7": 1,
+      "8": 1
+    },
+    "generatedAt": "2026-04-25T05:50:04.493Z"
+  },
+  "questions": [
+    {
+      "stem": "Which antipsychotic generation is associated with the highest risk of metabolic syndrome, including weight gain and insulin resistance?",
+      "options": [
+        "First-generation antipsychotics",
+        "Second-generation antipsychotics",
+        "Third-generation antipsychotics",
+        "All antipsychotic generations have equal risk"
+      ],
+      "answer": "Second-generation antipsychotics",
+      "explanation": "1. **Correct Answer: Second-generation antipsychotics**  \nSecond-generation antipsychotics (SGAs) are associated with a higher risk of metabolic syndrome, which includes significant weight gain, insulin resistance, and an increased risk for diabetes mellitus and heart disease. This is particularly noted with drugs like clozapine and other SGAs, which can lead to substantial metabolic changes compared to first-generation antipsychotics (FGAs) and third-generation antipsychotics (TGAs).\n\n2. **Incorrect Options:**\n- **First-generation antipsychotics:** FGAs primarily cause extrapyramidal side effects and are less commonly associated with metabolic syndrome compared to SGAs.\n- **Third-generation antipsychotics:** TGAs are noted to have fewer side effects overall, including a lower risk of metabolic syndrome compared to SGAs.\n- **All antipsychotic generations have equal risk:** This option is incorrect because the evidence clearly shows that SGAs have a significantly higher risk for metabolic syndrome than either FGAs or TGAs.",
+      "kn": "KN2",
+      "kn_explanation": "This item focuses on adverse effect profiles related to different drug classes, fitting within the drug classification and effects knowledge area (KN2).",
+      "difficulty": "medium",
+      "quality_comment": "Clear question with plausible answer choices; the distractors are reasonable and test recognition of important clinical differences.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Pharmacology Antidepressants and Antipsychotics.json",
+      "domain": 1,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Pharmacology Antidepressants and Antipsychotics.json::37",
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following is an example of positive punishment?",
+      "options": [
+        "A child must clean up chairs knocked over after becoming angry",
+        "A child loses 15 minutes of video game time for aggressive behavior",
+        "A child sits in the corner for a few minutes after misbehaving",
+        "Ignoring a child's whining to reduce its frequency"
+      ],
+      "answer": "A child must clean up chairs knocked over after becoming angry",
+      "explanation": "1. \"A child must clean up chairs knocked over after becoming angry\" is the correct answer because it exemplifies **overcorrection**, a form of positive punishment. Overcorrection involves applying a penalty following an undesirable behavior—in this case, the child must restore the environment to a better state by cleaning up the mess created by their anger, thereby reducing the likelihood of the undesirable behavior occurring again.\n\n2. The option \"A child loses 15 minutes of video game time for aggressive behavior\" is incorrect because it describes **response cost**, a type of negative punishment, where a specific reinforcer (video game time) is removed to decrease undesirable behavior. \"A child sits in the corner for a few minutes after misbehaving\" is also incorrect as it refers to **time out**, which involves removing all sources of reinforcement for a brief period, making it a form of negative punishment rather than positive punishment. Lastly, \"Ignoring a child's whining to reduce its frequency\" is incorrect because it illustrates **extinction**, where reinforcement (attention) is withheld to decrease the behavior, rather than applying a penalty for the behavior.",
+      "kn": "KN7",
+      "kn_explanation": "The question assesses knowledge of operant conditioning punishment definitions and examples, falling under learning principles in KN7.",
+      "difficulty": "medium",
+      "quality_comment": "The options represent different types of consequences making the question a good discriminator of understanding positive versus negative punishment and extinction.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Operant Conditioning Interventions.json",
+      "domain": 2,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Operant Conditioning Interventions.json::28",
+      "isScored": true
+    },
+    {
+      "stem": "In child development, how does credibility influence altruistic behavior?",
+      "options": [
+        "Children are more likely to help when they perceive the helper as credible.",
+        "Children's altruism is unaffected by the credibility of the helper.",
+        "Credibility only matters in peer interactions, not adult-child interactions.",
+        "Children prefer to help those who are less credible."
+      ],
+      "answer": "Children are more likely to help when they perceive the helper as credible.",
+      "explanation": "The correct answer is 'Children are more likely to help when they perceive the helper as credible' because research indicates that children's willingness to engage in altruistic behavior is influenced by their perception of the helper's credibility. 'Children's altruism is unaffected by the credibility of the helper' is incorrect as credibility plays a significant role. 'Credibility only matters in peer interactions, not adult-child interactions' is misleading, as it applies to both contexts. 'Children prefer to help those who are less credible' contradicts the established findings.",
+      "kn": "KN15",
+      "kn_explanation": "This question is best aligned with KN15 because it tests Social interaction and relationships (e.g., attraction, aggression, altruism, organizational justice, verbal and non-verbal communication, internet communication, mate selection, empathy).",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and assesses understanding of child development.",
+      "suggestedLesson": "3-connection",
+      "suggestedParagraph": "## Why Understanding Affiliation, Attraction, and Intimacy Matters for Your Practice",
+      "lessonExcerpt": "Children are more likely to engage in altruistic behavior when they perceive the helper as credible.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 17,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Connection.json",
+      "domain": 3,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Connection.json::4",
+      "isScored": true
+    },
+    {
+      "stem": "A school psychologist is preparing a psychoeducational workshop for middle school staff on puberty timing. A teacher asks whether developing early is advantageous or disadvantageous for students. Which of the following most accurately summarizes the empirical literature on the differential psychosocial effects of early physical maturation in boys versus girls?",
+      "options": [
+        "Early maturation confers similar peer status benefits for both boys and girls, primarily through perceived athletic and physical competence",
+        "Early-maturing girls tend to show greater self-confidence and social maturity, while early-maturing boys are at elevated risk for internalizing disorders",
+        "Early-maturing boys tend to experience social advantages such as higher peer status, while early-maturing girls are at greater risk for depression, lower self-esteem, and early engagement in risky behaviors",
+        "The psychosocial effects of early maturation are equivalent across genders but are moderated primarily by socioeconomic status and parenting style"
+      ],
+      "answer": "Early-maturing boys tend to experience social advantages such as higher peer status, while early-maturing girls are at greater risk for depression, lower self-esteem, and early engagement in risky behaviors",
+      "explanation": "The research literature consistently documents an asymmetric pattern: early maturation tends to be advantageous for boys, conferring social prestige, peer admiration, and athletic advantages that translate into higher status. In contrast, early-maturing girls are at elevated risk for depression, disordered eating, lower self-esteem, and earlier onset of sexual activity and substance use. This is partly because early-maturing girls are developmentally out of step with same-age peers, may attract older peer groups, and face unwanted sexualization before they have the psychological resources to manage it. The benefits and risks are clearly asymmetric, not equivalent across genders.",
+      "kn": "KN22",
+      "kn_explanation": "This question is best aligned with KN22 because it tests Influence of individual-environment interaction on development over time (e.g., the relationship between the individual and the social, academic, work, community environment).",
+      "difficulty": "medium",
+      "quality_comment": "High-yield EPPP content with clear asymmetric gender findings. Strong distractors including a plausible but incorrect 'equal effects' option.",
+      "suggestedLesson": "4-body-growth",
+      "suggestedParagraph": "## Sensory Development: How We Experience the World",
+      "lessonExcerpt": "Lesson content on puberty timing and adjustment was in a truncated portion of 4-body-growth.md and could not be confirmed from the provided excerpt.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 7,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Body Growth.json",
+      "domain": 4,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Body Growth.json::19",
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following best characterizes the diagnostic criteria of delirium?",
+      "options": [
+        "A gradual onset of cognitive decline over months with no fluctuations and no attention disturbance",
+        "A sudden disturbance in attention and awareness that fluctuates during the day, accompanied by at least one other cognitive disturbance",
+        "Progressive memory loss without any changes in attention or awareness",
+        "Steady cognitive decline accompanied by aphasia and apraxia in elderly individuals"
+      ],
+      "answer": "A sudden disturbance in attention and awareness that fluctuates during the day, accompanied by at least one other cognitive disturbance",
+      "explanation": "Delirium is defined by a disturbance in attention and awareness that develops quickly (hours to days), fluctuates during the day, and includes an additional cognitive disturbance such as memory or language impairment.",
+      "kn": "KN36",
+      "kn_explanation": "The question focuses on clinical diagnostic criteria for delirium, relating to the understanding of classification systems and diagnosis in neurocognitive disorders.",
+      "difficulty": "medium",
+      "quality_comment": "The stem is clear, and distractors cover related but distinct disorders, promoting good differentiation of delirium from other conditions.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Neurocognitive.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Neurocognitive.json::1",
+      "isScored": true
+    },
+    {
+      "stem": "A structural family therapist using Minuchin's model begins working with a family in which the mother routinely makes all major decisions together with her 14-year-old son, confides marital problems to him, and seeks his emotional support, while the father remains a peripheral and disengaged figure with minimal involvement in family life. The primary therapeutic focus of structural family therapy in this case would be to:",
+      "options": [
+        "Explore the multigenerational transmission of emotional fusion using a genogram spanning at least three generations",
+        "Identify and restructure the problematic boundaries maintaining enmeshment and disengagement within family subsystems",
+        "Challenge the family's irrational cognitions about appropriate parental and child roles through Socratic dialogue",
+        "Use paradoxical directives to expose the secondary gains that maintain the current dysfunctional family structure"
+      ],
+      "answer": "Identify and restructure the problematic boundaries maintaining enmeshment and disengagement within family subsystems",
+      "explanation": "Structural family therapy, developed by Salvador Minuchin, focuses on the family's organizational structure—specifically the boundaries between subsystems (parental, sibling, individual). When boundaries are overly permeable, enmeshment results, as seen between the mother and son; when too rigid, disengagement results, as seen with the father. The primary therapeutic goal is to reshape these boundaries to establish clearer, more functional structures and restore appropriate hierarchies. Option A describes Bowen's multigenerational approach, which uses genograms—not Minuchin's structural model. Option C reflects a cognitive-behavioral approach rather than a structural/systems one. Option D describes strategic or paradoxical interventions, not the structural model's primary method.",
+      "kn": "KN46",
+      "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
+      "difficulty": "medium",
+      "quality_comment": "Well-constructed scenario with good discriminating distractors across family therapy orientations. The structural family therapy section of the lesson is",
+      "suggestedLesson": "6-family-and-group",
+      "suggestedParagraph": "### 2. Structural Family Therapy (Minuchin)",
+      "lessonExcerpt": "### 2. Structural Family Therapy (Minuchin)",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 22,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Family and Group.json",
+      "domain": 6,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Family and Group.json::2",
+      "isScored": true
+    },
+    {
+      "stem": "A researcher wants to test whether undergraduates prefer hard-copy or online textbooks. Which statistical test should be used?",
+      "options": [
+        "Single-sample chi-square test",
+        "Multiple-sample chi-square test",
+        "One-way ANOVA",
+        "Student’s t-test for unrelated samples"
+      ],
+      "answer": "Single-sample chi-square test",
+      "explanation": "1. The \"Single-sample chi-square test\" is the correct answer because the researcher is analyzing a single nominal variable (preference for hard-copy or online textbooks) with two categories. This test is specifically designed for situations where there is one variable and the goal is to determine if the observed frequencies differ from expected frequencies, making it ideal for this study's purpose.\n\n2. The \"Multiple-sample chi-square test\" is incorrect because it is used when analyzing two or more variables, whereas this study only involves one variable (textbook preference). The \"One-way ANOVA\" is unsuitable because it requires a dependent variable measured on an interval or ratio scale and involves more than two levels of an independent variable, which is not the case here. Lastly, the \"Student’s t-test for unrelated samples\" is inappropriate because it is meant for comparing means between two unrelated groups measured on an interval or ratio scale, not for nominal data like textbook preferences.",
+      "kn": "KN54",
+      "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are credible statistical tests, challenging the test taker to correctly identify the single-variable chi-square application.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Stats Tests.json",
+      "domain": 7,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Stats Tests.json::13",
+      "isScored": true
+    },
+    {
+      "stem": "Emerging social, legal, or ethical issues can impact psychological practice. What is a recommended way for psychologists to address these evolving concerns?",
+      "options": [
+        "Avoid adapting practice standards until official code revisions occur.",
+        "Stay informed through professional organizations and update their practice accordingly.",
+        "Refer all new issues to legal counsel and avoid ethical decision-making.",
+        "Disregard emerging issues as they generally do not impact direct practice."
+      ],
+      "answer": "Stay informed through professional organizations and update their practice accordingly.",
+      "explanation": "1. The correct answer, \"Stay informed through professional organizations and update their practice accordingly,\" is vital because psychologists must remain aware of emerging social, legal, and ethical issues that can impact their practice. Engaging with professional organizations ensures that psychologists receive timely updates and guidance on best practices, allowing them to adapt their approaches to align with current standards and ethical guidelines, as emphasized in the APA Ethics Code.\n\n2. The option \"Avoid adapting practice standards until official code revisions occur\" is incorrect because it suggests a passive approach that could leave psychologists unprepared for current issues affecting their practice, which can be detrimental to clients and the profession. \"Refer all new issues to legal counsel and avoid ethical decision-making\" is wrong as it undermines the psychologist's responsibility to engage in ethical decision-making and take proactive steps in addressing issues rather than deferring entirely to legal counsel. Lastly, \"Disregard emerging issues as they generally do not impact direct practice\" is flawed because it dismisses the significant influence that evolving social and ethical concerns have on psychological practice, potentially compromising the well-being of clients and the integrity of the profession.",
+      "kn": "KN61",
+      "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
+      "difficulty": "medium",
+      "quality_comment": "The question tests understanding of professional responsibility towards evolving ethical and legal issues, fitting for current practice demands.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 7 and 8.json",
+      "domain": 8,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 7 and 8.json::27",
+      "isScored": true
+    }
+  ]
+}

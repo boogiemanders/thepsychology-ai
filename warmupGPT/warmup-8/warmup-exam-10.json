@@ -1,0 +1,185 @@
+{
+  "meta": {
+    "examId": "warmup-8-10",
+    "totalQuestions": 8,
+    "examType": "warmup",
+    "warmupLength": 8,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 1,
+      "7": 1,
+      "8": 1
+    },
+    "generatedAt": "2026-04-25T05:50:04.486Z"
+  },
+  "questions": [
+    {
+      "stem": "Which of the following best describes the role of the right hemisphere in language?",
+      "options": [
+        "Dominant for producing grammatical and syntactic language",
+        "Essential for emotional prosody and understanding pragmatics",
+        "Controls the majority of phoneme discrimination in adults learning their first language",
+        "Primary region for logical and analytical language functions"
+      ],
+      "answer": "Essential for emotional prosody and understanding pragmatics",
+      "explanation": "1. The correct answer, \"Essential for emotional prosody and understanding pragmatics,\" accurately reflects the role of the right hemisphere in language because it is responsible for the expression of emotion through variations in speech (emotional prosody) and for the use and understanding of language in social contexts (pragmatics). While the left hemisphere is dominant for most language functions, including grammar and syntax, the right hemisphere contributes significantly to how language is used in social interactions and emotional expression.\n\n2. The option \"Dominant for producing grammatical and syntactic language\" is incorrect because grammatical and syntactic functions are primarily associated with the left hemisphere, which is dominant for language in most individuals. The statement \"Controls the majority of phoneme discrimination in adults learning their first language\" is also wrong, as the left hemisphere is primarily responsible for phoneme discrimination, particularly in language acquisition. Lastly, \"Primary region for logical and analytical language functions\" is incorrect because logical and analytical thinking is a function of the left hemisphere, which is where most language processing occurs, rather than the right hemisphere.",
+      "kn": "KN1",
+      "kn_explanation": "Examines lateralization and specialization of brain functions related to language processing, central to biological bases of behavior (KN1).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are plausible but reflect common misconceptions, helping to assess nuanced understanding of hemispheric functions.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Cerebral Cortex.json",
+      "domain": 1,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Cerebral Cortex.json::30",
+      "isScored": true
+    },
+    {
+      "stem": "Which behavior is most likely to be influenced by high achievement motivation?",
+      "options": [
+        "Avoiding challenging tasks to prevent failure",
+        "Seeking out difficult tasks to demonstrate competence",
+        "Preferring tasks with minimal effort",
+        "Choosing tasks based on peer approval"
+      ],
+      "answer": "Seeking out difficult tasks to demonstrate competence",
+      "explanation": "High achievement motivation typically drives individuals to seek out challenging tasks that allow them to demonstrate their competence and skills. The other options reflect avoidance or external validation rather than intrinsic motivation to achieve.",
+      "kn": "KN10",
+      "kn_explanation": "This question is best aligned with KN10 because it tests Major research-based theories and models of emotion and their application.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of achievement motivation.",
+      "suggestedLesson": "2-stress-and-emotion",
+      "suggestedParagraph": "## Why Understanding Emotions and Stress Matters for Your EPPP Success",
+      "lessonExcerpt": "Understanding these systems helps you distinguish normal forgetting from pathological memory problems, and it explains why certain therapeutic techniques work better than others.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 12,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Stress and Emotion.json",
+      "domain": 2,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Stress and Emotion.json::14",
+      "isScored": true
+    },
+    {
+      "stem": "Regarding minority influence in groups, Moscovici proposed that minorities are most effective at persuading the majority when they:",
+      "options": [
+        "Express their opinion consistently but without rigidity or dogmatism",
+        "Apply pressure through repeated majority normative influence",
+        "Rely on informal social sanctions against the majority",
+        "Accept public compliance but avoid conversion"
+      ],
+      "answer": "Express their opinion consistently but without rigidity or dogmatism",
+      "explanation": "1. The correct answer, \"Express their opinion consistently but without rigidity or dogmatism,\" aligns with Moscovici's (1980) findings on minority influence. He emphasized that for a minority to effectively persuade the majority, they must consistently express their opinion while maintaining a flexible approach, avoiding a dogmatic stance. This balance allows the minority to be perceived as credible and reasonable, increasing the likelihood of influencing the majority's views.\n\n2. The option \"Apply pressure through repeated majority normative influence\" is incorrect because it describes a tactic typically used by the majority to maintain conformity, rather than a strategy employed by minorities who rely on consistency and behavioral style. \"Rely on informal social sanctions against the majority\" is wrong because Moscovici's theory focuses on persuasion through consistent expression rather than coercive methods or sanctions. Lastly, \"Accept public compliance but avoid conversion\" is incorrect as it misrepresents the goal of minority influence; Moscovici posited that minorities aim for private acceptance (conversion) rather than mere public compliance, which is more characteristic of majority influence.",
+      "kn": "KN16",
+      "kn_explanation": "This question tests understanding of social influence, particularly minority influence processes within groups, aligned with KN16.",
+      "difficulty": "medium",
+      "quality_comment": "The stem and options clearly address a nuanced aspect of social influence with plausible but conceptually distinct distractors.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Group Influences.json",
+      "domain": 3,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Group Influences.json::32",
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following cognitive changes is most commonly associated with aging?",
+      "options": [
+        "Improved problem-solving skills",
+        "Increased processing speed",
+        "Decline in working memory",
+        "Enhanced verbal skills"
+      ],
+      "answer": "Decline in working memory",
+      "explanation": "A common cognitive change associated with aging is a decline in working memory, which affects the ability to hold and manipulate information. The other options incorrectly suggest improvements or enhancements.",
+      "kn": "KN23",
+      "kn_explanation": "This question is best aligned with KN23 because it tests Major research-based theories and models of development.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of cognitive changes with aging.",
+      "suggestedLesson": "4-cognitive-development",
+      "suggestedParagraph": "## Adult Brain Changes: The Long Decline",
+      "lessonExcerpt": "The frontal lobes (especially that prefrontal cortex) and parietal lobes show the greatest decrease in size.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 9,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Cognitive Development.json",
+      "domain": 4,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Cognitive Development.json::21",
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following best characterizes Problem-Solving Skills Training (PSST) used in children with conduct disorder?",
+      "options": [
+        "It emphasizes operant conditioning techniques to modify externalizing behavior.",
+        "It helps children identify others’ feelings and develop prosocial conflict resolution skills.",
+        "It focuses on altering power structures within family systems.",
+        "It uses intensive therapy involving community and school interventions."
+      ],
+      "answer": "It helps children identify others’ feelings and develop prosocial conflict resolution skills.",
+      "explanation": "1. The correct answer, \"It helps children identify others’ feelings and develop prosocial conflict resolution skills,\" accurately characterizes Problem-Solving Skills Training (PSST) because PSST focuses on the cognitive processes underlying problematic behaviors in children with conduct disorder. This intervention teaches children to accurately perceive the feelings of others, understand the consequences of their actions, and identify positive ways to resolve interpersonal conflicts, which are essential for improving their social interactions and reducing disruptive behaviors.\n\n2. The option \"It emphasizes operant conditioning techniques to modify externalizing behavior\" is incorrect because this description aligns more closely with Parent Management Training (PMT), which uses operant conditioning principles to change parenting approaches and child behavior. The statement \"It focuses on altering power structures within family systems\" is wrong as it pertains to Functional Family Therapy (FFT), which addresses family dynamics rather than individual skill development. Lastly, \"It uses intensive therapy involving community and school interventions\" is not accurate for PSST, as this description better fits Multisystemic Therapy (MST), which involves broader community and school-based interventions to address antisocial behaviors.",
+      "kn": "KN33",
+      "kn_explanation": "This question is best aligned with KN33 because it tests Issues of differential diagnosis and integration of non-psychological information into psychological assessment.",
+      "difficulty": "medium",
+      "quality_comment": "The options are clearly differentiated and reflect distinct intervention approaches, aiding precise assessment of treatment knowledge.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Acting Out.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Acting Out.json::6",
+      "isScored": true
+    },
+    {
+      "stem": "Kelly’s personal construct therapy primarily assists clients by helping them:",
+      "options": [
+        "Identify and change unconscious id impulses",
+        "Contemplate existential concerns about death and freedom",
+        "Identify and replace maladaptive bipolar dimensions of meaning",
+        "Increase unconditional positive regard and self-acceptance"
+      ],
+      "answer": "Identify and replace maladaptive bipolar dimensions of meaning",
+      "explanation": "1. The correct answer, \"Identify and replace maladaptive bipolar dimensions of meaning,\" aligns with Kelly's personal construct therapy, which focuses on how individuals perceive and interpret events through personal constructs—bipolar dimensions of meaning. This therapy emphasizes that by recognizing and altering maladaptive constructs, clients can alleviate undesirable behaviors and outcomes, thus enhancing their psychological well-being.\n\n2. The option \"Identify and change unconscious id impulses\" is incorrect because personal construct therapy does not focus on unconscious drives or impulses, but rather on conscious perceptions and interpretations of experiences. \"Contemplate existential concerns about death and freedom\" is also wrong, as this approach is characteristic of existential therapies, which address such ultimate concerns rather than the cognitive constructs emphasized in personal construct therapy. Lastly, \"Increase unconditional positive regard and self-acceptance\" is not applicable, as this is a central goal of person-centered therapy, not personal construct therapy, which prioritizes the identification and modification of personal constructs over the provision of unconditional positive regard.",
+      "kn": "KN43",
+      "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors reflect concepts from other therapies, which is helpful to discern correct personal construct therapy principles.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Psychodynamic and Humanistic Therapies.json",
+      "domain": 6,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Psychodynamic and Humanistic Therapies.json::21",
+      "isScored": true
+    },
+    {
+      "stem": "Which assumption must be met when using most correlation coefficients to ensure accurate estimation of the relationship between variables?",
+      "options": [
+        "Variables have a nonlinear relationship",
+        "Predictor scores show restricted range",
+        "Variability of the criterion scores is consistent across all levels of the predictor",
+        "Only one variable is measured on an ordinal scale"
+      ],
+      "answer": "Variability of the criterion scores is consistent across all levels of the predictor",
+      "explanation": "1. The correct answer, \"Variability of the criterion scores is consistent across all levels of the predictor,\" refers to the assumption of homoscedasticity, which is crucial for accurate correlation and regression analysis. When this assumption is met, it ensures that the variability of the criterion scores remains similar across different predictor scores, leading to more reliable predictions and interpretations of the relationship between the variables.\n\n2. The option \"Variables have a nonlinear relationship\" is incorrect because correlation coefficients, particularly the Pearson r, are designed for linear relationships; a nonlinear relationship violates the assumption but does not directly relate to the accuracy of variability in criterion scores. \"Predictor scores show restricted range\" is wrong because a restricted range can lead to an underestimation of the correlation, but it does not address the consistency of variability across levels of the predictor. Lastly, \"Only one variable is measured on an ordinal scale\" is incorrect since the assumption regarding variability pertains to the consistency of scores across levels of the predictor, and the scale of measurement does not inherently affect this aspect.",
+      "kn": "KN55",
+      "kn_explanation": "This question is best aligned with KN55 because it tests Analytic methods, including qualitative (e.g., thematic, phenomenological) and quantitative (e.g., probability theory; descriptive, inferential, and parametric statistics; meta-analysis; factor analysis; causal modeling).",
+      "difficulty": "medium",
+      "quality_comment": "The question clearly tests understanding of key correlation assumptions; distractors are plausible misunderstandings that reinforce knowledge of assumptions.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Correlation and Regression.json",
+      "domain": 7,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Correlation and Regression.json::18",
+      "isScored": true
+    },
+    {
+      "stem": "According to the APA Ethics Code, when is it ethical for a psychologist to provide services to populations outside their current areas of competence?",
+      "options": [
+        "Only after they obtain formal certification in the new area",
+        "Whenever requested by a client or agency, regardless of training",
+        "After undertaking relevant education, training, supervised experience, or consultation to develop competence",
+        "Never; they should always refer clients to another provider"
+      ],
+      "answer": "After undertaking relevant education, training, supervised experience, or consultation to develop competence",
+      "explanation": "1. The correct answer, \"After undertaking relevant education, training, supervised experience, or consultation to develop competence,\" aligns with Standard 2.01(c) of the APA Ethics Code, which states that psychologists must acquire the necessary knowledge and training before providing services to new populations or using new techniques. This ensures that psychologists practice within their competence and provide effective and ethical care to clients.\n\n2. The option \"Only after they obtain formal certification in the new area\" is incorrect because the Ethics Code emphasizes relevant education and training rather than requiring formal certification, which may not always be necessary. The option \"Whenever requested by a client or agency, regardless of training\" is wrong as it disregards the ethical obligation to practice within one's competence, which protects clients from potential harm. Lastly, \"Never; they should always refer clients to another provider\" is incorrect because the Ethics Code allows psychologists to provide services in certain situations, such as when they make reasonable efforts to gain competence or in emergencies, rather than mandating referral in all cases.",
+      "kn": "KN61",
+      "kn_explanation": "This question addresses competence-related ethical standards, which are central to professional standards and guidelines.",
+      "difficulty": "medium",
+      "quality_comment": "Options offer clear contrasts, helping test-takers differentiate between ethical flexibility and rigid requirements.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 1 and 2.json",
+      "domain": 8,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 1 and 2.json::21",
+      "isScored": true
+    }
+  ]
+}

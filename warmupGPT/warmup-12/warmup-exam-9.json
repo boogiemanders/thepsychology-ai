@@ -1,0 +1,292 @@
+{
+  "meta": {
+    "examId": "warmup-12-9",
+    "totalQuestions": 12,
+    "examType": "warmup",
+    "warmupLength": 12,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 2,
+      "4": 1,
+      "5": 3,
+      "6": 1,
+      "7": 1,
+      "8": 1,
+      "3-5-6": 1
+    },
+    "generatedAt": "2026-04-25T05:50:04.484Z"
+  },
+  "questions": [
+    {
+      "stem": "A psychiatry resident is studying the neurochemical basis of schizophrenia. Which of the following BEST describes the dopamine hypothesis of schizophrenia and its primary supporting evidence?",
+      "options": [
+        "Schizophrenia results from insufficient dopamine activity, as evidenced by the effectiveness of dopamine agonists in treating symptoms",
+        "Excessive dopamine activity in certain brain pathways contributes to schizophrenia, as supported by the fact that effective antipsychotics block dopamine receptors",
+        "Schizophrenia is caused by dopamine deficiency in the frontal lobes, as demonstrated by low dopamine metabolites in cerebrospinal fluid",
+        "Dopamine imbalance causes schizophrenia only when combined with serotonin excess, as shown by the superior efficacy of atypical antipsychotics"
+      ],
+      "answer": "Excessive dopamine activity in certain brain pathways contributes to schizophrenia, as supported by the fact that effective antipsychotics block dopamine receptors",
+      "explanation": "The dopamine hypothesis of schizophrenia proposes that excessive dopamine activity, particularly in the mesolimbic pathway, contributes to the positive symptoms of schizophrenia. The primary evidence comes from the fact that first-generation antipsychotics are dopamine antagonists — they block D2 receptors and effectively reduce positive symptoms like hallucinations and delusions. Additionally, drugs that increase dopamine activity (such as amphetamines) can produce psychotic symptoms resembling schizophrenia. Option A reverses the hypothesis. Option C is partially true for negative symptoms but does not represent the core dopamine hypothesis. Option D conflates the dopamine hypothesis with the mechanism of atypical antipsychotics.",
+      "kn": "KN2",
+      "kn_explanation": "This question is best aligned with KN2 because it tests Drug classification, mechanisms of action, and desired/adverse effects of therapeutic agents, drugs of abuse, and complementary or alternative agents.",
+      "difficulty": "medium",
+      "quality_comment": "Tests understanding of a critical EPPP concept linking neurotransmitter theory to pharmacological evidence. Well-supported by the lesson content on antipsychotic mechanisms.",
+      "suggestedLesson": "1-pharmacology-antidepressants-antipsychotics",
+      "suggestedParagraph": "### First-Generation Antipsychotics (FGAs): The Original Heavy Hitters",
+      "lessonExcerpt": "FGAs are dopamine antagonists. They block dopamine receptors, specifically D2 receptors, which reduces the overactivity believed to cause psychotic symptoms.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 10,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Pharmacology Antidepressants and Antipsychotics.json",
+      "domain": 1,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Pharmacology Antidepressants and Antipsychotics.json::1",
+      "isScored": true
+    },
+    {
+      "stem": "Which reinforcement schedule is characterized by providing reinforcement after a variable amount of time has passed?",
+      "options": [
+        "Fixed Interval",
+        "Variable Interval",
+        "Fixed Ratio",
+        "Variable Ratio"
+      ],
+      "answer": "Variable Interval",
+      "explanation": "The variable interval schedule provides reinforcement after varying, unpredictable time periods, which leads to a steady rate of response. Fixed interval provides reinforcement after a set time, fixed ratio after a set number of responses, and variable ratio after a varying number of responses.",
+      "kn": "KN7",
+      "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
+      "difficulty": "medium",
+      "quality_comment": "The question accurately assesses knowledge of reinforcement schedules.",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "suggestedParagraph": "## Reinforcement Schedules: Timing Is Everything",
+      "lessonExcerpt": "Reinforcement comes after varying, unpredictable time periods.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 14,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Skinner and Operant Conditioning.json",
+      "domain": 2,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Skinner and Operant Conditioning.json::17",
+      "isScored": true
+    },
+    {
+      "stem": "A psychologist-in-training is waiting to learn whether she passed a high-stakes oral examination. She feels anxious and is unsure whether her distress level is reasonable or excessive. Rather than seeking out faculty who have administered the exam many times, she finds herself wanting to talk with other trainees who are in the same waiting period. According to social comparison theory, what best explains this selective preference?",
+      "options": [
+        "She is seeking emotional support from peers who share her professional identity",
+        "She wants to compare her emotional response with similar others in the same situation to gauge whether her anxiety level is appropriate",
+        "She is engaging in downward social comparison to reassure herself that others are worse off",
+        "She is avoiding evaluation apprehension by choosing confidants unlikely to judge her performance"
+      ],
+      "answer": "She wants to compare her emotional response with similar others in the same situation to gauge whether her anxiety level is appropriate",
+      "explanation": "Social comparison theory (Festinger, 1954) holds that when people are uncertain about how to feel, think, or react, they look to similar others to assess whether their responses are appropriate. The trainee is not choosing experienced faculty—who have a different vantage point—but peers facing the exact same situation, because only those in an equivalent position can serve as a valid comparison standard for calibrating emotional reactions. Option A reframes the behavior as support-seeking rather than information-seeking, which misses the specific mechanism Festinger identified. Option C (downward comparison) would require seeking out those doing worse, not those in the same boat. Option D describes evaluation apprehension, a distinct construct concerning fear of being judged while performing.",
+      "kn": "KN14",
+      "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
+      "difficulty": "medium",
+      "quality_comment": "Scenario cleanly instantiates the uncertainty-reduction function of social comparison and requires distinguishing it from three plausible but distinct alternatives. Direct lesson support is strong.",
+      "suggestedLesson": "3-connection",
+      "suggestedParagraph": "Schachter's Anxiety Studies: Misery Loves Company (But Only Certain Company)",
+      "lessonExcerpt": "Social comparison theory, developed by Leon Festinger in 1954, explains why. When we're uncertain about how to feel, think, or react, we look to similar others to gauge whether our responses are appropriate.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 21,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Connection.json",
+      "domain": 3,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Connection.json::14",
+      "isScored": true
+    },
+    {
+      "stem": "According to the Multidimensional Model of Racial Identity (Sellers et al.), which racial ideology emphasizes the similarity in oppression among minority groups and prioritizes coalition building?",
+      "options": [
+        "Assimilationist ideology",
+        "Humanist ideology",
+        "Oppressed minority ideology",
+        "Nationalist ideology"
+      ],
+      "answer": "Oppressed minority ideology",
+      "explanation": "1. The \"Oppressed minority ideology\" is the correct answer because it emphasizes the shared experiences of oppression among different minority groups and advocates for coalition building to address these common issues. This ideology recognizes that the struggles faced by African Americans are similar to those of other marginalized groups, fostering a sense of unity and collective action against systemic oppression.\n\n2. The \"Assimilationist ideology\" is incorrect because it focuses on the belief that African Americans should work within the existing societal structures to change them, rather than emphasizing coalition building with other minority groups. The \"Humanist ideology\" is also incorrect; it prioritizes the similarities among all humans and downplays racial identity, which does not align with the focus on shared oppression among minorities. Lastly, the \"Nationalist ideology\" is incorrect as it centers on the uniqueness of the African American experience and advocates for self-determination, rather than fostering connections with other oppressed groups.",
+      "kn": "KN19",
+      "kn_explanation": "This item assesses understanding of racial ideological perspectives within racial identity models, linked to social and cultural identity issues.",
+      "difficulty": "medium",
+      "quality_comment": "All options are drawn from the model’s ideologies with similar complexity and length, increasing discriminative quality.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Identity.json",
+      "domain": 3,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Identity.json::17",
+      "isScored": true
+    },
+    {
+      "stem": "How does ADHD typically manifest across the lifespan according to developmental theories?",
+      "options": [
+        "It resolves completely by adulthood.",
+        "Symptoms become less severe with age.",
+        "It remains consistent but may change in presentation.",
+        "It only affects children and adolescents."
+      ],
+      "answer": "It remains consistent but may change in presentation.",
+      "explanation": "The correct answer reflects that ADHD symptoms can persist into adulthood but may manifest differently as individuals age. The other options are incorrect as ADHD does not resolve completely, and while symptoms may become less disruptive, they do not disappear.",
+      "kn": "KN21",
+      "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of ADHD across the lifespan.",
+      "suggestedLesson": "4-temperament-and-personality",
+      "suggestedParagraph": "## Temperament: The Raw Material of Personality",
+      "lessonExcerpt": "ADHD remains consistent but may change in presentation across the lifespan.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 15,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Temperament and Personality.json",
+      "domain": 4,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Temperament and Personality.json::11",
+      "isScored": true
+    },
+    {
+      "stem": "In the diagnosis of female orgasmic disorder, which of the following best describes the situational type?",
+      "options": [
+        "It occurs only in specific contexts or situations.",
+        "It is characterized by a complete inability to achieve orgasm.",
+        "It is always accompanied by significant distress.",
+        "It is diagnosed when orgasm is achieved in all situations."
+      ],
+      "answer": "It occurs only in specific contexts or situations.",
+      "explanation": "The situational type of female orgasmic disorder refers to difficulties in achieving orgasm that occur only in certain contexts, not universally. The other options misrepresent the nature of the disorder.",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
+      "difficulty": "medium",
+      "quality_comment": "The question accurately assesses knowledge of the situational type of female orgasmic disorder.",
+      "suggestedLesson": "5-clinical-tests",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "The situational type occurs only in specific contexts or situations.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 22,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Clinical Tests.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Clinical Tests.json::28",
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following best represents an evidence-based model explaining PTSD symptom maintenance?",
+      "options": [
+        "The hyperactivity of the hippocampus alone accounts for symptom persistence",
+        "Reduced inhibitory control of the amygdala by the ventromedial prefrontal cortex leads to exaggerated fear responses",
+        "Increased anterior cingulate cortex activity causes persistent avoidance symptoms",
+        "High serotonin levels intensify re-experiencing symptoms through increased neural excitation"
+      ],
+      "answer": "Reduced inhibitory control of the amygdala by the ventromedial prefrontal cortex leads to exaggerated fear responses",
+      "explanation": "1. The correct answer, \"Reduced inhibitory control of the amygdala by the ventromedial prefrontal cortex leads to exaggerated fear responses,\" is supported by research indicating that the ventromedial prefrontal cortex normally inhibits amygdala activity. In PTSD, decreased activity in the ventromedial prefrontal cortex diminishes this inhibitory control, resulting in heightened fear responses and contributing to the persistence of PTSD symptoms.\n\n2. The option \"The hyperactivity of the hippocampus alone accounts for symptom persistence\" is incorrect because while there are findings of both increased and decreased hippocampal activity in PTSD, it is not solely responsible for symptom persistence; rather, the interplay of various brain regions is involved. The statement \"Increased anterior cingulate cortex activity causes persistent avoidance symptoms\" is wrong as the anterior cingulate cortex is linked to emotional regulation and decision-making, but its activity alone does not directly cause avoidance symptoms in PTSD. Lastly, the option \"High serotonin levels intensify re-experiencing symptoms through increased neural excitation\" is misleading because PTSD is associated with decreased serotonin levels, not high levels, which are linked to alleviating symptoms, rather than exacerbating them.",
+      "kn": "KN37",
+      "kn_explanation": "This question is best aligned with KN37 because it tests Factors influencing evidence-based interpretation of data and decision-making (e.g., base rates, group differences, cultural biases and differences, heuristics).",
+      "difficulty": "medium",
+      "quality_comment": "The item focuses on a central mechanistic model, with distractors reflecting related but inaccurate neurobiological hypotheses.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Trauma, Dissociation, and Somatic.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Trauma, Dissociation, and Somatic.json::19",
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following best describes content validity in psychological testing?",
+      "options": [
+        "The degree to which a test measures what it intends to by sampling items representative of the domain",
+        "The correlation of test scores with an external behavioral criterion",
+        "The degree to which test items appear valid to examinees",
+        "The degree to which test scores correlate highly with scores on unrelated constructs"
+      ],
+      "answer": "The degree to which a test measures what it intends to by sampling items representative of the domain",
+      "explanation": "1. The correct answer, \"The degree to which a test measures what it intends to by sampling items representative of the domain,\" accurately describes content validity because it emphasizes the importance of defining the domain to be assessed and ensuring that test items represent that domain effectively. Content validity is established through a systematic review by subject matter experts to confirm that the test items address all critical aspects of the intended content area.\n\n2. The option \"The correlation of test scores with an external behavioral criterion\" is incorrect because it describes criterion-related validity, which assesses how test scores relate to an external standard rather than the internal content of the test. The option \"The degree to which test items appear valid to examinees\" is incorrect because it refers to face validity, which is about the superficial appearance of validity rather than the actual representative sampling of the content domain. Lastly, the option \"The degree to which test scores correlate highly with scores on unrelated constructs\" is incorrect because it pertains to divergent validity, which aims to show low correlations with unrelated constructs, not high correlations.",
+      "kn": "KN29",
+      "kn_explanation": "This question focuses on test construction and validity evidence, topics central to psychometric theories and test characteristics (KN29).",
+      "difficulty": "medium",
+      "quality_comment": "The question clearly differentiates content validity from other forms, and distractors are plausible, enhancing discriminability in an exam setting.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 What Tests Measure.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 What Tests Measure.json::1",
+      "isScored": true
+    },
+    {
+      "stem": "An organizational psychologist evaluates the effects of implementing a compressed four-day, 40-hour workweek across a mid-sized logistics company. After six months, she compares pre- and post-implementation data. Based on the empirical literature on alternative work schedules, which pattern of outcomes is she most likely to find?",
+      "options": [
+        "Both employee morale and objective productivity measures show significant, sustained improvements",
+        "Employee morale and job satisfaction improve significantly, but productivity gains are modest and inconsistent",
+        "Objective productivity improves substantially while morale effects are neutral or slightly negative due to scheduling complexity",
+        "Neither morale nor productivity shows reliable change at the group level; individual differences overwhelm any schedule effect"
+      ],
+      "answer": "Employee morale and job satisfaction improve significantly, but productivity gains are modest and inconsistent",
+      "explanation": "The I/O psychology literature on alternative work schedules consistently documents robust improvements in attitudinal outcomes — job satisfaction, morale, sense of autonomy, and reduced absenteeism — when employees shift to compressed workweeks or flextime arrangements. However, the same literature does not support equally consistent improvements in actual job performance or quantitative productivity. Workers report feeling greater control over their time and work-life balance, producing genuine attitudinal benefits, but the volume and quality of work output are not reliably affected — particularly in roles with fixed throughput demands (e.g., logistics, manufacturing) that are structurally independent of scheduling. This morale-vs-performance distinction is a canonical finding in I/O psychology and is directly testable on the EPPP.",
+      "kn": "KN46",
+      "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
+      "difficulty": "medium",
+      "quality_comment": "Tests a precise empirical distinction between attitudinal and performance outcomes — a classic and frequently tested I/O psychology finding; distractors are plausible and require careful discrimination.",
+      "suggestedLesson": "6-prevention-and-consultation",
+      "suggestedParagraph": "## Understanding Prevention, Consultation, and Psychotherapy Research",
+      "lessonExcerpt": "LESSON CONTENT DOES NOT EXPLICITLY ADDRESS ALTERNATIVE WORK SCHEDULES OR I/O ORGANIZATIONAL INTERVENTIONS IN THE PROVIDED EXCERPTS",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 16,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Prevention and Consultation.json",
+      "domain": 6,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Prevention and Consultation.json::21",
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following describes the role of alpha in hypothesis testing?",
+      "options": [
+        "Alpha represents the probability of making a Type II error.",
+        "Alpha is the predetermined threshold for rejecting the null hypothesis, controlling the risk of Type I error.",
+        "Alpha increases statistical power by making it harder to reject the null hypothesis.",
+        "Alpha is the observed p-value that determines significance after data analysis."
+      ],
+      "answer": "Alpha is the predetermined threshold for rejecting the null hypothesis, controlling the risk of Type I error.",
+      "explanation": "1. The correct answer, \"Alpha is the predetermined threshold for rejecting the null hypothesis, controlling the risk of Type I error,\" accurately reflects the role of alpha in hypothesis testing. Alpha, also known as the level of significance, is set by researchers before analyzing data and indicates the probability of making a Type I error, which occurs when a true null hypothesis is incorrectly rejected. By establishing this threshold, researchers determine the level of evidence required to conclude that an independent variable has a significant effect on a dependent variable.\n\n2. \n- \"Alpha represents the probability of making a Type II error.\" This statement is incorrect because Type II error is associated with failing to reject a false null hypothesis, which is related to beta, not alpha.\n- \"Alpha increases statistical power by making it harder to reject the null hypothesis.\" This is wrong because a larger alpha increases statistical power by making it easier to reject the null hypothesis, not harder.\n- \"Alpha is the observed p-value that determines significance after data analysis.\" This option is incorrect because alpha is a predetermined threshold set before data analysis, whereas the p-value is calculated after the analysis to determine if the null hypothesis should be rejected based on the established alpha level.",
+      "kn": "KN56",
+      "kn_explanation": "This question targets understanding of error rates and decision-making thresholds in inferential statistics (KN56).",
+      "difficulty": "medium",
+      "quality_comment": "The question clearly distinguishes among common misconceptions about alpha and error probabilities, providing an effective test of fundamental statistical knowledge.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Inferential Stats.json",
+      "domain": 7,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Inferential Stats.json::35",
+      "isScored": true
+    },
+    {
+      "stem": "What is the ethical guideline regarding confidentiality after a client's death?",
+      "options": [
+        "A. All information can be disclosed to anyone after the client dies.",
+        "B. Confidentiality obligations cease immediately upon death.",
+        "C. Confidentiality may still apply depending on the circumstances.",
+        "D. Only the client's family can access the information after death."
+      ],
+      "answer": "C. Confidentiality may still apply depending on the circumstances.",
+      "explanation": "Option C is correct as confidentiality obligations may still apply after a client's death, depending on the circumstances. Option A is incorrect as it disregards the ethical duty to protect client information. Option B is misleading as confidentiality does not automatically cease. Option D is incorrect as access is not limited to family members.",
+      "kn": "KN62",
+      "kn_explanation": "This question is best aligned with KN62 because it tests Professional standards and relevant guidelines for the practice of psychology (e.g., standards for educational and psychological testing).",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests understanding of confidentiality issues.",
+      "suggestedLesson": "8-practice-issues",
+      "suggestedParagraph": "## Understanding Malpractice: The Four Ds You Can't Forget",
+      "lessonExcerpt": "The key question isn't always 'Was this technically part of my job?' The APA considers whether your personal actions overlap with your professional role.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 18,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json",
+      "domain": 8,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json::31",
+      "isScored": true
+    },
+    {
+      "stem": "What is one major disadvantage of using biodata (biographical information) measures in employee selection?",
+      "options": [
+        "They typically have low predictive validity for job performance",
+        "Applicants may perceive them as irrelevant or invasive, leading to refusal to answer",
+        "They are very costly and time-consuming to administer",
+        "They cause adverse impact against protected groups"
+      ],
+      "answer": "Applicants may perceive them as irrelevant or invasive, leading to refusal to answer",
+      "explanation": "1. The correct answer, \"Applicants may perceive them as irrelevant or invasive, leading to refusal to answer,\" highlights a significant disadvantage of biodata measures. Although these measures can effectively predict job performance, some items may lack face validity, meaning they do not appear relevant to job performance from the applicant's perspective. This perceived irrelevance can lead applicants to view the questions as intrusive, causing them to refuse to provide their information.\n\n2. The option \"They typically have low predictive validity for job performance\" is incorrect because biodata has been found to be a good predictor of performance across a variety of jobs, as indicated in the reference material. The statement \"They are very costly and time-consuming to administer\" is also wrong since the reference does not mention that biodata measures are particularly costly or time-consuming; instead, they are designed to be easily scored. Lastly, the option \"They cause adverse impact against protected groups\" is inaccurate because the reference notes that integrity tests do not seem to have an adverse impact on racial/ethnic minorities, and while biodata may have similar implications, the text does not suggest that they cause adverse impact.",
+      "kn": "KN34",
+      "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
+      "difficulty": "medium",
+      "quality_comment": "Options are plausible, requiring nuanced understanding of biodata drawbacks which is appropriate for EPPP-level knowledge.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/5 Hiring Methods.json",
+      "domain": "3-5-6",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/5 Hiring Methods.json::11",
+      "isScored": true
+    }
+  ]
+}

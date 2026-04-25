@@ -1,0 +1,185 @@
+{
+  "meta": {
+    "examId": "warmup-8-14",
+    "totalQuestions": 8,
+    "examType": "warmup",
+    "warmupLength": 8,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 1,
+      "7": 1,
+      "8": 1
+    },
+    "generatedAt": "2026-04-25T05:50:04.489Z"
+  },
+  "questions": [
+    {
+      "stem": "Which structure in the brainstem plays a crucial role in coordinating eye movements and regulating muscle tone?",
+      "options": [
+        "Substantia nigra",
+        "Reticular formation",
+        "Pons",
+        "Medulla oblongata"
+      ],
+      "answer": "Reticular formation",
+      "explanation": "1. The correct answer is \"Reticular formation\" because it is involved in a variety of functions, including the regulation of muscle tone and coordination of eye movements. The reticular formation, which extends from the medulla into the midbrain, contains the reticular activating system (RAS) that mediates consciousness and arousal, further emphasizing its role in coordinating sensory and motor functions.\n\n2. \n- **Substantia nigra**: While the substantia nigra is important for motor control and reward-seeking, it primarily relates to the production of dopamine and does not directly coordinate eye movements or regulate muscle tone.\n- **Pons**: Although the pons connects the two halves of the cerebellum and helps coordinate movements, its primary role is in relaying messages between the cerebellum and cerebral cortex rather than directly regulating muscle tone or eye movements.\n- **Medulla oblongata**: The medulla is primarily responsible for autonomic functions such as respiration and heart rate, and it does not play a significant role in coordinating eye movements or muscle tone.",
+      "kn": "KN1",
+      "kn_explanation": "Tests knowledge of midbrain structures involved in motor coordination and arousal functions within the biological bases of behavior.",
+      "difficulty": "medium",
+      "quality_comment": "Options are anatomically relevant brainstem structures, requiring careful consideration of function.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Hindbrain, Midbrain, and Forebrain.json",
+      "domain": 1,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Hindbrain, Midbrain, and Forebrain.json::34",
+      "isScored": true
+    },
+    {
+      "stem": "A behavioral therapist instructs a highly distractible adult client to allow himself to browse news websites for 15 minutes, but only after completing 30 minutes of uninterrupted report writing. The therapist explains that this works because the preferred activity is being used as a consequence for completing the less preferred one. Which operant principle most precisely describes this intervention?",
+      "options": [
+        "Token economy, because the preferred activity serves as an exchangeable backup reinforcer",
+        "Negative reinforcement, because completing the aversive report writing eventually terminates the demand",
+        "The Premack principle, because a high-frequency behavior is used to reinforce a low-frequency behavior",
+        "Differential reinforcement of incompatible behavior, because browsing and writing cannot occur simultaneously"
+      ],
+      "answer": "The Premack principle, because a high-frequency behavior is used to reinforce a low-frequency behavior",
+      "explanation": "The Premack principle specifies that a high-frequency (preferred) behavior can serve as a reinforcer for a low-frequency (less preferred) behavior when access to the preferred behavior is made contingent on performing the non-preferred behavior. Browsing news (high-frequency) is made contingent on report writing (low-frequency), which is the defining feature of the Premack principle. Token economy requires an exchangeable medium; negative reinforcement requires removal of an aversive stimulus to increase behavior; DRI requires topographic incompatibility between the target and alternative behavior. None of those mechanisms are driving this arrangement.",
+      "kn": "KN7",
+      "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
+      "difficulty": "medium",
+      "quality_comment": "Strong clinical vignette that requires conceptual understanding rather than simple definitional recall. Distractors represent plausible misattributions a doctoral candidate might make.",
+      "suggestedLesson": "2-operant-conditioning-interventions",
+      "suggestedParagraph": "### The Premack Principle: Grandma's Rule for Professionals",
+      "lessonExcerpt": "The Premack principle states that a high-frequency behavior can reinforce a low-frequency behavior. In plain language: you can do something you love AFTER you do something you don't want to do.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 21,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Operant Conditioning Interventions.json",
+      "domain": 2,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Operant Conditioning Interventions.json::23",
+      "isScored": true
+    },
+    {
+      "stem": "In a replication of Festinger and Carlsmith's classic experiment, participants perform a tedious task and are then paid either $2 or $50 to tell the next participant the task was enjoyable. According to cognitive dissonance theory, which group will subsequently rate the task as MORE enjoyable, and why?",
+      "options": [
+        "The $50 group, because receiving a large reward creates positive associations with the task",
+        "The $2 group, because insufficient external justification for lying creates dissonance that is reduced by changing their attitude about the task",
+        "The $50 group, because the larger payment reinforces their behavior through operant conditioning",
+        "Both groups equally, because the act of telling someone the task was enjoyable changes attitudes regardless of payment"
+      ],
+      "answer": "The $2 group, because insufficient external justification for lying creates dissonance that is reduced by changing their attitude about the task",
+      "explanation": "According to cognitive dissonance theory, the $2 group experiences dissonance because they lied about the task being enjoyable without sufficient external justification. The lesson explains: 'The $1 participants experienced dissonance: \"I told someone this boring task was fun, but I only got a dollar for lying.\" They had insufficient justification for their behavior. To reduce dissonance, they changed their attitude.' The $50 group has sufficient justification ('I lied, but hey, I got paid well for it'), so they experience no dissonance and don't need to change their attitude. Option A incorrectly applies reinforcement principles. Option C confuses operant conditioning with dissonance. Option D ignores the critical role of justification magnitude.",
+      "kn": "KN14",
+      "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
+      "difficulty": "medium",
+      "quality_comment": "Directly tests the classic Festinger and Carlsmith paradigm with updated dollar amounts to ensure originality.",
+      "suggestedLesson": "3-attitudes",
+      "suggestedParagraph": "### Cognitive Dissonance Theory: The Discomfort of Inconsistency",
+      "lessonExcerpt": "The $1 participants experienced dissonance: 'I told someone this boring task was fun, but I only got a dollar for lying.' They had insufficient justification for their behavior. To reduce dissonance, they changed their attitude.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 16,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Attitudes.json",
+      "domain": 3,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Attitudes.json::3",
+      "isScored": true
+    },
+    {
+      "stem": "Which type of depth cue do infants begin using at about five to six months of age, providing the impression of depth from static, one-eyed images?",
+      "options": [
+        "Kinetic cues",
+        "Binocular (stereoscopic) cues",
+        "Pictorial (static-monocular) cues",
+        "Motion parallax"
+      ],
+      "answer": "Pictorial (static-monocular) cues",
+      "explanation": "1. **Correct Answer: Pictorial (static-monocular) cues**  \nPictorial (static-monocular) cues are the type of depth information that infants begin using at about five to six months of age. These cues create the impression of depth through visual elements that can be perceived with one eye, such as size, texture gradients, shadows, and linear perspective, helping infants interpret their visual environment more effectively.\n\n2. **Incorrect Options:**\n- **Kinetic cues:** Kinetic cues are based on the movement of objects and are utilized by infants starting as early as three or four weeks of age, not at five to six months.\n- **Binocular (stereoscopic) cues:** Binocular (stereoscopic) cues rely on the integration of images received by both eyes and begin to develop between two and three months of age, making them an earlier form of depth perception than pictorial cues.\n- **Motion parallax:** Motion parallax is a depth cue that involves the perception of depth based on the relative motion of objects as an observer moves, which is not specifically tied to the static, one-eyed images that pictorial cues represent.",
+      "kn": "KN21",
+      "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are plausible types of depth cues, requiring test-takers to know specific developmental timing and cue types.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Body Growth.json",
+      "domain": 4,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Body Growth.json::24",
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following symptoms is required for the diagnosis of Opioid Intoxication?",
+      "options": [
+        "Pupillary constriction plus drowsiness, coma, slurred speech, or impaired attention/memory",
+        "Pupillary dilation plus hypervigilance and psychomotor agitation",
+        "Autonomic hyperactivity plus anxiety and transient hallucinations",
+        "Slurred speech plus nystagmus and unsteady gait"
+      ],
+      "answer": "Pupillary constriction plus drowsiness, coma, slurred speech, or impaired attention/memory",
+      "explanation": "1. The correct answer, \"Pupillary constriction plus drowsiness, coma, slurred speech, or impaired attention/memory,\" aligns with the criteria for diagnosing Opioid Intoxication. According to the reference material, Opioid Intoxication is characterized by significant behavioral or psychological changes, including pupillary constriction and the presence of at least one of the specified symptoms during or shortly after opioid use, such as drowsiness or impaired attention/memory.\n\n2. The first incorrect option, \"Pupillary dilation plus hypervigilance and psychomotor agitation,\" is wrong because opioid intoxication is associated with pupillary constriction, not dilation, and does not include hypervigilance or psychomotor agitation as primary symptoms. \n\nThe second incorrect option, \"Autonomic hyperactivity plus anxiety and transient hallucinations,\" is incorrect because these symptoms are more characteristic of Opioid Withdrawal rather than Opioid Intoxication, which focuses on behavioral changes and specific symptoms like drowsiness. \n\nLastly, the third incorrect option, \"Slurred speech plus nystagmus and unsteady gait,\" is incorrect because while slurred speech is a symptom of Opioid Intoxication, nystagmus and unsteady gait are specifically associated with Alcohol Intoxication rather than opioids.",
+      "kn": "KN36",
+      "kn_explanation": "Focus on diagnostic symptomatology of opioid intoxication reflects understanding of classification criteria (KN36).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors include symptoms of other substances' intoxication or withdrawal, appropriately challenging test-takers.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Substance Misuse.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Substance Misuse.json::6",
+      "isScored": true
+    },
+    {
+      "stem": "Jung's concept of the collective unconscious includes which of the following?",
+      "options": [
+        "Repressed personal memories unique to the individual",
+        "Universal archetypes shared across humanity",
+        "The superego's internalized societal values",
+        "Unconscious id impulses seeking gratification"
+      ],
+      "answer": "Universal archetypes shared across humanity",
+      "explanation": "1. \"Universal archetypes shared across humanity\" is the correct answer because Jung's concept of the collective unconscious refers to a part of the psyche that contains memories and experiences shared by all people across generations. These archetypes are universal thoughts and images that influence behavior and are expressed through myths, symbols, and dreams, representing fundamental human experiences.\n\n2. The option \"Repressed personal memories unique to the individual\" is incorrect because these memories are part of the personal unconscious, which consists of an individual's own forgotten or repressed experiences, not the collective unconscious. \"The superego's internalized societal values\" is wrong because the superego relates to the individual's internalization of societal norms and morals, which is not a component of the collective unconscious. Lastly, \"Unconscious id impulses seeking gratification\" is incorrect as these impulses pertain to the id, which is focused on immediate gratification of instinctual needs, rather than the shared archetypes found in the collective unconscious.",
+      "kn": "KN43",
+      "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors contrast Jung’s key concepts with Freud’s theory, promoting discriminative thinking.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Psychodynamic and Humanistic Therapies.json",
+      "domain": 6,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Psychodynamic and Humanistic Therapies.json::14",
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following is a key feature of cross-sequential developmental research design?",
+      "options": [
+        "It assesses different age groups only at one point in time",
+        "It follows the same group of individuals repeatedly over many years",
+        "It combines longitudinal and cross-sectional methods to distinguish age and cohort effects",
+        "It exclusively studies a single individual across different time points"
+      ],
+      "answer": "It combines longitudinal and cross-sectional methods to distinguish age and cohort effects",
+      "explanation": "1. The correct answer, \"It combines longitudinal and cross-sectional methods to distinguish age and cohort effects,\" accurately describes cross-sequential research because it involves assessing individuals of different ages at multiple time points, allowing researchers to differentiate between changes due to aging (age effects) and differences due to the time period in which individuals were born (cohort effects). This design effectively merges the strengths of both longitudinal and cross-sectional approaches, providing a more nuanced understanding of developmental changes over time.\n\n2. The option \"It assesses different age groups only at one point in time\" is incorrect because this describes a cross-sectional design, not a cross-sequential design, which involves multiple assessments over time. The statement \"It follows the same group of individuals repeatedly over many years\" mischaracterizes cross-sequential research as it describes longitudinal research, which focuses solely on a single group rather than incorporating multiple age groups. Lastly, \"It exclusively studies a single individual across different time points\" is inaccurate because this describes a single-subject design, while cross-sequential research involves multiple individuals across various age groups and time points.",
+      "kn": "KN54",
+      "kn_explanation": "This item focuses on understanding developmental research designs, specifically cross-sequential methods distinguishing confounding factors (KN54).",
+      "difficulty": "medium",
+      "quality_comment": "The item provides clear, distinct plausible options that require knowledge beyond basic developmental design definitions.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Research Designs.json",
+      "domain": 7,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Research Designs.json::35",
+      "isScored": true
+    },
+    {
+      "stem": "If a psychologist recognizes that a potential multiple relationship could become harmful, what is the most appropriate first step?",
+      "options": [
+        "Immediately terminate both relationships to avoid harm.",
+        "Ignore the conflict if no harm has occurred yet.",
+        "Consult with a colleague and discuss the situation with involved parties to find the best resolution.",
+        "Continue both relationships without disclosure to maintain rapport."
+      ],
+      "answer": "Consult with a colleague and discuss the situation with involved parties to find the best resolution.",
+      "explanation": "1. The correct answer, \"Consult with a colleague and discuss the situation with involved parties to find the best resolution,\" aligns with Standard 3.05(b) of the APA Ethics Code, which requires psychologists to take reasonable steps to resolve potentially harmful multiple relationships while considering the best interests of the affected individuals. Engaging in consultation helps ensure that the psychologist addresses the ethical dilemma thoughtfully and collaboratively, promoting transparency and accountability in the decision-making process.\n\n2. The option \"Immediately terminate both relationships to avoid harm\" is incorrect because abrupt termination may not be in the best interest of the individuals involved and could lead to additional harm or disruption. \"Ignore the conflict if no harm has occurred yet\" is wrong as it disregards the psychologist's ethical responsibility to proactively address potential issues before they escalate. Lastly, \"Continue both relationships without disclosure to maintain rapport\" is inappropriate since it compromises ethical standards by avoiding necessary transparency and could lead to exploitation or harm.",
+      "kn": "KN64",
+      "kn_explanation": "This question aligns with identifying and managing potential ethical issues related to multiple relationships (KN64).",
+      "difficulty": "medium",
+      "quality_comment": "The options present plausible responses; the correct option reflects standard ethical decision-making.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 3 and 4.json",
+      "domain": 8,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 3 and 4.json::55",
+      "isScored": true
+    }
+  ]
+}

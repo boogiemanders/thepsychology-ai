@@ -1,0 +1,209 @@
+{
+  "meta": {
+    "examId": "warmup-8-8",
+    "totalQuestions": 8,
+    "examType": "warmup",
+    "warmupLength": 8,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 1,
+      "7": 1,
+      "8": 1
+    },
+    "generatedAt": "2026-04-25T05:50:04.484Z"
+  },
+  "questions": [
+    {
+      "stem": "A psychologist is conducting a neuropsychological evaluation of a stroke patient. The patient speaks fluently and at a normal rate but produces speech that is largely incomprehensible, filled with neologisms and word substitutions. The patient also appears unaware of these errors. This presentation is most consistent with damage to which brain area?",
+      "options": [
+        "Broca's area in the left frontal lobe",
+        "Wernicke's area in the left temporal lobe",
+        "The angular gyrus in the left parietal lobe",
+        "The prefrontal cortex bilaterally"
+      ],
+      "answer": "Wernicke's area in the left temporal lobe",
+      "explanation": "Wernicke's aphasia (also called receptive or fluent aphasia) results from damage to Wernicke's area in the temporal lobe and is characterized by fluent but meaningless speech with poor comprehension and lack of awareness of deficits. Broca's aphasia produces the opposite pattern—slow, effortful, nonfluent speech with relatively intact comprehension. The angular gyrus is involved in reading and writing rather than speech fluency. Bilateral prefrontal damage would affect executive functions and personality but would not produce this specific pattern of fluent but incomprehensible speech.",
+      "kn": "KN1",
+      "kn_explanation": "Neurobiological bases of behavior pertaining to perception and cognition — localizing speech/language deficits to brain regions (e.g., Wernicke's area) in a neurobehavioral disease process (stroke).",
+      "difficulty": "medium",
+      "quality_comment": "The lesson clearly describes Broca's aphasia characteristics. Wernicke's area is mentioned in the cerebral cortex lesson under temporal lobe functions, though the detailed description of Wernicke's aphasia was in the",
+      "suggestedLesson": "1-cerebral-cortex",
+      "suggestedParagraph": "### Broca's Area: The Speech Production Center",
+      "lessonExcerpt": "Located in the dominant hemisphere (usually left), Wernicke's area is where language comprehension happens. Damage produces **Wernicke's aphasia**. Also called receptive or fluent aphasia.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 5,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Cerebral Cortex.json",
+      "domain": 1,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Cerebral Cortex.json::0",
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following statements BEST captures Skinner's central contribution to the understanding of learning through operant conditioning?",
+      "options": [
+        "Learning occurs through the formation of stimulus-response associations that are stamped in by satisfying consequences",
+        "Whether a voluntary behavior is repeated depends on whether it produces reinforcement or punishment from operating on the environment",
+        "All behavior can be explained by classical conditioning principles involving stimulus substitution",
+        "Organisms learn by forming cognitive maps of their environment through latent exploration"
+      ],
+      "answer": "Whether a voluntary behavior is repeated depends on whether it produces reinforcement or punishment from operating on the environment",
+      "explanation": "Skinner's operant conditioning framework proposes that voluntary behaviors are controlled by their consequences—specifically, whether they produce reinforcement (which increases behavior) or punishment (which decreases behavior). The term 'operant' reflects that the organism 'operates' on the environment. Option A describes Thorndike's law of effect, which was the precursor to Skinner's work but used the language of 'satisfying consequences' and 'stamping in.' Option C incorrectly attributes all behavior to classical conditioning, which Skinner specifically differentiated from operant conditioning. Option D describes Tolman's latent learning and cognitive maps, a cognitive approach that differs from Skinner's behavioral framework.",
+      "kn": "KN7",
+      "kn_explanation": "Skinner's operant conditioning is a major theory/model of learning",
+      "difficulty": "medium",
+      "quality_comment": "Tests conceptual understanding of Skinner vs. Thorndike vs. Tolman. Requires knowing the specific contributions of each theorist rather than just rote definitions.",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "suggestedParagraph": "## Where It All Started",
+      "lessonExcerpt": "B. F. Skinner took this concept further in 1938, developing what we now call operant conditioning. He proposed that whether or not a voluntary behavior happens depends on how it 'operates' on the environment. Specifically, whether it produces reinforcement or punishment.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 8,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Skinner and Operant Conditioning.json",
+      "domain": 2,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Skinner and Operant Conditioning.json::3",
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following factors is most likely to contribute to higher employee turnover rates in an organization?",
+      "options": [
+        "High levels of employee engagement and satisfaction.",
+        "Lack of opportunities for career advancement.",
+        "Strong organizational culture and values.",
+        "Effective communication between management and staff."
+      ],
+      "answer": "Lack of opportunities for career advancement.",
+      "explanation": "The correct answer highlights that a lack of career advancement opportunities can lead to dissatisfaction and increased turnover. The other options are associated with lower turnover rates, as they contribute positively to employee retention.",
+      "kn": "KN15",
+      "kn_explanation": "This question is best aligned with KN15 because it tests Social interaction and relationships (e.g., attraction, aggression, altruism, organizational justice, verbal and non-verbal communication, internet communication, mate selection, empathy).",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests knowledge of organizational behavior factors.",
+      "suggestedLesson": "3-helping-and-hurting",
+      "suggestedParagraph": "## Why This Matters for Your Psychology Career",
+      "lessonExcerpt": "Understanding prosocial behavior and prejudice isn't just about passing the EPPP.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 2,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Helping and Hurting.json",
+      "domain": 3,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Helping and Hurting.json::8",
+      "isScored": true
+    },
+    {
+      "stem": "In Kohlberg's theory of moral development, which stage is characterized by a focus on social approval and maintaining relationships?",
+      "options": [
+        "Punishment and Obedience",
+        "Instrumental Hedonism",
+        "Good Boy/Good Girl",
+        "Social Contract"
+      ],
+      "answer": "Good Boy/Good Girl",
+      "explanation": "The correct answer is 'Good Boy/Good Girl', which is the third stage in Kohlberg's conventional level of moral reasoning, where individuals seek approval from others. The other options represent different stages: 'Punishment and Obedience' is the first stage, 'Instrumental Hedonism' is the second stage, and 'Social Contract' is a later stage in the post-conventional level.",
+      "kn": "KN23",
+      "kn_explanation": "This question is best aligned with KN23 because it tests Major research-based theories and models of development.",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and tests understanding of Kohlberg's stages.",
+      "suggestedLesson": "4-morality",
+      "suggestedParagraph": "## The Expansion: Kohlberg's Six-Stage Theory",
+      "lessonExcerpt": "At this level, people have internalized social rules and care about maintaining social order.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 5,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Morality.json",
+      "domain": 4,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Morality.json::9",
+      "isScored": true
+    },
+    {
+      "stem": "What type of validity evidence is most relevant for evaluating whether a neurodevelopmental disorder assessment tool accurately predicts treatment outcomes?",
+      "options": [
+        "Content validity",
+        "Construct validity",
+        "Predictive validity",
+        "Face validity"
+      ],
+      "answer": "Predictive validity",
+      "explanation": "1. **Predictive validity** is the correct answer because it assesses how well a neurodevelopmental disorder assessment tool can forecast the outcomes of treatment based on the results of the assessment. In the context of neurodevelopmental disorders, demonstrating predictive validity ensures that the tool is effective in identifying individuals who will benefit from specific interventions, which is crucial for improving treatment efficacy and planning.\n\n2. **Content validity** is incorrect because it refers to how well the assessment tool covers the relevant domains of the disorder, rather than its ability to predict treatment outcomes. **Construct validity** is also not applicable here, as it evaluates whether the tool accurately measures the theoretical construct of the disorder rather than its predictive capabilities regarding treatment effectiveness. Lastly, **face validity** is not relevant because it simply assesses whether the tool appears to measure what it is intended to measure, based on subjective judgment, without providing evidence of its predictive power for treatment outcomes.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are valid forms of validity but only predictive validity relates to future outcome prediction, making the item conceptually sound.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Neurodevelopmental.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Neurodevelopmental.json::19",
+      "isScored": true
+    },
+    {
+      "stem": "An organizational psychologist advises a manufacturing company whose supervisors hold the belief that employees are inherently self-motivated, capable of exercising creativity and self-direction, and will commit to organizational goals when work is meaningful. According to McGregor's Theory Y, this set of management assumptions would most likely result in which organizational practice?",
+      "options": [
+        "Close supervision and detailed performance monitoring to ensure that productivity targets are consistently met",
+        "Centralized decision-making with clearly defined chains of command to maintain operational efficiency",
+        "Participative decision-making and the delegation of meaningful responsibility to employees at multiple levels",
+        "Performance-contingent reward structures designed to externally motivate employee compliance with standards"
+      ],
+      "answer": "Participative decision-making and the delegation of meaningful responsibility to employees at multiple levels",
+      "explanation": "McGregor's Theory Y holds that employees are inherently motivated, creative, and capable of self-direction when given meaningful work. Organizations operating under Theory Y assumptions naturally adopt participative management styles in which employees are involved in decision-making and given real autonomy and responsibility. Theory X, by contrast, assumes employees are passive and require external coercion—leading to close supervision (Option A), centralized authority (Option B), and contingent reward structures (Option D). Under Theory Y, external control is considered unnecessary and counterproductive when employees find their work purposeful.",
+      "kn": "KN46",
+      "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
+      "difficulty": "medium",
+      "quality_comment": "Clear question with well-differentiated distractors. Theory Y and McGregor's management framework are. Content goes beyond current lesson material — valid EPPP topic, no lesson excerpt available.",
+      "suggestedLesson": "6-prevention-and-consultation",
+      "suggestedParagraph": "## Organizational Management Theory",
+      "lessonExcerpt": "",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 24,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Prevention and Consultation.json",
+      "domain": 6,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Prevention and Consultation.json::26",
+      "isScored": true
+    },
+    {
+      "stem": "A researcher wants to determine whether there are significant differences in job satisfaction scores (measured on a continuous scale) among employees in four different departments. Each employee belongs to only one department, and the data meet assumptions of normality and homogeneity of variance. Which statistical test is most appropriate?",
+      "options": [
+        "Independent samples t-test",
+        "One-way ANOVA",
+        "Chi-square goodness-of-fit test",
+        "Paired samples t-test"
+      ],
+      "answer": "One-way ANOVA",
+      "explanation": "One-way ANOVA is correct because the study has one independent variable (department) with more than two levels (four departments), one continuous dependent variable (job satisfaction scores), and meets parametric assumptions. A t-test (A) is incorrect because t-tests compare only two means, not four. The chi-square goodness-of-fit test (C) is incorrect because it is used for nominal/categorical data (frequencies in categories), not continuous scores. A paired samples t-test (D) is incorrect both because it is limited to two means and because it requires related samples (same or matched participants measured twice), whereas these are independent groups.",
+      "kn": "KN54",
+      "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
+      "difficulty": "medium",
+      "quality_comment": "Straightforward application of the statistical test decision framework requiring discrimination between t-test (2 groups) and ANOVA (3+ groups) while also ruling out nonparametric alternatives.",
+      "suggestedLesson": "7-stats-tests",
+      "suggestedParagraph": "## The Selection Process: Your Decision Framework",
+      "lessonExcerpt": "When you have one independent variable with exactly two levels and one dependent variable measured on an interval or ratio scale, you need a t-test.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 11,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Stats Tests.json",
+      "domain": 7,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Stats Tests.json::10",
+      "isScored": true
+    },
+    {
+      "stem": "What constitutes an ethical violation when cooperating with an ethics investigation?",
+      "options": [
+        "Providing client information with a signed client release when requested by an ethics committee",
+        "Refusing to cooperate with the ethics committee's investigation without a valid legal or ethical justification",
+        "Reporting suspected child abuse to appropriate authorities despite confidentiality constraints",
+        "Consulting with a supervisor before responding to the ethics committee's request"
+      ],
+      "answer": "Refusing to cooperate with the ethics committee's investigation without a valid legal or ethical justification",
+      "explanation": "1. \"Refusing to cooperate with the ethics committee's investigation without a valid legal or ethical justification\" is the correct answer because Standard 1.06 of the APA Ethics Code explicitly states that psychologists must cooperate with investigations and proceedings of the APA and affiliated associations. Failing to do so constitutes an ethical violation unless there are valid legal or ethical reasons for the refusal.\n\n2. \n- **Providing client information with a signed client release when requested by an ethics committee** is incorrect because it aligns with Standard 1.06, which allows psychologists to share information if proper authorization is obtained, thereby fulfilling their obligation to cooperate.\n- **Reporting suspected child abuse to appropriate authorities despite confidentiality constraints** is incorrect because it reflects adherence to legal and ethical responsibilities, as mandated by laws that require reporting such abuse, which can supersede confidentiality obligations.\n- **Consulting with a supervisor before responding to the ethics committee's request** is incorrect because seeking consultation demonstrates due diligence and professionalism, ensuring that the psychologist's response is informed and appropriate, in line with ethical standards.",
+      "kn": "KN61",
+      "kn_explanation": "This item tests knowledge of ethical requirements regarding interactions with regulatory and professional bodies.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors include ethically correct or situation-appropriate responses, distinguishing the truly unethical behavior effectively.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 1 and 2.json",
+      "domain": 8,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 1 and 2.json::27",
+      "isScored": true
+    }
+  ]
+}

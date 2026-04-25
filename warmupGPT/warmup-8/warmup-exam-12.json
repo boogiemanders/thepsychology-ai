@@ -1,0 +1,185 @@
+{
+  "meta": {
+    "examId": "warmup-8-12",
+    "totalQuestions": 8,
+    "examType": "warmup",
+    "warmupLength": 8,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 1,
+      "7": 1,
+      "8": 1
+    },
+    "generatedAt": "2026-04-25T05:50:04.487Z"
+  },
+  "questions": [
+    {
+      "stem": "A patient presents with unsteady gait, slurred speech, jerky eye movements, and difficulty executing previously mastered guitar fingering patterns—despite being able to verbally describe the correct finger positions. Neuropsychological testing reveals intact declarative memory but impaired procedural memory. Damage to which brain structure BEST accounts for this clinical presentation?",
+      "options": [
+        "Basal ganglia",
+        "Cerebellum",
+        "Hippocampus",
+        "Substantia nigra"
+      ],
+      "answer": "Cerebellum",
+      "explanation": "The cerebellum coordinates voluntary movements, maintains posture, and stores procedural memories. Damage causes ataxia (unsteady, clumsy movements), slurred speech, and jerky eye movements—a presentation that resembles intoxication. The key differentiating feature is the dissociation between intact declarative memory (can describe finger positions) and impaired procedural memory (can't execute them), which is characteristic of cerebellar damage. The basal ganglia (option A) are involved in initiating and controlling voluntary movements but are inhibitory ('put the brakes on' movement) and are associated with Parkinson's disease and Huntington's disease—not this ataxic presentation. The hippocampus (option C) handles declarative memory consolidation, which is intact in this patient. The substantia nigra (option D) produces dopamine; its degeneration causes Parkinson's symptoms (slowed movement, tremors, rigidity), a different motor profile.",
+      "kn": "KN1",
+      "kn_explanation": "This question tests knowledge of hindbrain structures, specifically the cerebellum's role in balance, motor coordination, and procedural memory.",
+      "difficulty": "medium",
+      "quality_comment": "Excellent clinical scenario drawn directly from the lesson's own clinical example, testing the important distinction between cerebellar and other motor system dysfunction.",
+      "suggestedLesson": "1-hindbrain-midbrain-forebrain",
+      "suggestedParagraph": "### Cerebellum (More Than Just Balance)",
+      "lessonExcerpt": "A patient presents with balance problems, slurred speech, and difficulty with previously mastered motor skills (like playing guitar). They can verbally explain the finger positions but can't execute them. Neuropsych testing reveals intact declarative memory but impaired procedural memory. You're looking at cerebellar damage, not cortical dementia.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 8,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Hindbrain, Midbrain, and Forebrain.json",
+      "domain": 1,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Hindbrain, Midbrain, and Forebrain.json::6",
+      "isScored": true
+    },
+    {
+      "stem": "Which step in functional behavioral assessment involves collecting information about the antecedents and consequences maintaining a target behavior and forming hypotheses about its function?",
+      "options": [
+        "Step 2: Collect information about antecedents and consequences and develop hypotheses",
+        "Step 1: Collect information using direct and indirect methods",
+        "Step 4: Identify and implement function-based interventions",
+        "Step 3: Test hypotheses by altering antecedents and consequences"
+      ],
+      "answer": "Step 2: Collect information about antecedents and consequences and develop hypotheses",
+      "explanation": "1. **Correct Answer Explanation**: \"Step 2: Collect information about antecedents and consequences and develop hypotheses\" is the correct answer because this step specifically focuses on gathering information about what triggers (antecedents) and follows (consequences) the target behavior. This information is crucial for forming hypotheses about why the behavior occurs, which is essential for developing effective interventions.\n\n2. **Incorrect Options**:\n   - **Step 1: Collect information using direct and indirect methods**: This step involves gathering general information about the target behavior but does not specifically address the antecedents and consequences or the formation of hypotheses.\n   - **Step 4: Identify and implement function-based interventions**: This step occurs after hypotheses have been formed and focuses on applying interventions based on the identified functions of the behavior, not on collecting antecedent and consequence data.\n   - **Step 3: Test hypotheses by altering antecedents and consequences**: This step involves experimenting with changes to the antecedents and consequences to see if the behavior changes, but it does not focus on the initial collection of information or the development of hypotheses.",
+      "kn": "KN7",
+      "kn_explanation": "This question addresses the behavioral assessment process fundamental to designing operant interventions, consistent with KN7.",
+      "difficulty": "medium",
+      "quality_comment": "The question requires recall of FBA procedural steps with distractors reflecting other stages, well constructed for exam review.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Operant Conditioning Interventions.json",
+      "domain": 2,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Operant Conditioning Interventions.json::35",
+      "isScored": true
+    },
+    {
+      "stem": "What is the primary factor that enhances group cohesion during problem-solving tasks?",
+      "options": [
+        "Diversity of opinions",
+        "Shared goals",
+        "Individual recognition",
+        "Competition among members"
+      ],
+      "answer": "Shared goals",
+      "explanation": "Shared goals are the primary factor that enhances group cohesion during problem-solving tasks, as they unite members towards a common objective. Diversity of opinions can sometimes lead to conflict, while individual recognition and competition can detract from cohesion. Therefore, the correct answer is shared goals.",
+      "kn": "KN16",
+      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of factors influencing group cohesion.",
+      "suggestedLesson": "3-group-influences",
+      "suggestedParagraph": "## Losing Yourself in the Crowd: Deindividuation",
+      "lessonExcerpt": "Shared goals unite members towards a common objective, enhancing group cohesion.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 17,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Group Influences.json",
+      "domain": 3,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Group Influences.json::17",
+      "isScored": true
+    },
+    {
+      "stem": "What pattern of couple communication is associated with divorce occurring later in the marriage?",
+      "options": [
+        "Emotionally volatile (attack-defend) pattern",
+        "Emotionally expressive (engagement) pattern",
+        "Emotionally inexpressive (avoidant) pattern",
+        "Emotionally supportive pattern"
+      ],
+      "answer": "Emotionally inexpressive (avoidant) pattern",
+      "explanation": "1. The \"Emotionally inexpressive (avoidant) pattern\" is the correct answer because it is characterized by couples who avoid conflict and self-disclosure, leading to emotional distance and ultimately, divorce later in the marriage. This pattern contrasts with the emotionally volatile pattern, which tends to lead to earlier divorces due to frequent arguments and escalating conflicts.\n\n2. The \"Emotionally volatile (attack-defend) pattern\" is incorrect because it is associated with frequent arguments, criticism, and contempt, leading to divorce earlier in the marriage. The \"Emotionally expressive (engagement) pattern\" is also incorrect, as it is not mentioned in the reference material and does not relate to the patterns identified by Gottman and Levenson. Lastly, the \"Emotionally supportive pattern\" is incorrect because it similarly does not appear in the reference material and is not linked to the timing of divorce as described in the context of couple communication patterns.",
+      "kn": "KN22",
+      "kn_explanation": "This question is best aligned with KN22 because it tests Influence of individual-environment interaction on development over time (e.g., the relationship between the individual and the social, academic, work, community environment).",
+      "difficulty": "medium",
+      "quality_comment": "Clear stem and well-constructed distractors that distinguish between emotional expression styles in couples.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 School and Family.json",
+      "domain": 4,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 School and Family.json::23",
+      "isScored": true
+    },
+    {
+      "stem": "A pervasive pattern of disregard for and violation of the rights of others since age 15, with a history of conduct disorder and at least three symptoms such as deceitfulness and impulsivity, describes which personality disorder?",
+      "options": [
+        "Narcissistic personality disorder",
+        "Borderline personality disorder",
+        "Antisocial personality disorder",
+        "Histrionic personality disorder"
+      ],
+      "answer": "Antisocial personality disorder",
+      "explanation": "1. **Correct Answer: Antisocial Personality Disorder**  \nAntisocial personality disorder is characterized by a pervasive pattern of disregard for and violation of the rights of others, which begins in adolescence, specifically noted to start at age 15. The diagnosis requires the presence of at least three symptoms, such as deceitfulness and impulsivity, alongside a history of conduct disorder prior to age 15, making it the only personality disorder that fits the criteria outlined in the question.\n\n2. **Incorrect Options**  \n- **Narcissistic Personality Disorder:** This disorder involves a pervasive pattern of grandiosity, need for admiration, and lack of empathy, which does not include the disregard for others' rights or a history of conduct disorder.  \n- **Borderline Personality Disorder:** This disorder is marked by instability in interpersonal relationships, self-image, and affects, along with impulsivity, but does not focus on a pattern of violating others' rights or a history of conduct disorder.  \n- **Histrionic Personality Disorder:** Characterized by excessive emotionality and attention-seeking behaviors, this disorder does not involve the violation of others' rights or a history of conduct disorder, which is central to antisocial personality disorder.",
+      "kn": "KN36",
+      "kn_explanation": "This question requires detailed knowledge of diagnostic criteria and course of a specific personality disorder.",
+      "difficulty": "medium",
+      "quality_comment": "Stem clearly includes key diagnostic features; distractors are borderline disorders but differ significantly in diagnostic criteria.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Personality.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Personality.json::8",
+      "isScored": true
+    },
+    {
+      "stem": "According to Bowen's Extended Family Systems Therapy, what best describes 'differentiation' within family functioning?",
+      "options": [
+        "A person’s ability to distinguish and separate their own emotional and intellectual functioning from that of others",
+        "The formation of a third party to reduce tension in a family dyad",
+        "Parents projecting emotional immaturity onto their children",
+        "Rigid family boundaries that prevent emotional expression"
+      ],
+      "answer": "A person’s ability to distinguish and separate their own emotional and intellectual functioning from that of others",
+      "explanation": "1. The correct answer, \"A person’s ability to distinguish and separate their own emotional and intellectual functioning from that of others,\" accurately describes 'differentiation' as defined by Bowen's Extended Family Systems Therapy. Differentiation involves both intra- and interpersonal aspects, where an individual can recognize their own feelings and thoughts independently of others, enabling them to maintain a sense of self while interacting with family members. This ability is crucial for healthy family functioning, as lower levels of differentiation can lead to emotional fusion and dysfunctional relationships.\n\n2. The first incorrect option, \"The formation of a third party to reduce tension in a family dyad,\" refers to the concept of 'emotional triangles,' which is a separate idea in Bowen's theory; it describes how a third family member may be recruited to alleviate tension between two others, rather than defining differentiation itself. \n\nThe second incorrect option, \"Parents projecting emotional immaturity onto their children,\" describes the 'family projection process,' which explains how parents' emotional issues can affect their children's levels of differentiation, but it does not define differentiation itself. \n\nThe third incorrect option, \"Rigid family boundaries that prevent emotional expression,\" pertains to boundary issues in structural family therapy, emphasizing the importance of clear boundaries for healthy interactions, but it does not relate to the concept of differentiation as defined by Bowen.",
+      "kn": "KN46",
+      "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
+      "difficulty": "medium",
+      "quality_comment": "The question clearly targets a foundational concept in Bowenian therapy, with distractors reflecting related but distinct concepts, appropriate for EPPP testing.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Family and Group.json",
+      "domain": 6,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Family and Group.json::4",
+      "isScored": true
+    },
+    {
+      "stem": "What is the major limitation of randomized controlled trials (RCTs) that affects the generalizability of their results?",
+      "options": [
+        "Use of random assignment to groups",
+        "Strict inclusion/exclusion criteria and controlled study conditions",
+        "Lack of a control group",
+        "Inability to demonstrate causality"
+      ],
+      "answer": "Strict inclusion/exclusion criteria and controlled study conditions",
+      "explanation": "1. The correct answer, \"Strict inclusion/exclusion criteria and controlled study conditions,\" highlights a major limitation of randomized controlled trials (RCTs) that affects generalizability. While RCTs are considered the gold standard in clinical research due to their ability to establish causal relationships through random assignment, the stringent criteria for participant selection and the highly controlled environments can limit the applicability of the findings to broader, more diverse populations and real-world settings.\n\n2. The option \"Use of random assignment to groups\" is incorrect because random assignment is a strength of RCTs that enhances internal validity by ensuring that groups are equivalent at the study's outset. The option \"Lack of a control group\" is incorrect because RCTs typically include a control group, which is essential for comparing treatment effects. Lastly, \"Inability to demonstrate causality\" is incorrect since RCTs are specifically designed to determine causal relationships between variables, making them effective for establishing causality.",
+      "kn": "KN54",
+      "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
+      "difficulty": "medium",
+      "quality_comment": "The question requires knowledge of strengths and weaknesses of RCT methodology, with plausible but distinct distractors enhancing test quality.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Research Designs.json",
+      "domain": 7,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Research Designs.json::29",
+      "isScored": true
+    },
+    {
+      "stem": "A psychologist notices that personal problems are likely to interfere with their work. What should they do?",
+      "options": [
+        "Continue professional activities while monitoring the situation",
+        "Limit, suspend, or terminate professional activities after consultation or take appropriate measures",
+        "Ignore the personal problem unless clients complain",
+        "Delegate responsibilities to supervisees without notifying clients"
+      ],
+      "answer": "Limit, suspend, or terminate professional activities after consultation or take appropriate measures",
+      "explanation": "1. The correct answer, \"Limit, suspend, or terminate professional activities after consultation or take appropriate measures,\" aligns with Standard 2.06 of the APA Ethics Code, which states that psychologists must refrain from professional activities likely to be impaired by personal problems. This standard emphasizes the importance of seeking consultation to determine the best course of action when personal issues could negatively affect their work, ensuring that client welfare remains a priority.\n\n2. The incorrect options are as follows:\n- **Continue professional activities while monitoring the situation:** This option is inappropriate because it does not address the ethical obligation to refrain from activities that may be impaired, potentially harming clients.\n- **Ignore the personal problem unless clients complain:** This approach is unethical as it neglects the psychologist's responsibility to act proactively in addressing personal issues that could impact their professional effectiveness, regardless of client feedback.\n- **Delegate responsibilities to supervisees without notifying clients:** This is wrong because it violates the ethical standards regarding competence and transparency, as clients must be informed about who is providing their care and the qualifications of those individuals.",
+      "kn": "KN61",
+      "kn_explanation": "This question tests knowledge of competence-related ethical requirements concerning personal issues that affect professional work.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors present commonly held but unethical misunderstandings, providing a realistic challenge.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 1 and 2.json",
+      "domain": 8,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 1 and 2.json::22",
+      "isScored": true
+    }
+  ]
+}
