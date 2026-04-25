@@ -1,0 +1,274 @@
+{
+  "meta": {
+    "examId": "warmup-12-8",
+    "totalQuestions": 12,
+    "examType": "warmup",
+    "warmupLength": 12,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 2,
+      "4": 1,
+      "5": 3,
+      "6": 1,
+      "7": 1,
+      "8": 1,
+      "3-5-6": 1
+    },
+    "generatedAt": "2026-04-25T05:50:04.484Z"
+  },
+  "questions": [
+    {
+      "stem": "Gamma-aminobutyric acid (GABA) primarily functions as which of the following in the nervous system?",
+      "options": [
+        "An excitatory neurotransmitter involved in mood elevation",
+        "An inhibitory neurotransmitter involved in anxiety regulation",
+        "A neurotransmitter that causes muscle contraction",
+        "A hormone regulating sleep-wake cycles"
+      ],
+      "answer": "An inhibitory neurotransmitter involved in anxiety regulation",
+      "explanation": "1. The correct answer, \"An inhibitory neurotransmitter involved in anxiety regulation,\" accurately describes gamma-aminobutyric acid (GABA) because GABA is identified as the primary inhibitory neurotransmitter in the nervous system. It plays a crucial role in regulating mood and anxiety; abnormal levels of GABA can lead to conditions such as anxiety and insomnia, highlighting its importance in anxiety regulation.\n\n2. The option \"An excitatory neurotransmitter involved in mood elevation\" is incorrect because GABA is primarily inhibitory, not excitatory, and does not elevate mood but rather helps to regulate anxiety and inhibit excessive neuronal activity. The option \"A neurotransmitter that causes muscle contraction\" is wrong because muscle contraction is primarily mediated by acetylcholine (ACh), not GABA. Lastly, \"A hormone regulating sleep-wake cycles\" is incorrect as GABA is a neurotransmitter, not a hormone, and while it is involved in sleep regulation, it does not function as a hormone in this context.",
+      "kn": "KN1",
+      "kn_explanation": "This item examines neurotransmitter action and its behavioral effects within biological bases of behavior (KN1).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are plausible but inaccurate, allowing clear discrimination of GABA’s inhibitory role.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Neurons and Neurotransmitters.json",
+      "domain": 1,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Neurons and Neurotransmitters.json::23",
+      "isScored": true
+    },
+    {
+      "stem": "A therapist is conducting aversion therapy with a client who has a fetishistic disorder. In this counterconditioning paradigm, the fetish object (e.g., a specific article of clothing) is repeatedly presented immediately before an aversive stimulus such as a mild electric shock. In classical conditioning terms, the fetish object serves as the:",
+      "options": [
+        "Unconditioned stimulus (US)",
+        "Conditioned stimulus (CS)",
+        "Conditioned response (CR)",
+        "Unconditioned response (UR)"
+      ],
+      "answer": "Conditioned stimulus (CS)",
+      "explanation": "In aversion therapy, the stimuli associated with the problem behavior serve as the conditioned stimulus (CS). The fetish object is a previously learned stimulus that currently elicits a pleasurable response; the goal of aversion therapy is to pair it with an unconditioned stimulus (electric shock, which naturally produces pain/discomfort as the UR) so that the fetish object eventually elicits an aversive conditioned response (CR) instead of pleasure. The unconditioned stimulus (A) is the aversive stimulus itself (shock). The conditioned response (C) is the new aversive reaction to the fetish object after conditioning. The unconditioned response (D) is the natural pain reaction to the shock.",
+      "kn": "KN44",
+      "kn_explanation": "Aversion therapy is a specific treatment technique (counterconditioning paradigm) for a diagnosed disorder, fitting KN44's focus on treatment techniques/interventions and their efficacy.",
+      "difficulty": "medium",
+      "quality_comment": "Directly supported by lesson content which explicitly lists the fetish object as a CS example. Clear, unambiguous answer.",
+      "suggestedLesson": "2-classical-conditioning-interventions",
+      "suggestedParagraph": "### Aversion Therapy",
+      "lessonExcerpt": "Conditioned Stimulus (CS): Stimuli associated with the problem behavior (alcohol, cigarettes, fetish object). Unconditioned Stimulus (US): Something naturally unpleasant (electric shock, nausea-inducing drug, foul odor).",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 30,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Classical Conditioning Interventions.json",
+      "domain": 2,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Classical Conditioning Interventions.json::7",
+      "isScored": true
+    },
+    {
+      "stem": "What is the 'sleeper effect' in the context of communicator credibility in persuasion?",
+      "options": [
+        "The gradual increase in attitude change as exposure to the communicator continues over time",
+        "The tendency to remember the message but forget the low credibility of the source over time",
+        "The weakening of initial skepticism towards a communicator due to repeated messages",
+        "The effect of high-credible communicators producing less attitude change over time"
+      ],
+      "answer": "The tendency to remember the message but forget the low credibility of the source over time",
+      "explanation": "1. The correct answer, \"The tendency to remember the message but forget the low credibility of the source over time,\" accurately describes the sleeper effect as outlined in the reference material. This phenomenon occurs because, although high-credible communicators are initially more persuasive, over time, individuals tend to recall the content of the message rather than the credibility of the source, leading to a change in attitudes based on the message itself rather than the source’s credibility.\n\n2. The first incorrect option, \"The gradual increase in attitude change as exposure to the communicator continues over time,\" is wrong because the sleeper effect specifically refers to the retention of the message rather than a cumulative effect of repeated exposure. The second incorrect option, \"The weakening of initial skepticism towards a communicator due to repeated messages,\" is incorrect because the sleeper effect does not focus on skepticism but rather on the fading memory of the source's credibility. Lastly, the option \"The effect of high-credible communicators producing less attitude change over time\" is incorrect because high-credible communicators generally lead to greater attitude change initially; the sleeper effect indicates that this effect does not persist as the source's credibility is forgotten.",
+      "kn": "KN16",
+      "kn_explanation": "Understanding source credibility and its effect on persuasion is fundamental to social influence and group processes (KN16).",
+      "difficulty": "medium",
+      "quality_comment": "The alternatives are subtle and plausible, encouraging critical thinking about source issues in persuasion.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Persuasion.json",
+      "domain": 3,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Persuasion.json::6",
+      "isScored": true
+    },
+    {
+      "stem": "Which dimension of Sellers et al.'s Multidimensional Model of Racial Identity refers to the importance of race to an individual's overall self-concept compared to other identities like gender or religion?",
+      "options": [
+        "Racial salience",
+        "Racial centrality",
+        "Racial regard",
+        "Racial ideology"
+      ],
+      "answer": "Racial centrality",
+      "explanation": "1. \"Racial centrality\" is the correct answer because it refers to the extent to which a person defines themselves in terms of their race relative to other identities, such as gender or religion. This dimension captures how important race is in shaping an individual's overall self-concept and identity.\n\n2. \n- **Racial salience** is incorrect because it pertains to the relevance of race at a specific point in time or situation, rather than its overall importance in the person's identity compared to other identities.\n- **Racial regard** is incorrect as it focuses on an individual's feelings about African Americans (private regard) and how they believe others view African Americans (public regard), rather than the importance of race in their self-definition.\n- **Racial ideology** is incorrect because it refers to a person's beliefs and opinions about how African Americans should interact with society, which does not address the personal significance of race in their overall self-concept.",
+      "kn": "KN19",
+      "kn_explanation": "This question addresses key identity constructs within racial identity theory, falling within cultural and identity diversity issues.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are terms from the same model and related concepts, making the question appropriately challenging at the EPPP level.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Identity.json",
+      "domain": 3,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Identity.json::7",
+      "isScored": true
+    },
+    {
+      "stem": "Which best summarizes Kohlberg's view on the universality of his stages of moral development?",
+      "options": [
+        "The stages are universal and always occur in the same order.",
+        "The stages vary significantly by culture and gender.",
+        "The stages can be skipped depending on individual motivation.",
+        "The stages are exclusive to males from Western cultures."
+      ],
+      "answer": "The stages are universal and always occur in the same order.",
+      "explanation": "1. The correct answer, \"The stages are universal and always occur in the same order,\" aligns with Kohlberg's theory, which posits that moral reasoning progresses through three distinct levels, each comprising two stages. Kohlberg asserted that these stages are universal, meaning that all individuals, regardless of their background, will pass through them in the same sequence as they develop cognitively and socially.\n\n2. The option \"The stages vary significantly by culture and gender\" is incorrect because, while Kohlberg's theory has faced criticism for cultural bias, he argued for the universality of the stages across different cultures. The statement \"The stages can be skipped depending on individual motivation\" is wrong because Kohlberg maintained that individuals must progress through each stage in order and cannot bypass any stages based on motivation. Lastly, \"The stages are exclusive to males from Western cultures\" is inaccurate as Kohlberg's theory was intended to apply universally, although it has been critiqued for being androcentric and potentially not representative of women's moral reasoning.",
+      "kn": "KN23",
+      "kn_explanation": "This question addresses Kohlberg's theoretical claims regarding moral development sequences within major developmental theories (KN23).",
+      "difficulty": "medium",
+      "quality_comment": "Options present common misconceptions and criticisms, with one correct theoretical assertion, effectively testing knowledge of Kohlberg’s framework.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Morality.json",
+      "domain": 4,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Morality.json::18",
+      "isScored": true
+    },
+    {
+      "stem": "A researcher develops a performance appraisal instrument for hospital-based clinical psychologists that measures only session count, client symptom reduction scores, and therapy completion rates. An expert review panel notes that the measure omits supervisory competence, interdisciplinary consultation skills, administrative contributions, and training program involvement—all of which are established components of the performance domain for this role. The panel's primary psychometric concern regarding this instrument is best described as:",
+      "options": [
+        "Criterion contamination, because extraneous variables have been introduced into the criterion measure",
+        "Criterion deficiency, because the criterion measure fails to capture the full scope of the performance construct",
+        "Predictive bias, because the instrument will underpredict performance for some demographic subgroups",
+        "Convergent invalidity, because the measure correlates too highly with a single dimension of performance"
+      ],
+      "answer": "Criterion deficiency, because the criterion measure fails to capture the full scope of the performance construct",
+      "explanation": "Criterion deficiency occurs when a criterion measure does not assess all relevant dimensions of the construct it is intended to represent, leaving important aspects of the performance domain unmeasured. In this case, supervisory competence, consultation, administrative duties, and training contributions are legitimate components of a clinical psychologist's role that are absent from the appraisal. Option A (criterion contamination) is the opposite problem—variance in the criterion attributable to factors unrelated to true performance, not missing dimensions. Option C (predictive bias) refers to differential prediction of criterion scores across demographic groups, which is a validity generalization issue rather than a domain-coverage issue. Option D is incorrect because convergent invalidity involves pattern-of-correlations evidence and does not describe incomplete domain sampling.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
+      "difficulty": "medium",
+      "quality_comment": "Clear real-world vignette effectively differentiates criterion deficiency from the commonly confused criterion contamination. Distractors test precise conceptual distinctions appropriate for doctoral-level assessment.",
+      "suggestedLesson": "5-iq-tests",
+      "suggestedParagraph": "## Validity and Test Development Concepts",
+      "lessonExcerpt": "NOT COVERED: The provided lesson files do not explicitly address criterion deficiency as a psychometric concept. While empirical criterion keying is mentioned in 5-career-interests.md and 5-mmpi.md, the specific distinction between criterion deficiency and criterion contamination is not covered. A psychometrics or test construction lesson should include this content.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 22,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 IQ Tests.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 IQ Tests.json::12",
+      "isScored": true
+    },
+    {
+      "stem": "Which intervention has recently been FDA approved to slow progression of early-stage Alzheimer’s disease by targeting amyloid plaques?",
+      "options": [
+        "Memantine",
+        "Haloperidol",
+        "Donepezil",
+        "Donanemab"
+      ],
+      "answer": "Donanemab",
+      "explanation": "1. **Correct Answer: Donanemab**  \nDonanemab is the correct answer because it is an intravenous infusion recently approved by the FDA specifically to slow the progression of early-stage Alzheimer’s disease by targeting and reducing amyloid plaques in the brain. This mechanism directly addresses one of the hallmark brain abnormalities associated with Alzheimer’s disease.\n\n2. **Incorrect Options:**\n- **Memantine:** Memantine is used to reduce or stabilize cognitive symptoms in Alzheimer’s disease but does not specifically target amyloid plaques; instead, it regulates glutamate activity.\n- **Haloperidol:** Haloperidol is an antipsychotic medication that may help reduce agitation and psychotic symptoms in Alzheimer’s patients but is not used to slow disease progression or target amyloid plaques.\n- **Donepezil:** Donepezil is a cholinesterase inhibitor that helps delay the breakdown of acetylcholine to improve cognitive functioning but does not target amyloid plaques or slow the progression of the disease.",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
+      "difficulty": "medium",
+      "quality_comment": "Options are well-known drugs for neurocognitive or psychiatric disorders, increasing plausibility.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Neurocognitive.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Neurocognitive.json::11",
+      "isScored": true
+    },
+    {
+      "stem": "Two clinicians independently review 100 patient records and classify each patient as meeting or not meeting criteria for a specific diagnosis. Their percent agreement is 88%, but when Cohen's Kappa is calculated, the value is .76. The difference between these two values is best explained by the fact that Kappa:",
+      "options": [
+        "Uses a more lenient threshold for agreement than percent agreement",
+        "Adjusts for the proportion of agreement expected by chance alone",
+        "Weights disagreements by severity rather than treating all disagreements equally",
+        "Only counts agreement on positive cases while ignoring agreement on negative cases"
+      ],
+      "answer": "Adjusts for the proportion of agreement expected by chance alone",
+      "explanation": "Cohen's Kappa provides a more conservative estimate of inter-rater agreement by correcting for chance agreement. Simple percent agreement can be inflated because raters will agree some proportion of the time purely by chance, especially when base rates are very high or very low. For example, if 90% of cases are negative, two raters could agree 81% of the time just by both randomly guessing 'negative.' Kappa removes this chance-expected agreement, yielding a lower but more meaningful value. A Kappa of .76 indicates substantial agreement beyond chance. Kappa does not weight disagreements by severity (that would be weighted Kappa), does not use a more lenient threshold, and does not ignore agreement on negative cases.",
+      "kn": "KN29",
+      "kn_explanation": "Inter-rater reliability (percent agreement between clinicians) is a reliability/psychometric concept",
+      "difficulty": "medium",
+      "quality_comment": "Good conceptual question. The lesson mentions Kappa corrects for chance agreement but does not provide specific interpretation benchmarks for Kappa values (e.g., .76 = substantial). The core concept is well-supported.",
+      "suggestedLesson": "5-items-and-reliability",
+      "suggestedParagraph": "### Inter-Rater Reliability: The Subjective Scoring Check",
+      "lessonExcerpt": "Cohen's Kappa fixes this by accounting for chance agreement. It provides a more conservative estimate of true rater consistency.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 7,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Items and Reliability.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Items and Reliability.json::8",
+      "isScored": true
+    },
+    {
+      "stem": "A therapist is developing a treatment plan for a client diagnosed with obsessive-compulsive disorder who experiences intrusive thoughts about contamination and responds by washing her hands for up to three hours daily. Based on cognitive-behavioral principles, which behavioral intervention has the strongest empirical support as the first-line treatment for this presentation?",
+      "options": [
+        "Applied relaxation training to reduce the anxiety triggered by contamination-related intrusive thoughts",
+        "Exposure and response prevention, in which the client contacts feared contaminants while refraining from washing rituals",
+        "Systematic desensitization pairing progressive muscle relaxation with a graduated hierarchy of contamination stimuli",
+        "Habit reversal training using a competing response to interrupt handwashing behavior at onset"
+      ],
+      "answer": "Exposure and response prevention, in which the client contacts feared contaminants while refraining from washing rituals",
+      "explanation": "Exposure and response prevention (ERP) is the empirically validated first-line behavioral treatment for OCD. The client is systematically exposed to feared stimuli (contamination cues) while being prevented from performing the compulsive ritual (washing) that provides temporary anxiety relief. This breaks the negative reinforcement cycle maintaining the compulsion by allowing the anxiety to habituate naturally. Applied relaxation addresses anxiety but does not target the behavioral reinforcement cycle specific to OCD. Systematic desensitization uses relaxation as an incompatible response, which differs from ERP's approach of tolerating anxiety without relief. Habit reversal training is evidence-based for tic disorders and body-focused repetitive behaviors but is not the primary behavioral intervention for OCD contamination rituals.",
+      "kn": "KN44",
+      "kn_explanation": "This question is best aligned with KN44 because it tests Treatment techniques and interventions, and the evidence for their comparative efficacy and effectiveness.",
+      "difficulty": "medium",
+      "quality_comment": "Solid EPPP-level question with plausible distractors representing real behavioral interventions; requires fine discrimination.",
+      "suggestedLesson": "6-cbt",
+      "suggestedParagraph": "## Beck's Cognitive Therapy: The Foundation",
+      "lessonExcerpt": "CBT uses both cognitive techniques (like reframing thoughts and examining evidence) and behavioral techniques (like activity scheduling, exposure therapy, and behavioral rehearsal).",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 1,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 CBT.json",
+      "domain": 6,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 CBT.json::13",
+      "isScored": true
+    },
+    {
+      "stem": "What is the most accurate interpretation of a 95% frequentist confidence interval around a sample mean?",
+      "options": [
+        "There is a 95% chance the population mean lies within this interval for this sample.",
+        "95% of all sample means calculated from repeated sampling will fall within this interval.",
+        "If the study were repeated many times, 95% of such calculated intervals would contain the true population mean.",
+        "The sample mean will fall within 95% of all possible population values."
+      ],
+      "answer": "If the study were repeated many times, 95% of such calculated intervals would contain the true population mean.",
+      "explanation": "1. The correct interpretation of a 95% frequentist confidence interval is that if the study were repeated many times, 95% of the calculated confidence intervals would contain the true population mean. This is based on the definition of frequentist statistics, where the confidence interval reflects the long-run frequency of intervals containing the true parameter across numerous replications of the study.\n\n2. \n- \"There is a 95% chance the population mean lies within this interval for this sample.\" This statement misinterprets the confidence interval; once the interval is calculated for a specific sample, the population mean either lies within it or it does not, making the probability statement inappropriate for a single interval.\n  \n- \"95% of all sample means calculated from repeated sampling will fall within this interval.\" This option incorrectly suggests that it is the sample means that will fall within the specific confidence interval rather than the true population mean.\n\n- \"The sample mean will fall within 95% of all possible population values.\" This statement confuses the relationship between the sample mean and population values; the confidence interval pertains to the population mean, not the sample mean's position relative to population values.",
+      "kn": "KN55",
+      "kn_explanation": "This tests understanding of frequentist confidence intervals, part of statistical interpretation in analytic methods (KN55).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors include common misinterpretations, offering a useful challenge for EPPP candidates.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Inferential Stats.json",
+      "domain": 7,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Inferential Stats.json::34",
+      "isScored": true
+    },
+    {
+      "stem": "A psychologist learns that a colleague's actions have harmed a client and informal resolution is not appropriate. What should the psychologist do?",
+      "options": [
+        "Attempt an informal resolution by personally confronting the colleague, unless confidentiality can be broken",
+        "Report the violation to an ethics committee, licensing board, or other appropriate authority if informal resolution is not appropriate or successful",
+        "Ignore the violation unless it directly affects your own clients or professional activities",
+        "Consult with other colleagues before deciding whether to report the violation"
+      ],
+      "answer": "Report the violation to an ethics committee, licensing board, or other appropriate authority if informal resolution is not appropriate or successful",
+      "explanation": "1. The correct answer, \"Report the violation to an ethics committee, licensing board, or other appropriate authority if informal resolution is not appropriate or successful,\" aligns with Standard 1.05 of the APA Ethics Code. This standard mandates that psychologists must report ethical violations when informal resolution is inadequate or when the violation has caused or is likely to cause substantial harm. Therefore, when a psychologist learns that a colleague's actions have harmed a client, it is their ethical obligation to escalate the matter to the appropriate authorities to protect client welfare.\n\n2. The option \"Attempt an informal resolution by personally confronting the colleague, unless confidentiality can be broken\" is incorrect because Standard 1.04 requires informal resolution only when it is appropriate, and in cases of substantial harm, informal confrontation may not be suitable. \"Ignore the violation unless it directly affects your own clients or professional activities\" is wrong as ethical obligations extend beyond personal client relationships, and psychologists must act on any violations that could harm others. Lastly, \"Consult with other colleagues before deciding whether to report the violation\" is inappropriate because Standard 1.05 emphasizes the necessity of reporting when harm is evident, and delaying action can further jeopardize client welfare.",
+      "kn": "KN61",
+      "kn_explanation": "This question tests knowledge of ethical requirements related to addressing colleagues' violations, which falls within current ethical principles and codes.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors include common misconceptions about informal resolution and reporting, providing a realistic challenge for examinees.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 1 and 2.json",
+      "domain": 8,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 1 and 2.json::19",
+      "isScored": true
+    },
+    {
+      "stem": "Which phase of Tiedeman’s Career Decision-Making Model includes exploration, crystallization, choice, and clarification stages?",
+      "options": [
+        "Assessment phase",
+        "Anticipation phase",
+        "Implementation phase",
+        "Reformation phase"
+      ],
+      "answer": "Anticipation phase",
+      "explanation": "1. The \"Anticipation phase\" is the correct answer because it encompasses the stages of exploration, crystallization, choice, and clarification, which are crucial for individuals as they familiarize themselves with different job options and make tentative career decisions. This phase is focused on preparing for career choices and involves understanding various jobs before committing to a particular path.\n\n2. The \"Assessment phase\" is incorrect because Tiedeman’s model does not explicitly mention an assessment phase; rather, it focuses on anticipation and implementation phases. The \"Implementation phase\" is also incorrect, as it refers to the subsequent stages where individuals begin their chosen jobs and work towards proficiency, rather than the initial exploration and decision-making processes. Lastly, the \"Reformation phase\" is incorrect as it is not a defined phase within Tiedeman’s Career Decision-Making Model; the model specifically identifies the anticipation and implementation phases without including a reformation stage.",
+      "kn": "KN42",
+      "kn_explanation": "This question is best aligned with KN42 because it tests Factors related to treatment or intervention decision-making (e.g., relevant research, matching treatment to assessment/diagnosis, matching client or patient with psychologist characteristics, knowledge and use of allied services, cost and benefit, readiness to change).",
+      "difficulty": "medium",
+      "quality_comment": "The options use model-relevant terminology, encouraging examinees to distinguish among conceptual phases accurately.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/6 How Careers Develop.json",
+      "domain": "3-5-6",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/6 How Careers Develop.json::12",
+      "isScored": true
+    }
+  ]
+}

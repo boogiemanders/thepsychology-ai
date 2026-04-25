@@ -1,0 +1,179 @@
+{
+  "meta": {
+    "examId": "warmup-8-16",
+    "totalQuestions": 8,
+    "examType": "warmup",
+    "warmupLength": 8,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 1,
+      "7": 1,
+      "8": 1
+    },
+    "generatedAt": "2026-04-25T05:50:04.490Z"
+  },
+  "questions": [
+    {
+      "stem": "Which neurotransmitter was found by Kandel’s research on Aplysia to increase during short-term memory formation?",
+      "options": [
+        "Serotonin",
+        "Dopamine",
+        "Glutamate",
+        "Acetylcholine"
+      ],
+      "answer": "Serotonin",
+      "explanation": "1. **Explanation of Correct Answer - Serotonin:** The correct answer is serotonin because Kandel's research on Aplysia demonstrated that during the formation of short-term memories, there is an increase in the release of this neurotransmitter. This finding highlights serotonin's role in the initial storage of information, which is crucial for short-term memory processes.\n\n2. **Explanation of Incorrect Options:**\n   - **Dopamine:** Dopamine is primarily associated with reward and motivation rather than the specific mechanisms of short-term memory formation as identified in Kandel's studies.\n   - **Glutamate:** While glutamate is involved in long-term potentiation and memory formation, Kandel's research specifically indicated serotonin's role in short-term memory rather than glutamate's.\n   - **Acetylcholine:** Acetylcholine plays a significant role in attention and learning but is not specifically linked to the short-term memory processes outlined in Kandel's findings on Aplysia.",
+      "kn": "KN1",
+      "kn_explanation": "This question is best aligned with KN1 because it tests Functional correlates and determinants of the neurobiological and genetic bases of behavior pertaining to perception, cognition, personality, and mood and affect in normal, acute and chronic neurobehavioral disease processes and disease, comorbidities.",
+      "difficulty": "medium",
+      "quality_comment": "Options are plausible neurotransmitters involved in learning, offering a well-constructed question on neurobiology of memory.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Memory and Sleep.json",
+      "domain": 1,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Memory and Sleep.json::25",
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following best exemplifies differential reinforcement of low rates of behavior (DRL)?",
+      "options": [
+        "Reinforcing a child for asking three or fewer questions during a 60-minute period",
+        "Reinforcing a child for any behavior other than hand-flapping",
+        "Reinforcing a child for raising their hand instead of shouting out answers",
+        "Reinforcing a child for staying seated during class intervals"
+      ],
+      "answer": "Reinforcing a child for asking three or fewer questions during a 60-minute period",
+      "explanation": "1. The correct answer, \"Reinforcing a child for asking three or fewer questions during a 60-minute period,\" exemplifies differential reinforcement of low rates of behavior (DRL) because it involves reinforcing the child when they engage in the target behavior (asking questions) at or below a specified low rate (three questions). This approach aims to reduce the frequency of the behavior by encouraging the child to limit their questions to an acceptable level, rather than eliminating the behavior entirely.\n\n2. The option \"Reinforcing a child for any behavior other than hand-flapping\" is incorrect because it represents differential reinforcement of other behavior (DRO), which focuses on reinforcing any behavior other than the undesirable one, rather than specifying a low rate of the same behavior. The option \"Reinforcing a child for raising their hand instead of shouting out answers\" is wrong because it illustrates differential reinforcement of alternative behavior (DRA), which reinforces a different, appropriate behavior rather than controlling the rate of the same behavior. Lastly, \"Reinforcing a child for staying seated during class intervals\" is incorrect because it describes a behavior that is not related to controlling the rate of an existing behavior; it does not specify a low rate of a target behavior but rather encourages a completely different behavior.",
+      "kn": "KN7",
+      "kn_explanation": "This question evaluates understanding of a specific operant conditioning reinforcement strategy, appropriate under learning theories (KN7).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors reflect other differential reinforcement types, requiring solid understanding to answer correctly.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Operant Conditioning Interventions.json",
+      "domain": 2,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Operant Conditioning Interventions.json::37",
+      "isScored": true
+    },
+    {
+      "stem": "In a classic study, children who enjoyed drawing with markers were given external rewards for drawing during a play period. When the rewards were later removed, the previously rewarded children drew less than unrewarded children. This finding best illustrates:",
+      "options": [
+        "Cognitive dissonance reduction",
+        "The overjustification effect",
+        "Negative reinforcement",
+        "Reactance theory"
+      ],
+      "answer": "The overjustification effect",
+      "explanation": "The overjustification effect occurs when external rewards for an intrinsically enjoyable activity undermine intrinsic motivation. The children who were rewarded inferred 'I must be drawing for the reward' rather than 'I draw because I enjoy it,' so when rewards were removed, they drew less. Cognitive dissonance involves attitude change following inconsistent behavior, not reward effects on intrinsic motivation. Negative reinforcement involves removing an aversive stimulus to increase behavior. Reactance theory involves resistance to perceived threats to freedom, not reward-motivation dynamics.",
+      "kn": "KN13",
+      "kn_explanation": "This question is best aligned with KN13 because it tests the influence of psychosocial factors on cognitions/beliefs and behaviors.",
+      "difficulty": "medium",
+      "quality_comment": "Classic EPPP-style question based directly on the Lepper, Greene, & Nisbett study described in lesson content.",
+      "suggestedLesson": "3-attitudes",
+      "suggestedParagraph": "### Self-Perception Theory: Observing Yourself",
+      "lessonExcerpt": "Children who enjoyed drawing with markers were either rewarded or not rewarded for drawing during a play period. Later, when rewards were removed, the previously rewarded children spent less time drawing than the unrewarded children.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 2,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Attitudes.json",
+      "domain": 3,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Attitudes.json::2",
+      "isScored": true
+    },
+    {
+      "stem": "Which stage of Piaget's moral development theory is characterized by children judging behavior mainly based on its consequences rather than intentions?",
+      "options": [
+        "Heteronomous Stage",
+        "Premoral Stage",
+        "Autonomous Stage",
+        "Concrete Operational Stage"
+      ],
+      "answer": "Heteronomous Stage",
+      "explanation": "1. The \"Heteronomous Stage\" is the correct answer because, according to Piaget, this stage begins around five or six years of age, during which children believe that rules are established by authorities and cannot be changed. In this stage, children primarily judge behaviors based on the consequences rather than the intentions behind those behaviors, focusing on whether actions lead to punishment or negative outcomes.\n\n2. The \"Premoral Stage\" is incorrect because it occurs from birth to about five years of age, during which children have a very limited understanding of rules and moral behavior, lacking the ability to judge based on consequences or intentions. The \"Autonomous Stage\" is also incorrect as it begins around ten or eleven years old, where children start to understand that rules can be changed through mutual agreement and begin to consider intentions in their moral judgments. Lastly, the \"Concrete Operational Stage\" is not applicable here, as it refers to a stage of cognitive development (not moral development) characterized by logical thinking about concrete events, rather than moral reasoning or judgment.",
+      "kn": "KN23",
+      "kn_explanation": "This question targets Piaget's distinct stages of moral development, specifically the transition in reasoning about rules and consequences (KN23).",
+      "difficulty": "medium",
+      "quality_comment": "The item requires precise recall of Piagetian stages, with plausible distractors that challenge superficial understanding.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Morality.json",
+      "domain": 4,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Morality.json::22",
+      "isScored": true
+    },
+    {
+      "stem": "Which theory or model best explains the importance of base rates and potential biases in interpreting neuropsychological test results?",
+      "options": [
+        "Signal Detection Theory",
+        "Classical Test Theory",
+        "Bayesian Probability Theory",
+        "Piaget’s Stage Theory"
+      ],
+      "answer": "Bayesian Probability Theory",
+      "explanation": "1. **Bayesian Probability Theory** is the correct answer because it emphasizes the role of prior knowledge (base rates) and evidence in updating beliefs about the likelihood of a particular outcome. In the context of interpreting neuropsychological test results, Bayesian approaches allow clinicians to consider the prevalence of conditions (base rates) and adjust their interpretations of test scores accordingly, thus minimizing biases that may arise from overestimating or underestimating the significance of test results in individual cases.\n\n2. **Signal Detection Theory** is incorrect because it focuses on the ability to distinguish between signal (true positives) and noise (false positives) in decision-making, rather than incorporating base rates into the interpretation of test results. **Classical Test Theory** is also not applicable, as it primarily deals with the reliability and validity of test scores without addressing the influence of base rates or biases in interpretation. Lastly, **Piaget’s Stage Theory** is irrelevant in this context as it pertains to cognitive development stages in children, rather than the statistical and interpretative frameworks used in neuropsychological assessment.",
+      "kn": "KN37",
+      "kn_explanation": "This question targets evidence-based interpretation of data and how knowledge of base rates and biases influence clinical judgment (KN37).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are plausible psychological or testing theories, but only Bayesian theory specifically relates to base rate use and bias interpretation.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Neurodevelopmental.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Neurodevelopmental.json::17",
+      "isScored": true
+    },
+    {
+      "stem": "Existential therapies focus primarily on helping clients confront anxieties arising from which of the following ultimate concerns?",
+      "options": [
+        "Death, freedom, isolation, and meaninglessness",
+        "Id, ego, superego conflicts",
+        "Positive regard, empathy, and congruence",
+        "Conditioning, reinforcement, and punishment"
+      ],
+      "answer": "Death, freedom, isolation, and meaninglessness",
+      "explanation": "1. \"Death, freedom, isolation, and meaninglessness\" is the correct answer because existential therapies are rooted in the philosophy that individuals must confront these ultimate concerns of existence. According to existential therapists, psychological disturbances often arise from the inability to resolve conflicts related to these concerns, which are fundamental to the human experience.\n\n2. The option \"Id, ego, superego conflicts\" is incorrect because this concept is specific to Freudian psychoanalysis, which focuses on unconscious conflicts between different aspects of personality rather than existential themes. The option \"Positive regard, empathy, and congruence\" is also incorrect as these are core conditions of person-centered therapy, not existential therapy, which emphasizes personal responsibility and choice. Lastly, \"Conditioning, reinforcement, and punishment\" is wrong because these terms are associated with behavioral therapies, which focus on learned behaviors and their modification, rather than the existential focus on personal meaning and anxiety.",
+      "kn": "KN43",
+      "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
+      "difficulty": "medium",
+      "quality_comment": "The distractors focus on other theoretical models, making the correct option clear to knowledgeable candidates.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Psychodynamic and Humanistic Therapies.json",
+      "domain": 6,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Psychodynamic and Humanistic Therapies.json::17",
+      "isScored": true
+    },
+    {
+      "stem": "A correlational study analyzes the relationship between the predictor X (hours studied) and criterion Y (exam score). What does the regression equation derived from this analysis primarily allow the researcher to do?",
+      "options": [
+        "Establish a causal relationship between hours studied and exam score.",
+        "Describe the characteristics of the sample using descriptive statistics.",
+        "Predict an individual's exam score based on their hours studied.",
+        "Determine the population mean exam score."
+      ],
+      "answer": "Predict an individual's exam score based on their hours studied.",
+      "explanation": "1. The correct answer, \"Predict an individual's exam score based on their hours studied,\" is accurate because a regression equation derived from correlational analysis allows researchers to use the relationship between the predictor variable (hours studied) and the criterion variable (exam score) to make predictions about individual outcomes. In this context, the regression equation provides a formula that estimates the expected exam score for a given number of hours studied, demonstrating the predictive utility of the correlation.\n\n2. The option \"Establish a causal relationship between hours studied and exam score\" is incorrect because correlational studies do not manipulate variables or control for confounding factors, meaning they cannot confirm causation. \"Describe the characteristics of the sample using descriptive statistics\" is wrong because while descriptive statistics summarize data, they do not utilize the regression equation to make predictions about individual scores. Lastly, \"Determine the population mean exam score\" is incorrect as the regression equation focuses on individual predictions rather than calculating the mean for the entire population, which would require different statistical approaches.",
+      "kn": "KN54",
+      "kn_explanation": "This question tests understanding of correlational research and regression analysis within quantitative research methods (KN54).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors cover various unrelated statistical concepts, compelling test-takers to correctly apply the concept of regression in correlational research.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Research Designs.json",
+      "domain": 7,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Research Designs.json::28",
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following best describes a psychologist's responsibility regarding continuing professional development according to ethical standards?",
+      "options": [
+        "Psychologists may choose to engage in continuing education when convenient without formal documentation.",
+        "Psychologists must undertake ongoing education to maintain competence and ensure current knowledge.",
+        "Once licensed, psychologists are not ethically required to pursue further training.",
+        "Continuing professional development is solely the responsibility of employers, not the individual psychologist."
+      ],
+      "answer": "Psychologists must undertake ongoing education to maintain competence and ensure current knowledge.",
+      "explanation": "1. The correct answer, \"Psychologists must undertake ongoing education to maintain competence and ensure current knowledge,\" aligns with the ethical standards outlined in the APA Ethics Code, particularly Standard 7.02. This standard emphasizes that psychologists must take \"reasonable steps\" to ensure their education and training descriptions are accurate, indicating a commitment to continuous professional development to stay informed and competent in their field.\n\n2. The first incorrect option, \"Psychologists may choose to engage in continuing education when convenient without formal documentation,\" is wrong because ethical standards require psychologists to maintain accurate records of their education and training, suggesting that ongoing education should be a structured and documented process rather than a casual choice. \n\nThe second incorrect option, \"Once licensed, psychologists are not ethically required to pursue further training,\" is incorrect because the APA Ethics Code implies an ongoing responsibility for professional development beyond initial licensure to ensure competence in practice. \n\nFinally, the third incorrect option, \"Continuing professional development is solely the responsibility of employers, not the individual psychologist,\" is inaccurate because it places the onus of professional growth entirely on employers, whereas ethical standards highlight the individual psychologist's obligation to engage in ongoing education and training for their own competence.",
+      "kn": "KN66",
+      "kn_explanation": "This question covers the underrepresented area of continuing professional development within ethical, legal, and professional issues, which is relevant to maintaining ethical competence (KN66).",
+      "difficulty": "medium",
+      "quality_comment": "The question addresses an often overlooked but important ethical obligation, with plausible distractors enhancing discriminability.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 7 and 8.json",
+      "domain": 8,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 7 and 8.json::25",
+      "isScored": true
+    }
+  ]
+}

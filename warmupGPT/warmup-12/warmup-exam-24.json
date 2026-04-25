@@ -1,0 +1,267 @@
+{
+  "meta": {
+    "examId": "warmup-12-24",
+    "totalQuestions": 12,
+    "examType": "warmup",
+    "warmupLength": 12,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 2,
+      "4": 1,
+      "5": 3,
+      "6": 1,
+      "7": 1,
+      "8": 1,
+      "3-5-6": 1
+    },
+    "generatedAt": "2026-04-25T05:56:49.914421Z"
+  },
+  "questions": [
+    {
+      "stem": "Which photoreceptor type is primarily responsible for vision in dim light and peripheral vision?",
+      "options": [
+        "Cones",
+        "Rods",
+        "Bipolar cells",
+        "Ganglion cells"
+      ],
+      "answer": "Rods",
+      "explanation": "1. **Correct Answer - Rods:** Rods are the photoreceptors primarily responsible for vision in dim light and peripheral vision. They are more sensitive to light than cones and do not perceive color, making them essential for seeing in low-light conditions and detecting movement in the peripheral visual field.\n\n2. **Incorrect Options:**\n   - **Cones:** Cones are responsible for visual acuity and color perception, functioning best in bright light rather than dim light.\n   - **Bipolar cells:** Bipolar cells are not photoreceptors; they are interneurons in the retina that transmit signals from photoreceptors (rods and cones) to ganglion cells.\n   - **Ganglion cells:** Ganglion cells are also not photoreceptors; they receive input from bipolar cells and transmit visual information from the retina to the brain.",
+      "kn": "KN1",
+      "kn_explanation": "This question focuses on the biological basis of vision and the function of photoreceptors, which pertains to sensory neurobiology (KN1).",
+      "difficulty": "easy",
+      "quality_comment": "The options include cell types involved in visual processing, but only rods match the description precisely, enhancing content specificity.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Sensory Perception.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Sensory Perception.json::14",
+      "domain": 1,
+      "isScored": true
+    },
+    {
+      "stem": "In a controlled memory study, participants studied a list of 30 paired associates and were then randomly assigned to either sleep for 8 hours or remain awake before a retention test. The sleep group showed significantly superior recall compared to the wake group, even when total elapsed time and interference from new learning were held constant. The mechanism that most directly accounts for the sleep group's advantage is:",
+      "options": [
+        "Reduced proactive interference, because fewer prior memories were activated during sleep to compete with the newly encoded associations",
+        "Expanded working memory capacity during sleep, enabling more efficient retrieval of recently encoded material at testing",
+        "Memory consolidation, whereby offline neural reprocessing during sleep stabilizes and integrates newly encoded information into long-term memory",
+        "Elimination of the recency effect, because sleep clears short-term memory and forces all material into durable long-term storage before retrieval"
+      ],
+      "answer": "Memory consolidation, whereby offline neural reprocessing during sleep stabilizes and integrates newly encoded information into long-term memory",
+      "explanation": "Sleep-dependent memory consolidation refers to the process by which newly encoded memories are stabilized and integrated into long-term storage through offline neural activity during sleep, including hippocampal replay during slow-wave sleep for declarative memories. The memory lesson identifies consolidation — connecting new information to already-stored long-term representations — as the mechanism by which information transitions from short-term to long-term memory. Sleep provides the offline processing window that waking periods do not. While reduced interference is a plausible alternative hypothesis, the research literature and EPPP-tested content specifically identify consolidation as the primary mechanism for sleep's mnemonic benefit. Working memory capacity is not substantially altered by a single sleep period, and the recency effect concerns short-term retention during immediate recall, not delayed retention testing.",
+      "kn": "KN8",
+      "kn_explanation": "This question is best aligned with KN8 because it tests Major research-based theories and models of memory and their application.",
+      "difficulty": "hard",
+      "quality_comment": "Well-designed experimental vignette with plausible distractors grounded in legitimate memory concepts. Flagged for review because the provided memory lesson excerpt",
+      "suggestedLesson": "2-memory",
+      "suggestedParagraph": "### Long-Term Memory: The Permanent Archive",
+      "lessonExcerpt": "Information moves from short-term to long-term memory through encoding, connecting new information to something already stored in long-term memory.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 25,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Memory.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Memory.json::54",
+      "domain": 2,
+      "isScored": true
+    },
+    {
+      "stem": "Which recipient characteristic shows an inverted-U shaped relationship with susceptibility to persuasion?",
+      "options": [
+        "Intelligence",
+        "Self-esteem",
+        "Age",
+        "Gender"
+      ],
+      "answer": "Self-esteem",
+      "explanation": "1. **Self-esteem** is the correct answer because research by Rhodes and Wood (1992) indicates an inverted U-shaped relationship between self-esteem and susceptibility to persuasion. This means that individuals with moderate self-esteem are the most susceptible to influence, while those with either low or high self-esteem are less likely to be persuaded.\n\n2. **Intelligence** is incorrect because the relationship between intelligence and susceptibility to persuasion is linear, with higher levels of susceptibility associated with lower levels of intelligence, rather than an inverted U-shape. **Age** is also incorrect; while some studies suggest a U-shaped relationship for adolescents and older adults being more easily persuaded than middle-aged adults, this does not fit the inverted U-shaped criterion. Finally, **Gender** is not mentioned in the reference material as having a defined relationship with susceptibility to persuasion, making it an unsuitable choice for this question.",
+      "kn": "KN16",
+      "kn_explanation": "This question assesses knowledge of individual differences affecting social influence and persuasion, classified under social and group processes (KN16).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are all plausible individual difference variables; question is clear and focused.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Persuasion.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Persuasion.json::10",
+      "domain": 3,
+      "isScored": true
+    },
+    {
+      "stem": "Which stage of Atkinson, Morten, and Sue’s R/CID Model is marked by an understanding and acceptance of one's cultural identity, as well as a commitment to social justice and equity?",
+      "options": [
+        "Dissonance",
+        "Resistance and Immersion",
+        "Conformity",
+        "Integrative Awareness"
+      ],
+      "answer": "Integrative Awareness",
+      "explanation": "1. **Integrative Awareness** is the correct answer because it represents the final stage of Atkinson, Morten, and Sue’s R/CID Model, where individuals are secure in their cultural identity and recognize both the positive and negative aspects of all cultural groups. At this stage, individuals are committed to social justice and equity, actively working to eliminate oppression and embrace a multicultural perspective.\n\n2. The other options are incorrect for the following reasons:  \n   - **Dissonance**: In this stage, individuals begin to question their attitudes and are interested in learning about their culture, but they have not yet achieved full acceptance or a commitment to social justice.  \n   - **Resistance and Immersion**: This stage is characterized by a strong identification with one's own minority group and negative attitudes toward the majority group, but it lacks the broader understanding and commitment to equity found in integrative awareness.  \n   - **Conformity**: Individuals in the conformity stage hold positive attitudes toward the majority group and negative attitudes toward their own minority group, demonstrating a lack of awareness and acceptance of their cultural identity, which is contrary to the characteristics of integrative awareness.",
+      "difficulty": "hard",
+      "kn": "KN19",
+      "kn_explanation": "This question assesses knowledge of cultural and sociopolitical psychology and identity development among minority groups, aligning with identity diversity and intersectionality topics.",
+      "quality_comment": "This question challenges the test-taker to apply their knowledge of the R/CID Model to a more complex understanding of identity development.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "harder",
+      "tags": [
+        "lock_in_drill"
+      ],
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Identity.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Identity.json::19",
+      "domain": 3,
+      "isScored": true
+    },
+    {
+      "stem": "What psychological changes are commonly observed during mid-life?",
+      "options": [
+        "Increased cognitive flexibility and creativity",
+        "Heightened emotional stability and resilience",
+        "A decline in cognitive abilities and increased anxiety about aging",
+        "Improved social relationships and community involvement"
+      ],
+      "answer": "A decline in cognitive abilities and increased anxiety about aging",
+      "explanation": "Research indicates that mid-life can be associated with a decline in certain cognitive abilities and increased anxiety about aging. The other options suggest positive changes that are not universally observed.",
+      "kn": "KN21",
+      "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of psychological changes during mid-life.",
+      "suggestedLesson": "4-temperament-and-personality",
+      "suggestedParagraph": "## Adult Brain Changes: The Long Decline",
+      "lessonExcerpt": "Brain weight and volume start gradually decreasing around age 30 due to neuron loss.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 8,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Temperament and Personality.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Temperament and Personality.json::5",
+      "domain": 4,
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following personality inventories assesses the 'Big Five' traits and provides scores on broad traits and multiple facets?",
+      "options": [
+        "NEO Personality Inventory-3 (NEO-PI-3)",
+        "Sixteen Personality Factor Questionnaire (16 PF)",
+        "Edwards Personal Preference Schedule (EPPS)",
+        "Myers-Briggs Type Indicator (MBTI)"
+      ],
+      "answer": "NEO Personality Inventory-3 (NEO-PI-3)",
+      "explanation": "1. The **NEO Personality Inventory-3 (NEO-PI-3)** is the correct answer because it specifically assesses the \"Big Five\" personality traits: openness to experience, conscientiousness, extraversion, agreeableness, and neuroticism. Additionally, it provides scores not only on these broad traits but also on six or more facets for each, allowing for a detailed understanding of an individual's personality.\n\n2. The **Sixteen Personality Factor Questionnaire (16 PF)** is incorrect because it identifies 16 primary traits and five global traits, rather than the Big Five traits. The **Edwards Personal Preference Schedule (EPPS)** is not the correct answer as it focuses on 15 basic needs derived from Murray’s system, using a forced-choice format that does not assess broad personality traits. Lastly, the **Myers-Briggs Type Indicator (MBTI)** is incorrect because it is based on Jung’s personality typology and measures four bipolar dimensions, resulting in 16 personality types rather than the Big Five traits.",
+      "kn": "KN32",
+      "kn_explanation": "This question tests understanding of major personality inventories and their trait models.",
+      "difficulty": "medium",
+      "quality_comment": "Good distractor options that are also personality tests enhance the question's rigor without ambiguity.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Personality Tests.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Personality Tests.json::10",
+      "domain": 5,
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following factors is associated with a better prognosis in schizophrenia?",
+      "options": [
+        "Acute and late onset of symptoms",
+        "Male gender",
+        "Predominantly negative symptoms",
+        "High expressed emotion in the family"
+      ],
+      "answer": "Acute and late onset of symptoms",
+      "explanation": "1. \"Acute and late onset of symptoms\" is associated with a better prognosis in schizophrenia because individuals who experience an acute onset tend to have a more favorable course of the illness and are more likely to achieve remission. Additionally, late onset is linked to a better outcome compared to early onset, as it often indicates a different trajectory of the disorder and may be associated with less severe symptomatology.\n\n2. The option \"Male gender\" is incorrect because research indicates that female gender is associated with a better prognosis in schizophrenia. \"Predominantly negative symptoms\" is also wrong, as negative symptoms are typically linked to a poorer prognosis, while positive symptoms are associated with a better outcome. Lastly, \"High expressed emotion in the family\" is incorrect because high expressed emotion is associated with an increased risk of relapse and poorer outcomes, rather than a better prognosis.",
+      "kn": "KN37",
+      "kn_explanation": "This question is best aligned with KN37 because it tests Factors influencing evidence-based interpretation of data and decision-making (e.g., base rates, group differences, cultural biases and differences, heuristics).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors include well-known negative prognostic factors, making the question balanced and testing clinical prognostic knowledge well.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Psychosis.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Psychosis.json::5",
+      "domain": 5,
+      "isScored": true
+    },
+    {
+      "stem": "Item response theory (IRT) differs from classical test theory (CTT) primarily in that IRT:",
+      "options": [
+        "Focuses on examinee responses to individual test items rather than total test scores",
+        "Assumes test scores are composed of true score plus error score",
+        "Uses total test scores to estimate item difficulty and discrimination",
+        "Does not require large sample sizes for parameter estimation"
+      ],
+      "answer": "Focuses on examinee responses to individual test items rather than total test scores",
+      "explanation": "1. The correct answer, \"Focuses on examinee responses to individual test items rather than total test scores,\" accurately reflects a key distinction between item response theory (IRT) and classical test theory (CTT). IRT is item-based, concentrating on how examinees respond to individual items, which allows for a more nuanced understanding of item characteristics and the probability of a correct response based on the latent trait being measured. In contrast, CTT is test-based and primarily focuses on total test scores, limiting its ability to analyze item-level data.\n\n2. The first incorrect option, \"Assumes test scores are composed of true score plus error score,\" is wrong because this assumption is a fundamental principle of classical test theory (CTT), not item response theory (IRT). The second option, \"Uses total test scores to estimate item difficulty and discrimination,\" is incorrect because IRT specifically estimates item parameters independently of total test scores, focusing instead on individual item responses. Lastly, the option \"Does not require large sample sizes for parameter estimation\" is incorrect because IRT relies on large sample sizes to derive stable and sample-invariant item parameters, which is a significant advantage over CTT.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
+      "difficulty": "medium",
+      "quality_comment": "The question clearly distinguishes key features of IRT versus traditional measurement models with plausible options.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Items and Reliability.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Items and Reliability.json::29",
+      "domain": 5,
+      "isScored": true
+    },
+    {
+      "stem": "Which supervision model focuses on understanding and integrating the supervisor and supervisee's interpersonal dynamics to improve therapy outcomes?",
+      "options": [
+        "Developmental model",
+        "Integrative model",
+        "Psychodynamic model",
+        "Behavioral model"
+      ],
+      "answer": "Psychodynamic model",
+      "explanation": "1. The **psychodynamic model** is the correct answer because it emphasizes understanding and integrating the interpersonal dynamics between the supervisor and supervisee. This model focuses on the relational aspects of supervision, including transference and countertransference, which can significantly impact therapy outcomes by enhancing the supervisee's self-awareness and therapeutic effectiveness.\n\n2. The **developmental model** is incorrect because it primarily focuses on the growth and progression of the supervisee's skills and competencies over time, rather than the interpersonal dynamics between supervisor and supervisee. The **integrative model** is not the correct choice as it aims to combine various theoretical approaches and techniques in supervision, without specifically emphasizing the understanding of interpersonal dynamics. Lastly, the **behavioral model** is wrong because it concentrates on observable behaviors and the application of behavioral techniques in supervision, rather than exploring the deeper relational aspects that influence therapeutic outcomes.",
+      "kn": "KN52",
+      "kn_explanation": "Addresses supervision theories and models relevant to clinical psychology practice (KN52).",
+      "difficulty": "medium",
+      "quality_comment": "The options comprise known supervision models, testing candidate recognition of model focus areas appropriately.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Prevention and Consultation.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Prevention and Consultation.json::45",
+      "domain": 6,
+      "isScored": true
+    },
+    {
+      "stem": "Which statistical test is most appropriate for analyzing data when a study includes one or more independent variables and two or more dependent variables measured on interval or ratio scales?",
+      "options": [
+        "Multivariate analysis of variance (MANOVA)",
+        "One-way ANOVA",
+        "Chi-square test for contingency tables",
+        "T-test for unrelated samples"
+      ],
+      "answer": "Multivariate analysis of variance (MANOVA)",
+      "explanation": "1. The correct answer is \"Multivariate analysis of variance (MANOVA)\" because this statistical test is specifically designed to analyze data that includes one or more independent variables and two or more dependent variables, all measured on interval or ratio scales. MANOVA allows researchers to assess the impact of independent variables on multiple dependent variables simultaneously, making it suitable for studies with complex relationships among variables.\n\n2. The \"One-way ANOVA\" is incorrect because it is used when there is only one independent variable with more than two levels and one dependent variable, not multiple dependent variables. The \"Chi-square test for contingency tables\" is also incorrect as it is used for analyzing nominal data and does not accommodate interval or ratio scales or multiple dependent variables. Lastly, the \"T-test for unrelated samples\" is inappropriate because it is limited to comparing means from two groups for a single dependent variable, rather than handling multiple dependent variables as required in this question.",
+      "kn": "KN54",
+      "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are common inferential tests but do not accommodate multiple dependent variables, making this a well-targeted knowledge item.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Stats Tests.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Stats Tests.json::22",
+      "domain": 7,
+      "isScored": true
+    },
+    {
+      "stem": "When is it acceptable to divide or pay fees related to client referrals?",
+      "options": [
+        "Paying a colleague a set fee for each client referred regardless of services provided.",
+        "Dividing fees with another professional who both provided services to the client.",
+        "Offering a financial incentive to friends for client referrals.",
+        "Paying a fixed fee solely to secure new client referrals from another psychologist."
+      ],
+      "answer": "Dividing fees with another professional who both provided services to the client.",
+      "explanation": "1. The correct answer, \"Dividing fees with another professional who both provided services to the client,\" is acceptable because Standard 6.07 states that referral fees must be based on the services provided rather than the referral itself. This means that if both psychologists contributed to the client's care, it is ethical to share the fees in proportion to the services rendered.\n\n2. The first incorrect option, \"Paying a colleague a set fee for each client referred regardless of services provided,\" is wrong because it violates the principle that fees must be based on actual services rendered and not merely on the act of referral. The second incorrect option, \"Offering a financial incentive to friends for client referrals,\" is incorrect because it constitutes a financial incentive that is not based on services provided, which is unethical. Lastly, the option \"Paying a fixed fee solely to secure new client referrals from another psychologist\" is also incorrect as it does not comply with the requirement that referral fees must be tied to the services provided, making it an unethical practice.",
+      "kn": "KN64",
+      "kn_explanation": "This question is best aligned with KN64 because it tests Identification and management of potential ethical issues.",
+      "difficulty": "medium",
+      "quality_comment": "The scenario-based item creates plausible alternatives, strengthening the item’s ability to discriminate knowledge of nuanced ethical guidance.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 5 and 6.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 5 and 6.json::34",
+      "domain": 8,
+      "isScored": true
+    },
+    {
+      "stem": "A personality test used in employee selection correlates moderately with a valid intelligence test but poorly with measures of unrelated traits. This approach illustrates assessment of which type of validity?",
+      "options": [
+        "Content validity",
+        "Construct validity",
+        "Criterion-related validity",
+        "Incremental validity"
+      ],
+      "answer": "Construct validity",
+      "explanation": "1. **Construct validity** is the correct answer because it assesses the extent to which a predictor measures the hypothetical trait it is designed to measure. In this case, the personality test correlates moderately with a valid intelligence test, indicating it measures a related construct, while the poor correlation with unrelated traits suggests it accurately distinguishes between different constructs, thereby supporting its construct validity.\n\n2. **Content validity** is incorrect because it refers to how well a predictor samples the knowledge or skills it is intended to measure, rather than its correlation with other tests. **Criterion-related validity** is wrong because it involves assessing the correlation between predictor scores and criterion scores, rather than focusing on the relationship between different constructs. **Incremental validity** is not applicable here because it pertains to the increase in decision-making accuracy gained by adding a new predictor to an existing selection procedure, rather than the relationship between the personality test and other measures of validity.",
+      "kn": "KN34",
+      "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
+      "difficulty": "medium",
+      "quality_comment": "The scenario requires application of validity concepts; distractors are related but distinct types, promoting discriminative thinking.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/5 Do Hiring Tools Work.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/5 Do Hiring Tools Work.json::5",
+      "domain": "3-5-6",
+      "isScored": true
+    }
+  ]
+}

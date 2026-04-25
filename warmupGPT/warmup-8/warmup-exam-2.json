@@ -1,0 +1,197 @@
+{
+  "meta": {
+    "examId": "warmup-8-2",
+    "totalQuestions": 8,
+    "examType": "warmup",
+    "warmupLength": 8,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 1,
+      "7": 1,
+      "8": 1
+    },
+    "generatedAt": "2026-04-25T05:50:04.480Z"
+  },
+  "questions": [
+    {
+      "stem": "Which neurotransmitter is believed to play a significant role in the pathophysiology of seasonal affective disorder (SAD)?",
+      "options": [
+        "Dopamine",
+        "Serotonin",
+        "Acetylcholine",
+        "GABA"
+      ],
+      "answer": "Serotonin",
+      "explanation": "Serotonin is believed to play a significant role in the pathophysiology of seasonal affective disorder, particularly due to its influence on mood regulation. The other neurotransmitters listed do not have the same established connection to SAD.",
+      "kn": "KN1",
+      "kn_explanation": "This KN code applies as it relates to the biological bases of behavior, particularly in understanding neurotransmitter functions in mood disorders.",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests knowledge of neurotransmitter roles in mood disorders.",
+      "suggestedLesson": "1-neurological-endocrine-disorders",
+      "suggestedParagraph": "## Strokes: When Blood Flow Gets Cut Off",
+      "lessonExcerpt": "Serotonin is believed to play a significant role in the pathophysiology of seasonal affective disorder.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 20,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Neurological and Endocrine Disorders.json",
+      "domain": 1,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Neurological and Endocrine Disorders.json::14",
+      "isScored": true
+    },
+    {
+      "stem": "In cue exposure therapy for substance use disorders, adding coping skills training primarily enhances treatment by:",
+      "options": [
+        "Increasing the extinction of physiological responses to cues",
+        "Helping clients manage cravings and avoid relapse when exposed to triggers",
+        "Facilitating rapid eye movement processing of trauma",
+        "Encouraging exaggerated imagery of substance use consequences"
+      ],
+      "answer": "Helping clients manage cravings and avoid relapse when exposed to triggers",
+      "explanation": "1. The correct answer, \"Helping clients manage cravings and avoid relapse when exposed to triggers,\" is accurate because cue exposure therapy (CET) involves exposing clients to cues associated with substance use while prohibiting substance use, thereby weakening the relationship between the cues and the behavior. By incorporating coping skills training, clients are better equipped to handle cravings and potential relapse situations when they encounter these triggers, enhancing the overall effectiveness of the treatment (Spiegler, 2015).\n\n2. The option \"Increasing the extinction of physiological responses to cues\" is incorrect because while CET does aim to weaken the association between cues and substance use, the primary enhancement from coping skills training is in managing cravings rather than directly increasing the extinction of physiological responses. \"Facilitating rapid eye movement processing of trauma\" is wrong because this concept is related to Eye Movement Desensitization and Reprocessing (EMDR), not cue exposure therapy, which does not involve rapid eye movements. Lastly, \"Encouraging exaggerated imagery of substance use consequences\" is incorrect as this technique is more aligned with implosive therapy, which focuses on imagining exaggerated fears rather than the coping strategies central to cue exposure therapy.",
+      "kn": "KN7",
+      "kn_explanation": "This question relates to integrating learning-based extinction interventions with behavioral strategies, aligning with KN7 (learning theory).",
+      "difficulty": "medium",
+      "quality_comment": "The question connects theoretical mechanism with practical clinical enhancement, offering clear but nuanced options.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Classical Conditioning Interventions.json",
+      "domain": 2,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Classical Conditioning Interventions.json::19",
+      "isScored": true
+    },
+    {
+      "stem": "According to the prototype/willingness model, an adolescent with a positive social image (prototype) of peers who smoke marijuana is more likely to:",
+      "options": [
+        "Avoid marijuana use due to perceived risks",
+        "Have higher willingness to try marijuana in social settings",
+        "Depend solely on behavioral intentions to decide",
+        "Ignore peer influences on their behavior"
+      ],
+      "answer": "Have higher willingness to try marijuana in social settings",
+      "explanation": "1. The correct answer, \"Have higher willingness to try marijuana in social settings,\" aligns with the prototype/willingness model, which posits that a person's willingness to engage in a behavior is influenced by their social image (prototype) of individuals who engage in that behavior. If an adolescent has a positive social image of peers who smoke marijuana, they are more likely to feel accepted and willing to try it in social situations where it is present.\n\n2. \n- **Avoid marijuana use due to perceived risks:** This option is incorrect because the prototype/willingness model suggests that a positive social image would increase willingness to engage in the behavior, not avoid it due to risks.\n- **Depend solely on behavioral intentions to decide:** This option is incorrect as the model emphasizes both willingness in social contexts and behavioral intentions, indicating that willingness is influenced by social perceptions rather than solely by intentions.\n- **Ignore peer influences on their behavior:** This option is incorrect because the prototype/willingness model explicitly highlights the importance of peer influences in shaping willingness to engage in behaviors like marijuana use.",
+      "kn": "KN14",
+      "kn_explanation": "This item addresses social-cognitive mechanisms explaining risky health behaviors, aligned with social and cultural bases of behavior in KN14.",
+      "difficulty": "medium",
+      "quality_comment": "The item uses a practical example to distinguish theoretical pathways, enhancing the applied understanding of the prototype/willingness model.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Attitudes.json",
+      "domain": 3,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Attitudes.json::23",
+      "isScored": true
+    },
+    {
+      "stem": "What is the typical duration of REM sleep in infants compared to adults, and why is this significant for their development?",
+      "options": [
+        "Shorter than adults, important for brain development",
+        "Longer than adults, less important for development",
+        "Similar to adults, equally important for development",
+        "Shorter than adults, less important for development"
+      ],
+      "answer": "Longer than adults, less important for development",
+      "explanation": "Infants typically spend a greater proportion of their sleep in REM compared to adults, which is significant for brain development. However, the statement about it being 'less important for development' is misleading; REM sleep is crucial for infants. The other options either misrepresent the duration or the importance of REM sleep.",
+      "kn": "KN21",
+      "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
+      "difficulty": "medium",
+      "quality_comment": "The question assesses knowledge of sleep patterns in infants and their developmental significance.",
+      "suggestedLesson": "4-body-growth",
+      "suggestedParagraph": "## Early Brain Development: The First Two Years",
+      "lessonExcerpt": "Infants typically spend a greater proportion of their sleep in REM compared to adults.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 14,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Body Growth.json",
+      "domain": 4,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Body Growth.json::12",
+      "isScored": true
+    },
+    {
+      "stem": "A psychologist is conducting a neuropsychological evaluation of an HIV-positive client who presents with forgetfulness, difficulty concentrating, psychomotor slowing, and social withdrawal. These symptoms are most consistent with which pattern of neurocognitive impairment?",
+      "options": [
+        "Cortical neurocognitive disorder, characterized by aphasia, agnosia, and apraxia",
+        "Subcortical neurocognitive disorder, characterized by cognitive slowing, apathy, and motor problems",
+        "Cortico-subcortical neurocognitive disorder, characterized by variable symptoms depending on areas affected",
+        "Frontotemporal neurocognitive disorder, characterized by personality changes and disinhibition"
+      ],
+      "answer": "Subcortical neurocognitive disorder, characterized by cognitive slowing, apathy, and motor problems",
+      "explanation": "The lesson states that HIV-related NCD is 'Caused by HIV infection affecting the brain' and 'Shows subcortical symptoms: forgetfulness, poor attention, cognitive slowing, psychomotor slowing, apathy, social withdrawal, tremors, clumsiness.' The client's presentation matches this subcortical pattern exactly. Option A is incorrect because cortical NCDs (like Alzheimer's) feature aphasia, agnosia, and apraxia as primary symptoms. Option C describes cortico-subcortical patterns seen in vascular NCD or Lewy body disease. Option D describes frontotemporal NCD, which is a cortical disorder featuring personality changes as the earliest symptom.",
+      "kn": "KN42",
+      "kn_explanation": "Neuropsychological evaluation of an HIV-positive client with cognitive symptoms relates to matching treatment/intervention decisions to assessment and diagnosis findings, including consideration of medical comorbidities and special population factors.",
+      "difficulty": "medium",
+      "quality_comment": "Tests ability to identify subcortical vs. cortical NCD patterns in a specific medical population. Lesson coverage is adequate but brief.",
+      "suggestedLesson": "5-neurocognitive",
+      "suggestedParagraph": "### HIV-Related NCD",
+      "lessonExcerpt": "Caused by HIV infection affecting the brain. Shows subcortical symptoms: forgetfulness, poor attention, cognitive slowing, psychomotor slowing, apathy, social withdrawal, tremors, clumsiness.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 4,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Neurocognitive.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Neurocognitive.json::0",
+      "isScored": true
+    },
+    {
+      "stem": "Research on client-therapist racial/ethnic matching suggests that:",
+      "options": [
+        "Matching consistently improves therapy outcomes across all racial/ethnic groups",
+        "Matching has a stronger effect on client perceptions of the therapist than on outcome measures",
+        "Matching is irrelevant once therapist cultural competence is established",
+        "Therapy outcomes improve more when therapists share the same personality traits as clients"
+      ],
+      "answer": "Matching has a stronger effect on client perceptions of the therapist than on outcome measures",
+      "explanation": "1. The correct answer, \"Matching has a stronger effect on client perceptions of the therapist than on outcome measures,\" is supported by the findings of Cabral and Smith (2011), which reported an effect size of .32 for the impact of racial/ethnic matching on clients’ perceptions of their therapists, but only an effect size of .09 on therapy outcomes. This indicates that while clients may feel more positively about their therapists when there is a match in race or ethnicity, this does not necessarily translate into improved therapy results.\n\n2. The first incorrect option, \"Matching consistently improves therapy outcomes across all racial/ethnic groups,\" is inaccurate because research shows that matching effects vary by racial/ethnic group, with some groups benefiting more than others. The second incorrect option, \"Matching is irrelevant once therapist cultural competence is established,\" is wrong because cultural competence can enhance therapy effectiveness, but matching still plays a role in client perceptions and engagement. Lastly, the option \"Therapy outcomes improve more when therapists share the same personality traits as clients\" is misleading, as research indicates that while personality matching may influence the therapeutic alliance, it is not as consistently impactful on therapy outcomes as racial/ethnic matching.",
+      "kn": "KN42",
+      "kn_explanation": "This question is best aligned with KN42 because it tests Factors related to treatment or intervention decision-making (e.g., relevant research, matching treatment to assessment/diagnosis, matching client or patient with psychologist characteristics, knowledge and use of allied services, cost and benefit, readiness to change).",
+      "difficulty": "medium",
+      "quality_comment": "The question incorporates nuanced research findings and distractors address related confounds.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Prevention and Consultation.json",
+      "domain": 6,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Prevention and Consultation.json::37",
+      "isScored": true
+    },
+    {
+      "stem": "A researcher measures response time on a cognitive task but the equipment malfunctions for any response exceeding 5000 milliseconds, recording those as exactly 5000 ms. Several participants' actual response times exceeded this threshold. Which measure of central tendency would be MOST appropriate for summarizing these data?",
+      "options": [
+        "The mean, because it uses all available data points and is the most efficient estimator",
+        "The mode, because it is unaffected by extreme scores or truncation",
+        "The median, because it is not distorted by the artificial ceiling on extreme scores",
+        "The trimmed mean, because it removes both the highest and lowest scores"
+      ],
+      "answer": "The median, because it is not distorted by the artificial ceiling on extreme scores",
+      "explanation": "When data is truncated or censored (scores above a threshold are recorded at that threshold), the mean would be artificially lowered because extreme scores are compressed. The lesson states: 'When data is skewed, the median is usually better than the mean for representing a typical score because the mean gets distorted by those extreme values.' The same logic applies to truncated data — the median depends only on the rank order of scores, not their exact values, so it remains accurate even when some extreme values are artificially capped. Option A is wrong because the mean would be systematically biased downward by the truncated values. Option B is incorrect because while the mode is unaffected, it only reflects the most frequent value and provides limited information about central tendency in continuous data. Option D is partially reasonable but removes valid low scores unnecessarily and may still be affected if many scores are at the ceiling.",
+      "kn": "KN53",
+      "kn_explanation": "Equipment malfunction causing censored/truncated data is a data collection methods issue.",
+      "difficulty": "medium",
+      "quality_comment": "Good applied question. The lesson covers median superiority for skewed data, and the logic extends to",
+      "suggestedLesson": "7-variables",
+      "suggestedParagraph": "### Skewed Distributions: When Data Piles to One Side",
+      "lessonExcerpt": "In skewed distributions, the mean, median, and mode separate:",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 7,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Variables.json",
+      "domain": 7,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Variables.json::0",
+      "isScored": true
+    },
+    {
+      "stem": "When may psychologists waive obtaining informed consent from research participants?",
+      "options": [
+        "When the study involves experimental treatments or high risk of distress.",
+        "If the research involves anonymous questionnaires and presents no risk or legal liability.",
+        "Whenever the research is conducted in educational settings regardless of procedures involved.",
+        "If participants have previously given consent for any research participation."
+      ],
+      "answer": "If the research involves anonymous questionnaires and presents no risk or legal liability.",
+      "explanation": "1. The correct answer, \"If the research involves anonymous questionnaires and presents no risk or legal liability,\" aligns with Standard 8.05, which states that informed consent may be waived when the research is unlikely to cause distress or harm, such as studies using anonymous questionnaires. In this context, the confidentiality of participants is maintained, and there is no risk of legal liability, making informed consent unnecessary.\n\n2. The option \"When the study involves experimental treatments or high risk of distress\" is incorrect because informed consent is especially critical in such situations to ensure participants are fully aware of the risks involved. The option \"Whenever the research is conducted in educational settings regardless of procedures involved\" is wrong because it overlooks the requirement for informed consent in studies that may pose risks or involve identifiable information. Lastly, the option \"If participants have previously given consent for any research participation\" is incorrect because prior consent does not negate the need for informed consent specific to each new study, particularly if the nature of the research differs or involves new risks.",
+      "kn": "KN68",
+      "kn_explanation": "This question is best aligned with KN68 because it tests Client and patient rights.",
+      "difficulty": "medium",
+      "quality_comment": "The item has plausible distractors and a clear stem, effectively assessing understanding of informed consent waivers.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 7 and 8.json",
+      "domain": 8,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 7 and 8.json::23",
+      "isScored": true
+    }
+  ]
+}

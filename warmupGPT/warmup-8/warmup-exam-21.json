@@ -1,0 +1,196 @@
+{
+  "meta": {
+    "examId": "warmup-8-21",
+    "totalQuestions": 8,
+    "examType": "warmup",
+    "warmupLength": 8,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 1,
+      "7": 1,
+      "8": 1
+    },
+    "generatedAt": "2026-04-25T05:56:49.914421Z"
+  },
+  "questions": [
+    {
+      "stem": "Which subcortical brain structure acts as a sensory relay station, transmitting all sensory information to the cerebral cortex except olfactory stimuli?",
+      "options": [
+        "Hypothalamus",
+        "Thalamus",
+        "Basal ganglia",
+        "Amygdala"
+      ],
+      "answer": "Thalamus",
+      "explanation": "1. The **thalamus** is the correct answer because it functions as a \"relay station\" for sensory information, receiving sensory input and transmitting it to the cerebral cortex for processing. It is specifically noted for transmitting all sensory information except for olfactory stimuli, which makes it essential for the coordination of sensory and motor functioning, language, speech, and declarative memory.\n\n2. The **hypothalamus** is incorrect because, while it regulates various bodily functions and maintains homeostasis, it does not serve as a sensory relay station for transmitting sensory information to the cortex. The **basal ganglia** is also incorrect as it is involved in the initiation and control of voluntary movements and cognitive functions, rather than acting as a relay for sensory information. Lastly, the **amygdala** is incorrect because it primarily processes emotions and emotional memories, rather than functioning as a relay for sensory information to the cerebral cortex.",
+      "kn": "KN1",
+      "kn_explanation": "This question assesses understanding of sensory pathways in the brain, a core topic in biological bases of behavior.",
+      "difficulty": "easy",
+      "quality_comment": "Options are functionally related structures making the question appropriate for testing differentiation of sensory processing roles.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Hindbrain, Midbrain, and Forebrain.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Hindbrain, Midbrain, and Forebrain.json::26",
+      "domain": 1,
+      "isScored": true
+    },
+    {
+      "stem": "A student studies a list of 15 terms and is tested immediately, recalling the first and last items best. When the same student is required to wait 30 seconds before recall, which part of the serial position effect is most likely to disappear?",
+      "options": [
+        "Primacy effect",
+        "Recency effect",
+        "Chunking effect",
+        "Encoding specificity effect"
+      ],
+      "answer": "Recency effect",
+      "explanation": "The recency effect is the best answer because the last items are still in short-term memory immediately after study, but they fade during a delay. The primacy effect is wrong because early list items are more likely to have been rehearsed into long-term memory and therefore remain relatively intact. Chunking is wrong because it refers to grouping material to increase short-term capacity. Encoding specificity is wrong because it concerns similarity between learning and retrieval conditions, not the serial-position pattern after a delay.",
+      "kn": "KN8",
+      "kn_explanation": "This question assesses a major model of memory by applying the serial position effect to short-term and long-term memory processes.",
+      "difficulty": "medium",
+      "quality_comment": "High-yield memory-systems item built around a common exam manipulation: inserting a short delay.",
+      "suggestedLesson": "2-memory",
+      "suggestedParagraph": "### The Serial Position Effect: Proof the Model Works",
+      "lessonExcerpt": "Wait 30 seconds before the test, and the recency effect disappears.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Memory.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Memory.json::0",
+      "domain": 2,
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following is NOT a component of the health belief model that predicts a person's likelihood of engaging in health-promoting behavior?",
+      "options": [
+        "Perceived susceptibility",
+        "Perceived severity",
+        "Perceived ambivalence",
+        "Self-efficacy"
+      ],
+      "answer": "Perceived ambivalence",
+      "explanation": "1. \"Perceived ambivalence\" is the correct answer because it is not listed as a component of the health belief model, which identifies specific factors that predict a person’s likelihood of engaging in health-promoting behavior. The model includes perceived susceptibility, perceived severity, perceived benefits, perceived barriers, self-efficacy, and cues to action, but does not mention ambivalence as a relevant factor.\n\n2. \n- **Perceived susceptibility**: This component refers to a person’s perception of their likelihood of developing a health disorder, making it a crucial factor in determining health-related behaviors.\n- **Perceived severity**: This refers to an individual's beliefs about the seriousness of the consequences associated with a health disorder, influencing their motivation to engage in health-promoting behaviors.\n- **Self-efficacy**: This component describes a person's confidence in their ability to take action to reduce their risk for a disorder, which is essential for fostering health-promoting behaviors.",
+      "kn": "KN14",
+      "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
+      "difficulty": "easy",
+      "quality_comment": "Distractors are well matched and the question tests essential knowledge of foundational model components, appropriate for foundational-level recall.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Attitudes.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Attitudes.json::13",
+      "domain": 3,
+      "isScored": true
+    },
+    {
+      "stem": "A researcher studying sibling relationships across development finds that compared to early childhood, preadolescent sibling dyads show a shift in relational structure. Which of the following most accurately characterizes how sibling relationships typically change during preadolescence?",
+      "options": [
+        "Preadolescent siblings become substantially warmer and more emotionally intimate as their cognitive abilities mature",
+        "Preadolescent sibling relationships become more egalitarian and less asymmetrical, with the older sibling exerting less dominant authority over the younger",
+        "Conflict increases sharply in preadolescence and continues to escalate linearly through late adolescence",
+        "The younger sibling progressively takes on the dominant role in the relationship as the older sibling withdraws into peer relationships"
+      ],
+      "answer": "Preadolescent sibling relationships become more egalitarian and less asymmetrical, with the older sibling exerting less dominant authority over the younger",
+      "explanation": "During preadolescence, sibling relationships characteristically shift toward greater equality. The power differential that typifies early childhood—where the older sibling tends to dominate and direct—diminishes as the younger child develops cognitively and socially. While conflict may remain present, the structural change toward egalitarianism is the defining feature of preadolescent sibling dynamics. Sibling relationships do not simply become warmer or more intimate during this period, and conflict does not necessarily escalate linearly through adolescence. The younger sibling does not typically assume dominance.",
+      "kn": "KN22",
+      "kn_explanation": "This question is best aligned with KN22 because it tests Influence of individual-environment interaction on development over time (e.g., the relationship between the individual and the social, academic, work, community environment).",
+      "difficulty": "hard",
+      "quality_comment": "Tests a nuanced developmental shift in sibling dynamics that requires specific knowledge. High discriminability between distractors.",
+      "suggestedLesson": "4-school-and-family",
+      "suggestedParagraph": "## The Foundation: How Relationships Shape Us",
+      "lessonExcerpt": "Lesson content does not explicitly address preadolescent sibling relationship structure in the provided excerpts. Question is based on standard EPPP developmental knowledge for sibling relationships.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 5,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 School and Family.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 School and Family.json::21",
+      "domain": 4,
+      "isScored": true
+    },
+    {
+      "stem": "Which neurobiological finding is most commonly associated with Posttraumatic Stress Disorder (PTSD)?",
+      "options": [
+        "Hyperactivity in ventromedial prefrontal cortex and reduced amygdala activity",
+        "Reduced volume of the hippocampus and hyperactive amygdala",
+        "Increased serotonin levels and decreased dopamine activity",
+        "Hypoactive anterior cingulate cortex with increased GABA activity"
+      ],
+      "answer": "Reduced volume of the hippocampus and hyperactive amygdala",
+      "explanation": "1. \"Reduced volume of the hippocampus and hyperactive amygdala\" is the correct answer because neuroimaging studies have consistently linked PTSD to these specific brain abnormalities. The hyperactive amygdala is associated with an exaggerated fear response, while the reduced volume of the hippocampus is thought to relate to difficulties in memory processing and emotional regulation, both of which are prevalent in individuals with PTSD.\n\n2. The first incorrect option, \"Hyperactivity in ventromedial prefrontal cortex and reduced amygdala activity,\" is wrong because PTSD is characterized by reduced activity in the ventromedial prefrontal cortex, which normally inhibits the amygdala, rather than hyperactivity. The second option, \"Increased serotonin levels and decreased dopamine activity,\" is incorrect because PTSD is associated with decreased serotonin and GABA activity, not increased serotonin, along with increased levels and activity of dopamine and norepinephrine. Lastly, \"Hypoactive anterior cingulate cortex with increased GABA activity\" is wrong because, while there is evidence of hypoactivity in the anterior cingulate cortex in PTSD, the disorder is linked to decreased GABA activity, not increased.",
+      "kn": "KN32",
+      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
+      "difficulty": "hard",
+      "quality_comment": "Options are plausible and neurobiologically detailed, requiring advanced knowledge of PTSD pathophysiology suitable for EPPP.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Trauma, Dissociation, and Somatic.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Trauma, Dissociation, and Somatic.json::5",
+      "domain": 5,
+      "isScored": true
+    },
+    {
+      "stem": "Which brief therapy emphasizes focusing on solutions and future goals rather than exploring the history or causes of problems?",
+      "options": [
+        "Brief Psychodynamic Psychotherapy",
+        "Interpersonal Psychotherapy",
+        "Solution-Focused Therapy",
+        "Motivational Interviewing"
+      ],
+      "answer": "Solution-Focused Therapy",
+      "explanation": "1. **Solution-Focused Therapy** is the correct answer because it explicitly emphasizes finding solutions to problems and setting future goals, rather than delving into the history or causes of those problems. This therapy utilizes a goal-directed collaborative approach, employing techniques such as the miracle question and scaling questions to help clients identify their strengths and the steps needed to achieve their desired outcomes.\n\n2. **Brief Psychodynamic Psychotherapy** is incorrect because it focuses on understanding unconscious conflicts and interactional patterns, which often involves exploring the client's history and underlying issues rather than solely concentrating on solutions. **Interpersonal Psychotherapy** is also incorrect as it primarily targets interpersonal factors contributing to a client's symptoms and involves stages that address diagnosis and problem areas, which includes exploring the client's past experiences. Lastly, **Motivational Interviewing** is not the correct answer because, while it enhances intrinsic motivation and addresses ambivalence, it still involves exploring the client's feelings and thoughts about their behaviors rather than focusing strictly on future solutions and goals.",
+      "kn": "KN43",
+      "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
+      "difficulty": "easy",
+      "quality_comment": "The options list well-known therapies with distinct characteristics, making this a straightforward knowledge check.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Brief Therapies.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Brief Therapies.json::10",
+      "domain": 6,
+      "isScored": true
+    },
+    {
+      "stem": "A clinician uses an ABAB withdrawal design to evaluate a token economy intervention for reducing aggressive outbursts in a child with conduct disorder. During the second baseline phase (second A), the child's aggressive behavior does NOT return to the original baseline level but remains partially reduced. What is the MOST likely methodological concern?",
+      "options": [
+        "The study demonstrates a testing threat that invalidates the findings",
+        "The treatment may have produced carryover effects, making it difficult to attribute changes solely to the intervention's presence or absence",
+        "The results confirm that the intervention was effective because some improvement was maintained",
+        "The study should be redesigned as a multiple baseline design to eliminate the need for withdrawal"
+      ],
+      "answer": "The treatment may have produced carryover effects, making it difficult to attribute changes solely to the intervention's presence or absence",
+      "explanation": "The ABAB design's logic depends on behavior returning to baseline levels when treatment is withdrawn, and improving again when treatment is reintroduced. The lesson states: 'When behavior returns to baseline after treatment withdrawal and improves again when treatment is reintroduced, you have strong evidence the treatment works.' When behavior does NOT return to baseline, it suggests carryover effects — the treatment produced lasting changes that persist even after withdrawal. This undermines the design's internal validity because the causal demonstration relies on the behavior tracking with the treatment phases. Option A incorrectly identifies the threat. Option C mistakes a methodological limitation for a strength — while maintenance is clinically desirable, it weakens the design's logic. Option D identifies an alternative design but doesn't address the core concern.",
+      "kn": "KN54",
+      "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
+      "difficulty": "hard",
+      "quality_comment": "Tests a nuanced understanding of ABAB design logic — the tension between clinical desirability of maintained gains and methodological requirements for demonstrating experimental control.",
+      "suggestedLesson": "7-research-designs",
+      "suggestedParagraph": "### ABAB Design: More Convincing",
+      "lessonExcerpt": "When behavior returns to baseline after treatment withdrawal and improves again when treatment is reintroduced, you have strong evidence the treatment works.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 6,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Research Designs.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Research Designs.json::8",
+      "domain": 7,
+      "isScored": true
+    },
+    {
+      "stem": "In the context of referral ethics, what is a psychologist's responsibility regarding the outcomes of a referral?",
+      "options": [
+        "They are not responsible for the outcomes once a referral is made.",
+        "They must ensure the referred client receives appropriate follow-up care.",
+        "They should inform the client about the referral process only.",
+        "They must maintain contact with the referred professional."
+      ],
+      "answer": "They must ensure the referred client receives appropriate follow-up care.",
+      "explanation": "Psychologists have an ethical responsibility to ensure that clients receive appropriate follow-up care after a referral. Simply making a referral does not absolve them of responsibility for the client's ongoing care.",
+      "kn": "KN61",
+      "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of referral responsibilities.",
+      "suggestedLesson": "8-practice-issues",
+      "suggestedParagraph": "## What Actually Gets Psychologists in Trouble",
+      "lessonExcerpt": "The key question isn't always 'Was this technically part of my job?' The APA considers whether your personal actions overlap with your professional role.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 23,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json::19",
+      "domain": 8,
+      "isScored": true
+    }
+  ]
+}

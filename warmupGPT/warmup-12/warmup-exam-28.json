@@ -1,0 +1,284 @@
+{
+  "meta": {
+    "examId": "warmup-12-28",
+    "totalQuestions": 12,
+    "examType": "warmup",
+    "warmupLength": 12,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 2,
+      "4": 1,
+      "5": 3,
+      "6": 1,
+      "7": 1,
+      "8": 1,
+      "3-5-6": 1
+    },
+    "generatedAt": "2026-04-25T05:56:49.914421Z"
+  },
+  "questions": [
+    {
+      "stem": "A patient with a long history of heavy alcohol use is brought to the emergency department after a motor vehicle accident. Medical records indicate the patient has developed significant tolerance to alcohol. The treatment team is considering benzodiazepines for sedation during a procedure. What pharmacological phenomenon should the team anticipate regarding the patient's response to benzodiazepines?",
+      "options": [
+        "The patient will likely be hypersensitive to benzodiazepines due to liver damage from alcohol use",
+        "The patient will likely require higher-than-normal doses of benzodiazepines due to cross-tolerance with alcohol",
+        "The patient will show a paradoxical excitatory response to benzodiazepines",
+        "The patient will metabolize benzodiazepines at a slower rate due to enzyme depletion from chronic alcohol use"
+      ],
+      "answer": "The patient will likely require higher-than-normal doses of benzodiazepines due to cross-tolerance with alcohol",
+      "explanation": "Cross-tolerance occurs between drugs in the same pharmacological class. Alcohol, benzodiazepines, and barbiturates are all central nervous system depressants that enhance GABA activity, so tolerance to one produces tolerance to the others. The patient's alcohol tolerance means they will likely need higher doses of benzodiazepines to achieve the desired sedative effect. Hypersensitivity (option A) is the opposite of what cross-tolerance produces. Paradoxical effects (option C) can occur but are associated with age (children and elderly), not alcohol tolerance. Slower metabolism (option D) does not explain cross-tolerance, which is a pharmacodynamic phenomenon related to receptor adaptation.",
+      "kn": "KN3",
+      "kn_explanation": "This question is best aligned with KN3 because it tests results from major trials and general guidelines for pharmacological, psychotherapeutic, and combined treatment of psychological disorders.",
+      "difficulty": "hard",
+      "quality_comment": "Clinically grounded vignette that requires integration of cross-tolerance concepts with practical prescribing implications.",
+      "suggestedLesson": "1-pharmacology-other-drugs",
+      "suggestedParagraph": "### Tolerance and Cross-Tolerance",
+      "lessonExcerpt": "Cross-tolerance: Tolerance to one drug creates tolerance to others in the same class. For example, alcohol tolerance produces tolerance to benzodiazepines and barbiturates because they're all central nervous system depressants.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 2,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Pharmacology Other Drugs.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Pharmacology Other Drugs.json::3",
+      "domain": 1,
+      "isScored": true
+    },
+    {
+      "stem": "In operant conditioning, what is the primary purpose of implementing a thinning schedule?",
+      "options": [
+        "To increase the frequency of a behavior by adding more reinforcements.",
+        "To gradually decrease the amount of reinforcement to reduce satiation and improve resistance to extinction.",
+        "To change the type of reinforcer from primary to secondary.",
+        "To rapidly extinguish an undesired behavior by removing reinforcement entirely."
+      ],
+      "answer": "To gradually decrease the amount of reinforcement to reduce satiation and improve resistance to extinction.",
+      "explanation": "1. The correct answer, \"To gradually decrease the amount of reinforcement to reduce satiation and improve resistance to extinction,\" accurately reflects the purpose of thinning in operant conditioning. Thinning involves transitioning from a continuous reinforcement schedule to an intermittent one, which helps maintain the behavior while preventing the loss of the reinforcing value due to overuse (satiation). This gradual reduction in reinforcement also enhances the behavior's resistance to extinction, meaning the behavior is less likely to stop when reinforcement is eventually withheld.\n\n2. The option \"To increase the frequency of a behavior by adding more reinforcements\" is incorrect because thinning involves reducing reinforcement rather than increasing it, which is counterproductive to the goal of maintaining behavior. The statement \"To change the type of reinforcer from primary to secondary\" is not relevant to thinning, as thinning focuses on the amount of reinforcement rather than its type. Lastly, \"To rapidly extinguish an undesired behavior by removing reinforcement entirely\" is incorrect because thinning does not aim for rapid extinction; instead, it seeks to maintain behavior while gradually decreasing reinforcement, preventing sudden drops in behavior frequency.",
+      "kn": "KN7",
+      "kn_explanation": "This question targets knowledge of reinforcement schedules and their strategic manipulation in operant conditioning (KN7).",
+      "difficulty": "medium",
+      "quality_comment": "The options are similarly worded, requiring precise understanding of thinning to avoid confusion.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Skinner and Operant Conditioning.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Skinner and Operant Conditioning.json::43",
+      "domain": 2,
+      "isScored": true
+    },
+    {
+      "stem": "What is the primary mechanism through which cognitive dissonance leads to attitude adjustment?",
+      "options": [
+        "Increased awareness of conflicting beliefs.",
+        "Rationalization of behavior to align with beliefs.",
+        "Social comparison with others.",
+        "Emotional regulation strategies."
+      ],
+      "answer": "Rationalization of behavior to align with beliefs.",
+      "explanation": "The correct answer highlights that cognitive dissonance often leads individuals to rationalize their behavior to reduce discomfort, thereby adjusting their attitudes. The other options do not accurately capture the primary mechanism of cognitive dissonance.",
+      "kn": "KN14",
+      "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of cognitive dissonance.",
+      "suggestedLesson": "3-errors-and-shortcuts",
+      "suggestedParagraph": "## The Major Players: Errors and Biases",
+      "lessonExcerpt": "Understanding how people make judgments and decisions is crucial for the EPPP.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 7,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Errors and Shortcuts.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Errors and Shortcuts.json::4",
+      "domain": 3,
+      "isScored": true
+    },
+    {
+      "stem": "Which assessment is especially useful for minimizing cultural and language biases in nonverbal intelligence testing?",
+      "options": [
+        "Raven’s Standard Progressive Matrices",
+        "Wechsler Adult Intelligence Scale (WAIS-IV)",
+        "Stanford-Binet Intelligence Scales",
+        "Kaufman Assessment Battery for Children (KABC-II)"
+      ],
+      "answer": "Raven’s Standard Progressive Matrices",
+      "explanation": "1. **Raven’s Standard Progressive Matrices** is the correct answer because it is specifically designed to assess nonverbal intelligence and minimize cultural and language biases. This assessment focuses on abstract reasoning and pattern recognition, which reduces the influence of linguistic and cultural knowledge that might affect performance on other intelligence tests.\n\n2. The **Wechsler Adult Intelligence Scale (WAIS-IV)** is incorrect because it includes verbal components that can disadvantage individuals with limited English proficiency or different cultural backgrounds. The **Stanford-Binet Intelligence Scales** are also incorrect as they incorporate verbal reasoning tasks that may not accurately reflect the abilities of individuals from diverse cultural contexts. Lastly, the **Kaufman Assessment Battery for Children (KABC-II)**, while designed to reduce cultural bias, still includes elements that may be influenced by language proficiency, making it less effective than the Raven’s Matrices for nonverbal intelligence assessment.",
+      "kn": "KN18",
+      "kn_explanation": "Assessment tools that reduce cultural bias by focusing on nonverbal skills are important in cross-cultural psychology (KN18).",
+      "difficulty": "medium",
+      "quality_comment": "The question clearly contrasts verbal and nonverbal assessments to test knowledge of culturally fair instruments.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Concepts.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Concepts.json::24",
+      "domain": 3,
+      "isScored": true
+    },
+    {
+      "stem": "Which factor has been found to have a greater influence than the frequency of nonresident father contact on children’s outcomes following divorce?",
+      "options": [
+        "Child's age at the time of divorce",
+        "Father's payment of child support and authoritative parenting style",
+        "Mother's remarriage status",
+        "Number of siblings in the household"
+      ],
+      "answer": "Father's payment of child support and authoritative parenting style",
+      "explanation": "1. The correct answer, \"Father's payment of child support and authoritative parenting style,\" is supported by research indicating that these factors significantly impact children's outcomes after divorce. Studies show that the frequency of contact with nonresident fathers is less influential than the father's financial support and parenting approach, which includes being authoritative and fostering a close relationship with the child. These elements contribute more effectively to the child's emotional and social adjustment post-divorce.\n\n2. The incorrect option \"Child's age at the time of divorce\" is wrong because, while age does affect children's outcomes, it is not as impactful as the quality of the father's involvement and support. \"Mother's remarriage status\" is also incorrect as it does not directly correlate with children's outcomes in comparison to the father's parenting and financial support. Lastly, \"Number of siblings in the household\" is incorrect because the presence of siblings does not outweigh the importance of the father's engagement and support in determining the child's adjustment following divorce.",
+      "kn": "KN25",
+      "kn_explanation": "This question addresses family functioning and influences of diverse parenting factors on child development post-divorce (KN25).",
+      "difficulty": "medium",
+      "quality_comment": "Good differentiation of factors affecting child outcomes with consistent plausible alternatives.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 School and Family.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 School and Family.json::37",
+      "domain": 4,
+      "isScored": true
+    },
+    {
+      "stem": "A 44-year-old male presents to a cardiologist for the fifth time in eight months complaining of crushing chest pain, left arm numbness, diaphoresis, and an overwhelming sense that he is about to die. Each episode lasts approximately 10–15 minutes and then resolves completely. Electrocardiograms, echocardiography, and a cardiac stress test are all normal. He is referred for psychological evaluation. Which diagnosis should be ranked highest in the differential?",
+      "options": [
+        "Somatic symptom disorder, because he has persistent, medically unexplained physical symptoms accompanied by excessive health-related worry",
+        "Panic disorder, because the discrete, time-limited episodes include multiple cardinal panic attack symptoms with no identified medical etiology",
+        "Illness anxiety disorder, because he is preoccupied with having a serious cardiac illness despite normal medical findings",
+        "Conversion disorder (functional neurological symptom disorder), because the arm numbness represents a neurological symptom without a structural cause"
+      ],
+      "answer": "Panic disorder, because the discrete, time-limited episodes include multiple cardinal panic attack symptoms with no identified medical etiology",
+      "explanation": "The presentation describes recurrent discrete episodes of abrupt-onset chest pain, paresthesia, diaphoresis, and fear of dying—symptoms that are among the 13 DSM-5 panic attack criteria—each lasting approximately 10–15 minutes and resolving spontaneously, with a recurrence pattern over months and negative cardiac workup. This fits panic disorder's definition of recurrent unexpected panic attacks with persistent concern about additional attacks. Somatic symptom disorder requires persistent physical symptoms (typically present for more than 6 months) accompanied by disproportionate thoughts, feelings, or behaviors about those symptoms, but does not capture the discrete episodic onset and offset characteristic of panic. Illness anxiety disorder centers on preoccupation with having or acquiring illness with few or no somatic symptoms, not acute physical symptom episodes. Conversion disorder involves neurological symptoms (e.g., pseudoseizures, paralysis) that are clearly functional; paresthesia can occur in conversion but the dominant presentation here (chest pain, diaphoresis, fear of death in episodes) is more parsimoniously explained by panic.",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
+      "difficulty": "medium",
+      "quality_comment": "Classic EPPP presentation; the cardiac context is realistic and the episode profile clearly operationalizes panic attack criteria.",
+      "suggestedLesson": "5-clinical-tests",
+      "suggestedParagraph": "## Why Clinical Tests Matter for Your EPPP Success",
+      "lessonExcerpt": "",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 9,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Clinical Tests.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Clinical Tests.json::75",
+      "domain": 5,
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following best describes the cognitive disturbances associated with a diagnosis of vascular neurocognitive disorder?",
+      "options": [
+        "A gradual decline in memory with preserved attention",
+        "Fluctuating levels of attention and awareness with stable cognitive function",
+        "Cognitive impairment that follows a cerebrovascular event",
+        "A sudden and reversible state of confusion"
+      ],
+      "answer": "Cognitive impairment that follows a cerebrovascular event",
+      "explanation": "1. The correct answer, \"Cognitive impairment that follows a cerebrovascular event,\" accurately describes vascular neurocognitive disorder (NCD) because this disorder is diagnosed when symptoms are consistent with a vascular etiology, which is characterized by a temporal relationship between the onset of cognitive symptoms and a cerebrovascular event, such as a stroke. Additionally, the diagnosis requires evidence of cerebrovascular disease, making it clear that cognitive disturbances are directly linked to these medical events.\n\n2. \n- \"A gradual decline in memory with preserved attention\": This option is incorrect because vascular NCD is associated with a decline in complex attention and executive functioning, not merely a gradual memory decline with preserved attention.\n- \"Fluctuating levels of attention and awareness with stable cognitive function\": This describes the symptoms of delirium rather than vascular NCD, where cognitive impairment is linked to cerebrovascular issues rather than fluctuating attention and stable cognitive function.\n- \"A sudden and reversible state of confusion\": This option is misleading because while vascular NCD can have an acute onset, it typically does not result in a reversible state of confusion; rather, it involves a progressive course or stepwise decline in cognitive function tied to ongoing cerebrovascular issues.",
+      "difficulty": "hard",
+      "kn": "KN36",
+      "kn_explanation": "The question focuses on clinical diagnostic criteria for delirium, relating to the understanding of classification systems and diagnosis in neurocognitive disorders.",
+      "quality_comment": "This question challenges the test-taker to apply knowledge of neurocognitive disorders in a more complex context.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "harder",
+      "tags": [
+        "lock_in_drill"
+      ],
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Neurocognitive.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Neurocognitive.json::19",
+      "domain": 5,
+      "isScored": true
+    },
+    {
+      "stem": "Which coefficient in a multitrait-multimethod matrix provides evidence of convergent validity?",
+      "options": [
+        "Monotrait-heteromethod coefficient",
+        "Heterotrait-monomethod coefficient",
+        "Monotrait-monomethod coefficient",
+        "Heterotrait-heteromethod coefficient"
+      ],
+      "answer": "Monotrait-heteromethod coefficient",
+      "explanation": "1. The \"Monotrait-heteromethod coefficient\" is the correct answer because it measures the correlation between two different methods of assessing the same trait, which provides evidence of convergent validity. A high correlation in this coefficient indicates that the test is successfully measuring the intended construct, as it aligns with other methods that assess the same trait.\n\n2. The \"Heterotrait-monomethod coefficient\" is incorrect because it measures the correlation between different traits assessed using the same method, which does not provide evidence of convergent validity. The \"Monotrait-monomethod coefficient\" is also incorrect as it reflects the reliability of the test itself rather than its validity in relation to other assessments of the same trait. Lastly, the \"Heterotrait-heteromethod coefficient\" is wrong because it assesses the correlation between different traits measured by different methods, which does not pertain to convergent validity either.",
+      "kn": "KN29",
+      "kn_explanation": "This question addresses test validation techniques, specifically convergent validity assessment using multitrait-multimethod matrices, key to psychometric evaluation (KN29).",
+      "difficulty": "hard",
+      "quality_comment": "The question requires precise knowledge about validity coefficients; distractors are plausible which enhances its difficulty and discrimination.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 What Tests Measure.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 What Tests Measure.json::3",
+      "domain": 5,
+      "isScored": true
+    },
+    {
+      "stem": "In Beck's CBT, what is the purpose of the Dysfunctional Thought Record (DTR)?",
+      "options": [
+        "To collect evidence supporting a client's maladaptive schemas",
+        "To help clients identify and challenge negative automatic thoughts through recording events, emotions, and alternative responses",
+        "To track medication effectiveness alongside cognitive therapy",
+        "To provide a long-term storage of all therapy session notes"
+      ],
+      "answer": "To help clients identify and challenge negative automatic thoughts through recording events, emotions, and alternative responses",
+      "explanation": "1. The correct answer, \"To help clients identify and challenge negative automatic thoughts through recording events, emotions, and alternative responses,\" accurately reflects the purpose of the Dysfunctional Thought Record (DTR) in Beck's Cognitive-Behavior Therapy (CBT). The DTR is a structured tool that allows clients to document the specific events that trigger unpleasant emotions, the negative automatic thoughts that arise from those events, and to formulate alternative rational responses. This process enables clients to recognize cognitive distortions and modify their maladaptive thinking patterns, ultimately leading to improved emotional and behavioral outcomes.\n\n2. The option \"To collect evidence supporting a client's maladaptive schemas\" is incorrect because the DTR focuses on identifying and challenging negative thoughts, not on gathering evidence for schemas. The statement \"To track medication effectiveness alongside cognitive therapy\" is wrong as the DTR is not designed for monitoring medication but rather for cognitive processing and emotional response. Lastly, \"To provide a long-term storage of all therapy session notes\" is inaccurate because the DTR serves as a specific tool for recording thoughts and emotions related to particular events, rather than a comprehensive record of therapy sessions.",
+      "kn": "KN44",
+      "kn_explanation": "This question focuses on treatment techniques and interventions in CBT, which falls under treatment, intervention, and prevention (KN44).",
+      "difficulty": "medium",
+      "quality_comment": "The question has a clear stem and plausible but incorrect options, effectively distinguishing understanding of CBT tools.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 CBT.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 CBT.json::25",
+      "domain": 6,
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following statements best describes the effect of increasing sample size on the variability of the sampling distribution of the mean?",
+      "options": [
+        "The variability of the sampling distribution will decrease as sample size increases.",
+        "The variability of the sampling distribution will remain constant regardless of sample size.",
+        "The variability of the sampling distribution will increase as sample size increases.",
+        "The variability of the sampling distribution will become unpredictable as sample size increases."
+      ],
+      "answer": "The variability of the sampling distribution will decrease as sample size increases.",
+      "explanation": "1. The correct answer, \"The variability of the sampling distribution will decrease as sample size increases,\" aligns with the principles outlined in the reference material regarding the standard error of means. Specifically, the central limit theorem states that as the sample size increases, the standard deviation of the sampling distribution (standard error) decreases, leading to reduced variability among the sample means. This means that larger samples yield means that are more closely clustered around the population mean, reflecting less variability.\n\n2. The incorrect options are as follows:\n- \"The variability of the sampling distribution will remain constant regardless of sample size.\" This is incorrect because the standard error, which indicates variability, is directly influenced by sample size; it decreases as sample size increases.\n- \"The variability of the sampling distribution will increase as sample size increases.\" This statement is wrong because an increase in sample size leads to a decrease in variability, not an increase.\n- \"The variability of the sampling distribution will become unpredictable as sample size increases.\" This option is misleading; while larger samples reduce variability and provide more consistent estimates of the population mean, they do not lead to unpredictability but rather to greater reliability in the sampling distribution.",
+      "difficulty": "easy",
+      "kn": "KN53",
+      "kn_explanation": "This question assesses understanding of sampling distributions and probability theory, which are fundamental sampling and data collection concepts (KN53).",
+      "quality_comment": "This question effectively tests understanding of the relationship between sample size and variability in sampling distributions.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "easier",
+      "tags": [
+        "lock_in_drill"
+      ],
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Inferential Stats.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Inferential Stats.json::39",
+      "domain": 7,
+      "isScored": true
+    },
+    {
+      "stem": "A psychologist in independent practice needs to transmit client billing information electronically to an insurance company. According to APA ethical standards, what is the MOST appropriate way to protect confidentiality during this transmission?",
+      "options": [
+        "Use personal email as long as no clinical information is included in the message body",
+        "Use coding or other techniques to protect personal identifiers and employ encryption for electronic transmissions",
+        "Verbally communicate the billing information to the insurance company by phone instead",
+        "Include a confidentiality notice at the bottom of the email stating the information is privileged"
+      ],
+      "answer": "Use coding or other techniques to protect personal identifiers and employ encryption for electronic transmissions",
+      "explanation": "Standard 6.02(b) requires 'using coding or other techniques to protect personal identifiers when entering confidential information into databases that unauthorized people might access.' The lesson also lists encryption as a key modern protection strategy for confidential records. Option A is incorrect because personal email is described as inappropriate—the lesson compares it to 'shouting client information across a crowded coffee shop.' Option C is incorrect because while phone communication avoids electronic risks, it is not the standard solution for billing transmissions and introduces its own documentation concerns. Option D is incorrect because a confidentiality notice does not provide actual data protection.",
+      "kn": "KN61",
+      "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
+      "difficulty": "medium",
+      "quality_comment": "Practical question well-grounded in the lesson's discussion of electronic confidentiality protections.",
+      "suggestedLesson": "8-standards-5-6",
+      "suggestedParagraph": "### Protecting Confidentiality in Records",
+      "lessonExcerpt": "Standard 6.02(b) requires using coding or other techniques to protect personal identifiers when entering confidential information into databases that unauthorized people might access.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 26,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 5 and 6.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 5 and 6.json::6",
+      "domain": 8,
+      "isScored": true
+    },
+    {
+      "stem": "What is the primary focus of competency modeling in organizations?",
+      "options": [
+        "Identification of compensable factors to determine fair wages",
+        "Analyzing the tasks required for successful job completion",
+        "Determining core competencies linked to organizational values across multiple jobs",
+        "Measuring employee performance through objective metrics"
+      ],
+      "answer": "Determining core competencies linked to organizational values across multiple jobs",
+      "explanation": "1. The correct answer, \"Determining core competencies linked to organizational values across multiple jobs,\" accurately reflects the primary focus of competency modeling. Competency modeling is inherently worker-oriented and emphasizes identifying the essential attributes that support the successful performance of various jobs within an organization, aligning these competencies with the organization’s values, goals, and strategies.\n\n2. The first incorrect option, \"Identification of compensable factors to determine fair wages,\" is wrong because this process is associated with job evaluation, which focuses specifically on compensation rather than competencies. The second incorrect option, \"Analyzing the tasks required for successful job completion,\" is incorrect because this describes job analysis, which concentrates on tasks and worker characteristics specific to individual jobs, rather than overarching competencies. Lastly, \"Measuring employee performance through objective metrics\" is incorrect as it pertains to performance assessment, which involves evaluating job performance rather than identifying core competencies linked to organizational values.",
+      "kn": "KN34",
+      "kn_explanation": "This question addresses organizational assessment and personnel functions, specifically exploring competency modeling as part of assessment methods within groups and organizations (KN34).",
+      "difficulty": "medium",
+      "quality_comment": "Options differentiate closely related concepts, requiring test-takers to discriminate between job analysis and competency modeling effectively.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/5 6 Evaluating Jobs.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/5 6 Evaluating Jobs.json::8",
+      "domain": "3-5-6",
+      "isScored": true
+    }
+  ]
+}

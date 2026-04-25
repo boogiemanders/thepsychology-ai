@@ -1,0 +1,279 @@
+{
+  "meta": {
+    "examId": "warmup-12-11",
+    "totalQuestions": 12,
+    "examType": "warmup",
+    "warmupLength": 12,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 2,
+      "4": 1,
+      "5": 3,
+      "6": 1,
+      "7": 1,
+      "8": 1,
+      "3-5-6": 1
+    },
+    "generatedAt": "2026-04-25T05:50:04.487Z"
+  },
+  "questions": [
+    {
+      "stem": "Treatment with monoamine oxidase inhibitors (MAOIs) requires dietary restrictions primarily to prevent which potentially fatal complication?",
+      "options": [
+        "Serotonin syndrome",
+        "Hypertensive crisis",
+        "Neuroleptic malignant syndrome",
+        "Tardive dyskinesia"
+      ],
+      "answer": "Hypertensive crisis",
+      "explanation": "1. \"Hypertensive crisis\" is the correct answer because monoamine oxidase inhibitors (MAOIs) can lead to dangerously high blood pressure when combined with foods containing tyramine or certain medications. This reaction occurs because MAOIs inhibit the enzyme that deactivates norepinephrine, serotonin, and dopamine, leading to excessive levels of these neurotransmitters and resulting in a hypertensive crisis, which can be life-threatening.\n\n2. \n- **Serotonin syndrome** is incorrect because it is a potentially fatal condition that arises from the combination of serotonergic drugs, such as SSRIs or SNRIs, not from MAOIs alone.\n- **Neuroleptic malignant syndrome (NMS)** is wrong as it is a rare and life-threatening side effect associated with antipsychotic medications, not MAOIs.\n- **Tardive dyskinesia** is incorrect because it is a movement disorder that can occur with long-term use of antipsychotics, particularly first-generation antipsychotics, and is not related to MAOIs.",
+      "kn": "KN2",
+      "kn_explanation": "Understanding serious drug-food interactions and their adverse effects falls under drug classification and side effect knowledge (KN2).",
+      "difficulty": "medium",
+      "quality_comment": "The question is clinically relevant and tests knowledge of safety considerations, with distractors representing other severe drug-induced conditions.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Pharmacology Antidepressants and Antipsychotics.json",
+      "domain": 1,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Pharmacology Antidepressants and Antipsychotics.json::35",
+      "isScored": true
+    },
+    {
+      "stem": "A teacher reinforces a student for staying seated for 30 minutes, which is incompatible with the student's usual behavior of leaving their seat frequently. This is an example of:",
+      "options": [
+        "Differential reinforcement of incompatible behavior (DRI)",
+        "Differential reinforcement of alternative behavior (DRA)",
+        "Differential reinforcement of other behavior (DRO)",
+        "Differential reinforcement of low rates of behavior (DRL)"
+      ],
+      "answer": "Differential reinforcement of incompatible behavior (DRI)",
+      "explanation": "1. The correct answer is \"Differential reinforcement of incompatible behavior (DRI)\" because the teacher is reinforcing the student for staying seated, a behavior that cannot occur simultaneously with the undesirable behavior of leaving the seat. DRI specifically involves reinforcing a desirable behavior that is incompatible with the target undesirable behavior, effectively reducing the frequency of the latter.\n\n2. \n- **Differential reinforcement of alternative behavior (DRA)** is incorrect because it involves reinforcing an alternative behavior that is not necessarily incompatible with the undesirable behavior; in this case, the student is not being reinforced for an alternative behavior but rather for a behavior that directly opposes the undesired behavior.\n- **Differential reinforcement of other behavior (DRO)** is incorrect because it focuses on reinforcing any behavior other than the undesirable behavior, rather than specifically reinforcing a behavior that is incompatible with it.\n- **Differential reinforcement of low rates of behavior (DRL)** is incorrect because it involves reinforcing the individual for engaging in the target behavior at or below a specified low rate, rather than reinforcing a behavior that is incompatible with the target behavior.",
+      "kn": "KN7",
+      "kn_explanation": "Classifying differential reinforcement procedures falls under operant learning models included in KN7.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors include other differential reinforcement types, requiring precise knowledge for correct selection.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Operant Conditioning Interventions.json",
+      "domain": 2,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Operant Conditioning Interventions.json::34",
+      "isScored": true
+    },
+    {
+      "stem": "Research indicates that which leadership style is often associated with better outcomes in gender-diverse teams?",
+      "options": [
+        "Autocratic leadership",
+        "Transformational leadership",
+        "Transactional leadership",
+        "Laissez-faire leadership"
+      ],
+      "answer": "Transformational leadership",
+      "explanation": "Transformational leadership is often associated with better outcomes in gender-diverse teams as it emphasizes inspiration, motivation, and the development of team members. Autocratic leadership tends to stifle input, transactional leadership focuses on exchanges rather than development, and laissez-faire leadership can lead to a lack of direction. Therefore, the correct answer is transformational leadership.",
+      "kn": "KN19",
+      "kn_explanation": "This KN code applies as it pertains to understanding gender differences in leadership styles.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of leadership styles in diverse teams.",
+      "suggestedLesson": "3-connection",
+      "suggestedParagraph": "## The Need for Affiliation: Why We Seek Others",
+      "lessonExcerpt": "Transformational leadership is often associated with better outcomes in gender-diverse teams.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 19,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Connection.json",
+      "domain": 3,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Connection.json::10",
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following best describes the integration paradox in immigrant populations?",
+      "options": [
+        "Lower-status immigrants report more discrimination and less identification with the mainstream society.",
+        "Higher-status immigrants report more discrimination and less positive identification with the mainstream society.",
+        "Higher-status immigrants report less discrimination and more positive identification with the mainstream society.",
+        "Lower-status immigrants report less discrimination and more positive identification with the mainstream society."
+      ],
+      "answer": "Higher-status immigrants report more discrimination and less positive identification with the mainstream society.",
+      "explanation": "1. The correct answer, \"Higher-status immigrants report more discrimination and less positive identification with the mainstream society,\" reflects the integration paradox as explained by Meyer (2003) and others. Higher-status immigrants, who are more educated and economically successful, often have greater access to mainstream society, which increases their likelihood of encountering discrimination. This exposure leads to a heightened awareness of their marginalized status, resulting in a decreased positive identification with mainstream society.\n\n2. The first incorrect option, \"Lower-status immigrants report more discrimination and less identification with the mainstream society,\" is wrong because it overlooks the fact that higher-status immigrants, not lower-status ones, experience greater discrimination due to their increased interactions with the mainstream. The second incorrect option, \"Higher-status immigrants report less discrimination and more positive identification with the mainstream society,\" contradicts the integration paradox, which emphasizes that higher-status immigrants actually face more discrimination. Lastly, the option \"Lower-status immigrants report less discrimination and more positive identification with the mainstream society\" is incorrect since lower-status immigrants may have fewer interactions with the mainstream, leading to different experiences of identification and discrimination that do not align with the paradox described.",
+      "kn": "KN18",
+      "kn_explanation": "This phenomenon concerns sociocultural dynamics and attitudes during acculturation processes, under social and cultural bases of behavior (KN18).",
+      "difficulty": "medium",
+      "quality_comment": "The question targets subtle understanding of immigrant integration dynamics and avoids confusing it with the immigrant paradox.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Concepts.json",
+      "domain": 3,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Concepts.json::26",
+      "isScored": true
+    },
+    {
+      "stem": "How does language brokering by children in immigrant families impact their psychosocial development?",
+      "options": [
+        "It consistently leads to academic difficulties and decreased self-confidence",
+        "It is solely associated with negative effects such as anxiety and embarrassment",
+        "It can have both positive effects like increased self-efficacy and negative effects like family role reversals",
+        "It always enhances interpersonal skills without any psychological drawbacks"
+      ],
+      "answer": "It can have both positive effects like increased self-efficacy and negative effects like family role reversals",
+      "explanation": "1. The correct answer, \"It can have both positive effects like increased self-efficacy and negative effects like family role reversals,\" accurately reflects the mixed outcomes associated with language brokering in immigrant families. Research indicates that while children who act as language brokers may develop strong interpersonal skills and high self-confidence, they can also experience negative consequences such as elevated anxiety and role reversals that lead to parental dependency and increased conflict within the family.\n\n2. The option \"It consistently leads to academic difficulties and decreased self-confidence\" is incorrect because the research highlights both positive outcomes, like increased self-efficacy, and does not suggest a consistent link to academic difficulties. The statement \"It is solely associated with negative effects such as anxiety and embarrassment\" is wrong as it overlooks the positive effects, such as strong interpersonal skills and self-confidence. Lastly, the claim \"It always enhances interpersonal skills without any psychological drawbacks\" is misleading because it fails to acknowledge the potential negative impacts, including anxiety and family role reversals, that can arise from language brokering experiences.",
+      "kn": "KN21",
+      "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
+      "difficulty": "medium",
+      "quality_comment": "The item probes nuanced understanding of cultural/language dynamics, offering balanced options that require careful reading.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Language Development.json",
+      "domain": 4,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Language Development.json::23",
+      "isScored": true
+    },
+    {
+      "stem": "Which clinical test uses a five-point Global Scoring System to evaluate visual-motor integration by having examinees copy geometric figures and then recall them from memory?",
+      "options": [
+        "Bender Visual-Motor Gestalt Test, 2nd Edition",
+        "Benton Visual Retention Test, 5th Edition",
+        "Luria-Nebraska Neuropsychological Battery",
+        "Stroop Color and Word Test"
+      ],
+      "answer": "Bender Visual-Motor Gestalt Test, 2nd Edition",
+      "explanation": "1. The \"Bender Visual-Motor Gestalt Test, 2nd Edition\" is the correct answer because it specifically evaluates visual-motor perception and integration through a two-phase process: first, examinees copy geometric figures, and then they recall and draw those figures from memory. The test uses a five-point Global Scoring System to assess the quality of the designs, which ranges from 0 (no resemblance) to 4 (nearly perfect), making it a valid tool for measuring visual-motor skills.\n\n2. The \"Benton Visual Retention Test, 5th Edition\" is incorrect because, while it assesses visual memory and perception, it does not use a five-point scoring system and focuses solely on recalling geometric figures rather than copying them first. The \"Luria-Nebraska Neuropsychological Battery\" is also incorrect as it evaluates various neuropsychological functions across multiple scales, rather than specifically focusing on visual-motor integration through a scoring system related to copying and recalling figures. Lastly, the \"Stroop Color and Word Test\" is not the correct answer because it measures cognitive flexibility and response inhibition, not visual-motor integration, and does not involve copying geometric figures.",
+      "kn": "KN32",
+      "kn_explanation": "This question assesses knowledge of commonly used instruments for visual-motor assessment and their scoring methods (KN32).",
+      "difficulty": "medium",
+      "quality_comment": "Well-constructed with plausible distractors involving other visual and neuropsych tests, requiring detailed content knowledge.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Clinical Tests.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Clinical Tests.json::89",
+      "isScored": true
+    },
+    {
+      "stem": "Voucher-Based Reinforcement Therapy (VBRT) primarily utilizes which behavioral principle to promote abstinence?",
+      "options": [
+        "Contingency management by providing vouchers contingent on treatment goals",
+        "Cognitive restructuring to alter beliefs about substance use",
+        "Motivational interviewing to enhance readiness to change",
+        "Relapse prevention by identifying high-risk situations"
+      ],
+      "answer": "Contingency management by providing vouchers contingent on treatment goals",
+      "explanation": "1. The correct answer, \"Contingency management by providing vouchers contingent on treatment goals,\" is accurate because Voucher-Based Reinforcement Therapy (VBRT) operates on the principle of contingency management. This approach rewards patients with vouchers that can be exchanged for goods and services when they achieve specific treatment goals, such as maintaining abstinence or producing negative urine drug screens, thereby reinforcing positive behavior.\n\n2. The option \"Cognitive restructuring to alter beliefs about substance use\" is incorrect because VBRT does not focus on changing cognitive beliefs; instead, it emphasizes tangible rewards for achieving specific goals. \"Motivational interviewing to enhance readiness to change\" is also wrong, as VBRT is not primarily about enhancing motivation but rather about providing rewards for meeting established treatment targets. Lastly, \"Relapse prevention by identifying high-risk situations\" is inaccurate because while relapse prevention involves recognizing triggers for relapse, VBRT specifically emphasizes the use of vouchers as incentives for maintaining abstinence rather than addressing high-risk situations directly.",
+      "kn": "KN33",
+      "kn_explanation": "This question is best aligned with KN33 because it tests Issues of differential diagnosis and integration of non-psychological information into psychological assessment.",
+      "difficulty": "medium",
+      "quality_comment": "Options represent varied intervention strategies, compelling the examinee to know the core principle of VBRT.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Substance Misuse.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Substance Misuse.json::8",
+      "isScored": true
+    },
+    {
+      "stem": "A psychologist reports that an intelligence test with a standard deviation of 15 and a reliability coefficient of .91 has a standard error of measurement of approximately 4.5 points. A school team uses this value to construct a confidence interval around a student's obtained score of 112. In what metric are both the obtained score and the confidence interval boundaries expressed?",
+      "options": [
+        "Percentile rank units, because the SEM is derived from the normal distribution",
+        "Standard deviation units, because the SEM formula contains the standard deviation",
+        "The same units as the original test scores, because the SEM is computed from the test's own standard deviation",
+        "Z-score units, because SEM standardizes measurement error around a mean of zero"
+      ],
+      "answer": "The same units as the original test scores, because the SEM is computed from the test's own standard deviation",
+      "explanation": "The standard error of measurement (SEM = SD × √[1 – rxx]) is expressed in the same metric as the original test scores because it is derived directly from the test's standard deviation. When the SD is 15 IQ points and reliability is .91, the SEM of approximately 4.5 is also in IQ points. Confidence intervals constructed using the SEM are therefore also expressed in IQ points, allowing direct interpretation. The SEM is not in percentile rank units, which are nonlinear transformations requiring separate conversion. It is not in standard deviation units per se—although it uses the SD in its formula, the product inherits the original scale's unit. It is not in z-score units, which would require dividing by the test SD.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
+      "difficulty": "medium",
+      "quality_comment": "Tests a frequently confused but clinically important measurement concept; high face validity for applied practice.",
+      "suggestedLesson": "5-items-and-reliability",
+      "suggestedParagraph": "## Measurement Error Statistics",
+      "lessonExcerpt": "",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 4,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Items and Reliability.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Items and Reliability.json::9",
+      "isScored": true
+    },
+    {
+      "stem": "A practicum student receives an evaluation that is strongly positive overall but includes one comment about improving time management. For the rest of the day, the student thinks only about that criticism and concludes, \"My supervisor thinks I am doing a terrible job.\" Beck would describe this thinking error as:",
+      "options": [
+        "Selective abstraction",
+        "Personalization",
+        "Emotional reasoning",
+        "Arbitrary inference"
+      ],
+      "answer": "Selective abstraction",
+      "explanation": "Selective abstraction is the best answer because the student is focusing on one negative detail while ignoring the broader positive feedback. Personalization is wrong because the problem is not wrongly taking responsibility for an outside event. Emotional reasoning is wrong because the student is not using a feeling as proof of a fact. Arbitrary inference is wrong because, although the conclusion is unsupported, the defining pattern here is the narrow focus on one negative detail while discounting the rest of the evaluation.",
+      "kn": "KN43",
+      "kn_explanation": "This question assesses a contemporary research-based model of treatment, specifically Beck's cognitive therapy model.",
+      "difficulty": "medium",
+      "quality_comment": "Classic CBT discrimination item with plausible distortions from the same concept family.",
+      "suggestedLesson": "6-cbt",
+      "suggestedParagraph": "### The Three Core Components",
+      "lessonExcerpt": "Selective Abstraction | Focusing on one negative detail while ignoring everything else",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT/INTERVENTION",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 CBT.json",
+      "domain": 6,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 CBT.json::0",
+      "isScored": true
+    },
+    {
+      "stem": "A researcher plots the relationship between a predictor variable (X) and a criterion variable (Y) on a scatterplot. She notices that the spread of Y scores is roughly the same at every level of X, and the data points form a circular cloud with no discernible pattern. Which of the following BEST describes this situation?",
+      "options": [
+        "The variables show a strong linear relationship with homoscedasticity",
+        "The variables show heteroscedasticity with a moderate positive correlation",
+        "The variables show homoscedasticity with a correlation near zero",
+        "The variables show a curvilinear relationship that Pearson's r would accurately capture"
+      ],
+      "answer": "The variables show homoscedasticity with a correlation near zero",
+      "explanation": "When the variability in Y scores is similar across all levels of X (homoscedasticity) and the data form a circular cloud with no discernible pattern, the correlation is near zero. Homoscedasticity means the 'variability in your criterion scores should be similar across all levels of your predictor scores.' A circular cloud pattern indicates no systematic linear relationship. Option A is wrong because a strong linear relationship would show an elongated ellipse, not a circular cloud. Option B is wrong because heteroscedasticity would mean unequal variability across predictor levels. Option D is wrong because Pearson's r would not accurately capture curvilinear relationships.",
+      "kn": "KN55",
+      "kn_explanation": "Analyzing spread of residuals in a scatterplot (heteroscedasticity) is a quantitative analytic/statistical method",
+      "difficulty": "medium",
+      "quality_comment": "Good integration of homoscedasticity concept with correlation strength interpretation. Tests understanding of how scatterplot patterns relate to both assumptions and correlation magnitude.",
+      "suggestedLesson": "7-correlation-and-regression",
+      "suggestedParagraph": "### Assumption 3: Homoscedasticity",
+      "lessonExcerpt": "This intimidating term simply means that the variability in your criterion scores should be similar across all levels of your predictor scores.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 3,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Correlation and Regression.json",
+      "domain": 7,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Correlation and Regression.json::1",
+      "isScored": true
+    },
+    {
+      "stem": "In therapy, what is a critical ethical requirement regarding multiple relationships and informed consent?",
+      "options": [
+        "Therapists must disclose all personal relationships with clients.",
+        "Clients must agree to all forms of dual relationships.",
+        "Therapists should avoid any dual relationships that could impair their effectiveness.",
+        "Therapists can engage in dual relationships if clients are informed."
+      ],
+      "answer": "Therapists should avoid any dual relationships that could impair their effectiveness.",
+      "explanation": "The ethical requirement is to avoid dual relationships that could impair objectivity or effectiveness. While informing clients is important, it does not justify engaging in potentially harmful dual relationships.",
+      "kn": "KN64",
+      "kn_explanation": "This question is best aligned with KN64 because it tests Identification and management of potential ethical issues.",
+      "difficulty": "medium",
+      "quality_comment": "The question addresses a significant ethical concern in therapeutic practices.",
+      "suggestedLesson": "8-practice-issues",
+      "suggestedParagraph": "## Why Professional Issues Matter More Than You Think",
+      "lessonExcerpt": "Therapists should avoid dual relationships that could impair their effectiveness.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 4,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json",
+      "domain": 8,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json::48",
+      "isScored": true
+    },
+    {
+      "stem": "Which type of work sample test is designed specifically for applicants without prior job experience, incorporating training and evaluation periods?",
+      "options": [
+        "Standard work sample tests",
+        "On-the-job simulation tests",
+        "Trainability work sample tests",
+        "Realistic job preview tests"
+      ],
+      "answer": "Trainability work sample tests",
+      "explanation": "1. **Correct Answer: Trainability work sample tests**  \nTrainability work sample tests are specifically designed for applicants who do not have prior job experience. These tests incorporate periods of training and evaluation, allowing employers to assess whether inexperienced applicants are likely to benefit from training in the job role.\n\n2. **Incorrect Options:**\n- **Standard work sample tests:** These are designed for experienced applicants and require them to perform tasks similar to those they would encounter on the job, without the training component included in trainability tests.\n- **On-the-job simulation tests:** While these tests simulate real job tasks, they do not specifically focus on training and evaluation for inexperienced applicants, as trainability work sample tests do.\n- **Realistic job preview tests:** Realistic job previews inform applicants about the job's positives and negatives but do not involve the assessment or training of applicants in the way that trainability work sample tests do.",
+      "kn": "KN34",
+      "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
+      "difficulty": "medium",
+      "quality_comment": "The question is precise and answer choices include related but distinct concepts, requiring careful attention to terminology.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/5 Hiring Methods.json",
+      "domain": "3-5-6",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/5 Hiring Methods.json::12",
+      "isScored": true
+    }
+  ]
+}

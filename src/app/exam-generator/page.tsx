@@ -79,12 +79,13 @@ export default function ExamGeneratorPage() {
   const [showExplanation, setShowExplanation] = useState(false)
   const [showRecoverNudge, setShowRecoverNudge] = useState(false)
   const [error, setError] = useState<string | null>(null)
-  const [examType, setExamType] = useState<'diagnostic' | 'practice' | null>(null)
+  const [examType, setExamType] = useState<'diagnostic' | 'practice' | 'warmup' | null>(null)
+  const [warmupLength, setWarmupLength] = useState<8 | 12>(8)
   const [mode, setMode] = useState<'study' | 'test' | null>(null)
   const [timeRemaining, setTimeRemaining] = useState(0)
 	const [isExamStarted, setIsExamStarted] = useState(false)
 	const [selectedMode, setSelectedMode] = useState<'study' | 'test' | null>(null)
-  const [recommendedExamType, setRecommendedExamType] = useState<'diagnostic' | 'practice'>('diagnostic')
+  const [recommendedExamType, setRecommendedExamType] = useState<'diagnostic' | 'practice' | 'warmup'>('diagnostic')
   const [recommendedMode, setRecommendedMode] = useState<'study' | 'test'>('study')
   const [isLoadingPreGen, setIsLoadingPreGen] = useState(false)
   const [userId, setUserId] = useState<string | null>(null)
@@ -125,6 +126,12 @@ export default function ExamGeneratorPage() {
     'Includes experimental questions',
   ]
   const practiceLockMessage = 'Upgrade to Pro to unlock the complete 225-question practice exam.'
+  const warmupQuestionLabel = `${warmupLength} questions`
+  const warmupHighlights = [
+    'One question from each domain',
+    'Fastest way to sample the test',
+    'Ready in under 10 minutes',
+  ]
   const questionContentRef = useRef<HTMLDivElement | null>(null)
   const lastSelectionRef = useRef<{ text: string; questionIndex: number } | null>(null)
   const step2Ref = useRef<HTMLDivElement | null>(null)
@@ -563,7 +570,7 @@ export default function ExamGeneratorPage() {
       saveQuestionResult({
         questionId,
         question: question.question,
-        examType,
+        examType: examType === 'warmup' ? 'practice' : examType,
         topic: topicName,
         domain: domainId,
         selectedAnswer,
@@ -668,6 +675,7 @@ export default function ExamGeneratorPage() {
         score: (score / scoredQuestions.length) * 100,
         totalQuestions: scoredQuestions.length,
         correctAnswers: score,
+        ...(examType === 'warmup' ? { warmupLength } : {}),
       })
 
       // Generate priority recommendations for diagnostic/practice exams
@@ -834,7 +842,7 @@ export default function ExamGeneratorPage() {
   }, [])
 
   const handleExamTypeSelect = useCallback(
-    (type: 'diagnostic' | 'practice') => {
+    (type: 'diagnostic' | 'practice' | 'warmup') => {
       if (isFreeTier && type === 'practice') {
         setError('Practice exams are part of the Pro plan. Upgrade to unlock the full 225-question simulation.')
         return
@@ -1007,8 +1015,8 @@ export default function ExamGeneratorPage() {
   useEffect(() => {
     if (!isExamStarted || questions.length === 0 || mode !== 'test') return
 
-    // 68 seconds per question for practice (225q = 4h 15m), 50 seconds per question for diagnostic (71q = ~1h)
-    const secondsPerQuestion = examType === 'diagnostic' ? 50 : 68
+    // 68s/question for practice (225q = 4h 15m), 50s for diagnostic (71q = ~1h), 68s for warmup (matches practice pace)
+    const secondsPerQuestion = examType === 'diagnostic' ? 50 : examType === 'warmup' ? 68 : 68
     const totalSeconds = questions.length * secondsPerQuestion
 
     // Only initialize on first run
@@ -1047,8 +1055,8 @@ export default function ExamGeneratorPage() {
 
   const isTimeWarning = timeRemaining > 0 && timeRemaining <= 300
 
-  const handleGenerateExam = async (chosenExamType: 'diagnostic' | 'practice', chosenMode: 'study' | 'test') => {
-    if (isFreeTier && chosenExamType !== 'diagnostic') {
+  const handleGenerateExam = async (chosenExamType: 'diagnostic' | 'practice' | 'warmup', chosenMode: 'study' | 'test') => {
+    if (isFreeTier && chosenExamType === 'practice') {
       setError('Practice exams are part of the Pro plan. Upgrade to unlock the full 225-question simulation.')
       return
     }
@@ -1077,7 +1085,8 @@ export default function ExamGeneratorPage() {
 
       // For paid tiers, try to fetch Git-backed exams first.
       // Free tier always uses free-examsGPT and skips assignments.
-      if (!isFreeTier && resolvedUserId) {
+      // Warmup always loads from warmupGPT directly, no assignment step.
+      if (!isFreeTier && resolvedUserId && chosenExamType !== 'warmup') {
         setIsLoadingPreGen(true)
         try {
           console.time('[Exam Gen] Assignment API call')
@@ -1112,7 +1121,9 @@ export default function ExamGeneratorPage() {
         let jsonContent = ''
         const params = new URLSearchParams()
         params.set('type', chosenExamType)
-        if (isFreeTier) {
+        if (chosenExamType === 'warmup') {
+          params.set('length', String(warmupLength))
+        } else if (isFreeTier) {
           params.set('source', 'free')
           // Free-tier diagnostic is the short 8-question (1 per domain) version
           if (chosenExamType === 'diagnostic') {
@@ -1312,6 +1323,39 @@ export default function ExamGeneratorPage() {
 	                            <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
 	                              <Card
 	                                className={`cursor-pointer transition-all border-2 h-full ${
+	                                  examType === 'warmup'
+	                                    ? 'bg-[#e2dacd]/30 dark:bg-[#e2dacd]/10'
+	                                    : 'border-border'
+	                                }`}
+	                                style={examType === 'warmup' ? { borderColor: '#d87758' } : {}}
+	                                onClick={() => handleExamTypeSelect('warmup')}
+	                              >
+	                                <CardHeader className="text-center">
+	                                  <div className="flex items-center justify-center flex-col">
+	                                    <div className="flex items-center justify-center gap-2 mb-2 flex-wrap">
+	                                      <CardTitle className="text-xl font-semibold whitespace-nowrap">Warm Up</CardTitle>
+	                                    </div>
+	                                    <CardDescription>{warmupQuestionLabel}</CardDescription>
+	                                  </div>
+	                                </CardHeader>
+	                                <CardContent className="space-y-3">
+	                                  <ul className="space-y-2 text-sm text-left">
+	                                    {warmupHighlights.map((highlight, idx) => (
+	                                      <li key={idx} className="flex items-center gap-2">
+	                                        <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#d87758' }} />
+	                                        {highlight}
+	                                      </li>
+	                                    ))}
+	                                  </ul>
+	                                </CardContent>
+	                              </Card>
+	                            </motion.div>
+	                          </CarouselItem>
+
+	                          <CarouselItem className="basis-[85%] sm:basis-[70%]">
+	                            <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+	                              <Card
+	                                className={`cursor-pointer transition-all border-2 h-full ${
 	                                  examType === 'diagnostic'
 	                                    ? 'bg-[#bdd1ca]/20 dark:bg-[#bdd1ca]/10'
 	                                    : 'border-border'
@@ -1431,7 +1475,38 @@ export default function ExamGeneratorPage() {
 	                    </div>
 
 	                    {/* Desktop: static side-by-side cards */}
-	                    <div className="hidden md:grid md:grid-cols-2 gap-4">
+	                    <div className="hidden md:grid md:grid-cols-3 gap-4">
+	                      <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="h-full">
+	                        <Card
+	                          className={`cursor-pointer transition-all border-2 h-full flex flex-col ${
+	                            examType === 'warmup'
+	                              ? 'bg-[#e2dacd]/30 dark:bg-[#e2dacd]/10'
+	                              : 'border-border'
+	                          }`}
+	                          style={examType === 'warmup' ? { borderColor: '#d87758' } : {}}
+	                          onClick={() => handleExamTypeSelect('warmup')}
+	                        >
+	                          <CardHeader className="text-center">
+	                            <div className="flex items-center justify-center flex-col">
+	                              <div className="flex items-center justify-center gap-2 mb-2 flex-wrap">
+	                                <CardTitle className="text-xl font-semibold whitespace-nowrap">Warm Up</CardTitle>
+	                              </div>
+	                              <CardDescription>{warmupQuestionLabel}</CardDescription>
+	                            </div>
+	                          </CardHeader>
+	                          <CardContent className="space-y-3 flex-1">
+	                            <ul className="space-y-2 text-sm text-left">
+	                              {warmupHighlights.map((highlight, idx) => (
+	                                <li key={idx} className="flex items-center gap-2">
+	                                  <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#d87758' }} />
+	                                  {highlight}
+	                                </li>
+	                              ))}
+	                            </ul>
+	                          </CardContent>
+	                        </Card>
+	                      </motion.div>
+
 	                      <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="h-full">
 	                        <Card
 	                          className={`cursor-pointer transition-all border-2 h-full flex flex-col ${
@@ -1540,6 +1615,44 @@ export default function ExamGeneratorPage() {
 	                      </motion.div>
 	                    </div>
 	                  </div>
+
+	                  {/* Warm Up length picker (only when warmup is selected) */}
+	                  {examType === 'warmup' && (
+	                    <motion.div
+	                      initial={{ opacity: 0, y: -10 }}
+	                      animate={{ opacity: 1, y: 0 }}
+	                      transition={{ duration: 0.3 }}
+	                      className="max-w-2xl mx-auto mb-8"
+	                    >
+	                      <p className="text-sm font-semibold text-muted-foreground mb-3 text-center">Warm Up length</p>
+	                      <div className="flex justify-center">
+	                        <div className="inline-flex rounded-md border border-border p-1 bg-background">
+	                          <button
+	                            type="button"
+	                            onClick={() => setWarmupLength(8)}
+	                            className={`px-4 py-2 text-sm font-medium rounded-sm transition-colors ${
+	                              warmupLength === 8
+	                                ? 'bg-[#d87758] text-white'
+	                                : 'text-muted-foreground hover:text-foreground'
+	                            }`}
+	                          >
+	                            8 questions
+	                          </button>
+	                          <button
+	                            type="button"
+	                            onClick={() => setWarmupLength(12)}
+	                            className={`px-4 py-2 text-sm font-medium rounded-sm transition-colors ${
+	                              warmupLength === 12
+	                                ? 'bg-[#d87758] text-white'
+	                                : 'text-muted-foreground hover:text-foreground'
+	                            }`}
+	                          >
+	                            12 questions
+	                          </button>
+	                        </div>
+	                      </div>
+	                    </motion.div>
+	                  )}
 
 	                  {/* Step 2: Mode Selection (Study vs Test) */}
 	                  {examType && (
@@ -1726,7 +1839,7 @@ export default function ExamGeneratorPage() {
                             className="w-full px-8 py-6"
                             size="lg"
                           >
-                            Start {examType === 'diagnostic' ? 'Diagnostic' : 'Practice'} -{' '}
+                            Start {examType === 'diagnostic' ? 'Diagnostic' : examType === 'warmup' ? `Warm Up (${warmupLength})` : 'Practice'} -{' '}
                             {selectedMode === 'study' ? 'Study Mode' : 'Test Mode'}
                           </Button>
                         </motion.div>
@@ -1741,7 +1854,7 @@ export default function ExamGeneratorPage() {
               <div className="flex flex-col items-center justify-center py-20 gap-4">
                 <LoadingAnimation size="lg" />
                 <p className="text-muted-foreground">
-                  Generating your {examType === 'diagnostic' ? 'Diagnostic' : 'Practice'} exam...
+                  Generating your {examType === 'diagnostic' ? 'Diagnostic' : examType === 'warmup' ? 'Warm Up' : 'Practice'} exam...
                 </p>
                 <p className="text-sm text-muted-foreground/60">This may take a moment</p>
               </div>
@@ -1831,7 +1944,7 @@ export default function ExamGeneratorPage() {
               <div className="flex flex-col gap-2">
                 <div className="flex gap-2">
                   <Badge variant="outline">
-                    {examType === 'diagnostic' ? 'Diagnostic' : 'Practice'}
+                    {examType === 'diagnostic' ? 'Diagnostic' : examType === 'warmup' ? 'Warm Up' : 'Practice'}
                   </Badge>
                   <Badge variant="outline">
                     {mode === 'study' ? 'Study' : 'Test'}

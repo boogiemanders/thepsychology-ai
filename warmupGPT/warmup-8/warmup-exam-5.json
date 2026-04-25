@@ -1,0 +1,209 @@
+{
+  "meta": {
+    "examId": "warmup-8-5",
+    "totalQuestions": 8,
+    "examType": "warmup",
+    "warmupLength": 8,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 1,
+      "7": 1,
+      "8": 1
+    },
+    "generatedAt": "2026-04-25T05:50:04.482Z"
+  },
+  "questions": [
+    {
+      "stem": "What is a common side effect of stimulant medications like Ritalin?",
+      "options": [
+        "Weight gain",
+        "Drowsiness",
+        "Increased appetite",
+        "Insomnia"
+      ],
+      "answer": "Insomnia",
+      "explanation": "Stimulant medications like Ritalin often cause insomnia as a side effect due to their stimulating properties. Weight gain and increased appetite are more commonly associated with other types of medications, while drowsiness is typically not a side effect of stimulants.",
+      "kn": "KN2",
+      "kn_explanation": "This question is best aligned with KN2 because it tests Drug classification, mechanisms of action, and desired/adverse effects of therapeutic agents, drugs of abuse, and complementary or alternative agents.",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests knowledge of medication side effects.",
+      "suggestedLesson": "1-pharmacology-other-drugs",
+      "suggestedParagraph": "## Sedatives, Hypnotics, and Anxiolytics: The Calming Agents",
+      "lessonExcerpt": "Common side effects of stimulant medications like Ritalin include insomnia.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 6,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Pharmacology Other Drugs.json",
+      "domain": 1,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Pharmacology Other Drugs.json::9",
+      "isScored": true
+    },
+    {
+      "stem": "What distinguishes psychogenic amnesia from physiological amnesia?",
+      "options": [
+        "Psychogenic amnesia is caused by brain injury, while physiological amnesia is not.",
+        "Psychogenic amnesia involves a loss of memory due to psychological factors, while physiological amnesia is due to physical damage.",
+        "Physiological amnesia is reversible, while psychogenic amnesia is permanent.",
+        "Both types of amnesia are caused by the same underlying mechanisms."
+      ],
+      "answer": "Psychogenic amnesia involves a loss of memory due to psychological factors, while physiological amnesia is due to physical damage.",
+      "explanation": "Psychogenic amnesia is linked to psychological trauma, while physiological amnesia results from physical brain damage. The other options incorrectly describe the nature of these types of amnesia.",
+      "kn": "KN8",
+      "kn_explanation": "This question is best aligned with KN8 because it tests Major research-based theories and models of memory and their application.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of memory disorders.",
+      "suggestedLesson": "2-memory",
+      "suggestedParagraph": "## Types of Long-Term Memory: Not All Memories Are Equal",
+      "lessonExcerpt": "Psychogenic amnesia involves a loss of memory due to psychological factors, while physiological amnesia is due to physical damage.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 15,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Memory.json",
+      "domain": 2,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Memory.json::21",
+      "isScored": true
+    },
+    {
+      "stem": "According to social exchange theory, what primarily drives interpersonal attraction?",
+      "options": [
+        "The pursuit of emotional intimacy and connection.",
+        "The perceived rewards and costs associated with a relationship.",
+        "The influence of societal norms and expectations.",
+        "The biological instincts for reproduction and survival."
+      ],
+      "answer": "The perceived rewards and costs associated with a relationship.",
+      "explanation": "Social exchange theory posits that interpersonal attraction is driven by the evaluation of the rewards and costs involved in a relationship. The other options reflect different theories of attraction but do not align with the principles of social exchange theory.",
+      "kn": "KN15",
+      "kn_explanation": "This question is best aligned with KN15 because it tests Social interaction and relationships (e.g., attraction, aggression, altruism, organizational justice, verbal and non-verbal communication, internet communication, mate selection, empathy).",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests understanding of attraction theories.",
+      "suggestedLesson": "3-connection",
+      "suggestedParagraph": "## What Makes Us Attracted to Specific People?",
+      "lessonExcerpt": "The lesson does not adequately cover social exchange theory.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 24,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Connection.json",
+      "domain": 3,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Connection.json::12",
+      "isScored": true
+    },
+    {
+      "stem": "In Harlow and Zimmerman's (1959) study with infant monkeys, what was the main finding regarding attachment?",
+      "options": [
+        "Monkeys preferred the wire mother because it provided food",
+        "Monkeys showed equal attachment to the wire and cloth mothers",
+        "Monkeys became attached to the cloth mother despite the wire mother providing food",
+        "Monkeys did not show significant attachment behaviors toward either surrogate mother"
+      ],
+      "answer": "Monkeys became attached to the cloth mother despite the wire mother providing food",
+      "explanation": "1. The correct answer, \"Monkeys became attached to the cloth mother despite the wire mother providing food,\" reflects Harlow and Zimmerman's (1959) findings that emphasized the importance of *contact comfort* in attachment. The infant monkeys preferred the soft, cloth mother for comfort and security, seeking her out even when the wire mother provided sustenance, demonstrating that emotional needs can outweigh basic physical needs in forming attachments.\n\n2. The option \"Monkeys preferred the wire mother because it provided food\" is incorrect because the study showed that the monkeys chose the cloth mother for comfort over the wire mother that provided food, indicating that attachment is driven more by emotional connection than by the availability of food. The statement \"Monkeys showed equal attachment to the wire and cloth mothers\" is also wrong, as the research clearly indicated a strong preference for the cloth mother, highlighting the significance of comfort in attachment. Lastly, the option \"Monkeys did not show significant attachment behaviors toward either surrogate mother\" is inaccurate because the monkeys exhibited clear attachment behaviors, such as clinging to the cloth mother and seeking her out when distressed, confirming the presence of attachment.",
+      "kn": "KN25",
+      "kn_explanation": "This question is best aligned with KN25 because it tests Family development, configuration, and functioning and their impact on the individual across the lifespan.",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear, and the distractors are plausible, reflecting common misconceptions about attachment and early behavior research.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Bonding and Attachment.json",
+      "domain": 4,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Bonding and Attachment.json::30",
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following is a primary behavioral technique used to reduce performance anxiety in the treatment of erectile disorder?",
+      "options": [
+        "Start-stop technique",
+        "Sensate focus",
+        "Orgasmic reconditioning",
+        "Covert sensitization"
+      ],
+      "answer": "Sensate focus",
+      "explanation": "1. **Sensate focus** is the correct answer because it is a primary behavioral technique specifically developed to reduce performance anxiety in individuals experiencing erectile disorder. This method involves a series of activities that promote intimacy and help couples focus on pleasurable sensations rather than performance, which is essential for addressing the anxiety that can contribute to erectile difficulties.\n\n2. The **start-stop technique** is incorrect because, while it is used to help men control ejaculation in the context of premature ejaculation, it is not primarily aimed at addressing performance anxiety related to erectile disorder. **Orgasmic reconditioning** is also incorrect as it involves changing the focus of sexual arousal during masturbation to more appropriate stimuli, rather than directly addressing performance anxiety in erectile disorder. Lastly, **covert sensitization** is incorrect because it is an aversive conditioning technique used to reduce paraphilic urges, not a technique aimed at reducing performance anxiety in sexual dysfunctions like erectile disorder.",
+      "kn": "KN40",
+      "kn_explanation": "This question is best aligned with KN40 because it tests Measurement of outcomes and changes due to prevention or intervention efforts with individuals, couples, families, groups, and organizations.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors include relevant techniques for other sexual disorders or paraphilic disorders, providing plausible but distinct options.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Sex and Gender.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Sex and Gender.json::2",
+      "isScored": true
+    },
+    {
+      "stem": "According to research on common factors in psychotherapy outcomes, which of the following contributes MOST to variance in therapy outcomes?",
+      "options": [
+        "Specific treatment techniques used by the therapist",
+        "Patient contributions including motivation, resources, and social support",
+        "The strength of the therapeutic working alliance",
+        "Therapist characteristics such as experience and training"
+      ],
+      "answer": "Patient contributions including motivation, resources, and social support",
+      "explanation": "Research by Norcross and Lambert identifies patient contributions (motivation, resources, social support) as accounting for the largest identified portion of outcome variance at 30%. The therapeutic relationship accounts for 12%, treatment method for 8%, and therapist characteristics for 7%. While 40% remains unexplained, among identified factors, patient contributions are the strongest predictor. Option A (treatment method at 8%) is often overemphasized by clinicians. Option C (therapeutic alliance at 12%) is the second-largest identified factor. Option D (therapist characteristics at 7%) contributes the least of the named factors.",
+      "kn": "KN44",
+      "kn_explanation": "Research on common factors and their comparative contribution to therapy outcomes",
+      "difficulty": "medium",
+      "quality_comment": "Well-supported by lesson content with specific percentages. A classic EPPP topic testing common factors research.",
+      "suggestedLesson": "6-prevention-and-consultation",
+      "suggestedParagraph": "## What Makes Therapy Work? The Common Factors Debate",
+      "lessonExcerpt": "Norcross and Lambert's research suggests this breakdown of what contributes to therapy outcomes: 30% patient contributions (motivation, resources, social support), 12% therapeutic relationship, 8% treatment method, 7% therapist characteristics, 3% other factors, 40% unexplained variance.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 5,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Prevention and Consultation.json",
+      "domain": 6,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Prevention and Consultation.json::1",
+      "isScored": true
+    },
+    {
+      "stem": "When calculating expected frequencies for a chi-square test, which of the following is the correct formula to use?",
+      "options": [
+        "Total number of observations divided by the number of categories.",
+        "Row total multiplied by column total divided by the grand total.",
+        "Observed frequency divided by total frequency.",
+        "Total frequency minus observed frequency."
+      ],
+      "answer": "Row total multiplied by column total divided by the grand total.",
+      "explanation": "The correct formula for calculating expected frequencies in a chi-square test involves multiplying the row total by the column total and then dividing by the grand total. The other options do not accurately describe the method for calculating expected frequencies.",
+      "kn": "KN55",
+      "kn_explanation": "This question is best aligned with KN55 because it tests Analytic methods, including qualitative (e.g., thematic, phenomenological) and quantitative (e.g., probability theory; descriptive, inferential, and parametric statistics; meta-analysis; factor analysis; causal modeling).",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of chi-square calculations.",
+      "suggestedLesson": "7-stats-tests",
+      "suggestedParagraph": "## The Chi-Square Test: Analyzing Categories",
+      "lessonExcerpt": "Expected frequencies are calculated by multiplying the row total by the column total and dividing by the grand total.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 8,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Stats Tests.json",
+      "domain": 7,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Stats Tests.json::4",
+      "isScored": true
+    },
+    {
+      "stem": "What is the primary ethical concern regarding referral fees in therapy?",
+      "options": [
+        "They can create a conflict of interest.",
+        "They are always illegal.",
+        "They ensure therapists are compensated fairly.",
+        "They enhance client trust."
+      ],
+      "answer": "They can create a conflict of interest.",
+      "explanation": "Referral fees can lead to conflicts of interest where the therapist may prioritize financial gain over the best interests of the client. The other options misrepresent the nature of referral fees; they are not inherently illegal, do not guarantee fair compensation, and do not necessarily enhance trust.",
+      "kn": "KN64",
+      "kn_explanation": "This question is best aligned with KN64 because it tests Identification and management of potential ethical issues.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively highlights the ethical implications of referral fees in therapeutic settings.",
+      "suggestedLesson": "8-practice-issues",
+      "suggestedParagraph": "## What Actually Gets Psychologists in Trouble",
+      "lessonExcerpt": "Non-sexual dual relationships (becoming friends, business partners with clients).",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 3,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json",
+      "domain": 8,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json::36",
+      "isScored": true
+    }
+  ]
+}

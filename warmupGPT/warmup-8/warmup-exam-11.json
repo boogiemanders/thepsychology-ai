@@ -1,0 +1,209 @@
+{
+  "meta": {
+    "examId": "warmup-8-11",
+    "totalQuestions": 8,
+    "examType": "warmup",
+    "warmupLength": 8,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 1,
+      "7": 1,
+      "8": 1
+    },
+    "generatedAt": "2026-04-25T05:50:04.487Z"
+  },
+  "questions": [
+    {
+      "stem": "Damage to the occipital lobe's primary visual cortex with intact eyes and optic nerves produces which of the following conditions?",
+      "options": [
+        "Prosopagnosia",
+        "Cortical blindness",
+        "Tactile agnosia",
+        "Broca’s aphasia"
+      ],
+      "answer": "Cortical blindness",
+      "explanation": "1. \"Cortical blindness\" is the correct answer because it occurs when the primary visual cortex in the occipital lobe is damaged while the eyes and optic nerves remain intact. This condition results in the inability to consciously see visual stimuli, despite having functional visual pathways, leading to a lack of awareness of visual information.\n\n2. The incorrect options are as follows:\n- **Prosopagnosia**: This condition is characterized by an inability to recognize familiar faces and is caused by bilateral lesions in the occipitotemporal junction, not damage to the primary visual cortex alone.\n- **Tactile agnosia**: This refers to the inability to recognize objects by touch and is associated with damage to the parietal lobe, specifically the somatosensory cortex, rather than the occipital lobe.\n- **Broca’s aphasia**: Also known as expressive aphasia, this disorder arises from damage to Broca’s area in the frontal lobe, affecting speech production and language expression, which is unrelated to visual processing in the occipital lobe.",
+      "kn": "KN1",
+      "kn_explanation": "This question tests neuroanatomical understanding of visual processing deficits, within the biological bases of behavior (KN1).",
+      "difficulty": "medium",
+      "quality_comment": "Options include relevant neuropsychological disorders, forcing test takers to identify specific visual deficits.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Cerebral Cortex.json",
+      "domain": 1,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Cerebral Cortex.json::27",
+      "isScored": true
+    },
+    {
+      "stem": "What process describes memory retrieval that is triggered by sensory input?",
+      "options": [
+        "Rehearsal",
+        "Priming",
+        "Encoding",
+        "Chunking"
+      ],
+      "answer": "Priming",
+      "explanation": "The correct answer is 'Priming' because it refers to the process where exposure to a stimulus influences the response to a subsequent stimulus, often triggered by sensory input. The other options do not specifically relate to retrieval triggered by sensory input.",
+      "kn": "KN8",
+      "kn_explanation": "This question is best aligned with KN8 because it tests Major research-based theories and models of memory and their application.",
+      "difficulty": "medium",
+      "quality_comment": "The question accurately tests knowledge of memory retrieval processes.",
+      "suggestedLesson": "2-memory",
+      "suggestedParagraph": "## Memory and Forgetting: Your Complete EPPP Guide",
+      "lessonExcerpt": "Priming refers to the process where exposure to a stimulus influences the response to a subsequent stimulus.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 4,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Memory.json",
+      "domain": 2,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Memory.json::29",
+      "isScored": true
+    },
+    {
+      "stem": "McGuire’s attitude inoculation hypothesis proposes that resistance to persuasion is increased by:",
+      "options": [
+        "Providing only strong arguments supporting the current attitude",
+        "Exposing recipients to comprehensive convincing counterarguments",
+        "Presenting weak attacks on current attitudes along with refutations before exposure to persuasive messages",
+        "Avoiding exposure to any arguments that challenge the recipient's attitudes"
+      ],
+      "answer": "Presenting weak attacks on current attitudes along with refutations before exposure to persuasive messages",
+      "explanation": "1. The correct answer, \"Presenting weak attacks on current attitudes along with refutations before exposure to persuasive messages,\" aligns with McGuire’s attitude inoculation hypothesis. This hypothesis suggests that by exposing individuals to weak arguments against their existing beliefs and providing counterarguments to refute those weak attacks, individuals can build resistance to stronger persuasive messages they may encounter later. This process is akin to immunization, where individuals are better prepared to defend their attitudes after being \"inoculated\" against potential persuasion attempts.\n\n2. The first incorrect option, \"Providing only strong arguments supporting the current attitude,\" is wrong because it does not involve any challenge to the existing attitudes, which is essential for building resistance to persuasion. The second incorrect option, \"Exposing recipients to comprehensive convincing counterarguments,\" is incorrect as it focuses on strong counterarguments rather than the weak attacks necessary for inoculation; the goal is to prepare individuals against weaker challenges. Lastly, the option \"Avoiding exposure to any arguments that challenge the recipient's attitudes\" is incorrect because it does not allow for the development of resistance; without any exposure to challenges, individuals remain vulnerable to future persuasive messages.",
+      "kn": "KN16",
+      "kn_explanation": "This question focuses on strategies to enhance resistance to persuasion, a component of group and systems processes influencing social behavior (KN16).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are plausible but only one describes inoculation theory correctly, making it an effective question.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Persuasion.json",
+      "domain": 3,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Persuasion.json::11",
+      "isScored": true
+    },
+    {
+      "stem": "How might children typically respond emotionally to their parents' divorce?",
+      "options": [
+        "They show no significant changes in behavior",
+        "They may experience a range of emotions including sadness and anger",
+        "They become more independent immediately",
+        "They often blame themselves for the divorce"
+      ],
+      "answer": "They may experience a range of emotions including sadness and anger",
+      "explanation": "Children often experience a range of emotions such as sadness, anger, and confusion in response to parental divorce. The other options either underestimate the emotional impact or misrepresent typical responses.",
+      "kn": "KN25",
+      "kn_explanation": "This question is best aligned with KN25 because it tests Family development, configuration, and functioning and their impact on the individual across the lifespan.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of children's emotional responses to divorce.",
+      "suggestedLesson": "4-school-and-family",
+      "suggestedParagraph": "## How Divorce Affects Children",
+      "lessonExcerpt": "The impact on children varies significantly based on several factors.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 7,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 School and Family.json",
+      "domain": 4,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 School and Family.json::15",
+      "isScored": true
+    },
+    {
+      "stem": "Epidemiological research on autism spectrum disorder (ASD) consistently identifies a significant difference in diagnostic prevalence between males and females. Which of the following most accurately describes the male-to-female sex ratio in ASD diagnoses across population-based studies?",
+      "options": [
+        "Approximately 1:1, with equal prevalence in males and females",
+        "Approximately 2:1, with males diagnosed twice as often as females",
+        "Approximately 4:1, with males diagnosed approximately four times as often as females",
+        "Approximately 8:1, with males dramatically overrepresented across all age groups"
+      ],
+      "answer": "Approximately 4:1, with males diagnosed approximately four times as often as females",
+      "explanation": "Epidemiological research consistently estimates a male-to-female ratio of approximately 4:1 in ASD diagnoses. This disparity is thought to reflect a combination of genuine biological sex differences in vulnerability and the possibility that females are underdiagnosed because they may camouflage or 'mask' symptoms more effectively—a phenomenon that has gained increased research attention. A 1:1 ratio would imply equal prevalence, which contradicts established epidemiological data. A 2:1 ratio underestimates the disparity documented in population studies. An 8:1 ratio substantially overestimates the difference and is not supported by current community-based research.",
+      "kn": "KN38",
+      "kn_explanation": "This question is best aligned with KN38 because it tests Constructs of epidemiology and base rates of psychological and behavioral disorders.",
+      "difficulty": "medium",
+      "quality_comment": "Focused factual question with well-spaced numerical distractors spanning above and below the correct ratio; tests a frequently examined EPPP epidemiological fact.",
+      "suggestedLesson": "5-neurodevelopmental",
+      "suggestedParagraph": "## Autism Spectrum Disorder Epidemiology",
+      "lessonExcerpt": "Not found in provided lesson content. Needs review.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 13,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Neurodevelopmental.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Neurodevelopmental.json::3",
+      "isScored": true
+    },
+    {
+      "stem": "In Jungian analytical psychology, the process by which an individual attributes qualities from their own unconscious—particularly disowned or unacceptable aspects of the self—onto other people or external situations is most closely associated with which archetype?",
+      "options": [
+        "The persona",
+        "The anima/animus",
+        "The shadow",
+        "The self"
+      ],
+      "answer": "The shadow",
+      "explanation": "In Jungian psychology, the shadow represents one's hidden, dark, or unacceptable aspects. When individuals project shadow material outward, they attribute their own disowned qualities onto others. Jungians specifically view transference as a projection of the personal and/or collective unconscious. The persona (A) is the social mask—the public face presented to the world, not the source of projected negative material. The anima/animus (B) represents the feminine/masculine aspects of the psyche. The self (C) is the transcendent part of the psyche that encompasses all archetypes and represents the goal of individuation—wholeness and integration.",
+      "kn": "KN43",
+      "kn_explanation": "Jungian projection is a theory/model of treatment and intervention",
+      "difficulty": "medium",
+      "quality_comment": "Well-supported question testing integration of Jungian archetype concepts with the defense mechanism of projection.",
+      "suggestedLesson": "6-psychodynamic-and-humanistic",
+      "suggestedParagraph": "### Jung's Analytical Psychology: Beyond Freud",
+      "lessonExcerpt": "Important archetypes include the persona (your public mask), shadow (your dark side), hero, and anima/animus (feminine/masculine aspects)... Jungians see transference as a projection of the personal and/or collective unconscious.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 20,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Psychodynamic and Humanistic Therapies.json",
+      "domain": 6,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Psychodynamic and Humanistic Therapies.json::3",
+      "isScored": true
+    },
+    {
+      "stem": "A researcher draws random samples from a population with a standard deviation of 20. If she increases her sample size from 25 to 100, what will happen to the standard error of the mean?",
+      "options": [
+        "It will decrease from 4.0 to 2.0",
+        "It will decrease from 4.0 to 1.0",
+        "It will decrease from 0.8 to 0.2",
+        "It will remain the same because the population standard deviation has not changed"
+      ],
+      "answer": "It will decrease from 4.0 to 2.0",
+      "explanation": "The standard error of the mean equals the population standard deviation divided by the square root of the sample size (SE = SD/√n). With n=25: SE = 20/√25 = 20/5 = 4.0. With n=100: SE = 20/√100 = 20/10 = 2.0. The lesson states that 'the standard deviation of this sampling distribution (called the standard error) equals the population standard deviation divided by the square root of your sample size' and emphasizes that 'the standard error gets smaller as sample size increases.' Option B (1.0) incorrectly divides by the sample size rather than its square root. Option C uses incorrect values. Option D ignores the role of sample size.",
+      "kn": "KN53",
+      "kn_explanation": "This question is best aligned with KN53 because it tests Sampling and data collection methods.",
+      "difficulty": "medium",
+      "quality_comment": "Good computational question that tests both the formula and conceptual understanding of standard error. Distractors target common calculation errors.",
+      "suggestedLesson": "7-inferential-stats",
+      "suggestedParagraph": "### The Central Limit Theorem: Three Critical Predictions",
+      "lessonExcerpt": "The standard deviation of this sampling distribution (called the standard error) equals the population standard deviation divided by the square root of your sample size.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 4,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Inferential Stats.json",
+      "domain": 7,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Inferential Stats.json::3",
+      "isScored": true
+    },
+    {
+      "stem": "Dr. Patel is a psychologist in a small rural community where she also serves on the school board. A school board member's teenager is referred to her for therapy. According to the APA Ethics Code, under what condition would this multiple relationship be permissible?",
+      "options": [
+        "Only if Dr. Patel obtains written informed consent from the school board member",
+        "Only if the relationship would not reasonably be expected to impair her objectivity, competence, or effectiveness or risk exploitation or harm",
+        "Only if another psychologist in the community is unavailable to provide services",
+        "Multiple relationships are never permissible under any circumstances according to the Ethics Code"
+      ],
+      "answer": "Only if the relationship would not reasonably be expected to impair her objectivity, competence, or effectiveness or risk exploitation or harm",
+      "explanation": "The APA Ethics Code does not prohibit all multiple relationships—only those that could reasonably be expected to impair objectivity, competence, or effectiveness or risk exploitation or harm. Option A is insufficient because informed consent alone does not make a problematic multiple relationship ethical. Option C incorrectly suggests unavailability of other providers is the standard. Option D is incorrect because the Ethics Code explicitly recognizes that not all multiple relationships are prohibited.",
+      "kn": "KN61",
+      "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
+      "difficulty": "medium",
+      "quality_comment": "Strong question testing a common EPPP misconception that all multiple relationships are prohibited. The rural setting adds realistic context.",
+      "suggestedLesson": "8-standards-3-4",
+      "suggestedParagraph": "### Multiple Relationships: The Most Complex Standard",
+      "lessonExcerpt": "Not all multiple relationships are prohibited. Only those that \"could reasonably be expected to impair objectivity, competence, or effectiveness\" or risk exploitation or harm.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 21,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 3 and 4.json",
+      "domain": 8,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 3 and 4.json::37",
+      "isScored": true
+    }
+  ]
+}

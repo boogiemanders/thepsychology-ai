@@ -1,0 +1,278 @@
+{
+  "meta": {
+    "examId": "warmup-12-15",
+    "totalQuestions": 12,
+    "examType": "warmup",
+    "warmupLength": 12,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 2,
+      "4": 1,
+      "5": 3,
+      "6": 1,
+      "7": 1,
+      "8": 1,
+      "3-5-6": 1
+    },
+    "generatedAt": "2026-04-25T05:50:04.489Z"
+  },
+  "questions": [
+    {
+      "stem": "A 52-year-old client presents with depressed mood, lethargy, weight gain, cold intolerance, slowed heart rate, and difficulty concentrating. Before concluding that the client has a primary depressive disorder, which endocrine condition should be strongly considered?",
+      "options": [
+        "Hyperthyroidism",
+        "Cushing's disease",
+        "Hypothyroidism",
+        "Addison's disease"
+      ],
+      "answer": "Hypothyroidism",
+      "explanation": "Hypothyroidism is the best answer because it is associated with decreased metabolism, cold intolerance, weight gain, lethargy, depression, and impaired concentration and memory. Hyperthyroidism is wrong because it is more associated with heat intolerance, weight loss, insomnia, and emotional instability. Cushing's disease can involve mood symptoms, but the combination of cold intolerance and slowed physiology points away from it. Addison's disease can include depression and weakness but does not best fit this classic thyroid presentation.",
+      "kn": "KN1",
+      "kn_explanation": "This question focuses on biological determinants of mood and cognition by testing recognition of an endocrine disorder that mimics depression.",
+      "difficulty": "medium",
+      "quality_comment": "Good medical-rule-out item for psychiatry versus endocrine mimicry.",
+      "suggestedLesson": "1-neurological-endocrine-disorders",
+      "suggestedParagraph": "### Thyroid Disorders",
+      "lessonExcerpt": "Hypothyroidism (too little thyroid hormone): Decreased metabolism, lowered temperature, cold intolerance. Reduced appetite with weight gain. Slowed heart rate. Depression, lethargy, decreased libido. Confusion, impaired concentration and memory.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Neurological and Endocrine Disorders.json",
+      "domain": 1,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Neurological and Endocrine Disorders.json::2",
+      "isScored": true
+    },
+    {
+      "stem": "In Lazarus’s cognitive appraisal theory, what occurs during the primary appraisal of an event?",
+      "options": [
+        "Evaluating if the event is irrelevant, benign-positive, or stressful and identifying threat, challenge, or harm/loss",
+        "Determining available coping options and their likelihood of success",
+        "Monitoring and changing previous appraisals as new information emerges",
+        "Experiencing physiological arousal in response to the event"
+      ],
+      "answer": "Evaluating if the event is irrelevant, benign-positive, or stressful and identifying threat, challenge, or harm/loss",
+      "explanation": "1. The correct answer, \"Evaluating if the event is irrelevant, benign-positive, or stressful and identifying threat, challenge, or harm/loss,\" aligns with Lazarus’s cognitive appraisal theory, which posits that primary appraisal involves assessing an event's significance. During this stage, individuals determine whether the event is benign, irrelevant, or potentially harmful, and if harmful, they classify it as a threat, challenge, or loss, setting the stage for subsequent emotional responses and coping strategies.\n\n2. The option \"Determining available coping options and their likelihood of success\" is incorrect because this process occurs during secondary appraisal, not primary appraisal. The statement \"Monitoring and changing previous appraisals as new information emerges\" refers to reappraisal, which happens after the initial appraisals have been made, making it an incorrect choice for primary appraisal. Lastly, \"Experiencing physiological arousal in response to the event\" is also incorrect, as Lazarus's theory asserts that physiological arousal follows cognitive appraisal rather than occurring simultaneously or prior to it.",
+      "kn": "KN10",
+      "kn_explanation": "This question probes the cognitive process central to appraisal theory of emotion, a key research-based model under KN10.",
+      "difficulty": "medium",
+      "quality_comment": "The answer options represent different appraisal components; the correct response is clearly distinct and the stem is concisely worded.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Stress and Emotion.json",
+      "domain": 2,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Stress and Emotion.json::26",
+      "isScored": true
+    },
+    {
+      "stem": "Illusory correlation often leads to which of the following social cognitive errors?",
+      "options": [
+        "Overestimating the frequency of negative behaviors in minority groups",
+        "Ignoring base rate statistics in favor of anecdotes",
+        "Assuming a chance event's outcome will change due to past outcomes",
+        "Believing others' opinions match your own"
+      ],
+      "answer": "Overestimating the frequency of negative behaviors in minority groups",
+      "explanation": "1. \"Overestimating the frequency of negative behaviors in minority groups\" is the correct answer because it exemplifies the concept of *illusory correlation*, which occurs when individuals mistakenly perceive a relationship between two variables that are not significantly related. This cognitive error leads people to overestimate how often negative behaviors occur among minority groups, reinforcing stereotypes and biases.\n\n2. The option \"Ignoring base rate statistics in favor of anecdotes\" is incorrect because it describes the *base rate fallacy*, which specifically involves neglecting statistical information about the general population in favor of specific, often anecdotal, cases. \"Assuming a chance event's outcome will change due to past outcomes\" is wrong because this describes the *gambler’s fallacy*, where individuals believe that previous outcomes influence future random events, not illusory correlations. Lastly, \"Believing others' opinions match your own\" is incorrect as it refers to the *false consensus effect*, which involves overestimating the extent to which others share one's beliefs, rather than misjudging the frequency of behaviors in a group.",
+      "kn": "KN14",
+      "kn_explanation": "This item assesses understanding of illusory correlation, a bias in social cognition relating to stereotype formation and erroneous associations.",
+      "difficulty": "medium",
+      "quality_comment": "The distractors are plausible but distinct errors; the correct answer draws from a clear example, enhancing clarity and discriminability.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Errors and Shortcuts.json",
+      "domain": 3,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Errors and Shortcuts.json::25",
+      "isScored": true
+    },
+    {
+      "stem": "A psychologist working in a residential facility for adults with intellectual disabilities notices that staff members consistently attribute a resident's social withdrawal, appetite changes, and sleep disturbance solely to the resident's intellectual disability rather than considering a possible mood disorder. This pattern BEST illustrates:",
+      "options": [
+        "Confirmation bias",
+        "Diagnostic overshadowing",
+        "Fundamental attribution error",
+        "Anchoring heuristic"
+      ],
+      "answer": "Diagnostic overshadowing",
+      "explanation": "Diagnostic overshadowing originally described the tendency to attribute all problems of people with intellectual disabilities to that diagnosis while overlooking other conditions, such as comorbid psychiatric disorders. In this case, symptoms consistent with depression are being attributed to the intellectual disability rather than being evaluated as a separate condition. Confirmation bias involves seeking information that confirms preexisting beliefs. The fundamental attribution error involves overattributing behavior to dispositional rather than situational factors. The anchoring heuristic involves over-reliance on an initial piece of information when making judgments.",
+      "kn": "KN35",
+      "kn_explanation": "This question is best aligned with KN35 because it tests Criteria for selection and adaptation of assessment methods (e.g., evidenced-based knowledge of assessment limitations, cultural appropriateness, trans-cultural adaptation, and language accommodations).",
+      "difficulty": "medium",
+      "quality_comment": "Uses the classic population (intellectual disability) where diagnostic overshadowing was originally described, grounded directly in lesson content",
+      "suggestedLesson": "3-cultural-concepts",
+      "suggestedParagraph": "## Diagnostic Overshadowing: When One Factor Eclipses Everything",
+      "lessonExcerpt": "Diagnostic overshadowing originally described attributing all problems of people with intellectual disabilities to that diagnosis, overlooking other issues.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 17,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Concepts.json",
+      "domain": 3,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Concepts.json::10",
+      "isScored": true
+    },
+    {
+      "stem": "What is a major criticism of Kohlberg's moral development theory regarding cultural applicability?",
+      "options": [
+        "Stages 5 and 6 are more characteristic of Western than non-Western cultures.",
+        "All stages are equally observed in all cultures worldwide.",
+        "The theory focuses exclusively on non-Western cultural norms.",
+        "Kohlberg disregards laws and social rules in moral reasoning."
+      ],
+      "answer": "Stages 5 and 6 are more characteristic of Western than non-Western cultures.",
+      "explanation": "1. The correct answer, \"Stages 5 and 6 are more characteristic of Western than non-Western cultures,\" reflects a major criticism of Kohlberg's moral development theory. Critics argue that Kohlberg's stages, particularly the higher stages of postconventional morality, emphasize individual rights and justice, which are more aligned with Western cultural values. In contrast, non-Western cultures may prioritize communal values and relationships, making Kohlberg's framework less applicable to those contexts.\n\n2. The incorrect option \"All stages are equally observed in all cultures worldwide\" is wrong because it inaccurately suggests that Kohlberg's stages apply uniformly across diverse cultural contexts, which critics argue is not the case. The statement \"The theory focuses exclusively on non-Western cultural norms\" is incorrect as Kohlberg's research primarily involved Western subjects, leading to the oversight of non-Western perspectives. Lastly, the option \"Kohlberg disregards laws and social rules in moral reasoning\" is incorrect because Kohlberg's theory explicitly incorporates laws and social rules, particularly in the conventional stages of moral reasoning, indicating their importance in his framework.",
+      "kn": "KN23",
+      "kn_explanation": "This question addresses cultural bias criticisms of developmental moral reasoning theories, appropriate for KN23.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors include plausible but incorrect claims about cultural generality, making the correct answer stand out with relevant cultural knowledge.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Morality.json",
+      "domain": 4,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Morality.json::23",
+      "isScored": true
+    },
+    {
+      "stem": "An adult client is recovering from a stroke and has severe expressive speech difficulties but can point accurately to visual stimuli. The psychologist wants to measure the client's receptive vocabulary with minimal verbal output demands. Which instrument is most appropriate?",
+      "options": [
+        "PPVT-5",
+        "Leiter-3",
+        "CogAT7",
+        "CMMS"
+      ],
+      "answer": "PPVT-5",
+      "explanation": "The PPVT-5 is the best answer because it measures receptive vocabulary by having the client point to one of four pictures after hearing a word, which minimizes expressive language demands. Leiter-3 is wrong because it is a broader nonverbal cognitive measure rather than a vocabulary test. CogAT7 is wrong because it is a group test used primarily for educational planning. CMMS is wrong because it measures general reasoning ability in children rather than receptive vocabulary in adults.",
+      "kn": "KN32",
+      "kn_explanation": "This question assesses knowledge of commonly used instruments and their appropriate use with specific populations.",
+      "difficulty": "medium",
+      "quality_comment": "Good applied assessment-selection item with a clinically realistic aphasia-style vignette.",
+      "suggestedLesson": "5-cognitive-tests",
+      "suggestedParagraph": "### Tests for When Words Get in the Way",
+      "lessonExcerpt": "The PPVT-5 measures receptive vocabulary. You show someone four pictures and say a word. They point to the picture that matches the word. That's it. No speaking required.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Cognitive Tests.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Cognitive Tests.json::1",
+      "isScored": true
+    },
+    {
+      "stem": "Which assessment theory emphasizes the integration of historical, contextual, and systemic factors in understanding mood disorders?",
+      "options": [
+        "Classical test theory",
+        "Biopsychosocial model",
+        "Behavioral activation model",
+        "Psychodynamic formulation"
+      ],
+      "answer": "Biopsychosocial model",
+      "explanation": "1. The \"Biopsychosocial model\" is the correct answer because it emphasizes the integration of biological, psychological, and social factors, including historical and contextual elements, in understanding mood disorders such as bipolar and depressive disorders. This model aligns with the etiology of these disorders, which includes heredity, environmental influences, and cognitive-behavioral factors, thereby providing a comprehensive framework for assessment and treatment.\n\n2. \n- **Classical test theory**: This theory focuses on the reliability and validity of psychological tests, emphasizing measurement rather than the integration of contextual and systemic factors in understanding mood disorders.\n- **Behavioral activation model**: This model primarily centers on changing behaviors that contribute to depression, focusing on the present and immediate factors rather than the historical and contextual influences on mood disorders.\n- **Psychodynamic formulation**: While this approach considers unconscious processes and early experiences, it does not systematically integrate biological and social factors, making it less comprehensive than the biopsychosocial model in understanding mood disorders.",
+      "kn": "KN30",
+      "kn_explanation": "This question targets assessment theories that guide comprehensive evaluation of mood disorders by integrating diverse factors (KN30).",
+      "difficulty": "medium",
+      "quality_comment": "Choices include plausible models, requiring knowledge of theoretical frameworks in assessment.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Mood.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Mood.json::20",
+      "isScored": true
+    },
+    {
+      "stem": "A client obtains a T-score of 70 on a standardized anxiety measure that has a normal distribution. What is the client's approximate percentile rank?",
+      "options": [
+        "70th percentile",
+        "84th percentile",
+        "95th percentile",
+        "98th percentile"
+      ],
+      "answer": "98th percentile",
+      "explanation": "A T-score of 70 corresponds to 2 standard deviations above the mean (T-scores have M=50, SD=10; so 70 = 50 + 2×10). In a normal distribution, a score at +2 SD corresponds to approximately the 98th percentile. The lesson provides the conversion table showing that +2 SD = T-score of 70 = z-score of +2.0 = percentile rank of 98. Option A (70th) confuses the T-score value with a percentile rank. Option B (84th) corresponds to +1 SD (T-score of 60). Option C (95th) is incorrect and may be confused with the 95% confidence interval.",
+      "kn": "KN56",
+      "kn_explanation": "This question is best aligned with KN56 because it tests Statistical interpretation (e.g., power, effect size, causation vs. association, clinical vs. statistical significance).",
+      "difficulty": "medium",
+      "quality_comment": "Clean, straightforward conversion question. Tests memorization of the standard score equivalency table which is essential EPPP knowledge.",
+      "suggestedLesson": "5-interpreting-scores",
+      "suggestedParagraph": "### The Critical Table: Standard Score Equivalents",
+      "lessonExcerpt": "| +2 SD | +2.0 | 70 | 130 | 9 | 98 |",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 2,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Interpreting Scores.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Interpreting Scores.json::2",
+      "isScored": true
+    },
+    {
+      "stem": "In Bateson's communication theory relevant to family therapy, what characterizes a 'double-bind' communication pattern?",
+      "options": [
+        "Receiving two contradictory messages simultaneously with no opportunity to resolve the contradiction",
+        "Communicating in a way that reflects equality and reciprocal behavior",
+        "Assuming a dominant-subordinate interaction pattern consistently",
+        "Blaming one family member to avoid addressing the real conflict"
+      ],
+      "answer": "Receiving two contradictory messages simultaneously with no opportunity to resolve the contradiction",
+      "explanation": "1. The correct answer, \"Receiving two contradictory messages simultaneously with no opportunity to resolve the contradiction,\" accurately describes a 'double-bind' communication pattern as identified by Bateson. This type of communication creates a paradox for the recipient, where they receive conflicting messages that prevent them from responding appropriately, leading to confusion and distress, which Bateson linked to the development of schizophrenia.\n\n2. The first incorrect option, \"Communicating in a way that reflects equality and reciprocal behavior,\" is wrong because it describes symmetrical interactions, where behaviors are equal and reciprocal, rather than contradictory. The second option, \"Assuming a dominant-subordinate interaction pattern consistently,\" is incorrect as it refers to complementary interactions, which involve unequal power dynamics, not the contradictory nature of double-bind communication. Lastly, the option \"Blaming one family member to avoid addressing the real conflict\" is mistaken because it pertains to a detouring-support coalition, where blame is used as a strategy to divert attention from the core issues, rather than the simultaneous contradictions characteristic of a double-bind.",
+      "kn": "KN46",
+      "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
+      "difficulty": "medium",
+      "quality_comment": "The options provide distractors that are related communication or interaction styles, making the correct answer stand out with its unique paradoxical nature.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Family and Group.json",
+      "domain": 6,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Family and Group.json::14",
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following best describes a violation of independence in the context of a chi-square test?",
+      "options": [
+        "Participants in one group influence the responses of participants in another group.",
+        "The sample size is too small to draw valid conclusions.",
+        "The expected frequencies are too low for accurate analysis.",
+        "The variables being tested are not categorical."
+      ],
+      "answer": "Participants in one group influence the responses of participants in another group.",
+      "explanation": "A violation of independence occurs when the responses of one group affect another, which undermines the assumptions of the chi-square test. The other options describe issues related to sample size or data type but do not pertain to independence.",
+      "kn": "KN53",
+      "kn_explanation": "This question is best aligned with KN53 because it tests Sampling and data collection methods.",
+      "difficulty": "medium",
+      "quality_comment": "The question is well-structured and assesses understanding of chi-square test assumptions.",
+      "suggestedLesson": "7-stats-tests",
+      "suggestedParagraph": "## The Chi-Square Test: Analyzing Categories",
+      "lessonExcerpt": "Independence means that the responses of one participant do not influence the responses of another.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 4,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Stats Tests.json",
+      "domain": 7,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Stats Tests.json::3",
+      "isScored": true
+    },
+    {
+      "stem": "Why must psychologists maintain thorough professional records?",
+      "options": [
+        "To facilitate accurate billing and ensure legal compliance.",
+        "To create marketing materials for future client recruitment.",
+        "To share with colleagues without client consent for peer review.",
+        "To discard forensic notes to protect client privacy post-trial."
+      ],
+      "answer": "To facilitate accurate billing and ensure legal compliance.",
+      "explanation": "1. The correct answer, \"To facilitate accurate billing and ensure legal compliance,\" is supported by Standard 6.01, which emphasizes the importance of maintaining professional records for reasons such as ensuring accurate billing and complying with legal and institutional requirements. Accurate records are crucial not only for the financial aspects of practice but also for meeting legal obligations, particularly in forensic settings where detailed documentation is essential.\n\n2. The option \"To create marketing materials for future client recruitment\" is incorrect because the Ethics Code does not endorse using client records for marketing purposes, as it would violate confidentiality and ethical standards. The statement \"To share with colleagues without client consent for peer review\" is wrong because psychologists must respect client confidentiality and cannot share records without consent, even for peer review. Finally, the option \"To discard forensic notes to protect client privacy post-trial\" is inaccurate since maintaining records, especially in forensic contexts, is critical for legal compliance and they should not be discarded prematurely, as they may be subject to discovery.",
+      "kn": "KN62",
+      "kn_explanation": "This question is best aligned with KN62 because it tests Professional standards and relevant guidelines for the practice of psychology (e.g., standards for educational and psychological testing).",
+      "difficulty": "medium",
+      "quality_comment": "Options are balanced and the correct answer reflects foundational ethical record-keeping practices, reinforcing important clinical documentation guidelines.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 5 and 6.json",
+      "domain": 8,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 5 and 6.json::33",
+      "isScored": true
+    },
+    {
+      "stem": "Which method involves collecting employee feedback via surveys, sharing the summary results with employees, and collaboratively developing an action plan?",
+      "options": [
+        "Process consultation",
+        "Survey feedback",
+        "Total Quality Management",
+        "Business process reengineering"
+      ],
+      "answer": "Survey feedback",
+      "explanation": "1. **Correct Answer: Survey feedback**  \n\"Survey feedback\" is the correct answer because it specifically involves the process of collecting data from employees through surveys, summarizing the results, and sharing this information with employees to help them understand the organization's strengths and weaknesses. Following this, employees collaborate with management to develop an action plan to address identified issues, aligning perfectly with the question.\n\n2. **Incorrect Options:**\n- **Process consultation:** This method focuses on improving organizational processes like communication and decision-making, rather than collecting feedback through surveys and collaboratively developing action plans.\n- **Total Quality Management (TQM):** TQM emphasizes continuous improvement across all processes and involves various techniques such as quality circles and benchmarking, but it does not specifically include the survey feedback process described in the question.\n- **Business process reengineering:** This method centers on radically redesigning core processes to improve efficiency and does not involve the collection of employee feedback or the collaborative development of action plans based on survey results.",
+      "kn": "KN46",
+      "kn_explanation": "This question focuses on specific OD methods aimed at improving organizational climate and effectiveness, tied to intervention strategies (KN46).",
+      "difficulty": "medium",
+      "quality_comment": "All options are valid OD methods, making the question a fair test differentiating their key characteristics.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/6 How Orgs Change.json",
+      "domain": "3-5-6",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/6 How Orgs Change.json::12",
+      "isScored": true
+    }
+  ]
+}

@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import { X } from 'lucide-react'
 import { useAuth } from '@/context/auth-context'
 
-const DISMISS_KEY = 'new-exams-16-total-march-2026-dismissed'
+const DISMISS_KEY = 'warmup-launch-april-2026-dismissed'
 
 export function NewExamsBanner() {
   const { userProfile } = useAuth()
@@ -14,9 +14,8 @@ export function NewExamsBanner() {
     setDismissed(!!localStorage.getItem(DISMISS_KEY))
   }, [])
 
-  // Show to pro users only (they're the ones who take practice exams)
+  // Show to any signed-in user — Warm Up is free for everyone
   if (!userProfile) return null
-  if (userProfile.subscription_tier !== 'pro') return null
   if (dismissed) return null
 
   const handleDismiss = () => {
@@ -35,10 +34,10 @@ export function NewExamsBanner() {
       </button>
       <div className="pr-8">
         <p className="text-sm font-medium text-foreground">
-          12 new practice exams added — 16 total
+          Shorter quizzes. You asked, we shipped.
         </p>
         <p className="text-sm text-muted-foreground mt-0.5">
-          We've expanded the exam pool from 4 to 16 practice exams, each with 225 unique questions across all 8 EPPP domains. Start a new practice exam to try them out.
+          Warm Up gives you 8 or 12 questions, one from each domain. Try it in Practice.
         </p>
       </div>
     </div>

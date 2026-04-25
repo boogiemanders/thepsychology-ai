@@ -1,0 +1,279 @@
+{
+  "meta": {
+    "examId": "warmup-12-32",
+    "totalQuestions": 12,
+    "examType": "warmup",
+    "warmupLength": 12,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 2,
+      "4": 1,
+      "5": 3,
+      "6": 1,
+      "7": 1,
+      "8": 1,
+      "3-5-6": 1
+    },
+    "generatedAt": "2026-04-25T05:56:49.914421Z"
+  },
+  "questions": [
+    {
+      "stem": "What is the primary role of the cerebellum in motor coordination?",
+      "options": [
+        "Initiating movement",
+        "Balancing the body",
+        "Storing procedural memories",
+        "Regulating emotional responses"
+      ],
+      "answer": "Balancing the body",
+      "explanation": "The cerebellum is crucial for maintaining balance and coordinating voluntary movements. While it also stores procedural memories, its primary role in the context of motor coordination is balance. Initiating movement is primarily the role of the motor cortex, and regulating emotional responses is associated with the limbic system.",
+      "kn": "KN1",
+      "kn_explanation": "This question relates to the biological bases of behavior, specifically the cerebellum's function in motor coordination.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of cerebellar function.",
+      "suggestedLesson": "1-hindbrain-midbrain-forebrain",
+      "suggestedParagraph": "### Cerebellum (More Than Just Balance)",
+      "lessonExcerpt": "The cerebellum coordinates voluntary movements and maintains posture.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 8,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Hindbrain, Midbrain, and Forebrain.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Hindbrain, Midbrain, and Forebrain.json::8",
+      "domain": 1,
+      "isScored": true
+    },
+    {
+      "stem": "According to equity theory, how does perceived fairness affect work effort?",
+      "options": [
+        "It has no impact on motivation.",
+        "It increases effort when individuals feel under-rewarded.",
+        "It decreases effort when individuals feel over-rewarded.",
+        "It influences effort based on perceived fairness compared to others."
+      ],
+      "answer": "It influences effort based on perceived fairness compared to others.",
+      "explanation": "Equity theory posits that individuals assess their work effort based on perceived fairness in comparison to others. If they perceive inequity, it can lead to changes in effort. The other options do not accurately reflect the principles of equity theory.",
+      "kn": "KN10",
+      "kn_explanation": "This question is best aligned with KN10 because it tests Major research-based theories and models of emotion and their application.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests understanding of equity theory and its implications for work effort.",
+      "suggestedLesson": "2-stress-and-emotion",
+      "suggestedParagraph": "## Why Understanding Emotions and Stress Matters for Your EPPP Success",
+      "lessonExcerpt": "Equity theory posits that individuals assess their work effort based on perceived fairness in comparison to others.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 10,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Stress and Emotion.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Stress and Emotion.json::3",
+      "domain": 2,
+      "isScored": true
+    },
+    {
+      "stem": "Which technique involves making a large initial request that is expected to be refused, followed by a smaller, more reasonable request?",
+      "options": [
+        "Foot-in-the-door technique",
+        "Door-in-the-face technique",
+        "That's-not-all technique",
+        "Reciprocity technique"
+      ],
+      "answer": "Door-in-the-face technique",
+      "explanation": "1. The \"Door-in-the-face technique\" is the correct answer because it involves a two-step process where an influencer first makes a large request that is likely to be refused, followed by a smaller, more reasonable request. This technique relies on perceptual contrast, making the second request appear more acceptable after the first larger request, and utilizes the norm of mutual reciprocity, as individuals may feel compelled to agree after the influencer has made a concession.\n\n2. The \"Foot-in-the-door technique\" is incorrect because it starts with a small request that is easily accepted, followed by a larger request, rather than beginning with a large request. The \"That's-not-all technique\" is wrong as it involves adding additional incentives to a request before the person has a chance to respond, rather than using a two-step process of large to small requests. Lastly, the \"Reciprocity technique\" is not a standalone compliance technique but rather a principle that underlies various strategies, including the door-in-the-face technique, and does not specifically describe the process of making initial large requests followed by smaller ones.",
+      "kn": "KN16",
+      "kn_explanation": "This question evaluates knowledge of compliance tactics, a key aspect of social influence and group processes (KN16).",
+      "difficulty": "easy",
+      "quality_comment": "Clear, focused question with plausible alternative influence tactics as distractors, aiding discrimination at the EPPP level.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Influence.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Influence.json::20",
+      "domain": 3,
+      "isScored": true
+    },
+    {
+      "stem": "A psychologist who believes psychological theories and interventions are culture-specific and may not apply across cultural groups is said to adopt which perspective?",
+      "options": [
+        "Etic perspective",
+        "Emic perspective",
+        "Universalist perspective",
+        "Relativistic perspective"
+      ],
+      "answer": "Emic perspective",
+      "explanation": "1. The \"Emic perspective\" is the correct answer because it emphasizes that behavior is influenced by culture, suggesting that psychological theories and interventions may not be universally applicable across different cultural groups. This perspective recognizes the unique cultural contexts that shape individuals' experiences and responses, making it essential to tailor psychological practices to fit specific cultural backgrounds.\n\n2. The \"Etic perspective\" is incorrect because it posits that psychological theories and interventions are similar across cultures, implying a one-size-fits-all approach rather than acknowledging cultural specificity. The \"Universalist perspective\" is also incorrect as it suggests that certain psychological principles are universally applicable regardless of cultural context, which contradicts the emic viewpoint. Lastly, the \"Relativistic perspective\" is not the correct answer because, while it acknowledges cultural differences, it does not specifically focus on the application of psychological theories and interventions as being culture-specific, as the emic perspective does.",
+      "kn": "KN18",
+      "kn_explanation": "This question addresses perspectives on cross-cultural psychology and cultural relativism under cultural and sociopolitical psychology (KN18).",
+      "difficulty": "easy",
+      "quality_comment": "The question is clear and the options are well balanced; universalist and relativistic may be plausible distractors that test finer understanding.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Concepts.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Concepts.json::16",
+      "domain": 3,
+      "isScored": true
+    },
+    {
+      "stem": "According to socioemotional selectivity theory, what is the primary motivation for friendships in older adults who perceive their time as limited?",
+      "options": [
+        "Gathering new information for future use",
+        "Expanding social networks",
+        "Seeking emotional closeness and positive feelings",
+        "Establishing professional connections"
+      ],
+      "answer": "Seeking emotional closeness and positive feelings",
+      "explanation": "1. \"Seeking emotional closeness and positive feelings\" is the correct answer because, according to Carstensen's socioemotional selectivity theory, older adults who perceive their time as limited prioritize emotional connections over knowledge-seeking. This shift occurs as they focus on relationships that evoke positive emotions and provide emotional support, reflecting a preference for meaningful interactions rather than future-oriented goals.\n\n2. The option \"Gathering new information for future use\" is incorrect because this motivation is characteristic of individuals who view their time as unlimited and are more focused on acquiring knowledge rather than emotional closeness. \"Expanding social networks\" is also wrong, as older adults tend to be more selective about their friendships and prioritize quality over quantity, seeking deeper connections instead of broader social circles. Lastly, \"Establishing professional connections\" is not aligned with the motivations of older adults, who generally shift away from professional networking in favor of nurturing emotionally fulfilling relationships as they approach the later stages of life.",
+      "kn": "KN25",
+      "kn_explanation": "This question is best aligned with KN25 because it tests Family development, configuration, and functioning and their impact on the individual across the lifespan.",
+      "difficulty": "medium",
+      "quality_comment": "Options include plausible social goals, sharpening test-taker discrimination based on theory knowledge.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Bonding and Attachment.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Bonding and Attachment.json::38",
+      "domain": 4,
+      "isScored": true
+    },
+    {
+      "stem": "Which theory of intelligence critiques traditional IQ tests for neglecting creative and practical intelligence?",
+      "options": [
+        "Sternberg's Triarchic Theory of Successful Intelligence",
+        "Spearman's Two-Factor Theory",
+        "Gardner's Theory of Multiple Intelligences",
+        "Horn and Cattell's Crystallized and Fluid Intelligence Theory"
+      ],
+      "answer": "Sternberg's Triarchic Theory of Successful Intelligence",
+      "explanation": "1. **Correct Answer Explanation:** Sternberg's Triarchic Theory of Successful Intelligence critiques traditional IQ tests by emphasizing that they primarily measure analytical intelligence, which is akin to general intelligence (g), while neglecting other crucial components such as creative intelligence and practical intelligence. According to Sternberg, successful intelligence involves the ability to apply knowledge and skills in novel situations and everyday tasks, which are often overlooked in standard IQ assessments.\n\n2. **Incorrect Options Explanation:**\n   - **Spearman's Two-Factor Theory:** This theory focuses on distinguishing between a general intellectual factor (g) and specific factors (s) related to particular tasks, without addressing the importance of creative or practical intelligence.\n   - **Gardner's Theory of Multiple Intelligences:** While Gardner's theory acknowledges various types of intelligence, it does not specifically critique traditional IQ tests for neglecting creative and practical intelligence as Sternberg does; rather, it proposes a broader range of intelligences.\n   - **Horn and Cattell's Crystallized and Fluid Intelligence Theory:** This theory differentiates between crystallized intelligence (Gc) and fluid intelligence (Gf) but does not critique traditional IQ tests for their limitations regarding creative and practical intelligence. Instead, it focuses on the nature and development of these two types of intelligence.",
+      "kn": "KN32",
+      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
+      "difficulty": "medium",
+      "quality_comment": "Answer options are well-known theories, making the correct choice rewarding knowledge of broader intelligence conceptualizations.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 IQ Tests.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 IQ Tests.json::27",
+      "domain": 5,
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following symptoms is indicative of Disinhibited Social Engagement Disorder (DSED) in children?",
+      "options": [
+        "Inability to form emotional attachments",
+        "Excessive familiarity with strangers",
+        "Persistent sadness and withdrawal",
+        "Recurrent nightmares about separation"
+      ],
+      "answer": "Excessive familiarity with strangers",
+      "explanation": "1. \"Excessive familiarity with strangers\" is the correct answer because it is one of the defining symptoms of Disinhibited Social Engagement Disorder (DSED). This disorder is characterized by inappropriate interactions with unfamiliar adults, including behaviors such as reduced reticence in approaching or interacting with strangers and overly familiar behavior, which clearly aligns with the symptom of excessive familiarity.\n\n2. The option \"Inability to form emotional attachments\" is incorrect because DSED involves a lack of appropriate social boundaries rather than an inability to form attachments; children may engage with strangers inappropriately without forming deep emotional connections. \"Persistent sadness and withdrawal\" is incorrect as these symptoms are more characteristic of Reactive Attachment Disorder, which involves emotional withdrawal from caregivers rather than inappropriate engagement with strangers. Lastly, \"Recurrent nightmares about separation\" is incorrect because this symptom is more indicative of Posttraumatic Stress Disorder (PTSD) or other anxiety disorders, not DSED, which focuses on behavior towards unfamiliar adults rather than nightmares or separation anxiety.",
+      "difficulty": "easy",
+      "kn": "KN36",
+      "kn_explanation": "This question focuses on criteria and diagnosis of a psychological disorder, aligning with Classification systems and their rationales (KN36).",
+      "quality_comment": "This question effectively tests knowledge of specific symptoms related to DSED, reinforcing understanding of attachment disorders.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "easier",
+      "tags": [
+        "lock_in_drill"
+      ],
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Trauma, Dissociation, and Somatic.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Trauma, Dissociation, and Somatic.json::20",
+      "domain": 5,
+      "isScored": true
+    },
+    {
+      "stem": "Two doctoral-level clinicians independently administer and score a structured diagnostic interview with 40 patients. Their raw percentage agreement is 75%. Given the base rates of diagnoses in this clinic population, chance agreement is estimated at 50%. The computed kappa coefficient is .50. Which of the following statements accurately interprets this kappa value?",
+      "options": [
+        "The raters agreed on exactly half of all diagnoses, indicating unacceptable reliability for clinical use",
+        "The raters demonstrated agreement that is 50% greater than what chance alone would predict, indicating moderate reliability",
+        "Kappa of .50 is equivalent to a Pearson r of .50, indicating a moderate linear association between rater scores",
+        "The observed agreement of 75% was reduced to .50 after correcting for the unreliability of the diagnostic instrument"
+      ],
+      "answer": "The raters demonstrated agreement that is 50% greater than what chance alone would predict, indicating moderate reliability",
+      "explanation": "Cohen's kappa is computed as κ = (Po – Pe) / (1 – Pe), where Po is observed proportional agreement and Pe is expected chance agreement. Here κ = (.75 – .50) / (1 – .50) = .25 / .50 = .50. This means the raters agreed 50% more often than chance would predict—not that they agreed on only 50% of cases, which would imply 50% raw agreement. Kappa values in the range .41–.60 are conventionally classified as moderate agreement. Kappa is not equivalent to Pearson r; they are different statistics serving different purposes and cannot be directly compared. Kappa does not represent a corrected form of percentage agreement; rather, it indexes the proportion of possible beyond-chance agreement that was actually achieved.",
+      "kn": "KN37",
+      "kn_explanation": "This question is best aligned with KN37 because it tests Factors influencing evidence-based interpretation of data and decision-making (e.g., base rates, group differences, cultural biases and differences, heuristics).",
+      "difficulty": "medium",
+      "quality_comment": "Forces students to distinguish between raw agreement rate and the beyond-chance interpretation of kappa; distractors exploit common misreadings of the statistic.",
+      "suggestedLesson": "5-items-and-reliability",
+      "suggestedParagraph": "## Interrater Reliability",
+      "lessonExcerpt": "",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 7,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Items and Reliability.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Items and Reliability.json::11",
+      "domain": 5,
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following elements is essential in a therapist’s approach when conducting brief psychodynamic psychotherapy?",
+      "options": [
+        "Maintaining a passive stance to allow client-led insight",
+        "Focusing therapy goals primarily on symptom elimination",
+        "Establishing an active therapeutic alliance early to keep focus",
+        "Avoiding discussion of termination until late in therapy"
+      ],
+      "answer": "Establishing an active therapeutic alliance early to keep focus",
+      "explanation": "1. \"Establishing an active therapeutic alliance early to keep focus\" is the correct answer because brief psychodynamic psychotherapy emphasizes the importance of forming a strong therapeutic alliance at the outset to facilitate effective treatment. Practitioners take an active role from the beginning to quickly establish this alliance and ensure that therapy remains focused on the major issues, allowing clients to achieve their limited goals within the time constraints of therapy.\n\n2. The option \"Maintaining a passive stance to allow client-led insight\" is incorrect because brief psychodynamic therapy practitioners adopt an active role rather than a passive one, which is essential for guiding the therapeutic process. \"Focusing therapy goals primarily on symptom elimination\" is wrong because while symptom relief may be a goal, brief psychodynamic therapy emphasizes limited goals that are collaboratively identified with the client, not solely symptom elimination. Lastly, \"Avoiding discussion of termination until late in therapy\" is incorrect because practitioners in brief psychodynamic psychotherapy address concerns related to termination early in the treatment process, which is crucial due to the brevity of the therapy.",
+      "kn": "KN43",
+      "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
+      "difficulty": "medium",
+      "quality_comment": "The item requires understanding subtle differences in therapist roles across therapy types, promoting higher-order thinking.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Brief Therapies.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Brief Therapies.json::17",
+      "domain": 6,
+      "isScored": true
+    },
+    {
+      "stem": "In a study examining the relationship between education level and job performance, which of the following best describes the role of education as a moderator variable?",
+      "options": [
+        "Education level directly affects job performance without influencing other variables.",
+        "Education level changes the strength or direction of the relationship between job performance and other factors.",
+        "Education level is an independent variable that predicts job performance.",
+        "Education level has no impact on job performance."
+      ],
+      "answer": "Education level changes the strength or direction of the relationship between job performance and other factors.",
+      "explanation": "Education as a moderator variable indicates that it influences how other variables relate to job performance. The first option misrepresents its role, the third option incorrectly categorizes it as an independent variable, and the last option denies any impact, which is incorrect.",
+      "kn": "KN55",
+      "kn_explanation": "This question is best aligned with KN55 because it tests Analytic methods, including qualitative (e.g., thematic, phenomenological) and quantitative (e.g., probability theory; descriptive, inferential, and parametric statistics; meta-analysis; factor analysis; causal modeling).",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses knowledge of moderator variables in correlation analysis.",
+      "suggestedLesson": "7-correlation-and-regression",
+      "suggestedParagraph": "## The Foundation: What Correlation Actually Tells Us",
+      "lessonExcerpt": "A **moderator variable** changes the strength or direction of the relationship between your independent and dependent variables.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 1,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Correlation and Regression.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Correlation and Regression.json::3",
+      "domain": 7,
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following best reflects the psychologist's ethical responsibilities when providing telepsychology services to enhance confidentiality?",
+      "options": [
+        "Disclose all technical limitations to clients but take minimal additional steps.",
+        "Use secure, private settings and encrypted communication while educating clients about confidentiality risks.",
+        "Avoid discussing confidentiality to focus on therapy goals.",
+        "Rely solely on the telepsychology platform's default security features without additional measures."
+      ],
+      "answer": "Use secure, private settings and encrypted communication while educating clients about confidentiality risks.",
+      "explanation": "1. The correct answer, \"Use secure, private settings and encrypted communication while educating clients about confidentiality risks,\" aligns with the APA's *Guidelines for the Practice of Telepsychology*, which emphasize the importance of maintaining confidentiality and privacy in telepsychology. This includes delivering services from secure environments and using encrypted communication methods, as well as educating clients about potential confidentiality risks to ensure they are informed about their privacy protections.\n\n2. The first incorrect option, \"Disclose all technical limitations to clients but take minimal additional steps,\" is inadequate because merely disclosing limitations without implementing robust security measures does not effectively protect client confidentiality. The second option, \"Avoid discussing confidentiality to focus on therapy goals,\" is unethical as it neglects the psychologist's responsibility to inform clients about the limits of confidentiality, which is essential for informed consent. Lastly, the option, \"Rely solely on the telepsychology platform's default security features without additional measures,\" is insufficient because it overlooks the need for psychologists to actively ensure confidentiality through additional security protocols beyond the platform's basic features.",
+      "kn": "KN64",
+      "kn_explanation": "This question is best aligned with KN64 because it tests Identification and management of potential ethical issues.",
+      "difficulty": "medium",
+      "quality_comment": "The item requires application of best practices in telepsychology to protect confidentiality, with plausible distractors.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 3 and 4.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 3 and 4.json::57",
+      "domain": 8,
+      "isScored": true
+    },
+    {
+      "stem": "During which phase of Cummings and Worley’s general model of planned change does the OD consultant work with organization members to reach an agreement on expectations and develop a contractual arrangement?",
+      "options": [
+        "Diagnosing phase",
+        "Entering and contracting phase",
+        "Planning and implementing phase",
+        "Evaluating and institutionalizing phase"
+      ],
+      "answer": "Entering and contracting phase",
+      "explanation": "1. The \"Entering and contracting phase\" is the correct answer because it specifically involves the OD consultant collaborating with organization members to identify primary problems, establish a relationship, and reach an agreement on expectations regarding desired outcomes. This phase is focused on developing a contractual arrangement that outlines how the consultant and organization members will work together to address the identified issues.\n\n2. The \"Diagnosing phase\" is incorrect because it centers on collecting and analyzing diagnostic information about the organization's problems rather than establishing agreements or contracts. The \"Planning and implementing phase\" is also wrong, as it focuses on creating a vision for the future, designing interventions, and managing the change process rather than the initial contracting and agreement aspects. Lastly, the \"Evaluating and institutionalizing phase\" is incorrect because it deals with assessing the implementation and results of interventions, as well as making decisions about the continuation or modification of changes, rather than the initial agreement and contracting process.",
+      "kn": "KN46",
+      "kn_explanation": "This question focuses on organizational development consultation models and processes involving collaboration and contracting, fitting within interventions with systems (KN46).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are distinct phases of planned change, requiring the test taker to have precise knowledge of the timing and activities for each stage.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/6 How Orgs Change.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/6 How Orgs Change.json::3",
+      "domain": "3-5-6",
+      "isScored": true
+    }
+  ]
+}

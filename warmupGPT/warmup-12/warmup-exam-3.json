@@ -1,0 +1,268 @@
+{
+  "meta": {
+    "examId": "warmup-12-3",
+    "totalQuestions": 12,
+    "examType": "warmup",
+    "warmupLength": 12,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 2,
+      "4": 1,
+      "5": 3,
+      "6": 1,
+      "7": 1,
+      "8": 1,
+      "3-5-6": 1
+    },
+    "generatedAt": "2026-04-25T05:50:04.480Z"
+  },
+  "questions": [
+    {
+      "stem": "Which brain structure’s damage can cause both anterograde and retrograde amnesia due to its involvement in memory processing?",
+      "options": [
+        "Thalamus",
+        "Amygdala",
+        "Basal Ganglia",
+        "Prefrontal Cortex"
+      ],
+      "answer": "Thalamus",
+      "explanation": "1. The correct answer is the **thalamus** because it plays a significant role in memory processing, and damage to this structure can lead to both anterograde amnesia (inability to form new memories) and retrograde amnesia (loss of previously formed memories). This dual impact on memory functions is specifically noted in the reference material, highlighting the thalamus's essential contribution to memory.\n\n2. The **amygdala** is incorrect because, while it is involved in attaching emotions to memories, its damage does not typically result in anterograde or retrograde amnesia; rather, it affects emotional memory recall. The **basal ganglia** is also incorrect, as it is primarily responsible for procedural and implicit memories, and damage here does not lead to the same type of amnesia associated with the thalamus. Lastly, the **prefrontal cortex** is not the correct answer because, although it is essential for aspects of memory such as working memory and source memory, it does not directly cause anterograde and retrograde amnesia when damaged.",
+      "kn": "KN1",
+      "kn_explanation": "This question is best aligned with KN1 because it tests Functional correlates and determinants of the neurobiological and genetic bases of behavior pertaining to perception, cognition, personality, and mood and affect in normal, acute and chronic neurobehavioral disease processes and disease, comorbidities.",
+      "difficulty": "medium",
+      "quality_comment": "Good use of a less commonly tested memory-related brain region, which broadens knowledge evaluation beyond hippocampus and amygdala.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Memory and Sleep.json",
+      "domain": 1,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Memory and Sleep.json::31",
+      "isScored": true
+    },
+    {
+      "stem": "In classical conditioning, which procedure is considered most effective for acquiring a conditioned response?",
+      "options": [
+        "Simultaneous conditioning, where the conditioned stimulus (CS) and unconditioned stimulus (US) occur at the same time",
+        "Trace conditioning, where the CS is presented and ends just before the US begins",
+        "Delay conditioning, where the CS precedes and overlaps with the US",
+        "Backward conditioning, where the US is presented before the CS"
+      ],
+      "answer": "Delay conditioning, where the CS precedes and overlaps with the US",
+      "explanation": "1. **Correct Answer Explanation**: Delay conditioning is considered the most effective procedure for acquiring a conditioned response (CR) because the conditioned stimulus (CS) is presented just before and overlaps with the unconditioned stimulus (US). This timing creates a strong association between the two stimuli, enhancing the likelihood that the CS will elicit the CR when presented alone. The optimal delay of about one-half second between the CS and US further contributes to the effectiveness of this procedure.\n\n2. **Incorrect Options Explanation**:\n   - **Simultaneous conditioning**: This procedure is ineffective because the CS and US occur at the same time, which does not allow for a clear association to be formed, reducing the likelihood of the CR being established.\n   - **Trace conditioning**: In this method, the CS is presented and terminated before the US begins, which can weaken the association since there is a gap between the two stimuli, making it less effective than delay conditioning.\n   - **Backward conditioning**: This procedure is generally ineffective because the US is presented before the CS, which disrupts the typical contingency that is necessary for classical conditioning to occur, making it unlikely for the CS to elicit a CR.",
+      "kn": "KN7",
+      "kn_explanation": "This question tests knowledge of conditioning procedures within classical learning theories, which is central to the major research-based theories and principles of learning (KN7).",
+      "difficulty": "medium",
+      "quality_comment": "The question clearly distinguishes between different conditioning paradigms with plausible distractors, aiding test-takers in distinguishing procedural differences.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Pavlov and Classical Conditioning.json",
+      "domain": 2,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Pavlov and Classical Conditioning.json::15",
+      "isScored": true
+    },
+    {
+      "stem": "In the prototype/willingness model, what primarily influences a person’s willingness to engage in a health risk behavior in social settings?",
+      "options": [
+        "The person's behavioral intentions as predicted by attitudes and norms",
+        "The perceived acceptability of the behavior based on their prototype of people who engage in it",
+        "The strength of their general attitudes formed through direct experience",
+        "Their subjective norms about what others believe they should do"
+      ],
+      "answer": "The perceived acceptability of the behavior based on their prototype of people who engage in it",
+      "explanation": "Willingness to engage in a behavior depends on the social reaction path, which is influenced by the person’s prototype or social image of those who engage in the behavior, affecting perceived acceptability.",
+      "kn": "KN14",
+      "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
+      "difficulty": "medium",
+      "quality_comment": "Options differentiate between related social cognitive constructs, requiring a clear understanding of the prototype/willingness model, making it a solid EPPP item.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Attitudes.json",
+      "domain": 3,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Attitudes.json::12",
+      "isScored": true
+    },
+    {
+      "stem": "In culturally competent psychotherapy with Asian American clients, which therapist behavior is most appropriate based on research findings?",
+      "options": [
+        "Encouraging open emotional expression and direct eye contact early in therapy",
+        "Using a casual interpersonal style and minimizing formality throughout therapy",
+        "Maintaining a formal style and understanding that silence and limited eye contact express respect",
+        "Minimizing family involvement to focus on the individual client"
+      ],
+      "answer": "Maintaining a formal style and understanding that silence and limited eye contact express respect",
+      "explanation": "1. The correct answer, \"Maintaining a formal style and understanding that silence and limited eye contact express respect,\" aligns with the cultural values of Asian American clients. Research indicates that Asian Americans often prefer a formal therapeutic approach, as well as nonverbal communication styles where silence and limited eye contact are seen as expressions of respect and politeness. This understanding fosters a more effective therapeutic relationship by demonstrating cultural sensitivity.\n\n2. The first incorrect option, \"Encouraging open emotional expression and direct eye contact early in therapy,\" is wrong because it contradicts the cultural tendency of Asian Americans to value restraint and nonverbal cues over overt emotional expression and direct eye contact, which may be perceived as confrontational. \n\nThe second incorrect option, \"Using a casual interpersonal style and minimizing formality throughout therapy,\" is inappropriate as it overlooks the preference for a formal and respectful interaction style that Asian American clients typically expect in therapy settings.\n\nThe third incorrect option, \"Minimizing family involvement to focus on the individual client,\" fails to recognize the importance of family and community in Asian American culture, where collective well-being often takes precedence over individual concerns; thus, family involvement is crucial in the therapeutic process.",
+      "kn": "KN18",
+      "kn_explanation": "This question taps into culturally informed therapy adaptation and multicultural competence, related to cultural and sociopolitical psychology (KN18).",
+      "difficulty": "medium",
+      "quality_comment": "The question clearly contrasts culturally appropriate and inappropriate therapist behaviors for Asian American clients, enhancing discriminative value.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Concepts.json",
+      "domain": 3,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Concepts.json::18",
+      "isScored": true
+    },
+    {
+      "stem": "Research on the psychological adjustment of adults following divorce indicates that negative consequences for men and women tend to differ in important ways. Which of the following most accurately describes a key gender difference in post-divorce adjustment?",
+      "options": [
+        "Women are more likely to experience chronic economic hardship, while men's negative effects tend to be temporary",
+        "Men experience greater long-term psychological distress, while women show primarily short-term adjustment difficulties",
+        "Women typically show increased risky behaviors and social isolation, while men face primarily financial challenges",
+        "Both men and women experience equivalent patterns of adjustment, with differences attributable solely to custody arrangements"
+      ],
+      "answer": "Women are more likely to experience chronic economic hardship, while men's negative effects tend to be temporary",
+      "explanation": "Research consistently shows that divorce affects men and women differently. For women, economic hardship is the primary challenge, and these economic consequences tend to be chronic. For men, health problems stem more from risky behaviors, social isolation, and psychological factors, but these negative effects are often temporary rather than chronic. Option B reverses the pattern—men's effects tend to be temporary, not long-term. Option C incorrectly assigns risky behaviors to women and financial challenges to men (the reverse is true). Option D incorrectly claims equivalent patterns.",
+      "kn": "KN22",
+      "kn_explanation": "This question is best aligned with KN22 because it tests Influence of individual-environment interaction on development over time (e.g., the relationship between the individual and the social, academic, work, community environment).",
+      "difficulty": "medium",
+      "quality_comment": "Tests a commonly examined gender difference with plausible distractors that reverse the actual pattern.",
+      "suggestedLesson": "4-school-and-family",
+      "suggestedParagraph": "### The Aftermath: How Divorce Affects Adults",
+      "lessonExcerpt": "For women: Economic hardship is the primary challenge... These economic consequences tend to be chronic. For men: Health problems more often stem from risky behaviors, social isolation, and psychological factors... However, these negative effects are often temporary rather than chronic.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 2,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 School and Family.json",
+      "domain": 4,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 School and Family.json::5",
+      "isScored": true
+    },
+    {
+      "stem": "On the MMPI-2, an elevated F scale combined with a low VRIN scale score most likely indicates:",
+      "options": [
+        "Endorsement of genuine or faked psychopathology but consistent responding",
+        "Random responding and invalid profile",
+        "Attempt to fake good with symptom underreporting",
+        "Severe cognitive impairment causing inconsistent answers"
+      ],
+      "answer": "Endorsement of genuine or faked psychopathology but consistent responding",
+      "explanation": "1. The correct answer, \"Endorsement of genuine or faked psychopathology but consistent responding,\" is supported by the interpretation of the MMPI-2 validity scales. When the F scale score is elevated, it suggests that the examinee has reported symptoms that may indicate actual or feigned psychopathology. A low VRIN scale score indicates that the responses were consistent rather than random, which reinforces the likelihood that the reported symptoms are either genuine or deliberately exaggerated.\n\n2. The first incorrect option, \"Random responding and invalid profile,\" is incorrect because a low VRIN score indicates that the responses were consistent, not random. The second option, \"Attempt to fake good with symptom underreporting,\" is wrong because an elevated F scale suggests overreporting of symptoms rather than underreporting. Lastly, \"Severe cognitive impairment causing inconsistent answers\" is incorrect as a low VRIN score contradicts the notion of inconsistent responding, indicating that the examinee's cognitive functioning is likely intact enough to provide consistent answers.",
+      "kn": "KN32",
+      "kn_explanation": "This assesses interpretation of validity scale combinations, a key domain in evaluating psychological test responses (KN32).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors represent common misconceptions or related validity concerns, making the question discriminating.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 MMPI.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 MMPI.json::19",
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following cognitive biases is most relevant to relapse in substance use disorders as described in Relapse Prevention Therapy?",
+      "options": [
+        "Abstinence violation effect leading to feelings of guilt and failure",
+        "Confirmation bias reinforcing substance-related beliefs",
+        "Availability heuristic causing exaggerated recall of drug use benefits",
+        "Fundamental attribution error blaming others for one’s relapse"
+      ],
+      "answer": "Abstinence violation effect leading to feelings of guilt and failure",
+      "explanation": "1. The correct answer, \"Abstinence violation effect leading to feelings of guilt and failure,\" is most relevant to relapse in substance use disorders as described in Relapse Prevention Therapy (RPT). RPT posits that a lapse in abstinence can trigger negative emotions, such as guilt and a sense of personal failure, especially when individuals perceive their lapse as a significant setback rather than a manageable mistake. This emotional response can exacerbate the likelihood of a full-blown relapse, as individuals may feel demoralized and less capable of coping with their substance use challenges.\n\n2. The incorrect options are as follows:\n\n- **Confirmation bias reinforcing substance-related beliefs:** This bias pertains to how individuals may selectively interpret information to confirm their pre-existing beliefs, but it does not specifically address the emotional response and coping mechanisms that lead to relapse as described in RPT.\n\n- **Availability heuristic causing exaggerated recall of drug use benefits:** While this heuristic involves recalling positive experiences associated with substance use, it does not capture the critical emotional aspects and cognitive distortions related to lapses and guilt that are central to the abstinence violation effect in RPT.\n\n- **Fundamental attribution error blaming others for one’s relapse:** This error involves attributing one's failures to external factors rather than internal ones, but it does not align with the focus of RPT on personal responsibility and the internal emotional landscape that contributes to relapse following a lapse in abstinence.",
+      "kn": "KN33",
+      "kn_explanation": "This question is best aligned with KN33 because it tests Issues of differential diagnosis and integration of non-psychological information into psychological assessment.",
+      "difficulty": "medium",
+      "quality_comment": "The question adds nuanced content about cognitive biases impacting relapse, complementing existing treatment-focused items.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Substance Misuse.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Substance Misuse.json::15",
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following is TRUE about the relationship between norm-referenced standard scores and the shape of the raw score distribution?",
+      "options": [
+        "Standard scores always produce a flat distribution regardless of raw score distribution shape",
+        "Standard score distributions have the same shape as the raw score distributions unless a nonlinear transformation is applied",
+        "Percentile ranks maintain the exact shape of the original raw score distribution",
+        "Expectancy tables normalize score distributions before transformation"
+      ],
+      "answer": "Standard score distributions have the same shape as the raw score distributions unless a nonlinear transformation is applied",
+      "explanation": "1. The statement \"Standard score distributions have the same shape as the raw score distributions unless a nonlinear transformation is applied\" is correct because converting raw scores to standard scores (like z-scores or T-scores) involves a linear transformation, preserving the distribution's shape. This means that if the raw score distribution is normal, the standard score distribution will also be normal, unless a nonlinear transformation is specifically applied to normalize it.\n\n2. The option \"Standard scores always produce a flat distribution regardless of raw score distribution shape\" is incorrect because standard scores maintain the shape of the raw score distribution unless a nonlinear transformation is applied, meaning they do not inherently produce a flat distribution. The statement \"Percentile ranks maintain the exact shape of the original raw score distribution\" is wrong because percentile ranks result in a rectangular distribution, which does not reflect the shape of the raw score distribution. Lastly, the option \"Expectancy tables normalize score distributions before transformation\" is incorrect because expectancy tables do not involve normalizing distributions; they simply provide predicted outcomes based on obtained test scores without altering the shape of the score distributions.",
+      "kn": "KN29",
+      "kn_explanation": "This question tests knowledge of assessment theory concepts regarding score transformations and distribution shapes (KN29).",
+      "difficulty": "medium",
+      "quality_comment": "The options contrast key concepts well, requiring nuanced understanding of transformation effects.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Interpreting Scores.json",
+      "domain": 5,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Interpreting Scores.json::19",
+      "isScored": true
+    },
+    {
+      "stem": "In Strategic Family Therapy, what is the purpose of 'restraining' as a therapeutic directive?",
+      "options": [
+        "Encouraging family members not to change or warning against too rapid change",
+        "Directly asking family members to perform the problematic behavior",
+        "Altering hierarchical relationships by aligning with a less powerful member",
+        "Teaching communication skills to all family members"
+      ],
+      "answer": "Encouraging family members not to change or warning against too rapid change",
+      "explanation": "In Strategic Family Therapy, \"restraining\" serves the purpose of encouraging family members not to change or warning against too rapid change. This directive is employed to help family members recognize the potential consequences of change and to allow them to process their feelings and dynamics before making significant adjustments. By cautioning against hasty changes, therapists aim to stabilize the family system and promote thoughtful engagement with the issues at hand.\n\n1. **Directly asking family members to perform the problematic behavior:** This option describes \"prescribing the symptom,\" which involves instructing family members to engage in the problematic behavior, often in an exaggerated manner, rather than restraining change.\n\n2. **Altering hierarchical relationships by aligning with a less powerful member:** This option refers to \"unbalancing,\" a technique used to shift power dynamics within the family, which is distinct from the purpose of restraining.\n\n3. **Teaching communication skills to all family members:** This option does not fit within the scope of restraining, as it focuses on skill development rather than the therapeutic strategy of cautioning against immediate change. Restraining is more about managing the pace of change rather than directly enhancing communication skills.",
+      "kn": "KN46",
+      "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors include accurate therapeutic strategies but not matching restraining, providing a thoughtful challenge for examinees.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Family and Group.json",
+      "domain": 6,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Family and Group.json::16",
+      "isScored": true
+    },
+    {
+      "stem": "If a constant value is subtracted from every score in a dataset, what effect does this have on the mean and standard deviation?",
+      "options": [
+        "The mean decreases, but the standard deviation remains unchanged.",
+        "Both the mean and standard deviation decrease.",
+        "The mean remains unchanged, but the standard deviation decreases.",
+        "Both the mean and standard deviation remain unchanged."
+      ],
+      "answer": "The mean decreases, but the standard deviation remains unchanged.",
+      "explanation": "Subtracting a constant from each score shifts the mean down by that constant, but does not affect the variability of the scores, hence the standard deviation remains the same. The other options incorrectly suggest changes to the standard deviation or the mean.",
+      "kn": "KN54",
+      "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of descriptive statistics transformations.",
+      "suggestedLesson": "7-variables",
+      "suggestedParagraph": "### Independent and Dependent Variables: The 'What Affects What' Relationship",
+      "lessonExcerpt": "Subtracting a constant from each score affects the mean but not the standard deviation.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 2,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Variables.json",
+      "domain": 7,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Variables.json::3",
+      "isScored": true
+    },
+    {
+      "stem": "When managing encounters with former clients, what is the primary ethical consideration for psychologists?",
+      "options": [
+        "To maintain a friendship with the former client.",
+        "To ensure that the former client does not feel abandoned.",
+        "To avoid any relationship that could impair objectivity or effectiveness.",
+        "To discuss the former client's therapy openly with others."
+      ],
+      "answer": "To avoid any relationship that could impair objectivity or effectiveness.",
+      "explanation": "The correct answer highlights the importance of maintaining professional boundaries to avoid conflicts of interest or impaired judgment. The other options either promote inappropriate relationships or violate confidentiality.",
+      "kn": "KN64",
+      "kn_explanation": "This question is best aligned with KN64 because it tests Identification and management of potential ethical issues.",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests understanding of professional boundaries.",
+      "suggestedLesson": "8-standards-3-4",
+      "suggestedParagraph": "## Standard 3: Human Relations (Navigating Professional Boundaries)",
+      "lessonExcerpt": "Psychologists must avoid any relationship that could impair objectivity or effectiveness.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 24,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 3 and 4.json",
+      "domain": 8,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 3 and 4.json::19",
+      "isScored": true
+    },
+    {
+      "stem": "House's Path-Goal Theory suggests which leadership style is most appropriate for subordinates who have a high need for affiliation and are performing mundane tasks with low job satisfaction?",
+      "options": [
+        "Directive leadership",
+        "Supportive leadership",
+        "Achievement-oriented leadership",
+        "Participative leadership"
+      ],
+      "answer": "Supportive leadership",
+      "explanation": "1. **Supportive leadership** is the correct answer according to House's Path-Goal Theory, which posits that this style is most effective when subordinates have a high need for affiliation and are experiencing low job satisfaction while performing mundane tasks. Supportive leaders focus on creating a friendly and supportive work environment, which is essential for enhancing the morale and motivation of employees who may feel unchallenged or disengaged.\n\n2. **Directive leadership** is incorrect because it is most effective when subordinates are dogmatic or authoritarian and the tasks are ambiguous and complex, rather than when employees need support in mundane tasks. **Achievement-oriented leadership** is also not suitable, as it is best for subordinates who are motivated and capable, focusing on setting high goals and expectations, which does not align with the needs of those struggling with low job satisfaction. Lastly, **participative leadership** is inappropriate in this context because it is more effective when subordinates are willing and able to contribute to decision-making, which is not the case when they are performing mundane tasks with low engagement.",
+      "kn": "KN46",
+      "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
+      "difficulty": "medium",
+      "quality_comment": "Clear and focused stem with plausible distractors, requiring precise application of the theory.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/5 6 Leadership.json",
+      "domain": "3-5-6",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/5 6 Leadership.json::8",
+      "isScored": true
+    }
+  ]
+}

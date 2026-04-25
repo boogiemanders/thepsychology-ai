@@ -1,0 +1,290 @@
+{
+  "meta": {
+    "examId": "warmup-12-23",
+    "totalQuestions": 12,
+    "examType": "warmup",
+    "warmupLength": 12,
+    "domainCounts": {
+      "1": 1,
+      "2": 1,
+      "3": 2,
+      "4": 1,
+      "5": 3,
+      "6": 1,
+      "7": 1,
+      "8": 1,
+      "3-5-6": 1
+    },
+    "generatedAt": "2026-04-25T05:56:49.914421Z"
+  },
+  "questions": [
+    {
+      "stem": "Which subcortical forebrain structure regulates homeostasis including temperature, hunger, thirst, and links the nervous and endocrine systems?",
+      "options": [
+        "Amygdala",
+        "Hypothalamus",
+        "Hippocampus",
+        "Thalamus"
+      ],
+      "answer": "Hypothalamus",
+      "explanation": "1. The \"Hypothalamus\" is the correct answer because it plays a crucial role in maintaining homeostasis by regulating essential functions such as body temperature, hunger, thirst, and the body's response to stress. Additionally, it links the nervous and endocrine systems through its influence on the autonomic nervous system and the pituitary gland, producing hormones that control various physiological processes.\n\n2. \n- **Amygdala:** The amygdala is primarily involved in processing and regulating emotions such as fear and anxiety, rather than in maintaining homeostasis.\n- **Hippocampus:** The hippocampus is mainly responsible for memory functions, particularly transferring declarative memories from short-term to long-term memory, and does not regulate homeostatic processes.\n- **Thalamus:** The thalamus acts as a relay station for sensory information and is involved in coordinating sensory and motor functions, but it does not directly regulate homeostasis like the hypothalamus does.",
+      "kn": "KN1",
+      "kn_explanation": "The item assesses knowledge of neuroendocrine systems foundational for understanding biological regulation.",
+      "difficulty": "easy",
+      "quality_comment": "Clear stem and plausible options related to limbic and diencephalic structures make this a solid recall question.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Hindbrain, Midbrain, and Forebrain.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Hindbrain, Midbrain, and Forebrain.json::24",
+      "domain": 1,
+      "isScored": true
+    },
+    {
+      "stem": "In organizational psychology, what is the primary purpose of utility analysis?",
+      "options": [
+        "To assess the effectiveness of training programs.",
+        "To evaluate the financial return on investment of employee selection methods.",
+        "To measure employee satisfaction and engagement.",
+        "To determine the impact of organizational culture on performance."
+      ],
+      "answer": "To evaluate the financial return on investment of employee selection methods.",
+      "explanation": "Utility analysis is specifically designed to assess the economic value of various employee selection methods, making this the correct answer. The first option is incorrect as it pertains to training, while the third and fourth options focus on different aspects of organizational psychology.",
+      "kn": "KN7",
+      "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
+      "difficulty": "hard",
+      "quality_comment": "The question is well-structured and targets a specific aspect of organizational psychology.",
+      "suggestedLesson": "2-operant-conditioning-interventions",
+      "suggestedParagraph": "## Why Operant Conditioning Still Matters in Modern Practice",
+      "lessonExcerpt": "Utility analysis evaluates the financial return on investment of employee selection methods.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 22,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Operant Conditioning Interventions.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Operant Conditioning Interventions.json::21",
+      "domain": 2,
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following best illustrates the concept of psychological reactance in response to a social influence attempt?",
+      "options": [
+        "Agreeing publicly with a friend’s opinion but privately disagreeing",
+        "Refusing to comply with a request after feeling one's freedom to choose was threatened",
+        "Conforming to a group’s judgment because the task is ambiguous",
+        "Accepting a smaller request after rejecting a larger one"
+      ],
+      "answer": "Refusing to comply with a request after feeling one's freedom to choose was threatened",
+      "explanation": "1. The correct answer, \"Refusing to comply with a request after feeling one's freedom to choose was threatened,\" exemplifies psychological reactance as it directly aligns with the concept described by Brehm and Brehm (1981). Psychological reactance occurs when individuals perceive that their freedom to act is being restricted, prompting them to resist the influence by refusing to comply with the request, often as a means of regaining their autonomy.\n\n2. The option \"Agreeing publicly with a friend’s opinion but privately disagreeing\" is incorrect because it describes a situation of compliance without genuine acceptance, rather than a reaction against perceived threats to freedom. \"Conforming to a group’s judgment because the task is ambiguous\" is also incorrect, as it illustrates informational influence, where individuals conform due to uncertainty, rather than reactance against authority or influence. Finally, \"Accepting a smaller request after rejecting a larger one\" is not an example of psychological reactance; instead, it reflects the door-in-the-face technique, where compliance is achieved through a strategic concession rather than a response to a perceived threat to freedom.",
+      "kn": "KN16",
+      "kn_explanation": "This item targets understanding of how threats to autonomy can motivate resistance to social influence, a key concept in social influence and group processes (KN16).",
+      "difficulty": "medium",
+      "quality_comment": "The question clearly differentiates psychological reactance from other forms of social influence, enhancing conceptual clarity.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Influence.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Influence.json::26",
+      "domain": 3,
+      "isScored": true
+    },
+    {
+      "stem": "Which acculturation strategy, according to Berry, is associated with the least acculturative stress?",
+      "options": [
+        "Assimilation",
+        "Integration",
+        "Separation",
+        "Marginalization"
+      ],
+      "answer": "Integration",
+      "explanation": "1. **Integration** is the correct answer because it involves retaining one's own minority culture while also adopting the majority culture. According to Berry (2005), individuals who adopt an integration strategy experience the least acculturative stress, as they can maintain their cultural identity while benefiting from the resources and support of the majority culture.\n\n2. The other options are incorrect for the following reasons:\n   - **Assimilation**: This strategy involves rejecting one’s own minority culture in favor of fully adopting the majority culture, which can lead to a loss of cultural identity and increased stress.\n   - **Separation**: This strategy entails retaining one’s own minority culture while rejecting the majority culture, which can result in social isolation and difficulties in adapting to the broader society, leading to higher acculturative stress.\n   - **Marginalization**: This strategy involves rejecting both one’s own minority culture and the majority culture, often resulting in the highest levels of acculturative stress due to a lack of support and connection to any cultural group.",
+      "kn": "KN18",
+      "kn_explanation": "Berry's acculturation strategies and associated stress are central to cultural psychology and acculturation processes, fitting under cultural and sociopolitical psychology (KN18).",
+      "difficulty": "easy",
+      "quality_comment": "The question is straightforward and tests knowledge of a fundamental concept in acculturation with well-known strategies as distractors.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Concepts.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Concepts.json::12",
+      "domain": 3,
+      "isScored": true
+    },
+    {
+      "stem": "Which of the following is a key developmental milestone in motor skills for infants around 12 months of age?",
+      "options": [
+        "Crawling",
+        "Walking independently",
+        "Sitting without support",
+        "Grasping objects"
+      ],
+      "answer": "Walking independently",
+      "explanation": "By around 12 months of age, most infants achieve the milestone of walking independently, marking a significant development in their motor skills. Crawling and sitting without support occur earlier, while grasping objects is a more basic skill that develops even earlier.",
+      "kn": "KN21",
+      "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of motor skills development milestones.",
+      "suggestedLesson": "4-body-growth",
+      "suggestedParagraph": "## The Brain's Journey: From Birth Through Adulthood",
+      "lessonExcerpt": "By around 12 months, most infants can walk independently.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 22,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Body Growth.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Body Growth.json::13",
+      "domain": 4,
+      "isScored": true
+    },
+    {
+      "stem": "What is the primary reason psychologists must be cautious when interpreting IQ scores obtained using older test norms, according to the Flynn Effect?",
+      "options": [
+        "IQ scores tend to increase by about 3 points per decade, so older norms may inflate scores.",
+        "IQ scores tend to decrease over time, so older norms may deflate scores.",
+        "There is no systematic difference in IQ scores across different test norms.",
+        "Older test norms systematically bias scores downward due to cultural changes."
+      ],
+      "answer": "IQ scores tend to increase by about 3 points per decade, so older norms may inflate scores.",
+      "explanation": "1. The correct answer states that \"IQ scores tend to increase by about 3 points per decade, so older norms may inflate scores\" because research, particularly by Flynn (1987, 1998), has shown a consistent rise in IQ scores over time across various populations. This phenomenon, known as the Flynn Effect, indicates that individuals tested on older IQ tests with outdated norms may receive higher scores than they would on newer tests that reflect the current population's performance, leading to an inflation of their IQ scores when compared to contemporary norms.\n\n2. The option \"IQ scores tend to decrease over time, so older norms may deflate scores\" is incorrect because the Flynn Effect specifically documents an increase in scores rather than a decrease. The statement \"There is no systematic difference in IQ scores across different test norms\" is wrong because the Flynn Effect demonstrates a clear trend of increasing scores over decades, indicating a systematic difference. Lastly, the option \"Older test norms systematically bias scores downward due to cultural changes\" is incorrect as it contradicts the Flynn Effect, which illustrates that older norms typically lead to inflated scores rather than a downward bias.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors address plausible misunderstandings about the Flynn effect, thus providing meaningful options for test-takers.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 IQ Tests.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 IQ Tests.json::17",
+      "domain": 5,
+      "isScored": true
+    },
+    {
+      "stem": "In the context of treating sexual dysfunctions, which approach emphasizes gradual exposure to sexual stimuli to reduce anxiety?",
+      "options": [
+        "Exposure therapy",
+        "Cognitive therapy",
+        "Sensate focus",
+        "Aversion therapy"
+      ],
+      "answer": "Sensate focus",
+      "explanation": "1. **Sensate focus** is the correct answer because it is a behavioral technique specifically designed to reduce performance anxiety and enhance sexual stimulation in individuals experiencing sexual dysfunctions. Developed by Masters and Johnson, this method involves a series of activities where partners focus on pleasurable sensations through non-sexual and then sexual touching, promoting intimacy and gradually exposing them to sexual stimuli in a supportive manner.\n\n2. **Exposure therapy** is incorrect because it typically involves confronting feared stimuli directly to reduce anxiety, rather than focusing on pleasurable sensations in a gradual and intimate manner. **Cognitive therapy** is not the correct answer as it primarily addresses cognitive distortions and thought patterns rather than directly facilitating exposure to sexual stimuli to alleviate anxiety. Lastly, **aversion therapy** is inappropriate in this context because it aims to create a negative response to an undesired behavior, which contrasts with the goal of sensate focus to foster positive sexual experiences and reduce anxiety.",
+      "difficulty": "hard",
+      "kn": "KN38",
+      "kn_explanation": "This question is best aligned with KN38 because it tests Constructs of epidemiology and base rates of psychological and behavioral disorders.",
+      "quality_comment": "This question challenges the test-taker to apply their understanding of therapeutic techniques in a nuanced context.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "harder",
+      "tags": [
+        "lock_in_drill"
+      ],
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Sex and Gender.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Sex and Gender.json::19",
+      "domain": 5,
+      "isScored": true
+    },
+    {
+      "stem": "A child obtains an IQ score of 85 on a standardized intelligence test with a mean of 100 and standard deviation of 15. Assuming a normal distribution, which of the following is the BEST estimate of this child's percentile rank?",
+      "options": [
+        "2nd percentile",
+        "10th percentile",
+        "16th percentile",
+        "30th percentile"
+      ],
+      "answer": "16th percentile",
+      "explanation": "An IQ score of 85 falls exactly 1 standard deviation below the mean (100 - 15 = 85). According to the standard score equivalents table, a score at -1 SD corresponds to the 16th percentile rank. The 2nd percentile corresponds to -2 SD (IQ of 70). The 10th and 30th percentiles do not correspond to any whole standard deviation unit. The lesson's critical table explicitly shows: -1 SD = z-score of -1.0 = T-score of 40 = IQ of 85 = percentile rank of 16.",
+      "kn": "KN57",
+      "kn_explanation": "This question is best aligned with KN57 because it tests Critical appraisal and application of research findings (e.g., adequacy of design and statistics, limitations to generalizability, threats to internal and external validity, design flaws, level of evidence).",
+      "difficulty": "medium",
+      "quality_comment": "Straightforward application of the standard score conversion table. Tests a fundamental skill that appears frequently on the EPPP.",
+      "suggestedLesson": "5-interpreting-scores",
+      "suggestedParagraph": "### The Critical Table: Standard Score Equivalents",
+      "lessonExcerpt": "| -1 SD | -1.0 | 40 | 85 | 3 | 16 |",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 2,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Interpreting Scores.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Interpreting Scores.json::4",
+      "domain": 5,
+      "isScored": true
+    },
+    {
+      "stem": "In Jungian analytical psychology, the process by which an individual attributes their own unacknowledged dark or undesirable qualities onto other people or external situations is most accurately described as:",
+      "options": [
+        "Reaction formation against the anima archetype",
+        "Projection of the shadow archetype",
+        "Introjection of the collective unconscious",
+        "Repression of the persona archetype"
+      ],
+      "answer": "Projection of the shadow archetype",
+      "explanation": "In Jungian psychology, the shadow represents one's 'dark side'—hidden, unacknowledged aspects of the personality. When individuals fail to integrate their shadow, they often project these undesirable qualities onto others, perceiving in external people or situations what they cannot accept in themselves. This projection of shadow material is a central concept in Jungian therapy, and individuation requires integrating the shadow rather than projecting it. Reaction formation against the anima (A) conflates Freudian defense mechanisms with a different archetype. Introjection of the collective unconscious (C) misapplies a Gestalt concept to Jungian theory. Repression of the persona (D) is incorrect because the persona is the public mask, not the hidden dark side.",
+      "kn": "KN43",
+      "kn_explanation": "Jungian shadow projection is a theoretical model underlying treatment",
+      "difficulty": "medium",
+      "quality_comment": "Tests integration of Jungian concepts (shadow, projection) with clinical application. Distractors mix different archetypes and defense mechanisms.",
+      "suggestedLesson": "6-psychodynamic-and-humanistic",
+      "suggestedParagraph": "### Jung's Analytical Psychology: Beyond Freud",
+      "lessonExcerpt": "Important archetypes include the persona (your public mask), shadow (your dark side), hero, and anima/animus (feminine/masculine aspects).",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 20,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Psychodynamic and Humanistic Therapies.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Psychodynamic and Humanistic Therapies.json::5",
+      "domain": 6,
+      "isScored": true
+    },
+    {
+      "stem": "In a study examining the impact of sample size on the distribution of sample means, which of the following outcomes is expected as the sample size becomes very large?",
+      "options": [
+        "The distribution of sample means will become more uniform.",
+        "The distribution of sample means will approximate a normal distribution regardless of the original population distribution.",
+        "The distribution of sample means will show increased skewness.",
+        "The distribution of sample means will have a mean equal to the median."
+      ],
+      "answer": "The distribution of sample means will approximate a normal distribution regardless of the original population distribution.",
+      "explanation": "1. The correct answer, \"The distribution of sample means will approximate a normal distribution regardless of the original population distribution,\" aligns with the central limit theorem. This theorem states that as the sample size increases, the sampling distribution of means will increasingly take on a normal shape, even if the population distribution itself is not normal. This property is crucial for inferential statistics, as it allows researchers to make valid conclusions about population parameters based on sample data.\n\n2. \n- \"The distribution of sample means will become more uniform.\" This option is incorrect because the central limit theorem predicts that the distribution of sample means will converge to a normal distribution, not a uniform distribution.\n- \"The distribution of sample means will show increased skewness.\" This statement is wrong because, as sample size increases, the distribution of sample means becomes less skewed and approaches normality, which is characterized by a lack of skewness.\n- \"The distribution of sample means will have a mean equal to the median.\" This option is incorrect because while a normal distribution has its mean equal to the median, the statement does not specifically address the behavior of the distribution of sample means as sample size increases; instead, it misrepresents the relationship between mean and median in non-normal distributions.",
+      "difficulty": "hard",
+      "kn": "KN55",
+      "kn_explanation": "This question is best aligned with KN55 because it tests Analytic methods, including qualitative (e.g., thematic, phenomenological) and quantitative (e.g., probability theory; descriptive, inferential, and parametric statistics; meta-analysis; factor analysis; causal modeling).",
+      "quality_comment": "This question challenges the test-taker to apply their knowledge of the central limit theorem in a more complex context.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "harder",
+      "tags": [
+        "lock_in_drill"
+      ],
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Inferential Stats.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Inferential Stats.json::40",
+      "domain": 7,
+      "isScored": true
+    },
+    {
+      "stem": "Dr. Nguyen recently opened a private practice and wants to build an online presence. She asks several current therapy clients if they would be willing to write positive reviews on Google. According to APA Ethics Code Standard 5.05, this practice is:",
+      "options": [
+        "Acceptable as long as clients are not compensated for their reviews",
+        "Acceptable as long as clients provide written consent to write the review",
+        "Prohibited because psychologists may not solicit testimonials from current therapy clients",
+        "Acceptable as long as clients are informed that their participation is voluntary"
+      ],
+      "answer": "Prohibited because psychologists may not solicit testimonials from current therapy clients",
+      "explanation": "Standard 5.05 explicitly prohibits soliciting testimonials from current therapy clients or other persons who are vulnerable to undue influence. The therapeutic relationship inherently involves a power imbalance that makes genuine voluntary consent questionable. Option A is incorrect because the prohibition is not about compensation — it is about the inherent power imbalance in the therapeutic relationship. Option B is incorrect because written consent does not overcome the fundamental problem of the power differential. Option D is incorrect because even informing clients of voluntariness does not eliminate the coercive dynamics inherent in the therapist-client relationship.",
+      "kn": "KN61",
+      "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
+      "difficulty": "easy",
+      "quality_comment": "Well-grounded in lesson content with a clear direct quote. Strong distractors that test understanding of WHY testimonials are prohibited.",
+      "suggestedLesson": "8-standards-5-6",
+      "suggestedParagraph": "### The Testimonial Problem",
+      "lessonExcerpt": "Standard 5.05 prohibits soliciting testimonials from current therapy clients or other vulnerable individuals. This one's straightforward but important: don't ask your current clients for reviews or testimonials. Why? Because the therapeutic relationship involves a power imbalance. Clients might feel pressured to provide positive feedback even if that's not their genuine experience.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 15,
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 5 and 6.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 5 and 6.json::22",
+      "domain": 8,
+      "isScored": true
+    },
+    {
+      "stem": "Which selection technique has been found to be the most valid predictor of job performance across a wide variety of jobs and organizations?",
+      "options": [
+        "Personality tests assessing conscientiousness",
+        "General mental ability (GMA) tests",
+        "Integrity tests",
+        "Work sample tests"
+      ],
+      "answer": "General mental ability (GMA) tests",
+      "explanation": "1. The correct answer is \"General mental ability (GMA) tests\" because these tests, also known as general cognitive ability tests or intelligence tests, have been found to be the most valid predictors of job performance across a variety of jobs and organizations. Research indicates that GMA tests consistently outperform other selection techniques in terms of their predictive validity, making them a critical tool in employee selection (Hunter & Schmidt, 2004; Schmidt & Hunter, 1998).\n\n2. \n- **Personality tests assessing conscientiousness**: While conscientiousness is a strong predictor of job performance, it is not as universally valid across different jobs and organizations as GMA tests.\n- **Integrity tests**: Although integrity tests are good predictors of counterproductive behaviors and job performance, they rank lower in overall validity compared to GMA tests.\n- **Work sample tests**: Work sample tests have shown high validity in the past, but more recent analyses indicate that their validity is lower than that of GMA tests, especially when applied to a wider range of job types.",
+      "kn": "KN34",
+      "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
+      "difficulty": "medium",
+      "quality_comment": "This item tests knowledge of predictor validity and includes plausible distractors, making it a fair and relevant EPPP question.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/5 Hiring Methods.json",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/5 Hiring Methods.json::6",
+      "domain": "3-5-6",
+      "isScored": true
+    }
+  ]
+}
