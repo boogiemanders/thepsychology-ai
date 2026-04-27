@@ -33,15 +33,18 @@ export const TestimonialCard = ({
     </div>
 
     <div className="flex w-full select-none items-center justify-start gap-2">
-      <img
-        src={img}
-        alt={name}
-        draggable={false}
-        className={cn(
-          "size-7 rounded-full flex-shrink-0",
-          img?.includes("user-icon") && "dark:invert"
-        )}
-      />
+      <div className="size-7 rounded-full flex-shrink-0 overflow-hidden">
+        <img
+          src={img}
+          alt={name}
+          draggable={false}
+          className={cn(
+            "size-full object-cover",
+            img?.includes("yael-dror") && "scale-150 object-top",
+            img?.includes("user-icon") && "dark:invert"
+          )}
+        />
+      </div>
 
       <div className="min-w-0 overflow-hidden">
         <p className="font-medium text-primary/90 text-xs truncate">{name}</p>

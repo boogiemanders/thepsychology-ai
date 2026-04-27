@@ -306,6 +306,18 @@ export const siteConfig = {
         </p>
       ),
     },
+    // ── Named[7] → render pos 10 ──
+    {
+      id: "15",
+      name: "Yael Dror, PsyD",
+      role: "Clinical Psychologist",
+      img: "/images/yael-dror.png",
+      description: (
+        <p>
+          thePsychology.ai was a <Highlight className="text-brand-soft-blue dark:text-brand-coral">massive support</Highlight> for me while I studied for the EPPP. I appreciate the <Highlight className="text-brand-soft-blue dark:text-brand-coral">customization options</Highlight> that tailor to my study needs, such as the <Highlight className="text-brand-soft-blue dark:text-brand-coral">visual and audio components</Highlight>. I was able to get through all the material, quizzes, and exams within <Highlight className="text-brand-soft-blue dark:text-brand-coral">4 months</Highlight> and successfully <Highlight className="text-brand-soft-blue dark:text-brand-coral">passed the EPPP on my first try</Highlight>!
+        </p>
+      ),
+    },
     // ── Anonymous (inserted at render pos 2 & 4) ──
     {
       id: "11",
