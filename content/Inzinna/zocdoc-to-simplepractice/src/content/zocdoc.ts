@@ -7,6 +7,7 @@ import {
   urlToBase64,
   assertExtensionContext,
   isExtensionContextInvalidatedError,
+  registerFloatingButtonsController,
 } from './shared'
 
 /**
@@ -64,6 +65,53 @@ function getVisibleText(selectors: string[]): string {
   return ''
 }
 
+function findSexFromLabel(): string {
+  const sexValues = new Set(['male', 'female', 'other', 'prefer not to say', 'nonbinary', 'non-binary'])
+
+  // Strategy 1: find a label/heading element whose text is "Sex" or "Gender",
+  // then read the next sibling or adjacent element value.
+  const candidates = Array.from(document.querySelectorAll('div, span, p, label, dt'))
+    .filter(isVisible)
+    .filter((el) => {
+      const t = normalizeWhitespace(el.textContent ?? '').toLowerCase()
+      return t === 'sex' || t === 'gender'
+    })
+
+  for (const labelEl of candidates) {
+    // Try next sibling
+    const next = labelEl.nextElementSibling
+    if (next) {
+      const text = normalizeWhitespace(next.textContent ?? '')
+      if (text && sexValues.has(text.toLowerCase())) return text
+    }
+    // Try parent's next div child after the label
+    const parent = labelEl.parentElement
+    if (parent) {
+      const siblings = Array.from(parent.children)
+      const idx = siblings.indexOf(labelEl)
+      for (let i = idx + 1; i < siblings.length; i++) {
+        const text = normalizeWhitespace(siblings[i].textContent ?? '')
+        if (text && sexValues.has(text.toLowerCase())) return text
+      }
+    }
+  }
+
+  // Strategy 2: any visible div whose text is exactly Male/Female/Other inside
+  // a patient/demographics container.
+  const patientContainers = document.querySelectorAll(
+    '[class*="patient" i], [class*="demographic" i], [data-test*="patient" i]'
+  )
+  for (const container of Array.from(patientContainers)) {
+    const divs = container.querySelectorAll('div, span')
+    for (const d of Array.from(divs)) {
+      const text = normalizeWhitespace(d.textContent ?? '')
+      if (sexValues.has(text.toLowerCase())) return text
+    }
+  }
+
+  return ''
+}
+
 function findPatientRecordLink(): HTMLAnchorElement | null {
   return (
     getVisibleElement<HTMLAnchorElement>('[data-test="patient-record-link"]') ??
@@ -113,7 +161,7 @@ function snapshotVisiblePatientContext(): void {
   rememberIfPresent('email', getText('[data-test="email-content"]'))
   rememberIfPresent('addressRaw', getText('[data-test="address-content"]') || findCalendarCardAddress(patientLink))
   rememberIfPresent('appointmentRaw', getText('[data-test="appointment-details-section-appointment-time"]'))
-  rememberIfPresent('sexRaw', getText('[data-test="sex-content"]'))
+  rememberIfPresent('sexRaw', getText('[data-test="sex-content"]') || findSexFromLabel())
 }
 
 /**
@@ -438,7 +486,7 @@ async function captureClient(): Promise<void> {
     const insuranceCompany = extractInsuranceCompany(insuranceRow, networkStatus)
 
     // Sex
-    const sexRaw = getText('[data-test="sex-content"]') || lastObservedContext.sexRaw
+    const sexRaw = getText('[data-test="sex-content"]') || findSexFromLabel() || lastObservedContext.sexRaw
     const sex = sexRaw.replace(/^Sex/i, '').trim()
 
     const client: CapturedClient = {
@@ -545,3 +593,6 @@ function watchPatientContext(): void {
 }
 
 init()
+registerFloatingButtonsController(() => {
+  inject()
+})

@@ -49,7 +49,51 @@
       onClick();
     }, true);
     document.body.appendChild(btn);
+    btn.style.display = areFloatingButtonsVisible() ? "" : "none";
     return btn;
+  }
+  function floatingButtonsState() {
+    return window;
+  }
+  function areFloatingButtonsVisible() {
+    const state = floatingButtonsState();
+    if (typeof state.__zspFloatingButtonsVisible !== "boolean") {
+      state.__zspFloatingButtonsVisible = true;
+    }
+    return state.__zspFloatingButtonsVisible;
+  }
+  function setFloatingButtonsVisible(visible) {
+    const state = floatingButtonsState();
+    state.__zspFloatingButtonsVisible = visible;
+    const buttons = document.querySelectorAll(".spn-floating-btn, .zsp-floating-btn");
+    buttons.forEach((button) => {
+      button.style.display = visible ? "" : "none";
+    });
+    if (visible) {
+      for (const callback of state.__zspFloatingButtonsOnShow ?? []) {
+        callback();
+      }
+    }
+    return visible;
+  }
+  function registerFloatingButtonsController(onShow) {
+    const state = floatingButtonsState();
+    if (onShow) {
+      state.__zspFloatingButtonsOnShow ??= [];
+      state.__zspFloatingButtonsOnShow.push(onShow);
+    }
+    if (state.__zspFloatingButtonsListenerRegistered) return;
+    state.__zspFloatingButtonsListenerRegistered = true;
+    chrome.runtime.onMessage.addListener((msg, _sender, sendResponse) => {
+      if (msg?.type === "get-floating-buttons-visibility") {
+        sendResponse({ visible: areFloatingButtonsVisible() });
+        return true;
+      }
+      if (msg?.type === "toggle-floating-buttons") {
+        sendResponse({ visible: setFloatingButtonsVisible(!areFloatingButtonsVisible()) });
+        return true;
+      }
+    });
   }
   function isExtensionContextInvalidatedError(err) {
     if (!(err instanceof Error)) return false;
@@ -149,6 +193,40 @@
     }
     return "";
   }
+  function findSexFromLabel() {
+    const sexValues = /* @__PURE__ */ new Set(["male", "female", "other", "prefer not to say", "nonbinary", "non-binary"]);
+    const candidates = Array.from(document.querySelectorAll("div, span, p, label, dt")).filter(isVisible).filter((el) => {
+      const t = normalizeWhitespace(el.textContent ?? "").toLowerCase();
+      return t === "sex" || t === "gender";
+    });
+    for (const labelEl of candidates) {
+      const next = labelEl.nextElementSibling;
+      if (next) {
+        const text = normalizeWhitespace(next.textContent ?? "");
+        if (text && sexValues.has(text.toLowerCase())) return text;
+      }
+      const parent = labelEl.parentElement;
+      if (parent) {
+        const siblings = Array.from(parent.children);
+        const idx = siblings.indexOf(labelEl);
+        for (let i = idx + 1; i < siblings.length; i++) {
+          const text = normalizeWhitespace(siblings[i].textContent ?? "");
+          if (text && sexValues.has(text.toLowerCase())) return text;
+        }
+      }
+    }
+    const patientContainers = document.querySelectorAll(
+      '[class*="patient" i], [class*="demographic" i], [data-test*="patient" i]'
+    );
+    for (const container of Array.from(patientContainers)) {
+      const divs = container.querySelectorAll("div, span");
+      for (const d of Array.from(divs)) {
+        const text = normalizeWhitespace(d.textContent ?? "");
+        if (sexValues.has(text.toLowerCase())) return text;
+      }
+    }
+    return "";
+  }
   function findPatientRecordLink() {
     return getVisibleElement('[data-test="patient-record-link"]') ?? getVisibleElement('a[href*="/patient/"][href*="/record"]');
   }
@@ -178,7 +256,7 @@
     rememberIfPresent("email", getText('[data-test="email-content"]'));
     rememberIfPresent("addressRaw", getText('[data-test="address-content"]') || findCalendarCardAddress(patientLink));
     rememberIfPresent("appointmentRaw", getText('[data-test="appointment-details-section-appointment-time"]'));
-    rememberIfPresent("sexRaw", getText('[data-test="sex-content"]'));
+    rememberIfPresent("sexRaw", getText('[data-test="sex-content"]') || findSexFromLabel());
   }
   function parseName(fullName) {
     const parts = fullName.trim().split(/\s+/);
@@ -414,7 +492,7 @@
       const insuranceRow = getText('[data-test="intake-insurance-row"]');
       const networkStatus = getText('[data-test="network-status"]');
       const insuranceCompany = extractInsuranceCompany(insuranceRow, networkStatus);
-      const sexRaw = getText('[data-test="sex-content"]') || lastObservedContext.sexRaw;
+      const sexRaw = getText('[data-test="sex-content"]') || findSexFromLabel() || lastObservedContext.sexRaw;
       const sex = sexRaw.replace(/^Sex/i, "").trim();
       const client = {
         firstName: first,
@@ -517,5 +595,8 @@
     observer.observe(document.body, { childList: true, subtree: true });
   }
   init();
+  registerFloatingButtonsController(() => {
+    inject();
+  });
 })();
 //# sourceMappingURL=zocdoc.js.map
