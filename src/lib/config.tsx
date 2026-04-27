@@ -321,9 +321,10 @@ export const siteConfig = {
     // ── Anonymous (inserted at render pos 2 & 4) ──
     {
       id: "11",
-      name: "Anonymous",
+      name: "De-identified",
       role: "TikTok comment",
       img: "/images/user-icon.svg",
+      anonymous: true,
       description: (
         <p>
           Those are great and <Highlight className="text-brand-soft-blue dark:text-brand-coral">much needed tools</Highlight>! Hope it goes well with all the great ideas you have! As a person who is always on the go, I’m always wishing I could use <Highlight className="text-brand-soft-blue dark:text-brand-coral">a tool to study while in between places</Highlight> on my phone.
@@ -332,9 +333,10 @@ export const siteConfig = {
     },
     {
       id: "12",
-      name: "Anonymous",
+      name: "De-identified",
       role: "User",
       img: "/images/user-icon.svg",
+      anonymous: true,
       description: (
         <p>
           Information like PrepJet, but <Highlight className="text-brand-olive dark:text-brand-lavender-gray">much easier to digest</Highlight> and at a <Highlight className="text-brand-olive dark:text-brand-lavender-gray">fraction of the cost</Highlight>. Overall good program and would <Highlight className="text-brand-olive dark:text-brand-lavender-gray">recommend to peers</Highlight>.
@@ -343,9 +345,10 @@ export const siteConfig = {
     },
     {
       id: "14",
-      name: "Anonymous",
+      name: "De-identified",
       role: "User",
       img: "/images/user-icon.svg",
+      anonymous: true,
       description: (
         <p>
           Appreciated the use of <Highlight className="text-brand-soft-blue dark:text-brand-coral">culturally diverse names</Highlight> in the test questions, it feels <Highlight className="text-brand-soft-blue dark:text-brand-coral">meaningful to see my own last name</Highlight> :)

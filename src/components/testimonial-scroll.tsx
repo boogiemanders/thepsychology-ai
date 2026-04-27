@@ -60,10 +60,11 @@ interface Testimonial {
   role: string;
   img: string;
   description: React.ReactNode;
+  anonymous?: boolean;
 }
 
 function isAnonymousTestimonial(testimonial: Testimonial) {
-  return testimonial.name.trim().toLowerCase() === "anonymous";
+  return testimonial.anonymous === true;
 }
 
 function buildAnonymousGapSizes(
