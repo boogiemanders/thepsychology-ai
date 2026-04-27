@@ -35,6 +35,7 @@ const MANUAL_GROUPS: ManualGroup[] = [
   { id: 'didactic-anders', clinician: 'Anders Chan', kind: 'didactic', label: 'Didactic (Anders)' },
   { id: 'fusion-rachel', clinician: 'Rachel Beyer', kind: 'fusion', label: 'Fusion (Rachel)' },
   { id: 'fusion-izzy', clinician: 'Isabelle Feinstein', kind: 'fusion', label: 'Fusion (Izzy)' },
+  { id: 'admin-filomena', clinician: 'Filomena DiFranco', kind: 'admin', label: 'Admin (Filomena)' },
 ]
 
 interface ManualEntry {

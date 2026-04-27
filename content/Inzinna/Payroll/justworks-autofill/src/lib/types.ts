@@ -59,7 +59,7 @@ export interface PayrollResult {
 
 export type ClinicianType = 'flat' | 'cpt_based' | 'payer_dependent'
 
-export type ManualAdditionKind = 'didactic' | 'fusion'
+export type ManualAdditionKind = 'didactic' | 'fusion' | 'admin'
 
 export interface FlatConfig {
   type: 'flat'

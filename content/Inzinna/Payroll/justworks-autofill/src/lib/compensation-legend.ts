@@ -67,6 +67,7 @@ export const legend: Record<string, ClinicianConfig> = {
     type: 'cpt_based',
     rates: { '90791': 70, '90837': 65, '90834': 60, '90847': 60, '90832': 40, 'Admin': 65 },
     noShow: {},
+    manualRates: { admin: 65 },
   },
   'Isabelle Feinstein': {
     type: 'flat',
