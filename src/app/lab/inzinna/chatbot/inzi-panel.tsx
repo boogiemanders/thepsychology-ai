@@ -172,7 +172,7 @@ function Bubble({ msg, dark, variation, accent }: { msg: Message; dark: boolean;
   )
 }
 
-function PanelHeader({ variation, dark, accent, onMinimize }: { variation: Variation; dark: boolean; accent: AccentName; onMinimize: () => void }) {
+function PanelHeader({ variation, dark, accent, onMinimize, onCall }: { variation: Variation; dark: boolean; accent: AccentName; onMinimize: () => void; onCall?: () => void }) {
   const mono = iconMonoFor(variation, dark, accent)
   return (
     <div className={'inz-header inz-header--' + variation + (dark ? ' is-dark' : '')}>
@@ -189,6 +189,12 @@ function PanelHeader({ variation, dark, accent, onMinimize }: { variation: Varia
         </div>
       </div>
       <div className="inz-header__actions">
+        {onCall && (
+          <button type="button" className="inz-header__btn inz-header__btn--call" title="Voice call" onClick={onCall} aria-label="Start voice call">
+            <Ico.Phone size={16} />
+            <span className="inz-header__btn-label">Call</span>
+          </button>
+        )}
         {variation !== 'experimental' && (
           <button type="button" className="inz-header__btn" title="History" aria-label="Conversation history">
             <Ico.Clock size={18} />
@@ -212,9 +218,10 @@ interface ChatPanelProps {
   composerValue: string
   onComposerChange: (v: string) => void
   onComposerSend: () => void
+  onCall?: () => void
 }
 
-export function ChatPanel({ state, variation, accent, dark, onMinimize, onPickChip, composerValue, onComposerChange, onComposerSend }: ChatPanelProps) {
+export function ChatPanel({ state, variation, accent, dark, onMinimize, onPickChip, composerValue, onComposerChange, onComposerSend, onCall }: ChatPanelProps) {
   const scrollRef = useRef<HTMLDivElement>(null)
   useEffect(() => {
     if (scrollRef.current) scrollRef.current.scrollTop = scrollRef.current.scrollHeight
@@ -245,7 +252,7 @@ export function ChatPanel({ state, variation, accent, dark, onMinimize, onPickCh
         </div>
       )}
 
-      <PanelHeader variation={variation} dark={dark} accent={accent} onMinimize={onMinimize} />
+      <PanelHeader variation={variation} dark={dark} accent={accent} onMinimize={onMinimize} onCall={onCall} />
 
       <div className="inz-stream" ref={scrollRef}>
         {state.id === 'welcome' && (

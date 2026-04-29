@@ -23,6 +23,7 @@ interface Turn {
 const DOC_LABEL: Record<string, string> = {
   'clinic-manual': 'Clinic Manual',
   'employee-handbook': 'Employee Handbook',
+  'brand-strategy': 'Brand Strategy',
 }
 
 const CATEGORY_COLOR: Record<string, string> = {
@@ -33,6 +34,7 @@ const CATEGORY_COLOR: Record<string, string> = {
   benefits: 'bg-amber-400/15 text-amber-700 border-amber-400/40 dark:text-amber-300',
   hr: 'bg-zinc-400/10 text-zinc-600 border-zinc-400/40 dark:text-zinc-300',
   'how-to': 'bg-violet-400/15 text-violet-700 border-violet-400/40 dark:text-violet-300',
+  brand: 'bg-[#b08a55]/15 text-[#7a5e3a] border-[#b08a55]/40 dark:text-[#d4b089]',
   faq: 'bg-zinc-300/10 text-zinc-500 border-zinc-400/30 dark:text-zinc-400',
 }
 

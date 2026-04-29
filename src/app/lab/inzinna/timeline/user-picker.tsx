@@ -3,9 +3,16 @@
 import { cn } from '@/lib/utils'
 import type { TimelineCollaborator } from './use-timeline'
 
+// Inzinna brand palette (matches the VIEWING row pastels)
 const COLLAB_COLORS: Record<string, string> = {
-  AC: '#F39E3A', BR: '#E7437D', CA: '#F5ED43', FI: '#4EBFD4',
-  GI: '#B6D458', LO: '#AC80AF', TM: '#F5ED43', JC: '#AC80AF',
+  AC: '#FFE7DA', // peach-50
+  BR: '#DFD7E2', // lavender
+  CA: '#F1E29D', // sun
+  FI: '#E8F9E8', // mint-50
+  GI: '#3362FF', // royal
+  LO: '#5F396D', // plum
+  TM: '#F1E29D', // sun
+  JC: '#5F396D', // plum
 }
 
 function isLightHex(hex: string): boolean {

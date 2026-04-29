@@ -4,6 +4,7 @@ import { INZ_STATES, type AccentName, type InziState, type LauncherStyle, type M
 import { ChatPanel } from './inzi-panel'
 import { HomepageBackdrop, Launcher } from './inzi-launcher'
 import { TweaksPanel } from './inzi-tweaks'
+import { VoiceCall } from './voice-call'
 import './inzi.css'
 
 const LIVE_INTRO: Message = {
@@ -29,6 +30,7 @@ export function InziApp() {
   const [liveMessages, setLiveMessages] = useState<Message[]>([LIVE_INTRO])
   const [liveLoading, setLiveLoading] = useState<boolean>(false)
   const [liveActive, setLiveActive] = useState<boolean>(false)
+  const [callOpen, setCallOpen] = useState<boolean>(false)
 
   const stateObj: InziState = useMemo(() => {
     if (liveActive) {
@@ -148,11 +150,22 @@ export function InziApp() {
             composerValue={composerValue}
             onComposerChange={setComposerValue}
             onComposerSend={onComposerSend}
+            onCall={() => { setLiveActive(true); setCallOpen(true) }}
           />
         </div>
       )}
 
       <Launcher style={launcherStyle} variation={variation} open={open} onToggle={() => setOpen(o => !o)} />
+
+      {callOpen && (
+        <VoiceCall
+          accent={accent}
+          dark={dark}
+          onClose={() => setCallOpen(false)}
+          onUserSaid={(text) => setLiveMessages(prev => [...prev, { from: 'user', text }])}
+          onBotSaid={(msg) => setLiveMessages(prev => [...prev, msg])}
+        />
+      )}
 
       <TweaksPanel
         variation={variation}
