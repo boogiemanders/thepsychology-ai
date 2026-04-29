@@ -5,10 +5,10 @@ import type { TimelineCollaborator } from './use-timeline'
 
 // Inzinna brand palette (matches the VIEWING row pastels)
 const COLLAB_COLORS: Record<string, string> = {
-  AC: '#FFE7DA', // peach-50
-  BR: '#DFD7E2', // lavender
+  AC: '#FFB990', // peach
+  BR: '#9DADE5', // peri (periwinkle)
   CA: '#F1E29D', // sun
-  FI: '#E8F9E8', // mint-50
+  FI: '#8AE08D', // mint
   GI: '#3362FF', // royal
   LO: '#5F396D', // plum
   TM: '#F1E29D', // sun
