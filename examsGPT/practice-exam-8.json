@@ -642,20 +642,20 @@
     },
     {
       "id": 33,
-      "question": "A clinician uses an ABAB withdrawal design to evaluate a token economy intervention for reducing aggressive outbursts in a child with conduct disorder. During the second baseline phase (second A), the child's aggressive behavior does NOT return to the original baseline level but remains partially reduced. What is the MOST likely methodological concern?",
+      "question": "In a research study comparing the effectiveness of three different therapies on reducing depressive symptoms, the variable representing the type of therapy given is best described as which of the following?",
       "options": [
-        "The study demonstrates a testing threat that invalidates the findings",
-        "The treatment may have produced carryover effects, making it difficult to attribute changes solely to the intervention's presence or absence",
-        "The results confirm that the intervention was effective because some improvement was maintained",
-        "The study should be redesigned as a multiple baseline design to eliminate the need for withdrawal"
+        "Dependent variable",
+        "Moderator variable",
+        "Independent variable",
+        "Mediator variable"
       ],
-      "correct_answer": "The treatment may have produced carryover effects, making it difficult to attribute changes solely to the intervention's presence or absence",
-      "explanation": "The ABAB design's logic depends on behavior returning to baseline levels when treatment is withdrawn, and improving again when treatment is reintroduced. The lesson states: 'When behavior returns to baseline after treatment withdrawal and improves again when treatment is reintroduced, you have strong evidence the treatment works.' When behavior does NOT return to baseline, it suggests carryover effects — the treatment produced lasting changes that persist even after withdrawal. This undermines the design's internal validity because the causal demonstration relies on the behavior tracking with the treatment phases. Option A incorrectly identifies the threat. Option C mistakes a methodological limitation for a strength — while maintenance is clinically desirable, it weakens the design's logic. Option D identifies an alternative design but doesn't address the core concern.",
+      "correct_answer": "Independent variable",
+      "explanation": "1. The correct answer is \"Independent variable\" because the type of therapy given is the variable that the researcher manipulates to observe its effect on reducing depressive symptoms. In this study, the different therapies represent the levels of the independent variable, which aims to determine how they influence the dependent variable, in this case, the severity of depressive symptoms.\n\n2. The \"Dependent variable\" is incorrect because it refers to the outcome being measured, which, in this study, is the severity of depressive symptoms, not the type of therapy. A \"Moderator variable\" is also incorrect because it influences the strength or direction of the relationship between the independent and dependent variables but does not represent the variable being manipulated in the study. Lastly, the \"Mediator variable\" is incorrect because it explains the process through which the independent variable affects the dependent variable, rather than being the variable itself that is manipulated in the research.",
       "domain": "Domain 7: Research Methods & Statistics",
       "knId": "KN54",
-      "source_file": "7-research-designs.json",
+      "source_file": "7 Variables.json",
       "source_folder": "7 Research and Stats",
-      "difficulty": "hard",
+      "difficulty": "medium",
       "question_type": "standard",
       "isScored": false,
       "is_org_psych": false
@@ -2462,18 +2462,18 @@
     },
     {
       "id": 124,
-      "question": "A researcher conducts a 3 × 2 factorial ANOVA examining the effects of therapy type (CBT, ACT, IPT) and session frequency (weekly, biweekly) on depression scores. The results reveal a significant interaction effect but non-significant main effects for both therapy type and session frequency. Which of the following is the BEST interpretation?",
+      "question": "In a repeated measures ANOVA, what is primarily being analyzed?",
       "options": [
-        "Neither therapy type nor session frequency affects depression scores under any conditions",
-        "The effect of therapy type on depression depends on session frequency, even though neither variable has a consistent overall effect",
-        "The results are uninterpretable because main effects must be significant before interactions can be meaningful",
-        "Session frequency moderates depression scores regardless of therapy type"
+        "Differences between independent groups",
+        "Differences within the same group over time",
+        "Differences in categorical variables",
+        "Differences in variances"
       ],
-      "correct_answer": "The effect of therapy type on depression depends on session frequency, even though neither variable has a consistent overall effect",
-      "explanation": "The lesson describes this exact pattern: 'Neither therapy nor medication matters alone, but specific combinations work' is listed as an example of 'Interaction only.' A significant interaction means the effect of one IV depends on the level of the other IV. Non-significant main effects mean that neither variable has a consistent overall effect when averaged across levels of the other variable. Option A is incorrect because the significant interaction indicates that certain combinations DO affect depression. Option C is incorrect — main effects do not need to be significant for interactions to be meaningful; in fact, the lesson warns 'When there's a significant interaction, be cautious interpreting main effects – the interaction might tell the more important story.' Option D incorrectly describes moderation as independent of therapy type.",
+      "correct_answer": "Differences within the same group over time",
+      "explanation": "The correct answer is 'Differences within the same group over time' because repeated measures ANOVA is specifically designed to analyze data where the same subjects are measured multiple times under different conditions. It contrasts with other tests that compare independent groups or categorical variables.",
       "domain": "Domain 7: Research Methods & Statistics",
       "knId": "KN54",
-      "source_file": "7-research-designs.json",
+      "source_file": "7 Stats Tests.json",
       "source_folder": "7 Research and Stats",
       "difficulty": "hard",
       "question_type": "standard",
@@ -2682,20 +2682,20 @@
     },
     {
       "id": 135,
-      "question": "In operant conditioning, which schedule of reinforcement is characterized by providing reinforcement after a fixed amount of time has passed?",
+      "question": "What is the primary reason for extinction resistance in reinforcement schedules?",
       "options": [
-        "Variable Ratio",
-        "Fixed Interval",
-        "Variable Interval",
-        "Continuous"
+        "The unpredictability of reinforcement.",
+        "The consistency of punishment.",
+        "The clarity of the behavior's consequences.",
+        "The duration of the reinforcement period."
       ],
-      "correct_answer": "Fixed Interval",
-      "explanation": "A Fixed Interval schedule provides reinforcement after a set period of time, regardless of the number of responses. Variable Ratio and Variable Interval schedules involve varying times or ratios, while Continuous reinforcement provides reinforcement every time the behavior occurs.",
+      "correct_answer": "The unpredictability of reinforcement.",
+      "explanation": "Extinction resistance is often due to the unpredictability of reinforcement, which makes behaviors harder to extinguish. The other options do not accurately capture the primary reason for this phenomenon.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
       "knId": "KN7",
-      "source_file": "2-skinner-and-operant-conditioning.json",
+      "source_file": "2 Operant Conditioning Interventions.json",
       "source_folder": "2 Learning and Memory",
-      "difficulty": "medium",
+      "difficulty": "hard",
       "question_type": "standard",
       "isScored": false,
       "is_org_psych": false
@@ -2802,20 +2802,20 @@
     },
     {
       "id": 141,
-      "question": "An I-O psychologist introduces a new cognitive ability test (validity coefficient = .35) to a company's hiring process. According to the Taylor-Russell tables, under which combination of conditions will this test produce the GREATEST incremental validity?",
+      "question": "Which of the following best explains the importance of updated normative data in intelligence testing?",
       "options": [
-        "Base rate of .50 and selection ratio of .10",
-        "Base rate of .80 and selection ratio of .10",
-        "Base rate of .50 and selection ratio of .90",
-        "Base rate of .80 and selection ratio of .90"
+        "Proper norms adjust for cultural and environmental changes affecting test performance over time",
+        "Older norms provide more stable and reliable scores",
+        "Test norms have no effect on IQ score interpretation",
+        "Norms are only relevant for local, not national, populations"
       ],
-      "correct_answer": "Base rate of .50 and selection ratio of .10",
-      "explanation": "The Taylor-Russell tables show that incremental validity is maximized when the base rate is moderate (around .50, providing maximum room for improvement) and the selection ratio is low (like .10, meaning the organization is highly selective). A high base rate (.80) means the current system already works well, leaving little room for improvement. A high selection ratio (.90) means almost everyone is hired, reducing the test's ability to differentiate. The lesson demonstrates that with a base rate of .50, validity of .30, and selection ratio of .10, success increases to 71% (a 21% improvement), but with a selection ratio of .90, improvement is only 3%.",
+      "correct_answer": "Proper norms adjust for cultural and environmental changes affecting test performance over time",
+      "explanation": "1. The correct answer, \"Proper norms adjust for cultural and environmental changes affecting test performance over time,\" highlights the necessity of using updated normative data to ensure that intelligence tests remain valid and relevant. As the Flynn effect indicates, IQ scores can increase due to environmental factors, necessitating updated norms to accurately reflect current population performance and to avoid misinterpretation of an individual's abilities based on outdated standards.\n\n2. The option \"Older norms provide more stable and reliable scores\" is incorrect because older norms may not account for recent cultural and educational shifts that can significantly impact test performance, leading to misleading results. The statement \"Test norms have no effect on IQ score interpretation\" is false, as norms are essential for contextualizing an individual's score within the population, influencing how that score is understood and utilized. Lastly, the claim \"Norms are only relevant for local, not national, populations\" is misleading because intelligence tests are designed with national norms in mind to ensure their applicability across diverse populations, making national norms crucial for accurate interpretation.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
       "knId": "KN37",
-      "source_file": "5-do-hiring-tools-work.json",
+      "source_file": "5 IQ Tests.json",
       "source_folder": "5 Assessment",
-      "difficulty": "hard",
+      "difficulty": "easy",
       "question_type": "standard",
       "isScored": true,
       "is_org_psych": false
@@ -3402,20 +3402,20 @@
     },
     {
       "id": 171,
-      "question": "A client with social anxiety reports that she frequently makes excuses to leave parties early because doing so immediately reduces her feelings of distress. Over time, she has become increasingly likely to leave social events within the first few minutes. The maintenance of this early-departure behavior is best explained by:",
+      "question": "A behavioral therapist instructs a highly distractible adult client to allow himself to browse news websites for 15 minutes, but only after completing 30 minutes of uninterrupted report writing. The therapist explains that this works because the preferred activity is being used as a consequence for completing the less preferred one. Which operant principle most precisely describes this intervention?",
       "options": [
-        "Positive punishment, because the social anxiety serves as an aversive consequence for attending parties",
-        "Negative reinforcement, because the behavior is strengthened by the termination of an aversive state",
-        "Positive reinforcement, because leaving the party provides the reward of being alone",
-        "Avoidance conditioning, because she prevents the anxiety from occurring in the first place"
+        "Token economy, because the preferred activity serves as an exchangeable backup reinforcer",
+        "Negative reinforcement, because completing the aversive report writing eventually terminates the demand",
+        "The Premack principle, because a high-frequency behavior is used to reinforce a low-frequency behavior",
+        "Differential reinforcement of incompatible behavior, because browsing and writing cannot occur simultaneously"
       ],
-      "correct_answer": "Negative reinforcement, because the behavior is strengthened by the termination of an aversive state",
-      "explanation": "Negative reinforcement occurs when a behavior increases because it removes or terminates an aversive stimulus. The client's leaving behavior is strengthened because it removes the unpleasant anxiety she is currently experiencing. As the lesson states, negative reinforcement involves 'something unpleasant is removed' and the behavior 'increases/maintains.' Positive punishment (A) decreases behavior by adding something aversive — the opposite direction. Positive reinforcement (C) would involve adding a pleasant stimulus; while solitude might be pleasant, the key mechanism here is the relief from distress. Avoidance conditioning (D) involves preventing an aversive event before it starts; since the client is already at the party experiencing distress, this is escape conditioning (a form of negative reinforcement), not avoidance.",
+      "correct_answer": "The Premack principle, because a high-frequency behavior is used to reinforce a low-frequency behavior",
+      "explanation": "The Premack principle specifies that a high-frequency (preferred) behavior can serve as a reinforcer for a low-frequency (less preferred) behavior when access to the preferred behavior is made contingent on performing the non-preferred behavior. Browsing news (high-frequency) is made contingent on report writing (low-frequency), which is the defining feature of the Premack principle. Token economy requires an exchangeable medium; negative reinforcement requires removal of an aversive stimulus to increase behavior; DRI requires topographic incompatibility between the target and alternative behavior. None of those mechanisms are driving this arrangement.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
       "knId": "KN7",
-      "source_file": "2-skinner-and-operant-conditioning.json",
+      "source_file": "2 Operant Conditioning Interventions.json",
       "source_folder": "2 Learning and Memory",
-      "difficulty": "hard",
+      "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
       "is_org_psych": false
