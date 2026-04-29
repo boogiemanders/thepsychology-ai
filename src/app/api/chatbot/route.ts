@@ -16,16 +16,23 @@ interface MatchRow {
   score: number
 }
 
-const SYSTEM_PROMPT = `You are the DIPS internal assistant for Dr. Inzinna Psychological Services PLLC.
-Answer staff questions about clinic operations, compliance, booking, billing, HR, and benefits using ONLY the CONTEXT below.
+const SYSTEM_PROMPT = `You are the Inzinna internal assistant for Inzinna Psychological Services.
+Answer staff questions about clinic operations, compliance, booking, billing, HR, benefits, and the brand using ONLY the CONTEXT below.
+
+Voice (from the Inzinna brand strategy):
+- The Clear-Eyed Guide. Grounded. Direct. Human.
+- Listen first. Name what's real. Don't hide behind technique or jargon.
+- Plain language. Short sentences. No buzzwords, no marketing fluff, no hype.
+- Warm without being soft. Honest without being cold.
+- Say the hard thing out loud when it matters. Don't pad answers.
 
 Rules:
-- Ground every statement in the CONTEXT. If the answer is not in the CONTEXT, say "I don't have that in the manual — ask Greg (clinical) or Carlos (admin)."
+- Ground every statement in the CONTEXT. If the answer is not in the CONTEXT, say "I don't have that in the manual. Ask Greg (clinical) or Carlos (admin)."
 - Quote phone numbers, dollar amounts, CPT codes, and hour counts verbatim from the CONTEXT. Never paraphrase numbers.
-- Keep answers short — 3-6 sentences unless the user asks for steps. For workflows, use a numbered list that matches the source.
+- Keep answers short. 3-6 sentences unless the user asks for steps. For workflows, use a numbered list that matches the source.
 - Cite sources inline like [1], [2] matching the order of the CONTEXT blocks. Do not invent citations.
 - Do NOT give clinical opinions. For clinical questions ("should I do X in session"), say "consult Greg or Bret."
-- No emojis.`
+- No emojis. No em-dashes. Use periods, commas, or colons instead.`
 
 export async function POST(req: Request) {
   const { question } = (await req.json().catch(() => ({}))) as { question?: string }
@@ -71,11 +78,13 @@ export async function POST(req: Request) {
   }
 
   // 3. Build context with explicit citation numbers.
+  const docLabel = (doc: string) =>
+    doc === 'clinic-manual' ? 'Clinic Manual'
+    : doc === 'employee-handbook' ? 'Employee Handbook'
+    : doc === 'brand-strategy' ? 'Brand Strategy'
+    : doc
   const context = rows
-    .map(
-      (r, i) =>
-        `[${i + 1}] ${r.title} (${r.doc === 'clinic-manual' ? 'Clinic Manual' : 'Employee Handbook'})\n${r.content}`
-    )
+    .map((r, i) => `[${i + 1}] ${r.title} (${docLabel(r.doc)})\n${r.content}`)
     .join('\n\n---\n\n')
 
   // 4. Generate grounded answer.

@@ -6,12 +6,12 @@ import { readFileSync, writeFileSync } from 'node:fs'
 import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
-type Category = 'faq' | 'booking' | 'billing' | 'crisis' | 'compliance' | 'hr' | 'benefits' | 'how-to'
+type Category = 'faq' | 'booking' | 'billing' | 'crisis' | 'compliance' | 'hr' | 'benefits' | 'how-to' | 'brand'
 type Audience = 'clinician' | 'admin' | 'supervisor' | 'all-staff' | 'new-staff'
 
 interface Chunk {
   id: string
-  doc: 'clinic-manual' | 'employee-handbook'
+  doc: 'clinic-manual' | 'employee-handbook' | 'brand-strategy'
   title: string
   category: Category
   audience: Audience
@@ -24,6 +24,7 @@ const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url))
 const ROOT = join(SCRIPT_DIR, '..')
 const MANUAL = join(ROOT, 'DIPS-Clinic-Manual.md')
 const HANDBOOK = join(ROOT, 'DIPS-Employee-Handbook.txt')
+const BRAND = join(ROOT, 'Inzinna-Brand-Strategy.md')
 const OUT = join(ROOT, 'out', 'kb.jsonl')
 
 // ----- Category mappings (from KB-OUTLINE.md) ------------------------------
@@ -245,11 +246,54 @@ function chunkHandbook(): Chunk[] {
   return chunks
 }
 
+// ----- Brand Strategy chunker ---------------------------------------------
+
+function chunkBrand(): Chunk[] {
+  const src = readFileSync(BRAND, 'utf8')
+  const lines = src.split('\n')
+  const headingRx = /^##\s+(.+?)\s*\{#([^}]+)\}\s*$/
+
+  interface RawChunk { id: string; title: string; bodyLines: string[] }
+  const raw: RawChunk[] = []
+  let current: RawChunk | null = null
+
+  for (const line of lines) {
+    const m = line.match(headingRx)
+    if (m) {
+      if (current) raw.push(current)
+      const title = m[1].replace(/\*\*/g, '').trim()
+      const id = `brand-${m[2].replace(/[^a-z0-9\-]/gi, '-').replace(/-+/g, '-').toLowerCase()}`
+      current = { id, title, bodyLines: [] }
+    } else if (current) {
+      current.bodyLines.push(line)
+    }
+  }
+  if (current) raw.push(current)
+
+  const chunks: Chunk[] = []
+  for (const r of raw) {
+    const content = clean(r.bodyLines.join('\n'))
+    if (!r.title || content.length < 40) continue
+    chunks.push({
+      id: r.id,
+      doc: 'brand-strategy',
+      title: r.title,
+      category: 'brand',
+      audience: 'all-staff',
+      content,
+      links: extractLinks(content),
+      related: [],
+    })
+  }
+  return chunks
+}
+
 // ----- Main ----------------------------------------------------------------
 
 const manualChunks = chunkManual()
 const handbookChunks = chunkHandbook()
-const all = [...manualChunks, ...handbookChunks]
+const brandChunks = chunkBrand()
+const all = [...manualChunks, ...handbookChunks, ...brandChunks]
 
 // De-dupe by id (later wins; shouldn't happen but guard anyway)
 const seen = new Map<string, Chunk>()
@@ -264,5 +308,5 @@ const byCat = dedup.reduce<Record<string, number>>((acc, c) => {
 }, {})
 
 console.log(`Wrote ${dedup.length} chunks to ${OUT}`)
-console.log(`  manual: ${manualChunks.length}  handbook: ${handbookChunks.length}`)
+console.log(`  manual: ${manualChunks.length}  handbook: ${handbookChunks.length}  brand: ${brandChunks.length}`)
 console.log(`  categories:`, byCat)
