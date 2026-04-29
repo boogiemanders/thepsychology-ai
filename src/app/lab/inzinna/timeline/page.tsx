@@ -82,7 +82,7 @@ const months = MONTHS
 const FALLBACK_PROJECTS: TimelineProject[] = [
   {
     id: 'fallback-01', timeline_key: 'inzinna-leadership', num: '01',
-    name: 'Zocdoc → SimplePractice',
+    name: 'Zocdoc → SimplePractice', lead: 'AC',
     one_liner: 'Pulls patient info from Zocdoc into SimplePractice. Drafts the insurance verification email. Saves ~15 min per intake.',
     priority: 'high', status: 'blocked',
     stage_line: 'Working plugin on one machine. Blocked on Workspace admin.',
@@ -96,7 +96,7 @@ const FALLBACK_PROJECTS: TimelineProject[] = [
   },
   {
     id: 'fallback-02', timeline_key: 'inzinna-leadership', num: '02',
-    name: 'Leadership Roadmap Timeline',
+    name: 'Leadership Roadmap Timeline', lead: 'AC',
     one_liner: 'Shared monthly view of every leadership project (this page).',
     priority: 'high', status: 'building',
     stage_line: 'Folder + doc created. Doc is being filled. Visual ships next.',
@@ -110,7 +110,7 @@ const FALLBACK_PROJECTS: TimelineProject[] = [
   },
   {
     id: 'fallback-03', timeline_key: 'inzinna-leadership', num: '03',
-    name: 'Supervision Prep Tool',
+    name: 'Supervision Prep Tool', lead: 'AC',
     one_liner: 'Pulls notes + treatment plans. Clinicians review and adjust diagnoses before supervision.',
     priority: 'medium', status: 'building',
     stage_line: 'Working but rough. Needs cleanup + bug fixes + a clinician feedback pass.',
@@ -124,7 +124,7 @@ const FALLBACK_PROJECTS: TimelineProject[] = [
   },
   {
     id: 'fallback-04', timeline_key: 'inzinna-leadership', num: '04',
-    name: 'JustWorks Payroll Autofill',
+    name: 'JustWorks Payroll Autofill', lead: 'AC',
     one_liner: 'Reads SimplePractice payroll. Fills JustWorks time cards using pay rules + CPT-based rates.',
     priority: 'high', status: 'building',
     stage_line: 'Mostly working. Comparing against Carlos payroll session Apr 17.',
@@ -138,7 +138,7 @@ const FALLBACK_PROJECTS: TimelineProject[] = [
   },
   {
     id: 'fallback-05', timeline_key: 'inzinna-leadership', num: '05',
-    name: 'Assessment',
+    name: 'Assessment', lead: 'AC',
     one_liner: 'Automated scoring for clinical assessments. BAARS, ADHD-RS, executive functioning (Trail-making, Tower of Hanoi), Rorschach.',
     priority: 'high', status: 'live',
     stage_line: 'Live and in testing with Bret. Bret is travelling.',
@@ -152,7 +152,7 @@ const FALLBACK_PROJECTS: TimelineProject[] = [
   },
   {
     id: 'fallback-06', timeline_key: 'inzinna-leadership', num: '06',
-    name: 'Website Chatbot + Call Management',
+    name: 'Website Chatbot + Call Management', lead: 'AC',
     one_liner: 'Chatbot handles admin questions, then call routing reduces interruptions. Chatbot first, call system after. Can prototype early if bandwidth opens up.',
     priority: 'medium', status: 'idea',
     stage_line: null,

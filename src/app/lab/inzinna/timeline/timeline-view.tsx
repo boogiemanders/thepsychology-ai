@@ -145,6 +145,8 @@ export function TimelineShell({ initialProjects, initialCollaborators, months, t
   const today = useMemo(() => isoToPosition(todayIso, months), [todayIso, months])
 
   const PRIORITY_ORDER: Record<string, number> = { high: 0, medium: 1, low: 2 }
+  // Blocked work surfaces first so unsticking it isn't buried under "building" rows.
+  const STATUS_ORDER: Record<string, number> = { blocked: 0, building: 1, live: 2, idea: 3, done: 4 }
   const visible = useMemo(() => {
     let filtered = timeline.projects
     if (myOnly && timeline.activeUser) {
@@ -153,7 +155,15 @@ export function TimelineShell({ initialProjects, initialCollaborators, months, t
     if (viewingFilter) {
       filtered = filtered.filter(p => p.contributors.includes(viewingFilter))
     }
-    return [...filtered].sort((a, b) => (PRIORITY_ORDER[a.priority] ?? 2) - (PRIORITY_ORDER[b.priority] ?? 2))
+    return [...filtered].sort((a, b) => {
+      const sa = STATUS_ORDER[a.status] ?? 5
+      const sb = STATUS_ORDER[b.status] ?? 5
+      if (sa !== sb) return sa - sb
+      const pa = PRIORITY_ORDER[a.priority] ?? 2
+      const pb = PRIORITY_ORDER[b.priority] ?? 2
+      if (pa !== pb) return pa - pb
+      return (a.sort_order ?? 0) - (b.sort_order ?? 0)
+    })
   }, [timeline.projects, timeline.activeUser, myOnly, viewingFilter])
 
   // Build contributor lookup for chips
@@ -255,6 +265,7 @@ export function TimelineShell({ initialProjects, initialCollaborators, months, t
             collaborators={timeline.collaborators}
             activeUser={timeline.activeUser}
             onPick={timeline.pickUser}
+            projects={timeline.projects}
           />
           <GoogleConnect activeUser={timeline.activeUser} />
         </div>
@@ -305,6 +316,7 @@ export function TimelineShell({ initialProjects, initialCollaborators, months, t
               onMilestoneCommit={(ms) => timeline.updateMilestone(p.id, ms)}
               onPriorityCommit={(priority) => timeline.updatePriority(p.id, priority)}
               onContributorsCommit={(contributors) => timeline.updateContributors(p.id, contributors)}
+              onLeadCommit={(lead) => timeline.updateLead(p.id, lead)}
               allCollaborators={timeline.collaborators}
             />
           ))}
@@ -373,7 +385,7 @@ function MonthHeader({ months, today }: { months: Month[]; today: number }) {
 
 function TimelineRow({
   project, months, today, collabLookup, canEdit,
-  onToggleStep, onUpdateStep, onPhasesCommit, onMilestoneCommit, onPriorityCommit, onContributorsCommit,
+  onToggleStep, onUpdateStep, onPhasesCommit, onMilestoneCommit, onPriorityCommit, onContributorsCommit, onLeadCommit,
   allCollaborators,
 }: {
   project: TimelineProject
@@ -387,14 +399,38 @@ function TimelineRow({
   onMilestoneCommit: (ms: { at: number; label: string } | null) => void
   onPriorityCommit: (priority: PriorityLevel) => void
   onContributorsCommit: (contributors: string[]) => void
+  onLeadCommit: (lead: string | null) => void
   allCollaborators: TimelineCollaborator[]
 }) {
   const pri = PRIORITY[project.priority as PriorityLevel] ?? PRIORITY.medium
   const status = STATUS_CFG[project.status] ?? STATUS_CFG.idea
   const doneCount = project.steps.filter(s => s.done).length
   const totalSteps = project.steps.length
-  const lead = project.contributors[0] ? collabLookup[project.contributors[0]] ?? null : null
+  const leadId = project.lead ?? project.contributors[0] ?? null
+  const lead = leadId ? collabLookup[leadId] ?? null : null
   const leadCol = leadColors(lead)
+  const isStale = (() => {
+    if (!project.updated_at) return false
+    const days = (Date.now() - new Date(project.updated_at).getTime()) / 86_400_000
+    return days > 14 && project.status !== 'done' && project.status !== 'idea'
+  })()
+  const needsMilestone = project.priority === 'high' && !project.milestone && project.status !== 'done'
+  // Render phases. If phases is empty but the project is live, derive a single
+  // bar from step start/due so project 05 (Assessment) doesn't render as a void.
+  const renderPhases: TimelinePhase[] = useMemo(() => {
+    if (project.phases.length > 0) return project.phases
+    if (project.status === 'live') {
+      const starts = project.steps.map(s => s.start_at).filter((x): x is number => typeof x === 'number')
+      const dues = project.steps.map(s => s.due_at).filter((x): x is number => typeof x === 'number')
+      if (starts.length || dues.length) {
+        const start = starts.length ? Math.min(...starts) : 0
+        const end = dues.length ? Math.max(...dues) : 1
+        if (end > start) return [{ kind: 'live', start, end, label: 'Live' }]
+      }
+      return [{ kind: 'live', start: 0, end: 1, label: 'Live' }]
+    }
+    return []
+  }, [project.phases, project.steps, project.status])
 
   return (
     <AccordionItem
@@ -412,7 +448,15 @@ function TimelineRow({
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-2 mb-1">
                 <h3 className="text-[14px] font-medium tracking-[-0.1px] text-white/92 leading-[1.35] line-clamp-2" title={project.name}>{project.name}</h3>
-                <span className={cn('inline-block h-1.5 w-1.5 rounded-full shrink-0', status.dot)} />
+                <span className={cn('inline-block h-1.5 w-1.5 rounded-full shrink-0', status.dot)} title={status.label} />
+                {isStale && (
+                  <span className="inline-block h-1.5 w-1.5 rounded-full shrink-0 bg-red-400 animate-pulse" title={`Stale. Last edit ${relativeTime(project.updated_at)}`} />
+                )}
+                {needsMilestone && (
+                  <span className="text-[9px] font-mono uppercase tracking-[0.12em] px-1.5 py-px rounded bg-yellow-500/15 text-yellow-300 border border-yellow-500/30 shrink-0" title="High priority but no milestone set">
+                    No milestone
+                  </span>
+                )}
                 {totalSteps > 0 && (
                   <span className={cn(
                     'text-[10px] font-mono tabular-nums',
@@ -423,7 +467,7 @@ function TimelineRow({
                 )}
               </div>
               <div className="mt-2">
-                <ContribStack ids={project.contributors} lookup={collabLookup} />
+                <ContribStack ids={project.contributors} leadId={leadId} lookup={collabLookup} />
               </div>
             </div>
             <span className="text-white/30 mt-0.5 shrink-0 transition-transform duration-200 group-data-[state=open]/trigger:rotate-90" aria-hidden="true">›</span>
@@ -437,16 +481,16 @@ function TimelineRow({
           </div>
           <TodayMarker position={today} variant="row" />
           <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-9">
-            {project.phases.map((ph, phIdx) => (
+            {renderPhases.map((ph, phIdx) => (
               <PhaseBar
                 key={phIdx}
                 phase={ph}
-                phases={project.phases}
+                phases={renderPhases}
                 phaseIndex={phIdx}
                 leadCol={leadCol}
-                canEdit={canEdit}
+                canEdit={canEdit && project.phases.length > 0}
                 onCommit={onPhasesCommit}
-                progress={phaseProgress(phIdx, project.phases.length, project.steps)}
+                progress={phaseProgress(phIdx, renderPhases.length, project.steps)}
               />
             ))}
             {project.steps.map((step, i) => (
@@ -465,7 +509,7 @@ function TimelineRow({
       </div>
 
       <AccordionContent className="border-t border-dashed border-white/[0.06] px-6 py-5 bg-black/20">
-        <ExpandedDetail project={project} collabLookup={collabLookup} canEdit={canEdit} onToggleStep={onToggleStep} onUpdateStep={onUpdateStep} onPriorityCommit={onPriorityCommit} onContributorsCommit={onContributorsCommit} allCollaborators={allCollaborators} />
+        <ExpandedDetail project={project} collabLookup={collabLookup} canEdit={canEdit} onToggleStep={onToggleStep} onUpdateStep={onUpdateStep} onPriorityCommit={onPriorityCommit} onContributorsCommit={onContributorsCommit} onLeadCommit={onLeadCommit} allCollaborators={allCollaborators} />
       </AccordionContent>
     </AccordionItem>
   )
@@ -722,7 +766,7 @@ function TodayMarker({ position, variant }: { position: number; variant: 'header
 // ---------- Expanded detail with checkboxes ----------
 
 function ExpandedDetail({
-  project, collabLookup, canEdit, onToggleStep, onUpdateStep, onPriorityCommit, onContributorsCommit, allCollaborators,
+  project, collabLookup, canEdit, onToggleStep, onUpdateStep, onPriorityCommit, onContributorsCommit, onLeadCommit, allCollaborators,
 }: {
   project: TimelineProject
   collabLookup: Record<string, TimelineCollaborator>
@@ -731,8 +775,10 @@ function ExpandedDetail({
   onUpdateStep: (idx: number, patch: Partial<TimelineStep>) => void
   onPriorityCommit: (priority: PriorityLevel) => void
   onContributorsCommit: (contributors: string[]) => void
+  onLeadCommit: (lead: string | null) => void
   allCollaborators: TimelineCollaborator[]
 }) {
+  const currentLead = project.lead ?? project.contributors[0] ?? null
   const projectStartFrac = project.phases.length ? Math.min(...project.phases.map(p => p.start)) : 0
   const projectEndFrac = project.phases.length ? Math.max(...project.phases.map(p => p.end)) : 1
   const projectStart = fractionToDate(projectStartFrac)
@@ -744,18 +790,36 @@ function ExpandedDetail({
         <p className="text-[13px] text-white/75 leading-relaxed">{project.one_liner}</p>
       )}
       {canEdit && (
-        <div className="flex items-center gap-3">
-          <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-white/45">Priority</span>
-          <Select value={project.priority} onValueChange={(v) => onPriorityCommit(v as PriorityLevel)}>
-            <SelectTrigger className="h-7 w-[110px] text-[12px] font-mono">
-              <SelectValue />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="high" className="text-[12px] font-mono">High</SelectItem>
-              <SelectItem value="medium" className="text-[12px] font-mono">Medium</SelectItem>
-              <SelectItem value="low" className="text-[12px] font-mono">Low</SelectItem>
-            </SelectContent>
-          </Select>
+        <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
+          <div className="flex items-center gap-3">
+            <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-white/45">Priority</span>
+            <Select value={project.priority} onValueChange={(v) => onPriorityCommit(v as PriorityLevel)}>
+              <SelectTrigger className="h-7 w-[110px] text-[12px] font-mono">
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="high" className="text-[12px] font-mono">High</SelectItem>
+                <SelectItem value="medium" className="text-[12px] font-mono">Medium</SelectItem>
+                <SelectItem value="low" className="text-[12px] font-mono">Low</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+          <div className="flex items-center gap-3">
+            <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-white/45" title="Directly Responsible Individual">Lead (DRI)</span>
+            <Select value={currentLead ?? '__none__'} onValueChange={(v) => onLeadCommit(v === '__none__' ? null : v)}>
+              <SelectTrigger className="h-7 w-[140px] text-[12px] font-mono">
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="__none__" className="text-[12px] font-mono">No lead</SelectItem>
+                {allCollaborators.filter(c => !c.neutral).map(c => (
+                  <SelectItem key={c.initials} value={c.initials} className="text-[12px] font-mono">
+                    {c.initials} {c.name}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
         </div>
       )}
       {canEdit && (
@@ -1079,7 +1143,8 @@ function MobileRow({ project, collabLookup, monthStart, monthEnd }: {
 }) {
   const status = STATUS_CFG[project.status] ?? STATUS_CFG.idea
   const monthSpan = monthEnd - monthStart
-  const lead = project.contributors[0] ? collabLookup[project.contributors[0]] ?? null : null
+  const leadId = project.lead ?? project.contributors[0] ?? null
+  const lead = leadId ? collabLookup[leadId] ?? null : null
   const leadCol = leadColors(lead)
   const totalPhases = project.phases.length
   const clipped = project.phases
@@ -1099,7 +1164,7 @@ function MobileRow({ project, collabLookup, monthStart, monthEnd }: {
         <span className={cn('inline-block h-1.5 w-1.5 rounded-full', status.dot)} />
       </div>
       {project.one_liner && <p className="text-[12px] text-white/65 leading-relaxed mb-2">{project.one_liner}</p>}
-      <ContribStack ids={project.contributors} lookup={collabLookup} />
+      <ContribStack ids={project.contributors} leadId={leadId} lookup={collabLookup} />
       <div className="relative mt-2 h-2 bg-white/[0.06] rounded-sm overflow-hidden">
         {clipped.map((ph, i) => {
           const l = ((ph.start - monthStart) / monthSpan) * 100
@@ -1130,15 +1195,18 @@ function MobileRow({ project, collabLookup, monthStart, monthEnd }: {
 
 // ---------- Contributor chips ----------
 
-function ContribStack({ ids, lookup }: { ids: string[]; lookup: Record<string, TimelineCollaborator> }) {
+function ContribStack({ ids, leadId, lookup }: { ids: string[]; leadId?: string | null; lookup: Record<string, TimelineCollaborator> }) {
+  // Render lead first so it sits at the front of the stack with a ring.
+  const ordered = leadId && ids.includes(leadId) ? [leadId, ...ids.filter(id => id !== leadId)] : ids
   return (
-    <div className="flex items-center" title={ids.map(id => lookup[id]?.name ?? id).join(', ')}>
-      {ids.map((id, i) => {
+    <div className="flex items-center" title={ordered.map(id => `${lookup[id]?.name ?? id}${id === leadId ? ' (lead)' : ''}`).join(', ')}>
+      {ordered.map((id, i) => {
         const c = lookup[id]
         if (!c) return null
+        const isLead = id === leadId
         return (
-          <span key={id} style={{ marginLeft: i === 0 ? 0 : -6, zIndex: ids.length - i }} className="relative">
-            <ContribChip c={c} size="sm" />
+          <span key={id} style={{ marginLeft: i === 0 ? 0 : -6, zIndex: ordered.length - i }} className="relative">
+            <ContribChip c={c} size="sm" isLead={isLead} />
           </span>
         )
       })}
@@ -1146,7 +1214,7 @@ function ContribStack({ ids, lookup }: { ids: string[]; lookup: Record<string, T
   )
 }
 
-function ContribChip({ c, size = 'sm' }: { c: TimelineCollaborator; size?: 'sm' | 'md' }) {
+function ContribChip({ c, size = 'sm', isLead = false }: { c: TimelineCollaborator; size?: 'sm' | 'md'; isLead?: boolean }) {
   const dim = size === 'sm' ? 'h-5 w-5 text-[9px]' : 'h-6 w-6 text-[10px]'
   const hex = COLLAB_COLORS[c.initials]
   let bg: string
@@ -1164,7 +1232,12 @@ function ContribChip({ c, size = 'sm' }: { c: TimelineCollaborator; size?: 'sm' 
   const base = 'items-center justify-center rounded-full font-mono uppercase tracking-[0.04em] border-[1.5px]'
 
   return (
-    <span className={cn('inline-flex border-[#101032]', base, dim)} style={{ backgroundColor: bg, color: fg }} aria-label={c.name}>{c.initials}</span>
+    <span
+      className={cn('inline-flex border-[#101032]', base, dim, isLead && 'ring-[1.5px] ring-white ring-offset-[1.5px] ring-offset-[#101032]')}
+      style={{ backgroundColor: bg, color: fg }}
+      aria-label={isLead ? `${c.name} (lead)` : c.name}
+      title={isLead ? `${c.name} — Lead` : c.name}
+    >{c.initials}</span>
   )
 }
 

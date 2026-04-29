@@ -58,6 +58,7 @@ export async function POST(req: NextRequest) {
   const lastNum = existing?.[0]?.num ? parseInt(existing[0].num, 10) : 0
   const lastOrder = existing?.[0]?.sort_order ?? 0
 
+  const contributors = Array.isArray(body.contributors) ? body.contributors : [contributor]
   const project = {
     timeline_key: key,
     num: String(lastNum + 1).padStart(2, '0'),
@@ -66,7 +67,8 @@ export async function POST(req: NextRequest) {
     priority: ['high', 'medium', 'low'].includes(body.priority) ? body.priority : 'medium',
     status: ['live', 'building', 'blocked', 'idea'].includes(body.status) ? body.status : 'idea',
     stage_line: body.stage_line ?? '',
-    contributors: Array.isArray(body.contributors) ? body.contributors : [contributor],
+    contributors,
+    lead: typeof body.lead === 'string' && body.lead ? body.lead : (contributors[0] ?? contributor),
     phases: Array.isArray(body.phases) ? body.phases : [],
     milestone: body.milestone ?? null,
     steps: Array.isArray(body.steps) ? body.steps : [],
