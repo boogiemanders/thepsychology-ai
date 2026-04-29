@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=TikTok+Sans:wght@300;400;500;600;700&display=swap');
+
+.inz-page {
+  --inz-oxford: #101032;
+  --inz-royal: #3362FF;
+  --inz-slate: #4D4D5F;
+  --inz-cloud: #DBDBDF;
+  --inz-snow: #FDFEF9;
+  --inz-creme: #FCF9EB;
+  --inz-peach: #FFB990;
+  --inz-peach-50: #FFE7DA;
+  --inz-peach-25: #FFF1E9;
+  --inz-terra: #D67263;
+  --inz-blush: #F7E3E0;
+  --inz-peri: #9DADE5;
+  --inz-peri-50: rgba(157, 173, 229, 0.5);
+  --inz-peri-10: rgba(157, 173, 229, 0.10);
+  --inz-plum: #5F396D;
+  --inz-lavender: #DFD7E2;
+  --inz-mint: #8AE08D;
+  --inz-mint-50: #E8F9E8;
+  --inz-sun: #F1E29D;
+
+  font-family: "TikTok Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: var(--inz-oxford);
+  color: rgba(255, 255, 255, 0.92);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.inz-shell {
+  max-width: 1280px;
+  margin: 0 auto;
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* When the timeline page mounts, paint the whole document oxford navy
+   so the area outside max-w-7xl matches and there's no grey edge. */
+body:has(.inz-page) {
+  background: #101032 !important;
+}
+
+/* Hide the global site navbar until the user mouses over the top strip. */
+body:has(.inz-page) [data-site-navbar="true"] {
+  opacity: 0;
+  transition: opacity 220ms ease;
+}
+body:has(.inz-page) [data-site-navbar="true"]:hover,
+body:has(.inz-page) [data-site-navbar="true"]:focus-within {
+  opacity: 1;
+}

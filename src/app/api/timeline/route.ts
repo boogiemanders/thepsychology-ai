@@ -9,14 +9,17 @@ function db() {
   return createClient(supabaseUrl, serviceKey)
 }
 
-export async function GET() {
+export async function GET(req: NextRequest) {
   const supabase = db()
   if (!supabase) return NextResponse.json({ error: 'Server config error' }, { status: 500 })
+
+  const url = new URL(req.url)
+  const key = url.searchParams.get('key') || 'inzinna-leadership'
 
   const { data, error } = await supabase
     .from('timeline_projects')
     .select('*')
-    .eq('timeline_key', 'inzinna-leadership')
+    .eq('timeline_key', key)
     .order('sort_order', { ascending: true })
 
   if (error) {
@@ -39,6 +42,7 @@ export async function POST(req: NextRequest) {
 
   const body = await req.json()
   const contributor = typeof body.contributor === 'string' ? body.contributor : 'AC'
+  const key = typeof body.key === 'string' && body.key ? body.key : 'inzinna-leadership'
 
   const name = typeof body.name === 'string' ? body.name.trim() : ''
   if (!name) return NextResponse.json({ error: 'Name is required' }, { status: 400 })
@@ -47,7 +51,7 @@ export async function POST(req: NextRequest) {
   const { data: existing } = await supabase
     .from('timeline_projects')
     .select('num, sort_order')
-    .eq('timeline_key', 'inzinna-leadership')
+    .eq('timeline_key', key)
     .order('sort_order', { ascending: false })
     .limit(1)
 
@@ -55,7 +59,7 @@ export async function POST(req: NextRequest) {
   const lastOrder = existing?.[0]?.sort_order ?? 0
 
   const project = {
-    timeline_key: 'inzinna-leadership',
+    timeline_key: key,
     num: String(lastNum + 1).padStart(2, '0'),
     name,
     one_liner: body.one_liner ?? '',

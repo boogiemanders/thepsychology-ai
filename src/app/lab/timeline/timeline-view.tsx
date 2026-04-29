@@ -41,20 +41,15 @@ const STATUS_CFG: Record<string, { label: string; dot: string; text: string }> =
   done:     { label: 'Done',     dot: 'bg-[#8AE08D]', text: 'text-[#8AE08D]' },
 }
 
-function priorityBorderColor(p: PriorityLevel): string {
-  return p === 'high' ? '#d87758' : p === 'medium' ? '#788c5d' : '#6a9bcc'
-}
-
-// Inzinna brand palette — drives lead-color of phase bars + contributor chips.
 const COLLAB_COLORS: Record<string, string> = {
-  AC: '#FFB990', // peach
-  BR: '#9DADE5', // peri
-  CA: '#F1E29D', // sun
-  FI: '#8AE08D', // mint
-  GI: '#3362FF', // royal
-  LO: '#5F396D', // plum
-  TM: '#F1E29D', // sun (reuse)
-  JC: '#5F396D', // plum (reuse)
+  AC: '#FFB990',
+  BR: '#9DADE5',
+  CA: '#F1E29D',
+  FI: '#8AE08D',
+  GI: '#3362FF',
+  LO: '#5F396D',
+  TM: '#F1E29D',
+  JC: '#5F396D',
 }
 
 function isLightHex(hex: string): boolean {
@@ -101,9 +96,6 @@ function leadColors(lead: TimelineCollaborator | null) {
   }
 }
 
-// Map steps onto phases by index proportion. If a phase gets zero steps
-// (more phases than steps), fall back to overall project progress so every
-// bar still moves when something gets checked off.
 function phaseProgress(phaseIndex: number, totalPhases: number, steps: TimelineStep[]): number {
   if (steps.length === 0 || totalPhases === 0) return 0
   const overall = steps.filter(s => s.done).length / steps.length
@@ -127,7 +119,7 @@ function isoToPosition(iso: string, months: Month[]): number {
   return (monthIndex + frac) / months.length
 }
 
-// ---------- Shell (entry point from page.tsx) ----------
+// ---------- Shell ----------
 
 interface ShellProps {
   initialProjects: TimelineProject[]
@@ -156,7 +148,6 @@ export function TimelineShell({ initialProjects, initialCollaborators, months, t
     return [...filtered].sort((a, b) => (PRIORITY_ORDER[a.priority] ?? 2) - (PRIORITY_ORDER[b.priority] ?? 2))
   }, [timeline.projects, timeline.activeUser, myOnly, viewingFilter])
 
-  // Build contributor lookup for chips
   const collabLookup = useMemo(() => {
     const map: Record<string, TimelineCollaborator> = {}
     for (const c of timeline.collaborators) map[c.initials] = c
@@ -165,28 +156,32 @@ export function TimelineShell({ initialProjects, initialCollaborators, months, t
 
   return (
     <div className="inz-shell">
-      {/* Top crumb bar with Inzinna brand logo */}
+      {/* Top crumb bar */}
       <div className="flex items-center justify-between px-10 py-3.5 border-b border-white/[0.08]">
-        <Link href="/lab#projects" aria-label="Back to Lab" className="inline-flex items-center transition-opacity hover:opacity-80">
-          <img src="/inzinna/inzinna-primary-light.svg" alt="Inzinna Therapy Group" className="h-9 w-auto object-contain" />
+        <Link
+          href="/lab#projects"
+          aria-label="Back to Lab"
+          className="text-[11px] font-mono uppercase tracking-[0.18em] text-white/65 hover:text-white transition-colors"
+        >
+          &larr; Lab
         </Link>
         <span className="text-[11px] font-mono uppercase tracking-[0.18em] text-white/45">
-          Lab · Timeline
+          Personal Timeline
         </span>
       </div>
 
       {/* Hero */}
       <section className="px-10 pt-12 pb-7">
         <p className="text-[11px] font-mono uppercase tracking-[0.2em] text-[#9DADE5] mb-3.5">
-          Inzinna Practice Automation
+          Personal
         </p>
         <div className="flex items-start justify-between gap-4 flex-wrap">
           <div>
             <h1 className="text-[48px] font-bold tracking-[-1.4px] leading-[1.05] mb-3 text-white">
-              Leadership Timeline
+              Personal Timeline
             </h1>
             <p className="text-[14px] text-white/65 leading-[1.55] max-w-[560px]">
-              Every leadership project, month by month. Pick your name to start checking things off and editing dates.
+              Side projects, month by month. Pick your name to start checking things off and editing dates.
             </p>
           </div>
           {timeline.activeUser && (
@@ -214,7 +209,6 @@ export function TimelineShell({ initialProjects, initialCollaborators, months, t
           )}
         </div>
 
-        {/* Viewing filter — show one person's slate */}
         <div className="mt-7 flex items-center gap-2 flex-wrap">
           <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-[#9DADE5] mr-1">
             Viewing
@@ -249,7 +243,6 @@ export function TimelineShell({ initialProjects, initialCollaborators, months, t
           )}
         </div>
 
-        {/* User picker */}
         <div className="mt-5 pb-7 border-b border-white/[0.08]">
           <UserPicker
             collaborators={timeline.collaborators}
@@ -260,7 +253,6 @@ export function TimelineShell({ initialProjects, initialCollaborators, months, t
         </div>
       </section>
 
-      {/* Add project form */}
       {timeline.activeUser && (
         <Accordion
           type="single"
@@ -282,12 +274,11 @@ export function TimelineShell({ initialProjects, initialCollaborators, months, t
         </Accordion>
       )}
 
-      {/* Desktop timeline grid */}
       <div className="hidden md:block">
         <MonthHeader months={months} today={today} />
         {visible.length === 0 && (
           <div className="px-10 py-14 text-center text-[12px] font-mono uppercase tracking-[0.2em] text-white/45">
-            No projects {viewingFilter ? `for ${timeline.collaborators.find(c => c.initials === viewingFilter)?.name ?? viewingFilter}` : 'match this filter'}
+            No projects {viewingFilter ? `for ${timeline.collaborators.find(c => c.initials === viewingFilter)?.name ?? viewingFilter}` : 'yet'}
           </div>
         )}
         <Accordion type="single" collapsible>
@@ -311,7 +302,6 @@ export function TimelineShell({ initialProjects, initialCollaborators, months, t
         </Accordion>
       </div>
 
-      {/* Mobile month-stacked */}
       <div className="md:hidden px-6 py-6 space-y-10">
         {months.map((m, mIdx) => {
           const start = mIdx / months.length
@@ -334,7 +324,6 @@ export function TimelineShell({ initialProjects, initialCollaborators, months, t
         })}
       </div>
 
-      {/* Contributors / legend */}
       <section className="px-10 pt-7 pb-14 border-t border-white/[0.08]">
         <h2 className="text-[10px] font-mono uppercase tracking-[0.2em] text-white/45 mb-4">Contributors</h2>
         <div className="flex flex-wrap gap-x-6 gap-y-3">
@@ -369,8 +358,6 @@ function MonthHeader({ months, today }: { months: Month[]; today: number }) {
   )
 }
 
-// ---------- Row ----------
-
 function TimelineRow({
   project, months, today, collabLookup, canEdit,
   onToggleStep, onUpdateStep, onPhasesCommit, onMilestoneCommit, onPriorityCommit, onContributorsCommit,
@@ -389,7 +376,6 @@ function TimelineRow({
   onContributorsCommit: (contributors: string[]) => void
   allCollaborators: TimelineCollaborator[]
 }) {
-  const pri = PRIORITY[project.priority as PriorityLevel] ?? PRIORITY.medium
   const status = STATUS_CFG[project.status] ?? STATUS_CFG.idea
   const doneCount = project.steps.filter(s => s.done).length
   const totalSteps = project.steps.length
@@ -402,7 +388,6 @@ function TimelineRow({
       className="border-b-0 border-t border-white/[0.08] first:border-t-0 transition-colors hover:bg-white/[0.025] data-[state=open]:bg-white/[0.04]"
     >
       <div className="grid grid-cols-[320px_1fr]">
-        {/* Label (accordion trigger) */}
         <AccordionPrimitive.Header className="flex">
           <AccordionPrimitive.Trigger
             className="group/trigger flex-1 text-left px-4 py-[18px] flex items-start gap-3 min-w-0 border-l-2 cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-[#9DADE5]/40"
@@ -430,7 +415,6 @@ function TimelineRow({
           </AccordionPrimitive.Trigger>
         </AccordionPrimitive.Header>
 
-        {/* Timeline track */}
         <div className="relative border-l border-white/[0.08]" style={{ minHeight: '88px' }}>
           <div className="absolute inset-0 grid" style={{ gridTemplateColumns: `repeat(${months.length}, minmax(0, 1fr))` }} aria-hidden="true">
             {months.map((m, i) => (<div key={m.key} className={cn('h-full', i > 0 && 'border-l border-white/[0.05]')} />))}
@@ -470,8 +454,6 @@ function TimelineRow({
     </AccordionItem>
   )
 }
-
-// ---------- Phase bar with click-to-edit popover ----------
 
 function PhaseBar({
   phase, phases, phaseIndex, leadCol, canEdit, onCommit, progress,
@@ -623,7 +605,6 @@ function PhaseBar({
   )
 }
 
-/** Month-only row — edge decides day-1 (start) vs last-day (end) */
 function DateRow({ label, monthNum, day: _day, onChange, edge = 'start' }: {
   label: string
   monthNum: number
@@ -651,8 +632,6 @@ function DateRow({ label, monthNum, day: _day, onChange, edge = 'start' }: {
     </div>
   )
 }
-
-// ---------- Milestone with click-to-edit popover ----------
 
 function MilestoneMarker({
   milestone, priority, canEdit, onCommit,
@@ -698,8 +677,6 @@ function MilestoneMarker({
   )
 }
 
-// ---------- Today marker ----------
-
 function TodayMarker({ position, variant }: { position: number; variant: 'header' | 'row' }) {
   return (
     <div
@@ -718,8 +695,6 @@ function TodayMarker({ position, variant }: { position: number; variant: 'header
     </div>
   )
 }
-
-// ---------- Expanded detail with checkboxes ----------
 
 function ExpandedDetail({
   project, collabLookup, canEdit, onToggleStep, onUpdateStep, onPriorityCommit, onContributorsCommit, allCollaborators,
@@ -833,8 +808,6 @@ function ExpandedDetail({
     </div>
   )
 }
-
-// ---------- Step row with checkbox ----------
 
 function StepRow({
   step, index, canEdit, collabLookup, onToggle, onUpdateStep, defaultStart, defaultDue,
@@ -968,8 +941,6 @@ function StepRow({
   )
 }
 
-// ---------- Step dot on timeline ----------
-
 function StepDot({ step, leadCol, canEdit, onUpdateStep }: {
   step: TimelineStep
   leadCol: { bg: string; bgOpaque: string; border: string; text: string; solid: string; hoverBg: string; hoverText: string }
@@ -1069,8 +1040,6 @@ function StepDot({ step, leadCol, canEdit, onUpdateStep }: {
   )
 }
 
-// ---------- Mobile row ----------
-
 function MobileRow({ project, collabLookup, monthStart, monthEnd }: {
   project: TimelineProject
   collabLookup: Record<string, TimelineCollaborator>
@@ -1128,8 +1097,6 @@ function MobileRow({ project, collabLookup, monthStart, monthEnd }: {
   )
 }
 
-// ---------- Contributor chips ----------
-
 function ContribStack({ ids, lookup }: { ids: string[]; lookup: Record<string, TimelineCollaborator> }) {
   return (
     <div className="flex items-center" title={ids.map(id => lookup[id]?.name ?? id).join(', ')}>
@@ -1167,8 +1134,6 @@ function ContribChip({ c, size = 'sm' }: { c: TimelineCollaborator; size?: 'sm' 
     <span className={cn('inline-flex border-[#101032]', base, dim)} style={{ backgroundColor: bg, color: fg }} aria-label={c.name}>{c.initials}</span>
   )
 }
-
-// ---------- Helpers ----------
 
 function relativeTime(iso: string): string {
   const diff = Date.now() - new Date(iso).getTime()

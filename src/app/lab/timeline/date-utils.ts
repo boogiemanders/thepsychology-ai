@@ -1,5 +1,5 @@
 /**
- * Shared date <-> fraction helpers for the leadership timeline (Apr-Dec 2026).
+ * Shared date <-> fraction helpers for the personal timeline (Apr-Dec 2026).
  * Each month gets equal visual width (1/N of track where N = MONTH_META.length).
  * Fraction = (monthIndex + (day-1) / daysInMonth) / MONTH_META.length
  */

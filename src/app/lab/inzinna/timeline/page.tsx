@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { getSupabaseClient } from '@/lib/supabase-server'
 import { TimelineShell } from './timeline-view'
 import type { TimelineProject, TimelineCollaborator } from './use-timeline'
+import './inzinna.css'
 
 export const metadata: Metadata = {
   title: 'Leadership Timeline | Inzinna Lab',
@@ -19,10 +20,15 @@ const FALLBACK_COLLABORATORS: TimelineCollaborator[] = [
 ]
 
 const MONTHS = [
-  { key: 'apr', label: 'April', short: 'APR', days: 30 },
-  { key: 'may', label: 'May',   short: 'MAY', days: 31 },
-  { key: 'jun', label: 'June',  short: 'JUN', days: 30 },
-  { key: 'jul', label: 'July',  short: 'JUL', days: 31 },
+  { key: 'apr', label: 'April',     short: 'APR', days: 30 },
+  { key: 'may', label: 'May',       short: 'MAY', days: 31 },
+  { key: 'jun', label: 'June',      short: 'JUN', days: 30 },
+  { key: 'jul', label: 'July',      short: 'JUL', days: 31 },
+  { key: 'aug', label: 'August',    short: 'AUG', days: 31 },
+  { key: 'sep', label: 'September', short: 'SEP', days: 30 },
+  { key: 'oct', label: 'October',   short: 'OCT', days: 31 },
+  { key: 'nov', label: 'November',  short: 'NOV', days: 30 },
+  { key: 'dec', label: 'December',  short: 'DEC', days: 31 },
 ]
 
 export default async function LeadershipTimelinePage() {
@@ -58,12 +64,14 @@ export default async function LeadershipTimelinePage() {
   const today = new Date().toISOString().slice(0, 10)
 
   return (
-    <TimelineShell
-      initialProjects={projects}
-      initialCollaborators={collaborators}
-      months={months}
-      todayIso={today}
-    />
+    <div className="dark inz-page">
+      <TimelineShell
+        initialProjects={projects}
+        initialCollaborators={collaborators}
+        months={months}
+        todayIso={today}
+      />
+    </div>
   )
 }
 
@@ -79,7 +87,7 @@ const FALLBACK_PROJECTS: TimelineProject[] = [
     priority: 'high', status: 'blocked',
     stage_line: 'Working plugin on one machine. Blocked on Workspace admin.',
     contributors: ['AC', 'GI'],
-    phases: [{ kind: 'build', start: 0.000, end: 0.230, label: 'Ship blocker' }, { kind: 'rollout', start: 0.230, end: 0.250, label: 'Push-install + pilot' }],
+    phases: [{ kind: 'build', start: 0.000, end: 0.230, label: 'Google admin + Chrome store' }, { kind: 'rollout', start: 0.230, end: 0.250, label: 'Push-install + pilot' }],
     milestone: { at: 0.250, label: 'Live (end of April)' },
     steps: [{ text: 'Get Google Workspace admin access', done: false }, { text: 'Submit plugin to Chrome Web Store (private)', done: false }, { text: 'Push-install to clinicians', done: false }, { text: 'Pilot with P02', done: false }],
     support: 'Workspace admin / HIPAA BAA with Google / Zocdoc admin for testing',
@@ -121,7 +129,7 @@ const FALLBACK_PROJECTS: TimelineProject[] = [
     priority: 'high', status: 'building',
     stage_line: 'Mostly working. Comparing against Carlos payroll session Apr 17.',
     contributors: ['AC', 'CA'],
-    phases: [{ kind: 'build', start: 0.100, end: 0.250, label: 'Build + upload template' }, { kind: 'rollout', start: 0.250, end: 0.500, label: 'Salary calculator' }],
+    phases: [{ kind: 'build', start: 0.100, end: 0.250, label: 'Build + upload template' }, { kind: 'build', start: 0.250, end: 0.500, label: 'Salary calculator' }],
     milestone: { at: 0.160, label: 'Carlos session — Apr 17' },
     steps: [{ text: 'Build upload template', done: false }, { text: 'Test full pay cycle', done: false }, { text: 'Meet with Carlos (Apr 17)', done: false }, { text: 'Confirm SimplePractice / JustWorks reports', done: false }, { text: 'Add salary calculator (May)', done: false }],
     support: 'Carlos availability / confirmation on required reports',
@@ -135,7 +143,7 @@ const FALLBACK_PROJECTS: TimelineProject[] = [
     priority: 'high', status: 'live',
     stage_line: 'Live and in testing with Bret. Bret is travelling.',
     contributors: ['AC', 'BR'],
-    phases: [{ kind: 'test', start: 0.100, end: 0.250, label: 'Apply feedback + finalize BAARS/ADHD-RS' }, { kind: 'build', start: 0.250, end: 0.500, label: 'EF: Trail-making + Tower of Hanoi' }, { kind: 'build', start: 0.500, end: 0.750, label: 'Rorschach admin + scoring' }, { kind: 'build', start: 0.750, end: 1.000, label: 'Rorschach interpretation' }],
+    phases: [{ kind: 'test', start: 0.100, end: 0.250, label: 'BAARS + ADHD-RS', description: 'Apply feedback + finalize BAARS/ADHD-RS' }, { kind: 'build', start: 0.250, end: 0.500, label: 'EF: Trail-making + Tower of Hanoi' }, { kind: 'build', start: 0.500, end: 0.750, label: 'Rorschach admin + scoring' }, { kind: 'build', start: 0.750, end: 1.000, label: 'Rorschach interpretation' }],
     milestone: null,
     steps: [{ text: 'Apply Bret feedback on BAARS/ADHD-RS', done: false }, { text: 'Finalize scoring logic', done: false }, { text: 'Build Trail-making test', done: false }, { text: 'Build Tower of Hanoi', done: false }, { text: 'Rorschach administration flow', done: false }, { text: 'Rorschach scoring', done: false }, { text: 'Rorschach interpretation', done: false }],
     support: 'Bret feedback',

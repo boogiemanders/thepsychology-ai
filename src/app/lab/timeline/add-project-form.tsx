@@ -54,12 +54,12 @@ const STATUSES = [
 
 const TEMPLATES: TemplateOption[] = [
   { key: 'build', label: 'Build only', stages: [{ kind: 'build', label: 'Build', weight: 1 }] },
-  { key: 'btr',   label: 'Build > Test > Rollout', stages: [
+  { key: 'btr',   label: 'Build, Test, Rollout', stages: [
     { kind: 'build',   label: 'Build',   weight: 0.6 },
     { kind: 'test',    label: 'Test',    weight: 0.2 },
     { kind: 'rollout', label: 'Rollout', weight: 0.2 },
   ]},
-  { key: 'btl',   label: 'Build > Test > Launch', stages: [
+  { key: 'btl',   label: 'Build, Test, Launch', stages: [
     { kind: 'build', label: 'Build', weight: 0.5 },
     { kind: 'test',  label: 'Test',  weight: 0.25 },
     { kind: 'live',  label: 'Live',  weight: 0.25 },
@@ -75,8 +75,6 @@ const KIND_OPTIONS: { value: PhaseKind; label: string }[] = [
   { value: 'wait',    label: 'Wait' },
 ]
 
-// ---------- Phase color lookup (Inzinna brand) ----------
-
 const PHASE_COLORS: Record<PhaseKind, string> = {
   build:   'bg-[#FFB990]',
   test:    'bg-[#9DADE5]',
@@ -85,7 +83,6 @@ const PHASE_COLORS: Record<PhaseKind, string> = {
   wait:    'bg-white/30',
 }
 
-// Reusable token strings for shared classes.
 const INPUT_CLS = 'w-full px-3 py-2 text-sm bg-transparent border border-white/15 text-white placeholder:text-white/30 rounded-md focus:outline-none focus:border-[#9DADE5] transition-colors'
 const LABEL_CLS = 'block text-[10px] font-mono uppercase tracking-[0.18em] text-white/45 mb-1.5'
 const PILL_BASE = 'px-2.5 py-1 text-[11px] font-mono border rounded-full transition-colors cursor-pointer'
@@ -138,14 +135,12 @@ export function AddProjectForm({ collaborators, activeUser, onSubmit, onClose }:
   const startFrac = dateToFraction(startMonth, startDay)
   const endFrac = dateToFraction(endMonth, endDay)
 
-  // When template or overall dates change, regenerate phases from template
   const handleTemplateChange = (key: string) => {
     setTemplateKey(key)
     const t = TEMPLATES.find(tt => tt.key === key) ?? TEMPLATES[0]
     setPhases(buildPhasesFromTemplate(t, startFrac, endFrac))
   }
 
-  // When overall start/end dates change, redistribute phases proportionally
   const handleDateRangeChange = (newStartFrac: number, newEndFrac: number) => {
     if (newEndFrac <= newStartFrac) return
     const oldStart = phases[0]?.start ?? startFrac
@@ -181,8 +176,6 @@ export function AddProjectForm({ collaborators, activeUser, onSubmit, onClose }:
 
     setSubmitting(true)
 
-    // Filter empty step text. Auto-distribute due_at evenly when missing
-    // so every newly created project shows step bars on the timeline.
     const filled = steps.map(s => ({ ...s, text: s.text.trim() })).filter(s => s.text)
     const span = endFrac - startFrac
     const stepsOut = filled.map((s, i) => ({
@@ -223,7 +216,6 @@ export function AddProjectForm({ collaborators, activeUser, onSubmit, onClose }:
         </button>
       </div>
 
-      {/* Name */}
       <div>
         <label className={LABEL_CLS}>Project Name</label>
         <input
@@ -236,7 +228,6 @@ export function AddProjectForm({ collaborators, activeUser, onSubmit, onClose }:
         />
       </div>
 
-      {/* One-liner */}
       <div>
         <label className={LABEL_CLS}>One-liner</label>
         <input
@@ -248,7 +239,6 @@ export function AddProjectForm({ collaborators, activeUser, onSubmit, onClose }:
         />
       </div>
 
-      {/* Priority + Status row */}
       <div className="grid grid-cols-2 gap-4">
         <div>
           <label className={LABEL_CLS}>Priority</label>
@@ -282,7 +272,6 @@ export function AddProjectForm({ collaborators, activeUser, onSubmit, onClose }:
         </div>
       </div>
 
-      {/* Contributors */}
       <div>
         <label className={LABEL_CLS}>Contributors</label>
         <div className="flex flex-wrap gap-1.5">
@@ -299,7 +288,6 @@ export function AddProjectForm({ collaborators, activeUser, onSubmit, onClose }:
         </div>
       </div>
 
-      {/* Date range */}
       <div className="grid grid-cols-2 gap-4">
         <div>
           <label className={LABEL_CLS}>Starts</label>
@@ -373,7 +361,6 @@ export function AddProjectForm({ collaborators, activeUser, onSubmit, onClose }:
         </div>
       </div>
 
-      {/* Stage template picker + editable rows */}
       <div>
         <label className={cn(LABEL_CLS, 'mb-2')}>Stages</label>
         <div className="flex flex-wrap gap-1.5 mb-3">
@@ -391,7 +378,6 @@ export function AddProjectForm({ collaborators, activeUser, onSubmit, onClose }:
           ))}
         </div>
 
-        {/* Editable stage rows — always visible */}
         <div className="space-y-2 mb-3">
           {phases.map((ph, i) => {
             const sd = fractionToDate(ph.start)
@@ -497,7 +483,6 @@ export function AddProjectForm({ collaborators, activeUser, onSubmit, onClose }:
           </button>
         </div>
 
-        {/* Visual preview */}
         {endFrac > startFrac && (
           <div className="relative h-3 bg-white/[0.06] rounded-sm overflow-hidden">
             {phases.map((ph, i) => {
@@ -540,7 +525,6 @@ export function AddProjectForm({ collaborators, activeUser, onSubmit, onClose }:
         )}
       </div>
 
-      {/* Steps with optional per-step due date */}
       <div>
         <label className={cn(LABEL_CLS, 'mb-2')}>Action Steps</label>
         <p className="text-[10px] font-mono text-white/40 mb-2">
@@ -597,7 +581,6 @@ export function AddProjectForm({ collaborators, activeUser, onSubmit, onClose }:
         </button>
       </div>
 
-      {/* Support */}
       <div>
         <label className={LABEL_CLS}>Support Needed</label>
         <input

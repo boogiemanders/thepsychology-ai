@@ -9,10 +9,10 @@ import type { RealtimeChannel } from '@supabase/supabase-js'
 export interface TimelineStep {
   text: string
   done: boolean
-  start_at?: number  // fractional position on timeline (0-1)
-  due_at?: number    // fractional position on timeline (0-1)
-  done_by?: string   // contributor initials
-  done_at?: string   // ISO timestamp
+  start_at?: number
+  due_at?: number
+  done_by?: string
+  done_at?: string
 }
 
 export interface TimelinePhase {
@@ -29,7 +29,7 @@ export interface TimelineMilestone {
 }
 
 export interface TimelineProject {
-  id: string  // UUID from Supabase
+  id: string
   timeline_key: string
   num: string
   name: string
@@ -56,6 +56,8 @@ export interface TimelineCollaborator {
   neutral?: boolean
 }
 
+const TIMELINE_KEY = 'anders-personal'
+
 // ---------- Hook ----------
 
 export function useTimeline(
@@ -68,17 +70,14 @@ export function useTimeline(
   const [loading, setLoading] = useState(false)
   const channelRef = useRef<RealtimeChannel | null>(null)
 
-  // Load active user from localStorage
   useEffect(() => {
-    const stored = localStorage.getItem('timeline-user')
+    const stored = localStorage.getItem('timeline-personal-user')
     if (stored) setActiveUser(stored)
   }, [])
 
-  // When a user is active, poll their Google Tasks once per 30s window for check-off changes.
-  // Throttled via sessionStorage so tab switches don't re-hit the API.
   useEffect(() => {
     if (!activeUser) return
-    const key = `timeline-checkoff-poll-${activeUser}`
+    const key = `timeline-personal-checkoff-poll-${activeUser}`
     const last = Number(sessionStorage.getItem(key) || '0')
     const now = Date.now()
     if (now - last < 30_000) return
@@ -90,27 +89,25 @@ export function useTimeline(
     }).catch(() => undefined)
   }, [activeUser])
 
-  // Persist active user
   const pickUser = useCallback((initials: string | null) => {
     setActiveUser(initials)
     if (initials) {
-      localStorage.setItem('timeline-user', initials)
+      localStorage.setItem('timeline-personal-user', initials)
     } else {
-      localStorage.removeItem('timeline-user')
+      localStorage.removeItem('timeline-personal-user')
     }
   }, [])
 
-  // Realtime subscription
   useEffect(() => {
     const channel = supabase
-      .channel('timeline-realtime')
+      .channel('timeline-realtime-personal')
       .on(
         'postgres_changes',
         {
           event: '*',
           schema: 'public',
           table: 'timeline_projects',
-          filter: `timeline_key=eq.inzinna-leadership`,
+          filter: `timeline_key=eq.${TIMELINE_KEY}`,
         },
         (payload) => {
           if (payload.eventType === 'INSERT') {
@@ -155,7 +152,6 @@ export function useTimeline(
     return res.json()
   }, [])
 
-  /** Toggle a step's done state. Optimistic. */
   const toggleStep = useCallback(async (projectId: string, stepIndex: number) => {
     if (!activeUser) return
 
@@ -188,12 +184,10 @@ export function useTimeline(
       })
     } catch (err) {
       console.error('[timeline] toggleStep error:', err)
-      // Rollback: re-fetch
       refreshProjects()
     }
   }, [activeUser, projects, apiFetch])
 
-  /** Update phases (optimistic + commit). */
   const updatePhases = useCallback(async (projectId: string, phases: TimelinePhase[]) => {
     if (!activeUser) return
 
@@ -212,7 +206,6 @@ export function useTimeline(
     }
   }, [activeUser, apiFetch])
 
-  /** Update milestone (optimistic + commit). */
   const updateMilestone = useCallback(async (projectId: string, milestone: TimelineMilestone | null) => {
     if (!activeUser) return
 
@@ -231,7 +224,6 @@ export function useTimeline(
     }
   }, [activeUser, apiFetch])
 
-  /** Update a single step (e.g. due_at, text). */
   const updateStep = useCallback(async (projectId: string, stepIndex: number, patch: Partial<TimelineStep>) => {
     if (!activeUser) return
 
@@ -255,7 +247,6 @@ export function useTimeline(
     }
   }, [activeUser, projects, apiFetch])
 
-  /** Update project priority. */
   const updatePriority = useCallback(async (projectId: string, priority: TimelineProject['priority']) => {
     if (!activeUser) return
 
@@ -274,7 +265,6 @@ export function useTimeline(
     }
   }, [activeUser, apiFetch])
 
-  /** Update project contributors. */
   const updateContributors = useCallback(async (projectId: string, contributors: string[]) => {
     if (!activeUser) return
 
@@ -293,7 +283,6 @@ export function useTimeline(
     }
   }, [activeUser, apiFetch])
 
-  /** Update project status. */
   const updateStatus = useCallback(async (projectId: string, status: TimelineProject['status']) => {
     if (!activeUser) return
 
@@ -312,7 +301,6 @@ export function useTimeline(
     }
   }, [activeUser, apiFetch])
 
-  /** Add a new project. */
   const addProject = useCallback(async (data: {
     name: string
     one_liner: string
@@ -329,7 +317,7 @@ export function useTimeline(
     try {
       await apiFetch('/api/timeline', {
         method: 'POST',
-        body: JSON.stringify({ ...data, contributor: activeUser }),
+        body: JSON.stringify({ ...data, contributor: activeUser, key: TIMELINE_KEY }),
       })
     } catch (err) {
       console.error('[timeline] addProject error:', err)
@@ -338,10 +326,9 @@ export function useTimeline(
     }
   }, [activeUser, apiFetch])
 
-  /** Full refresh from server. */
   const refreshProjects = useCallback(async () => {
     try {
-      const res = await fetch('/api/timeline')
+      const res = await fetch(`/api/timeline?key=${encodeURIComponent(TIMELINE_KEY)}`)
       if (res.ok) {
         const data = await res.json()
         setProjects(data.projects ?? [])
