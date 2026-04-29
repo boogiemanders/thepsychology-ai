@@ -3,7 +3,8 @@ import { useEffect, useRef } from 'react'
 import ReactMarkdown from 'react-markdown'
 import type { InziState, Message, Variation, AccentName } from './inzi-data'
 import { BrainAnim, Ico, LoopSquiggle, TypingDots } from './inzi-icons'
-import { AssessmentQuestion, Chips, ClinicianCard, Composer, CrisisActions, HandoffLoading, HistoryList, ResultsCard } from './inzi-cards'
+import { AssessmentQuestion, Chips, ClinicianCard, Composer, CrisisActions, HandoffLoading, HistoryList, ResultsCard, SchedulingForm, ContactClinicianForm, HandoffSuccess } from './inzi-cards'
+import type { SchedulingSubmit, ContactClinicianSubmit, HandoffIntent } from './inzi-data'
 
 function iconMonoFor(variation: Variation, dark: boolean, accent: AccentName): string {
   const accentColor = ({ royal: '#3362FF', peach: '#D67263', plum: '#5F396D', mint: '#3F8E45' } as const)[accent] || '#3362FF'
@@ -61,7 +62,17 @@ function SourceTags({ sources }: { sources: { title: string; doc: string }[] }) 
   )
 }
 
-function Bubble({ msg, dark, variation, accent }: { msg: Message; dark: boolean; variation: Variation; accent: AccentName }) {
+interface BubbleProps {
+  msg: Message
+  dark: boolean
+  variation: Variation
+  accent: AccentName
+  onSchedulingSubmit?: (data: SchedulingSubmit) => Promise<void>
+  onContactClinicianSubmit?: (data: ContactClinicianSubmit) => Promise<void>
+  onCancelHandoff?: () => void
+}
+
+function Bubble({ msg, dark, variation, accent, onSchedulingSubmit, onContactClinicianSubmit, onCancelHandoff }: BubbleProps) {
   const mono = iconMonoFor(variation, dark, accent)
   if (msg.from === 'system') {
     return (
@@ -110,6 +121,41 @@ function Bubble({ msg, dark, variation, accent }: { msg: Message; dark: boolean;
       <div className="inz-msg">
         <div className="inz-msg__avatar"><BrainAnim size={28} active mono={mono} /></div>
         <div className="inz-msg__body"><HandoffLoading text={msg.text} /></div>
+      </div>
+    )
+  }
+  if (msg.from === 'bot' && msg.kind === 'scheduling-form') {
+    return (
+      <div className="inz-msg inz-msg--wide">
+        <div className="inz-msg__avatar"><BrainAnim size={28} mono={mono} /></div>
+        <div className="inz-msg__body">
+          <SchedulingForm
+            onSubmit={async d => { if (onSchedulingSubmit) await onSchedulingSubmit(d) }}
+            onCancel={() => onCancelHandoff?.()}
+          />
+        </div>
+      </div>
+    )
+  }
+  if (msg.from === 'bot' && msg.kind === 'contact-clinician-form') {
+    return (
+      <div className="inz-msg inz-msg--wide">
+        <div className="inz-msg__avatar"><BrainAnim size={28} mono={mono} /></div>
+        <div className="inz-msg__body">
+          <ContactClinicianForm
+            clinicians={msg.clinicians}
+            onSubmit={async d => { if (onContactClinicianSubmit) await onContactClinicianSubmit(d) }}
+            onCancel={() => onCancelHandoff?.()}
+          />
+        </div>
+      </div>
+    )
+  }
+  if (msg.from === 'bot' && msg.kind === 'handoff-success') {
+    return (
+      <div className="inz-msg">
+        <div className="inz-msg__avatar"><BrainAnim size={28} mono={mono} /></div>
+        <div className="inz-msg__body"><HandoffSuccess intent={msg.intent} etaText={msg.etaText} /></div>
       </div>
     )
   }
@@ -219,9 +265,12 @@ interface ChatPanelProps {
   onComposerChange: (v: string) => void
   onComposerSend: () => void
   onCall?: () => void
+  onSchedulingSubmit?: (data: SchedulingSubmit) => Promise<void>
+  onContactClinicianSubmit?: (data: ContactClinicianSubmit) => Promise<void>
+  onCancelHandoff?: () => void
 }
 
-export function ChatPanel({ state, variation, accent, dark, onMinimize, onPickChip, composerValue, onComposerChange, onComposerSend, onCall }: ChatPanelProps) {
+export function ChatPanel({ state, variation, accent, dark, onMinimize, onPickChip, composerValue, onComposerChange, onComposerSend, onCall, onSchedulingSubmit, onContactClinicianSubmit, onCancelHandoff }: ChatPanelProps) {
   const scrollRef = useRef<HTMLDivElement>(null)
   useEffect(() => {
     if (scrollRef.current) scrollRef.current.scrollTop = scrollRef.current.scrollHeight
@@ -269,7 +318,18 @@ export function ChatPanel({ state, variation, accent, dark, onMinimize, onPickCh
           <HistoryList threads={state.threads || []} />
         ) : (
           <>
-            {(state.messages || []).map((m, i) => <Bubble key={i} msg={m} dark={dark} variation={variation} accent={accent} />)}
+            {(state.messages || []).map((m, i) => (
+              <Bubble
+                key={i}
+                msg={m}
+                dark={dark}
+                variation={variation}
+                accent={accent}
+                onSchedulingSubmit={onSchedulingSubmit}
+                onContactClinicianSubmit={onContactClinicianSubmit}
+                onCancelHandoff={onCancelHandoff}
+              />
+            ))}
             {state.botTyping && (
               <div className="inz-msg">
                 <div className="inz-msg__avatar"><BrainAnim size={28} active mono={mono} /></div>
