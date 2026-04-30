@@ -11,11 +11,11 @@ type Stat = { value: string; label: string }
 
 function StatGrid({ stats }: { stats: Stat[] }) {
   return (
-    <div className="my-2 grid grid-cols-1 sm:grid-cols-3 border border-zinc-200 dark:border-zinc-800/80 rounded-md overflow-hidden">
+    <div className="my-2 grid grid-cols-1 sm:grid-cols-3 border border-zinc-100 dark:border-zinc-800/80 rounded-md overflow-hidden">
       {stats.map((s, i) => (
         <div
           key={i}
-          className="p-5 sm:p-6 border-b sm:border-b-0 sm:border-r border-zinc-200 dark:border-zinc-800/80 last:border-b-0 sm:[&:nth-child(3n)]:border-r-0 sm:[&:nth-last-child(-n+3)]:border-b-0 [&:nth-child(n+4)]:border-t sm:[&:nth-child(n+4)]:border-t"
+          className="p-5 sm:p-6 border-b sm:border-b-0 sm:border-r border-zinc-100 dark:border-zinc-800/80 last:border-b-0 sm:[&:nth-child(3n)]:border-r-0 sm:[&:nth-last-child(-n+3)]:border-b-0 [&:nth-child(n+4)]:border-t sm:[&:nth-child(n+4)]:border-t"
         >
           <div className="text-[26px] sm:text-[30px] font-semibold tracking-[-0.02em] text-zinc-900 dark:text-zinc-50 leading-none mb-3">
             {s.value}
@@ -33,7 +33,7 @@ type Phase = { label: string; title: string; body: React.ReactNode }
 
 function Roadmap({ phases }: { phases: Phase[] }) {
   return (
-    <ol className="mt-6 divide-y divide-zinc-200 dark:divide-zinc-800/80 border-y border-zinc-200 dark:border-zinc-800/80">
+    <ol className="mt-6 divide-y divide-zinc-100 dark:divide-zinc-800/80">
       {phases.map((p, i) => (
         <li key={i} className="grid grid-cols-[3.25rem_1fr] gap-x-6 py-6 sm:py-7">
           <div className="font-mono text-[11px] tracking-[0.18em] text-zinc-400 dark:text-zinc-600 pt-[3px]">
@@ -82,7 +82,8 @@ const qas: QA[] = [
           >
             Shaunak
           </Link>{' '}
-          has Unity experience from building a patient education tool. He owns visual safety
+          co-founded the MedVR Symposium and Hackathon for VR/AR in Healthcare in 2019 and has
+          Unity experience from building a patient education tool. He owns the visual safety
           protocols, eye-tracking metrics, and ophthalmology-side engineering decisions.
         </p>
         <p>All technical work to date has been done by founders. No non-founder contributions.</p>
@@ -146,6 +147,7 @@ const qas: QA[] = [
           description="Quest 3 + Muse S, live EEG and heart rate"
           aspectRatio="16/9"
           className="mb-5"
+          caption="As user's breathing matches biofeedback orb, her heart rate lowers which turns the orb green."
         />
         <p>
           Saturday's user test video. Tamilyn wears Quest 3 plus Muse S. She breathes slowly. The
@@ -510,7 +512,7 @@ export default function BlindSpotPage() {
         </p>
       </header>
 
-      <div className="mb-10 flex items-baseline justify-between border-b border-zinc-200 dark:border-zinc-800/80 pb-3">
+      <div className="mb-10 flex items-baseline justify-between border-b border-zinc-100 dark:border-zinc-800/80 pb-3">
         <h2 className="font-mono text-[11px] uppercase tracking-[0.22em] text-zinc-900 dark:text-zinc-50">
           Application Answers
         </h2>
@@ -519,7 +521,7 @@ export default function BlindSpotPage() {
         </span>
       </div>
 
-      <div className="divide-y divide-zinc-200 dark:divide-zinc-800/80">
+      <div className="divide-y divide-zinc-100 dark:divide-zinc-800/80">
         {qas.map((item, i) => (
           <section key={i} className="py-10 sm:py-12 first:pt-8">
             <h3 className="text-[14px] sm:text-[15px] font-medium text-zinc-900 dark:text-zinc-50 leading-[1.4] mb-5 max-w-[54ch]">
@@ -532,7 +534,7 @@ export default function BlindSpotPage() {
         ))}
       </div>
 
-      <footer className="mt-20 pt-8 border-t border-zinc-200 dark:border-zinc-800/80">
+      <footer className="mt-20 pt-8 border-t border-zinc-100 dark:border-zinc-800/80">
         <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-zinc-500 dark:text-zinc-500">
           End of application &middot; Blind Spot &middot; 2026
         </p>
