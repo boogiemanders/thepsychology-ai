@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { VideoPlayer } from '@/components/ui/video-thumbnail-player'
+import DepthHero from './depth-hero'
 
 export const metadata: Metadata = {
   title: 'Blind Spot | thePsychology.ai',
@@ -498,6 +499,18 @@ export default function BlindSpotPage() {
           &larr; Lab
         </Link>
       </div>
+
+      <section className="mb-14 sm:mb-20">
+        <div className="relative aspect-[16/9] rounded-md overflow-hidden border border-zinc-100 dark:border-zinc-800/80 bg-zinc-950">
+          <DepthHero
+            src="/blind-spot/hero-depth-gray.mp4"
+            poster="/blind-spot/hero-depth-voxel-poster.jpg"
+          />
+        </div>
+        <p className="mt-4 font-mono text-[11px] uppercase tracking-[0.22em] text-zinc-500 dark:text-zinc-500">
+          Depth-Anything-V2 on a Quest 3 user. Drag to rotate. The system sees the body before it touches it.
+        </p>
+      </section>
 
       <header className="mb-16 sm:mb-24">
         <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-zinc-500 dark:text-zinc-500 mb-6">
