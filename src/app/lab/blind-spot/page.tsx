@@ -11,11 +11,11 @@ type Stat = { value: string; label: string }
 
 function StatGrid({ stats }: { stats: Stat[] }) {
   return (
-    <div className="my-2 grid grid-cols-1 sm:grid-cols-3 border border-zinc-100 dark:border-zinc-800/80 rounded-md overflow-hidden">
+    <div className="my-2 grid grid-cols-1 sm:grid-cols-3">
       {stats.map((s, i) => (
         <div
           key={i}
-          className="p-5 sm:p-6 border-b sm:border-b-0 sm:border-r border-zinc-100 dark:border-zinc-800/80 last:border-b-0 sm:[&:nth-child(3n)]:border-r-0 sm:[&:nth-last-child(-n+3)]:border-b-0 [&:nth-child(n+4)]:border-t sm:[&:nth-child(n+4)]:border-t"
+          className="py-5 sm:py-6 sm:px-6 first:sm:pl-0 last:sm:pr-0"
         >
           <div className="text-[26px] sm:text-[30px] font-semibold tracking-[-0.02em] text-zinc-900 dark:text-zinc-50 leading-none mb-3">
             {s.value}
