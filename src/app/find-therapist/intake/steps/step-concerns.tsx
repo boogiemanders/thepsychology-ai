@@ -42,6 +42,20 @@ export function StepConcerns() {
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+        <FormField control={form.control} name="presenting_concerns_text" render={({ field }) => (
+          <FormItem>
+            <FormLabel>In your own words, what brings you here?</FormLabel>
+            <FormControl>
+              <Textarea
+                placeholder="Whatever feels true. No right answer."
+                className="min-h-[120px]"
+                {...field}
+              />
+            </FormControl>
+            <FormMessage />
+          </FormItem>
+        )} />
+
         <FormField control={form.control} name="conditions_seeking_help" render={({ field }) => (
           <FormItem>
             <FormLabel>What are you seeking help with?</FormLabel>
@@ -78,20 +92,6 @@ export function StepConcerns() {
               />
               <div className="text-center text-sm font-medium">{field.value}/10</div>
             </div>
-            <FormMessage />
-          </FormItem>
-        )} />
-
-        <FormField control={form.control} name="presenting_concerns_text" render={({ field }) => (
-          <FormItem>
-            <FormLabel>Describe what brings you to therapy (optional)</FormLabel>
-            <FormControl>
-              <Textarea
-                placeholder="In your own words, what's going on..."
-                className="min-h-[100px]"
-                {...field}
-              />
-            </FormControl>
             <FormMessage />
           </FormItem>
         )} />

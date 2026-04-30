@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { VideoPlayer } from '@/components/ui/video-thumbnail-player'
 import DepthHero from './depth-hero'
+import BoxLoader from '@/components/ui/box-loader'
 
 export const metadata: Metadata = {
   title: 'Blind Spot | thePsychology.ai',
@@ -502,6 +503,9 @@ export default function BlindSpotPage() {
 
       <section className="mb-14 sm:mb-20 px-6">
         <div className="relative aspect-[16/9] rounded-md overflow-hidden border border-zinc-100 dark:border-zinc-800/80 bg-zinc-50 dark:bg-zinc-900">
+          <div className="absolute inset-0 flex items-center justify-center">
+            <BoxLoader />
+          </div>
           <DepthHero
             src="/blind-spot/hero-depth-gray.mp4"
             poster="/blind-spot/hero-depth-voxel-poster.jpg"

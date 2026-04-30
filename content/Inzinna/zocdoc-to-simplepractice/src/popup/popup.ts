@@ -18,8 +18,13 @@ function setToggleButtonState(visible: boolean): void {
   toggleBtn.title = visible ? 'Hide page buttons' : 'Show page buttons'
 }
 
-async function getActiveTabId(): Promise<number | null> {
+async function getActiveTab(): Promise<chrome.tabs.Tab | null> {
   const [tab] = await chrome.tabs.query({ active: true, currentWindow: true })
+  return tab ?? null
+}
+
+async function getActiveTabId(): Promise<number | null> {
+  const tab = await getActiveTab()
   return tab?.id ?? null
 }
 
@@ -46,6 +51,19 @@ function updateCheckItem(id: string, done: boolean): void {
     el.classList.remove('done')
     if (icon) icon.textContent = '\u25CB'
   }
+}
+
+async function syncToggleButtonState(): Promise<void> {
+  const tabId = await getActiveTabId()
+  if (!tabId) {
+    setToggleButtonState(true)
+    return
+  }
+
+  const response = await sendTabMessage<{ visible: boolean }>(tabId, {
+    type: 'get-floating-buttons-visibility',
+  })
+  setToggleButtonState(response?.visible ?? true)
 }
 
 function showView(view: 'main' | 'settings'): void {
@@ -176,6 +194,7 @@ chrome.storage.onChanged.addListener(() => render())
 // Initial load — show settings on first use
 async function init(): Promise<void> {
   const hasPrefs = await hasPreferences()
+  await syncToggleButtonState()
   if (!hasPrefs) {
     await populateSettingsForm()
     showView('settings')
