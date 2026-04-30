@@ -3,8 +3,9 @@
 import * as React from "react"
 import { cn } from "@/lib/utils"
 import { Play, X } from "lucide-react"
+import InnerVideoPlayer from "@/components/ui/video-player"
 
-interface VideoPlayerProps extends React.HTMLAttributes<HTMLDivElement> {
+interface VideoThumbnailPlayerProps extends React.HTMLAttributes<HTMLDivElement> {
   thumbnailUrl: string
   videoUrl: string
   title: string
@@ -12,7 +13,7 @@ interface VideoPlayerProps extends React.HTMLAttributes<HTMLDivElement> {
   aspectRatio?: "16/9" | "4/3" | "1/1" | "9/16"
 }
 
-const VideoPlayer = React.forwardRef<HTMLDivElement, VideoPlayerProps>(
+const VideoThumbnailPlayer = React.forwardRef<HTMLDivElement, VideoThumbnailPlayerProps>(
   (
     {
       className,
@@ -99,14 +100,7 @@ const VideoPlayer = React.forwardRef<HTMLDivElement, VideoPlayerProps>(
               className="w-full max-w-4xl p-4"
               onClick={(e) => e.stopPropagation()}
             >
-              <video
-                src={videoUrl}
-                title={title}
-                controls
-                autoPlay
-                playsInline
-                className="h-auto max-h-[85vh] w-full rounded-lg bg-black"
-              />
+              <InnerVideoPlayer src={videoUrl} autoPlay />
             </div>
           </div>
         )}
@@ -114,6 +108,6 @@ const VideoPlayer = React.forwardRef<HTMLDivElement, VideoPlayerProps>(
     )
   },
 )
-VideoPlayer.displayName = "VideoPlayer"
+VideoThumbnailPlayer.displayName = "VideoThumbnailPlayer"
 
-export { VideoPlayer }
+export { VideoThumbnailPlayer as VideoPlayer }
