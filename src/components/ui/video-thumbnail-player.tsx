@@ -11,6 +11,7 @@ interface VideoThumbnailPlayerProps extends React.HTMLAttributes<HTMLDivElement>
   title: string
   description?: string
   aspectRatio?: "16/9" | "4/3" | "1/1" | "9/16"
+  caption?: string
 }
 
 const VideoThumbnailPlayer = React.forwardRef<HTMLDivElement, VideoThumbnailPlayerProps>(
@@ -22,6 +23,7 @@ const VideoThumbnailPlayer = React.forwardRef<HTMLDivElement, VideoThumbnailPlay
       title,
       description,
       aspectRatio = "16/9",
+      caption,
       ...props
     },
     ref,
@@ -100,7 +102,7 @@ const VideoThumbnailPlayer = React.forwardRef<HTMLDivElement, VideoThumbnailPlay
               className="w-full max-w-4xl p-4"
               onClick={(e) => e.stopPropagation()}
             >
-              <InnerVideoPlayer src={videoUrl} autoPlay />
+              <InnerVideoPlayer src={videoUrl} autoPlay caption={caption} />
             </div>
           </div>
         )}
