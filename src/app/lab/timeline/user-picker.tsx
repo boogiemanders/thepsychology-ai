@@ -6,6 +6,7 @@ import type { TimelineCollaborator } from './use-timeline'
 const COLLAB_COLORS: Record<string, string> = {
   AC: '#F39E3A', BR: '#E7437D', CA: '#F5ED43', FI: '#4EBFD4',
   GI: '#B6D458', LO: '#AC80AF', TM: '#F5ED43', JC: '#AC80AF',
+  SB: '#4EBFD4', TC: '#E7437D', LC: '#B6D458', YD: '#AC80AF',
 }
 
 function isLightHex(hex: string): boolean {
