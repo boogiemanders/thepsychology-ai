@@ -64,9 +64,11 @@ export function VoiceCall({ accent, dark, onClose, onUserSaid, onBotSaid }: Voic
       return
     }
     const rec = new SR()
-    rec.continuous = false
+    rec.continuous = true
     rec.interimResults = true
     rec.lang = 'en-US'
+
+    rec.onstart = () => { console.log('[voice] recognition started') }
 
     rec.onresult = (e: any) => {
       let finalText = ''
@@ -84,13 +86,35 @@ export function VoiceCall({ accent, dark, onClose, onUserSaid, onBotSaid }: Voic
     }
 
     rec.onerror = (e: any) => {
+      console.warn('[voice] SR error:', e.error, e.message)
       if (e.error === 'no-speech' || e.error === 'aborted') return
-      console.warn('SR error:', e.error)
+      if (e.error === 'not-allowed' || e.error === 'service-not-allowed') {
+        endedRef.current = true
+        setCallState('error')
+        setErrorMsg('microphone access blocked. click the lock icon in the URL bar and allow mic, then refresh.')
+        return
+      }
+      if (e.error === 'audio-capture') {
+        endedRef.current = true
+        setCallState('error')
+        setErrorMsg('no microphone detected. check your system audio input.')
+        return
+      }
+      if (e.error === 'network') {
+        setCallState('error')
+        setErrorMsg('network error. speech recognition needs internet (Chrome streams audio to Google).')
+        return
+      }
     }
 
     rec.onend = () => {
+      console.log('[voice] recognition ended, state=', callStateRef.current)
       if (callStateRef.current === 'listening' && !endedRef.current) {
-        try { rec.start() } catch {}
+        setTimeout(() => {
+          if (callStateRef.current === 'listening' && !endedRef.current) {
+            try { rec.start() } catch (err) { console.warn('[voice] restart failed:', err) }
+          }
+        }, 300)
       }
     }
 
@@ -128,7 +152,16 @@ export function VoiceCall({ accent, dark, onClose, onUserSaid, onBotSaid }: Voic
   const startListening = () => {
     if (endedRef.current) return
     setCallState('listening')
-    try { recognitionRef.current?.start() } catch {}
+    callStateRef.current = 'listening'
+    setTimeout(() => {
+      if (endedRef.current) return
+      try {
+        recognitionRef.current?.start()
+        console.log('[voice] start() called')
+      } catch (err: any) {
+        console.warn('[voice] start failed:', err?.message || err)
+      }
+    }, 250)
   }
 
   const handleUserSpeech = async (text: string) => {
