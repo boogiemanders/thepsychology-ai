@@ -22,7 +22,7 @@ const STEP_TITLES = [
 ]
 
 export function ProviderOnboardClient() {
-  const { user, userProfile, loading, isProvider } = useAuth()
+  const { user, loading } = useAuth()
   const router = useRouter()
 
   if (loading) {
@@ -38,17 +38,6 @@ export function ProviderOnboardClient() {
       <div className="flex flex-col items-center justify-center min-h-[60vh] gap-4 px-6">
         <h1 className="text-2xl font-medium">Sign in to get started</h1>
         <p className="text-muted-foreground">You need to be logged in to set up your provider profile.</p>
-      </div>
-    )
-  }
-
-  if (!isProvider && userProfile?.user_role !== 'provider') {
-    return (
-      <div className="flex flex-col items-center justify-center min-h-[60vh] gap-4 px-6">
-        <h1 className="text-2xl font-medium">Provider Access Required</h1>
-        <p className="text-muted-foreground">
-          Your account is not set up as a provider. Contact us to get started.
-        </p>
       </div>
     )
   }

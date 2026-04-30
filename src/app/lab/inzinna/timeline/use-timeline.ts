@@ -38,6 +38,7 @@ export interface TimelineProject {
   status: 'live' | 'building' | 'blocked' | 'idea' | 'done'
   stage_line: string | null
   contributors: string[]
+  lead: string | null
   phases: TimelinePhase[]
   milestone: TimelineMilestone | null
   steps: TimelineStep[]
@@ -293,6 +294,25 @@ export function useTimeline(
     }
   }, [activeUser, apiFetch])
 
+  /** Update project lead (DRI). */
+  const updateLead = useCallback(async (projectId: string, lead: string | null) => {
+    if (!activeUser) return
+
+    setProjects(prev =>
+      prev.map(p => (p.id === projectId ? { ...p, lead, updated_by: activeUser, updated_at: new Date().toISOString() } : p))
+    )
+
+    try {
+      await apiFetch(`/api/timeline/${projectId}`, {
+        method: 'PATCH',
+        body: JSON.stringify({ lead, contributor: activeUser }),
+      })
+    } catch (err) {
+      console.error('[timeline] updateLead error:', err)
+      refreshProjects()
+    }
+  }, [activeUser, apiFetch])
+
   /** Update project status. */
   const updateStatus = useCallback(async (projectId: string, status: TimelineProject['status']) => {
     if (!activeUser) return
@@ -364,6 +384,7 @@ export function useTimeline(
     updatePriority,
     updateStatus,
     updateContributors,
+    updateLead,
     addProject,
     refreshProjects,
   }

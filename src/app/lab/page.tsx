@@ -104,6 +104,16 @@ const projects = [
     tags: ['Roadmap', 'Monthly View', 'Personal'],
   },
   {
+    id: 20,
+    title: 'Blind Spot',
+    description: 'Multimodal VR psychotherapy. Closed-loop therapy that adapts to your body, not your words. EEG and HRV from a Muse S drive a biofeedback orb in a Quest 3 scene. YC Summer 2026 application in flight.',
+    category: 'clinical-practice',
+    categoryLabel: '02 Psychologist Tools',
+    href: '/lab/blind-spot',
+    status: 'dev' as const,
+    tags: ['VR', 'Quest 3', 'EEG', 'HRV', 'Biofeedback', 'YC S26'],
+  },
+  {
     id: 14,
     title: 'Plan Match',
     description: 'Pick your insurance and state. See the psychologists on the platform who take your plan. No more calling three offices to find out who’s in-network.',

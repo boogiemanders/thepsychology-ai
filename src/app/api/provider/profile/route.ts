@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import {
   getUserWithRole,
-  hasRole,
   getProviderProfile,
   upsertProviderProfile,
 } from '@/lib/supabase-matching'
@@ -16,10 +15,6 @@ export async function GET(request: NextRequest) {
     const user = await getUserWithRole(authToken)
     if (!user) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
-    }
-
-    if (!hasRole(user, 'provider')) {
-      return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
     }
 
     const profile = await getProviderProfile(user.id)
@@ -40,10 +35,6 @@ export async function POST(request: NextRequest) {
     const user = await getUserWithRole(authToken)
     if (!user) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
-    }
-
-    if (!hasRole(user, 'provider')) {
-      return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
     }
 
     const body = await request.json()

@@ -42,7 +42,68 @@ export function injectButton(
     onClick()
   }, true)
   document.body.appendChild(btn)
+  btn.style.display = areFloatingButtonsVisible() ? '' : 'none'
   return btn
+}
+
+type FloatingButtonsStateWindow = Window & typeof globalThis & {
+  __zspFloatingButtonsVisible?: boolean
+  __zspFloatingButtonsListenerRegistered?: boolean
+  __zspFloatingButtonsOnShow?: Array<() => void>
+}
+
+function floatingButtonsState(): FloatingButtonsStateWindow {
+  return window as FloatingButtonsStateWindow
+}
+
+export function areFloatingButtonsVisible(): boolean {
+  const state = floatingButtonsState()
+  if (typeof state.__zspFloatingButtonsVisible !== 'boolean') {
+    state.__zspFloatingButtonsVisible = true
+  }
+  return state.__zspFloatingButtonsVisible
+}
+
+export function setFloatingButtonsVisible(visible: boolean): boolean {
+  const state = floatingButtonsState()
+  state.__zspFloatingButtonsVisible = visible
+
+  const buttons = document.querySelectorAll('.spn-floating-btn, .zsp-floating-btn') as NodeListOf<HTMLElement>
+  buttons.forEach((button) => {
+    button.style.display = visible ? '' : 'none'
+  })
+
+  if (visible) {
+    for (const callback of state.__zspFloatingButtonsOnShow ?? []) {
+      callback()
+    }
+  }
+
+  return visible
+}
+
+export function registerFloatingButtonsController(onShow?: () => void): void {
+  const state = floatingButtonsState()
+
+  if (onShow) {
+    state.__zspFloatingButtonsOnShow ??= []
+    state.__zspFloatingButtonsOnShow.push(onShow)
+  }
+
+  if (state.__zspFloatingButtonsListenerRegistered) return
+  state.__zspFloatingButtonsListenerRegistered = true
+
+  chrome.runtime.onMessage.addListener((msg, _sender, sendResponse) => {
+    if (msg?.type === 'get-floating-buttons-visibility') {
+      sendResponse({ visible: areFloatingButtonsVisible() })
+      return true
+    }
+
+    if (msg?.type === 'toggle-floating-buttons') {
+      sendResponse({ visible: setFloatingButtonsVisible(!areFloatingButtonsVisible()) })
+      return true
+    }
+  })
 }
 
 export function isExtensionContextInvalidatedError(err: unknown): boolean {

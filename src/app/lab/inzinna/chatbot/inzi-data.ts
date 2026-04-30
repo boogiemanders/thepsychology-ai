@@ -40,6 +40,27 @@ export interface HistoryThread {
 
 export interface SourceTag { title: string; doc: string }
 
+export type HandoffIntent = 'scheduling' | 'billing' | 'clinical' | 'general'
+
+export interface SchedulingSubmit {
+  name: string
+  email: string
+  phone?: string
+  modality: 'telehealth' | 'in-person' | 'either'
+  preferredTimes: string[]
+  insurance: string
+  concerns: string
+}
+
+export interface ContactClinicianSubmit {
+  name: string
+  email: string
+  phone?: string
+  clinician: string
+  message: string
+  urgency: 'low' | 'normal' | 'urgent'
+}
+
 export type Message =
   | { from: 'bot'; text: string; kind?: undefined; sub?: undefined; sources?: SourceTag[] }
   | { from: 'bot'; kind: 'intro'; text: string; sub?: string }
@@ -49,6 +70,9 @@ export type Message =
   | { from: 'bot'; kind: 'results'; score: number; max: number; level: 'Mild' | 'Moderate' | 'Severe'; summary: string; recommendations: Recommendation[] }
   | { from: 'bot'; kind: 'clinician-card'; clinician: Clinician }
   | { from: 'bot'; kind: 'handoff-loading'; text: string }
+  | { from: 'bot'; kind: 'scheduling-form' }
+  | { from: 'bot'; kind: 'contact-clinician-form'; clinicians: string[] }
+  | { from: 'bot'; kind: 'handoff-success'; intent: HandoffIntent; etaText: string }
   | { from: 'user'; text: string }
   | { from: 'human'; name: string; text: string; avatar: string }
   | { from: 'system'; text: string }
@@ -103,10 +127,11 @@ export const INZ_STATES: InziState[] = [
       { from: 'bot', kind: 'intro', text: "hi, I'm Inzi", sub: "I'm here to help you figure out what kind of support might be right for you. nothing you say here is binding. it's just a conversation." },
     ],
     chips: [
-      "I'm new to therapy",
       "Take the 5-min self-assessment",
+      "Schedule a session",
       "Help me find a therapist",
-      "I have insurance questions",
+      "Send a message to my therapist",
+      "Insurance and billing questions",
       "I'm in crisis",
     ],
     composer: { value: '', placeholder: "type a message..." },

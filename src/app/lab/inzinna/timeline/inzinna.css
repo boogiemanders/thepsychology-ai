@@ -42,6 +42,14 @@ body:has(.inz-page) {
   background: #101032 !important;
 }
 
+/* Personal timeline variant: dark gray instead of oxford navy. */
+.inz-page.inz-personal {
+  background: #18181B;
+}
+body:has(.inz-page.inz-personal) {
+  background: #18181B !important;
+}
+
 /* Hide the global site navbar until the user mouses over the top strip. */
 body:has(.inz-page) [data-site-navbar="true"] {
   opacity: 0;

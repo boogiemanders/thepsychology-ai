@@ -4,6 +4,32 @@ Paste this to continue working:
 
 ---
 
+## Pilot: P02 (first real-portal user)
+
+Per the Inzinna clinician survey (April 2026, n=7), **P02's #1 priority is VOB automation**, #2 is simplified billing, #3 is localizing information. This extension hits priorities 1 and 2 directly. P02 is the designated first pilot once real-portal QA lands.
+
+**P02 profile:** LSW, humanistic/person-centered, 18 client hrs/wk, 2 hrs documentation/wk, 0–1 hr supervision. High Likert fit scores (5/5 workflow fit, 5/5 comfortable with feedback). Primary barriers: accuracy skepticism, technical friction, workflow integration uncertainty. No privacy dealbreakers.
+
+**Pre-pilot config for P02 (set in popup settings):**
+- Provider name: P02's actual name from SP
+- Locations: whichever of Video Office (39003359), New Rochelle (40833537), Manhattan (41119532) apply to his caseload
+- CPT codes: his usual intake + follow-up codes (confirm during onboarding)
+- VOB recipients: his VOB workflow inbox
+- VOB signature block: his standard template
+
+**VOB-specific QA checklist (before sending him to test):**
+- [ ] Gmail compose URL opens with correct recipient(s) pre-filled
+- [ ] Subject line format correct (abbreviated name + date + time)
+- [ ] Body uses abbreviated name (not full name)
+- [ ] Appointment date/time rendered in local TZ
+- [ ] Signature block matches his configured template
+- [ ] Draft vs. send behavior is draft-only (clinician reviews before sending)
+- [ ] Works for both new-patient VOB and re-verification VOB flows
+
+**Outreach:** adapt `content/Inzinna/Clinician Survey/pilot-outreach-P07-P08.md` with VOB-first framing for P02.
+
+---
+
 Let's continue working on the ZocDoc to SimplePractice Chrome extension at `content/Inzinna/zocdoc-to-simplepractice/`. The design spec is at `docs/superpowers/specs/2026-03-26-zocdoc-simplepractice-extension-design.md`.
 
 ## Architecture

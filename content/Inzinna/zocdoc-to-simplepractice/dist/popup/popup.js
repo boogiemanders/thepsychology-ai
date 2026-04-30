@@ -173,8 +173,12 @@ ${prefs.vobSignature}`;
     toggleBtn2.textContent = visible ? "\u{1F441}" : "\u{1F6AB}";
     toggleBtn2.title = visible ? "Hide page buttons" : "Show page buttons";
   }
-  async function getActiveTabId() {
+  async function getActiveTab() {
     const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+    return tab ?? null;
+  }
+  async function getActiveTabId() {
+    const tab = await getActiveTab();
     return tab?.id ?? null;
   }
   function sendTabMessage(tabId, message) {
@@ -199,6 +203,17 @@ ${prefs.vobSignature}`;
       el.classList.remove("done");
       if (icon) icon.textContent = "\u25CB";
     }
+  }
+  async function syncToggleButtonState() {
+    const tabId = await getActiveTabId();
+    if (!tabId) {
+      setToggleButtonState(true);
+      return;
+    }
+    const response = await sendTabMessage(tabId, {
+      type: "get-floating-buttons-visibility"
+    });
+    setToggleButtonState(response?.visible ?? true);
   }
   function showView(view) {
     const emptyState = document.getElementById("empty-state");
@@ -296,6 +311,7 @@ ${prefs.vobSignature}`;
   chrome.storage.onChanged.addListener(() => render());
   async function init() {
     const hasPrefs = await hasPreferences();
+    await syncToggleButtonState();
     if (!hasPrefs) {
       await populateSettingsForm();
       showView("settings");

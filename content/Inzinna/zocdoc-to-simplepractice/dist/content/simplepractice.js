@@ -181,7 +181,51 @@ ${prefs.vobSignature}`;
       onClick();
     }, true);
     document.body.appendChild(btn);
+    btn.style.display = areFloatingButtonsVisible() ? "" : "none";
     return btn;
+  }
+  function floatingButtonsState() {
+    return window;
+  }
+  function areFloatingButtonsVisible() {
+    const state = floatingButtonsState();
+    if (typeof state.__zspFloatingButtonsVisible !== "boolean") {
+      state.__zspFloatingButtonsVisible = true;
+    }
+    return state.__zspFloatingButtonsVisible;
+  }
+  function setFloatingButtonsVisible(visible) {
+    const state = floatingButtonsState();
+    state.__zspFloatingButtonsVisible = visible;
+    const buttons = document.querySelectorAll(".spn-floating-btn, .zsp-floating-btn");
+    buttons.forEach((button) => {
+      button.style.display = visible ? "" : "none";
+    });
+    if (visible) {
+      for (const callback of state.__zspFloatingButtonsOnShow ?? []) {
+        callback();
+      }
+    }
+    return visible;
+  }
+  function registerFloatingButtonsController(onShow) {
+    const state = floatingButtonsState();
+    if (onShow) {
+      state.__zspFloatingButtonsOnShow ??= [];
+      state.__zspFloatingButtonsOnShow.push(onShow);
+    }
+    if (state.__zspFloatingButtonsListenerRegistered) return;
+    state.__zspFloatingButtonsListenerRegistered = true;
+    chrome.runtime.onMessage.addListener((msg, _sender, sendResponse) => {
+      if (msg?.type === "get-floating-buttons-visibility") {
+        sendResponse({ visible: areFloatingButtonsVisible() });
+        return true;
+      }
+      if (msg?.type === "toggle-floating-buttons") {
+        sendResponse({ visible: setFloatingButtonsVisible(!areFloatingButtonsVisible()) });
+        return true;
+      }
+    });
   }
   function isExtensionContextInvalidatedError(err) {
     if (!(err instanceof Error)) return false;
@@ -1000,16 +1044,8 @@ ${prefs.vobSignature}`;
     }
   }
   init();
-  chrome.runtime.onMessage.addListener((msg, _sender, sendResponse) => {
-    if (msg?.type === "toggle-floating-buttons") {
-      const btns = document.querySelectorAll(".spn-floating-btn, .zsp-floating-btn");
-      const anyVisible = Array.from(btns).some((b) => b.style.display !== "none");
-      btns.forEach((b) => {
-        b.style.display = anyVisible ? "none" : "";
-      });
-      sendResponse({ visible: !anyVisible });
-      return true;
-    }
+  registerFloatingButtonsController(() => {
+    syncInjectedUi();
   });
 })();
 //# sourceMappingURL=simplepractice.js.map

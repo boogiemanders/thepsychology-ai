@@ -46,7 +46,35 @@ export async function upsertProviderProfile(
     return null
   }
 
+  await addSecondaryRole(userId, 'provider')
+
   return result as ProviderProfile
+}
+
+async function addSecondaryRole(userId: string, role: 'client' | 'provider'): Promise<void> {
+  const supabase = getSupabaseClient(undefined, { requireServiceRole: true })
+  if (!supabase) return
+
+  const { data: current } = await supabase
+    .from('users')
+    .select('user_role, secondary_roles')
+    .eq('id', userId)
+    .single()
+
+  if (!current) return
+  if (current.user_role === role) return
+
+  const existing = (current.secondary_roles as string[] | null) ?? []
+  if (existing.includes(role)) return
+
+  const { error } = await supabase
+    .from('users')
+    .update({ secondary_roles: [...existing, role] })
+    .eq('id', userId)
+
+  if (error) {
+    console.error(`Error adding ${role} role to user ${userId}:`, error)
+  }
 }
 
 export async function submitProviderProfile(userId: string): Promise<{ success: boolean; error?: string }> {
@@ -141,6 +169,8 @@ export async function upsertClientIntake(
     console.error('Error upserting client intake:', error)
     return null
   }
+
+  await addSecondaryRole(userId, 'client')
 
   return result as ClientIntakeProfile
 }

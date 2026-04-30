@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useMemo, useState } from 'react'
-import { INZ_STATES, type AccentName, type InziState, type LauncherStyle, type Message, type Variation } from './inzi-data'
+import { INZ_STATES, INZINNA_THERAPISTS, type AccentName, type ContactClinicianSubmit, type InziState, type LauncherStyle, type Message, type SchedulingSubmit, type Variation } from './inzi-data'
 import { ChatPanel } from './inzi-panel'
 import { HomepageBackdrop, Launcher } from './inzi-launcher'
 import { TweaksPanel } from './inzi-tweaks'
@@ -63,17 +63,104 @@ export function InziApp() {
     else if (key === 'open') setOpen(value)
   }
 
+  const enterLive = (initial?: Message) => {
+    setLiveActive(true)
+    if (initial) setLiveMessages([LIVE_INTRO, initial])
+  }
+
+  const startScheduling = () => {
+    enterLive({ from: 'bot', text: "let's get you booked. fill this out and our scheduling team will reach out within one business day." } as Message)
+    setLiveMessages(prev => [...prev, { from: 'bot', kind: 'scheduling-form' }])
+  }
+
+  const startContactClinician = (preselect?: string) => {
+    const list = INZINNA_THERAPISTS.map(t => t.name)
+    enterLive({ from: 'bot', text: "of course. write your message below and pick who it's going to. they'll get an email." } as Message)
+    setLiveMessages(prev => [...prev, { from: 'bot', kind: 'contact-clinician-form', clinicians: preselect ? [preselect, ...list.filter(n => n !== preselect)] : list }])
+  }
+
   const onPickChip = (label: string) => {
+    const t = label.toLowerCase()
+    if (t.includes('schedule') || t.includes('book a session') || t.includes('book an appointment')) return startScheduling()
+    if (t.includes('message my') || t.includes('message a clinician') || t.includes('contact my therapist') || t.includes('send a message')) return startContactClinician()
     if (liveActive) {
       askLive(label)
       return
     }
-    const t = label.toLowerCase()
     if (t.includes('crisis')) return setStateId('crisis')
     if (t.includes('assessment') || t.includes("let's do it")) return setStateId('assessment-progress')
     if (t.includes('match') || t.includes('therapist') || t.includes('cbt clinicians')) return setStateId('booking')
     if (t.includes('real person')) return setStateId('handoff')
+    if (t.includes('insurance') || t.includes('billing') || t.includes('cost') || t.includes('fee')) {
+      enterLive()
+      askLive(label)
+      return
+    }
     return setStateId('bot-typing')
+  }
+
+  const onSchedulingSubmit = async (data: SchedulingSubmit) => {
+    setLiveMessages(prev => prev.map(m => 'kind' in m && m.kind === 'scheduling-form' ? { from: 'bot', kind: 'handoff-loading', text: 'sending to scheduling...' } : m))
+    try {
+      const res = await fetch('/api/inzi/handoff', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({
+          intent: 'scheduling',
+          patient: { name: data.name, email: data.email, phone: data.phone },
+          summary: `${data.modality} session. Times: ${data.preferredTimes.join(', ')}. Concerns: ${data.concerns}`,
+          payload: {
+            modality: data.modality,
+            preferredTimes: data.preferredTimes,
+            insurance: data.insurance,
+            concerns: data.concerns,
+          },
+        }),
+      })
+      if (!res.ok) throw new Error('Handoff failed')
+      setLiveMessages(prev => prev.filter(m => !('kind' in m) || m.kind !== 'handoff-loading').concat([
+        { from: 'bot', kind: 'handoff-success', intent: 'scheduling', etaText: "we'll confirm your appointment via email within 1 business day." },
+      ]))
+    } catch (e) {
+      setLiveMessages(prev => prev.filter(m => !('kind' in m) || m.kind !== 'handoff-loading').concat([
+        { from: 'bot', text: "something went wrong sending that. mind trying again, or call the clinic directly?" },
+      ]))
+    }
+  }
+
+  const onContactClinicianSubmit = async (data: ContactClinicianSubmit) => {
+    setLiveMessages(prev => prev.map(m => 'kind' in m && m.kind === 'contact-clinician-form' ? { from: 'bot', kind: 'handoff-loading', text: 'sending message...' } : m))
+    try {
+      const res = await fetch('/api/inzi/handoff', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({
+          intent: 'clinical',
+          patient: { name: data.name, email: data.email, phone: data.phone },
+          summary: data.message,
+          urgency: data.urgency,
+          assignedClinician: data.clinician,
+          payload: { clinician: data.clinician, urgency: data.urgency },
+        }),
+      })
+      if (!res.ok) throw new Error('Handoff failed')
+      const eta = data.urgency === 'urgent'
+        ? `${data.clinician.split(' ').slice(0, 2).join(' ')} will see this today. for emergencies call 911 or 988.`
+        : `${data.clinician.split(' ').slice(0, 2).join(' ')} will reply by next business day.`
+      setLiveMessages(prev => prev.filter(m => !('kind' in m) || m.kind !== 'handoff-loading').concat([
+        { from: 'bot', kind: 'handoff-success', intent: 'clinical', etaText: eta },
+      ]))
+    } catch (e) {
+      setLiveMessages(prev => prev.filter(m => !('kind' in m) || m.kind !== 'handoff-loading').concat([
+        { from: 'bot', text: "couldn't send that. try again, or call the clinic if it's urgent." },
+      ]))
+    }
+  }
+
+  const onCancelHandoff = () => {
+    setLiveMessages(prev => prev.filter(m => !('kind' in m) || (m.kind !== 'scheduling-form' && m.kind !== 'contact-clinician-form')).concat([
+      { from: 'bot', text: 'no worries. anything else I can help with?' },
+    ]))
   }
 
   const askLive = async (q: string) => {
@@ -151,6 +238,9 @@ export function InziApp() {
             onComposerChange={setComposerValue}
             onComposerSend={onComposerSend}
             onCall={() => { setLiveActive(true); setCallOpen(true) }}
+            onSchedulingSubmit={onSchedulingSubmit}
+            onContactClinicianSubmit={onContactClinicianSubmit}
+            onCancelHandoff={onCancelHandoff}
           />
         </div>
       )}

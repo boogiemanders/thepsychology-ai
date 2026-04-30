@@ -7,7 +7,8 @@
     "extract:clinical-knowledge": "python3 ./scripts/extract-clinical-knowledge.py",
     "build": "node build.mjs",
     "watch": "node build.mjs --watch",
-    "test:llm-diagnostic": "npx tsx scripts/test-llm-diagnostic.ts"
+    "test:llm-diagnostic": "npx tsx scripts/test-llm-diagnostic.ts",
+    "test:deidentify": "npx tsx scripts/test-deidentify.ts"
   },
   "devDependencies": {
     "@types/chrome": "^0.0.287",

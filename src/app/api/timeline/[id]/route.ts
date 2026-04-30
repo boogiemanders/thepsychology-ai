@@ -24,6 +24,7 @@ export async function PATCH(
   const allowed = [
     'name', 'one_liner', 'priority', 'status', 'stage_line',
     'contributors', 'phases', 'milestone', 'steps', 'support', 'href',
+    'lead',
   ] as const
 
   const update: Record<string, unknown> = {

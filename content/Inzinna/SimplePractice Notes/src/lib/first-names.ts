@@ -16,7 +16,7 @@
 
 const NAMES: readonly string[] = [
   // Top male names (mid-20th c. through present)
-  'aaron', 'abraham', 'adam', 'adrian', 'aidan', 'alan', 'albert', 'alejandro', 'alex', 'alexander',
+  'aaron', 'abraham', 'adam', 'adrian', 'aidan', 'aiden', 'ayden', 'alan', 'albert', 'alejandro', 'alex', 'alexander',
   'alexis', 'alfred', 'allen', 'alvin', 'amir', 'anderson', 'andre', 'andres', 'andrew', 'andy',
   'angel', 'anthony', 'antonio', 'ari', 'arjun', 'arnold', 'arthur', 'asher', 'ashton', 'austin',
   'avery', 'axel', 'barry', 'benjamin', 'bennett', 'benny', 'bernard', 'bill', 'billy', 'blake',
