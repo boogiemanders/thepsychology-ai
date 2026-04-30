@@ -11,7 +11,6 @@ import { Hammer, FlaskConical, Rocket, Radio, Clock } from 'lucide-react'
 import { useTimeline, type TimelineProject, type TimelineCollaborator, type TimelinePhase, type TimelineStep } from './use-timeline'
 import { MONTH_META, fractionToDate, dateToFraction, daysInMonth } from './date-utils'
 import { UserPicker } from './user-picker'
-import { GoogleConnect } from './google-connect'
 import { AddProjectForm } from './add-project-form'
 
 // ---------- Types ----------
@@ -34,22 +33,27 @@ const PRIORITY: Record<PriorityLevel, { label: string; bar: string; fill: string
 }
 
 const STATUS_CFG: Record<string, { label: string; dot: string; text: string }> = {
-  live:     { label: 'Live',     dot: 'bg-[#8AE08D]', text: 'text-[#8AE08D]' },
-  building: { label: 'Building', dot: 'bg-[#9DADE5]', text: 'text-[#9DADE5]' },
-  blocked:  { label: 'Blocked',  dot: 'bg-[#FFB990]', text: 'text-[#FFB990]' },
-  idea:     { label: 'Idea',     dot: 'bg-white/30',  text: 'text-white/45' },
-  done:     { label: 'Done',     dot: 'bg-[#8AE08D]', text: 'text-[#8AE08D]' },
+  live:     { label: 'Live',     dot: 'bg-emerald-500',               text: 'text-emerald-600 dark:text-emerald-500' },
+  building: { label: 'Building', dot: 'bg-zinc-400 dark:bg-zinc-500', text: 'text-zinc-500 dark:text-zinc-400' },
+  blocked:  { label: 'Blocked',  dot: 'bg-amber-500',                 text: 'text-amber-600 dark:text-amber-500' },
+  idea:     { label: 'Idea',     dot: 'bg-zinc-300 dark:bg-zinc-700', text: 'text-zinc-400 dark:text-zinc-600' },
+  done:     { label: 'Done',     dot: 'bg-emerald-500',               text: 'text-emerald-600 dark:text-emerald-500' },
 }
 
+function priorityBorderColor(p: PriorityLevel): string {
+  return p === 'high' ? '#d87758' : p === 'medium' ? '#788c5d' : '#6a9bcc'
+}
+
+// Brand palette — overrides hue-based colors when initials match.
 const COLLAB_COLORS: Record<string, string> = {
-  AC: '#FFB990',
-  BR: '#9DADE5',
-  CA: '#F1E29D',
-  FI: '#8AE08D',
-  GI: '#3362FF',
-  LO: '#5F396D',
-  TM: '#F1E29D',
-  JC: '#5F396D',
+  AC: '#F39E3A', // orange
+  BR: '#E7437D', // pink
+  CA: '#F5ED43', // yellow
+  FI: '#4EBFD4', // cyan
+  GI: '#B6D458', // lime
+  LO: '#AC80AF', // purple
+  TM: '#F5ED43', // yellow (reuse)
+  JC: '#AC80AF', // purple (reuse)
 }
 
 function isLightHex(hex: string): boolean {
@@ -96,17 +100,6 @@ function leadColors(lead: TimelineCollaborator | null) {
   }
 }
 
-function phaseProgress(phaseIndex: number, totalPhases: number, steps: TimelineStep[]): number {
-  if (steps.length === 0 || totalPhases === 0) return 0
-  const overall = steps.filter(s => s.done).length / steps.length
-  const stepsPerPhase = steps.length / totalPhases
-  const startIdx = Math.floor(phaseIndex * stepsPerPhase)
-  const endIdx = Math.max(startIdx, Math.floor((phaseIndex + 1) * stepsPerPhase))
-  const phaseSteps = steps.slice(startIdx, endIdx)
-  if (phaseSteps.length === 0) return overall
-  return phaseSteps.filter(s => s.done).length / phaseSteps.length
-}
-
 function isoToPosition(iso: string, months: Month[]): number {
   const parts = iso.split('-')
   const m = parseInt(parts[1], 10)
@@ -119,7 +112,7 @@ function isoToPosition(iso: string, months: Month[]): number {
   return (monthIndex + frac) / months.length
 }
 
-// ---------- Shell ----------
+// ---------- Shell (entry point from page.tsx) ----------
 
 interface ShellProps {
   initialProjects: TimelineProject[]
@@ -132,22 +125,18 @@ export function TimelineShell({ initialProjects, initialCollaborators, months, t
   const timeline = useTimeline(initialProjects, initialCollaborators)
   const [showAddForm, setShowAddForm] = useState(false)
   const [myOnly, setMyOnly] = useState(false)
-  const [viewingFilter, setViewingFilter] = useState<string | null>(null)
 
   const today = useMemo(() => isoToPosition(todayIso, months), [todayIso, months])
 
   const PRIORITY_ORDER: Record<string, number> = { high: 0, medium: 1, low: 2 }
   const visible = useMemo(() => {
-    let filtered = timeline.projects
-    if (myOnly && timeline.activeUser) {
-      filtered = filtered.filter(p => p.contributors.includes(timeline.activeUser!))
-    }
-    if (viewingFilter) {
-      filtered = filtered.filter(p => p.contributors.includes(viewingFilter))
-    }
+    const filtered = myOnly && timeline.activeUser
+      ? timeline.projects.filter(p => p.contributors.includes(timeline.activeUser!))
+      : timeline.projects
     return [...filtered].sort((a, b) => (PRIORITY_ORDER[a.priority] ?? 2) - (PRIORITY_ORDER[b.priority] ?? 2))
-  }, [timeline.projects, timeline.activeUser, myOnly, viewingFilter])
+  }, [timeline.projects, timeline.activeUser, myOnly])
 
+  // Build contributor lookup for chips
   const collabLookup = useMemo(() => {
     const map: Record<string, TimelineCollaborator> = {}
     for (const c of timeline.collaborators) map[c.initials] = c
@@ -155,186 +144,145 @@ export function TimelineShell({ initialProjects, initialCollaborators, months, t
   }, [timeline.collaborators])
 
   return (
-    <div className="inz-shell">
-      {/* Top crumb bar */}
-      <div className="flex items-center justify-between px-10 py-3.5 border-b border-white/[0.08]">
-        <Link
-          href="/lab#projects"
-          aria-label="Back to Lab"
-          className="text-[11px] font-mono uppercase tracking-[0.18em] text-white/65 hover:text-white transition-colors"
-        >
+    <div className="min-h-screen">
+      <div className="max-w-6xl mx-auto px-6 py-14">
+        {/* Back */}
+        <Link href="/lab#projects" className="inline-flex items-center gap-1 text-xs text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors mb-10">
           &larr; Lab
         </Link>
-        <span className="text-[11px] font-mono uppercase tracking-[0.18em] text-white/45">
-          Personal Timeline
-        </span>
-      </div>
 
-      {/* Hero */}
-      <section className="px-10 pt-12 pb-7">
-        <p className="text-[11px] font-mono uppercase tracking-[0.2em] text-[#9DADE5] mb-3.5">
-          Personal
-        </p>
-        <div className="flex items-start justify-between gap-4 flex-wrap">
-          <div>
-            <h1 className="text-[48px] font-bold tracking-[-1.4px] leading-[1.05] mb-3 text-white">
-              Personal Timeline
-            </h1>
-            <p className="text-[14px] text-white/65 leading-[1.55] max-w-[560px]">
-              Side projects, month by month. Pick your name to start checking things off and editing dates.
-            </p>
-          </div>
-          {timeline.activeUser && (
-            <div className="flex items-center gap-2 shrink-0">
-              <button
-                type="button"
-                onClick={() => setMyOnly(v => !v)}
-                className={cn(
-                  'px-4 py-2 text-[11px] font-mono uppercase tracking-[0.16em] border rounded-full transition-colors cursor-pointer',
-                  myOnly
-                    ? 'border-[#9DADE5] text-white bg-[rgba(157,173,229,0.10)]'
-                    : 'border-white/15 text-white/70 hover:border-white/40 hover:text-white'
-                )}
-              >
-                My projects
-              </button>
-              <button
-                type="button"
-                onClick={() => setShowAddForm(v => !v)}
-                className="px-4 py-2 text-[11px] font-mono uppercase tracking-[0.16em] border border-white/15 text-white/70 rounded-full hover:border-white/40 hover:text-white transition-colors cursor-pointer"
-              >
-                + Add project
-              </button>
+        {/* Header */}
+        <header className="mb-10">
+          <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-400 dark:text-zinc-500 mb-3">
+            Inzinna Practice Automation
+          </p>
+          <div className="flex items-start justify-between gap-4 flex-wrap">
+            <div>
+              <h1 className="text-4xl sm:text-5xl font-bold tracking-tight mb-3 text-zinc-900 dark:text-zinc-50">
+                Leadership Timeline
+              </h1>
+              <p className="text-[14px] text-zinc-500 dark:text-zinc-400 leading-relaxed max-w-xl">
+                Every leadership project, month by month. Pick your name to start checking things off and editing dates.
+              </p>
             </div>
-          )}
+            {timeline.activeUser && (
+              <div className="flex items-center gap-2 shrink-0">
+                <button
+                  type="button"
+                  onClick={() => setMyOnly(v => !v)}
+                  className={cn(
+                    'px-4 py-2 text-[12px] font-mono border rounded-md transition-colors cursor-pointer',
+                    myOnly
+                      ? 'border-zinc-900 dark:border-zinc-100 text-zinc-900 dark:text-zinc-100'
+                      : 'border-zinc-200 dark:border-zinc-800 text-zinc-400 dark:text-zinc-500 hover:border-zinc-400 dark:hover:border-zinc-600'
+                  )}
+                >
+                  My projects
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setShowAddForm(v => !v)}
+                  className="px-4 py-2 text-[12px] font-mono border border-zinc-200 dark:border-zinc-800 rounded-md hover:border-zinc-400 dark:hover:border-zinc-600 transition-colors cursor-pointer"
+                >
+                  + Add project
+                </button>
+              </div>
+            )}
+          </div>
+
+          {/* User picker */}
+          <div className="mt-6 pb-6 border-b border-zinc-200 dark:border-zinc-800">
+            <UserPicker
+              collaborators={timeline.collaborators}
+              activeUser={timeline.activeUser}
+              onPick={timeline.pickUser}
+            />
+          </div>
+
+        </header>
+
+        {/* Add project form */}
+        {timeline.activeUser && (
+          <Accordion
+            type="single"
+            collapsible
+            value={showAddForm ? 'add' : ''}
+            onValueChange={(v) => setShowAddForm(v === 'add')}
+            className="mb-8"
+          >
+            <AccordionItem value="add" className="border-0">
+              <AccordionContent className="pt-0 pb-0">
+                <AddProjectForm
+                  collaborators={timeline.collaborators}
+                  activeUser={timeline.activeUser}
+                  onSubmit={timeline.addProject}
+                  onClose={() => setShowAddForm(false)}
+                />
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        )}
+
+        {/* Desktop timeline grid */}
+        <div className="hidden md:block">
+          <MonthHeader months={months} today={today} />
+          <Accordion type="single" collapsible className="border-b border-zinc-200 dark:border-zinc-800">
+            {visible.map(p => (
+              <TimelineRow
+                key={p.id}
+                project={p}
+                months={months}
+                today={today}
+                collabLookup={collabLookup}
+                canEdit={!!timeline.activeUser}
+                onToggleStep={(idx) => timeline.toggleStep(p.id, idx)}
+                onUpdateStep={(idx, patch) => timeline.updateStep(p.id, idx, patch)}
+                onPhasesCommit={(phases) => timeline.updatePhases(p.id, phases)}
+                onMilestoneCommit={(ms) => timeline.updateMilestone(p.id, ms)}
+                onPriorityCommit={(priority) => timeline.updatePriority(p.id, priority)}
+                onContributorsCommit={(contributors) => timeline.updateContributors(p.id, contributors)}
+                allCollaborators={timeline.collaborators}
+              />
+            ))}
+          </Accordion>
         </div>
 
-        <div className="mt-7 flex items-center gap-2 flex-wrap">
-          <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-[#9DADE5] mr-1">
-            Viewing
-          </span>
-          {timeline.collaborators.filter(c => !c.neutral).map(c => {
-            const active = viewingFilter === c.initials
+        {/* Mobile month-stacked */}
+        <div className="md:hidden mt-6 space-y-10">
+          {months.map((m, mIdx) => {
+            const start = mIdx / months.length
+            const end = (mIdx + 1) / months.length
+            const inMonth = visible.filter(p => p.phases.some(ph => ph.end > start && ph.start < end))
+            if (!inMonth.length) return null
             return (
-              <button
-                key={c.initials}
-                type="button"
-                onClick={() => setViewingFilter(active ? null : c.initials)}
-                className={cn(
-                  'inline-flex items-center gap-2 pl-1 pr-3 py-1 rounded-full border text-[11px] font-mono transition-colors cursor-pointer',
-                  active
-                    ? 'border-[#9DADE5] bg-[rgba(157,173,229,0.10)] text-white'
-                    : 'border-white/15 text-white/70 hover:border-white/40 hover:text-white'
-                )}
-              >
-                <ContribChip c={c} size="sm" />
-                <span>{c.name}</span>
-              </button>
+              <section key={m.key}>
+                <div className="flex items-baseline justify-between mb-3 border-b border-zinc-200 dark:border-zinc-800 pb-2">
+                  <h2 className="text-[11px] font-mono uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">{m.label} 2026</h2>
+                  <span className="text-[10px] font-mono text-zinc-300 dark:text-zinc-700">{inMonth.length} active</span>
+                </div>
+                <ul className="space-y-4">
+                  {inMonth.map(p => (
+                    <MobileRow key={`${m.key}-${p.id}`} project={p} collabLookup={collabLookup} monthStart={start} monthEnd={end} />
+                  ))}
+                </ul>
+              </section>
             )
           })}
-          {viewingFilter && (
-            <button
-              type="button"
-              onClick={() => setViewingFilter(null)}
-              className="text-[10px] font-mono uppercase tracking-[0.16em] text-white/45 hover:text-white ml-1 cursor-pointer"
-            >
-              Clear
-            </button>
-          )}
         </div>
 
-        <div className="mt-5 pb-7 border-b border-white/[0.08]">
-          <UserPicker
-            collaborators={timeline.collaborators}
-            activeUser={timeline.activeUser}
-            onPick={timeline.pickUser}
-          />
-          <GoogleConnect activeUser={timeline.activeUser} />
-        </div>
-      </section>
-
-      {timeline.activeUser && (
-        <Accordion
-          type="single"
-          collapsible
-          value={showAddForm ? 'add' : ''}
-          onValueChange={(v) => setShowAddForm(v === 'add')}
-          className="px-10 mb-2"
-        >
-          <AccordionItem value="add" className="border-0">
-            <AccordionContent className="pt-0 pb-0">
-              <AddProjectForm
-                collaborators={timeline.collaborators}
-                activeUser={timeline.activeUser}
-                onSubmit={timeline.addProject}
-                onClose={() => setShowAddForm(false)}
-              />
-            </AccordionContent>
-          </AccordionItem>
-        </Accordion>
-      )}
-
-      <div className="hidden md:block">
-        <MonthHeader months={months} today={today} />
-        {visible.length === 0 && (
-          <div className="px-10 py-14 text-center text-[12px] font-mono uppercase tracking-[0.2em] text-white/45">
-            No projects {viewingFilter ? `for ${timeline.collaborators.find(c => c.initials === viewingFilter)?.name ?? viewingFilter}` : 'yet'}
-          </div>
-        )}
-        <Accordion type="single" collapsible>
-          {visible.map(p => (
-            <TimelineRow
-              key={p.id}
-              project={p}
-              months={months}
-              today={today}
-              collabLookup={collabLookup}
-              canEdit={!!timeline.activeUser}
-              onToggleStep={(idx) => timeline.toggleStep(p.id, idx)}
-              onUpdateStep={(idx, patch) => timeline.updateStep(p.id, idx, patch)}
-              onPhasesCommit={(phases) => timeline.updatePhases(p.id, phases)}
-              onMilestoneCommit={(ms) => timeline.updateMilestone(p.id, ms)}
-              onPriorityCommit={(priority) => timeline.updatePriority(p.id, priority)}
-              onContributorsCommit={(contributors) => timeline.updateContributors(p.id, contributors)}
-              allCollaborators={timeline.collaborators}
-            />
-          ))}
-        </Accordion>
-      </div>
-
-      <div className="md:hidden px-6 py-6 space-y-10">
-        {months.map((m, mIdx) => {
-          const start = mIdx / months.length
-          const end = (mIdx + 1) / months.length
-          const inMonth = visible.filter(p => p.phases.some(ph => ph.end > start && ph.start < end))
-          if (!inMonth.length) return null
-          return (
-            <section key={m.key}>
-              <div className="flex items-baseline justify-between mb-3 border-b border-white/[0.08] pb-2">
-                <h2 className="text-[11px] font-mono uppercase tracking-[0.2em] text-white/65">{m.label} 2026</h2>
-                <span className="text-[10px] font-mono text-white/25">{inMonth.length} active</span>
+        {/* Contributors */}
+        <section className="mt-16 border-t border-zinc-200 dark:border-zinc-800 pt-8">
+          <h2 className="text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-400 dark:text-zinc-500 mb-4">Contributors</h2>
+          <div className="flex flex-wrap gap-3">
+            {timeline.collaborators.map(c => (
+              <div key={c.initials} className="flex items-center gap-2">
+                <ContribChip c={c} size="md" />
+                <span className="text-[13px] text-zinc-600 dark:text-zinc-400">{c.name}</span>
               </div>
-              <ul className="space-y-4">
-                {inMonth.map(p => (
-                  <MobileRow key={`${m.key}-${p.id}`} project={p} collabLookup={collabLookup} monthStart={start} monthEnd={end} />
-                ))}
-              </ul>
-            </section>
-          )
-        })}
+            ))}
+          </div>
+        </section>
       </div>
-
-      <section className="px-10 pt-7 pb-14 border-t border-white/[0.08]">
-        <h2 className="text-[10px] font-mono uppercase tracking-[0.2em] text-white/45 mb-4">Contributors</h2>
-        <div className="flex flex-wrap gap-x-6 gap-y-3">
-          {timeline.collaborators.map(c => (
-            <div key={c.initials} className="flex items-center gap-2">
-              <ContribChip c={c} size="md" />
-              <span className="text-[13px] text-white/75">{c.name}</span>
-            </div>
-          ))}
-        </div>
-      </section>
     </div>
   )
 }
@@ -343,13 +291,13 @@ export function TimelineShell({ initialProjects, initialCollaborators, months, t
 
 function MonthHeader({ months, today }: { months: Month[]; today: number }) {
   return (
-    <div className="grid grid-cols-[320px_1fr] border-y border-white/[0.08] bg-white/[0.02]">
-      <div className="px-4 py-3.5 text-[10px] font-mono uppercase tracking-[0.2em] text-white/45">Project</div>
+    <div className="grid grid-cols-[320px_1fr] border-y border-zinc-200 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-950/50">
+      <div className="px-4 py-3 text-[10px] font-mono uppercase tracking-[0.18em] text-zinc-400 dark:text-zinc-500">Project</div>
       <div className="relative grid" style={{ gridTemplateColumns: `repeat(${months.length}, minmax(0, 1fr))` }}>
         {months.map(m => (
-          <div key={m.key} className="px-4 py-3.5 border-l border-white/[0.08] flex items-baseline justify-between">
-            <span className="text-[11px] font-mono uppercase tracking-[0.18em] text-white/85">{m.short}</span>
-            <span className="text-[10px] font-mono text-white/25">{m.days}d</span>
+          <div key={m.key} className="px-4 py-3 border-l border-zinc-200 dark:border-zinc-800 flex items-baseline justify-between">
+            <span className="text-[11px] font-mono uppercase tracking-[0.18em] text-zinc-600 dark:text-zinc-300">{m.short}</span>
+            <span className="text-[10px] font-mono text-zinc-300 dark:text-zinc-700">{m.days}d</span>
           </div>
         ))}
         <TodayMarker position={today} variant="header" />
@@ -357,6 +305,8 @@ function MonthHeader({ months, today }: { months: Month[]; today: number }) {
     </div>
   )
 }
+
+// ---------- Row ----------
 
 function TimelineRow({
   project, months, today, collabLookup, canEdit,
@@ -376,6 +326,7 @@ function TimelineRow({
   onContributorsCommit: (contributors: string[]) => void
   allCollaborators: TimelineCollaborator[]
 }) {
+  const pri = PRIORITY[project.priority as PriorityLevel] ?? PRIORITY.medium
   const status = STATUS_CFG[project.status] ?? STATUS_CFG.idea
   const doneCount = project.steps.filter(s => s.done).length
   const totalSteps = project.steps.length
@@ -385,54 +336,58 @@ function TimelineRow({
   return (
     <AccordionItem
       value={project.id}
-      className="border-b-0 border-t border-white/[0.08] first:border-t-0 transition-colors hover:bg-white/[0.025] data-[state=open]:bg-white/[0.04]"
+      className="border-b-0 border-t border-zinc-200 dark:border-zinc-800 first:border-t-0 transition-colors hover:bg-zinc-50/60 dark:hover:bg-zinc-900/25 data-[state=open]:bg-zinc-50 dark:data-[state=open]:bg-zinc-900/40"
     >
       <div className="grid grid-cols-[320px_1fr]">
+        {/* Label (accordion trigger) */}
         <AccordionPrimitive.Header className="flex">
           <AccordionPrimitive.Trigger
-            className="group/trigger flex-1 text-left px-4 py-[18px] flex items-start gap-3 min-w-0 border-l-2 cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-[#9DADE5]/40"
+            className="group/trigger flex-1 text-left px-4 py-5 flex items-start gap-3 min-w-0 border-l-2 cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-zinc-500/40"
             style={{ borderLeftColor: leadCol.solid }}
           >
-            <span className="font-mono text-[11px] text-white/25 tabular-nums mt-[2px] shrink-0">{project.num}</span>
+            <span className="font-mono text-[11px] text-zinc-300 dark:text-zinc-700 mt-[2px] shrink-0">{project.num}</span>
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-2 mb-1">
-                <h3 className="text-[14px] font-medium tracking-[-0.1px] text-white/92 leading-[1.35] line-clamp-2" title={project.name}>{project.name}</h3>
+                <h3 className="text-[14px] font-medium tracking-tight text-zinc-900 dark:text-zinc-100 leading-snug line-clamp-2" title={project.name}>{project.name}</h3>
                 <span className={cn('inline-block h-1.5 w-1.5 rounded-full shrink-0', status.dot)} />
                 {totalSteps > 0 && (
                   <span className={cn(
                     'text-[10px] font-mono tabular-nums',
-                    doneCount === totalSteps ? 'text-[#8AE08D]' : 'text-white/40'
+                    doneCount === totalSteps ? 'text-emerald-600 dark:text-emerald-500' : 'text-zinc-400 dark:text-zinc-500'
                   )}>
                     {doneCount}/{totalSteps}
                   </span>
                 )}
               </div>
-              <div className="mt-2">
+              <div className="mt-1.5">
                 <ContribStack ids={project.contributors} lookup={collabLookup} />
               </div>
             </div>
-            <span className="text-white/30 mt-0.5 shrink-0 transition-transform duration-200 group-data-[state=open]/trigger:rotate-90" aria-hidden="true">›</span>
+            <span className="text-zinc-300 dark:text-zinc-700 mt-0.5 shrink-0 transition-transform duration-200 group-data-[state=open]/trigger:rotate-90" aria-hidden="true">›</span>
           </AccordionPrimitive.Trigger>
         </AccordionPrimitive.Header>
 
-        <div className="relative border-l border-white/[0.08]" style={{ minHeight: '88px' }}>
+        {/* Timeline track */}
+        <div className="relative border-l border-zinc-200 dark:border-zinc-800" style={{ minHeight: '88px' }}>
           <div className="absolute inset-0 grid" style={{ gridTemplateColumns: `repeat(${months.length}, minmax(0, 1fr))` }} aria-hidden="true">
-            {months.map((m, i) => (<div key={m.key} className={cn('h-full', i > 0 && 'border-l border-white/[0.05]')} />))}
+            {months.map((m, i) => (<div key={m.key} className={cn('h-full', i > 0 && 'border-l border-zinc-200/70 dark:border-zinc-800/70')} />))}
           </div>
           <TodayMarker position={today} variant="row" />
           <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-9">
-            {project.phases.map((ph, phIdx) => (
-              <PhaseBar
-                key={phIdx}
-                phase={ph}
-                phases={project.phases}
-                phaseIndex={phIdx}
-                leadCol={leadCol}
-                canEdit={canEdit}
-                onCommit={onPhasesCommit}
-                progress={phaseProgress(phIdx, project.phases.length, project.steps)}
-              />
-            ))}
+            {project.phases.map((ph, phIdx) => {
+              if (ph.kind === 'rollout' || ph.kind === 'live') return null
+              return (
+                <PhaseBar
+                  key={phIdx}
+                  phase={ph}
+                  phases={project.phases}
+                  phaseIndex={phIdx}
+                  leadCol={leadCol}
+                  canEdit={canEdit}
+                  onCommit={onPhasesCommit}
+                />
+              )
+            })}
             {project.steps.map((step, i) => (
               step.due_at !== undefined ? (
                 <StepDot
@@ -448,15 +403,17 @@ function TimelineRow({
         </div>
       </div>
 
-      <AccordionContent className="border-t border-dashed border-white/[0.06] px-6 py-5 bg-black/20">
+      <AccordionContent className="border-t border-zinc-200 dark:border-zinc-800 px-6 py-5 bg-white/40 dark:bg-zinc-950/40">
         <ExpandedDetail project={project} collabLookup={collabLookup} canEdit={canEdit} onToggleStep={onToggleStep} onUpdateStep={onUpdateStep} onPriorityCommit={onPriorityCommit} onContributorsCommit={onContributorsCommit} allCollaborators={allCollaborators} />
       </AccordionContent>
     </AccordionItem>
   )
 }
 
+// ---------- Phase bar with click-to-edit popover ----------
+
 function PhaseBar({
-  phase, phases, phaseIndex, leadCol, canEdit, onCommit, progress,
+  phase, phases, phaseIndex, leadCol, canEdit, onCommit,
 }: {
   phase: TimelinePhase
   phases: TimelinePhase[]
@@ -464,7 +421,6 @@ function PhaseBar({
   leadCol: { bg: string; bgOpaque: string; border: string; text: string; solid: string; hoverBg: string; hoverText: string }
   canEdit: boolean
   onCommit: (phases: TimelinePhase[]) => void
-  progress: number
 }) {
   const [open, setOpen] = useState(false)
   const [hovered, setHovered] = useState(false)
@@ -528,8 +484,6 @@ function PhaseBar({
     : phase.kind === 'live' ? Radio
     : Clock
 
-  const safeProgress = Math.max(0, Math.min(1, progress))
-  const isComplete = safeProgress >= 1
   const bar = (
     <div
       className={cn(base, kindClass, canEdit && 'cursor-pointer hover:brightness-110')}
@@ -537,20 +491,8 @@ function PhaseBar({
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      {safeProgress > 0 && (
-        <div
-          aria-hidden="true"
-          className="absolute inset-y-0 left-0 pointer-events-none"
-          style={{
-            width: `${safeProgress * 100}%`,
-            backgroundColor: isComplete ? 'rgba(138, 224, 141, 0.55)' : leadCol.solid,
-            opacity: isComplete ? 1 : 0.5,
-            transition: prefersReduced ? 'none' : 'width 240ms cubic-bezier(0.25, 1, 0.5, 1), background-color 200ms',
-          }}
-        />
-      )}
-      <KindIcon className="size-[10px] shrink-0 ml-1.5 opacity-80 relative" aria-hidden="true" />
-      <span ref={labelRef} className={cn('pl-1 pr-2 relative', hovered ? 'whitespace-nowrap' : 'truncate')}>{hovered && phase.description ? phase.description : phase.label}</span>
+      <KindIcon className="size-[10px] shrink-0 ml-1.5 opacity-80" aria-hidden="true" />
+      <span ref={labelRef} className={cn('pl-1 pr-2', hovered ? 'whitespace-nowrap' : 'truncate')}>{hovered && phase.description ? phase.description : phase.label}</span>
     </div>
   )
 
@@ -605,6 +547,7 @@ function PhaseBar({
   )
 }
 
+/** Month-only row — edge decides day-1 (start) vs last-day (end) */
 function DateRow({ label, monthNum, day: _day, onChange, edge = 'start' }: {
   label: string
   monthNum: number
@@ -632,6 +575,8 @@ function DateRow({ label, monthNum, day: _day, onChange, edge = 'start' }: {
     </div>
   )
 }
+
+// ---------- Milestone with click-to-edit popover ----------
 
 function MilestoneMarker({
   milestone, priority, canEdit, onCommit,
@@ -677,24 +622,28 @@ function MilestoneMarker({
   )
 }
 
+// ---------- Today marker ----------
+
 function TodayMarker({ position, variant }: { position: number; variant: 'header' | 'row' }) {
   return (
     <div
       className={cn(
         'absolute top-0 bottom-0 z-[3] pointer-events-none border-l border-dashed',
-        variant === 'header' ? 'border-[#FFB990]' : 'border-[#FFB990]/35'
+        variant === 'header' ? 'border-[#d87758]/80' : 'border-[#d87758]/35'
       )}
       style={{ left: `${position * 100}%` }}
       aria-hidden="true"
     >
       {variant === 'header' && (
-        <span className="absolute -top-[3px] left-1/2 -translate-x-1/2 -translate-y-full px-[7px] py-[2px] rounded-[3px] bg-[#FFB990] text-[8px] font-bold font-mono uppercase tracking-[0.16em] text-[#101032] whitespace-nowrap shadow-[0_2px_4px_rgba(0,0,0,0.3)]">
+        <span className="absolute -top-[4px] left-1/2 -translate-x-1/2 -translate-y-full px-1.5 py-0.5 rounded-[3px] bg-[#d87758] text-[8px] font-mono uppercase tracking-[0.16em] text-white whitespace-nowrap shadow-sm">
           Today
         </span>
       )}
     </div>
   )
 }
+
+// ---------- Expanded detail with checkboxes ----------
 
 function ExpandedDetail({
   project, collabLookup, canEdit, onToggleStep, onUpdateStep, onPriorityCommit, onContributorsCommit, allCollaborators,
@@ -716,11 +665,11 @@ function ExpandedDetail({
   return (
     <div className="space-y-4">
       {project.one_liner && (
-        <p className="text-[13px] text-white/75 leading-relaxed">{project.one_liner}</p>
+        <p className="text-[13px] text-zinc-600 dark:text-zinc-300 leading-relaxed">{project.one_liner}</p>
       )}
       {canEdit && (
         <div className="flex items-center gap-3">
-          <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-white/45">Priority</span>
+          <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-400 dark:text-zinc-500">Priority</span>
           <Select value={project.priority} onValueChange={(v) => onPriorityCommit(v as PriorityLevel)}>
             <SelectTrigger className="h-7 w-[110px] text-[12px] font-mono">
               <SelectValue />
@@ -735,7 +684,7 @@ function ExpandedDetail({
       )}
       {canEdit && (
         <div>
-          <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-white/45 mb-2">Collaborators</p>
+          <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-400 dark:text-zinc-500 mb-2">Collaborators</p>
           <div className="flex flex-wrap gap-1.5">
             {allCollaborators.filter(c => !c.neutral).map(c => {
               const active = project.contributors.includes(c.initials)
@@ -754,7 +703,7 @@ function ExpandedDetail({
                     'px-2.5 py-1 text-[11px] font-mono rounded-full border transition-colors cursor-pointer',
                     active
                       ? ''
-                      : 'border-white/10 text-white/55 hover:border-white/30 hover:text-white/85'
+                      : 'border-zinc-200 dark:border-zinc-800 text-zinc-400 dark:text-zinc-500 hover:border-zinc-400 dark:hover:border-zinc-600'
                   )}
                   style={active ? { borderColor: leadCol.solid, color: leadCol.text, backgroundColor: leadCol.bg } : undefined}
                 >
@@ -766,7 +715,7 @@ function ExpandedDetail({
         </div>
       )}
       <div>
-        <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-white/45 mb-2">Action Steps</p>
+        <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-400 dark:text-zinc-500 mb-2">Action Steps</p>
         <ul className="space-y-1">
           {project.steps.map((step, i) => (
             <StepRow
@@ -785,29 +734,31 @@ function ExpandedDetail({
       </div>
       {project.support && (
         <div>
-          <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-white/45 mb-1">Support Needed</p>
-          <p className="text-[12px] text-white/65 leading-relaxed">{project.support}</p>
+          <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-400 dark:text-zinc-500 mb-1">Support Needed</p>
+          <p className="text-[12px] text-zinc-600 dark:text-zinc-400 leading-relaxed">{project.support}</p>
         </div>
       )}
       {project.milestone && (
         <div>
-          <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-white/45 mb-1">Milestone</p>
-          <p className="text-[13px] text-white/92">{project.milestone.label}</p>
+          <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-400 dark:text-zinc-500 mb-1">Milestone</p>
+          <p className="text-[13px] text-zinc-900 dark:text-zinc-100">{project.milestone.label}</p>
         </div>
       )}
       {project.href && (
-        <Link href={project.href} className="inline-flex items-center gap-1 text-[13px] font-medium text-white hover:opacity-70 transition-opacity">
+        <Link href={project.href} className="inline-flex items-center gap-1 text-[13px] font-medium text-zinc-900 dark:text-zinc-100 hover:opacity-70 transition-opacity">
           Open project <span>&rarr;</span>
         </Link>
       )}
       {project.updated_by && (
-        <p className="text-[11px] text-white/40">
+        <p className="text-[11px] text-zinc-400 dark:text-zinc-600">
           Last edit: {project.updated_by} · {relativeTime(project.updated_at)}
         </p>
       )}
     </div>
   )
 }
+
+// ---------- Step row with checkbox ----------
 
 function StepRow({
   step, index, canEdit, collabLookup, onToggle, onUpdateStep, defaultStart, defaultDue,
@@ -832,10 +783,10 @@ function StepRow({
           type="button"
           onClick={onToggle}
           className={cn(
-            'mt-[3px] shrink-0 h-4 w-4 rounded-[3px] border-[1.5px] transition-colors cursor-pointer flex items-center justify-center',
+            'mt-[3px] shrink-0 h-4 w-4 rounded-sm border transition-colors cursor-pointer flex items-center justify-center',
             step.done
-              ? 'bg-[#FFB990] border-[#FFB990] text-[#101032]'
-              : 'border-white/30 hover:border-white/55'
+              ? 'bg-emerald-500 border-emerald-500 text-white'
+              : 'border-zinc-300 dark:border-zinc-700 hover:border-zinc-500'
           )}
         >
           {step.done && (
@@ -846,11 +797,11 @@ function StepRow({
         </button>
       ) : (
         <span className={cn(
-          'mt-[3px] shrink-0 h-4 w-4 rounded-[3px] border-[1.5px] flex items-center justify-center',
-          step.done ? 'bg-[#FFB990] border-[#FFB990]' : 'border-white/20'
+          'mt-[3px] shrink-0 h-4 w-4 rounded-sm border flex items-center justify-center',
+          step.done ? 'bg-emerald-500/20 border-emerald-500/40' : 'border-zinc-200 dark:border-zinc-800'
         )}>
           {step.done && (
-            <svg width="10" height="8" viewBox="0 0 10 8" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-[#101032]">
+            <svg width="10" height="8" viewBox="0 0 10 8" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-emerald-600 dark:text-emerald-400">
               <path d="M1 4l3 3 5-6" />
             </svg>
           )}
@@ -870,12 +821,12 @@ function StepRow({
           }}
           className={cn(
             'flex-1 text-[13px] bg-transparent border-none outline-none focus:ring-0 px-0 py-0',
-            'hover:bg-white/5 focus:bg-white/5 rounded-sm transition-colors',
-            step.done ? 'line-through decoration-white/25 text-white/45' : 'text-white/85'
+            'hover:bg-zinc-100 dark:hover:bg-zinc-900 focus:bg-zinc-100 dark:focus:bg-zinc-900 rounded-sm transition-colors',
+            step.done ? 'line-through text-zinc-400 dark:text-zinc-600' : 'text-zinc-600 dark:text-zinc-300'
           )}
         />
       ) : (
-        <span className={cn('flex-1 text-[13px]', step.done ? 'line-through decoration-white/25 text-white/45' : 'text-white/85')}>
+        <span className={cn('flex-1 text-[13px]', step.done ? 'line-through text-zinc-400 dark:text-zinc-600' : 'text-zinc-600 dark:text-zinc-300')}>
           {step.text}
         </span>
       )}
@@ -884,17 +835,17 @@ function StepRow({
           <PopoverTrigger asChild>
             <button
               type="button"
-              title={dateObj ? 'Edit deadline' : 'Set a deadline so this step shows on the timeline'}
+              title={dateObj ? 'Edit date' : 'Inherited from project range — click to set'}
               className={cn(
-                'shrink-0 text-[10px] font-mono uppercase tracking-[0.12em] transition-colors cursor-pointer px-2 py-0.5 border rounded',
+                'shrink-0 text-[10px] font-mono transition-colors cursor-pointer px-2 py-0.5 border rounded',
                 dateObj
-                  ? 'text-white/55 border-white/15 hover:text-white hover:border-[#9DADE5]'
-                  : 'text-[#9DADE5] border-dashed border-[#9DADE5]/40 hover:text-white hover:bg-[rgba(157,173,229,0.10)] hover:border-[#9DADE5]'
+                  ? 'text-zinc-400 dark:text-zinc-500 border-zinc-200 dark:border-zinc-800 hover:text-zinc-900 dark:hover:text-zinc-100 hover:border-zinc-400 dark:hover:border-zinc-600'
+                  : 'text-zinc-300 dark:text-zinc-600 italic border-dashed border-zinc-200/60 dark:border-zinc-800/60 hover:text-zinc-900 dark:hover:text-zinc-100 hover:border-zinc-400 dark:hover:border-zinc-600 hover:not-italic'
               )}
             >
               {dateObj
                 ? `${MONTH_META[dateObj.monthNum - 4]?.label ?? ''} ${dateObj.day}`
-                : '+ Set deadline'}
+                : `${MONTH_META[defaultDue.monthNum - 4]?.label ?? ''} ${defaultDue.day}`}
             </button>
           </PopoverTrigger>
           <PopoverContent className="w-auto p-3" side="top" align="end">
@@ -916,7 +867,7 @@ function StepRow({
               {(startObj || dateObj) && (
                 <button
                   type="button"
-                  className="text-[10px] font-mono text-[#D67263] hover:text-[#FFB990] cursor-pointer pt-1 border-t border-white/10 w-full text-left"
+                  className="text-[10px] font-mono text-red-400 hover:text-red-600 cursor-pointer pt-1 border-t border-zinc-200 dark:border-zinc-800 w-full text-left"
                   onClick={() => onUpdateStep({ start_at: undefined, due_at: undefined })}
                 >
                   Clear dates
@@ -927,7 +878,7 @@ function StepRow({
         </Popover>
       ) : (
         dateObj && (
-          <span className="shrink-0 text-[10px] font-mono text-white/45">
+          <span className="shrink-0 text-[10px] font-mono text-zinc-400 dark:text-zinc-500">
             {MONTH_META[dateObj.monthNum - 4]?.label} {dateObj.day}
           </span>
         )
@@ -940,6 +891,8 @@ function StepRow({
     </li>
   )
 }
+
+// ---------- Step dot on timeline ----------
 
 function StepDot({ step, leadCol, canEdit, onUpdateStep }: {
   step: TimelineStep
@@ -954,10 +907,10 @@ function StepDot({ step, leadCol, canEdit, onUpdateStep }: {
 
   if (step.due_at === undefined) return null
   const hasRange = step.start_at !== undefined && step.start_at < step.due_at
-  const doneColor = '#8AE08D'
+  const doneColor = 'rgb(16 185 129)'
   const fill = step.done ? doneColor : leadCol.solid
   const edge = step.done ? doneColor : leadCol.border
-  const fillBg = step.done ? 'rgba(138, 224, 141, 0.18)' : leadCol.bg
+  const fillBg = step.done ? 'rgb(16 185 129 / 0.18)' : leadCol.bg
   const startObj = step.start_at !== undefined ? fractionToDate(step.start_at) : null
   const dueObj = fractionToDate(step.due_at)
 
@@ -1040,6 +993,8 @@ function StepDot({ step, leadCol, canEdit, onUpdateStep }: {
   )
 }
 
+// ---------- Mobile row ----------
+
 function MobileRow({ project, collabLookup, monthStart, monthEnd }: {
   project: TimelineProject
   collabLookup: Record<string, TimelineCollaborator>
@@ -1050,52 +1005,33 @@ function MobileRow({ project, collabLookup, monthStart, monthEnd }: {
   const monthSpan = monthEnd - monthStart
   const lead = project.contributors[0] ? collabLookup[project.contributors[0]] ?? null : null
   const leadCol = leadColors(lead)
-  const totalPhases = project.phases.length
   const clipped = project.phases
-    .map((ph, originalIndex) => ({
-      ...ph,
-      originalIndex,
-      start: Math.max(ph.start, monthStart),
-      end: Math.min(ph.end, monthEnd),
-    }))
+    .filter(ph => ph.kind !== 'rollout' && ph.kind !== 'live')
+    .map(ph => ({ ...ph, start: Math.max(ph.start, monthStart), end: Math.min(ph.end, monthEnd) }))
     .filter(ph => ph.end > ph.start)
 
   return (
     <li className="border-l-2 pl-3 py-2" style={{ borderLeftColor: leadCol.solid }}>
       <div className="flex items-center gap-2 mb-1">
-        <span className="font-mono text-[10px] text-white/25 tabular-nums">{project.num}</span>
-        <h3 className="text-[14px] font-medium tracking-[-0.1px] text-white/92" title={project.name}>{project.name}</h3>
+        <span className="font-mono text-[10px] text-zinc-300 dark:text-zinc-700">{project.num}</span>
+        <h3 className="text-[14px] font-medium tracking-tight text-zinc-900 dark:text-zinc-100" title={project.name}>{project.name}</h3>
         <span className={cn('inline-block h-1.5 w-1.5 rounded-full', status.dot)} />
       </div>
-      {project.one_liner && <p className="text-[12px] text-white/65 leading-relaxed mb-2">{project.one_liner}</p>}
+      {project.one_liner && <p className="text-[12px] text-zinc-500 dark:text-zinc-400 leading-relaxed mb-2">{project.one_liner}</p>}
       <ContribStack ids={project.contributors} lookup={collabLookup} />
-      <div className="relative mt-2 h-2 bg-white/[0.06] rounded-sm overflow-hidden">
+      <div className="relative mt-2 h-2 bg-zinc-100 dark:bg-zinc-800/60 rounded-sm overflow-hidden">
         {clipped.map((ph, i) => {
           const l = ((ph.start - monthStart) / monthSpan) * 100
           const w = ((ph.end - ph.start) / monthSpan) * 100
-          const bgColor = ph.kind === 'wait' ? 'rgba(255, 255, 255, 0.25)' : leadCol.solid
-          const prog = phaseProgress(ph.originalIndex, totalPhases, project.steps)
-          const isComplete = prog >= 1
-          return (
-            <div key={i} className="absolute inset-y-0" style={{ left: `${l}%`, width: `${w}%` }}>
-              <div className="absolute inset-0 opacity-80" style={{ backgroundColor: bgColor }} />
-              {prog > 0 && (
-                <div
-                  className="absolute inset-y-0 left-0"
-                  style={{
-                    width: `${prog * 100}%`,
-                    backgroundColor: isComplete ? '#8AE08D' : '#fff',
-                    opacity: isComplete ? 0.85 : 0.55,
-                  }}
-                />
-              )}
-            </div>
-          )
+          const bgColor = ph.kind === 'wait' ? 'hsl(0 0% 60% / 0.4)' : leadCol.solid
+          return <div key={i} className="absolute inset-y-0 opacity-80" style={{ left: `${l}%`, width: `${w}%`, backgroundColor: bgColor }} />
         })}
       </div>
     </li>
   )
 }
+
+// ---------- Contributor chips ----------
 
 function ContribStack({ ids, lookup }: { ids: string[]; lookup: Record<string, TimelineCollaborator> }) {
   return (
@@ -1119,21 +1055,23 @@ function ContribChip({ c, size = 'sm' }: { c: TimelineCollaborator; size?: 'sm' 
   let bg: string
   let fg: string
   if (c.neutral) {
-    bg = 'rgba(255, 255, 255, 0.18)'
-    fg = 'rgba(255, 255, 255, 0.78)'
+    bg = 'hsl(0 0% 22%)'
+    fg = 'hsl(0 0% 78%)'
   } else if (hex) {
     bg = hex
-    fg = isLightHex(hex) ? '#101032' : '#fff'
+    fg = isLightHex(hex) ? '#111' : '#fff'
   } else {
-    bg = `hsl(${c.hue} 26% 36%)`
-    fg = `hsl(${c.hue} 34% 88%)`
+    bg = `hsl(${c.hue} 26% 28%)`
+    fg = `hsl(${c.hue} 34% 82%)`
   }
-  const base = 'items-center justify-center rounded-full font-mono uppercase tracking-[0.04em] border-[1.5px]'
+  const base = 'items-center justify-center rounded-full font-mono uppercase tracking-[0.04em] border'
 
   return (
-    <span className={cn('inline-flex border-[#101032]', base, dim)} style={{ backgroundColor: bg, color: fg }} aria-label={c.name}>{c.initials}</span>
+    <span className={cn('inline-flex border-zinc-950', base, dim)} style={{ backgroundColor: bg, color: fg }} aria-label={c.name}>{c.initials}</span>
   )
 }
+
+// ---------- Helpers ----------
 
 function relativeTime(iso: string): string {
   const diff = Date.now() - new Date(iso).getTime()

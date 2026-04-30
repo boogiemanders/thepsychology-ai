@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import { getSupabaseClient } from '@/lib/supabase-server'
 import { TimelineShell } from './timeline-view'
 import type { TimelineProject, TimelineCollaborator } from './use-timeline'
-import '../inzinna/timeline/inzinna.css'
 
 export const metadata: Metadata = {
   title: 'Personal Timeline | Lab',
@@ -57,7 +56,7 @@ export default async function PersonalTimelinePage() {
   const today = new Date().toISOString().slice(0, 10)
 
   return (
-    <div className="dark inz-page">
+    <div className="dark">
       <TimelineShell
         initialProjects={projects}
         initialCollaborators={collaborators}
