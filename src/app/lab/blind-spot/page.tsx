@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { VideoPlayer } from '@/components/ui/video-thumbnail-player'
 
 export const metadata: Metadata = {
   title: 'Blind Spot | thePsychology.ai',
@@ -138,12 +139,13 @@ const qas: QA[] = [
     q: 'Demo',
     a: (
       <>
-        <video
-          src="/blind-spot/demo.mp4"
-          controls
-          playsInline
-          preload="metadata"
-          className="block w-full h-auto rounded-md border border-zinc-200 dark:border-zinc-800/80 bg-black mb-5"
+        <VideoPlayer
+          thumbnailUrl="/blind-spot/demo-thumb.jpg"
+          videoUrl="/blind-spot/demo.mp4"
+          title="First user test"
+          description="Quest 3 + Muse S, live EEG and heart rate"
+          aspectRatio="16/9"
+          className="mb-5"
         />
         <p>
           Saturday's user test video. Tamilyn wears Quest 3 plus Muse S. She breathes slowly. The
@@ -478,7 +480,7 @@ const qas: QA[] = [
   },
   {
     q: 'How did you hear about Y Combinator?',
-    a: <p>YC event in Boston, plus general awareness in the startup community.</p>,
+    a: <p>YC event in Boston, the YC podcast, and general awareness in the startup community.</p>,
   },
   { q: 'Batch preference', a: <p>Summer 2026.</p> },
 ]
