@@ -11,8 +11,15 @@ export const metadata: Metadata = {
 
 const TIMELINE_KEY = 'anders-personal'
 
+// Only people on Anders' personal projects show in the picker.
+const PERSONAL_INITIALS = ['AC', 'SB', 'TC', 'LC', 'YD'] as const
+
 const FALLBACK_COLLABORATORS: TimelineCollaborator[] = [
-  { initials: 'AC', name: 'Anders', hue: 12 },
+  { initials: 'AC', name: 'Anders',  hue: 12 },
+  { initials: 'SB', name: 'Shaunak', hue: 240 },
+  { initials: 'TC', name: 'Tamilyn', hue: 320 },
+  { initials: 'LC', name: 'Lenny',   hue: 90 },
+  { initials: 'YD', name: 'Yael',    hue: 60 },
 ]
 
 const MONTHS = [
@@ -44,6 +51,7 @@ export default async function PersonalTimelinePage() {
         supabase
           .from('timeline_collaborators')
           .select('*')
+          .in('initials', PERSONAL_INITIALS as unknown as string[])
           .order('initials'),
       ])
 
