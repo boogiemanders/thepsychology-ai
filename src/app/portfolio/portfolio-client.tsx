@@ -208,6 +208,91 @@ I graduated Magna Cum Laude from SUNY Albany and was inducted into Psi Chi, the 
       linkedin: "https://www.linkedin.com/in/yaeldror",
     },
   },
+  {
+    id: "shaunak",
+    name: "Shaunak Bakshi, MD",
+    title: "Ophthalmologist, Director of Refractive Services",
+    photo: "/images/shaunak-bakshi.jpeg",
+    about: `Bio coming soon.`,
+    workExperience: [
+      {
+        company: "New England Vision & Vermont Eye Laser",
+        title: "Ophthalmologist, Director of Refractive Services",
+        period: "Oct 2025 - Present",
+        location: "Burlington, Vermont",
+      },
+      {
+        company: "MedVR Symposium & Hackathon for VR/AR in Healthcare",
+        title: "Co-Founder",
+        period: "Jun 2019 - Present",
+        location: "Remote",
+      },
+      {
+        company: "Massachusetts Eye and Ear",
+        title: "Clinical Fellow, Cornea and Refractive Surgery",
+        period: "Jul 2024 - Jul 2025",
+        location: "Boston, Massachusetts",
+      },
+      {
+        company: "USC Roski Eye Institute",
+        title: "Resident Physician",
+        period: "Jul 2021 - Jun 2024",
+        location: "Los Angeles, California",
+      },
+      {
+        company: "Mount Auburn Hospital",
+        title: "Resident Physician, Preliminary Internal Medicine",
+        period: "Jun 2020 - Jun 2021",
+        location: "Cambridge, Massachusetts",
+      },
+      {
+        company: "Harvard Medical School",
+        title: "Clinical Fellow",
+        period: "Jun 2020 - Jun 2021",
+        location: "Boston, Massachusetts",
+      },
+      {
+        company: "Massachusetts Eye and Ear",
+        title: "Research Fellow, Disruptive Technology Laboratory",
+        period: "Apr 2018 - May 2020",
+        location: "Boston, Massachusetts",
+      },
+      {
+        company: "Yale University School of Medicine",
+        title: "Student Researcher, Laboratory of Molecular Neurobiology",
+        period: "May 2012 - May 2015",
+        location: "New Haven, Connecticut",
+      },
+      {
+        company: "The Rockefeller University",
+        title: "Research Intern, Laboratory of Molecular and Cellular Neuroscience",
+        period: "Jun 2014 - Aug 2014",
+        location: "New York, New York",
+      },
+      {
+        company: "The Rockefeller University",
+        title: "Research Intern, Laboratory of Molecular and Cellular Neuroscience",
+        period: "Jun 2010 - Aug 2010",
+        location: "New York, New York",
+      },
+    ],
+    education: [
+      {
+        school: "Harvard Medical School",
+        degree: "Doctor of Medicine (MD)",
+        period: "2015 - 2020",
+      },
+      {
+        school: "Yale University",
+        degree: "Bachelor's Degree",
+        period: "2011 - 2015",
+      },
+    ],
+    publications: [],
+    contact: {
+      linkedin: "https://www.linkedin.com/in/shaunakbakshi/",
+    },
+  },
 ]
 
 export default function PortfolioClient() {
