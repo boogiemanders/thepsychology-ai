@@ -54,6 +54,10 @@ const COLLAB_COLORS: Record<string, string> = {
   LO: '#AC80AF', // purple
   TM: '#F5ED43', // yellow (reuse)
   JC: '#AC80AF', // purple (reuse)
+  SB: '#4EBFD4', // cyan (Shaunak)
+  TC: '#E7437D', // pink (Tamilyn)
+  LC: '#B6D458', // lime (Lenny)
+  YD: '#AC80AF', // purple (Yael)
 }
 
 function isLightHex(hex: string): boolean {
@@ -154,15 +158,15 @@ export function TimelineShell({ initialProjects, initialCollaborators, months, t
         {/* Header */}
         <header className="mb-10">
           <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-400 dark:text-zinc-500 mb-3">
-            Inzinna Practice Automation
+            Anders Chan
           </p>
           <div className="flex items-start justify-between gap-4 flex-wrap">
             <div>
               <h1 className="text-4xl sm:text-5xl font-bold tracking-tight mb-3 text-zinc-900 dark:text-zinc-50">
-                Leadership Timeline
+                Personal Timeline
               </h1>
               <p className="text-[14px] text-zinc-500 dark:text-zinc-400 leading-relaxed max-w-xl">
-                Every leadership project, month by month. Pick your name to start checking things off and editing dates.
+                Every side project, month by month. Pick your name to check things off and edit dates.
               </p>
             </div>
             {timeline.activeUser && (
@@ -330,7 +334,9 @@ function TimelineRow({
   const status = STATUS_CFG[project.status] ?? STATUS_CFG.idea
   const doneCount = project.steps.filter(s => s.done).length
   const totalSteps = project.steps.length
-  const lead = project.contributors[0] ? collabLookup[project.contributors[0]] ?? null : null
+  const nonSelf = project.contributors.find(i => i !== 'AC')
+  const leadInitials = nonSelf ?? project.contributors[0] ?? null
+  const lead = leadInitials ? collabLookup[leadInitials] ?? null : null
   const leadCol = leadColors(lead)
 
   return (
@@ -376,13 +382,16 @@ function TimelineRow({
           <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-9">
             {project.phases.map((ph, phIdx) => {
               if (ph.kind === 'rollout' || ph.kind === 'live') return null
+              const phaseLeadInitials = (ph as { lead?: string }).lead
+              const phaseLead = phaseLeadInitials ? collabLookup[phaseLeadInitials] ?? null : null
+              const phaseLeadCol = phaseLead ? leadColors(phaseLead) : leadCol
               return (
                 <PhaseBar
                   key={phIdx}
                   phase={ph}
                   phases={project.phases}
                   phaseIndex={phIdx}
-                  leadCol={leadCol}
+                  leadCol={phaseLeadCol}
                   canEdit={canEdit}
                   onCommit={onPhasesCommit}
                 />
@@ -1003,7 +1012,9 @@ function MobileRow({ project, collabLookup, monthStart, monthEnd }: {
 }) {
   const status = STATUS_CFG[project.status] ?? STATUS_CFG.idea
   const monthSpan = monthEnd - monthStart
-  const lead = project.contributors[0] ? collabLookup[project.contributors[0]] ?? null : null
+  const nonSelf = project.contributors.find(i => i !== 'AC')
+  const leadInitials = nonSelf ?? project.contributors[0] ?? null
+  const lead = leadInitials ? collabLookup[leadInitials] ?? null : null
   const leadCol = leadColors(lead)
   const clipped = project.phases
     .filter(ph => ph.kind !== 'rollout' && ph.kind !== 'live')
