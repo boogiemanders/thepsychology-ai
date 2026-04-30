@@ -1,7 +1,8 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import * as THREE from 'three'
+import BoxLoader from '@/components/ui/box-loader'
 
 // === KNOBS — edit these ===
 const DISPLACE = 1.2          // depth strength (0.5 to 2.5)
@@ -75,6 +76,7 @@ const FRAG = `
 
 export default function DepthHero({ src, poster }: { src: string; poster?: string }) {
   const mountRef = useRef<HTMLDivElement>(null)
+  const [ready, setReady] = useState(false)
 
   useEffect(() => {
     const mount = mountRef.current
@@ -110,7 +112,9 @@ export default function DepthHero({ src, poster }: { src: string; poster?: strin
     video.autoplay = true
     video.preload = 'auto'
     const tryPlay = () => video.play().catch(() => {})
+    const onLoaded = () => setReady(true)
     video.addEventListener('loadeddata', tryPlay)
+    video.addEventListener('loadeddata', onLoaded)
     tryPlay()
 
     const tex = new THREE.VideoTexture(video)
@@ -197,6 +201,7 @@ export default function DepthHero({ src, poster }: { src: string; poster?: strin
       window.removeEventListener('pointerup', onUp)
       renderer.domElement.removeEventListener('pointerdown', onDown)
       video.removeEventListener('loadeddata', tryPlay)
+      video.removeEventListener('loadeddata', onLoaded)
       tex.dispose()
       geom.dispose()
       mat.dispose()
@@ -210,10 +215,20 @@ export default function DepthHero({ src, poster }: { src: string; poster?: strin
   }, [src, CUTOFF, DISPLACE, POINT_SIZE, BOX_X_MIN, BOX_X_MAX, BOX_Y_MIN, BOX_Y_MAX])
 
   return (
-    <div
-      ref={mountRef}
-      className="absolute inset-0 h-full w-full cursor-grab active:cursor-grabbing"
-      aria-label="Interactive depth visualization. Drag to rotate."
-    />
+    <>
+      <div
+        ref={mountRef}
+        className="absolute inset-0 h-full w-full cursor-grab active:cursor-grabbing"
+        aria-label="Interactive depth visualization. Drag to rotate."
+      />
+      <div
+        aria-hidden
+        className={`pointer-events-none absolute inset-0 flex items-center justify-center transition-opacity duration-500 ${
+          ready ? 'opacity-0' : 'opacity-100'
+        }`}
+      >
+        <BoxLoader />
+      </div>
+    </>
   )
 }

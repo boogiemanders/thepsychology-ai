@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { VideoPlayer } from '@/components/ui/video-thumbnail-player'
 import DepthHero from './depth-hero'
-import BoxLoader from '@/components/ui/box-loader'
 
 export const metadata: Metadata = {
   title: 'Blind Spot | thePsychology.ai',
@@ -492,7 +491,7 @@ const qas: QA[] = [
 export default function BlindSpotPage() {
   return (
     <main className="py-14 sm:py-20">
-      <div className="mx-auto max-w-[680px] px-6 mb-14 sm:mb-20">
+      <div className="mx-auto max-w-[1080px] px-6 mb-14 sm:mb-20">
         <Link
           href="/lab"
           className="font-mono text-[11px] uppercase tracking-[0.22em] text-zinc-500 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
@@ -501,37 +500,34 @@ export default function BlindSpotPage() {
         </Link>
       </div>
 
-      <section className="mb-14 sm:mb-20 px-6">
-        <div className="relative aspect-[16/9] rounded-md overflow-hidden border border-zinc-100 dark:border-zinc-800/80 bg-zinc-50 dark:bg-zinc-900">
-          <div className="absolute inset-0 flex items-center justify-center">
-            <BoxLoader />
-          </div>
-          <DepthHero
-            src="/blind-spot/hero-depth-gray.mp4"
-            poster="/blind-spot/hero-depth-voxel-poster.jpg"
-          />
-          <div className="pointer-events-none absolute inset-x-0 bottom-6 sm:bottom-10 px-6">
-            <div className="mx-auto max-w-[680px]">
+      <section className="mb-14 sm:mb-20">
+        <div className="mx-auto max-w-[1080px] px-6">
+          <div className="relative aspect-[16/9] rounded-md overflow-hidden border border-zinc-100 dark:border-zinc-800/80 bg-zinc-50 dark:bg-zinc-900">
+            <DepthHero
+              src="/blind-spot/hero-depth-gray.mp4"
+              poster="/blind-spot/hero-depth-voxel-poster.jpg"
+            />
+            <div className="pointer-events-none absolute inset-x-0 bottom-6 sm:bottom-10 px-6 sm:px-10">
               <h1 className="max-w-[18ch] text-[28px] sm:text-[44px] md:text-[56px] font-semibold tracking-[-0.02em] leading-[1.04] text-zinc-900 dark:text-zinc-50">
-                VR Therapy That Adapts to Nervous System
+                VR Therapy That Adapts to Your Nervous System
               </h1>
             </div>
           </div>
+          <p className="mt-4 font-mono text-[11px] uppercase tracking-[0.22em] text-zinc-500 dark:text-zinc-500">
+            Drag to rotate
+          </p>
         </div>
-        <p className="mt-4 mx-auto max-w-[680px] font-mono text-[11px] uppercase tracking-[0.22em] text-zinc-500 dark:text-zinc-500">
-          Drag to rotate
-        </p>
       </section>
 
-      <div className="mx-auto max-w-[680px] px-6">
+      <div className="mx-auto max-w-[1080px] px-6">
 
       <header className="mb-16 sm:mb-24">
         <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-zinc-500 dark:text-zinc-500 mb-6">
           Blind Spot &middot; YC Application &middot; S26
         </p>
-        <p className="text-[16px] sm:text-[17px] text-zinc-600 dark:text-zinc-400 leading-[1.55] max-w-[58ch]">
-          Closed-loop biofeedback, EEG, heart rate, and eye gaze, that changes the VR session in
-          real time. Built by a clinical psychologist and an ophthalmologist.
+        <p className="text-[16px] sm:text-[17px] text-zinc-600 dark:text-zinc-400 leading-[1.55]">
+          Most VR therapy plays a video at you. Ours reads your body and adapts. Built by a clinical
+          psychologist and an ophthalmologist.
         </p>
       </header>
 
@@ -546,11 +542,19 @@ export default function BlindSpotPage() {
 
       <div className="divide-y divide-zinc-100 dark:divide-zinc-800/80">
         {qas.map((item, i) => (
-          <section key={i} className="py-10 sm:py-12 first:pt-8">
-            <h3 className="text-[14px] sm:text-[15px] font-medium text-zinc-900 dark:text-zinc-50 leading-[1.4] mb-5 max-w-[54ch]">
-              {item.q}
-            </h3>
-            <div className="text-[15px] sm:text-[16px] text-zinc-600 dark:text-zinc-400 leading-[1.65] space-y-5 max-w-[62ch]">
+          <section
+            key={i}
+            className="grid grid-cols-1 gap-y-5 py-10 first:pt-8 sm:grid-cols-12 sm:gap-x-10 sm:py-14"
+          >
+            <div className="sm:col-span-4">
+              <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-zinc-400 dark:text-zinc-600 mb-3">
+                {String(i + 1).padStart(2, '0')} / {String(qas.length).padStart(2, '0')}
+              </div>
+              <h3 className="text-[14px] sm:text-[15px] font-medium text-zinc-900 dark:text-zinc-50 leading-[1.4]">
+                {item.q}
+              </h3>
+            </div>
+            <div className="text-[15px] sm:text-[16px] text-zinc-600 dark:text-zinc-400 leading-[1.65] space-y-5 sm:col-span-8">
               {item.a}
             </div>
           </section>
