@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   description: 'Monthly timeline of leadership projects and milestones for the Inzinna practice. Scan what ships in April, May, June, and July 2026.',
 }
 
+// Only Inzinna team members show in the picker.
+const INZINNA_INITIALS = ['AC', 'GI', 'CA', 'BR', 'LO', 'FI'] as const
+
 // Fallback data when Supabase isn't available (dev / preview)
 const FALLBACK_COLLABORATORS: TimelineCollaborator[] = [
   { initials: 'AC', name: 'Anders',   hue: 12 },
@@ -48,6 +51,7 @@ export default async function LeadershipTimelinePage() {
         supabase
           .from('timeline_collaborators')
           .select('*')
+          .in('initials', INZINNA_INITIALS as unknown as string[])
           .order('initials'),
       ])
 
