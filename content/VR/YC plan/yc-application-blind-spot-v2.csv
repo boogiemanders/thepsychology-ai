@@ -1,0 +1,94 @@
+Question,Answer
+"Who writes code, or does other technical work on your product? Was any of it done by a non-founder?","Anders built the prototype with AI-assisted coding (Claude Code). Unity scene on Quest 3. Python pipeline (muselsl, pylsl, websockets) streams Muse S EEG and heart rate into the scene. Biofeedback orb responds live.
+
+Shaunak owns visual safety protocols, eye-tracking metrics, and ophthalmology engineering decisions. Prior Unity experience from a patient education tool.
+
+All technical work by founders. No non-founder contributions."
+"Are you looking for a cofounder?","Open to a software cofounder.
+
+Current team:
+- Anders Chan, clinical psychologist (UCLA postdoc, PsyD).
+- Shaunak Bakshi, MD (Harvard), Director of Refractive Services at New England Vision and Vermont Eye Laser.
+
+Therapy protocols and visual science in one team. Both building."
+"Company name","Blind Spot. Backups: Foveal, Saccade."
+"Describe what your company does in 50 characters or less","VR Therapy that Adapts to Your Nervous System (47 chars)"
+"Company URL","thepsychology.ai/lab/blind-spot. Holding URL until rebrand."
+"Demo","Saturday user test. Tamilyn wears Quest 3 + Muse S. She breathes slowly. The biofeedback orb expands and shifts red to green as her heart rate drops. Forest scene. Real EEG and HR streaming live."
+"What is your company going to make?","Most VR therapy plays a video at you. No feedback. No adaptation. We close the loop.
+
+Blind Spot reads EEG, HRV, and eye gaze, then changes the VR environment in real time based on what the body is doing. The system knows when you're stressed, calm, or avoiding eye contact. It responds.
+
+Phase 1 (now): anxiety and performance. Practice job interviews and public speaking with live stress feedback. ACT in VR (breathing, defusion, mindfulness). D2C wellness, no FDA needed.
+
+Phase 2: chronic pain, FDA De Novo on the EaseVRx playbook. Closed-loop biofeedback unlocks insurance reimbursement.
+
+Phase 3+: PTSD, autism, depression, surgical training. Same engine, different module."
+"Where do you live now, and where would the company be based after YC?","Boston (Anders), Vermont (Shaunak). Post-YC primary ops in NY. Pilot sites stay in Boston and Vermont."
+"Explain your decision regarding location","Boston: Harvard, MGH, BU access for pilots. Vermont: Shaunak's surgical practice and Mass Eye and Ear network. NY post-YC for XR engineering talent and digital health investors."
+"How far along are you?","Working prototype on Quest 3. Muse S streams EEG and HR via Lab Streaming Layer into Unity. Biofeedback orb responds live. First user test Saturday.
+
+Next: eye-tracking integration and therapist dashboard.
+
+Adjacent traction at thepsychology.ai (see revenue Q)."
+"How long have each of you been working on this? How much of that has been full-time?","Anders: 7 months full-time on thepsychology.ai. 1 month part-time on the VR prototype. 6+ years clinical (chronic pain, anxiety, PTSD, substance use, gender health) at UCLA, NYU, Brooklyn outpatient. Three years eye-gaze tracking research at SUNY Old Westbury (2015-2018), validating eye tracking for accommodative interventions in students with disabilities. ACT chronic pain groups with sickle cell patients at Ronald Reagan UCLA.
+
+Shaunak: 6+ years co-founding the MedVR Symposium and Hackathon for VR/AR in Healthcare. 2 years in Mass Eye and Ear's Disruptive Technology Lab. 1 week ramped on this prototype.
+
+Both employed full-time clinically. Going full-time when funded."
+"What tech stack are you using, or planning to use?","Unity (C#) on Quest 3. Python for sensor processing: muselsl, pylsl, Lab Streaming Layer, websockets to Unity.
+
+Roadmap: Apple Watch HRV via HealthKit, Quest 3 eye-tracking API, Photon Fusion for shared rooms.
+
+AI: Claude Code."
+"Are people using your product?","No. Prototype. First user test Saturday. Video attached as demo."
+"Do you have revenue?","Not from Blind Spot. Anders' adjacent product, thepsychology.ai, makes $300/mo teaching postdocs to pass the EPPP licensure exam. 4 have passed.
+
+Same brand runs an intake automation, scheduling, insurance verification, and payroll pipeline for Inzinna Therapy Group. Paid contract. Proves we can build, sell, and retain."
+"Why did you pick this idea to work on? Do you have domain expertise in this area? How do you know people need what you're making?","We're both clinicians who see the gap every day.
+
+Anders has treated thousands of patients with anxiety, PTSD, and chronic pain. Before clinical training, three years of eye-gaze tracking neuropsychology research validating eye tracking for accommodative interventions. The eye-tracking thesis isn't a bet. It's a return.
+
+Shaunak is an ophthalmologist (Harvard MD, Mass Eye and Ear cornea/refractive fellowship). Six years co-founding and running the MedVR Symposium for VR/AR in Healthcare. He didn't wait for VR to come to ophthalmology. He's been building that field.
+
+The clinical limitation is obvious to both of us. VR exposure has no idea if the patient is actually anxious. Biofeedback creates no immersive context. The two have to be one system. Consumer EEG and AI coding tools finally made it buildable by clinicians.
+
+Evidence base: 122 RCTs for VR chronic pain. 30 RCTs for VR anxiety. 86 percent accuracy detecting depression from gaze in a single session. 66-83 percent PTSD remission with VR exposure. Nobody integrates the biofeedback loop into session content.
+
+We know people need this because we've been the clinicians wishing it existed."
+"Who are your competitors? What do you understand about your business that they don't?","Mental health VR. AppliedVR (RelieVRx) is the only FDA-cleared VR therapeutic. Pain only. Open-loop. No biofeedback adapting content. No eye tracking. Floreo: autism, no biofeedback. Amelia Virtual Care: exposure therapy, no physiology. Limbix shut down.
+
+Digital mental health (YC). Meru Health (S18) ships HRV biofeedback with remote therapists, but on a phone. Single signal. Fixed program content. No exposure. Intellect (S21) is workforce mental health benefits, app + telehealth, no physiological data, no VR. Both are wellness plays outside FDA.
+
+Vision therapy VR. Vivid Vision, NovaSight (CureSight), Luminopia. All vision (amblyopia, strabismus). None mental health.
+
+Biofeedback devices. Muse meditation app. HeartMath HRV training. No immersion.
+
+What they miss. Meru proved YC funds biofeedback + therapy. Intellect proved YC funds digital mental health at scale. We're the VR-native, multi-sensor (EEG + HRV + eye gaze), closed-loop version, with an FDA pathway they don't have. Mental health VR has no eye doctors. Vision VR has no psychologists. Biofeedback has no VR. The therapy drives the tech, not the other way around. EaseVRx is our precedent, not our competitor."
+"How do or will you make money? How much could you make?","Phase 1: D2C wellness subscription. $25/mo. Anxiety and performance. 43M Americans have social anxiety, most untreated. 0.1 percent capture is $12.9M ARR.
+
+Phase 2: B2B SaaS. $200-400 per clinician seat per month. $5-15 per user per month for enterprise. 50K+ licensed psychologists in the US. Corporate wellness $60B+.
+
+Phase 3: FDA De Novo for chronic pain. CPT codes already exist for biofeedback and VR-assisted exposure. Chronic pain is 50M patients, $635B/yr. Payers want opioid alternatives.
+
+Phase 4: VR surgical simulation. Eyesi costs $100K+ per program. We ship the same training value at a fraction, leveraging Shaunak's domain.
+
+5-year target: $20-50M ARR. Higher with FDA clearance and reimbursement."
+"Which category best applies to your company?","Consumer Health and Wellness initially. Healthcare / Digital Health post-FDA."
+"Other ideas considered","1. VR for surgical training only. Narrower market. Kept as a future module.
+2. AI therapy chatbot with voice. Skipped: regulatory complexity, crowded market (Woebot, Wysa). VR + biofeedback is a fundamentally different modality.
+3. VR vision therapy (amblyopia, strabismus). Proven market but we chose the harder bridge between vision and mental health."
+"Have you formed any legal entity yet?","No."
+"Have you taken any investment yet?","No."
+"Are you currently fundraising?","No."
+"What convinced you to apply to Y Combinator?","A YC event in Boston two weeks ago. Accepted founders said 50 percent got in pre-product on the strength of team and idea. Anders texted Shaunak that night. A week later, working prototype.
+
+A psychologist with eye-tracking research and an ophthalmologist who has been organizing healthcare VR/AR for six years is the kind of domain-expert founding team YC backs in healthcare. Meru Health (S18) and Intellect (S21) show the pattern. We're clinicians who see the gap daily, not technologists looking for a healthcare application."
+"How did you hear about Y Combinator?","YC event in Boston, YC podcast, and general awareness in the startup community."
+"Batch preference","Summer 2026."
+"Founder video (1 minute)","See pitch-updated-easevrx-framing.md. Currently pain-first, needs update for hybrid framing (anxiety Phase 1 wedge, pain Phase 2 FDA unlock). Visual hook: Saturday's orb demo with Tamilyn."
+"Demo video (3 min max, optional)","0:00-0:30 Problem: VR therapy is one-way. No feedback.
+0:30-1:30 Live demo: Quest 3 + Muse S, orb responding, HR dropping with paced breathing.
+1:30-2:15 Use case: VR job interview, HR spike triggers breathing cue, system tracks recovery time across sessions.
+2:15-2:45 Eye tracking + safety: Shaunak walks gaze metrics and screening protocol.
+2:45-3:00 Roadmap: anxiety, then pain (EaseVRx path), then PTSD, autism, depression, surgical training."

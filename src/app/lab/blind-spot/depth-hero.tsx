@@ -104,7 +104,6 @@ export default function DepthHero({ src, poster }: { src: string; poster?: strin
     setSize()
 
     const video = document.createElement('video')
-    video.src = src
     video.crossOrigin = 'anonymous'
     video.loop = true
     video.muted = true
@@ -115,6 +114,9 @@ export default function DepthHero({ src, poster }: { src: string; poster?: strin
     const onLoaded = () => setReady(true)
     video.addEventListener('loadeddata', tryPlay)
     video.addEventListener('loadeddata', onLoaded)
+    video.addEventListener('canplay', onLoaded)
+    video.src = src
+    if (video.readyState >= 2) setReady(true)
     tryPlay()
 
     const tex = new THREE.VideoTexture(video)
@@ -202,6 +204,7 @@ export default function DepthHero({ src, poster }: { src: string; poster?: strin
       renderer.domElement.removeEventListener('pointerdown', onDown)
       video.removeEventListener('loadeddata', tryPlay)
       video.removeEventListener('loadeddata', onLoaded)
+      video.removeEventListener('canplay', onLoaded)
       tex.dispose()
       geom.dispose()
       mat.dispose()

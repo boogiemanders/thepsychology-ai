@@ -95,17 +95,14 @@ const qas: QA[] = [
     q: 'Are you looking for a cofounder?',
     a: (
       <>
-        <p>Open for a cofounder in software development.</p>
-        <p>Current two-founder team:</p>
-        <p>
-          Anders Chan, clinical psychologist (UCLA postdoc, PsyD Long Island University). Three
-          years of eye-gaze tracking research before clinical training.
-        </p>
+        <p>Open to a software cofounder.</p>
+        <p>Current team:</p>
+        <p>Anders Chan, clinical psychologist (UCLA postdoc, PsyD).</p>
         <p>
           Shaunak Bakshi, MD (Harvard), Director of Refractive Services at New England Vision and
-          Vermont Eye Laser. Co-founder of the MedVR Symposium and Hackathon for VR/AR in
-          Healthcare since 2019.
+          Vermont Eye Laser.
         </p>
+        <p>Therapy protocols and visual science in one team. Both building.</p>
       </>
     ),
   },
@@ -151,9 +148,8 @@ const qas: QA[] = [
           caption="As user's breathing matches biofeedback orb, her heart rate lowers which turns the orb green."
         />
         <p>
-          Saturday's user test video. Tamilyn wears Quest 3 plus Muse S. She breathes slowly. The
-          biofeedback orb expands and shifts from red to green as her heart rate lowers. Forest VR
-          scene. Real EEG and heart rate streaming live.
+          Saturday's user test. Tamilyn wears Quest 3 plus Muse S. The orb expands and shifts red
+          to green as her heart rate drops. Forest scene. Real EEG and HR streaming live.
         </p>
       </>
     ),
@@ -234,17 +230,11 @@ const qas: QA[] = [
     a: (
       <>
         <p>
-          Working prototype on Meta Quest 3. The Muse S headband streams EEG and heart rate through
-          Python (Lab Streaming Layer) into the Unity scene. A biofeedback orb expands and shifts
-          color in response to live physiology. First real user test was Saturday. Video available.
+          Working prototype on Quest 3. Muse S streams EEG and HR via Lab Streaming Layer into
+          Unity. Biofeedback orb responds live. First user test Saturday.
         </p>
-        <p>Eye tracking integration and a therapist dashboard are next.</p>
-        <p>
-          Adjacent traction at thepsychology.ai (Anders' existing site): $300 MRR, 4 postdocs
-          have passed the EPPP licensure exam. Same brand currently runs an automated intake,
-          scheduling, insurance verification, and payroll pipeline for Inzinna Therapy Group.
-          Proves we can build, sell, and retain.
-        </p>
+        <p>Next: eye-tracking integration and therapist dashboard.</p>
+        <p>Adjacent traction at thepsychology.ai (see revenue below).</p>
       </>
     ),
   },
@@ -253,20 +243,15 @@ const qas: QA[] = [
     a: (
       <>
         <p>
-          Anders: 7 months full-time on thepsychology.ai. 1 month part-time on the VR prototype. 6
-          plus years of clinical work in chronic pain, anxiety, PTSD, substance use, and gender
-          health (UCLA, NYU Langone, Montefiore, Pratt outpatient). 3 years of eye-gaze tracking
-          neuropsychology research at SUNY Old Westbury (2015 to 2018) before clinical training,
-          validating eye tracking for accommodative interventions in students with disabilities.
+          Anders: 7 months full-time on thepsychology.ai. 1 month part-time on the VR prototype. 6+
+          years clinical (chronic pain, anxiety, PTSD, substance use, gender health) at UCLA, NYU
+          Langone, Montefiore, Pratt outpatient.
         </p>
         <p>
-          Shaunak: 6 plus years on the MedVR Symposium. 2 years in Mass Eye and Ear's Disruptive
-          Technology Lab. 1 week ramped on this specific prototype.
+          Shaunak: 6+ years on the MedVR Symposium. 2 years in Mass Eye and Ear's Disruptive
+          Technology Lab. 1 week ramped on this prototype.
         </p>
-        <p>
-          Both currently employed full-time in clinical roles. Going full-time on Blind Spot when
-          funded.
-        </p>
+        <p>Both employed full-time clinically. Going full-time when funded.</p>
       </>
     ),
   },
@@ -300,13 +285,12 @@ const qas: QA[] = [
     a: (
       <>
         <p>
-          Not from Blind Spot. The founder's adjacent product, thepsychology.ai, makes $300 MRR
-          teaching psychology postdocs to pass the EPPP licensure exam. 4 have passed so far.
+          Not from Blind Spot. Anders' adjacent product, thepsychology.ai, makes $300 MRR teaching
+          postdocs to pass the EPPP licensure exam. 4 have passed.
         </p>
         <p>
-          Same brand also runs an intake automation, scheduling, insurance verification, and
-          payroll pipeline for Inzinna Therapy Group. Paid contract. Proves the team can build,
-          sell, and retain.
+          Same brand runs an intake, scheduling, insurance verification, and payroll pipeline for
+          Inzinna Therapy Group. Paid contract. Proves we can build, sell, and retain.
         </p>
       </>
     ),
@@ -315,29 +299,25 @@ const qas: QA[] = [
     q: "Why did you pick this idea to work on? Do you have domain expertise in this area? How do you know people need what you're making?",
     a: (
       <>
-        <p>We are both clinicians who see the gap every day.</p>
+        <p>We're both clinicians who see the gap every day.</p>
         <p>
-          Anders is a clinical psychologist (UCLA postdoc, PsyD) who has treated thousands of
-          patients with anxiety, PTSD, and chronic pain across UCLA, NYU Langone, Montefiore, and
-          Pratt outpatient settings. He ran ACT-based chronic pain groups with sickle cell patients
-          at Ronald Reagan UCLA Medical Center. He also did three years of eye-gaze tracking
-          neuropsychology research at SUNY Old Westbury before clinical training, validating eye
-          tracking technology for accommodative interventions. The eye-tracking thesis is not a
-          bet. It is a return to his earliest research.
+          Anders has treated thousands of patients with anxiety, PTSD, and chronic pain across
+          UCLA, NYU Langone, Montefiore, and Pratt outpatient. ACT chronic pain groups with sickle
+          cell patients at Ronald Reagan UCLA. Before clinical training, three years of eye-gaze
+          tracking neuropsychology research at SUNY Old Westbury, validating eye tracking for
+          accommodative interventions. The eye-tracking thesis isn't a bet. It's a return.
         </p>
         <p>
-          Shaunak is an ophthalmologist (Harvard MD, Mass Eye and Ear cornea and refractive
-          fellowship, Director of Refractive Services in Vermont). He has spent the last six years
-          co-founding the MedVR Symposium. He has not waited for VR to come to ophthalmology. He
-          has been building that field.
+          Shaunak is an ophthalmologist (Harvard MD, Mass Eye and Ear cornea/refractive
+          fellowship). Six years co-founding the MedVR Symposium. He didn't wait for VR to come to
+          ophthalmology. He's been building that field.
         </p>
         <p>
-          The clinical limitation is obvious to both of us. VR exposure has no idea whether the
-          patient is actually anxious. Biofeedback devices create no immersive therapeutic
-          context. The two have to be one system. Consumer EEG and AI coding tools finally made
-          the integration buildable by clinicians.
+          The clinical limitation is obvious to both of us. VR exposure has no idea if the patient
+          is actually anxious. Biofeedback creates no immersive context. The two have to be one
+          system. Consumer EEG and AI coding tools finally made it buildable by clinicians.
         </p>
-        <p>The evidence base is enormous. Nobody integrates the biofeedback loop into the session content.</p>
+        <p>Nobody integrates the biofeedback loop into session content.</p>
         <StatGrid
           stats={[
             { value: '122', label: 'RCTs for VR chronic pain' },
@@ -363,16 +343,22 @@ const qas: QA[] = [
           monitoring. Limbix shut down.
         </p>
         <p>
+          Digital mental health (YC). Meru Health (S18) ships HRV biofeedback with remote
+          therapists, but on a phone. Single signal. Fixed program content. No exposure. Intellect
+          (S21) is workforce mental health benefits, app + telehealth, no physiological data, no
+          VR. Both are wellness plays outside FDA.
+        </p>
+        <p>
           Vision therapy VR. Vivid Vision, NovaSight (CureSight), Luminopia. All work in vision
           (amblyopia, strabismus). None work in mental health.
         </p>
         <p>Biofeedback devices. Muse meditation app. HeartMath HRV training. No immersion.</p>
         <p>
-          What we understand that they do not. Mental health VR companies do not have eye doctors.
-          Vision VR companies do not have psychologists. Biofeedback companies do not have VR. We
-          sit at the intersection that nobody else can staff. The therapy drives the tech, not the
-          other way around. EaseVRx is our precedent, not our competitor. We extend their playbook
-          with closed-loop biofeedback, eye tracking, and a condition-agnostic engine.
+          What they miss. Meru proved YC funds biofeedback + therapy. Intellect proved YC funds
+          digital mental health at scale. We are the VR-native, multi-sensor (EEG + HRV + eye
+          gaze), closed-loop version, with an FDA pathway they don't have. Mental health VR has no
+          eye doctors. Vision VR has no psychologists. Biofeedback has no VR. The therapy drives
+          the tech, not the other way around. EaseVRx is our precedent, not our competitor.
         </p>
       </>
     ),
@@ -475,15 +461,15 @@ const qas: QA[] = [
       <p>
         A YC event in Boston two weeks ago. Accepted founders said 50 percent got in pre-product,
         on the strength of team and idea. Anders texted Shaunak right then and there. A week
-        later, working prototype. YC's healthcare portfolio (Nurx, Loyal) plus the "build
-        something people want" ethos lines up with our approach. We are clinicians who see the
+        later, working prototype. YC's mental health portfolio (Meru Health S18, Intellect S21) plus
+        the "build something people want" ethos lines up with our approach. We are clinicians who see the
         gap daily, not technologists looking for a healthcare application.
       </p>
     ),
   },
   {
     q: 'How did you hear about Y Combinator?',
-    a: <p>YC event in Boston, the YC podcast, and general awareness in the startup community.</p>,
+    a: <p>YC event in Boston, YC podcast, and general awareness in the startup community.</p>,
   },
   { q: 'Batch preference', a: <p>Summer 2026.</p> },
 ]
