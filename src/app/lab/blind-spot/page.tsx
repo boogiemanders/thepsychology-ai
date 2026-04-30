@@ -490,8 +490,8 @@ const qas: QA[] = [
 
 export default function BlindSpotPage() {
   return (
-    <main className="mx-auto max-w-[680px] px-6 py-14 sm:py-20">
-      <div className="mb-14 sm:mb-20">
+    <main className="py-14 sm:py-20">
+      <div className="mx-auto max-w-[680px] px-6 mb-14 sm:mb-20">
         <Link
           href="/lab"
           className="font-mono text-[11px] uppercase tracking-[0.22em] text-zinc-500 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
@@ -500,25 +500,31 @@ export default function BlindSpotPage() {
         </Link>
       </div>
 
-      <section className="mb-14 sm:mb-20">
-        <div className="relative aspect-[16/9] rounded-md overflow-hidden border border-zinc-100 dark:border-zinc-800/80 bg-zinc-950">
+      <section className="mb-14 sm:mb-20 px-6">
+        <div className="relative aspect-[16/9] rounded-md overflow-hidden border border-zinc-100 dark:border-zinc-800/80 bg-zinc-50 dark:bg-zinc-900">
           <DepthHero
             src="/blind-spot/hero-depth-gray.mp4"
             poster="/blind-spot/hero-depth-voxel-poster.jpg"
           />
+          <div className="pointer-events-none absolute inset-x-0 bottom-6 sm:bottom-10 px-6">
+            <div className="mx-auto max-w-[680px]">
+              <h1 className="max-w-[18ch] text-[28px] sm:text-[44px] md:text-[56px] font-semibold tracking-[-0.02em] leading-[1.04] text-zinc-900 dark:text-zinc-50">
+                VR Therapy That Adapts to Nervous System
+              </h1>
+            </div>
+          </div>
         </div>
-        <p className="mt-4 font-mono text-[11px] uppercase tracking-[0.22em] text-zinc-500 dark:text-zinc-500">
-          Depth-Anything-V2 on a Quest 3 user. Drag to rotate. The system sees the body before it touches it.
+        <p className="mt-4 mx-auto max-w-[680px] font-mono text-[11px] uppercase tracking-[0.22em] text-zinc-500 dark:text-zinc-500">
+          Drag to rotate
         </p>
       </section>
+
+      <div className="mx-auto max-w-[680px] px-6">
 
       <header className="mb-16 sm:mb-24">
         <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-zinc-500 dark:text-zinc-500 mb-6">
           Blind Spot &middot; YC Application &middot; S26
         </p>
-        <h1 className="text-[34px] sm:text-[52px] font-semibold tracking-[-0.02em] leading-[1.04] text-zinc-900 dark:text-zinc-50 mb-6">
-          VR therapy that adapts to your nervous system.
-        </h1>
         <p className="text-[16px] sm:text-[17px] text-zinc-600 dark:text-zinc-400 leading-[1.55] max-w-[58ch]">
           Closed-loop biofeedback, EEG, heart rate, and eye gaze, that changes the VR session in
           real time. Built by a clinical psychologist and an ophthalmologist.
@@ -552,6 +558,7 @@ export default function BlindSpotPage() {
           End of application &middot; Blind Spot &middot; 2026
         </p>
       </footer>
+      </div>
     </main>
   )
 }

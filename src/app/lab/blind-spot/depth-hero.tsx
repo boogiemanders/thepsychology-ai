@@ -8,7 +8,7 @@ const DISPLACE = 1.2          // depth strength (0.5 to 2.5)
 const POINT_SIZE = 1.4        // dot size in px (1.0 to 3.0)
 const COLS = 960              // grid density
 const ROWS = 540
-const CUTOFF = 0.68           // depth floor (0 to 1, higher = chops more wall)
+const CUTOFF = 0.30           // depth floor (0 to 1, higher = chops more wall)
 const BOX_X_MIN = 0.40        // left edge of person box (0=left, 1=right)
 const BOX_X_MAX = 0.82        // right edge
 const BOX_Y_MIN = 0.05        // bottom edge of person box (0=bottom, 1=top)
@@ -66,6 +66,7 @@ const FRAG = `
   void main() {
     vec2 uv = gl_PointCoord - 0.5;
     if (max(abs(uv.x), abs(uv.y)) > 0.5) discard;
+    if (vDepth < uCutoff) discard;
     float colorD = clamp((vDepth - uCutoff) / (1.0 - uCutoff), 0.0, 1.0);
     vec3 col = spectral(0.15 + colorD * 0.85);
     gl_FragColor = vec4(col, 1.0);
@@ -81,7 +82,7 @@ export default function DepthHero({ src, poster }: { src: string; poster?: strin
 
     const scene = new THREE.Scene()
     const camera = new THREE.PerspectiveCamera(35, 16 / 9, 0.1, 100)
-    camera.position.set(0, 0, 3.4)
+    camera.position.set(0, 0, 2.2)
 
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: 'high-performance' })
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
@@ -145,6 +146,8 @@ export default function DepthHero({ src, poster }: { src: string; poster?: strin
       transparent: false,
     })
     const points = new THREE.Points(geom, mat)
+    points.position.set(-0.4, 0.07, 0)
+    points.scale.set(0.9, 0.9, 0.9)
     scene.add(points)
 
     let dragging = false
@@ -204,7 +207,7 @@ export default function DepthHero({ src, poster }: { src: string; poster?: strin
       video.pause()
       video.src = ''
     }
-  }, [src])
+  }, [src, CUTOFF, DISPLACE, POINT_SIZE, BOX_X_MIN, BOX_X_MAX, BOX_Y_MIN, BOX_Y_MAX])
 
   return (
     <div
