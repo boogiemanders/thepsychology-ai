@@ -15,7 +15,7 @@ function StatGrid({ stats }: { stats: Stat[] }) {
       {stats.map((s, i) => (
         <div
           key={i}
-          className="py-5 sm:py-6 sm:px-6 first:sm:pl-0 last:sm:pr-0"
+          className="py-5 sm:py-6 sm:px-6 sm:[&:nth-child(3n+1)]:pl-0 sm:[&:nth-child(3n)]:pr-0"
         >
           <div className="text-[26px] sm:text-[30px] font-semibold tracking-[-0.02em] text-zinc-900 dark:text-zinc-50 leading-none mb-3">
             {s.value}
