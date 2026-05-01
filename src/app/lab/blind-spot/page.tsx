@@ -326,29 +326,41 @@ const qas: QA[] = [
     q: "Who are your competitors? What do you understand about your business that they don't?",
     a: (
       <>
+        <p>Everyone picks two. Nobody picks all three.</p>
+        <ul className="space-y-3 list-none [counter-reset:cat]">
+          <li className="grid grid-cols-[1.5rem_1fr] gap-x-3 [counter-increment:cat] before:content-[counter(cat)] before:font-mono before:text-[11px] before:tracking-[0.18em] before:text-zinc-400 dark:before:text-zinc-600 before:pt-[2px]">
+            <span>
+              <strong>Therapy + biofeedback = no exposure.</strong> Meru Health (YC S18),
+              Intellect (YC S21), Muse, HeartMath. No scenarios to practice in. Skill never
+              leaves the app.
+            </span>
+          </li>
+          <li className="grid grid-cols-[1.5rem_1fr] gap-x-3 [counter-increment:cat] before:content-[counter(cat)] before:font-mono before:text-[11px] before:tracking-[0.18em] before:text-zinc-400 dark:before:text-zinc-600 before:pt-[2px]">
+            <span>
+              <strong>Therapy + VR = no feedback, no eye doctor, no range.</strong> AppliedVR
+              (pain only), Floreo (autism only), Amelia (exposure only), Limbix (shut down).
+              Nobody knows what's working live. No ophthalmologist to catch the eye strain that
+              kills retention. Real people walk in with more than one diagnosis and more than one
+              identity. One-trick ponies don't scale.
+            </span>
+          </li>
+          <li className="grid grid-cols-[1.5rem_1fr] gap-x-3 [counter-increment:cat] before:content-[counter(cat)] before:font-mono before:text-[11px] before:tracking-[0.18em] before:text-zinc-400 dark:before:text-zinc-600 before:pt-[2px]">
+            <span>
+              <strong>VR + eye tracking = no mental health.</strong> Vivid Vision, NovaSight,
+              Luminopia. Treats amblyopia. Not humans.
+            </span>
+          </li>
+        </ul>
         <p>
-          Mental health VR. AppliedVR (RelieVRx) is the only FDA-cleared VR therapeutic. Pain
-          only. Open-loop. No biofeedback adapting session content. No eye tracking. Floreo:
-          autism, no biofeedback. Amelia Virtual Care: exposure therapy, no physiological
-          monitoring. Limbix shut down.
+          <strong>So what.</strong> Bringing psychotherapy, VR, and biofeedback together treats
+          mental, emotional, and physical health at a new level of understanding, speed, and
+          scale. That earns FDA, insurance reimbursement, and 50M patients.
         </p>
         <p>
-          Digital mental health (YC). Meru Health (S18) ships HRV biofeedback with remote
-          therapists, but on a phone. Single signal. Fixed program content. No exposure. Intellect
-          (S21) is workforce mental health benefits, app + telehealth, no physiological data, no
-          VR. Both are wellness plays outside FDA.
-        </p>
-        <p>
-          Vision therapy VR. Vivid Vision, NovaSight (CureSight), Luminopia. All work in vision
-          (amblyopia, strabismus). None work in mental health.
-        </p>
-        <p>Biofeedback devices. Muse meditation app. HeartMath HRV training. No immersion.</p>
-        <p>
-          What they miss. Meru proved YC funds biofeedback + therapy. Intellect proved YC funds
-          digital mental health at scale. We are the VR-native, multi-sensor (EEG + HRV + eye
-          gaze), closed-loop version, with an FDA pathway they don't have. Mental health VR has no
-          eye doctors. Vision VR has no psychologists. Biofeedback has no VR. The therapy drives
-          the tech, not the other way around. EaseVRx is our precedent, not our competitor.
+          <strong>Why us.</strong> A clinical psychologist and an ophthalmologist are the only
+          team that can translate that clinical experience into VR scenes that handle every
+          diagnosis a real human walks in with, keep patients in the headset without burning
+          their eyes out, and adapt live. AI ships it in days, not years.
         </p>
       </>
     ),
@@ -357,56 +369,89 @@ const qas: QA[] = [
     q: 'How do or will you make money? How much could you make?',
     a: (
       <>
+        <p>Path to $100M+ ARR.</p>
         <Roadmap
           phases={[
             {
-              label: 'Now',
-              title: 'D2C wellness subscription',
+              label: 'Year 1, no FDA needed',
+              title: 'D2C anxiety subscription',
               body: (
                 <p>
-                  $25 per month. Anxiety and performance. 43 million Americans have social anxiety
-                  disorder, most untreated. 0.1 percent capture is $12.9M ARR. No FDA needed at
-                  this tier.
+                  43M Americans report social anxiety. 1% capture = 430K users. $20/mo = $103M
+                  ARR.
                 </p>
               ),
             },
             {
-              label: 'Next',
-              title: 'B2B SaaS',
+              label: 'Year 1-2',
+              title: 'B2B clinician SaaS',
               body: (
                 <p>
-                  $200 to 400 per clinician seat per month, $5 to 15 per user per month for
-                  enterprise. 50,000 plus licensed psychologists in the US. Corporate wellness is a
-                  $60B plus market.
+                  50,000+ licensed psychologists in the US. They get a VR therapy platform plus
+                  an outcome dashboard: run sessions in-office, send patients home with assigned
+                  protocols, track HRV and gaze data between visits, auto-generate
+                  insurance-ready notes. 1% capture = 500 clinicians. $150/mo = $900K ARR. Stacks
+                  on D2C.
                 </p>
+              ),
+            },
+            {
+              label: 'Year 2-3, no FDA needed',
+              title: 'Hospitals',
+              body: (
+                <p>
+                  ~6,000 hospitals in the US, consolidated into ~700 health systems (Mass General
+                  Brigham, Cleveland Clinic, Kaiser). Average system spends $250K+ per year on
+                  clinical software. 1% capture = 7 systems × $250K = $1.75M ARR. Bought under
+                  innovation and research budgets, no reimbursement required. Pain clinics,
+                  surgery prep, oncology psych, integrated behavioral health.
+                </p>
+              ),
+            },
+            {
+              label: 'Year 2-3',
+              title: 'Enterprise wellness',
+              body: (
+                <p>
+                  $60B+ US corporate wellness market. ~1,000 Fortune 1000 companies buy mental
+                  health benefits the same way they buy Calm or Headspace. Average ~10,000
+                  employees × $120/year per employee = $1.2M per company. 1% capture = 10
+                  companies × $1.2M = $12M ARR.
+                </p>
+              ),
+            },
+            {
+              label: 'Year 3+, the long shot',
+              title: 'FDA clearance for chronic pain',
+              body: (
+                <>
+                  <p>
+                    Chronic pain costs the US $635B per year. 50M Americans live with it. That
+                    is $12,700 per patient per year in current healthcare costs. AppliedVR's
+                    RelieVRx is already FDA-cleared and reimbursed by Medicare and some
+                    commercial payers, so the path exists. With FDA clearance and the 122 RCTs
+                    already backing VR for chronic pain, 1% capture = 500K patients. At $50/mo =
+                    $300M ARR.
+                  </p>
+                  <p>
+                    Honest caveat: only 17.6% of providers can currently bill for VR services
+                    [OE research]. We treat this as upside, not base case.
+                  </p>
+                </>
               ),
             },
             {
               label: 'Later',
-              title: 'FDA De Novo for chronic pain',
-              body: (
-                <p>
-                  EaseVRx played this same path. CPT codes already exist for biofeedback therapy
-                  and VR-assisted exposure. Chronic pain is 50M patients and $635B per year in
-                  total cost. Payers want opioid alternatives.
-                </p>
-              ),
-            },
-            {
-              label: 'Beyond',
               title: 'VR surgical simulation',
               body: (
-                <p>
-                  Eyesi costs $100K plus per program. We can ship the same training value at a
-                  fraction of that, leveraging Shaunak's domain.
-                </p>
+                <p>Eyesi sells at $100K+ per program. Shaunak's domain.</p>
               ),
             },
           ]}
         />
         <p className="pt-2">
-          Conservative 5-year target: $20 to 50M ARR. Ceiling is much higher with FDA clearance
-          and insurance reimbursement.
+          Phases 1-4 stack to ~$118M ARR without FDA. Phase 5 is the lottery ticket. Phase 6 is
+          the side bet.
         </p>
       </>
     ),
