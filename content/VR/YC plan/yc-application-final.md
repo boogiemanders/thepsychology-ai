@@ -178,19 +178,15 @@ We know people need this because we have been the clinicians wishing it existed.
 
 WHO ARE YOUR COMPETITORS? WHAT DO YOU UNDERSTAND ABOUT YOUR BUSINESS THAT THEY DON'T?
 
-What everyone misses: nobody closes the loop. The session does not know what the body is doing. We do.
+Everyone picks two. Nobody picks all three.
 
-Competitors:
+- **Therapy + biofeedback = no exposure.** Meru Health (YC S18), Intellect (YC S21), Muse, HeartMath. No scenarios to practice in. Skill never leaves the app.
+- **Therapy + VR = no feedback, no eye doctor, no range.** AppliedVR (pain only), Floreo (autism only), Amelia (exposure only), Limbix (shut down). Nobody knows what's working live. No ophthalmologist to catch the eye strain that kills retention. Real people walk in with more than one diagnosis and more than one identity. One-trick ponies don't scale.
+- **VR + eye tracking = no mental health.** Vivid Vision, NovaSight, Luminopia. Treats amblyopia. Not humans.
 
-- AppliedVR (RelieVRx). Only FDA-cleared VR therapeutic. Pain only. Open-loop. No biofeedback.
-- Floreo. Autism VR. No biofeedback.
-- Amelia Virtual Care. Exposure therapy VR. No physiological monitoring.
-- Vivid Vision, NovaSight, Luminopia. Vision only (amblyopia, strabismus). No mental health.
-- Muse, HeartMath. Biofeedback. No immersion.
+**So what.** Bringing psychotherapy, VR, and biofeedback together treats mental, emotional, and physical health at a new level of understanding, speed, and scale. That earns FDA, insurance reimbursement, and 50M patients.
 
-Mental health VR companies have no eye doctors and ship no eye-tracking science. Vision VR companies have no psychologists. Biofeedback companies have no VR. We sit at the intersection nobody else can staff: a clinical psychologist with three years of eye-gaze tracking research, and an ophthalmologist who co-founded the MedVR Symposium six years ago.
-
-Our edge: AI lets two clinicians generate and adapt VR scenarios in days, not months. Therapy drives tech, not the other way around. EaseVRx is our precedent, not our competitor. We extend their playbook with closed-loop biofeedback, eye tracking, and a condition-agnostic engine.
+**Why us.** A clinical psychologist and an ophthalmologist are the only team that can translate that clinical experience into VR scenes that handle every diagnosis a real human walks in with, keep patients in the headset without burning their eyes out, and adapt live. AI ships it in days, not years.
 
 ---
 
