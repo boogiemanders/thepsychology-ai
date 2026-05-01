@@ -192,19 +192,21 @@ Everyone picks two. Nobody picks all three.
 
 HOW DO OR WILL YOU MAKE MONEY? HOW MUCH COULD YOU MAKE?
 
-Path to $100M ARR, three stacked revenue lines:
+Path to $100M+ ARR.
 
-1. D2C anxiety subscription. $25/mo. 300k paying users = $90M ARR. 43M Americans have social anxiety disorder, most untreated. That is 0.7 percent capture. No FDA needed.
+**Phase 1 (year 1, no FDA needed). D2C anxiety subscription.** 43M Americans report social anxiety. 1% capture = 430K users. $20/mo = $103M ARR.
 
-2. B2B clinician SaaS. $300/seat/mo. 50,000+ licensed psychologists in the US. 5,000 seats = $18M ARR. Stacks on top of D2C.
+**Phase 2 (year 1-2). B2B clinician SaaS.** 50,000+ licensed psychologists in the US. They get a VR therapy platform plus an outcome dashboard: run sessions in-office, send patients home with assigned protocols, track HRV and gaze data between visits, auto-generate insurance-ready notes. 1% capture = 500 clinicians. $150/mo = $900K ARR. Stacks on D2C.
 
-3. Enterprise wellness. $5 to 15 per user per month. $60B+ corporate wellness market. One Fortune 500 deal at 50k seats = $6M ARR.
+**Phase 3 (year 2-3, no FDA needed). Hospitals.** ~6,000 hospitals in the US, consolidated into ~700 health systems (Mass General Brigham, Cleveland Clinic, Kaiser). Average system spends $250K+ per year on clinical software. 1% capture = 7 systems × $250K = $1.75M ARR. Bought under innovation and research budgets, no reimbursement required. Pain clinics, surgery prep, oncology psych, integrated behavioral health.
 
-D2C alone gets us to $90M. B2B and enterprise stack on for $114M+ within 5 years.
+**Phase 4 (year 2-3). Enterprise wellness.** $60B+ US corporate wellness market. ~1,000 Fortune 1000 companies buy mental health benefits the same way they buy Calm or Headspace. Average ~10,000 employees × $120/year per employee = $1.2M per company. 1% capture = 10 companies × $1.2M = $12M ARR.
 
-Phase 2 unlock (year 3+): FDA De Novo for chronic pain on the EaseVRx playbook. CPT codes already exist for biofeedback and VR-assisted exposure. 50M chronic pain patients, $635B annual cost. Insurance reimbursement at $1,000 to 3,000 per patient course pushes the ceiling past $500M.
+**Phase 5 (year 3+, the long shot). FDA clearance for chronic pain.** Chronic pain costs the US $635B per year. 50M Americans live with it. That is $12,700 per patient per year in current healthcare costs. AppliedVR's RelieVRx is already FDA-cleared and reimbursed by Medicare and some commercial payers, so the path exists. With FDA clearance and the 122 RCTs already backing VR for chronic pain, 1% capture = 500K patients. At $50/mo = $300M ARR. Honest caveat: only 17.6% of providers can currently bill for VR services [OE research]. We treat this as upside, not base case.
 
-Phase 4 (later): VR surgical simulation. Eyesi sells at $100K+ per program. Shaunak's domain.
+**Phase 6 (later). VR surgical simulation.** Eyesi sells at $100K+ per program. Shaunak's domain.
+
+Phases 1-4 stack to ~$118M ARR without FDA. Phase 5 is the lottery ticket. Phase 6 is the side bet.
 
 ---
 
