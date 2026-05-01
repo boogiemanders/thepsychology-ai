@@ -178,27 +178,37 @@ We know people need this because we have been the clinicians wishing it existed.
 
 WHO ARE YOUR COMPETITORS? WHAT DO YOU UNDERSTAND ABOUT YOUR BUSINESS THAT THEY DON'T?
 
-Mental health VR. AppliedVR (RelieVRx) is the only FDA-cleared VR therapeutic. Pain only. Open-loop. No biofeedback adapting session content. No eye tracking. Floreo: autism, no biofeedback. Amelia Virtual Care: exposure therapy, no physiological monitoring. Limbix shut down.
+What everyone misses: nobody closes the loop. The session does not know what the body is doing. We do.
 
-Vision therapy VR. Vivid Vision, NovaSight (CureSight), Luminopia. All work in vision (amblyopia, strabismus). None work in mental health.
+Competitors:
 
-Biofeedback devices. Muse meditation app. HeartMath HRV training. No immersion.
+- AppliedVR (RelieVRx). Only FDA-cleared VR therapeutic. Pain only. Open-loop. No biofeedback.
+- Floreo. Autism VR. No biofeedback.
+- Amelia Virtual Care. Exposure therapy VR. No physiological monitoring.
+- Vivid Vision, NovaSight, Luminopia. Vision only (amblyopia, strabismus). No mental health.
+- Muse, HeartMath. Biofeedback. No immersion.
 
-What we understand that they do not. Mental health VR companies do not have eye doctors and ship no eye-tracking science. Vision VR companies do not have psychologists. Biofeedback companies do not have VR. We sit at the intersection that nobody else can staff: a clinical psychologist with three years of eye-gaze tracking research, and an ophthalmologist who co-founded the MedVR Symposium six years ago. The therapy drives the tech, not the other way around. EaseVRx is our precedent, not our competitor. We extend their playbook with closed-loop biofeedback, eye tracking, and a condition-agnostic engine.
+Mental health VR companies have no eye doctors and ship no eye-tracking science. Vision VR companies have no psychologists. Biofeedback companies have no VR. We sit at the intersection nobody else can staff: a clinical psychologist with three years of eye-gaze tracking research, and an ophthalmologist who co-founded the MedVR Symposium six years ago.
+
+Our edge: AI lets two clinicians generate and adapt VR scenarios in days, not months. Therapy drives tech, not the other way around. EaseVRx is our precedent, not our competitor. We extend their playbook with closed-loop biofeedback, eye tracking, and a condition-agnostic engine.
 
 ---
 
 HOW DO OR WILL YOU MAKE MONEY? HOW MUCH COULD YOU MAKE?
 
-Phase 1: D2C wellness subscription. $25 per month. Anxiety and performance. 43 million Americans have social anxiety disorder, most untreated. 0.1 percent capture is $12.9M ARR. No FDA needed at this tier.
+Path to $100M ARR, three stacked revenue lines:
 
-Phase 2: B2B SaaS. $200 to 400 per clinician seat per month, $5 to 15 per user per month for enterprise. 50,000 plus licensed psychologists in the US. Corporate wellness is a $60B plus market.
+1. D2C anxiety subscription. $25/mo. 300k paying users = $90M ARR. 43M Americans have social anxiety disorder, most untreated. That is 0.7 percent capture. No FDA needed.
 
-Phase 3: FDA De Novo for chronic pain. EaseVRx played this same path. CPT codes already exist for biofeedback therapy and VR-assisted exposure. Chronic pain is 50M patients and $635B per year in total cost. Payers want opioid alternatives.
+2. B2B clinician SaaS. $300/seat/mo. 50,000+ licensed psychologists in the US. 5,000 seats = $18M ARR. Stacks on top of D2C.
 
-Phase 4: VR surgical simulation. Eyesi costs $100K plus per program. We can ship the same training value at a fraction of that, leveraging Shaunak's domain.
+3. Enterprise wellness. $5 to 15 per user per month. $60B+ corporate wellness market. One Fortune 500 deal at 50k seats = $6M ARR.
 
-Conservative 5-year target: $20 to 50M ARR. Ceiling is much higher with FDA clearance and insurance reimbursement.
+D2C alone gets us to $90M. B2B and enterprise stack on for $114M+ within 5 years.
+
+Phase 2 unlock (year 3+): FDA De Novo for chronic pain on the EaseVRx playbook. CPT codes already exist for biofeedback and VR-assisted exposure. 50M chronic pain patients, $635B annual cost. Insurance reimbursement at $1,000 to 3,000 per patient course pushes the ceiling past $500M.
+
+Phase 4 (later): VR surgical simulation. Eyesi sells at $100K+ per program. Shaunak's domain.
 
 ---
 
