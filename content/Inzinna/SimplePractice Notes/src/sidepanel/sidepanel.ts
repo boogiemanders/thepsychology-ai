@@ -928,21 +928,17 @@ async function regenerateSoapDraftFromSavedNotes(): Promise<void> {
   }
 
   const treatmentPlan = await getTreatmentPlan()
-  if (!treatmentPlan) {
-    setSoapStatus('Capture a treatment plan first on the client treatment plan page.')
-    return
-  }
-
   const sessionNotes = (await getSessionNotes(apptCtx.apptId))?.notes ?? ''
-  if (!sessionNotes.trim()) {
-    setSoapStatus('Save session notes first from the popup or video room notes panel.')
+  const transcriptForCheck = await getTranscript(apptCtx.apptId)
+  if (!sessionNotes.trim() && !transcriptForCheck?.entries.length) {
+    setSoapStatus('Save session notes or capture transcript first.')
     return
   }
 
   const intake = await getIntake()
   const note = await getNote()
   const workspace = await getDiagnosticWorkspace()
-  const transcript = await getTranscript(apptCtx.apptId)
+  const transcript = transcriptForCheck
   const prefs = await getPreferences()
   const mseChecklist = await getMseChecklist()
   const diagnosticImpressions = workspace?.finalizedImpressions?.length

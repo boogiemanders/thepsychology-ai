@@ -93,18 +93,7 @@ const qas: QA[] = [
   },
   {
     q: 'Are you looking for a cofounder?',
-    a: (
-      <>
-        <p>Open to a software cofounder.</p>
-        <p>Current team:</p>
-        <p>Anders Chan, clinical psychologist (UCLA postdoc, PsyD).</p>
-        <p>
-          Shaunak Bakshi, MD (Harvard), Director of Refractive Services at New England Vision and
-          Vermont Eye Laser.
-        </p>
-        <p>Therapy protocols and visual science in one team. Both building.</p>
-      </>
-    ),
+    a: <p>Open to a technical cofounder/CTO.</p>,
   },
   {
     q: 'Company name',
@@ -244,8 +233,10 @@ const qas: QA[] = [
       <>
         <p>
           Anders: 7 months full-time on thepsychology.ai. 1 month part-time on the VR prototype. 6+
-          years clinical (chronic pain, anxiety, PTSD, substance use, gender health) at UCLA, NYU
-          Langone, Montefiore, Pratt outpatient.
+          years clinical (chronic pain, anxiety, PTSD, substance use, gender health) at UCLA, NYU,
+          Brooklyn outpatient. Three years eye-gaze tracking research at SUNY Old Westbury
+          (2015-2018), validating eye tracking for accommodative interventions in students with
+          disabilities. ACT chronic pain groups with sickle cell patients at Ronald Reagan UCLA.
         </p>
         <p>
           Shaunak: 6+ years on the MedVR Symposium. 2 years in Mass Eye and Ear's Disruptive
@@ -301,11 +292,10 @@ const qas: QA[] = [
       <>
         <p>We're both clinicians who see the gap every day.</p>
         <p>
-          Anders has treated thousands of patients with anxiety, PTSD, and chronic pain across
-          UCLA, NYU Langone, Montefiore, and Pratt outpatient. ACT chronic pain groups with sickle
-          cell patients at Ronald Reagan UCLA. Before clinical training, three years of eye-gaze
-          tracking neuropsychology research at SUNY Old Westbury, validating eye tracking for
-          accommodative interventions. The eye-tracking thesis isn't a bet. It's a return.
+          Anders has treated thousands of patients with anxiety, PTSD, and chronic pain. Before
+          clinical training, three years of eye-gaze tracking neuropsychology research at SUNY Old
+          Westbury (2015-2018), validating eye tracking for accommodative interventions in students
+          with disabilities. The eye-tracking thesis isn't a bet. It's a return.
         </p>
         <p>
           Shaunak is an ophthalmologist (Harvard MD, Mass Eye and Ear cornea/refractive
@@ -458,13 +448,19 @@ const qas: QA[] = [
   {
     q: 'What convinced you to apply to Y Combinator?',
     a: (
-      <p>
-        A YC event in Boston two weeks ago. Accepted founders said 50 percent got in pre-product,
-        on the strength of team and idea. Anders texted Shaunak right then and there. A week
-        later, working prototype. YC's mental health portfolio (Meru Health S18, Intellect S21) plus
-        the "build something people want" ethos lines up with our approach. We are clinicians who see the
-        gap daily, not technologists looking for a healthcare application.
-      </p>
+      <>
+        <p>
+          A YC event in Boston two weeks ago. Accepted founders said 50 percent got in pre-product
+          on the strength of team and idea. Anders texted Shaunak immediately. A week later, made a
+          working prototype.
+        </p>
+        <p>
+          A psychologist with eye-tracking research and an ophthalmologist who has been organizing
+          healthcare VR/AR for six years is the kind of domain-expert founding team YC backs in
+          healthcare. Meru Health (S18) and Intellect (S21) show the pattern. We're clinicians who
+          see the gap daily, not technologists looking for a healthcare application.
+        </p>
+      </>
     ),
   },
   {
