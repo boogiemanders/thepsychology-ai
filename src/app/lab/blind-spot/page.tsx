@@ -370,6 +370,26 @@ const qas: QA[] = [
     a: (
       <>
         <p>Path to $100M+ ARR.</p>
+        <div className="rounded-lg border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/40 p-4 sm:p-5 space-y-3">
+          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-zinc-500 dark:text-zinc-400">
+            Why phases 1-4 are legal without FDA
+          </p>
+          <ul className="space-y-2 text-[14px] leading-[1.6]">
+            <li>
+              <strong>D2C wellness (Phase 1).</strong> Same regulatory bucket as Calm or Headspace.
+              Legal as long as we say "practice" and "support," not "treat" or "cure."
+            </li>
+            <li>
+              <strong>Licensed clinicians (Phases 2-3).</strong> Can use VR as a tool with their
+              own patients under informed consent, like a workbook. State licensure is theirs to
+              handle.
+            </li>
+            <li>
+              <strong>FDA territory (Phase 5).</strong> Chronic pain claims require FDA clearance.
+              AppliedVR's RelieVRx already paved that path.
+            </li>
+          </ul>
+        </div>
         <Roadmap
           phases={[
             {

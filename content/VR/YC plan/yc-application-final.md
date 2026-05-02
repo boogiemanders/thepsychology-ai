@@ -194,6 +194,12 @@ HOW DO OR WILL YOU MAKE MONEY? HOW MUCH COULD YOU MAKE?
 
 Path to $100M+ ARR.
 
+**Why phases 1-4 are legal without FDA.**
+
+- **D2C wellness (Phase 1).** Same regulatory bucket as Calm or Headspace. Legal as long as we say "practice" and "support," not "treat" or "cure."
+- **Licensed clinicians (Phases 2-3).** Can use VR as a tool with their own patients under informed consent, like a workbook. State licensure is theirs to handle.
+- **FDA territory (Phase 5).** Chronic pain claims require FDA clearance. AppliedVR's RelieVRx already paved that path.
+
 **Phase 1 (year 1, no FDA needed). D2C anxiety subscription.** 43M Americans report social anxiety. 1% capture = 430K users. $20/mo = $103M ARR.
 
 **Phase 2 (year 1-2). B2B clinician SaaS.** 50,000+ licensed psychologists in the US. They get a VR therapy platform plus an outcome dashboard: run sessions in-office, send patients home with assigned protocols, track HRV and gaze data between visits, auto-generate insurance-ready notes. 1% capture = 500 clinicians. $150/mo = $900K ARR. Stacks on D2C.
