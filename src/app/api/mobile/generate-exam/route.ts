@@ -2,8 +2,12 @@ import { NextRequest, NextResponse } from 'next/server'
 import { existsSync, readFileSync, readdirSync } from 'fs'
 import { join } from 'path'
 import { randomUUID } from 'crypto'
+import type { SupabaseClient } from '@supabase/supabase-js'
 import { requireMobileAuth } from '@/lib/server/mobile-auth'
 import { getServerSubscriptionStatus } from '@/lib/subscription-server'
+import { getSupabaseClient } from '@/lib/supabase-server'
+
+const RECENT_EXAMS_TO_EXCLUDE = 3
 
 type ExamType = 'diagnostic' | 'practice'
 
@@ -51,21 +55,95 @@ function pickRandom<T>(items: T[]): T | null {
   return items[Math.floor(Math.random() * items.length)]
 }
 
-function loadJsonFile(dir: string, prefix: string, exclude?: string): ServerQuestion[] | null {
-  if (!existsSync(dir)) return null
-  const files = readdirSync(dir)
+function listJsonFiles(dir: string, prefix: string, exclude?: string): string[] {
+  if (!existsSync(dir)) return []
+  return readdirSync(dir)
     .filter((name) => name.endsWith('.json'))
     .filter((name) => name.startsWith(prefix))
     .filter((name) => !exclude || !name.startsWith(exclude))
-  const chosen = pickRandom(files)
-  if (!chosen) return null
+}
+
+function loadQuestionsFromFile(dir: string, fileName: string): ServerQuestion[] | null {
   try {
-    const raw = readFileSync(join(dir, chosen), 'utf-8')
+    const raw = readFileSync(join(dir, fileName), 'utf-8')
     const parsed = JSON.parse(raw)
     return Array.isArray(parsed.questions) ? parsed.questions : null
   } catch {
     return null
   }
+}
+
+interface SelectedFile {
+  dir: string
+  fileName: string
+}
+
+async function getRecentExamFiles(
+  supabase: SupabaseClient,
+  userId: string,
+  examType: ExamType,
+  limit: number
+): Promise<string[]> {
+  const { data, error } = await supabase
+    .from('user_exam_assignments')
+    .select('exam_file, assigned_at')
+    .eq('user_id', userId)
+    .eq('exam_type', examType)
+    .order('assigned_at', { ascending: false })
+    .limit(limit)
+
+  if (error) {
+    console.warn('[mobile/generate-exam] Failed to load recent assignments:', error)
+    return []
+  }
+  return (data || []).map((row: any) => row.exam_file)
+}
+
+async function recordExamAssignment(
+  supabase: SupabaseClient,
+  userId: string,
+  examType: ExamType,
+  examFile: string
+): Promise<void> {
+  const now = new Date().toISOString()
+  const { data: existing } = await supabase
+    .from('user_exam_assignments')
+    .select('id')
+    .eq('user_id', userId)
+    .eq('exam_file', examFile)
+    .maybeSingle()
+
+  if (existing?.id) {
+    const { error } = await supabase
+      .from('user_exam_assignments')
+      .update({ assigned_at: now })
+      .eq('id', existing.id)
+    if (error) console.warn('[mobile/generate-exam] Failed to update assignment:', error)
+    return
+  }
+
+  const { error } = await supabase
+    .from('user_exam_assignments')
+    .insert({ user_id: userId, exam_type: examType, exam_file: examFile, assigned_at: now })
+  if (error) console.warn('[mobile/generate-exam] Failed to insert assignment:', error)
+}
+
+function selectExamFile(
+  dir: string,
+  prefix: string,
+  exclude: string | undefined,
+  recentFiles: string[]
+): SelectedFile | null {
+  const files = listJsonFiles(dir, prefix, exclude)
+  if (files.length === 0) return null
+
+  const recentSet = new Set(recentFiles)
+  const fresh = files.filter((f) => !recentSet.has(f))
+  // If recent exclusion would empty the pool, fall back to all files
+  const pool = fresh.length > 0 ? fresh : files
+  const chosen = pickRandom(pool)
+  if (!chosen) return null
+  return { dir, fileName: chosen }
 }
 
 function normalizeDifficulty(raw: unknown): 'easy' | 'medium' | 'hard' {
@@ -164,26 +242,37 @@ export async function POST(request: NextRequest) {
     }
 
     const cwd = process.cwd()
-    let questions: ServerQuestion[] | null = null
+    const supabase = getSupabaseClient(undefined, { requireServiceRole: true })
+    const recentFiles = supabase
+      ? await getRecentExamFiles(supabase, auth.userId, examType, RECENT_EXAMS_TO_EXCLUDE)
+      : []
+
+    let selected: SelectedFile | null = null
 
     if (examType === 'diagnostic') {
       const freeDir = join(cwd, 'free-examsGPT')
       if (isPro) {
-        questions = loadJsonFile(freeDir, 'diagnostic-exam-', 'diagnostic-exam-short-')
+        selected = selectExamFile(freeDir, 'diagnostic-exam-', 'diagnostic-exam-short-', recentFiles)
       }
-      if (!questions) {
-        questions = loadJsonFile(freeDir, 'diagnostic-exam-short-')
+      if (!selected) {
+        selected = selectExamFile(freeDir, 'diagnostic-exam-short-', undefined, recentFiles)
       }
     } else {
       const proDir = join(cwd, 'examsGPT')
-      questions = loadJsonFile(proDir, 'practice-exam-')
+      selected = selectExamFile(proDir, 'practice-exam-', undefined, recentFiles)
     }
 
-    if (!questions || questions.length === 0) {
+    const questions = selected ? loadQuestionsFromFile(selected.dir, selected.fileName) : null
+
+    if (!selected || !questions || questions.length === 0) {
       return NextResponse.json(
         { error: 'No exam content available. Please try again later.' },
         { status: 503 }
       )
+    }
+
+    if (supabase) {
+      await recordExamAssignment(supabase, auth.userId, examType, selected.fileName)
     }
 
     const exam = buildExam(examType, questions)
