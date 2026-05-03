@@ -138,8 +138,9 @@ const qas: QA[] = [
           caption="As user's breathing matches biofeedback orb, her heart rate lowers which turns the orb green."
         />
         <p>
-          Saturday's user test. Tamilyn wears Quest 3 plus Muse S. The orb expands and shifts red
-          to green as her heart rate drops. Forest scene. Real EEG and HR streaming live.
+          Tamilyn wears the Quest 3 plus Muse S. The orb expands and contracts, as she
+          synchronizes her breathing to the rate of the VR orb expanding and contracting, her
+          heart rate drops, which is picked up by the Muse and shifts the orb from red to green.
         </p>
       </>
     ),
@@ -164,7 +165,7 @@ const qas: QA[] = [
                   Users will be able to practice job interviews and public speaking with
                   biofeedback by using techniques in Acceptance and Commitment Therapy (ACT),
                   exposure (increasing difficulty/realism), and practicing coping skills in VR.
-                  Imagine CBT + Toastmasters + body monitoring. By focusing on direct-to-consumer
+                  Imagine Toastmasters + CBT + body monitoring. By focusing on direct-to-consumer
                   wellness, no FDA is needed at this tier.
                 </p>
               ),
@@ -185,10 +186,10 @@ const qas: QA[] = [
               title: 'PTSD, autism, depression, surgical training',
               body: (
                 <p>
-                  After getting approval with the largest market, we can build upon this engine
-                  to expand to different modules. Eye gaze alone detects depression at 86 percent
-                  accuracy in a single session. No other company has a stack that can specialize
-                  across multiple diagnoses.
+                  After getting approval with the largest market (chronic pain), we can build
+                  upon this engine to expand to different modules. Eye gaze alone detects
+                  depression at 86 percent accuracy in a single session. No other company has a
+                  stack that can specialize across multiple diagnoses.
                 </p>
               ),
             },
@@ -235,17 +236,18 @@ const qas: QA[] = [
     a: (
       <>
         <p>
-          Anders: 7 months full-time on thepsychology.ai. 1 month part-time on the VR prototype. 6+
-          years clinical (chronic pain, anxiety, PTSD, substance use, gender health) at UCLA, NYU,
-          Brooklyn outpatient. Three years eye-gaze tracking research at SUNY Old Westbury
-          (2015-2018), validating eye tracking for accommodative interventions in students with
-          disabilities. ACT chronic pain groups with sickle cell patients at Ronald Reagan UCLA.
+          Anders: 7 months full-time on thePsychology.ai. 1 month part-time on the VR prototype. 6+
+          years full-time in clinical (chronic pain, anxiety, PTSD, substance use, gender health)
+          at UCLA, NYU, Montefiore, Pratt, LIU, and BCP outpatient w/ 3 years eye-gaze tracking
+          research at SUNY Old Westbury validating eye tracking for accommodative interventions in
+          students with disabilities. ACT chronic pain groups with sickle cell patients at Ronald
+          Reagan UCLA.
         </p>
         <p>
           Shaunak: 6+ years on the MedVR Symposium. 2 years in Mass Eye and Ear's Disruptive
           Technology Lab. 1 week ramped on this prototype.
         </p>
-        <p>Both employed full-time clinically. Going full-time when funded.</p>
+        <p>Anders can go full-time if funded.</p>
       </>
     ),
   },
@@ -279,12 +281,12 @@ const qas: QA[] = [
     a: (
       <>
         <p>
-          Not from Blind Spot. Anders' adjacent product, thepsychology.ai, makes $300 MRR teaching
+          Not from Blind Spot. Anders' adjacent product, thePsychology.ai, makes $320 MRR teaching
           postdocs to pass the EPPP licensure exam. 4 have passed.
         </p>
         <p>
-          Same brand runs an intake, scheduling, insurance verification, and payroll pipeline for
-          Inzinna Therapy Group. Paid contract. Proves we can build, sell, and retain.
+          The same brand runs an intake, scheduling, insurance verification, and payroll pipeline
+          for Inzinna Therapy Group in a paid contract, proving we can build, sell, and retain.
         </p>
       </>
     ),
@@ -295,20 +297,20 @@ const qas: QA[] = [
       <>
         <p>We're both clinicians who see the gap every day.</p>
         <p>
-          Anders in his undergraduate, researched for three years of neuropsychology to find
+          Anders in his undergraduate research, researched neuropsychology for three years to find
           accommodative assessment/interventions for students with disabilities using a 10-minute
-          task with eye gaze tracking technology. As he trained to become a clinical psychologist,
+          task with eye-gaze tracking technology. As he trained to become a clinical psychologist,
           he learned to treat thousands of patients with anxiety, PTSD, and chronic pain, yet
-          noticed that no clinics were using technology to assist with diagnostics or
-          interventions. It is a cultural norm to be spending hours flipping through pages of the
-          diagnostic manual and copying and pasting text in intake forms. He still believes in
-          human clinical judgment, and using technology to enhance it can help people spend their
-          time on their values.
+          noticed that no clinics were using technology like his previous research to assist with
+          diagnostics or interventions. It is a cultural norm to spend hours flipping through pages
+          of the diagnostic manual and copying and pasting text in intake forms. He still believes
+          in human clinical judgment, and using technology to enhance it can help people spend
+          their time on their values.
         </p>
         <p>
           Shaunak is an ophthalmologist (Harvard MD, Mass Eye and Ear cornea/refractive
-          fellowship). Six years co-founding the MedVR Symposium. He didn't wait for VR to come to
-          ophthalmology. He's been building that field.
+          fellowship) with six years co-founding the MedVR Symposium. He didn't wait for VR to come
+          to ophthalmology. He's been building that field.
         </p>
         <p>
           The clinical limitation is obvious to both of us. VR exposure has no idea if the patient
@@ -348,12 +350,13 @@ const qas: QA[] = [
             <span>
               <strong>Therapy + VR = no feedback, no eye doctor, no range.</strong> AppliedVR
               (pain), EaseVRx (chronic pain, FDA-cleared), Floreo (autism), Amelia (exposure),
-              and Limbix (shut down) all focus on one topic. We are aiming to help all topics
-              available, which allows a larger addressable market. These companies are also
-              using open-loops, meaning they are missing the user's live feedback. By adding
-              biofeedback, we can add a closed-loop, which takes the user's live responses to
-              increase the accuracy of interventions. Lastly, with an ophthalmologist, we can
-              catch the eye strain that kills retention that other companies ignore.
+              and Limbix (shut down) all focus on one topic, which is difficult to scale. We
+              are aiming to provide help across all topics, which allows a larger addressable
+              market. These companies are also using open-loops, meaning they are missing the
+              user's live feedback. By adding biofeedback, we can add a closed-loop, which
+              takes the user's live responses to increase the accuracy of interventions.
+              Lastly, with an ophthalmologist, we can catch the eye strain that kills retention
+              that other companies ignore.
             </span>
           </li>
           <li className="grid grid-cols-[1.5rem_1fr] gap-x-3 [counter-increment:cat] before:content-[counter(cat)] before:font-mono before:text-[11px] before:tracking-[0.18em] before:text-zinc-400 dark:before:text-zinc-600 before:pt-[2px]">
@@ -414,7 +417,7 @@ const qas: QA[] = [
                   for sessions, at-home practice, HRV/gaze tracking, progress tracking, and
                   insurance-ready notes; 1% of 50,000+ licensed psychologists = $900K ARR. This
                   may avoid FDA only if clinicians use it under their own license and informed
-                  consent as a workflow, biofeedback, and support tool. thepsychology.ai workflow
+                  consent as a workflow, biofeedback, and support tool. thePsychology.ai workflow
                   automations can help clinicians choose protocols, summarize biofeedback, draft
                   notes, and save safety responses for panic, dissociation, cybersickness, or
                   trauma activation.
@@ -599,9 +602,9 @@ const qas: QA[] = [
     a: (
       <>
         <p>
-          A YC event in Boston two weeks ago. Accepted founders said 50 percent got in pre-product
-          on the strength of team and idea. Anders texted Shaunak immediately. A week later, made a
-          working prototype.
+          During a YC event in Boston two weeks ago, accepted founders reflected that some got in
+          pre-product on the strength of the team and idea. Anders texted Shaunak immediately. A
+          week later, they made a working prototype.
         </p>
         <p>
           A psychologist with eye-tracking research and an ophthalmologist who has been organizing
