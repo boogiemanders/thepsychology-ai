@@ -7,8 +7,6 @@ import { requireMobileAuth } from '@/lib/server/mobile-auth'
 import { getServerSubscriptionStatus } from '@/lib/subscription-server'
 import { getSupabaseClient } from '@/lib/supabase-server'
 
-const RECENT_EXAMS_TO_EXCLUDE = 3
-
 type ExamType = 'diagnostic' | 'practice'
 
 interface ServerQuestion {
@@ -78,22 +76,19 @@ interface SelectedFile {
   fileName: string
 }
 
-async function getRecentExamFiles(
+async function getSeenExamFiles(
   supabase: SupabaseClient,
   userId: string,
-  examType: ExamType,
-  limit: number
+  examType: ExamType
 ): Promise<string[]> {
   const { data, error } = await supabase
     .from('user_exam_assignments')
-    .select('exam_file, assigned_at')
+    .select('exam_file')
     .eq('user_id', userId)
     .eq('exam_type', examType)
-    .order('assigned_at', { ascending: false })
-    .limit(limit)
 
   if (error) {
-    console.warn('[mobile/generate-exam] Failed to load recent assignments:', error)
+    console.warn('[mobile/generate-exam] Failed to load assignments:', error)
     return []
   }
   return (data || []).map((row: any) => row.exam_file)
@@ -132,15 +127,15 @@ function selectExamFile(
   dir: string,
   prefix: string,
   exclude: string | undefined,
-  recentFiles: string[]
+  seenFiles: string[]
 ): SelectedFile | null {
   const files = listJsonFiles(dir, prefix, exclude)
   if (files.length === 0) return null
 
-  const recentSet = new Set(recentFiles)
-  const fresh = files.filter((f) => !recentSet.has(f))
-  // If recent exclusion would empty the pool, fall back to all files
-  const pool = fresh.length > 0 ? fresh : files
+  const seenSet = new Set(seenFiles)
+  const unseen = files.filter((f) => !seenSet.has(f))
+  // Once every exam has been seen, allow repeats from the full pool
+  const pool = unseen.length > 0 ? unseen : files
   const chosen = pickRandom(pool)
   if (!chosen) return null
   return { dir, fileName: chosen }
@@ -243,8 +238,8 @@ export async function POST(request: NextRequest) {
 
     const cwd = process.cwd()
     const supabase = getSupabaseClient(undefined, { requireServiceRole: true })
-    const recentFiles = supabase
-      ? await getRecentExamFiles(supabase, auth.userId, examType, RECENT_EXAMS_TO_EXCLUDE)
+    const seenFiles = supabase
+      ? await getSeenExamFiles(supabase, auth.userId, examType)
       : []
 
     let selected: SelectedFile | null = null
@@ -252,14 +247,14 @@ export async function POST(request: NextRequest) {
     if (examType === 'diagnostic') {
       const freeDir = join(cwd, 'free-examsGPT')
       if (isPro) {
-        selected = selectExamFile(freeDir, 'diagnostic-exam-', 'diagnostic-exam-short-', recentFiles)
+        selected = selectExamFile(freeDir, 'diagnostic-exam-', 'diagnostic-exam-short-', seenFiles)
       }
       if (!selected) {
-        selected = selectExamFile(freeDir, 'diagnostic-exam-short-', undefined, recentFiles)
+        selected = selectExamFile(freeDir, 'diagnostic-exam-short-', undefined, seenFiles)
       }
     } else {
       const proDir = join(cwd, 'examsGPT')
-      selected = selectExamFile(proDir, 'practice-exam-', undefined, recentFiles)
+      selected = selectExamFile(proDir, 'practice-exam-', undefined, seenFiles)
     }
 
     const questions = selected ? loadQuestionsFromFile(selected.dir, selected.fileName) : null
