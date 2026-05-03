@@ -3,12 +3,12 @@
 import { useEffect } from 'react'
 import { useAuth } from '@/context/auth-context'
 
-const COPY_ALLOWED_EMAIL = 'chanders0@yahoo.com'
+const COPY_ALLOWED_EMAILS = ['chanders0@yahoo.com', 'dranders@drinzinna.com']
 
 export function CopyProtection() {
   const { user, userProfile } = useAuth()
   const normalizedEmail = (userProfile?.email ?? user?.email ?? '').trim().toLowerCase()
-  const allowClipboard = normalizedEmail === COPY_ALLOWED_EMAIL
+  const allowClipboard = COPY_ALLOWED_EMAILS.includes(normalizedEmail)
 
   useEffect(() => {
     if (allowClipboard) return

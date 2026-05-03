@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { VideoPlayer } from '@/components/ui/video-thumbnail-player'
 import DepthHero from './depth-hero'
+import { EditableArea, ResetEditsButton } from './editable-answer'
 
 export const metadata: Metadata = {
   title: 'Blind Spot | thePsychology.ai',
@@ -71,10 +72,10 @@ const qas: QA[] = [
           >
             Anders
           </Link>{' '}
-          built the working prototype with AI-assisted coding (Claude Code, VS Code). Unity VR
-          scene on Meta Quest 3. Real-time pipeline pulls EEG and heart rate from a Muse S headband
-          through Python (muselsl, pylsl, websockets). A biofeedback orb in the scene responds to
-          the user's physiology live.
+          built the working prototype with AI-assisted coding (Claude Code, VS Code); Muse S
+          headband with real-time pipeline of EEG and heart rate through Python (muselsl, pylsl,
+          websockets); and a Unity VR scene on Meta Quest 3, depicting a biofeedback orb that
+          responds to the user's physiology live.
         </p>
         <p>
           <Link
@@ -93,7 +94,7 @@ const qas: QA[] = [
   },
   {
     q: 'Are you looking for a cofounder?',
-    a: <p>Open to a technical cofounder/CTO.</p>,
+    a: <p>Open to a technical cofounder.</p>,
   },
   {
     q: 'Company name',
@@ -160,10 +161,11 @@ const qas: QA[] = [
               title: 'Anxiety and performance',
               body: (
                 <p>
-                  Practice job interviews and public speaking with biofeedback showing your stress
-                  response. Toastmasters with brain monitoring. ACT in VR (breathing, defusion,
-                  mindfulness) visualized with live physiology. Direct-to-consumer wellness, no FDA
-                  needed at this tier.
+                  Users will be able to practice job interviews and public speaking with
+                  biofeedback by using techniques in Acceptance and Commitment Therapy (ACT),
+                  exposure (increasing difficulty/realism), and practicing coping skills in VR.
+                  Imagine CBT + Toastmasters + body monitoring. By focusing on direct-to-consumer
+                  wellness, no FDA is needed at this tier.
                 </p>
               ),
             },
@@ -172,9 +174,9 @@ const qas: QA[] = [
               title: 'Chronic pain, FDA pathway',
               body: (
                 <p>
-                  EaseVRx is the only FDA-cleared VR therapeutic. n=1,093, 12-month durability
-                  data. Pain only. Open-loop. We extend their playbook with closed-loop biofeedback
-                  and pursue FDA De Novo. That unlocks insurance reimbursement.
+                  By creating tools for consumers and therapists to use, Blind Spot can build
+                  evidence for its benefits and a case for FDA De Novo, which could then unlock
+                  insurance reimbursement.
                 </p>
               ),
             },
@@ -183,8 +185,10 @@ const qas: QA[] = [
               title: 'PTSD, autism, depression, surgical training',
               body: (
                 <p>
-                  Same engine, different module. Eye gaze alone detects depression at 86 percent
-                  accuracy in a single session. Nobody else has this stack.
+                  After getting approval with the largest market, we can build upon this engine
+                  to expand to different modules. Eye gaze alone detects depression at 86 percent
+                  accuracy in a single session. No other company has a stack that can specialize
+                  across multiple diagnoses.
                 </p>
               ),
             },
@@ -206,10 +210,10 @@ const qas: QA[] = [
     q: 'Explain your decision regarding location',
     a: (
       <p>
-        Anders is in Boston. Access to Harvard, MGH, and BU for clinical pilots and research
+        Anders is in Boston with access to Harvard, MGH, and BU for clinical pilots and research
         partnerships. Shaunak is in Vermont, practicing ophthalmologist with surgical expertise and
-        a Mass Eye and Ear fellowship still in his network. Post-YC, primary operations move to NY
-        for XR engineering talent and digital health investors. Pilot sites stay in Boston and
+        a Mass Eye and Ear fellowship still in his network. Post-YC, primary operations can move to
+        NY for XR engineering talent and digital health investors. Pilot sites stay in Boston and
         Vermont.
       </p>
     ),
@@ -219,11 +223,10 @@ const qas: QA[] = [
     a: (
       <>
         <p>
-          Working prototype on Quest 3. Muse S streams EEG and HR via Lab Streaming Layer into
-          Unity. Biofeedback orb responds live. First user test Saturday.
+          Working prototype demonstrating how a VR intervention can show benefits evidenced by
+          live EEG and heart rate.
         </p>
-        <p>Next: eye-tracking integration and therapist dashboard.</p>
-        <p>Adjacent traction at thepsychology.ai (see revenue below).</p>
+        <p>Adjacent traction at thePsychology.ai (see revenue below).</p>
       </>
     ),
   },
@@ -266,7 +269,7 @@ const qas: QA[] = [
     q: 'Are people using your product?',
     a: (
       <p>
-        No. Prototype stage. First real user test was Saturday. Video available as the demo
+        No. Prototype stage. First real user test was 5/2/26. Video available as the demo
         attachment.
       </p>
     ),
@@ -292,10 +295,15 @@ const qas: QA[] = [
       <>
         <p>We're both clinicians who see the gap every day.</p>
         <p>
-          Anders has treated thousands of patients with anxiety, PTSD, and chronic pain. Before
-          clinical training, three years of eye-gaze tracking neuropsychology research at SUNY Old
-          Westbury (2015-2018), validating eye tracking for accommodative interventions in students
-          with disabilities. The eye-tracking thesis isn't a bet. It's a return.
+          Anders in his undergraduate, researched for three years of neuropsychology to find
+          accommodative assessment/interventions for students with disabilities using a 10-minute
+          task with eye gaze tracking technology. As he trained to become a clinical psychologist,
+          he learned to treat thousands of patients with anxiety, PTSD, and chronic pain, yet
+          noticed that no clinics were using technology to assist with diagnostics or
+          interventions. It is a cultural norm to be spending hours flipping through pages of the
+          diagnostic manual and copying and pasting text in intake forms. He still believes in
+          human clinical judgment, and using technology to enhance it can help people spend their
+          time on their values.
         </p>
         <p>
           Shaunak is an ophthalmologist (Harvard MD, Mass Eye and Ear cornea/refractive
@@ -331,36 +339,41 @@ const qas: QA[] = [
           <li className="grid grid-cols-[1.5rem_1fr] gap-x-3 [counter-increment:cat] before:content-[counter(cat)] before:font-mono before:text-[11px] before:tracking-[0.18em] before:text-zinc-400 dark:before:text-zinc-600 before:pt-[2px]">
             <span>
               <strong>Therapy + biofeedback = no exposure.</strong> Meru Health (YC S18),
-              Intellect (YC S21), Muse, HeartMath. No scenarios to practice in. Skill never
-              leaves the app.
+              Intellect (YC S21), and Muse are stuck within the app. Users have no scenarios to
+              generalize their progress in. Bringing in VR can help users progress into more
+              challenging scenarios at an appropriate pace.
             </span>
           </li>
           <li className="grid grid-cols-[1.5rem_1fr] gap-x-3 [counter-increment:cat] before:content-[counter(cat)] before:font-mono before:text-[11px] before:tracking-[0.18em] before:text-zinc-400 dark:before:text-zinc-600 before:pt-[2px]">
             <span>
               <strong>Therapy + VR = no feedback, no eye doctor, no range.</strong> AppliedVR
-              (pain only), Floreo (autism only), Amelia (exposure only), Limbix (shut down).
-              Nobody knows what's working live. No ophthalmologist to catch the eye strain that
-              kills retention. Real people walk in with more than one diagnosis and more than one
-              identity. One-trick ponies don't scale.
+              (pain), EaseVRx (chronic pain, FDA-cleared), Floreo (autism), Amelia (exposure),
+              and Limbix (shut down) all focus on one topic. We are aiming to help all topics
+              available, which allows a larger addressable market. These companies are also
+              using open-loops, meaning they are missing the user's live feedback. By adding
+              biofeedback, we can add a closed-loop, which takes the user's live responses to
+              increase the accuracy of interventions. Lastly, with an ophthalmologist, we can
+              catch the eye strain that kills retention that other companies ignore.
             </span>
           </li>
           <li className="grid grid-cols-[1.5rem_1fr] gap-x-3 [counter-increment:cat] before:content-[counter(cat)] before:font-mono before:text-[11px] before:tracking-[0.18em] before:text-zinc-400 dark:before:text-zinc-600 before:pt-[2px]">
             <span>
-              <strong>VR + eye tracking = no mental health.</strong> Vivid Vision, NovaSight,
-              Luminopia. Treats amblyopia. Not humans.
+              <strong>VR + eye tracking = no mental health.</strong> Vivid Vision, NovaSight, and
+              Luminopia treat amblyopia. Not humans.
             </span>
           </li>
         </ul>
         <p>
-          <strong>So what.</strong> Bringing psychotherapy, VR, and biofeedback together treats
+          <strong>Why us?</strong> A clinical psychologist and an ophthalmologist can use
+          psychotherapy, VR, and biofeedback to translate their clinical experience to treat
           mental, emotional, and physical health at a new level of understanding, speed, and
-          scale. That earns FDA, insurance reimbursement, and 50M patients.
+          scale that no individual clinician or piece of technology can do at the moment.
         </p>
         <p>
-          <strong>Why us.</strong> A clinical psychologist and an ophthalmologist are the only
-          team that can translate that clinical experience into VR scenes that handle every
-          diagnosis a real human walks in with, keep patients in the headset without burning
-          their eyes out, and adapt live. AI ships it in days, not years.
+          <strong>How so?</strong> We can treat multiple diagnoses, use AI-assisted coding to
+          develop new scenes appropriate for the user, adjust the level of exposure based off of
+          biofeedback in real-time, and increase retention by reducing eye burnout. This
+          combination could earn FDA, insurance compensation, and 50M users.
         </p>
       </>
     ),
@@ -369,107 +382,178 @@ const qas: QA[] = [
     q: 'How do or will you make money? How much could you make?',
     a: (
       <>
-        <p>Path to $100M+ ARR.</p>
-        <div className="rounded-lg border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/40 p-4 sm:p-5 space-y-3">
-          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-zinc-500 dark:text-zinc-400">
-            Why phases 1-4 are legal without FDA
-          </p>
-          <ul className="space-y-2 text-[14px] leading-[1.6]">
-            <li>
-              <strong>D2C wellness (Phase 1).</strong> Same regulatory bucket as Calm or Headspace.
-              Legal as long as we say "practice" and "support," not "treat" or "cure."
-            </li>
-            <li>
-              <strong>Licensed clinicians (Phases 2-3).</strong> Can use VR as a tool with their
-              own patients under informed consent, like a workbook. State licensure is theirs to
-              handle.
-            </li>
-            <li>
-              <strong>FDA territory (Phase 5).</strong> Chronic pain claims require FDA clearance.
-              AppliedVR's RelieVRx already paved that path.
-            </li>
-          </ul>
-        </div>
+        <p>
+          Blind Spot could create value in six phases: D2C wellness, clinician SaaS, hospitals,
+          enterprise wellness, FDA-cleared chronic pain, and later surgical simulation. Phases
+          1-4 can potentially reach ~$118M ARR before FDA, when staying in wellness,
+          clinician-controlled tools, research/innovation budgets, and workplace wellness. FDA
+          becomes necessary to make specific claims about diagnosing and treating conditions and
+          could open to $300M ARR.
+        </p>
         <Roadmap
           phases={[
             {
-              label: 'Year 1, no FDA needed',
-              title: 'D2C anxiety subscription',
+              label: 'No FDA needed',
+              title: 'D2C anxiety, stress, and performance wellness',
               body: (
                 <p>
-                  43M Americans report social anxiety. 1% capture = 430K users. $20/mo = $103M
-                  ARR.
+                  First phase is a VR wellness app for anxiety practice, stress control, public
+                  speaking, social confidence, and performance pressure. At scale, 1% of 43M
+                  anxiety-adjacent users at $20/month = $103M ARR. Growth starts through Anders'
+                  organic psychology/AI content, VR communities, clinician referrals, creators,
+                  and high-anxiety professionals. Paid CAC should stay around $40-$60.
                 </p>
               ),
             },
             {
-              label: 'Year 1-2',
+              label: 'Clinician-controlled, no FDA needed',
               title: 'B2B clinician SaaS',
               body: (
                 <p>
-                  50,000+ licensed psychologists in the US. They get a VR therapy platform plus
-                  an outcome dashboard: run sessions in-office, send patients home with assigned
-                  protocols, track HRV and gaze data between visits, auto-generate
-                  insurance-ready notes. 1% capture = 500 clinicians. $150/mo = $900K ARR. Stacks
-                  on D2C.
+                  Blind Spot sells to therapists as a $150/month clinician-controlled VR platform
+                  for sessions, at-home practice, HRV/gaze tracking, progress tracking, and
+                  insurance-ready notes; 1% of 50,000+ licensed psychologists = $900K ARR. This
+                  may avoid FDA only if clinicians use it under their own license and informed
+                  consent as a workflow, biofeedback, and support tool. thepsychology.ai workflow
+                  automations can help clinicians choose protocols, summarize biofeedback, draft
+                  notes, and save safety responses for panic, dissociation, cybersickness, or
+                  trauma activation.
                 </p>
               ),
             },
             {
-              label: 'Year 2-3, no FDA needed',
-              title: 'Hospitals',
+              label: 'Innovation budgets, no FDA needed',
+              title: 'Hospitals and health systems',
               body: (
                 <p>
-                  ~6,000 hospitals in the US, consolidated into ~700 health systems (Mass General
-                  Brigham, Cleveland Clinic, Kaiser). Average system spends $250K+ per year on
-                  clinical software. 1% capture = 7 systems × $250K = $1.75M ARR. Bought under
-                  innovation and research budgets, no reimbursement required. Pain clinics,
-                  surgery prep, oncology psych, integrated behavioral health.
+                  Blind Spot sells to hospitals as a VR platform for pain clinics, surgery prep,
+                  oncology psychology, anxiety support, and integrated behavioral health. 1% of
+                  roughly 700 health systems × $250K/year = $1.75M ARR. This may avoid FDA only
+                  if sold first through innovation, research, and clinical workflow budgets
+                  without disease-treatment claims. Hospital sales are slow, so the entry path is
+                  paid pilots, research partnerships, innovation budgets, and clinical champions.
                 </p>
               ),
             },
             {
-              label: 'Year 2-3',
+              label: 'Workplace wellness, no FDA needed',
               title: 'Enterprise wellness',
               body: (
                 <p>
-                  $60B+ US corporate wellness market. ~1,000 Fortune 1000 companies buy mental
-                  health benefits the same way they buy Calm or Headspace. Average ~10,000
-                  employees × $120/year per employee = $1.2M per company. 1% capture = 10
-                  companies × $1.2M = $12M ARR.
+                  Blind Spot sells to employers as a VR wellness benefit for stress, focus,
+                  social confidence, anxiety support, and performance. 10 companies × 10,000
+                  employees × $120/year = $12M ARR. This stays in workplace wellness, not medical
+                  treatment, and becomes stronger after Blind Spot proves users engage, return,
+                  feel safe, and keep using the product.
                 </p>
               ),
             },
             {
-              label: 'Year 3+, the long shot',
-              title: 'FDA clearance for chronic pain',
+              label: 'FDA De Novo required',
+              title: 'FDA-cleared chronic pain',
               body: (
                 <>
                   <p>
-                    Chronic pain costs the US $635B per year. 50M Americans live with it. That
-                    is $12,700 per patient per year in current healthcare costs. AppliedVR's
-                    RelieVRx is already FDA-cleared and reimbursed by Medicare and some
-                    commercial payers, so the path exists. With FDA clearance and the 122 RCTs
-                    already backing VR for chronic pain, 1% capture = 500K patients. At $50/mo =
-                    $300M ARR.
+                    Blind Spot later expands into an FDA-cleared VR chronic pain product, likely
+                    starting with chronic lower-back pain; if expanded across chronic pain over
+                    time, 500K patients × $50/month = $300M ARR. The FDA path adds cost; the FY
+                    2026 De Novo fee is $173,782, or $43,446 for a qualified small business, plus
+                    the real cost of studies, regulatory work, quality systems, safety testing,
+                    and documentation, likely $500K-$3M+ total.
                   </p>
                   <p>
-                    Honest caveat: only 17.6% of providers can currently bill for VR services
-                    [OE research]. We treat this as upside, not base case.
+                    FDA clearance can increase profit because Blind Spot can move from wellness
+                    pricing to medical-device pricing, make treatment claims, get prescribed,
+                    access payer reimbursement, and sell with more trust to hospitals and
+                    providers. AppliedVR's RelieVRx shows this path exists for chronic lower-back
+                    pain, but Blind Spot still needs product-specific studies, FDA clearance, and
+                    payer adoption. At $300M ARR, profit could be roughly $60M-$180M/year
+                    depending on whether net margin is 20%-60%.
                   </p>
                 </>
               ),
             },
             {
-              label: 'Later',
+              label: 'Side bet',
               title: 'VR surgical simulation',
               body: (
-                <p>Eyesi sells at $100K+ per program. Shaunak's domain.</p>
+                <p>
+                  Blind Spot can later expand into VR surgical simulation, especially
+                  ophthalmology and eye-tracking-based training; Eyesi sells at $100K+ per
+                  program. This fits Shaunak's strength as an ophthalmologist with VR and visual
+                  safety experience, but it is not included in the base case.
+                </p>
               ),
             },
           ]}
         />
+        <div className="mt-4 overflow-hidden rounded-md border border-zinc-100 dark:border-zinc-800/80">
+          <table className="w-full text-[14px]">
+            <thead className="bg-zinc-50 dark:bg-zinc-900/40">
+              <tr className="text-left">
+                <th className="px-4 py-3 font-mono text-[10px] uppercase tracking-[0.22em] text-zinc-500 dark:text-zinc-400">
+                  Phase
+                </th>
+                <th className="px-4 py-3 font-mono text-[10px] uppercase tracking-[0.22em] text-zinc-500 dark:text-zinc-400">
+                  Stream
+                </th>
+                <th className="px-4 py-3 font-mono text-[10px] uppercase tracking-[0.22em] text-zinc-500 dark:text-zinc-400">
+                  ARR potential
+                </th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-zinc-100 dark:divide-zinc-800/80">
+              <tr>
+                <td className="px-4 py-3 font-mono text-[12px] text-zinc-500 dark:text-zinc-500">01</td>
+                <td className="px-4 py-3 text-zinc-700 dark:text-zinc-300">D2C wellness</td>
+                <td className="px-4 py-3 text-zinc-900 dark:text-zinc-50">$103M</td>
+              </tr>
+              <tr>
+                <td className="px-4 py-3 font-mono text-[12px] text-zinc-500 dark:text-zinc-500">02</td>
+                <td className="px-4 py-3 text-zinc-700 dark:text-zinc-300">Clinician SaaS</td>
+                <td className="px-4 py-3 text-zinc-900 dark:text-zinc-50">$900K</td>
+              </tr>
+              <tr>
+                <td className="px-4 py-3 font-mono text-[12px] text-zinc-500 dark:text-zinc-500">03</td>
+                <td className="px-4 py-3 text-zinc-700 dark:text-zinc-300">Hospitals</td>
+                <td className="px-4 py-3 text-zinc-900 dark:text-zinc-50">$1.75M</td>
+              </tr>
+              <tr>
+                <td className="px-4 py-3 font-mono text-[12px] text-zinc-500 dark:text-zinc-500">04</td>
+                <td className="px-4 py-3 text-zinc-700 dark:text-zinc-300">Enterprise wellness</td>
+                <td className="px-4 py-3 text-zinc-900 dark:text-zinc-50">$12M</td>
+              </tr>
+              <tr className="bg-zinc-50 dark:bg-zinc-900/40">
+                <td className="px-4 py-3 font-mono text-[12px] text-zinc-500 dark:text-zinc-500">
+                  Total
+                </td>
+                <td className="px-4 py-3 font-medium text-zinc-900 dark:text-zinc-50">
+                  Phases 1-4 before FDA
+                </td>
+                <td className="px-4 py-3 font-medium text-zinc-900 dark:text-zinc-50">~$118M</td>
+              </tr>
+              <tr>
+                <td className="px-4 py-3 font-mono text-[12px] text-zinc-500 dark:text-zinc-500">05</td>
+                <td className="px-4 py-3 text-zinc-700 dark:text-zinc-300">
+                  FDA-cleared chronic pain
+                </td>
+                <td className="px-4 py-3 text-zinc-900 dark:text-zinc-50">$300M upside</td>
+              </tr>
+              <tr>
+                <td className="px-4 py-3 font-mono text-[12px] text-zinc-500 dark:text-zinc-500">06</td>
+                <td className="px-4 py-3 text-zinc-700 dark:text-zinc-300">Surgical simulation</td>
+                <td className="px-4 py-3 text-zinc-500 dark:text-zinc-500">Not included</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
         <p className="pt-2">
+          Bottom line: Blind Spot can potentially reach ~$118M ARR before FDA if it stays in
+          wellness and clinician-controlled workflows. FDA clearance adds cost, but it can unlock
+          the bigger $300M ARR chronic pain upside and raise profit by allowing medical claims,
+          prescriptions, reimbursement, and higher-trust hospital/provider sales.
+        </p>
+        <p>
           Phases 1-4 stack to ~$118M ARR without FDA. Phase 5 is the lottery ticket. Phase 6 is
           the side bet.
         </p>
@@ -555,9 +639,13 @@ export default function BlindSpotPage() {
               poster="/blind-spot/hero-depth-voxel-poster.jpg"
             />
             <div className="pointer-events-none absolute inset-x-0 bottom-6 sm:bottom-10 px-6 sm:px-10">
-              <h1 className="max-w-[18ch] text-[28px] sm:text-[44px] md:text-[56px] font-semibold tracking-[-0.02em] leading-[1.04] text-zinc-900 dark:text-zinc-50">
+              <EditableArea
+                as="h1"
+                id="hero-h1"
+                className="pointer-events-auto inline-block max-w-[18ch] text-[28px] sm:text-[44px] md:text-[56px] font-semibold tracking-[-0.02em] leading-[1.04] text-zinc-900 dark:text-zinc-50 outline-none focus:ring-1 focus:ring-zinc-300 dark:focus:ring-zinc-700 rounded-sm"
+              >
                 VR Therapy That Adapts to Your Nervous System
-              </h1>
+              </EditableArea>
             </div>
           </div>
           <p className="mt-4 font-mono text-[11px] uppercase tracking-[0.22em] text-zinc-500 dark:text-zinc-500">
@@ -572,20 +660,30 @@ export default function BlindSpotPage() {
         <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-zinc-500 dark:text-zinc-500 mb-6">
           Blind Spot &middot; YC Application &middot; S26
         </p>
-        <p className="text-[16px] sm:text-[17px] text-zinc-600 dark:text-zinc-400 leading-[1.55]">
+        <EditableArea
+          as="p"
+          id="intro"
+          className="text-[16px] sm:text-[17px] text-zinc-600 dark:text-zinc-400 leading-[1.55] outline-none focus:ring-1 focus:ring-zinc-300 dark:focus:ring-zinc-700 rounded-sm"
+        >
           Most VR therapy plays a video at you. Ours reads your body and adapts. Built by a clinical
           psychologist and an ophthalmologist.
-        </p>
+        </EditableArea>
       </header>
 
       <div className="mb-10 flex items-baseline justify-between border-b border-zinc-100 dark:border-zinc-800/80 pb-3">
         <h2 className="font-mono text-[11px] uppercase tracking-[0.22em] text-zinc-900 dark:text-zinc-50">
           Application Answers
         </h2>
-        <span className="font-mono text-[11px] tracking-[0.18em] text-zinc-500 dark:text-zinc-500">
-          {String(qas.length).padStart(2, '0')} fields
-        </span>
+        <div className="flex items-baseline gap-x-5">
+          <ResetEditsButton />
+          <span className="font-mono text-[11px] tracking-[0.18em] text-zinc-500 dark:text-zinc-500">
+            {String(qas.length).padStart(2, '0')} fields
+          </span>
+        </div>
       </div>
+      <p className="mb-6 font-mono text-[10px] uppercase tracking-[0.22em] text-zinc-400 dark:text-zinc-600">
+        Click any text to edit. Saved locally to your browser.
+      </p>
 
       <div className="divide-y divide-zinc-100 dark:divide-zinc-800/80">
         {qas.map((item, i) => (
@@ -601,9 +699,12 @@ export default function BlindSpotPage() {
                 {item.q}
               </h3>
             </div>
-            <div className="text-[15px] sm:text-[16px] text-zinc-600 dark:text-zinc-400 leading-[1.65] space-y-5 sm:col-span-8">
+            <EditableArea
+              id={`a-${i}`}
+              className="text-[15px] sm:text-[16px] text-zinc-600 dark:text-zinc-400 leading-[1.65] space-y-5 sm:col-span-8 outline-none focus:ring-1 focus:ring-zinc-300 dark:focus:ring-zinc-700 rounded-sm"
+            >
               {item.a}
-            </div>
+            </EditableArea>
           </section>
         ))}
       </div>
