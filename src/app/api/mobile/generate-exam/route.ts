@@ -76,6 +76,7 @@ interface SelectedFile {
   fileName: string
 }
 
+// Files most-recently assigned first
 async function getSeenExamFiles(
   supabase: SupabaseClient,
   userId: string,
@@ -83,9 +84,10 @@ async function getSeenExamFiles(
 ): Promise<string[]> {
   const { data, error } = await supabase
     .from('user_exam_assignments')
-    .select('exam_file')
+    .select('exam_file, assigned_at')
     .eq('user_id', userId)
     .eq('exam_type', examType)
+    .order('assigned_at', { ascending: false })
 
   if (error) {
     console.warn('[mobile/generate-exam] Failed to load assignments:', error)
@@ -123,6 +125,9 @@ async function recordExamAssignment(
   if (error) console.warn('[mobile/generate-exam] Failed to insert assignment:', error)
 }
 
+const RECENT_REPEAT_GUARD = 3
+
+// seenFiles is ordered most-recent first
 function selectExamFile(
   dir: string,
   prefix: string,
@@ -134,8 +139,19 @@ function selectExamFile(
 
   const seenSet = new Set(seenFiles)
   const unseen = files.filter((f) => !seenSet.has(f))
-  // Once every exam has been seen, allow repeats from the full pool
-  const pool = unseen.length > 0 ? unseen : files
+
+  let pool: string[]
+  if (unseen.length > 0) {
+    pool = unseen
+  } else {
+    // All exams have been seen — exclude the most recent few so users don't
+    // get the same exam they just took. If there aren't enough files to do
+    // that (e.g. only 1-2 files exist total), fall back to the full pool.
+    const recentSet = new Set(seenFiles.slice(0, RECENT_REPEAT_GUARD))
+    const filtered = files.filter((f) => !recentSet.has(f))
+    pool = filtered.length > 0 ? filtered : files
+  }
+
   const chosen = pickRandom(pool)
   if (!chosen) return null
   return { dir, fileName: chosen }
