@@ -2,7 +2,16 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { VideoPlayer } from '@/components/ui/video-thumbnail-player'
 import DepthHero from './depth-hero'
-import { EditableArea, ResetEditsButton } from './editable-answer'
+import {
+  EditableArea,
+  ResetEditsButton,
+  EditingStatusBanner,
+  SignInPrompt,
+} from './editable-answer'
+import { BlindSpotEditsProvider } from './edits-provider'
+import { getSupabaseClient } from '@/lib/supabase-server'
+
+export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
   title: 'Blind Spot | thePsychology.ai',
@@ -622,8 +631,29 @@ const qas: QA[] = [
   { q: 'Batch preference', a: <p>Summer 2026.</p> },
 ]
 
-export default function BlindSpotPage() {
+async function fetchInitialEdits(): Promise<{
+  edits: Record<string, string>
+  lastEditor: string | null
+}> {
+  const supa = getSupabaseClient()
+  if (!supa) return { edits: {}, lastEditor: null }
+  const { data, error } = await supa
+    .from('blindspot_edits')
+    .select('field_id, content, updated_by_email, updated_at')
+    .order('updated_at', { ascending: false })
+  if (error || !data) return { edits: {}, lastEditor: null }
+  const edits: Record<string, string> = {}
+  for (const row of data) {
+    edits[row.field_id as string] = row.content as string
+  }
+  const lastEditor = (data[0] as { updated_by_email?: string | null } | undefined)?.updated_by_email ?? null
+  return { edits, lastEditor }
+}
+
+export default async function BlindSpotPage() {
+  const { edits, lastEditor } = await fetchInitialEdits()
   return (
+    <BlindSpotEditsProvider initialEdits={edits} initialLastEditor={lastEditor}>
     <main className="py-14 sm:py-20">
       <div className="mx-auto max-w-[1080px] px-6 mb-14 sm:mb-20">
         <Link
@@ -673,20 +703,24 @@ export default function BlindSpotPage() {
         </EditableArea>
       </header>
 
-      <div className="mb-10 flex items-baseline justify-between border-b border-zinc-100 dark:border-zinc-800/80 pb-3">
+      <div className="mb-4 flex items-baseline justify-between border-b border-zinc-100 dark:border-zinc-800/80 pb-3">
         <h2 className="font-mono text-[11px] uppercase tracking-[0.22em] text-zinc-900 dark:text-zinc-50">
           Application Answers
         </h2>
         <div className="flex items-baseline gap-x-5">
+          <SignInPrompt />
           <ResetEditsButton />
           <span className="font-mono text-[11px] tracking-[0.18em] text-zinc-500 dark:text-zinc-500">
             {String(qas.length).padStart(2, '0')} fields
           </span>
         </div>
       </div>
-      <p className="mb-6 font-mono text-[10px] uppercase tracking-[0.22em] text-zinc-400 dark:text-zinc-600">
-        Click any text to edit. Saved locally to your browser.
-      </p>
+      <div className="mb-6 flex flex-wrap items-center gap-x-5 gap-y-2">
+        <EditingStatusBanner />
+        <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-zinc-400 dark:text-zinc-600">
+          Click any text to edit. Synced live across collaborators.
+        </p>
+      </div>
 
       <div className="divide-y divide-zinc-100 dark:divide-zinc-800/80">
         {qas.map((item, i) => (
@@ -719,5 +753,6 @@ export default function BlindSpotPage() {
       </footer>
       </div>
     </main>
+    </BlindSpotEditsProvider>
   )
 }
