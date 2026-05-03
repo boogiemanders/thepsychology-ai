@@ -295,19 +295,24 @@ async function fillStatusActive(): Promise<boolean> {
 
 function enableReminderToggles(): number {
   const toggles = new Set<HTMLInputElement>()
+
   const directMatches = document.querySelectorAll(
     'input[type="checkbox"][name*="remind" i], input[type="checkbox"][id*="remind" i]'
   )
   directMatches.forEach((toggle) => toggles.add(toggle as HTMLInputElement))
 
-  const reminderContainers = Array.from(document.querySelectorAll('section, fieldset, div, label'))
-    .filter((el) => normalizedText(el.textContent).includes('reminder'))
-
-  for (const container of reminderContainers) {
-    container.querySelectorAll('input[type="checkbox"]').forEach((toggle) => {
-      toggles.add(toggle as HTMLInputElement)
-    })
-  }
+  // Only match checkboxes whose own label text mentions "reminder",
+  // not any ancestor — otherwise high-level form containers cause
+  // unrelated checkboxes (race/ethnicity, etc.) to be ticked too.
+  const checkboxes = document.querySelectorAll('input[type="checkbox"]')
+  checkboxes.forEach((input) => {
+    const checkbox = input as HTMLInputElement
+    const label = checkbox.closest('label') ?? document.querySelector(`label[for="${checkbox.id}"]`)
+    const labelText = normalizedText(label?.textContent)
+    if (labelText.includes('reminder')) {
+      toggles.add(checkbox)
+    }
+  })
 
   let enabled = 0
   for (const toggle of toggles) {
@@ -458,11 +463,17 @@ async function fillClientDemographics(): Promise<void> {
   if (tryFill(['input[name="lastName"]'], client.lastName)) filled++
 
   const sexValue = normalizeSexForSp(client.sex)
-  if (sexValue && selectOptionInElement(
-    document.querySelector('select[name="sex"]') as HTMLSelectElement | null,
-    sexValue
-  )) {
-    filled++
+  if (sexValue) {
+    const sexSelect = document.querySelector('select[name="sex"]') as HTMLSelectElement | null
+    if (sexSelect && selectOptionInElement(sexSelect, sexValue)) {
+      filled++
+    }
+    if (tryFill(
+      ['input[name="genderInfo"]', 'input[aria-label="Gender Identity" i]'],
+      sexValue
+    )) {
+      filled++
+    }
   }
 
   // DOB — three separate selects

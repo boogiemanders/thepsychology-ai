@@ -479,12 +479,15 @@ ${prefs.vobSignature}`;
       'input[type="checkbox"][name*="remind" i], input[type="checkbox"][id*="remind" i]'
     );
     directMatches.forEach((toggle) => toggles.add(toggle));
-    const reminderContainers = Array.from(document.querySelectorAll("section, fieldset, div, label")).filter((el) => normalizedText(el.textContent).includes("reminder"));
-    for (const container of reminderContainers) {
-      container.querySelectorAll('input[type="checkbox"]').forEach((toggle) => {
-        toggles.add(toggle);
-      });
-    }
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach((input) => {
+      const checkbox = input;
+      const label = checkbox.closest("label") ?? document.querySelector(`label[for="${checkbox.id}"]`);
+      const labelText = normalizedText(label?.textContent);
+      if (labelText.includes("reminder")) {
+        toggles.add(checkbox);
+      }
+    });
     let enabled = 0;
     for (const toggle of toggles) {
       if (toggle.checked) continue;
@@ -601,11 +604,17 @@ ${prefs.vobSignature}`;
     if (tryFill(['input[name="firstName"]'], client.firstName)) filled++;
     if (tryFill(['input[name="lastName"]'], client.lastName)) filled++;
     const sexValue = normalizeSexForSp(client.sex);
-    if (sexValue && selectOptionInElement(
-      document.querySelector('select[name="sex"]'),
-      sexValue
-    )) {
-      filled++;
+    if (sexValue) {
+      const sexSelect = document.querySelector('select[name="sex"]');
+      if (sexSelect && selectOptionInElement(sexSelect, sexValue)) {
+        filled++;
+      }
+      if (tryFill(
+        ['input[name="genderInfo"]', 'input[aria-label="Gender Identity" i]'],
+        sexValue
+      )) {
+        filled++;
+      }
     }
     filled += fillDob(client.dob);
     if (client.email) {
