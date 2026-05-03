@@ -90,8 +90,20 @@ export function ResetEditsButton() {
   )
 }
 
+const EDITOR_NAMES: Record<string, string> = {
+  'dranders@drinzinna.com': 'Anders',
+  'chanders0@yahoo.com': 'Anders',
+  's@bakshi.nyc': 'Shaunak',
+}
+
+function displayNameFor(email: string | null): string | null {
+  if (!email) return null
+  return EDITOR_NAMES[email.toLowerCase()] ?? email
+}
+
 export function EditingStatusBanner() {
   const { canEdit, isAuthed, status, lastEditor } = useBlindSpotEdits()
+  const lastEditorName = displayNameFor(lastEditor)
 
   let label = ''
   if (!isAuthed) {
@@ -118,8 +130,8 @@ export function EditingStatusBanner() {
         }
       />
       <span className="text-zinc-500 dark:text-zinc-500">{label}</span>
-      {lastEditor ? (
-        <span className="text-zinc-400 dark:text-zinc-600">· last by {lastEditor}</span>
+      {lastEditorName ? (
+        <span className="text-zinc-400 dark:text-zinc-600">· last by {lastEditorName}</span>
       ) : null}
     </div>
   )

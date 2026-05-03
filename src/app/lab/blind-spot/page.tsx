@@ -67,9 +67,14 @@ function Roadmap({ phases }: { phases: Phase[] }) {
   )
 }
 
-type QA = { q: string; a: React.ReactNode }
+type QA = { q: string; a: React.ReactNode; id?: string }
 
 const qas: QA[] = [
+  {
+    id: 'met',
+    q: 'How long have the founders known one another and how did you meet? Have any of the founders not met in person?',
+    a: <p>Placeholder. Edit me.</p>,
+  },
   {
     q: 'Who writes code, or does other technical work on your product? Was any of it done by a non-founder?',
     a: (
@@ -723,27 +728,31 @@ export default async function BlindSpotPage() {
       </div>
 
       <div className="divide-y divide-zinc-100 dark:divide-zinc-800/80">
-        {qas.map((item, i) => (
-          <section
-            key={i}
-            className="grid grid-cols-1 gap-y-5 py-10 first:pt-8 sm:grid-cols-12 sm:gap-x-10 sm:py-14"
-          >
-            <div className="sm:col-span-4">
-              <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-zinc-400 dark:text-zinc-600 mb-3">
-                {String(i + 1).padStart(2, '0')} / {String(qas.length).padStart(2, '0')}
-              </div>
-              <h3 className="text-[14px] sm:text-[15px] font-medium text-zinc-900 dark:text-zinc-50 leading-[1.4]">
-                {item.q}
-              </h3>
-            </div>
-            <EditableArea
-              id={`a-${i}`}
-              className="text-[15px] sm:text-[16px] text-zinc-600 dark:text-zinc-400 leading-[1.65] space-y-5 sm:col-span-8 outline-none focus:ring-1 focus:ring-zinc-300 dark:focus:ring-zinc-700 rounded-sm"
+        {qas.map((item, i) => {
+          const positionalIndex = qas.slice(0, i).filter((q) => !q.id).length
+          const fieldId = item.id ?? `a-${positionalIndex}`
+          return (
+            <section
+              key={fieldId}
+              className="grid grid-cols-1 gap-y-5 py-10 first:pt-8 sm:grid-cols-12 sm:gap-x-10 sm:py-14"
             >
-              {item.a}
-            </EditableArea>
-          </section>
-        ))}
+              <div className="sm:col-span-4">
+                <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-zinc-400 dark:text-zinc-600 mb-3">
+                  {String(i + 1).padStart(2, '0')} / {String(qas.length).padStart(2, '0')}
+                </div>
+                <h3 className="text-[14px] sm:text-[15px] font-medium text-zinc-900 dark:text-zinc-50 leading-[1.4]">
+                  {item.q}
+                </h3>
+              </div>
+              <EditableArea
+                id={fieldId}
+                className="text-[15px] sm:text-[16px] text-zinc-600 dark:text-zinc-400 leading-[1.65] space-y-5 sm:col-span-8 outline-none focus:ring-1 focus:ring-zinc-300 dark:focus:ring-zinc-700 rounded-sm"
+              >
+                {item.a}
+              </EditableArea>
+            </section>
+          )
+        })}
       </div>
 
       <footer className="mt-20 pt-8 border-t border-zinc-100 dark:border-zinc-800/80">
