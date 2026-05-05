@@ -2,9 +2,15 @@
 
 ## Context
 
-Synthesized from all 11 OE Research files. The existing `demo-build-spec-chronic-pain-act.md` covers the ACT clouds + narration (already built). This plan builds the full EaseVRx-equivalent therapeutic pipeline on top of that foundation: six modalities, Muse S Gen 2 biofeedback, and the hand rehab gamification module (Tamilyn/Zone I FDP use case). Everything flows as a single linear session.
+Synthesized from all 11 original OE Research files plus 9 newer chronic-pain protocol files added 2026-05-05. The existing `demo-build-spec-chronic-pain-act.md` covers the ACT clouds + narration (already built). This plan builds the full EaseVRx-equivalent therapeutic pipeline on top of that foundation: six modalities, Muse S Gen 2 biofeedback, and the hand rehab gamification module (Tamilyn/Zone I FDP use case). Everything flows as a single linear session.
+
+> **Scope note (2026-05-05 update):** This demo targets **chronic low back pain (CLBP)**. Fibromyalgia, neuropathic pain, and CRPS get materially different protocols (different default psychotherapy, EEG band, HRV duration). See `2026-05-05-openevidence-chronic-pain-condition-specific-adaptations.md` for branched flows.
+
+> **Entry point:** Chronic pain will be a 4th mode on the left-controller `TopLevelModeSwitcher` (alongside social / act / breathing). Cycling to "chronic pain" loads this session flow.
 
 Source files pulled from:
+
+Original set:
 - `content/VR/OE Research/openevidence-vr-protocols-deep-dive.md` — EaseVRx 6-component model, VRNT
 - `content/VR/OE Research/openevidence-vr-hand-rehab-flexor-tendon.md` — Zone I FDP rehab, Tamilyn use case
 - `content/VR/OE Research/openevidence-vr-act-biofeedback-blueprint.md` — ACT + HRV + EEG dual-loop
@@ -18,31 +24,68 @@ Source files pulled from:
 - `content/VR/code plan/demo-build-spec-chronic-pain-act.md` — existing spec (narration + clouds DONE)
 - `content/VR/code plan/demo-build-spec-nature-audio.md` — ocean scene spec
 
+2026-05-05 additions (chronic-pain protocol stack):
+- `2026-05-05-openevidence-vr-content-design-specification.md` — hard rules for what shows on screen during gameplay (no pain language, no rep counters, threat dial)
+- `2026-05-05-openevidence-chronic-pain-vr-eeg-hrv-act-psychotherapy.md` — domain overview, PRT g=-1.74 evidence
+- `2026-05-05-openevidence-chronic-pain-condition-specific-adaptations.md` — phenotype-matched protocols (CLBP→PRT, FM→EAET, neuropathic→β1/β2 NF)
+- `2026-05-05-openevidence-chronic-pain-16-week-session-protocol.md` — 5-phase, ~30-session production model with RF test 4-7 bpm
+- `2026-05-05-openevidence-chronic-pain-adaptive-decision-criteria.md` — Week 5 SMART decision logic, individual alpha peak frequency
+- `2026-05-05-openevidence-chronic-pain-session-adaptation-framework.md` — three-timescale adaptation
+- `2026-05-05-openevidence-chronic-pain-integrated-protocol-framework.md` — process-based, biomarker-guided framework
+- `2026-05-05-openevidence-pcs-tsk-cpaq-instrument-detail.md` — CPAQ-2 ultra-brief (2 items, 30 sec) for pre/post
+- `2026-05-05-openevidence-bpi-sf-instrument-detail.md` — BPI-SF severity + interference, MCID rules
+
 ---
 
 ## Why It Matters
 
-- **EaseVRx RCT** (n=179): d = 0.40–0.49 vs sham VR for chronic pain. Effects persist 12 months (n=1,093).
-- **VRNT** (n=61): pain intensity g = 0.63, interference g = 0.84. Pre/post MRI showed actual dmPFC connectivity changes — the brain physically changed.
+Demo headline (CLBP scope, updated 2026-05-05):
+
+- **Pain Reprocessing Therapy (PRT)** (Ashar et al. JAMA Psychiatry 2022, n=151): g = −1.74 vs usual care, **73% pain-free or nearly pain-free** at post-treatment, durable at 12 months. PRT reattributes pain from peripheral tissue damage to reversible brain processes — exactly what immersive VR pain neuroscience + threat dial moments deliver.
+- **EaseVRx RCT** (n=179): d = 0.40–0.49 vs sham VR for chronic pain. Effects persist 12 months (n=1,093). FDA-cleared.
+- **VRNT** (n=61): pain intensity g = 0.63, interference g = 0.84. Pre/post MRI showed dmPFC connectivity change.
 - **Ocean nature VR**: d = 1.60 for pain tolerance (Raghuraman et al., Lancet RH Am 2026). Largest single-session pain effect in the literature.
-- **StableHandVR** (n=150): +63% voluntary ROM vs control. Kinesiophobia is the #1 rehab dropout cause — VR directly eliminates it.
-- **HRV biofeedback VR** (Xu et al., 2025): significant anxiety + HRV improvement in a single 5-min session. ACT without biofeedback showed no HRV change.
-- Pain catastrophizing (PCS score) is the #1 mediator of chronic pain disability. Cognitive defusion — ACT clouds — directly targets it.
+- **EAET in older veterans**: 63% achieved ≥30% pain reduction vs 17% with CBT (Yarns et al.).
+- **StableHandVR** (n=150): +63% voluntary ROM vs control. Kinesiophobia is the #1 rehab dropout cause.
+- **HRV biofeedback VR** (Xu et al. 2025): significant anxiety + HRV improvement in a single 5-min session. ACT without biofeedback showed no HRV change.
+- Pain catastrophizing (PCS score) is the #1 mediator of chronic pain disability. Cognitive defusion targets it; the **threat dial** mechanism makes central sensitization tangible.
 
 ---
 
 ## Demo Goal
 
-Single linear session: HRV baseline (5 sec) → pain neuroscience narration (5-sec clip) → breathing biofeedback (5 sec) → mindfulness nature (5 sec) → ACT clouds [already built — full duration OK] → guided relaxation (5 sec) → summary card with HRV + pain delta. Total demo runtime: under 6 minutes.
+Single linear session: **CPAQ-2 pre (30 sec)** → HRV baseline (5 sec) → pain neuroscience narration (5-sec clip) → **threat dial moment (10 sec)** → breathing biofeedback (5 sec) → mindfulness nature (5 sec) → ACT clouds [already built — full duration OK] → guided relaxation (5 sec) → **CPAQ-2 post (30 sec)** → summary card with HRV delta + CPAQ-2 delta. Total demo runtime: under 6 minutes.
+
+> The CPAQ-2 (2 items, ~30 sec) gives a "psychological flexibility delta" alongside HRV delta on the summary card. Replaces the pre/post 0-10 pain rating from earlier draft because (per `2026-05-05-openevidence-vr-content-design-specification.md:21`) pain ratings during sessions prime threat monitoring. CPAQ-2 also accounts for >60% of CPAQ-20 variance (`2026-05-05-openevidence-pcs-tsk-cpaq-instrument-detail.md:210`). Pain rating may still be collected pre-session and post-session if framed as outside the immersive flow.
 
 ---
 
 ## What's Already Done (Don't Rebuild)
 
-- ACT cognitive defusion clouds (`ACTCloudSpawner`) — PCS thought words, proximity dissolve, 8-15s spawn
-- Pain neuroscience narration audio + script
-- Pre/post pain rating UI (stretch from existing spec — check if done)
-- Forest nature environment (base scene)
+Verified against `/Users/anderschan/vr-mvp/unity/Assets/` on 2026-05-05:
+
+- **DONE:**
+  - `ACTCloudSpawner` — PCS thought words, proximity dissolve, 8-15s spawn (word list needs review per Task 6)
+  - `BreathingPacer` — 6 bpm orb with visual scaling
+  - `HRVEnvironmentController` — fog/bloom/vignette modulation by RMSSD coherence
+  - `BiofeedbackHUD` — right-hand HUD with HR/RMSSD + α/β/θ bars, spawned by `BiofeedbackBootstrap`
+  - `TopLevelModeSwitcher` — social → act → breathing menu cycler
+  - Forest scene (`NatureScene.unity`)
+  - Ocean scene (`OceanNatureScene.unity` — exists bare, no spatial audio yet)
+- **PARTIAL (needs work):**
+  - Muse bridge — `BiofeedbackReceiver.cs` is WebSocket, not OSC. Will need swap or wrapper for the OSC streams Task 1 wants.
+  - `ACTProfile.cs` baseline storage — has the right fields but ACT-scoped; rename or fork to `ChronicPainBaselineProfile`.
+- **NOT BUILT:**
+  - `EEGProcessor.cs` (FFT, FAA, individual peak frequency)
+  - HRV baseline calibration scene
+  - Pain narration scene + `NarrationTimer`
+  - `RelaxationNarration` 5-prompt sequence
+  - Hand rehab module entirely
+  - Pre/post pain rating UI (now demoted — see Task 9 update)
+  - Session summary card
+  - **Session flow orchestrator** — nothing currently chains baseline → narration → breathing → ocean → ACT → relaxation → summary. The mode switcher is menu-level only, not intra-session.
+  - Threat dial (Task 11)
+  - CPAQ-2 (Task 12)
 
 **Pending for social anxiety branch** (not this plan, but note): NPC faces need to be added to all three scenario characters before that work can be pushed to GitHub.
 
@@ -98,6 +141,8 @@ Flow:
 4. Store as `ChronicPainBaselineProfile` ScriptableObject
 5. Green checkmark → auto-advance 1 sec
 
+> **Production note (2026-05-05):** 6 bpm is a **demo placeholder**, not the real protocol. Production Phase 0 runs an individualized resonance frequency (RF) test sweeping **4–7 bpm in 0.5-bpm increments**, picking the rate that produces the highest HRV amplitude. RF is unstable in 67% of patients — reassess every 2 weeks. Source: `2026-05-05-openevidence-chronic-pain-16-week-session-protocol.md:12,17`.
+
 ### Task 3 — Pain Narration Scene (15 min)
 
 Already scripted. For demo: play first 5-second excerpt, then auto-advance. Real: play full 60 sec.
@@ -129,10 +174,16 @@ Muse S Gen 2 gives 4-channel EEG: TP9, AF7, AF8, TP10. Add `EEGProcessor.cs` alo
 - Normalize each band vs baseline: `alphaNorm = currentAlpha / baselineAlpha`
 - Update rate: 0.5 Hz (every 2 sec, matching FFT epoch)
 
-**EEG biofeedback triggers in session:**
+**EEG biofeedback triggers in session (DEMO PLACEHOLDER VALUES):**
 - Alpha ≥ 1.1× baseline → subtle green shimmer on ocean surface, soft chime (mindfulness reward)
 - Theta surge (theta > 1.3× baseline + alpha drops) → gentle environmental cue: bird call in periphery redirects attention without interrupting flow
 - High-beta spike (>1.5× baseline) → increase wave sound volume slightly, no text prompt (avoid conscious interruption)
+
+> **Real thresholds (2026-05-05):** The 1.1× / 1.3× / 1.5× ratios above are demo placeholders, NOT clinically validated thresholds. Production targets:
+> - **Individual alpha peak frequency**, not fixed 8-12 Hz. Chronic pain patients have shifted dominant alpha (mean ≈7.6 Hz). Neurofeedback at the individual peak ± 2 Hz produces significantly larger pain reduction than fixed-band targeting (`2026-05-05-openevidence-chronic-pain-adaptive-decision-criteria.md:38`).
+> - **Alpha state dynamics** (fractional occupancy, dwell time, low-to-high transition probability) correlate r = -0.45 to -0.48 with pain reduction — more sensitive than mean alpha power (`adaptive-decision-criteria.md:45`).
+> - For neuropathic pain phenotype, target **β1/β2 contralateral** instead of alpha (Mussigmann et al.) — see `2026-05-05-openevidence-chronic-pain-condition-specific-adaptations.md:118`.
+> - For fibromyalgia, HRV recording should be **≥10 min**, not 5 (systemic dysregulation requires longer protocols).
 
 **Dual-loop architecture** (HRV = primary, EEG = secondary):
 - HRV loop: fog lifts / flower blooms as RMSSD coherence rises — strongest evidence (g=0.81–0.83)
@@ -179,11 +230,17 @@ Two analgesia pathways active simultaneously:
 
 **DEMO: 5-sec** then auto-advance. Real: 5–10 min.
 
-### Task 6 — ACT Cognitive Defusion (ALREADY DONE)
+### Task 6 — ACT Cognitive Defusion (ALREADY BUILT — needs word-list review)
 
-`ACTCloudSpawner` is built. PCS words spawning: "broken", "never end", "afraid", "useless", "stuck", "ruined", "trapped", "alone". Proximity dissolve working.
+`ACTCloudSpawner` is built. Currently spawning PCS words: "broken", "never end", "afraid", "useless", "stuck", "ruined", "trapped", "alone". Proximity dissolve working.
 
 Wire into session flow: start spawner on scene load, stop and despawn all clouds after 60 sec (real) or 30 sec (demo). Auto-advance on timer.
+
+> **Content design conflict (2026-05-05):** `2026-05-05-openevidence-vr-content-design-specification.md:21` forbids "pain-related language on screen during gameplay" because it primes threat monitoring. The current PCS word list is exactly that. Three options:
+> 1. **Replace PCS words with non-pain self-criticism words** ("not enough", "judged", "fail", "behind") — keeps defusion mechanism, removes pain priming. Loses direct PCS-mapping but matches new content rule.
+> 2. **Move ACT clouds to a clearly framed "thought defusion exercise"** screen with a brief verbal pre-frame ("notice these as thoughts passing through"). The pre-frame may be the carve-out — content rule applies to gameplay, not to explicitly framed psychological exercises.
+> 3. **Drop ACT clouds entirely from the chronic-pain demo** and substitute the **threat dial** moment (Task 11) which is the new content-design file's recommended interactive element for pain reattribution.
+> **Recommend Option 1 for CLBP demo** — keeps the already-built spawner, swaps the word source. Cheapest path. Decision needed before next demo build.
 
 ### Task 7 — Guided Relaxation Scene (25 min)
 
@@ -206,10 +263,11 @@ Optional module, separate scene. Activate for Tamilyn use case / PT demo.
 
 Components:
 1. **Optical hand tracking** via Quest 3 hand tracking API. No controller.
-2. **Safe ROM zone visualization**: Green zone overlay on DIP joint. 0–75° = green, beyond = yellow warning. No red zone — avoid pain-conditioned fear.
+2. **Safe ROM zone visualization**: Green zone overlay on DIP joint. 0–75° = green, beyond = soft fade (NOT yellow warning — avoid pain-conditioned fear). No red zone.
 3. **RMSSD-triggered pause**: if RMSSD drops >20% below baseline mid-exercise → orb pulses orange → "Pause. One breath." prompt → resumes when RMSSD recovers to 90% baseline or after **5 sec demo** (real: waits for genuine recovery).
-4. **Rep counter**: count ring DIP flexion cycles. Target: 40–80 reps (shown as progress fill).
+4. ~~**Rep counter**~~ → **Game-framed movement loop**: pick a virtual fruit, place it in basket, repeat. Movement count tracked silently in background for clinician dashboard, NEVER shown to patient. Per `2026-05-05-openevidence-vr-content-design-specification.md:22`: "no movement counters, rep counters, or exercise labels — reactivates patient identity as someone doing rehab." Target 40–80 movement cycles same as before, just hidden.
 5. **Anders avatar**: static friendly avatar seated across from patient. No interaction needed for demo — just presence. (Add face when NPC face system is done.)
+6. **Embodied virtual hands** required (not abstract pointers). Visual underestimation of one's own movement increases pain-free ROM by ~+20% (Jordán-López 2025, cited in content-design file).
 
 VR adds: +63% ROM adherence, kinesiophobia reduction, early adhesion detection via ROM plateau.
 
@@ -217,20 +275,21 @@ Highest-value rehab windows: **Weeks 3–6** (rupture vs adhesion balance) and *
 
 **DEMO: 5-sec rep sequence** showing green zone + one RMSSD-triggered pause + recovery.
 
-### Task 9 — Pre/Post Pain Rating UI (15 min)
+### Task 9 — Pre/Post Pain Rating UI (15 min) — DEMOTED, see Task 12
 
 World-space Canvas, 0–10 numeric pad. Show pre-session after baseline, show post-session after relaxation.
 
 Store delta: `painDelta = preRating - postRating`. Display on summary card.
 
-Already partially built per existing spec — verify it wires up to session flow.
+> **2026-05-05 update:** Pain rating during the immersive flow conflicts with content-design rule (`vr-content-design-specification.md:21`). For demo, **collect pain rating OUTSIDE VR** (clipboard before/after the headset goes on/off) and feed it into the summary card. The CPAQ-2 in Task 12 carries the in-session psychological delta. If you keep an in-VR pain pad anyway, frame it as a "menu/intake screen" visually distinct from the immersive scenes.
 
 ### Task 10 — Session Summary Card (20 min)
 
 Appears after guided relaxation (or hand rehab if that module ran). World-space panel.
 
 Shows:
-- "Pain: [pre] → [post]" (if pain rating done)
+- "Pain: [pre] → [post]" (collected outside VR per Task 9 update)
+- "Acceptance shift: [+/-X]" (CPAQ-2 delta from Task 12)
 - "HRV change: +[X]%" vs baseline
 - "Alpha coherence: [X]% of session"
 - ACT reflection prompt: "What did you notice about your thoughts during that?"
@@ -238,20 +297,57 @@ Shows:
 
 **DEMO: 5-sec auto-advance** then fade to black. Real: user reads + taps to dismiss.
 
+### Task 11 — Threat Dial Interactive Moment (30 min) — NEW (2026-05-05)
+
+Per `2026-05-05-openevidence-vr-content-design-specification.md:35` and `chronic-pain-16-week-session-protocol.md:27`. Most demo-able moment in the new content design — patient manipulates a virtual control and watches the pain signal grow or shrink in real time at each brain relay station. Makes central sensitization tangible.
+
+Components:
+- World-space dial (0–10) on left controller, patient turns it
+- Thalamic / cortical signal nodes pulse brighter/dimmer in lockstep with the dial
+- Voiceover: "When fear goes up, the pain signal amplifies. When fear goes down, it quiets."
+- Single interaction: turn dial down from high to low, see signal quiet → narration confirms
+- Connects directly to PRT mechanism (reattribution to brain processes)
+
+**DEMO: 10 sec** — turn dial once, hold, narration plays, auto-advance. No score or counter.
+**PRODUCTION:** Embedded in Phase 1 VRNT sessions. Patient explores brain anatomy, manipulates threat at multiple sites.
+
+### Task 12 — CPAQ-2 Pre/Post (15 min) — NEW (2026-05-05)
+
+Two-item ultra-brief acceptance measure (`pcs-tsk-cpaq-instrument-detail.md:203-210`). Replaces in-session pain rating.
+
+Items (7-point Likert, 0=never true, 6=always true):
+- Item 9 (AE): "I lead a full life even though I have chronic pain."
+- Item 14 (PW, reverse-scored): "Before I can make any serious plans, I have to get some control over my pain."
+
+Score: AE − PW (range −6 to +6). Higher = more acceptance.
+
+Flow:
+- Pre: shown after Muse connect, before HRV baseline. World-space panel, two sliders or 7-button rows.
+- Post: shown after guided relaxation, before summary card.
+- Delta displayed on summary card.
+
+**Demo time: 30 sec each = 60 sec total. Adds one minute to demo runtime — worth it for the "psych delta" headline.**
+
+These two items account for >60% of CPAQ-20 variance. Adequate for demo, NOT clinically valid for individual decisions (use full CPAQ-20 in production trials per `pcs-tsk-cpaq-instrument-detail.md:240`).
+
 ---
 
-## Demo Session Flow (Total ~5 min)
+## Demo Session Flow (Total ~6 min)
 
 ```
-Muse connect (30 sec)
+Pain rating pre (outside VR, on clipboard, 30 sec)
+→ Muse connect (30 sec)
+→ CPAQ-2 pre [30 sec]
 → HRV baseline [5 sec]
 → Pain narration excerpt [5 sec]
+→ Threat dial moment [10 sec]
 → Breathing + HRV biofeedback [5 sec]
 → Mindfulness ocean [5 sec]
-→ ACT clouds [~30 sec — real content]
+→ ACT clouds [~30 sec — non-pain word list per Task 6 update]
 → Guided relaxation [25 sec — 5 prompts × 5 sec]
+→ CPAQ-2 post [30 sec]
 → Summary card [5 sec auto-advance]
-→ Done
+→ Done → headset off → pain rating post (clipboard, 30 sec)
 ```
 
 Hand rehab module: separate demo path, not in main chronic pain flow.
@@ -273,9 +369,11 @@ Hand rehab module: separate demo path, not in main chronic pain flow.
 | Task 8: Hand rehab module | 60 min |
 | Task 9: Pain rating UI wire-up | 15 min |
 | Task 10: Session summary card | 20 min |
+| Task 11: Threat dial moment (NEW 2026-05-05) | 30 min |
+| Task 12: CPAQ-2 pre/post (NEW 2026-05-05) | 15 min |
 | Polish + demo recording | 30 min |
-| **Total (no hand rehab)** | **~3.5 hrs** |
-| **Total (with hand rehab)** | **~4.5 hrs** |
+| **Total (no hand rehab)** | **~4.25 hrs** |
+| **Total (with hand rehab)** | **~5.25 hrs** |
 
 ---
 
@@ -284,16 +382,18 @@ Hand rehab module: separate demo path, not in main chronic pain flow.
 Non-negotiable for demo:
 1. HRV baseline (Task 2) — without this, biofeedback has no reference
 2. Breathing + HRV loop (Task 4) — this IS the demo's science moment
-3. ACT clouds already built — just confirm they fire in session flow (Task 6)
-4. Summary card with HRV delta (Task 10) — the "proof it worked" moment
+3. ACT clouds already built — just confirm they fire in session flow with non-pain word list (Task 6)
+4. **Threat dial moment (Task 11)** — the new "feel the science" moment, ties directly to PRT mechanism
+5. Summary card with HRV + CPAQ-2 delta (Task 10 + Task 12) — the "proof it worked" moment
 
 Can skip:
 - Hand rehab module (Task 8) — separate demo anyway
 - EEG processing layer (Task 3b) — drop to HRV-only if Muse EEG is unreliable on the day
 - Guided relaxation narration (Task 7) — shorten to 1 prompt
-- Pain rating UI (Task 9) — skip, just show HRV delta on summary
+- Pain rating UI (Task 9) — skip, do clipboard pre/post outside VR
 - Mindfulness ocean scene (Task 5) — go straight from breathing to ACT clouds
 - Muse bridge (Task 1) if already built for social anxiety branch
+- CPAQ-2 (Task 12) — if very tight on time, skip; but the psych delta is a strong demo moment
 
 ---
 
@@ -311,13 +411,27 @@ Can skip:
 
 ## Production Expansion (Post-Demo)
 
+> **Program model resolved (2026-05-05):** Earlier draft mentioned both "EaseVRx 56 daily sessions × 8 weeks" AND a 16-week structure. The new chronic-pain protocol stack is the production model. EaseVRx remains the FDA-cleared comparator/headline evidence. **Use the 16-week / 5-phase / ~30-session protocol for production builds.**
+
 - Extend all demo timings to production values (see table above)
-- Full 56-day program structure: daily sessions with progress curve
-- EaseVRx model: increase session duration 6–12 min per module
-- VRNT add-on: pain reprocessing narration ("your pain is brain-generated, not tissue damage") as optional module — strongest evidence for pain belief change
-- Adaptive pacing via ML: track RMSSD trend across sessions → auto-adjust session intensity (from `openevidence-vr-ml-adaptive-classification.md`)
-- Weekly ROM tracking dashboard (hand rehab): trend lines, adherence rate, plateau detection flag to therapist
-- Full program outcome measures: VAS (pain intensity), PCS (catastrophizing), RMDQ (disability), RMSSD trend, alpha coherence trend
+- **16-week / 5-phase production protocol** (`2026-05-05-openevidence-chronic-pain-16-week-session-protocol.md`):
+  - Phase 0 (Visit 1-2): intake, instrument battery, EEG resting state, RF test 4-7 bpm
+  - Phase 1 (Weeks 1-2): VRNT × 2-4 sessions (pain neuroscience + threat dial)
+  - Phase 2 (Weeks 3-5): phenotype-matched psychotherapy core (PRT for CLBP, EAET for fibromyalgia, ACT for nociplastic-disengaged)
+  - Phase 3 (Weeks 5-12): adaptive biofeedback augmentation for non-responders, 12-session NF dose, HRV BFB at individual RF
+  - Phase 4 (Weeks 12-16): real-world wearable HRV practice, daily 10-min RF breathing
+  - Phase 5: maintenance + Week 28/52 follow-up
+- **Week 5 SMART decision point** (`2026-05-05-openevidence-chronic-pain-adaptive-decision-criteria.md`): three-tier responder logic — clinical (≥30% BPI reduction), EEG (alpha fractional occupancy + theta/alpha ratio), HRV (RMSSD age/sex quartile)
+- VRNT add-on: pain reprocessing narration + threat dial — strongest evidence for pain belief change
+- Adaptive pacing via ML: track RMSSD trend across sessions → auto-adjust intensity (from `openevidence-vr-ml-adaptive-classification.md`)
+- Three-timescale adaptation (`2026-05-05-openevidence-chronic-pain-session-adaptation-framework.md`): between-session daily diary, within-session real-time HRV (60th-percentile-of-self threshold), phase-transition (Week 2/5/8/12). Pacer reliance fades 75% → 0% across sessions 5-8.
+- **Phenotype-matched protocol branches** (`2026-05-05-openevidence-chronic-pain-condition-specific-adaptations.md`):
+  - **CLBP** → PRT default (g=-1.74, 73% pain-free, Ashar et al.). Alt: EAET if trauma history.
+  - **Fibromyalgia** → EAET (63% ≥30% reduction). Alt: ACT (Lai meta-analysis g=0.44 for FM specifically). HRV recording ≥10 min. NOT PRT (FM patients already understand pain isn't structural).
+  - **Neuropathic** → β1/β2 contralateral neurofeedback (Mussigmann). NOT PRT (real nerve damage). EAET if trauma comorbidity.
+  - **CRPS** → add thermal biofeedback.
+- Weekly ROM tracking dashboard (hand rehab): trend lines, adherence rate, plateau detection (clinician-only — patient never sees rep counts)
+- Full program outcome measures: BPI-SF (severity + interference, MCID = 1 pt or ≥30%), PCS (catastrophizing, MCIC 8 pts; 11 if baseline ≥30), TSK-17 (kinesiophobia ≥37 cutoff), CPAQ-20 formal + CPAQ-2 per-session, RMSSD trend, alpha coherence trend
 
 ---
 
@@ -325,12 +439,20 @@ Can skip:
 
 | Evidence | Source |
 |----------|--------|
+| **PRT g=-1.74, 73% pain-free or near, n=151 CLBP RCT** | Ashar et al. JAMA Psychiatry 2022; 2026-05-05-openevidence-chronic-pain-vr-eeg-hrv-act-psychotherapy.md:31 |
+| **EAET 63% ≥30% pain reduction vs CBT 17%** | Yarns et al.; 2026-05-05-openevidence-chronic-pain-vr-eeg-hrv-act-psychotherapy.md:32 |
 | EaseVRx d=0.40–0.49, n=179 RCT | FDA-cleared 2021, openevidence-vr-protocols-deep-dive.md |
 | 12-month durability, n=1,093 | protocols-deep-dive.md |
 | VRNT g=0.63 pain intensity, MRI change | protocols-deep-dive.md |
 | Ocean nature d=1.60 pain tolerance | Raghuraman et al., Lancet RH Am 2026; hand-rehab file |
 | StableHandVR +63% ROM, kinesiophobia | hand-rehab-flexor-tendon.md |
 | HRV biofeedback VR single session effect | Xu et al. 2025; act-biofeedback-blueprint.md |
-| ACT defusion → pain catastrophizing | protocols-deep-dive.md, act-biofeedback-blueprint.md |
-| HRV coherence resonance: 6 breaths/min | Lehrer & Gevirtz 2014; biofeedback-integration.md |
+| HRV reduced in chronic pain (g=-0.52, n=3,641) | 2026-05-05-openevidence-chronic-pain-vr-eeg-hrv-act-psychotherapy.md:19 |
+| ACT defusion → pain catastrophizing (g=0.44 FM-specific) | protocols-deep-dive.md; 2026-05-05-condition-specific-adaptations.md:40 |
+| **Individual alpha peak frequency (mean ≈7.6 Hz in chronic pain)** | 2026-05-05-openevidence-chronic-pain-adaptive-decision-criteria.md:38 |
+| **Alpha fractional occupancy r=-0.45 to -0.48 with pain reduction** | 2026-05-05-openevidence-chronic-pain-adaptive-decision-criteria.md:45 |
+| HRV resonance frequency individualized 4-7 bpm in 0.5 increments | Lehrer & Gevirtz 2014; 2026-05-05-openevidence-chronic-pain-16-week-session-protocol.md:17 |
+| **CPAQ-2 accounts for >60% of CPAQ-20 variance** | 2026-05-05-openevidence-pcs-tsk-cpaq-instrument-detail.md:210 |
+| **No pain language / no rep counters during gameplay** | 2026-05-05-openevidence-vr-content-design-specification.md:21,22 |
+| **Embodied virtual hands → +20% pain-free ROM (Jordán-López 2025)** | 2026-05-05-openevidence-vr-content-design-specification.md |
 | Zone I FDP Evans protocol | hand-rehab-flexor-tendon.md |
