@@ -21,12 +21,31 @@ function docLabel(doc: string): string {
   return doc
 }
 
+const DOC_URLS: Record<string, string> = {
+  'clinic-manual': 'https://docs.google.com/document/d/1TVkzNhvpj248UNyFdN-NxtKNV_StTjk-/edit',
+  'employee-handbook': 'https://docs.google.com/document/d/1JAbHIkdzn2Jp1kH4zz5gDnvCKm8UuDxA0qa-2yaneyY/edit',
+  'brand-strategy': 'https://drive.google.com/file/d/1wmGiM_0OE3Z2K-Vcr7xWZUvsN8L8aZA7/view',
+}
+
+function docUrl(doc: string): string | undefined {
+  return DOC_URLS[doc]
+}
+
 function cleanTitle(t: string): string {
   return t.replace(/^\d+\\?\.\s*/, '').replace(/:$/, '').trim()
 }
 
 function CiteBadge({ n, doc }: { n: number; doc: string }) {
-  return <span className={'inz-cite inz-cite--' + doc}>{n}</span>
+  const url = docUrl(doc)
+  const className = 'inz-cite inz-cite--' + doc
+  if (url) {
+    return (
+      <a href={url} target="_blank" rel="noopener noreferrer" className={className} title={`Open ${docLabel(doc)}`}>
+        {n}
+      </a>
+    )
+  }
+  return <span className={className}>{n}</span>
 }
 
 function withCitations(node: any, sources: { title: string; doc: string }[]): any {
@@ -52,12 +71,26 @@ function SourceTags({ sources }: { sources: { title: string; doc: string }[] }) 
   return (
     <div className="inz-sources">
       <div className="inz-sources__label">sources</div>
-      {top.map((s, i) => (
-        <span key={i} className={'inz-source-tag inz-source-tag--' + s.doc} title={`${cleanTitle(s.title)} · ${docLabel(s.doc)}`}>
-          <span className="inz-source-tag__num">{i + 1}</span>
-          <span className="inz-source-tag__title">{cleanTitle(s.title)}</span>
-        </span>
-      ))}
+      {top.map((s, i) => {
+        const url = docUrl(s.doc)
+        const className = 'inz-source-tag inz-source-tag--' + s.doc
+        const title = `${cleanTitle(s.title)} · ${docLabel(s.doc)}${url ? ' · click to open' : ''}`
+        const inner = (
+          <>
+            <span className="inz-source-tag__num">{i + 1}</span>
+            <span className="inz-source-tag__title">{cleanTitle(s.title)}</span>
+          </>
+        )
+        return url ? (
+          <a key={i} href={url} target="_blank" rel="noopener noreferrer" className={className} title={title}>
+            {inner}
+          </a>
+        ) : (
+          <span key={i} className={className} title={title}>
+            {inner}
+          </span>
+        )
+      })}
     </div>
   )
 }

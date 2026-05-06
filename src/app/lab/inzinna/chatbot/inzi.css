@@ -295,6 +295,8 @@ body.inzi-page-active .max-w-7xl > .border-l, body.inzi-page-active .max-w-7xl >
 .inz-cite--clinic-manual { background: var(--inz-royal); }
 .inz-cite--employee-handbook { background: var(--inz-plum); }
 .inz-cite--brand-strategy { background: var(--inz-terra); }
+a.inz-cite { text-decoration: none; cursor: pointer; transition: transform 0.12s ease, box-shadow 0.12s ease; }
+a.inz-cite:hover { transform: translateY(-1px); box-shadow: 0 2px 6px rgba(0,0,0,0.15); }
 
 /* Source tags */
 .inz-sources { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 10px; align-items: center; }
@@ -318,6 +320,8 @@ body.inzi-page-active .max-w-7xl > .border-l, body.inzi-page-active .max-w-7xl >
 .inz-source-tag--employee-handbook .inz-source-tag__num { background: var(--inz-plum); }
 .inz-source-tag--brand-strategy .inz-source-tag__num { background: var(--inz-terra); }
 .inz-panel.is-dark .inz-source-tag { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1); color: rgba(255,255,255,0.75); }
+a.inz-source-tag { text-decoration: none; cursor: pointer; transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease; }
+a.inz-source-tag:hover { transform: translateY(-1px); box-shadow: 0 2px 6px rgba(0,0,0,0.08); border-color: var(--inz-slate); }
 
 .inz-msg-system { display: flex; align-items: center; gap: 10px; font-size: 11.5px; color: var(--inz-slate); font-weight: 500; padding: 4px 0; }
 .inz-msg-system__line { flex: 1; height: 1px; background: var(--inz-cloud); }
