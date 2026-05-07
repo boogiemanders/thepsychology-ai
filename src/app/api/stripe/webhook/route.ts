@@ -218,6 +218,26 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: 'Invalid signature' }, { status: 400 })
   }
 
+  // Tripwire: log every received event. Best-effort, never blocks the handler.
+  try {
+    const obj = event.data.object as { customer?: string | { id?: string } | null }
+    const customerId =
+      typeof obj?.customer === 'string'
+        ? obj.customer
+        : (obj?.customer as { id?: string } | null)?.id ?? null
+    const supabaseLog = getSupabaseClient(undefined, { requireServiceRole: true })
+    if (supabaseLog) {
+      await supabaseLog
+        .from('stripe_webhook_log')
+        .upsert(
+          { event_id: event.id, event_type: event.type, customer_id: customerId },
+          { onConflict: 'event_id', ignoreDuplicates: true }
+        )
+    }
+  } catch (err) {
+    console.warn('[Stripe] Failed to log webhook event', err)
+  }
+
   try {
     if (event.type === 'checkout.session.completed') {
       const session = event.data.object as Stripe.Checkout.Session
