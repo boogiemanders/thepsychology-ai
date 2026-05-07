@@ -18,6 +18,7 @@ import {
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb'
 import { supabase } from '@/lib/supabase'
+import { extractOptionLetter } from '@/lib/option-letter'
 
 interface CompletedExam {
   assignmentId: string
@@ -238,7 +239,7 @@ export default function ReviewExamsPage() {
 
                                     <div className="ml-8 space-y-2">
                                       {question.options.map((option, optIdx) => {
-                                        const optionLetter = String.fromCharCode(65 + optIdx)
+                                        const optionLetter = extractOptionLetter(option) || String.fromCharCode(65 + optIdx)
                                         const isCorrect = option === question.correct_answer
 
                                         return (
@@ -335,7 +336,7 @@ export default function ReviewExamsPage() {
 
                                     <div className="ml-8 space-y-2">
                                       {question.options.map((option, optIdx) => {
-                                        const optionLetter = String.fromCharCode(65 + optIdx)
+                                        const optionLetter = extractOptionLetter(option) || String.fromCharCode(65 + optIdx)
                                         const isCorrect = option === question.correct_answer
 
                                         return (

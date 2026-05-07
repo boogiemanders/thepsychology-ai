@@ -30,6 +30,7 @@ import { QuestionFeedbackButton } from '@/components/question-feedback-button'
 import { InlineLessonRating } from '@/components/topic-teacher/inline-lesson-rating'
 import { computeQuestionKeyClient } from '@/lib/question-key-client'
 import { isQuizPass } from '@/lib/quiz-passing'
+import { extractOptionLetter } from '@/lib/option-letter'
 import { RECOVER_RECOMMENDATION_HOUR_KEY } from '@/lib/recover'
 import {
   Breadcrumb,
@@ -1416,7 +1417,7 @@ export function QuizzerContent() {
                           {/* Answer Options */}
                           <div className="space-y-2 mb-4">
                             {q.options.map((option, optIdx) => {
-                              const optionLetter = String.fromCharCode(65 + optIdx)
+                              const optionLetter = extractOptionLetter(option) || String.fromCharCode(65 + optIdx)
                               const isThisCorrect = option === q.correctAnswer
                               const isThisSelected = option === selectedAnswer
 
@@ -1621,7 +1622,7 @@ export function QuizzerContent() {
                         <div className="space-y-3">
                           {questions[quizState.question]?.options.map((option, idx) => {
                             const isSelected = quizState.selectedAnswers[quizState.question] === option
-                            const optionLetter = String.fromCharCode(65 + idx)
+                            const optionLetter = extractOptionLetter(option) || String.fromCharCode(65 + idx)
                             const optionContent = optionHtml[idx] ?? escapeHtml(stripOptionLetterPrefix(option))
 
                             return (

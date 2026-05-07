@@ -15,6 +15,7 @@ import { QuestionFeedbackButton } from '@/components/question-feedback-button'
 import { useAuth } from '@/context/auth-context'
 import { getEntitledSubscriptionTier } from '@/lib/subscription-utils'
 import { isTopicAccessible } from '@/lib/free-tier-limits'
+import { extractOptionLetter } from '@/lib/option-letter'
 
 interface Question {
   id: number
@@ -233,7 +234,7 @@ export function ExpandableDomainAnalysis({
     if (!answer) return null
     const optionIndex = question.options.findIndex((opt) => opt === answer)
     if (optionIndex === -1) return answer
-    const optionLetter = String.fromCharCode(65 + optionIndex)
+    const optionLetter = extractOptionLetter(answer) || String.fromCharCode(65 + optionIndex)
     return `${optionLetter}. ${answer}`
   }
 
@@ -500,7 +501,7 @@ export function ExpandableDomainAnalysis({
                                         {question.options.map((option, optIdx) => {
                                           const isCorrect = option === question.correct_answer
                                           const isSelected = selectedAnswer === option
-                                          const optionLetter = String.fromCharCode(65 + optIdx)
+                                          const optionLetter = extractOptionLetter(option) || String.fromCharCode(65 + optIdx)
 
                                           return (
                                             <div
@@ -856,7 +857,7 @@ export function ExpandableDomainAnalysis({
                                       {question.options.map((option, optIdx) => {
                                         const isCorrect = option === question.correct_answer
                                         const isSelected = selectedAnswer === option
-                                        const optionLetter = String.fromCharCode(65 + optIdx)
+                                        const optionLetter = extractOptionLetter(option) || String.fromCharCode(65 + optIdx)
 
                                         return (
                                           <div

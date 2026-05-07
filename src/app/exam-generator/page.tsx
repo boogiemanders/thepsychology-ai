@@ -33,6 +33,7 @@ import { QuestionFeedbackButton } from '@/components/question-feedback-button'
 import { RecoverNudge } from '@/components/recover-nudge'
 import { supabase } from '@/lib/supabase'
 import { getEntitledSubscriptionTier } from '@/lib/subscription-utils'
+import { extractOptionLetter } from '@/lib/option-letter'
 
 interface Question {
   id: number
@@ -1790,7 +1791,7 @@ export default function ExamGeneratorPage() {
   })()
 
   const correctOption = question.options[correctOptionIndex]
-  const correctLetter = String.fromCharCode(65 + correctOptionIndex)
+  const correctLetter = extractOptionLetter(correctOption) || String.fromCharCode(65 + correctOptionIndex)
   const isCorrect = selectedAnswer === correctOption
 
   return (
@@ -1926,7 +1927,7 @@ export default function ExamGeneratorPage() {
                     {question.options.map((option, idx) => {
                       const isSelected = selectedAnswer === option
                       const isAnswered = selectedAnswer !== undefined
-                      const optionLetter = String.fromCharCode(65 + idx)
+                      const optionLetter = extractOptionLetter(option) || String.fromCharCode(65 + idx)
                       const optionIsCorrect = option === question.correct_answer
                       const isShowingCorrect = (mode === 'study' && isAnswered) || (mode === 'test' && currentQuestion === questions.length - 1)
 

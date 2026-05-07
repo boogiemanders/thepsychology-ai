@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
+import { extractOptionLetter } from "@/lib/option-letter"
 
 type LockInDrillButtonProps = {
   topicName: string
@@ -221,7 +222,7 @@ export function LockInDrillButton(props: LockInDrillButtonProps) {
 
                 <div className="space-y-2">
                   {current.options.map((option, optionIndex) => {
-                    const letter = String.fromCharCode(65 + optionIndex)
+                    const letter = extractOptionLetter(option) || String.fromCharCode(65 + optionIndex)
                     const isSelected = selected === option
                     const isCorrect = revealed && option === current.answer
                     const isWrongSelected = revealed && isSelected && option !== current.answer

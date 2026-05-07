@@ -65,6 +65,7 @@ import {
   type HastNode,
 } from '@/lib/rehype-read-along'
 import { TopicTeacherTourProvider, useTopicTeacherTour } from '@/components/onboarding/TopicTeacherTourProvider'
+import { extractOptionLetter } from '@/lib/option-letter'
 
 interface Message {
   role: 'user' | 'assistant'
@@ -2906,7 +2907,7 @@ export function TopicTeacherContent() {
     const options = Array.isArray(question.options) ? question.options : []
     const index = options.findIndex((option) => option === answerText)
     if (index < 0) return answerText
-    const letter = String.fromCharCode(65 + index)
+    const letter = extractOptionLetter(answerText) || String.fromCharCode(65 + index)
     return `${letter}. ${answerText}`
   }
 
@@ -4538,7 +4539,7 @@ export function TopicTeacherContent() {
                           {activeMissedQuestion.question.options.map((option, optIdx) => {
                             const isCorrect = option === activeMissedQuestion.question.correct_answer
                             const isSelected = option === activeMissedQuestion.selectedAnswer
-                            const optionLetter = String.fromCharCode(65 + optIdx)
+                            const optionLetter = extractOptionLetter(option) || String.fromCharCode(65 + optIdx)
 
                             return (
                               <div
@@ -4622,7 +4623,7 @@ export function TopicTeacherContent() {
                         {activeQuizQuestion.options.map((option, optIdx) => {
                           const isCorrect = option === activeQuizQuestion.correctAnswer
                           const isSelected = option === activeQuizQuestion.selectedAnswer
-                          const optionLetter = String.fromCharCode(65 + optIdx)
+                          const optionLetter = extractOptionLetter(option) || String.fromCharCode(65 + optIdx)
 
                           return (
                             <div
