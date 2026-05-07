@@ -42,6 +42,10 @@
     {
       "path": "/api/cron/check-nysed-licenses",
       "schedule": "0 12 * * *"
+    },
+    {
+      "path": "/api/cron/downgrade-past-due",
+      "schedule": "0 7 * * *"
     }
   ]
 }

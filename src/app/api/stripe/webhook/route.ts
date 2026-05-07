@@ -409,6 +409,28 @@ export async function POST(request: Request) {
       }
     }
 
+    // Clear grace period on successful payment (covers retry-after-fail case)
+    if (event.type === 'invoice.payment_succeeded') {
+      const invoice = event.data.object as Stripe.Invoice
+      const stripeCustomerId =
+        typeof invoice.customer === 'string' ? invoice.customer : (invoice.customer as { id?: string } | null)?.id
+
+      if (stripeCustomerId) {
+        try {
+          const supabase = getSupabaseClient(undefined, { requireServiceRole: true })
+          if (supabase) {
+            await supabase
+              .from('users')
+              .update({ grace_period_ends_at: null })
+              .eq('stripe_customer_id', stripeCustomerId)
+              .not('grace_period_ends_at', 'is', null)
+          }
+        } catch (err) {
+          console.warn('[Stripe] Failed to clear grace_period_ends_at on payment success', err)
+        }
+      }
+    }
+
     // Handle failed payments
     if (event.type === 'invoice.payment_failed') {
       const invoice = event.data.object as Stripe.Invoice
@@ -416,6 +438,24 @@ export async function POST(request: Request) {
       const attemptCount = invoice.attempt_count || 1
       const stripeCustomerId =
         typeof invoice.customer === 'string' ? invoice.customer : (invoice.customer as { id?: string } | null)?.id
+
+      // Start the 7-day grace countdown if not already running for this customer.
+      // Preserved across Stripe Smart Retries so the deadline doesn't reset.
+      if (stripeCustomerId) {
+        try {
+          const supabase = getSupabaseClient(undefined, { requireServiceRole: true })
+          if (supabase) {
+            const graceEnds = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString()
+            await supabase
+              .from('users')
+              .update({ grace_period_ends_at: graceEnds })
+              .eq('stripe_customer_id', stripeCustomerId)
+              .is('grace_period_ends_at', null)
+          }
+        } catch (err) {
+          console.warn('[Stripe] Failed to set grace_period_ends_at on payment failure', err)
+        }
+      }
 
       // Generate billing portal URL so customer can update payment method
       let portalUrl = 'https://thepsychology.ai'
