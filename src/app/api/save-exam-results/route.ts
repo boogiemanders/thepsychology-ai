@@ -126,7 +126,6 @@ export async function POST(request: NextRequest) {
             .update({
               completed: true,
               completed_at: new Date().toISOString(),
-              exam_result_id: data.id,
             })
             .eq('id', assignmentId)
 
