@@ -18,7 +18,7 @@ import {
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb'
 import { supabase } from '@/lib/supabase'
-import { extractOptionLetter } from '@/lib/option-letter'
+import { extractOptionLetter, stripOptionLetterPrefix } from '@/lib/option-letter'
 
 interface CompletedExam {
   assignmentId: string
@@ -251,7 +251,7 @@ export default function ReviewExamsPage() {
                                                 : 'border-border bg-background'
                                             }`}
                                           >
-                                            <span className="font-semibold">{optionLetter}.</span> {option}
+                                            <span className="font-semibold">{optionLetter}.</span> {stripOptionLetterPrefix(option)}
                                             {isCorrect && (
                                               <Badge className="ml-2 bg-green-600">Correct Answer</Badge>
                                             )}
@@ -348,7 +348,7 @@ export default function ReviewExamsPage() {
                                                 : 'border-border bg-background'
                                             }`}
                                           >
-                                            <span className="font-semibold">{optionLetter}.</span> {option}
+                                            <span className="font-semibold">{optionLetter}.</span> {stripOptionLetterPrefix(option)}
                                             {isCorrect && (
                                               <Badge className="ml-2 bg-green-600">Correct Answer</Badge>
                                             )}

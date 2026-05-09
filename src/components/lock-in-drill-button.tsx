@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
-import { extractOptionLetter } from "@/lib/option-letter"
+import { extractOptionLetter, stripOptionLetterPrefix } from "@/lib/option-letter"
 
 type LockInDrillButtonProps = {
   topicName: string
@@ -244,7 +244,7 @@ export function LockInDrillButton(props: LockInDrillButtonProps) {
                         disabled={revealed}
                       >
                         <span className="mr-2 font-mono">{letter}.</span>
-                        <span>{option}</span>
+                        <span>{stripOptionLetterPrefix(option)}</span>
                       </Button>
                     )
                   })}

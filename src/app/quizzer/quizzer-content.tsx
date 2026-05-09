@@ -30,7 +30,7 @@ import { QuestionFeedbackButton } from '@/components/question-feedback-button'
 import { InlineLessonRating } from '@/components/topic-teacher/inline-lesson-rating'
 import { computeQuestionKeyClient } from '@/lib/question-key-client'
 import { isQuizPass } from '@/lib/quiz-passing'
-import { extractOptionLetter } from '@/lib/option-letter'
+import { extractOptionLetter, shuffleQuestion, stripOptionLetterPrefix } from '@/lib/option-letter'
 import { RECOVER_RECOMMENDATION_HOUR_KEY } from '@/lib/recover'
 import {
   Breadcrumb,
@@ -105,11 +105,6 @@ const escapeHtml = (value: string): string => {
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#39;')
 }
-
-/** Strip leading letter prefix like "A. " or "D. " from option text to avoid
- *  doubling when the renderer already prepends its own A/B/C/D label. */
-const stripOptionLetterPrefix = (text: string): string =>
-  text.replace(/^[A-Da-d]\.\s*/, '')
 
 const normalizeQuestionText = (value: string): string => {
   return value
@@ -840,11 +835,15 @@ export function QuizzerContent() {
         const questionsData: QuizQuestion[] = Array.isArray(data.questions) ? data.questions : []
         const domainId: string | null = data.domainId ?? null
 
-        const questions = shuffleArray(questionsData).map((q, idx) => ({
-          ...q,
-          options: shuffleArray(q.options),
-          id: idx,
-        }))
+        const questions = shuffleArray(questionsData).map((q, idx) => {
+          const shuffled = shuffleQuestion(q.options, q.correctAnswer)
+          return {
+            ...q,
+            options: shuffled.options,
+            correctAnswer: shuffled.correctAnswer,
+            id: idx,
+          }
+        })
 
         return { questions, domainId }
       }
@@ -886,16 +885,19 @@ export function QuizzerContent() {
 
           const retryQuestions: GeneratedQuestion[] = shuffleArray(eligibleWrong)
             .slice(0, TOTAL_QUESTIONS)
-            .map((wa) => ({
-              id: 0,
-              question: wa.question,
-              options: shuffleArray([...(wa.options ?? [])]),
-              correctAnswer: wa.correctAnswer,
-              explanation: wa.explanation ?? '',
-              relatedSections: wa.relatedSections || [],
-              isScored: wa.isScored !== false,
-              __source: 'wrong',
-            }))
+            .map((wa) => {
+              const shuffled = shuffleQuestion([...(wa.options ?? [])], wa.correctAnswer)
+              return {
+                id: 0,
+                question: wa.question,
+                options: shuffled.options,
+                correctAnswer: shuffled.correctAnswer,
+                explanation: wa.explanation ?? '',
+                relatedSections: wa.relatedSections || [],
+                isScored: wa.isScored !== false,
+                __source: 'wrong' as const,
+              }
+            })
 
           const assembled: GeneratedQuestion[] = [...retryQuestions]
           const candidatesScored: GeneratedQuestion[] = []
@@ -987,15 +989,18 @@ export function QuizzerContent() {
 
           const finalQuestions = shuffleArray(assembled)
             .slice(0, TOTAL_QUESTIONS)
-            .map((q, idx) => ({
-              id: idx,
-              question: q.question,
-              options: shuffleArray(q.options),
-              correctAnswer: q.correctAnswer,
-              explanation: q.explanation,
-              relatedSections: q.relatedSections || [],
-              isScored: q.isScored !== false,
-            })) as QuizQuestion[]
+            .map((q, idx) => {
+              const shuffled = shuffleQuestion(q.options, q.correctAnswer)
+              return {
+                id: idx,
+                question: q.question,
+                options: shuffled.options,
+                correctAnswer: shuffled.correctAnswer,
+                explanation: q.explanation,
+                relatedSections: q.relatedSections || [],
+                isScored: q.isScored !== false,
+              }
+            }) as QuizQuestion[]
 
           setQuestions(finalQuestions)
           setEffectiveDomain(fetchedDomainId ?? domain ?? null)

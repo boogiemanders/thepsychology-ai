@@ -8,6 +8,7 @@ import { INITIAL_RECOVER_ASSISTANT_MESSAGE } from '@/lib/recover'
 import fs from 'node:fs'
 import path from 'node:path'
 import { sanitizeOpenAIApiKey } from '@/lib/openai-api-key'
+import { shuffleQuestion, extractOptionLetter, stripOptionLetterPrefix } from '@/lib/option-letter'
 import { logUsageEvent } from '@/lib/usage-events'
 import { checkSubscriptionAccess } from '@/lib/subscription-server'
 import { SupabaseClient } from '@supabase/supabase-js'
@@ -380,7 +381,6 @@ function buildInlineQuiz(topicName: string, domainId: string | undefined, count:
   if (validQuestions.length === 0) return null
 
   const selected = shuffleArray(validQuestions).slice(0, count)
-  const labels = ['A', 'B', 'C', 'D']
 
   const questionBlocks: string[] = []
   const answerBlocks: string[] = []
@@ -389,13 +389,12 @@ function buildInlineQuiz(topicName: string, domainId: string | undefined, count:
     const q: TopicQuestion = selected[i]
     const stem = q.stem || q.question || ''
     const correctAnswer = q.answer || q.correct_answer || ''
-    const shuffledOptions = shuffleArray(q.options ?? [])
-    const correctIndex = shuffledOptions.findIndex((opt: string) => opt === correctAnswer)
-    const correctLabel = correctIndex >= 0 ? labels[correctIndex] : '?'
+    const shuffled = shuffleQuestion(q.options ?? [], correctAnswer)
+    const correctLabel = extractOptionLetter(shuffled.correctAnswer) || '?'
 
-    const optionLines = shuffledOptions
+    const optionLines = shuffled.options
       .slice(0, 4)
-      .map((opt: string, idx: number) => `- ${labels[idx]}) ${opt}`)
+      .map((opt: string) => `- ${extractOptionLetter(opt)}) ${stripOptionLetterPrefix(opt)}`)
       .join('\n')
 
     questionBlocks.push(`**${i + 1}.** ${stem}\n${optionLines}`)

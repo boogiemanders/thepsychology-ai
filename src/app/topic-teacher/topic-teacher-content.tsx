@@ -65,7 +65,7 @@ import {
   type HastNode,
 } from '@/lib/rehype-read-along'
 import { TopicTeacherTourProvider, useTopicTeacherTour } from '@/components/onboarding/TopicTeacherTourProvider'
-import { extractOptionLetter } from '@/lib/option-letter'
+import { extractOptionLetter, stripOptionLetterPrefix } from '@/lib/option-letter'
 
 interface Message {
   role: 'user' | 'assistant'
@@ -2908,7 +2908,7 @@ export function TopicTeacherContent() {
     const index = options.findIndex((option) => option === answerText)
     if (index < 0) return answerText
     const letter = extractOptionLetter(answerText) || String.fromCharCode(65 + index)
-    return `${letter}. ${answerText}`
+    return `${letter}. ${stripOptionLetterPrefix(answerText)}`
   }
 
   const labelsMatch = (headerText: string, sectionName: string): boolean => {
@@ -4556,7 +4556,7 @@ export function TopicTeacherContent() {
                                   {optionLetter}.
                                 </span>
                                 <span className="break-words">
-                                  {option}
+                                  {stripOptionLetterPrefix(option)}
                                   {isCorrect && (
                                     <span className="font-semibold ml-2">✓ Correct</span>
                                   )}
@@ -4638,7 +4638,7 @@ export function TopicTeacherContent() {
                                 {optionLetter}.
                               </span>
                               <span className="break-words">
-                                {option}
+                                {stripOptionLetterPrefix(option)}
                                 {isCorrect && (
                                   <span className="font-semibold ml-2">✓ Correct</span>
                                 )}

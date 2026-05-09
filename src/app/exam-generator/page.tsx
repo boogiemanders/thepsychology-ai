@@ -33,7 +33,7 @@ import { QuestionFeedbackButton } from '@/components/question-feedback-button'
 import { RecoverNudge } from '@/components/recover-nudge'
 import { supabase } from '@/lib/supabase'
 import { getEntitledSubscriptionTier } from '@/lib/subscription-utils'
-import { extractOptionLetter } from '@/lib/option-letter'
+import { extractOptionLetter, stripOptionLetterPrefix } from '@/lib/option-letter'
 
 interface Question {
   id: number
@@ -1960,7 +1960,7 @@ export default function ExamGeneratorPage() {
                               {textFormats[currentQuestion]?.options?.[idx] ? (
                                 <span dangerouslySetInnerHTML={{ __html: textFormats[currentQuestion].options[idx] }} />
                               ) : (
-                                option
+                                stripOptionLetterPrefix(option)
                               )}
                             </div>
                           </div>

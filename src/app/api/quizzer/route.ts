@@ -5,6 +5,7 @@ import { loadFullTopicContent } from '@/lib/topic-content-manager'
 import { deriveTopicMetaFromSourceFile } from '@/lib/topic-source-utils'
 import { logUsageEvent } from '@/lib/usage-events'
 import { getCaseQuestionsForTopic } from '@/lib/case-bank'
+import { shuffleQuestion } from '@/lib/option-letter'
 
 const client = new Anthropic({
   apiKey: process.env.ANTHROPIC_API_KEY,
@@ -231,16 +232,17 @@ function buildQuizFromLocalQuestions(topicName: string, domain?: string): { ques
   }
 
   const questions = selected.map((q, idx) => {
-    const baseOptions = shuffleArray(
-      (Array.isArray(q.options) ? q.options : []).filter((opt) => typeof opt === 'string' && opt.trim().length > 0)
+    const sourceOptions = (Array.isArray(q.options) ? q.options : []).filter(
+      (opt) => typeof opt === 'string' && opt.trim().length > 0,
     )
-    const correctAnswer = q.answer ?? q.correct_answer ?? baseOptions[0]
+    const sourceCorrect = q.answer ?? q.correct_answer ?? sourceOptions[0]
+    const shuffled = shuffleQuestion(sourceOptions, sourceCorrect)
 
     const question = {
       id: idx + 1,
       question: q.stem ?? q.question ?? '',
-      options: baseOptions,
-      correctAnswer,
+      options: shuffled.options,
+      correctAnswer: shuffled.correctAnswer,
       explanation: q.explanation ?? '',
       relatedSections: q.relatedSections && q.relatedSections.length > 0 ? q.relatedSections : [derivedTopicName],
       isScored: !unscoredIndices.has(idx),

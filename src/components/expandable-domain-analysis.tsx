@@ -15,7 +15,7 @@ import { QuestionFeedbackButton } from '@/components/question-feedback-button'
 import { useAuth } from '@/context/auth-context'
 import { getEntitledSubscriptionTier } from '@/lib/subscription-utils'
 import { isTopicAccessible } from '@/lib/free-tier-limits'
-import { extractOptionLetter } from '@/lib/option-letter'
+import { extractOptionLetter, stripOptionLetterPrefix } from '@/lib/option-letter'
 
 interface Question {
   id: number
@@ -235,7 +235,7 @@ export function ExpandableDomainAnalysis({
     const optionIndex = question.options.findIndex((opt) => opt === answer)
     if (optionIndex === -1) return answer
     const optionLetter = extractOptionLetter(answer) || String.fromCharCode(65 + optionIndex)
-    return `${optionLetter}. ${answer}`
+    return `${optionLetter}. ${stripOptionLetterPrefix(answer)}`
   }
 
   const getLessonLinkInfo = (question: Question) => {
@@ -522,7 +522,7 @@ export function ExpandableDomainAnalysis({
                                             >
                                               <span className="font-semibold flex-shrink-0">{optionLetter}.</span>
                                               <span className="break-words">
-                                                {option}
+                                                {stripOptionLetterPrefix(option)}
                                                 {isCorrect && <span className="font-semibold ml-2">✓ Correct</span>}
                                                 {isSelected && !isCorrect && (
                                                   <span className="font-semibold ml-2">✗ Your answer</span>
@@ -880,7 +880,7 @@ export function ExpandableDomainAnalysis({
                                               {optionLetter}.
                                             </span>
                                             <span className="break-words">
-                                              {option}
+                                              {stripOptionLetterPrefix(option)}
                                               {isCorrect && (
                                                 <span className="font-semibold ml-2">✓ Correct</span>
                                               )}
