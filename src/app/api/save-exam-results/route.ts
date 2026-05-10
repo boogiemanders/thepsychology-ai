@@ -89,7 +89,16 @@ export async function POST(request: NextRequest) {
         .single()
 
       if (error) {
+        // Don't silently fall back to the in-memory dev store when Supabase is
+        // configured. The fallback resultId won't survive serverless cold
+        // starts, and the client wipes its paused-exam localStorage on
+        // success. Surface the failure so the client can keep paused state
+        // and let the user retry.
         console.error('Error saving exam results to Supabase:', error)
+        return NextResponse.json(
+          { error: 'Failed to save exam results to database. Your progress is preserved. Please try submitting again.' },
+          { status: 500 }
+        )
       } else {
         resultId = data.id
 

@@ -105,6 +105,7 @@ export default function ExamGeneratorPage() {
   const [isSavingResults, setIsSavingResults] = useState(false)
   const [isPaused, setIsPaused] = useState(false)
   const [hasPausedExam, setHasPausedExam] = useState(false)
+  const [lastExamWasSubmitted, setLastExamWasSubmitted] = useState(false)
   const [showQuestionNav, setShowQuestionNav] = useState(false)
   const [isReviewMode, setIsReviewMode] = useState(false)
   const [shouldScrollToStep2, setShouldScrollToStep2] = useState(false)
@@ -759,8 +760,22 @@ export default function ExamGeneratorPage() {
         throw new Error(data?.error || 'Failed to save exam results')
       }
 
-      // Clear paused exam state since exam is now completed
-      localStorage.removeItem('pausedExamState')
+      // Mark paused state as submitted (don't delete it yet) so that if
+      // anything goes wrong post-submit (auth bounce, /prioritize render
+      // error, browser crash), the user has a recovery path back to their
+      // results instead of an empty dashboard.
+      try {
+        const existing = localStorage.getItem('pausedExamState')
+        if (existing) {
+          const parsed = JSON.parse(existing)
+          parsed.submittedResultId = data.resultId
+          parsed.submittedAt = new Date().toISOString()
+          localStorage.setItem('pausedExamState', JSON.stringify(parsed))
+        }
+      } catch {
+        // If storage fails, fall back to the old behavior.
+        localStorage.removeItem('pausedExamState')
+      }
       setHasPausedExam(false)
 
       // Navigate with just the result ID (no more URI_TOO_LONG!)
@@ -768,9 +783,11 @@ export default function ExamGeneratorPage() {
     } catch (error) {
       console.error('Error saving exam results:', error)
       if (error instanceof DOMException && error.name === 'AbortError') {
-        setError('Saving took too long. Please check your connection and try submitting again.')
+        setError('Saving took too long. Your progress is preserved. Please check your connection and try submitting again.')
+      } else if (error instanceof Error && error.message) {
+        setError(error.message)
       } else {
-        setError('Failed to save exam results. Please try again.')
+        setError('Failed to save exam results. Your progress is preserved. Please try submitting again.')
       }
       setIsSavingResults(false)
     }
@@ -786,6 +803,13 @@ export default function ExamGeneratorPage() {
 
     try {
       const state = JSON.parse(pausedState)
+      // If this exam was already submitted, route to its result page instead
+      // of letting the user "resume" a finished exam (which would create a
+      // duplicate row on re-submit).
+      if (state.submittedResultId) {
+        router.push(`/prioritize?id=${state.submittedResultId}`)
+        return
+      }
       // Restore all exam state
       setExamType(state.examType)
       setMode(state.mode)
@@ -814,13 +838,16 @@ export default function ExamGeneratorPage() {
         const state = JSON.parse(pausedState)
         // Just detect the paused exam, don't auto-restore
         setHasPausedExam(true)
+        setLastExamWasSubmitted(Boolean(state.submittedResultId))
       } catch (error) {
         console.error('Failed to parse paused exam:', error)
         localStorage.removeItem('pausedExamState')
         setHasPausedExam(false)
+        setLastExamWasSubmitted(false)
       }
     } else if (!pausedState) {
       setHasPausedExam(false)
+      setLastExamWasSubmitted(false)
     }
   }, [isExamStarted])
 
@@ -1290,7 +1317,7 @@ export default function ExamGeneratorPage() {
                     size="sm"
                     className="w-full rounded-none"
                   >
-                    Resume Last Exam
+                    {lastExamWasSubmitted ? 'View Last Exam Results' : 'Resume Last Exam'}
                   </Button>
                 </motion.div>
               )}
