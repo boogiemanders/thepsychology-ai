@@ -9,7 +9,7 @@
         "The researcher must offer participants additional compensation for having been deceived"
       ],
       "answer": "The researcher must debrief participants as early as feasible, explaining the true nature of the study and allowing them to withdraw their data",
-      "explanation": "Standard 8.08 requires that when deception is used in research, psychologists must debrief participants as early as feasible, preferably at the conclusion of their participation. The debriefing must explain the nature and purpose of the deception, and participants should be permitted to withdraw their data if they wish. Option B is wrong because debriefing should occur as soon as feasible for each participant, not delayed until all data collection is finished. Option C is wrong because a formal apology is not required\u2014debriefing with an explanation is the standard. Option D is wrong because additional compensation is not ethically mandated for deception studies.",
+      "explanation": "Standard 8.08 requires that when deception is used in research, psychologists must debrief participants as early as feasible, preferably at the conclusion of their participation. The debriefing must explain the nature and purpose of the deception, and participants should be permitted to withdraw their data if they wish. Option B is wrong because debriefing should occur as soon as feasible for each participant, not delayed until all data collection is finished. Option C is wrong because a formal apology is not required—debriefing with an explanation is the standard. Option D is wrong because additional compensation is not ethically mandated for deception studies.",
       "kn": "KN69",
       "kn_explanation": "Deception in research is an ethical issue in the conduct of research",
       "difficulty": "medium",
@@ -85,27 +85,6 @@
       "inspirationIndex": 19
     },
     {
-      "stem": "Under the Buckley Amendment, what is a student's right regarding their educational records?",
-      "options": [
-        "Students have no rights to access their records.",
-        "Students can request to amend their records if they believe they are inaccurate.",
-        "Students can demand that their records be destroyed after graduation.",
-        "Students can access their records only if they are currently enrolled."
-      ],
-      "answer": "Students can request to amend their records if they believe they are inaccurate.",
-      "explanation": "The correct answer reflects the rights granted under the Buckley Amendment, which allows students to request amendments to their records. The lesson supports this by stating that students have rights concerning their educational records. The other options misrepresent students' rights under the amendment.",
-      "kn": "KN7",
-      "kn_explanation": "This KN code applies as it pertains to privacy protection of student records under the Buckley Amendment.",
-      "difficulty": "medium",
-      "quality_comment": "The question is clear and tests understanding of student rights regarding educational records.",
-      "suggestedLesson": "8-standards-7-8",
-      "suggestedParagraph": "## The Foundation: Base Your Conclusions on Solid Ground",
-      "lessonExcerpt": "Students have the right to request to amend their records if they believe they are inaccurate.",
-      "needsReview": false,
-      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 6
-    },
-    {
       "stem": "When a psychologist suspects child abuse based on a disclosure from a child, what is their primary ethical obligation?",
       "options": [
         "To confront the parents about the allegations before taking any action.",
@@ -115,13 +94,13 @@
       ],
       "answer": "To report the suspected abuse to the appropriate authorities as mandated by law.",
       "explanation": "The correct answer reflects the psychologist's legal and ethical obligation to report suspected child abuse to protect the child. The other options either delay necessary action or compromise the child's safety.",
-      "kn": "KN5",
-      "kn_explanation": "This KN code applies as it relates to child protection and reporting obligations.",
+      "kn": "KN63",
+      "kn_explanation": "This question is best aligned with KN63 because it tests Laws, statutes, and judicial decisions that affect psychological practice.",
       "difficulty": "hard",
       "quality_comment": "The question effectively tests knowledge of child protection laws and ethical responsibilities.",
-      "suggestedLesson": "8-standards-7-8",
+      "suggestedLesson": "8-standards-3-4",
       "suggestedParagraph": "## Standard 7: Education and Training",
-      "lessonExcerpt": "You must ensure it's accurate and ethical.",
+      "lessonExcerpt": "Mandatory reporting laws require reporting suspected child abuse or neglect to protective services.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 15
@@ -136,13 +115,13 @@
       ],
       "answer": "To report the disclosure to the authorities as required by law.",
       "explanation": "The correct answer reflects the psychologist's legal and ethical obligation to report suspected child abuse to protect the child. The other options either delay necessary action or compromise the child's safety.",
-      "kn": "KN8",
-      "kn_explanation": "This KN code applies as it relates to child protection and reporting obligations.",
+      "kn": "KN63",
+      "kn_explanation": "This question is best aligned with KN63 because it tests Laws, statutes, and judicial decisions that affect psychological practice.",
       "difficulty": "hard",
       "quality_comment": "The question effectively tests knowledge of child protection laws and ethical responsibilities.",
-      "suggestedLesson": "8-standards-7-8",
+      "suggestedLesson": "8-standards-3-4",
       "suggestedParagraph": "## Standard 7: Education and Training",
-      "lessonExcerpt": "You must ensure it's accurate and ethical.",
+      "lessonExcerpt": "Mandatory reporting laws require reporting suspected child abuse or neglect to protective services. You report when you have \"reasonable cause to suspect\". Not when you're certain.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 18
@@ -184,7 +163,7 @@
       "quality_comment": "The question is well-structured and tests a nuanced understanding of authorship ethics.",
       "suggestedLesson": "8-standards-7-8",
       "suggestedParagraph": "## Standard 8: Research and Publication",
-      "lessonExcerpt": "Authorship should reflect significant contributions to the conception, design, execution, or interpretation of the research.",
+      "lessonExcerpt": "Publication credit: Standard 8.12 addresses who gets credit for published work. The principle is simple: Take credit only for work you actually did or substantially contributed to. Author order should reflect the relative contributions of each person involved.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 21
@@ -205,31 +184,10 @@
       "quality_comment": "The question effectively assesses understanding of authorship criteria.",
       "suggestedLesson": "8-standards-7-8",
       "suggestedParagraph": "## Standard 8: Research and Publication",
-      "lessonExcerpt": "Authorship should reflect significant contributions to the conception, design, execution, or interpretation of the research.",
+      "lessonExcerpt": "What counts as substantial contribution? According to the APA Publication Manual: Formulating the problem or hypothesis; Structuring the study design; Organizing and conducting the analysis; Interpreting results",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 24
-    },
-    {
-      "stem": "What should a psychologist do if they receive an unresolved complaint from a student in an academic setting?",
-      "options": [
-        "Ignore the complaint if it seems trivial.",
-        "Address the complaint through established institutional procedures.",
-        "Discuss the complaint with other faculty members immediately.",
-        "Respond to the student with a personal opinion."
-      ],
-      "answer": "Address the complaint through established institutional procedures.",
-      "explanation": "The appropriate response is to follow institutional procedures for addressing complaints, ensuring that the process is formal and fair. Ignoring the complaint or discussing it informally undermines the seriousness of the issue.",
-      "kn": "KN26",
-      "kn_explanation": "This KN code applies as it relates to professional ethics in handling complaints in academia.",
-      "difficulty": "medium",
-      "quality_comment": "The question is relevant and tests knowledge of professional ethics in an academic context.",
-      "suggestedLesson": "8-standards-7-8",
-      "suggestedParagraph": "## Standard 7: Education and Training",
-      "lessonExcerpt": "The lesson does not specifically address unresolved complaints, indicating a gap in coverage.",
-      "needsReview": false,
-      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 26
     },
     {
       "stem": "What ethical requirement must psychology students fulfill regarding their psychotherapy training?",
@@ -289,7 +247,7 @@
       "quality_comment": "Tests the commonly examined distinction between routine advising and substantial intellectual contribution in dissertation authorship. Realistic scenario with plausible distractors.",
       "suggestedLesson": "8-standards-7-8",
       "suggestedParagraph": "## Standard 8: Research and Publication",
-      "lessonExcerpt": "",
+      "lessonExcerpt": "Students must be listed as principal author on articles substantially based on their dissertations, except in exceptional circumstances.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 29

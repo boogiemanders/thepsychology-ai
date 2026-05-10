@@ -16,7 +16,7 @@
       "quality_comment": "Good conceptual question grounded in the SEM formula from the lesson. The lesson clearly shows SEM derived from the SD, implying shared units.",
       "suggestedLesson": "5-items-and-reliability",
       "suggestedParagraph": "## Standard Error of Measurement: Embracing Uncertainty",
-      "lessonExcerpt": "SEM = SD × √(1 - Reliability coefficient)... Example calculation: Test has SD = 15 and reliability = .91, SEM = 15 × √(1 - .91) = 15 × √.09 = 15 × .3 = 4.5",
+      "lessonExcerpt": "Formula: SEM = SD x sqrt(1 - Reliability coefficient). Where SD is the test's standard deviation. Example: Test has SD = 15 and reliability = .91, SEM = 4.5",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 4
@@ -41,27 +41,6 @@
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 7
-    },
-    {
-      "stem": "A psychologist is evaluating a cognitive ability test that has a standard deviation of 15. She notes that the standard error of measurement (SEM) for this test could theoretically range from:",
-      "options": [
-        "0.0 to 1.0",
-        "0.0 to 15",
-        "-15 to +15",
-        "0.0 to 225"
-      ],
-      "answer": "0.0 to 15",
-      "explanation": "The SEM ranges from 0.0 to the standard deviation of the test (SDx). When reliability is perfect (1.0), SEM = SD × √(1-1.0) = 0. When reliability is 0, SEM = SD × √(1-0) = SD. Therefore, for a test with SD = 15, SEM ranges from 0 to 15. Option A (0 to 1.0) confuses SEM range with the range of the reliability coefficient itself. Option C (-15 to +15) incorrectly applies the range of a correlation coefficient. Option D (0 to 225) confuses SEM with variance (SD²).",
-      "kn": "KN29",
-      "kn_explanation": "Standard error of measurement and standard deviation are fundamental psychometric/test characteristics.",
-      "difficulty": "hard",
-      "quality_comment": "Tests understanding of the mathematical relationship between SEM, reliability, and SD — a frequently tested psychometric concept.",
-      "suggestedLesson": "5-items-and-reliability",
-      "suggestedParagraph": "## Standard Error of Measurement: Embracing Uncertainty",
-      "lessonExcerpt": "The standard error of the measurement has a range from 0.0 to SDx.",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 11
     },
     {
       "stem": "A graduate student is studying psychometric principles and reads that the Spearman-Brown prophecy formula is used in split-half reliability to correct for the fact that shorter tests are less reliable. This principle reflects the broader psychometric finding that increasing test length:",
@@ -104,6 +83,69 @@
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 18
+    },
+    {
+      "stem": "What does the Kappa coefficient measure in the context of psychometric assessments?",
+      "options": [
+        "A. The correlation between two tests",
+        "B. The agreement between raters",
+        "C. The internal consistency of a test",
+        "D. The validity of a test"
+      ],
+      "answer": "B. The agreement between raters",
+      "explanation": "Option B is correct because the Kappa coefficient specifically measures the level of agreement between raters beyond chance. Option A refers to correlation, which is different from agreement. Option C pertains to internal consistency, which is not what Kappa measures. Option D relates to validity, which is a separate concept.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and tests knowledge of psychometric concepts.",
+      "suggestedLesson": "5-anxiety-and-ocd",
+      "suggestedParagraph": "## Why Clinical Tests Matter for Your EPPP Success",
+      "lessonExcerpt": "**Cohen's Kappa:** A more sophisticated measure that corrects for chance agreement. It's used when two raters are assigning ratings on a nominal scale",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 27
+    },
+    {
+      "stem": "In psychological testing, what does 'validity' refer to?",
+      "options": [
+        "The consistency of test results over time.",
+        "The degree to which a test measures what it claims to measure.",
+        "The accuracy of test scores in predicting future performance.",
+        "The extent to which a test is free from bias."
+      ],
+      "answer": "The degree to which a test measures what it claims to measure.",
+      "explanation": "Validity refers to the extent to which a test accurately measures what it is intended to measure. The other options describe reliability, predictive accuracy, and bias, which are related but distinct concepts.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it pertains to the understanding of validity in psychological testing.",
+      "difficulty": "medium",
+      "quality_comment": "Re-tagged from 5-clinical-tests by audit 2026-05-09. Lesson excerpt needs regen against 5-items-and-reliability.",
+      "suggestedLesson": "5-items-and-reliability",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "Let's start with the basic framework that underlies most psychological testing: Classical Test Theory (CTT).",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 16
+    },
+    {
+      "stem": "How can increasing the number of test items improve the reliability of psychological testing?",
+      "options": [
+        "By reducing test length",
+        "By increasing variability",
+        "By enhancing item difficulty",
+        "By providing more data points"
+      ],
+      "answer": "By providing more data points",
+      "explanation": "Increasing the number of test items provides more data points, which can lead to a more accurate representation of the test-taker's abilities and reduce the impact of random error. Reducing test length would likely decrease reliability, while increasing variability and enhancing item difficulty do not directly relate to reliability improvements.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
+      "difficulty": "medium",
+      "quality_comment": "The question is well-structured and tests understanding of reliability in testing.",
+      "suggestedLesson": "5-neurodevelopmental",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "Increasing the number of test items can improve the reliability of psychological testing by providing more data points.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 19
     }
   ]
 }

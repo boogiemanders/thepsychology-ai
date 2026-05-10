@@ -9,7 +9,7 @@
         "Males are diagnosed ten times more often than females"
       ],
       "answer": "Males are diagnosed three to four times more often than females",
-      "explanation": "Research consistently shows that males receive ASD diagnoses 3-4 times more often than females. This is one of the most well-established epidemiological findings in developmental psychology. Option A reverses the sex ratio. Option B incorrectly suggests equal rates. Option D exaggerates the male predominance \u2014 while the ratio is significant, it is not as extreme as 10:1.",
+      "explanation": "Research consistently shows that males receive ASD diagnoses 3-4 times more often than females. This is one of the most well-established epidemiological findings in developmental psychology. Option A reverses the sex ratio. Option B incorrectly suggests equal rates. Option D exaggerates the male predominance — while the ratio is significant, it is not as extreme as 10:1.",
       "kn": "KN38",
       "kn_explanation": "The question asks about epidemiological data and prevalence rates of a psychological disorder (ASD), which directly maps to KN38: Constructs of epidemiology and base rates of psychological and behavioral disorders.",
       "difficulty": "easy",
@@ -51,17 +51,269 @@
         "Approximately 8:1, with males dramatically overrepresented across all age groups"
       ],
       "answer": "Approximately 4:1, with males diagnosed approximately four times as often as females",
-      "explanation": "Epidemiological research consistently estimates a male-to-female ratio of approximately 4:1 in ASD diagnoses. This disparity is thought to reflect a combination of genuine biological sex differences in vulnerability and the possibility that females are underdiagnosed because they may camouflage or 'mask' symptoms more effectively\u2014a phenomenon that has gained increased research attention. A 1:1 ratio would imply equal prevalence, which contradicts established epidemiological data. A 2:1 ratio underestimates the disparity documented in population studies. An 8:1 ratio substantially overestimates the difference and is not supported by current community-based research.",
-      "kn": "KN5",
-      "kn_explanation": "ASD epidemiology, including sex ratio in prevalence, is a core diagnostic and assessment concept in the Assessment and Diagnosis domain.",
+      "explanation": "Epidemiological research consistently estimates a male-to-female ratio of approximately 4:1 in ASD diagnoses. This disparity is thought to reflect a combination of genuine biological sex differences in vulnerability and the possibility that females are underdiagnosed because they may camouflage or 'mask' symptoms more effectively—a phenomenon that has gained increased research attention. A 1:1 ratio would imply equal prevalence, which contradicts established epidemiological data. A 2:1 ratio underestimates the disparity documented in population studies. An 8:1 ratio substantially overestimates the difference and is not supported by current community-based research.",
+      "kn": "KN38",
+      "kn_explanation": "This question is best aligned with KN38 because it tests Constructs of epidemiology and base rates of psychological and behavioral disorders.",
       "difficulty": "medium",
       "quality_comment": "Focused factual question with well-spaced numerical distractors spanning above and below the correct ratio; tests a frequently examined EPPP epidemiological fact.",
       "suggestedLesson": "5-neurodevelopmental",
       "suggestedParagraph": "## Autism Spectrum Disorder Epidemiology",
-      "lessonExcerpt": "Not found in provided lesson content. Needs review.",
+      "lessonExcerpt": "Males receive diagnoses three to four times more often than females.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 13
+    },
+    {
+      "stem": "What is a common comorbidity associated with Tourette's disorder?",
+      "options": [
+        "Major depressive disorder",
+        "Obsessive-compulsive disorder",
+        "Bipolar disorder",
+        "Schizophrenia"
+      ],
+      "answer": "Obsessive-compulsive disorder",
+      "explanation": "The correct answer is 'Obsessive-compulsive disorder' as it is frequently found in individuals with Tourette's disorder. The other options are less commonly associated with Tourette's, making them incorrect.",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of comorbid conditions related to Tourette's disorder.",
+      "suggestedLesson": "5-personality",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "The lesson does not specifically address Tourette's disorder comorbidities, indicating a need for review.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 14
+    },
+    {
+      "stem": "Which of the following characteristics is most commonly associated with autism spectrum disorder?",
+      "options": [
+        "A. High intelligence and advanced verbal skills",
+        "B. Difficulty with social interactions and communication",
+        "C. Preference for solitary play over group activities",
+        "D. Strong interest in a wide range of topics"
+      ],
+      "answer": "B. Difficulty with social interactions and communication",
+      "explanation": "Option B is correct because individuals with autism spectrum disorder often experience challenges in social interactions and communication. Option A is incorrect as high intelligence is not a defining characteristic of autism. Option C, while sometimes true, does not encompass the broader social difficulties faced by individuals with autism. Option D is misleading as strong interests can be a characteristic, but it does not define the disorder itself.",
+      "kn": "KN32",
+      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of autism characteristics.",
+      "suggestedLesson": "5-can-tests-predict",
+      "suggestedParagraph": "## Why Clinical Tests Matter for Your EPPP Success",
+      "lessonExcerpt": "**Incremental validity** asks: Does this new predictor improve prediction accuracy beyond what we already have?",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 21
+    },
+    {
+      "stem": "Which of the following strengths is commonly observed in children with autism spectrum disorder?",
+      "options": [
+        "A. Exceptional verbal communication skills",
+        "B. Advanced mathematical abilities",
+        "C. Intense focus on specific interests",
+        "D. High levels of social adaptability"
+      ],
+      "answer": "C. Intense focus on specific interests",
+      "explanation": "Option C is correct because children with autism spectrum disorder often exhibit an intense focus on specific interests, which can be a strength. Option A is incorrect as not all children with autism have exceptional verbal skills. Option B, while possible, is not universally applicable. Option D is misleading as social adaptability is often a challenge for these children.",
+      "kn": "KN32",
+      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of strengths in children with autism.",
+      "suggestedLesson": "5-psychosis",
+      "suggestedParagraph": "## Why Clinical Tests Matter for Your EPPP Success",
+      "lessonExcerpt": "Children with autism spectrum disorder often exhibit an intense focus on specific interests.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 30
+    },
+    {
+      "stem": "What is a significant challenge in diagnosing ADHD in young children?",
+      "options": [
+        "The symptoms can overlap with other developmental disorders.",
+        "ADHD symptoms are often more pronounced in structured environments.",
+        "Parents may have difficulty recognizing symptoms.",
+        "Standardized tests are not available for young children."
+      ],
+      "answer": "The symptoms can overlap with other developmental disorders.",
+      "explanation": "One of the significant challenges in diagnosing ADHD in young children is that its symptoms can overlap with those of other developmental disorders, making accurate diagnosis difficult. The other options, while relevant, do not capture the primary challenge in diagnosis.",
+      "kn": "KN30",
+      "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
+      "difficulty": "hard",
+      "quality_comment": "The question is well-structured and tests knowledge of ADHD diagnosis challenges.",
+      "suggestedLesson": "5-what-tests-measure",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "The symptoms of ADHD can overlap with those of other developmental disorders, complicating diagnosis.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 20
+    },
+    {
+      "stem": "Which of the following statements best describes the interpretation of IQ and achievement test scores in relation to specific learning disorder?",
+      "options": [
+        "IQ scores are the sole determinant of a specific learning disorder diagnosis.",
+        "Achievement test scores are more indicative of a specific learning disorder than IQ scores.",
+        "Both IQ and achievement test scores are irrelevant in diagnosing specific learning disorders.",
+        "IQ scores must always be higher than achievement test scores to diagnose a specific learning disorder."
+      ],
+      "answer": "Achievement test scores are more indicative of a specific learning disorder than IQ scores.",
+      "explanation": "Achievement test scores provide a clearer picture of a person's academic skills and difficulties, which are central to diagnosing specific learning disorders. The other options incorrectly emphasize the primacy of IQ scores or misinterpret the relationship between IQ and achievement in this context.",
+      "kn": "KN30",
+      "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of the relationship between IQ and achievement tests in diagnosing specific learning disorders.",
+      "suggestedLesson": "5-mood",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "People with specific learning disorders typically have average to above-average IQ but elevated rates of other problems. ADHD is the most common comorbid psychiatric disorder.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 21
+    },
+    {
+      "stem": "Which of the following coexisting diagnoses is most commonly associated with specific learning disorder?",
+      "options": [
+        "Bipolar disorder",
+        "Generalized anxiety disorder",
+        "Attention-deficit/hyperactivity disorder (ADHD)",
+        "Obsessive-compulsive disorder"
+      ],
+      "answer": "Attention-deficit/hyperactivity disorder (ADHD)",
+      "explanation": "ADHD is frequently comorbid with specific learning disorders, as both can affect academic performance and attention. The other disorders listed do not have the same level of common association with specific learning disorders.",
+      "kn": "KN30",
+      "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of comorbid conditions with specific learning disorders.",
+      "suggestedLesson": "5-mood",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "ADHD is frequently comorbid with specific learning disorders.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 23
+    },
+    {
+      "stem": "What is the estimated prevalence of ADHD among children in the United States?",
+      "options": [
+        "A. 1-3%",
+        "B. 5-10%",
+        "C. 10-15%",
+        "D. 20-25%"
+      ],
+      "answer": "B. 5-10%",
+      "explanation": "Option B is correct as studies estimate that the prevalence of ADHD among children in the United States falls within the 5-10% range. Options A, C, and D are incorrect as they underestimate or overestimate the prevalence.",
+      "kn": "KN30",
+      "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of ADHD prevalence.",
+      "suggestedLesson": "5-mmpi",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "These were developed through **empirical criterion keying**, which is a fancy way of saying the test creators gave hundreds of questions to people with specific diagnoses and people without mental health issues, then kept only the questions that reliably told the groups apart.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 9
+    },
+    {
+      "stem": "Which of the following is a key feature in diagnosing autism spectrum disorder related to social communication difficulties?",
+      "options": [
+        "Repetitive behaviors",
+        "Restricted interests",
+        "Deficits in social-emotional reciprocity",
+        "Sensory sensitivities"
+      ],
+      "answer": "Deficits in social-emotional reciprocity",
+      "explanation": "Deficits in social-emotional reciprocity are a core feature of autism spectrum disorder, specifically relating to social communication difficulties. While repetitive behaviors and restricted interests are also characteristics of autism, they do not directly pertain to social communication. Sensory sensitivities are additional features but not central to the diagnosis.",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
+      "difficulty": "hard",
+      "quality_comment": "The question is challenging and directly assesses knowledge of autism spectrum disorder diagnostic criteria.",
+      "suggestedLesson": "5-substance-misuse",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "Key features in diagnosing autism spectrum disorder include deficits in social-emotional reciprocity.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 13
+    },
+    {
+      "stem": "What is the primary criterion for diagnosing intellectual disability related to adaptive functioning?",
+      "options": [
+        "IQ score below 70",
+        "Onset during developmental period",
+        "Deficits in adaptive functioning",
+        "Cultural considerations"
+      ],
+      "answer": "Deficits in adaptive functioning",
+      "explanation": "Deficits in adaptive functioning are crucial for diagnosing intellectual disability, as they reflect the individual's ability to cope with everyday demands. While an IQ score below 70 is a common criterion, it is not sufficient alone without considering adaptive functioning. Onset during the developmental period is also necessary but does not directly address the adaptive functioning aspect.",
+      "kn": "KN30",
+      "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of the criteria for intellectual disability.",
+      "suggestedLesson": "5-neurodevelopmental",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "The primary criterion for diagnosing intellectual disability includes deficits in adaptive functioning.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 14
+    },
+    {
+      "stem": "How is childhood stuttering typically diagnosed?",
+      "options": [
+        "Through self-report questionnaires from parents.",
+        "By observing speech patterns and frequency of disfluencies.",
+        "Using standardized intelligence tests.",
+        "Through projective tests assessing personality."
+      ],
+      "answer": "By observing speech patterns and frequency of disfluencies.",
+      "explanation": "Childhood stuttering is diagnosed primarily through direct observation of speech patterns and the frequency of disfluencies, rather than through self-reports or personality assessments. The other options do not provide the appropriate methods for diagnosing stuttering.",
+      "kn": "KN31",
+      "kn_explanation": "This question is best aligned with KN31 because it tests Assessment methods and their strengths and limitations (e.g., self-report, multi-informant reports, psychophysiological measures, work samples, assessment centers, direct observation, structured and semi-structured interviews).",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and assesses knowledge of stuttering diagnosis.",
+      "suggestedLesson": "5-interpreting-scores",
+      "suggestedParagraph": "## Why Clinical Tests Matter for Your EPPP Success",
+      "lessonExcerpt": "Banding groups scores into ranges based on the test's standard error of measurement. All scores within a band are considered statistically equivalent.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 20
+    },
+    {
+      "stem": "Which of the following is NOT a criterion for diagnosing autism spectrum disorder (ASD)?",
+      "options": [
+        "Persistent deficits in social communication and interaction.",
+        "Restricted, repetitive patterns of behavior, interests, or activities.",
+        "Significant impairment in cognitive functioning.",
+        "Symptoms must be present in early developmental periods."
+      ],
+      "answer": "Significant impairment in cognitive functioning.",
+      "explanation": "While cognitive functioning can be affected in individuals with ASD, it is not a required criterion for diagnosis. The other options are all essential criteria for diagnosing ASD.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it relates to the diagnostic criteria for autism spectrum disorder.",
+      "difficulty": "hard",
+      "quality_comment": "Re-tagged from 5-clinical-tests by audit 2026-05-09. Lesson excerpt needs regen against 5-neurodevelopmental.",
+      "suggestedLesson": "5-neurodevelopmental",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "Research reveals something fascinating about ASD: children with autism process faces differently than neurotypical children.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 23
+    },
+    {
+      "stem": "A 32-year-old adult presents for neuropsychological evaluation requesting clarification of a diagnosis. Records show a DSM-IV-TR diagnosis of Asperger's Disorder made in 2009, documented by deficits in social reciprocity and restricted interests in the absence of clinically significant language or intellectual delays. The evaluating psychologist explains that DSM-5 eliminated Asperger's Disorder as a separate diagnostic category. Which of the following best describes how individuals previously diagnosed with Asperger's Disorder should be classified under DSM-5?",
+      "options": [
+        "Social (Pragmatic) Communication Disorder, because preserved language ability excludes an autism spectrum diagnosis",
+        "Autism Spectrum Disorder with specifiers indicating absence of intellectual impairment and absence of language impairment",
+        "High-Functioning Autism Disorder, which is the DSM-5 replacement for the Asperger's Disorder category",
+        "Unspecified Neurodevelopmental Disorder, pending updated validity evidence for restructured autism criteria"
+      ],
+      "answer": "Autism Spectrum Disorder with specifiers indicating absence of intellectual impairment and absence of language impairment",
+      "explanation": "The DSM-5 collapsed the DSM-IV-TR pervasive developmental disorders (Autistic Disorder, Asperger's Disorder, Childhood Disintegrative Disorder, and PDD-NOS) into a single dimensional diagnosis: Autism Spectrum Disorder. Severity and associated features are communicated via specifiers rather than separate categories. An individual previously diagnosed with Asperger's Disorder—who had preserved language and typical intellectual functioning—would now receive ASD Level 1 with specifiers noting 'without accompanying intellectual impairment' and 'without accompanying language impairment.' Option A is incorrect; Social (Pragmatic) Communication Disorder (SCD) was created for individuals with social communication deficits who do NOT meet ASD criteria (i.e., no restricted/repetitive behaviors); prior Asperger's diagnoses typically included restricted interests qualifying for ASD. Option C is incorrect; 'High-Functioning Autism' is not an official DSM-5 diagnostic term. Option D is incorrect; 'Unspecified Neurodevelopmental Disorder' is used when there is insufficient information to specify a diagnosis, not as a reclassification of established diagnoses.",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
+      "difficulty": "medium",
+      "quality_comment": "Clinically realistic scenario. Tests precise knowledge of DSM-5 restructuring. The SCD distractor is particularly effective as a sophisticated misconception held by many clinicians.",
+      "suggestedLesson": "5-personality",
+      "suggestedParagraph": "## DSM-5 Neurodevelopmental Disorder Classification",
+      "lessonExcerpt": "NOT COVERED: The provided lesson files do not cover Autism Spectrum Disorder diagnosis or the DSM-IV to DSM-5 reclassification of Asperger's Disorder. A dedicated lesson on DSM-5 neurodevelopmental disorders is needed for this content. The file 5-clinical-tests.md does reference ASD in the context of WCST performance ('Poor performance connects to frontal lobe dysfunction and appears in autism spectrum disorder') but does not address diagnostic criteria or classification.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 24
     }
   ]
 }

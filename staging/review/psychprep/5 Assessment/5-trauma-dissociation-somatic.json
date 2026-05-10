@@ -20,6 +20,111 @@
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 1
+    },
+    {
+      "stem": "What is a key diagnostic criterion for acute stress disorder?",
+      "options": [
+        "Symptoms must last for more than one month.",
+        "The individual must experience dissociative symptoms.",
+        "The event must involve direct exposure to death.",
+        "The symptoms must cause significant impairment in social functioning."
+      ],
+      "answer": "The individual must experience dissociative symptoms.",
+      "explanation": "A key diagnostic criterion for acute stress disorder is the presence of dissociative symptoms following exposure to a traumatic event. The other options do not accurately reflect the diagnostic criteria for acute stress disorder.",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses knowledge of diagnostic criteria for acute stress disorder.",
+      "suggestedLesson": "5-6-evaluating-jobs",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "**Criterion contamination** occurs when the measure is influenced by factors unrelated to actual job performance.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 18
+    },
+    {
+      "stem": "What is a primary cause of dissociative identity disorder often linked to its development?",
+      "options": [
+        "Genetic predisposition",
+        "Childhood trauma",
+        "Neurological deficits",
+        "Substance abuse"
+      ],
+      "answer": "Childhood trauma",
+      "explanation": "Childhood trauma is the primary cause often linked to the development of dissociative identity disorder, as it can lead to dissociation as a coping mechanism. While genetic predisposition, neurological deficits, and substance abuse may play roles in other disorders, they are not the primary causes of dissociative identity disorder.",
+      "kn": "KN30",
+      "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses knowledge of the causes of dissociative identity disorder.",
+      "suggestedLesson": "5-neurodevelopmental",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "Childhood trauma is a primary cause linked to the development of dissociative identity disorder.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 20
+    },
+    {
+      "stem": "Which of the following best describes self-mutilation as a coping mechanism in trauma survivors?",
+      "options": [
+        "A form of self-expression that enhances emotional regulation.",
+        "A maladaptive behavior used to cope with overwhelming emotional pain.",
+        "A culturally accepted practice for managing stress.",
+        "A therapeutic technique recommended for trauma recovery."
+      ],
+      "answer": "A maladaptive behavior used to cope with overwhelming emotional pain.",
+      "explanation": "Self-mutilation is often a maladaptive behavior that trauma survivors may use to cope with intense emotional distress, rather than a healthy or therapeutic practice. The other options either mischaracterize self-mutilation or suggest it is beneficial, which is not supported by the literature.",
+      "kn": "KN30",
+      "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of a complex psychological concept.",
+      "suggestedLesson": "5-what-tests-measure",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "One of the most elegant ways to assess construct validity is the multitrait-multimethod matrix, developed by Campbell and Fiske.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 21
+    },
+    {
+      "stem": "When diagnosing social phobia, which of the following behaviors would be considered factitious?",
+      "options": [
+        "Exaggerating symptoms to gain attention.",
+        "Avoiding social situations due to fear of embarrassment.",
+        "Seeking reassurance from others about social performance.",
+        "Engaging in compulsive behaviors to manage anxiety."
+      ],
+      "answer": "Exaggerating symptoms to gain attention.",
+      "explanation": "Factitious behavior involves intentionally producing or exaggerating symptoms for attention or other external incentives. The other options describe behaviors associated with social phobia but do not involve factitious behavior.",
+      "kn": "KN30",
+      "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively distinguishes between factitious behavior and typical symptoms of social phobia.",
+      "suggestedLesson": "5-psychosis",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "Exaggerating symptoms to gain attention is considered factitious behavior.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 29
+    },
+    {
+      "stem": "A 5-year-old child recently placed with foster parents after removal from a severely neglectful home readily approaches unfamiliar adults at the park, climbs onto strangers' laps, and agrees to leave with people she has just met without hesitation or glancing back at her caregiver. She shows no stranger wariness and initiates physical contact indiscriminately. The foster parents report this behavior has been consistent across multiple settings since placement. According to DSM-5, which of the following etiological conditions must be present to diagnose Disinhibited Social Engagement Disorder (DSED)?",
+      "options": [
+        "A co-occurring diagnosis of Reactive Attachment Disorder established prior to the current placement",
+        "Documented traumatic exposure to domestic violence or abuse before age 3",
+        "A history of social neglect or other forms of pathogenic care reflecting insufficient caregiving",
+        "Evidence of neurological compromise affecting the orbitofrontal cortex or amygdala"
+      ],
+      "answer": "A history of social neglect or other forms of pathogenic care reflecting insufficient caregiving",
+      "explanation": "DSM-5 Criterion C for Disinhibited Social Engagement Disorder requires that the child experienced a pattern of extremes of insufficient care, which includes social neglect (persistent deprivation of basic emotional needs), repeated changes in primary caregivers, or rearing in settings that severely limit opportunities to form selective attachments (e.g., institutional care). This pathogenic care history is a necessary etiological criterion that distinguishes DSED from disinhibited behavior with other causes. Option A is incorrect; while DSED and RAD can co-occur, a prior RAD diagnosis is not required for DSED. Option B is incorrect; generalized traumatic exposure (e.g., domestic violence, abuse) is not specifically listed in DSM-5 Criterion C—the pathogenic care must involve insufficient caregiving that limits attachment formation. Option D is incorrect; neurological compromise is considered in differential diagnosis but is not a diagnostic criterion for DSED.",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
+      "difficulty": "hard",
+      "quality_comment": "High-quality vignette isolating the etiological criterion. Distractors probe common confusions between DSED/RAD and between different types of early adversity. Appropriate doctoral-level difficulty.",
+      "suggestedLesson": "5-neurodevelopmental",
+      "suggestedParagraph": "## DSM-5 Trauma- and Stressor-Related Disorders",
+      "lessonExcerpt": "NOT COVERED: The provided lesson files do not address Disinhibited Social Engagement Disorder or Reactive Attachment Disorder. A lesson on DSM-5 trauma- and stressor-related disorders diagnoses is needed for this content.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 23
     }
   ]
 }

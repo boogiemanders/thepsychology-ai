@@ -9,7 +9,7 @@
         "Early maturation is associated with equivalent increases in self-esteem for both boys and girls"
       ],
       "answer": "Early maturation is associated with predominantly negative outcomes for girls but mixed outcomes for boys",
-      "explanation": "Research clearly demonstrates that early puberty has different effects by gender. For boys, early maturation produces a mixed picture\u2014positive effects include higher self-esteem, greater social maturity, more popularity, and better athletic skills, while negative effects include higher alcohol use, more antisocial behavior, and precocious sexual behavior. For girls, early maturation is predominantly negative, including lower self-esteem and popularity, poorer academic achievement, higher risk for precocious sexual behavior, and increased rates of substance use, depression, anxiety, eating disorders, and disruptive behavior. Options A and D incorrectly suggest positive or equivalent outcomes for girls. Option C reverses the gender pattern.",
+      "explanation": "Research clearly demonstrates that early puberty has different effects by gender. For boys, early maturation produces a mixed picture—positive effects include higher self-esteem, greater social maturity, more popularity, and better athletic skills, while negative effects include higher alcohol use, more antisocial behavior, and precocious sexual behavior. For girls, early maturation is predominantly negative, including lower self-esteem and popularity, poorer academic achievement, higher risk for precocious sexual behavior, and increased rates of substance use, depression, anxiety, eating disorders, and disruptive behavior. Options A and D incorrectly suggest positive or equivalent outcomes for girls. Option C reverses the gender pattern.",
       "kn": "KN21",
       "kn_explanation": "Puberty timing and its differential psychosocial effects for boys vs girls is a core topic of normal growth and development across the lifespan.",
       "difficulty": "medium",
@@ -43,27 +43,6 @@
       "inspirationIndex": 17
     },
     {
-      "stem": "A newborn infant, when its cheek is stroked, turns its head toward the stimulus and opens its mouth. This reflexive behavior, which is essential for initiating breastfeeding, is known as the:",
-      "options": [
-        "Moro reflex",
-        "Babinski reflex",
-        "Rooting reflex",
-        "Palmar grasp reflex"
-      ],
-      "answer": "Rooting reflex",
-      "explanation": "The rooting reflex causes a neonate to turn its head toward a tactile stimulus on the cheek and open its mouth, facilitating the location of the nipple for breastfeeding. This is one of several survival-oriented neonatal reflexes. The Moro reflex is a startle response involving arm extension and then retraction when the infant feels a sudden loss of support. The Babinski reflex involves fanning of the toes when the sole of the foot is stroked. The palmar grasp reflex involves gripping when an object is placed in the palm. While the rooting reflex helps the infant find the food source, the sucking reflex then enables actual feeding.",
-      "kn": "KN4",
-      "kn_explanation": "Neonatal reflexes are a fundamental topic in Growth and Lifespan Development.",
-      "difficulty": "easy",
-      "quality_comment": "Tests basic knowledge of neonatal reflexes. The lesson discusses reflexive reactions in the sensorimotor stage but does not detail specific reflexes like rooting by name.",
-      "suggestedLesson": "4-body-growth",
-      "suggestedParagraph": "## The Brain's Journey: From Birth Through Adulthood",
-      "lessonExcerpt": "When a baby is born, their brain weighs about 25% of what it will weigh as an adult.",
-      "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 16
-    },
-    {
       "stem": "At the time of birth, a full-term neonate's brain contains approximately what proportion of the neurons it will have in adulthood?",
       "options": [
         "About 25%, with most neurons generated during the first two years",
@@ -72,7 +51,7 @@
         "About 75%, with the remaining neurons generated during adolescent brain maturation"
       ],
       "answer": "Nearly all neurons are present at birth, with postnatal growth driven primarily by synaptogenesis and myelination",
-      "explanation": "The lesson explicitly states that most neurons are already present at birth. Postnatal brain growth\u2014from 25% of adult weight at birth to 80% by age two\u2014is driven not by new neuron creation but by synaptogenesis (forming new connections), dendritic growth (more branches), and myelination (insulating axons to speed neural transmission). The 25% figure refers to brain weight, not neuron count. The options suggesting 50% or 75% of neurons are present at birth incorrectly conflate brain weight with neuron number.",
+      "explanation": "The lesson explicitly states that most neurons are already present at birth. Postnatal brain growth—from 25% of adult weight at birth to 80% by age two—is driven not by new neuron creation but by synaptogenesis (forming new connections), dendritic growth (more branches), and myelination (insulating axons to speed neural transmission). The 25% figure refers to brain weight, not neuron count. The options suggesting 50% or 75% of neurons are present at birth incorrectly conflate brain weight with neuron number.",
       "kn": "KN4",
       "kn_explanation": "This question addresses prenatal and postnatal brain development, a core Growth and Lifespan Development topic.",
       "difficulty": "medium",
@@ -93,7 +72,7 @@
         "Preserved processing speed with decreased fund of information"
       ],
       "answer": "Decreased performance on timed pattern recognition tasks and preserved general knowledge scores",
-      "explanation": "Fluid intelligence involves the ability to solve novel problems, reason abstractly, and process information quickly\u2014capacities that decline with age. Timed pattern recognition is a classic fluid intelligence task. Crystallized intelligence encompasses accumulated knowledge, vocabulary, and learned skills, which remain stable or even increase across much of the lifespan. General knowledge is a crystallized ability. Option A reverses the expected pattern. Option C describes global decline more consistent with dementia. Option D also reverses the expected pattern, as processing speed (a fluid ability) declines while fund of information (crystallized) is preserved.",
+      "explanation": "Fluid intelligence involves the ability to solve novel problems, reason abstractly, and process information quickly—capacities that decline with age. Timed pattern recognition is a classic fluid intelligence task. Crystallized intelligence encompasses accumulated knowledge, vocabulary, and learned skills, which remain stable or even increase across much of the lifespan. General knowledge is a crystallized ability. Option A reverses the expected pattern. Option C describes global decline more consistent with dementia. Option D also reverses the expected pattern, as processing speed (a fluid ability) declines while fund of information (crystallized) is preserved.",
       "kn": "KN4",
       "kn_explanation": "This question addresses cognitive aging and the fluid vs. crystallized intelligence distinction across the lifespan.",
       "difficulty": "hard",
@@ -169,48 +148,6 @@
       "inspirationIndex": 16
     },
     {
-      "stem": "What percentage of a newborn's brain weight is achieved by age two?",
-      "options": [
-        "25%",
-        "50%",
-        "80%",
-        "100%"
-      ],
-      "answer": "80%",
-      "explanation": "The correct answer is 80%, as by age two, a newborn's brain reaches approximately 80% of its adult weight. The other options do not accurately reflect the growth trajectory of the brain during this critical period.",
-      "kn": "KN4",
-      "kn_explanation": "This KN code applies as it relates to neuroscience and brain development.",
-      "difficulty": "medium",
-      "quality_comment": "The question accurately assesses knowledge of early brain development milestones.",
-      "suggestedLesson": "4-body-growth",
-      "suggestedParagraph": "## Early Brain Development: The First Two Years",
-      "lessonExcerpt": "By age two, a newborn's brain weighs about 80% of what it will weigh as an adult.",
-      "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 18
-    },
-    {
-      "stem": "What cognitive changes are commonly associated with aging?",
-      "options": [
-        "Increased processing speed",
-        "Enhanced memory retention",
-        "Decline in executive function",
-        "Improved problem-solving skills"
-      ],
-      "answer": "Decline in executive function",
-      "explanation": "The correct answer is a decline in executive function, which is commonly observed in aging individuals. The other options incorrectly suggest improvements or increases in cognitive abilities that typically decline with age.",
-      "kn": "KN6",
-      "kn_explanation": "This KN code applies as it relates to aging and cognitive changes.",
-      "difficulty": "medium",
-      "quality_comment": "The question accurately assesses knowledge of cognitive changes associated with aging.",
-      "suggestedLesson": "4-body-growth",
-      "suggestedParagraph": "## Adult Brain Changes: The Long Decline",
-      "lessonExcerpt": "Brain weight and volume start gradually decreasing around age 30 due to neuron loss, leading to a decline in executive function.",
-      "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 20
-    },
-    {
       "stem": "At what age do most children typically begin to walk independently, marking a significant milestone in motor development?",
       "options": [
         "6 months",
@@ -220,13 +157,13 @@
       ],
       "answer": "12 months",
       "explanation": "The correct answer is 12 months, as this is the age when most children achieve the milestone of walking independently. The other options are incorrect because walking typically does not occur at 6 months, and while some children may walk by 18 or 24 months, it is not the average milestone age.",
-      "kn": "KN4",
-      "kn_explanation": "This KN code applies as it relates to the understanding of motor development milestones in children.",
+      "kn": "KN21",
+      "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
       "difficulty": "medium",
       "quality_comment": "The question is clear and tests knowledge of a specific developmental milestone.",
       "suggestedLesson": "4-body-growth",
       "suggestedParagraph": "## The Brain's Journey: From Birth Through Adulthood",
-      "lessonExcerpt": "Walking typically occurs around 12 months of age, marking a significant milestone in motor development.",
+      "lessonExcerpt": "They respond to a cheek touch by turning their head toward the touch. That's the rooting reflex.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 21
@@ -304,13 +241,13 @@
       ],
       "answer": "It can cause stunted growth and developmental delays",
       "explanation": "Inadequate nutrition during critical periods can lead to stunted growth and developmental delays, as proper nutrition is essential for physical and cognitive development. The other options incorrectly suggest positive outcomes or no impact at all.",
-      "kn": "KN5",
-      "kn_explanation": "This KN code applies as it relates to physical development and the impact of nutrition.",
+      "kn": "KN21",
+      "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
       "difficulty": "medium",
       "quality_comment": "The question is relevant and tests knowledge on the effects of nutrition on development.",
       "suggestedLesson": "4-body-growth",
       "suggestedParagraph": "## Why Physical Development Matters for Your EPPP Success",
-      "lessonExcerpt": "Understanding how the body and brain develop across the lifespan gives you crucial insight into when certain psychological disorders might emerge.",
+      "lessonExcerpt": "| 10-12 months | Creeps well, cruises furniture, takes independent steps |",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 3
@@ -358,27 +295,6 @@
       "inspirationIndex": 24
     },
     {
-      "stem": "What is the primary characteristic of sexual dimorphism in humans?",
-      "options": [
-        "Differences in height and weight",
-        "Variations in skin color",
-        "Differences in brain structure",
-        "Variations in reproductive anatomy"
-      ],
-      "answer": "Variations in reproductive anatomy",
-      "explanation": "The correct answer is 'Variations in reproductive anatomy', as sexual dimorphism refers to the distinct differences in male and female reproductive systems and secondary sexual characteristics. The other options may reflect differences among individuals but do not specifically pertain to sexual dimorphism.",
-      "kn": "KN6",
-      "kn_explanation": "This KN code applies because it relates to biological development and sexual dimorphism.",
-      "difficulty": "medium",
-      "quality_comment": "The question accurately assesses knowledge of biological differences between sexes.",
-      "suggestedLesson": "4-body-growth",
-      "suggestedParagraph": "## The Brain's Journey: From Birth Through Adulthood",
-      "lessonExcerpt": "Sexual dimorphism refers to the distinct differences in male and female reproductive systems.",
-      "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 6
-    },
-    {
       "stem": "What is a significant health concern regarding HIV infection in older adults?",
       "options": [
         "Increased risk of developing diabetes",
@@ -409,19 +325,19 @@
       ],
       "answer": "Early-maturing boys tend to experience social advantages such as higher peer status, while early-maturing girls are at greater risk for depression, lower self-esteem, and early engagement in risky behaviors",
       "explanation": "The research literature consistently documents an asymmetric pattern: early maturation tends to be advantageous for boys, conferring social prestige, peer admiration, and athletic advantages that translate into higher status. In contrast, early-maturing girls are at elevated risk for depression, disordered eating, lower self-esteem, and earlier onset of sexual activity and substance use. This is partly because early-maturing girls are developmentally out of step with same-age peers, may attract older peer groups, and face unwanted sexualization before they have the psychological resources to manage it. The benefits and risks are clearly asymmetric, not equivalent across genders.",
-      "kn": "KN4",
-      "kn_explanation": "Puberty timing and its differential psychosocial effects fall within Growth and Lifespan Development (Domain 4), addressing physical development and its interaction with social-emotional outcomes.",
+      "kn": "KN22",
+      "kn_explanation": "This question is best aligned with KN22 because it tests Influence of individual-environment interaction on development over time (e.g., the relationship between the individual and the social, academic, work, community environment).",
       "difficulty": "medium",
       "quality_comment": "High-yield EPPP content with clear asymmetric gender findings. Strong distractors including a plausible but incorrect 'equal effects' option.",
       "suggestedLesson": "4-body-growth",
       "suggestedParagraph": "## Sensory Development: How We Experience the World",
-      "lessonExcerpt": "Lesson content on puberty timing and adjustment was in a truncated portion of 4-body-growth.md and could not be confirmed from the provided excerpt.",
+      "lessonExcerpt": "| 10-12 months | Creeps well, cruises furniture, takes independent steps |",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 7
     },
     {
-      "stem": "A gerontologist is reviewing outcome data across a cohort of adults aged 70\u201385. After controlling for physical health status, which factor most consistently predicts positive psychological and functional outcomes in late life according to the research literature on successful aging?",
+      "stem": "A gerontologist is reviewing outcome data across a cohort of adults aged 70–85. After controlling for physical health status, which factor most consistently predicts positive psychological and functional outcomes in late life according to the research literature on successful aging?",
       "options": [
         "Preservation of fluid intelligence and processing speed",
         "Freedom from diagnosable psychiatric conditions throughout adulthood",
@@ -429,7 +345,7 @@
         "Access to sufficient financial resources and preventive healthcare"
       ],
       "answer": "Maintaining meaningful engagement in social and productive activities",
-      "explanation": "Research on successful aging\u2014most notably Rowe and Kahn's model\u2014identifies sustained engagement with life, encompassing both social relationships and productive activity, as the primary distinguishing feature of successful versus usual aging. While avoiding disease and maintaining physical and cognitive function are also components, engagement is consistently the strongest predictor because it captures purpose, connection, and continued contribution. Fluid intelligence naturally declines with age and cannot be preserved as a primary strategy. Freedom from psychiatric history is helpful but not the dominant predictor once physical health is controlled. Financial resources, while facilitating, are not the primary psychological driver.",
+      "explanation": "Research on successful aging—most notably Rowe and Kahn's model—identifies sustained engagement with life, encompassing both social relationships and productive activity, as the primary distinguishing feature of successful versus usual aging. While avoiding disease and maintaining physical and cognitive function are also components, engagement is consistently the strongest predictor because it captures purpose, connection, and continued contribution. Fluid intelligence naturally declines with age and cannot be preserved as a primary strategy. Freedom from psychiatric history is helpful but not the dominant predictor once physical health is controlled. Financial resources, while facilitating, are not the primary psychological driver.",
       "kn": "KN4",
       "kn_explanation": "Successful aging outcomes fall squarely within Growth and Lifespan Development (Domain 4), addressing late-life developmental trajectories and psychosocial predictors of well-being in older adulthood.",
       "difficulty": "medium",
@@ -442,7 +358,7 @@
       "inspirationIndex": 21
     },
     {
-      "stem": "A palliative care psychologist is consulting on a 61-year-old patient recently diagnosed with a terminal cancer. The patient insists the oncologist made a laboratory error, refuses to discuss end-of-life planning, and has scheduled appointments with three other physicians seeking a different diagnosis. According to K\u00fcbler-Ross's model, which stage of response to terminal illness does this behavior most clearly represent?",
+      "stem": "A palliative care psychologist is consulting on a 61-year-old patient recently diagnosed with a terminal cancer. The patient insists the oncologist made a laboratory error, refuses to discuss end-of-life planning, and has scheduled appointments with three other physicians seeking a different diagnosis. According to Kübler-Ross's model, which stage of response to terminal illness does this behavior most clearly represent?",
       "options": [
         "Anger",
         "Bargaining",
@@ -450,11 +366,11 @@
         "Depression"
       ],
       "answer": "Denial",
-      "explanation": "K\u00fcbler-Ross identified Denial as the first stage in her model of adjustment to terminal illness. Patients in this stage refuse to accept the reality of their prognosis, often attributing diagnoses to error, seeking additional medical opinions, and avoiding planning that would confirm the illness's legitimacy. Denial serves as an initial psychological buffer against the shock of a terminal diagnosis. Anger (stage 2) is characterized by resentment, frustration, and asking 'Why me?' Bargaining (stage 3) involves making conditional deals or promises to gain more time. Depression (stage 4) reflects a quiet, inward grief in anticipation of loss. This patient shows no indication of anger toward providers, conditional deal-making, or depressive withdrawal\u2014the clinical picture fits Denial.",
+      "explanation": "Kübler-Ross identified Denial as the first stage in her model of adjustment to terminal illness. Patients in this stage refuse to accept the reality of their prognosis, often attributing diagnoses to error, seeking additional medical opinions, and avoiding planning that would confirm the illness's legitimacy. Denial serves as an initial psychological buffer against the shock of a terminal diagnosis. Anger (stage 2) is characterized by resentment, frustration, and asking 'Why me?' Bargaining (stage 3) involves making conditional deals or promises to gain more time. Depression (stage 4) reflects a quiet, inward grief in anticipation of loss. This patient shows no indication of anger toward providers, conditional deal-making, or depressive withdrawal—the clinical picture fits Denial.",
       "kn": "KN4",
-      "kn_explanation": "Death and dying is a foundational topic in Growth and Lifespan Development (Domain 4). K\u00fcbler-Ross's stage model is among the most consistently tested concepts in this subdomain on the EPPP.",
+      "kn_explanation": "Death and dying is a foundational topic in Growth and Lifespan Development (Domain 4). Kübler-Ross's stage model is among the most consistently tested concepts in this subdomain on the EPPP.",
       "difficulty": "easy",
-      "quality_comment": "Clear, well-grounded clinical vignette testing a core EPPP concept. Distractors require differentiation among adjacent stages. However, the provided lesson files do not include content on K\u00fcbler-Ross or death/dying. Flagged for review.",
+      "quality_comment": "Clear, well-grounded clinical vignette testing a core EPPP concept. Distractors require differentiation among adjacent stages. However, the provided lesson files do not include content on Kübler-Ross or death/dying. Flagged for review.",
       "suggestedLesson": "4-body-growth",
       "suggestedParagraph": "## Adult Brain Changes: The Long Decline",
       "lessonExcerpt": "",

@@ -16,7 +16,7 @@
       "quality_comment": "Tests specific quantitative knowledge about bipolar genetics that is commonly examined on the EPPP.",
       "suggestedLesson": "5-mood",
       "suggestedParagraph": "### The Genetics Are Strong",
-      "lessonExcerpt": "Monozygotic (identical) twins: 40-80%. Dizygotic (fraternal) twins: 5-30%.",
+      "lessonExcerpt": "The concordance rates tell the story: Monozygotic (identical) twins: 40-80% Dizygotic (fraternal) twins: 5-30%",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 14
@@ -83,6 +83,132 @@
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 15
+    },
+    {
+      "stem": "Which demographic factor has been shown to correlate with increased suicide risk?",
+      "options": [
+        "Higher socioeconomic status",
+        "Marital status",
+        "Age",
+        "Educational attainment"
+      ],
+      "answer": "Age",
+      "explanation": "Research indicates that age is a significant demographic factor correlated with suicide risk, particularly among older adults. The other options do not consistently show a direct correlation with increased suicide risk.",
+      "kn": "KN5",
+      "kn_explanation": "This question pertains to suicide risk factors and their demographic correlations.",
+      "difficulty": "medium",
+      "quality_comment": "Re-tagged from 5-clinical-tests by audit 2026-05-09. Lesson excerpt needs regen against 5-mood. Re-tagged + grounded 2026-05-09.",
+      "suggestedLesson": "5-mood",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "**Older adults**: Chronic medical illness is one of the strongest risk factors, especially when it limits physical functioning and creates social isolation",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 5
+    },
+    {
+      "stem": "Which factor is most critical when assessing an individual's risk of suicide?",
+      "options": [
+        "The presence of a mental health disorder.",
+        "The individual's social support system.",
+        "Previous suicide attempts.",
+        "Current life stressors."
+      ],
+      "answer": "Previous suicide attempts.",
+      "explanation": "Previous suicide attempts are one of the strongest predictors of future suicide risk, making this factor critical in assessment. While the other factors are also important, they do not carry the same weight as a history of attempts.",
+      "kn": "KN30",
+      "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
+      "difficulty": "hard",
+      "quality_comment": "The question is well-constructed and tests important knowledge about suicide risk assessment.",
+      "suggestedLesson": "5-personality",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "Previous suicide attempts are one of the strongest predictors of future suicide risk.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 17
+    },
+    {
+      "stem": "Which environmental stressor is most likely to trigger a manic episode in individuals with bipolar I disorder?",
+      "options": [
+        "Loss of a job",
+        "A major life transition",
+        "Substance abuse",
+        "Sleep deprivation"
+      ],
+      "answer": "Sleep deprivation",
+      "explanation": "Sleep deprivation is a well-known trigger for manic episodes in individuals with bipolar I disorder. While the other stressors can contribute to mood episodes, sleep deprivation is particularly potent in precipitating mania.",
+      "kn": "KN30",
+      "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests knowledge of triggers for manic episodes in bipolar disorder.",
+      "suggestedLesson": "5-hiring-methods",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "Sleep deprivation is a well-known trigger for manic episodes in individuals with bipolar I disorder.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 19
+    },
+    {
+      "stem": "Which of the following symptoms is most indicative of bipolar disorder in adolescents?",
+      "options": [
+        "A. Persistent sadness lasting more than two weeks",
+        "B. Episodes of extreme mood swings between mania and depression",
+        "C. Difficulty concentrating in school",
+        "D. Increased irritability and anger outbursts"
+      ],
+      "answer": "B. Episodes of extreme mood swings between mania and depression",
+      "explanation": "Option B is correct because bipolar disorder is characterized by episodes of mania and depression. Option A describes major depressive disorder, while C and D can be symptoms of various disorders but are not specific to bipolar disorder.",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests knowledge of bipolar disorder symptoms in adolescents.",
+      "suggestedLesson": "5-do-hiring-tools-work",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "Bipolar disorder is characterized by episodes of extreme mood swings between mania and depression.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 1
+    },
+    {
+      "stem": "Which of the following genetic factors is most strongly associated with bipolar I disorder?",
+      "options": [
+        "A single gene mutation that guarantees the disorder.",
+        "A family history of mood disorders.",
+        "Environmental stressors that trigger episodes.",
+        "A specific chromosomal abnormality."
+      ],
+      "answer": "A family history of mood disorders.",
+      "explanation": "Research indicates that a family history of mood disorders is a significant genetic factor in the development of bipolar I disorder. The other options do not accurately reflect the genetic basis of the disorder.",
+      "kn": "KN30",
+      "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of genetic factors in bipolar I disorder.",
+      "suggestedLesson": "5-trauma-dissociation-somatic",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "A family history of mood disorders is strongly associated with bipolar I disorder.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 7
+    },
+    {
+      "stem": "In premenstrual dysphoric disorder (PMDD), when do symptoms typically begin in relation to the menstrual cycle?",
+      "options": [
+        "During the luteal phase, approximately one week before menstruation.",
+        "At the onset of menstruation.",
+        "In the follicular phase, after menstruation has ended.",
+        "Immediately after ovulation."
+      ],
+      "answer": "During the luteal phase, approximately one week before menstruation.",
+      "explanation": "PMDD symptoms typically arise during the luteal phase of the menstrual cycle, which is about one week before menstruation begins. The other options incorrectly place the timing of symptoms either at the wrong phase or at the wrong time in relation to the menstrual cycle.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it pertains to understanding the timing of symptoms in menstrual disorders.",
+      "difficulty": "medium",
+      "quality_comment": "Re-tagged from 5-clinical-tests by audit 2026-05-09. Lesson excerpt needs regen against 5-mood.",
+      "suggestedLesson": "5-mood",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "The \"with peripartum onset\" specifier applies when symptoms begin during pregnancy or within four weeks after delivery.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 22
     }
   ]
 }

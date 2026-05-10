@@ -14,9 +14,9 @@
       "kn_explanation": "This KN code applies as it relates to the biological bases of behavior, specifically in understanding language acquisition.",
       "difficulty": "medium",
       "quality_comment": "The question effectively assesses knowledge of language development.",
-      "suggestedLesson": "1-sensory-perception",
+      "suggestedLesson": "5-neurodevelopmental",
       "suggestedParagraph": "## The Foundation: Sensation vs. Perception",
-      "lessonExcerpt": "Echolalia is characterized by the repetition of phrases or sentences that a child hears.",
+      "lessonExcerpt": "This disorder involves disturbed fluency and speech timing inappropriate for the person's age and language skills. Look for sound/syllable repetitions, sound prolongations, broken words, blocking, circumlocutions, excessive tension when speaking, or whole-word repetitions.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 17
@@ -37,7 +37,7 @@
       "quality_comment": "The question effectively tests knowledge of pain perception mechanisms.",
       "suggestedLesson": "1-sensory-perception",
       "suggestedParagraph": "## Pain Perception: Theories and Mechanisms",
-      "lessonExcerpt": "Understanding pain perception involves recognizing how signals can be modulated at the spinal cord level.",
+      "lessonExcerpt": "Gate control theory revolutionized pain understanding by explaining why pain isn't simply a direct signal from injury to brain. The theory proposes a \"gate\" mechanism in your spinal cord that can increase or decrease pain signals reaching your brain.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 20

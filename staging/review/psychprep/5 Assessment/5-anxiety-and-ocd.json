@@ -62,6 +62,132 @@
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 19
+    },
+    {
+      "stem": "What is the reported prevalence of obsessive-compulsive disorder (OCD) in girls compared to boys?",
+      "options": [
+        "Higher in boys",
+        "Higher in girls",
+        "Equal prevalence",
+        "No significant data available"
+      ],
+      "answer": "Higher in girls",
+      "explanation": "The correct answer is 'Higher in girls' as research indicates that OCD is more prevalent in females than in males. The other options are incorrect as they do not reflect the established findings regarding gender differences in OCD prevalence.",
+      "kn": "KN38",
+      "kn_explanation": "This question is best aligned with KN38 because it tests Constructs of epidemiology and base rates of psychological and behavioral disorders.",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and effectively assesses knowledge of OCD prevalence.",
+      "suggestedLesson": "5-neurodevelopmental",
+      "suggestedParagraph": "## Why Clinical Tests Matter for Your EPPP Success",
+      "lessonExcerpt": "The lesson does not specifically cover OCD prevalence in girls, indicating a need for review.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 19
+    },
+    {
+      "stem": "Which of the following is a key characteristic of social anxiety disorder?",
+      "options": [
+        "Persistent fear of social situations where embarrassment may occur",
+        "Inability to recall important personal information",
+        "Delusions of grandeur or persecution",
+        "Compulsive behaviors to reduce anxiety"
+      ],
+      "answer": "Persistent fear of social situations where embarrassment may occur",
+      "explanation": "The correct answer identifies the hallmark of social anxiety disorder, which is the intense fear of social situations. The other options describe symptoms of different disorders, such as dissociative disorders and obsessive-compulsive disorder.",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and directly assesses knowledge of anxiety disorders.",
+      "suggestedLesson": "5-items-and-reliability",
+      "suggestedParagraph": "## Why Clinical Tests Matter for Your EPPP Success",
+      "lessonExcerpt": "**Cohen's Kappa:** A more sophisticated measure that corrects for chance agreement. It's used when two raters are assigning ratings on a nominal scale",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 2
+    },
+    {
+      "stem": "Which symptom is most likely to differentiate caffeine intoxication from anxiety disorders?",
+      "options": [
+        "A. Increased heart rate",
+        "B. Feelings of restlessness",
+        "C. Presence of gastrointestinal disturbances",
+        "D. Excessive worry about everyday issues"
+      ],
+      "answer": "C. Presence of gastrointestinal disturbances",
+      "explanation": "Option C is correct as gastrointestinal disturbances are more commonly associated with caffeine intoxication than with anxiety disorders. Options A and B can occur in both conditions, while D is specific to anxiety disorders.",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of symptom differentiation.",
+      "suggestedLesson": "5-psychosis",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "Caffeine intoxication can lead to symptoms such as increased heart rate and gastrointestinal disturbances.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 2
+    },
+    {
+      "stem": "Which of the following best distinguishes Generalized Anxiety Disorder (GAD) from normal worries?",
+      "options": [
+        "GAD is characterized by excessive worry that is difficult to control and occurs more days than not for at least six months.",
+        "Normal worries are typically more intense and persistent than those seen in GAD.",
+        "GAD only occurs in children and adolescents, while normal worries can affect adults.",
+        "Individuals with GAD usually have a clear trigger for their anxiety, unlike those with normal worries."
+      ],
+      "answer": "GAD is characterized by excessive worry that is difficult to control and occurs more days than not for at least six months.",
+      "explanation": "The correct answer highlights the chronic and uncontrollable nature of anxiety in GAD, which is a key diagnostic criterion. The other options misrepresent the characteristics of GAD or incorrectly define normal worries.",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of GAD versus normal worries.",
+      "suggestedLesson": "5-items-and-reliability",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "GAD involves excessive anxiety and worry about multiple events or activities occurring most days for at least six months. The person finds it difficult to control the worry.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 1
+    },
+    {
+      "stem": "Which of the following best describes selective mutism as a disorder?",
+      "options": [
+        "A temporary inability to speak due to trauma.",
+        "A consistent failure to speak in specific social situations despite speaking in other contexts.",
+        "A developmental delay in speech production.",
+        "A refusal to speak as a form of rebellion."
+      ],
+      "answer": "A consistent failure to speak in specific social situations despite speaking in other contexts.",
+      "explanation": "Selective mutism is characterized by a child's inability to speak in certain social settings while being able to communicate in more comfortable environments. The other options do not accurately capture the essence of this disorder.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it pertains to understanding communication disorders and their assessment.",
+      "difficulty": "medium",
+      "quality_comment": "Re-tagged from 5-clinical-tests by audit 2026-05-09. Lesson excerpt needs regen against 5-anxiety-and-ocd.",
+      "suggestedLesson": "5-anxiety-and-ocd",
+      "suggestedParagraph": "## Why Clinical Tests Matter for Your EPPP Success",
+      "lessonExcerpt": "{{M}}Picture a child on Sunday evening who starts complaining about stomachaches and headaches that mysteriously disappear on Saturday morning.{{/M}} School refusal often signals separation anxiety disorder, though it can also indicate social anxiety or other conditions.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 18
+    },
+    {
+      "stem": "A 44-year-old male presents to a cardiologist for the fifth time in eight months complaining of crushing chest pain, left arm numbness, diaphoresis, and an overwhelming sense that he is about to die. Each episode lasts approximately 10–15 minutes and then resolves completely. Electrocardiograms, echocardiography, and a cardiac stress test are all normal. He is referred for psychological evaluation. Which diagnosis should be ranked highest in the differential?",
+      "options": [
+        "Somatic symptom disorder, because he has persistent, medically unexplained physical symptoms accompanied by excessive health-related worry",
+        "Panic disorder, because the discrete, time-limited episodes include multiple cardinal panic attack symptoms with no identified medical etiology",
+        "Illness anxiety disorder, because he is preoccupied with having a serious cardiac illness despite normal medical findings",
+        "Conversion disorder (functional neurological symptom disorder), because the arm numbness represents a neurological symptom without a structural cause"
+      ],
+      "answer": "Panic disorder, because the discrete, time-limited episodes include multiple cardinal panic attack symptoms with no identified medical etiology",
+      "explanation": "The presentation describes recurrent discrete episodes of abrupt-onset chest pain, paresthesia, diaphoresis, and fear of dying—symptoms that are among the 13 DSM-5 panic attack criteria—each lasting approximately 10–15 minutes and resolving spontaneously, with a recurrence pattern over months and negative cardiac workup. This fits panic disorder's definition of recurrent unexpected panic attacks with persistent concern about additional attacks. Somatic symptom disorder requires persistent physical symptoms (typically present for more than 6 months) accompanied by disproportionate thoughts, feelings, or behaviors about those symptoms, but does not capture the discrete episodic onset and offset characteristic of panic. Illness anxiety disorder centers on preoccupation with having or acquiring illness with few or no somatic symptoms, not acute physical symptom episodes. Conversion disorder involves neurological symptoms (e.g., pseudoseizures, paralysis) that are clearly functional; paresthesia can occur in conversion but the dominant presentation here (chest pain, diaphoresis, fear of death in episodes) is more parsimoniously explained by panic.",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
+      "difficulty": "medium",
+      "quality_comment": "Classic EPPP presentation; the cardiac context is realistic and the episode profile clearly operationalizes panic attack criteria.",
+      "suggestedLesson": "5-cognitive-tests",
+      "suggestedParagraph": "## Why Clinical Tests Matter for Your EPPP Success",
+      "lessonExcerpt": "They don't. While tests like the FTII show predictive validity, infant assessment is better for identifying developmental delays than predicting exact future IQ scores.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 9
     }
   ]
 }

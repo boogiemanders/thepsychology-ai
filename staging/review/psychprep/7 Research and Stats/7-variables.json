@@ -9,14 +9,14 @@
         "The trimmed mean, because it removes both the highest and lowest scores"
       ],
       "answer": "The median, because it is not distorted by the artificial ceiling on extreme scores",
-      "explanation": "When data is truncated or censored (scores above a threshold are recorded at that threshold), the mean would be artificially lowered because extreme scores are compressed. The lesson states: 'When data is skewed, the median is usually better than the mean for representing a typical score because the mean gets distorted by those extreme values.' The same logic applies to truncated data \u2014 the median depends only on the rank order of scores, not their exact values, so it remains accurate even when some extreme values are artificially capped. Option A is wrong because the mean would be systematically biased downward by the truncated values. Option B is incorrect because while the mode is unaffected, it only reflects the most frequent value and provides limited information about central tendency in continuous data. Option D is partially reasonable but removes valid low scores unnecessarily and may still be affected if many scores are at the ceiling.",
+      "explanation": "When data is truncated or censored (scores above a threshold are recorded at that threshold), the mean would be artificially lowered because extreme scores are compressed. The lesson states: 'When data is skewed, the median is usually better than the mean for representing a typical score because the mean gets distorted by those extreme values.' The same logic applies to truncated data — the median depends only on the rank order of scores, not their exact values, so it remains accurate even when some extreme values are artificially capped. Option A is wrong because the mean would be systematically biased downward by the truncated values. Option B is incorrect because while the mode is unaffected, it only reflects the most frequent value and provides limited information about central tendency in continuous data. Option D is partially reasonable but removes valid low scores unnecessarily and may still be affected if many scores are at the ceiling.",
       "kn": "KN53",
       "kn_explanation": "Equipment malfunction causing censored/truncated data is a data collection methods issue.",
       "difficulty": "medium",
       "quality_comment": "Good applied question. The lesson covers median superiority for skewed data, and the logic extends to",
       "suggestedLesson": "7-variables",
       "suggestedParagraph": "### Skewed Distributions: When Data Piles to One Side",
-      "lessonExcerpt": "In skewed distributions, the mean, median, and mode separate:",
+      "lessonExcerpt": "When data is skewed, the median is usually better than the mean for representing a typical score because the mean gets distorted by those extreme values.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
       "inspirationIndex": 7
@@ -30,7 +30,7 @@
         "The distribution will become leptokurtic because z-score conversions compress extreme values"
       ],
       "answer": "The distribution will retain its positively skewed shape but will have a mean of 0 and standard deviation of 1",
-      "explanation": "Converting raw scores to z-scores is a linear transformation that changes the mean to 0 and the standard deviation to 1, but it does NOT change the shape of the distribution. A positively skewed distribution remains positively skewed after z-score conversion. The lesson describes the normal distribution properties (mean, median, and mode equal; 68-95-99 rule) but z-score transformations only produce a normal distribution when the original data are already normally distributed. Option A is a common misconception \u2014 z-scores standardize the scale but do not normalize skewed data. Option C is wrong because linear transformations preserve the direction of skew. Option D is wrong because z-scores do not compress extreme values; they merely re-express them on a standardized scale.",
+      "explanation": "Converting raw scores to z-scores is a linear transformation that changes the mean to 0 and the standard deviation to 1, but it does NOT change the shape of the distribution. A positively skewed distribution remains positively skewed after z-score conversion. The lesson describes the normal distribution properties (mean, median, and mode equal; 68-95-99 rule) but z-score transformations only produce a normal distribution when the original data are already normally distributed. Option A is a common misconception — z-scores standardize the scale but do not normalize skewed data. Option C is wrong because linear transformations preserve the direction of skew. Option D is wrong because z-scores do not compress extreme values; they merely re-express them on a standardized scale.",
       "kn": "KN55",
       "kn_explanation": "Linear transformations of scores and their effects on distribution properties (mean, SD, skewness) fall under descriptive statistics/analytic methods.",
       "difficulty": "medium",
@@ -64,27 +64,6 @@
       "inspirationIndex": 3
     },
     {
-      "stem": "If a constant value is subtracted from every score in a dataset, what effect does this have on the mean and standard deviation?",
-      "options": [
-        "The mean decreases, but the standard deviation remains unchanged.",
-        "Both the mean and standard deviation decrease.",
-        "The mean remains unchanged, but the standard deviation decreases.",
-        "Both the mean and standard deviation remain unchanged."
-      ],
-      "answer": "The mean decreases, but the standard deviation remains unchanged.",
-      "explanation": "Subtracting a constant from each score shifts the mean down by that constant, but does not affect the variability of the scores, hence the standard deviation remains the same. The other options incorrectly suggest changes to the standard deviation or the mean.",
-      "kn": "KN6",
-      "kn_explanation": "This KN code applies as it relates to understanding the effects of transformations on descriptive statistics.",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively assesses knowledge of descriptive statistics transformations.",
-      "suggestedLesson": "7-variables",
-      "suggestedParagraph": "### Independent and Dependent Variables: The 'What Affects What' Relationship",
-      "lessonExcerpt": "Subtracting a constant from each score affects the mean but not the standard deviation.",
-      "needsReview": false,
-      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 2
-    },
-    {
       "stem": "When ranking scores based on percentiles, which of the following statements is true?",
       "options": [
         "Percentiles indicate the percentage of scores that fall below a specific score.",
@@ -94,13 +73,13 @@
       ],
       "answer": "Percentiles indicate the percentage of scores that fall below a specific score.",
       "explanation": "The correct answer accurately describes what percentiles represent in a dataset. The other options either misinterpret the concept of percentiles or incorrectly limit their applicability.",
-      "kn": "KN6",
-      "kn_explanation": "This KN code applies as it relates to understanding the use of percentiles in ranking scores.",
+      "kn": "KN54",
+      "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
       "difficulty": "medium",
       "quality_comment": "The question is well-constructed and tests knowledge of descriptive statistics.",
-      "suggestedLesson": "7-variables",
+      "suggestedLesson": "5-interpreting-scores",
       "suggestedParagraph": "### Scales of Measurement: How We Quantify Experience",
-      "lessonExcerpt": "Percentiles indicate the percentage of scores that fall below a specific score.",
+      "lessonExcerpt": "A percentile rank tells you the percentage of people in the reference group who scored at or below a particular score. If your client receives a percentile rank of 82, it means 82% of people in the comparison group scored the same or lower.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
       "inspirationIndex": 4

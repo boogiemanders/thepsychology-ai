@@ -30,14 +30,14 @@
         "Physical attractiveness becomes irrelevant once partners have interacted for more than a few minutes"
       ],
       "answer": "People of approximately equal physical attractiveness are likely to select each other as partners",
-      "explanation": "The matching hypothesis posits that despite preferences for highly attractive partners, people of approximately equal physical attractiveness are likely to select each other. This is a well-established finding in interpersonal attraction research. Option A incorrectly invokes complementarity, which research does not consistently support over similarity. Option C is not supported by research\u2014gender differences in mate selection relate to prioritization of attractiveness versus resources, not selecting partners more attractive than oneself. Option D is incorrect because physical attractiveness continues to influence attraction beyond initial interactions.",
+      "explanation": "The matching hypothesis posits that despite preferences for highly attractive partners, people of approximately equal physical attractiveness are likely to select each other. This is a well-established finding in interpersonal attraction research. Option A incorrectly invokes complementarity, which research does not consistently support over similarity. Option C is not supported by research—gender differences in mate selection relate to prioritization of attractiveness versus resources, not selecting partners more attractive than oneself. Option D is incorrect because physical attractiveness continues to influence attraction beyond initial interactions.",
       "kn": "KN15",
       "kn_explanation": "Interpersonal attraction and mate selection fall under social interaction and relationships",
       "difficulty": "easy",
       "quality_comment": "Straightforward recall question well-grounded in lesson content. The matching hypothesis is a classic EPPP concept.",
       "suggestedLesson": "3-connection",
       "suggestedParagraph": "## What Makes Us Attracted to Specific People?",
-      "lessonExcerpt": "People prefer physically attractive partners, but the matching hypothesis posits that people of approximately equal physical attractiveness are likely to select each other.",
+      "lessonExcerpt": "Physical attractiveness - Youth - Specific physical markers ### Why These Differences?",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
       "inspirationIndex": 14
@@ -51,7 +51,7 @@
         "A therapist who can objectively evaluate whether her reaction is appropriate"
       ],
       "answer": "Fellow graduate students who recently received feedback on their own proposals",
-      "explanation": "According to Festinger's social comparison theory, when people are uncertain about how to feel or react, they seek out similar others to gauge whether their responses are appropriate. The graduate student would most likely turn to peers in comparable situations\u2014other graduate students who recently received proposal feedback\u2014because they provide the most relevant comparison point. A mentor (A) represents an authority figure, not a similar other. Online forums (C) offer anonymous strangers who may not be in comparable situations. A therapist (D) provides expert evaluation, not social comparison with similar others. The key principle is that people compare themselves with those in similar circumstances to evaluate their own reactions.",
+      "explanation": "According to Festinger's social comparison theory, when people are uncertain about how to feel or react, they seek out similar others to gauge whether their responses are appropriate. The graduate student would most likely turn to peers in comparable situations—other graduate students who recently received proposal feedback—because they provide the most relevant comparison point. A mentor (A) represents an authority figure, not a similar other. Online forums (C) offer anonymous strangers who may not be in comparable situations. A therapist (D) provides expert evaluation, not social comparison with similar others. The key principle is that people compare themselves with those in similar circumstances to evaluate their own reactions.",
       "kn": "KN15",
       "kn_explanation": "Social comparison of emotional reactions relates to social interaction, though it touches social cognition; the core is about social feedback and interpersonal context",
       "difficulty": "medium",
@@ -72,7 +72,7 @@
         "Gender schema"
       ],
       "answer": "Gender stability",
-      "explanation": "In Kohlberg's cognitive developmental theory, the gender stability stage (around age 4) is characterized by the understanding that gender is stable over time\u2014a boy knows he will become a man. However, children at this stage have not yet achieved gender constancy and may believe that gender can change based on superficial appearance changes (like clothing or hair length). Gender identity (A) is the first stage (ages 2-3), where children can simply label themselves and others as male or female but don't yet understand temporal stability. Gender constancy (C) is the final stage (ages 6-7), where children understand that gender remains the same regardless of changes in appearance or activities. Gender schema (D) is from Bem's gender schema theory, not Kohlberg's stage model.",
+      "explanation": "In Kohlberg's cognitive developmental theory, the gender stability stage (around age 4) is characterized by the understanding that gender is stable over time—a boy knows he will become a man. However, children at this stage have not yet achieved gender constancy and may believe that gender can change based on superficial appearance changes (like clothing or hair length). Gender identity (A) is the first stage (ages 2-3), where children can simply label themselves and others as male or female but don't yet understand temporal stability. Gender constancy (C) is the final stage (ages 6-7), where children understand that gender remains the same regardless of changes in appearance or activities. Gender schema (D) is from Bem's gender schema theory, not Kohlberg's stage model.",
       "kn": "KN14",
       "kn_explanation": "Gender constancy development is a social cognitive developmental concept (person perception/categorization), not social interaction - fits social cognition models",
       "difficulty": "medium",
@@ -148,69 +148,6 @@
       "inspirationIndex": 1
     },
     {
-      "stem": "According to social comparison theory, which of the following best explains why individuals seek emotional support from others during stressful situations?",
-      "options": [
-        "A) To validate their feelings and gauge the appropriateness of their emotional responses.",
-        "B) To avoid personal responsibility for their emotions.",
-        "C) To enhance their self-esteem through competition.",
-        "D) To demonstrate their emotional resilience to others."
-      ],
-      "answer": "A) To validate their feelings and gauge the appropriateness of their emotional responses.",
-      "explanation": "Option A is correct because social comparison theory suggests that individuals look to others in similar situations to assess their own emotional responses. Option B is incorrect as seeking support does not imply avoiding responsibility. Option C is not relevant to the theory, which focuses on validation rather than competition. Option D misrepresents the motivation for seeking support, which is more about understanding than demonstrating resilience.",
-      "kn": "KN3",
-      "kn_explanation": "This question relates to social psychology concepts, specifically social comparison theory.",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively tests understanding of social comparison theory and its application to emotional support.",
-      "suggestedLesson": "3-connection",
-      "suggestedParagraph": "## The Need for Affiliation: Why We Seek Others",
-      "lessonExcerpt": "When we're uncertain about how to feel, think, or react, we look to similar others to gauge whether our responses are appropriate.",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 11
-    },
-    {
-      "stem": "According to Helms's model of racial identity development, which stage involves individuals actively seeking to understand their racial identity and the implications of racism?",
-      "options": [
-        "Pre-encounter",
-        "Encounter",
-        "Immersion-Emersion",
-        "Internalization"
-      ],
-      "answer": "Immersion-Emersion",
-      "explanation": "The Immersion-Emersion stage in Helms's model is characterized by individuals immersing themselves in their racial identity and grappling with the implications of racism. The Pre-encounter stage involves a lack of awareness of racial identity, the Encounter stage is marked by a significant event that prompts awareness, and the Internalization stage involves a more integrated sense of self. Therefore, Immersion-Emersion is the correct answer.",
-      "kn": "KN3",
-      "kn_explanation": "This KN code applies as it relates to racial identity development in social psychology.",
-      "difficulty": "hard",
-      "quality_comment": "Well-structured question that assesses knowledge of racial identity stages.",
-      "suggestedLesson": "3-connection",
-      "suggestedParagraph": "### Stages of Racial Identity Development",
-      "lessonExcerpt": "The Immersion-Emersion stage involves individuals actively seeking to understand their racial identity and the implications of racism.",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 2
-    },
-    {
-      "stem": "According to Cross's model of Black racial identity development, which stage is characterized by a strong sense of pride in one's racial identity and a commitment to the Black community?",
-      "options": [
-        "Pre-encounter",
-        "Encounter",
-        "Immersion-Emersion",
-        "Internalization"
-      ],
-      "answer": "Immersion-Emersion",
-      "explanation": "The Immersion-Emersion stage is where individuals experience a strong sense of pride in their racial identity and actively engage with the Black community. The Pre-encounter stage involves a lack of awareness of racial identity, the Encounter stage is marked by a significant event that prompts reflection on race, and the Internalization stage involves a more integrated sense of self. Thus, Immersion-Emersion is the correct answer.",
-      "kn": "KN11",
-      "kn_explanation": "This KN code applies as it pertains to the understanding of racial identity development models.",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively assesses knowledge of a specific model of racial identity development.",
-      "suggestedLesson": "3-connection",
-      "suggestedParagraph": "## The Need for Affiliation: Why We Seek Others",
-      "lessonExcerpt": "The Immersion-Emersion stage is characterized by a strong sense of pride in one's racial identity and a commitment to the Black community.",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 11
-    },
-    {
       "stem": "In the context of sexual identity development, what characterizes the identity pride stage?",
       "options": [
         "Exploration of sexual orientation",
@@ -245,9 +182,9 @@
       "kn_explanation": "This KN code applies as it pertains to understanding gender differences in leadership styles.",
       "difficulty": "medium",
       "quality_comment": "The question effectively tests knowledge of leadership styles in diverse teams.",
-      "suggestedLesson": "3-connection",
+      "suggestedLesson": "3-cultural-identity",
       "suggestedParagraph": "## The Need for Affiliation: Why We Seek Others",
-      "lessonExcerpt": "Transformational leadership is often associated with better outcomes in gender-diverse teams.",
+      "lessonExcerpt": "Immersion-Emersion:** They reject White culture completely and immerse themselves in Black culture. This is an intense, emotionally charged stage.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
       "inspirationIndex": 19
@@ -283,13 +220,13 @@
       ],
       "answer": "The perceived rewards and costs associated with a relationship.",
       "explanation": "Social exchange theory posits that interpersonal attraction is driven by the evaluation of the rewards and costs involved in a relationship. The other options reflect different theories of attraction but do not align with the principles of social exchange theory.",
-      "kn": "KN3",
-      "kn_explanation": "This KN code applies as it relates to understanding the dynamics of attraction in social psychology.",
+      "kn": "KN15",
+      "kn_explanation": "This question is best aligned with KN15 because it tests Social interaction and relationships (e.g., attraction, aggression, altruism, organizational justice, verbal and non-verbal communication, internet communication, mate selection, empathy).",
       "difficulty": "medium",
       "quality_comment": "The question is relevant and tests understanding of attraction theories.",
-      "suggestedLesson": "3-connection",
+      "suggestedLesson": "3-cultural-identity",
       "suggestedParagraph": "## What Makes Us Attracted to Specific People?",
-      "lessonExcerpt": "The lesson does not adequately cover social exchange theory.",
+      "lessonExcerpt": "Immersion-Emersion:** They reject White culture completely and immerse themselves in Black culture. This is an intense, emotionally charged stage.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
       "inspirationIndex": 24
@@ -303,14 +240,14 @@
         "The pratfall effect, which predicts that perceived imperfections increase attraction in high-competence individuals"
       ],
       "answer": "The matching hypothesis, derived from social exchange principles that partners seek equity in interpersonal value",
-      "explanation": "The matching hypothesis, grounded in social exchange theory, proposes that individuals pair with partners of similar social desirability (including physical attractiveness) because exchange equity is maximized when both partners contribute comparable interpersonal value. Dissatisfaction in mismatched couples reflects the perceived inequity in the exchange. Byrne's law of attraction pertains to attitude similarity predicting attraction strength \u2014 not attractiveness matching in partner selection. The mere exposure effect describes how repeated exposure creates familiarity-based liking regardless of attribute matching. The pratfall effect describes how a minor mistake increases liking for a highly competent person \u2014 it is unrelated to the matching dynamic described in this finding.",
-      "kn": "KN3",
-      "kn_explanation": "This question addresses interpersonal attraction and partner selection within the Social and Multicultural Bases of Behavior domain, specifically the matching hypothesis as derived from social exchange and equity principles.",
+      "explanation": "The matching hypothesis, grounded in social exchange theory, proposes that individuals pair with partners of similar social desirability (including physical attractiveness) because exchange equity is maximized when both partners contribute comparable interpersonal value. Dissatisfaction in mismatched couples reflects the perceived inequity in the exchange. Byrne's law of attraction pertains to attitude similarity predicting attraction strength — not attractiveness matching in partner selection. The mere exposure effect describes how repeated exposure creates familiarity-based liking regardless of attribute matching. The pratfall effect describes how a minor mistake increases liking for a highly competent person — it is unrelated to the matching dynamic described in this finding.",
+      "kn": "KN14",
+      "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
       "difficulty": "medium",
       "quality_comment": "Tests conceptual understanding of why the matching hypothesis is grounded in social exchange theory; distractors require careful discrimination among the major theories of attraction.",
-      "suggestedLesson": "3-connection",
+      "suggestedLesson": "5-sex-and-gender",
       "suggestedParagraph": "What Makes Us Attracted to Specific People?",
-      "lessonExcerpt": "Despite the romantic notion that 'opposites attract,' research consistently shows we're drawn to people similar to ourselves, particularly regarding important attitudes and values. Donn Byrne formulated the law of attraction in 1971, stating there's a positive linear relationship between attitude similarity and attraction.",
+      "lessonExcerpt": "Gender-Affirmative**: Dutch = \"wait and see then proceed\"; Gender-Affirmative = \"support authentic identity as it emerges.\" The Dutch protocol emphasizes caution and waiting for persistence; the gender-affirmative model emphasizes affirmation and authenticity. ## Key Takeaways",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
       "inspirationIndex": 14
@@ -324,38 +261,17 @@
         "She is avoiding evaluation apprehension by choosing confidants unlikely to judge her performance"
       ],
       "answer": "She wants to compare her emotional response with similar others in the same situation to gauge whether her anxiety level is appropriate",
-      "explanation": "Social comparison theory (Festinger, 1954) holds that when people are uncertain about how to feel, think, or react, they look to similar others to assess whether their responses are appropriate. The trainee is not choosing experienced faculty\u2014who have a different vantage point\u2014but peers facing the exact same situation, because only those in an equivalent position can serve as a valid comparison standard for calibrating emotional reactions. Option A reframes the behavior as support-seeking rather than information-seeking, which misses the specific mechanism Festinger identified. Option C (downward comparison) would require seeking out those doing worse, not those in the same boat. Option D describes evaluation apprehension, a distinct construct concerning fear of being judged while performing.",
-      "kn": "KN3",
-      "kn_explanation": "Social comparison theory is a foundational concept in the Social and Multicultural Bases of Behavior domain, explaining how individuals evaluate the appropriateness of their emotions, beliefs, and behaviors through reference to comparable others.",
+      "explanation": "Social comparison theory (Festinger, 1954) holds that when people are uncertain about how to feel, think, or react, they look to similar others to assess whether their responses are appropriate. The trainee is not choosing experienced faculty—who have a different vantage point—but peers facing the exact same situation, because only those in an equivalent position can serve as a valid comparison standard for calibrating emotional reactions. Option A reframes the behavior as support-seeking rather than information-seeking, which misses the specific mechanism Festinger identified. Option C (downward comparison) would require seeking out those doing worse, not those in the same boat. Option D describes evaluation apprehension, a distinct construct concerning fear of being judged while performing.",
+      "kn": "KN14",
+      "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
       "difficulty": "medium",
       "quality_comment": "Scenario cleanly instantiates the uncertainty-reduction function of social comparison and requires distinguishing it from three plausible but distinct alternatives. Direct lesson support is strong.",
-      "suggestedLesson": "3-connection",
+      "suggestedLesson": "5-6-leadership",
       "suggestedParagraph": "Schachter's Anxiety Studies: Misery Loves Company (But Only Certain Company)",
-      "lessonExcerpt": "Social comparison theory, developed by Leon Festinger in 1954, explains why. When we're uncertain about how to feel, think, or react, we look to similar others to gauge whether our responses are appropriate.",
+      "lessonExcerpt": "A meta-analysis by Eagly, Johannesen-Schmidt, and van Engen (2003) revealed something interesting about transformational and transactional leadership: **Female leaders are more likely to:** - Use transformational leadership approaches (inspiring and developing people) - Provide contingency rewards (a transactional element)",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
       "inspirationIndex": 21
-    },
-    {
-      "stem": "A 3-year-old boy correctly identifies himself as a boy and labels male playmates as boys. When his older sister puts on a short haircut and dresses in his clothing for a costume party, he insists she has 'turned into a boy.' According to Kohlberg's model of gender identity development, this child's error is MOST characteristic of which stage?",
-      "options": [
-        "Gender stability, because the child understands that his own gender persists over time but cannot yet conserve another person's gender across situational transformations",
-        "Gender labeling (basic gender identity), because the child can apply gender categories accurately under normal conditions but does not yet understand that gender is invariant across changes in appearance",
-        "Gender constancy, because the child has achieved full conservation of gender for familiar individuals but fails when costumes obscure biological cues",
-        "Pre-gender awareness, because the error reflects the absence of any stable internal representation of gender categories"
-      ],
-      "answer": "Gender labeling (basic gender identity), because the child can apply gender categories accurately under normal conditions but does not yet understand that gender is invariant across changes in appearance",
-      "explanation": "In Kohlberg's three-stage model of gender identity development, the first stage\u2014gender labeling (basic gender identity, approximately ages 2\u20133)\u2014is characterized by accurate gender categorization under typical conditions but a failure to conserve gender across superficial changes in appearance such as clothing, hairstyle, or costume. The child in this scenario correctly applies gender labels in ordinary contexts but concludes that a costume change produces an actual gender change, which is the defining error of the labeling stage. Gender stability (Option A) is the second stage, in which the child understands that their own gender persists across time but may still fail to conserve gender across situational or appearance-based transformations\u2014particularly for others. However, the child in the scenario makes the error for another person based on appearance, which is most precisely the hallmark of stage one, where the very concept of gender's permanence has not yet been acquired. Gender constancy (Option C) is the third stage, involving full conservation of gender across both time and situational changes. Option D is incorrect because the child clearly demonstrates functional gender labeling.",
-      "kn": "KN4",
-      "kn_explanation": "Kohlberg's stages of gender identity development\u2014labeling, stability, and constancy\u2014are classified under Growth and Lifespan Development (KN4) on the EPPP. This concept also appears in Social and Multicultural Bases of Behavior content given its relevance to gender as a dimension of diversity and identity.",
-      "difficulty": "medium",
-      "quality_comment": "Scenario precisely operationalizes the defining error of gender labeling stage and requires distinguishing it from gender stability, a common source of confusion. Flagged for review: the provided lesson files cover social psychology and do not include Kohlberg's gender identity development stages\u2014this topic typically appears in developmental psychology content.",
-      "suggestedLesson": "3-connection",
-      "suggestedParagraph": "## Why Understanding Affiliation, Attraction, and Intimacy Matters for Your Practice",
-      "lessonExcerpt": "CONTENT NOT FOUND IN PROVIDED LESSONS: The supplied lesson files (domain 3, social psychology) do not contain material on Kohlberg's stages of gender identity development. This topic is typically covered in developmental psychology (domain 4) content.",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 25
     }
   ]
 }

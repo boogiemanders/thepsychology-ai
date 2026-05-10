@@ -31,16 +31,58 @@
       ],
       "answer": "Both true positives and false positives will increase",
       "explanation": "Lowering the cutoff score makes it easier to 'pass' (test positive), which means more people are selected/identified. According to the lesson, lowering the cutoff results in: 'More true positives (catch more good candidates), More false positives (accidentally accept more bad candidates), Fewer true negatives, Fewer false negatives.' This increases sensitivity (catching more people with the disorder) but decreases specificity (more false alarms). Option B is wrong because false positives increase, not decrease. Option C is wrong because both true negatives and false negatives decrease. Option D describes raising the cutoff, not lowering it.",
-      "kn": "KN5",
-      "kn_explanation": "This question addresses classification accuracy and the effects of adjusting predictor cutoff scores on sensitivity and specificity, a key test construction concept.",
+      "kn": "KN37",
+      "kn_explanation": "This question is best aligned with KN37 because it tests Factors influencing evidence-based interpretation of data and decision-making (e.g., base rates, group differences, cultural biases and differences, heuristics).",
       "difficulty": "hard",
       "quality_comment": "Strong application question requiring understanding of how cutoff score adjustments affect the four classification categories and sensitivity/specificity trade-offs.",
       "suggestedLesson": "5-can-tests-predict",
       "suggestedParagraph": "### Understanding Cutoff Score Effects",
-      "lessonExcerpt": "Lowering the cutoff (making it easier to 'pass'): More people selected, More true positives (catch more good candidates), More false positives (accidentally accept more bad candidates), Fewer true negatives (reject fewer people correctly), Fewer false negatives (miss fewer good candidates).",
+      "lessonExcerpt": "More true positives (catch more good candidates), More false positives (accidentally accept more bad candidates), Fewer true negatives (reject fewer people correctly), Fewer false negatives (miss fewer good candidates).",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 3
+    },
+    {
+      "stem": "Which validity assessment method allows researchers to evaluate the convergence and divergence of different measures?",
+      "options": [
+        "Multitrait-multimethod matrix",
+        "Criterion-related validity",
+        "Content validity",
+        "Construct validity"
+      ],
+      "answer": "Multitrait-multimethod matrix",
+      "explanation": "The multitrait-multimethod matrix is a validity assessment method that evaluates the convergence and divergence of different measures, helping to establish construct validity. The other options do not specifically focus on this aspect of validity assessment.",
+      "kn": "KN30",
+      "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses knowledge of validity assessment methods.",
+      "suggestedLesson": "5-personality",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "One of the most elegant ways to assess construct validity is the multitrait-multimethod matrix, developed by Campbell and Fiske.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 28
+    },
+    {
+      "stem": "What is the primary concern regarding the predictive validity of infant development tests?",
+      "options": [
+        "They are too expensive to administer.",
+        "They may not accurately predict later cognitive abilities.",
+        "They require extensive training to interpret.",
+        "They are only useful for diagnosing disabilities."
+      ],
+      "answer": "They may not accurately predict later cognitive abilities.",
+      "explanation": "The main concern with infant development tests is their limited ability to predict future cognitive abilities, as early development can vary widely and does not always correlate with later outcomes. The other options do not directly address the validity of these tests.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively challenges understanding of predictive validity in developmental assessments.",
+      "suggestedLesson": "5-do-hiring-tools-work",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "The **Taylor-Russell tables** let you estimate how much a new predictor will improve hiring success for different combinations of validity coefficients, selection ratios, and base rates.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 13
     }
   ]
 }

@@ -1,0 +1,46 @@
+{
+  "questions": [
+    {
+      "stem": "In the diagnosis of female orgasmic disorder, which of the following best describes the situational type?",
+      "options": [
+        "It occurs only in specific contexts or situations.",
+        "It is characterized by a complete inability to achieve orgasm.",
+        "It is always accompanied by significant distress.",
+        "It is diagnosed when orgasm is achieved in all situations."
+      ],
+      "answer": "It occurs only in specific contexts or situations.",
+      "explanation": "The situational type of female orgasmic disorder refers to difficulties in achieving orgasm that occur only in certain contexts, not universally. The other options misrepresent the nature of the disorder.",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
+      "difficulty": "medium",
+      "quality_comment": "The question accurately assesses knowledge of the situational type of female orgasmic disorder.",
+      "suggestedLesson": "5-trauma-dissociation-somatic",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "The situational type occurs only in specific contexts or situations.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 22
+    },
+    {
+      "stem": "A 7-year-old child assigned female at birth has, for the past 8 months, strongly insisted on being called by a male name, expressed a persistent desire to be a boy, preferred rough-and-tumble play exclusively with male peers, and refused to wear feminine clothing. The child's parents report significant distress at school, including refusal to use the girls' restroom and daily crying before school. According to DSM-5, which of the following is required in addition to the specified incongruence criteria to diagnose Gender Dysphoria in Children?",
+      "options": [
+        "Clinically significant distress or impairment in social, school, or other important areas of functioning",
+        "Documented biological evidence of a sex chromosome variation or hormonal atypicality",
+        "Onset of gender incongruence symptoms prior to age 5",
+        "Presence of co-occurring separation anxiety disorder or oppositional defiant disorder"
+      ],
+      "answer": "Clinically significant distress or impairment in social, school, or other important areas of functioning",
+      "explanation": "DSM-5 Gender Dysphoria in Children requires two criteria: Criterion A, a marked incongruence between experienced/expressed gender and assigned gender manifested by at least 6 of 8 specified indicators lasting at least 6 months, AND Criterion B, clinically significant distress or impairment. The distress/impairment criterion (Criterion B) is essential because it distinguishes Gender Dysphoria from gender nonconformity that does not cause distress. The 8-month duration in this vignette satisfies the minimum 6-month threshold. Option B is incorrect because biological sex variations are not required; they may be noted as a specifier if present. Option C is incorrect because DSM-5 imposes no age-of-onset requirement before age 5. Option D is incorrect because comorbid diagnoses are not required for the Gender Dysphoria diagnosis.",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
+      "difficulty": "hard",
+      "quality_comment": "Well-grounded in DSM-5 diagnostic criteria. Vignette-based format appropriate for doctoral-level difficulty. Distractors are plausible misconceptions about the diagnosis.",
+      "suggestedLesson": "5-6-evaluating-jobs",
+      "suggestedParagraph": "## Clinical Diagnosis and DSM-5 Classification",
+      "lessonExcerpt": "**Criterion contamination** occurs when the measure is influenced by factors unrelated to actual job performance.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 21
+    }
+  ]
+}

@@ -1,25 +1,25 @@
 {
   "questions": [
     {
-      "stem": "A school psychologist wants to determine the percentage of time a student spends on-task during a 30-minute independent reading period. The psychologist divides the observation period into 60 equal intervals and checks at the end of each interval whether the student is engaged in reading at that exact moment. This procedure is BEST described as:",
+      "stem": "A longitudinal research team studying Type A behavior pattern and cardiovascular outcomes follows 1,500 middle-aged adults over 22 years. After controlling for traditional cardiovascular risk factors (blood pressure, cholesterol, smoking, BMI), the researchers conduct multivariate analyses to determine which specific Type A component independently predicts incident coronary artery disease. Based on the preponderance of psychophysiological research, which Type A component would most likely emerge as the significant independent predictor?",
       "options": [
-        "Event recording",
-        "Whole-interval sampling",
-        "Momentary time sampling",
-        "Continuous recording"
+        "Time urgency and chronic time pressure",
+        "Hostility and cynical mistrust of others",
+        "Achievement striving and competitive drive",
+        "Rapid speech rate and psychomotor agitation"
       ],
-      "answer": "Momentary time sampling",
-      "explanation": "Momentary time sampling involves recording whether the target behavior is present or absent at the moment the time interval ends. This matches the described procedure of checking at the end of each interval. Whole-interval sampling requires the behavior to be exhibited for the full duration of the interval to be scored positively. Event recording involves tallying each occurrence of a discrete behavior. Continuous recording tracks every instance of a behavior with exact onset and offset times.",
-      "kn": "KN5",
-      "kn_explanation": "Behavioral observation methods are a core assessment technique tested under the Assessment domain",
+      "answer": "Hostility and cynical mistrust of others",
+      "explanation": "Research by Williams, Barefoot, Dembroski, and others decomposed the Type A behavior pattern and found that hostility—specifically cynical hostility (distrustful, antagonistic interpersonal orientation and resentful reactivity to others)—is the 'toxic component' most consistently associated with cardiovascular disease risk after controlling for other variables. Hostility is thought to produce heightened sympathetic nervous system reactivity, neuroendocrine dysregulation (elevated cortisol, catecholamines), and greater inflammatory response, all contributing to atherosclerosis. Options A, C, and D (time urgency, achievement striving, rapid speech/psychomotor agitation) have not shown consistent independent predictive validity for coronary artery disease in multivariate studies, and in some research, achievement striving has been associated with lower CVD risk. This finding has clinical implications for health psychology interventions targeting cardiac-prone individuals.",
+      "kn": "KN2",
+      "kn_explanation": "The relationship between Type A personality characteristics and cardiovascular disease falls within the Cognitive-Affective and Biological Bases of Behavior domains (KN2/KN1). The EPPP tests health psychology content including psychophysiological mechanisms linking personality to physical disease outcomes.",
       "difficulty": "medium",
-      "quality_comment": "Requires distinguishing between momentary time sampling and whole-interval sampling based on the specific recording criterion; scenario provides clear procedural details",
+      "quality_comment": "Re-tagged from 5-clinical-tests by audit 2026-05-09. Lesson excerpt needs regen against 7-research-designs.",
       "suggestedLesson": "7-research-designs",
-      "suggestedParagraph": "## Observational studies",
-      "lessonExcerpt": "MOMENTARY TIME SAMPLING Momentary time sampling involves the observer simply recording whether the target behavior is present or absent at the moment that the time interval ends.",
+      "suggestedParagraph": "## Health Psychology and Behavioral Medicine",
+      "lessonExcerpt": "{{M}}Rather than a university researcher studying homelessness by interviewing homeless individuals, CBPR would involve homeless individuals as research partners who help shape research questions, interpret findings, and develop solutions.{{/M}}",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 12
+      "inspirationIndex": 26
     }
   ]
 }

@@ -1,0 +1,412 @@
+[
+  {
+    "idx": 0,
+    "stem": "Which of the following symptoms is NOT typically associated with narcolepsy?",
+    "proposed": "5-eating-sleep-elimination"
+  },
+  {
+    "idx": 1,
+    "stem": "Which demographic factor has been shown to correlate with increased suicide risk?",
+    "proposed": "5-mood"
+  },
+  {
+    "idx": 2,
+    "stem": "Which of the following personality disorders is characterized by a pervasive pattern of disregard for the righ",
+    "proposed": "5-personality"
+  },
+  {
+    "idx": 3,
+    "stem": "Which of the following is a primary advantage of behavior observation methods in behavioral assessment?",
+    "proposed": "5-clinical-tests"
+  },
+  {
+    "idx": 4,
+    "stem": "Which of the following criteria is essential for diagnosing bipolar I disorder according to the DSM-5?",
+    "proposed": "5-mood"
+  },
+  {
+    "idx": 5,
+    "stem": "What is a common comorbidity associated with Tourette's disorder?",
+    "proposed": "5-neurodevelopmental"
+  },
+  {
+    "idx": 6,
+    "stem": "Research indicates that which gender is more likely to experience major depressive disorder?",
+    "proposed": "5-mood"
+  },
+  {
+    "idx": 7,
+    "stem": "Which method is most effective for optimizing incremental validity in selection processes?",
+    "proposed": "5-do-hiring-tools-work"
+  },
+  {
+    "idx": 8,
+    "stem": "What is the phenomenon of diagnostic overshadowing primarily concerned with?",
+    "proposed": "DIAGNOSIS_GENERAL"
+  },
+  {
+    "idx": 9,
+    "stem": "What is the reported prevalence of obsessive-compulsive disorder (OCD) in girls compared to boys?",
+    "proposed": "5-anxiety-and-ocd"
+  },
+  {
+    "idx": 10,
+    "stem": "Which of the following best describes the halo effect in performance ratings?",
+    "proposed": "5-do-hiring-tools-work"
+  },
+  {
+    "idx": 11,
+    "stem": "Which of the following characteristics is most commonly associated with autism spectrum disorder?",
+    "proposed": "5-neurodevelopmental"
+  },
+  {
+    "idx": 12,
+    "stem": "Which of the following best differentiates bipolar I disorder from schizoaffective disorder?",
+    "proposed": "5-mood"
+  },
+  {
+    "idx": 13,
+    "stem": "What does the Kappa coefficient measure in the context of psychometric assessments?",
+    "proposed": "5-items-and-reliability"
+  },
+  {
+    "idx": 14,
+    "stem": "Which type of hallucination is most commonly reported by individuals with schizophrenia?",
+    "proposed": "5-psychosis"
+  },
+  {
+    "idx": 15,
+    "stem": "Which of the following is a characteristic symptom of Intermittent Explosive Disorder?",
+    "proposed": "5-acting-out"
+  },
+  {
+    "idx": 16,
+    "stem": "Which of the following strengths is commonly observed in children with autism spectrum disorder?",
+    "proposed": "5-neurodevelopmental"
+  },
+  {
+    "idx": 17,
+    "stem": "Which of the following is a key characteristic of social anxiety disorder?",
+    "proposed": "5-anxiety-and-ocd"
+  },
+  {
+    "idx": 18,
+    "stem": "Which of the following symptoms is most characteristic of schizotypal personality disorder?",
+    "proposed": "5-personality"
+  },
+  {
+    "idx": 19,
+    "stem": "What is criterion contamination in the context of psychological assessments?",
+    "proposed": "5-do-hiring-tools-work"
+  },
+  {
+    "idx": 20,
+    "stem": "Which of the following is considered a strong predictor of job performance?",
+    "proposed": "5-do-hiring-tools-work"
+  },
+  {
+    "idx": 21,
+    "stem": "In psychological testing, what does 'validity' refer to?",
+    "proposed": "5-items-and-reliability"
+  },
+  {
+    "idx": 22,
+    "stem": "Which factor is most critical when assessing an individual's risk of suicide?",
+    "proposed": "5-mood"
+  },
+  {
+    "idx": 23,
+    "stem": "What is a key diagnostic criterion for acute stress disorder?",
+    "proposed": "5-trauma-dissociation-somatic"
+  },
+  {
+    "idx": 24,
+    "stem": "Which environmental stressor is most likely to trigger a manic episode in individuals with bipolar I disorder?",
+    "proposed": "5-mood"
+  },
+  {
+    "idx": 25,
+    "stem": "What is a significant challenge in diagnosing ADHD in young children?",
+    "proposed": "5-neurodevelopmental"
+  },
+  {
+    "idx": 26,
+    "stem": "Which of the following statements best describes the interpretation of IQ and achievement test scores in relat",
+    "proposed": "5-neurodevelopmental"
+  },
+  {
+    "idx": 27,
+    "stem": "In the diagnosis of female orgasmic disorder, which of the following best describes the situational type?",
+    "proposed": "5-sex-and-gender"
+  },
+  {
+    "idx": 28,
+    "stem": "Which of the following coexisting diagnoses is most commonly associated with specific learning disorder?",
+    "proposed": "5-neurodevelopmental"
+  },
+  {
+    "idx": 29,
+    "stem": "What is a primary concern regarding adverse impact in employment testing?",
+    "proposed": "5-do-hiring-tools-work"
+  },
+  {
+    "idx": 30,
+    "stem": "Which of the following genetic factors is most strongly associated with an increased risk of developing schizo",
+    "proposed": "5-psychosis"
+  },
+  {
+    "idx": 31,
+    "stem": "What is a key diagnostic criterion for narcolepsy related to cataplexy?",
+    "proposed": "5-eating-sleep-elimination"
+  },
+  {
+    "idx": 32,
+    "stem": "In the context of test development, what does empirical criterion-keying primarily assess?",
+    "proposed": "5-do-hiring-tools-work"
+  },
+  {
+    "idx": 33,
+    "stem": "Which of the following indicators may suggest malingering in memory deficits during testing?",
+    "proposed": "DIAGNOSIS_GENERAL"
+  },
+  {
+    "idx": 34,
+    "stem": "Which of the following symptoms is most indicative of bipolar disorder in adolescents?",
+    "proposed": "5-mood"
+  },
+  {
+    "idx": 35,
+    "stem": "Which symptom is most likely to differentiate caffeine intoxication from anxiety disorders?",
+    "proposed": "5-anxiety-and-ocd"
+  },
+  {
+    "idx": 36,
+    "stem": "Which of the following behaviors is classified as self-injurious behavior in children?",
+    "proposed": "5-acting-out"
+  },
+  {
+    "idx": 37,
+    "stem": "What is the estimated prevalence of ADHD among children in the United States?",
+    "proposed": "5-neurodevelopmental"
+  },
+  {
+    "idx": 38,
+    "stem": "Which aspect of scoring in Rorschach tests is primarily concerned with the developmental quality of responses?",
+    "proposed": "5-personality-tests"
+  },
+  {
+    "idx": 39,
+    "stem": "In the context of borderline personality disorder, which symptom is most indicative of indecision and procrast",
+    "proposed": "5-personality"
+  },
+  {
+    "idx": 40,
+    "stem": "Which of the following is a key feature in diagnosing autism spectrum disorder related to social communication",
+    "proposed": "5-neurodevelopmental"
+  },
+  {
+    "idx": 41,
+    "stem": "What is the primary criterion for diagnosing intellectual disability related to adaptive functioning?",
+    "proposed": "5-neurodevelopmental"
+  },
+  {
+    "idx": 42,
+    "stem": "Which gender-related factor is considered a prognostic factor in schizophrenia?",
+    "proposed": "5-psychosis"
+  },
+  {
+    "idx": 43,
+    "stem": "What testing procedure can enhance performance by allowing for adjustments during the assessment?",
+    "proposed": "5-clinical-tests"
+  },
+  {
+    "idx": 44,
+    "stem": "What is a common sleep disorder in children characterized by episodes of sudden arousal and fear during sleep?",
+    "proposed": "5-eating-sleep-elimination"
+  },
+  {
+    "idx": 45,
+    "stem": "Which personality trait is most closely associated with avoidant personality disorder?",
+    "proposed": "5-personality"
+  },
+  {
+    "idx": 46,
+    "stem": "How can increasing the number of test items improve the reliability of psychological testing?",
+    "proposed": "5-items-and-reliability"
+  },
+  {
+    "idx": 47,
+    "stem": "What is a primary cause of dissociative identity disorder often linked to its development?",
+    "proposed": "5-trauma-dissociation-somatic"
+  },
+  {
+    "idx": 48,
+    "stem": "Which of the following is a common indicator of hearing problems in children that may affect their communicati",
+    "proposed": "5-cognitive-tests"
+  },
+  {
+    "idx": 49,
+    "stem": "What do Taylor-Russell tables primarily help assess in the context of selection decision-making?",
+    "proposed": "5-do-hiring-tools-work"
+  },
+  {
+    "idx": 50,
+    "stem": "What is the primary purpose of trainability tests in the context of training assessment?",
+    "proposed": "5-do-hiring-tools-work"
+  },
+  {
+    "idx": 51,
+    "stem": "Which personnel selection method allows for a range of scores to be considered acceptable for hiring decisions",
+    "proposed": "5-do-hiring-tools-work"
+  },
+  {
+    "idx": 52,
+    "stem": "Which validity assessment method allows researchers to evaluate the convergence and divergence of different me",
+    "proposed": "5-can-tests-predict"
+  },
+  {
+    "idx": 53,
+    "stem": "Which of the following best distinguishes Generalized Anxiety Disorder (GAD) from normal worries?",
+    "proposed": "5-anxiety-and-ocd"
+  },
+  {
+    "idx": 54,
+    "stem": "Which of the following factors is a strong predictor of community success post-hospitalization in individuals ",
+    "proposed": "5-psychosis"
+  },
+  {
+    "idx": 55,
+    "stem": "Which of the following genetic factors is most strongly associated with bipolar I disorder?",
+    "proposed": "5-mood"
+  },
+  {
+    "idx": 56,
+    "stem": "Which of the following factors is considered a prognostic indicator for schizophrenia outcomes?",
+    "proposed": "5-psychosis"
+  },
+  {
+    "idx": 57,
+    "stem": "In signal detection theory, what is a false alarm?",
+    "proposed": "5-do-hiring-tools-work"
+  },
+  {
+    "idx": 58,
+    "stem": "Which of the following is a common measure of operant behavior?",
+    "proposed": "5-clinical-tests"
+  },
+  {
+    "idx": 59,
+    "stem": "What is the primary concern regarding the predictive validity of infant development tests?",
+    "proposed": "5-can-tests-predict"
+  },
+  {
+    "idx": 60,
+    "stem": "Which of the following is a common outcome for children experiencing remission of night terrors?",
+    "proposed": "5-eating-sleep-elimination"
+  },
+  {
+    "idx": 61,
+    "stem": "How does test difficulty impact the rates of true and false positives in diagnostic assessments?",
+    "proposed": "5-do-hiring-tools-work"
+  },
+  {
+    "idx": 62,
+    "stem": "Which of the following best describes selective mutism as a disorder?",
+    "proposed": "5-anxiety-and-ocd"
+  },
+  {
+    "idx": 63,
+    "stem": "What does criterion contamination refer to in the context of validity assessment?",
+    "proposed": "5-do-hiring-tools-work"
+  },
+  {
+    "idx": 64,
+    "stem": "How is childhood stuttering typically diagnosed?",
+    "proposed": "5-neurodevelopmental"
+  },
+  {
+    "idx": 65,
+    "stem": "Which of the following best describes self-mutilation as a coping mechanism in trauma survivors?",
+    "proposed": "5-trauma-dissociation-somatic"
+  },
+  {
+    "idx": 66,
+    "stem": "In premenstrual dysphoric disorder (PMDD), when do symptoms typically begin in relation to the menstrual cycle",
+    "proposed": "5-mood"
+  },
+  {
+    "idx": 67,
+    "stem": "Which of the following is NOT a criterion for diagnosing autism spectrum disorder (ASD)?",
+    "proposed": "5-neurodevelopmental"
+  },
+  {
+    "idx": 68,
+    "stem": "What are the diagnostic criteria for separation anxiety disorder?",
+    "proposed": "5-anxiety-and-ocd"
+  },
+  {
+    "idx": 69,
+    "stem": "What is a common treatment outcome for individuals diagnosed with schizoaffective disorder?",
+    "proposed": "5-psychosis"
+  },
+  {
+    "idx": 70,
+    "stem": "When diagnosing social phobia, which of the following behaviors would be considered factitious?",
+    "proposed": "5-trauma-dissociation-somatic"
+  },
+  {
+    "idx": 71,
+    "stem": "What does test validity refer to in psychometric properties?",
+    "proposed": "5-can-tests-predict"
+  },
+  {
+    "idx": 72,
+    "stem": "A 7-year-old boy is hospitalized repeatedly over 14 months with unexplained seizures, vomiting, and lethargy. ",
+    "proposed": "5-trauma-dissociation-somatic"
+  },
+  {
+    "idx": 73,
+    "stem": "A 44-year-old male presents to a cardiologist for the fifth time in eight months complaining of crushing chest",
+    "proposed": "5-anxiety-and-ocd"
+  },
+  {
+    "idx": 74,
+    "stem": "A psychiatry resident asks a consulting psychologist about the heritability of bipolar I disorder, noting that",
+    "proposed": "5-mood"
+  },
+  {
+    "idx": 75,
+    "stem": "A clinician conducting a differential diagnosis notes that a patient holds bizarre delusions\u2014beliefs that are ",
+    "proposed": "5-psychosis"
+  },
+  {
+    "idx": 76,
+    "stem": "A researcher reviewing epidemiological literature on obsessive-compulsive disorder (OCD) notices a distinctive",
+    "proposed": "5-anxiety-and-ocd"
+  },
+  {
+    "idx": 77,
+    "stem": "A 7-year-old child assigned female at birth has, for the past 8 months, strongly insisted on being called by a",
+    "proposed": "5-sex-and-gender"
+  },
+  {
+    "idx": 78,
+    "stem": "A 5-year-old child recently placed with foster parents after removal from a severely neglectful home readily a",
+    "proposed": "5-trauma-dissociation-somatic"
+  },
+  {
+    "idx": 79,
+    "stem": "A 32-year-old adult presents for neuropsychological evaluation requesting clarification of a diagnosis. Record",
+    "proposed": "5-neurodevelopmental"
+  },
+  {
+    "idx": 80,
+    "stem": "A client reports recurrent episodes of heart racing, chest tightness, trembling, and a fear of humiliating her",
+    "proposed": "5-anxiety-and-ocd"
+  },
+  {
+    "idx": 81,
+    "stem": "A longitudinal research team studying Type A behavior pattern and cardiovascular outcomes follows 1,500 middle",
+    "proposed": "7-research-designs"
+  }
+]

@@ -62,6 +62,258 @@
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 16
+    },
+    {
+      "stem": "Which method is most effective for optimizing incremental validity in selection processes?",
+      "options": [
+        "Using multiple assessment tools",
+        "Relying solely on interviews",
+        "Implementing a single standardized test",
+        "Conducting background checks"
+      ],
+      "answer": "Using multiple assessment tools",
+      "explanation": "The correct answer is 'Using multiple assessment tools' as this approach enhances the overall predictive validity of the selection process by providing a more comprehensive view of candidates. The other options are less effective as they do not incorporate diverse data sources.",
+      "kn": "KN37",
+      "kn_explanation": "This question is best aligned with KN37 because it tests Factors influencing evidence-based interpretation of data and decision-making (e.g., base rates, group differences, cultural biases and differences, heuristics).",
+      "difficulty": "hard",
+      "quality_comment": "The question is well-structured and assesses knowledge of selection methods effectively.",
+      "suggestedLesson": "5-mood",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "**Incremental validity** asks: Does this new predictor improve prediction accuracy beyond what we already have?",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 16
+    },
+    {
+      "stem": "Which of the following best describes the halo effect in performance ratings?",
+      "options": [
+        "Rating based on a single characteristic",
+        "Bias towards negative traits",
+        "Equal evaluation across all traits",
+        "Focus on past performance only"
+      ],
+      "answer": "Rating based on a single characteristic",
+      "explanation": "The correct answer is 'Rating based on a single characteristic' as the halo effect occurs when an evaluator allows one positive trait to influence their overall assessment of an individual. The other options do not accurately capture the essence of the halo effect.",
+      "kn": "KN34",
+      "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of the halo effect and its implications.",
+      "suggestedLesson": "5-mood",
+      "suggestedParagraph": "## Why Clinical Tests Matter for Your EPPP Success",
+      "lessonExcerpt": "The **halo error** (also called halo effect or halo bias) occurs when a rater's impression of one performance dimension bleeds over into ratings of unrelated dimensions.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 20
+    },
+    {
+      "stem": "What is criterion contamination in the context of psychological assessments?",
+      "options": [
+        "When the predictor measure influences the criterion measure.",
+        "When the assessment tool is not reliable.",
+        "When the test results are misinterpreted.",
+        "When the assessment lacks validity."
+      ],
+      "answer": "When the predictor measure influences the criterion measure.",
+      "explanation": "Criterion contamination occurs when the predictor measure (like a test score) influences the criterion measure (like job performance), leading to biased results. The other options describe different issues related to assessment but do not define criterion contamination.",
+      "kn": "KN30",
+      "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests understanding of a specific concept in assessment validity.",
+      "suggestedLesson": "5-acting-out",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "**Criterion contamination** occurs when the measure is influenced by factors unrelated to actual job performance.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 14
+    },
+    {
+      "stem": "Which of the following is considered a strong predictor of job performance?",
+      "options": [
+        "Personality tests",
+        "Ability tests",
+        "Interest inventories",
+        "Projective tests"
+      ],
+      "answer": "Ability tests",
+      "explanation": "Ability tests are considered strong predictors of job performance as they assess the skills and competencies necessary for specific tasks. Personality tests and interest inventories provide insight into preferences and traits but do not directly measure job-related abilities. Projective tests are not typically used for job performance prediction.",
+      "kn": "KN34",
+      "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests knowledge of predictors of job performance.",
+      "suggestedLesson": "5-neurodevelopmental",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "Ability tests are strong predictors of job performance.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 15
+    },
+    {
+      "stem": "What is a primary concern regarding adverse impact in employment testing?",
+      "options": [
+        "It ensures that all candidates are treated equally.",
+        "It may disproportionately affect certain demographic groups.",
+        "It guarantees that only the most qualified candidates are selected.",
+        "It eliminates the need for test validation."
+      ],
+      "answer": "It may disproportionately affect certain demographic groups.",
+      "explanation": "Adverse impact refers to employment tests that may disadvantage certain demographic groups, raising concerns about fairness and discrimination. The other options misrepresent the nature of adverse impact.",
+      "kn": "KN30",
+      "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
+      "difficulty": "hard",
+      "quality_comment": "The question accurately assesses understanding of adverse impact in the context of employment testing.",
+      "suggestedLesson": "5-neurodevelopmental",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "Adverse impact may disproportionately affect certain demographic groups.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 24
+    },
+    {
+      "stem": "In the context of test development, what does empirical criterion-keying primarily assess?",
+      "options": [
+        "The theoretical validity of test items.",
+        "The ability of test items to predict performance in specific settings.",
+        "The subjective opinions of test developers.",
+        "The consistency of test scores over time."
+      ],
+      "answer": "The ability of test items to predict performance in specific settings.",
+      "explanation": "Empirical criterion-keying focuses on selecting test items based on their ability to differentiate between groups based on actual performance, making it a practical approach to test development. The other options do not accurately describe the primary focus of this method.",
+      "kn": "KN30",
+      "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of empirical criterion-keying in test development.",
+      "suggestedLesson": "5-neurodevelopmental",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "These were developed through **empirical criterion keying**, which is a fancy way of saying the test creators gave hundreds of questions to people with specific diagnoses and people without mental health issues, then kept only the questions that reliably told the groups apart.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 27
+    },
+    {
+      "stem": "What do Taylor-Russell tables primarily help assess in the context of selection decision-making?",
+      "options": [
+        "The reliability of a test",
+        "The validity of a selection method",
+        "The utility of a selection method",
+        "The fairness of a selection process"
+      ],
+      "answer": "The utility of a selection method",
+      "explanation": "Taylor-Russell tables are used to evaluate the utility of a selection method by showing how the selection ratio and the validity of a test affect the expected performance of selected candidates. The other options relate to different aspects of assessment but not specifically to the utility of selection methods.",
+      "kn": "KN37",
+      "kn_explanation": "This question is best aligned with KN37 because it tests Factors influencing evidence-based interpretation of data and decision-making (e.g., base rates, group differences, cultural biases and differences, heuristics).",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses knowledge of Taylor-Russell tables and their application.",
+      "suggestedLesson": "5-psychosis",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "The **Taylor-Russell tables** let you estimate how much a new predictor will improve hiring success for different combinations of validity coefficients, selection ratios, and base rates.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 23
+    },
+    {
+      "stem": "Which personnel selection method allows for a range of scores to be considered acceptable for hiring decisions?",
+      "options": [
+        "Banding",
+        "Ranking",
+        "Cut-off scores",
+        "Weighted scoring"
+      ],
+      "answer": "Banding",
+      "explanation": "Banding is a personnel selection method that allows for a range of scores to be considered acceptable, rather than relying on a single cut-off score. The other options do not provide this flexibility in scoring.",
+      "kn": "KN34",
+      "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of banding in personnel selection.",
+      "suggestedLesson": "5-eating-sleep-elimination",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "**Sleep Terrors:**\n- Abrupt arousal usually starting with panicky scream\n- Intense fear with autonomic arousal",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 26
+    },
+    {
+      "stem": "How does test difficulty impact the rates of true and false positives in diagnostic assessments?",
+      "options": [
+        "Higher difficulty increases true positives and decreases false positives.",
+        "Higher difficulty decreases both true and false positives.",
+        "Higher difficulty increases false positives and decreases true positives.",
+        "Higher difficulty has no effect on true and false positives."
+      ],
+      "answer": "Higher difficulty increases false positives and decreases true positives.",
+      "explanation": "As test difficulty increases, it often leads to more false positives due to misinterpretation of results, while true positives may decrease as fewer individuals meet the criteria accurately. The other options do not accurately reflect the relationship between test difficulty and diagnostic accuracy.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it relates to understanding the implications of test construction on assessment outcomes.",
+      "difficulty": "hard",
+      "quality_comment": "Re-tagged from 5-clinical-tests by audit 2026-05-09. Lesson excerpt needs regen against 5-do-hiring-tools-work.",
+      "suggestedLesson": "5-do-hiring-tools-work",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "This coefficient ranges from -1.0 to +1.0:\n- **+1.0** = perfect positive relationship (higher test scores = better performance)\n- **0** = no relationship at all\n- **-1.0** = perfect negative relationship (higher test scores = worse performance)",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 15
+    },
+    {
+      "stem": "What does criterion contamination refer to in the context of validity assessment?",
+      "options": [
+        "The influence of external factors on test scores.",
+        "The overlap between the test content and the criterion measure.",
+        "The effect of test-taker motivation on results.",
+        "The impact of cultural bias on test interpretation."
+      ],
+      "answer": "The overlap between the test content and the criterion measure.",
+      "explanation": "Criterion contamination occurs when the test items are too similar to the criterion being measured, leading to inflated validity estimates. The other options describe different issues that may affect validity but do not define criterion contamination.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively challenges understanding of validity concepts.",
+      "suggestedLesson": "5-hiring-methods",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "**Criterion contamination** occurs when the measure is influenced by factors unrelated to actual job performance.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 19
+    },
+    {
+      "stem": "An employer's hiring rate for the majority group is 70%, and the hiring rate for a protected group is 50%. Applying the four-fifths rule, what does this indicate?",
+      "options": [
+        "Adverse impact is occurring because 50/70 = .71, which is less than .80.",
+        "Adverse impact is not occurring because both groups are above 50%.",
+        "The 80% rule does not apply when both groups exceed 50% hiring.",
+        "The selection process is automatically valid."
+      ],
+      "answer": "Adverse impact is occurring because 50/70 = .71, which is less than .80.",
+      "explanation": "The four-fifths rule says adverse impact is occurring when the hiring rate for a protected group is less than 80% of the hiring rate for the majority group. Here, 50/70 = .71, which is below .80, so adverse impact is indicated.",
+      "kn": "KN12",
+      "kn_explanation": "Tests applied use of the four-fifths rule for adverse impact detection.",
+      "difficulty": "medium",
+      "quality_comment": "High-yield EPPP topic on adverse impact calculation.",
+      "suggestedLesson": "5-do-hiring-tools-work",
+      "suggestedParagraph": "### The 80% Rule (Four-Fifths Rule)",
+      "lessonExcerpt": "Adverse impact is occurring when the hiring rate for a protected group is less than 80% of the hiring rate for the majority group.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 50
+    },
+    {
+      "stem": "In the context of incremental validity for selection decisions, why is a low selection ratio (for example, .10) considered better than a high selection ratio (for example, .90)?",
+      "options": [
+        "It eliminates the need for valid predictors.",
+        "It allows the employer to be more selective, so each additional piece of information helps differentiate between many qualified candidates.",
+        "It guarantees that adverse impact will not occur.",
+        "It increases the base rate automatically."
+      ],
+      "answer": "It allows the employer to be more selective, so each additional piece of information helps differentiate between many qualified candidates.",
+      "explanation": "A low selection ratio means the employer is hiring a small fraction of applicants, which makes them more selective. With many qualified candidates and few slots, additional valid predictors yield bigger gains in decision-making accuracy.",
+      "kn": "KN12",
+      "kn_explanation": "Tests interpretation of selection ratio in incremental validity.",
+      "difficulty": "medium",
+      "quality_comment": "Targets selection ratio concept for hiring decisions.",
+      "suggestedLesson": "5-do-hiring-tools-work",
+      "suggestedParagraph": "### Factor 2: The Selection Ratio",
+      "lessonExcerpt": "A low selection ratio is better** because you're choosier.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 51
     }
   ]
 }

@@ -43,48 +43,6 @@
       "inspirationIndex": 11
     },
     {
-      "stem": "What is the primary purpose of calculating a confidence interval for test scores in psychological assessment?",
-      "options": [
-        "To determine the exact score a client will achieve on a future test",
-        "To estimate the range within which a true score is likely to fall",
-        "To compare the scores of different clients directly",
-        "To assess the reliability of the test itself"
-      ],
-      "answer": "To estimate the range within which a true score is likely to fall",
-      "explanation": "The correct answer is that confidence intervals provide an estimate of the range within which the true score is likely to fall, reflecting the uncertainty inherent in test scores. The other options are incorrect as they misrepresent the purpose of confidence intervals in psychological testing.",
-      "kn": "KN5",
-      "kn_explanation": "This KN code applies because it relates to the assessment and interpretation of test scores, specifically focusing on statistical methods used in psychological evaluations.",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively assesses understanding of statistical concepts in psychological assessment.",
-      "suggestedLesson": "5-career-interests",
-      "suggestedParagraph": "## Why Interest Inventories Matter for Your EPPP (and Your Future Clients)",
-      "lessonExcerpt": "Interest inventories are excellent at predicting job choice, satisfaction, and persistence, but they're much less accurate at predicting actual job success.",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 1
-    },
-    {
-      "stem": "According to Donald Super's Career Rainbow model, which of the following stages emphasizes the exploration of various career options?",
-      "options": [
-        "Growth",
-        "Exploration",
-        "Establishment",
-        "Maintenance"
-      ],
-      "answer": "Exploration",
-      "explanation": "The Exploration stage in Super's Career Rainbow model focuses on individuals exploring various career options and making choices about their future. The Growth stage involves developing self-concept, while Establishment and Maintenance focus on settling into and maintaining a career.",
-      "kn": "KN5",
-      "kn_explanation": "This KN code applies as it relates to understanding career development models and their stages.",
-      "difficulty": "medium",
-      "quality_comment": "The question accurately reflects the stages of Super's Career Rainbow model.",
-      "suggestedLesson": "5-career-interests",
-      "suggestedParagraph": "## The Two Heavy Hitters You Need to Know",
-      "lessonExcerpt": "The lesson does not explicitly cover Super's Career Rainbow model.",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 22
-    },
-    {
       "stem": "In Holland's Self-Directed Search, which of the following is a key component that helps individuals identify their career interests?",
       "options": [
         "Personality types",

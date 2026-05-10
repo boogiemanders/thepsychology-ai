@@ -9,14 +9,14 @@
         "Holophrastic speech, in which the child uses a single word to convey an entire sentence"
       ],
       "answer": "Overextension, in which the child applies a word too broadly based on shared perceptual features",
-      "explanation": "Overextension occurs when a child uses a word too broadly, applying it to objects that share similar perceptual features with the original referent. Calling a horse 'doggie' because both are four-legged animals is a classic example. Underextension (A) is the opposite error\u2014using a word too narrowly (e.g., only calling the family pet 'doggie'). Overregularization (B) involves applying grammatical rules to exceptions (e.g., 'goed' instead of 'went'). Holophrastic speech (D) refers to using single words to express complete thoughts but doesn't involve categorization errors.",
+      "explanation": "Overextension occurs when a child uses a word too broadly, applying it to objects that share similar perceptual features with the original referent. Calling a horse 'doggie' because both are four-legged animals is a classic example. Underextension (A) is the opposite error—using a word too narrowly (e.g., only calling the family pet 'doggie'). Overregularization (B) involves applying grammatical rules to exceptions (e.g., 'goed' instead of 'went'). Holophrastic speech (D) refers to using single words to express complete thoughts but doesn't involve categorization errors.",
       "kn": "KN21",
       "kn_explanation": "Overextension is a normal language development milestone in toddlers, fitting normal growth and development across the lifespan.",
       "difficulty": "easy",
       "quality_comment": "Straightforward application question using a classic example, with well-constructed distractors from related language development concepts.",
       "suggestedLesson": "4-language-development",
       "suggestedParagraph": "## Common Language Errors: Totally Normal Development",
-      "lessonExcerpt": "Overextension: Using a word too broadly - Calling all four-legged animals 'doggie'",
+      "lessonExcerpt": "Overextension: Using a word too broadly - Calling all four-legged animals \"doggie\"",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 9
@@ -73,13 +73,13 @@
       ],
       "answer": "Cooing, babbling, first words",
       "explanation": "The primary milestones in language development during the first two years include cooing (around 2-3 months), babbling (around 6 months), and the emergence of first words (around 12 months). The other options either misorder these milestones or include stages not typically reached within the first two years.",
-      "kn": "KN4",
-      "kn_explanation": "This KN code applies as it pertains to language development milestones in early childhood.",
+      "kn": "KN21",
+      "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
       "difficulty": "medium",
       "quality_comment": "The question accurately assesses knowledge of language development milestones.",
       "suggestedLesson": "4-language-development",
       "suggestedParagraph": "## Language Development Timeline: From Womb to Words",
-      "lessonExcerpt": "The primary milestones in language development during the first two years include cooing, babbling, and the emergence of first words.",
+      "lessonExcerpt": "Critical developmental sequence: Cooing (6-8 weeks) → Babbling (3-6 months) → First words (10-15 months) → Holophrastic speech (12-15 months) → Telegraphic speech (18-24 months) → Simple sentences (24-36 months)",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 18
@@ -167,48 +167,6 @@
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 26
-    },
-    {
-      "stem": "A 14-month-old girl has just learned the word 'dog' in reference to the family's German Shepherd. While at a park, she points to a cat and says 'dog.' She also calls a horse 'dog' at the petting zoo. A developmental psychologist observing these interactions would identify this language behavior as an example of:",
-      "options": [
-        "Underextension, because the child is applying the label only to animals that perceptually resemble the original referent",
-        "Overextension, because the child is applying a learned word label to new but perceptually or functionally similar referents beyond its correct categorical boundary",
-        "Holophrastic speech, because the child is using a single word to convey a rich communicative intent about the animals",
-        "Overregularization, because the child is applying a recently acquired linguistic rule to contexts where it does not apply"
-      ],
-      "answer": "Overextension, because the child is applying a learned word label to new but perceptually or functionally similar referents beyond its correct categorical boundary",
-      "explanation": "Overextension occurs when a child applies a word to a broader range of referents than is conventionally correct, typically on the basis of perceptual similarity (shape, movement, size) or functional similarity. Calling a cat and a horse 'dog' is a classic example. This is an expected and normal feature of early word learning, reflecting the child's attempt to generalize limited vocabulary. Underextension is the opposite error\u2014restricting a word to too narrow a category. Holophrastic speech refers to using a single word to express a full proposition, which is a different phenomenon entirely. Overregularization refers to applying morphological grammar rules (e.g., adding '-ed' for past tense) in overly broad ways (e.g., 'goed'), not to applying word labels to new referents.",
-      "kn": "KN4",
-      "kn_explanation": "Language development, including semantic errors in early word use, is a core topic in Growth and Lifespan Development (Domain 4).",
-      "difficulty": "medium",
-      "quality_comment": "Excellent discriminability question. The four options represent four distinct and testable language concepts. The stem provides a clear behavioral vignette. Tests conceptual precision.",
-      "suggestedLesson": "4-language-development",
-      "suggestedParagraph": "## Language Development Timeline: From Womb to Words",
-      "lessonExcerpt": "Lesson content covering overextension was in a truncated portion of 4-language-development.md and could not be directly confirmed from the provided excerpt.",
-      "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 8
-    },
-    {
-      "stem": "A cross-cultural psychologist presents findings showing that speakers of a language lacking grammatical distinction between past and future events perceive time as more cyclical and show different patterns of future-oriented planning than speakers of languages with distinct tense markers. These findings provide the strongest support for which theoretical position regarding the relationship between language and cognition?",
-      "options": [
-        "Nativist theory, because universal grammatical structures reflect innate cognitive architecture shared across all humans",
-        "Social interactionist theory, because cultural environments mediate both language acquisition and behavioral outcomes",
-        "The linguistic relativity hypothesis, because the structure of one's language shapes how one conceptualizes and reasons about the world",
-        "Learning theory, because reinforcement histories within different cultural contexts differentially shape time-related behaviors"
-      ],
-      "answer": "The linguistic relativity hypothesis, because the structure of one's language shapes how one conceptualizes and reasons about the world",
-      "explanation": "The linguistic relativity hypothesis (also called the Sapir-Whorf hypothesis) proposes that the language one speaks influences how one perceives and thinks about reality. The finding that tense-marking differences across languages correlate with differences in temporal cognition and future-oriented behavior is precisely the type of cross-linguistic evidence this hypothesis predicts. Nativist theory (Chomsky's LAD) argues for universal innate grammar underlying all languages, making it predict similarities rather than cognitive differences across language groups. Social interactionist theory focuses on how social environments facilitate language acquisition, not how acquired language shapes downstream cognition. Learning theory attributes behavioral variation to differential reinforcement schedules rather than to structural properties of language itself.",
-      "kn": "KN4",
-      "kn_explanation": "The relationship between language and thought is a core topic within language development in Growth and Lifespan Development (Domain 4), requiring integration of theoretical positions covered in language development content.",
-      "difficulty": "hard",
-      "quality_comment": "High-quality inferential application question at appropriate doctoral difficulty. The lesson file 4-language-development.md covers language acquisition theories but  Flagged for review.",
-      "suggestedLesson": "4-language-development",
-      "suggestedParagraph": "## The Big Three Theories: Understanding How We Learn to Talk",
-      "lessonExcerpt": "Learning theory says that language develops through imitation and reinforcement... Noam Chomsky flipped the script with nativist theory, arguing that humans come pre-wired for language... This theory combines both biological readiness and social environment.",
-      "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 23
     }
   ]
 }

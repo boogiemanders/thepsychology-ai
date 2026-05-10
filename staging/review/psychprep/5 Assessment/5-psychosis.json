@@ -16,10 +16,115 @@
       "quality_comment": "Tests critical DSM-5 changes that differentiate psychotic disorders — a high-yield EPPP topic.",
       "suggestedLesson": "5-psychosis",
       "suggestedParagraph": "## Core Symptoms: The Building Blocks",
-      "lessonExcerpt": "elimination of the allowance that bizarre delusions or two or more voices conversing suffice for a diagnosis of schizophrenia; thus the requirement is now at least two symptoms... There is no longer a requirement that the delusions in delusional disorder are non-bizarre; a specifier is added for bizarre type.",
+      "lessonExcerpt": "Delusional Disorder: Highly Focused Beliefs This is different from schizophrenia in important ways: - One or more delusions lasting at least 1 month - Overall functioning is NOT markedly impaired (except for direct effects of the delusion) - No prominent hallucinations, disorganized speech, or negative symptoms",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 15
+    },
+    {
+      "stem": "Which type of hallucination is most commonly reported by individuals with schizophrenia?",
+      "options": [
+        "A. Visual hallucinations",
+        "B. Auditory hallucinations",
+        "C. Tactile hallucinations",
+        "D. Olfactory hallucinations"
+      ],
+      "answer": "B. Auditory hallucinations",
+      "explanation": "Option B is correct because auditory hallucinations are the most common type reported by individuals with schizophrenia. Option A, while possible, is less common than auditory types. Options C and D are less frequently reported in schizophrenia compared to auditory hallucinations.",
+      "kn": "KN32",
+      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
+      "difficulty": "medium",
+      "quality_comment": "The question accurately assesses knowledge of schizophrenia symptoms.",
+      "suggestedLesson": "5-6-evaluating-jobs",
+      "suggestedParagraph": "## Why Clinical Tests Matter for Your EPPP Success",
+      "lessonExcerpt": "The **halo error** (also called halo effect or halo bias) occurs when a rater's impression of one performance dimension bleeds over into ratings of unrelated dimensions.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 28
+    },
+    {
+      "stem": "Which of the following genetic factors is most strongly associated with an increased risk of developing schizophrenia?",
+      "options": [
+        "Having a family history of schizophrenia",
+        "Experiencing a traumatic brain injury",
+        "Being diagnosed with a mood disorder",
+        "Having a high IQ"
+      ],
+      "answer": "Having a family history of schizophrenia",
+      "explanation": "A family history of schizophrenia is one of the most significant genetic risk factors for developing the disorder. The other options do not have the same level of association with genetic risk for schizophrenia.",
+      "kn": "KN5",
+      "kn_explanation": "This KN code applies as it pertains to understanding genetic risk factors in the context of schizophrenia.",
+      "difficulty": "medium",
+      "quality_comment": "Re-tagged from 5-clinical-tests by audit 2026-05-09. Lesson excerpt needs regen against 5-psychosis.",
+      "suggestedLesson": "5-psychosis",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "Better Prognosis Associated With:**\n- Female gender\n- Acute and late onset (rather than gradual, early onset)\n- Comorbid mood symptoms (especially depression)\n- Predominantly positive symptoms (rather than negative)\n- Clear precipitating factors\n- Family history of mood disorder (not schizophrenia)\n- Good premorbid adjustment (functioning well before onset)",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 25
+    },
+    {
+      "stem": "Which gender-related factor is considered a prognostic factor in schizophrenia?",
+      "options": [
+        "Age of onset",
+        "Severity of symptoms",
+        "Gender differences",
+        "Family history"
+      ],
+      "answer": "Gender differences",
+      "explanation": "Gender differences are recognized as a prognostic factor in schizophrenia, with research indicating that men often experience an earlier onset and more severe symptoms than women. Age of onset and severity of symptoms are important but are influenced by gender differences. Family history is relevant but not a gender-specific factor.",
+      "kn": "KN30",
+      "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
+      "difficulty": "hard",
+      "quality_comment": "The question is well-structured and tests knowledge of prognostic factors in schizophrenia.",
+      "suggestedLesson": "5-neurodevelopmental",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "Gender differences are significant prognostic factors in schizophrenia.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 15
+    },
+    {
+      "stem": "Which of the following factors is a strong predictor of community success post-hospitalization in individuals with schizophrenia?",
+      "options": [
+        "The presence of supportive family relationships.",
+        "The severity of psychotic symptoms at the time of discharge.",
+        "The duration of the hospitalization.",
+        "The individual's age at the onset of schizophrenia."
+      ],
+      "answer": "The presence of supportive family relationships.",
+      "explanation": "Supportive family relationships are crucial for community success after hospitalization, as they provide emotional and practical support. The other options may influence outcomes but are not as consistently predictive as family support.",
+      "kn": "KN4",
+      "kn_explanation": "This KN code applies as it relates to the prognosis of schizophrenia and factors influencing recovery.",
+      "difficulty": "medium",
+      "quality_comment": "Re-tagged from 5-clinical-tests by audit 2026-05-09. Lesson excerpt needs regen against 5-psychosis.",
+      "suggestedLesson": "5-psychosis",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "Better Prognosis Associated With:**\n- Female gender\n- Acute and late onset (rather than gradual, early onset)\n- Comorbid mood symptoms (especially depression)\n- Predominantly positive symptoms (rather than negative)\n- Clear precipitating factors\n- Family history of mood disorder (not schizophrenia)\n- Good premorbid adjustment (functioning well before onset)",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 4
+    },
+    {
+      "stem": "What is a common treatment outcome for individuals diagnosed with schizoaffective disorder?",
+      "options": [
+        "Complete remission of all symptoms without medication.",
+        "Significant improvement in mood symptoms with antipsychotic treatment.",
+        "No response to any form of therapy.",
+        "Permanent cognitive decline regardless of treatment."
+      ],
+      "answer": "Significant improvement in mood symptoms with antipsychotic treatment.",
+      "explanation": "Individuals with schizoaffective disorder often show significant improvement in mood symptoms when treated with antipsychotic medications. The other options either misrepresent treatment outcomes or suggest unrealistic expectations.",
+      "kn": "KN6",
+      "kn_explanation": "This KN code applies as it relates to understanding treatment outcomes in schizoaffective disorder.",
+      "difficulty": "medium",
+      "quality_comment": "Re-tagged from 5-clinical-tests by audit 2026-05-09. Lesson excerpt needs regen against 5-psychosis.",
+      "suggestedLesson": "5-psychosis",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "Schizoaffective disorder** requires both psychotic and mood symptoms, with 2+ weeks of psychosis without mood symptoms",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 27
     }
   ]
 }

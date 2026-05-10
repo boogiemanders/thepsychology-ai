@@ -20,6 +20,90 @@
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 8
+    },
+    {
+      "stem": "Which of the following personality disorders is characterized by a pervasive pattern of disregard for the rights of others?",
+      "options": [
+        "Borderline Personality Disorder",
+        "Narcissistic Personality Disorder",
+        "Antisocial Personality Disorder",
+        "Avoidant Personality Disorder"
+      ],
+      "answer": "Antisocial Personality Disorder",
+      "explanation": "Antisocial Personality Disorder is defined by a pervasive pattern of disregard for the rights of others, including deceit and manipulation. The other options describe different patterns of behavior and interpersonal relationships.",
+      "kn": "KN30",
+      "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of personality disorder characteristics.",
+      "suggestedLesson": "5-eating-sleep-elimination",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "**Diagnosis Requires ONE of These:**\n\n- Episodes of cataplexy (loss of muscle tone)\n- Hypocretin deficiency\n- REM sleep latency of 15 minutes or less on polysomnography",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 8
+    },
+    {
+      "stem": "Which of the following symptoms is most characteristic of schizotypal personality disorder?",
+      "options": [
+        "A pervasive pattern of grandiosity",
+        "A lack of interest in social relationships",
+        "Odd beliefs or magical thinking",
+        "Emotional instability"
+      ],
+      "answer": "Odd beliefs or magical thinking",
+      "explanation": "Schizotypal personality disorder is characterized by odd beliefs or magical thinking, which is a key symptom. The other options describe symptoms of different personality disorders: grandiosity is more associated with narcissistic personality disorder, lack of interest in social relationships is typical of schizoid personality disorder, and emotional instability is a hallmark of borderline personality disorder.",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
+      "difficulty": "hard",
+      "quality_comment": "The question is well-structured and tests specific knowledge of personality disorder symptoms.",
+      "suggestedLesson": "5-psychosis",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "Schizotypal personality disorder is characterized by odd beliefs or magical thinking.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 11
+    },
+    {
+      "stem": "In the context of borderline personality disorder, which symptom is most indicative of indecision and procrastination?",
+      "options": [
+        "Fear of abandonment",
+        "Impulsivity",
+        "Chronic feelings of emptiness",
+        "Difficulty making decisions"
+      ],
+      "answer": "Difficulty making decisions",
+      "explanation": "Difficulty making decisions is a hallmark symptom of indecision and procrastination, particularly in borderline personality disorder. While fear of abandonment and impulsivity are also symptoms, they do not specifically relate to indecision. Chronic feelings of emptiness are more about emotional states than decision-making processes.",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of borderline personality disorder symptoms.",
+      "suggestedLesson": "5-mood",
+      "suggestedParagraph": "## Why Clinical Tests Matter for Your EPPP Success",
+      "lessonExcerpt": "Indecision and procrastination are common symptoms in borderline personality disorder.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 12
+    },
+    {
+      "stem": "Which personality trait is most closely associated with avoidant personality disorder?",
+      "options": [
+        "Extraversion",
+        "Agreeableness",
+        "Neuroticism",
+        "Low self-esteem"
+      ],
+      "answer": "Low self-esteem",
+      "explanation": "Low self-esteem is a core feature of avoidant personality disorder, leading individuals to avoid social situations due to feelings of inadequacy. While neuroticism may also be present, it is not as directly linked as low self-esteem. Extraversion and agreeableness are not characteristic of avoidant personality disorder.",
+      "kn": "KN30",
+      "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of personality traits related to avoidant personality disorder.",
+      "suggestedLesson": "5-personality",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "Low self-esteem is a significant trait associated with avoidant personality disorder.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 18
     }
   ]
 }

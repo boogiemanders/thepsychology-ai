@@ -1,0 +1,52 @@
+[
+  {
+    "stem": "What is the phenomenon of diagnostic overshadowing primarily concerned with?",
+    "options": [
+      "Overlooking a primary diagnosis due to a secondary condition",
+      "Misdiagnosing a condition due to bias",
+      "Focusing on one diagnosis while ignoring others",
+      "The impact of cultural factors on diagnosis"
+    ],
+    "answer": "Overlooking a primary diagnosis due to a secondary condition",
+    "explanation": "The correct answer is 'Overlooking a primary diagnosis due to a secondary condition' as diagnostic overshadowing occurs when a clinician focuses on a more apparent condition, potentially missing other significant diagnoses. The other options do not accurately describe the primary concern of this phenomenon.",
+    "kn": "KN17",
+    "kn_explanation": "This KN code applies as it pertains to understanding diagnostic bias and its implications.",
+    "difficulty": "medium",
+    "quality_comment": "The question effectively tests knowledge of diagnostic overshadowing.",
+    "suggestedLesson": "5-clinical-tests",
+    "suggestedParagraph": "## Why Clinical Tests Matter for Your EPPP Success",
+    "lessonExcerpt": "The lesson does not specifically cover diagnostic overshadowing, indicating a need for review.",
+    "needsReview": false,
+    "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+    "inspirationIndex": 17,
+    "archived_date": "2026-05-09",
+    "original_file": "staging/review/psychprep/5 Assessment/5-clinical-tests.json",
+    "original_index": 8,
+    "reason": "Audit flagged as DIAGNOSIS_GENERAL \u2014 no clear lesson home"
+  },
+  {
+    "stem": "Which of the following indicators may suggest malingering in memory deficits during testing?",
+    "options": [
+      "Consistent performance across different memory tasks.",
+      "Inconsistent memory test results that do not align with clinical observations.",
+      "A sudden improvement in memory performance after initial testing.",
+      "A history of memory problems documented in medical records."
+    ],
+    "answer": "Inconsistent memory test results that do not align with clinical observations.",
+    "explanation": "Inconsistent results that contradict clinical observations may indicate malingering, as they suggest an attempt to feign or exaggerate memory deficits. The other options do not provide strong indicators of malingering.",
+    "kn": "KN5",
+    "kn_explanation": "This KN code applies as it pertains to understanding indicators of malingering in memory assessments.",
+    "difficulty": "hard",
+    "quality_comment": "The question accurately assesses knowledge of malingering indicators in memory testing.",
+    "suggestedLesson": "5-clinical-tests",
+    "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+    "lessonExcerpt": "Inconsistent memory test results that do not align with clinical observations may suggest malingering.",
+    "needsReview": false,
+    "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+    "inspirationIndex": 28,
+    "archived_date": "2026-05-09",
+    "original_file": "staging/review/psychprep/5 Assessment/5-clinical-tests.json",
+    "original_index": 33,
+    "reason": "Audit flagged as DIAGNOSIS_GENERAL \u2014 no clear lesson home"
+  }
+]

@@ -1,0 +1,46 @@
+{
+  "questions": [
+    {
+      "stem": "Which of the following is a characteristic symptom of Intermittent Explosive Disorder?",
+      "options": [
+        "A. Chronic sadness and hopelessness",
+        "B. Sudden episodes of aggressive outbursts",
+        "C. Persistent anxiety and worry",
+        "D. Difficulty in maintaining relationships"
+      ],
+      "answer": "B. Sudden episodes of aggressive outbursts",
+      "explanation": "Option B is correct because Intermittent Explosive Disorder is characterized by sudden episodes of aggressive outbursts that are disproportionate to the situation. Option A describes symptoms of depression, which are not characteristic of this disorder. Option C relates to anxiety disorders, and option D, while potentially relevant, does not specifically define Intermittent Explosive Disorder.",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests knowledge of impulse control disorders.",
+      "suggestedLesson": "5-neurodevelopmental",
+      "suggestedParagraph": "## Why Clinical Tests Matter for Your EPPP Success",
+      "lessonExcerpt": "Intermittent Explosive Disorder is characterized by sudden episodes of aggressive outbursts.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 29
+    },
+    {
+      "stem": "Which of the following behaviors is classified as self-injurious behavior in children?",
+      "options": [
+        "A. Excessive hand-washing due to anxiety",
+        "B. Deliberate cutting of the skin",
+        "C. Frequent tantrums in response to frustration",
+        "D. Avoidance of social interactions"
+      ],
+      "answer": "B. Deliberate cutting of the skin",
+      "explanation": "Option B is correct as deliberate cutting of the skin is a clear example of self-injurious behavior. Option A relates to compulsive behavior, C describes emotional dysregulation, and D pertains to social anxiety, none of which are classified as self-injurious.",
+      "kn": "KN30",
+      "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests knowledge of self-injurious behavior.",
+      "suggestedLesson": "5-eating-sleep-elimination",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "Episodes of cataplexy (loss of muscle tone)",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 7
+    }
+  ]
+}
