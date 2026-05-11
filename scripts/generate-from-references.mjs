@@ -17,6 +17,7 @@ import fsSync from 'fs'
 import path from 'path'
 import { spawn } from 'child_process'
 import OpenAI from 'openai'
+import { validateQuestion, annotateValidationFailure } from './lib/validate-question.mjs'
 
 const DOMAIN_FOLDER_MAP = {
   '1': '1 Biopsychology (Neuroscience & Pharmacology)',
@@ -371,6 +372,21 @@ async function processDomain(domainFile) {
   // Pass 2: Generate new questions
   const newQuestions = await pass2GenerateQuestions(concepts, lessons, domainKey, domain)
   console.log(`  Generated ${newQuestions.length} new questions`)
+
+  // Validation gate: flag ungrounded questions for review (don't drop — generation is expensive)
+  let flagged = 0
+  for (let i = 0; i < newQuestions.length; i++) {
+    const result = validateQuestion(newQuestions[i])
+    if (!result.valid) {
+      newQuestions[i] = annotateValidationFailure(newQuestions[i], result.errors)
+      flagged++
+    }
+  }
+  if (flagged > 0) {
+    console.log(`  Validation: ${flagged}/${newQuestions.length} flagged for review (excerpt not grounded, etc.)`)
+  } else {
+    console.log(`  Validation: all ${newQuestions.length} questions passed`)
+  }
 
   // Group by lesson and write output files
   const folderName = DOMAIN_FOLDER_MAP[domainKey]

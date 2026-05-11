@@ -2,6 +2,9 @@
 
 import fs from 'fs'
 import path from 'path'
+import { validateQuestion } from './lib/validate-question.mjs'
+
+const BLOCK_INVALID = process.env.SKIP_VALIDATION !== '1'
 
 const ROOT = process.cwd()
 const QUESTIONS_DIR = path.join(ROOT, 'questionsGPT')
@@ -292,11 +295,25 @@ function main() {
   let totalWritten = 0
   let totalReviewQuestions = 0
   let totalRootQuestions = 0
+  let totalBlocked = 0
 
   for (const [lesson, rootFilePath] of lessonToRoot.entries()) {
     const rootQuestions = getQuestions(readJson(rootFilePath))
     const reviewEntries = reviewByLesson.get(lesson) ?? []
-    const mergedQuestions = mergeLessonQuestions(reviewEntries, rootQuestions)
+    let mergedQuestions = mergeLessonQuestions(reviewEntries, rootQuestions)
+
+    if (BLOCK_INVALID) {
+      const kept = []
+      for (const q of mergedQuestions) {
+        const result = validateQuestion(q)
+        if (result.valid) {
+          kept.push(q)
+        } else {
+          totalBlocked++
+        }
+      }
+      mergedQuestions = kept
+    }
 
     writeJson(rootFilePath, { questions: mergedQuestions })
 
@@ -328,6 +345,11 @@ function main() {
   console.log(`Review questions considered: ${totalReviewQuestions}`)
   console.log(`Existing root questions considered: ${totalRootQuestions}`)
   console.log(`Final questions written: ${totalWritten}`)
+  if (BLOCK_INVALID) {
+    console.log(`Blocked from sync (failed validation): ${totalBlocked}`)
+  } else {
+    console.log(`Validation skipped (SKIP_VALIDATION=1)`)
+  }
   console.log(`Lessons with no reviewed staging questions: ${noReviewLessons.length ? noReviewLessons.join(', ') : 'none'}`)
 }
 
