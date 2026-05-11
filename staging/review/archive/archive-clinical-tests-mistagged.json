@@ -48,5 +48,29 @@
     "original_file": "staging/review/psychprep/5 Assessment/5-clinical-tests.json",
     "original_index": 33,
     "reason": "Audit flagged as DIAGNOSIS_GENERAL \u2014 no clear lesson home"
+  },
+  {
+    "stem": "In psychological testing, what does 'validity' refer to?",
+    "options": [
+      "The consistency of test results over time.",
+      "The degree to which a test measures what it claims to measure.",
+      "The accuracy of test scores in predicting future performance.",
+      "The extent to which a test is free from bias."
+    ],
+    "answer": "The degree to which a test measures what it claims to measure.",
+    "explanation": "Validity refers to the extent to which a test accurately measures what it is intended to measure. The other options describe reliability, predictive accuracy, and bias, which are related but distinct concepts.",
+    "kn": "KN29",
+    "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
+    "difficulty": "medium",
+    "quality_comment": "The question is clear and effectively assesses knowledge of test validity.",
+    "suggestedLesson": "5-what-tests-measure",
+    "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+    "lessonExcerpt": "Validity refers to the degree to which a test measures what it claims to measure.",
+    "needsReview": false,
+    "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+    "inspirationIndex": 16,
+    "archived_date": "2026-05-11",
+    "original_file": "questionsGPT/5 Assessment/5 Clinical Tests.json",
+    "reason": "Pre-regen survivor. Mistagged to 5-what-tests-measure, lessonExcerpt not in Clinical Tests lesson."
   }
 ]

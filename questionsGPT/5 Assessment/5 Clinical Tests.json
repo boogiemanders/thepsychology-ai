@@ -1,25 +1,670 @@
 {
   "questions": [
     {
-      "stem": "In psychological testing, what does 'validity' refer to?",
+      "stem": "A neuropsychologist is evaluating a 42-year-old man following a closed head injury. She wants a comprehensive battery that assesses memory, abstract reasoning, concentration, manual dexterity, and visual-motor integration, and she plans to pair it with the WAIS-IV and MMPI-2 to get a three-dimensional picture. Which battery best fits her plan?",
       "options": [
-        "The consistency of test results over time.",
-        "The degree to which a test measures what it claims to measure.",
-        "The accuracy of test scores in predicting future performance.",
-        "The extent to which a test is free from bias."
+        "Halstead-Reitan Neuropsychological Battery",
+        "Wechsler Memory Scale-IV",
+        "Bender Visual-Motor Gestalt Test",
+        "Repeatable Battery for the Assessment of Neuropsychological Status (RBANS)"
       ],
-      "answer": "The degree to which a test measures what it claims to measure.",
-      "explanation": "Validity refers to the extent to which a test accurately measures what it is intended to measure. The other options describe reliability, predictive accuracy, and bias, which are related but distinct concepts.",
+      "answer": "Halstead-Reitan Neuropsychological Battery",
+      "explanation": "The Halstead-Reitan is the comprehensive battery designed to evaluate memory, abstract reasoning, concentration, manual dexterity, and visual-motor integration, and it is classically paired with a Wechsler intelligence test and the MMPI-2. The WMS-IV is memory-only, the Bender is a brief visual-motor screen, and the RBANS is a short screening battery, not a comprehensive neuropsych exam.",
       "kn": "KN29",
-      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
-      "difficulty": "medium",
-      "quality_comment": "The question is clear and effectively assesses knowledge of test validity.",
-      "suggestedLesson": "5-what-tests-measure",
-      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
-      "lessonExcerpt": "Validity refers to the degree to which a test measures what it claims to measure.",
+      "kn_explanation": "This question tests psychometric and clinical assessment knowledge under Domain 5: Assessment.",
+      "difficulty": "easy",
+      "quality_comment": "Tests recognition of the Halstead-Reitan by its scope and standard companion tests.",
+      "suggestedLesson": "clinical-tests",
+      "lessonExcerpt": "evaluates memory, abstract reasoning, concentration, manual dexterity, and visual-motor integration",
       "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 16
+      "tags": [
+        "assessment",
+        "neuropsychological"
+      ]
+    },
+    {
+      "stem": "A neuropsychologist administered 10 subtests of the Halstead-Reitan to a 55-year-old patient. Seven of the subtests fell in the impaired range. Using the Halstead Impairment Index, how should she interpret the result?",
+      "options": [
+        "Normal functioning",
+        "Mild impairment",
+        "Moderate impairment",
+        "Severe impairment"
+      ],
+      "answer": "Moderate impairment",
+      "explanation": "The Halstead Impairment Index divides impaired subtests by total subtests given: 7/10 = 0.7, which falls in the 0.5 to 0.7 moderate impairment range. 0 to 0.2 is normal, 0.3 to 0.4 is mild, and 0.8 to 1.0 is severe.",
+      "kn": "KN29",
+      "kn_explanation": "This question tests psychometric and clinical assessment knowledge under Domain 5: Assessment.",
+      "difficulty": "medium",
+      "quality_comment": "Tests ability to calculate and interpret the Halstead Impairment Index.",
+      "suggestedLesson": "clinical-tests",
+      "lessonExcerpt": "divide the number of impaired subtests by the total number given",
+      "needsReview": false,
+      "tags": [
+        "assessment",
+        "neuropsychological"
+      ]
+    },
+    {
+      "stem": "A psychologist is reviewing a Halstead-Reitan report. The Halstead Impairment Index is reported as 0.35. Which interpretation is most accurate?",
+      "options": [
+        "Normal functioning",
+        "Mild impairment",
+        "Moderate impairment",
+        "Severe impairment"
+      ],
+      "answer": "Mild impairment",
+      "explanation": "An index of 0.35 falls within the 0.3 to 0.4 range, indicating mild impairment. 0 to 0.2 would be normal, 0.5 to 0.7 would be moderate, and 0.8 to 1.0 would be severe.",
+      "kn": "KN29",
+      "kn_explanation": "This question tests psychometric and clinical assessment knowledge under Domain 5: Assessment.",
+      "difficulty": "easy",
+      "quality_comment": "Tests recall of the Halstead Impairment Index cutoff ranges.",
+      "suggestedLesson": "clinical-tests",
+      "lessonExcerpt": "0.3 to 0.4 | Mild impairment",
+      "needsReview": false,
+      "tags": [
+        "assessment",
+        "neuropsychological"
+      ]
+    },
+    {
+      "stem": "A school psychologist is evaluating a 10-year-old with suspected learning problems and wants a comprehensive battery whose 11 scales explicitly cover reading, writing, arithmetic, expressive language, receptive language, and intellectual functioning. Which battery is most appropriate?",
+      "options": [
+        "Halstead-Reitan Neuropsychological Battery",
+        "Luria-Nebraska Neuropsychological Battery",
+        "Woodcock-Johnson IV Tests of Cognitive Abilities",
+        "NEPSY-II"
+      ],
+      "answer": "Luria-Nebraska Neuropsychological Battery",
+      "explanation": "The Luria-Nebraska has 11 scales covering exactly those domains and is available for ages 8 and up, fitting this 10-year-old. The Halstead-Reitan does not organize itself around those specific 11 academic and language scales. The Woodcock-Johnson is an achievement/cognitive test, not a neuropsych battery. NEPSY-II is a child neuropsych battery but does not use the 11-scale Luria-style structure.",
+      "kn": "KN29",
+      "kn_explanation": "This question tests psychometric and clinical assessment knowledge under Domain 5: Assessment.",
+      "difficulty": "medium",
+      "quality_comment": "Tests identification of the Luria-Nebraska by its scale structure and age range.",
+      "suggestedLesson": "clinical-tests",
+      "lessonExcerpt": "11 scales covering reading, writing, arithmetic, expressive language, receptive language, and intellectual functioning",
+      "needsReview": false,
+      "tags": [
+        "assessment",
+        "neuropsychological"
+      ]
+    },
+    {
+      "stem": "A neuropsychologist is scoring a Luria-Nebraska protocol. On one item, the patient struggles noticeably but eventually produces a usable response. According to the standard Luria-Nebraska scoring system, what raw score should the patient receive on that item?",
+      "options": [
+        "0 (normal performance)",
+        "1 (borderline performance)",
+        "2 (impaired performance)",
+        "3 (severely impaired performance)"
+      ],
+      "answer": "1 (borderline performance)",
+      "explanation": "The Luria-Nebraska uses a 3-point scoring system: 0 = normal performance, 1 = borderline (struggling but managing), 2 = impaired performance. The patient described is struggling but produced a response, which matches the borderline score of 1. There is no score of 3 in this system.",
+      "kn": "KN29",
+      "kn_explanation": "This question tests psychometric and clinical assessment knowledge under Domain 5: Assessment.",
+      "difficulty": "medium",
+      "quality_comment": "Tests applied knowledge of the Luria-Nebraska 3-point scoring system.",
+      "suggestedLesson": "clinical-tests",
+      "lessonExcerpt": "1 = Borderline performance (struggling but managing)",
+      "needsReview": false,
+      "tags": [
+        "assessment",
+        "neuropsychological"
+      ]
+    },
+    {
+      "stem": "A senior neuropsychologist is supervising a postdoc who, during a WAIS-IV Block Design administration, continued past the standard discontinue rule, gave the patient extra time on one item, and offered a non-standard cue to observe problem-solving strategy. The supervisor recognizes this as deliberate methodology, not error. Which approach is the postdoc using?",
+      "options": [
+        "Halstead-Reitan fixed battery approach",
+        "Luria-Nebraska standardized approach",
+        "Boston Process Approach",
+        "Computerized adaptive testing"
+      ],
+      "answer": "Boston Process Approach",
+      "explanation": "The Boston Process Approach intentionally modifies standardized tests on the fly, continuing past stopping points, allowing extra time, and providing non-standard cues to study how the person arrives at their answer. The Halstead-Reitan and Luria-Nebraska are fixed batteries that require standardized administration. Computerized adaptive testing varies item difficulty algorithmically but still follows a rigid protocol.",
+      "kn": "KN29",
+      "kn_explanation": "This question tests psychometric and clinical assessment knowledge under Domain 5: Assessment.",
+      "difficulty": "hard",
+      "quality_comment": "Tests recognition of the Boston Process Approach by its qualitative, flexible methodology.",
+      "suggestedLesson": "clinical-tests",
+      "lessonExcerpt": "continuing past normal stopping points, giving extra time, or providing cues that aren't in the standard protocol",
+      "needsReview": false,
+      "tags": [
+        "assessment",
+        "neuropsychological"
+      ]
+    },
+    {
+      "stem": "A neuropsychologist is screening a 62-year-old man for possible early neurocognitive impairment. She shows him a series of geometric designs one at a time and asks him to copy each one, then later asks him to draw as many as he can remember. Which test is she most likely administering?",
+      "options": [
+        "Bender Visual-Motor Gestalt Test, 2nd Edition",
+        "Wisconsin Card Sorting Test",
+        "Stroop Color and Word Test",
+        "Tower of London, 2nd Edition"
+      ],
+      "answer": "Bender Visual-Motor Gestalt Test, 2nd Edition",
+      "explanation": "The Bender-Gestalt II uses a copy phase and a recall phase with geometric designs to screen visual-motor perception and integration. The WCST uses card sorting with shifting rules. The Stroop uses color-word interference. The Tower of London uses disks on pegs.",
+      "kn": "KN29",
+      "kn_explanation": "This question tests psychometric and clinical assessment knowledge under Domain 5: Assessment.",
+      "difficulty": "easy",
+      "quality_comment": "Tests recognition of Bender-Gestalt II's two-phase administration procedure.",
+      "suggestedLesson": "clinical-tests",
+      "lessonExcerpt": "Copy phase: Show them geometric designs",
+      "needsReview": false,
+      "tags": [
+        "assessment",
+        "neuropsychological"
+      ]
+    },
+    {
+      "stem": "A psychologist administers the Bender-Gestalt II to a 28-year-old patient and the referring physician asks whether the results can help confirm a suspected personality disorder. What is the most appropriate response?",
+      "options": [
+        "The Bender-Gestalt II is not accurate for identifying personality characteristics or making psychiatric diagnoses",
+        "The Bender-Gestalt II's recall phase produces valid personality indicators when scored projectively",
+        "The Global Scoring System yields diagnostic personality profiles for adults",
+        "The Bender-Gestalt II is the gold standard for distinguishing Cluster B personality disorders"
+      ],
+      "answer": "The Bender-Gestalt II is not accurate for identifying personality characteristics or making psychiatric diagnoses",
+      "explanation": "The Bender-Gestalt II is excellent for screening neuropsychological impairment but is explicitly not accurate for personality characteristics or psychiatric diagnoses. The other options invent uses the test does not support.",
+      "kn": "KN29",
+      "kn_explanation": "This question tests psychometric and clinical assessment knowledge under Domain 5: Assessment.",
+      "difficulty": "medium",
+      "quality_comment": "Tests the critical EPPP-relevant limitation of the Bender-Gestalt II.",
+      "suggestedLesson": "clinical-tests",
+      "lessonExcerpt": "not accurate for identifying personality characteristics or making psychiatric diagnoses",
+      "needsReview": false,
+      "tags": [
+        "assessment",
+        "neuropsychological"
+      ]
+    },
+    {
+      "stem": "A school psychologist needs a brief assessment to help screen a 10-year-old for a possible learning disability and ADHD, focusing on visual perception, visual memory, and visuo-constructive skills. Which instrument is best suited?",
+      "options": [
+        "Benton Visual Retention Test, 5th Edition",
+        "Wisconsin Card Sorting Test",
+        "Stroop Color and Word Test",
+        "Tower of London, 2nd Edition"
+      ],
+      "answer": "Benton Visual Retention Test, 5th Edition",
+      "explanation": "The BVRT is designed for ages 8+ and screens visual perception, visual memory, and visuo-constructive skills, with utility for learning disabilities, ADHD, TBI, and neurocognitive disorders. The WCST targets cognitive flexibility, the Stroop targets inhibition, and the Tower of London targets planning.",
+      "kn": "KN29",
+      "kn_explanation": "This question tests psychometric and clinical assessment knowledge under Domain 5: Assessment.",
+      "difficulty": "medium",
+      "quality_comment": "Tests test selection for visual memory and visuo-constructive screening.",
+      "suggestedLesson": "clinical-tests",
+      "lessonExcerpt": "screening learning disabilities, ADHD, traumatic brain injury",
+      "needsReview": false,
+      "tags": [
+        "assessment",
+        "neuropsychological"
+      ]
+    },
+    {
+      "stem": "A 45-year-old patient is being evaluated for suspected frontal lobe dysfunction. On testing, she continues to sort cards by color even after the examiner repeatedly tells her she is wrong and the rule has changed. This pattern of repeatedly applying the same incorrect strategy is best described as which type of error?",
+      "options": [
+        "Perseverative errors on the Wisconsin Card Sorting Test",
+        "Nonperseverative errors on the Wisconsin Card Sorting Test",
+        "Rule violations on the Tower of London",
+        "Interference errors on the Stroop Color and Word Test"
+      ],
+      "answer": "Perseverative errors on the Wisconsin Card Sorting Test",
+      "explanation": "Perseverative errors on the WCST occur when the patient stubbornly sticks with the wrong strategy despite feedback. Nonperseverative errors are other types of mistakes. Tower of London rule violations involve breaking movement rules. Stroop interference involves failure to inhibit reading.",
+      "kn": "KN29",
+      "kn_explanation": "This question tests psychometric and clinical assessment knowledge under Domain 5: Assessment.",
+      "difficulty": "medium",
+      "quality_comment": "Tests identification of WCST perseverative errors as a frontal lobe sign.",
+      "suggestedLesson": "clinical-tests",
+      "lessonExcerpt": "stubbornly sticking with the wrong strategy",
+      "needsReview": false,
+      "tags": [
+        "assessment",
+        "neuropsychological"
+      ]
+    },
+    {
+      "stem": "A neuropsychologist wants to specifically assess a patient's ability to suppress an automatic response in favor of a less natural one. The patient is shown the word 'yellow' printed in blue ink and asked to name the ink color rather than read the word. Which test and construct does this best assess?",
+      "options": [
+        "Stroop Color and Word Test, cognitive inhibition",
+        "Wisconsin Card Sorting Test, cognitive flexibility",
+        "Tower of London, impulse control",
+        "Bender-Gestalt II, visual-motor integration"
+      ],
+      "answer": "Stroop Color and Word Test, cognitive inhibition",
+      "explanation": "The Stroop directly assesses cognitive inhibition by requiring suppression of the automatic word-reading response. The WCST measures set-shifting cognitive flexibility through rule changes. Tower of London measures planning and impulse control via disk movement. Bender-Gestalt II measures visual-motor integration.",
+      "kn": "KN29",
+      "kn_explanation": "This question tests psychometric and clinical assessment knowledge under Domain 5: Assessment.",
+      "difficulty": "easy",
+      "quality_comment": "Tests recognition of the Stroop paradigm and the cognitive inhibition construct.",
+      "suggestedLesson": "clinical-tests",
+      "lessonExcerpt": "suppress an automatic response for a less natural one",
+      "needsReview": false,
+      "tags": [
+        "assessment",
+        "neuropsychological"
+      ]
+    },
+    {
+      "stem": "A neuropsychologist evaluating a 15-year-old for frontal lobe functioning has him move colored disks on a pegboard to match a target configuration, following specific rules and moving only one disk at a time. The psychologist scores total correct moves, total time, and rule violations. Which test is being administered, and what executive functions does it primarily measure?",
+      "options": [
+        "Tower of London, 2nd Edition: problem-solving, planning, and impulse control",
+        "Wisconsin Card Sorting Test: abstract reasoning and set-shifting",
+        "Stroop Color and Word Test: selective attention and response inhibition",
+        "Benton Visual Retention Test: visual memory and visuo-constructive skills"
+      ],
+      "answer": "Tower of London, 2nd Edition: problem-solving, planning, and impulse control",
+      "explanation": "The Tower of London, 2nd Edition uses disk-moving on a pegboard to measure problem-solving, planning, and impulse control in ages 7 to 80. The WCST uses cards, the Stroop uses color-word interference, and the BVRT uses geometric figure reproduction.",
+      "kn": "KN29",
+      "kn_explanation": "This question tests psychometric and clinical assessment knowledge under Domain 5: Assessment.",
+      "difficulty": "medium",
+      "quality_comment": "Tests recognition of Tower of London administration and the planning construct.",
+      "suggestedLesson": "clinical-tests",
+      "lessonExcerpt": "move colored disks on a pegboard to match a target configuration",
+      "needsReview": false,
+      "tags": [
+        "assessment",
+        "neuropsychological"
+      ]
+    },
+    {
+      "stem": "A 78-year-old patient is brought to clinic for cognitive screening. The clinician administers the MMSE and the patient scores 22 out of 30. Based on the standard cutoff, what does this score most likely suggest?",
+      "options": [
+        "Cognitive impairment",
+        "Normal cognition",
+        "Severe dementia confirmed",
+        "Delirium ruled out"
+      ],
+      "answer": "Cognitive impairment",
+      "explanation": "The MMSE has a maximum of 30 points with 24 as the typical cutoff; scores below 24 suggest cognitive impairment. A single cutoff score does not confirm a specific diagnosis like severe dementia, nor does it rule out delirium. Calling it normal cognition contradicts the standard cutoff.",
+      "kn": "KN29",
+      "kn_explanation": "This question tests psychometric and clinical assessment knowledge under Domain 5: Assessment.",
+      "difficulty": "easy",
+      "quality_comment": "Tests recognition of the standard MMSE cutoff score for cognitive impairment.",
+      "suggestedLesson": "clinical-tests",
+      "lessonExcerpt": "30 maximum points, with 24 as the typical cutoff",
+      "needsReview": false,
+      "tags": [
+        "assessment",
+        "screening"
+      ]
+    },
+    {
+      "stem": "A 70-year-old Spanish-speaking patient with severe hearing loss is referred for cognitive screening and scores 19 on the MMSE. Before concluding cognitive impairment, what is the most important consideration?",
+      "options": [
+        "The MMSE relies heavily on verbal responses, reading, and writing, so sensory and language factors may artificially lower scores",
+        "MMSE scores below 20 always confirm Alzheimer's disease regardless of context",
+        "The MMSE is fully nonverbal and uninfluenced by language proficiency",
+        "Hearing loss has no documented effect on MMSE performance"
+      ],
+      "answer": "The MMSE relies heavily on verbal responses, reading, and writing, so sensory and language factors may artificially lower scores",
+      "explanation": "Per the source, the MMSE relies heavily on verbal responses, reading, and writing, so hearing loss, vision problems, limited English proficiency, or communication disorders can produce false positives. The MMSE is not nonverbal, does not confirm any specific diagnosis on its own, and sensory/language barriers are documented to affect performance.",
+      "kn": "KN29",
+      "kn_explanation": "This question tests psychometric and clinical assessment knowledge under Domain 5: Assessment.",
+      "difficulty": "medium",
+      "quality_comment": "Tests understanding of MMSE limitations and false positives due to sensory or language barriers.",
+      "suggestedLesson": "clinical-tests",
+      "lessonExcerpt": "the MMSE relies heavily on verbal responses, reading, and writing",
+      "needsReview": false,
+      "tags": [
+        "assessment",
+        "screening"
+      ]
+    },
+    {
+      "stem": "An ER psychologist consults on a patient who arrived after a motor vehicle accident. The trauma team reports a Glasgow Coma Scale score of 7. How should this score be interpreted?",
+      "options": [
+        "Coma or severe injury",
+        "Moderate injury",
+        "Mild injury",
+        "Normal level of consciousness"
+      ],
+      "answer": "Coma or severe injury",
+      "explanation": "GCS scores of 8 or less indicate coma or severe injury. Moderate injury corresponds to 9 to 12, mild injury to 13 to 15, and a normal level of consciousness is not how GCS ranges are characterized in this scale.",
+      "kn": "KN29",
+      "kn_explanation": "This question tests psychometric and clinical assessment knowledge under Domain 5: Assessment.",
+      "difficulty": "easy",
+      "quality_comment": "Tests recall of GCS severity ranges for acute brain injury.",
+      "suggestedLesson": "clinical-tests",
+      "lessonExcerpt": "8 or less | Coma/Severe injury",
+      "needsReview": false,
+      "tags": [
+        "assessment",
+        "screening"
+      ]
+    },
+    {
+      "stem": "A neuropsychologist is reviewing the Glasgow Coma Scale with a trainee and asks which three areas are rated to produce the total score. Which response is correct?",
+      "options": [
+        "Eye opening, motor response, and verbal response",
+        "Orientation, registration, and delayed recall",
+        "Attention, memory, and executive function",
+        "Eye opening, pupillary response, and pain reaction"
+      ],
+      "answer": "Eye opening, motor response, and verbal response",
+      "explanation": "The GCS rates three areas: eye opening, motor response, and verbal response, for a total score between 3 and 15. Orientation, registration, and delayed recall are MMSE domains. Attention, memory, and executive function are broad neuropsychological domains, not the GCS components. Pupillary response is not part of the GCS.",
+      "kn": "KN29",
+      "kn_explanation": "This question tests psychometric and clinical assessment knowledge under Domain 5: Assessment.",
+      "difficulty": "medium",
+      "quality_comment": "Tests knowledge of the three components of the Glasgow Coma Scale.",
+      "suggestedLesson": "clinical-tests",
+      "lessonExcerpt": "eye opening, motor response, and verbal response",
+      "needsReview": false,
+      "tags": [
+        "assessment",
+        "screening"
+      ]
+    },
+    {
+      "stem": "A rehabilitation psychologist follows a patient three weeks after a traumatic brain injury. The patient is completely unresponsive and requires total assistance for all care. On the Rancho Scale of Cognitive Functioning Revised, this presentation is most consistent with which level?",
+      "options": [
+        "Level I",
+        "Level V",
+        "Level VIII",
+        "Level X"
+      ],
+      "answer": "Level I",
+      "explanation": "Per the source, Level I on the Rancho Scale Revised describes a patient who is completely unresponsive and requires total assistance. Level X reflects mostly independent functioning with some need for extra time or compensatory strategies. Levels V and VIII fall between these endpoints and do not match a completely unresponsive presentation.",
+      "kn": "KN29",
+      "kn_explanation": "This question tests psychometric and clinical assessment knowledge under Domain 5: Assessment.",
+      "difficulty": "medium",
+      "quality_comment": "Tests recognition of Rancho Scale Revised Level I criteria during early TBI recovery.",
+      "suggestedLesson": "clinical-tests",
+      "lessonExcerpt": "Level I being completely unresponsive and requiring total assistance",
+      "needsReview": false,
+      "tags": [
+        "assessment",
+        "screening"
+      ]
+    },
+    {
+      "stem": "A psychologist is selecting a screening instrument for the FIRST FEW WEEKS of cognitive recovery after a head injury, to track how the patient progresses across stages of responsiveness and independence. Which tool is best suited for this purpose?",
+      "options": [
+        "Rancho Scale of Cognitive Functioning Revised",
+        "Mini-Mental State Exam",
+        "Glasgow Coma Scale",
+        "Wechsler Adult Intelligence Scale"
+      ],
+      "answer": "Rancho Scale of Cognitive Functioning Revised",
+      "explanation": "The Rancho Scale of Cognitive Functioning Revised tracks cognitive recovery during the first weeks after head injury across 10 levels. The MMSE is a brief cognitive screen, not a TBI recovery tracker. The GCS measures acute consciousness level, not weeks-long recovery trajectory. The WAIS is a full intelligence battery, not a recovery-stage tool.",
+      "kn": "KN29",
+      "kn_explanation": "This question tests psychometric and clinical assessment knowledge under Domain 5: Assessment.",
+      "difficulty": "hard",
+      "quality_comment": "Tests ability to match the Rancho Scale to its specific use case in tracking TBI recovery.",
+      "suggestedLesson": "clinical-tests",
+      "lessonExcerpt": "tracks cognitive recovery during the first weeks after head injury",
+      "needsReview": false,
+      "tags": [
+        "assessment",
+        "screening"
+      ]
+    },
+    {
+      "stem": "A 34-year-old client completes a 21-item self-report measure where each item presents four statements of increasing severity, and she selects the one that best describes her past two weeks. Her total score is 24. Which interpretation is most accurate?",
+      "options": [
+        "BDI-II score in the moderate depression range",
+        "BDI-II score in the mild depression range",
+        "PHQ-9 score indicating major depressive episode",
+        "HAM-D score in the severe depression range"
+      ],
+      "answer": "BDI-II score in the moderate depression range",
+      "explanation": "The 21-item, four-statement-per-item, past-two-weeks structure uniquely identifies the BDI-II. A score of 24 falls in the 20 to 28 range, which is moderate. Mild is 14 to 19, so 24 is too high. The PHQ-9 has only 9 items, not 21. The HAM-D is clinician-administered, not self-report.",
+      "kn": "KN29",
+      "kn_explanation": "This question tests psychometric and clinical assessment knowledge under Domain 5: Assessment.",
+      "difficulty": "medium",
+      "quality_comment": "Tests recognition of BDI-II structure plus accurate score-range interpretation.",
+      "suggestedLesson": "clinical-tests",
+      "lessonExcerpt": "Each item presents four statements reflecting increasing severity",
+      "needsReview": false,
+      "tags": [
+        "assessment",
+        "clinical"
+      ]
+    },
+    {
+      "stem": "A clinician administers the BDI-II to a 16-year-old who reports persistent low mood. The total score is 31. Which depression-level classification matches this score?",
+      "options": [
+        "Severe",
+        "Moderate",
+        "Mild",
+        "Minimal"
+      ],
+      "answer": "Severe",
+      "explanation": "BDI-II scores of 29 to 63 fall in the severe range, so 31 is severe. Moderate is 20 to 28, mild is 14 to 19, and minimal is 0 to 13. The BDI-II is validated for ages 13 to 80, so 16 is appropriate.",
+      "kn": "KN29",
+      "kn_explanation": "This question tests psychometric and clinical assessment knowledge under Domain 5: Assessment.",
+      "difficulty": "easy",
+      "quality_comment": "Tests memorization of BDI-II cutoff scores in a clinical context.",
+      "suggestedLesson": "clinical-tests",
+      "lessonExcerpt": "Total scores range from 0 to 63",
+      "needsReview": false,
+      "tags": [
+        "assessment",
+        "clinical"
+      ]
+    },
+    {
+      "stem": "A psychologist needs to assess adaptive functioning in a nonverbal 8-year-old being evaluated for intellectual disability. The child is unlikely to perform well in formal testing situations. Which instrument is most appropriate and why?",
+      "options": [
+        "Vineland-3 because information comes from parents, caregivers, or teachers rather than direct testing",
+        "WISC-V because it includes a nonverbal index for children who cannot speak",
+        "WAIS-IV because it is co-normed with the WMS-IV",
+        "BDI-II because it is a self-report measure appropriate for ages 13 to 80"
+      ],
+      "answer": "Vineland-3 because information comes from parents, caregivers, or teachers rather than direct testing",
+      "explanation": "The Vineland-3 is informant-based, making it valuable for individuals who cannot perform in formal testing situations. It is essential for diagnosing intellectual disability. The WISC-V still requires direct administration. The WAIS-IV is for ages 16+ and is a cognitive test, not adaptive functioning. The BDI-II measures depression severity, not adaptive functioning.",
+      "kn": "KN29",
+      "kn_explanation": "This question tests psychometric and clinical assessment knowledge under Domain 5: Assessment.",
+      "difficulty": "medium",
+      "quality_comment": "Tests recognition of when informant-based assessment is clinically indicated.",
+      "suggestedLesson": "clinical-tests",
+      "lessonExcerpt": "Information comes from parents, caregivers, or teachers",
+      "needsReview": false,
+      "tags": [
+        "assessment",
+        "clinical"
+      ]
+    },
+    {
+      "stem": "A school psychologist uses the Vineland-3 to help determine eligibility for special education services. Which combination of domains represents the CORE (non-optional) adaptive behavior domains?",
+      "options": [
+        "Communication, Daily Living Skills, and Socialization",
+        "Communication, Motor Skills, and Maladaptive Behavior",
+        "Daily Living Skills, Socialization, and Motor Skills",
+        "Verbal Comprehension, Working Memory, and Processing Speed"
+      ],
+      "answer": "Communication, Daily Living Skills, and Socialization",
+      "explanation": "The Vineland-3 core domains are Communication, Daily Living Skills, and Socialization. Motor Skills and Maladaptive Behavior are optional. The last option lists WISC/WAIS cognitive indices, not Vineland domains.",
+      "kn": "KN29",
+      "kn_explanation": "This question tests psychometric and clinical assessment knowledge under Domain 5: Assessment.",
+      "difficulty": "medium",
+      "quality_comment": "Tests knowledge of Vineland-3 domain structure and which are optional.",
+      "suggestedLesson": "clinical-tests",
+      "lessonExcerpt": "essential for diagnosing intellectual disability, autism spectrum disorder, neurocognitive disorders",
+      "needsReview": false,
+      "tags": [
+        "assessment",
+        "clinical"
+      ]
+    },
+    {
+      "stem": "A 58-year-old patient with a suspected traumatic brain injury is referred for memory assessment. The neuropsychologist administers the WMS-IV. Which set of indices reflects the four main index scales of the WMS-IV?",
+      "options": [
+        "Auditory Memory, Visual Memory, Visual Working Memory, Immediate Memory",
+        "Verbal Comprehension, Perceptual Reasoning, Working Memory, Processing Speed",
+        "Communication, Daily Living Skills, Socialization, Motor Skills",
+        "Attention, Language, Visuospatial, Executive Function"
+      ],
+      "answer": "Auditory Memory, Visual Memory, Visual Working Memory, Immediate Memory",
+      "explanation": "The WMS-IV's four main index scales are Auditory Memory Index, Visual Memory Index, Visual Working Memory Index, and Immediate Memory Index. The second option lists WAIS-IV cognitive indices. The third lists Vineland-3 domains. The fourth lists generic cognitive screening domains.",
+      "kn": "KN29",
+      "kn_explanation": "This question tests psychometric and clinical assessment knowledge under Domain 5: Assessment.",
+      "difficulty": "medium",
+      "quality_comment": "Tests recognition of WMS-IV index structure versus other batteries.",
+      "suggestedLesson": "clinical-tests",
+      "lessonExcerpt": "Four main index scales emerge from the primary subtests",
+      "needsReview": false,
+      "tags": [
+        "assessment",
+        "clinical"
+      ]
+    },
+    {
+      "stem": "A neuropsychologist wants to determine whether a 45-year-old patient's memory performance is significantly worse than her overall cognitive ability. Which feature of the WMS-IV makes this direct comparison statistically appropriate?",
+      "options": [
+        "The WMS-IV and WAIS-IV were co-normed, so performance can be directly compared",
+        "The WMS-IV uses informant report, eliminating the need for direct cognitive testing",
+        "The WMS-IV uses the same 0 to 63 score range as the BDI-II",
+        "The WMS-IV index scores have a mean of 10 and SD of 3, matching the WAIS-IV"
+      ],
+      "answer": "The WMS-IV and WAIS-IV were co-normed, so performance can be directly compared",
+      "explanation": "Co-norming means both tests were standardized on the same sample, allowing direct cross-test comparison of memory versus general cognitive ability. The Vineland-3, not the WMS-IV, uses informant report. The 0 to 63 range belongs to the BDI-II. WMS-IV subtests have a mean of 10 and SD of 3, but index scales have a mean of 100 and SD of 15, like the WAIS-IV indices.",
+      "kn": "KN29",
+      "kn_explanation": "This question tests psychometric and clinical assessment knowledge under Domain 5: Assessment.",
+      "difficulty": "hard",
+      "quality_comment": "Tests understanding of why co-norming permits cross-battery interpretation.",
+      "suggestedLesson": "clinical-tests",
+      "lessonExcerpt": "the WMS-IV and WAIS-IV were co-normed",
+      "needsReview": false,
+      "tags": [
+        "assessment",
+        "clinical"
+      ]
+    },
+    {
+      "stem": "A 22-year-old college soccer player is brought to the ER after a head-to-head collision during a match. She is disoriented, opens her eyes only to pain, mumbles incoherent words, and withdraws from painful stimuli. The treating neuropsychologist is consulted in the acute phase. Which instrument is most appropriate to administer FIRST in this acute window?",
+      "options": [
+        "Glasgow Coma Scale",
+        "Rancho Scale",
+        "Wechsler Memory Scale-IV",
+        "Wisconsin Card Sorting Test"
+      ],
+      "answer": "Glasgow Coma Scale",
+      "explanation": "The Glasgow Coma Scale rates consciousness after brain injury (3-15 scale) and is the gold-standard acute-phase measure. Rancho Scale tracks cognitive recovery through 10 levels but is used during rehabilitation, not the acute ER window. WMS-IV is a detailed memory battery inappropriate for an obtunded patient. WCST measures executive flexibility and requires intact attention and engagement, also inappropriate acutely.",
+      "kn": "KN29",
+      "kn_explanation": "This question tests psychometric and clinical assessment knowledge under Domain 5: Assessment.",
+      "difficulty": "medium",
+      "quality_comment": "Tests sequencing of neuropsych instruments across the acute-to-rehab timeline of TBI.",
+      "suggestedLesson": "clinical-tests",
+      "lessonExcerpt": "Glasgow Coma Scale rates consciousness after brain injury",
+      "needsReview": false,
+      "tags": [
+        "assessment",
+        "test-selection",
+        "case-based"
+      ]
+    },
+    {
+      "stem": "A 35-year-old construction worker fell from scaffolding six months ago. His wife reports dramatic personality changes, impulsive financial decisions, and difficulty switching tasks at work. The neuropsychologist wants to specifically evaluate cognitive flexibility and frontal lobe executive function. Which combination of tests is most appropriate to target these concerns?",
+      "options": [
+        "Wisconsin Card Sorting Test, Stroop Test, and Tower of London",
+        "Bender-Gestalt II, Benton Visual Retention Test, and MMSE",
+        "Vineland-3, BDI-II, and Glasgow Coma Scale",
+        "Luria-Nebraska functional scales only"
+      ],
+      "answer": "Wisconsin Card Sorting Test, Stroop Test, and Tower of London",
+      "explanation": "WCST measures cognitive flexibility and is sensitive to frontal lobe dysfunction; the Stroop assesses inhibition of automatic responses and is frontal lobe sensitive; Tower of London measures planning, problem-solving, and impulse control for frontal lobe evaluation. Bender-Gestalt II and Benton screen visual-motor and visual memory, not executive function. Vineland-3 and BDI-II measure adaptive functioning and depression severity respectively. Luria-Nebraska alone is comprehensive but does not specifically isolate frontal/executive function the way this triad does.",
+      "kn": "KN29",
+      "kn_explanation": "This question tests psychometric and clinical assessment knowledge under Domain 5: Assessment.",
+      "difficulty": "hard",
+      "quality_comment": "Tests synthesis across three frontal-lobe-sensitive measures for a personality-change TBI presentation.",
+      "suggestedLesson": "clinical-tests",
+      "lessonExcerpt": "Tower of London measures planning, problem-solving, and impulse control for frontal lobe evaluation",
+      "needsReview": false,
+      "tags": [
+        "assessment",
+        "test-selection",
+        "case-based"
+      ]
+    },
+    {
+      "stem": "A 78-year-old retired teacher is brought to clinic by her daughter, who reports increasing forgetfulness, missed appointments, and confusion about familiar routes. The clinician wants to (1) screen cognitive status quickly, (2) differentiate normal aging from mild cognitive impairment versus dementia, and (3) assess decline in everyday functioning using family report. Which battery best matches these three goals in order?",
+      "options": [
+        "MMSE, then WMS-IV, then Vineland-3",
+        "Bender-Gestalt II, then Halstead-Reitan, then BDI-II",
+        "Glasgow Coma Scale, then Rancho Scale, then Stroop Test",
+        "Wisconsin Card Sorting Test, then Tower of London, then Benton Visual Retention Test"
+      ],
+      "answer": "MMSE, then WMS-IV, then Vineland-3",
+      "explanation": "MMSE screens cognitive impairment with 24 as the cutoff score; WMS-IV is specialized memory assessment with four index scales useful to differentiate normal aging vs MCI vs dementia; Vineland-3 assesses adaptive functioning using informant reports, ideal for capturing family-observed decline. Glasgow Coma Scale and Rancho are for acute brain injury, not insidious cognitive decline. Bender-Gestalt II and Halstead-Reitan are not the standard dementia workup. WCST and Tower of London target frontal/executive, not the staged dementia question.",
+      "kn": "KN29",
+      "kn_explanation": "This question tests psychometric and clinical assessment knowledge under Domain 5: Assessment.",
+      "difficulty": "medium",
+      "quality_comment": "Tests staged battery design for geriatric cognitive decline workup.",
+      "suggestedLesson": "clinical-tests",
+      "lessonExcerpt": "WMS-IV to differentiate between normal aging, mild cognitive impairment, or dementia",
+      "needsReview": false,
+      "tags": [
+        "assessment",
+        "test-selection",
+        "case-based"
+      ]
+    },
+    {
+      "stem": "A 10-year-old boy with an average Full Scale IQ is struggling academically. His teacher reports illegible handwriting, trouble copying from the board, weak recall of visual material, difficulty shifting between tasks, and lagging self-care skills relative to peers. His psychologist wants to construct a targeted battery. Which set of instruments best matches this profile?",
+      "options": [
+        "Bender-Gestalt II, Benton Visual Retention Test, Vineland-3, and Wisconsin Card Sorting Test",
+        "Glasgow Coma Scale, Rancho Scale, MMSE, and BDI-II",
+        "Halstead-Reitan, Luria-Nebraska, WMS-IV, and Tower of London",
+        "Stroop Test, BDI-II, Bender-Gestalt II, and Glasgow Coma Scale"
+      ],
+      "answer": "Bender-Gestalt II, Benton Visual Retention Test, Vineland-3, and Wisconsin Card Sorting Test",
+      "explanation": "Bender-Gestalt II screens visual-motor copying; Benton assesses visual perception, memory, and visuo-constructive skills useful for screening learning disabilities; Vineland-3 captures adaptive functioning lag; WCST evaluates the task-shifting executive concern. Option B mixes acute TBI tools with a depression scale and dementia screener, none appropriate. Option C uses adult-heavy neuropsych batteries not targeted to a pediatric LD profile. Option D mixes a depression scale and acute TBI tool with no coverage of visual memory or adaptive functioning.",
+      "kn": "KN29",
+      "kn_explanation": "This question tests psychometric and clinical assessment knowledge under Domain 5: Assessment.",
+      "difficulty": "hard",
+      "quality_comment": "Tests pediatric battery construction across visual-motor, adaptive, and executive domains.",
+      "suggestedLesson": "clinical-tests",
+      "lessonExcerpt": "useful for screening learning disabilities, ADHD, and brain injury",
+      "needsReview": false,
+      "tags": [
+        "assessment",
+        "test-selection",
+        "case-based"
+      ]
+    },
+    {
+      "stem": "A psychologist is asked to assess a 45-year-old patient referred by an attorney following an alleged workplace head injury. The patient endorses severe cognitive complaints. The clinician suspects malingering and wants a measure that is sensitive to feigned executive dysfunction, while also being elevated in conditions like autism, schizophrenia, and depression so that interpretation requires clinical context. Which test best fits this purpose?",
+      "options": [
+        "Wisconsin Card Sorting Test",
+        "Vineland-3",
+        "MMSE",
+        "Bender-Gestalt II"
+      ],
+      "answer": "Wisconsin Card Sorting Test",
+      "explanation": "WCST measures cognitive flexibility and executive function, with elevated errors in autism, schizophrenia, depression, and malingering, making it relevant here but requiring clinical context to interpret. Vineland-3 measures adaptive functioning via informant report, not feigning. MMSE is a brief cognitive screener with sensory-language confounds, not designed to flag malingering. Bender-Gestalt II screens visual-motor impairment and is explicitly NOT valid for personality assessment or feigning detection.",
+      "kn": "KN29",
+      "kn_explanation": "This question tests psychometric and clinical assessment knowledge under Domain 5: Assessment.",
+      "difficulty": "hard",
+      "quality_comment": "Tests recognition that WCST elevations are non-specific and span malingering, mood, and psychotic conditions.",
+      "suggestedLesson": "clinical-tests",
+      "lessonExcerpt": "elevated errors in autism, schizophrenia, depression, and malingering",
+      "needsReview": false,
+      "tags": [
+        "assessment",
+        "test-selection",
+        "case-based"
+      ]
+    },
+    {
+      "stem": "A 28-year-old patient who suffered a moderate TBI four months ago reports persistent memory complaints. The neuropsychologist wants a memory battery that yields four index scales (auditory, visual, visual working, and immediate memory) AND can be directly compared to the patient's intellectual functioning from a co-normed IQ test. Which instrument is most appropriate?",
+      "options": [
+        "Wechsler Memory Scale-IV",
+        "Benton Visual Retention Test",
+        "Halstead-Reitan",
+        "MMSE"
+      ],
+      "answer": "Wechsler Memory Scale-IV",
+      "explanation": "WMS-IV is specialized memory assessment with four index scales (AMI, VMI, VWMI, IMI) and is co-normed with WAIS-IV for direct comparison, exactly matching the referral question. Benton Visual Retention Test covers visual perception and memory but is a screening tool, not a four-index battery co-normed with IQ. Halstead-Reitan provides comprehensive neuropsychological assessment but is not a dedicated memory index battery co-normed with WAIS-IV. MMSE is a brief cognitive screener with a 24 cutoff, not a memory index battery.",
+      "kn": "KN29",
+      "kn_explanation": "This question tests psychometric and clinical assessment knowledge under Domain 5: Assessment.",
+      "difficulty": "medium",
+      "quality_comment": "Tests recognition of WMS-IV's four-index structure and WAIS-IV co-norming for IQ-memory discrepancy analysis.",
+      "suggestedLesson": "clinical-tests",
+      "lessonExcerpt": "co-normed with WAIS-IV for direct comparison",
+      "needsReview": false,
+      "tags": [
+        "assessment",
+        "test-selection",
+        "case-based"
+      ]
     }
   ]
 }
