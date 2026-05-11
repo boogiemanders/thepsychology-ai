@@ -361,7 +361,7 @@ export function QuizzerContent() {
 
       const currentFormat = textFormats[quizState.question]
       const baseQuestion = currentFormat?.question ?? escapeHtml(question.question)
-      const baseOptions = currentFormat?.options ?? question.options.map(escapeHtml)
+      const baseOptions = currentFormat?.options ?? question.options.map((opt) => escapeHtml(stripOptionLetterPrefix(opt)))
 
       const wrapTag = () => {
         const el = document.createElement(tagName)
@@ -1008,7 +1008,7 @@ export function QuizzerContent() {
           finalQuestions.forEach((q, idx) => {
             initialFormats[idx] = {
               question: escapeHtml(q.question),
-              options: q.options.map(escapeHtml),
+              options: q.options.map((opt) => escapeHtml(stripOptionLetterPrefix(opt))),
             }
           })
           setTextFormats(initialFormats)
@@ -1026,7 +1026,7 @@ export function QuizzerContent() {
       finalQuestions.forEach((q, idx) => {
         initialFormats[idx] = {
           question: escapeHtml(q.question),
-          options: q.options.map(escapeHtml),
+          options: q.options.map((opt) => escapeHtml(stripOptionLetterPrefix(opt))),
         }
       })
       setTextFormats(initialFormats)
@@ -1609,7 +1609,7 @@ export function QuizzerContent() {
                 const currentQuestion = questions[quizState.question]
                 const currentFormat = textFormats[quizState.question]
                 const questionHtml = currentFormat?.question ?? escapeHtml(currentQuestion?.question ?? '')
-                const optionHtml = currentFormat?.options ?? currentQuestion?.options.map(escapeHtml) ?? []
+                const optionHtml = currentFormat?.options ?? currentQuestion?.options.map((opt) => escapeHtml(stripOptionLetterPrefix(opt))) ?? []
 
                 return (
                   <div ref={questionContentRef}>
