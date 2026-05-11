@@ -81,23 +81,24 @@
       "is_org_psych": false
     },
     {
-      "id": 5,
-      "question": "Which statistical method is primarily used for confirming hypotheses about underlying relationships among variables?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Inferential Stats.json::13",
+      "question": "In stepwise regression, what is the primary criterion for selecting predictors?",
       "options": [
-        "Regression analysis",
-        "Factor analysis",
-        "Chi-square test",
-        "T-test"
+        "The strength of the relationship with the dependent variable",
+        "The number of predictors already included",
+        "The order of entry into the model",
+        "The sample size of the study"
       ],
-      "correct_answer": "Factor analysis",
-      "explanation": "Factor analysis is specifically designed to identify underlying relationships among variables, making it the correct choice. Regression analysis is used for predicting outcomes, chi-square tests are for categorical data, and t-tests compare means between groups, which do not confirm underlying relationships.",
+      "correct_answer": "The strength of the relationship with the dependent variable",
+      "explanation": "The correct answer is 'The strength of the relationship with the dependent variable' because stepwise regression selects predictors based on their statistical significance and contribution to explaining variance in the dependent variable. The other options do not accurately reflect the primary criterion for predictor selection.",
       "domain": "Domain 7: Research Methods & Statistics",
       "knId": "KN55",
-      "source_file": "7-correlation-and-regression.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Inferential Stats.json",
       "source_folder": "7 Research and Stats",
       "difficulty": "hard",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -161,23 +162,24 @@
       "is_org_psych": false
     },
     {
-      "id": 9,
-      "question": "What percentage of a newborn's brain weight is achieved by age two?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Before Birth.json::12",
+      "question": "Which statement best describes the effect of exposure to teratogens during the germinal period of prenatal development?",
       "options": [
-        "25%",
-        "50%",
-        "80%",
-        "100%"
+        "It commonly causes specific organ malformations.",
+        "Exposure usually has an all-or-none effect, either causing failure to implant or no effect if implantation occurs.",
+        "It causes minor physical abnormalities without affecting cognition.",
+        "The fetus is most vulnerable to teratogen-related brain damage at this stage."
       ],
-      "correct_answer": "80%",
-      "explanation": "The correct answer is 80%, as by age two, a newborn's brain reaches approximately 80% of its adult weight. The other options do not accurately reflect the growth trajectory of the brain during this critical period.",
+      "correct_answer": "Exposure usually has an all-or-none effect, either causing failure to implant or no effect if implantation occurs.",
+      "explanation": "1. The correct answer, \"Exposure usually has an all-or-none effect, either causing failure to implant or no effect if implantation occurs,\" accurately describes the germinal period of prenatal development. During this period, which extends from conception to the end of the second week, if a zygote is exposed to teratogens, the exposure can lead to significant damage that prevents implantation. Conversely, if implantation occurs, it indicates that the exposure likely had little or no detrimental effect on the developing zygote.\n\n2. The option \"It commonly causes specific organ malformations\" is incorrect because organ formation primarily occurs during the embryonic period (weeks 3 to 8), not the germinal period. The statement \"It causes minor physical abnormalities without affecting cognition\" is also wrong, as the germinal period's all-or-none effect means that either significant damage occurs (preventing implantation) or no effect is seen; it does not lead to minor abnormalities. Finally, the option \"The fetus is most vulnerable to teratogen-related brain damage at this stage\" is incorrect because the central nervous system is most susceptible to teratogens during the embryonic and fetal periods, not during the germinal period.",
       "domain": "Domain 4: Growth & Lifespan Development",
       "knId": "KN21",
-      "source_file": "4-body-growth.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Before Birth.json",
       "source_folder": "4 Development",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -281,23 +283,24 @@
       "is_org_psych": false
     },
     {
-      "id": 15,
-      "question": "Which of the following best describes how cultural expectations shape gender roles in society?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Attitudes.json::18",
+      "question": "According to the prototype/willingness model, an adolescent with a positive social image (prototype) of peers who smoke marijuana is more likely to:",
       "options": [
-        "Cultural expectations have no impact on gender roles.",
-        "Cultural expectations dictate specific behaviors and responsibilities for men and women.",
-        "Gender roles are solely determined by biological factors.",
-        "Cultural expectations only affect gender roles in certain societies."
+        "Avoid marijuana use due to perceived risks",
+        "Have higher willingness to try marijuana in social settings",
+        "Depend solely on behavioral intentions to decide",
+        "Ignore peer influences on their behavior"
       ],
-      "correct_answer": "Cultural expectations dictate specific behaviors and responsibilities for men and women.",
-      "explanation": "Cultural expectations significantly influence how society defines and enforces gender roles, dictating specific behaviors and responsibilities assigned to men and women. The other options either downplay the role of culture or incorrectly attribute gender roles solely to biology or specific contexts.",
+      "correct_answer": "Have higher willingness to try marijuana in social settings",
+      "explanation": "1. The correct answer, \"Have higher willingness to try marijuana in social settings,\" aligns with the prototype/willingness model, which posits that a person's willingness to engage in a behavior is influenced by their social image (prototype) of individuals who engage in that behavior. If an adolescent has a positive social image of peers who smoke marijuana, they are more likely to feel accepted and willing to try it in social situations where it is present.\n\n2. \n- **Avoid marijuana use due to perceived risks:** This option is incorrect because the prototype/willingness model suggests that a positive social image would increase willingness to engage in the behavior, not avoid it due to risks.\n- **Depend solely on behavioral intentions to decide:** This option is incorrect as the model emphasizes both willingness in social contexts and behavioral intentions, indicating that willingness is influenced by social perceptions rather than solely by intentions.\n- **Ignore peer influences on their behavior:** This option is incorrect because the prototype/willingness model explicitly highlights the importance of peer influences in shaping willingness to engage in behaviors like marijuana use.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
       "knId": "KN14",
-      "source_file": "3-attitudes.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Attitudes.json",
       "source_folder": "3 Social Psychology",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -501,23 +504,24 @@
       "is_org_psych": false
     },
     {
-      "id": 26,
-      "question": "In the context of informed consent, what is meant by 'legal capacity'?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 5 and 6.json::8",
+      "question": "What ethical consideration must psychologists keep in mind when discussing co-payments with clients?",
       "options": [
-        "The ability to understand the legal implications of a contract.",
-        "The mental ability to make informed decisions about one's treatment.",
-        "The requirement to have a lawyer present during therapy.",
-        "The age at which a person can consent to treatment."
+        "Co-payments should be kept confidential.",
+        "Clients should be informed of all fees upfront.",
+        "Psychologists can charge whatever they want.",
+        "Co-payments are not relevant to ethical practice."
       ],
-      "correct_answer": "The mental ability to make informed decisions about one's treatment.",
-      "explanation": "The correct answer highlights the mental capacity necessary for informed consent, which is crucial for ethical practice. The other options do not accurately capture the essence of legal capacity in this context.",
+      "correct_answer": "Clients should be informed of all fees upfront.",
+      "explanation": "Ethically, psychologists must provide clear and upfront information about all fees, including co-payments, to ensure transparency and informed consent. Keeping fees confidential is not a standard practice.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
       "knId": "KN68",
-      "source_file": "8-practice-issues.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 5 and 6.json",
       "source_folder": "8 Ethics",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -661,23 +665,24 @@
       "is_org_psych": false
     },
     {
-      "id": 34,
-      "question": "A psychologist receives a referral for a 42-year-old construction worker who sustained a back injury eight months ago and continues to report significant pain despite medical clearance indicating the injury has healed. What should the psychologist's first step be?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Prevention and Consultation.json::22",
+      "question": "A human resources consultant recommends two separate interventions to a manufacturing company. The first involves adding several assembly steps to each worker's role so that employees rotate through a broader set of tasks, all at the same complexity level. The second involves redesigning positions to include planning, quality inspection, and scheduling responsibilities that were previously handled exclusively by supervisors. Which statement correctly distinguishes job enlargement from job enrichment as illustrated in this scenario?",
       "options": [
-        "Begin a course of cognitive-behavioral therapy for pain management",
-        "Conduct a comprehensive biopsychosocial assessment of the pain experience",
-        "Teach relaxation and mindfulness techniques to reduce pain perception",
-        "Refer the client back to the physician for additional medical evaluation"
+        "Job enlargement incorporates higher-level managerial responsibilities; job enrichment increases the number of tasks at the worker's existing skill level",
+        "Job enlargement and job enrichment are functionally interchangeable strategies for reducing employee monotony through task variety",
+        "Job enlargement increases task variety horizontally by adding similar-level tasks; job enrichment adds vertical depth by incorporating greater autonomy and responsibility",
+        "Job enrichment expands the number of workers assigned to a role; job enlargement increases the total individual workload without changing task complexity"
       ],
-      "correct_answer": "Conduct a comprehensive biopsychosocial assessment of the pain experience",
-      "explanation": "When receiving a chronic pain referral, the appropriate first step is always a comprehensive assessment. Chronic pain is considered a multi-factorial process affected by neural memories of previous pain, physical effects (tense muscles, limited mobility), and emotional effects (depression, anger, anxiety). Jumping directly to CBT (A) or relaxation techniques (C) without first understanding the full picture of the client's pain experience would be premature. Referring back to the physician (D) is inappropriate when medical clearance has already been given. A thorough assessment informs the treatment plan and ensures that all contributing factors—biological, psychological, and social—are properly identified before intervention begins.",
+      "correct_answer": "Job enlargement increases task variety horizontally by adding similar-level tasks; job enrichment adds vertical depth by incorporating greater autonomy and responsibility",
+      "explanation": "Job enlargement refers to horizontal loading—adding more tasks at the same level of skill and complexity, increasing variety without increasing challenge, decision-making authority, or responsibility. Job enrichment, associated with Herzberg's motivation-hygiene theory, refers to vertical loading—adding higher-level responsibilities such as planning, self-inspection, and decision-making that were previously reserved for supervisors, thereby increasing the meaningfulness and motivating potential of the role. Option A reverses these definitions. Option B incorrectly treats the two as interchangeable. Option D confuses job enrichment with workforce staffing decisions.",
       "domain": "Domain 6: Treatment & Intervention",
       "knId": "KN42",
-      "source_file": "6-cbt.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Prevention and Consultation.json",
       "source_folder": "6 Clinical Interventions",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -841,23 +846,24 @@
       "is_org_psych": false
     },
     {
-      "id": 43,
-      "question": "According to Helms's model of racial identity development, which stage involves individuals actively seeking to understand their racial identity and the implications of racism?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Identity.json::19",
+      "question": "Which stage of Atkinson, Morten, and Sue’s R/CID Model is marked by an understanding and acceptance of one's cultural identity, as well as a commitment to social justice and equity?",
       "options": [
-        "Pre-encounter",
-        "Encounter",
-        "Immersion-Emersion",
-        "Internalization"
+        "Dissonance",
+        "Resistance and Immersion",
+        "Conformity",
+        "Integrative Awareness"
       ],
-      "correct_answer": "Immersion-Emersion",
-      "explanation": "The Immersion-Emersion stage in Helms's model is characterized by individuals immersing themselves in their racial identity and grappling with the implications of racism. The Pre-encounter stage involves a lack of awareness of racial identity, the Encounter stage is marked by a significant event that prompts awareness, and the Internalization stage involves a more integrated sense of self. Therefore, Immersion-Emersion is the correct answer.",
+      "correct_answer": "Integrative Awareness",
+      "explanation": "1. **Integrative Awareness** is the correct answer because it represents the final stage of Atkinson, Morten, and Sue’s R/CID Model, where individuals are secure in their cultural identity and recognize both the positive and negative aspects of all cultural groups. At this stage, individuals are committed to social justice and equity, actively working to eliminate oppression and embrace a multicultural perspective.\n\n2. The other options are incorrect for the following reasons:  \n   - **Dissonance**: In this stage, individuals begin to question their attitudes and are interested in learning about their culture, but they have not yet achieved full acceptance or a commitment to social justice.  \n   - **Resistance and Immersion**: This stage is characterized by a strong identification with one's own minority group and negative attitudes toward the majority group, but it lacks the broader understanding and commitment to equity found in integrative awareness.  \n   - **Conformity**: Individuals in the conformity stage hold positive attitudes toward the majority group and negative attitudes toward their own minority group, demonstrating a lack of awareness and acceptance of their cultural identity, which is contrary to the characteristics of integrative awareness.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
       "knId": "KN19",
-      "source_file": "3-connection.json",
-      "source_folder": "3 Social Psychology",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Identity.json",
+      "source_folder": "3 Cultural Considerations",
       "difficulty": "hard",
       "question_type": "standard",
       "isScored": false,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -981,23 +987,24 @@
       "is_org_psych": false
     },
     {
-      "id": 50,
-      "question": "Which of the following symptoms is NOT typically associated with narcolepsy?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Acting Out.json::11",
+      "question": "Which theory best explains the difference between life-course-persistent and adolescence-limited types of conduct disorder in terms of their underlying causes and developmental pathways?",
       "options": [
-        "Excessive daytime sleepiness",
-        "Cataplexy",
-        "Sleep paralysis",
-        "Chronic insomnia"
+        "Biosocial theory focusing on gene-environment interactions",
+        "Moffitt’s developmental taxonomy distinguishing neuropsychological deficits and social maturity gaps",
+        "Social learning theory emphasizing modeling and reinforcement",
+        "Attachment theory focusing on early caregiver relationships"
       ],
-      "correct_answer": "Chronic insomnia",
-      "explanation": "Chronic insomnia is not a symptom of narcolepsy; rather, narcolepsy is characterized by excessive daytime sleepiness, cataplexy (sudden loss of muscle tone), and sleep paralysis. The other options are directly related to narcolepsy symptoms.",
+      "correct_answer": "Moffitt’s developmental taxonomy distinguishing neuropsychological deficits and social maturity gaps",
+      "explanation": "1. **Correct Answer Explanation:** \"Moffitt’s developmental taxonomy distinguishing neuropsychological deficits and social maturity gaps\" is the correct answer because it specifically outlines the different underlying causes for life-course-persistent and adolescence-limited types of conduct disorder. Moffitt posits that the life-course-persistent type is associated with neuropsychological deficits that lead to a consistent pattern of antisocial behavior starting in early childhood, whereas the adolescence-limited type arises from a maturity gap between biological and social maturity, resulting in temporary antisocial behaviors during adolescence.\n\n2. **Incorrect Options Explanation:**\n   - **Biosocial theory focusing on gene-environment interactions:** This theory addresses the interplay between genetic predispositions and environmental factors but does not specifically differentiate the developmental pathways of the two types of conduct disorder as Moffitt’s taxonomy does.\n   - **Social learning theory emphasizing modeling and reinforcement:** While this theory explains behavior acquisition through observation and reinforcement, it does not account for the neuropsychological aspects and the distinct developmental trajectories proposed by Moffitt.\n   - **Attachment theory focusing on early caregiver relationships:** This theory highlights the importance of early relationships in emotional and social development but does not specifically address the neuropsychological deficits or the maturity gap that characterize the life-course-persistent and adolescence-limited types of conduct disorder.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
       "knId": "KN30",
-      "source_file": "5-clinical-tests.json",
-      "source_folder": "5 Assessment",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Acting Out.json",
+      "source_folder": "5 Diagnosis",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -1061,43 +1068,45 @@
       "is_org_psych": false
     },
     {
-      "id": 54,
-      "question": "In multiple regression analysis, what is the purpose of weighting variables?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Inferential Stats.json::31",
+      "question": "Bayesian analysis differs from frequentist analysis primarily in which way?",
       "options": [
-        "To increase the sample size for more reliable results.",
-        "To adjust the influence of each predictor variable on the outcome variable.",
-        "To eliminate multicollinearity among predictor variables.",
-        "To ensure all variables contribute equally to the model."
+        "Bayesian analysis does not require prior information about parameters.",
+        "Frequentist probability is the subjective degree of belief in an event, whereas Bayesian probability is based on data frequencies.",
+        "Bayesian analysis combines prior knowledge with current data to update beliefs about parameters.",
+        "Frequentist methods allow direct testing of research hypotheses, while Bayesian methods only reject null hypotheses."
       ],
-      "correct_answer": "To adjust the influence of each predictor variable on the outcome variable.",
-      "explanation": "Weighting variables in multiple regression allows researchers to account for the varying degrees of influence that different predictors have on the outcome. The other options do not accurately describe the purpose of weighting in regression analysis.",
+      "correct_answer": "Bayesian analysis combines prior knowledge with current data to update beliefs about parameters.",
+      "explanation": "1. The correct answer, \"Bayesian analysis combines prior knowledge with current data to update beliefs about parameters,\" accurately reflects the fundamental principle of Bayesian statistics. According to the reference material, Bayesian analysis utilizes Bayes’ theorem to synthesize prior information (the prior) with data collected in the current study (the likelihood function) to derive an updated understanding (the posterior) of a parameter. This process allows researchers to incorporate previous findings into their current analysis, providing a more comprehensive view of the parameter in question.\n\n2. The first incorrect option, \"Bayesian analysis does not require prior information about parameters,\" is wrong because Bayesian analysis explicitly relies on prior knowledge to inform the analysis and update beliefs. The second incorrect option, \"Frequentist probability is the subjective degree of belief in an event, whereas Bayesian probability is based on data frequencies,\" misrepresents the definitions; frequentist statistics defines probability based on data frequencies, while Bayesian probability is indeed the degree of belief about parameters. Lastly, the option, \"Frequentist methods allow direct testing of research hypotheses, while Bayesian methods only reject null hypotheses,\" is incorrect because Bayesian methods also allow for direct hypothesis testing, contrary to the assertion that they only focus on rejecting null hypotheses.",
       "domain": "Domain 7: Research Methods & Statistics",
       "knId": "KN55",
-      "source_file": "7-correlation-and-regression.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Inferential Stats.json",
       "source_folder": "7 Research and Stats",
       "difficulty": "hard",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
-      "id": 55,
-      "question": "A psychologist is conducting an initial assessment of a 44-year-old patient with a 3-year history of chronic low back pain who is simultaneously pursuing a long-term disability claim. His treating physician's chart notes significant discrepancy between objective imaging findings and the patient's reported functional limitations. What should be the PRIMARY assessment priority before interpreting any self-report data?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Psychodynamic and Humanistic Therapies.json::7",
+      "question": "From a behavioral perspective, the psychoanalytic concept of catharsis is BEST understood as:",
       "options": [
-        "Identifying specific pain locations and quality using a standardized body diagram and numeric rating scale",
-        "Evaluating response validity and the degree of psychological overlay including secondary gain factors",
-        "Administering a full neuropsychological battery to rule out cognitive contributors to functional impairment",
-        "Obtaining a detailed three-generation family history to assess hereditary musculoskeletal vulnerability"
+        "Positive reinforcement of emotional expression in the therapeutic relationship",
+        "Extinction of conditioned emotional responses through repeated exposure to anxiety-provoking material without aversive consequences",
+        "Stimulus generalization of relaxation responses from the therapy setting to everyday situations",
+        "Negative reinforcement through the removal of repressed memories from unconscious awareness"
       ],
-      "correct_answer": "Evaluating response validity and the degree of psychological overlay including secondary gain factors",
-      "explanation": "When objective medical findings are disproportionate to reported limitations — especially in the context of pending disability benefits (a clear secondary gain context) — the psychologist's primary obligation is to establish whether self-report data are valid before drawing any clinical conclusions. Secondary gain refers to external incentives (financial compensation, avoidance of occupational demands, increased social support) that may consciously or unconsciously inflate symptom reporting. Assessment must include symptom validity tests (SVTs), MMPI-2 validity scale interpretation, and clinical observation of functional inconsistencies. Interpreting pain ratings, neuropsychological findings, or family history without first confirming data validity risks generating misleading and potentially harmful conclusions. Pain mapping and neuropsychological testing may follow, but only after validity is established.",
+      "correct_answer": "Extinction of conditioned emotional responses through repeated exposure to anxiety-provoking material without aversive consequences",
+      "explanation": "Behaviorists reinterpret psychoanalytic catharsis as an extinction process: when a client repeatedly discusses anxiety-laden unconscious material in the safe therapeutic environment (a context without punishment or other aversive consequences), the conditioned emotional responses associated with that material gradually extinguish. Option A misidentifies the mechanism as reinforcement of expression rather than extinction of the emotional response itself. Option C describes generalization, which is a different learning principle and does not capture the core mechanism of catharsis. Option D incorrectly frames the process as negative reinforcement and misrepresents what happens to repressed material — the behavioral account focuses on the emotional response diminishing, not memories being removed.",
       "domain": "Domain 6: Treatment & Intervention",
       "knId": "KN43",
-      "source_file": "6-cbt.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Psychodynamic and Humanistic Therapies.json",
       "source_folder": "6 Clinical Interventions",
       "difficulty": "hard",
       "question_type": "standard",
       "isScored": false,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -1141,23 +1150,24 @@
       "is_org_psych": false
     },
     {
-      "id": 58,
-      "question": "A forensic psychologist consulting with a prison treatment team is asked which type of consequence most effectively modifies behavior in inmates with antisocial personality disorder (ASPD). Drawing on the treatment literature for personality disorders, the consultant would most accurately advise that this population is most responsive to consequences that are:",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 CBT.json::31",
+      "question": "Which of the following statements best illustrates the impact of cognitive schemas on an individual's perception of reality in cognitive-behavioral therapy?",
       "options": [
-        "Internally generated through enhanced empathy training and restorative justice exercises",
-        "Delayed punishments delivered after a structured reflection period to promote insight",
-        "Immediate, concrete, and externally applied, such as loss of privileges tied directly to specific behaviors",
-        "Socially mediated through confrontation by prosocial peers in therapeutic community settings"
+        "Cognitive schemas are flexible and change with every new experience.",
+        "Individuals with negative cognitive schemas may misinterpret neutral situations as threatening.",
+        "Cognitive schemas only affect thoughts and have no bearing on behavior.",
+        "Positive cognitive schemas guarantee a person's happiness and success."
       ],
-      "correct_answer": "Immediate, concrete, and externally applied, such as loss of privileges tied directly to specific behaviors",
-      "explanation": "Individuals with ASPD characteristically lack internalized guilt, empathy, and sensitivity to delayed consequences. The treatment literature consistently indicates they are most responsive to immediate, external, and concrete consequences rather than internally mediated or delayed ones. Option A is incorrect because ASPD is associated with profound empathy deficits that severely limit the effectiveness of empathy-based interventions. Option B is incorrect because delayed consequences are far less effective given ASPD-related deficits in connecting future outcomes to present behavior. Option D is incorrect because peer confrontation alone, without clear external contingencies, is insufficient to modify behavior in this population.",
+      "correct_answer": "Individuals with negative cognitive schemas may misinterpret neutral situations as threatening.",
+      "explanation": "1. The statement \"Individuals with negative cognitive schemas may misinterpret neutral situations as threatening\" is correct because cognitive schemas serve as core beliefs that influence how individuals interpret experiences. Negative cognitive schemas lead to distorted perceptions, causing individuals to view neutral or ambiguous situations through a lens of negativity, which can result in anxiety and emotional distress. This aligns with Beck's assertion that different disorders are associated with distinct maladaptive schemas, affecting how individuals respond to various stimuli.\n\n2. The option \"Cognitive schemas are flexible and change with every new experience\" is incorrect because cognitive schemas are typically stable and enduring, often requiring significant therapeutic intervention to modify. The statement \"Cognitive schemas only affect thoughts and have no bearing on behavior\" is wrong as cognitive schemas influence both thoughts and behaviors, leading to maladaptive emotional responses and actions. Lastly, \"Positive cognitive schemas guarantee a person's happiness and success\" is misleading because while positive schemas can promote well-being, they do not ensure happiness or success, as various external factors and challenges can still impact an individual's life.",
       "domain": "Domain 6: Treatment & Intervention",
       "knId": "KN43",
-      "source_file": "6-cbt.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 CBT.json",
       "source_folder": "6 Clinical Interventions",
       "difficulty": "hard",
       "question_type": "standard",
       "isScored": false,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -1221,23 +1231,24 @@
       "is_org_psych": false
     },
     {
-      "id": 62,
-      "question": "According to social comparison theory, which of the following best explains why individuals seek emotional support from others during stressful situations?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Why People Do Things.json::19",
+      "question": "Which of the following statements accurately reflects cultural differences in the fundamental attribution error as found by Miller (1984)?",
       "options": [
-        "A) To validate their feelings and gauge the appropriateness of their emotional responses.",
-        "B) To avoid personal responsibility for their emotions.",
-        "C) To enhance their self-esteem through competition.",
-        "D) To demonstrate their emotional resilience to others."
+        "North American adults and Asian Indian adults make equally dispositional attributions for negative events",
+        "Both North American and Asian Indian adolescents make predominantly situational attributions for negative events",
+        "North American adults tend to make more dispositional attributions than Asian Indian adults for negative events",
+        "Asian Indian children make more dispositional attributions than North American children"
       ],
-      "correct_answer": "A) To validate their feelings and gauge the appropriateness of their emotional responses.",
-      "explanation": "Option A is correct because social comparison theory suggests that individuals look to others in similar situations to assess their own emotional responses. Option B is incorrect as seeking support does not imply avoiding responsibility. Option C is not relevant to the theory, which focuses on validation rather than competition. Option D misrepresents the motivation for seeking support, which is more about understanding than demonstrating resilience.",
+      "correct_answer": "North American adults tend to make more dispositional attributions than Asian Indian adults for negative events",
+      "explanation": "Miller's study found cultural differences arise in adolescence and adulthood, with North Americans favoring dispositional attributions and Asian Indians favoring situational explanations for negative events.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
       "knId": "KN14",
-      "source_file": "3-connection.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Why People Do Things.json",
       "source_folder": "3 Social Psychology",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -1841,43 +1852,45 @@
       "is_org_psych": false
     },
     {
-      "id": 93,
-      "question": "What is a potential ethical concern when conducting custody evaluations with limited participation from one parent?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 1 and 2.json::2",
+      "question": "A psychologist with strong experience providing CBT to middle-class adults is asked to begin treatment with a recently arrived refugee family whose care will require knowledge of language, cultural context, and trauma-related migration issues that the psychologist does not currently possess. Under Standard 2.01(b), what is the most ethical course of action?",
       "options": [
-        "The evaluation may lack objectivity.",
-        "The evaluator may favor the more cooperative parent.",
-        "The results may be biased due to incomplete information.",
-        "All of the above."
+        "Begin treatment immediately because general CBT skills are sufficient across populations",
+        "Avoid discussing cultural factors so therapy stays focused on universal symptoms",
+        "Provide services only after obtaining the necessary knowledge and training, or make an appropriate referral if that cannot be done adequately",
+        "Accept the case as long as the family signs an informed consent acknowledging the psychologist's limitations"
       ],
-      "correct_answer": "All of the above.",
-      "explanation": "The correct answer encompasses multiple ethical concerns that arise when one parent is not fully involved in the evaluation process. Each of the other options represents a valid concern that could affect the integrity of the evaluation.",
+      "correct_answer": "Provide services only after obtaining the necessary knowledge and training, or make an appropriate referral if that cannot be done adequately",
+      "explanation": "This is the best answer because Standard 2.01(b) makes competence population-specific when cultural and related factors are essential for effective service. Starting immediately is wrong because general skill with CBT does not automatically establish competence with every population. Avoiding cultural issues is wrong because those issues are central, not optional, in the scenario. The informed-consent option is wrong because a client's awareness of a psychologist's limitations does not substitute for competence.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
       "knId": "KN64",
-      "source_file": "8-practice-issues.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 1 and 2.json",
       "source_folder": "8 Ethics",
       "difficulty": "hard",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
-      "id": 94,
-      "question": "Which of the following criteria is essential for diagnosing bipolar I disorder according to the DSM-5?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Anxiety and OCD.json::2",
+      "question": "An adult becomes intensely distressed whenever her partner leaves for work trips, refuses to stay home alone, repeatedly reports nausea and headaches before each separation, and has shown this pattern for the past four months. Assuming the symptom threshold is otherwise met, which fact would prevent a DSM diagnosis of Separation Anxiety Disorder in this case?",
       "options": [
-        "Presence of at least one major depressive episode",
-        "At least one manic episode",
-        "Presence of hypomanic episodes",
-        "A history of psychotic episodes"
+        "The symptoms are accompanied by physical complaints",
+        "The fear is focused on separation from an attachment figure",
+        "The duration has been only four months",
+        "The anxiety causes the person to avoid being alone"
       ],
-      "correct_answer": "At least one manic episode",
-      "explanation": "The correct answer is 'At least one manic episode' because the DSM-5 specifies that the diagnosis of bipolar I disorder requires at least one manic episode. The other options are incorrect as they do not represent the necessary criteria for this diagnosis.",
+      "correct_answer": "The duration has been only four months",
+      "explanation": "The duration is the best answer because adults must show the pattern for at least six months, whereas children and adolescents require only four weeks. Physical complaints are wrong because they can be part of the disorder. Fear centered on separation from an attachment figure is wrong because that is a defining feature. Avoidance of being alone is also wrong because it is consistent with separation-related fear.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
       "knId": "KN36",
-      "source_file": "5-clinical-tests.json",
-      "source_folder": "5 Assessment",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Anxiety and OCD.json",
+      "source_folder": "5 Diagnosis",
       "difficulty": "hard",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -2061,23 +2074,24 @@
       "is_org_psych": false
     },
     {
-      "id": 104,
-      "question": "What is the primary effect of proactive inhibition on learning new information?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Memory.json::22",
+      "question": "What process describes memory retrieval that is triggered by sensory input?",
       "options": [
-        "It enhances the ability to recall new information.",
-        "It causes interference from previously learned information.",
-        "It has no effect on the learning process.",
-        "It facilitates the encoding of new memories."
+        "Rehearsal",
+        "Priming",
+        "Encoding",
+        "Chunking"
       ],
-      "correct_answer": "It causes interference from previously learned information.",
-      "explanation": "Proactive inhibition refers to the phenomenon where previously learned information interferes with the ability to learn or recall new information. The other options incorrectly suggest that proactive inhibition has a positive effect or no effect on learning.",
+      "correct_answer": "Priming",
+      "explanation": "The correct answer is 'Priming' because it refers to the process where exposure to a stimulus influences the response to a subsequent stimulus, often triggered by sensory input. The other options do not specifically relate to retrieval triggered by sensory input.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
       "knId": "KN8",
-      "source_file": "2-memory.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Memory.json",
       "source_folder": "2 Learning and Memory",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -2461,23 +2475,24 @@
       "is_org_psych": false
     },
     {
-      "id": 124,
-      "question": "Research indicates that which gender is more likely to experience major depressive disorder?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Sex and Gender.json::6",
+      "question": "According to the gender-affirmative model of care for gender diverse youth, which of the following assumptions is emphasized?",
       "options": [
-        "Males",
-        "Females",
-        "Both genders equally",
-        "No significant difference"
+        "Gender dysphoria in children persists into adolescence in only a small minority of cases",
+        "Gender variations are not disorders and gender is not always binary",
+        "Watchful waiting is the preferred approach before any social transition",
+        "Cross-sex hormone therapy should only be provided after age 18"
       ],
-      "correct_answer": "Females",
-      "explanation": "The correct answer is 'Females' as research consistently shows that females are more likely to experience major depressive disorder compared to males. The other options are incorrect as they do not reflect the established findings in depression epidemiology.",
+      "correct_answer": "Gender variations are not disorders and gender is not always binary",
+      "explanation": "1. The statement \"Gender variations are not disorders and gender is not always binary\" aligns with the gender-affirmative model, which emphasizes that gender diversity is a normal part of human experience rather than a pathology. This model recognizes that gender identity can be fluid and diverse, challenging the traditional binary understanding of gender, thus promoting acceptance and support for gender diverse youth.\n\n2. The option \"Gender dysphoria in children persists into adolescence in only a small minority of cases\" is incorrect because it reflects the assumption of the Dutch protocol rather than the gender-affirmative model, which supports the idea that children may recognize their authentic identity at any age. \n\nThe statement \"Watchful waiting is the preferred approach before any social transition\" is also wrong as it pertains to the Dutch protocol, which advocates for a more cautious approach, whereas the gender-affirmative model supports immediate social transition when appropriate. \n\nLastly, the claim \"Cross-sex hormone therapy should only be provided after age 18\" is misleading because the gender-affirmative model allows for earlier access to hormone therapy for youth who are persistent in their gender dysphoria, particularly when they are developmentally ready and have appropriate support.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
       "knId": "KN38",
-      "source_file": "5-clinical-tests.json",
-      "source_folder": "5 Assessment",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Sex and Gender.json",
+      "source_folder": "5 Diagnosis",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -2661,23 +2676,24 @@
       "is_org_psych": false
     },
     {
-      "id": 134,
-      "question": "What distinguishes psychogenic amnesia from physiological amnesia?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Memory.json::45",
+      "question": "Tolman’s concept of latent learning was best demonstrated by rats in a maze who:",
       "options": [
-        "Psychogenic amnesia is caused by brain injury, while physiological amnesia is not.",
-        "Psychogenic amnesia involves a loss of memory due to psychological factors, while physiological amnesia is due to physical damage.",
-        "Physiological amnesia is reversible, while psychogenic amnesia is permanent.",
-        "Both types of amnesia are caused by the same underlying mechanisms."
+        "Gradually improved maze performance only when reinforced from the start",
+        "Formed cognitive maps of the maze without reinforcement and improved when reinforcement was introduced",
+        "Showed insight by suddenly solving the maze without trial-and-error learning",
+        "Learned to avoid the maze after experiencing shocks"
       ],
-      "correct_answer": "Psychogenic amnesia involves a loss of memory due to psychological factors, while physiological amnesia is due to physical damage.",
-      "explanation": "Psychogenic amnesia is linked to psychological trauma, while physiological amnesia results from physical brain damage. The other options incorrectly describe the nature of these types of amnesia.",
+      "correct_answer": "Formed cognitive maps of the maze without reinforcement and improved when reinforcement was introduced",
+      "explanation": "1. The correct answer, \"Formed cognitive maps of the maze without reinforcement and improved when reinforcement was introduced,\" accurately reflects Tolman's findings from his research with rats. In his study, rats that initially received no reinforcement were able to navigate the maze and demonstrate improved performance once reinforcement was provided, indicating they had formed cognitive maps of the maze during the initial trials. This illustrates the concept of latent learning, where learning occurs without immediate reinforcement and is later exhibited when a reward is introduced.\n\n2. The option \"Gradually improved maze performance only when reinforced from the start\" is incorrect because it misrepresents Tolman's findings; the rats in Group 3 did not improve until reinforcement was introduced after a delay, demonstrating latent learning without initial reinforcement. The option \"Showed insight by suddenly solving the maze without trial-and-error learning\" is wrong because insight learning, as described by Kohler, involves sudden problem-solving, which is not applicable to Tolman’s rats that learned through cognitive mapping rather than immediate insight. Lastly, the option \"Learned to avoid the maze after experiencing shocks\" is incorrect because Tolman's study did not involve punishment or avoidance learning; instead, it focused on how the rats learned the layout of the maze without reinforcement.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
       "knId": "KN8",
-      "source_file": "2-memory.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Memory.json",
       "source_folder": "2 Learning and Memory",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": false,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -2701,23 +2717,24 @@
       "is_org_psych": false
     },
     {
-      "id": 136,
-      "question": "According to reactance theory, what is the primary psychological response individuals exhibit when they perceive their freedoms are being threatened?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Errors and Shortcuts.json::27",
+      "question": "In which of the following situations is confirmation bias most likely to occur?",
       "options": [
-        "Increased compliance",
-        "Psychological reactance",
-        "Cognitive dissonance",
-        "Social facilitation"
+        "A scientist reviews literature that contradicts their previous findings.",
+        "A manager only considers employee feedback that aligns with their own opinions.",
+        "A group discusses a problem and includes diverse viewpoints.",
+        "An individual reflects on their past decisions with a critical lens."
       ],
-      "correct_answer": "Psychological reactance",
-      "explanation": "Psychological reactance is the correct answer as it specifically refers to the emotional response individuals have when they feel their freedoms are being restricted. Increased compliance, cognitive dissonance, and social facilitation do not directly relate to the perception of freedom being threatened.",
+      "correct_answer": "A manager only considers employee feedback that aligns with their own opinions.",
+      "explanation": "1. The correct answer, \"A manager only considers employee feedback that aligns with their own opinions,\" exemplifies confirmation bias because it illustrates the tendency to seek and focus on information that supports one’s existing beliefs while disregarding contradictory evidence. This behavior aligns with the definition of confirmation bias, which emphasizes the inclination to pay attention to feedback that confirms one’s attitudes and beliefs, thus undermining objective decision-making.\n\n2. The option \"A scientist reviews literature that contradicts their previous findings\" is incorrect because it involves engaging with information that challenges existing beliefs, contrary to confirmation bias. \"A group discusses a problem and includes diverse viewpoints\" is also incorrect, as this scenario promotes the consideration of varied perspectives, which counters the essence of confirmation bias. Lastly, \"An individual reflects on their past decisions with a critical lens\" is wrong because critical reflection typically involves evaluating and questioning one’s beliefs, rather than selectively focusing on confirming evidence.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
       "knId": "KN14",
-      "source_file": "3-attitudes.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Errors and Shortcuts.json",
       "source_folder": "3 Social Psychology",
       "difficulty": "hard",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -2861,23 +2878,24 @@
       "is_org_psych": false
     },
     {
-      "id": 144,
-      "question": "In forensic settings, what is a key challenge psychologists face when predicting violent behavior?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json::38",
+      "question": "What is a psychologist's ethical responsibility when addressing a misdiagnosis that may have led to inappropriate medication being prescribed?",
       "options": [
-        "The lack of reliable assessment tools.",
-        "The difficulty in obtaining accurate historical data.",
-        "The inherent unpredictability of human behavior.",
-        "The pressure to provide definitive answers to legal questions."
+        "To inform the client and collaborate with the prescribing physician to adjust the treatment plan.",
+        "To ignore the misdiagnosis if the client seems to be responding well to the medication.",
+        "To wait for the client to bring up concerns about their medication before taking action.",
+        "To document the misdiagnosis but take no further action."
       ],
-      "correct_answer": "The inherent unpredictability of human behavior.",
-      "explanation": "The correct answer highlights the fundamental challenge in predicting behavior, which is often unpredictable. The other options may contribute to the difficulty but do not capture the core issue.",
+      "correct_answer": "To inform the client and collaborate with the prescribing physician to adjust the treatment plan.",
+      "explanation": "The correct answer emphasizes the psychologist's duty to ensure client welfare by addressing misdiagnosis and collaborating on treatment. Ignoring the issue or waiting for the client to express concerns neglects ethical responsibilities. Documenting without action does not fulfill the duty of care.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
       "knId": "KN67",
-      "source_file": "8-practice-issues.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json",
       "source_folder": "8 Ethics",
       "difficulty": "hard",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -2921,23 +2939,24 @@
       "is_org_psych": false
     },
     {
-      "id": 147,
-      "question": "Which of the following best distinguishes between episodic and semantic memory?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Memory.json::19",
+      "question": "Which statement best reflects the relationship between hypnosis and memory recall accuracy?",
       "options": [
-        "Episodic memory is related to personal experiences, while semantic memory involves general knowledge.",
-        "Episodic memory is more stable over time than semantic memory.",
-        "Semantic memory is always conscious, while episodic memory can be unconscious.",
-        "Episodic memory is only relevant to emotional events, while semantic memory is not."
+        "Hypnosis consistently enhances the accuracy of memory recall.",
+        "Hypnosis can lead to both enhanced and distorted memory recall.",
+        "Hypnosis has no effect on memory recall accuracy.",
+        "Only trained professionals can use hypnosis to improve memory recall."
       ],
-      "correct_answer": "Episodic memory is related to personal experiences, while semantic memory involves general knowledge.",
-      "explanation": "This statement accurately captures the fundamental distinction between episodic and semantic memory, where episodic memory pertains to specific events and experiences, and semantic memory relates to facts and general knowledge. The other options either misrepresent the nature of these memory types or introduce inaccuracies.",
+      "correct_answer": "Hypnosis can lead to both enhanced and distorted memory recall.",
+      "explanation": "Research shows that while hypnosis may enhance recall in some cases, it can also lead to inaccuracies and false memories. The other options either overstate or misrepresent the effects of hypnosis on memory.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
       "knId": "KN8",
-      "source_file": "2-memory.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Memory.json",
       "source_folder": "2 Learning and Memory",
       "difficulty": "hard",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -3081,23 +3100,24 @@
       "is_org_psych": false
     },
     {
-      "id": 155,
-      "question": "What is the primary purpose of calculating a confidence interval for test scores in psychological assessment?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/5 6 Evaluating Jobs.json::15",
+      "question": "Which of the following rater training approaches aims to improve rating accuracy by teaching raters about multidimensional job performance and providing rating practice with feedback?",
       "options": [
-        "To determine the exact score a client will achieve on a future test",
-        "To estimate the range within which a true score is likely to fall",
-        "To compare the scores of different clients directly",
-        "To assess the reliability of the test itself"
+        "Bias-awareness training",
+        "Frame-of-reference (FOR) training",
+        "Forced distribution training",
+        "Critical incident training"
       ],
-      "correct_answer": "To estimate the range within which a true score is likely to fall",
-      "explanation": "The correct answer is that confidence intervals provide an estimate of the range within which the true score is likely to fall, reflecting the uncertainty inherent in test scores. The other options are incorrect as they misrepresent the purpose of confidence intervals in psychological testing.",
-      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "correct_answer": "Frame-of-reference (FOR) training",
+      "explanation": "1. **Frame-of-reference (FOR) training** is the correct answer because it aims to enhance rating accuracy by educating raters on the multidimensional nature of job performance and the organization’s definitions of successful and unsuccessful performance. This training also involves providing opportunities for raters to practice assigning ratings and receiving feedback about their accuracy, which helps improve their overall evaluation skills.\n\n2. **Bias-awareness training** is incorrect because it primarily focuses on making raters aware of potential biases in their evaluations rather than providing comprehensive training on the multidimensional aspects of job performance or practice with feedback. **Forced distribution training** is also incorrect as it involves assigning a predetermined percentage of ratings across performance categories, which does not address the multidimensional nature of job performance or provide practice and feedback. Lastly, **critical incident training** is wrong because it is a method used for identifying specific behaviors associated with good or poor performance, rather than a training approach aimed at improving rating accuracy through understanding job performance dimensions and practicing ratings.",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
       "knId": "KN34",
-      "source_file": "5-career-interests.json",
-      "source_folder": "5 Assessment",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/5 6 Evaluating Jobs.json",
+      "source_folder": "2 3 5 6 I-O Psychology",
       "difficulty": "hard",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -3141,23 +3161,24 @@
       "is_org_psych": false
     },
     {
-      "id": 158,
-      "question": "What cognitive changes are commonly associated with aging?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Language Development.json::17",
+      "question": "How does language brokering by children in immigrant families impact their psychosocial development?",
       "options": [
-        "Increased processing speed",
-        "Enhanced memory retention",
-        "Decline in executive function",
-        "Improved problem-solving skills"
+        "It consistently leads to academic difficulties and decreased self-confidence",
+        "It is solely associated with negative effects such as anxiety and embarrassment",
+        "It can have both positive effects like increased self-efficacy and negative effects like family role reversals",
+        "It always enhances interpersonal skills without any psychological drawbacks"
       ],
-      "correct_answer": "Decline in executive function",
-      "explanation": "The correct answer is a decline in executive function, which is commonly observed in aging individuals. The other options incorrectly suggest improvements or increases in cognitive abilities that typically decline with age.",
+      "correct_answer": "It can have both positive effects like increased self-efficacy and negative effects like family role reversals",
+      "explanation": "1. The correct answer, \"It can have both positive effects like increased self-efficacy and negative effects like family role reversals,\" accurately reflects the mixed outcomes associated with language brokering in immigrant families. Research indicates that while children who act as language brokers may develop strong interpersonal skills and high self-confidence, they can also experience negative consequences such as elevated anxiety and role reversals that lead to parental dependency and increased conflict within the family.\n\n2. The option \"It consistently leads to academic difficulties and decreased self-confidence\" is incorrect because the research highlights both positive outcomes, like increased self-efficacy, and does not suggest a consistent link to academic difficulties. The statement \"It is solely associated with negative effects such as anxiety and embarrassment\" is wrong as it overlooks the positive effects, such as strong interpersonal skills and self-confidence. Lastly, the claim \"It always enhances interpersonal skills without any psychological drawbacks\" is misleading because it fails to acknowledge the potential negative impacts, including anxiety and family role reversals, that can arise from language brokering experiences.",
       "domain": "Domain 4: Growth & Lifespan Development",
       "knId": "KN21",
-      "source_file": "4-body-growth.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Language Development.json",
       "source_folder": "4 Development",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -3361,23 +3382,24 @@
       "is_org_psych": false
     },
     {
-      "id": 169,
-      "question": "A behavior therapist is treating a child who engages in frequent head-banging. Rather than applying punishment contingent on each episode, the therapist implements a protocol in which the child receives a preferred edible reinforcer after any interval of a specified duration during which head-banging does not occur. This procedure is identified as differential reinforcement of other behavior (DRO). In operant conditioning terms, the mechanism by which DRO reduces the target behavior is best described as:",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Brief Therapies.json::12",
+      "question": "In the transtheoretical model, which factor is the most important determinant of motivation during the contemplation stage?",
       "options": [
-        "Punishment by application, in which an aversive stimulus is contingently delivered following each head-banging episode to suppress the behavior",
-        "Extinction paired with positive reinforcement, in which head-banging receives no reinforcement while its absence is systematically reinforced",
-        "Negative reinforcement, in which removal of the aversive head-banging behavior is itself reinforcing to the supervising therapist",
-        "Stimulus control, in which antecedent cues that previously signaled head-banging are systematically modified to suppress the response"
+        "Self-efficacy",
+        "Decisional balance",
+        "Temptation",
+        "Environmental reevaluation"
       ],
-      "correct_answer": "Extinction paired with positive reinforcement, in which head-banging receives no reinforcement while its absence is systematically reinforced",
-      "explanation": "DRO operates through two complementary operant mechanisms: (1) extinction—the target behavior (head-banging) receives no reinforcement, allowing it to weaken and decrease; and (2) positive reinforcement delivered contingently on the absence of the target behavior during a specified interval. Together these mechanisms reduce the problem behavior while building more adaptive behavioral repertoires. Option A describes punishment by application, a distinct procedure not used in DRO. Option C misapplies the definition of negative reinforcement, which involves removal of an aversive stimulus contingent on a behavior—not applicable here. Option D describes antecedent-based stimulus control interventions, which modify triggers rather than consequences.",
+      "correct_answer": "Decisional balance",
+      "explanation": "1. \"Decisional balance\" is the correct answer because it refers to the strength of a person's beliefs about the pros and cons of changing, which is crucial during the contemplation stage. At this stage, individuals are ambivalent about making changes, and their motivation to proceed is significantly influenced by weighing the benefits against the drawbacks of changing their behavior.\n\n2. **Self-efficacy** is incorrect because, while it is important for transitioning from contemplation to preparation, it primarily assesses a person's confidence in their ability to change rather than their motivation during contemplation. **Temptation** is also incorrect because it pertains to the intensity of the urge to engage in undesirable behavior and does not directly address the motivational factors influencing decision-making in the contemplation stage. Lastly, **Environmental reevaluation** is not the correct choice as it involves examining how the environment affects behavior, which is more relevant for clients in the precontemplation stage rather than focusing on the internal decision-making process during contemplation.",
       "domain": "Domain 6: Treatment & Intervention",
       "knId": "KN42",
-      "source_file": "6-cbt.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Brief Therapies.json",
       "source_folder": "6 Clinical Interventions",
       "difficulty": "hard",
       "question_type": "standard",
       "isScored": false,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -3481,23 +3503,24 @@
       "is_org_psych": false
     },
     {
-      "id": 175,
-      "question": "Which of the following best describes the phenomenon of loss aversion in investment decisions?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Why People Do Things.json::1",
+      "question": "Dr. Patel is running late for a supervision meeting and attributes her tardiness to unexpected traffic. However, when her supervisee arrives late the following week, Dr. Patel assumes the supervisee is irresponsible. This pattern of attributing one's own behavior to situational factors while attributing others' behavior to dispositional factors is known as:",
       "options": [
-        "Investors are more likely to sell winning stocks than losing ones.",
-        "Investors prefer to avoid losses rather than acquire equivalent gains.",
-        "Investors are indifferent to the potential outcomes of their investments.",
-        "Investors are more influenced by potential gains than potential losses."
+        "The fundamental attribution error",
+        "The actor-observer effect",
+        "The self-serving bias",
+        "The ultimate attribution error"
       ],
-      "correct_answer": "Investors prefer to avoid losses rather than acquire equivalent gains.",
-      "explanation": "Loss aversion refers to the tendency for people to prefer avoiding losses over acquiring equivalent gains. This means that the pain of losing is psychologically more impactful than the pleasure of gaining. The other options either misrepresent this concept or do not relate to loss aversion.",
+      "correct_answer": "The actor-observer effect",
+      "explanation": "The actor-observer effect, described by Jones and Nisbett (1971), is the tendency to attribute our own behaviors to situational factors but others' behaviors to dispositional (personality) factors. The key distinction from the fundamental attribution error is that actor-observer explicitly contrasts how we explain OUR OWN behavior versus OTHERS' behavior for the same type of event. The fundamental attribution error refers only to overweighting dispositional factors when explaining others' behavior, without the self-other comparison. The self-serving bias specifically involves taking credit for successes and blaming failures on external factors—it's about successes vs. failures, not self vs. other. The ultimate attribution error extends attribution biases to in-group vs. out-group dynamics.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
       "knId": "KN14",
-      "source_file": "3-attitudes.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Why People Do Things.json",
       "source_folder": "3 Social Psychology",
       "difficulty": "hard",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -3561,23 +3584,24 @@
       "is_org_psych": false
     },
     {
-      "id": 179,
-      "question": "According to Donald Super's Career Rainbow model, which of the following stages emphasizes the exploration of various career options?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Personality.json::7",
+      "question": "Which Big Five personality trait is most positively related to the presence of personality disorders, according to meta-analytic findings?",
       "options": [
-        "Growth",
-        "Exploration",
-        "Establishment",
-        "Maintenance"
+        "Openness to experience",
+        "Conscientiousness",
+        "Neuroticism",
+        "Agreeableness"
       ],
-      "correct_answer": "Exploration",
-      "explanation": "The Exploration stage in Super's Career Rainbow model focuses on individuals exploring various career options and making choices about their future. The Growth stage involves developing self-concept, while Establishment and Maintenance focus on settling into and maintaining a career.",
+      "correct_answer": "Neuroticism",
+      "explanation": "1. **Neuroticism** is the correct answer because, according to the meta-analysis by Saulsman and Page (2004), it has the most positive relationships with personality disorders. This means that higher levels of neuroticism, which encompass traits like emotional instability and anxiety, are strongly associated with the presence and severity of various personality disorders.\n\n2. **Openness to Experience** is incorrect because the same meta-analysis found that it does not have a strong relationship with any personality disorders, indicating it is less relevant in this context. **Conscientiousness** is also incorrect; while it has strong relationships with some personality disorders, it does not have the most positive relationship overall, as neuroticism does. Lastly, **Agreeableness** is incorrect because, although it shows negative relationships with personality disorders, indicating that lower agreeableness is associated with these disorders, it is not positively related as neuroticism is.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
       "knId": "KN32",
-      "source_file": "5-career-interests.json",
-      "source_folder": "5 Assessment",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Personality.json",
+      "source_folder": "5 Diagnosis",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -3601,23 +3625,24 @@
       "is_org_psych": false
     },
     {
-      "id": 181,
-      "question": "What long-term effects are associated with fetal alcohol syndrome (FAS) as children grow into adulthood?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Before Birth.json::6",
+      "question": "Which syndrome is caused by a deletion on the paternal chromosome 15 and is characterized by hypotonia, hyperphagia, obesity, intellectual disabilities, and self-injurious behaviors?",
       "options": [
-        "Increased height and weight",
-        "Cognitive impairments and behavioral issues",
-        "Enhanced social skills",
-        "Improved academic performance"
+        "Angelman syndrome",
+        "Cri-du-chat syndrome",
+        "Prader-Willi syndrome",
+        "Fragile X syndrome"
       ],
-      "correct_answer": "Cognitive impairments and behavioral issues",
-      "explanation": "The correct answer is cognitive impairments and behavioral issues, as these are well-documented long-term effects of fetal alcohol syndrome. The other options are incorrect as they do not reflect the typical outcomes associated with FAS.",
+      "correct_answer": "Prader-Willi syndrome",
+      "explanation": "1. **Correct Answer Explanation:**\n\"Prader-Willi syndrome\" is the correct answer because it is specifically caused by a deletion on the paternal chromosome 15. This syndrome is characterized by symptoms such as hypotonia (poor muscle tone), hyperphagia (chronic overeating), obesity, intellectual disabilities, and self-injurious behaviors, which align with the symptoms described in the question.\n\n2. **Incorrect Options Explanation:**\n- **Angelman syndrome:** This disorder is caused by a deletion on the maternal chromosome 15 and is characterized by severe developmental delays, communication and intellectual disabilities, and a happy demeanor, which differ from the symptoms of Prader-Willi syndrome.\n- **Cri-du-chat syndrome:** This syndrome is caused by a deletion on chromosome 5 and is marked by a high-pitched cry, intellectual disability, and developmental delays, which are not related to the paternal chromosome 15 deletion associated with Prader-Willi syndrome.\n- **Fragile X syndrome:** This is an X-linked dominant disorder caused by mutations in the FMR1 gene, leading to intellectual developmental disorder and specific physical features, rather than the symptoms associated with Prader-Willi syndrome.",
       "domain": "Domain 4: Growth & Lifespan Development",
       "knId": "KN28",
-      "source_file": "4-before-birth.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Before Birth.json",
       "source_folder": "4 Development",
       "difficulty": "hard",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -3841,23 +3866,24 @@
       "is_org_psych": false
     },
     {
-      "id": 193,
-      "question": "What is the primary characteristic of sexual dimorphism in humans?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Language Development.json::4",
+      "question": "What does code-switching in bilingual individuals primarily refer to?",
       "options": [
-        "Differences in height and weight",
-        "Variations in skin color",
-        "Differences in brain structure",
-        "Variations in reproductive anatomy"
+        "Switching languages based on context",
+        "Changing dialects within the same language",
+        "Using slang in informal settings",
+        "Adopting formal language in professional contexts"
       ],
-      "correct_answer": "Variations in reproductive anatomy",
-      "explanation": "The correct answer is 'Variations in reproductive anatomy', as sexual dimorphism refers to the distinct differences in male and female reproductive systems and secondary sexual characteristics. The other options may reflect differences among individuals but do not specifically pertain to sexual dimorphism.",
+      "correct_answer": "Switching languages based on context",
+      "explanation": "Code-switching refers to the practice of alternating between two or more languages or dialects depending on the social context. The other options describe variations in language use but do not capture the essence of code-switching.",
       "domain": "Domain 4: Growth & Lifespan Development",
       "knId": "KN21",
-      "source_file": "4-body-growth.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Language Development.json",
       "source_folder": "4 Development",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": false,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -3981,23 +4007,24 @@
       "is_org_psych": false
     },
     {
-      "id": 200,
-      "question": "Which of the following best differentiates bipolar I disorder from schizoaffective disorder?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Clinical Tests.json::51",
+      "question": "A 7-year-old child assigned female at birth has, for the past 8 months, strongly insisted on being called by a male name, expressed a persistent desire to be a boy, preferred rough-and-tumble play exclusively with male peers, and refused to wear feminine clothing. The child's parents report significant distress at school, including refusal to use the girls' restroom and daily crying before school. According to DSM-5, which of the following is required in addition to the specified incongruence criteria to diagnose Gender Dysphoria in Children?",
       "options": [
-        "A. Presence of hallucinations in bipolar I disorder",
-        "B. Duration of mood episodes in schizoaffective disorder",
-        "C. Presence of mood episodes in schizoaffective disorder",
-        "D. Severity of depressive episodes in bipolar I disorder"
+        "Clinically significant distress or impairment in social, school, or other important areas of functioning",
+        "Documented biological evidence of a sex chromosome variation or hormonal atypicality",
+        "Onset of gender incongruence symptoms prior to age 5",
+        "Presence of co-occurring separation anxiety disorder or oppositional defiant disorder"
       ],
-      "correct_answer": "C. Presence of mood episodes in schizoaffective disorder",
-      "explanation": "Option C is correct because schizoaffective disorder is characterized by the presence of mood episodes alongside psychotic symptoms, which is a key differentiator from bipolar I disorder. Option A is incorrect as hallucinations can occur in both disorders. Option B is misleading; the duration of mood episodes is not a distinguishing factor. Option D does not accurately differentiate the two disorders.",
+      "correct_answer": "Clinically significant distress or impairment in social, school, or other important areas of functioning",
+      "explanation": "DSM-5 Gender Dysphoria in Children requires two criteria: Criterion A, a marked incongruence between experienced/expressed gender and assigned gender manifested by at least 6 of 8 specified indicators lasting at least 6 months, AND Criterion B, clinically significant distress or impairment. The distress/impairment criterion (Criterion B) is essential because it distinguishes Gender Dysphoria from gender nonconformity that does not cause distress. The 8-month duration in this vignette satisfies the minimum 6-month threshold. Option B is incorrect because biological sex variations are not required; they may be noted as a specifier if present. Option C is incorrect because DSM-5 imposes no age-of-onset requirement before age 5. Option D is incorrect because comorbid diagnoses are not required for the Gender Dysphoria diagnosis.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
       "knId": "KN36",
-      "source_file": "5-clinical-tests.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Clinical Tests.json",
       "source_folder": "5 Assessment",
       "difficulty": "hard",
       "question_type": "standard",
       "isScored": false,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -4161,23 +4188,24 @@
       "is_org_psych": false
     },
     {
-      "id": 209,
-      "question": "When a psychologist learns that a client has experienced trauma, what is their ethical obligation regarding reporting?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 3 and 4.json::9",
+      "question": "What is a primary ethical concern regarding dual relationships in psychological practice?",
       "options": [
-        "They must report the trauma to the authorities immediately.",
-        "They should assess the client's safety and discuss reporting options with the client.",
-        "They can choose to ignore the trauma if the client does not want to report it.",
-        "They must inform the client's family about the trauma."
+        "They can enhance the therapeutic alliance.",
+        "They may lead to conflicts of interest.",
+        "They are always prohibited by the APA Ethics Code.",
+        "They can provide additional support for the client."
       ],
-      "correct_answer": "They should assess the client's safety and discuss reporting options with the client.",
-      "explanation": "The correct answer reflects the ethical obligation to prioritize the client's safety while also respecting their autonomy. The other options either violate confidentiality or do not consider the client's wishes.",
+      "correct_answer": "They may lead to conflicts of interest.",
+      "explanation": "Dual relationships can create conflicts of interest that impair objectivity and effectiveness in treatment. While they can sometimes enhance relationships, the potential for harm and ethical violations is a significant concern.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
       "knId": "KN64",
-      "source_file": "8-practice-issues.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 3 and 4.json",
       "source_folder": "8 Ethics",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -4381,23 +4409,24 @@
       "is_org_psych": false
     },
     {
-      "id": 220,
-      "question": "A newborn infant, when its cheek is stroked, turns its head toward the stimulus and opens its mouth. This reflexive behavior, which is essential for initiating breastfeeding, is known as the:",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Before Birth.json::19",
+      "question": "Which prenatal period corresponds to the second trimester, and what major developmental processes occur during this time?",
       "options": [
-        "Moro reflex",
-        "Babinski reflex",
-        "Rooting reflex",
-        "Palmar grasp reflex"
+        "Weeks 1–13; organ formation and implantation",
+        "Weeks 14–27; growth and maturation of organs and structures",
+        "Weeks 28–birth; initial cellular differentiation",
+        "Weeks 3–8; establishment of major organ systems"
       ],
-      "correct_answer": "Rooting reflex",
-      "explanation": "The rooting reflex causes a neonate to turn its head toward a tactile stimulus on the cheek and open its mouth, facilitating the location of the nipple for breastfeeding. This is one of several survival-oriented neonatal reflexes. The Moro reflex is a startle response involving arm extension and then retraction when the infant feels a sudden loss of support. The Babinski reflex involves fanning of the toes when the sole of the foot is stroked. The palmar grasp reflex involves gripping when an object is placed in the palm. While the rooting reflex helps the infant find the food source, the sucking reflex then enables actual feeding.",
+      "correct_answer": "Weeks 14–27; growth and maturation of organs and structures",
+      "explanation": "1. The correct answer, \"Weeks 14–27; growth and maturation of organs and structures,\" accurately describes the second trimester of prenatal development. During this period, the major organs and structures formed in the embryonic period continue to grow and mature, preparing the fetus for survival outside the womb.\n\n2. The first incorrect option, \"Weeks 1–13; organ formation and implantation,\" refers to the first trimester, which is characterized by the germinal and early embryonic periods where implantation and initial organ formation occur, not growth and maturation. The second incorrect option, \"Weeks 28–birth; initial cellular differentiation,\" incorrectly identifies the third trimester, which primarily involves further growth and maturation rather than initial differentiation. Lastly, the option \"Weeks 3–8; establishment of major organ systems\" describes the embryonic period when major organs are forming, rather than the growth and maturation processes that occur in the second trimester.",
       "domain": "Domain 4: Growth & Lifespan Development",
       "knId": "KN21",
-      "source_file": "4-body-growth.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Before Birth.json",
       "source_folder": "4 Development",
       "difficulty": "easy",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {

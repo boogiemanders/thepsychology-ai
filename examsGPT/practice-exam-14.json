@@ -27,7 +27,8 @@
     "generatedAt": "2026-03-26T01:46:50.201Z",
     "source": "questionsGPT",
     "blueprint": "Kns.md",
-    "generator": "scripts/assemble-questionsgpt-exams.mjs"
+    "generator": "scripts/assemble-questionsgpt-exams.mjs",
+    "lastSurgicalFix": "2026-05-10T02:40:11.006Z"
   },
   "questions": [
     {
@@ -52,20 +53,20 @@
       "is_org_psych": false
     },
     {
-      "id": 2,
-      "question": "A researcher reviewing epidemiological literature on obsessive-compulsive disorder (OCD) notices a distinctive pattern in how sex differences in prevalence change across development. Which of the following most accurately characterizes the relationship between sex and OCD prevalence from childhood through adulthood?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Sex and Gender.json::11",
+      "question": "Orgasmic reconditioning as a behavioral strategy in the treatment of paraphilic disorders involves which of the following?",
       "options": [
-        "OCD is more prevalent in females across both childhood and adult populations, with the disparity most pronounced during adolescence",
-        "OCD shows male predominance in childhood, but the sex difference diminishes and becomes roughly equal by adulthood",
-        "OCD prevalence is essentially equal across sex at all developmental stages, with no consistent pattern across studies",
-        "OCD shows female predominance in childhood and then shifts to male predominance by middle adulthood"
+        "Replacing sexual fantasies with fear through imagined aversive conditioning",
+        "Masturbating while shifting fantasy from paraphilic to normative stimuli",
+        "Practicing repeated exposure to paraphilic stimuli without allowing orgasm",
+        "Relaxation training to reduce sexual arousal to paraphilic objects"
       ],
-      "correct_answer": "OCD shows male predominance in childhood, but the sex difference diminishes and becomes roughly equal by adulthood",
-      "explanation": "Epidemiological research consistently finds that childhood and adolescent OCD has a male predominance, with boys being diagnosed at higher rates and at younger ages than girls. By adulthood, this sex difference largely disappears, and adult OCD prevalence approximates equality between men and women (with some community samples showing a slight female preponderance). This developmental shift distinguishes OCD from disorders like major depressive disorder and generalized anxiety disorder, which show female predominance across all age groups, and is an important EPPP epidemiological fact. Option A is incorrect because the childhood male predominance is well established. Option C is incorrect because the childhood male predominance is a reliable cross-study finding. Option D reverses the actual developmental pattern.",
+      "correct_answer": "Masturbating while shifting fantasy from paraphilic to normative stimuli",
+      "explanation": "1. The correct answer, \"Masturbating while shifting fantasy from paraphilic to normative stimuli,\" accurately describes orgasmic reconditioning, a behavioral strategy used in treating paraphilic disorders. This technique involves instructing the individual to switch their fantasy during masturbation from the paraphilic object or behavior to a more appropriate or normative sexual object or behavior, thereby helping to reshape their sexual arousal patterns.\n\n2. The option \"Replacing sexual fantasies with fear through imagined aversive conditioning\" is incorrect because it describes covert sensitization, not orgasmic reconditioning. The option \"Practicing repeated exposure to paraphilic stimuli without allowing orgasm\" is wrong as it does not align with the goal of reconditioning, which focuses on transitioning to normative fantasies rather than exposure. Lastly, \"Relaxation training to reduce sexual arousal to paraphilic objects\" is incorrect because relaxation training is not a specific technique associated with orgasmic reconditioning; rather, it is a broader intervention that can be used in various contexts but does not specifically involve the fantasy-shifting aspect of orgasmic reconditioning.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
       "knId": "KN38",
-      "source_file": "5 Clinical Tests.json",
-      "source_folder": "5 Assessment",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Sex and Gender.json",
+      "source_folder": "5 Diagnosis",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
@@ -220,19 +221,19 @@
       "is_org_psych": false
     },
     {
-      "id": 10,
-      "question": "Which aspect of scoring in Rorschach tests is primarily concerned with the developmental quality of responses?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Clinical Tests.json::70",
+      "question": "Which neuropsychological assessment is specifically focused on identifying deficits in executive functioning?",
       "options": [
-        "Location analysis",
-        "Form quality",
-        "Developmental quality",
-        "Content analysis"
+        "The Wisconsin Card Sorting Test",
+        "The Beck Depression Inventory",
+        "The Rorschach Inkblot Test",
+        "The Minnesota Multiphasic Personality Inventory"
       ],
-      "correct_answer": "Developmental quality",
-      "explanation": "Developmental quality refers to how responses to the Rorschach reflect the individual's cognitive and emotional development. Content analysis focuses on the themes present in responses, form quality assesses the accuracy of the response to the inkblot, and location analysis examines which part of the blot was used. Therefore, the correct answer is 'Developmental quality'.",
+      "correct_answer": "The Wisconsin Card Sorting Test",
+      "explanation": "1. The correct answer, \"The Wisconsin Card Sorting Test (WCST),\" is specifically focused on identifying deficits in executive functioning. The WCST measures abstract reasoning, cognitive flexibility, and the ability to adapt cognitive strategies in response to feedback, which are essential components of executive functioning. Additionally, it is sensitive to frontal lobe dysfunction, making it a valuable tool for assessing executive deficits.\n\n2. The Beck Depression Inventory (BDI-II) is a self-report measure that assesses the severity of depressive symptoms, not executive functioning. The Rorschach Inkblot Test is a projective personality assessment that provides insights into an individual's personality and emotional functioning rather than specifically targeting executive functions. The Minnesota Multiphasic Personality Inventory (MMPI-2) is a comprehensive personality assessment tool designed to evaluate psychological conditions and personality structure, but it does not focus on executive functioning deficits.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
       "knId": "KN30",
-      "source_file": "5 Clinical Tests.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Clinical Tests.json",
       "source_folder": "5 Assessment",
       "difficulty": "hard",
       "question_type": "standard",
@@ -1018,19 +1019,19 @@
       "is_org_psych": false
     },
     {
-      "id": 48,
-      "question": "In the context of informed consent, what is meant by 'legal capacity'?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 7 and 8.json::21",
+      "question": "When may psychologists waive obtaining informed consent from research participants?",
       "options": [
-        "The age at which a person can consent to treatment.",
-        "The ability to understand the legal implications of a contract.",
-        "The mental ability to make informed decisions about one's treatment.",
-        "The requirement to have a lawyer present during therapy."
+        "When the study involves experimental treatments or high risk of distress.",
+        "If the research involves anonymous questionnaires and presents no risk or legal liability.",
+        "Whenever the research is conducted in educational settings regardless of procedures involved.",
+        "If participants have previously given consent for any research participation."
       ],
-      "correct_answer": "The mental ability to make informed decisions about one's treatment.",
-      "explanation": "The correct answer highlights the mental capacity necessary for informed consent, which is crucial for ethical practice. The other options do not accurately capture the essence of legal capacity in this context.",
+      "correct_answer": "If the research involves anonymous questionnaires and presents no risk or legal liability.",
+      "explanation": "1. The correct answer, \"If the research involves anonymous questionnaires and presents no risk or legal liability,\" aligns with Standard 8.05, which states that informed consent may be waived when the research is unlikely to cause distress or harm, such as studies using anonymous questionnaires. In this context, the confidentiality of participants is maintained, and there is no risk of legal liability, making informed consent unnecessary.\n\n2. The option \"When the study involves experimental treatments or high risk of distress\" is incorrect because informed consent is especially critical in such situations to ensure participants are fully aware of the risks involved. The option \"Whenever the research is conducted in educational settings regardless of procedures involved\" is wrong because it overlooks the requirement for informed consent in studies that may pose risks or involve identifiable information. Lastly, the option \"If participants have previously given consent for any research participation\" is incorrect because prior consent does not negate the need for informed consent specific to each new study, particularly if the nature of the research differs or involves new risks.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
       "knId": "KN68",
-      "source_file": "8 Practice Issues.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 7 and 8.json",
       "source_folder": "8 Ethics",
       "difficulty": "medium",
       "question_type": "standard",
@@ -1039,19 +1040,19 @@
       "is_org_psych": false
     },
     {
-      "id": 49,
-      "question": "Which of the following criteria is NOT typically considered in child custody decision-making according to family law?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 1 and 2.json::26",
+      "question": "What constitutes an ethical violation when cooperating with an ethics investigation?",
       "options": [
-        "The child's preference if they are of sufficient age",
-        "The parent's social media presence",
-        "The child's relationship with each parent",
-        "The financial stability of each parent"
+        "Providing client information with a signed client release when requested by an ethics committee",
+        "Refusing to cooperate with the ethics committee's investigation without a valid legal or ethical justification",
+        "Reporting suspected child abuse to appropriate authorities despite confidentiality constraints",
+        "Consulting with a supervisor before responding to the ethics committee's request"
       ],
-      "correct_answer": "The parent's social media presence",
-      "explanation": "The child's relationship with each parent, financial stability, and the child's preference are all relevant factors in custody decisions. However, a parent's social media presence is not a standard criterion considered in custody evaluations.",
+      "correct_answer": "Refusing to cooperate with the ethics committee's investigation without a valid legal or ethical justification",
+      "explanation": "1. \"Refusing to cooperate with the ethics committee's investigation without a valid legal or ethical justification\" is the correct answer because Standard 1.06 of the APA Ethics Code explicitly states that psychologists must cooperate with investigations and proceedings of the APA and affiliated associations. Failing to do so constitutes an ethical violation unless there are valid legal or ethical reasons for the refusal.\n\n2. \n- **Providing client information with a signed client release when requested by an ethics committee** is incorrect because it aligns with Standard 1.06, which allows psychologists to share information if proper authorization is obtained, thereby fulfilling their obligation to cooperate.\n- **Reporting suspected child abuse to appropriate authorities despite confidentiality constraints** is incorrect because it reflects adherence to legal and ethical responsibilities, as mandated by laws that require reporting such abuse, which can supersede confidentiality obligations.\n- **Consulting with a supervisor before responding to the ethics committee's request** is incorrect because seeking consultation demonstrates due diligence and professionalism, ensuring that the psychologist's response is informed and appropriate, in line with ethical standards.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
-      "knId": "KN65",
-      "source_file": "8 Practice Issues.json",
+      "knId": "KN61",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 1 and 2.json",
       "source_folder": "8 Ethics",
       "difficulty": "medium",
       "question_type": "standard",
@@ -1207,19 +1208,19 @@
       "is_org_psych": true
     },
     {
-      "id": 57,
-      "question": "Which of the following best describes the nature of recent memory recall from short-term exposure?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Memory.json::37",
+      "question": "A cognitive psychologist presents participants with a recorded list of spoken words under three conditions: one group rates whether each word rhymes with another word (acoustic processing), a second group judges whether each word belongs to a living category (semantic processing), and a third group decides whether each word contains the letter 'e' (structural processing). On a surprise recall test one hour later, which group would the levels-of-processing framework predict will show the highest retention?",
       "options": [
-        "It is often highly accurate and detailed.",
-        "It is typically limited to a few items.",
-        "It relies heavily on long-term memory storage.",
-        "It can be enhanced through emotional arousal."
+        "The group that rated rhyming patterns, because phonological encoding is particularly suited to auditory material",
+        "The group that assessed structural features, because attention to letter composition consolidates orthographic memory traces",
+        "The group that judged semantic category membership, because deeper meaning-based encoding produces more elaborated and durable memory traces",
+        "All groups would perform equivalently, because incidental encoding produces comparable retention regardless of processing depth"
       ],
-      "correct_answer": "It is typically limited to a few items.",
-      "explanation": "The correct answer is C because recent memory recall from short-term exposure is limited by the capacity of short-term memory, which is about 7 plus or minus 2 items. Option A is incorrect as recent memory can be inaccurate. Option B is incorrect because it primarily involves short-term memory. Option D is misleading as emotional arousal affects long-term memory more significantly.",
+      "correct_answer": "The group that judged semantic category membership, because deeper meaning-based encoding produces more elaborated and durable memory traces",
+      "explanation": "Craik and Lockhart's levels-of-processing framework proposes that the depth at which information is processed determines how well it is retained: shallow processing (structural, acoustic) produces weaker, more transient memory traces, while deep semantic processing produces rich, elaborated, and durable traces. Judging category membership (living vs. non-living) requires extracting meaning from the word, constituting the deepest level of processing among the three conditions. Rating rhyming (A) involves acoustic/phonological processing, which is intermediate in depth and would not surpass semantic processing. Assessing letter composition (B) is the shallowest structural form of processing. Option D is incorrect; robust empirical evidence from incidental learning paradigms demonstrates significant recall differences as a function of processing depth.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
       "knId": "KN8",
-      "source_file": "2 Memory.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Memory.json",
       "source_folder": "2 Learning and Memory",
       "difficulty": "medium",
       "question_type": "standard",
@@ -1417,21 +1418,21 @@
       "is_org_psych": true
     },
     {
-      "id": 67,
-      "question": "In rural settings, what is a primary concern regarding the scope of practice for psychologists?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 7 and 8.json::23",
+      "question": "Which of the following best describes a psychologist's responsibility regarding continuing professional development according to ethical standards?",
       "options": [
-        "Availability of advanced technology",
-        "High demand for specialized services",
-        "Excessive competition among practitioners",
-        "Limited access to supervision and consultation"
+        "Psychologists may choose to engage in continuing education when convenient without formal documentation.",
+        "Psychologists must undertake ongoing education to maintain competence and ensure current knowledge.",
+        "Once licensed, psychologists are not ethically required to pursue further training.",
+        "Continuing professional development is solely the responsibility of employers, not the individual psychologist."
       ],
-      "correct_answer": "Limited access to supervision and consultation",
-      "explanation": "In rural settings, psychologists often face challenges related to limited access to supervision and consultation, which can impact their practice and professional development. The other options do not accurately reflect the primary concerns in rural psychology practice.",
+      "correct_answer": "Psychologists must undertake ongoing education to maintain competence and ensure current knowledge.",
+      "explanation": "1. The correct answer, \"Psychologists must undertake ongoing education to maintain competence and ensure current knowledge,\" aligns with the ethical standards outlined in the APA Ethics Code, particularly Standard 7.02. This standard emphasizes that psychologists must take \"reasonable steps\" to ensure their education and training descriptions are accurate, indicating a commitment to continuous professional development to stay informed and competent in their field.\n\n2. The first incorrect option, \"Psychologists may choose to engage in continuing education when convenient without formal documentation,\" is wrong because ethical standards require psychologists to maintain accurate records of their education and training, suggesting that ongoing education should be a structured and documented process rather than a casual choice. \n\nThe second incorrect option, \"Once licensed, psychologists are not ethically required to pursue further training,\" is incorrect because the APA Ethics Code implies an ongoing responsibility for professional development beyond initial licensure to ensure competence in practice. \n\nFinally, the third incorrect option, \"Continuing professional development is solely the responsibility of employers, not the individual psychologist,\" is inaccurate because it places the onus of professional growth entirely on employers, whereas ethical standards highlight the individual psychologist's obligation to engage in ongoing education and training for their own competence.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
       "knId": "KN66",
-      "source_file": "8 Practice Issues.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 7 and 8.json",
       "source_folder": "8 Ethics",
-      "difficulty": "hard",
+      "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
       "type": "standard",
@@ -1480,19 +1481,19 @@
       "is_org_psych": false
     },
     {
-      "id": 70,
-      "question": "Which supervision model focuses on understanding and integrating the supervisor and supervisee's interpersonal dynamics to improve therapy outcomes?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Brief Therapies.json::1",
+      "question": "A graduate student is comparing different models of addiction. Which of the following best describes how Alcoholics Anonymous (AA) conceptualizes addiction?",
       "options": [
-        "Integrative model",
-        "Psychodynamic model",
-        "Behavioral model",
-        "Developmental model"
+        "Addiction is an overlearned maladaptive habit that can be unlearned through skills training",
+        "Addiction is a disease that requires lifelong abstinence and is never fully cured",
+        "Addiction results from operant conditioning and is maintained by reinforcement contingencies",
+        "Addiction is a rational choice made in response to environmental contingencies"
       ],
-      "correct_answer": "Psychodynamic model",
-      "explanation": "1. The **psychodynamic model** is the correct answer because it emphasizes understanding and integrating the interpersonal dynamics between the supervisor and supervisee. This model focuses on the relational aspects of supervision, including transference and countertransference, which can significantly impact therapy outcomes by enhancing the supervisee's self-awareness and therapeutic effectiveness.\n\n2. The **developmental model** is incorrect because it primarily focuses on the growth and progression of the supervisee's skills and competencies over time, rather than the interpersonal dynamics between supervisor and supervisee. The **integrative model** is not the correct choice as it aims to combine various theoretical approaches and techniques in supervision, without specifically emphasizing the understanding of interpersonal dynamics. Lastly, the **behavioral model** is wrong because it concentrates on observable behaviors and the application of behavioral techniques in supervision, rather than exploring the deeper relational aspects that influence therapeutic outcomes.",
+      "correct_answer": "Addiction is a disease that requires lifelong abstinence and is never fully cured",
+      "explanation": "Alcoholics Anonymous conceptualizes addiction as a disease—a chronic condition that cannot be cured but can be managed through complete abstinence. This is contrasted in the literature with cognitive-behavioral approaches like Marlatt's relapse prevention model, which views addiction as an overlearned habit (A) rather than a disease. The operant conditioning model (C) represents a pure behavioral perspective, while the rational choice model (D) represents an economic/decision-making perspective. AA's disease model is significant because it frames recovery as requiring lifelong management and abstinence, and views any use as a relapse rather than a learning opportunity.",
       "domain": "Domain 6: Treatment & Intervention",
-      "knId": "KN52",
-      "source_file": "6 Prevention and Consultation.json",
+      "knId": "KN44",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Brief Therapies.json",
       "source_folder": "6 Clinical Interventions",
       "difficulty": "medium",
       "question_type": "standard",
@@ -1795,20 +1796,20 @@
       "is_org_psych": false
     },
     {
-      "id": 85,
-      "question": "A 3-year-old boy correctly identifies himself as a boy and labels male playmates as boys. When his older sister puts on a short haircut and dresses in his clothing for a costume party, he insists she has 'turned into a boy.' According to Kohlberg's model of gender identity development, this child's error is MOST characteristic of which stage?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Identity.json::9",
+      "question": "Troiden’s Model of Homosexual Identity Development describes the Identity Confusion stage as:",
       "options": [
-        "Gender constancy, because the child has achieved full conservation of gender for familiar individuals but fails when costumes obscure biological cues",
-        "Pre-gender awareness, because the error reflects the absence of any stable internal representation of gender categories",
-        "Gender labeling (basic gender identity), because the child can apply gender categories accurately under normal conditions but does not yet understand that gender is invariant across changes in appearance",
-        "Gender stability, because the child understands that his own gender persists over time but cannot yet conserve another person's gender across situational transformations"
+        "Feeling different from same-sex peers during childhood",
+        "Beginning to accept a gay or lesbian identity and seeking related social relationships",
+        "Suspecting one is gay or lesbian leading to anxiety and use of denial or avoidance",
+        "Internalizing the identity and being comfortable disclosing sexual orientation to others"
       ],
-      "correct_answer": "Gender labeling (basic gender identity), because the child can apply gender categories accurately under normal conditions but does not yet understand that gender is invariant across changes in appearance",
-      "explanation": "In Kohlberg's three-stage model of gender identity development, the first stage—gender labeling (basic gender identity, approximately ages 2–3)—is characterized by accurate gender categorization under typical conditions but a failure to conserve gender across superficial changes in appearance such as clothing, hairstyle, or costume. The child in this scenario correctly applies gender labels in ordinary contexts but concludes that a costume change produces an actual gender change, which is the defining error of the labeling stage. Gender stability (Option A) is the second stage, in which the child understands that their own gender persists across time but may still fail to conserve gender across situational or appearance-based transformations—particularly for others. However, the child in the scenario makes the error for another person based on appearance, which is most precisely the hallmark of stage one, where the very concept of gender's permanence has not yet been acquired. Gender constancy (Option C) is the third stage, involving full conservation of gender across both time and situational changes. Option D is incorrect because the child clearly demonstrates functional gender labeling.",
+      "correct_answer": "Suspecting one is gay or lesbian leading to anxiety and use of denial or avoidance",
+      "explanation": "1. The correct answer, \"Suspecting one is gay or lesbian leading to anxiety and use of denial or avoidance,\" accurately reflects the Identity Confusion stage in Troiden’s Model of Homosexual Identity Development. This stage occurs during middle or late adolescence when individuals begin to feel sexual attraction to the same sex, leading to uncertainty and anxiety. To cope with these feelings, individuals may employ strategies such as denial or avoidance, as they grapple with their emerging identity.\n\n2. The first incorrect option, \"Feeling different from same-sex peers during childhood,\" describes the Sensitization stage, where individuals recognize their differences from peers but have not yet developed sexual attraction or identity awareness. The second incorrect option, \"Beginning to accept a gay or lesbian identity and seeking related social relationships,\" pertains to the Identity Assumption stage, where individuals start to embrace their sexual orientation and actively seek connections within the LGBTQ+ community. Lastly, the option \"Internalizing the identity and being comfortable disclosing sexual orientation to others\" refers to the Identity Commitment stage, where individuals have fully accepted their gay or lesbian identity and are open about it with others, contrasting with the uncertainty and anxiety characteristic of the Identity Confusion stage.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
       "knId": "KN19",
-      "source_file": "3 Connection.json",
-      "source_folder": "3 Social Psychology",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Identity.json",
+      "source_folder": "3 Cultural Considerations",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
@@ -2299,19 +2300,19 @@
       "is_org_psych": false
     },
     {
-      "id": 109,
-      "question": "Research on the psychological adjustment of adults following divorce indicates that negative consequences for men and women tend to differ in important ways. Which of the following most accurately describes a key gender difference in post-divorce adjustment?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Heredity and Environment.json::8",
+      "question": "Which environmental factors have been identified as causing epigenetic changes during prenatal development?",
       "options": [
-        "Both men and women experience equivalent patterns of adjustment, with differences attributable solely to custody arrangements",
-        "Women typically show increased risky behaviors and social isolation, while men face primarily financial challenges",
-        "Women are more likely to experience chronic economic hardship, while men's negative effects tend to be temporary",
-        "Men experience greater long-term psychological distress, while women show primarily short-term adjustment difficulties"
+        "Maternal diet, teratogenic medications, infections, tobacco use, and alcohol consumption",
+        "Physical exercise, trauma, drug use, and environmental toxins",
+        "Genetic mutations and chromosomal abnormalities",
+        "Only genetic inheritance without environmental influence"
       ],
-      "correct_answer": "Women are more likely to experience chronic economic hardship, while men's negative effects tend to be temporary",
-      "explanation": "Research consistently shows that divorce affects men and women differently. For women, economic hardship is the primary challenge, and these economic consequences tend to be chronic. For men, health problems stem more from risky behaviors, social isolation, and psychological factors, but these negative effects are often temporary rather than chronic. Option B reverses the pattern—men's effects tend to be temporary, not long-term. Option C incorrectly assigns risky behaviors to women and financial challenges to men (the reverse is true). Option D incorrectly claims equivalent patterns.",
+      "correct_answer": "Maternal diet, teratogenic medications, infections, tobacco use, and alcohol consumption",
+      "explanation": "1. The correct answer, \"Maternal diet, teratogenic medications, infections, tobacco use, and alcohol consumption,\" is supported by the reference material, which identifies these factors as potential causes of epigenetic changes during prenatal development. Specifically, it mentions that maternal diet and exposure to teratogenic medications, as well as infections, tobacco, and alcohol, can trigger changes in gene expression that may lead to lasting effects on the developing fetus.\n\n2. The first incorrect option, \"Physical exercise, trauma, drug use, and environmental toxins,\" is wrong because while some of these factors can influence development postnatally, the reference material specifically lists the factors affecting prenatal epigenetic changes as maternal diet, teratogenic medications, infections, tobacco, and alcohol. The second incorrect option, \"Genetic mutations and chromosomal abnormalities,\" is incorrect because it pertains to changes in genetic code rather than epigenetic modifications, which involve alterations in gene expression without changing the DNA sequence. Lastly, the option \"Only genetic inheritance without environmental influence\" is incorrect because the reference material emphasizes that both genetic and environmental factors contribute to development, highlighting the significant role of environmental influences in epigenetic changes.",
       "domain": "Domain 4: Growth & Lifespan Development",
       "knId": "KN22",
-      "source_file": "4 School and Family.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Heredity and Environment.json",
       "source_folder": "4 Development",
       "difficulty": "medium",
       "question_type": "standard",
@@ -2320,19 +2321,19 @@
       "is_org_psych": false
     },
     {
-      "id": 110,
-      "question": "In the context of gender identity theories, what is the sequence of gender role development according to social learning theory?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Temperament and Personality.json::19",
+      "question": "In Rothbart’s temperament model, what does 'effortful control' refer to?",
       "options": [
-        "Reinforcement, observation, imitation",
-        "Imitation, reinforcement, observation",
-        "Observation, imitation, reinforcement",
-        "Observation, reinforcement, imitation"
+        "The biological reactivity to stimuli",
+        "The ability to inhibit a dominant response to perform a subdominant one",
+        "The tendency to respond negatively and withdraw from new situations",
+        "The overall activity level and pleasure-seeking behavior"
       ],
-      "correct_answer": "Observation, imitation, reinforcement",
-      "explanation": "Social learning theory posits that children learn gender roles through observing others, imitating their behaviors, and receiving reinforcement for gender-appropriate behaviors. The other sequences misrepresent the order of these processes.",
+      "correct_answer": "The ability to inhibit a dominant response to perform a subdominant one",
+      "explanation": "1. The correct answer, \"The ability to inhibit a dominant response to perform a subdominant one,\" accurately describes 'effortful control' in Rothbart’s temperament model. Effortful control is a component of self-regulation, which refers to processes that facilitate, maintain, and inhibit reactivity. It specifically involves the capacity to manage one’s responses effectively, allowing an individual to suppress an automatic or dominant reaction in favor of a more appropriate or less impulsive response.\n\n2. The first incorrect option, \"The biological reactivity to stimuli,\" is wrong because it describes reactivity, which refers to the intensity and duration of responses to stimuli, rather than the self-regulatory aspect of effortful control. The second incorrect option, \"The tendency to respond negatively and withdraw from new situations,\" misrepresents effortful control by conflating it with behavioral inhibition, which is characterized by negative affect and withdrawal, rather than self-regulation. Lastly, \"The overall activity level and pleasure-seeking behavior\" is incorrect because it pertains to the surgency/extraversion factor of temperament, focusing on activity levels and pleasure-seeking, rather than the ability to control or inhibit responses.",
       "domain": "Domain 4: Growth & Lifespan Development",
-      "knId": "KN24",
-      "source_file": "4 Temperament and Personality.json",
+      "knId": "KN21",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Temperament and Personality.json",
       "source_folder": "4 Development",
       "difficulty": "medium",
       "question_type": "standard",
@@ -2446,19 +2447,19 @@
       "is_org_psych": false
     },
     {
-      "id": 116,
-      "question": "Research indicates that job satisfaction tends to change with age. Which of the following statements best reflects this relationship?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 School and Family.json::20",
+      "question": "According to Rosenthal and Jacobson's study on teacher expectations, what phenomenon explains students' improved performance when labeled as 'bloomers'?",
       "options": [
-        "Job satisfaction remains constant throughout adulthood.",
-        "Job satisfaction tends to increase as individuals age.",
-        "Job satisfaction is unrelated to age.",
-        "Job satisfaction decreases consistently as individuals age."
+        "Social learning theory",
+        "Self-fulfilling prophecy",
+        "Cognitive dissonance",
+        "Classical conditioning"
       ],
-      "correct_answer": "Job satisfaction tends to increase as individuals age.",
-      "explanation": "Research shows that job satisfaction often increases with age, likely due to factors such as increased experience, stability, and alignment of job roles with personal values. The other options do not accurately reflect the general trend observed in studies.",
+      "correct_answer": "Self-fulfilling prophecy",
+      "explanation": "1. The correct answer, \"self-fulfilling prophecy,\" is based on Rosenthal and Jacobson's study, which demonstrated that teachers' expectations can influence student performance. When teachers labeled certain students as \"bloomers,\" they treated them differently, providing more encouragement and support, which led to those students actually performing better academically. This illustrates how expectations can create a cycle where belief in potential translates into improved outcomes.\n\n2. **Social learning theory** is incorrect because it focuses on learning through observation and imitation rather than the influence of expectations on performance. **Cognitive dissonance** is not applicable here as it refers to the mental discomfort experienced when holding conflicting beliefs or attitudes, which does not relate to teacher expectations and student performance. **Classical conditioning** is also incorrect because it involves learning through association between stimuli, not the impact of teacher expectations on student achievement.",
       "domain": "Domain 4: Growth & Lifespan Development",
       "knId": "KN22",
-      "source_file": "4 School and Family.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 School and Family.json",
       "source_folder": "4 Development",
       "difficulty": "medium",
       "question_type": "standard",
@@ -2572,19 +2573,19 @@
       "is_org_psych": false
     },
     {
-      "id": 122,
-      "question": "What long-term effects are associated with fetal alcohol syndrome (FAS) as children grow into adulthood?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Before Birth.json::16",
+      "question": "Which disorder is caused by a deletion on chromosome 5 and includes a high-pitched, cat-like cry, intellectual disability, microcephaly, and distinctive facial features?",
       "options": [
-        "Enhanced social skills",
-        "Increased height and weight",
-        "Cognitive impairments and behavioral issues",
-        "Improved academic performance"
+        "Angelman syndrome",
+        "Cri-du-chat syndrome",
+        "Prader-Willi syndrome",
+        "Down syndrome"
       ],
-      "correct_answer": "Cognitive impairments and behavioral issues",
-      "explanation": "The correct answer is cognitive impairments and behavioral issues, as these are well-documented long-term effects of fetal alcohol syndrome. The other options are incorrect as they do not reflect the typical outcomes associated with FAS.",
+      "correct_answer": "Cri-du-chat syndrome",
+      "explanation": "1. \"Cri-du-chat syndrome\" is the correct answer because it is specifically caused by a deletion on chromosome 5 and is characterized by a high-pitched, cat-like cry, intellectual disability, microcephaly, and distinctive facial features such as widely set eyes and low-set ears. The symptoms of cri-du-chat syndrome align perfectly with the details provided in the question.\n\n2. \n- **Angelman syndrome** is incorrect because it is caused by a deletion on the maternal chromosome 15 and is characterized by symptoms such as severe developmental delays, communication difficulties, and a happy demeanor, rather than the features associated with cri-du-chat syndrome.\n- **Prader-Willi syndrome** is incorrect as it is also linked to a deletion on chromosome 15 (paternal) and is primarily characterized by symptoms like hypotonia, hyperphagia, and obesity, which do not include the distinctive features of cri-du-chat syndrome.\n- **Down syndrome** is incorrect because it is caused by an abnormality on chromosome 21, specifically trisomy 21, and its symptoms include intellectual disability and distinct physical features, but do not include a high-pitched cry or the specific characteristics associated with cri-du-chat syndrome.",
       "domain": "Domain 4: Growth & Lifespan Development",
       "knId": "KN28",
-      "source_file": "4 Before Birth.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Before Birth.json",
       "source_folder": "4 Development",
       "difficulty": "hard",
       "question_type": "standard",
@@ -2635,20 +2636,20 @@
       "is_org_psych": false
     },
     {
-      "id": 125,
-      "question": "A researcher conducting a study on the effectiveness of a new therapeutic intervention inadvertently provides more encouraging nonverbal cues to participants in the treatment group than to those in the control group. This pattern of behavior, in which the researcher's expectations subtly influence participant responses, is BEST described as:",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/6 How Careers Develop.json::1",
+      "question": "In Holland's theory of career choice, what does a high degree of differentiation in an individual's self-directed search profile indicate?",
       "options": [
-        "Observer bias",
-        "Demand characteristics",
-        "The Rosenthal effect",
-        "The Hawthorne effect"
+        "High scores on multiple personality types",
+        "High scores on one personality type and low scores on others",
+        "Indecision in career choice",
+        "Similarity to multiple work environments"
       ],
-      "correct_answer": "The Rosenthal effect",
-      "explanation": "The Rosenthal effect (also called experimenter expectancy effect) refers to subtle cues or clues transmitted by the experimenter that influence participant behavior in the direction of the experimenter's hypothesis. This is distinct from the Hawthorne effect (behavior change due to awareness of being observed), demand characteristics (cues that inform participants about what behavior is expected, which come from the experimental situation rather than the experimenter specifically), and observer bias (systematic errors in recording or interpreting data, rather than influencing participant behavior).",
+      "correct_answer": "High scores on one personality type and low scores on others",
+      "explanation": "Differentiation refers to the profile of scores where an individual scores high on one personality type and low on the others, indicating a clear preference and better predictive validity for career outcomes.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
-      "knId": "KN6",
-      "source_file": "7 Research Designs.json",
-      "source_folder": "7 Research and Stats",
+      "knId": "KN48",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/6 How Careers Develop.json",
+      "source_folder": "2 3 5 6 I-O Psychology",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
@@ -2677,19 +2678,19 @@
       "is_org_psych": false
     },
     {
-      "id": 127,
-      "question": "Which of the following best exemplifies structural racism as defined by the APA?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Persuasion.json::15",
+      "question": "Which of the following describes the typical relationship between intelligence and susceptibility to persuasion?",
       "options": [
-        "Individual holding and expressing overtly racist views",
-        "Laws and policies that create race-based inequalities, such as school funding tied to local property taxes",
-        "A teacher treating students unfairly based on race",
-        "Discriminatory hiring practices by a private employer"
+        "An inverted U-shaped relationship where moderate intelligence is most susceptible",
+        "Higher intelligence is associated with higher susceptibility to persuasion",
+        "Lower intelligence is associated with higher susceptibility to persuasion",
+        "No consistent relationship exists between intelligence and persuasion"
       ],
-      "correct_answer": "Laws and policies that create race-based inequalities, such as school funding tied to local property taxes",
-      "explanation": "1. The correct answer, \"Laws and policies that create race-based inequalities, such as school funding tied to local property taxes,\" exemplifies structural racism as defined by the APA because it refers to systemic practices and policies that produce enduring racial disparities. Structural racism encompasses laws and institutional practices that perpetuate inequalities across various domains, including education, as evidenced by funding mechanisms that disadvantage minority communities.\n\n2. The option \"A teacher treating students unfairly based on race\" is incorrect because it describes interpersonal racism, which involves individual behaviors and attitudes rather than systemic practices. \"Individual holding and expressing overtly racist views\" is also incorrect, as this represents overt racism, which is characterized by explicit hostility and discrimination from individuals rather than structural inequalities. Finally, \"Discriminatory hiring practices by a private employer\" is incorrect because it pertains to institutional racism, which is specific to organizational policies rather than broader societal structures that create systemic racial disparities.",
+      "correct_answer": "Lower intelligence is associated with higher susceptibility to persuasion",
+      "explanation": "1. The correct answer, \"Lower intelligence is associated with higher susceptibility to persuasion,\" is supported by the research findings of Rhodes and Wood (1992), which indicate a linear relationship between intelligence and influenceability. Specifically, their meta-analysis revealed that individuals with lower intelligence levels exhibit higher susceptibility to persuasive messages.\n\n2. The first incorrect option, \"An inverted U-shaped relationship where moderate intelligence is most susceptible,\" is wrong because the research indicates a linear relationship rather than an inverted U-shape, meaning susceptibility increases as intelligence decreases. The second incorrect option, \"Higher intelligence is associated with higher susceptibility to persuasion,\" is incorrect because it contradicts the research findings, which state that lower intelligence correlates with higher susceptibility. Lastly, the option \"No consistent relationship exists between intelligence and persuasion\" is incorrect because the research clearly demonstrates a consistent linear relationship where lower intelligence leads to greater susceptibility to persuasion.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
-      "knId": "KN20",
-      "source_file": "3 Helping and Hurting.json",
+      "knId": "KN16",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Persuasion.json",
       "source_folder": "3 Social Psychology",
       "difficulty": "medium",
       "question_type": "standard",
@@ -3139,19 +3140,19 @@
       "is_org_psych": false
     },
     {
-      "id": 149,
-      "question": "A psychologist receives a referral for a 52-year-old patient with chronic low back pain. What should the psychologist's first step be in working with this patient?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Brief Therapies.json::5",
+      "question": "In Solution-Focused Therapy, which type of question is most useful for identifying client strengths and past successes in managing problems?",
       "options": [
-        "Conduct a comprehensive assessment of the pain experience including physical, emotional, and cognitive factors",
-        "Prescribe a time-contingent medication schedule in consultation with the referring physician",
-        "Implement a cognitive-behavioral pain management protocol",
-        "Begin relaxation training and biofeedback to reduce muscle tension"
+        "Miracle question",
+        "Scaling question",
+        "Exception question",
+        "Decision analysis question"
       ],
-      "correct_answer": "Conduct a comprehensive assessment of the pain experience including physical, emotional, and cognitive factors",
-      "explanation": "Chronic pain is considered a multifactorial process with both physical and emotional effects (depression, anger, anxiety, tense muscles, limited mobility, lack of energy). Before implementing any specific intervention, a thorough assessment is essential to understand the full picture. While CBT (A) and relaxation training (D) are evidence-based interventions for chronic pain, they should follow assessment. Time-contingent medication scheduling (C) relates to medication management, which would be the physician's domain, and the psychologist's role requires understanding the patient's pain experience first.",
+      "correct_answer": "Exception question",
+      "explanation": "1. The correct answer is \"Exception question\" because these questions are specifically designed to help clients identify times when their problems were less intense or did not exist, thereby highlighting their strengths and past successes in managing challenges. By recalling these exceptions, clients can recognize their capabilities and resources that can be utilized in the present to achieve their treatment goals.\n\n2. The \"Miracle question\" is incorrect because it focuses on envisioning a future where the client's problem is resolved, rather than identifying current strengths and past successes. The \"Scaling question\" is also incorrect as it is used to evaluate the client’s current status or progress toward their goals, not to uncover past strengths. Lastly, \"Decision analysis question\" is not mentioned in the reference material as a type of question used in Solution-Focused Therapy, making it an inappropriate choice for identifying client strengths.",
       "domain": "Domain 6: Treatment & Intervention",
       "knId": "KN42",
-      "source_file": "6 CBT.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Brief Therapies.json",
       "source_folder": "6 Clinical Interventions",
       "difficulty": "medium",
       "question_type": "standard",
@@ -3307,24 +3308,24 @@
       "is_org_psych": false
     },
     {
-      "id": 157,
-      "question": "Which form of racism is characterized by subtle, often unconscious negative feelings toward minority groups while maintaining a non-prejudiced self-image and a belief in equality?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Errors and Shortcuts.json::16",
+      "question": "The conjunction fallacy, as demonstrated by Tversky and Kahneman, is an error that results from:",
       "options": [
-        "Symbolic racism",
-        "Ambivalent racism",
-        "Aversive racism",
-        "Overt racism"
+        "Estimating the probability of two events occurring together as greater than the probability of either event alone",
+        "Ignoring base rate information in favor of anecdotal evidence",
+        "Overestimating how easily events can be imagined happening",
+        "Believing you have more control over chance events than you actually do"
       ],
-      "correct_answer": "Aversive racism",
-      "explanation": "1. **Aversive racism** is the correct answer because it is characterized by individuals who hold a non-prejudiced self-image and a belief in equality while simultaneously harboring subtle, often unconscious negative feelings about minority groups. This form of racism leads to avoidance of interactions with minority members unless the individual can justify their discrimination on a basis other than race, reflecting an internal conflict between egalitarian beliefs and negative feelings.\n\n2. **Symbolic racism** is incorrect because it involves a belief in egalitarianism paired with the perception that minority groups violate traditional values, leading to opposition against policies aimed at promoting equality, rather than subtle negative feelings. **Ambivalent racism** is not the correct answer because it describes individuals who possess both positive and negative attitudes toward minority groups, resulting in emotional tension, rather than solely unconscious negative feelings. **Overt racism** is wrong as it refers to openly hostile and aggressive attitudes toward minority groups, which is a direct contrast to the subtlety and ambiguity of aversive racism.",
+      "correct_answer": "Estimating the probability of two events occurring together as greater than the probability of either event alone",
+      "explanation": "1. The correct answer, \"Estimating the probability of two events occurring together as greater than the probability of either event alone,\" accurately describes the conjunction fallacy as explained by Tversky and Kahneman. This fallacy occurs when people mistakenly believe that the likelihood of two events happening together is higher than the likelihood of either event occurring on its own, often because they rely on representativeness rather than logical probability calculations.\n\n2. The first incorrect option, \"Ignoring base rate information in favor of anecdotal evidence,\" describes the base rate fallacy, which involves neglecting general statistical information in favor of specific, memorable examples, rather than the conjunction of events. The second incorrect option, \"Overestimating how easily events can be imagined happening,\" refers to the simulation heuristic, which focuses on how easily one can mentally simulate an event occurring, not the probability of two events occurring together. Lastly, the option \"Believing you have more control over chance events than you actually do\" relates to the illusion of control, which involves misjudging one’s influence over random events, rather than the estimation of event probabilities in conjunction.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
-      "knId": "KN20",
-      "source_file": "3 Helping and Hurting.json",
+      "knId": "KN14",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Errors and Shortcuts.json",
       "source_folder": "3 Social Psychology",
       "difficulty": "hard",
-      "question_type": "difficult",
+      "question_type": "standard",
       "isScored": false,
-      "type": "experimental",
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -3517,21 +3518,21 @@
       "is_org_psych": false
     },
     {
-      "id": 167,
-      "question": "In forensic settings, what is a key challenge psychologists face when predicting violent behavior?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json::59",
+      "question": "Which of the following best describes the purpose of a psychological autopsy in forensic cases?",
       "options": [
-        "The lack of reliable assessment tools.",
-        "The pressure to provide definitive answers to legal questions.",
-        "The inherent unpredictability of human behavior.",
-        "The difficulty in obtaining accurate historical data."
+        "To diagnose mental disorders for legal competency proceedings.",
+        "To clarify equivocal deaths by evaluating psychosocial factors surrounding death.",
+        "To evaluate malingering in criminal defendants.",
+        "To assess risk factors for future violent behavior."
       ],
-      "correct_answer": "The inherent unpredictability of human behavior.",
-      "explanation": "The correct answer highlights the fundamental challenge in predicting behavior, which is often unpredictable. The other options may contribute to the difficulty but do not capture the core issue.",
+      "correct_answer": "To clarify equivocal deaths by evaluating psychosocial factors surrounding death.",
+      "explanation": "1. The correct answer, \"To clarify equivocal deaths by evaluating psychosocial factors surrounding death,\" accurately reflects the purpose of a psychological autopsy as described by Shneidman (1994) and La Fon (1999). Psychological autopsies are primarily conducted to gather information that helps classify ambiguous deaths, determining whether they were due to suicide, accident, homicide, natural causes, or remain undetermined. This process involves assessing the psychosocial factors that may have contributed to the death, thus clarifying the circumstances surrounding it.\n\n2. The option \"To diagnose mental disorders for legal competency proceedings\" is incorrect because psychological autopsies focus on understanding the circumstances of a death rather than diagnosing mental disorders related to a living individual's competency. The option \"To evaluate malingering in criminal defendants\" is wrong because psychological autopsies are not designed to assess the truthfulness or deception of defendants regarding their mental state but rather to analyze past death circumstances. Lastly, \"To assess risk factors for future violent behavior\" is incorrect as psychological autopsies are retrospective and do not involve predicting future behaviors, but rather understanding factors that led to the death in question.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
       "knId": "KN67",
-      "source_file": "8 Practice Issues.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json",
       "source_folder": "8 Ethics",
-      "difficulty": "hard",
+      "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
       "type": "standard",
@@ -3790,19 +3791,19 @@
       "is_org_psych": false
     },
     {
-      "id": 180,
-      "question": "According to research on cognitive development and diverse identities (KN24), how can gender-role stereotypes affect children’s cognitive performance in domains such as math and verbal abilities?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Bonding and Attachment.json::26",
+      "question": "Which type of childhood aggression is characterized by goal-directed behavior to obtain an object or attention and tends to peak around age 2?",
       "options": [
-        "They only affect adults’ attitudes and do not influence children's cognitive skills",
-        "They have no effect on children’s cognitive performance as abilities are biologically predetermined",
-        "They contribute to self-fulfilling prophecies where children perform in line with expectations linked to gender roles",
-        "They enhance boys’ and girls’ abilities equally through positive reinforcement"
+        "Hostile/reactive aggression",
+        "Instrumental/proactive aggression",
+        "Relational aggression",
+        "Verbal aggression"
       ],
-      "correct_answer": "They contribute to self-fulfilling prophecies where children perform in line with expectations linked to gender roles",
-      "explanation": "1. The correct answer, \"They contribute to self-fulfilling prophecies where children perform in line with expectations linked to gender roles,\" reflects the impact of gender-role stereotypes on children's cognitive performance. Research indicates that these stereotypes can lead children to internalize expectations about their abilities, particularly in areas like math and verbal skills. For instance, parents may expect sons to excel in math and attribute their successes to innate ability, while daughters may be seen as needing to work harder for the same achievements, leading girls to underestimate their capabilities and become less interested in math.\n\n2. The first incorrect option, \"They have no effect on children’s cognitive performance as abilities are biologically predetermined,\" is wrong because research shows that cognitive abilities are influenced by both biological factors and social constructs, including gender-role stereotypes. The second incorrect option, \"They only affect adults’ attitudes and do not influence children's cognitive skills,\" is incorrect because studies demonstrate that these stereotypes directly impact children's self-perception and performance, not just adult attitudes. Lastly, the option \"They enhance boys’ and girls’ abilities equally through positive reinforcement\" is misleading, as the reinforcement often differs by gender, with boys receiving more encouragement in math and girls potentially receiving less, which can hinder their performance rather than enhance it.",
+      "correct_answer": "Instrumental/proactive aggression",
+      "explanation": "1. **Correct Answer: Instrumental/proactive aggression** is characterized by goal-directed behavior aimed at obtaining a desired object or attention. According to the reference material, this type of aggression is often seen in early childhood, peaking around age 2, as children engage in physical actions to fulfill their needs or desires.\n\n2. **Incorrect Options:**\n   - **Hostile/reactive aggression** is driven by anger and intended to hurt someone, rather than being goal-directed to obtain something.\n   - **Relational aggression** involves damaging social relationships through exclusion or gossip, which does not focus on obtaining objects or attention directly.\n   - **Verbal aggression** includes threats or name-calling and is not primarily about achieving a goal through physical actions, as is typical with instrumental aggression.",
       "domain": "Domain 4: Growth & Lifespan Development",
-      "knId": "KN24",
-      "source_file": "4 Cognitive Development.json",
+      "knId": "KN25",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Bonding and Attachment.json",
       "source_folder": "4 Development",
       "difficulty": "medium",
       "question_type": "standard",
@@ -4063,20 +4064,20 @@
       "is_org_psych": false
     },
     {
-      "id": 193,
-      "question": "A parent in Adlerian family therapy reports that her 9-year-old refuses to bring an umbrella on rainy days despite the parent's repeated warnings. The Adlerian therapist instructs the parent to stop arguing, say nothing further, and allow the child to arrive at school wet. The therapist explains that the child needs to experience the direct outcome of his own choice in order to develop social interest and responsibility. The therapist is recommending which Adlerian concept?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/2 Work Motivation.json::15",
+      "question": "Which type of need, according to McClelland’s Acquired Needs Theory, best describes a person motivated by seeking status and influence over others?",
       "options": [
-        "Mistaken goals correction, because the parent is interrupting the child's pursuit of undue attention through the conflict over the umbrella",
-        "Encouragement, because the parent is withdrawing negative reinforcement in order to build the child's intrinsic motivation",
-        "Logical consequences, because the child experiences a planned, parent-arranged outcome that is logically connected to the misbehavior",
-        "Natural consequences, because the child experiences an outcome that flows directly and automatically from his own decision without parental mediation"
+        "Need for affiliation",
+        "Need for power",
+        "Need for achievement",
+        "Need for autonomy"
       ],
-      "correct_answer": "Natural consequences, because the child experiences an outcome that flows directly and automatically from his own decision without parental mediation",
-      "explanation": "In Adlerian theory, natural consequences are the direct, automatic results of a child's behavior as produced by the physical or social environment without adult intervention (getting wet because one did not bring an umbrella). They are distinguished from logical consequences, which are arranged by a parent or teacher, are logically related to the misbehavior, and require adult action to deliver. Encouragement is a broader Adlerian principle of building self-efficacy and is not a consequence type. Mistaken goals correction refers to identifying and redirecting the mistaken purpose behind misbehavior, which is distinct from the specific disciplinary strategy described.",
+      "correct_answer": "Need for power",
+      "explanation": "1. The correct answer is \"Need for power\" because, according to McClelland’s Acquired Needs Theory, individuals with a high need for power are motivated by opportunities to control and influence others, as well as to gain status, prestige, and recognition. This aligns directly with the description of a person seeking status and influence, highlighting their desire for authority and impact over others.\n\n2. The option \"Need for affiliation\" is incorrect because it refers to the motivation to be liked and accepted by others, focusing on relationships rather than influence. \"Need for achievement\" is also incorrect, as it pertains to a desire for success in accomplishing personal goals, emphasizing personal responsibility and performance rather than power over others. Lastly, \"Need for autonomy\" is incorrect because it describes the desire for independence and self-direction, which does not specifically relate to seeking influence or status among others.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
       "knId": "KN9",
-      "source_file": "6 Psychodynamic and Humanistic Therapies.json",
-      "source_folder": "6 Clinical Interventions",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/2 Work Motivation.json",
+      "source_folder": "2 3 5 6 I-O Psychology",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
@@ -4105,19 +4106,19 @@
       "is_org_psych": false
     },
     {
-      "id": 195,
-      "question": "In a situation where an individual feels fear after noticing their heart racing, which theory of emotion best explains this experience?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Stress and Emotion.json::1",
+      "question": "According to the James-Lange theory of emotion, which of the following statements is true?",
       "options": [
-        "Schachter-Singer theory",
-        "James-Lange theory",
-        "Cannon-Bard theory",
-        "Lazarus theory"
+        "Emotions are experienced before physiological changes occur.",
+        "Physiological changes occur and then lead to emotional experiences.",
+        "Emotions are solely based on cognitive appraisal.",
+        "Physiological responses have no impact on emotional experiences."
       ],
-      "correct_answer": "James-Lange theory",
-      "explanation": "The individual's experience of fear is based on the physiological response (heart racing), which aligns with the James-Lange theory that emphasizes physiological reactions preceding emotional experiences.",
+      "correct_answer": "Physiological changes occur and then lead to emotional experiences.",
+      "explanation": "The James-Lange theory posits that physiological responses precede and inform emotional experiences. The other options misrepresent the theory's core premise.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
       "knId": "KN10",
-      "source_file": "2 Stress and Emotion.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Stress and Emotion.json",
       "source_folder": "2 Learning and Memory",
       "difficulty": "hard",
       "question_type": "standard",
@@ -4210,20 +4211,20 @@
       "is_org_psych": false
     },
     {
-      "id": 200,
-      "question": "A school psychologist wants to determine the percentage of time a student spends on-task during a 30-minute independent reading period. The psychologist divides the observation period into 60 equal intervals and checks at the end of each interval whether the student is engaged in reading at that exact moment. This procedure is BEST described as:",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Clinical Tests.json::45",
+      "question": "How is childhood stuttering typically diagnosed?",
       "options": [
-        "Momentary time sampling",
-        "Whole-interval sampling",
-        "Event recording",
-        "Continuous recording"
+        "Through self-report questionnaires from parents.",
+        "By observing speech patterns and frequency of disfluencies.",
+        "Using standardized intelligence tests.",
+        "Through projective tests assessing personality."
       ],
-      "correct_answer": "Momentary time sampling",
-      "explanation": "Momentary time sampling involves recording whether the target behavior is present or absent at the moment the time interval ends. This matches the described procedure of checking at the end of each interval. Whole-interval sampling requires the behavior to be exhibited for the full duration of the interval to be scored positively. Event recording involves tallying each occurrence of a discrete behavior. Continuous recording tracks every instance of a behavior with exact onset and offset times.",
+      "correct_answer": "By observing speech patterns and frequency of disfluencies.",
+      "explanation": "Childhood stuttering is diagnosed primarily through direct observation of speech patterns and the frequency of disfluencies, rather than through self-reports or personality assessments. The other options do not provide the appropriate methods for diagnosing stuttering.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
       "knId": "KN31",
-      "source_file": "7 Research Designs.json",
-      "source_folder": "7 Research and Stats",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Clinical Tests.json",
+      "source_folder": "5 Assessment",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
@@ -4294,24 +4295,24 @@
       "is_org_psych": false
     },
     {
-      "id": 204,
-      "question": "Which of the following best distinguishes between episodic and semantic memory?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Memory.json::13",
+      "question": "What phenomenon describes the creation of false memories due to confabulation?",
       "options": [
-        "Episodic memory is more stable over time than semantic memory.",
-        "Episodic memory is only relevant to emotional events, while semantic memory is not.",
-        "Episodic memory is related to personal experiences, while semantic memory involves general knowledge.",
-        "Semantic memory is always conscious, while episodic memory can be unconscious."
+        "The process of recalling memories that are entirely fabricated.",
+        "The blending of real memories with imagined details.",
+        "The inability to remember past events accurately.",
+        "The enhancement of memory recall through suggestion."
       ],
-      "correct_answer": "Episodic memory is related to personal experiences, while semantic memory involves general knowledge.",
-      "explanation": "This statement accurately captures the fundamental distinction between episodic and semantic memory, where episodic memory pertains to specific events and experiences, and semantic memory relates to facts and general knowledge. The other options either misrepresent the nature of these memory types or introduce inaccuracies.",
+      "correct_answer": "The blending of real memories with imagined details.",
+      "explanation": "Confabulation involves the unintentional creation of false memories where real memories are mixed with fabricated details. Option A misrepresents the nature of confabulation, while Option C describes a different memory issue, and Option D refers to a different process of memory enhancement.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
       "knId": "KN8",
-      "source_file": "2 Memory.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Memory.json",
       "source_folder": "2 Learning and Memory",
       "difficulty": "hard",
-      "question_type": "difficult",
+      "question_type": "standard",
       "isScored": false,
-      "type": "experimental",
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -4588,19 +4589,19 @@
       "is_org_psych": false
     },
     {
-      "id": 218,
-      "question": "A patient with amnesia who shows no conscious recollection of previously presented words but performs well on a word-stem completion task is demonstrating evidence of which type of memory?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Memory.json::0",
+      "question": "A student studies a list of 15 terms and is tested immediately, recalling the first and last items best. When the same student is required to wait 30 seconds before recall, which part of the serial position effect is most likely to disappear?",
       "options": [
-        "Explicit memory",
-        "Semantic memory",
-        "Implicit memory",
-        "Declarative memory"
+        "Primacy effect",
+        "Recency effect",
+        "Chunking effect",
+        "Encoding specificity effect"
       ],
-      "correct_answer": "Implicit memory",
-      "explanation": "1. \"Implicit memory\" is the correct answer because it refers to memories that can be recalled without conscious effort, which aligns with the patient's performance on the word-stem completion task despite having no explicit recollection of the words. This phenomenon is evidenced by studies showing that individuals with amnesia can still perform well on tasks that rely on implicit memory, indicating that their ability to recall information is intact even when they lack conscious awareness of it.\n\n2. \"Explicit memory\" is incorrect because it involves conscious effort to retrieve information, which the patient with amnesia does not demonstrate. \"Declarative memory\" is also incorrect as it includes explicit memory, which requires conscious recall, and the patient shows no such ability. Lastly, \"semantic memory\" is incorrect because it specifically refers to a type of declarative memory focused on facts and concepts, and the patient’s performance does not reflect conscious recall of semantic information.",
+      "correct_answer": "Recency effect",
+      "explanation": "The recency effect is the best answer because the last items are still in short-term memory immediately after study, but they fade during a delay. The primacy effect is wrong because early list items are more likely to have been rehearsed into long-term memory and therefore remain relatively intact. Chunking is wrong because it refers to grouping material to increase short-term capacity. Encoding specificity is wrong because it concerns similarity between learning and retrieval conditions, not the serial-position pattern after a delay.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
       "knId": "KN8",
-      "source_file": "2 Memory.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Memory.json",
       "source_folder": "2 Learning and Memory",
       "difficulty": "medium",
       "question_type": "standard",

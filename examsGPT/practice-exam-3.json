@@ -12,7 +12,8 @@
       "7": 16,
       "8": 36
     },
-    "generatedAt": "2025-11-20T18:01:10.411Z"
+    "generatedAt": "2025-11-20T18:01:10.411Z",
+    "lastSurgicalFix": "2026-05-10T02:45:22.446Z"
   },
   "questions": [
     {
@@ -73,22 +74,22 @@
       "scored": true
     },
     {
-      "stem": "Ambivalent sexism theory differentiates hostile sexism from benevolent sexism by identifying hostile sexism as:",
+      "stem": "A woman collapses in a busy shopping mall food court during the lunch rush. Approximately 50 people are nearby, yet several minutes pass before anyone calls for help. According to the bystander intervention model proposed by Latané and Darley, the MOST likely explanation for why no one initially helps is:",
       "options": [
-        "A subjectively favorable attitude offering protection to women in traditional roles",
-        "Antipathy toward women perceived as challenging men's power",
-        "Neutral attitudes that do not affect behavior",
-        "A rejection of all gender stereotypes"
+        "The bystanders lack the knowledge necessary to provide medical assistance",
+        "Each bystander assumes that someone else will take responsibility for helping",
+        "The bystanders are unable to notice the emergency due to stimulus overload",
+        "The bystanders are afraid of being sued for providing inadequate medical care"
       ],
-      "answer": "Antipathy toward women perceived as challenging men's power",
-      "explanation": "1. The correct answer, \"Antipathy toward women perceived as challenging men's power,\" accurately defines hostile sexism as described in ambivalent sexism theory. This type of sexism reflects negative attitudes and hostility towards women who are viewed as undermining traditional gender roles or threatening male dominance. Hostile sexism encompasses disdain for women who assert themselves or seek equality, as it is rooted in a belief that men should retain power over women.\n\n2. The first incorrect option, \"A subjectively favorable attitude offering protection to women in traditional roles,\" describes benevolent sexism, which is characterized by positive but patronizing attitudes toward women who conform to traditional roles, rather than hostility toward those who challenge them. The second incorrect option, \"Neutral attitudes that do not affect behavior,\" mischaracterizes hostile sexism, as it involves strong negative feelings rather than neutrality. Lastly, the option \"A rejection of all gender stereotypes\" is incorrect because hostile sexism does not reject gender stereotypes; rather, it reinforces them by promoting negative views of women who deviate from traditional expectations.",
+      "answer": "Each bystander assumes that someone else will take responsibility for helping",
+      "explanation": "This scenario illustrates diffusion of responsibility, which occurs at Step 3 of Latané and Darley's bystander intervention model. When multiple people are present, each person feels less personally responsible for helping because they assume others will act. Research confirms that victims are most likely to receive help when only one bystander is present. Option A (lack of knowledge) relates to Step 4 but is not the primary explanation when 50 people are present. Option C (stimulus overload) relates to Step 1, but a woman collapsing is a conspicuous event even in a busy setting. Option D (fear of legal consequences) is not one of the primary mechanisms in the model.",
       "kn": "KN15",
       "kn_explanation": "This question is best aligned with KN15 because it tests Social interaction and relationships (e.g., attraction, aggression, altruism, organizational justice, verbal and non-verbal communication, internet communication, mate selection, empathy).",
       "difficulty": "medium",
-      "quality_comment": "The stem and options are precise; distractors represent common misunderstandings providing a valid challenge.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Prosocial Behavior and Prejudice-Discrimination.json",
-      "domain": 3,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Prosocial Behavior and Prejudice-Discrimination.json::7",
+      "quality_comment": "Well-constructed scenario that requires understanding the specific mechanisms of the bystander effect rather than just recognizing the term.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Helping and Hurting.json",
+      "domain": 15,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Helping and Hurting.json::1",
       "scored": true
     },
     {
@@ -814,22 +815,22 @@
       "scored": true
     },
     {
-      "stem": "A 72-year-old patient shows progressive memory loss and trouble with daily activities over several years. Genetic testing reveals an ApoE4 allele. What does this finding suggest about the patient’s neurocognitive disorder?",
+      "stem": "Which of the following symptom durations is required for a diagnosis of brief psychotic disorder according to DSM-5-TR?",
       "options": [
-        "The presence of the ApoE4 allele decreases the likelihood of Alzheimer’s disease",
-        "The ApoE4 allele is a risk factor for Alzheimer’s disease and supports a probable diagnosis",
-        "The ApoE4 allele is diagnostic for Lewy body dementia",
-        "ApoE4 presence suggests the disorder is due to vascular causes"
+        "At least one day but less than one month",
+        "At least one week but less than two months",
+        "At least one month but less than six months",
+        "At least six months continuously"
       ],
-      "answer": "The ApoE4 allele is a risk factor for Alzheimer’s disease and supports a probable diagnosis",
-      "explanation": "1. The correct answer, \"The ApoE4 allele is a risk factor for Alzheimer’s disease and supports a probable diagnosis,\" is accurate because the presence of the ApoE4 variant has been identified as a genetic risk factor for Alzheimer’s disease. In individuals with neurocognitive disorder symptoms, such as progressive memory loss and difficulty with daily activities, the identification of the ApoE4 allele strengthens the likelihood of a probable diagnosis of Alzheimer’s, aligning with the criteria that require evidence of a causative genetic mutation.\n\n2. The incorrect options are as follows:\n- \"The presence of the ApoE4 allele decreases the likelihood of Alzheimer’s disease\" is wrong because the ApoE4 allele is known to increase, not decrease, the risk of developing Alzheimer’s disease.\n- \"The ApoE4 allele is diagnostic for Lewy body dementia\" is incorrect because the ApoE4 allele is specifically associated with Alzheimer’s disease, not Lewy body dementia, which has different diagnostic criteria and features.\n- \"ApoE4 presence suggests the disorder is due to vascular causes\" is misleading because the ApoE4 allele is not linked to vascular neurocognitive disorders; instead, it is a known risk factor specifically for Alzheimer’s disease.",
+      "answer": "At least one day but less than one month",
+      "explanation": "1. The correct answer, \"At least one day but less than one month,\" aligns with the DSM-5-TR criteria for diagnosing brief psychotic disorder. This disorder requires the presence of one or more characteristic symptoms, including delusions, hallucinations, or disorganized speech, for a duration that meets this specific time frame, distinguishing it from other psychotic disorders that have longer duration requirements.\n\n2. The option \"At least one week but less than two months\" is incorrect because it does not fit within the specified duration for brief psychotic disorder, which is limited to less than one month. The option \"At least one month but less than six months\" is wrong because this duration applies to schizophreniform disorder, not brief psychotic disorder. Lastly, \"At least six months continuously\" is incorrect as it describes the duration required for a diagnosis of schizophrenia, which involves continuous signs of the disorder for at least six months, far exceeding the criteria for brief psychotic disorder.",
       "kn": "KN36",
-      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
+      "kn_explanation": "This question focuses on diagnostic criteria, which is part of classification systems and applying diagnostic classification rationales and limitations (KN36).",
       "difficulty": "medium",
-      "quality_comment": "Options are plausible and reflect common misunderstandings, making the question effective for testing genetic knowledge.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis : Psychopathology/5 Neurocognitive Disorders.json",
-      "domain": 1,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis : Psychopathology/5 Neurocognitive Disorders.json::3",
+      "quality_comment": "The stem is clear and options reflect durations from related disorders, enhancing the plausibility of distractors and testing precise knowledge.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Psychosis.json",
+      "domain": 36,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Psychosis.json::1",
       "scored": true
     },
     {
@@ -1175,22 +1176,22 @@
       "scored": true
     },
     {
-      "stem": "Which neuropsychological test includes subtests scored on a 3-point scale indicating normal, borderline, or impaired performance, with final scores converted to age- and education-based T scores?",
+      "stem": "A patient with insomnia complains of worry about the consequences of poor sleep and frequently checks the clock at night, which worsens their difficulty sleeping. According to cognitive therapy for insomnia (CT-I), what are these behaviors termed?",
       "options": [
-        "Luria-Nebraska Neuropsychological Battery",
-        "Halstead-Reitan Neuropsychological Battery",
-        "Bender Visual-Motor Gestalt Test",
-        "Tower of London"
+        "Sleep hygiene violations",
+        "Maladaptive safety behaviors",
+        "Sleep restriction techniques",
+        "Stimulus control errors"
       ],
-      "answer": "Luria-Nebraska Neuropsychological Battery",
-      "explanation": "1. The **Luria-Nebraska Neuropsychological Battery** is the correct answer because it consists of 11 scales that assess various aspects of neuropsychological functioning, with each item scored on a 3-point scale: 0 for normal performance, 1 for borderline performance, and 2 for impaired performance. The raw scale scores obtained from these items are then converted to T scores, which are interpreted based on the examinee's age and education level.\n\n2. The **Halstead-Reitan Neuropsychological Battery** is incorrect because it utilizes a different scoring method, specifically the Halstead Impairment Index, which ranges from 0 to 1.0 to indicate levels of impairment rather than a 3-point scale. The **Bender Visual-Motor Gestalt Test** is also incorrect as it evaluates designs using a Global Scoring System on a five-point scale, not a 3-point scale. Finally, the **Tower of London** is incorrect because it assesses problem-solving and planning without the use of a 3-point scoring system; it focuses on total correct responses and rule violations instead.",
+      "answer": "Maladaptive safety behaviors",
+      "explanation": "1. The correct answer, \"maladaptive safety behaviors,\" refers to actions that individuals engage in to try to gain control over their sleep but ultimately exacerbate their insomnia. In this case, the patient's worry about the consequences of poor sleep and the act of frequently checking the clock are counterproductive strategies that increase anxiety and reinforce negative beliefs about sleep, thereby worsening their sleep difficulties.\n\n2. **Sleep hygiene violations:** This option is incorrect because sleep hygiene refers to practices that promote good sleep quality, such as maintaining a consistent sleep schedule or creating a comfortable sleep environment; the patient's behaviors do not fall under this category. \n\n**Sleep restriction techniques:** This option is incorrect because sleep restriction is a component of cognitive behavior therapy for insomnia (CBT-I) designed to improve sleep efficiency by limiting time in bed to the actual amount of sleep; the patient's behaviors do not align with this therapeutic approach.\n\n**Stimulus control errors:** This option is incorrect because stimulus control involves establishing the bed and bedroom as cues for sleep, such as going to bed only when tired; the patient's behaviors of worrying and clock-checking do not reflect errors in this strategy but rather maladaptive attempts to manage anxiety about sleep.",
       "kn": "KN32",
       "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
       "difficulty": "medium",
-      "quality_comment": "Options include well-known neuropsych tests, requiring nuanced knowledge of scoring procedures to answer correctly.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Clinical Tests.json",
-      "domain": 5,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Clinical Tests.json::11",
+      "quality_comment": "Distractors are plausible sleep-related terms, allowing for meaningful discrimination based on CT-I theory.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Eating, Sleep, and Elimination.json",
+      "domain": 32,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Eating, Sleep, and Elimination.json::11",
       "scored": true
     },
     {
@@ -1441,22 +1442,22 @@
       "scored": true
     },
     {
-      "stem": "Which of the following best describes the impact of divorce on men’s health according to research?",
+      "stem": "What impact does poor parenting have on the likelihood of delinquency in children?",
       "options": [
-        "Economic hardship leading to chronic health problems",
-        "Increased risky health behaviors and transient health effects",
-        "Greater social support improving mental health",
-        "Steady improvement in psychological well-being"
+        "It has no significant impact",
+        "It increases the likelihood of delinquency",
+        "It decreases the likelihood of delinquency",
+        "It only affects academic performance"
       ],
-      "answer": "Increased risky health behaviors and transient health effects",
-      "explanation": "1. The correct answer, \"Increased risky health behaviors and transient health effects,\" accurately describes the impact of divorce on men's health as research indicates that men often engage in riskier health behaviors following divorce and experience health problems that are typically temporary. Specifically, studies show that men may face increased stress, social isolation, and other psychological factors post-divorce, which contribute to these risky behaviors and transient health issues (Liu, 2013).\n\n2. The option \"Economic hardship leading to chronic health problems\" is incorrect because, while economic hardship does affect women's health post-divorce, men typically experience an improved financial situation after divorce, which does not lead to chronic health problems. The statement \"Greater social support improving mental health\" is also wrong, as the research indicates that men often face increased social isolation after divorce rather than enhanced social support. Lastly, \"Steady improvement in psychological well-being\" is incorrect because the research shows that men's health problems post-divorce are often linked to increased stress and risky behaviors, not a consistent improvement in their psychological state.",
+      "answer": "It increases the likelihood of delinquency",
+      "explanation": "The correct answer is 'It increases the likelihood of delinquency', as research indicates that poor parenting practices, such as lack of supervision and inconsistent discipline, are associated with higher rates of delinquent behavior in children. The other options are incorrect as they do not accurately reflect the established link between parenting and delinquency.",
       "kn": "KN22",
       "kn_explanation": "This question is best aligned with KN22 because it tests Influence of individual-environment interaction on development over time (e.g., the relationship between the individual and the social, academic, work, community environment).",
       "difficulty": "medium",
-      "quality_comment": "Good balance of detailed, plausible answer choices reflecting different health outcomes.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 School and Family Influences.json",
-      "domain": 4,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 School and Family Influences.json::3",
+      "quality_comment": "The question effectively assesses knowledge of the relationship between parenting and delinquency.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 School and Family.json",
+      "domain": 22,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 School and Family.json::3",
       "scored": true
     },
     {
@@ -1821,22 +1822,22 @@
       "scored": true
     },
     {
-      "stem": "Which sociodemographic factor is among the best predictors of a decreased risk for divorce?",
+      "stem": "Which stage is NOT part of Walker’s cycle of violence in intimate partner violence?",
       "options": [
-        "Younger age at time of marriage",
-        "Presence of a child before marriage",
-        "Higher socioeconomic status",
-        "Younger age at first cohabitation"
+        "Tension building phase",
+        "Acute battering incident",
+        "Loving contrition phase",
+        "Permanent resolution phase"
       ],
-      "answer": "Higher socioeconomic status",
-      "explanation": "1. **Higher socioeconomic status** is the correct answer because research indicates that individuals from higher socioeconomic groups experience a decreased risk for divorce compared to those from lower socioeconomic backgrounds. This correlation suggests that financial stability and resources associated with higher socioeconomic status may contribute to more stable marital relationships, reducing stressors that can lead to divorce.\n\n2. The option **younger age at time of marriage** is incorrect because studies have shown that the risk for divorce actually increases with younger age at marriage, indicating that marrying at an older age is a protective factor against divorce. The option **presence of a child before marriage** is wrong as it is associated with a greater risk for divorce, not a decrease, since couples who have children before marriage often face additional stress and challenges. Lastly, **younger age at first cohabitation** is incorrect because initial studies found that cohabiting before marriage was linked to higher rates of divorce, suggesting that younger cohabitation is a risk factor rather than a protective one.",
+      "answer": "Permanent resolution phase",
+      "explanation": "1. The \"Permanent resolution phase\" is the correct answer because it is not a recognized stage in Walker’s cycle of violence. Walker's cycle consists of three distinct phases: the tension building phase, the acute battering incident, and the loving contrition phase, which describe the repetitive nature of intimate partner violence.\n\n2. The **tension building phase** is incorrect because it represents the initial stage where hostility and tension escalate between partners, leading to conflict. The **acute battering incident** is also incorrect as it refers to the actual occurrence of violence, marking a critical point in the cycle. Lastly, the **loving contrition phase** is incorrect because it describes the period following the violence, where the abuser expresses remorse and attempts to reconcile with the victim, completing the cycle of violence.",
       "kn": "KN22",
       "kn_explanation": "This question is best aligned with KN22 because it tests Influence of individual-environment interaction on development over time (e.g., the relationship between the individual and the social, academic, work, community environment).",
       "difficulty": "medium",
-      "quality_comment": "The options are balanced and plausible, making discrimination among choices clear and appropriate.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 School and Family Influences.json",
-      "domain": 4,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 School and Family Influences.json::2",
+      "quality_comment": "Clear, focused question with a distinct incorrect option to test recognition of cycle components.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 School and Family.json",
+      "domain": 22,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 School and Family.json::24",
       "scored": true
     },
     {
@@ -2087,22 +2088,22 @@
       "scored": true
     },
     {
-      "stem": "Research on shooter bias has found that:",
+      "stem": "In the context of attribution theory, how do individuals typically explain their failures when experiencing depression?",
       "options": [
-        "Both White and Black civilians exhibit shooter bias in response times and errors",
-        "Police officers do not show any form of shooter bias compared to civilians",
-        "Only White civilians show shooter bias related to racial stereotypes",
-        "Police officers make more errors than civilians when deciding to shoot armed suspects"
+        "By attributing them to external, unstable factors",
+        "By attributing them to internal, stable factors",
+        "By attributing them to situational, specific factors",
+        "By attributing them to global, external factors"
       ],
-      "answer": "Both White and Black civilians exhibit shooter bias in response times and errors",
-      "explanation": "1. The correct answer, \"Both White and Black civilians exhibit shooter bias in response times and errors,\" is supported by Correll et al.'s (2002) research, which demonstrated that both groups showed similar levels of shooter bias, evidenced by their faster decisions to shoot armed Black suspects compared to armed White suspects and higher rates of mistakenly shooting unarmed Black suspects. This indicates that shooter bias is not limited to one racial group, but rather affects both White and Black civilians in similar ways.\n\n2. The first incorrect option, \"Police officers do not show any form of shooter bias compared to civilians,\" is wrong because while police officers were found to be better at detecting weapons, they still exhibited racial bias in the speed of their shoot/don't shoot decisions, specifically regarding armed Black suspects. The second incorrect option, \"Only White civilians show shooter bias related to racial stereotypes,\" is incorrect as the research indicates that both White and Black civilians display shooter bias, not just White civilians. Lastly, the option \"Police officers make more errors than civilians when deciding to shoot armed suspects\" is inaccurate because the studies found that police officers had better accuracy in detecting weapons than civilians, suggesting they made fewer errors overall, despite exhibiting shooter bias in response times.",
+      "answer": "By attributing them to internal, stable factors",
+      "explanation": "This option is correct as individuals with depression often attribute their failures to internal, stable factors, which reinforces their negative self-view. The other options do not align with the typical cognitive patterns observed in depressed individuals.",
       "kn": "KN14",
-      "kn_explanation": "This item addresses social cognitive biases and stereotype activation in decision-making, relating to social cognition (KN14).",
+      "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
       "difficulty": "hard",
-      "quality_comment": "The question integrates empirical research findings and has carefully constructed distractors that require detailed content knowledge.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Prosocial Behavior and Prejudice-Discrimination.json",
-      "domain": 3,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Prosocial Behavior and Prejudice-Discrimination.json::9",
+      "quality_comment": "The question is well-crafted and targets a critical aspect of attribution theory in relation to depression.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Why People Do Things.json",
+      "domain": 14,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Why People Do Things.json::10",
       "scored": false
     },
     {
@@ -2182,22 +2183,22 @@
       "scored": true
     },
     {
-      "stem": "Which of the following best exemplifies structural racism as defined by the APA?",
+      "stem": "Which of the following is an example of unintentional covert racism?",
       "options": [
-        "A teacher treating students unfairly based on race",
-        "Laws and policies that create race-based inequalities, such as school funding tied to local property taxes",
-        "Individual holding and expressing overtly racist views",
-        "Discriminatory hiring practices by a private employer"
+        "Openly stating discriminatory beliefs",
+        "Providing a socially acceptable excuse for prejudiced behavior",
+        "Avoiding contact with minority group members without awareness of harm caused",
+        "Engaging in hate crimes"
       ],
-      "answer": "Laws and policies that create race-based inequalities, such as school funding tied to local property taxes",
-      "explanation": "1. The correct answer, \"Laws and policies that create race-based inequalities, such as school funding tied to local property taxes,\" exemplifies structural racism as defined by the APA because it refers to systemic practices and policies that produce enduring racial disparities. Structural racism encompasses laws and institutional practices that perpetuate inequalities across various domains, including education, as evidenced by funding mechanisms that disadvantage minority communities.\n\n2. The option \"A teacher treating students unfairly based on race\" is incorrect because it describes interpersonal racism, which involves individual behaviors and attitudes rather than systemic practices. \"Individual holding and expressing overtly racist views\" is also incorrect, as this represents overt racism, which is characterized by explicit hostility and discrimination from individuals rather than structural inequalities. Finally, \"Discriminatory hiring practices by a private employer\" is incorrect because it pertains to institutional racism, which is specific to organizational policies rather than broader societal structures that create systemic racial disparities.",
+      "answer": "Avoiding contact with minority group members without awareness of harm caused",
+      "explanation": "1. \"Avoiding contact with minority group members without awareness of harm caused\" is the correct answer because it exemplifies unintentional covert racism, where individuals do not consciously recognize the negative impact of their actions. This behavior aligns with the definition of unintentional covert racism, as it involves acting in ways that may harm minority group members without the individual being aware of their prejudiced attitudes or the consequences of their actions.\n\n2. \n- \"Openly stating discriminatory beliefs\" is incorrect because this behavior represents overt racism, which is characterized by openly hostile attitudes and actions against minority groups, rather than subtle or unintentional forms of racism.\n- \"Providing a socially acceptable excuse for prejudiced behavior\" is incorrect because this describes intentional covert racism, where individuals are aware of their prejudiced attitudes and attempt to mask them with justifications, rather than acting without awareness.\n- \"Engaging in hate crimes\" is incorrect because hate crimes involve explicit and intentional acts of violence or discrimination against individuals based on their race or ethnicity, which is a clear manifestation of overt racism rather than covert or unintentional racism.",
       "kn": "KN20",
-      "kn_explanation": "The question focuses on systemic and societal bases of oppression, fitting within causes, manifestations, and effects of oppression (KN20).",
+      "kn_explanation": "This item examines subtle forms of racism and their manifestations, fitting causes and manifestations of oppression (KN20).",
       "difficulty": "medium",
-      "quality_comment": "The distractors are plausible but distinct forms of racism, increasing clarity and content validity.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Prosocial Behavior and Prejudice-Discrimination.json",
-      "domain": 3,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Prosocial Behavior and Prejudice-Discrimination.json::8",
+      "quality_comment": "Distractors contrast intentionality and manifestation types, improving discrimination in specialized content.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Helping and Hurting.json",
+      "domain": 20,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Helping and Hurting.json::12",
       "scored": true
     },
     {
@@ -2315,22 +2316,22 @@
       "scored": true
     },
     {
-      "stem": "Which of the following best describes the typical pattern of hearing loss that begins around age 40 in adults?",
+      "stem": "Which of the following characteristics is most likely associated with a child who is categorized as 'slow-to-warm-up' in temperament?",
       "options": [
-        "Decreased sensitivity to low-frequency sounds",
-        "Decreased sensitivity to high-frequency sounds",
-        "Increased auditory localization abilities",
-        "Increased sensitivity to soft consonants"
+        "Easily engages with new peers",
+        "Shows reluctance in new situations",
+        "Displays high energy levels",
+        "Frequently smiles and laughs"
       ],
-      "answer": "Decreased sensitivity to high-frequency sounds",
-      "explanation": "1. \"Decreased sensitivity to high-frequency sounds\" is the correct answer because, around age 40, many adults begin to experience presbycusis, which is characterized by a decline in the ability to hear higher-frequency sounds. This decline makes it particularly difficult for individuals to understand voices of women and children, as well as softer consonants, which are typically higher in pitch.\n\n2. The option \"Decreased sensitivity to low-frequency sounds\" is incorrect because age-related hearing loss primarily affects high-frequency sounds, not low-frequency ones. \"Increased auditory localization abilities\" is wrong because, instead of improving, auditory localization typically diminishes in infants before re-emerging, and there is no indication that adults experience an increase in this ability with age. Lastly, \"Increased sensitivity to soft consonants\" is incorrect since the onset of presbycusis leads to decreased sensitivity, making it harder to hear softer sounds, including soft consonants, rather than increasing sensitivity to them.",
+      "answer": "Shows reluctance in new situations",
+      "explanation": "1. The correct answer, \"Shows reluctance in new situations,\" accurately reflects the characteristics of a child categorized as 'slow-to-warm-up' according to Thomas and Chess's temperament model. Slow-to-warm-up children typically exhibit a mildly negative mood and take time to adapt to new people and situations, which leads them to show reluctance or hesitation when facing unfamiliar environments or individuals.\n\n2. The first incorrect option, \"Easily engages with new peers,\" is wrong because slow-to-warm-up children are characterized by their cautiousness and difficulty in adapting to new social interactions, rather than ease in engaging with others. The second incorrect option, \"Displays high energy levels,\" is incorrect as slow-to-warm-up children generally have low levels of activity, contrasting with the high energy levels associated with more active temperamental types. Lastly, \"Frequently smiles and laughs\" is incorrect because slow-to-warm-up children tend to have a more reserved demeanor, which does not align with the frequent expression of joy characterized by easier temperamental types.",
       "kn": "KN21",
       "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
       "difficulty": "easy",
-      "quality_comment": "The stem is clear and distractors address common misconceptions about hearing loss to differentiate knowledge levels.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Physical Development.json",
-      "domain": 1,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Physical Development.json::3",
+      "quality_comment": "This question effectively tests knowledge of temperament categories while providing clear options for differentiation.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Temperament and Personality.json",
+      "domain": 21,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Temperament and Personality.json::23",
       "scored": true
     },
     {
@@ -3132,22 +3133,22 @@
       "scored": true
     },
     {
-      "stem": "Which of the following technologies has shown promise in the assessment or treatment of depressive disorders?",
+      "stem": "Which technology is commonly employed to objectively measure sleep stages and diagnose sleep-wake disorders in clinical settings?",
       "options": [
-        "Use of smartphone mood-tracking apps for symptom monitoring",
-        "Traditional paper-and-pencil questionnaires only",
-        "In-person only psychological testing without digital aids",
-        "Manual scoring of inventories without software assistance"
+        "Polysomnography",
+        "Actigraphy",
+        "Electrocardiogram",
+        "Functional MRI"
       ],
-      "answer": "Use of smartphone mood-tracking apps for symptom monitoring",
-      "explanation": "1. The correct answer, \"Use of smartphone mood-tracking apps for symptom monitoring,\" is appropriate because the reference material highlights the growing integration of technology in mental health treatment, including the use of digital tools for monitoring symptoms and enhancing patient engagement. While specific studies on smartphone apps are not detailed in the reference, the trend towards technology-assisted interventions suggests that such apps can facilitate ongoing assessment and provide valuable data for treatment adjustments.\n\n2. The option \"Traditional paper-and-pencil questionnaires only\" is incorrect because it does not incorporate modern technology that can enhance symptom tracking and patient engagement, limiting the potential for timely and dynamic assessments. \"In-person only psychological testing without digital aids\" is wrong as it overlooks the benefits of digital tools that can streamline the assessment process and improve accessibility for clients. Lastly, \"Manual scoring of inventories without software assistance\" is incorrect because it lacks the efficiency and accuracy that software can provide, which is crucial for effective monitoring and treatment of depressive disorders.",
+      "answer": "Polysomnography",
+      "explanation": "**1. Explanation for Correct Answer:**\n\nPolysomnography is the correct answer because it is a comprehensive sleep study that records various physiological parameters during sleep, including brain activity (via electroencephalography), eye movements, muscle activity, and heart rate. This technology allows clinicians to objectively measure sleep stages and diagnose sleep-wake disorders, as it provides detailed information about the sleep architecture and any disturbances that may occur.\n\n**2. Explanation for Incorrect Options:**\n\n- **Actigraphy:** Actigraphy involves using a wrist-worn device to monitor movement patterns to estimate sleep-wake cycles, but it does not provide the detailed physiological data necessary for diagnosing specific sleep stages or disorders.\n\n- **Electrocardiogram (ECG):** An electrocardiogram measures the electrical activity of the heart, which is not sufficient for assessing sleep stages or diagnosing sleep-wake disorders, as it does not capture brain activity or other sleep-related parameters.\n\n- **Functional MRI (fMRI):** While functional MRI is used to assess brain activity by measuring changes in blood flow, it is not typically employed in clinical settings for sleep studies, as it does not provide the necessary data on sleep stages or disturbances in a sleep context.",
       "kn": "KN41",
-      "kn_explanation": "This item relates to the application of technology in assessment and monitoring of mood disorders, consistent with the role of technology in testing and evaluation (KN41).",
+      "kn_explanation": "This question targets knowledge of technology used in assessment and diagnosis of sleep-wake disorders, specifically objective sleep measurement methods (KN41).",
       "difficulty": "easy",
-      "quality_comment": "The question highlights an important emerging practice area, relevant to current assessment trends.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis : Psychopathology/5 Bipolar and Depressive Disorders.json",
-      "domain": 5,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis : Psychopathology/5 Bipolar and Depressive Disorders.json::17",
+      "quality_comment": "The options are common physiological measures, with polysomnography clearly the best fit, making the item an accessible test of assessment technology knowledge.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Eating, Sleep, and Elimination.json",
+      "domain": 41,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Eating, Sleep, and Elimination.json::17",
       "scored": true
     },
     {
@@ -3417,22 +3418,22 @@
       "scored": false
     },
     {
-      "stem": "Which supervision model focuses on understanding and integrating the supervisor and supervisee's interpersonal dynamics to improve therapy outcomes?",
+      "stem": "According to Caplan's model of prevention, which type of prevention aims to reduce the occurrence of new cases of a disorder by targeting entire populations or groups regardless of risk status?",
       "options": [
-        "Developmental model",
-        "Integrative model",
-        "Psychodynamic model",
-        "Behavioral model"
+        "Primary prevention",
+        "Secondary prevention",
+        "Tertiary prevention",
+        "Selective prevention"
       ],
-      "answer": "Psychodynamic model",
-      "explanation": "1. The **psychodynamic model** is the correct answer because it emphasizes understanding and integrating the interpersonal dynamics between the supervisor and supervisee. This model focuses on the relational aspects of supervision, including transference and countertransference, which can significantly impact therapy outcomes by enhancing the supervisee's self-awareness and therapeutic effectiveness.\n\n2. The **developmental model** is incorrect because it primarily focuses on the growth and progression of the supervisee's skills and competencies over time, rather than the interpersonal dynamics between supervisor and supervisee. The **integrative model** is not the correct choice as it aims to combine various theoretical approaches and techniques in supervision, without specifically emphasizing the understanding of interpersonal dynamics. Lastly, the **behavioral model** is wrong because it concentrates on observable behaviors and the application of behavioral techniques in supervision, rather than exploring the deeper relational aspects that influence therapeutic outcomes.",
-      "kn": "KN52",
-      "kn_explanation": "Addresses supervision theories and models relevant to clinical psychology practice (KN52).",
+      "answer": "Primary prevention",
+      "explanation": "1. **Primary prevention** is the correct answer because it is defined by Caplan as the type of prevention aimed at reducing the occurrence of new cases of a mental or physical disorder by targeting entire populations or groups, regardless of their risk status. This approach focuses on preventive measures that can be applied broadly, such as public education programs or community health initiatives.\n\n2. **Secondary prevention** is incorrect because it focuses on reducing the prevalence of a disorder through early detection and intervention, specifically targeting individuals identified as at elevated risk for the disorder. **Tertiary prevention** is also incorrect because it aims to reduce the severity and duration of an already diagnosed disorder, targeting individuals who have received a diagnosis rather than preventing new cases. Lastly, **selective prevention** is incorrect as it targets individuals who are at increased risk for a disorder due to specific biological, psychological, or social characteristics, rather than addressing the entire population.",
+      "kn": "KN51",
+      "kn_explanation": "This question is best aligned with KN51 because it tests Approaches to health promotion, risk reduction, resilience, and wellness.",
       "difficulty": "medium",
-      "quality_comment": "The options comprise known supervision models, testing candidate recognition of model focus areas appropriately.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Treatment, Intervention, and Prevention : Clinical Psychology/6 Prevention, Consultation, and Psychotherapy Research.json",
-      "domain": 6,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Treatment, Intervention, and Prevention : Clinical Psychology/6 Prevention, Consultation, and Psychotherapy Research.json::16",
+      "quality_comment": "The stem is clear and the distractors are plausible but conceptually distinct, making this a solid question for assessing key prevention concepts.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Prevention and Consultation.json",
+      "domain": 51,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Prevention and Consultation.json::24",
       "scored": true
     },
     {

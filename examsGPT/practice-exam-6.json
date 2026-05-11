@@ -21,23 +21,24 @@
       "is_org_psych": false
     },
     {
-      "id": 2,
-      "question": "How do Erikson's stages of psychosocial development differ from Freud's psychosexual stages?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Temperament and Personality.json::3",
+      "question": "A developmental psychology student is comparing Freud's psychosexual and Erikson's psychosocial stage theories. Which of the following CORRECTLY pairs a Freudian stage with its corresponding Eriksonian crisis during the same developmental period?",
       "options": [
-        "Erikson's stages focus on social relationships, while Freud's focus on sexual drives",
-        "Freud's stages are more culturally influenced than Erikson's",
-        "Erikson's stages are strictly sequential, while Freud's are not",
-        "Freud's stages emphasize adult development more than Erikson's"
+        "Oral stage (0-1 year) corresponds to Autonomy vs. Shame and Doubt",
+        "Anal stage (1-3 years) corresponds to Initiative vs. Guilt",
+        "Phallic stage (3-6 years) corresponds to Initiative vs. Guilt",
+        "Latency stage (6-12 years) corresponds to Identity vs. Role Confusion"
       ],
-      "correct_answer": "Erikson's stages focus on social relationships, while Freud's focus on sexual drives",
-      "explanation": "The correct answer is 'Erikson's stages focus on social relationships, while Freud's focus on sexual drives', as Erikson's theory emphasizes psychosocial challenges throughout the lifespan, whereas Freud's theory centers on psychosexual development during early childhood. The other options misrepresent the core differences between the two theories.",
+      "correct_answer": "Phallic stage (3-6 years) corresponds to Initiative vs. Guilt",
+      "explanation": "According to the lesson, Erikson's first five stages align age-wise with Freud's stages. The Phallic stage covers ages 3-6, which corresponds to Erikson's Initiative vs. Guilt crisis (also ages 3-6). Option A is incorrect because the Oral stage (0-1 year) corresponds to Trust vs. Mistrust, not Autonomy vs. Shame and Doubt. Option B is incorrect because the Anal stage (1-3 years) corresponds to Autonomy vs. Shame and Doubt, not Initiative vs. Guilt. Option D is incorrect because the Latency stage (6-12 years) corresponds to Industry vs. Inferiority, not Identity vs. Role Confusion (which corresponds to the Genital stage in adolescence).",
       "domain": "Domain 4: Growth & Lifespan Development",
       "knId": "KN23",
-      "source_file": "4-bonding-and-attachment.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Temperament and Personality.json",
       "source_folder": "4 Development",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": false,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -361,23 +362,24 @@
       "is_org_psych": false
     },
     {
-      "id": 19,
-      "question": "What is a potential ethical concern regarding instructor self-disclosure in educational settings?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 3 and 4.json::9",
+      "question": "What is a primary ethical concern regarding dual relationships in psychological practice?",
       "options": [
-        "It can enhance the instructor's credibility.",
-        "It may blur professional boundaries and affect student perceptions.",
-        "It fosters a more open classroom environment.",
-        "It is always beneficial for student engagement."
+        "They can enhance the therapeutic alliance.",
+        "They may lead to conflicts of interest.",
+        "They are always prohibited by the APA Ethics Code.",
+        "They can provide additional support for the client."
       ],
-      "correct_answer": "It may blur professional boundaries and affect student perceptions.",
-      "explanation": "While self-disclosure can enhance credibility and engagement, it poses risks of blurring boundaries, which can lead to ethical dilemmas. The other options do not address the potential negative implications of self-disclosure.",
+      "correct_answer": "They may lead to conflicts of interest.",
+      "explanation": "Dual relationships can create conflicts of interest that impair objectivity and effectiveness in treatment. While they can sometimes enhance relationships, the potential for harm and ethical violations is a significant concern.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
       "knId": "KN64",
-      "source_file": "8-practice-issues.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 3 and 4.json",
       "source_folder": "8 Ethics",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -521,23 +523,24 @@
       "is_org_psych": false
     },
     {
-      "id": 27,
-      "question": "A 3-year-old boy correctly identifies himself as a boy and labels male playmates as boys. When his older sister puts on a short haircut and dresses in his clothing for a costume party, he insists she has 'turned into a boy.' According to Kohlberg's model of gender identity development, this child's error is MOST characteristic of which stage?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Identity.json::9",
+      "question": "Troiden’s Model of Homosexual Identity Development describes the Identity Confusion stage as:",
       "options": [
-        "Gender stability, because the child understands that his own gender persists over time but cannot yet conserve another person's gender across situational transformations",
-        "Gender labeling (basic gender identity), because the child can apply gender categories accurately under normal conditions but does not yet understand that gender is invariant across changes in appearance",
-        "Gender constancy, because the child has achieved full conservation of gender for familiar individuals but fails when costumes obscure biological cues",
-        "Pre-gender awareness, because the error reflects the absence of any stable internal representation of gender categories"
+        "Feeling different from same-sex peers during childhood",
+        "Beginning to accept a gay or lesbian identity and seeking related social relationships",
+        "Suspecting one is gay or lesbian leading to anxiety and use of denial or avoidance",
+        "Internalizing the identity and being comfortable disclosing sexual orientation to others"
       ],
-      "correct_answer": "Gender labeling (basic gender identity), because the child can apply gender categories accurately under normal conditions but does not yet understand that gender is invariant across changes in appearance",
-      "explanation": "In Kohlberg's three-stage model of gender identity development, the first stage—gender labeling (basic gender identity, approximately ages 2–3)—is characterized by accurate gender categorization under typical conditions but a failure to conserve gender across superficial changes in appearance such as clothing, hairstyle, or costume. The child in this scenario correctly applies gender labels in ordinary contexts but concludes that a costume change produces an actual gender change, which is the defining error of the labeling stage. Gender stability (Option A) is the second stage, in which the child understands that their own gender persists across time but may still fail to conserve gender across situational or appearance-based transformations—particularly for others. However, the child in the scenario makes the error for another person based on appearance, which is most precisely the hallmark of stage one, where the very concept of gender's permanence has not yet been acquired. Gender constancy (Option C) is the third stage, involving full conservation of gender across both time and situational changes. Option D is incorrect because the child clearly demonstrates functional gender labeling.",
+      "correct_answer": "Suspecting one is gay or lesbian leading to anxiety and use of denial or avoidance",
+      "explanation": "1. The correct answer, \"Suspecting one is gay or lesbian leading to anxiety and use of denial or avoidance,\" accurately reflects the Identity Confusion stage in Troiden’s Model of Homosexual Identity Development. This stage occurs during middle or late adolescence when individuals begin to feel sexual attraction to the same sex, leading to uncertainty and anxiety. To cope with these feelings, individuals may employ strategies such as denial or avoidance, as they grapple with their emerging identity.\n\n2. The first incorrect option, \"Feeling different from same-sex peers during childhood,\" describes the Sensitization stage, where individuals recognize their differences from peers but have not yet developed sexual attraction or identity awareness. The second incorrect option, \"Beginning to accept a gay or lesbian identity and seeking related social relationships,\" pertains to the Identity Assumption stage, where individuals start to embrace their sexual orientation and actively seek connections within the LGBTQ+ community. Lastly, the option \"Internalizing the identity and being comfortable disclosing sexual orientation to others\" refers to the Identity Commitment stage, where individuals have fully accepted their gay or lesbian identity and are open about it with others, contrasting with the uncertainty and anxiety characteristic of the Identity Confusion stage.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
       "knId": "KN19",
-      "source_file": "3-connection.json",
-      "source_folder": "3 Social Psychology",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Identity.json",
+      "source_folder": "3 Cultural Considerations",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -701,23 +704,24 @@
       "is_org_psych": false
     },
     {
-      "id": 36,
-      "question": "What is the relationship between separation protest and object permanence in infants?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Bonding and Attachment.json::18",
+      "question": "A researcher conducting a prospective longitudinal study administers the Adult Attachment Interview (AAI) to expectant mothers during pregnancy and then assesses the attachment classifications of their infants at 12 months using the Strange Situation. What does this research design most directly investigate?",
       "options": [
-        "Separation protest indicates that infants have developed object permanence.",
-        "Object permanence develops before separation protest.",
-        "Separation protest and object permanence are unrelated.",
-        "Both develop simultaneously in infants."
+        "The degree to which infant temperament predicts maternal sensitivity over the first year of life",
+        "Whether secure base behavior in infancy predicts adult romantic attachment style decades later",
+        "The intergenerational transmission of attachment, whereby parental attachment representations predict infant attachment classification",
+        "The stability of internal working models from infancy through toddlerhood within the same child"
       ],
-      "correct_answer": "Separation protest indicates that infants have developed object permanence.",
-      "explanation": "Separation protest typically emerges after infants have developed object permanence, as they begin to understand that caregivers continue to exist even when they are not visible. The other options misrepresent the developmental sequence of these concepts.",
+      "correct_answer": "The intergenerational transmission of attachment, whereby parental attachment representations predict infant attachment classification",
+      "explanation": "The design described — AAI assessment of parents prior to the infant's birth followed by Strange Situation classification at 12 months — is the classic paradigm for studying intergenerational transmission of attachment. Research using this design shows that a parent's coherent or incoherent narrative about their own childhood attachment experiences, assessed before the infant is born, significantly predicts the infant's subsequent attachment classification. This transmission is thought to operate through the quality of caregiving behaviors shaped by the parent's internal working models. Option A reverses the causal direction, examining infant-to-parent effects rather than parent-to-infant. Option B describes a different longitudinal question about within-individual continuity into adulthood, not cross-generational transmission. Option D examines stability within a single child across time, not the cross-generational transfer of attachment patterns.",
       "domain": "Domain 4: Growth & Lifespan Development",
       "knId": "KN25",
-      "source_file": "4-bonding-and-attachment.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Bonding and Attachment.json",
       "source_folder": "4 Development",
       "difficulty": "hard",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -861,23 +865,24 @@
       "is_org_psych": false
     },
     {
-      "id": 44,
-      "question": "What ethical consideration is paramount when making parole recommendations for individuals with a history of multiple relationships?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 3 and 4.json::45",
+      "question": "A therapist is asked to provide therapy and also serve as a forensic evaluator for the same family. What is the ethical approach?",
       "options": [
-        "Ensuring the individual has access to rehabilitation programs.",
-        "Avoiding conflicts of interest that may impair objectivity.",
-        "Providing recommendations based solely on the individual's criminal history.",
-        "Prioritizing the opinions of family members in the decision-making process."
+        "Forensic and therapeutic services to the same individual are encouraged to improve comprehensive care.",
+        "Psychologists should avoid concurrent forensic and therapeutic roles but refer the individual to another provider if both services are requested.",
+        "Dual roles are acceptable if the psychologist obtains informed consent.",
+        "It is permissible to combine forensic and therapeutic roles without any restrictions."
       ],
-      "correct_answer": "Avoiding conflicts of interest that may impair objectivity.",
-      "explanation": "In parole recommendations, it is crucial to avoid conflicts of interest that could compromise the objectivity of the recommendation. The other options, while relevant, do not address the ethical implications of multiple relationships.",
+      "correct_answer": "Psychologists should avoid concurrent forensic and therapeutic roles but refer the individual to another provider if both services are requested.",
+      "explanation": "1. The correct answer, \"Psychologists should avoid concurrent forensic and therapeutic roles but refer the individual to another provider if both services are requested,\" aligns with Standard 3.05 of the APA Ethics Code, which emphasizes that multiple relationships should be avoided when they could impair the psychologist’s objectivity, competence, or effectiveness, or risk exploitation or harm to the client. Conducting both forensic evaluations and therapy for the same family creates a conflict of interest, as the roles serve different purposes and can compromise the integrity of both services.\n\n2. The first incorrect option, \"Forensic and therapeutic services to the same individual are encouraged to improve comprehensive care,\" is wrong because the APA Ethics Code specifically advises against such dual roles due to the potential for impaired objectivity and ethical dilemmas. \n\nThe second incorrect option, \"Dual roles are acceptable if the psychologist obtains informed consent,\" is incorrect as informed consent does not mitigate the inherent risks of exploitation and harm associated with multiple relationships, particularly in forensic contexts. \n\nLastly, the option \"It is permissible to combine forensic and therapeutic roles without any restrictions\" is incorrect because it contradicts the ethical standards that explicitly discourage combining these roles due to the potential for conflict of interest and compromised service quality.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
       "knId": "KN64",
-      "source_file": "8-practice-issues.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 3 and 4.json",
       "source_folder": "8 Ethics",
       "difficulty": "hard",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -961,23 +966,24 @@
       "is_org_psych": false
     },
     {
-      "id": 49,
-      "question": "In the context of test validity, what does a high correlation between a test and an established measure indicate?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Correlation and Regression.json::26",
+      "question": "Which of the following best characterizes the difference between point biserial and biserial correlation coefficients?",
       "options": [
-        "The test is reliable but not necessarily valid.",
-        "The test is valid and reliable.",
-        "The test is valid but not reliable.",
-        "The test is neither valid nor reliable."
+        "Point biserial is used for continuous variables, biserial is for nominal variables",
+        "Point biserial is for true dichotomies, biserial is for artificially dichotomized continuous variables",
+        "Point biserial assumes nonlinear relationships, biserial assumes linear",
+        "Point biserial coefficient is always higher than biserial"
       ],
-      "correct_answer": "The test is valid and reliable.",
-      "explanation": "A high correlation with an established measure suggests that the test accurately measures what it claims to measure (validity) and produces consistent results (reliability). The other options misinterpret the implications of high correlation.",
+      "correct_answer": "Point biserial is for true dichotomies, biserial is for artificially dichotomized continuous variables",
+      "explanation": "1. The correct answer, \"Point biserial is for true dichotomies, biserial is for artificially dichotomized continuous variables,\" accurately reflects the definitions provided in the reference material. The point biserial correlation coefficient is specifically used when one variable is continuous and the other is a true dichotomy, meaning it has only two distinct categories (e.g., pregnant vs. not pregnant). In contrast, the biserial correlation coefficient is applied when one variable is continuous and the other is an artificial dichotomy, which occurs when a continuous variable is divided into two categories (e.g., passing vs. failing based on a cutoff score).\n\n2. The option \"Point biserial is used for continuous variables, biserial is for nominal variables\" is incorrect because it mischaracterizes the application of both coefficients; point biserial is specifically for a continuous variable with a true dichotomy, while biserial is for a continuous variable with an artificially created dichotomy. The statement \"Point biserial assumes nonlinear relationships, biserial assumes linear\" is wrong as both coefficients can be used in the context of linear relationships; the distinction lies in the type of dichotomy, not the nature of the relationship. Lastly, the claim \"Point biserial coefficient is always higher than biserial\" is inaccurate because there is no inherent rule that suggests one coefficient will always be higher than the other; their values depend on the specific data and context in which they are used.",
       "domain": "Domain 7: Research Methods & Statistics",
       "knId": "KN55",
-      "source_file": "7-correlation-and-regression.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Correlation and Regression.json",
       "source_folder": "7 Research and Stats",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -1101,23 +1107,24 @@
       "is_org_psych": false
     },
     {
-      "id": 56,
-      "question": "A psychologist is consulted about the most effective long-term intervention for reducing recidivism in cases of domestic violence. Based on the research literature, which intervention has been associated with the best long-term outcomes for stopping spousal abuse?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Sex and Gender.json::1",
+      "question": "Masters and Johnson's sensate focus technique for treating sexual dysfunctions is theoretically classified as which type of intervention?",
       "options": [
-        "Mandated couples therapy focusing on communication skills",
-        "Arrest of the perpetrator",
-        "Individual psychodynamic therapy for the abuser",
-        "Group anger management programs for batterers"
+        "An extinction-based procedure that habituates the anxiety response through repeated exposure",
+        "A counterconditioning technique that uses pleasure to inhibit performance anxiety",
+        "A cognitive restructuring approach that challenges irrational beliefs about sexual performance",
+        "An operant conditioning procedure that reinforces successive approximations of sexual behavior"
       ],
-      "correct_answer": "Arrest of the perpetrator",
-      "explanation": "Research on domestic violence indicates that the best long-term results for reducing recidivism follow arrest of the perpetrator. The literature suggests that change in the perpetrator occurs only when the victim refuses to tolerate the situation further, and arrest represents a concrete consequence. Couples therapy (A) is generally contraindicated in active abuse situations due to safety concerns. Individual psychodynamic therapy (C) and group anger management (D) have not shown the same level of effectiveness as arrest for long-term outcomes. Additionally, the research distinguishes between expressive abuse (less deliberate, more amenable to treatment) and instrumental abuse (deliberate control), noting that even expressive abuse becomes instrumental over time if untreated.",
-      "domain": "Domain 6: Treatment & Intervention",
+      "correct_answer": "A counterconditioning technique that uses pleasure to inhibit performance anxiety",
+      "explanation": "Sensate focus is classified as a counterconditioning intervention. According to the reference material, it 'uses pleasure as the counterconditioning response to inhibit performance anxiety.' Pleasure is elicited through body massages that are discontinued at the first sign of anxiety, and the couple initially abstains from intercourse to reduce performance pressure. Option A is incorrect because sensate focus is not primarily an extinction procedure—it actively pairs a new response (pleasure) with the anxiety-provoking stimulus. Option C is incorrect because sensate focus is a behavioral, not cognitive, technique. Option D is incorrect because sensate focus is based on classical conditioning (counterconditioning), not operant conditioning or shaping.",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
       "knId": "KN44",
-      "source_file": "6-prevention-and-consultation.json",
-      "source_folder": "6 Clinical Interventions",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Sex and Gender.json",
+      "source_folder": "5 Diagnosis",
       "difficulty": "hard",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -1161,23 +1168,24 @@
       "is_org_psych": false
     },
     {
-      "id": 59,
-      "question": "According to Erikson's stages of psychosocial development, which stage is primarily focused on the development of trust versus mistrust?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Cognitive Development.json::18",
+      "question": "In Piaget's theory of cognitive development, which stage is characterized by the ability to perform operations mentally rather than physically?",
       "options": [
-        "Autonomy vs. Shame and Doubt",
-        "Trust vs. Mistrust",
-        "Identity vs. Role Confusion",
-        "Intimacy vs. Isolation"
+        "Sensorimotor Stage",
+        "Preoperational Stage",
+        "Concrete Operational Stage",
+        "Formal Operational Stage"
       ],
-      "correct_answer": "Trust vs. Mistrust",
-      "explanation": "The correct answer is 'Trust vs. Mistrust' because this is the first stage in Erikson's theory, where infants learn to trust their caregivers for basic needs. The other options represent different stages of psychosocial development that occur later in life.",
+      "correct_answer": "Concrete Operational Stage",
+      "explanation": "The Concrete Operational Stage, occurring between ages 7 to 12, is characterized by the ability to perform mental operations and understand concepts such as conservation. The other stages do not emphasize mental operations to the same extent.",
       "domain": "Domain 4: Growth & Lifespan Development",
       "knId": "KN23",
-      "source_file": "4-bonding-and-attachment.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Cognitive Development.json",
       "source_folder": "4 Development",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -1361,23 +1369,24 @@
       "is_org_psych": false
     },
     {
-      "id": 69,
-      "question": "A client participates in both weekly individual psychotherapy and an outpatient interpersonal therapy group. After several months, the group therapist notices that whenever another member directly challenges the client's behavior, the client responds, 'That's a good point—I'll definitely bring that up with my individual therapist.' The individual therapist similarly observes that the client consistently avoids discussing interpersonal relationship themes, saying she prefers to work on those in group. This dynamic most clearly illustrates which recognized disadvantage of concurrent individual and group therapy?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/5 6 Training and Evaluation.json::22",
+      "question": "When evaluating whether a company's training needs are being met, which type of analysis would be most appropriate for identifying if the training aligns with broader organizational goals?",
       "options": [
-        "Role diffusion, in which the client loses clarity about the distinct therapeutic purpose of each modality",
-        "Compartmentalization, in which the client keeps therapeutic material separated by setting to avoid full engagement in either",
-        "Countertransference collusion, in which both therapists unconsciously reinforce the client's avoidance of core material",
-        "Scapegoating, in which the group displaces its collective negative affect onto the client who also receives individual care"
+        "Task analysis",
+        "Organizational analysis",
+        "Person analysis",
+        "Demographic analysis"
       ],
-      "correct_answer": "Compartmentalization, in which the client keeps therapeutic material separated by setting to avoid full engagement in either",
-      "explanation": "A recognized disadvantage of concurrent individual and group therapy is that clients can compartmentalize their therapeutic work, routing certain issues to individual sessions while deferring others to group, which lets them avoid complete engagement and therapeutic pressure in either setting. Note that this is distinct from splitting in the psychodynamic sense, which involves idealizing one provider while devaluing the other. Role diffusion describes confusion about each modality's therapeutic purpose, not avoidance through material division. Countertransference collusion would be a therapist-driven phenomenon, whereas this dynamic is client-initiated. Scapegoating is a group process issue unrelated to the concurrent format per se.",
-      "domain": "Domain 6: Treatment & Intervention",
+      "correct_answer": "Organizational analysis",
+      "explanation": "1. **Organizational analysis** is the correct answer because it specifically focuses on identifying organizational goals and determining whether employee performance problems stem from a lack of training or other factors. This analysis ensures that the training aligns with the broader objectives of the organization, making it essential for evaluating training needs in relation to overall organizational performance.\n\n2. **Task analysis** is incorrect because it identifies the specific tasks required for job performance and the knowledge, skills, abilities, and other characteristics (KSAOs) needed, rather than assessing alignment with organizational goals. \n\n   **Person analysis** is also incorrect, as it focuses on determining which employees have deficiencies that require training, rather than evaluating how training fits into the larger organizational context. \n\n   **Demographic analysis** is not suitable either, as it identifies the training needs of specific groups of workers (e.g., age differences) instead of examining the alignment of training with organizational goals.",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
       "knId": "KN46",
-      "source_file": "6-family-and-group.json",
-      "source_folder": "6 Clinical Interventions",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/5 6 Training and Evaluation.json",
+      "source_folder": "2 3 5 6 I-O Psychology",
       "difficulty": "hard",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -1521,23 +1530,24 @@
       "is_org_psych": false
     },
     {
-      "id": 77,
-      "question": "An organizational psychologist advises a manufacturing company whose supervisors hold the belief that employees are inherently self-motivated, capable of exercising creativity and self-direction, and will commit to organizational goals when work is meaningful. According to McGregor's Theory Y, this set of management assumptions would most likely result in which organizational practice?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/6 Management Theories.json::5",
+      "question": "Which principle from Katz and Kahn’s Open-System Theory states that an organization can reach the same goal through multiple different methods?",
       "options": [
-        "Close supervision and detailed performance monitoring to ensure that productivity targets are consistently met",
-        "Centralized decision-making with clearly defined chains of command to maintain operational efficiency",
-        "Participative decision-making and the delegation of meaningful responsibility to employees at multiple levels",
-        "Performance-contingent reward structures designed to externally motivate employee compliance with standards"
+        "Homeostasis principle",
+        "Differential reinforcement principle",
+        "Principle of equifinality",
+        "Principle of multifinality"
       ],
-      "correct_answer": "Participative decision-making and the delegation of meaningful responsibility to employees at multiple levels",
-      "explanation": "McGregor's Theory Y holds that employees are inherently motivated, creative, and capable of self-direction when given meaningful work. Organizations operating under Theory Y assumptions naturally adopt participative management styles in which employees are involved in decision-making and given real autonomy and responsibility. Theory X, by contrast, assumes employees are passive and require external coercion—leading to close supervision (Option A), centralized authority (Option B), and contingent reward structures (Option D). Under Theory Y, external control is considered unnecessary and counterproductive when employees find their work purposeful.",
-      "domain": "Domain 6: Treatment & Intervention",
+      "correct_answer": "Principle of equifinality",
+      "explanation": "1. The \"Principle of equifinality\" is the correct answer because it states that an organization can achieve the same goal or outcome through multiple different methods. This principle highlights the flexibility and adaptability of organizations in reaching their objectives, emphasizing that there is not just one way to succeed.\n\n2. The \"Homeostasis principle\" is incorrect because it refers to an organization's ability to maintain stability and balance within its environment, rather than achieving goals through various methods. The \"Differential reinforcement principle\" is not mentioned in the reference material and is unrelated to Katz and Kahn’s theories; it typically pertains to behavioral psychology. Lastly, the \"Principle of multifinality\" is also incorrect because it states that a system can achieve dissimilar goals or outcomes from the same initial conditions, which is the opposite of what the question asks about achieving the same goal through different methods.",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
       "knId": "KN46",
-      "source_file": "6-prevention-and-consultation.json",
-      "source_folder": "6 Clinical Interventions",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/6 Management Theories.json",
+      "source_folder": "2 3 5 6 I-O Psychology",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": false,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -1821,23 +1831,24 @@
       "is_org_psych": false
     },
     {
-      "id": 92,
-      "question": "Which of the following best describes the nature of recent memory recall from short-term exposure?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Memory.json::49",
+      "question": "The encoding specificity hypothesis explains improved memory retrieval when:",
       "options": [
-        "It is often highly accurate and detailed.",
-        "It relies heavily on long-term memory storage.",
-        "It is typically limited to a few items.",
-        "It can be enhanced through emotional arousal."
+        "Information is rehearsed multiple times during encoding",
+        "Learning and recall occur in the same context and similar state",
+        "The material is organized into meaningful chunks",
+        "The individual uses a mnemonic device during encoding"
       ],
-      "correct_answer": "It is typically limited to a few items.",
-      "explanation": "The correct answer is C because recent memory recall from short-term exposure is limited by the capacity of short-term memory, which is about 7 plus or minus 2 items. Option A is incorrect as recent memory can be inaccurate. Option B is incorrect because it primarily involves short-term memory. Option D is misleading as emotional arousal affects long-term memory more significantly.",
+      "correct_answer": "Learning and recall occur in the same context and similar state",
+      "explanation": "Encoding specificity posits that memory retrieval is enhanced when the cues present during encoding match those during retrieval, including environmental context and physiological/psychological states.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
       "knId": "KN8",
-      "source_file": "2-memory.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Memory.json",
       "source_folder": "2 Learning and Memory",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -1881,23 +1892,24 @@
       "is_org_psych": false
     },
     {
-      "id": 95,
-      "question": "What is the term for the bias where individuals attribute hostile intentions to others, often leading to negative social perceptions?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Why People Do Things.json::7",
+      "question": "What is the actor-observer bias in attribution theory?",
       "options": [
-        "Hostility attribution bias",
-        "Fundamental attribution error",
-        "Self-serving bias",
-        "Actor-observer effect"
+        "The tendency to attribute one's own actions to external factors while attributing others' actions to their character.",
+        "The inclination to see one's own behavior as a reflection of personality traits.",
+        "The belief that others' behavior is influenced more by situational factors than by their personality.",
+        "The tendency to overestimate the role of situational factors in one's own behavior."
       ],
-      "correct_answer": "Hostility attribution bias",
-      "explanation": "Hostility attribution bias refers to the tendency to perceive others' actions as having hostile intent, which can lead to negative social perceptions and interactions. The fundamental attribution error involves misattributing behavior to personality rather than situational factors, while self-serving bias relates to personal success and failure attributions. The actor-observer effect describes the tendency to attribute one's own actions to situational factors while attributing others' actions to their character.",
+      "correct_answer": "The tendency to attribute one's own actions to external factors while attributing others' actions to their character.",
+      "explanation": "This answer correctly defines the actor-observer bias, which highlights the double standard in attributions. The other options misrepresent the bias or confuse it with other attribution concepts.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
       "knId": "KN14",
-      "source_file": "3-errors-and-shortcuts.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Why People Do Things.json",
       "source_folder": "3 Social Psychology",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -2041,23 +2053,24 @@
       "is_org_psych": false
     },
     {
-      "id": 103,
-      "question": "Which aspect of scoring in Rorschach tests is primarily concerned with the developmental quality of responses?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Clinical Tests.json::70",
+      "question": "Which neuropsychological assessment is specifically focused on identifying deficits in executive functioning?",
       "options": [
-        "Content analysis",
-        "Form quality",
-        "Developmental quality",
-        "Location analysis"
+        "The Wisconsin Card Sorting Test",
+        "The Beck Depression Inventory",
+        "The Rorschach Inkblot Test",
+        "The Minnesota Multiphasic Personality Inventory"
       ],
-      "correct_answer": "Developmental quality",
-      "explanation": "Developmental quality refers to how responses to the Rorschach reflect the individual's cognitive and emotional development. Content analysis focuses on the themes present in responses, form quality assesses the accuracy of the response to the inkblot, and location analysis examines which part of the blot was used. Therefore, the correct answer is 'Developmental quality'.",
+      "correct_answer": "The Wisconsin Card Sorting Test",
+      "explanation": "1. The correct answer, \"The Wisconsin Card Sorting Test (WCST),\" is specifically focused on identifying deficits in executive functioning. The WCST measures abstract reasoning, cognitive flexibility, and the ability to adapt cognitive strategies in response to feedback, which are essential components of executive functioning. Additionally, it is sensitive to frontal lobe dysfunction, making it a valuable tool for assessing executive deficits.\n\n2. The Beck Depression Inventory (BDI-II) is a self-report measure that assesses the severity of depressive symptoms, not executive functioning. The Rorschach Inkblot Test is a projective personality assessment that provides insights into an individual's personality and emotional functioning rather than specifically targeting executive functions. The Minnesota Multiphasic Personality Inventory (MMPI-2) is a comprehensive personality assessment tool designed to evaluate psychological conditions and personality structure, but it does not focus on executive functioning deficits.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
       "knId": "KN30",
-      "source_file": "5-clinical-tests.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Clinical Tests.json",
       "source_folder": "5 Assessment",
       "difficulty": "hard",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -2141,23 +2154,24 @@
       "is_org_psych": false
     },
     {
-      "id": 108,
-      "question": "Which scoring method is typically used for standardized entrance exams to ensure fairness across different test-takers?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Interpreting Scores.json::1",
+      "question": "A psychologist obtains a z-score of +1.5 on a standardized measure for a client. The psychologist needs to convert this to a T-score for reporting purposes. What is the equivalent T-score?",
       "options": [
-        "Raw score method",
-        "Percentile rank method",
-        "Standardized score method",
-        "Cumulative score method"
+        "55",
+        "60",
+        "65",
+        "72.5"
       ],
-      "correct_answer": "Standardized score method",
-      "explanation": "The standardized score method adjusts scores based on the distribution of scores in the population, ensuring fairness. The raw score method does not account for variability among test-takers, the percentile rank method ranks scores but does not standardize them, and the cumulative score method is not typically used for entrance exams.",
-      "domain": "Domain 7: Research Methods & Statistics",
+      "correct_answer": "65",
+      "explanation": "T-scores have a mean of 50 and a standard deviation of 10. To convert a z-score to a T-score, use the formula: T = 50 + 10(z). With z = +1.5: T = 50 + 10(1.5) = 50 + 15 = 65. Option A (55) would correspond to z = +0.5. Option B (60) would correspond to z = +1.0. Option D (72.5) incorrectly uses a different conversion formula. Understanding standardized score conversions is essential for interpreting psychological test results across different metric systems.",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
       "knId": "KN55",
-      "source_file": "7-inferential-stats.json",
-      "source_folder": "7 Research and Stats",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Interpreting Scores.json",
+      "source_folder": "5 Test Construction",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -2401,23 +2415,24 @@
       "is_org_psych": false
     },
     {
-      "id": 121,
-      "question": "A researcher reviewing the common factors literature concludes that one therapist-offered condition consistently accounts for more outcome variance than any specific treatment technique across diverse presenting problems and theoretical orientations. Which variable has been most robustly identified in this role by the empirical literature?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Skinner and Operant Conditioning.json::26",
+      "question": "A behavioral psychologist wants to establish a new target behavior as quickly as possible during the initial acquisition phase of treatment. Which reinforcement schedule would produce the fastest learning of the new behavior?",
       "options": [
-        "Years of clinical experience and postdoctoral specialization in the relevant disorder",
-        "Selection of a treatment protocol empirically validated for the client's specific diagnosis",
-        "Accurate empathy as experienced and reported by the client",
-        "Therapist use of strategic self-disclosure to model vulnerability and reduce power differentials"
+        "Variable ratio schedule, because it produces the highest overall response rate",
+        "Fixed ratio schedule, because it produces high, steady response rates",
+        "Continuous reinforcement schedule, because every correct response is reinforced",
+        "Variable interval schedule, because it produces steady and sustained responding"
       ],
-      "correct_answer": "Accurate empathy as experienced and reported by the client",
-      "explanation": "The common factors and therapist effect literatures consistently identify accurate empathy — operationalized as the therapist's capacity to understand and communicate understanding of the client's subjective experience — as the most reliably predictive therapist-offered variable for positive outcomes. This finding was first articulated by Carl Rogers and rigorously operationalized by Truax and Carkhuff, whose research showed that empathy, warmth, and genuineness predicted outcomes independently of theoretical orientation. Critically, it is the client's perception of empathy that predicts outcome, not the therapist's self-rated empathy — a distinction that underscores its relational rather than technical nature. Years of experience show surprisingly weak associations with outcome in meta-analyses. Treatment protocol selection reflects specific factors, which account for a smaller proportion of outcome variance than common factors. Strategic self-disclosure has limited empirical support as a primary outcome predictor.",
-      "domain": "Domain 6: Treatment & Intervention",
+      "correct_answer": "Continuous reinforcement schedule, because every correct response is reinforced",
+      "explanation": "The lesson clearly states: 'Initially, the fastest way to teach a new behavior is through a continuous schedule, reinforcing every single time the behavior occurs.' While variable ratio schedules produce the highest response rates once behavior is established, they are not optimal for initial acquisition. The question specifically asks about initial acquisition, not maintenance or resistance to extinction. Option A is a common trap—VR schedules produce the highest response rate and greatest resistance to extinction, but the question asks about fastest acquisition of a NEW behavior. Option B (fixed ratio) produces high rates but is not as efficient for initial learning. Option D (variable interval) produces only moderate response rates.",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
       "knId": "KN44",
-      "source_file": "6-prevention-and-consultation.json",
-      "source_folder": "6 Clinical Interventions",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Skinner and Operant Conditioning.json",
+      "source_folder": "2 Learning and Memory",
       "difficulty": "hard",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -2641,23 +2656,24 @@
       "is_org_psych": false
     },
     {
-      "id": 133,
-      "question": "What is the maximum capacity of working memory as proposed by Miller's theory?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Memory.json::10",
+      "question": "How does semantic similarity influence memory recall according to cognitive psychology?",
       "options": [
-        "5 items",
-        "7 items",
-        "9 items",
-        "11 items"
+        "It enhances recall by creating stronger associations between similar concepts.",
+        "It impairs recall by causing interference between similar memories.",
+        "It has no significant effect on recall performance.",
+        "It only affects long-term memory, not short-term memory."
       ],
-      "correct_answer": "7 items",
-      "explanation": "The correct answer is B because Miller's theory states that the capacity of working memory is approximately 7 plus or minus 2 items. Option A is incorrect as it underestimates the capacity. Option C is incorrect as it overestimates the capacity. Option D is incorrect as it also overestimates the capacity.",
+      "correct_answer": "It enhances recall by creating stronger associations between similar concepts.",
+      "explanation": "Semantic similarity enhances recall by allowing related concepts to activate each other, facilitating retrieval. Option B incorrectly states that it impairs recall, which is not supported by cognitive psychology. Option C is incorrect as semantic similarity does have a significant effect, and Option D misrepresents the influence across memory types.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
       "knId": "KN8",
-      "source_file": "2-memory.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Memory.json",
       "source_folder": "2 Learning and Memory",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -2681,23 +2697,24 @@
       "is_org_psych": false
     },
     {
-      "id": 135,
-      "question": "What is a potential long-term effect of early deprivation on attachment in children?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Bonding and Attachment.json::23",
+      "question": "Which of the following best describes the findings related to socioeconomic status (SES) and childhood attachment?",
       "options": [
-        "Increased resilience in relationships",
-        "Heightened ability to form secure attachments",
-        "Increased risk of developing attachment disorders",
-        "Improved social skills"
+        "Low SES directly causes insecure attachment regardless of parenting quality",
+        "Secure attachment only occurs in high SES families",
+        "Insecure attachment is more common in low SES families due to associated risk factors but secure attachment can occur with good parenting",
+        "Attachment patterns are not influenced by SES or related factors"
       ],
-      "correct_answer": "Increased risk of developing attachment disorders",
-      "explanation": "Early deprivation can lead to attachment disorders, as children may struggle to form secure attachments due to inconsistent or absent caregiving. The other options incorrectly suggest positive outcomes or improvements.",
+      "correct_answer": "Insecure attachment is more common in low SES families due to associated risk factors but secure attachment can occur with good parenting",
+      "explanation": "1. The correct answer, \"Insecure attachment is more common in low SES families due to associated risk factors but secure attachment can occur with good parenting,\" is supported by research indicating that children from low socioeconomic status (SES) backgrounds are more likely to be insecurely attached due to risk factors such as poor parental education, parental drug use, and father absence. However, it is also noted that secure attachment can still develop in low SES families when parenting quality is high, demonstrating that good parenting practices can mitigate the negative impacts of low SES.\n\n2. The first incorrect option, \"Low SES directly causes insecure attachment regardless of parenting quality,\" is wrong because it oversimplifies the relationship by ignoring the role of parenting quality, which can lead to secure attachment even in low SES contexts. The second incorrect option, \"Secure attachment only occurs in high SES families,\" is incorrect as it fails to recognize that secure attachment can be achieved in families across various SES levels, particularly when parenting is responsive and sensitive. Lastly, the option \"Attachment patterns are not influenced by SES or related factors\" is inaccurate because research clearly indicates that SES and associated risk factors significantly impact attachment security, emphasizing that these factors play a crucial role in the development of attachment patterns.",
       "domain": "Domain 4: Growth & Lifespan Development",
       "knId": "KN25",
-      "source_file": "4-bonding-and-attachment.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Bonding and Attachment.json",
       "source_folder": "4 Development",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -2961,23 +2978,24 @@
       "is_org_psych": false
     },
     {
-      "id": 149,
-      "question": "A 32-year-old construction worker sustains a severe closed-head injury after a fall. Upon regaining consciousness, he has no difficulty learning the names of his new rehabilitation nurses, forming new friendships on the ward, or acquiring the hospital's daily schedule. However, he is unable to recall his wedding, the birth of his children, or most events from the five years preceding the accident. This presentation is most consistent with which type of amnesia?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Memory.json::50",
+      "question": "Which type of priming involves facilitated identification of words or objects based on prior exposure to the exact same stimuli, often tested with word-stem or word-fragment completion tasks?",
       "options": [
-        "Anterograde amnesia, because the patient cannot consolidate memories that occurred after the injury",
-        "Retrograde amnesia, because the patient has lost access to memories formed before the injury",
-        "Korsakoff amnesia, because the pattern results from chronic thiamine deficiency following alcohol use",
-        "Transient global amnesia, because the memory loss will resolve spontaneously within 24 hours"
+        "Conceptual priming",
+        "Semantic priming",
+        "Repetition priming",
+        "Masked priming"
       ],
-      "correct_answer": "Retrograde amnesia, because the patient has lost access to memories formed before the injury",
-      "explanation": "Retrograde amnesia involves the inability to recall events and information that were encoded before the onset of the amnestic episode—in this case, the head injury. The patient retains the capacity to form new memories (ruling out anterograde amnesia) but cannot access a substantial pre-injury autobiographical record. Anterograde amnesia (A) refers specifically to difficulty forming new memories after the injury; this patient is successfully forming new memories on the ward. Korsakoff amnesia (C) is caused by thiamine deficiency secondary to chronic alcoholism and is not appropriate here; it also typically involves a characteristic confabulation pattern. Transient global amnesia (D) is a brief, self-limiting episode of amnesia with no precipitating head trauma and typically resolves within hours, not presenting as a stable post-injury pattern.",
+      "correct_answer": "Repetition priming",
+      "explanation": "1. **Repetition priming** is the correct answer because it specifically refers to the phenomenon where prior exposure to a word or object facilitates later identification of that same word or object, particularly in tasks like word-stem or word-fragment completion. This type of priming demonstrates how previous encounters with stimuli enhance recognition or recall, as evidenced by studies showing that individuals are more likely to complete stems or fragments with words they have previously seen.\n\n2. **Conceptual priming** is incorrect because it involves the facilitation of responses based on the meaning of related concepts rather than the exact stimuli themselves. **Semantic priming** is also incorrect as it refers to the activation of related meanings or concepts, which can enhance retrieval but does not focus on the direct repetition of the same word or object. **Masked priming** is not correct because it involves presenting a stimulus briefly and obscuring it, which influences responses without relying on direct prior exposure to the same stimuli.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
       "knId": "KN8",
-      "source_file": "2-memory.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Memory.json",
       "source_folder": "2 Learning and Memory",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": false,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -3001,23 +3019,24 @@
       "is_org_psych": false
     },
     {
-      "id": 151,
-      "question": "How do heterogeneous groups differ from homogeneous groups in terms of group dynamics?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/5 6 Leadership.json::1",
+      "question": "A newly hired employee quickly adopts the work habits and values of a senior colleague whom she admires and with whom she strongly identifies. The senior colleague's ability to influence the new employee's behavior is best explained by which of French and Raven's bases of social power?",
       "options": [
-        "Heterogeneous groups tend to have less conflict than homogeneous groups.",
-        "Homogeneous groups are more likely to foster creativity and innovation.",
-        "Heterogeneous groups often experience more diverse perspectives and ideas.",
-        "Homogeneous groups are more effective in decision-making."
+        "Expert power",
+        "Legitimate power",
+        "Referent power",
+        "Informational power"
       ],
-      "correct_answer": "Heterogeneous groups often experience more diverse perspectives and ideas.",
-      "explanation": "This answer correctly identifies a key advantage of heterogeneous groups, which is the variety of perspectives they bring. The other options misrepresent the dynamics of heterogeneous and homogeneous groups.",
-      "domain": "Domain 3: Social Psychology & Cultural Aspects",
+      "correct_answer": "Referent power",
+      "explanation": "Referent power is based on identification with and admiration for the power holder. The new employee changes her behavior because she identifies with and wants to be like the senior colleague, which is the hallmark of referent power. Expert power (A) is based on perceived knowledge or skill, not personal identification. Legitimate power (B) derives from a formal role or position of authority. Informational power (D) stems from possessing specific information others need. The key distinguishing feature here is the identification and admiration, pointing to referent power.",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
       "knId": "KN16",
-      "source_file": "3-group-influences.json",
-      "source_folder": "3 Social Psychology",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/5 6 Leadership.json",
+      "source_folder": "2 3 5 6 I-O Psychology",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": false,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -3361,23 +3380,24 @@
       "is_org_psych": false
     },
     {
-      "id": 169,
-      "question": "In rural settings, what is a primary concern regarding the scope of practice for psychologists?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json::25",
+      "question": "Which of the following is a common cause of malpractice claims against psychologists?",
       "options": [
-        "Limited access to supervision and consultation",
-        "Excessive competition among practitioners",
-        "High demand for specialized services",
-        "Availability of advanced technology"
+        "A. Providing therapy without a license.",
+        "B. Failing to maintain adequate documentation of client sessions.",
+        "C. Engaging in pro bono work.",
+        "D. Offering group therapy sessions."
       ],
-      "correct_answer": "Limited access to supervision and consultation",
-      "explanation": "In rural settings, psychologists often face challenges related to limited access to supervision and consultation, which can impact their practice and professional development. The other options do not accurately reflect the primary concerns in rural psychology practice.",
+      "correct_answer": "B. Failing to maintain adequate documentation of client sessions.",
+      "explanation": "Option B is correct as poor record-keeping is a common cause of malpractice claims. Option A is incorrect as practicing without a license is a criminal issue, not a malpractice claim. Option C is incorrect as pro bono work is generally viewed positively. Option D is not inherently linked to malpractice claims.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
       "knId": "KN66",
-      "source_file": "8-practice-issues.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json",
       "source_folder": "8 Ethics",
-      "difficulty": "hard",
+      "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -3541,43 +3561,45 @@
       "is_org_psych": false
     },
     {
-      "id": 178,
-      "question": "What is a common complaint that interns have about their supervisors?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json::67",
+      "question": "Which of the following best describes the ethical competency a supervisor must possess to provide competent clinical supervision?",
       "options": [
-        "Lack of feedback on performance",
-        "Too much supervision",
-        "Inconsistent scheduling of sessions",
-        "Overly supportive relationships"
+        "Competence only in the clinical services provided by the supervisee.",
+        "Competence in both the clinical services provided by the supervisee and in the provision of supervision.",
+        "Competence only in general psychological theory without regard to supervisee services.",
+        "Competence in administrative tasks but not necessarily clinical issues."
       ],
-      "correct_answer": "Lack of feedback on performance",
-      "explanation": "Interns often express dissatisfaction with the lack of constructive feedback, which is crucial for their development. The other options do not typically reflect common complaints; interns generally appreciate guidance but may feel overwhelmed by excessive supervision or inconsistent scheduling.",
+      "correct_answer": "Competence in both the clinical services provided by the supervisee and in the provision of supervision.",
+      "explanation": "1. The correct answer, \"Competence in both the clinical services provided by the supervisee and in the provision of supervision,\" aligns with the ASPPB’s *Supervision Guidelines*, which state that a supervisor must be competent in the services being provided by the supervisee as well as in the supervision itself. This dual competence ensures that the supervisor can effectively guide the supervisee while also safeguarding the welfare of the supervisee’s clients.\n\n2. \n- **Competence only in the clinical services provided by the supervisee:** This option is incorrect because it neglects the necessity for supervisors to also possess expertise in the supervision process itself, which is essential for effective guidance and support.\n  \n- **Competence only in general psychological theory without regard to supervisee services:** This choice is inadequate as it fails to recognize that knowledge of general psychological theory alone does not equip a supervisor to address the specific needs and challenges of the supervisee’s clinical practice.\n\n- **Competence in administrative tasks but not necessarily clinical issues:** This option is misleading because while administrative skills are important, they do not substitute for the clinical knowledge required to provide effective supervision and support for the supervisee’s clinical work.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
       "knId": "KN70",
-      "source_file": "8-practice-issues.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json",
       "source_folder": "8 Ethics",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
-      "id": 179,
-      "question": "In motivation theories, what does the arousal motive primarily refer to?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/2 Work Motivation.json::5",
+      "question": "According to Maslow's need hierarchy theory, which of the following BEST distinguishes self-actualization from the four lower-level needs?",
       "options": [
-        "The need to avoid boredom and seek stimulation.",
-        "The desire to achieve specific goals.",
-        "The drive to maintain homeostasis.",
-        "The urge to conform to social norms."
+        "Self-actualization is the only need that requires social interaction",
+        "Self-actualization can never be fully satisfied, while lower needs can be",
+        "Self-actualization emerges only after age 40",
+        "Self-actualization is motivated by external reinforcement rather than internal drive"
       ],
-      "correct_answer": "The need to avoid boredom and seek stimulation.",
-      "explanation": "The arousal motive is fundamentally about seeking out experiences that provide stimulation and prevent boredom. The other options describe different motivational drives.",
+      "correct_answer": "Self-actualization can never be fully satisfied, while lower needs can be",
+      "explanation": "According to Maslow, self-actualization is unique among the five needs because it can never be fully satisfied—there is always room for more growth and development. Once lower needs (physiological, safety, social, esteem) are satisfied, they stop motivating behavior, and the next level takes over. Self-actualization does not require social interaction more than other needs (A)—social needs are at level 3. There is no age restriction in the theory (C). Self-actualization is driven by internal growth motivation, not external reinforcement (D).",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
       "knId": "KN9",
-      "source_file": "2-memory.json",
-      "source_folder": "2 Learning and Memory",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/2 Work Motivation.json",
+      "source_folder": "2 3 5 6 I-O Psychology",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -3721,23 +3743,24 @@
       "is_org_psych": false
     },
     {
-      "id": 187,
-      "question": "Which of the following criteria is NOT typically considered in child custody decision-making according to family law?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 1 and 2.json::25",
+      "question": "According to APA's ethical decision-making model described by Fisher (2022), what step comes immediately after identifying relevant laws, regulations, and institutional policies?",
       "options": [
-        "The child's relationship with each parent",
-        "The financial stability of each parent",
-        "The child's preference if they are of sufficient age",
-        "The parent's social media presence"
+        "Consider the perspectives of affected stakeholders",
+        "Identify the ethical problem",
+        "Monitor and evaluate results of the action plan",
+        "Develop and implement an action plan"
       ],
-      "correct_answer": "The parent's social media presence",
-      "explanation": "The child's relationship with each parent, financial stability, and the child's preference are all relevant factors in custody decisions. However, a parent's social media presence is not a standard criterion considered in custody evaluations.",
+      "correct_answer": "Consider the perspectives of affected stakeholders",
+      "explanation": "1. \"Consider the perspectives of affected stakeholders\" is the correct answer because it follows the identification of relevant laws, regulations, and institutional policies in Fisher's (2022) ethical decision-making model. This step emphasizes the importance of understanding how the decision will impact various stakeholders, such as clients, colleagues, and the community, ensuring that their perspectives are taken into account before proceeding with any actions.\n\n2. \n- \"Identify the ethical problem\" is incorrect because this step occurs first in the decision-making process, setting the foundation for the subsequent steps.\n- \"Monitor and evaluate results of the action plan\" is wrong as it is the final step in the model, focusing on assessing the outcomes after the action has been implemented rather than before developing an action plan.\n- \"Develop and implement an action plan\" is incorrect because it comes after considering the perspectives of stakeholders; this step involves creating a specific course of action based on the gathered information and stakeholder input.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
       "knId": "KN65",
-      "source_file": "8-practice-issues.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 1 and 2.json",
       "source_folder": "8 Ethics",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -4101,23 +4124,24 @@
       "is_org_psych": false
     },
     {
-      "id": 206,
-      "question": "A county domestic violence program is evaluating which intervention approach produces the lowest recidivism rates among male perpetrators following a spousal assault conviction. Based on the empirical literature, which of the following interventions is most consistently associated with reduced re-offense rates when implemented as part of a coordinated community response?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 CBT.json::2",
+      "question": "A therapist is completing a Safety Planning Intervention with a client who has recurrent suicidal crises. The client has already identified warning signs and tried internal coping strategies, but the suicidal urge remains intense. According to the sequence of the intervention, what should come next?",
       "options": [
-        "Couples therapy targeting communication deficits and conflict resolution skills",
-        "Mandatory arrest followed by incarceration without psychoeducational programming",
-        "Batterer intervention programs combined with legal system monitoring",
-        "Individual psychodynamic therapy exploring early attachment disruptions"
+        "Ask the client to sign a no-suicide contract before continuing",
+        "Contact social supports who can provide distraction",
+        "Return to earlier childhood experiences that may explain the crisis",
+        "Move immediately to hospitalization in every case"
       ],
-      "correct_answer": "Batterer intervention programs combined with legal system monitoring",
-      "explanation": "Research indicates that batterer intervention programs (BIPs), particularly when embedded within a coordinated community response involving legal accountability, are associated with the lowest recidivism rates. Couples therapy is contraindicated in active domestic violence situations because it implicitly assigns mutual responsibility for violence, may endanger the victim by surfacing grievances in session, and provides abusers with new information to exploit coercively. Mandatory arrest alone (without psychoeducational follow-through) has shown inconsistent results across studies — Sherman et al.'s research found deterrent effects only for employed batterers. Individual psychodynamic therapy lacks adequate evidence for reducing intimate partner violence recidivism and fails to address the power and control dynamics central to this behavior pattern.",
+      "correct_answer": "Contact social supports who can provide distraction",
+      "explanation": "This is the best answer because the Safety Planning Intervention proceeds from warning signs to internal coping strategies and then to contacting social supports for distraction before moving to people who can actively help resolve the crisis or to professional services. The no-suicide contract option is wrong because those contracts are not evidence-based. The childhood-history option is wrong because safety planning is a concrete crisis-management tool, not an exploratory intervention. Automatic hospitalization is wrong because the model uses graduated steps and does not require the same response in every situation.",
       "domain": "Domain 6: Treatment & Intervention",
       "knId": "KN44",
-      "source_file": "6-prevention-and-consultation.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 CBT.json",
       "source_folder": "6 Clinical Interventions",
       "difficulty": "hard",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -4381,23 +4405,24 @@
       "is_org_psych": false
     },
     {
-      "id": 220,
-      "question": "During a therapy session, a client reveals that her previous therapist initiated a sexual relationship with her during treatment. The current therapist's most appropriate first step is to:",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 1 and 2.json::23",
+      "question": "A client asks a psychologist's family member to interpret during sessions. Is it appropriate to delegate that role?",
       "options": [
-        "Immediately file a formal ethics complaint against the previous therapist with the APA Ethics Committee",
-        "Help the client understand her options, which may include filing an ethics complaint, and assist her in addressing the impact of the exploitation",
-        "Contact the previous therapist directly to confirm the client's allegations before taking action",
-        "Advise the client that therapist-client sexual contact is not illegal in most states and therefore cannot be reported"
+        "If the family member agrees and the client consents",
+        "When the psychologist lacks other interpreter options but supervises carefully",
+        "Never, because a family member may have a multiple relationship that impairs objectivity and effectiveness",
+        "If the family member is fluent in the language and understands confidentiality"
       ],
-      "correct_answer": "Help the client understand her options, which may include filing an ethics complaint, and assist her in addressing the impact of the exploitation",
-      "explanation": "APA Standard 10.05 addresses sexual intimacies with current therapy clients, and when a therapist learns of such misconduct by a colleague, the appropriate response prioritizes client welfare. The therapist should help the client explore options including filing an ethics complaint, rather than unilaterally filing on the client's behalf (which could retraumatize). Option A is wrong because immediately filing without client input violates the client's autonomy. Option C is wrong because contacting the previous therapist breaches the current client's confidentiality. Option D is factually incorrect—sexual contact with clients is illegal in many states and always violates ethics standards.",
+      "correct_answer": "Never, because a family member may have a multiple relationship that impairs objectivity and effectiveness",
+      "explanation": "1. The correct answer, \"Never, because a family member may have a multiple relationship that impairs objectivity and effectiveness,\" is supported by Standard 2.05 of the APA Ethics Code, which states that psychologists must delegate responsibilities only to individuals who do not have a multiple relationship that could compromise their objectivity. A family member's involvement can create biases and conflicts of interest that can affect the therapeutic process and the quality of care provided to the client.\n\n2. The option \"If the family member agrees and the client consents\" is incorrect because consent does not eliminate the potential for bias or impaired effectiveness due to the family relationship. The option \"When the psychologist lacks other interpreter options but supervises carefully\" is wrong because the presence of a family member as an interpreter is inherently problematic, regardless of supervision, due to the risk of compromised objectivity. Lastly, the option \"If the family member is fluent in the language and understands confidentiality\" is incorrect because fluency and knowledge of confidentiality do not mitigate the ethical concerns related to multiple relationships that can negatively impact the therapeutic alliance and the client's experience.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
       "knId": "KN61",
-      "source_file": "8-practice-issues.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 1 and 2.json",
       "source_folder": "8 Ethics",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": false,
+      "type": "standard",
       "is_org_psych": false
     },
     {

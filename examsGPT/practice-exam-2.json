@@ -12,7 +12,8 @@
       "7": 16,
       "8": 36
     },
-    "generatedAt": "2025-11-20T18:01:10.400Z"
+    "generatedAt": "2025-11-20T18:01:10.400Z",
+    "lastSurgicalFix": "2026-05-10T02:40:11.057Z"
   },
   "questions": [
     {
@@ -909,22 +910,22 @@
       "scored": true
     },
     {
-      "stem": "Ambivalent sexism theory differentiates hostile sexism from benevolent sexism by identifying hostile sexism as:",
+      "stem": "Research on the pratfall effect shows that a competent person who makes a blunder is perceived as:",
       "options": [
-        "A subjectively favorable attitude offering protection to women in traditional roles",
-        "Antipathy toward women perceived as challenging men's power",
-        "Neutral attitudes that do not affect behavior",
-        "A rejection of all gender stereotypes"
+        "More attractive because the blunder humanizes them",
+        "Less attractive because they lose credibility",
+        "More attractive only if the blunder is minor",
+        "Less attractive regardless of competence"
       ],
-      "answer": "Antipathy toward women perceived as challenging men's power",
-      "explanation": "1. The correct answer, \"Antipathy toward women perceived as challenging men's power,\" accurately defines hostile sexism as described in ambivalent sexism theory. This type of sexism reflects negative attitudes and hostility towards women who are viewed as undermining traditional gender roles or threatening male dominance. Hostile sexism encompasses disdain for women who assert themselves or seek equality, as it is rooted in a belief that men should retain power over women.\n\n2. The first incorrect option, \"A subjectively favorable attitude offering protection to women in traditional roles,\" describes benevolent sexism, which is characterized by positive but patronizing attitudes toward women who conform to traditional roles, rather than hostility toward those who challenge them. The second incorrect option, \"Neutral attitudes that do not affect behavior,\" mischaracterizes hostile sexism, as it involves strong negative feelings rather than neutrality. Lastly, the option \"A rejection of all gender stereotypes\" is incorrect because hostile sexism does not reject gender stereotypes; rather, it reinforces them by promoting negative views of women who deviate from traditional expectations.",
+      "answer": "More attractive because the blunder humanizes them",
+      "explanation": "1. The correct answer, \"More attractive because the blunder humanizes them,\" is supported by the research of Aronson, Willerman, and Floyd (1966), which indicates that when a competent person commits a blunder, it increases their attractiveness. This occurs because the blunder makes them appear more relatable and human, which enhances their likability rather than diminishing their perceived competence.\n\n2. \n- **Less attractive because they lose credibility:** This option is incorrect because the pratfall effect specifically shows that a blunder can enhance attractiveness rather than detract from it, particularly for competent individuals.\n- **More attractive only if the blunder is minor:** This option is misleading; the research does not specify that the blunder must be minor for the effect to occur, as the key factor is the humanizing aspect of the blunder itself.\n- **Less attractive regardless of competence:** This is incorrect because the pratfall effect highlights that competent individuals actually become more attractive after making a blunder, contradicting the idea that their attractiveness would decrease.",
       "kn": "KN15",
-      "kn_explanation": "This question is best aligned with KN15 because it tests Social interaction and relationships (e.g., attraction, aggression, altruism, organizational justice, verbal and non-verbal communication, internet communication, mate selection, empathy).",
+      "kn_explanation": "This question involves understanding social perception and attraction processes within interpersonal relationships (KN15).",
       "difficulty": "medium",
-      "quality_comment": "The stem and options are precise; distractors represent common misunderstandings providing a valid challenge.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Prosocial Behavior and Prejudice-Discrimination.json",
-      "domain": 3,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Prosocial Behavior and Prejudice-Discrimination.json::7",
+      "quality_comment": "Question clearly differentiates between competence and the blunder's effect, with distractors testing common misconceptions.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Connection.json",
+      "domain": 15,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Connection.json::11",
       "scored": true
     },
     {
@@ -1023,22 +1024,22 @@
       "scored": false
     },
     {
-      "stem": "Which supervision model focuses on understanding and integrating the supervisor and supervisee's interpersonal dynamics to improve therapy outcomes?",
+      "stem": "During a Gestalt therapy session, a client describes a recurring dream in which she is lost in a dark forest while a bright light shines from a distant tower. The therapist asks the client to \"become\" the dark forest and speak as the forest, then to \"become\" the bright light and speak as the light. This approach to dream interpretation reflects which Gestalt principle?",
       "options": [
-        "Developmental model",
-        "Integrative model",
-        "Psychodynamic model",
-        "Behavioral model"
+        "Dream elements are symbolic representations of unconscious wishes that require the therapist's interpretation",
+        "Each element of the dream represents a projected or disowned aspect of the dreamer's own personality",
+        "Dreams reveal archetypal patterns from the collective unconscious that guide individuation",
+        "Dream content should be analyzed for latent meaning through free association to manifest elements"
       ],
-      "answer": "Psychodynamic model",
-      "explanation": "1. The **psychodynamic model** is the correct answer because it emphasizes understanding and integrating the interpersonal dynamics between the supervisor and supervisee. This model focuses on the relational aspects of supervision, including transference and countertransference, which can significantly impact therapy outcomes by enhancing the supervisee's self-awareness and therapeutic effectiveness.\n\n2. The **developmental model** is incorrect because it primarily focuses on the growth and progression of the supervisee's skills and competencies over time, rather than the interpersonal dynamics between supervisor and supervisee. The **integrative model** is not the correct choice as it aims to combine various theoretical approaches and techniques in supervision, without specifically emphasizing the understanding of interpersonal dynamics. Lastly, the **behavioral model** is wrong because it concentrates on observable behaviors and the application of behavioral techniques in supervision, rather than exploring the deeper relational aspects that influence therapeutic outcomes.",
-      "kn": "KN52",
-      "kn_explanation": "Addresses supervision theories and models relevant to clinical psychology practice (KN52).",
+      "answer": "Each element of the dream represents a projected or disowned aspect of the dreamer's own personality",
+      "explanation": "In Gestalt therapy, dreams are not interpreted symbolically by the therapist (as in psychoanalysis). Instead, clients role-play different elements of their dreams because each part is treated as a disowned aspect of the client's own personality. By 'becoming' the forest and the light, the client can access and integrate these different aspects of self. Option A describes Freudian dream interpretation with therapist-delivered symbolic analysis. Option C describes Jungian interpretation involving collective unconscious archetypes. Option D describes the psychoanalytic free association approach to manifest dream content.",
+      "kn": "KN43",
+      "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
       "difficulty": "medium",
-      "quality_comment": "The options comprise known supervision models, testing candidate recognition of model focus areas appropriately.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Treatment, Intervention, and Prevention : Clinical Psychology/6 Prevention, Consultation, and Psychotherapy Research.json",
-      "domain": 6,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Treatment, Intervention, and Prevention : Clinical Psychology/6 Prevention, Consultation, and Psychotherapy Research.json::16",
+      "quality_comment": "Strong question differentiating Gestalt dream work from psychoanalytic and Jungian approaches. Directly supported by lesson content.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Psychodynamic and Humanistic Therapies.json",
+      "domain": 43,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Psychodynamic and Humanistic Therapies.json::2",
       "scored": true
     },
     {
@@ -1441,22 +1442,22 @@
       "scored": false
     },
     {
-      "stem": "What is the main focus of Rothbart's definition of temperament?",
+      "stem": "A gerontologist is reviewing outcome data across a cohort of adults aged 70–85. After controlling for physical health status, which factor most consistently predicts positive psychological and functional outcomes in late life according to the research literature on successful aging?",
       "options": [
-        "Behavioral style categorized into three types",
-        "Constitutional differences in reactivity and self-regulation",
-        "Tendency to withdraw from unfamiliar situations",
-        "Biological maturation without environmental influence"
+        "Preservation of fluid intelligence and processing speed",
+        "Freedom from diagnosable psychiatric conditions throughout adulthood",
+        "Maintaining meaningful engagement in social and productive activities",
+        "Access to sufficient financial resources and preventive healthcare"
       ],
-      "answer": "Constitutional differences in reactivity and self-regulation",
-      "explanation": "1. The correct answer, \"Constitutional differences in reactivity and self-regulation,\" aligns with Rothbart's definition of temperament, which emphasizes the inherent biological makeup of individuals that influences their reactivity to stimuli and their ability to self-regulate those reactions. Rothbart describes temperament as involving two key components: reactivity, which encompasses the intensity and duration of responses to stimuli, and self-regulation, which refers to the processes that help manage those responses effectively.\n\n2. The first incorrect option, \"Behavioral style categorized into three types,\" is wrong because it refers to Thomas and Chess's classification of temperament, which categorizes children into easy, difficult, and slow-to-warm-up types, rather than Rothbart's focus on reactivity and self-regulation. The second incorrect option, \"Tendency to withdraw from unfamiliar situations,\" is incorrect as it specifically describes Kagan's concept of behavioral inhibition, not Rothbart's broader definition of temperament. Lastly, the option \"Biological maturation without environmental influence\" is incorrect because Rothbart acknowledges that temperament is influenced by both heredity and environmental experiences, contrary to the suggestion that it is solely determined by biological maturation.",
+      "answer": "Maintaining meaningful engagement in social and productive activities",
+      "explanation": "Research on successful aging—most notably Rowe and Kahn's model—identifies sustained engagement with life, encompassing both social relationships and productive activity, as the primary distinguishing feature of successful versus usual aging. While avoiding disease and maintaining physical and cognitive function are also components, engagement is consistently the strongest predictor because it captures purpose, connection, and continued contribution. Fluid intelligence naturally declines with age and cannot be preserved as a primary strategy. Freedom from psychiatric history is helpful but not the dominant predictor once physical health is controlled. Financial resources, while facilitating, are not the primary psychological driver.",
       "kn": "KN21",
-      "kn_explanation": "This question addresses temperament as a biologically influenced dimension of development, under the umbrella of growth and lifespan development (KN21).",
+      "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
       "difficulty": "medium",
-      "quality_comment": "The options reflect common temperament concepts; the correct answer requires specific knowledge of Rothbart's model, providing appropriate challenge.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Socioemotional Development – Temperament and Personality.json",
-      "domain": 4,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Socioemotional Development – Temperament and Personality.json::1",
+      "quality_comment": "Tests a high-yield EPPP concept at appropriate doctoral difficulty. However, none of the provided lesson files explicitly address successful aging models. Flagged for review and lesson content alignment.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Body Growth.json",
+      "domain": 21,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Body Growth.json::10",
       "scored": true
     },
     {
@@ -1574,22 +1575,22 @@
       "scored": true
     },
     {
-      "stem": "Which of the following best describes the impact of divorce on men’s health according to research?",
+      "stem": "A psychologist is presenting grand rounds on post-divorce adjustment. She summarizes the empirical literature as follows: 'The primary stressor differs by gender, and the chronicity of effects also differs.' Which of the following most accurately captures the gender-differentiated findings on adjustment to divorce?",
       "options": [
-        "Economic hardship leading to chronic health problems",
-        "Increased risky health behaviors and transient health effects",
-        "Greater social support improving mental health",
-        "Steady improvement in psychological well-being"
+        "Men experience primarily chronic economic hardship, while women experience primarily social isolation and loss of support networks",
+        "Women with custody of children experience primarily chronic economic hardship, while men more often experience health problems stemming from risky behaviors and social isolation that tend to be temporary",
+        "Both men and women experience equivalent economic decline, but men recover psychologically more quickly due to stronger social networks",
+        "Women primarily experience risky health behaviors, while men experience chronic psychological distress"
       ],
-      "answer": "Increased risky health behaviors and transient health effects",
-      "explanation": "1. The correct answer, \"Increased risky health behaviors and transient health effects,\" accurately describes the impact of divorce on men's health as research indicates that men often engage in riskier health behaviors following divorce and experience health problems that are typically temporary. Specifically, studies show that men may face increased stress, social isolation, and other psychological factors post-divorce, which contribute to these risky behaviors and transient health issues (Liu, 2013).\n\n2. The option \"Economic hardship leading to chronic health problems\" is incorrect because, while economic hardship does affect women's health post-divorce, men typically experience an improved financial situation after divorce, which does not lead to chronic health problems. The statement \"Greater social support improving mental health\" is also wrong, as the research indicates that men often face increased social isolation after divorce rather than enhanced social support. Lastly, \"Steady improvement in psychological well-being\" is incorrect because the research shows that men's health problems post-divorce are often linked to increased stress and risky behaviors, not a consistent improvement in their psychological state.",
+      "answer": "Women with custody of children experience primarily chronic economic hardship, while men more often experience health problems stemming from risky behaviors and social isolation that tend to be temporary",
+      "explanation": "Research distinguishes both the nature and chronicity of post-divorce adjustment by gender. Women—particularly custodial mothers—face severe economic decline that tends to be chronic, creating cascading effects on mental and physical health. Men more often experience health problems related to risky behaviors and loss of social support networks, but these effects are more often temporary rather than chronic. The other options incorrectly reverse the gender assignments or erroneously equate outcomes across gender.",
       "kn": "KN22",
       "kn_explanation": "This question is best aligned with KN22 because it tests Influence of individual-environment interaction on development over time (e.g., the relationship between the individual and the social, academic, work, community environment).",
       "difficulty": "medium",
-      "quality_comment": "Good balance of detailed, plausible answer choices reflecting different health outcomes.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 School and Family Influences.json",
-      "domain": 4,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 School and Family Influences.json::3",
+      "quality_comment": "Strong question that tests nuanced understanding of gender-differentiated divorce outcomes including both content and chronicity. Well grounded in lesson text.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 School and Family.json",
+      "domain": 22,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 School and Family.json::11",
       "scored": true
     },
     {
@@ -1973,22 +1974,22 @@
       "scored": true
     },
     {
-      "stem": "Which of the following best describes the role of biases and base rates in the interpretation of assessment data for mood disorders?",
+      "stem": "In panic disorder, which of the following best describes interoceptive exposure as part of panic control treatment?",
       "options": [
-        "Ignoring base rates improves diagnostic accuracy in low-prevalence disorders.",
-        "Availability heuristic can lead clinicians to overdiagnose rare mood disorders after recent cases.",
-        "Confirmation bias encourages clinicians to consider all contradictory evidence.",
-        "High base rates of a disorder should generally lower the estimated likelihood of diagnosis."
+        "Exposure to social situations that trigger anxiety and avoidance",
+        "Deliberate induction of physical sensations associated with panic to reduce fear of them",
+        "Use of relaxation techniques to immediately stop panic attacks",
+        "Gradual exposure to feared physical locations outside the home"
       ],
-      "answer": "Availability heuristic can lead clinicians to overdiagnose rare mood disorders after recent cases.",
-      "explanation": "1. The correct answer, \"Availability heuristic can lead clinicians to overdiagnose rare mood disorders after recent cases,\" highlights how recent exposure to cases can skew a clinician's perception of the prevalence of mood disorders. When clinicians encounter unusual cases frequently, they may mistakenly perceive these disorders as more common than they are, leading to overdiagnosis. This cognitive bias occurs because the availability heuristic relies on easily recalled examples rather than statistical base rates, which are critical for accurate diagnosis.\n\n2. The option \"Ignoring base rates improves diagnostic accuracy in low-prevalence disorders\" is incorrect because disregarding base rates can lead to misdiagnosis; clinicians should consider prevalence to avoid overestimating the likelihood of rare disorders. The statement \"Confirmation bias encourages clinicians to consider all contradictory evidence\" is misleading, as confirmation bias actually leads clinicians to favor information that supports their initial hypotheses while ignoring contradictory evidence. Lastly, \"High base rates of a disorder should generally lower the estimated likelihood of diagnosis\" is incorrect because higher base rates typically increase the likelihood of diagnosis; clinicians should adjust their estimates based on the prevalence of the disorder in the population.",
+      "answer": "Deliberate induction of physical sensations associated with panic to reduce fear of them",
+      "explanation": "1. The correct answer, \"Deliberate induction of physical sensations associated with panic to reduce fear of them,\" accurately describes interoceptive exposure as part of panic control treatment. This approach involves intentionally provoking the physical symptoms that individuals associate with panic attacks (such as increased heart rate or dizziness) to help them confront and desensitize to these sensations, ultimately reducing their fear and anxiety related to panic attacks.\n\n2. The incorrect options are as follows:\n- \"Exposure to social situations that trigger anxiety and avoidance\" is wrong because interoceptive exposure specifically targets the internal physical sensations associated with panic attacks, not external social situations.\n- \"Use of relaxation techniques to immediately stop panic attacks\" is incorrect since the goal of interoceptive exposure is not to stop panic attacks but to help individuals tolerate and reduce their fear of panic-related sensations.\n- \"Gradual exposure to feared physical locations outside the home\" is misleading because this describes a form of exposure therapy related to agoraphobia, not the interoceptive exposure that focuses on inducing bodily sensations linked to panic disorder.",
       "kn": "KN37",
-      "kn_explanation": "This question addresses evidence-based interpretation of data, including the effects of cognitive biases and base rates on clinical decision-making (KN37).",
+      "kn_explanation": "This question is best aligned with KN37 because it tests Factors influencing evidence-based interpretation of data and decision-making (e.g., base rates, group differences, cultural biases and differences, heuristics).",
       "difficulty": "medium",
-      "quality_comment": "The question effectively assesses clinical reasoning and awareness of cognitive biases during assessment.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis : Psychopathology/5 Bipolar and Depressive Disorders.json",
-      "domain": 5,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis : Psychopathology/5 Bipolar and Depressive Disorders.json::15",
+      "quality_comment": "The stem clearly specifies panic disorder context; distractors are reasonable but different treatment concepts, increasing question quality.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Anxiety and OCD.json",
+      "domain": 37,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Anxiety and OCD.json::11",
       "scored": true
     },
     {
@@ -2030,22 +2031,22 @@
       "scored": true
     },
     {
-      "stem": "Which of the following technologies has shown promise in the assessment or treatment of depressive disorders?",
+      "stem": "Which of the following best describes how computerized adaptive testing (CAT) typically proceeds?",
       "options": [
-        "Use of smartphone mood-tracking apps for symptom monitoring",
-        "Traditional paper-and-pencil questionnaires only",
-        "In-person only psychological testing without digital aids",
-        "Manual scoring of inventories without software assistance"
+        "All examinees receive the same fixed sequence of items so their scores are directly comparable",
+        "The test begins with a moderately difficult item and then presents harder or easier items depending on the examinee's previous responses",
+        "The test presents only the most difficult items first in order to estimate ceiling performance efficiently",
+        "The test alternates between verbal and nonverbal items regardless of the examinee's performance level"
       ],
-      "answer": "Use of smartphone mood-tracking apps for symptom monitoring",
-      "explanation": "1. The correct answer, \"Use of smartphone mood-tracking apps for symptom monitoring,\" is appropriate because the reference material highlights the growing integration of technology in mental health treatment, including the use of digital tools for monitoring symptoms and enhancing patient engagement. While specific studies on smartphone apps are not detailed in the reference, the trend towards technology-assisted interventions suggests that such apps can facilitate ongoing assessment and provide valuable data for treatment adjustments.\n\n2. The option \"Traditional paper-and-pencil questionnaires only\" is incorrect because it does not incorporate modern technology that can enhance symptom tracking and patient engagement, limiting the potential for timely and dynamic assessments. \"In-person only psychological testing without digital aids\" is wrong as it overlooks the benefits of digital tools that can streamline the assessment process and improve accessibility for clients. Lastly, \"Manual scoring of inventories without software assistance\" is incorrect because it lacks the efficiency and accuracy that software can provide, which is crucial for effective monitoring and treatment of depressive disorders.",
+      "answer": "The test begins with a moderately difficult item and then presents harder or easier items depending on the examinee's previous responses",
+      "explanation": "This is the best answer because CAT adapts item difficulty based on the examinee's responses, usually starting around a moderate difficulty level. The fixed-sequence option is wrong because that describes traditional testing, not adaptive testing. Presenting only the hardest items first is wrong because CAT aims to match item difficulty to the examinee's estimated ability rather than overwhelm everyone initially. Alternating content types regardless of performance is wrong because CAT's defining logic is adaptation based on prior responses.",
       "kn": "KN41",
-      "kn_explanation": "This item relates to the application of technology in assessment and monitoring of mood disorders, consistent with the role of technology in testing and evaluation (KN41).",
+      "kn_explanation": "This question tests the use of technology in implementing tests and other forms of assessment.",
       "difficulty": "easy",
-      "quality_comment": "The question highlights an important emerging practice area, relevant to current assessment trends.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis : Psychopathology/5 Bipolar and Depressive Disorders.json",
-      "domain": 5,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis : Psychopathology/5 Bipolar and Depressive Disorders.json::17",
+      "quality_comment": "Foundational CAT mechanism item that fits the AATBS-style direct-concept format.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Cognitive Tests.json",
+      "domain": 41,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Cognitive Tests.json::2",
       "scored": true
     },
     {
@@ -3037,22 +3038,22 @@
       "scored": true
     },
     {
-      "stem": "Which cognitive ability test is designed to reduce cultural bias by minimizing verbal instructions and cultural content, and allows interpretation via both CHC and Luria's models?",
+      "stem": "Which of the following is the primary purpose of the Dependability Indices on the Kuder Occupational Interest Survey?",
       "options": [
-        "Kaufman Assessment Battery for Children, Second Edition (KABC-II)",
-        "Leiter International Performance Scale-Third Edition (Leiter-3)",
-        "Cognitive Assessment System, Second Edition (CAS2)",
-        "Columbia Mental Maturity Scale-Third Edition (CMMS)"
+        "To assess the consistency and validity of the examinee’s responses",
+        "To measure the desire for stable employment positions",
+        "To evaluate reliability of the vocational skills reported",
+        "To predict job satisfaction based on interests"
       ],
-      "answer": "Kaufman Assessment Battery for Children, Second Edition (KABC-II)",
-      "explanation": "1. The **Kaufman Assessment Battery for Children, Second Edition (KABC-II)** is the correct answer because it was specifically designed to be a culturally fair test by minimizing cultural content and verbal instructions, thereby reducing cultural bias. Additionally, it allows for interpretation using both the Cattell-Horn-Carroll (CHC) model of cognitive abilities and Luria’s neuropsychological processing model, making it versatile for diverse populations.\n\n2. The **Leiter International Performance Scale-Third Edition (Leiter-3)** is incorrect because, while it is a nonverbal test designed for individuals with cognitive delays and other impairments, it does not explicitly mention the use of both CHC and Luria's models for interpretation. The **Cognitive Assessment System, Second Edition (CAS2)** is also incorrect as it focuses on cognitive processing abilities based on the PASS theory rather than minimizing cultural content or verbal instructions. Lastly, the **Columbia Mental Maturity Scale-Third Edition (CMMS)** is not the correct answer because it primarily assesses general reasoning ability without the comprehensive cultural fairness and interpretative frameworks offered by the KABC-II.",
+      "answer": "To assess the consistency and validity of the examinee’s responses",
+      "explanation": "1. The correct answer, \"To assess the consistency and validity of the examinee’s responses,\" accurately reflects the purpose of the Dependability Indices in the Kuder Occupational Interest Survey (KOIS). These indices are specifically designed to provide information that helps determine how reliable the examinee's responses are, ensuring that the results are valid for interpreting their interests and preferences.\n\n2. The option \"To measure the desire for stable employment positions\" is incorrect because the Dependability Indices do not assess employment desires but rather focus on the reliability of the responses given. The statement \"To evaluate reliability of the vocational skills reported\" is misleading, as the Dependability Indices do not measure vocational skills directly; they assess the consistency of the examinee’s responses instead. Lastly, \"To predict job satisfaction based on interests\" is incorrect because the Dependability Indices do not predict job satisfaction; they only evaluate the validity of the responses related to interests, not the outcomes of those interests in terms of job satisfaction.",
       "kn": "KN29",
-      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
+      "kn_explanation": "Assessment of response validity is central to psychometric test scoring, reliability, and validity concepts (KN29).",
       "difficulty": "medium",
-      "quality_comment": "High-quality question targeting knowledge of test characteristics and cultural fairness, with well-chosen distractors.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Other Measures of Cognitive Ability.json",
-      "domain": 5,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Other Measures of Cognitive Ability.json::2",
+      "quality_comment": "Distractors address related but distinct concepts, reinforcing understanding of test response validity measures.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Career Interests.json",
+      "domain": 29,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Career Interests.json::8",
       "scored": true
     },
     {
@@ -3151,22 +3152,22 @@
       "scored": true
     },
     {
-      "stem": "Which of the following best exemplifies structural racism as defined by the APA?",
+      "stem": "According to Sue and Sue's Racial/Cultural Identity Development (R/CID) model, an individual who initially idealized the dominant culture but now actively rejects dominant cultural values and immerses in their own cultural heritage is most likely in which stage?",
       "options": [
-        "A teacher treating students unfairly based on race",
-        "Laws and policies that create race-based inequalities, such as school funding tied to local property taxes",
-        "Individual holding and expressing overtly racist views",
-        "Discriminatory hiring practices by a private employer"
+        "Conformity",
+        "Dissonance",
+        "Resistance and immersion",
+        "Integrative awareness"
       ],
-      "answer": "Laws and policies that create race-based inequalities, such as school funding tied to local property taxes",
-      "explanation": "1. The correct answer, \"Laws and policies that create race-based inequalities, such as school funding tied to local property taxes,\" exemplifies structural racism as defined by the APA because it refers to systemic practices and policies that produce enduring racial disparities. Structural racism encompasses laws and institutional practices that perpetuate inequalities across various domains, including education, as evidenced by funding mechanisms that disadvantage minority communities.\n\n2. The option \"A teacher treating students unfairly based on race\" is incorrect because it describes interpersonal racism, which involves individual behaviors and attitudes rather than systemic practices. \"Individual holding and expressing overtly racist views\" is also incorrect, as this represents overt racism, which is characterized by explicit hostility and discrimination from individuals rather than structural inequalities. Finally, \"Discriminatory hiring practices by a private employer\" is incorrect because it pertains to institutional racism, which is specific to organizational policies rather than broader societal structures that create systemic racial disparities.",
-      "kn": "KN20",
-      "kn_explanation": "The question focuses on systemic and societal bases of oppression, fitting within causes, manifestations, and effects of oppression (KN20).",
+      "answer": "Resistance and immersion",
+      "explanation": "In the R/CID model, the resistance and immersion stage is characterized by active rejection of the dominant culture and full embrace of one's own cultural group. Conformity (A) involves preference for dominant cultural values. Dissonance (B) involves conflict and questioning but not yet full rejection. Integrative awareness (D) represents the final stage where the individual develops a balanced appreciation of both their own and other cultures. The active rejection described in the stem is the defining feature of resistance and immersion.",
+      "kn": "KN19",
+      "kn_explanation": "This question is best aligned with KN19 because it tests Identity diversity and intersectionality (e.g., psychological impact of diversity on individuals, families, and systems).",
       "difficulty": "medium",
-      "quality_comment": "The distractors are plausible but distinct forms of racism, increasing clarity and content validity.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Prosocial Behavior and Prejudice-Discrimination.json",
-      "domain": 3,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Prosocial Behavior and Prejudice-Discrimination.json::8",
+      "quality_comment": "Tests understanding of stage progression in a widely tested identity model.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Identity.json",
+      "domain": 19,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Identity.json::0",
       "scored": true
     },
     {
@@ -3398,22 +3399,22 @@
       "scored": true
     },
     {
-      "stem": "According to Chomsky's nativist theory of language development, what innate mechanism enables children to acquire language?",
+      "stem": "At what age do most children typically begin to walk independently, marking a significant milestone in motor development?",
       "options": [
-        "Social interactionist device",
-        "Language acquisition device (LAD)",
-        "Imitation and reinforcement system",
-        "Cognitive schema processor"
+        "6 months",
+        "12 months",
+        "18 months",
+        "24 months"
       ],
-      "answer": "Language acquisition device (LAD)",
-      "explanation": "1. The correct answer, \"Language acquisition device (LAD),\" is based on Chomsky's nativist theory, which posits that humans are biologically programmed to acquire language. The LAD is described as an inborn linguistic processor that allows children to understand language and speak according to grammatical rules, providing evidence for the universal stages of language acquisition that all children experience at similar ages.\n\n2. The option \"Social interactionist device\" is incorrect because social interactionist theory emphasizes the role of biological and social factors in language acquisition rather than a specific innate mechanism. The \"Imitation and reinforcement system\" is also wrong, as this concept is part of learning theory, which suggests language development occurs through imitation and reinforcement, not an innate biological process. Lastly, \"Cognitive schema processor\" is incorrect because it does not specifically relate to language acquisition; rather, cognitive schemas pertain to general cognitive development and understanding rather than the innate capacity for language as proposed by Chomsky.",
+      "answer": "12 months",
+      "explanation": "The correct answer is 12 months, as this is the age when most children achieve the milestone of walking independently. The other options are incorrect because walking typically does not occur at 6 months, and while some children may walk by 18 or 24 months, it is not the average milestone age.",
       "kn": "KN21",
       "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
       "difficulty": "medium",
-      "quality_comment": "The question is well-constructed with plausible distractors that distinguish between major theories of language development.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Language Development.json",
-      "domain": 2,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Language Development.json::0",
+      "quality_comment": "The question is clear and tests knowledge of a specific developmental milestone.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Body Growth.json",
+      "domain": 21,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Body Growth.json::4",
       "scored": true
     },
     {

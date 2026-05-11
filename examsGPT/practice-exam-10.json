@@ -27,7 +27,8 @@
     "generatedAt": "2026-03-25T19:54:22.240Z",
     "source": "questionsGPT",
     "blueprint": "Kns.md",
-    "generator": "scripts/assemble-questionsgpt-exams.mjs"
+    "generator": "scripts/assemble-questionsgpt-exams.mjs",
+    "lastSurgicalFix": "2026-05-10T02:40:10.914Z"
   },
   "questions": [
     {
@@ -136,19 +137,19 @@
       "is_org_psych": false
     },
     {
-      "id": 6,
-      "question": "In a crisis situation, what is the primary ethical obligation of a psychologist when offering help?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 1 and 2.json::25",
+      "question": "According to APA's ethical decision-making model described by Fisher (2022), what step comes immediately after identifying relevant laws, regulations, and institutional policies?",
       "options": [
-        "To provide assistance only if they are being compensated.",
-        "To act in the best interest of the individual in crisis, even if it means breaching confidentiality.",
-        "To ensure that their intervention does not violate any laws.",
-        "To refer the individual to another professional immediately."
+        "Consider the perspectives of affected stakeholders",
+        "Identify the ethical problem",
+        "Monitor and evaluate results of the action plan",
+        "Develop and implement an action plan"
       ],
-      "correct_answer": "To act in the best interest of the individual in crisis, even if it means breaching confidentiality.",
-      "explanation": "The correct answer emphasizes the ethical obligation to prioritize the well-being of the individual in crisis, which may necessitate breaching confidentiality. The other options do not align with the ethical imperative to provide immediate help.",
+      "correct_answer": "Consider the perspectives of affected stakeholders",
+      "explanation": "1. \"Consider the perspectives of affected stakeholders\" is the correct answer because it follows the identification of relevant laws, regulations, and institutional policies in Fisher's (2022) ethical decision-making model. This step emphasizes the importance of understanding how the decision will impact various stakeholders, such as clients, colleagues, and the community, ensuring that their perspectives are taken into account before proceeding with any actions.\n\n2. \n- \"Identify the ethical problem\" is incorrect because this step occurs first in the decision-making process, setting the foundation for the subsequent steps.\n- \"Monitor and evaluate results of the action plan\" is wrong as it is the final step in the model, focusing on assessing the outcomes after the action has been implemented rather than before developing an action plan.\n- \"Develop and implement an action plan\" is incorrect because it comes after considering the perspectives of stakeholders; this step involves creating a specific course of action based on the gathered information and stakeholder input.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
       "knId": "KN65",
-      "source_file": "8 Standards 1 and 2.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 1 and 2.json",
       "source_folder": "8 Ethics",
       "difficulty": "medium",
       "question_type": "standard",
@@ -220,19 +221,19 @@
       "is_org_psych": false
     },
     {
-      "id": 10,
-      "question": "Which supervision model focuses on understanding and integrating the supervisor and supervisee's interpersonal dynamics to improve therapy outcomes?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Family and Group.json::16",
+      "question": "Within Bowen’s family systems theory, what does the 'family projection process' describe?",
       "options": [
-        "Psychodynamic model",
-        "Developmental model",
-        "Integrative model",
-        "Behavioral model"
+        "Parents projecting their emotional immaturity onto children, lowering the children's level of differentiation",
+        "Children forming triangles with their parents to reduce parental conflicts",
+        "The transmission of family secrets across generations",
+        "The process of establishing clear family boundaries between subsystems"
       ],
-      "correct_answer": "Psychodynamic model",
-      "explanation": "1. The **psychodynamic model** is the correct answer because it emphasizes understanding and integrating the interpersonal dynamics between the supervisor and supervisee. This model focuses on the relational aspects of supervision, including transference and countertransference, which can significantly impact therapy outcomes by enhancing the supervisee's self-awareness and therapeutic effectiveness.\n\n2. The **developmental model** is incorrect because it primarily focuses on the growth and progression of the supervisee's skills and competencies over time, rather than the interpersonal dynamics between supervisor and supervisee. The **integrative model** is not the correct choice as it aims to combine various theoretical approaches and techniques in supervision, without specifically emphasizing the understanding of interpersonal dynamics. Lastly, the **behavioral model** is wrong because it concentrates on observable behaviors and the application of behavioral techniques in supervision, rather than exploring the deeper relational aspects that influence therapeutic outcomes.",
+      "correct_answer": "Parents projecting their emotional immaturity onto children, lowering the children's level of differentiation",
+      "explanation": "1. The correct answer, \"Parents projecting their emotional immaturity onto children, lowering the children's level of differentiation,\" accurately reflects Bowen's concept of the family projection process. This process occurs when parents, due to their own emotional struggles, project their unresolved issues onto their children, which results in the children developing lower levels of differentiation. As a consequence, these children may become more emotionally fused with their parents, perpetuating a cycle of emotional immaturity within the family.\n\n2. The first incorrect option, \"Children forming triangles with their parents to reduce parental conflicts,\" is wrong because it describes the concept of emotional triangles, not the family projection process. The second option, \"The transmission of family secrets across generations,\" inaccurately refers to the concept of multigenerational transmission, which involves the passing down of emotional processes rather than secrets. Lastly, the option \"The process of establishing clear family boundaries between subsystems\" is incorrect because it pertains to structural family therapy's focus on boundaries and subsystems, rather than Bowen's family projection process.",
       "domain": "Domain 6: Treatment & Intervention",
-      "knId": "KN52",
-      "source_file": "6 Prevention and Consultation.json",
+      "knId": "KN46",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Family and Group.json",
       "source_folder": "6 Clinical Interventions",
       "difficulty": "medium",
       "question_type": "standard",
@@ -304,19 +305,19 @@
       "is_org_psych": false
     },
     {
-      "id": 14,
-      "question": "According to the two-factor theory of emotion, which two components are essential for the experience of emotion?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Stress and Emotion.json::1",
+      "question": "According to the James-Lange theory of emotion, which of the following statements is true?",
       "options": [
-        "Cognitive appraisal and emotional expression",
-        "Behavioral response and physiological arousal",
-        "Physiological arousal and cognitive labeling",
-        "Cognitive labeling and emotional suppression"
+        "Emotions are experienced before physiological changes occur.",
+        "Physiological changes occur and then lead to emotional experiences.",
+        "Emotions are solely based on cognitive appraisal.",
+        "Physiological responses have no impact on emotional experiences."
       ],
-      "correct_answer": "Physiological arousal and cognitive labeling",
-      "explanation": "The two-factor theory of emotion posits that emotion is based on physiological arousal followed by cognitive labeling of that arousal. The other options do not accurately reflect the components of this theory.",
+      "correct_answer": "Physiological changes occur and then lead to emotional experiences.",
+      "explanation": "The James-Lange theory posits that physiological responses precede and inform emotional experiences. The other options misrepresent the theory's core premise.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
       "knId": "KN10",
-      "source_file": "2 Stress and Emotion.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Stress and Emotion.json",
       "source_folder": "2 Learning and Memory",
       "difficulty": "hard",
       "question_type": "standard",
@@ -346,19 +347,19 @@
       "is_org_psych": false
     },
     {
-      "id": 16,
-      "question": "What is a common complaint that interns have about their supervisors?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json::68",
+      "question": "Which of the following is true regarding telepsychology supervision according to APA guidelines?",
       "options": [
-        "Inconsistent scheduling of sessions",
-        "Too much supervision",
-        "Lack of feedback on performance",
-        "Overly supportive relationships"
+        "Telepsychology supervision can constitute 100% of a supervisee's supervision at any practicum site.",
+        "Interjurisdictional telepsychology supervision is permitted under all circumstances.",
+        "Supervisors must verify supervisee's identity at the start of each telepsychology supervision contact.",
+        "There are no specific risks or limitations to discuss with supervisees during telepsychology supervision."
       ],
-      "correct_answer": "Lack of feedback on performance",
-      "explanation": "Interns often express dissatisfaction with the lack of constructive feedback, which is crucial for their development. The other options do not typically reflect common complaints; interns generally appreciate guidance but may feel overwhelmed by excessive supervision or inconsistent scheduling.",
+      "correct_answer": "Supervisors must verify supervisee's identity at the start of each telepsychology supervision contact.",
+      "explanation": "1. The statement \"Supervisors must verify supervisee's identity at the start of each telepsychology supervision contact\" is correct because the APA guidelines emphasize the importance of ensuring that supervisors confirm the identity of supervisees to maintain the integrity and security of the supervision process. This verification is crucial to uphold confidentiality and protect client welfare in telepsychology settings.\n\n2. The first incorrect option, \"Telepsychology supervision can constitute 100% of a supervisee's supervision at any practicum site,\" is wrong because the guidelines specify that telepsychology supervision should not account for more than 50% of a supervisee’s supervision at any given practicum site. The second incorrect option, \"Interjurisdictional telepsychology supervision is permitted under all circumstances,\" is incorrect as the guidelines state that such supervision is not allowed except in emergency situations, highlighting the need for jurisdictional compliance. Lastly, the option \"There are no specific risks or limitations to discuss with supervisees during telepsychology supervision\" is incorrect because the guidelines explicitly require supervisors to inform supervisees about the potential risks and limitations associated with telepsychology supervision, including issues related to confidentiality, security, and privacy.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
       "knId": "KN70",
-      "source_file": "8 Practice Issues.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json",
       "source_folder": "8 Ethics",
       "difficulty": "medium",
       "question_type": "standard",
@@ -661,40 +662,40 @@
       "is_org_psych": false
     },
     {
-      "id": 31,
-      "question": "Which of the following is a protective factor against adolescent substance use?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Body Growth.json::20",
+      "question": "Which of the following scenarios best illustrates a protective factor that buffers the adverse effect of stressful life events on adolescent substance use?",
       "options": [
-        "Parental disapproval of substance use",
-        "Exposure to stressful life events",
-        "Affiliation with substance-involved peers",
-        "Poor academic achievement"
+        "A teen with supportive parents who monitors their social activities",
+        "A teen with a history of depression and anxiety",
+        "A teen affiliated with deviant peers using substances",
+        "A teen exposed to multiple family stressors without support"
       ],
-      "correct_answer": "Parental disapproval of substance use",
-      "explanation": "1. \"Parental disapproval of substance use\" is the correct answer because it serves as a protective factor that can help deter adolescents from engaging in substance use. Research indicates that supportive parenting and clear disapproval of substance use can buffer the negative effects of risk factors, such as peer influence and mental health issues, thus promoting healthier choices among adolescents.\n\n2. The option \"Affiliation with substance-involved peers\" is incorrect because associating with peers who engage in substance use increases the likelihood of an adolescent using substances themselves, acting as a risk factor rather than a protective factor. \"Poor academic achievement\" is also incorrect, as it is a risk factor associated with higher rates of substance use, indicating that academic struggles can lead to increased vulnerability to substance abuse. Lastly, \"Exposure to stressful life events\" is wrong because such exposure is a known risk factor that can contribute to higher rates of substance use among adolescents, as it may lead to coping through substance use rather than providing any protective benefit.",
+      "correct_answer": "A teen with supportive parents who monitors their social activities",
+      "explanation": "1. \"A teen with supportive parents who monitors their social activities\" is the correct answer because supportive parenting is identified as a protective factor against adolescent substance use. According to the reference material, protective factors include parental disapproval of substance use and supportive parenting, which can buffer the adverse effects of stressful life events on a teen's likelihood of engaging in substance use.\n\n2. The option \"A teen with a history of depression and anxiety\" is incorrect because mental health problems, including depression and anxiety, are considered risk factors for substance abuse rather than protective factors. \"A teen affiliated with deviant peers using substances\" is wrong because association with deviant peers is a risk factor that increases the likelihood of substance use, not a protective factor. Lastly, \"A teen exposed to multiple family stressors without support\" is incorrect as the lack of support in the face of stressors heightens the risk for substance abuse, making it a risk factor rather than a protective one.",
       "domain": "Domain 4: Growth & Lifespan Development",
       "knId": "KN27",
-      "source_file": "4 Body Growth.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Body Growth.json",
       "source_folder": "4 Development",
-      "difficulty": "easy",
+      "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
       "type": "standard",
       "is_org_psych": false
     },
     {
-      "id": 32,
-      "question": "Which attribution style is most commonly associated with the maintenance of depression?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Why People Do Things.json::1",
+      "question": "Dr. Patel is running late for a supervision meeting and attributes her tardiness to unexpected traffic. However, when her supervisee arrives late the following week, Dr. Patel assumes the supervisee is irresponsible. This pattern of attributing one's own behavior to situational factors while attributing others' behavior to dispositional factors is known as:",
       "options": [
-        "Pessimistic attribution style",
-        "Situational attribution style",
-        "Global attribution style",
-        "Optimistic attribution style"
+        "The fundamental attribution error",
+        "The actor-observer effect",
+        "The self-serving bias",
+        "The ultimate attribution error"
       ],
-      "correct_answer": "Pessimistic attribution style",
-      "explanation": "The pessimistic attribution style is correct as it involves attributing negative events to internal, stable, and global factors, which is linked to the maintenance of depression. The other options do not reflect the same negative explanatory patterns associated with depression.",
+      "correct_answer": "The actor-observer effect",
+      "explanation": "The actor-observer effect, described by Jones and Nisbett (1971), is the tendency to attribute our own behaviors to situational factors but others' behaviors to dispositional (personality) factors. The key distinction from the fundamental attribution error is that actor-observer explicitly contrasts how we explain OUR OWN behavior versus OTHERS' behavior for the same type of event. The fundamental attribution error refers only to overweighting dispositional factors when explaining others' behavior, without the self-other comparison. The self-serving bias specifically involves taking credit for successes and blaming failures on external factors—it's about successes vs. failures, not self vs. other. The ultimate attribution error extends attribution biases to in-group vs. out-group dynamics.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
       "knId": "KN14",
-      "source_file": "3 Why People Do Things.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Why People Do Things.json",
       "source_folder": "3 Social Psychology",
       "difficulty": "hard",
       "question_type": "standard",
@@ -1165,20 +1166,20 @@
       "is_org_psych": true
     },
     {
-      "id": 55,
-      "question": "A researcher conducting a study on the effectiveness of a new therapeutic intervention inadvertently provides more encouraging nonverbal cues to participants in the treatment group than to those in the control group. This pattern of behavior, in which the researcher's expectations subtly influence participant responses, is BEST described as:",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Memory.json::42",
+      "question": "According to Bandura's social cognitive theory, which of the following is NOT one of the four mediational processes required for observational learning?",
       "options": [
-        "The Hawthorne effect",
-        "The Rosenthal effect",
-        "Observer bias",
-        "Demand characteristics"
+        "Attention",
+        "Encoding",
+        "Retention",
+        "Motivation"
       ],
-      "correct_answer": "The Rosenthal effect",
-      "explanation": "The Rosenthal effect (also called experimenter expectancy effect) refers to subtle cues or clues transmitted by the experimenter that influence participant behavior in the direction of the experimenter's hypothesis. This is distinct from the Hawthorne effect (behavior change due to awareness of being observed), demand characteristics (cues that inform participants about what behavior is expected, which come from the experimental situation rather than the experimenter specifically), and observer bias (systematic errors in recording or interpreting data, rather than influencing participant behavior).",
+      "correct_answer": "Encoding",
+      "explanation": "1. **Why \"Encoding\" is the Correct Answer**: \"Encoding\" is the correct answer because it is not one of the four mediational processes identified by Bandura in his social cognitive theory. The four processes are attention, retention, production, and motivation, which describe the steps necessary for observational learning to occur. Encoding, while related to memory processes, is not explicitly mentioned as a mediational process in Bandura's framework.\n\n2. **Why Each Incorrect Option is Wrong**:\n   - **Attention**: Attention is essential because the learner must notice and focus on the model's behavior for observational learning to take place.\n   - **Retention**: Retention refers to the learner's ability to store information about the model's behavior in memory, which is crucial for later imitation.\n   - **Motivation**: Motivation is necessary as it determines whether the learner is willing to perform the observed behavior, influenced by various forms of reinforcement.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
-      "knId": "KN6",
-      "source_file": "7 Research Designs.json",
-      "source_folder": "7 Research and Stats",
+      "knId": "KN7",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Memory.json",
+      "source_folder": "2 Learning and Memory",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
@@ -1417,19 +1418,19 @@
       "is_org_psych": true
     },
     {
-      "id": 67,
-      "question": "In the context of gender identity theories, what is the sequence of gender role development according to social learning theory?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Temperament and Personality.json::6",
+      "question": "Which of the following best describes the correspondence between Freud's and Erikson's stages of development?",
       "options": [
-        "Observation, reinforcement, imitation",
-        "Observation, imitation, reinforcement",
-        "Reinforcement, observation, imitation",
-        "Imitation, reinforcement, observation"
+        "Freud's stages focus on sexual development while Erikson's focus on social relationships.",
+        "Both theorists propose identical stages of development.",
+        "Erikson's stages are a direct extension of Freud's psychosexual stages.",
+        "Freud's stages are more relevant to adult development than Erikson's."
       ],
-      "correct_answer": "Observation, imitation, reinforcement",
-      "explanation": "Social learning theory posits that children learn gender roles through observing others, imitating their behaviors, and receiving reinforcement for gender-appropriate behaviors. The other sequences misrepresent the order of these processes.",
+      "correct_answer": "Freud's stages focus on sexual development while Erikson's focus on social relationships.",
+      "explanation": "Freud's psychosexual stages emphasize sexual development, while Erikson's psychosocial stages emphasize social relationships and identity. The other options misrepresent the theories.",
       "domain": "Domain 4: Growth & Lifespan Development",
-      "knId": "KN24",
-      "source_file": "4 Temperament and Personality.json",
+      "knId": "KN21",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Temperament and Personality.json",
       "source_folder": "4 Development",
       "difficulty": "medium",
       "question_type": "standard",
@@ -1522,19 +1523,19 @@
       "is_org_psych": false
     },
     {
-      "id": 72,
-      "question": "In rural settings, what is a primary concern regarding the scope of practice for psychologists?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 9 and 10.json::11",
+      "question": "What ethical considerations must psychologists keep in mind when administering psychological tests?",
       "options": [
-        "Availability of advanced technology",
-        "High demand for specialized services",
-        "Limited access to supervision and consultation",
-        "Excessive competition among practitioners"
+        "Tests should only be administered if the psychologist is familiar with the client.",
+        "Tests must be used for their intended purpose and with established validity.",
+        "Psychologists can modify tests as they see fit.",
+        "Tests can be administered without supervision."
       ],
-      "correct_answer": "Limited access to supervision and consultation",
-      "explanation": "In rural settings, psychologists often face challenges related to limited access to supervision and consultation, which can impact their practice and professional development. The other options do not accurately reflect the primary concerns in rural psychology practice.",
+      "correct_answer": "Tests must be used for their intended purpose and with established validity.",
+      "explanation": "The correct answer emphasizes the ethical obligation to use tests appropriately and based on established research. The other options either suggest unethical practices or misunderstand the requirements for test administration.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
-      "knId": "KN66",
-      "source_file": "8 Practice Issues.json",
+      "knId": "KN61",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 9 and 10.json",
       "source_folder": "8 Ethics",
       "difficulty": "hard",
       "question_type": "standard",
@@ -1648,19 +1649,19 @@
       "is_org_psych": false
     },
     {
-      "id": 78,
-      "question": "Which of the following criteria is NOT typically considered in child custody decision-making according to family law?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 9 and 10.json::0",
+      "question": "A graduate student in a forensic psychology program obtains a copy of a widely used intelligence test and posts several test items on a professional forum to discuss scoring controversies. Which of the following BEST describes the ethical and legal status of this action?",
       "options": [
-        "The child's relationship with each parent",
-        "The financial stability of each parent",
-        "The parent's social media presence",
-        "The child's preference if they are of sufficient age"
+        "This is ethically acceptable because the purpose is educational and promotes professional discussion",
+        "This is ethically acceptable as long as the student removes the items if the test publisher requests it",
+        "This violates ethical standards regarding test security because distributing secure test materials undermines test integrity",
+        "This is only a violation if the student profits financially from distributing the materials"
       ],
-      "correct_answer": "The parent's social media presence",
-      "explanation": "The child's relationship with each parent, financial stability, and the child's preference are all relevant factors in custody decisions. However, a parent's social media presence is not a standard criterion considered in custody evaluations.",
+      "correct_answer": "This violates ethical standards regarding test security because distributing secure test materials undermines test integrity",
+      "explanation": "Standard 9.11 requires psychologists to make reasonable efforts to maintain the integrity and security of test materials. Posting actual test items from a secure, copyrighted instrument on a public or semi-public forum compromises test security and potentially violates copyright law. Once test items are exposed, the validity of the measure is threatened for all future examinees. Option A is wrong because educational purpose does not override the obligation to maintain test security. Option B is wrong because the ethical violation occurs at the point of distribution, not only if the publisher objects. Option D is wrong because the prohibition on distributing secure test materials applies regardless of financial gain.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
-      "knId": "KN65",
-      "source_file": "8 Practice Issues.json",
+      "knId": "KN62",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 9 and 10.json",
       "source_folder": "8 Ethics",
       "difficulty": "medium",
       "question_type": "standard",
@@ -1753,19 +1754,19 @@
       "is_org_psych": false
     },
     {
-      "id": 83,
-      "question": "In the context of bipolar disorder, which of the following statements accurately describes the difference between a mixed episode and a manic episode according to DSM-5-TR criteria?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Sex and Gender.json::7",
+      "question": "Which of the following criteria must be met for a diagnosis of pedophilic disorder according to DSM-5-TR?",
       "options": [
-        "A mixed episode is characterized by the absence of irritability, while a manic episode often includes it.",
-        "A mixed episode lasts for at least one week, while a manic episode can last for as little as four days.",
-        "A mixed episode requires hospitalization, while a manic episode does not.",
-        "A mixed episode includes both manic and depressive symptoms occurring simultaneously, while a manic episode consists only of elevated mood and increased energy."
+        "Sexual arousal focused on children under 16, with onset before age 18",
+        "Recurrent sexual arousal involving children 13 years or younger, with the individual at least 16 years old and five years older than the child",
+        "Sexual attraction to prepubescent and adolescent children without acting on urges",
+        "Persistent distress caused by urges involving consenting underage partners"
       ],
-      "correct_answer": "A mixed episode includes both manic and depressive symptoms occurring simultaneously, while a manic episode consists only of elevated mood and increased energy.",
-      "explanation": "A mixed episode is defined by the presence of both manic and depressive symptoms at the same time, whereas a manic episode is characterized by elevated mood and increased energy without concurrent depressive symptoms.",
+      "correct_answer": "Recurrent sexual arousal involving children 13 years or younger, with the individual at least 16 years old and five years older than the child",
+      "explanation": "1. The correct answer, \"Recurrent sexual arousal involving children 13 years or younger, with the individual at least 16 years old and five years older than the child,\" aligns with the DSM-5-TR criteria for pedophilic disorder. It specifies that the individual must experience recurrent and intense sexual arousal related to fantasies, urges, or behaviors involving sexual activity with children 13 years of age or younger, and the individual must be at least 16 years old and at least five years older than the child to meet the diagnostic criteria.\n\n2. The first incorrect option, \"Sexual arousal focused on children under 16, with onset before age 18,\" is wrong because it inaccurately includes children up to age 15 and does not specify the age difference required between the individual and the child. The second incorrect option, \"Sexual attraction to prepubescent and adolescent children without acting on urges,\" is incorrect because the diagnosis requires that the individual has acted on these urges or experienced significant distress due to them. The third incorrect option, \"Persistent distress caused by urges involving consenting underage partners,\" is incorrect because the diagnosis does not consider consent from underage individuals; it focuses on the individual's arousal and actions toward children who are not able to consent.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
       "knId": "KN36",
-      "source_file": "5 Mood.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Sex and Gender.json",
       "source_folder": "5 Diagnosis",
       "difficulty": "hard",
       "question_type": "standard",
@@ -1984,19 +1985,19 @@
       "is_org_psych": false
     },
     {
-      "id": 94,
-      "question": "A psychologist suspects that a 7-year-old client is being physically abused by a parent. Before filing a report with child protective services, the psychologist wants to contact the child's pediatrician for corroborating information. What does the psychologist need in order to contact the pediatrician?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 1 and 2.json::11",
+      "question": "What must a psychologist demonstrate to establish legal liability in a malpractice case?",
       "options": [
-        "A court order specifically authorizing inter-provider communication about the suspected abuse",
-        "Nothing—mandated reporting laws automatically waive all consent requirements for any communication related to suspected abuse",
-        "Only verbal consent from the child, since the child is the identified client",
-        "A signed release of information from the non-abusing parent or legal guardian authorizing contact with the pediatrician"
+        "The client must show emotional distress.",
+        "The psychologist must have a personal relationship with the client.",
+        "The psychologist must have breached a duty of care that caused measurable harm.",
+        "The client must have a prior history of mental health issues."
       ],
-      "correct_answer": "A signed release of information from the non-abusing parent or legal guardian authorizing contact with the pediatrician",
-      "explanation": "Mandated reporting laws require reporting suspected abuse to protective services—they do not broadly waive confidentiality for all communications with any party. Contacting the pediatrician is a separate clinical action that still requires proper authorization (a release of information). Option A incorrectly assumes mandated reporting laws eliminate all consent requirements for any abuse-related communication. Option C is overly restrictive—a court order is not required for routine provider-to-provider communication when proper consent exists. Option D is incorrect because minors generally cannot provide their own consent for release of information; the parent or legal guardian holds that right.",
+      "correct_answer": "The psychologist must have breached a duty of care that caused measurable harm.",
+      "explanation": "The correct answer reflects the essential elements required to establish legal liability in a malpractice case, specifically the breach of duty and resulting harm. The other options do not accurately represent the legal requirements for establishing malpractice.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
       "knId": "KN63",
-      "source_file": "8 Standards 3 and 4.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 1 and 2.json",
       "source_folder": "8 Ethics",
       "difficulty": "hard",
       "question_type": "standard",
@@ -2005,24 +2006,24 @@
       "is_org_psych": false
     },
     {
-      "id": 95,
-      "question": "A psychologist is evaluating a cognitive ability test that has a standard deviation of 15. She notes that the standard error of measurement (SEM) for this test could theoretically range from:",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Cognitive Tests.json::5",
+      "question": "What does test-retest reliability measure in psychological testing?",
       "options": [
-        "0.0 to 15",
-        "0.0 to 1.0",
-        "0.0 to 225",
-        "-15 to +15"
+        "The consistency of a test's results over time",
+        "The accuracy of a test in predicting outcomes",
+        "The degree to which a test measures what it claims to measure",
+        "The agreement between different raters scoring the same test"
       ],
-      "correct_answer": "0.0 to 15",
-      "explanation": "The SEM ranges from 0.0 to the standard deviation of the test (SDx). When reliability is perfect (1.0), SEM = SD × √(1-1.0) = 0. When reliability is 0, SEM = SD × √(1-0) = SD. Therefore, for a test with SD = 15, SEM ranges from 0 to 15. Option A (0 to 1.0) confuses SEM range with the range of the reliability coefficient itself. Option C (-15 to +15) incorrectly applies the range of a correlation coefficient. Option D (0 to 225) confuses SEM with variance (SD²).",
+      "correct_answer": "The consistency of a test's results over time",
+      "explanation": "Test-retest reliability specifically assesses how consistent a test's results are when administered at different times. The other options refer to different types of reliability or validity.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
       "knId": "KN29",
-      "source_file": "5 Items and Reliability.json",
-      "source_folder": "5 Test Construction",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Cognitive Tests.json",
+      "source_folder": "5 Assessment",
       "difficulty": "hard",
-      "question_type": "difficult",
+      "question_type": "standard",
       "isScored": false,
-      "type": "experimental",
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -2404,19 +2405,19 @@
       "is_org_psych": false
     },
     {
-      "id": 114,
-      "question": "Which assessment theory emphasizes the integration of historical, contextual, and systemic factors in understanding mood disorders?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Acting Out.json::11",
+      "question": "Which theory best explains the difference between life-course-persistent and adolescence-limited types of conduct disorder in terms of their underlying causes and developmental pathways?",
       "options": [
-        "Psychodynamic formulation",
-        "Behavioral activation model",
-        "Classical test theory",
-        "Biopsychosocial model"
+        "Biosocial theory focusing on gene-environment interactions",
+        "Moffitt’s developmental taxonomy distinguishing neuropsychological deficits and social maturity gaps",
+        "Social learning theory emphasizing modeling and reinforcement",
+        "Attachment theory focusing on early caregiver relationships"
       ],
-      "correct_answer": "Biopsychosocial model",
-      "explanation": "1. The \"Biopsychosocial model\" is the correct answer because it emphasizes the integration of biological, psychological, and social factors, including historical and contextual elements, in understanding mood disorders such as bipolar and depressive disorders. This model aligns with the etiology of these disorders, which includes heredity, environmental influences, and cognitive-behavioral factors, thereby providing a comprehensive framework for assessment and treatment.\n\n2. \n- **Classical test theory**: This theory focuses on the reliability and validity of psychological tests, emphasizing measurement rather than the integration of contextual and systemic factors in understanding mood disorders.\n- **Behavioral activation model**: This model primarily centers on changing behaviors that contribute to depression, focusing on the present and immediate factors rather than the historical and contextual influences on mood disorders.\n- **Psychodynamic formulation**: While this approach considers unconscious processes and early experiences, it does not systematically integrate biological and social factors, making it less comprehensive than the biopsychosocial model in understanding mood disorders.",
+      "correct_answer": "Moffitt’s developmental taxonomy distinguishing neuropsychological deficits and social maturity gaps",
+      "explanation": "1. **Correct Answer Explanation:** \"Moffitt’s developmental taxonomy distinguishing neuropsychological deficits and social maturity gaps\" is the correct answer because it specifically outlines the different underlying causes for life-course-persistent and adolescence-limited types of conduct disorder. Moffitt posits that the life-course-persistent type is associated with neuropsychological deficits that lead to a consistent pattern of antisocial behavior starting in early childhood, whereas the adolescence-limited type arises from a maturity gap between biological and social maturity, resulting in temporary antisocial behaviors during adolescence.\n\n2. **Incorrect Options Explanation:**\n   - **Biosocial theory focusing on gene-environment interactions:** This theory addresses the interplay between genetic predispositions and environmental factors but does not specifically differentiate the developmental pathways of the two types of conduct disorder as Moffitt’s taxonomy does.\n   - **Social learning theory emphasizing modeling and reinforcement:** While this theory explains behavior acquisition through observation and reinforcement, it does not account for the neuropsychological aspects and the distinct developmental trajectories proposed by Moffitt.\n   - **Attachment theory focusing on early caregiver relationships:** This theory highlights the importance of early relationships in emotional and social development but does not specifically address the neuropsychological deficits or the maturity gap that characterize the life-course-persistent and adolescence-limited types of conduct disorder.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
       "knId": "KN30",
-      "source_file": "5 Mood.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Acting Out.json",
       "source_folder": "5 Diagnosis",
       "difficulty": "medium",
       "question_type": "standard",
@@ -2572,19 +2573,19 @@
       "is_org_psych": true
     },
     {
-      "id": 122,
-      "question": "A forensic psychologist consulting with a prison treatment team is asked which type of consequence most effectively modifies behavior in inmates with antisocial personality disorder (ASPD). Drawing on the treatment literature for personality disorders, the consultant would most accurately advise that this population is most responsive to consequences that are:",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 CBT.json::31",
+      "question": "Which of the following statements best illustrates the impact of cognitive schemas on an individual's perception of reality in cognitive-behavioral therapy?",
       "options": [
-        "Internally generated through enhanced empathy training and restorative justice exercises",
-        "Delayed punishments delivered after a structured reflection period to promote insight",
-        "Immediate, concrete, and externally applied, such as loss of privileges tied directly to specific behaviors",
-        "Socially mediated through confrontation by prosocial peers in therapeutic community settings"
+        "Cognitive schemas are flexible and change with every new experience.",
+        "Individuals with negative cognitive schemas may misinterpret neutral situations as threatening.",
+        "Cognitive schemas only affect thoughts and have no bearing on behavior.",
+        "Positive cognitive schemas guarantee a person's happiness and success."
       ],
-      "correct_answer": "Immediate, concrete, and externally applied, such as loss of privileges tied directly to specific behaviors",
-      "explanation": "Individuals with ASPD characteristically lack internalized guilt, empathy, and sensitivity to delayed consequences. The treatment literature consistently indicates they are most responsive to immediate, external, and concrete consequences rather than internally mediated or delayed ones. Option A is incorrect because ASPD is associated with profound empathy deficits that severely limit the effectiveness of empathy-based interventions. Option B is incorrect because delayed consequences are far less effective given ASPD-related deficits in connecting future outcomes to present behavior. Option D is incorrect because peer confrontation alone, without clear external contingencies, is insufficient to modify behavior in this population.",
+      "correct_answer": "Individuals with negative cognitive schemas may misinterpret neutral situations as threatening.",
+      "explanation": "1. The statement \"Individuals with negative cognitive schemas may misinterpret neutral situations as threatening\" is correct because cognitive schemas serve as core beliefs that influence how individuals interpret experiences. Negative cognitive schemas lead to distorted perceptions, causing individuals to view neutral or ambiguous situations through a lens of negativity, which can result in anxiety and emotional distress. This aligns with Beck's assertion that different disorders are associated with distinct maladaptive schemas, affecting how individuals respond to various stimuli.\n\n2. The option \"Cognitive schemas are flexible and change with every new experience\" is incorrect because cognitive schemas are typically stable and enduring, often requiring significant therapeutic intervention to modify. The statement \"Cognitive schemas only affect thoughts and have no bearing on behavior\" is wrong as cognitive schemas influence both thoughts and behaviors, leading to maladaptive emotional responses and actions. Lastly, \"Positive cognitive schemas guarantee a person's happiness and success\" is misleading because while positive schemas can promote well-being, they do not ensure happiness or success, as various external factors and challenges can still impact an individual's life.",
       "domain": "Domain 6: Treatment & Intervention",
       "knId": "KN43",
-      "source_file": "6 CBT.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 CBT.json",
       "source_folder": "6 Clinical Interventions",
       "difficulty": "hard",
       "question_type": "standard",
@@ -2782,24 +2783,24 @@
       "is_org_psych": false
     },
     {
-      "id": 132,
-      "question": "A researcher reviewing the common factors literature concludes that one therapist-offered condition consistently accounts for more outcome variance than any specific treatment technique across diverse presenting problems and theoretical orientations. Which variable has been most robustly identified in this role by the empirical literature?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 CBT.json::12",
+      "question": "A sex therapist introduces sensate focus exercises to a couple in which the male partner experiences erectile dysfunction attributed to performance anxiety. The therapist explains that intercourse is temporarily prohibited and partners are asked to focus exclusively on physical sensation during non-genital touch. Which theoretical construct most directly provides the basis for this intervention?",
       "options": [
-        "Therapist use of strategic self-disclosure to model vulnerability and reduce power differentials",
-        "Years of clinical experience and postdoctoral specialization in the relevant disorder",
-        "Accurate empathy as experienced and reported by the client",
-        "Selection of a treatment protocol empirically validated for the client's specific diagnosis"
+        "Classical conditioning, in which sexual stimuli are systematically re-paired with relaxation rather than anxiety responses",
+        "Elimination of the spectator role, in which anxious self-monitoring and performance evaluation during sexual activity are reduced through attentional redirection",
+        "Stimulus control, in which sexual behavior is restricted to specific situational cues to eliminate conditioned inhibition",
+        "Cognitive restructuring, in which negative automatic thoughts about sexual performance are identified and challenged"
       ],
-      "correct_answer": "Accurate empathy as experienced and reported by the client",
-      "explanation": "The common factors and therapist effect literatures consistently identify accurate empathy — operationalized as the therapist's capacity to understand and communicate understanding of the client's subjective experience — as the most reliably predictive therapist-offered variable for positive outcomes. This finding was first articulated by Carl Rogers and rigorously operationalized by Truax and Carkhuff, whose research showed that empathy, warmth, and genuineness predicted outcomes independently of theoretical orientation. Critically, it is the client's perception of empathy that predicts outcome, not the therapist's self-rated empathy — a distinction that underscores its relational rather than technical nature. Years of experience show surprisingly weak associations with outcome in meta-analyses. Treatment protocol selection reflects specific factors, which account for a smaller proportion of outcome variance than common factors. Strategic self-disclosure has limited empirical support as a primary outcome predictor.",
+      "correct_answer": "Elimination of the spectator role, in which anxious self-monitoring and performance evaluation during sexual activity are reduced through attentional redirection",
+      "explanation": "Masters and Johnson developed sensate focus around their concept of the 'spectator role' — the pattern of anxious self-observation in which individuals monitor and evaluate their own sexual performance during the act rather than experiencing sensation. This self-monitoring disrupts natural arousal and response. Sensate focus redirects attention toward immediate sensory experience, eliminating the evaluative stance. Classical conditioning is peripherally involved but does not capture the primary mechanism, which is attentional rather than associative. Stimulus control involves regulating environmental antecedents of behavior, not attentional processes during the activity. Cognitive restructuring involves explicitly disputing thoughts, which is a distinct, adjunctive technique rather than the theoretical foundation of sensate focus itself.",
       "domain": "Domain 6: Treatment & Intervention",
       "knId": "KN44",
-      "source_file": "6 Prevention and Consultation.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 CBT.json",
       "source_folder": "6 Clinical Interventions",
       "difficulty": "hard",
-      "question_type": "difficult",
+      "question_type": "standard",
       "isScored": false,
-      "type": "experimental",
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -3181,20 +3182,20 @@
       "is_org_psych": false
     },
     {
-      "id": 151,
-      "question": "A county domestic violence program is evaluating which intervention approach produces the lowest recidivism rates among male perpetrators following a spousal assault conviction. Based on the empirical literature, which of the following interventions is most consistently associated with reduced re-offense rates when implemented as part of a coordinated community response?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Sex and Gender.json::1",
+      "question": "Masters and Johnson's sensate focus technique for treating sexual dysfunctions is theoretically classified as which type of intervention?",
       "options": [
-        "Batterer intervention programs combined with legal system monitoring",
-        "Individual psychodynamic therapy exploring early attachment disruptions",
-        "Mandatory arrest followed by incarceration without psychoeducational programming",
-        "Couples therapy targeting communication deficits and conflict resolution skills"
+        "An extinction-based procedure that habituates the anxiety response through repeated exposure",
+        "A counterconditioning technique that uses pleasure to inhibit performance anxiety",
+        "A cognitive restructuring approach that challenges irrational beliefs about sexual performance",
+        "An operant conditioning procedure that reinforces successive approximations of sexual behavior"
       ],
-      "correct_answer": "Batterer intervention programs combined with legal system monitoring",
-      "explanation": "Research indicates that batterer intervention programs (BIPs), particularly when embedded within a coordinated community response involving legal accountability, are associated with the lowest recidivism rates. Couples therapy is contraindicated in active domestic violence situations because it implicitly assigns mutual responsibility for violence, may endanger the victim by surfacing grievances in session, and provides abusers with new information to exploit coercively. Mandatory arrest alone (without psychoeducational follow-through) has shown inconsistent results across studies — Sherman et al.'s research found deterrent effects only for employed batterers. Individual psychodynamic therapy lacks adequate evidence for reducing intimate partner violence recidivism and fails to address the power and control dynamics central to this behavior pattern.",
-      "domain": "Domain 6: Treatment & Intervention",
+      "correct_answer": "A counterconditioning technique that uses pleasure to inhibit performance anxiety",
+      "explanation": "Sensate focus is classified as a counterconditioning intervention. According to the reference material, it 'uses pleasure as the counterconditioning response to inhibit performance anxiety.' Pleasure is elicited through body massages that are discontinued at the first sign of anxiety, and the couple initially abstains from intercourse to reduce performance pressure. Option A is incorrect because sensate focus is not primarily an extinction procedure—it actively pairs a new response (pleasure) with the anxiety-provoking stimulus. Option C is incorrect because sensate focus is a behavioral, not cognitive, technique. Option D is incorrect because sensate focus is based on classical conditioning (counterconditioning), not operant conditioning or shaping.",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
       "knId": "KN44",
-      "source_file": "6 Prevention and Consultation.json",
-      "source_folder": "6 Clinical Interventions",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Sex and Gender.json",
+      "source_folder": "5 Diagnosis",
       "difficulty": "hard",
       "question_type": "standard",
       "isScored": true,
@@ -3349,19 +3350,19 @@
       "is_org_psych": false
     },
     {
-      "id": 159,
-      "question": "According to research on cognitive development and diverse identities (KN24), how can gender-role stereotypes affect children’s cognitive performance in domains such as math and verbal abilities?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Temperament and Personality.json::14",
+      "question": "According to Marcia’s model of adolescent identity development, which identity status is characterized by having experienced a crisis but lacking commitment?",
       "options": [
-        "They contribute to self-fulfilling prophecies where children perform in line with expectations linked to gender roles",
-        "They have no effect on children’s cognitive performance as abilities are biologically predetermined",
-        "They enhance boys’ and girls’ abilities equally through positive reinforcement",
-        "They only affect adults’ attitudes and do not influence children's cognitive skills"
+        "Identity diffusion",
+        "Identity foreclosure",
+        "Identity moratorium",
+        "Identity achievement"
       ],
-      "correct_answer": "They contribute to self-fulfilling prophecies where children perform in line with expectations linked to gender roles",
-      "explanation": "1. The correct answer, \"They contribute to self-fulfilling prophecies where children perform in line with expectations linked to gender roles,\" reflects the impact of gender-role stereotypes on children's cognitive performance. Research indicates that these stereotypes can lead children to internalize expectations about their abilities, particularly in areas like math and verbal skills. For instance, parents may expect sons to excel in math and attribute their successes to innate ability, while daughters may be seen as needing to work harder for the same achievements, leading girls to underestimate their capabilities and become less interested in math.\n\n2. The first incorrect option, \"They have no effect on children’s cognitive performance as abilities are biologically predetermined,\" is wrong because research shows that cognitive abilities are influenced by both biological factors and social constructs, including gender-role stereotypes. The second incorrect option, \"They only affect adults’ attitudes and do not influence children's cognitive skills,\" is incorrect because studies demonstrate that these stereotypes directly impact children's self-perception and performance, not just adult attitudes. Lastly, the option \"They enhance boys’ and girls’ abilities equally through positive reinforcement\" is misleading, as the reinforcement often differs by gender, with boys receiving more encouragement in math and girls potentially receiving less, which can hinder their performance rather than enhance it.",
+      "correct_answer": "Identity moratorium",
+      "explanation": "1. \"Identity moratorium\" is the correct answer because it is defined as the status where individuals have experienced or are experiencing an identity crisis but have not yet made a commitment to a specific identity. This status reflects a period of exploration and uncertainty, where individuals actively search for their identity but have not settled on a definitive path.\n\n2. \"Identity diffusion\" is incorrect because it describes individuals who have neither undergone an identity crisis nor made a commitment to an identity, indicating a lack of exploration altogether. \"Identity foreclosure\" is also incorrect as it refers to individuals who have not experienced an identity crisis but have made a strong commitment to an identity based on the values and beliefs of authority figures, rather than their own exploration. Finally, \"identity achievement\" is incorrect because this status is characterized by individuals who have successfully navigated an identity crisis and made a strong commitment to a specific identity, indicating resolution rather than ongoing exploration.",
       "domain": "Domain 4: Growth & Lifespan Development",
-      "knId": "KN24",
-      "source_file": "4 Cognitive Development.json",
+      "knId": "KN21",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Temperament and Personality.json",
       "source_folder": "4 Development",
       "difficulty": "medium",
       "question_type": "standard",
@@ -3454,19 +3455,19 @@
       "is_org_psych": true
     },
     {
-      "id": 164,
-      "question": "Under the Buckley Amendment, what is a student's right regarding their educational records?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 3 and 4.json::32",
+      "question": "Dr. Wallace has been treating a 22-year-old college student for anxiety. The student's parents, who are paying for therapy, request copies of their daughter's psychological test results. The student has not authorized the release. What should Dr. Wallace do?",
       "options": [
-        "Students can access their records only if they are currently enrolled.",
-        "Students can request to amend their records if they believe they are inaccurate.",
-        "Students can demand that their records be destroyed after graduation.",
-        "Students have no rights to access their records."
+        "Release the results because the parents are financially responsible for treatment",
+        "Release only a summary of results rather than the full test data",
+        "Decline to release the results without the adult client's explicit authorization",
+        "Release the results but remove any sensitive information the client might not want shared"
       ],
-      "correct_answer": "Students can request to amend their records if they believe they are inaccurate.",
-      "explanation": "The correct answer reflects the rights granted under the Buckley Amendment, which allows students to request amendments to their records. The lesson supports this by stating that students have rights concerning their educational records. The other options misrepresent students' rights under the amendment.",
+      "correct_answer": "Decline to release the results without the adult client's explicit authorization",
+      "explanation": "The client is a legal adult (age 22), and regardless of who pays for treatment, confidentiality belongs to the client. Standard 4.01 requires psychologists to take reasonable precautions to protect confidential information, and Standard 9.04 addresses the release of test data. Without the adult client's authorization (or a court order or legal mandate), the psychologist must not release confidential information, including test results, to third parties — even parents who are paying for services. Option A is incorrect because financial responsibility does not confer a right to confidential clinical information about an adult client. Option B is incorrect because even a summary constitutes protected confidential information requiring client authorization. Option D is incorrect because selective redaction still constitutes unauthorized disclosure.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
       "knId": "KN62",
-      "source_file": "8 Standards 7 and 8.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 3 and 4.json",
       "source_folder": "8 Ethics",
       "difficulty": "medium",
       "question_type": "standard",
@@ -3874,19 +3875,19 @@
       "is_org_psych": false
     },
     {
-      "id": 184,
-      "question": "Which form of racism is characterized by subtle, often unconscious negative feelings toward minority groups while maintaining a non-prejudiced self-image and a belief in equality?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Attitudes.json::5",
+      "question": "A predoctoral intern receives two equally attractive internship offers — one at a prestigious clinical training site and one at a highly regarded research-focused site. After accepting the clinical position, the intern tells a colleague one week later: 'The more I think about it, the more I realize the research site would have been too narrow for my long-term goals — clinical training is clearly the stronger choice.' According to cognitive dissonance theory, this post-decisional reevaluation is BEST explained by:",
       "options": [
-        "Symbolic racism",
-        "Overt racism",
-        "Ambivalent racism",
-        "Aversive racism"
+        "Rationalization as a defense mechanism, in which unconscious conflict is managed through logically coherent but post-hoc justifications",
+        "Confirmatory hypothesis testing driven by the self-verification motive to maintain a stable professional identity",
+        "Spreading of alternatives following an approach-approach conflict, in which the chosen option is re-evaluated more positively and the rejected option more negatively to reduce post-decisional dissonance",
+        "Attitude bolstering through an alpha persuasion strategy applied to the intern's own prior decision"
       ],
-      "correct_answer": "Aversive racism",
-      "explanation": "1. **Aversive racism** is the correct answer because it is characterized by individuals who hold a non-prejudiced self-image and a belief in equality while simultaneously harboring subtle, often unconscious negative feelings about minority groups. This form of racism leads to avoidance of interactions with minority members unless the individual can justify their discrimination on a basis other than race, reflecting an internal conflict between egalitarian beliefs and negative feelings.\n\n2. **Symbolic racism** is incorrect because it involves a belief in egalitarianism paired with the perception that minority groups violate traditional values, leading to opposition against policies aimed at promoting equality, rather than subtle negative feelings. **Ambivalent racism** is not the correct answer because it describes individuals who possess both positive and negative attitudes toward minority groups, resulting in emotional tension, rather than solely unconscious negative feelings. **Overt racism** is wrong as it refers to openly hostile and aggressive attitudes toward minority groups, which is a direct contrast to the subtlety and ambiguity of aversive racism.",
+      "correct_answer": "Spreading of alternatives following an approach-approach conflict, in which the chosen option is re-evaluated more positively and the rejected option more negatively to reduce post-decisional dissonance",
+      "explanation": "When two comparably attractive options compete (approach-approach conflict) and a choice must be made, the resulting cognitive dissonance — having forgone the unchosen option's benefits — is typically reduced through 'spreading of alternatives': the chosen option is re-evaluated upward and the unchosen option is re-evaluated downward, increasing the psychological distance between them post-decision. The intern's retrospective criticism of the rejected site ('too narrow') illustrates the downward re-evaluation component. Rationalization as a defense mechanism implies unconscious processing — spreading of alternatives is a conscious cognitive re-evaluation process within dissonance theory. Self-verification theory (Swann) describes actively seeking feedback consistent with the existing self-concept, which is not what is occurring here. Attitude bolstering is an alpha persuasion strategy aimed at strengthening one's own attitude against anticipated counterarguments from others — it is a persuasion concept, not a post-decisional dissonance reduction mechanism.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
-      "knId": "KN20",
-      "source_file": "3 Helping and Hurting.json",
+      "knId": "KN14",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Attitudes.json",
       "source_folder": "3 Social Psychology",
       "difficulty": "hard",
       "question_type": "standard",
@@ -4063,19 +4064,19 @@
       "is_org_psych": false
     },
     {
-      "id": 193,
-      "question": "Which of the following best exemplifies structural racism as defined by the APA?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Attitudes.json::4",
+      "question": "A community health program aims to increase cervical cancer screening rates among women who already believe the procedure is effective but nonetheless fail to schedule appointments. According to the Theory of Planned Behavior, which intervention MOST directly targets the subjective norm component in order to strengthen behavioral intention?",
       "options": [
-        "A teacher treating students unfairly based on race",
-        "Discriminatory hiring practices by a private employer",
-        "Individual holding and expressing overtly racist views",
-        "Laws and policies that create race-based inequalities, such as school funding tied to local property taxes"
+        "Distributing pamphlets with vivid statistics about cervical cancer incidence and mortality to increase perceived susceptibility",
+        "Providing transportation vouchers and extended clinic hours to eliminate logistical barriers to scheduling",
+        "Disseminating messages emphasizing that physicians, family members, and community leaders strongly encourage regular screening",
+        "Offering guided practice in navigating the online scheduling system to build procedural self-efficacy"
       ],
-      "correct_answer": "Laws and policies that create race-based inequalities, such as school funding tied to local property taxes",
-      "explanation": "1. The correct answer, \"Laws and policies that create race-based inequalities, such as school funding tied to local property taxes,\" exemplifies structural racism as defined by the APA because it refers to systemic practices and policies that produce enduring racial disparities. Structural racism encompasses laws and institutional practices that perpetuate inequalities across various domains, including education, as evidenced by funding mechanisms that disadvantage minority communities.\n\n2. The option \"A teacher treating students unfairly based on race\" is incorrect because it describes interpersonal racism, which involves individual behaviors and attitudes rather than systemic practices. \"Individual holding and expressing overtly racist views\" is also incorrect, as this represents overt racism, which is characterized by explicit hostility and discrimination from individuals rather than structural inequalities. Finally, \"Discriminatory hiring practices by a private employer\" is incorrect because it pertains to institutional racism, which is specific to organizational policies rather than broader societal structures that create systemic racial disparities.",
+      "correct_answer": "Disseminating messages emphasizing that physicians, family members, and community leaders strongly encourage regular screening",
+      "explanation": "Subjective norms in the Theory of Planned Behavior reflect what a person believes important referent others think she should do. An intervention communicating that trusted social figures (physicians, family, community leaders) endorse the behavior directly strengthens this component and, through it, behavioral intention. Option A targets perceived severity, a component from the Health Belief Model rather than subjective norms. Option B addresses perceived behavioral control by removing structural barriers. Option D also targets perceived behavioral control by building confidence in one's ability to perform the scheduling behavior. All three TPB components contribute to intention, but only Option C specifically addresses subjective norms.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
-      "knId": "KN20",
-      "source_file": "3 Helping and Hurting.json",
+      "knId": "KN14",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Attitudes.json",
       "source_folder": "3 Social Psychology",
       "difficulty": "medium",
       "question_type": "standard",
@@ -4441,19 +4442,19 @@
       "is_org_psych": false
     },
     {
-      "id": 211,
-      "question": "Which behavior is most likely to be influenced by high achievement motivation?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Stress and Emotion.json::5",
+      "question": "In auditory tasks, what is the primary function of selective attention?",
       "options": [
-        "Seeking out difficult tasks to demonstrate competence",
-        "Choosing tasks based on peer approval",
-        "Avoiding challenging tasks to prevent failure",
-        "Preferring tasks with minimal effort"
+        "To enhance memory retention of all auditory stimuli",
+        "To filter out irrelevant sounds and focus on specific information",
+        "To increase the volume of important sounds",
+        "To improve the clarity of background noise"
       ],
-      "correct_answer": "Seeking out difficult tasks to demonstrate competence",
-      "explanation": "High achievement motivation typically drives individuals to seek out challenging tasks that allow them to demonstrate their competence and skills. The other options reflect avoidance or external validation rather than intrinsic motivation to achieve.",
+      "correct_answer": "To filter out irrelevant sounds and focus on specific information",
+      "explanation": "Selective attention allows individuals to focus on specific auditory information while filtering out irrelevant sounds, which is crucial for effective communication and comprehension. The other options do not accurately describe the function of selective attention.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
       "knId": "KN10",
-      "source_file": "2 Stress and Emotion.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Stress and Emotion.json",
       "source_folder": "2 Learning and Memory",
       "difficulty": "medium",
       "question_type": "standard",
@@ -4714,19 +4715,19 @@
       "is_org_psych": false
     },
     {
-      "id": 224,
-      "question": "On the MMPI-2, fractions of the K scale raw score are added to raw scores on Clinical Scales 1, 4, 7, 8, and 9 before converting to T-scores. A client with a highly elevated K score will therefore receive upwardly adjusted scores on those clinical scales compared to a client with a low K score who gave the same item responses. This procedure reflects the K scale's role as a:",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Career Interests.json::12",
+      "question": "In the context of the Strong Interest Inventory (SII), which scale is primarily used to assess an individual's preferences in work environments and personal styles?",
       "options": [
-        "Suppressor variable that removes irrelevant response-set variance from the clinical scales",
-        "Critical items index that flags individual responses associated with serious psychopathology requiring immediate attention",
-        "Moderator variable that adjusts the relationship between item responses and clinical scale scores based on the respondent's level of defensiveness",
-        "Content scale that provides thematic information about specific symptom clusters endorsed at low frequency"
+        "Basic Interest Scales (BISs)",
+        "General Occupational Themes (GOTs)",
+        "Occupational Scales (OSs)",
+        "Personal Styles Scales (PSSs)"
       ],
-      "correct_answer": "Moderator variable that adjusts the relationship between item responses and clinical scale scores based on the respondent's level of defensiveness",
-      "explanation": "A moderator variable is one that changes the strength or direction of the relationship between a predictor and an outcome. The K scale measures defensiveness—the tendency to deny psychopathology and present oneself favorably. Because defensive respondents suppress elevations on clinical scales, K corrections are added to Scales 1, 4, 7, 8, and 9 to adjust scores upward in proportion to defensiveness level, thereby modifying how item endorsements translate into clinical scale T-scores. A suppressor variable removes shared irrelevant variance between a predictor and an outcome variable, which is not the mechanism here. Content scales (e.g., ANX, DEP) were developed later to measure specific symptom domains and are not correction variables. Critical items are individual responses flagged for clinical review, not a scoring correction mechanism.",
+      "correct_answer": "Personal Styles Scales (PSSs)",
+      "explanation": "1. The **Personal Styles Scales (PSSs)** is the correct answer because it specifically assesses an individual's preferences regarding five personal styles: work style, leadership style, learning environment, risk taking, and team orientation. This scale focuses on how individuals prefer to engage in their work environments and interact with others, making it central to understanding personal styles.\n\n2. The **Basic Interest Scales (BISs)** are incorrect because they provide scores on specific interests related to Holland's six occupational themes rather than personal preferences in work environments. The **General Occupational Themes (GOTs)** are also incorrect as they assess broad occupational themes rather than individual work style preferences. Lastly, the **Occupational Scales (OSs)** are not the correct answer because they focus on the similarity of an examinee's interests to those of individuals in specific occupations, rather than assessing personal styles or preferences directly.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
       "knId": "KN32",
-      "source_file": "5 MMPI.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Career Interests.json",
       "source_folder": "5 Assessment",
       "difficulty": "hard",
       "question_type": "standard",

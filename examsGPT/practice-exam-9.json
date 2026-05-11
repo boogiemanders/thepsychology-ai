@@ -27,7 +27,8 @@
     "generatedAt": "2026-03-25T19:54:22.160Z",
     "source": "questionsGPT",
     "blueprint": "Kns.md",
-    "generator": "scripts/assemble-questionsgpt-exams.mjs"
+    "generator": "scripts/assemble-questionsgpt-exams.mjs",
+    "lastSurgicalFix": "2026-05-10T02:40:11.160Z"
   },
   "questions": [
     {
@@ -94,19 +95,19 @@
       "is_org_psych": false
     },
     {
-      "id": 4,
-      "question": "Which form of racism is characterized by subtle, often unconscious negative feelings toward minority groups while maintaining a non-prejudiced self-image and a belief in equality?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Why People Do Things.json::5",
+      "question": "Which of the following best describes how gender stereotypes can influence the attribution of performance in academic settings?",
       "options": [
-        "Symbolic racism",
-        "Aversive racism",
-        "Ambivalent racism",
-        "Overt racism"
+        "Performance is attributed to innate ability regardless of gender.",
+        "Performance is often attributed to effort, particularly for males.",
+        "Performance is frequently attributed to external factors for females.",
+        "Performance is viewed as equally influenced by both internal and external factors for all genders."
       ],
-      "correct_answer": "Aversive racism",
-      "explanation": "1. **Aversive racism** is the correct answer because it is characterized by individuals who hold a non-prejudiced self-image and a belief in equality while simultaneously harboring subtle, often unconscious negative feelings about minority groups. This form of racism leads to avoidance of interactions with minority members unless the individual can justify their discrimination on a basis other than race, reflecting an internal conflict between egalitarian beliefs and negative feelings.\n\n2. **Symbolic racism** is incorrect because it involves a belief in egalitarianism paired with the perception that minority groups violate traditional values, leading to opposition against policies aimed at promoting equality, rather than subtle negative feelings. **Ambivalent racism** is not the correct answer because it describes individuals who possess both positive and negative attitudes toward minority groups, resulting in emotional tension, rather than solely unconscious negative feelings. **Overt racism** is wrong as it refers to openly hostile and aggressive attitudes toward minority groups, which is a direct contrast to the subtlety and ambiguity of aversive racism.",
+      "correct_answer": "Performance is frequently attributed to external factors for females.",
+      "explanation": "The correct answer highlights how gender stereotypes can lead to different attributions based on gender, particularly that women's performance may be attributed to external factors rather than their abilities. The other options do not accurately reflect the influence of gender stereotypes on performance attribution.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
-      "knId": "KN20",
-      "source_file": "3 Helping and Hurting.json",
+      "knId": "KN14",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Why People Do Things.json",
       "source_folder": "3 Social Psychology",
       "difficulty": "hard",
       "question_type": "standard",
@@ -157,20 +158,20 @@
       "is_org_psych": false
     },
     {
-      "id": 7,
-      "question": "A researcher conducting a study on the effectiveness of a new therapeutic intervention inadvertently provides more encouraging nonverbal cues to participants in the treatment group than to those in the control group. This pattern of behavior, in which the researcher's expectations subtly influence participant responses, is BEST described as:",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/5 6 Leadership.json::4",
+      "question": "Which leadership style is most characteristic of female leaders compared to male leaders, based on meta-analyses by Eagly and colleagues?",
       "options": [
-        "Demand characteristics",
-        "Observer bias",
-        "The Rosenthal effect",
-        "The Hawthorne effect"
+        "More directive and autocratic",
+        "Higher use of laissez-faire behaviors",
+        "More participative and transformational leadership",
+        "Management-by-exception with active monitoring"
       ],
-      "correct_answer": "The Rosenthal effect",
-      "explanation": "The Rosenthal effect (also called experimenter expectancy effect) refers to subtle cues or clues transmitted by the experimenter that influence participant behavior in the direction of the experimenter's hypothesis. This is distinct from the Hawthorne effect (behavior change due to awareness of being observed), demand characteristics (cues that inform participants about what behavior is expected, which come from the experimental situation rather than the experimenter specifically), and observer bias (systematic errors in recording or interpreting data, rather than influencing participant behavior).",
+      "correct_answer": "More participative and transformational leadership",
+      "explanation": "1. The correct answer, \"More participative and transformational leadership,\" reflects findings from meta-analyses by Eagly and colleagues, which indicate that female leaders are more likely to adopt a participative (democratic) leadership style compared to their male counterparts, who tend to be more directive (autocratic). Additionally, female leaders are found to be more inclined towards transformational leadership, characterized by inspiring and motivating employees while fostering their growth, which contrasts with the more transactional styles often associated with male leaders.\n\n2. \n- **More directive and autocratic**: This option is incorrect because it describes a leadership style more commonly associated with male leaders, who are generally found to adopt a more directive (autocratic) approach, while female leaders are more participative.\n- **Higher use of laissez-faire behaviors**: This is wrong because female leaders are not characterized by laissez-faire behaviors; rather, they engage more actively in leadership through participative and transformational styles.\n- **Management-by-exception with active monitoring**: This option is incorrect as it pertains to male leaders who are more likely to engage in management-by-exception, whereas female leaders tend to focus on transformational leadership, which emphasizes development and support rather than corrective measures.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
-      "knId": "KN6",
-      "source_file": "7 Research Designs.json",
-      "source_folder": "7 Research and Stats",
+      "knId": "KN46",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/5 6 Leadership.json",
+      "source_folder": "2 3 5 6 I-O Psychology",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
@@ -451,20 +452,20 @@
       "is_org_psych": false
     },
     {
-      "id": 21,
-      "question": "A school psychologist wants to determine the percentage of time a student spends on-task during a 30-minute independent reading period. The psychologist divides the observation period into 60 equal intervals and checks at the end of each interval whether the student is engaged in reading at that exact moment. This procedure is BEST described as:",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Clinical Tests.json::45",
+      "question": "How is childhood stuttering typically diagnosed?",
       "options": [
-        "Momentary time sampling",
-        "Continuous recording",
-        "Whole-interval sampling",
-        "Event recording"
+        "Through self-report questionnaires from parents.",
+        "By observing speech patterns and frequency of disfluencies.",
+        "Using standardized intelligence tests.",
+        "Through projective tests assessing personality."
       ],
-      "correct_answer": "Momentary time sampling",
-      "explanation": "Momentary time sampling involves recording whether the target behavior is present or absent at the moment the time interval ends. This matches the described procedure of checking at the end of each interval. Whole-interval sampling requires the behavior to be exhibited for the full duration of the interval to be scored positively. Event recording involves tallying each occurrence of a discrete behavior. Continuous recording tracks every instance of a behavior with exact onset and offset times.",
+      "correct_answer": "By observing speech patterns and frequency of disfluencies.",
+      "explanation": "Childhood stuttering is diagnosed primarily through direct observation of speech patterns and the frequency of disfluencies, rather than through self-reports or personality assessments. The other options do not provide the appropriate methods for diagnosing stuttering.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
       "knId": "KN31",
-      "source_file": "7 Research Designs.json",
-      "source_folder": "7 Research and Stats",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Clinical Tests.json",
+      "source_folder": "5 Assessment",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
@@ -766,19 +767,19 @@
       "is_org_psych": false
     },
     {
-      "id": 36,
-      "question": "In rural settings, what is a primary concern regarding the scope of practice for psychologists?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 3 and 4.json::21",
+      "question": "What is the ethical stance on sexual relationships with former clients according to the APA Ethics Code?",
       "options": [
-        "Availability of advanced technology",
-        "Limited access to supervision and consultation",
-        "High demand for specialized services",
-        "Excessive competition among practitioners"
+        "They are permissible after a two-year waiting period.",
+        "They are prohibited for at least two years after termination, and after that only in the most unusual circumstances.",
+        "They are allowed if the former client consents.",
+        "They are acceptable if the relationship does not impair professional judgment."
       ],
-      "correct_answer": "Limited access to supervision and consultation",
-      "explanation": "In rural settings, psychologists often face challenges related to limited access to supervision and consultation, which can impact their practice and professional development. The other options do not accurately reflect the primary concerns in rural psychology practice.",
+      "correct_answer": "They are prohibited for at least two years after termination, and after that only in the most unusual circumstances.",
+      "explanation": "APA Ethics Code Standard 10.08 prohibits sexual intimacies with former clients for at least two years after termination of therapy. Even after two years, such relationships are still prohibited except in the 'most unusual circumstances,' and the psychologist bears the burden of proving that the relationship is not exploitative. The 'permissible after two years' option is too permissive; in practice, these relationships remain ethically problematic.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
-      "knId": "KN66",
-      "source_file": "8 Practice Issues.json",
+      "knId": "KN61",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 3 and 4.json",
       "source_folder": "8 Ethics",
       "difficulty": "hard",
       "question_type": "standard",
@@ -787,40 +788,40 @@
       "is_org_psych": false
     },
     {
-      "id": 37,
-      "question": "In forensic settings, what is a key challenge psychologists face when predicting violent behavior?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json::53",
+      "question": "According to data from the Association of State and Provincial Psychology Boards (ASPPB), which of the following represents the most frequently cited category of disciplinary action against psychologists?",
       "options": [
-        "The difficulty in obtaining accurate historical data.",
-        "The inherent unpredictability of human behavior.",
-        "The lack of reliable assessment tools.",
-        "The pressure to provide definitive answers to legal questions."
+        "Sexual misconduct with clients",
+        "Unprofessional conduct",
+        "Negligence in providing standard of care",
+        "Violations of confidentiality"
       ],
-      "correct_answer": "The inherent unpredictability of human behavior.",
-      "explanation": "The correct answer highlights the fundamental challenge in predicting behavior, which is often unpredictable. The other options may contribute to the difficulty but do not capture the core issue.",
+      "correct_answer": "Unprofessional conduct",
+      "explanation": "According to ASPPB data from 1974 to 2023 as presented in the lesson, unprofessional conduct is the number one reason psychologists face disciplinary action, followed by sexual misconduct at number two, and negligence at number three. Confidentiality violations are not listed in the top ten. Option A (sexual misconduct) is the second most common. Option C (negligence) is third. Option D (confidentiality violations) is not among the top ten categories listed.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
       "knId": "KN67",
-      "source_file": "8 Practice Issues.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json",
       "source_folder": "8 Ethics",
-      "difficulty": "hard",
+      "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
       "type": "standard",
       "is_org_psych": false
     },
     {
-      "id": 38,
-      "question": "Which of the following best describes a violation of independence in the context of a chi-square test?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Stats Tests.json::1",
+      "question": "A researcher uses a chi-square test to examine whether diagnosis type (anxiety disorder, mood disorder, or personality disorder) is associated with treatment preference (medication, psychotherapy, or combined). She collects data by surveying 150 clients at a clinic, where some married couples are both included in the sample. What assumption of the chi-square test is MOST likely violated?",
       "options": [
-        "The expected frequencies are too low for accurate analysis.",
-        "The variables being tested are not categorical.",
-        "The sample size is too small to draw valid conclusions.",
-        "Participants in one group influence the responses of participants in another group."
+        "The assumption of homogeneity of variance across diagnostic groups",
+        "The assumption of normally distributed data within each cell",
+        "The assumption of independence of observations, because married couples' responses may be correlated",
+        "The assumption that all expected cell frequencies must be equal"
       ],
-      "correct_answer": "Participants in one group influence the responses of participants in another group.",
-      "explanation": "A violation of independence occurs when the responses of one group affect another, which undermines the assumptions of the chi-square test. The other options describe issues related to sample size or data type but do not pertain to independence.",
+      "correct_answer": "The assumption of independence of observations, because married couples' responses may be correlated",
+      "explanation": "The chi-square test requires that each observation is independent of every other observation. When married couples are both included, their responses may be correlated — partners often share treatment preferences, diagnostic patterns influenced by shared environment, or may influence each other's responses. This violates independence of observations. Option A is incorrect because homogeneity of variance is an assumption of parametric tests like ANOVA, not chi-square. Option B is wrong because chi-square is a nonparametric test that does not assume normality. Option D is wrong because chi-square does not require equal expected frequencies — it requires adequate expected frequencies (typically at least 5 per cell), not equal ones.",
       "domain": "Domain 7: Research Methods & Statistics",
       "knId": "KN53",
-      "source_file": "7 Stats Tests.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Stats Tests.json",
       "source_folder": "7 Research and Stats",
       "difficulty": "medium",
       "question_type": "standard",
@@ -892,19 +893,19 @@
       "is_org_psych": false
     },
     {
-      "id": 42,
-      "question": "According to research on cognitive development and diverse identities (KN24), how can gender-role stereotypes affect children’s cognitive performance in domains such as math and verbal abilities?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Temperament and Personality.json::19",
+      "question": "In Rothbart’s temperament model, what does 'effortful control' refer to?",
       "options": [
-        "They have no effect on children’s cognitive performance as abilities are biologically predetermined",
-        "They enhance boys’ and girls’ abilities equally through positive reinforcement",
-        "They contribute to self-fulfilling prophecies where children perform in line with expectations linked to gender roles",
-        "They only affect adults’ attitudes and do not influence children's cognitive skills"
+        "The biological reactivity to stimuli",
+        "The ability to inhibit a dominant response to perform a subdominant one",
+        "The tendency to respond negatively and withdraw from new situations",
+        "The overall activity level and pleasure-seeking behavior"
       ],
-      "correct_answer": "They contribute to self-fulfilling prophecies where children perform in line with expectations linked to gender roles",
-      "explanation": "1. The correct answer, \"They contribute to self-fulfilling prophecies where children perform in line with expectations linked to gender roles,\" reflects the impact of gender-role stereotypes on children's cognitive performance. Research indicates that these stereotypes can lead children to internalize expectations about their abilities, particularly in areas like math and verbal skills. For instance, parents may expect sons to excel in math and attribute their successes to innate ability, while daughters may be seen as needing to work harder for the same achievements, leading girls to underestimate their capabilities and become less interested in math.\n\n2. The first incorrect option, \"They have no effect on children’s cognitive performance as abilities are biologically predetermined,\" is wrong because research shows that cognitive abilities are influenced by both biological factors and social constructs, including gender-role stereotypes. The second incorrect option, \"They only affect adults’ attitudes and do not influence children's cognitive skills,\" is incorrect because studies demonstrate that these stereotypes directly impact children's self-perception and performance, not just adult attitudes. Lastly, the option \"They enhance boys’ and girls’ abilities equally through positive reinforcement\" is misleading, as the reinforcement often differs by gender, with boys receiving more encouragement in math and girls potentially receiving less, which can hinder their performance rather than enhance it.",
+      "correct_answer": "The ability to inhibit a dominant response to perform a subdominant one",
+      "explanation": "1. The correct answer, \"The ability to inhibit a dominant response to perform a subdominant one,\" accurately describes 'effortful control' in Rothbart’s temperament model. Effortful control is a component of self-regulation, which refers to processes that facilitate, maintain, and inhibit reactivity. It specifically involves the capacity to manage one’s responses effectively, allowing an individual to suppress an automatic or dominant reaction in favor of a more appropriate or less impulsive response.\n\n2. The first incorrect option, \"The biological reactivity to stimuli,\" is wrong because it describes reactivity, which refers to the intensity and duration of responses to stimuli, rather than the self-regulatory aspect of effortful control. The second incorrect option, \"The tendency to respond negatively and withdraw from new situations,\" misrepresents effortful control by conflating it with behavioral inhibition, which is characterized by negative affect and withdrawal, rather than self-regulation. Lastly, \"The overall activity level and pleasure-seeking behavior\" is incorrect because it pertains to the surgency/extraversion factor of temperament, focusing on activity levels and pleasure-seeking, rather than the ability to control or inhibit responses.",
       "domain": "Domain 4: Growth & Lifespan Development",
-      "knId": "KN24",
-      "source_file": "4 Cognitive Development.json",
+      "knId": "KN21",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Temperament and Personality.json",
       "source_folder": "4 Development",
       "difficulty": "medium",
       "question_type": "standard",
@@ -1081,19 +1082,19 @@
       "is_org_psych": true
     },
     {
-      "id": 51,
-      "question": "Which factor is most influential in determining whether a bystander will help a person in distress in urban versus rural settings?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Helping and Hurting.json::5",
+      "question": "What strategy is most effective in reducing racial prejudice according to intergroup contact theory?",
       "options": [
-        "The bystander’s current location during the emergency",
-        "The severity of the victim’s injury",
-        "Where the bystander was born and socialized",
-        "Whether the bystander has received formal emergency training"
+        "Increased competition between groups",
+        "Encouraging group isolation",
+        "Facilitating positive interactions between groups",
+        "Promoting stereotypes"
       ],
-      "correct_answer": "The bystander’s current location during the emergency",
-      "explanation": "1. \"The bystander’s current location during the emergency\" is the correct answer because research indicates that a bystander is less likely to help a person in distress when the incident occurs in an urban area compared to a rural area, regardless of where the bystander was born and raised. This suggests that the immediate environment plays a crucial role in influencing a bystander's willingness to intervene, primarily due to factors like stimulus overload and the presence of more potential distractions in urban settings (Steblay, 1987).\n\n2. The option \"Where the bystander was born and socialized\" is incorrect because studies suggest that the current location of the bystander has a more significant impact on helping behavior than their background or socialization. \"Whether the bystander has received formal emergency training\" is not a primary factor in the context of urban versus rural settings, as the emphasis is on location rather than training. Lastly, \"The severity of the victim’s injury\" is also incorrect because while it may influence the decision to help, the research primarily highlights the environmental context (urban vs. rural) as the most critical determinant of bystander intervention.",
+      "correct_answer": "Facilitating positive interactions between groups",
+      "explanation": "Intergroup contact theory suggests that facilitating positive interactions between groups can effectively reduce racial prejudice. Increased competition can exacerbate tensions, group isolation does not foster understanding, and promoting stereotypes is counterproductive. Therefore, facilitating positive interactions is the correct answer.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
       "knId": "KN15",
-      "source_file": "3 Helping and Hurting.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Helping and Hurting.json",
       "source_folder": "3 Social Psychology",
       "difficulty": "medium",
       "question_type": "standard",
@@ -1270,25 +1271,25 @@
       "is_org_psych": false
     },
     {
-      "id": 60,
-      "question": "Which of the following practices would NOT align with the principles of Max Weber's Bureaucratic Theory?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/6 How Orgs Change.json::7",
+      "question": "Research examining the compressed workweek has found it to have which of the following effects?",
       "options": [
-        "Flexible job descriptions",
-        "Clear hierarchical structure",
-        "Formal rules and regulations",
-        "Impersonal relationships among staff"
+        "A strong positive effect on absenteeism and no effect on job satisfaction",
+        "Strong positive effects on both job satisfaction and productivity, with unclear effects on absenteeism",
+        "No effect on job satisfaction but reduced absenteeism and productivity",
+        "A strong negative effect on job satisfaction and increased absenteeism"
       ],
-      "correct_answer": "Flexible job descriptions",
-      "explanation": "1. \"Flexible job descriptions\" is the correct answer because Weber's Bureaucratic Theory emphasizes the importance of a clear division of labor and well-defined roles within an organization. Flexible job descriptions imply adaptability and ambiguity in roles, which contradicts the bureaucratic principle of having specific, formalized responsibilities that ensure order and efficiency.\n\n2. \n- **Clear hierarchical structure:** This option is incorrect because Weber's theory highlights the necessity of a well-defined hierarchy of authority to maintain order and efficiency within an organization.\n- **Impersonal relationships among staff:** This is incorrect as Weber's Bureaucratic Theory advocates for impersonal relationships to prevent favoritism and ensure that decisions are made based on rules rather than personal connections.\n- **Formal rules and regulations:** This option is incorrect because the establishment of formal rules and procedures is a core component of Weber's theory, ensuring that organizational operations are predictable and systematic.",
-      "domain": "Domain 6: Treatment & Intervention",
+      "correct_answer": "Strong positive effects on both job satisfaction and productivity, with unclear effects on absenteeism",
+      "explanation": "1. The correct answer, \"Strong positive effects on both job satisfaction and productivity, with unclear effects on absenteeism,\" aligns with research findings on the compressed workweek. Specifically, studies indicate that the compressed workweek leads to significant increases in job satisfaction and a positive, albeit weaker, impact on productivity; however, the effects on absenteeism remain ambiguous, as noted in the reference material.\n\n2. The first incorrect option, \"A strong positive effect on absenteeism and no effect on job satisfaction,\" is wrong because research indicates that the compressed workweek has a strong positive effect on job satisfaction, not absenteeism. The second incorrect option, \"No effect on job satisfaction but reduced absenteeism and productivity,\" is incorrect because it contradicts the evidence showing positive effects on job satisfaction and only a weak effect on productivity. Lastly, the third incorrect option, \"A strong negative effect on job satisfaction and increased absenteeism,\" is incorrect as it directly opposes the research findings that highlight strong positive effects on job satisfaction rather than negative ones.",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
       "knId": "KN46",
-      "source_file": "6 Management Theories.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/6 How Orgs Change.json",
       "source_folder": "2 3 5 6 I-O Psychology",
       "difficulty": "hard",
       "question_type": "standard",
       "isScored": true,
       "type": "standard",
-      "is_org_psych": true
+      "is_org_psych": false
     },
     {
       "id": 61,
@@ -1438,19 +1439,19 @@
       "is_org_psych": false
     },
     {
-      "id": 68,
-      "question": "Which of the following best exemplifies structural racism as defined by the APA?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Group Influences.json::8",
+      "question": "In decision-making processes, which of the following statements is true regarding the effectiveness of groups compared to individuals?",
       "options": [
-        "Individual holding and expressing overtly racist views",
-        "Discriminatory hiring practices by a private employer",
-        "Laws and policies that create race-based inequalities, such as school funding tied to local property taxes",
-        "A teacher treating students unfairly based on race"
+        "A) Groups always make better decisions than individuals.",
+        "B) Individuals are less prone to biases than groups.",
+        "C) Groups can benefit from diverse perspectives but may also fall prey to groupthink.",
+        "D) Individual decisions are always faster than group decisions."
       ],
-      "correct_answer": "Laws and policies that create race-based inequalities, such as school funding tied to local property taxes",
-      "explanation": "1. The correct answer, \"Laws and policies that create race-based inequalities, such as school funding tied to local property taxes,\" exemplifies structural racism as defined by the APA because it refers to systemic practices and policies that produce enduring racial disparities. Structural racism encompasses laws and institutional practices that perpetuate inequalities across various domains, including education, as evidenced by funding mechanisms that disadvantage minority communities.\n\n2. The option \"A teacher treating students unfairly based on race\" is incorrect because it describes interpersonal racism, which involves individual behaviors and attitudes rather than systemic practices. \"Individual holding and expressing overtly racist views\" is also incorrect, as this represents overt racism, which is characterized by explicit hostility and discrimination from individuals rather than structural inequalities. Finally, \"Discriminatory hiring practices by a private employer\" is incorrect because it pertains to institutional racism, which is specific to organizational policies rather than broader societal structures that create systemic racial disparities.",
+      "correct_answer": "C) Groups can benefit from diverse perspectives but may also fall prey to groupthink.",
+      "explanation": "Option C is correct as groups can leverage diverse perspectives but are also susceptible to groupthink, which can hinder decision-making. Option A is incorrect; groups do not always make better decisions. Option B is misleading; individuals can also exhibit biases. Option D is false; group decisions can be slower due to discussion.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
-      "knId": "KN20",
-      "source_file": "3 Helping and Hurting.json",
+      "knId": "KN16",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Group Influences.json",
       "source_folder": "3 Social Psychology",
       "difficulty": "medium",
       "question_type": "standard",
@@ -1606,21 +1607,21 @@
       "is_org_psych": false
     },
     {
-      "id": 76,
-      "question": "Which theoretical model of psychopathology emphasizes the role of brain network connectivity disruptions in explaining neurocognitive disorders?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Personality.json::14",
+      "question": "What is the primary theoretical basis for dialectical behavior therapy (DBT) in the treatment of borderline personality disorder?",
       "options": [
-        "The connectome model",
-        "Biopsychosocial model",
-        "Psychodynamic model",
-        "Behavioral model"
+        "Behavioral conditioning with reward and punishment",
+        "Emotion dysregulation resulting from biological and environmental factors",
+        "Cognitive distortions and maladaptive beliefs",
+        "Attachment disruptions in early childhood"
       ],
-      "correct_answer": "The connectome model",
-      "explanation": "1. **The connectome model** is the correct answer because it emphasizes the role of disruptions in brain network connectivity, which aligns with the understanding of neurocognitive disorders. These disorders often involve impairments in cognitive functions due to damage or degeneration in specific brain areas and their connections, as indicated by the various neurocognitive disorders discussed, such as Alzheimer’s disease and frontotemporal NCD, which highlight the importance of brain structure and function in cognition.\n\n2. The **biopsychosocial model** is incorrect because it integrates biological, psychological, and social factors in understanding mental health but does not specifically focus on brain connectivity. The **psychodynamic model** is also incorrect as it centers on unconscious processes and early life experiences rather than neurobiological mechanisms. Lastly, the **behavioral model** is incorrect because it emphasizes observable behaviors and learning processes rather than the underlying neural connectivity that contributes to neurocognitive disorders.",
+      "correct_answer": "Emotion dysregulation resulting from biological and environmental factors",
+      "explanation": "1. The correct answer, \"Emotion dysregulation resulting from biological and environmental factors,\" is based on the premise that borderline personality disorder (BPD) is fundamentally linked to difficulties in regulating emotions. According to the reference material, dialectical behavior therapy (DBT) operates under the assumption that these emotional dysregulations stem from a combination of biological vulnerabilities and environmental influences, which makes it essential for treatment to address these underlying issues to help individuals manage their emotions more effectively.\n\n2. The option \"Behavioral conditioning with reward and punishment\" is incorrect because DBT focuses on emotional regulation rather than solely on behavioral modification through rewards and punishments. \"Cognitive distortions and maladaptive beliefs\" is not the primary theoretical basis for DBT, as the therapy emphasizes emotion regulation rather than just addressing cognitive patterns. Lastly, \"Attachment disruptions in early childhood\" is not the correct answer because, while early experiences can influence emotional regulation, DBT specifically targets the dysregulation itself rather than solely focusing on attachment issues.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
       "knId": "KN39",
-      "source_file": "5 Neurocognitive.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Personality.json",
       "source_folder": "5 Diagnosis",
-      "difficulty": "hard",
+      "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
       "type": "standard",
@@ -2362,19 +2363,19 @@
       "is_org_psych": false
     },
     {
-      "id": 112,
-      "question": "In the context of behavioral genetics, which term refers to behaviors that are the result of the interaction between multiple genes and environmental factors?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 School and Family.json::25",
+      "question": "Which of the following negative communication patterns, identified by Gottman, is most detrimental to long-term relationship stability?",
       "options": [
-        "Heritability",
-        "Genetic predisposition",
-        "Polygenic inheritance",
-        "Epigenetics"
+        "Criticism",
+        "Defensiveness",
+        "Contempt",
+        "Stonewalling"
       ],
-      "correct_answer": "Polygenic inheritance",
-      "explanation": "1. **Polygenic inheritance** is the correct answer because it refers to characteristics that are influenced by multiple genes, which interact with environmental factors. This concept highlights the complexity of traits such as height, weight, and intelligence, indicating that these traits cannot be attributed to a single gene but rather to a combination of genetic contributions and environmental influences.\n\n2. **Epigenetics** is incorrect because it specifically focuses on changes in gene expression caused by environmental factors without altering the genetic code itself, rather than the interaction of multiple genes with the environment. **Genetic predisposition** is also incorrect as it refers to the inherited likelihood of developing certain traits or behaviors due to specific genes, but does not encompass the broader interaction of multiple genes and environmental influences. Lastly, **heritability** is incorrect because it measures the extent to which genetic differences contribute to observed variability in a trait within a population, but it does not specifically refer to the interaction of multiple genes with environmental factors.",
+      "correct_answer": "Contempt",
+      "explanation": "1. \"Contempt\" is the correct answer because, according to Gottman and Levenson's research, it is identified as the single best predictor of divorce. Contempt involves a sense of superiority and disdain towards one's partner, which undermines respect and affection, creating a toxic environment in the relationship that can lead to long-term instability.\n\n2. The incorrect options are:\n\n- **Criticism**: While criticism focuses on blaming or attacking a partner's character, it does not carry the same level of emotional devastation as contempt, which erodes the foundation of respect in a relationship.\n\n- **Defensiveness**: This behavior involves protecting oneself from perceived attacks, but it does not inherently convey the same level of disdain and negativity that contempt does, making it less detrimental to long-term stability.\n\n- **Stonewalling**: Although stonewalling, or withdrawing from conversation, can create emotional distance, it is less destructive than contempt, which actively undermines the partner's value and the relationship's emotional connection.",
       "domain": "Domain 4: Growth & Lifespan Development",
       "knId": "KN22",
-      "source_file": "4 Heredity and Environment.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 School and Family.json",
       "source_folder": "4 Development",
       "difficulty": "hard",
       "question_type": "standard",
@@ -2488,19 +2489,19 @@
       "is_org_psych": true
     },
     {
-      "id": 118,
-      "question": "Which of the following criteria is NOT typically considered in child custody decision-making according to family law?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 1 and 2.json::25",
+      "question": "According to APA's ethical decision-making model described by Fisher (2022), what step comes immediately after identifying relevant laws, regulations, and institutional policies?",
       "options": [
-        "The financial stability of each parent",
-        "The parent's social media presence",
-        "The child's relationship with each parent",
-        "The child's preference if they are of sufficient age"
+        "Consider the perspectives of affected stakeholders",
+        "Identify the ethical problem",
+        "Monitor and evaluate results of the action plan",
+        "Develop and implement an action plan"
       ],
-      "correct_answer": "The parent's social media presence",
-      "explanation": "The child's relationship with each parent, financial stability, and the child's preference are all relevant factors in custody decisions. However, a parent's social media presence is not a standard criterion considered in custody evaluations.",
+      "correct_answer": "Consider the perspectives of affected stakeholders",
+      "explanation": "1. \"Consider the perspectives of affected stakeholders\" is the correct answer because it follows the identification of relevant laws, regulations, and institutional policies in Fisher's (2022) ethical decision-making model. This step emphasizes the importance of understanding how the decision will impact various stakeholders, such as clients, colleagues, and the community, ensuring that their perspectives are taken into account before proceeding with any actions.\n\n2. \n- \"Identify the ethical problem\" is incorrect because this step occurs first in the decision-making process, setting the foundation for the subsequent steps.\n- \"Monitor and evaluate results of the action plan\" is wrong as it is the final step in the model, focusing on assessing the outcomes after the action has been implemented rather than before developing an action plan.\n- \"Develop and implement an action plan\" is incorrect because it comes after considering the perspectives of stakeholders; this step involves creating a specific course of action based on the gathered information and stakeholder input.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
       "knId": "KN65",
-      "source_file": "8 Practice Issues.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 1 and 2.json",
       "source_folder": "8 Ethics",
       "difficulty": "medium",
       "question_type": "standard",
@@ -2509,19 +2510,19 @@
       "is_org_psych": false
     },
     {
-      "id": 119,
-      "question": "In the context of gender identity theories, what is the sequence of gender role development according to social learning theory?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Morality.json::21",
+      "question": "Which of the following best describes a key feature of the induction style of parental discipline?",
       "options": [
-        "Reinforcement, observation, imitation",
-        "Observation, reinforcement, imitation",
-        "Imitation, reinforcement, observation",
-        "Observation, imitation, reinforcement"
+        "Explaining why a behavior is wrong and emphasizing its effect on others",
+        "Withholding affection as a means of reducing undesirable behavior",
+        "Imposing strict consequences without explanation",
+        "Allowing children to do as they please without limits"
       ],
-      "correct_answer": "Observation, imitation, reinforcement",
-      "explanation": "Social learning theory posits that children learn gender roles through observing others, imitating their behaviors, and receiving reinforcement for gender-appropriate behaviors. The other sequences misrepresent the order of these processes.",
+      "correct_answer": "Explaining why a behavior is wrong and emphasizing its effect on others",
+      "explanation": "1. The correct answer, \"Explaining why a behavior is wrong and emphasizing its effect on others,\" accurately reflects the induction style of parental discipline. This approach focuses on helping children understand the reasons behind their actions and the consequences for others, promoting advanced levels of moral reasoning. Research indicates that this style fosters a deeper comprehension of moral standards compared to other disciplinary methods.\n\n2. The option \"Withholding affection as a means of reducing undesirable behavior\" is incorrect because it describes a power assertion style of discipline, which relies on emotional manipulation rather than reasoning. \"Imposing strict consequences without explanation\" is also incorrect, as it reflects an authoritarian approach that does not involve the child in understanding the rationale behind rules or consequences. Lastly, \"Allowing children to do as they please without limits\" is incorrect because it suggests a lack of guidance or boundaries, which is contrary to the structured and educational nature of the induction style that aims to teach moral reasoning.",
       "domain": "Domain 4: Growth & Lifespan Development",
-      "knId": "KN24",
-      "source_file": "4 Temperament and Personality.json",
+      "knId": "KN23",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Morality.json",
       "source_folder": "4 Development",
       "difficulty": "medium",
       "question_type": "standard",
@@ -2656,19 +2657,19 @@
       "is_org_psych": false
     },
     {
-      "id": 126,
-      "question": "Which medication is contraindicated for patients with alcohol use disorder?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Pharmacology Other Drugs.json::8",
+      "question": "Which of the following withdrawal symptoms is most commonly associated with benzodiazepine discontinuation?",
       "options": [
-        "Naltrexone",
-        "Disulfiram",
-        "Acamprosate",
-        "Benzodiazepines"
+        "Severe hallucinations",
+        "Flu-like symptoms",
+        "Rebound anxiety and seizures",
+        "Increased appetite"
       ],
-      "correct_answer": "Benzodiazepines",
-      "explanation": "Benzodiazepines are contraindicated in alcohol use disorder due to the risk of respiratory depression and increased sedation when combined with alcohol. The other medications listed are used to treat alcohol use disorder.",
+      "correct_answer": "Rebound anxiety and seizures",
+      "explanation": "Withdrawal from benzodiazepines can lead to rebound anxiety and seizures, which are significant concerns. The other options do not accurately reflect the typical withdrawal symptoms associated with benzodiazepines.",
       "domain": "Domain 1: Biological Bases of Behavior",
       "knId": "KN2",
-      "source_file": "1 Pharmacology Other Drugs.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Pharmacology Other Drugs.json",
       "source_folder": "1 Biopsychology (Neuroscience & Pharmacology)",
       "difficulty": "hard",
       "question_type": "standard",
@@ -3034,24 +3035,24 @@
       "is_org_psych": false
     },
     {
-      "id": 144,
-      "question": "What is the primary mechanism by which L-Dopa alleviates symptoms of Parkinson's disease?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Cerebral Cortex.json::9",
+      "question": "Damage to which area of the brain is most likely to result in language impairments, particularly expressive language difficulties?",
       "options": [
-        "It reduces glutamate activity.",
-        "It increases serotonin levels in the brain.",
-        "It blocks acetylcholine receptors.",
-        "It enhances dopamine production in the brain."
+        "Wernicke's area",
+        "Broca's area",
+        "Angular gyrus",
+        "Hippocampus"
       ],
-      "correct_answer": "It enhances dopamine production in the brain.",
-      "explanation": "L-Dopa is a precursor to dopamine and is used in Parkinson's disease treatment to increase dopamine levels, which are deficient in patients. The other options do not accurately describe L-Dopa's mechanism of action. Serotonin, acetylcholine, and glutamate are not the primary targets of L-Dopa treatment.",
+      "correct_answer": "Broca's area",
+      "explanation": "Broca's area is responsible for language production, and damage to this area leads to Broca's aphasia, characterized by expressive language difficulties. Wernicke's area is involved in language comprehension, the angular gyrus is associated with reading and writing, and the hippocampus is primarily involved in memory.",
       "domain": "Domain 1: Biological Bases of Behavior",
       "knId": "KN1",
-      "source_file": "1 Neurons and Neurotransmitters.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Cerebral Cortex.json",
       "source_folder": "1 Biopsychology (Neuroscience & Pharmacology)",
       "difficulty": "hard",
-      "question_type": "difficult",
+      "question_type": "standard",
       "isScored": false,
-      "type": "experimental",
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -3160,24 +3161,24 @@
       "is_org_psych": false
     },
     {
-      "id": 150,
-      "question": "When conducting a regression analysis, which assumption is critical for ensuring that the regression coefficients are valid estimates of the relationships among the variables?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Inferential Stats.json::13",
+      "question": "In stepwise regression, what is the primary criterion for selecting predictors?",
       "options": [
-        "The residuals are normally distributed",
-        "The sample includes outliers",
-        "The dependent variable is measured on a nominal scale",
-        "The predictor variables are independent"
+        "The strength of the relationship with the dependent variable",
+        "The number of predictors already included",
+        "The order of entry into the model",
+        "The sample size of the study"
       ],
-      "correct_answer": "The residuals are normally distributed",
-      "explanation": "For valid regression coefficients, it is important that the residuals (the differences between observed and predicted values) are normally distributed, as this affects the reliability of hypothesis tests and confidence intervals.",
+      "correct_answer": "The strength of the relationship with the dependent variable",
+      "explanation": "The correct answer is 'The strength of the relationship with the dependent variable' because stepwise regression selects predictors based on their statistical significance and contribution to explaining variance in the dependent variable. The other options do not accurately reflect the primary criterion for predictor selection.",
       "domain": "Domain 7: Research Methods & Statistics",
       "knId": "KN55",
-      "source_file": "7 Correlation and Regression.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Inferential Stats.json",
       "source_folder": "7 Research and Stats",
       "difficulty": "hard",
-      "question_type": "difficult",
+      "question_type": "standard",
       "isScored": false,
-      "type": "experimental",
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -3202,19 +3203,19 @@
       "is_org_psych": false
     },
     {
-      "id": 152,
-      "question": "How does cognitive dissonance relate to payment effects in decision-making?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Errors and Shortcuts.json::1",
+      "question": "In legal judgments, what is the primary effect of hindsight bias?",
       "options": [
-        "Cognitive dissonance has no relation to payment effects.",
-        "Payments can create dissonance if they conflict with personal values.",
-        "Higher payments reduce cognitive dissonance.",
-        "Cognitive dissonance increases when payments are made."
+        "It leads to more accurate predictions of future events.",
+        "It causes individuals to believe outcomes were more predictable than they actually were.",
+        "It enhances the credibility of eyewitness testimonies.",
+        "It reduces the influence of emotional responses on decisions."
       ],
-      "correct_answer": "Payments can create dissonance if they conflict with personal values.",
-      "explanation": "Cognitive dissonance occurs when there is a conflict between one's beliefs and actions. If a payment is made that contradicts personal values, it can lead to dissonance. The other options either misrepresent the relationship or state incorrect facts.",
+      "correct_answer": "It causes individuals to believe outcomes were more predictable than they actually were.",
+      "explanation": "The correct answer is 'It causes individuals to believe outcomes were more predictable than they actually were' because hindsight bias distorts our perception of past events, making them seem more obvious or predictable after they have occurred. 'It leads to more accurate predictions of future events' is incorrect as hindsight bias does not improve predictive accuracy. 'It enhances the credibility of eyewitness testimonies' is misleading, as hindsight bias can actually undermine credibility. 'It reduces the influence of emotional responses on decisions' is false, as hindsight bias can exacerbate emotional responses.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
       "knId": "KN14",
-      "source_file": "3 Why People Do Things.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Errors and Shortcuts.json",
       "source_folder": "3 Social Psychology",
       "difficulty": "hard",
       "question_type": "standard",
@@ -3349,19 +3350,19 @@
       "is_org_psych": false
     },
     {
-      "id": 159,
-      "question": "What does the Halstead Impairment Index specifically quantify in neuropsychological assessment?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Clinical Tests.json::29",
+      "question": "What is the estimated prevalence of ADHD among children in the United States?",
       "options": [
-        "The total number of cognitive symptoms reported by the patient",
-        "The ratio of impaired subtest performances to total subtests administered",
-        "The baseline intelligence quotient of the examinee",
-        "The severity of depressive symptoms during neurocognitive testing"
+        "A. 1-3%",
+        "B. 5-10%",
+        "C. 10-15%",
+        "D. 20-25%"
       ],
-      "correct_answer": "The ratio of impaired subtest performances to total subtests administered",
-      "explanation": "The Halstead Impairment Index is calculated by dividing the number of impaired neuropsychological subtests by the total number administered, providing a quantitative severity estimate of brain dysfunction.",
+      "correct_answer": "B. 5-10%",
+      "explanation": "Option B is correct as studies estimate that the prevalence of ADHD among children in the United States falls within the 5-10% range. Options A, C, and D are incorrect as they underestimate or overestimate the prevalence.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
       "knId": "KN30",
-      "source_file": "5 Clinical Tests.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Clinical Tests.json",
       "source_folder": "5 Assessment",
       "difficulty": "medium",
       "question_type": "standard",
@@ -3643,24 +3644,25 @@
       "is_org_psych": false
     },
     {
-      "id": 173,
-      "question": "In a situation where an individual feels fear after noticing their heart racing, which theory of emotion best explains this experience?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Stress and Emotion.json::3",
+      "question": "Which of the following stages is NOT part of Kubler-Ross's stages of grief?",
       "options": [
-        "James-Lange theory",
-        "Cannon-Bard theory",
-        "Lazarus theory",
-        "Schachter-Singer theory"
+        "Denial",
+        "Anger",
+        "Bargaining",
+        "Acceptance",
+        "Resilience"
       ],
-      "correct_answer": "James-Lange theory",
-      "explanation": "The individual's experience of fear is based on the physiological response (heart racing), which aligns with the James-Lange theory that emphasizes physiological reactions preceding emotional experiences.",
+      "correct_answer": "Resilience",
+      "explanation": "The correct answer is E because resilience is not one of the stages in Kubler-Ross's model of grief. The other options are all recognized stages of grief. Option A is incorrect as denial is a stage. Option B is incorrect as anger is a stage. Option C is incorrect as bargaining is a stage. Option D is incorrect as acceptance is a stage.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
       "knId": "KN10",
-      "source_file": "2 Stress and Emotion.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Stress and Emotion.json",
       "source_folder": "2 Learning and Memory",
       "difficulty": "hard",
-      "question_type": "difficult",
+      "question_type": "standard",
       "isScored": false,
-      "type": "experimental",
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -3748,19 +3750,19 @@
       "is_org_psych": false
     },
     {
-      "id": 178,
-      "question": "In a crisis situation, what is the primary ethical obligation of a psychologist when offering help?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 5 and 6.json::36",
+      "question": "Which of the following is TRUE regarding the ethical use of sliding fee scales and free initial sessions according to APA Ethics Code standards and commentary?",
       "options": [
-        "To refer the individual to another professional immediately.",
-        "To act in the best interest of the individual in crisis, even if it means breaching confidentiality.",
-        "To provide assistance only if they are being compensated.",
-        "To ensure that their intervention does not violate any laws."
+        "Sliding fee scales are ethically acceptable if applied consistently and comply with state laws, while free sessions are acceptable with clear limits and disclosures.",
+        "Sliding fee scales are prohibited by the Ethics Code, but free initial sessions are endorsed.",
+        "Sliding fee scales and free initial sessions are clearly prohibited without exception.",
+        "Neither sliding fee scales nor free sessions require any informed consent or discussion with clients."
       ],
-      "correct_answer": "To act in the best interest of the individual in crisis, even if it means breaching confidentiality.",
-      "explanation": "The correct answer emphasizes the ethical obligation to prioritize the well-being of the individual in crisis, which may necessitate breaching confidentiality. The other options do not align with the ethical imperative to provide immediate help.",
+      "correct_answer": "Sliding fee scales are ethically acceptable if applied consistently and comply with state laws, while free sessions are acceptable with clear limits and disclosures.",
+      "explanation": "The Ethics Code does not explicitly address sliding fees or free sessions, but sliding scales are generally acceptable if equitable, and free sessions may be acceptable if the therapist clarifies their limited purpose and fees for subsequent sessions.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
-      "knId": "KN65",
-      "source_file": "8 Standards 1 and 2.json",
+      "knId": "KN61",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 5 and 6.json",
       "source_folder": "8 Ethics",
       "difficulty": "medium",
       "question_type": "standard",
@@ -3895,19 +3897,19 @@
       "is_org_psych": false
     },
     {
-      "id": 185,
-      "question": "A patient with amnesia who shows no conscious recollection of previously presented words but performs well on a word-stem completion task is demonstrating evidence of which type of memory?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Memory.json::10",
+      "question": "How does semantic similarity influence memory recall according to cognitive psychology?",
       "options": [
-        "Implicit memory",
-        "Explicit memory",
-        "Declarative memory",
-        "Semantic memory"
+        "It enhances recall by creating stronger associations between similar concepts.",
+        "It impairs recall by causing interference between similar memories.",
+        "It has no significant effect on recall performance.",
+        "It only affects long-term memory, not short-term memory."
       ],
-      "correct_answer": "Implicit memory",
-      "explanation": "1. \"Implicit memory\" is the correct answer because it refers to memories that can be recalled without conscious effort, which aligns with the patient's performance on the word-stem completion task despite having no explicit recollection of the words. This phenomenon is evidenced by studies showing that individuals with amnesia can still perform well on tasks that rely on implicit memory, indicating that their ability to recall information is intact even when they lack conscious awareness of it.\n\n2. \"Explicit memory\" is incorrect because it involves conscious effort to retrieve information, which the patient with amnesia does not demonstrate. \"Declarative memory\" is also incorrect as it includes explicit memory, which requires conscious recall, and the patient shows no such ability. Lastly, \"semantic memory\" is incorrect because it specifically refers to a type of declarative memory focused on facts and concepts, and the patient’s performance does not reflect conscious recall of semantic information.",
+      "correct_answer": "It enhances recall by creating stronger associations between similar concepts.",
+      "explanation": "Semantic similarity enhances recall by allowing related concepts to activate each other, facilitating retrieval. Option B incorrectly states that it impairs recall, which is not supported by cognitive psychology. Option C is incorrect as semantic similarity does have a significant effect, and Option D misrepresents the influence across memory types.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
       "knId": "KN8",
-      "source_file": "2 Memory.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Memory.json",
       "source_folder": "2 Learning and Memory",
       "difficulty": "medium",
       "question_type": "standard",
@@ -4084,19 +4086,19 @@
       "is_org_psych": false
     },
     {
-      "id": 194,
-      "question": "Which of the following best explains why altruistic helping is more likely to result in sustained assistance compared to egoistic helping?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Connection.json::10",
+      "question": "The mere exposure effect predicts that repeated exposure to a person will increase liking only when initial reactions are:",
       "options": [
-        "Egoistic helping typically requires external rewards",
-        "Altruistic helping is motivated by reducing one’s own distress",
-        "Egoistic helping leads to increased social approval",
-        "Altruistic helping originates from empathic concern for the other’s well-being"
+        "Mildly negative, neutral, or positive",
+        "Strongly negative or neutral",
+        "Extremely positive",
+        "Strongly negative"
       ],
-      "correct_answer": "Altruistic helping originates from empathic concern for the other’s well-being",
-      "explanation": "1. The correct answer, \"Altruistic helping originates from empathic concern for the other’s well-being,\" is supported by the empathy-altruism hypothesis, which posits that individuals help others primarily out of genuine concern for their welfare. This type of motivation fosters a deeper emotional connection to the recipient, leading to more sustained assistance over time as the helper is driven by empathy rather than self-interest.\n\n2. The option \"Altruistic helping is motivated by reducing one’s own distress\" is incorrect because it describes egoistic helping, which is driven by the desire to alleviate one's own negative feelings rather than a focus on the other’s needs. The statement \"Egoistic helping typically requires external rewards\" is misleading; while egoistic motivations may sometimes seek rewards, they do not inherently require them, thus failing to distinguish between the two types of helping. Lastly, \"Egoistic helping leads to increased social approval\" is inaccurate because while social approval can be a factor, it does not define egoistic helping, which is primarily concerned with self-serving motives rather than the altruistic intent of genuinely wanting to help others.",
+      "correct_answer": "Mildly negative, neutral, or positive",
+      "explanation": "1. The mere exposure effect suggests that individuals tend to develop a preference for things simply due to repeated exposure, particularly when their initial reactions are mildly negative, neutral, or positive. This is supported by the reference material, which states that while repeated exposure can enhance liking, it does not apply when initial responses are extremely negative. Therefore, the correct answer is that repeated exposure increases liking primarily when initial reactions are mildly negative, neutral, or positive.\n\n2. \n- **Strongly negative or neutral:** This option is incorrect because the mere exposure effect does not apply when initial reactions are strongly negative; such reactions inhibit the development of liking, regardless of subsequent exposure.\n- **Extremely positive:** This option is wrong because the mere exposure effect is not necessary when initial reactions are extremely positive; individuals are already inclined to like the person without the need for further exposure.\n- **Strongly negative:** This option is incorrect as it aligns with the concept that extremely negative initial reactions prevent the mere exposure effect from increasing liking, as the negative feelings overshadow any potential positive effects of repeated encounters.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
       "knId": "KN15",
-      "source_file": "3 Helping and Hurting.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Connection.json",
       "source_folder": "3 Social Psychology",
       "difficulty": "medium",
       "question_type": "standard",
@@ -4210,24 +4212,24 @@
       "is_org_psych": false
     },
     {
-      "id": 200,
-      "question": "A newly hired staff psychologist at a community mental health center spends the first six months scrupulously following all agency documentation procedures, attending every team meeting, and deferring to senior colleagues on treatment decisions — even when privately disagreeing. In the seventh month, the psychologist proposes replacing the agency's standard intake protocol with a significantly streamlined alternative. To the psychologist's surprise, senior staff endorse the proposal with little resistance. According to Hollander's idiosyncrasy credit model, this acceptance is BEST explained by:",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Persuasion.json::2",
+      "question": "According to the elaboration likelihood model, which route to persuasion is most effective when individuals are motivated and able to process information?",
       "options": [
-        "Normative social influence shifted the group's standards over time toward the psychologist's preferred approach",
-        "Early conformity to agency norms accumulated social capital that legitimizes subsequent deviation without threatening the psychologist's standing",
-        "The psychologist's growing seniority and formal status within the agency now confer permission to deviate from established norms",
-        "Informational social influence caused senior staff to genuinely agree that the new protocol was superior on its merits"
+        "Peripheral route.",
+        "Central route.",
+        "Social proof route.",
+        "Fear appeal route."
       ],
-      "correct_answer": "Early conformity to agency norms accumulated social capital that legitimizes subsequent deviation without threatening the psychologist's standing",
-      "explanation": "Hollander's idiosyncrasy credit model (1958) holds that group members earn 'credits' through early conformity to group norms and through demonstrated competence. These credits function as social capital that permits the member to later deviate from group expectations without losing status or influence. The psychologist's initial period of scrupulous conformity was credit-building behavior; the tolerance for the later protocol deviation reflects those credits being spent. Formal seniority alone would confer some permission regardless of behavioral history, but the idiosyncrasy credit model specifically explains tolerance for deviation as a function of prior conformity, not mere time elapsed. Informational influence pertains to accepting others' positions as accurate — it does not explain why the same proposal would be tolerated from this psychologist but might not be from a newcomer. Normative social influence describes pressures toward conformity with existing norms, not the mechanism by which deviance from those norms becomes acceptable.",
+      "correct_answer": "Central route.",
+      "explanation": "The correct answer indicates that the central route is effective when individuals are motivated and able to engage deeply with the content. The peripheral route is less effective under these conditions.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
       "knId": "KN16",
-      "source_file": "3 Influence.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Persuasion.json",
       "source_folder": "3 Social Psychology",
       "difficulty": "hard",
-      "question_type": "difficult",
+      "question_type": "standard",
       "isScored": false,
-      "type": "experimental",
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -4609,19 +4611,19 @@
       "is_org_psych": false
     },
     {
-      "id": 219,
-      "question": "Which supervision model focuses on understanding and integrating the supervisor and supervisee's interpersonal dynamics to improve therapy outcomes?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Brief Therapies.json::17",
+      "question": "Which of the following elements is essential in a therapist’s approach when conducting brief psychodynamic psychotherapy?",
       "options": [
-        "Developmental model",
-        "Integrative model",
-        "Psychodynamic model",
-        "Behavioral model"
+        "Maintaining a passive stance to allow client-led insight",
+        "Focusing therapy goals primarily on symptom elimination",
+        "Establishing an active therapeutic alliance early to keep focus",
+        "Avoiding discussion of termination until late in therapy"
       ],
-      "correct_answer": "Psychodynamic model",
-      "explanation": "1. The **psychodynamic model** is the correct answer because it emphasizes understanding and integrating the interpersonal dynamics between the supervisor and supervisee. This model focuses on the relational aspects of supervision, including transference and countertransference, which can significantly impact therapy outcomes by enhancing the supervisee's self-awareness and therapeutic effectiveness.\n\n2. The **developmental model** is incorrect because it primarily focuses on the growth and progression of the supervisee's skills and competencies over time, rather than the interpersonal dynamics between supervisor and supervisee. The **integrative model** is not the correct choice as it aims to combine various theoretical approaches and techniques in supervision, without specifically emphasizing the understanding of interpersonal dynamics. Lastly, the **behavioral model** is wrong because it concentrates on observable behaviors and the application of behavioral techniques in supervision, rather than exploring the deeper relational aspects that influence therapeutic outcomes.",
+      "correct_answer": "Establishing an active therapeutic alliance early to keep focus",
+      "explanation": "1. \"Establishing an active therapeutic alliance early to keep focus\" is the correct answer because brief psychodynamic psychotherapy emphasizes the importance of forming a strong therapeutic alliance at the outset to facilitate effective treatment. Practitioners take an active role from the beginning to quickly establish this alliance and ensure that therapy remains focused on the major issues, allowing clients to achieve their limited goals within the time constraints of therapy.\n\n2. The option \"Maintaining a passive stance to allow client-led insight\" is incorrect because brief psychodynamic therapy practitioners adopt an active role rather than a passive one, which is essential for guiding the therapeutic process. \"Focusing therapy goals primarily on symptom elimination\" is wrong because while symptom relief may be a goal, brief psychodynamic therapy emphasizes limited goals that are collaboratively identified with the client, not solely symptom elimination. Lastly, \"Avoiding discussion of termination until late in therapy\" is incorrect because practitioners in brief psychodynamic psychotherapy address concerns related to termination early in the treatment process, which is crucial due to the brevity of the therapy.",
       "domain": "Domain 6: Treatment & Intervention",
-      "knId": "KN52",
-      "source_file": "6 Prevention and Consultation.json",
+      "knId": "KN43",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Brief Therapies.json",
       "source_folder": "6 Clinical Interventions",
       "difficulty": "medium",
       "question_type": "standard",

@@ -101,23 +101,24 @@
       "is_org_psych": false
     },
     {
-      "id": 6,
-      "question": "In the context of ethical hiring practices, how should a psychologist approach hiring decisions when a candidate has a history of harassment claims?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 9 and 10.json::33",
+      "question": "During a consultation, a psychologist discusses a client's treatment history based on records from another provider. What is the best practice for the psychologist in this scenario?",
       "options": [
-        "Ignore the past claims if the candidate has relevant qualifications.",
-        "Conduct a thorough review of the circumstances surrounding the claims.",
-        "Only consider the candidate's most recent employment history.",
-        "Consult with the candidate's previous employers for their perspective."
+        "Present the treatment history as if it were their own assessment",
+        "Mention the other provider's involvement and any potential biases",
+        "Avoid discussing the treatment history to prevent misinformation",
+        "Only refer to the treatment history if the client agrees"
       ],
-      "correct_answer": "Conduct a thorough review of the circumstances surrounding the claims.",
-      "explanation": "The correct answer emphasizes the need for a thorough review, which is essential in ethical hiring practices. The lesson suggests that understanding the context of past claims is crucial for making informed decisions. The other options either oversimplify the issue or do not address the ethical considerations involved.",
+      "correct_answer": "Mention the other provider's involvement and any potential biases",
+      "explanation": "1. The correct answer, \"Mention the other provider's involvement and any potential biases,\" aligns with Standard 9.01(b) of the APA Ethics Code, which requires psychologists to communicate any limitations of their conclusions when relying on information from other professionals. By acknowledging the other provider's involvement, the psychologist ensures transparency about the source of the treatment history and any potential biases that may arise from that perspective, thereby maintaining ethical standards in assessment and interpretation.\n\n2. The option \"Present the treatment history as if it were their own assessment\" is incorrect because it violates the ethical obligation to accurately represent the source of information, potentially misleading others about the psychologist's role in the assessment. \"Avoid discussing the treatment history to prevent misinformation\" is also wrong, as it disregards the importance of transparency and the ethical responsibility to provide a complete account of the client's treatment history, which can inform current assessments. Lastly, \"Only refer to the treatment history if the client agrees\" is inappropriate because it implies that the psychologist can withhold relevant information from consultations, which undermines the ethical obligation to share pertinent data that could affect treatment decisions.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
       "knId": "KN61",
-      "source_file": "8-standards-3-4.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 9 and 10.json",
       "source_folder": "8 Ethics",
       "difficulty": "hard",
       "question_type": "standard",
       "isScored": false,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -181,23 +182,24 @@
       "is_org_psych": false
     },
     {
-      "id": 10,
-      "question": "What is a significant adverse effect on group decision-making that can occur when individuals feel less accountable for their contributions?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Persuasion.json::9",
+      "question": "According to Tannenbaum et al. (2015), fear appeals are most effective in changing attitudes when they include all of the following EXCEPT:",
       "options": [
-        "Increased creativity and innovation in problem-solving.",
-        "Enhanced group cohesion and collaboration.",
-        "Social loafing leading to reduced individual effort.",
-        "Improved decision accuracy through diverse perspectives."
+        "A high level of fear arousal",
+        "Assurance that recipients can perform the recommended action",
+        "Descriptions of the negative consequences if action is not taken",
+        "Minimization of risk to reduce anxiety in recipients"
       ],
-      "correct_answer": "Social loafing leading to reduced individual effort.",
-      "explanation": "Social loafing occurs when individuals in a group contribute less effort due to a diffusion of responsibility, leading to poorer group performance. The other options suggest positive outcomes that do not align with the concept of social loafing.",
+      "correct_answer": "Minimization of risk to reduce anxiety in recipients",
+      "explanation": "1. \"Minimization of risk to reduce anxiety in recipients\" is the correct answer because Tannenbaum et al. (2015) indicate that effective fear appeals should aim to arouse a high level of fear rather than minimize risk. Minimizing risk would likely decrease the perceived urgency and importance of taking action, which contradicts the goal of effectively using fear to motivate change.\n\n2. The option \"A high level of fear arousal\" is incorrect because research shows that fear appeals are most effective when they elicit a relatively high level of fear, as this can motivate recipients to change their attitudes or behaviors. \"Assurance that recipients can perform the recommended action\" is incorrect because providing efficacy messages that assure recipients of their capability to act is crucial for the effectiveness of fear appeals, helping to alleviate potential feelings of helplessness. Lastly, \"Descriptions of the negative consequences if action is not taken\" is incorrect because detailing the negative outcomes associated with inaction is essential for reinforcing the urgency of the recommended action and enhancing the overall impact of the fear appeal.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
       "knId": "KN16",
-      "source_file": "3-group-influences.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Persuasion.json",
       "source_folder": "3 Social Psychology",
       "difficulty": "hard",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -301,23 +303,24 @@
       "is_org_psych": false
     },
     {
-      "id": 16,
-      "question": "Which of the following best describes intrinsic motivation?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Skinner and Operant Conditioning.json::37",
+      "question": "Skinner’s concept of superstitious behavior is best explained as:",
       "options": [
-        "Motivation driven by external rewards",
-        "Motivation based on personal satisfaction and interest",
-        "Motivation influenced by social pressures",
-        "Motivation that is temporary and situational"
+        "Behaviors maintained by punishment rather than reinforcement.",
+        "Behaviors that increase because they were accidentally reinforced.",
+        "Behaviors that cease when reinforcement is discontinued.",
+        "Behaviors that require both classical and operant conditioning."
       ],
-      "correct_answer": "Motivation based on personal satisfaction and interest",
-      "explanation": "The correct answer is B because intrinsic motivation refers to engaging in behavior for personal satisfaction and interest rather than for external rewards. Option A is incorrect as that describes extrinsic motivation. Option C is incorrect as social pressures relate to external motivation. Option D is incorrect as intrinsic motivation is often more stable and enduring.",
+      "correct_answer": "Behaviors that increase because they were accidentally reinforced.",
+      "explanation": "1. The correct answer, \"Behaviors that increase because they were accidentally reinforced,\" reflects Skinner's concept of superstitious behavior. In his studies, Skinner found that when pigeons were given food at regular intervals regardless of their actions, they began to associate their random behaviors with the reinforcement of food. This led to an increase in those behaviors, even though they were not directly linked to obtaining the food, illustrating how accidental reinforcement can shape behavior.\n\n2. The option \"Behaviors maintained by punishment rather than reinforcement\" is incorrect because superstitious behavior specifically involves reinforcement, not punishment; punishment decreases behavior rather than increasing it. \"Behaviors that cease when reinforcement is discontinued\" is wrong because superstitious behaviors can persist even after reinforcement stops due to their accidental reinforcement history. Lastly, \"Behaviors that require both classical and operant conditioning\" is incorrect because superstitious behavior primarily arises from operant conditioning, specifically through accidental reinforcement, rather than the combination of classical conditioning and operant conditioning.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
       "knId": "KN7",
-      "source_file": "2-operant-conditioning-interventions.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Skinner and Operant Conditioning.json",
       "source_folder": "2 Learning and Memory",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -541,23 +544,24 @@
       "is_org_psych": false
     },
     {
-      "id": 28,
-      "question": "According to the Premack principle, how can a high-frequency behavior be used in reinforcement?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Classical Conditioning Interventions.json::5",
+      "question": "Which of the following environmental factors is most likely to influence eating behavior according to behavioral psychology?",
       "options": [
-        "It can replace low-frequency behaviors entirely.",
-        "It can reinforce low-frequency behaviors when performed afterward.",
-        "It can only be used as a punishment for low-frequency behaviors.",
-        "It has no effect on low-frequency behaviors."
+        "The presence of food cues in the environment",
+        "The time of day when meals are consumed",
+        "The emotional state of the individual",
+        "The nutritional value of the food"
       ],
-      "correct_answer": "It can reinforce low-frequency behaviors when performed afterward.",
-      "explanation": "The Premack principle states that a high-frequency behavior can reinforce a low-frequency behavior when the former is made contingent upon the latter. The other options misinterpret the application of the Premack principle.",
+      "correct_answer": "The presence of food cues in the environment",
+      "explanation": "The presence of food cues in the environment can trigger eating behaviors, as these cues can evoke conditioned responses related to hunger and eating. The other options, while relevant to eating behavior, do not specifically highlight the environmental influence as strongly as food cues do.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
       "knId": "KN7",
-      "source_file": "2-operant-conditioning-interventions.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Classical Conditioning Interventions.json",
       "source_folder": "2 Learning and Memory",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -1041,23 +1045,24 @@
       "is_org_psych": false
     },
     {
-      "id": 53,
-      "question": "In group dynamics, how do individuals typically respond to norm violations within their group?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/2 3 Work Satisfaction.json::10",
+      "question": "Which construct refers to employees' perceptions of their value as members of their organization and relates to their resistance to job stress?",
       "options": [
-        "They often ignore the violation to maintain group harmony.",
-        "They may confront the violator to reinforce group norms.",
-        "They are likely to leave the group if norms are violated.",
-        "They will support the violator if they are a close friend."
+        "Hardiness",
+        "Organizational justice",
+        "Organization-based self-esteem (OBSE)",
+        "Continuance commitment"
       ],
-      "correct_answer": "They may confront the violator to reinforce group norms.",
-      "explanation": "When group norms are violated, individuals often feel compelled to confront the violator to maintain the integrity of the group and reinforce shared norms. Ignoring the violation can lead to further issues, while leaving the group or supporting the violator is less common.",
-      "domain": "Domain 3: Social Psychology & Cultural Aspects",
+      "correct_answer": "Organization-based self-esteem (OBSE)",
+      "explanation": "1. **Correct Answer: Organization-based self-esteem (OBSE)**  \nOrganization-based self-esteem (OBSE) refers to employees' perceptions of their value as members of their organization. This construct is significant because it has been linked to job stress; individuals with low levels of OBSE are more adversely affected by stress and tend to cope with it in a more passive manner, whereas those with high OBSE exhibit greater resistance to job stress.\n\n2. **Incorrect Options:**\n- **Hardiness:** While hardiness is a personality trait that increases resistance to stress, it does not specifically relate to employees' perceptions of their value within an organization, which is the focus of the question.\n- **Organizational justice:** This construct pertains to the fairness of outcomes and procedures within an organization, but it does not directly address employees' self-perceptions or their resistance to job stress.\n- **Continuance commitment:** This type of commitment refers to an employee's belief that they must stay with the organization for financial or alternative opportunity reasons, rather than their self-esteem or value as a member, making it unrelated to the perception of value in the context of stress resistance.",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
       "knId": "KN16",
-      "source_file": "3-group-influences.json",
-      "source_folder": "3 Social Psychology",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/2 3 Work Satisfaction.json",
+      "source_folder": "2 3 5 6 I-O Psychology",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -1081,23 +1086,24 @@
       "is_org_psych": false
     },
     {
-      "id": 55,
-      "question": "A psychology intern is studying the evolution of psychodynamic thought. Compared to classical Freudian psychoanalysis, the Neo-Freudian psychologists primarily emphasized the role of which factors in personality development?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 CBT.json::7",
+      "question": "In Beck's cognitive therapy model, the primary therapeutic focus is on identifying and modifying:",
       "options": [
-        "Biological drives and psychosexual stages",
-        "Social and cultural factors",
-        "Object relations and attachment in the first year of life",
-        "Cognitive schemas and information processing"
+        "Irrational beliefs expressed as absolute demands using 'must' and 'should'",
+        "Maladaptive schemas, automatic thoughts, and systematic cognitive distortions",
+        "Unconscious conflicts that produce anxiety and defense mechanisms",
+        "Experiential avoidance and cognitive fusion that reduce psychological flexibility"
       ],
-      "correct_answer": "Social and cultural factors",
-      "explanation": "The Neo-Freudians (including Sullivan, Horney, and Fromm) departed from classical Freudian theory by emphasizing social and cultural factors rather than biological and instinctual drives. They believed psychological disturbance results from faulty learning and maladaptive interpersonal styles. Biological drives and psychosexual stages (A) represent classical Freudian theory, which is precisely what the Neo-Freudians moved away from. Object relations (C) represents a different post-Freudian school. Cognitive schemas (D) represent Beck's cognitive therapy, not a psychodynamic approach.",
+      "correct_answer": "Maladaptive schemas, automatic thoughts, and systematic cognitive distortions",
+      "explanation": "Beck's cognitive therapy focuses on three core components: cognitive schemas (deep core beliefs), automatic thoughts (spontaneous moment-to-moment cognitions), and cognitive distortions (systematic thinking errors such as arbitrary inference, selective abstraction, and dichotomous thinking). The lesson states: 'Beck identified three elements that create and maintain psychological distress' and describes these three components in detail. Option A describes Ellis's REBT, which targets irrational beliefs expressed as rigid demands. Option C describes psychoanalytic therapy's focus on unconscious conflicts. Option D describes ACT's focus on experiential avoidance and cognitive fusion.",
       "domain": "Domain 6: Treatment & Intervention",
       "knId": "KN43",
-      "source_file": "6-psychodynamic-and-humanistic.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 CBT.json",
       "source_folder": "6 Clinical Interventions",
       "difficulty": "easy",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -1321,23 +1327,24 @@
       "is_org_psych": false
     },
     {
-      "id": 67,
-      "question": "Which of the following best describes the difference between traditional assessment and behavioral assessment?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Neurodevelopmental.json::8",
+      "question": "What is the primary evidence-based behavioral intervention approach for young children with Autism Spectrum Disorder?",
       "options": [
-        "Traditional assessment focuses on observable behaviors, while behavioral assessment emphasizes subjective reports.",
-        "Behavioral assessment is more structured than traditional assessment.",
-        "Traditional assessment often uses standardized tests, while behavioral assessment relies on direct observation.",
-        "Behavioral assessment is less reliable than traditional assessment."
+        "Applied Behavior Analysis (ABA) including Early Intensive Behavioral Intervention (EIBI)",
+        "Cognitive Behavioral Therapy focused on social skills",
+        "Parent-child Interaction Therapy (PCIT)",
+        "Dialectical Behavior Therapy (DBT)"
       ],
-      "correct_answer": "Traditional assessment often uses standardized tests, while behavioral assessment relies on direct observation.",
-      "explanation": "Traditional assessment typically involves standardized tests that measure various psychological constructs, while behavioral assessment focuses on observing and recording specific behaviors in real-time. The other options mischaracterize the distinctions between the two methodologies.",
+      "correct_answer": "Applied Behavior Analysis (ABA) including Early Intensive Behavioral Intervention (EIBI)",
+      "explanation": "1. \"Applied Behavior Analysis (ABA) including Early Intensive Behavioral Intervention (EIBI)\" is the correct answer because it is an evidence-based treatment specifically designed for children with Autism Spectrum Disorder (ASD). EIBI utilizes the principles and techniques of ABA to provide intensive behavioral interventions that promote the acquisition of functional skills and minimize core symptoms of ASD, making it the primary intervention recommended for young children with this disorder.\n\n2. \n- **Cognitive Behavioral Therapy (CBT) focused on social skills**: While CBT can be beneficial for addressing specific issues in individuals with ASD, it is not primarily designed for young children with ASD and does not encompass the comprehensive behavioral strategies used in ABA.\n  \n- **Parent-Child Interaction Therapy (PCIT)**: PCIT is a behavioral intervention aimed at improving parent-child interactions and is primarily used for addressing disruptive behaviors in children, rather than specifically targeting the core symptoms of ASD.\n\n- **Dialectical Behavior Therapy (DBT)**: DBT is primarily designed for treating borderline personality disorder and emotional dysregulation, and it is not an evidence-based intervention for the core symptoms of ASD in young children.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
       "knId": "KN30",
-      "source_file": "5-clinical-tests.json",
-      "source_folder": "5 Assessment",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Neurodevelopmental.json",
+      "source_folder": "5 Diagnosis",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -1441,23 +1448,24 @@
       "is_org_psych": false
     },
     {
-      "id": 73,
-      "question": "What is the primary purpose of trainability tests in the context of training assessment?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Acting Out.json::11",
+      "question": "Which theory best explains the difference between life-course-persistent and adolescence-limited types of conduct disorder in terms of their underlying causes and developmental pathways?",
       "options": [
-        "To measure cognitive abilities",
-        "To evaluate physical fitness",
-        "To assess the potential for learning new skills",
-        "To determine personality traits"
+        "Biosocial theory focusing on gene-environment interactions",
+        "Moffitt’s developmental taxonomy distinguishing neuropsychological deficits and social maturity gaps",
+        "Social learning theory emphasizing modeling and reinforcement",
+        "Attachment theory focusing on early caregiver relationships"
       ],
-      "correct_answer": "To assess the potential for learning new skills",
-      "explanation": "The primary purpose of trainability tests is to evaluate an individual's potential to learn new skills, particularly in a training context. The other options do not accurately reflect the focus of trainability tests.",
+      "correct_answer": "Moffitt’s developmental taxonomy distinguishing neuropsychological deficits and social maturity gaps",
+      "explanation": "1. **Correct Answer Explanation:** \"Moffitt’s developmental taxonomy distinguishing neuropsychological deficits and social maturity gaps\" is the correct answer because it specifically outlines the different underlying causes for life-course-persistent and adolescence-limited types of conduct disorder. Moffitt posits that the life-course-persistent type is associated with neuropsychological deficits that lead to a consistent pattern of antisocial behavior starting in early childhood, whereas the adolescence-limited type arises from a maturity gap between biological and social maturity, resulting in temporary antisocial behaviors during adolescence.\n\n2. **Incorrect Options Explanation:**\n   - **Biosocial theory focusing on gene-environment interactions:** This theory addresses the interplay between genetic predispositions and environmental factors but does not specifically differentiate the developmental pathways of the two types of conduct disorder as Moffitt’s taxonomy does.\n   - **Social learning theory emphasizing modeling and reinforcement:** While this theory explains behavior acquisition through observation and reinforcement, it does not account for the neuropsychological aspects and the distinct developmental trajectories proposed by Moffitt.\n   - **Attachment theory focusing on early caregiver relationships:** This theory highlights the importance of early relationships in emotional and social development but does not specifically address the neuropsychological deficits or the maturity gap that characterize the life-course-persistent and adolescence-limited types of conduct disorder.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
       "knId": "KN30",
-      "source_file": "5-clinical-tests.json",
-      "source_folder": "5 Assessment",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Acting Out.json",
+      "source_folder": "5 Diagnosis",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -1601,23 +1609,24 @@
       "is_org_psych": false
     },
     {
-      "id": 81,
-      "question": "Which of the following factors is considered a prognostic indicator for schizophrenia outcomes?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Clinical Tests.json::70",
+      "question": "Which neuropsychological assessment is specifically focused on identifying deficits in executive functioning?",
       "options": [
-        "The presence of positive symptoms at the time of diagnosis.",
-        "The age of onset of the disorder.",
-        "The duration of untreated psychosis.",
-        "The individual's level of education at the time of diagnosis."
+        "The Wisconsin Card Sorting Test",
+        "The Beck Depression Inventory",
+        "The Rorschach Inkblot Test",
+        "The Minnesota Multiphasic Personality Inventory"
       ],
-      "correct_answer": "The duration of untreated psychosis.",
-      "explanation": "Research indicates that a longer duration of untreated psychosis is associated with poorer outcomes in schizophrenia. The other options may influence prognosis but are not as strongly predictive.",
+      "correct_answer": "The Wisconsin Card Sorting Test",
+      "explanation": "1. The correct answer, \"The Wisconsin Card Sorting Test (WCST),\" is specifically focused on identifying deficits in executive functioning. The WCST measures abstract reasoning, cognitive flexibility, and the ability to adapt cognitive strategies in response to feedback, which are essential components of executive functioning. Additionally, it is sensitive to frontal lobe dysfunction, making it a valuable tool for assessing executive deficits.\n\n2. The Beck Depression Inventory (BDI-II) is a self-report measure that assesses the severity of depressive symptoms, not executive functioning. The Rorschach Inkblot Test is a projective personality assessment that provides insights into an individual's personality and emotional functioning rather than specifically targeting executive functions. The Minnesota Multiphasic Personality Inventory (MMPI-2) is a comprehensive personality assessment tool designed to evaluate psychological conditions and personality structure, but it does not focus on executive functioning deficits.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
       "knId": "KN30",
-      "source_file": "5-clinical-tests.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Clinical Tests.json",
       "source_folder": "5 Assessment",
       "difficulty": "hard",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -1841,23 +1850,24 @@
       "is_org_psych": false
     },
     {
-      "id": 93,
-      "question": "An experienced concert violinist who has performed the same concerto hundreds of times is asked, on the same evening, to sight-read an unfamiliar contemporary piece she has never rehearsed. Both performances occur before a packed concert hall. According to Zajonc's drive theory of social facilitation, which outcome is MOST predicted?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/2 3 Work Satisfaction.json::16",
+      "question": "In the context of psychological resilience, which individual trait has been shown to contribute to sustained job satisfaction despite external stressors?",
       "options": [
-        "Audience presence will improve both performances because the violinist's general expertise generalizes the facilitation effect across tasks",
-        "Audience presence will improve her performance on the familiar concerto but impair her performance on the unfamiliar sight-reading piece",
-        "Audience effects will occur only if the audience is perceived as evaluative; a supportive audience will enhance performance on both pieces equally",
-        "The heightened arousal from the audience will disrupt automatic motor programs regardless of task familiarity, uniformly impairing both performances"
+        "Optimism",
+        "Affective disposition",
+        "Self-efficacy",
+        "Emotional intelligence"
       ],
-      "correct_answer": "Audience presence will improve her performance on the familiar concerto but impair her performance on the unfamiliar sight-reading piece",
-      "explanation": "Zajonc's drive theory holds that the mere presence of others increases physiological arousal, which energizes the dominant response for any given task. For the well-practiced concerto, the dominant response is correct and fluent execution, so arousal facilitates performance. For the unfamiliar sight-reading piece, the dominant response is hesitant and error-prone, so the same arousal impairs performance. Option A incorrectly assumes that expertise generalizes the facilitation benefit to all tasks — Zajonc's model is explicit that the task's degree of mastery, not the performer's overall expertise, determines the direction of the effect. Option C describes evaluation apprehension theory (Cottrell et al., 1968), not Zajonc's mere-presence account, which attributes effects to arousal from presence alone rather than perceived evaluation. Option D incorrectly predicts uniform impairment, contradicting the differential prediction central to drive theory.",
-      "domain": "Domain 3: Social Psychology & Cultural Aspects",
+      "correct_answer": "Affective disposition",
+      "explanation": "1. **Affective disposition** is the correct answer because it refers to an individual's tendency to respond to various situations in a consistently favorable or unfavorable manner. Research indicates that this trait is linked to job satisfaction, as individuals with a positive affective disposition are more likely to experience higher levels of job satisfaction over time, even in the presence of external stressors (Judge & Hulin, 1993).\n\n2. **Optimism** is incorrect because, while it can influence resilience and well-being, the reference material specifically highlights affective disposition as a stable trait linked to job satisfaction, rather than optimism, which is more situational. **Self-efficacy** is also incorrect as it pertains to an individual's belief in their ability to succeed in specific situations, which, while important, does not directly relate to the stability of job satisfaction across different contexts. Lastly, **emotional intelligence** is not the correct answer because it involves the ability to understand and manage emotions, but the reference material does not connect it specifically to sustained job satisfaction in the context of stress, unlike affective disposition, which is explicitly mentioned.",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
       "knId": "KN16",
-      "source_file": "3-group-influences.json",
-      "source_folder": "3 Social Psychology",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/2 3 Work Satisfaction.json",
+      "source_folder": "2 3 5 6 I-O Psychology",
       "difficulty": "hard",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -1921,23 +1931,24 @@
       "is_org_psych": false
     },
     {
-      "id": 97,
-      "question": "A psychology intern is preparing a presentation on the evolution of psychoanalytic thought. What is the primary theoretical emphasis that distinguishes the Neo-Freudian psychoanalysts (e.g., Sullivan, Horney, Fromm) from classical Freudian psychoanalysis?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Psychodynamic and Humanistic Therapies.json::17",
+      "question": "Kelly’s personal construct therapy primarily assists clients by helping them:",
       "options": [
-        "The role of ego autonomous functions in personality development",
-        "The impact of social and cultural factors on personality",
-        "The importance of early object relationships in personality formation",
-        "The process of individuation through integration of archetypes"
+        "Identify and change unconscious id impulses",
+        "Contemplate existential concerns about death and freedom",
+        "Identify and replace maladaptive bipolar dimensions of meaning",
+        "Increase unconditional positive regard and self-acceptance"
       ],
-      "correct_answer": "The impact of social and cultural factors on personality",
-      "explanation": "The Neo-Freudians (Sullivan, Horney, and Fromm) are distinguished by their focus on the impact of social and cultural factors in determining personality. They believed that psychological disturbance results from faulty learning and involves a characterologically maladaptive style of interacting with the environment. Ego autonomous functions (A) is the focus of ego psychology (Hartmann, Anna Freud, Erikson). Early object relationships (C) is the focus of object relations theory (Klein, Winnicott, Mahler). Integration of archetypes and individuation (D) is the focus of Jungian analytical psychology. Each of these represents a distinct extension or departure from classical psychoanalysis.",
+      "correct_answer": "Identify and replace maladaptive bipolar dimensions of meaning",
+      "explanation": "1. The correct answer, \"Identify and replace maladaptive bipolar dimensions of meaning,\" aligns with Kelly's personal construct therapy, which focuses on how individuals perceive and interpret events through personal constructs—bipolar dimensions of meaning. This therapy emphasizes that by recognizing and altering maladaptive constructs, clients can alleviate undesirable behaviors and outcomes, thus enhancing their psychological well-being.\n\n2. The option \"Identify and change unconscious id impulses\" is incorrect because personal construct therapy does not focus on unconscious drives or impulses, but rather on conscious perceptions and interpretations of experiences. \"Contemplate existential concerns about death and freedom\" is also wrong, as this approach is characteristic of existential therapies, which address such ultimate concerns rather than the cognitive constructs emphasized in personal construct therapy. Lastly, \"Increase unconditional positive regard and self-acceptance\" is not applicable, as this is a central goal of person-centered therapy, not personal construct therapy, which prioritizes the identification and modification of personal constructs over the provision of unconditional positive regard.",
       "domain": "Domain 6: Treatment & Intervention",
       "knId": "KN43",
-      "source_file": "6-psychodynamic-and-humanistic.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Psychodynamic and Humanistic Therapies.json",
       "source_folder": "6 Clinical Interventions",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -2121,23 +2132,24 @@
       "is_org_psych": false
     },
     {
-      "id": 107,
-      "question": "What are the diagnostic criteria for separation anxiety disorder?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Sex and Gender.json::0",
+      "question": "A 7-year-old biological male is brought to a psychologist by concerned parents. The child consistently insists on wearing dresses, prefers playing with dolls, exclusively chooses female playmates, and has expressed a strong desire to be a girl for the past 8 months. According to DSM-5-TR criteria, how many of the specified symptoms must be present to diagnose gender dysphoria in children?",
       "options": [
-        "Excessive fear of separation from home or attachment figures lasting at least four weeks.",
-        "Persistent worry about losing a significant other or event causing separation.",
-        "Fear of social situations leading to avoidance behavior.",
-        "Recurrent panic attacks occurring unexpectedly."
+        "At least 2 of 6 specified symptoms for 6 or more months",
+        "At least 4 of 8 specified symptoms for 6 or more months",
+        "At least 6 of 8 specified symptoms for 6 or more months",
+        "At least 3 of 5 specified symptoms for 12 or more months"
       ],
-      "correct_answer": "Excessive fear of separation from home or attachment figures lasting at least four weeks.",
-      "explanation": "The primary diagnostic criterion for separation anxiety disorder includes excessive fear of separation that lasts for at least four weeks. The other options describe different anxiety-related disorders.",
+      "correct_answer": "At least 6 of 8 specified symptoms for 6 or more months",
+      "explanation": "The DSM-5-TR requires children to meet 6 of 8 specified symptoms for at least 6 months for a diagnosis of gender dysphoria. This threshold is higher than for adolescents/adults, who need only 2 of 6 symptoms, because children express gender identity through observable behaviors (toy preferences, clothing choices, playmate selection) rather than through the more articulate self-awareness available to older individuals. Option A (2 of 6) describes the adolescent/adult criteria. Options B and D are fabricated thresholds.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
       "knId": "KN36",
-      "source_file": "5-clinical-tests.json",
-      "source_folder": "5 Assessment",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Sex and Gender.json",
+      "source_folder": "5 Diagnosis",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -2161,43 +2173,45 @@
       "is_org_psych": false
     },
     {
-      "id": 109,
-      "question": "A psychologist suspects that a 7-year-old client is being physically abused by a parent. Before filing a report with child protective services, the psychologist wants to contact the child's pediatrician for corroborating information. What does the psychologist need in order to contact the pediatrician?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json::26",
+      "question": "In the context of court-ordered evaluations, what is the status of privilege?",
       "options": [
-        "Nothing—mandated reporting laws automatically waive all consent requirements for any communication related to suspected abuse",
-        "A signed release of information from the non-abusing parent or legal guardian authorizing contact with the pediatrician",
-        "A court order specifically authorizing inter-provider communication about the suspected abuse",
-        "Only verbal consent from the child, since the child is the identified client"
+        "A. Privilege is always maintained regardless of the court's request.",
+        "B. Privilege is waived when a court orders an evaluation.",
+        "C. Privilege can be asserted unless the court specifically overrides it.",
+        "D. Privilege applies only to therapy sessions, not evaluations."
       ],
-      "correct_answer": "A signed release of information from the non-abusing parent or legal guardian authorizing contact with the pediatrician",
-      "explanation": "Mandated reporting laws require reporting suspected abuse to protective services—they do not broadly waive confidentiality for all communications with any party. Contacting the pediatrician is a separate clinical action that still requires proper authorization (a release of information). Option A incorrectly assumes mandated reporting laws eliminate all consent requirements for any abuse-related communication. Option C is overly restrictive—a court order is not required for routine provider-to-provider communication when proper consent exists. Option D is incorrect because minors generally cannot provide their own consent for release of information; the parent or legal guardian holds that right.",
+      "correct_answer": "C. Privilege can be asserted unless the court specifically overrides it.",
+      "explanation": "Option C is correct because privilege can be asserted in court-ordered evaluations unless the court explicitly overrides it. Option A is incorrect as privilege can be waived by court order. Option B is misleading as it implies automatic waiver. Option D is incorrect because privilege can apply to both therapy and evaluations.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
       "knId": "KN63",
-      "source_file": "8-standards-3-4.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json",
       "source_folder": "8 Ethics",
       "difficulty": "hard",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
-      "id": 110,
-      "question": "A residential psychologist is consulting on a high-density urban housing project where tenants report chronic irritability, frequent interpersonal conflicts, and reduced willingness to assist neighbors compared to residents of lower-density buildings in the same neighborhood. Which explanation from environmental psychology research MOST accurately accounts for these findings?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Persuasion.json::7",
+      "question": "Regarding message discrepancy and communicator credibility, which pattern best describes the relationship between amount of attitude change and message discrepancy when the communicator is high in credibility?",
       "options": [
-        "Prolonged crowding reduces baseline arousal through habituation, paradoxically increasing irritability during low-stimulation periods",
-        "High residential density elevates physiological arousal, which heightens aggressive responding and diminishes prosocial behavior",
-        "Crowding selectively impairs performance on complex cognitive tasks while leaving interpersonal behavior largely unaffected",
-        "The behavioral effects of crowding are mediated entirely by perceived loss of privacy rather than objective physical density"
+        "An inverted-U shape with moderate discrepancy eliciting the greatest change",
+        "A linear relationship with increased change as discrepancy increases",
+        "No relationship between discrepancy and attitude change",
+        "A negative linear relationship with less change as discrepancy increases"
       ],
-      "correct_answer": "High residential density elevates physiological arousal, which heightens aggressive responding and diminishes prosocial behavior",
-      "explanation": "Environmental psychology research consistently links residential crowding to elevated physiological arousal, which in turn is associated with increased irritability and aggression and reduced prosocial helping. Option A incorrectly inverts the arousal model — crowding does not reliably produce habituation leading to reduced arousal. Option C incorrectly limits crowding effects to cognitive performance while excluding social behavior, when interpersonal outcomes are among the most robust findings. Option D overstates the singular role of perceived privacy; objective physical density contributes to arousal independently of perceived control or privacy.",
+      "correct_answer": "A linear relationship with increased change as discrepancy increases",
+      "explanation": "1. The correct answer, \"A linear relationship with increased change as discrepancy increases,\" aligns with the findings regarding high-credible communicators. Research indicates that when a communicator has high credibility, the amount of attitude change increases consistently as the degree of message discrepancy grows, rather than leveling off or decreasing, which is characteristic of low-credible communicators (Aronson, Turner, & Carlsmith, 1963).\n\n2. The first incorrect option, \"An inverted-U shape with moderate discrepancy eliciting the greatest change,\" describes the relationship for low-credible communicators, where moderate discrepancy leads to the most attitude change, but this does not apply to high-credible communicators. The second option, \"No relationship between discrepancy and attitude change,\" is incorrect because there is a clear relationship; high discrepancy leads to increased attitude change for high-credible communicators. Lastly, the option \"A negative linear relationship with less change as discrepancy increases\" is wrong because it contradicts the established finding that higher discrepancy correlates with greater attitude change in the context of high-credibility communication.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
       "knId": "KN16",
-      "source_file": "3-group-influences.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Persuasion.json",
       "source_folder": "3 Social Psychology",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -2281,23 +2295,24 @@
       "is_org_psych": false
     },
     {
-      "id": 115,
-      "question": "What does research suggest about the stability of IQ scores over time?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Internal and External Validity.json::16",
+      "question": "Demand characteristics in a research study primarily threaten which aspect of validity?",
       "options": [
-        "IQ scores are highly unstable and fluctuate significantly throughout life.",
-        "IQ scores tend to remain stable after early childhood.",
-        "IQ scores are influenced solely by environmental factors.",
-        "IQ scores are irrelevant to long-term academic success."
+        "Internal validity by introducing selection bias",
+        "External validity by causing reactivity in participant responses",
+        "Internal validity by affecting instrumentation reliability",
+        "External validity by causing temporal variation"
       ],
-      "correct_answer": "IQ scores tend to remain stable after early childhood.",
-      "explanation": "Research indicates that IQ scores generally show stability after early childhood, suggesting that they are relatively consistent over time. The other options misrepresent the findings regarding IQ stability.",
+      "correct_answer": "External validity by causing reactivity in participant responses",
+      "explanation": "1. The correct answer is \"External validity by causing reactivity in participant responses\" because demand characteristics lead participants to alter their behavior based on cues about what is expected from them during the study. This change in behavior can skew the results, making it difficult to generalize the findings to a broader population, thus compromising the study's external validity.\n\n2. The option \"Internal validity by introducing selection bias\" is incorrect because selection bias pertains to how participants are assigned to groups, not how they respond during the study. \"Internal validity by affecting instrumentation reliability\" is also wrong, as instrumentation threats involve changes in the measurement tools over time rather than participant behavior. Lastly, \"External validity by causing temporal variation\" is incorrect because temporal threats relate to the generalizability of results across time, while demand characteristics specifically influence participant responses during the study, not the time aspect of the findings.",
       "domain": "Domain 7: Research Methods & Statistics",
       "knId": "KN57",
-      "source_file": "7-internal-external-validity.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Internal and External Validity.json",
       "source_folder": "7 Research and Stats",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": false,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -2661,23 +2676,24 @@
       "is_org_psych": false
     },
     {
-      "id": 134,
-      "question": "A behavior analyst working with a child who refuses to complete math worksheets observes that the child spends most of free time drawing. The analyst recommends that the child be allowed to draw for 10 minutes contingent upon completing each worksheet. This intervention is based on which principle?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Skinner and Operant Conditioning.json::20",
+      "question": "A parent repeatedly nags a teenager about completing homework each evening. The teenager eventually shouts at the parent, who immediately leaves the room and stops nagging. Over the following month, the teenager's shouting behavior increases in frequency. Which operant conditioning process best accounts for the maintenance of the shouting behavior?",
       "options": [
-        "Token economy, because drawing serves as a token that can be exchanged for reinforcement",
-        "Premack principle, because a high-frequency preferred behavior is used to reinforce a low-frequency behavior",
-        "Shaping, because the child is being reinforced for successive approximations of worksheet completion",
-        "Differential reinforcement of alternative behavior, because drawing replaces the refusal behavior"
+        "Positive reinforcement, because the parent's attention following the shouting serves as a rewarding stimulus",
+        "Negative reinforcement, because shouting successfully terminated the aversive nagging stimulus",
+        "Positive punishment, because the parent responds to shouting by withdrawing from the situation",
+        "Negative punishment, because the teenager loses access to a pleasant parental relationship"
       ],
-      "correct_answer": "Premack principle, because a high-frequency preferred behavior is used to reinforce a low-frequency behavior",
-      "explanation": "The Premack principle states that 'a high-frequency behavior can reinforce a low-frequency behavior.' Drawing is the high-frequency (preferred) activity, and completing math worksheets is the low-frequency (non-preferred) activity. Access to drawing is contingent upon completing the worksheets. A token economy (A) involves earning tokens exchangeable for backup reinforcers — drawing is the reinforcer itself, not a token. Shaping (C) involves reinforcing successive approximations toward a target behavior, not using a preferred activity as a reinforcer. Differential reinforcement of alternative behavior (D) involves reinforcing an alternative to the problem behavior, but the Premack principle specifically uses the activity preference hierarchy as the basis for reinforcement.",
+      "correct_answer": "Negative reinforcement, because shouting successfully terminated the aversive nagging stimulus",
+      "explanation": "Negative reinforcement involves the removal of an aversive stimulus that increases the likelihood a behavior will recur. The teenager's shouting behavior is negatively reinforced because it reliably terminates the aversive nagging. The behavior increases precisely because the unpleasant stimulus is removed. Positive reinforcement (A) would require the addition of something desirable; shouting does not earn a reward, it eliminates a cost. Positive punishment (C) would decrease the behavior by adding something unpleasant, which does not occur here. Negative punishment (D) would decrease the behavior by removing a desirable stimulus, but shouting actually increases, ruling out any punishment process.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
       "knId": "KN7",
-      "source_file": "2-operant-conditioning-interventions.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Skinner and Operant Conditioning.json",
       "source_folder": "2 Learning and Memory",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -3061,23 +3077,24 @@
       "is_org_psych": false
     },
     {
-      "id": 154,
-      "question": "A researcher reviewing epidemiological literature on obsessive-compulsive disorder (OCD) notices a distinctive pattern in how sex differences in prevalence change across development. Which of the following most accurately characterizes the relationship between sex and OCD prevalence from childhood through adulthood?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Sex and Gender.json::14",
+      "question": "Which of the following statements about transvestic disorder is true?",
       "options": [
-        "OCD is more prevalent in females across both childhood and adult populations, with the disparity most pronounced during adolescence",
-        "OCD shows male predominance in childhood, but the sex difference diminishes and becomes roughly equal by adulthood",
-        "OCD prevalence is essentially equal across sex at all developmental stages, with no consistent pattern across studies",
-        "OCD shows female predominance in childhood and then shifts to male predominance by middle adulthood"
+        "It involves sexual arousal from wearing clothes of the other gender and most affected men identify as heterosexual",
+        "It is characterized by a strong desire to live permanently as the other gender",
+        "It requires distress related to a mismatch between assigned and expressed gender identity",
+        "It only occurs in individuals assigned female at birth"
       ],
-      "correct_answer": "OCD shows male predominance in childhood, but the sex difference diminishes and becomes roughly equal by adulthood",
-      "explanation": "Epidemiological research consistently finds that childhood and adolescent OCD has a male predominance, with boys being diagnosed at higher rates and at younger ages than girls. By adulthood, this sex difference largely disappears, and adult OCD prevalence approximates equality between men and women (with some community samples showing a slight female preponderance). This developmental shift distinguishes OCD from disorders like major depressive disorder and generalized anxiety disorder, which show female predominance across all age groups, and is an important EPPP epidemiological fact. Option A is incorrect because the childhood male predominance is well established. Option C is incorrect because the childhood male predominance is a reliable cross-study finding. Option D reverses the actual developmental pattern.",
+      "correct_answer": "It involves sexual arousal from wearing clothes of the other gender and most affected men identify as heterosexual",
+      "explanation": "1. The correct answer, \"It involves sexual arousal from wearing clothes of the other gender and most affected men identify as heterosexual,\" accurately describes transvestic disorder as it specifically pertains to the recurrent and intense sexual arousal that occurs from cross-dressing. Additionally, it is noted that most men with this disorder identify as heterosexual, which highlights the complexity of sexual orientation in relation to this paraphilic behavior.\n\n2. The statement \"It is characterized by a strong desire to live permanently as the other gender\" is incorrect because transvestic disorder does not inherently involve a desire for permanent gender transition; rather, it focuses on sexual arousal related to cross-dressing. The option \"It requires distress related to a mismatch between assigned and expressed gender identity\" is also wrong, as transvestic disorder is defined by sexual arousal from cross-dressing, not by gender dysphoria or distress over gender identity mismatch. Finally, the statement \"It only occurs in individuals assigned female at birth\" is incorrect because transvestic disorder predominantly occurs in individuals assigned male at birth, as indicated by the prevalence of this disorder among heterosexual men.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
       "knId": "KN38",
-      "source_file": "5-clinical-tests.json",
-      "source_folder": "5 Assessment",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Sex and Gender.json",
+      "source_folder": "5 Diagnosis",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": false,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -3181,23 +3198,24 @@
       "is_org_psych": false
     },
     {
-      "id": 160,
-      "question": "A 7-year-old boy is hospitalized repeatedly over 14 months with unexplained seizures, vomiting, and lethargy. Extensive neurological and laboratory workups are consistently negative. Hospital staff observe that symptoms arise exclusively when the child's mother is present and resolve when she leaves. Video surveillance confirms the mother administering an unknown substance to the child. Under DSM-5, which of the following best describes the correct diagnosis and its assignment?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Anxiety and OCD.json::18",
+      "question": "Which of the following is true about the typical presentation and prevalence of Specific Phobia?",
       "options": [
-        "Somatic symptom disorder, assigned to the child because he is the one experiencing physical symptoms",
-        "Factitious disorder imposed on another, assigned to the mother as the perpetrating caregiver",
-        "Malingering, assigned to the mother because she is deceiving medical staff for secondary gain",
-        "Illness anxiety disorder, assigned to the mother because she is excessively preoccupied with her child's health"
+        "Specific phobia commonly begins in childhood with about twice the prevalence in girls, and involves persistent fear of a particular object or situation.",
+        "Specific phobia occurs equally in males and females and is characterized by worry about multiple life domains.",
+        "It typically starts in adulthood and involves panic attacks triggered by feared situations involving social scrutiny.",
+        "The disorder involves excessive separation anxiety usually developing after a stressful life event."
       ],
-      "correct_answer": "Factitious disorder imposed on another, assigned to the mother as the perpetrating caregiver",
-      "explanation": "In factitious disorder imposed on another (FDIA, formerly Munchausen syndrome by proxy), the DSM-5 assigns the diagnosis to the perpetrating caregiver, not the victim. The caregiver falsifies or induces physical or psychological signs and symptoms in another person under their care, without external incentives. Somatic symptom disorder would be assigned to the person experiencing symptoms who genuinely believes they are ill. Malingering involves external incentives such as financial reward or avoidance of legal responsibility, which are absent here. Illness anxiety disorder involves preoccupation with having or acquiring a disease, not the deliberate induction of illness in another. The critical distinguishing feature of FDIA is intentional deception directed at medical providers through a dependent victim.",
+      "correct_answer": "Specific phobia commonly begins in childhood with about twice the prevalence in girls, and involves persistent fear of a particular object or situation.",
+      "explanation": "1. The correct answer states that \"Specific phobia commonly begins in childhood with about twice the prevalence in girls, and involves persistent fear of a particular object or situation\" because the reference material indicates that specific phobia typically has its onset in childhood, with a mean age of around 10 years. Additionally, it notes that specific phobia is about twice as common in girls compared to boys, and it is characterized by intense fear or anxiety regarding a specific object or situation, which leads to avoidance or distress.\n\n2. The first incorrect option claims that \"Specific phobia occurs equally in males and females and is characterized by worry about multiple life domains.\" This is incorrect because the reference material clearly states that specific phobia is about twice as common in girls than boys, and it focuses on fear of specific objects or situations rather than multiple life domains, which is more characteristic of Generalized Anxiety Disorder (GAD).\n\nThe second incorrect option states that \"It typically starts in adulthood and involves panic attacks triggered by feared situations involving social scrutiny.\" This is wrong because specific phobia usually begins in childhood, not adulthood, and panic attacks are more closely associated with Panic Disorder and Social Anxiety Disorder, not specific phobia.\n\nThe third incorrect option asserts that \"The disorder involves excessive separation anxiety usually developing after a stressful life event.\" This is inaccurate as it describes Separation Anxiety Disorder, which is distinct from specific phobia, the latter being defined by fear of specific objects or situations rather than separation anxiety.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
       "knId": "KN36",
-      "source_file": "5-clinical-tests.json",
-      "source_folder": "5 Assessment",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Anxiety and OCD.json",
+      "source_folder": "5 Diagnosis",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": false,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -3221,23 +3239,24 @@
       "is_org_psych": false
     },
     {
-      "id": 162,
-      "question": "In the context of cultural therapy, what is the primary purpose of cuento therapy?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Connection.json::12",
+      "question": "The gain-loss effect in reciprocity suggests that people tend to be most attracted to those who:",
       "options": [
-        "To provide a structured therapeutic approach for all clients.",
-        "To use storytelling as a means of cultural expression and healing.",
-        "To focus solely on cognitive behavioral techniques.",
-        "To eliminate cultural differences in therapeutic practices."
+        "Initially dislike them but later express liking",
+        "Consistently like them from the beginning",
+        "Initially like them but later express dislike",
+        "Consistently dislike them"
       ],
-      "correct_answer": "To use storytelling as a means of cultural expression and healing.",
-      "explanation": "This answer correctly identifies the purpose of cuento therapy, which emphasizes cultural storytelling. The other options misrepresent the focus and intent of this therapeutic approach.",
+      "correct_answer": "Initially dislike them but later express liking",
+      "explanation": "1. The correct answer, \"Initially dislike them but later express liking,\" aligns with the gain-loss effect, which posits that individuals are more attracted to those who initially show dislike but later change their stance to express liking. This phenomenon occurs because the shift from negative to positive feelings is perceived as more significant and rewarding than consistent positive feelings, enhancing the sense of validation and appreciation in the relationship.\n\n2. The option \"Consistently like them from the beginning\" is incorrect because it does not reflect the dynamic change in feelings that the gain-loss effect highlights; constant liking lacks the emotional intensity that comes from a change in perception. The option \"Initially like them but later express dislike\" is wrong as it suggests a decline in attraction, which contradicts the gain-loss effect that emphasizes attraction resulting from a positive shift in feelings. Lastly, \"Consistently dislike them\" is incorrect because it fails to capture any positive change in feelings, which is essential for the attraction described by the gain-loss effect; a consistent dislike does not foster attraction.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
       "knId": "KN15",
-      "source_file": "3-helping-and-hurting.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Connection.json",
       "source_folder": "3 Social Psychology",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": false,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -3361,43 +3380,45 @@
       "is_org_psych": false
     },
     {
-      "id": 169,
-      "question": "A clinician conducting a differential diagnosis notes that a patient holds bizarre delusions—beliefs that are clearly implausible and outside ordinary human experience (e.g., believing that interdimensional beings have physically replaced his organs without leaving scars). According to DSM-5 criteria, which of the following conditions specifically EXCLUDES bizarre delusions as part of its defining diagnostic requirements?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Acting Out.json::4",
+      "question": "Which physiological finding has been associated with conduct disorder in children?",
       "options": [
-        "Schizophrenia",
-        "Brief psychotic disorder",
-        "Delusional disorder",
-        "Schizoaffective disorder"
+        "Elevated resting heart rate compared to healthy peers",
+        "Lower physiological reactions to aversive stimuli",
+        "Heightened skin conductance responses",
+        "Increased cardiovascular reactivity during stress"
       ],
-      "correct_answer": "Delusional disorder",
-      "explanation": "By DSM-5 definition, delusional disorder requires that the delusions be non-bizarre—that is, they must involve situations that could plausibly occur in real life (e.g., being followed, being poisoned, having a disease, being deceived by a partner). Bizarre delusions, which are implausible by any ordinary real-world standard, rule out the diagnosis of delusional disorder. In contrast, schizophrenia, brief psychotic disorder, and schizoaffective disorder may all include bizarre delusions; notably, in schizophrenia, a single bizarre delusion alone can satisfy Criterion A even in the absence of other psychotic symptoms. This distinction between bizarre and non-bizarre delusions is a high-yield differential diagnosis point on the EPPP.",
+      "correct_answer": "Lower physiological reactions to aversive stimuli",
+      "explanation": "1. \"Lower physiological reactions to aversive stimuli\" is the correct answer because research has shown that children with conduct disorder (CD) exhibit reduced physiological responses, such as lower heart rate and skin conductance, when exposed to stressful situations. Studies indicate that compared to healthy children, those with CD do not experience the typical increase in physiological arousal in response to aversive stimuli, suggesting a discrepancy between their emotional and physiological reactions.\n\n2. The option \"Elevated resting heart rate compared to healthy peers\" is incorrect because children with conduct disorder typically have a lower resting heart rate, which is associated with their reduced physiological reactivity. \"Heightened skin conductance responses\" is wrong because evidence indicates that children with CD have lower skin conductance responses, not heightened ones, in stressful situations. Lastly, \"Increased cardiovascular reactivity during stress\" is incorrect as children with CD do not show the expected increase in cardiovascular responses, further highlighting their atypical physiological functioning in response to stressors.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
       "knId": "KN33",
-      "source_file": "5-clinical-tests.json",
-      "source_folder": "5 Assessment",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Acting Out.json",
+      "source_folder": "5 Diagnosis",
       "difficulty": "hard",
       "question_type": "standard",
       "isScored": false,
+      "type": "standard",
       "is_org_psych": false
     },
     {
-      "id": 170,
-      "question": "A psychiatry resident asks a consulting psychologist about the heritability of bipolar I disorder, noting that twin studies offer the clearest evidence of genetic contribution. Which of the following most accurately characterizes the monozygotic (MZ) twin concordance rate for bipolar I disorder and the appropriate interpretation of this finding?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 What Tests Measure.json::18",
+      "question": "In the context of test validity, which scenario best exemplifies a threat to content validity?",
       "options": [
-        "MZ concordance is approximately 5–15%, suggesting genetics plays a minimal role and environmental factors predominate",
-        "MZ concordance is approximately 20–25%, roughly equivalent to dizygotic (DZ) twin rates, indicating primarily shared environmental influence",
-        "MZ concordance is approximately 40–70%, substantially higher than DZ rates, indicating a significant but incomplete genetic contribution",
-        "MZ concordance approaches 95–100%, indicating that bipolar I disorder is almost entirely genetically determined with negligible environmental input"
+        "A. A math test includes questions on geometry but not on algebra",
+        "B. A personality test shows high correlation with a measure of anxiety",
+        "C. A clinical assessment tool is consistently yielding different results over time",
+        "D. A test designed to measure intelligence includes irrelevant cultural questions"
       ],
-      "correct_answer": "MZ concordance is approximately 40–70%, substantially higher than DZ rates, indicating a significant but incomplete genetic contribution",
-      "explanation": "Twin studies consistently show MZ concordance rates for bipolar I disorder in the range of approximately 40–70%, compared to DZ twin rates of approximately 5–15%. The substantially higher MZ rate (compared to DZ) confirms a strong genetic contribution, while the fact that concordance falls well below 100% demonstrates that environmental factors also play a meaningful etiological role. A 5–15% rate would imply minimal heritability, contradicting the research literature. Nearly identical MZ and DZ rates would suggest that shared environment rather than genetics drives familial aggregation. Near-perfect MZ concordance would imply a purely genetic etiology, which the evidence does not support.",
+      "correct_answer": "A. A math test includes questions on geometry but not on algebra",
+      "explanation": "1. Option A is correct because content validity refers to the extent to which a test represents all aspects of the domain it is intended to measure. A math test that includes questions on geometry but excludes algebra fails to adequately cover the essential content areas of mathematics, thus threatening its content validity.\n\n2. Option B is incorrect because a high correlation between a personality test and a measure of anxiety demonstrates convergent validity, not a threat to content validity. Option C is wrong because consistently yielding different results over time indicates a reliability issue rather than a content validity threat. Option D is incorrect because including irrelevant cultural questions in an intelligence test could threaten construct validity, but it does not specifically address the adequacy of content coverage within the intended domain of intelligence.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
       "knId": "KN29",
-      "source_file": "5-clinical-tests.json",
-      "source_folder": "5 Assessment",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 What Tests Measure.json",
+      "source_folder": "5 Test Construction",
       "difficulty": "hard",
       "question_type": "standard",
       "isScored": false,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -3481,23 +3502,24 @@
       "is_org_psych": false
     },
     {
-      "id": 175,
-      "question": "What is the primary outcome of group polarization in decision-making contexts?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Persuasion.json::21",
+      "question": "Which persuasion technique involves presenting compelling evidence and social proof to strengthen an argument and reduce counterarguments?",
       "options": [
-        "Group members become more moderate in their views.",
-        "Group members' opinions become more extreme in the direction of the majority.",
-        "Group members reach a consensus that reflects the average of individual opinions.",
-        "Group members are less likely to express their true opinions."
+        "Beta strategy",
+        "Alpha strategy",
+        "Gamma strategy",
+        "Epsilon strategy"
       ],
-      "correct_answer": "Group members' opinions become more extreme in the direction of the majority.",
-      "explanation": "Group polarization occurs when discussions within a group lead to members adopting more extreme positions than they initially held, often aligning with the majority view. The other options incorrectly describe the effects of group dynamics on decision-making.",
+      "correct_answer": "Alpha strategy",
+      "explanation": "1. The correct answer is \"Alpha strategy\" because it focuses on overcoming resistance to persuasion by increasing approach forces. This involves presenting compelling evidence and social proof, such as maximizing the strength of the arguments and demonstrating that the advocated attitude, belief, or behavior is widely accepted, thereby making the change seem desirable.\n\n2. The option \"Beta strategy\" is incorrect because it is not mentioned in the reference material and does not correspond to any established persuasion technique. \"Gamma strategy\" is also incorrect for the same reason; it does not exist within the discussed frameworks of persuasion. Lastly, \"Epsilon strategy\" is incorrect as it is not defined or referenced in the material, making it an invalid choice in the context of persuasion strategies.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
       "knId": "KN16",
-      "source_file": "3-group-influences.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Persuasion.json",
       "source_folder": "3 Social Psychology",
       "difficulty": "hard",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -3561,23 +3583,24 @@
       "is_org_psych": false
     },
     {
-      "id": 179,
-      "question": "What is the primary justification for using a pooled error term in ANOVA?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Inferential Stats.json::22",
+      "question": "In Bayesian statistics, what does the 'prior' represent?",
       "options": [
-        "To increase the sample size for more accurate estimates.",
-        "To account for unequal variances across groups.",
-        "To provide a more stable estimate of the error variance.",
-        "To simplify the calculations involved in ANOVA."
+        "The probability distribution of a parameter after observing current data",
+        "The probability distribution of a parameter before collecting current data, based on previous knowledge",
+        "The observed data distribution in the current study",
+        "The probability that the null hypothesis is false"
       ],
-      "correct_answer": "To provide a more stable estimate of the error variance.",
-      "explanation": "The correct answer reflects the purpose of pooling error terms, which is to enhance the stability of the error variance estimate across groups. The other options either misstate the purpose or are not relevant to the justification for pooling.",
+      "correct_answer": "The probability distribution of a parameter before collecting current data, based on previous knowledge",
+      "explanation": "1. The correct answer, \"The probability distribution of a parameter before collecting current data, based on previous knowledge,\" accurately describes the 'prior' in Bayesian statistics. The prior is established by the researcher and reflects their beliefs or knowledge about a parameter before new data is gathered. This foundational concept is crucial as it allows researchers to integrate existing information with new evidence to form updated conclusions.\n\n2. The option \"The probability distribution of a parameter after observing current data\" is incorrect because it describes the 'posterior,' which is the updated distribution obtained after combining the prior with the current data. The option \"The observed data distribution in the current study\" is incorrect because it refers to the likelihood function, not the prior, as the likelihood encompasses the data collected in the current study. Lastly, \"The probability that the null hypothesis is false\" is incorrect because it mischaracterizes the prior; the prior does not directly express probabilities related to the null hypothesis but rather serves as a foundation for estimating parameters before considering new data.",
       "domain": "Domain 7: Research Methods & Statistics",
       "knId": "KN55",
-      "source_file": "7-inferential-stats.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Inferential Stats.json",
       "source_folder": "7 Research and Stats",
       "difficulty": "hard",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -3841,23 +3864,24 @@
       "is_org_psych": false
     },
     {
-      "id": 193,
-      "question": "In a crisis situation, what is the primary ethical obligation of a psychologist when offering help?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 1 and 2.json::25",
+      "question": "According to APA's ethical decision-making model described by Fisher (2022), what step comes immediately after identifying relevant laws, regulations, and institutional policies?",
       "options": [
-        "To ensure that their intervention does not violate any laws.",
-        "To provide assistance only if they are being compensated.",
-        "To act in the best interest of the individual in crisis, even if it means breaching confidentiality.",
-        "To refer the individual to another professional immediately."
+        "Consider the perspectives of affected stakeholders",
+        "Identify the ethical problem",
+        "Monitor and evaluate results of the action plan",
+        "Develop and implement an action plan"
       ],
-      "correct_answer": "To act in the best interest of the individual in crisis, even if it means breaching confidentiality.",
-      "explanation": "The correct answer emphasizes the ethical obligation to prioritize the well-being of the individual in crisis, which may necessitate breaching confidentiality. The other options do not align with the ethical imperative to provide immediate help.",
+      "correct_answer": "Consider the perspectives of affected stakeholders",
+      "explanation": "1. \"Consider the perspectives of affected stakeholders\" is the correct answer because it follows the identification of relevant laws, regulations, and institutional policies in Fisher's (2022) ethical decision-making model. This step emphasizes the importance of understanding how the decision will impact various stakeholders, such as clients, colleagues, and the community, ensuring that their perspectives are taken into account before proceeding with any actions.\n\n2. \n- \"Identify the ethical problem\" is incorrect because this step occurs first in the decision-making process, setting the foundation for the subsequent steps.\n- \"Monitor and evaluate results of the action plan\" is wrong as it is the final step in the model, focusing on assessing the outcomes after the action has been implemented rather than before developing an action plan.\n- \"Develop and implement an action plan\" is incorrect because it comes after considering the perspectives of stakeholders; this step involves creating a specific course of action based on the gathered information and stakeholder input.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
       "knId": "KN65",
-      "source_file": "8-standards-1-2.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 1 and 2.json",
       "source_folder": "8 Ethics",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -4041,23 +4065,24 @@
       "is_org_psych": false
     },
     {
-      "id": 203,
-      "question": "A management consultant is hired to reduce social loafing on a software engineering team where individual contributions are indistinguishable in the final product and the team shares a single performance bonus regardless of individual output. Based on the empirical literature on group performance, which structural redesign has the STRONGEST support for eliminating free-rider behavior?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Influence.json::3",
+      "question": "Which leadership style focuses on inspiring and motivating followers to achieve higher levels of performance?",
       "options": [
-        "Increasing team size so that workload is distributed more broadly and no single individual feels undue pressure",
-        "Replacing individual performance metrics with team-only metrics to foster collective identity and interdependence",
-        "Restructuring tasks so that each member's contribution is uniquely identifiable and indispensable to completing the final product",
-        "Rotating task assignments monthly so that each member's diverse contributions are visible to the full team over time"
+        "Transactional leadership.",
+        "Transformational leadership.",
+        "Autocratic leadership.",
+        "Laissez-faire leadership."
       ],
-      "correct_answer": "Restructuring tasks so that each member's contribution is uniquely identifiable and indispensable to completing the final product",
-      "explanation": "Social loafing is substantially reduced when individual contributions are both identifiable and essential to group success. Identifiability increases evaluation apprehension, and task indispensability reduces diffusion of responsibility — the two primary mechanisms driving social loafing. Option A is counterproductive; larger teams increase anonymity and diffusion of responsibility, typically worsening social loafing. Option B (team-only metrics) preserves collective anonymity and maintains the reward structure that enabled loafing in the first place. Option D (task rotation) may provide some visibility benefits but does not create the sustained identifiability and indispensability that directly address the core mechanisms.",
+      "correct_answer": "Transformational leadership.",
+      "explanation": "The correct answer identifies transformational leadership as the style that emphasizes inspiration and motivation. The other options describe different leadership styles that do not focus on inspiring followers.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
       "knId": "KN16",
-      "source_file": "3-group-influences.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Influence.json",
       "source_folder": "3 Social Psychology",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -4121,23 +4146,24 @@
       "is_org_psych": false
     },
     {
-      "id": 207,
-      "question": "What does test validity refer to in psychometric properties?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Interpreting Scores.json::0",
+      "question": "A psychologist is explaining test results to the parents of a child who scored 85% correct on a reading mastery assessment. The parents ask whether this means their child is performing better than 85% of other children. Which response BEST clarifies the distinction between the two types of scores?",
       "options": [
-        "The consistency of test scores over time.",
-        "The degree to which a test measures what it claims to measure.",
-        "The ease of administering and scoring the test.",
-        "The ability of a test to predict future performance."
+        "The 85% represents a criterion-referenced score indicating the proportion of content mastered, not a comparison to other children's performance",
+        "The 85% is equivalent to a percentile rank of 85, meaning the child scored better than 85% of the normative sample",
+        "The 85% should be converted to a z-score before any meaningful interpretation can be made",
+        "The 85% represents a norm-referenced standard score that places the child one standard deviation above the mean"
       ],
-      "correct_answer": "The degree to which a test measures what it claims to measure.",
-      "explanation": "Test validity specifically refers to how well a test measures the construct it is intended to measure. The other options describe different aspects of test reliability or practicality, not validity.",
+      "correct_answer": "The 85% represents a criterion-referenced score indicating the proportion of content mastered, not a comparison to other children's performance",
+      "explanation": "A percentage score of 85% is a criterion-referenced score indicating the child answered 85% of items correctly—it measures mastery of content, not comparison to others. Option B confuses percentage scores with percentile ranks, which are norm-referenced and indicate standing relative to a comparison group. As the lesson explicitly states: 'A percentile rank of 75 means you scored better than 75% of people. A percentage score of 75 means you answered 75% of questions correctly. These are completely different metrics.' Option C is incorrect because criterion-referenced scores are meaningful without conversion to z-scores. Option D is wrong because 85% correct is not a standard score.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
       "knId": "KN29",
-      "source_file": "5-clinical-tests.json",
-      "source_folder": "5 Assessment",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Interpreting Scores.json",
+      "source_folder": "5 Test Construction",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": false,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -4401,23 +4427,24 @@
       "is_org_psych": false
     },
     {
-      "id": 221,
-      "question": "When a client expresses concerns about discrimination in therapy, what is the most ethical response for the psychologist?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 1 and 2.json::26",
+      "question": "What constitutes an ethical violation when cooperating with an ethics investigation?",
       "options": [
-        "Dismissing the concerns as unfounded.",
-        "Encouraging the client to seek therapy elsewhere.",
-        "Listening to the client's concerns and exploring them together.",
-        "Reporting the client to the authorities for inappropriate behavior."
+        "Providing client information with a signed client release when requested by an ethics committee",
+        "Refusing to cooperate with the ethics committee's investigation without a valid legal or ethical justification",
+        "Reporting suspected child abuse to appropriate authorities despite confidentiality constraints",
+        "Consulting with a supervisor before responding to the ethics committee's request"
       ],
-      "correct_answer": "Listening to the client's concerns and exploring them together.",
-      "explanation": "The correct answer emphasizes the importance of listening and exploring the client's concerns, which aligns with ethical practices in psychology. The lesson highlights that psychologists should address client concerns seriously. The other options either dismiss the client's feelings or suggest inappropriate actions.",
+      "correct_answer": "Refusing to cooperate with the ethics committee's investigation without a valid legal or ethical justification",
+      "explanation": "1. \"Refusing to cooperate with the ethics committee's investigation without a valid legal or ethical justification\" is the correct answer because Standard 1.06 of the APA Ethics Code explicitly states that psychologists must cooperate with investigations and proceedings of the APA and affiliated associations. Failing to do so constitutes an ethical violation unless there are valid legal or ethical reasons for the refusal.\n\n2. \n- **Providing client information with a signed client release when requested by an ethics committee** is incorrect because it aligns with Standard 1.06, which allows psychologists to share information if proper authorization is obtained, thereby fulfilling their obligation to cooperate.\n- **Reporting suspected child abuse to appropriate authorities despite confidentiality constraints** is incorrect because it reflects adherence to legal and ethical responsibilities, as mandated by laws that require reporting such abuse, which can supersede confidentiality obligations.\n- **Consulting with a supervisor before responding to the ethics committee's request** is incorrect because seeking consultation demonstrates due diligence and professionalism, ensuring that the psychologist's response is informed and appropriate, in line with ethical standards.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
       "knId": "KN61",
-      "source_file": "8-standards-3-4.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 1 and 2.json",
       "source_folder": "8 Ethics",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": false,
+      "type": "standard",
       "is_org_psych": false
     },
     {

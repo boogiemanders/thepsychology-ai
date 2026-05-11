@@ -12,7 +12,8 @@
       "7": 16,
       "8": 36
     },
-    "generatedAt": "2025-11-20T18:01:10.389Z"
+    "generatedAt": "2025-11-20T18:01:10.389Z",
+    "lastSurgicalFix": "2026-05-10T02:45:22.406Z"
   },
   "questions": [
     {
@@ -130,22 +131,22 @@
       "scored": true
     },
     {
-      "stem": "Which type of genotype-environment correlation occurs when children actively seek experiences compatible with their genetic predispositions?",
+      "stem": "Which environmental factors have been identified as causing epigenetic changes during prenatal development?",
       "options": [
-        "Active genotype-environment correlation",
-        "Passive genotype-environment correlation",
-        "Evocative genotype-environment correlation",
-        "Reactive genotype-environment correlation"
+        "Maternal diet, teratogenic medications, infections, tobacco use, and alcohol consumption",
+        "Physical exercise, trauma, drug use, and environmental toxins",
+        "Genetic mutations and chromosomal abnormalities",
+        "Only genetic inheritance without environmental influence"
       ],
-      "answer": "Active genotype-environment correlation",
-      "explanation": "1. The correct answer is \"Active genotype-environment correlation\" because this type of correlation occurs when children actively seek out experiences that align with their genetic predispositions. As children grow, they gain the ability to choose environments and activities that resonate with their innate traits, thereby reinforcing those characteristics through their choices.\n\n2. \n- **Passive genotype-environment correlation** is incorrect because it refers to situations where children inherit genes from their parents that predispose them to certain traits, and those parents provide environments that support the development of those traits, rather than the children actively seeking experiences themselves.\n  \n- **Evocative genotype-environment correlation** is wrong because it describes how a child's genetic traits elicit specific responses from others in their environment, rather than the child choosing experiences that match their genetic predispositions.\n\n- **Reactive genotype-environment correlation** is not a recognized term in the context provided; the correct terms are passive, evocative, and active genotype-environment correlations, making this option invalid based on the reference material.",
+      "answer": "Maternal diet, teratogenic medications, infections, tobacco use, and alcohol consumption",
+      "explanation": "1. The correct answer, \"Maternal diet, teratogenic medications, infections, tobacco use, and alcohol consumption,\" is supported by the reference material, which identifies these factors as potential causes of epigenetic changes during prenatal development. Specifically, it mentions that maternal diet and exposure to teratogenic medications, as well as infections, tobacco, and alcohol, can trigger changes in gene expression that may lead to lasting effects on the developing fetus.\n\n2. The first incorrect option, \"Physical exercise, trauma, drug use, and environmental toxins,\" is wrong because while some of these factors can influence development postnatally, the reference material specifically lists the factors affecting prenatal epigenetic changes as maternal diet, teratogenic medications, infections, tobacco, and alcohol. The second incorrect option, \"Genetic mutations and chromosomal abnormalities,\" is incorrect because it pertains to changes in genetic code rather than epigenetic modifications, which involve alterations in gene expression without changing the DNA sequence. Lastly, the option \"Only genetic inheritance without environmental influence\" is incorrect because the reference material emphasizes that both genetic and environmental factors contribute to development, highlighting the significant role of environmental influences in epigenetic changes.",
       "kn": "KN22",
       "kn_explanation": "This question is best aligned with KN22 because it tests Influence of individual-environment interaction on development over time (e.g., the relationship between the individual and the social, academic, work, community environment).",
       "difficulty": "medium",
-      "quality_comment": "Distractors are plausible and well matched, requiring test-takers to differentiate among similar genotype-environment correlations.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Early Influences on Development – Nature vs- Nurture.json",
-      "domain": 1,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Early Influences on Development – Nature vs- Nurture.json::2",
+      "quality_comment": "Distractors include postnatal and genetic-only factors, enabling testers to distinguish prenatal environmental epigenetic influences.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Heredity and Environment.json",
+      "domain": 22,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Heredity and Environment.json::8",
       "scored": true
     },
     {
@@ -168,22 +169,22 @@
       "scored": true
     },
     {
-      "stem": "Which of the following best describes the impact of divorce on men’s health according to research?",
+      "stem": "According to Gottman and Levenson's research, which communication behavior is the single best predictor of divorce?",
       "options": [
-        "Economic hardship leading to chronic health problems",
-        "Increased risky health behaviors and transient health effects",
-        "Greater social support improving mental health",
-        "Steady improvement in psychological well-being"
+        "Stonewalling",
+        "Criticism",
+        "Contempt",
+        "Defensiveness"
       ],
-      "answer": "Increased risky health behaviors and transient health effects",
-      "explanation": "1. The correct answer, \"Increased risky health behaviors and transient health effects,\" accurately describes the impact of divorce on men's health as research indicates that men often engage in riskier health behaviors following divorce and experience health problems that are typically temporary. Specifically, studies show that men may face increased stress, social isolation, and other psychological factors post-divorce, which contribute to these risky behaviors and transient health issues (Liu, 2013).\n\n2. The option \"Economic hardship leading to chronic health problems\" is incorrect because, while economic hardship does affect women's health post-divorce, men typically experience an improved financial situation after divorce, which does not lead to chronic health problems. The statement \"Greater social support improving mental health\" is also wrong, as the research indicates that men often face increased social isolation after divorce rather than enhanced social support. Lastly, \"Steady improvement in psychological well-being\" is incorrect because the research shows that men's health problems post-divorce are often linked to increased stress and risky behaviors, not a consistent improvement in their psychological state.",
+      "answer": "Contempt",
+      "explanation": "1. **Correct Answer - Contempt**: According to Gottman and Levenson's research, contempt is identified as the single best predictor of divorce. This behavior is part of their \"Four Horsemen of the Apocalypse,\" which also includes criticism, defensiveness, and stonewalling. Contempt signifies a deep-seated disdain for one’s partner, often leading to escalating conflicts and a breakdown in the relationship, making it a critical indicator of marital dissolution.\n\n2. **Incorrect Options**:\n   - **Stonewalling**: While stonewalling, or withdrawing from interaction, is a negative communication behavior, it is not as strongly predictive of divorce as contempt, which reflects a more active disdain for the partner.\n   - **Criticism**: Criticism involves attacking a partner's character or personality rather than addressing specific behaviors, but it does not have the same level of detrimental impact on the relationship as contempt does.\n   - **Defensiveness**: Defensiveness is a response aimed at protecting oneself from perceived attacks, and while it can contribute to conflict, it lacks the corrosive effect of contempt on the relationship dynamics.",
       "kn": "KN22",
       "kn_explanation": "This question is best aligned with KN22 because it tests Influence of individual-environment interaction on development over time (e.g., the relationship between the individual and the social, academic, work, community environment).",
       "difficulty": "medium",
-      "quality_comment": "Good balance of detailed, plausible answer choices reflecting different health outcomes.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 School and Family Influences.json",
-      "domain": 4,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 School and Family Influences.json::3",
+      "quality_comment": "The question is clear and covers a key concept with plausible distractors that test knowledge of specific relationship dynamics.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 School and Family.json",
+      "domain": 22,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 School and Family.json::12",
       "scored": true
     },
     {
@@ -206,22 +207,22 @@
       "scored": true
     },
     {
-      "stem": "Which explanation for forgetting attributes memory loss to interference between similar pieces of information?",
+      "stem": "The Zeigarnik effect suggests that people remember uncompleted or interrupted tasks better than completed ones. What psychological principle does this phenomenon illustrate?",
       "options": [
-        "Trace decay theory",
-        "Interference theory",
-        "Encoding specificity hypothesis",
-        "Latent learning theory"
+        "Cognitive dissonance",
+        "Memory consolidation",
+        "Attention and focus",
+        "Motivation and goal-setting"
       ],
-      "answer": "Interference theory",
-      "explanation": "1. **Interference theory** is the correct answer because it specifically attributes memory loss to the disruption caused by previously learned or more recently acquired information that is similar to the target memory. This theory distinguishes between two types of interference: proactive interference, where old information interferes with new learning, and retroactive interference, where new information disrupts the recall of old memories.\n\n2. **Trace decay theory** is incorrect because it posits that memories fade over time due to physical changes in the brain rather than interference from other information. **Encoding specificity hypothesis** is also incorrect as it suggests that memory retrieval is optimized when the conditions during encoding match those during recall, focusing on the context rather than interference. Lastly, **latent learning theory** is wrong because it explains the acquisition of knowledge that occurs without reinforcement, emphasizing cognitive maps rather than the forgetting process related to interference.",
+      "answer": "Memory consolidation",
+      "explanation": "The Zeigarnik effect illustrates how uncompleted tasks remain active in memory, suggesting that they are more readily recalled due to their unresolved nature, which relates to the processes of memory consolidation. Cognitive dissonance, attention and focus, and motivation and goal-setting are not directly related to this effect.",
       "kn": "KN8",
-      "kn_explanation": "This question assesses knowledge of research-based theories explaining memory and forgetting, which is central to KN8.",
+      "kn_explanation": "This question is best aligned with KN8 because it tests Major research-based theories and models of memory and their application.",
       "difficulty": "medium",
-      "quality_comment": "Distractors are plausible memory theories but only interference theory specifically relates to confusion caused by similar information, enhancing question validity.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Cognitive-Affective Bases : Learning and Memory/2 Memory and Forgetting.json",
-      "domain": 2,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Cognitive-Affective Bases : Learning and Memory/2 Memory and Forgetting.json::5",
+      "quality_comment": "The question is well-structured and tests knowledge of a specific memory phenomenon.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Memory.json",
+      "domain": 8,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Memory.json::31",
       "scored": true
     },
     {
@@ -434,22 +435,22 @@
       "scored": false
     },
     {
-      "stem": "Which supervision model is conceptually aligned with humanistic therapies' emphasis on authentic therapist-client relationships and genuineness?",
+      "stem": "A behavioral psychologist explains that the emotional release experienced during psychoanalytic free association is therapeutically beneficial not because of catharsis per se, but because it allows the client to discuss previously avoided material without negative consequences. This explanation is MOST consistent with which behavioral principle?",
       "options": [
-        "Behavioral skills training",
-        "Psychoanalytic supervision focusing on transference analysis",
-        "Developmental models emphasizing growth and authenticity",
-        "Adlerian supervision focused on social interest and encouragement"
+        "Systematic desensitization through reciprocal inhibition of anxiety responses",
+        "Extinction of conditioned emotional responses through repeated unreinforced exposure",
+        "Counterconditioning by pairing distressing memories with the positive therapeutic relationship",
+        "Stimulus generalization of relaxation from the therapy setting to real-world situations"
       ],
-      "answer": "Developmental models emphasizing growth and authenticity",
-      "explanation": "1. \"Developmental models emphasizing growth and authenticity\" is the correct answer because humanistic therapies, such as person-centered therapy, prioritize the authenticity of the therapist-client relationship and focus on personal growth. These models align with the humanistic emphasis on fostering a genuine connection that supports the client’s journey towards self-actualization and becoming a fully functioning person.\n\n2. \n- **Behavioral skills training**: This option is incorrect as it focuses on teaching specific skills and behaviors rather than fostering an authentic therapeutic relationship or personal growth, which are central to humanistic therapies.\n  \n- **Psychoanalytic supervision focusing on transference analysis**: This is incorrect because psychoanalytic supervision emphasizes understanding unconscious processes and transference dynamics rather than the authenticity and growth-oriented aspects of the therapist-client relationship found in humanistic approaches.\n\n- **Adlerian supervision focused on social interest and encouragement**: This option is incorrect as Adlerian supervision, while it values social interest and encouragement, does not specifically emphasize the authenticity of the therapist-client relationship in the same way that humanistic therapies do.",
+      "answer": "Extinction of conditioned emotional responses through repeated unreinforced exposure",
+      "explanation": "From a behavioral perspective, the catharsis that occurs in psychoanalysis can be understood as extinction. When clients verbalize previously avoided (repressed) thoughts and feelings during free association, they are exposed to conditioned stimuli (the distressing memories and emotions) without the originally feared negative consequences. Over repeated exposures in the safe therapy environment, the conditioned emotional responses gradually extinguish. Option A is incorrect because systematic desensitization involves a structured anxiety hierarchy and relaxation training, not free association. Option C describes counterconditioning, which requires actively pairing the stimulus with an incompatible positive response—this is a related but distinct mechanism from extinction. Option D describes stimulus generalization, which refers to transfer of learning across contexts rather than the in-session emotional release phenomenon.",
       "kn": "KN43",
       "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
       "difficulty": "hard",
-      "quality_comment": "The question extends the domain by bridging supervision theories with therapy style, enhancing integration relevant to advanced EPPP candidates.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Treatment, Intervention, and Prevention : Clinical Psychology/6 Psychodynamic and Humanistic Therapies.json",
-      "domain": 6,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Treatment, Intervention, and Prevention : Clinical Psychology/6 Psychodynamic and Humanistic Therapies.json::15",
+      "quality_comment": "Excellent integrative question requiring understanding of both psychodynamic concepts and behavioral principles. The lesson mentions catharsis but does not provide the behavioral reinterpretation as extinction.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Psychodynamic and Humanistic Therapies.json",
+      "domain": 43,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Psychodynamic and Humanistic Therapies.json::3",
       "scored": false
     },
     {
@@ -795,22 +796,22 @@
       "scored": false
     },
     {
-      "stem": "According to research on conformity, which type of influence is most likely to lead to private acceptance of a group's viewpoint in ambiguous situations?",
+      "stem": "Which of the following individual characteristics is associated with increased susceptibility to the negative effects of stress and an elevated risk for coronary heart disease?",
       "options": [
-        "Normative influence",
-        "Informational influence",
-        "Psychological reactance",
-        "Foot-in-the-door technique"
+        "Hardiness",
+        "Type A behavior pattern",
+        "Organization-based self-esteem",
+        "Neuroticism"
       ],
-      "answer": "Informational influence",
-      "explanation": "1. **Informational influence** is the correct answer because it occurs when individuals conform to the judgments of others in ambiguous situations, believing that those others possess more accurate information. This type of influence often leads to private acceptance, meaning that individuals genuinely adopt the group's viewpoint rather than merely conforming outwardly.\n\n2. **Normative influence** is incorrect because it pertains to conforming to avoid ridicule or rejection, leading to public compliance without genuine acceptance of the group's viewpoint. **Psychological reactance** is also incorrect as it describes a reaction against perceived pressure to conform, where individuals may do the opposite of what is requested to regain their freedom, rather than accepting the group's viewpoint. Lastly, the **foot-in-the-door technique** is not applicable here because it is a compliance strategy involving a two-step request process rather than a mechanism of conformity or acceptance of group norms.",
+      "answer": "Type A behavior pattern",
+      "explanation": "1. **Type A behavior pattern** is the correct answer because it is characterized by a chronic sense of time urgency, excessive competitiveness, and hostility, which are linked to increased susceptibility to the negative effects of stress. Research indicates that this behavior pattern is associated with a higher risk for coronary heart disease, particularly due to the hostility component (Friedman & Rosenman, 1959; Krantz & McCeney, 2002).\n\n2. The incorrect options are:\n\n- **Hardiness**: This personality trait is associated with increased resistance to stress, as hardy individuals perceive challenges positively and maintain a sense of control, thus reducing the likelihood of negative health outcomes.\n  \n- **Organization-based self-esteem (OBSE)**: OBSE relates to employees’ perceptions of their value within an organization and is linked to higher job satisfaction and commitment, but low OBSE can make individuals more passive in coping with stress rather than increasing susceptibility.\n\n- **Neuroticism**: While neuroticism is associated with emotional instability and higher stress levels, it is not specifically mentioned in the provided material as a direct contributor to increased susceptibility to stress or coronary heart disease compared to the Type A behavior pattern.",
       "kn": "KN16",
-      "kn_explanation": "This question assesses understanding of social cognition processes involved in conformity and social influence, which falls under group and systems processes (KN16).",
+      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
       "difficulty": "medium",
-      "quality_comment": "The options include related concepts, some from other influence types, providing a well-constructed challenge for differentiating key mechanisms.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Social Influence – Types of Influence.json",
-      "domain": 3,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Social Influence – Types of Influence.json::2",
+      "quality_comment": "The distractors are plausible resilience or unrelated traits; the item assesses important associations in stress-health research.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/2 3 Work Satisfaction.json",
+      "domain": 16,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/2 3 Work Satisfaction.json::13",
       "scored": true
     },
     {
@@ -1574,22 +1575,22 @@
       "scored": true
     },
     {
-      "stem": "Which of the following best illustrates the concept of pluralistic ignorance in bystander intervention research?",
+      "stem": "A woman collapses in a busy shopping mall food court during the lunch rush. Approximately 50 people are nearby, yet several minutes pass before anyone calls for help. According to the bystander intervention model proposed by Latané and Darley, the MOST likely explanation for why no one initially helps is:",
       "options": [
-        "A person not noticing an emergency due to distraction",
-        "A bystander assuming that others' lack of action means no help is needed",
-        "Feeling unable to help because of lack of skills",
-        "Avoiding helping to prevent social embarrassment"
+        "The bystanders lack the knowledge necessary to provide medical assistance",
+        "Each bystander assumes that someone else will take responsibility for helping",
+        "The bystanders are unable to notice the emergency due to stimulus overload",
+        "The bystanders are afraid of being sued for providing inadequate medical care"
       ],
-      "answer": "A bystander assuming that others' lack of action means no help is needed",
-      "explanation": "1. \"A bystander assuming that others' lack of action means no help is needed\" is the correct answer because it exemplifies pluralistic ignorance, where an individual misinterprets the inaction of others as an indication that the situation does not require intervention. This phenomenon can lead to a bystander failing to act, believing that since no one else is helping, the emergency is not perceived as urgent or serious.\n\n2. The option \"A person not noticing an emergency due to distraction\" is incorrect because it relates to the first step of bystander intervention, which is noticing the event, rather than interpreting the situation based on others' actions. \"Feeling unable to help because of lack of skills\" is wrong because it pertains to the fourth step, determining how to help, rather than the social influence of others' inaction. Lastly, \"Avoiding helping to prevent social embarrassment\" is incorrect as it reflects evaluation apprehension, which is related to the fifth step of the intervention process, rather than the misinterpretation of others' behaviors that characterizes pluralistic ignorance.",
+      "answer": "Each bystander assumes that someone else will take responsibility for helping",
+      "explanation": "This scenario illustrates diffusion of responsibility, which occurs at Step 3 of Latané and Darley's bystander intervention model. When multiple people are present, each person feels less personally responsible for helping because they assume others will act. Research confirms that victims are most likely to receive help when only one bystander is present. Option A (lack of knowledge) relates to Step 4 but is not the primary explanation when 50 people are present. Option C (stimulus overload) relates to Step 1, but a woman collapsing is a conspicuous event even in a busy setting. Option D (fear of legal consequences) is not one of the primary mechanisms in the model.",
       "kn": "KN15",
-      "kn_explanation": "Focuses on social cognitive processes involved in interpreting other people's behavior, key to social interaction and relationships (KN15).",
+      "kn_explanation": "This question is best aligned with KN15 because it tests Social interaction and relationships (e.g., attraction, aggression, altruism, organizational justice, verbal and non-verbal communication, internet communication, mate selection, empathy).",
       "difficulty": "medium",
-      "quality_comment": "Options are clear with distractors representing related but distinct barriers to helping, aiding discrimination on knowledge.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Prosocial Behavior and Prejudice-Discrimination.json",
-      "domain": 3,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Prosocial Behavior and Prejudice-Discrimination.json::2",
+      "quality_comment": "Well-constructed scenario that requires understanding the specific mechanisms of the bystander effect rather than just recognizing the term.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Helping and Hurting.json",
+      "domain": 15,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Helping and Hurting.json::1",
       "scored": true
     },
     {
@@ -1973,22 +1974,22 @@
       "scored": true
     },
     {
-      "stem": "Which neuropsychological test is designed to assess executive functions such as abstract reasoning, perseveration, and set shifting by requiring examinees to match cards according to undisclosed sorting rules?",
+      "stem": "Which MMPI inventory is designed specifically for adolescents aged 14 to 18 years and includes clinical, validity, and content scales similar to the MMPI-2?",
       "options": [
-        "Stroop Color and Word Test",
-        "Wisconsin Card Sorting Test",
-        "Tower of London",
-        "Halstead-Reitan Battery"
+        "MMPI-A (Minnesota Multiphasic Personality Inventory-Adolescent)",
+        "MMPI-2-RF (Restructured Form)",
+        "MMPI-3",
+        "MMPI-A-RF (Adolescent-Restructured Form)"
       ],
-      "answer": "Wisconsin Card Sorting Test",
-      "explanation": "1. The **Wisconsin Card Sorting Test (WCST)** is the correct answer because it specifically assesses executive functions such as abstract reasoning, perseveration, and the ability to change cognitive strategies in response to feedback. The test requires examinees to sort cards according to undisclosed rules, which they must discover through trial and error, making it a direct measure of cognitive flexibility and executive functioning.\n\n2. The **Stroop Color and Word Test** is incorrect because it primarily evaluates cognitive flexibility, selective attention, and response inhibition, rather than executive functions like abstract reasoning and set shifting. The **Tower of London** is also incorrect as it focuses on problem-solving and planning rather than card sorting and abstract reasoning. Lastly, the **Halstead-Reitan Battery** is not the correct choice because it is designed to determine the severity and nature of brain damage, assessing various cognitive functions but not specifically targeting executive functions through card sorting tasks.",
+      "answer": "MMPI-A (Minnesota Multiphasic Personality Inventory-Adolescent)",
+      "explanation": "1. The correct answer is \"MMPI-A (Minnesota Multiphasic Personality Inventory-Adolescent)\" because it is specifically designed for adolescents aged 14 to 18 years and includes a range of scales that assess psychopathology and personality, similar to those found in the MMPI-2. The MMPI-A consists of 478 true/false items, providing scores for clinical scales, validity scales, and content scales, making it suitable for evaluating this age group.\n\n2. The incorrect options are as follows:\n\n- **MMPI-2-RF (Restructured Form):** This inventory is designed for adults aged 18 and older and contains 338 items, making it inappropriate for the adolescent age range.\n\n- **MMPI-3:** Like the MMPI-2-RF, the MMPI-3 is intended for individuals aged 18 and above, and it focuses on adult populations with 335 items, thus not suitable for adolescents.\n\n- **MMPI-A-RF (Adolescent-Restructured Form):** Although this inventory is designed for adolescents, it is a brief alternative with fewer items (241 true/false) and does not include the full range of clinical, validity, and content scales found in the MMPI-A.",
       "kn": "KN32",
-      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
+      "kn_explanation": "Understanding appropriate instruments for different populations, including adolescents, is an important competency in psychological assessment (KN32).",
       "difficulty": "medium",
-      "quality_comment": "The options are plausible neuropsychological tests, reinforcing discrimination of similar but distinct tests targeting executive functions.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Clinical Tests.json",
-      "domain": 2,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Clinical Tests.json::3",
+      "quality_comment": "Distractors include related but different versions of the MMPI, requiring knowledge of age-appropriate forms.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 MMPI.json",
+      "domain": 32,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 MMPI.json::15",
       "scored": true
     },
     {
@@ -2581,22 +2582,22 @@
       "scored": true
     },
     {
-      "stem": "In cognitive-behavioral therapy for suicide prevention, what does the 'chain analysis' technique primarily involve?",
+      "stem": "A practicum student receives an evaluation that is strongly positive overall but includes one comment about improving time management. For the rest of the day, the student thinks only about that criticism and concludes, \"My supervisor thinks I am doing a terrible job.\" Beck would describe this thinking error as:",
       "options": [
-        "Evaluating the efficacy of safety plans after discharge",
-        "Identifying the series of events and thoughts leading up to the suicide attempt",
-        "Teaching relaxation skills to manage suicidal urges",
-        "Disputing irrational beliefs about self-worth and hopelessness"
+        "Selective abstraction",
+        "Personalization",
+        "Emotional reasoning",
+        "Arbitrary inference"
       ],
-      "answer": "Identifying the series of events and thoughts leading up to the suicide attempt",
-      "explanation": "1. The correct answer, \"Identifying the series of events and thoughts leading up to the suicide attempt,\" accurately describes the chain analysis technique used in cognitive-behavioral therapy for suicide prevention (CT-SP). This technique focuses on understanding the specific circumstances and cognitive processes that culminate in a suicidal crisis, allowing both the therapist and client to explore the connections between events and thoughts that contribute to suicidal behavior, thereby informing safety planning and coping strategies.\n\n2. The option \"Evaluating the efficacy of safety plans after discharge\" is incorrect because chain analysis is concerned with understanding the antecedents to a suicide attempt rather than assessing post-discharge interventions. \"Teaching relaxation skills to manage suicidal urges\" is not correct as chain analysis does not focus on skill acquisition but rather on the sequence of events and thoughts leading to the crisis. Lastly, \"Disputing irrational beliefs about self-worth and hopelessness\" is misleading because while addressing irrational beliefs is a component of cognitive therapies, chain analysis specifically aims to map the events and thoughts rather than directly disputing beliefs.",
+      "answer": "Selective abstraction",
+      "explanation": "Selective abstraction is the best answer because the student is focusing on one negative detail while ignoring the broader positive feedback. Personalization is wrong because the problem is not wrongly taking responsibility for an outside event. Emotional reasoning is wrong because the student is not using a feeling as proof of a fact. Arbitrary inference is wrong because, although the conclusion is unsupported, the defining pattern here is the narrow focus on one negative detail while discounting the rest of the evaluation.",
       "kn": "KN43",
-      "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
+      "kn_explanation": "This question assesses a contemporary research-based model of treatment, specifically Beck's cognitive therapy model.",
       "difficulty": "medium",
-      "quality_comment": "The question is clear and focused on a practical CBT technique, with plausible distractors enhancing differentiation.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Treatment, Intervention, and Prevention : Clinical Psychology/6 Cognitive-Behavioral Therapies.json",
-      "domain": 6,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Treatment, Intervention, and Prevention : Clinical Psychology/6 Cognitive-Behavioral Therapies.json::10",
+      "quality_comment": "Classic CBT discrimination item with plausible distortions from the same concept family.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 CBT.json",
+      "domain": 43,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 CBT.json::0",
       "scored": true
     },
     {
@@ -3227,41 +3228,41 @@
       "scored": true
     },
     {
-      "stem": "According to Latane and Darley's model of bystander intervention, which step involves a bystander deciding that someone else will take responsibility for helping, thereby reducing their own likelihood of intervening?",
+      "stem": "A graduate student receives unexpectedly critical feedback on her dissertation proposal and is unsure whether her emotional reaction is proportionate. According to Festinger's social comparison theory, she would most likely seek out:",
       "options": [
-        "Step 2 – Interpreting the event",
-        "Step 3 – Assuming responsibility",
-        "Step 4 – Determining how to help",
-        "Step 5 – Deciding whether or not to help"
+        "A trusted mentor who has extensive experience reviewing dissertations",
+        "Fellow graduate students who recently received feedback on their own proposals",
+        "Online forums where anonymous users share academic experiences",
+        "A therapist who can objectively evaluate whether her reaction is appropriate"
       ],
-      "answer": "Step 3 – Assuming responsibility",
-      "explanation": "1. \"Step 3 – Assuming responsibility\" is the correct answer because it specifically addresses the phenomenon of diffusion of responsibility. In this step, a bystander may conclude that others present are willing to assist, leading them to feel less personally responsible for intervening in the emergency situation. This reduction in perceived responsibility decreases the likelihood that they will take action.\n\n2. \n- **Step 2 – Interpreting the event:** This step involves the bystander determining whether the situation is an emergency, which does not directly relate to feelings of responsibility but rather to understanding the urgency of the situation.\n- **Step 4 – Determining how to help:** This step focuses on the bystander’s ability to figure out the appropriate way to assist the victim, which is separate from the decision of whether or not they feel responsible to help.\n- **Step 5 – Deciding whether or not to help:** This step pertains to the final decision to help, which may be influenced by various factors, including evaluation apprehension, but does not specifically address the assumption of responsibility that occurs earlier in the process.",
+      "answer": "Fellow graduate students who recently received feedback on their own proposals",
+      "explanation": "According to Festinger's social comparison theory, when people are uncertain about how to feel or react, they seek out similar others to gauge whether their responses are appropriate. The graduate student would most likely turn to peers in comparable situations—other graduate students who recently received proposal feedback—because they provide the most relevant comparison point. A mentor (A) represents an authority figure, not a similar other. Online forums (C) offer anonymous strangers who may not be in comparable situations. A therapist (D) provides expert evaluation, not social comparison with similar others. The key principle is that people compare themselves with those in similar circumstances to evaluate their own reactions.",
       "kn": "KN15",
-      "kn_explanation": "This question relates to social cognition theories regarding altruistic behavior and social influence in emergencies, pertinent to social interaction and relationships (KN15).",
+      "kn_explanation": "Social comparison of emotional reactions relates to social interaction, though it touches social cognition; the core is about social feedback and interpersonal context",
       "difficulty": "medium",
-      "quality_comment": "The question clearly targets a specific step in a well-known model and distractors are similarly plausible steps, improving discriminability.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Prosocial Behavior and Prejudice-Discrimination.json",
-      "domain": 3,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Prosocial Behavior and Prejudice-Discrimination.json::0",
+      "quality_comment": "Good application-level question requiring understanding of the 'similar others' component of social comparison theory rather than simple recall.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Connection.json",
+      "domain": 15,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Connection.json::1",
       "scored": true
     },
     {
-      "stem": "Regarding measurement of outcomes for interventions targeting personality disorders, which approach focuses on assessing changes in symptom severity, interpersonal functioning, and quality of life over time?",
+      "stem": "A pervasive pattern of disregard for and violation of the rights of others since age 15, with a history of conduct disorder and at least three symptoms such as deceitfulness and impulsivity, describes which personality disorder?",
       "options": [
-        "Cross-sectional diagnostic interviews",
-        "Outcome monitoring using standardized symptom measures",
-        "Predictive validity studies",
-        "Neuroimaging biomarkers"
+        "Narcissistic personality disorder",
+        "Borderline personality disorder",
+        "Antisocial personality disorder",
+        "Histrionic personality disorder"
       ],
-      "answer": "Outcome monitoring using standardized symptom measures",
-      "explanation": "1. **Correct Answer Explanation**: \"Outcome monitoring using standardized symptom measures\" is the correct answer because it directly assesses changes in symptom severity, interpersonal functioning, and quality of life over time, which is essential for evaluating the effectiveness of interventions for personality disorders. This approach provides quantifiable data that can track the progress of treatment and the impact on the individual's functioning, aligning with the goal of measuring therapeutic outcomes.\n\n2. **Incorrect Options**:\n- **Cross-sectional diagnostic interviews**: This method provides a snapshot of an individual's symptoms and diagnoses at a specific point in time but does not track changes over time, making it unsuitable for measuring treatment outcomes.\n- **Predictive validity studies**: These studies assess how well a test predicts future outcomes or behaviors but do not focus on measuring changes in symptom severity or functioning over time, which is necessary for evaluating treatment effectiveness.\n- **Neuroimaging biomarkers**: While neuroimaging can provide insights into brain function and structure, it does not directly measure changes in symptoms or interpersonal functioning, making it less relevant for monitoring treatment outcomes in personality disorders.",
+      "answer": "Antisocial personality disorder",
+      "explanation": "1. **Correct Answer: Antisocial Personality Disorder**  \nAntisocial personality disorder is characterized by a pervasive pattern of disregard for and violation of the rights of others, which begins in adolescence, specifically noted to start at age 15. The diagnosis requires the presence of at least three symptoms, such as deceitfulness and impulsivity, alongside a history of conduct disorder prior to age 15, making it the only personality disorder that fits the criteria outlined in the question.\n\n2. **Incorrect Options**  \n- **Narcissistic Personality Disorder:** This disorder involves a pervasive pattern of grandiosity, need for admiration, and lack of empathy, which does not include the disregard for others' rights or a history of conduct disorder.  \n- **Borderline Personality Disorder:** This disorder is marked by instability in interpersonal relationships, self-image, and affects, along with impulsivity, but does not focus on a pattern of violating others' rights or a history of conduct disorder.  \n- **Histrionic Personality Disorder:** Characterized by excessive emotionality and attention-seeking behaviors, this disorder does not involve the violation of others' rights or a history of conduct disorder, which is central to antisocial personality disorder.",
       "kn": "KN36",
-      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
+      "kn_explanation": "This question requires detailed knowledge of diagnostic criteria and course of a specific personality disorder.",
       "difficulty": "medium",
-      "quality_comment": "Well-constructed question highlighting practical approaches to outcome measurement in clinical assessment settings.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis : Psychopathology/5 Personality Disorders.json",
-      "domain": 5,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis : Psychopathology/5 Personality Disorders.json::15",
+      "quality_comment": "Stem clearly includes key diagnostic features; distractors are borderline disorders but differ significantly in diagnostic criteria.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Personality.json",
+      "domain": 36,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Personality.json::8",
       "scored": true
     },
     {
@@ -4006,22 +4007,22 @@
       "scored": true
     },
     {
-      "stem": "Which form of racism is characterized by subtle, often unconscious negative feelings toward minority groups while maintaining a non-prejudiced self-image and a belief in equality?",
+      "stem": "Which of the following is an example of unintentional covert racism?",
       "options": [
-        "Symbolic racism",
-        "Aversive racism",
-        "Ambivalent racism",
-        "Overt racism"
+        "Openly stating discriminatory beliefs",
+        "Providing a socially acceptable excuse for prejudiced behavior",
+        "Avoiding contact with minority group members without awareness of harm caused",
+        "Engaging in hate crimes"
       ],
-      "answer": "Aversive racism",
-      "explanation": "1. **Aversive racism** is the correct answer because it is characterized by individuals who hold a non-prejudiced self-image and a belief in equality while simultaneously harboring subtle, often unconscious negative feelings about minority groups. This form of racism leads to avoidance of interactions with minority members unless the individual can justify their discrimination on a basis other than race, reflecting an internal conflict between egalitarian beliefs and negative feelings.\n\n2. **Symbolic racism** is incorrect because it involves a belief in egalitarianism paired with the perception that minority groups violate traditional values, leading to opposition against policies aimed at promoting equality, rather than subtle negative feelings. **Ambivalent racism** is not the correct answer because it describes individuals who possess both positive and negative attitudes toward minority groups, resulting in emotional tension, rather than solely unconscious negative feelings. **Overt racism** is wrong as it refers to openly hostile and aggressive attitudes toward minority groups, which is a direct contrast to the subtlety and ambiguity of aversive racism.",
+      "answer": "Avoiding contact with minority group members without awareness of harm caused",
+      "explanation": "1. \"Avoiding contact with minority group members without awareness of harm caused\" is the correct answer because it exemplifies unintentional covert racism, where individuals do not consciously recognize the negative impact of their actions. This behavior aligns with the definition of unintentional covert racism, as it involves acting in ways that may harm minority group members without the individual being aware of their prejudiced attitudes or the consequences of their actions.\n\n2. \n- \"Openly stating discriminatory beliefs\" is incorrect because this behavior represents overt racism, which is characterized by openly hostile attitudes and actions against minority groups, rather than subtle or unintentional forms of racism.\n- \"Providing a socially acceptable excuse for prejudiced behavior\" is incorrect because this describes intentional covert racism, where individuals are aware of their prejudiced attitudes and attempt to mask them with justifications, rather than acting without awareness.\n- \"Engaging in hate crimes\" is incorrect because hate crimes involve explicit and intentional acts of violence or discrimination against individuals based on their race or ethnicity, which is a clear manifestation of overt racism rather than covert or unintentional racism.",
       "kn": "KN20",
-      "kn_explanation": "The question pertains to a nuanced form of bias relevant to the causes and manifestations of oppression (KN20).",
-      "difficulty": "hard",
-      "quality_comment": "The choices are conceptually specific and require detailed content knowledge, making this appropriate for advanced testing.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Prosocial Behavior and Prejudice-Discrimination.json",
-      "domain": 3,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Prosocial Behavior and Prejudice-Discrimination.json::5",
+      "kn_explanation": "This item examines subtle forms of racism and their manifestations, fitting causes and manifestations of oppression (KN20).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors contrast intentionality and manifestation types, improving discrimination in specialized content.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Helping and Hurting.json",
+      "domain": 20,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Helping and Hurting.json::12",
       "scored": false
     },
     {

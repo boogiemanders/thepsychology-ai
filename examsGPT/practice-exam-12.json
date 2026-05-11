@@ -27,7 +27,8 @@
     "generatedAt": "2026-03-25T19:54:22.409Z",
     "source": "questionsGPT",
     "blueprint": "Kns.md",
-    "generator": "scripts/assemble-questionsgpt-exams.mjs"
+    "generator": "scripts/assemble-questionsgpt-exams.mjs",
+    "lastSurgicalFix": "2026-05-10T02:40:10.959Z"
   },
   "questions": [
     {
@@ -94,19 +95,19 @@
       "is_org_psych": false
     },
     {
-      "id": 4,
-      "question": "In a crisis situation, what is the primary ethical obligation of a psychologist when offering help?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 3 and 4.json::9",
+      "question": "What is a primary ethical concern regarding dual relationships in psychological practice?",
       "options": [
-        "To act in the best interest of the individual in crisis, even if it means breaching confidentiality.",
-        "To provide assistance only if they are being compensated.",
-        "To ensure that their intervention does not violate any laws.",
-        "To refer the individual to another professional immediately."
+        "They can enhance the therapeutic alliance.",
+        "They may lead to conflicts of interest.",
+        "They are always prohibited by the APA Ethics Code.",
+        "They can provide additional support for the client."
       ],
-      "correct_answer": "To act in the best interest of the individual in crisis, even if it means breaching confidentiality.",
-      "explanation": "The correct answer emphasizes the ethical obligation to prioritize the well-being of the individual in crisis, which may necessitate breaching confidentiality. The other options do not align with the ethical imperative to provide immediate help.",
+      "correct_answer": "They may lead to conflicts of interest.",
+      "explanation": "Dual relationships can create conflicts of interest that impair objectivity and effectiveness in treatment. While they can sometimes enhance relationships, the potential for harm and ethical violations is a significant concern.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
-      "knId": "KN65",
-      "source_file": "8 Standards 1 and 2.json",
+      "knId": "KN64",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 3 and 4.json",
       "source_folder": "8 Ethics",
       "difficulty": "medium",
       "question_type": "standard",
@@ -367,24 +368,24 @@
       "is_org_psych": false
     },
     {
-      "id": 17,
-      "question": "A psychologist is conducting an initial assessment of a 44-year-old patient with a 3-year history of chronic low back pain who is simultaneously pursuing a long-term disability claim. His treating physician's chart notes significant discrepancy between objective imaging findings and the patient's reported functional limitations. What should be the PRIMARY assessment priority before interpreting any self-report data?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Psychodynamic and Humanistic Therapies.json::3",
+      "question": "A behavioral psychologist explains that the emotional release experienced during psychoanalytic free association is therapeutically beneficial not because of catharsis per se, but because it allows the client to discuss previously avoided material without negative consequences. This explanation is MOST consistent with which behavioral principle?",
       "options": [
-        "Evaluating response validity and the degree of psychological overlay including secondary gain factors",
-        "Identifying specific pain locations and quality using a standardized body diagram and numeric rating scale",
-        "Obtaining a detailed three-generation family history to assess hereditary musculoskeletal vulnerability",
-        "Administering a full neuropsychological battery to rule out cognitive contributors to functional impairment"
+        "Systematic desensitization through reciprocal inhibition of anxiety responses",
+        "Extinction of conditioned emotional responses through repeated unreinforced exposure",
+        "Counterconditioning by pairing distressing memories with the positive therapeutic relationship",
+        "Stimulus generalization of relaxation from the therapy setting to real-world situations"
       ],
-      "correct_answer": "Evaluating response validity and the degree of psychological overlay including secondary gain factors",
-      "explanation": "When objective medical findings are disproportionate to reported limitations — especially in the context of pending disability benefits (a clear secondary gain context) — the psychologist's primary obligation is to establish whether self-report data are valid before drawing any clinical conclusions. Secondary gain refers to external incentives (financial compensation, avoidance of occupational demands, increased social support) that may consciously or unconsciously inflate symptom reporting. Assessment must include symptom validity tests (SVTs), MMPI-2 validity scale interpretation, and clinical observation of functional inconsistencies. Interpreting pain ratings, neuropsychological findings, or family history without first confirming data validity risks generating misleading and potentially harmful conclusions. Pain mapping and neuropsychological testing may follow, but only after validity is established.",
+      "correct_answer": "Extinction of conditioned emotional responses through repeated unreinforced exposure",
+      "explanation": "From a behavioral perspective, the catharsis that occurs in psychoanalysis can be understood as extinction. When clients verbalize previously avoided (repressed) thoughts and feelings during free association, they are exposed to conditioned stimuli (the distressing memories and emotions) without the originally feared negative consequences. Over repeated exposures in the safe therapy environment, the conditioned emotional responses gradually extinguish. Option A is incorrect because systematic desensitization involves a structured anxiety hierarchy and relaxation training, not free association. Option C describes counterconditioning, which requires actively pairing the stimulus with an incompatible positive response—this is a related but distinct mechanism from extinction. Option D describes stimulus generalization, which refers to transfer of learning across contexts rather than the in-session emotional release phenomenon.",
       "domain": "Domain 6: Treatment & Intervention",
       "knId": "KN43",
-      "source_file": "6 CBT.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Psychodynamic and Humanistic Therapies.json",
       "source_folder": "6 Clinical Interventions",
       "difficulty": "hard",
-      "question_type": "difficult",
+      "question_type": "standard",
       "isScored": false,
-      "type": "experimental",
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -1354,19 +1355,19 @@
       "is_org_psych": false
     },
     {
-      "id": 64,
-      "question": "A psychologist is consulted about the most effective long-term intervention for reducing recidivism in cases of domestic violence. Based on the research literature, which intervention has been associated with the best long-term outcomes for stopping spousal abuse?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Prevention and Consultation.json::14",
+      "question": "A researcher reviewing meta-analytic studies on psychotherapy outcome finds that one category of variables consistently accounts for the largest proportion of outcome variance across treatment modalities. Which category does the literature most strongly identify as the primary predictor of psychotherapy success?",
       "options": [
-        "Individual psychodynamic therapy for the abuser",
-        "Group anger management programs for batterers",
-        "Arrest of the perpetrator",
-        "Mandated couples therapy focusing on communication skills"
+        "Therapist variables, including years of experience, level of training, and fidelity to the treatment protocol",
+        "Specific technique variables, including the theoretical orientation and structured components of the intervention model",
+        "Client and extratherapeutic variables, including severity of pathology, motivation for change, and external social support",
+        "Therapeutic alliance variables, including empathy, collaborative goal-setting, and bond quality"
       ],
-      "correct_answer": "Arrest of the perpetrator",
-      "explanation": "Research on domestic violence indicates that the best long-term results for reducing recidivism follow arrest of the perpetrator. The literature suggests that change in the perpetrator occurs only when the victim refuses to tolerate the situation further, and arrest represents a concrete consequence. Couples therapy (A) is generally contraindicated in active abuse situations due to safety concerns. Individual psychodynamic therapy (C) and group anger management (D) have not shown the same level of effectiveness as arrest for long-term outcomes. Additionally, the research distinguishes between expressive abuse (less deliberate, more amenable to treatment) and instrumental abuse (deliberate control), noting that even expressive abuse becomes instrumental over time if untreated.",
+      "correct_answer": "Client and extratherapeutic variables, including severity of pathology, motivation for change, and external social support",
+      "explanation": "Lambert's influential common factors research identifies client and extratherapeutic factors as accounting for approximately 40% of outcome variance — the single largest category — more than any other set of variables. These factors include what clients bring to therapy: their strengths, social resources, severity of disorder, and motivation. The therapeutic alliance accounts for approximately 30% of variance and is the second strongest predictor, not the first. Expectancy and placebo effects contribute approximately 15%, and specific techniques approximately 15%. This hierarchy is clinically significant because it suggests that assessing and mobilizing client strengths and resources should be a treatment priority regardless of the specific approach employed.",
       "domain": "Domain 6: Treatment & Intervention",
       "knId": "KN44",
-      "source_file": "6 Prevention and Consultation.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Prevention and Consultation.json",
       "source_folder": "6 Clinical Interventions",
       "difficulty": "hard",
       "question_type": "standard",
@@ -1648,24 +1649,24 @@
       "is_org_psych": false
     },
     {
-      "id": 78,
-      "question": "How does exposure to pornography potentially affect empathy towards victims of sexual violence?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Connection.json::21",
+      "question": "A group of researchers is examining the behavior of individuals in stressful situations. They hypothesize that those with high anxiety will prefer to engage in group activities with:",
       "options": [
-        "It enhances understanding of consent and healthy relationships.",
-        "It increases empathy by providing educational content.",
-        "It may decrease empathy by normalizing aggressive behaviors.",
-        "It has no effect on empathy levels."
+        "Calm individuals",
+        "Anxious peers",
+        "No one",
+        "A mix of anxious and calm individuals"
       ],
-      "correct_answer": "It may decrease empathy by normalizing aggressive behaviors.",
-      "explanation": "The correct answer reflects research suggesting that exposure to pornography can desensitize individuals to violence and reduce empathy towards victims. The other options either misrepresent the effects or suggest positive outcomes that are not supported by evidence.",
+      "correct_answer": "Anxious peers",
+      "explanation": "1. The correct answer, \"anxious peers,\" aligns with Schachter's (1959) findings, which indicate that highly anxious individuals prefer to wait with others who are also anxious rather than alone or with non-participants. This preference occurs because anxious individuals seek the comfort of those who share their feelings, as suggested by the principle that \"misery doesn’t love any kind of company, it loves only miserable company.\" Thus, in stressful situations, anxious individuals are more likely to engage with peers who can provide mutual understanding and support.\n\n2. The option \"calm individuals\" is incorrect because anxious individuals tend to feel disconnected from those who do not share their anxiety, making it less likely for them to seek comfort in calm individuals. \"No one\" is also wrong, as research shows that anxious individuals prefer the company of others, particularly those who are similarly anxious, rather than isolating themselves. Lastly, \"a mix of anxious and calm individuals\" is incorrect because, while some may seek diverse social interactions, the specific preference highlighted in Schachter's study indicates that anxious individuals specifically gravitate towards those who are anxious, not a mix that includes calm individuals.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
       "knId": "KN16",
-      "source_file": "3 Influence.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Connection.json",
       "source_folder": "3 Social Psychology",
       "difficulty": "hard",
-      "question_type": "difficult",
+      "question_type": "standard",
       "isScored": false,
-      "type": "experimental",
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -1816,19 +1817,19 @@
       "is_org_psych": false
     },
     {
-      "id": 86,
-      "question": "In the context of gender identity theories, what is the sequence of gender role development according to social learning theory?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Bonding and Attachment.json::26",
+      "question": "Which type of childhood aggression is characterized by goal-directed behavior to obtain an object or attention and tends to peak around age 2?",
       "options": [
-        "Reinforcement, observation, imitation",
-        "Observation, reinforcement, imitation",
-        "Observation, imitation, reinforcement",
-        "Imitation, reinforcement, observation"
+        "Hostile/reactive aggression",
+        "Instrumental/proactive aggression",
+        "Relational aggression",
+        "Verbal aggression"
       ],
-      "correct_answer": "Observation, imitation, reinforcement",
-      "explanation": "Social learning theory posits that children learn gender roles through observing others, imitating their behaviors, and receiving reinforcement for gender-appropriate behaviors. The other sequences misrepresent the order of these processes.",
+      "correct_answer": "Instrumental/proactive aggression",
+      "explanation": "1. **Correct Answer: Instrumental/proactive aggression** is characterized by goal-directed behavior aimed at obtaining a desired object or attention. According to the reference material, this type of aggression is often seen in early childhood, peaking around age 2, as children engage in physical actions to fulfill their needs or desires.\n\n2. **Incorrect Options:**\n   - **Hostile/reactive aggression** is driven by anger and intended to hurt someone, rather than being goal-directed to obtain something.\n   - **Relational aggression** involves damaging social relationships through exclusion or gossip, which does not focus on obtaining objects or attention directly.\n   - **Verbal aggression** includes threats or name-calling and is not primarily about achieving a goal through physical actions, as is typical with instrumental aggression.",
       "domain": "Domain 4: Growth & Lifespan Development",
-      "knId": "KN24",
-      "source_file": "4 Temperament and Personality.json",
+      "knId": "KN25",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Bonding and Attachment.json",
       "source_folder": "4 Development",
       "difficulty": "medium",
       "question_type": "standard",
@@ -1963,19 +1964,19 @@
       "is_org_psych": true
     },
     {
-      "id": 93,
-      "question": "According to Helms's model of racial identity development, which stage involves individuals actively seeking to understand their racial identity and the implications of racism?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Helping and Hurting.json::7",
+      "question": "Which stage in the Racial/Cultural Identity Development Model involves individuals recognizing their own cultural identity and its significance?",
       "options": [
-        "Internalization",
-        "Immersion-Emersion",
-        "Encounter",
-        "Pre-encounter"
+        "Pre-encounter stage",
+        "Encounter stage",
+        "Immersion-Emersion stage",
+        "Internalization stage"
       ],
-      "correct_answer": "Immersion-Emersion",
-      "explanation": "The Immersion-Emersion stage in Helms's model is characterized by individuals immersing themselves in their racial identity and grappling with the implications of racism. The Pre-encounter stage involves a lack of awareness of racial identity, the Encounter stage is marked by a significant event that prompts awareness, and the Internalization stage involves a more integrated sense of self. Therefore, Immersion-Emersion is the correct answer.",
+      "correct_answer": "Internalization stage",
+      "explanation": "The Internalization stage is where individuals recognize and embrace their cultural identity, integrating it into their self-concept. The other stages focus on different aspects of identity development, such as awareness or immersion in cultural experiences.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
       "knId": "KN19",
-      "source_file": "3 Connection.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Helping and Hurting.json",
       "source_folder": "3 Social Psychology",
       "difficulty": "hard",
       "question_type": "standard",
@@ -2299,19 +2300,19 @@
       "is_org_psych": false
     },
     {
-      "id": 109,
-      "question": "According to equity theory, how does perceived fairness affect work effort?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Stress and Emotion.json::15",
+      "question": "Which statement accurately reflects Cannon-Bard theory of emotion?",
       "options": [
-        "It decreases effort when individuals feel over-rewarded.",
-        "It has no impact on motivation.",
-        "It influences effort based on perceived fairness compared to others.",
-        "It increases effort when individuals feel under-rewarded."
+        "Emotion is experienced only after physiological arousal is perceived",
+        "Emotion and physiological arousal occur simultaneously but independently",
+        "Emotion results from labeling physiological arousal according to situational cues",
+        "Cognitive appraisal precedes physiological responses"
       ],
-      "correct_answer": "It influences effort based on perceived fairness compared to others.",
-      "explanation": "Equity theory posits that individuals assess their work effort based on perceived fairness in comparison to others. If they perceive inequity, it can lead to changes in effort. The other options do not accurately reflect the principles of equity theory.",
+      "correct_answer": "Emotion and physiological arousal occur simultaneously but independently",
+      "explanation": "1. The statement \"Emotion and physiological arousal occur simultaneously but independently\" accurately reflects Cannon-Bard theory because this theory posits that when an environmental stimulus is encountered, the thalamus sends signals to both the cerebral cortex (which processes the emotional experience) and the sympathetic nervous system (which triggers physiological arousal) at the same time. This means that emotional experience and physiological responses do not rely on one another and occur concurrently.\n\n2. The option \"Emotion is experienced only after physiological arousal is perceived\" is incorrect because it aligns with the James-Lange theory, which suggests that physiological arousal precedes and leads to the experience of emotion. The option \"Emotion results from labeling physiological arousal according to situational cues\" is wrong because it describes Schachter and Singer’s Two-Factor Theory, which emphasizes the role of cognitive labeling after physiological arousal. Lastly, the statement \"Cognitive appraisal precedes physiological responses\" is incorrect as it reflects Lazarus’s Cognitive Appraisal Theory, which asserts that emotional responses are based on cognitive appraisal before any physiological changes occur.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
       "knId": "KN10",
-      "source_file": "2 Stress and Emotion.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Stress and Emotion.json",
       "source_folder": "2 Learning and Memory",
       "difficulty": "medium",
       "question_type": "standard",
@@ -2446,19 +2447,19 @@
       "is_org_psych": false
     },
     {
-      "id": 116,
-      "question": "Chronic exposure to stress is most likely to result in which of the following outcomes?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Stress and Emotion.json::5",
+      "question": "In auditory tasks, what is the primary function of selective attention?",
       "options": [
-        "Increased cognitive flexibility",
-        "Deterioration of hippocampal neurons",
-        "Enhanced immune function",
-        "Improved emotional regulation"
+        "To enhance memory retention of all auditory stimuli",
+        "To filter out irrelevant sounds and focus on specific information",
+        "To increase the volume of important sounds",
+        "To improve the clarity of background noise"
       ],
-      "correct_answer": "Deterioration of hippocampal neurons",
-      "explanation": "Chronic stress can lead to damage in the hippocampus, affecting memory and learning. The other options are incorrect as chronic stress typically impairs cognitive flexibility, immune function, and emotional regulation.",
+      "correct_answer": "To filter out irrelevant sounds and focus on specific information",
+      "explanation": "Selective attention allows individuals to focus on specific auditory information while filtering out irrelevant sounds, which is crucial for effective communication and comprehension. The other options do not accurately describe the function of selective attention.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
       "knId": "KN10",
-      "source_file": "2 Stress and Emotion.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Stress and Emotion.json",
       "source_folder": "2 Learning and Memory",
       "difficulty": "medium",
       "question_type": "standard",
@@ -2488,24 +2489,24 @@
       "is_org_psych": false
     },
     {
-      "id": 118,
-      "question": "Which of the following best describes the pattern of mean-level change in the 'Big Five' personality traits during adulthood?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Cognitive Development.json::0",
+      "question": "A 4-year-old watches Maya put a sticker in the blue box and leave the room. While Maya is gone, Liam moves the sticker to the red box. When asked where Maya will look first, the child answers, \"The red box.\" This response most directly suggests difficulty with:",
       "options": [
-        "All five traits remain highly stable with no significant mean-level changes",
-        "Neuroticism and openness increase; agreeableness and conscientiousness decrease",
-        "Neuroticism decreases; agreeableness and conscientiousness increase; extraversion remains stable or decreases slightly",
-        "Extraversion and neuroticism increase; openness and conscientiousness decrease"
+        "Theory of mind",
+        "Object permanence",
+        "Conservation",
+        "Scaffolding"
       ],
-      "correct_answer": "Neuroticism decreases; agreeableness and conscientiousness increase; extraversion remains stable or decreases slightly",
-      "explanation": "1. The correct answer, \"Neuroticism decreases; agreeableness and conscientiousness increase; extraversion remains stable or decreases slightly,\" accurately reflects the findings from studies on personality traits during adulthood. Research indicates that neuroticism tends to decrease as individuals age, while agreeableness and conscientiousness show a tendency to increase. Additionally, extraversion remains relatively stable or may experience a slight decrease, aligning with the observed patterns of mean-level change in personality traits among adults (McCrae et al., 2000; Soto et al., 2011).\n\n2. The first incorrect option, \"Neuroticism and openness increase; agreeableness and conscientiousness decrease,\" is wrong because it contradicts the established finding that neuroticism decreases and that agreeableness and conscientiousness increase during adulthood. The second incorrect option, \"All five traits remain highly stable with no significant mean-level changes,\" is incorrect as it overlooks the predictable mean-level changes observed in specific traits like neuroticism, agreeableness, and conscientiousness. Lastly, the third incorrect option, \"Extraversion and neuroticism increase; openness and conscientiousness decrease,\" is inaccurate because it misrepresents the trends that show neuroticism decreasing and does not reflect the increases in conscientiousness and agreeableness that occur during adulthood.",
+      "correct_answer": "Theory of mind",
+      "explanation": "Theory of mind is the best answer because the child is failing a false-belief task and cannot yet separate Maya's belief from the child's own knowledge of where the sticker really is. Object permanence is wrong because the issue is not whether the child understands the sticker still exists when unseen. Conservation is wrong because nothing in the vignette involves quantity remaining the same despite a change in appearance. Scaffolding is wrong because that refers to guided assistance from a more skilled person, not the child's misunderstanding of another person's mental state.",
       "domain": "Domain 4: Growth & Lifespan Development",
       "knId": "KN21",
-      "source_file": "4 Temperament and Personality.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Cognitive Development.json",
       "source_folder": "4 Development",
       "difficulty": "medium",
-      "question_type": "difficult",
+      "question_type": "standard",
       "isScored": false,
-      "type": "experimental",
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -2677,19 +2678,19 @@
       "is_org_psych": false
     },
     {
-      "id": 127,
-      "question": "In rural settings, what is a primary concern regarding the scope of practice for psychologists?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 3 and 4.json::8",
+      "question": "Dr. Reeves provided family therapy to a couple and their two children. The parents are now in a contentious custody dispute, and the father's attorney requests release of the full family therapy records. The mother does not consent to the release. What is Dr. Reeves's MOST appropriate course of action?",
       "options": [
-        "Excessive competition among practitioners",
-        "High demand for specialized services",
-        "Limited access to supervision and consultation",
-        "Availability of advanced technology"
+        "Release the records because the father, as a party to therapy, has a right to the full record",
+        "Release only the portions of the records that pertain to the father's individual disclosures",
+        "Decline to release the records without consent from all parties to the therapy, and seek court guidance if necessary",
+        "Release the records to the attorney because a legal proceeding overrides confidentiality protections"
       ],
-      "correct_answer": "Limited access to supervision and consultation",
-      "explanation": "In rural settings, psychologists often face challenges related to limited access to supervision and consultation, which can impact their practice and professional development. The other options do not accurately reflect the primary concerns in rural psychology practice.",
+      "correct_answer": "Decline to release the records without consent from all parties to the therapy, and seek court guidance if necessary",
+      "explanation": "In family therapy, all participants are considered clients, and confidentiality belongs to all parties jointly. When one party does not consent to the release, the therapist should not release the records. The lesson emphasizes that in couples and family therapy, the therapist must clarify upfront who the clients are and how information will be handled. Since the mother has not consented, releasing the records would violate her confidentiality. If compelled, the therapist should seek court guidance—consistent with the subpoena response protocol of filing a motion to quash or requesting a protective order. Option A is incorrect because one party's consent does not authorize release of records involving all parties. Option B is incorrect because family therapy records are typically integrated and cannot be neatly separated. Option D is incorrect because a legal proceeding does not automatically override confidentiality; the therapist should assert privilege and seek court guidance.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
-      "knId": "KN66",
-      "source_file": "8 Practice Issues.json",
+      "knId": "KN68",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 3 and 4.json",
       "source_folder": "8 Ethics",
       "difficulty": "hard",
       "question_type": "standard",
@@ -3118,19 +3119,19 @@
       "is_org_psych": true
     },
     {
-      "id": 148,
-      "question": "In forensic settings, what is a key challenge psychologists face when predicting violent behavior?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json::38",
+      "question": "What is a psychologist's ethical responsibility when addressing a misdiagnosis that may have led to inappropriate medication being prescribed?",
       "options": [
-        "The lack of reliable assessment tools.",
-        "The pressure to provide definitive answers to legal questions.",
-        "The inherent unpredictability of human behavior.",
-        "The difficulty in obtaining accurate historical data."
+        "To inform the client and collaborate with the prescribing physician to adjust the treatment plan.",
+        "To ignore the misdiagnosis if the client seems to be responding well to the medication.",
+        "To wait for the client to bring up concerns about their medication before taking action.",
+        "To document the misdiagnosis but take no further action."
       ],
-      "correct_answer": "The inherent unpredictability of human behavior.",
-      "explanation": "The correct answer highlights the fundamental challenge in predicting behavior, which is often unpredictable. The other options may contribute to the difficulty but do not capture the core issue.",
+      "correct_answer": "To inform the client and collaborate with the prescribing physician to adjust the treatment plan.",
+      "explanation": "The correct answer emphasizes the psychologist's duty to ensure client welfare by addressing misdiagnosis and collaborating on treatment. Ignoring the issue or waiting for the client to express concerns neglects ethical responsibilities. Documenting without action does not fulfill the duty of care.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
       "knId": "KN67",
-      "source_file": "8 Practice Issues.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json",
       "source_folder": "8 Ethics",
       "difficulty": "hard",
       "question_type": "standard",
@@ -3244,19 +3245,19 @@
       "is_org_psych": false
     },
     {
-      "id": 154,
-      "question": "How does heritability of intelligence change across the lifespan according to research findings?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Cognitive Development.json::42",
+      "question": "Which explanation for childhood amnesia emphasizes the role of language in encoding memories?",
       "options": [
-        "It is highest during infancy and declines during adolescence.",
-        "It decreases steadily from birth through old age.",
-        "It remains constant at approximately .50 throughout life.",
-        "It increases from about .20 in infancy to about .60-.80 in early and middle adulthood."
+        "The theory that infant brain structures are underdeveloped",
+        "The hypothesis that children lack a stable sense of self necessary for memory",
+        "The idea that limited language ability in young children restricts memory encoding",
+        "The proposal that early memories are replaced by later experiences"
       ],
-      "correct_answer": "It increases from about .20 in infancy to about .60-.80 in early and middle adulthood.",
-      "explanation": "1. The correct answer, \"It increases from about .20 in infancy to about .60-.80 in early and middle adulthood,\" reflects the findings that heritability estimates for intelligence vary with age. Specifically, research indicates that heritability is approximately .20 for infants, increases to about .40 for children and adolescents, and reaches .60 to .80 for individuals in early and middle adulthood, demonstrating a significant rise in genetic influence on intelligence as individuals mature.\n\n2. The option \"It remains constant at approximately .50 throughout life\" is incorrect because heritability estimates for intelligence actually fluctuate with age, starting lower in infancy and increasing significantly in adulthood. The statement \"It decreases steadily from birth through old age\" is wrong as research shows heritability increases rather than decreases over the lifespan. Lastly, the option \"It is highest during infancy and declines during adolescence\" is inaccurate because heritability is lowest during infancy and increases during adolescence and adulthood, contrary to the claim of a decline.",
+      "correct_answer": "The idea that limited language ability in young children restricts memory encoding",
+      "explanation": "1. **Correct Answer Explanation**: \"The idea that limited language ability in young children restricts memory encoding\" is the correct answer because language plays a crucial role in how memories are formed and organized. Children under the age of three or four have limited language skills, which may hinder their ability to encode memories effectively, making it difficult for them to retrieve these memories later in life.\n\n2. **Incorrect Option Explanations**:\n   - **The theory that infant brain structures are underdeveloped**: While it is true that brain development is ongoing during infancy, this explanation does not specifically address the role of language in the encoding of memories.\n   - **The hypothesis that children lack a stable sense of self necessary for memory**: Although a coherent sense of self may contribute to memory formation, this option does not focus on the impact of language on encoding memories.\n   - **The proposal that early memories are replaced by later experiences**: This explanation suggests a replacement mechanism rather than addressing how language limitations affect the initial encoding of memories in young children.",
       "domain": "Domain 4: Growth & Lifespan Development",
       "knId": "KN21",
-      "source_file": "4 Heredity and Environment.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Cognitive Development.json",
       "source_folder": "4 Development",
       "difficulty": "medium",
       "question_type": "standard",
@@ -3454,19 +3455,19 @@
       "is_org_psych": false
     },
     {
-      "id": 164,
-      "question": "According to research on cognitive development and diverse identities (KN24), how can gender-role stereotypes affect children’s cognitive performance in domains such as math and verbal abilities?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 School and Family.json::0",
+      "question": "A family court judge asks a psychologist to provide expert testimony about the effects of being raised by same-sex parents on children's development. Based on the research literature, the psychologist should testify that children raised by gay or lesbian parents:",
       "options": [
-        "They only affect adults’ attitudes and do not influence children's cognitive skills",
-        "They enhance boys’ and girls’ abilities equally through positive reinforcement",
-        "They contribute to self-fulfilling prophecies where children perform in line with expectations linked to gender roles",
-        "They have no effect on children’s cognitive performance as abilities are biologically predetermined"
+        "Show equivalent rates of homosexuality as children in the general population",
+        "Tend to have more behavioral problems but better academic performance",
+        "Are more likely to identify as gay or lesbian in adulthood",
+        "Show poorer psychological adjustment but stronger gender identity development"
       ],
-      "correct_answer": "They contribute to self-fulfilling prophecies where children perform in line with expectations linked to gender roles",
-      "explanation": "1. The correct answer, \"They contribute to self-fulfilling prophecies where children perform in line with expectations linked to gender roles,\" reflects the impact of gender-role stereotypes on children's cognitive performance. Research indicates that these stereotypes can lead children to internalize expectations about their abilities, particularly in areas like math and verbal skills. For instance, parents may expect sons to excel in math and attribute their successes to innate ability, while daughters may be seen as needing to work harder for the same achievements, leading girls to underestimate their capabilities and become less interested in math.\n\n2. The first incorrect option, \"They have no effect on children’s cognitive performance as abilities are biologically predetermined,\" is wrong because research shows that cognitive abilities are influenced by both biological factors and social constructs, including gender-role stereotypes. The second incorrect option, \"They only affect adults’ attitudes and do not influence children's cognitive skills,\" is incorrect because studies demonstrate that these stereotypes directly impact children's self-perception and performance, not just adult attitudes. Lastly, the option \"They enhance boys’ and girls’ abilities equally through positive reinforcement\" is misleading, as the reinforcement often differs by gender, with boys receiving more encouragement in math and girls potentially receiving less, which can hinder their performance rather than enhance it.",
+      "correct_answer": "Show equivalent rates of homosexuality as children in the general population",
+      "explanation": "Research consistently shows that children raised by gay or lesbian parents do not differ from children of heterosexual parents in psychological adjustment, intellectual functioning, gender identity, or sexual orientation. Furthermore, these children show equivalent rates of homosexuality as in the general population. The other options contradict the research evidence. Children of same-sex parents do not show more behavioral problems, are not more likely to identify as gay/lesbian, and do not show poorer psychological adjustment.",
       "domain": "Domain 4: Growth & Lifespan Development",
-      "knId": "KN24",
-      "source_file": "4 Cognitive Development.json",
+      "knId": "KN16",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 School and Family.json",
       "source_folder": "4 Development",
       "difficulty": "medium",
       "question_type": "standard",
@@ -3853,20 +3854,20 @@
       "is_org_psych": false
     },
     {
-      "id": 183,
-      "question": "A researcher conducting a study on the effectiveness of a new therapeutic intervention inadvertently provides more encouraging nonverbal cues to participants in the treatment group than to those in the control group. This pattern of behavior, in which the researcher's expectations subtly influence participant responses, is BEST described as:",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/5 6 Workplace Decisions.json::0",
+      "question": "Members of a neighborhood watch committee are individually polled before their meeting and each reports moderate support for a curfew ordinance. After one hour of discussion exclusively among themselves, the committee unanimously endorses a far stricter ordinance than any individual had originally favored. Which phenomenon MOST directly accounts for this outcome?",
       "options": [
-        "The Rosenthal effect",
-        "Demand characteristics",
-        "Observer bias",
-        "The Hawthorne effect"
+        "Groupthink, in which the desire for unanimity suppresses dissenting viewpoints and critical analysis",
+        "Group polarization, in which discussion among like-minded individuals amplifies their shared initial tendency toward a more extreme position",
+        "Deindividuation, in which members lose personal accountability within the collective and adopt more extreme norms",
+        "Conformity pressure, in which a dominant minority enforces attitude change through normative influence"
       ],
-      "correct_answer": "The Rosenthal effect",
-      "explanation": "The Rosenthal effect (also called experimenter expectancy effect) refers to subtle cues or clues transmitted by the experimenter that influence participant behavior in the direction of the experimenter's hypothesis. This is distinct from the Hawthorne effect (behavior change due to awareness of being observed), demand characteristics (cues that inform participants about what behavior is expected, which come from the experimental situation rather than the experimenter specifically), and observer bias (systematic errors in recording or interpreting data, rather than influencing participant behavior).",
+      "correct_answer": "Group polarization, in which discussion among like-minded individuals amplifies their shared initial tendency toward a more extreme position",
+      "explanation": "Group polarization refers to the reliable tendency for deliberation among people who share an initial lean to produce a collective position more extreme than their pre-discussion average. Because each committee member already favored the curfew to some degree, discussion reinforced and magnified that lean, yielding an outcome beyond any individual's original position. This is the defining signature of group polarization. Groupthink (Option A) involves specific symptoms—illusion of invulnerability, self-censorship, mindguarding—and primarily concerns the suppression of alternatives to preserve cohesion; it does not require or predict a shift to extremity per se. Deindividuation (Option C) involves reduced self-awareness in crowds and the abandonment of personal restraints, not the amplification of pre-existing attitudes through discussion. Option D (conformity) describes influence exerted by a minority or majority on an individual, not the emergent amplification of an already-shared group tendency.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
-      "knId": "KN6",
-      "source_file": "7 Research Designs.json",
-      "source_folder": "7 Research and Stats",
+      "knId": "KN16",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/5 6 Workplace Decisions.json",
+      "source_folder": "2 3 5 6 I-O Psychology",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
@@ -4084,19 +4085,19 @@
       "is_org_psych": false
     },
     {
-      "id": 194,
-      "question": "Which supervision model focuses on understanding and integrating the supervisor and supervisee's interpersonal dynamics to improve therapy outcomes?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Family and Group.json::15",
+      "question": "In Strategic Family Therapy, what is the purpose of 'restraining' as a therapeutic directive?",
       "options": [
-        "Behavioral model",
-        "Developmental model",
-        "Psychodynamic model",
-        "Integrative model"
+        "Encouraging family members not to change or warning against too rapid change",
+        "Directly asking family members to perform the problematic behavior",
+        "Altering hierarchical relationships by aligning with a less powerful member",
+        "Teaching communication skills to all family members"
       ],
-      "correct_answer": "Psychodynamic model",
-      "explanation": "1. The **psychodynamic model** is the correct answer because it emphasizes understanding and integrating the interpersonal dynamics between the supervisor and supervisee. This model focuses on the relational aspects of supervision, including transference and countertransference, which can significantly impact therapy outcomes by enhancing the supervisee's self-awareness and therapeutic effectiveness.\n\n2. The **developmental model** is incorrect because it primarily focuses on the growth and progression of the supervisee's skills and competencies over time, rather than the interpersonal dynamics between supervisor and supervisee. The **integrative model** is not the correct choice as it aims to combine various theoretical approaches and techniques in supervision, without specifically emphasizing the understanding of interpersonal dynamics. Lastly, the **behavioral model** is wrong because it concentrates on observable behaviors and the application of behavioral techniques in supervision, rather than exploring the deeper relational aspects that influence therapeutic outcomes.",
+      "correct_answer": "Encouraging family members not to change or warning against too rapid change",
+      "explanation": "In Strategic Family Therapy, \"restraining\" serves the purpose of encouraging family members not to change or warning against too rapid change. This directive is employed to help family members recognize the potential consequences of change and to allow them to process their feelings and dynamics before making significant adjustments. By cautioning against hasty changes, therapists aim to stabilize the family system and promote thoughtful engagement with the issues at hand.\n\n1. **Directly asking family members to perform the problematic behavior:** This option describes \"prescribing the symptom,\" which involves instructing family members to engage in the problematic behavior, often in an exaggerated manner, rather than restraining change.\n\n2. **Altering hierarchical relationships by aligning with a less powerful member:** This option refers to \"unbalancing,\" a technique used to shift power dynamics within the family, which is distinct from the purpose of restraining.\n\n3. **Teaching communication skills to all family members:** This option does not fit within the scope of restraining, as it focuses on skill development rather than the therapeutic strategy of cautioning against immediate change. Restraining is more about managing the pace of change rather than directly enhancing communication skills.",
       "domain": "Domain 6: Treatment & Intervention",
-      "knId": "KN52",
-      "source_file": "6 Prevention and Consultation.json",
+      "knId": "KN46",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Family and Group.json",
       "source_folder": "6 Clinical Interventions",
       "difficulty": "medium",
       "question_type": "standard",
@@ -4126,19 +4127,19 @@
       "is_org_psych": false
     },
     {
-      "id": 196,
-      "question": "Which form of racism is characterized by subtle, often unconscious negative feelings toward minority groups while maintaining a non-prejudiced self-image and a belief in equality?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Group Influences.json::2",
+      "question": "In a committee meeting, only two members oppose the popular plan. They continue presenting the same evidence calmly and consistently over several meetings, and eventually several other members privately change their minds. Moscovici would describe this pattern as an example of:",
       "options": [
-        "Aversive racism",
-        "Ambivalent racism",
-        "Symbolic racism",
-        "Overt racism"
+        "Normative influence by the majority",
+        "Minority influence",
+        "Social loafing",
+        "Evaluation apprehension"
       ],
-      "correct_answer": "Aversive racism",
-      "explanation": "1. **Aversive racism** is the correct answer because it is characterized by individuals who hold a non-prejudiced self-image and a belief in equality while simultaneously harboring subtle, often unconscious negative feelings about minority groups. This form of racism leads to avoidance of interactions with minority members unless the individual can justify their discrimination on a basis other than race, reflecting an internal conflict between egalitarian beliefs and negative feelings.\n\n2. **Symbolic racism** is incorrect because it involves a belief in egalitarianism paired with the perception that minority groups violate traditional values, leading to opposition against policies aimed at promoting equality, rather than subtle negative feelings. **Ambivalent racism** is not the correct answer because it describes individuals who possess both positive and negative attitudes toward minority groups, resulting in emotional tension, rather than solely unconscious negative feelings. **Overt racism** is wrong as it refers to openly hostile and aggressive attitudes toward minority groups, which is a direct contrast to the subtlety and ambiguity of aversive racism.",
+      "correct_answer": "Minority influence",
+      "explanation": "Minority influence is the best answer because a small, consistent minority can shift opinions through behavioral style and produce genuine private acceptance. Normative influence by the majority is wrong because the source of change here is not pressure from the larger group. Social loafing is wrong because it concerns reduced effort in group tasks. Evaluation apprehension is wrong because it involves concern about being judged, not conversion to a minority position.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
-      "knId": "KN20",
-      "source_file": "3 Helping and Hurting.json",
+      "knId": "KN16",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Group Influences.json",
       "source_folder": "3 Social Psychology",
       "difficulty": "hard",
       "question_type": "standard",
@@ -4462,19 +4463,19 @@
       "is_org_psych": false
     },
     {
-      "id": 212,
-      "question": "Which of the following illustrates the misattribution of arousal as demonstrated in Schachter and Singer’s experiment?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Stress and Emotion.json::2",
+      "question": "Expectancy in motivational theories primarily refers to which of the following?",
       "options": [
-        "Experiencing happiness immediately after smiling during a mirror task",
-        "Being aware that physiological arousal is due to caffeine consumption and feeling anxious",
-        "Feeling fear because of increased heart rate caused by running, but attributing it to anger from a confederate’s behavior",
-        "Reacting with anger due to residual sexual arousal from a prior unrelated event"
+        "The belief that one can achieve a desired outcome.",
+        "The anticipation of negative consequences.",
+        "The expectation of external rewards.",
+        "The understanding of social norms."
       ],
-      "correct_answer": "Feeling fear because of increased heart rate caused by running, but attributing it to anger from a confederate’s behavior",
-      "explanation": "Misattribution of arousal occurs when physiological arousal from one source (e.g., running) is incorrectly labeled as being caused by another source (e.g., anger provoked by a confederate), as demonstrated by Schachter and Singer.",
+      "correct_answer": "The belief that one can achieve a desired outcome.",
+      "explanation": "Expectancy in motivational theories is about the belief in one's ability to achieve goals, which influences motivation. The other options do not accurately reflect the concept of expectancy.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
       "knId": "KN10",
-      "source_file": "2 Stress and Emotion.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Stress and Emotion.json",
       "source_folder": "2 Learning and Memory",
       "difficulty": "medium",
       "question_type": "standard",
@@ -4504,19 +4505,19 @@
       "is_org_psych": false
     },
     {
-      "id": 214,
-      "question": "What is a common complaint that interns have about their supervisors?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json::67",
+      "question": "Which of the following best describes the ethical competency a supervisor must possess to provide competent clinical supervision?",
       "options": [
-        "Lack of feedback on performance",
-        "Inconsistent scheduling of sessions",
-        "Overly supportive relationships",
-        "Too much supervision"
+        "Competence only in the clinical services provided by the supervisee.",
+        "Competence in both the clinical services provided by the supervisee and in the provision of supervision.",
+        "Competence only in general psychological theory without regard to supervisee services.",
+        "Competence in administrative tasks but not necessarily clinical issues."
       ],
-      "correct_answer": "Lack of feedback on performance",
-      "explanation": "Interns often express dissatisfaction with the lack of constructive feedback, which is crucial for their development. The other options do not typically reflect common complaints; interns generally appreciate guidance but may feel overwhelmed by excessive supervision or inconsistent scheduling.",
+      "correct_answer": "Competence in both the clinical services provided by the supervisee and in the provision of supervision.",
+      "explanation": "1. The correct answer, \"Competence in both the clinical services provided by the supervisee and in the provision of supervision,\" aligns with the ASPPB’s *Supervision Guidelines*, which state that a supervisor must be competent in the services being provided by the supervisee as well as in the supervision itself. This dual competence ensures that the supervisor can effectively guide the supervisee while also safeguarding the welfare of the supervisee’s clients.\n\n2. \n- **Competence only in the clinical services provided by the supervisee:** This option is incorrect because it neglects the necessity for supervisors to also possess expertise in the supervision process itself, which is essential for effective guidance and support.\n  \n- **Competence only in general psychological theory without regard to supervisee services:** This choice is inadequate as it fails to recognize that knowledge of general psychological theory alone does not equip a supervisor to address the specific needs and challenges of the supervisee’s clinical practice.\n\n- **Competence in administrative tasks but not necessarily clinical issues:** This option is misleading because while administrative skills are important, they do not substitute for the clinical knowledge required to provide effective supervision and support for the supervisee’s clinical work.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
       "knId": "KN70",
-      "source_file": "8 Practice Issues.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json",
       "source_folder": "8 Ethics",
       "difficulty": "medium",
       "question_type": "standard",
@@ -4567,40 +4568,40 @@
       "is_org_psych": false
     },
     {
-      "id": 217,
-      "question": "Which of the following best describes referent power in the context of social influence?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/2 3 Work Satisfaction.json::16",
+      "question": "In the context of psychological resilience, which individual trait has been shown to contribute to sustained job satisfaction despite external stressors?",
       "options": [
-        "The capacity to affect others' behavior through personal relationships and admiration.",
-        "The power to change others' beliefs through logical argumentation.",
-        "The influence derived from the ability to reward or punish others.",
-        "The ability to influence others based on perceived authority or expertise."
+        "Optimism",
+        "Affective disposition",
+        "Self-efficacy",
+        "Emotional intelligence"
       ],
-      "correct_answer": "The capacity to affect others' behavior through personal relationships and admiration.",
-      "explanation": "Referent power is based on the personal relationships and admiration that one individual has for another, making them more likely to be influenced. The other options describe different types of power, such as expert power or coercive power, which do not align with the concept of referent power.",
-      "domain": "Domain 3: Social Psychology & Cultural Aspects",
+      "correct_answer": "Affective disposition",
+      "explanation": "1. **Affective disposition** is the correct answer because it refers to an individual's tendency to respond to various situations in a consistently favorable or unfavorable manner. Research indicates that this trait is linked to job satisfaction, as individuals with a positive affective disposition are more likely to experience higher levels of job satisfaction over time, even in the presence of external stressors (Judge & Hulin, 1993).\n\n2. **Optimism** is incorrect because, while it can influence resilience and well-being, the reference material specifically highlights affective disposition as a stable trait linked to job satisfaction, rather than optimism, which is more situational. **Self-efficacy** is also incorrect as it pertains to an individual's belief in their ability to succeed in specific situations, which, while important, does not directly relate to the stability of job satisfaction across different contexts. Lastly, **emotional intelligence** is not the correct answer because it involves the ability to understand and manage emotions, but the reference material does not connect it specifically to sustained job satisfaction in the context of stress, unlike affective disposition, which is explicitly mentioned.",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
       "knId": "KN16",
-      "source_file": "3 Influence.json",
-      "source_folder": "3 Social Psychology",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/2 3 Work Satisfaction.json",
+      "source_folder": "2 3 5 6 I-O Psychology",
       "difficulty": "hard",
-      "question_type": "difficult",
+      "question_type": "standard",
       "isScored": false,
-      "type": "experimental",
+      "type": "standard",
       "is_org_psych": false
     },
     {
-      "id": 218,
-      "question": "What is the appropriate way for psychologists to represent their professional experience in advertisements?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json::60",
+      "question": "According to APA Inclusive Language Guidelines, which of the following is the most appropriate way to refer to a hypothetical single individual of unknown gender?",
       "options": [
-        "B. Psychologists can exaggerate their past experiences to make their services more appealing.",
-        "C. Psychologists may include any work experience, regardless of its relevance to their practice.",
-        "D. Psychologists are permitted to list volunteer experiences as if they were formal employment.",
-        "A. Psychologists should only include experiences that are directly relevant to their current practice."
+        "He or she",
+        "They, them, and their",
+        "He",
+        "She"
       ],
-      "correct_answer": "A. Psychologists should only include experiences that are directly relevant to their current practice.",
-      "explanation": "1. The correct answer, \"A. Psychologists should only include experiences that are directly relevant to their current practice,\" aligns with Standard 5.01 of the APA Ethics Code, which prohibits psychologists from making false, deceptive, or fraudulent public statements about their qualifications. Including only relevant experiences ensures that psychologists accurately represent their training and expertise, thereby maintaining ethical standards in advertising.\n\n2. \n- **B. Psychologists can exaggerate their past experiences to make their services more appealing.** This option is incorrect because exaggerating experiences violates the ethical mandate to provide truthful and accurate information about one’s qualifications, as stated in Standard 5.01. \n\n- **C. Psychologists may include any work experience, regardless of its relevance to their practice.** This is wrong because including irrelevant work experience could mislead clients about the psychologist's qualifications, contradicting the requirement of truthful representation in advertisements.\n\n- **D. Psychologists are permitted to list volunteer experiences as if they were formal employment.** This option is incorrect as it misrepresents the nature of volunteer work, which could be considered deceptive and misleading in advertisements, violating the ethical standards of accurate representation outlined in Standard 5.01.",
+      "correct_answer": "They, them, and their",
+      "explanation": "1. “They, them, and their” is the correct answer because the APA Inclusive Language Guidelines recommend using these singular pronouns when referring to a hypothetical individual whose gender is unknown or irrelevant to the context. This approach avoids assuming gender and promotes inclusivity by respecting the diverse identities that individuals may hold.\n\n2. The option \"He or she\" is incorrect because it assumes a binary understanding of gender, which does not encompass non-binary identities. \"He\" is inappropriate as it exclusively refers to a male individual, thereby excluding individuals of other genders. Similarly, \"She\" is incorrect because it exclusively refers to a female individual, also excluding other gender identities.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
       "knId": "KN62",
-      "source_file": "8 Standards 5 and 6.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json",
       "source_folder": "8 Ethics",
       "difficulty": "easy",
       "question_type": "standard",
@@ -4609,19 +4610,19 @@
       "is_org_psych": false
     },
     {
-      "id": 219,
-      "question": "Which of the following best exemplifies structural racism as defined by the APA?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Why People Do Things.json::2",
+      "question": "According to the reformulated learned helplessness model, a person who attributes a job rejection to the belief that 'I'm incompetent at everything and always will be' is making attributions that are:",
       "options": [
-        "A teacher treating students unfairly based on race",
-        "Individual holding and expressing overtly racist views",
-        "Laws and policies that create race-based inequalities, such as school funding tied to local property taxes",
-        "Discriminatory hiring practices by a private employer"
+        "External, stable, and global",
+        "Internal, unstable, and specific",
+        "Internal, stable, and global",
+        "External, unstable, and specific"
       ],
-      "correct_answer": "Laws and policies that create race-based inequalities, such as school funding tied to local property taxes",
-      "explanation": "1. The correct answer, \"Laws and policies that create race-based inequalities, such as school funding tied to local property taxes,\" exemplifies structural racism as defined by the APA because it refers to systemic practices and policies that produce enduring racial disparities. Structural racism encompasses laws and institutional practices that perpetuate inequalities across various domains, including education, as evidenced by funding mechanisms that disadvantage minority communities.\n\n2. The option \"A teacher treating students unfairly based on race\" is incorrect because it describes interpersonal racism, which involves individual behaviors and attitudes rather than systemic practices. \"Individual holding and expressing overtly racist views\" is also incorrect, as this represents overt racism, which is characterized by explicit hostility and discrimination from individuals rather than structural inequalities. Finally, \"Discriminatory hiring practices by a private employer\" is incorrect because it pertains to institutional racism, which is specific to organizational policies rather than broader societal structures that create systemic racial disparities.",
+      "correct_answer": "Internal, stable, and global",
+      "explanation": "The reformulated learned helplessness model (Abramson, Seligman, & Teasdale) identifies a pessimistic attributional style as the cognitive vulnerability for learned helplessness and depression: attributing negative events to internal ('I'm incompetent'), stable ('always will be'), and global ('at everything') causes. This combination predicts the most pervasive helplessness. External, stable, and global attributions would blame outside forces. Internal, unstable, and specific reflects an optimistic style for negative events. External, unstable, and specific represents the most optimistic attributional pattern for negative events.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
-      "knId": "KN20",
-      "source_file": "3 Helping and Hurting.json",
+      "knId": "KN14",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Why People Do Things.json",
       "source_folder": "3 Social Psychology",
       "difficulty": "medium",
       "question_type": "standard",

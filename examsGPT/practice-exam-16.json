@@ -27,23 +27,24 @@
     "generatedAt": "2026-03-26T01:46:50.340Z",
     "source": "questionsGPT",
     "blueprint": "Kns.md",
-    "generator": "scripts/assemble-questionsgpt-exams.mjs"
+    "generator": "scripts/assemble-questionsgpt-exams.mjs",
+    "lastSurgicalFix": "2026-05-10T02:40:11.047Z"
   },
   "questions": [
     {
-      "id": 1,
-      "question": "Which behavior is most likely to be influenced by high achievement motivation?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Stress and Emotion.json::5",
+      "question": "In auditory tasks, what is the primary function of selective attention?",
       "options": [
-        "Preferring tasks with minimal effort",
-        "Avoiding challenging tasks to prevent failure",
-        "Choosing tasks based on peer approval",
-        "Seeking out difficult tasks to demonstrate competence"
+        "To enhance memory retention of all auditory stimuli",
+        "To filter out irrelevant sounds and focus on specific information",
+        "To increase the volume of important sounds",
+        "To improve the clarity of background noise"
       ],
-      "correct_answer": "Seeking out difficult tasks to demonstrate competence",
-      "explanation": "High achievement motivation typically drives individuals to seek out challenging tasks that allow them to demonstrate their competence and skills. The other options reflect avoidance or external validation rather than intrinsic motivation to achieve.",
+      "correct_answer": "To filter out irrelevant sounds and focus on specific information",
+      "explanation": "Selective attention allows individuals to focus on specific auditory information while filtering out irrelevant sounds, which is crucial for effective communication and comprehension. The other options do not accurately describe the function of selective attention.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
       "knId": "KN10",
-      "source_file": "2 Stress and Emotion.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Stress and Emotion.json",
       "source_folder": "2 Learning and Memory",
       "difficulty": "medium",
       "question_type": "standard",
@@ -94,24 +95,24 @@
       "is_org_psych": false
     },
     {
-      "id": 4,
-      "question": "Which of the following assessment models emphasizes understanding personality disorders as maladaptive variants of general personality traits rather than distinct categories?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Neurocognitive.json::13",
+      "question": "Which of the following factors is associated with increased risk for developing Alzheimer’s disease?",
       "options": [
-        "Behavioral learning model",
-        "Categorical diagnostic model",
-        "Dimensional trait model",
-        "Psychodynamic conflict model"
+        "High educational attainment",
+        "Obesity and hearing loss",
+        "Regular aerobic exercise",
+        "Young age at onset"
       ],
-      "correct_answer": "Dimensional trait model",
-      "explanation": "1. The \"Dimensional trait model\" is the correct answer because it emphasizes understanding personality disorders as maladaptive variations of general personality traits, rather than viewing them as distinct categories. This model aligns with the findings of Saulsman and Page (2004), which highlight the relationships between personality disorders and the Big Five personality traits, indicating that personality disorders can be conceptualized along a continuum of traits rather than as separate entities.\n\n2. The \"Categorical diagnostic model\" is incorrect because it classifies personality disorders as distinct categories with specific criteria, rather than viewing them as variations of traits. The \"Psychodynamic conflict model\" is wrong because it focuses on unconscious conflicts and drives, rather than the trait-based understanding of personality disorders. Lastly, the \"Behavioral learning model\" is incorrect as it emphasizes learned behaviors and environmental influences on personality, rather than the inherent traits that the dimensional approach highlights.",
+      "correct_answer": "Obesity and hearing loss",
+      "explanation": "1. \"Obesity and hearing loss\" is the correct answer because both factors have been linked to an increased risk of developing Alzheimer’s disease. The DSM-5-TR indicates that low educational status and obesity are risk factors, while hearing loss has also been associated with cognitive decline and may contribute to the development of neurocognitive disorders, including Alzheimer’s.\n\n2. \n- **High educational attainment:** This option is incorrect because higher educational attainment is generally associated with a lower risk of developing Alzheimer’s disease, likely due to the cognitive reserve it provides.\n- **Regular aerobic exercise:** This is incorrect as regular aerobic exercise is associated with a reduced risk of Alzheimer’s disease, promoting overall brain health and cognitive function.\n- **Young age at onset:** This option is incorrect because younger age at onset is typically linked to genetic factors or specific conditions (like Down syndrome) that increase risk, rather than being a general risk factor for Alzheimer’s disease itself.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
       "knId": "KN36",
-      "source_file": "5 Personality.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Neurocognitive.json",
       "source_folder": "5 Diagnosis",
       "difficulty": "medium",
-      "question_type": "difficult",
+      "question_type": "standard",
       "isScored": false,
-      "type": "experimental",
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -388,19 +389,19 @@
       "is_org_psych": false
     },
     {
-      "id": 18,
-      "question": "A psychologist is approached by a client who is a member of a marginalized group. What is the ethical guideline regarding the provision of services to this client?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 1 and 2.json::16",
+      "question": "A managed care company requires a specific diagnosis code for reimbursement. Dr. Chen's client presents with adjustment difficulties that do not meet criteria for any reimbursable diagnosis. The client cannot afford to pay out of pocket. Dr. Chen is considering assigning a diagnosis of Major Depressive Disorder to secure insurance coverage. This practice is:",
       "options": [
-        "Psychologists should provide services to all clients without regard to their background.",
-        "Psychologists may refuse services if they feel uncomfortable with the client's background.",
-        "Psychologists must ensure that their personal biases do not interfere with providing services.",
-        "Psychologists can refuse services based on the client's political beliefs."
+        "Ethically acceptable if the client consents to the misdiagnosis and understands the implications",
+        "Ethically acceptable as long as the assigned diagnosis is close to the client's actual presentation",
+        "Ethically prohibited because it constitutes fraud and violates standards of honesty and integrity",
+        "Ethically acceptable if the psychologist documents the clinical rationale for the diagnostic decision"
       ],
-      "correct_answer": "Psychologists must ensure that their personal biases do not interfere with providing services.",
-      "explanation": "This answer is correct because the APA Ethics Code emphasizes that psychologists must be aware of their biases and ensure they do not affect their professional conduct, particularly when working with clients from diverse backgrounds.",
+      "correct_answer": "Ethically prohibited because it constitutes fraud and violates standards of honesty and integrity",
+      "explanation": "Intentionally misrepresenting a client's diagnosis to obtain insurance reimbursement violates multiple APA ethical standards, including Principle C (Integrity) which requires honesty and truthfulness, and Standard 6.06 which prohibits fraud. It also constitutes insurance fraud under law. Option A is incorrect because client consent does not make fraudulent billing ethical or legal. Option B is incorrect because any intentional misrepresentation of diagnosis is prohibited regardless of how 'close' the assigned diagnosis appears to be. Option D is incorrect because documenting a rationale for an intentionally false diagnosis does not transform fraud into acceptable practice.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
       "knId": "KN61",
-      "source_file": "8 Standards 3 and 4.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 1 and 2.json",
       "source_folder": "8 Ethics",
       "difficulty": "easy",
       "question_type": "standard",
@@ -430,24 +431,24 @@
       "is_org_psych": false
     },
     {
-      "id": 20,
-      "question": "What is the primary goal of frame-of-reference training in performance appraisal?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/5 6 Evaluating Jobs.json::14",
+      "question": "Behaviorally Anchored Rating Scales (BARS) differ from graphic rating scales primarily because:",
       "options": [
-        "To standardize performance ratings across evaluators",
-        "To improve communication skills",
-        "To increase job satisfaction",
-        "To enhance employee motivation"
+        "They are easier to develop and apply",
+        "Behavioral examples anchor each scale point to improve rating accuracy",
+        "They focus exclusively on relative comparisons among employees",
+        "They rely solely on quantitative performance metrics"
       ],
-      "correct_answer": "To standardize performance ratings across evaluators",
-      "explanation": "Frame-of-reference training aims to ensure that all evaluators use the same standards and criteria when assessing employee performance, thus standardizing ratings. The other options do not capture the primary goal of this training.",
-      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
+      "correct_answer": "Behavioral examples anchor each scale point to improve rating accuracy",
+      "explanation": "1. The correct answer, \"Behavioral examples anchor each scale point to improve rating accuracy,\" is accurate because Behaviorally Anchored Rating Scales (BARS) are specifically designed to include descriptions of specific behaviors at each point on the rating scale. This anchoring helps raters understand what constitutes good, average, or poor performance, thereby reducing rater biases and enhancing the accuracy of the ratings provided.\n\n2. The option \"They are easier to develop and apply\" is incorrect because BARS are actually time-consuming to develop due to the need for comprehensive input from job incumbents and subject matter experts to identify essential performance dimensions and behaviors. \n\nThe statement \"They focus exclusively on relative comparisons among employees\" is wrong because BARS do not exclusively compare employees relative to one another; instead, they assess individual performance against defined behavioral standards.\n\nFinally, \"They rely solely on quantitative performance metrics\" is incorrect because BARS incorporate qualitative behavioral descriptions rather than relying solely on quantitative measures, allowing for a more nuanced evaluation of performance.",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
       "knId": "KN34",
-      "source_file": "5 Personality Tests.json",
-      "source_folder": "5 Assessment",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/5 6 Evaluating Jobs.json",
+      "source_folder": "2 3 5 6 I-O Psychology",
       "difficulty": "medium",
-      "question_type": "difficult",
+      "question_type": "standard",
       "isScored": false,
-      "type": "experimental",
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -829,20 +830,20 @@
       "is_org_psych": false
     },
     {
-      "id": 39,
-      "question": "A researcher conducting a study on the effectiveness of a new therapeutic intervention inadvertently provides more encouraging nonverbal cues to participants in the treatment group than to those in the control group. This pattern of behavior, in which the researcher's expectations subtly influence participant responses, is BEST described as:",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Memory.json::47",
+      "question": "Which type of interference occurs when newly learned information impairs the recall of previously acquired information?",
       "options": [
-        "Demand characteristics",
-        "Observer bias",
-        "The Hawthorne effect",
-        "The Rosenthal effect"
+        "Proactive interference",
+        "Retroactive interference",
+        "Decay interference",
+        "Semantic interference"
       ],
-      "correct_answer": "The Rosenthal effect",
-      "explanation": "The Rosenthal effect (also called experimenter expectancy effect) refers to subtle cues or clues transmitted by the experimenter that influence participant behavior in the direction of the experimenter's hypothesis. This is distinct from the Hawthorne effect (behavior change due to awareness of being observed), demand characteristics (cues that inform participants about what behavior is expected, which come from the experimental situation rather than the experimenter specifically), and observer bias (systematic errors in recording or interpreting data, rather than influencing participant behavior).",
+      "correct_answer": "Retroactive interference",
+      "explanation": "1. **Retroactive interference** is the correct answer because it specifically refers to the phenomenon where newly acquired information disrupts the ability to recall previously learned information. According to interference theory, this occurs when the new information interferes with the retrieval of older memories, making it difficult to recall what was learned before.\n\n2. **Proactive interference** is incorrect because it describes the situation where previously learned information interferes with the learning or recall of new information, not the other way around. **Decay interference** is not a recognized term in the provided material; the relevant theory discussed is trace decay theory, which suggests that memories deteriorate over time but does not specifically address interference between memories. Lastly, **semantic interference** is also not mentioned in the reference material; it implies interference based on the meanings of words or concepts, which is not the focus of the interference theory discussed.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
-      "knId": "KN6",
-      "source_file": "7 Research Designs.json",
-      "source_folder": "7 Research and Stats",
+      "knId": "KN8",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Memory.json",
+      "source_folder": "2 Learning and Memory",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
@@ -1375,20 +1376,20 @@
       "is_org_psych": false
     },
     {
-      "id": 65,
-      "question": "A school psychologist wants to determine the percentage of time a student spends on-task during a 30-minute independent reading period. The psychologist divides the observation period into 60 equal intervals and checks at the end of each interval whether the student is engaged in reading at that exact moment. This procedure is BEST described as:",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Anxiety and OCD.json::21",
+      "question": "Which of the following best exemplifies an evidence-based method to enhance motivation before cognitive-behavioral therapy (CBT) for anxiety disorders?",
       "options": [
-        "Continuous recording",
-        "Whole-interval sampling",
-        "Event recording",
-        "Momentary time sampling"
+        "Applying motivational interviewing as a pretreatment to reduce resistance and improve engagement",
+        "Administering benzodiazepines prior to CBT sessions to decrease anxiety symptoms",
+        "Using psychoeducation alone without direct exposure or cognitive restructuring",
+        "Scheduling brief supportive counseling sessions without specific therapeutic techniques"
       ],
-      "correct_answer": "Momentary time sampling",
-      "explanation": "Momentary time sampling involves recording whether the target behavior is present or absent at the moment the time interval ends. This matches the described procedure of checking at the end of each interval. Whole-interval sampling requires the behavior to be exhibited for the full duration of the interval to be scored positively. Event recording involves tallying each occurrence of a discrete behavior. Continuous recording tracks every instance of a behavior with exact onset and offset times.",
+      "correct_answer": "Applying motivational interviewing as a pretreatment to reduce resistance and improve engagement",
+      "explanation": "1. **Correct Answer Explanation**: \"Applying motivational interviewing as a pretreatment to reduce resistance and improve engagement\" is the correct answer because research indicates that combining motivational interviewing with cognitive-behavioral therapy (CBT) can enhance treatment effectiveness by reducing resistance to treatment and improving patient engagement in the therapeutic process. This approach prepares patients for CBT by addressing ambivalence and fostering a commitment to change, making it an evidence-based method for enhancing motivation.\n\n2. **Incorrect Options**:\n   - **Administering benzodiazepines prior to CBT sessions to decrease anxiety symptoms**: This option is incorrect because while benzodiazepines may provide short-term relief from anxiety, they do not address motivation or engagement in therapy, and their long-term use can lead to dependence.\n   - **Using psychoeducation alone without direct exposure or cognitive restructuring**: This option is incorrect because psychoeducation is not sufficient on its own to enhance motivation; effective treatment for anxiety disorders typically requires exposure and cognitive restructuring as core components of CBT.\n   - **Scheduling brief supportive counseling sessions without specific therapeutic techniques**: This option is incorrect because brief supportive counseling lacks the structured therapeutic techniques necessary to effectively enhance motivation and engagement in CBT for anxiety disorders.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
       "knId": "KN31",
-      "source_file": "7 Research Designs.json",
-      "source_folder": "7 Research and Stats",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Anxiety and OCD.json",
+      "source_folder": "5 Diagnosis",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
@@ -1501,19 +1502,19 @@
       "is_org_psych": false
     },
     {
-      "id": 71,
-      "question": "In forensic settings, what is a key challenge psychologists face when predicting violent behavior?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json::38",
+      "question": "What is a psychologist's ethical responsibility when addressing a misdiagnosis that may have led to inappropriate medication being prescribed?",
       "options": [
-        "The lack of reliable assessment tools.",
-        "The difficulty in obtaining accurate historical data.",
-        "The pressure to provide definitive answers to legal questions.",
-        "The inherent unpredictability of human behavior."
+        "To inform the client and collaborate with the prescribing physician to adjust the treatment plan.",
+        "To ignore the misdiagnosis if the client seems to be responding well to the medication.",
+        "To wait for the client to bring up concerns about their medication before taking action.",
+        "To document the misdiagnosis but take no further action."
       ],
-      "correct_answer": "The inherent unpredictability of human behavior.",
-      "explanation": "The correct answer highlights the fundamental challenge in predicting behavior, which is often unpredictable. The other options may contribute to the difficulty but do not capture the core issue.",
+      "correct_answer": "To inform the client and collaborate with the prescribing physician to adjust the treatment plan.",
+      "explanation": "The correct answer emphasizes the psychologist's duty to ensure client welfare by addressing misdiagnosis and collaborating on treatment. Ignoring the issue or waiting for the client to express concerns neglects ethical responsibilities. Documenting without action does not fulfill the duty of care.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
       "knId": "KN67",
-      "source_file": "8 Practice Issues.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json",
       "source_folder": "8 Ethics",
       "difficulty": "hard",
       "question_type": "standard",
@@ -1816,19 +1817,19 @@
       "is_org_psych": false
     },
     {
-      "id": 86,
-      "question": "In rural settings, what is a primary concern regarding the scope of practice for psychologists?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 1 and 2.json::11",
+      "question": "What must a psychologist demonstrate to establish legal liability in a malpractice case?",
       "options": [
-        "Limited access to supervision and consultation",
-        "Excessive competition among practitioners",
-        "High demand for specialized services",
-        "Availability of advanced technology"
+        "The client must show emotional distress.",
+        "The psychologist must have a personal relationship with the client.",
+        "The psychologist must have breached a duty of care that caused measurable harm.",
+        "The client must have a prior history of mental health issues."
       ],
-      "correct_answer": "Limited access to supervision and consultation",
-      "explanation": "In rural settings, psychologists often face challenges related to limited access to supervision and consultation, which can impact their practice and professional development. The other options do not accurately reflect the primary concerns in rural psychology practice.",
+      "correct_answer": "The psychologist must have breached a duty of care that caused measurable harm.",
+      "explanation": "The correct answer reflects the essential elements required to establish legal liability in a malpractice case, specifically the breach of duty and resulting harm. The other options do not accurately represent the legal requirements for establishing malpractice.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
-      "knId": "KN66",
-      "source_file": "8 Practice Issues.json",
+      "knId": "KN63",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 1 and 2.json",
       "source_folder": "8 Ethics",
       "difficulty": "hard",
       "question_type": "standard",
@@ -1858,19 +1859,19 @@
       "is_org_psych": false
     },
     {
-      "id": 88,
-      "question": "In educational settings, which of the following non-verbal communication cues is most likely to enhance student learning?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Stress and Emotion.json::12",
+      "question": "Which of the following is a core assumption of Schachter and Singer's two-factor theory of emotion?",
       "options": [
-        "Eye contact",
-        "Looking at the floor",
-        "Fidgeting",
-        "Crossed arms"
+        "Each emotion has a distinct pattern of physiological arousal",
+        "Emotional experience depends on physiological arousal and cognitive interpretation of that arousal",
+        "The thalamus sends simultaneous signals to the cortex and autonomic nervous system",
+        "Cognitive appraisal occurs only after the emotion is experienced"
       ],
-      "correct_answer": "Eye contact",
-      "explanation": "Eye contact is a powerful non-verbal communication cue that can enhance engagement and learning in educational settings. Crossed arms, looking at the floor, and fidgeting are generally associated with disinterest or anxiety, which can detract from learning.",
+      "correct_answer": "Emotional experience depends on physiological arousal and cognitive interpretation of that arousal",
+      "explanation": "1. The correct answer, \"Emotional experience depends on physiological arousal and cognitive interpretation of that arousal,\" accurately reflects Schachter and Singer's two-factor theory of emotion. This theory posits that physiological arousal occurs first and is followed by a cognitive label or interpretation of that arousal, which ultimately leads to the experience of emotion. Thus, both physiological arousal and the cognitive appraisal of that arousal are essential for determining emotional experience.\n\n2. The option \"Each emotion has a distinct pattern of physiological arousal\" is incorrect because Schachter and Singer's theory asserts that physiological arousal is generally similar across different emotions; it is the cognitive interpretation that differentiates the emotions. The statement \"The thalamus sends simultaneous signals to the cortex and autonomic nervous system\" is wrong because this describes the Cannon-Bard theory, not Schachter and Singer's approach, which emphasizes cognitive interpretation following arousal. Lastly, \"Cognitive appraisal occurs only after the emotion is experienced\" is incorrect because Schachter and Singer's theory indicates that cognitive appraisal follows physiological arousal but is necessary for the experience of emotion, not the other way around.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
       "knId": "KN10",
-      "source_file": "2 Stress and Emotion.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Stress and Emotion.json",
       "source_folder": "2 Learning and Memory",
       "difficulty": "medium",
       "question_type": "standard",
@@ -2341,19 +2342,19 @@
       "is_org_psych": false
     },
     {
-      "id": 111,
-      "question": "What is a potential ethical concern regarding instructor self-disclosure in educational settings?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 3 and 4.json::13",
+      "question": "What should a psychologist disclose to clients regarding supervision in their practice?",
       "options": [
-        "It may blur professional boundaries and affect student perceptions.",
-        "It is always beneficial for student engagement.",
-        "It fosters a more open classroom environment.",
-        "It can enhance the instructor's credibility."
+        "The psychologist should not disclose any information about supervision.",
+        "The psychologist must inform clients about the nature and purpose of supervision.",
+        "Clients do not need to know about supervision as it is an internal matter.",
+        "Supervision details should only be disclosed if the client asks about them."
       ],
-      "correct_answer": "It may blur professional boundaries and affect student perceptions.",
-      "explanation": "While self-disclosure can enhance credibility and engagement, it poses risks of blurring boundaries, which can lead to ethical dilemmas. The other options do not address the potential negative implications of self-disclosure.",
+      "correct_answer": "The psychologist must inform clients about the nature and purpose of supervision.",
+      "explanation": "The correct answer emphasizes the importance of transparency regarding supervision, which is an ethical obligation. The lesson states that psychologists should disclose relevant information to clients, including supervision details. The other options either promote secrecy or fail to recognize the importance of client awareness.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
       "knId": "KN64",
-      "source_file": "8 Practice Issues.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 3 and 4.json",
       "source_folder": "8 Ethics",
       "difficulty": "medium",
       "question_type": "standard",
@@ -2698,19 +2699,19 @@
       "is_org_psych": false
     },
     {
-      "id": 128,
-      "question": "According to research on cognitive development and diverse identities (KN24), how can gender-role stereotypes affect children’s cognitive performance in domains such as math and verbal abilities?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Cognitive Development.json::32",
+      "question": "A 4-year-old watches as an experimenter pours water from a short, wide beaker into a tall, narrow cylinder and asks whether the amount of water changed. The child says 'there's more now because it's taller,' ignoring that the cylinder is narrower. According to Piaget, the specific cognitive limitation most directly responsible for this error is:",
       "options": [
-        "They have no effect on children’s cognitive performance as abilities are biologically predetermined",
-        "They contribute to self-fulfilling prophecies where children perform in line with expectations linked to gender roles",
-        "They only affect adults’ attitudes and do not influence children's cognitive skills",
-        "They enhance boys’ and girls’ abilities equally through positive reinforcement"
+        "Egocentrism, because the child cannot take the experimenter's physical perspective on the containers",
+        "Irreversibility, because the child cannot mentally reverse the pouring action to infer the original amount",
+        "Centration, because the child focuses on the single dimension of height while ignoring the dimension of width",
+        "Animism, because the child attributes the water's movement to intentional self-directed action"
       ],
-      "correct_answer": "They contribute to self-fulfilling prophecies where children perform in line with expectations linked to gender roles",
-      "explanation": "1. The correct answer, \"They contribute to self-fulfilling prophecies where children perform in line with expectations linked to gender roles,\" reflects the impact of gender-role stereotypes on children's cognitive performance. Research indicates that these stereotypes can lead children to internalize expectations about their abilities, particularly in areas like math and verbal skills. For instance, parents may expect sons to excel in math and attribute their successes to innate ability, while daughters may be seen as needing to work harder for the same achievements, leading girls to underestimate their capabilities and become less interested in math.\n\n2. The first incorrect option, \"They have no effect on children’s cognitive performance as abilities are biologically predetermined,\" is wrong because research shows that cognitive abilities are influenced by both biological factors and social constructs, including gender-role stereotypes. The second incorrect option, \"They only affect adults’ attitudes and do not influence children's cognitive skills,\" is incorrect because studies demonstrate that these stereotypes directly impact children's self-perception and performance, not just adult attitudes. Lastly, the option \"They enhance boys’ and girls’ abilities equally through positive reinforcement\" is misleading, as the reinforcement often differs by gender, with boys receiving more encouragement in math and girls potentially receiving less, which can hinder their performance rather than enhance it.",
+      "correct_answer": "Centration, because the child focuses on the single dimension of height while ignoring the dimension of width",
+      "explanation": "Centration is Piaget's term for the preoperational tendency to focus attention on one salient perceptual dimension of a stimulus while failing to simultaneously consider other relevant dimensions. In this conservation task, the child centers on the height of the water column — the most visually salient change — while ignoring that the narrower width compensates for the increased height. The result is an incorrect judgment about quantity. Egocentrism (A) involves difficulty understanding that others hold different perspectives than oneself, not a failure to integrate multiple physical dimensions. Irreversibility (B) refers to the inability to mentally undo an action and is also implicated in conservation failures, but the specific error described — focusing exclusively on height — is most directly attributed to centration rather than irreversibility. Animism (D) involves attributing life or intention to inanimate objects, which is unrelated to this quantity judgment task.",
       "domain": "Domain 4: Growth & Lifespan Development",
-      "knId": "KN24",
-      "source_file": "4 Cognitive Development.json",
+      "knId": "KN23",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Cognitive Development.json",
       "source_folder": "4 Development",
       "difficulty": "medium",
       "question_type": "standard",
@@ -2824,19 +2825,19 @@
       "is_org_psych": false
     },
     {
-      "id": 134,
-      "question": "Which of the following best exemplifies structural racism as defined by the APA?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Influence.json::13",
+      "question": "Which of the following best explains why the door-in-the-face compliance technique works?",
       "options": [
-        "Discriminatory hiring practices by a private employer",
-        "Laws and policies that create race-based inequalities, such as school funding tied to local property taxes",
-        "A teacher treating students unfairly based on race",
-        "Individual holding and expressing overtly racist views"
+        "People desire to appear consistent in their actions after agreeing to a small initial request",
+        "People feel obligated to reciprocate after perceiving the influencer has made a concession",
+        "People assume the influencer holds valid factual information in ambiguous situations",
+        "People experience a psychological threat to their freedom, leading to compliance"
       ],
-      "correct_answer": "Laws and policies that create race-based inequalities, such as school funding tied to local property taxes",
-      "explanation": "1. The correct answer, \"Laws and policies that create race-based inequalities, such as school funding tied to local property taxes,\" exemplifies structural racism as defined by the APA because it refers to systemic practices and policies that produce enduring racial disparities. Structural racism encompasses laws and institutional practices that perpetuate inequalities across various domains, including education, as evidenced by funding mechanisms that disadvantage minority communities.\n\n2. The option \"A teacher treating students unfairly based on race\" is incorrect because it describes interpersonal racism, which involves individual behaviors and attitudes rather than systemic practices. \"Individual holding and expressing overtly racist views\" is also incorrect, as this represents overt racism, which is characterized by explicit hostility and discrimination from individuals rather than structural inequalities. Finally, \"Discriminatory hiring practices by a private employer\" is incorrect because it pertains to institutional racism, which is specific to organizational policies rather than broader societal structures that create systemic racial disparities.",
+      "correct_answer": "People feel obligated to reciprocate after perceiving the influencer has made a concession",
+      "explanation": "1. The correct answer, \"People feel obligated to reciprocate after perceiving the influencer has made a concession,\" is accurate because the door-in-the-face technique relies on the norm of mutual reciprocity. When the influencer first makes a large request and then concedes by making a smaller, more reasonable request, the person feels a social obligation to reciprocate this concession by agreeing to the second request.\n\n2. The option \"People desire to appear consistent in their actions after agreeing to a small initial request\" is incorrect because it describes the foot-in-the-door technique, where consistency is key after an initial small request, not the door-in-the-face method. The option \"People assume the influencer holds valid factual information in ambiguous situations\" is wrong because it pertains to informational influence, which explains conformity rather than compliance in the context of the door-in-the-face technique. Lastly, \"People experience a psychological threat to their freedom, leading to compliance\" is incorrect because this explanation relates to psychological reactance, which is not relevant to the dynamics of the door-in-the-face technique and its reliance on perceived concessions.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
-      "knId": "KN20",
-      "source_file": "3 Helping and Hurting.json",
+      "knId": "KN16",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Influence.json",
       "source_folder": "3 Social Psychology",
       "difficulty": "medium",
       "question_type": "standard",
@@ -2845,24 +2846,24 @@
       "is_org_psych": false
     },
     {
-      "id": 135,
-      "question": "A behavior therapist is treating a child who engages in frequent head-banging. Rather than applying punishment contingent on each episode, the therapist implements a protocol in which the child receives a preferred edible reinforcer after any interval of a specified duration during which head-banging does not occur. This procedure is identified as differential reinforcement of other behavior (DRO). In operant conditioning terms, the mechanism by which DRO reduces the target behavior is best described as:",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Brief Therapies.json::12",
+      "question": "In the transtheoretical model, which factor is the most important determinant of motivation during the contemplation stage?",
       "options": [
-        "Extinction paired with positive reinforcement, in which head-banging receives no reinforcement while its absence is systematically reinforced",
-        "Stimulus control, in which antecedent cues that previously signaled head-banging are systematically modified to suppress the response",
-        "Punishment by application, in which an aversive stimulus is contingently delivered following each head-banging episode to suppress the behavior",
-        "Negative reinforcement, in which removal of the aversive head-banging behavior is itself reinforcing to the supervising therapist"
+        "Self-efficacy",
+        "Decisional balance",
+        "Temptation",
+        "Environmental reevaluation"
       ],
-      "correct_answer": "Extinction paired with positive reinforcement, in which head-banging receives no reinforcement while its absence is systematically reinforced",
-      "explanation": "DRO operates through two complementary operant mechanisms: (1) extinction—the target behavior (head-banging) receives no reinforcement, allowing it to weaken and decrease; and (2) positive reinforcement delivered contingently on the absence of the target behavior during a specified interval. Together these mechanisms reduce the problem behavior while building more adaptive behavioral repertoires. Option A describes punishment by application, a distinct procedure not used in DRO. Option C misapplies the definition of negative reinforcement, which involves removal of an aversive stimulus contingent on a behavior—not applicable here. Option D describes antecedent-based stimulus control interventions, which modify triggers rather than consequences.",
+      "correct_answer": "Decisional balance",
+      "explanation": "1. \"Decisional balance\" is the correct answer because it refers to the strength of a person's beliefs about the pros and cons of changing, which is crucial during the contemplation stage. At this stage, individuals are ambivalent about making changes, and their motivation to proceed is significantly influenced by weighing the benefits against the drawbacks of changing their behavior.\n\n2. **Self-efficacy** is incorrect because, while it is important for transitioning from contemplation to preparation, it primarily assesses a person's confidence in their ability to change rather than their motivation during contemplation. **Temptation** is also incorrect because it pertains to the intensity of the urge to engage in undesirable behavior and does not directly address the motivational factors influencing decision-making in the contemplation stage. Lastly, **Environmental reevaluation** is not the correct choice as it involves examining how the environment affects behavior, which is more relevant for clients in the precontemplation stage rather than focusing on the internal decision-making process during contemplation.",
       "domain": "Domain 6: Treatment & Intervention",
       "knId": "KN42",
-      "source_file": "2 Operant Conditioning Interventions.json",
-      "source_folder": "2 Learning and Memory",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Brief Therapies.json",
+      "source_folder": "6 Clinical Interventions",
       "difficulty": "hard",
-      "question_type": "difficult",
+      "question_type": "standard",
       "isScored": false,
-      "type": "experimental",
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -2950,19 +2951,19 @@
       "is_org_psych": false
     },
     {
-      "id": 140,
-      "question": "What is a common side effect of beta-blockers?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Neurological and Endocrine Disorders.json::51",
+      "question": "The first-line medication for alleviating the bradykinesia symptoms of Parkinson’s disease, which is converted to dopamine in the brain, is:",
       "options": [
-        "B. Bradycardia",
-        "A. Weight gain",
-        "C. Insomnia",
-        "D. Increased anxiety"
+        "Levodopa",
+        "Dopamine agonists",
+        "Beta blockers",
+        "Acetylcholinesterase inhibitors"
       ],
-      "correct_answer": "B. Bradycardia",
-      "explanation": "Bradycardia, or a slower heart rate, is a common side effect of beta-blockers due to their action on the sympathetic nervous system. Weight gain is more associated with certain antipsychotics. Insomnia is not a typical side effect of beta-blockers, and increased anxiety is not a common effect; in fact, beta-blockers are used to reduce physical symptoms of anxiety.",
+      "correct_answer": "Levodopa",
+      "explanation": "1. **Correct Answer: Levodopa**  \nLevodopa is the first-line medication for alleviating bradykinesia symptoms of Parkinson’s disease because it is converted to dopamine in the brain, directly addressing the deficiency of dopamine that causes these motor symptoms. It is particularly effective for treating bradykinesia and may also help reduce muscle rigidity and tremor, making it a primary treatment option for individuals with Parkinson's disease.\n\n2. **Incorrect Options:**  \n- **Dopamine agonists:** While dopamine agonists mimic dopamine at receptor sites and can be used to treat Parkinson’s disease, they are not the first-line treatment for bradykinesia; levodopa is preferred for its direct conversion to dopamine.\n- **Beta blockers:** Beta blockers are primarily used to manage cardiovascular conditions and are not indicated for treating the motor symptoms of Parkinson’s disease, including bradykinesia.\n- **Acetylcholinesterase inhibitors:** These medications are typically used to treat cognitive symptoms in neurocognitive disorders, such as Alzheimer's disease, and do not address the motor symptoms associated with Parkinson’s disease.",
       "domain": "Domain 1: Biological Bases of Behavior",
       "knId": "KN2",
-      "source_file": "1 Pharmacology Other Drugs.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/1 Biopsychology (Neuroscience & Pharmacology)/1 Neurological and Endocrine Disorders.json",
       "source_folder": "1 Biopsychology (Neuroscience & Pharmacology)",
       "difficulty": "medium",
       "question_type": "standard",
@@ -3244,19 +3245,19 @@
       "is_org_psych": true
     },
     {
-      "id": 154,
-      "question": "Which factor is most influential in determining whether a bystander will help a person in distress in urban versus rural settings?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Connection.json::8",
+      "question": "According to Schachter's (1959) research on affiliation, highly anxious individuals tend to prefer waiting with:",
       "options": [
-        "Whether the bystander has received formal emergency training",
-        "Where the bystander was born and socialized",
-        "The severity of the victim’s injury",
-        "The bystander’s current location during the emergency"
+        "Other highly anxious participants rather than non-participants",
+        "Non-participants rather than other highly anxious participants",
+        "Alone rather than with any company",
+        "Any company regardless of their anxiety level"
       ],
-      "correct_answer": "The bystander’s current location during the emergency",
-      "explanation": "1. \"The bystander’s current location during the emergency\" is the correct answer because research indicates that a bystander is less likely to help a person in distress when the incident occurs in an urban area compared to a rural area, regardless of where the bystander was born and raised. This suggests that the immediate environment plays a crucial role in influencing a bystander's willingness to intervene, primarily due to factors like stimulus overload and the presence of more potential distractions in urban settings (Steblay, 1987).\n\n2. The option \"Where the bystander was born and socialized\" is incorrect because studies suggest that the current location of the bystander has a more significant impact on helping behavior than their background or socialization. \"Whether the bystander has received formal emergency training\" is not a primary factor in the context of urban versus rural settings, as the emphasis is on location rather than training. Lastly, \"The severity of the victim’s injury\" is also incorrect because while it may influence the decision to help, the research primarily highlights the environmental context (urban vs. rural) as the most critical determinant of bystander intervention.",
+      "correct_answer": "Other highly anxious participants rather than non-participants",
+      "explanation": "1. The correct answer, \"Other highly anxious participants rather than non-participants,\" aligns with Schachter's (1959) findings that highly anxious individuals prefer the company of others who share their anxiety. His research demonstrated that when given a choice, anxious subjects chose to wait with other anxious participants, as they seek out \"miserable company\" to alleviate their distress through social comparison and shared experiences, rather than waiting alone or with those who are not experiencing similar feelings.\n\n2. The option \"Non-participants rather than other highly anxious participants\" is incorrect because Schachter's study specifically showed that anxious individuals do not prefer the company of non-participants, indicating they seek out those who are similarly anxious. The option \"Alone rather than with any company\" is wrong because it contradicts the findings that anxious individuals prefer to wait with others rather than being alone. Lastly, the option \"Any company regardless of their anxiety level\" is incorrect as Schachter concluded that anxious individuals specifically prefer the company of others who are also experiencing anxiety, rather than any random company.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
       "knId": "KN15",
-      "source_file": "3 Helping and Hurting.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Connection.json",
       "source_folder": "3 Social Psychology",
       "difficulty": "medium",
       "question_type": "standard",
@@ -3349,19 +3350,19 @@
       "is_org_psych": false
     },
     {
-      "id": 159,
-      "question": "A 17-year-old reports that she has always planned to become a nurse, just like her mother and aunt, and has never seriously entertained any other career path. She fully endorses her family's religious and political values without ever questioning them. When asked if she ever explored alternatives, she states, 'I just knew what I was supposed to do.' According to Marcia's theory of identity development, this adolescent is best characterized as being in which identity status?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Cognitive Development.json::42",
+      "question": "Which explanation for childhood amnesia emphasizes the role of language in encoding memories?",
       "options": [
-        "Identity achievement, because she has a clear, stable sense of her future direction",
-        "Identity diffusion, because she has made no deliberate commitment to any identity",
-        "Identity moratorium, because she is deferring her decision until she feels ready",
-        "Identity foreclosure, because she has committed to an identity without engaging in personal exploration"
+        "The theory that infant brain structures are underdeveloped",
+        "The hypothesis that children lack a stable sense of self necessary for memory",
+        "The idea that limited language ability in young children restricts memory encoding",
+        "The proposal that early memories are replaced by later experiences"
       ],
-      "correct_answer": "Identity foreclosure, because she has committed to an identity without engaging in personal exploration",
-      "explanation": "Identity foreclosure, in Marcia's framework, is defined by commitment to values, roles, or goals—typically inherited from parents or authority figures—without having undergone a period of active questioning or exploration. This adolescent demonstrates foreclosure through her unexamined adoption of her family's occupational and ideological positions. Identity diffusion involves neither exploration nor commitment. Moratorium involves active, ongoing exploration without yet committing. Achievement requires both prior exploration and subsequent commitment. The absence of any exploratory process is the defining criterion that distinguishes foreclosure from achievement.",
+      "correct_answer": "The idea that limited language ability in young children restricts memory encoding",
+      "explanation": "1. **Correct Answer Explanation**: \"The idea that limited language ability in young children restricts memory encoding\" is the correct answer because language plays a crucial role in how memories are formed and organized. Children under the age of three or four have limited language skills, which may hinder their ability to encode memories effectively, making it difficult for them to retrieve these memories later in life.\n\n2. **Incorrect Option Explanations**:\n   - **The theory that infant brain structures are underdeveloped**: While it is true that brain development is ongoing during infancy, this explanation does not specifically address the role of language in the encoding of memories.\n   - **The hypothesis that children lack a stable sense of self necessary for memory**: Although a coherent sense of self may contribute to memory formation, this option does not focus on the impact of language on encoding memories.\n   - **The proposal that early memories are replaced by later experiences**: This explanation suggests a replacement mechanism rather than addressing how language limitations affect the initial encoding of memories in young children.",
       "domain": "Domain 4: Growth & Lifespan Development",
       "knId": "KN21",
-      "source_file": "4 Temperament and Personality.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Cognitive Development.json",
       "source_folder": "4 Development",
       "difficulty": "medium",
       "question_type": "standard",
@@ -3391,19 +3392,19 @@
       "is_org_psych": false
     },
     {
-      "id": 161,
-      "question": "Under DSM-5-TR, a child previously diagnosed with Asperger's disorder would now receive which diagnosis?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Mood.json::7",
+      "question": "When differentiating adult mania from adult ADHD, which symptom is more characteristic of mania than ADHD?",
       "options": [
-        "Social (pragmatic) communication disorder",
-        "Autism spectrum disorder with language impairment specifier",
-        "Autism spectrum disorder",
-        "Unspecified neurodevelopmental disorder"
+        "Labile and dysphoric mood",
+        "Distractibility due to wandering thoughts",
+        "Increased self-esteem or grandiosity",
+        "Fatigue following loss of sleep"
       ],
-      "correct_answer": "Autism spectrum disorder",
-      "explanation": "The DSM-5-TR combined what were previously separate diagnoses—autistic disorder, Asperger's disorder, and PDD-NOS—into a single diagnosis of autism spectrum disorder (ASD). A child who would have previously received an Asperger's diagnosis (characterized by social communication deficits and restricted interests without significant language delay) now receives an ASD diagnosis. The key is that ASD requires both social communication/interaction deficits AND restricted, repetitive behaviors. Social (pragmatic) communication disorder (A) would apply only if restricted/repetitive behaviors were absent. Option C is incorrect because Asperger's was characterized by the absence of language impairment, not its presence. Option D is a residual category, not the appropriate primary diagnosis.",
+      "correct_answer": "Increased self-esteem or grandiosity",
+      "explanation": "1. \"Increased self-esteem or grandiosity\" is the correct answer because it is a hallmark symptom of manic episodes in bipolar disorder. Adults experiencing mania typically exhibit an elevated or euphoric mood accompanied by inflated self-esteem or grandiosity, which is not characteristic of adult ADHD. In contrast, individuals with ADHD often experience reduced self-esteem rather than inflated self-views.\n\n2. The option \"Labile and dysphoric mood\" is incorrect because adults with ADHD typically exhibit a labile mood that is dysphoric, while mania is characterized by an elevated or euphoric mood. \"Distractibility due to wandering thoughts\" is incorrect as ADHD involves distractibility caused by wandering thoughts, whereas mania is characterized by distractibility due to thought acceleration, not wandering. Lastly, \"Fatigue following loss of sleep\" is incorrect because individuals with mania often have a decreased need for sleep and do not experience fatigue; in contrast, adults with ADHD may experience fatigue due to poor sleep quality or quantity.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
       "knId": "KN36",
-      "source_file": "5 Neurodevelopmental.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Mood.json",
       "source_folder": "5 Diagnosis",
       "difficulty": "medium",
       "question_type": "standard",
@@ -3433,19 +3434,19 @@
       "is_org_psych": false
     },
     {
-      "id": 163,
-      "question": "Which of the following criteria is NOT typically considered in child custody decision-making according to family law?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 1 and 2.json::25",
+      "question": "According to APA's ethical decision-making model described by Fisher (2022), what step comes immediately after identifying relevant laws, regulations, and institutional policies?",
       "options": [
-        "The child's relationship with each parent",
-        "The parent's social media presence",
-        "The child's preference if they are of sufficient age",
-        "The financial stability of each parent"
+        "Consider the perspectives of affected stakeholders",
+        "Identify the ethical problem",
+        "Monitor and evaluate results of the action plan",
+        "Develop and implement an action plan"
       ],
-      "correct_answer": "The parent's social media presence",
-      "explanation": "The child's relationship with each parent, financial stability, and the child's preference are all relevant factors in custody decisions. However, a parent's social media presence is not a standard criterion considered in custody evaluations.",
+      "correct_answer": "Consider the perspectives of affected stakeholders",
+      "explanation": "1. \"Consider the perspectives of affected stakeholders\" is the correct answer because it follows the identification of relevant laws, regulations, and institutional policies in Fisher's (2022) ethical decision-making model. This step emphasizes the importance of understanding how the decision will impact various stakeholders, such as clients, colleagues, and the community, ensuring that their perspectives are taken into account before proceeding with any actions.\n\n2. \n- \"Identify the ethical problem\" is incorrect because this step occurs first in the decision-making process, setting the foundation for the subsequent steps.\n- \"Monitor and evaluate results of the action plan\" is wrong as it is the final step in the model, focusing on assessing the outcomes after the action has been implemented rather than before developing an action plan.\n- \"Develop and implement an action plan\" is incorrect because it comes after considering the perspectives of stakeholders; this step involves creating a specific course of action based on the gathered information and stakeholder input.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
       "knId": "KN65",
-      "source_file": "8 Practice Issues.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 1 and 2.json",
       "source_folder": "8 Ethics",
       "difficulty": "medium",
       "question_type": "standard",
@@ -3790,19 +3791,19 @@
       "is_org_psych": false
     },
     {
-      "id": 180,
-      "question": "What term describes the genetic contribution to traits that are influenced by more than one gene, such as skin color or eye color?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 School and Family.json::18",
+      "question": "Which outcome is most consistently observed among children raised by gay or lesbian parents compared to those raised by heterosexual parents?",
       "options": [
-        "Mendelian inheritance",
-        "Autosomal inheritance",
-        "Chromosomal inheritance",
-        "Polygenic inheritance"
+        "Greater psychological adjustment difficulties",
+        "Lower intellectual functioning",
+        "No consistent differences in psychological and intellectual outcomes",
+        "Higher rates of gender identity confusion"
       ],
-      "correct_answer": "Polygenic inheritance",
-      "explanation": "1. **Correct Answer: Polygenic inheritance**  \n\"Polygenic inheritance\" is the correct term because it refers to traits influenced by multiple genes, such as skin color and eye color. The reference material states that most characteristics, including these traits, are polygenic, meaning their expression results from the cumulative effects of several different genes.\n\n2. **Incorrect Options:**\n- **Mendelian inheritance:** This term describes traits influenced by a single gene pair, following the inheritance patterns established by Gregor Mendel, and does not apply to traits influenced by multiple genes.\n- **Chromosomal inheritance:** This term refers to the inheritance of traits related to the structure and number of chromosomes, rather than the influence of multiple genes on specific traits.\n- **Autosomal inheritance:** This term pertains to traits carried on non-sex chromosomes (autosomes) and does not specifically denote the involvement of multiple genes in trait expression.",
+      "correct_answer": "No consistent differences in psychological and intellectual outcomes",
+      "explanation": "1. The correct answer, \"No consistent differences in psychological and intellectual outcomes,\" reflects the findings from studies that indicate children raised by gay or lesbian parents do not differ significantly from those raised by heterosexual parents in terms of psychological adjustment, intellectual functioning, gender identity, or sexual orientation. Research shows that the parenting skills of gay and lesbian parents are similar to or even better than those of heterosexual parents, supporting the conclusion that the sexual orientation of parents does not negatively impact child outcomes.\n\n2. \n- **Greater psychological adjustment difficulties**: This option is incorrect because studies have found no consistent evidence that children of gay or lesbian parents experience more psychological adjustment difficulties compared to their peers raised by heterosexual parents.\n  \n- **Lower intellectual functioning**: This option is wrong as research indicates that children raised by gay or lesbian parents do not have lower intellectual functioning than those raised by heterosexual parents, showing similar intellectual outcomes across both groups.\n\n- **Higher rates of gender identity confusion**: This choice is incorrect because the literature suggests that children raised by gay or lesbian parents do not exhibit higher rates of gender identity confusion compared to children raised by heterosexual parents, indicating no significant differences in this area.",
       "domain": "Domain 4: Growth & Lifespan Development",
       "knId": "KN22",
-      "source_file": "4 Heredity and Environment.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 School and Family.json",
       "source_folder": "4 Development",
       "difficulty": "easy",
       "question_type": "standard",
@@ -3811,19 +3812,19 @@
       "is_org_psych": false
     },
     {
-      "id": 181,
-      "question": "What does research suggest about the stability of IQ scores over time?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Internal and External Validity.json::15",
+      "question": "Which of the following threats to internal validity involves participants scoring extremely high or low on a pretest and then regressing to more typical scores on a posttest?",
       "options": [
-        "IQ scores are influenced solely by environmental factors.",
-        "IQ scores are irrelevant to long-term academic success.",
-        "IQ scores are highly unstable and fluctuate significantly throughout life.",
-        "IQ scores tend to remain stable after early childhood."
+        "Statistical regression",
+        "Differential selection",
+        "History",
+        "Reactivity"
       ],
-      "correct_answer": "IQ scores tend to remain stable after early childhood.",
-      "explanation": "Research indicates that IQ scores generally show stability after early childhood, suggesting that they are relatively consistent over time. The other options misrepresent the findings regarding IQ stability.",
+      "correct_answer": "Statistical regression",
+      "explanation": "1. \"Statistical regression\" is the correct answer because it refers to the phenomenon where participants selected for a study based on extreme scores on a pretest tend to score closer to the mean on a subsequent posttest. This occurs because many characteristics fluctuate over time, leading to a natural regression toward more typical scores, which can threaten the internal validity of a study by confounding the effects of the independent variable with this natural variability.\n\n2. \n- **Differential selection:** This option is incorrect because differential selection refers to the biased assignment of subjects to treatment groups, resulting in pre-existing differences that affect outcomes, rather than changes in scores over time.\n- **History:** This option is wrong because history involves external events occurring during the study that impact results, rather than the natural fluctuation of scores seen in statistical regression.\n- **Reactivity:** This option is incorrect as reactivity pertains to participants changing their behavior due to awareness of being studied, which does not relate to changes in scores from pretest to posttest as described in statistical regression.",
       "domain": "Domain 7: Research Methods & Statistics",
       "knId": "KN57",
-      "source_file": "7 Internal and External Validity.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Internal and External Validity.json",
       "source_folder": "7 Research and Stats",
       "difficulty": "medium",
       "question_type": "standard",
@@ -4021,19 +4022,19 @@
       "is_org_psych": false
     },
     {
-      "id": 191,
-      "question": "In the context of gender identity theories, what is the sequence of gender role development according to social learning theory?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Before Birth.json::12",
+      "question": "Which statement best describes the effect of exposure to teratogens during the germinal period of prenatal development?",
       "options": [
-        "Reinforcement, observation, imitation",
-        "Imitation, reinforcement, observation",
-        "Observation, imitation, reinforcement",
-        "Observation, reinforcement, imitation"
+        "It commonly causes specific organ malformations.",
+        "Exposure usually has an all-or-none effect, either causing failure to implant or no effect if implantation occurs.",
+        "It causes minor physical abnormalities without affecting cognition.",
+        "The fetus is most vulnerable to teratogen-related brain damage at this stage."
       ],
-      "correct_answer": "Observation, imitation, reinforcement",
-      "explanation": "Social learning theory posits that children learn gender roles through observing others, imitating their behaviors, and receiving reinforcement for gender-appropriate behaviors. The other sequences misrepresent the order of these processes.",
+      "correct_answer": "Exposure usually has an all-or-none effect, either causing failure to implant or no effect if implantation occurs.",
+      "explanation": "1. The correct answer, \"Exposure usually has an all-or-none effect, either causing failure to implant or no effect if implantation occurs,\" accurately describes the germinal period of prenatal development. During this period, which extends from conception to the end of the second week, if a zygote is exposed to teratogens, the exposure can lead to significant damage that prevents implantation. Conversely, if implantation occurs, it indicates that the exposure likely had little or no detrimental effect on the developing zygote.\n\n2. The option \"It commonly causes specific organ malformations\" is incorrect because organ formation primarily occurs during the embryonic period (weeks 3 to 8), not the germinal period. The statement \"It causes minor physical abnormalities without affecting cognition\" is also wrong, as the germinal period's all-or-none effect means that either significant damage occurs (preventing implantation) or no effect is seen; it does not lead to minor abnormalities. Finally, the option \"The fetus is most vulnerable to teratogen-related brain damage at this stage\" is incorrect because the central nervous system is most susceptible to teratogens during the embryonic and fetal periods, not during the germinal period.",
       "domain": "Domain 4: Growth & Lifespan Development",
-      "knId": "KN24",
-      "source_file": "4 Temperament and Personality.json",
+      "knId": "KN21",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Before Birth.json",
       "source_folder": "4 Development",
       "difficulty": "medium",
       "question_type": "standard",
@@ -4189,24 +4190,24 @@
       "is_org_psych": false
     },
     {
-      "id": 199,
-      "question": "George Kelly's Personal Construct Theory is based on the fundamental postulate that people's psychological processes are directed by the ways they anticipate events. Kelly's central metaphor for understanding human cognition was that ordinary people function as:",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Why People Do Things.json::7",
+      "question": "What is the actor-observer bias in attribution theory?",
       "options": [
-        "Computers processing information",
-        "Philosophers seeking meaning",
-        "Artists interpreting reality creatively",
-        "Scientists forming and testing hypotheses"
+        "The tendency to attribute one's own actions to external factors while attributing others' actions to their character.",
+        "The inclination to see one's own behavior as a reflection of personality traits.",
+        "The belief that others' behavior is influenced more by situational factors than by their personality.",
+        "The tendency to overestimate the role of situational factors in one's own behavior."
       ],
-      "correct_answer": "Scientists forming and testing hypotheses",
-      "explanation": "Kelly described ordinary people as scientists who are constantly forming, testing, and revising hypotheses about the world around them. His theory views people as active and future-oriented, using personal constructs (bipolar dimensions of meaning) to anticipate events. 'Philosophers seeking meaning' better describes existential approaches. 'Artists interpreting reality creatively' does not capture Kelly's emphasis on hypothesis testing. 'Computers processing information' describes the information processing approach, not Kelly's constructivist framework.",
+      "correct_answer": "The tendency to attribute one's own actions to external factors while attributing others' actions to their character.",
+      "explanation": "This answer correctly defines the actor-observer bias, which highlights the double standard in attributions. The other options misrepresent the bias or confuse it with other attribution concepts.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
       "knId": "KN14",
-      "source_file": "6 Psychodynamic and Humanistic Therapies.json",
-      "source_folder": "6 Clinical Interventions",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Why People Do Things.json",
+      "source_folder": "3 Social Psychology",
       "difficulty": "medium",
-      "question_type": "difficult",
+      "question_type": "standard",
       "isScored": false,
-      "type": "experimental",
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -4252,19 +4253,19 @@
       "is_org_psych": false
     },
     {
-      "id": 202,
-      "question": "Which supervision model focuses on understanding and integrating the supervisor and supervisee's interpersonal dynamics to improve therapy outcomes?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 CBT.json::1",
+      "question": "In CBT, a client says, \"If I make one mistake during the presentation, everyone will know I am incompetent.\" The therapist responds, \"Let's treat that prediction as a hypothesis and review the evidence for and against it.\" This intervention best illustrates:",
       "options": [
-        "Integrative model",
-        "Behavioral model",
-        "Psychodynamic model",
-        "Developmental model"
+        "Free association",
+        "Collaborative empiricism",
+        "Paradoxical intention",
+        "Unconditional positive regard"
       ],
-      "correct_answer": "Psychodynamic model",
-      "explanation": "1. The **psychodynamic model** is the correct answer because it emphasizes understanding and integrating the interpersonal dynamics between the supervisor and supervisee. This model focuses on the relational aspects of supervision, including transference and countertransference, which can significantly impact therapy outcomes by enhancing the supervisee's self-awareness and therapeutic effectiveness.\n\n2. The **developmental model** is incorrect because it primarily focuses on the growth and progression of the supervisee's skills and competencies over time, rather than the interpersonal dynamics between supervisor and supervisee. The **integrative model** is not the correct choice as it aims to combine various theoretical approaches and techniques in supervision, without specifically emphasizing the understanding of interpersonal dynamics. Lastly, the **behavioral model** is wrong because it concentrates on observable behaviors and the application of behavioral techniques in supervision, rather than exploring the deeper relational aspects that influence therapeutic outcomes.",
+      "correct_answer": "Collaborative empiricism",
+      "explanation": "Collaborative empiricism is the best answer because the therapist and client are examining the client's thought together as a testable hypothesis rather than treating it as fact. Free association is wrong because that is a psychodynamic technique aimed at uncovering unconscious material. Paradoxical intention is wrong because the therapist is not prescribing the feared behavior or symptom. Unconditional positive regard is wrong because, while warmth may be present, the key CBT mechanism here is joint evidence-testing.",
       "domain": "Domain 6: Treatment & Intervention",
-      "knId": "KN52",
-      "source_file": "6 Prevention and Consultation.json",
+      "knId": "KN43",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 CBT.json",
       "source_folder": "6 Clinical Interventions",
       "difficulty": "medium",
       "question_type": "standard",
@@ -4336,20 +4337,20 @@
       "is_org_psych": false
     },
     {
-      "id": 206,
-      "question": "Which explanation for forgetting attributes memory loss to interference between similar pieces of information?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/2 Work Motivation.json::6",
+      "question": "An employee discovers that a coworker with the same job title and similar qualifications earns significantly more per hour. According to Adams' equity theory, the employee experiencing underpayment inequity is MOST likely to:",
       "options": [
-        "Interference theory",
-        "Latent learning theory",
-        "Encoding specificity hypothesis",
-        "Trace decay theory"
+        "Increase both the quality and quantity of their work output",
+        "Decrease effort or seek higher compensation to restore the input-outcome ratio",
+        "Experience increased motivation due to competitive drive",
+        "Attribute the pay difference to their own superior qualifications"
       ],
-      "correct_answer": "Interference theory",
-      "explanation": "1. **Interference theory** is the correct answer because it specifically attributes memory loss to the disruption caused by previously learned or more recently acquired information that is similar to the target memory. This theory distinguishes between two types of interference: proactive interference, where old information interferes with new learning, and retroactive interference, where new information disrupts the recall of old memories.\n\n2. **Trace decay theory** is incorrect because it posits that memories fade over time due to physical changes in the brain rather than interference from other information. **Encoding specificity hypothesis** is also incorrect as it suggests that memory retrieval is optimized when the conditions during encoding match those during recall, focusing on the context rather than interference. Lastly, **latent learning theory** is wrong because it explains the acquisition of knowledge that occurs without reinforcement, emphasizing cognitive maps rather than the forgetting process related to interference.",
+      "correct_answer": "Decrease effort or seek higher compensation to restore the input-outcome ratio",
+      "explanation": "Adams' equity theory predicts that underpayment inequity—when a worker's input/outcome ratio is worse than a comparison other's—motivates the worker to restore equity by decreasing inputs (effort, quality, quantity) or seeking better outcomes (raises, promotions). Increasing work output (A) is the predicted response to overpayment inequity, not underpayment. Increased motivation from competition (C) is not an equity theory prediction. Attributing the difference to superior qualifications (D) would reflect a perception of equity, not inequity, and contradicts the scenario premise.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
       "knId": "KN8",
-      "source_file": "2 Memory.json",
-      "source_folder": "2 Learning and Memory",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/2 Work Motivation.json",
+      "source_folder": "2 3 5 6 I-O Psychology",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
@@ -4399,24 +4400,24 @@
       "is_org_psych": false
     },
     {
-      "id": 209,
-      "question": "Which form of racism is characterized by subtle, often unconscious negative feelings toward minority groups while maintaining a non-prejudiced self-image and a belief in equality?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Influence.json::15",
+      "question": "In a corporate setting, what psychological mechanism might explain why employees follow unethical directives from their superiors even when they believe such actions are wrong?",
       "options": [
-        "Symbolic racism",
-        "Aversive racism",
-        "Ambivalent racism",
-        "Overt racism"
+        "A. Employees are motivated by a desire for promotion",
+        "B. Employees enter an agentic state, viewing themselves as instruments of authority",
+        "C. Employees conform to the group's unethical norms",
+        "D. Employees experience cognitive dissonance that leads to compliance"
       ],
-      "correct_answer": "Aversive racism",
-      "explanation": "1. **Aversive racism** is the correct answer because it is characterized by individuals who hold a non-prejudiced self-image and a belief in equality while simultaneously harboring subtle, often unconscious negative feelings about minority groups. This form of racism leads to avoidance of interactions with minority members unless the individual can justify their discrimination on a basis other than race, reflecting an internal conflict between egalitarian beliefs and negative feelings.\n\n2. **Symbolic racism** is incorrect because it involves a belief in egalitarianism paired with the perception that minority groups violate traditional values, leading to opposition against policies aimed at promoting equality, rather than subtle negative feelings. **Ambivalent racism** is not the correct answer because it describes individuals who possess both positive and negative attitudes toward minority groups, resulting in emotional tension, rather than solely unconscious negative feelings. **Overt racism** is wrong as it refers to openly hostile and aggressive attitudes toward minority groups, which is a direct contrast to the subtlety and ambiguity of aversive racism.",
+      "correct_answer": "B. Employees enter an agentic state, viewing themselves as instruments of authority",
+      "explanation": "1. The correct answer, \"B. Employees enter an agentic state, viewing themselves as instruments of authority,\" is supported by Milgram's research, which indicates that individuals may obey authority figures because they perceive themselves as agents executing the wishes of that authority. In this state, employees may prioritize the directives of their superiors over their personal moral judgments, leading them to comply with unethical orders.\n\n2. \n- A. Employees are motivated by a desire for promotion: While the desire for promotion may influence behavior, it does not specifically explain the psychological mechanism of compliance with unethical directives; the agentic state is more directly related to obedience to authority.\n- C. Employees conform to the group's unethical norms: Although group norms can influence behavior, the agentic state specifically addresses the role of authority in directing actions, rather than peer conformity.\n- D. Employees experience cognitive dissonance that leads to compliance: Cognitive dissonance refers to the discomfort arising from conflicting beliefs or behaviors; however, the agentic state focuses on obedience to authority rather than the internal conflict that might lead to compliance.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
-      "knId": "KN20",
-      "source_file": "3 Helping and Hurting.json",
+      "knId": "KN16",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Influence.json",
       "source_folder": "3 Social Psychology",
       "difficulty": "hard",
-      "question_type": "difficult",
+      "question_type": "standard",
       "isScored": false,
-      "type": "experimental",
+      "type": "standard",
       "is_org_psych": false
     },
     {

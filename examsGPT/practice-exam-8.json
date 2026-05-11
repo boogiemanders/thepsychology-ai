@@ -101,23 +101,24 @@
       "is_org_psych": false
     },
     {
-      "id": 6,
-      "question": "According to Gender Schema Theory, how do individuals develop their understanding of gender roles?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Helping and Hurting.json::2",
+      "question": "Following a contentious community dispute over resource allocation, a mediator proposes a resolution in which each party receives resources proportional to their contributions to the community project. This resolution approach is MOST consistent with which type of justice?",
       "options": [
-        "Through biological predispositions",
-        "By observing and imitating others",
-        "Through direct reinforcement of gender-appropriate behaviors",
-        "By internalizing societal norms and expectations"
+        "Procedural justice",
+        "Distributive justice based on equity",
+        "Restorative justice",
+        "Retributive justice"
       ],
-      "correct_answer": "By internalizing societal norms and expectations",
-      "explanation": "Gender Schema Theory posits that individuals develop their understanding of gender roles by internalizing societal norms and expectations, which shape their perceptions and behaviors regarding gender. While biological predispositions, observation, and reinforcement play roles, the theory emphasizes the cognitive framework formed by societal influences. Therefore, internalizing societal norms and expectations is the correct answer.",
+      "correct_answer": "Distributive justice based on equity",
+      "explanation": "Distributive justice concerns the fairness of outcome allocation. The equity principle within distributive justice holds that resources should be distributed proportional to contributions—those who contribute more receive more. Option A (procedural justice) concerns fairness of the process rather than outcomes. Option C (restorative justice) focuses on repairing harm done to victims. Option D (retributive justice) focuses on punishment proportional to wrongdoing. The scenario specifically describes outcome-based allocation proportional to contributions, which is the hallmark of equity-based distributive justice.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
       "knId": "KN15",
-      "source_file": "3-helping-and-hurting.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Helping and Hurting.json",
       "source_folder": "3 Social Psychology",
       "difficulty": "hard",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -181,23 +182,24 @@
       "is_org_psych": false
     },
     {
-      "id": 10,
-      "question": "A cross-cultural psychologist presents findings showing that speakers of a language lacking grammatical distinction between past and future events perceive time as more cyclical and show different patterns of future-oriented planning than speakers of languages with distinct tense markers. These findings provide the strongest support for which theoretical position regarding the relationship between language and cognition?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Language Development.json::9",
+      "question": "Research on the critical period for language acquisition suggests that:",
       "options": [
-        "Nativist theory, because universal grammatical structures reflect innate cognitive architecture shared across all humans",
-        "Social interactionist theory, because cultural environments mediate both language acquisition and behavioral outcomes",
-        "The linguistic relativity hypothesis, because the structure of one's language shapes how one conceptualizes and reasons about the world",
-        "Learning theory, because reinforcement histories within different cultural contexts differentially shape time-related behaviors"
+        "Exposure to language after adolescence has no effect on vocabulary acquisition",
+        "Early exposure to language is crucial for full proficiency in grammar and syntax",
+        "Semantics and vocabulary are equally impaired by late language exposure",
+        "Sign language and spoken language do not follow similar developmental trajectories"
       ],
-      "correct_answer": "The linguistic relativity hypothesis, because the structure of one's language shapes how one conceptualizes and reasons about the world",
-      "explanation": "The linguistic relativity hypothesis (also called the Sapir-Whorf hypothesis) proposes that the language one speaks influences how one perceives and thinks about reality. The finding that tense-marking differences across languages correlate with differences in temporal cognition and future-oriented behavior is precisely the type of cross-linguistic evidence this hypothesis predicts. Nativist theory (Chomsky's LAD) argues for universal innate grammar underlying all languages, making it predict similarities rather than cognitive differences across language groups. Social interactionist theory focuses on how social environments facilitate language acquisition, not how acquired language shapes downstream cognition. Learning theory attributes behavioral variation to differential reinforcement schedules rather than to structural properties of language itself.",
+      "correct_answer": "Early exposure to language is crucial for full proficiency in grammar and syntax",
+      "explanation": "1. The statement \"Early exposure to language is crucial for full proficiency in grammar and syntax\" is correct because research indicates a strong negative relationship between the age of exposure to language and proficiency in grammar and syntax. Studies have shown that full proficiency in these aspects of language requires early exposure, particularly during critical periods such as the first year of life (Friedmann & Rusou, 2015).\n\n2. The incorrect option \"Exposure to language after adolescence has no effect on vocabulary acquisition\" is wrong because while late exposure may affect proficiency, it does not imply that vocabulary acquisition is entirely unaffected; individuals can still learn vocabulary at older ages. The statement \"Semantics and vocabulary are equally impaired by late language exposure\" is incorrect because research suggests that semantics and vocabulary size are less affected by age of exposure compared to grammar and syntax. Finally, the option \"Sign language and spoken language do not follow similar developmental trajectories\" is inaccurate as evidence shows that both spoken and sign language exhibit parallel developmental trajectories when exposure begins at birth (Mayberry, 2010).",
       "domain": "Domain 4: Growth & Lifespan Development",
       "knId": "KN21",
-      "source_file": "4-language-development.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Language Development.json",
       "source_folder": "4 Development",
       "difficulty": "hard",
       "question_type": "standard",
       "isScored": false,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -221,23 +223,24 @@
       "is_org_psych": false
     },
     {
-      "id": 12,
-      "question": "Which of the following factors is most likely to contribute to negative attitudes towards homosexual individuals?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Connection.json::8",
+      "question": "According to Schachter's (1959) research on affiliation, highly anxious individuals tend to prefer waiting with:",
       "options": [
-        "A) Increased exposure to LGBTQ+ communities.",
-        "B) Cultural norms and values that stigmatize non-heteronormative identities.",
-        "C) Personal experiences with LGBTQ+ individuals.",
-        "D) Education about sexual orientation and diversity."
+        "Other highly anxious participants rather than non-participants",
+        "Non-participants rather than other highly anxious participants",
+        "Alone rather than with any company",
+        "Any company regardless of their anxiety level"
       ],
-      "correct_answer": "B) Cultural norms and values that stigmatize non-heteronormative identities.",
-      "explanation": "Option B is correct as cultural norms and values play a significant role in shaping negative attitudes towards homosexual individuals. Option A is incorrect because increased exposure typically reduces negative attitudes. Option C may vary but does not universally contribute to negative attitudes. Option D is also incorrect as education generally promotes understanding and acceptance.",
+      "correct_answer": "Other highly anxious participants rather than non-participants",
+      "explanation": "1. The correct answer, \"Other highly anxious participants rather than non-participants,\" aligns with Schachter's (1959) findings that highly anxious individuals prefer the company of others who share their anxiety. His research demonstrated that when given a choice, anxious subjects chose to wait with other anxious participants, as they seek out \"miserable company\" to alleviate their distress through social comparison and shared experiences, rather than waiting alone or with those who are not experiencing similar feelings.\n\n2. The option \"Non-participants rather than other highly anxious participants\" is incorrect because Schachter's study specifically showed that anxious individuals do not prefer the company of non-participants, indicating they seek out those who are similarly anxious. The option \"Alone rather than with any company\" is wrong because it contradicts the findings that anxious individuals prefer to wait with others rather than being alone. Lastly, the option \"Any company regardless of their anxiety level\" is incorrect as Schachter concluded that anxious individuals specifically prefer the company of others who are also experiencing anxiety, rather than any random company.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
       "knId": "KN15",
-      "source_file": "3-helping-and-hurting.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Connection.json",
       "source_folder": "3 Social Psychology",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -401,23 +404,24 @@
       "is_org_psych": false
     },
     {
-      "id": 21,
-      "question": "A school psychologist is consulting with a racially divided middle school where two student groups have developed sustained intergroup hostility. A sensitivity training workshop produced no lasting change. The psychologist redesigns an academic unit so that each student in a multiethnic group is assigned a unique segment of the material; all group members must learn from and teach each other for the group to complete the project successfully. Hostility between the groups decreases significantly. The operative mechanism in this intervention is BEST described as:",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Persuasion.json::13",
+      "question": "What does the term 'scarcity trap' refer to in behavioral economics?",
       "options": [
-        "The contact hypothesis, because structured positive intergroup exposure reduces prejudice over time",
-        "Superordinate goals, because achieving the shared objective requires cooperative interdependence across group boundaries",
-        "The jigsaw classroom technique, which operates through a different mechanism than superordinate goal strategies",
-        "The minimal group paradigm, which reframes group boundaries by creating new shared category memberships"
+        "A situation where abundance leads to poor decision-making due to complacency",
+        "A mental state where preoccupation with unfulfilled needs leads to self-defeating behaviors perpetuating scarcity",
+        "A condition where sudden availability of resources increases risky behaviors",
+        "A form of cognitive overload caused by too many options"
       ],
-      "correct_answer": "Superordinate goals, because achieving the shared objective requires cooperative interdependence across group boundaries",
-      "explanation": "Superordinate goals are objectives that can only be achieved through active cooperation between previously hostile groups, as demonstrated in Sherif's Robbers Cave study. The lesson explicitly identifies the jigsaw classroom as an educational application of superordinate goal principles. The correct answer identifies the underlying mechanism. Option A (contact hypothesis) is insufficient — mere contact without structured interdependence does not reliably reduce hostility. Option C is a trap: the jigsaw classroom IS an application of superordinate goals, not a distinct mechanism; describing it as operating through a 'different mechanism' is factually incorrect. The minimal group paradigm is a laboratory research paradigm demonstrating how easily intergroup bias develops from arbitrary categorization — it is not an intervention strategy and does not involve cooperative interdependence.",
+      "correct_answer": "A mental state where preoccupation with unfulfilled needs leads to self-defeating behaviors perpetuating scarcity",
+      "explanation": "1. The correct answer, \"A mental state where preoccupation with unfulfilled needs leads to self-defeating behaviors perpetuating scarcity,\" accurately reflects the concept of a \"scarcity trap\" as described by Mullainathan and Shafir (2014). In this state, individuals become so focused on their unmet needs that they engage in behaviors that ultimately worsen their situation, such as postponing necessary repairs, which can lead to additional costs and further scarcity.\n\n2. The first incorrect option, \"A situation where abundance leads to poor decision-making due to complacency,\" is wrong because it misrepresents the concept; a scarcity trap specifically involves a lack of resources rather than abundance. The second incorrect option, \"A condition where sudden availability of resources increases risky behaviors,\" is incorrect because it suggests that the presence of resources leads to risk-taking, while a scarcity trap focuses on the negative consequences of lacking resources. Lastly, the option \"A form of cognitive overload caused by too many options,\" is incorrect because it conflates scarcity with the abundance of choices, whereas a scarcity trap is about the cognitive limitations imposed by unmet needs, not by having too many options.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
       "knId": "KN16",
-      "source_file": "3-helping-and-hurting.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Persuasion.json",
       "source_folder": "3 Social Psychology",
       "difficulty": "hard",
       "question_type": "standard",
       "isScored": false,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -901,23 +905,24 @@
       "is_org_psych": false
     },
     {
-      "id": 46,
-      "question": "A 14-month-old girl has just learned the word 'dog' in reference to the family's German Shepherd. While at a park, she points to a cat and says 'dog.' She also calls a horse 'dog' at the petting zoo. A developmental psychologist observing these interactions would identify this language behavior as an example of:",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Language Development.json::17",
+      "question": "How does language brokering by children in immigrant families impact their psychosocial development?",
       "options": [
-        "Underextension, because the child is applying the label only to animals that perceptually resemble the original referent",
-        "Overextension, because the child is applying a learned word label to new but perceptually or functionally similar referents beyond its correct categorical boundary",
-        "Holophrastic speech, because the child is using a single word to convey a rich communicative intent about the animals",
-        "Overregularization, because the child is applying a recently acquired linguistic rule to contexts where it does not apply"
+        "It consistently leads to academic difficulties and decreased self-confidence",
+        "It is solely associated with negative effects such as anxiety and embarrassment",
+        "It can have both positive effects like increased self-efficacy and negative effects like family role reversals",
+        "It always enhances interpersonal skills without any psychological drawbacks"
       ],
-      "correct_answer": "Overextension, because the child is applying a learned word label to new but perceptually or functionally similar referents beyond its correct categorical boundary",
-      "explanation": "Overextension occurs when a child applies a word to a broader range of referents than is conventionally correct, typically on the basis of perceptual similarity (shape, movement, size) or functional similarity. Calling a cat and a horse 'dog' is a classic example. This is an expected and normal feature of early word learning, reflecting the child's attempt to generalize limited vocabulary. Underextension is the opposite error—restricting a word to too narrow a category. Holophrastic speech refers to using a single word to express a full proposition, which is a different phenomenon entirely. Overregularization refers to applying morphological grammar rules (e.g., adding '-ed' for past tense) in overly broad ways (e.g., 'goed'), not to applying word labels to new referents.",
+      "correct_answer": "It can have both positive effects like increased self-efficacy and negative effects like family role reversals",
+      "explanation": "1. The correct answer, \"It can have both positive effects like increased self-efficacy and negative effects like family role reversals,\" accurately reflects the mixed outcomes associated with language brokering in immigrant families. Research indicates that while children who act as language brokers may develop strong interpersonal skills and high self-confidence, they can also experience negative consequences such as elevated anxiety and role reversals that lead to parental dependency and increased conflict within the family.\n\n2. The option \"It consistently leads to academic difficulties and decreased self-confidence\" is incorrect because the research highlights both positive outcomes, like increased self-efficacy, and does not suggest a consistent link to academic difficulties. The statement \"It is solely associated with negative effects such as anxiety and embarrassment\" is wrong as it overlooks the positive effects, such as strong interpersonal skills and self-confidence. Lastly, the claim \"It always enhances interpersonal skills without any psychological drawbacks\" is misleading because it fails to acknowledge the potential negative impacts, including anxiety and family role reversals, that can arise from language brokering experiences.",
       "domain": "Domain 4: Growth & Lifespan Development",
       "knId": "KN21",
-      "source_file": "4-language-development.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Language Development.json",
       "source_folder": "4 Development",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": false,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -1241,23 +1246,24 @@
       "is_org_psych": false
     },
     {
-      "id": 63,
-      "question": "Which of the following strategies is most effective for optimizing external validity in research?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Interpreting Scores.json::4",
+      "question": "A child obtains an IQ score of 85 on a standardized intelligence test with a mean of 100 and standard deviation of 15. Assuming a normal distribution, which of the following is the BEST estimate of this child's percentile rank?",
       "options": [
-        "Using a diverse sample",
-        "Controlling for extraneous variables",
-        "Increasing sample size",
-        "Using complex statistical models"
+        "2nd percentile",
+        "10th percentile",
+        "16th percentile",
+        "30th percentile"
       ],
-      "correct_answer": "Using a diverse sample",
-      "explanation": "The correct answer is 'Using a diverse sample' because a diverse sample enhances the generalizability of the findings to a broader population, which is the essence of external validity. While controlling for extraneous variables and increasing sample size are important, they do not directly address the generalizability of results across different populations.",
-      "domain": "Domain 7: Research Methods & Statistics",
+      "correct_answer": "16th percentile",
+      "explanation": "An IQ score of 85 falls exactly 1 standard deviation below the mean (100 - 15 = 85). According to the standard score equivalents table, a score at -1 SD corresponds to the 16th percentile rank. The 2nd percentile corresponds to -2 SD (IQ of 70). The 10th and 30th percentiles do not correspond to any whole standard deviation unit. The lesson's critical table explicitly shows: -1 SD = z-score of -1.0 = T-score of 40 = IQ of 85 = percentile rank of 16.",
+      "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
       "knId": "KN57",
-      "source_file": "7-internal-external-validity.json",
-      "source_folder": "7 Research and Stats",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Interpreting Scores.json",
+      "source_folder": "5 Test Construction",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -1661,23 +1667,24 @@
       "is_org_psych": false
     },
     {
-      "id": 84,
-      "question": "Which of the following best illustrates the interaction of genes and environment in human development?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 School and Family.json::25",
+      "question": "Which of the following negative communication patterns, identified by Gottman, is most detrimental to long-term relationship stability?",
       "options": [
-        "A child with a genetic predisposition for high intelligence who grows up in a stimulating environment",
-        "A child with no genetic predisposition for athleticism who becomes a professional athlete",
-        "A child raised in an impoverished environment who shows no signs of cognitive development",
-        "A child with a genetic disorder who thrives in a supportive family"
+        "Criticism",
+        "Defensiveness",
+        "Contempt",
+        "Stonewalling"
       ],
-      "correct_answer": "A child with a genetic predisposition for high intelligence who grows up in a stimulating environment",
-      "explanation": "This option illustrates how genetic predispositions can be enhanced or diminished by environmental factors, demonstrating the interaction between nature and nurture. The other options either misrepresent the interaction or suggest that environment alone determines outcomes without considering genetic influences.",
+      "correct_answer": "Contempt",
+      "explanation": "1. \"Contempt\" is the correct answer because, according to Gottman and Levenson's research, it is identified as the single best predictor of divorce. Contempt involves a sense of superiority and disdain towards one's partner, which undermines respect and affection, creating a toxic environment in the relationship that can lead to long-term instability.\n\n2. The incorrect options are:\n\n- **Criticism**: While criticism focuses on blaming or attacking a partner's character, it does not carry the same level of emotional devastation as contempt, which erodes the foundation of respect in a relationship.\n\n- **Defensiveness**: This behavior involves protecting oneself from perceived attacks, but it does not inherently convey the same level of disdain and negativity that contempt does, making it less detrimental to long-term stability.\n\n- **Stonewalling**: Although stonewalling, or withdrawing from conversation, can create emotional distance, it is less destructive than contempt, which actively undermines the partner's value and the relationship's emotional connection.",
       "domain": "Domain 4: Growth & Lifespan Development",
       "knId": "KN22",
-      "source_file": "4-heredity-and-environment.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 School and Family.json",
       "source_folder": "4 Development",
       "difficulty": "hard",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -1701,23 +1708,24 @@
       "is_org_psych": false
     },
     {
-      "id": 86,
-      "question": "What is a psychologist's responsibility when they discover that a public statement they made was misleading?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 9 and 10.json::33",
+      "question": "During a consultation, a psychologist discusses a client's treatment history based on records from another provider. What is the best practice for the psychologist in this scenario?",
       "options": [
-        "They should ignore it if no one has complained.",
-        "They must correct the misrepresentation as soon as possible.",
-        "They can wait until they receive a formal complaint before addressing it.",
-        "They should deny any responsibility for the misleading statement."
+        "Present the treatment history as if it were their own assessment",
+        "Mention the other provider's involvement and any potential biases",
+        "Avoid discussing the treatment history to prevent misinformation",
+        "Only refer to the treatment history if the client agrees"
       ],
-      "correct_answer": "They must correct the misrepresentation as soon as possible.",
-      "explanation": "The correct answer reflects the ethical obligation to correct any misleading public statements to maintain integrity and trust. Ignoring it or waiting for complaints does not align with ethical standards.",
+      "correct_answer": "Mention the other provider's involvement and any potential biases",
+      "explanation": "1. The correct answer, \"Mention the other provider's involvement and any potential biases,\" aligns with Standard 9.01(b) of the APA Ethics Code, which requires psychologists to communicate any limitations of their conclusions when relying on information from other professionals. By acknowledging the other provider's involvement, the psychologist ensures transparency about the source of the treatment history and any potential biases that may arise from that perspective, thereby maintaining ethical standards in assessment and interpretation.\n\n2. The option \"Present the treatment history as if it were their own assessment\" is incorrect because it violates the ethical obligation to accurately represent the source of information, potentially misleading others about the psychologist's role in the assessment. \"Avoid discussing the treatment history to prevent misinformation\" is also wrong, as it disregards the importance of transparency and the ethical responsibility to provide a complete account of the client's treatment history, which can inform current assessments. Lastly, \"Only refer to the treatment history if the client agrees\" is inappropriate because it implies that the psychologist can withhold relevant information from consultations, which undermines the ethical obligation to share pertinent data that could affect treatment decisions.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
       "knId": "KN61",
-      "source_file": "8-standards-5-6.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 9 and 10.json",
       "source_folder": "8 Ethics",
       "difficulty": "hard",
       "question_type": "standard",
       "isScored": false,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -1821,23 +1829,24 @@
       "is_org_psych": false
     },
     {
-      "id": 92,
-      "question": "How should psychologists determine their fees for therapy services?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 1 and 2.json::26",
+      "question": "What constitutes an ethical violation when cooperating with an ethics investigation?",
       "options": [
-        "Based on what competitors charge.",
-        "By considering their own financial needs.",
-        "In accordance with the APA guidelines and community standards.",
-        "By charging the highest possible rate."
+        "Providing client information with a signed client release when requested by an ethics committee",
+        "Refusing to cooperate with the ethics committee's investigation without a valid legal or ethical justification",
+        "Reporting suspected child abuse to appropriate authorities despite confidentiality constraints",
+        "Consulting with a supervisor before responding to the ethics committee's request"
       ],
-      "correct_answer": "In accordance with the APA guidelines and community standards.",
-      "explanation": "Psychologists should establish their fees based on ethical guidelines and community standards to ensure fairness and accessibility. Charging based on competitors or personal financial needs can lead to unethical practices.",
+      "correct_answer": "Refusing to cooperate with the ethics committee's investigation without a valid legal or ethical justification",
+      "explanation": "1. \"Refusing to cooperate with the ethics committee's investigation without a valid legal or ethical justification\" is the correct answer because Standard 1.06 of the APA Ethics Code explicitly states that psychologists must cooperate with investigations and proceedings of the APA and affiliated associations. Failing to do so constitutes an ethical violation unless there are valid legal or ethical reasons for the refusal.\n\n2. \n- **Providing client information with a signed client release when requested by an ethics committee** is incorrect because it aligns with Standard 1.06, which allows psychologists to share information if proper authorization is obtained, thereby fulfilling their obligation to cooperate.\n- **Reporting suspected child abuse to appropriate authorities despite confidentiality constraints** is incorrect because it reflects adherence to legal and ethical responsibilities, as mandated by laws that require reporting such abuse, which can supersede confidentiality obligations.\n- **Consulting with a supervisor before responding to the ethics committee's request** is incorrect because seeking consultation demonstrates due diligence and professionalism, ensuring that the psychologist's response is informed and appropriate, in line with ethical standards.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
       "knId": "KN61",
-      "source_file": "8-standards-5-6.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 1 and 2.json",
       "source_folder": "8 Ethics",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": false,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -1901,23 +1910,24 @@
       "is_org_psych": false
     },
     {
-      "id": 96,
-      "question": "In developmental psychopathology, what does the term multifinality refer to?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 School and Family.json::8",
+      "question": "What is the primary mechanism by which the Rosenthal effect influences student performance?",
       "options": [
-        "Different outcomes from the same starting point",
-        "The same outcome from different starting points",
-        "The ability to adapt to various environments",
-        "The process of developing multiple skills simultaneously"
+        "Increased parental involvement",
+        "Teacher expectations",
+        "Peer pressure",
+        "Standardized testing"
       ],
-      "correct_answer": "Different outcomes from the same starting point",
-      "explanation": "Multifinality refers to the concept that individuals with the same initial conditions can develop different outcomes, particularly in the context of psychological development. The other options misrepresent the concept or focus on unrelated ideas.",
+      "correct_answer": "Teacher expectations",
+      "explanation": "The Rosenthal effect, also known as the Pygmalion effect, primarily influences student performance through teacher expectations. When teachers have higher expectations for certain students, those students tend to perform better. The other options do not directly relate to the mechanism of the Rosenthal effect.",
       "domain": "Domain 4: Growth & Lifespan Development",
       "knId": "KN22",
-      "source_file": "4-heredity-and-environment.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 School and Family.json",
       "source_folder": "4 Development",
       "difficulty": "hard",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -2041,23 +2051,24 @@
       "is_org_psych": false
     },
     {
-      "id": 103,
-      "question": "What is a significant limitation of the WISC-IV when assessing gifted children?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 MMPI.json::6",
+      "question": "What is a common challenge in assessing individuals with anorexia nervosa?",
       "options": [
-        "It does not measure verbal skills",
-        "It may underestimate abilities in nonverbal areas",
-        "It lacks cultural fairness",
-        "It is not suitable for children under age 6"
+        "Lack of available treatment options",
+        "Denial of the severity of their eating disorder",
+        "High rates of comorbid disorders",
+        "Difficulty in establishing rapport with clients"
       ],
-      "correct_answer": "It may underestimate abilities in nonverbal areas",
-      "explanation": "The WISC-IV has been criticized for potentially underestimating the abilities of gifted children, particularly in nonverbal areas, due to its structure and scoring. The other options do not accurately reflect limitations of the WISC-IV.",
+      "correct_answer": "Denial of the severity of their eating disorder",
+      "explanation": "Individuals with anorexia nervosa often exhibit denial regarding the severity of their condition, which complicates assessment and treatment. The other options may be relevant but do not capture the primary challenge in assessment.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
       "knId": "KN32",
-      "source_file": "5-iq-tests.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 MMPI.json",
       "source_folder": "5 Assessment",
       "difficulty": "hard",
       "question_type": "standard",
       "isScored": false,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -2321,23 +2332,24 @@
       "is_org_psych": false
     },
     {
-      "id": 117,
-      "question": "Which principle of item response theory emphasizes the relationship between item characteristics and respondent abilities?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Items and Reliability.json::17",
+      "question": "Which method corrects for the underestimation of reliability that occurs when splitting a test in half for the calculation of split-half reliability?",
       "options": [
-        "Item difficulty",
-        "Item discrimination",
-        "Guessing parameter",
-        "Test reliability"
+        "Spearman-Brown prophecy formula",
+        "Kuder-Richardson 20 formula",
+        "Cronbach’s alpha",
+        "Cohen’s kappa coefficient"
       ],
-      "correct_answer": "Item discrimination",
-      "explanation": "The correct answer is 'Item discrimination' as it refers to how well an item differentiates between respondents of varying abilities. The other options do not capture this specific relationship as accurately.",
+      "correct_answer": "Spearman-Brown prophecy formula",
+      "explanation": "1. The **Spearman-Brown prophecy formula** is the correct answer because it is specifically designed to correct for the underestimation of reliability that occurs when a test is split in half for the calculation of split-half reliability. When a test is divided into two halves, each half is shorter than the original test, which typically leads to a lower reliability coefficient; the Spearman-Brown formula adjusts this coefficient to reflect the reliability of the full-length test.\n\n2. The **Kuder-Richardson 20 formula** is incorrect because it is used to evaluate internal consistency reliability for dichotomously scored items, rather than correcting split-half reliability underestimations. **Cronbach’s alpha** is also incorrect because, while it assesses internal consistency reliability, it does not specifically address the issue of underestimating reliability from split-half testing. Lastly, **Cohen’s kappa coefficient** is incorrect because it measures inter-rater reliability for nominal scales and does not relate to the correction of split-half reliability coefficients.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
       "knId": "KN29",
-      "source_file": "5-cognitive-tests.json",
-      "source_folder": "5 Assessment",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Items and Reliability.json",
+      "source_folder": "5 Test Construction",
       "difficulty": "hard",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -2381,23 +2393,24 @@
       "is_org_psych": false
     },
     {
-      "id": 120,
-      "question": "A woman collapses in the lobby of a busy urban office building during the lunch hour. Eighteen people are present, but over two minutes pass before anyone calls emergency services. When interviewed afterward, multiple bystanders reported, 'I figured someone with more medical knowledge must have already called.' According to Latané and Darley's five-step model of bystander intervention, the MOST direct explanation for the delayed response is:",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Connection.json::11",
+      "question": "Research on the pratfall effect shows that a competent person who makes a blunder is perceived as:",
       "options": [
-        "Pluralistic ignorance caused bystanders to collectively misinterpret the event as non-urgent based on others' apparent calm",
-        "Stimulus overload prevented bystanders from initially noticing that a medical emergency had occurred",
-        "Diffusion of responsibility decreased each individual's felt obligation to act when others were present",
-        "Evaluation apprehension caused bystanders to fear appearing incompetent or alarmist if they intervened"
+        "More attractive because the blunder humanizes them",
+        "Less attractive because they lose credibility",
+        "More attractive only if the blunder is minor",
+        "Less attractive regardless of competence"
       ],
-      "correct_answer": "Diffusion of responsibility decreased each individual's felt obligation to act when others were present",
-      "explanation": "Diffusion of responsibility is the mechanism most directly identified by the bystanders' own accounts — each person assumed someone else had already acted. In Latané and Darley's model, this represents a failure at Step 3 (taking personal responsibility). The bystanders' statements ('someone else must have already called') are the textbook expression of this mechanism. Pluralistic ignorance (Step 2) involves misreading the situation as non-serious based on observing others' apparent calm — it would apply if bystanders thought the person was merely sleeping. Stimulus overload (Step 1) involves failing to notice the event entirely, which is not the case here since all bystanders were aware of the collapse. Evaluation apprehension (Step 5) involves fear of embarrassment about intervening incorrectly, which was not reported by these bystanders.",
+      "correct_answer": "More attractive because the blunder humanizes them",
+      "explanation": "1. The correct answer, \"More attractive because the blunder humanizes them,\" is supported by the research of Aronson, Willerman, and Floyd (1966), which indicates that when a competent person commits a blunder, it increases their attractiveness. This occurs because the blunder makes them appear more relatable and human, which enhances their likability rather than diminishing their perceived competence.\n\n2. \n- **Less attractive because they lose credibility:** This option is incorrect because the pratfall effect specifically shows that a blunder can enhance attractiveness rather than detract from it, particularly for competent individuals.\n- **More attractive only if the blunder is minor:** This option is misleading; the research does not specify that the blunder must be minor for the effect to occur, as the key factor is the humanizing aspect of the blunder itself.\n- **Less attractive regardless of competence:** This is incorrect because the pratfall effect highlights that competent individuals actually become more attractive after making a blunder, contradicting the idea that their attractiveness would decrease.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
       "knId": "KN15",
-      "source_file": "3-helping-and-hurting.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Connection.json",
       "source_folder": "3 Social Psychology",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": false,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -2461,23 +2474,24 @@
       "is_org_psych": false
     },
     {
-      "id": 124,
-      "question": "In a repeated measures ANOVA, what is primarily being analyzed?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Research Designs.json::13",
+      "question": "Which of the following methods is most effective in reducing experimenter bias in research design?",
       "options": [
-        "Differences between independent groups",
-        "Differences within the same group over time",
-        "Differences in categorical variables",
-        "Differences in variances"
+        "Using a single-blind design where participants are unaware of the treatment conditions.",
+        "Employing random assignment to groups.",
+        "Conducting a double-blind study where both participants and researchers are unaware of the treatment conditions.",
+        "Using a control group that receives no treatment."
       ],
-      "correct_answer": "Differences within the same group over time",
-      "explanation": "The correct answer is 'Differences within the same group over time' because repeated measures ANOVA is specifically designed to analyze data where the same subjects are measured multiple times under different conditions. It contrasts with other tests that compare independent groups or categorical variables.",
+      "correct_answer": "Conducting a double-blind study where both participants and researchers are unaware of the treatment conditions.",
+      "explanation": "The correct answer is the most effective method for minimizing experimenter bias, as it prevents both participants and researchers from influencing the results. The other options may reduce bias but do not eliminate it as effectively as a double-blind design.",
       "domain": "Domain 7: Research Methods & Statistics",
       "knId": "KN54",
-      "source_file": "7 Stats Tests.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Research Designs.json",
       "source_folder": "7 Research and Stats",
       "difficulty": "hard",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -2661,23 +2675,24 @@
       "is_org_psych": false
     },
     {
-      "id": 134,
-      "question": "Which stage of White racial identity development involves a recognition of the impact of racism and a commitment to social justice?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Connection.json::15",
+      "question": "The double-shot hypothesis explains gender differences in jealousy by proposing that:",
       "options": [
-        "A) Pre-Encounter",
-        "B) Encounter",
-        "C) Immersion-Emersion",
-        "D) Internalization"
+        "Men and women differ in beliefs about whether sexual and emotional infidelity co-occur",
+        "Men are more jealous about any form of infidelity",
+        "Women are indifferent to sexual infidelity but highly distressed by emotional infidelity",
+        "Men and women experience equal distress over emotional infidelity"
       ],
-      "correct_answer": "C) Immersion-Emersion",
-      "explanation": "Option C is correct as the Immersion-Emersion stage is characterized by a deep engagement with issues of race and a commitment to social justice. Option A, Pre-Encounter, involves a lack of awareness of racial issues. Option B, Encounter, is about experiencing a significant event that challenges one's racial identity. Option D, Internalization, refers to a more integrated identity but does not specifically emphasize social justice commitment.",
+      "correct_answer": "Men and women differ in beliefs about whether sexual and emotional infidelity co-occur",
+      "explanation": "1. The correct answer, \"Men and women differ in beliefs about whether sexual and emotional infidelity co-occur,\" aligns with the double-shot hypothesis proposed by DeSteno and Salovey (1996). This hypothesis suggests that men believe emotional involvement does not necessitate sexual involvement, whereas women think that if a man is emotionally involved, he is also sexually involved. This difference in belief explains why men and women experience jealousy differently regarding sexual and emotional infidelity.\n\n2. The option \"Men are more jealous about any form of infidelity\" is incorrect because it oversimplifies the findings, which indicate that men respond more strongly to sexual infidelity while women are more distressed by emotional infidelity. The statement \"Women are indifferent to sexual infidelity but highly distressed by emotional infidelity\" misrepresents the research, as it suggests women have no concern over sexual infidelity, which is not supported by the findings. Lastly, \"Men and women experience equal distress over emotional infidelity\" is wrong because it contradicts the research that shows women respond more strongly to emotional infidelity than men do, highlighting a significant gender difference in reactions to infidelity.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
       "knId": "KN19",
-      "source_file": "3-helping-and-hurting.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Connection.json",
       "source_folder": "3 Social Psychology",
       "difficulty": "hard",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -2741,23 +2756,24 @@
       "is_org_psych": false
     },
     {
-      "id": 138,
-      "question": "What is the primary goal of administering the Mini-Mental State Examination (MMSE)?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Mood.json::8",
+      "question": "Which pharmacological treatment is typically most effective for the \"classic bipolar disorder\" subtype characterized by episodic mood states and onset in late adolescence?",
       "options": [
-        "To assess personality traits and emotional functioning.",
-        "To evaluate cognitive impairment and screen for dementia.",
-        "To measure intelligence quotient (IQ) levels.",
-        "To determine the effectiveness of psychotherapy."
+        "Valproic acid",
+        "Carbamazepine",
+        "Lithium",
+        "Second-generation antipsychotics"
       ],
-      "correct_answer": "To evaluate cognitive impairment and screen for dementia.",
-      "explanation": "The MMSE is specifically designed to assess cognitive functioning and identify potential dementia. The other options do not accurately reflect the purpose of the MMSE.",
+      "correct_answer": "Lithium",
+      "explanation": "1. **Lithium** is the correct answer because it is identified as the most effective pharmacological treatment for “classic bipolar disorder,” which is characterized by a low likelihood of mixed mood states, rapid cycling, long periods of recovery between episodes, and an onset between the ages of 15 and 19. The reference material specifically states that lithium is typically the preferred treatment for this subtype due to its effectiveness in stabilizing mood and reducing the frequency of episodes.\n\n2. The other options are incorrect for the following reasons:\n\n- **Valproic acid**: While it is effective for \"atypical bipolar disorder,\" which is characterized by mixed mood states and rapid cycling, it is not the primary treatment for classic bipolar disorder.\n  \n- **Carbamazepine**: Similar to valproic acid, carbamazepine is more suited for atypical bipolar disorder rather than classic bipolar disorder, making it less effective for the specified subtype.\n\n- **Second-generation antipsychotics**: These medications are also indicated for atypical bipolar disorder, particularly for managing acute episodes and mixed states, but they are not the first-line treatment for classic bipolar disorder, where lithium is preferred.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
       "knId": "KN41",
-      "source_file": "5-cognitive-tests.json",
-      "source_folder": "5 Assessment",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Mood.json",
+      "source_folder": "5 Diagnosis",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -3601,23 +3617,24 @@
       "is_org_psych": false
     },
     {
-      "id": 181,
-      "question": "A client reports recurrent episodes of heart racing, chest tightness, trembling, and a fear of humiliating herself that last 8 to 12 minutes. Review of her history reveals these episodes occur exclusively when she must speak in front of groups, when she is introduced to new people at social gatherings, and when she believes others are observing her eating. She reports no episodes occurring while alone, during sleep, or without an identifiable social trigger. Which of the following most accurately explains why Panic Disorder is NOT the appropriate primary diagnosis?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Personality.json::11",
+      "question": "Which of the following best describes the relationship between histrionic and antisocial personality disorders according to Hamburger et al. (1996)?",
       "options": [
-        "Her symptoms do not meet the full symptomatic threshold for a panic attack, so they cannot form the basis of any anxiety disorder diagnosis",
-        "Panic attacks in Social Anxiety Disorder produce physiological symptoms that are less severe than those required for Panic Disorder",
-        "Her panic attacks are situationally bound to social-evaluative contexts rather than unexpected and uncued, which is required for Panic Disorder",
-        "Panic Disorder requires a minimum of four panic attacks per month, whereas Social Anxiety Disorder has no such frequency requirement"
+        "They share psychopathy as an underlying trait, with biological sex influencing the manifestation.",
+        "They share a common cause rooted in childhood trauma.",
+        "They are unrelated disorders with completely distinct symptomatology.",
+        "Diagnosis biases explain the similarity in symptoms between men and women."
       ],
-      "correct_answer": "Her panic attacks are situationally bound to social-evaluative contexts rather than unexpected and uncued, which is required for Panic Disorder",
-      "explanation": "The defining feature of Panic Disorder is recurrent UNEXPECTED panic attacks—those that arise without an apparent trigger or situational cue—followed by persistent concern about additional attacks or maladaptive behavioral changes. In this vignette, all panic attacks are situationally bound to feared social-evaluative situations, which is characteristic of Social Anxiety Disorder (SAD). DSM-5 explicitly permits panic attacks as a specifier across multiple anxiety disorders; their presence does not automatically indicate Panic Disorder. Option A is incorrect; the client's symptoms (racing heart, chest tightness, trembling, fear) can constitute a full-criteria panic attack regardless of the trigger. Option B is incorrect; DSM-5 does not impose differential symptom severity thresholds between disorder types for panic attacks—both can involve full-symptom panic attacks. Option D is incorrect; DSM-5 does not require a specific frequency of panic attacks (such as four per month) for a Panic Disorder diagnosis.",
+      "correct_answer": "They share psychopathy as an underlying trait, with biological sex influencing the manifestation.",
+      "explanation": "1. The correct answer, \"They share psychopathy as an underlying trait, with biological sex influencing the manifestation,\" is supported by Hamburger et al. (1996), who propose that both histrionic and antisocial personality disorders exhibit psychopathy but differ in expression based on biological sex. Specifically, they suggest that men with high levels of psychopathy are more likely to exhibit features of antisocial personality disorder, while women are more likely to display features of histrionic personality disorder.\n\n2. The option \"They share a common cause rooted in childhood trauma\" is incorrect because the reference material does not establish a direct causal link between childhood trauma and these personality disorders. The statement \"They are unrelated disorders with completely distinct symptomatology\" is wrong as it overlooks the shared underlying trait of psychopathy identified by Hamburger et al. (1996). Lastly, \"Diagnosis biases explain the similarity in symptoms between men and women\" is incorrect because the material attributes the differences in symptom manifestation to biological sex rather than diagnostic biases, suggesting a more intrinsic factor rather than external bias influencing diagnosis.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
       "knId": "KN36",
-      "source_file": "5-clinical-tests.json",
-      "source_folder": "5 Assessment",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Personality.json",
+      "source_folder": "5 Diagnosis",
       "difficulty": "hard",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -4181,23 +4198,24 @@
       "is_org_psych": false
     },
     {
-      "id": 210,
-      "question": "In cognitive-behavioral therapy for suicide prevention, what does the 'chain analysis' technique primarily involve?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Psychodynamic and Humanistic Therapies.json::17",
+      "question": "Kelly’s personal construct therapy primarily assists clients by helping them:",
       "options": [
-        "Evaluating the efficacy of safety plans after discharge",
-        "Identifying the series of events and thoughts leading up to the suicide attempt",
-        "Teaching relaxation skills to manage suicidal urges",
-        "Disputing irrational beliefs about self-worth and hopelessness"
+        "Identify and change unconscious id impulses",
+        "Contemplate existential concerns about death and freedom",
+        "Identify and replace maladaptive bipolar dimensions of meaning",
+        "Increase unconditional positive regard and self-acceptance"
       ],
-      "correct_answer": "Identifying the series of events and thoughts leading up to the suicide attempt",
-      "explanation": "1. The correct answer, \"Identifying the series of events and thoughts leading up to the suicide attempt,\" accurately describes the chain analysis technique used in cognitive-behavioral therapy for suicide prevention (CT-SP). This technique focuses on understanding the specific circumstances and cognitive processes that culminate in a suicidal crisis, allowing both the therapist and client to explore the connections between events and thoughts that contribute to suicidal behavior, thereby informing safety planning and coping strategies.\n\n2. The option \"Evaluating the efficacy of safety plans after discharge\" is incorrect because chain analysis is concerned with understanding the antecedents to a suicide attempt rather than assessing post-discharge interventions. \"Teaching relaxation skills to manage suicidal urges\" is not correct as chain analysis does not focus on skill acquisition but rather on the sequence of events and thoughts leading to the crisis. Lastly, \"Disputing irrational beliefs about self-worth and hopelessness\" is misleading because while addressing irrational beliefs is a component of cognitive therapies, chain analysis specifically aims to map the events and thoughts rather than directly disputing beliefs.",
+      "correct_answer": "Identify and replace maladaptive bipolar dimensions of meaning",
+      "explanation": "1. The correct answer, \"Identify and replace maladaptive bipolar dimensions of meaning,\" aligns with Kelly's personal construct therapy, which focuses on how individuals perceive and interpret events through personal constructs—bipolar dimensions of meaning. This therapy emphasizes that by recognizing and altering maladaptive constructs, clients can alleviate undesirable behaviors and outcomes, thus enhancing their psychological well-being.\n\n2. The option \"Identify and change unconscious id impulses\" is incorrect because personal construct therapy does not focus on unconscious drives or impulses, but rather on conscious perceptions and interpretations of experiences. \"Contemplate existential concerns about death and freedom\" is also wrong, as this approach is characteristic of existential therapies, which address such ultimate concerns rather than the cognitive constructs emphasized in personal construct therapy. Lastly, \"Increase unconditional positive regard and self-acceptance\" is not applicable, as this is a central goal of person-centered therapy, not personal construct therapy, which prioritizes the identification and modification of personal constructs over the provision of unconditional positive regard.",
       "domain": "Domain 6: Treatment & Intervention",
       "knId": "KN43",
-      "source_file": "6 CBT.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Psychodynamic and Humanistic Therapies.json",
       "source_folder": "6 Clinical Interventions",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -4261,43 +4279,45 @@
       "is_org_psych": false
     },
     {
-      "id": 214,
-      "question": "In a study examining gender bias in academic evaluation, psychology faculty independently reviewed an identical research manuscript. Half received it attributed to 'Dr. Jennifer Morris' and half received the same manuscript attributed to 'Dr. James Morris.' Faculty who believed the author was male rated the manuscript significantly higher in scientific rigor, methodological sophistication, and overall publication worthiness. This finding MOST directly illustrates:",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Why People Do Things.json::13",
+      "question": "A licensed psychologist begins treatment with a first-generation Korean American client presenting with chronic occupational stress and somatic complaints. The client appears disengaged during open-ended reflective questioning and responds minimally to exploratory affect-focused techniques. However, the client becomes notably more engaged when the psychologist offers concrete coping strategies and a structured plan for managing workplace conflicts. Which adjustment would be MOST consistent with culturally competent practice for this client?",
       "options": [
-        "The ultimate attribution error, because evaluators attributed the work's perceived quality to the author's group membership characteristics",
-        "Illusory correlation, because evaluators incorrectly perceived a statistical relationship between gender and scientific quality",
-        "Evaluative gender bias, in which identical intellectual work is judged as lower quality when attributed to a female rather than a male author",
-        "Ingroup favoritism, because male evaluators disproportionately rated the male-attributed manuscript more favorably"
+        "Persisting with nondirective, client-centered techniques to respect the client's autonomy and self-determination",
+        "Transitioning to more directive, structured, and problem-focused interventions consistent with the client's cultural expectations",
+        "Increasing emotional exploration exercises to help the client overcome culturally conditioned affect suppression",
+        "Immediately involving the client's family in session, since collectivist cultures uniformly prefer family-based treatment"
       ],
-      "correct_answer": "Evaluative gender bias, in which identical intellectual work is judged as lower quality when attributed to a female rather than a male author",
-      "explanation": "This experimental paradigm (originating with Goldberg, 1968) demonstrates evaluative gender bias: objectively identical work is judged as inferior when attributed to a woman. This constitutes a direct form of sex-based discrimination in intellectual evaluation. The ultimate attribution error (Pettigrew, 2001) refers to applying self-serving attributional logic to in-group versus out-group behavior — it concerns explanations for why groups behave as they do, not differential quality ratings of identical products. Illusory correlation describes overestimating the co-occurrence of two unrelated things (e.g., group membership and a behavior); while conceptually adjacent, it does not precisely describe the evaluative mechanism at work. Ingroup favoritism would require that the effect be driven by evaluators sharing the author's gender — but Goldberg's original research and replications showed that both male and female evaluators exhibited the bias, ruling out simple ingroup favoritism.",
+      "correct_answer": "Transitioning to more directive, structured, and problem-focused interventions consistent with the client's cultural expectations",
+      "explanation": "Culturally competent practice with many Asian American clients requires recognizing that collectivist values, deference to authority, and pragmatic problem-solving orientation may make structured, directive, and problem-focused approaches more acceptable and effective than nondirective, exploratory techniques. The client's behavioral engagement pattern directly signals this preference. Persisting with nondirective techniques ignores clear cultural and behavioral cues already present in the session. Framing the client's engagement with concrete strategies as 'affect avoidance to overcome' pathologizes a culturally normative presentation. While family involvement may sometimes be relevant, universally mandating it reflects stereotyping rather than culturally informed individualization — the EPPP consistently distinguishes between cultural generalizations and individualized application.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
       "knId": "KN14",
-      "source_file": "3-helping-and-hurting.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Why People Do Things.json",
       "source_folder": "3 Social Psychology",
       "difficulty": "hard",
       "question_type": "standard",
       "isScored": false,
+      "type": "standard",
       "is_org_psych": false
     },
     {
-      "id": 215,
-      "question": "When discussing a client's medication management, what is the psychologist's ethical responsibility?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 1 and 2.json::20",
+      "question": "According to the APA Ethics Code, when is it ethical for a psychologist to provide services to populations outside their current areas of competence?",
       "options": [
-        "To make medication recommendations without consulting the prescribing physician.",
-        "To collaborate with the client and their prescribing physician when appropriate.",
-        "To discourage clients from taking medication.",
-        "To only focus on therapy and ignore medication discussions."
+        "Only after they obtain formal certification in the new area",
+        "Whenever requested by a client or agency, regardless of training",
+        "After undertaking relevant education, training, supervised experience, or consultation to develop competence",
+        "Never; they should always refer clients to another provider"
       ],
-      "correct_answer": "To collaborate with the client and their prescribing physician when appropriate.",
-      "explanation": "The correct answer emphasizes the importance of collaboration in client care, ensuring that all aspects of treatment are considered. The other options either promote unethical practices or neglect the client's needs.",
+      "correct_answer": "After undertaking relevant education, training, supervised experience, or consultation to develop competence",
+      "explanation": "1. The correct answer, \"After undertaking relevant education, training, supervised experience, or consultation to develop competence,\" aligns with Standard 2.01(c) of the APA Ethics Code, which states that psychologists must acquire the necessary knowledge and training before providing services to new populations or using new techniques. This ensures that psychologists practice within their competence and provide effective and ethical care to clients.\n\n2. The option \"Only after they obtain formal certification in the new area\" is incorrect because the Ethics Code emphasizes relevant education and training rather than requiring formal certification, which may not always be necessary. The option \"Whenever requested by a client or agency, regardless of training\" is wrong as it disregards the ethical obligation to practice within one's competence, which protects clients from potential harm. Lastly, \"Never; they should always refer clients to another provider\" is incorrect because the Ethics Code allows psychologists to provide services in certain situations, such as when they make reasonable efforts to gain competence or in emergencies, rather than mandating referral in all cases.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
       "knId": "KN61",
-      "source_file": "8-standards-3-4.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 1 and 2.json",
       "source_folder": "8 Ethics",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -4481,23 +4501,24 @@
       "is_org_psych": false
     },
     {
-      "id": 225,
-      "question": "A parent in Adlerian family therapy reports that her 9-year-old refuses to bring an umbrella on rainy days despite the parent's repeated warnings. The Adlerian therapist instructs the parent to stop arguing, say nothing further, and allow the child to arrive at school wet. The therapist explains that the child needs to experience the direct outcome of his own choice in order to develop social interest and responsibility. The therapist is recommending which Adlerian concept?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/2 Work Motivation.json::20",
+      "question": "According to Expectancy Theory, a worker will have high motivation only if which combination of beliefs is held?",
       "options": [
-        "Logical consequences, because the child experiences a planned, parent-arranged outcome that is logically connected to the misbehavior",
-        "Natural consequences, because the child experiences an outcome that flows directly and automatically from his own decision without parental mediation",
-        "Encouragement, because the parent is withdrawing negative reinforcement in order to build the child's intrinsic motivation",
-        "Mistaken goals correction, because the parent is interrupting the child's pursuit of undue attention through the conflict over the umbrella"
+        "Effort will lead to performance, performance leads to valued outcomes, and outcomes are desirable",
+        "Effort alone guarantees success regardless of performance or outcomes",
+        "Outcomes are valuable but effort and performance are irrelevant",
+        "Performance is unrelated to effort but outcomes are highly valued"
       ],
-      "correct_answer": "Natural consequences, because the child experiences an outcome that flows directly and automatically from his own decision without parental mediation",
-      "explanation": "In Adlerian theory, natural consequences are the direct, automatic results of a child's behavior as produced by the physical or social environment without adult intervention (getting wet because one did not bring an umbrella). They are distinguished from logical consequences, which are arranged by a parent or teacher, are logically related to the misbehavior, and require adult action to deliver. Encouragement is a broader Adlerian principle of building self-efficacy and is not a consequence type. Mistaken goals correction refers to identifying and redirecting the mistaken purpose behind misbehavior, which is distinct from the specific disciplinary strategy described.",
+      "correct_answer": "Effort will lead to performance, performance leads to valued outcomes, and outcomes are desirable",
+      "explanation": "### Correct Answer Explanation\nThe correct answer, \"Effort will lead to performance, performance leads to valued outcomes, and outcomes are desirable,\" aligns with Expectancy Theory, which posits that a worker's motivation is contingent upon three interrelated beliefs: the expectation that their effort will result in successful performance (expectancy), the belief that this performance will yield certain outcomes (instrumentality), and the value they place on those outcomes (valence). All three factors must be positively perceived for motivation to be high.\n\n### Incorrect Options Explanation\n- **Effort alone guarantees success regardless of performance or outcomes:** This option is incorrect because Expectancy Theory emphasizes the importance of both performance and the perceived value of outcomes, not just effort.\n- **Outcomes are valuable but effort and performance are irrelevant:** This statement is wrong as it disregards the fundamental premise of Expectancy Theory that both effort and performance are critical to achieving valued outcomes.\n- **Performance is unrelated to effort but outcomes are highly valued:** This option is incorrect because Expectancy Theory explicitly states that the belief that effort leads to performance is essential for motivation, making performance directly related to effort.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
       "knId": "KN9",
-      "source_file": "2-psychodynamic-and-humanistic.json",
-      "source_folder": "2 Learning and Memory",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/2 Work Motivation.json",
+      "source_folder": "2 3 5 6 I-O Psychology",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
+      "type": "standard",
       "is_org_psych": false
     }
   ]

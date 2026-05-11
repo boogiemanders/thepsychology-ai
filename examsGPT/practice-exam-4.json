@@ -12,7 +12,8 @@
       "7": 17,
       "8": 35
     },
-    "generatedAt": "2025-11-20T18:01:10.421Z"
+    "generatedAt": "2025-11-20T18:01:10.421Z",
+    "lastSurgicalFix": "2026-05-10T02:45:22.470Z"
   },
   "questions": [
     {
@@ -130,22 +131,22 @@
       "scored": false
     },
     {
-      "stem": "In assessing change after intervention for conduct disorder, which outcome measure is considered most appropriate to evaluate treatment effectiveness?",
+      "stem": "Which early intervention program for first-episode psychosis includes team-based treatment, family education, and supported employment?",
       "options": [
-        "Pre- and post-treatment symptom checklists completed by caregivers and teachers",
-        "Patient’s subjective report of mood and feelings alone",
-        "Only teacher reports of classroom behavior",
-        "Number of hospitalizations recorded during treatment"
+        "NAVIGATE",
+        "TOMPKINS",
+        "Illness Management and Recovery (IMR)",
+        "FACT (Flexible Assertive Community Treatment)"
       ],
-      "answer": "Pre- and post-treatment symptom checklists completed by caregivers and teachers",
-      "explanation": "1. **Correct Answer Explanation:** \"Pre- and post-treatment symptom checklists completed by caregivers and teachers\" is the most appropriate outcome measure for evaluating treatment effectiveness in conduct disorder because it provides a comprehensive assessment from multiple perspectives, capturing changes in behavior across different environments (home and school). This multimodal approach aligns with the evidence-based treatments for conduct disorder, which emphasize the importance of feedback from caregivers and teachers in understanding the child's functioning and progress.\n\n2. **Incorrect Options Explanation:**\n   - **Patient’s subjective report of mood and feelings alone:** This option is inadequate because it relies solely on the individual’s perspective, which may not fully capture observable behavioral changes or the impact of conduct disorder on their functioning in various contexts.\n   - **Only teacher reports of classroom behavior:** This option is limited as it does not consider the child's behavior at home or in other settings, potentially missing critical aspects of their overall functioning and treatment response.\n   - **Number of hospitalizations recorded during treatment:** This measure focuses on a specific outcome rather than a comprehensive assessment of symptom change and does not account for improvements in daily functioning or behavior that may not lead to hospitalization.",
+      "answer": "NAVIGATE",
+      "explanation": "1. \"NAVIGATE\" is the correct answer because it is specifically designed as a team-based early intervention program for individuals experiencing their first episode of psychosis. This program includes essential components such as family education, individual resiliency training, and supported employment, all aimed at helping patients manage their illness effectively.\n\n2. The option \"TOMPKINS\" is incorrect because it is not mentioned in the reference material as a program associated with first-episode psychosis or any specific treatment components. \"Illness Management and Recovery (IMR)\" is also incorrect, as it is not highlighted in the context of early interventions for first-episode psychosis in the provided material. Lastly, \"FACT (Flexible Assertive Community Treatment)\" is incorrect because the reference material does not identify it as part of the early intervention strategies for first-episode psychosis, unlike NAVIGATE, which is specifically detailed.",
       "kn": "KN40",
-      "kn_explanation": "This question focuses on measuring outcomes and changes due to prevention or intervention (KN40), emphasizing multi-informant approaches.",
+      "kn_explanation": "This question addresses assessment and outcome measurement through early intervention programs in schizophrenia (KN40).",
       "difficulty": "medium",
-      "quality_comment": "This item is practical and clinically relevant, assessing understanding of appropriate outcome measures for behavioral interventions.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis : Psychopathology/5 Disruptive, Impulse-Control, and Conduct Disorders.json",
-      "domain": 5,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis : Psychopathology/5 Disruptive, Impulse-Control, and Conduct Disorders.json::13",
+      "quality_comment": "Options include real programs but only NAVIGATE matches the described multidisciplinary, early psychosis model.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Psychosis.json",
+      "domain": 40,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Psychosis.json::14",
       "scored": true
     },
     {
@@ -301,22 +302,22 @@
       "scored": true
     },
     {
-      "stem": "At approximately what age does an infant's visual acuity reach levels similar to that of a normal adult?",
+      "stem": "Which aspect of language is primarily concerned with the appropriate use of language in social contexts, including nonverbal cues and conversational rules?",
       "options": [
-        "At birth",
-        "1 to 2 months",
-        "7 to 8 months",
-        "12 months"
+        "Phonology",
+        "Semantics",
+        "Pragmatics",
+        "Morphology"
       ],
-      "answer": "7 to 8 months",
-      "explanation": "1. The correct answer is \"7 to 8 months\" because by this age, an infant's visual acuity improves significantly, allowing them to see at about 20 feet what normal adults can see at the same distance. This developmental milestone indicates that their vision has matured to levels comparable to that of adults, enabling better visual processing and interaction with their environment.\n\n2. The option \"At birth\" is incorrect because newborns have limited visual acuity, only able to see at about 20 feet what adults see at 400 to 600 feet. The option \"1 to 2 months\" is also wrong as infants at this age still prefer to look at their mothers' faces but have not yet developed adult-like visual acuity. Lastly, \"12 months\" is incorrect because by this age, infants have already achieved visual acuity similar to adults, making it an outdated response to the question regarding when this level is first reached.",
+      "answer": "Pragmatics",
+      "explanation": "1. \"Pragmatics\" is the correct answer because it focuses on the use and meaning of language in various social contexts, including the understanding of nonverbal cues and adherence to conversational rules such as turn-taking and topic maintenance. It encompasses the appropriate use of language tailored to the listener or situation, which is crucial for effective communication.\n\n2. \n- **Phonology** is incorrect because it deals with the rules for using phonemes, the smallest units of sound in a language, rather than the social aspects of language use.\n- **Semantics** is incorrect because it is concerned with the literal meanings of words, phrases, and sentences, rather than how language is used in social contexts.\n- **Morphology** is incorrect because it addresses the rules governing the use of morphemes, the smallest units of meaning in a language, and does not focus on the social aspects of language use.",
       "kn": "KN21",
-      "kn_explanation": "This question tests knowledge of normal sensory development during infancy, which falls under growth and lifespan development (KN21).",
+      "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
       "difficulty": "easy",
-      "quality_comment": "The question is straightforward with realistic distractors that align with typical developmental timelines.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Physical Development.json",
-      "domain": 4,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Physical Development.json::1",
+      "quality_comment": "Clear differential among language components; distractors are other well-known categories but easily ruled out by knowledgeable students.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Language Development.json",
+      "domain": 21,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Language Development.json::12",
       "scored": true
     },
     {
@@ -567,22 +568,22 @@
       "scored": false
     },
     {
-      "stem": "According to research on cognitive development and diverse identities (KN24), how can gender-role stereotypes affect children’s cognitive performance in domains such as math and verbal abilities?",
+      "stem": "Which of the following is a major criticism of both Piaget's and Kohlberg's moral development theories?",
       "options": [
-        "They have no effect on children’s cognitive performance as abilities are biologically predetermined",
-        "They contribute to self-fulfilling prophecies where children perform in line with expectations linked to gender roles",
-        "They only affect adults’ attitudes and do not influence children's cognitive skills",
-        "They enhance boys’ and girls’ abilities equally through positive reinforcement"
+        "They underestimate young children's moral reasoning abilities.",
+        "They exaggerate the role of emotions in moral judgment.",
+        "They emphasize culture as the primary factor influencing development.",
+        "They focus only on real-life moral decisions, ignoring hypothetical dilemmas."
       ],
-      "answer": "They contribute to self-fulfilling prophecies where children perform in line with expectations linked to gender roles",
-      "explanation": "1. The correct answer, \"They contribute to self-fulfilling prophecies where children perform in line with expectations linked to gender roles,\" reflects the impact of gender-role stereotypes on children's cognitive performance. Research indicates that these stereotypes can lead children to internalize expectations about their abilities, particularly in areas like math and verbal skills. For instance, parents may expect sons to excel in math and attribute their successes to innate ability, while daughters may be seen as needing to work harder for the same achievements, leading girls to underestimate their capabilities and become less interested in math.\n\n2. The first incorrect option, \"They have no effect on children’s cognitive performance as abilities are biologically predetermined,\" is wrong because research shows that cognitive abilities are influenced by both biological factors and social constructs, including gender-role stereotypes. The second incorrect option, \"They only affect adults’ attitudes and do not influence children's cognitive skills,\" is incorrect because studies demonstrate that these stereotypes directly impact children's self-perception and performance, not just adult attitudes. Lastly, the option \"They enhance boys’ and girls’ abilities equally through positive reinforcement\" is misleading, as the reinforcement often differs by gender, with boys receiving more encouragement in math and girls potentially receiving less, which can hinder their performance rather than enhance it.",
-      "kn": "KN24",
-      "kn_explanation": "This item targets KN24 by examining how diverse social identities and cultural stereotypes impact cognitive development outcomes across genders.",
+      "answer": "They underestimate young children's moral reasoning abilities.",
+      "explanation": "1. The correct answer, \"They underestimate young children's moral reasoning abilities,\" is supported by criticisms of both Piaget's and Kohlberg's theories. Piaget's research suggests that young children have a limited understanding of moral standards, while critics argue that he underestimates their cognitive abilities and moral understanding. Similarly, Kohlberg's theory has also been criticized for underestimating the moral reasoning of young children, indicating that both theorists fail to recognize the complexity of moral reasoning in early developmental stages.\n\n2. The option \"They exaggerate the role of emotions in moral judgment\" is incorrect because neither Piaget nor Kohlberg emphasizes emotions as a primary factor in their theories; instead, they focus on cognitive processes and reasoning. The option \"They emphasize culture as the primary factor influencing development\" is also wrong, as both theorists suggest that moral development follows a universal sequence rather than being primarily influenced by cultural factors. Lastly, the option \"They focus only on real-life moral decisions, ignoring hypothetical dilemmas\" is inaccurate because Kohlberg, in particular, is known for his use of hypothetical dilemmas to study moral reasoning, making this statement not reflective of their work.",
+      "kn": "KN23",
+      "kn_explanation": "Understanding criticisms of developmental theories of moral reasoning involves analysis of developmental research, appropriate for KN23.",
       "difficulty": "medium",
-      "quality_comment": "The question draws on well-established research, with distractors based on common myths, making it effective for assessing nuanced knowledge.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Cognitive Development.json",
-      "domain": 4,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Cognitive Development.json::14",
+      "quality_comment": "Distractors are plausible misunderstandings making this item suitable to assess critical evaluation of theory.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Morality.json",
+      "domain": 23,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Morality.json::13",
       "scored": true
     },
     {
@@ -719,22 +720,22 @@
       "scored": true
     },
     {
-      "stem": "Which neuropsychological test is designed to assess executive functions such as abstract reasoning, perseveration, and set shifting by requiring examinees to match cards according to undisclosed sorting rules?",
+      "stem": "Which of the following characteristics is most commonly associated with autism spectrum disorder?",
       "options": [
-        "Stroop Color and Word Test",
-        "Wisconsin Card Sorting Test",
-        "Tower of London",
-        "Halstead-Reitan Battery"
+        "A. High intelligence and advanced verbal skills",
+        "B. Difficulty with social interactions and communication",
+        "C. Preference for solitary play over group activities",
+        "D. Strong interest in a wide range of topics"
       ],
-      "answer": "Wisconsin Card Sorting Test",
-      "explanation": "1. The **Wisconsin Card Sorting Test (WCST)** is the correct answer because it specifically assesses executive functions such as abstract reasoning, perseveration, and the ability to change cognitive strategies in response to feedback. The test requires examinees to sort cards according to undisclosed rules, which they must discover through trial and error, making it a direct measure of cognitive flexibility and executive functioning.\n\n2. The **Stroop Color and Word Test** is incorrect because it primarily evaluates cognitive flexibility, selective attention, and response inhibition, rather than executive functions like abstract reasoning and set shifting. The **Tower of London** is also incorrect as it focuses on problem-solving and planning rather than card sorting and abstract reasoning. Lastly, the **Halstead-Reitan Battery** is not the correct choice because it is designed to determine the severity and nature of brain damage, assessing various cognitive functions but not specifically targeting executive functions through card sorting tasks.",
+      "answer": "B. Difficulty with social interactions and communication",
+      "explanation": "Option B is correct because individuals with autism spectrum disorder often experience challenges in social interactions and communication. Option A is incorrect as high intelligence is not a defining characteristic of autism. Option C, while sometimes true, does not encompass the broader social difficulties faced by individuals with autism. Option D is misleading as strong interests can be a characteristic, but it does not define the disorder itself.",
       "kn": "KN32",
       "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
       "difficulty": "medium",
-      "quality_comment": "The options are plausible neuropsychological tests, reinforcing discrimination of similar but distinct tests targeting executive functions.",
+      "quality_comment": "The question effectively assesses knowledge of autism characteristics.",
       "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Clinical Tests.json",
-      "domain": 2,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Clinical Tests.json::3",
+      "domain": 32,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Clinical Tests.json::5",
       "scored": true
     },
     {
@@ -814,22 +815,22 @@
       "scored": true
     },
     {
-      "stem": "What is an important consideration when psychologists identify and manage potential ethical issues arising in their practice?",
+      "stem": "Dr. Nguyen terminated therapy with a client two and a half years ago. The therapy lasted 18 months and focused on the client's severe childhood trauma and attachment difficulties. The former client has now asked Dr. Nguyen on a date. According to APA Standard 10.08, what is the most accurate statement about this situation?",
       "options": [
-        "Ignoring minor issues to avoid complications.",
-        "Discussing concerns openly with supervisors or ethics committees to seek guidance.",
-        "Handling issues independently without documentation.",
-        "Waiting for formal complaints before addressing ethical dilemmas."
+        "The two-year waiting period has passed, so Dr. Nguyen may freely pursue the relationship",
+        "Sexual intimacies with former clients are permanently and absolutely prohibited under all circumstances",
+        "Although the two-year minimum has passed, the nature, duration, and intensity of the therapy make this relationship almost certainly unethical, and Dr. Nguyen bears the burden of proving it is not exploitative",
+        "Dr. Nguyen may pursue the relationship only after obtaining a formal ethics consultation documenting approval"
       ],
-      "answer": "Discussing concerns openly with supervisors or ethics committees to seek guidance.",
-      "explanation": "1. The correct answer, \"Discussing concerns openly with supervisors or ethics committees to seek guidance,\" aligns with the ethical standards outlined in the APA Ethics Code, particularly regarding the importance of supervision and consultation in managing ethical dilemmas. Psychologists are encouraged to seek guidance when faced with ethical issues to ensure they are making informed decisions that adhere to professional standards and protect the welfare of clients and students.\n\n2. The option \"Ignoring minor issues to avoid complications\" is incorrect because neglecting even minor ethical concerns can lead to larger problems and undermine professional integrity. \"Handling issues independently without documentation\" is wrong as proper documentation is essential for accountability and transparency in ethical decision-making, as well as for protecting the rights of all parties involved. Lastly, \"Waiting for formal complaints before addressing ethical dilemmas\" is inappropriate because proactive management of ethical issues is crucial; addressing concerns before they escalate into formal complaints demonstrates a commitment to ethical practice and the well-being of clients and students.",
+      "answer": "Although the two-year minimum has passed, the nature, duration, and intensity of the therapy make this relationship almost certainly unethical, and Dr. Nguyen bears the burden of proving it is not exploitative",
+      "explanation": "Standard 10.08 prohibits sexual intimacies with former clients for at least two years and states they are still prohibited after two years except in 'the most unusual circumstances,' with the psychologist bearing the burden of proof. The factors to evaluate include time since termination, nature/duration/intensity of therapy, circumstances of termination, client's personal history and mental status, and likelihood of adverse impact. Here, the long-duration, trauma-focused therapy creates a high-risk situation. Option A ignores that the two-year period is a minimum, not a green light. Option B is technically incorrect—the standard does allow for 'most unusual circumstances.' Option D fabricates a consultation approval requirement not in the standard.",
       "kn": "KN64",
-      "kn_explanation": "This question targets the ethical knowledge area involving the identification and management of ethical issues, emphasizing consultation and ethical problem-solving (KN64).",
+      "kn_explanation": "Post-termination sexual/dual relationship is identification and management of potential ethical issues",
       "difficulty": "medium",
-      "quality_comment": "This item highlights proactive ethical management strategies with realistic distractors, supporting assessment of applied ethics knowledge.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethical : Legal : Professional Issues/8 APA Ethics Code Standards 7 & 8.json",
-      "domain": 8,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethical : Legal : Professional Issues/8 APA Ethics Code Standards 7 & 8.json::12",
+      "quality_comment": "Strong clinical vignette that tests understanding of the nuance beyond the two-year rule, including the burden-of-proof requirement.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 9 and 10.json",
+      "domain": 64,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 9 and 10.json::2",
       "scored": true
     },
     {
@@ -871,22 +872,22 @@
       "scored": true
     },
     {
-      "stem": "A 72-year-old patient shows progressive memory loss and trouble with daily activities over several years. Genetic testing reveals an ApoE4 allele. What does this finding suggest about the patient’s neurocognitive disorder?",
+      "stem": "Which characteristic symptom is NOT required for the diagnosis of binge-eating disorder according to DSM-5-TR criteria?",
       "options": [
-        "The presence of the ApoE4 allele decreases the likelihood of Alzheimer’s disease",
-        "The ApoE4 allele is a risk factor for Alzheimer’s disease and supports a probable diagnosis",
-        "The ApoE4 allele is diagnostic for Lewy body dementia",
-        "ApoE4 presence suggests the disorder is due to vascular causes"
+        "Episodes of binge eating occur at least once a week for three months",
+        "Frequent inappropriate compensatory behaviors following binges",
+        "At least three specific behavioral or emotional symptoms during binges",
+        "A subjective sense of loss of control during binge episodes"
       ],
-      "answer": "The ApoE4 allele is a risk factor for Alzheimer’s disease and supports a probable diagnosis",
-      "explanation": "1. The correct answer, \"The ApoE4 allele is a risk factor for Alzheimer’s disease and supports a probable diagnosis,\" is accurate because the presence of the ApoE4 variant has been identified as a genetic risk factor for Alzheimer’s disease. In individuals with neurocognitive disorder symptoms, such as progressive memory loss and difficulty with daily activities, the identification of the ApoE4 allele strengthens the likelihood of a probable diagnosis of Alzheimer’s, aligning with the criteria that require evidence of a causative genetic mutation.\n\n2. The incorrect options are as follows:\n- \"The presence of the ApoE4 allele decreases the likelihood of Alzheimer’s disease\" is wrong because the ApoE4 allele is known to increase, not decrease, the risk of developing Alzheimer’s disease.\n- \"The ApoE4 allele is diagnostic for Lewy body dementia\" is incorrect because the ApoE4 allele is specifically associated with Alzheimer’s disease, not Lewy body dementia, which has different diagnostic criteria and features.\n- \"ApoE4 presence suggests the disorder is due to vascular causes\" is misleading because the ApoE4 allele is not linked to vascular neurocognitive disorders; instead, it is a known risk factor specifically for Alzheimer’s disease.",
+      "answer": "Frequent inappropriate compensatory behaviors following binges",
+      "explanation": "1. \"Frequent inappropriate compensatory behaviors following binges\" is the correct answer because, unlike bulimia nervosa, binge-eating disorder (BED) does not involve any compensatory behaviors such as self-induced vomiting or excessive exercise to prevent weight gain. The diagnosis of BED is characterized solely by recurrent episodes of binge eating without these compensatory actions, which distinguishes it from other eating disorders.\n\n2. The option \"Episodes of binge eating occur at least once a week for three months\" is incorrect because this frequency is a key diagnostic criterion for BED, indicating the severity and persistence of the disorder. The statement \"At least three specific behavioral or emotional symptoms during binges\" is also incorrect, as the DSM-5-TR specifies that individuals must exhibit at least three out of five characteristic symptoms to meet the criteria for BED. Lastly, \"A subjective sense of loss of control during binge episodes\" is incorrect because experiencing a sense of lack of control during binge eating is a fundamental requirement for the diagnosis of BED, highlighting the psychological aspect of the disorder.",
       "kn": "KN36",
-      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
+      "kn_explanation": "This question evaluates detailed knowledge of diagnostic criteria distinguishing feeding disorders (assessment and diagnosis, KN36).",
       "difficulty": "medium",
-      "quality_comment": "Options are plausible and reflect common misunderstandings, making the question effective for testing genetic knowledge.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis : Psychopathology/5 Neurocognitive Disorders.json",
-      "domain": 1,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis : Psychopathology/5 Neurocognitive Disorders.json::3",
+      "quality_comment": "Distractors are accurate DSM criteria for BED except for the compensatory behavior item, making this an effective question on diagnostic differentiation.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Eating, Sleep, and Elimination.json",
+      "domain": 36,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Eating, Sleep, and Elimination.json::12",
       "scored": true
     },
     {
@@ -1061,22 +1062,22 @@
       "scored": true
     },
     {
-      "stem": "Which form of racism is characterized by subtle, often unconscious negative feelings toward minority groups while maintaining a non-prejudiced self-image and a belief in equality?",
+      "stem": "Which of the following is an example of unintentional covert racism?",
       "options": [
-        "Symbolic racism",
-        "Aversive racism",
-        "Ambivalent racism",
-        "Overt racism"
+        "Openly stating discriminatory beliefs",
+        "Providing a socially acceptable excuse for prejudiced behavior",
+        "Avoiding contact with minority group members without awareness of harm caused",
+        "Engaging in hate crimes"
       ],
-      "answer": "Aversive racism",
-      "explanation": "1. **Aversive racism** is the correct answer because it is characterized by individuals who hold a non-prejudiced self-image and a belief in equality while simultaneously harboring subtle, often unconscious negative feelings about minority groups. This form of racism leads to avoidance of interactions with minority members unless the individual can justify their discrimination on a basis other than race, reflecting an internal conflict between egalitarian beliefs and negative feelings.\n\n2. **Symbolic racism** is incorrect because it involves a belief in egalitarianism paired with the perception that minority groups violate traditional values, leading to opposition against policies aimed at promoting equality, rather than subtle negative feelings. **Ambivalent racism** is not the correct answer because it describes individuals who possess both positive and negative attitudes toward minority groups, resulting in emotional tension, rather than solely unconscious negative feelings. **Overt racism** is wrong as it refers to openly hostile and aggressive attitudes toward minority groups, which is a direct contrast to the subtlety and ambiguity of aversive racism.",
+      "answer": "Avoiding contact with minority group members without awareness of harm caused",
+      "explanation": "1. \"Avoiding contact with minority group members without awareness of harm caused\" is the correct answer because it exemplifies unintentional covert racism, where individuals do not consciously recognize the negative impact of their actions. This behavior aligns with the definition of unintentional covert racism, as it involves acting in ways that may harm minority group members without the individual being aware of their prejudiced attitudes or the consequences of their actions.\n\n2. \n- \"Openly stating discriminatory beliefs\" is incorrect because this behavior represents overt racism, which is characterized by openly hostile attitudes and actions against minority groups, rather than subtle or unintentional forms of racism.\n- \"Providing a socially acceptable excuse for prejudiced behavior\" is incorrect because this describes intentional covert racism, where individuals are aware of their prejudiced attitudes and attempt to mask them with justifications, rather than acting without awareness.\n- \"Engaging in hate crimes\" is incorrect because hate crimes involve explicit and intentional acts of violence or discrimination against individuals based on their race or ethnicity, which is a clear manifestation of overt racism rather than covert or unintentional racism.",
       "kn": "KN20",
-      "kn_explanation": "The question pertains to a nuanced form of bias relevant to the causes and manifestations of oppression (KN20).",
-      "difficulty": "hard",
-      "quality_comment": "The choices are conceptually specific and require detailed content knowledge, making this appropriate for advanced testing.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Prosocial Behavior and Prejudice-Discrimination.json",
-      "domain": 3,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Prosocial Behavior and Prejudice-Discrimination.json::5",
+      "kn_explanation": "This item examines subtle forms of racism and their manifestations, fitting causes and manifestations of oppression (KN20).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors contrast intentionality and manifestation types, improving discrimination in specialized content.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Helping and Hurting.json",
+      "domain": 20,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Helping and Hurting.json::12",
       "scored": false
     },
     {
@@ -1099,22 +1100,22 @@
       "scored": false
     },
     {
-      "stem": "Which of the following best describes the role of biases and base rates in the interpretation of assessment data for mood disorders?",
+      "stem": "When using banding as a selection technique, what assumption about test scores is central to its application?",
       "options": [
-        "Ignoring base rates improves diagnostic accuracy in low-prevalence disorders.",
-        "Availability heuristic can lead clinicians to overdiagnose rare mood disorders after recent cases.",
-        "Confirmation bias encourages clinicians to consider all contradictory evidence.",
-        "High base rates of a disorder should generally lower the estimated likelihood of diagnosis."
+        "That all scores within a band represent identical true ability levels",
+        "That small score differences within a band are due to measurement error rather than meaningful differences",
+        "That higher raw scores always indicate superior ability regardless of error",
+        "That test scores should be converted to percentile ranks before banding"
       ],
-      "answer": "Availability heuristic can lead clinicians to overdiagnose rare mood disorders after recent cases.",
-      "explanation": "1. The correct answer, \"Availability heuristic can lead clinicians to overdiagnose rare mood disorders after recent cases,\" highlights how recent exposure to cases can skew a clinician's perception of the prevalence of mood disorders. When clinicians encounter unusual cases frequently, they may mistakenly perceive these disorders as more common than they are, leading to overdiagnosis. This cognitive bias occurs because the availability heuristic relies on easily recalled examples rather than statistical base rates, which are critical for accurate diagnosis.\n\n2. The option \"Ignoring base rates improves diagnostic accuracy in low-prevalence disorders\" is incorrect because disregarding base rates can lead to misdiagnosis; clinicians should consider prevalence to avoid overestimating the likelihood of rare disorders. The statement \"Confirmation bias encourages clinicians to consider all contradictory evidence\" is misleading, as confirmation bias actually leads clinicians to favor information that supports their initial hypotheses while ignoring contradictory evidence. Lastly, \"High base rates of a disorder should generally lower the estimated likelihood of diagnosis\" is incorrect because higher base rates typically increase the likelihood of diagnosis; clinicians should adjust their estimates based on the prevalence of the disorder in the population.",
+      "answer": "That small score differences within a band are due to measurement error rather than meaningful differences",
+      "explanation": "1. The correct answer, \"That small score differences within a band are due to measurement error rather than meaningful differences,\" reflects the foundational assumption of banding in selection techniques. Banding posits that minor variations in test scores may not accurately reflect true differences in ability due to the inherent unreliability of the test. Therefore, candidates with scores that fall within the same band are considered equivalent, allowing for a more equitable selection process that accounts for potential measurement errors.\n\n2. The option \"That all scores within a band represent identical true ability levels\" is incorrect because banding acknowledges that while scores within a band are treated as equivalent, they may not reflect identical true abilities; rather, they are seen as potentially influenced by measurement error. The statement \"That higher raw scores always indicate superior ability regardless of error\" is wrong because banding specifically addresses the unreliability of test scores, suggesting that not all higher scores are indicative of true ability due to possible measurement error. Lastly, the option \"That test scores should be converted to percentile ranks before banding\" is incorrect because the banding process does not necessitate the conversion of scores to percentile ranks; it focuses on grouping scores based on their standard error of measurement without altering their original format.",
       "kn": "KN37",
-      "kn_explanation": "This question addresses evidence-based interpretation of data, including the effects of cognitive biases and base rates on clinical decision-making (KN37).",
+      "kn_explanation": "This question is best aligned with KN37 because it tests Factors influencing evidence-based interpretation of data and decision-making (e.g., base rates, group differences, cultural biases and differences, heuristics).",
       "difficulty": "medium",
-      "quality_comment": "The question effectively assesses clinical reasoning and awareness of cognitive biases during assessment.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis : Psychopathology/5 Bipolar and Depressive Disorders.json",
-      "domain": 5,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis : Psychopathology/5 Bipolar and Depressive Disorders.json::15",
+      "quality_comment": "The distractors address common misunderstandings, requiring examinees to grasp measurement concepts underlying banding.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Interpreting Scores.json",
+      "domain": 37,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 Interpreting Scores.json::18",
       "scored": true
     },
     {
@@ -1232,22 +1233,22 @@
       "scored": true
     },
     {
-      "stem": "What type of scoring does the Kuder Occupational Interest Survey (KOIS) use given its forced-choice item format?",
+      "stem": "Which of the following best describes content validity in psychological testing?",
       "options": [
-        "Norm-referenced scoring",
-        "Ipsative scoring",
-        "Criterion-referenced scoring",
-        "Percentile scoring"
+        "The degree to which a test measures what it intends to by sampling items representative of the domain",
+        "The correlation of test scores with an external behavioral criterion",
+        "The degree to which test items appear valid to examinees",
+        "The degree to which test scores correlate highly with scores on unrelated constructs"
       ],
-      "answer": "Ipsative scoring",
-      "explanation": "1. **Ipsative scoring** is the correct answer for the Kuder Occupational Interest Survey (KOIS) because the test employs a forced-choice format where examinees select their most and least preferred activities from sets of three options. This method yields ipsative scores that allow for comparisons of an individual's preferences within themselves, rather than against a normative group, which is characteristic of ipsative scoring.\n\n2. The other options are incorrect for the following reasons:\n\n- **Norm-referenced scoring** compares an individual's scores to a normative sample, which is not applicable in the KOIS due to its ipsative nature that focuses on individual preferences rather than group comparisons.\n  \n- **Criterion-referenced scoring** evaluates an individual's performance against a specific criterion or standard, rather than comparing preferences within the individual, which does not align with the KOIS's forced-choice design.\n  \n- **Percentile scoring** indicates the percentage of scores in a normative sample that fall below a given score, which is not relevant for the KOIS as it does not provide comparisons to a normative group but rather focuses on intra-individual comparisons.",
+      "answer": "The degree to which a test measures what it intends to by sampling items representative of the domain",
+      "explanation": "1. The correct answer, \"The degree to which a test measures what it intends to by sampling items representative of the domain,\" accurately describes content validity because it emphasizes the importance of defining the domain to be assessed and ensuring that test items represent that domain effectively. Content validity is established through a systematic review by subject matter experts to confirm that the test items address all critical aspects of the intended content area.\n\n2. The option \"The correlation of test scores with an external behavioral criterion\" is incorrect because it describes criterion-related validity, which assesses how test scores relate to an external standard rather than the internal content of the test. The option \"The degree to which test items appear valid to examinees\" is incorrect because it refers to face validity, which is about the superficial appearance of validity rather than the actual representative sampling of the content domain. Lastly, the option \"The degree to which test scores correlate highly with scores on unrelated constructs\" is incorrect because it pertains to divergent validity, which aims to show low correlations with unrelated constructs, not high correlations.",
       "kn": "KN29",
-      "kn_explanation": "This question addresses test scoring methods and characteristics of specific assessments, central to psychometric theories and test interpretation (KN29).",
+      "kn_explanation": "This question focuses on test construction and validity evidence, topics central to psychometric theories and test characteristics (KN29).",
       "difficulty": "medium",
-      "quality_comment": "Distractors correctly represent other common scoring methods, making the distractors credible and the question effective for testing knowledge of scoring types.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Interest Inventories.json",
-      "domain": 5,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Interest Inventories.json::1",
+      "quality_comment": "The question clearly differentiates content validity from other forms, and distractors are plausible, enhancing discriminability in an exam setting.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 What Tests Measure.json",
+      "domain": 29,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Test Construction/5 What Tests Measure.json::1",
       "scored": true
     },
     {
@@ -1631,22 +1632,22 @@
       "scored": true
     },
     {
-      "stem": "Which supervision model is conceptually aligned with humanistic therapies' emphasis on authentic therapist-client relationships and genuineness?",
+      "stem": "In Freudian psychoanalysis, what is the initial step in the process of analysis that involves helping clients recognize previously unconscious behaviors?",
       "options": [
-        "Behavioral skills training",
-        "Psychoanalytic supervision focusing on transference analysis",
-        "Developmental models emphasizing growth and authenticity",
-        "Adlerian supervision focused on social interest and encouragement"
+        "Clarification",
+        "Interpretation",
+        "Confrontation",
+        "Working through"
       ],
-      "answer": "Developmental models emphasizing growth and authenticity",
-      "explanation": "1. \"Developmental models emphasizing growth and authenticity\" is the correct answer because humanistic therapies, such as person-centered therapy, prioritize the authenticity of the therapist-client relationship and focus on personal growth. These models align with the humanistic emphasis on fostering a genuine connection that supports the client’s journey towards self-actualization and becoming a fully functioning person.\n\n2. \n- **Behavioral skills training**: This option is incorrect as it focuses on teaching specific skills and behaviors rather than fostering an authentic therapeutic relationship or personal growth, which are central to humanistic therapies.\n  \n- **Psychoanalytic supervision focusing on transference analysis**: This is incorrect because psychoanalytic supervision emphasizes understanding unconscious processes and transference dynamics rather than the authenticity and growth-oriented aspects of the therapist-client relationship found in humanistic approaches.\n\n- **Adlerian supervision focused on social interest and encouragement**: This option is incorrect as Adlerian supervision, while it values social interest and encouragement, does not specifically emphasize the authenticity of the therapist-client relationship in the same way that humanistic therapies do.",
+      "answer": "Confrontation",
+      "explanation": "1. \"Confrontation\" is the correct answer because it is the initial step in Freudian psychoanalysis that involves helping clients recognize behaviors they have been unaware of, including those that are unconscious. This step aims to bring these behaviors into the client's conscious awareness, which is essential for understanding the underlying conflicts contributing to their psychological issues.\n\n2. The option \"Clarification\" is incorrect because it follows confrontation; it focuses on bringing the causes of behaviors into sharper focus by separating important details from extraneous material rather than initially recognizing unconscious behaviors. \"Interpretation\" is also incorrect, as it is a subsequent step where the therapist explicitly links conscious behaviors to unconscious processes, building on the awareness established during confrontation. Lastly, \"Working through\" is incorrect because it refers to the gradual process of integrating new insights into the client's life after they have gained awareness and understanding, which occurs later in the therapeutic process.",
       "kn": "KN43",
       "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
       "difficulty": "hard",
-      "quality_comment": "The question extends the domain by bridging supervision theories with therapy style, enhancing integration relevant to advanced EPPP candidates.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Treatment, Intervention, and Prevention : Clinical Psychology/6 Psychodynamic and Humanistic Therapies.json",
-      "domain": 6,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Treatment, Intervention, and Prevention : Clinical Psychology/6 Psychodynamic and Humanistic Therapies.json::15",
+      "quality_comment": "Options are closely related analytic steps, requiring detailed knowledge suitable for a challenging EPPP question.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Psychodynamic and Humanistic Therapies.json",
+      "domain": 43,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Psychodynamic and Humanistic Therapies.json::18",
       "scored": false
     },
     {
@@ -2543,22 +2544,22 @@
       "scored": true
     },
     {
-      "stem": "Which sociodemographic factor is among the best predictors of a decreased risk for divorce?",
+      "stem": "What is epigenetics primarily concerned with in the study of development?",
       "options": [
-        "Younger age at time of marriage",
-        "Presence of a child before marriage",
-        "Higher socioeconomic status",
-        "Younger age at first cohabitation"
+        "Changes in gene expression without alteration of the DNA sequence",
+        "Mutations in DNA sequence causing permanent genetic changes",
+        "Inheritance of mitochondrial DNA exclusively from the mother",
+        "The direct transmission of traits through dominant and recessive genes"
       ],
-      "answer": "Higher socioeconomic status",
-      "explanation": "1. **Higher socioeconomic status** is the correct answer because research indicates that individuals from higher socioeconomic groups experience a decreased risk for divorce compared to those from lower socioeconomic backgrounds. This correlation suggests that financial stability and resources associated with higher socioeconomic status may contribute to more stable marital relationships, reducing stressors that can lead to divorce.\n\n2. The option **younger age at time of marriage** is incorrect because studies have shown that the risk for divorce actually increases with younger age at marriage, indicating that marrying at an older age is a protective factor against divorce. The option **presence of a child before marriage** is wrong as it is associated with a greater risk for divorce, not a decrease, since couples who have children before marriage often face additional stress and challenges. Lastly, **younger age at first cohabitation** is incorrect because initial studies found that cohabiting before marriage was linked to higher rates of divorce, suggesting that younger cohabitation is a risk factor rather than a protective one.",
+      "answer": "Changes in gene expression without alteration of the DNA sequence",
+      "explanation": "1. The correct answer, \"Changes in gene expression without alteration of the DNA sequence,\" accurately reflects the definition of epigenetics as outlined in the reference material. Epigenetics studies modifications that affect how genes are expressed without changing the actual genetic code (DNA). This means that environmental factors can lead to changes in phenotype through mechanisms like DNA methylation, which can influence gene expression while keeping the underlying DNA sequence intact.\n\n2. The first incorrect option, \"Mutations in DNA sequence causing permanent genetic changes,\" is wrong because epigenetics focuses on changes in gene expression rather than permanent alterations to the DNA sequence itself. The second incorrect option, \"Inheritance of mitochondrial DNA exclusively from the mother,\" is incorrect as it pertains to a specific type of genetic inheritance rather than the broader concept of gene expression changes studied in epigenetics. Lastly, the option \"The direct transmission of traits through dominant and recessive genes\" is also incorrect because it describes classical genetics, which involves the transmission of traits based on genetic inheritance patterns, rather than the regulatory processes of gene expression emphasized in epigenetics.",
       "kn": "KN22",
       "kn_explanation": "This question is best aligned with KN22 because it tests Influence of individual-environment interaction on development over time (e.g., the relationship between the individual and the social, academic, work, community environment).",
       "difficulty": "medium",
-      "quality_comment": "The options are balanced and plausible, making discrimination among choices clear and appropriate.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 School and Family Influences.json",
-      "domain": 4,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 School and Family Influences.json::2",
+      "quality_comment": "Distractors are relevant genetic concepts but distinct enough to test knowledge of epigenetic mechanisms effectively.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Heredity and Environment.json",
+      "domain": 22,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Heredity and Environment.json::5",
       "scored": true
     },
     {
@@ -2809,22 +2810,22 @@
       "scored": true
     },
     {
-      "stem": "Which supervision model focuses on understanding and integrating the supervisor and supervisee's interpersonal dynamics to improve therapy outcomes?",
+      "stem": "Kelly’s personal construct therapy primarily assists clients by helping them:",
       "options": [
-        "Developmental model",
-        "Integrative model",
-        "Psychodynamic model",
-        "Behavioral model"
+        "Identify and change unconscious id impulses",
+        "Contemplate existential concerns about death and freedom",
+        "Identify and replace maladaptive bipolar dimensions of meaning",
+        "Increase unconditional positive regard and self-acceptance"
       ],
-      "answer": "Psychodynamic model",
-      "explanation": "1. The **psychodynamic model** is the correct answer because it emphasizes understanding and integrating the interpersonal dynamics between the supervisor and supervisee. This model focuses on the relational aspects of supervision, including transference and countertransference, which can significantly impact therapy outcomes by enhancing the supervisee's self-awareness and therapeutic effectiveness.\n\n2. The **developmental model** is incorrect because it primarily focuses on the growth and progression of the supervisee's skills and competencies over time, rather than the interpersonal dynamics between supervisor and supervisee. The **integrative model** is not the correct choice as it aims to combine various theoretical approaches and techniques in supervision, without specifically emphasizing the understanding of interpersonal dynamics. Lastly, the **behavioral model** is wrong because it concentrates on observable behaviors and the application of behavioral techniques in supervision, rather than exploring the deeper relational aspects that influence therapeutic outcomes.",
-      "kn": "KN52",
-      "kn_explanation": "Addresses supervision theories and models relevant to clinical psychology practice (KN52).",
+      "answer": "Identify and replace maladaptive bipolar dimensions of meaning",
+      "explanation": "1. The correct answer, \"Identify and replace maladaptive bipolar dimensions of meaning,\" aligns with Kelly's personal construct therapy, which focuses on how individuals perceive and interpret events through personal constructs—bipolar dimensions of meaning. This therapy emphasizes that by recognizing and altering maladaptive constructs, clients can alleviate undesirable behaviors and outcomes, thus enhancing their psychological well-being.\n\n2. The option \"Identify and change unconscious id impulses\" is incorrect because personal construct therapy does not focus on unconscious drives or impulses, but rather on conscious perceptions and interpretations of experiences. \"Contemplate existential concerns about death and freedom\" is also wrong, as this approach is characteristic of existential therapies, which address such ultimate concerns rather than the cognitive constructs emphasized in personal construct therapy. Lastly, \"Increase unconditional positive regard and self-acceptance\" is not applicable, as this is a central goal of person-centered therapy, not personal construct therapy, which prioritizes the identification and modification of personal constructs over the provision of unconditional positive regard.",
+      "kn": "KN43",
+      "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
       "difficulty": "medium",
-      "quality_comment": "The options comprise known supervision models, testing candidate recognition of model focus areas appropriately.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Treatment, Intervention, and Prevention : Clinical Psychology/6 Prevention, Consultation, and Psychotherapy Research.json",
-      "domain": 6,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Treatment, Intervention, and Prevention : Clinical Psychology/6 Prevention, Consultation, and Psychotherapy Research.json::16",
+      "quality_comment": "Distractors reflect concepts from other therapies, which is helpful to discern correct personal construct therapy principles.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Psychodynamic and Humanistic Therapies.json",
+      "domain": 43,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Psychodynamic and Humanistic Therapies.json::17",
       "scored": true
     },
     {
@@ -3132,22 +3133,22 @@
       "scored": true
     },
     {
-      "stem": "In studies on children of divorced parents, which factor has been found to have as much or greater impact on child adjustment than divorce itself?",
+      "stem": "Which environmental factors have been identified as causing epigenetic changes during prenatal development?",
       "options": [
-        "The frequency of contact with nonresident fathers",
-        "The quality of the parent-child relationship and socioeconomic status",
-        "Age at time of parental divorce",
-        "Gender of the child"
+        "Maternal diet, teratogenic medications, infections, tobacco use, and alcohol consumption",
+        "Physical exercise, trauma, drug use, and environmental toxins",
+        "Genetic mutations and chromosomal abnormalities",
+        "Only genetic inheritance without environmental influence"
       ],
-      "answer": "The quality of the parent-child relationship and socioeconomic status",
-      "explanation": "1. **Correct Answer Explanation**: The quality of the parent-child relationship and socioeconomic status are critical factors influencing child adjustment following divorce. Research indicates that children from low-income families often experience increased risks for academic, behavioral, and emotional problems, primarily due to the financial hardships that follow divorce, particularly affecting custodial mothers. Additionally, a strong parent-child relationship can mitigate the negative effects of divorce, highlighting its importance in child adjustment.\n\n2. **Incorrect Options**:\n   - **The frequency of contact with nonresident fathers**: While contact with nonresident fathers is relevant, research shows that factors such as the father's payment of child support and the quality of the father-child relationship are more significant in affecting children's outcomes than the frequency of contact alone.\n   - **Age at time of parental divorce**: Although age at the time of divorce can influence child outcomes, it does not consistently have as much impact as the quality of the parent-child relationship and socioeconomic status, which are more critical determinants of adjustment.\n   - **Gender of the child**: Gender differences in adjustment exist, but the overall quality of parenting and socioeconomic context are more influential on children's adjustment than gender alone.",
+      "answer": "Maternal diet, teratogenic medications, infections, tobacco use, and alcohol consumption",
+      "explanation": "1. The correct answer, \"Maternal diet, teratogenic medications, infections, tobacco use, and alcohol consumption,\" is supported by the reference material, which identifies these factors as potential causes of epigenetic changes during prenatal development. Specifically, it mentions that maternal diet and exposure to teratogenic medications, as well as infections, tobacco, and alcohol, can trigger changes in gene expression that may lead to lasting effects on the developing fetus.\n\n2. The first incorrect option, \"Physical exercise, trauma, drug use, and environmental toxins,\" is wrong because while some of these factors can influence development postnatally, the reference material specifically lists the factors affecting prenatal epigenetic changes as maternal diet, teratogenic medications, infections, tobacco, and alcohol. The second incorrect option, \"Genetic mutations and chromosomal abnormalities,\" is incorrect because it pertains to changes in genetic code rather than epigenetic modifications, which involve alterations in gene expression without changing the DNA sequence. Lastly, the option \"Only genetic inheritance without environmental influence\" is incorrect because the reference material emphasizes that both genetic and environmental factors contribute to development, highlighting the significant role of environmental influences in epigenetic changes.",
       "kn": "KN22",
       "kn_explanation": "This question is best aligned with KN22 because it tests Influence of individual-environment interaction on development over time (e.g., the relationship between the individual and the social, academic, work, community environment).",
       "difficulty": "medium",
-      "quality_comment": "Distractors are plausible but the correct option captures demonstrated environmental influences well.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 School and Family Influences.json",
-      "domain": 4,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 School and Family Influences.json::5",
+      "quality_comment": "Distractors include postnatal and genetic-only factors, enabling testers to distinguish prenatal environmental epigenetic influences.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Heredity and Environment.json",
+      "domain": 22,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Heredity and Environment.json::8",
       "scored": true
     },
     {
@@ -3208,22 +3209,22 @@
       "scored": true
     },
     {
-      "stem": "At what age do infants typically begin to recognize and categorize facial expressions of emotion, and show a shift in preference toward fearful expressions?",
+      "stem": "A child is diagnosed with phenylketonuria (PKU). Which of the following is the most accurate inheritance pattern and key management strategy?",
       "options": [
-        "Immediately after birth",
-        "2 to 3 months",
-        "5 to 7 months",
-        "12 to 18 months"
+        "Autosomal dominant; gene therapy to replace defective gene",
+        "X-linked recessive; enzyme replacement therapy",
+        "Autosomal recessive; lifelong phenylalanine-restricted diet",
+        "Mitochondrial inheritance; supportive care only"
       ],
-      "answer": "5 to 7 months",
-      "explanation": "1. The correct answer, \"5 to 7 months,\" is supported by research indicating that infants do not reliably discriminate between facial expressions until this age. During this period, they begin to categorize emotions, recognizing similarities in facial expressions and showing a shift in preference toward fearful expressions, which is attributed to their increasing exposure to various emotional expressions (Xie et al., 2019).\n\n2. The option \"Immediately after birth\" is incorrect because research shows that infants are not capable of recognizing or categorizing facial expressions right after birth; they require time to develop this ability. \"2 to 3 months\" is also incorrect, as studies indicate that while infants may show some basic responses to emotions, they do not reliably categorize facial expressions until around 5 to 7 months. Lastly, \"12 to 18 months\" is incorrect because by this age, infants have already developed the ability to recognize and categorize facial expressions, and the shift in preference toward fearful expressions occurs earlier, around 7 months.",
+      "answer": "Autosomal recessive; lifelong phenylalanine-restricted diet",
+      "explanation": "1. The correct answer is \"Autosomal recessive; lifelong phenylalanine-restricted diet\" because phenylketonuria (PKU) is caused by two autosomal recessive genes, requiring a child to inherit the PKU gene from both parents to manifest the disorder. The key management strategy for PKU is a lifelong diet low in phenylalanine, as this amino acid cannot be adequately metabolized by individuals with PKU, leading to severe health issues if not managed.\n\n2. The option \"Autosomal dominant; gene therapy to replace defective gene\" is incorrect because PKU is not caused by a dominant gene; it requires both parents to pass the recessive gene for the child to develop the disorder. The option \"X-linked recessive; enzyme replacement therapy\" is wrong because PKU is not an X-linked disorder; it is autosomal, and enzyme replacement therapy is not a recognized treatment for PKU. Lastly, \"Mitochondrial inheritance; supportive care only\" is incorrect because PKU does not follow mitochondrial inheritance patterns, and while supportive care is important, the primary management involves dietary restrictions rather than just supportive care.",
       "kn": "KN25",
       "kn_explanation": "This question is best aligned with KN25 because it tests Family development, configuration, and functioning and their impact on the individual across the lifespan.",
       "difficulty": "medium",
-      "quality_comment": "Distractors reflect plausible developmental timelines; the stem is precise, making this a well-constructed developmental question.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Socioemotional Development – Attachment, Emotions, and Social Relationships.json",
-      "domain": 2,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Growth & Lifespan Development/4 Socioemotional Development – Attachment, Emotions, and Social Relationships.json::4",
+      "quality_comment": "The options reflect different inheritance and management strategies, requiring understanding of both genetics and treatment principles.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Before Birth.json",
+      "domain": 25,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Before Birth.json::14",
       "scored": true
     },
     {
@@ -3455,41 +3456,41 @@
       "scored": true
     },
     {
-      "stem": "Which cognitive assessment is based on the PASS theory, measuring planning, attention, simultaneous, and successive processing in children aged 5 to 18 years?",
+      "stem": "Which of the following theories of intelligence emphasizes planning, attention, simultaneous processing, and sequential processing as four interdependent functions?",
       "options": [
-        "Cognitive Assessment System, Second Edition (CAS2)",
-        "Kaufman Assessment Battery for Children, Second Edition (KABC-II)",
-        "Leiter International Performance Scale-Third Edition (Leiter-3)",
-        "Columbia Mental Maturity Scale-Third Edition (CMMS)"
+        "Das, Naglieri, and Kirby's PASS theory",
+        "Gardner's Theory of Multiple Intelligences",
+        "Sternberg's Triarchic Theory of Successful Intelligence",
+        "Spearman's Two-Factor Theory"
       ],
-      "answer": "Cognitive Assessment System, Second Edition (CAS2)",
-      "explanation": "1. The **Cognitive Assessment System, Second Edition (CAS2)** is the correct answer because it is explicitly described as a measure of cognitive processing abilities for individuals aged 5 to 18 years, based on the PASS cognitive/neurological theory. This theory identifies four cognitive functions: planning, attention, simultaneous processing, and successive processing, which are directly assessed by the CAS2.\n\n2. \n- The **Kaufman Assessment Battery for Children, Second Edition (KABC-II)** is incorrect because, while it assesses cognitive abilities in children aged 3 to 18 years, it is designed to be culturally fair and does not specifically utilize the PASS theory framework.\n- The **Leiter International Performance Scale-Third Edition (Leiter-3)** is also incorrect as it is a nonverbal measure of cognitive abilities for individuals aged 3 to 75+ years, focusing on fluid intelligence without reference to the PASS theory.\n- The **Columbia Mental Maturity Scale-Third Edition (CMMS)** is incorrect because it measures general reasoning ability specifically for children aged 3:6 through 9:11 and does not incorporate the four cognitive functions outlined in the PASS theory.",
+      "answer": "Das, Naglieri, and Kirby's PASS theory",
+      "explanation": "1. \"Das, Naglieri, and Kirby's PASS theory\" is the correct answer because it specifically identifies four interdependent functions of intelligence: planning, attention, simultaneous processing, and sequential processing. This theory is rooted in Luria's research on cognitive functions and emphasizes how these functions interact with a person's knowledge to facilitate intelligent behavior.\n\n2. The incorrect options are as follows: \n- **Gardner's Theory of Multiple Intelligences** focuses on the existence of multiple distinct intelligences that vary in strength among individuals, rather than interdependent cognitive functions.\n- **Sternberg's Triarchic Theory of Successful Intelligence** comprises three components—analytical, creative, and practical intelligence—rather than the four functions outlined in the PASS theory.\n- **Spearman's Two-Factor Theory** distinguishes between a general intelligence factor (g) and specific factors (s) affecting performance on cognitive tasks, without addressing the specific functions of planning, attention, simultaneous processing, and sequential processing.",
       "kn": "KN32",
       "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
       "difficulty": "medium",
-      "quality_comment": "The question focuses on distinguishing a specific test based on theoretical underpinnings, with well-balanced answer choices covering similar age ranges and functions.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Other Measures of Cognitive Ability.json",
-      "domain": 2,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Other Measures of Cognitive Ability.json::0",
+      "quality_comment": "Distractor theories are well-known and plausible but distinct; this tests precise recognition of the PASS theory.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 IQ Tests.json",
+      "domain": 32,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 IQ Tests.json::18",
       "scored": true
     },
     {
-      "stem": "Which statement best characterizes the Rancho Scale of Cognitive Functioning (Revised)?",
+      "stem": "Which personality assessment is based on the assumption that important personality traits are encoded in the English language and uses factor analysis to identify both primary and global traits?",
       "options": [
-        "It quantifies severity of depression during neurorehabilitation.",
-        "It assesses adaptive behavior from birth to 90 years of age.",
-        "It rates levels of cognitive recovery after head injury across ten levels.",
-        "It measures visual memory deficits in children over 8 years."
+        "Sixteen Personality Factor Questionnaire (16 PF)",
+        "NEO Personality Inventory-3 (NEO-PI-3)",
+        "Myers-Briggs Type Indicator (MBTI)",
+        "Edwards Personal Preference Schedule (EPPS)"
       ],
-      "answer": "It rates levels of cognitive recovery after head injury across ten levels.",
-      "explanation": "1. The correct answer, \"It rates levels of cognitive recovery after head injury across ten levels,\" accurately describes the Rancho Scale of Cognitive Functioning Revised. This scale evaluates cognitive recovery in patients following a head injury by categorizing their level of response and assistance needs into ten distinct levels, ranging from unresponsive to purposeful and appropriate responses.\n\n2. The incorrect options are as follows:\n- \"It quantifies severity of depression during neurorehabilitation.\" This statement is incorrect because the Rancho Scale does not assess depression; it focuses specifically on cognitive recovery levels after brain injury.\n- \"It assesses adaptive behavior from birth to 90 years of age.\" This option is wrong as it describes the Vineland Adaptive Behavior Scales, not the Rancho Scale, which is specifically aimed at cognitive functioning post-injury.\n- \"It measures visual memory deficits in children over 8 years.\" This statement is incorrect because it pertains to tests like the Benton Visual Retention Test, while the Rancho Scale evaluates cognitive recovery levels, not visual memory.",
+      "answer": "Sixteen Personality Factor Questionnaire (16 PF)",
+      "explanation": "1. The \"Sixteen Personality Factor Questionnaire (16 PF)\" is the correct answer because it was developed by Cattell using the lexical strategy, which posits that important personality traits are encoded in language. Cattell employed factor analysis to distill a large number of personality descriptors into 16 primary traits and five broader global traits, effectively identifying both specific and overarching aspects of personality.\n\n2. The \"NEO Personality Inventory-3 (NEO-PI-3)\" is incorrect because, while it also uses a lexical approach and factor analysis, it focuses specifically on the Big Five personality traits rather than identifying a broader range of primary and global traits like the 16 PF. The \"Myers-Briggs Type Indicator (MBTI)\" is wrong because it is based on Jung’s personality typology and identifies personality types through four bipolar dimensions, rather than deriving traits from language and factor analysis. Lastly, the \"Edwards Personal Preference Schedule (EPPS)\" is incorrect as it assesses basic needs through a forced-choice format, focusing on relative strengths of needs rather than employing factor analysis to identify personality traits.",
       "kn": "KN32",
-      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
+      "kn_explanation": "This question evaluates knowledge of commonly used personality assessment instruments and their theoretical basis.",
       "difficulty": "medium",
-      "quality_comment": "This question effectively discriminates test knowledge relevant to post-injury recovery assessment with plausible distractors describing other clinical measures.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Clinical Tests.json",
-      "domain": 5,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Clinical Tests.json::9",
+      "quality_comment": "Clear stem with well-differentiated options focused on specific test characteristics, appropriate for the EPPP.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Personality Tests.json",
+      "domain": 32,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Personality Tests.json::3",
       "scored": true
     },
     {
@@ -3892,22 +3893,22 @@
       "scored": true
     },
     {
-      "stem": "Which of the following best describes the role of base rates and bias in interpreting conduct disorder assessment data?",
+      "stem": "Dialectical behavior therapy (DBT) for borderline personality disorder includes all the following components EXCEPT:",
       "options": [
-        "Ignoring base rates leads to accurate interpretation of clinical symptoms.",
-        "High prevalence of CD in a population decreases false alarms in diagnosis.",
-        "Availability heuristic may cause overestimation of CD when recent cases are vivid to the assessor.",
-        "Base rates are irrelevant when clinical interviews are comprehensive."
+        "Group skills training to enhance emotion regulation and mindfulness",
+        "Individual psychotherapy focusing on reducing suicidal and therapy-interfering behaviors",
+        "Intersession coaching to generalize skills and repair the therapeutic relationship",
+        "Medication management emphasizing pharmacotherapy for impulsivity"
       ],
-      "answer": "Availability heuristic may cause overestimation of CD when recent cases are vivid to the assessor.",
-      "explanation": "1. The correct answer, \"Availability heuristic may cause overestimation of CD when recent cases are vivid to the assessor,\" reflects how cognitive biases can influence clinical judgment. When assessors are recently exposed to vivid cases of conduct disorder (CD), they may overestimate its prevalence in their evaluations due to the ease with which these examples come to mind, leading to a skewed interpretation of assessment data. This can result in an inflated perception of the disorder's occurrence in the population, affecting diagnosis and treatment decisions.\n\n2. The option \"Ignoring base rates leads to accurate interpretation of clinical symptoms\" is incorrect because disregarding base rates can often lead to misdiagnosis or overdiagnosis, as clinicians may not accurately contextualize symptoms within the larger population. The statement \"High prevalence of CD in a population decreases false alarms in diagnosis\" is misleading; a high prevalence could actually increase the likelihood of false positives if assessors do not consider base rates properly, as they may assume that symptoms are more indicative of CD than they are. Lastly, \"Base rates are irrelevant when clinical interviews are comprehensive\" is incorrect because comprehensive clinical interviews still need to consider base rates to avoid misinterpretation; understanding the prevalence of CD helps clinicians contextualize individual cases within the broader population, ensuring more accurate diagnoses.",
+      "answer": "Medication management emphasizing pharmacotherapy for impulsivity",
+      "explanation": "1. The correct answer is \"Medication management emphasizing pharmacotherapy for impulsivity\" because dialectical behavior therapy (DBT) does not primarily focus on pharmacotherapy. Instead, DBT is a specific type of cognitive-behavioral therapy that emphasizes skills training, individual psychotherapy, and coaching to help clients manage their emotions and behaviors, particularly in the context of borderline personality disorder.\n\n2. The first incorrect option, \"Group skills training to enhance emotion regulation and mindfulness,\" is wrong because group skills training is a fundamental component of DBT designed to teach clients skills for emotion regulation, distress tolerance, and mindfulness. The second incorrect option, \"Individual psychotherapy focusing on reducing suicidal and therapy-interfering behaviors,\" is incorrect because individual therapy is a core aspect of DBT aimed at addressing self-destructive behaviors and enhancing the client’s emotional skills. Lastly, \"Intersession coaching to generalize skills and repair the therapeutic relationship\" is incorrect as intersession coaching is an essential part of DBT that helps clients apply learned skills to real-life situations and supports the therapeutic alliance.",
       "kn": "KN37",
-      "kn_explanation": "This item pertains to evidence-based interpretation of data, biases, and heuristics in assessment (KN37), crucial for accurate diagnosis of conduct disorder.",
+      "kn_explanation": "This question is best aligned with KN37 because it tests Factors influencing evidence-based interpretation of data and decision-making (e.g., base rates, group differences, cultural biases and differences, heuristics).",
       "difficulty": "medium",
-      "quality_comment": "The options include common misunderstandings, allowing clear assessment of knowledge about bias and base rate usage in clinical judgment.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis : Psychopathology/5 Disruptive, Impulse-Control, and Conduct Disorders.json",
-      "domain": 5,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis : Psychopathology/5 Disruptive, Impulse-Control, and Conduct Disorders.json::12",
+      "quality_comment": "Good balance of plausible options reflecting aspects of treatment; distractors are consistent with treatment terminology but clearly differentiated.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Personality.json",
+      "domain": 37,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Personality.json::5",
       "scored": true
     },
     {
@@ -4158,22 +4159,22 @@
       "scored": true
     },
     {
-      "stem": "Which theoretical model of psychopathology emphasizes the role of brain network connectivity disruptions in explaining neurocognitive disorders?",
+      "stem": "What is the primary theoretical basis for dialectical behavior therapy (DBT) in the treatment of borderline personality disorder?",
       "options": [
-        "Biopsychosocial model",
-        "The connectome model",
-        "Psychodynamic model",
-        "Behavioral model"
+        "Behavioral conditioning with reward and punishment",
+        "Emotion dysregulation resulting from biological and environmental factors",
+        "Cognitive distortions and maladaptive beliefs",
+        "Attachment disruptions in early childhood"
       ],
-      "answer": "The connectome model",
-      "explanation": "1. **The connectome model** is the correct answer because it emphasizes the role of disruptions in brain network connectivity, which aligns with the understanding of neurocognitive disorders. These disorders often involve impairments in cognitive functions due to damage or degeneration in specific brain areas and their connections, as indicated by the various neurocognitive disorders discussed, such as Alzheimer’s disease and frontotemporal NCD, which highlight the importance of brain structure and function in cognition.\n\n2. The **biopsychosocial model** is incorrect because it integrates biological, psychological, and social factors in understanding mental health but does not specifically focus on brain connectivity. The **psychodynamic model** is also incorrect as it centers on unconscious processes and early life experiences rather than neurobiological mechanisms. Lastly, the **behavioral model** is incorrect because it emphasizes observable behaviors and learning processes rather than the underlying neural connectivity that contributes to neurocognitive disorders.",
+      "answer": "Emotion dysregulation resulting from biological and environmental factors",
+      "explanation": "1. The correct answer, \"Emotion dysregulation resulting from biological and environmental factors,\" is based on the premise that borderline personality disorder (BPD) is fundamentally linked to difficulties in regulating emotions. According to the reference material, dialectical behavior therapy (DBT) operates under the assumption that these emotional dysregulations stem from a combination of biological vulnerabilities and environmental influences, which makes it essential for treatment to address these underlying issues to help individuals manage their emotions more effectively.\n\n2. The option \"Behavioral conditioning with reward and punishment\" is incorrect because DBT focuses on emotional regulation rather than solely on behavioral modification through rewards and punishments. \"Cognitive distortions and maladaptive beliefs\" is not the primary theoretical basis for DBT, as the therapy emphasizes emotion regulation rather than just addressing cognitive patterns. Lastly, \"Attachment disruptions in early childhood\" is not the correct answer because, while early experiences can influence emotional regulation, DBT specifically targets the dysregulation itself rather than solely focusing on attachment issues.",
       "kn": "KN39",
-      "kn_explanation": "KN39 involves theories and models of psychopathology; the connectome model is relevant for understanding neurocognitive disorder mechanisms.",
-      "difficulty": "hard",
-      "quality_comment": "The question targets advanced integrative theoretical knowledge relevant for understanding neurocognitive disorder etiologies.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis : Psychopathology/5 Neurocognitive Disorders.json",
-      "domain": 5,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis : Psychopathology/5 Neurocognitive Disorders.json::16",
+      "kn_explanation": "This question relates to theoretical models of psychopathology underlying specific personality disorders, fitting well with knowledge of personality disorder theories.",
+      "difficulty": "medium",
+      "quality_comment": "The question highlights foundational theory for an evidence-based treatment, clearly differentiating models of psychopathology.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Personality.json",
+      "domain": 39,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Personality.json::14",
       "scored": false
     },
     {
@@ -4196,22 +4197,22 @@
       "scored": true
     },
     {
-      "stem": "Which test is best suited for assessing visual perception, visual memory, and visuoconstructive abilities through reproduction of geometric figures from memory in individuals aged 8 and older?",
+      "stem": "What is a key characteristic of the forced distribution method in employee performance evaluations?",
       "options": [
-        "Benton Visual Retention Test (BVRT)",
-        "Bender Visual-Motor Gestalt Test",
-        "Stroop Color and Word Test",
-        "Mini-Mental State Exam (MMSE)"
+        "A. It allows for unlimited ratings across all employees.",
+        "B. It requires employees to be ranked within a predetermined distribution curve.",
+        "C. It focuses solely on qualitative feedback.",
+        "D. It eliminates bias in performance ratings."
       ],
-      "answer": "Benton Visual Retention Test (BVRT)",
-      "explanation": "1. The **Benton Visual Retention Test (BVRT)** is the correct answer because it specifically assesses visual perception, visual memory, and visuoconstructive skills by requiring individuals aged 8 and older to reproduce geometric figures from memory. The BVRT includes ten cards with geometric figures that the examinee must remember and accurately reproduce, making it ideal for evaluating these specific cognitive abilities.\n\n2. The **Bender Visual-Motor Gestalt Test** is incorrect because, while it also assesses visual-motor perception and integration, it focuses on copying and recalling geometric designs but is not exclusively aimed at visual perception and memory as the BVRT is. The **Stroop Color and Word Test** is not suitable because it primarily measures cognitive flexibility, selective attention, and response inhibition rather than visual perception or memory. Lastly, the **Mini-Mental State Exam (MMSE)** is inappropriate for this question as it is a screening tool for cognitive impairment that evaluates various cognitive domains, but it does not specifically target visual perception or memory skills like the BVRT does.",
+      "answer": "B. It requires employees to be ranked within a predetermined distribution curve.",
+      "explanation": "Option B is correct because the forced distribution method mandates that employees be ranked according to a specific distribution, often leading to a set percentage of employees being categorized into performance tiers. Options A, C, and D are incorrect as they misrepresent the forced distribution method.",
       "kn": "KN32",
-      "kn_explanation": "This tests knowledge of specific neuropsychological instruments and their appropriate uses in assessing visual memory and perception (KN32).",
+      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
       "difficulty": "medium",
-      "quality_comment": "The question appropriately targets recognition of test purpose with distractors that assess different domains or ages.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Clinical Tests.json",
-      "domain": 5,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Clinical Tests.json::12",
+      "quality_comment": "The question effectively assesses understanding of forced distribution in evaluations.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Cognitive Tests.json",
+      "domain": 32,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Cognitive Tests.json::10",
       "scored": true
     },
     {
@@ -4253,22 +4254,22 @@
       "scored": true
     },
     {
-      "stem": "The phenomenon in which members of stigmatized groups perform more poorly on tasks after exposure to negative group stereotypes is called:",
+      "stem": "According to the reformulated learned helplessness model, a person who attributes a job rejection to the belief that 'I'm incompetent at everything and always will be' is making attributions that are:",
       "options": [
-        "Self-stereotyping",
-        "Stereotype threat",
-        "Scapegoating",
-        "Dehumanization"
+        "External, stable, and global",
+        "Internal, unstable, and specific",
+        "Internal, stable, and global",
+        "External, unstable, and specific"
       ],
-      "answer": "Stereotype threat",
-      "explanation": "1. **Stereotype threat** is the correct answer because it refers to the phenomenon where situational factors activate negative group stereotypes in members of low-status groups, leading to impaired performance on tasks relevant to those stereotypes. This effect occurs when individuals feel the pressure to conform to negative expectations, which can increase stress and reduce cognitive resources necessary for task completion.\n\n2. **Self-stereotyping** is incorrect because it refers to the unconscious internalization of stereotypes that individuals apply to their own group, rather than the performance impairment caused by exposure to negative stereotypes. **Scapegoating** is also incorrect, as it involves members of dominant groups discriminating against weaker target groups to vent frustration, rather than the impact of stereotypes on performance. Lastly, **dehumanization** is wrong because it describes an evaluative stance that denies the humanness of outgroup members, which does not specifically relate to the performance effects caused by stereotype activation in stigmatized groups.",
+      "answer": "Internal, stable, and global",
+      "explanation": "The reformulated learned helplessness model (Abramson, Seligman, & Teasdale) identifies a pessimistic attributional style as the cognitive vulnerability for learned helplessness and depression: attributing negative events to internal ('I'm incompetent'), stable ('always will be'), and global ('at everything') causes. This combination predicts the most pervasive helplessness. External, stable, and global attributions would blame outside forces. Internal, unstable, and specific reflects an optimistic style for negative events. External, unstable, and specific represents the most optimistic attributional pattern for negative events.",
       "kn": "KN14",
-      "kn_explanation": "This question assesses understanding of social cognitive processes leading to discrimination effects, falling under social cognition (KN14).",
+      "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
       "difficulty": "medium",
-      "quality_comment": "The distractors are related concepts that are plausible but distinct, helping differentiate levels of understanding.",
-      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Prosocial Behavior and Prejudice-Discrimination.json",
-      "domain": 3,
-      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Prosocial Behavior and Prejudice-Discrimination.json::6",
+      "quality_comment": "Well-supported by lesson content and tests understanding of the three attribution dimensions in learned helplessness.",
+      "sourceFile": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Why People Do Things.json",
+      "domain": 14,
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Why People Do Things.json::2",
       "scored": true
     },
     {

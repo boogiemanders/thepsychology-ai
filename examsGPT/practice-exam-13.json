@@ -27,7 +27,8 @@
     "generatedAt": "2026-03-26T01:46:50.135Z",
     "source": "questionsGPT",
     "blueprint": "Kns.md",
-    "generator": "scripts/assemble-questionsgpt-exams.mjs"
+    "generator": "scripts/assemble-questionsgpt-exams.mjs",
+    "lastSurgicalFix": "2026-05-10T02:40:10.983Z"
   },
   "questions": [
     {
@@ -94,19 +95,19 @@
       "is_org_psych": false
     },
     {
-      "id": 4,
-      "question": "At what age do children typically begin to show signs of racial awareness, according to child development research?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 School and Family.json::19",
+      "question": "Which factor is most strongly related to better adjustment among stepfathers according to research findings?",
       "options": [
-        "Around 2-3 years",
-        "Infancy",
-        "Adolescence",
-        "Around 5-6 years"
+        "Having stepchildren who are younger than 9 years of age",
+        "Being previously unmarried before current marriage",
+        "Having biological children living in their new households",
+        "Having an authoritarian parenting style"
       ],
-      "correct_answer": "Around 2-3 years",
-      "explanation": "The correct answer is 'Around 2-3 years' as this is when children start to notice and categorize people based on race. The other options do not accurately reflect the typical age for the onset of racial awareness.",
+      "correct_answer": "Having biological children living in their new households",
+      "explanation": "1. The correct answer, \"Having biological children living in their new households,\" is supported by research indicating that stepfathers experience better adjustment when they have their own biological children present. Palisi et al. (1991) found that this factor is most strongly related to positive adjustment in stepfathers, suggesting that the presence of biological children fosters a more stable and supportive family environment.\n\n2. The option \"Having stepchildren who are younger than 9 years of age\" is incorrect because research does not specify age as a significant factor for stepfather adjustment; instead, it highlights the quality of relationships as more crucial. \"Being previously unmarried before current marriage\" is wrong as it does not correlate directly with stepfather adjustment; the emphasis is on the presence of biological children rather than marital history. Lastly, \"Having an authoritarian parenting style\" is incorrect because studies indicate that authoritative parenting styles, rather than authoritarian ones, are associated with better outcomes in stepfamily dynamics.",
       "domain": "Domain 4: Growth & Lifespan Development",
       "knId": "KN22",
-      "source_file": "4 School and Family.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 School and Family.json",
       "source_folder": "4 Development",
       "difficulty": "medium",
       "question_type": "standard",
@@ -115,20 +116,20 @@
       "is_org_psych": false
     },
     {
-      "id": 5,
-      "question": "Which of the following best exemplifies structural racism as defined by the APA?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Concepts.json::9",
+      "question": "A psychologist begins working with an African American family presenting with communication difficulties. Based on culturally responsive treatment guidelines, which therapeutic approach would be MOST appropriate?",
       "options": [
-        "Individual holding and expressing overtly racist views",
-        "Discriminatory hiring practices by a private employer",
-        "A teacher treating students unfairly based on race",
-        "Laws and policies that create race-based inequalities, such as school funding tied to local property taxes"
+        "A strictly psychodynamic approach emphasizing individual intrapsychic conflict",
+        "A multisystems approach that intervenes across individual, family, community, and agency levels",
+        "An exclusively behavioral approach focused on contingency management within the home",
+        "A nondirective Rogerian approach that avoids any structured problem-solving"
       ],
-      "correct_answer": "Laws and policies that create race-based inequalities, such as school funding tied to local property taxes",
-      "explanation": "1. The correct answer, \"Laws and policies that create race-based inequalities, such as school funding tied to local property taxes,\" exemplifies structural racism as defined by the APA because it refers to systemic practices and policies that produce enduring racial disparities. Structural racism encompasses laws and institutional practices that perpetuate inequalities across various domains, including education, as evidenced by funding mechanisms that disadvantage minority communities.\n\n2. The option \"A teacher treating students unfairly based on race\" is incorrect because it describes interpersonal racism, which involves individual behaviors and attitudes rather than systemic practices. \"Individual holding and expressing overtly racist views\" is also incorrect, as this represents overt racism, which is characterized by explicit hostility and discrimination from individuals rather than structural inequalities. Finally, \"Discriminatory hiring practices by a private employer\" is incorrect because it pertains to institutional racism, which is specific to organizational policies rather than broader societal structures that create systemic racial disparities.",
+      "correct_answer": "A multisystems approach that intervenes across individual, family, community, and agency levels",
+      "explanation": "The lesson specifically states that for African American clients, 'Boyd-Franklin recommends multisystems approaches, intervening across individual, family, community, and agency levels.' The lesson also notes that 'African American clients typically prefer egalitarian relationships and problem-solving approaches' and that therapists should consider 'environmental factors (racism, discrimination) may contribute to presenting problems.' Option A is too narrow and individually focused, ignoring systemic factors. Option C addresses only behavioral contingencies without considering broader systems. Option D contradicts the preference for problem-solving approaches.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
-      "knId": "KN20",
-      "source_file": "3 Helping and Hurting.json",
-      "source_folder": "3 Social Psychology",
+      "knId": "KN16",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Concepts.json",
+      "source_folder": "3 Cultural Considerations",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
@@ -556,24 +557,24 @@
       "is_org_psych": true
     },
     {
-      "id": 26,
-      "question": "What ethical consideration is paramount when making parole recommendations for individuals with a history of multiple relationships?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 3 and 4.json::17",
+      "question": "What is the primary ethical concern regarding multiple relationships in psychology?",
       "options": [
-        "Providing recommendations based solely on the individual's criminal history.",
-        "Prioritizing the opinions of family members in the decision-making process.",
-        "Ensuring the individual has access to rehabilitation programs.",
-        "Avoiding conflicts of interest that may impair objectivity."
+        "They are always prohibited.",
+        "They can enhance the therapeutic relationship.",
+        "They may impair objectivity or effectiveness.",
+        "They are encouraged to build rapport with clients."
       ],
-      "correct_answer": "Avoiding conflicts of interest that may impair objectivity.",
-      "explanation": "In parole recommendations, it is crucial to avoid conflicts of interest that could compromise the objectivity of the recommendation. The other options, while relevant, do not address the ethical implications of multiple relationships.",
+      "correct_answer": "They may impair objectivity or effectiveness.",
+      "explanation": "The correct answer highlights the potential risks associated with multiple relationships, which can compromise professional judgment. The other options misrepresent the nature of multiple relationships in a professional context.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
       "knId": "KN64",
-      "source_file": "8 Practice Issues.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 3 and 4.json",
       "source_folder": "8 Ethics",
       "difficulty": "hard",
-      "question_type": "difficult",
+      "question_type": "standard",
       "isScored": false,
-      "type": "experimental",
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -976,19 +977,19 @@
       "is_org_psych": false
     },
     {
-      "id": 46,
-      "question": "According to Cross's model of Black racial identity development, which stage is characterized by a strong sense of pride in one's racial identity and a commitment to the Black community?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Connection.json::3",
+      "question": "In the context of sexual identity development, what characterizes the identity pride stage?",
       "options": [
-        "Immersion-Emersion",
-        "Internalization",
-        "Pre-encounter",
-        "Encounter"
+        "Exploration of sexual orientation",
+        "Acceptance of one's sexual identity",
+        "Integration of sexual identity into overall self-concept",
+        "Public affirmation of sexual identity"
       ],
-      "correct_answer": "Immersion-Emersion",
-      "explanation": "The Immersion-Emersion stage is where individuals experience a strong sense of pride in their racial identity and actively engage with the Black community. The Pre-encounter stage involves a lack of awareness of racial identity, the Encounter stage is marked by a significant event that prompts reflection on race, and the Internalization stage involves a more integrated sense of self. Thus, Immersion-Emersion is the correct answer.",
+      "correct_answer": "Public affirmation of sexual identity",
+      "explanation": "The identity pride stage is characterized by a strong public affirmation of one's sexual identity, often accompanied by pride in that identity. Exploration occurs in earlier stages, while acceptance and integration are part of later stages. Thus, the correct answer is public affirmation of sexual identity.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
       "knId": "KN19",
-      "source_file": "3 Connection.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Connection.json",
       "source_folder": "3 Social Psychology",
       "difficulty": "hard",
       "question_type": "standard",
@@ -1102,20 +1103,20 @@
       "is_org_psych": false
     },
     {
-      "id": 52,
-      "question": "A clinician conducting a differential diagnosis notes that a patient holds bizarre delusions—beliefs that are clearly implausible and outside ordinary human experience (e.g., believing that interdimensional beings have physically replaced his organs without leaving scars). According to DSM-5 criteria, which of the following conditions specifically EXCLUDES bizarre delusions as part of its defining diagnostic requirements?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Personality.json::6",
+      "question": "A key difference between schizotypal and schizoid personality disorders concerning interpersonal relationships is that:",
       "options": [
-        "Delusional disorder",
-        "Schizoaffective disorder",
-        "Schizophrenia",
-        "Brief psychotic disorder"
+        "Schizotypal individuals desire close relationships but avoid them due to social fears, while schizoid individuals lack desire for close relationships.",
+        "Both disorders involve discomfort around others but schizoid individuals experience excessive social anxiety.",
+        "Schizoid individuals express unhappiness about lack of friends, schizotypal individuals do not.",
+        "Schizotypal individuals have eccentric behavior and social deficits, schizoid individuals enjoy close relationships but are detached."
       ],
-      "correct_answer": "Delusional disorder",
-      "explanation": "By DSM-5 definition, delusional disorder requires that the delusions be non-bizarre—that is, they must involve situations that could plausibly occur in real life (e.g., being followed, being poisoned, having a disease, being deceived by a partner). Bizarre delusions, which are implausible by any ordinary real-world standard, rule out the diagnosis of delusional disorder. In contrast, schizophrenia, brief psychotic disorder, and schizoaffective disorder may all include bizarre delusions; notably, in schizophrenia, a single bizarre delusion alone can satisfy Criterion A even in the absence of other psychotic symptoms. This distinction between bizarre and non-bizarre delusions is a high-yield differential diagnosis point on the EPPP.",
+      "correct_answer": "Schizotypal individuals desire close relationships but avoid them due to social fears, while schizoid individuals lack desire for close relationships.",
+      "explanation": "Schizotypal individuals may express discomfort and unhappiness at their lack of relationships due to social anxiety, whereas schizoid individuals generally have limited desire for or pleasure from close relationships.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
       "knId": "KN33",
-      "source_file": "5 Clinical Tests.json",
-      "source_folder": "5 Assessment",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Personality.json",
+      "source_folder": "5 Diagnosis",
       "difficulty": "hard",
       "question_type": "standard",
       "isScored": true,
@@ -1648,19 +1649,19 @@
       "is_org_psych": false
     },
     {
-      "id": 78,
-      "question": "In a crisis situation, what is the primary ethical obligation of a psychologist when offering help?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 1 and 2.json::25",
+      "question": "According to APA's ethical decision-making model described by Fisher (2022), what step comes immediately after identifying relevant laws, regulations, and institutional policies?",
       "options": [
-        "To ensure that their intervention does not violate any laws.",
-        "To provide assistance only if they are being compensated.",
-        "To refer the individual to another professional immediately.",
-        "To act in the best interest of the individual in crisis, even if it means breaching confidentiality."
+        "Consider the perspectives of affected stakeholders",
+        "Identify the ethical problem",
+        "Monitor and evaluate results of the action plan",
+        "Develop and implement an action plan"
       ],
-      "correct_answer": "To act in the best interest of the individual in crisis, even if it means breaching confidentiality.",
-      "explanation": "The correct answer emphasizes the ethical obligation to prioritize the well-being of the individual in crisis, which may necessitate breaching confidentiality. The other options do not align with the ethical imperative to provide immediate help.",
+      "correct_answer": "Consider the perspectives of affected stakeholders",
+      "explanation": "1. \"Consider the perspectives of affected stakeholders\" is the correct answer because it follows the identification of relevant laws, regulations, and institutional policies in Fisher's (2022) ethical decision-making model. This step emphasizes the importance of understanding how the decision will impact various stakeholders, such as clients, colleagues, and the community, ensuring that their perspectives are taken into account before proceeding with any actions.\n\n2. \n- \"Identify the ethical problem\" is incorrect because this step occurs first in the decision-making process, setting the foundation for the subsequent steps.\n- \"Monitor and evaluate results of the action plan\" is wrong as it is the final step in the model, focusing on assessing the outcomes after the action has been implemented rather than before developing an action plan.\n- \"Develop and implement an action plan\" is incorrect because it comes after considering the perspectives of stakeholders; this step involves creating a specific course of action based on the gathered information and stakeholder input.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
       "knId": "KN65",
-      "source_file": "8 Standards 1 and 2.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 1 and 2.json",
       "source_folder": "8 Ethics",
       "difficulty": "medium",
       "question_type": "standard",
@@ -1858,21 +1859,21 @@
       "is_org_psych": false
     },
     {
-      "id": 88,
-      "question": "Which of the following is a protective factor against adolescent substance use?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Bonding and Attachment.json::6",
+      "question": "A psychologist is evaluating risk and protective factors for an 8-year-old child growing up in a high-conflict household with limited financial resources. Which of the following would be considered the STRONGEST protective factor contributing to resilience in this child?",
       "options": [
-        "Parental disapproval of substance use",
-        "Affiliation with substance-involved peers",
-        "Poor academic achievement",
-        "Exposure to stressful life events"
+        "High intelligence quotient (IQ above 130)",
+        "A secure attachment relationship with at least one competent, caring adult",
+        "Enrollment in an academically rigorous private school",
+        "Absence of any diagnosable psychiatric condition"
       ],
-      "correct_answer": "Parental disapproval of substance use",
-      "explanation": "1. \"Parental disapproval of substance use\" is the correct answer because it serves as a protective factor that can help deter adolescents from engaging in substance use. Research indicates that supportive parenting and clear disapproval of substance use can buffer the negative effects of risk factors, such as peer influence and mental health issues, thus promoting healthier choices among adolescents.\n\n2. The option \"Affiliation with substance-involved peers\" is incorrect because associating with peers who engage in substance use increases the likelihood of an adolescent using substances themselves, acting as a risk factor rather than a protective factor. \"Poor academic achievement\" is also incorrect, as it is a risk factor associated with higher rates of substance use, indicating that academic struggles can lead to increased vulnerability to substance abuse. Lastly, \"Exposure to stressful life events\" is wrong because such exposure is a known risk factor that can contribute to higher rates of substance use among adolescents, as it may lead to coping through substance use rather than providing any protective benefit.",
+      "correct_answer": "A secure attachment relationship with at least one competent, caring adult",
+      "explanation": "Research consistently identifies a warm, stable relationship with at least one caring and competent adult as the single most powerful protective factor for children facing adversity. This finding aligns with attachment theory and the broader resilience literature. While higher intelligence can serve as a protective factor, an IQ above 130 specifically is not identified as the strongest protective factor. Attending a rigorous school addresses only one domain and does not provide the relational security that is most critical. The absence of psychiatric diagnosis is not itself a protective factor—it describes the absence of a risk factor, which is conceptually different from the presence of a protective one.",
       "domain": "Domain 4: Growth & Lifespan Development",
       "knId": "KN27",
-      "source_file": "4 Body Growth.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Bonding and Attachment.json",
       "source_folder": "4 Development",
-      "difficulty": "easy",
+      "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
       "type": "standard",
@@ -1963,19 +1964,19 @@
       "is_org_psych": false
     },
     {
-      "id": 93,
-      "question": "In the context of gender identity theories, what is the sequence of gender role development according to social learning theory?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Cognitive Development.json::15",
+      "question": "What is a characteristic of egocentrism in Piaget's preoperational stage of cognitive development?",
       "options": [
-        "Imitation, reinforcement, observation",
-        "Observation, reinforcement, imitation",
-        "Reinforcement, observation, imitation",
-        "Observation, imitation, reinforcement"
+        "Ability to understand others' perspectives",
+        "Difficulty in understanding that others have different viewpoints",
+        "Recognition of shared experiences",
+        "Capacity for logical reasoning"
       ],
-      "correct_answer": "Observation, imitation, reinforcement",
-      "explanation": "Social learning theory posits that children learn gender roles through observing others, imitating their behaviors, and receiving reinforcement for gender-appropriate behaviors. The other sequences misrepresent the order of these processes.",
+      "correct_answer": "Difficulty in understanding that others have different viewpoints",
+      "explanation": "The correct answer is 'Difficulty in understanding that others have different viewpoints' as egocentrism refers to the inability of children in the preoperational stage to see things from perspectives other than their own. The other options describe abilities that develop later.",
       "domain": "Domain 4: Growth & Lifespan Development",
-      "knId": "KN24",
-      "source_file": "4 Temperament and Personality.json",
+      "knId": "KN23",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Cognitive Development.json",
       "source_folder": "4 Development",
       "difficulty": "medium",
       "question_type": "standard",
@@ -2089,19 +2090,19 @@
       "is_org_psych": false
     },
     {
-      "id": 99,
-      "question": "Which type of inheritance refers to a characteristic influenced by multiple genes, such as height or intelligence?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Heredity and Environment.json::0",
+      "question": "In adoption studies examining the heritability of intelligence, researchers have found that as adopted children grow older, their IQ scores tend to show:",
       "options": [
-        "Polygenic inheritance",
-        "Mitochondrial inheritance",
-        "Sex-linked inheritance",
-        "Single gene-pair inheritance"
+        "Increasing correlation with adoptive parents' IQ and decreasing correlation with biological parents' IQ",
+        "Increasing correlation with biological parents' IQ and decreasing correlation with adoptive parents' IQ",
+        "Equal and stable correlations with both biological and adoptive parents' IQ",
+        "No significant correlation with either biological or adoptive parents' IQ"
       ],
-      "correct_answer": "Polygenic inheritance",
-      "explanation": "1. **Correct Answer: Polygenic inheritance**  \nPolygenic inheritance refers to characteristics that are influenced by multiple genes, rather than a single gene pair. This is applicable to traits such as height and intelligence, which are determined by the cumulative effects of many genes, reflecting the complexity of developmental influences outlined in the reference material.\n\n2. **Incorrect Options:**  \n- **Single gene-pair inheritance:** This type of inheritance occurs when a characteristic is influenced by a single pair of genes, typically involving two recessive genes or one dominant and one recessive gene, which does not apply to traits like height or intelligence.  \n- **Sex-linked inheritance:** This refers to characteristics influenced by genes located on sex chromosomes, most often the X chromosome, and does not encompass traits that are polygenic in nature.  \n- **Mitochondrial inheritance:** This involves traits transmitted through mitochondrial DNA, which is inherited only from the mother, and is not relevant to polygenic traits like height or intelligence that involve multiple genes.",
+      "correct_answer": "Increasing correlation with biological parents' IQ and decreasing correlation with adoptive parents' IQ",
+      "explanation": "Adoption studies consistently demonstrate that as adopted children age, their IQ scores become more similar to their biological parents and less similar to their adoptive parents, supporting a strong genetic contribution to intelligence. This reflects the concept of active gene-environment correlation, where individuals increasingly select environments matching their genetic predispositions. Option A reverses the actual finding. Option C incorrectly suggests equal contributions that remain static. Option D contradicts the well-established finding that IQ has substantial heritability.",
       "domain": "Domain 4: Growth & Lifespan Development",
       "knId": "KN22",
-      "source_file": "4 Heredity and Environment.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Heredity and Environment.json",
       "source_folder": "4 Development",
       "difficulty": "medium",
       "question_type": "standard",
@@ -2656,21 +2657,21 @@
       "is_org_psych": false
     },
     {
-      "id": 126,
-      "question": "Which theoretical model of psychopathology emphasizes the role of brain network connectivity disruptions in explaining neurocognitive disorders?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Mood.json::17",
+      "question": "Which neurotransmitter abnormalities have been linked to major depressive disorder?",
       "options": [
-        "The connectome model",
-        "Behavioral model",
-        "Psychodynamic model",
-        "Biopsychosocial model"
+        "Elevated serotonin and norepinephrine levels",
+        "Low levels of serotonin, dopamine, and norepinephrine",
+        "High dopamine with low serotonin",
+        "Low acetylcholine and histamine levels"
       ],
-      "correct_answer": "The connectome model",
-      "explanation": "1. **The connectome model** is the correct answer because it emphasizes the role of disruptions in brain network connectivity, which aligns with the understanding of neurocognitive disorders. These disorders often involve impairments in cognitive functions due to damage or degeneration in specific brain areas and their connections, as indicated by the various neurocognitive disorders discussed, such as Alzheimer’s disease and frontotemporal NCD, which highlight the importance of brain structure and function in cognition.\n\n2. The **biopsychosocial model** is incorrect because it integrates biological, psychological, and social factors in understanding mental health but does not specifically focus on brain connectivity. The **psychodynamic model** is also incorrect as it centers on unconscious processes and early life experiences rather than neurobiological mechanisms. Lastly, the **behavioral model** is incorrect because it emphasizes observable behaviors and learning processes rather than the underlying neural connectivity that contributes to neurocognitive disorders.",
+      "correct_answer": "Low levels of serotonin, dopamine, and norepinephrine",
+      "explanation": "1. The correct answer, \"Low levels of serotonin, dopamine, and norepinephrine,\" is supported by research indicating that major depressive disorder (MDD) is associated with deficiencies in these neurotransmitters. Specifically, studies have shown that low levels of serotonin, dopamine, and norepinephrine contribute to the symptoms of depression, suggesting that these neurotransmitter abnormalities play a significant role in the etiology of MDD.\n\n2. The option \"Elevated serotonin and norepinephrine levels\" is incorrect because research indicates that depression is related to low, not elevated, levels of these neurotransmitters. The option \"High dopamine with low serotonin\" is also incorrect, as it misrepresents the relationship; MDD is characterized by low levels of both dopamine and serotonin, rather than a combination of high dopamine and low serotonin. Lastly, \"Low acetylcholine and histamine levels\" is incorrect because the primary neurotransmitter abnormalities linked to MDD are specifically serotonin, dopamine, and norepinephrine, not acetylcholine or histamine.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
       "knId": "KN39",
-      "source_file": "5 Neurocognitive.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Mood.json",
       "source_folder": "5 Diagnosis",
-      "difficulty": "hard",
+      "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
       "type": "standard",
@@ -2971,20 +2972,20 @@
       "is_org_psych": true
     },
     {
-      "id": 141,
-      "question": "In motivation theories, what does the arousal motive primarily refer to?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/2 Work Motivation.json::17",
+      "question": "According to Herzberg’s Two-Factor Theory, what is the effect of improving hygiene factors like pay and working conditions on worker motivation?",
       "options": [
-        "The need to avoid boredom and seek stimulation.",
-        "The drive to maintain homeostasis.",
-        "The urge to conform to social norms.",
-        "The desire to achieve specific goals."
+        "They increase motivation and satisfaction equally",
+        "They prevent dissatisfaction but do not increase motivation",
+        "They increase motivation but have no effect on dissatisfaction",
+        "They have no impact on either satisfaction or dissatisfaction"
       ],
-      "correct_answer": "The need to avoid boredom and seek stimulation.",
-      "explanation": "The arousal motive is fundamentally about seeking out experiences that provide stimulation and prevent boredom. The other options describe different motivational drives.",
+      "correct_answer": "They prevent dissatisfaction but do not increase motivation",
+      "explanation": "1. The correct answer, \"They prevent dissatisfaction but do not increase motivation,\" aligns with Herzberg’s Two-Factor Theory, which states that hygiene factors (such as pay and working conditions) fulfill lower-order needs and can lead to dissatisfaction if inadequate. However, the presence of adequate hygiene factors does not contribute to job satisfaction or motivation; only motivator factors can enhance these aspects.\n\n2. The option \"They increase motivation and satisfaction equally\" is incorrect because hygiene factors do not increase motivation; only motivator factors can achieve that. The statement \"They increase motivation but have no effect on dissatisfaction\" is wrong because improving hygiene factors does not enhance motivation, and their absence can lead to dissatisfaction. Lastly, \"They have no impact on either satisfaction or dissatisfaction\" is incorrect because inadequate hygiene factors can indeed lead to dissatisfaction, highlighting their importance in the workplace.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
       "knId": "KN9",
-      "source_file": "2 Memory.json",
-      "source_folder": "2 Learning and Memory",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/2 Work Motivation.json",
+      "source_folder": "2 3 5 6 I-O Psychology",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
@@ -3328,24 +3329,24 @@
       "is_org_psych": false
     },
     {
-      "id": 158,
-      "question": "In Sherif's autokinetic studies, participants who first made individual estimates of a stationary light's apparent movement subsequently made estimates alongside small groups over several sessions, during which their individual estimates converged. When these participants were later returned to making judgments alone, they maintained estimates near the group standard rather than reverting to their initial individual responses. This finding MOST directly demonstrates which principle about group norms?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Persuasion.json::13",
+      "question": "What does the term 'scarcity trap' refer to in behavioral economics?",
       "options": [
-        "Majority influence requires unanimity within the group to successfully shift an individual's private judgment",
-        "Conformity is sustained by ongoing normative social pressure and dissolves once group surveillance is removed",
-        "Ambiguous social situations produce public compliance while leaving private beliefs and standards unchanged",
-        "Group norms emerge through social interaction in ambiguous situations and become internalized as personal standards that persist beyond the group context"
+        "A situation where abundance leads to poor decision-making due to complacency",
+        "A mental state where preoccupation with unfulfilled needs leads to self-defeating behaviors perpetuating scarcity",
+        "A condition where sudden availability of resources increases risky behaviors",
+        "A form of cognitive overload caused by too many options"
       ],
-      "correct_answer": "Group norms emerge through social interaction in ambiguous situations and become internalized as personal standards that persist beyond the group context",
-      "explanation": "Sherif's autokinetic research demonstrated that individuals converged on a shared group standard during group sessions, and crucially, they retained that standard when subsequently making judgments alone — indicating genuine internalization rather than surface compliance. Option A is directly contradicted by the data: if conformity depended on ongoing social pressure, estimates should have reverted to pre-group baselines once participants were alone. Option B also contradicts the finding — private beliefs were demonstrably altered, not merely surface behavior. Option D describes unanimity as a precondition, which was the focus of Asch's line-judgment paradigm, not Sherif's autokinetic work.",
+      "correct_answer": "A mental state where preoccupation with unfulfilled needs leads to self-defeating behaviors perpetuating scarcity",
+      "explanation": "1. The correct answer, \"A mental state where preoccupation with unfulfilled needs leads to self-defeating behaviors perpetuating scarcity,\" accurately reflects the concept of a \"scarcity trap\" as described by Mullainathan and Shafir (2014). In this state, individuals become so focused on their unmet needs that they engage in behaviors that ultimately worsen their situation, such as postponing necessary repairs, which can lead to additional costs and further scarcity.\n\n2. The first incorrect option, \"A situation where abundance leads to poor decision-making due to complacency,\" is wrong because it misrepresents the concept; a scarcity trap specifically involves a lack of resources rather than abundance. The second incorrect option, \"A condition where sudden availability of resources increases risky behaviors,\" is incorrect because it suggests that the presence of resources leads to risk-taking, while a scarcity trap focuses on the negative consequences of lacking resources. Lastly, the option \"A form of cognitive overload caused by too many options,\" is incorrect because it conflates scarcity with the abundance of choices, whereas a scarcity trap is about the cognitive limitations imposed by unmet needs, not by having too many options.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
       "knId": "KN16",
-      "source_file": "3 Influence.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Persuasion.json",
       "source_folder": "3 Social Psychology",
       "difficulty": "hard",
-      "question_type": "difficult",
+      "question_type": "standard",
       "isScored": false,
-      "type": "experimental",
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -3517,19 +3518,19 @@
       "is_org_psych": false
     },
     {
-      "id": 167,
-      "question": "Which form of racism is characterized by subtle, often unconscious negative feelings toward minority groups while maintaining a non-prejudiced self-image and a belief in equality?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Group Influences.json::15",
+      "question": "In an environmental psychology experiment, two groups of participants complete proofreading tasks while exposed to loud, unpredictable noise. Group A is given a button they are told can stop the noise, but are asked not to press it; Group B has no such button. Despite the fact that Group A never actually uses the button, they make significantly fewer errors and report less frustration than Group B. This finding is BEST accounted for by which of the following?",
       "options": [
-        "Aversive racism",
-        "Symbolic racism",
-        "Overt racism",
-        "Ambivalent racism"
+        "Learned helplessness: Group B's lack of control extinguishes motivated responding more rapidly than noise alone would",
+        "Perceived control: the belief that one can terminate an aversive stimulus reduces its disruptive effects even when control is never exercised",
+        "Reactance: providing a control option in Group A elicits greater effort to protect perceived freedom",
+        "Stimulus overload: Group A's attention is divided between the task and monitoring the button, paradoxically reducing the salience of the noise"
       ],
-      "correct_answer": "Aversive racism",
-      "explanation": "1. **Aversive racism** is the correct answer because it is characterized by individuals who hold a non-prejudiced self-image and a belief in equality while simultaneously harboring subtle, often unconscious negative feelings about minority groups. This form of racism leads to avoidance of interactions with minority members unless the individual can justify their discrimination on a basis other than race, reflecting an internal conflict between egalitarian beliefs and negative feelings.\n\n2. **Symbolic racism** is incorrect because it involves a belief in egalitarianism paired with the perception that minority groups violate traditional values, leading to opposition against policies aimed at promoting equality, rather than subtle negative feelings. **Ambivalent racism** is not the correct answer because it describes individuals who possess both positive and negative attitudes toward minority groups, resulting in emotional tension, rather than solely unconscious negative feelings. **Overt racism** is wrong as it refers to openly hostile and aggressive attitudes toward minority groups, which is a direct contrast to the subtlety and ambiguity of aversive racism.",
+      "correct_answer": "Perceived control: the belief that one can terminate an aversive stimulus reduces its disruptive effects even when control is never exercised",
+      "explanation": "The Glass and Singer (1972) research program established that perceived controllability is the primary determinant of how disruptive noise proves to be—not the actual reduction of noise or the exercise of control. Group A participants who believed they could stop the noise showed better performance and less physiological arousal than those with no option, despite never pressing the button. This demonstrates that it is the cognitive representation of control, not its execution, that buffers against environmental stressors. Option A (learned helplessness) applies to Group B's situation but does not explain why Group A outperforms—learned helplessness describes a deficit, not a buffer. Option C (reactance) concerns motivation to restore threatened freedom, not performance protection. Option D describes an attentional mechanism that would predict worse performance in Group A, the opposite of the finding.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
-      "knId": "KN20",
-      "source_file": "3 Helping and Hurting.json",
+      "knId": "KN16",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Group Influences.json",
       "source_folder": "3 Social Psychology",
       "difficulty": "hard",
       "question_type": "standard",
@@ -3664,19 +3665,19 @@
       "is_org_psych": false
     },
     {
-      "id": 174,
-      "question": "Which brain structure is primarily involved in recognizing fear in others' facial expressions and attaching emotions to memories?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Stress and Emotion.json::16",
+      "question": "Which brain area is implicated in regulating the physical signs of emotion through the autonomic nervous system and pituitary gland communication?",
       "options": [
-        "Prefrontal cortex",
-        "Hippocampus",
+        "Amygdala",
         "Hypothalamus",
-        "Amygdala"
+        "Hippocampus",
+        "Cingulate gyrus"
       ],
-      "correct_answer": "Amygdala",
-      "explanation": "1. The correct answer is \"Amygdala\" because it is a key component of the limbic system responsible for recognizing fear in facial expressions and attaching emotions to memories. The amygdala evaluates incoming information to determine its emotional significance and mediates the emotional reaction to it, making it crucial for processing fear-related stimuli.\n\n2. The **Hippocampus** is primarily involved in memory formation and is not directly responsible for recognizing emotions or fear in facial expressions. The **Hypothalamus** regulates the physical signs of emotion through its communication with the autonomic nervous system but does not specifically recognize fear or attach emotions to memories. The **Prefrontal Cortex** is involved in higher cognitive functions, such as decision-making and emotional regulation, rather than the direct recognition of fear in others' expressions.",
+      "correct_answer": "Hypothalamus",
+      "explanation": "1. The **hypothalamus** is the correct answer because it regulates the physical signs of emotion by communicating with the autonomic nervous system and the pituitary gland. This regulation is essential for the body's physiological responses to emotional stimuli, such as changes in heart rate and blood pressure, which are critical components of emotional experiences.\n\n2. The **amygdala** is incorrect because, while it is involved in recognizing fear and mediating emotional reactions, it does not primarily regulate the physical signs of emotion through the autonomic nervous system or the pituitary gland. The **hippocampus** is also incorrect as it is more associated with memory processes rather than the direct regulation of emotional responses. Lastly, the **cingulate gyrus** is wrong because it is primarily involved in emotional processing and decision-making, but it does not play a direct role in regulating the physical signs of emotion through autonomic and endocrine pathways.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
       "knId": "KN10",
-      "source_file": "2 Stress and Emotion.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Stress and Emotion.json",
       "source_folder": "2 Learning and Memory",
       "difficulty": "easy",
       "question_type": "standard",
@@ -3727,19 +3728,19 @@
       "is_org_psych": false
     },
     {
-      "id": 177,
-      "question": "Which of the following criteria is NOT typically considered in child custody decision-making according to family law?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 7 and 8.json::0",
+      "question": "A researcher studying conformity uses a mild deception paradigm in which participants are told the study examines \"visual perception\" when it actually measures social influence. The IRB approved the study. After data collection, which of the following is the researcher's PRIMARY ethical obligation regarding the deception?",
       "options": [
-        "The child's preference if they are of sufficient age",
-        "The child's relationship with each parent",
-        "The parent's social media presence",
-        "The financial stability of each parent"
+        "The researcher must debrief participants as early as feasible, explaining the true nature of the study and allowing them to withdraw their data",
+        "The researcher must wait until all data collection is complete before debriefing any participant to avoid contaminating results",
+        "The researcher must send a written apology to each participant for the deception",
+        "The researcher must offer participants additional compensation for having been deceived"
       ],
-      "correct_answer": "The parent's social media presence",
-      "explanation": "The child's relationship with each parent, financial stability, and the child's preference are all relevant factors in custody decisions. However, a parent's social media presence is not a standard criterion considered in custody evaluations.",
+      "correct_answer": "The researcher must debrief participants as early as feasible, explaining the true nature of the study and allowing them to withdraw their data",
+      "explanation": "Standard 8.08 requires that when deception is used in research, psychologists must debrief participants as early as feasible, preferably at the conclusion of their participation. The debriefing must explain the nature and purpose of the deception, and participants should be permitted to withdraw their data if they wish. Option B is wrong because debriefing should occur as soon as feasible for each participant, not delayed until all data collection is finished. Option C is wrong because a formal apology is not required—debriefing with an explanation is the standard. Option D is wrong because additional compensation is not ethically mandated for deception studies.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
-      "knId": "KN65",
-      "source_file": "8 Practice Issues.json",
+      "knId": "KN69",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 7 and 8.json",
       "source_folder": "8 Ethics",
       "difficulty": "medium",
       "question_type": "standard",
@@ -3811,19 +3812,19 @@
       "is_org_psych": false
     },
     {
-      "id": 181,
-      "question": "What is a common complaint that interns have about their supervisors?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json::68",
+      "question": "Which of the following is true regarding telepsychology supervision according to APA guidelines?",
       "options": [
-        "Lack of feedback on performance",
-        "Inconsistent scheduling of sessions",
-        "Overly supportive relationships",
-        "Too much supervision"
+        "Telepsychology supervision can constitute 100% of a supervisee's supervision at any practicum site.",
+        "Interjurisdictional telepsychology supervision is permitted under all circumstances.",
+        "Supervisors must verify supervisee's identity at the start of each telepsychology supervision contact.",
+        "There are no specific risks or limitations to discuss with supervisees during telepsychology supervision."
       ],
-      "correct_answer": "Lack of feedback on performance",
-      "explanation": "Interns often express dissatisfaction with the lack of constructive feedback, which is crucial for their development. The other options do not typically reflect common complaints; interns generally appreciate guidance but may feel overwhelmed by excessive supervision or inconsistent scheduling.",
+      "correct_answer": "Supervisors must verify supervisee's identity at the start of each telepsychology supervision contact.",
+      "explanation": "1. The statement \"Supervisors must verify supervisee's identity at the start of each telepsychology supervision contact\" is correct because the APA guidelines emphasize the importance of ensuring that supervisors confirm the identity of supervisees to maintain the integrity and security of the supervision process. This verification is crucial to uphold confidentiality and protect client welfare in telepsychology settings.\n\n2. The first incorrect option, \"Telepsychology supervision can constitute 100% of a supervisee's supervision at any practicum site,\" is wrong because the guidelines specify that telepsychology supervision should not account for more than 50% of a supervisee’s supervision at any given practicum site. The second incorrect option, \"Interjurisdictional telepsychology supervision is permitted under all circumstances,\" is incorrect as the guidelines state that such supervision is not allowed except in emergency situations, highlighting the need for jurisdictional compliance. Lastly, the option \"There are no specific risks or limitations to discuss with supervisees during telepsychology supervision\" is incorrect because the guidelines explicitly require supervisors to inform supervisees about the potential risks and limitations associated with telepsychology supervision, including issues related to confidentiality, security, and privacy.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
       "knId": "KN70",
-      "source_file": "8 Practice Issues.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json",
       "source_folder": "8 Ethics",
       "difficulty": "medium",
       "question_type": "standard",
@@ -3832,19 +3833,19 @@
       "is_org_psych": false
     },
     {
-      "id": 182,
-      "question": "A county domestic violence program is evaluating which intervention approach produces the lowest recidivism rates among male perpetrators following a spousal assault conviction. Based on the empirical literature, which of the following interventions is most consistently associated with reduced re-offense rates when implemented as part of a coordinated community response?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Prevention and Consultation.json::36",
+      "question": "Eysenck’s 1952 review concluded that:",
       "options": [
-        "Couples therapy targeting communication deficits and conflict resolution skills",
-        "Mandatory arrest followed by incarceration without psychoeducational programming",
-        "Batterer intervention programs combined with legal system monitoring",
-        "Individual psychodynamic therapy exploring early attachment disruptions"
+        "Psychotherapy was highly effective for neurotic patients compared to no treatment",
+        "Psychotherapy may be ineffective or even detrimental compared to spontaneous remission",
+        "All forms of psychotherapy have equivalent, significant positive outcomes",
+        "Custodial care produced worse outcomes than psychoanalytic therapy"
       ],
-      "correct_answer": "Batterer intervention programs combined with legal system monitoring",
-      "explanation": "Research indicates that batterer intervention programs (BIPs), particularly when embedded within a coordinated community response involving legal accountability, are associated with the lowest recidivism rates. Couples therapy is contraindicated in active domestic violence situations because it implicitly assigns mutual responsibility for violence, may endanger the victim by surfacing grievances in session, and provides abusers with new information to exploit coercively. Mandatory arrest alone (without psychoeducational follow-through) has shown inconsistent results across studies — Sherman et al.'s research found deterrent effects only for employed batterers. Individual psychodynamic therapy lacks adequate evidence for reducing intimate partner violence recidivism and fails to address the power and control dynamics central to this behavior pattern.",
+      "correct_answer": "Psychotherapy may be ineffective or even detrimental compared to spontaneous remission",
+      "explanation": "1. The correct answer, \"Psychotherapy may be ineffective or even detrimental compared to spontaneous remission,\" is based on Eysenck's 1952 review, which concluded that a significant percentage of neurotic patients improved without therapy, suggesting that the recovery rates for psychotherapy patients were lower than those for patients who did not receive treatment. Eysenck's findings indicated that 44% of patients in psychoanalytic therapy and 64% in eclectic therapy improved, which were lower than the 72% spontaneous remission rate, leading him to propose that psychotherapy could be ineffective or even harmful.\n\n2. The option \"Psychotherapy was highly effective for neurotic patients compared to no treatment\" is incorrect because Eysenck's review indicated that the recovery rates for psychotherapy patients were actually lower than those for patients who did not receive treatment. The statement \"All forms of psychotherapy have equivalent, significant positive outcomes\" is also wrong, as Eysenck's findings highlighted variability in outcomes and did not support the idea of equivalence across different therapies. Lastly, the claim \"Custodial care produced worse outcomes than psychoanalytic therapy\" is inaccurate because Eysenck's analysis suggested that custodial care had a higher spontaneous remission rate than psychoanalytic therapy, thus indicating better outcomes for custodial care compared to psychotherapy.",
       "domain": "Domain 6: Treatment & Intervention",
       "knId": "KN44",
-      "source_file": "6 Prevention and Consultation.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Prevention and Consultation.json",
       "source_folder": "6 Clinical Interventions",
       "difficulty": "hard",
       "question_type": "standard",
@@ -3874,19 +3875,19 @@
       "is_org_psych": false
     },
     {
-      "id": 184,
-      "question": "According to Gender Schema Theory, how do individuals develop their understanding of gender roles?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Helping and Hurting.json::2",
+      "question": "Following a contentious community dispute over resource allocation, a mediator proposes a resolution in which each party receives resources proportional to their contributions to the community project. This resolution approach is MOST consistent with which type of justice?",
       "options": [
-        "By observing and imitating others",
-        "By internalizing societal norms and expectations",
-        "Through biological predispositions",
-        "Through direct reinforcement of gender-appropriate behaviors"
+        "Procedural justice",
+        "Distributive justice based on equity",
+        "Restorative justice",
+        "Retributive justice"
       ],
-      "correct_answer": "By internalizing societal norms and expectations",
-      "explanation": "Gender Schema Theory posits that individuals develop their understanding of gender roles by internalizing societal norms and expectations, which shape their perceptions and behaviors regarding gender. While biological predispositions, observation, and reinforcement play roles, the theory emphasizes the cognitive framework formed by societal influences. Therefore, internalizing societal norms and expectations is the correct answer.",
+      "correct_answer": "Distributive justice based on equity",
+      "explanation": "Distributive justice concerns the fairness of outcome allocation. The equity principle within distributive justice holds that resources should be distributed proportional to contributions—those who contribute more receive more. Option A (procedural justice) concerns fairness of the process rather than outcomes. Option C (restorative justice) focuses on repairing harm done to victims. Option D (retributive justice) focuses on punishment proportional to wrongdoing. The scenario specifically describes outcome-based allocation proportional to contributions, which is the hallmark of equity-based distributive justice.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
       "knId": "KN15",
-      "source_file": "3 Helping and Hurting.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Helping and Hurting.json",
       "source_folder": "3 Social Psychology",
       "difficulty": "hard",
       "question_type": "standard",
@@ -4021,19 +4022,19 @@
       "is_org_psych": false
     },
     {
-      "id": 191,
-      "question": "According to research on cognitive development and diverse identities (KN24), how can gender-role stereotypes affect children’s cognitive performance in domains such as math and verbal abilities?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Cognitive Development.json::34",
+      "question": "In Piaget's sensorimotor substages, which substage is characterized by the development of object permanence and intentional goal-directed behavior?",
       "options": [
-        "They only affect adults’ attitudes and do not influence children's cognitive skills",
-        "They enhance boys’ and girls’ abilities equally through positive reinforcement",
-        "They have no effect on children’s cognitive performance as abilities are biologically predetermined",
-        "They contribute to self-fulfilling prophecies where children perform in line with expectations linked to gender roles"
+        "Primary Circular Reactions",
+        "Secondary Circular Reactions",
+        "Coordination of Secondary Circular Reactions",
+        "Internalization of Schemas"
       ],
-      "correct_answer": "They contribute to self-fulfilling prophecies where children perform in line with expectations linked to gender roles",
-      "explanation": "1. The correct answer, \"They contribute to self-fulfilling prophecies where children perform in line with expectations linked to gender roles,\" reflects the impact of gender-role stereotypes on children's cognitive performance. Research indicates that these stereotypes can lead children to internalize expectations about their abilities, particularly in areas like math and verbal skills. For instance, parents may expect sons to excel in math and attribute their successes to innate ability, while daughters may be seen as needing to work harder for the same achievements, leading girls to underestimate their capabilities and become less interested in math.\n\n2. The first incorrect option, \"They have no effect on children’s cognitive performance as abilities are biologically predetermined,\" is wrong because research shows that cognitive abilities are influenced by both biological factors and social constructs, including gender-role stereotypes. The second incorrect option, \"They only affect adults’ attitudes and do not influence children's cognitive skills,\" is incorrect because studies demonstrate that these stereotypes directly impact children's self-perception and performance, not just adult attitudes. Lastly, the option \"They enhance boys’ and girls’ abilities equally through positive reinforcement\" is misleading, as the reinforcement often differs by gender, with boys receiving more encouragement in math and girls potentially receiving less, which can hinder their performance rather than enhance it.",
+      "correct_answer": "Coordination of Secondary Circular Reactions",
+      "explanation": "1. The correct answer, \"Coordination of Secondary Circular Reactions,\" is characterized by the development of object permanence and intentional goal-directed behavior. This substage, which occurs between 8 to 12 months of age, involves children intentionally combining secondary circular reactions to achieve specific goals, demonstrating their understanding that objects continue to exist even when out of sight, which is essential for object permanence.\n\n2. The option \"Primary Circular Reactions\" is incorrect because it occurs from 1 to 4 months of age and involves infants repeating enjoyable actions involving their own bodies, without the understanding of object permanence. \"Secondary Circular Reactions\" is also incorrect as it occurs from 4 to 8 months of age and focuses on reproducing actions involving objects, but does not yet include intentional goal-directed behavior or the development of object permanence. Lastly, \"Internalization of Schemas\" is incorrect because it occurs from 18 to 24 months of age and involves the development of mental representations of reality, which is after the establishment of object permanence and goal-directed behavior.",
       "domain": "Domain 4: Growth & Lifespan Development",
-      "knId": "KN24",
-      "source_file": "4 Cognitive Development.json",
+      "knId": "KN23",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Cognitive Development.json",
       "source_folder": "4 Development",
       "difficulty": "medium",
       "question_type": "standard",
@@ -4063,21 +4064,21 @@
       "is_org_psych": false
     },
     {
-      "id": 193,
-      "question": "In rural settings, what is a primary concern regarding the scope of practice for psychologists?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 7 and 8.json::23",
+      "question": "Which of the following best describes a psychologist's responsibility regarding continuing professional development according to ethical standards?",
       "options": [
-        "Limited access to supervision and consultation",
-        "Excessive competition among practitioners",
-        "Availability of advanced technology",
-        "High demand for specialized services"
+        "Psychologists may choose to engage in continuing education when convenient without formal documentation.",
+        "Psychologists must undertake ongoing education to maintain competence and ensure current knowledge.",
+        "Once licensed, psychologists are not ethically required to pursue further training.",
+        "Continuing professional development is solely the responsibility of employers, not the individual psychologist."
       ],
-      "correct_answer": "Limited access to supervision and consultation",
-      "explanation": "In rural settings, psychologists often face challenges related to limited access to supervision and consultation, which can impact their practice and professional development. The other options do not accurately reflect the primary concerns in rural psychology practice.",
+      "correct_answer": "Psychologists must undertake ongoing education to maintain competence and ensure current knowledge.",
+      "explanation": "1. The correct answer, \"Psychologists must undertake ongoing education to maintain competence and ensure current knowledge,\" aligns with the ethical standards outlined in the APA Ethics Code, particularly Standard 7.02. This standard emphasizes that psychologists must take \"reasonable steps\" to ensure their education and training descriptions are accurate, indicating a commitment to continuous professional development to stay informed and competent in their field.\n\n2. The first incorrect option, \"Psychologists may choose to engage in continuing education when convenient without formal documentation,\" is wrong because ethical standards require psychologists to maintain accurate records of their education and training, suggesting that ongoing education should be a structured and documented process rather than a casual choice. \n\nThe second incorrect option, \"Once licensed, psychologists are not ethically required to pursue further training,\" is incorrect because the APA Ethics Code implies an ongoing responsibility for professional development beyond initial licensure to ensure competence in practice. \n\nFinally, the third incorrect option, \"Continuing professional development is solely the responsibility of employers, not the individual psychologist,\" is inaccurate because it places the onus of professional growth entirely on employers, whereas ethical standards highlight the individual psychologist's obligation to engage in ongoing education and training for their own competence.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
       "knId": "KN66",
-      "source_file": "8 Practice Issues.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 7 and 8.json",
       "source_folder": "8 Ethics",
-      "difficulty": "hard",
+      "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
       "type": "standard",
@@ -4168,20 +4169,20 @@
       "is_org_psych": false
     },
     {
-      "id": 198,
-      "question": "A researcher conducting a study on the effectiveness of a new therapeutic intervention inadvertently provides more encouraging nonverbal cues to participants in the treatment group than to those in the control group. This pattern of behavior, in which the researcher's expectations subtly influence participant responses, is BEST described as:",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/5 6 Training and Evaluation.json::18",
+      "question": "Which training method is characterized by teaching employees how to perform the essential tasks of other workers to improve team flexibility and coverage?",
       "options": [
-        "The Hawthorne effect",
-        "The Rosenthal effect",
-        "Observer bias",
-        "Demand characteristics"
+        "Job rotation",
+        "Cross-training",
+        "Apprenticeship",
+        "Behavior modeling"
       ],
-      "correct_answer": "The Rosenthal effect",
-      "explanation": "The Rosenthal effect (also called experimenter expectancy effect) refers to subtle cues or clues transmitted by the experimenter that influence participant behavior in the direction of the experimenter's hypothesis. This is distinct from the Hawthorne effect (behavior change due to awareness of being observed), demand characteristics (cues that inform participants about what behavior is expected, which come from the experimental situation rather than the experimenter specifically), and observer bias (systematic errors in recording or interpreting data, rather than influencing participant behavior).",
+      "correct_answer": "Cross-training",
+      "explanation": "1. **Cross-training** is the correct answer because it involves teaching employees how to perform the essential tasks of other workers. This method is specifically designed to improve team flexibility and coverage, allowing team members to step in for one another as needed, which enhances overall team performance and adaptability.\n\n2. **Job rotation** is incorrect because it refers to having trainees rotate through a predetermined set of jobs within the organization, primarily aimed at training managers rather than teaching tasks of other workers for team flexibility. **Apprenticeship** is not the correct answer as it typically involves a formalized training relationship where inexperienced employees learn a specific trade or skill under the guidance of a skilled worker, rather than learning multiple roles within a team context. **Behavior modeling** is also incorrect because it focuses on trainees observing a model perform desired behaviors and practicing those behaviors, rather than specifically teaching them to perform the tasks of other workers for improved team coverage.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
-      "knId": "KN6",
-      "source_file": "7 Research Designs.json",
-      "source_folder": "7 Research and Stats",
+      "knId": "KN46",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/5 6 Training and Evaluation.json",
+      "source_folder": "2 3 5 6 I-O Psychology",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
@@ -4441,19 +4442,19 @@
       "is_org_psych": false
     },
     {
-      "id": 211,
-      "question": "A behavior analyst working in a substance use treatment program wants to choose a reinforcement schedule that will produce the most persistent behavior and the greatest resistance to extinction after the formal contingency management program ends. Research on reinforcement schedules consistently supports which schedule as producing the highest response rates and the slowest extinction?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Skinner and Operant Conditioning.json::2",
+      "question": "In Skinner's classic pigeon experiment, food was delivered at fixed 15-second intervals regardless of the pigeons' behavior. Several pigeons developed ritualistic movements such as spinning or head-bobbing that they repeated consistently before each food delivery. This phenomenon is BEST explained as:",
       "options": [
-        "Variable ratio, because unpredictable and varying response requirements produce the highest rates and greatest resistance to extinction",
-        "Fixed ratio, because the predictable response requirement produces efficient, rapid responding",
-        "Fixed interval, because the regular time-based reinforcement creates a reliable and steady behavioral baseline",
-        "Variable interval, because unpredictable timing prevents satiation and maintains moderate consistent responding"
+        "Operant discrimination, because the pigeons learned to distinguish between reinforced and non-reinforced behaviors",
+        "Respondent conditioning, because the time interval became a conditioned stimulus for salivation",
+        "Superstitious behavior, because the pigeons' actions were accidentally reinforced by coincidental pairing with food delivery",
+        "Fixed interval scalloping, because the pigeons increased responding as the reinforcement time approached"
       ],
-      "correct_answer": "Variable ratio, because unpredictable and varying response requirements produce the highest rates and greatest resistance to extinction",
-      "explanation": "Variable ratio (VR) schedules, in which reinforcement is delivered after an unpredictable number of responses, consistently produce the highest and most uniform response rates of all four intermittent schedules, as well as the greatest resistance to extinction. Because the organism cannot predict when the next reinforcement will occur, it continues responding at high rates even when reinforcement is withheld—a pattern directly analogous to gambling behavior. Fixed ratio schedules (A) produce high response rates but are subject to post-reinforcement pauses and are more vulnerable to extinction. Fixed interval schedules (B) produce low average response rates with a characteristic 'scalloping' pattern (increased responding near the interval end); they are not optimized for persistence. Variable interval schedules (C) produce steady, moderate response rates but lower overall rates than VR schedules, because responding beyond the elapsed time is not required.",
+      "correct_answer": "Superstitious behavior, because the pigeons' actions were accidentally reinforced by coincidental pairing with food delivery",
+      "explanation": "Superstitious behavior occurs when a behavior is accidentally reinforced—when reinforcement happens to follow the behavior by coincidence rather than because the behavior caused it. In Skinner's experiment, food was delivered on a time-based schedule regardless of behavior, but pigeons developed ritualistic actions because whatever they happened to be doing when food arrived was coincidentally reinforced. Option A is incorrect because the pigeons never actually learned a true discrimination—no specific behavior was required for reinforcement. Option B is incorrect because the ritualistic motor behaviors are operant responses, not respondent (classically conditioned) reflexes. Option D is incorrect because while the experiment used a fixed time interval, the phenomenon being described is the development of superstitious ritualistic behavior, not the scalloping response pattern.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
       "knId": "KN7",
-      "source_file": "2 Skinner and Operant Conditioning.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Skinner and Operant Conditioning.json",
       "source_folder": "2 Learning and Memory",
       "difficulty": "medium",
       "question_type": "standard",
@@ -4462,19 +4463,19 @@
       "is_org_psych": false
     },
     {
-      "id": 212,
-      "question": "Which of the following best describes a violation of independence in the context of a chi-square test?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Stats Tests.json::0",
+      "question": "A researcher wants to use a chi-square test to examine whether there is a relationship between therapy modality (CBT, psychodynamic, humanistic) and treatment completion (completed, dropped out). The study includes 180 participants. However, when constructing the contingency table, one cell (humanistic/dropped out) contains only 3 participants. What is the PRIMARY concern about using the chi-square test in this situation?",
       "options": [
-        "The sample size is too small to draw valid conclusions.",
-        "Participants in one group influence the responses of participants in another group.",
-        "The variables being tested are not categorical.",
-        "The expected frequencies are too low for accurate analysis."
+        "The chi-square test cannot be used with more than two categories per variable",
+        "The chi-square test requires that expected frequencies in each cell be sufficiently large",
+        "The chi-square test is inappropriate because the dependent variable is dichotomous",
+        "The chi-square test assumes that the variables are measured on at least an ordinal scale"
       ],
-      "correct_answer": "Participants in one group influence the responses of participants in another group.",
-      "explanation": "A violation of independence occurs when the responses of one group affect another, which undermines the assumptions of the chi-square test. The other options describe issues related to sample size or data type but do not pertain to independence.",
+      "correct_answer": "The chi-square test requires that expected frequencies in each cell be sufficiently large",
+      "explanation": "A key assumption of the chi-square test is that expected cell frequencies must be adequate (typically at least 5). Small expected frequencies can lead to inaccurate results. The lesson notes that chi-square is a nonparametric test used with nominal data and frequencies, and that nonparametric tests are used 'if your sample is small, groups are unequal in size.' When cells have very low frequencies, the chi-square approximation breaks down. Option A is incorrect — chi-square can handle multiple categories. Option C is incorrect — dichotomous variables are appropriate for chi-square. Option D is incorrect — chi-square specifically works with nominal (categorical) data, not ordinal.",
       "domain": "Domain 7: Research Methods & Statistics",
       "knId": "KN53",
-      "source_file": "7 Stats Tests.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Stats Tests.json",
       "source_folder": "7 Research and Stats",
       "difficulty": "medium",
       "question_type": "standard",
@@ -4567,19 +4568,19 @@
       "is_org_psych": false
     },
     {
-      "id": 217,
-      "question": "Which supervision model focuses on understanding and integrating the supervisor and supervisee's interpersonal dynamics to improve therapy outcomes?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Family and Group.json::8",
+      "question": "In Narrative Family Therapy, what is the primary meaning of 'externalizing questions'?",
       "options": [
-        "Developmental model",
-        "Integrative model",
-        "Psychodynamic model",
-        "Behavioral model"
+        "Questions that help clients view problems as separate from themselves",
+        "Questions that focus on blame and responsibility",
+        "Questions that reinforce family rules and rituals",
+        "Questions that analyze family communication patterns"
       ],
-      "correct_answer": "Psychodynamic model",
-      "explanation": "1. The **psychodynamic model** is the correct answer because it emphasizes understanding and integrating the interpersonal dynamics between the supervisor and supervisee. This model focuses on the relational aspects of supervision, including transference and countertransference, which can significantly impact therapy outcomes by enhancing the supervisee's self-awareness and therapeutic effectiveness.\n\n2. The **developmental model** is incorrect because it primarily focuses on the growth and progression of the supervisee's skills and competencies over time, rather than the interpersonal dynamics between supervisor and supervisee. The **integrative model** is not the correct choice as it aims to combine various theoretical approaches and techniques in supervision, without specifically emphasizing the understanding of interpersonal dynamics. Lastly, the **behavioral model** is wrong because it concentrates on observable behaviors and the application of behavioral techniques in supervision, rather than exploring the deeper relational aspects that influence therapeutic outcomes.",
+      "correct_answer": "Questions that help clients view problems as separate from themselves",
+      "explanation": "1. The correct answer, \"Questions that help clients view problems as separate from themselves,\" aligns with the principles of Narrative Family Therapy, which emphasizes that problems are not internal to individuals but exist outside of them. By using externalizing questions, therapists encourage clients to see their issues as separate entities, facilitating a healthier perspective that allows for the construction of alternative, more satisfying narratives.\n\n2. The option \"Questions that focus on blame and responsibility\" is incorrect because externalizing questions aim to distance the individual from the problem rather than assigning blame or responsibility to them. The option \"Questions that reinforce family rules and rituals\" is also wrong, as externalizing questions challenge existing narratives rather than reinforcing the status quo of family dynamics. Finally, \"Questions that analyze family communication patterns\" is not accurate because externalizing questions specifically seek to separate the individual from the problem, rather than focusing on analyzing communication patterns within the family.",
       "domain": "Domain 6: Treatment & Intervention",
-      "knId": "KN52",
-      "source_file": "6 Prevention and Consultation.json",
+      "knId": "KN46",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Family and Group.json",
       "source_folder": "6 Clinical Interventions",
       "difficulty": "medium",
       "question_type": "standard",

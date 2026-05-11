@@ -27,7 +27,8 @@
     "generatedAt": "2026-03-26T01:46:50.277Z",
     "source": "questionsGPT",
     "blueprint": "Kns.md",
-    "generator": "scripts/assemble-questionsgpt-exams.mjs"
+    "generator": "scripts/assemble-questionsgpt-exams.mjs",
+    "lastSurgicalFix": "2026-05-10T02:40:11.025Z"
   },
   "questions": [
     {
@@ -136,19 +137,19 @@
       "is_org_psych": false
     },
     {
-      "id": 6,
-      "question": "Which of the following symptoms is NOT typically associated with narcolepsy?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Clinical Tests.json::29",
+      "question": "What is the estimated prevalence of ADHD among children in the United States?",
       "options": [
-        "Chronic insomnia",
-        "Sleep paralysis",
-        "Cataplexy",
-        "Excessive daytime sleepiness"
+        "A. 1-3%",
+        "B. 5-10%",
+        "C. 10-15%",
+        "D. 20-25%"
       ],
-      "correct_answer": "Chronic insomnia",
-      "explanation": "Chronic insomnia is not a symptom of narcolepsy; rather, narcolepsy is characterized by excessive daytime sleepiness, cataplexy (sudden loss of muscle tone), and sleep paralysis. The other options are directly related to narcolepsy symptoms.",
+      "correct_answer": "B. 5-10%",
+      "explanation": "Option B is correct as studies estimate that the prevalence of ADHD among children in the United States falls within the 5-10% range. Options A, C, and D are incorrect as they underestimate or overestimate the prevalence.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
       "knId": "KN30",
-      "source_file": "5 Clinical Tests.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Clinical Tests.json",
       "source_folder": "5 Assessment",
       "difficulty": "medium",
       "question_type": "standard",
@@ -178,19 +179,19 @@
       "is_org_psych": false
     },
     {
-      "id": 8,
-      "question": "Which of the following best illustrates the concept of pluralistic ignorance in bystander intervention research?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Helping and Hurting.json::1",
+      "question": "A woman collapses in a busy shopping mall food court during the lunch rush. Approximately 50 people are nearby, yet several minutes pass before anyone calls for help. According to the bystander intervention model proposed by Latané and Darley, the MOST likely explanation for why no one initially helps is:",
       "options": [
-        "Feeling unable to help because of lack of skills",
-        "A person not noticing an emergency due to distraction",
-        "Avoiding helping to prevent social embarrassment",
-        "A bystander assuming that others' lack of action means no help is needed"
+        "The bystanders lack the knowledge necessary to provide medical assistance",
+        "Each bystander assumes that someone else will take responsibility for helping",
+        "The bystanders are unable to notice the emergency due to stimulus overload",
+        "The bystanders are afraid of being sued for providing inadequate medical care"
       ],
-      "correct_answer": "A bystander assuming that others' lack of action means no help is needed",
-      "explanation": "1. \"A bystander assuming that others' lack of action means no help is needed\" is the correct answer because it exemplifies pluralistic ignorance, where an individual misinterprets the inaction of others as an indication that the situation does not require intervention. This phenomenon can lead to a bystander failing to act, believing that since no one else is helping, the emergency is not perceived as urgent or serious.\n\n2. The option \"A person not noticing an emergency due to distraction\" is incorrect because it relates to the first step of bystander intervention, which is noticing the event, rather than interpreting the situation based on others' actions. \"Feeling unable to help because of lack of skills\" is wrong because it pertains to the fourth step, determining how to help, rather than the social influence of others' inaction. Lastly, \"Avoiding helping to prevent social embarrassment\" is incorrect as it reflects evaluation apprehension, which is related to the fifth step of the intervention process, rather than the misinterpretation of others' behaviors that characterizes pluralistic ignorance.",
+      "correct_answer": "Each bystander assumes that someone else will take responsibility for helping",
+      "explanation": "This scenario illustrates diffusion of responsibility, which occurs at Step 3 of Latané and Darley's bystander intervention model. When multiple people are present, each person feels less personally responsible for helping because they assume others will act. Research confirms that victims are most likely to receive help when only one bystander is present. Option A (lack of knowledge) relates to Step 4 but is not the primary explanation when 50 people are present. Option C (stimulus overload) relates to Step 1, but a woman collapsing is a conspicuous event even in a busy setting. Option D (fear of legal consequences) is not one of the primary mechanisms in the model.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
       "knId": "KN15",
-      "source_file": "3 Helping and Hurting.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Helping and Hurting.json",
       "source_folder": "3 Social Psychology",
       "difficulty": "medium",
       "question_type": "standard",
@@ -220,19 +221,19 @@
       "is_org_psych": false
     },
     {
-      "id": 10,
-      "question": "In the context of gender identity theories, what is the sequence of gender role development according to social learning theory?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Language Development.json::17",
+      "question": "How does language brokering by children in immigrant families impact their psychosocial development?",
       "options": [
-        "Reinforcement, observation, imitation",
-        "Observation, imitation, reinforcement",
-        "Imitation, reinforcement, observation",
-        "Observation, reinforcement, imitation"
+        "It consistently leads to academic difficulties and decreased self-confidence",
+        "It is solely associated with negative effects such as anxiety and embarrassment",
+        "It can have both positive effects like increased self-efficacy and negative effects like family role reversals",
+        "It always enhances interpersonal skills without any psychological drawbacks"
       ],
-      "correct_answer": "Observation, imitation, reinforcement",
-      "explanation": "Social learning theory posits that children learn gender roles through observing others, imitating their behaviors, and receiving reinforcement for gender-appropriate behaviors. The other sequences misrepresent the order of these processes.",
+      "correct_answer": "It can have both positive effects like increased self-efficacy and negative effects like family role reversals",
+      "explanation": "1. The correct answer, \"It can have both positive effects like increased self-efficacy and negative effects like family role reversals,\" accurately reflects the mixed outcomes associated with language brokering in immigrant families. Research indicates that while children who act as language brokers may develop strong interpersonal skills and high self-confidence, they can also experience negative consequences such as elevated anxiety and role reversals that lead to parental dependency and increased conflict within the family.\n\n2. The option \"It consistently leads to academic difficulties and decreased self-confidence\" is incorrect because the research highlights both positive outcomes, like increased self-efficacy, and does not suggest a consistent link to academic difficulties. The statement \"It is solely associated with negative effects such as anxiety and embarrassment\" is wrong as it overlooks the positive effects, such as strong interpersonal skills and self-confidence. Lastly, the claim \"It always enhances interpersonal skills without any psychological drawbacks\" is misleading because it fails to acknowledge the potential negative impacts, including anxiety and family role reversals, that can arise from language brokering experiences.",
       "domain": "Domain 4: Growth & Lifespan Development",
-      "knId": "KN24",
-      "source_file": "4 Temperament and Personality.json",
+      "knId": "KN21",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Language Development.json",
       "source_folder": "4 Development",
       "difficulty": "medium",
       "question_type": "standard",
@@ -262,24 +263,24 @@
       "is_org_psych": false
     },
     {
-      "id": 12,
-      "question": "Which form of racism is characterized by subtle, often unconscious negative feelings toward minority groups while maintaining a non-prejudiced self-image and a belief in equality?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Errors and Shortcuts.json::27",
+      "question": "In which of the following situations is confirmation bias most likely to occur?",
       "options": [
-        "Overt racism",
-        "Symbolic racism",
-        "Aversive racism",
-        "Ambivalent racism"
+        "A scientist reviews literature that contradicts their previous findings.",
+        "A manager only considers employee feedback that aligns with their own opinions.",
+        "A group discusses a problem and includes diverse viewpoints.",
+        "An individual reflects on their past decisions with a critical lens."
       ],
-      "correct_answer": "Aversive racism",
-      "explanation": "1. **Aversive racism** is the correct answer because it is characterized by individuals who hold a non-prejudiced self-image and a belief in equality while simultaneously harboring subtle, often unconscious negative feelings about minority groups. This form of racism leads to avoidance of interactions with minority members unless the individual can justify their discrimination on a basis other than race, reflecting an internal conflict between egalitarian beliefs and negative feelings.\n\n2. **Symbolic racism** is incorrect because it involves a belief in egalitarianism paired with the perception that minority groups violate traditional values, leading to opposition against policies aimed at promoting equality, rather than subtle negative feelings. **Ambivalent racism** is not the correct answer because it describes individuals who possess both positive and negative attitudes toward minority groups, resulting in emotional tension, rather than solely unconscious negative feelings. **Overt racism** is wrong as it refers to openly hostile and aggressive attitudes toward minority groups, which is a direct contrast to the subtlety and ambiguity of aversive racism.",
+      "correct_answer": "A manager only considers employee feedback that aligns with their own opinions.",
+      "explanation": "1. The correct answer, \"A manager only considers employee feedback that aligns with their own opinions,\" exemplifies confirmation bias because it illustrates the tendency to seek and focus on information that supports one’s existing beliefs while disregarding contradictory evidence. This behavior aligns with the definition of confirmation bias, which emphasizes the inclination to pay attention to feedback that confirms one’s attitudes and beliefs, thus undermining objective decision-making.\n\n2. The option \"A scientist reviews literature that contradicts their previous findings\" is incorrect because it involves engaging with information that challenges existing beliefs, contrary to confirmation bias. \"A group discusses a problem and includes diverse viewpoints\" is also incorrect, as this scenario promotes the consideration of varied perspectives, which counters the essence of confirmation bias. Lastly, \"An individual reflects on their past decisions with a critical lens\" is wrong because critical reflection typically involves evaluating and questioning one’s beliefs, rather than selectively focusing on confirming evidence.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
-      "knId": "KN20",
-      "source_file": "3 Helping and Hurting.json",
+      "knId": "KN14",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Errors and Shortcuts.json",
       "source_folder": "3 Social Psychology",
       "difficulty": "hard",
-      "question_type": "difficult",
+      "question_type": "standard",
       "isScored": false,
-      "type": "experimental",
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -346,19 +347,19 @@
       "is_org_psych": false
     },
     {
-      "id": 16,
-      "question": "Which of the following correlation coefficients for IQ scores supports the conclusion that genetics play a substantial role in intelligence?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 School and Family.json::18",
+      "question": "Which outcome is most consistently observed among children raised by gay or lesbian parents compared to those raised by heterosexual parents?",
       "options": [
-        "Biological siblings reared apart: .24",
-        "Adoptive siblings reared together: .31",
-        "Adoptive parent and adopted child: .18",
-        "Identical twins reared together: .85"
+        "Greater psychological adjustment difficulties",
+        "Lower intellectual functioning",
+        "No consistent differences in psychological and intellectual outcomes",
+        "Higher rates of gender identity confusion"
       ],
-      "correct_answer": "Identical twins reared together: .85",
-      "explanation": "1. The correlation coefficient for IQ scores of identical twins reared together is .85, indicating a very strong genetic influence on intelligence. This high correlation suggests that identical twins, who share 100% of their genetic material, have similar IQ scores largely due to their genetic similarities, supporting the conclusion that genetics play a substantial role in intelligence.\n\n2. The correlation coefficient for adoptive siblings reared together is .31, which indicates a low correlation and suggests that environmental factors have a more significant impact than genetics in this group. The coefficient for biological siblings reared apart is .24, reflecting a weak genetic influence on IQ scores when siblings are raised in different environments, further supporting the idea that shared genetics alone does not account for intelligence. Lastly, the correlation of .18 for adoptive parent and adopted child indicates minimal genetic influence, as these children do not share genetic material with their adoptive parents, showing that environmental factors are more significant in this context.",
+      "correct_answer": "No consistent differences in psychological and intellectual outcomes",
+      "explanation": "1. The correct answer, \"No consistent differences in psychological and intellectual outcomes,\" reflects the findings from studies that indicate children raised by gay or lesbian parents do not differ significantly from those raised by heterosexual parents in terms of psychological adjustment, intellectual functioning, gender identity, or sexual orientation. Research shows that the parenting skills of gay and lesbian parents are similar to or even better than those of heterosexual parents, supporting the conclusion that the sexual orientation of parents does not negatively impact child outcomes.\n\n2. \n- **Greater psychological adjustment difficulties**: This option is incorrect because studies have found no consistent evidence that children of gay or lesbian parents experience more psychological adjustment difficulties compared to their peers raised by heterosexual parents.\n  \n- **Lower intellectual functioning**: This option is wrong as research indicates that children raised by gay or lesbian parents do not have lower intellectual functioning than those raised by heterosexual parents, showing similar intellectual outcomes across both groups.\n\n- **Higher rates of gender identity confusion**: This choice is incorrect because the literature suggests that children raised by gay or lesbian parents do not exhibit higher rates of gender identity confusion compared to children raised by heterosexual parents, indicating no significant differences in this area.",
       "domain": "Domain 4: Growth & Lifespan Development",
       "knId": "KN22",
-      "source_file": "4 Heredity and Environment.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 School and Family.json",
       "source_folder": "4 Development",
       "difficulty": "easy",
       "question_type": "standard",
@@ -367,24 +368,24 @@
       "is_org_psych": false
     },
     {
-      "id": 17,
-      "question": "What is the relationship between separation protest and object permanence in infants?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Bonding and Attachment.json::4",
+      "question": "A psychologist reviewing longitudinal research on childhood aggression would most accurately conclude that:",
       "options": [
-        "Separation protest indicates that infants have developed object permanence.",
-        "Both develop simultaneously in infants.",
-        "Separation protest and object permanence are unrelated.",
-        "Object permanence develops before separation protest."
+        "Aggressive behavior in early childhood rarely persists beyond the preschool years due to rapid socialization",
+        "Physical aggression peaks around age 2 and transitions into verbal and relational forms by age 4, with aggressive patterns showing notable stability across development",
+        "Aggression is entirely situational and shows no trait-like consistency from childhood into adolescence",
+        "Only hostile aggression demonstrates stability over time, while instrumental aggression is transient and age-limited"
       ],
-      "correct_answer": "Separation protest indicates that infants have developed object permanence.",
-      "explanation": "Separation protest typically emerges after infants have developed object permanence, as they begin to understand that caregivers continue to exist even when they are not visible. The other options misrepresent the developmental sequence of these concepts.",
+      "correct_answer": "Physical aggression peaks around age 2 and transitions into verbal and relational forms by age 4, with aggressive patterns showing notable stability across development",
+      "explanation": "The lesson describes the developmental trajectory of aggression: 'physical instrumental aggression peaks around age 2, then declines as verbal and relational hostile aggression increase around age 4.' Longitudinal research consistently demonstrates that aggression is one of the most stable behavioral characteristics across development. Option A is incorrect because aggressive behavior shows considerable continuity, not rapid dissolution. Option C is incorrect because research clearly demonstrates trait-like stability in aggression. Option D incorrectly claims only hostile aggression is stable; research shows stability applies to aggressive behavior patterns generally, with forms changing but the underlying tendency persisting.",
       "domain": "Domain 4: Growth & Lifespan Development",
       "knId": "KN25",
-      "source_file": "4 Bonding and Attachment.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Bonding and Attachment.json",
       "source_folder": "4 Development",
       "difficulty": "hard",
-      "question_type": "difficult",
+      "question_type": "standard",
       "isScored": false,
-      "type": "experimental",
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -514,21 +515,21 @@
       "is_org_psych": false
     },
     {
-      "id": 24,
-      "question": "In the context of relationship dynamics, which of the following behaviors is most likely to lead to relationship dissatisfaction according to Gottman's research?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Heredity and Environment.json::2",
+      "question": "What is the typical correlation of IQ scores among siblings raised in the same household?",
       "options": [
-        "Contempt",
-        "Criticism",
-        "Stonewalling",
-        "Defensiveness"
+        "0.0",
+        "0.25",
+        "0.5",
+        "0.75"
       ],
-      "correct_answer": "Contempt",
-      "explanation": "1. **Contempt as the Correct Answer**: According to Gottman and Levenson’s research, contempt is identified as the single best predictor of divorce and relationship dissatisfaction. This behavior reflects a deep sense of disrespect and superiority towards one’s partner, which can escalate conflicts and erode the emotional connection necessary for a healthy relationship. Contempt often manifests through sarcasm, ridicule, or disdain, making it particularly damaging to relationship satisfaction.\n\n2. **Explanation of Incorrect Options**:\n   - **Stonewalling**: While stonewalling, characterized by emotional withdrawal and disengagement during conflicts, can lead to relationship issues, it is more often associated with the emotionally inexpressive (avoidant) pattern and is not as directly linked to immediate dissatisfaction as contempt.\n   - **Criticism**: Criticism involves attacking a partner's character or behavior, which can contribute to conflict; however, it does not have the same pervasive negative impact on relationship satisfaction as contempt, which conveys deeper disrespect.\n   - **Defensiveness**: Defensiveness is a response to perceived attacks and can hinder communication; it is typically a reaction to conflict rather than a primary predictor of relationship dissatisfaction like contempt, which fundamentally undermines respect and trust.",
+      "correct_answer": "0.5",
+      "explanation": "Research indicates that the correlation of IQ scores among siblings raised in the same household is approximately 0.5, reflecting both genetic and environmental influences. The other correlations do not accurately represent this relationship.",
       "domain": "Domain 4: Growth & Lifespan Development",
       "knId": "KN22",
-      "source_file": "4 School and Family.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Heredity and Environment.json",
       "source_folder": "4 Development",
-      "difficulty": "easy",
+      "difficulty": "hard",
       "question_type": "standard",
       "isScored": true,
       "type": "standard",
@@ -787,24 +788,24 @@
       "is_org_psych": false
     },
     {
-      "id": 37,
-      "question": "Which theoretical model of psychopathology emphasizes the role of brain network connectivity disruptions in explaining neurocognitive disorders?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Mood.json::0",
+      "question": "A clinical psychologist is educating a family about the genetic contribution to bipolar I disorder. When discussing concordance rates in twin studies, which of the following most accurately reflects the research findings?",
       "options": [
-        "Biopsychosocial model",
-        "Psychodynamic model",
-        "Behavioral model",
-        "The connectome model"
+        "Concordance is approximately 10-15% for monozygotic twins and 2-5% for dizygotic twins",
+        "Concordance is approximately 40-80% for monozygotic twins and 5-30% for dizygotic twins",
+        "Concordance is approximately 90-95% for monozygotic twins and 40-60% for dizygotic twins",
+        "Concordance rates for monozygotic and dizygotic twins are approximately equal at 30-40%"
       ],
-      "correct_answer": "The connectome model",
-      "explanation": "1. **The connectome model** is the correct answer because it emphasizes the role of disruptions in brain network connectivity, which aligns with the understanding of neurocognitive disorders. These disorders often involve impairments in cognitive functions due to damage or degeneration in specific brain areas and their connections, as indicated by the various neurocognitive disorders discussed, such as Alzheimer’s disease and frontotemporal NCD, which highlight the importance of brain structure and function in cognition.\n\n2. The **biopsychosocial model** is incorrect because it integrates biological, psychological, and social factors in understanding mental health but does not specifically focus on brain connectivity. The **psychodynamic model** is also incorrect as it centers on unconscious processes and early life experiences rather than neurobiological mechanisms. Lastly, the **behavioral model** is incorrect because it emphasizes observable behaviors and learning processes rather than the underlying neural connectivity that contributes to neurocognitive disorders.",
+      "correct_answer": "Concordance is approximately 40-80% for monozygotic twins and 5-30% for dizygotic twins",
+      "explanation": "Twin studies of bipolar disorder show concordance rates of 40-80% for monozygotic (identical) twins and 5-30% for dizygotic (fraternal) twins, reflecting high heritability (60-90%). Option A underestimates the concordance rates significantly. Option C overestimates the monozygotic rate and dramatically overestimates the dizygotic rate. Option D incorrectly suggests similar concordance regardless of zygosity, which would indicate minimal genetic contribution — contradicting the strong genetic evidence for bipolar disorder.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
       "knId": "KN39",
-      "source_file": "5 Neurocognitive.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Mood.json",
       "source_folder": "5 Diagnosis",
-      "difficulty": "hard",
-      "question_type": "difficult",
+      "difficulty": "medium",
+      "question_type": "standard",
       "isScored": false,
-      "type": "experimental",
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -871,20 +872,20 @@
       "is_org_psych": false
     },
     {
-      "id": 41,
-      "question": "A researcher conducting a study on the effectiveness of a new therapeutic intervention inadvertently provides more encouraging nonverbal cues to participants in the treatment group than to those in the control group. This pattern of behavior, in which the researcher's expectations subtly influence participant responses, is BEST described as:",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/5 6 Training and Evaluation.json::4",
+      "question": "Which type of analysis in a needs analysis is primarily focused on determining if employee performance issues are due to inadequate selection procedures rather than lack of training?",
       "options": [
-        "The Hawthorne effect",
-        "The Rosenthal effect",
-        "Observer bias",
-        "Demand characteristics"
+        "Task analysis",
+        "Organizational analysis",
+        "Person analysis",
+        "Demographic analysis"
       ],
-      "correct_answer": "The Rosenthal effect",
-      "explanation": "The Rosenthal effect (also called experimenter expectancy effect) refers to subtle cues or clues transmitted by the experimenter that influence participant behavior in the direction of the experimenter's hypothesis. This is distinct from the Hawthorne effect (behavior change due to awareness of being observed), demand characteristics (cues that inform participants about what behavior is expected, which come from the experimental situation rather than the experimenter specifically), and observer bias (systematic errors in recording or interpreting data, rather than influencing participant behavior).",
+      "correct_answer": "Organizational analysis",
+      "explanation": "1. **Organizational analysis** is the correct answer because it specifically aims to identify organizational goals and assess whether employee performance problems stem from inadequate training, selection procedures, or other factors. This analysis helps determine the root causes of performance issues within the organization, making it essential for understanding whether training is the appropriate solution.\n\n2. **Task analysis** is incorrect because it focuses on identifying the specific tasks required for a job and the knowledge, skills, abilities, and other characteristics (KSAOs) necessary for successful task performance, rather than examining the broader organizational factors affecting employee performance. \n\n**Person analysis** is also incorrect because it targets individual employees to identify those with deficiencies that require training, without assessing the organizational context that might contribute to performance issues. \n\nLastly, **demographic analysis** is wrong because it aims to identify the training needs of specific groups of workers based on demographic characteristics, rather than evaluating the organizational factors that might influence performance problems.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
-      "knId": "KN6",
-      "source_file": "7 Research Designs.json",
-      "source_folder": "7 Research and Stats",
+      "knId": "KN46",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/5 6 Training and Evaluation.json",
+      "source_folder": "2 3 5 6 I-O Psychology",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
@@ -1018,19 +1019,19 @@
       "is_org_psych": false
     },
     {
-      "id": 48,
-      "question": "What is a common complaint that interns have about their supervisors?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json::64",
+      "question": "According to APA’s Supervision Guidelines, what is the supervisor’s responsibility regarding confidentiality in supervision?",
       "options": [
-        "Overly supportive relationships",
-        "Inconsistent scheduling of sessions",
-        "Too much supervision",
-        "Lack of feedback on performance"
+        "Keep supervisee’s personal disclosures confidential with no exceptions",
+        "Inform supervisees about limits of confidentiality and be responsible for supervisee’s client records",
+        "Share supervisee disclosures freely with other staff members for feedback purposes",
+        "Disclose supervisee’s client data only with supervisee’s verbal consent"
       ],
-      "correct_answer": "Lack of feedback on performance",
-      "explanation": "Interns often express dissatisfaction with the lack of constructive feedback, which is crucial for their development. The other options do not typically reflect common complaints; interns generally appreciate guidance but may feel overwhelmed by excessive supervision or inconsistent scheduling.",
+      "correct_answer": "Inform supervisees about limits of confidentiality and be responsible for supervisee’s client records",
+      "explanation": "1. The correct answer, \"Inform supervisees about limits of confidentiality and be responsible for supervisee’s client records,\" aligns with the ASPPB’s Supervision Guidelines, which state that supervisors must inform supervisees of the limits of confidentiality regarding personal disclosures and evaluations. Additionally, supervisors are responsible for ensuring that supervisees' clients are aware of the supervisee's status as a trainee and that the supervisor has access to all client records, thereby maintaining accountability and protecting client welfare.\n\n2. The incorrect options are as follows:\n\n- **Keep supervisee’s personal disclosures confidential with no exceptions:** This is incorrect because supervisors must inform supervisees of the limits of confidentiality, indicating that there are circumstances under which disclosures may not remain confidential.\n  \n- **Share supervisee disclosures freely with other staff members for feedback purposes:** This option is wrong as it violates confidentiality principles; supervisors should not disclose supervisee information without appropriate limits and considerations for confidentiality.\n  \n- **Disclose supervisee’s client data only with supervisee’s verbal consent:** This is incorrect because while consent is important, supervisors must also ensure that they have access to client records for oversight and accountability, which may not always be contingent on verbal consent alone.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
       "knId": "KN70",
-      "source_file": "8 Practice Issues.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json",
       "source_folder": "8 Ethics",
       "difficulty": "medium",
       "question_type": "standard",
@@ -1543,19 +1544,19 @@
       "is_org_psych": false
     },
     {
-      "id": 73,
-      "question": "When a psychologist learns that a client has experienced trauma, what is their ethical obligation regarding reporting?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 3 and 4.json::0",
+      "question": "Dr. Patel ended a romantic relationship with Jordan three years ago. Jordan now seeks therapy from Dr. Patel for anxiety. According to APA ethical standards on multiple relationships, which of the following is MOST accurate?",
       "options": [
-        "They can choose to ignore the trauma if the client does not want to report it.",
-        "They must inform the client's family about the trauma.",
-        "They should assess the client's safety and discuss reporting options with the client.",
-        "They must report the trauma to the authorities immediately."
+        "Dr. Patel may treat Jordan because three years have passed since the relationship ended",
+        "Dr. Patel should not treat Jordan because prior intimate relationships create an inherent conflict that impairs objectivity",
+        "Dr. Patel may treat Jordan only if Jordan initiates the request and provides written consent",
+        "Dr. Patel may treat Jordan only after consulting with a colleague who approves the arrangement"
       ],
-      "correct_answer": "They should assess the client's safety and discuss reporting options with the client.",
-      "explanation": "The correct answer reflects the ethical obligation to prioritize the client's safety while also respecting their autonomy. The other options either violate confidentiality or do not consider the client's wishes.",
+      "correct_answer": "Dr. Patel should not treat Jordan because prior intimate relationships create an inherent conflict that impairs objectivity",
+      "explanation": "Standard 10.07 prohibits psychologists from accepting as therapy clients persons with whom they have had a prior sexual or romantic relationship. The lesson content on multiple relationships emphasizes that relationships that 'could reasonably be expected to impair objectivity, competence, or effectiveness' or risk exploitation are problematic. A prior romantic relationship creates a deeply personal history that compromises therapeutic objectivity and introduces dynamics incompatible with effective therapy. Option A is wrong because unlike the post-therapy sexual relationship rule, there is no time-based exception for treating a former romantic partner. Option C is wrong because client initiation and consent do not overcome the inherent conflict. Option D is wrong because colleague consultation does not remove the fundamental impairment to objectivity.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
       "knId": "KN64",
-      "source_file": "8 Practice Issues.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 3 and 4.json",
       "source_folder": "8 Ethics",
       "difficulty": "medium",
       "question_type": "standard",
@@ -1900,19 +1901,19 @@
       "is_org_psych": false
     },
     {
-      "id": 90,
-      "question": "A 2-year-old insists on trying to buckle his own car seat, becoming frustrated and crying when his father intervenes to help him. According to Erikson's theory of psychosocial development, this child is most centrally navigating which stage?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Body Growth.json::8",
+      "question": "Which of the following senses is least developed at birth and shows significant improvement by 7-8 months of age?",
       "options": [
-        "Trust vs. Mistrust, characterized by dependence on caregiver reliability",
-        "Initiative vs. Guilt, characterized by purposeful goal-directed behavior",
-        "Autonomy vs. Shame and Doubt, characterized by striving for self-control and independence",
-        "Industry vs. Inferiority, characterized by mastery of culturally valued skills"
+        "Hearing",
+        "Touch",
+        "Vision",
+        "Taste"
       ],
-      "correct_answer": "Autonomy vs. Shame and Doubt, characterized by striving for self-control and independence",
-      "explanation": "According to Erikson's psychosocial theory, toddlerhood (approximately ages 1-3) corresponds to the Autonomy vs. Shame and Doubt stage. The core developmental task is the child's push to assert self-control and independence over their own actions and body. The toddler's insistence on performing the task himself — and frustration when that independence is thwarted — directly illustrates this stage's central conflict. Trust vs. Mistrust (A) is the infancy stage (0-1 year) centered on caregiver consistency. Initiative vs. Guilt (C) emerges during preschool years (3-6) when children begin taking self-directed purposeful action. Industry vs. Inferiority (D) characterizes the school-age years (6-12) focused on skill mastery and peer comparison.",
+      "correct_answer": "Vision",
+      "explanation": "Vision is the least developed sense at birth, with newborns having a visual acuity of approximately 20/400 to 20/600. By 7-8 months, infants achieve visual acuity similar to that of normal adults. Hearing, touch, and taste are more developed at birth compared to vision.",
       "domain": "Domain 4: Growth & Lifespan Development",
       "knId": "KN21",
-      "source_file": "4 Temperament and Personality.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Body Growth.json",
       "source_folder": "4 Development",
       "difficulty": "medium",
       "question_type": "standard",
@@ -2047,19 +2048,19 @@
       "is_org_psych": true
     },
     {
-      "id": 97,
-      "question": "Which supervision model focuses on understanding and integrating the supervisor and supervisee's interpersonal dynamics to improve therapy outcomes?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 CBT.json::27",
+      "question": "Self-instructional training (Meichenbaum) aims to improve children's impulsivity mainly by teaching them to:",
       "options": [
-        "Behavioral model",
-        "Developmental model",
-        "Integrative model",
-        "Psychodynamic model"
+        "Verbalize internal task instructions progressively from modeling to covert self-guidance",
+        "Avoid stressful stimuli through role playing and relaxation techniques",
+        "Modify core beliefs through disputation of irrational thoughts",
+        "Develop cognitive schemas during early childhood"
       ],
-      "correct_answer": "Psychodynamic model",
-      "explanation": "1. The **psychodynamic model** is the correct answer because it emphasizes understanding and integrating the interpersonal dynamics between the supervisor and supervisee. This model focuses on the relational aspects of supervision, including transference and countertransference, which can significantly impact therapy outcomes by enhancing the supervisee's self-awareness and therapeutic effectiveness.\n\n2. The **developmental model** is incorrect because it primarily focuses on the growth and progression of the supervisee's skills and competencies over time, rather than the interpersonal dynamics between supervisor and supervisee. The **integrative model** is not the correct choice as it aims to combine various theoretical approaches and techniques in supervision, without specifically emphasizing the understanding of interpersonal dynamics. Lastly, the **behavioral model** is wrong because it concentrates on observable behaviors and the application of behavioral techniques in supervision, rather than exploring the deeper relational aspects that influence therapeutic outcomes.",
+      "correct_answer": "Verbalize internal task instructions progressively from modeling to covert self-guidance",
+      "explanation": "1. The correct answer, \"Verbalize internal task instructions progressively from modeling to covert self-guidance,\" reflects the five stages of self-instructional training developed by Meichenbaum. This approach begins with cognitive modeling, where children observe a model verbalizing instructions, and progresses through stages where they gradually take on more responsibility for verbalizing these instructions themselves, ultimately leading to covert self-instruction. This method is specifically designed to enhance problem-solving skills and reduce impulsivity by fostering self-guidance and self-regulation.\n\n2. The option \"Avoid stressful stimuli through role playing and relaxation techniques\" is incorrect because self-instructional training focuses on teaching task-related verbalization rather than avoidance strategies. The option \"Modify core beliefs through disputation of irrational thoughts\" is wrong as it pertains to Rational Emotive Behavior Therapy (REBT), which targets irrational beliefs, not self-instructional training. Lastly, \"Develop cognitive schemas during early childhood\" is incorrect because self-instructional training does not aim to develop cognitive schemas but rather to teach children specific self-instruction strategies to manage tasks and impulsivity.",
       "domain": "Domain 6: Treatment & Intervention",
-      "knId": "KN52",
-      "source_file": "6 Prevention and Consultation.json",
+      "knId": "KN43",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 CBT.json",
       "source_folder": "6 Clinical Interventions",
       "difficulty": "medium",
       "question_type": "standard",
@@ -2446,21 +2447,21 @@
       "is_org_psych": false
     },
     {
-      "id": 116,
-      "question": "In rural settings, what is a primary concern regarding the scope of practice for psychologists?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 7 and 8.json::23",
+      "question": "Which of the following best describes a psychologist's responsibility regarding continuing professional development according to ethical standards?",
       "options": [
-        "Limited access to supervision and consultation",
-        "Excessive competition among practitioners",
-        "High demand for specialized services",
-        "Availability of advanced technology"
+        "Psychologists may choose to engage in continuing education when convenient without formal documentation.",
+        "Psychologists must undertake ongoing education to maintain competence and ensure current knowledge.",
+        "Once licensed, psychologists are not ethically required to pursue further training.",
+        "Continuing professional development is solely the responsibility of employers, not the individual psychologist."
       ],
-      "correct_answer": "Limited access to supervision and consultation",
-      "explanation": "In rural settings, psychologists often face challenges related to limited access to supervision and consultation, which can impact their practice and professional development. The other options do not accurately reflect the primary concerns in rural psychology practice.",
+      "correct_answer": "Psychologists must undertake ongoing education to maintain competence and ensure current knowledge.",
+      "explanation": "1. The correct answer, \"Psychologists must undertake ongoing education to maintain competence and ensure current knowledge,\" aligns with the ethical standards outlined in the APA Ethics Code, particularly Standard 7.02. This standard emphasizes that psychologists must take \"reasonable steps\" to ensure their education and training descriptions are accurate, indicating a commitment to continuous professional development to stay informed and competent in their field.\n\n2. The first incorrect option, \"Psychologists may choose to engage in continuing education when convenient without formal documentation,\" is wrong because ethical standards require psychologists to maintain accurate records of their education and training, suggesting that ongoing education should be a structured and documented process rather than a casual choice. \n\nThe second incorrect option, \"Once licensed, psychologists are not ethically required to pursue further training,\" is incorrect because the APA Ethics Code implies an ongoing responsibility for professional development beyond initial licensure to ensure competence in practice. \n\nFinally, the third incorrect option, \"Continuing professional development is solely the responsibility of employers, not the individual psychologist,\" is inaccurate because it places the onus of professional growth entirely on employers, whereas ethical standards highlight the individual psychologist's obligation to engage in ongoing education and training for their own competence.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
       "knId": "KN66",
-      "source_file": "8 Practice Issues.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 7 and 8.json",
       "source_folder": "8 Ethics",
-      "difficulty": "hard",
+      "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
       "type": "standard",
@@ -2530,19 +2531,19 @@
       "is_org_psych": false
     },
     {
-      "id": 120,
-      "question": "According to research on cognitive development and diverse identities (KN24), how can gender-role stereotypes affect children’s cognitive performance in domains such as math and verbal abilities?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Before Birth.json::15",
+      "question": "Which teratogen is most associated with spontaneous abortion, premature birth, low birth weight, and infants who are irritable with a piercing cry and later risk for attention and behavior problems?",
       "options": [
-        "They enhance boys’ and girls’ abilities equally through positive reinforcement",
-        "They have no effect on children’s cognitive performance as abilities are biologically predetermined",
-        "They contribute to self-fulfilling prophecies where children perform in line with expectations linked to gender roles",
-        "They only affect adults’ attitudes and do not influence children's cognitive skills"
+        "Alcohol",
+        "Nicotine",
+        "Cocaine",
+        "Valproic acid"
       ],
-      "correct_answer": "They contribute to self-fulfilling prophecies where children perform in line with expectations linked to gender roles",
-      "explanation": "1. The correct answer, \"They contribute to self-fulfilling prophecies where children perform in line with expectations linked to gender roles,\" reflects the impact of gender-role stereotypes on children's cognitive performance. Research indicates that these stereotypes can lead children to internalize expectations about their abilities, particularly in areas like math and verbal skills. For instance, parents may expect sons to excel in math and attribute their successes to innate ability, while daughters may be seen as needing to work harder for the same achievements, leading girls to underestimate their capabilities and become less interested in math.\n\n2. The first incorrect option, \"They have no effect on children’s cognitive performance as abilities are biologically predetermined,\" is wrong because research shows that cognitive abilities are influenced by both biological factors and social constructs, including gender-role stereotypes. The second incorrect option, \"They only affect adults’ attitudes and do not influence children's cognitive skills,\" is incorrect because studies demonstrate that these stereotypes directly impact children's self-perception and performance, not just adult attitudes. Lastly, the option \"They enhance boys’ and girls’ abilities equally through positive reinforcement\" is misleading, as the reinforcement often differs by gender, with boys receiving more encouragement in math and girls potentially receiving less, which can hinder their performance rather than enhance it.",
+      "correct_answer": "Cocaine",
+      "explanation": "1. \"Cocaine\" is the correct answer because prenatal exposure to cocaine is specifically linked to spontaneous abortion, premature birth, and low birth weight. Additionally, infants exposed to cocaine tend to be irritable, exhibit a piercing cry, and are at risk for attention and behavior problems later in life, as outlined in the reference material.\n\n2. **Alcohol:** While prenatal exposure to alcohol can lead to fetal alcohol spectrum disorder (FASD) and various developmental issues, it is not primarily associated with spontaneous abortion or the specific symptoms described in the question. \n\n**Nicotine:** Prenatal exposure to nicotine is known to have harmful effects, including low birth weight and developmental issues, but it is not mentioned in the reference material as a direct cause of spontaneous abortion or the specific irritability and behavior problems outlined.\n\n**Valproic acid:** Valproic acid is noted in the reference material for causing teratogenic effects, but it is not specifically associated with the symptoms of spontaneous abortion, premature birth, or the described irritability and behavior problems in infants, making it an incorrect choice for this question.",
       "domain": "Domain 4: Growth & Lifespan Development",
-      "knId": "KN24",
-      "source_file": "4 Cognitive Development.json",
+      "knId": "KN27",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Before Birth.json",
       "source_folder": "4 Development",
       "difficulty": "medium",
       "question_type": "standard",
@@ -2593,19 +2594,19 @@
       "is_org_psych": true
     },
     {
-      "id": 123,
-      "question": "Under what circumstances can a psychologist require clients to share personal information during therapy sessions?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 9 and 10.json::32",
+      "question": "A psychologist is preparing a report that includes findings from a previous assessment conducted by another clinician. What is the most ethical way to present this information?",
       "options": [
-        "When the psychologist feels that the client is withholding critical information.",
-        "When the psychologist believes it will directly impact the therapeutic process.",
-        "Only if the client agrees to share information voluntarily.",
-        "If the client is informed that such information is necessary for treatment planning."
+        "Cite the previous clinician's findings without any caveats",
+        "Clearly state the source of the findings and any limitations",
+        "Only include the findings if the previous clinician is present",
+        "Use the findings but claim them as your own"
       ],
-      "correct_answer": "If the client is informed that such information is necessary for treatment planning.",
-      "explanation": "1. The correct answer, \"If the client is informed that such information is necessary for treatment planning,\" aligns with Standard 7.04 of the APA Ethics Code, which states that personal information can only be required if it is clearly identified in program materials or necessary for evaluating or assisting students. In therapy, informing clients that sharing personal information is essential for their treatment planning adheres to ethical guidelines, ensuring clients understand the relevance of the information to their care.\n\n2. The option \"Only if the client agrees to share information voluntarily\" is incorrect because it does not acknowledge that there are situations where specific information may be essential for effective treatment planning, which necessitates disclosure beyond voluntary agreement. The statement \"When the psychologist believes it will directly impact the therapeutic process\" is misleading since it lacks the requirement of informing the client about the necessity of the information, which is crucial for ethical practice. Lastly, \"When the psychologist feels that the client is withholding critical information\" is also incorrect, as it does not meet the ethical standard of requiring clear communication about the necessity of sharing personal information for treatment purposes; instead, it implies a subjective judgment without proper client involvement.",
+      "correct_answer": "Clearly state the source of the findings and any limitations",
+      "explanation": "1. The correct answer, \"Clearly state the source of the findings and any limitations,\" aligns with Standard 9.01(b) of the APA Ethics Code, which emphasizes the importance of transparency when using assessment results from other professionals. Psychologists must communicate any limitations of the conclusions drawn from such assessments, ensuring that the context and potential impact on their own conclusions are clearly articulated.\n\n2. The option \"Cite the previous clinician's findings without any caveats\" is incorrect because it fails to acknowledge the limitations of the previous assessment, which is essential for ethical reporting as per Standard 9.01(b). The choice \"Only include the findings if the previous clinician is present\" is misleading; ethical practice does not require the presence of the original clinician to report their findings, but rather the proper attribution and contextualization of the data. Finally, the option \"Use the findings but claim them as your own\" is unethical and violates the principles of honesty and integrity set forth in the APA Ethics Code, as it misrepresents the original source of the findings.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
       "knId": "KN61",
-      "source_file": "8 Standards 7 and 8.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 9 and 10.json",
       "source_folder": "8 Ethics",
       "difficulty": "easy",
       "question_type": "standard",
@@ -2950,24 +2951,24 @@
       "is_org_psych": true
     },
     {
-      "id": 140,
-      "question": "According to the two-factor theory of emotion, which two components are essential for the experience of emotion?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Stress and Emotion.json::4",
+      "question": "Research indicates that men and women may exhibit different leadership styles. Which of the following is a commonly observed difference?",
       "options": [
-        "Physiological arousal and cognitive labeling",
-        "Cognitive labeling and emotional suppression",
-        "Behavioral response and physiological arousal",
-        "Cognitive appraisal and emotional expression"
+        "Men are more likely to use transformational leadership",
+        "Women are more likely to adopt a democratic leadership style",
+        "Men are more likely to use a participative approach",
+        "Women are more likely to use an authoritarian style"
       ],
-      "correct_answer": "Physiological arousal and cognitive labeling",
-      "explanation": "The two-factor theory of emotion posits that emotion is based on physiological arousal followed by cognitive labeling of that arousal. The other options do not accurately reflect the components of this theory.",
+      "correct_answer": "Women are more likely to adopt a democratic leadership style",
+      "explanation": "Research has shown that women tend to adopt a more democratic or participative leadership style, which contrasts with the more autocratic styles often associated with men. The other options do not accurately reflect the common findings in leadership research.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
       "knId": "KN10",
-      "source_file": "2 Stress and Emotion.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Stress and Emotion.json",
       "source_folder": "2 Learning and Memory",
       "difficulty": "hard",
-      "question_type": "difficult",
+      "question_type": "standard",
       "isScored": false,
-      "type": "experimental",
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -2992,20 +2993,20 @@
       "is_org_psych": true
     },
     {
-      "id": 142,
-      "question": "Which of the following best exemplifies structural racism as defined by the APA?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Concepts.json::2",
+      "question": "Which of the following comments is the best example of a microinvalidation rather than a microinsult or microassault?",
       "options": [
-        "A teacher treating students unfairly based on race",
-        "Individual holding and expressing overtly racist views",
-        "Laws and policies that create race-based inequalities, such as school funding tied to local property taxes",
-        "Discriminatory hiring practices by a private employer"
+        "A supervisor tells an Asian American employee, \"You speak English so well.\"",
+        "A coworker says, \"I do not see color. We are all just human.\"",
+        "A manager assumes a Black applicant was hired only because of affirmative action.",
+        "A student intentionally uses a racial slur in class discussion."
       ],
-      "correct_answer": "Laws and policies that create race-based inequalities, such as school funding tied to local property taxes",
-      "explanation": "1. The correct answer, \"Laws and policies that create race-based inequalities, such as school funding tied to local property taxes,\" exemplifies structural racism as defined by the APA because it refers to systemic practices and policies that produce enduring racial disparities. Structural racism encompasses laws and institutional practices that perpetuate inequalities across various domains, including education, as evidenced by funding mechanisms that disadvantage minority communities.\n\n2. The option \"A teacher treating students unfairly based on race\" is incorrect because it describes interpersonal racism, which involves individual behaviors and attitudes rather than systemic practices. \"Individual holding and expressing overtly racist views\" is also incorrect, as this represents overt racism, which is characterized by explicit hostility and discrimination from individuals rather than structural inequalities. Finally, \"Discriminatory hiring practices by a private employer\" is incorrect because it pertains to institutional racism, which is specific to organizational policies rather than broader societal structures that create systemic racial disparities.",
+      "correct_answer": "A coworker says, \"I do not see color. We are all just human.\"",
+      "explanation": "This is the best answer because claiming not to see color dismisses and negates the lived significance of race in a person's experience, which is the defining feature of a microinvalidation. The English comment is wrong because it is more consistent with a microinsult that implies foreignness. The affirmative-action assumption is also a microinsult because it demeans competence. The racial-slur example is a microassault because it is explicit and overtly discriminatory.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
-      "knId": "KN20",
-      "source_file": "3 Helping and Hurting.json",
-      "source_folder": "3 Social Psychology",
+      "knId": "KN18",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Cultural Considerations/3 Cultural Concepts.json",
+      "source_folder": "3 Cultural Considerations",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
@@ -4294,19 +4295,19 @@
       "is_org_psych": false
     },
     {
-      "id": 204,
-      "question": "In a crisis situation, what is the primary ethical obligation of a psychologist when offering help?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 5 and 6.json::31",
+      "question": "When is it acceptable to divide or pay fees related to client referrals?",
       "options": [
-        "To provide assistance only if they are being compensated.",
-        "To act in the best interest of the individual in crisis, even if it means breaching confidentiality.",
-        "To refer the individual to another professional immediately.",
-        "To ensure that their intervention does not violate any laws."
+        "Paying a colleague a set fee for each client referred regardless of services provided.",
+        "Dividing fees with another professional who both provided services to the client.",
+        "Offering a financial incentive to friends for client referrals.",
+        "Paying a fixed fee solely to secure new client referrals from another psychologist."
       ],
-      "correct_answer": "To act in the best interest of the individual in crisis, even if it means breaching confidentiality.",
-      "explanation": "The correct answer emphasizes the ethical obligation to prioritize the well-being of the individual in crisis, which may necessitate breaching confidentiality. The other options do not align with the ethical imperative to provide immediate help.",
+      "correct_answer": "Dividing fees with another professional who both provided services to the client.",
+      "explanation": "1. The correct answer, \"Dividing fees with another professional who both provided services to the client,\" is acceptable because Standard 6.07 states that referral fees must be based on the services provided rather than the referral itself. This means that if both psychologists contributed to the client's care, it is ethical to share the fees in proportion to the services rendered.\n\n2. The first incorrect option, \"Paying a colleague a set fee for each client referred regardless of services provided,\" is wrong because it violates the principle that fees must be based on actual services rendered and not merely on the act of referral. The second incorrect option, \"Offering a financial incentive to friends for client referrals,\" is incorrect because it constitutes a financial incentive that is not based on services provided, which is unethical. Lastly, the option \"Paying a fixed fee solely to secure new client referrals from another psychologist\" is also incorrect as it does not comply with the requirement that referral fees must be tied to the services provided, making it an unethical practice.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
-      "knId": "KN65",
-      "source_file": "8 Standards 1 and 2.json",
+      "knId": "KN64",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 5 and 6.json",
       "source_folder": "8 Ethics",
       "difficulty": "medium",
       "question_type": "standard",
@@ -4567,19 +4568,19 @@
       "is_org_psych": false
     },
     {
-      "id": 217,
-      "question": "What is the primary goal of administering the Mini-Mental State Examination (MMSE)?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 IQ Tests.json::9",
+      "question": "What is the primary focus of the Primary Mental Abilities Test?",
       "options": [
-        "To determine the effectiveness of psychotherapy.",
-        "To measure intelligence quotient (IQ) levels.",
-        "To assess personality traits and emotional functioning.",
-        "To evaluate cognitive impairment and screen for dementia."
+        "To measure overall intelligence as a single factor.",
+        "To assess specific cognitive abilities across multiple domains.",
+        "To evaluate personality traits and emotional functioning.",
+        "To diagnose learning disabilities in children."
       ],
-      "correct_answer": "To evaluate cognitive impairment and screen for dementia.",
-      "explanation": "The MMSE is specifically designed to assess cognitive functioning and identify potential dementia. The other options do not accurately reflect the purpose of the MMSE.",
+      "correct_answer": "To assess specific cognitive abilities across multiple domains.",
+      "explanation": "The Primary Mental Abilities Test is designed to measure specific cognitive abilities rather than overall intelligence or personality traits. The other options misrepresent the test's purpose.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
       "knId": "KN41",
-      "source_file": "5 Cognitive Tests.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 IQ Tests.json",
       "source_folder": "5 Assessment",
       "difficulty": "medium",
       "question_type": "standard",
@@ -4693,24 +4694,24 @@
       "is_org_psych": false
     },
     {
-      "id": 223,
-      "question": "What is a potential ethical concern when conducting custody evaluations with limited participation from one parent?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 3 and 4.json::36",
+      "question": "Dr. Whitfield has been providing family therapy to both parents and their two children. The parents are now divorcing and in a custody dispute. The mother requests that Dr. Whitfield release the complete family therapy records to her attorney, but the father does not consent to the release. What is Dr. Whitfield's MOST appropriate course of action?",
       "options": [
-        "The evaluation may lack objectivity.",
-        "All of the above.",
-        "The evaluator may favor the more cooperative parent.",
-        "The results may be biased due to incomplete information."
+        "Release the records because the mother has a right to access her own therapy records",
+        "Release only portions of the records that pertain exclusively to the mother's individual statements",
+        "Decline to release the records without consent from all parties involved in the family therapy, and seek legal consultation if necessary",
+        "Release the records to the court directly rather than to either party's attorney"
       ],
-      "correct_answer": "All of the above.",
-      "explanation": "The correct answer encompasses multiple ethical concerns that arise when one parent is not fully involved in the evaluation process. Each of the other options represents a valid concern that could affect the integrity of the evaluation.",
+      "correct_answer": "Decline to release the records without consent from all parties involved in the family therapy, and seek legal consultation if necessary",
+      "explanation": "In family therapy, confidentiality belongs to all participants in the treatment. When one party consents to release but another does not, the psychologist cannot release the records because doing so would violate the non-consenting party's confidentiality rights. This is particularly important in custody disputes where released information could be used adversarially. Option A incorrectly treats family therapy records as individual records. Option B attempts a partial solution but family therapy records are intertwined and separating them risks revealing information about the non-consenting party. Option D circumvents the consent issue improperly—the psychologist should instead wait for a court order if the court needs the records.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
       "knId": "KN64",
-      "source_file": "8 Practice Issues.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 3 and 4.json",
       "source_folder": "8 Ethics",
       "difficulty": "hard",
-      "question_type": "difficult",
+      "question_type": "standard",
       "isScored": false,
-      "type": "experimental",
+      "type": "standard",
       "is_org_psych": false
     },
     {

@@ -27,7 +27,8 @@
     "generatedAt": "2026-03-25T19:54:22.323Z",
     "source": "questionsGPT",
     "blueprint": "Kns.md",
-    "generator": "scripts/assemble-questionsgpt-exams.mjs"
+    "generator": "scripts/assemble-questionsgpt-exams.mjs",
+    "lastSurgicalFix": "2026-05-10T02:40:10.936Z"
   },
   "questions": [
     {
@@ -52,19 +53,19 @@
       "is_org_psych": false
     },
     {
-      "id": 2,
-      "question": "Which of the following best illustrates the use of the method of loci as a mnemonic technique?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Memory.json::44",
+      "question": "Which memory improvement technique is demonstrated when a student relates new information to concepts they already understand to facilitate storage in long-term memory?",
       "options": [
-        "Creating an acronym to remember the order of operations in mathematics",
-        "Rehearsing a list of words repeatedly to store them in short-term memory",
-        "Associating grocery list items with familiar objects placed in a familiar location",
-        "Using a phrase where each word’s first letter cues the item to be recalled"
+        "Elaborative rehearsal",
+        "Maintenance rehearsal",
+        "Encoding specificity",
+        "Practice testing"
       ],
-      "correct_answer": "Associating grocery list items with familiar objects placed in a familiar location",
-      "explanation": "1. The correct answer, \"Associating grocery list items with familiar objects placed in a familiar location,\" exemplifies the method of loci because this mnemonic technique involves linking each item on a list to a specific object in a known environment. By mentally walking through this familiar location, the individual can retrieve the items associated with each object, enhancing memory recall through visual imagery.\n\n2. The first incorrect option, \"Creating an acronym to remember the order of operations in mathematics,\" is wrong because it describes a verbal mnemonic rather than the method of loci, which relies on spatial associations. The second option, \"Using a phrase where each word’s first letter cues the item to be recalled,\" is incorrect because it also represents an acrostic mnemonic, not the spatial imagery central to the method of loci. Lastly, \"Rehearsing a list of words repeatedly to store them in short-term memory\" is incorrect because it focuses on rote memorization rather than the distinct spatial and visual associations utilized in the method of loci.",
+      "correct_answer": "Elaborative rehearsal",
+      "explanation": "1. **Elaborative rehearsal** is the correct answer because it involves making new information meaningful by relating it to existing knowledge, which enhances the likelihood of transferring that information to long-term memory. This technique is specifically designed to facilitate deeper processing of information, known as semantic encoding, thereby improving memory retention and retrieval.\n\n2. **Maintenance rehearsal** is incorrect because it refers to the simple repetition of information to keep it in short-term memory, rather than relating it to existing concepts. **Encoding specificity** is not the correct answer because it focuses on the conditions under which information is learned and retrieved, rather than the process of making information meaningful. Lastly, **practice testing** is incorrect because it involves actively recalling information to enhance memory, rather than relating new information to prior knowledge for better encoding.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
       "knId": "KN8",
-      "source_file": "2 Memory.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Memory.json",
       "source_folder": "2 Learning and Memory",
       "difficulty": "easy",
       "question_type": "standard",
@@ -115,20 +116,20 @@
       "is_org_psych": false
     },
     {
-      "id": 5,
-      "question": "A school psychologist wants to determine the percentage of time a student spends on-task during a 30-minute independent reading period. The psychologist divides the observation period into 60 equal intervals and checks at the end of each interval whether the student is engaged in reading at that exact moment. This procedure is BEST described as:",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Clinical Tests.json::45",
+      "question": "How is childhood stuttering typically diagnosed?",
       "options": [
-        "Momentary time sampling",
-        "Continuous recording",
-        "Whole-interval sampling",
-        "Event recording"
+        "Through self-report questionnaires from parents.",
+        "By observing speech patterns and frequency of disfluencies.",
+        "Using standardized intelligence tests.",
+        "Through projective tests assessing personality."
       ],
-      "correct_answer": "Momentary time sampling",
-      "explanation": "Momentary time sampling involves recording whether the target behavior is present or absent at the moment the time interval ends. This matches the described procedure of checking at the end of each interval. Whole-interval sampling requires the behavior to be exhibited for the full duration of the interval to be scored positively. Event recording involves tallying each occurrence of a discrete behavior. Continuous recording tracks every instance of a behavior with exact onset and offset times.",
+      "correct_answer": "By observing speech patterns and frequency of disfluencies.",
+      "explanation": "Childhood stuttering is diagnosed primarily through direct observation of speech patterns and the frequency of disfluencies, rather than through self-reports or personality assessments. The other options do not provide the appropriate methods for diagnosing stuttering.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
       "knId": "KN31",
-      "source_file": "7 Research Designs.json",
-      "source_folder": "7 Research and Stats",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Clinical Tests.json",
+      "source_folder": "5 Assessment",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
@@ -199,24 +200,24 @@
       "is_org_psych": false
     },
     {
-      "id": 9,
-      "question": "In a repeated measures ANOVA, what is primarily being analyzed?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Variables.json::2",
+      "question": "How does age function as a moderator variable in psychological research?",
       "options": [
-        "Differences in variances",
-        "Differences in categorical variables",
-        "Differences between independent groups",
-        "Differences within the same group over time"
+        "It directly affects the dependent variable",
+        "It changes the strength or direction of the relationship between variables",
+        "It is an extraneous variable that must be controlled",
+        "It serves as the independent variable in studies"
       ],
-      "correct_answer": "Differences within the same group over time",
-      "explanation": "The correct answer is 'Differences within the same group over time' because repeated measures ANOVA is specifically designed to analyze data where the same subjects are measured multiple times under different conditions. It contrasts with other tests that compare independent groups or categorical variables.",
+      "correct_answer": "It changes the strength or direction of the relationship between variables",
+      "explanation": "Age as a moderator variable influences how the independent variable affects the dependent variable, making it the correct answer. The other options mischaracterize the role of age in research.",
       "domain": "Domain 7: Research Methods & Statistics",
       "knId": "KN54",
-      "source_file": "7 Stats Tests.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/7 Research and Stats/7 Variables.json",
       "source_folder": "7 Research and Stats",
       "difficulty": "hard",
-      "question_type": "difficult",
+      "question_type": "standard",
       "isScored": false,
-      "type": "experimental",
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -556,19 +557,19 @@
       "is_org_psych": true
     },
     {
-      "id": 26,
-      "question": "According to research on cognitive development and diverse identities (KN24), how can gender-role stereotypes affect children’s cognitive performance in domains such as math and verbal abilities?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Temperament and Personality.json::3",
+      "question": "A developmental psychology student is comparing Freud's psychosexual and Erikson's psychosocial stage theories. Which of the following CORRECTLY pairs a Freudian stage with its corresponding Eriksonian crisis during the same developmental period?",
       "options": [
-        "They only affect adults’ attitudes and do not influence children's cognitive skills",
-        "They contribute to self-fulfilling prophecies where children perform in line with expectations linked to gender roles",
-        "They enhance boys’ and girls’ abilities equally through positive reinforcement",
-        "They have no effect on children’s cognitive performance as abilities are biologically predetermined"
+        "Oral stage (0-1 year) corresponds to Autonomy vs. Shame and Doubt",
+        "Anal stage (1-3 years) corresponds to Initiative vs. Guilt",
+        "Phallic stage (3-6 years) corresponds to Initiative vs. Guilt",
+        "Latency stage (6-12 years) corresponds to Identity vs. Role Confusion"
       ],
-      "correct_answer": "They contribute to self-fulfilling prophecies where children perform in line with expectations linked to gender roles",
-      "explanation": "1. The correct answer, \"They contribute to self-fulfilling prophecies where children perform in line with expectations linked to gender roles,\" reflects the impact of gender-role stereotypes on children's cognitive performance. Research indicates that these stereotypes can lead children to internalize expectations about their abilities, particularly in areas like math and verbal skills. For instance, parents may expect sons to excel in math and attribute their successes to innate ability, while daughters may be seen as needing to work harder for the same achievements, leading girls to underestimate their capabilities and become less interested in math.\n\n2. The first incorrect option, \"They have no effect on children’s cognitive performance as abilities are biologically predetermined,\" is wrong because research shows that cognitive abilities are influenced by both biological factors and social constructs, including gender-role stereotypes. The second incorrect option, \"They only affect adults’ attitudes and do not influence children's cognitive skills,\" is incorrect because studies demonstrate that these stereotypes directly impact children's self-perception and performance, not just adult attitudes. Lastly, the option \"They enhance boys’ and girls’ abilities equally through positive reinforcement\" is misleading, as the reinforcement often differs by gender, with boys receiving more encouragement in math and girls potentially receiving less, which can hinder their performance rather than enhance it.",
+      "correct_answer": "Phallic stage (3-6 years) corresponds to Initiative vs. Guilt",
+      "explanation": "According to the lesson, Erikson's first five stages align age-wise with Freud's stages. The Phallic stage covers ages 3-6, which corresponds to Erikson's Initiative vs. Guilt crisis (also ages 3-6). Option A is incorrect because the Oral stage (0-1 year) corresponds to Trust vs. Mistrust, not Autonomy vs. Shame and Doubt. Option B is incorrect because the Anal stage (1-3 years) corresponds to Autonomy vs. Shame and Doubt, not Initiative vs. Guilt. Option D is incorrect because the Latency stage (6-12 years) corresponds to Industry vs. Inferiority, not Identity vs. Role Confusion (which corresponds to the Genital stage in adolescence).",
       "domain": "Domain 4: Growth & Lifespan Development",
-      "knId": "KN24",
-      "source_file": "4 Cognitive Development.json",
+      "knId": "KN23",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Temperament and Personality.json",
       "source_folder": "4 Development",
       "difficulty": "medium",
       "question_type": "standard",
@@ -619,19 +620,19 @@
       "is_org_psych": false
     },
     {
-      "id": 29,
-      "question": "Which stage of White racial identity development involves a recognition of the impact of racism and a commitment to social justice?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Helping and Hurting.json::7",
+      "question": "Which stage in the Racial/Cultural Identity Development Model involves individuals recognizing their own cultural identity and its significance?",
       "options": [
-        "B) Encounter",
-        "C) Immersion-Emersion",
-        "A) Pre-Encounter",
-        "D) Internalization"
+        "Pre-encounter stage",
+        "Encounter stage",
+        "Immersion-Emersion stage",
+        "Internalization stage"
       ],
-      "correct_answer": "C) Immersion-Emersion",
-      "explanation": "Option C is correct as the Immersion-Emersion stage is characterized by a deep engagement with issues of race and a commitment to social justice. Option A, Pre-Encounter, involves a lack of awareness of racial issues. Option B, Encounter, is about experiencing a significant event that challenges one's racial identity. Option D, Internalization, refers to a more integrated identity but does not specifically emphasize social justice commitment.",
+      "correct_answer": "Internalization stage",
+      "explanation": "The Internalization stage is where individuals recognize and embrace their cultural identity, integrating it into their self-concept. The other stages focus on different aspects of identity development, such as awareness or immersion in cultural experiences.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
       "knId": "KN19",
-      "source_file": "3 Helping and Hurting.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Helping and Hurting.json",
       "source_folder": "3 Social Psychology",
       "difficulty": "hard",
       "question_type": "standard",
@@ -766,20 +767,20 @@
       "is_org_psych": false
     },
     {
-      "id": 36,
-      "question": "A behavior therapist is treating a child who engages in frequent head-banging. Rather than applying punishment contingent on each episode, the therapist implements a protocol in which the child receives a preferred edible reinforcer after any interval of a specified duration during which head-banging does not occur. This procedure is identified as differential reinforcement of other behavior (DRO). In operant conditioning terms, the mechanism by which DRO reduces the target behavior is best described as:",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/5 6 Training and Evaluation.json::15",
+      "question": "Which evaluation component involves determining if a program's effectiveness can be practically measured before conducting a full evaluation?",
       "options": [
-        "Punishment by application, in which an aversive stimulus is contingently delivered following each head-banging episode to suppress the behavior",
-        "Extinction paired with positive reinforcement, in which head-banging receives no reinforcement while its absence is systematically reinforced",
-        "Stimulus control, in which antecedent cues that previously signaled head-banging are systematically modified to suppress the response",
-        "Negative reinforcement, in which removal of the aversive head-banging behavior is itself reinforcing to the supervising therapist"
+        "Process evaluation",
+        "Evaluability assessment",
+        "Implementation evaluation",
+        "Needs assessment"
       ],
-      "correct_answer": "Extinction paired with positive reinforcement, in which head-banging receives no reinforcement while its absence is systematically reinforced",
-      "explanation": "DRO operates through two complementary operant mechanisms: (1) extinction—the target behavior (head-banging) receives no reinforcement, allowing it to weaken and decrease; and (2) positive reinforcement delivered contingently on the absence of the target behavior during a specified interval. Together these mechanisms reduce the problem behavior while building more adaptive behavioral repertoires. Option A describes punishment by application, a distinct procedure not used in DRO. Option C misapplies the definition of negative reinforcement, which involves removal of an aversive stimulus contingent on a behavior—not applicable here. Option D describes antecedent-based stimulus control interventions, which modify triggers rather than consequences.",
-      "domain": "Domain 6: Treatment & Intervention",
+      "correct_answer": "Evaluability assessment",
+      "explanation": "1. **Evaluability assessment** is the correct answer because it specifically aims to determine if evaluating a training program’s effectiveness is possible and practical before a full evaluation is conducted. This step ensures that the evaluation can be effectively designed and implemented, considering the resources and conditions available for measuring outcomes.\n\n2. The **process evaluation** is incorrect because it focuses on evaluating how the program was delivered rather than assessing the feasibility of measuring its effectiveness. The **implementation evaluation** is also wrong, as it monitors the fidelity of the program's delivery rather than addressing whether the evaluation itself can be conducted practically. Lastly, the **needs assessment** is not the correct answer because it identifies the needs of proposed participants and the methods to meet those needs, rather than evaluating the feasibility of measuring program effectiveness.",
+      "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
       "knId": "KN42",
-      "source_file": "2 Operant Conditioning Interventions.json",
-      "source_folder": "2 Learning and Memory",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/5 6 Training and Evaluation.json",
+      "source_folder": "2 3 5 6 I-O Psychology",
       "difficulty": "hard",
       "question_type": "standard",
       "isScored": true,
@@ -1165,19 +1166,19 @@
       "is_org_psych": false
     },
     {
-      "id": 55,
-      "question": "According to contact hypothesis, one key condition that enhances the effectiveness of intergroup contact for reducing prejudice is:",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Connection.json::16",
+      "question": "According to Buss (1989), across many cultures, men prefer mates who primarily exhibit:",
       "options": [
-        "Contact sanctioned by law or institutional authorities",
-        "Groups competing for limited resources",
-        "Avoidance of cooperative activities",
-        "Contact occurring with unequal group status"
+        "Physical attractiveness signaling health and fertility",
+        "Industriousness and earning capacity",
+        "Emotional support and nurturing qualities",
+        "High levels of education and intelligence"
       ],
-      "correct_answer": "Contact sanctioned by law or institutional authorities",
-      "explanation": "1. \"Contact sanctioned by law or institutional authorities\" is the correct answer because, according to Allport's (1954) contact hypothesis, effective intergroup contact for reducing prejudice occurs when it is supported by legal or institutional frameworks. This endorsement helps create an environment where members of different groups feel safe and encouraged to engage with one another, thus facilitating positive interactions and reducing biases.\n\n2. The option \"Groups competing for limited resources\" is incorrect because competition can exacerbate prejudice and discrimination rather than reduce it, as it creates conflict between groups. \"Contact occurring with unequal group status\" is wrong because unequal status can reinforce existing prejudices and power dynamics, hindering effective interaction. Lastly, \"Avoidance of cooperative activities\" is incorrect because cooperation is essential for achieving common goals, which promotes positive intergroup relations and diminishes prejudice, contrary to the premise of the contact hypothesis.",
+      "correct_answer": "Physical attractiveness signaling health and fertility",
+      "explanation": "1. The correct answer, \"Physical attractiveness signaling health and fertility,\" aligns with Buss's (1989) findings that men across various cultures prioritize physical traits in potential mates. This preference is rooted in evolutionary goals, where men are attracted to women whose physical appearance suggests health and fertility, thereby maximizing their reproductive success.\n\n2. The option \"Industriousness and earning capacity\" is incorrect because these traits are primarily valued by women, as they seek partners who can provide resources to support them and their children. \"Emotional support and nurturing qualities\" is also incorrect, as these characteristics are more commonly associated with women's preferences in mates rather than men's. Lastly, \"High levels of education and intelligence\" is not the primary focus for men according to Buss's research; while these traits may be appreciated, they do not hold the same evolutionary significance as physical attractiveness in male mate selection.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
       "knId": "KN15",
-      "source_file": "3 Helping and Hurting.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Connection.json",
       "source_folder": "3 Social Psychology",
       "difficulty": "easy",
       "question_type": "standard",
@@ -1186,21 +1187,21 @@
       "is_org_psych": false
     },
     {
-      "id": 56,
-      "question": "Which theoretical model of psychopathology emphasizes the role of brain network connectivity disruptions in explaining neurocognitive disorders?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Personality.json::14",
+      "question": "What is the primary theoretical basis for dialectical behavior therapy (DBT) in the treatment of borderline personality disorder?",
       "options": [
-        "Psychodynamic model",
-        "The connectome model",
-        "Behavioral model",
-        "Biopsychosocial model"
+        "Behavioral conditioning with reward and punishment",
+        "Emotion dysregulation resulting from biological and environmental factors",
+        "Cognitive distortions and maladaptive beliefs",
+        "Attachment disruptions in early childhood"
       ],
-      "correct_answer": "The connectome model",
-      "explanation": "1. **The connectome model** is the correct answer because it emphasizes the role of disruptions in brain network connectivity, which aligns with the understanding of neurocognitive disorders. These disorders often involve impairments in cognitive functions due to damage or degeneration in specific brain areas and their connections, as indicated by the various neurocognitive disorders discussed, such as Alzheimer’s disease and frontotemporal NCD, which highlight the importance of brain structure and function in cognition.\n\n2. The **biopsychosocial model** is incorrect because it integrates biological, psychological, and social factors in understanding mental health but does not specifically focus on brain connectivity. The **psychodynamic model** is also incorrect as it centers on unconscious processes and early life experiences rather than neurobiological mechanisms. Lastly, the **behavioral model** is incorrect because it emphasizes observable behaviors and learning processes rather than the underlying neural connectivity that contributes to neurocognitive disorders.",
+      "correct_answer": "Emotion dysregulation resulting from biological and environmental factors",
+      "explanation": "1. The correct answer, \"Emotion dysregulation resulting from biological and environmental factors,\" is based on the premise that borderline personality disorder (BPD) is fundamentally linked to difficulties in regulating emotions. According to the reference material, dialectical behavior therapy (DBT) operates under the assumption that these emotional dysregulations stem from a combination of biological vulnerabilities and environmental influences, which makes it essential for treatment to address these underlying issues to help individuals manage their emotions more effectively.\n\n2. The option \"Behavioral conditioning with reward and punishment\" is incorrect because DBT focuses on emotional regulation rather than solely on behavioral modification through rewards and punishments. \"Cognitive distortions and maladaptive beliefs\" is not the primary theoretical basis for DBT, as the therapy emphasizes emotion regulation rather than just addressing cognitive patterns. Lastly, \"Attachment disruptions in early childhood\" is not the correct answer because, while early experiences can influence emotional regulation, DBT specifically targets the dysregulation itself rather than solely focusing on attachment issues.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
       "knId": "KN39",
-      "source_file": "5 Neurocognitive.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Personality.json",
       "source_folder": "5 Diagnosis",
-      "difficulty": "hard",
+      "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
       "type": "standard",
@@ -1312,19 +1313,19 @@
       "is_org_psych": false
     },
     {
-      "id": 62,
-      "question": "In educational settings, which of the following non-verbal communication cues is most likely to enhance student learning?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Stress and Emotion.json::15",
+      "question": "Which statement accurately reflects Cannon-Bard theory of emotion?",
       "options": [
-        "Looking at the floor",
-        "Crossed arms",
-        "Eye contact",
-        "Fidgeting"
+        "Emotion is experienced only after physiological arousal is perceived",
+        "Emotion and physiological arousal occur simultaneously but independently",
+        "Emotion results from labeling physiological arousal according to situational cues",
+        "Cognitive appraisal precedes physiological responses"
       ],
-      "correct_answer": "Eye contact",
-      "explanation": "Eye contact is a powerful non-verbal communication cue that can enhance engagement and learning in educational settings. Crossed arms, looking at the floor, and fidgeting are generally associated with disinterest or anxiety, which can detract from learning.",
+      "correct_answer": "Emotion and physiological arousal occur simultaneously but independently",
+      "explanation": "1. The statement \"Emotion and physiological arousal occur simultaneously but independently\" accurately reflects Cannon-Bard theory because this theory posits that when an environmental stimulus is encountered, the thalamus sends signals to both the cerebral cortex (which processes the emotional experience) and the sympathetic nervous system (which triggers physiological arousal) at the same time. This means that emotional experience and physiological responses do not rely on one another and occur concurrently.\n\n2. The option \"Emotion is experienced only after physiological arousal is perceived\" is incorrect because it aligns with the James-Lange theory, which suggests that physiological arousal precedes and leads to the experience of emotion. The option \"Emotion results from labeling physiological arousal according to situational cues\" is wrong because it describes Schachter and Singer’s Two-Factor Theory, which emphasizes the role of cognitive labeling after physiological arousal. Lastly, the statement \"Cognitive appraisal precedes physiological responses\" is incorrect as it reflects Lazarus’s Cognitive Appraisal Theory, which asserts that emotional responses are based on cognitive appraisal before any physiological changes occur.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
       "knId": "KN10",
-      "source_file": "2 Stress and Emotion.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/2 Learning and Memory/2 Stress and Emotion.json",
       "source_folder": "2 Learning and Memory",
       "difficulty": "medium",
       "question_type": "standard",
@@ -1669,24 +1670,24 @@
       "is_org_psych": false
     },
     {
-      "id": 79,
-      "question": "A psychologist is consulting with a community task force on domestic violence intervention. Based on the research literature, which approach has been found to produce the best long-term outcomes for reducing spousal abuse recidivism?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Prevention and Consultation.json::36",
+      "question": "Eysenck’s 1952 review concluded that:",
       "options": [
-        "Individual psychotherapy for the abuser",
-        "Mandatory anger management group treatment",
-        "Couples therapy focusing on communication skills",
-        "Arrest of the perpetrator"
+        "Psychotherapy was highly effective for neurotic patients compared to no treatment",
+        "Psychotherapy may be ineffective or even detrimental compared to spontaneous remission",
+        "All forms of psychotherapy have equivalent, significant positive outcomes",
+        "Custodial care produced worse outcomes than psychoanalytic therapy"
       ],
-      "correct_answer": "Arrest of the perpetrator",
-      "explanation": "Research on domestic violence indicates that the best long-term results follow arrest of the perpetrator. The research also suggests that change in the perpetrator occurs only when the victim refuses to tolerate the situation further. Couples therapy (A) is generally contraindicated in active abuse situations. Individual psychotherapy (C) and anger management groups (D) may be components of treatment but have not been shown to produce the best long-term outcomes. The distinction between expressive and instrumental abuse is also relevant—expressive abuse is more amenable to psychological treatment, but left untreated becomes instrumental over time.",
+      "correct_answer": "Psychotherapy may be ineffective or even detrimental compared to spontaneous remission",
+      "explanation": "1. The correct answer, \"Psychotherapy may be ineffective or even detrimental compared to spontaneous remission,\" is based on Eysenck's 1952 review, which concluded that a significant percentage of neurotic patients improved without therapy, suggesting that the recovery rates for psychotherapy patients were lower than those for patients who did not receive treatment. Eysenck's findings indicated that 44% of patients in psychoanalytic therapy and 64% in eclectic therapy improved, which were lower than the 72% spontaneous remission rate, leading him to propose that psychotherapy could be ineffective or even harmful.\n\n2. The option \"Psychotherapy was highly effective for neurotic patients compared to no treatment\" is incorrect because Eysenck's review indicated that the recovery rates for psychotherapy patients were actually lower than those for patients who did not receive treatment. The statement \"All forms of psychotherapy have equivalent, significant positive outcomes\" is also wrong, as Eysenck's findings highlighted variability in outcomes and did not support the idea of equivalence across different therapies. Lastly, the claim \"Custodial care produced worse outcomes than psychoanalytic therapy\" is inaccurate because Eysenck's analysis suggested that custodial care had a higher spontaneous remission rate than psychoanalytic therapy, thus indicating better outcomes for custodial care compared to psychotherapy.",
       "domain": "Domain 6: Treatment & Intervention",
       "knId": "KN44",
-      "source_file": "6 Prevention and Consultation.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Prevention and Consultation.json",
       "source_folder": "6 Clinical Interventions",
       "difficulty": "hard",
-      "question_type": "difficult",
+      "question_type": "standard",
       "isScored": false,
-      "type": "experimental",
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -1732,19 +1733,19 @@
       "is_org_psych": false
     },
     {
-      "id": 82,
-      "question": "In rural settings, what is a primary concern regarding the scope of practice for psychologists?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 7 and 8.json::9",
+      "question": "What ethical requirement must psychology students fulfill regarding their psychotherapy training?",
       "options": [
-        "Availability of advanced technology",
-        "Excessive competition among practitioners",
-        "High demand for specialized services",
-        "Limited access to supervision and consultation"
+        "They must undergo therapy with a therapist affiliated with their program.",
+        "They should not be required to disclose personal information.",
+        "They must choose a therapist who is not affiliated with the program.",
+        "They can select any therapist regardless of qualifications."
       ],
-      "correct_answer": "Limited access to supervision and consultation",
-      "explanation": "In rural settings, psychologists often face challenges related to limited access to supervision and consultation, which can impact their practice and professional development. The other options do not accurately reflect the primary concerns in rural psychology practice.",
+      "correct_answer": "They must choose a therapist who is not affiliated with the program.",
+      "explanation": "Students are required to select a therapist who is not affiliated with their training program to avoid conflicts of interest and maintain professional boundaries. The other options do not align with ethical guidelines.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
-      "knId": "KN66",
-      "source_file": "8 Practice Issues.json",
+      "knId": "KN62",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 7 and 8.json",
       "source_folder": "8 Ethics",
       "difficulty": "hard",
       "question_type": "standard",
@@ -2068,24 +2069,24 @@
       "is_org_psych": false
     },
     {
-      "id": 98,
-      "question": "A forensic psychologist consulting with a prison treatment team is asked which type of consequence most effectively modifies behavior in inmates with antisocial personality disorder (ASPD). Drawing on the treatment literature for personality disorders, the consultant would most accurately advise that this population is most responsive to consequences that are:",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Psychodynamic and Humanistic Therapies.json::5",
+      "question": "During Jungian analysis, a client who consistently presents himself as entirely selfless and accommodating expresses intense, seemingly disproportionate contempt for colleagues he describes as 'exploitative and narcissistic.' His analyst hypothesizes that the client is engaged in shadow projection. Which of the following most accurately describes the theoretical basis for this formulation within Jungian analytical psychology?",
       "options": [
-        "Immediate, concrete, and externally applied, such as loss of privileges tied directly to specific behaviors",
-        "Internally generated through enhanced empathy training and restorative justice exercises",
-        "Delayed punishments delivered after a structured reflection period to promote insight",
-        "Socially mediated through confrontation by prosocial peers in therapeutic community settings"
+        "The client is displacing superego-driven moral condemnation onto external authority figures, re-enacting the relationship with an internalized punitive parental object",
+        "Disowned material from both the personal unconscious — individually repressed traits — and the collective unconscious — universal dark archetypes shared by all humanity — is being attributed to others rather than recognized in oneself",
+        "The client's anima is in irreconcilable conflict with his persona, generating compensatory idealization of the persona and projection of animus qualities onto male colleagues",
+        "Unresolved transference from early attachment figures is distorting perception of colleagues through the object-relational mechanism of projective identification"
       ],
-      "correct_answer": "Immediate, concrete, and externally applied, such as loss of privileges tied directly to specific behaviors",
-      "explanation": "Individuals with ASPD characteristically lack internalized guilt, empathy, and sensitivity to delayed consequences. The treatment literature consistently indicates they are most responsive to immediate, external, and concrete consequences rather than internally mediated or delayed ones. Option A is incorrect because ASPD is associated with profound empathy deficits that severely limit the effectiveness of empathy-based interventions. Option B is incorrect because delayed consequences are far less effective given ASPD-related deficits in connecting future outcomes to present behavior. Option D is incorrect because peer confrontation alone, without clear external contingencies, is insufficient to modify behavior in this population.",
+      "correct_answer": "Disowned material from both the personal unconscious — individually repressed traits — and the collective unconscious — universal dark archetypes shared by all humanity — is being attributed to others rather than recognized in oneself",
+      "explanation": "In Jungian theory, the shadow is the archetype representing the dark, unacceptable, and disowned dimensions of the self that are excluded from the persona (the public identity). The shadow draws from two sources: (1) the personal unconscious, which contains individually repressed memories, impulses, and traits unique to the person's history, and (2) the collective unconscious, which contains universal, inherited archetypal patterns of human darkness shared across all people and cultures. Shadow projection occurs when a person attributes these disowned qualities to external others rather than integrating them. In this case, the client's accommodation persona likely conceals disowned self-serving impulses that he projects as contemptible narcissism in colleagues. The superego/parental object explanation belongs to Freudian object-relations theory. The anima/animus formulation is a distinct Jungian concept involving contrasexual archetypes. Projective identification is an object-relations term (Kleinian) unrelated to Jungian shadow theory.",
       "domain": "Domain 6: Treatment & Intervention",
       "knId": "KN43",
-      "source_file": "6 CBT.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Psychodynamic and Humanistic Therapies.json",
       "source_folder": "6 Clinical Interventions",
       "difficulty": "hard",
-      "question_type": "difficult",
+      "question_type": "standard",
       "isScored": false,
-      "type": "experimental",
+      "type": "standard",
       "is_org_psych": false
     },
     {
@@ -2194,19 +2195,19 @@
       "is_org_psych": true
     },
     {
-      "id": 104,
-      "question": "Which of the following factors is considered a prognostic indicator for schizophrenia outcomes?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Clinical Tests.json::46",
+      "question": "Which of the following best describes self-mutilation as a coping mechanism in trauma survivors?",
       "options": [
-        "The individual's level of education at the time of diagnosis.",
-        "The duration of untreated psychosis.",
-        "The age of onset of the disorder.",
-        "The presence of positive symptoms at the time of diagnosis."
+        "A form of self-expression that enhances emotional regulation.",
+        "A maladaptive behavior used to cope with overwhelming emotional pain.",
+        "A culturally accepted practice for managing stress.",
+        "A therapeutic technique recommended for trauma recovery."
       ],
-      "correct_answer": "The duration of untreated psychosis.",
-      "explanation": "Research indicates that a longer duration of untreated psychosis is associated with poorer outcomes in schizophrenia. The other options may influence prognosis but are not as strongly predictive.",
+      "correct_answer": "A maladaptive behavior used to cope with overwhelming emotional pain.",
+      "explanation": "Self-mutilation is often a maladaptive behavior that trauma survivors may use to cope with intense emotional distress, rather than a healthy or therapeutic practice. The other options either mischaracterize self-mutilation or suggest it is beneficial, which is not supported by the literature.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
       "knId": "KN30",
-      "source_file": "5 Clinical Tests.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 Clinical Tests.json",
       "source_folder": "5 Assessment",
       "difficulty": "hard",
       "question_type": "standard",
@@ -2236,20 +2237,20 @@
       "is_org_psych": false
     },
     {
-      "id": 106,
-      "question": "A researcher conducting a study on the effectiveness of a new therapeutic intervention inadvertently provides more encouraging nonverbal cues to participants in the treatment group than to those in the control group. This pattern of behavior, in which the researcher's expectations subtly influence participant responses, is BEST described as:",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/5 6 Leadership.json::11",
+      "question": "Which characteristic is NOT a defining feature of transformational leadership according to Bass (1997)?",
       "options": [
-        "Demand characteristics",
-        "The Rosenthal effect",
-        "The Hawthorne effect",
-        "Observer bias"
+        "Idealized influence",
+        "Management by contingency rewards",
+        "Inspirational motivation",
+        "Intellectual stimulation"
       ],
-      "correct_answer": "The Rosenthal effect",
-      "explanation": "The Rosenthal effect (also called experimenter expectancy effect) refers to subtle cues or clues transmitted by the experimenter that influence participant behavior in the direction of the experimenter's hypothesis. This is distinct from the Hawthorne effect (behavior change due to awareness of being observed), demand characteristics (cues that inform participants about what behavior is expected, which come from the experimental situation rather than the experimenter specifically), and observer bias (systematic errors in recording or interpreting data, rather than influencing participant behavior).",
+      "correct_answer": "Management by contingency rewards",
+      "explanation": "Contingency rewards are a feature of transactional leadership, whereas transformational leadership includes idealized influence, inspirational motivation, intellectual stimulation, and individualized consideration.",
       "domain": "Domain 2: Cognitive-Affective Bases of Behavior",
-      "knId": "KN6",
-      "source_file": "7 Research Designs.json",
-      "source_folder": "7 Research and Stats",
+      "knId": "KN46",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/2 3 5 6 I-O Psychology/5 6 Leadership.json",
+      "source_folder": "2 3 5 6 I-O Psychology",
       "difficulty": "medium",
       "question_type": "standard",
       "isScored": true,
@@ -2362,19 +2363,19 @@
       "is_org_psych": false
     },
     {
-      "id": 112,
-      "question": "In assessing change after intervention for conduct disorder, which outcome measure is considered most appropriate to evaluate treatment effectiveness?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Mood.json::12",
+      "question": "Which of the following treatment approaches has the highest response and remission rates and the fastest time to remission for severe major depressive disorder?",
       "options": [
-        "Pre- and post-treatment symptom checklists completed by caregivers and teachers",
-        "Only teacher reports of classroom behavior",
-        "Patient’s subjective report of mood and feelings alone",
-        "Number of hospitalizations recorded during treatment"
+        "Cognitive-behavioral therapy",
+        "Second-generation antidepressants",
+        "Electroconvulsive therapy",
+        "Repetitive transcranial magnetic stimulation"
       ],
-      "correct_answer": "Pre- and post-treatment symptom checklists completed by caregivers and teachers",
-      "explanation": "1. **Correct Answer Explanation:** \"Pre- and post-treatment symptom checklists completed by caregivers and teachers\" is the most appropriate outcome measure for evaluating treatment effectiveness in conduct disorder because it provides a comprehensive assessment from multiple perspectives, capturing changes in behavior across different environments (home and school). This multimodal approach aligns with the evidence-based treatments for conduct disorder, which emphasize the importance of feedback from caregivers and teachers in understanding the child's functioning and progress.\n\n2. **Incorrect Options Explanation:**\n   - **Patient’s subjective report of mood and feelings alone:** This option is inadequate because it relies solely on the individual’s perspective, which may not fully capture observable behavioral changes or the impact of conduct disorder on their functioning in various contexts.\n   - **Only teacher reports of classroom behavior:** This option is limited as it does not consider the child's behavior at home or in other settings, potentially missing critical aspects of their overall functioning and treatment response.\n   - **Number of hospitalizations recorded during treatment:** This measure focuses on a specific outcome rather than a comprehensive assessment of symptom change and does not account for improvements in daily functioning or behavior that may not lead to hospitalization.",
+      "correct_answer": "Electroconvulsive therapy",
+      "explanation": "1. **Electroconvulsive therapy (ECT)** is the correct answer because it has a high success rate for treating severe major depressive disorder, with reported response rates approaching 80% and remission rates around 70%. Additionally, ECT provides a faster time to remission, typically achieving results within 1 to 3 weeks, compared to other treatments that may take longer to show effects.\n\n2. **Cognitive-behavioral therapy (CBT)** is incorrect because, while effective, its response and remission rates are generally lower (30-60% for response) and it typically takes longer (6 to 10 weeks) to achieve remission compared to ECT. **Second-generation antidepressants** also have lower response and remission rates (25-45% for remission) and longer timeframes for effectiveness, making them less optimal for severe cases than ECT. **Repetitive transcranial magnetic stimulation (rTMS)**, while a noninvasive treatment option for treatment-resistant depression, has lower response and remission rates than ECT and does not achieve the same rapid results.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
       "knId": "KN40",
-      "source_file": "5 Acting Out.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Diagnosis/5 Mood.json",
       "source_folder": "5 Diagnosis",
       "difficulty": "medium",
       "question_type": "standard",
@@ -2782,19 +2783,19 @@
       "is_org_psych": false
     },
     {
-      "id": 132,
-      "question": "In a crisis situation, what is the primary ethical obligation of a psychologist when offering help?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 1 and 2.json::25",
+      "question": "According to APA's ethical decision-making model described by Fisher (2022), what step comes immediately after identifying relevant laws, regulations, and institutional policies?",
       "options": [
-        "To ensure that their intervention does not violate any laws.",
-        "To provide assistance only if they are being compensated.",
-        "To refer the individual to another professional immediately.",
-        "To act in the best interest of the individual in crisis, even if it means breaching confidentiality."
+        "Consider the perspectives of affected stakeholders",
+        "Identify the ethical problem",
+        "Monitor and evaluate results of the action plan",
+        "Develop and implement an action plan"
       ],
-      "correct_answer": "To act in the best interest of the individual in crisis, even if it means breaching confidentiality.",
-      "explanation": "The correct answer emphasizes the ethical obligation to prioritize the well-being of the individual in crisis, which may necessitate breaching confidentiality. The other options do not align with the ethical imperative to provide immediate help.",
+      "correct_answer": "Consider the perspectives of affected stakeholders",
+      "explanation": "1. \"Consider the perspectives of affected stakeholders\" is the correct answer because it follows the identification of relevant laws, regulations, and institutional policies in Fisher's (2022) ethical decision-making model. This step emphasizes the importance of understanding how the decision will impact various stakeholders, such as clients, colleagues, and the community, ensuring that their perspectives are taken into account before proceeding with any actions.\n\n2. \n- \"Identify the ethical problem\" is incorrect because this step occurs first in the decision-making process, setting the foundation for the subsequent steps.\n- \"Monitor and evaluate results of the action plan\" is wrong as it is the final step in the model, focusing on assessing the outcomes after the action has been implemented rather than before developing an action plan.\n- \"Develop and implement an action plan\" is incorrect because it comes after considering the perspectives of stakeholders; this step involves creating a specific course of action based on the gathered information and stakeholder input.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
       "knId": "KN65",
-      "source_file": "8 Standards 1 and 2.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 1 and 2.json",
       "source_folder": "8 Ethics",
       "difficulty": "medium",
       "question_type": "standard",
@@ -2824,19 +2825,19 @@
       "is_org_psych": true
     },
     {
-      "id": 134,
-      "question": "Which of the following criteria is NOT typically considered in child custody decision-making according to family law?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 3 and 4.json::13",
+      "question": "What should a psychologist disclose to clients regarding supervision in their practice?",
       "options": [
-        "The parent's social media presence",
-        "The financial stability of each parent",
-        "The child's preference if they are of sufficient age",
-        "The child's relationship with each parent"
+        "The psychologist should not disclose any information about supervision.",
+        "The psychologist must inform clients about the nature and purpose of supervision.",
+        "Clients do not need to know about supervision as it is an internal matter.",
+        "Supervision details should only be disclosed if the client asks about them."
       ],
-      "correct_answer": "The parent's social media presence",
-      "explanation": "The child's relationship with each parent, financial stability, and the child's preference are all relevant factors in custody decisions. However, a parent's social media presence is not a standard criterion considered in custody evaluations.",
+      "correct_answer": "The psychologist must inform clients about the nature and purpose of supervision.",
+      "explanation": "The correct answer emphasizes the importance of transparency regarding supervision, which is an ethical obligation. The lesson states that psychologists should disclose relevant information to clients, including supervision details. The other options either promote secrecy or fail to recognize the importance of client awareness.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
-      "knId": "KN65",
-      "source_file": "8 Practice Issues.json",
+      "knId": "KN64",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 3 and 4.json",
       "source_folder": "8 Ethics",
       "difficulty": "medium",
       "question_type": "standard",
@@ -2845,19 +2846,19 @@
       "is_org_psych": false
     },
     {
-      "id": 135,
-      "question": "Which of the following best exemplifies structural racism as defined by the APA?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Why People Do Things.json::11",
+      "question": "What is a common attribution bias that affects social perception?",
       "options": [
-        "Laws and policies that create race-based inequalities, such as school funding tied to local property taxes",
-        "Discriminatory hiring practices by a private employer",
-        "A teacher treating students unfairly based on race",
-        "Individual holding and expressing overtly racist views"
+        "Self-serving bias",
+        "Fundamental attribution error",
+        "Actor-observer effect",
+        "Ultimate attribution error"
       ],
-      "correct_answer": "Laws and policies that create race-based inequalities, such as school funding tied to local property taxes",
-      "explanation": "1. The correct answer, \"Laws and policies that create race-based inequalities, such as school funding tied to local property taxes,\" exemplifies structural racism as defined by the APA because it refers to systemic practices and policies that produce enduring racial disparities. Structural racism encompasses laws and institutional practices that perpetuate inequalities across various domains, including education, as evidenced by funding mechanisms that disadvantage minority communities.\n\n2. The option \"A teacher treating students unfairly based on race\" is incorrect because it describes interpersonal racism, which involves individual behaviors and attitudes rather than systemic practices. \"Individual holding and expressing overtly racist views\" is also incorrect, as this represents overt racism, which is characterized by explicit hostility and discrimination from individuals rather than structural inequalities. Finally, \"Discriminatory hiring practices by a private employer\" is incorrect because it pertains to institutional racism, which is specific to organizational policies rather than broader societal structures that create systemic racial disparities.",
+      "correct_answer": "Fundamental attribution error",
+      "explanation": "The fundamental attribution error is a common bias where individuals overestimate personality factors and underestimate situational factors when explaining others' behaviors. The other biases are also relevant but do not specifically address the common errors in social perception.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
-      "knId": "KN20",
-      "source_file": "3 Helping and Hurting.json",
+      "knId": "KN14",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Why People Do Things.json",
       "source_folder": "3 Social Psychology",
       "difficulty": "medium",
       "question_type": "standard",
@@ -2971,20 +2972,20 @@
       "is_org_psych": false
     },
     {
-      "id": 141,
-      "question": "A test developer applies the Spearman-Brown prophecy formula to estimate the effect of doubling the number of items on a 50-item personality scale. She finds that reliability increases substantially. A colleague then cautions that the same doubling may not improve—and could even harm—another psychometric property. Which of the following BEST describes the differential effect of increasing test length on reliability versus validity?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 IQ Tests.json::2",
+      "question": "What is the predictive validity of infant intelligence tests primarily concerned with?",
       "options": [
-        "Both reliability and validity increase proportionally with each additional item, making longer tests uniformly superior",
-        "Reliability increases predictably with test length, but validity may not improve proportionally and could decrease if added items measure different or weaker constructs",
-        "Validity increases predictably with test length because more items sample the domain more thoroughly, while reliability is largely unaffected by length",
-        "Neither reliability nor validity changes meaningfully when test length is increased by fewer than 100%"
+        "Their ability to forecast academic success in adulthood",
+        "Their correlation with parental intelligence",
+        "Their effectiveness in identifying developmental delays",
+        "Their reliability across different cultures"
       ],
-      "correct_answer": "Reliability increases predictably with test length, but validity may not improve proportionally and could decrease if added items measure different or weaker constructs",
-      "explanation": "The Spearman-Brown prophecy formula demonstrates that reliability increases in a predictable, systematic fashion as test length grows—longer tests aggregate more observations, reducing random error. Validity, however, does not follow the same pattern. Adding items improves validity only if the new items tap the same construct and maintain the same relationship to the criterion. If added items introduce construct heterogeneity, measure related but distinct constructs, or have weaker criterion relationships, the test's validity coefficient can remain flat or decrease. This asymmetry is a core psychometric principle: reliability is a necessary but not sufficient condition for validity, and mechanically increasing reliability through length does not guarantee improved predictive or construct validity.",
+      "correct_answer": "Their ability to forecast academic success in adulthood",
+      "explanation": "The predictive validity of infant intelligence tests is primarily concerned with how well these tests can forecast future academic success. The other options do not directly relate to the primary concern of predictive validity.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
       "knId": "KN29",
-      "source_file": "5 Items and Reliability.json",
-      "source_folder": "5 Test Construction",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/5 Assessment/5 IQ Tests.json",
+      "source_folder": "5 Assessment",
       "difficulty": "hard",
       "question_type": "standard",
       "isScored": true,
@@ -3181,19 +3182,19 @@
       "is_org_psych": false
     },
     {
-      "id": 151,
-      "question": "Which of the following best describes the effects of divorce on children?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 School and Family.json::3",
+      "question": "What impact does poor parenting have on the likelihood of delinquency in children?",
       "options": [
-        "Divorced parents are always less effective than married parents.",
-        "Children are unaffected by parental divorce if they are not directly involved.",
-        "Children from divorced families often experience emotional and behavioral difficulties.",
-        "Divorce has uniform effects on all children, regardless of age or gender."
+        "It has no significant impact",
+        "It increases the likelihood of delinquency",
+        "It decreases the likelihood of delinquency",
+        "It only affects academic performance"
       ],
-      "correct_answer": "Children from divorced families often experience emotional and behavioral difficulties.",
-      "explanation": "Research shows that children from divorced families frequently face emotional and behavioral challenges, particularly in the immediate aftermath of the divorce. The other options are overly simplistic or inaccurate.",
+      "correct_answer": "It increases the likelihood of delinquency",
+      "explanation": "The correct answer is 'It increases the likelihood of delinquency', as research indicates that poor parenting practices, such as lack of supervision and inconsistent discipline, are associated with higher rates of delinquent behavior in children. The other options are incorrect as they do not accurately reflect the established link between parenting and delinquency.",
       "domain": "Domain 4: Growth & Lifespan Development",
       "knId": "KN22",
-      "source_file": "4 School and Family.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 School and Family.json",
       "source_folder": "4 Development",
       "difficulty": "medium",
       "question_type": "standard",
@@ -3223,19 +3224,19 @@
       "is_org_psych": false
     },
     {
-      "id": 153,
-      "question": "A psychologist receives a referral for a 42-year-old construction worker who sustained a back injury eight months ago and continues to report significant pain despite medical clearance indicating the injury has healed. What should the psychologist's first step be?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Prevention and Consultation.json::32",
+      "question": "Research on client-therapist racial/ethnic matching suggests that:",
       "options": [
-        "Teach relaxation and mindfulness techniques to reduce pain perception",
-        "Refer the client back to the physician for additional medical evaluation",
-        "Begin a course of cognitive-behavioral therapy for pain management",
-        "Conduct a comprehensive biopsychosocial assessment of the pain experience"
+        "Matching consistently improves therapy outcomes across all racial/ethnic groups",
+        "Matching has a stronger effect on client perceptions of the therapist than on outcome measures",
+        "Matching is irrelevant once therapist cultural competence is established",
+        "Therapy outcomes improve more when therapists share the same personality traits as clients"
       ],
-      "correct_answer": "Conduct a comprehensive biopsychosocial assessment of the pain experience",
-      "explanation": "When receiving a chronic pain referral, the appropriate first step is always a comprehensive assessment. Chronic pain is considered a multi-factorial process affected by neural memories of previous pain, physical effects (tense muscles, limited mobility), and emotional effects (depression, anger, anxiety). Jumping directly to CBT (A) or relaxation techniques (C) without first understanding the full picture of the client's pain experience would be premature. Referring back to the physician (D) is inappropriate when medical clearance has already been given. A thorough assessment informs the treatment plan and ensures that all contributing factors—biological, psychological, and social—are properly identified before intervention begins.",
+      "correct_answer": "Matching has a stronger effect on client perceptions of the therapist than on outcome measures",
+      "explanation": "1. The correct answer, \"Matching has a stronger effect on client perceptions of the therapist than on outcome measures,\" is supported by the findings of Cabral and Smith (2011), which reported an effect size of .32 for the impact of racial/ethnic matching on clients’ perceptions of their therapists, but only an effect size of .09 on therapy outcomes. This indicates that while clients may feel more positively about their therapists when there is a match in race or ethnicity, this does not necessarily translate into improved therapy results.\n\n2. The first incorrect option, \"Matching consistently improves therapy outcomes across all racial/ethnic groups,\" is inaccurate because research shows that matching effects vary by racial/ethnic group, with some groups benefiting more than others. The second incorrect option, \"Matching is irrelevant once therapist cultural competence is established,\" is wrong because cultural competence can enhance therapy effectiveness, but matching still plays a role in client perceptions and engagement. Lastly, the option \"Therapy outcomes improve more when therapists share the same personality traits as clients\" is misleading, as research indicates that while personality matching may influence the therapeutic alliance, it is not as consistently impactful on therapy outcomes as racial/ethnic matching.",
       "domain": "Domain 6: Treatment & Intervention",
       "knId": "KN42",
-      "source_file": "6 CBT.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Prevention and Consultation.json",
       "source_folder": "6 Clinical Interventions",
       "difficulty": "medium",
       "question_type": "standard",
@@ -3622,19 +3623,19 @@
       "is_org_psych": false
     },
     {
-      "id": 172,
-      "question": "What should a psychologist do if they receive an unresolved complaint from a student in an academic setting?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json::2",
+      "question": "At a neighborhood barbecue, a licensed psychologist casually tells an acquaintance, 'You should really see a cognitive-behavioral therapist for that anxiety you mentioned.' The acquaintance follows this advice, sees a CBT therapist, and experiences a worsening of symptoms due to an undiagnosed bipolar disorder. Could the psychologist be held liable for malpractice?",
       "options": [
-        "Respond to the student with a personal opinion.",
-        "Address the complaint through established institutional procedures.",
-        "Discuss the complaint with other faculty members immediately.",
-        "Ignore the complaint if it seems trivial."
+        "Yes, because the psychologist provided a professional recommendation that caused harm",
+        "Yes, because all licensed psychologists have a duty of care to anyone they interact with",
+        "No, because no professional relationship was established, so the first element of malpractice (duty of care) is not met",
+        "No, but only because the psychologist recommended a legitimate form of treatment"
       ],
-      "correct_answer": "Address the complaint through established institutional procedures.",
-      "explanation": "The appropriate response is to follow institutional procedures for addressing complaints, ensuring that the process is formal and fair. Ignoring the complaint or discussing it informally undermines the seriousness of the issue.",
+      "correct_answer": "No, because no professional relationship was established, so the first element of malpractice (duty of care) is not met",
+      "explanation": "Malpractice requires all 'Four Ds': Duty of Care, Dereliction of Duty, Damages, and Direct Cause. The first D—Duty of Care—requires that a professional relationship existed. At a neighborhood barbecue, the psychologist was making a casual social remark, not establishing a therapist-client relationship. Without a professional relationship, there is no duty of care, and the malpractice claim fails at the first element. Option A incorrectly assumes a casual suggestion creates professional liability. Option B overstates the scope of duty of care. Option D focuses on the wrong element; the issue is not whether CBT is legitimate but whether a duty existed.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
       "knId": "KN62",
-      "source_file": "8 Standards 7 and 8.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json",
       "source_folder": "8 Ethics",
       "difficulty": "medium",
       "question_type": "standard",
@@ -4147,19 +4148,19 @@
       "is_org_psych": false
     },
     {
-      "id": 197,
-      "question": "In forensic settings, what is a key challenge psychologists face when predicting violent behavior?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json::9",
+      "question": "What is a significant concern regarding racial and cultural biases in IQ testing?",
       "options": [
-        "The difficulty in obtaining accurate historical data.",
-        "The pressure to provide definitive answers to legal questions.",
-        "The inherent unpredictability of human behavior.",
-        "The lack of reliable assessment tools."
+        "IQ tests are designed to be culturally neutral.",
+        "Bias can lead to misinterpretation of a person's abilities.",
+        "All individuals score equally on IQ tests.",
+        "Cultural factors do not influence test performance."
       ],
-      "correct_answer": "The inherent unpredictability of human behavior.",
-      "explanation": "The correct answer highlights the fundamental challenge in predicting behavior, which is often unpredictable. The other options may contribute to the difficulty but do not capture the core issue.",
+      "correct_answer": "Bias can lead to misinterpretation of a person's abilities.",
+      "explanation": "The correct answer highlights the risk of bias affecting the interpretation of test results, which can have significant implications for individuals. The other options are incorrect as they misrepresent the nature of IQ tests and cultural influences.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
       "knId": "KN67",
-      "source_file": "8 Practice Issues.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Practice Issues.json",
       "source_folder": "8 Ethics",
       "difficulty": "hard",
       "question_type": "standard",
@@ -4273,19 +4274,19 @@
       "is_org_psych": false
     },
     {
-      "id": 203,
-      "question": "In the context of countertransference, what is the most appropriate way for a therapist to manage their feelings towards a client who reminds them of a close friend?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 9 and 10.json::24",
+      "question": "When a client asks for their test data, when can a psychologist decline to release it?",
       "options": [
-        "Discuss these feelings openly with the client to build rapport.",
-        "Seek supervision or consultation to explore these feelings and their impact on therapy.",
-        "Terminate the therapeutic relationship to avoid conflict.",
-        "Ignore the feelings and focus solely on the client's issues."
+        "If releasing the data is reasonably likely to cause harm or misuse of the data permitted by law",
+        "If the client is unlikely to understand the data due to cognitive limitations",
+        "If the psychologist believes the data are irrelevant to the client’s treatment",
+        "If the client requests only the summary report instead"
       ],
-      "correct_answer": "Seek supervision or consultation to explore these feelings and their impact on therapy.",
-      "explanation": "The correct answer highlights the importance of seeking supervision to manage countertransference, which is crucial for maintaining professional boundaries and effective therapy. The other options either involve inappropriate disclosure, avoidance, or premature termination, which do not address the underlying issue effectively.",
+      "correct_answer": "If releasing the data is reasonably likely to cause harm or misuse of the data permitted by law",
+      "explanation": "1. The correct answer, \"If releasing the data is reasonably likely to cause harm or misuse of the data permitted by law,\" aligns with Standard 9.04 of the APA Ethics Code. This standard allows psychologists to refrain from releasing test data when doing so is necessary to protect the client or others from potential harm or misuse, as long as this action is permitted by law, such as under the provisions of HIPAA.\n\n2. The first incorrect option, \"If the client is unlikely to understand the data due to cognitive limitations,\" is wrong because the psychologist is still obligated to provide the client with the data or assist them in understanding it, regardless of cognitive limitations. The second incorrect option, \"If the psychologist believes the data are irrelevant to the client’s treatment,\" is incorrect because the relevance of the data does not justify withholding it; the client has the right to access their test data. Lastly, the option \"If the client requests only the summary report instead\" is incorrect because the client has the right to request their full test data, and the psychologist cannot refuse based solely on the type of report requested.",
       "domain": "Domain 8: Ethical, Legal & Professional Issues",
       "knId": "KN62",
-      "source_file": "8 Standards 5 and 6.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/8 Ethics/8 Standards 9 and 10.json",
       "source_folder": "8 Ethics",
       "difficulty": "medium",
       "question_type": "standard",
@@ -4378,19 +4379,19 @@
       "is_org_psych": false
     },
     {
-      "id": 208,
-      "question": "Which form of racism is characterized by subtle, often unconscious negative feelings toward minority groups while maintaining a non-prejudiced self-image and a belief in equality?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Group Influences.json::15",
+      "question": "In an environmental psychology experiment, two groups of participants complete proofreading tasks while exposed to loud, unpredictable noise. Group A is given a button they are told can stop the noise, but are asked not to press it; Group B has no such button. Despite the fact that Group A never actually uses the button, they make significantly fewer errors and report less frustration than Group B. This finding is BEST accounted for by which of the following?",
       "options": [
-        "Symbolic racism",
-        "Aversive racism",
-        "Overt racism",
-        "Ambivalent racism"
+        "Learned helplessness: Group B's lack of control extinguishes motivated responding more rapidly than noise alone would",
+        "Perceived control: the belief that one can terminate an aversive stimulus reduces its disruptive effects even when control is never exercised",
+        "Reactance: providing a control option in Group A elicits greater effort to protect perceived freedom",
+        "Stimulus overload: Group A's attention is divided between the task and monitoring the button, paradoxically reducing the salience of the noise"
       ],
-      "correct_answer": "Aversive racism",
-      "explanation": "1. **Aversive racism** is the correct answer because it is characterized by individuals who hold a non-prejudiced self-image and a belief in equality while simultaneously harboring subtle, often unconscious negative feelings about minority groups. This form of racism leads to avoidance of interactions with minority members unless the individual can justify their discrimination on a basis other than race, reflecting an internal conflict between egalitarian beliefs and negative feelings.\n\n2. **Symbolic racism** is incorrect because it involves a belief in egalitarianism paired with the perception that minority groups violate traditional values, leading to opposition against policies aimed at promoting equality, rather than subtle negative feelings. **Ambivalent racism** is not the correct answer because it describes individuals who possess both positive and negative attitudes toward minority groups, resulting in emotional tension, rather than solely unconscious negative feelings. **Overt racism** is wrong as it refers to openly hostile and aggressive attitudes toward minority groups, which is a direct contrast to the subtlety and ambiguity of aversive racism.",
+      "correct_answer": "Perceived control: the belief that one can terminate an aversive stimulus reduces its disruptive effects even when control is never exercised",
+      "explanation": "The Glass and Singer (1972) research program established that perceived controllability is the primary determinant of how disruptive noise proves to be—not the actual reduction of noise or the exercise of control. Group A participants who believed they could stop the noise showed better performance and less physiological arousal than those with no option, despite never pressing the button. This demonstrates that it is the cognitive representation of control, not its execution, that buffers against environmental stressors. Option A (learned helplessness) applies to Group B's situation but does not explain why Group A outperforms—learned helplessness describes a deficit, not a buffer. Option C (reactance) concerns motivation to restore threatened freedom, not performance protection. Option D describes an attentional mechanism that would predict worse performance in Group A, the opposite of the finding.",
       "domain": "Domain 3: Social Psychology & Cultural Aspects",
-      "knId": "KN20",
-      "source_file": "3 Helping and Hurting.json",
+      "knId": "KN16",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/3 Social Psychology/3 Group Influences.json",
       "source_folder": "3 Social Psychology",
       "difficulty": "hard",
       "question_type": "standard",
@@ -4441,19 +4442,19 @@
       "is_org_psych": false
     },
     {
-      "id": 211,
-      "question": "In the context of gender identity theories, what is the sequence of gender role development according to social learning theory?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Morality.json::13",
+      "question": "Which of the following is a major criticism of both Piaget's and Kohlberg's moral development theories?",
       "options": [
-        "Observation, imitation, reinforcement",
-        "Imitation, reinforcement, observation",
-        "Observation, reinforcement, imitation",
-        "Reinforcement, observation, imitation"
+        "They underestimate young children's moral reasoning abilities.",
+        "They exaggerate the role of emotions in moral judgment.",
+        "They emphasize culture as the primary factor influencing development.",
+        "They focus only on real-life moral decisions, ignoring hypothetical dilemmas."
       ],
-      "correct_answer": "Observation, imitation, reinforcement",
-      "explanation": "Social learning theory posits that children learn gender roles through observing others, imitating their behaviors, and receiving reinforcement for gender-appropriate behaviors. The other sequences misrepresent the order of these processes.",
+      "correct_answer": "They underestimate young children's moral reasoning abilities.",
+      "explanation": "1. The correct answer, \"They underestimate young children's moral reasoning abilities,\" is supported by criticisms of both Piaget's and Kohlberg's theories. Piaget's research suggests that young children have a limited understanding of moral standards, while critics argue that he underestimates their cognitive abilities and moral understanding. Similarly, Kohlberg's theory has also been criticized for underestimating the moral reasoning of young children, indicating that both theorists fail to recognize the complexity of moral reasoning in early developmental stages.\n\n2. The option \"They exaggerate the role of emotions in moral judgment\" is incorrect because neither Piaget nor Kohlberg emphasizes emotions as a primary factor in their theories; instead, they focus on cognitive processes and reasoning. The option \"They emphasize culture as the primary factor influencing development\" is also wrong, as both theorists suggest that moral development follows a universal sequence rather than being primarily influenced by cultural factors. Lastly, the option \"They focus only on real-life moral decisions, ignoring hypothetical dilemmas\" is inaccurate because Kohlberg, in particular, is known for his use of hypothetical dilemmas to study moral reasoning, making this statement not reflective of their work.",
       "domain": "Domain 4: Growth & Lifespan Development",
-      "knId": "KN24",
-      "source_file": "4 Temperament and Personality.json",
+      "knId": "KN23",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Morality.json",
       "source_folder": "4 Development",
       "difficulty": "medium",
       "question_type": "standard",
@@ -4483,19 +4484,19 @@
       "is_org_psych": false
     },
     {
-      "id": 213,
-      "question": "What long-term effects are associated with fetal alcohol syndrome (FAS) as children grow into adulthood?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Before Birth.json::16",
+      "question": "Which disorder is caused by a deletion on chromosome 5 and includes a high-pitched, cat-like cry, intellectual disability, microcephaly, and distinctive facial features?",
       "options": [
-        "Enhanced social skills",
-        "Cognitive impairments and behavioral issues",
-        "Increased height and weight",
-        "Improved academic performance"
+        "Angelman syndrome",
+        "Cri-du-chat syndrome",
+        "Prader-Willi syndrome",
+        "Down syndrome"
       ],
-      "correct_answer": "Cognitive impairments and behavioral issues",
-      "explanation": "The correct answer is cognitive impairments and behavioral issues, as these are well-documented long-term effects of fetal alcohol syndrome. The other options are incorrect as they do not reflect the typical outcomes associated with FAS.",
+      "correct_answer": "Cri-du-chat syndrome",
+      "explanation": "1. \"Cri-du-chat syndrome\" is the correct answer because it is specifically caused by a deletion on chromosome 5 and is characterized by a high-pitched, cat-like cry, intellectual disability, microcephaly, and distinctive facial features such as widely set eyes and low-set ears. The symptoms of cri-du-chat syndrome align perfectly with the details provided in the question.\n\n2. \n- **Angelman syndrome** is incorrect because it is caused by a deletion on the maternal chromosome 15 and is characterized by symptoms such as severe developmental delays, communication difficulties, and a happy demeanor, rather than the features associated with cri-du-chat syndrome.\n- **Prader-Willi syndrome** is incorrect as it is also linked to a deletion on chromosome 15 (paternal) and is primarily characterized by symptoms like hypotonia, hyperphagia, and obesity, which do not include the distinctive features of cri-du-chat syndrome.\n- **Down syndrome** is incorrect because it is caused by an abnormality on chromosome 21, specifically trisomy 21, and its symptoms include intellectual disability and distinct physical features, but do not include a high-pitched cry or the specific characteristics associated with cri-du-chat syndrome.",
       "domain": "Domain 4: Growth & Lifespan Development",
       "knId": "KN28",
-      "source_file": "4 Before Birth.json",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/4 Development/4 Before Birth.json",
       "source_folder": "4 Development",
       "difficulty": "hard",
       "question_type": "standard",
@@ -4525,19 +4526,19 @@
       "is_org_psych": false
     },
     {
-      "id": 215,
-      "question": "Which supervision model focuses on understanding and integrating the supervisor and supervisee's interpersonal dynamics to improve therapy outcomes?",
+      "id": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Family and Group.json::6",
+      "question": "In Milan Systemic Family Therapy, what is the purpose of 'circular questioning'?",
       "options": [
-        "Behavioral model",
-        "Developmental model",
-        "Integrative model",
-        "Psychodynamic model"
+        "To identify differences in family members' perceptions and uncover communication patterns",
+        "To assign blame for problematic behaviors",
+        "To have family members role-play past conflicts",
+        "To instruct family members to perform rituals between sessions"
       ],
-      "correct_answer": "Psychodynamic model",
-      "explanation": "1. The **psychodynamic model** is the correct answer because it emphasizes understanding and integrating the interpersonal dynamics between the supervisor and supervisee. This model focuses on the relational aspects of supervision, including transference and countertransference, which can significantly impact therapy outcomes by enhancing the supervisee's self-awareness and therapeutic effectiveness.\n\n2. The **developmental model** is incorrect because it primarily focuses on the growth and progression of the supervisee's skills and competencies over time, rather than the interpersonal dynamics between supervisor and supervisee. The **integrative model** is not the correct choice as it aims to combine various theoretical approaches and techniques in supervision, without specifically emphasizing the understanding of interpersonal dynamics. Lastly, the **behavioral model** is wrong because it concentrates on observable behaviors and the application of behavioral techniques in supervision, rather than exploring the deeper relational aspects that influence therapeutic outcomes.",
+      "correct_answer": "To identify differences in family members' perceptions and uncover communication patterns",
+      "explanation": "In Milan Systemic Family Therapy, the purpose of 'circular questioning' is to identify differences in family members' perceptions and uncover communication patterns. This technique involves asking each family member the same question to reveal how their views differ, which helps the therapist understand the family's dynamics and the underlying issues affecting their interactions (Browning & Green, 2003).\n\nThe incorrect options are as follows:\n\n- **To assign blame for problematic behaviors:** This option is incorrect because circular questioning aims to explore perceptions and communication rather than to attribute blame, which would not facilitate understanding or healing within the family system.\n\n- **To have family members role-play past conflicts:** This option is wrong because circular questioning does not involve role-playing; instead, it focuses on gathering insights into individual perspectives and communication styles rather than reenacting past events.\n\n- **To instruct family members to perform rituals between sessions:** This option is incorrect as it misrepresents the function of circular questioning, which is not about directing family members to perform specific actions but rather about facilitating dialogue that reveals their perceptions and communication patterns.",
       "domain": "Domain 6: Treatment & Intervention",
-      "knId": "KN52",
-      "source_file": "6 Prevention and Consultation.json",
+      "knId": "KN46",
+      "source_file": "/Users/anderschan/thepsychology-ai/questionsGPT/6 Clinical Interventions/6 Family and Group.json",
       "source_folder": "6 Clinical Interventions",
       "difficulty": "medium",
       "question_type": "standard",
