@@ -100,7 +100,7 @@
       "quality_comment": "Strong clinical vignette that requires differentiating OFC damage from other prefrontal and cortical regions. Well-supported by lesson content.",
       "suggestedLesson": "1-cerebral-cortex",
       "suggestedParagraph": "### The Prefrontal Cortex: Where Planning Meets Personality",
-      "lessonExcerpt": "Orbitofrontal Cortex (OFC) - The OFC manages emotion regulation, response inhibition, and social behaviors... Damage causes: Impulsivity, Social inappropriateness (immature behavior, inappropriate jocularity, oversharing), Lack of empathy, Aggressive or abusive behaviors, Emotion dysregulation",
+      "lessonExcerpt": "Damage causes: - Impulsivity - Social inappropriateness (immature behavior, inappropriate jocularity, oversharing) - Lack of empathy - Aggressive or abusive behaviors - Emotion dysregulation",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 11
@@ -119,9 +119,9 @@
       "kn_explanation": "This question tests knowledge of speech and language pathology terminology relevant to neurological and neurodevelopmental conditions within biological bases.",
       "difficulty": "medium",
       "quality_comment": "Good discrimination between similar-sounding terms. All distractors are plausible phenomena seen in tic disorders or neurological conditions.",
-      "suggestedLesson": "1-cerebral-cortex",
+      "suggestedLesson": "5-neurodevelopmental",
       "suggestedParagraph": "### Understanding Tics",
-      "lessonExcerpt": "Vocal tics include throat clearing, barking, and echolalia (repeating others' words).",
+      "lessonExcerpt": "A tic is a sudden, rapid, recurrent, nonrhythmic motor movement or vocalization. Motor tics include eye blinking, facial grimacing, shoulder shrugging, and echopraxia (imitating others' movements). Vocal tics include throat clearing, barking, and echolalia (repeating others' words).",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 17
@@ -163,7 +163,7 @@
       "quality_comment": "Well-grounded in lesson content about right hemisphere specialization for prosody and emotional processing. Clinical vignette format appropriate for EPPP.",
       "suggestedLesson": "1-cerebral-cortex",
       "suggestedParagraph": "## When the Two Hemispheres Specialize",
-      "lessonExcerpt": "Right Hemisphere (Nondominant for most people): ... Negative emotions ... The emotional 'music' of speech (prosody) ... Understanding social context in language (pragmatics) — humor, sarcasm, hyperbole",
+      "lessonExcerpt": "**Reality:** Broca's aphasia means slow, effortful speech with relatively intact comprehension. Wernicke's aphasia means fluent but meaningless speech with impaired comprehension.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 21
@@ -184,7 +184,7 @@
       "quality_comment": "The question accurately assesses knowledge of brain anatomy and function.",
       "suggestedLesson": "1-cerebral-cortex",
       "suggestedParagraph": "## The Big Picture: Four Lobes, Each With Its Own Job",
-      "lessonExcerpt": "The parietal lobe... Touch, body awareness, skilled movements.",
+      "lessonExcerpt": "- **Four lobes, four jobs**: Frontal (executive functions, movement, speech production), Temporal (hearing, language comprehension), Parietal (touch, body awareness, skilled movement), Occipital (vision)",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 4
@@ -205,7 +205,7 @@
       "quality_comment": "The question is well-structured and tests specific knowledge of language-related brain functions.",
       "suggestedLesson": "1-cerebral-cortex",
       "suggestedParagraph": "### Broca's Area: The Speech Production Center",
-      "lessonExcerpt": "When it's damaged, you get Broca's aphasia... slow and effortful speech.",
+      "lessonExcerpt": "Located in the dominant hemisphere (left side for most people), Broca's area is your language production hub. When it's damaged, you get **Broca's aphasia**. Also called expressive or nonfluent aphasia.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 7
@@ -247,7 +247,7 @@
       "quality_comment": "The question effectively assesses knowledge of brain functions related to emotional regulation.",
       "suggestedLesson": "1-cerebral-cortex",
       "suggestedParagraph": "## The Frontal Lobe: Your Brain's Executive Suite",
-      "lessonExcerpt": "The OFC manages emotion regulation, response inhibition, and social behaviors.",
+      "lessonExcerpt": "- **Prefrontal cortex has four regions**: Dorsolateral (goal-directed behavior, working memory), Ventrolateral (inhibition, emotion regulation), Ventromedial (social cognition, moral judgment), Orbitofrontal (social appropriateness, impulse control)",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 21
@@ -289,7 +289,7 @@
       "quality_comment": "The question is straightforward and tests a fundamental aspect of brain function.",
       "suggestedLesson": "1-cerebral-cortex",
       "suggestedParagraph": "## The Big Picture: Four Lobes, Each With Its Own Job",
-      "lessonExcerpt": "The limbic system is primarily involved in emotional regulation, memory, and motivation.",
+      "lessonExcerpt": "This region is crucial for social cognition and emotion regulation. When you read someone's facial expression or feel empathy, this area is involved.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 5
@@ -331,7 +331,7 @@
       "quality_comment": "The question effectively tests knowledge of different types of aphasia.",
       "suggestedLesson": "1-cerebral-cortex",
       "suggestedParagraph": "## Broca's Area: The Speech Production Center",
-      "lessonExcerpt": "When it's damaged, you get Broca's aphasia... Comprehension relatively intact (this is the crucial distinction).",
+      "lessonExcerpt": "**Reality:** Broca's aphasia means slow, effortful speech with relatively intact comprehension. Wernicke's aphasia means fluent but meaningless speech with impaired comprehension.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 18
@@ -373,7 +373,7 @@
       "quality_comment": "The question accurately targets knowledge of neuroanatomy related to aggression.",
       "suggestedLesson": "1-cerebral-cortex",
       "suggestedParagraph": "## The Frontal Lobe: Your Brain's Executive Suite",
-      "lessonExcerpt": "The amygdala is involved in emotional regulation, including aggression.",
+      "lessonExcerpt": "The temporal lobes sit on the sides of your brain, roughly near your temples. They handle auditory processing and language comprehension.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 14
@@ -394,7 +394,7 @@
       "quality_comment": "The question is challenging and requires specific knowledge of neuroimaging findings in schizophrenia.",
       "suggestedLesson": "1-cerebral-cortex",
       "suggestedParagraph": "## The Frontal Lobe: Your Brain's Executive Suite",
-      "lessonExcerpt": "Neuroimaging studies have shown abnormalities in the frontal lobes of individuals with schizophrenia.",
+      "lessonExcerpt": "The frontal lobes occupy the largest portion of the brain, about **1/3 of the entire brain**. They house three critical areas that will come up repeatedly on the EPPP and in your clinical work.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 22
@@ -415,7 +415,7 @@
       "quality_comment": "The question effectively assesses knowledge of aphasia types and their characteristics.",
       "suggestedLesson": "1-cerebral-cortex",
       "suggestedParagraph": "## The Frontal Lobe: Your Brain's Executive Suite",
-      "lessonExcerpt": "Key features of Broca's aphasia: - Slow, labored speech - Comprehension relatively intact (this is the crucial distinction)",
+      "lessonExcerpt": "**Reality:** Broca's aphasia means slow, effortful speech with relatively intact comprehension. Wernicke's aphasia means fluent but meaningless speech with impaired comprehension.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 1
@@ -478,7 +478,7 @@
       "quality_comment": "Clean, well-grounded question with a direct lesson quote; appropriate foundational difficulty for a lobe localization concept; options are meaningfully differentiated",
       "suggestedLesson": "1-cerebral-cortex",
       "suggestedParagraph": "## The Big Picture: Four Lobes, Each With Its Own Job",
-      "lessonExcerpt": "Temporal | Sides (near temples) | Hearing, language comprehension ... Occipital | Very back | Vision processing",
+      "lessonExcerpt": "- **Four lobes, four jobs**: Frontal (executive functions, movement, speech production), Temporal (hearing, language comprehension), Parietal (touch, body awareness, skilled movement), Occipital (vision)",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 20
@@ -496,7 +496,10 @@
       "kn": "KN1",
       "kn_explanation": "This question pertains to neurobiological bases of language processing and neurological deficits, aligned with biological bases of behavior (KN1).",
       "difficulty": "medium",
-      "quality_comment": "The distractors are relevant neurological deficits, creating plausible distractors that test differentiation among aphasias and syndromes."
+      "quality_comment": "The distractors are relevant neurological deficits, creating plausible distractors that test differentiation among aphasias and syndromes.",
+      "lessonExcerpt": "Key features of Broca's aphasia: - Slow, labored speech - Mostly nouns and verbs (telegraphic speech) - Impaired repetition - Anomia (can't name familiar objects) - **Comprehension relatively intact** (this is the crucial distinction)",
+      "suggestedLesson": "1-cerebral-cortex",
+      "needsReview": false
     },
     {
       "stem": "Which region of the prefrontal cortex is primarily associated with goal-directed behavior, working memory deficits, and impairments in executive function when damaged?",
@@ -511,7 +514,10 @@
       "kn": "KN1",
       "kn_explanation": "This assesses knowledge of neuroanatomical correlates of executive functions, under neurological and genetic bases of behavior (KN1).",
       "difficulty": "medium",
-      "quality_comment": "Distractors are all prefrontal regions with overlapping functions, requiring careful recall and differentiation, enhancing question quality."
+      "quality_comment": "Distractors are all prefrontal regions with overlapping functions, requiring careful recall and differentiation, enhancing question quality.",
+      "lessonExcerpt": "**Dorsolateral Prefrontal Cortex (DLPFC)**",
+      "suggestedLesson": "1-cerebral-cortex",
+      "needsReview": false
     },
     {
       "stem": "A patient presents with fluent speech containing many word substitutions, impaired comprehension of spoken and written language, and impaired repetition, but intact grammar and prosody. Which brain region is most likely damaged?",
@@ -526,7 +532,10 @@
       "kn": "KN1",
       "kn_explanation": "This question tests neurological localization of language comprehension deficits, a core concept of biological bases of behavior (KN1).",
       "difficulty": "medium",
-      "quality_comment": "Distractors include anatomically adjacent or functionally related areas, making this a well-constructed differential diagnosis question."
+      "quality_comment": "Distractors include anatomically adjacent or functionally related areas, making this a well-constructed differential diagnosis question.",
+      "lessonExcerpt": "Key features of Wernicke's aphasia: - Fluent but meaningless speech - Many word substitutions and errors - Impaired comprehension (spoken and written) - Impaired repetition - Anomia - Often unaware of their deficits",
+      "suggestedLesson": "1-cerebral-cortex",
+      "needsReview": false
     },
     {
       "stem": "Which syndrome is characterized by right-left disorientation, finger agnosia, agraphia, and acalculia, commonly resulting from damage to the dominant parietal lobe?",
@@ -541,7 +550,10 @@
       "kn": "KN1",
       "kn_explanation": "The question evaluates knowledge of neurological syndromes linked to specific brain regions, fitting biological bases of behavior (KN1).",
       "difficulty": "hard",
-      "quality_comment": "Uses multiple hallmark symptoms for localization, requiring integrative recall suitable for higher difficulty EPPP questions."
+      "quality_comment": "Uses multiple hallmark symptoms for localization, requiring integrative recall suitable for higher difficulty EPPP questions.",
+      "lessonExcerpt": "This specific syndrome results from left (dominant) parietal damage and involves four symptoms (memorize this quartet): 1. Right-left disorientation 2. Finger agnosia (can't identify their own fingers) 3. Agraphia (loss of writing skills) 4. Acalculia (loss of arithmetic skills)",
+      "suggestedLesson": "1-cerebral-cortex",
+      "needsReview": false
     },
     {
       "stem": "Damage to the occipital lobe's primary visual cortex with intact eyes and optic nerves produces which of the following conditions?",
@@ -556,7 +568,10 @@
       "kn": "KN1",
       "kn_explanation": "This question tests neuroanatomical understanding of visual processing deficits, within the biological bases of behavior (KN1).",
       "difficulty": "medium",
-      "quality_comment": "Options include relevant neuropsychological disorders, forcing test takers to identify specific visual deficits."
+      "quality_comment": "Options include relevant neuropsychological disorders, forcing test takers to identify specific visual deficits.",
+      "lessonExcerpt": "Damage can cause: - Visual agnosia (seeing but not recognizing what you're looking at) - Visual hallucinations - Achromatopsia (loss of color vision, seeing only in grayscale) - Cortical blindness",
+      "suggestedLesson": "1-cerebral-cortex",
+      "needsReview": false
     },
     {
       "stem": "Which prefrontal cortex region, when damaged, leads to impulsivity, social inappropriateness, lack of empathy, and emotional dysregulation?",
@@ -571,7 +586,10 @@
       "kn": "KN1",
       "kn_explanation": "This question addresses the neurobiological underpinnings of emotional and social regulation functions, aligned with KN1.",
       "difficulty": "medium",
-      "quality_comment": "Well-constructed question that differentiates closely related prefrontal regions to test precise localization knowledge."
+      "quality_comment": "Well-constructed question that differentiates closely related prefrontal regions to test precise localization knowledge.",
+      "lessonExcerpt": "- **Prefrontal cortex has four regions**: Dorsolateral (goal-directed behavior, working memory), Ventrolateral (inhibition, emotion regulation), Ventromedial (social cognition, moral judgment), Orbitofrontal (social appropriateness, impulse control)",
+      "suggestedLesson": "1-cerebral-cortex",
+      "needsReview": false
     },
     {
       "stem": "A patient with right parietal lobe damage is most likely to exhibit which of the following symptoms?",
@@ -586,7 +604,10 @@
       "kn": "KN1",
       "kn_explanation": "This focuses on sensory and spatial neuropsychological deficits following lesion localization, within biological bases of behavior (KN1).",
       "difficulty": "medium",
-      "quality_comment": "The distractors correspond to other cortical deficits, strengthening the diagnostic reasoning tested by this question."
+      "quality_comment": "The distractors correspond to other cortical deficits, strengthening the diagnostic reasoning tested by this question.",
+      "lessonExcerpt": "- **Four lobes, four jobs**: Frontal (executive functions, movement, speech production), Temporal (hearing, language comprehension), Parietal (touch, body awareness, skilled movement), Occipital (vision)",
+      "suggestedLesson": "1-cerebral-cortex",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best describes the role of the right hemisphere in language?",
@@ -601,7 +622,10 @@
       "kn": "KN1",
       "kn_explanation": "Examines lateralization and specialization of brain functions related to language processing, central to biological bases of behavior (KN1).",
       "difficulty": "medium",
-      "quality_comment": "Distractors are plausible but reflect common misconceptions, helping to assess nuanced understanding of hemispheric functions."
+      "quality_comment": "Distractors are plausible but reflect common misconceptions, helping to assess nuanced understanding of hemispheric functions.",
+      "lessonExcerpt": "**Right Hemisphere (Nondominant for most people):** - Holistic thinking - Intuition - Spatial relationships - Creativity - Negative emotions - The emotional \"music\" of speech (prosody) - Understanding social context in language (pragmatics) — humor, sarcasm, hyperbole - Controls left side of body",
+      "suggestedLesson": "1-cerebral-cortex",
+      "needsReview": false
     },
     {
       "stem": "In split-brain patients, a picture of a spoon presented to the left visual field will likely result in which of the following behaviors?",
@@ -616,7 +640,10 @@
       "kn": "KN1",
       "kn_explanation": "Tests knowledge of cerebral lateralization and split-brain research findings relating to sensory processing and language, within biological bases of behavior (KN1).",
       "difficulty": "hard",
-      "quality_comment": "This question assesses integration of complex research findings, with well-constructed options demanding detailed understanding."
+      "quality_comment": "This question assesses integration of complex research findings, with well-constructed options demanding detailed understanding.",
+      "lessonExcerpt": "Patients could only SAY \"ART\" (left hemisphere controls language) but could POINT to \"HE\" with their left hand (controlled by right hemisphere).",
+      "suggestedLesson": "1-cerebral-cortex",
+      "needsReview": false
     },
     {
       "stem": "Damage to which brain area would most likely impair one's ability to imitate a motor activity upon verbal command, such as 'pretend to comb your hair'?",
@@ -631,7 +658,10 @@
       "kn": "KN1",
       "kn_explanation": "This focuses on neurological motor planning deficits based on lesion location, consistent with biological bases of behavior (KN1).",
       "difficulty": "medium",
-      "quality_comment": "The options include incorrect lobes and brain areas plausibly related to motor control, supporting effective discrimination."
+      "quality_comment": "The options include incorrect lobes and brain areas plausibly related to motor control, supporting effective discrimination.",
+      "lessonExcerpt": "Ideomotor | Can't imitate movements or perform them on command | Can't pretend to comb hair when asked, even though they can do it spontaneously",
+      "suggestedLesson": "1-cerebral-cortex",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best describes the difference in hemispheric control of sensory and motor functions?",
@@ -646,7 +676,10 @@
       "kn": "KN1",
       "kn_explanation": "This question pertains to the neuroanatomical organization of motor and sensory pathways, falling under biological bases of behavior (KN1).",
       "difficulty": "easy",
-      "quality_comment": "This question is straightforward and clearly differentiates common misconception, appropriate for entry-level understanding."
+      "quality_comment": "This question is straightforward and clearly differentiates common misconception, appropriate for entry-level understanding.",
+      "lessonExcerpt": "**Right Hemisphere (Nondominant for most people):** - Holistic thinking - Intuition - Spatial relationships - Creativity - Negative emotions - The emotional \"music\" of speech (prosody) - Understanding social context in language (pragmatics) — humor, sarcasm, hyperbole - Controls left side of body",
+      "suggestedLesson": "1-cerebral-cortex",
+      "needsReview": false
     },
     {
       "stem": "Damage to the ventromedial prefrontal cortex (VMPFC) is most likely to result in which combination of symptoms?",
@@ -661,7 +694,10 @@
       "kn": "KN1",
       "kn_explanation": "This question assesses knowledge of functional localization within the prefrontal cortex related to decision-making and social cognition, consistent with biological bases of behavior (KN1).",
       "difficulty": "medium",
-      "quality_comment": "The item requires nuanced understanding of prefrontal cortex subregions, providing plausible distractors from other domains."
+      "quality_comment": "The item requires nuanced understanding of prefrontal cortex subregions, providing plausible distractors from other domains.",
+      "lessonExcerpt": "Damage causes: - Impaired decision-making - Impaired moral judgment - Lack of insight - Confabulation (making up stories to fill memory gaps without realizing it) - Deficits in social cognition (can't read facial emotions, reduced empathy) - Blunted emotional responses",
+      "suggestedLesson": "1-cerebral-cortex",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best describes the neuronal function of the primary motor cortex in the frontal lobe?",
@@ -676,7 +712,10 @@
       "kn": "KN1",
       "kn_explanation": "This question evaluates understanding of motor cortex function in movement control, a core biological bases of behavior content (KN1).",
       "difficulty": "easy",
-      "quality_comment": "Simple yet important question that clearly distinguishes motor from sensory and higher-order cortical functions."
+      "quality_comment": "Simple yet important question that clearly distinguishes motor from sensory and higher-order cortical functions.",
+      "lessonExcerpt": "This area initiates purposeful movements. Interestingly, it's active not just when you move, but when you imagine moving or watch someone else move. Crucial for learning new skills and for mirror neuron activity.",
+      "suggestedLesson": "1-cerebral-cortex",
+      "needsReview": false
     },
     {
       "stem": "Which language disorder is characterized by relatively preserved comprehension but impaired repetition and fluent speech with many errors, caused by damage to the arcuate fasciculus?",
@@ -691,7 +730,10 @@
       "kn": "KN1",
       "kn_explanation": "This assesses neuroanatomical pathways involved in language processing, fitting biological bases of behavior (KN1).",
       "difficulty": "medium",
-      "quality_comment": "The question effectively differentiates between various aphasia types relying on lesion localization."
+      "quality_comment": "The question effectively differentiates between various aphasia types relying on lesion localization.",
+      "lessonExcerpt": "Key features of Broca's aphasia: - Slow, labored speech - Mostly nouns and verbs (telegraphic speech) - Impaired repetition - Anomia (can't name familiar objects) - **Comprehension relatively intact** (this is the crucial distinction)",
+      "suggestedLesson": "1-cerebral-cortex",
+      "needsReview": false
     },
     {
       "stem": "Which of the following clinical presentations is most likely to occur following damage to Wernicke's area in the dominant hemisphere?",
@@ -711,7 +753,10 @@
       "lock_in_level": "easier",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "**Reality:** Broca's aphasia means slow, effortful speech with relatively intact comprehension. Wernicke's aphasia means fluent but meaningless speech with impaired comprehension.",
+      "suggestedLesson": "1-cerebral-cortex",
+      "needsReview": false
     },
     {
       "stem": "A patient presents with the ability to speak in long, complex sentences but makes little sense and has difficulty understanding questions. Which area of the brain is most likely affected?",
@@ -731,7 +776,10 @@
       "lock_in_level": "harder",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "Located in the dominant hemisphere (usually left), Wernicke's area is where language comprehension happens. Damage produces **Wernicke's aphasia**. Also called receptive or fluent aphasia.",
+      "suggestedLesson": "1-cerebral-cortex",
+      "needsReview": false
     }
   ]
 }

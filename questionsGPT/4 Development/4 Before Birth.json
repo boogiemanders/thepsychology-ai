@@ -37,52 +37,10 @@
       "quality_comment": "The question effectively assesses knowledge of causes of intellectual disability.",
       "suggestedLesson": "4-before-birth",
       "suggestedParagraph": "## Why Prenatal Development Matters for Your Practice",
-      "lessonExcerpt": "Exposure to harmful substances (called teratogens) causes the most serious damage.",
+      "lessonExcerpt": "Because everything is forming so rapidly, this is when exposure to harmful substances (called teratogens) causes the most serious damage.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 3
-    },
-    {
-      "stem": "How does exposure to androgens during prenatal development affect female fetuses?",
-      "options": [
-        "Increases risk of developmental delays",
-        "Enhances cognitive abilities",
-        "May lead to masculinization of physical traits",
-        "Decreases likelihood of behavioral problems"
-      ],
-      "answer": "May lead to masculinization of physical traits",
-      "explanation": "The correct answer is that exposure to androgens during prenatal development may lead to masculinization of physical traits in female fetuses. This exposure can influence the development of certain physical characteristics typically associated with males. The other options do not accurately reflect the effects of androgen exposure on female fetuses.",
-      "kn": "KN27",
-      "kn_explanation": "This question is best aligned with KN27 because it tests Risk and protective factors that may impact a developmental course (e.g., nutrition, prenatal care, health care, social support, socioeconomic status, abuse, victimization, and resiliency).",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively assesses understanding of the impact of prenatal hormone exposure.",
-      "suggestedLesson": "4-before-birth",
-      "suggestedParagraph": "## Why Prenatal Development Matters for Your Practice",
-      "lessonExcerpt": "Exposure to androgens during prenatal development may lead to masculinization of physical traits.",
-      "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 14
-    },
-    {
-      "stem": "What long-term effects are associated with fetal alcohol syndrome (FAS) as children grow into adulthood?",
-      "options": [
-        "Increased height and weight",
-        "Cognitive impairments and behavioral issues",
-        "Enhanced social skills",
-        "Improved academic performance"
-      ],
-      "answer": "Cognitive impairments and behavioral issues",
-      "explanation": "The correct answer is cognitive impairments and behavioral issues, as these are well-documented long-term effects of fetal alcohol syndrome. The other options are incorrect as they do not reflect the typical outcomes associated with FAS.",
-      "kn": "KN28",
-      "kn_explanation": "This question is best aligned with KN28 because it tests Disorders and diseases that impact the expected course of development over the lifespan.",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively assesses knowledge of the consequences of prenatal development issues.",
-      "suggestedLesson": "4-before-birth",
-      "suggestedParagraph": "## Why Prenatal Development Matters for Your Practice",
-      "lessonExcerpt": "Children with fetal alcohol syndrome often experience cognitive impairments and behavioral challenges that persist into adulthood.",
-      "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 23
     },
     {
       "stem": "What is a potential consequence of fetal malnutrition during the prenatal development period?",
@@ -100,7 +58,7 @@
       "quality_comment": "The question is relevant and tests knowledge of prenatal influences on development.",
       "suggestedLesson": "4-before-birth",
       "suggestedParagraph": "## Why Prenatal Development Matters for Your Practice",
-      "lessonExcerpt": "Understanding prenatal development isn't just academic trivia. It's the foundation for recognizing how early biological events shape someone's entire life trajectory.",
+      "lessonExcerpt": "Fetal Alcohol Syndrome (FAS). Most severe | Small eye openings, thin upper lip, other facial anomalies; retarded physical growth; CNS dysfunction (intellectual deficits, slowed processing, hyperactivity)",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 3
@@ -121,7 +79,7 @@
       "quality_comment": "The question accurately assesses knowledge of genetic causes of Down syndrome.",
       "suggestedLesson": "4-before-birth",
       "suggestedParagraph": "## When Chromosomes Tell a Different Story",
-      "lessonExcerpt": "Down syndrome is primarily caused by Trisomy 21, which results from nondisjunction during meiosis.",
+      "lessonExcerpt": "Trisomy 21 (about 95% of cases): Every cell contains three copies of chromosome 21 instead of two, giving 47 total chromosomes instead of 46.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 16
@@ -142,7 +100,7 @@
       "quality_comment": "The question effectively assesses knowledge of prenatal vulnerabilities.",
       "suggestedLesson": "4-before-birth",
       "suggestedParagraph": "## The Embryonic Period (Weeks 3-8)",
-      "lessonExcerpt": "This is the high-stakes period... exposure to harmful substances (called teratogens) causes the most serious damage.",
+      "lessonExcerpt": "Trisomy 21 (about 95% of cases): Every cell contains three copies of chromosome 21 instead of two, giving 47 total chromosomes instead of 46.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 4
@@ -160,7 +118,10 @@
       "kn": "KN21",
       "kn_explanation": "This question tests knowledge of normal developmental stages and timing of vulnerability, which falls under normal growth and development across the lifespan (KN21).",
       "difficulty": "medium",
-      "quality_comment": "The options are clearly defined and plausible; the stem focuses specifically on timing, which is important for prenatal development understanding."
+      "quality_comment": "The options are clearly defined and plausible; the stem focuses specifically on timing, which is important for prenatal development understanding.",
+      "lessonExcerpt": "This is why the embryonic period represents the window of greatest vulnerability for major birth defects.",
+      "suggestedLesson": "4-before-birth",
+      "needsReview": false
     },
     {
       "stem": "Which syndrome is caused by a deletion on the paternal chromosome 15 and is characterized by hypotonia, hyperphagia, obesity, intellectual disabilities, and self-injurious behaviors?",
@@ -175,7 +136,10 @@
       "kn": "KN28",
       "kn_explanation": "This question is best aligned with KN28 because it tests Disorders and diseases that impact the expected course of development over the lifespan.",
       "difficulty": "hard",
-      "quality_comment": "Distractors include other disorders with some overlapping features, requiring precise knowledge of genetic etiology and symptomatology, appropriate for higher difficulty."
+      "quality_comment": "Distractors include other disorders with some overlapping features, requiring precise knowledge of genetic etiology and symptomatology, appropriate for higher difficulty.",
+      "lessonExcerpt": "The Embryonic Period (Weeks 3-8) This is the high-stakes period. During weeks three through eight, all the major organs and body structures are forming.",
+      "suggestedLesson": "4-before-birth",
+      "needsReview": false
     },
     {
       "stem": "A female infant presents with slowed head growth, loss of speech around 12 months, abnormal hand movements, breathing problems, and seizures. Genetic testing reveals a mutation in the MECP2 gene. Which diagnosis is most consistent with this presentation?",
@@ -190,7 +154,10 @@
       "kn": "KN21",
       "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
       "difficulty": "hard",
-      "quality_comment": "The clinical features and genetic details provide adequate difficulty, and distractors are disorders with distinct features but plausible genetic bases."
+      "quality_comment": "The clinical features and genetic details provide adequate difficulty, and distractors are disorders with distinct features but plausible genetic bases.",
+      "lessonExcerpt": "Prader-Willi Syndrome | Deletion on paternal chromosome 15 | Narrow forehead, almond-shaped eyes, small hands/feet, short stature | Chronic overeating leading to obesity, intellectual disabilities, self-injurious behaviors like skin-picking",
+      "suggestedLesson": "4-before-birth",
+      "needsReview": false
     },
     {
       "stem": "Which chromosomal abnormality is associated with males having two or more X chromosomes and symptoms including gynecomastia, taller stature, impaired executive functions, and social cognitive deficits?",
@@ -205,7 +172,10 @@
       "kn": "KN28",
       "kn_explanation": "This question is best aligned with KN28 because it tests Disorders and diseases that impact the expected course of development over the lifespan.",
       "difficulty": "medium",
-      "quality_comment": "Options are plausible chromosomal disorders, and the stem includes multiple distinguishing features that require specific knowledge."
+      "quality_comment": "Options are plausible chromosomal disorders, and the stem includes multiple distinguishing features that require specific knowledge.",
+      "lessonExcerpt": "Rett Syndrome is an X-linked dominant disorder, almost exclusively affecting females, usually caused by mutations in the MECP2 gene.",
+      "suggestedLesson": "4-before-birth",
+      "needsReview": false
     },
     {
       "stem": "Which of the following inheritance patterns best describes Huntington’s disease?",
@@ -220,7 +190,10 @@
       "kn": "KN28",
       "kn_explanation": "This question is best aligned with KN28 because it tests Disorders and diseases that impact the expected course of development over the lifespan.",
       "difficulty": "easy",
-      "quality_comment": "The options are common inheritance patterns and the question is straightforward, serving well as a foundational item on genetics."
+      "quality_comment": "The options are common inheritance patterns and the question is straightforward, serving well as a foundational item on genetics.",
+      "lessonExcerpt": "Klinefelter Syndrome affects males who have XXY (or sometimes XXXY or more X chromosomes) instead of the typical XY.",
+      "suggestedLesson": "4-before-birth",
+      "needsReview": false
     },
     {
       "stem": "Prenatal exposure to which substance is most strongly associated with fetal alcohol syndrome, characterized by facial anomalies, growth retardation, CNS dysfunction, and organ defects?",
@@ -235,7 +208,10 @@
       "kn": "KN27",
       "kn_explanation": "This question is best aligned with KN27 because it tests Risk and protective factors that may impact a developmental course (e.g., nutrition, prenatal care, health care, social support, socioeconomic status, abuse, victimization, and resiliency).",
       "difficulty": "medium",
-      "quality_comment": "Distractors include other teratogens or drugs of abuse, creating plausible alternatives and requiring precise knowledge of prenatal teratogens."
+      "quality_comment": "Distractors include other teratogens or drugs of abuse, creating plausible alternatives and requiring precise knowledge of prenatal teratogens.",
+      "lessonExcerpt": "Autosomal Dominant: Huntington's Disease. Huntington's disease requires only one copy of the abnormal gene to cause the disorder.",
+      "suggestedLesson": "4-before-birth",
+      "needsReview": false
     },
     {
       "stem": "The earliest age at which a premature baby can survive outside the womb, typically occurring between 22 and 26 weeks gestation, is known as the:",
@@ -250,7 +226,10 @@
       "kn": "KN21",
       "kn_explanation": "This question pertains to prenatal developmental milestones and survival thresholds, an element of normal growth and development (KN21).",
       "difficulty": "easy",
-      "quality_comment": "Clear question with plausible options related to prenatal periods; a good recall-level question for foundational knowledge."
+      "quality_comment": "Clear question with plausible options related to prenatal periods; a good recall-level question for foundational knowledge.",
+      "lessonExcerpt": "Prenatal alcohol exposure can cause Fetal Alcohol Spectrum Disorder (FASD), an umbrella term for four related conditions with largely irreversible effects",
+      "suggestedLesson": "4-before-birth",
+      "needsReview": false
     },
     {
       "stem": "Which statement best describes the effect of exposure to teratogens during the germinal period of prenatal development?",
@@ -265,7 +244,10 @@
       "kn": "KN21",
       "kn_explanation": "The question examines understanding of prenatal development timing and teratogenic vulnerability in early stages, linking to growth and development (KN21).",
       "difficulty": "medium",
-      "quality_comment": "The distractors are plausible but inaccurate statements about teratogen effects that require knowledge about timing, enhancing discriminative value."
+      "quality_comment": "The distractors are plausible but inaccurate statements about teratogen effects that require knowledge about timing, enhancing discriminative value.",
+      "lessonExcerpt": "Around weeks 22-26, the fetus reaches the age of viability, the earliest point where a premature baby could potentially survive outside the womb with intensive medical support.",
+      "suggestedLesson": "4-before-birth",
+      "needsReview": false
     },
     {
       "stem": "Which of the following chromosomal abnormalities is characterized by an extra chromosome 21 in all cells, resulting in intellectual disability, hypotonia, and a short stocky build?",
@@ -280,7 +262,10 @@
       "kn": "KN28",
       "kn_explanation": "This question is best aligned with KN28 because it tests Disorders and diseases that impact the expected course of development over the lifespan.",
       "difficulty": "medium",
-      "quality_comment": "Options are chromosomal disorders with distinct features, making the question appropriate for assessing knowledge of common genetic syndromes."
+      "quality_comment": "Options are chromosomal disorders with distinct features, making the question appropriate for assessing knowledge of common genetic syndromes.",
+      "lessonExcerpt": "Either the damage is so severe that implantation fails (often before a woman even knows she's pregnant), or the damage is minimal enough that implantation succeeds and development continues relatively normally.",
+      "suggestedLesson": "4-before-birth",
+      "needsReview": false
     },
     {
       "stem": "A child is diagnosed with phenylketonuria (PKU). Which of the following is the most accurate inheritance pattern and key management strategy?",
@@ -295,7 +280,10 @@
       "kn": "KN25",
       "kn_explanation": "This question is best aligned with KN25 because it tests Family development, configuration, and functioning and their impact on the individual across the lifespan.",
       "difficulty": "medium",
-      "quality_comment": "The options reflect different inheritance and management strategies, requiring understanding of both genetics and treatment principles."
+      "quality_comment": "The options reflect different inheritance and management strategies, requiring understanding of both genetics and treatment principles.",
+      "lessonExcerpt": "Trisomy 21 (about 95% of cases): Every cell contains three copies of chromosome 21 instead of two, giving 47 total chromosomes instead of 46.",
+      "suggestedLesson": "4-before-birth",
+      "needsReview": false
     },
     {
       "stem": "Which teratogen is most associated with spontaneous abortion, premature birth, low birth weight, and infants who are irritable with a piercing cry and later risk for attention and behavior problems?",
@@ -310,7 +298,10 @@
       "kn": "KN27",
       "kn_explanation": "This question is best aligned with KN27 because it tests Risk and protective factors that may impact a developmental course (e.g., nutrition, prenatal care, health care, social support, socioeconomic status, abuse, victimization, and resiliency).",
       "difficulty": "medium",
-      "quality_comment": "Distractors are substances with teratogenic effects, but only cocaine matches this specific pattern, making this a well-constructed clinical knowledge item."
+      "quality_comment": "Distractors are substances with teratogenic effects, but only cocaine matches this specific pattern, making this a well-constructed clinical knowledge item.",
+      "lessonExcerpt": "Phenylketonuria (PKU) requires two copies of the recessive gene. ... PKU is manageable with a strict low-phenylalanine diet (no milk, cheese, meat, fish, eggs) maintained throughout life.",
+      "suggestedLesson": "4-before-birth",
+      "needsReview": false
     },
     {
       "stem": "Which disorder is caused by a deletion on chromosome 5 and includes a high-pitched, cat-like cry, intellectual disability, microcephaly, and distinctive facial features?",
@@ -325,7 +316,10 @@
       "kn": "KN28",
       "kn_explanation": "This question is best aligned with KN28 because it tests Disorders and diseases that impact the expected course of development over the lifespan.",
       "difficulty": "hard",
-      "quality_comment": "Options are syndromes with overlap in developmental delay but distinct genetics; the question requires precise identification of genetic causes."
+      "quality_comment": "Options are syndromes with overlap in developmental delay but distinct genetics; the question requires precise identification of genetic causes.",
+      "lessonExcerpt": "Prenatal cocaine exposure can cause: Spontaneous abortion during first trimester; Premature birth; Low birth weight; Infant irritability and overreaction to stimuli; Shrill, piercing cry",
+      "suggestedLesson": "4-before-birth",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best reflects the relationship between prenatal teratogen exposure and epigenetic changes?",
@@ -340,7 +334,10 @@
       "kn": "KN27",
       "kn_explanation": "This question is best aligned with KN27 because it tests Risk and protective factors that may impact a developmental course (e.g., nutrition, prenatal care, health care, social support, socioeconomic status, abuse, victimization, and resiliency).",
       "difficulty": "medium",
-      "quality_comment": "This item introduces newer conceptual knowledge about teratogen mechanisms, enhancing depth without undue complexity; options are balanced and plausible."
+      "quality_comment": "This item introduces newer conceptual knowledge about teratogen mechanisms, enhancing depth without undue complexity; options are balanced and plausible.",
+      "lessonExcerpt": "Cri-du-Chat Syndrome | Deletion on chromosome 5 | Characteristic high-pitched cat-like cry, low-set ears, round face, widely set eyes | Intellectual disability, developmental delays, weak muscle tone",
+      "suggestedLesson": "4-before-birth",
+      "needsReview": false
     },
     {
       "stem": "Regarding prenatal exposure to cocaine, which of the following statements best describes factors influencing variability in developmental outcomes?",
@@ -355,7 +352,10 @@
       "kn": "KN22",
       "kn_explanation": "This question is best aligned with KN22 because it tests Influence of individual-environment interaction on development over time (e.g., the relationship between the individual and the social, academic, work, community environment).",
       "difficulty": "medium",
-      "quality_comment": "The item tests understanding of complex interactions between prenatal teratogens and environmental influences; options are plausible and carefully constructed."
+      "quality_comment": "The item tests understanding of complex interactions between prenatal teratogens and environmental influences; options are plausible and carefully constructed.",
+      "lessonExcerpt": "Some teratogens work by causing epigenetic changes. Altering how genes are expressed without changing the DNA sequence itself.",
+      "suggestedLesson": "4-before-birth",
+      "needsReview": false
     },
     {
       "stem": "Which prenatal period corresponds to the second trimester, and what major developmental processes occur during this time?",
@@ -370,7 +370,10 @@
       "kn": "KN21",
       "kn_explanation": "This question assesses precise knowledge of prenatal trimester timing and associated developmental processes, relevant to normal growth and development (KN21).",
       "difficulty": "easy",
-      "quality_comment": "Clear and straightforward item that reinforces basic knowledge of prenatal developmental periods; distractors are conceptually related but incorrect."
+      "quality_comment": "Clear and straightforward item that reinforces basic knowledge of prenatal developmental periods; distractors are conceptually related but incorrect.",
+      "lessonExcerpt": "Outcomes depend on: Amount and potency of cocaine used; Other prenatal risk factors; Postnatal environment (poverty, caregiving quality, ongoing substance abuse in the home)",
+      "suggestedLesson": "4-before-birth",
+      "needsReview": false
     },
     {
       "stem": "During which stage of prenatal development is the risk of miscarriage highest due to chromosomal abnormalities?",
@@ -390,7 +393,10 @@
       "lock_in_level": "easier",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "Second trimester: Weeks 14-27 (entirely fetal period)",
+      "suggestedLesson": "4-before-birth",
+      "needsReview": false
     },
     {
       "stem": "Which prenatal stage is particularly sensitive to environmental factors that can influence brain development?",
@@ -410,7 +416,10 @@
       "lock_in_level": "harder",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "Either the damage is so severe that implantation fails (often before a woman even knows she's pregnant)",
+      "suggestedLesson": "4-before-birth",
+      "needsReview": false
     }
   ]
 }

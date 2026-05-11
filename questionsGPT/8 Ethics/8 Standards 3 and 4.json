@@ -37,31 +37,10 @@
       "quality_comment": "Tests application of Gottlieb's model to a supervisory context. Supported by lesson content on power differentials in multiple relationships.",
       "suggestedLesson": "8-standards-3-4",
       "suggestedParagraph": "#### Gottlieb's Decision-Making Model",
-      "lessonExcerpt": "Large gap (supervisor-supervisee) [represents] Higher Risk",
+      "lessonExcerpt": "Power Differential | Large gap (supervisor-supervisee) | Minimal gap (peer consultation)",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 9
-    },
-    {
-      "stem": "A psychologist suspects that a 7-year-old client is being physically abused by a parent. Before filing a report with child protective services, the psychologist wants to contact the child's pediatrician for corroborating information. What does the psychologist need in order to contact the pediatrician?",
-      "options": [
-        "Nothing—mandated reporting laws automatically waive all consent requirements for any communication related to suspected abuse",
-        "A signed release of information from the non-abusing parent or legal guardian authorizing contact with the pediatrician",
-        "A court order specifically authorizing inter-provider communication about the suspected abuse",
-        "Only verbal consent from the child, since the child is the identified client"
-      ],
-      "answer": "A signed release of information from the non-abusing parent or legal guardian authorizing contact with the pediatrician",
-      "explanation": "Mandated reporting laws require reporting suspected abuse to protective services—they do not broadly waive confidentiality for all communications with any party. Contacting the pediatrician is a separate clinical action that still requires proper authorization (a release of information). Option A incorrectly assumes mandated reporting laws eliminate all consent requirements for any abuse-related communication. Option C is overly restrictive—a court order is not required for routine provider-to-provider communication when proper consent exists. Option D is incorrect because minors generally cannot provide their own consent for release of information; the parent or legal guardian holds that right.",
-      "kn": "KN63",
-      "kn_explanation": "Mandatory reporting laws and legal obligations regarding child abuse",
-      "difficulty": "hard",
-      "quality_comment": "Tests the important distinction between mandated reporting to authorities versus general inter-provider communication. The lesson covers mandated reporting and consent separately but",
-      "suggestedLesson": "8-standards-3-4",
-      "suggestedParagraph": "### Disclosing Confidential Information: When Secrets Must Be Broken",
-      "lessonExcerpt": "### Informed Consent: More Than Just a Signature",
-      "needsReview": false,
-      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 12
     },
     {
       "stem": "A psychologist determines that a 15-year-old client is at imminent risk for suicide and requires psychiatric hospitalization. The parents are divorced. The mother, who brought the adolescent to therapy, consents to hospitalization, but the father cannot be reached. According to ethical and legal guidelines, what should the psychologist do?",
@@ -100,7 +79,7 @@
       "quality_comment": "Tests privilege vs. confidentiality distinction in court-ordered therapy. Lesson covers court-ordered evaluation and privilege ownership.",
       "suggestedLesson": "8-standards-3-4",
       "suggestedParagraph": "### Confidentiality versus Privilege: Understanding the Difference",
-      "lessonExcerpt": "Court-ordered evaluation: The court/attorney who retained you — Objective assessment; limited confidentiality.",
+      "lessonExcerpt": "Privilege | Legal right | Client holds it; client decides to claim or waive | Legal proceedings only",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 16
@@ -295,48 +274,6 @@
       "inspirationIndex": 28
     },
     {
-      "stem": "When a client expresses concerns about discrimination in therapy, what is the most ethical response for the psychologist?",
-      "options": [
-        "Dismissing the concerns as unfounded.",
-        "Encouraging the client to seek therapy elsewhere.",
-        "Listening to the client's concerns and exploring them together.",
-        "Reporting the client to the authorities for inappropriate behavior."
-      ],
-      "answer": "Listening to the client's concerns and exploring them together.",
-      "explanation": "The correct answer emphasizes the importance of listening and exploring the client's concerns, which aligns with ethical practices in psychology. The lesson highlights that psychologists should address client concerns seriously. The other options either dismiss the client's feelings or suggest inappropriate actions.",
-      "kn": "KN61",
-      "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively assesses understanding of ethical responses to client concerns.",
-      "suggestedLesson": "8-standards-3-4",
-      "suggestedParagraph": "## Discrimination: When Can You Say No?",
-      "lessonExcerpt": "You must listen to and address client concerns seriously, especially regarding discrimination.",
-      "needsReview": false,
-      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 3
-    },
-    {
-      "stem": "In the context of ethical hiring practices, how should a psychologist approach hiring decisions when a candidate has a history of harassment claims?",
-      "options": [
-        "Ignore the past claims if the candidate has relevant qualifications.",
-        "Conduct a thorough review of the circumstances surrounding the claims.",
-        "Only consider the candidate's most recent employment history.",
-        "Consult with the candidate's previous employers for their perspective."
-      ],
-      "answer": "Conduct a thorough review of the circumstances surrounding the claims.",
-      "explanation": "The correct answer emphasizes the need for a thorough review, which is essential in ethical hiring practices. The lesson suggests that understanding the context of past claims is crucial for making informed decisions. The other options either oversimplify the issue or do not address the ethical considerations involved.",
-      "kn": "KN61",
-      "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
-      "difficulty": "hard",
-      "quality_comment": "The question is well-structured and tests critical thinking regarding ethical hiring.",
-      "suggestedLesson": "8-standards-3-4",
-      "suggestedParagraph": "## Conflict of Interest: Following the Money",
-      "lessonExcerpt": "Conducting a thorough review of past claims is essential for ethical hiring decisions.",
-      "needsReview": false,
-      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 4
-    },
-    {
       "stem": "What should a psychologist disclose to clients regarding supervision in their practice?",
       "options": [
         "The psychologist should not disclose any information about supervision.",
@@ -350,9 +287,9 @@
       "kn_explanation": "This question is best aligned with KN64 because it tests Identification and management of potential ethical issues.",
       "difficulty": "medium",
       "quality_comment": "The question effectively assesses understanding of ethical obligations related to supervision disclosure.",
-      "suggestedLesson": "8-standards-3-4",
+      "suggestedLesson": "8-standards-9-10",
       "suggestedParagraph": "## Multiple Relationships: The Most Complex Standard",
-      "lessonExcerpt": "Psychologists must inform clients about the nature and purpose of supervision.",
+      "lessonExcerpt": "Trainee therapists (Standard 10.01(c)): Clients must know if their therapist is in training, that they're supervised, and who the supervisor is.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 7
@@ -415,7 +352,7 @@
       "quality_comment": "The question is relevant and tests understanding of professional boundaries.",
       "suggestedLesson": "8-standards-3-4",
       "suggestedParagraph": "## Standard 3: Human Relations (Navigating Professional Boundaries)",
-      "lessonExcerpt": "Psychologists must avoid any relationship that could impair objectivity or effectiveness.",
+      "lessonExcerpt": "Not all multiple relationships are prohibited. Only those that \"could reasonably be expected to impair objectivity, competence, or effectiveness\" or risk exploitation or harm.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 24
@@ -436,31 +373,10 @@
       "quality_comment": "The question effectively tests knowledge of ethical considerations regarding dual relationships.",
       "suggestedLesson": "8-standards-3-4",
       "suggestedParagraph": "## Multiple Relationships: The Most Complex Standard",
-      "lessonExcerpt": "Multiple relationships may impair objectivity or effectiveness.",
+      "lessonExcerpt": "Not all multiple relationships are prohibited. Only those that \"could reasonably be expected to impair objectivity, competence, or effectiveness\" or risk exploitation or harm.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 27
-    },
-    {
-      "stem": "When discussing a client's medication management, what is the psychologist's ethical responsibility?",
-      "options": [
-        "To make medication recommendations without consulting the prescribing physician.",
-        "To collaborate with the client and their prescribing physician when appropriate.",
-        "To discourage clients from taking medication.",
-        "To only focus on therapy and ignore medication discussions."
-      ],
-      "answer": "To collaborate with the client and their prescribing physician when appropriate.",
-      "explanation": "The correct answer emphasizes the importance of collaboration in client care, ensuring that all aspects of treatment are considered. The other options either promote unethical practices or neglect the client's needs.",
-      "kn": "KN61",
-      "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
-      "difficulty": "medium",
-      "quality_comment": "The question is relevant and tests understanding of collaborative care ethics.",
-      "suggestedLesson": "8-standards-3-4",
-      "suggestedParagraph": "## Standard 3: Human Relations (Navigating Professional Boundaries)",
-      "lessonExcerpt": "Psychologists should collaborate with the client and their prescribing physician when appropriate.",
-      "needsReview": false,
-      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 28
     },
     {
       "stem": "In the context of psychological evaluations, how should psychologists address language barriers to ensure cultural competence?",
@@ -476,9 +392,9 @@
       "kn_explanation": "This question is best aligned with KN71 because it tests ethical issues in technology-assisted psychological services.",
       "difficulty": "hard",
       "quality_comment": "The question effectively tests knowledge of cultural competence in psychological practice.",
-      "suggestedLesson": "8-standards-3-4",
+      "suggestedLesson": "8-standards-1-2",
       "suggestedParagraph": "## Standard 3: Human Relations (Navigating Professional Boundaries)",
-      "lessonExcerpt": "You must ensure it's accurate and ethical.",
+      "lessonExcerpt": "Use certified professional interpreters when possible (National Board of Certification for Medical Interpreters). Obtain client consent before bringing in an interpreter. Discuss confidentiality obligations with the interpreter",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 13
@@ -499,7 +415,7 @@
       "quality_comment": "The question is relevant and tests knowledge of confidentiality ethics.",
       "suggestedLesson": "8-standards-3-4",
       "suggestedParagraph": "## Standard 4: Privacy and Confidentiality",
-      "lessonExcerpt": "Consult with the client to obtain consent before disclosing any information.",
+      "lessonExcerpt": "Standard 4.06 allows consulting with colleagues about clients but requires not disclosing identifying information without authorization. Disclose only what's necessary for the consultation purpose.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 23
@@ -518,9 +434,9 @@
       "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
       "difficulty": "medium",
       "quality_comment": "The question is relevant and tests knowledge of cultural competence ethics.",
-      "suggestedLesson": "8-standards-3-4",
+      "suggestedLesson": "8-standards-1-2",
       "suggestedParagraph": "## Standard 3: Human Relations",
-      "lessonExcerpt": "When lacking cultural competence, psychologists should refer the client to another professional who has the necessary cultural competence.",
+      "lessonExcerpt": "Standard 2.01(b) addresses cultural competence: If understanding issues related to gender, gender identity, race, ethnicity, or other characteristics is essential for effective service, you must have the necessary knowledge and training. If you don't, make appropriate referrals.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 25
@@ -529,19 +445,19 @@
       "stem": "What is the ethical stance on sexual relationships with former clients according to the APA Ethics Code?",
       "options": [
         "They are permissible after a two-year waiting period.",
-        "They are prohibited regardless of the time elapsed since therapy ended.",
+        "They are prohibited for at least two years after termination, and after that only in the most unusual circumstances.",
         "They are allowed if the former client consents.",
         "They are acceptable if the relationship does not impair professional judgment."
       ],
-      "answer": "They are prohibited regardless of the time elapsed since therapy ended.",
-      "explanation": "The correct answer reflects the strict ethical prohibition against sexual relationships with former clients to prevent exploitation and maintain professional boundaries. The other options misinterpret the ethical guidelines regarding such relationships.",
+      "answer": "They are prohibited for at least two years after termination, and after that only in the most unusual circumstances.",
+      "explanation": "APA Ethics Code Standard 10.08 prohibits sexual intimacies with former clients for at least two years after termination of therapy. Even after two years, such relationships are still prohibited except in the 'most unusual circumstances,' and the psychologist bears the burden of proving that the relationship is not exploitative. The 'permissible after two years' option is too permissive; in practice, these relationships remain ethically problematic.",
       "kn": "KN61",
       "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
       "difficulty": "hard",
       "quality_comment": "The question effectively assesses understanding of ethical boundaries in therapy.",
-      "suggestedLesson": "8-standards-3-4",
+      "suggestedLesson": "8-standards-9-10",
       "suggestedParagraph": "## Standard 3: Human Relations",
-      "lessonExcerpt": "They are prohibited regardless of the time elapsed since therapy ended.",
+      "lessonExcerpt": "Standard 10.08: No sexual intimacies with former clients for at least two years after termination. After two years, it's still prohibited except in the \"most unusual circumstances,\" and you bear the burden of proving the relationship isn't exploitative.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 28
@@ -562,7 +478,7 @@
       "quality_comment": "The question is relevant and tests knowledge of dual relationship ethics.",
       "suggestedLesson": "8-standards-3-4",
       "suggestedParagraph": "## Standard 3: Human Relations",
-      "lessonExcerpt": "The risk of impaired objectivity and effectiveness in therapy.",
+      "lessonExcerpt": "Not all multiple relationships are prohibited. Only those that \"could reasonably be expected to impair objectivity, competence, or effectiveness\" or risk exploitation or harm.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 29
@@ -583,7 +499,7 @@
       "quality_comment": "The question effectively assesses understanding of client privilege.",
       "suggestedLesson": "8-standards-3-4",
       "suggestedParagraph": "## Standard 4: Privacy and Confidentiality",
-      "lessonExcerpt": "The client's right to prevent the therapist from disclosing confidential information.",
+      "lessonExcerpt": "Privilege: Legal right. Client holds it; client decides to claim or waive. All 50 states recognize some form of psychotherapist-client privilege. You can claim privilege on behalf of a client when asked to disclose information in legal proceedings.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 30
@@ -709,7 +625,7 @@
       "quality_comment": "Well-constructed question integrating Gottlieb's model with a realistic supervision scenario. Directly supported by lesson content.",
       "suggestedLesson": "8-standards-3-4",
       "suggestedParagraph": "#### Gottlieb's Decision-Making Model",
-      "lessonExcerpt": "Power Differential: Higher Risk = Large gap (supervisor-supervisee), Lower Risk = Minimal gap (peer consultation). Duration: Higher Risk = Long-term or ongoing. Clarity of Termination: Higher Risk = Likely to resume.",
+      "lessonExcerpt": "Power Differential | Large gap (supervisor-supervisee) | Minimal gap (peer consultation)",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 9
@@ -814,7 +730,7 @@
       "quality_comment": "Solid question testing a nuanced and commonly tested distinction about the limits of confidentiality guarantees in group settings.",
       "suggestedLesson": "8-standards-3-4",
       "suggestedParagraph": "## Standard 4: Privacy and Confidentiality",
-      "lessonExcerpt": "",
+      "lessonExcerpt": "Here's a hard truth: You cannot guarantee confidentiality in group therapy. Discuss confidentiality importance during screening interviews; Revisit it in the first session, subsequent sessions as needed, and the final session",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 24
@@ -856,7 +772,7 @@
       "quality_comment": "Tests a high-stakes clinical scenario frequently examined on the EPPP. The custody context adds complexity that requires understanding of how confidentiality applies to multiple therapy participants.",
       "suggestedLesson": "8-standards-3-4",
       "suggestedParagraph": "### Multiple Relationships: The Most Complex Standard",
-      "lessonExcerpt": "",
+      "lessonExcerpt": "You must clarify upfront: Who are the clients? How will information shared privately by one person be handled?",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 30
@@ -874,7 +790,10 @@
       "kn": "KN64",
       "kn_explanation": "This question is best aligned with KN64 because it tests Identification and management of potential ethical issues.",
       "difficulty": "medium",
-      "quality_comment": "The question clearly distinguishes between discrimination and refusal based on competence; distractors are plausible with different nuances."
+      "quality_comment": "The question clearly distinguishes between discrimination and refusal based on competence; distractors are plausible with different nuances.",
+      "lessonExcerpt": "The Ethics Code prohibits discrimination based on age, gender, race, ethnicity, and other protected categories. But that doesn't mean you must accept every single person who contacts you for services.",
+      "suggestedLesson": "8-standards-3-4",
+      "needsReview": false
     },
     {
       "stem": "Which behavior by a psychologist would be considered sexual harassment in a professional setting?",
@@ -889,7 +808,10 @@
       "kn": "KN62",
       "kn_explanation": "This question is best aligned with KN62 because it tests Professional standards and relevant guidelines for the practice of psychology (e.g., standards for educational and psychological testing).",
       "difficulty": "hard",
-      "quality_comment": "The distractors contrast accepted versus unwelcome behaviors, creating a high-level question about behavior interpretation in context."
+      "quality_comment": "The distractors contrast accepted versus unwelcome behaviors, creating a high-level question about behavior interpretation in context.",
+      "lessonExcerpt": "An occasional off-color joke might not constitute harassment initially, but if someone continues after being told it's unwelcome, it absolutely becomes harassment.",
+      "suggestedLesson": "8-standards-3-4",
+      "needsReview": false
     },
     {
       "stem": "When does a multiple relationship become ethically unacceptable?",
@@ -904,7 +826,10 @@
       "kn": "KN64",
       "kn_explanation": "This question is best aligned with KN64 because it tests Identification and management of potential ethical issues.",
       "difficulty": "medium",
-      "quality_comment": "The question clearly targets the key ethical distinction and distractors are plausible but less accurate."
+      "quality_comment": "The question clearly targets the key ethical distinction and distractors are plausible but less accurate.",
+      "lessonExcerpt": "Not all multiple relationships are prohibited. Only those that \"could reasonably be expected to impair objectivity, competence, or effectiveness\" or risk exploitation or harm.",
+      "suggestedLesson": "8-standards-3-4",
+      "needsReview": false
     },
     {
       "stem": "A clinician is asked to assess unaccompanied immigrant children who lack a legal guardian. Whose consent should they seek?",
@@ -919,7 +844,10 @@
       "kn": "KN68",
       "kn_explanation": "This question addresses ethical obligations for informed consent with special populations, which falls under ethical and professional issues (KN68).",
       "difficulty": "hard",
-      "quality_comment": "The correct answer reflects nuanced application of informed consent standards; distractors reflect common misconceptions."
+      "quality_comment": "The correct answer reflects nuanced application of informed consent standards; distractors reflect common misconceptions.",
+      "lessonExcerpt": "Unaccompanied immigrant children (UIC) present special challenges. The agency holding custody must consent, not the child. You provide informed consent information to both the agency and the child as appropriate.",
+      "suggestedLesson": "8-standards-3-4",
+      "needsReview": false
     },
     {
       "stem": "Before beginning a court-ordered evaluation, what should a psychologist explain to the person being assessed?",
@@ -934,7 +862,10 @@
       "kn": "KN61",
       "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
       "difficulty": "medium",
-      "quality_comment": "Options provide contrasting misinformation, allowing test-takers to discriminate based on knowledge of judicial mandates and confidentiality."
+      "quality_comment": "Options provide contrasting misinformation, allowing test-takers to discriminate based on knowledge of judicial mandates and confidentiality.",
+      "lessonExcerpt": "When services are mandated by the court, you still discuss the nature of services and confidentiality limits with the person, but you don't need their consent to proceed.",
+      "suggestedLesson": "8-standards-3-4",
+      "needsReview": false
     },
     {
       "stem": "If a psychologist expects services to be interrupted because of a move or another foreseeable change, what should they arrange?",
@@ -949,7 +880,10 @@
       "kn": "KN61",
       "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
       "difficulty": "easy",
-      "quality_comment": "The scenario is straightforward with clear correct action, and distractors represent ethically incorrect responses."
+      "quality_comment": "The scenario is straightforward with clear correct action, and distractors represent ethically incorrect responses.",
+      "lessonExcerpt": "For foreseeable interruptions: Discuss the situation with clients early, provide pretermination counseling, offer referrals.",
+      "suggestedLesson": "8-standards-3-4",
+      "needsReview": false
     },
     {
       "stem": "When should psychologists discuss the limits of confidentiality with clients?",
@@ -964,7 +898,10 @@
       "kn": "KN61",
       "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
       "difficulty": "easy",
-      "quality_comment": "The question is clear and covers a foundational ethical practice with plausible distractors."
+      "quality_comment": "The question is clear and covers a foundational ethical practice with plausible distractors.",
+      "lessonExcerpt": "Standard 4.02 requires discussing confidentiality limits at the relationship's outset and whenever circumstances change.",
+      "suggestedLesson": "8-standards-3-4",
+      "needsReview": false
     },
     {
       "stem": "In group therapy, how should psychologists address confidentiality with members?",
@@ -979,7 +916,10 @@
       "kn": "KN61",
       "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
       "difficulty": "medium",
-      "quality_comment": "Distractors clarify common misconceptions with the correct answer emphasizing education and realistic limits."
+      "quality_comment": "Distractors clarify common misconceptions with the correct answer emphasizing education and realistic limits.",
+      "lessonExcerpt": "Your job is risk reduction: Discuss confidentiality importance during screening interviews; Revisit it in the first session, subsequent sessions as needed, and the final session; Explain potential consequences of breaches; Set clear expectations",
+      "suggestedLesson": "8-standards-3-4",
+      "needsReview": false
     },
     {
       "stem": "A therapist is asked to provide therapy and also serve as a forensic evaluator for the same family. What is the ethical approach?",
@@ -994,7 +934,10 @@
       "kn": "KN64",
       "kn_explanation": "This question is best aligned with KN64 because it tests Identification and management of potential ethical issues.",
       "difficulty": "hard",
-      "quality_comment": "This question highlights discipline-specific ethical standards with appropriately challenging distractors."
+      "quality_comment": "This question highlights discipline-specific ethical standards with appropriately challenging distractors.",
+      "lessonExcerpt": "Forensic work: Providing both therapeutic and forensic services to the same person impairs objectivity",
+      "suggestedLesson": "8-standards-3-4",
+      "needsReview": false
     },
     {
       "stem": "When may psychologists disclose confidential information without client authorization?",
@@ -1009,7 +952,10 @@
       "kn": "KN61",
       "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
       "difficulty": "medium",
-      "quality_comment": "Distractors include common misunderstandings, with the correct choice emphasizing legal mandates consistent with Ethics Code."
+      "quality_comment": "Distractors include common misunderstandings, with the correct choice emphasizing legal mandates consistent with Ethics Code.",
+      "lessonExcerpt": "Standard 4.05 permits disclosure with appropriate authorization OR without authorization when mandated or permitted by law for valid purposes like protecting people from harm.",
+      "suggestedLesson": "8-standards-3-4",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best describes the difference between confidentiality and privilege in the context of psychological practice?",
@@ -1024,7 +970,10 @@
       "kn": "KN61",
       "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
       "difficulty": "medium",
-      "quality_comment": "The question is well-constructed, with clear distinctions that challenge test-takers to differentiate related constructs."
+      "quality_comment": "The question is well-constructed, with clear distinctions that challenge test-takers to differentiate related constructs.",
+      "lessonExcerpt": "Confidentiality | Ethical obligation (sometimes legal requirement) | Psychologist maintains it | All professional relationships. Privilege | Legal right | Client holds it; client decides to claim or waive | Legal proceedings only",
+      "suggestedLesson": "8-standards-3-4",
+      "needsReview": false
     },
     {
       "stem": "What is the recommended approach for psychologists using telepsychology services to protect client confidentiality, according to APA Guidelines?",
@@ -1039,7 +988,10 @@
       "kn": "KN62",
       "kn_explanation": "This question is best aligned with KN62 because it tests Professional standards and relevant guidelines for the practice of psychology (e.g., standards for educational and psychological testing).",
       "difficulty": "medium",
-      "quality_comment": "Distractors reflect common errors in telepsychology practice, while the correct option accurately reflects ethical standards."
+      "quality_comment": "Distractors reflect common errors in telepsychology practice, while the correct option accurately reflects ethical standards.",
+      "lessonExcerpt": "Telepsychology: Technology introduces new risks. Protect confidentiality through: Private, soundproof locations; Password protection on all devices; Encryption for emails, texts, documents; HIPAA-compliant videoconferencing",
+      "suggestedLesson": "8-standards-3-4",
+      "needsReview": false
     },
     {
       "stem": "When should psychologists decline or step back from a professional role because of other interests or relationships they hold?",
@@ -1054,7 +1006,10 @@
       "kn": "KN64",
       "kn_explanation": "This question is best aligned with KN64 because it tests Identification and management of potential ethical issues.",
       "difficulty": "medium",
-      "quality_comment": "The distractors test understanding of the circumstances that impair professional performance versus general role characteristics."
+      "quality_comment": "The distractors test understanding of the circumstances that impair professional performance versus general role characteristics.",
+      "lessonExcerpt": "Standard 3.06 prohibits accepting roles that impair your objectivity or expose others to harm.",
+      "suggestedLesson": "8-standards-3-4",
+      "needsReview": false
     },
     {
       "stem": "Under HIPAA, when can parents generally access their minor child's protected health information (PHI)?",
@@ -1069,7 +1024,10 @@
       "kn": "KN68",
       "kn_explanation": "This question tests knowledge of legal and ethical issues regarding client access to records and rights of minors (KN68).",
       "difficulty": "medium",
-      "quality_comment": "Options clarify nuances in parental rights and client confidentiality, important for clinical and legal considerations."
+      "quality_comment": "Options clarify nuances in parental rights and client confidentiality, important for clinical and legal considerations.",
+      "lessonExcerpt": "With minors: Parents typically access their minor children's PHI as legal representatives, unless state law grants the minor consent rights or treatment resulted from a court order.",
+      "suggestedLesson": "8-standards-3-4",
+      "needsReview": false
     },
     {
       "stem": "If a psychologist recognizes that a potential multiple relationship could become harmful, what is the most appropriate first step?",
@@ -1084,7 +1042,10 @@
       "kn": "KN64",
       "kn_explanation": "This question aligns with identifying and managing potential ethical issues related to multiple relationships (KN64).",
       "difficulty": "medium",
-      "quality_comment": "The options present plausible responses; the correct option reflects standard ethical decision-making."
+      "quality_comment": "The options present plausible responses; the correct option reflects standard ethical decision-making.",
+      "lessonExcerpt": "When a potentially harmful multiple relationship occurs anyway, you must take reasonable steps to resolve it. Discuss it with those involved, consult colleagues, prioritize the affected person's best interests",
+      "suggestedLesson": "8-standards-3-4",
+      "needsReview": false
     },
     {
       "stem": "Which factor is NOT part of Gottlieb's decision-making model when evaluating whether to enter into a multiple relationship?",
@@ -1099,7 +1060,10 @@
       "kn": "KN64",
       "kn_explanation": "This question covers ethical decision-making processes for managing multiple relationships, which involves managing potential ethical issues (KN64).",
       "difficulty": "medium",
-      "quality_comment": "Distractors are reasonable, with the exception option reflecting a commonly confused but irrelevant factor."
+      "quality_comment": "Distractors are reasonable, with the exception option reflecting a commonly confused but irrelevant factor.",
+      "lessonExcerpt": "When considering whether a multiple relationship is acceptable, evaluate three factors: Power Differential; Duration; Clarity of Termination",
+      "suggestedLesson": "8-standards-3-4",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best reflects the psychologist's ethical responsibilities when providing telepsychology services to enhance confidentiality?",
@@ -1114,27 +1078,10 @@
       "kn": "KN64",
       "kn_explanation": "This question is best aligned with KN64 because it tests Identification and management of potential ethical issues.",
       "difficulty": "medium",
-      "quality_comment": "The item requires application of best practices in telepsychology to protect confidentiality, with plausible distractors."
-    },
-    {
-      "stem": "A psychologist is approached by a client who is a member of a marginalized group. What is the ethical guideline regarding the provision of services to this client?",
-      "options": [
-        "Psychologists should provide services to all clients without regard to their background.",
-        "Psychologists may refuse services if they feel uncomfortable with the client's background.",
-        "Psychologists must ensure that their personal biases do not interfere with providing services.",
-        "Psychologists can refuse services based on the client's political beliefs."
-      ],
-      "answer": "Psychologists must ensure that their personal biases do not interfere with providing services.",
-      "explanation": "This answer is correct because the APA Ethics Code emphasizes that psychologists must be aware of their biases and ensure they do not affect their professional conduct, particularly when working with clients from diverse backgrounds.",
-      "difficulty": "easy",
-      "kn": "KN61",
-      "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
-      "quality_comment": "This question effectively tests understanding of ethical guidelines regarding bias and service provision.",
-      "is_lock_in_drill": true,
-      "lock_in_level": "easier",
-      "tags": [
-        "lock_in_drill"
-      ]
+      "quality_comment": "The item requires application of best practices in telepsychology to protect confidentiality, with plausible distractors.",
+      "lessonExcerpt": "Protect confidentiality through: Private, soundproof locations; Password protection on all devices; Encryption for emails, texts, documents; Discussing with clients how they'll maintain privacy on their end",
+      "suggestedLesson": "8-standards-3-4",
+      "needsReview": false
     },
     {
       "stem": "During a supervision session, a psychologist expresses reluctance to work with clients from a specific cultural background. What should the supervisor emphasize regarding ethical practice?",
@@ -1154,7 +1101,10 @@
       "lock_in_level": "harder",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "Standard 2.01(b) addresses cultural competence: If understanding issues related to gender, gender identity, race, ethnicity, or other characteristics is essential for effective service, you must have the necessary knowledge and training.",
+      "suggestedLesson": "8-standards-1-2",
+      "needsReview": false
     }
   ]
 }

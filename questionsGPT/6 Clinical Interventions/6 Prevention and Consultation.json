@@ -37,7 +37,7 @@
       "quality_comment": "Well-supported by lesson content with specific percentages. A classic EPPP topic testing common factors research.",
       "suggestedLesson": "6-prevention-and-consultation",
       "suggestedParagraph": "## What Makes Therapy Work? The Common Factors Debate",
-      "lessonExcerpt": "Norcross and Lambert's research suggests this breakdown of what contributes to therapy outcomes: 30% patient contributions (motivation, resources, social support), 12% therapeutic relationship, 8% treatment method, 7% therapist characteristics, 3% other factors, 40% unexplained variance.",
+      "lessonExcerpt": "Norcross and Lambert's research suggests this breakdown of what contributes to therapy outcomes: 30% patient contributions (motivation, resources, social support), 12% therapeutic relationship, 8% treatment method",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
       "inspirationIndex": 5
@@ -62,27 +62,6 @@
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
       "inspirationIndex": 10
-    },
-    {
-      "stem": "A psychologist is consulting with a community task force on domestic violence intervention. Based on the research literature, which approach has been found to produce the best long-term outcomes for reducing spousal abuse recidivism?",
-      "options": [
-        "Couples therapy focusing on communication skills",
-        "Arrest of the perpetrator",
-        "Individual psychotherapy for the abuser",
-        "Mandatory anger management group treatment"
-      ],
-      "answer": "Arrest of the perpetrator",
-      "explanation": "Research on domestic violence indicates that the best long-term results follow arrest of the perpetrator. The research also suggests that change in the perpetrator occurs only when the victim refuses to tolerate the situation further. Couples therapy (A) is generally contraindicated in active abuse situations. Individual psychotherapy (C) and anger management groups (D) may be components of treatment but have not been shown to produce the best long-term outcomes. The distinction between expressive and instrumental abuse is also relevant—expressive abuse is more amenable to psychological treatment, but left untreated becomes instrumental over time.",
-      "kn": "KN44",
-      "kn_explanation": "This question is best aligned with KN44 because it tests Treatment techniques and interventions, and the evidence for their comparative efficacy and effectiveness.",
-      "difficulty": "hard",
-      "quality_comment": "Strong question testing a counterintuitive finding that is well-supported by the lesson content. Distractors represent plausible but less supported interventions.",
-      "suggestedLesson": "6-prevention-and-consultation",
-      "suggestedParagraph": "## Domestic Violence",
-      "lessonExcerpt": "The research suggests that change in the perpetrator of the abuse takes place only when the victim refuses to tolerate the situation any further. The best long-term results seem to follow arrest of the perpetrator.",
-      "needsReview": false,
-      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 11
     },
     {
       "stem": "Dr. Okonkwo is reviewing the psychotherapy outcome literature to improve her clinical practice. According to Norcross and Lambert's research on common factors, which variable accounts for the largest identified portion of variance in therapy outcomes?",
@@ -209,27 +188,6 @@
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
       "inspirationIndex": 10
-    },
-    {
-      "stem": "A psychologist is consulted about the most effective long-term intervention for reducing recidivism in cases of domestic violence. Based on the research literature, which intervention has been associated with the best long-term outcomes for stopping spousal abuse?",
-      "options": [
-        "Mandated couples therapy focusing on communication skills",
-        "Arrest of the perpetrator",
-        "Individual psychodynamic therapy for the abuser",
-        "Group anger management programs for batterers"
-      ],
-      "answer": "Arrest of the perpetrator",
-      "explanation": "Research on domestic violence indicates that the best long-term results for reducing recidivism follow arrest of the perpetrator. The literature suggests that change in the perpetrator occurs only when the victim refuses to tolerate the situation further, and arrest represents a concrete consequence. Couples therapy (A) is generally contraindicated in active abuse situations due to safety concerns. Individual psychodynamic therapy (C) and group anger management (D) have not shown the same level of effectiveness as arrest for long-term outcomes. Additionally, the research distinguishes between expressive abuse (less deliberate, more amenable to treatment) and instrumental abuse (deliberate control), noting that even expressive abuse becomes instrumental over time if untreated.",
-      "kn": "KN44",
-      "kn_explanation": "Evidence-based intervention for reducing domestic violence recidivism",
-      "difficulty": "hard",
-      "quality_comment": "Strong question testing applied knowledge of domestic violence intervention research. The distractors represent commonly assumed interventions.",
-      "suggestedLesson": "6-prevention-and-consultation",
-      "suggestedParagraph": "## The Three Faces of Prevention: Stopping Problems Before They Start",
-      "lessonExcerpt": "The research suggests that change in the perpetrator of the abuse takes place only when the victim refuses to tolerate the situation any further. The best long-term results seem to follow arrest of the perpetrator.",
-      "needsReview": false,
-      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 11
     },
     {
       "stem": "According to research on common factors in psychotherapy outcomes, which therapist-related variable is most consistently identified as a significant predictor of positive therapeutic outcomes?",
@@ -379,27 +337,6 @@
       "inspirationIndex": 10
     },
     {
-      "stem": "A county domestic violence program is evaluating which intervention approach produces the lowest recidivism rates among male perpetrators following a spousal assault conviction. Based on the empirical literature, which of the following interventions is most consistently associated with reduced re-offense rates when implemented as part of a coordinated community response?",
-      "options": [
-        "Couples therapy targeting communication deficits and conflict resolution skills",
-        "Mandatory arrest followed by incarceration without psychoeducational programming",
-        "Batterer intervention programs combined with legal system monitoring",
-        "Individual psychodynamic therapy exploring early attachment disruptions"
-      ],
-      "answer": "Batterer intervention programs combined with legal system monitoring",
-      "explanation": "Research indicates that batterer intervention programs (BIPs), particularly when embedded within a coordinated community response involving legal accountability, are associated with the lowest recidivism rates. Couples therapy is contraindicated in active domestic violence situations because it implicitly assigns mutual responsibility for violence, may endanger the victim by surfacing grievances in session, and provides abusers with new information to exploit coercively. Mandatory arrest alone (without psychoeducational follow-through) has shown inconsistent results across studies — Sherman et al.'s research found deterrent effects only for employed batterers. Individual psychodynamic therapy lacks adequate evidence for reducing intimate partner violence recidivism and fails to address the power and control dynamics central to this behavior pattern.",
-      "kn": "KN44",
-      "kn_explanation": "This question is best aligned with KN44 because it tests Treatment techniques and interventions, and the evidence for their comparative efficacy and effectiveness.",
-      "difficulty": "hard",
-      "quality_comment": "High-quality doctoral-level question requiring discrimination between a contraindicated approach (couples therapy) and evidence-supported ones; tests applied clinical judgment in a forensic context.",
-      "suggestedLesson": "6-prevention-and-consultation",
-      "suggestedParagraph": "## Understanding Prevention, Consultation, and Psychotherapy Research",
-      "lessonExcerpt": "LESSON CONTENT DOES NOT EXPLICITLY ADDRESS DOMESTIC VIOLENCE INTERVENTION OR RECIDIVISM OUTCOMES IN THE PROVIDED EXCERPTS",
-      "needsReview": false,
-      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 11
-    },
-    {
       "stem": "A client who recently began attending Alcoholics Anonymous states: 'I used to think I was just weak-willed and could stop if I really tried. Now I understand I have a condition — I literally cannot drink even one glass of wine without losing control. It's not about willpower.' This statement most directly reflects which foundational premise of AA's theoretical framework?",
       "options": [
         "The moral model, which locates the source of addiction in correctable character defects addressed through spiritual inventory",
@@ -421,27 +358,6 @@
       "inspirationIndex": 13
     },
     {
-      "stem": "A researcher reviewing the common factors literature concludes that one therapist-offered condition consistently accounts for more outcome variance than any specific treatment technique across diverse presenting problems and theoretical orientations. Which variable has been most robustly identified in this role by the empirical literature?",
-      "options": [
-        "Years of clinical experience and postdoctoral specialization in the relevant disorder",
-        "Selection of a treatment protocol empirically validated for the client's specific diagnosis",
-        "Accurate empathy as experienced and reported by the client",
-        "Therapist use of strategic self-disclosure to model vulnerability and reduce power differentials"
-      ],
-      "answer": "Accurate empathy as experienced and reported by the client",
-      "explanation": "The common factors and therapist effect literatures consistently identify accurate empathy — operationalized as the therapist's capacity to understand and communicate understanding of the client's subjective experience — as the most reliably predictive therapist-offered variable for positive outcomes. This finding was first articulated by Carl Rogers and rigorously operationalized by Truax and Carkhuff, whose research showed that empathy, warmth, and genuineness predicted outcomes independently of theoretical orientation. Critically, it is the client's perception of empathy that predicts outcome, not the therapist's self-rated empathy — a distinction that underscores its relational rather than technical nature. Years of experience show surprisingly weak associations with outcome in meta-analyses. Treatment protocol selection reflects specific factors, which account for a smaller proportion of outcome variance than common factors. Strategic self-disclosure has limited empirical support as a primary outcome predictor.",
-      "kn": "KN44",
-      "kn_explanation": "This question is best aligned with KN44 because it tests Treatment techniques and interventions, and the evidence for their comparative efficacy and effectiveness.",
-      "difficulty": "hard",
-      "quality_comment": "Requires integration of common factors research, the client-perception nuance, and relative weighting of therapist variables — well-suited for doctoral-level discrimination.",
-      "suggestedLesson": "6-prevention-and-consultation",
-      "suggestedParagraph": "## Understanding Prevention, Consultation, and Psychotherapy Research",
-      "lessonExcerpt": "LESSON CONTENT IS TRUNCATED — COMMON FACTORS AND THERAPIST EMPATHY AS OUTCOME VARIABLE ARE LIKELY ADDRESSED IN THE OMITTED PSYCHOTHERAPY RESEARCH SECTIONS",
-      "needsReview": false,
-      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 15
-    },
-    {
       "stem": "An organizational psychologist evaluates the effects of implementing a compressed four-day, 40-hour workweek across a mid-sized logistics company. After six months, she compares pre- and post-implementation data. Based on the empirical literature on alternative work schedules, which pattern of outcomes is she most likely to find?",
       "options": [
         "Both employee morale and objective productivity measures show significant, sustained improvements",
@@ -455,9 +371,9 @@
       "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
       "difficulty": "medium",
       "quality_comment": "Tests a precise empirical distinction between attitudinal and performance outcomes — a classic and frequently tested I/O psychology finding; distractors are plausible and require careful discrimination.",
-      "suggestedLesson": "6-prevention-and-consultation",
+      "suggestedLesson": "6-how-orgs-change",
       "suggestedParagraph": "## Understanding Prevention, Consultation, and Psychotherapy Research",
-      "lessonExcerpt": "LESSON CONTENT DOES NOT EXPLICITLY ADDRESS ALTERNATIVE WORK SCHEDULES OR I/O ORGANIZATIONAL INTERVENTIONS IN THE PROVIDED EXCERPTS",
+      "lessonExcerpt": "Compressed workweeks improve satisfaction more than productivity. Flextime's biggest benefit is reducing absenteeism, not improving performance ratings.",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
       "inspirationIndex": 16
@@ -476,9 +392,9 @@
       "kn_explanation": "This question is best aligned with KN45 because it tests methods and their evidence base for prevention, intervention, and rehabilitation with diverse and special populations.",
       "difficulty": "hard",
       "quality_comment": "Requires nuanced understanding of the multicultural therapy literature; avoids oversimplification while demanding precise knowledge of etiology and magnitude of disparities.",
-      "suggestedLesson": "6-prevention-and-consultation",
+      "suggestedLesson": "3-helping-and-hurting",
       "suggestedParagraph": "## Understanding Prevention, Consultation, and Psychotherapy Research",
-      "lessonExcerpt": "LESSON CONTENT IS TRUNCATED — MULTICULTURAL THERAPY OUTCOMES AND PREMATURE TERMINATION ARE LIKELY ADDRESSED IN OMITTED SECTIONS",
+      "lessonExcerpt": "redlining | | **Institutional** | Organizational practices that marginalize racial groups | Zero-tolerance school policies that disproportionately suspend minority students | | **Interpersonal** | Individual behaviors that harm other racial groups | Microaggressions: subtle comments that communicate hostile or demeaning messages | | **Internalized** | Acceptance of negative stereotypes about one's own group | Colorism: minorities accepting negative beliefs about darker skin tones |...",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
       "inspirationIndex": 17
@@ -499,7 +415,7 @@
       "quality_comment": "Clean numerical discrimination question anchored to a landmark study; the supervisor's paraphrase provides contextual scaffolding appropriate for doctoral-level test-taking.",
       "suggestedLesson": "6-prevention-and-consultation",
       "suggestedParagraph": "## Understanding Prevention, Consultation, and Psychotherapy Research",
-      "lessonExcerpt": "LESSON CONTENT IS TRUNCATED — PSYCHOTHERAPY META-ANALYSIS EFFECT SIZE DATA ARE LIKELY COVERED IN THE OMITTED PSYCHOTHERAPY RESEARCH SECTIONS",
+      "lessonExcerpt": "These researchers pioneered using meta-analysis to combine results from 475 studies comparing therapy to no treatment. Their finding: an effect size of .85, meaning the average therapy patient was better off than 80% of people who didn't receive therapy.",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
       "inspirationIndex": 18
@@ -518,9 +434,9 @@
       "kn_explanation": "This question is best aligned with KN44 because it tests Treatment techniques and interventions, and the evidence for their comparative efficacy and effectiveness.",
       "difficulty": "medium",
       "quality_comment": "Realistic clinical vignette with diagnostically specific features that sharpen the indication; distractors span multiple DSM categories requiring precise knowledge of ECT's evidence base.",
-      "suggestedLesson": "6-prevention-and-consultation",
+      "suggestedLesson": "1-pharmacology-antidepressants-antipsychotics",
       "suggestedParagraph": "## Understanding Prevention, Consultation, and Psychotherapy Research",
-      "lessonExcerpt": "LESSON CONTENT DOES NOT ADDRESS ELECTROCONVULSIVE THERAPY IN THE PROVIDED EXCERPTS",
+      "lessonExcerpt": "What They Treat:** Treatment-resistant depression and atypical depression (characterized by reversed vegetative symptoms like oversleeping, increased appetite, and mood reactivity). **The Major Concern: Hypertensive Crisis",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
       "inspirationIndex": 19
@@ -547,27 +463,6 @@
       "inspirationIndex": 23
     },
     {
-      "stem": "An organizational psychologist advises a manufacturing company whose supervisors hold the belief that employees are inherently self-motivated, capable of exercising creativity and self-direction, and will commit to organizational goals when work is meaningful. According to McGregor's Theory Y, this set of management assumptions would most likely result in which organizational practice?",
-      "options": [
-        "Close supervision and detailed performance monitoring to ensure that productivity targets are consistently met",
-        "Centralized decision-making with clearly defined chains of command to maintain operational efficiency",
-        "Participative decision-making and the delegation of meaningful responsibility to employees at multiple levels",
-        "Performance-contingent reward structures designed to externally motivate employee compliance with standards"
-      ],
-      "answer": "Participative decision-making and the delegation of meaningful responsibility to employees at multiple levels",
-      "explanation": "McGregor's Theory Y holds that employees are inherently motivated, creative, and capable of self-direction when given meaningful work. Organizations operating under Theory Y assumptions naturally adopt participative management styles in which employees are involved in decision-making and given real autonomy and responsibility. Theory X, by contrast, assumes employees are passive and require external coercion—leading to close supervision (Option A), centralized authority (Option B), and contingent reward structures (Option D). Under Theory Y, external control is considered unnecessary and counterproductive when employees find their work purposeful.",
-      "kn": "KN46",
-      "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
-      "difficulty": "medium",
-      "quality_comment": "Clear question with well-differentiated distractors. Theory Y and McGregor's management framework are. Content goes beyond current lesson material — valid EPPP topic, no lesson excerpt available.",
-      "suggestedLesson": "6-prevention-and-consultation",
-      "suggestedParagraph": "## Organizational Management Theory",
-      "lessonExcerpt": "",
-      "needsReview": false,
-      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 24
-    },
-    {
       "stem": "A human resources consultant recommends two separate interventions to a manufacturing company. The first involves adding several assembly steps to each worker's role so that employees rotate through a broader set of tasks, all at the same complexity level. The second involves redesigning positions to include planning, quality inspection, and scheduling responsibilities that were previously handled exclusively by supervisors. Which statement correctly distinguishes job enlargement from job enrichment as illustrated in this scenario?",
       "options": [
         "Job enlargement incorporates higher-level managerial responsibilities; job enrichment increases the number of tasks at the worker's existing skill level",
@@ -581,9 +476,9 @@
       "kn_explanation": "This question is best aligned with KN42 because it tests Factors related to treatment or intervention decision-making (e.g., relevant research, matching treatment to assessment/diagnosis, matching client or patient with psychologist characteristics, knowledge and use of allied services, cost and benefit, readiness to change).",
       "difficulty": "medium",
       "quality_comment": "Clear scenario with well-differentiated distractors. This topic is not present in the provided lesson files; flagged for verification against the appropriate I/O psychology lesson.",
-      "suggestedLesson": "6-prevention-and-consultation",
+      "suggestedLesson": "2-work-motivation",
       "suggestedParagraph": "## Job Design",
-      "lessonExcerpt": "Lesson content does not explicitly cover the distinction between job enrichment and job enlargement. Flagged for review.",
+      "lessonExcerpt": "Misconception #2**: \"Job enlargement and job enrichment are the same thing.\" **Reality**: Enlargement adds more tasks at the same level (horizontal loading). Enrichment adds depth, meaning, and responsibility (vertical loading).",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
       "inspirationIndex": 27
@@ -602,9 +497,9 @@
       "kn_explanation": "This question is best aligned with KN44 because it tests Treatment techniques and interventions, and the evidence for their comparative efficacy and effectiveness.",
       "difficulty": "hard",
       "quality_comment": "Solid contingency model question testing the core matching principle. However, the provided domain 6 lesson content does not cover Fiedler's contingency model or leadership theory at all — this topic typically falls under I/O Psychology. Content goes beyond current lesson material — valid EPPP topic, no lesson excerpt available.",
-      "suggestedLesson": "6-prevention-and-consultation",
+      "suggestedLesson": "5-6-leadership",
       "suggestedParagraph": "## Understanding Prevention, Consultation, and Psychotherapy Research: Your Complete Guide",
-      "lessonExcerpt": "",
+      "lessonExcerpt": "These combine to create situations ranging from very favorable to very unfavorable. **The Match-Up",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
       "inspirationIndex": 31
@@ -622,7 +517,10 @@
       "kn": "KN51",
       "kn_explanation": "This question is best aligned with KN51 because it tests Approaches to health promotion, risk reduction, resilience, and wellness.",
       "difficulty": "medium",
-      "quality_comment": "The stem is clear and the distractors are plausible but conceptually distinct, making this a solid question for assessing key prevention concepts."
+      "quality_comment": "The stem is clear and the distractors are plausible but conceptually distinct, making this a solid question for assessing key prevention concepts.",
+      "lessonExcerpt": "**Primary Prevention** targets everyone, not just people who are struggling. The goal is stopping new cases from developing in the first place. These programs cast a wide net.",
+      "suggestedLesson": "6-prevention-and-consultation",
+      "needsReview": false
     },
     {
       "stem": "Which of the following describes client-centered case consultation as defined by Caplan?",
@@ -637,7 +535,10 @@
       "kn": "KN47",
       "kn_explanation": "Focuses on models and processes of consultation, specifically mental health consultation types (KN47).",
       "difficulty": "medium",
-      "quality_comment": "Options are carefully crafted to represent different consultation types, requiring nuanced understanding of Caplan's consultation model."
+      "quality_comment": "Options are carefully crafted to represent different consultation types, requiring nuanced understanding of Caplan's consultation model.",
+      "lessonExcerpt": "**Client-Centered Case Consultation** focuses on solving a problem with a specific client. You review the case and provide recommendations that will directly benefit that client. Your goal is giving the consultee a workable plan for this particular situation.",
+      "suggestedLesson": "6-prevention-and-consultation",
+      "needsReview": false
     },
     {
       "stem": "Which psychotherapy outcome model proposes three distinct phases: remoralization, remediation, and rehabilitation?",
@@ -652,7 +553,10 @@
       "kn": "KN44",
       "kn_explanation": "Tests knowledge of psychotherapy outcome research and treatment models (KN44).",
       "difficulty": "medium",
-      "quality_comment": "Distractors are plausible psychotherapy concepts, correctly assessing detailed knowledge of outcome models."
+      "quality_comment": "Distractors are plausible psychotherapy concepts, correctly assessing detailed knowledge of outcome models.",
+      "lessonExcerpt": "The **Phase Model** describes therapy as moving through three stages: 1. **Remoralization** (first few sessions): Hope increases 2. **Remediation** (next 16 sessions): Symptoms decrease 3. **Rehabilitation** (later sessions)",
+      "suggestedLesson": "6-prevention-and-consultation",
+      "needsReview": false
     },
     {
       "stem": "In Gordon's model of prevention, what type of prevention targets individuals who have minimal signs or symptoms of a disorder but have not yet received a diagnosis?",
@@ -667,7 +571,10 @@
       "kn": "KN51",
       "kn_explanation": "This question is best aligned with KN51 because it tests Approaches to health promotion, risk reduction, resilience, and wellness.",
       "difficulty": "easy",
-      "quality_comment": "Clear presentation with distractors varying in prevention type and level of risk, effective for EPPP learners."
+      "quality_comment": "Clear presentation with distractors varying in prevention type and level of risk, effective for EPPP learners.",
+      "lessonExcerpt": "**Indicated Prevention** goes even further. You're working with individuals showing early warning signs of a disorder but who don't meet full diagnostic criteria yet.",
+      "suggestedLesson": "6-prevention-and-consultation",
+      "needsReview": false
     },
     {
       "stem": "Which of the following statements best describes the findings of Smith, Glass, and Miller's meta-analysis on psychotherapy outcomes?",
@@ -682,7 +589,10 @@
       "kn": "KN44",
       "kn_explanation": "Evaluates knowledge of psychotherapy outcome research and meta-analytic findings (KN44).",
       "difficulty": "medium",
-      "quality_comment": "Stem is straightforward; distractors include common misconceptions that challenge examinees' knowledge of evidence-appraisal."
+      "quality_comment": "Stem is straightforward; distractors include common misconceptions that challenge examinees' knowledge of evidence-appraisal.",
+      "lessonExcerpt": "Their finding: an effect size of .85, meaning the average therapy patient was better off than 80% of people who didn't receive therapy.",
+      "suggestedLesson": "6-prevention-and-consultation",
+      "needsReview": false
     },
     {
       "stem": "Routine outcome monitoring (ROM) in clinical practice primarily involves:",
@@ -697,7 +607,10 @@
       "kn": "KN44",
       "kn_explanation": "Concerns evidence-based treatment practices and integration of measurement-based care (KN44).",
       "difficulty": "medium",
-      "quality_comment": "Good clarity with distractors that probe common misunderstandings about how ROM is practiced."
+      "quality_comment": "Good clarity with distractors that probe common misunderstandings about how ROM is practiced.",
+      "lessonExcerpt": "ROM (also called feedback-informed treatment or measurement-based care) involves four components: 1. Regularly administered measures before each session 2. Practitioner reviews data 3. Patient reviews data 4. Collaborative treatment plan adjustments based on data",
+      "suggestedLesson": "6-prevention-and-consultation",
+      "needsReview": false
     },
     {
       "stem": "Which economic evaluation method compares the costs and benefits of interventions by converting both into monetary terms?",
@@ -712,7 +625,10 @@
       "kn": "KN51",
       "kn_explanation": "This question is best aligned with KN51 because it tests Approaches to health promotion, risk reduction, resilience, and wellness.",
       "difficulty": "medium",
-      "quality_comment": "Options are related economic terms, requiring precise knowledge of health economics terminology."
+      "quality_comment": "Options are related economic terms, requiring precise knowledge of health economics terminology.",
+      "lessonExcerpt": "**Cost-Benefit Analysis (CBA)** expresses both costs and benefits in monetary terms.",
+      "suggestedLesson": "6-prevention-and-consultation",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best describes the social model of disability?",
@@ -727,7 +643,10 @@
       "kn": "KN44",
       "kn_explanation": "This question is best aligned with KN44 because it tests Treatment techniques and interventions, and the evidence for their comparative efficacy and effectiveness.",
       "difficulty": "medium",
-      "quality_comment": "Options clearly differentiate between models, testing knowledge of disability conceptual frameworks."
+      "quality_comment": "Options clearly differentiate between models, testing knowledge of disability conceptual frameworks.",
+      "lessonExcerpt": "**Social Model**: Views disabilities as differences, not deficiencies, caused primarily by societal barriers (negative attitudes, discrimination, architectural barriers).",
+      "suggestedLesson": "6-prevention-and-consultation",
+      "needsReview": false
     },
     {
       "stem": "Research on client-therapist racial/ethnic matching suggests that:",
@@ -742,7 +661,10 @@
       "kn": "KN42",
       "kn_explanation": "This question is best aligned with KN42 because it tests Factors related to treatment or intervention decision-making (e.g., relevant research, matching treatment to assessment/diagnosis, matching client or patient with psychologist characteristics, knowledge and use of allied services, cost and benefit, readiness to change).",
       "difficulty": "medium",
-      "quality_comment": "The question incorporates nuanced research findings and distractors address related confounds."
+      "quality_comment": "The question incorporates nuanced research findings and distractors address related confounds.",
+      "lessonExcerpt": "Matching has a moderate effect (.32) on how clients perceive their therapists but minimal effect (.09) on actual outcomes.",
+      "suggestedLesson": "6-prevention-and-consultation",
+      "needsReview": false
     },
     {
       "stem": "Which of the following is a primary advantage of transdiagnostic treatments compared to diagnosis-specific interventions?",
@@ -757,7 +679,10 @@
       "kn": "KN44",
       "kn_explanation": "Tests understanding of evidence-based treatment models in psychotherapy (KN44).",
       "difficulty": "medium",
-      "quality_comment": "Distractors are plausible but incorrect, emphasizing key benefits of transdiagnostic approaches."
+      "quality_comment": "Distractors are plausible but incorrect, emphasizing key benefits of transdiagnostic approaches.",
+      "lessonExcerpt": "These treatments target commonalities across multiple diagnoses rather than focusing on single disorders. The premise: shared mechanisms matter more than diagnostic differences. Benefits include reduced training costs and better handling of comorbidities.",
+      "suggestedLesson": "6-prevention-and-consultation",
+      "needsReview": false
     },
     {
       "stem": "Which model of stepped care for depression prioritizes the least restrictive but effective treatments first and systematically monitors treatment response to adjust care?",
@@ -772,7 +697,10 @@
       "kn": "KN50",
       "kn_explanation": "This question is best aligned with KN50 because it tests healthcare systems, structures, and economics, and how these impact intervention choice.",
       "difficulty": "medium",
-      "quality_comment": "The stem clearly defines the model, and distractors represent other models for differentiation."
+      "quality_comment": "The stem clearly defines the model, and distractors represent other models for differentiation.",
+      "lessonExcerpt": "Stepped care delivers the least restrictive treatment likely to produce significant benefit, with systematic monitoring and \"stepping up\" if needed.",
+      "suggestedLesson": "6-prevention-and-consultation",
+      "needsReview": false
     },
     {
       "stem": "In research assessing telepsychology for anxiety disorders, which statement is best supported?",
@@ -787,7 +715,10 @@
       "kn": "KN49",
       "kn_explanation": "Concerns telepsychology and technology-assisted psychological services (KN49).",
       "difficulty": "medium",
-      "quality_comment": "Distractors probe common misconceptions about teletherapy, forcing examinees to recall empirical findings."
+      "quality_comment": "Distractors probe common misconceptions about teletherapy, forcing examinees to recall empirical findings.",
+      "lessonExcerpt": "**Anxiety Disorders**: Videoconference-delivered CBT shows effectiveness comparable to in-person therapy for panic disorder, generalized anxiety disorder, and social anxiety disorder.",
+      "suggestedLesson": "6-prevention-and-consultation",
+      "needsReview": false
     },
     {
       "stem": "Eysenck’s 1952 review concluded that:",
@@ -802,7 +733,10 @@
       "kn": "KN44",
       "kn_explanation": "This question is best aligned with KN44 because it tests Treatment techniques and interventions, and the evidence for their comparative efficacy and effectiveness.",
       "difficulty": "hard",
-      "quality_comment": "Question addresses a historical, controversial study with plausible distractors, requiring recall of detailed content."
+      "quality_comment": "Question addresses a historical, controversial study with plausible distractors, requiring recall of detailed content.",
+      "lessonExcerpt": "Hans Eysenck dropped a controversial paper claiming psychotherapy was not just ineffective but potentially harmful.",
+      "suggestedLesson": "6-prevention-and-consultation",
+      "needsReview": false
     },
     {
       "stem": "What is the primary focus of treatment fidelity in psychotherapy research and practice?",
@@ -817,7 +751,10 @@
       "kn": "KN44",
       "kn_explanation": "This question is best aligned with KN44 because it tests Treatment techniques and interventions, and the evidence for their comparative efficacy and effectiveness.",
       "difficulty": "easy",
-      "quality_comment": "The stem is clear and straightforward; distractors are related concepts but clearly distinct."
+      "quality_comment": "The stem is clear and straightforward; distractors are related concepts but clearly distinct.",
+      "lessonExcerpt": "Treatment fidelity measures how well a treatment is delivered as intended, affected by therapist adherence to protocols and competence.",
+      "suggestedLesson": "6-prevention-and-consultation",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best describes the WEIRD sampling bias in psychological research?",
@@ -832,7 +769,10 @@
       "kn": "KN44",
       "kn_explanation": "This question is best aligned with KN44 because it tests Treatment techniques and interventions, and the evidence for their comparative efficacy and effectiveness.",
       "difficulty": "medium",
-      "quality_comment": "Distractors are plausible potential biases; the question requires specific knowledge of sampling biases."
+      "quality_comment": "Distractors are plausible potential biases; the question requires specific knowledge of sampling biases.",
+      "lessonExcerpt": "**WEIRD sampling bias** refers to over-reliance on samples from Western, Educated, Industrialized, Rich, and Democratic cultures. Research derived primarily from WEIRD samples may have limited generalizability.",
+      "suggestedLesson": "6-prevention-and-consultation",
+      "needsReview": false
     },
     {
       "stem": "Which of the following is an important benefit of interprofessional collaboration (IPC) in primary care settings?",
@@ -847,22 +787,10 @@
       "kn": "KN51",
       "kn_explanation": "This question is best aligned with KN51 because it tests Approaches to health promotion, risk reduction, resilience, and wellness.",
       "difficulty": "medium",
-      "quality_comment": "Distractors include plausible but incorrect ideas about IPC, requiring examinees to understand nuanced research outcomes."
-    },
-    {
-      "stem": "Which supervision model focuses on understanding and integrating the supervisor and supervisee's interpersonal dynamics to improve therapy outcomes?",
-      "options": [
-        "Developmental model",
-        "Integrative model",
-        "Psychodynamic model",
-        "Behavioral model"
-      ],
-      "answer": "Psychodynamic model",
-      "explanation": "1. The **psychodynamic model** is the correct answer because it emphasizes understanding and integrating the interpersonal dynamics between the supervisor and supervisee. This model focuses on the relational aspects of supervision, including transference and countertransference, which can significantly impact therapy outcomes by enhancing the supervisee's self-awareness and therapeutic effectiveness.\n\n2. The **developmental model** is incorrect because it primarily focuses on the growth and progression of the supervisee's skills and competencies over time, rather than the interpersonal dynamics between supervisor and supervisee. The **integrative model** is not the correct choice as it aims to combine various theoretical approaches and techniques in supervision, without specifically emphasizing the understanding of interpersonal dynamics. Lastly, the **behavioral model** is wrong because it concentrates on observable behaviors and the application of behavioral techniques in supervision, rather than exploring the deeper relational aspects that influence therapeutic outcomes.",
-      "kn": "KN52",
-      "kn_explanation": "Addresses supervision theories and models relevant to clinical psychology practice (KN52).",
-      "difficulty": "medium",
-      "quality_comment": "The options comprise known supervision models, testing candidate recognition of model focus areas appropriately."
+      "quality_comment": "Distractors include plausible but incorrect ideas about IPC, requiring examinees to understand nuanced research outcomes.",
+      "lessonExcerpt": "IPC shows particular promise for older adults with complex healthcare needs (often called integrated care in this context). Evidence suggests integrated care increases access, boosts satisfaction, and reduces emergency visits, hospitalizations, and long-term care placements.",
+      "suggestedLesson": "6-prevention-and-consultation",
+      "needsReview": false
     },
     {
       "stem": "Health promotion strategies in psychological interventions primarily aim to:",
@@ -877,7 +805,10 @@
       "kn": "KN51",
       "kn_explanation": "This item assesses knowledge of health promotion, risk reduction, and wellness concepts in prevention (KN51).",
       "difficulty": "medium",
-      "quality_comment": "Distractors contrast stages of intervention to ensure understanding of health promotion's proactive nature."
+      "quality_comment": "Distractors contrast stages of intervention to ensure understanding of health promotion's proactive nature.",
+      "lessonExcerpt": "**Primary Prevention** targets everyone, not just people who are struggling. The goal is stopping new cases from developing in the first place.",
+      "suggestedLesson": "6-prevention-and-consultation",
+      "needsReview": false
     },
     {
       "stem": "In the context of public health, which type of intervention is designed to prevent the onset of mental health disorders in the general population before any symptoms appear?",
@@ -897,7 +828,10 @@
       "lock_in_level": "easier",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "**Universal Prevention** reaches everyone in a population without screening for risk.",
+      "suggestedLesson": "6-prevention-and-consultation",
+      "needsReview": false
     },
     {
       "stem": "Which prevention strategy focuses on reducing the incidence of mental health disorders by implementing programs that target all individuals in a community, regardless of their risk factors?",
@@ -917,7 +851,10 @@
       "lock_in_level": "harder",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "**Universal Prevention** reaches everyone in a population without screening for risk. A drug abuse prevention program delivered to every single high school student in a district? That's universal.",
+      "suggestedLesson": "6-prevention-and-consultation",
+      "needsReview": false
     }
   ]
 }

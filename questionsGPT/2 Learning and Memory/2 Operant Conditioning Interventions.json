@@ -22,48 +22,6 @@
       "inspirationIndex": 6
     },
     {
-      "stem": "A cognitive psychologist studying problem-solving asks participants to verbalize their thought processes while working through a series of logic puzzles. The researcher records and analyzes these verbalizations to identify the strategies and heuristics participants use. This research method is known as:",
-      "options": [
-        "Introspection, because participants are reporting on their internal mental states",
-        "Protocol analysis, because participants describe aloud the steps being taken during a task",
-        "Functional analysis, because the researcher is identifying the function of each cognitive step",
-        "Content analysis, because the researcher is coding verbal statements into categories"
-      ],
-      "answer": "Protocol analysis, because participants describe aloud the steps being taken during a task",
-      "explanation": "Protocol analysis is a procedure in which a person performing a task describes aloud the steps being taken, and these verbalizations are analyzed to understand problem-solving strategies. The reference material states: 'Protocol analysis is a procedure that is used when a person is learning a task and is asked to describe aloud the steps being taken to solve the task. Protocol analysis is used to gain access to people's problem-solving strategies.' Introspection (A) is a historical method from Wundt's laboratory involving reflection on conscious experience, not concurrent verbalization during task performance. Functional analysis (C) is a behavioral assessment method identifying antecedents and consequences, not a cognitive research method. Content analysis (D) is a broader research method for analyzing textual data, not specifically the think-aloud methodology.",
-      "kn": "KN7",
-      "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
-      "difficulty": "medium",
-      "quality_comment": "Tests the distinction between protocol analysis and similar-sounding methods. The key distractor (introspection) tests whether examinees understand the methodological difference.",
-      "suggestedLesson": "2-operant-conditioning-interventions",
-      "suggestedParagraph": "## Cognitive-Behavioral Approaches",
-      "lessonExcerpt": "Protocol analysis is a procedure that is used when a person is learning a task and is asked to describe aloud the steps being taken to solve the task. Protocol analysis is used to gain access to people's problem-solving strategies.",
-      "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 19
-    },
-    {
-      "stem": "A behavior analyst working with a child who refuses to complete math worksheets observes that the child spends most of free time drawing. The analyst recommends that the child be allowed to draw for 10 minutes contingent upon completing each worksheet. This intervention is based on which principle?",
-      "options": [
-        "Token economy, because drawing serves as a token that can be exchanged for reinforcement",
-        "Premack principle, because a high-frequency preferred behavior is used to reinforce a low-frequency behavior",
-        "Shaping, because the child is being reinforced for successive approximations of worksheet completion",
-        "Differential reinforcement of alternative behavior, because drawing replaces the refusal behavior"
-      ],
-      "answer": "Premack principle, because a high-frequency preferred behavior is used to reinforce a low-frequency behavior",
-      "explanation": "The Premack principle states that 'a high-frequency behavior can reinforce a low-frequency behavior.' Drawing is the high-frequency (preferred) activity, and completing math worksheets is the low-frequency (non-preferred) activity. Access to drawing is contingent upon completing the worksheets. A token economy (A) involves earning tokens exchangeable for backup reinforcers — drawing is the reinforcer itself, not a token. Shaping (C) involves reinforcing successive approximations toward a target behavior, not using a preferred activity as a reinforcer. Differential reinforcement of alternative behavior (D) involves reinforcing an alternative to the problem behavior, but the Premack principle specifically uses the activity preference hierarchy as the basis for reinforcement.",
-      "kn": "KN7",
-      "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
-      "difficulty": "medium",
-      "quality_comment": "Applied clinical scenario that requires understanding the Premack principle's specific mechanism — using activity preference hierarchy — versus other reinforcement-based interventions.",
-      "suggestedLesson": "2-operant-conditioning-interventions",
-      "suggestedParagraph": "### The Premack Principle: Grandma's Rule for Professionals",
-      "lessonExcerpt": "The Premack principle states that a high-frequency behavior can reinforce a low-frequency behavior. In plain language: you can do something you love AFTER you do something you don't want to do.",
-      "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 20
-    },
-    {
       "stem": "According to Equity Theory, what prediction can be made about an individual's performance when they perceive inequity in their work environment?",
       "options": [
         "Their performance will likely improve as they strive to restore equity.",
@@ -106,27 +64,6 @@
       "inspirationIndex": 9
     },
     {
-      "stem": "Which of the following best describes job enrichment preferences among employees?",
-      "options": [
-        "Employees prefer tasks that are repetitive and predictable.",
-        "Employees seek opportunities for personal growth and skill development.",
-        "Employees favor a rigid hierarchy with clear job descriptions.",
-        "Employees are indifferent to the variety of tasks they perform."
-      ],
-      "answer": "Employees seek opportunities for personal growth and skill development.",
-      "explanation": "Job enrichment involves enhancing a job by adding meaningful tasks that promote personal growth and skill development. The other options reflect preferences for less engaging work environments.",
-      "kn": "KN7",
-      "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
-      "difficulty": "medium",
-      "quality_comment": "The question is relevant and assesses understanding of job enrichment concepts.",
-      "suggestedLesson": "2-operant-conditioning-interventions",
-      "suggestedParagraph": "## Positive Reinforcement: Building New Behaviors",
-      "lessonExcerpt": "Job enrichment preferences among employees often include opportunities for personal growth.",
-      "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 14
-    },
-    {
       "stem": "In the context of parenting, what does the term 'contingency of reinforcement' refer to?",
       "options": [
         "The consistency of rewards given to children for good behavior.",
@@ -148,27 +85,6 @@
       "inspirationIndex": 16
     },
     {
-      "stem": "According to the Premack principle, how can a high-frequency behavior be used in reinforcement?",
-      "options": [
-        "It can replace low-frequency behaviors entirely.",
-        "It can reinforce low-frequency behaviors when performed afterward.",
-        "It can only be used as a punishment for low-frequency behaviors.",
-        "It has no effect on low-frequency behaviors."
-      ],
-      "answer": "It can reinforce low-frequency behaviors when performed afterward.",
-      "explanation": "The Premack principle states that a high-frequency behavior can reinforce a low-frequency behavior when the former is made contingent upon the latter. The other options misinterpret the application of the Premack principle.",
-      "kn": "KN7",
-      "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
-      "difficulty": "medium",
-      "quality_comment": "The question is relevant and tests understanding of the Premack principle.",
-      "suggestedLesson": "2-operant-conditioning-interventions",
-      "suggestedParagraph": "## The Premack Principle: Grandma's Rule for Professionals",
-      "lessonExcerpt": "The Premack principle states that a high-frequency behavior can reinforce a low-frequency behavior.",
-      "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 20
-    },
-    {
       "stem": "How does the 'time out' principle function as a learning principle in behavior modification?",
       "options": [
         "It serves as a form of positive reinforcement.",
@@ -184,7 +100,7 @@
       "quality_comment": "The question is clear and tests knowledge of the time out principle effectively.",
       "suggestedLesson": "2-operant-conditioning-interventions",
       "suggestedParagraph": "## Positive Reinforcement: Building New Behaviors",
-      "lessonExcerpt": "Time out functions by removing an individual from a reinforcing environment, thereby decreasing the likelihood of undesirable behavior.",
+      "lessonExcerpt": "Time out (formally \"time out from positive reinforcement\") removes access to ALL reinforcement for a brief period.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 5
@@ -203,9 +119,9 @@
       "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
       "difficulty": "hard",
       "quality_comment": "The question effectively assesses understanding of negative reinforcement in the context of smoking.",
-      "suggestedLesson": "2-operant-conditioning-interventions",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
       "suggestedParagraph": "## Negative Reinforcement: Building New Behaviors",
-      "lessonExcerpt": "Negative reinforcement occurs when a behavior is strengthened by the removal of an aversive stimulus.",
+      "lessonExcerpt": "Negative Reinforcement: You have a persistent headache, take ibuprofen, and the pain goes away. You're more likely to take ibuprofen for headaches in the future because it removed the unpleasant sensation.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 9
@@ -226,7 +142,7 @@
       "quality_comment": "The question effectively tests knowledge of learning theories and their distinctions.",
       "suggestedLesson": "2-operant-conditioning-interventions",
       "suggestedParagraph": "## Why Operant Conditioning Still Matters in Modern Practice",
-      "lessonExcerpt": "Operant conditioning interventions work, they work fast, and they're everywhere in modern psychology practice.",
+      "lessonExcerpt": "Time out (formally \"time out from positive reinforcement\") removes access to ALL reinforcement for a brief period.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 12
@@ -245,9 +161,9 @@
       "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
       "difficulty": "hard",
       "quality_comment": "The question effectively tests knowledge of reinforcement schedules.",
-      "suggestedLesson": "2-operant-conditioning-interventions",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
       "suggestedParagraph": "## Reinforcement Schedules: Timing Is Everything",
-      "lessonExcerpt": "The unpredictability of reinforcement makes behaviors harder to extinguish.",
+      "lessonExcerpt": "Negative Reinforcement: You have a persistent headache, take ibuprofen, and the pain goes away. You're more likely to take ibuprofen for headaches in the future because it removed the unpleasant sensation.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 19
@@ -274,27 +190,6 @@
       "inspirationIndex": 26
     },
     {
-      "stem": "How does flextime impact employee behavior in the workplace?",
-      "options": [
-        "It decreases productivity due to distractions",
-        "It increases job satisfaction and reduces stress",
-        "It leads to more conflicts among employees",
-        "It has no significant effect on employee behavior"
-      ],
-      "answer": "It increases job satisfaction and reduces stress",
-      "explanation": "The correct answer is 'It increases job satisfaction and reduces stress' because flextime allows employees to manage their work schedules more effectively, leading to higher satisfaction and lower stress levels. The other options are incorrect as they do not accurately reflect the positive impacts of flextime.",
-      "kn": "KN7",
-      "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively assesses understanding of workplace psychology and the implications of flextime.",
-      "suggestedLesson": "2-operant-conditioning-interventions",
-      "suggestedParagraph": "## Why Operant Conditioning Still Matters in Modern Practice",
-      "lessonExcerpt": "Flextime allows employees to manage their work schedules more effectively, leading to higher satisfaction and lower stress levels.",
-      "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 2
-    },
-    {
       "stem": "According to Herzberg's theory, which of the following factors is considered a hygiene factor in job motivation?",
       "options": [
         "Achievement",
@@ -308,9 +203,9 @@
       "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
       "difficulty": "medium",
       "quality_comment": "The question is relevant and tests understanding of motivation theories.",
-      "suggestedLesson": "2-operant-conditioning-interventions",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
       "suggestedParagraph": "## Positive Reinforcement: Building New Behaviors",
-      "lessonExcerpt": "Behaviors followed by satisfying consequences tend to happen again, while behaviors followed by unsatisfying consequences tend to disappear.",
+      "lessonExcerpt": "Variable Ratio (VR): Reinforcement comes after an unpredictable number of responses. This is the most powerful schedule. It produces the highest response rate and the greatest resistance to extinction.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 13
@@ -329,33 +224,12 @@
       "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
       "difficulty": "medium",
       "quality_comment": "The question is relevant and tests understanding of behavioral modification.",
-      "suggestedLesson": "2-operant-conditioning-interventions",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
       "suggestedParagraph": "## The Four Core Consequences",
-      "lessonExcerpt": "Negative punishment: Something desirable is removed.",
+      "lessonExcerpt": "Negative Punishment | Decreases | Something desirable is removed | Loss",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 17
-    },
-    {
-      "stem": "Which of the following best describes intrinsic motivation?",
-      "options": [
-        "Motivation driven by external rewards",
-        "Motivation based on personal satisfaction and interest",
-        "Motivation influenced by social pressures",
-        "Motivation that is temporary and situational"
-      ],
-      "answer": "Motivation based on personal satisfaction and interest",
-      "explanation": "The correct answer is B because intrinsic motivation refers to engaging in behavior for personal satisfaction and interest rather than for external rewards. Option A is incorrect as that describes extrinsic motivation. Option C is incorrect as social pressures relate to external motivation. Option D is incorrect as intrinsic motivation is often more stable and enduring.",
-      "kn": "KN7",
-      "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively assesses understanding of intrinsic motivation.",
-      "suggestedLesson": "2-operant-conditioning-interventions",
-      "suggestedParagraph": "## Positive Reinforcement: Building New Behaviors",
-      "lessonExcerpt": "Behaviors followed by satisfying consequences tend to happen again.",
-      "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 18
     },
     {
       "stem": "In the context of motivation theories, what is the primary challenge of approach-avoidance conflict?",
@@ -392,9 +266,9 @@
       "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
       "difficulty": "hard",
       "quality_comment": "The question is challenging and requires a solid understanding of reinforcement principles.",
-      "suggestedLesson": "2-operant-conditioning-interventions",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
       "suggestedParagraph": "## Positive Reinforcement: Building New Behaviors",
-      "lessonExcerpt": "The fastest way to teach a new behavior is through a continuous schedule, reinforcing every single time the behavior occurs.",
+      "lessonExcerpt": "Negative Punishment | Decreases | Something desirable is removed | Loss",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 6
@@ -442,27 +316,6 @@
       "inspirationIndex": 10
     },
     {
-      "stem": "In organizational psychology, what is the primary purpose of utility analysis?",
-      "options": [
-        "To assess the effectiveness of training programs.",
-        "To evaluate the financial return on investment of employee selection methods.",
-        "To measure employee satisfaction and engagement.",
-        "To determine the impact of organizational culture on performance."
-      ],
-      "answer": "To evaluate the financial return on investment of employee selection methods.",
-      "explanation": "Utility analysis is specifically designed to assess the economic value of various employee selection methods, making this the correct answer. The first option is incorrect as it pertains to training, while the third and fourth options focus on different aspects of organizational psychology.",
-      "kn": "KN7",
-      "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
-      "difficulty": "hard",
-      "quality_comment": "The question is well-structured and targets a specific aspect of organizational psychology.",
-      "suggestedLesson": "2-operant-conditioning-interventions",
-      "suggestedParagraph": "## Why Operant Conditioning Still Matters in Modern Practice",
-      "lessonExcerpt": "Utility analysis evaluates the financial return on investment of employee selection methods.",
-      "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 22
-    },
-    {
       "stem": "A board-certified behavior analyst conducts a functional behavioral assessment for a 5-year-old with a history of screaming and floor-kicking during transitions. The FBA reveals that the behavior is maintained by caregiver attention. The treatment plan instructs all caregivers to provide zero social attention—no eye contact, verbal response, or physical contact—when screaming and floor-kicking occur, while ensuring physical safety. Over the next two weeks, the behavior decreases substantially. The primary mechanism responsible for the behavior reduction is:",
       "options": [
         "Negative punishment, because caregivers are removing their attention as a consequence of the tantrum",
@@ -478,7 +331,7 @@
       "quality_comment": "Excellent applied question requiring precise differentiation of extinction from negative punishment—a common EPPP confusion. FBA framework is explicitly covered in the lesson.",
       "suggestedLesson": "2-operant-conditioning-interventions",
       "suggestedParagraph": "## The Foundation: What Makes Behavior Stick or Disappear?",
-      "lessonExcerpt": "Every behavior serves a function – maybe it gets attention, avoids something unpleasant, provides sensory stimulation, or obtains a tangible reward.",
+      "lessonExcerpt": "Extinction means stopping all reinforcement for a previously reinforced behavior. If attention maintains a behavior, extinction means withdrawing all attention.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 5
@@ -526,27 +379,6 @@
       "inspirationIndex": 26
     },
     {
-      "stem": "A behavior therapist is treating a child who engages in frequent head-banging. Rather than applying punishment contingent on each episode, the therapist implements a protocol in which the child receives a preferred edible reinforcer after any interval of a specified duration during which head-banging does not occur. This procedure is identified as differential reinforcement of other behavior (DRO). In operant conditioning terms, the mechanism by which DRO reduces the target behavior is best described as:",
-      "options": [
-        "Punishment by application, in which an aversive stimulus is contingently delivered following each head-banging episode to suppress the behavior",
-        "Extinction paired with positive reinforcement, in which head-banging receives no reinforcement while its absence is systematically reinforced",
-        "Negative reinforcement, in which removal of the aversive head-banging behavior is itself reinforcing to the supervising therapist",
-        "Stimulus control, in which antecedent cues that previously signaled head-banging are systematically modified to suppress the response"
-      ],
-      "answer": "Extinction paired with positive reinforcement, in which head-banging receives no reinforcement while its absence is systematically reinforced",
-      "explanation": "DRO operates through two complementary operant mechanisms: (1) extinction—the target behavior (head-banging) receives no reinforcement, allowing it to weaken and decrease; and (2) positive reinforcement delivered contingently on the absence of the target behavior during a specified interval. Together these mechanisms reduce the problem behavior while building more adaptive behavioral repertoires. Option A describes punishment by application, a distinct procedure not used in DRO. Option C misapplies the definition of negative reinforcement, which involves removal of an aversive stimulus contingent on a behavior—not applicable here. Option D describes antecedent-based stimulus control interventions, which modify triggers rather than consequences.",
-      "kn": "KN42",
-      "kn_explanation": "This question is best aligned with KN42 because it tests Factors related to treatment or intervention decision-making (e.g., relevant research, matching treatment to assessment/diagnosis, matching client or patient with psychologist characteristics, knowledge and use of allied services, cost and benefit, readiness to change).",
-      "difficulty": "hard",
-      "quality_comment": "Technically rigorous question requiring precise command of operant conditioning terminology as applied to DRO. Remapped to 2-operant-conditioning-interventions which covers all four DR types in detail.",
-      "suggestedLesson": "2-operant-conditioning-interventions",
-      "suggestedParagraph": "### Differential Reinforcement: The Swiss Army Knife of Behavior Change",
-      "lessonExcerpt": "Differential Reinforcement of Other Behavior (DRO): You reinforce ANY behavior except the target problem behavior during specified time intervals. This is less focused than DRI or DRA but sometimes more practical.",
-      "needsReview": false,
-      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 26
-    },
-    {
       "stem": "Which of the following best describes the primary distinction between shaping and chaining in operant conditioning interventions?",
       "options": [
         "Shaping reinforces successive approximations to a single final behavior, whereas chaining reinforces each discrete behavior in a sequence.",
@@ -559,7 +391,10 @@
       "kn": "KN7",
       "kn_explanation": "This question evaluates understanding of core operant conditioning procedures, which aligns with theories and principles of learning under KN7.",
       "difficulty": "medium",
-      "quality_comment": "The stem clearly differentiates two similar operant techniques; distractors are plausible but clearly incorrect upon knowledge of definitions."
+      "quality_comment": "The stem clearly differentiates two similar operant techniques; distractors are plausible but clearly incorrect upon knowledge of definitions.",
+      "lessonExcerpt": "Extinction means stopping all reinforcement for a previously reinforced behavior. If attention maintains a behavior, extinction means withdrawing all attention.",
+      "suggestedLesson": "2-operant-conditioning-interventions",
+      "needsReview": false
     },
     {
       "stem": "A teacher praises a student for raising her hand instead of shouting out answers in class. Which differential reinforcement procedure is being used?",
@@ -574,7 +409,10 @@
       "kn": "KN7",
       "kn_explanation": "This question focuses on applying operant learning principles to behavior modification strategies, fitting under KN7's coverage of learning theories.",
       "difficulty": "easy",
-      "quality_comment": "The item is straightforward with clearly defined options that differentiate closely related reinforcement procedures, suitable for EPPP level."
+      "quality_comment": "The item is straightforward with clearly defined options that differentiate closely related reinforcement procedures, suitable for EPPP level.",
+      "lessonExcerpt": "Differential Reinforcement of Alternative Behavior (DRA) - Example: A student shouts out answers in class. You reinforce raising their hand instead.",
+      "suggestedLesson": "2-operant-conditioning-interventions",
+      "needsReview": false
     },
     {
       "stem": "Which of the following is an example of positive punishment?",
@@ -589,7 +427,10 @@
       "kn": "KN7",
       "kn_explanation": "The question assesses knowledge of operant conditioning punishment definitions and examples, falling under learning principles in KN7.",
       "difficulty": "medium",
-      "quality_comment": "The options represent different types of consequences making the question a good discriminator of understanding positive versus negative punishment and extinction."
+      "quality_comment": "The options represent different types of consequences making the question a good discriminator of understanding positive versus negative punishment and extinction.",
+      "lessonExcerpt": "Overcorrection is technically positive punishment (adding a consequence), but it's designed to be educational rather than just unpleasant. Restitution requires the person to fix what they damaged",
+      "suggestedLesson": "2-operant-conditioning-interventions",
+      "needsReview": false
     },
     {
       "stem": "In functional behavioral assessment, what is the purpose of systematically altering antecedents and consequences during the third step?",
@@ -604,7 +445,10 @@
       "kn": "KN7",
       "kn_explanation": "Understanding functional assessment procedures is part of applied learning theory and intervention selection, aligning with KN7.",
       "difficulty": "medium",
-      "quality_comment": "The question clearly targets a key step in functional behavioral assessment with plausible distractors representing other steps."
+      "quality_comment": "The question clearly targets a key step in functional behavioral assessment with plausible distractors representing other steps.",
+      "lessonExcerpt": "Step 3: Test Your Hypotheses - You systematically change the antecedents and consequences to see what actually affects the behavior.",
+      "suggestedLesson": "2-operant-conditioning-interventions",
+      "needsReview": false
     },
     {
       "stem": "When applying the Premack principle, which of the following scenarios illustrates its use correctly?",
@@ -619,7 +463,10 @@
       "kn": "KN7",
       "kn_explanation": "This question addresses reinforcement contingencies within operant learning theories consistent with KN7.",
       "difficulty": "easy",
-      "quality_comment": "The stem is clear and distractors include other operant techniques, aiding in differentiation of concepts."
+      "quality_comment": "The stem is clear and distractors include other operant techniques, aiding in differentiation of concepts.",
+      "lessonExcerpt": "Confusing shaping and chaining: Remember, shaping produces ONE final behavior where intermediate steps vanish. Chaining produces a SEQUENCE where all steps remain visible.",
+      "suggestedLesson": "2-operant-conditioning-interventions",
+      "needsReview": false
     },
     {
       "stem": "Which of these statements about time out as a behavior intervention is FALSE?",
@@ -634,7 +481,10 @@
       "kn": "KN7",
       "kn_explanation": "This question evaluates knowledge of operant punishment procedures and best practice guidelines, related to learning theories in KN7.",
       "difficulty": "medium",
-      "quality_comment": "This item effectively tests common misunderstandings about time out with clearly true and false answer choices."
+      "quality_comment": "This item effectively tests common misunderstandings about time out with clearly true and false answer choices.",
+      "lessonExcerpt": "Differential Reinforcement of Alternative Behavior (DRA) - Example: A student shouts out answers in class. You reinforce raising their hand instead.",
+      "suggestedLesson": "2-operant-conditioning-interventions",
+      "needsReview": false
     },
     {
       "stem": "A parent stops responding to a child's whining, which previously resulted in attention. This intervention is an example of:",
@@ -649,7 +499,10 @@
       "kn": "KN7",
       "kn_explanation": "Understanding extinction as a learning principle applies directly to operant conditioning concepts in KN7.",
       "difficulty": "easy",
-      "quality_comment": "The example is straightforward and well matched to the concept tested, with plausible distractors to challenge knowledge."
+      "quality_comment": "The example is straightforward and well matched to the concept tested, with plausible distractors to challenge knowledge.",
+      "lessonExcerpt": "Overcorrection is technically positive punishment (adding a consequence), but it's designed to be educational rather than just unpleasant. Restitution requires the person to fix what they damaged",
+      "suggestedLesson": "2-operant-conditioning-interventions",
+      "needsReview": false
     },
     {
       "stem": "In backward chaining, teaching a complex task differs from forward chaining because:",
@@ -664,7 +517,10 @@
       "kn": "KN7",
       "kn_explanation": "This question targets chaining methods, a specialized operant conditioning technique within learning models, making KN7 most relevant.",
       "difficulty": "medium",
-      "quality_comment": "The item clearly contrasts chaining methods with plausible distractors that reflect basic misunderstandings."
+      "quality_comment": "The item clearly contrasts chaining methods with plausible distractors that reflect basic misunderstandings.",
+      "lessonExcerpt": "Step 3: Test Your Hypotheses - You systematically change the antecedents and consequences to see what actually affects the behavior.",
+      "suggestedLesson": "2-operant-conditioning-interventions",
+      "needsReview": false
     },
     {
       "stem": "A teacher reinforces a student for staying seated for 30 minutes, which is incompatible with the student's usual behavior of leaving their seat frequently. This is an example of:",
@@ -679,7 +535,10 @@
       "kn": "KN7",
       "kn_explanation": "Classifying differential reinforcement procedures falls under operant learning models included in KN7.",
       "difficulty": "medium",
-      "quality_comment": "Distractors include other differential reinforcement types, requiring precise knowledge for correct selection."
+      "quality_comment": "Distractors include other differential reinforcement types, requiring precise knowledge for correct selection.",
+      "lessonExcerpt": "The Premack principle states that a high-frequency behavior can reinforce a low-frequency behavior. In plain language: you can do something you love AFTER you do something you don't want to do.",
+      "suggestedLesson": "2-operant-conditioning-interventions",
+      "needsReview": false
     },
     {
       "stem": "Which step in functional behavioral assessment involves collecting information about the antecedents and consequences maintaining a target behavior and forming hypotheses about its function?",
@@ -694,7 +553,10 @@
       "kn": "KN7",
       "kn_explanation": "This question addresses the behavioral assessment process fundamental to designing operant interventions, consistent with KN7.",
       "difficulty": "medium",
-      "quality_comment": "The question requires recall of FBA procedural steps with distractors reflecting other stages, well constructed for exam review."
+      "quality_comment": "The question requires recall of FBA procedural steps with distractors reflecting other stages, well constructed for exam review.",
+      "lessonExcerpt": "End on compliance: Don't release someone from time out while they're still acting out",
+      "suggestedLesson": "2-operant-conditioning-interventions",
+      "needsReview": false
     },
     {
       "stem": "Response cost is best characterized as:",
@@ -709,7 +571,10 @@
       "kn": "KN7",
       "kn_explanation": "This question tests knowledge of operant conditioning punishment procedures according to learning theories (KN7).",
       "difficulty": "easy",
-      "quality_comment": "Options are clearly defined and plausible, facilitating discrimination of key operant concepts."
+      "quality_comment": "Options are clearly defined and plausible, facilitating discrimination of key operant concepts.",
+      "lessonExcerpt": "Extinction means stopping all reinforcement for a previously reinforced behavior. If attention maintains a behavior, extinction means withdrawing all attention.",
+      "suggestedLesson": "2-operant-conditioning-interventions",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best exemplifies differential reinforcement of low rates of behavior (DRL)?",
@@ -724,7 +589,10 @@
       "kn": "KN7",
       "kn_explanation": "This question evaluates understanding of a specific operant conditioning reinforcement strategy, appropriate under learning theories (KN7).",
       "difficulty": "medium",
-      "quality_comment": "Distractors reflect other differential reinforcement types, requiring solid understanding to answer correctly."
+      "quality_comment": "Distractors reflect other differential reinforcement types, requiring solid understanding to answer correctly.",
+      "lessonExcerpt": "Backward chaining starts with the last step.",
+      "suggestedLesson": "2-operant-conditioning-interventions",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best describes a critical feature for extinction to effectively reduce an undesirable behavior?",
@@ -739,7 +607,10 @@
       "kn": "KN7",
       "kn_explanation": "This question focuses on extinction principles and effective intervention strategies within operant conditioning, fitting under KN7.",
       "difficulty": "medium",
-      "quality_comment": "The item addresses a key operational detail of extinction interventions, with distractors clarifying common misconceptions."
+      "quality_comment": "The item addresses a key operational detail of extinction interventions, with distractors clarifying common misconceptions.",
+      "lessonExcerpt": "Differential Reinforcement of Incompatible Behavior (DRI) - You reinforce a behavior that physically cannot occur at the same time as the problem behavior.",
+      "suggestedLesson": "2-operant-conditioning-interventions",
+      "needsReview": false
     },
     {
       "stem": "In functional behavioral assessment (FBA), what is the main reason for including indirect methods such as family member reports during data collection?",
@@ -754,7 +625,10 @@
       "kn": "KN7",
       "kn_explanation": "This item relates to behavioral assessment methodology, aligning with applied learning theory content in KN7.",
       "difficulty": "medium",
-      "quality_comment": "The question addresses the complementary use of indirect methods in FBA, enhancing test-taker understanding of assessment techniques."
+      "quality_comment": "The question addresses the complementary use of indirect methods in FBA, enhancing test-taker understanding of assessment techniques.",
+      "lessonExcerpt": "Step 2: Identify Functions - You figure out what's triggering the behavior (antecedents) and what's maintaining it (consequences).",
+      "suggestedLesson": "2-operant-conditioning-interventions",
+      "needsReview": false
     },
     {
       "stem": "Which of the following is a declarative characteristic of overcorrection as a positive punishment technique in operant interventions?",
@@ -769,7 +643,10 @@
       "kn": "KN7",
       "kn_explanation": "This question evaluates specific procedures for punishment strategies within operant conditioning theory, appropriate under KN7.",
       "difficulty": "medium",
-      "quality_comment": "The distractors represent varied operant concepts, enhancing discrimination of overcorrection's unique features."
+      "quality_comment": "The distractors represent varied operant concepts, enhancing discrimination of overcorrection's unique features.",
+      "lessonExcerpt": "Response cost is negative punishment, you remove something valued when an undesired behavior occurs. The key word is \"specific\", you take away a particular reinforcer, not everything.",
+      "suggestedLesson": "2-operant-conditioning-interventions",
+      "needsReview": false
     },
     {
       "stem": "In the context of teaching a child to tie their shoes, which of the following best illustrates the process of shaping?",
@@ -789,7 +666,10 @@
       "lock_in_level": "easier",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "Differential Reinforcement of Low Rates (DRL) - Unlike the others, you're not trying to eliminate the behavior completely. You're just reducing its frequency to an acceptable level.",
+      "suggestedLesson": "2-operant-conditioning-interventions",
+      "needsReview": false
     },
     {
       "stem": "Which of the following scenarios best exemplifies the use of chaining in operant conditioning?",
@@ -809,7 +689,10 @@
       "lock_in_level": "harder",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "Differential reinforcement combines extinction of the problem behavior with reinforcement of alternative behaviors.",
+      "suggestedLesson": "2-operant-conditioning-interventions",
+      "needsReview": false
     }
   ]
 }

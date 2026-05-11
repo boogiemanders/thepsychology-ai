@@ -116,9 +116,9 @@
       "kn_explanation": "This question is best aligned with KN62 because it tests Professional standards and relevant guidelines for the practice of psychology (e.g., standards for educational and psychological testing).",
       "difficulty": "medium",
       "quality_comment": "The question is clear and directly assesses knowledge of ethical feedback practices.",
-      "suggestedLesson": "8-standards-1-2",
+      "suggestedLesson": "8-standards-9-10",
       "suggestedParagraph": "## Making Ethical Decisions: A Practical Framework",
-      "lessonExcerpt": "Your job is to ensure that clients understand the evaluation process and results.",
+      "lessonExcerpt": "Standard 9.10 requires you to explain assessment results to clients unless there's a valid reason not to (like employment screening or forensic evaluations).",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 1
@@ -137,33 +137,12 @@
       "kn_explanation": "This question is best aligned with KN71 because it tests ethical issues in technology-assisted psychological services.",
       "difficulty": "hard",
       "quality_comment": "The question effectively tests knowledge of ethical obligations regarding confidentiality.",
-      "suggestedLesson": "8-standards-1-2",
+      "suggestedLesson": "8-standards-3-4",
       "suggestedParagraph": "## Understanding Malpractice: The Four Ds You Can't Forget",
-      "lessonExcerpt": "Psychologists must break confidentiality if they believe the client poses a danger to themselves or others.",
+      "lessonExcerpt": "Many jurisdictions follow the Tarasoff decision, establishing a duty to protect third parties from client violence. This typically applies when: The client communicates a clear and imminent threat... Appropriate actions: warn the intended victim, notify police, or hospitalize the client.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 21
-    },
-    {
-      "stem": "In a crisis situation, what is the primary ethical obligation of a psychologist when offering help?",
-      "options": [
-        "To ensure that their intervention does not violate any laws.",
-        "To provide assistance only if they are being compensated.",
-        "To act in the best interest of the individual in crisis, even if it means breaching confidentiality.",
-        "To refer the individual to another professional immediately."
-      ],
-      "answer": "To act in the best interest of the individual in crisis, even if it means breaching confidentiality.",
-      "explanation": "The correct answer emphasizes the ethical obligation to prioritize the well-being of the individual in crisis, which may necessitate breaching confidentiality. The other options do not align with the ethical imperative to provide immediate help.",
-      "kn": "KN65",
-      "kn_explanation": "This question is best aligned with KN65 because it tests Models of ethical decision-making.",
-      "difficulty": "medium",
-      "quality_comment": "The question is relevant and tests understanding of ethical crisis intervention.",
-      "suggestedLesson": "8-standards-1-2",
-      "suggestedParagraph": "## Making Ethical Decisions: A Practical Framework",
-      "lessonExcerpt": "Psychologists must act in the best interest of the individual in crisis, even if it means breaching confidentiality.",
-      "needsReview": false,
-      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 22
     },
     {
       "stem": "What should a psychologist do when they receive a court order for client records?",
@@ -202,7 +181,7 @@
       "quality_comment": "The question is relevant and tests understanding of ethical practice regarding pro bono work.",
       "suggestedLesson": "8-standards-1-2",
       "suggestedParagraph": "## The Five General Principles",
-      "lessonExcerpt": "Psychologists are encouraged to contribute professional time for little or no compensation.",
+      "lessonExcerpt": "Notice that Principle B mentions contributing professional time \"for little or no compensation.\" This is aspirational. You won't be sanctioned for not doing pro bono work, but it's considered the ethical ideal.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 29
@@ -223,7 +202,7 @@
       "quality_comment": "The question effectively tests knowledge of ethical responsibilities in reporting misconduct.",
       "suggestedLesson": "8-standards-1-2",
       "suggestedParagraph": "## The Five General Principles",
-      "lessonExcerpt": "Psychologists have an ethical obligation to report unethical conduct to the appropriate authorities.",
+      "lessonExcerpt": "Standard 1.05 (Formal Reporting): You must report to an ethics committee, licensing board, or other authority when: The violation has caused or is likely to cause substantial harm",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 30
@@ -263,9 +242,9 @@
       "kn_explanation": "This question is best aligned with KN63 because it tests Laws, statutes, and judicial decisions that affect psychological practice.",
       "difficulty": "hard",
       "quality_comment": "The question effectively assesses understanding of legal liability in psychology.",
-      "suggestedLesson": "8-standards-1-2",
+      "suggestedLesson": "8-practice-issues",
       "suggestedParagraph": "## Understanding Malpractice: The Four Ds You Can't Forget",
-      "lessonExcerpt": "The psychologist must have breached a duty of care that caused measurable harm.",
+      "lessonExcerpt": "Malpractice claims follow a predictable pattern called the \"Four Ds.\" Duty of Care: A professional relationship existed where you owed the client a standard of care. Dereliction of Duty: You breached that standard through negligence or misconduct. Damages: The client suffered measurable harm. Direct Cause: Your breach directly caused the harm.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 26
@@ -286,7 +265,7 @@
       "quality_comment": "The question effectively highlights a key ethical standard relevant to assessment practices.",
       "suggestedLesson": "8-standards-1-2",
       "suggestedParagraph": "## Standard 2: Competence",
-      "lessonExcerpt": "Standard 2 emphasizes the necessity of maintaining competence in all professional activities.",
+      "lessonExcerpt": "Standard 2.01 is fundamental: You can only provide services, teach, and conduct research within your competence boundaries, based on your education, training, supervised experience, consultation, study, or professional experience.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 8
@@ -388,7 +367,10 @@
       "kn": "KN61",
       "kn_explanation": "This question addresses knowledge of current ethical principles and codes applicable to psychologists, fitting under the ethical principles and codes knowledge area.",
       "difficulty": "easy",
-      "quality_comment": "The question clearly distinguishes key terminology from the ethical code, and distractors are plausible misunderstandings, making it a solid foundational ethics question."
+      "quality_comment": "The question clearly distinguishes key terminology from the ethical code, and distractors are plausible misunderstandings, making it a solid foundational ethics question.",
+      "lessonExcerpt": "Guidelines are suggestions. They recommend best practices but won't get you sanctioned if you don't follow them exactly. They're aspirational. Standards are mandatory rules with enforcement mechanisms.",
+      "suggestedLesson": "8-standards-1-2",
+      "needsReview": false
     },
     {
       "stem": "A psychologist learns that a colleague's actions have harmed a client and informal resolution is not appropriate. What should the psychologist do?",
@@ -403,7 +385,10 @@
       "kn": "KN61",
       "kn_explanation": "This question tests knowledge of ethical requirements related to addressing colleagues' violations, which falls within current ethical principles and codes.",
       "difficulty": "medium",
-      "quality_comment": "Distractors include common misconceptions about informal resolution and reporting, providing a realistic challenge for examinees."
+      "quality_comment": "Distractors include common misconceptions about informal resolution and reporting, providing a realistic challenge for examinees.",
+      "lessonExcerpt": "Standard 1.05 (Formal Reporting): You must report to an ethics committee, licensing board, or other authority when: The violation has caused or is likely to cause substantial harm; Informal resolution isn't appropriate; Informal resolution didn't work",
+      "suggestedLesson": "8-standards-1-2",
+      "needsReview": false
     },
     {
       "stem": "If a law requires an action that would violate human rights and conflicts with ethical responsibilities, how should a psychologist respond?",
@@ -418,7 +403,10 @@
       "kn": "KN61",
       "kn_explanation": "This question probes understanding of the interaction between ethical standards and legal demands, a core ethical and legal professional issue.",
       "difficulty": "medium",
-      "quality_comment": "Options reflect typical misunderstandings about law versus ethics, making the distractors credible and the question fair."
+      "quality_comment": "Options reflect typical misunderstandings about law versus ethics, making the distractors credible and the question fair.",
+      "lessonExcerpt": "Important limitation: \"Under no circumstances may this standard be used to justify or defend violating human rights.\"",
+      "suggestedLesson": "8-standards-1-2",
+      "needsReview": false
     },
     {
       "stem": "According to the APA Ethics Code, when is it ethical for a psychologist to provide services to populations outside their current areas of competence?",
@@ -433,7 +421,10 @@
       "kn": "KN61",
       "kn_explanation": "This question addresses competence-related ethical standards, which are central to professional standards and guidelines.",
       "difficulty": "medium",
-      "quality_comment": "Options offer clear contrasts, helping test-takers differentiate between ethical flexibility and rigid requirements."
+      "quality_comment": "Options offer clear contrasts, helping test-takers differentiate between ethical flexibility and rigid requirements.",
+      "lessonExcerpt": "2.01(c) | You want to provide services to new populations or use new techniques | Undertake relevant education, training, supervised experience, consultation, or study",
+      "suggestedLesson": "8-standards-1-2",
+      "needsReview": false
     },
     {
       "stem": "A psychologist notices that personal problems are likely to interfere with their work. What should they do?",
@@ -448,7 +439,10 @@
       "kn": "KN61",
       "kn_explanation": "This question tests knowledge of competence-related ethical requirements concerning personal issues that affect professional work.",
       "difficulty": "medium",
-      "quality_comment": "Distractors present commonly held but unethical misunderstandings, providing a realistic challenge."
+      "quality_comment": "Distractors present commonly held but unethical misunderstandings, providing a realistic challenge.",
+      "lessonExcerpt": "Standard 2.06 addresses what to do when personal issues affect your work: Don't start new professional activities when personal problems will likely impede effectiveness; Take appropriate measures",
+      "suggestedLesson": "8-standards-1-2",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best illustrates the principle of Fidelity and Responsibility (Principle B) outlined in the APA General Principles?",
@@ -463,7 +457,10 @@
       "kn": "KN61",
       "kn_explanation": "This question covers understanding of the APA General Principles, specifically Principle B, which is foundational ethical knowledge.",
       "difficulty": "easy",
-      "quality_comment": "Clear options representing different principles, making the question straightforward and well suited for foundational knowledge."
+      "quality_comment": "Clear options representing different principles, making the question straightforward and well suited for foundational knowledge.",
+      "lessonExcerpt": "B: Fidelity and Responsibility | Build trust and give back | Establish trustworthy relationships; be aware of professional responsibilities; contribute pro bono time",
+      "suggestedLesson": "8-standards-1-2",
+      "needsReview": false
     },
     {
       "stem": "A client asks a psychologist's family member to interpret during sessions. Is it appropriate to delegate that role?",
@@ -478,7 +475,10 @@
       "kn": "KN61",
       "kn_explanation": "This question assesses competence and delegation ethical standards, focusing on maintaining objectivity and professionalism.",
       "difficulty": "medium",
-      "quality_comment": "Distractors include ethically incorrect but plausible justifications, encouraging careful ethical reasoning."
+      "quality_comment": "Distractors include ethically incorrect but plausible justifications, encouraging careful ethical reasoning.",
+      "lessonExcerpt": "Don't ask your client's brother to translate during sessions, even if he speaks the language fluently. His family relationship creates a conflict that could affect both objectivity and confidentiality.",
+      "suggestedLesson": "8-standards-1-2",
+      "needsReview": false
     },
     {
       "stem": "What is the primary purpose of the Preamble in the APA Ethics Code?",
@@ -493,7 +493,10 @@
       "kn": "KN61",
       "kn_explanation": "This question tests knowledge of ethical principles and codes, specifically the foundational purpose of the Ethics Code as outlined in the Preamble.",
       "difficulty": "easy",
-      "quality_comment": "The options are clearly worded and represent common misconceptions, making the question effective for foundational understanding."
+      "quality_comment": "The options are clearly worded and represent common misconceptions, making the question effective for foundational understanding.",
+      "lessonExcerpt": "The Preamble states the Ethics Code's primary goals: protecting the people psychologists work with and educating everyone about ethical standards.",
+      "suggestedLesson": "8-standards-1-2",
+      "needsReview": false
     },
     {
       "stem": "According to APA's ethical decision-making model described by Fisher (2022), what step comes immediately after identifying relevant laws, regulations, and institutional policies?",
@@ -508,7 +511,10 @@
       "kn": "KN65",
       "kn_explanation": "This question involves understanding models of ethical decision-making, which fits within the knowledge area related to ethical decision approaches.",
       "difficulty": "medium",
-      "quality_comment": "The sequence-focused question is clear and tests recall of procedural ethics models, with plausible distractors reflecting other steps in the process."
+      "quality_comment": "The sequence-focused question is clear and tests recall of procedural ethics models, with plausible distractors reflecting other steps in the process.",
+      "lessonExcerpt": "Identify the ethical problem; Identify relevant APA principles and standards; Identify relevant laws and regulations; Consider stakeholder perspectives; Develop and implement an action plan; Monitor and evaluate results",
+      "suggestedLesson": "8-standards-1-2",
+      "needsReview": false
     },
     {
       "stem": "What constitutes an ethical violation when cooperating with an ethics investigation?",
@@ -523,7 +529,10 @@
       "kn": "KN61",
       "kn_explanation": "This item tests knowledge of ethical requirements regarding interactions with regulatory and professional bodies.",
       "difficulty": "medium",
-      "quality_comment": "Distractors include ethically correct or situation-appropriate responses, distinguishing the truly unethical behavior effectively."
+      "quality_comment": "Distractors include ethically correct or situation-appropriate responses, distinguishing the truly unethical behavior effectively.",
+      "lessonExcerpt": "Standard 1.06 requires you to cooperate with APA investigations and proceedings. Refusing to cooperate is itself an ethical violation.",
+      "suggestedLesson": "8-standards-1-2",
+      "needsReview": false
     },
     {
       "stem": "After providing emergency services outside their usual competence, what should a psychologist do when alternative providers become available?",
@@ -538,7 +547,10 @@
       "kn": "KN61",
       "kn_explanation": "This question assesses ethical standards tied to competence and emergency practice, a key area of professional ethical behavior.",
       "difficulty": "medium",
-      "quality_comment": "The distractors resemble reasonable clinical options, requiring careful understanding of ethical mandates."
+      "quality_comment": "The distractors resemble reasonable clinical options, requiring careful understanding of ethical mandates.",
+      "lessonExcerpt": "2.02 | Emergency situation | Alternative services unavailable; discontinue as soon as emergency ends or appropriate services available",
+      "suggestedLesson": "8-standards-1-2",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best describes 'vicarious liability' in the context of psychologists delegating work to supervisees or employees?",
@@ -553,7 +565,10 @@
       "kn": "KN61",
       "kn_explanation": "Understanding legal and ethical responsibilities related to supervision and delegation aligns with ethical, legal, and professional issues.",
       "difficulty": "medium",
-      "quality_comment": "This question clearly distinguishes between legal liability concepts and ethical supervision responsibilities with plausible distractors."
+      "quality_comment": "This question clearly distinguishes between legal liability concepts and ethical supervision responsibilities with plausible distractors.",
+      "lessonExcerpt": "Vicarious Liability Warning: You may be legally responsible for an employee's or supervisee's actions when: You have authority to control them; Their conduct deviated from the standard of care and caused harm; Their conduct was within the scope of their designated responsibilities",
+      "suggestedLesson": "8-standards-1-2",
+      "needsReview": false
     },
     {
       "stem": "According to the APA Ethics Code, what must psychologists consider when providing telepsychology services in emerging areas with incomplete evidence for effectiveness?",
@@ -568,7 +583,10 @@
       "kn": "KN61",
       "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
       "difficulty": "medium",
-      "quality_comment": "Distractors reflect common misconceptions and practices, encouraging careful consideration of ethical informed consent requirements."
+      "quality_comment": "Distractors reflect common misconceptions and practices, encouraging careful consideration of ethical informed consent requirements.",
+      "lessonExcerpt": "When providing telepsychology services without complete effectiveness information, engage clients in thorough, documented informed consent that reviews available information, risks, and benefits.",
+      "suggestedLesson": "8-standards-1-2",
+      "needsReview": false
     },
     {
       "stem": "According to the APA Ethics Code, what is required when delegating professional work to others such as research assistants or interpreters?",
@@ -583,7 +601,10 @@
       "kn": "KN61",
       "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
       "difficulty": "medium",
-      "quality_comment": "Answer options vary in plausibility, promoting understanding of key delegation criteria and ethical constraints."
+      "quality_comment": "Answer options vary in plausibility, promoting understanding of key delegation criteria and ethical constraints.",
+      "lessonExcerpt": "Standard 2.05 covers when you assign work to employees, supervisees, research assistants, or interpreters. You can only delegate when: No problematic multiple relationship exists; The person has adequate competence; You ensure competent service delivery",
+      "suggestedLesson": "8-standards-1-2",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best reflects the ethical considerations for psychologists whose personal conduct may impact their professional role, according to APA guidelines?",
@@ -598,7 +619,10 @@
       "kn": "KN61",
       "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
       "difficulty": "medium",
-      "quality_comment": "The question clarifies nuanced understanding of how personal behavior may implicate professional ethical standards."
+      "quality_comment": "The question clarifies nuanced understanding of how personal behavior may implicate professional ethical standards.",
+      "lessonExcerpt": "The APA considers whether your personal actions overlap with your professional role. Here are questions to ask yourself: Does this personal action seem at least partially professional? Could this action significantly harm my clients, students, or research participants?",
+      "suggestedLesson": "8-standards-1-2",
+      "needsReview": false
     },
     {
       "stem": "If no specialists are available, how may a psychologist proceed when asked to work outside their usual competence?",
@@ -613,7 +637,10 @@
       "kn": "KN61",
       "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
       "difficulty": "medium",
-      "quality_comment": "Distractors include common pitfalls to avoid, reinforcing proper ethical response to competence challenges."
+      "quality_comment": "Distractors include common pitfalls to avoid, reinforcing proper ethical response to competence challenges.",
+      "lessonExcerpt": "2.01(d) | Asked to provide services outside competence AND alternative services aren't available | Must have closely related training/experience; make reasonable effort to obtain appropriate knowledge, training, and/or consultation",
+      "suggestedLesson": "8-standards-1-2",
+      "needsReview": false
     },
     {
       "stem": "A psychologist discovers that a fellow professional has engaged in unethical research practices that could endanger participants. What is the most appropriate action for the psychologist to take?",
@@ -633,7 +660,10 @@
       "lock_in_level": "easier",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "Standard 1.05 (Formal Reporting): You must report to an ethics committee, licensing board, or other authority when: The violation has caused or is likely to cause substantial harm",
+      "suggestedLesson": "8-standards-1-2",
+      "needsReview": false
     },
     {
       "stem": "A clinical psychologist learns that a therapist is engaging in dual relationships that may exploit clients. After determining that informal resolution is not possible, what should the psychologist do next?",
@@ -653,7 +683,10 @@
       "lock_in_level": "harder",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "Standard 1.05 (Formal Reporting): You must report to an ethics committee, licensing board, or other authority when: The violation has caused or is likely to cause substantial harm; Informal resolution isn't appropriate; Informal resolution didn't work",
+      "suggestedLesson": "8-standards-1-2",
+      "needsReview": false
     }
   ]
 }

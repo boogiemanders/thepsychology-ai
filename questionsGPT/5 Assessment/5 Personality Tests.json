@@ -1,69 +1,6 @@
 {
   "questions": [
     {
-      "stem": "Which of the following methods is most effective for increasing the sensitivity of a psychological test?",
-      "options": [
-        "Reducing the number of items",
-        "Using a forced-choice format",
-        "Increasing the test length",
-        "Employing a Likert scale"
-      ],
-      "answer": "Using a forced-choice format",
-      "explanation": "A forced-choice format can increase sensitivity by requiring respondents to make a choice between two equally appealing options, thus providing clearer distinctions in responses. The other options may not effectively enhance sensitivity.",
-      "kn": "KN41",
-      "kn_explanation": "This question is best aligned with KN41 because it tests Use of technology in implementing tests, surveys, and other forms of assessment and diagnostic evaluation (e.g., validity, cost-effectiveness, consumer acceptability).",
-      "difficulty": "medium",
-      "quality_comment": "The question is relevant and tests knowledge of test development strategies.",
-      "suggestedLesson": "5-personality-tests",
-      "suggestedParagraph": "## Understanding Personality Assessment Tools: Your Guide to Structured and Projective Tests",
-      "lessonExcerpt": "Using a forced-choice format can increase the sensitivity of a psychological test.",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 3
-    },
-    {
-      "stem": "What is the primary goal of frame-of-reference training in performance appraisal?",
-      "options": [
-        "To enhance employee motivation",
-        "To standardize performance ratings across evaluators",
-        "To improve communication skills",
-        "To increase job satisfaction"
-      ],
-      "answer": "To standardize performance ratings across evaluators",
-      "explanation": "Frame-of-reference training aims to ensure that all evaluators use the same standards and criteria when assessing employee performance, thus standardizing ratings. The other options do not capture the primary goal of this training.",
-      "kn": "KN34",
-      "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
-      "difficulty": "medium",
-      "quality_comment": "The question is clear and effectively assesses understanding of performance appraisal techniques.",
-      "suggestedLesson": "5-personality-tests",
-      "suggestedParagraph": "## Understanding Personality Assessment Tools: Your Guide to Structured and Projective Tests",
-      "lessonExcerpt": "The primary goal of frame-of-reference training is to standardize performance ratings across evaluators.",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 6
-    },
-    {
-      "stem": "In functional analysis of behavior, what is the primary goal of identifying antecedents and consequences?",
-      "options": [
-        "A. To increase the frequency of maladaptive behaviors",
-        "B. To understand the context in which behaviors occur",
-        "C. To eliminate all behaviors from the individual",
-        "D. To create a standardized behavior assessment tool"
-      ],
-      "answer": "B. To understand the context in which behaviors occur",
-      "explanation": "Option B is correct because the goal of functional analysis is to identify the antecedents and consequences that influence behavior, thereby understanding the context in which behaviors occur. Option A is incorrect as the aim is not to increase maladaptive behaviors. Option C is misleading; the goal is not to eliminate behaviors but to understand them. Option D is not relevant to the purpose of functional analysis.",
-      "kn": "KN30",
-      "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively assesses understanding of functional analysis.",
-      "suggestedLesson": "5-personality-tests",
-      "suggestedParagraph": "## Understanding Personality Assessment Tools: Your Guide to Structured and Projective Tests",
-      "lessonExcerpt": "The goal of functional analysis is to identify the antecedents and consequences that influence behavior.",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 23
-    },
-    {
       "stem": "Which strategy is most effective in addressing rater leniency during performance appraisals?",
       "options": [
         "Implementing a forced-choice rating system",
@@ -77,33 +14,12 @@
       "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
       "difficulty": "medium",
       "quality_comment": "The question is relevant and tests knowledge of performance appraisal techniques.",
-      "suggestedLesson": "5-personality-tests",
+      "suggestedLesson": "5-6-evaluating-jobs",
       "suggestedParagraph": "## Understanding Personality Assessment Tools: Your Guide to Structured and Projective Tests",
       "lessonExcerpt": "Personality tests fall into two main camps: structured tests (where questions have clear, specific answers) and projective tests (where people respond to ambiguous images and reveal themselves indirectly).",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 6
-    },
-    {
-      "stem": "Which symptom is most characteristic of dissociative amnesia?",
-      "options": [
-        "Inability to recall important autobiographical information",
-        "Experiencing episodes of intense fear in social situations",
-        "Persistent feelings of sadness and hopelessness",
-        "Delusions of grandeur or persecution"
-      ],
-      "answer": "Inability to recall important autobiographical information",
-      "explanation": "The hallmark of dissociative amnesia is the inability to recall significant personal information, often related to trauma. The other options describe symptoms of anxiety disorders and mood disorders.",
-      "kn": "KN36",
-      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively tests knowledge of dissociative disorders.",
-      "suggestedLesson": "5-personality-tests",
-      "suggestedParagraph": "## Understanding Personality Assessment Tools: Your Guide to Structured and Projective Tests",
-      "lessonExcerpt": "Personality tests fall into two main camps: structured tests (where questions have clear, specific answers) and projective tests (where people respond to ambiguous images and reveal themselves indirectly).",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 9
     },
     {
       "stem": "What is the primary purpose of empirical criterion keying in personality assessment?",
@@ -119,9 +35,9 @@
       "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
       "difficulty": "medium",
       "quality_comment": "The question is clear and assesses knowledge of personality assessment methods.",
-      "suggestedLesson": "5-personality-tests",
+      "suggestedLesson": "5-mmpi",
       "suggestedParagraph": "## Understanding Personality Assessment Tools: Your Guide to Structured and Projective Tests",
-      "lessonExcerpt": "The lesson does not explicitly cover empirical criterion keying in personality assessment.",
+      "lessonExcerpt": "These were developed through **empirical criterion keying**",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 16
@@ -142,7 +58,7 @@
       "quality_comment": "The question effectively assesses knowledge of projective testing purposes.",
       "suggestedLesson": "5-personality-tests",
       "suggestedParagraph": "## Understanding Personality Assessment Tools: Your Guide to Structured and Projective Tests",
-      "lessonExcerpt": "The lesson does not adequately cover the purpose of projective tests in psychology.",
+      "lessonExcerpt": "**Projective tests** operate on the assumption that when you give people ambiguous, unstructured stimuli and freedom to respond however they want, they'll unconsciously reveal their inner world",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 17
@@ -160,7 +76,10 @@
       "kn": "KN32",
       "kn_explanation": "This question evaluates knowledge of commonly used personality assessment instruments and their theoretical basis.",
       "difficulty": "medium",
-      "quality_comment": "Clear stem with well-differentiated options focused on specific test characteristics, appropriate for the EPPP."
+      "quality_comment": "Clear stem with well-differentiated options focused on specific test characteristics, appropriate for the EPPP.",
+      "lessonExcerpt": "These were developed through **empirical criterion keying**",
+      "suggestedLesson": "5-mmpi",
+      "needsReview": false
     },
     {
       "stem": "What type of scoring does the Edwards Personal Preference Schedule (EPPS) use, and what is a key limitation of these scores?",
@@ -175,7 +94,10 @@
       "kn": "KN34",
       "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
       "difficulty": "medium",
-      "quality_comment": "Distractors are plausible but incorrect scoring types, making the correct choice clear for knowledgeable candidates."
+      "quality_comment": "Distractors are plausible but incorrect scoring types, making the correct choice clear for knowledgeable candidates.",
+      "lessonExcerpt": "**Projective tests** operate on the assumption that when you give people ambiguous, unstructured stimuli and freedom to respond however they want, they'll unconsciously reveal their inner world",
+      "suggestedLesson": "5-personality-tests",
+      "needsReview": false
     },
     {
       "stem": "Which personality test categorizes individuals into 16 types based on four bipolar dimensions derived from Jung’s theory?",
@@ -190,7 +112,10 @@
       "kn": "KN32",
       "kn_explanation": "This question assesses knowledge of specific personality assessment instruments and their theoretical underpinnings.",
       "difficulty": "easy",
-      "quality_comment": "Straightforward question with clearly differentiated options; suitable for foundational EPPP content."
+      "quality_comment": "Straightforward question with clearly differentiated options; suitable for foundational EPPP content.",
+      "lessonExcerpt": "Raymond Cattell created the 16 PF in 1947 using a fascinating approach. He started with the **lexical strategy**, which assumes that if a personality trait is important, people will have created words for it.",
+      "suggestedLesson": "5-personality-tests",
+      "needsReview": false
     },
     {
       "stem": "Which of the following personality inventories assesses the 'Big Five' traits and provides scores on broad traits and multiple facets?",
@@ -205,7 +130,10 @@
       "kn": "KN32",
       "kn_explanation": "This question tests understanding of major personality inventories and their trait models.",
       "difficulty": "medium",
-      "quality_comment": "Good distractor options that are also personality tests enhance the question's rigor without ambiguity."
+      "quality_comment": "Good distractor options that are also personality tests enhance the question's rigor without ambiguity.",
+      "lessonExcerpt": "This format produces **ipsative scores**, which is fancy terminology for \"relative rankings.\" Ipsative scores tell you which needs are strongest *within* a person (intra-individual comparison) but can't compare how strong someone's needs are relative to other people",
+      "suggestedLesson": "5-personality-tests",
+      "needsReview": false
     },
     {
       "stem": "According to meta-analytic research, which Big Five personality traits are most consistently associated with an increased risk for Alzheimer’s disease and other neurocognitive disorders?",
@@ -220,7 +148,10 @@
       "kn": "KN41",
       "kn_explanation": "This question is best aligned with KN41 because it tests Use of technology in implementing tests, surveys, and other forms of assessment and diagnostic evaluation (e.g., validity, cost-effectiveness, consumer acceptability).",
       "difficulty": "hard",
-      "quality_comment": "The question requires integration of personality and neurocognitive disorder knowledge, appropriately challenging for the EPPP."
+      "quality_comment": "The question requires integration of personality and neurocognitive disorder knowledge, appropriately challenging for the EPPP.",
+      "lessonExcerpt": "Your results place you into one of 16 personality types. Combinations like ISTP or ENFJ.",
+      "suggestedLesson": "5-personality-tests",
+      "needsReview": false
     },
     {
       "stem": "Which projective test uses 10 bilaterally symmetrical inkblots and includes an administration phase where the examinee describes what they see and an inquiry phase exploring determinants of responses?",
@@ -235,7 +166,10 @@
       "kn": "KN32",
       "kn_explanation": "This question addresses knowledge of projective personality assessment methods and procedures, part of assessment instrument familiarity.",
       "difficulty": "medium",
-      "quality_comment": "Well-constructed with plausible distractors, effectively distinguishing knowledge of projective methods."
+      "quality_comment": "Well-constructed with plausible distractors, effectively distinguishing knowledge of projective methods.",
+      "lessonExcerpt": "This is the gold standard for measuring the **Big Five** personality traits",
+      "suggestedLesson": "5-personality-tests",
+      "needsReview": false
     },
     {
       "stem": "In the Exner Comprehensive System for the Rorschach Inkblot Test, what does a high number of 'color' responses typically indicate about an examinee?",
@@ -250,7 +184,10 @@
       "kn": "KN32",
       "kn_explanation": "This question tests knowledge of specific scoring interpretation techniques for projective measures, critical in assessment.",
       "difficulty": "hard",
-      "quality_comment": "Distractors are related to other possible interpretations, increasing the question’s discriminative power."
+      "quality_comment": "Distractors are related to other possible interpretations, increasing the question’s discriminative power.",
+      "lessonExcerpt": "A major meta-analysis by Aschwanden and colleagues in 2021 found that high neuroticism and low conscientiousness significantly predict increased risk for Alzheimer's disease and other neurocognitive disorders.",
+      "suggestedLesson": "5-personality-tests",
+      "needsReview": false
     },
     {
       "stem": "The Thematic Apperception Test (TAT) was developed based on which of the following theoretical frameworks?",
@@ -265,7 +202,10 @@
       "kn": "KN32",
       "kn_explanation": "This item focuses on the theoretical foundation of a specific projective test, relevant for assessment knowledge.",
       "difficulty": "medium",
-      "quality_comment": "Distractors include other well-known personality theories that provide plausible but incorrect choices."
+      "quality_comment": "Distractors include other well-known personality theories that provide plausible but incorrect choices.",
+      "lessonExcerpt": "The test includes 10 cards with bilaterally symmetrical inkblots",
+      "suggestedLesson": "5-personality-tests",
+      "needsReview": false
     },
     {
       "stem": "Which of the following describes a primary characteristic of projective personality tests?",
@@ -280,7 +220,10 @@
       "kn": "KN29",
       "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
       "difficulty": "easy",
-      "quality_comment": "Simple yet important distinction, with distractors reflecting characteristics of structured tests, enhancing clarity."
+      "quality_comment": "Simple yet important distinction, with distractors reflecting characteristics of structured tests, enhancing clarity.",
+      "lessonExcerpt": "Many **color responses** suggest strong emotionality and impulsiveness, the person responds quickly to emotional stimuli",
+      "suggestedLesson": "5-personality-tests",
+      "needsReview": false
     },
     {
       "stem": "In the Rorschach test, what does a 'whole' response location typically indicate about the examinee’s cognitive style?",
@@ -295,7 +238,10 @@
       "kn": "KN32",
       "kn_explanation": "This question involves the interpretation of a specific Rorschach scoring category within personality assessment knowledge.",
       "difficulty": "hard",
-      "quality_comment": "Options are concise and targeted, emphasizing clinically relevant interpretation for advanced examinees."
+      "quality_comment": "Options are concise and targeted, emphasizing clinically relevant interpretation for advanced examinees.",
+      "lessonExcerpt": "Henry Murray developed the TAT in 1943, building on his theory of human needs",
+      "suggestedLesson": "5-personality-tests",
+      "needsReview": false
     },
     {
       "stem": "Which best describes a theoretical model underlying the 16 Personality Factor Questionnaire (16 PF)?",
@@ -310,7 +256,10 @@
       "kn": "KN29",
       "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
       "difficulty": "medium",
-      "quality_comment": "Well-constructed item distinguishing theoretical foundations, enhancing domain-relevant conceptual understanding."
+      "quality_comment": "Well-constructed item distinguishing theoretical foundations, enhancing domain-relevant conceptual understanding.",
+      "lessonExcerpt": "**Projective tests** operate on the assumption that when you give people ambiguous, unstructured stimuli and freedom to respond however they want, they'll unconsciously reveal their inner world",
+      "suggestedLesson": "5-personality-tests",
+      "needsReview": false
     },
     {
       "stem": "Which key limitation is associated with ipsative scoring formats such as that used in the Edwards Personal Preference Schedule (EPPS)?",
@@ -325,37 +274,10 @@
       "kn": "KN29",
       "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
       "difficulty": "medium",
-      "quality_comment": "Options are plausible but distinct, requiring nuanced comprehension of scoring methods."
-    },
-    {
-      "stem": "Which cognitive bias could affect the interpretation of base rates during personality test data analysis, potentially leading to overestimating rare disorder prevalence?",
-      "options": [
-        "Base rate neglect",
-        "Confirmation bias",
-        "Hindsight bias",
-        "Anchoring bias"
-      ],
-      "answer": "Base rate neglect",
-      "explanation": "1. **Base rate neglect** is the correct answer because it refers to the cognitive bias where individuals overlook the general prevalence of a condition (the base rate) when evaluating specific cases. In the context of personality test data analysis, this can lead to an overestimation of the prevalence of rare disorders, as the analyst may focus on individual test results without considering how often those results occur in the general population.\n\n2. **Confirmation bias** is incorrect because it involves favoring information that confirms existing beliefs rather than overlooking base rates; it does not specifically relate to the misinterpretation of prevalence rates. **Hindsight bias** is also incorrect, as it refers to the tendency to see events as having been predictable after they have already occurred, rather than affecting how base rates are interpreted. Lastly, **anchoring bias** is wrong because it pertains to relying too heavily on the first piece of information encountered (the \"anchor\") when making decisions, which does not directly relate to the neglect of base rates in prevalence assessments.",
-      "kn": "KN37",
-      "kn_explanation": "This question addresses biases and heuristics relevant to evidence-based interpretation of assessment data.",
-      "difficulty": "hard",
-      "quality_comment": "Integrates cognitive bias concepts with assessment interpretation, providing higher-level challenge fitting EPPP standards."
-    },
-    {
-      "stem": "Which aspect is important in evidence-based interpretation of personality assessment data?",
-      "options": [
-        "Considering base rates of disorders to avoid misclassification errors",
-        "Relying solely on test score cutoffs without contextual information",
-        "Ignoring potential response biases for expediency",
-        "Assuming ipsative scores provide absolute trait levels"
-      ],
-      "answer": "Considering base rates of disorders to avoid misclassification errors",
-      "explanation": "1. **Correct Answer Explanation:** \"Considering base rates of disorders to avoid misclassification errors\" is crucial in evidence-based interpretation of personality assessment data because it ensures that clinicians understand the prevalence of disorders within specific populations. This consideration helps in accurately diagnosing individuals by providing context for the test results, reducing the likelihood of misclassifying normal variations in personality as pathological.\n\n2. **Incorrect Options Explanation:**\n   - **Relying solely on test score cutoffs without contextual information:** This approach is flawed because it overlooks the importance of individual differences and situational factors that can influence test scores, leading to potentially misleading conclusions.\n   - **Ignoring potential response biases for expediency:** Ignoring response biases can compromise the validity of the assessment, as individuals may respond in a socially desirable manner or be influenced by their current mood, which skews the results.\n   - **Assuming ipsative scores provide absolute trait levels:** Ipsative scores, such as those from the Edwards Personal Preference Schedule (EPPS), only allow for intra-individual comparisons and do not provide information on absolute trait levels, making them unsuitable for understanding an individual’s personality in a broader context.",
-      "kn": "KN37",
-      "kn_explanation": "This item examines the application of evidence-based principles including biases and base rates in personality test interpretation.",
-      "difficulty": "medium",
-      "quality_comment": "Provides a foundational concept in test data interpretation with clear distractors emphasizing common errors."
+      "quality_comment": "Options are plausible but distinct, requiring nuanced comprehension of scoring methods.",
+      "lessonExcerpt": "Many **whole responses** indicate creative, theoretical thinking, the ability to see the big picture",
+      "suggestedLesson": "5-personality-tests",
+      "needsReview": false
     },
     {
       "stem": "Which personality test categorizes individuals into 16 distinct personality profiles based on their responses to a series of questions regarding their traits and behaviors?",
@@ -375,7 +297,10 @@
       "lock_in_level": "easier",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "He started with the **lexical strategy**, which assumes that if a personality trait is important, people will have created words for it.",
+      "suggestedLesson": "5-personality-tests",
+      "needsReview": false
     },
     {
       "stem": "Which of the following assessments utilizes a lexical approach to identify key personality traits, focusing on the language used to describe these traits?",
@@ -395,7 +320,10 @@
       "lock_in_level": "harder",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "Ipsative scores only allow intra-individual comparisons (within one person). You cannot use EPPS results to say one person has higher achievement needs than another person.",
+      "suggestedLesson": "5-personality-tests",
+      "needsReview": false
     }
   ]
 }

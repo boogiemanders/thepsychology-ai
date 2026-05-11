@@ -22,48 +22,6 @@
       "inspirationIndex": 8
     },
     {
-      "stem": "Research on sexuality in older adulthood consistently identifies which of the following as the BEST predictor of sexual activity frequency among older adults?",
-      "options": [
-        "Current physical health status",
-        "Frequency of sexual activity during younger years",
-        "Availability of hormone replacement therapy",
-        "Level of emotional intimacy in the current relationship"
-      ],
-      "answer": "Frequency of sexual activity during younger years",
-      "explanation": "Research consistently shows that the likelihood of sexual activity in later years is closely related to the frequency of sexual activity during younger years. People who were sexually active when younger are likely to remain sexually active in old age. Current physical health (A), while relevant, is not the best predictor. Hormone replacement therapy (C) may address physiological changes but is not the primary predictor of sexual activity frequency. Emotional intimacy (D) contributes to relationship satisfaction but is not identified as the strongest predictor of sexual activity frequency in older adulthood.",
-      "kn": "KN21",
-      "kn_explanation": "Sexuality in older adulthood and predictors of sexual activity frequency is part of normal developmental processes across the lifespan.",
-      "difficulty": "medium",
-      "quality_comment": "Tests a well-established research finding about aging and sexuality. Lesson content from original reference source provides clear support.",
-      "suggestedLesson": "4-body-growth",
-      "suggestedParagraph": "## Sexual Orientation and Fluidity",
-      "lessonExcerpt": "the likelihood of sexual activity in the later years is closely related to the frequency of sexual activity during younger years. Research has indicated that people who were sexually active are likely to remain sexually active during old age.",
-      "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 17
-    },
-    {
-      "stem": "A newborn infant, when its cheek is stroked, turns its head toward the stimulus and opens its mouth. This reflexive behavior, which is essential for initiating breastfeeding, is known as the:",
-      "options": [
-        "Moro reflex",
-        "Babinski reflex",
-        "Rooting reflex",
-        "Palmar grasp reflex"
-      ],
-      "answer": "Rooting reflex",
-      "explanation": "The rooting reflex causes a neonate to turn its head toward a tactile stimulus on the cheek and open its mouth, facilitating the location of the nipple for breastfeeding. This is one of several survival-oriented neonatal reflexes. The Moro reflex is a startle response involving arm extension and then retraction when the infant feels a sudden loss of support. The Babinski reflex involves fanning of the toes when the sole of the foot is stroked. The palmar grasp reflex involves gripping when an object is placed in the palm. While the rooting reflex helps the infant find the food source, the sucking reflex then enables actual feeding.",
-      "kn": "KN21",
-      "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
-      "difficulty": "easy",
-      "quality_comment": "Tests basic knowledge of neonatal reflexes. The lesson discusses reflexive reactions in the sensorimotor stage but does not detail specific reflexes like rooting by name.",
-      "suggestedLesson": "4-body-growth",
-      "suggestedParagraph": "## The Brain's Journey: From Birth Through Adulthood",
-      "lessonExcerpt": "When a baby is born, their brain weighs about 25% of what it will weigh as an adult.",
-      "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 16
-    },
-    {
       "stem": "At the time of birth, a full-term neonate's brain contains approximately what proportion of the neurons it will have in adulthood?",
       "options": [
         "About 25%, with most neurons generated during the first two years",
@@ -106,48 +64,6 @@
       "inspirationIndex": 20
     },
     {
-      "stem": "What is the primary method used to assess cognitive changes associated with aging?",
-      "options": [
-        "Neuroimaging",
-        "Cognitive testing",
-        "Genetic analysis",
-        "Behavioral observation"
-      ],
-      "answer": "Cognitive testing",
-      "explanation": "Cognitive testing is the primary method for assessing cognitive changes associated with aging, as it directly measures various cognitive functions. Neuroimaging can provide insights into brain structure but does not assess cognitive function directly. Genetic analysis is not typically used for cognitive assessment, and behavioral observation may not provide specific cognitive insights.",
-      "kn": "KN21",
-      "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
-      "difficulty": "medium",
-      "quality_comment": "The question accurately assesses knowledge of assessment methods for cognitive changes in aging.",
-      "suggestedLesson": "4-body-growth",
-      "suggestedParagraph": "## Adult Brain Changes: The Long Decline",
-      "lessonExcerpt": "Cognitive testing is essential for assessing cognitive changes associated with aging.",
-      "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 13
-    },
-    {
-      "stem": "What is a key indicator that a child is ready for toilet training?",
-      "options": [
-        "Ability to follow complex instructions",
-        "Showing interest in adult bathroom habits",
-        "Consistent bowel movements",
-        "All of the above"
-      ],
-      "answer": "All of the above",
-      "explanation": "The correct answer is 'All of the above' as each option indicates readiness for toilet training. Following complex instructions shows cognitive readiness, interest in adult habits indicates social learning, and consistent bowel movements suggest physiological readiness. Therefore, all these factors together signal readiness for toilet training.",
-      "kn": "KN21",
-      "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
-      "difficulty": "medium",
-      "quality_comment": "The question comprehensively assesses knowledge of readiness for toilet training.",
-      "suggestedLesson": "4-body-growth",
-      "suggestedParagraph": "## Why Physical Development Matters for Your EPPP Success",
-      "lessonExcerpt": "Key indicators of readiness for toilet training include showing interest in adult bathroom habits and having consistent bowel movements.",
-      "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 15
-    },
-    {
       "stem": "Which neonatal reflex is crucial for successful breastfeeding?",
       "options": [
         "Moro reflex",
@@ -163,52 +79,10 @@
       "quality_comment": "The question accurately assesses knowledge of neonatal reflexes and their importance in breastfeeding.",
       "suggestedLesson": "4-body-growth",
       "suggestedParagraph": "## Early Brain Development: The First Two Years",
-      "lessonExcerpt": "The rooting reflex is crucial for successful breastfeeding as it helps infants locate the nipple.",
+      "lessonExcerpt": "They respond to a cheek touch by turning their head toward the touch. That's the rooting reflex.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 16
-    },
-    {
-      "stem": "What percentage of a newborn's brain weight is achieved by age two?",
-      "options": [
-        "25%",
-        "50%",
-        "80%",
-        "100%"
-      ],
-      "answer": "80%",
-      "explanation": "The correct answer is 80%, as by age two, a newborn's brain reaches approximately 80% of its adult weight. The other options do not accurately reflect the growth trajectory of the brain during this critical period.",
-      "kn": "KN21",
-      "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
-      "difficulty": "medium",
-      "quality_comment": "The question accurately assesses knowledge of early brain development milestones.",
-      "suggestedLesson": "4-body-growth",
-      "suggestedParagraph": "## Early Brain Development: The First Two Years",
-      "lessonExcerpt": "By age two, a newborn's brain weighs about 80% of what it will weigh as an adult.",
-      "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 18
-    },
-    {
-      "stem": "What cognitive changes are commonly associated with aging?",
-      "options": [
-        "Increased processing speed",
-        "Enhanced memory retention",
-        "Decline in executive function",
-        "Improved problem-solving skills"
-      ],
-      "answer": "Decline in executive function",
-      "explanation": "The correct answer is a decline in executive function, which is commonly observed in aging individuals. The other options incorrectly suggest improvements or increases in cognitive abilities that typically decline with age.",
-      "kn": "KN21",
-      "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
-      "difficulty": "medium",
-      "quality_comment": "The question accurately assesses knowledge of cognitive changes associated with aging.",
-      "suggestedLesson": "4-body-growth",
-      "suggestedParagraph": "## Adult Brain Changes: The Long Decline",
-      "lessonExcerpt": "Brain weight and volume start gradually decreasing around age 30 due to neuron loss, leading to a decline in executive function.",
-      "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 20
     },
     {
       "stem": "At what age do most children typically begin to walk independently, marking a significant milestone in motor development?",
@@ -226,7 +100,7 @@
       "quality_comment": "The question is clear and tests knowledge of a specific developmental milestone.",
       "suggestedLesson": "4-body-growth",
       "suggestedParagraph": "## The Brain's Journey: From Birth Through Adulthood",
-      "lessonExcerpt": "Walking typically occurs around 12 months of age, marking a significant milestone in motor development.",
+      "lessonExcerpt": "They respond to a cheek touch by turning their head toward the touch. That's the rooting reflex.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 21
@@ -253,27 +127,6 @@
       "inspirationIndex": 6
     },
     {
-      "stem": "What is the typical duration of REM sleep in infants compared to adults, and why is this significant for their development?",
-      "options": [
-        "Shorter than adults, important for brain development",
-        "Longer than adults, less important for development",
-        "Similar to adults, equally important for development",
-        "Shorter than adults, less important for development"
-      ],
-      "answer": "Longer than adults, less important for development",
-      "explanation": "Infants typically spend a greater proportion of their sleep in REM compared to adults, which is significant for brain development. However, the statement about it being 'less important for development' is misleading; REM sleep is crucial for infants. The other options either misrepresent the duration or the importance of REM sleep.",
-      "kn": "KN21",
-      "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
-      "difficulty": "medium",
-      "quality_comment": "The question assesses knowledge of sleep patterns in infants and their developmental significance.",
-      "suggestedLesson": "4-body-growth",
-      "suggestedParagraph": "## Early Brain Development: The First Two Years",
-      "lessonExcerpt": "Infants typically spend a greater proportion of their sleep in REM compared to adults.",
-      "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 14
-    },
-    {
       "stem": "Which of the following is a key developmental milestone in motor skills for infants around 12 months of age?",
       "options": [
         "Crawling",
@@ -289,7 +142,7 @@
       "quality_comment": "The question effectively tests knowledge of motor skills development milestones.",
       "suggestedLesson": "4-body-growth",
       "suggestedParagraph": "## The Brain's Journey: From Birth Through Adulthood",
-      "lessonExcerpt": "By around 12 months, most infants can walk independently.",
+      "lessonExcerpt": "| 10-12 months | Creeps well, cruises furniture, takes independent steps |",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 22
@@ -310,7 +163,7 @@
       "quality_comment": "The question is relevant and tests knowledge on the effects of nutrition on development.",
       "suggestedLesson": "4-body-growth",
       "suggestedParagraph": "## Why Physical Development Matters for Your EPPP Success",
-      "lessonExcerpt": "Understanding how the body and brain develop across the lifespan gives you crucial insight into when certain psychological disorders might emerge.",
+      "lessonExcerpt": "| 10-12 months | Creeps well, cruises furniture, takes independent steps |",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 3
@@ -337,69 +190,6 @@
       "inspirationIndex": 21
     },
     {
-      "stem": "What is the primary benefit of early stimulation in infants regarding motor skill development?",
-      "options": [
-        "Increased muscle mass",
-        "Enhanced cognitive abilities",
-        "Improved sensory integration",
-        "Faster neural connections"
-      ],
-      "answer": "Improved sensory integration",
-      "explanation": "Early stimulation is crucial for motor skill development as it enhances sensory integration, allowing infants to better coordinate their movements with sensory feedback. While cognitive abilities and neural connections may also benefit, the primary focus of early stimulation is on sensory integration.",
-      "kn": "KN21",
-      "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
-      "difficulty": "medium",
-      "quality_comment": "The question is relevant and tests knowledge of motor skill development.",
-      "suggestedLesson": "4-body-growth",
-      "suggestedParagraph": "## Early Brain Development: The First Two Years",
-      "lessonExcerpt": "Early stimulation is crucial for motor skill development, enhancing sensory integration.",
-      "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 24
-    },
-    {
-      "stem": "What is the primary characteristic of sexual dimorphism in humans?",
-      "options": [
-        "Differences in height and weight",
-        "Variations in skin color",
-        "Differences in brain structure",
-        "Variations in reproductive anatomy"
-      ],
-      "answer": "Variations in reproductive anatomy",
-      "explanation": "The correct answer is 'Variations in reproductive anatomy', as sexual dimorphism refers to the distinct differences in male and female reproductive systems and secondary sexual characteristics. The other options may reflect differences among individuals but do not specifically pertain to sexual dimorphism.",
-      "kn": "KN21",
-      "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
-      "difficulty": "medium",
-      "quality_comment": "The question accurately assesses knowledge of biological differences between sexes.",
-      "suggestedLesson": "4-body-growth",
-      "suggestedParagraph": "## The Brain's Journey: From Birth Through Adulthood",
-      "lessonExcerpt": "Sexual dimorphism refers to the distinct differences in male and female reproductive systems.",
-      "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 6
-    },
-    {
-      "stem": "What is a significant health concern regarding HIV infection in older adults?",
-      "options": [
-        "Increased risk of developing diabetes",
-        "Higher rates of cardiovascular disease",
-        "Potential for cognitive decline and social isolation",
-        "Greater likelihood of developing arthritis"
-      ],
-      "answer": "Potential for cognitive decline and social isolation",
-      "explanation": "The correct answer highlights the concern that older adults with HIV may experience cognitive decline and social isolation, which can significantly impact their quality of life. The other options, while relevant to older adults, do not specifically address the unique implications of HIV infection.",
-      "kn": "KN21",
-      "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
-      "difficulty": "medium",
-      "quality_comment": "The question is relevant and assesses knowledge of health psychology in the context of aging.",
-      "suggestedLesson": "4-body-growth",
-      "suggestedParagraph": "## Adult Brain Changes: The Long Decline",
-      "lessonExcerpt": "Older adults with HIV may face cognitive decline and social isolation.",
-      "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 14
-    },
-    {
       "stem": "A school psychologist is preparing a psychoeducational workshop for middle school staff on puberty timing. A teacher asks whether developing early is advantageous or disadvantageous for students. Which of the following most accurately summarizes the empirical literature on the differential psychosocial effects of early physical maturation in boys versus girls?",
       "options": [
         "Early maturation confers similar peer status benefits for both boys and girls, primarily through perceived athletic and physical competence",
@@ -415,7 +205,7 @@
       "quality_comment": "High-yield EPPP content with clear asymmetric gender findings. Strong distractors including a plausible but incorrect 'equal effects' option.",
       "suggestedLesson": "4-body-growth",
       "suggestedParagraph": "## Sensory Development: How We Experience the World",
-      "lessonExcerpt": "Lesson content on puberty timing and adjustment was in a truncated portion of 4-body-growth.md and could not be confirmed from the provided excerpt.",
+      "lessonExcerpt": "| 10-12 months | Creeps well, cruises furniture, takes independent steps |",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 7
@@ -442,27 +232,6 @@
       "inspirationIndex": 21
     },
     {
-      "stem": "A palliative care psychologist is consulting on a 61-year-old patient recently diagnosed with a terminal cancer. The patient insists the oncologist made a laboratory error, refuses to discuss end-of-life planning, and has scheduled appointments with three other physicians seeking a different diagnosis. According to Kübler-Ross's model, which stage of response to terminal illness does this behavior most clearly represent?",
-      "options": [
-        "Anger",
-        "Bargaining",
-        "Denial",
-        "Depression"
-      ],
-      "answer": "Denial",
-      "explanation": "Kübler-Ross identified Denial as the first stage in her model of adjustment to terminal illness. Patients in this stage refuse to accept the reality of their prognosis, often attributing diagnoses to error, seeking additional medical opinions, and avoiding planning that would confirm the illness's legitimacy. Denial serves as an initial psychological buffer against the shock of a terminal diagnosis. Anger (stage 2) is characterized by resentment, frustration, and asking 'Why me?' Bargaining (stage 3) involves making conditional deals or promises to gain more time. Depression (stage 4) reflects a quiet, inward grief in anticipation of loss. This patient shows no indication of anger toward providers, conditional deal-making, or depressive withdrawal—the clinical picture fits Denial.",
-      "kn": "KN21",
-      "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
-      "difficulty": "easy",
-      "quality_comment": "Clear, well-grounded clinical vignette testing a core EPPP concept. Distractors require differentiation among adjacent stages. However, the provided lesson files do not include content on Kübler-Ross or death/dying. Flagged for review.",
-      "suggestedLesson": "4-body-growth",
-      "suggestedParagraph": "## Adult Brain Changes: The Long Decline",
-      "lessonExcerpt": "",
-      "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 22
-    },
-    {
       "stem": "Which brain developmental process involves the elimination of unused synapses that continues through adolescence?",
       "options": [
         "Neurogenesis",
@@ -475,22 +244,10 @@
       "kn": "KN21",
       "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
       "difficulty": "medium",
-      "quality_comment": "Clear stem with plausible distractors involving related brain development processes makes it suitable for EPPP-level testing."
-    },
-    {
-      "stem": "At approximately what age does an infant's visual acuity reach levels similar to that of a normal adult?",
-      "options": [
-        "At birth",
-        "1 to 2 months",
-        "7 to 8 months",
-        "12 months"
-      ],
-      "answer": "7 to 8 months",
-      "explanation": "1. The correct answer is \"7 to 8 months\" because by this age, an infant's visual acuity improves significantly, allowing them to see at about 20 feet what normal adults can see at the same distance. This developmental milestone indicates that their vision has matured to levels comparable to that of adults, enabling better visual processing and interaction with their environment.\n\n2. The option \"At birth\" is incorrect because newborns have limited visual acuity, only able to see at about 20 feet what adults see at 400 to 600 feet. The option \"1 to 2 months\" is also wrong as infants at this age still prefer to look at their mothers' faces but have not yet developed adult-like visual acuity. Lastly, \"12 months\" is incorrect because by this age, infants have already achieved visual acuity similar to adults, making it an outdated response to the question regarding when this level is first reached.",
-      "kn": "KN21",
-      "kn_explanation": "This question tests knowledge of normal sensory development during infancy, which falls under growth and lifespan development (KN21).",
-      "difficulty": "easy",
-      "quality_comment": "The question is straightforward with realistic distractors that align with typical developmental timelines."
+      "quality_comment": "Clear stem with plausible distractors involving related brain development processes makes it suitable for EPPP-level testing.",
+      "lessonExcerpt": "After this explosive growth in synapses, something counterintuitive happens: the brain starts cutting connections. This process is called synaptic pruning, and it continues through adolescence.",
+      "suggestedLesson": "4-body-growth",
+      "needsReview": false
     },
     {
       "stem": "Which type of depth cue do infants begin using at about five to six months of age, providing the impression of depth from static, one-eyed images?",
@@ -505,22 +262,10 @@
       "kn": "KN21",
       "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
       "difficulty": "medium",
-      "quality_comment": "Distractors are plausible types of depth cues, requiring test-takers to know specific developmental timing and cue types."
-    },
-    {
-      "stem": "Which of the following best describes the typical pattern of hearing loss that begins around age 40 in adults?",
-      "options": [
-        "Decreased sensitivity to low-frequency sounds",
-        "Decreased sensitivity to high-frequency sounds",
-        "Increased auditory localization abilities",
-        "Increased sensitivity to soft consonants"
-      ],
-      "answer": "Decreased sensitivity to high-frequency sounds",
-      "explanation": "1. \"Decreased sensitivity to high-frequency sounds\" is the correct answer because, around age 40, many adults begin to experience presbycusis, which is characterized by a decline in the ability to hear higher-frequency sounds. This decline makes it particularly difficult for individuals to understand voices of women and children, as well as softer consonants, which are typically higher in pitch.\n\n2. The option \"Decreased sensitivity to low-frequency sounds\" is incorrect because age-related hearing loss primarily affects high-frequency sounds, not low-frequency ones. \"Increased auditory localization abilities\" is wrong because, instead of improving, auditory localization typically diminishes in infants before re-emerging, and there is no indication that adults experience an increase in this ability with age. Lastly, \"Increased sensitivity to soft consonants\" is incorrect since the onset of presbycusis leads to decreased sensitivity, making it harder to hear softer sounds, including soft consonants, rather than increasing sensitivity to them.",
-      "kn": "KN21",
-      "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
-      "difficulty": "easy",
-      "quality_comment": "The stem is clear and distractors address common misconceptions about hearing loss to differentiate knowledge levels."
+      "quality_comment": "Distractors are plausible types of depth cues, requiring test-takers to know specific developmental timing and cue types.",
+      "lessonExcerpt": "These different reproductive challenges shaped what triggers jealousy most intensely. ### Alternative Explanation: The Double-Shot Hypothesis",
+      "suggestedLesson": "3-connection",
+      "needsReview": false
     },
     {
       "stem": "Which factor is associated with an increased risk of early onset puberty in girls?",
@@ -535,7 +280,10 @@
       "kn": "KN21",
       "kn_explanation": "This question taps into developmental influences on puberty timing in adolescence, part of normal growth and lifespan development (KN21).",
       "difficulty": "medium",
-      "quality_comment": "Distractors relate to plausible family environment factors, enhancing the discriminative power of the question."
+      "quality_comment": "Distractors relate to plausible family environment factors, enhancing the discriminative power of the question.",
+      "lessonExcerpt": "Early Puberty in Boys. Mixed bag: Higher self-esteem, Greater social maturity, More popularity, Better athletic skills",
+      "suggestedLesson": "4-body-growth",
+      "needsReview": false
     },
     {
       "stem": "Why are adolescents particularly at risk for engaging in substance use and other impulsive behaviors, according to brain development research?",
@@ -550,22 +298,10 @@
       "kn": "KN21",
       "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
       "difficulty": "medium",
-      "quality_comment": "Well-structured distractors require nuanced understanding of developmental neuroscience, making it suitable for intermediate difficulty."
-    },
-    {
-      "stem": "Which of the following is a protective factor against adolescent substance use?",
-      "options": [
-        "Affiliation with substance-involved peers",
-        "Poor academic achievement",
-        "Parental disapproval of substance use",
-        "Exposure to stressful life events"
-      ],
-      "answer": "Parental disapproval of substance use",
-      "explanation": "1. \"Parental disapproval of substance use\" is the correct answer because it serves as a protective factor that can help deter adolescents from engaging in substance use. Research indicates that supportive parenting and clear disapproval of substance use can buffer the negative effects of risk factors, such as peer influence and mental health issues, thus promoting healthier choices among adolescents.\n\n2. The option \"Affiliation with substance-involved peers\" is incorrect because associating with peers who engage in substance use increases the likelihood of an adolescent using substances themselves, acting as a risk factor rather than a protective factor. \"Poor academic achievement\" is also incorrect, as it is a risk factor associated with higher rates of substance use, indicating that academic struggles can lead to increased vulnerability to substance abuse. Lastly, \"Exposure to stressful life events\" is wrong because such exposure is a known risk factor that can contribute to higher rates of substance use among adolescents, as it may lead to coping through substance use rather than providing any protective benefit.",
-      "kn": "KN27",
-      "kn_explanation": "This question is best aligned with KN27 because it tests Risk and protective factors that may impact a developmental course (e.g., nutrition, prenatal care, health care, social support, socioeconomic status, abuse, victimization, and resiliency).",
-      "difficulty": "easy",
-      "quality_comment": "The question clearly differentiates well-known risk vs. protective factors, providing good basic knowledge testing."
+      "quality_comment": "Well-structured distractors require nuanced understanding of developmental neuroscience, making it suitable for intermediate difficulty.",
+      "lessonExcerpt": "Remember how the prefrontal cortex doesn't mature until the late teens to mid-20s? Here's where that matters most: the limbic system (involved in emotions and motivation) develops earlier than the prefrontal cortex.",
+      "suggestedLesson": "4-body-growth",
+      "needsReview": false
     },
     {
       "stem": "Which developmental milestone is expected between 10 and 12 months of age?",
@@ -580,7 +316,10 @@
       "kn": "KN21",
       "kn_explanation": "This assesses knowledge of typical gross motor milestones in infancy, falling under growth and lifespan development (KN21).",
       "difficulty": "medium",
-      "quality_comment": "Options represent motor milestones from different ages, requiring precise knowledge of developmental timing."
+      "quality_comment": "Options represent motor milestones from different ages, requiring precise knowledge of developmental timing.",
+      "lessonExcerpt": "After this explosive growth in synapses, something counterintuitive happens: the brain starts cutting connections. This process is called synaptic pruning, and it continues through adolescence.",
+      "suggestedLesson": "4-body-growth",
+      "needsReview": false
     },
     {
       "stem": "Which of the following is NOT recommended to reduce the risk of Sudden Infant Death Syndrome (SIDS)?",
@@ -595,7 +334,10 @@
       "kn": "KN21",
       "kn_explanation": "This questions covers risk and protective factors in infant development and safety, appropriate for growth and lifespan development (KN21).",
       "difficulty": "easy",
-      "quality_comment": "The question uses commonly known safe sleep practices, with distractors that are clear and plausible, enhancing clarity."
+      "quality_comment": "The question uses commonly known safe sleep practices, with distractors that are clear and plausible, enhancing clarity.",
+      "lessonExcerpt": "By 7-8 months, though, infants have visual acuity similar to normal adults.",
+      "suggestedLesson": "4-body-growth",
+      "needsReview": false
     },
     {
       "stem": "Which biological factor is most consistently linked to the increased likelihood that a boy will have a gay sexual orientation?",
@@ -610,7 +352,10 @@
       "kn": "KN21",
       "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
       "difficulty": "hard",
-      "quality_comment": "Distractors involve plausible biological factors, increasing the challenge suitable for advanced examination items."
+      "quality_comment": "Distractors involve plausible biological factors, increasing the challenge suitable for advanced examination items.",
+      "lessonExcerpt": "| 5-6 months | Pictorial cues | Can perceive depth with one eye using size, shadows, texture |",
+      "suggestedLesson": "4-body-growth",
+      "needsReview": false
     },
     {
       "stem": "What is the main biological factor contributing to adolescent sleep deprivation according to research?",
@@ -625,7 +370,10 @@
       "kn": "KN21",
       "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
       "difficulty": "medium",
-      "quality_comment": "Options reflect known contributors with a clear distinction between biological and social factors, fostering critical thinking."
+      "quality_comment": "Options reflect known contributors with a clear distinction between biological and social factors, fostering critical thinking.",
+      "lessonExcerpt": "Presbycusis (age-related hearing loss) typically starts around age 40, beginning with decreased sensitivity to high-frequency sounds.",
+      "suggestedLesson": "4-body-growth",
+      "needsReview": false
     },
     {
       "stem": "Which term best describes variations in sexual attractions and behaviors over time that differ from a person's stable sexual orientation labels?",
@@ -640,7 +388,10 @@
       "kn": "KN21",
       "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
       "difficulty": "medium",
-      "quality_comment": "The question distinguishes nuanced terminology relevant to sexual orientation and identity, suitable for graduate-level understanding."
+      "quality_comment": "The question distinguishes nuanced terminology relevant to sexual orientation and identity, suitable for graduate-level understanding.",
+      "lessonExcerpt": "Predictors of early puberty in girls include maternal mood disorder, biological father's absence, stepfather or maternal boyfriend presence, and discordant family relationships.",
+      "suggestedLesson": "4-body-growth",
+      "needsReview": false
     },
     {
       "stem": "Which of the following scenarios best illustrates a protective factor that buffers the adverse effect of stressful life events on adolescent substance use?",
@@ -655,7 +406,10 @@
       "kn": "KN27",
       "kn_explanation": "This question is best aligned with KN27 because it tests Risk and protective factors that may impact a developmental course (e.g., nutrition, prenatal care, health care, social support, socioeconomic status, abuse, victimization, and resiliency).",
       "difficulty": "medium",
-      "quality_comment": "Clear scenario-based question enhances application of theory to realistic developmental contexts."
+      "quality_comment": "Clear scenario-based question enhances application of theory to realistic developmental contexts.",
+      "lessonExcerpt": "Remember how the prefrontal cortex doesn't mature until the late teens to mid-20s? Here's where that matters most: the limbic system (involved in emotions and motivation) develops earlier than the prefrontal cortex.",
+      "suggestedLesson": "4-body-growth",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best describes a mechanism by which synaptic pruning improves brain efficiency during development?",
@@ -670,7 +424,10 @@
       "kn": "KN21",
       "kn_explanation": "This reflects understanding of a neurodevelopmental process during childhood/adolescence in growth and lifespan development.",
       "difficulty": "medium",
-      "quality_comment": "Distractors are plausible neurological processes, requiring test-takers to understand specific pruning functions."
+      "quality_comment": "Distractors are plausible neurological processes, requiring test-takers to understand specific pruning functions.",
+      "lessonExcerpt": "Protective Factors: Parental disapproval of substance use, Supportive parenting, Age-appropriate parental monitoring",
+      "suggestedLesson": "4-body-growth",
+      "needsReview": false
     },
     {
       "stem": "What term describes the process by which the brain strengthens synaptic connections that are frequently used while eliminating those that are not?",
@@ -690,7 +447,10 @@
       "lock_in_level": "easier",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "| 10-12 months | Creeps well, cruises furniture, takes independent steps |",
+      "suggestedLesson": "4-body-growth",
+      "needsReview": false
     },
     {
       "stem": "During which developmental phase does synaptic pruning primarily occur, leading to a more efficient neural network in the brain?",
@@ -710,7 +470,10 @@
       "lock_in_level": "harder",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "Protective factors include: Back sleeping position; Breastfeeding; Bare crib (minimal bedding); Avoiding overheating; Room-sharing without bed-sharing",
+      "suggestedLesson": "4-body-growth",
+      "needsReview": false
     }
   ]
 }

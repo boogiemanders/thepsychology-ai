@@ -100,7 +100,7 @@
       "quality_comment": "The question is clear and directly relates to the ethical and legal responsibilities of psychologists.",
       "suggestedLesson": "8-practice-issues",
       "suggestedParagraph": "## When a Subpoena Lands on Your Desk",
-      "lessonExcerpt": "Before doing anything else, reach out to your client to discuss the implications.",
+      "lessonExcerpt": "Before doing anything else, reach out to discuss the implications. Your client has a right to know what's being requested and to make informed decisions about their confidential information.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 1
@@ -142,31 +142,10 @@
       "quality_comment": "The question is well-structured and tests a nuanced understanding of legal competency.",
       "suggestedLesson": "8-practice-issues",
       "suggestedParagraph": "## Insanity vs. Competency",
-      "lessonExcerpt": "Competency refers to the defendant's mental state right now.",
+      "lessonExcerpt": "Competency refers to the defendant's mental state right now. It's about whether they can currently understand the charges against them and cooperate with their attorney.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 3
-    },
-    {
-      "stem": "In the context of informed consent, what is meant by 'legal capacity'?",
-      "options": [
-        "The ability to understand the legal implications of a contract.",
-        "The mental ability to make informed decisions about one's treatment.",
-        "The requirement to have a lawyer present during therapy.",
-        "The age at which a person can consent to treatment."
-      ],
-      "answer": "The mental ability to make informed decisions about one's treatment.",
-      "explanation": "The correct answer highlights the mental capacity necessary for informed consent, which is crucial for ethical practice. The other options do not accurately capture the essence of legal capacity in this context.",
-      "kn": "KN68",
-      "kn_explanation": "This question is best aligned with KN68 because it tests Client and patient rights.",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively assesses understanding of informed consent and legal capacity.",
-      "suggestedLesson": "8-practice-issues",
-      "suggestedParagraph": "## Making Ethical Decisions: A Practical Framework",
-      "lessonExcerpt": "Informed consent requires that clients have the mental ability to make informed decisions.",
-      "needsReview": false,
-      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 4
     },
     {
       "stem": "What is a psychologist's responsibility regarding confidentiality when making referrals to Employee Assistance Programs (EAPs)?",
@@ -182,54 +161,12 @@
       "kn_explanation": "This question is best aligned with KN64 because it tests Identification and management of potential ethical issues.",
       "difficulty": "medium",
       "quality_comment": "The question is clear and directly addresses confidentiality issues in EAP referrals.",
-      "suggestedLesson": "8-practice-issues",
+      "suggestedLesson": "8-standards-3-4",
       "suggestedParagraph": "## What Actually Gets Psychologists in Trouble",
-      "lessonExcerpt": "Your job is to maintain confidentiality unless the client authorizes release.",
+      "lessonExcerpt": "Employee Assistance Programs (EAPs): Confidentiality works the same as in other therapy. Information isn't shared with supervisors or employers without written authorization, even for mandatory referrals.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 5
-    },
-    {
-      "stem": "When a psychologist learns that a client has experienced trauma, what is their ethical obligation regarding reporting?",
-      "options": [
-        "They must report the trauma to the authorities immediately.",
-        "They should assess the client's safety and discuss reporting options with the client.",
-        "They can choose to ignore the trauma if the client does not want to report it.",
-        "They must inform the client's family about the trauma."
-      ],
-      "answer": "They should assess the client's safety and discuss reporting options with the client.",
-      "explanation": "The correct answer reflects the ethical obligation to prioritize the client's safety while also respecting their autonomy. The other options either violate confidentiality or do not consider the client's wishes.",
-      "kn": "KN64",
-      "kn_explanation": "This question is best aligned with KN64 because it tests Identification and management of potential ethical issues.",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively assesses understanding of ethical responsibilities regarding client trauma.",
-      "suggestedLesson": "8-practice-issues",
-      "suggestedParagraph": "## What Actually Gets Psychologists in Trouble",
-      "lessonExcerpt": "Assess the client's safety and discuss reporting options with them.",
-      "needsReview": false,
-      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 6
-    },
-    {
-      "stem": "In forensic settings, what is a key challenge psychologists face when predicting violent behavior?",
-      "options": [
-        "The lack of reliable assessment tools.",
-        "The difficulty in obtaining accurate historical data.",
-        "The inherent unpredictability of human behavior.",
-        "The pressure to provide definitive answers to legal questions."
-      ],
-      "answer": "The inherent unpredictability of human behavior.",
-      "explanation": "The correct answer highlights the fundamental challenge in predicting behavior, which is often unpredictable. The other options may contribute to the difficulty but do not capture the core issue.",
-      "kn": "KN67",
-      "kn_explanation": "This question is best aligned with KN67 because it tests Emerging social, legal, ethical, and policy issues and their impact on psychological practice.",
-      "difficulty": "hard",
-      "quality_comment": "The question is well-structured and tests a nuanced understanding of forensic psychology challenges.",
-      "suggestedLesson": "8-practice-issues",
-      "suggestedParagraph": "## Understanding Malpractice: The Four Ds You Can't Forget",
-      "lessonExcerpt": "The inherent unpredictability of human behavior complicates assessments in forensic settings.",
-      "needsReview": false,
-      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 7
     },
     {
       "stem": "Who is ultimately responsible for errors in test interpretation?",
@@ -245,33 +182,12 @@
       "kn_explanation": "This question is best aligned with KN62 because it tests Professional standards and relevant guidelines for the practice of psychology (e.g., standards for educational and psychological testing).",
       "difficulty": "medium",
       "quality_comment": "The question effectively assesses understanding of accountability in test interpretation.",
-      "suggestedLesson": "8-practice-issues",
+      "suggestedLesson": "8-standards-9-10",
       "suggestedParagraph": "## Understanding Malpractice: The Four Ds You Can't Forget",
-      "lessonExcerpt": "The psychologist who interprets the results is ultimately responsible for any errors.",
+      "lessonExcerpt": "You can use these services, but remember: you retain full responsibility for the appropriate application and interpretation of the results.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 8
-    },
-    {
-      "stem": "What is a potential ethical concern when conducting custody evaluations with limited participation from one parent?",
-      "options": [
-        "The evaluation may lack objectivity.",
-        "The evaluator may favor the more cooperative parent.",
-        "The results may be biased due to incomplete information.",
-        "All of the above."
-      ],
-      "answer": "All of the above.",
-      "explanation": "The correct answer encompasses multiple ethical concerns that arise when one parent is not fully involved in the evaluation process. Each of the other options represents a valid concern that could affect the integrity of the evaluation.",
-      "kn": "KN64",
-      "kn_explanation": "This question is best aligned with KN64 because it tests Identification and management of potential ethical issues.",
-      "difficulty": "hard",
-      "quality_comment": "The question is comprehensive and addresses multiple ethical issues in custody evaluations.",
-      "suggestedLesson": "8-practice-issues",
-      "suggestedParagraph": "## Conducting custody evaluations with limited participation",
-      "lessonExcerpt": "The results may be biased due to incomplete information.",
-      "needsReview": false,
-      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 9
     },
     {
       "stem": "What is a significant concern regarding racial and cultural biases in IQ testing?",
@@ -287,9 +203,9 @@
       "kn_explanation": "This question is best aligned with KN67 because it tests Emerging social, legal, ethical, and policy issues and their impact on psychological practice.",
       "difficulty": "hard",
       "quality_comment": "The question effectively assesses understanding of cultural biases in testing.",
-      "suggestedLesson": "8-practice-issues",
+      "suggestedLesson": "5-cognitive-tests",
       "suggestedParagraph": "## Racial and cultural biases in IQ testing",
-      "lessonExcerpt": "Bias can lead to misinterpretation of a person's abilities.",
+      "lessonExcerpt": "When you need to minimize cultural bias or language barriers, your top two choices are: KABC-II, Raven's SPM. The Kaufman Assessment Battery for Children (KABC-II) and Raven's Standard Progressive Matrices (SPM) reduce cultural bias and aren't affected by English proficiency or cultural learning.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 10
@@ -329,9 +245,9 @@
       "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
       "difficulty": "hard",
       "quality_comment": "The question effectively assesses understanding of the importance of record keeping in psychology.",
-      "suggestedLesson": "8-practice-issues",
+      "suggestedLesson": "8-standards-5-6",
       "suggestedParagraph": "## Understanding Malpractice: The Four Ds You Can't Forget",
-      "lessonExcerpt": "Poor record-keeping (inadequate or inaccurate documentation) is one of the top reasons psychologists face disciplinary action.",
+      "lessonExcerpt": "Standard 6.01 requires psychologists to create, maintain, and eventually dispose of records appropriately. The reasons are practical: Facilitating continuity of care if services transfer to another provider",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 12
@@ -455,9 +371,9 @@
       "kn_explanation": "This question is best aligned with KN63 because it tests Laws, statutes, and judicial decisions that affect psychological practice.",
       "difficulty": "hard",
       "quality_comment": "The question effectively assesses understanding of mandatory reporting laws.",
-      "suggestedLesson": "8-practice-issues",
+      "suggestedLesson": "8-standards-3-4",
       "suggestedParagraph": "## When a Subpoena Lands on Your Desk",
-      "lessonExcerpt": "Psychologists must report any suspicions of child abuse to the appropriate authorities.",
+      "lessonExcerpt": "Mandatory reporting laws require reporting suspected child abuse or neglect to protective services. You report when you have \"reasonable cause to suspect\". Not when you're certain.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 30
@@ -539,9 +455,9 @@
       "kn_explanation": "This question is best aligned with KN62 because it tests Professional standards and relevant guidelines for the practice of psychology (e.g., standards for educational and psychological testing).",
       "difficulty": "hard",
       "quality_comment": "The question is precise and tests specific knowledge of HIPAA regulations.",
-      "suggestedLesson": "8-practice-issues",
+      "suggestedLesson": "8-standards-7-8",
       "suggestedParagraph": "## Understanding Malpractice: The Four Ds You Can't Forget",
-      "lessonExcerpt": "HIPAA regulations require covered entities to retain documentation for a minimum of 6 years.",
+      "lessonExcerpt": "HIPAA regulations (for health information): At least 6 years after authorization is signed",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 2
@@ -751,7 +667,7 @@
       "quality_comment": "The question clearly distinguishes between competency and related concepts, testing knowledge of legal standards.",
       "suggestedLesson": "8-practice-issues",
       "suggestedParagraph": "## Understanding Malpractice: The Four Ds You Can't Forget",
-      "lessonExcerpt": "Competency refers to the defendant's mental state right now.",
+      "lessonExcerpt": "Competency refers to the defendant's mental state right now. It's about whether they can currently understand the charges against them and cooperate with their attorney.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 2
@@ -770,9 +686,9 @@
       "kn_explanation": "This question is best aligned with KN64 because it tests Identification and management of potential ethical issues.",
       "difficulty": "medium",
       "quality_comment": "The question effectively highlights the ethical implications of referral fees in therapeutic settings.",
-      "suggestedLesson": "8-practice-issues",
+      "suggestedLesson": "8-standards-5-6",
       "suggestedParagraph": "## What Actually Gets Psychologists in Trouble",
-      "lessonExcerpt": "Non-sexual dual relationships (becoming friends, business partners with clients).",
+      "lessonExcerpt": "Standard 6.07 states that referral fees must be \"based on the services provided\" and not \"on the referral itself.\"",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 3
@@ -841,27 +757,6 @@
       "inspirationIndex": 6
     },
     {
-      "stem": "What is a common complaint that interns have about their supervisors?",
-      "options": [
-        "Lack of feedback on performance",
-        "Too much supervision",
-        "Inconsistent scheduling of sessions",
-        "Overly supportive relationships"
-      ],
-      "answer": "Lack of feedback on performance",
-      "explanation": "Interns often express dissatisfaction with the lack of constructive feedback, which is crucial for their development. The other options do not typically reflect common complaints; interns generally appreciate guidance but may feel overwhelmed by excessive supervision or inconsistent scheduling.",
-      "kn": "KN70",
-      "kn_explanation": "This question is best aligned with KN70 because it tests Ethical issues in supervision.",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively captures a common concern among interns regarding supervision.",
-      "suggestedLesson": "8-practice-issues",
-      "suggestedParagraph": "## What Actually Gets Psychologists in Trouble",
-      "lessonExcerpt": "Improper supervision (not adequately overseeing trainees).",
-      "needsReview": false,
-      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 7
-    },
-    {
       "stem": "What is a key strategy for managing dual relationships in therapy?",
       "options": [
         "Avoiding all forms of social interaction with clients",
@@ -896,33 +791,12 @@
       "kn_explanation": "This question is best aligned with KN62 because it tests Professional standards and relevant guidelines for the practice of psychology (e.g., standards for educational and psychological testing).",
       "difficulty": "medium",
       "quality_comment": "The question effectively highlights the importance of reporting unethical behavior in the field.",
-      "suggestedLesson": "8-practice-issues",
+      "suggestedLesson": "8-standards-1-2",
       "suggestedParagraph": "## What Actually Gets Psychologists in Trouble",
-      "lessonExcerpt": "Violating laws and regulations (state, federal, or professional rules).",
+      "lessonExcerpt": "Standard 1.05 (Formal Reporting): You must report to an ethics committee, licensing board, or other authority when: The violation has caused or is likely to cause substantial harm",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 9
-    },
-    {
-      "stem": "In rural settings, what is a primary concern regarding the scope of practice for psychologists?",
-      "options": [
-        "Limited access to supervision and consultation",
-        "Excessive competition among practitioners",
-        "High demand for specialized services",
-        "Availability of advanced technology"
-      ],
-      "answer": "Limited access to supervision and consultation",
-      "explanation": "In rural settings, psychologists often face challenges related to limited access to supervision and consultation, which can impact their practice and professional development. The other options do not accurately reflect the primary concerns in rural psychology practice.",
-      "kn": "KN66",
-      "kn_explanation": "This question is best aligned with KN66 because it tests Approaches for continuing professional development.",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively assesses understanding of the unique challenges faced by psychologists in rural areas.",
-      "suggestedLesson": "8-practice-issues",
-      "suggestedParagraph": "## Why Professional Issues Matter More Than You Think",
-      "lessonExcerpt": "Understanding these issues isn't optional.",
-      "needsReview": false,
-      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 10
     },
     {
       "stem": "What is a psychologist's ethical responsibility when addressing a misdiagnosis that may have led to inappropriate medication being prescribed?",
@@ -946,27 +820,6 @@
       "inspirationIndex": 11
     },
     {
-      "stem": "What is a potential ethical concern regarding instructor self-disclosure in educational settings?",
-      "options": [
-        "It can enhance the instructor's credibility.",
-        "It may blur professional boundaries and affect student perceptions.",
-        "It fosters a more open classroom environment.",
-        "It is always beneficial for student engagement."
-      ],
-      "answer": "It may blur professional boundaries and affect student perceptions.",
-      "explanation": "While self-disclosure can enhance credibility and engagement, it poses risks of blurring boundaries, which can lead to ethical dilemmas. The other options do not address the potential negative implications of self-disclosure.",
-      "kn": "KN64",
-      "kn_explanation": "This question is best aligned with KN64 because it tests Identification and management of potential ethical issues.",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively addresses a nuanced ethical issue in educational settings.",
-      "suggestedLesson": "8-practice-issues",
-      "suggestedParagraph": "## Why Professional Issues Matter More Than You Think",
-      "lessonExcerpt": "Instructor self-disclosure can blur professional boundaries and affect student perceptions.",
-      "needsReview": false,
-      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 1
-    },
-    {
       "stem": "In psychological research, what is the primary purpose of obtaining informed consent from participants?",
       "options": [
         "To ensure participants are aware of their rights.",
@@ -980,33 +833,12 @@
       "kn_explanation": "This question is best aligned with KN68 because it tests Client and patient rights.",
       "difficulty": "hard",
       "quality_comment": "The question clearly focuses on a fundamental aspect of research ethics.",
-      "suggestedLesson": "8-practice-issues",
+      "suggestedLesson": "8-standards-7-8",
       "suggestedParagraph": "## Why Professional Issues Matter More Than You Think",
-      "lessonExcerpt": "Informed consent ensures that participants are aware of their rights.",
+      "lessonExcerpt": "When someone agrees to participate in your research, they need to know what they're signing up for. Standard 8.02 requires you to tell prospective participants",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 2
-    },
-    {
-      "stem": "What ethical consideration is paramount when making parole recommendations for individuals with a history of multiple relationships?",
-      "options": [
-        "Ensuring the individual has access to rehabilitation programs.",
-        "Avoiding conflicts of interest that may impair objectivity.",
-        "Providing recommendations based solely on the individual's criminal history.",
-        "Prioritizing the opinions of family members in the decision-making process."
-      ],
-      "answer": "Avoiding conflicts of interest that may impair objectivity.",
-      "explanation": "In parole recommendations, it is crucial to avoid conflicts of interest that could compromise the objectivity of the recommendation. The other options, while relevant, do not address the ethical implications of multiple relationships.",
-      "kn": "KN64",
-      "kn_explanation": "This question is best aligned with KN64 because it tests Identification and management of potential ethical issues.",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively highlights a complex ethical issue in the context of parole recommendations.",
-      "suggestedLesson": "8-practice-issues",
-      "suggestedParagraph": "## Why Professional Issues Matter More Than You Think",
-      "lessonExcerpt": "Avoiding conflicts of interest is paramount in maintaining objectivity.",
-      "needsReview": false,
-      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 3
     },
     {
       "stem": "In therapy, what is a critical ethical requirement regarding multiple relationships and informed consent?",
@@ -1022,9 +854,9 @@
       "kn_explanation": "This question is best aligned with KN64 because it tests Identification and management of potential ethical issues.",
       "difficulty": "medium",
       "quality_comment": "The question addresses a significant ethical concern in therapeutic practices.",
-      "suggestedLesson": "8-practice-issues",
+      "suggestedLesson": "8-standards-3-4",
       "suggestedParagraph": "## Why Professional Issues Matter More Than You Think",
-      "lessonExcerpt": "Therapists should avoid dual relationships that could impair their effectiveness.",
+      "lessonExcerpt": "Not all multiple relationships are prohibited. Only those that \"could reasonably be expected to impair objectivity, competence, or effectiveness\" or risk exploitation or harm.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 4
@@ -1043,9 +875,9 @@
       "kn_explanation": "This question is best aligned with KN68 because it tests Client and patient rights.",
       "difficulty": "medium",
       "quality_comment": "The question effectively clarifies a critical distinction in research ethics.",
-      "suggestedLesson": "8-practice-issues",
+      "suggestedLesson": "8-standards-3-4",
       "suggestedParagraph": "## Why Professional Issues Matter More Than You Think",
-      "lessonExcerpt": "Assent allows minors to agree to participate, but informed consent is needed from parents.",
+      "lessonExcerpt": "Minors: Most people under 18 cannot legally consent to treatment. You must... Seek their assent (agreement). Think of informed consent with minors like a group project at work: the manager (parent) has final authority, but you still explain the project to the junior employee (minor) and get their buy-in.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 5
@@ -1064,9 +896,9 @@
       "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
       "difficulty": "medium",
       "quality_comment": "The question effectively connects ethical principles to financial practices.",
-      "suggestedLesson": "8-practice-issues",
+      "suggestedLesson": "8-standards-1-2",
       "suggestedParagraph": "## Why Professional Issues Matter More Than You Think",
-      "lessonExcerpt": "The principle of justice emphasizes fairness in access to psychological services.",
+      "lessonExcerpt": "D: Justice | Ensure fairness | Everyone deserves access to psychology's benefits and equal quality services",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 6
@@ -1085,9 +917,9 @@
       "kn_explanation": "This question is best aligned with KN62 because it tests Professional standards and relevant guidelines for the practice of psychology (e.g., standards for educational and psychological testing).",
       "difficulty": "hard",
       "quality_comment": "The question effectively clarifies a fundamental difference in professional standards.",
-      "suggestedLesson": "8-practice-issues",
+      "suggestedLesson": "8-standards-1-2",
       "suggestedParagraph": "## Why Professional Issues Matter More Than You Think",
-      "lessonExcerpt": "Legal obligations are mandatory, while ethical guidelines are aspirational.",
+      "lessonExcerpt": "These are aspirational. They can't be used to sanction you, but they represent the highest ideals of the profession. They're like the philosophy behind the rules... General Principles are aspirational only. You can't be sanctioned based on them alone. Only the Ethical Standards are enforceable.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 7
@@ -1192,7 +1024,7 @@
       "quality_comment": "The question effectively assesses knowledge of malpractice risks.",
       "suggestedLesson": "8-practice-issues",
       "suggestedParagraph": "## What Actually Gets Psychologists in Trouble",
-      "lessonExcerpt": "Poor record-keeping (inadequate or inaccurate documentation).",
+      "lessonExcerpt": "Poor record-keeping (inadequate or inaccurate documentation)",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 19
@@ -1217,27 +1049,6 @@
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 20
-    },
-    {
-      "stem": "Which of the following criteria is NOT typically considered in child custody decision-making according to family law?",
-      "options": [
-        "The child's relationship with each parent",
-        "The financial stability of each parent",
-        "The child's preference if they are of sufficient age",
-        "The parent's social media presence"
-      ],
-      "answer": "The parent's social media presence",
-      "explanation": "The child's relationship with each parent, financial stability, and the child's preference are all relevant factors in custody decisions. However, a parent's social media presence is not a standard criterion considered in custody evaluations.",
-      "kn": "KN65",
-      "kn_explanation": "This question is best aligned with KN65 because it tests Models of ethical decision-making.",
-      "difficulty": "medium",
-      "quality_comment": "The question is clear and tests knowledge of child custody criteria effectively.",
-      "suggestedLesson": "8-practice-issues",
-      "suggestedParagraph": "## Understanding Malpractice: The Four Ds You Can't Forget",
-      "lessonExcerpt": "The lesson does not specifically address child custody decision-making criteria, indicating a gap in coverage.",
-      "needsReview": false,
-      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 21
     },
     {
       "stem": "What is the first step a psychologist should take upon receiving a subpoena for client records?",
@@ -1280,27 +1091,6 @@
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 30
-    },
-    {
-      "stem": "During a therapy session, a client reveals that her previous therapist initiated a sexual relationship with her during treatment. The current therapist's most appropriate first step is to:",
-      "options": [
-        "Immediately file a formal ethics complaint against the previous therapist with the APA Ethics Committee",
-        "Help the client understand her options, which may include filing an ethics complaint, and assist her in addressing the impact of the exploitation",
-        "Contact the previous therapist directly to confirm the client's allegations before taking action",
-        "Advise the client that therapist-client sexual contact is not illegal in most states and therefore cannot be reported"
-      ],
-      "answer": "Help the client understand her options, which may include filing an ethics complaint, and assist her in addressing the impact of the exploitation",
-      "explanation": "APA Standard 10.05 addresses sexual intimacies with current therapy clients, and when a therapist learns of such misconduct by a colleague, the appropriate response prioritizes client welfare. The therapist should help the client explore options including filing an ethics complaint, rather than unilaterally filing on the client's behalf (which could retraumatize). Option A is wrong because immediately filing without client input violates the client's autonomy. Option C is wrong because contacting the previous therapist breaches the current client's confidentiality. Option D is factually incorrect—sexual contact with clients is illegal in many states and always violates ethics standards.",
-      "kn": "KN61",
-      "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
-      "difficulty": "medium",
-      "quality_comment": "Clinically relevant scenario. The lesson discusses sexual misconduct as the #2 reason for disciplinary action but does not provide detailed guidance on how to respond when a client reports a prior therapist's misconduct.",
-      "suggestedLesson": "8-practice-issues",
-      "suggestedParagraph": "## What Actually Gets Psychologists in Trouble",
-      "lessonExcerpt": "Sexual misconduct (any sexual contact with clients)",
-      "needsReview": false,
-      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 4
     },
     {
       "stem": "A defendant is found not guilty by reason of insanity (NGRI) for a violent felony. This verdict most accurately means that:",
@@ -1399,7 +1189,10 @@
       "kn": "KN62",
       "kn_explanation": "This question is best aligned with KN62 because it tests Professional standards and relevant guidelines for the practice of psychology (e.g., standards for educational and psychological testing).",
       "difficulty": "medium",
-      "quality_comment": "The question is straightforward with one clearly inaccurate option, testing essential malpractice concepts effectively."
+      "quality_comment": "The question is straightforward with one clearly inaccurate option, testing essential malpractice concepts effectively.",
+      "lessonExcerpt": "Malpractice claims follow a predictable pattern called the \"Four Ds.\" Duty of Care; Dereliction of Duty; Damages; Direct Cause",
+      "suggestedLesson": "8-practice-issues",
+      "needsReview": false
     },
     {
       "stem": "According to APA guidelines, when responding to a subpoena for client records, what is the psychologist's first step?",
@@ -1414,7 +1207,10 @@
       "kn": "KN63",
       "kn_explanation": "This question assesses knowledge of the proper legal procedures when dealing with subpoenas, relevant to laws and statutes impacting practice.",
       "difficulty": "easy",
-      "quality_comment": "Clear and concise stem, with plausible distractors; this item effectively addresses a key professional legal procedure."
+      "quality_comment": "Clear and concise stem, with plausible distractors; this item effectively addresses a key professional legal procedure.",
+      "lessonExcerpt": "Step 1: Verify the subpoena is legitimate. A valid subpoena must include: Court name and jurisdiction; Case title and docket number",
+      "suggestedLesson": "8-practice-issues",
+      "needsReview": false
     },
     {
       "stem": "Which statement best describes the difference between a fact witness and an expert witness in forensic psychology?",
@@ -1429,7 +1225,10 @@
       "kn": "KN63",
       "kn_explanation": "This question addresses legal definitions and roles in psychological testimony, fitting under relevant laws and judicial decisions.",
       "difficulty": "medium",
-      "quality_comment": "Stem is well-written; distractors are plausible misconceptions, making this a good discriminating item."
+      "quality_comment": "Stem is well-written; distractors are plausible misconceptions, making this a good discriminating item.",
+      "lessonExcerpt": "Fact Witness: Testifies only to what they directly saw, heard, or observed; Cannot give opinions or speculate. Expert Witness: Offers professional opinions based on specialized knowledge; Can respond to hypothetical situations",
+      "suggestedLesson": "8-practice-issues",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best describes the purpose of a psychological autopsy in forensic cases?",
@@ -1444,7 +1243,10 @@
       "kn": "KN67",
       "kn_explanation": "This question is best aligned with KN67 because it tests Emerging social, legal, ethical, and policy issues and their impact on psychological practice.",
       "difficulty": "medium",
-      "quality_comment": "Options are balanced and the correct answer is the only one describing the unique forensic autopsy purpose, making it effective for EPPP-level testing."
+      "quality_comment": "Options are balanced and the correct answer is the only one describing the unique forensic autopsy purpose, making it effective for EPPP-level testing.",
+      "lessonExcerpt": "Equivocal Death Psychological Autopsy (EDPA): Used when manner of death is ambiguous. Was it suicide, accident, homicide, natural causes, or undetermined?",
+      "suggestedLesson": "8-practice-issues",
+      "needsReview": false
     },
     {
       "stem": "According to APA Inclusive Language Guidelines, which of the following is the most appropriate way to refer to a hypothetical single individual of unknown gender?",
@@ -1459,7 +1261,10 @@
       "kn": "KN62",
       "kn_explanation": "This question is best aligned with KN62 because it tests Professional standards and relevant guidelines for the practice of psychology (e.g., standards for educational and psychological testing).",
       "difficulty": "easy",
-      "quality_comment": "Clear question stem and well-differentiated options; tests awareness of current recommendations for non-binary inclusive language."
+      "quality_comment": "Clear question stem and well-differentiated options; tests awareness of current recommendations for non-binary inclusive language.",
+      "lessonExcerpt": "When gender is irrelevant or the person is hypothetical, use \"they/them/their\" as singular pronouns. Yes, even in formal writing.",
+      "suggestedLesson": "8-practice-issues",
+      "needsReview": false
     },
     {
       "stem": "Which of the following is TRUE about providing telepsychology services across state lines in jurisdictions NOT participating in PSYPACT?",
@@ -1474,7 +1279,10 @@
       "kn": "KN63",
       "kn_explanation": "This question assesses knowledge about legal and regulatory issues related to telepsychology practice.",
       "difficulty": "medium",
-      "quality_comment": "Distractors include common misconceptions; the stem is clear, making this question effective and relevant."
+      "quality_comment": "Distractors include common misconceptions; the stem is clear, making this question effective and relevant.",
+      "lessonExcerpt": "If jurisdictions aren't part of PSYPACT (we'll get to that), you must determine legal requirements for both your location and your client's location.",
+      "suggestedLesson": "8-practice-issues",
+      "needsReview": false
     },
     {
       "stem": "What is the primary purpose of the APA Commission on Accreditation (APA-CoA)?",
@@ -1489,7 +1297,10 @@
       "kn": "KN62",
       "kn_explanation": "This question relates to professional standards and guidelines regarding training and education in psychology.",
       "difficulty": "easy",
-      "quality_comment": "The options are plausible roles but only one matches the main purpose of APA-CoA, making this question straightforward."
+      "quality_comment": "The options are plausible roles but only one matches the main purpose of APA-CoA, making this question straightforward.",
+      "lessonExcerpt": "Accreditation assures the public that programs meet professional standards supporting ethical, skillful service delivery. It protects students, benefits the public, and improves quality.",
+      "suggestedLesson": "8-practice-issues",
+      "needsReview": false
     },
     {
       "stem": "In Bernard’s discrimination model of clinical supervision, which combination describes the supervisor acting as counselor focusing on personalization skills?",
@@ -1504,7 +1315,10 @@
       "kn": "KN70",
       "kn_explanation": "This question assesses knowledge of supervision models and related ethical and professional issues in clinical supervision.",
       "difficulty": "hard",
-      "quality_comment": "The stem is precise and options plausible; this tests more advanced knowledge fitting well at the applied level."
+      "quality_comment": "The stem is precise and options plausible; this tests more advanced knowledge fitting well at the applied level.",
+      "lessonExcerpt": "Bernard's discrimination model identifies three focus areas (intervention skills, conceptualization skills, personalization skills) and three supervisor roles (educator, counselor, consultant).",
+      "suggestedLesson": "8-practice-issues",
+      "needsReview": false
     },
     {
       "stem": "According to APA’s Supervision Guidelines, what is the supervisor’s responsibility regarding confidentiality in supervision?",
@@ -1519,7 +1333,10 @@
       "kn": "KN70",
       "kn_explanation": "This question addresses ethical issues specific to supervision, including confidentiality responsibilities.",
       "difficulty": "medium",
-      "quality_comment": "Well-constructed item with clear alternatives; tests knowledge of supervisor ethical duties."
+      "quality_comment": "Well-constructed item with clear alternatives; tests knowledge of supervisor ethical duties.",
+      "lessonExcerpt": "Confidentiality: Supervisees need to know the limits of confidentiality regarding their personal disclosures and evaluations. Their clients need to know about the supervisory relationship and that the supervisor has access to their records.",
+      "suggestedLesson": "8-practice-issues",
+      "needsReview": false
     },
     {
       "stem": "Which stage in Stoltenberg's Integrated Developmental Model is characterized by supervisees who are anxious about evaluation, highly dependent on the supervisor, and primarily focused on themselves?",
@@ -1534,7 +1351,10 @@
       "kn": "KN66",
       "kn_explanation": "This question is best aligned with KN66 because it tests Approaches for continuing professional development.",
       "difficulty": "medium",
-      "quality_comment": "Distractors include plausible levels but only one reflects the early developmental characteristics accurately."
+      "quality_comment": "Distractors include plausible levels but only one reflects the early developmental characteristics accurately.",
+      "lessonExcerpt": "Level 1: Self-focused, anxious, highly dependent. Needs structure, support, and skill-building.",
+      "suggestedLesson": "8-practice-issues",
+      "needsReview": false
     },
     {
       "stem": "Which of the following is an appropriate ethical response to a negative online review about a psychologist's services?",
@@ -1549,7 +1369,10 @@
       "kn": "KN68",
       "kn_explanation": "This question involves client rights and ethical considerations in professional practice and online behavior.",
       "difficulty": "medium",
-      "quality_comment": "Options represent common reactions; the correct answer reflects current ethical guidance, making this a relevant applied item."
+      "quality_comment": "Options represent common reactions; the correct answer reflects current ethical guidance, making this a relevant applied item.",
+      "lessonExcerpt": "So what can you do? Build a positive online presence proactively. Post patient satisfaction ratings, testimonials from colleagues and supervisors, professional accomplishments.",
+      "suggestedLesson": "8-practice-issues",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best describes the ethical competency a supervisor must possess to provide competent clinical supervision?",
@@ -1564,7 +1387,10 @@
       "kn": "KN70",
       "kn_explanation": "This question is best aligned with KN70 because it tests Ethical issues in supervision.",
       "difficulty": "medium",
-      "quality_comment": "This question fills an important gap about supervisor competence and is appropriately stated for EPPP-level testing."
+      "quality_comment": "This question fills an important gap about supervisor competence and is appropriately stated for EPPP-level testing.",
+      "lessonExcerpt": "Competence: You must be competent both in the services the supervisee provides AND in providing supervision itself. You can't just wing it.",
+      "suggestedLesson": "8-practice-issues",
+      "needsReview": false
     },
     {
       "stem": "Which of the following is true regarding telepsychology supervision according to APA guidelines?",
@@ -1579,7 +1405,10 @@
       "kn": "KN70",
       "kn_explanation": "This question assesses knowledge of telepsychology practices and ethical issues in supervision under professional guidelines.",
       "difficulty": "medium",
-      "quality_comment": "Options provide clear contrasts; this question addresses an emerging and underrepresented topic well."
+      "quality_comment": "Options provide clear contrasts; this question addresses an emerging and underrepresented topic well.",
+      "lessonExcerpt": "Telepsychology supervision can account for no more than 50% of total supervision at any site. Supervisors must verify supervisee identity at each contact and inform them about security and privacy limitations.",
+      "suggestedLesson": "8-practice-issues",
+      "needsReview": false
     },
     {
       "stem": "Which of the following elements is NOT essential for establishing negligence in a psychological practice?",
@@ -1599,7 +1428,10 @@
       "lock_in_level": "easier",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "Malpractice claims follow a predictable pattern called the \"Four Ds.\" Duty of Care; Dereliction of Duty; Damages; Direct Cause",
+      "suggestedLesson": "8-practice-issues",
+      "needsReview": false
     },
     {
       "stem": "In the context of a malpractice lawsuit against a psychologist, which of the following must be demonstrated to establish a successful claim?",
@@ -1619,7 +1451,10 @@
       "lock_in_level": "harder",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "Direct Cause: Your breach directly caused the harm",
+      "suggestedLesson": "8-practice-issues",
+      "needsReview": false
     }
   ]
 }

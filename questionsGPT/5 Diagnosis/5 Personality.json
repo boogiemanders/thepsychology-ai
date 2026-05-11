@@ -55,7 +55,9 @@
       "kn": "KN36",
       "kn_explanation": "This question focuses on diagnostic criteria and classification systems, highlighting limits and rationales for diagnosis under DSM-5-TR, which aligns with assessment and diagnosis knowledge.",
       "difficulty": "medium",
-      "quality_comment": "The question clearly tests a key diagnostic criterion with plausible distractors, effectively assessing detailed knowledge of diagnostic age restrictions."
+      "quality_comment": "The question clearly tests a key diagnostic criterion with plausible distractors, effectively assessing detailed knowledge of diagnostic age restrictions.",
+      "lessonExcerpt": "You can diagnose most personality disorders in someone under 18 if symptoms have been present for at least one year. The exception? Antisocial personality disorder requires the person to be at least 18.",
+      "needsReview": false
     },
     {
       "stem": "Which personality disorder is characterized by a pervasive pattern of detachment from social relationships and restricted emotional expression, including little or no interest in sexual experiences and emotional coldness?",
@@ -70,7 +72,9 @@
       "kn": "KN34",
       "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
       "difficulty": "easy",
-      "quality_comment": "Clear stem with clinically relevant symptom descriptions; distractors are disorders with social components but differing features, making it effective for assessment."
+      "quality_comment": "Clear stem with clinically relevant symptom descriptions; distractors are disorders with social components but differing features, making it effective for assessment.",
+      "lessonExcerpt": "This involves detachment from social relationships and restricted emotional expression. You need at least four of seven symptoms",
+      "needsReview": false
     },
     {
       "stem": "Which cluster of personality disorders is most associated with anxiety and fearfulness?",
@@ -85,7 +89,9 @@
       "kn": "KN36",
       "kn_explanation": "This question requires knowledge of the DSM classification system and the behavioral characteristics distinctive of each personality disorder cluster.",
       "difficulty": "easy",
-      "quality_comment": "The question is straightforward and tests foundational knowledge of cluster distinctions; distractors are clear and manageable for test-takers."
+      "quality_comment": "The question is straightforward and tests foundational knowledge of cluster distinctions; distractors are clear and manageable for test-takers.",
+      "lessonExcerpt": "**Cluster C** | Anxious, fearful behaviors | Avoidant, Dependent, Obsessive-Compulsive",
+      "needsReview": false
     },
     {
       "stem": "Dialectical behavior therapy (DBT) for borderline personality disorder includes all the following components EXCEPT:",
@@ -100,7 +106,9 @@
       "kn": "KN37",
       "kn_explanation": "This question is best aligned with KN37 because it tests Factors influencing evidence-based interpretation of data and decision-making (e.g., base rates, group differences, cultural biases and differences, heuristics).",
       "difficulty": "medium",
-      "quality_comment": "Good balance of plausible options reflecting aspects of treatment; distractors are consistent with treatment terminology but clearly differentiated."
+      "quality_comment": "Good balance of plausible options reflecting aspects of treatment; distractors are consistent with treatment terminology but clearly differentiated.",
+      "lessonExcerpt": "DBT has three main components: 1. **Group skills training**: Teaches emotion regulation, distress tolerance, relationship effectiveness, and mindfulness 2. **Individual psychotherapy** ... 3. **Intersession coaching**: Telephone support to generalize skills",
+      "needsReview": false
     },
     {
       "stem": "A key difference between schizotypal and schizoid personality disorders concerning interpersonal relationships is that:",
@@ -115,7 +123,9 @@
       "kn": "KN33",
       "kn_explanation": "This question is best aligned with KN33 because it tests Issues of differential diagnosis and integration of non-psychological information into psychological assessment.",
       "difficulty": "hard",
-      "quality_comment": "The nuanced distinctions present a challenge appropriate for advanced understanding; distractors are well-constructed to test conceptual clarity."
+      "quality_comment": "The nuanced distinctions present a challenge appropriate for advanced understanding; distractors are well-constructed to test conceptual clarity.",
+      "lessonExcerpt": "**Schizotypal**: Uncomfortable around others despite expressing unhappiness about isolation; acts disinterested **Schizoid**: Limited desire for relationships; derives no pleasure from them **Avoidant**: Desperately wants relationships but fears criticism and rejection",
+      "needsReview": false
     },
     {
       "stem": "Which Big Five personality trait is most positively related to the presence of personality disorders, according to meta-analytic findings?",
@@ -130,7 +140,9 @@
       "kn": "KN32",
       "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
       "difficulty": "medium",
-      "quality_comment": "Concise stem with reasonable distractors focusing on Big Five traits; tests integration of personality theory and disorder correlation effectively."
+      "quality_comment": "Concise stem with reasonable distractors focusing on Big Five traits; tests integration of personality theory and disorder correlation effectively.",
+      "lessonExcerpt": "**Neuroticism** has the strongest positive relationships with personality disorders (higher neuroticism = more disorder features)",
+      "needsReview": false
     },
     {
       "stem": "A pervasive pattern of disregard for and violation of the rights of others since age 15, with a history of conduct disorder and at least three symptoms such as deceitfulness and impulsivity, describes which personality disorder?",
@@ -145,7 +157,9 @@
       "kn": "KN36",
       "kn_explanation": "This question requires detailed knowledge of diagnostic criteria and course of a specific personality disorder.",
       "difficulty": "medium",
-      "quality_comment": "Stem clearly includes key diagnostic features; distractors are borderline disorders but differ significantly in diagnostic criteria."
+      "quality_comment": "Stem clearly includes key diagnostic features; distractors are borderline disorders but differ significantly in diagnostic criteria.",
+      "lessonExcerpt": "This is the only personality disorder that requires the person to be at least 18 years old AND have a history of conduct disorder before age 15. You need at least three of seven symptoms showing disregard for others' rights since age 15",
+      "needsReview": false
     },
     {
       "stem": "Which personality disorder involves a pervasive pattern of excessive emotionality and attention seeking, with symptoms such as inappropriately seductive behavior, rapidly shifting emotions, and exaggerated expression of emotion?",
@@ -160,7 +174,9 @@
       "kn": "KN36",
       "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
       "difficulty": "easy",
-      "quality_comment": "Clear presentation of defining symptoms helps distinguish this disorder from other Cluster B disorders."
+      "quality_comment": "Clear presentation of defining symptoms helps distinguish this disorder from other Cluster B disorders.",
+      "lessonExcerpt": "This involves excessive emotionality and attention-seeking. You need at least five of eight symptoms: Uncomfortable when not the center of attention Inappropriately seductive or provocative Rapidly shifting, shallow emotions",
+      "needsReview": false
     },
     {
       "stem": "Which of the following symptoms is NOT characteristic of obsessive-compulsive personality disorder?",
@@ -175,7 +191,9 @@
       "kn": "KN36",
       "kn_explanation": "This question distinguishes between personality disorder and anxiety disorder symptomatology, relating to classification and diagnosis.",
       "difficulty": "medium",
-      "quality_comment": "Distractors reflect core features of OCPD, contrasted with the key feature of OCD, clarifying common misconceptions."
+      "quality_comment": "Distractors reflect core features of OCPD, contrasted with the key feature of OCD, clarifying common misconceptions.",
+      "lessonExcerpt": "Despite similar names, obsessive-compulsive personality disorder and obsessive-compulsive disorder (OCD) are different. Only OCD involves true obsessions (intrusive thoughts) and compulsions (ritualistic behaviors). OCPD is about pervasive rigidity and perfectionism as personality traits.",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best describes the relationship between histrionic and antisocial personality disorders according to Hamburger et al. (1996)?",
@@ -190,7 +208,10 @@
       "kn": "KN36",
       "kn_explanation": "This question addresses conceptual models regarding gender differences and personality disorder traits, related to classification and underlying theory.",
       "difficulty": "hard",
-      "quality_comment": "The question includes advanced content on differential expression hypotheses, with distractors plausible but clearly distinct for trained examinees."
+      "quality_comment": "The question includes advanced content on differential expression hypotheses, with distractors plausible but clearly distinct for trained examinees.",
+      "lessonExcerpt": "There's debate about whether these disorders represent gender-biased expressions of similar underlying traits (psychopathy), but research hasn't strongly supported this hypothesis. Some experts suggest diagnostic bias explains why antisocial is more common in men and histrionic in women.",
+      "suggestedLesson": "5-personality",
+      "needsReview": false
     },
     {
       "stem": "Which personality disorder is characterized by a persistent and excessive need to be taken care of, resulting in submissive and clinging behaviors and fear of separation?",
@@ -205,7 +226,9 @@
       "kn": "KN36",
       "kn_explanation": "The question assesses diagnostic criteria knowledge of Cluster C personality disorders, facilitating differential diagnosis.",
       "difficulty": "easy",
-      "quality_comment": "Straightforward question focused on key traits allows for clear differentiation from similar disorders."
+      "quality_comment": "Straightforward question focused on key traits allows for clear differentiation from similar disorders.",
+      "lessonExcerpt": "This involves excessive need to be taken care of, leading to submissive, clinging behavior and separation fears. You need at least five of eight symptoms",
+      "needsReview": false
     },
     {
       "stem": "Which of the following symptoms is typical of borderline personality disorder as defined in DSM-5-TR?",
@@ -220,7 +243,9 @@
       "kn": "KN36",
       "kn_explanation": "The stem tests knowledge of characteristic symptoms of a specific personality disorder for accurate diagnosis.",
       "difficulty": "medium",
-      "quality_comment": "Options include common traits from multiple personality disorders, making the correct choice a good test of symptom recognition."
+      "quality_comment": "Options include common traits from multiple personality disorders, making the correct choice a good test of symptom recognition.",
+      "lessonExcerpt": "Frantic efforts to avoid abandonment",
+      "needsReview": false
     },
     {
       "stem": "What is the primary theoretical basis for dialectical behavior therapy (DBT) in the treatment of borderline personality disorder?",
@@ -235,7 +260,9 @@
       "kn": "KN39",
       "kn_explanation": "This question relates to theoretical models of psychopathology underlying specific personality disorders, fitting well with knowledge of personality disorder theories.",
       "difficulty": "medium",
-      "quality_comment": "The question highlights foundational theory for an evidence-based treatment, clearly differentiating models of psychopathology."
+      "quality_comment": "The question highlights foundational theory for an evidence-based treatment, clearly differentiating models of psychopathology.",
+      "lessonExcerpt": "**Treatment spotlight:** Dialectical Behavior Therapy (DBT) by Marsha Linehan is the gold standard. It assumes the disorder stems from emotion dysregulation caused by biological and environmental factors.",
+      "needsReview": false
     },
     {
       "stem": "When interpreting assessment data for personality disorders, which bias involves overestimating the likelihood of rare personality disorders due to their dramatic features, regardless of actual base rates?",
@@ -250,37 +277,10 @@
       "kn": "KN37",
       "kn_explanation": "This question addresses evidence-based interpretation of data, focusing on cognitive biases and heuristics affecting diagnostic judgments.",
       "difficulty": "medium",
-      "quality_comment": "It effectively tests knowledge of common cognitive biases that can distort assessment data interpretation relevant to personality disorders."
-    },
-    {
-      "stem": "Which of the following assessment models emphasizes understanding personality disorders as maladaptive variants of general personality traits rather than distinct categories?",
-      "options": [
-        "Categorical diagnostic model",
-        "Dimensional trait model",
-        "Psychodynamic conflict model",
-        "Behavioral learning model"
-      ],
-      "answer": "Dimensional trait model",
-      "explanation": "1. The \"Dimensional trait model\" is the correct answer because it emphasizes understanding personality disorders as maladaptive variations of general personality traits, rather than viewing them as distinct categories. This model aligns with the findings of Saulsman and Page (2004), which highlight the relationships between personality disorders and the Big Five personality traits, indicating that personality disorders can be conceptualized along a continuum of traits rather than as separate entities.\n\n2. The \"Categorical diagnostic model\" is incorrect because it classifies personality disorders as distinct categories with specific criteria, rather than viewing them as variations of traits. The \"Psychodynamic conflict model\" is wrong because it focuses on unconscious conflicts and drives, rather than the trait-based understanding of personality disorders. Lastly, the \"Behavioral learning model\" is incorrect as it emphasizes learned behaviors and environmental influences on personality, rather than the inherent traits that the dimensional approach highlights.",
-      "kn": "KN36",
-      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
-      "difficulty": "medium",
-      "quality_comment": "The question clarifies important conceptual frameworks guiding assessment, with plausible distractors representing alternative models."
-    },
-    {
-      "stem": "Regarding measurement of outcomes for interventions targeting personality disorders, which approach focuses on assessing changes in symptom severity, interpersonal functioning, and quality of life over time?",
-      "options": [
-        "Cross-sectional diagnostic interviews",
-        "Outcome monitoring using standardized symptom measures",
-        "Predictive validity studies",
-        "Neuroimaging biomarkers"
-      ],
-      "answer": "Outcome monitoring using standardized symptom measures",
-      "explanation": "1. **Correct Answer Explanation**: \"Outcome monitoring using standardized symptom measures\" is the correct answer because it directly assesses changes in symptom severity, interpersonal functioning, and quality of life over time, which is essential for evaluating the effectiveness of interventions for personality disorders. This approach provides quantifiable data that can track the progress of treatment and the impact on the individual's functioning, aligning with the goal of measuring therapeutic outcomes.\n\n2. **Incorrect Options**:\n- **Cross-sectional diagnostic interviews**: This method provides a snapshot of an individual's symptoms and diagnoses at a specific point in time but does not track changes over time, making it unsuitable for measuring treatment outcomes.\n- **Predictive validity studies**: These studies assess how well a test predicts future outcomes or behaviors but do not focus on measuring changes in symptom severity or functioning over time, which is necessary for evaluating treatment effectiveness.\n- **Neuroimaging biomarkers**: While neuroimaging can provide insights into brain function and structure, it does not directly measure changes in symptoms or interpersonal functioning, making it less relevant for monitoring treatment outcomes in personality disorders.",
-      "kn": "KN36",
-      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
-      "difficulty": "medium",
-      "quality_comment": "Well-constructed question highlighting practical approaches to outcome measurement in clinical assessment settings."
+      "quality_comment": "It effectively tests knowledge of common cognitive biases that can distort assessment data interpretation relevant to personality disorders.",
+      "lessonExcerpt": "Availability Heuristic: How Easily Can I Think of Examples? The **availability heuristic** involves judging the frequency or likelihood of events based on how easily we can recall examples.",
+      "suggestedLesson": "3-errors-and-shortcuts",
+      "needsReview": false
     },
     {
       "stem": "Which of the following is true regarding the diagnosis of borderline personality disorder in adolescents according to DSM-5-TR criteria?",
@@ -300,7 +300,10 @@
       "lock_in_level": "easier",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "Reality:** CD cannot be diagnosed after age 18 if the person meets criteria for Antisocial Personality Disorder. CD is essentially the developmental precursor.",
+      "suggestedLesson": "5-acting-out",
+      "needsReview": false
     },
     {
       "stem": "According to DSM-5-TR, which statement is accurate regarding the diagnosis of narcissistic personality disorder in individuals who are still in their teenage years?",
@@ -320,7 +323,10 @@
       "lock_in_level": "harder",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "Reality:** CD cannot be diagnosed after age 18 if the person meets criteria for Antisocial Personality Disorder. CD is essentially the developmental precursor.",
+      "suggestedLesson": "5-acting-out",
+      "needsReview": false
     }
   ]
 }

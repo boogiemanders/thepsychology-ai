@@ -37,7 +37,7 @@
       "quality_comment": "Clinically relevant question connecting neurotransmitter function to pharmacological intervention. The lesson discusses serotonin's roles across multiple files.",
       "suggestedLesson": "1-neurons-and-neurotransmitters",
       "suggestedParagraph": "### Serotonin: The Mood and Sleep Regulator",
-      "lessonExcerpt": "Serotonin is involved in mood regulation, sleep, appetite, and pain perception. Low levels are associated with depression, anxiety, and sleep disturbances.",
+      "lessonExcerpt": "- **Major neurotransmitters and their clinical associations**: Dopamine (movement, reward, Parkinson's, schizophrenia), acetylcholine (memory, movement, Alzheimer's), glutamate (excitatory, excitotoxicity), norepinephrine (arousal, mood), serotonin (mood, appetite, anxiety), and GABA (inhibitory, an",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 6
@@ -121,7 +121,7 @@
       "quality_comment": "The question is clear and tests basic physiological knowledge.",
       "suggestedLesson": "1-neurons-and-neurotransmitters",
       "suggestedParagraph": "## The Nervous System: Your Body's Information Network",
-      "lessonExcerpt": "Heart rate is defined as the number of heartbeats per minute.",
+      "lessonExcerpt": "**The Autonomic Nervous System (ANS)** manages the involuntary functions that keep you alive without conscious effort. Heart rate, digestion, breathing rate, and glandular activity.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 16
@@ -142,7 +142,7 @@
       "quality_comment": "The question is well-structured and tests knowledge of neurotransmitter roles.",
       "suggestedLesson": "1-neurons-and-neurotransmitters",
       "suggestedParagraph": "## Neurons: The Messengers That Make It All Work",
-      "lessonExcerpt": "Opioid peptides, such as endorphins, are primarily responsible for pain relief in the body.",
+      "lessonExcerpt": "Reality: The relationship between neurotransmitters and disorders is complex. Low serotonin is associated with depression, but anorexia nervosa involves *high* brain serotonin. No disorder has a single neurotransmitter cause. Multiple systems interact.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 18
@@ -184,7 +184,7 @@
       "quality_comment": "The question effectively assesses knowledge of neurotransmitter functions related to alcohol.",
       "suggestedLesson": "1-neurons-and-neurotransmitters",
       "suggestedParagraph": "## Neurotransmitter Systems",
-      "lessonExcerpt": "Alcohol primarily enhances the activity of GABA, which is an inhibitory neurotransmitter.",
+      "lessonExcerpt": "**Gamma-Aminobutyric Acid (GABA)** is the primary inhibitory neurotransmitter, involved in motor control, memory, mood, anxiety, arousal, and sleep. GABA essentially puts the brakes on neural activity:",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 21
@@ -205,52 +205,10 @@
       "quality_comment": "The question effectively tests understanding of action potentials and their relationship to stimulus intensity.",
       "suggestedLesson": "1-neurons-and-neurotransmitters",
       "suggestedParagraph": "## How Information Travels Within a Neuron",
-      "lessonExcerpt": "The magnitude of an action potential is constant regardless of stimulus intensity.",
+      "lessonExcerpt": "Reality: Action potentials are all-or-none. Stimulus intensity is encoded by firing *frequency* and the *number* of neurons firing, not by action potential intensity. This is fundamental to understanding neural coding.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 8
-    },
-    {
-      "stem": "Which of the following best describes the role of genetic coding in behavior and cognition?",
-      "options": [
-        "Genetic coding solely determines intelligence and personality traits.",
-        "Genetic coding has no influence on behavior or cognition.",
-        "Genetic coding interacts with environmental factors to shape behavior and cognition.",
-        "Genetic coding only affects physical traits, not cognitive abilities."
-      ],
-      "answer": "Genetic coding interacts with environmental factors to shape behavior and cognition.",
-      "explanation": "The correct answer highlights the interaction between genetic coding and environmental influences, which is crucial in understanding behavioral genetics. The other options either overstate or understate the role of genetics in behavior and cognition.",
-      "kn": "KN1",
-      "kn_explanation": "This KN code applies as it pertains to the biological bases of behavior, particularly in behavioral genetics.",
-      "difficulty": "medium",
-      "quality_comment": "The question is well-structured and tests understanding of the complex relationship between genetics and behavior.",
-      "suggestedLesson": "1-neurons-and-neurotransmitters",
-      "suggestedParagraph": "## The Nervous System: Your Body's Information Network",
-      "lessonExcerpt": "Genetic coding interacts with environmental factors to shape behavior and cognition.",
-      "needsReview": false,
-      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 12
-    },
-    {
-      "stem": "What is the primary mechanism by which L-Dopa alleviates symptoms of Parkinson's disease?",
-      "options": [
-        "It increases serotonin levels in the brain.",
-        "It enhances dopamine production in the brain.",
-        "It blocks acetylcholine receptors.",
-        "It reduces glutamate activity."
-      ],
-      "answer": "It enhances dopamine production in the brain.",
-      "explanation": "L-Dopa is a precursor to dopamine and is used in Parkinson's disease treatment to increase dopamine levels, which are deficient in patients. The other options do not accurately describe L-Dopa's mechanism of action. Serotonin, acetylcholine, and glutamate are not the primary targets of L-Dopa treatment.",
-      "kn": "KN1",
-      "kn_explanation": "This KN code applies as it relates to the biological bases of behavior, specifically neurotransmitter systems involved in movement disorders.",
-      "difficulty": "hard",
-      "quality_comment": "High-quality question that tests specific knowledge of pharmacological treatment mechanisms.",
-      "suggestedLesson": "1-neurons-and-neurotransmitters",
-      "suggestedParagraph": "## Neurotransmitter Systems",
-      "lessonExcerpt": "L-Dopa is a precursor to dopamine and is used in Parkinson's disease treatment to increase dopamine levels.",
-      "needsReview": false,
-      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 21
     },
     {
       "stem": "A psychopharmacologist teaching a continuing education course explains that a single monoamine neurotransmitter plays a dual role in promoting slow-wave sleep and regulating mood, which is why disruptions to this system are implicated in both insomnia and major depressive disorder, and why medications that potentiate this system are used to treat both conditions. Which neurotransmitter is most likely being described?",
@@ -268,7 +226,7 @@
       "quality_comment": "Tests knowledge of serotonin's pleiotropic functions beyond mood alone; the sleep angle elevates difficulty beyond standard neurotransmitter recall.",
       "suggestedLesson": "1-neurons-and-neurotransmitters",
       "suggestedParagraph": "## Neurotransmitter Systems",
-      "lessonExcerpt": "[Serotonin's dual involvement in slow-wave sleep regulation and mood is covered in the neurotransmitter systems section — full content extends beyond the provided excerpt]",
+      "lessonExcerpt": "- **Major neurotransmitters and their clinical associations**: Dopamine (movement, reward, Parkinson's, schizophrenia), acetylcholine (memory, movement, Alzheimer's), glutamate (excitatory, excitotoxicity), norepinephrine (arousal, mood), serotonin (mood, appetite, anxiety), and GABA (inhibitory, an",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 6
@@ -289,7 +247,7 @@
       "quality_comment": "Important neurotransmitter-to-disorder mapping question; options include plausible distractors with accurate partial explanations to elevate difficulty",
       "suggestedLesson": "1-neurons-and-neurotransmitters",
       "suggestedParagraph": "## Neurotransmitter Systems",
-      "lessonExcerpt": "Neurotransmitter function underlies nearly every question about medication effects, substance use disorders, and neurological conditions you'll encounter on the exam.",
+      "lessonExcerpt": "- **Major neurotransmitters and their clinical associations**: Dopamine (movement, reward, Parkinson's, schizophrenia), acetylcholine (memory, movement, Alzheimer's), glutamate (excitatory, excitotoxicity), norepinephrine (arousal, mood), serotonin (mood, appetite, anxiety), and GABA (inhibitory, an",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 12
@@ -328,7 +286,10 @@
       "kn": "KN1",
       "kn_explanation": "This question assesses knowledge about structural and functional aspects of the nervous system, which falls under biological bases of behavior (KN1).",
       "difficulty": "easy",
-      "quality_comment": "The question is straightforward with clear, plausible distractors and tests fundamental knowledge appropriate for the EPPP."
+      "quality_comment": "The question is straightforward with clear, plausible distractors and tests fundamental knowledge appropriate for the EPPP.",
+      "lessonExcerpt": "**The Autonomic Nervous System (ANS)** manages the involuntary functions that keep you alive without conscious effort. Heart rate, digestion, breathing rate, and glandular activity. It communicates between smooth muscles, organs, and the CNS.",
+      "suggestedLesson": "1-neurons-and-neurotransmitters",
+      "needsReview": false
     },
     {
       "stem": "During the fight-or-flight response, which of the following physiological changes is primarily mediated by the sympathetic nervous system?",
@@ -343,7 +304,10 @@
       "kn": "KN1",
       "kn_explanation": "The item focuses on autonomic nervous system functions, specifically sympathetic responses, relating to biological bases of behavior (KN1).",
       "difficulty": "medium",
-      "quality_comment": "Options are reasonably balanced, and the question clearly assesses physiological responses controlled by the sympathetic nervous system."
+      "quality_comment": "Options are reasonably balanced, and the question clearly assesses physiological responses controlled by the sympathetic nervous system.",
+      "lessonExcerpt": "**The Autonomic Nervous System (ANS)** manages the involuntary functions that keep you alive without conscious effort. Heart rate, digestion, breathing rate, and glandular activity. It communicates between smooth muscles, organs, and the CNS.",
+      "suggestedLesson": "1-neurons-and-neurotransmitters",
+      "needsReview": false
     },
     {
       "stem": "Which component of a neuron is responsible for receiving chemical signals from other neurons?",
@@ -358,7 +322,10 @@
       "kn": "KN1",
       "kn_explanation": "Identifying neuron structure and function is fundamental to understanding biological bases of behavior (KN1).",
       "difficulty": "easy",
-      "quality_comment": "The distractors are plausible neuron components, making the question clear and appropriate for basic foundational testing."
+      "quality_comment": "The distractors are plausible neuron components, making the question clear and appropriate for basic foundational testing.",
+      "lessonExcerpt": "Your pupils dilate (better vision), heart rate increases (more blood flow), respiration quickens (more oxygen), you start sweating (cooling system activated), and digestion slows down (resources redirected to muscles).",
+      "suggestedLesson": "1-neurons-and-neurotransmitters",
+      "needsReview": false
     },
     {
       "stem": "What best describes an action potential in neuronal conduction?",
@@ -373,7 +340,10 @@
       "kn": "KN1",
       "kn_explanation": "This question addresses neurophysiological processes essential to the biological bases of behavior (KN1).",
       "difficulty": "medium",
-      "quality_comment": "The distractors are scientifically plausible but clearly distinct, allowing accurate assessment of action potential knowledge."
+      "quality_comment": "The distractors are scientifically plausible but clearly distinct, allowing accurate assessment of action potential knowledge.",
+      "lessonExcerpt": "**Conduction within neurons** starts when dendrites receive sufficient stimulation.",
+      "suggestedLesson": "1-neurons-and-neurotransmitters",
+      "needsReview": false
     },
     {
       "stem": "Which statement best describes the role of neurotransmitters during synaptic transmission?",
@@ -388,7 +358,10 @@
       "kn": "KN1",
       "kn_explanation": "This question targets understanding of chemical communication between neurons, a key neurobiological concept (KN1).",
       "difficulty": "easy",
-      "quality_comment": "Clear and concise wording with suitable distractors makes this question effective for assessing synaptic mechanisms."
+      "quality_comment": "Clear and concise wording with suitable distractors makes this question effective for assessing synaptic mechanisms.",
+      "lessonExcerpt": "When this depolarization reaches a minimum threshold, complete depolarization occurs, triggering an **action potential**, an electrical impulse that travels down the axon. After firing, the neuron returns to its resting state and prepares to fire again.",
+      "suggestedLesson": "1-neurons-and-neurotransmitters",
+      "needsReview": false
     },
     {
       "stem": "Which type of neuroplasticity involves the reassignment of a brain area to process a different sensory modality after deprivation of its usual input?",
@@ -403,7 +376,10 @@
       "kn": "KN1",
       "kn_explanation": "This question focuses on neuroplasticity types and brain functional adaptation within biological bases (KN1).",
       "difficulty": "medium",
-      "quality_comment": "The answer choices reflect distinct types of neuroplasticity, challenging the test-taker to apply knowledge precisely."
+      "quality_comment": "The answer choices reflect distinct types of neuroplasticity, challenging the test-taker to apply knowledge precisely.",
+      "lessonExcerpt": "**Conventional neurotransmitters** are stored in small sacs called synaptic vesicles, released when action potentials arrive, and activate postsynaptic receptors. This category includes:",
+      "suggestedLesson": "1-neurons-and-neurotransmitters",
+      "needsReview": false
     },
     {
       "stem": "Which neurotransmitter is involved in motor control, reward, mood, and is implicated in disorders such as Parkinson’s disease, ADHD, and schizophrenia?",
@@ -418,7 +394,10 @@
       "kn": "KN1",
       "kn_explanation": "The question assesses knowledge of neurotransmitter functions and their relevance to neurobehavioral disorders (KN1).",
       "difficulty": "medium",
-      "quality_comment": "Clear distractors are other major neurotransmitters, making this a well-constructed and relevant item."
+      "quality_comment": "Clear distractors are other major neurotransmitters, making this a well-constructed and relevant item.",
+      "lessonExcerpt": "- **Neuroplasticity continues throughout life** and includes homologous area adaptation, cross-modal reassignment, map expansion, and compensatory masquerade.",
+      "suggestedLesson": "1-neurons-and-neurotransmitters",
+      "needsReview": false
     },
     {
       "stem": "What is the primary role of acetylcholine (ACh) at the neuromuscular junction?",
@@ -433,7 +412,10 @@
       "kn": "KN1",
       "kn_explanation": "Testing understanding of neurotransmitter function relevant to motor systems fits the biological bases domain (KN1).",
       "difficulty": "easy",
-      "quality_comment": "Distractors are related concepts but only one fits the neuromuscular function, making this item clear and valid."
+      "quality_comment": "Distractors are related concepts but only one fits the neuromuscular function, making this item clear and valid.",
+      "lessonExcerpt": "- **Major neurotransmitters and their clinical associations**: Dopamine (movement, reward, Parkinson's, schizophrenia), acetylcholine (memory, movement, Alzheimer's), glutamate (excitatory, excitotoxicity), norepinephrine (arousal, mood), serotonin (mood, appetite, anxiety), and GABA (inhibitory, an",
+      "suggestedLesson": "1-neurons-and-neurotransmitters",
+      "needsReview": false
     },
     {
       "stem": "Gamma-aminobutyric acid (GABA) primarily functions as which of the following in the nervous system?",
@@ -448,7 +430,10 @@
       "kn": "KN1",
       "kn_explanation": "This item examines neurotransmitter action and its behavioral effects within biological bases of behavior (KN1).",
       "difficulty": "medium",
-      "quality_comment": "Distractors are plausible but inaccurate, allowing clear discrimination of GABA’s inhibitory role."
+      "quality_comment": "Distractors are plausible but inaccurate, allowing clear discrimination of GABA’s inhibitory role.",
+      "lessonExcerpt": "**Nicotinic** | ACh and nicotine | Rapid communication | CNS, PNS, neuromuscular junctions, autonomic ganglia | Excitatory (muscle contraction)",
+      "suggestedLesson": "1-neurons-and-neurotransmitters",
+      "needsReview": false
     },
     {
       "stem": "Which description best fits a partial agonist drug in relation to neurotransmitter receptors?",
@@ -463,7 +448,10 @@
       "kn": "KN1",
       "kn_explanation": "This question is best aligned with KN1 because it tests Functional correlates and determinants of the neurobiological and genetic bases of behavior pertaining to perception, cognition, personality, and mood and affect in normal, acute and chronic neurobehavioral disease processes and disease, comorbidities.",
       "difficulty": "medium",
-      "quality_comment": "Distractors are well constructed to reflect other pharmacological concepts, making the item a solid test of drug action knowledge."
+      "quality_comment": "Distractors are well constructed to reflect other pharmacological concepts, making the item a solid test of drug action knowledge.",
+      "lessonExcerpt": "**Gamma-Aminobutyric Acid (GABA)** is the primary inhibitory neurotransmitter, involved in motor control, memory, mood, anxiety, arousal, and sleep. GABA essentially puts the brakes on neural activity:",
+      "suggestedLesson": "1-neurons-and-neurotransmitters",
+      "needsReview": false
     },
     {
       "stem": "Which neurotransmitter's deficiency is associated with depression according to the catecholamine hypothesis?",
@@ -478,7 +466,10 @@
       "kn": "KN1",
       "kn_explanation": "Assessing neurotransmitter hypotheses in mood disorders falls under biological bases of behavior and psychopharmacology (KN1).",
       "difficulty": "medium",
-      "quality_comment": "Distractors are other well-known neurotransmitters, increasing the item’s clinical relevance and discriminability."
+      "quality_comment": "Distractors are other well-known neurotransmitters, increasing the item’s clinical relevance and discriminability.",
+      "lessonExcerpt": "**Conventional neurotransmitters** are stored in small sacs called synaptic vesicles, released when action potentials arrive, and activate postsynaptic receptors. This category includes:",
+      "suggestedLesson": "1-neurons-and-neurotransmitters",
+      "needsReview": false
     },
     {
       "stem": "Which statement accurately describes how the resting state of a neuron is maintained before stimulation?",
@@ -493,7 +484,10 @@
       "kn": "KN1",
       "kn_explanation": "This question assesses basic neurophysiological mechanisms crucial to the biological bases of behavior (KN1).",
       "difficulty": "medium",
-      "quality_comment": "Distractors are presented in a scientifically plausible manner, requiring test-takers to apply knowledge of neurobiology."
+      "quality_comment": "Distractors are presented in a scientifically plausible manner, requiring test-takers to apply knowledge of neurobiology.",
+      "lessonExcerpt": "It's essential for the sympathetic fight-or-flight response and involved in attention, arousal, sleep, memory, and mood. The catecholamine hypothesis proposes that some forms of depression result from not enough norepinephrine (deficiency), while mania stems from norepinephrine excess.",
+      "suggestedLesson": "1-neurons-and-neurotransmitters",
+      "needsReview": false
     },
     {
       "stem": "Which neurotransmitter is characterized as an unconventional neurotransmitter that is synthesized on demand and involved in regulating pain, memory, appetite, and sleep?",
@@ -508,7 +502,10 @@
       "kn": "KN1",
       "kn_explanation": "This question is best aligned with KN1 because it tests Functional correlates and determinants of the neurobiological and genetic bases of behavior pertaining to perception, cognition, personality, and mood and affect in normal, acute and chronic neurobehavioral disease processes and disease, comorbidities.",
       "difficulty": "medium",
-      "quality_comment": "The item is clear and differentiated by including both conventional and unconventional neurotransmitters as options, enhancing discrimination."
+      "quality_comment": "The item is clear and differentiated by including both conventional and unconventional neurotransmitters as options, enhancing discrimination.",
+      "lessonExcerpt": "Negatively charged inside relative to outside, {{M}}like a battery waiting to discharge{{/M}}. When stimulation reaches the dendrites, channels in the cell membrane open, allowing positively charged sodium ions to rush inside. This makes the cell less negative (depolarization).",
+      "suggestedLesson": "1-neurons-and-neurotransmitters",
+      "needsReview": false
     },
     {
       "stem": "Which neuroplasticity process refers to the recruitment of neurons from the borders of a functioning cortical region due to practice or exercise?",
@@ -523,7 +520,10 @@
       "kn": "KN1",
       "kn_explanation": "This question is best aligned with KN1 because it tests Functional correlates and determinants of the neurobiological and genetic bases of behavior pertaining to perception, cognition, personality, and mood and affect in normal, acute and chronic neurobehavioral disease processes and disease, comorbidities.",
       "difficulty": "medium",
-      "quality_comment": "The answer options represent distinct neuroplasticity types, allowing assessment of precise conceptual knowledge."
+      "quality_comment": "The answer options represent distinct neuroplasticity types, allowing assessment of precise conceptual knowledge.",
+      "lessonExcerpt": "**Unconventional neurotransmitters** aren't stored in vesicles but are made on demand. They can be released from various locations in the neuron and sometimes travel backward from postsynaptic to presynaptic neurons. The **endocannabinoids** belong to this category.",
+      "suggestedLesson": "1-neurons-and-neurotransmitters",
+      "needsReview": false
     },
     {
       "stem": "Which neurotransmitter receptor type mediates rapid excitatory neurotransmission at the neuromuscular junction and responds to both acetylcholine and nicotine?",
@@ -538,7 +538,10 @@
       "kn": "KN1",
       "kn_explanation": "This question focuses on receptor subtypes of neurotransmitters, relevant to neurochemical signaling knowledge (KN1).",
       "difficulty": "medium",
-      "quality_comment": "Distractors are plausible receptor types making the test-taker apply specific knowledge about receptor function."
+      "quality_comment": "Distractors are plausible receptor types making the test-taker apply specific knowledge about receptor function.",
+      "lessonExcerpt": "- **Neuroplasticity continues throughout life** and includes homologous area adaptation, cross-modal reassignment, map expansion, and compensatory masquerade.",
+      "suggestedLesson": "1-neurons-and-neurotransmitters",
+      "needsReview": false
     },
     {
       "stem": "Which of the following actions is primarily regulated by the sympathetic nervous system during a stressful situation?",
@@ -558,7 +561,10 @@
       "lock_in_level": "easier",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "**Nicotinic** | ACh and nicotine | Rapid communication | CNS, PNS, neuromuscular junctions, autonomic ganglia | Excitatory (muscle contraction)",
+      "suggestedLesson": "1-neurons-and-neurotransmitters",
+      "needsReview": false
     },
     {
       "stem": "In response to a perceived threat, which physiological response is NOT typically associated with the activation of the sympathetic nervous system?",
@@ -578,7 +584,10 @@
       "lock_in_level": "harder",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "Your pupils dilate (better vision), heart rate increases (more blood flow), respiration quickens (more oxygen), you start sweating (cooling system activated), and digestion slows down (resources redirected to muscles).",
+      "suggestedLesson": "1-neurons-and-neurotransmitters",
+      "needsReview": false
     }
   ]
 }

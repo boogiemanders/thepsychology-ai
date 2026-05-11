@@ -37,7 +37,7 @@
       "quality_comment": "Good clinical vignette. However, the lesson content on caffeine intoxication is minimal—it only notes caffeine 'can cause intoxication' without listing specific symptoms. The specific symptoms used in this question are based on DSM-5-TR criteria rather than lesson content.",
       "suggestedLesson": "5-substance-misuse",
       "suggestedParagraph": "## The Big Picture: Two Categories, Ten Substances",
-      "lessonExcerpt": "Caffeine can cause intoxication and withdrawal but doesn't have a recognized use disorder in DSM-5-TR. It's the exception in the substance categories.",
+      "lessonExcerpt": "We're talking about intoxication, withdrawal, and other mental disorders directly caused by substances (like substance-induced depression or anxiety). **Substance-Use Disorders** are the ongoing patterns.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 10
@@ -58,7 +58,7 @@
       "quality_comment": "Straightforward but clinically important vignette; distractors test ability to apply substance-exclusion rules in GAD and to distinguish intoxication from episodic mood disorder.",
       "suggestedLesson": "5-substance-misuse",
       "suggestedParagraph": "## Caffeine-Related Disorders",
-      "lessonExcerpt": "",
+      "lessonExcerpt": "Alcohol Intoxication** is what most people call being drunk, but the clinical diagnosis requires specific criteria. You need problematic behavioral or psychological changes (inappropriate sexual or aggressive behavior, mood swings, poor judgment) plus at least one physical sign: slurred speech, poor coordination, unsteady walking, nystagmus (involuntary eye movements), problems with attention or memory, or stupor/coma.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 10
@@ -76,7 +76,9 @@
       "kn": "KN36",
       "kn_explanation": "This question tests understanding of diagnostic criteria and classification systems relevant to substance use disorders, aligned with diagnostic frameworks (KN36).",
       "difficulty": "easy",
-      "quality_comment": "Clear stem and well-defined options, with distractors plausible but incorrect, ideal for foundational knowledge assessment."
+      "quality_comment": "Clear stem and well-defined options, with distractors plausible but incorrect, ideal for foundational knowledge assessment.",
+      "lessonExcerpt": "**Substance-Use Disorders** are the ongoing patterns. ... The pattern continues for at least 12 months and involves at least two symptoms from a list of criteria.",
+      "needsReview": false
     },
     {
       "stem": "Which symptom is NOT one of the criteria for Alcohol Intoxication in DSM-5-TR?",
@@ -91,7 +93,9 @@
       "kn": "KN36",
       "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
       "difficulty": "medium",
-      "quality_comment": "Good focus on differential diagnosis with strong distractors from related substance intoxications, enhancing discrimination."
+      "quality_comment": "Good focus on differential diagnosis with strong distractors from related substance intoxications, enhancing discrimination.",
+      "lessonExcerpt": "**Alcohol Intoxication** ... plus at least one physical sign: slurred speech, poor coordination, unsteady walking, nystagmus (involuntary eye movements), problems with attention or memory, or stupor/coma.",
+      "needsReview": false
     },
     {
       "stem": "Korsakoff syndrome, associated with alcohol use, is characterized clinically by:",
@@ -106,7 +110,9 @@
       "kn": "KN33",
       "kn_explanation": "This question is best aligned with KN33 because it tests Issues of differential diagnosis and integration of non-psychological information into psychological assessment.",
       "difficulty": "medium",
-      "quality_comment": "Options include symptoms from other alcohol-related disorders, providing strong distractors; question tests clinical knowledge of neurological sequelae."
+      "quality_comment": "Options include symptoms from other alcohol-related disorders, providing strong distractors; question tests clinical knowledge of neurological sequelae.",
+      "lessonExcerpt": "**Korsakoff syndrome**. This one's caused by thiamine deficiency (vitamin B1) and involves severe memory problems (both anterograde (can't form new memories) and retrograde (can't recall old memories). People with Korsakoff syndrome often confabulate",
+      "needsReview": false
     },
     {
       "stem": "Which of the following symptoms is required for the diagnosis of Opioid Intoxication?",
@@ -121,7 +127,9 @@
       "kn": "KN36",
       "kn_explanation": "Focus on diagnostic symptomatology of opioid intoxication reflects understanding of classification criteria (KN36).",
       "difficulty": "medium",
-      "quality_comment": "Distractors include symptoms of other substances' intoxication or withdrawal, appropriately challenging test-takers."
+      "quality_comment": "Distractors include symptoms of other substances' intoxication or withdrawal, appropriately challenging test-takers.",
+      "lessonExcerpt": "**Opioid Intoxication** involves problematic behavioral or psychological changes ... plus pupillary constriction (pinpoint pupils ... and at least one of: drowsiness or coma, slurred speech, or impaired attention/memory.",
+      "needsReview": false
     },
     {
       "stem": "Which of the following interventions focuses primarily on arranging an individual’s lifestyle so that healthy, drug-free living is more rewarding than substance use?",
@@ -136,7 +144,9 @@
       "kn": "KN33",
       "kn_explanation": "This question is best aligned with KN33 because it tests Issues of differential diagnosis and integration of non-psychological information into psychological assessment.",
       "difficulty": "medium",
-      "quality_comment": "Distractors are all relevant substance use interventions, which requires discrimination and understanding different treatment foci."
+      "quality_comment": "Distractors are all relevant substance use interventions, which requires discrimination and understanding different treatment foci.",
+      "lessonExcerpt": "CRA is based on operant conditioning principles. The core idea: Make healthy, drug-free living more rewarding than substance use.",
+      "needsReview": false
     },
     {
       "stem": "Voucher-Based Reinforcement Therapy (VBRT) primarily utilizes which behavioral principle to promote abstinence?",
@@ -151,7 +161,9 @@
       "kn": "KN33",
       "kn_explanation": "This question is best aligned with KN33 because it tests Issues of differential diagnosis and integration of non-psychological information into psychological assessment.",
       "difficulty": "medium",
-      "quality_comment": "Options represent varied intervention strategies, compelling the examinee to know the core principle of VBRT."
+      "quality_comment": "Options represent varied intervention strategies, compelling the examinee to know the core principle of VBRT.",
+      "lessonExcerpt": "This is contingency management in action. Clients receive vouchers they can exchange for goods and services when they meet treatment goals.",
+      "needsReview": false
     },
     {
       "stem": "Personalized Normative Feedback (PNF) reduces problematic substance use primarily by:",
@@ -166,7 +178,9 @@
       "kn": "KN33",
       "kn_explanation": "This question is best aligned with KN33 because it tests Issues of differential diagnosis and integration of non-psychological information into psychological assessment.",
       "difficulty": "easy",
-      "quality_comment": "Distractors are plausible but clearly different interventions, enabling assessment of conceptual understanding."
+      "quality_comment": "Distractors are plausible but clearly different interventions, enabling assessment of conceptual understanding.",
+      "lessonExcerpt": "Here's the assumption behind PNF: People overestimate how much others use substances, and this misperception influences their own use. Correct the misperception, and behavior should change.",
+      "needsReview": false
     },
     {
       "stem": "Relapse Prevention Therapy (RPT) conceptualizes a lapse in substance use as most likely to become a full relapse when the individual:",
@@ -181,7 +195,9 @@
       "kn": "KN33",
       "kn_explanation": "This question is best aligned with KN33 because it tests Issues of differential diagnosis and integration of non-psychological information into psychological assessment.",
       "difficulty": "medium",
-      "quality_comment": "Distractors describe elements from other treatments making the question a solid test of RPT-specific conceptual knowledge."
+      "quality_comment": "Distractors describe elements from other treatments making the question a solid test of RPT-specific conceptual knowledge.",
+      "lessonExcerpt": "A lapse is most likely to become a full relapse when someone has poor coping skills, low self-efficacy, high expectations about positive substance effects, and experiences an \"abstinence violation effect.\"",
+      "needsReview": false
     },
     {
       "stem": "Which of the following characterizes Tobacco Withdrawal according to the DSM-5-TR?",
@@ -196,7 +212,9 @@
       "kn": "KN36",
       "kn_explanation": "This question tests criteria related to substance withdrawal syndromes for accurate diagnosis (KN36).",
       "difficulty": "medium",
-      "quality_comment": "Distractors include symptoms diagnostic for other substances, enhancing item plausibility and preventing cueing."
+      "quality_comment": "Distractors include symptoms diagnostic for other substances, enhancing item plausibility and preventing cueing.",
+      "lessonExcerpt": "**Tobacco Withdrawal** requires at least four of seven symptoms developing within 24 hours of stopping or reducing tobacco use: irritability, anger or anxiety, impaired concentration, increased appetite, restlessness, depressed mood, or insomnia.",
+      "needsReview": false
     },
     {
       "stem": "In Project MATCH, which treatment showed a slight advantage in reducing drinking in clients diagnosed with alcohol dependence or abuse at one- and three-year follow-up?",
@@ -211,7 +229,9 @@
       "kn": "KN40",
       "kn_explanation": "This question is best aligned with KN40 because it tests Measurement of outcomes and changes due to prevention or intervention efforts with individuals, couples, families, groups, and organizations.",
       "difficulty": "medium",
-      "quality_comment": "Options include well-known treatments in the field; this item requires recall of specific research findings, suitable for EPPP context."
+      "quality_comment": "Options include well-known treatments in the field; this item requires recall of specific research findings, suitable for EPPP context.",
+      "lessonExcerpt": "Results: All three treatments significantly reduced drinking at one-year and three-year follow-ups, with twelve-step facilitation having a slight edge.",
+      "needsReview": false
     },
     {
       "stem": "Hallucinogen Persisting Perception Disorder is best described as:",
@@ -226,7 +246,9 @@
       "kn": "KN36",
       "kn_explanation": "Focuses on understanding diagnosis and symptom presentation of substance-induced disorders (KN36).",
       "difficulty": "medium",
-      "quality_comment": "Includes subtle distinctions related to psychotic symptoms and reality testing, requiring knowledge of diagnostic conceptualization."
+      "quality_comment": "Includes subtle distinctions related to psychotic symptoms and reality testing, requiring knowledge of diagnostic conceptualization.",
+      "lessonExcerpt": "After using LSD or other hallucinogens, some people re-experience perceptual symptoms days, weeks, months, or even years later. ... The key diagnostic feature: Reality testing remains intact.",
+      "needsReview": false
     },
     {
       "stem": "Which theoretical model underlies the Community Reinforcement Approach (CRA) to substance use treatment?",
@@ -241,7 +263,9 @@
       "kn": "KN33",
       "kn_explanation": "This question is best aligned with KN33 because it tests Issues of differential diagnosis and integration of non-psychological information into psychological assessment.",
       "difficulty": "medium",
-      "quality_comment": "The question introduces theoretical foundations, clearly distinct from existing items, with credible and comparable distractors."
+      "quality_comment": "The question introduces theoretical foundations, clearly distinct from existing items, with credible and comparable distractors.",
+      "lessonExcerpt": "CRA is based on operant conditioning principles. The core idea: Make healthy, drug-free living more rewarding than substance use.",
+      "needsReview": false
     },
     {
       "stem": "Which of the following cognitive biases is most relevant to relapse in substance use disorders as described in Relapse Prevention Therapy?",
@@ -256,7 +280,9 @@
       "kn": "KN33",
       "kn_explanation": "This question is best aligned with KN33 because it tests Issues of differential diagnosis and integration of non-psychological information into psychological assessment.",
       "difficulty": "medium",
-      "quality_comment": "The question adds nuanced content about cognitive biases impacting relapse, complementing existing treatment-focused items."
+      "quality_comment": "The question adds nuanced content about cognitive biases impacting relapse, complementing existing treatment-focused items.",
+      "lessonExcerpt": "experiences an \"abstinence violation effect.\" That's when someone has one drink after months of sobriety and thinks, \"I've completely failed. I'm a terrible person. I might as well keep drinking.\"",
+      "needsReview": false
     },
     {
       "stem": "How does text-message intervention support treatment for substance use disorders?",
@@ -271,7 +297,9 @@
       "kn": "KN33",
       "kn_explanation": "This question is best aligned with KN33 because it tests Issues of differential diagnosis and integration of non-psychological information into psychological assessment.",
       "difficulty": "easy",
-      "quality_comment": "This item introduces technology use in treatment complementing existing intervention questions without overlap."
+      "quality_comment": "This item introduces technology use in treatment complementing existing intervention questions without overlap.",
+      "lessonExcerpt": "Text messages serve four major functions in mental health treatment: appointment and medication reminders, health information, support, and self-monitoring tools.",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best summarizes the treatment outcome finding for combining therapy and medication in tobacco use disorder?",
@@ -286,7 +314,9 @@
       "kn": "KN40",
       "kn_explanation": "This question addresses measuring outcomes and changes due to intervention, highlighting evidence-based efficacy (KN40).",
       "difficulty": "medium",
-      "quality_comment": "A clear clinically relevant item about intervention efficacy that broadens assessment coverage in outcome measurement."
+      "quality_comment": "A clear clinically relevant item about intervention efficacy that broadens assessment coverage in outcome measurement.",
+      "lessonExcerpt": "text messaging plus other interventions produces better quit rates than those other interventions alone.",
+      "needsReview": false
     },
     {
       "stem": "Which symptom is NOT one of the criteria for Cannabis Intoxication in DSM-5-TR?",
@@ -306,7 +336,10 @@
       "lock_in_level": "easier",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "Opioid Intoxication** involves problematic behavioral or psychological changes (initial euphoria followed by apathy or dysphoria, impaired judgment) plus pupillary constriction (pinpoint pupils (this is a key sign) and at least one of: drowsiness or coma, slurred speech, or impaired attention/memory. Sometimes people experience perceptual disturbances) hallucinations with intact reality testing or illusions without delirium.",
+      "suggestedLesson": "5-substance-misuse",
+      "needsReview": false
     },
     {
       "stem": "Which of the following symptoms is NOT a criterion for Opioid Intoxication according to DSM-5-TR?",
@@ -326,7 +359,9 @@
       "lock_in_level": "harder",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "**Opioid Intoxication** involves problematic behavioral or psychological changes (initial euphoria followed by apathy or dysphoria, impaired judgment) plus pupillary constriction (pinpoint pupils ... and at least one of: drowsiness or coma, slurred speech, or impaired attention/memory.",
+      "needsReview": false
     }
   ]
 }

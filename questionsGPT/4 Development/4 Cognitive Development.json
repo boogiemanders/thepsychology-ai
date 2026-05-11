@@ -56,7 +56,7 @@
       "quality_comment": "Short vignette that distinguishes adolescent egocentrism subtypes without relying on copied stock examples.",
       "suggestedLesson": "4-cognitive-development",
       "suggestedParagraph": "### Piaget's Four Stages: The Essential Framework",
-      "lessonExcerpt": "Imaginary audience: Feeling like everyone's watching and judging you",
+      "lessonExcerpt": "Imaginary audience: Feeling like everyone's watching and judging you, like when you're convinced everyone at the meeting noticed your coffee stain when they probably didn't.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT"
     },
@@ -202,7 +202,7 @@
       "quality_comment": "Straightforward identification question linking animism to the correct Piagetian stage. Good foundational-level item.",
       "suggestedLesson": "4-cognitive-development",
       "suggestedParagraph": "### Piaget's Four Stages: The Essential Framework",
-      "lessonExcerpt": "Animism: Attributing life to inanimate objects",
+      "lessonExcerpt": "2. Preoperational Stage (2 to 7 years) ... Animism: Attributing life to inanimate objects",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 12
@@ -265,7 +265,7 @@
       "quality_comment": "The question effectively assesses knowledge of Piaget's theory and animistic thinking.",
       "suggestedLesson": "4-cognitive-development",
       "suggestedParagraph": "## Piaget's Constructivist Theory: The Active Builder",
-      "lessonExcerpt": "Children in the Preoperational Stage exhibit magical thinking and animism, attributing life to inanimate objects.",
+      "lessonExcerpt": "2. Preoperational Stage (2 to 7 years) ... Animism: Attributing life to inanimate objects",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 11
@@ -391,7 +391,7 @@
       "quality_comment": "The question is clear and tests knowledge of Piaget's cognitive development stages.",
       "suggestedLesson": "4-cognitive-development",
       "suggestedParagraph": "## Piaget's Constructivist Theory: The Active Builder",
-      "lessonExcerpt": "During the Concrete Operational Stage (7 to 12 years), children can now use logical operations.",
+      "lessonExcerpt": "3. Concrete Operational Stage (7 to 12 years) Children can now use logical operations. Mental activities that allow logical thinking about concrete situations.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 25
@@ -412,7 +412,7 @@
       "quality_comment": "The question is well-structured and targets a specific cognitive development milestone.",
       "suggestedLesson": "4-cognitive-development",
       "suggestedParagraph": "## The Big Three Theories You Need to Know",
-      "lessonExcerpt": "Theory of mind refers to the understanding that others have their own thoughts, beliefs, and feelings.",
+      "lessonExcerpt": "Theory of Mind (ToM) is the ability to attribute mental states (beliefs, desires, intentions) to others and use those attributions to predict behavior.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 2
@@ -538,7 +538,7 @@
       "quality_comment": "The question accurately assesses knowledge of cognitive development milestones.",
       "suggestedLesson": "4-cognitive-development",
       "suggestedParagraph": "## The Big Three Theories You Need to Know",
-      "lessonExcerpt": "Object permanence begins around 8-12 months.",
+      "lessonExcerpt": "Object permanence begins around 8-12 months (substage 4).",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 12
@@ -559,7 +559,7 @@
       "quality_comment": "The question accurately assesses knowledge of Piaget's stages of cognitive development.",
       "suggestedLesson": "4-cognitive-development",
       "suggestedParagraph": "## Piaget's Constructivist Theory: The Active Builder",
-      "lessonExcerpt": "During the Preoperational stage, children engage in symbolic play and develop representational thought.",
+      "lessonExcerpt": "2. Preoperational Stage (2 to 7 years) Representational thinking expands dramatically here. Children can think about the past and future, use language more complexly, and engage in sophisticated pretend play.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 16
@@ -580,7 +580,7 @@
       "quality_comment": "The question effectively assesses understanding of decalage in cognitive development.",
       "suggestedLesson": "4-cognitive-development",
       "suggestedParagraph": "## The Big Three Theories You Need to Know",
-      "lessonExcerpt": "Decalage refers to the uneven development of cognitive abilities.",
+      "lessonExcerpt": "Conservation skills emerge in a predictable sequence... This gradual emergence within a single stage is called horizontal decalage.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 24
@@ -641,9 +641,9 @@
       "kn_explanation": "This question is best aligned with KN28 because it tests Disorders and diseases that impact the expected course of development over the lifespan.",
       "difficulty": "hard",
       "quality_comment": "Clinically important question; requires distinguishing persistence from pervasiveness and knowing the evidence base for intervention.",
-      "suggestedLesson": "4-cognitive-development",
+      "suggestedLesson": "5-hiring-methods",
       "suggestedParagraph": "## Cognitive Development",
-      "lessonExcerpt": "N/A — specific reading disorder prognosis is not explicitly covered in the provided lesson excerpt.",
+      "lessonExcerpt": "There are two main approaches: compensatory and noncompensatory methods. ### Compensatory Methods: Balance Is Possible",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 14
@@ -662,9 +662,9 @@
       "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
       "difficulty": "medium",
       "quality_comment": "Well-constructed clinical vignette; distractors require distinguishing the two constructs rather than guessing based on surface features.",
-      "suggestedLesson": "4-cognitive-development",
+      "suggestedLesson": "5-cognitive-tests",
       "suggestedParagraph": "## Cognitive Development",
-      "lessonExcerpt": "N/A — fluid versus crystallized intelligence decline trajectory is not explicitly covered in the provided lesson excerpt.",
+      "lessonExcerpt": "Nonverbal tests typically emphasize fluid intelligence (reasoning with new information) while minimizing crystallized intelligence (learned knowledge). They're measuring different aspects of cognitive ability.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 16
@@ -703,7 +703,10 @@
       "kn": "KN23",
       "kn_explanation": "This question tests knowledge of Piaget’s constructivist theory, a major research-based developmental theory under KN23.",
       "difficulty": "easy",
-      "quality_comment": "The question clearly tests a fundamental Piagetian concept, with distractors that are related but distinct, supporting effective assessment of understanding."
+      "quality_comment": "The question clearly tests a fundamental Piagetian concept, with distractors that are related but distinct, supporting effective assessment of understanding.",
+      "lessonExcerpt": "Accommodation means changing your mental frameworks or creating new ones when the old ones don't work.",
+      "suggestedLesson": "4-cognitive-development",
+      "needsReview": false
     },
     {
       "stem": "In Piaget's sensorimotor substages, which substage is characterized by the development of object permanence and intentional goal-directed behavior?",
@@ -718,7 +721,10 @@
       "kn": "KN23",
       "kn_explanation": "This question focuses on developmental stages and their characteristics, aligned with major theories of development under KN23.",
       "difficulty": "medium",
-      "quality_comment": "The distractors represent other substages in the sensorimotor period, making this question moderately challenging but fair."
+      "quality_comment": "The distractors represent other substages in the sensorimotor period, making this question moderately challenging but fair.",
+      "lessonExcerpt": "| Coordination of Secondary Reactions | 8-12 months | Combines actions intentionally to reach goals |",
+      "suggestedLesson": "4-cognitive-development",
+      "needsReview": false
     },
     {
       "stem": "Which limitation of preoperational thought explains a child's difficulty understanding that the amount of liquid remains the same when poured into a differently shaped container?",
@@ -733,7 +739,10 @@
       "kn": "KN23",
       "kn_explanation": "Preoperational cognitive limitations are central concepts within developmental theory, classified under KN23.",
       "difficulty": "medium",
-      "quality_comment": "Distractors are plausible Piagetian terms, enhancing the quality and discriminative power of the question."
+      "quality_comment": "Distractors are plausible Piagetian terms, enhancing the quality and discriminative power of the question.",
+      "lessonExcerpt": "Centration: Focusing on one aspect while ignoring others - Irreversibility: Not understanding that actions can be undone",
+      "suggestedLesson": "4-cognitive-development",
+      "needsReview": false
     },
     {
       "stem": "According to Vygotsky's sociocultural theory, the 'zone of proximal development' refers to:",
@@ -748,7 +757,10 @@
       "kn": "KN23",
       "kn_explanation": "This concept is a central part of Vygotsky’s developmental theory, encompassing social and cultural influences on cognitive growth, relevant to KN23.",
       "difficulty": "easy",
-      "quality_comment": "The stem is concise and the distractors are related but incorrect definitions, making it straightforward for exam-level learners."
+      "quality_comment": "The stem is concise and the distractors are related but incorrect definitions, making it straightforward for exam-level learners.",
+      "lessonExcerpt": "Zone of Proximal Development (ZPD): The gap between what someone can do independently and what they can do with assistance.",
+      "suggestedLesson": "4-cognitive-development",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best describes the misinformation effect as it pertains to eyewitness testimony?",
@@ -763,7 +775,10 @@
       "kn": "KN23",
       "kn_explanation": "This question is best aligned with KN23 because it tests Major research-based theories and models of development.",
       "difficulty": "medium",
-      "quality_comment": "The choices include plausible memory-related concepts making it a well-constructed question testing important aspects of eyewitness reliability."
+      "quality_comment": "The choices include plausible memory-related concepts making it a well-constructed question testing important aspects of eyewitness reliability.",
+      "lessonExcerpt": "The misinformation effect occurs when memories get altered by subsequent exposure to misleading information.",
+      "suggestedLesson": "4-cognitive-development",
+      "needsReview": false
     },
     {
       "stem": "Which memory type is most likely to show significant decline as adults age?",
@@ -778,7 +793,10 @@
       "kn": "KN21",
       "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
       "difficulty": "medium",
-      "quality_comment": "Distractors are all legitimate memory types, making this question effective for distinguishing knowledge of age-related memory effects."
+      "quality_comment": "Distractors are all legitimate memory types, making this question effective for distinguishing knowledge of age-related memory effects.",
+      "lessonExcerpt": "| Recent long-term (secondary) memory | Greatest decline |",
+      "suggestedLesson": "4-cognitive-development",
+      "needsReview": false
     },
     {
       "stem": "In Piaget’s formal operational stage, which concept explains adolescents’ belief that they are the focus of everyone’s attention?",
@@ -793,7 +811,10 @@
       "kn": "KN23",
       "kn_explanation": "This question pertains to developmental theory focused on adolescence, corresponding to major research-based developmental models (KN23).",
       "difficulty": "easy",
-      "quality_comment": "Distractors are related developmental concepts, but only one specifically describes this egocentric belief, making it a clear and fair question."
+      "quality_comment": "Distractors are related developmental concepts, but only one specifically describes this egocentric belief, making it a clear and fair question.",
+      "lessonExcerpt": "Early formal operations bring renewed egocentrism: Imaginary audience: Feeling like everyone's watching and judging you",
+      "suggestedLesson": "4-cognitive-development",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best exemplifies private speech as described by Vygotsky?",
@@ -808,7 +829,10 @@
       "kn": "KN23",
       "kn_explanation": "This question is best aligned with KN23 because it tests Major research-based theories and models of development.",
       "difficulty": "medium",
-      "quality_comment": "The distractors contrast with the concept of private speech, helping to test precise understanding of Vygotsky’s theory."
+      "quality_comment": "The distractors contrast with the concept of private speech, helping to test precise understanding of Vygotsky’s theory.",
+      "lessonExcerpt": "Private speech is the verbal self-guidance children use aloud. Research confirms it's associated with better problem-solving and gradually becomes internal by age 7.",
+      "suggestedLesson": "4-cognitive-development",
+      "needsReview": false
     },
     {
       "stem": "Which of the following statements best describes 'horizontal decalage' in cognitive development?",
@@ -823,7 +847,10 @@
       "kn": "KN23",
       "kn_explanation": "This question tests knowledge of nuanced concepts within developmental stage theory, which falls under KN23.",
       "difficulty": "hard",
-      "quality_comment": "The distractors are related cognitive concepts, increasing the complexity and making it appropriate for higher-difficulty assessment."
+      "quality_comment": "The distractors are related cognitive concepts, increasing the complexity and making it appropriate for higher-difficulty assessment.",
+      "lessonExcerpt": "This gradual emergence within a single stage is called horizontal decalage.",
+      "suggestedLesson": "4-cognitive-development",
+      "needsReview": false
     },
     {
       "stem": "Which explanation for childhood amnesia emphasizes the role of language in encoding memories?",
@@ -838,7 +865,10 @@
       "kn": "KN21",
       "kn_explanation": "The question deals with normal cognitive development and memory processes across the lifespan, falling under growth and lifespan development (KN21).",
       "difficulty": "medium",
-      "quality_comment": "Distractors include plausible but inaccurate theories, making this a well-balanced question."
+      "quality_comment": "Distractors include plausible but inaccurate theories, making this a well-balanced question.",
+      "lessonExcerpt": "1. Language allows memory encoding, and very young children have limited language",
+      "suggestedLesson": "4-cognitive-development",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best describes the 'personal fable' in adolescent egocentrism?",
@@ -853,7 +883,10 @@
       "kn": "KN23",
       "kn_explanation": "This question focuses on adolescent cognitive development, especially egocentrism, a key concept in developmental theory under KN23.",
       "difficulty": "easy",
-      "quality_comment": "Distractors are plausible adolescent concepts but clearly distinct from the personal fable, making it an accessible question."
+      "quality_comment": "Distractors are plausible adolescent concepts but clearly distinct from the personal fable, making it an accessible question.",
+      "lessonExcerpt": "Personal fable: Believing you're uniquely special and invulnerable.",
+      "suggestedLesson": "4-cognitive-development",
+      "needsReview": false
     },
     {
       "stem": "Which cognitive ability involves evaluating the logic of verbal statements without needing concrete examples and typically develops during Piaget’s formal operational stage?",
@@ -868,7 +901,10 @@
       "kn": "KN23",
       "kn_explanation": "This question tests understanding of higher-level logical reasoning in development, categorized under developmental theories (KN23).",
       "difficulty": "medium",
-      "quality_comment": "The options contain related terms, requiring careful differentiation which enhances the question’s discriminative value."
+      "quality_comment": "The options contain related terms, requiring careful differentiation which enhances the question’s discriminative value.",
+      "lessonExcerpt": "Use propositional thought: evaluating logical statements without concrete examples",
+      "suggestedLesson": "4-cognitive-development",
+      "needsReview": false
     },
     {
       "stem": "Research on sex differences in cognitive abilities has consistently found which of the following patterns during adolescence?",
@@ -883,37 +919,10 @@
       "kn": "KN23",
       "kn_explanation": "This question is best aligned with KN23 because it tests Major research-based theories and models of development.",
       "difficulty": "medium",
-      "quality_comment": "The options are plausible but only one correctly states the consistent research findings, making it a quality question."
-    },
-    {
-      "stem": "In the context of diverse identities and development (KN24), which factor best demonstrates how cultural background influences cognitive developmental milestones?",
-      "options": [
-        "Children universally develop object permanence at the same age regardless of culture",
-        "Exposure to language and social interaction within a culture shapes the timing and nature of a child’s cognitive skills",
-        "Cognitive development is solely driven by biological maturation, independent of cultural experience",
-        "Culture has minimal impact on children’s acquisition of hypothetical-deductive reasoning"
-      ],
-      "answer": "Exposure to language and social interaction within a culture shapes the timing and nature of a child’s cognitive skills",
-      "explanation": "1. The correct answer, \"Exposure to language and social interaction within a culture shapes the timing and nature of a child’s cognitive skills,\" aligns with Vygotsky’s sociocultural theory, which emphasizes that cognitive development is influenced by social and cultural factors. According to Vygotsky, learning occurs first on an interpersonal level through interactions with others, which then facilitates cognitive development on an intrapersonal level. Thus, the cultural context in which a child is raised significantly impacts their cognitive milestones by providing the language and social experiences necessary for development.\n\n2. The option \"Children universally develop object permanence at the same age regardless of culture\" is incorrect because research indicates that the timing of cognitive milestones, such as object permanence, can vary based on cultural factors and experiences, contradicting the universality claim. The statement \"Cognitive development is solely driven by biological maturation, independent of cultural experience\" is wrong because it overlooks the critical role of cultural interactions and experiences in shaping cognitive skills, as highlighted by Vygotsky's theory. Lastly, the assertion \"Culture has minimal impact on children’s acquisition of hypothetical-deductive reasoning\" is incorrect, as cultural influences can significantly affect the development of reasoning skills, demonstrating that cognitive processes are not isolated from cultural context.",
-      "kn": "KN21",
-      "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
-      "difficulty": "medium",
-      "quality_comment": "The options test understanding of cultural impact on development, with distractors reflecting common misconceptions, supporting a well-targeted item."
-    },
-    {
-      "stem": "According to research on cognitive development and diverse identities (KN24), how can gender-role stereotypes affect children’s cognitive performance in domains such as math and verbal abilities?",
-      "options": [
-        "They have no effect on children’s cognitive performance as abilities are biologically predetermined",
-        "They contribute to self-fulfilling prophecies where children perform in line with expectations linked to gender roles",
-        "They only affect adults’ attitudes and do not influence children's cognitive skills",
-        "They enhance boys’ and girls’ abilities equally through positive reinforcement"
-      ],
-      "answer": "They contribute to self-fulfilling prophecies where children perform in line with expectations linked to gender roles",
-      "explanation": "1. The correct answer, \"They contribute to self-fulfilling prophecies where children perform in line with expectations linked to gender roles,\" reflects the impact of gender-role stereotypes on children's cognitive performance. Research indicates that these stereotypes can lead children to internalize expectations about their abilities, particularly in areas like math and verbal skills. For instance, parents may expect sons to excel in math and attribute their successes to innate ability, while daughters may be seen as needing to work harder for the same achievements, leading girls to underestimate their capabilities and become less interested in math.\n\n2. The first incorrect option, \"They have no effect on children’s cognitive performance as abilities are biologically predetermined,\" is wrong because research shows that cognitive abilities are influenced by both biological factors and social constructs, including gender-role stereotypes. The second incorrect option, \"They only affect adults’ attitudes and do not influence children's cognitive skills,\" is incorrect because studies demonstrate that these stereotypes directly impact children's self-perception and performance, not just adult attitudes. Lastly, the option \"They enhance boys’ and girls’ abilities equally through positive reinforcement\" is misleading, as the reinforcement often differs by gender, with boys receiving more encouragement in math and girls potentially receiving less, which can hinder their performance rather than enhance it.",
-      "kn": "KN24",
-      "kn_explanation": "This item targets KN24 by examining how diverse social identities and cultural stereotypes impact cognitive development outcomes across genders.",
-      "difficulty": "medium",
-      "quality_comment": "The question draws on well-established research, with distractors based on common myths, making it effective for assessing nuanced knowledge."
+      "quality_comment": "The options are plausible but only one correctly states the consistent research findings, making it a quality question.",
+      "lessonExcerpt": "| Verbal abilities | Girls score higher on speech fluency, reading, writing... | Visual-spatial abilities | Boys score higher, especially on mental rotation tasks |",
+      "suggestedLesson": "4-cognitive-development",
+      "needsReview": false
     },
     {
       "stem": "In which of Piaget's sensorimotor substages do infants begin to understand that objects continue to exist even when they cannot be seen?",
@@ -933,7 +942,10 @@
       "lock_in_level": "easier",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "These sex differences aren't purely biological. They reflect social and cultural factors, including gender-role stereotypes that create self-fulfilling prophecies.",
+      "suggestedLesson": "4-cognitive-development",
+      "needsReview": false
     },
     {
       "stem": "During which substage of Piaget's sensorimotor period do infants demonstrate the ability to combine actions to achieve a specific goal, reflecting an understanding of object permanence?",
@@ -953,7 +965,10 @@
       "lock_in_level": "harder",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "Object permanence begins around 8-12 months (substage 4).",
+      "suggestedLesson": "4-cognitive-development",
+      "needsReview": false
     }
   ]
 }

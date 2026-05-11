@@ -43,48 +43,6 @@
       "inspirationIndex": 7
     },
     {
-      "stem": "What aspect of a creativity exam is most closely related to its validity?",
-      "options": [
-        "The number of items on the test",
-        "The diversity of the test-takers",
-        "The alignment of test content with creative tasks",
-        "The time allowed for completion"
-      ],
-      "answer": "The alignment of test content with creative tasks",
-      "explanation": "The validity of a creativity exam is primarily determined by how well the test content aligns with actual creative tasks and processes. The other options do not directly influence the validity of the test.",
-      "kn": "KN29",
-      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively assesses understanding of test validity principles.",
-      "suggestedLesson": "5-iq-tests",
-      "suggestedParagraph": "## Understanding Intelligence: The Theoretical Foundation",
-      "lessonExcerpt": "The validity of a creativity exam is determined by the alignment of test content with creative tasks.",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 4
-    },
-    {
-      "stem": "What is a significant limitation of the WISC-IV when assessing gifted children?",
-      "options": [
-        "It does not measure verbal skills",
-        "It may underestimate abilities in nonverbal areas",
-        "It lacks cultural fairness",
-        "It is not suitable for children under age 6"
-      ],
-      "answer": "It may underestimate abilities in nonverbal areas",
-      "explanation": "The WISC-IV has been criticized for potentially underestimating the abilities of gifted children, particularly in nonverbal areas, due to its structure and scoring. The other options do not accurately reflect limitations of the WISC-IV.",
-      "kn": "KN32",
-      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
-      "difficulty": "hard",
-      "quality_comment": "The question is relevant and tests knowledge of the limitations of intelligence assessments.",
-      "suggestedLesson": "5-iq-tests",
-      "suggestedParagraph": "## Understanding Intelligence: The Theoretical Foundation",
-      "lessonExcerpt": "The WISC-IV may underestimate abilities in nonverbal areas when assessing gifted children.",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 7
-    },
-    {
       "stem": "What is the predictive validity of infant intelligence tests primarily concerned with?",
       "options": [
         "Their ability to forecast academic success in adulthood",
@@ -100,7 +58,7 @@
       "quality_comment": "The question is well-structured and tests understanding of predictive validity.",
       "suggestedLesson": "5-iq-tests",
       "suggestedParagraph": "## Understanding Intelligence: The Theoretical Foundation",
-      "lessonExcerpt": "The predictive validity of infant intelligence tests is primarily concerned with their ability to forecast academic success in adulthood.",
+      "lessonExcerpt": "Nonverbal Learning Disability (NVLD)** shows VCI significantly higher than PRI. These individuals have strong verbal abilities but struggle with visual-spatial tasks, math concepts, and reading nonverbal cues.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 9
@@ -119,9 +77,9 @@
       "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
       "difficulty": "hard",
       "quality_comment": "The question is well-structured and tests a critical understanding of test construction.",
-      "suggestedLesson": "5-iq-tests",
+      "suggestedLesson": "5-cognitive-tests",
       "suggestedParagraph": "## Understanding Intelligence: The Theoretical Foundation",
-      "lessonExcerpt": "Test validity is fundamentally about ensuring that the test accurately measures the construct it is intended to assess.",
+      "lessonExcerpt": "They don't. While tests like the FTII show predictive validity, infant assessment is better for identifying developmental delays than predicting exact future IQ scores.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 22
@@ -140,9 +98,9 @@
       "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
       "difficulty": "hard",
       "quality_comment": "The question is challenging and tests a nuanced understanding of intelligence theory.",
-      "suggestedLesson": "5-iq-tests",
+      "suggestedLesson": "5-what-tests-measure",
       "suggestedParagraph": "## Understanding Intelligence: The Theoretical Foundation",
-      "lessonExcerpt": "Fluid intelligence encompasses the ability to solve new problems and think abstractly.",
+      "lessonExcerpt": "**Fluid intelligence (Gf)** is your raw ability to solve new problems, see patterns, and think abstractly without relying on previous knowledge.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 24
@@ -163,7 +121,7 @@
       "quality_comment": "The question is relevant and tests understanding of reliability in test development.",
       "suggestedLesson": "5-iq-tests",
       "suggestedParagraph": "## Understanding Intelligence: The Theoretical Foundation",
-      "lessonExcerpt": "Standardizing test administration procedures is crucial for ensuring that tests yield consistent results.",
+      "lessonExcerpt": "**Fluid intelligence (Gf)** is your raw ability to solve new problems, see patterns, and think abstractly without relying on previous knowledge.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 26
@@ -182,7 +140,7 @@
       "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
       "difficulty": "medium",
       "quality_comment": "The question is straightforward and tests knowledge of delusional disorder types.",
-      "suggestedLesson": "5-iq-tests",
+      "suggestedLesson": "5-items-and-reliability",
       "suggestedParagraph": "## Understanding Intelligence: The Theoretical Foundation",
       "lessonExcerpt": "This matters tremendously for intellectual disability diagnoses.",
       "needsReview": false,
@@ -226,7 +184,7 @@
       "quality_comment": "The question accurately assesses knowledge of intelligence assessment tools for children.",
       "suggestedLesson": "5-iq-tests",
       "suggestedParagraph": "## Understanding Intelligence: The Theoretical Foundation",
-      "lessonExcerpt": "The lesson does not specifically cover verbal intelligence tests for children with disorders.",
+      "lessonExcerpt": "## Wechsler Intelligence Scale for Children, 5th Edition (WISC-V)\n\n### Structure\n\nThe WISC-V assesses children and adolescents ages 6-16",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 24
@@ -247,7 +205,7 @@
       "quality_comment": "The question accurately assesses knowledge of a specific intelligence test.",
       "suggestedLesson": "5-iq-tests",
       "suggestedParagraph": "## Understanding Intelligence: The Theoretical Foundation",
-      "lessonExcerpt": "The Primary Mental Abilities Test assesses specific cognitive abilities across multiple domains.",
+      "lessonExcerpt": "## Wechsler Intelligence Scale for Children, 5th Edition (WISC-V)\n\n### Structure\n\nThe WISC-V assesses children and adolescents ages 6-16",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 24
@@ -266,9 +224,9 @@
       "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
       "difficulty": "medium",
       "quality_comment": "Clear real-world vignette effectively differentiates criterion deficiency from the commonly confused criterion contamination. Distractors test precise conceptual distinctions appropriate for doctoral-level assessment.",
-      "suggestedLesson": "5-iq-tests",
+      "suggestedLesson": "5-mmpi",
       "suggestedParagraph": "## Validity and Test Development Concepts",
-      "lessonExcerpt": "NOT COVERED: The provided lesson files do not explicitly address criterion deficiency as a psychometric concept. While empirical criterion keying is mentioned in 5-career-interests.md and 5-mmpi.md, the specific distinction between criterion deficiency and criterion contamination is not covered. A psychometrics or test construction lesson should include this content.",
+      "lessonExcerpt": "Neurotic Triad (1-2-3 elevation)** When scales 1 (Hypochondriasis), 2 (Depression), and 3 (Hysteria) are all elevated together, you're looking at someone experiencing significant distress across multiple domains. These individuals struggle with depression, physical complaints, work problems, relationship issues, and general life dissatisfaction.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 22
@@ -286,7 +244,10 @@
       "kn": "KN29",
       "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
       "difficulty": "medium",
-      "quality_comment": "The distractors are plausible and based on reversed or incorrect age and intelligence type pairings, requiring careful knowledge of the theory."
+      "quality_comment": "The distractors are plausible and based on reversed or incorrect age and intelligence type pairings, requiring careful knowledge of the theory.",
+      "lessonExcerpt": "**Criterion deficiency** occurs when our measure misses important aspects of performance.",
+      "suggestedLesson": "5-6-evaluating-jobs",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best describes the hierarchical levels in Carroll's Three-Stratum Theory of intelligence?",
@@ -301,7 +262,10 @@
       "kn": "KN29",
       "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
       "difficulty": "hard",
-      "quality_comment": "Options are structured similarly but contain subtle reversals in the order of strata, requiring detailed knowledge; well-designed for EPPP difficulty."
+      "quality_comment": "Options are structured similarly but contain subtle reversals in the order of strata, requiring detailed knowledge; well-designed for EPPP difficulty.",
+      "lessonExcerpt": "Fluid intelligence peaks relatively early (around 30-40 years) and starts declining. Crystallized intelligence, however, keeps growing until around 60-70 years.",
+      "suggestedLesson": "5-iq-tests",
+      "needsReview": false
     },
     {
       "stem": "The Cattell-Horn-Carroll (CHC) theory has most influenced the development and revision of which intelligence test?",
@@ -316,7 +280,10 @@
       "kn": "KN32",
       "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
       "difficulty": "medium",
-      "quality_comment": "Distractors are credible alternate intelligence tests, making the correct answer plausible yet distinguished by careful recall."
+      "quality_comment": "Distractors are credible alternate intelligence tests, making the correct answer plausible yet distinguished by careful recall.",
+      "lessonExcerpt": "Carroll organized intelligence into three levels:\n- **Stratum III**: General intelligence (g) at the top\n- **Stratum II**: Eight broad abilities (including Gc, Gf, short-term memory)\n- **Stratum I**: Numerous specific abilities",
+      "suggestedLesson": "5-iq-tests",
+      "needsReview": false
     },
     {
       "stem": "Which cognitive ability is primarily assessed by the Visual Spatial Index of the WISC-V?",
@@ -331,7 +298,10 @@
       "kn": "KN32",
       "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
       "difficulty": "easy",
-      "quality_comment": "The options are equally plausible cognitive abilities, making this a straightforward recall question appropriate for EPPP."
+      "quality_comment": "The options are equally plausible cognitive abilities, making this a straightforward recall question appropriate for EPPP.",
+      "lessonExcerpt": "The Stanford-Binet 5th Edition explicitly uses CHC theory",
+      "suggestedLesson": "5-iq-tests",
+      "needsReview": false
     },
     {
       "stem": "What is the primary reason psychologists must be cautious when interpreting IQ scores obtained using older test norms, according to the Flynn Effect?",
@@ -346,7 +316,10 @@
       "kn": "KN29",
       "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
       "difficulty": "medium",
-      "quality_comment": "Distractors address plausible misunderstandings about the Flynn effect, thus providing meaningful options for test-takers."
+      "quality_comment": "Distractors address plausible misunderstandings about the Flynn effect, thus providing meaningful options for test-takers.",
+      "lessonExcerpt": "| Visual Spatial | Visual Processing (Gv) |",
+      "suggestedLesson": "5-iq-tests",
+      "needsReview": false
     },
     {
       "stem": "In the WAIS-IV, which Index Score typically shows the greatest decline beginning around age 30?",
@@ -361,7 +334,10 @@
       "kn": "KN32",
       "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
       "difficulty": "medium",
-      "quality_comment": "Distractors include other WAIS-IV indexes that decline later or remain stable to increase discrimination without making the question overly difficult."
+      "quality_comment": "Distractors include other WAIS-IV indexes that decline later or remain stable to increase discrimination without making the question overly difficult.",
+      "lessonExcerpt": "IQ scores increased by about 3 points per decade throughout the 20th century. This \"Flynn effect\" means that if you took an IQ test with 1980s norms today, you'd score higher than if you took a test with current norms.",
+      "suggestedLesson": "5-iq-tests",
+      "needsReview": false
     },
     {
       "stem": "Which of the following patterns of WAIS-IV index scores is characteristic of an individual with nonverbal learning disability (NVLD)?",
@@ -376,7 +352,10 @@
       "kn": "KN32",
       "kn_explanation": "This question tests knowledge of assessment interpretation for a specific clinical presentation using an intelligence test, which belongs to commonly used instruments and their appropriate use.",
       "difficulty": "hard",
-      "quality_comment": "Options include plausible discrepancies but only one corresponds to the clinical pattern, rewarding detailed knowledge of test profiles."
+      "quality_comment": "Options include plausible discrepancies but only one corresponds to the clinical pattern, rewarding detailed knowledge of test profiles.",
+      "lessonExcerpt": "- **PSI**: Steepest age-related decline, starting around 30",
+      "suggestedLesson": "5-iq-tests",
+      "needsReview": false
     },
     {
       "stem": "Which of the following theories of intelligence emphasizes planning, attention, simultaneous processing, and sequential processing as four interdependent functions?",
@@ -391,7 +370,10 @@
       "kn": "KN32",
       "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
       "difficulty": "medium",
-      "quality_comment": "Distractor theories are well-known and plausible but distinct; this tests precise recognition of the PASS theory."
+      "quality_comment": "Distractor theories are well-known and plausible but distinct; this tests precise recognition of the PASS theory.",
+      "lessonExcerpt": "**Nonverbal Learning Disability (NVLD)** shows VCI significantly higher than PRI.",
+      "suggestedLesson": "5-iq-tests",
+      "needsReview": false
     },
     {
       "stem": "Which WAIS-IV Index is mainly associated with crystallized intelligence (Gc) based on CHC theory as identified in independent factor analyses?",
@@ -406,7 +388,10 @@
       "kn": "KN29",
       "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
       "difficulty": "easy",
-      "quality_comment": "Clear distinction among indexes with CHC labels makes this a straightforward knowledge recall question well-suited for EPPP review."
+      "quality_comment": "Clear distinction among indexes with CHC labels makes this a straightforward knowledge recall question well-suited for EPPP review.",
+      "lessonExcerpt": "**PASS Theory** focuses on four cognitive functions: Planning, Attention, Simultaneous processing, and Sequential processing. This theory connects to brain structures based on Luria's research.",
+      "suggestedLesson": "5-iq-tests",
+      "needsReview": false
     },
     {
       "stem": "For a child diagnosed with Autism Spectrum Disorder without language impairment, which WISC-V Index score is typically the highest?",
@@ -421,7 +406,10 @@
       "kn": "KN32",
       "kn_explanation": "This question tests knowledge on psychological assessment and interpretation of index score patterns for clinical groups on standardized tests.",
       "difficulty": "medium",
-      "quality_comment": "Distractors are commonly reported indexes allowing test-takers to exercise applied knowledge, enhancing question quality."
+      "quality_comment": "Distractors are commonly reported indexes allowing test-takers to exercise applied knowledge, enhancing question quality.",
+      "lessonExcerpt": "| Verbal Comprehension | Crystallized Intelligence (Gc) |",
+      "suggestedLesson": "5-iq-tests",
+      "needsReview": false
     },
     {
       "stem": "Which of the following accurately describes the stopping rule (ceiling) when administering a Stanford-Binet 5th Edition subtest?",
@@ -436,7 +424,10 @@
       "kn": "KN32",
       "kn_explanation": "This question addresses knowledge of assessment methods and administration rules for a standardized intelligence test.",
       "difficulty": "medium",
-      "quality_comment": "Options are plausible test discontinuation rules, but only one matches the SB5 guidelines, requiring specific knowledge."
+      "quality_comment": "Options are plausible test discontinuation rules, but only one matches the SB5 guidelines, requiring specific knowledge.",
+      "lessonExcerpt": "| Autism Spectrum Disorder without Language Impairment | PSI | VCI |",
+      "suggestedLesson": "5-iq-tests",
+      "needsReview": false
     },
     {
       "stem": "Which intelligence test is designed for individuals aged 2 to 85 years and contains five cognitive factors each divided into verbal and nonverbal domains?",
@@ -451,7 +442,10 @@
       "kn": "KN32",
       "kn_explanation": "This question covers knowledge of commonly used intelligence instruments and their key characteristics and populations.",
       "difficulty": "easy",
-      "quality_comment": "The options are all major IQ tests but differ in age ranges and structure; question clearly assesses knowledge of test features."
+      "quality_comment": "The options are all major IQ tests but differ in age ranges and structure; question clearly assesses knowledge of test features.",
+      "lessonExcerpt": "Testing continues until you reach the **ceiling level**) the point where they miss 75% of questions at two consecutive age levels.",
+      "suggestedLesson": "5-iq-tests",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best describes the General Ability Index (GAI) on the WAIS-IV?",
@@ -466,7 +460,10 @@
       "kn": "KN32",
       "kn_explanation": "This question relates to interpretation and scoring of intelligence tests, focusing on derived indexes used clinically and in assessment.",
       "difficulty": "medium",
-      "quality_comment": "Distractors are plausible alternate index conceptualizations, requiring knowledge of WAIS-IV scoring and clinical use."
+      "quality_comment": "Distractors are plausible alternate index conceptualizations, requiring knowledge of WAIS-IV scoring and clinical use.",
+      "lessonExcerpt": "The SB5 assesses individuals from age 2 to 85+ and measures five cognitive factors derived from CHC theory",
+      "suggestedLesson": "5-iq-tests",
+      "needsReview": false
     },
     {
       "stem": "Research indicates that the Flynn effect has recently plateaued or reversed in certain populations. Which environmental factor best explains these rapid IQ score changes?",
@@ -481,7 +478,10 @@
       "kn": "KN37",
       "kn_explanation": "This question highlights biases and interpretation factors in assessment derived from research on IQ test score trends and environmental influences.",
       "difficulty": "medium",
-      "quality_comment": "Distractors include common but incorrect attributions, providing a discriminating test of understanding environmental vs. genetic influences."
+      "quality_comment": "Distractors include common but incorrect attributions, providing a discriminating test of understanding environmental vs. genetic influences.",
+      "lessonExcerpt": "The **General Ability Index (GAI)** combines only VCI and PRI, excluding working memory and processing speed.",
+      "suggestedLesson": "5-iq-tests",
+      "needsReview": false
     },
     {
       "stem": "Which theory of intelligence critiques traditional IQ tests for neglecting creative and practical intelligence?",
@@ -496,7 +496,10 @@
       "kn": "KN32",
       "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
       "difficulty": "medium",
-      "quality_comment": "Answer options are well-known theories, making the correct choice rewarding knowledge of broader intelligence conceptualizations."
+      "quality_comment": "Answer options are well-known theories, making the correct choice rewarding knowledge of broader intelligence conceptualizations.",
+      "lessonExcerpt": "The changes happen too fast to be genetic. They're environmental. Better nutrition, more education, increased cognitive complexity in daily life, and other environmental factors likely drive these changes.",
+      "suggestedLesson": "5-iq-tests",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best explains the importance of updated normative data in intelligence testing?",
@@ -511,7 +514,10 @@
       "kn": "KN37",
       "kn_explanation": "This question tests knowledge about evidence-based interpretation of assessment data and the impact of biases and base rates in test norms.",
       "difficulty": "easy",
-      "quality_comment": "Distractors contrast commonly held misconceptions, allowing clear discrimination for those understanding test norm updates."
+      "quality_comment": "Distractors contrast commonly held misconceptions, allowing clear discrimination for those understanding test norm updates.",
+      "lessonExcerpt": "**Sternberg's Triarchic Theory** describes three components: analytical intelligence (academic problem-solving), creative intelligence (handling novel situations), and practical intelligence (everyday tasks). Sternberg criticized traditional IQ tests",
+      "suggestedLesson": "5-iq-tests",
+      "needsReview": false
     },
     {
       "stem": "In the context of cognitive development, which type of intelligence is characterized by the ability to reason and solve new problems without relying on previously acquired knowledge?",
@@ -531,7 +537,10 @@
       "lock_in_level": "easier",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "This matters tremendously for intellectual disability diagnoses. Someone tested on an older test might score above the intellectual disability threshold, but on a newer test with updated norms, they might fall below it.",
+      "suggestedLesson": "5-iq-tests",
+      "needsReview": false
     },
     {
       "stem": "Which of the following statements best describes the trend of crystallized intelligence across the lifespan, according to Horn and Cattell's theory?",
@@ -551,7 +560,10 @@
       "lock_in_level": "harder",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "**Fluid intelligence (Gf)** is your raw ability to solve new problems, see patterns, and think abstractly without relying on previous knowledge.",
+      "suggestedLesson": "5-iq-tests",
+      "needsReview": false
     }
   ]
 }

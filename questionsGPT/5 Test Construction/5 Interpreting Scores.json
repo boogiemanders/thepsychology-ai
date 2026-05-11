@@ -139,7 +139,10 @@
       "kn": "KN29",
       "kn_explanation": "This question pertains to psychometric score interpretation, a key aspect of test construction and interpretation (KN29).",
       "difficulty": "easy",
-      "quality_comment": "The distractors are conceptually distinct and the stem is straightforward, making the question accessible and effective for testing basic knowledge."
+      "quality_comment": "The distractors are conceptually distinct and the stem is straightforward, making the question accessible and effective for testing basic knowledge.",
+      "lessonExcerpt": "A percentile rank tells you the percentage of people in the reference group who scored at or below a particular score.",
+      "suggestedLesson": "5-interpreting-scores",
+      "needsReview": false
     },
     {
       "stem": "An examinee obtains a T-score of 40 on a standardized test. Which of the following is the best interpretation of this score?",
@@ -154,7 +157,10 @@
       "kn": "KN29",
       "kn_explanation": "Understanding standard score conversions and interpretations is essential for psychometric test interpretation (KN29).",
       "difficulty": "medium",
-      "quality_comment": "Clear and concise, the options are numerically close, requiring test-takers to apply knowledge rather than guess."
+      "quality_comment": "Clear and concise, the options are numerically close, requiring test-takers to apply knowledge rather than guess.",
+      "lessonExcerpt": "T-scores have a mean of 50 and a standard deviation of 10. A T-score of 40 means one standard deviation below average.",
+      "suggestedLesson": "5-interpreting-scores",
+      "needsReview": false
     },
     {
       "stem": "If an individual’s raw score on a test corresponds to a z-score of +2.0, what is the approximate percentile rank equivalent in a normal distribution?",
@@ -169,7 +175,10 @@
       "kn": "KN37",
       "kn_explanation": "This question is best aligned with KN37 because it tests Factors influencing evidence-based interpretation of data and decision-making (e.g., base rates, group differences, cultural biases and differences, heuristics).",
       "difficulty": "medium",
-      "quality_comment": "Distractors represent common percentile ranks associated with standard deviations, making the question appropriately challenging."
+      "quality_comment": "Distractors represent common percentile ranks associated with standard deviations, making the question appropriately challenging.",
+      "lessonExcerpt": "| +2 SD | +2.0 | 70 | 130 | 9 | 98 |",
+      "suggestedLesson": "5-interpreting-scores",
+      "needsReview": false
     },
     {
       "stem": "Which of the following statements accurately describes stanines?",
@@ -184,7 +193,10 @@
       "kn": "KN29",
       "kn_explanation": "This question tests knowledge of standard score types and their interpretations (KN29).",
       "difficulty": "medium",
-      "quality_comment": "All options are plausible but only one accurately reflects stanine characteristics, improving item discrimination."
+      "quality_comment": "All options are plausible but only one accurately reflects stanine characteristics, improving item discrimination.",
+      "lessonExcerpt": "Stanines (short for \"standard nine\") range from 1 to 9, with a mean of 5 and a standard deviation of 2. Each stanine represents about half a standard deviation, except for the extremes (1 and 9, which extend beyond).",
+      "suggestedLesson": "5-interpreting-scores",
+      "needsReview": false
     },
     {
       "stem": "In which scenario is the use of criterion-referenced scores most appropriate?",
@@ -199,7 +211,10 @@
       "kn": "KN29",
       "kn_explanation": "This question addresses score interpretation types and their appropriate applications in assessment (KN29).",
       "difficulty": "easy",
-      "quality_comment": "The distractors contrast norm- and criterion-referenced uses well, reinforcing conceptual understanding."
+      "quality_comment": "The distractors contrast norm- and criterion-referenced uses well, reinforcing conceptual understanding.",
+      "lessonExcerpt": "While norm-referenced scores compare people to each other, criterion-referenced scores evaluate whether someone has achieved a specific level of competence or mastery.",
+      "suggestedLesson": "5-interpreting-scores",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best characterizes the use of banding in personnel selection?",
@@ -214,7 +229,10 @@
       "kn": "KN34",
       "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
       "difficulty": "medium",
-      "quality_comment": "Distractors reflect common selection methods, creating a realistic and challenging question format."
+      "quality_comment": "Distractors reflect common selection methods, creating a realistic and challenging question format.",
+      "lessonExcerpt": "Banding groups scores into ranges based on the test's standard error of measurement. All scores within a band are considered statistically equivalent.",
+      "suggestedLesson": "5-interpreting-scores",
+      "needsReview": false
     },
     {
       "stem": "What is a key difference between expectancy tables and regression equations in predicting criterion scores from predictor test scores?",
@@ -229,7 +247,10 @@
       "kn": "KN37",
       "kn_explanation": "This question is best aligned with KN37 because it tests Factors influencing evidence-based interpretation of data and decision-making (e.g., base rates, group differences, cultural biases and differences, heuristics).",
       "difficulty": "hard",
-      "quality_comment": "The options are nuanced and rely on subtle distinctions that require thorough understanding; distractors are credible."
+      "quality_comment": "The options are nuanced and rely on subtle distinctions that require thorough understanding; distractors are credible.",
+      "lessonExcerpt": "Expectancy tables bridge the gap between test scores and real-world outcomes. Instead of predicting a single outcome score (like a regression equation does), an expectancy table shows the distribution of outcomes for people at different score levels.",
+      "suggestedLesson": "5-interpreting-scores",
+      "needsReview": false
     },
     {
       "stem": "An individual scores 85 on a Wechsler IQ test. Which of the following interpretations is accurate?",
@@ -244,7 +265,10 @@
       "kn": "KN32",
       "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
       "difficulty": "easy",
-      "quality_comment": "Clear and straightforward, with options that show common misunderstandings, making it easy to differentiate test-takers’ knowledge."
+      "quality_comment": "Clear and straightforward, with options that show common misunderstandings, making it easy to differentiate test-takers’ knowledge.",
+      "lessonExcerpt": "Full-scale IQ scores on tests like the Wechsler scales and Stanford-Binet have a mean of 100 and a standard deviation of 15. An IQ of 85 means one standard deviation below average.",
+      "suggestedLesson": "5-interpreting-scores",
+      "needsReview": false
     },
     {
       "stem": "Why is the conversion of raw scores to percentile ranks considered a nonlinear transformation?",
@@ -259,7 +283,10 @@
       "kn": "KN37",
       "kn_explanation": "This question is best aligned with KN37 because it tests Factors influencing evidence-based interpretation of data and decision-making (e.g., base rates, group differences, cultural biases and differences, heuristics).",
       "difficulty": "medium",
-      "quality_comment": "Options target common misconceptions about linearity versus nonlinearity, supporting effective differentiation."
+      "quality_comment": "Options target common misconceptions about linearity versus nonlinearity, supporting effective differentiation.",
+      "lessonExcerpt": "Percentile ranks use a nonlinear transformation. Every raw score distribution gets converted into a perfectly flat (rectangular) distribution. Why? Because exactly 1% of scores get assigned to each percentile rank.",
+      "suggestedLesson": "5-interpreting-scores",
+      "needsReview": false
     },
     {
       "stem": "A hiring manager uses a cutoff score for a selection test linked to a criterion measure of job performance. Which is the BEST description of this approach?",
@@ -274,7 +301,10 @@
       "kn": "KN34",
       "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
       "difficulty": "medium",
-      "quality_comment": "The distractors represent other common selection methods, making this an applied and relevant question."
+      "quality_comment": "The distractors represent other common selection methods, making this an applied and relevant question.",
+      "lessonExcerpt": "With a cutoff approach, you set a minimum score and select everyone at or above that threshold. One method for determining the cutoff is to link test scores to criterion scores (like job performance ratings) and use the test score associated with the lowest acceptable performance as your cutoff.",
+      "suggestedLesson": "5-interpreting-scores",
+      "needsReview": false
     },
     {
       "stem": "Which of the following represents a linear transformation of raw test scores?",
@@ -289,7 +319,10 @@
       "kn": "KN29",
       "kn_explanation": "Understanding types of score transformations is fundamental for psychometric interpretation (KN29).",
       "difficulty": "medium",
-      "quality_comment": "Distractors are well-chosen to test understanding of linear versus nonlinear transformations."
+      "quality_comment": "Distractors are well-chosen to test understanding of linear versus nonlinear transformations.",
+      "lessonExcerpt": "Standard scores tell you how far someone's score falls from the average, measured in standard deviations. Unlike percentile ranks, converting raw scores to standard scores is a linear transformation, the shape of the distribution stays the same.",
+      "suggestedLesson": "5-interpreting-scores",
+      "needsReview": false
     },
     {
       "stem": "What primary purpose do expectancy tables serve in test score interpretation?",
@@ -304,7 +337,10 @@
       "kn": "KN29",
       "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
       "difficulty": "medium",
-      "quality_comment": "The item effectively distinguishes expectancy tables from other score interpretations with plausible distractors."
+      "quality_comment": "The item effectively distinguishes expectancy tables from other score interpretations with plausible distractors.",
+      "lessonExcerpt": "Expectancy tables bridge the gap between test scores and real-world outcomes. Instead of predicting a single outcome score (like a regression equation does), an expectancy table shows the distribution of outcomes for people at different score levels.",
+      "suggestedLesson": "5-interpreting-scores",
+      "needsReview": false
     },
     {
       "stem": "When using banding as a selection technique, what assumption about test scores is central to its application?",
@@ -319,7 +355,10 @@
       "kn": "KN37",
       "kn_explanation": "This question is best aligned with KN37 because it tests Factors influencing evidence-based interpretation of data and decision-making (e.g., base rates, group differences, cultural biases and differences, heuristics).",
       "difficulty": "medium",
-      "quality_comment": "The distractors address common misunderstandings, requiring examinees to grasp measurement concepts underlying banding."
+      "quality_comment": "The distractors address common misunderstandings, requiring examinees to grasp measurement concepts underlying banding.",
+      "lessonExcerpt": "The rationale is sound: Small score differences often reflect test unreliability rather than true ability differences.",
+      "suggestedLesson": "5-interpreting-scores",
+      "needsReview": false
     },
     {
       "stem": "Which of the following is TRUE about the relationship between norm-referenced standard scores and the shape of the raw score distribution?",
@@ -334,7 +373,10 @@
       "kn": "KN29",
       "kn_explanation": "This question tests knowledge of assessment theory concepts regarding score transformations and distribution shapes (KN29).",
       "difficulty": "medium",
-      "quality_comment": "The options contrast key concepts well, requiring nuanced understanding of transformation effects."
+      "quality_comment": "The options contrast key concepts well, requiring nuanced understanding of transformation effects.",
+      "lessonExcerpt": "Converting raw scores to standard scores is a linear transformation, the shape of the distribution stays the same. If your raw scores form a bell curve, your standard scores will too.",
+      "suggestedLesson": "5-interpreting-scores",
+      "needsReview": false
     },
     {
       "stem": "An examinee receives a T-score of 60 on a different standardized test. What is the best interpretation of this score?",
@@ -354,7 +396,10 @@
       "lock_in_level": "easier",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "| +1 SD | +1.0 | 60 | 115 | 7 | 84 |",
+      "suggestedLesson": "5-interpreting-scores",
+      "needsReview": false
     },
     {
       "stem": "If an examinee has a T-score of 30 on a standardized test, how should this score be interpreted?",
@@ -374,7 +419,10 @@
       "lock_in_level": "harder",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "| -2 SD | -2.0 | 30 | 70 | 1 | 2 |",
+      "suggestedLesson": "5-interpreting-scores",
+      "needsReview": false
     }
   ]
 }

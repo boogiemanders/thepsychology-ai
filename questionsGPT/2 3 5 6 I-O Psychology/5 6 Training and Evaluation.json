@@ -14,9 +14,9 @@
       "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
       "difficulty": "hard",
       "quality_comment": "Stem provides precise behavioral detail to separate criterion contamination from halo; requires fine-grained definitional knowledge.",
-      "suggestedLesson": "5-6-training-and-evaluation",
+      "suggestedLesson": "5-6-evaluating-jobs",
       "suggestedParagraph": "## Performance Appraisal Biases",
-      "lessonExcerpt": "",
+      "lessonExcerpt": "- Knowledge of hiring scores: When a supervisor knows how well someone scored on pre-employment tests and lets that knowledge color performance ratings",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 2
@@ -35,9 +35,9 @@
       "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
       "difficulty": "medium",
       "quality_comment": "Well-grounded vignette with a clearly defensible correct answer; tests mechanism-level understanding of why BARS reduce halo specifically.",
-      "suggestedLesson": "5-6-training-and-evaluation",
+      "suggestedLesson": "5-6-evaluating-jobs",
       "suggestedParagraph": "## Rater Bias Control Methods",
-      "lessonExcerpt": "",
+      "lessonExcerpt": "**Behaviorally Anchored Rating Scales (BARS)**: These improve on simple graphic scales by anchoring each scale point with specific behavioral descriptions.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 6
@@ -56,9 +56,9 @@
       "kn_explanation": "This question is best aligned with KN37 because it tests Factors influencing evidence-based interpretation of data and decision-making (e.g., base rates, group differences, cultural biases and differences, heuristics).",
       "difficulty": "hard",
       "quality_comment": "High-quality question targeting a specific and commonly tested psychometric tool; distractors substitute plausible but incorrect psychometric terms drawn from related utility frameworks.",
-      "suggestedLesson": "5-6-training-and-evaluation",
+      "suggestedLesson": "5-do-hiring-tools-work",
       "suggestedParagraph": "## Incremental Validity and Selection Utility",
-      "lessonExcerpt": "Not found in provided lesson content. Needs review.",
+      "lessonExcerpt": "The **Taylor-Russell tables** let you estimate how much a new predictor will improve hiring success for different combinations of validity coefficients, selection ratios, and base rates.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 12
@@ -77,9 +77,9 @@
       "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
       "difficulty": "hard",
       "quality_comment": "Strong applied question requiring correct mathematical application of the four-fifths rule with a realistic vignette; distractors test common misunderstandings of the rule's mechanics.",
-      "suggestedLesson": "5-6-training-and-evaluation",
+      "suggestedLesson": "5-do-hiring-tools-work",
       "suggestedParagraph": "## Adverse Impact and Test Fairness",
-      "lessonExcerpt": "Not found in provided lesson content. Needs review.",
+      "lessonExcerpt": "**Adverse impact is occurring when the hiring rate for a protected group is less than 80% of the hiring rate for the majority group.**",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 16
@@ -97,7 +97,10 @@
       "kn": "KN46",
       "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
       "difficulty": "medium",
-      "quality_comment": "The question clearly targets a fundamental step in training needs analysis, with plausible distractors that represent other types of needs analyses, enhancing discriminability."
+      "quality_comment": "The question clearly targets a fundamental step in training needs analysis, with plausible distractors that represent other types of needs analyses, enhancing discriminability.",
+      "lessonExcerpt": "**Organizational Analysis** looks at the big picture. Is the problem really about training, or is something else going on?",
+      "suggestedLesson": "5-6-training-and-evaluation",
+      "needsReview": false
     },
     {
       "stem": "What is a key advantage of on-the-job training compared to off-the-job training?",
@@ -112,7 +115,10 @@
       "kn": "KN58",
       "kn_explanation": "This question is best aligned with KN58 because it tests evaluation strategies and techniques, including needs assessment, formative and summative evaluation, outcome evaluation, and cost-benefit analysis.",
       "difficulty": "easy",
-      "quality_comment": "The stem is straightforward and the options are balanced, making the correct answer clearly distinguishable for examinees familiar with training methods."
+      "quality_comment": "The stem is straightforward and the options are balanced, making the correct answer clearly distinguishable for examinees familiar with training methods.",
+      "lessonExcerpt": "The advantages of on-the-job training are clear: it's usually less expensive, and you don't have to worry as much about whether skills will **transfer** from training to actual work",
+      "suggestedLesson": "5-6-training-and-evaluation",
+      "needsReview": false
     },
     {
       "stem": "Behavior modeling in training is based on which of the following theoretical frameworks?",
@@ -127,7 +133,10 @@
       "kn": "KN43",
       "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
       "difficulty": "medium",
-      "quality_comment": "The distractors are relevant learning theories, providing a good challenge while the correct answer is well grounded in theory."
+      "quality_comment": "The distractors are relevant learning theories, providing a good challenge while the correct answer is well grounded in theory.",
+      "lessonExcerpt": "**Behavior modeling** is based on Bandura's social learning theory.",
+      "suggestedLesson": "5-6-training-and-evaluation",
+      "needsReview": false
     },
     {
       "stem": "How does mentoring differ from coaching in workplace training?",
@@ -142,7 +151,10 @@
       "kn": "KN46",
       "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
       "difficulty": "medium",
-      "quality_comment": "Answer options present subtle distinctions between mentoring and coaching, requiring careful reading to identify key differences."
+      "quality_comment": "Answer options present subtle distinctions between mentoring and coaching, requiring careful reading to identify key differences.",
+      "lessonExcerpt": "| Primary Focus | Career and personal development | Performance improvement |",
+      "suggestedLesson": "5-6-training-and-evaluation",
+      "needsReview": false
     },
     {
       "stem": "Which practice has been shown to maximize transfer of training by increasing similarity between training and work conditions?",
@@ -157,7 +169,10 @@
       "kn": "KN58",
       "kn_explanation": "This question is best aligned with KN58 because it tests evaluation strategies and techniques, including needs assessment, formative and summative evaluation, outcome evaluation, and cost-benefit analysis.",
       "difficulty": "medium",
-      "quality_comment": "Options include commonly confused training concepts, improving the discriminative value of the question."
+      "quality_comment": "Options include commonly confused training concepts, improving the discriminative value of the question.",
+      "lessonExcerpt": "The **principle of identical elements** says that the more similar the training and work situations are, the better the transfer.",
+      "suggestedLesson": "5-6-training-and-evaluation",
+      "needsReview": false
     },
     {
       "stem": "What is the primary difference between distributed practice and massed practice in training settings?",
@@ -172,7 +187,10 @@
       "kn": "KN42",
       "kn_explanation": "This question is best aligned with KN42 because it tests Factors related to treatment or intervention decision-making (e.g., relevant research, matching treatment to assessment/diagnosis, matching client or patient with psychologist characteristics, knowledge and use of allied services, cost and benefit, readiness to change).",
       "difficulty": "easy",
-      "quality_comment": "The stem is clear and the answer contrasts the two concepts effectively, with distractors addressing common misconceptions."
+      "quality_comment": "The stem is clear and the answer contrasts the two concepts effectively, with distractors addressing common misconceptions.",
+      "lessonExcerpt": "For most tasks, **distributed practice** (spaced practice) beats **massed practice**. Distributed practice spreads learning across multiple sessions with breaks in between. Massed practice crams everything into one continuous session.",
+      "suggestedLesson": "5-6-training-and-evaluation",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best describes overlearning in training contexts?",
@@ -187,7 +205,10 @@
       "kn": "KN42",
       "kn_explanation": "This question is best aligned with KN42 because it tests Factors related to treatment or intervention decision-making (e.g., relevant research, matching treatment to assessment/diagnosis, matching client or patient with psychologist characteristics, knowledge and use of allied services, cost and benefit, readiness to change).",
       "difficulty": "medium",
-      "quality_comment": "Distractors include plausible but incorrect interpretations, enhancing the question's ability to discriminate mastery of the content."
+      "quality_comment": "Distractors include plausible but incorrect interpretations, enhancing the question's ability to discriminate mastery of the content.",
+      "lessonExcerpt": "**Overlearning** means continuing to practice beyond the point where you've achieved basic mastery. This creates **automaticity**, the ability to recall information or perform behaviors with minimal conscious effort.",
+      "suggestedLesson": "5-6-training-and-evaluation",
+      "needsReview": false
     },
     {
       "stem": "According to Kirkpatrick’s model, which level of training evaluation assesses changes in job performance after training?",
@@ -202,7 +223,10 @@
       "kn": "KN46",
       "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
       "difficulty": "medium",
-      "quality_comment": "The answer choices represent the four levels of Kirkpatrick’s model clearly, making it an effective test of conceptual knowledge."
+      "quality_comment": "The answer choices represent the four levels of Kirkpatrick’s model clearly, making it an effective test of conceptual knowledge.",
+      "lessonExcerpt": "**Behavior criteria** evaluate whether job performance actually improved. This is more challenging because you need to observe or measure performance back in the work environment, often weeks or months after training.",
+      "suggestedLesson": "5-6-training-and-evaluation",
+      "needsReview": false
     },
     {
       "stem": "What is the primary purpose of a formative evaluation in training program development?",
@@ -217,7 +241,10 @@
       "kn": "KN42",
       "kn_explanation": "This question is best aligned with KN42 because it tests Factors related to treatment or intervention decision-making (e.g., relevant research, matching treatment to assessment/diagnosis, matching client or patient with psychologist characteristics, knowledge and use of allied services, cost and benefit, readiness to change).",
       "difficulty": "easy",
-      "quality_comment": "This question straightforwardly distinguishes formative from summative evaluation, making it accessible but meaningful for exam purposes."
+      "quality_comment": "This question straightforwardly distinguishes formative from summative evaluation, making it accessible but meaningful for exam purposes.",
+      "lessonExcerpt": "**Formative evaluation** happens during program development to improve the program. It's like beta testing. You're trying to identify problems and fix them before the final version.",
+      "suggestedLesson": "5-6-training-and-evaluation",
+      "needsReview": false
     },
     {
       "stem": "Which of the following practices best supports maximizing transfer of training once employees return to the job?",
@@ -232,7 +259,10 @@
       "kn": "KN46",
       "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
       "difficulty": "medium",
-      "quality_comment": "The distractors offer contrasting approaches, making the correct answer distinctive, emphasizing the practical aspect of training application."
+      "quality_comment": "The distractors offer contrasting approaches, making the correct answer distinctive, emphasizing the practical aspect of training application.",
+      "lessonExcerpt": "Transfer depends heavily on the support trainees receive for using their new skills. Organizations provide this through maintaining a **transfer of training climate** that emphasizes training's importance and offers:\n\n- Sufficient peer and supervisor support\n- Opportunities to actually use new skills and knowledge",
+      "suggestedLesson": "5-6-training-and-evaluation",
+      "needsReview": false
     },
     {
       "stem": "Which type of training involves a trainee rotating through a predetermined sequence of jobs within an organization, usually to prepare managers?",
@@ -247,7 +277,10 @@
       "kn": "KN46",
       "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
       "difficulty": "easy",
-      "quality_comment": "Options are related training methods, but job rotation is clearly identified by its defining feature, making the question straightforward."
+      "quality_comment": "Options are related training methods, but job rotation is clearly identified by its defining feature, making the question straightforward.",
+      "lessonExcerpt": "**Job rotation** moves trainees through different positions in a predetermined sequence, commonly used for manager training",
+      "suggestedLesson": "5-6-training-and-evaluation",
+      "needsReview": false
     },
     {
       "stem": "Which evaluation component involves determining if a program's effectiveness can be practically measured before conducting a full evaluation?",
@@ -262,7 +295,10 @@
       "kn": "KN42",
       "kn_explanation": "This question is best aligned with KN42 because it tests Factors related to treatment or intervention decision-making (e.g., relevant research, matching treatment to assessment/diagnosis, matching client or patient with psychologist characteristics, knowledge and use of allied services, cost and benefit, readiness to change).",
       "difficulty": "hard",
-      "quality_comment": "The question requires knowledge of nuanced evaluation stages with closely related terms as distractors, increasing cognitive challenge."
+      "quality_comment": "The question requires knowledge of nuanced evaluation stages with closely related terms as distractors, increasing cognitive challenge.",
+      "lessonExcerpt": "- Evaluability assessment to check if evaluation is feasible",
+      "suggestedLesson": "5-6-training-and-evaluation",
+      "needsReview": false
     },
     {
       "stem": "According to the Dessinger-Moseley full-scope evaluation model, what type of evaluation is conducted a significant time after training to assess long-term effects?",
@@ -277,7 +313,10 @@
       "kn": "KN58",
       "kn_explanation": "This question is best aligned with KN58 because it tests evaluation strategies and techniques, including needs assessment, formative and summative evaluation, outcome evaluation, and cost-benefit analysis.",
       "difficulty": "hard",
-      "quality_comment": "This question addresses a less commonly known evaluation phase, demanding integration of conceptual details with plausible distractors."
+      "quality_comment": "This question addresses a less commonly known evaluation phase, demanding integration of conceptual details with plausible distractors.",
+      "lessonExcerpt": "**Confirmative evaluation** occurs later to assess long-term effects, using measures similar to the summative evaluation but administered after trainees have had time to apply their learning.",
+      "suggestedLesson": "5-6-training-and-evaluation",
+      "needsReview": false
     },
     {
       "stem": "Which characteristic most accurately distinguishes coaching from mentoring in organizational training contexts?",
@@ -292,7 +331,10 @@
       "kn": "KN46",
       "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
       "difficulty": "medium",
-      "quality_comment": "Distractors are plausible but incorrect, requiring careful analysis to discriminate coaching's formal structure."
+      "quality_comment": "Distractors are plausible but incorrect, requiring careful analysis to discriminate coaching's formal structure.",
+      "lessonExcerpt": "| Structure | Informal, flexible | Formal, scheduled meetings |",
+      "suggestedLesson": "5-6-training-and-evaluation",
+      "needsReview": false
     },
     {
       "stem": "Which training method is characterized by teaching employees how to perform the essential tasks of other workers to improve team flexibility and coverage?",
@@ -307,7 +349,10 @@
       "kn": "KN46",
       "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
       "difficulty": "medium",
-      "quality_comment": "The distractors are relevant training methods offering a good challenge by contrasting approaches that involve different kinds of employee exposure."
+      "quality_comment": "The distractors are relevant training methods offering a good challenge by contrasting approaches that involve different kinds of employee exposure.",
+      "lessonExcerpt": "- **Cross-training** teaches employees how to do each other's jobs, typically used for team members doing similar work",
+      "suggestedLesson": "5-6-training-and-evaluation",
+      "needsReview": false
     },
     {
       "stem": "What is the role of a meta-evaluation in the Dessinger-Moseley full-scope evaluation model?",
@@ -322,7 +367,10 @@
       "kn": "KN58",
       "kn_explanation": "This question is best aligned with KN58 because it tests evaluation strategies and techniques, including needs assessment, formative and summative evaluation, outcome evaluation, and cost-benefit analysis.",
       "difficulty": "hard",
-      "quality_comment": "This advanced question requires integrative knowledge of evaluation models and quality assurance procedures, enhancing cognitive depth."
+      "quality_comment": "This advanced question requires integrative knowledge of evaluation models and quality assurance procedures, enhancing cognitive depth.",
+      "lessonExcerpt": "**Meta-evaluation** is an ongoing process that assesses the reliability and validity of the other evaluations themselves. Basically, evaluating the evaluations.",
+      "suggestedLesson": "5-6-training-and-evaluation",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best exemplifies mentoring's psychosocial functions in workplace training?",
@@ -337,7 +385,10 @@
       "kn": "KN46",
       "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
       "difficulty": "medium",
-      "quality_comment": "The options contrast career-related and psychosocial functions, requiring differentiation between mentoring roles to answer correctly."
+      "quality_comment": "The options contrast career-related and psychosocial functions, requiring differentiation between mentoring roles to answer correctly.",
+      "lessonExcerpt": "**Psychosocial functions** depend on the interpersonal bond between mentor and mentee. This includes role-modeling, offering advice, providing emotional support, and helping build the mentee's confidence and self-efficacy.",
+      "suggestedLesson": "5-6-training-and-evaluation",
+      "needsReview": false
     },
     {
       "stem": "In assessing the effectiveness of a new training program, which analysis would help determine if the issues stem from employee motivation rather than inadequate training content?",
@@ -357,7 +408,10 @@
       "lock_in_level": "easier",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "**Person Analysis** identifies which specific employees need training. Not everyone requires the same training. Some people might excel at certain skills but need help with others.",
+      "suggestedLesson": "5-6-training-and-evaluation",
+      "needsReview": false
     },
     {
       "stem": "When evaluating whether a company's training needs are being met, which type of analysis would be most appropriate for identifying if the training aligns with broader organizational goals?",
@@ -377,7 +431,10 @@
       "lock_in_level": "harder",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "**Organizational Analysis** looks at the big picture. Is the problem really about training, or is something else going on?",
+      "suggestedLesson": "5-6-training-and-evaluation",
+      "needsReview": false
     }
   ]
 }

@@ -244,7 +244,10 @@
       "kn": "KN23",
       "kn_explanation": "This question focuses on Piaget's developmental theory of moral understanding, which aligns with major developmental theories and models (KN23).",
       "difficulty": "medium",
-      "quality_comment": "The question clearly targets a key Piagetian concept with plausible distractors including a common Piagetian developmental stage to test nuanced understanding."
+      "quality_comment": "The question clearly targets a key Piagetian concept with plausible distractors including a common Piagetian developmental stage to test nuanced understanding.",
+      "lessonExcerpt": "Autonomous Stage (Ages 10-11 onward) ... children entering this stage start to understand that rules are created through mutual agreement and can be changed when people agree to change them.",
+      "suggestedLesson": "4-morality",
+      "needsReview": false
     },
     {
       "stem": "In Kohlberg's theory, which level of moral reasoning is characterized by adherence to laws and rules established by legitimate authorities?",
@@ -259,7 +262,10 @@
       "kn": "KN23",
       "kn_explanation": "The question pertains to Kohlberg's stages of moral development, a core developmental theory, and therefore best fits KN23.",
       "difficulty": "easy",
-      "quality_comment": "The stem is straightforward and the distractors are relevant stages or concepts from Kohlberg's theory, providing a good discrimination."
+      "quality_comment": "The stem is straightforward and the distractors are relevant stages or concepts from Kohlberg's theory, providing a good discrimination.",
+      "lessonExcerpt": "Level 2: Conventional Morality (Typical in Adolescents and Many Adults) ... | Stage 4 | Law and Order | \"What do the rules say?\"",
+      "suggestedLesson": "4-morality",
+      "needsReview": false
     },
     {
       "stem": "Which of the following is a major criticism of both Piaget's and Kohlberg's moral development theories?",
@@ -274,7 +280,10 @@
       "kn": "KN23",
       "kn_explanation": "Understanding criticisms of developmental theories of moral reasoning involves analysis of developmental research, appropriate for KN23.",
       "difficulty": "medium",
-      "quality_comment": "Distractors are plausible misunderstandings making this item suitable to assess critical evaluation of theory."
+      "quality_comment": "Distractors are plausible misunderstandings making this item suitable to assess critical evaluation of theory.",
+      "lessonExcerpt": "Both theories: - Underestimate young children",
+      "suggestedLesson": "4-morality",
+      "needsReview": false
     },
     {
       "stem": "According to Kohlberg, which stage involves moral reasoning based primarily on avoiding punishment?",
@@ -289,7 +298,10 @@
       "kn": "KN23",
       "kn_explanation": "This question tests knowledge of specific stages in Kohlberg's moral development theory, a major developmental model (KN23).",
       "difficulty": "easy",
-      "quality_comment": "The question clearly tests a fundamental Kohlbergian concept with well-crafted, plausible distractors from other stages."
+      "quality_comment": "The question clearly tests a fundamental Kohlbergian concept with well-crafted, plausible distractors from other stages.",
+      "lessonExcerpt": "| Stage 1 | Punishment and Obedience | \"Will I get punished?\" | \"Heinz shouldn't steal because he'll go to jail.\" |",
+      "suggestedLesson": "4-morality",
+      "needsReview": false
     },
     {
       "stem": "Which parenting discipline style is most strongly associated with advanced levels of a child's moral reasoning?",
@@ -304,7 +316,10 @@
       "kn": "KN23",
       "kn_explanation": "This question is best aligned with KN23 because it tests Major research-based theories and models of development.",
       "difficulty": "medium",
-      "quality_comment": "Distractors are commonly known parenting styles, making the correct answer stand out but still challenging for those less familiar with moral development research."
+      "quality_comment": "Distractors are commonly known parenting styles, making the correct answer stand out but still challenging for those less familiar with moral development research.",
+      "lessonExcerpt": "Induction (Most effective for moral development) - Explaining why a behavior is wrong - Emphasizing how the behavior affects others ... Associated with more advanced moral reasoning",
+      "suggestedLesson": "4-morality",
+      "needsReview": false
     },
     {
       "stem": "Gilligan critiqued Kohlberg's moral development theory primarily because:",
@@ -319,7 +334,10 @@
       "kn": "KN23",
       "kn_explanation": "The question examines critiques related to cultural and gender influences on moral development theory, which falls under developmental theory models (KN23).",
       "difficulty": "medium",
-      "quality_comment": "Distractors are credible critiques but only one directly addresses Gilligan's key argument, making this a targeted and fair question."
+      "quality_comment": "Distractors are credible critiques but only one directly addresses Gilligan's key argument, making this a targeted and fair question.",
+      "lessonExcerpt": "3. Gender Bias (Carol Gilligan's Critique). Carol Gilligan pointed out that Kohlberg only studied males, then claimed his theory was universal.",
+      "suggestedLesson": "4-morality",
+      "needsReview": false
     },
     {
       "stem": "Piaget believed that moral development depends primarily on:",
@@ -334,7 +352,10 @@
       "kn": "KN23",
       "kn_explanation": "This question targets Piaget's theory linking cognition and moral development, aligning with research on developmental models (KN23).",
       "difficulty": "easy",
-      "quality_comment": "The distractors are relevant developmental concepts but distinguishable, which helps confirm mastery of Piaget's focus."
+      "quality_comment": "The distractors are relevant developmental concepts but distinguishable, which helps confirm mastery of Piaget's focus.",
+      "lessonExcerpt": "Cognitive development is necessary but not sufficient for moral development – you need the cognitive capacity to think abstractly before you can reason at higher stages",
+      "suggestedLesson": "4-morality",
+      "needsReview": false
     },
     {
       "stem": "Which best summarizes Kohlberg's view on the universality of his stages of moral development?",
@@ -349,7 +370,10 @@
       "kn": "KN23",
       "kn_explanation": "This question addresses Kohlberg's theoretical claims regarding moral development sequences within major developmental theories (KN23).",
       "difficulty": "medium",
-      "quality_comment": "Options present common misconceptions and criticisms, with one correct theoretical assertion, effectively testing knowledge of Kohlberg’s framework."
+      "quality_comment": "Options present common misconceptions and criticisms, with one correct theoretical assertion, effectively testing knowledge of Kohlberg’s framework.",
+      "lessonExcerpt": "The stages are universal and invariant (according to Kohlberg) – everyone goes through them in the same order, never skipping stages or going backward",
+      "suggestedLesson": "4-morality",
+      "needsReview": false
     },
     {
       "stem": "Why do Piaget and Kohlberg emphasize the greater influence of peers over parents in children's moral development?",
@@ -364,7 +388,10 @@
       "kn": "KN23",
       "kn_explanation": "This question is best aligned with KN23 because it tests Major research-based theories and models of development.",
       "difficulty": "hard",
-      "quality_comment": "The question probes conceptual understanding of social influences with plausible distractors that require nuanced knowledge of developmental theory."
+      "quality_comment": "The question probes conceptual understanding of social influences with plausible distractors that require nuanced knowledge of developmental theory.",
+      "lessonExcerpt": "Both Piaget and Kohlberg emphasized that peers matter more than parents for moral development. Their reasoning? Parent-child relationships involve too much unequal power. ... But with peers, you're equals.",
+      "suggestedLesson": "4-morality",
+      "needsReview": false
     },
     {
       "stem": "According to Kohlberg's theory, actions judged acceptable because they satisfy one’s own needs and lead to rewards belong to which stage?",
@@ -379,7 +406,10 @@
       "kn": "KN23",
       "kn_explanation": "This question requires knowledge of Kohlberg’s specific stages within preconventional morality, aligned with developmental theories (KN23).",
       "difficulty": "medium",
-      "quality_comment": "Distractors are drawn from other Kohlbergian stages, offering plausible alternatives and enhancing discriminative value."
+      "quality_comment": "Distractors are drawn from other Kohlbergian stages, offering plausible alternatives and enhancing discriminative value.",
+      "lessonExcerpt": "| Stage 2 | Instrumental Hedonism | \"What's in it for me?\" | \"Heinz should steal if saving his wife benefits him, but not if it doesn't.\" |",
+      "suggestedLesson": "4-morality",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best describes a key feature of the induction style of parental discipline?",
@@ -394,7 +424,10 @@
       "kn": "KN23",
       "kn_explanation": "This question is best aligned with KN23 because it tests Major research-based theories and models of development.",
       "difficulty": "medium",
-      "quality_comment": "This item tests understanding of key parenting practices relevant to moral socialization with plausible distractors reflecting common disciplinary practices."
+      "quality_comment": "This item tests understanding of key parenting practices relevant to moral socialization with plausible distractors reflecting common disciplinary practices.",
+      "lessonExcerpt": "Induction (Most effective for moral development) - Explaining why a behavior is wrong - Emphasizing how the behavior affects others",
+      "suggestedLesson": "4-morality",
+      "needsReview": false
     },
     {
       "stem": "Which stage of Piaget's moral development theory is characterized by children judging behavior mainly based on its consequences rather than intentions?",
@@ -409,7 +442,10 @@
       "kn": "KN23",
       "kn_explanation": "This question targets Piaget's distinct stages of moral development, specifically the transition in reasoning about rules and consequences (KN23).",
       "difficulty": "medium",
-      "quality_comment": "The item requires precise recall of Piagetian stages, with plausible distractors that challenge superficial understanding."
+      "quality_comment": "The item requires precise recall of Piagetian stages, with plausible distractors that challenge superficial understanding.",
+      "lessonExcerpt": "Heteronomous Stage (Ages 5-6 to 10-11) ... The key feature of this stage is moral realism – kids judge actions purely by their consequences, not by intentions.",
+      "suggestedLesson": "4-morality",
+      "needsReview": false
     },
     {
       "stem": "What is a major criticism of Kohlberg's moral development theory regarding cultural applicability?",
@@ -424,7 +460,10 @@
       "kn": "KN23",
       "kn_explanation": "This question addresses cultural bias criticisms of developmental moral reasoning theories, appropriate for KN23.",
       "difficulty": "medium",
-      "quality_comment": "Distractors include plausible but incorrect claims about cultural generality, making the correct answer stand out with relevant cultural knowledge."
+      "quality_comment": "Distractors include plausible but incorrect claims about cultural generality, making the correct answer stand out with relevant cultural knowledge.",
+      "lessonExcerpt": "4. Cultural Bias. Kohlberg's higher stages (especially 5 and 6) reflect Western, individualistic values.",
+      "suggestedLesson": "4-morality",
+      "needsReview": false
     },
     {
       "stem": "In which stage of moral development, according to Piaget, do children start to consider the intentions behind actions rather than just the consequences?",
@@ -444,7 +483,10 @@
       "lock_in_level": "easier",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "More importantly, they begin judging actions based on intentions rather than just outcomes.",
+      "suggestedLesson": "4-morality",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best describes a key feature of the Autonomous Stage in Piaget's theory of moral development?",
@@ -464,7 +506,10 @@
       "lock_in_level": "harder",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "children entering this stage start to understand that rules are created through mutual agreement and can be changed when people agree to change them.",
+      "suggestedLesson": "4-morality",
+      "needsReview": false
     }
   ]
 }

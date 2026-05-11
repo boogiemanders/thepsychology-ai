@@ -64,27 +64,6 @@
       "inspirationIndex": 22
     },
     {
-      "stem": "A client participates in both weekly individual psychotherapy and an outpatient interpersonal therapy group. After several months, the group therapist notices that whenever another member directly challenges the client's behavior, the client responds, 'That's a good point—I'll definitely bring that up with my individual therapist.' The individual therapist similarly observes that the client consistently avoids discussing interpersonal relationship themes, saying she prefers to work on those in group. This dynamic most clearly illustrates which recognized disadvantage of concurrent individual and group therapy?",
-      "options": [
-        "Role diffusion, in which the client loses clarity about the distinct therapeutic purpose of each modality",
-        "Compartmentalization, in which the client keeps therapeutic material separated by setting to avoid full engagement in either",
-        "Countertransference collusion, in which both therapists unconsciously reinforce the client's avoidance of core material",
-        "Scapegoating, in which the group displaces its collective negative affect onto the client who also receives individual care"
-      ],
-      "answer": "Compartmentalization, in which the client keeps therapeutic material separated by setting to avoid full engagement in either",
-      "explanation": "A recognized disadvantage of concurrent individual and group therapy is that clients can compartmentalize their therapeutic work, routing certain issues to individual sessions while deferring others to group, which lets them avoid complete engagement and therapeutic pressure in either setting. Note that this is distinct from splitting in the psychodynamic sense, which involves idealizing one provider while devaluing the other. Role diffusion describes confusion about each modality's therapeutic purpose, not avoidance through material division. Countertransference collusion would be a therapist-driven phenomenon, whereas this dynamic is client-initiated. Scapegoating is a group process issue unrelated to the concurrent format per se.",
-      "kn": "KN46",
-      "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
-      "difficulty": "hard",
-      "quality_comment": "High-quality clinical scenario requiring sophisticated understanding of group therapy limitations. The group therapy section of. Content goes beyond current lesson material — valid EPPP topic, no lesson excerpt available.",
-      "suggestedLesson": "6-family-and-group",
-      "suggestedParagraph": "## Group Therapy",
-      "lessonExcerpt": "",
-      "needsReview": false,
-      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 25
-    },
-    {
       "stem": "According to Bowen's Extended Family Systems Therapy, what best describes 'differentiation' within family functioning?",
       "options": [
         "A person’s ability to distinguish and separate their own emotional and intellectual functioning from that of others",
@@ -97,7 +76,10 @@
       "kn": "KN46",
       "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
       "difficulty": "medium",
-      "quality_comment": "The question clearly targets a foundational concept in Bowenian therapy, with distractors reflecting related but distinct concepts, appropriate for EPPP testing."
+      "quality_comment": "The question clearly targets a foundational concept in Bowenian therapy, with distractors reflecting related but distinct concepts, appropriate for EPPP testing.",
+      "lessonExcerpt": "Differentiation has two aspects: Intrapersonal: Can you distinguish between your feelings and your thoughts? Interpersonal: Can you maintain your own identity while staying emotionally connected to family?",
+      "suggestedLesson": "6-family-and-group",
+      "needsReview": false
     },
     {
       "stem": "In Structural Family Therapy, which type of alliance occurs when one parent and a child join together inflexibly against the other parent?",
@@ -112,7 +94,10 @@
       "kn": "KN46",
       "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
       "difficulty": "medium",
-      "quality_comment": "Options are plausible and derived directly from the theory, providing an effective discrimination of key concepts in structural family therapy."
+      "quality_comment": "Options are plausible and derived directly from the theory, providing an effective discrimination of key concepts in structural family therapy.",
+      "lessonExcerpt": "1. **Stable coalition**: One parent and child consistently team up against the other parent",
+      "suggestedLesson": "6-family-and-group",
+      "needsReview": false
     },
     {
       "stem": "Which therapeutic technique involves instructing family members to engage in the problematic behavior, often in an exaggerated way, to promote change?",
@@ -127,7 +112,10 @@
       "kn": "KN46",
       "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
       "difficulty": "medium",
-      "quality_comment": "Distractors are other valid structural or strategic approaches, making the correct answer stand out by its unique paradoxical nature."
+      "quality_comment": "Distractors are other valid structural or strategic approaches, making the correct answer stand out by its unique paradoxical nature.",
+      "lessonExcerpt": "**Prescribing the symptom**: Instruct the family to do the problematic behavior, often exaggerated.",
+      "suggestedLesson": "6-family-and-group",
+      "needsReview": false
     },
     {
       "stem": "In Milan Systemic Family Therapy, what is the purpose of 'circular questioning'?",
@@ -142,7 +130,10 @@
       "kn": "KN46",
       "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
       "difficulty": "medium",
-      "quality_comment": "This question clearly distinguishes the unique and non-obvious use of circular questioning compared to other Milan therapy interventions."
+      "quality_comment": "This question clearly distinguishes the unique and non-obvious use of circular questioning compared to other Milan therapy interventions.",
+      "lessonExcerpt": "**Circular questioning**: Asking each family member the same question (e.g., \"When mom is depressed, what does dad do?\") to reveal different perceptions and patterns.",
+      "suggestedLesson": "6-family-and-group",
+      "needsReview": false
     },
     {
       "stem": "Which family communication style identified by Satir involves changing the subject or making jokes to avoid conflict?",
@@ -157,7 +148,10 @@
       "kn": "KN46",
       "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
       "difficulty": "easy",
-      "quality_comment": "Distractors represent other dysfunctional styles Satir described, providing plausible alternatives that enhance discriminability."
+      "quality_comment": "Distractors represent other dysfunctional styles Satir described, providing plausible alternatives that enhance discriminability.",
+      "lessonExcerpt": "| Distracting | Changing subject, inappropriate joking | Avoiding conflict |",
+      "suggestedLesson": "6-family-and-group",
+      "needsReview": false
     },
     {
       "stem": "In Narrative Family Therapy, what is the primary meaning of 'externalizing questions'?",
@@ -172,7 +166,10 @@
       "kn": "KN46",
       "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
       "difficulty": "medium",
-      "quality_comment": "Distractors are plausible but clearly different from the core concept, providing good differentiation for EPPP level."
+      "quality_comment": "Distractors are plausible but clearly different from the core concept, providing good differentiation for EPPP level.",
+      "lessonExcerpt": "Crucially, **the problem is the problem, not the person**. Instead of saying \"John is depressed,\" a narrative therapist says \"depression sometimes causes problems for John.\"",
+      "suggestedLesson": "6-family-and-group",
+      "needsReview": false
     },
     {
       "stem": "What is the main goal of Emotionally Focused Therapy (EFT) for couples?",
@@ -187,7 +184,10 @@
       "kn": "KN46",
       "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
       "difficulty": "medium",
-      "quality_comment": "The distractors reference other family therapy methods, which serves to clearly differentiate EFT’s unique attachment focus."
+      "quality_comment": "The distractors reference other family therapy methods, which serves to clearly differentiate EFT’s unique attachment focus.",
+      "lessonExcerpt": "**Treatment goal**: Expand and restructure emotional experiences to create new interaction patterns and attachment security.",
+      "suggestedLesson": "6-family-and-group",
+      "needsReview": false
     },
     {
       "stem": "Which stage in group therapy, according to Yalom and Leszcz, is characterized by group members competing for power, expressing hostility, and establishing a pecking order?",
@@ -202,7 +202,10 @@
       "kn": "KN46",
       "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
       "difficulty": "easy",
-      "quality_comment": "Distractors are stages from group therapy development with one being incorrect (termination), making this a clear but valid test of knowledge."
+      "quality_comment": "Distractors are stages from group therapy development with one being incorrect (termination), making this a clear but valid test of knowledge.",
+      "lessonExcerpt": "| 2. Conflict, dominance | Competition, criticism, hostility toward therapist | Who's in charge? Where do I fit in the hierarchy? |",
+      "suggestedLesson": "6-family-and-group",
+      "needsReview": false
     },
     {
       "stem": "In Functional Family Therapy (FFT), what is the primary focus when replacing problematic behaviors?",
@@ -217,7 +220,10 @@
       "kn": "KN46",
       "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
       "difficulty": "medium",
-      "quality_comment": "Distractors include plausible but non-core features, effectively assessing understanding of FFT’s functional approach."
+      "quality_comment": "Distractors include plausible but non-core features, effectively assessing understanding of FFT’s functional approach.",
+      "lessonExcerpt": "**Functional Family Therapy (FFT)**: Designed for at-risk adolescents with conduct disorder or substance use. Assumes problematic behaviors serve relationship functions. They regulate connections and hierarchies. Treatment replaces problem behaviors with healthier ones serving the same functions.",
+      "suggestedLesson": "6-family-and-group",
+      "needsReview": false
     },
     {
       "stem": "Multisystemic Therapy (MST) is grounded in which theoretical model emphasizing multiple social systems interacting to influence individual behavior?",
@@ -232,7 +238,10 @@
       "kn": "KN46",
       "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
       "difficulty": "easy",
-      "quality_comment": "Distractors are other well-known family therapy models, enhancing the clarity of the correct systemic ecological model."
+      "quality_comment": "Distractors are other well-known family therapy models, enhancing the clarity of the correct systemic ecological model.",
+      "lessonExcerpt": "**Multisystemic Therapy (MST)**: Originally for adolescent offenders at risk for out-of-home placement. Based on Bronfenbrenner's ecological model.",
+      "suggestedLesson": "6-family-and-group",
+      "needsReview": false
     },
     {
       "stem": "In Bateson's communication theory relevant to family therapy, what characterizes a 'double-bind' communication pattern?",
@@ -247,7 +256,10 @@
       "kn": "KN46",
       "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
       "difficulty": "medium",
-      "quality_comment": "The options provide distractors that are related communication or interaction styles, making the correct answer stand out with its unique paradoxical nature."
+      "quality_comment": "The options provide distractors that are related communication or interaction styles, making the correct answer stand out with its unique paradoxical nature.",
+      "lessonExcerpt": "**Double-bind communication**: This happens when someone receives two contradictory messages and can't comment on the contradiction.",
+      "suggestedLesson": "6-family-and-group",
+      "needsReview": false
     },
     {
       "stem": "Which of the following is considered the analogue of the therapeutic alliance in group therapy according to Yalom and Leszcz?",
@@ -262,7 +274,10 @@
       "kn": "KN46",
       "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
       "difficulty": "easy",
-      "quality_comment": "Distractors are well-known therapeutic factors, making the question straightforward while testing important group therapy knowledge."
+      "quality_comment": "Distractors are well-known therapeutic factors, making the question straightforward while testing important group therapy knowledge.",
+      "lessonExcerpt": "1. **Group cohesiveness**: The analogue of therapeutic alliance in individual therapy. Most consistently predicts positive outcomes and is a precondition for other factors.",
+      "suggestedLesson": "6-family-and-group",
+      "needsReview": false
     },
     {
       "stem": "In Strategic Family Therapy, what is the purpose of 'restraining' as a therapeutic directive?",
@@ -277,7 +292,10 @@
       "kn": "KN46",
       "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
       "difficulty": "medium",
-      "quality_comment": "Distractors include accurate therapeutic strategies but not matching restraining, providing a thoughtful challenge for examinees."
+      "quality_comment": "Distractors include accurate therapeutic strategies but not matching restraining, providing a thoughtful challenge for examinees.",
+      "lessonExcerpt": "- **Restraining**: Encourage the family not to change or warn against changing too quickly. This uses their resistance therapeutically.",
+      "suggestedLesson": "6-family-and-group",
+      "needsReview": false
     },
     {
       "stem": "Within Bowen’s family systems theory, what does the 'family projection process' describe?",
@@ -292,7 +310,10 @@
       "kn": "KN46",
       "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
       "difficulty": "medium",
-      "quality_comment": "Distractors are related concepts from Bowenian theory, enhancing validity and discrimination for testing family systems knowledge."
+      "quality_comment": "Distractors are related concepts from Bowenian theory, enhancing validity and discrimination for testing family systems knowledge.",
+      "lessonExcerpt": "**Family projection process**: Parents project their emotional immaturity onto their children, resulting in lower differentiation in the next generation.",
+      "suggestedLesson": "6-family-and-group",
+      "needsReview": false
     },
     {
       "stem": "Which of the following is a key principle of Multisystemic Therapy (MST) that distinguishes it from other family therapies?",
@@ -307,7 +328,10 @@
       "kn": "KN46",
       "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
       "difficulty": "medium",
-      "quality_comment": "Distractors represent concepts from other models or styles, making this a clear yet nuanced test of MST’s distinctive format."
+      "quality_comment": "Distractors represent concepts from other models or styles, making this a clear yet nuanced test of MST’s distinctive format.",
+      "lessonExcerpt": "Treatment is delivered in home and community settings where problems occur.",
+      "suggestedLesson": "6-family-and-group",
+      "needsReview": false
     },
     {
       "stem": "In Family Therapies, how do therapists typically use the 'genogram' during Bowenian therapy sessions?",
@@ -322,7 +346,10 @@
       "kn": "KN46",
       "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
       "difficulty": "medium",
-      "quality_comment": "Distractors relate to other family therapy techniques, differentiating the unique purpose of genograms in Bowenian therapy."
+      "quality_comment": "Distractors relate to other family therapy techniques, differentiating the unique purpose of genograms in Bowenian therapy.",
+      "lessonExcerpt": "They use a **genogram** (a family tree that maps relationships and events across three generations) to help families see patterns.",
+      "suggestedLesson": "6-family-and-group",
+      "needsReview": false
     },
     {
       "stem": "Which stage of group therapy according to Yalom and Leszcz is most likely to feature increased trust and members sharing more deeply personal issues?",
@@ -337,7 +364,10 @@
       "kn": "KN46",
       "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
       "difficulty": "easy",
-      "quality_comment": "Distractors are other stages of group development, allowing clear identification of correct stage by test-takers."
+      "quality_comment": "Distractors are other stages of group development, allowing clear identification of correct stage by test-takers.",
+      "lessonExcerpt": "| 3. Cohesiveness | Trust building, authentic sharing, mutual concern | How can we support each other? |",
+      "suggestedLesson": "6-family-and-group",
+      "needsReview": false
     },
     {
       "stem": "In the context of family therapy, what does 'differentiation' primarily involve?",
@@ -357,7 +387,10 @@
       "lock_in_level": "easier",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "Interpersonal: Can you maintain your own identity while staying emotionally connected to family?",
+      "suggestedLesson": "6-family-and-group",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best illustrates a lack of differentiation in family dynamics?",
@@ -377,7 +410,10 @@
       "lock_in_level": "harder",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "People with low differentiation become \"emotionally fused\" with family members.",
+      "suggestedLesson": "6-family-and-group",
+      "needsReview": false
     }
   ]
 }

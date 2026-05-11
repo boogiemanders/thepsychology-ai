@@ -35,9 +35,9 @@
       "kn_explanation": "This question is best aligned with KN22 because it tests Influence of individual-environment interaction on development over time (e.g., the relationship between the individual and the social, academic, work, community environment).",
       "difficulty": "hard",
       "quality_comment": "The question accurately assesses knowledge of Patterson's model and its implications for child behavior.",
-      "suggestedLesson": "4-school-and-family",
+      "suggestedLesson": "4-bonding-and-attachment",
       "suggestedParagraph": "## The Foundation: How Relationships Shape Us",
-      "lessonExcerpt": "Inconsistent discipline from parents can lead to conduct problems in children.",
+      "lessonExcerpt": "Coercive Family Interaction Model (Patterson): This model describes a destructive cycle where parents use threats and punishment to temporarily stop misbehavior",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 20
@@ -56,9 +56,9 @@
       "kn_explanation": "This question is best aligned with KN22 because it tests Influence of individual-environment interaction on development over time (e.g., the relationship between the individual and the social, academic, work, community environment).",
       "difficulty": "hard",
       "quality_comment": "The question effectively tests knowledge of adolescent behavior and substance use.",
-      "suggestedLesson": "4-school-and-family",
+      "suggestedLesson": "4-body-growth",
       "suggestedParagraph": "## Predicting Divorce: Warning Signs in Communication",
-      "lessonExcerpt": "Peer influence is a significant predictor of adolescent alcohol use.",
+      "lessonExcerpt": "Risk Factors: Stressful life events, Parental substance abuse, Weak parent-child relationships, Affiliation with substance-using peers",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 2
@@ -77,54 +77,12 @@
       "kn_explanation": "This question is best aligned with KN22 because it tests Influence of individual-environment interaction on development over time (e.g., the relationship between the individual and the social, academic, work, community environment).",
       "difficulty": "medium",
       "quality_comment": "The question effectively assesses knowledge of the relationship between parenting and delinquency.",
-      "suggestedLesson": "4-school-and-family",
+      "suggestedLesson": "4-temperament-and-personality",
       "suggestedParagraph": "## Marriage, Divorce, and What Comes After",
-      "lessonExcerpt": "Poor parenting practices increase the likelihood of delinquency in children.",
+      "lessonExcerpt": "Most strongly associated with juvenile delinquency among all parenting styles.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 9
-    },
-    {
-      "stem": "What is the leading cause of death among adolescents in the United States?",
-      "options": [
-        "Accidents",
-        "Violence",
-        "Suicide",
-        "Chronic health conditions"
-      ],
-      "answer": "Violence",
-      "explanation": "Violence is a significant cause of death among adolescents, often overshadowed by accidents and suicide. The other options, while relevant, do not specifically highlight violence as the leading cause.",
-      "kn": "KN22",
-      "kn_explanation": "This question is best aligned with KN22 because it tests Influence of individual-environment interaction on development over time (e.g., the relationship between the individual and the social, academic, work, community environment).",
-      "difficulty": "medium",
-      "quality_comment": "The question is relevant and tests knowledge of adolescent health issues effectively.",
-      "suggestedLesson": "4-school-and-family",
-      "suggestedParagraph": "## Marriage, Divorce, and What Comes After",
-      "lessonExcerpt": "Violence is a significant cause of death among adolescents.",
-      "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 22
-    },
-    {
-      "stem": "Research on the psychological adjustment of adults following divorce indicates that negative consequences for men and women tend to differ in important ways. Which of the following most accurately describes a key gender difference in post-divorce adjustment?",
-      "options": [
-        "Women are more likely to experience chronic economic hardship, while men's negative effects tend to be temporary",
-        "Men experience greater long-term psychological distress, while women show primarily short-term adjustment difficulties",
-        "Women typically show increased risky behaviors and social isolation, while men face primarily financial challenges",
-        "Both men and women experience equivalent patterns of adjustment, with differences attributable solely to custody arrangements"
-      ],
-      "answer": "Women are more likely to experience chronic economic hardship, while men's negative effects tend to be temporary",
-      "explanation": "Research consistently shows that divorce affects men and women differently. For women, economic hardship is the primary challenge, and these economic consequences tend to be chronic. For men, health problems stem more from risky behaviors, social isolation, and psychological factors, but these negative effects are often temporary rather than chronic. Option B reverses the pattern—men's effects tend to be temporary, not long-term. Option C incorrectly assigns risky behaviors to women and financial challenges to men (the reverse is true). Option D incorrectly claims equivalent patterns.",
-      "kn": "KN22",
-      "kn_explanation": "This question is best aligned with KN22 because it tests Influence of individual-environment interaction on development over time (e.g., the relationship between the individual and the social, academic, work, community environment).",
-      "difficulty": "medium",
-      "quality_comment": "Tests a commonly examined gender difference with plausible distractors that reverse the actual pattern.",
-      "suggestedLesson": "4-school-and-family",
-      "suggestedParagraph": "### The Aftermath: How Divorce Affects Adults",
-      "lessonExcerpt": "For women: Economic hardship is the primary challenge... These economic consequences tend to be chronic. For men: Health problems more often stem from risky behaviors, social isolation, and psychological factors... However, these negative effects are often temporary rather than chronic.",
-      "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 2
     },
     {
       "stem": "A psychologist is evaluating two children from the same household where intimate partner violence occurs. Child A has been directly physically abused by the perpetrating parent, while Child B has not been directly abused but has regularly witnessed the violence between parents. Based on the research literature on family violence and child outcomes, which of the following statements is MOST accurate?",
@@ -163,31 +121,10 @@
       "quality_comment": "Excellent clinical vignette that tests the sleeper effect concept with specific behavioral indicators drawn directly from the lesson content.",
       "suggestedLesson": "4-school-and-family",
       "suggestedParagraph": "### How Divorce Affects Children",
-      "lessonExcerpt": "The 'sleeper effect' is particularly important: Girls who seem fine after their parents' divorce may develop serious problems in adolescence. They may become noncompliant, develop low self-esteem, become pregnant before marriage, or experience intense fears about abandonment in their own romantic relationships.",
+      "lessonExcerpt": "Trauma-Focused Cognitive Behavioral Therapy (TF-CBT) for ages 3-18: Treats sexual abuse, maltreatment, domestic violence exposure, traumatic loss",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 6
-    },
-    {
-      "stem": "A child development specialist is describing the Montessori educational approach to a group of parents considering preschool options. Which of the following BEST captures the key principle underlying the Montessori method?",
-      "options": [
-        "Maximum learning occurs through direct classroom instruction with age-matched peer groups and standardized curricula",
-        "Maximum learning comes from manipulation of sensory-motor materials rather than traditional classroom instruction, with mixed-age groupings",
-        "Maximum learning occurs through competitive academic exercises designed to identify and accelerate gifted students",
-        "Maximum learning comes from teacher-directed rote memorization supplemented by regular standardized testing"
-      ],
-      "answer": "Maximum learning comes from manipulation of sensory-motor materials rather than traditional classroom instruction, with mixed-age groupings",
-      "explanation": "The key principle of Montessori schools is that maximum learning comes from manipulation of materials (sensory-motor stimuli), rather than through traditional classroom instruction and rote learning. Children are grouped with peers of different ages and abilities, and are encouraged to perform at their potential with individually tailored learning goals. Option A is incorrect because Montessori specifically rejects traditional classroom instruction and same-age groupings. Option C is incorrect because Montessori philosophy does not emphasize competition or identifying gifted students; children are not pushed to excel but encouraged to perform at their potential. Option D is incorrect because Montessori explicitly opposes rote learning.",
-      "kn": "KN22",
-      "kn_explanation": "This question is best aligned with KN22 because it tests Influence of individual-environment interaction on development over time (e.g., the relationship between the individual and the social, academic, work, community environment).",
-      "difficulty": "easy",
-      "quality_comment": "The lesson .md files do not cover Montessori; this content is found only in the reference text (TXT_cleaned_v2.rtf). Consider adding Montessori content to the school-and-family lesson.",
-      "suggestedLesson": "4-school-and-family",
-      "suggestedParagraph": "## School Influences",
-      "lessonExcerpt": "MONTESSORI SCHOOLS - The key principle underlying Montessori schools is that maximum learning comes from manipulation of materials (sensory-motor stimuli), rather than through traditional classroom instruction and rote learning. Children in Montessori schools are grouped with peers of different ages and abilities.",
-      "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 10
     },
     {
       "stem": "Research on gender dynamics in classroom settings has consistently found that teachers tend to:",
@@ -211,48 +148,6 @@
       "inspirationIndex": 17
     },
     {
-      "stem": "How do child-rearing practices influence the development of altruism in children?",
-      "options": [
-        "Children raised in authoritarian households are more altruistic.",
-        "Children learn altruism through modeling and reinforcement from caregivers.",
-        "Altruism is solely a genetic trait and not influenced by upbringing.",
-        "Children in neglectful environments show higher levels of altruism."
-      ],
-      "answer": "Children learn altruism through modeling and reinforcement from caregivers.",
-      "explanation": "Research indicates that children develop altruistic behaviors by observing and imitating caregivers who model such behaviors, as well as through reinforcement. The other options present incorrect or unsupported claims.",
-      "kn": "KN22",
-      "kn_explanation": "This question is best aligned with KN22 because it tests Influence of individual-environment interaction on development over time (e.g., the relationship between the individual and the social, academic, work, community environment).",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively tests understanding of the relationship between parenting and altruism.",
-      "suggestedLesson": "4-school-and-family",
-      "suggestedParagraph": "## The Foundation: How Relationships Shape Us",
-      "lessonExcerpt": "These early lessons become templates (often unconscious ones) that people carry into adulthood.",
-      "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 4
-    },
-    {
-      "stem": "Which of the following best describes the effects of divorce on children?",
-      "options": [
-        "Children are unaffected by parental divorce if they are not directly involved.",
-        "Divorce has uniform effects on all children, regardless of age or gender.",
-        "Children from divorced families often experience emotional and behavioral difficulties.",
-        "Divorced parents are always less effective than married parents."
-      ],
-      "answer": "Children from divorced families often experience emotional and behavioral difficulties.",
-      "explanation": "Research shows that children from divorced families frequently face emotional and behavioral challenges, particularly in the immediate aftermath of the divorce. The other options are overly simplistic or inaccurate.",
-      "kn": "KN22",
-      "kn_explanation": "This question is best aligned with KN22 because it tests Influence of individual-environment interaction on development over time (e.g., the relationship between the individual and the social, academic, work, community environment).",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively assesses understanding of the impact of divorce on children.",
-      "suggestedLesson": "4-school-and-family",
-      "suggestedParagraph": "## How Divorce Affects Children",
-      "lessonExcerpt": "The impact on children varies significantly based on several factors.",
-      "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 6
-    },
-    {
       "stem": "What impact do teacher-student gender interactions have on educational outcomes?",
       "options": [
         "They have no significant impact",
@@ -268,31 +163,10 @@
       "quality_comment": "The question effectively assesses understanding of the implications of gender interactions in education.",
       "suggestedLesson": "4-school-and-family",
       "suggestedParagraph": "## The Foundation: How Relationships Shape Us",
-      "lessonExcerpt": "Teacher-student gender interactions can reinforce gender stereotypes, affecting educational outcomes.",
+      "lessonExcerpt": "Research reveals gender-biased teaching patterns from elementary through graduate school: Teachers call on male students more frequently... These patterns reflect and perpetuate gender stereotypes",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 17
-    },
-    {
-      "stem": "At what age do children typically begin to show signs of racial awareness, according to child development research?",
-      "options": [
-        "Infancy",
-        "Around 2-3 years",
-        "Around 5-6 years",
-        "Adolescence"
-      ],
-      "answer": "Around 2-3 years",
-      "explanation": "The correct answer is 'Around 2-3 years' as this is when children start to notice and categorize people based on race. The other options do not accurately reflect the typical age for the onset of racial awareness.",
-      "kn": "KN22",
-      "kn_explanation": "This question is best aligned with KN22 because it tests Influence of individual-environment interaction on development over time (e.g., the relationship between the individual and the social, academic, work, community environment).",
-      "difficulty": "medium",
-      "quality_comment": "The question is well-structured and tests knowledge of child development stages.",
-      "suggestedLesson": "4-school-and-family",
-      "suggestedParagraph": "## The Foundation: How Relationships Shape Us",
-      "lessonExcerpt": "Understanding how families and schools shape development isn't just academic trivia.",
-      "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 4
     },
     {
       "stem": "What is the primary mechanism by which the Rosenthal effect influences student performance?",
@@ -310,7 +184,7 @@
       "quality_comment": "The question is well-structured and assesses understanding of the Rosenthal effect in an educational context.",
       "suggestedLesson": "4-school-and-family",
       "suggestedParagraph": "## Predicting Divorce: Warning Signs in Communication",
-      "lessonExcerpt": "The Rosenthal effect, also known as the Pygmalion effect, shows that teacher expectations can significantly influence student performance.",
+      "lessonExcerpt": "The famous Rosenthal and Jacobson study demonstrated the self-fulfilling prophecy effect: Teachers told certain randomly-selected students were \"bloomers\" who would excel.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 23
@@ -331,7 +205,7 @@
       "quality_comment": "The question effectively assesses understanding of children's emotional responses to divorce.",
       "suggestedLesson": "4-school-and-family",
       "suggestedParagraph": "## How Divorce Affects Children",
-      "lessonExcerpt": "The impact on children varies significantly based on several factors.",
+      "lessonExcerpt": "Research reveals gender-biased teaching patterns from elementary through graduate school: Teachers call on male students more frequently... These patterns reflect and perpetuate gender stereotypes",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 7
@@ -350,75 +224,12 @@
       "kn_explanation": "This question is best aligned with KN27 because it tests Risk and protective factors that may impact a developmental course (e.g., nutrition, prenatal care, health care, social support, socioeconomic status, abuse, victimization, and resiliency).",
       "difficulty": "medium",
       "quality_comment": "The question effectively assesses knowledge of resilience factors in development.",
-      "suggestedLesson": "4-school-and-family",
+      "suggestedLesson": "4-body-growth",
       "suggestedParagraph": "## Marriage, Divorce, and What Comes After",
-      "lessonExcerpt": "Strong family support can help individuals cope with stress and adversity.",
+      "lessonExcerpt": "Protective Factors: Parental disapproval of substance use, Supportive parenting, Age-appropriate parental monitoring",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 14
-    },
-    {
-      "stem": "Research indicates that job satisfaction tends to change with age. Which of the following statements best reflects this relationship?",
-      "options": [
-        "Job satisfaction decreases consistently as individuals age.",
-        "Job satisfaction remains constant throughout adulthood.",
-        "Job satisfaction tends to increase as individuals age.",
-        "Job satisfaction is unrelated to age."
-      ],
-      "answer": "Job satisfaction tends to increase as individuals age.",
-      "explanation": "Research shows that job satisfaction often increases with age, likely due to factors such as increased experience, stability, and alignment of job roles with personal values. The other options do not accurately reflect the general trend observed in studies.",
-      "kn": "KN22",
-      "kn_explanation": "This question is best aligned with KN22 because it tests Influence of individual-environment interaction on development over time (e.g., the relationship between the individual and the social, academic, work, community environment).",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively assesses knowledge of the relationship between age and job satisfaction.",
-      "suggestedLesson": "4-school-and-family",
-      "suggestedParagraph": "## The Aftermath: How Divorce Affects Adults",
-      "lessonExcerpt": "Job satisfaction tends to increase as individuals age.",
-      "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 18
-    },
-    {
-      "stem": "What is a key factor in understanding bullying behavior in childhood according to developmental psychology?",
-      "options": [
-        "It is primarily a result of genetic predisposition.",
-        "It is influenced by peer relationships and social dynamics.",
-        "It is solely a reflection of family dynamics.",
-        "It is a behavior that typically resolves without intervention."
-      ],
-      "answer": "It is influenced by peer relationships and social dynamics.",
-      "explanation": "The correct answer highlights that bullying behavior is significantly influenced by peer relationships and the social context in which children operate. The other options oversimplify the issue by attributing it to genetics, family dynamics, or assuming it resolves on its own.",
-      "kn": "KN22",
-      "kn_explanation": "This question is best aligned with KN22 because it tests Influence of individual-environment interaction on development over time (e.g., the relationship between the individual and the social, academic, work, community environment).",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively tests knowledge of social development and bullying behavior.",
-      "suggestedLesson": "4-school-and-family",
-      "suggestedParagraph": "## The Foundation: How Relationships Shape Us",
-      "lessonExcerpt": "Bullying behavior is influenced by peer relationships and social dynamics.",
-      "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 17
-    },
-    {
-      "stem": "What role does play serve in child development according to developmental psychology?",
-      "options": [
-        "It is merely a form of entertainment.",
-        "It helps children develop social skills and emotional regulation.",
-        "It has no significant impact on cognitive development.",
-        "It is primarily a way for children to expend energy."
-      ],
-      "answer": "It helps children develop social skills and emotional regulation.",
-      "explanation": "The correct answer reflects the understanding that play is crucial for developing social skills and emotional regulation, as it allows children to practice interactions and manage their emotions. The other options underestimate the importance of play in development.",
-      "kn": "KN22",
-      "kn_explanation": "This question is best aligned with KN22 because it tests Influence of individual-environment interaction on development over time (e.g., the relationship between the individual and the social, academic, work, community environment).",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively tests knowledge of the role of play in development.",
-      "suggestedLesson": "4-school-and-family",
-      "suggestedParagraph": "## The Foundation: How Relationships Shape Us",
-      "lessonExcerpt": "Play helps children develop social skills and emotional regulation.",
-      "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 20
     },
     {
       "stem": "A psychologist is presenting grand rounds on post-divorce adjustment. She summarizes the empirical literature as follows: 'The primary stressor differs by gender, and the chronicity of effects also differs.' Which of the following most accurately captures the gender-differentiated findings on adjustment to divorce?",
@@ -436,31 +247,10 @@
       "quality_comment": "Strong question that tests nuanced understanding of gender-differentiated divorce outcomes including both content and chronicity. Well grounded in lesson text.",
       "suggestedLesson": "4-school-and-family",
       "suggestedParagraph": "### The Aftermath: How Divorce Affects Adults",
-      "lessonExcerpt": "For women: Economic hardship is the primary challenge. When women have custody of children, their financial situation typically worsens significantly after divorce. These economic consequences tend to be chronic. For men: Health problems more often stem from risky behaviors, social isolation, and psychological factors. However, these negative effects are often temporary rather than chronic.",
+      "lessonExcerpt": "The famous Rosenthal and Jacobson study demonstrated the self-fulfilling prophecy effect: Teachers told certain randomly-selected students were \"bloomers\" who would excel.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 1
-    },
-    {
-      "stem": "A researcher studying sibling relationships across development finds that compared to early childhood, preadolescent sibling dyads show a shift in relational structure. Which of the following most accurately characterizes how sibling relationships typically change during preadolescence?",
-      "options": [
-        "Preadolescent siblings become substantially warmer and more emotionally intimate as their cognitive abilities mature",
-        "Preadolescent sibling relationships become more egalitarian and less asymmetrical, with the older sibling exerting less dominant authority over the younger",
-        "Conflict increases sharply in preadolescence and continues to escalate linearly through late adolescence",
-        "The younger sibling progressively takes on the dominant role in the relationship as the older sibling withdraws into peer relationships"
-      ],
-      "answer": "Preadolescent sibling relationships become more egalitarian and less asymmetrical, with the older sibling exerting less dominant authority over the younger",
-      "explanation": "During preadolescence, sibling relationships characteristically shift toward greater equality. The power differential that typifies early childhood—where the older sibling tends to dominate and direct—diminishes as the younger child develops cognitively and socially. While conflict may remain present, the structural change toward egalitarianism is the defining feature of preadolescent sibling dynamics. Sibling relationships do not simply become warmer or more intimate during this period, and conflict does not necessarily escalate linearly through adolescence. The younger sibling does not typically assume dominance.",
-      "kn": "KN22",
-      "kn_explanation": "This question is best aligned with KN22 because it tests Influence of individual-environment interaction on development over time (e.g., the relationship between the individual and the social, academic, work, community environment).",
-      "difficulty": "hard",
-      "quality_comment": "Tests a nuanced developmental shift in sibling dynamics that requires specific knowledge. High discriminability between distractors.",
-      "suggestedLesson": "4-school-and-family",
-      "suggestedParagraph": "## The Foundation: How Relationships Shape Us",
-      "lessonExcerpt": "Lesson content does not explicitly address preadolescent sibling relationship structure in the provided excerpts. Question is based on standard EPPP developmental knowledge for sibling relationships.",
-      "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 5
     },
     {
       "stem": "According to Gottman and Levenson's research, which communication behavior is the single best predictor of divorce?",
@@ -475,7 +265,10 @@
       "kn": "KN22",
       "kn_explanation": "This question is best aligned with KN22 because it tests Influence of individual-environment interaction on development over time (e.g., the relationship between the individual and the social, academic, work, community environment).",
       "difficulty": "medium",
-      "quality_comment": "The question is clear and covers a key concept with plausible distractors that test knowledge of specific relationship dynamics."
+      "quality_comment": "The question is clear and covers a key concept with plausible distractors that test knowledge of specific relationship dynamics.",
+      "lessonExcerpt": "Interestingly, contempt alone is the single strongest predictor of divorce.",
+      "suggestedLesson": "4-school-and-family",
+      "needsReview": false
     },
     {
       "stem": "What pattern of couple communication is associated with divorce occurring later in the marriage?",
@@ -490,37 +283,10 @@
       "kn": "KN22",
       "kn_explanation": "This question is best aligned with KN22 because it tests Influence of individual-environment interaction on development over time (e.g., the relationship between the individual and the social, academic, work, community environment).",
       "difficulty": "medium",
-      "quality_comment": "Clear stem and well-constructed distractors that distinguish between emotional expression styles in couples."
-    },
-    {
-      "stem": "Which sociodemographic factor is among the best predictors of a decreased risk for divorce?",
-      "options": [
-        "Younger age at time of marriage",
-        "Presence of a child before marriage",
-        "Higher socioeconomic status",
-        "Younger age at first cohabitation"
-      ],
-      "answer": "Higher socioeconomic status",
-      "explanation": "1. **Higher socioeconomic status** is the correct answer because research indicates that individuals from higher socioeconomic groups experience a decreased risk for divorce compared to those from lower socioeconomic backgrounds. This correlation suggests that financial stability and resources associated with higher socioeconomic status may contribute to more stable marital relationships, reducing stressors that can lead to divorce.\n\n2. The option **younger age at time of marriage** is incorrect because studies have shown that the risk for divorce actually increases with younger age at marriage, indicating that marrying at an older age is a protective factor against divorce. The option **presence of a child before marriage** is wrong as it is associated with a greater risk for divorce, not a decrease, since couples who have children before marriage often face additional stress and challenges. Lastly, **younger age at first cohabitation** is incorrect because initial studies found that cohabiting before marriage was linked to higher rates of divorce, suggesting that younger cohabitation is a risk factor rather than a protective one.",
-      "kn": "KN22",
-      "kn_explanation": "This question is best aligned with KN22 because it tests Influence of individual-environment interaction on development over time (e.g., the relationship between the individual and the social, academic, work, community environment).",
-      "difficulty": "medium",
-      "quality_comment": "The options are balanced and plausible, making discrimination among choices clear and appropriate."
-    },
-    {
-      "stem": "Which of the following best describes the impact of divorce on men’s health according to research?",
-      "options": [
-        "Economic hardship leading to chronic health problems",
-        "Increased risky health behaviors and transient health effects",
-        "Greater social support improving mental health",
-        "Steady improvement in psychological well-being"
-      ],
-      "answer": "Increased risky health behaviors and transient health effects",
-      "explanation": "1. The correct answer, \"Increased risky health behaviors and transient health effects,\" accurately describes the impact of divorce on men's health as research indicates that men often engage in riskier health behaviors following divorce and experience health problems that are typically temporary. Specifically, studies show that men may face increased stress, social isolation, and other psychological factors post-divorce, which contribute to these risky behaviors and transient health issues (Liu, 2013).\n\n2. The option \"Economic hardship leading to chronic health problems\" is incorrect because, while economic hardship does affect women's health post-divorce, men typically experience an improved financial situation after divorce, which does not lead to chronic health problems. The statement \"Greater social support improving mental health\" is also wrong, as the research indicates that men often face increased social isolation after divorce rather than enhanced social support. Lastly, \"Steady improvement in psychological well-being\" is incorrect because the research shows that men's health problems post-divorce are often linked to increased stress and risky behaviors, not a consistent improvement in their psychological state.",
-      "kn": "KN22",
-      "kn_explanation": "This question is best aligned with KN22 because it tests Influence of individual-environment interaction on development over time (e.g., the relationship between the individual and the social, academic, work, community environment).",
-      "difficulty": "medium",
-      "quality_comment": "Good balance of detailed, plausible answer choices reflecting different health outcomes."
+      "quality_comment": "Clear stem and well-constructed distractors that distinguish between emotional expression styles in couples.",
+      "lessonExcerpt": "Protective Factors: Parental disapproval of substance use, Supportive parenting, Age-appropriate parental monitoring",
+      "suggestedLesson": "4-body-growth",
+      "needsReview": false
     },
     {
       "stem": "Which parenting style is usually associated with custodial mothers following divorce, especially toward sons?",
@@ -535,22 +301,10 @@
       "kn": "KN25",
       "kn_explanation": "Examines post-divorce family dynamics and parenting styles, relevant to family functioning and individual development (KN25).",
       "difficulty": "medium",
-      "quality_comment": "Answer options fairly distinct; question tests nuanced knowledge of parenting changes post-divorce."
-    },
-    {
-      "stem": "In studies on children of divorced parents, which factor has been found to have as much or greater impact on child adjustment than divorce itself?",
-      "options": [
-        "The frequency of contact with nonresident fathers",
-        "The quality of the parent-child relationship and socioeconomic status",
-        "Age at time of parental divorce",
-        "Gender of the child"
-      ],
-      "answer": "The quality of the parent-child relationship and socioeconomic status",
-      "explanation": "1. **Correct Answer Explanation**: The quality of the parent-child relationship and socioeconomic status are critical factors influencing child adjustment following divorce. Research indicates that children from low-income families often experience increased risks for academic, behavioral, and emotional problems, primarily due to the financial hardships that follow divorce, particularly affecting custodial mothers. Additionally, a strong parent-child relationship can mitigate the negative effects of divorce, highlighting its importance in child adjustment.\n\n2. **Incorrect Options**:\n   - **The frequency of contact with nonresident fathers**: While contact with nonresident fathers is relevant, research shows that factors such as the father's payment of child support and the quality of the father-child relationship are more significant in affecting children's outcomes than the frequency of contact alone.\n   - **Age at time of parental divorce**: Although age at the time of divorce can influence child outcomes, it does not consistently have as much impact as the quality of the parent-child relationship and socioeconomic status, which are more critical determinants of adjustment.\n   - **Gender of the child**: Gender differences in adjustment exist, but the overall quality of parenting and socioeconomic context are more influential on children's adjustment than gender alone.",
-      "kn": "KN22",
-      "kn_explanation": "This question is best aligned with KN22 because it tests Influence of individual-environment interaction on development over time (e.g., the relationship between the individual and the social, academic, work, community environment).",
-      "difficulty": "medium",
-      "quality_comment": "Distractors are plausible but the correct option captures demonstrated environmental influences well."
+      "quality_comment": "Answer options fairly distinct; question tests nuanced knowledge of parenting changes post-divorce.",
+      "lessonExcerpt": "Custodial mothers may become less affectionate (especially toward sons) and more authoritarian.",
+      "suggestedLesson": "4-school-and-family",
+      "needsReview": false
     },
     {
       "stem": "Which type of intimate partner violence (IPV) is characterized by one partner’s use of violence to exert control and includes cycles of tension, acute violence, and loving contrition?",
@@ -565,7 +319,10 @@
       "kn": "KN22",
       "kn_explanation": "This question is best aligned with KN22 because it tests Influence of individual-environment interaction on development over time (e.g., the relationship between the individual and the social, academic, work, community environment).",
       "difficulty": "hard",
-      "quality_comment": "Question tests detailed understanding of IPV typology with well-differentiated response options."
+      "quality_comment": "Question tests detailed understanding of IPV typology with well-differentiated response options.",
+      "lessonExcerpt": "Interestingly, contempt alone is the single strongest predictor of divorce.",
+      "suggestedLesson": "4-school-and-family",
+      "needsReview": false
     },
     {
       "stem": "Which intervention model includes live coaching of parents by therapists through a two-way mirror and focuses on strengthening parent-child relationships and consistent discipline?",
@@ -580,7 +337,10 @@
       "kn": "KN22",
       "kn_explanation": "This question is best aligned with KN22 because it tests Influence of individual-environment interaction on development over time (e.g., the relationship between the individual and the social, academic, work, community environment).",
       "difficulty": "medium",
-      "quality_comment": "Clear stem with relevant, plausible interventions as distractors, requiring specific knowledge."
+      "quality_comment": "Clear stem with relevant, plausible interventions as distractors, requiring specific knowledge.",
+      "lessonExcerpt": "The Avoidant Pattern (Later Divorce Predictor) Some couples avoid conflict entirely. They don't share feelings, dodge difficult conversations, and maintain emotional distance.",
+      "suggestedLesson": "4-school-and-family",
+      "needsReview": false
     },
     {
       "stem": "Research on 'helicopter parents' has linked this parenting style primarily to which child or emerging adult outcomes?",
@@ -595,7 +355,10 @@
       "kn": "KN25",
       "kn_explanation": "Focuses on family functioning and parenting’s effect on development, specifically psychological outcomes during transition to adulthood (KN25).",
       "difficulty": "medium",
-      "quality_comment": "Distractors are reasonable and the correct answer clearly reflects the evidence-based outcomes of helicopter parenting."
+      "quality_comment": "Distractors are reasonable and the correct answer clearly reflects the evidence-based outcomes of helicopter parenting.",
+      "lessonExcerpt": "| Lower socioeconomic status | Financial stress adds pressure to relationships |",
+      "suggestedLesson": "4-school-and-family",
+      "needsReview": false
     },
     {
       "stem": "Which outcome is most consistently observed among children raised by gay or lesbian parents compared to those raised by heterosexual parents?",
@@ -610,22 +373,10 @@
       "kn": "KN22",
       "kn_explanation": "This question is best aligned with KN22 because it tests Influence of individual-environment interaction on development over time (e.g., the relationship between the individual and the social, academic, work, community environment).",
       "difficulty": "easy",
-      "quality_comment": "Simple and straightforward question assessing a critical research consensus with plausible distractors."
-    },
-    {
-      "stem": "Which of the following has research shown to mediate the relationship between childhood maltreatment and adult obesity?",
-      "options": [
-        "Posttraumatic stress disorder (PTSD)",
-        "Depression",
-        "Socioeconomic status",
-        "Genetic predisposition to obesity"
-      ],
-      "answer": "Depression",
-      "explanation": "1. **Correct Answer - Depression**: Research indicates that childhood maltreatment is linked to an increased risk of obesity in adulthood, and this relationship is mediated by depression. Specifically, Danese and Tan (2014) found that when they adjusted their data for current depression, the link between childhood maltreatment and adult obesity was no longer statistically significant, suggesting that depression plays a critical role in this relationship.\n\n2. **Incorrect Options**:\n   - **Posttraumatic Stress Disorder (PTSD)**: While PTSD can result from childhood maltreatment and may contribute to various health issues, the reference material specifically highlights depression as the mediating factor for the relationship between maltreatment and obesity.\n   - **Socioeconomic Status**: Although socioeconomic status can influence various outcomes, the provided material does not indicate that it mediates the relationship between childhood maltreatment and obesity; instead, it focuses on depression as the primary mediator.\n   - **Genetic Predisposition to Obesity**: Genetic factors may play a role in obesity, but the reference material does not support the idea that genetic predisposition mediates the relationship between childhood maltreatment and obesity, emphasizing depression as the key mediator instead.",
-      "kn": "KN22",
-      "kn_explanation": "This question is best aligned with KN22 because it tests Influence of individual-environment interaction on development over time (e.g., the relationship between the individual and the social, academic, work, community environment).",
-      "difficulty": "hard",
-      "quality_comment": "Challenging question that integrates research findings on mediation, requiring nuanced understanding of developmental psychopathology."
+      "quality_comment": "Simple and straightforward question assessing a critical research consensus with plausible distractors.",
+      "lessonExcerpt": "For men: Health problems more often stem from risky behaviors, social isolation, and psychological factors. ... However, these negative effects are often temporary rather than chronic.",
+      "suggestedLesson": "4-school-and-family",
+      "needsReview": false
     },
     {
       "stem": "Which factor is most strongly related to better adjustment among stepfathers according to research findings?",
@@ -640,7 +391,10 @@
       "kn": "KN22",
       "kn_explanation": "This question is best aligned with KN22 because it tests Influence of individual-environment interaction on development over time (e.g., the relationship between the individual and the social, academic, work, community environment).",
       "difficulty": "medium",
-      "quality_comment": "Well-constructed distractors with one clearly supported correct answer from the research."
+      "quality_comment": "Well-constructed distractors with one clearly supported correct answer from the research.",
+      "lessonExcerpt": "Custodial mothers may become less affectionate (especially toward sons) and more authoritarian.",
+      "suggestedLesson": "4-school-and-family",
+      "needsReview": false
     },
     {
       "stem": "According to Rosenthal and Jacobson's study on teacher expectations, what phenomenon explains students' improved performance when labeled as 'bloomers'?",
@@ -655,7 +409,10 @@
       "kn": "KN22",
       "kn_explanation": "This question is best aligned with KN22 because it tests Influence of individual-environment interaction on development over time (e.g., the relationship between the individual and the social, academic, work, community environment).",
       "difficulty": "medium",
-      "quality_comment": "Classic study question with well-known theory and plausible alternative social-cognitive phenomena."
+      "quality_comment": "Classic study question with well-known theory and plausible alternative social-cognitive phenomena.",
+      "lessonExcerpt": "When family income drops after divorce (which typically happens for custodial mothers), children face increased risk for academic, behavioral, and emotional problems. ... the problems aren't about single parenting itself, but about the financial stress",
+      "suggestedLesson": "4-school-and-family",
+      "needsReview": false
     },
     {
       "stem": "Which factor related to early maternal employment is associated with small positive effects on children’s behavior and academic achievement?",
@@ -670,7 +427,10 @@
       "kn": "KN22",
       "kn_explanation": "The question addresses individual-environment interactions affecting child development, specifically the impact of maternal employment and family structure (KN22).",
       "difficulty": "medium",
-      "quality_comment": "Options are balanced and incorporate key contextual factors influencing child outcomes."
+      "quality_comment": "Options are balanced and incorporate key contextual factors influencing child outcomes.",
+      "lessonExcerpt": "| Intimate Terrorism | Usually male partner | Control partner | Uses multiple control tactics; follows cycle of violence |",
+      "suggestedLesson": "4-school-and-family",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best describes the impact of cultural socialization practices used by ethnic/racial minority parents?",
@@ -685,7 +445,10 @@
       "kn": "KN22",
       "kn_explanation": "This question is best aligned with KN22 because it tests Influence of individual-environment interaction on development over time (e.g., the relationship between the individual and the social, academic, work, community environment).",
       "difficulty": "medium",
-      "quality_comment": "The question effectively highlights cultural factors in development with balanced and plausible distractors."
+      "quality_comment": "The question effectively highlights cultural factors in development with balanced and plausible distractors.",
+      "lessonExcerpt": "Parent-Child Interaction Therapy (PCIT) for ages 2-12: - Therapist observes from behind mirror, coaches parents via earpiece - Phase 1: Child-directed interaction (strengthen bond)",
+      "suggestedLesson": "4-school-and-family",
+      "needsReview": false
     },
     {
       "stem": "Which factor has been found to have a greater influence than the frequency of nonresident father contact on children’s outcomes following divorce?",
@@ -700,7 +463,10 @@
       "kn": "KN25",
       "kn_explanation": "This question addresses family functioning and influences of diverse parenting factors on child development post-divorce (KN25).",
       "difficulty": "medium",
-      "quality_comment": "Good differentiation of factors affecting child outcomes with consistent plausible alternatives."
+      "quality_comment": "Good differentiation of factors affecting child outcomes with consistent plausible alternatives.",
+      "lessonExcerpt": "But the outcomes are similarly problematic: - High stress and anxiety in children - Increased sense of entitlement - Poor emotional and behavioral self-regulation - Low autonomy",
+      "suggestedLesson": "4-school-and-family",
+      "needsReview": false
     },
     {
       "stem": "Which stage is NOT part of Walker’s cycle of violence in intimate partner violence?",
@@ -715,27 +481,10 @@
       "kn": "KN22",
       "kn_explanation": "This question is best aligned with KN22 because it tests Influence of individual-environment interaction on development over time (e.g., the relationship between the individual and the social, academic, work, community environment).",
       "difficulty": "medium",
-      "quality_comment": "Clear, focused question with a distinct incorrect option to test recognition of cycle components."
-    },
-    {
-      "stem": "In the context of relationship dynamics, which of the following behaviors is most likely to lead to relationship dissatisfaction according to Gottman's research?",
-      "options": [
-        "Stonewalling",
-        "Criticism",
-        "Contempt",
-        "Defensiveness"
-      ],
-      "answer": "Contempt",
-      "explanation": "1. **Contempt as the Correct Answer**: According to Gottman and Levenson’s research, contempt is identified as the single best predictor of divorce and relationship dissatisfaction. This behavior reflects a deep sense of disrespect and superiority towards one’s partner, which can escalate conflicts and erode the emotional connection necessary for a healthy relationship. Contempt often manifests through sarcasm, ridicule, or disdain, making it particularly damaging to relationship satisfaction.\n\n2. **Explanation of Incorrect Options**:\n   - **Stonewalling**: While stonewalling, characterized by emotional withdrawal and disengagement during conflicts, can lead to relationship issues, it is more often associated with the emotionally inexpressive (avoidant) pattern and is not as directly linked to immediate dissatisfaction as contempt.\n   - **Criticism**: Criticism involves attacking a partner's character or behavior, which can contribute to conflict; however, it does not have the same pervasive negative impact on relationship satisfaction as contempt, which conveys deeper disrespect.\n   - **Defensiveness**: Defensiveness is a response to perceived attacks and can hinder communication; it is typically a reaction to conflict rather than a primary predictor of relationship dissatisfaction like contempt, which fundamentally undermines respect and trust.",
-      "difficulty": "easy",
-      "kn": "KN22",
-      "kn_explanation": "This question is best aligned with KN22 because it tests Influence of individual-environment interaction on development over time (e.g., the relationship between the individual and the social, academic, work, community environment).",
-      "quality_comment": "This question effectively tests knowledge of Gottman's findings while being straightforward.",
-      "is_lock_in_drill": true,
-      "lock_in_level": "easier",
-      "tags": [
-        "lock_in_drill"
-      ]
+      "quality_comment": "Clear, focused question with a distinct incorrect option to test recognition of cycle components.",
+      "lessonExcerpt": "Research consistently shows children raised by gay or lesbian parents don't differ from children of heterosexual parents in psychological adjustment, intellectual functioning, gender identity, or sexual orientation.",
+      "suggestedLesson": "4-school-and-family",
+      "needsReview": false
     },
     {
       "stem": "Which of the following negative communication patterns, identified by Gottman, is most detrimental to long-term relationship stability?",
@@ -755,7 +504,10 @@
       "lock_in_level": "harder",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "Stepfather Adjustment. Stepfathers adjust better when they: - Have their own biological children living in the household",
+      "suggestedLesson": "4-school-and-family",
+      "needsReview": false
     }
   ]
 }

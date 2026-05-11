@@ -16,7 +16,7 @@
       "quality_comment": "Directly tests a high-yield diagnostic threshold distinction between child and adult criteria that commonly appears on the EPPP.",
       "suggestedLesson": "5-sex-and-gender",
       "suggestedParagraph": "### Diagnostic Criteria Across Ages",
-      "lessonExcerpt": "**For Children** (need 6 of 8 symptoms for 6+ months): Strong desire to be another gender, Strong preference for cross-gender clothing, Preference for cross-gender roles in play, Preference for toys/activities typical of other gender, Preference for playmates of other gender, Rejection of own anatomy, Strong desire for physical sex characteristics of other gender, General distress about assigned gender",
+      "lessonExcerpt": "**For children**, you need at least six of eight symptoms lasting six months: Strong desire to be the other gender, Strong preference for wearing clothes typical of the other gender, Strong dislike of one's sexual anatomy",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 21
@@ -55,7 +55,9 @@
       "kn": "KN40",
       "kn_explanation": "This question is best aligned with KN40 because it tests Measurement of outcomes and changes due to prevention or intervention efforts with individuals, couples, families, groups, and organizations.",
       "difficulty": "medium",
-      "quality_comment": "Distractors include relevant techniques for other sexual disorders or paraphilic disorders, providing plausible but distinct options."
+      "quality_comment": "Distractors include relevant techniques for other sexual disorders or paraphilic disorders, providing plausible but distinct options.",
+      "lessonExcerpt": "**Sensate Focus** (developed by Masters and Johnson in 1970) is the gold standard behavioral intervention. It works by gradually rebuilding intimacy while removing performance pressure.",
+      "needsReview": false
     },
     {
       "stem": "A man reports persistent difficulty ejaculating before one minute of vaginal penetration in 80% of sexual encounters for the past seven months, causing him significant distress. Which of the following treatments is supported by research for this condition?",
@@ -70,7 +72,9 @@
       "kn": "KN38",
       "kn_explanation": "This question is best aligned with KN38 because it tests Constructs of epidemiology and base rates of psychological and behavioral disorders.",
       "difficulty": "medium",
-      "quality_comment": "Options include plausible treatments related to sexual disorders or gender dysphoria to challenge test-takers appropriately."
+      "quality_comment": "Options include plausible treatments related to sexual disorders or gender dysphoria to challenge test-takers appropriately.",
+      "lessonExcerpt": "**SSRIs** (particularly paroxetine): Low serotonin levels contribute to premature ejaculation, and daily SSRIs can help delay ejaculation",
+      "needsReview": false
     },
     {
       "stem": "Which of the following DSM-5-TR specifiers is NOT applicable to genito-pelvic pain/penetration disorder?",
@@ -85,7 +89,9 @@
       "kn": "KN36",
       "kn_explanation": "This question requires knowledge of diagnostic classification and specifiers within the DSM-5-TR classification system, linked to assessment and diagnosis (KN36).",
       "difficulty": "hard",
-      "quality_comment": "The question tests detailed knowledge of diagnostic criteria and specifiers, with distractors mixing diagnostic features and irrelevant clinical terminology."
+      "quality_comment": "The question tests detailed knowledge of diagnostic criteria and specifiers, with distractors mixing diagnostic features and irrelevant clinical terminology.",
+      "lessonExcerpt": "The one exception is genito-pelvic pain/penetration disorder, which only uses onset and severity specifiers.",
+      "needsReview": false
     },
     {
       "stem": "Which treatment combination is most appropriate for a woman experiencing genito-pelvic pain/penetration disorder associated with pelvic floor muscle tension?",
@@ -100,7 +106,9 @@
       "kn": "KN38",
       "kn_explanation": "This question is best aligned with KN38 because it tests Constructs of epidemiology and base rates of psychological and behavioral disorders.",
       "difficulty": "medium",
-      "quality_comment": "Distractors include treatments relevant to other disorders providing thoughtful challenge, with plausible but incorrect options."
+      "quality_comment": "Distractors include treatments relevant to other disorders providing thoughtful challenge, with plausible but incorrect options.",
+      "lessonExcerpt": "Treatment options include: Relaxation training, Sensate focus, Topical anesthetics, Vaginal dilators (gradually increasing sizes), Kegel exercises to gain voluntary control over pelvic floor muscles",
+      "needsReview": false
     },
     {
       "stem": "According to the gender-affirmative model of care for gender diverse youth, which of the following assumptions is emphasized?",
@@ -115,7 +123,9 @@
       "kn": "KN38",
       "kn_explanation": "This question is best aligned with KN38 because it tests Constructs of epidemiology and base rates of psychological and behavioral disorders.",
       "difficulty": "medium",
-      "quality_comment": "Distractors contrast the Dutch protocol and incorrect assumptions, enhancing clarity and discrimination."
+      "quality_comment": "Distractors contrast the Dutch protocol and incorrect assumptions, enhancing clarity and discrimination.",
+      "lessonExcerpt": "View of gender variations | Not explicitly stated | Gender variations are not disorders; gender is diverse, not always binary, and may be fluid",
+      "needsReview": false
     },
     {
       "stem": "Which of the following criteria must be met for a diagnosis of pedophilic disorder according to DSM-5-TR?",
@@ -130,7 +140,9 @@
       "kn": "KN36",
       "kn_explanation": "The question assesses diagnostic criteria for a paraphilic disorder, focusing on assessment and diagnosis (KN36).",
       "difficulty": "hard",
-      "quality_comment": "Distractors contain partially correct but inaccurate age or consent descriptions to thoughtfully challenge recall of specific DSM criteria."
+      "quality_comment": "Distractors contain partially correct but inaccurate age or consent descriptions to thoughtfully challenge recall of specific DSM criteria.",
+      "lessonExcerpt": "Sexual arousal related to children 13 years or younger Person must be at least 16 years old and at least five years older than the child",
+      "needsReview": false
     },
     {
       "stem": "Which pharmacological treatment would most likely be prescribed to reduce sexual desire in a client with severe paraphilic disorder to reduce risk of harm to others?",
@@ -145,7 +157,9 @@
       "kn": "KN38",
       "kn_explanation": "This question is best aligned with KN38 because it tests Constructs of epidemiology and base rates of psychological and behavioral disorders.",
       "difficulty": "medium",
-      "quality_comment": "All options are psychopharmacological agents relevant to psychiatry, but only one is correctly linked to reducing sexual drive."
+      "quality_comment": "All options are psychopharmacological agents relevant to psychiatry, but only one is correctly linked to reducing sexual drive.",
+      "lessonExcerpt": "Antiandrogens (Depo-Provera) | Severe disorders | Reduce sexual desire; serious side effects; high relapse risk when discontinued",
+      "needsReview": false
     },
     {
       "stem": "A client diagnosed with exhibitionistic disorder must meet which of the following diagnostic requirements according to DSM-5-TR?",
@@ -160,7 +174,9 @@
       "kn": "KN36",
       "kn_explanation": "This question evaluates diagnostic criteria for a paraphilic disorder, specifically focusing on assessment and identification (KN36).",
       "difficulty": "medium",
-      "quality_comment": "Options present nuanced diagnostic features related to duration, consent, and behavior to challenge detailed knowledge of criteria."
+      "quality_comment": "Options present nuanced diagnostic features related to duration, consent, and behavior to challenge detailed knowledge of criteria.",
+      "lessonExcerpt": "Exposing genitals to unsuspecting persons for sexual arousal At least six months duration Person has acted on urges OR experienced significant distress/impairment",
+      "needsReview": false
     },
     {
       "stem": "Which of the following is true regarding the prognosis of gender confirmation surgery (gender-affirming surgery)?",
@@ -175,7 +191,9 @@
       "kn": "KN38",
       "kn_explanation": "This question is best aligned with KN38 because it tests Constructs of epidemiology and base rates of psychological and behavioral disorders.",
       "difficulty": "medium",
-      "quality_comment": "Distractors are clearly incorrect but plausible misconceptions, making the question effective for assessing understanding of prognosis."
+      "quality_comment": "Distractors are clearly incorrect but plausible misconceptions, making the question effective for assessing understanding of prognosis.",
+      "lessonExcerpt": "Transgender male patients tend to have slightly more positive outcomes than transgender female patients",
+      "needsReview": false
     },
     {
       "stem": "Orgasmic reconditioning as a behavioral strategy in the treatment of paraphilic disorders involves which of the following?",
@@ -190,7 +208,9 @@
       "kn": "KN38",
       "kn_explanation": "This question is best aligned with KN38 because it tests Constructs of epidemiology and base rates of psychological and behavioral disorders.",
       "difficulty": "medium",
-      "quality_comment": "Options contrast related behavioral interventions, requiring examinees to discriminate subtle but important distinctions."
+      "quality_comment": "Options contrast related behavioral interventions, requiring examinees to discriminate subtle but important distinctions.",
+      "lessonExcerpt": "**Orgasmic (masturbatory) reconditioning**: The person switches their fantasy during masturbation from the paraphilic object to more appropriate stimuli.",
+      "needsReview": false
     },
     {
       "stem": "Which sexual dysfunction requires symptoms to have been present at least six months, occur on 75-100% of sexual occasions, and involve marked difficulty maintaining an erection during sexual activity?",
@@ -205,7 +225,9 @@
       "kn": "KN36",
       "kn_explanation": "This question assesses knowledge of diagnostic criteria for sexual dysfunctions, which falls under assessment and diagnosis (KN36).",
       "difficulty": "easy",
-      "quality_comment": "Stem and options are clearly stated, with plausible distractors representing other sexual dysfunctions to aid discrimination."
+      "quality_comment": "Stem and options are clearly stated, with plausible distractors representing other sexual dysfunctions to aid discrimination.",
+      "lessonExcerpt": "For an erectile disorder diagnosis, symptoms must occur on 75-100% of sexual occasions. ... These symptoms must persist for at least six months and cause significant distress.",
+      "needsReview": false
     },
     {
       "stem": "The Dutch protocol for treating gender dysphoria in youth emphasizes which of the following approaches prior to puberty?",
@@ -220,7 +242,9 @@
       "kn": "KN38",
       "kn_explanation": "This question is best aligned with KN38 because it tests Constructs of epidemiology and base rates of psychological and behavioral disorders.",
       "difficulty": "medium",
-      "quality_comment": "Distractors include approaches from other models or inaccurate practices, clarifying the distinctions for examinees."
+      "quality_comment": "Distractors include approaches from other models or inaccurate practices, clarifying the distinctions for examinees.",
+      "lessonExcerpt": "Childhood approach: \"Watchful waiting\" with support ... Both approaches may include this progression as appropriate: 1. Social transition (name, pronouns, clothing, presentation) 2. Puberty blockers at puberty onset (gives time for exploration)",
+      "needsReview": false
     },
     {
       "stem": "Which of the following statements about transvestic disorder is true?",
@@ -235,7 +259,9 @@
       "kn": "KN38",
       "kn_explanation": "This question is best aligned with KN38 because it tests Constructs of epidemiology and base rates of psychological and behavioral disorders.",
       "difficulty": "medium",
-      "quality_comment": "Distractors are common misunderstandings related to gender dysphoria and gender identity, promoting clear differentiation."
+      "quality_comment": "Distractors are common misunderstandings related to gender dysphoria and gender identity, promoting clear differentiation.",
+      "lessonExcerpt": "Cross-dressing specifically for sexual arousal (not for gender expression) At least six months duration causing significant distress or impairment Most individuals identify as heterosexual",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best describes a key feature of the gender-affirmative model of care for gender diverse youth?",
@@ -250,7 +276,9 @@
       "kn": "KN38",
       "kn_explanation": "This question is best aligned with KN38 because it tests Constructs of epidemiology and base rates of psychological and behavioral disorders.",
       "difficulty": "medium",
-      "quality_comment": "Options contrast important aspects of gender-affirmative care and common misconceptions, aiding discrimination and conceptual understanding."
+      "quality_comment": "Options contrast important aspects of gender-affirmative care and common misconceptions, aiding discrimination and conceptual understanding.",
+      "lessonExcerpt": "Gender variations are not disorders; gender is diverse, not always binary, and may be fluid",
+      "needsReview": false
     },
     {
       "stem": "In the context of paraphilic disorders, which cognitive-behavioral technique is primarily aimed at replacing sexual arousal associated with deviant stimuli with fear or aversive responses?",
@@ -265,7 +293,9 @@
       "kn": "KN38",
       "kn_explanation": "This question is best aligned with KN38 because it tests Constructs of epidemiology and base rates of psychological and behavioral disorders.",
       "difficulty": "medium",
-      "quality_comment": "Distractors are other behavioral intervention techniques, requiring examinees to distinguish between related therapies."
+      "quality_comment": "Distractors are other behavioral intervention techniques, requiring examinees to distinguish between related therapies.",
+      "lessonExcerpt": "**Covert sensitization**: A form of aversive counterconditioning conducted in imagination. ... The sexual arousal gets replaced with fear or another undesirable response.",
+      "needsReview": false
     },
     {
       "stem": "When assessing a client for sexual dysfunction, understanding the base rates of nocturnal erections can most help differentiate if erectile difficulties are due to organic or psychological causes by confirming which?",
@@ -280,7 +310,9 @@
       "kn": "KN37",
       "kn_explanation": "This question focuses on evidence-based interpretation of clinical data and base rate information relevant to differential diagnosis under assessment and diagnosis (KN37).",
       "difficulty": "medium",
-      "quality_comment": "Options test understanding of clinical clues in differential diagnosis, using base rate and diagnostic reasoning principles."
+      "quality_comment": "Options test understanding of clinical clues in differential diagnosis, using base rate and diagnostic reasoning principles.",
+      "lessonExcerpt": "If the problem is psychological rather than purely medical, the person typically still has spontaneous erections at unexpected times, morning erections, or successful erections during masturbation or with a different partner.",
+      "needsReview": false
     },
     {
       "stem": "Which technique is commonly employed to help couples improve intimacy and reduce anxiety during sexual activities?",
@@ -300,7 +332,9 @@
       "lock_in_level": "easier",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "**Sensate Focus** (developed by Masters and Johnson in 1970) is the gold standard behavioral intervention. It works by gradually rebuilding intimacy while removing performance pressure.",
+      "needsReview": false
     },
     {
       "stem": "In the context of treating sexual dysfunctions, which approach emphasizes gradual exposure to sexual stimuli to reduce anxiety?",
@@ -320,7 +354,9 @@
       "lock_in_level": "harder",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "The couple progresses through stages: 1. Non-sexual touching while focusing on pleasurable sensations 2. Sexual touching (still no intercourse) 3. Finally, sexual intercourse",
+      "needsReview": false
     }
   ]
 }

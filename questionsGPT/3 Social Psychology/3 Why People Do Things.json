@@ -211,48 +211,6 @@
       "inspirationIndex": 6
     },
     {
-      "stem": "What attribution style is most likely to lead to a positive self-image in athletes?",
-      "options": [
-        "Internal and stable",
-        "External and unstable",
-        "Internal and unstable",
-        "External and stable"
-      ],
-      "answer": "Internal and unstable",
-      "explanation": "The correct answer is 'Internal and unstable' because this attribution style allows athletes to take credit for their successes (internal) while viewing failures as temporary (unstable), which helps maintain a positive self-image. 'Internal and stable' would lead to a negative self-image as it suggests a permanent flaw. 'External and unstable' does not allow for personal accountability, and 'External and stable' would lead to a negative self-image as it suggests consistent external factors causing failure.",
-      "kn": "KN14",
-      "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively assesses knowledge of attribution theory in sports.",
-      "suggestedLesson": "3-why-people-do-things",
-      "suggestedParagraph": "## The Major Attribution Biases You Need to Know",
-      "lessonExcerpt": "An internal and unstable attribution style allows individuals to maintain a positive self-image by attributing successes to their abilities and failures to temporary factors.",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 19
-    },
-    {
-      "stem": "Which attribution style is most commonly associated with the maintenance of depression?",
-      "options": [
-        "Optimistic attribution style",
-        "Pessimistic attribution style",
-        "Situational attribution style",
-        "Global attribution style"
-      ],
-      "answer": "Pessimistic attribution style",
-      "explanation": "The pessimistic attribution style is correct as it involves attributing negative events to internal, stable, and global factors, which is linked to the maintenance of depression. The other options do not reflect the same negative explanatory patterns associated with depression.",
-      "kn": "KN14",
-      "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
-      "difficulty": "hard",
-      "quality_comment": "The question is well-structured and targets a critical aspect of attribution theory in relation to depression.",
-      "suggestedLesson": "3-why-people-do-things",
-      "suggestedParagraph": "## What Are Causal Attributions?",
-      "lessonExcerpt": "People with a pessimistic explanatory style do the opposite with negative events, attributing them to internal, stable, and global factors.",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 2
-    },
-    {
       "stem": "In the context of attribution theory, how do individuals typically explain their failures when experiencing depression?",
       "options": [
         "By attributing them to external, unstable factors",
@@ -274,27 +232,6 @@
       "inspirationIndex": 4
     },
     {
-      "stem": "According to attribution theory, which type of attribution is most likely to be made when a colleague is promoted over others?",
-      "options": [
-        "Internal attribution based on their skills and abilities.",
-        "External attribution based on luck or favoritism.",
-        "Stable attribution suggesting this will happen consistently.",
-        "Global attribution affecting all areas of their life."
-      ],
-      "answer": "Internal attribution based on their skills and abilities.",
-      "explanation": "In attribution theory, when someone is promoted, observers are likely to attribute this success to internal factors such as skills and abilities, rather than external factors. The other options do not accurately reflect the typical attribution made in this context.",
-      "kn": "KN14",
-      "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
-      "difficulty": "medium",
-      "quality_comment": "The question accurately assesses understanding of attribution theory in workplace performance.",
-      "suggestedLesson": "3-why-people-do-things",
-      "suggestedParagraph": "## What Are Causal Attributions?",
-      "lessonExcerpt": "Observers are likely to attribute this success to internal factors such as skills and abilities.",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 14
-    },
-    {
       "stem": "What is a common attribution bias that affects social perception?",
       "options": [
         "Self-serving bias",
@@ -314,27 +251,6 @@
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
       "inspirationIndex": 17
-    },
-    {
-      "stem": "How does cognitive dissonance relate to payment effects in decision-making?",
-      "options": [
-        "Higher payments reduce cognitive dissonance.",
-        "Cognitive dissonance increases when payments are made.",
-        "Payments can create dissonance if they conflict with personal values.",
-        "Cognitive dissonance has no relation to payment effects."
-      ],
-      "answer": "Payments can create dissonance if they conflict with personal values.",
-      "explanation": "Cognitive dissonance occurs when there is a conflict between one's beliefs and actions. If a payment is made that contradicts personal values, it can lead to dissonance. The other options either misrepresent the relationship or state incorrect facts.",
-      "kn": "KN14",
-      "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively tests knowledge of cognitive dissonance in relation to payment effects.",
-      "suggestedLesson": "3-why-people-do-things",
-      "suggestedParagraph": "## Why Causal Attributions Matter in Your Career as a Psychologist",
-      "lessonExcerpt": "Payments can create dissonance if they conflict with personal values.",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 19
     },
     {
       "stem": "A forensic evaluator reviews a security video showing a convenience store cashier who, without observable provocation, responds sharply to a customer and refuses to complete the transaction. Without reviewing the cashier's work history or the events of that day, the evaluator concludes the cashier has 'an inherently aggressive and confrontational personality.' This reasoning most clearly reflects:",
@@ -391,7 +307,10 @@
       "kn": "KN14",
       "kn_explanation": "This question tests knowledge of social cognition theories related to person perception and attribution, which is central to KN14.",
       "difficulty": "medium",
-      "quality_comment": "The stem is precise and the distractors are plausible but clearly distinguishable, providing a solid test of key attribution bias knowledge."
+      "quality_comment": "The stem is precise and the distractors are plausible but clearly distinguishable, providing a solid test of key attribution bias knowledge.",
+      "lessonExcerpt": "The fundamental attribution error is our tendency to overestimate personality factors and underestimate situational factors when explaining other people's behavior.",
+      "suggestedLesson": "3-why-people-do-things",
+      "needsReview": false
     },
     {
       "stem": "According to Kelley's covariation model, which pattern of consensus, consistency, and distinctiveness would most likely lead to an internal attribution?",
@@ -406,7 +325,10 @@
       "kn": "KN14",
       "kn_explanation": "This question assesses knowledge of the specific components and application of Kelley's attribution theory, a core social cognition model covered under KN14.",
       "difficulty": "hard",
-      "quality_comment": "The question challenges understanding of multiple interacting variables and requires familiarity with the model’s conceptual framework; distractors are reasonable alternatives."
+      "quality_comment": "The question challenges understanding of multiple interacting variables and requires familiarity with the model’s conceptual framework; distractors are reasonable alternatives.",
+      "lessonExcerpt": "When consensus is LOW, consistency is HIGH, and distinctiveness is LOW, you make an internal (dispositional) attribution",
+      "suggestedLesson": "3-why-people-do-things",
+      "needsReview": false
     },
     {
       "stem": "Which bias explains why individuals tend to attribute their own failures to situational factors but their successes to dispositional factors?",
@@ -421,7 +343,10 @@
       "kn": "KN14",
       "kn_explanation": "This question targets understanding of attributional biases relevant to self-perception, a key concept within social cognition research covered in KN14.",
       "difficulty": "medium",
-      "quality_comment": "Clear wording and well-chosen distractors that refer to related biases enhance the question’s diagnostic value."
+      "quality_comment": "Clear wording and well-chosen distractors that refer to related biases enhance the question’s diagnostic value.",
+      "lessonExcerpt": "The fundamental attribution error is our tendency to overestimate personality factors and underestimate situational factors when explaining other people's behavior.",
+      "suggestedLesson": "3-why-people-do-things",
+      "needsReview": false
     },
     {
       "stem": "Which of the following describes the ultimate attribution error?",
@@ -436,7 +361,10 @@
       "kn": "KN14",
       "kn_explanation": "This question addresses bias in intergroup attribution processes, a central topic in social cognition and prejudice research within KN14.",
       "difficulty": "medium",
-      "quality_comment": "Distractors represent other attribution biases, making the question appropriately challenging and discriminative."
+      "quality_comment": "Distractors represent other attribution biases, making the question appropriately challenging and discriminative.",
+      "lessonExcerpt": "When consensus is LOW, consistency is HIGH, and distinctiveness is LOW, you make an internal (dispositional) attribution",
+      "suggestedLesson": "3-why-people-do-things",
+      "needsReview": false
     },
     {
       "stem": "In the actor-observer effect, how do people typically explain their own versus others’ behavior?",
@@ -451,7 +379,10 @@
       "kn": "KN14",
       "kn_explanation": "This tests knowledge of a foundational social cognition bias concerning self versus other attributions, covered in KN14.",
       "difficulty": "easy",
-      "quality_comment": "The question is clear and the options are plausible, making it a good straightforward item for testing basic attribution concepts."
+      "quality_comment": "The question is clear and the options are plausible, making it a good straightforward item for testing basic attribution concepts.",
+      "lessonExcerpt": "the self-serving bias means we take credit for our successes (internal attribution) but blame circumstances for our failures (external attribution).",
+      "suggestedLesson": "3-why-people-do-things",
+      "needsReview": false
     },
     {
       "stem": "Which of the following statements accurately reflects cultural differences in the fundamental attribution error as found by Miller (1984)?",
@@ -466,7 +397,10 @@
       "kn": "KN14",
       "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
       "difficulty": "medium",
-      "quality_comment": "The question is well constructed to distinguish knowledge of cultural variations in attribution, with credible distractors reflecting common misconceptions."
+      "quality_comment": "The question is well constructed to distinguish knowledge of cultural variations in attribution, with credible distractors reflecting common misconceptions.",
+      "lessonExcerpt": "When someone in our in-group does something negative, we attribute it to situational factors or dismiss it as an exception. When someone in an out-group does something negative, we attribute it to their character or culture.",
+      "suggestedLesson": "3-why-people-do-things",
+      "needsReview": false
     },
     {
       "stem": "What is the group attribution error as described by Allison and Messick (1985)?",
@@ -481,7 +415,10 @@
       "kn": "KN14",
       "kn_explanation": "This item targets a nuanced social cognition bias concerning group decision-making, highly relevant to social cognition research in KN14.",
       "difficulty": "hard",
-      "quality_comment": "The stem is specific and the distractors plausible, requiring careful knowledge of the subtle distinctions in group attribution biases."
+      "quality_comment": "The stem is specific and the distractors plausible, requiring careful knowledge of the subtle distinctions in group attribution biases.",
+      "lessonExcerpt": "We attribute our own behaviors to situations, but we attribute other people's behaviors to their personalities.",
+      "suggestedLesson": "3-why-people-do-things",
+      "needsReview": false
     },
     {
       "stem": "According to an optimistic explanatory style, how are negative events typically attributed?",
@@ -496,7 +433,10 @@
       "kn": "KN14",
       "kn_explanation": "This question assesses understanding of attributional styles related to explanatory patterns, a key concept in social cognition under KN14.",
       "difficulty": "medium",
-      "quality_comment": "The answer options are concise and balanced, with distractors reflecting common attributions that require careful discrimination."
+      "quality_comment": "The answer options are concise and balanced, with distractors reflecting common attributions that require careful discrimination.",
+      "lessonExcerpt": "Americans increasingly made dispositional attributions while Indians made more situational attributions.",
+      "suggestedLesson": "3-why-people-do-things",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best exemplifies the self-serving bias?",
@@ -511,7 +451,10 @@
       "kn": "KN14",
       "kn_explanation": "This question examines bias in self-attribution, a fundamental aspect of social cognition and attribution theory in KN14.",
       "difficulty": "easy",
-      "quality_comment": "The example clearly illustrates the bias with realistic scenarios and plausible alternative biases as distractors."
+      "quality_comment": "The example clearly illustrates the bias with realistic scenarios and plausible alternative biases as distractors.",
+      "lessonExcerpt": "Version 2 (Allison & Messick, 1985): We assume a group's decision reflects every individual member's opinion, even when we know the decision wasn't unanimous.",
+      "suggestedLesson": "3-why-people-do-things",
+      "needsReview": false
     },
     {
       "stem": "Which of the following is true when consensus, consistency, and distinctiveness are all high in Kelley's covariation model?",
@@ -526,7 +469,10 @@
       "kn": "KN14",
       "kn_explanation": "This question specifically tests knowledge of Kelley's covariation model, a foundational social cognition theory under KN14.",
       "difficulty": "medium",
-      "quality_comment": "The question is concise and well-targeted; distractors are intuitive but incorrect, requiring solid understanding of the model."
+      "quality_comment": "The question is concise and well-targeted; distractors are intuitive but incorrect, requiring solid understanding of the model.",
+      "lessonExcerpt": "people with an optimistic explanatory style explain bad events as external, unstable, and specific.",
+      "suggestedLesson": "3-why-people-do-things",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best illustrates the group attribution error?",
@@ -541,7 +487,10 @@
       "kn": "KN14",
       "kn_explanation": "This question probes understanding of group-level attribution biases, a key topic in social cognition in KN14.",
       "difficulty": "medium",
-      "quality_comment": "The options are balanced and the question requires careful differentiation of group versus individual attributions."
+      "quality_comment": "The options are balanced and the question requires careful differentiation of group versus individual attributions.",
+      "lessonExcerpt": "Land a new client? \"I've really developed strong therapeutic skills.\" Lose a client? \"They weren't ready for change,\" or \"Insurance issues made it impossible.\"",
+      "suggestedLesson": "3-why-people-do-things",
+      "needsReview": false
     },
     {
       "stem": "How does the actor-observer effect relate to attributions made by individuals about their own versus others' behaviors?",
@@ -556,7 +505,10 @@
       "kn": "KN14",
       "kn_explanation": "This item focuses on self versus other attribution systems, an important social cognition concept represented in KN14.",
       "difficulty": "easy",
-      "quality_comment": "The distractors are plausible but clearly incorrect; the item succinctly tests the core idea."
+      "quality_comment": "The distractors are plausible but clearly incorrect; the item succinctly tests the core idea.",
+      "lessonExcerpt": "Pattern 2 | High | High | High | External (Situational) | \"Anyone would act that way in those circumstances\"",
+      "suggestedLesson": "3-why-people-do-things",
+      "needsReview": false
     },
     {
       "stem": "What is the tendency to attribute one's own negative behaviors to external factors while attributing others' similar behaviors to their character called?",
@@ -576,7 +528,10 @@
       "lock_in_level": "easier",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "We assume a group's decision reflects every individual member's opinion, even when we know the decision wasn't unanimous.",
+      "suggestedLesson": "3-why-people-do-things",
+      "needsReview": false
     },
     {
       "stem": "In a study examining how people explain the behaviors of their peers versus their own, which of the following findings would be consistent with the fundamental attribution error?",
@@ -596,7 +551,10 @@
       "lock_in_level": "harder",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "We attribute our own behaviors to situations, but we attribute other people's behaviors to their personalities.",
+      "suggestedLesson": "3-why-people-do-things",
+      "needsReview": false
     }
   ]
 }

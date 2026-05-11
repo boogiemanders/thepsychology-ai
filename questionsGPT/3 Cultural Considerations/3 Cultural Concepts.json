@@ -202,7 +202,7 @@
       "quality_comment": "Directly supported by specific lesson content citing Boyd-Franklin's recommendation.",
       "suggestedLesson": "3-cultural-concepts",
       "suggestedParagraph": "### African American Clients",
-      "lessonExcerpt": "Boyd-Franklin recommends multisystems approaches, intervening across individual, family, community, and agency levels.",
+      "lessonExcerpt": "African American clients typically prefer egalitarian relationships and problem-solving approaches. Boyd-Franklin recommends multisystems approaches, intervening across individual, family, community, and agency levels.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
       "inspirationIndex": 18
@@ -241,7 +241,10 @@
       "kn": "KN18",
       "kn_explanation": "This question addresses cultural psychology concepts, specifically different worldviews influenced by culture, which falls under cultural and sociopolitical psychology (KN18).",
       "difficulty": "medium",
-      "quality_comment": "The question clearly targets a key cultural concept with plausible distractors reflecting different worldviews to assess nuanced understanding."
+      "quality_comment": "The question clearly targets a key cultural concept with plausible distractors reflecting different worldviews to assess nuanced understanding.",
+      "lessonExcerpt": "| IC-IR | Internal | Internal | \"I control my destiny and own my results\" | Mainstream American culture |",
+      "suggestedLesson": "3-cultural-concepts",
+      "needsReview": false
     },
     {
       "stem": "Which acculturation strategy, according to Berry, is associated with the least acculturative stress?",
@@ -256,7 +259,10 @@
       "kn": "KN18",
       "kn_explanation": "Berry's acculturation strategies and associated stress are central to cultural psychology and acculturation processes, fitting under cultural and sociopolitical psychology (KN18).",
       "difficulty": "easy",
-      "quality_comment": "The question is straightforward and tests knowledge of a fundamental concept in acculturation with well-known strategies as distractors."
+      "quality_comment": "The question is straightforward and tests knowledge of a fundamental concept in acculturation with well-known strategies as distractors.",
+      "lessonExcerpt": "Berry found that integration produces the least stress, while marginalization produces the most.",
+      "suggestedLesson": "3-cultural-concepts",
+      "needsReview": false
     },
     {
       "stem": "What is the primary difference between functional paranoia and healthy cultural paranoia in ethnic minority clients, according to Ridley?",
@@ -271,7 +277,10 @@
       "kn": "KN18",
       "kn_explanation": "This question assesses understanding of client reactions to cultural dynamics in therapy related to trust and disclosure, which pertains to cultural and sociopolitical psychology (KN18).",
       "difficulty": "medium",
-      "quality_comment": "The distractors are nuanced and the question is clearly worded, effectively assessing discrimination between similar concepts."
+      "quality_comment": "The distractors are nuanced and the question is clearly worded, effectively assessing discrimination between similar concepts.",
+      "lessonExcerpt": "**Functional paranoia** is unhealthy. It's pervasive distrust toward everyone, regardless of their background. A client with functional paranoia won't open up to any therapist, minority or majority.",
+      "suggestedLesson": "3-cultural-concepts",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best describes a microinvalidation as defined by Sue et al. (2007)?",
@@ -286,7 +295,10 @@
       "kn": "KN18",
       "kn_explanation": "This question is best aligned with KN18 because it tests Cultural and sociopolitical psychology (e.g., privilege, cross-cultural comparisons, political differences, international and global awareness, religiosity and spirituality, acculturation).",
       "difficulty": "medium",
-      "quality_comment": "Options represent distinct microaggression types; the question requires precise recall, making it suitable for EPPP-level assessment."
+      "quality_comment": "Options represent distinct microaggression types; the question requires precise recall, making it suitable for EPPP-level assessment.",
+      "lessonExcerpt": "**Microinvalidations** dismiss or negate the experiences of people of color:\n- Telling an Asian American they speak English well (implying they're foreign)",
+      "suggestedLesson": "3-cultural-concepts",
+      "needsReview": false
     },
     {
       "stem": "Which statement regarding White privilege according to McIntosh (1998) is accurate?",
@@ -301,7 +313,10 @@
       "kn": "KN18",
       "kn_explanation": "Understanding systemic and interpersonal aspects of privilege involves knowledge of sociopolitical psychology and oppression (KN18).",
       "difficulty": "medium",
-      "quality_comment": "The options include common misconceptions as distractors, improving the diagnostic value of the question."
+      "quality_comment": "The options include common misconceptions as distractors, improving the diagnostic value of the question.",
+      "lessonExcerpt": "Peggy McIntosh described **white privilege** as unearned benefits conferred solely based on having white skin. Most White people don't notice these advantages because they're maintained through denial and seem \"normal.\"",
+      "suggestedLesson": "3-cultural-concepts",
+      "needsReview": false
     },
     {
       "stem": "A psychologist who believes psychological theories and interventions are culture-specific and may not apply across cultural groups is said to adopt which perspective?",
@@ -316,7 +331,10 @@
       "kn": "KN18",
       "kn_explanation": "This question addresses perspectives on cross-cultural psychology and cultural relativism under cultural and sociopolitical psychology (KN18).",
       "difficulty": "easy",
-      "quality_comment": "The question is clear and the options are well balanced; universalist and relativistic may be plausible distractors that test finer understanding."
+      "quality_comment": "The question is clear and the options are well balanced; universalist and relativistic may be plausible distractors that test finer understanding.",
+      "lessonExcerpt": "**Emic perspective**: Behavior is culture-bound. What works for one group may not work for another. You need different tools and approaches for different cultural contexts.",
+      "suggestedLesson": "3-cultural-concepts",
+      "needsReview": false
     },
     {
       "stem": "According to Gelfand's research, which characteristic is more likely in individuals from tight cultures compared to loose cultures?",
@@ -331,7 +349,10 @@
       "kn": "KN18",
       "kn_explanation": "This question is best aligned with KN18 because it tests Cultural and sociopolitical psychology (e.g., privilege, cross-cultural comparisons, political differences, international and global awareness, religiosity and spirituality, acculturation).",
       "difficulty": "medium",
-      "quality_comment": "Distractors represent opposite traits of tight vs loose cultures, requiring examinees to know the conceptual framework for effective elimination."
+      "quality_comment": "Distractors represent opposite traits of tight vs loose cultures, requiring examinees to know the conceptual framework for effective elimination.",
+      "lessonExcerpt": "People in tight cultures tend toward conformity, risk avoidance, and stability. They score higher on conscientiousness and lower on openness.",
+      "suggestedLesson": "3-cultural-concepts",
+      "needsReview": false
     },
     {
       "stem": "In culturally competent psychotherapy with Asian American clients, which therapist behavior is most appropriate based on research findings?",
@@ -346,7 +367,10 @@
       "kn": "KN18",
       "kn_explanation": "This question taps into culturally informed therapy adaptation and multicultural competence, related to cultural and sociopolitical psychology (KN18).",
       "difficulty": "medium",
-      "quality_comment": "The question clearly contrasts culturally appropriate and inappropriate therapist behaviors for Asian American clients, enhancing discriminative value."
+      "quality_comment": "The question clearly contrasts culturally appropriate and inappropriate therapist behaviors for Asian American clients, enhancing discriminative value.",
+      "lessonExcerpt": "Fear of losing face and shame are powerful motivators affecting disclosure. Silence and avoiding eye contact express respect.",
+      "suggestedLesson": "3-cultural-concepts",
+      "needsReview": false
     },
     {
       "stem": "Which assessment battery is recommended to reduce cultural bias and minimize the influence of English proficiency in cognitive testing of culturally diverse children?",
@@ -361,7 +385,10 @@
       "kn": "KN18",
       "kn_explanation": "This question is best aligned with KN18 because it tests Cultural and sociopolitical psychology (e.g., privilege, cross-cultural comparisons, political differences, international and global awareness, religiosity and spirituality, acculturation).",
       "difficulty": "medium",
-      "quality_comment": "Distractors include well-known tests but only one focuses on reducing cultural and language bias, making the question discriminative."
+      "quality_comment": "Distractors include well-known tests but only one focuses on reducing cultural and language bias, making the question discriminative.",
+      "lessonExcerpt": "The Kaufman Assessment Battery for Children (KABC-II) and Raven's Standard Progressive Matrices (SPM) reduce cultural bias and aren't affected by English proficiency or cultural learning.",
+      "suggestedLesson": "3-cultural-concepts",
+      "needsReview": false
     },
     {
       "stem": "Minority stress theory distinguishes proximal and distal stress processes experienced by sexual minority individuals. Which of the following is a proximal stress process?",
@@ -376,7 +403,10 @@
       "kn": "KN19",
       "kn_explanation": "This question is best aligned with KN19 because it tests Identity diversity and intersectionality (e.g., psychological impact of diversity on individuals, families, and systems).",
       "difficulty": "medium",
-      "quality_comment": "Clear distinction between internal and external stressors with plausible distractors fitting each category improves effectiveness."
+      "quality_comment": "Clear distinction between internal and external stressors with plausible distractors fitting each category improves effectiveness.",
+      "lessonExcerpt": "**Proximal stressors**: Internal processes like concealment, fear of rejection, internalized heterosexism",
+      "suggestedLesson": "3-cultural-concepts",
+      "needsReview": false
     },
     {
       "stem": "When a therapist assumes that all presenting problems of a gay client are due to sexual orientation and overlooks other causes, this is an example of what phenomenon?",
@@ -391,7 +421,10 @@
       "kn": "KN19",
       "kn_explanation": "This question is best aligned with KN19 because it tests Identity diversity and intersectionality (e.g., psychological impact of diversity on individuals, families, and systems).",
       "difficulty": "medium",
-      "quality_comment": "Options include related bias and cultural concepts but only diagnostic overshadowing accurately describes the diagnostic error."
+      "quality_comment": "Options include related bias and cultural concepts but only diagnostic overshadowing accurately describes the diagnostic error.",
+      "lessonExcerpt": "For example, assuming a gay client's problems stem entirely from sexual orientation without considering other explanations.",
+      "suggestedLesson": "3-cultural-concepts",
+      "needsReview": false
     },
     {
       "stem": "The 'own-race bias' refers to which phenomenon observed in the perception of faces?",
@@ -406,7 +439,10 @@
       "kn": "KN14",
       "kn_explanation": "This question concerns social cognition and person perception processes, which fall under major research-based theories/models of social cognition (KN14).",
       "difficulty": "easy",
-      "quality_comment": "Clear stem and plausible distractors make the question appropriate for testing foundational knowledge."
+      "quality_comment": "Clear stem and plausible distractors make the question appropriate for testing foundational knowledge.",
+      "lessonExcerpt": "The **own-race bias** (also called cross-race effect) means people more accurately recognize faces of their own race than other races.",
+      "suggestedLesson": "3-cultural-concepts",
+      "needsReview": false
     },
     {
       "stem": "Which treatment approach is described as focusing on changing the client’s behavior or perceptions so they can adapt to the environment rather than changing external circumstances?",
@@ -421,7 +457,10 @@
       "kn": "KN14",
       "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
       "difficulty": "medium",
-      "quality_comment": "The options include related but distinct terms, providing a clear test of conceptual knowledge of intervention strategies."
+      "quality_comment": "The options include related but distinct terms, providing a clear test of conceptual knowledge of intervention strategies.",
+      "lessonExcerpt": "**Autoplastic interventions** focus on changing the client to fit the environment, developing insight, learning new skills, or modifying behaviors.",
+      "suggestedLesson": "3-cultural-concepts",
+      "needsReview": false
     },
     {
       "stem": "Which assessment is especially useful for minimizing cultural and language biases in nonverbal intelligence testing?",
@@ -436,7 +475,10 @@
       "kn": "KN18",
       "kn_explanation": "Assessment tools that reduce cultural bias by focusing on nonverbal skills are important in cross-cultural psychology (KN18).",
       "difficulty": "medium",
-      "quality_comment": "The question clearly contrasts verbal and nonverbal assessments to test knowledge of culturally fair instruments."
+      "quality_comment": "The question clearly contrasts verbal and nonverbal assessments to test knowledge of culturally fair instruments.",
+      "lessonExcerpt": "The Kaufman Assessment Battery for Children (KABC-II) and Raven's Standard Progressive Matrices (SPM) reduce cultural bias and aren't affected by English proficiency or cultural learning.",
+      "suggestedLesson": "3-cultural-concepts",
+      "needsReview": false
     },
     {
       "stem": "In the context of culturally competent assessment, what does 'cultural fit' most accurately refer to?",
@@ -451,7 +493,10 @@
       "kn": "KN18",
       "kn_explanation": "Understanding how individual and cultural compatibility affects acculturation relates to cultural psychology and minority adjustment (KN18).",
       "difficulty": "medium",
-      "quality_comment": "Distractors focus on related but incorrect factors affecting acculturation, requiring conceptual understanding."
+      "quality_comment": "Distractors focus on related but incorrect factors affecting acculturation, requiring conceptual understanding.",
+      "lessonExcerpt": "**Cultural fit** describes how well someone's personality matches the host culture's values.",
+      "suggestedLesson": "3-cultural-concepts",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best describes the integration paradox in immigrant populations?",
@@ -466,7 +511,10 @@
       "kn": "KN18",
       "kn_explanation": "This phenomenon concerns sociocultural dynamics and attitudes during acculturation processes, under social and cultural bases of behavior (KN18).",
       "difficulty": "medium",
-      "quality_comment": "The question targets subtle understanding of immigrant integration dynamics and avoids confusing it with the immigrant paradox."
+      "quality_comment": "The question targets subtle understanding of immigrant integration dynamics and avoids confusing it with the immigrant paradox.",
+      "lessonExcerpt": "Here's something counterintuitive: highly educated, economically successful immigrants report experiencing more discrimination than lower-status immigrants and feel less positive about mainstream society. This is the **integration paradox**.",
+      "suggestedLesson": "3-cultural-concepts",
+      "needsReview": false
     },
     {
       "stem": "In the context of Sue's worldview framework, which worldview is characterized by a belief in personal responsibility but an external locus of control?",
@@ -486,7 +534,10 @@
       "lock_in_level": "easier",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "| EC-IR | External | Internal | \"I can't control outcomes but blame myself anyway\" | Some minority groups experiencing internalized oppression |",
+      "suggestedLesson": "3-cultural-concepts",
+      "needsReview": false
     },
     {
       "stem": "Which worldview in Sue's framework reflects a belief that individuals have control over their outcomes but do not feel personally responsible for their failures?",
@@ -506,7 +557,10 @@
       "lock_in_level": "harder",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "| IC-ER | Internal | External | \"I could succeed if others weren't blocking me\" | Some minority groups facing systemic barriers |",
+      "suggestedLesson": "3-cultural-concepts",
+      "needsReview": false
     }
   ]
 }

@@ -16,7 +16,7 @@
       "quality_comment": "Classic EPPP question testing a well-established finding. The lesson provides very clear support for the correct answer.",
       "suggestedLesson": "2-3-work-satisfaction",
       "suggestedParagraph": "## Common Misconceptions That Trip Up Test-Takers",
-      "lessonExcerpt": "**Type A Behavior Pattern** is the opposite of protective. Friedman and Rosenman described it as chronic time urgency, excessive competitiveness, and hostility. While earlier research linked the entire pattern to coronary heart disease, more recent studies suggest hostility is the toxic component.",
+      "lessonExcerpt": "Initially, researchers thought the entire pattern predicted heart disease. More recent evidence suggests that **hostility** is the component most strongly linked to cardiovascular problems.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 26
@@ -34,7 +34,10 @@
       "kn": "KN16",
       "kn_explanation": "This question concerns job satisfaction and factors influencing it, which relates to social and organizational behavior (KN16).",
       "difficulty": "medium",
-      "quality_comment": "The question is clear and tests knowledge of individual contributors to job satisfaction; options are plausible but only one matches the content."
+      "quality_comment": "The question is clear and tests knowledge of individual contributors to job satisfaction; options are plausible but only one matches the content.",
+      "lessonExcerpt": "**Affective disposition** refers to your general tendency to respond to situations favorably or unfavorably. Some people have a naturally positive outlook, while others tend toward negativity across different contexts.",
+      "suggestedLesson": "2-3-work-satisfaction",
+      "needsReview": false
     },
     {
       "stem": "Which type of organizational justice is concerned with the fairness of the procedures used to determine workplace outcomes?",
@@ -49,7 +52,10 @@
       "kn": "KN16",
       "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
       "difficulty": "easy",
-      "quality_comment": "The question is straightforward with distractors that are commonly confused types of justice, suitable for EPPP level."
+      "quality_comment": "The question is straightforward with distractors that are commonly confused types of justice, suitable for EPPP level.",
+      "lessonExcerpt": "| **Procedural Justice** | Fairness of the process used to make decisions | Are performance reviews conducted consistently? Do employees have a voice? |",
+      "suggestedLesson": "2-3-work-satisfaction",
+      "needsReview": false
     },
     {
       "stem": "According to meta-analytic research, which type of organizational commitment is most consistently associated with positive job outcomes such as satisfaction and performance?",
@@ -64,7 +70,10 @@
       "kn": "KN16",
       "kn_explanation": "This question deals with organizational commitment and its relationship to job outcomes, relating to social and group processes (KN16).",
       "difficulty": "medium",
-      "quality_comment": "Question clearly distinguishes commitment types; options are plausible, though 'role-based commitment' is a distractor not supported by the material."
+      "quality_comment": "Question clearly distinguishes commitment types; options are plausible, though 'role-based commitment' is a distractor not supported by the material.",
+      "lessonExcerpt": "Of these three, **affective commitment consistently shows the strongest relationships with positive job outcomes**. People who are emotionally attached to their organizations perform better, are more satisfied, and are less likely to leave.",
+      "suggestedLesson": "2-3-work-satisfaction",
+      "needsReview": false
     },
     {
       "stem": "Which hormone is released by the adrenal cortex during the general adaptation syndrome and helps maintain energy during prolonged stress?",
@@ -79,7 +88,10 @@
       "kn": "KN16",
       "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
       "difficulty": "medium",
-      "quality_comment": "Distractors include hormones related to stress but with different roles, making the question both challenging and clear."
+      "quality_comment": "Distractors include hormones related to stress but with different roles, making the question both challenging and clear.",
+      "lessonExcerpt": "The pituitary gland releases ACTH, which stimulates the adrenal cortex to release cortisol",
+      "suggestedLesson": "2-3-work-satisfaction",
+      "needsReview": false
     },
     {
       "stem": "Which of the following is NOT identified as a major source of work-related stress?",
@@ -94,7 +106,10 @@
       "kn": "KN16",
       "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
       "difficulty": "easy",
-      "quality_comment": "Options are well balanced; the correct choice is clearly differentiated from the others, aiding test-taker discrimination."
+      "quality_comment": "Options are well balanced; the correct choice is clearly differentiated from the others, aiding test-taker discrimination.",
+      "lessonExcerpt": "Major workplace stressors include lack of control, work-family conflict, and downsizing (which affects survivors too)",
+      "suggestedLesson": "2-3-work-satisfaction",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best describes the 'survivor syndrome' observed in employees who remain after organizational downsizing?",
@@ -109,7 +124,10 @@
       "kn": "KN16",
       "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
       "difficulty": "medium",
-      "quality_comment": "The distractors are plausible reactions to organizational change; the correct answer clearly reflects the syndrome described."
+      "quality_comment": "The distractors are plausible reactions to organizational change; the correct answer clearly reflects the syndrome described.",
+      "lessonExcerpt": "**Survivor syndrome** includes:\n- Reduced job satisfaction and organizational commitment\n- Loss of control feelings\n- Anxiety, depression, and insomnia\n- Somatic symptoms\n- Guilt about surviving when colleagues didn't",
+      "suggestedLesson": "2-3-work-satisfaction",
+      "needsReview": false
     },
     {
       "stem": "Which of the following is NOT one of the three core characteristics of job burnout as defined by Maslach and colleagues?",
@@ -124,7 +142,10 @@
       "kn": "KN16",
       "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
       "difficulty": "easy",
-      "quality_comment": "Clear and concise question with an obvious correct answer relative to plausible distractors enhances reliability."
+      "quality_comment": "Clear and concise question with an obvious correct answer relative to plausible distractors enhances reliability.",
+      "lessonExcerpt": "Burnout is a specific syndrome resulting from chronic work stress. Christina Maslach and her colleagues identified three core characteristics:",
+      "suggestedLesson": "2-3-work-satisfaction",
+      "needsReview": false
     },
     {
       "stem": "According to Kobasa's model, which personality trait increases resistance to the harmful effects of stress?",
@@ -139,7 +160,10 @@
       "kn": "KN16",
       "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
       "difficulty": "medium",
-      "quality_comment": "Distractors include related but incorrect traits, encouraging critical thinking about stress resilience."
+      "quality_comment": "Distractors include related but incorrect traits, encouraging critical thinking about stress resilience.",
+      "lessonExcerpt": "Kobasa's research on hardiness identified three interconnected characteristics that buffer against stress:",
+      "suggestedLesson": "2-3-work-satisfaction",
+      "needsReview": false
     },
     {
       "stem": "Which Type A behavior characteristic is most associated with an increased risk for coronary heart disease?",
@@ -154,7 +178,10 @@
       "kn": "KN16",
       "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
       "difficulty": "medium",
-      "quality_comment": "The question targets a nuanced detail in the relationship between Type A behavior and health, with plausible distractors enhancing challenge."
+      "quality_comment": "The question targets a nuanced detail in the relationship between Type A behavior and health, with plausible distractors enhancing challenge.",
+      "lessonExcerpt": "Initially, researchers thought the entire pattern predicted heart disease. More recent evidence suggests that **hostility** is the component most strongly linked to cardiovascular problems.",
+      "suggestedLesson": "2-3-work-satisfaction",
+      "needsReview": false
     },
     {
       "stem": "Which construct refers to employees' perceptions of their value as members of their organization and relates to their resistance to job stress?",
@@ -169,7 +196,10 @@
       "kn": "KN16",
       "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
       "difficulty": "medium",
-      "quality_comment": "Distractors are related constructs, making the question appropriate for assessing nuanced knowledge in this area."
+      "quality_comment": "Distractors are related constructs, making the question appropriate for assessing nuanced knowledge in this area.",
+      "lessonExcerpt": "OBSE refers to how valuable you perceive yourself to be as an organization member. High OBSE is linked to:\n\n- Greater job satisfaction\n- Stronger organizational commitment\n- Better stress management (active rather than passive coping)",
+      "suggestedLesson": "2-3-work-satisfaction",
+      "needsReview": false
     },
     {
       "stem": "Which statement best describes the relationship between job satisfaction and job performance according to meta-analytic findings?",
@@ -184,7 +214,10 @@
       "kn": "KN16",
       "kn_explanation": "This question assesses understanding of workplace attitudes and behaviors, specifically social and organizational influences on functioning (KN16).",
       "difficulty": "hard",
-      "quality_comment": "The question addresses complex causal relationships with plausible distractors; it challenges higher-level reasoning relevant to EPPP."
+      "quality_comment": "The question addresses complex causal relationships with plausible distractors; it challenges higher-level reasoning relevant to EPPP.",
+      "lessonExcerpt": "Research suggests that when pay is closely tied to performance, performance might actually drive satisfaction rather than the other way around.",
+      "suggestedLesson": "2-3-work-satisfaction",
+      "needsReview": false
     },
     {
       "stem": "Which stage of the General Adaptation Syndrome is characterized by the body's inability to sustain hormonal responses, leading to physiological breakdown?",
@@ -199,7 +232,10 @@
       "kn": "KN16",
       "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
       "difficulty": "medium",
-      "quality_comment": "The question clearly distinguishes the key features of each stage, helping test-takers understand the sequence and consequences of stress."
+      "quality_comment": "The question clearly distinguishes the key features of each stage, helping test-takers understand the sequence and consequences of stress.",
+      "lessonExcerpt": "**Stage 3: Exhaustion**\n\nWhen stress persists too long without resolution, your pituitary and adrenal glands can't maintain elevated hormone levels anymore. Physiological processes break down.",
+      "suggestedLesson": "2-3-work-satisfaction",
+      "needsReview": false
     },
     {
       "stem": "Which of the following individual characteristics is associated with increased susceptibility to the negative effects of stress and an elevated risk for coronary heart disease?",
@@ -214,7 +250,10 @@
       "kn": "KN16",
       "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
       "difficulty": "medium",
-      "quality_comment": "The distractors are plausible resilience or unrelated traits; the item assesses important associations in stress-health research."
+      "quality_comment": "The distractors are plausible resilience or unrelated traits; the item assesses important associations in stress-health research.",
+      "lessonExcerpt": "Unlike hardiness and OBSE, Type A behavior increases vulnerability to stress's negative effects.",
+      "suggestedLesson": "2-3-work-satisfaction",
+      "needsReview": false
     },
     {
       "stem": "Work-family conflict has been found to be equally reported by men and women across various regions. However, in dual-earner couples, what slight difference exists in the type of interference reported?",
@@ -229,7 +268,10 @@
       "kn": "KN16",
       "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
       "difficulty": "medium",
-      "quality_comment": "The question examines nuanced gender-related differences in work-family stress, promoting application of research findings."
+      "quality_comment": "The question examines nuanced gender-related differences in work-family stress, promoting application of research findings.",
+      "lessonExcerpt": "However, small differences emerge in specific contexts: in dual-earner couples, men report slightly more work-to-family interference, while women report slightly more family-to-work interference.",
+      "suggestedLesson": "2-3-work-satisfaction",
+      "needsReview": false
     },
     {
       "stem": "What individual characteristic is often associated with consistent levels of life satisfaction across different life domains?",
@@ -249,7 +291,10 @@
       "lock_in_level": "easier",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "**Affective disposition** refers to your general tendency to respond to situations favorably or unfavorably. Some people have a naturally positive outlook, while others tend toward negativity across different contexts.",
+      "suggestedLesson": "2-3-work-satisfaction",
+      "needsReview": false
     },
     {
       "stem": "In the context of psychological resilience, which individual trait has been shown to contribute to sustained job satisfaction despite external stressors?",
@@ -269,7 +314,10 @@
       "lock_in_level": "harder",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "**Affective disposition** refers to your general tendency to respond to situations favorably or unfavorably. Some people have a naturally positive outlook, while others tend toward negativity across different contexts.",
+      "suggestedLesson": "2-3-work-satisfaction",
+      "needsReview": false
     }
   ]
 }

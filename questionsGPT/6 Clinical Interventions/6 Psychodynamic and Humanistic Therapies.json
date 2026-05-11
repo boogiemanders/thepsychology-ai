@@ -1,69 +1,6 @@
 {
   "questions": [
     {
-      "stem": "A parent in Adlerian family therapy reports that her 9-year-old refuses to bring an umbrella on rainy days despite the parent's repeated warnings. The Adlerian therapist instructs the parent to stop arguing, say nothing further, and allow the child to arrive at school wet. The therapist explains that the child needs to experience the direct outcome of his own choice in order to develop social interest and responsibility. The therapist is recommending which Adlerian concept?",
-      "options": [
-        "Logical consequences, because the child experiences a planned, parent-arranged outcome that is logically connected to the misbehavior",
-        "Natural consequences, because the child experiences an outcome that flows directly and automatically from his own decision without parental mediation",
-        "Encouragement, because the parent is withdrawing negative reinforcement in order to build the child's intrinsic motivation",
-        "Mistaken goals correction, because the parent is interrupting the child's pursuit of undue attention through the conflict over the umbrella"
-      ],
-      "answer": "Natural consequences, because the child experiences an outcome that flows directly and automatically from his own decision without parental mediation",
-      "explanation": "In Adlerian theory, natural consequences are the direct, automatic results of a child's behavior as produced by the physical or social environment without adult intervention (getting wet because one did not bring an umbrella). They are distinguished from logical consequences, which are arranged by a parent or teacher, are logically related to the misbehavior, and require adult action to deliver. Encouragement is a broader Adlerian principle of building self-efficacy and is not a consequence type. Mistaken goals correction refers to identifying and redirecting the mistaken purpose behind misbehavior, which is distinct from the specific disciplinary strategy described.",
-      "kn": "KN9",
-      "kn_explanation": "This question is best aligned with KN9 because it tests Major research-based theories and models of motivation and their application.",
-      "difficulty": "medium",
-      "quality_comment": "Clearly constructed question testing a clinically important Adlerian distinction. Content goes beyond current lesson material — valid EPPP topic, no lesson excerpt available.",
-      "suggestedLesson": "6-psychodynamic-and-humanistic",
-      "suggestedParagraph": "## Adlerian Theory",
-      "lessonExcerpt": "",
-      "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 7
-    },
-    {
-      "stem": "George Kelly's Personal Construct Theory is based on the fundamental postulate that people's psychological processes are directed by the ways they anticipate events. Kelly's central metaphor for understanding human cognition was that ordinary people function as:",
-      "options": [
-        "Philosophers seeking meaning",
-        "Scientists forming and testing hypotheses",
-        "Artists interpreting reality creatively",
-        "Computers processing information"
-      ],
-      "answer": "Scientists forming and testing hypotheses",
-      "explanation": "Kelly described ordinary people as scientists who are constantly forming, testing, and revising hypotheses about the world around them. His theory views people as active and future-oriented, using personal constructs (bipolar dimensions of meaning) to anticipate events. 'Philosophers seeking meaning' better describes existential approaches. 'Artists interpreting reality creatively' does not capture Kelly's emphasis on hypothesis testing. 'Computers processing information' describes the information processing approach, not Kelly's constructivist framework.",
-      "kn": "KN14",
-      "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
-      "difficulty": "medium",
-      "quality_comment": "Directly supported by reference text and lesson content with clear correct answer.",
-      "suggestedLesson": "6-psychodynamic-and-humanistic",
-      "suggestedParagraph": "### Personal Construct Therapy: Changing How You See Things",
-      "lessonExcerpt": "George Kelly is known for describing ordinary people as scientists, who are constantly forming, testing, and revising hypotheses about the world around them.",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 6
-    },
-    {
-      "stem": "A psychology intern is studying the evolution of psychodynamic thought. Compared to classical Freudian psychoanalysis, the Neo-Freudian psychologists primarily emphasized the role of which factors in personality development?",
-      "options": [
-        "Biological drives and psychosexual stages",
-        "Social and cultural factors",
-        "Object relations and attachment in the first year of life",
-        "Cognitive schemas and information processing"
-      ],
-      "answer": "Social and cultural factors",
-      "explanation": "The Neo-Freudians (including Sullivan, Horney, and Fromm) departed from classical Freudian theory by emphasizing social and cultural factors rather than biological and instinctual drives. They believed psychological disturbance results from faulty learning and maladaptive interpersonal styles. Biological drives and psychosexual stages (A) represent classical Freudian theory, which is precisely what the Neo-Freudians moved away from. Object relations (C) represents a different post-Freudian school. Cognitive schemas (D) represent Beck's cognitive therapy, not a psychodynamic approach.",
-      "kn": "KN43",
-      "kn_explanation": "Neo-Freudian vs classical Freudian theory is about contemporary research-based theories and models of treatment",
-      "difficulty": "easy",
-      "quality_comment": "Clear, well-supported question. The lesson content explicitly states the Neo-Freudian emphasis.",
-      "suggestedLesson": "6-psychodynamic-and-humanistic",
-      "suggestedParagraph": "## The Psychodynamic Perspective: Understanding the Hidden Forces",
-      "lessonExcerpt": "The neo-Freudians focused on the impact of social and cultural factors in determining personality. They believed that psychological disturbance results from faulty learning and involves a characterologically maladaptive style of interacting with the environment.",
-      "needsReview": false,
-      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 14
-    },
-    {
       "stem": "In Jungian analytical psychology, the process by which an individual attributes qualities from their own unconscious—particularly disowned or unacceptable aspects of the self—onto other people or external situations is most closely associated with which archetype?",
       "options": [
         "The persona",
@@ -79,31 +16,10 @@
       "quality_comment": "Well-supported question testing integration of Jungian archetype concepts with the defense mechanism of projection.",
       "suggestedLesson": "6-psychodynamic-and-humanistic",
       "suggestedParagraph": "### Jung's Analytical Psychology: Beyond Freud",
-      "lessonExcerpt": "Important archetypes include the persona (your public mask), shadow (your dark side), hero, and anima/animus (feminine/masculine aspects)... Jungians see transference as a projection of the personal and/or collective unconscious.",
+      "lessonExcerpt": "Important archetypes include the persona (your public mask), shadow (your dark side), hero, and anima/animus (feminine/masculine aspects).",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
       "inspirationIndex": 20
-    },
-    {
-      "stem": "A psychology intern is preparing a presentation on the evolution of psychoanalytic thought. What is the primary theoretical emphasis that distinguishes the Neo-Freudian psychoanalysts (e.g., Sullivan, Horney, Fromm) from classical Freudian psychoanalysis?",
-      "options": [
-        "The role of ego autonomous functions in personality development",
-        "The impact of social and cultural factors on personality",
-        "The importance of early object relationships in personality formation",
-        "The process of individuation through integration of archetypes"
-      ],
-      "answer": "The impact of social and cultural factors on personality",
-      "explanation": "The Neo-Freudians (Sullivan, Horney, and Fromm) are distinguished by their focus on the impact of social and cultural factors in determining personality. They believed that psychological disturbance results from faulty learning and involves a characterologically maladaptive style of interacting with the environment. Ego autonomous functions (A) is the focus of ego psychology (Hartmann, Anna Freud, Erikson). Early object relationships (C) is the focus of object relations theory (Klein, Winnicott, Mahler). Integration of archetypes and individuation (D) is the focus of Jungian analytical psychology. Each of these represents a distinct extension or departure from classical psychoanalysis.",
-      "kn": "KN43",
-      "kn_explanation": "Evolution of psychoanalytic thought and object relations theory are treatment theories and models",
-      "difficulty": "medium",
-      "quality_comment": "Excellent discrimination question requiring knowledge of how different psychoanalytic schools differ. All distractors are real emphases of other schools.",
-      "suggestedLesson": "6-psychodynamic-and-humanistic",
-      "suggestedParagraph": "## The Psychodynamic Perspective: Understanding the Hidden Forces",
-      "lessonExcerpt": "The neo-Freudians focused on the impact of social and cultural factors in determining personality. They believed that psychological disturbance results from faulty learning and involves a characterologically maladaptive style of interacting with the environment.",
-      "needsReview": false,
-      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 14
     },
     {
       "stem": "In Jungian analytical psychology, the process by which an individual attributes their own unacknowledged dark or undesirable qualities onto other people or external situations is most accurately described as:",
@@ -182,9 +98,9 @@
       "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
       "difficulty": "medium",
       "quality_comment": "Clean conceptual discrimination question; appropriately tests the theoretical core rather than peripheral facts about individual Neo-Freudians.",
-      "suggestedLesson": "6-psychodynamic-and-humanistic",
+      "suggestedLesson": "5-personality-tests",
       "suggestedParagraph": "## The Psychodynamic Perspective: Understanding the Hidden Forces",
-      "lessonExcerpt": "LESSON CONTENT COVERS FREUD AND JUNG IN DETAIL BUT DOES NOT EXPLICITLY ADDRESS NEO-FREUDIAN THEORISTS SUCH AS ADLER OR HORNEY IN THE PROVIDED EXCERPTS",
+      "lessonExcerpt": "Determinants:** What characteristics influenced the response? - Form (the shape) - Movement (perceived action) - Color - Shading",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
       "inspirationIndex": 14
@@ -226,7 +142,7 @@
       "quality_comment": "Well-constructed question with precisely differentiated distractors across three major theoretical orientations. The psychodynamic and humanistic lesson file is. Content goes beyond current lesson material — valid EPPP topic, no lesson excerpt available.",
       "suggestedLesson": "6-psychodynamic-and-humanistic",
       "suggestedParagraph": "## Gestalt Therapy",
-      "lessonExcerpt": "",
+      "lessonExcerpt": "**Dream work**: Unlike Freud's symbolic interpretation, Gestalt therapists have clients role-play different elements of their dreams, treating each part as a disowned aspect of the client's own personality.",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
       "inspirationIndex": 29
@@ -265,7 +181,10 @@
       "kn": "KN43",
       "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
       "difficulty": "medium",
-      "quality_comment": "The question is clear and distractors are plausible, testing a fundamental Freudian concept appropriate for EPPP exam level."
+      "quality_comment": "The question is clear and distractors are plausible, testing a fundamental Freudian concept appropriate for EPPP exam level.",
+      "lessonExcerpt": "| **Ego** | ~6 months | Reality principle | Rational problem-solving | To satisfy id's needs realistically |",
+      "suggestedLesson": "6-psychodynamic-and-humanistic",
+      "needsReview": false
     },
     {
       "stem": "Which defense mechanism involves attributing one's own unacceptable impulses to another person?",
@@ -280,7 +199,10 @@
       "kn": "KN43",
       "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
       "difficulty": "easy",
-      "quality_comment": "Options are well balanced and reflect commonly tested defense mechanisms, ensuring test-taker differentiation."
+      "quality_comment": "Options are well balanced and reflect commonly tested defense mechanisms, ensuring test-taker differentiation.",
+      "lessonExcerpt": "**Projection**: Attributing your own unacceptable feelings to someone else.",
+      "suggestedLesson": "6-psychodynamic-and-humanistic",
+      "needsReview": false
     },
     {
       "stem": "Jung's concept of the collective unconscious includes which of the following?",
@@ -295,7 +217,10 @@
       "kn": "KN43",
       "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
       "difficulty": "medium",
-      "quality_comment": "Distractors contrast Jung’s key concepts with Freud’s theory, promoting discriminative thinking."
+      "quality_comment": "Distractors contrast Jung’s key concepts with Freud’s theory, promoting discriminative thinking.",
+      "lessonExcerpt": "The collective unconscious contains **archetypes**. Universal patterns of thought and imagery that predispose us to act in similar ways.",
+      "suggestedLesson": "6-psychodynamic-and-humanistic",
+      "needsReview": false
     },
     {
       "stem": "In Rogers's person-centered therapy, what is the therapist’s role in facilitating client growth?",
@@ -310,7 +235,10 @@
       "kn": "KN43",
       "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
       "difficulty": "medium",
-      "quality_comment": "The options cover common therapy interventions, with plausible distractors from other therapy types enhancing discriminability."
+      "quality_comment": "The options cover common therapy interventions, with plausible distractors from other therapy types enhancing discriminability.",
+      "lessonExcerpt": "Rogers believed that providing these three core conditions creates an environment where clients can grow: Empathy, Unconditional Positive Regard, Congruence",
+      "suggestedLesson": "6-psychodynamic-and-humanistic",
+      "needsReview": false
     },
     {
       "stem": "Which boundary disturbance in Gestalt therapy is characterized by a person attributing unwanted parts of themselves to others?",
@@ -325,7 +253,10 @@
       "kn": "KN43",
       "kn_explanation": "The question addresses a Gestalt therapy concept related to treatment theories and models (KN43).",
       "difficulty": "medium",
-      "quality_comment": "Distractors are other Gestalt boundary disturbances providing a balanced challenge for examinees familiar with the model."
+      "quality_comment": "Distractors are other Gestalt boundary disturbances providing a balanced challenge for examinees familiar with the model.",
+      "lessonExcerpt": "**Projection**: Putting your own undesirable qualities onto others.",
+      "suggestedLesson": "6-psychodynamic-and-humanistic",
+      "needsReview": false
     },
     {
       "stem": "Existential therapies focus primarily on helping clients confront anxieties arising from which of the following ultimate concerns?",
@@ -340,7 +271,10 @@
       "kn": "KN43",
       "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
       "difficulty": "medium",
-      "quality_comment": "The distractors focus on other theoretical models, making the correct option clear to knowledgeable candidates."
+      "quality_comment": "The distractors focus on other theoretical models, making the correct option clear to knowledgeable candidates.",
+      "lessonExcerpt": "Existential therapists believe psychological disturbances come from failing to resolve conflicts around four ultimate concerns: 1. Death 2. Freedom 3. Isolation 4. Meaninglessness",
+      "suggestedLesson": "6-psychodynamic-and-humanistic",
+      "needsReview": false
     },
     {
       "stem": "In Glasser’s reality therapy, what term describes the client’s adoption of positive, responsible ways to fulfill basic needs without infringing on others’ rights?",
@@ -355,7 +289,10 @@
       "kn": "KN43",
       "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
       "difficulty": "medium",
-      "quality_comment": "Distractors include terms from other theories and related but incorrect concepts, enhancing discriminability."
+      "quality_comment": "Distractors include terms from other theories and related but incorrect concepts, enhancing discriminability.",
+      "lessonExcerpt": "- **Success identity**: Meeting needs responsibly, in ways that don't infringe on others' rights",
+      "suggestedLesson": "6-psychodynamic-and-humanistic",
+      "needsReview": false
     },
     {
       "stem": "Which technique is most associated with Gestalt therapy and involves role-playing opposing parts of the self or significant others to increase awareness?",
@@ -370,7 +307,10 @@
       "kn": "KN43",
       "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
       "difficulty": "medium",
-      "quality_comment": "Distractors are plausible therapeutic techniques from other models, making the question appropriate for EPPP level."
+      "quality_comment": "Distractors are plausible therapeutic techniques from other models, making the question appropriate for EPPP level.",
+      "lessonExcerpt": "**Empty chair technique**: The client talks to an empty chair as if someone important is sitting there, or they switch chairs to dialogue between different parts of themselves",
+      "suggestedLesson": "6-psychodynamic-and-humanistic",
+      "needsReview": false
     },
     {
       "stem": "Positive psychology's concept of 'flow' is best described as:",
@@ -385,7 +325,10 @@
       "kn": "KN43",
       "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
       "difficulty": "easy",
-      "quality_comment": "Clear options distinguish flow from anxiety or relaxation states, appropriate for testing foundational positive psychology concepts."
+      "quality_comment": "Clear options distinguish flow from anxiety or relaxation states, appropriate for testing foundational positive psychology concepts.",
+      "lessonExcerpt": "Flow happens most when there's a challenge-skill balance: you believe you have the skills needed, and both the challenge and your skill level are relatively high.",
+      "suggestedLesson": "6-psychodynamic-and-humanistic",
+      "needsReview": false
     },
     {
       "stem": "Kelly’s personal construct therapy primarily assists clients by helping them:",
@@ -400,7 +343,10 @@
       "kn": "KN43",
       "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
       "difficulty": "medium",
-      "quality_comment": "Distractors reflect concepts from other therapies, which is helpful to discern correct personal construct therapy principles."
+      "quality_comment": "Distractors reflect concepts from other therapies, which is helpful to discern correct personal construct therapy principles.",
+      "lessonExcerpt": "These are bipolar dimensions of meaning we use to understand the world: fair/unfair, strong/weak, trustworthy/untrustworthy, success/failure.",
+      "suggestedLesson": "6-psychodynamic-and-humanistic",
+      "needsReview": false
     },
     {
       "stem": "In Freudian psychoanalysis, what is the initial step in the process of analysis that involves helping clients recognize previously unconscious behaviors?",
@@ -415,7 +361,10 @@
       "kn": "KN43",
       "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
       "difficulty": "hard",
-      "quality_comment": "Options are closely related analytic steps, requiring detailed knowledge suitable for a challenging EPPP question."
+      "quality_comment": "Options are closely related analytic steps, requiring detailed knowledge suitable for a challenging EPPP question.",
+      "lessonExcerpt": "**Confrontation** → **Clarification** → **Interpretation** → **Working Through** First, you help clients notice behaviors they weren't aware of.",
+      "suggestedLesson": "6-psychodynamic-and-humanistic",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best differentiates existential therapies from humanistic therapies?",
@@ -430,7 +379,10 @@
       "kn": "KN43",
       "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
       "difficulty": "medium",
-      "quality_comment": "Presents a nuanced comparison of similar therapies with plausible but incorrect distractors, fitting for EPPP."
+      "quality_comment": "Presents a nuanced comparison of similar therapies with plausible but incorrect distractors, fitting for EPPP.",
+      "lessonExcerpt": "**Humanistic**: Emphasizes acceptance, growth, self-actualization **Existential**: Emphasizes freedom, responsibility, authentic engagement with life's inherent anxieties",
+      "suggestedLesson": "6-psychodynamic-and-humanistic",
+      "needsReview": false
     },
     {
       "stem": "According to Freud, repression is best described as:",
@@ -445,7 +397,10 @@
       "kn": "KN43",
       "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
       "difficulty": "easy",
-      "quality_comment": "Distractors represent other defense mechanisms, making the correct choice clear but requiring knowledge of terms."
+      "quality_comment": "Distractors represent other defense mechanisms, making the correct choice clear but requiring knowledge of terms.",
+      "lessonExcerpt": "**Repression**: The foundation of all other defenses. Keeping threatening thoughts completely out of awareness. Not conscious avoidance, but truly not knowing they exist.",
+      "suggestedLesson": "6-psychodynamic-and-humanistic",
+      "needsReview": false
     },
     {
       "stem": "In the context of positive psychology, which intervention is most supported by empirical research to improve physical health?",
@@ -460,7 +415,10 @@
       "kn": "KN43",
       "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
       "difficulty": "medium",
-      "quality_comment": "The question integrates empirical support with positive psychology concepts, promoting clinical rationale at EPPP level."
+      "quality_comment": "The question integrates empirical support with positive psychology concepts, promoting clinical rationale at EPPP level.",
+      "lessonExcerpt": "Studies have linked positive emotions and optimism to longer life and improved physical health.",
+      "suggestedLesson": "6-psychodynamic-and-humanistic",
+      "needsReview": false
     },
     {
       "stem": "What is the primary goal of Jung’s analytical psychotherapy?",
@@ -475,22 +433,10 @@
       "kn": "KN43",
       "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
       "difficulty": "medium",
-      "quality_comment": "Distractors represent other therapy goals to challenge test-takers’ differentiation of psychodynamic approaches."
-    },
-    {
-      "stem": "Which supervision model is conceptually aligned with humanistic therapies' emphasis on authentic therapist-client relationships and genuineness?",
-      "options": [
-        "Behavioral skills training",
-        "Psychoanalytic supervision focusing on transference analysis",
-        "Developmental models emphasizing growth and authenticity",
-        "Adlerian supervision focused on social interest and encouragement"
-      ],
-      "answer": "Developmental models emphasizing growth and authenticity",
-      "explanation": "1. \"Developmental models emphasizing growth and authenticity\" is the correct answer because humanistic therapies, such as person-centered therapy, prioritize the authenticity of the therapist-client relationship and focus on personal growth. These models align with the humanistic emphasis on fostering a genuine connection that supports the client’s journey towards self-actualization and becoming a fully functioning person.\n\n2. \n- **Behavioral skills training**: This option is incorrect as it focuses on teaching specific skills and behaviors rather than fostering an authentic therapeutic relationship or personal growth, which are central to humanistic therapies.\n  \n- **Psychoanalytic supervision focusing on transference analysis**: This is incorrect because psychoanalytic supervision emphasizes understanding unconscious processes and transference dynamics rather than the authenticity and growth-oriented aspects of the therapist-client relationship found in humanistic approaches.\n\n- **Adlerian supervision focused on social interest and encouragement**: This option is incorrect as Adlerian supervision, while it values social interest and encouragement, does not specifically emphasize the authenticity of the therapist-client relationship in the same way that humanistic therapies do.",
-      "kn": "KN43",
-      "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
-      "difficulty": "hard",
-      "quality_comment": "The question extends the domain by bridging supervision theories with therapy style, enhancing integration relevant to advanced EPPP candidates."
+      "quality_comment": "Distractors represent other therapy goals to challenge test-takers’ differentiation of psychodynamic approaches.",
+      "lessonExcerpt": "Jung's therapy aims for individuation, which happens mainly in the second half of life. This is the process of becoming a whole, complete individual, integrating all aspects of yourself, including those from the collective unconscious.",
+      "suggestedLesson": "6-psychodynamic-and-humanistic",
+      "needsReview": false
     },
     {
       "stem": "In the context of psychodynamic theory, which component of personality is primarily responsible for moral judgments and strives for perfection?",
@@ -510,7 +456,10 @@
       "lock_in_level": "easier",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "| **Superego** | Later childhood | Moral principle | Society's rules internalized | To block id's \"bad\" impulses completely |",
+      "suggestedLesson": "6-psychodynamic-and-humanistic",
+      "needsReview": false
     },
     {
       "stem": "Which structure of personality, according to Freud, is involved in mediating between instinctual drives and societal expectations, often leading to defense mechanisms?",
@@ -530,7 +479,10 @@
       "lock_in_level": "harder",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "When the ego can't resolve conflicts between id and superego rationally, it uses defense mechanisms.",
+      "suggestedLesson": "6-psychodynamic-and-humanistic",
+      "needsReview": false
     }
   ]
 }

@@ -34,7 +34,10 @@
       "kn": "KN46",
       "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
       "difficulty": "medium",
-      "quality_comment": "Options are balanced in length and content; the distractor addresses a plausible but incorrect interpretation of the theory, requiring test-takers to discriminate between management roles."
+      "quality_comment": "Options are balanced in length and content; the distractor addresses a plausible but incorrect interpretation of the theory, requiring test-takers to discriminate between management roles.",
+      "lessonExcerpt": "3. **Division of labor**. Managers plan and organize; workers execute those plans",
+      "suggestedLesson": "6-management-theories",
+      "needsReview": false
     },
     {
       "stem": "Which feature is characteristic of Weber’s concept of bureaucracy in organizational theory?",
@@ -49,7 +52,10 @@
       "kn": "KN46",
       "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
       "difficulty": "easy",
-      "quality_comment": "Clear stem and plausible distractors; options test recognition of formal versus informal organizational features."
+      "quality_comment": "Clear stem and plausible distractors; options test recognition of formal versus informal organizational features.",
+      "lessonExcerpt": "| Separation of ownership and management | Those who own the organization don't necessarily run day-to-day operations |",
+      "suggestedLesson": "6-management-theories",
+      "needsReview": false
     },
     {
       "stem": "The Hawthorne effect, as discovered in Mayo’s Human Relations research, refers to which phenomenon?",
@@ -64,7 +70,10 @@
       "kn": "KN44",
       "kn_explanation": "This question is best aligned with KN44 because it tests Treatment techniques and interventions, and the evidence for their comparative efficacy and effectiveness.",
       "difficulty": "medium",
-      "quality_comment": "Distractors relate to reasonable alternatives but only one fits the classic definition of the Hawthorne effect, aiding discrimination."
+      "quality_comment": "Distractors relate to reasonable alternatives but only one fits the classic definition of the Hawthorne effect, aiding discrimination.",
+      "lessonExcerpt": "Through interviews and observations, Mayo discovered the answer: **workers were responding to the attention they received as research participants**. This became known as the **Hawthorne effect**, the phenomenon where people change their behavior simply because they know they're being observed or given special attention.",
+      "suggestedLesson": "6-management-theories",
+      "needsReview": false
     },
     {
       "stem": "According to McGregor’s Theory X, supervisors typically believe that workers:",
@@ -79,7 +88,10 @@
       "kn": "KN46",
       "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
       "difficulty": "easy",
-      "quality_comment": "Options present clear contrasts between Theory X and Theory Y assumptions, with straightforward wording to assess knowledge efficiently."
+      "quality_comment": "Options present clear contrasts between Theory X and Theory Y assumptions, with straightforward wording to assess knowledge efficiently.",
+      "lessonExcerpt": "**Theory X Supervisors Believe:**\n\n- Subordinates are inherently lazy\n- Workers dislike responsibility and avoid it\n- Employees resist change\n- People care only about themselves\n- Therefore: Supervisors must be directive, controlling, and coercive",
+      "suggestedLesson": "6-management-theories",
+      "needsReview": false
     },
     {
       "stem": "Which principle from Katz and Kahn’s Open-System Theory states that an organization can reach the same goal through multiple different methods?",
@@ -94,7 +106,10 @@
       "kn": "KN46",
       "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
       "difficulty": "medium",
-      "quality_comment": "Distractors include plausible-sounding but incorrect terms, requiring specific knowledge of system principles."
+      "quality_comment": "Distractors include plausible-sounding but incorrect terms, requiring specific knowledge of system principles.",
+      "lessonExcerpt": "**4. Equifinality:** Multiple paths can lead to the same outcome. There's not just one way to achieve a goal.",
+      "suggestedLesson": "6-management-theories",
+      "needsReview": false
     },
     {
       "stem": "In Katz and Kahn’s Open-System Theory, what term describes when the same initial conditions lead to different outcomes?",
@@ -109,7 +124,10 @@
       "kn": "KN46",
       "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
       "difficulty": "medium",
-      "quality_comment": "The similar sounding options test detailed comprehension of key system concepts, appropriate for graduate-level exam preparation."
+      "quality_comment": "The similar sounding options test detailed comprehension of key system concepts, appropriate for graduate-level exam preparation.",
+      "lessonExcerpt": "**5. Multifinality:** The same starting conditions can produce different outcomes depending on what happens along the way.",
+      "suggestedLesson": "6-management-theories",
+      "needsReview": false
     },
     {
       "stem": "Which cycle correctly represents the input-throughput-output model in Katz and Kahn’s Open-System Theory of organizations?",
@@ -124,7 +142,10 @@
       "kn": "KN46",
       "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
       "difficulty": "medium",
-      "quality_comment": "Clear and concise stem and distractors test the candidate’s ability to recall and apply the system input-output model accurately."
+      "quality_comment": "Clear and concise stem and distractors test the candidate’s ability to recall and apply the system input-output model accurately.",
+      "lessonExcerpt": "| **Input** | Organization takes in resources, information, materials | A therapy practice receives new clients, insurance payments, referrals, and market information |\n| **Throughput** | Organization transforms inputs into something else | Therapists provide treatment, support staff manage scheduling, billing department processes payments |\n| **Output** | Organization sends out products, services, or information | Clients receive therapy, insurance companies receive claims, community receives educational workshops |",
+      "suggestedLesson": "6-management-theories",
+      "needsReview": false
     },
     {
       "stem": "McGregor’s Theory Y supervisors believe that subordinates:",
@@ -139,7 +160,10 @@
       "kn": "KN46",
       "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
       "difficulty": "easy",
-      "quality_comment": "The options clearly contrast Theory X and Theory Y assumptions, allowing a straightforward assessment of knowledge with plausible distractors."
+      "quality_comment": "The options clearly contrast Theory X and Theory Y assumptions, allowing a straightforward assessment of knowledge with plausible distractors.",
+      "lessonExcerpt": "**Theory Y Supervisors Believe:**\n\n- Subordinates enjoy work\n- Workers are self-directed and internally motivated\n- Employees seek responsibility\n- People want to contribute meaningfully",
+      "suggestedLesson": "6-management-theories",
+      "needsReview": false
     },
     {
       "stem": "A key finding from Mayo’s research in the Hawthorne studies was that worker productivity is most strongly influenced by:",
@@ -154,7 +178,10 @@
       "kn": "KN46",
       "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
       "difficulty": "medium",
-      "quality_comment": "Distractors reflect common assumptions about productivity, making the correct social factor answer stand out meaningfully to informed test-takers."
+      "quality_comment": "Distractors reflect common assumptions about productivity, making the correct social factor answer stand out meaningfully to informed test-takers.",
+      "lessonExcerpt": "**Mayo's Conclusion:**\n\nSocial factors matter more than physical work conditions for motivation and productivity.",
+      "suggestedLesson": "6-management-theories",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best describes the role of feedback in Katz and Kahn’s input-throughput-output model within an open system?",
@@ -169,7 +196,10 @@
       "kn": "KN46",
       "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
       "difficulty": "medium",
-      "quality_comment": "Distractors are plausible but incorrect; the question tests nuanced understanding of feedback roles in open system organizational models."
+      "quality_comment": "Distractors are plausible but incorrect; the question tests nuanced understanding of feedback roles in open system organizational models.",
+      "lessonExcerpt": "| **Feedback Loop** | Consequences of outputs become new inputs | Client outcomes affect referrals, financial results determine hiring capacity, reputation influences new client volume |",
+      "suggestedLesson": "6-management-theories",
+      "needsReview": false
     },
     {
       "stem": "According to Taylor’s Scientific Management, what is the primary motivation for workers?",
@@ -184,7 +214,10 @@
       "kn": "KN46",
       "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
       "difficulty": "easy",
-      "quality_comment": "Answer options offer realistic worker motivators, requiring clear understanding of Taylor’s perspective on motivation."
+      "quality_comment": "Answer options offer realistic worker motivators, requiring clear understanding of Taylor’s perspective on motivation.",
+      "lessonExcerpt": "Taylor believed workers were motivated primarily by money.",
+      "suggestedLesson": "6-management-theories",
+      "needsReview": false
     },
     {
       "stem": "Weber’s bureaucracy theory emphasizes which of the following principles for employment decisions?",
@@ -199,47 +232,10 @@
       "kn": "KN46",
       "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
       "difficulty": "medium",
-      "quality_comment": "Distractors represent common misunderstandings, effectively distinguishing candidates familiar with Weber’s ideal bureaucracy."
-    },
-    {
-      "stem": "In the context of Fayol's Administrative Theory, which of the following is NOT considered a principle of management?",
-      "options": [
-        "Unity of command",
-        "Division of work",
-        "Employee autonomy",
-        "Scalar chain"
-      ],
-      "answer": "Employee autonomy",
-      "explanation": "1. \"Employee autonomy\" is the correct answer because it is not a principle of management according to Fayol's Administrative Theory. Fayol emphasized structured management principles that facilitate organizational efficiency, such as hierarchy and division of labor, rather than promoting individual freedom or autonomy in decision-making for employees.\n\n2. \n- **Unity of command**: This principle states that each employee should report to only one supervisor to avoid confusion and conflicting instructions, ensuring clear lines of authority.\n- **Division of work**: This principle advocates for dividing tasks among employees to improve efficiency and specialization, allowing workers to focus on specific roles that match their skills.\n- **Scalar chain**: This principle refers to the chain of command within an organization, emphasizing the importance of a clear hierarchy where communication flows from the top down, ensuring organized management and accountability.",
-      "difficulty": "easy",
-      "kn": "KN46",
-      "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
-      "quality_comment": "This question effectively tests knowledge of classical management principles in a straightforward manner.",
-      "is_lock_in_drill": true,
-      "lock_in_level": "easier",
-      "tags": [
-        "lock_in_drill"
-      ]
-    },
-    {
-      "stem": "Which of the following practices would NOT align with the principles of Max Weber's Bureaucratic Theory?",
-      "options": [
-        "Clear hierarchical structure",
-        "Impersonal relationships among staff",
-        "Flexible job descriptions",
-        "Formal rules and regulations"
-      ],
-      "answer": "Flexible job descriptions",
-      "explanation": "1. \"Flexible job descriptions\" is the correct answer because Weber's Bureaucratic Theory emphasizes the importance of a clear division of labor and well-defined roles within an organization. Flexible job descriptions imply adaptability and ambiguity in roles, which contradicts the bureaucratic principle of having specific, formalized responsibilities that ensure order and efficiency.\n\n2. \n- **Clear hierarchical structure:** This option is incorrect because Weber's theory highlights the necessity of a well-defined hierarchy of authority to maintain order and efficiency within an organization.\n- **Impersonal relationships among staff:** This is incorrect as Weber's Bureaucratic Theory advocates for impersonal relationships to prevent favoritism and ensure that decisions are made based on rules rather than personal connections.\n- **Formal rules and regulations:** This option is incorrect because the establishment of formal rules and procedures is a core component of Weber's theory, ensuring that organizational operations are predictable and systematic.",
-      "difficulty": "hard",
-      "kn": "KN46",
-      "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
-      "quality_comment": "This question challenges the test-taker to apply their understanding of bureaucratic principles in a nuanced way.",
-      "is_lock_in_drill": true,
-      "lock_in_level": "harder",
-      "tags": [
-        "lock_in_drill"
-      ]
+      "quality_comment": "Distractors represent common misunderstandings, effectively distinguishing candidates familiar with Weber’s ideal bureaucracy.",
+      "lessonExcerpt": "| Merit-based employment | Hiring and promotion based on competence, not favoritism |",
+      "suggestedLesson": "6-management-theories",
+      "needsReview": false
     }
   ]
 }

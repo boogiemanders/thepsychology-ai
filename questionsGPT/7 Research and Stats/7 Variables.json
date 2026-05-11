@@ -16,7 +16,7 @@
       "quality_comment": "Good applied question. The lesson covers median superiority for skewed data, and the logic extends to",
       "suggestedLesson": "7-variables",
       "suggestedParagraph": "### Skewed Distributions: When Data Piles to One Side",
-      "lessonExcerpt": "In skewed distributions, the mean, median, and mode separate:",
+      "lessonExcerpt": "When data is skewed, the median is usually better than the mean for representing a typical score because the mean gets distorted by those extreme values.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
       "inspirationIndex": 7
@@ -64,27 +64,6 @@
       "inspirationIndex": 3
     },
     {
-      "stem": "If a constant value is subtracted from every score in a dataset, what effect does this have on the mean and standard deviation?",
-      "options": [
-        "The mean decreases, but the standard deviation remains unchanged.",
-        "Both the mean and standard deviation decrease.",
-        "The mean remains unchanged, but the standard deviation decreases.",
-        "Both the mean and standard deviation remain unchanged."
-      ],
-      "answer": "The mean decreases, but the standard deviation remains unchanged.",
-      "explanation": "Subtracting a constant from each score shifts the mean down by that constant, but does not affect the variability of the scores, hence the standard deviation remains the same. The other options incorrectly suggest changes to the standard deviation or the mean.",
-      "kn": "KN54",
-      "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively assesses knowledge of descriptive statistics transformations.",
-      "suggestedLesson": "7-variables",
-      "suggestedParagraph": "### Independent and Dependent Variables: The 'What Affects What' Relationship",
-      "lessonExcerpt": "Subtracting a constant from each score affects the mean but not the standard deviation.",
-      "needsReview": false,
-      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 2
-    },
-    {
       "stem": "When ranking scores based on percentiles, which of the following statements is true?",
       "options": [
         "Percentiles indicate the percentage of scores that fall below a specific score.",
@@ -98,9 +77,9 @@
       "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
       "difficulty": "medium",
       "quality_comment": "The question is well-constructed and tests knowledge of descriptive statistics.",
-      "suggestedLesson": "7-variables",
+      "suggestedLesson": "5-interpreting-scores",
       "suggestedParagraph": "### Scales of Measurement: How We Quantify Experience",
-      "lessonExcerpt": "Percentiles indicate the percentage of scores that fall below a specific score.",
+      "lessonExcerpt": "A percentile rank tells you the percentage of people in the reference group who scored at or below a particular score. If your client receives a percentile rank of 82, it means 82% of people in the comparison group scored the same or lower.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
       "inspirationIndex": 4
@@ -139,7 +118,10 @@
       "kn": "KN54",
       "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
       "difficulty": "medium",
-      "quality_comment": "The question clearly distinguishes between different types of variables; distractors are plausible for examinees who might confuse roles of variables in studies."
+      "quality_comment": "The question clearly distinguishes between different types of variables; distractors are plausible for examinees who might confuse roles of variables in studies.",
+      "lessonExcerpt": "The **independent variable** is what researchers manipulate or compare (it's the \"cause\" side of the equation.",
+      "suggestedLesson": "7-variables",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best characterizes a mediator variable in psychological research?",
@@ -154,7 +136,10 @@
       "kn": "KN54",
       "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
       "difficulty": "medium",
-      "quality_comment": "Distractors include correct concepts related to variables but selectively differentiate mediator from moderator and extraneous variables, enhancing discrimination."
+      "quality_comment": "Distractors include correct concepts related to variables but selectively differentiate mediator from moderator and extraneous variables, enhancing discrimination.",
+      "lessonExcerpt": "A **mediator variable** explains *why* or *how* an independent variable affects a dependent variable. It's the mechanism, the middle step in the process.",
+      "suggestedLesson": "7-variables",
+      "needsReview": false
     },
     {
       "stem": "In a study of teaching methods where one group receives instruction in noisier conditions than another group, the noise level is best described as which type of variable?",
@@ -169,7 +154,10 @@
       "kn": "KN54",
       "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
       "difficulty": "medium",
-      "quality_comment": "The question situationally clarifies concept of extraneous variables; distractors include other variable types to test subtle distinctions."
+      "quality_comment": "The question situationally clarifies concept of extraneous variables; distractors include other variable types to test subtle distinctions.",
+      "lessonExcerpt": "**Extraneous variables** (also called confounding variables) are factors you didn't plan for but might mess up your results.",
+      "suggestedLesson": "7-variables",
+      "needsReview": false
     },
     {
       "stem": "Which scale of measurement allows for meaningful statements about ratios, such as one value being twice as much as another, due to having an absolute zero?",
@@ -184,7 +172,10 @@
       "kn": "KN54",
       "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
       "difficulty": "medium",
-      "quality_comment": "Distractors reflect common scales of measurement, making the question effective for testing knowledge of scale properties."
+      "quality_comment": "Distractors reflect common scales of measurement, making the question effective for testing knowledge of scale properties.",
+      "lessonExcerpt": "**Ratio scales** have everything: ordered categories, equal intervals, *and* an absolute zero point that means \"none of this quality exists.\"",
+      "suggestedLesson": "7-variables",
+      "needsReview": false
     },
     {
       "stem": "A variable measured by assigning individuals to categories such as 'strongly agree,' 'agree,' 'disagree,' and 'strongly disagree' is an example of which scale of measurement?",
@@ -199,7 +190,10 @@
       "kn": "KN54",
       "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
       "difficulty": "easy",
-      "quality_comment": "Clear stem with straightforward options; distractors are plausible but test basic knowledge of measurement levels."
+      "quality_comment": "Clear stem with straightforward options; distractors are plausible but test basic knowledge of measurement levels.",
+      "lessonExcerpt": "Common examples:\n- Likert scales (strongly agree to strongly disagree)",
+      "suggestedLesson": "7-variables",
+      "needsReview": false
     },
     {
       "stem": "In a frequency polygon depicting test scores that are negatively skewed, which of the following accurately describes the relative positions of the mean, median, and mode?",
@@ -214,7 +208,10 @@
       "kn": "KN54",
       "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
       "difficulty": "hard",
-      "quality_comment": "The question tests nuanced understanding of skewed distributions; the distractors are plausible, requiring detailed conceptual comprehension."
+      "quality_comment": "The question tests nuanced understanding of skewed distributions; the distractors are plausible, requiring detailed conceptual comprehension.",
+      "lessonExcerpt": "| Negatively Skewed | Lowest value | Middle | Highest value |",
+      "suggestedLesson": "7-variables",
+      "needsReview": false
     },
     {
       "stem": "Which type of graph is most appropriate for displaying data measured on a nominal scale, such as eye color categories?",
@@ -229,7 +226,10 @@
       "kn": "KN54",
       "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
       "difficulty": "easy",
-      "quality_comment": "The question is clear and tests common knowledge; distractors are typical graph types but less suitable for nominal data."
+      "quality_comment": "The question is clear and tests common knowledge; distractors are typical graph types but less suitable for nominal data.",
+      "lessonExcerpt": "**Bar graphs** work with nominal and ordinal data.",
+      "suggestedLesson": "7-variables",
+      "needsReview": false
     },
     {
       "stem": "A study finds that cognitive-behavioral therapy reduces anxiety because it changes the way clients think. Changing the clients' thinking is an example of what kind of variable in this context?",
@@ -244,22 +244,10 @@
       "kn": "KN54",
       "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
       "difficulty": "medium",
-      "quality_comment": "Distractors include relevant variable concepts; the scenario helps clarify mediator conceptualization effectively."
-    },
-    {
-      "stem": "Which characteristic is true of interval scales but not of ratio scales?",
-      "options": [
-        "Variables can be ordered",
-        "Equal intervals between values",
-        "An absolute zero point",
-        "Allowed to perform meaningful ratio comparisons"
-      ],
-      "answer": "Equal intervals between values",
-      "explanation": "1. The correct answer, \"Equal intervals between values,\" is true of interval scales because they assign values to ordered categories with equal differences between adjacent categories, allowing for meaningful comparisons of the magnitude of differences. In contrast, while ratio scales also have equal intervals, they are distinguished by the presence of an absolute zero point, which is not a characteristic of interval scales.\n\n2. The option \"Variables can be ordered\" is incorrect because both interval and ratio scales allow for variables to be ordered; this characteristic applies to both types of scales. The statement \"An absolute zero point\" is incorrect because interval scales do not have an absolute zero point, which is a defining feature of ratio scales. Lastly, the option \"Allowed to perform meaningful ratio comparisons\" is incorrect because meaningful ratio comparisons can only be made with ratio scales due to their absolute zero point, whereas interval scales do not support such comparisons.",
-      "kn": "KN54",
-      "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
-      "difficulty": "medium",
-      "quality_comment": "The question focuses on a common source of confusion with well-matched distractors; the stem is clear and concise."
+      "quality_comment": "Distractors include relevant variable concepts; the scenario helps clarify mediator conceptualization effectively.",
+      "lessonExcerpt": "In psychotherapy research, cognitive therapy for depression assumes this pathway:\n- Therapy (independent variable) → Changes in negative thinking patterns (mediator) → Reduced depressive symptoms (dependent variable)",
+      "suggestedLesson": "7-variables",
+      "needsReview": false
     },
     {
       "stem": "What distinguishes a moderator variable in experimental research?",
@@ -274,7 +262,10 @@
       "kn": "KN54",
       "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
       "difficulty": "medium",
-      "quality_comment": "Distractors reflect related concepts, requiring test-takers to discriminate carefully, making it a well-constructed question."
+      "quality_comment": "Distractors reflect related concepts, requiring test-takers to discriminate carefully, making it a well-constructed question.",
+      "lessonExcerpt": "A **moderator variable** changes the strength or direction of the relationship between your independent and dependent variables.",
+      "suggestedLesson": "7-variables",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best describes a platykurtic distribution?",
@@ -289,7 +280,10 @@
       "kn": "KN54",
       "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
       "difficulty": "hard",
-      "quality_comment": "This item tests knowledge often confused with leptokurtic and normal distributions; the distractors are appropriately challenging."
+      "quality_comment": "This item tests knowledge often confused with leptokurtic and normal distributions; the distractors are appropriately challenging.",
+      "lessonExcerpt": "**Platykurtic distribution**: Flatter peak and fatter tails than normal.",
+      "suggestedLesson": "7-variables",
+      "needsReview": false
     },
     {
       "stem": "Which of the following is true about a confounding variable in research?",
@@ -304,7 +298,10 @@
       "kn": "KN54",
       "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
       "difficulty": "medium",
-      "quality_comment": "The question clarifies an important subtype of extraneous variables, distinguishing it from mediators or moderators with effective distractors."
+      "quality_comment": "The question clarifies an important subtype of extraneous variables, distinguishing it from mediators or moderators with effective distractors.",
+      "lessonExcerpt": "**Extraneous variables** (also called confounding variables) are factors you didn't plan for but might mess up your results. They make it hard to know if your independent variable really caused the changes you observed.",
+      "suggestedLesson": "7-variables",
+      "needsReview": false
     },
     {
       "stem": "What type of graph is most appropriate to show the distribution of IQ scores in a sample, which are measured on an interval scale?",
@@ -319,7 +316,10 @@
       "kn": "KN53",
       "kn_explanation": "Understanding the correct visual display based on data scale is a core component of research methods and statistics (KN53).",
       "difficulty": "easy",
-      "quality_comment": "The item tests basic but essential knowledge of data visualization; distractors are plausible graph types but inappropriate for interval data."
+      "quality_comment": "The item tests basic but essential knowledge of data visualization; distractors are plausible graph types but inappropriate for interval data.",
+      "lessonExcerpt": "**Histograms** are used with interval and ratio data. The bars touch each other because the data represents a continuous range of scores, not separate categories.",
+      "suggestedLesson": "7-variables",
+      "needsReview": false
     },
     {
       "stem": "In terms of variable types, which best describes parenting style that modifies the effectiveness of a treatment for social anxiety in adolescents?",
@@ -334,7 +334,10 @@
       "kn": "KN54",
       "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
       "difficulty": "medium",
-      "quality_comment": "The realistic example enhances understanding; distractors involve related variable types for candidate discrimination."
+      "quality_comment": "The realistic example enhances understanding; distractors involve related variable types for candidate discrimination.",
+      "lessonExcerpt": "A **moderator variable** changes the strength or direction of the relationship between your independent and dependent variables.",
+      "suggestedLesson": "7-variables",
+      "needsReview": false
     },
     {
       "stem": "In a study examining the impact of different diets on weight loss, the variable indicating the type of diet participants follow is classified as which of the following?",
@@ -354,7 +357,10 @@
       "lock_in_level": "easier",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "The **independent variable** is what researchers manipulate or compare (it's the \"cause\" side of the equation.",
+      "suggestedLesson": "7-variables",
+      "needsReview": false
     },
     {
       "stem": "In an experiment investigating the effects of various teaching methods on student performance, the variable that denotes the specific teaching method used is best described as which type of variable?",
@@ -374,7 +380,10 @@
       "lock_in_level": "harder",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "The **independent variable** is what researchers manipulate or compare (it's the \"cause\" side of the equation.",
+      "suggestedLesson": "7-variables",
+      "needsReview": false
     }
   ]
 }

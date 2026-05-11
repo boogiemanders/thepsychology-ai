@@ -1,27 +1,6 @@
 {
   "questions": [
     {
-      "stem": "What does research suggest about the stability of IQ scores over time?",
-      "options": [
-        "IQ scores are highly unstable and fluctuate significantly throughout life.",
-        "IQ scores tend to remain stable after early childhood.",
-        "IQ scores are influenced solely by environmental factors.",
-        "IQ scores are irrelevant to long-term academic success."
-      ],
-      "answer": "IQ scores tend to remain stable after early childhood.",
-      "explanation": "Research indicates that IQ scores generally show stability after early childhood, suggesting that they are relatively consistent over time. The other options misrepresent the findings regarding IQ stability.",
-      "kn": "KN57",
-      "kn_explanation": "This question is best aligned with KN57 because it tests Critical appraisal and application of research findings (e.g., adequacy of design and statistics, limitations to generalizability, threats to internal and external validity, design flaws, level of evidence).",
-      "difficulty": "medium",
-      "quality_comment": "The question accurately reflects research findings on IQ stability.",
-      "suggestedLesson": "7-internal-external-validity",
-      "suggestedParagraph": "## Why Internal and External Validity Actually Matter",
-      "lessonExcerpt": "IQ scores tend to remain stable after early childhood.",
-      "needsReview": false,
-      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 7
-    },
-    {
       "stem": "What is a common threat to validity associated with selection bias in research assignment methods?",
       "options": [
         "Participants may drop out of the study",
@@ -37,7 +16,7 @@
       "quality_comment": "The question is relevant and tests understanding of validity threats.",
       "suggestedLesson": "7-internal-external-validity",
       "suggestedParagraph": "## The Seven Threats to Internal Validity",
-      "lessonExcerpt": "Selection bias can lead to a sample that does not represent the population.",
+      "lessonExcerpt": "Despite its name, this actually refers to how you assign people to groups. If groups start out different, you can't trust your conclusions.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
       "inspirationIndex": 10
@@ -58,31 +37,10 @@
       "quality_comment": "The question effectively assesses knowledge of validity threats.",
       "suggestedLesson": "7-internal-external-validity",
       "suggestedParagraph": "## The Seven Threats to Internal Validity",
-      "lessonExcerpt": "Selection bias can occur in quasi-experimental designs due to the lack of random assignment.",
+      "lessonExcerpt": "Random assignment is your defense here. When you randomly assign participants to groups, you create similar groups at the start. No random assignment? You've got a problem.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
       "inspirationIndex": 3
-    },
-    {
-      "stem": "Which of the following strategies is most effective for optimizing external validity in research?",
-      "options": [
-        "Using a diverse sample",
-        "Controlling for extraneous variables",
-        "Increasing sample size",
-        "Using complex statistical models"
-      ],
-      "answer": "Using a diverse sample",
-      "explanation": "The correct answer is 'Using a diverse sample' because a diverse sample enhances the generalizability of the findings to a broader population, which is the essence of external validity. While controlling for extraneous variables and increasing sample size are important, they do not directly address the generalizability of results across different populations.",
-      "kn": "KN57",
-      "kn_explanation": "This question is best aligned with KN57 because it tests Critical appraisal and application of research findings (e.g., adequacy of design and statistics, limitations to generalizability, threats to internal and external validity, design flaws, level of evidence).",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively tests knowledge of external validity considerations.",
-      "suggestedLesson": "7-internal-external-validity",
-      "suggestedParagraph": "## Breaking Down External Validity Into Five Parts",
-      "lessonExcerpt": "Using a diverse sample is crucial for optimizing external validity.",
-      "needsReview": false,
-      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 9
     },
     {
       "stem": "Which of the following is NOT considered a threat to validity in research design?",
@@ -100,7 +58,7 @@
       "quality_comment": "The question is clear and tests knowledge of validity threats.",
       "suggestedLesson": "7-internal-external-validity",
       "suggestedParagraph": "## The Seven Threats to Internal Validity",
-      "lessonExcerpt": "Random assignment is not considered a threat to validity; it is a method to enhance it.",
+      "lessonExcerpt": "**Random assignment** helps internal validity by creating equivalent groups. **Random selection** helps external validity by ensuring your sample represents the population.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
       "inspirationIndex": 10
@@ -160,7 +118,10 @@
       "kn": "KN57",
       "kn_explanation": "This question assesses knowledge of a fundamental research concept, internal validity, which is a key aspect of research methods and critical appraisal of evidence.",
       "difficulty": "easy",
-      "quality_comment": "The question is clear, with plausible distractors focusing on different aspects of research validity, facilitating discrimination of understanding."
+      "quality_comment": "The question is clear, with plausible distractors focusing on different aspects of research validity, facilitating discrimination of understanding.",
+      "lessonExcerpt": "Internal validity tells you whether a study's conclusions about cause-and-effect are accurate.",
+      "suggestedLesson": "7-internal-external-validity",
+      "needsReview": false
     },
     {
       "stem": "A study’s results are threatened by history when:",
@@ -175,7 +136,10 @@
       "kn": "KN57",
       "kn_explanation": "Understanding threats to internal validity, such as history effects, is a critical component of research methods and interpretation of study findings.",
       "difficulty": "medium",
-      "quality_comment": "The stem clearly targets a major threat to validity, and answer options cover common internal validity threats, making distractors plausible and relevant."
+      "quality_comment": "The stem clearly targets a major threat to validity, and answer options cover common internal validity threats, making distractors plausible and relevant.",
+      "lessonExcerpt": "History occurs when outside events during the study affect the results.",
+      "suggestedLesson": "7-internal-external-validity",
+      "needsReview": false
     },
     {
       "stem": "Which technique is most effective at controlling the threat of maturation in an experimental study?",
@@ -190,7 +154,10 @@
       "kn": "KN57",
       "kn_explanation": "This question focuses on methods to control internal validity threats, specifically maturation, which is fundamental in experimental design knowledge.",
       "difficulty": "medium",
-      "quality_comment": "Options provide realistic techniques to control validity threats, encouraging test-takers to differentiate between methods appropriate for specific threats."
+      "quality_comment": "Options provide realistic techniques to control validity threats, encouraging test-takers to differentiate between methods appropriate for specific threats.",
+      "lessonExcerpt": "Random assignment to multiple groups solves this too. If you have a treatment group and a control group, both mature at roughly the same rate.",
+      "suggestedLesson": "7-internal-external-validity",
+      "needsReview": false
     },
     {
       "stem": "What is differential selection in the context of experimental research?",
@@ -205,7 +172,10 @@
       "kn": "KN57",
       "kn_explanation": "Recognizing threats to internal validity such as differential selection is essential for understanding the quality of experimental designs.",
       "difficulty": "medium",
-      "quality_comment": "Distractors address other internal validity threats, enhancing the question's discriminative utility for advanced understanding."
+      "quality_comment": "Distractors address other internal validity threats, enhancing the question's discriminative utility for advanced understanding.",
+      "lessonExcerpt": "Despite its name, this actually refers to how you assign people to groups. If groups start out different, you can't trust your conclusions.",
+      "suggestedLesson": "7-internal-external-validity",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best describes the purpose of the Solomon four-group design?",
@@ -220,7 +190,10 @@
       "kn": "KN57",
       "kn_explanation": "This question is best aligned with KN57 because it tests Critical appraisal and application of research findings (e.g., adequacy of design and statistics, limitations to generalizability, threats to internal and external validity, design flaws, level of evidence).",
       "difficulty": "hard",
-      "quality_comment": "The question is clear and tests detailed knowledge of research design, with distractors referencing other study design principles, making it challenging."
+      "quality_comment": "The question is clear and tests detailed knowledge of research design, with distractors referencing other study design principles, making it challenging.",
+      "lessonExcerpt": "The **Solomon four-group design** simultaneously addresses testing as a threat to internal validity and pretest-treatment interaction as a threat to external validity.",
+      "suggestedLesson": "7-internal-external-validity",
+      "needsReview": false
     },
     {
       "stem": "Which threat to external validity refers to participants responding differently to the independent variable during a study than they would in real life due to knowing they are being observed?",
@@ -235,7 +208,10 @@
       "kn": "KN57",
       "kn_explanation": "Understanding external validity and threats like reactivity is crucial for evaluating whether study findings will apply outside controlled research settings.",
       "difficulty": "medium",
-      "quality_comment": "The question succinctly targets a key external validity threat, with plausible distractors from both internal and external validity domains."
+      "quality_comment": "The question succinctly targets a key external validity threat, with plausible distractors from both internal and external validity domains.",
+      "lessonExcerpt": "Reactivity means people act differently because they know they're being studied.",
+      "suggestedLesson": "7-internal-external-validity",
+      "needsReview": false
     },
     {
       "stem": "In a within-subjects design assessing three different drug doses given in sequence, the greatest observed effect at the highest dose might be due to which threat to external validity?",
@@ -250,7 +226,10 @@
       "kn": "KN57",
       "kn_explanation": "This question addresses a specific external validity threat relevant to experimental design, focusing on treatment order effects in repeated-measures research.",
       "difficulty": "medium",
-      "quality_comment": "Well-constructed stem and options refer to common research validity concerns, requiring application of knowledge about within-subjects design threats."
+      "quality_comment": "Well-constructed stem and options refer to common research validity concerns, requiring application of knowledge about within-subjects design threats.",
+      "lessonExcerpt": "This occurs in within-subjects designs where each person receives multiple treatments or conditions. The order matters.",
+      "suggestedLesson": "7-internal-external-validity",
+      "needsReview": false
     },
     {
       "stem": "Which strategy is best for controlling the threat of selection-treatment interaction in experimental research?",
@@ -265,7 +244,10 @@
       "kn": "KN57",
       "kn_explanation": "This question relates to sample selection techniques aimed at improving external validity, foundational in research methodology topics.",
       "difficulty": "medium",
-      "quality_comment": "Distractors refer to other validity threats or control techniques, making the correct choice stand out to examinees familiar with research sampling concepts."
+      "quality_comment": "Distractors refer to other validity threats or control techniques, making the correct choice stand out to examinees familiar with research sampling concepts.",
+      "lessonExcerpt": "The best control is random selection from the population.",
+      "suggestedLesson": "7-internal-external-validity",
+      "needsReview": false
     },
     {
       "stem": "What type of external validity relates to whether study results can be generalized across different time periods?",
@@ -280,7 +262,10 @@
       "kn": "KN57",
       "kn_explanation": "This question tests understanding of subcategories of external validity, a key area in appraising the usefulness and broader applicability of research.",
       "difficulty": "easy",
-      "quality_comment": "Clear and straightforward, this question separates related validity concepts effectively with plausibly similar-sounding distractors."
+      "quality_comment": "Clear and straightforward, this question separates related validity concepts effectively with plausibly similar-sounding distractors.",
+      "lessonExcerpt": "| **Temporal Validity** | Can we generalize across time? | Will this treatment still work five years from now? |",
+      "suggestedLesson": "7-internal-external-validity",
+      "needsReview": false
     },
     {
       "stem": "If raters become more accurate or stricter in scoring over the duration of a study, threatening internal validity, this phenomenon is called:",
@@ -295,7 +280,10 @@
       "kn": "KN57",
       "kn_explanation": "This question covers a classic internal validity threat involving measurement consistency, a fundamental topic in research methods.",
       "difficulty": "medium",
-      "quality_comment": "Good clarity and plausible alternatives test knowledge of distinct internal validity threats without overlapping definitions."
+      "quality_comment": "Good clarity and plausible alternatives test knowledge of distinct internal validity threats without overlapping definitions.",
+      "lessonExcerpt": "Instrumentation problems occur when your measuring tool changes over time.",
+      "suggestedLesson": "7-internal-external-validity",
+      "needsReview": false
     },
     {
       "stem": "Which of the following threats to internal validity involves participants scoring extremely high or low on a pretest and then regressing to more typical scores on a posttest?",
@@ -310,7 +298,10 @@
       "kn": "KN57",
       "kn_explanation": "This question focuses on understanding a common threat to internal validity that occurs due to measurement and score variability.",
       "difficulty": "medium",
-      "quality_comment": "Distractors are other threats to validity, providing a good set of plausible choices for examinees to consider."
+      "quality_comment": "Distractors are other threats to validity, providing a good set of plausible choices for examinees to consider.",
+      "lessonExcerpt": "Statistical regression happens when you select people specifically because they scored extremely high or low on something, and their scores naturally drift toward average over time.",
+      "suggestedLesson": "7-internal-external-validity",
+      "needsReview": false
     },
     {
       "stem": "Demand characteristics in a research study primarily threaten which aspect of validity?",
@@ -325,7 +316,10 @@
       "kn": "KN57",
       "kn_explanation": "The question assesses knowledge about a specific external validity threat related to participant behavior changes due to study conditions.",
       "difficulty": "medium",
-      "quality_comment": "The question is clearly worded and includes plausible distractors that distinguish between types of validity and threats."
+      "quality_comment": "The question is clearly worded and includes plausible distractors that distinguish between types of validity and threats.",
+      "lessonExcerpt": "**Demand characteristics** are cues that tell participants what you expect.",
+      "suggestedLesson": "7-internal-external-validity",
+      "needsReview": false
     },
     {
       "stem": "Counterbalancing is a control procedure used primarily to address which research threat?",
@@ -340,7 +334,10 @@
       "kn": "KN57",
       "kn_explanation": "This question pertains to methods controlling threats to internal and external validity in experimental designs, key topics in research methodology.",
       "difficulty": "medium",
-      "quality_comment": "Distractors target plausible alternative threats, enhancing the question’s effectiveness in testing detailed knowledge of design controls."
+      "quality_comment": "Distractors target plausible alternative threats, enhancing the question’s effectiveness in testing detailed knowledge of design controls.",
+      "lessonExcerpt": "**Counterbalancing** solves this. You have different groups receive the treatments in different orders.",
+      "suggestedLesson": "7-internal-external-validity",
+      "needsReview": false
     },
     {
       "stem": "Which of the following internal validity threats is most likely to be minimized by using double-blind procedures in a study?",
@@ -355,7 +352,10 @@
       "kn": "KN57",
       "kn_explanation": "Experimenter expectancy is an internal validity threat that arises from researcher bias; double-blind designs are a key control method to reduce it.",
       "difficulty": "medium",
-      "quality_comment": "This question adds focus on a control technique for an internal validity threat, complementing existing items well."
+      "quality_comment": "This question adds focus on a control technique for an internal validity threat, complementing existing items well.",
+      "lessonExcerpt": "**Double-blind technique**: Neither participants nor researchers interacting with them know who's in which group",
+      "suggestedLesson": "7-internal-external-validity",
+      "needsReview": false
     },
     {
       "stem": "Which validity threat involves changes in participants’ responses due to repeated exposure to the same measurement instrument across multiple time points?",
@@ -370,7 +370,10 @@
       "kn": "KN57",
       "kn_explanation": "Testing effect is a key internal validity concern in repeated-measures designs as outlined in the topic content.",
       "difficulty": "medium",
-      "quality_comment": "This item clarifies the concept of testing effects, enriching the existing question pool about internal validity threats."
+      "quality_comment": "This item clarifies the concept of testing effects, enriching the existing question pool about internal validity threats.",
+      "lessonExcerpt": "Taking a test can change how you perform on that test later.",
+      "suggestedLesson": "7-internal-external-validity",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best describes ecological validity?",
@@ -385,7 +388,10 @@
       "kn": "KN57",
       "kn_explanation": "Ecological validity is a subcategory of external validity concerned with applicability to practical settings, making it important to understand in research evaluation.",
       "difficulty": "easy",
-      "quality_comment": "This straightforward item supplements existing external validity questions by focusing on a key subcategory that is well covered in the source content."
+      "quality_comment": "This straightforward item supplements existing external validity questions by focusing on a key subcategory that is well covered in the source content.",
+      "lessonExcerpt": "| **Ecological Validity** | Can we generalize to real-world settings? | Will this therapy work in a clinic, not just in a controlled lab? |",
+      "suggestedLesson": "7-internal-external-validity",
+      "needsReview": false
     },
     {
       "stem": "In a longitudinal study, which of the following scenarios would most likely introduce a history threat to the validity of the findings?",
@@ -405,7 +411,10 @@
       "lock_in_level": "easier",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "There's a trickier version: when you're testing groups separately and something happens to just one group.",
+      "suggestedLesson": "7-internal-external-validity",
+      "needsReview": false
     },
     {
       "stem": "During a psychological experiment, a significant political event occurs that influences participants' responses. This scenario demonstrates a threat to validity known as:",
@@ -425,7 +434,10 @@
       "lock_in_level": "harder",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "History occurs when outside events during the study affect the results.",
+      "suggestedLesson": "7-internal-external-validity",
+      "needsReview": false
     }
   ]
 }

@@ -37,7 +37,7 @@
       "quality_comment": "The question is challenging and relevant to cognitive biases.",
       "suggestedLesson": "3-errors-and-shortcuts",
       "suggestedParagraph": "## The Major Players: Errors and Biases",
-      "lessonExcerpt": "Hindsight bias leads individuals to believe that outcomes were more predictable than they actually were, distorting their understanding of past events.",
+      "lessonExcerpt": "Hindsight bias is the tendency to believe, after an event occurs, that we predicted it would happen (or that we could have predicted it) more than we actually could have or did.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
       "inspirationIndex": 14
@@ -106,48 +106,6 @@
       "inspirationIndex": 7
     },
     {
-      "stem": "How can personal bias affect employee evaluations in the workplace?",
-      "options": [
-        "A) It ensures that all employees are evaluated based on objective criteria.",
-        "B) It can lead to favoritism and unfair assessments of employee performance.",
-        "C) It promotes a more diverse workplace by recognizing individual strengths.",
-        "D) It has no significant impact on the evaluation process."
-      ],
-      "answer": "B) It can lead to favoritism and unfair assessments of employee performance.",
-      "explanation": "Option B is correct because personal bias can skew evaluations, leading to favoritism and unfair assessments. Option A is incorrect as bias undermines objectivity. Option C is misleading since bias does not inherently promote diversity. Option D is false; personal bias significantly impacts evaluations.",
-      "kn": "KN14",
-      "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively tests understanding of the implications of personal bias in evaluations.",
-      "suggestedLesson": "3-errors-and-shortcuts",
-      "suggestedParagraph": "## The Major Players: Errors and Biases",
-      "lessonExcerpt": "Personal bias can lead to favoritism and unfair assessments of employee performance.",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 13
-    },
-    {
-      "stem": "What is the term for the bias where individuals attribute hostile intentions to others, often leading to negative social perceptions?",
-      "options": [
-        "Hostility attribution bias",
-        "Fundamental attribution error",
-        "Self-serving bias",
-        "Actor-observer effect"
-      ],
-      "answer": "Hostility attribution bias",
-      "explanation": "Hostility attribution bias refers to the tendency to perceive others' actions as having hostile intent, which can lead to negative social perceptions and interactions. The fundamental attribution error involves misattributing behavior to personality rather than situational factors, while self-serving bias relates to personal success and failure attributions. The actor-observer effect describes the tendency to attribute one's own actions to situational factors while attributing others' actions to their character.",
-      "kn": "KN14",
-      "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
-      "difficulty": "medium",
-      "quality_comment": "The question is clear and directly assesses knowledge of social perception biases.",
-      "suggestedLesson": "3-errors-and-shortcuts",
-      "suggestedParagraph": "## The Major Players: Errors and Biases",
-      "lessonExcerpt": "Hostility attribution bias refers to the tendency to perceive others' actions as having hostile intent.",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 23
-    },
-    {
       "stem": "Which cognitive bias is primarily responsible for individuals who believe in astrology focusing on information that confirms their beliefs while ignoring contradictory evidence?",
       "options": [
         "Availability heuristic",
@@ -161,9 +119,9 @@
       "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
       "difficulty": "hard",
       "quality_comment": "High-quality question that tests understanding of cognitive biases.",
-      "suggestedLesson": "3-errors-and-shortcuts",
+      "suggestedLesson": "3-why-people-do-things",
       "suggestedParagraph": "### Confirmation Bias: Your Brain's Echo Chamber",
-      "lessonExcerpt": "Confirmation bias is our tendency to seek out and pay attention to information that confirms what we already believe while ignoring information that challenges those beliefs.",
+      "lessonExcerpt": "For the EPPP, you'll need to recognize different types of attribution biases and understand how people decide whether behavior stems from someone's personality or their circumstances. Let's break this down in a way that sticks.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
       "inspirationIndex": 1
@@ -182,9 +140,9 @@
       "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
       "difficulty": "hard",
       "quality_comment": "The question effectively tests knowledge of cognitive biases and their implications in social perception.",
-      "suggestedLesson": "3-errors-and-shortcuts",
+      "suggestedLesson": "3-why-people-do-things",
       "suggestedParagraph": "## The Major Players: Errors and Biases",
-      "lessonExcerpt": "The halo effect illustrates an attribution error where positive traits lead to biased evaluations of character.",
+      "lessonExcerpt": "topic_name: Social Cognition – Causal Attributions domain: 3: Social Psychology slug: social-cognition-causal-attributions generated_at: 2025-11-16T15:23:20.860Z model: claude-sonnet-4-5-20250929 version: 3 --- ## Why Causal Attributions Matter in Your Career as a Psychologist",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
       "inspirationIndex": 9
@@ -203,9 +161,9 @@
       "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
       "difficulty": "hard",
       "quality_comment": "Classic study with carefully constructed distractors targeting three distinct alternative explanations; tests mechanistic understanding rather than mere study recognition.",
-      "suggestedLesson": "3-errors-and-shortcuts",
+      "suggestedLesson": "3-why-people-do-things",
       "suggestedParagraph": "## Confirmation Bias: Your Brain's Echo Chamber",
-      "lessonExcerpt": "Lesson content does not explicitly address the Pygmalion study or teacher expectancy effects. The confirmation bias section provides a related conceptual parallel but does not cover expectancy effects on student performance. Question written from established EPPP knowledge base.",
+      "lessonExcerpt": "topic_name: Social Cognition – Causal Attributions domain: 3: Social Psychology slug: social-cognition-causal-attributions generated_at: 2025-11-16T15:23:20.860Z model: claude-sonnet-4-5-20250929 version: 3 --- ## Why Causal Attributions Matter in Your Career as a Psychologist",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
       "inspirationIndex": 6
@@ -224,9 +182,9 @@
       "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
       "difficulty": "hard",
       "quality_comment": "High clinical relevance for assessment practice; requires precise discrimination among four related but mechanistically distinct cognitive phenomena; the Barnum effect is frequently confused with confirmation bias on the EPPP.",
-      "suggestedLesson": "3-errors-and-shortcuts",
+      "suggestedLesson": "6-management-theories",
       "suggestedParagraph": "The Major Players: Errors and Biases",
-      "lessonExcerpt": "Confirmation bias is our tendency to seek out and pay attention to information that confirms what we already believe while ignoring information that challenges those beliefs.",
+      "lessonExcerpt": "McGregor's Theory X/Theory Y: The Self-Fulfilling Prophecy Douglas McGregor's 1960 theory focuses on supervisor-subordinate interactions and introduces a powerful psychological concept: your assumptions about people shape how they behave.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
       "inspirationIndex": 15
@@ -244,7 +202,10 @@
       "kn": "KN14",
       "kn_explanation": "This question pertains to major research-based theories and models of social cognition, specifically cognitive biases and processing errors.",
       "difficulty": "medium",
-      "quality_comment": "The stem is clear and the distractors are plausible cognitive errors, making it a strong question for testing knowledge of confirmation bias."
+      "quality_comment": "The stem is clear and the distractors are plausible cognitive errors, making it a strong question for testing knowledge of confirmation bias.",
+      "lessonExcerpt": "Confirmation bias is our tendency to seek out and pay attention to information that confirms what we already believe while ignoring information that challenges those beliefs.",
+      "suggestedLesson": "3-errors-and-shortcuts",
+      "needsReview": false
     },
     {
       "stem": "A defense attorney presents anecdotal stories of rare wrongful convictions to the jury, who then ignore national conviction rates and base their verdict on these stories. Which cognitive bias is most clearly illustrated here?",
@@ -259,7 +220,10 @@
       "kn": "KN14",
       "kn_explanation": "This question examines understanding of social cognition biases, specifically how judgment errors arise from misuse or ignoring of base rate information.",
       "difficulty": "medium",
-      "quality_comment": "Options reflect several known biases, requiring examinees to discriminate carefully, which increases item quality and test validity."
+      "quality_comment": "Options reflect several known biases, requiring examinees to discriminate carefully, which increases item quality and test validity.",
+      "lessonExcerpt": "Confirmation bias is our tendency to seek out and pay attention to information that confirms what we already believe while ignoring information that challenges those beliefs.",
+      "suggestedLesson": "3-errors-and-shortcuts",
+      "needsReview": false
     },
     {
       "stem": "Which cognitive bias is characterized by the tendency to overestimate how much other people share our own opinions and beliefs?",
@@ -274,7 +238,10 @@
       "kn": "KN14",
       "kn_explanation": "This item tests knowledge of social cognition biases concerning self and social perception.",
       "difficulty": "easy",
-      "quality_comment": "Clear question with well-targeted distractors that help differentiate related but distinct concepts increases the question’s quality."
+      "quality_comment": "Clear question with well-targeted distractors that help differentiate related but distinct concepts increases the question’s quality.",
+      "lessonExcerpt": "The base rate fallacy occurs when we ignore statistical information about the general population (base rates) and instead focus on specific, distinctive details about an individual case.",
+      "suggestedLesson": "3-errors-and-shortcuts",
+      "needsReview": false
     },
     {
       "stem": "Which of the following scenarios illustrates the gambler’s fallacy?",
@@ -289,7 +256,10 @@
       "kn": "KN14",
       "kn_explanation": "This question assesses understanding of heuristics and fallacies affecting judgment about chance events in social cognition theories.",
       "difficulty": "easy",
-      "quality_comment": "The options include related biases making the correct answer distinguishable, achieving a good balance between challenge and clarity."
+      "quality_comment": "The options include related biases making the correct answer distinguishable, achieving a good balance between challenge and clarity.",
+      "lessonExcerpt": "The false consensus effect is our tendency to overestimate how many other people share our opinions, values, and beliefs.",
+      "suggestedLesson": "3-errors-and-shortcuts",
+      "needsReview": false
     },
     {
       "stem": "The tendency to imagine alternative outcomes to events that have already happened, often leading to feelings of regret or relief, is known as:",
@@ -304,7 +274,10 @@
       "kn": "KN14",
       "kn_explanation": "This question targets knowledge about social cognition errors related to hypothetical alternatives and their emotional impact.",
       "difficulty": "medium",
-      "quality_comment": "Distractors are plausible cognitive biases, requiring a good understanding of terminology which makes for a high-quality question."
+      "quality_comment": "Distractors are plausible cognitive biases, requiring a good understanding of terminology which makes for a high-quality question.",
+      "lessonExcerpt": "The gambler's fallacy is the mistaken belief that previous random events affect future random events. That random outcomes will \"even out\" in the short run.",
+      "suggestedLesson": "3-errors-and-shortcuts",
+      "needsReview": false
     },
     {
       "stem": "A person believes that their choice of a 'lucky number' will improve their odds of winning the lottery, despite the lottery being random. This is an example of:",
@@ -319,7 +292,10 @@
       "kn": "KN14",
       "kn_explanation": "This item assesses understanding of cognitive biases regarding perceived control over chance events in social cognition.",
       "difficulty": "easy",
-      "quality_comment": "Options are distinct and target common heuristics and biases, making it a clear and effective test item."
+      "quality_comment": "Options are distinct and target common heuristics and biases, making it a clear and effective test item.",
+      "lessonExcerpt": "Counterfactual thinking involves imagining alternative outcomes. What might have happened but didn't.",
+      "suggestedLesson": "3-errors-and-shortcuts",
+      "needsReview": false
     },
     {
       "stem": "Which heuristic involves making judgments about the likelihood of an event based on how easily relevant examples come to mind?",
@@ -334,7 +310,10 @@
       "kn": "KN14",
       "kn_explanation": "The question focuses on heuristics used in social cognition, specifically on memory retrieval influencing judgments.",
       "difficulty": "easy",
-      "quality_comment": "The item is straightforward with well-defined distractors that help the test-taker differentiate related heuristics."
+      "quality_comment": "The item is straightforward with well-defined distractors that help the test-taker differentiate related heuristics.",
+      "lessonExcerpt": "Illusory control (also called illusion of control) happens when people believe they can influence outcomes that are actually outside their control.",
+      "suggestedLesson": "3-errors-and-shortcuts",
+      "needsReview": false
     },
     {
       "stem": "The conjunction fallacy, as demonstrated by Tversky and Kahneman, is an error that results from:",
@@ -349,7 +328,10 @@
       "kn": "KN14",
       "kn_explanation": "This question addresses understanding of errors in probability judgment under the representativeness heuristic in social cognition.",
       "difficulty": "hard",
-      "quality_comment": "The question references a classic experimental result with plausible distractors, offering a challenging test of conceptual understanding."
+      "quality_comment": "The question references a classic experimental result with plausible distractors, offering a challenging test of conceptual understanding.",
+      "lessonExcerpt": "The availability heuristic involves judging the frequency or likelihood of events based on how easily we can recall examples.",
+      "suggestedLesson": "3-errors-and-shortcuts",
+      "needsReview": false
     },
     {
       "stem": "A college student who received a passing grade on a social sensitivity test estimates that most other students also passed, whereas a student who failed the same test estimates most others failed. This phenomenon is an example of the:",
@@ -364,7 +346,10 @@
       "kn": "KN14",
       "kn_explanation": "This question focuses on biases in self-other perception, a core topic in social cognition research.",
       "difficulty": "medium",
-      "quality_comment": "The question uses a well-known empirical example, and options are all social biases, enhancing discriminability and conceptual clarity."
+      "quality_comment": "The question uses a well-known empirical example, and options are all social biases, enhancing discriminability and conceptual clarity.",
+      "lessonExcerpt": "the conjunction fallacy, where people incorrectly judge that two events happening together are more likely than either event alone.",
+      "suggestedLesson": "3-errors-and-shortcuts",
+      "needsReview": false
     },
     {
       "stem": "After a political election, individuals' recollections of their pre-election predictions become closer to the actual results than originally predicted. This is an example of:",
@@ -379,7 +364,10 @@
       "kn": "KN14",
       "kn_explanation": "The question addresses memory distortions and judgment errors related to event outcome evaluations within social cognition.",
       "difficulty": "medium",
-      "quality_comment": "The scenario is distinct and the distractors are other known biases, fostering precise knowledge assessment."
+      "quality_comment": "The scenario is distinct and the distractors are other known biases, fostering precise knowledge assessment.",
+      "lessonExcerpt": "students took a bogus \"social sensitivity test\" and were told they either passed or failed. When asked to predict how other students would perform, those who failed predicted most others would fail too, and those who passed predicted most others would pass.",
+      "suggestedLesson": "3-errors-and-shortcuts",
+      "needsReview": false
     },
     {
       "stem": "Which bias involves continuing to invest resources into an unsuccessful project because previous investments cannot be recovered?",
@@ -394,7 +382,10 @@
       "kn": "KN14",
       "kn_explanation": "This question tests knowledge of decision-making errors related to resource investment, a key concept in social and economic cognition.",
       "difficulty": "medium",
-      "quality_comment": "Well-constructed question with plausible distractors that target related but distinct cognitive errors."
+      "quality_comment": "Well-constructed question with plausible distractors that target related but distinct cognitive errors.",
+      "lessonExcerpt": "Blank and colleagues found that after political elections, people's memories of their own predictions shifted to become closer to the actual results.",
+      "suggestedLesson": "3-errors-and-shortcuts",
+      "needsReview": false
     },
     {
       "stem": "The Spotlight Effect refers to:",
@@ -409,7 +400,10 @@
       "kn": "KN14",
       "kn_explanation": "This question pertains to theories of self-awareness and social perception biases in social cognition.",
       "difficulty": "easy",
-      "quality_comment": "Clear and concise, with distractors representative of other common biases, making it effective and accessible."
+      "quality_comment": "Clear and concise, with distractors representative of other common biases, making it effective and accessible.",
+      "lessonExcerpt": "The sunk-cost fallacy happens when people continue investing resources (time, money, effort) into something that isn't working because they've already invested so much.",
+      "suggestedLesson": "3-errors-and-shortcuts",
+      "needsReview": false
     },
     {
       "stem": "Which heuristic involves beginning with an initial estimate and making adjustments to reach a final judgment, often insufficiently shifting from the starting point?",
@@ -424,7 +418,10 @@
       "kn": "KN14",
       "kn_explanation": "This question addresses heuristics relevant to judgment and decision-making processes central to social cognition research.",
       "difficulty": "medium",
-      "quality_comment": "Distractors are well-matched and conceptually related, requiring focused knowledge for correct identification."
+      "quality_comment": "Distractors are well-matched and conceptually related, requiring focused knowledge for correct identification.",
+      "lessonExcerpt": "The spotlight effect occurs when people believe others notice their actions and appearance far more than they actually do.",
+      "suggestedLesson": "3-errors-and-shortcuts",
+      "needsReview": false
     },
     {
       "stem": "The illusion of transparency differs from the spotlight effect in that it refers to overestimating how well others can perceive one's:",
@@ -439,7 +436,10 @@
       "kn": "KN14",
       "kn_explanation": "This question covers social cognitive biases related to perception of self by others, an important topic in social cognition theories.",
       "difficulty": "medium",
-      "quality_comment": "Options are clearly distinct, and the stem properly differentiates similar social perception biases, enhancing item quality."
+      "quality_comment": "Options are clearly distinct, and the stem properly differentiates similar social perception biases, enhancing item quality.",
+      "lessonExcerpt": "When using the anchoring and adjustment heuristic, we start with an initial value (the anchor) and then adjust up or down from there. The problem is that our adjustments are usually insufficient.",
+      "suggestedLesson": "3-errors-and-shortcuts",
+      "needsReview": false
     },
     {
       "stem": "Illusory correlation often leads to which of the following social cognitive errors?",
@@ -454,7 +454,10 @@
       "kn": "KN14",
       "kn_explanation": "This item assesses understanding of illusory correlation, a bias in social cognition relating to stereotype formation and erroneous associations.",
       "difficulty": "medium",
-      "quality_comment": "The distractors are plausible but distinct errors; the correct answer draws from a clear example, enhancing clarity and discriminability."
+      "quality_comment": "The distractors are plausible but distinct errors; the correct answer draws from a clear example, enhancing clarity and discriminability.",
+      "lessonExcerpt": "The illusion of transparency is closely related to the spotlight effect, but it specifically involves overestimating how well others can discern our internal thoughts and feelings.",
+      "suggestedLesson": "3-errors-and-shortcuts",
+      "needsReview": false
     },
     {
       "stem": "Which cognitive bias explains why older adults may be less likely to continue investing in a failing project compared to younger adults?",
@@ -469,7 +472,10 @@
       "kn": "KN14",
       "kn_explanation": "This question examines developmental differences in susceptibility to decision-making biases within social cognition research.",
       "difficulty": "medium",
-      "quality_comment": "Includes demographic nuance increasing complexity while staying anchored in core social cognitive concepts, supporting deep understanding."
+      "quality_comment": "Includes demographic nuance increasing complexity while staying anchored in core social cognitive concepts, supporting deep understanding.",
+      "lessonExcerpt": "Research by Hamilton and Gifford found that people tend to overestimate how often minority group members engage in negative behaviors.",
+      "suggestedLesson": "3-errors-and-shortcuts",
+      "needsReview": false
     },
     {
       "stem": "The simulation heuristic affects decision making by influencing:",
@@ -484,7 +490,10 @@
       "kn": "KN14",
       "kn_explanation": "This item targets understanding of heuristics that influence both probability judgments and emotional evaluations within social cognition.",
       "difficulty": "medium",
-      "quality_comment": "Options reflect related heuristics requiring careful analysis, making this a useful question to probe nuanced comprehension."
+      "quality_comment": "Options reflect related heuristics requiring careful analysis, making this a useful question to probe nuanced comprehension.",
+      "lessonExcerpt": "research by Strough and colleagues found that older adults are actually less susceptible to this fallacy than younger adults",
+      "suggestedLesson": "3-errors-and-shortcuts",
+      "needsReview": false
     },
     {
       "stem": "Which of the following scenarios illustrates the concept of confirmation bias in decision-making?",
@@ -504,7 +513,10 @@
       "lock_in_level": "easier",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "The simulation heuristic involves judging how likely an event is based on how easily we can mentally simulate (imagine) it happening.",
+      "suggestedLesson": "3-errors-and-shortcuts",
+      "needsReview": false
     },
     {
       "stem": "In which of the following situations is confirmation bias most likely to occur?",
@@ -524,7 +536,10 @@
       "lock_in_level": "harder",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "Confirmation bias is our tendency to seek out and pay attention to information that confirms what we already believe while ignoring information that challenges those beliefs.",
+      "suggestedLesson": "3-errors-and-shortcuts",
+      "needsReview": false
     }
   ]
 }

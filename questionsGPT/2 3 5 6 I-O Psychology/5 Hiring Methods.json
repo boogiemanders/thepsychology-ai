@@ -35,9 +35,9 @@
       "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
       "difficulty": "hard",
       "quality_comment": "Tests a specific landmark legal case with direct implications for psychological testing practice. Distractors probe common misconceptions about what the ruling did and did not prohibit. Appropriate doctoral-level difficulty with real-world practice relevance.",
-      "suggestedLesson": "5-hiring-methods",
+      "suggestedLesson": "5-do-hiring-tools-work",
       "suggestedParagraph": "## Legal Foundations of Employment Testing",
-      "lessonExcerpt": "NOT COVERED: The provided lesson files do not address Griggs v. Duke Power Co. or legal requirements for employment selection testing. This content belongs in a lesson on industrial-organizational assessment, personnel selection, or ethical/legal issues in testing. The file 5-hiring-methods (not provided in the lesson content) would be the most appropriate location.",
+      "lessonExcerpt": "Adverse impact** (also called disparate impact) occurs when a selection method negatively affects protected group members compared to majority group members. The Uniform Guidelines on Employee Selection Procedures outlines two main problems that cause adverse impact:",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 28
@@ -58,7 +58,7 @@
       "quality_comment": "Content is covered in 5-hiring-methods lesson (work samples, adverse impact, GMA tests). Remapped lesson slug.",
       "suggestedLesson": "5-hiring-methods",
       "suggestedParagraph": "## Work Samples: The \"Try Before You Buy\" Approach",
-      "lessonExcerpt": "Work samples are exactly what they sound like: you ask applicants to actually perform job-related tasks under realistic conditions... The logic is straightforward: actual performance of job tasks should predict future performance of those same tasks.",
+      "lessonExcerpt": "But there's a significant downside: general mental ability tests have the highest risk of adverse impact on applicants from certain ethnic and racial minority groups.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 8
@@ -79,7 +79,7 @@
       "quality_comment": "Requires integration of psychometric knowledge, adverse impact law, and comparative validity; Option A is a plausible but legally incorrect distractor.",
       "suggestedLesson": "5-hiring-methods",
       "suggestedParagraph": "## Work Sample and Performance Tests",
-      "lessonExcerpt": "",
+      "lessonExcerpt": "Work samples require applicants to actually perform job tasks under realistic conditions.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 8
@@ -97,7 +97,10 @@
       "kn": "KN34",
       "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
       "difficulty": "medium",
-      "quality_comment": "The question is clear, and the options provide plausible interview types that require understanding differences between structured and unstructured methods."
+      "quality_comment": "The question is clear, and the options provide plausible interview types that require understanding differences between structured and unstructured methods.",
+      "lessonExcerpt": "**Structured interviews** follow a script. Every candidate gets asked the same predetermined questions, often developed from a job analysis, and responses are scored using a standardized system.",
+      "suggestedLesson": "5-hiring-methods",
+      "needsReview": false
     },
     {
       "stem": "A recent meta-analysis found that when behavioral and situational interview questions assess the same job requirements, which type of interview question better predicts job performance?",
@@ -112,7 +115,10 @@
       "kn": "KN34",
       "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
       "difficulty": "hard",
-      "quality_comment": "The question challenges test takers to distinguish between nuanced interview question types backed by recent research evidence, providing well-constructed response options."
+      "quality_comment": "The question challenges test takers to distinguish between nuanced interview question types backed by recent research evidence, providing well-constructed response options.",
+      "lessonExcerpt": "Here's a twist the research revealed: When behavioral and situational questions are designed to assess the same job requirements and asked of the same applicants, situational questions actually predict job performance better.",
+      "suggestedLesson": "5-hiring-methods",
+      "needsReview": false
     },
     {
       "stem": "Which selection technique has been found to be the most valid predictor of job performance across a wide variety of jobs and organizations?",
@@ -127,7 +133,10 @@
       "kn": "KN34",
       "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
       "difficulty": "medium",
-      "quality_comment": "This item tests knowledge of predictor validity and includes plausible distractors, making it a fair and relevant EPPP question."
+      "quality_comment": "This item tests knowledge of predictor validity and includes plausible distractors, making it a fair and relevant EPPP question.",
+      "lessonExcerpt": "These tests go by several names: general cognitive ability tests, intelligence tests, or simply cognitive ability tests. Here's what you absolutely need to know: **these are the most valid predictors of job performance** across different types of jobs, performance criteria, and organizations.",
+      "suggestedLesson": "5-hiring-methods",
+      "needsReview": false
     },
     {
       "stem": "Which Big Five personality trait has been consistently shown to be the best predictor of job performance across diverse roles and criteria?",
@@ -142,7 +151,10 @@
       "kn": "KN34",
       "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
       "difficulty": "easy",
-      "quality_comment": "The question is straightforward with clearly distinct options, suitable for testing basic knowledge of personality predictors."
+      "quality_comment": "The question is straightforward with clearly distinct options, suitable for testing basic knowledge of personality predictors.",
+      "lessonExcerpt": "Of these five traits, **conscientiousness** consistently emerges as the best predictor of job performance across different jobs and performance criteria.",
+      "suggestedLesson": "5-hiring-methods",
+      "needsReview": false
     },
     {
       "stem": "What is a key advantage of integrity tests used in employee selection compared to general mental ability tests?",
@@ -157,7 +169,10 @@
       "kn": "KN34",
       "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
       "difficulty": "medium",
-      "quality_comment": "Distractors are plausible but not accurate, making the correct answer salient for knowledge of differential impacts of selection tools."
+      "quality_comment": "Distractors are plausible but not accurate, making the correct answer salient for knowledge of differential impacts of selection tools.",
+      "lessonExcerpt": "The good news? Integrity tests don't show adverse impact for racial or ethnic minorities, making them a legally safer option than some alternatives.",
+      "suggestedLesson": "5-hiring-methods",
+      "needsReview": false
     },
     {
       "stem": "When using multiple predictors in employee selection, which method involves administering all predictors to all applicants, requiring each applicant to meet cutoff scores on every predictor to be considered?",
@@ -172,7 +187,10 @@
       "kn": "KN34",
       "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
       "difficulty": "hard",
-      "quality_comment": "This item requires detailed knowledge of selection process terminology and is well-constructed with plausible alternatives."
+      "quality_comment": "This item requires detailed knowledge of selection process terminology and is well-constructed with plausible alternatives.",
+      "lessonExcerpt": "**Multiple cutoff** administers all predictors to all applicants. To move forward, applicants must score above the cutoff on every single predictor.",
+      "suggestedLesson": "5-hiring-methods",
+      "needsReview": false
     },
     {
       "stem": "Which of the following is a noncompensatory selection method that administers predictors sequentially, only proceeding to the next if the applicant meets the cutoff score on the current test?",
@@ -187,7 +205,10 @@
       "kn": "KN34",
       "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
       "difficulty": "medium",
-      "quality_comment": "The question is clear and tests understanding of specific selection techniques with well-differentiated options."
+      "quality_comment": "The question is clear and tests understanding of specific selection techniques with well-differentiated options.",
+      "lessonExcerpt": "**Multiple hurdles** takes a sequential approach. Predictors are administered in a specific order, and applicants must pass each hurdle before advancing to the next one.",
+      "suggestedLesson": "5-hiring-methods",
+      "needsReview": false
     },
     {
       "stem": "What is one major disadvantage of using biodata (biographical information) measures in employee selection?",
@@ -202,7 +223,10 @@
       "kn": "KN34",
       "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
       "difficulty": "medium",
-      "quality_comment": "Options are plausible, requiring nuanced understanding of biodata drawbacks which is appropriate for EPPP-level knowledge."
+      "quality_comment": "Options are plausible, requiring nuanced understanding of biodata drawbacks which is appropriate for EPPP-level knowledge.",
+      "lessonExcerpt": "But there's a catch: some items lack **face validity**, meaning they don't appear relevant to job performance.",
+      "suggestedLesson": "5-hiring-methods",
+      "needsReview": false
     },
     {
       "stem": "Which type of work sample test is designed specifically for applicants without prior job experience, incorporating training and evaluation periods?",
@@ -217,7 +241,10 @@
       "kn": "KN34",
       "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
       "difficulty": "medium",
-      "quality_comment": "The question is precise and answer choices include related but distinct concepts, requiring careful attention to terminology."
+      "quality_comment": "The question is precise and answer choices include related but distinct concepts, requiring careful attention to terminology.",
+      "lessonExcerpt": "There's a specialized version called **trainability work sample tests** designed for applicants without previous experience. These incorporate training periods followed by evaluation",
+      "suggestedLesson": "5-hiring-methods",
+      "needsReview": false
     },
     {
       "stem": "Assessment centers typically use multiple raters and methods to evaluate managerial candidates. Which simulation exercise requires candidates to respond to memos and phone messages reflecting typical job communications?",
@@ -232,7 +259,10 @@
       "kn": "KN34",
       "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
       "difficulty": "medium",
-      "quality_comment": "Distractors represent common selection tools, making the question appropriate for testing familiarity with specific assessment center exercises."
+      "quality_comment": "Distractors represent common selection tools, making the question appropriate for testing familiarity with specific assessment center exercises.",
+      "lessonExcerpt": "**The in-basket exercise** assesses decision-making skills.",
+      "suggestedLesson": "5-hiring-methods",
+      "needsReview": false
     },
     {
       "stem": "According to research, combining which two selection methods produces the greatest gain in validity for predicting job performance?",
@@ -247,7 +277,10 @@
       "kn": "KN34",
       "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
       "difficulty": "hard",
-      "quality_comment": "This item requires integration of meta-analytic findings, challenging candidates to apply research knowledge to practical assessment scenarios."
+      "quality_comment": "This item requires integration of meta-analytic findings, challenging candidates to apply research knowledge to practical assessment scenarios.",
+      "lessonExcerpt": "When researchers examined which combination of selection methods provides the best prediction, they found that **combining a general mental ability test with an integrity test produces the greatest incremental validity**.",
+      "suggestedLesson": "5-hiring-methods",
+      "needsReview": false
     },
     {
       "stem": "Which selection predictor is least likely to produce adverse impact for racial/ethnic minority applicants?",
@@ -262,7 +295,10 @@
       "kn": "KN34",
       "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
       "difficulty": "medium",
-      "quality_comment": "The question focuses on differential subgroup impacts, which is important in test fairness knowledge."
+      "quality_comment": "The question focuses on differential subgroup impacts, which is important in test fairness knowledge.",
+      "lessonExcerpt": "The good news? Integrity tests don't show adverse impact for racial or ethnic minorities, making them a legally safer option than some alternatives.",
+      "suggestedLesson": "5-hiring-methods",
+      "needsReview": false
     },
     {
       "stem": "What is a realistic job preview's primary purpose in employee selection?",
@@ -277,7 +313,10 @@
       "kn": "KN34",
       "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
       "difficulty": "medium",
-      "quality_comment": "This question clarifies the concept and importance of realistic job previews in practical hiring contexts."
+      "quality_comment": "This question clarifies the concept and importance of realistic job previews in practical hiring contexts.",
+      "lessonExcerpt": "Work samples often appear in **realistic job previews (RJPs)**, which show applicants both positive and negative aspects of the job. The goal? Reduce turnover by ensuring new hires know what they're getting into before accepting an offer.",
+      "suggestedLesson": "5-hiring-methods",
+      "needsReview": false
     },
     {
       "stem": "Which type of integrity test directly asks about attitudes and past behaviors related to dishonesty?",
@@ -292,7 +331,10 @@
       "kn": "KN34",
       "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
       "difficulty": "medium",
-      "quality_comment": "Answered options are plausible and related, making the question effective for testing conceptual differentiation."
+      "quality_comment": "Answered options are plausible and related, making the question effective for testing conceptual differentiation.",
+      "lessonExcerpt": "**Overt integrity tests** ask directly about attitudes toward dishonesty and past behavior.",
+      "suggestedLesson": "5-hiring-methods",
+      "needsReview": false
     },
     {
       "stem": "What type of interview format allows for the same set of questions to be posed to all applicants, ensuring consistency in the evaluation process?",
@@ -312,7 +354,10 @@
       "lock_in_level": "easier",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "**Structured interviews** follow a script. Every candidate gets asked the same predetermined questions, often developed from a job analysis, and responses are scored using a standardized system.",
+      "suggestedLesson": "5-hiring-methods",
+      "needsReview": false
     },
     {
       "stem": "In the context of employee selection, which interview method is most likely to produce the most reliable and valid assessment of candidates by using predetermined questions and a scoring rubric?",
@@ -332,7 +377,10 @@
       "lock_in_level": "harder",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "**Structured interviews** follow a script. Every candidate gets asked the same predetermined questions, often developed from a job analysis, and responses are scored using a standardized system. For years, researchers believed structured interviews were clearly superior predictors of job performance.",
+      "suggestedLesson": "5-hiring-methods",
+      "needsReview": false
     }
   ]
 }

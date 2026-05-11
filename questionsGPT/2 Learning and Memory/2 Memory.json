@@ -36,7 +36,7 @@
       "quality_comment": "Simple but effective interference item using everyday wording instead of textbook phrasing.",
       "suggestedLesson": "2-memory",
       "suggestedParagraph": "## Why We Forget: Trace Decay vs. Interference",
-      "lessonExcerpt": "Proactive interference: Old information blocks new learning.",
+      "lessonExcerpt": "Proactive interference: Old information blocks new learning - You keep giving your old phone number instead of your new one",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR"
     },
@@ -284,96 +284,12 @@
       "kn_explanation": "This question is best aligned with KN8 because it tests Major research-based theories and models of memory and their application.",
       "difficulty": "hard",
       "quality_comment": "The question effectively tests knowledge of confabulation and its implications for memory.",
-      "suggestedLesson": "2-memory",
+      "suggestedLesson": "1-hindbrain-midbrain-forebrain",
       "suggestedParagraph": "## Types of Long-Term Memory: Not All Memories Are Equal",
-      "lessonExcerpt": "This tells us something important: extinction doesn't erase the original learning.",
+      "lessonExcerpt": "They can't save new files (anterograde amnesia), some old files got corrupted (retrograde amnesia), and when they can't find a file, their system automatically generates a plausible substitute that they can't distinguish from real memories (confabulation).{{/M}} **EPPP tip:** Don't confuse this with Wernicke-Korsakoff syndrome, which includes Wernicke's encephalopathy (acute confusion, ataxia, eye movement problems) followed by Korsakoff syndrome.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 8
-    },
-    {
-      "stem": "What method involves analyzing cognitive processes by verbalizing thoughts during problem-solving?",
-      "options": [
-        "Cognitive restructuring",
-        "Protocol analysis",
-        "Behavioral observation",
-        "Cognitive mapping"
-      ],
-      "answer": "Protocol analysis",
-      "explanation": "Protocol analysis involves individuals verbalizing their thought processes while solving problems, allowing researchers to understand cognitive strategies. The other options do not accurately describe this method.",
-      "kn": "KN11",
-      "kn_explanation": "This question is best aligned with KN11 because it tests Elements of cognition, including sensation and perception, attention, language, information processing, visual-spatial processing, executive functioning.",
-      "difficulty": "hard",
-      "quality_comment": "The question is challenging and tests knowledge of cognitive analysis methods.",
-      "suggestedLesson": "2-memory",
-      "suggestedParagraph": "## Types of Long-Term Memory: Not All Memories Are Equal",
-      "lessonExcerpt": "Protocol analysis in cognitive processes involves verbalizing thoughts during problem-solving.",
-      "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 19
-    },
-    {
-      "stem": "According to Herzberg's Two-Factor Theory, which of the following factors is most likely to lead to job dissatisfaction?",
-      "options": [
-        "Recognition for achievements",
-        "Opportunities for advancement",
-        "Poor working conditions",
-        "Meaningful work"
-      ],
-      "answer": "Poor working conditions",
-      "explanation": "Poor working conditions are considered hygiene factors that can lead to job dissatisfaction if not adequately addressed. The other options are motivators that contribute to job satisfaction rather than dissatisfaction.",
-      "kn": "KN9",
-      "kn_explanation": "This question is best aligned with KN9 because it tests Major research-based theories and models of motivation and their application.",
-      "difficulty": "medium",
-      "quality_comment": "The question is clear and directly relates to Herzberg's theory, making it a solid assessment item.",
-      "suggestedLesson": "2-memory",
-      "suggestedParagraph": "## Why Memory Matters for Psychologists",
-      "lessonExcerpt": "The lesson does not adequately cover Herzberg's theory, indicating a need for review.",
-      "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 22
-    },
-    {
-      "stem": "Which of the following best distinguishes between episodic and semantic memory?",
-      "options": [
-        "Episodic memory is related to personal experiences, while semantic memory involves general knowledge.",
-        "Episodic memory is more stable over time than semantic memory.",
-        "Semantic memory is always conscious, while episodic memory can be unconscious.",
-        "Episodic memory is only relevant to emotional events, while semantic memory is not."
-      ],
-      "answer": "Episodic memory is related to personal experiences, while semantic memory involves general knowledge.",
-      "explanation": "This statement accurately captures the fundamental distinction between episodic and semantic memory, where episodic memory pertains to specific events and experiences, and semantic memory relates to facts and general knowledge. The other options either misrepresent the nature of these memory types or introduce inaccuracies.",
-      "kn": "KN8",
-      "kn_explanation": "This question is best aligned with KN8 because it tests Major research-based theories and models of memory and their application.",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively tests knowledge of a key concept in memory research.",
-      "suggestedLesson": "2-memory",
-      "suggestedParagraph": "## Types of Long-Term Memory: Not All Memories Are Equal",
-      "lessonExcerpt": "Episodic memory: Personal experiences (your first therapy session, where you were during a significant life event); Semantic memory: General knowledge and facts.",
-      "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 23
-    },
-    {
-      "stem": "What is the primary effect of proactive inhibition on learning new information?",
-      "options": [
-        "It enhances the ability to recall new information.",
-        "It causes interference from previously learned information.",
-        "It has no effect on the learning process.",
-        "It facilitates the encoding of new memories."
-      ],
-      "answer": "It causes interference from previously learned information.",
-      "explanation": "Proactive inhibition refers to the phenomenon where previously learned information interferes with the ability to learn or recall new information. The other options incorrectly suggest that proactive inhibition has a positive effect or no effect on learning.",
-      "kn": "KN8",
-      "kn_explanation": "This question is best aligned with KN8 because it tests Major research-based theories and models of memory and their application.",
-      "difficulty": "medium",
-      "quality_comment": "The question is clear and effectively assesses knowledge of memory processes.",
-      "suggestedLesson": "2-memory",
-      "suggestedParagraph": "## Interference in Learning: Proactive Inhibition",
-      "lessonExcerpt": "Proactive inhibition occurs when previously learned information interferes with the learning of new information.",
-      "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 25
     },
     {
       "stem": "Which of the following best describes prospective memory impairment?",
@@ -412,7 +328,7 @@
       "quality_comment": "The question effectively tests knowledge of memory encoding processes.",
       "suggestedLesson": "2-memory",
       "suggestedParagraph": "## The Three-Store Model: How Information Moves Through Your Brain",
-      "lessonExcerpt": "Information moves from short-term to long-term memory through encoding, connecting new information to something already stored in long-term memory.",
+      "lessonExcerpt": "Proactive interference: Old information blocks new learning",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 2
@@ -433,31 +349,10 @@
       "quality_comment": "The question is clear and tests knowledge of primary memory effectively.",
       "suggestedLesson": "2-memory",
       "suggestedParagraph": "## Short-Term Memory: The Temporary Workspace",
-      "lessonExcerpt": "Short-term memory holds incoming information for about 20 seconds without rehearsal.",
+      "lessonExcerpt": "Memory span (also called primary memory): The basic storage capacity. How much you can hold",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 8
-    },
-    {
-      "stem": "What distinguishes psychogenic amnesia from physiological amnesia?",
-      "options": [
-        "Psychogenic amnesia is caused by brain injury, while physiological amnesia is not.",
-        "Psychogenic amnesia involves a loss of memory due to psychological factors, while physiological amnesia is due to physical damage.",
-        "Physiological amnesia is reversible, while psychogenic amnesia is permanent.",
-        "Both types of amnesia are caused by the same underlying mechanisms."
-      ],
-      "answer": "Psychogenic amnesia involves a loss of memory due to psychological factors, while physiological amnesia is due to physical damage.",
-      "explanation": "Psychogenic amnesia is linked to psychological trauma, while physiological amnesia results from physical brain damage. The other options incorrectly describe the nature of these types of amnesia.",
-      "kn": "KN8",
-      "kn_explanation": "This question is best aligned with KN8 because it tests Major research-based theories and models of memory and their application.",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively assesses knowledge of memory disorders.",
-      "suggestedLesson": "2-memory",
-      "suggestedParagraph": "## Types of Long-Term Memory: Not All Memories Are Equal",
-      "lessonExcerpt": "Psychogenic amnesia involves a loss of memory due to psychological factors, while physiological amnesia is due to physical damage.",
-      "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 15
     },
     {
       "stem": "Which memory encoding strategy involves grouping information to enhance recall?",
@@ -481,27 +376,6 @@
       "inspirationIndex": 18
     },
     {
-      "stem": "How does depression typically affect memory recall?",
-      "options": [
-        "It enhances recall of positive memories.",
-        "It has no effect on memory recall.",
-        "It impairs recall of negative memories.",
-        "It often impairs overall memory recall."
-      ],
-      "answer": "It often impairs overall memory recall.",
-      "explanation": "Depression is associated with impairments in memory recall, affecting both positive and negative memories. The other options misrepresent the effects of depression on memory.",
-      "kn": "KN8",
-      "kn_explanation": "This question is best aligned with KN8 because it tests Major research-based theories and models of memory and their application.",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively assesses knowledge of memory recall in the context of depression.",
-      "suggestedLesson": "2-memory",
-      "suggestedParagraph": "## Memory and Forgetting: Your Complete EPPP Guide",
-      "lessonExcerpt": "Depression is associated with impairments in memory recall.",
-      "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 20
-    },
-    {
       "stem": "What is a common psychological effect of a compressed work week on employee productivity?",
       "options": [
         "Increased stress levels leading to burnout.",
@@ -517,7 +391,7 @@
       "quality_comment": "The question is relevant and tests knowledge of work psychology.",
       "suggestedLesson": "2-memory",
       "suggestedParagraph": "## Why Memory Matters for Psychologists",
-      "lessonExcerpt": "Understanding these systems helps you distinguish normal forgetting from pathological memory problems.",
+      "lessonExcerpt": "Memory span (also called primary memory): The basic storage capacity. How much you can hold",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 22
@@ -544,27 +418,6 @@
       "inspirationIndex": 23
     },
     {
-      "stem": "In motivation theories, what does the arousal motive primarily refer to?",
-      "options": [
-        "The need to avoid boredom and seek stimulation.",
-        "The desire to achieve specific goals.",
-        "The drive to maintain homeostasis.",
-        "The urge to conform to social norms."
-      ],
-      "answer": "The need to avoid boredom and seek stimulation.",
-      "explanation": "The arousal motive is fundamentally about seeking out experiences that provide stimulation and prevent boredom. The other options describe different motivational drives.",
-      "kn": "KN9",
-      "kn_explanation": "This question is best aligned with KN9 because it tests Major research-based theories and models of motivation and their application.",
-      "difficulty": "medium",
-      "quality_comment": "The question is relevant and tests knowledge of motivation theories.",
-      "suggestedLesson": "2-memory",
-      "suggestedParagraph": "## The Three-Store Model: How Information Moves Through Your Brain",
-      "lessonExcerpt": "Understanding these systems helps you distinguish normal forgetting from pathological memory problems.",
-      "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 24
-    },
-    {
       "stem": "What is the primary characteristic of episodic memory recall?",
       "options": [
         "It involves recalling facts and general knowledge.",
@@ -580,7 +433,7 @@
       "quality_comment": "The question effectively assesses knowledge of memory types.",
       "suggestedLesson": "2-memory",
       "suggestedParagraph": "## Types of Long-Term Memory: Not All Memories Are Equal",
-      "lessonExcerpt": "It splits into: Semantic memory: General knowledge and facts... Episodic memory: Personal experiences.",
+      "lessonExcerpt": "Episodic memory: Personal experiences (your first therapy session, where you were during a significant life event)",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 25
@@ -601,7 +454,7 @@
       "quality_comment": "The question is clear and directly assesses knowledge of sensory memory duration.",
       "suggestedLesson": "2-memory",
       "suggestedParagraph": "### Sensory Memory: The Brief Snapshot",
-      "lessonExcerpt": "Visual information (iconic memory) lasts about half a second.",
+      "lessonExcerpt": "Visual information (iconic memory) lasts about half a second, while sounds (echoic memory) stick around for about two seconds.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 1
@@ -622,7 +475,7 @@
       "quality_comment": "The question accurately tests knowledge of memory retrieval processes.",
       "suggestedLesson": "2-memory",
       "suggestedParagraph": "## Memory and Forgetting: Your Complete EPPP Guide",
-      "lessonExcerpt": "Priming refers to the process where exposure to a stimulus influences the response to a subsequent stimulus.",
+      "lessonExcerpt": "Priming occurs when exposure to something influences your later response without conscious awareness.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 4
@@ -643,52 +496,10 @@
       "quality_comment": "The question effectively assesses understanding of memory interference concepts.",
       "suggestedLesson": "2-memory",
       "suggestedParagraph": "## Types of Long-Term Memory: Not All Memories Are Equal",
-      "lessonExcerpt": "Retroactive interference occurs when newly learned information interferes with the retrieval of previously stored information.",
+      "lessonExcerpt": "Episodic memory: Personal experiences (your first therapy session, where you were during a significant life event)",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 7
-    },
-    {
-      "stem": "What type of memory is most likely to be affected after a head trauma?",
-      "options": [
-        "Long-term memory",
-        "Sensory memory",
-        "Recent memory",
-        "Procedural memory"
-      ],
-      "answer": "Recent memory",
-      "explanation": "The correct answer is 'Recent memory' because head trauma often impacts the ability to recall information that was recently learned or experienced. The other types of memory are less likely to be affected in the same way by head trauma.",
-      "kn": "KN8",
-      "kn_explanation": "This question is best aligned with KN8 because it tests Major research-based theories and models of memory and their application.",
-      "difficulty": "hard",
-      "quality_comment": "The question is challenging and requires an understanding of the impact of trauma on memory.",
-      "suggestedLesson": "2-memory",
-      "suggestedParagraph": "## Types of Long-Term Memory: Not All Memories Are Equal",
-      "lessonExcerpt": "Head trauma often impacts the ability to recall information that was recently learned or experienced.",
-      "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 8
-    },
-    {
-      "stem": "What is the effect of selective attention on multitasking performance?",
-      "options": [
-        "It enhances performance by allowing focus on multiple tasks",
-        "It decreases performance by dividing cognitive resources",
-        "It has no effect on performance",
-        "It improves memory retention for all tasks"
-      ],
-      "answer": "It decreases performance by dividing cognitive resources",
-      "explanation": "The correct answer is 'It decreases performance by dividing cognitive resources' because selective attention limits the ability to effectively process multiple tasks simultaneously, leading to poorer performance. The other options are incorrect as they misrepresent the effects of selective attention on multitasking.",
-      "kn": "KN8",
-      "kn_explanation": "This question is best aligned with KN8 because it tests Major research-based theories and models of memory and their application.",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively assesses understanding of attention and multitasking dynamics.",
-      "suggestedLesson": "2-memory",
-      "suggestedParagraph": "## The Serial Position Effect: Proof the Model Works",
-      "lessonExcerpt": "Selective attention limits the ability to effectively process multiple tasks simultaneously, leading to poorer performance.",
-      "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 9
     },
     {
       "stem": "Which of the following best describes a common reason for long-term memory retrieval failure?",
@@ -706,7 +517,7 @@
       "quality_comment": "The question is clear and tests understanding of memory processes.",
       "suggestedLesson": "2-memory",
       "suggestedParagraph": "## The Three-Store Model: How Information Moves Through Your Brain",
-      "lessonExcerpt": "This explains why clients might say they 'heard' what you said but can't recall it, the information never made it past sensory memory because their attention was elsewhere.",
+      "lessonExcerpt": "Visual information (iconic memory) lasts about half a second, while sounds (echoic memory) stick around for about two seconds.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 11
@@ -727,7 +538,7 @@
       "quality_comment": "The question effectively assesses knowledge of memory recall factors.",
       "suggestedLesson": "2-memory",
       "suggestedParagraph": "## Types of Long-Term Memory: Not All Memories Are Equal",
-      "lessonExcerpt": "This structure helps you remember where and when something emotional happened.",
+      "lessonExcerpt": "Priming occurs when exposure to something influences your later response without conscious awareness.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 12
@@ -748,52 +559,10 @@
       "quality_comment": "The question effectively assesses knowledge of memory retrieval processes.",
       "suggestedLesson": "2-memory",
       "suggestedParagraph": "## Context-Dependent Memory Effects",
-      "lessonExcerpt": "This tells us something important: extinction doesn't erase the original learning.",
+      "lessonExcerpt": "Retroactive interference: New information blocks old recall",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 14
-    },
-    {
-      "stem": "Which of the following best describes the nature of recent memory recall from short-term exposure?",
-      "options": [
-        "It is often highly accurate and detailed.",
-        "It relies heavily on long-term memory storage.",
-        "It is typically limited to a few items.",
-        "It can be enhanced through emotional arousal."
-      ],
-      "answer": "It is typically limited to a few items.",
-      "explanation": "The correct answer is C because recent memory recall from short-term exposure is limited by the capacity of short-term memory, which is about 7 plus or minus 2 items. Option A is incorrect as recent memory can be inaccurate. Option B is incorrect because it primarily involves short-term memory. Option D is misleading as emotional arousal affects long-term memory more significantly.",
-      "kn": "KN8",
-      "kn_explanation": "This question is best aligned with KN8 because it tests Major research-based theories and models of memory and their application.",
-      "difficulty": "medium",
-      "quality_comment": "The question is clear and assesses understanding of short-term memory.",
-      "suggestedLesson": "2-memory",
-      "suggestedParagraph": "## Short-Term Memory: The Temporary Workspace",
-      "lessonExcerpt": "Miller's famous finding. 7 Plus or minus 2 units of information.",
-      "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 15
-    },
-    {
-      "stem": "What is the maximum capacity of working memory as proposed by Miller's theory?",
-      "options": [
-        "5 items",
-        "7 items",
-        "9 items",
-        "11 items"
-      ],
-      "answer": "7 items",
-      "explanation": "The correct answer is B because Miller's theory states that the capacity of working memory is approximately 7 plus or minus 2 items. Option A is incorrect as it underestimates the capacity. Option C is incorrect as it overestimates the capacity. Option D is incorrect as it also overestimates the capacity.",
-      "kn": "KN8",
-      "kn_explanation": "This question is best aligned with KN8 because it tests Major research-based theories and models of memory and their application.",
-      "difficulty": "medium",
-      "quality_comment": "The question is clear and tests knowledge of working memory.",
-      "suggestedLesson": "2-memory",
-      "suggestedParagraph": "## Short-Term Memory: The Temporary Workspace",
-      "lessonExcerpt": "Miller's famous finding. 7 Plus or minus 2 units of information.",
-      "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 19
     },
     {
       "stem": "Which mnemonic device is most effective for enhancing memory retention according to memory strategies?",
@@ -853,7 +622,7 @@
       "quality_comment": "The question effectively assesses knowledge of memory encoding types.",
       "suggestedLesson": "2-memory",
       "suggestedParagraph": "## The Three-Store Model: How Information Moves Through Your Brain",
-      "lessonExcerpt": "Information moves from short-term to long-term memory through encoding, connecting new information to something already stored in long-term memory.",
+      "lessonExcerpt": "Context-dependent learning: Study where you'll be tested (or in a similar environment)",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 1
@@ -899,27 +668,6 @@
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 3
-    },
-    {
-      "stem": "In intelligence testing, which type of memory is primarily assessed by the WAIS-IV?",
-      "options": [
-        "Episodic memory",
-        "Working memory",
-        "Procedural memory",
-        "Semantic memory"
-      ],
-      "answer": "Working memory",
-      "explanation": "The WAIS-IV primarily assesses working memory, which involves the active manipulation and processing of information. While episodic, procedural, and semantic memories are important, they are not the primary focus of the WAIS-IV.",
-      "kn": "KN8",
-      "kn_explanation": "This question is best aligned with KN8 because it tests Major research-based theories and models of memory and their application.",
-      "difficulty": "medium",
-      "quality_comment": "The question is relevant and tests knowledge of memory types in the context of intelligence testing.",
-      "suggestedLesson": "2-memory",
-      "suggestedParagraph": "## Types of Long-Term Memory: Not All Memories Are Equal",
-      "lessonExcerpt": "This includes riding a bike, typing, and clinical techniques you've mastered.",
-      "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 7
     },
     {
       "stem": "What neurobiological process is associated with the strengthening of synapses and is believed to underlie learning and memory?",
@@ -1027,90 +775,6 @@
       "inspirationIndex": 1
     },
     {
-      "stem": "A memory researcher presents participants with 20 tasks; they are allowed to complete only 10 and are interrupted before finishing the remaining 10. On a surprise recall test administered one hour later, participants correctly recall an average of 6.8 of the interrupted tasks but only 4.3 of the completed tasks. The researcher's hypothesis is that cognitive tension created by unfinished tasks keeps them in an active memorial state. This hypothesis is most directly consistent with which memory phenomenon?",
-      "options": [
-        "The generation effect, because actively working on a task enhances encoding relative to passive reception",
-        "The Zeigarnik effect, which holds that memory for incomplete tasks is superior to memory for completed tasks",
-        "The spacing effect, because distributed rehearsal across interrupted trials strengthens the memory trace",
-        "Proactive interference, because earlier completed tasks disrupt encoding of the interrupted tasks presented later"
-      ],
-      "answer": "The Zeigarnik effect, which holds that memory for incomplete tasks is superior to memory for completed tasks",
-      "explanation": "The Zeigarnik effect, named after Bluma Zeigarnik, is the empirical finding that people retain interrupted or incomplete tasks better in memory than completed ones. The theoretical account holds that incomplete tasks create a persistent cognitive tension or motivational state that keeps the task mentally active. The generation effect refers to superior memory for self-generated versus externally provided material, not to a completion-vs.-interruption difference. The spacing effect addresses the benefit of distributing practice over time. Proactive interference describes earlier learning impairing later learning, not the differential recall of interrupted versus completed tasks.",
-      "kn": "KN8",
-      "kn_explanation": "This question is best aligned with KN8 because it tests Major research-based theories and models of memory and their application.",
-      "difficulty": "hard",
-      "quality_comment": "Rigorous experimental scenario question. Content goes beyond current lesson material — valid EPPP topic, no lesson excerpt available.",
-      "suggestedLesson": "2-memory",
-      "suggestedParagraph": "## Memory Phenomena",
-      "lessonExcerpt": "",
-      "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 4
-    },
-    {
-      "stem": "A cognitive scientist studying how expert chess players evaluate positions asks grandmasters to speak aloud every thought, evaluation, and strategy consideration they have while choosing their next move. The researcher transcribes these verbalizations and codes them for categories of strategic reasoning. This data collection method is best described as:",
-      "options": [
-        "Retrospective self-report, because participants are describing mental events that occurred prior to verbalization",
-        "Protocol analysis, because participants provide concurrent verbal reports of ongoing cognitive processes that are then coded",
-        "Structured observation, because the researcher uses a predetermined coding scheme to analyze visible behavior",
-        "Introspective report, because participants examine internal states using systematic philosophical self-reflection in the Wundtian tradition"
-      ],
-      "answer": "Protocol analysis, because participants provide concurrent verbal reports of ongoing cognitive processes that are then coded",
-      "explanation": "Protocol analysis, developed by Ericsson and Simon, is a methodology in which participants think aloud concurrently while performing a task. The resulting verbal stream is the 'protocol,' which is systematically coded for cognitive processes. The critical feature is the concurrent, real-time nature of the verbalization. Retrospective self-report requires recall of thoughts after the task; concurrent verbalization is neither retrospective nor recall-based. Structured observation codes observable behavioral events, not verbalized cognitions. Wundtian introspection involved retrospective, systematic examination of consciousness under controlled laboratory conditions and is methodologically distinct from think-aloud protocols.",
-      "kn": "KN8",
-      "kn_explanation": "This question is best aligned with KN8 because it tests Major research-based theories and models of memory and their application.",
-      "difficulty": "medium",
-      "quality_comment": "Tests an important methodological distinction. Content goes beyond current lesson material — valid EPPP topic, no lesson excerpt available.",
-      "suggestedLesson": "2-memory",
-      "suggestedParagraph": "## Research Methods in Cognitive Psychology",
-      "lessonExcerpt": "",
-      "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 6
-    },
-    {
-      "stem": "An attorney challenges the admissibility of an eyewitness's testimony on the grounds that the witness's recollection was developed during a hypnotic interview. A forensic psychologist retained as an expert witness testifies about the scientific literature on hypnosis and memory. Which of the following most accurately summarizes the empirical consensus the expert should report?",
-      "options": [
-        "Hypnosis reliably enhances accurate recall of factual details without systematically altering the witness's subjective confidence in those details",
-        "Hypnosis reduces overall memory production because the deep relaxation state interferes with retrieval of encoded information",
-        "Hypnosis increases the total quantity of reported memories—including both accurate and fabricated details—while simultaneously elevating the witness's confidence in all reported content regardless of accuracy",
-        "Hypnosis selectively enhances memory for emotionally arousing events while having no effect on memory for neutral contextual details"
-      ],
-      "answer": "Hypnosis increases the total quantity of reported memories—including both accurate and fabricated details—while simultaneously elevating the witness's confidence in all reported content regardless of accuracy",
-      "explanation": "The empirical literature consistently shows that hypnosis produces hypermnesia (increased memory output) but also substantially increases the production of confabulated or false memories. Critically, hypnotized individuals express equivalent high confidence in both their accurate and fabricated recollections, making the procedure forensically problematic because the witness cannot distinguish true from false memories and their confident demeanor may unduly persuade fact-finders. Hypnosis does not improve accuracy while leaving confidence unchanged. It does not reduce memory output. And it does not selectively enhance emotionally encoded content—its inflation of confidence and confabulation applies broadly.",
-      "kn": "KN8",
-      "kn_explanation": "This question is best aligned with KN8 because it tests Major research-based theories and models of memory and their application.",
-      "difficulty": "hard",
-      "quality_comment": "Strong forensically-contextualized question testing an important applied memory phenomenon. Content goes beyond current lesson material — valid EPPP topic, no lesson excerpt available.",
-      "suggestedLesson": "2-memory",
-      "suggestedParagraph": "## Memory and Suggestibility",
-      "lessonExcerpt": "",
-      "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 10
-    },
-    {
-      "stem": "A 32-year-old construction worker sustains a severe closed-head injury after a fall. Upon regaining consciousness, he has no difficulty learning the names of his new rehabilitation nurses, forming new friendships on the ward, or acquiring the hospital's daily schedule. However, he is unable to recall his wedding, the birth of his children, or most events from the five years preceding the accident. This presentation is most consistent with which type of amnesia?",
-      "options": [
-        "Anterograde amnesia, because the patient cannot consolidate memories that occurred after the injury",
-        "Retrograde amnesia, because the patient has lost access to memories formed before the injury",
-        "Korsakoff amnesia, because the pattern results from chronic thiamine deficiency following alcohol use",
-        "Transient global amnesia, because the memory loss will resolve spontaneously within 24 hours"
-      ],
-      "answer": "Retrograde amnesia, because the patient has lost access to memories formed before the injury",
-      "explanation": "Retrograde amnesia involves the inability to recall events and information that were encoded before the onset of the amnestic episode—in this case, the head injury. The patient retains the capacity to form new memories (ruling out anterograde amnesia) but cannot access a substantial pre-injury autobiographical record. Anterograde amnesia (A) refers specifically to difficulty forming new memories after the injury; this patient is successfully forming new memories on the ward. Korsakoff amnesia (C) is caused by thiamine deficiency secondary to chronic alcoholism and is not appropriate here; it also typically involves a characteristic confabulation pattern. Transient global amnesia (D) is a brief, self-limiting episode of amnesia with no precipitating head trauma and typically resolves within hours, not presenting as a stable post-injury pattern.",
-      "kn": "KN8",
-      "kn_explanation": "This question is best aligned with KN8 because it tests Major research-based theories and models of memory and their application.",
-      "difficulty": "medium",
-      "quality_comment": "The scenario clearly contrasts intact anterograde function with impaired retrograde retrieval, making the clinical distinction testable and unambiguous.",
-      "suggestedLesson": "2-memory",
-      "suggestedParagraph": "## Types of Long-Term Memory: Not All Memories Are Equal",
-      "lessonExcerpt": "Retrospective memory: Remembering past events (standard memory). The provided file was truncated before explicit coverage of retrograde amnesia subtypes; question is grounded in standard EPPP memory content.",
-      "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 14
-    },
-    {
       "stem": "A cognitive psychologist presents participants with a recorded list of spoken words under three conditions: one group rates whether each word rhymes with another word (acoustic processing), a second group judges whether each word belongs to a living category (semantic processing), and a third group decides whether each word contains the letter 'e' (structural processing). On a surprise recall test one hour later, which group would the levels-of-processing framework predict will show the highest retention?",
       "options": [
         "The group that rated rhyming patterns, because phonological encoding is particularly suited to auditory material",
@@ -1126,7 +790,7 @@
       "quality_comment": "Classic experimental design framing tests conceptual understanding rather than simple recall of the framework name; appropriate for doctoral-level assessment.",
       "suggestedLesson": "2-memory",
       "suggestedParagraph": "## Types of Long-Term Memory: Not All Memories Are Equal",
-      "lessonExcerpt": "Semantic memory: General knowledge and facts (DSM-5 criteria, therapy theories, that the multi-store model has three components). The provided file was truncated before explicit coverage of levels-of-processing theory; question is grounded in standard EPPP memory encoding content.",
+      "lessonExcerpt": "Simply repeating information (rote rehearsal) is weak. Elaborative rehearsal works better. Connect new information to what you already know - This process, called semantic encoding, is the most effective way to transfer information to long-term memory.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 17
@@ -1165,7 +829,10 @@
       "kn": "KN8",
       "kn_explanation": "This question addresses foundational theories and models of memory, which is under the domain of major research-based theories and models of memory and their application (KN8).",
       "difficulty": "easy",
-      "quality_comment": "The question is straightforward with clear, plausible distractors; it tests basic knowledge of memory systems suitable for EPPP review."
+      "quality_comment": "The question is straightforward with clear, plausible distractors; it tests basic knowledge of memory systems suitable for EPPP review.",
+      "lessonExcerpt": "Sensory memory holds incoming information for barely long enough to decide if it matters. Visual information (iconic memory) lasts about half a second",
+      "suggestedLesson": "2-memory",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best describes the function of the phonological loop in Baddeley's model of working memory?",
@@ -1180,7 +847,10 @@
       "kn": "KN8",
       "kn_explanation": "This question is best aligned with KN8 because it tests Major research-based theories and models of memory and their application.",
       "difficulty": "medium",
-      "quality_comment": "Distractors are carefully worded to reflect other components of working memory, requiring solid understanding to select the correct one."
+      "quality_comment": "Distractors are carefully worded to reflect other components of working memory, requiring solid understanding to select the correct one.",
+      "lessonExcerpt": "Phonological loop | Stores verbal/auditory information",
+      "suggestedLesson": "2-memory",
+      "needsReview": false
     },
     {
       "stem": "In the serial position effect observed in the multi-store model of memory, why do individuals recall more words from the end of a list immediately after presentation?",
@@ -1195,52 +865,10 @@
       "kn": "KN8",
       "kn_explanation": "This question tests understanding of classic memory phenomena explained by theoretical models of memory, appropriate for KN8.",
       "difficulty": "medium",
-      "quality_comment": "The question clearly focuses on a key memory phenomenon and offers plausible distractors that differentiate key memory concepts."
-    },
-    {
-      "stem": "A patient with amnesia who shows no conscious recollection of previously presented words but performs well on a word-stem completion task is demonstrating evidence of which type of memory?",
-      "options": [
-        "Explicit memory",
-        "Declarative memory",
-        "Semantic memory",
-        "Implicit memory"
-      ],
-      "answer": "Implicit memory",
-      "explanation": "1. \"Implicit memory\" is the correct answer because it refers to memories that can be recalled without conscious effort, which aligns with the patient's performance on the word-stem completion task despite having no explicit recollection of the words. This phenomenon is evidenced by studies showing that individuals with amnesia can still perform well on tasks that rely on implicit memory, indicating that their ability to recall information is intact even when they lack conscious awareness of it.\n\n2. \"Explicit memory\" is incorrect because it involves conscious effort to retrieve information, which the patient with amnesia does not demonstrate. \"Declarative memory\" is also incorrect as it includes explicit memory, which requires conscious recall, and the patient shows no such ability. Lastly, \"semantic memory\" is incorrect because it specifically refers to a type of declarative memory focused on facts and concepts, and the patient’s performance does not reflect conscious recall of semantic information.",
-      "kn": "KN8",
-      "kn_explanation": "This question involves understanding distinctions between types of long-term memory and evidence from research on memory systems, central to KN8.",
-      "difficulty": "medium",
-      "quality_comment": "Distractors reflect closely related memory types, which requires test-takers to understand definitions and research findings to choose correctly."
-    },
-    {
-      "stem": "Which of the following best illustrates the use of the method of loci as a mnemonic technique?",
-      "options": [
-        "Creating an acronym to remember the order of operations in mathematics",
-        "Associating grocery list items with familiar objects placed in a familiar location",
-        "Using a phrase where each word’s first letter cues the item to be recalled",
-        "Rehearsing a list of words repeatedly to store them in short-term memory"
-      ],
-      "answer": "Associating grocery list items with familiar objects placed in a familiar location",
-      "explanation": "1. The correct answer, \"Associating grocery list items with familiar objects placed in a familiar location,\" exemplifies the method of loci because this mnemonic technique involves linking each item on a list to a specific object in a known environment. By mentally walking through this familiar location, the individual can retrieve the items associated with each object, enhancing memory recall through visual imagery.\n\n2. The first incorrect option, \"Creating an acronym to remember the order of operations in mathematics,\" is wrong because it describes a verbal mnemonic rather than the method of loci, which relies on spatial associations. The second option, \"Using a phrase where each word’s first letter cues the item to be recalled,\" is incorrect because it also represents an acrostic mnemonic, not the spatial imagery central to the method of loci. Lastly, \"Rehearsing a list of words repeatedly to store them in short-term memory\" is incorrect because it focuses on rote memorization rather than the distinct spatial and visual associations utilized in the method of loci.",
-      "kn": "KN8",
-      "kn_explanation": "Mnemonic techniques for improving memory are aspects of applied memory theory and learning models, which align with KN8.",
-      "difficulty": "easy",
-      "quality_comment": "The question provides distinct mnemonic examples and tests recognition of a specific technique, making options clear and balanced."
-    },
-    {
-      "stem": "Which explanation for forgetting attributes memory loss to interference between similar pieces of information?",
-      "options": [
-        "Trace decay theory",
-        "Interference theory",
-        "Encoding specificity hypothesis",
-        "Latent learning theory"
-      ],
-      "answer": "Interference theory",
-      "explanation": "1. **Interference theory** is the correct answer because it specifically attributes memory loss to the disruption caused by previously learned or more recently acquired information that is similar to the target memory. This theory distinguishes between two types of interference: proactive interference, where old information interferes with new learning, and retroactive interference, where new information disrupts the recall of old memories.\n\n2. **Trace decay theory** is incorrect because it posits that memories fade over time due to physical changes in the brain rather than interference from other information. **Encoding specificity hypothesis** is also incorrect as it suggests that memory retrieval is optimized when the conditions during encoding match those during recall, focusing on the context rather than interference. Lastly, **latent learning theory** is wrong because it explains the acquisition of knowledge that occurs without reinforcement, emphasizing cognitive maps rather than the forgetting process related to interference.",
-      "kn": "KN8",
-      "kn_explanation": "This question assesses knowledge of research-based theories explaining memory and forgetting, which is central to KN8.",
-      "difficulty": "medium",
-      "quality_comment": "Distractors are plausible memory theories but only interference theory specifically relates to confusion caused by similar information, enhancing question validity."
+      "quality_comment": "The question clearly focuses on a key memory phenomenon and offers plausible distractors that differentiate key memory concepts.",
+      "lessonExcerpt": "Semantic memory: General knowledge and facts (DSM-5 criteria, therapy theories, that the multi-store model has three components)",
+      "suggestedLesson": "2-memory",
+      "needsReview": false
     },
     {
       "stem": "According to Bandura's social cognitive theory, which of the following is NOT one of the four mediational processes required for observational learning?",
@@ -1255,7 +883,10 @@
       "kn": "KN7",
       "kn_explanation": "This question addresses major theories of learning, specifically observational learning, covered in KN7.",
       "difficulty": "medium",
-      "quality_comment": "The distractors include three correct mediational processes and one related but incorrect term, requiring precise knowledge of Bandura's theory."
+      "quality_comment": "The distractors include three correct mediational processes and one related but incorrect term, requiring precise knowledge of Bandura's theory.",
+      "lessonExcerpt": "Retrograde amnesia**: Can't remember things from before the injury. Recent memories disappear first, and when memories return, the oldest ones come back first.",
+      "suggestedLesson": "1-neurological-endocrine-disorders",
+      "needsReview": false
     },
     {
       "stem": "In the Deese-Roediger-McDermott (DRM) procedure, participants commonly demonstrate false memories by:",
@@ -1270,7 +901,10 @@
       "kn": "KN8",
       "kn_explanation": "This question tests experimental paradigms and findings related to false memories, which are important in memory research under KN8.",
       "difficulty": "medium",
-      "quality_comment": "The option choices are plausible memory outcomes, but only one describes the hallmark false memory effect of the DRM paradigm."
+      "quality_comment": "The option choices are plausible memory outcomes, but only one describes the hallmark false memory effect of the DRM paradigm.",
+      "lessonExcerpt": "Simply repeating information (rote rehearsal) is weak. Elaborative rehearsal works better. Connect new information to what you already know - This process, called semantic encoding, is the most effective way to transfer information to long-term memory.",
+      "suggestedLesson": "2-memory",
+      "needsReview": false
     },
     {
       "stem": "Which memory improvement technique is demonstrated when a student relates new information to concepts they already understand to facilitate storage in long-term memory?",
@@ -1285,7 +919,10 @@
       "kn": "KN8",
       "kn_explanation": "This question assesses understanding of effective memory encoding techniques, a key applied concept in KN8.",
       "difficulty": "easy",
-      "quality_comment": "The distractors are related memory strategies, but only elaborative rehearsal involves meaningful connections, making the question clear and well-constructed."
+      "quality_comment": "The distractors are related memory strategies, but only elaborative rehearsal involves meaningful connections, making the question clear and well-constructed.",
+      "lessonExcerpt": "Elaborative rehearsal works better. Connect new information to what you already know or create personally meaningful examples.",
+      "suggestedLesson": "2-memory",
+      "needsReview": false
     },
     {
       "stem": "Tolman’s concept of latent learning was best demonstrated by rats in a maze who:",
@@ -1300,7 +937,10 @@
       "kn": "KN8",
       "kn_explanation": "This question is best aligned with KN8 because it tests Major research-based theories and models of memory and their application.",
       "difficulty": "medium",
-      "quality_comment": "Distractors are plausible maze learning scenarios but differ clearly from Tolman’s latent learning, requiring comprehension of specific experimental results."
+      "quality_comment": "Distractors are plausible maze learning scenarios but differ clearly from Tolman’s latent learning, requiring comprehension of specific experimental results.",
+      "lessonExcerpt": "Sensory memory holds incoming information for barely long enough to decide if it matters. Visual information (iconic memory) lasts about half a second",
+      "suggestedLesson": "2-memory",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best characterizes the recency effect in memory recall tasks?",
@@ -1315,7 +955,10 @@
       "kn": "KN8",
       "kn_explanation": "This question tests understanding of specific memory effects explained by theoretical models, a key part of KN8.",
       "difficulty": "easy",
-      "quality_comment": "The options are all memory-related concepts but only one correctly describes the recency effect, making this a clear and focused question."
+      "quality_comment": "The options are all memory-related concepts but only one correctly describes the recency effect, making this a clear and focused question.",
+      "lessonExcerpt": "Phonological loop | Stores verbal/auditory information",
+      "suggestedLesson": "2-memory",
+      "needsReview": false
     },
     {
       "stem": "Which type of interference occurs when newly learned information impairs the recall of previously acquired information?",
@@ -1330,7 +973,10 @@
       "kn": "KN8",
       "kn_explanation": "This question covers memory forgetting theories and interference effects, core topics in the study of memory under KN8.",
       "difficulty": "medium",
-      "quality_comment": "The question provides common interference types, requiring test-takers to distinguish between the directionality of interference effects."
+      "quality_comment": "The question provides common interference types, requiring test-takers to distinguish between the directionality of interference effects.",
+      "lessonExcerpt": "If tested immediately, you'll remember techniques from the beginning (primacy effect) and end (recency effect) better than the middle ones. The beginning items made it to long-term memory through rehearsal, while the end items are still in short-term memory.",
+      "suggestedLesson": "2-memory",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best exemplifies the use of an acrostic mnemonic?",
@@ -1345,7 +991,10 @@
       "kn": "KN8",
       "kn_explanation": "Mnemonic techniques for enhancing memory recall are practical applications of memory models, well covered in KN8.",
       "difficulty": "easy",
-      "quality_comment": "Distractors represent different mnemonic strategies, requiring knowledge of specific definitions, making for a reasonable test item."
+      "quality_comment": "Distractors represent different mnemonic strategies, requiring knowledge of specific definitions, making for a reasonable test item.",
+      "lessonExcerpt": "Critical finding: Amnesic patients with no explicit memory for new information perform normally on priming tasks. This proves implicit memory operates independently from explicit memory.",
+      "suggestedLesson": "2-memory",
+      "needsReview": false
     },
     {
       "stem": "The encoding specificity hypothesis explains improved memory retrieval when:",
@@ -1360,7 +1009,10 @@
       "kn": "KN8",
       "kn_explanation": "This question relates to encoding and retrieval processes critical to memory theory and application (KN8), which is well supported by the topic content.",
       "difficulty": "medium",
-      "quality_comment": "Options are plausible memory strategies but only the correct answer accurately reflects encoding specificity, ensuring clarity and discrimination."
+      "quality_comment": "Options are plausible memory strategies but only the correct answer accurately reflects encoding specificity, ensuring clarity and discrimination.",
+      "lessonExcerpt": "Method of loci: For lists - Link each concept to objects in your apartment.",
+      "suggestedLesson": "2-memory",
+      "needsReview": false
     },
     {
       "stem": "Which type of priming involves facilitated identification of words or objects based on prior exposure to the exact same stimuli, often tested with word-stem or word-fragment completion tasks?",
@@ -1375,7 +1027,10 @@
       "kn": "KN8",
       "kn_explanation": "This question assesses understanding of implicit memory and priming mechanisms, central topics in memory research under KN8.",
       "difficulty": "medium",
-      "quality_comment": "Distractors are several types of priming, requiring detailed knowledge of their distinctions, making the item challenging but focused."
+      "quality_comment": "Distractors are several types of priming, requiring detailed knowledge of their distinctions, making the item challenging but focused.",
+      "lessonExcerpt": "Interference theory has strong research support. We forget because other information gets in the way",
+      "suggestedLesson": "2-memory",
+      "needsReview": false
     },
     {
       "stem": "A researcher repeatedly asks participants to imagine an event that never happened, leading to increased confidence that the event did occur. This technique is an example of:",
@@ -1390,7 +1045,10 @@
       "kn": "KN8",
       "kn_explanation": "This question covers false memory mechanisms and research methods, which are key concepts in the study of memory phenomena under KN8.",
       "difficulty": "medium",
-      "quality_comment": "Options include related memory distortion techniques, requiring detailed knowledge to accurately select imagination inflation."
+      "quality_comment": "Options include related memory distortion techniques, requiring detailed knowledge to accurately select imagination inflation.",
+      "lessonExcerpt": "Observational learning requires four processes: Attention | Retention | Production | Motivation",
+      "suggestedLesson": "2-memory",
+      "needsReview": false
     },
     {
       "stem": "In Baddeley's model of working memory, which component is primarily responsible for the temporary storage of auditory information?",
@@ -1410,7 +1068,10 @@
       "lock_in_level": "easier",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "Present words: candy, sugar, bitter, chocolate, taste, cake, honey - Result: Many people confidently \"remember\" seeing the word SWEET. Even though it wasn't on the list.",
+      "suggestedLesson": "2-memory",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best illustrates the role of the phonological loop when a person is trying to remember a phone number by repeating it silently?",
@@ -1430,7 +1091,10 @@
       "lock_in_level": "harder",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "Elaborative rehearsal works better. Connect new information to what you already know or create personally meaningful examples.",
+      "suggestedLesson": "2-memory",
+      "needsReview": false
     }
   ]
 }

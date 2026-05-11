@@ -142,7 +142,7 @@
       "quality_comment": "Classic EPPP-style question testing the most commonly confused concept in operant conditioning. The scenario clearly illustrates removal of an aversive stimulus maintaining behavior.",
       "suggestedLesson": "2-skinner-and-operant-conditioning",
       "suggestedParagraph": "## The Four Core Consequences",
-      "lessonExcerpt": "Negative Reinforcement: Increases/maintains behavior. Something unpleasant is removed. Memory Aid: Relief.",
+      "lessonExcerpt": "Negative Reinforcement | Increases/maintains | Something unpleasant is removed | Relief",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 10
@@ -268,7 +268,7 @@
       "quality_comment": "The question accurately assesses knowledge of negative reinforcement.",
       "suggestedLesson": "2-skinner-and-operant-conditioning",
       "suggestedParagraph": "## The Four Core Consequences",
-      "lessonExcerpt": "Negative reinforcement increases/maintains behavior by removing something unpleasant.",
+      "lessonExcerpt": "Negative Reinforcement | Increases/maintains | Something unpleasant is removed | Relief",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 10
@@ -289,7 +289,7 @@
       "quality_comment": "The question effectively assesses understanding of positive punishment.",
       "suggestedLesson": "2-skinner-and-operant-conditioning",
       "suggestedParagraph": "## The Four Core Consequences",
-      "lessonExcerpt": "Positive punishment decreases behavior by adding something unpleasant.",
+      "lessonExcerpt": "Positive Punishment | Decreases | Something unpleasant is added | Pain",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 11
@@ -331,7 +331,7 @@
       "quality_comment": "The question effectively assesses understanding of behavior extinction.",
       "suggestedLesson": "2-skinner-and-operant-conditioning",
       "suggestedParagraph": "## Reinforcement Schedules: Timing Is Everything",
-      "lessonExcerpt": "When reinforcement stops, the behavior disappears rapidly.",
+      "lessonExcerpt": "When you stop reinforcing a previously reinforced behavior, it will eventually disappear. That's operant extinction.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 18
@@ -373,7 +373,7 @@
       "quality_comment": "The question accurately assesses knowledge of reinforcement schedules.",
       "suggestedLesson": "2-skinner-and-operant-conditioning",
       "suggestedParagraph": "## Reinforcement Schedules: Timing Is Everything",
-      "lessonExcerpt": "Reinforcement comes after varying, unpredictable time periods.",
+      "lessonExcerpt": "Variable Interval (VI): Reinforcement comes after varying, unpredictable time periods.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 14
@@ -394,7 +394,7 @@
       "quality_comment": "Sophisticated question requiring distinction among four related but distinct operant phenomena. Content goes beyond current lesson material — valid EPPP topic, no lesson excerpt available.",
       "suggestedLesson": "2-skinner-and-operant-conditioning",
       "suggestedParagraph": "## Advanced Operant Phenomena",
-      "lessonExcerpt": "",
+      "lessonExcerpt": "Behavioral contrast occurs when you're reinforcing two different behaviors (A and B), and you change the reinforcement for one behavior, which then affects the other behavior even though its reinforcement didn't change.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 8
@@ -413,9 +413,9 @@
       "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
       "difficulty": "medium",
       "quality_comment": "Excellent question testing precise use of the four-consequence taxonomy. Directly supported by the lesson's consequence table.",
-      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "suggestedLesson": "2-operant-conditioning-interventions",
       "suggestedParagraph": "## The Four Core Consequences",
-      "lessonExcerpt": "Negative Punishment: Decreases | Something desirable is removed | Loss",
+      "lessonExcerpt": "Response cost is negative punishment, you remove something valued when an undesired behavior occurs. In clinical settings, this might look like a token economy where clients earn points for appropriate behaviors and lose a set number of points for specific problem behaviors.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 9
@@ -442,48 +442,6 @@
       "inspirationIndex": 11
     },
     {
-      "stem": "A 45-year-old woman enters therapy reporting no memory of sexual abuse her siblings have independently corroborated occurred during her childhood. She does not report deliberately trying to avoid thinking about the events and shows no conscious awareness of them. According to classical psychoanalytic theory, which defense mechanism most precisely describes this phenomenon, and why is it considered foundational?",
-      "options": [
-        "Suppression, because the patient has made a conscious effort to push threatening memories out of awareness",
-        "Repression, because threatening material has been automatically and unconsciously barred from consciousness, forming the basis from which other defenses operate",
-        "Dissociation, because the patient has fragmented her conscious identity to protect herself from overwhelming affect",
-        "Intellectualization, because the patient has neutralized the emotional impact of the trauma by avoiding its content entirely"
-      ],
-      "answer": "Repression, because threatening material has been automatically and unconsciously barred from consciousness, forming the basis from which other defenses operate",
-      "explanation": "Repression, in classical Freudian theory, is the involuntary and unconscious exclusion of threatening impulses, memories, or affects from conscious awareness. It is considered the prototype or foundational defense mechanism because virtually all other defenses are understood as elaborations upon or supplements to the basic repressive function. Suppression (A) is a conscious, deliberate effort to set aside distressing material—the patient shows no such deliberate effort. Dissociation (C) involves a disruption of normally integrated functions of consciousness, identity, or memory, often in response to acute trauma, and is distinct from the ongoing unconscious barrier described in repression. Intellectualization (D) involves the use of abstract thinking to distance oneself from the emotional component of an experience; it does not explain the absence of the memory itself.",
-      "kn": "KN7",
-      "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
-      "difficulty": "hard",
-      "quality_comment": "Tests a nuanced distinction (repression vs. suppression vs. dissociation) at doctoral level; the 'foundational' framing adds conceptual depth.",
-      "suggestedLesson": "2-skinner-and-operant-conditioning",
-      "suggestedParagraph": "## The Foundation",
-      "lessonExcerpt": "N/A — the provided lesson files do not contain explicit coverage of psychodynamic defense mechanisms. This question is grounded in standard EPPP psychodynamic content but cannot be anchored to the provided lesson text.",
-      "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 13
-    },
-    {
-      "stem": "A behavior analyst working in a substance use treatment program wants to choose a reinforcement schedule that will produce the most persistent behavior and the greatest resistance to extinction after the formal contingency management program ends. Research on reinforcement schedules consistently supports which schedule as producing the highest response rates and the slowest extinction?",
-      "options": [
-        "Fixed ratio, because the predictable response requirement produces efficient, rapid responding",
-        "Fixed interval, because the regular time-based reinforcement creates a reliable and steady behavioral baseline",
-        "Variable interval, because unpredictable timing prevents satiation and maintains moderate consistent responding",
-        "Variable ratio, because unpredictable and varying response requirements produce the highest rates and greatest resistance to extinction"
-      ],
-      "answer": "Variable ratio, because unpredictable and varying response requirements produce the highest rates and greatest resistance to extinction",
-      "explanation": "Variable ratio (VR) schedules, in which reinforcement is delivered after an unpredictable number of responses, consistently produce the highest and most uniform response rates of all four intermittent schedules, as well as the greatest resistance to extinction. Because the organism cannot predict when the next reinforcement will occur, it continues responding at high rates even when reinforcement is withheld—a pattern directly analogous to gambling behavior. Fixed ratio schedules (A) produce high response rates but are subject to post-reinforcement pauses and are more vulnerable to extinction. Fixed interval schedules (B) produce low average response rates with a characteristic 'scalloping' pattern (increased responding near the interval end); they are not optimized for persistence. Variable interval schedules (C) produce steady, moderate response rates but lower overall rates than VR schedules, because responding beyond the elapsed time is not required.",
-      "kn": "KN7",
-      "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
-      "difficulty": "medium",
-      "quality_comment": "Applied framing in a clinical context while testing fundamental schedule knowledge; distractors are well-calibrated with plausible partial-knowledge rationales.",
-      "suggestedLesson": "2-skinner-and-operant-conditioning",
-      "suggestedParagraph": "### The Four Intermittent Schedules",
-      "lessonExcerpt": "Variable Ratio (VR): The most resistant to extinction schedule. Reinforcement comes after a varying, unpredictable number of responses... Think about slot machines.",
-      "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 19
-    },
-    {
       "stem": "A spouse repeatedly asks her partner to put dishes in the dishwasher rather than leaving them in the sink. Each time the partner complies and places the dishes in the dishwasher, the spouse immediately stops asking. Over a period of weeks, the partner's dish-loading behavior increases substantially. According to operant conditioning principles, the partner's behavior is being maintained by:",
       "options": [
         "Positive reinforcement, because the partner earns praise and gratitude from the spouse for completing the household task",
@@ -499,7 +457,7 @@
       "quality_comment": "Cleanly illustrates the escape/avoidance mechanism of negative reinforcement in an ecologically valid domestic scenario; the four distractors test precision of the two-step identification process.",
       "suggestedLesson": "2-skinner-and-operant-conditioning",
       "suggestedParagraph": "## The Four Core Consequences",
-      "lessonExcerpt": "Negative Reinforcement: Increases/maintains behavior. Something unpleasant is removed. 'You're more likely to take ibuprofen for headaches in the future because it removed the unpleasant sensation. Note that the medication itself isn't the reinforcer — the removal of pain is what reinforces taking the medication.'",
+      "lessonExcerpt": "Variable Ratio (VR): Reinforcement comes after an unpredictable number of responses. This is the most powerful schedule. It produces the highest response rate and the greatest resistance to extinction.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 20
@@ -560,9 +518,9 @@
       "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
       "difficulty": "medium",
       "quality_comment": "Clinical training scenario is realistic and engaging. Content goes beyond current lesson material — valid EPPP topic, no lesson excerpt available.",
-      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "suggestedLesson": "2-memory",
       "suggestedParagraph": "## Understanding Operant Conditioning: The Psychology of Consequences",
-      "lessonExcerpt": "",
+      "lessonExcerpt": "Bandura's bobo doll experiments showed children learn through observation without direct reinforcement. Observational learning requires four processes",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 24
@@ -581,9 +539,9 @@
       "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
       "difficulty": "medium",
       "quality_comment": "Classic EPPP scenario anchored in a real-world clinical application. The continuous reinforcement distractor exploits a common misconception. Well-supported by lesson content on intermittent schedules.",
-      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "suggestedLesson": "2-memory",
       "suggestedParagraph": "### The Four Intermittent Schedules",
-      "lessonExcerpt": "But continuous schedules have problems: people get tired of the reward (satiation), and when reinforcement stops, the behavior disappears rapidly. The solution? Once the behavior is established, switch to an intermittent (partial) schedule, where reinforcement happens only some of the time.",
+      "lessonExcerpt": "Bandura's bobo doll experiments showed children learn through observation without direct reinforcement. Observational learning requires four processes",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 26
@@ -622,7 +580,10 @@
       "kn": "KN7",
       "kn_explanation": "This question tests knowledge of a fundamental principle of learning related to operant conditioning, best categorized under theories and principles of learning (KN7).",
       "difficulty": "easy",
-      "quality_comment": "The question clearly targets a foundational concept with distractors that are plausible misconceptions, suitable for EPPP-level assessment."
+      "quality_comment": "The question clearly targets a foundational concept with distractors that are plausible misconceptions, suitable for EPPP-level assessment.",
+      "lessonExcerpt": "This led to his law of effect: behaviors followed by satisfying consequences tend to happen again, while behaviors followed by unsatisfying consequences tend to disappear.",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best describes negative reinforcement?",
@@ -637,7 +598,10 @@
       "kn": "KN7",
       "kn_explanation": "This question assesses understanding of operant conditioning concepts involving reinforcement types, relevant to major theories and models of learning (KN7).",
       "difficulty": "medium",
-      "quality_comment": "Options are well-constructed with subtle distinctions, promoting careful analysis and preventing guessing based on wording alone."
+      "quality_comment": "Options are well-constructed with subtle distinctions, promoting careful analysis and preventing guessing based on wording alone.",
+      "lessonExcerpt": "This led to his law of effect: behaviors followed by satisfying consequences tend to happen again, while behaviors followed by unsatisfying consequences tend to disappear.",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "needsReview": false
     },
     {
       "stem": "A rat receives a food pellet each time it presses a lever exactly 15 times. This reinforcement schedule is known as:",
@@ -652,7 +616,10 @@
       "kn": "KN7",
       "kn_explanation": "Scheduling of reinforcement is a key operant conditioning concept within major learning theories and models (KN7).",
       "difficulty": "medium",
-      "quality_comment": "Clear and focused stem with plausible distractors, ensuring candidates understand different reinforcement schedules."
+      "quality_comment": "Clear and focused stem with plausible distractors, ensuring candidates understand different reinforcement schedules.",
+      "lessonExcerpt": "Fixed Ratio (FR): Reinforcement comes after a set number of responses.",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "needsReview": false
     },
     {
       "stem": "Which intermittent reinforcement schedule typically produces the highest rate of responding and the greatest resistance to extinction?",
@@ -667,7 +634,10 @@
       "kn": "KN7",
       "kn_explanation": "This question assesses knowledge of reinforcement schedules and their effects on behavior, a foundational part of operant conditioning (KN7).",
       "difficulty": "hard",
-      "quality_comment": "Distractors are all plausible types of reinforcement schedules, requiring solid content knowledge to select the correct option."
+      "quality_comment": "Distractors are all plausible types of reinforcement schedules, requiring solid content knowledge to select the correct option.",
+      "lessonExcerpt": "Fixed Ratio (FR): Reinforcement comes after a set number of responses.",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best exemplifies positive punishment?",
@@ -682,7 +652,10 @@
       "kn": "KN7",
       "kn_explanation": "Distinguishing reinforcement and punishment types is central to operant conditioning theory, fitting under learning principles (KN7).",
       "difficulty": "medium",
-      "quality_comment": "Options cover various operant conditioning scenarios with subtle differences, requiring careful discrimination by test-takers."
+      "quality_comment": "Options cover various operant conditioning scenarios with subtle differences, requiring careful discrimination by test-takers.",
+      "lessonExcerpt": "Variable Ratio (VR): Reinforcement comes after an unpredictable number of responses. This is the most powerful schedule. It produces the highest response rate and the greatest resistance to extinction.",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "needsReview": false
     },
     {
       "stem": "A behavior that initially increases after discontinuing reinforcement but then gradually decreases is known as:",
@@ -697,7 +670,10 @@
       "kn": "KN7",
       "kn_explanation": "This question tests knowledge of operant conditioning procedures related to extinction, part of major learning theories (KN7).",
       "difficulty": "medium",
-      "quality_comment": "The distractors are plausible and closely related concepts, making this question challenging yet fair for the exam level."
+      "quality_comment": "The distractors are plausible and closely related concepts, making this question challenging yet fair for the exam level.",
+      "lessonExcerpt": "Positive Punishment | Decreases | Something unpleasant is added | Pain",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "needsReview": false
     },
     {
       "stem": "Behavioral contrast is observed when:",
@@ -712,7 +688,10 @@
       "kn": "KN7",
       "kn_explanation": "Understanding behavioral contrast involves knowledge of operant reinforcement dynamics, aligned with learning theory content (KN7).",
       "difficulty": "hard",
-      "quality_comment": "The stem addresses a complex operant conditioning concept; distractors are relevant, challenging test-takers’ higher-level understanding."
+      "quality_comment": "The stem addresses a complex operant conditioning concept; distractors are relevant, challenging test-takers’ higher-level understanding.",
+      "lessonExcerpt": "Here's what trips people up: when you first stop the reinforcement, the behavior often increases temporarily. This is called an extinction burst.",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "needsReview": false
     },
     {
       "stem": "In the context of operant conditioning, a generalized reinforcer is best described as:",
@@ -727,7 +706,10 @@
       "kn": "KN7",
       "kn_explanation": "Knowledge of types of reinforcers is part of operant conditioning theory typically covered in learning models and principles (KN7).",
       "difficulty": "medium",
-      "quality_comment": "Distractors represent related concepts in reinforcement, which enhances discriminability of candidate understanding."
+      "quality_comment": "Distractors represent related concepts in reinforcement, which enhances discriminability of candidate understanding.",
+      "lessonExcerpt": "Negative behavioral contrast: When you increase reinforcement for Behavior A, Behavior B decreases (even though its reinforcement stayed the same).",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "needsReview": false
     },
     {
       "stem": "A child who cleans her room to stop her parents from nagging is an example of what type of operant conditioning?",
@@ -742,7 +724,10 @@
       "kn": "KN7",
       "kn_explanation": "The question requires application of operant conditioning principles—specifically reinforcement types—to everyday examples (KN7).",
       "difficulty": "easy",
-      "quality_comment": "The scenario is straightforward and clearly illustrates the concept, making the question accessible while encouraging application skills."
+      "quality_comment": "The scenario is straightforward and clearly illustrates the concept, making the question accessible while encouraging application skills.",
+      "lessonExcerpt": "Generalized reinforcers are secondary reinforcers associated with multiple different primary reinforcers. Money is the classic example",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best describes the process of fading in operant conditioning?",
@@ -757,7 +742,10 @@
       "kn": "KN7",
       "kn_explanation": "This question tests knowledge of operant conditioning procedures and techniques used in behavior modification (KN7).",
       "difficulty": "medium",
-      "quality_comment": "The options include similar behavioral concepts, requiring examinees to differentiate between related procedures."
+      "quality_comment": "The options include similar behavioral concepts, requiring examinees to differentiate between related procedures.",
+      "lessonExcerpt": "Negative Reinforcement | Increases/maintains | Something unpleasant is removed | Relief",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "needsReview": false
     },
     {
       "stem": "Skinner’s concept of superstitious behavior is best explained as:",
@@ -772,7 +760,10 @@
       "kn": "KN7",
       "kn_explanation": "Understanding superstitious behavior falls under key operant conditioning concepts in learning theory (KN7).",
       "difficulty": "medium",
-      "quality_comment": "This question focuses on a specific phenomenon with carefully crafted distractors that could confuse less-prepared candidates."
+      "quality_comment": "This question focuses on a specific phenomenon with carefully crafted distractors that could confuse less-prepared candidates.",
+      "lessonExcerpt": "Fading is the gradual removal of prompts once the behavior is established.",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "needsReview": false
     },
     {
       "stem": "When a rat learns to press a lever only when a blinking light is on, the blinking light functions as what in operant conditioning?",
@@ -787,7 +778,10 @@
       "kn": "KN7",
       "kn_explanation": "This question assesses understanding of stimulus control, an important operant conditioning process and component of learning models (KN7).",
       "difficulty": "medium",
-      "quality_comment": "The distractors include related conditioning terms, encouraging precise understanding of discrimination stimuli."
+      "quality_comment": "The distractors include related conditioning terms, encouraging precise understanding of discrimination stimuli.",
+      "lessonExcerpt": "Superstitious behavior develops when a behavior is accidentally reinforced, when reinforcement happens to follow the behavior by coincidence, not because the behavior caused it.",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "needsReview": false
     },
     {
       "stem": "According to the matching law, when two behaviors are reinforced concurrently on different schedules, how will the organism allocate responding?",
@@ -802,7 +796,10 @@
       "kn": "KN7",
       "kn_explanation": "This question covers a quantitative principle of operant behavior allocation, fitting within major research-based learning models (KN7).",
       "difficulty": "hard",
-      "quality_comment": "The item requires nuanced understanding of concurrent reinforcement schedules; the distractors include common misconceptions."
+      "quality_comment": "The item requires nuanced understanding of concurrent reinforcement schedules; the distractors include common misconceptions.",
+      "lessonExcerpt": "The positive discriminative stimulus (SD) signals that reinforcement is available.",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "needsReview": false
     },
     {
       "stem": "In escape conditioning, a behavior is maintained because it:",
@@ -817,7 +814,10 @@
       "kn": "KN7",
       "kn_explanation": "This question addresses types of negative reinforcement procedures, relevant to operant learning theory (KN7).",
       "difficulty": "medium",
-      "quality_comment": "Clear stem with distractors representing related but distinct concepts improves discrimination of candidate knowledge."
+      "quality_comment": "Clear stem with distractors representing related but distinct concepts improves discrimination of candidate knowledge.",
+      "lessonExcerpt": "The matching law predicts that when multiple behaviors are reinforced simultaneously on different schedules, you'll perform each behavior proportionally to how often it's reinforced.",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "needsReview": false
     },
     {
       "stem": "In operant conditioning, what is the primary purpose of implementing a thinning schedule?",
@@ -832,7 +832,10 @@
       "kn": "KN7",
       "kn_explanation": "This question targets knowledge of reinforcement schedules and their strategic manipulation in operant conditioning (KN7).",
       "difficulty": "medium",
-      "quality_comment": "The options are similarly worded, requiring precise understanding of thinning to avoid confusion."
+      "quality_comment": "The options are similarly worded, requiring precise understanding of thinning to avoid confusion.",
+      "lessonExcerpt": "Escape conditioning: A behavior occurs because it allows you to get away from something unpleasant that's already happening.",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "needsReview": false
     },
     {
       "stem": "Which operant conditioning phenomenon explains why punishment often loses effectiveness over time?",
@@ -847,7 +850,10 @@
       "kn": "KN7",
       "kn_explanation": "This item assesses knowledge of behavioral processes affecting the long-term efficacy of punishment, aligned with operant conditioning principles (KN7).",
       "difficulty": "medium",
-      "quality_comment": "Distractors are related behavioral phenomena, which requires candidates to distinguish habituation specifically in this context."
+      "quality_comment": "Distractors are related behavioral phenomena, which requires candidates to distinguish habituation specifically in this context.",
+      "lessonExcerpt": "Thinning means gradually reducing how much reinforcement you provide. Thinning increases resistance to extinction, making behaviors more durable in the long run.",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "needsReview": false
     },
     {
       "stem": "Which of the following scenarios best illustrates negative reinforcement?",
@@ -867,7 +873,10 @@
       "lock_in_level": "easier",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "Habituation refers to a gradual decline in response over time. In operant conditioning contexts, this is particularly relevant to punishment. When punishment is used repeatedly, people often become accustomed to it, and it loses effectiveness.",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "needsReview": false
     },
     {
       "stem": "In the context of operant conditioning, which of the following best exemplifies the principle of negative reinforcement?",
@@ -887,7 +896,10 @@
       "lock_in_level": "harder",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "Negative Reinforcement | Increases/maintains | Something unpleasant is removed | Relief",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "needsReview": false
     }
   ]
 }

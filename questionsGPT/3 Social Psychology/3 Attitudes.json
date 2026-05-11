@@ -85,111 +85,6 @@
       "inspirationIndex": 16
     },
     {
-      "stem": "Which of the following ethical concerns is most directly associated with the potential for harm to participants in psychological experiments?",
-      "options": [
-        "Informed consent",
-        "Confidentiality",
-        "Deception",
-        "Risk of harm"
-      ],
-      "answer": "Risk of harm",
-      "explanation": "The correct answer is 'Risk of harm' because ethical concerns in psychological experiments often focus on ensuring that participants are not exposed to unnecessary risks or harm. 'Informed consent' relates to participants being aware of the study, 'confidentiality' pertains to protecting participant information, and 'deception' involves misleading participants about the study's purpose, which can also raise ethical issues but is not as directly linked to harm as the risk of harm itself.",
-      "kn": "KN14",
-      "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively assesses knowledge of research ethics.",
-      "suggestedLesson": "3-attitudes",
-      "suggestedParagraph": "## Why Attitudes Matter More Than You Think",
-      "lessonExcerpt": "The lesson discusses the importance of ethical considerations in psychological research, particularly the risk of harm to participants.",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 11
-    },
-    {
-      "stem": "Which of the following best describes how cultural expectations shape gender roles in society?",
-      "options": [
-        "Cultural expectations have no impact on gender roles.",
-        "Cultural expectations dictate specific behaviors and responsibilities for men and women.",
-        "Gender roles are solely determined by biological factors.",
-        "Cultural expectations only affect gender roles in certain societies."
-      ],
-      "answer": "Cultural expectations dictate specific behaviors and responsibilities for men and women.",
-      "explanation": "Cultural expectations significantly influence how society defines and enforces gender roles, dictating specific behaviors and responsibilities assigned to men and women. The other options either downplay the role of culture or incorrectly attribute gender roles solely to biology or specific contexts.",
-      "kn": "KN14",
-      "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively assesses understanding of cultural influences on gender roles.",
-      "suggestedLesson": "3-attitudes",
-      "suggestedParagraph": "## Why Attitudes Matter More Than You Think",
-      "lessonExcerpt": "Cultural expectations dictate specific behaviors and responsibilities for men and women.",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 21
-    },
-    {
-      "stem": "Which of the following best describes the emic approach in psychology?",
-      "options": [
-        "A focus on universal psychological principles across cultures.",
-        "An emphasis on understanding behaviors and beliefs from within a specific cultural context.",
-        "A method that prioritizes quantitative data over qualitative insights.",
-        "A strategy that seeks to apply Western psychological theories globally."
-      ],
-      "answer": "An emphasis on understanding behaviors and beliefs from within a specific cultural context.",
-      "explanation": "The emic approach focuses on understanding behaviors and beliefs from the perspective of the cultural group being studied, rather than imposing external frameworks. The other options either describe the etic approach or misrepresent the emic focus.",
-      "kn": "KN14",
-      "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively assesses understanding of emic vs. etic approaches.",
-      "suggestedLesson": "3-attitudes",
-      "suggestedParagraph": "## Why Attitudes Matter More Than You Think",
-      "lessonExcerpt": "The lesson does not explicitly cover emic vs. etic approaches.",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 21
-    },
-    {
-      "stem": "According to reactance theory, what is the primary psychological response individuals exhibit when they perceive their freedoms are being threatened?",
-      "options": [
-        "Increased compliance",
-        "Psychological reactance",
-        "Cognitive dissonance",
-        "Social facilitation"
-      ],
-      "answer": "Psychological reactance",
-      "explanation": "Psychological reactance is the correct answer as it specifically refers to the emotional response individuals have when they feel their freedoms are being restricted. Increased compliance, cognitive dissonance, and social facilitation do not directly relate to the perception of freedom being threatened.",
-      "kn": "KN14",
-      "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively tests knowledge of reactance theory at a doctoral level.",
-      "suggestedLesson": "3-attitudes",
-      "suggestedParagraph": "## Why Attitudes Matter More Than You Think",
-      "lessonExcerpt": "The primary psychological response is psychological reactance, which occurs when individuals feel their freedoms are being threatened.",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 1
-    },
-    {
-      "stem": "Which of the following best describes the phenomenon of loss aversion in investment decisions?",
-      "options": [
-        "Investors are more likely to sell winning stocks than losing ones.",
-        "Investors prefer to avoid losses rather than acquire equivalent gains.",
-        "Investors are indifferent to the potential outcomes of their investments.",
-        "Investors are more influenced by potential gains than potential losses."
-      ],
-      "answer": "Investors prefer to avoid losses rather than acquire equivalent gains.",
-      "explanation": "Loss aversion refers to the tendency for people to prefer avoiding losses over acquiring equivalent gains. This means that the pain of losing is psychologically more impactful than the pleasure of gaining. The other options either misrepresent this concept or do not relate to loss aversion.",
-      "kn": "KN14",
-      "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively tests understanding of a key concept in behavioral economics.",
-      "suggestedLesson": "3-attitudes",
-      "suggestedParagraph": "## Why Attitudes Matter More Than You Think",
-      "lessonExcerpt": "Investors prefer to avoid losses rather than acquire equivalent gains.",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 11
-    },
-    {
       "stem": "A community health program aims to increase cervical cancer screening rates among women who already believe the procedure is effective but nonetheless fail to schedule appointments. According to the Theory of Planned Behavior, which intervention MOST directly targets the subjective norm component in order to strengthen behavioral intention?",
       "options": [
         "Distributing pamphlets with vivid statistics about cervical cancer incidence and mortality to increase perceived susceptibility",
@@ -203,9 +98,9 @@
       "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
       "difficulty": "medium",
       "quality_comment": "Well-anchored in lesson content; distractors each map to a distinct competing construct, making this an effective test of TPB component differentiation.",
-      "suggestedLesson": "3-attitudes",
+      "suggestedLesson": "3-influence",
       "suggestedParagraph": "## Three Models for Predicting Behavior from Attitudes",
-      "lessonExcerpt": "Subjective norms | What you believe others think you should do | 'My family and doctor think I should quit' ... All three need to align for strong behavioral intention. It's like needing three keys to open a vault.",
+      "lessonExcerpt": "Brehm and Brehm (1981) identified this phenomenon as psychological reactance.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
       "inspirationIndex": 2
@@ -244,7 +139,10 @@
       "kn": "KN14",
       "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
       "difficulty": "medium",
-      "quality_comment": "The stem clearly tests knowledge of the theory’s components; distractors are plausible but only one option is not part of the theory, ensuring focused and fair assessment."
+      "quality_comment": "The stem clearly tests knowledge of the theory’s components; distractors are plausible but only one option is not part of the theory, ensuring focused and fair assessment.",
+      "lessonExcerpt": "Three factors work together: Attitude toward the behavior, subjective norms, perceived behavioral control",
+      "suggestedLesson": "3-attitudes",
+      "needsReview": false
     },
     {
       "stem": "In the prototype/willingness model, what primarily influences a person’s willingness to engage in a health risk behavior in social settings?",
@@ -259,7 +157,10 @@
       "kn": "KN14",
       "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
       "difficulty": "medium",
-      "quality_comment": "Options differentiate between related social cognitive constructs, requiring a clear understanding of the prototype/willingness model, making it a solid EPPP item."
+      "quality_comment": "Options differentiate between related social cognitive constructs, requiring a clear understanding of the prototype/willingness model, making it a solid EPPP item.",
+      "lessonExcerpt": "If you have a positive prototype of people who do something, you're more willing to do it when the opportunity arises, even without planning.",
+      "suggestedLesson": "3-attitudes",
+      "needsReview": false
     },
     {
       "stem": "Which of the following is NOT a component of the health belief model that predicts a person's likelihood of engaging in health-promoting behavior?",
@@ -274,7 +175,10 @@
       "kn": "KN14",
       "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
       "difficulty": "easy",
-      "quality_comment": "Distractors are well matched and the question tests essential knowledge of foundational model components, appropriate for foundational-level recall."
+      "quality_comment": "Distractors are well matched and the question tests essential knowledge of foundational model components, appropriate for foundational-level recall.",
+      "lessonExcerpt": "Three factors work together: Attitude toward the behavior, subjective norms, perceived behavioral control",
+      "suggestedLesson": "3-attitudes",
+      "needsReview": false
     },
     {
       "stem": "According to the elaboration likelihood model, attitude change that is strong, enduring, and predictive of behavior is most likely to occur through which processing route?",
@@ -289,7 +193,10 @@
       "kn": "KN14",
       "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
       "difficulty": "medium",
-      "quality_comment": "The question contrasts central and peripheral routes effectively, with distractors based on peripheral cues, encouraging discrimination of key theoretical concepts."
+      "quality_comment": "The question contrasts central and peripheral routes effectively, with distractors based on peripheral cues, encouraging discrimination of key theoretical concepts.",
+      "lessonExcerpt": "If you have a positive prototype of people who do something, you're more willing to do it when the opportunity arises, even without planning.",
+      "suggestedLesson": "3-attitudes",
+      "needsReview": false
     },
     {
       "stem": "According to social judgment theory, when a person's level of ego-involvement with an issue increases, how do their latitudes of acceptance and rejection change?",
@@ -304,7 +211,10 @@
       "kn": "KN14",
       "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
       "difficulty": "hard",
-      "quality_comment": "The stem requires understanding subtle changes in attitude latitudes with ego involvement, and distractors are nuanced, providing a challenging yet fair test of knowledge."
+      "quality_comment": "The stem requires understanding subtle changes in attitude latitudes with ego involvement, and distractors are nuanced, providing a challenging yet fair test of knowledge.",
+      "lessonExcerpt": "Perceived susceptibility, Perceived severity, Perceived benefits, Perceived barriers, Self-efficacy, Cues to action",
+      "suggestedLesson": "3-attitudes",
+      "needsReview": false
     },
     {
       "stem": "Heider's balance theory suggests that if Patricia (P) likes Oscar (O) but Oscar dislikes country music (X), which Patricia likes, Patricia will likely be:",
@@ -319,7 +229,10 @@
       "kn": "KN14",
       "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
       "difficulty": "medium",
-      "quality_comment": "The question presents a clear, practical example of the theory, with plausible distractors, making it well suited for applied knowledge testing."
+      "quality_comment": "The question presents a clear, practical example of the theory, with plausible distractors, making it well suited for applied knowledge testing.",
+      "lessonExcerpt": "When persuasion happens through the central route, it's based on the strength of the argument itself. The resulting attitude change is strong, lasting, and predictive of future behavior.",
+      "suggestedLesson": "3-attitudes",
+      "needsReview": false
     },
     {
       "stem": "In Festinger and Carlsmith’s cognitive dissonance study, why did participants paid $1 to lie about a boring task rate the task as more enjoyable than those paid $20?",
@@ -334,7 +247,10 @@
       "kn": "KN14",
       "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
       "difficulty": "medium",
-      "quality_comment": "This question tests critical experimental findings illustrating theoretical principles, with well-matched distractors that reflect common misconceptions."
+      "quality_comment": "This question tests critical experimental findings illustrating theoretical principles, with well-matched distractors that reflect common misconceptions.",
+      "lessonExcerpt": "The more ego-involved you are: Your latitude of acceptance shrinks, Your latitude of noncommitment shrinks, Your latitude of rejection expands",
+      "suggestedLesson": "3-attitudes",
+      "needsReview": false
     },
     {
       "stem": "Which phenomenon best explains why children who were externally rewarded for an intrinsically enjoyable activity later showed decreased intrinsic motivation for that activity?",
@@ -349,7 +265,10 @@
       "kn": "KN14",
       "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
       "difficulty": "easy",
-      "quality_comment": "Distractors are relevant social psychology concepts but only one answers the question correctly; clear and concise formulation enhances validity."
+      "quality_comment": "Distractors are relevant social psychology concepts but only one answers the question correctly; clear and concise formulation enhances validity.",
+      "lessonExcerpt": "When imbalance occurs, you're motivated to restore balance by changing one of the relationships.",
+      "suggestedLesson": "3-attitudes",
+      "needsReview": false
     },
     {
       "stem": "Which condition is LEAST likely to strengthen the relationship between a person’s attitude and their subsequent behavior?",
@@ -364,7 +283,10 @@
       "kn": "KN14",
       "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
       "difficulty": "medium",
-      "quality_comment": "The stem is clear and concise, with plausible options that test understanding of important moderating factors for attitudes predicting behavior."
+      "quality_comment": "The stem is clear and concise, with plausible options that test understanding of important moderating factors for attitudes predicting behavior.",
+      "lessonExcerpt": "The $1 participants experienced dissonance: \"I told someone this boring task was fun, but I only got a dollar for lying.\" They had insufficient justification for their behavior.",
+      "suggestedLesson": "3-attitudes",
+      "needsReview": false
     },
     {
       "stem": "According to the elaboration likelihood model, which of the following is a peripheral cue that may influence attitude change through the peripheral route?",
@@ -379,7 +301,10 @@
       "kn": "KN14",
       "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
       "difficulty": "easy",
-      "quality_comment": "Clear and focused question with plausible answer choices that differentiate between central message content and peripheral cues."
+      "quality_comment": "Clear and focused question with plausible answer choices that differentiate between central message content and peripheral cues.",
+      "lessonExcerpt": "if you're externally rewarded for doing something you already enjoy intrinsically, your intrinsic motivation decreases.",
+      "suggestedLesson": "3-attitudes",
+      "needsReview": false
     },
     {
       "stem": "Within the health belief model, what is the role of 'cues to action'?",
@@ -394,7 +319,10 @@
       "kn": "KN14",
       "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
       "difficulty": "medium",
-      "quality_comment": "The question stems from core model knowledge with distractors reflecting other model components, providing a robust assessment of detailed understanding."
+      "quality_comment": "The question stems from core model knowledge with distractors reflecting other model components, providing a robust assessment of detailed understanding.",
+      "lessonExcerpt": "Match the specificity level. General attitudes predict general behavior patterns. Specific attitudes predict specific behaviors.",
+      "suggestedLesson": "3-attitudes",
+      "needsReview": false
     },
     {
       "stem": "Which factor most strongly influences the strength of the relationship between attitudes and behavior?",
@@ -409,7 +337,10 @@
       "kn": "KN14",
       "kn_explanation": "KN14 includes knowledge of social and cultural bases of behavior such as factors influencing attitude-behavior consistency; attitude strength from direct experience is a key factor.",
       "difficulty": "medium",
-      "quality_comment": "This question complements existing items by emphasizing an important factor affecting the attitude-behavior link, broadening coverage within this topic."
+      "quality_comment": "This question complements existing items by emphasizing an important factor affecting the attitude-behavior link, broadening coverage within this topic.",
+      "lessonExcerpt": "When persuasion happens through the peripheral route, it relies on peripheral cues. Things unrelated to the argument's quality: Is the speaker attractive or likeable?",
+      "suggestedLesson": "3-attitudes",
+      "needsReview": false
     },
     {
       "stem": "According to the prototype/willingness model, an adolescent with a positive social image (prototype) of peers who smoke marijuana is more likely to:",
@@ -424,7 +355,10 @@
       "kn": "KN14",
       "kn_explanation": "This item addresses social-cognitive mechanisms explaining risky health behaviors, aligned with social and cultural bases of behavior in KN14.",
       "difficulty": "medium",
-      "quality_comment": "The item uses a practical example to distinguish theoretical pathways, enhancing the applied understanding of the prototype/willingness model."
+      "quality_comment": "The item uses a practical example to distinguish theoretical pathways, enhancing the applied understanding of the prototype/willingness model.",
+      "lessonExcerpt": "Cues to action | \"What triggers me to act now?\" | More reminders/prompts → More likely to act",
+      "suggestedLesson": "3-attitudes",
+      "needsReview": false
     },
     {
       "stem": "In social judgment theory, what happens when a persuasive message falls within a person’s latitude of rejection?",
@@ -439,7 +373,10 @@
       "kn": "KN14",
       "kn_explanation": "This question focuses on attitude change mechanisms involving social judgment theory, part of the social and cultural bases domain relevant to KN14.",
       "difficulty": "medium",
-      "quality_comment": "Distractors involve plausible misunderstandings, requiring knowledge of nuanced effects within attitude change theories to answer correctly."
+      "quality_comment": "Distractors involve plausible misunderstandings, requiring knowledge of nuanced effects within attitude change theories to answer correctly.",
+      "lessonExcerpt": "Direct experience: If you've personally experienced something, your attitude about it carries more weight.",
+      "suggestedLesson": "3-attitudes",
+      "needsReview": false
     },
     {
       "stem": "In the context of the theory of planned behavior, which of the following is NOT a component that influences behavioral intention?",
@@ -459,7 +396,10 @@
       "lock_in_level": "easier",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "If you have a positive prototype of people who do something, you're more willing to do it when the opportunity arises, even without planning.",
+      "suggestedLesson": "3-attitudes",
+      "needsReview": false
     },
     {
       "stem": "Which of the following statements best describes a factor that is NOT part of the theory of planned behavior's framework for predicting intentions?",
@@ -479,7 +419,10 @@
       "lock_in_level": "harder",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "Latitude of Rejection: Positions so different from yours that you immediately reject them. Messages here can backfire, making you more entrenched in your original position.",
+      "suggestedLesson": "3-attitudes",
+      "needsReview": false
     }
   ]
 }

@@ -14,9 +14,9 @@
       "kn_explanation": "This KN code applies as it relates to the biological bases of behavior, specifically in understanding language acquisition.",
       "difficulty": "medium",
       "quality_comment": "The question effectively assesses knowledge of language development.",
-      "suggestedLesson": "1-sensory-perception",
+      "suggestedLesson": "5-neurodevelopmental",
       "suggestedParagraph": "## The Foundation: Sensation vs. Perception",
-      "lessonExcerpt": "Echolalia is characterized by the repetition of phrases or sentences that a child hears.",
+      "lessonExcerpt": "This disorder involves disturbed fluency and speech timing inappropriate for the person's age and language skills. Look for sound/syllable repetitions, sound prolongations, broken words, blocking, circumlocutions, excessive tension when speaking, or whole-word repetitions.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 17
@@ -37,7 +37,7 @@
       "quality_comment": "The question effectively tests knowledge of pain perception mechanisms.",
       "suggestedLesson": "1-sensory-perception",
       "suggestedParagraph": "## Pain Perception: Theories and Mechanisms",
-      "lessonExcerpt": "Understanding pain perception involves recognizing how signals can be modulated at the spinal cord level.",
+      "lessonExcerpt": "Gate control theory revolutionized pain understanding by explaining why pain isn't simply a direct signal from injury to brain. The theory proposes a \"gate\" mechanism in your spinal cord that can increase or decrease pain signals reaching your brain.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 20
@@ -55,7 +55,10 @@
       "kn": "KN1",
       "kn_explanation": "This question is best aligned with KN1 because it tests Functional correlates and determinants of the neurobiological and genetic bases of behavior pertaining to perception, cognition, personality, and mood and affect in normal, acute and chronic neurobehavioral disease processes and disease, comorbidities.",
       "difficulty": "medium",
-      "quality_comment": "Clear wording and plausible distractors make the question effective at differentiating understanding of processing types."
+      "quality_comment": "Clear wording and plausible distractors make the question effective at differentiating understanding of processing types.",
+      "lessonExcerpt": "- **Sensation** receives environmental stimuli; **perception** interprets them. Bottom-up processing builds from sensory data; top-down uses existing knowledge.",
+      "suggestedLesson": "1-sensory-perception",
+      "needsReview": false
     },
     {
       "stem": "According to the opponent-process theory of color vision, which of the following color pairs would be processed as opponent channels?",
@@ -70,7 +73,10 @@
       "kn": "KN1",
       "kn_explanation": "This question is best aligned with KN1 because it tests Functional correlates and determinants of the neurobiological and genetic bases of behavior pertaining to perception, cognition, personality, and mood and affect in normal, acute and chronic neurobehavioral disease processes and disease, comorbidities.",
       "difficulty": "medium",
-      "quality_comment": "Distractors are reasonable color pairs; correct answer aligns clearly with opponent-process theory."
+      "quality_comment": "Distractors are reasonable color pairs; correct answer aligns clearly with opponent-process theory.",
+      "lessonExcerpt": "This theory explains what happens after the retina, in subsequent neural processing. It proposes that color information is processed through three opposing pairs: red versus green, blue versus yellow, and black versus white.",
+      "suggestedLesson": "1-sensory-perception",
+      "needsReview": false
     },
     {
       "stem": "Which type of color blindness is most frequently caused by a recessive gene on the X chromosome and affects males more often than females?",
@@ -85,7 +91,10 @@
       "kn": "KN4",
       "kn_explanation": "This question addresses genetic transmission of color vision deficiencies, specifically X-linked recessive inheritance, related to behavioral genetics (KN4).",
       "difficulty": "medium",
-      "quality_comment": "The distractors are plausible types of color blindness but differ sufficiently to test precise knowledge of genetic causes."
+      "quality_comment": "The distractors are plausible types of color blindness but differ sufficiently to test precise knowledge of genetic causes.",
+      "lessonExcerpt": "**Red-green color blindness** is the most common type (affecting about 8% of males and 0.5% of females). It's caused by a recessive gene on the X chromosome. Males have only one X chromosome (inherited from their mothers), so one copy of the mutated gene causes color blindness.",
+      "suggestedLesson": "1-sensory-perception",
+      "needsReview": false
     },
     {
       "stem": "Which depth perception cue depends on the brain integrating different images from each eye due to their slightly different perspectives?",
@@ -100,7 +109,10 @@
       "kn": "KN1",
       "kn_explanation": "This question is best aligned with KN1 because it tests Functional correlates and determinants of the neurobiological and genetic bases of behavior pertaining to perception, cognition, personality, and mood and affect in normal, acute and chronic neurobehavioral disease processes and disease, comorbidities.",
       "difficulty": "medium",
-      "quality_comment": "Options include common monocular and binocular cues, which makes the question sufficiently challenging."
+      "quality_comment": "Options include common monocular and binocular cues, which makes the question sufficiently challenging.",
+      "lessonExcerpt": "- **Depth perception** uses binocular cues (retinal disparity, convergence) for nearby objects and monocular cues (relative size, interposition, etc.) for distant objects.",
+      "suggestedLesson": "1-sensory-perception",
+      "needsReview": false
     },
     {
       "stem": "According to gate control theory of pain, how can non-painful stimuli reduce the experience of pain?",
@@ -115,7 +127,10 @@
       "kn": "KN1",
       "kn_explanation": "This question relates to neurobiological mechanisms of pain and sensory processing, best categorized under biological bases of behavior (KN1).",
       "difficulty": "medium",
-      "quality_comment": "Distractors represent common misconceptions; the correct option accurately reflects the gate control mechanism."
+      "quality_comment": "Distractors represent common misconceptions; the correct option accurately reflects the gate control mechanism.",
+      "lessonExcerpt": "Here's how it works: Your spinal cord contains two types of nerve fibers. Small unmyelinated fibers transmit pain signals (opening the gate). Large myelinated fibers transmit other sensory information like touch, pressure, or temperature (closing the gate).",
+      "suggestedLesson": "1-sensory-perception",
+      "needsReview": false
     },
     {
       "stem": "A person with grapheme-color synesthesia most likely experiences which phenomenon?",
@@ -130,7 +145,10 @@
       "kn": "KN1",
       "kn_explanation": "This question is best aligned with KN1 because it tests Functional correlates and determinants of the neurobiological and genetic bases of behavior pertaining to perception, cognition, personality, and mood and affect in normal, acute and chronic neurobehavioral disease processes and disease, comorbidities.",
       "difficulty": "easy",
-      "quality_comment": "Clear options and focused stem make this question straightforward yet informative."
+      "quality_comment": "Clear options and focused stem make this question straightforward yet informative.",
+      "lessonExcerpt": "Synesthesia occurs when stimulating one sense automatically triggers another. The most common type is grapheme-color synesthesia, where specific numbers or letters consistently evoke specific colors. {{M}}Someone might always see the number 5 as distinctly red, or the letter A as blue.",
+      "suggestedLesson": "1-sensory-perception",
+      "needsReview": false
     },
     {
       "stem": "Which psychophysical law predicts that the just noticeable difference (JND) for a stimulus is a constant proportion of the original stimulus intensity?",
@@ -145,7 +163,10 @@
       "kn": "KN1",
       "kn_explanation": "This question is best aligned with KN1 because it tests Functional correlates and determinants of the neurobiological and genetic bases of behavior pertaining to perception, cognition, personality, and mood and affect in normal, acute and chronic neurobehavioral disease processes and disease, comorbidities.",
       "difficulty": "medium",
-      "quality_comment": "Options represent key psychophysical theories, requiring candidates to distinguish among related laws."
+      "quality_comment": "Options represent key psychophysical theories, requiring candidates to distinguish among related laws.",
+      "lessonExcerpt": "- **Weber's law**: JND is a constant proportion. **Fechner's law**: logarithmic relationship. **Stevens's power law**: exponential relationship varies by stimulus type.",
+      "suggestedLesson": "1-sensory-perception",
+      "needsReview": false
     },
     {
       "stem": "In signal detection theory, what does a false alarm indicate during a perception task?",
@@ -160,7 +181,10 @@
       "kn": "KN1",
       "kn_explanation": "This question is best aligned with KN1 because it tests Functional correlates and determinants of the neurobiological and genetic bases of behavior pertaining to perception, cognition, personality, and mood and affect in normal, acute and chronic neurobehavioral disease processes and disease, comorbidities.",
       "difficulty": "medium",
-      "quality_comment": "The question clearly tests knowledge of SDT's outcome categories with plausible alternatives."
+      "quality_comment": "The question clearly tests knowledge of SDT's outcome categories with plausible alternatives.",
+      "lessonExcerpt": "| **Reality** | **Your Response: \"Yes\"** | **Your Response: \"No\"** | |------------|------------------------|------------------------| | **Signal Present** | Hit (correct) | Miss (error) | | **Signal Absent** | False Alarm (error) | Correct Rejection (correct) |",
+      "suggestedLesson": "1-sensory-perception",
+      "needsReview": false
     },
     {
       "stem": "Which psychophysical theory proposes an exponential relationship between psychological sensation and the magnitude of the physical stimulus, with varying exponents for different stimuli?",
@@ -175,7 +199,10 @@
       "kn": "KN1",
       "kn_explanation": "This question is best aligned with KN1 because it tests Functional correlates and determinants of the neurobiological and genetic bases of behavior pertaining to perception, cognition, personality, and mood and affect in normal, acute and chronic neurobehavioral disease processes and disease, comorbidities.",
       "difficulty": "hard",
-      "quality_comment": "Good complexity and nuance; the distinctions among laws challenge test-takers to apply precise knowledge."
+      "quality_comment": "Good complexity and nuance; the distinctions among laws challenge test-takers to apply precise knowledge.",
+      "lessonExcerpt": "- **Weber's law**: JND is a constant proportion. **Fechner's law**: logarithmic relationship. **Stevens's power law**: exponential relationship varies by stimulus type.",
+      "suggestedLesson": "1-sensory-perception",
+      "needsReview": false
     },
     {
       "stem": "Why is red-green color blindness more prevalent in males than females?",
@@ -190,7 +217,10 @@
       "kn": "KN1",
       "kn_explanation": "This question is best aligned with KN1 because it tests Functional correlates and determinants of the neurobiological and genetic bases of behavior pertaining to perception, cognition, personality, and mood and affect in normal, acute and chronic neurobehavioral disease processes and disease, comorbidities.",
       "difficulty": "medium",
-      "quality_comment": "Distractors test understanding of inheritance patterns; question is clearly posed."
+      "quality_comment": "Distractors test understanding of inheritance patterns; question is clearly posed.",
+      "lessonExcerpt": "**Red-green color blindness** is the most common type (affecting about 8% of males and 0.5% of females). It's caused by a recessive gene on the X chromosome. Males have only one X chromosome (inherited from their mothers), so one copy of the mutated gene causes color blindness.",
+      "suggestedLesson": "1-sensory-perception",
+      "needsReview": false
     },
     {
       "stem": "Which monocular depth cue involves judging the distance of an object based on the relative size compared to other objects?",
@@ -205,7 +235,10 @@
       "kn": "KN1",
       "kn_explanation": "This question is best aligned with KN1 because it tests Functional correlates and determinants of the neurobiological and genetic bases of behavior pertaining to perception, cognition, personality, and mood and affect in normal, acute and chronic neurobehavioral disease processes and disease, comorbidities.",
       "difficulty": "easy",
-      "quality_comment": "Options include both binocular and monocular cues; answer choices are balanced."
+      "quality_comment": "Options include both binocular and monocular cues; answer choices are balanced.",
+      "lessonExcerpt": "- **Depth perception** uses binocular cues (retinal disparity, convergence) for nearby objects and monocular cues (relative size, interposition, etc.) for distant objects.",
+      "suggestedLesson": "1-sensory-perception",
+      "needsReview": false
     },
     {
       "stem": "How does signal detection theory account for decision-making under conditions of uncertainty in stimulus perception?",
@@ -220,7 +253,10 @@
       "kn": "KN1",
       "kn_explanation": "This question is best aligned with KN1 because it tests Functional correlates and determinants of the neurobiological and genetic bases of behavior pertaining to perception, cognition, personality, and mood and affect in normal, acute and chronic neurobehavioral disease processes and disease, comorbidities.",
       "difficulty": "hard",
-      "quality_comment": "Complex concept clearly presented with well-designed distractors, appropriate for advanced EPPP items."
+      "quality_comment": "Complex concept clearly presented with well-designed distractors, appropriate for advanced EPPP items.",
+      "lessonExcerpt": "- **Signal detection theory** recognizes that perception involves both sensory sensitivity and decision criteria, directly applicable to clinical diagnosis and assessment.",
+      "suggestedLesson": "1-sensory-perception",
+      "needsReview": false
     },
     {
       "stem": "Which photoreceptor type is primarily responsible for vision in dim light and peripheral vision?",
@@ -235,7 +271,10 @@
       "kn": "KN1",
       "kn_explanation": "This question focuses on the biological basis of vision and the function of photoreceptors, which pertains to sensory neurobiology (KN1).",
       "difficulty": "easy",
-      "quality_comment": "The options include cell types involved in visual processing, but only rods match the description precisely, enhancing content specificity."
+      "quality_comment": "The options include cell types involved in visual processing, but only rods match the description precisely, enhancing content specificity.",
+      "lessonExcerpt": "**Rods** are your night-vision specialists. They're extremely sensitive to light but can't detect color. They dominate your peripheral vision. {{M}}Think of them as the security cameras that work in low light. Great for detecting movement in your periphery but not for reading fine print.{{/M}}",
+      "suggestedLesson": "1-sensory-perception",
+      "needsReview": false
     },
     {
       "stem": "Retinal disparity and convergence are examples of which type of depth perception cues?",
@@ -250,7 +289,10 @@
       "kn": "KN1",
       "kn_explanation": "Understanding the neurobiological mechanisms underlying depth perception relates to sensory processing in biological bases of behavior (KN1).",
       "difficulty": "medium",
-      "quality_comment": "Distractors are plausible types of sensory cues, making the question effective at distinguishing knowledge of depth perception categories."
+      "quality_comment": "Distractors are plausible types of sensory cues, making the question effective at distinguishing knowledge of depth perception categories.",
+      "lessonExcerpt": "- **Depth perception** uses binocular cues (retinal disparity, convergence) for nearby objects and monocular cues (relative size, interposition, etc.) for distant objects.",
+      "suggestedLesson": "1-sensory-perception",
+      "needsReview": false
     },
     {
       "stem": "How does the gate control theory explain the pain relief produced by distraction or guided imagery?",
@@ -265,7 +307,10 @@
       "kn": "KN1",
       "kn_explanation": "This question targets biological mechanisms modulating pain perception as explained by gate control theory (KN1).",
       "difficulty": "medium",
-      "quality_comment": "The options provide common misconceptions about pain relief, with the correct option reflecting accurate neurobiological mechanisms."
+      "quality_comment": "The options provide common misconceptions about pain relief, with the correct option reflecting accurate neurobiological mechanisms.",
+      "lessonExcerpt": "2. **From the brain**: Cognitive and emotional factors can close the gate through descending signals. {{M}}This is why watching an engaging movie or using guided imagery can reduce pain. Your brain sends signals that literally close the spinal gate to pain transmission.{{/M}}",
+      "suggestedLesson": "1-sensory-perception",
+      "needsReview": false
     },
     {
       "stem": "Which of the following statements best describes the role of bottom-up processing in the perception of a new musical piece?",
@@ -285,7 +330,10 @@
       "lock_in_level": "easier",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "- **Sensation** receives environmental stimuli; **perception** interprets them. Bottom-up processing builds from sensory data; top-down uses existing knowledge.",
+      "suggestedLesson": "1-sensory-perception",
+      "needsReview": false
     },
     {
       "stem": "In a psychological experiment, participants are asked to identify shapes presented briefly on a screen. Which processing method would most likely help them recognize familiar shapes based on previous experiences?",
@@ -305,7 +353,10 @@
       "lock_in_level": "harder",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "- **Sensation** receives environmental stimuli; **perception** interprets them. Bottom-up processing builds from sensory data; top-down uses existing knowledge.",
+      "suggestedLesson": "1-sensory-perception",
+      "needsReview": false
     }
   ]
 }

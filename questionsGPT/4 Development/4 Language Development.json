@@ -16,7 +16,7 @@
       "quality_comment": "Straightforward application question using a classic example, with well-constructed distractors from related language development concepts.",
       "suggestedLesson": "4-language-development",
       "suggestedParagraph": "## Common Language Errors: Totally Normal Development",
-      "lessonExcerpt": "Overextension: Using a word too broadly - Calling all four-legged animals 'doggie'",
+      "lessonExcerpt": "Overextension: Using a word too broadly - Calling all four-legged animals \"doggie\"",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 9
@@ -79,7 +79,7 @@
       "quality_comment": "The question accurately assesses knowledge of language development milestones.",
       "suggestedLesson": "4-language-development",
       "suggestedParagraph": "## Language Development Timeline: From Womb to Words",
-      "lessonExcerpt": "The primary milestones in language development during the first two years include cooing, babbling, and the emergence of first words.",
+      "lessonExcerpt": "Critical developmental sequence: Cooing (6-8 weeks) → Babbling (3-6 months) → First words (10-15 months) → Holophrastic speech (12-15 months) → Telegraphic speech (18-24 months) → Simple sentences (24-36 months)",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 18
@@ -106,126 +106,6 @@
       "inspirationIndex": 26
     },
     {
-      "stem": "What type of reading errors are characteristic of deep dyslexia?",
-      "options": [
-        "Phonological errors",
-        "Semantic errors",
-        "Syntactic errors",
-        "Orthographic errors"
-      ],
-      "answer": "Semantic errors",
-      "explanation": "Deep dyslexia is characterized by semantic errors, where a reader may substitute a word with another that has a similar meaning. Phonological errors relate to phonological dyslexia, while syntactic and orthographic errors are not specific to deep dyslexia.",
-      "kn": "KN21",
-      "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
-      "difficulty": "hard",
-      "quality_comment": "The question is specific and tests knowledge of a particular reading disorder.",
-      "suggestedLesson": "4-language-development",
-      "suggestedParagraph": "## The Big Three Theories: Understanding How We Learn to Talk",
-      "lessonExcerpt": "Deep dyslexia is characterized by semantic errors, where a reader may substitute a word with another that has a similar meaning.",
-      "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 5
-    },
-    {
-      "stem": "What is a common issue that can lead to the misdiagnosis of learning disorders in children?",
-      "options": [
-        "Cultural differences in learning styles",
-        "Lack of parental involvement in education",
-        "Overemphasis on standardized testing",
-        "All of the above"
-      ],
-      "answer": "All of the above",
-      "explanation": "The correct answer is 'All of the above' as each factor can contribute to the misdiagnosis of learning disorders. Cultural differences can lead to misunderstandings of a child's abilities, lack of parental involvement can affect educational outcomes, and standardized testing may not accurately reflect a child's learning style.",
-      "kn": "KN28",
-      "kn_explanation": "This question is best aligned with KN28 because it tests Disorders and diseases that impact the expected course of development over the lifespan.",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively assesses knowledge of factors influencing the diagnosis of learning disorders.",
-      "suggestedLesson": "4-language-development",
-      "suggestedParagraph": "## The Building Blocks: Five Components of Language",
-      "lessonExcerpt": "Cultural differences, lack of parental involvement, and overemphasis on standardized testing can all lead to misdiagnosis of learning disorders.",
-      "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 18
-    },
-    {
-      "stem": "What cognitive advantage is often associated with bilingualism in children?",
-      "options": [
-        "Increased vocabulary in both languages",
-        "Enhanced problem-solving skills",
-        "Better social skills",
-        "Improved physical coordination"
-      ],
-      "answer": "Enhanced problem-solving skills",
-      "explanation": "Bilingualism is linked to enhanced cognitive flexibility and problem-solving skills due to the mental juggling of two languages. The other options, while potentially true, are not the primary cognitive advantages associated with bilingualism.",
-      "kn": "KN21",
-      "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively assesses understanding of the cognitive benefits of bilingualism.",
-      "suggestedLesson": "4-language-development",
-      "suggestedParagraph": "## The Big Three Theories: Understanding How We Learn to Talk",
-      "lessonExcerpt": "Bilingualism is linked to enhanced problem-solving skills.",
-      "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 26
-    },
-    {
-      "stem": "A 14-month-old girl has just learned the word 'dog' in reference to the family's German Shepherd. While at a park, she points to a cat and says 'dog.' She also calls a horse 'dog' at the petting zoo. A developmental psychologist observing these interactions would identify this language behavior as an example of:",
-      "options": [
-        "Underextension, because the child is applying the label only to animals that perceptually resemble the original referent",
-        "Overextension, because the child is applying a learned word label to new but perceptually or functionally similar referents beyond its correct categorical boundary",
-        "Holophrastic speech, because the child is using a single word to convey a rich communicative intent about the animals",
-        "Overregularization, because the child is applying a recently acquired linguistic rule to contexts where it does not apply"
-      ],
-      "answer": "Overextension, because the child is applying a learned word label to new but perceptually or functionally similar referents beyond its correct categorical boundary",
-      "explanation": "Overextension occurs when a child applies a word to a broader range of referents than is conventionally correct, typically on the basis of perceptual similarity (shape, movement, size) or functional similarity. Calling a cat and a horse 'dog' is a classic example. This is an expected and normal feature of early word learning, reflecting the child's attempt to generalize limited vocabulary. Underextension is the opposite error—restricting a word to too narrow a category. Holophrastic speech refers to using a single word to express a full proposition, which is a different phenomenon entirely. Overregularization refers to applying morphological grammar rules (e.g., adding '-ed' for past tense) in overly broad ways (e.g., 'goed'), not to applying word labels to new referents.",
-      "kn": "KN21",
-      "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
-      "difficulty": "medium",
-      "quality_comment": "Excellent discriminability question. The four options represent four distinct and testable language concepts. The stem provides a clear behavioral vignette. Tests conceptual precision.",
-      "suggestedLesson": "4-language-development",
-      "suggestedParagraph": "## Language Development Timeline: From Womb to Words",
-      "lessonExcerpt": "Lesson content covering overextension was in a truncated portion of 4-language-development.md and could not be directly confirmed from the provided excerpt.",
-      "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 8
-    },
-    {
-      "stem": "A cross-cultural psychologist presents findings showing that speakers of a language lacking grammatical distinction between past and future events perceive time as more cyclical and show different patterns of future-oriented planning than speakers of languages with distinct tense markers. These findings provide the strongest support for which theoretical position regarding the relationship between language and cognition?",
-      "options": [
-        "Nativist theory, because universal grammatical structures reflect innate cognitive architecture shared across all humans",
-        "Social interactionist theory, because cultural environments mediate both language acquisition and behavioral outcomes",
-        "The linguistic relativity hypothesis, because the structure of one's language shapes how one conceptualizes and reasons about the world",
-        "Learning theory, because reinforcement histories within different cultural contexts differentially shape time-related behaviors"
-      ],
-      "answer": "The linguistic relativity hypothesis, because the structure of one's language shapes how one conceptualizes and reasons about the world",
-      "explanation": "The linguistic relativity hypothesis (also called the Sapir-Whorf hypothesis) proposes that the language one speaks influences how one perceives and thinks about reality. The finding that tense-marking differences across languages correlate with differences in temporal cognition and future-oriented behavior is precisely the type of cross-linguistic evidence this hypothesis predicts. Nativist theory (Chomsky's LAD) argues for universal innate grammar underlying all languages, making it predict similarities rather than cognitive differences across language groups. Social interactionist theory focuses on how social environments facilitate language acquisition, not how acquired language shapes downstream cognition. Learning theory attributes behavioral variation to differential reinforcement schedules rather than to structural properties of language itself.",
-      "kn": "KN21",
-      "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
-      "difficulty": "hard",
-      "quality_comment": "High-quality inferential application question at appropriate doctoral difficulty. The lesson file 4-language-development.md covers language acquisition theories but  Flagged for review.",
-      "suggestedLesson": "4-language-development",
-      "suggestedParagraph": "## The Big Three Theories: Understanding How We Learn to Talk",
-      "lessonExcerpt": "Learning theory says that language develops through imitation and reinforcement... Noam Chomsky flipped the script with nativist theory, arguing that humans come pre-wired for language... This theory combines both biological readiness and social environment.",
-      "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 23
-    },
-    {
-      "stem": "According to Chomsky's nativist theory of language development, what innate mechanism enables children to acquire language?",
-      "options": [
-        "Social interactionist device",
-        "Language acquisition device (LAD)",
-        "Imitation and reinforcement system",
-        "Cognitive schema processor"
-      ],
-      "answer": "Language acquisition device (LAD)",
-      "explanation": "1. The correct answer, \"Language acquisition device (LAD),\" is based on Chomsky's nativist theory, which posits that humans are biologically programmed to acquire language. The LAD is described as an inborn linguistic processor that allows children to understand language and speak according to grammatical rules, providing evidence for the universal stages of language acquisition that all children experience at similar ages.\n\n2. The option \"Social interactionist device\" is incorrect because social interactionist theory emphasizes the role of biological and social factors in language acquisition rather than a specific innate mechanism. The \"Imitation and reinforcement system\" is also wrong, as this concept is part of learning theory, which suggests language development occurs through imitation and reinforcement, not an innate biological process. Lastly, \"Cognitive schema processor\" is incorrect because it does not specifically relate to language acquisition; rather, cognitive schemas pertain to general cognitive development and understanding rather than the innate capacity for language as proposed by Chomsky.",
-      "kn": "KN21",
-      "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
-      "difficulty": "medium",
-      "quality_comment": "The question is well-constructed with plausible distractors that distinguish between major theories of language development."
-    },
-    {
       "stem": "Which component of language involves the rules for combining morphemes, the smallest units of meaning?",
       "options": [
         "Phonology",
@@ -238,7 +118,10 @@
       "kn": "KN21",
       "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
       "difficulty": "easy",
-      "quality_comment": "Clear question stem and options; distractors represent other language components but are easily distinguishable."
+      "quality_comment": "Clear question stem and options; distractors represent other language components but are easily distinguishable.",
+      "lessonExcerpt": "Overextension: Using a word too broadly - Calling all four-legged animals \"doggie\"",
+      "suggestedLesson": "4-language-development",
+      "needsReview": false
     },
     {
       "stem": "Which theory of language development emphasizes the role of caregivers' use of child-directed speech in facilitating language acquisition?",
@@ -253,7 +136,10 @@
       "kn": "KN21",
       "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
       "difficulty": "medium",
-      "quality_comment": "Options provide a clear contrast among major theories; distractors are credible for graduate-level examinees."
+      "quality_comment": "Options provide a clear contrast among major theories; distractors are credible for graduate-level examinees.",
+      "lessonExcerpt": "Social Interactionist Theory: It Takes a Village... One key piece of evidence is child-directed speech (also called \"parentese\")... Research shows this style actually facilitates language learning.",
+      "suggestedLesson": "4-language-development",
+      "needsReview": false
     },
     {
       "stem": "At approximately what age do infants typically begin to use telegraphic speech characterized by two-word phrases?",
@@ -268,7 +154,10 @@
       "kn": "KN21",
       "kn_explanation": "The question pertains to language development milestones within normal growth across the lifespan.",
       "difficulty": "easy",
-      "quality_comment": "The time frames are distinct and well chosen, making the question suitable for assessing milestone knowledge."
+      "quality_comment": "The time frames are distinct and well chosen, making the question suitable for assessing milestone knowledge.",
+      "lessonExcerpt": "He proposed the Language Acquisition Device (LAD), an inborn processor that helps children understand and produce rule-governed speech.",
+      "suggestedLesson": "4-language-development",
+      "needsReview": false
     },
     {
       "stem": "What is overregularization in children's language development?",
@@ -283,7 +172,10 @@
       "kn": "KN21",
       "kn_explanation": "This question addresses a typical language development error during childhood growth stages.",
       "difficulty": "medium",
-      "quality_comment": "Distractors are plausible linguistic errors, providing a good challenge for test-takers."
+      "quality_comment": "Distractors are plausible linguistic errors, providing a good challenge for test-takers.",
+      "lessonExcerpt": "| Morphology | Rules for morphemes (smallest meaning units) | \"Unspeakable\" = 1 free morpheme (speak) + 2 bound morphemes (un, able) |",
+      "suggestedLesson": "4-language-development",
+      "needsReview": false
     },
     {
       "stem": "Research on the critical period for language acquisition suggests that:",
@@ -298,7 +190,10 @@
       "kn": "KN21",
       "kn_explanation": "This question relates to developmental sensitive periods affecting language acquisition, which is a core topic in lifespan development.",
       "difficulty": "hard",
-      "quality_comment": "The question requires nuanced understanding of critical period research with subtle differences among options, suitable for advanced learners."
+      "quality_comment": "The question requires nuanced understanding of critical period research with subtle differences among options, suitable for advanced learners.",
+      "lessonExcerpt": "Social Interactionist Theory: It Takes a Village... One key piece of evidence is child-directed speech (also called \"parentese\")... Research shows this style actually facilitates language learning.",
+      "suggestedLesson": "4-language-development",
+      "needsReview": false
     },
     {
       "stem": "Which term describes bilingual or multilingual speakers’ use of more than one language within a single conversation or interaction?",
@@ -313,7 +208,10 @@
       "kn": "KN21",
       "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
       "difficulty": "medium",
-      "quality_comment": "Options are all related to language concepts, making distractors plausible and enhancing question validity."
+      "quality_comment": "Options are all related to language concepts, making distractors plausible and enhancing question validity.",
+      "lessonExcerpt": "| 18-24 months | Telegraphic speech | Two-word combinations: \"want juice,\" \"doggie gone\" |",
+      "suggestedLesson": "4-language-development",
+      "needsReview": false
     },
     {
       "stem": "What type of cry is characterized by a loud high-pitched cry followed by silence due to breath-holding and signals pain in a newborn?",
@@ -328,7 +226,10 @@
       "kn": "KN21",
       "kn_explanation": "This question pertains to early infant behavioral development and communication, a key part of normal growth across the lifespan.",
       "difficulty": "medium",
-      "quality_comment": "Distractors reflect other known cry types ensuring differentiation but maintaining plausible confusion."
+      "quality_comment": "Distractors reflect other known cry types ensuring differentiation but maintaining plausible confusion.",
+      "lessonExcerpt": "Overregularization: Misapplying grammar rules - \"I goed to the store\" (applying regular past tense rule) - \"Two foots\" (applying regular plural rule)",
+      "suggestedLesson": "4-language-development",
+      "needsReview": false
     },
     {
       "stem": "Which aspect of language is primarily concerned with the appropriate use of language in social contexts, including nonverbal cues and conversational rules?",
@@ -343,7 +244,10 @@
       "kn": "KN21",
       "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
       "difficulty": "easy",
-      "quality_comment": "Clear differential among language components; distractors are other well-known categories but easily ruled out by knowledgeable students."
+      "quality_comment": "Clear differential among language components; distractors are other well-known categories but easily ruled out by knowledgeable students.",
+      "lessonExcerpt": "Different language components have different critical periods - Grammar, syntax, and phonetics require early exposure",
+      "suggestedLesson": "4-language-development",
+      "needsReview": false
     },
     {
       "stem": "Language brokering within immigrant families is best described as:",
@@ -358,7 +262,10 @@
       "kn": "KN21",
       "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
       "difficulty": "medium",
-      "quality_comment": "Distractors relate to language or communication concepts and provide a reasonable level of challenge."
+      "quality_comment": "Distractors relate to language or communication concepts and provide a reasonable level of challenge.",
+      "lessonExcerpt": "Code-switching occurs when bilingual/multilingual speakers use multiple languages within a single conversation.",
+      "suggestedLesson": "4-language-development",
+      "needsReview": false
     },
     {
       "stem": "In studies of deaf infants exposed from birth to American Sign Language (ASL), what behavior emerges between 6 and 8 months of age similar to vocal babbling in hearing infants?",
@@ -373,7 +280,10 @@
       "kn": "KN21",
       "kn_explanation": "This question addresses developmental milestones in atypical populations, relevant to lifespan growth and language acquisition.",
       "difficulty": "hard",
-      "quality_comment": "The question tests detailed knowledge of parallel language development modes in deaf infants, with plausible distractors."
+      "quality_comment": "The question tests detailed knowledge of parallel language development modes in deaf infants, with plausible distractors.",
+      "lessonExcerpt": "3. Loud high-pitched cry followed by silence = pain",
+      "suggestedLesson": "4-language-development",
+      "needsReview": false
     },
     {
       "stem": "Which feature of child-directed speech (parentese) facilitates language development in young children?",
@@ -388,7 +298,10 @@
       "kn": "KN21",
       "kn_explanation": "This question addresses the social interactionist perspective of language development emphasizing caregiver influences during early growth and development.",
       "difficulty": "medium",
-      "quality_comment": "Distractors are realistic but distinct in features of speech directed at children vs. adults, sharpening test-taker discrimination."
+      "quality_comment": "Distractors are realistic but distinct in features of speech directed at children vs. adults, sharpening test-taker discrimination.",
+      "lessonExcerpt": "| Pragmatics | Using language appropriately in social contexts | Knowing to speak differently to your supervisor vs. your friend |",
+      "suggestedLesson": "4-language-development",
+      "needsReview": false
     },
     {
       "stem": "Language development in deaf and hard-of-hearing (DHH) children is best supported by which of the following approaches according to current evidence?",
@@ -403,7 +316,10 @@
       "kn": "KN21",
       "kn_explanation": "This question relates to lifespan developmental considerations of language acquisition in special populations, emphasizing intervention strategies.",
       "difficulty": "medium",
-      "quality_comment": "The item tests applied knowledge of evidence-based practice for DHH children's language development, with credible distractors."
+      "quality_comment": "The item tests applied knowledge of evidence-based practice for DHH children's language development, with credible distractors.",
+      "lessonExcerpt": "Language brokering happens when children or adolescents translate for their immigrant parents and family members.",
+      "suggestedLesson": "4-language-development",
+      "needsReview": false
     },
     {
       "stem": "How does language brokering by children in immigrant families impact their psychosocial development?",
@@ -418,7 +334,10 @@
       "kn": "KN21",
       "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
       "difficulty": "medium",
-      "quality_comment": "The item probes nuanced understanding of cultural/language dynamics, offering balanced options that require careful reading."
+      "quality_comment": "The item probes nuanced understanding of cultural/language dynamics, offering balanced options that require careful reading.",
+      "lessonExcerpt": "However, when deaf infants are exposed to sign language from birth, they exhibit manual babbling at 6-8 months. Repetitive hand movements that replicate components of American Sign Language.",
+      "suggestedLesson": "4-language-development",
+      "needsReview": false
     },
     {
       "stem": "Which concept describes the inherent ability in humans that facilitates the learning of complex grammar and language structures, according to Chomsky's theory?",
@@ -438,7 +357,10 @@
       "lock_in_level": "easier",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "This is when caregivers naturally adjust their speech patterns (slowing down, using a higher pitch, simplifying sentences, and emphasizing key words.",
+      "suggestedLesson": "4-language-development",
+      "needsReview": false
     },
     {
       "stem": "In the context of Chomsky's nativist perspective, which of the following best exemplifies the role of the language acquisition device (LAD) in language learning?",
@@ -458,7 +380,10 @@
       "lock_in_level": "harder",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "Many professionals now advocate for the combined approach, noting: Cochlear implants aren't typically implanted until 12+ months; Infants can access sign language from birth",
+      "suggestedLesson": "4-language-development",
+      "needsReview": false
     }
   ]
 }

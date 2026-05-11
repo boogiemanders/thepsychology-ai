@@ -103,27 +103,6 @@
       "inspirationIndex": 4
     },
     {
-      "stem": "Which scoring method is typically used for standardized entrance exams to ensure fairness across different test-takers?",
-      "options": [
-        "Raw score method",
-        "Percentile rank method",
-        "Standardized score method",
-        "Cumulative score method"
-      ],
-      "answer": "Standardized score method",
-      "explanation": "The standardized score method adjusts scores based on the distribution of scores in the population, ensuring fairness. The raw score method does not account for variability among test-takers, the percentile rank method ranks scores but does not standardize them, and the cumulative score method is not typically used for entrance exams.",
-      "kn": "KN55",
-      "kn_explanation": "This question is best aligned with KN55 because it tests Analytic methods, including qualitative (e.g., thematic, phenomenological) and quantitative (e.g., probability theory; descriptive, inferential, and parametric statistics; meta-analysis; factor analysis; causal modeling).",
-      "difficulty": "medium",
-      "quality_comment": "The question is clear and targets knowledge of scoring systems in entrance exams.",
-      "suggestedLesson": "7-inferential-stats",
-      "suggestedParagraph": "## Introduction: Why Inferential Statistics Matter for Your Psychology Career",
-      "lessonExcerpt": "Standardized tests provide a way to compare scores across different populations.",
-      "needsReview": false,
-      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 2
-    },
-    {
       "stem": "In the context of Bayes' Theorem, what does the term 'prior probability' refer to?",
       "options": [
         "The probability of an event occurring before new evidence is considered.",
@@ -139,7 +118,7 @@
       "quality_comment": "The question effectively assesses knowledge of Bayes' Theorem and its components.",
       "suggestedLesson": "7-inferential-stats",
       "suggestedParagraph": "## The Foundation: Sampling Distributions and Probability",
-      "lessonExcerpt": "Prior probability refers to the probability of an event occurring before new evidence is considered.",
+      "lessonExcerpt": "**Prior** | Your probability distribution for a parameter BEFORE seeing new data | Previous research, expert opinion, or theoretical assumptions",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
       "inspirationIndex": 5
@@ -179,9 +158,9 @@
       "kn_explanation": "This question is best aligned with KN55 because it tests Analytic methods, including qualitative (e.g., thematic, phenomenological) and quantitative (e.g., probability theory; descriptive, inferential, and parametric statistics; meta-analysis; factor analysis; causal modeling).",
       "difficulty": "medium",
       "quality_comment": "The question effectively assesses knowledge of ANOVA and its purpose.",
-      "suggestedLesson": "7-inferential-stats",
+      "suggestedLesson": "7-stats-tests",
       "suggestedParagraph": "## Making Decisions: The Four Possible Outcomes",
-      "lessonExcerpt": "One-way ANOVA is used to compare means across multiple groups.",
+      "lessonExcerpt": "When you have one independent variable with more than two levels and one dependent variable on an interval or ratio scale, you need a one-way analysis of variance (ANOVA).",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
       "inspirationIndex": 2
@@ -200,9 +179,9 @@
       "kn_explanation": "This question is best aligned with KN55 because it tests Analytic methods, including qualitative (e.g., thematic, phenomenological) and quantitative (e.g., probability theory; descriptive, inferential, and parametric statistics; meta-analysis; factor analysis; causal modeling).",
       "difficulty": "medium",
       "quality_comment": "The question is relevant and tests knowledge of statistical concepts.",
-      "suggestedLesson": "7-inferential-stats",
+      "suggestedLesson": "5-interpreting-scores",
       "suggestedParagraph": "## The Foundation: Sampling Distributions and Probability",
-      "lessonExcerpt": "You determine score thresholds for percentiles using z-scores.",
+      "lessonExcerpt": "Z-Scores: The Foundation Z-scores have a mean of 0 and a standard deviation of 1.0.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
       "inspirationIndex": 7
@@ -221,9 +200,9 @@
       "kn_explanation": "This question is best aligned with KN55 because it tests Analytic methods, including qualitative (e.g., thematic, phenomenological) and quantitative (e.g., probability theory; descriptive, inferential, and parametric statistics; meta-analysis; factor analysis; causal modeling).",
       "difficulty": "hard",
       "quality_comment": "The question is challenging and requires a nuanced understanding of statistical tests.",
-      "suggestedLesson": "7-inferential-stats",
+      "suggestedLesson": "7-stats-tests",
       "suggestedParagraph": "## The Selection Process: Your Decision Framework",
-      "lessonExcerpt": "Trend analysis is used for analyzing non-linear outcomes.",
+      "lessonExcerpt": "**Trend Analysis:** Used with quantitative independent variables to determine if there's a linear or nonlinear relationship with the dependent variable.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
       "inspirationIndex": 8
@@ -242,9 +221,9 @@
       "kn_explanation": "This question is best aligned with KN55 because it tests Analytic methods, including qualitative (e.g., thematic, phenomenological) and quantitative (e.g., probability theory; descriptive, inferential, and parametric statistics; meta-analysis; factor analysis; causal modeling).",
       "difficulty": "medium",
       "quality_comment": "The question effectively highlights a key advantage of MANOVA.",
-      "suggestedLesson": "7-inferential-stats",
+      "suggestedLesson": "7-stats-tests",
       "suggestedParagraph": "## The Two Main Families of Statistical Tests",
-      "lessonExcerpt": "MANOVA reduces the risk of Type I error by testing multiple dependent variables simultaneously.",
+      "lessonExcerpt": "**MANOVA (Multivariate Analysis of Variance):** For studies with multiple dependent variables, each measured on an interval or ratio scale.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
       "inspirationIndex": 9
@@ -263,9 +242,9 @@
       "kn_explanation": "This question is best aligned with KN55 because it tests Analytic methods, including qualitative (e.g., thematic, phenomenological) and quantitative (e.g., probability theory; descriptive, inferential, and parametric statistics; meta-analysis; factor analysis; causal modeling).",
       "difficulty": "medium",
       "quality_comment": "The question effectively tests knowledge of meta-analysis concepts.",
-      "suggestedLesson": "7-inferential-stats",
+      "suggestedLesson": "6-prevention-and-consultation",
       "suggestedParagraph": "## Introduction: Why Inferential Statistics Matter for Your Psychology Career",
-      "lessonExcerpt": "Meta-analysis combines study results into an effect size.",
+      "lessonExcerpt": "These researchers pioneered using meta-analysis to combine results from 475 studies comparing therapy to no treatment. Their finding: an effect size of .85, meaning the average therapy patient was better off than 80% of people who didn't receive therapy.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
       "inspirationIndex": 1
@@ -286,7 +265,7 @@
       "quality_comment": "The question is relevant and tests a fundamental concept in statistics.",
       "suggestedLesson": "7-inferential-stats",
       "suggestedParagraph": "## Statistical Power: Your Ability to Detect Real Effects",
-      "lessonExcerpt": "Statistical power is increased primarily by increasing sample size.",
+      "lessonExcerpt": "This is the most practical factor you can control. Larger samples increase power substantially.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
       "inspirationIndex": 4
@@ -305,9 +284,9 @@
       "kn_explanation": "This question is best aligned with KN55 because it tests Analytic methods, including qualitative (e.g., thematic, phenomenological) and quantitative (e.g., probability theory; descriptive, inferential, and parametric statistics; meta-analysis; factor analysis; causal modeling).",
       "difficulty": "hard",
       "quality_comment": "The question effectively assesses knowledge of regression techniques.",
-      "suggestedLesson": "7-inferential-stats",
+      "suggestedLesson": "7-correlation-and-regression",
       "suggestedParagraph": "## The Selection Process: Your Decision Framework",
-      "lessonExcerpt": "Stepwise regression selects predictors based on their strength of relationship with the dependent variable.",
+      "lessonExcerpt": "**Stepwise multiple regression** adds predictors one at a time, identifying which ones add meaningful predictive power.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
       "inspirationIndex": 7
@@ -326,9 +305,9 @@
       "kn_explanation": "This question is best aligned with KN55 because it tests Analytic methods, including qualitative (e.g., thematic, phenomenological) and quantitative (e.g., probability theory; descriptive, inferential, and parametric statistics; meta-analysis; factor analysis; causal modeling).",
       "difficulty": "medium",
       "quality_comment": "The question is relevant and tests knowledge of effective employee selection methods.",
-      "suggestedLesson": "7-inferential-stats",
+      "suggestedLesson": "5-hiring-methods",
       "suggestedParagraph": "## Introduction: Why Inferential Statistics Matter for Your Psychology Career",
-      "lessonExcerpt": "A work sample test is designed to assess a candidate's ability to perform specific tasks related to the job.",
+      "lessonExcerpt": "There's a specialized version called **trainability work sample tests** designed for applicants without previous experience. These incorporate training periods followed by evaluation, helping organizations determine whether inexperienced applicants are likely to benefit from on-the-job training.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
       "inspirationIndex": 13
@@ -347,9 +326,9 @@
       "kn_explanation": "This question is best aligned with KN56 because it tests Statistical interpretation (e.g., power, effect size, causation vs. association, clinical vs. statistical significance).",
       "difficulty": "hard",
       "quality_comment": "The question is well-structured and tests a critical understanding of statistical principles.",
-      "suggestedLesson": "7-inferential-stats",
+      "suggestedLesson": "7-stats-tests",
       "suggestedParagraph": "### Type I Error: The False Alarm",
-      "lessonExcerpt": "If α = .05, you're accepting a 5% chance of a false positive. If you conduct multiple tests, the overall Type I error rate increases.",
+      "lessonExcerpt": "Running multiple tests inflates this risk, the **experimentwise error rate**.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
       "inspirationIndex": 1
@@ -370,31 +349,10 @@
       "quality_comment": "The question is clear and effectively tests the understanding of significance in research.",
       "suggestedLesson": "7-inferential-stats",
       "suggestedParagraph": "## Making Decisions: The Four Possible Outcomes",
-      "lessonExcerpt": "Statistical significance is determined by p-values, while practical significance considers effect size.",
+      "lessonExcerpt": "Misconception 2: \"Statistical significance means practical importance.\" Reality: With large enough samples, even tiny, meaningless effects can be statistically significant. Always consider effect size, not just p-values.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
       "inspirationIndex": 3
-    },
-    {
-      "stem": "What is the primary justification for using a pooled error term in ANOVA?",
-      "options": [
-        "To increase the sample size for more accurate estimates.",
-        "To account for unequal variances across groups.",
-        "To provide a more stable estimate of the error variance.",
-        "To simplify the calculations involved in ANOVA."
-      ],
-      "answer": "To provide a more stable estimate of the error variance.",
-      "explanation": "The correct answer reflects the purpose of pooling error terms, which is to enhance the stability of the error variance estimate across groups. The other options either misstate the purpose or are not relevant to the justification for pooling.",
-      "kn": "KN55",
-      "kn_explanation": "This question is best aligned with KN55 because it tests Analytic methods, including qualitative (e.g., thematic, phenomenological) and quantitative (e.g., probability theory; descriptive, inferential, and parametric statistics; meta-analysis; factor analysis; causal modeling).",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively assesses knowledge of ANOVA assumptions.",
-      "suggestedLesson": "7-inferential-stats",
-      "suggestedParagraph": "## The Selection Process: Your Decision Framework",
-      "lessonExcerpt": "Pooling error terms provides a more stable estimate of the error variance in ANOVA.",
-      "needsReview": false,
-      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 7
     },
     {
       "stem": "Which of the following best exemplifies cluster sampling in research?",
@@ -410,9 +368,9 @@
       "kn_explanation": "This question is best aligned with KN53 because it tests Sampling and data collection methods.",
       "difficulty": "medium",
       "quality_comment": "The question effectively tests knowledge of sampling techniques.",
-      "suggestedLesson": "7-inferential-stats",
+      "suggestedLesson": "7-research-designs",
       "suggestedParagraph": "## The Selection Process: Your Decision Framework",
-      "lessonExcerpt": "Cluster sampling involves selecting entire groups and surveying all individuals within those groups.",
+      "lessonExcerpt": "**Cluster random sampling**: {{M}}Instead of randomly selecting individual users from all of Twitter (impossible), you randomly select specific hashtag communities, then sample from within those communities.{{/M}}",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
       "inspirationIndex": 10
@@ -451,7 +409,10 @@
       "kn": "KN55",
       "kn_explanation": "This question is best aligned with KN55 because it tests Analytic methods, including qualitative (e.g., thematic, phenomenological) and quantitative (e.g., probability theory; descriptive, inferential, and parametric statistics; meta-analysis; factor analysis; causal modeling).",
       "difficulty": "medium",
-      "quality_comment": "The question clearly targets a central statistical concept with distractors that reflect common misconceptions, making it suitable for the EPPP level."
+      "quality_comment": "The question clearly targets a central statistical concept with distractors that reflect common misconceptions, making it suitable for the EPPP level.",
+      "lessonExcerpt": "**Shape**: As your sample size increases, the distribution of sample means will look increasingly normal (bell-curved), even if your original population distribution is weird and skewed.",
+      "suggestedLesson": "7-inferential-stats",
+      "needsReview": false
     },
     {
       "stem": "What does a Type I error represent in hypothesis testing?",
@@ -466,7 +427,10 @@
       "kn": "KN56",
       "kn_explanation": "Understanding decision errors and alpha levels is a key statistical interpretation topic related to power and error rates (KN56).",
       "difficulty": "easy",
-      "quality_comment": "This is a straightforward question testing a fundamental concept; distractors are clear and plausible, appropriate for entry-level statistics knowledge."
+      "quality_comment": "This is a straightforward question testing a fundamental concept; distractors are clear and plausible, appropriate for entry-level statistics knowledge.",
+      "lessonExcerpt": "A **Type I error** happens when you reject a true null hypothesis.",
+      "suggestedLesson": "7-inferential-stats",
+      "needsReview": false
     },
     {
       "stem": "Which of the following factors increases the statistical power of a study?",
@@ -481,7 +445,10 @@
       "kn": "KN56",
       "kn_explanation": "This question addresses factors influencing power and error rates, focusing on statistical interpretation (KN56).",
       "difficulty": "medium",
-      "quality_comment": "Distractors are plausible, but only one correctly identifies a factor that increases power, making this question effective for EPPP preparation."
+      "quality_comment": "Distractors are plausible, but only one correctly identifies a factor that increases power, making this question effective for EPPP preparation.",
+      "lessonExcerpt": "This is about how strong the independent variable's effect actually is.",
+      "suggestedLesson": "7-inferential-stats",
+      "needsReview": false
     },
     {
       "stem": "In Bayesian statistics, what does the 'prior' represent?",
@@ -496,7 +463,10 @@
       "kn": "KN55",
       "kn_explanation": "This question involves analytic methods and different statistical approaches, including Bayesian statistics (KN55).",
       "difficulty": "hard",
-      "quality_comment": "The question is clearly worded, and options reflect common Bayesian terms to challenge test takers’ comprehension effectively."
+      "quality_comment": "The question is clearly worded, and options reflect common Bayesian terms to challenge test takers’ comprehension effectively.",
+      "lessonExcerpt": "**Prior** | Your probability distribution for a parameter BEFORE seeing new data | Previous research, expert opinion, or theoretical assumptions",
+      "suggestedLesson": "7-inferential-stats",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best describes the difference between frequentist confidence intervals and Bayesian credibility intervals?",
@@ -511,7 +481,10 @@
       "kn": "KN56",
       "kn_explanation": "This question is best aligned with KN56 because it tests Statistical interpretation (e.g., power, effect size, causation vs. association, clinical vs. statistical significance).",
       "difficulty": "hard",
-      "quality_comment": "The distractors include common misconceptions, which strengthens the question’s ability to distinguish between novice and advanced understanding."
+      "quality_comment": "The distractors include common misconceptions, which strengthens the question’s ability to distinguish between novice and advanced understanding.",
+      "lessonExcerpt": "**95% Frequentist Confidence Interval**: If we repeated this study many times and calculated a confidence interval each time, 95% of those intervals would contain the true population mean.",
+      "suggestedLesson": "7-inferential-stats",
+      "needsReview": false
     },
     {
       "stem": "Which of the following statements about the null and alternative hypotheses in inferential statistics is TRUE?",
@@ -526,7 +499,10 @@
       "kn": "KN55",
       "kn_explanation": "This question is best aligned with KN55 because it tests Analytic methods, including qualitative (e.g., thematic, phenomenological) and quantitative (e.g., probability theory; descriptive, inferential, and parametric statistics; meta-analysis; factor analysis; causal modeling).",
       "difficulty": "easy",
-      "quality_comment": "The question is clear and the distractors are plausible misunderstandings, helping to reinforce correct hypothesis formulation knowledge."
+      "quality_comment": "The question is clear and the distractors are plausible misunderstandings, helping to reinforce correct hypothesis formulation knowledge.",
+      "lessonExcerpt": "**The alternative hypothesis (H₁)**: This is usually what you actually believe. That your independent variable DOES have a real effect.",
+      "suggestedLesson": "7-inferential-stats",
+      "needsReview": false
     },
     {
       "stem": "If a researcher sets alpha at .05, what is the implication for making a Type I error?",
@@ -541,7 +517,10 @@
       "kn": "KN56",
       "kn_explanation": "This question targets knowledge of decision errors and alpha levels, key components of statistical interpretation (KN56).",
       "difficulty": "easy",
-      "quality_comment": "The question is straightforward with well-distinguished distractors, ideal for confirming foundational understanding."
+      "quality_comment": "The question is straightforward with well-distinguished distractors, ideal for confirming foundational understanding.",
+      "lessonExcerpt": "If α = .05, you're accepting a 5% chance of a false positive.",
+      "suggestedLesson": "7-inferential-stats",
+      "needsReview": false
     },
     {
       "stem": "Which factor is NOT controllable by the researcher to increase statistical power?",
@@ -556,7 +535,10 @@
       "kn": "KN56",
       "kn_explanation": "This question involves understanding factors influencing power, part of statistical interpretation (KN56).",
       "difficulty": "medium",
-      "quality_comment": "Distractors are plausible active research decisions, while the correct answer highlights an uncontrollable factor, demanding good conceptual clarity."
+      "quality_comment": "Distractors are plausible active research decisions, while the correct answer highlights an uncontrollable factor, demanding good conceptual clarity.",
+      "lessonExcerpt": "However, unlike the other factors, you can't control this. It's just a characteristic of what you're studying.",
+      "suggestedLesson": "7-inferential-stats",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best describes sampling error in the context of inferential statistics?",
@@ -571,7 +553,10 @@
       "kn": "KN55",
       "kn_explanation": "This question is best aligned with KN55 because it tests Analytic methods, including qualitative (e.g., thematic, phenomenological) and quantitative (e.g., probability theory; descriptive, inferential, and parametric statistics; meta-analysis; factor analysis; causal modeling).",
       "difficulty": "easy",
-      "quality_comment": "Distractors contrast measurement and treatment effects effectively against the correct statistical definition, making the question clear and instructive."
+      "quality_comment": "Distractors contrast measurement and treatment effects effectively against the correct statistical definition, making the question clear and instructive.",
+      "lessonExcerpt": "Some would be higher than the true population mean, some lower, not because anything actually changed, but because of **sampling error**. Random variation that happens when you select different people.",
+      "suggestedLesson": "7-inferential-stats",
+      "needsReview": false
     },
     {
       "stem": "What is the relationship between beta and statistical power in hypothesis testing?",
@@ -586,7 +571,10 @@
       "kn": "KN56",
       "kn_explanation": "This question addresses statistical interpretation of error rates and power, critical to hypothesis testing concepts (KN56).",
       "difficulty": "medium",
-      "quality_comment": "Answer choices provide a balanced set of plausible errors, reinforcing distinctions between error types and power clearly."
+      "quality_comment": "Answer choices provide a balanced set of plausible errors, reinforcing distinctions between error types and power clearly.",
+      "lessonExcerpt": "The probability of making a Type II error is **beta (β)**. Unlike alpha, you don't directly set beta. However, you can reduce it by increasing your study's **statistical power**.",
+      "suggestedLesson": "7-inferential-stats",
+      "needsReview": false
     },
     {
       "stem": "In the context of inferential statistics, what does the standard error of the mean represent?",
@@ -601,7 +589,10 @@
       "kn": "KN55",
       "kn_explanation": "This question is best aligned with KN55 because it tests Analytic methods, including qualitative (e.g., thematic, phenomenological) and quantitative (e.g., probability theory; descriptive, inferential, and parametric statistics; meta-analysis; factor analysis; causal modeling).",
       "difficulty": "medium",
-      "quality_comment": "Distractors test knowledge of related formulas and concepts, helping to clarify a key statistical term effectively."
+      "quality_comment": "Distractors test knowledge of related formulas and concepts, helping to clarify a key statistical term effectively.",
+      "lessonExcerpt": "**Spread**: The standard deviation of this sampling distribution (called the **standard error**) equals the population standard deviation divided by the square root of your sample size.",
+      "suggestedLesson": "7-inferential-stats",
+      "needsReview": false
     },
     {
       "stem": "Which statistical test is generally more powerful when data meet the required assumptions?",
@@ -616,7 +607,10 @@
       "kn": "KN55",
       "kn_explanation": "This question is best aligned with KN55 because it tests Analytic methods, including qualitative (e.g., thematic, phenomenological) and quantitative (e.g., probability theory; descriptive, inferential, and parametric statistics; meta-analysis; factor analysis; causal modeling).",
       "difficulty": "medium",
-      "quality_comment": "The distractors are appropriate examples of nonparametric tests, providing a meaningful challenge for test takers."
+      "quality_comment": "The distractors are appropriate examples of nonparametric tests, providing a meaningful challenge for test takers.",
+      "lessonExcerpt": "**Parametric tests** (like t-tests and ANOVA) are more powerful than **nonparametric tests** (like chi-square).",
+      "suggestedLesson": "7-inferential-stats",
+      "needsReview": false
     },
     {
       "stem": "Bayesian analysis differs from frequentist analysis primarily in which way?",
@@ -631,7 +625,10 @@
       "kn": "KN55",
       "kn_explanation": "This question evaluates comprehension of Bayesian versus frequentist statistical approaches, which is part of analytic methods (KN55).",
       "difficulty": "hard",
-      "quality_comment": "Options target common confusions about Bayesian concepts, making this a high-quality question on a complex topic."
+      "quality_comment": "Options target common confusions about Bayesian concepts, making this a high-quality question on a complex topic.",
+      "lessonExcerpt": "**Bayesian approach**: You combine what's already known (previous research) with your current data to get updated knowledge. It's cumulative and collaborative.",
+      "suggestedLesson": "7-inferential-stats",
+      "needsReview": false
     },
     {
       "stem": "What is the most accurate interpretation of a 95% frequentist confidence interval around a sample mean?",
@@ -646,7 +643,10 @@
       "kn": "KN55",
       "kn_explanation": "This tests understanding of frequentist confidence intervals, part of statistical interpretation in analytic methods (KN55).",
       "difficulty": "medium",
-      "quality_comment": "Distractors include common misinterpretations, offering a useful challenge for EPPP candidates."
+      "quality_comment": "Distractors include common misinterpretations, offering a useful challenge for EPPP candidates.",
+      "lessonExcerpt": "**95% Frequentist Confidence Interval**: If we repeated this study many times and calculated a confidence interval each time, 95% of those intervals would contain the true population mean.",
+      "suggestedLesson": "7-inferential-stats",
+      "needsReview": false
     },
     {
       "stem": "Which of the following describes the role of alpha in hypothesis testing?",
@@ -661,7 +661,10 @@
       "kn": "KN56",
       "kn_explanation": "This question targets understanding of error rates and decision-making thresholds in inferential statistics (KN56).",
       "difficulty": "medium",
-      "quality_comment": "The question clearly distinguishes among common misconceptions about alpha and error probabilities, providing an effective test of fundamental statistical knowledge."
+      "quality_comment": "The question clearly distinguishes among common misconceptions about alpha and error probabilities, providing an effective test of fundamental statistical knowledge.",
+      "lessonExcerpt": "The probability of making a Type I error is **alpha (α)**, also called your **significance level**. Researchers typically set this at .05 or .01 before collecting data.",
+      "suggestedLesson": "7-inferential-stats",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best explains why parametric tests are generally more powerful than nonparametric tests?",
@@ -676,7 +679,10 @@
       "kn": "KN55",
       "kn_explanation": "This question is best aligned with KN55 because it tests Analytic methods, including qualitative (e.g., thematic, phenomenological) and quantitative (e.g., probability theory; descriptive, inferential, and parametric statistics; meta-analysis; factor analysis; causal modeling).",
       "difficulty": "medium",
-      "quality_comment": "The distractors help clarify critical distinctions between parametric and nonparametric tests, supporting mastery of test selection principles."
+      "quality_comment": "The distractors help clarify critical distinctions between parametric and nonparametric tests, supporting mastery of test selection principles.",
+      "lessonExcerpt": "However, parametric tests require:\n- Interval or ratio data (not just categories)\n- Certain assumptions about your data (like normal distribution)",
+      "suggestedLesson": "7-inferential-stats",
+      "needsReview": false
     },
     {
       "stem": "In inferential statistics, the standard error of the mean decreases when which of the following occurs?",
@@ -691,7 +697,10 @@
       "kn": "KN55",
       "kn_explanation": "This question is best aligned with KN55 because it tests Analytic methods, including qualitative (e.g., thematic, phenomenological) and quantitative (e.g., probability theory; descriptive, inferential, and parametric statistics; meta-analysis; factor analysis; causal modeling).",
       "difficulty": "medium",
-      "quality_comment": "Distractors are plausible and test comprehension of how key parameters influence sampling variability, reinforcing key sampling distribution concepts."
+      "quality_comment": "Distractors are plausible and test comprehension of how key parameters influence sampling variability, reinforcing key sampling distribution concepts.",
+      "lessonExcerpt": "the standard error gets smaller as sample size increases, meaning your sample means cluster more tightly around the true population mean.",
+      "suggestedLesson": "7-inferential-stats",
+      "needsReview": false
     },
     {
       "stem": "What is the main advantage of Bayesian hypothesis testing over frequentist approaches?",
@@ -706,7 +715,10 @@
       "kn": "KN55",
       "kn_explanation": "This question evaluates knowledge of Bayesian vs. frequentist inferential logic, highlighting the key interpretive advantage of Bayesian statistics (KN55).",
       "difficulty": "hard",
-      "quality_comment": "Distractors represent common misunderstandings about Bayesian advantages, making this question a good diagnostic tool for advanced conceptual understanding."
+      "quality_comment": "Distractors represent common misunderstandings about Bayesian advantages, making this question a good diagnostic tool for advanced conceptual understanding.",
+      "lessonExcerpt": "**Direct hypothesis testing**: You can directly assess evidence for your research hypothesis, not just against the null",
+      "suggestedLesson": "7-inferential-stats",
+      "needsReview": false
     },
     {
       "stem": "Which of the following statements best describes the effect of increasing sample size on the variability of the sampling distribution of the mean?",
@@ -726,7 +738,10 @@
       "lock_in_level": "easier",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "the standard error gets smaller as sample size increases, meaning your sample means cluster more tightly around the true population mean.",
+      "suggestedLesson": "7-inferential-stats",
+      "needsReview": false
     },
     {
       "stem": "In a study examining the impact of sample size on the distribution of sample means, which of the following outcomes is expected as the sample size becomes very large?",
@@ -746,7 +761,10 @@
       "lock_in_level": "harder",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "**Shape**: As your sample size increases, the distribution of sample means will look increasingly normal (bell-curved), even if your original population distribution is weird and skewed.",
+      "suggestedLesson": "7-inferential-stats",
+      "needsReview": false
     }
   ]
 }

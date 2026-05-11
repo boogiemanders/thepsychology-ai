@@ -14,96 +14,12 @@
       "kn_explanation": "This question is best aligned with KN10 because it tests Major research-based theories and models of emotion and their application.",
       "difficulty": "hard",
       "quality_comment": "The question effectively assesses understanding of job enrichment and its motivational impact.",
-      "suggestedLesson": "2-stress-and-emotion",
+      "suggestedLesson": "3-attitudes",
       "suggestedParagraph": "## Why Understanding Emotions and Stress Matters for Your EPPP Success",
-      "lessonExcerpt": "Job enrichment is designed to enhance intrinsic motivation by providing employees with more meaningful work.",
+      "lessonExcerpt": "This fascinating prediction says: if you're externally rewarded for doing something you already enjoy intrinsically, your intrinsic motivation decreases. **Classic Study**: Children who enjoyed drawing with markers were either rewarded or not rewarded for drawing during a play period.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 4
-    },
-    {
-      "stem": "Which of the following factors is most likely to influence goal achievement according to goal-setting theory?",
-      "options": [
-        "The complexity of the goal.",
-        "The level of intrinsic motivation.",
-        "The presence of external rewards.",
-        "The specificity of the goal."
-      ],
-      "answer": "The specificity of the goal.",
-      "explanation": "Goal-setting theory emphasizes that specific and challenging goals lead to higher performance compared to vague or easy goals. While intrinsic motivation and external rewards can play roles, specificity is a key factor in achieving goals.",
-      "kn": "KN9",
-      "kn_explanation": "This question is best aligned with KN9 because it tests Major research-based theories and models of motivation and their application.",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively assesses knowledge of goal-setting theory.",
-      "suggestedLesson": "2-stress-and-emotion",
-      "suggestedParagraph": "## Why Understanding Emotions and Stress Matters for Your EPPP Success",
-      "lessonExcerpt": "Specific and challenging goals lead to higher performance compared to vague or easy goals.",
-      "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 6
-    },
-    {
-      "stem": "How does performance distribution affect an individual's perception of their capability?",
-      "options": [
-        "It has no impact on self-perception.",
-        "It influences self-efficacy based on social comparisons.",
-        "It leads to increased anxiety about performance.",
-        "It decreases motivation to improve."
-      ],
-      "answer": "It influences self-efficacy based on social comparisons.",
-      "explanation": "Performance distribution can affect how individuals perceive their capabilities, particularly through social comparison processes, which can enhance or diminish self-efficacy. The other options do not accurately capture the relationship between performance distribution and self-perception.",
-      "kn": "KN10",
-      "kn_explanation": "This question is best aligned with KN10 because it tests Major research-based theories and models of emotion and their application.",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively tests understanding of social perception and self-efficacy.",
-      "suggestedLesson": "2-stress-and-emotion",
-      "suggestedParagraph": "## Why Understanding Emotions and Stress Matters for Your EPPP Success",
-      "lessonExcerpt": "Performance distribution can affect how individuals perceive their capabilities, particularly through social comparison processes.",
-      "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 7
-    },
-    {
-      "stem": "According to equity theory, how does perceived fairness affect work effort?",
-      "options": [
-        "It has no impact on motivation.",
-        "It increases effort when individuals feel under-rewarded.",
-        "It decreases effort when individuals feel over-rewarded.",
-        "It influences effort based on perceived fairness compared to others."
-      ],
-      "answer": "It influences effort based on perceived fairness compared to others.",
-      "explanation": "Equity theory posits that individuals assess their work effort based on perceived fairness in comparison to others. If they perceive inequity, it can lead to changes in effort. The other options do not accurately reflect the principles of equity theory.",
-      "kn": "KN10",
-      "kn_explanation": "This question is best aligned with KN10 because it tests Major research-based theories and models of emotion and their application.",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively tests understanding of equity theory and its implications for work effort.",
-      "suggestedLesson": "2-stress-and-emotion",
-      "suggestedParagraph": "## Why Understanding Emotions and Stress Matters for Your EPPP Success",
-      "lessonExcerpt": "Equity theory posits that individuals assess their work effort based on perceived fairness in comparison to others.",
-      "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 10
-    },
-    {
-      "stem": "Chronic exposure to stress is most likely to result in which of the following outcomes?",
-      "options": [
-        "Increased cognitive flexibility",
-        "Enhanced immune function",
-        "Deterioration of hippocampal neurons",
-        "Improved emotional regulation"
-      ],
-      "answer": "Deterioration of hippocampal neurons",
-      "explanation": "Chronic stress can lead to damage in the hippocampus, affecting memory and learning. The other options are incorrect as chronic stress typically impairs cognitive flexibility, immune function, and emotional regulation.",
-      "kn": "KN10",
-      "kn_explanation": "This question is best aligned with KN10 because it tests Major research-based theories and models of emotion and their application.",
-      "difficulty": "medium",
-      "quality_comment": "The question accurately assesses understanding of chronic stress effects.",
-      "suggestedLesson": "2-stress-and-emotion",
-      "suggestedParagraph": "## The Stress Response: From Perception to Action",
-      "lessonExcerpt": "chronic stress and elevated cortisol can actually damage hippocampal neurons, leading to memory problems.",
-      "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 13
     },
     {
       "stem": "According to the James-Lange theory of emotion, which of the following statements is true?",
@@ -119,33 +35,12 @@
       "kn_explanation": "This question is best aligned with KN10 because it tests Major research-based theories and models of emotion and their application.",
       "difficulty": "hard",
       "quality_comment": "The question effectively tests knowledge of emotion theories.",
-      "suggestedLesson": "2-stress-and-emotion",
+      "suggestedLesson": "2-work-motivation",
       "suggestedParagraph": "## The Brain's Emotion Centers: Meet Your Neural Cast",
-      "lessonExcerpt": "The James-Lange theory posits that physiological responses precede and inform emotional experiences.",
+      "lessonExcerpt": "Adams' equity theory is all about fairness through social comparison. Workers naturally compare their input/outcome ratio to others doing similar work:",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 14
-    },
-    {
-      "stem": "In the context of motivation theories, what does the learned helplessness model primarily explain?",
-      "options": [
-        "The impact of rewards on behavior.",
-        "The effects of uncontrollable events on motivation and behavior.",
-        "The role of cognitive appraisal in emotional responses.",
-        "The influence of social factors on motivation."
-      ],
-      "answer": "The effects of uncontrollable events on motivation and behavior.",
-      "explanation": "The learned helplessness model illustrates how repeated exposure to uncontrollable events can lead to a lack of motivation and passivity. The other options do not accurately capture the essence of this model.",
-      "kn": "KN12",
-      "kn_explanation": "This question is best aligned with KN12 because it tests Relations among cognitions/beliefs, behavior, affect, temperament, and mood.",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively tests knowledge of motivation theories.",
-      "suggestedLesson": "2-stress-and-emotion",
-      "suggestedParagraph": "## The Stress Response: From Perception to Action",
-      "lessonExcerpt": "The learned helplessness model illustrates how repeated exposure to uncontrollable events can lead to a lack of motivation and passivity.",
-      "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 16
     },
     {
       "stem": "Expectancy in motivational theories primarily refers to which of the following?",
@@ -161,54 +56,12 @@
       "kn_explanation": "This question is best aligned with KN10 because it tests Major research-based theories and models of emotion and their application.",
       "difficulty": "medium",
       "quality_comment": "The question effectively tests knowledge of expectancy in motivation.",
-      "suggestedLesson": "2-stress-and-emotion",
+      "suggestedLesson": "2-work-motivation",
       "suggestedParagraph": "## The Stress Response: From Perception to Action",
-      "lessonExcerpt": "Expectancy in motivational theories is about the belief in one's ability to achieve goals.",
+      "lessonExcerpt": "Theory #6: Expectancy Theory (VIE Theory) Vroom's expectancy theory says motivation is a calculation based on three factors:",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 17
-    },
-    {
-      "stem": "According to the Yerkes-Dodson law, what is the relationship between arousal and performance in decision-making tasks?",
-      "options": [
-        "Higher arousal always leads to better performance",
-        "There is an optimal level of arousal for peak performance",
-        "Arousal has no effect on performance",
-        "Performance decreases as arousal increases"
-      ],
-      "answer": "There is an optimal level of arousal for peak performance",
-      "explanation": "The correct answer is 'There is an optimal level of arousal for peak performance' because the Yerkes-Dodson law posits that performance improves with arousal up to a certain point, after which it can decline. The other options are incorrect as they misrepresent the relationship outlined by the law.",
-      "kn": "KN10",
-      "kn_explanation": "This question is best aligned with KN10 because it tests Major research-based theories and models of emotion and their application.",
-      "difficulty": "hard",
-      "quality_comment": "The question is challenging and requires a nuanced understanding of the Yerkes-Dodson law.",
-      "suggestedLesson": "2-stress-and-emotion",
-      "suggestedParagraph": "## The Stress Response: From Perception to Action",
-      "lessonExcerpt": "The Yerkes-Dodson law posits that performance improves with arousal up to a certain point, after which it can decline.",
-      "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 3
-    },
-    {
-      "stem": "What does the diathesis-stress model suggest about the development of mental illness?",
-      "options": [
-        "Mental illness is solely caused by environmental factors",
-        "Genetic predisposition interacts with stressors to trigger mental illness",
-        "Mental illness is only a result of biological factors",
-        "Stress alone is sufficient to cause mental illness"
-      ],
-      "answer": "Genetic predisposition interacts with stressors to trigger mental illness",
-      "explanation": "The correct answer is 'Genetic predisposition interacts with stressors to trigger mental illness' because the diathesis-stress model posits that both genetic vulnerabilities and environmental stressors contribute to the onset of mental disorders. The other options are incorrect as they oversimplify the causes of mental illness.",
-      "kn": "KN10",
-      "kn_explanation": "This question is best aligned with KN10 because it tests Major research-based theories and models of emotion and their application.",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively assesses understanding of a complex model in psychopathology.",
-      "suggestedLesson": "2-stress-and-emotion",
-      "suggestedParagraph": "## Why Understanding Emotions and Stress Matters for Your EPPP Success",
-      "lessonExcerpt": "The diathesis-stress model posits that both genetic vulnerabilities and environmental stressors contribute to the onset of mental disorders.",
-      "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 5
     },
     {
       "stem": "Which of the following stages is NOT part of Kubler-Ross's stages of grief?",
@@ -227,31 +80,10 @@
       "quality_comment": "The question effectively tests knowledge of grief stages.",
       "suggestedLesson": "2-stress-and-emotion",
       "suggestedParagraph": "## The Brain's Emotion Centers: Meet Your Neural Cast",
-      "lessonExcerpt": "This structure helps you remember where and when something emotional happened.",
+      "lessonExcerpt": "William James and Carl Lange proposed that emotions arise from physiological responses. You don't run because you're afraid; you're afraid because you run. The sequence: Stimulus → Physiological response → Emotion.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 16
-    },
-    {
-      "stem": "According to the two-factor theory of emotion, which two components are essential for the experience of emotion?",
-      "options": [
-        "Physiological arousal and cognitive labeling",
-        "Cognitive appraisal and emotional expression",
-        "Behavioral response and physiological arousal",
-        "Cognitive labeling and emotional suppression"
-      ],
-      "answer": "Physiological arousal and cognitive labeling",
-      "explanation": "The two-factor theory of emotion posits that emotion is based on physiological arousal followed by cognitive labeling of that arousal. The other options do not accurately reflect the components of this theory.",
-      "kn": "KN10",
-      "kn_explanation": "This question is best aligned with KN10 because it tests Major research-based theories and models of emotion and their application.",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively tests knowledge of a foundational theory in emotion psychology.",
-      "suggestedLesson": "2-stress-and-emotion",
-      "suggestedParagraph": "## The Brain's Emotion Centers: Meet Your Neural Cast",
-      "lessonExcerpt": "Understanding these mechanisms will make you a better clinician who can explain to clients why their heart races before presentations.",
-      "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 24
     },
     {
       "stem": "Research indicates that men and women may exhibit different leadership styles. Which of the following is a commonly observed difference?",
@@ -267,54 +99,12 @@
       "kn_explanation": "This question is best aligned with KN10 because it tests Major research-based theories and models of emotion and their application.",
       "difficulty": "hard",
       "quality_comment": "The question effectively assesses knowledge of gender differences in leadership.",
-      "suggestedLesson": "2-stress-and-emotion",
+      "suggestedLesson": "2-work-motivation",
       "suggestedParagraph": "## The Brain's Emotion Centers: Meet Your Neural Cast",
-      "lessonExcerpt": "This structure helps you remember where and when something emotional happened.",
+      "lessonExcerpt": "Theory #6: Expectancy Theory (VIE Theory) Vroom's expectancy theory says motivation is a calculation based on three factors:",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 4
-    },
-    {
-      "stem": "In educational settings, which of the following non-verbal communication cues is most likely to enhance student learning?",
-      "options": [
-        "Eye contact",
-        "Crossed arms",
-        "Looking at the floor",
-        "Fidgeting"
-      ],
-      "answer": "Eye contact",
-      "explanation": "Eye contact is a powerful non-verbal communication cue that can enhance engagement and learning in educational settings. Crossed arms, looking at the floor, and fidgeting are generally associated with disinterest or anxiety, which can detract from learning.",
-      "kn": "KN10",
-      "kn_explanation": "This question is best aligned with KN10 because it tests Major research-based theories and models of emotion and their application.",
-      "difficulty": "medium",
-      "quality_comment": "The question is relevant and tests knowledge of effective communication in education.",
-      "suggestedLesson": "2-stress-and-emotion",
-      "suggestedParagraph": "## The Stress Response: From Perception to Action",
-      "lessonExcerpt": "This is your immediate response.",
-      "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 5
-    },
-    {
-      "stem": "Which behavior is most likely to be influenced by high achievement motivation?",
-      "options": [
-        "Avoiding challenging tasks to prevent failure",
-        "Seeking out difficult tasks to demonstrate competence",
-        "Preferring tasks with minimal effort",
-        "Choosing tasks based on peer approval"
-      ],
-      "answer": "Seeking out difficult tasks to demonstrate competence",
-      "explanation": "High achievement motivation typically drives individuals to seek out challenging tasks that allow them to demonstrate their competence and skills. The other options reflect avoidance or external validation rather than intrinsic motivation to achieve.",
-      "kn": "KN10",
-      "kn_explanation": "This question is best aligned with KN10 because it tests Major research-based theories and models of emotion and their application.",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively assesses understanding of achievement motivation.",
-      "suggestedLesson": "2-stress-and-emotion",
-      "suggestedParagraph": "## Why Understanding Emotions and Stress Matters for Your EPPP Success",
-      "lessonExcerpt": "Understanding these systems helps you distinguish normal forgetting from pathological memory problems, and it explains why certain therapeutic techniques work better than others.",
-      "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 12
     },
     {
       "stem": "In auditory tasks, what is the primary function of selective attention?",
@@ -416,31 +206,10 @@
       "quality_comment": "The question effectively assesses understanding of a foundational emotion theory.",
       "suggestedLesson": "2-stress-and-emotion",
       "suggestedParagraph": "## The Brain's Emotion Centers: Meet Your Neural Cast",
-      "lessonExcerpt": "The James-Lange theory of emotion states that physiological responses occur first, followed by the emotional experience.",
+      "lessonExcerpt": "James-Lange Theory - The sequence: Stimulus → Physiological response → Emotion.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 21
-    },
-    {
-      "stem": "Which of the following components is NOT part of Lazarus's emotion theory?",
-      "options": [
-        "Cognitive appraisal",
-        "Physiological response",
-        "Emotional regulation",
-        "Coping strategies"
-      ],
-      "answer": "Physiological response",
-      "explanation": "Lazarus's emotion theory emphasizes cognitive appraisal and coping strategies as central components, while physiological responses are not a focus of his model. The other options are integral to understanding how emotions are processed and managed according to Lazarus.",
-      "kn": "KN10",
-      "kn_explanation": "This question is best aligned with KN10 because it tests Major research-based theories and models of emotion and their application.",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively distinguishes between components of Lazarus's theory and common physiological responses.",
-      "suggestedLesson": "2-stress-and-emotion",
-      "suggestedParagraph": "## The Stress Response: From Perception to Action",
-      "lessonExcerpt": "Lazarus's emotion theory includes cognitive appraisal and coping strategies, but not physiological response.",
-      "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 23
     },
     {
       "stem": "In a classic experiment, participants injected with epinephrine were placed in a room with a confederate acting either euphoric or angry. Despite receiving identical injections, participants reported emotions consistent with the confederate's behavior—happy in the euphoria condition and angry in the anger condition. This pattern of results is most consistent with which theory of emotion?",
@@ -458,7 +227,7 @@
       "quality_comment": "High-quality scenario that requires distinguishing four competing theories. Content goes beyond current lesson material — valid EPPP topic, no lesson excerpt available.",
       "suggestedLesson": "2-stress-and-emotion",
       "suggestedParagraph": "## Theories of Emotion",
-      "lessonExcerpt": "",
+      "lessonExcerpt": "Their famous epinephrine studies demonstrated this: participants injected with epinephrine (causing arousal) reported different emotions depending on whether they were with an angry or euphoric confederate.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 3
@@ -476,22 +245,10 @@
       "kn": "KN10",
       "kn_explanation": "This question tests knowledge of a major emotion theory, which belongs to research-based theories and models of emotion in cognitive-affective bases of behavior (KN10).",
       "difficulty": "medium",
-      "quality_comment": "Options present common theories of emotion with plausible descriptions, requiring careful differentiation, making this a good challenge at EPPP level."
-    },
-    {
-      "stem": "Which statement best describes the facial feedback hypothesis related to emotion?",
-      "options": [
-        "Physiological responses to emotional stimuli occur without conscious awareness",
-        "Mimicking facial expressions can induce the corresponding emotion",
-        "Emotions cause facial expressions that then trigger physiological arousal",
-        "Facial expressions are simply outcomes of emotional experiences"
-      ],
-      "answer": "Mimicking facial expressions can induce the corresponding emotion",
-      "explanation": "1. The statement \"Mimicking facial expressions can induce the corresponding emotion\" is correct because it aligns with the facial feedback hypothesis, which posits that our facial expressions can trigger physiological changes that are consistent with specific emotions. Research supporting this hypothesis indicates that when individuals mimic facial expressions associated with certain emotions, they tend to actually experience those emotions, such as feeling happy when smiling.\n\n2. The option \"Physiological responses to emotional stimuli occur without conscious awareness\" is incorrect because it does not specifically relate to the facial feedback hypothesis, which emphasizes the role of facial expressions in emotion generation. The statement \"Emotions cause facial expressions that then trigger physiological arousal\" reverses the causal order proposed by the facial feedback hypothesis, which suggests that facial expressions lead to emotional experiences, not the other way around. Lastly, \"Facial expressions are simply outcomes of emotional experiences\" is wrong because it overlooks the active role that facial expressions play in generating emotions, as posited by the facial feedback hypothesis, rather than just being passive outcomes of emotions.",
-      "kn": "KN10",
-      "kn_explanation": "This question foregrounds a specific proposed mechanism relating physical expression to emotion, integral to the study of emotion in cognitive-affective bases of behavior (KN10).",
-      "difficulty": "easy",
-      "quality_comment": "Clear and concise stem; distractors are reasonable, though one is close, reinforcing the need for careful reading for EPPP candidates."
+      "quality_comment": "Options present common theories of emotion with plausible descriptions, requiring careful differentiation, making this a good challenge at EPPP level.",
+      "lessonExcerpt": "James-Lange Theory - William James and Carl Lange proposed that emotions arise from physiological responses.",
+      "suggestedLesson": "2-stress-and-emotion",
+      "needsReview": false
     },
     {
       "stem": "Which of the following is a core assumption of Schachter and Singer's two-factor theory of emotion?",
@@ -506,52 +263,10 @@
       "kn": "KN10",
       "kn_explanation": "This question tests understanding of a major research-based theory of emotion focusing on cognitive-affective processes, relevant to KN10.",
       "difficulty": "medium",
-      "quality_comment": "Distractors represent other prominent theories, making this an effective question to differentiate among candidates' understanding."
-    },
-    {
-      "stem": "According to Zillman's excitation transfer theory, residual arousal from a prior event can:",
-      "options": [
-        "Decrease the physiological response to a subsequent unrelated event",
-        "Be fully attributed to the original stimulus regardless of context",
-        "Intensify emotional reactions to a later unrelated event due to misattribution of arousal",
-        "Cause a gradual dissipation of emotional intensity over time"
-      ],
-      "answer": "Intensify emotional reactions to a later unrelated event due to misattribution of arousal",
-      "explanation": "1. The correct answer, \"Intensify emotional reactions to a later unrelated event due to misattribution of arousal,\" aligns with Zillman's excitation transfer theory, which posits that residual physiological arousal from one event can enhance the emotional response to a subsequent, unrelated event. This occurs because individuals may misattribute their lingering arousal to the new situation, leading to a heightened emotional reaction that is not solely based on the current context.\n\n2. The first incorrect option, \"Decrease the physiological response to a subsequent unrelated event,\" is wrong because excitation transfer theory suggests that residual arousal actually increases, rather than decreases, emotional responses. The second incorrect option, \"Be fully attributed to the original stimulus regardless of context,\" is incorrect because excitation transfer theory emphasizes that arousal can be misattributed to new stimuli rather than being solely linked to the original event. Lastly, the option \"Cause a gradual dissipation of emotional intensity over time\" is not aligned with the theory, which indicates that residual arousal can persist and even amplify emotional intensity rather than simply fade away.",
-      "kn": "KN10",
-      "kn_explanation": "This question addresses theories linking physiological responses and cognitive interpretations in emotional processes, fitting within KN10.",
-      "difficulty": "hard",
-      "quality_comment": "The stem and options integrate complex theory concepts; distractors are plausible, making this suitably challenging for the EPPP."
-    },
-    {
-      "stem": "In Lazarus’s cognitive appraisal theory, what occurs during the primary appraisal of an event?",
-      "options": [
-        "Evaluating if the event is irrelevant, benign-positive, or stressful and identifying threat, challenge, or harm/loss",
-        "Determining available coping options and their likelihood of success",
-        "Monitoring and changing previous appraisals as new information emerges",
-        "Experiencing physiological arousal in response to the event"
-      ],
-      "answer": "Evaluating if the event is irrelevant, benign-positive, or stressful and identifying threat, challenge, or harm/loss",
-      "explanation": "1. The correct answer, \"Evaluating if the event is irrelevant, benign-positive, or stressful and identifying threat, challenge, or harm/loss,\" aligns with Lazarus’s cognitive appraisal theory, which posits that primary appraisal involves assessing an event's significance. During this stage, individuals determine whether the event is benign, irrelevant, or potentially harmful, and if harmful, they classify it as a threat, challenge, or loss, setting the stage for subsequent emotional responses and coping strategies.\n\n2. The option \"Determining available coping options and their likelihood of success\" is incorrect because this process occurs during secondary appraisal, not primary appraisal. The statement \"Monitoring and changing previous appraisals as new information emerges\" refers to reappraisal, which happens after the initial appraisals have been made, making it an incorrect choice for primary appraisal. Lastly, \"Experiencing physiological arousal in response to the event\" is also incorrect, as Lazarus's theory asserts that physiological arousal follows cognitive appraisal rather than occurring simultaneously or prior to it.",
-      "kn": "KN10",
-      "kn_explanation": "This question probes the cognitive process central to appraisal theory of emotion, a key research-based model under KN10.",
-      "difficulty": "medium",
-      "quality_comment": "The answer options represent different appraisal components; the correct response is clearly distinct and the stem is concisely worded."
-    },
-    {
-      "stem": "LeDoux’s two-system theory of fear distinguishes between a subcortical and a cortical system. What is the primary role of the subcortical system?",
-      "options": [
-        "To process sensory information consciously and generate the feeling of fear",
-        "To quickly react automatically to threatening stimuli and mediate physiological and defensive behaviors",
-        "To regulate hormonal responses via communication with the pituitary gland",
-        "To integrate episodic and semantic memory during fear evaluation"
-      ],
-      "answer": "To quickly react automatically to threatening stimuli and mediate physiological and defensive behaviors",
-      "explanation": "1. The correct answer, \"To quickly react automatically to threatening stimuli and mediate physiological and defensive behaviors,\" accurately reflects the primary role of the subcortical system in LeDoux’s two-system theory. This system, primarily involving the amygdala, responds rapidly and automatically to threatening stimuli, triggering physiological reactions and defensive behaviors without the need for conscious processing. This immediate response is crucial for survival, allowing for quick reactions to potential dangers.\n\n2. The option \"To process sensory information consciously and generate the feeling of fear\" is incorrect because this function is associated with the cortical system, which involves conscious processing and evaluation of sensory information to determine if a stimulus warrants a fear response. The statement \"To regulate hormonal responses via communication with the pituitary gland\" is also wrong, as this role pertains more to the hypothalamus, which regulates hormonal responses in conjunction with the autonomic nervous system. Lastly, the option \"To integrate episodic and semantic memory during fear evaluation\" is inaccurate because the integration of memory types is a function of the cortical system, which processes information and evaluates the emotional significance of stimuli, rather than the subcortical system that reacts automatically.",
-      "kn": "KN10",
-      "kn_explanation": "This question concerns brain mechanisms underlying emotion, specifically fear, which falls under research-based emotion theories in KN10.",
-      "difficulty": "medium",
-      "quality_comment": "Options are similarly detailed and technically accurate, prompting test-takers to carefully recall specifics of neural substrates of fear."
+      "quality_comment": "Distractors represent other prominent theories, making this an effective question to differentiate among candidates' understanding.",
+      "lessonExcerpt": "Schachter-Singer Two-Factor Theory - Stanley Schachter and Jerome Singer proposed that emotion requires both physiological arousal AND cognitive interpretation.",
+      "suggestedLesson": "2-stress-and-emotion",
+      "needsReview": false
     },
     {
       "stem": "Damage to the left hemisphere areas of the cerebral cortex involved in emotion typically results in which reaction?",
@@ -566,7 +281,10 @@
       "kn": "KN10",
       "kn_explanation": "This question is best aligned with KN10 because it tests Major research-based theories and models of emotion and their application.",
       "difficulty": "medium",
-      "quality_comment": "Distractors are plausible but incorrect, making this question effective for assessing neurological knowledge relevant to emotion."
+      "quality_comment": "Distractors are plausible but incorrect, making this question effective for assessing neurological knowledge relevant to emotion.",
+      "lessonExcerpt": "Damage here can be catastrophic. We're talking respiratory failure, coma, or death.",
+      "suggestedLesson": "1-hindbrain-midbrain-forebrain",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best characterizes the resistance stage in Selye’s general adaptation syndrome model of stress?",
@@ -581,37 +299,10 @@
       "kn": "KN10",
       "kn_explanation": "This question is best aligned with KN10 because it tests Major research-based theories and models of emotion and their application.",
       "difficulty": "medium",
-      "quality_comment": "Options reflect distinct stages of stress response, reinforcing key conceptual distinctions; concisely stated for clarity."
-    },
-    {
-      "stem": "McEwen’s allostatic load model explains that prolonged or repeated stress leads to:",
-      "options": [
-        "Enhanced immune system functioning due to continuous adaptation",
-        "Stable physiological states maintained without any adverse health effects",
-        "Wear-and-tear on the body and brain increasing risk of physical and psychiatric disorders",
-        "Immediate physiological exhaustion without adaptation phases"
-      ],
-      "answer": "Wear-and-tear on the body and brain increasing risk of physical and psychiatric disorders",
-      "explanation": "1. The correct answer, \"Wear-and-tear on the body and brain increasing risk of physical and psychiatric disorders,\" aligns with McEwen’s allostatic load model, which posits that chronic stress or repeated episodes of acute stress can lead to an allostatic load. This load results in physiological dysregulation, making individuals more vulnerable to various health issues, including physical ailments and psychiatric disorders such as PTSD and major depressive disorder.\n\n2. The option \"Enhanced immune system functioning due to continuous adaptation\" is incorrect because McEwen’s model indicates that chronic stress can lead to dysregulation of the immune system, not enhancement. The statement \"Stable physiological states maintained without any adverse health effects\" is also wrong, as prolonged allostatic states can have negative consequences on health, contrary to the idea of stability. Lastly, \"Immediate physiological exhaustion without adaptation phases\" is misleading because McEwen’s model describes a process where physiological responses adapt over time before leading to exhaustion, highlighting that adaptation phases do occur.",
-      "kn": "KN10",
-      "kn_explanation": "This question is best aligned with KN10 because it tests Major research-based theories and models of emotion and their application.",
-      "difficulty": "hard",
-      "quality_comment": "The question probes nuanced knowledge of contemporary stress models; distractors are technically accurate statements but do not represent allostatic load consequences."
-    },
-    {
-      "stem": "Which brain structure is primarily involved in recognizing fear in others' facial expressions and attaching emotions to memories?",
-      "options": [
-        "Hippocampus",
-        "Amygdala",
-        "Hypothalamus",
-        "Prefrontal cortex"
-      ],
-      "answer": "Amygdala",
-      "explanation": "1. The correct answer is \"Amygdala\" because it is a key component of the limbic system responsible for recognizing fear in facial expressions and attaching emotions to memories. The amygdala evaluates incoming information to determine its emotional significance and mediates the emotional reaction to it, making it crucial for processing fear-related stimuli.\n\n2. The **Hippocampus** is primarily involved in memory formation and is not directly responsible for recognizing emotions or fear in facial expressions. The **Hypothalamus** regulates the physical signs of emotion through its communication with the autonomic nervous system but does not specifically recognize fear or attach emotions to memories. The **Prefrontal Cortex** is involved in higher cognitive functions, such as decision-making and emotional regulation, rather than the direct recognition of fear in others' expressions.",
-      "kn": "KN10",
-      "kn_explanation": "This question is best aligned with KN10 because it tests Major research-based theories and models of emotion and their application.",
-      "difficulty": "easy",
-      "quality_comment": "Simple, direct question with clear correct answer; distractors are plausible brain areas but do not have the specific three functions listed."
+      "quality_comment": "Options reflect distinct stages of stress response, reinforcing key conceptual distinctions; concisely stated for clarity.",
+      "lessonExcerpt": "James-Lange Theory - The sequence: Stimulus → Physiological response → Emotion.",
+      "suggestedLesson": "2-stress-and-emotion",
+      "needsReview": false
     },
     {
       "stem": "Which statement accurately reflects Cannon-Bard theory of emotion?",
@@ -626,22 +317,10 @@
       "kn": "KN10",
       "kn_explanation": "This question assesses understanding of a major theory of emotion emphasizing simultaneity of arousal and experience, a core topic within KN10.",
       "difficulty": "medium",
-      "quality_comment": "Options contrast major theories well, requiring candidates to carefully distinguish Cannon-Bard theory, suitable for EPPP-level rigor."
-    },
-    {
-      "stem": "In Lazarus's cognitive appraisal model, what differentiates the secondary appraisal from the primary appraisal?",
-      "options": [
-        "Secondary appraisal focuses on evaluating if the event is stressful, primary appraisal evaluates coping options",
-        "Secondary appraisal involves identifying coping options and their effectiveness after an event is appraised as stressful",
-        "Primary appraisal is about monitoring ongoing stress while secondary appraisal identifies emotional reactions",
-        "Primary appraisal assesses physiological responses before cognitive evaluation"
-      ],
-      "answer": "Secondary appraisal involves identifying coping options and their effectiveness after an event is appraised as stressful",
-      "explanation": "1. The correct answer, \"Secondary appraisal involves identifying coping options and their effectiveness after an event is appraised as stressful,\" accurately reflects Lazarus's cognitive appraisal theory. In this model, primary appraisal determines whether an event is perceived as stressful, while secondary appraisal occurs only after this determination, focusing on evaluating potential coping strategies and assessing their likelihood of success in managing the stressor.\n\n2. The first incorrect option, \"Secondary appraisal focuses on evaluating if the event is stressful, primary appraisal evaluates coping options,\" is wrong because primary appraisal is specifically concerned with assessing the nature of the event (whether it is irrelevant, benign-positive, or stressful), while secondary appraisal is about coping strategies. \n\nThe second incorrect option, \"Primary appraisal is about monitoring ongoing stress while secondary appraisal identifies emotional reactions,\" is incorrect because primary appraisal evaluates the initial perception of the event, not ongoing stress, while secondary appraisal does not specifically identify emotional reactions but rather the coping mechanisms available. \n\nThe third incorrect option, \"Primary appraisal assesses physiological responses before cognitive evaluation,\" is misleading as primary appraisal does not involve assessing physiological responses; it focuses solely on the cognitive evaluation of the event's significance before any physiological or emotional responses occur.",
-      "kn": "KN10",
-      "kn_explanation": "This question highlights a specific component of the cognitive appraisal process, essential to theories of emotion appraisal within KN10.",
-      "difficulty": "medium",
-      "quality_comment": "Distractors include reversed or incorrect sequences to test detailed knowledge, making this a precise evaluation item."
+      "quality_comment": "Options contrast major theories well, requiring candidates to carefully distinguish Cannon-Bard theory, suitable for EPPP-level rigor.",
+      "lessonExcerpt": "Their famous epinephrine studies demonstrated this: participants injected with epinephrine (causing arousal) reported different emotions depending on whether they were with an angry or euphoric confederate.",
+      "suggestedLesson": "2-stress-and-emotion",
+      "needsReview": false
     },
     {
       "stem": "Which brain area is implicated in regulating the physical signs of emotion through the autonomic nervous system and pituitary gland communication?",
@@ -656,52 +335,10 @@
       "kn": "KN10",
       "kn_explanation": "This question is best aligned with KN10 because it tests Major research-based theories and models of emotion and their application.",
       "difficulty": "easy",
-      "quality_comment": "Simple and clear question addressing a key brain-emotion connection; distractors are related brain areas but serve to test specificity."
-    },
-    {
-      "stem": "Which of the following best describes the concept of allostasis in McEwen’s allostatic load model of stress?",
-      "options": [
-        "A stable internal state achieved through adaptation to environmental demands",
-        "The cumulative biological burden from chronic stress",
-        "A pathological breakdown of physiological systems due to prolonged stress",
-        "An immediate physiological response to a threatening stimulus"
-      ],
-      "answer": "A stable internal state achieved through adaptation to environmental demands",
-      "explanation": "1. \"A stable internal state achieved through adaptation to environmental demands\" is the correct answer because McEwen’s allostasis refers to the processes that enable the body to maintain stability while adapting to changes in the environment. This concept emphasizes that the body can achieve a balanced state through physiological adjustments, which is integral to coping with stressors effectively.\n\n2. The option \"The cumulative biological burden from chronic stress\" is incorrect because this describes allostatic load, which refers to the wear-and-tear on the body resulting from prolonged stress rather than the adaptive processes of allostasis. \"A pathological breakdown of physiological systems due to prolonged stress\" is wrong because it characterizes allostatic overload, which occurs when the allostatic state is maintained too long, leading to negative health outcomes, rather than the adaptive state itself. Lastly, \"An immediate physiological response to a threatening stimulus\" is incorrect as it pertains to the alarm reaction stage in Selye’s general adaptation syndrome, which is focused on immediate responses rather than the long-term stabilization achieved through allostasis.",
-      "kn": "KN10",
-      "kn_explanation": "This question is best aligned with KN10 because it tests Major research-based theories and models of emotion and their application.",
-      "difficulty": "medium",
-      "quality_comment": "Options contrast related but distinct concepts in stress physiology, making it effective for nuanced understanding at EPPP level."
-    },
-    {
-      "stem": "How does McEwen’s allostatic load model explain individual differences in response to chronic stress?",
-      "options": [
-        "All individuals experience similar physiological breakdowns after prolonged stress",
-        "Genetic makeup, resilience, and perceptions of stressor controllability influence outcomes",
-        "Only prior physical health determines vulnerability to stress-related disorders",
-        "Allostatic load effects are random and unpredictable across individuals"
-      ],
-      "answer": "Genetic makeup, resilience, and perceptions of stressor controllability influence outcomes",
-      "explanation": "1. The correct answer, \"Genetic makeup, resilience, and perceptions of stressor controllability influence outcomes,\" aligns with McEwen’s allostatic load model, which emphasizes that individual differences in responses to chronic stress stem from various factors. According to McEwen, the brain plays a crucial role in determining what is perceived as stressful, and individual genetic factors, levels of resilience, and beliefs about the controllability of stressors all significantly affect how one copes with stress and the resulting physiological and psychological outcomes.\n\n2. The first incorrect option, \"All individuals experience similar physiological breakdowns after prolonged stress,\" is wrong because McEwen’s model asserts that responses to stress vary significantly based on individual differences rather than being uniform across all people. The second incorrect option, \"Only prior physical health determines vulnerability to stress-related disorders,\" is incorrect because McEwen highlights multiple factors, including genetic and psychological aspects, not just physical health, in determining vulnerability to stress. Lastly, the option \"Allostatic load effects are random and unpredictable across individuals\" is incorrect as McEwen's model indicates that while the effects can vary, they are influenced by identifiable factors such as genetic makeup and resilience, rather than being random.",
-      "kn": "KN10",
-      "kn_explanation": "This question is best aligned with KN10 because it tests Major research-based theories and models of emotion and their application.",
-      "difficulty": "medium",
-      "quality_comment": "Distractors are plausible misconceptions, ensuring candidates must understand nuances of the model, making it a valuable EPPP item."
-    },
-    {
-      "stem": "Which of the following illustrates the misattribution of arousal as demonstrated in Schachter and Singer’s experiment?",
-      "options": [
-        "Feeling fear because of increased heart rate caused by running, but attributing it to anger from a confederate’s behavior",
-        "Experiencing happiness immediately after smiling during a mirror task",
-        "Reacting with anger due to residual sexual arousal from a prior unrelated event",
-        "Being aware that physiological arousal is due to caffeine consumption and feeling anxious"
-      ],
-      "answer": "Feeling fear because of increased heart rate caused by running, but attributing it to anger from a confederate’s behavior",
-      "explanation": "Misattribution of arousal occurs when physiological arousal from one source (e.g., running) is incorrectly labeled as being caused by another source (e.g., anger provoked by a confederate), as demonstrated by Schachter and Singer.",
-      "kn": "KN10",
-      "kn_explanation": "This question assesses understanding of the misattribution of arousal phenomenon within two-factor theories of emotion, related to cognitive-affective bases of behavior (KN10).",
-      "difficulty": "medium",
-      "quality_comment": "Scenarios present subtle differences, testing real comprehension of the experimental basis of misattribution, suitable for EPPP."
+      "quality_comment": "Simple and clear question addressing a key brain-emotion connection; distractors are related brain areas but serve to test specificity.",
+      "lessonExcerpt": "James-Lange Theory - William James and Carl Lange proposed that emotions arise from physiological responses.",
+      "suggestedLesson": "2-stress-and-emotion",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best describes the sequence of events according to the James-Lange theory of emotion?",
@@ -721,27 +358,10 @@
       "lock_in_level": "easier",
       "tags": [
         "lock_in_drill"
-      ]
-    },
-    {
-      "stem": "In a situation where an individual feels fear after noticing their heart racing, which theory of emotion best explains this experience?",
-      "options": [
-        "Cannon-Bard theory",
-        "James-Lange theory",
-        "Schachter-Singer theory",
-        "Lazarus theory"
       ],
-      "answer": "James-Lange theory",
-      "explanation": "The individual's experience of fear is based on the physiological response (heart racing), which aligns with the James-Lange theory that emphasizes physiological reactions preceding emotional experiences.",
-      "difficulty": "hard",
-      "kn": "KN10",
-      "kn_explanation": "This question tests knowledge of a major emotion theory, which belongs to research-based theories and models of emotion in cognitive-affective bases of behavior (KN10).",
-      "quality_comment": "This question challenges the test-taker to apply the James-Lange theory to a specific scenario, enhancing comprehension.",
-      "is_lock_in_drill": true,
-      "lock_in_level": "harder",
-      "tags": [
-        "lock_in_drill"
-      ]
+      "lessonExcerpt": "Schachter-Singer Two-Factor Theory - Stanley Schachter and Jerome Singer proposed that emotion requires both physiological arousal AND cognitive interpretation.",
+      "suggestedLesson": "2-stress-and-emotion",
+      "needsReview": false
     }
   ]
 }

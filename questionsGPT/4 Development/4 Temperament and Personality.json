@@ -16,7 +16,7 @@
       "quality_comment": "Strong clinical vignette that requires distinguishing foreclosure from achievement based on the absence of exploration.",
       "suggestedLesson": "4-temperament-and-personality",
       "suggestedParagraph": "## Marcia's Identity Statuses",
-      "lessonExcerpt": "Identity Foreclosure | No | Yes | Committed without exploration. Accepted parents'/authority's values",
+      "lessonExcerpt": "| Identity Foreclosure | No | Yes | Committed without exploration. Accepted parents'/authority's values |",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 1
@@ -98,9 +98,9 @@
       "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
       "difficulty": "medium",
       "quality_comment": "Practical clinical scenario with clear developmental rationale. The lesson references Freud's anal stage (1-3 years) involving toilet training.",
-      "suggestedLesson": "4-temperament-and-personality",
+      "suggestedLesson": "4-cognitive-development",
       "suggestedParagraph": "### Freud's Psychosexual Stages",
-      "lessonExcerpt": "1-3 years | Anal | Toilet training, control | Obsessiveness or messiness",
+      "lessonExcerpt": "Six-month-olds remember information for about 24 hours; 20-month-olds for up to 12 months. But **childhood amnesia** blocks early memories.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 15
@@ -148,48 +148,6 @@
       "inspirationIndex": 9
     },
     {
-      "stem": "Which of the following is a source of resilience that can help individuals overcome adversity?",
-      "options": [
-        "Social support",
-        "Genetic predisposition",
-        "Financial resources",
-        "All of the above"
-      ],
-      "answer": "Social support",
-      "explanation": "The correct answer is social support, as it is a key source of resilience that helps individuals cope with adversity. While genetic predisposition and financial resources can play roles, they are not as universally impactful as social support in fostering resilience.",
-      "kn": "KN27",
-      "kn_explanation": "This question is best aligned with KN27 because it tests Risk and protective factors that may impact a developmental course (e.g., nutrition, prenatal care, health care, social support, socioeconomic status, abuse, victimization, and resiliency).",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively assesses understanding of resilience factors.",
-      "suggestedLesson": "4-temperament-and-personality",
-      "suggestedParagraph": "## Temperament: The Raw Material of Personality",
-      "lessonExcerpt": "Social support is a crucial source of resilience in overcoming adversity.",
-      "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 19
-    },
-    {
-      "stem": "In the context of gender identity theories, what is the sequence of gender role development according to social learning theory?",
-      "options": [
-        "Observation, reinforcement, imitation",
-        "Imitation, reinforcement, observation",
-        "Reinforcement, observation, imitation",
-        "Observation, imitation, reinforcement"
-      ],
-      "answer": "Observation, imitation, reinforcement",
-      "explanation": "Social learning theory posits that children learn gender roles through observing others, imitating their behaviors, and receiving reinforcement for gender-appropriate behaviors. The other sequences misrepresent the order of these processes.",
-      "kn": "KN24",
-      "kn_explanation": "This question is best aligned with KN24 because it tests Influence of diverse identities on development.",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively assesses understanding of social learning theory in the context of gender role development.",
-      "suggestedLesson": "4-temperament-and-personality",
-      "suggestedParagraph": "## Personality Development: Classical Theories",
-      "lessonExcerpt": "Children learn gender roles through observing others, imitating their behaviors, and receiving reinforcement.",
-      "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 17
-    },
-    {
       "stem": "Which of the following statements best describes the differences in parenting styles based on gender?",
       "options": [
         "Mothers are generally more permissive than fathers",
@@ -205,7 +163,7 @@
       "quality_comment": "The question effectively assesses understanding of gender differences in parenting.",
       "suggestedLesson": "4-temperament-and-personality",
       "suggestedParagraph": "## Why Understanding Temperament and Personality Matters for Your EPPP",
-      "lessonExcerpt": "Understanding temperament and personality development gives you the framework to predict, explain, and intervene effectively throughout the lifespan.",
+      "lessonExcerpt": "Proposes gender identity develops through: Observing and imitating same-gender models; Differential reinforcement (praise for gender-appropriate behavior)",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 4
@@ -224,54 +182,12 @@
       "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
       "difficulty": "hard",
       "quality_comment": "The question effectively assesses knowledge of the complexities involved in antisocial behavior development.",
-      "suggestedLesson": "4-temperament-and-personality",
+      "suggestedLesson": "5-acting-out",
       "suggestedParagraph": "## Personality Development: Classical Theories",
-      "lessonExcerpt": "Antisocial behavior develops through a combination of biological, psychological, and social factors.",
+      "lessonExcerpt": "Psychologist Terrie Moffitt (1993) proposed an influential framework distinguishing two types of antisocial behavior: Life-Course-Persistent Type... While parenting factors contribute, the etiology is multifactorial, including genetic, neurobiological, and environmental influences.",
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 16
-    },
-    {
-      "stem": "How does ADHD typically manifest across the lifespan according to developmental theories?",
-      "options": [
-        "It resolves completely by adulthood.",
-        "Symptoms become less severe with age.",
-        "It remains consistent but may change in presentation.",
-        "It only affects children and adolescents."
-      ],
-      "answer": "It remains consistent but may change in presentation.",
-      "explanation": "The correct answer reflects that ADHD symptoms can persist into adulthood but may manifest differently as individuals age. The other options are incorrect as ADHD does not resolve completely, and while symptoms may become less disruptive, they do not disappear.",
-      "kn": "KN21",
-      "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively tests knowledge of ADHD across the lifespan.",
-      "suggestedLesson": "4-temperament-and-personality",
-      "suggestedParagraph": "## Temperament: The Raw Material of Personality",
-      "lessonExcerpt": "ADHD remains consistent but may change in presentation across the lifespan.",
-      "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 15
-    },
-    {
-      "stem": "What is a significant factor contributing to the comorbidity of mental disorders in adulthood?",
-      "options": [
-        "Genetic predisposition",
-        "Environmental stressors",
-        "Lack of social support",
-        "All of the above"
-      ],
-      "answer": "All of the above",
-      "explanation": "The correct answer is 'All of the above' as each factor can contribute to the comorbidity of mental disorders. Genetic predisposition can increase vulnerability, environmental stressors can trigger symptoms, and lack of social support can exacerbate mental health issues.",
-      "kn": "KN21",
-      "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively tests knowledge of factors contributing to mental health comorbidity.",
-      "suggestedLesson": "4-temperament-and-personality",
-      "suggestedParagraph": "## Personality Development: Classical Theories",
-      "lessonExcerpt": "Genetic predisposition, environmental stressors, and lack of social support are significant factors in the comorbidity of mental disorders.",
-      "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 19
     },
     {
       "stem": "Which of the following statements best reflects the concept of trait theory in personality psychology?",
@@ -293,111 +209,6 @@
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 21
-    },
-    {
-      "stem": "A 17-year-old reports that she has always planned to become a nurse, just like her mother and aunt, and has never seriously entertained any other career path. She fully endorses her family's religious and political values without ever questioning them. When asked if she ever explored alternatives, she states, 'I just knew what I was supposed to do.' According to Marcia's theory of identity development, this adolescent is best characterized as being in which identity status?",
-      "options": [
-        "Identity diffusion, because she has made no deliberate commitment to any identity",
-        "Identity moratorium, because she is deferring her decision until she feels ready",
-        "Identity foreclosure, because she has committed to an identity without engaging in personal exploration",
-        "Identity achievement, because she has a clear, stable sense of her future direction"
-      ],
-      "answer": "Identity foreclosure, because she has committed to an identity without engaging in personal exploration",
-      "explanation": "Identity foreclosure, in Marcia's framework, is defined by commitment to values, roles, or goals—typically inherited from parents or authority figures—without having undergone a period of active questioning or exploration. This adolescent demonstrates foreclosure through her unexamined adoption of her family's occupational and ideological positions. Identity diffusion involves neither exploration nor commitment. Moratorium involves active, ongoing exploration without yet committing. Achievement requires both prior exploration and subsequent commitment. The absence of any exploratory process is the defining criterion that distinguishes foreclosure from achievement.",
-      "kn": "KN21",
-      "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
-      "difficulty": "medium",
-      "quality_comment": "Clear clinical vignette with strong distractors that require distinguishing all four Marcia statuses. Good EPPP-level difficulty.",
-      "suggestedLesson": "4-temperament-and-personality",
-      "suggestedParagraph": "## Personality Development: Classical Theories",
-      "lessonExcerpt": "Lesson content does not explicitly cover Marcia's identity statuses in the provided excerpts; this question is based on standard EPPP domain knowledge for identity development.",
-      "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 0
-    },
-    {
-      "stem": "In contrast to traditional psychodynamic and Eriksonian frameworks that conceptualize healthy development as culminating in individuation and autonomous selfhood, the Stone Center's self-in-relation theory proposes a fundamentally different model of female identity development. According to this theory, psychological health for women is best characterized by:",
-      "options": [
-        "Successfully separating from early attachment figures to form a bounded, autonomous, and individuated self",
-        "Progressing through a hierarchical sequence of psychosexual stages culminating in mature relational capacity",
-        "Growth through connection, wherein the self develops and is maintained through mutual, empathic relational engagement rather than through separation",
-        "Achieving identity via a moratorium period of exploration followed by commitment to stable occupational and ideological roles"
-      ],
-      "answer": "Growth through connection, wherein the self develops and is maintained through mutual, empathic relational engagement rather than through separation",
-      "explanation": "The Stone Center (Jordan, Miller, Stiver, Surrey) self-in-relation theory challenges the traditional Western developmental emphasis on separation-individuation as the hallmark of psychological maturity. Instead, it proposes that for women, the self is organized around and grows through connection rather than separation. Healthy development is defined by the capacity for mutually empathic, growth-fostering relationships. The model argues that applying separation-based developmental norms to women pathologizes relational orientation. Options A and B reflect traditional frameworks the Stone Center critiques. Option D describes Marcia's identity achievement status, which is a different theoretical tradition.",
-      "kn": "KN21",
-      "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
-      "difficulty": "hard",
-      "quality_comment": "Doctoral-level question requiring knowledge of feminist alternatives to mainstream developmental theory. Tests conceptual contrast, which is high-yield EPPP content.",
-      "suggestedLesson": "4-temperament-and-personality",
-      "suggestedParagraph": "## Personality Development: Classical Theories",
-      "lessonExcerpt": "Lesson content does not explicitly address the Stone Center self-in-relation theory in the provided excerpts. Question is based on standard EPPP domain knowledge for feminist developmental theory.",
-      "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 3
-    },
-    {
-      "stem": "A pediatric psychologist is consulting on the case of a 15-year-old with Type 1 diabetes who has been skipping insulin doses and refusing to check her blood glucose, telling her parents, 'Stop controlling my life—you don't own me.' She monitors her glucose regularly at school when peers are not present. From a developmental perspective, the psychologist would most accurately conceptualize this pattern as:",
-      "options": [
-        "A primary manifestation of illness denial that indicates a need for immediate psychiatric assessment",
-        "A normative expression of adolescent autonomy striving that comes into direct conflict with the self-management demands of chronic illness",
-        "Evidence of oppositional defiant disorder requiring behavioral intervention prior to medical management",
-        "A conditioned avoidance response to pain associated with blood glucose monitoring"
-      ],
-      "answer": "A normative expression of adolescent autonomy striving that comes into direct conflict with the self-management demands of chronic illness",
-      "explanation": "Adolescence is characterized by normative developmental pushes for autonomy, separation from parental authority, and identity formation. Chronic illness management typically requires ongoing parental monitoring and adherence behaviors that can feel antithetical to these developmental imperatives. Adolescents with chronic conditions frequently show reduced compliance precisely because the illness management routine becomes a battleground for autonomy. The fact that the adolescent monitors her glucose at school when peers are not present (where parental authority is absent) supports this interpretation over pathological explanations. This is not evidence of oppositional defiant disorder (which requires a pervasive, cross-situational pattern), illness denial (she monitors in private), or a simple avoidance response.",
-      "kn": "KN21",
-      "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
-      "difficulty": "hard",
-      "quality_comment": "High-quality clinical reasoning question that requires integrating developmental theory with applied health psychology. Distractors are plausible clinical alternatives that require ruling out.",
-      "suggestedLesson": "4-temperament-and-personality",
-      "suggestedParagraph": "## Temperament: The Raw Material of Personality",
-      "lessonExcerpt": "Lesson content does not explicitly address chronic illness management and adolescent autonomy in the provided excerpts. Question is based on standard EPPP domain knowledge for chronic illness in adolescence.",
-      "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 9
-    },
-    {
-      "stem": "A 2-year-old insists on trying to buckle his own car seat, becoming frustrated and crying when his father intervenes to help him. According to Erikson's theory of psychosocial development, this child is most centrally navigating which stage?",
-      "options": [
-        "Trust vs. Mistrust, characterized by dependence on caregiver reliability",
-        "Autonomy vs. Shame and Doubt, characterized by striving for self-control and independence",
-        "Initiative vs. Guilt, characterized by purposeful goal-directed behavior",
-        "Industry vs. Inferiority, characterized by mastery of culturally valued skills"
-      ],
-      "answer": "Autonomy vs. Shame and Doubt, characterized by striving for self-control and independence",
-      "explanation": "According to Erikson's psychosocial theory, toddlerhood (approximately ages 1-3) corresponds to the Autonomy vs. Shame and Doubt stage. The core developmental task is the child's push to assert self-control and independence over their own actions and body. The toddler's insistence on performing the task himself — and frustration when that independence is thwarted — directly illustrates this stage's central conflict. Trust vs. Mistrust (A) is the infancy stage (0-1 year) centered on caregiver consistency. Initiative vs. Guilt (C) emerges during preschool years (3-6) when children begin taking self-directed purposeful action. Industry vs. Inferiority (D) characterizes the school-age years (6-12) focused on skill mastery and peer comparison.",
-      "kn": "KN21",
-      "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
-      "difficulty": "medium",
-      "quality_comment": "Well-grounded behavioral vignette testing stage identification; distractors are appropriately adjacent stages.",
-      "suggestedLesson": "4-temperament-and-personality",
-      "suggestedParagraph": "### Erikson's Psychosocial Stages",
-      "lessonExcerpt": "The exam expects you to know two foundational stage theories cold: Freud's and Erikson's.",
-      "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 11
-    },
-    {
-      "stem": "A geriatric psychologist assessing a 74-year-old widowed woman notes that she reports significantly reduced sexual activity compared to her 60s. The research literature on sexuality in later life most strongly suggests that the primary factor accounting for this decline is:",
-      "options": [
-        "Declining estrogen levels resulting in reduced sexual desire and physical discomfort",
-        "Internalized cultural attitudes that define sexual activity as inappropriate for older adults",
-        "The absence of an available and interested partner, most commonly due to spousal loss",
-        "Decreased tactile sensitivity and genital blood flow associated with normal vascular aging"
-      ],
-      "answer": "The absence of an available and interested partner, most commonly due to spousal loss",
-      "explanation": "Research on sexual activity in older adults consistently identifies partner availability as the single strongest predictor of sexual activity frequency, particularly among older women. Widowhood, partner illness, or partner functional impairment are the primary reasons older adults — especially women, who outlive men at higher rates — report reduced or absent sexual activity. While physiological factors such as estrogen decline (A) and vascular changes (D) affect sexual function and comfort, they do not as strongly predict frequency of sexual activity as partner availability does. Cultural attitudes (B) have some influence but are not identified as the primary predictor in the empirical literature. This finding has direct clinical implications for how practitioners assess and address sexual health concerns in older adult populations.",
-      "kn": "KN26",
-      "kn_explanation": "This question is best aligned with KN26 because it tests Life events that can influence the course of development across the lifespan.",
-      "difficulty": "medium",
-      "quality_comment": "Important clinical question that tests a counterintuitive finding — partner availability over physiology — with plausible physiological distractors.",
-      "suggestedLesson": "4-temperament-and-personality",
-      "suggestedParagraph": "## Cognitive Development",
-      "lessonExcerpt": "N/A — sexuality in later life is not covered in the provided lesson excerpts.",
-      "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 17
     },
     {
       "stem": "According to Freud's theory of psychosexual development, the Oedipus complex in boys is resolved primarily through which psychological mechanism?",
@@ -433,37 +244,10 @@
       "kn": "KN21",
       "kn_explanation": "This question pertains to temperament development in early childhood, a key part of normal growth and development across the lifespan (KN21).",
       "difficulty": "medium",
-      "quality_comment": "The distractors are plausible temperament profiles, but only one correctly matches the slow-to-warm-up description, making it a clear but challenging question."
-    },
-    {
-      "stem": "What is the main focus of Rothbart's definition of temperament?",
-      "options": [
-        "Behavioral style categorized into three types",
-        "Constitutional differences in reactivity and self-regulation",
-        "Tendency to withdraw from unfamiliar situations",
-        "Biological maturation without environmental influence"
-      ],
-      "answer": "Constitutional differences in reactivity and self-regulation",
-      "explanation": "1. The correct answer, \"Constitutional differences in reactivity and self-regulation,\" aligns with Rothbart's definition of temperament, which emphasizes the inherent biological makeup of individuals that influences their reactivity to stimuli and their ability to self-regulate those reactions. Rothbart describes temperament as involving two key components: reactivity, which encompasses the intensity and duration of responses to stimuli, and self-regulation, which refers to the processes that help manage those responses effectively.\n\n2. The first incorrect option, \"Behavioral style categorized into three types,\" is wrong because it refers to Thomas and Chess's classification of temperament, which categorizes children into easy, difficult, and slow-to-warm-up types, rather than Rothbart's focus on reactivity and self-regulation. The second incorrect option, \"Tendency to withdraw from unfamiliar situations,\" is incorrect as it specifically describes Kagan's concept of behavioral inhibition, not Rothbart's broader definition of temperament. Lastly, the option \"Biological maturation without environmental influence\" is incorrect because Rothbart acknowledges that temperament is influenced by both heredity and environmental experiences, contrary to the suggestion that it is solely determined by biological maturation.",
-      "kn": "KN21",
-      "kn_explanation": "This question addresses temperament as a biologically influenced dimension of development, under the umbrella of growth and lifespan development (KN21).",
-      "difficulty": "medium",
-      "quality_comment": "The options reflect common temperament concepts; the correct answer requires specific knowledge of Rothbart's model, providing appropriate challenge."
-    },
-    {
-      "stem": "In Erikson’s psychosocial stages of development, what virtue is associated with successfully resolving the conflict in the stage of 'autonomy vs. shame and doubt'?",
-      "options": [
-        "Hope",
-        "Will",
-        "Purpose",
-        "Competence"
-      ],
-      "answer": "Will",
-      "explanation": "1. \"Will\" is the correct answer because, according to Erikson’s psychosocial stages of development, the conflict of 'autonomy vs. shame and doubt' occurs during the ages of 1 to 3 years. Successfully resolving this conflict leads to the virtue of will, which reflects a child's developing sense of independence and the ability to make choices confidently.\n\n2. The incorrect options are as follows:\n   - **Hope:** This virtue is associated with the successful resolution of the 'trust vs. mistrust' stage, which occurs from birth to 1 year, focusing on the infant's reliance on caregivers.\n   - **Purpose:** This virtue arises from the resolution of the 'initiative vs. guilt' stage, which occurs between ages 3 and 6, emphasizing a child's ability to take initiative and assert control over their environment.\n   - **Competence:** This virtue is linked to the 'industry vs. inferiority' stage, which spans ages 6 to 12, where children develop a sense of competence through mastering skills and tasks.",
-      "kn": "KN23",
-      "kn_explanation": "This question tests knowledge of Erikson’s stages, a major research-based developmental theory, fitting under theories and models of development (KN23).",
-      "difficulty": "easy",
-      "quality_comment": "The question is clear and straightforward, with options all representing virtues from Erikson’s stages that might reasonably confuse those less familiar."
+      "quality_comment": "The distractors are plausible temperament profiles, but only one correctly matches the slow-to-warm-up description, making it a clear but challenging question.",
+      "lessonExcerpt": "| Identity Foreclosure | No | Yes | Committed without exploration. Accepted parents'/authority's values |",
+      "suggestedLesson": "4-temperament-and-personality",
+      "needsReview": false
     },
     {
       "stem": "Which parenting style is characterized by high demandingness and low responsiveness, often leading to children who are insecure, moody, and have poorer social skills?",
@@ -478,22 +262,10 @@
       "kn": "KN25",
       "kn_explanation": "This question evaluates knowledge on parenting styles and their impact on child development, a core topic in family development and functioning (KN25).",
       "difficulty": "easy",
-      "quality_comment": "The four styles are well-known and clearly distinct; the distractors are reasonable but the correct answer is direct, suitable for foundational knowledge testing."
-    },
-    {
-      "stem": "Which of the following best describes the pattern of mean-level change in the 'Big Five' personality traits during adulthood?",
-      "options": [
-        "Neuroticism and openness increase; agreeableness and conscientiousness decrease",
-        "Neuroticism decreases; agreeableness and conscientiousness increase; extraversion remains stable or decreases slightly",
-        "All five traits remain highly stable with no significant mean-level changes",
-        "Extraversion and neuroticism increase; openness and conscientiousness decrease"
-      ],
-      "answer": "Neuroticism decreases; agreeableness and conscientiousness increase; extraversion remains stable or decreases slightly",
-      "explanation": "1. The correct answer, \"Neuroticism decreases; agreeableness and conscientiousness increase; extraversion remains stable or decreases slightly,\" accurately reflects the findings from studies on personality traits during adulthood. Research indicates that neuroticism tends to decrease as individuals age, while agreeableness and conscientiousness show a tendency to increase. Additionally, extraversion remains relatively stable or may experience a slight decrease, aligning with the observed patterns of mean-level change in personality traits among adults (McCrae et al., 2000; Soto et al., 2011).\n\n2. The first incorrect option, \"Neuroticism and openness increase; agreeableness and conscientiousness decrease,\" is wrong because it contradicts the established finding that neuroticism decreases and that agreeableness and conscientiousness increase during adulthood. The second incorrect option, \"All five traits remain highly stable with no significant mean-level changes,\" is incorrect as it overlooks the predictable mean-level changes observed in specific traits like neuroticism, agreeableness, and conscientiousness. Lastly, the third incorrect option, \"Extraversion and neuroticism increase; openness and conscientiousness decrease,\" is inaccurate because it misrepresents the trends that show neuroticism decreasing and does not reflect the increases in conscientiousness and agreeableness that occur during adulthood.",
-      "kn": "KN21",
-      "kn_explanation": "This question tests understanding of personality development and change, a key component of normal lifespan development (KN21).",
-      "difficulty": "medium",
-      "quality_comment": "Options are balanced and reflect plausible trait patterns, requiring specific recall of personality developmental trends, appropriate for medium difficulty."
+      "quality_comment": "The four styles are well-known and clearly distinct; the distractors are reasonable but the correct answer is direct, suitable for foundational knowledge testing.",
+      "lessonExcerpt": "Authoritarian (High Demand + Low Response). These parents have many strict rules, emphasize control and authority, use harsh punishment, and show little warmth.",
+      "suggestedLesson": "4-temperament-and-personality",
+      "needsReview": false
     },
     {
       "stem": "At what age do most children pass the mirror self-recognition test, indicating self-awareness?",
@@ -508,7 +280,10 @@
       "kn": "KN21",
       "kn_explanation": "Understanding developmental milestones such as self-awareness aligns with growth and lifespan development knowledge (KN21).",
       "difficulty": "easy",
-      "quality_comment": "Dates given are plausible developmental intervals, making this a well-constructed question for foundational knowledge assessment."
+      "quality_comment": "Dates given are plausible developmental intervals, making this a well-constructed question for foundational knowledge assessment.",
+      "lessonExcerpt": "By 18-24 months, most children pass the mirror self-recognition test (touching their own nose when they see a red dot on it in the mirror, not the mirror image).",
+      "suggestedLesson": "4-temperament-and-personality",
+      "needsReview": false
     },
     {
       "stem": "According to Marcia’s model of adolescent identity development, which identity status is characterized by having experienced a crisis but lacking commitment?",
@@ -523,7 +298,10 @@
       "kn": "KN21",
       "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
       "difficulty": "medium",
-      "quality_comment": "Options represent distinct stages with nuanced differences; distractors are plausible, requiring careful knowledge of Marcia’s model."
+      "quality_comment": "Options represent distinct stages with nuanced differences; distractors are plausible, requiring careful knowledge of Marcia’s model.",
+      "lessonExcerpt": "Slow-to-warm-up children (about 15% of infants): - Mildly negative mood initially - Need time to adjust to new people and situations - Low activity levels - Moderately regular routines",
+      "suggestedLesson": "4-temperament-and-personality",
+      "needsReview": false
     },
     {
       "stem": "Which of the following theories proposes that children organize gender-related experiences into schemas that guide their perceptions and behavior?",
@@ -538,7 +316,10 @@
       "kn": "KN23",
       "kn_explanation": "This question tests understanding of gender identity development theories, a topic within lifespan development theories/models (KN23).",
       "difficulty": "medium",
-      "quality_comment": "Each option represents a credible theory on gender identity, making distractors plausible and the item an effective test of detailed knowledge."
+      "quality_comment": "Each option represents a credible theory on gender identity, making distractors plausible and the item an effective test of detailed knowledge.",
+      "lessonExcerpt": "Rothbart's model focuses on two core components of temperament: Reactivity ... Self-regulation refers to processes that control reactivity.",
+      "suggestedLesson": "4-temperament-and-personality",
+      "needsReview": false
     },
     {
       "stem": "Which personality trait, according to Costa, Terracciano, and McCrae's research, do women tend to score higher on consistently across cultures?",
@@ -553,7 +334,10 @@
       "kn": "KN21",
       "kn_explanation": "This question focuses on cross-cultural personality trait differences, pertinent to personality development and individual differences within lifespan development (KN21).",
       "difficulty": "medium",
-      "quality_comment": "The options are traits commonly investigated in personality research, making it a solid question for assessing knowledge of sex differences in personality."
+      "quality_comment": "The options are traits commonly investigated in personality research, making it a solid question for assessing knowledge of sex differences in personality.",
+      "lessonExcerpt": "| 1-3 years | Autonomy vs. Shame/Doubt | Will |",
+      "suggestedLesson": "4-temperament-and-personality",
+      "needsReview": false
     },
     {
       "stem": "What does Thomas and Chess’s goodness-of-fit model primarily emphasize regarding child development?",
@@ -568,7 +352,10 @@
       "kn": "KN21",
       "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
       "difficulty": "medium",
-      "quality_comment": "Distractors include common misconceptions, ensuring that only those familiar with the model select the correct conceptual emphasis."
+      "quality_comment": "Distractors include common misconceptions, ensuring that only those familiar with the model select the correct conceptual emphasis.",
+      "lessonExcerpt": "Authoritarian (High Demand + Low Response). These parents have many strict rules, emphasize control and authority, use harsh punishment, and show little warmth.",
+      "suggestedLesson": "4-temperament-and-personality",
+      "needsReview": false
     },
     {
       "stem": "Which parenting style is most strongly associated with juvenile delinquency according to research by Tapia et al. (2018)?",
@@ -583,7 +370,10 @@
       "kn": "KN25",
       "kn_explanation": "Understanding the effects of parenting styles on child outcomes including delinquency is critical to family influences on development (KN25).",
       "difficulty": "medium",
-      "quality_comment": "The distractors are common parenting styles with known associations to problem behavior, making this question a realistic assessment of specific research findings."
+      "quality_comment": "The distractors are common parenting styles with known associations to problem behavior, making this question a realistic assessment of specific research findings.",
+      "lessonExcerpt": "Mean-level change: ... Neuroticism decreases ... Extraversion and openness: Remain stable or decrease slightly ... Agreeableness increases ... Conscientiousness increases",
+      "suggestedLesson": "4-temperament-and-personality",
+      "needsReview": false
     },
     {
       "stem": "In Rothbart’s temperament model, what does 'effortful control' refer to?",
@@ -598,7 +388,10 @@
       "kn": "KN21",
       "kn_explanation": "This question concerns individual differences in temperament self-regulation, relevant to growth and lifespan development topics (KN21).",
       "difficulty": "medium",
-      "quality_comment": "Answer choices align conceptually with temperament dimensions, requiring knowledge of this specific self-regulatory construct."
+      "quality_comment": "Answer choices align conceptually with temperament dimensions, requiring knowledge of this specific self-regulatory construct.",
+      "lessonExcerpt": "By 18-24 months, most children pass the mirror self-recognition test (touching their own nose when they see a red dot on it in the mirror, not the mirror image).",
+      "suggestedLesson": "4-temperament-and-personality",
+      "needsReview": false
     },
     {
       "stem": "Which of the following describes the pattern of gender typicality and contentedness according to Egan and Perry’s multidimensional model and their relation to psychological adjustment?",
@@ -613,7 +406,10 @@
       "kn": "KN21",
       "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
       "difficulty": "hard",
-      "quality_comment": "The options are complex and close in meaning, suitable for testing nuanced understanding at a higher difficulty level."
+      "quality_comment": "The options are complex and close in meaning, suitable for testing nuanced understanding at a higher difficulty level.",
+      "lessonExcerpt": "| Identity Moratorium | Yes | No | Actively exploring but not yet committed |",
+      "suggestedLesson": "4-temperament-and-personality",
+      "needsReview": false
     },
     {
       "stem": "Which temperamental characteristic did Kagan focus on, characterized by withdrawal and negative affect toward unfamiliar people and situations?",
@@ -628,7 +424,10 @@
       "kn": "KN21",
       "kn_explanation": "This question targets a specific temperament trait linked to emotional regulation and risk for psychopathology, falling under socioemotional development in growth and lifespan development (KN21).",
       "difficulty": "medium",
-      "quality_comment": "The distractors are other temperament concepts, making the correct answer specific and requiring targeted knowledge of Kagan's focus."
+      "quality_comment": "The distractors are other temperament concepts, making the correct answer specific and requiring targeted knowledge of Kagan's focus.",
+      "lessonExcerpt": "Bem's Gender Schema Theory. Combines cognitive and social learning approaches. Children develop gender schemas. Mental frameworks organizing information about what's appropriate for each gender.",
+      "suggestedLesson": "4-temperament-and-personality",
+      "needsReview": false
     },
     {
       "stem": "Which characteristic is most typical of children raised by permissive parents?",
@@ -643,22 +442,10 @@
       "kn": "KN25",
       "kn_explanation": "This question focuses on the association between parenting styles and child personality/behavior outcomes, a critical topic in family influences on development (KN25).",
       "difficulty": "medium",
-      "quality_comment": "Options reflect outcomes of different parenting styles, requiring knowledge of specific behavioral correlates of permissive parenting."
-    },
-    {
-      "stem": "According to Jean Piaget's influence on Kohlberg, what cognitive ability is crucial for children to achieve gender constancy?",
-      "options": [
-        "Conservation skills",
-        "Object permanence",
-        "Egocentrism",
-        "Abstract reasoning"
-      ],
-      "answer": "Conservation skills",
-      "explanation": "Conservation skills, typically developing around ages 6-7, enable children to understand that gender remains constant despite changes in appearance or behavior, forming the basis of gender constancy in Kohlberg’s theory.",
-      "kn": "KN23",
-      "kn_explanation": "This question integrates cognitive developmental theory with gender identity development, relevant to theories of socioemotional growth within lifespan development (KN23).",
-      "difficulty": "medium",
-      "quality_comment": "The options are important Piagetian concepts, making this a good test of linking cognitive and gender identity development theories."
+      "quality_comment": "Options reflect outcomes of different parenting styles, requiring knowledge of specific behavioral correlates of permissive parenting.",
+      "lessonExcerpt": "Women score higher on: Neuroticism, agreeableness, warmth, openness to feelings",
+      "suggestedLesson": "4-temperament-and-personality",
+      "needsReview": false
     },
     {
       "stem": "Which of the following characteristics is most likely associated with a child who is categorized as 'slow-to-warm-up' in temperament?",
@@ -678,7 +465,10 @@
       "lock_in_level": "easier",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "Here's what makes Thomas and Chess clinically useful: their goodness-of-fit model. This proposes that outcomes depend on the match between a child's temperament and environmental demands.",
+      "suggestedLesson": "4-temperament-and-personality",
+      "needsReview": false
     },
     {
       "stem": "In the context of temperament, which of the following behaviors would most likely be exhibited by a child identified as 'slow-to-warm-up'?",
@@ -698,7 +488,10 @@
       "lock_in_level": "harder",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "Uninvolved/Neglectful (Low Demand + Low Response) ... Most strongly associated with juvenile delinquency among all parenting styles.",
+      "suggestedLesson": "4-temperament-and-personality",
+      "needsReview": false
     }
   ]
 }

@@ -1,111 +1,6 @@
 {
   "questions": [
     {
-      "stem": "A psychologist consulting with an organization wants to help mid-career professionals understand why they consistently gravitate toward certain types of work roles despite receiving attractive offers in other areas. Which theoretical framework would be MOST useful for explaining why these professionals resist career changes that conflict with their core professional self-concept?",
-      "options": [
-        "Holland's RIASEC model of vocational interests",
-        "Schein's career anchor theory",
-        "Super's life-span, life-space theory",
-        "Dawis and Lofquist's theory of work adjustment"
-      ],
-      "answer": "Schein's career anchor theory",
-      "explanation": "Schein's career anchor theory proposes that a person's self-concept acts as a stabilizing force (anchor) that determines future occupational decisions. This explains why professionals resist changes that conflict with their core career identity. Holland's RIASEC model classifies interests into six types but doesn't specifically address why people resist career changes. Super's theory focuses on developmental stages across the lifespan. The theory of work adjustment focuses on person-environment correspondence and satisfaction, not the anchoring function of self-concept.",
-      "kn": "KN34",
-      "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
-      "difficulty": "hard",
-      "quality_comment": "Tests understanding of Schein's unique contribution vs. other career theories; the scenario requires distinguishing the anchoring self-concept mechanism from general interest classification",
-      "suggestedLesson": "5-career-interests",
-      "suggestedParagraph": "## Why Interest Inventories Matter for Your EPPP (and Your Future Clients)",
-      "lessonExcerpt": "Schein developed a theory of career anchors according to which a person's self-concept acts as an anchor, or stabilizing force, determining what future occupational decisions will be made.",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 11
-    },
-    {
-      "stem": "According to Edgar Schein's career model, which of the following components is NOT included in the model's framework?",
-      "options": [
-        "Career anchors",
-        "Organizational culture",
-        "Personal values",
-        "Career stages"
-      ],
-      "answer": "Organizational culture",
-      "explanation": "The correct answer is 'Organizational culture' because Schein's model focuses on career anchors, personal values, and career stages as key components. Organizational culture is a broader concept that influences but is not a direct component of Schein's career model. The other options are integral to understanding individual career paths within organizations.",
-      "kn": "KN34",
-      "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively tests knowledge of Schein's model and differentiates between related concepts.",
-      "suggestedLesson": "5-career-interests",
-      "suggestedParagraph": "## Why Interest Inventories Matter for Your EPPP (and Your Future Clients)",
-      "lessonExcerpt": "The lesson does not explicitly cover Schein's career model, indicating a need for review.",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 11
-    },
-    {
-      "stem": "What is the primary purpose of calculating a confidence interval for test scores in psychological assessment?",
-      "options": [
-        "To determine the exact score a client will achieve on a future test",
-        "To estimate the range within which a true score is likely to fall",
-        "To compare the scores of different clients directly",
-        "To assess the reliability of the test itself"
-      ],
-      "answer": "To estimate the range within which a true score is likely to fall",
-      "explanation": "The correct answer is that confidence intervals provide an estimate of the range within which the true score is likely to fall, reflecting the uncertainty inherent in test scores. The other options are incorrect as they misrepresent the purpose of confidence intervals in psychological testing.",
-      "kn": "KN34",
-      "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively assesses understanding of statistical concepts in psychological assessment.",
-      "suggestedLesson": "5-career-interests",
-      "suggestedParagraph": "## Why Interest Inventories Matter for Your EPPP (and Your Future Clients)",
-      "lessonExcerpt": "Interest inventories are excellent at predicting job choice, satisfaction, and persistence, but they're much less accurate at predicting actual job success.",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 1
-    },
-    {
-      "stem": "According to Donald Super's Career Rainbow model, which of the following stages emphasizes the exploration of various career options?",
-      "options": [
-        "Growth",
-        "Exploration",
-        "Establishment",
-        "Maintenance"
-      ],
-      "answer": "Exploration",
-      "explanation": "The Exploration stage in Super's Career Rainbow model focuses on individuals exploring various career options and making choices about their future. The Growth stage involves developing self-concept, while Establishment and Maintenance focus on settling into and maintaining a career.",
-      "kn": "KN32",
-      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
-      "difficulty": "medium",
-      "quality_comment": "The question accurately reflects the stages of Super's Career Rainbow model.",
-      "suggestedLesson": "5-career-interests",
-      "suggestedParagraph": "## The Two Heavy Hitters You Need to Know",
-      "lessonExcerpt": "The lesson does not explicitly cover Super's Career Rainbow model.",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 22
-    },
-    {
-      "stem": "In Holland's Self-Directed Search, which of the following is a key component that helps individuals identify their career interests?",
-      "options": [
-        "Personality types",
-        "Cognitive abilities",
-        "Work values",
-        "Job market trends"
-      ],
-      "answer": "Personality types",
-      "explanation": "Holland's Self-Directed Search emphasizes personality types as a key component in helping individuals identify their career interests. The other options are not the primary focus of this assessment tool.",
-      "kn": "KN31",
-      "kn_explanation": "This question is best aligned with KN31 because it tests Assessment methods and their strengths and limitations (e.g., self-report, multi-informant reports, psychophysiological measures, work samples, assessment centers, direct observation, structured and semi-structured interviews).",
-      "difficulty": "medium",
-      "quality_comment": "The question accurately reflects the components of Holland's Self-Directed Search.",
-      "suggestedLesson": "5-career-interests",
-      "suggestedParagraph": "## The Two Heavy Hitters You Need to Know",
-      "lessonExcerpt": "The lesson does not specifically cover Holland's Self-Directed Search.",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 27
-    },
-    {
       "stem": "Which of the following statements best reflects the validity of biographical data in employee evaluation during the employee selection process?",
       "options": [
         "Biographical data is highly predictive of job performance across all industries.",
@@ -139,22 +34,10 @@
       "kn": "KN32",
       "kn_explanation": "KN32 relates to commonly used instruments and their scales, here focusing on the SII and its components for vocational assessment.",
       "difficulty": "medium",
-      "quality_comment": "The question clearly contrasts different SII scales, with plausible distractors referencing other legitimate scales, enhancing content validity for EPPP level."
-    },
-    {
-      "stem": "What type of scoring does the Kuder Occupational Interest Survey (KOIS) use given its forced-choice item format?",
-      "options": [
-        "Norm-referenced scoring",
-        "Ipsative scoring",
-        "Criterion-referenced scoring",
-        "Percentile scoring"
-      ],
-      "answer": "Ipsative scoring",
-      "explanation": "1. **Ipsative scoring** is the correct answer for the Kuder Occupational Interest Survey (KOIS) because the test employs a forced-choice format where examinees select their most and least preferred activities from sets of three options. This method yields ipsative scores that allow for comparisons of an individual's preferences within themselves, rather than against a normative group, which is characteristic of ipsative scoring.\n\n2. The other options are incorrect for the following reasons:\n\n- **Norm-referenced scoring** compares an individual's scores to a normative sample, which is not applicable in the KOIS due to its ipsative nature that focuses on individual preferences rather than group comparisons.\n  \n- **Criterion-referenced scoring** evaluates an individual's performance against a specific criterion or standard, rather than comparing preferences within the individual, which does not align with the KOIS's forced-choice design.\n  \n- **Percentile scoring** indicates the percentage of scores in a normative sample that fall below a given score, which is not relevant for the KOIS as it does not provide comparisons to a normative group but rather focuses on intra-individual comparisons.",
-      "kn": "KN29",
-      "kn_explanation": "This question addresses test scoring methods and characteristics of specific assessments, central to psychometric theories and test interpretation (KN29).",
-      "difficulty": "medium",
-      "quality_comment": "Distractors correctly represent other common scoring methods, making the distractors credible and the question effective for testing knowledge of scoring types."
+      "quality_comment": "The question clearly contrasts different SII scales, with plausible distractors referencing other legitimate scales, enhancing content validity for EPPP level.",
+      "lessonExcerpt": "| Exploration | 15 to 24 | Trying out different options, narrowing choices |",
+      "suggestedLesson": "6-how-careers-develop",
+      "needsReview": false
     },
     {
       "stem": "Which personal style is NOT assessed by the Personal Styles Scales (PSSs) in the Strong Interest Inventory?",
@@ -169,7 +52,10 @@
       "kn": "KN32",
       "kn_explanation": "This question examines detailed knowledge of assessment instrument components, fitting under commonly used measurement instruments (KN32).",
       "difficulty": "hard",
-      "quality_comment": "The options are similar in length and plausibility, challenging test-takers to know specific scale content enhancing discriminative capacity."
+      "quality_comment": "The options are similar in length and plausibility, challenging test-takers to know specific scale content enhancing discriminative capacity.",
+      "lessonExcerpt": "These five scales capture how someone prefers to work, beyond just what they want to work on:\n\n- **Work style**\n- **Leadership style**\n- **Learning environment**\n- **Risk taking**\n- **Team orientation**",
+      "suggestedLesson": "5-career-interests",
+      "needsReview": false
     },
     {
       "stem": "How were the Occupational Scales (OSs) of the Strong Interest Inventory constructed?",
@@ -184,7 +70,10 @@
       "kn": "KN29",
       "kn_explanation": "This question deals with test construction and standardization procedures, a core topic within psychometric theories and test characteristics (KN29).",
       "difficulty": "medium",
-      "quality_comment": "Distractors blend both common test construction practices and relevant theory, requiring a precise understanding, suitable for graduate level."
+      "quality_comment": "Distractors blend both common test construction practices and relevant theory, requiring a precise understanding, suitable for graduate level.",
+      "lessonExcerpt": "The GOTs are based on Holland's six occupational themes, which you'll want to memorize for the exam.",
+      "suggestedLesson": "5-career-interests",
+      "needsReview": false
     },
     {
       "stem": "Which of the following is a key difference between the Strong Interest Inventory (SII) and the Kuder Occupational Interest Survey (KOIS)?",
@@ -199,7 +88,10 @@
       "kn": "KN32",
       "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
       "difficulty": "medium",
-      "quality_comment": "The distractors include partially correct or clearly false options, increasing the precision with which test takers must know differences between assessments."
+      "quality_comment": "The distractors include partially correct or clearly false options, increasing the precision with which test takers must know differences between assessments.",
+      "lessonExcerpt": "ipsative scores allow you to compare a person's interests against their own other interests (intra-individual comparison), but you cannot meaningfully compare one person's scores to another person's scores",
+      "suggestedLesson": "5-career-interests",
+      "needsReview": false
     },
     {
       "stem": "Which statement best describes how Occupational Scales for the Kuder Occupational Interest Survey (KOIS) were developed?",
@@ -214,22 +106,10 @@
       "kn": "KN29",
       "kn_explanation": "This tests detailed understanding of test construction and criterion keying approaches in vocational assessment, key psychometric concepts (KN29).",
       "difficulty": "hard",
-      "quality_comment": "The distractors reflect plausible test development methods, requiring deep knowledge of KOIS scale construction, appropriate for advanced learners."
-    },
-    {
-      "stem": "An examinee takes the Kuder Occupational Interest Survey and receives Vocational Interest Estimates (VIEs). Which of the following interest areas is NOT part of the VIEs?",
-      "options": [
-        "Computational",
-        "Artistic",
-        "Healthcare services",
-        "Persuasive"
-      ],
-      "answer": "Healthcare services",
-      "explanation": "Healthcare services is a Basic Interest Scale category on the Strong Interest Inventory, not a VIE area on the KOIS; the KOIS includes computational, artistic, and persuasive among its ten VIE interest areas.",
-      "kn": "KN32",
-      "kn_explanation": "This addresses recognition of specific subscales and interest domains within vocational assessments, aligned with commonly used instruments knowledge (KN32).",
-      "difficulty": "medium",
-      "quality_comment": "Distractors all sound vocationally relevant, making the question appropriately challenging and fair for the EPPP."
+      "quality_comment": "The distractors reflect plausible test development methods, requiring deep knowledge of KOIS scale construction, appropriate for advanced learners.",
+      "lessonExcerpt": "These five scales capture how someone prefers to work, beyond just what they want to work on:\n\n- **Work style**\n- **Leadership style**\n- **Learning environment**\n- **Risk taking**\n- **Team orientation**",
+      "suggestedLesson": "5-career-interests",
+      "needsReview": false
     },
     {
       "stem": "Which of the following statements about the Kuder Career Planning System (KCPS) is TRUE?",
@@ -244,7 +124,10 @@
       "kn": "KN34",
       "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
       "difficulty": "easy",
-      "quality_comment": "This question is straightforward with clear true/false options, good for foundational knowledge testing at the EPPP level."
+      "quality_comment": "This question is straightforward with clear true/false options, good for foundational knowledge testing at the EPPP level.",
+      "lessonExcerpt": "they actually compared responses from people employed in specific occupations with responses from a general representative sample of employed adults. Only the items that actually distinguished between these groups made it onto each Occupational Scale.",
+      "suggestedLesson": "5-career-interests",
+      "needsReview": false
     },
     {
       "stem": "The Strong Interest Inventory’s Personal Styles Scales assess preferences related to all of the following EXCEPT:",
@@ -259,7 +142,10 @@
       "kn": "KN32",
       "kn_explanation": "This question tests knowledge of the content domains assessed by a popular vocational interest inventory, fitting within assessment instrument knowledge (KN32).",
       "difficulty": "medium",
-      "quality_comment": "The distractors are consistent with plausible personality/personal style factors, making the test-taker discriminate carefully."
+      "quality_comment": "The distractors are consistent with plausible personality/personal style factors, making the test-taker discriminate carefully.",
+      "lessonExcerpt": "| **Score type** | Normative (can compare between people) | Ipsative (can only compare within person) |",
+      "suggestedLesson": "5-career-interests",
+      "needsReview": false
     },
     {
       "stem": "Which of the following is the primary purpose of the Dependability Indices on the Kuder Occupational Interest Survey?",
@@ -274,22 +160,10 @@
       "kn": "KN29",
       "kn_explanation": "Assessment of response validity is central to psychometric test scoring, reliability, and validity concepts (KN29).",
       "difficulty": "medium",
-      "quality_comment": "Distractors address related but distinct concepts, reinforcing understanding of test response validity measures."
-    },
-    {
-      "stem": "Which of the following best describes a limitation of ipsative scoring as used in the Kuder Occupational Interest Survey (KOIS)?",
-      "options": [
-        "It allows for reliable inter-individual comparisons but not intra-individual comparisons",
-        "It provides trait-level scores that are directly comparable across populations",
-        "It limits the ability to compare scores between individuals, restricting normative interpretation",
-        "It produces scores that are unaffected by an examinee’s relative preferences"
-      ],
-      "answer": "It limits the ability to compare scores between individuals, restricting normative interpretation",
-      "explanation": "1. The correct answer, \"It limits the ability to compare scores between individuals, restricting normative interpretation,\" accurately describes a limitation of ipsative scoring used in the Kuder Occupational Interest Survey (KOIS). Ipsative scoring means that scores are relative to an individual's own preferences rather than compared to a normative sample, making it impossible to determine how one individual’s scores stack up against another’s. This restricts the ability to draw broad conclusions about how an examinee's interests compare to others, limiting normative interpretation of the results.\n\n2. The option \"It allows for reliable inter-individual comparisons but not intra-individual comparisons\" is incorrect because ipsative scoring specifically does not support inter-individual comparisons; it only allows for comparisons within an individual’s own responses. The statement \"It provides trait-level scores that are directly comparable across populations\" is wrong because ipsative scoring does not yield scores that are comparable across different individuals or groups, as it is based on individual preferences rather than normative data. Lastly, \"It produces scores that are unaffected by an examinee’s relative preferences\" is inaccurate because ipsative scoring is inherently influenced by an examinee's preferences, as it measures and ranks those preferences against one another rather than in relation to a normative standard.",
-      "kn": "KN29",
-      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
-      "difficulty": "medium",
-      "quality_comment": "The item targets understanding of ipsative scoring limitations, a nuanced psychometric concept important for EPPP candidates."
+      "quality_comment": "Distractors address related but distinct concepts, reinforcing understanding of test response validity measures.",
+      "lessonExcerpt": "The KOIS didn't compare occupational groups to a general sample. Instead, it compared different occupational groups directly to each other, including only items that could distinguish between them.",
+      "suggestedLesson": "5-career-interests",
+      "needsReview": false
     },
     {
       "stem": "What type of vocational interests do the Basic Interest Scales (BISs) of the Strong Interest Inventory (SII) assess?",
@@ -304,7 +178,10 @@
       "kn": "KN32",
       "kn_explanation": "This item focuses on knowledge of SII scale content and differentiation of interest levels within vocational assessment instruments (KN32).",
       "difficulty": "medium",
-      "quality_comment": "Plausible distractors related to other scale types strengthen the question’s discriminative power and relevance."
+      "quality_comment": "Plausible distractors related to other scale types strengthen the question’s discriminative power and relevance.",
+      "lessonExcerpt": "The Kuder has evolved into an online platform called the Kuder Career Planning System (KCPS), which offers age-appropriate programs",
+      "suggestedLesson": "5-career-interests",
+      "needsReview": false
     },
     {
       "stem": "Which of the following is a primary advantage of empirical criterion keying in the development of interest inventory scales such as the Strong Interest Inventory's Occupational Scales?",
@@ -319,7 +196,10 @@
       "kn": "KN29",
       "kn_explanation": "Understanding test construction methodologies like criterion keying informs how vocational inventories optimize predictive validity (KN29).",
       "difficulty": "medium",
-      "quality_comment": "The question effectively contrasts empirical and theoretical scale development methods, important for advanced test knowledge."
+      "quality_comment": "The question effectively contrasts empirical and theoretical scale development methods, important for advanced test knowledge.",
+      "lessonExcerpt": "These five scales capture how someone prefers to work, beyond just what they want to work on:\n\n- **Work style**\n- **Leadership style**\n- **Learning environment**\n- **Risk taking**\n- **Team orientation**",
+      "suggestedLesson": "5-career-interests",
+      "needsReview": false
     },
     {
       "stem": "Which component of the Strong Interest Inventory (SII) focuses on specific careers and compares an individual's interests with those of people in various occupations?",
@@ -339,7 +219,10 @@
       "lock_in_level": "easier",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "Like the SII's Administrative Indices, these help determine if the responses are valid and consistent.",
+      "suggestedLesson": "5-career-interests",
+      "needsReview": false
     },
     {
       "stem": "In the context of the Strong Interest Inventory (SII), which scale is primarily used to assess an individual's preferences in work environments and personal styles?",
@@ -359,7 +242,10 @@
       "lock_in_level": "harder",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "ipsative scores allow you to compare a person's interests against their own other interests (intra-individual comparison), but you cannot meaningfully compare one person's scores to another person's scores",
+      "suggestedLesson": "5-career-interests",
+      "needsReview": false
     }
   ]
 }

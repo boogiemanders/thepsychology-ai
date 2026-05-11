@@ -77,9 +77,9 @@
       "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
       "difficulty": "hard",
       "quality_comment": "The question effectively assesses understanding of a complex psychological theory.",
-      "suggestedLesson": "2-classical-conditioning-interventions",
+      "suggestedLesson": "2-work-motivation",
       "suggestedParagraph": "## Why Classical Conditioning Interventions Matter for Your Career",
-      "lessonExcerpt": "The lesson does not specifically address Acquired Needs Theory, indicating a need for review.",
+      "lessonExcerpt": "Theory #1: McClelland's Acquired Needs Theory David McClelland focused on psychological needs that develop through life experience rather than being hardwired from birth.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 21
@@ -181,7 +181,10 @@
       "kn": "KN7",
       "kn_explanation": "This question focuses on the classical conditioning principles underlying exposure therapy, thus aligns with theories and principles of learning (KN7).",
       "difficulty": "medium",
-      "quality_comment": "The question clearly targets a key mechanism in exposure therapy, and the distractors are related concepts, creating plausible distractors that test conceptual understanding."
+      "quality_comment": "The question clearly targets a key mechanism in exposure therapy, and the distractors are related concepts, creating plausible distractors that test conceptual understanding.",
+      "lessonExcerpt": "you expose the client to what they fear while preventing their usual escape or avoidance response.",
+      "suggestedLesson": "2-classical-conditioning-interventions",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best describes graded exposure in the context of exposure with response prevention?",
@@ -196,7 +199,10 @@
       "kn": "KN7",
       "kn_explanation": "This question tests knowledge about exposure therapy, a classical conditioning-based intervention, linked to learning theories in KN7.",
       "difficulty": "easy",
-      "quality_comment": "Well-structured question with clear and distinct options to test understanding of graded exposure specifically."
+      "quality_comment": "Well-structured question with clear and distinct options to test understanding of graded exposure specifically.",
+      "lessonExcerpt": "Graded Exposure | Start with mildly anxiety-provoking situations | Gradually work up to more challenging situations",
+      "suggestedLesson": "2-classical-conditioning-interventions",
+      "needsReview": false
     },
     {
       "stem": "In cue exposure therapy (CET) for substance use disorders, what is the primary process presumed to weaken the conditioned association between cues and substance use?",
@@ -211,7 +217,10 @@
       "kn": "KN7",
       "kn_explanation": "The question concerns extinction of conditioned responses via exposure therapy, reflecting learning theory principles (KN7).",
       "difficulty": "medium",
-      "quality_comment": "Options represent plausible interventions, requiring knowledge of CET's specific extinction mechanism, enhancing question quality."
+      "quality_comment": "Options represent plausible interventions, requiring knowledge of CET's specific extinction mechanism, enhancing question quality.",
+      "lessonExcerpt": "In cue exposure therapy, you expose your client to these triggers while preventing substance use.",
+      "suggestedLesson": "2-classical-conditioning-interventions",
+      "needsReview": false
     },
     {
       "stem": "Implosive therapy differs from other exposure techniques primarily because it:",
@@ -226,7 +235,10 @@
       "kn": "KN7",
       "kn_explanation": "This question addresses theoretical aspects and components of a classical conditioning-based treatment, fitting under learning theory (KN7).",
       "difficulty": "medium",
-      "quality_comment": "The distractors are distinct commonly used techniques, assisting discrimination and reinforcing conceptual clarity."
+      "quality_comment": "The distractors are distinct commonly used techniques, assisting discrimination and reinforcing conceptual clarity.",
+      "lessonExcerpt": "This is flooding done in imagination with a psychodynamic twist. You have the client imagine their feared scenario but encourage them to exaggerate it to extreme levels.",
+      "suggestedLesson": "2-classical-conditioning-interventions",
+      "needsReview": false
     },
     {
       "stem": "Which statement best summarizes current research findings regarding the role of rapid eye movements in Eye Movement Desensitization and Reprocessing (EMDR)?",
@@ -241,7 +253,10 @@
       "kn": "KN7",
       "kn_explanation": "The question addresses the mechanisms of a learning-based intervention, relating to research-based learning models (KN7).",
       "difficulty": "hard",
-      "quality_comment": "This question effectively assesses nuanced understanding of the evidence regarding EMDR's mechanism, challenging but fair."
+      "quality_comment": "This question effectively assesses nuanced understanding of the evidence regarding EMDR's mechanism, challenging but fair.",
+      "lessonExcerpt": "Some studies find that eye movements add nothing, the benefit comes purely from repeated exposure to the traumatic memory - Other studies find eye movements do contribute to effectiveness",
+      "suggestedLesson": "2-classical-conditioning-interventions",
+      "needsReview": false
     },
     {
       "stem": "Systematic desensitization works by which primary classical conditioning mechanism according to Wolpe’s original description?",
@@ -256,7 +271,10 @@
       "kn": "KN7",
       "kn_explanation": "The question tests understanding of classical conditioning-based counterconditioning, central to learning theory (KN7).",
       "difficulty": "medium",
-      "quality_comment": "Clear and focused question with plausible distractors that test knowledge of key classical conditioning concepts."
+      "quality_comment": "Clear and focused question with plausible distractors that test knowledge of key classical conditioning concepts.",
+      "lessonExcerpt": "Wolpe believed this worked through reciprocal inhibition (his term for counterconditioning). You're replacing anxiety with relaxation by pairing the feared stimulus with something that produces calm.",
+      "suggestedLesson": "2-classical-conditioning-interventions",
+      "needsReview": false
     },
     {
       "stem": "Research dismantling studies indicate that the effectiveness of systematic desensitization is largely due to which process?",
@@ -271,7 +289,10 @@
       "kn": "KN7",
       "kn_explanation": "This question concerns empirical findings about learning mechanisms underlying treatment efficacy, fitting within KN7’s scope.",
       "difficulty": "hard",
-      "quality_comment": "The question highlights research nuance in treatment theory; distractors are conceptually related, increasing test rigor."
+      "quality_comment": "The question highlights research nuance in treatment theory; distractors are conceptually related, increasing test rigor.",
+      "lessonExcerpt": "However, dismantling studies (which test whether individual components are necessary) suggest it actually works through extinction.",
+      "suggestedLesson": "2-classical-conditioning-interventions",
+      "needsReview": false
     },
     {
       "stem": "In aversion therapy, the fetish object serves as which of the following in classical conditioning terms?",
@@ -286,7 +307,10 @@
       "kn": "KN7",
       "kn_explanation": "This question assesses knowledge of classical conditioning terminology as applied to behavioral interventions (KN7).",
       "difficulty": "easy",
-      "quality_comment": "This is a straightforward, well-constructed question testing fundamental classical conditioning concepts in treatment context."
+      "quality_comment": "This is a straightforward, well-constructed question testing fundamental classical conditioning concepts in treatment context.",
+      "lessonExcerpt": "Conditioned Stimulus (CS): Stimuli associated with the problem behavior (alcohol, cigarettes, fetish object)",
+      "suggestedLesson": "2-classical-conditioning-interventions",
+      "needsReview": false
     },
     {
       "stem": "Which of the following statements about safety behaviors during exposure with response prevention is TRUE?",
@@ -301,7 +325,10 @@
       "kn": "KN7",
       "kn_explanation": "This question delves into learning concepts related to safety signals and conditioned inhibition as they affect exposure therapy outcomes (KN7).",
       "difficulty": "medium",
-      "quality_comment": "The question differentiates nuanced clinical application points; distractors include common misconceptions, enhancing discrimination."
+      "quality_comment": "The question differentiates nuanced clinical application points; distractors include common misconceptions, enhancing discrimination.",
+      "lessonExcerpt": "The client might think \"I only made it through because I had my water bottle\" rather than learning they can handle the situation on their own. This prevents full extinction of the fear response.",
+      "suggestedLesson": "2-classical-conditioning-interventions",
+      "needsReview": false
     },
     {
       "stem": "Which of these best describes the difference between implosive therapy and systematic desensitization?",
@@ -316,7 +343,10 @@
       "kn": "KN7",
       "kn_explanation": "This question compares classical conditioning-based interventions, evaluating knowledge of their specific features in learning theory (KN7).",
       "difficulty": "medium",
-      "quality_comment": "Cleverly juxtaposes two concepts with some overlapping features, requiring detailed knowledge for accurate selection."
+      "quality_comment": "Cleverly juxtaposes two concepts with some overlapping features, requiring detailed knowledge for accurate selection.",
+      "lessonExcerpt": "This is flooding done in imagination with a psychodynamic twist. You have the client imagine their feared scenario but encourage them to exaggerate it to extreme levels.",
+      "suggestedLesson": "2-classical-conditioning-interventions",
+      "needsReview": false
     },
     {
       "stem": "Which of the following is a core assumption of the adaptive information processing (AIP) model upon which EMDR is based?",
@@ -331,7 +361,10 @@
       "kn": "KN7",
       "kn_explanation": "This question targets theoretical foundations of EMDR, a classical conditioning-related intervention, fitting learning theories in KN7.",
       "difficulty": "medium",
-      "quality_comment": "Well-formulated question testing understanding of a model underlying an intervention, with plausible and distinct distractors."
+      "quality_comment": "Well-formulated question testing understanding of a model underlying an intervention, with plausible and distinct distractors.",
+      "lessonExcerpt": "EMDR is based on Shapiro's adaptive information processing model, which says trauma causes problems when the brain can't fully process or adaptively integrate traumatic experiences.",
+      "suggestedLesson": "2-classical-conditioning-interventions",
+      "needsReview": false
     },
     {
       "stem": "In cue exposure therapy for substance use disorders, adding coping skills training primarily enhances treatment by:",
@@ -346,7 +379,10 @@
       "kn": "KN7",
       "kn_explanation": "This question relates to integrating learning-based extinction interventions with behavioral strategies, aligning with KN7 (learning theory).",
       "difficulty": "medium",
-      "quality_comment": "The question connects theoretical mechanism with practical clinical enhancement, offering clear but nuanced options."
+      "quality_comment": "The question connects theoretical mechanism with practical clinical enhancement, offering clear but nuanced options.",
+      "lessonExcerpt": "The research shows this works better when combined with coping strategies. You're not just breaking the old connection; you're giving your client alternative responses.",
+      "suggestedLesson": "2-classical-conditioning-interventions",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best explains why graded exposure is generally preferred over flooding in clinical settings?",
@@ -361,7 +397,10 @@
       "kn": "KN7",
       "kn_explanation": "This item assesses knowledge of how classical conditioning principles are applied clinically to optimize exposure interventions, consistent with KN7.",
       "difficulty": "easy",
-      "quality_comment": "The question straightforwardly tests practical considerations in the application of classical conditioning interventions."
+      "quality_comment": "The question straightforwardly tests practical considerations in the application of classical conditioning interventions.",
+      "lessonExcerpt": "Many clients refuse or drop out | Better completion rates",
+      "suggestedLesson": "2-classical-conditioning-interventions",
+      "needsReview": false
     },
     {
       "stem": "In systematic desensitization, which response is inhibited to help reduce anxiety when a client is gradually exposed to a feared stimulus?",
@@ -381,7 +420,10 @@
       "lock_in_level": "easier",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "Wolpe believed this worked through reciprocal inhibition (his term for counterconditioning). You're replacing anxiety with relaxation by pairing the feared stimulus with something that produces calm.",
+      "suggestedLesson": "2-classical-conditioning-interventions",
+      "needsReview": false
     },
     {
       "stem": "During a cognitive-behavioral therapy session, a client is encouraged to confront their fears without engaging in safety behaviors. What is the primary goal of this approach?",
@@ -401,7 +443,10 @@
       "lock_in_level": "harder",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "you expose the client to what they fear while preventing their usual escape or avoidance response.",
+      "suggestedLesson": "2-classical-conditioning-interventions",
+      "needsReview": false
     }
   ]
 }

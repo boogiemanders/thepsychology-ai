@@ -16,7 +16,7 @@
       "quality_comment": "Tests specific quantitative knowledge about bipolar genetics that is commonly examined on the EPPP.",
       "suggestedLesson": "5-mood",
       "suggestedParagraph": "### The Genetics Are Strong",
-      "lessonExcerpt": "Monozygotic (identical) twins: 40-80%. Dizygotic (fraternal) twins: 5-30%.",
+      "lessonExcerpt": "The concordance rates tell the story: Monozygotic (identical) twins: 40-80% Dizygotic (fraternal) twins: 5-30%",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 14
@@ -97,7 +97,9 @@
       "kn": "KN36",
       "kn_explanation": "This question assesses knowledge of diagnostic criteria for mood episodes, which involves understanding DSM-5-TR classification systems and diagnostic criteria (KN36).",
       "difficulty": "medium",
-      "quality_comment": "The distractors are plausible and test the nuances of diagnostic criteria, making it suitable for EPPP preparation."
+      "quality_comment": "The distractors are plausible and test the nuances of diagnostic criteria, making it suitable for EPPP preparation.",
+      "lessonExcerpt": "A **hypomanic episode** looks similar but less intense. Same elevated or irritable mood, same symptoms, but only needs to last four consecutive days. The crucial difference? No severe impairment, no hospitalization needed, and no psychotic features.",
+      "needsReview": false
     },
     {
       "stem": "Which bipolar disorder diagnosis requires the presence of at least one hypomanic episode and at least one major depressive episode?",
@@ -112,7 +114,9 @@
       "kn": "KN36",
       "kn_explanation": "This question focuses on the diagnostic distinctions within bipolar disorders per DSM-5-TR criteria, falling under classification systems and diagnostic criteria (KN36).",
       "difficulty": "easy",
-      "quality_comment": "Clear and straightforward question with plausible distractors; appropriate for foundational understanding."
+      "quality_comment": "Clear and straightforward question with plausible distractors; appropriate for foundational understanding.",
+      "lessonExcerpt": "**Bipolar II** | At least one hypomanic AND one major depressive episode | 4 days (hypomania) + 2 weeks (depression) | Never had full manic episode; depression is primary problem",
+      "needsReview": false
     },
     {
       "stem": "Which of the following environmental factors has NOT been identified as a risk factor for bipolar disorder?",
@@ -127,7 +131,9 @@
       "kn": "KN38",
       "kn_explanation": "This question is best aligned with KN38 because it tests Constructs of epidemiology and base rates of psychological and behavioral disorders.",
       "difficulty": "medium",
-      "quality_comment": "Distractors are credible; the question tests etiological knowledge effectively."
+      "quality_comment": "Distractors are credible; the question tests etiological knowledge effectively.",
+      "lessonExcerpt": "But genes aren't destiny. Environmental risk factors include: Early parental loss or childhood maltreatment (especially emotional abuse) Medical conditions like irritable bowel syndrome, asthma, or migraines Substance use (cannabis, cocaine, and others) Highly stressful life events",
+      "needsReview": false
     },
     {
       "stem": "When differentiating adult mania from adult ADHD, which symptom is more characteristic of mania than ADHD?",
@@ -142,7 +148,9 @@
       "kn": "KN36",
       "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
       "difficulty": "medium",
-      "quality_comment": "Options are balanced and touch on overlapping symptoms, enhancing the question's discriminative value."
+      "quality_comment": "Options are balanced and touch on overlapping symptoms, enhancing the question's discriminative value.",
+      "lessonExcerpt": "| Self-esteem | Increased or grandiose | Reduced |",
+      "needsReview": false
     },
     {
       "stem": "Which pharmacological treatment is typically most effective for the \"classic bipolar disorder\" subtype characterized by episodic mood states and onset in late adolescence?",
@@ -157,7 +165,9 @@
       "kn": "KN41",
       "kn_explanation": "This question is best aligned with KN41 because it tests Use of technology in implementing tests, surveys, and other forms of assessment and diagnostic evaluation (e.g., validity, cost-effectiveness, consumer acceptability).",
       "difficulty": "medium",
-      "quality_comment": "Clear and focused stem with options that reflect common treatments, testing specific clinical application."
+      "quality_comment": "Clear and focused stem with options that reflect common treatments, testing specific clinical application.",
+      "lessonExcerpt": "**Classic bipolar disorder** (best treated with lithium): Low likelihood of mixed mood states and rapid cycling Long recovery periods between episodes Onset between 15-19 years",
+      "needsReview": false
     },
     {
       "stem": "A patient has experienced numerous periods of hypomanic and depressive symptoms for the past two years, but never meets full criteria for episodes. Which diagnosis fits best?",
@@ -172,7 +182,9 @@
       "kn": "KN36",
       "kn_explanation": "This question assesses correct diagnostic classification for mood disorders based on symptom duration and severity (KN36).",
       "difficulty": "medium",
-      "quality_comment": "Options are clinically relevant and plausible, enhancing differentiation of related diagnoses."
+      "quality_comment": "Options are clinically relevant and plausible, enhancing differentiation of related diagnoses.",
+      "lessonExcerpt": "**Cyclothymic Disorder** | Multiple periods of hypomanic symptoms + depressive symptoms | 2 years (adults) or 1 year (children/adolescents) | Symptoms don't meet full criteria for episodes; chronic but less severe",
+      "needsReview": false
     },
     {
       "stem": "Which theory of depression attributes the disorder to decreased response-contingent social reinforcement leading to social isolation and low self-esteem?",
@@ -187,7 +199,9 @@
       "kn": "KN36",
       "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
       "difficulty": "medium",
-      "quality_comment": "Distractors are well chosen as they represent other important depression theories, encouraging careful recall."
+      "quality_comment": "Distractors are well chosen as they represent other important depression theories, encouraging careful recall.",
+      "lessonExcerpt": "**Lewinsohn's Social Reinforcement Theory**: Depression results from low rates of positive reinforcement for social behaviors. This could be due to lack of environmental reinforcement or poor social skills.",
+      "needsReview": false
     },
     {
       "stem": "Which of the following brain activity patterns is typically associated with depression, as opposed to its remission following effective treatment?",
@@ -202,7 +216,9 @@
       "kn": "KN32",
       "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
       "difficulty": "hard",
-      "quality_comment": "The question effectively assesses detailed neurobiological knowledge with balanced and plausible options."
+      "quality_comment": "The question effectively assesses detailed neurobiological knowledge with balanced and plausible options.",
+      "lessonExcerpt": "**Ventromedial prefrontal cortex (vmPFC)**: Abnormally HIGH activity during depression **Dorsolateral prefrontal cortex (dlPFC)**: Abnormally LOW activity during depression When treatment works (therapy or medication), this pattern reverses",
+      "needsReview": false
     },
     {
       "stem": "Which of the following treatment approaches has the highest response and remission rates and the fastest time to remission for severe major depressive disorder?",
@@ -217,7 +233,9 @@
       "kn": "KN40",
       "kn_explanation": "This question is best aligned with KN40 because it tests Measurement of outcomes and changes due to prevention or intervention efforts with individuals, couples, families, groups, and organizations.",
       "difficulty": "medium",
-      "quality_comment": "Distractors represent common treatments, making this clinically relevant and well-targeted."
+      "quality_comment": "Distractors represent common treatments, making this clinically relevant and well-targeted.",
+      "lessonExcerpt": "**Electroconvulsive Therapy (ECT)**: The heavy hitter for severe depression. Response rates: ~80% Remission rates: ~70% Time to remission: 1-3 weeks",
+      "needsReview": false
     },
     {
       "stem": "Which factor is most associated with increasing depression risk in older adults, as opposed to younger adults?",
@@ -232,7 +250,9 @@
       "kn": "KN36",
       "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
       "difficulty": "medium",
-      "quality_comment": "Distractors are plausible risk factors for other age groups, increasing question discrimination."
+      "quality_comment": "Distractors are plausible risk factors for other age groups, increasing question discrimination.",
+      "lessonExcerpt": "**Older adults**: Chronic medical illness is one of the strongest risk factors, especially when it limits physical functioning and creates social isolation",
+      "needsReview": false
     },
     {
       "stem": "A client reports severe temper outbursts occurring three or more times per week and a persistently irritable mood most days for over a year, starting in childhood. Which diagnosis fits best?",
@@ -247,7 +267,9 @@
       "kn": "KN36",
       "kn_explanation": "This question tests accurate differential diagnosis of depressive and mood dysregulation disorders in children (KN36).",
       "difficulty": "medium",
-      "quality_comment": "Options are all mood-related disorders, appropriately challenging differential diagnosis skills."
+      "quality_comment": "Options are all mood-related disorders, appropriately challenging differential diagnosis skills.",
+      "lessonExcerpt": "Severe, recurrent temper outbursts (verbal or behavioral) that are way out of proportion, occurring three or more times weekly Persistent irritable or angry mood between outbursts, observable most of the day, nearly every day Must be present for at least 12 months",
+      "needsReview": false
     },
     {
       "stem": "Which of the following statements about suicide risk is accurate based on recent epidemiological data in the United States?",
@@ -262,7 +284,9 @@
       "kn": "KN38",
       "kn_explanation": "This question is best aligned with KN38 because it tests Constructs of epidemiology and base rates of psychological and behavioral disorders.",
       "difficulty": "medium",
-      "quality_comment": "Distractors reflect common misconceptions, making this a useful test of epidemiological knowledge."
+      "quality_comment": "Distractors reflect common misconceptions, making this a useful test of epidemiological knowledge.",
+      "lessonExcerpt": "**Veterans**: Suicide rate of 34.7 per 100,000 vs. 17.1 for non-veterans",
+      "needsReview": false
     },
     {
       "stem": "Which of the following is a validated, evidence-based psychotherapy recommended for preventing and treating peripartum major depressive disorder?",
@@ -277,7 +301,9 @@
       "kn": "KN36",
       "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
       "difficulty": "easy",
-      "quality_comment": "Clear question with plausible options, suitable for testing clinical treatment knowledge."
+      "quality_comment": "Clear question with plausible options, suitable for testing clinical treatment knowledge.",
+      "lessonExcerpt": "Effective treatments include CBT, interpersonal therapy, and antidepressants (especially sertraline).",
+      "needsReview": false
     },
     {
       "stem": "Which neurotransmitter abnormalities have been linked to major depressive disorder?",
@@ -292,7 +318,9 @@
       "kn": "KN39",
       "kn_explanation": "This question is best aligned with KN39 because it tests Major research-based theories and models of psychopathology.",
       "difficulty": "medium",
-      "quality_comment": "Options are well balanced and test neurochemical etiology knowledge relevant to the EPPP."
+      "quality_comment": "Options are well balanced and test neurochemical etiology knowledge relevant to the EPPP.",
+      "lessonExcerpt": "Low levels of serotonin, dopamine, and norepinephrine are associated with depression.",
+      "needsReview": false
     },
     {
       "stem": "Which cognitive theory of depression emphasizes the role of negative thoughts about oneself, the world, and the future?",
@@ -307,52 +335,9 @@
       "kn": "KN32",
       "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
       "difficulty": "easy",
-      "quality_comment": "Clear stem with distinct and well-known theoretical options, ideal for exam preparation."
-    },
-    {
-      "stem": "Which of the following best describes the role of biases and base rates in the interpretation of assessment data for mood disorders?",
-      "options": [
-        "Ignoring base rates improves diagnostic accuracy in low-prevalence disorders.",
-        "Availability heuristic can lead clinicians to overdiagnose rare mood disorders after recent cases.",
-        "Confirmation bias encourages clinicians to consider all contradictory evidence.",
-        "High base rates of a disorder should generally lower the estimated likelihood of diagnosis."
-      ],
-      "answer": "Availability heuristic can lead clinicians to overdiagnose rare mood disorders after recent cases.",
-      "explanation": "1. The correct answer, \"Availability heuristic can lead clinicians to overdiagnose rare mood disorders after recent cases,\" highlights how recent exposure to cases can skew a clinician's perception of the prevalence of mood disorders. When clinicians encounter unusual cases frequently, they may mistakenly perceive these disorders as more common than they are, leading to overdiagnosis. This cognitive bias occurs because the availability heuristic relies on easily recalled examples rather than statistical base rates, which are critical for accurate diagnosis.\n\n2. The option \"Ignoring base rates improves diagnostic accuracy in low-prevalence disorders\" is incorrect because disregarding base rates can lead to misdiagnosis; clinicians should consider prevalence to avoid overestimating the likelihood of rare disorders. The statement \"Confirmation bias encourages clinicians to consider all contradictory evidence\" is misleading, as confirmation bias actually leads clinicians to favor information that supports their initial hypotheses while ignoring contradictory evidence. Lastly, \"High base rates of a disorder should generally lower the estimated likelihood of diagnosis\" is incorrect because higher base rates typically increase the likelihood of diagnosis; clinicians should adjust their estimates based on the prevalence of the disorder in the population.",
-      "kn": "KN37",
-      "kn_explanation": "This question addresses evidence-based interpretation of data, including the effects of cognitive biases and base rates on clinical decision-making (KN37).",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively assesses clinical reasoning and awareness of cognitive biases during assessment."
-    },
-    {
-      "stem": "Which assessment theory emphasizes the integration of historical, contextual, and systemic factors in understanding mood disorders?",
-      "options": [
-        "Classical test theory",
-        "Biopsychosocial model",
-        "Behavioral activation model",
-        "Psychodynamic formulation"
-      ],
-      "answer": "Biopsychosocial model",
-      "explanation": "1. The \"Biopsychosocial model\" is the correct answer because it emphasizes the integration of biological, psychological, and social factors, including historical and contextual elements, in understanding mood disorders such as bipolar and depressive disorders. This model aligns with the etiology of these disorders, which includes heredity, environmental influences, and cognitive-behavioral factors, thereby providing a comprehensive framework for assessment and treatment.\n\n2. \n- **Classical test theory**: This theory focuses on the reliability and validity of psychological tests, emphasizing measurement rather than the integration of contextual and systemic factors in understanding mood disorders.\n- **Behavioral activation model**: This model primarily centers on changing behaviors that contribute to depression, focusing on the present and immediate factors rather than the historical and contextual influences on mood disorders.\n- **Psychodynamic formulation**: While this approach considers unconscious processes and early experiences, it does not systematically integrate biological and social factors, making it less comprehensive than the biopsychosocial model in understanding mood disorders.",
-      "kn": "KN30",
-      "kn_explanation": "This question targets assessment theories that guide comprehensive evaluation of mood disorders by integrating diverse factors (KN30).",
-      "difficulty": "medium",
-      "quality_comment": "Choices include plausible models, requiring knowledge of theoretical frameworks in assessment."
-    },
-    {
-      "stem": "Which of the following technologies has shown promise in the assessment or treatment of depressive disorders?",
-      "options": [
-        "Use of smartphone mood-tracking apps for symptom monitoring",
-        "Traditional paper-and-pencil questionnaires only",
-        "In-person only psychological testing without digital aids",
-        "Manual scoring of inventories without software assistance"
-      ],
-      "answer": "Use of smartphone mood-tracking apps for symptom monitoring",
-      "explanation": "1. The correct answer, \"Use of smartphone mood-tracking apps for symptom monitoring,\" is appropriate because the reference material highlights the growing integration of technology in mental health treatment, including the use of digital tools for monitoring symptoms and enhancing patient engagement. While specific studies on smartphone apps are not detailed in the reference, the trend towards technology-assisted interventions suggests that such apps can facilitate ongoing assessment and provide valuable data for treatment adjustments.\n\n2. The option \"Traditional paper-and-pencil questionnaires only\" is incorrect because it does not incorporate modern technology that can enhance symptom tracking and patient engagement, limiting the potential for timely and dynamic assessments. \"In-person only psychological testing without digital aids\" is wrong as it overlooks the benefits of digital tools that can streamline the assessment process and improve accessibility for clients. Lastly, \"Manual scoring of inventories without software assistance\" is incorrect because it lacks the efficiency and accuracy that software can provide, which is crucial for effective monitoring and treatment of depressive disorders.",
-      "kn": "KN41",
-      "kn_explanation": "This item relates to the application of technology in assessment and monitoring of mood disorders, consistent with the role of technology in testing and evaluation (KN41).",
-      "difficulty": "easy",
-      "quality_comment": "The question highlights an important emerging practice area, relevant to current assessment trends."
+      "quality_comment": "Clear stem with distinct and well-known theoretical options, ideal for exam preparation.",
+      "lessonExcerpt": "**Beck's Cognitive Theory**: Depression stems from a negative cognitive triad: 1. Negative thoughts about oneself 2. Negative thoughts about the world 3. Negative thoughts about the future",
+      "needsReview": false
     },
     {
       "stem": "Which of the following is a key characteristic that differentiates major depressive disorder from persistent depressive disorder (dysthymia) according to DSM-5-TR criteria?",
@@ -372,27 +357,9 @@
       "lock_in_level": "easier",
       "tags": [
         "lock_in_drill"
-      ]
-    },
-    {
-      "stem": "In the context of bipolar disorder, which of the following statements accurately describes the difference between a mixed episode and a manic episode according to DSM-5-TR criteria?",
-      "options": [
-        "A mixed episode includes both manic and depressive symptoms occurring simultaneously, while a manic episode consists only of elevated mood and increased energy.",
-        "A mixed episode lasts for at least one week, while a manic episode can last for as little as four days.",
-        "A mixed episode requires hospitalization, while a manic episode does not.",
-        "A mixed episode is characterized by the absence of irritability, while a manic episode often includes it."
       ],
-      "answer": "A mixed episode includes both manic and depressive symptoms occurring simultaneously, while a manic episode consists only of elevated mood and increased energy.",
-      "explanation": "A mixed episode is defined by the presence of both manic and depressive symptoms at the same time, whereas a manic episode is characterized by elevated mood and increased energy without concurrent depressive symptoms.",
-      "difficulty": "hard",
-      "kn": "KN36",
-      "kn_explanation": "This question assesses knowledge of diagnostic criteria for mood episodes, which involves understanding DSM-5-TR classification systems and diagnostic criteria (KN36).",
-      "quality_comment": "This question challenges the test-taker's understanding of complex bipolar disorder criteria, making it a valuable assessment tool.",
-      "is_lock_in_drill": true,
-      "lock_in_level": "harder",
-      "tags": [
-        "lock_in_drill"
-      ]
+      "lessonExcerpt": "Requires five or more depressive symptoms for at least two weeks, with at least one being depressed mood or loss of interest/pleasure. ... A depressed mood plus two or more symptoms lasting at least two years (adults) or one year (children/adolescents).",
+      "needsReview": false
     }
   ]
 }

@@ -85,90 +85,6 @@
       "inspirationIndex": 20
     },
     {
-      "stem": "What is a common adjustment outcome for children raised by gay and lesbian parents compared to those raised by heterosexual parents?",
-      "options": [
-        "Children of gay and lesbian parents show higher rates of psychological distress.",
-        "Children of gay and lesbian parents have lower levels of social competence.",
-        "Children of gay and lesbian parents exhibit similar adjustment outcomes to those raised by heterosexual parents.",
-        "Children of gay and lesbian parents are more likely to experience bullying."
-      ],
-      "answer": "Children of gay and lesbian parents exhibit similar adjustment outcomes to those raised by heterosexual parents.",
-      "explanation": "This answer reflects research findings that indicate no significant differences in adjustment outcomes between children of gay and lesbian parents and those of heterosexual parents. The other options inaccurately suggest negative outcomes associated with being raised by gay and lesbian parents.",
-      "kn": "KN15",
-      "kn_explanation": "This question is best aligned with KN15 because it tests Social interaction and relationships (e.g., attraction, aggression, altruism, organizational justice, verbal and non-verbal communication, internet communication, mate selection, empathy).",
-      "difficulty": "medium",
-      "quality_comment": "The question is relevant and accurately assesses knowledge of family dynamics.",
-      "suggestedLesson": "3-helping-and-hurting",
-      "suggestedParagraph": "## Why Do People Help? Altruism vs. Egoism",
-      "lessonExcerpt": "Research consistently shows children of gay and lesbian parents exhibit similar adjustment outcomes to those raised by heterosexual parents.",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 5
-    },
-    {
-      "stem": "In the context of cultural therapy, what is the primary purpose of cuento therapy?",
-      "options": [
-        "To provide a structured therapeutic approach for all clients.",
-        "To use storytelling as a means of cultural expression and healing.",
-        "To focus solely on cognitive behavioral techniques.",
-        "To eliminate cultural differences in therapeutic practices."
-      ],
-      "answer": "To use storytelling as a means of cultural expression and healing.",
-      "explanation": "This answer correctly identifies the purpose of cuento therapy, which emphasizes cultural storytelling. The other options misrepresent the focus and intent of this therapeutic approach.",
-      "kn": "KN15",
-      "kn_explanation": "This question is best aligned with KN15 because it tests Social interaction and relationships (e.g., attraction, aggression, altruism, organizational justice, verbal and non-verbal communication, internet communication, mate selection, empathy).",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively assesses knowledge of cultural therapy techniques.",
-      "suggestedLesson": "3-helping-and-hurting",
-      "suggestedParagraph": "## Why Do People Help? Altruism vs. Egoism",
-      "lessonExcerpt": "Cuento therapy uses storytelling as a means of cultural expression and healing.",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 8
-    },
-    {
-      "stem": "What is the primary role of folk healers in therapy, particularly in culturally diverse populations?",
-      "options": [
-        "To provide medical prescriptions",
-        "To offer culturally relevant healing practices",
-        "To replace traditional medical care",
-        "To enforce Western psychological methods"
-      ],
-      "answer": "To offer culturally relevant healing practices",
-      "explanation": "The correct answer is 'To offer culturally relevant healing practices' because folk healers often incorporate cultural beliefs and practices into their healing methods, making them more relatable and effective for individuals from those cultures. 'To provide medical prescriptions' is incorrect as folk healers typically do not prescribe medication. 'To replace traditional medical care' is misleading, as they often work alongside it. 'To enforce Western psychological methods' contradicts the essence of folk healing.",
-      "kn": "KN15",
-      "kn_explanation": "This question is best aligned with KN15 because it tests Social interaction and relationships (e.g., attraction, aggression, altruism, organizational justice, verbal and non-verbal communication, internet communication, mate selection, empathy).",
-      "difficulty": "hard",
-      "quality_comment": "The question is well-structured and relevant to cultural competence.",
-      "suggestedLesson": "3-helping-and-hurting",
-      "suggestedParagraph": "## Why This Matters for Your Psychology Career",
-      "lessonExcerpt": "Folk healers play a crucial role in providing culturally relevant healing practices that resonate with the beliefs of their communities.",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 12
-    },
-    {
-      "stem": "What factor most significantly influences perceptions of justice in mediation outcomes?",
-      "options": [
-        "The mediator's personal beliefs",
-        "The clarity of communication between parties",
-        "The cultural background of the participants",
-        "The perceived fairness of the process"
-      ],
-      "answer": "The perceived fairness of the process",
-      "explanation": "The correct answer is 'The perceived fairness of the process' because perceptions of justice in mediation are heavily influenced by how fair the participants believe the mediation process is, regardless of the outcome. 'The mediator's personal beliefs' may play a role but are not as significant as perceived fairness. 'The clarity of communication between parties' is important but secondary to the overall perception of fairness. 'The cultural background of the participants' can influence perceptions but is not the primary factor.",
-      "kn": "KN15",
-      "kn_explanation": "This question is best aligned with KN15 because it tests Social interaction and relationships (e.g., attraction, aggression, altruism, organizational justice, verbal and non-verbal communication, internet communication, mate selection, empathy).",
-      "difficulty": "medium",
-      "quality_comment": "The question is relevant and assesses understanding of conflict resolution.",
-      "suggestedLesson": "3-helping-and-hurting",
-      "suggestedParagraph": "## Reducing Conflict Through Cooperation",
-      "lessonExcerpt": "Perceptions of justice in mediation outcomes are significantly influenced by the perceived fairness of the process.",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 15
-    },
-    {
       "stem": "Which of the following factors is most likely to contribute to higher employee turnover rates in an organization?",
       "options": [
         "High levels of employee engagement and satisfaction.",
@@ -182,159 +98,12 @@
       "kn_explanation": "This question is best aligned with KN15 because it tests Social interaction and relationships (e.g., attraction, aggression, altruism, organizational justice, verbal and non-verbal communication, internet communication, mate selection, empathy).",
       "difficulty": "medium",
       "quality_comment": "The question is relevant and tests knowledge of organizational behavior factors.",
-      "suggestedLesson": "3-helping-and-hurting",
+      "suggestedLesson": "5-personality-tests",
       "suggestedParagraph": "## Why This Matters for Your Psychology Career",
-      "lessonExcerpt": "Understanding prosocial behavior and prejudice isn't just about passing the EPPP.",
+      "lessonExcerpt": "TAT = Only storytelling ## Real-World Applications",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
       "inspirationIndex": 2
-    },
-    {
-      "stem": "Which stage in the development of gay and lesbian identity involves individuals recognizing their sexual orientation and beginning to explore it?",
-      "options": [
-        "Identity confusion.",
-        "Identity acceptance.",
-        "Identity pride.",
-        "Identity synthesis."
-      ],
-      "answer": "Identity acceptance.",
-      "explanation": "The correct answer reflects the stage where individuals begin to accept their sexual orientation and explore it more openly. The other options refer to different stages in the identity development process.",
-      "kn": "KN19",
-      "kn_explanation": "This question is best aligned with KN19 because it tests Identity diversity and intersectionality (e.g., psychological impact of diversity on individuals, families, and systems).",
-      "difficulty": "hard",
-      "quality_comment": "The question is relevant and tests knowledge of sexual identity development.",
-      "suggestedLesson": "3-helping-and-hurting",
-      "suggestedParagraph": "## Why This Matters for Your Psychology Career",
-      "lessonExcerpt": "Understanding these patterns isn't just academic.",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 6
-    },
-    {
-      "stem": "Which stage of White racial identity development involves a recognition of the impact of racism and a commitment to social justice?",
-      "options": [
-        "A) Pre-Encounter",
-        "B) Encounter",
-        "C) Immersion-Emersion",
-        "D) Internalization"
-      ],
-      "answer": "C) Immersion-Emersion",
-      "explanation": "Option C is correct as the Immersion-Emersion stage is characterized by a deep engagement with issues of race and a commitment to social justice. Option A, Pre-Encounter, involves a lack of awareness of racial issues. Option B, Encounter, is about experiencing a significant event that challenges one's racial identity. Option D, Internalization, refers to a more integrated identity but does not specifically emphasize social justice commitment.",
-      "kn": "KN19",
-      "kn_explanation": "This question is best aligned with KN19 because it tests Identity diversity and intersectionality (e.g., psychological impact of diversity on individuals, families, and systems).",
-      "difficulty": "hard",
-      "quality_comment": "The question accurately assesses knowledge of racial identity development stages.",
-      "suggestedLesson": "3-helping-and-hurting",
-      "suggestedParagraph": "## Why Do People Help? Altruism vs. Egoism",
-      "lessonExcerpt": "The Immersion-Emersion stage involves a recognition of the impact of racism and a commitment to social justice.",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 12
-    },
-    {
-      "stem": "Which of the following factors is most likely to contribute to negative attitudes towards homosexual individuals?",
-      "options": [
-        "A) Increased exposure to LGBTQ+ communities.",
-        "B) Cultural norms and values that stigmatize non-heteronormative identities.",
-        "C) Personal experiences with LGBTQ+ individuals.",
-        "D) Education about sexual orientation and diversity."
-      ],
-      "answer": "B) Cultural norms and values that stigmatize non-heteronormative identities.",
-      "explanation": "Option B is correct as cultural norms and values play a significant role in shaping negative attitudes towards homosexual individuals. Option A is incorrect because increased exposure typically reduces negative attitudes. Option C may vary but does not universally contribute to negative attitudes. Option D is also incorrect as education generally promotes understanding and acceptance.",
-      "kn": "KN15",
-      "kn_explanation": "This question is best aligned with KN15 because it tests Social interaction and relationships (e.g., attraction, aggression, altruism, organizational justice, verbal and non-verbal communication, internet communication, mate selection, empathy).",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively assesses knowledge of factors contributing to homophobia.",
-      "suggestedLesson": "3-helping-and-hurting",
-      "suggestedParagraph": "## Why Do People Help? Altruism vs. Egoism",
-      "lessonExcerpt": "Cultural norms and values that stigmatize non-heteronormative identities contribute to negative attitudes.",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 14
-    },
-    {
-      "stem": "How do cultural differences influence the expression of psychological distress?",
-      "options": [
-        "A) All cultures express psychological distress in the same way.",
-        "B) Cultural norms dictate acceptable expressions of distress.",
-        "C) Psychological distress is universally recognized across cultures.",
-        "D) Cultural differences have no impact on psychological distress."
-      ],
-      "answer": "B) Cultural norms dictate acceptable expressions of distress.",
-      "explanation": "Option B is correct because cultural norms significantly influence how individuals express psychological distress. Option A is incorrect as cultures vary widely in expression. Option C is misleading; while distress is recognized, expressions differ. Option D is false; cultural differences greatly impact distress expression.",
-      "kn": "KN15",
-      "kn_explanation": "This question is best aligned with KN15 because it tests Social interaction and relationships (e.g., attraction, aggression, altruism, organizational justice, verbal and non-verbal communication, internet communication, mate selection, empathy).",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively tests understanding of cultural influences on psychological distress.",
-      "suggestedLesson": "3-helping-and-hurting",
-      "suggestedParagraph": "## When Bad Things Happen: The Bystander Effect",
-      "lessonExcerpt": "Cultural norms dictate acceptable expressions of distress.",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 17
-    },
-    {
-      "stem": "In comparing Maslow's hierarchy of needs with Alderfer's ERG theory, which of the following statements is true?",
-      "options": [
-        "A) Maslow's theory suggests that higher needs must be met before lower needs.",
-        "B) Alderfer's ERG theory does not recognize the importance of lower-level needs.",
-        "C) Both theories emphasize the same level of needs in their hierarchy.",
-        "D) Alderfer's ERG theory allows for movement between needs."
-      ],
-      "answer": "D) Alderfer's ERG theory allows for movement between needs.",
-      "explanation": "Option D is correct because Alderfer's ERG theory allows individuals to move between different levels of needs, unlike Maslow's rigid hierarchy. Option A is incorrect as Maslow's theory does suggest a progression. Option B is false; Alderfer recognizes lower-level needs. Option C is misleading as the theories differ in structure.",
-      "kn": "KN15",
-      "kn_explanation": "This question is best aligned with KN15 because it tests Social interaction and relationships (e.g., attraction, aggression, altruism, organizational justice, verbal and non-verbal communication, internet communication, mate selection, empathy).",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively tests understanding of the differences between Maslow's and Alderfer's theories.",
-      "suggestedLesson": "3-helping-and-hurting",
-      "suggestedParagraph": "## Why Do People Help? Altruism vs. Egoism",
-      "lessonExcerpt": "Alderfer's ERG theory allows for movement between needs, unlike Maslow's hierarchy.",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 18
-    },
-    {
-      "stem": "Which of the following factors is most likely to influence job satisfaction in the workplace?",
-      "options": [
-        "A) The number of hours worked per week.",
-        "B) The level of autonomy and control over one's work.",
-        "C) The physical location of the workplace.",
-        "D) The age of the employees."
-      ],
-      "answer": "B) The level of autonomy and control over one's work.",
-      "explanation": "Option B is correct as autonomy and control are strongly linked to job satisfaction. Option A may influence satisfaction but is not as significant. Option C can affect satisfaction but is less impactful than autonomy. Option D is not a primary factor influencing job satisfaction.",
-      "kn": "KN16",
-      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively tests understanding of job satisfaction determinants.",
-      "suggestedLesson": "3-helping-and-hurting",
-      "suggestedParagraph": "## Why Do People Help? Altruism vs. Egoism",
-      "lessonExcerpt": "The level of autonomy and control over one's work is a significant factor influencing job satisfaction.",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 19
-    },
-    {
-      "stem": "According to social learning theory, which factor is most influential in the development of aggressive behavior?",
-      "options": [
-        "Genetic predisposition",
-        "Direct reinforcement",
-        "Observational learning",
-        "Cognitive appraisal"
-      ],
-      "answer": "Observational learning",
-      "explanation": "Social learning theory posits that aggressive behavior is primarily learned through observational learning, where individuals model behaviors seen in others, especially role models. Genetic predisposition refers to biological factors, direct reinforcement involves rewards for behavior, and cognitive appraisal relates to individual interpretation of situations. Therefore, observational learning is the correct answer.",
-      "kn": "KN15",
-      "kn_explanation": "This question is best aligned with KN15 because it tests Social interaction and relationships (e.g., attraction, aggression, altruism, organizational justice, verbal and non-verbal communication, internet communication, mate selection, empathy).",
-      "difficulty": "hard",
-      "quality_comment": "Challenging question that tests knowledge of aggression and learning theories.",
-      "suggestedLesson": "3-helping-and-hurting",
-      "suggestedParagraph": "## Media Influence on Aggression",
-      "lessonExcerpt": "Social learning theory posits that aggressive behavior is primarily learned through observational learning.",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 7
     },
     {
       "stem": "What strategy is most effective in reducing racial prejudice according to intergroup contact theory?",
@@ -350,54 +119,12 @@
       "kn_explanation": "This question is best aligned with KN15 because it tests Social interaction and relationships (e.g., attraction, aggression, altruism, organizational justice, verbal and non-verbal communication, internet communication, mate selection, empathy).",
       "difficulty": "medium",
       "quality_comment": "Relevant question that assesses understanding of prejudice reduction strategies.",
-      "suggestedLesson": "3-helping-and-hurting",
+      "suggestedLesson": "6-how-orgs-change",
       "suggestedParagraph": "## Reducing Conflict Through Cooperation",
-      "lessonExcerpt": "Facilitating positive interactions between groups can effectively reduce racial prejudice.",
+      "lessonExcerpt": "Job Enrichment**, originally described by Herzberg in 1966, means designing jobs to include more responsibility, challenge, advancement opportunities, and other motivating factors that increase satisfaction and drive. **Alternative Work Schedules** include two main types:",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
       "inspirationIndex": 8
-    },
-    {
-      "stem": "Which factor is most likely to influence the manifestation of psychopathology across different cultures?",
-      "options": [
-        "Genetic predisposition",
-        "Sociocultural impact",
-        "Individual personality traits",
-        "Biological factors"
-      ],
-      "answer": "Sociocultural impact",
-      "explanation": "Sociocultural impact is crucial in understanding how psychopathology manifests differently across cultures, as cultural norms, values, and social structures shape the expression and understanding of mental health issues. While genetic predisposition, individual personality traits, and biological factors play roles, they do not account for the cultural variations in psychopathology. Therefore, sociocultural impact is the correct answer.",
-      "kn": "KN16",
-      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
-      "difficulty": "hard",
-      "quality_comment": "Insightful question that tests knowledge of culture and psychopathology.",
-      "suggestedLesson": "3-helping-and-hurting",
-      "suggestedParagraph": "## Cultural Factors in Psychopathology",
-      "lessonExcerpt": "Sociocultural impact is crucial in understanding how psychopathology manifests differently across cultures.",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 9
-    },
-    {
-      "stem": "According to Gender Schema Theory, how do individuals develop their understanding of gender roles?",
-      "options": [
-        "Through biological predispositions",
-        "By observing and imitating others",
-        "Through direct reinforcement of gender-appropriate behaviors",
-        "By internalizing societal norms and expectations"
-      ],
-      "answer": "By internalizing societal norms and expectations",
-      "explanation": "Gender Schema Theory posits that individuals develop their understanding of gender roles by internalizing societal norms and expectations, which shape their perceptions and behaviors regarding gender. While biological predispositions, observation, and reinforcement play roles, the theory emphasizes the cognitive framework formed by societal influences. Therefore, internalizing societal norms and expectations is the correct answer.",
-      "kn": "KN15",
-      "kn_explanation": "This question is best aligned with KN15 because it tests Social interaction and relationships (e.g., attraction, aggression, altruism, organizational justice, verbal and non-verbal communication, internet communication, mate selection, empathy).",
-      "difficulty": "hard",
-      "quality_comment": "Thought-provoking question that assesses understanding of gender role development.",
-      "suggestedLesson": "3-helping-and-hurting",
-      "suggestedParagraph": "## Gender Roles and Socialization",
-      "lessonExcerpt": "Individuals develop their understanding of gender roles by internalizing societal norms and expectations.",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 10
     },
     {
       "stem": "Which of the following best describes cultural syndromes as expressions of distress?",
@@ -413,138 +140,12 @@
       "kn_explanation": "This question is best aligned with KN15 because it tests Social interaction and relationships (e.g., attraction, aggression, altruism, organizational justice, verbal and non-verbal communication, internet communication, mate selection, empathy).",
       "difficulty": "medium",
       "quality_comment": "The question accurately assesses knowledge of cultural syndromes in psychology.",
-      "suggestedLesson": "3-helping-and-hurting",
+      "suggestedLesson": "3-cultural-identity",
       "suggestedParagraph": "## Why Do People Help? Altruism vs. Egoism",
-      "lessonExcerpt": "Cultural syndromes refer to culturally specific patterns of symptoms and behaviors.",
+      "lessonExcerpt": "Immersion-Emersion:** They reject White culture completely and immerse themselves in Black culture. This is an intense, emotionally charged stage.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
       "inspirationIndex": 12
-    },
-    {
-      "stem": "What psychological effect is commonly associated with the process of acculturation in immigrants?",
-      "options": [
-        "Increased social isolation",
-        "Enhanced cultural identity",
-        "Identity confusion",
-        "Improved mental health outcomes"
-      ],
-      "answer": "Identity confusion",
-      "explanation": "Acculturation can lead to identity confusion as immigrants navigate between their original culture and the new culture, often resulting in a struggle to reconcile different cultural identities. While some may experience enhanced cultural identity or improved mental health outcomes, identity confusion is a common psychological effect. Therefore, the correct answer is identity confusion.",
-      "kn": "KN15",
-      "kn_explanation": "This KN code applies as it pertains to understanding the psychological effects of immigration.",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively tests knowledge of acculturation effects.",
-      "suggestedLesson": "3-helping-and-hurting",
-      "suggestedParagraph": "## Why Do People Help? Altruism vs. Egoism",
-      "lessonExcerpt": "Acculturation can lead to identity confusion as immigrants navigate between their original culture and the new culture.",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 15
-    },
-    {
-      "stem": "What demographic factor has been shown to correlate with higher rates of adolescent violence, particularly homicide?",
-      "options": [
-        "Socioeconomic status",
-        "Parental education level",
-        "Urban residency",
-        "Access to mental health services"
-      ],
-      "answer": "Urban residency",
-      "explanation": "Urban residency has been shown to correlate with higher rates of adolescent violence, including homicide, due to factors such as higher population density, increased exposure to violence, and greater social disorganization. Socioeconomic status and parental education level can also play roles, but urban environments are particularly significant. Therefore, the correct answer is urban residency.",
-      "kn": "KN15",
-      "kn_explanation": "This question is best aligned with KN15 because it tests Social interaction and relationships (e.g., attraction, aggression, altruism, organizational justice, verbal and non-verbal communication, internet communication, mate selection, empathy).",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively tests knowledge of demographic influences on violence.",
-      "suggestedLesson": "3-helping-and-hurting",
-      "suggestedParagraph": "## When Bad Things Happen: The Bystander Effect",
-      "lessonExcerpt": "Urban residency has been shown to correlate with higher rates of adolescent violence, including homicide.",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 20
-    },
-    {
-      "stem": "What is a common consequence of minority marginalization in relation to cultural identity?",
-      "options": [
-        "Increased social cohesion within the marginalized group.",
-        "Enhanced visibility and representation in mainstream culture.",
-        "A diminished sense of belonging and identity among minority members.",
-        "Greater acceptance of diverse cultural practices."
-      ],
-      "answer": "A diminished sense of belonging and identity among minority members.",
-      "explanation": "Minority marginalization often leads to a decreased sense of belonging and identity, as individuals may feel disconnected from both their own cultural group and the dominant culture. The other options do not accurately reflect the consequences of marginalization.",
-      "kn": "KN19",
-      "kn_explanation": "This question is best aligned with KN19 because it tests Identity diversity and intersectionality (e.g., psychological impact of diversity on individuals, families, and systems).",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively assesses knowledge of minority marginalization.",
-      "suggestedLesson": "3-helping-and-hurting",
-      "suggestedParagraph": "## Why Do People Help? Altruism vs. Egoism",
-      "lessonExcerpt": "The lesson does not adequately cover minority marginalization.",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 23
-    },
-    {
-      "stem": "What is a key cultural consideration that therapists should keep in mind when providing multicultural counseling?",
-      "options": [
-        "All clients prefer the same therapeutic approach",
-        "Cultural values can influence client expectations and behaviors",
-        "Therapists should avoid discussing cultural backgrounds",
-        "Therapeutic techniques are universally applicable"
-      ],
-      "answer": "Cultural values can influence client expectations and behaviors",
-      "explanation": "This option is correct because cultural values significantly shape how clients perceive therapy and what they expect from it. The other options are incorrect as they either generalize client preferences or suggest avoidance of cultural discussions, which are essential in multicultural counseling.",
-      "kn": "KN15",
-      "kn_explanation": "This question is best aligned with KN15 because it tests Social interaction and relationships (e.g., attraction, aggression, altruism, organizational justice, verbal and non-verbal communication, internet communication, mate selection, empathy).",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively assesses understanding of multicultural counseling principles.",
-      "suggestedLesson": "3-helping-and-hurting",
-      "suggestedParagraph": "## Why This Matters for Your Psychology Career",
-      "lessonExcerpt": "Cultural values can influence client expectations and behaviors, making it crucial for therapists to consider these factors.",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 3
-    },
-    {
-      "stem": "What aspect of Gilligan's moral development theory highlights gender differences in moral reasoning?",
-      "options": [
-        "The emphasis on justice over care",
-        "The focus on care as a moral priority",
-        "The universality of moral principles",
-        "The role of cognitive development in morality"
-      ],
-      "answer": "The focus on care as a moral priority",
-      "explanation": "This option is correct as Gilligan's theory emphasizes that women often prioritize care and relationships in moral reasoning, contrasting with traditional theories that emphasize justice. The other options do not accurately reflect her perspective on gender differences in moral reasoning.",
-      "kn": "KN15",
-      "kn_explanation": "This question is best aligned with KN15 because it tests Social interaction and relationships (e.g., attraction, aggression, altruism, organizational justice, verbal and non-verbal communication, internet communication, mate selection, empathy).",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively assesses understanding of Gilligan's contributions to moral development theory.",
-      "suggestedLesson": "3-helping-and-hurting",
-      "suggestedParagraph": "## Why This Matters for Your Psychology Career",
-      "lessonExcerpt": "Gilligan's theory emphasizes the focus on care as a moral priority, highlighting gender differences in moral reasoning.",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 6
-    },
-    {
-      "stem": "Which ethnic group has been identified as having a higher prevalence of hypertension according to health disparities research?",
-      "options": [
-        "Caucasian",
-        "African American",
-        "Asian American",
-        "Hispanic"
-      ],
-      "answer": "African American",
-      "explanation": "African American is the correct answer as research indicates that this group has a higher prevalence of hypertension compared to other ethnic groups. The other options do not reflect the same level of prevalence identified in health disparities research.",
-      "kn": "KN15",
-      "kn_explanation": "This question is best aligned with KN15 because it tests Social interaction and relationships (e.g., attraction, aggression, altruism, organizational justice, verbal and non-verbal communication, internet communication, mate selection, empathy).",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively assesses knowledge of health disparities related to hypertension.",
-      "suggestedLesson": "3-helping-and-hurting",
-      "suggestedParagraph": "## Why This Matters for Your Psychology Career",
-      "lessonExcerpt": "Research indicates that African Americans have a higher prevalence of hypertension compared to other ethnic groups.",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 10
     },
     {
       "stem": "Which stage in the Racial/Cultural Identity Development Model involves individuals recognizing their own cultural identity and its significance?",
@@ -560,153 +161,12 @@
       "kn_explanation": "This question is best aligned with KN19 because it tests Identity diversity and intersectionality (e.g., psychological impact of diversity on individuals, families, and systems).",
       "difficulty": "hard",
       "quality_comment": "The question effectively tests knowledge of a specific model of cultural identity development.",
-      "suggestedLesson": "3-helping-and-hurting",
+      "suggestedLesson": "3-cultural-identity",
       "suggestedParagraph": "## Why This Matters for Your Psychology Career",
-      "lessonExcerpt": "Individuals recognizing their own cultural identity and its significance occurs in the Internalization stage.",
+      "lessonExcerpt": "Internalization:** The emotional intensity decreases. They've developed a positive Black identity and can now tolerate or respect racial and cultural differences.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
       "inspirationIndex": 13
-    },
-    {
-      "stem": "In decision-making, what does approach-avoidance conflict refer to?",
-      "options": [
-        "The struggle between two equally attractive options.",
-        "The tension between wanting to pursue a goal and fearing the potential negative outcomes.",
-        "The decision to avoid all risks in a situation.",
-        "The choice between a safe option and a risky one."
-      ],
-      "answer": "The tension between wanting to pursue a goal and fearing the potential negative outcomes.",
-      "explanation": "Approach-avoidance conflict occurs when an individual is torn between the desire to achieve a goal and the fear of the negative consequences associated with that goal. The other options do not accurately capture this specific type of conflict.",
-      "kn": "KN15",
-      "kn_explanation": "This question is best aligned with KN15 because it tests Social interaction and relationships (e.g., attraction, aggression, altruism, organizational justice, verbal and non-verbal communication, internet communication, mate selection, empathy).",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively tests understanding of approach-avoidance conflict.",
-      "suggestedLesson": "3-helping-and-hurting",
-      "suggestedParagraph": "## Why Do People Help? Altruism vs. Egoism",
-      "lessonExcerpt": "Approach-avoidance conflict occurs when an individual is torn between the desire to achieve a goal and the fear of the negative consequences.",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 18
-    },
-    {
-      "stem": "Which of the following factors is most commonly associated with contributing to aggression in social psychology?",
-      "options": [
-        "Biological predispositions",
-        "Cognitive dissonance",
-        "Social learning",
-        "Cultural norms"
-      ],
-      "answer": "Social learning",
-      "explanation": "Social learning theory posits that aggression is learned through observing and imitating others, making it a key factor in understanding aggressive behavior. The other options are relevant but do not capture the primary mechanism as effectively.",
-      "kn": "KN15",
-      "kn_explanation": "This question is best aligned with KN15 because it tests Social interaction and relationships (e.g., attraction, aggression, altruism, organizational justice, verbal and non-verbal communication, internet communication, mate selection, empathy).",
-      "difficulty": "medium",
-      "quality_comment": "The question accurately assesses knowledge of aggression factors.",
-      "suggestedLesson": "3-helping-and-hurting",
-      "suggestedParagraph": "## Why Do People Help? Altruism vs. Egoism",
-      "lessonExcerpt": "Social learning theory posits that aggression is learned through observing and imitating others.",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 20
-    },
-    {
-      "stem": "A school psychologist is consulting with a racially divided middle school where two student groups have developed sustained intergroup hostility. A sensitivity training workshop produced no lasting change. The psychologist redesigns an academic unit so that each student in a multiethnic group is assigned a unique segment of the material; all group members must learn from and teach each other for the group to complete the project successfully. Hostility between the groups decreases significantly. The operative mechanism in this intervention is BEST described as:",
-      "options": [
-        "The contact hypothesis, because structured positive intergroup exposure reduces prejudice over time",
-        "Superordinate goals, because achieving the shared objective requires cooperative interdependence across group boundaries",
-        "The jigsaw classroom technique, which operates through a different mechanism than superordinate goal strategies",
-        "The minimal group paradigm, which reframes group boundaries by creating new shared category memberships"
-      ],
-      "answer": "Superordinate goals, because achieving the shared objective requires cooperative interdependence across group boundaries",
-      "explanation": "Superordinate goals are objectives that can only be achieved through active cooperation between previously hostile groups, as demonstrated in Sherif's Robbers Cave study. The lesson explicitly identifies the jigsaw classroom as an educational application of superordinate goal principles. The correct answer identifies the underlying mechanism. Option A (contact hypothesis) is insufficient — mere contact without structured interdependence does not reliably reduce hostility. Option C is a trap: the jigsaw classroom IS an application of superordinate goals, not a distinct mechanism; describing it as operating through a 'different mechanism' is factually incorrect. The minimal group paradigm is a laboratory research paradigm demonstrating how easily intergroup bias develops from arbitrary categorization — it is not an intervention strategy and does not involve cooperative interdependence.",
-      "kn": "KN16",
-      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
-      "difficulty": "hard",
-      "quality_comment": "High-difficulty question requiring conceptual understanding of the jigsaw classroom as an application of superordinate goals rather than a separate technique; tests hierarchical concept structure rather than surface-level naming.",
-      "suggestedLesson": "3-helping-and-hurting",
-      "suggestedParagraph": "Reducing Conflict Through Cooperation",
-      "lessonExcerpt": "The solution? Superordinate goals. Objectives that could only be achieved through cooperation between groups. When the water supply 'broke' and both groups had to work together to fix it, hostility decreased. This principle led to the jigsaw classroom technique.",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 13
-    },
-    {
-      "stem": "A woman collapses in the lobby of a busy urban office building during the lunch hour. Eighteen people are present, but over two minutes pass before anyone calls emergency services. When interviewed afterward, multiple bystanders reported, 'I figured someone with more medical knowledge must have already called.' According to Latané and Darley's five-step model of bystander intervention, the MOST direct explanation for the delayed response is:",
-      "options": [
-        "Pluralistic ignorance caused bystanders to collectively misinterpret the event as non-urgent based on others' apparent calm",
-        "Stimulus overload prevented bystanders from initially noticing that a medical emergency had occurred",
-        "Diffusion of responsibility decreased each individual's felt obligation to act when others were present",
-        "Evaluation apprehension caused bystanders to fear appearing incompetent or alarmist if they intervened"
-      ],
-      "answer": "Diffusion of responsibility decreased each individual's felt obligation to act when others were present",
-      "explanation": "Diffusion of responsibility is the mechanism most directly identified by the bystanders' own accounts — each person assumed someone else had already acted. In Latané and Darley's model, this represents a failure at Step 3 (taking personal responsibility). The bystanders' statements ('someone else must have already called') are the textbook expression of this mechanism. Pluralistic ignorance (Step 2) involves misreading the situation as non-serious based on observing others' apparent calm — it would apply if bystanders thought the person was merely sleeping. Stimulus overload (Step 1) involves failing to notice the event entirely, which is not the case here since all bystanders were aware of the collapse. Evaluation apprehension (Step 5) involves fear of embarrassment about intervening incorrectly, which was not reported by these bystanders.",
-      "kn": "KN15",
-      "kn_explanation": "This question is best aligned with KN15 because it tests Social interaction and relationships (e.g., attraction, aggression, altruism, organizational justice, verbal and non-verbal communication, internet communication, mate selection, empathy).",
-      "difficulty": "medium",
-      "quality_comment": "Scenario-based discrimination question anchored in bystanders' actual reported reasoning, which maps precisely to diffusion of responsibility; distractors correspond to other steps in Latané and Darley's model, requiring knowledge of the full sequential framework.",
-      "suggestedLesson": "3-helping-and-hurting",
-      "suggestedParagraph": "The Five Steps to Helping (And Where Things Go Wrong)",
-      "lessonExcerpt": "Here's where the diffusion of responsibility kicks in. When multiple people are present, each person feels less personally responsible. The math is brutal: more bystanders = less likelihood of any single person helping.",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 16
-    },
-    {
-      "stem": "In a study examining gender bias in academic evaluation, psychology faculty independently reviewed an identical research manuscript. Half received it attributed to 'Dr. Jennifer Morris' and half received the same manuscript attributed to 'Dr. James Morris.' Faculty who believed the author was male rated the manuscript significantly higher in scientific rigor, methodological sophistication, and overall publication worthiness. This finding MOST directly illustrates:",
-      "options": [
-        "The ultimate attribution error, because evaluators attributed the work's perceived quality to the author's group membership characteristics",
-        "Illusory correlation, because evaluators incorrectly perceived a statistical relationship between gender and scientific quality",
-        "Evaluative gender bias, in which identical intellectual work is judged as lower quality when attributed to a female rather than a male author",
-        "Ingroup favoritism, because male evaluators disproportionately rated the male-attributed manuscript more favorably"
-      ],
-      "answer": "Evaluative gender bias, in which identical intellectual work is judged as lower quality when attributed to a female rather than a male author",
-      "explanation": "This experimental paradigm (originating with Goldberg, 1968) demonstrates evaluative gender bias: objectively identical work is judged as inferior when attributed to a woman. This constitutes a direct form of sex-based discrimination in intellectual evaluation. The ultimate attribution error (Pettigrew, 2001) refers to applying self-serving attributional logic to in-group versus out-group behavior — it concerns explanations for why groups behave as they do, not differential quality ratings of identical products. Illusory correlation describes overestimating the co-occurrence of two unrelated things (e.g., group membership and a behavior); while conceptually adjacent, it does not precisely describe the evaluative mechanism at work. Ingroup favoritism would require that the effect be driven by evaluators sharing the author's gender — but Goldberg's original research and replications showed that both male and female evaluators exhibited the bias, ruling out simple ingroup favoritism.",
-      "kn": "KN14",
-      "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
-      "difficulty": "hard",
-      "quality_comment": "Tests discriminative knowledge of gender bias mechanisms versus related social cognition constructs; the ingroup favoritism distractor requires knowledge of the classic Goldberg finding that both sexes show the bias.",
-      "suggestedLesson": "3-helping-and-hurting",
-      "suggestedParagraph": "Reducing Conflict Through Cooperation",
-      "lessonExcerpt": "Sherif's famous Robbers Cave study (1966) showed how quickly groups can turn hostile. And how to fix it.",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 17
-    },
-    {
-      "stem": "A community mental health researcher documents that the prevalence of major depressive disorder, schizophrenia, and anxiety disorders is significantly higher in the lowest income quintile than in the highest. She argues that chronic stress from financial insecurity, restricted access to healthcare, exposure to neighborhood violence, and lack of social capital directly cause the elevated rates of psychiatric disorder in low-SES communities. This argument is most consistent with which theoretical position?",
-      "options": [
-        "The social selection (downward drift) hypothesis, which proposes that mental illness precedes and causes a decline in socioeconomic status",
-        "The social causation hypothesis, which proposes that the adversity conditions associated with low SES directly increase vulnerability to mental illness",
-        "Labeling theory, which holds that psychiatric diagnosis is differentially applied to lower-SES individuals who violate dominant cultural norms",
-        "Relative deprivation theory, which attributes psychiatric risk to perceived inequality rather than to absolute material conditions"
-      ],
-      "answer": "The social causation hypothesis, which proposes that the adversity conditions associated with low SES directly increase vulnerability to mental illness",
-      "explanation": "The social causation (or social stress) hypothesis asserts a direct causal pathway from low-SES conditions—chronic stress, poverty, limited healthcare access, trauma exposure, discrimination—to elevated rates of psychopathology. This matches the researcher's argument that environmental adversity produces disorder. The social selection (downward drift) hypothesis (Option A) offers the competing causal model: that mental illness impairs occupational and social functioning, causing individuals to drift into lower-SES positions. The two hypotheses differ on the direction of the causal arrow and are a classic paired comparison on the EPPP. Labeling theory (Option C) concerns how societal reactions to norm-violating behavior—not stressors per se—generate psychiatric diagnoses disproportionately for marginalized groups. Relative deprivation theory (Option D) focuses on perceived status gaps rather than the absolute adversity conditions the scenario describes.",
-      "kn": "KN15",
-      "kn_explanation": "This question is best aligned with KN15 because it tests Social interaction and relationships (e.g., attraction, aggression, altruism, organizational justice, verbal and non-verbal communication, internet communication, mate selection, empathy).",
-      "difficulty": "hard",
-      "quality_comment": "Tests a high-yield, frequently examined conceptual distinction (causation vs. selection). Distractors are carefully calibrated to adjacent constructs. Flagged for review: the provided lesson files do not contain content on SES and psychiatric prevalence—this question draws on Hollingshead & Redlich and Dohrenwend et al., standard EPPP sources not present in the supplied materials.",
-      "suggestedLesson": "3-helping-and-hurting",
-      "suggestedParagraph": "## Why This Matters for Your Psychology Career",
-      "lessonExcerpt": "CONTENT NOT FOUND IN PROVIDED LESSONS: The supplied lesson files do not address socioeconomic determinants of mental illness or the social causation/social selection debate. This question is grounded in classic epidemiological and sociological literature (Hollingshead & Redlich, 1958; Dohrenwend et al., 1992).",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 24
-    },
-    {
-      "stem": "According to Latane and Darley's model of bystander intervention, which step involves a bystander deciding that someone else will take responsibility for helping, thereby reducing their own likelihood of intervening?",
-      "options": [
-        "Step 2 – Interpreting the event",
-        "Step 3 – Assuming responsibility",
-        "Step 4 – Determining how to help",
-        "Step 5 – Deciding whether or not to help"
-      ],
-      "answer": "Step 3 – Assuming responsibility",
-      "explanation": "1. \"Step 3 – Assuming responsibility\" is the correct answer because it specifically addresses the phenomenon of diffusion of responsibility. In this step, a bystander may conclude that others present are willing to assist, leading them to feel less personally responsible for intervening in the emergency situation. This reduction in perceived responsibility decreases the likelihood that they will take action.\n\n2. \n- **Step 2 – Interpreting the event:** This step involves the bystander determining whether the situation is an emergency, which does not directly relate to feelings of responsibility but rather to understanding the urgency of the situation.\n- **Step 4 – Determining how to help:** This step focuses on the bystander’s ability to figure out the appropriate way to assist the victim, which is separate from the decision of whether or not they feel responsible to help.\n- **Step 5 – Deciding whether or not to help:** This step pertains to the final decision to help, which may be influenced by various factors, including evaluation apprehension, but does not specifically address the assumption of responsibility that occurs earlier in the process.",
-      "kn": "KN15",
-      "kn_explanation": "This question relates to social cognition theories regarding altruistic behavior and social influence in emergencies, pertinent to social interaction and relationships (KN15).",
-      "difficulty": "medium",
-      "quality_comment": "The question clearly targets a specific step in a well-known model and distractors are similarly plausible steps, improving discriminability."
     },
     {
       "stem": "In Sherif’s Robbers Cave study, which intervention was found to most effectively reduce intergroup hostility between competing groups?",
@@ -721,22 +181,10 @@
       "kn": "KN15",
       "kn_explanation": "This question is best aligned with KN15 because it tests Social interaction and relationships (e.g., attraction, aggression, altruism, organizational justice, verbal and non-verbal communication, internet communication, mate selection, empathy).",
       "difficulty": "easy",
-      "quality_comment": "This item is clear and has one well-supported correct answer with plausible distractors reflective of related constructs."
-    },
-    {
-      "stem": "Which of the following best illustrates the concept of pluralistic ignorance in bystander intervention research?",
-      "options": [
-        "A person not noticing an emergency due to distraction",
-        "A bystander assuming that others' lack of action means no help is needed",
-        "Feeling unable to help because of lack of skills",
-        "Avoiding helping to prevent social embarrassment"
-      ],
-      "answer": "A bystander assuming that others' lack of action means no help is needed",
-      "explanation": "1. \"A bystander assuming that others' lack of action means no help is needed\" is the correct answer because it exemplifies pluralistic ignorance, where an individual misinterprets the inaction of others as an indication that the situation does not require intervention. This phenomenon can lead to a bystander failing to act, believing that since no one else is helping, the emergency is not perceived as urgent or serious.\n\n2. The option \"A person not noticing an emergency due to distraction\" is incorrect because it relates to the first step of bystander intervention, which is noticing the event, rather than interpreting the situation based on others' actions. \"Feeling unable to help because of lack of skills\" is wrong because it pertains to the fourth step, determining how to help, rather than the social influence of others' inaction. Lastly, \"Avoiding helping to prevent social embarrassment\" is incorrect as it reflects evaluation apprehension, which is related to the fifth step of the intervention process, rather than the misinterpretation of others' behaviors that characterizes pluralistic ignorance.",
-      "kn": "KN15",
-      "kn_explanation": "Focuses on social cognitive processes involved in interpreting other people's behavior, key to social interaction and relationships (KN15).",
-      "difficulty": "medium",
-      "quality_comment": "Options are clear with distractors representing related but distinct barriers to helping, aiding discrimination on knowledge."
+      "quality_comment": "This item is clear and has one well-supported correct answer with plausible distractors reflective of related constructs.",
+      "lessonExcerpt": "Allport's contact hypothesis remains foundational. Simply putting different groups together isn't enough.",
+      "suggestedLesson": "3-helping-and-hurting",
+      "needsReview": false
     },
     {
       "stem": "The empathy-altruism hypothesis proposes that people help others primarily due to:",
@@ -751,7 +199,10 @@
       "kn": "KN15",
       "kn_explanation": "This question tests knowledge of motivational theories behind prosocial behavior, relating to social cognition and social interaction (KN15).",
       "difficulty": "easy",
-      "quality_comment": "The correct option is conceptually distinct and distractors reflect alternative motivational explanations, enhancing test validity."
+      "quality_comment": "The correct option is conceptually distinct and distractors reflect alternative motivational explanations, enhancing test validity.",
+      "lessonExcerpt": "Fewer externalizing and internalizing problems ### Teacher Expectations",
+      "suggestedLesson": "4-school-and-family",
+      "needsReview": false
     },
     {
       "stem": "According to social identity theory, prejudice and discrimination toward outgroup members stem primarily from:",
@@ -766,97 +217,10 @@
       "kn": "KN14",
       "kn_explanation": "This question targets foundational social cognition theories around group membership and prejudice, fitting social cognition (KN14).",
       "difficulty": "medium",
-      "quality_comment": "Distractors are plausible competing theories of prejudice, making this question effective for assessing theory knowledge."
-    },
-    {
-      "stem": "Which form of racism is characterized by subtle, often unconscious negative feelings toward minority groups while maintaining a non-prejudiced self-image and a belief in equality?",
-      "options": [
-        "Symbolic racism",
-        "Aversive racism",
-        "Ambivalent racism",
-        "Overt racism"
-      ],
-      "answer": "Aversive racism",
-      "explanation": "1. **Aversive racism** is the correct answer because it is characterized by individuals who hold a non-prejudiced self-image and a belief in equality while simultaneously harboring subtle, often unconscious negative feelings about minority groups. This form of racism leads to avoidance of interactions with minority members unless the individual can justify their discrimination on a basis other than race, reflecting an internal conflict between egalitarian beliefs and negative feelings.\n\n2. **Symbolic racism** is incorrect because it involves a belief in egalitarianism paired with the perception that minority groups violate traditional values, leading to opposition against policies aimed at promoting equality, rather than subtle negative feelings. **Ambivalent racism** is not the correct answer because it describes individuals who possess both positive and negative attitudes toward minority groups, resulting in emotional tension, rather than solely unconscious negative feelings. **Overt racism** is wrong as it refers to openly hostile and aggressive attitudes toward minority groups, which is a direct contrast to the subtlety and ambiguity of aversive racism.",
-      "kn": "KN20",
-      "kn_explanation": "The question pertains to a nuanced form of bias relevant to the causes and manifestations of oppression (KN20).",
-      "difficulty": "hard",
-      "quality_comment": "The choices are conceptually specific and require detailed content knowledge, making this appropriate for advanced testing."
-    },
-    {
-      "stem": "The phenomenon in which members of stigmatized groups perform more poorly on tasks after exposure to negative group stereotypes is called:",
-      "options": [
-        "Self-stereotyping",
-        "Stereotype threat",
-        "Scapegoating",
-        "Dehumanization"
-      ],
-      "answer": "Stereotype threat",
-      "explanation": "1. **Stereotype threat** is the correct answer because it refers to the phenomenon where situational factors activate negative group stereotypes in members of low-status groups, leading to impaired performance on tasks relevant to those stereotypes. This effect occurs when individuals feel the pressure to conform to negative expectations, which can increase stress and reduce cognitive resources necessary for task completion.\n\n2. **Self-stereotyping** is incorrect because it refers to the unconscious internalization of stereotypes that individuals apply to their own group, rather than the performance impairment caused by exposure to negative stereotypes. **Scapegoating** is also incorrect, as it involves members of dominant groups discriminating against weaker target groups to vent frustration, rather than the impact of stereotypes on performance. Lastly, **dehumanization** is wrong because it describes an evaluative stance that denies the humanness of outgroup members, which does not specifically relate to the performance effects caused by stereotype activation in stigmatized groups.",
-      "kn": "KN14",
-      "kn_explanation": "This question assesses understanding of social cognitive processes leading to discrimination effects, falling under social cognition (KN14).",
-      "difficulty": "medium",
-      "quality_comment": "The distractors are related concepts that are plausible but distinct, helping differentiate levels of understanding."
-    },
-    {
-      "stem": "Ambivalent sexism theory differentiates hostile sexism from benevolent sexism by identifying hostile sexism as:",
-      "options": [
-        "A subjectively favorable attitude offering protection to women in traditional roles",
-        "Antipathy toward women perceived as challenging men's power",
-        "Neutral attitudes that do not affect behavior",
-        "A rejection of all gender stereotypes"
-      ],
-      "answer": "Antipathy toward women perceived as challenging men's power",
-      "explanation": "1. The correct answer, \"Antipathy toward women perceived as challenging men's power,\" accurately defines hostile sexism as described in ambivalent sexism theory. This type of sexism reflects negative attitudes and hostility towards women who are viewed as undermining traditional gender roles or threatening male dominance. Hostile sexism encompasses disdain for women who assert themselves or seek equality, as it is rooted in a belief that men should retain power over women.\n\n2. The first incorrect option, \"A subjectively favorable attitude offering protection to women in traditional roles,\" describes benevolent sexism, which is characterized by positive but patronizing attitudes toward women who conform to traditional roles, rather than hostility toward those who challenge them. The second incorrect option, \"Neutral attitudes that do not affect behavior,\" mischaracterizes hostile sexism, as it involves strong negative feelings rather than neutrality. Lastly, the option \"A rejection of all gender stereotypes\" is incorrect because hostile sexism does not reject gender stereotypes; rather, it reinforces them by promoting negative views of women who deviate from traditional expectations.",
-      "kn": "KN15",
-      "kn_explanation": "This question is best aligned with KN15 because it tests Social interaction and relationships (e.g., attraction, aggression, altruism, organizational justice, verbal and non-verbal communication, internet communication, mate selection, empathy).",
-      "difficulty": "medium",
-      "quality_comment": "The stem and options are precise; distractors represent common misunderstandings providing a valid challenge."
-    },
-    {
-      "stem": "Which of the following best exemplifies structural racism as defined by the APA?",
-      "options": [
-        "A teacher treating students unfairly based on race",
-        "Laws and policies that create race-based inequalities, such as school funding tied to local property taxes",
-        "Individual holding and expressing overtly racist views",
-        "Discriminatory hiring practices by a private employer"
-      ],
-      "answer": "Laws and policies that create race-based inequalities, such as school funding tied to local property taxes",
-      "explanation": "1. The correct answer, \"Laws and policies that create race-based inequalities, such as school funding tied to local property taxes,\" exemplifies structural racism as defined by the APA because it refers to systemic practices and policies that produce enduring racial disparities. Structural racism encompasses laws and institutional practices that perpetuate inequalities across various domains, including education, as evidenced by funding mechanisms that disadvantage minority communities.\n\n2. The option \"A teacher treating students unfairly based on race\" is incorrect because it describes interpersonal racism, which involves individual behaviors and attitudes rather than systemic practices. \"Individual holding and expressing overtly racist views\" is also incorrect, as this represents overt racism, which is characterized by explicit hostility and discrimination from individuals rather than structural inequalities. Finally, \"Discriminatory hiring practices by a private employer\" is incorrect because it pertains to institutional racism, which is specific to organizational policies rather than broader societal structures that create systemic racial disparities.",
-      "kn": "KN20",
-      "kn_explanation": "The question focuses on systemic and societal bases of oppression, fitting within causes, manifestations, and effects of oppression (KN20).",
-      "difficulty": "medium",
-      "quality_comment": "The distractors are plausible but distinct forms of racism, increasing clarity and content validity."
-    },
-    {
-      "stem": "Research on shooter bias has found that:",
-      "options": [
-        "Both White and Black civilians exhibit shooter bias in response times and errors",
-        "Police officers do not show any form of shooter bias compared to civilians",
-        "Only White civilians show shooter bias related to racial stereotypes",
-        "Police officers make more errors than civilians when deciding to shoot armed suspects"
-      ],
-      "answer": "Both White and Black civilians exhibit shooter bias in response times and errors",
-      "explanation": "1. The correct answer, \"Both White and Black civilians exhibit shooter bias in response times and errors,\" is supported by Correll et al.'s (2002) research, which demonstrated that both groups showed similar levels of shooter bias, evidenced by their faster decisions to shoot armed Black suspects compared to armed White suspects and higher rates of mistakenly shooting unarmed Black suspects. This indicates that shooter bias is not limited to one racial group, but rather affects both White and Black civilians in similar ways.\n\n2. The first incorrect option, \"Police officers do not show any form of shooter bias compared to civilians,\" is wrong because while police officers were found to be better at detecting weapons, they still exhibited racial bias in the speed of their shoot/don't shoot decisions, specifically regarding armed Black suspects. The second incorrect option, \"Only White civilians show shooter bias related to racial stereotypes,\" is incorrect as the research indicates that both White and Black civilians display shooter bias, not just White civilians. Lastly, the option \"Police officers make more errors than civilians when deciding to shoot armed suspects\" is inaccurate because the studies found that police officers had better accuracy in detecting weapons than civilians, suggesting they made fewer errors overall, despite exhibiting shooter bias in response times.",
-      "kn": "KN14",
-      "kn_explanation": "This item addresses social cognitive biases and stereotype activation in decision-making, relating to social cognition (KN14).",
-      "difficulty": "hard",
-      "quality_comment": "The question integrates empirical research findings and has carefully constructed distractors that require detailed content knowledge."
-    },
-    {
-      "stem": "According to contact hypothesis, one key condition that enhances the effectiveness of intergroup contact for reducing prejudice is:",
-      "options": [
-        "Groups competing for limited resources",
-        "Contact occurring with unequal group status",
-        "Contact sanctioned by law or institutional authorities",
-        "Avoidance of cooperative activities"
-      ],
-      "answer": "Contact sanctioned by law or institutional authorities",
-      "explanation": "1. \"Contact sanctioned by law or institutional authorities\" is the correct answer because, according to Allport's (1954) contact hypothesis, effective intergroup contact for reducing prejudice occurs when it is supported by legal or institutional frameworks. This endorsement helps create an environment where members of different groups feel safe and encouraged to engage with one another, thus facilitating positive interactions and reducing biases.\n\n2. The option \"Groups competing for limited resources\" is incorrect because competition can exacerbate prejudice and discrimination rather than reduce it, as it creates conflict between groups. \"Contact occurring with unequal group status\" is wrong because unequal status can reinforce existing prejudices and power dynamics, hindering effective interaction. Lastly, \"Avoidance of cooperative activities\" is incorrect because cooperation is essential for achieving common goals, which promotes positive intergroup relations and diminishes prejudice, contrary to the premise of the contact hypothesis.",
-      "kn": "KN15",
-      "kn_explanation": "This question is best aligned with KN15 because it tests Social interaction and relationships (e.g., attraction, aggression, altruism, organizational justice, verbal and non-verbal communication, internet communication, mate selection, empathy).",
-      "difficulty": "easy",
-      "quality_comment": "Clear stem and plausible alternatives make this question accessible but still discriminating for test-takers."
+      "quality_comment": "Distractors are plausible competing theories of prejudice, making this question effective for assessing theory knowledge.",
+      "lessonExcerpt": "Culturally adapted interventions** systematically modify evidence-based treatments to align with clients' cultural patterns, meanings, and values. Adaptations might include: - Content changes: Addressing acculturation, racism, spirituality - Format changes: Delivering treatment in native language, adopting culturally appropriate interpersonal styles, including indigenous healers",
+      "suggestedLesson": "3-cultural-concepts",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best describes the concept of infrahumanization in dehumanization theories?",
@@ -871,37 +235,10 @@
       "kn": "KN15",
       "kn_explanation": "This question is best aligned with KN15 because it tests Social interaction and relationships (e.g., attraction, aggression, altruism, organizational justice, verbal and non-verbal communication, internet communication, mate selection, empathy).",
       "difficulty": "medium",
-      "quality_comment": "Distractors are well-constructed, and the item requires understanding subtle differences in theories of dehumanization."
-    },
-    {
-      "stem": "Which factor is most influential in determining whether a bystander will help a person in distress in urban versus rural settings?",
-      "options": [
-        "Where the bystander was born and socialized",
-        "Whether the bystander has received formal emergency training",
-        "The bystander’s current location during the emergency",
-        "The severity of the victim’s injury"
-      ],
-      "answer": "The bystander’s current location during the emergency",
-      "explanation": "1. \"The bystander’s current location during the emergency\" is the correct answer because research indicates that a bystander is less likely to help a person in distress when the incident occurs in an urban area compared to a rural area, regardless of where the bystander was born and raised. This suggests that the immediate environment plays a crucial role in influencing a bystander's willingness to intervene, primarily due to factors like stimulus overload and the presence of more potential distractions in urban settings (Steblay, 1987).\n\n2. The option \"Where the bystander was born and socialized\" is incorrect because studies suggest that the current location of the bystander has a more significant impact on helping behavior than their background or socialization. \"Whether the bystander has received formal emergency training\" is not a primary factor in the context of urban versus rural settings, as the emphasis is on location rather than training. Lastly, \"The severity of the victim’s injury\" is also incorrect because while it may influence the decision to help, the research primarily highlights the environmental context (urban vs. rural) as the most critical determinant of bystander intervention.",
-      "kn": "KN15",
-      "kn_explanation": "This item relates to social environmental influences on prosocial behavior and bystander intervention, fitting social interaction and relationships (KN15).",
-      "difficulty": "medium",
-      "quality_comment": "This question targets empirical evidence distinguishing location effects, offering realistic but distinct distractors."
-    },
-    {
-      "stem": "Which of the following best explains why altruistic helping is more likely to result in sustained assistance compared to egoistic helping?",
-      "options": [
-        "Altruistic helping is motivated by reducing one’s own distress",
-        "Egoistic helping typically requires external rewards",
-        "Altruistic helping originates from empathic concern for the other’s well-being",
-        "Egoistic helping leads to increased social approval"
-      ],
-      "answer": "Altruistic helping originates from empathic concern for the other’s well-being",
-      "explanation": "1. The correct answer, \"Altruistic helping originates from empathic concern for the other’s well-being,\" is supported by the empathy-altruism hypothesis, which posits that individuals help others primarily out of genuine concern for their welfare. This type of motivation fosters a deeper emotional connection to the recipient, leading to more sustained assistance over time as the helper is driven by empathy rather than self-interest.\n\n2. The option \"Altruistic helping is motivated by reducing one’s own distress\" is incorrect because it describes egoistic helping, which is driven by the desire to alleviate one's own negative feelings rather than a focus on the other’s needs. The statement \"Egoistic helping typically requires external rewards\" is misleading; while egoistic motivations may sometimes seek rewards, they do not inherently require them, thus failing to distinguish between the two types of helping. Lastly, \"Egoistic helping leads to increased social approval\" is inaccurate because while social approval can be a factor, it does not define egoistic helping, which is primarily concerned with self-serving motives rather than the altruistic intent of genuinely wanting to help others.",
-      "kn": "KN15",
-      "kn_explanation": "This question highlights motivational factors in prosocial behavior, relevant to social cognition in interaction (KN15).",
-      "difficulty": "medium",
-      "quality_comment": "The distractors cover alternative motivations, making the correct answer clear but requiring conceptual understanding."
+      "quality_comment": "Distractors are well-constructed, and the item requires understanding subtle differences in theories of dehumanization.",
+      "lessonExcerpt": "Internalization:** The emotional intensity decreases. They've developed a positive Black identity and can now tolerate or respect racial and cultural differences.",
+      "suggestedLesson": "3-cultural-identity",
+      "needsReview": false
     },
     {
       "stem": "Which of the following is an example of unintentional covert racism?",
@@ -916,7 +253,10 @@
       "kn": "KN20",
       "kn_explanation": "This item examines subtle forms of racism and their manifestations, fitting causes and manifestations of oppression (KN20).",
       "difficulty": "medium",
-      "quality_comment": "Distractors contrast intentionality and manifestation types, improving discrimination in specialized content."
+      "quality_comment": "Distractors contrast intentionality and manifestation types, improving discrimination in specialized content.",
+      "lessonExcerpt": "They avoid contact with minorities when possible and discriminate only when they can justify it on non-racial grounds.",
+      "suggestedLesson": "3-helping-and-hurting",
+      "needsReview": false
     },
     {
       "stem": "In a situation where multiple witnesses observe a person in distress, which step in Latane and Darley's model refers to the bystander recognizing that help is needed?",
@@ -936,7 +276,10 @@
       "lock_in_level": "easier",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "Step 2: Interpreting It as an Emergency - Even when you notice something unusual, you might misread the situation.",
+      "suggestedLesson": "3-helping-and-hurting",
+      "needsReview": false
     },
     {
       "stem": "When a bystander feels a personal obligation to assist someone in need despite the presence of others, which step in Latane and Darley's model are they likely engaged in?",
@@ -956,7 +299,10 @@
       "lock_in_level": "harder",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "Step 3: Taking Responsibility - Here's where the diffusion of responsibility kicks in.",
+      "suggestedLesson": "3-helping-and-hurting",
+      "needsReview": false
     }
   ]
 }

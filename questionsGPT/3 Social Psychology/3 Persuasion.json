@@ -35,9 +35,9 @@
       "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
       "difficulty": "medium",
       "quality_comment": "The question effectively assesses understanding of cognitive dissonance.",
-      "suggestedLesson": "3-persuasion",
+      "suggestedLesson": "3-attitudes",
       "suggestedParagraph": "## Why Persuasion Matters for Psychologists",
-      "lessonExcerpt": "Cognitive dissonance creates discomfort that motivates individuals to change their attitudes to resolve the conflict.",
+      "lessonExcerpt": "you experience psychological discomfort called dissonance. This discomfort motivates you to reduce it.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
       "inspirationIndex": 16
@@ -118,7 +118,10 @@
       "kn": "KN16",
       "kn_explanation": "This question focuses on persuasion techniques, which are part of group and systems processes and social influences on functioning (KN16).",
       "difficulty": "medium",
-      "quality_comment": "Clear stem with plausible distractors, though use of Greek letter names might slightly cue the test takers; otherwise well-constructed."
+      "quality_comment": "Clear stem with plausible distractors, though use of Greek letter names might slightly cue the test takers; otherwise well-constructed.",
+      "lessonExcerpt": "Alpha strategies focus on increasing the attractive pull toward change. ... Alpha strategies pile on the reasons why change is desirable.",
+      "suggestedLesson": "3-persuasion",
+      "needsReview": false
     },
     {
       "stem": "What is the 'sleeper effect' in the context of communicator credibility in persuasion?",
@@ -133,7 +136,10 @@
       "kn": "KN16",
       "kn_explanation": "Understanding source credibility and its effect on persuasion is fundamental to social influence and group processes (KN16).",
       "difficulty": "medium",
-      "quality_comment": "The alternatives are subtle and plausible, encouraging critical thinking about source issues in persuasion."
+      "quality_comment": "The alternatives are subtle and plausible, encouraging critical thinking about source issues in persuasion.",
+      "lessonExcerpt": "the impact of credibility fades over time. This phenomenon is called the sleeper effect. ... People remember the message but forget who said it.",
+      "suggestedLesson": "3-persuasion",
+      "needsReview": false
     },
     {
       "stem": "Regarding message discrepancy and communicator credibility, which pattern best describes the relationship between amount of attitude change and message discrepancy when the communicator is high in credibility?",
@@ -148,7 +154,10 @@
       "kn": "KN16",
       "kn_explanation": "This question tests knowledge of message factors influencing persuasion, a key part of social and group processes (KN16).",
       "difficulty": "medium",
-      "quality_comment": "Offers well-balanced options and tests understanding of a nuanced interaction effect in persuasion research."
+      "quality_comment": "Offers well-balanced options and tests understanding of a nuanced interaction effect in persuasion research.",
+      "lessonExcerpt": "for high-credible sources, more discrepancy actually leads to more attitude change – a linear relationship.",
+      "suggestedLesson": "3-persuasion",
+      "needsReview": false
     },
     {
       "stem": "When two opposing sides of an argument are presented back-to-back and attitudes are assessed after a delay, which effect is most likely to be observed?",
@@ -163,7 +172,10 @@
       "kn": "KN16",
       "kn_explanation": "Understanding order and timing effects in message presentation relates to social cognition and persuasion processes within group/social dynamics (KN16).",
       "difficulty": "medium",
-      "quality_comment": "Clear distinction between primacy and recency effects; distractors are plausible and test knowledge well."
+      "quality_comment": "Clear distinction between primacy and recency effects; distractors are plausible and test knowledge well.",
+      "lessonExcerpt": "Primacy effect occurs when: Both sides are presented back-to-back; Then time passes before measuring attitudes; Result: The first side wins",
+      "suggestedLesson": "3-persuasion",
+      "needsReview": false
     },
     {
       "stem": "According to Tannenbaum et al. (2015), fear appeals are most effective in changing attitudes when they include all of the following EXCEPT:",
@@ -178,7 +190,10 @@
       "kn": "KN16",
       "kn_explanation": "This question addresses message factors in persuasion (fear arousal), fitting within social influence and group processes (KN16).",
       "difficulty": "hard",
-      "quality_comment": "Well-crafted question focusing on specifics of fear appeals with plausible but incorrect distractor emphasizing minimization."
+      "quality_comment": "Well-crafted question focusing on specifics of fear appeals with plausible but incorrect distractor emphasizing minimization.",
+      "lessonExcerpt": "Three ingredients make fear appeals effective: 1. High fear arousal: Don't hold back on describing the negative consequences 2. Efficacy message: Assure people they're capable of taking action AND that the action will work 3. Clear risk description: Spell out what happens if no action is taken",
+      "suggestedLesson": "3-persuasion",
+      "needsReview": false
     },
     {
       "stem": "Which recipient characteristic shows an inverted-U shaped relationship with susceptibility to persuasion?",
@@ -193,7 +208,10 @@
       "kn": "KN16",
       "kn_explanation": "This question assesses knowledge of individual differences affecting social influence and persuasion, classified under social and group processes (KN16).",
       "difficulty": "medium",
-      "quality_comment": "Distractors are all plausible individual difference variables; question is clear and focused."
+      "quality_comment": "Distractors are all plausible individual difference variables; question is clear and focused.",
+      "lessonExcerpt": "The relationship between self-esteem and persuasion forms another inverted U-shape. People with moderate self-esteem are most easily persuaded.",
+      "suggestedLesson": "3-persuasion",
+      "needsReview": false
     },
     {
       "stem": "McGuire’s attitude inoculation hypothesis proposes that resistance to persuasion is increased by:",
@@ -208,7 +226,10 @@
       "kn": "KN16",
       "kn_explanation": "This question focuses on strategies to enhance resistance to persuasion, a component of group and systems processes influencing social behavior (KN16).",
       "difficulty": "medium",
-      "quality_comment": "Distractors are plausible but only one describes inoculation theory correctly, making it an effective question."
+      "quality_comment": "Distractors are plausible but only one describes inoculation theory correctly, making it an effective question.",
+      "lessonExcerpt": "attitude inoculation exposes people to weak arguments against their current beliefs, along with counterarguments that refute those weak arguments.",
+      "suggestedLesson": "3-persuasion",
+      "needsReview": false
     },
     {
       "stem": "According to behavioral economics, which of the following best illustrates 'loss aversion'?",
@@ -223,7 +244,10 @@
       "kn": "KN16",
       "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
       "difficulty": "medium",
-      "quality_comment": "Options are clear and differentiated; tests precise understanding of the key concept of loss aversion."
+      "quality_comment": "Options are clear and differentiated; tests precise understanding of the key concept of loss aversion.",
+      "lessonExcerpt": "The pain of losing something is roughly twice as powerful as the pleasure of gaining the same thing.",
+      "suggestedLesson": "3-persuasion",
+      "needsReview": false
     },
     {
       "stem": "What does the term 'scarcity trap' refer to in behavioral economics?",
@@ -238,7 +262,10 @@
       "kn": "KN16",
       "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
       "difficulty": "hard",
-      "quality_comment": "The question captures a complex concept with well-balanced answer choices, requiring integration of multiple ideas."
+      "quality_comment": "The question captures a complex concept with well-balanced answer choices, requiring integration of multiple ideas.",
+      "lessonExcerpt": "When bandwidth is reduced by scarcity, people make worse decisions, which can create a scarcity trap.",
+      "suggestedLesson": "3-persuasion",
+      "needsReview": false
     },
     {
       "stem": "Which of the following factors decreases the perceived trustworthiness of a communicator in persuasion?",
@@ -253,7 +280,10 @@
       "kn": "KN16",
       "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
       "difficulty": "easy",
-      "quality_comment": "Clear and straightforward question with plausible distractors, appropriate for foundational understanding."
+      "quality_comment": "Clear and straightforward question with plausible distractors, appropriate for foundational understanding.",
+      "lessonExcerpt": "Trustworthiness means people see you as honest, fair, and unbiased.",
+      "suggestedLesson": "3-persuasion",
+      "needsReview": false
     },
     {
       "stem": "Which of the following describes the typical relationship between intelligence and susceptibility to persuasion?",
@@ -268,7 +298,10 @@
       "kn": "KN16",
       "kn_explanation": "Understanding recipient characteristics influencing persuasion fits within social cognitive processes (KN16).",
       "difficulty": "medium",
-      "quality_comment": "Distractors cover common patterns to distinguish test-takers' familiarity with intelligence and persuasion data."
+      "quality_comment": "Distractors cover common patterns to distinguish test-takers' familiarity with intelligence and persuasion data.",
+      "lessonExcerpt": "intelligence shows a linear relationship with persuasion: lower intelligence is associated with higher susceptibility.",
+      "suggestedLesson": "3-persuasion",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best defines 'materialism' as studied in behavioral economics and psychology?",
@@ -283,7 +316,10 @@
       "kn": "KN16",
       "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
       "difficulty": "medium",
-      "quality_comment": "Good conceptual clarity; distractors are plausible but clearly different constructs from materialism."
+      "quality_comment": "Good conceptual clarity; distractors are plausible but clearly different constructs from materialism.",
+      "lessonExcerpt": "Materialism involves organizing your values and goals around wealth, possessions, image, and status.",
+      "suggestedLesson": "3-persuasion",
+      "needsReview": false
     },
     {
       "stem": "Which persuasion factor is most enhanced when a celebrity endorses a product that aligns closely with their known background or expertise?",
@@ -298,7 +334,10 @@
       "kn": "KN16",
       "kn_explanation": "This question highlights communicator factors influencing persuasion, specifically expertise within social influence processes (KN16).",
       "difficulty": "medium",
-      "quality_comment": "Clear linkage of communicator expertise to an applied example; options are balanced and plausible."
+      "quality_comment": "Clear linkage of communicator expertise to an applied example; options are balanced and plausible.",
+      "lessonExcerpt": "The research shows that expertise works best when there's a match between the communicator's background and what they're endorsing.",
+      "suggestedLesson": "3-persuasion",
+      "needsReview": false
     },
     {
       "stem": "Which of the following is an example of an omega strategy in persuasion?",
@@ -313,7 +352,10 @@
       "kn": "KN16",
       "kn_explanation": "This item addresses persuasion strategies targeting resistance reduction, an important social influence topic (KN16).",
       "difficulty": "medium",
-      "quality_comment": "Good discrimination between approach-focused alpha strategies and resistance-focused omega strategies."
+      "quality_comment": "Good discrimination between approach-focused alpha strategies and resistance-focused omega strategies.",
+      "lessonExcerpt": "You're addressing resistance head-on, providing counterarguments to objections, and making the change seem less threatening.",
+      "suggestedLesson": "3-persuasion",
+      "needsReview": false
     },
     {
       "stem": "Which recipient factor has been shown to have a U-shaped relationship with susceptibility to persuasion, with adolescents and older adults being more persuadable than middle-aged adults?",
@@ -328,7 +370,10 @@
       "kn": "KN16",
       "kn_explanation": "This question tests knowledge of recipient factors influencing persuasion, within social development and influence processes (KN16).",
       "difficulty": "medium",
-      "quality_comment": "Distractors are relevant constructs, allowing effective testing of nuanced developmental patterns in susceptibility."
+      "quality_comment": "Distractors are relevant constructs, allowing effective testing of nuanced developmental patterns in susceptibility.",
+      "lessonExcerpt": "research suggests a U-shaped pattern: adolescents/young adults and older adults are more easily persuaded than middle-aged adults.",
+      "suggestedLesson": "3-persuasion",
+      "needsReview": false
     },
     {
       "stem": "In the context of persuasion, which approach focuses on enhancing the attractiveness of a message to encourage acceptance by highlighting expert opinions and positive testimonials?",
@@ -348,7 +393,10 @@
       "lock_in_level": "easier",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "Alpha strategies focus on increasing the attractive pull toward change.",
+      "suggestedLesson": "3-persuasion",
+      "needsReview": false
     },
     {
       "stem": "Which persuasion technique involves presenting compelling evidence and social proof to strengthen an argument and reduce counterarguments?",
@@ -368,7 +416,10 @@
       "lock_in_level": "harder",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "Alpha strategies pile on the reasons why change is desirable. You're strengthening the arguments for change and showing that lots of other people are already on board.",
+      "suggestedLesson": "3-persuasion",
+      "needsReview": false
     }
   ]
 }

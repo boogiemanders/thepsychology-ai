@@ -16,7 +16,7 @@
       "quality_comment": "Straightforward recall question well-grounded in lesson content. The matching hypothesis is a classic EPPP concept.",
       "suggestedLesson": "3-connection",
       "suggestedParagraph": "## What Makes Us Attracted to Specific People?",
-      "lessonExcerpt": "People prefer physically attractive partners, but the matching hypothesis posits that people of approximately equal physical attractiveness are likely to select each other.",
+      "lessonExcerpt": "Physical attractiveness - Youth - Specific physical markers ### Why These Differences?",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
       "inspirationIndex": 14
@@ -64,132 +64,6 @@
       "inspirationIndex": 25
     },
     {
-      "stem": "How does cultural context enhance the understanding of individual behavior according to cultural psychology?",
-      "options": [
-        "By isolating individual traits from social influences",
-        "By emphasizing universal psychological processes",
-        "By recognizing the influence of cultural norms and values",
-        "By focusing solely on biological factors"
-      ],
-      "answer": "By recognizing the influence of cultural norms and values",
-      "explanation": "The correct answer is 'By recognizing the influence of cultural norms and values' because cultural psychology emphasizes that individual behavior cannot be fully understood without considering the cultural context in which it occurs. 'By isolating individual traits from social influences' is incorrect as it contradicts the premise of cultural psychology. 'By emphasizing universal psychological processes' overlooks the specificity of cultural influences. 'By focusing solely on biological factors' ignores the social and cultural dimensions.",
-      "kn": "KN16",
-      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively assesses understanding of cultural psychology.",
-      "suggestedLesson": "3-connection",
-      "suggestedParagraph": "## Why Understanding Affiliation, Attraction, and Intimacy Matters for Your Practice",
-      "lessonExcerpt": "Cultural psychology recognizes that understanding individuals requires acknowledging the influence of cultural norms and values.",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 13
-    },
-    {
-      "stem": "In child development, how does credibility influence altruistic behavior?",
-      "options": [
-        "Children are more likely to help when they perceive the helper as credible.",
-        "Children's altruism is unaffected by the credibility of the helper.",
-        "Credibility only matters in peer interactions, not adult-child interactions.",
-        "Children prefer to help those who are less credible."
-      ],
-      "answer": "Children are more likely to help when they perceive the helper as credible.",
-      "explanation": "The correct answer is 'Children are more likely to help when they perceive the helper as credible' because research indicates that children's willingness to engage in altruistic behavior is influenced by their perception of the helper's credibility. 'Children's altruism is unaffected by the credibility of the helper' is incorrect as credibility plays a significant role. 'Credibility only matters in peer interactions, not adult-child interactions' is misleading, as it applies to both contexts. 'Children prefer to help those who are less credible' contradicts the established findings.",
-      "kn": "KN15",
-      "kn_explanation": "This question is best aligned with KN15 because it tests Social interaction and relationships (e.g., attraction, aggression, altruism, organizational justice, verbal and non-verbal communication, internet communication, mate selection, empathy).",
-      "difficulty": "medium",
-      "quality_comment": "The question is relevant and assesses understanding of child development.",
-      "suggestedLesson": "3-connection",
-      "suggestedParagraph": "## Why Understanding Affiliation, Attraction, and Intimacy Matters for Your Practice",
-      "lessonExcerpt": "Children are more likely to engage in altruistic behavior when they perceive the helper as credible.",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 17
-    },
-    {
-      "stem": "Which of the following best describes how early relationships influence adult intimacy according to attachment theory?",
-      "options": [
-        "Early relationships create a secure base that fosters healthy adult intimacy.",
-        "Adult intimacy is solely determined by individual personality traits.",
-        "Early relationships have no significant impact on adult intimacy.",
-        "Adult intimacy is primarily influenced by social norms and peer relationships."
-      ],
-      "answer": "Early relationships create a secure base that fosters healthy adult intimacy.",
-      "explanation": "The correct answer reflects the idea that early relationships, particularly those characterized by secure attachment, provide a foundation for healthy intimacy in adulthood. The other options either deny the influence of early relationships or misattribute the source of adult intimacy.",
-      "kn": "KN15",
-      "kn_explanation": "This question is best aligned with KN15 because it tests Social interaction and relationships (e.g., attraction, aggression, altruism, organizational justice, verbal and non-verbal communication, internet communication, mate selection, empathy).",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively assesses understanding of attachment theory in relation to adult intimacy.",
-      "suggestedLesson": "3-connection",
-      "suggestedParagraph": "## Why Understanding Affiliation, Attraction, and Intimacy Matters for Your Practice",
-      "lessonExcerpt": "Understanding these patterns isn't just academic. It's practical knowledge you'll use almost daily.",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 1
-    },
-    {
-      "stem": "According to social comparison theory, which of the following best explains why individuals seek emotional support from others during stressful situations?",
-      "options": [
-        "A) To validate their feelings and gauge the appropriateness of their emotional responses.",
-        "B) To avoid personal responsibility for their emotions.",
-        "C) To enhance their self-esteem through competition.",
-        "D) To demonstrate their emotional resilience to others."
-      ],
-      "answer": "A) To validate their feelings and gauge the appropriateness of their emotional responses.",
-      "explanation": "Option A is correct because social comparison theory suggests that individuals look to others in similar situations to assess their own emotional responses. Option B is incorrect as seeking support does not imply avoiding responsibility. Option C is not relevant to the theory, which focuses on validation rather than competition. Option D misrepresents the motivation for seeking support, which is more about understanding than demonstrating resilience.",
-      "kn": "KN14",
-      "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively tests understanding of social comparison theory and its application to emotional support.",
-      "suggestedLesson": "3-connection",
-      "suggestedParagraph": "## The Need for Affiliation: Why We Seek Others",
-      "lessonExcerpt": "When we're uncertain about how to feel, think, or react, we look to similar others to gauge whether our responses are appropriate.",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 11
-    },
-    {
-      "stem": "According to Helms's model of racial identity development, which stage involves individuals actively seeking to understand their racial identity and the implications of racism?",
-      "options": [
-        "Pre-encounter",
-        "Encounter",
-        "Immersion-Emersion",
-        "Internalization"
-      ],
-      "answer": "Immersion-Emersion",
-      "explanation": "The Immersion-Emersion stage in Helms's model is characterized by individuals immersing themselves in their racial identity and grappling with the implications of racism. The Pre-encounter stage involves a lack of awareness of racial identity, the Encounter stage is marked by a significant event that prompts awareness, and the Internalization stage involves a more integrated sense of self. Therefore, Immersion-Emersion is the correct answer.",
-      "kn": "KN19",
-      "kn_explanation": "This question is best aligned with KN19 because it tests Identity diversity and intersectionality (e.g., psychological impact of diversity on individuals, families, and systems).",
-      "difficulty": "hard",
-      "quality_comment": "Well-structured question that assesses knowledge of racial identity stages.",
-      "suggestedLesson": "3-connection",
-      "suggestedParagraph": "### Stages of Racial Identity Development",
-      "lessonExcerpt": "The Immersion-Emersion stage involves individuals actively seeking to understand their racial identity and the implications of racism.",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 2
-    },
-    {
-      "stem": "According to Cross's model of Black racial identity development, which stage is characterized by a strong sense of pride in one's racial identity and a commitment to the Black community?",
-      "options": [
-        "Pre-encounter",
-        "Encounter",
-        "Immersion-Emersion",
-        "Internalization"
-      ],
-      "answer": "Immersion-Emersion",
-      "explanation": "The Immersion-Emersion stage is where individuals experience a strong sense of pride in their racial identity and actively engage with the Black community. The Pre-encounter stage involves a lack of awareness of racial identity, the Encounter stage is marked by a significant event that prompts reflection on race, and the Internalization stage involves a more integrated sense of self. Thus, Immersion-Emersion is the correct answer.",
-      "kn": "KN19",
-      "kn_explanation": "This question is best aligned with KN19 because it tests Identity diversity and intersectionality (e.g., psychological impact of diversity on individuals, families, and systems).",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively assesses knowledge of a specific model of racial identity development.",
-      "suggestedLesson": "3-connection",
-      "suggestedParagraph": "## The Need for Affiliation: Why We Seek Others",
-      "lessonExcerpt": "The Immersion-Emersion stage is characterized by a strong sense of pride in one's racial identity and a commitment to the Black community.",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 11
-    },
-    {
       "stem": "In the context of sexual identity development, what characterizes the identity pride stage?",
       "options": [
         "Exploration of sexual orientation",
@@ -203,9 +77,9 @@
       "kn_explanation": "This question is best aligned with KN19 because it tests Identity diversity and intersectionality (e.g., psychological impact of diversity on individuals, families, and systems).",
       "difficulty": "hard",
       "quality_comment": "The question accurately assesses knowledge of sexual identity development stages.",
-      "suggestedLesson": "3-connection",
+      "suggestedLesson": "5-sex-and-gender",
       "suggestedParagraph": "## What Makes Us Attracted to Specific People?",
-      "lessonExcerpt": "The identity pride stage is characterized by a strong public affirmation of one's sexual identity.",
+      "lessonExcerpt": "Gender-Affirmative**: Dutch = \"wait and see then proceed\"; Gender-Affirmative = \"support authentic identity as it emerges.\" The Dutch protocol emphasizes caution and waiting for persistence; the gender-affirmative model emphasizes affirmation and authenticity. ## Key Takeaways",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
       "inspirationIndex": 14
@@ -224,33 +98,12 @@
       "kn_explanation": "This KN code applies as it pertains to understanding gender differences in leadership styles.",
       "difficulty": "medium",
       "quality_comment": "The question effectively tests knowledge of leadership styles in diverse teams.",
-      "suggestedLesson": "3-connection",
+      "suggestedLesson": "3-cultural-identity",
       "suggestedParagraph": "## The Need for Affiliation: Why We Seek Others",
-      "lessonExcerpt": "Transformational leadership is often associated with better outcomes in gender-diverse teams.",
+      "lessonExcerpt": "Immersion-Emersion:** They reject White culture completely and immerse themselves in Black culture. This is an intense, emotionally charged stage.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
       "inspirationIndex": 19
-    },
-    {
-      "stem": "In political communication, what is the primary purpose of timing in campaign strategies?",
-      "options": [
-        "To ensure that messages are delivered when the audience is most receptive.",
-        "To create a sense of urgency that compels immediate action.",
-        "To align campaign messages with the political calendar.",
-        "To distract opponents from their strategies."
-      ],
-      "answer": "To ensure that messages are delivered when the audience is most receptive.",
-      "explanation": "Effective timing in campaign strategies is crucial for maximizing audience receptiveness to messages. The other options, while relevant, do not capture the primary purpose of timing in communication.",
-      "kn": "KN15",
-      "kn_explanation": "This question is best aligned with KN15 because it tests Social interaction and relationships (e.g., attraction, aggression, altruism, organizational justice, verbal and non-verbal communication, internet communication, mate selection, empathy).",
-      "difficulty": "medium",
-      "quality_comment": "The question is relevant and tests knowledge of campaign strategies.",
-      "suggestedLesson": "3-connection",
-      "suggestedParagraph": "## Why Understanding Affiliation, Attraction, and Intimacy Matters for Your Practice",
-      "lessonExcerpt": "The lesson does not adequately cover political communication timing.",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 22
     },
     {
       "stem": "According to social exchange theory, what primarily drives interpersonal attraction?",
@@ -266,9 +119,9 @@
       "kn_explanation": "This question is best aligned with KN15 because it tests Social interaction and relationships (e.g., attraction, aggression, altruism, organizational justice, verbal and non-verbal communication, internet communication, mate selection, empathy).",
       "difficulty": "medium",
       "quality_comment": "The question is relevant and tests understanding of attraction theories.",
-      "suggestedLesson": "3-connection",
+      "suggestedLesson": "3-cultural-identity",
       "suggestedParagraph": "## What Makes Us Attracted to Specific People?",
-      "lessonExcerpt": "The lesson does not adequately cover social exchange theory.",
+      "lessonExcerpt": "Immersion-Emersion:** They reject White culture completely and immerse themselves in Black culture. This is an intense, emotionally charged stage.",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
       "inspirationIndex": 24
@@ -287,9 +140,9 @@
       "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
       "difficulty": "medium",
       "quality_comment": "Tests conceptual understanding of why the matching hypothesis is grounded in social exchange theory; distractors require careful discrimination among the major theories of attraction.",
-      "suggestedLesson": "3-connection",
+      "suggestedLesson": "5-sex-and-gender",
       "suggestedParagraph": "What Makes Us Attracted to Specific People?",
-      "lessonExcerpt": "Despite the romantic notion that 'opposites attract,' research consistently shows we're drawn to people similar to ourselves, particularly regarding important attitudes and values. Donn Byrne formulated the law of attraction in 1971, stating there's a positive linear relationship between attitude similarity and attraction.",
+      "lessonExcerpt": "Gender-Affirmative**: Dutch = \"wait and see then proceed\"; Gender-Affirmative = \"support authentic identity as it emerges.\" The Dutch protocol emphasizes caution and waiting for persistence; the gender-affirmative model emphasizes affirmation and authenticity. ## Key Takeaways",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
       "inspirationIndex": 14
@@ -308,33 +161,12 @@
       "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
       "difficulty": "medium",
       "quality_comment": "Scenario cleanly instantiates the uncertainty-reduction function of social comparison and requires distinguishing it from three plausible but distinct alternatives. Direct lesson support is strong.",
-      "suggestedLesson": "3-connection",
+      "suggestedLesson": "5-6-leadership",
       "suggestedParagraph": "Schachter's Anxiety Studies: Misery Loves Company (But Only Certain Company)",
-      "lessonExcerpt": "Social comparison theory, developed by Leon Festinger in 1954, explains why. When we're uncertain about how to feel, think, or react, we look to similar others to gauge whether our responses are appropriate.",
+      "lessonExcerpt": "A meta-analysis by Eagly, Johannesen-Schmidt, and van Engen (2003) revealed something interesting about transformational and transactional leadership: **Female leaders are more likely to:** - Use transformational leadership approaches (inspiring and developing people) - Provide contingency rewards (a transactional element)",
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
       "inspirationIndex": 21
-    },
-    {
-      "stem": "A 3-year-old boy correctly identifies himself as a boy and labels male playmates as boys. When his older sister puts on a short haircut and dresses in his clothing for a costume party, he insists she has 'turned into a boy.' According to Kohlberg's model of gender identity development, this child's error is MOST characteristic of which stage?",
-      "options": [
-        "Gender stability, because the child understands that his own gender persists over time but cannot yet conserve another person's gender across situational transformations",
-        "Gender labeling (basic gender identity), because the child can apply gender categories accurately under normal conditions but does not yet understand that gender is invariant across changes in appearance",
-        "Gender constancy, because the child has achieved full conservation of gender for familiar individuals but fails when costumes obscure biological cues",
-        "Pre-gender awareness, because the error reflects the absence of any stable internal representation of gender categories"
-      ],
-      "answer": "Gender labeling (basic gender identity), because the child can apply gender categories accurately under normal conditions but does not yet understand that gender is invariant across changes in appearance",
-      "explanation": "In Kohlberg's three-stage model of gender identity development, the first stage—gender labeling (basic gender identity, approximately ages 2–3)—is characterized by accurate gender categorization under typical conditions but a failure to conserve gender across superficial changes in appearance such as clothing, hairstyle, or costume. The child in this scenario correctly applies gender labels in ordinary contexts but concludes that a costume change produces an actual gender change, which is the defining error of the labeling stage. Gender stability (Option A) is the second stage, in which the child understands that their own gender persists across time but may still fail to conserve gender across situational or appearance-based transformations—particularly for others. However, the child in the scenario makes the error for another person based on appearance, which is most precisely the hallmark of stage one, where the very concept of gender's permanence has not yet been acquired. Gender constancy (Option C) is the third stage, involving full conservation of gender across both time and situational changes. Option D is incorrect because the child clearly demonstrates functional gender labeling.",
-      "kn": "KN19",
-      "kn_explanation": "This question is best aligned with KN19 because it tests Identity diversity and intersectionality (e.g., psychological impact of diversity on individuals, families, and systems).",
-      "difficulty": "medium",
-      "quality_comment": "Scenario precisely operationalizes the defining error of gender labeling stage and requires distinguishing it from gender stability, a common source of confusion. Flagged for review: the provided lesson files cover social psychology and do not include Kohlberg's gender identity development stages—this topic typically appears in developmental psychology content.",
-      "suggestedLesson": "3-connection",
-      "suggestedParagraph": "## Why Understanding Affiliation, Attraction, and Intimacy Matters for Your Practice",
-      "lessonExcerpt": "CONTENT NOT FOUND IN PROVIDED LESSONS: The supplied lesson files (domain 3, social psychology) do not contain material on Kohlberg's stages of gender identity development. This topic is typically covered in developmental psychology (domain 4) content.",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 25
     },
     {
       "stem": "According to Schachter's (1959) research on affiliation, highly anxious individuals tend to prefer waiting with:",
@@ -349,7 +181,10 @@
       "kn": "KN15",
       "kn_explanation": "This question explores social interaction and affiliation dynamics, which belong to social interaction and relationships (KN15).",
       "difficulty": "medium",
-      "quality_comment": "The question clearly tests understanding of a key study with plausible distractors that cover alternative behaviors, making it suitable for EPPP-level."
+      "quality_comment": "The question clearly tests understanding of a key study with plausible distractors that cover alternative behaviors, making it suitable for EPPP-level.",
+      "lessonExcerpt": "Why Understanding Affiliation, Attraction, and Intimacy Matters for Your Practice When you work with clients, you'll quickly notice that many of their struggles center on relationships: Why can't they make friends?",
+      "suggestedLesson": "3-connection",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best explains why people tend to be attracted to others who share similar attitudes according to Byrne's law of attraction?",
@@ -364,7 +199,10 @@
       "kn": "KN15",
       "kn_explanation": "This question addresses social cognition and interpersonal attraction within social interaction and relationships (KN15).",
       "difficulty": "easy",
-      "quality_comment": "Options are well balanced and the correct answer targets a core principle of attraction, making it appropriate for the EPPP."
+      "quality_comment": "Options are well balanced and the correct answer targets a core principle of attraction, making it appropriate for the EPPP.",
+      "lessonExcerpt": "Donn Byrne formulated the law of attraction in 1971, stating there's a positive linear relationship between attitude similarity and attraction. Why? Because interacting with people who share our views is reinforcing.",
+      "suggestedLesson": "3-connection",
+      "needsReview": false
     },
     {
       "stem": "The mere exposure effect predicts that repeated exposure to a person will increase liking only when initial reactions are:",
@@ -379,7 +217,10 @@
       "kn": "KN15",
       "kn_explanation": "This question tests knowledge of social psychological principles related to attraction, part of social interaction and relationships (KN15).",
       "difficulty": "medium",
-      "quality_comment": "Distractors include nuanced choices around valence, which challenges the test taker to recall precise conditions of the mere exposure effect."
+      "quality_comment": "Distractors include nuanced choices around valence, which challenges the test taker to recall precise conditions of the mere exposure effect.",
+      "lessonExcerpt": "This effect works when our initial reaction is neutral, mildly negative, or positive. If you absolutely can't stand someone from your first meeting, seeing them repeatedly won't magically fix that.",
+      "suggestedLesson": "3-connection",
+      "needsReview": false
     },
     {
       "stem": "Research on the pratfall effect shows that a competent person who makes a blunder is perceived as:",
@@ -394,7 +235,10 @@
       "kn": "KN15",
       "kn_explanation": "This question involves understanding social perception and attraction processes within interpersonal relationships (KN15).",
       "difficulty": "medium",
-      "quality_comment": "Question clearly differentiates between competence and the blunder's effect, with distractors testing common misconceptions."
+      "quality_comment": "Question clearly differentiates between competence and the blunder's effect, with distractors testing common misconceptions.",
+      "lessonExcerpt": "ssical Test Theory | Item Response Theory | |----------------------|---------------------| | Test-based (focuses on total scores) | Item-based (focuses on individual items) | | Sample-dependent (item statistics change with different groups) | Sample-invariant (item properties stable across groups) | | Less suitable for adaptive testing | Ideal for adaptive testing | | Simpler to understand and calculate | More complex but more powerful | ### The Core Idea: Item Characteristic Curves",
+      "suggestedLesson": "5-items-and-reliability",
+      "needsReview": false
     },
     {
       "stem": "The gain-loss effect in reciprocity suggests that people tend to be most attracted to those who:",
@@ -409,7 +253,10 @@
       "kn": "KN15",
       "kn_explanation": "This question targets nuances within reciprocity and social interaction, classified under social interaction and relationships (KN15).",
       "difficulty": "medium",
-      "quality_comment": "The options reflect the theoretical gradient of liking, well-designed to test recognition of a subtle social psychological phenomenon."
+      "quality_comment": "The options reflect the theoretical gradient of liking, well-designed to test recognition of a subtle social psychological phenomenon.",
+      "lessonExcerpt": "When highly anxious participants could choose between waiting alone or with other participants facing the same shock experiment, they overwhelmingly chose to wait together.",
+      "suggestedLesson": "3-connection",
+      "needsReview": false
     },
     {
       "stem": "According to Berscheid’s emotion-in-relationships model, strong emotional reactions in intimate relationships occur primarily when:",
@@ -424,7 +271,10 @@
       "kn": "KN14",
       "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
       "difficulty": "medium",
-      "quality_comment": "The stem is precise and all options are plausible behaviors in relationships, making the correct answer stand out logically."
+      "quality_comment": "The stem is precise and all options are plausible behaviors in relationships, making the correct answer stand out logically.",
+      "lessonExcerpt": "Donn Byrne formulated the law of attraction in 1971, stating there's a positive linear relationship between attitude similarity and attraction. Why? Because interacting with people who share our views is reinforcing.",
+      "suggestedLesson": "3-connection",
+      "needsReview": false
     },
     {
       "stem": "Buss and colleagues (1992) found that sexual infidelity elicits a stronger jealous response in men because:",
@@ -439,7 +289,10 @@
       "kn": "KN19",
       "kn_explanation": "This question is best aligned with KN19 because it tests Identity diversity and intersectionality (e.g., psychological impact of diversity on individuals, families, and systems).",
       "difficulty": "medium",
-      "quality_comment": "Answer options include commonly studied motives and theories, making the correct response clearly tied to key EPPP content."
+      "quality_comment": "Answer options include commonly studied motives and theories, making the correct response clearly tied to key EPPP content.",
+      "lessonExcerpt": "This effect works when our initial reaction is neutral, mildly negative, or positive. If you absolutely can't stand someone from your first meeting, seeing them repeatedly won't magically fix that.",
+      "suggestedLesson": "3-connection",
+      "needsReview": false
     },
     {
       "stem": "The double-shot hypothesis explains gender differences in jealousy by proposing that:",
@@ -454,7 +307,10 @@
       "kn": "KN19",
       "kn_explanation": "This question is best aligned with KN19 because it tests Identity diversity and intersectionality (e.g., psychological impact of diversity on individuals, families, and systems).",
       "difficulty": "hard",
-      "quality_comment": "The question requires understanding a complex interaction of beliefs and jealousy with plausible but nuanced distractors."
+      "quality_comment": "The question requires understanding a complex interaction of beliefs and jealousy with plausible but nuanced distractors.",
+      "lessonExcerpt": "competent people become more attractive when they commit small blunders, while average people become less attractive when they make the same mistakes.",
+      "suggestedLesson": "3-connection",
+      "needsReview": false
     },
     {
       "stem": "According to Buss (1989), across many cultures, men prefer mates who primarily exhibit:",
@@ -469,7 +325,10 @@
       "kn": "KN15",
       "kn_explanation": "This question assesses cross-cultural mate preference research within social and cultural bases of behavior (KN15).",
       "difficulty": "easy",
-      "quality_comment": "Distractors are relevant mate qualities, making the correct option salient but not obvious, suitable for EPPP level."
+      "quality_comment": "Distractors are relevant mate qualities, making the correct option salient but not obvious, suitable for EPPP level.",
+      "lessonExcerpt": "We're MORE attracted to people who initially dislike us but warm up over time than to people who consistently like us",
+      "suggestedLesson": "3-connection",
+      "needsReview": false
     },
     {
       "stem": "Cross-cultural research indicates that a low waist-to-hip ratio (WHR) of about 0.7 in women is generally preferred by men because it is a marker of:",
@@ -484,7 +343,10 @@
       "kn": "KN18",
       "kn_explanation": "This question is best aligned with KN18 because it tests Cultural and sociopolitical psychology (e.g., privilege, cross-cultural comparisons, political differences, international and global awareness, religiosity and spirituality, acculturation).",
       "difficulty": "medium",
-      "quality_comment": "Good balance of options; the correct answer aligns with established evolutionary theory tested in EPPP."
+      "quality_comment": "Good balance of options; the correct answer aligns with established evolutionary theory tested in EPPP.",
+      "lessonExcerpt": "strong emotions arise in close relationships when a partner interrupts the couple's usual behavioral routines by doing something unexpected.",
+      "suggestedLesson": "3-connection",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best describes the evolutionary basis for the human need for affiliation?",
@@ -499,7 +361,10 @@
       "kn": "KN14",
       "kn_explanation": "This question assesses understanding of evolutionary explanations for social affiliation, relevant to social and cultural bases of behavior (KN14).",
       "difficulty": "medium",
-      "quality_comment": "Options are plausible theories, allowing examinees to discriminate knowledge of evolutionary vs. social explanations effectively."
+      "quality_comment": "Options are plausible theories, allowing examinees to discriminate knowledge of evolutionary vs. social explanations effectively.",
+      "lessonExcerpt": "Throughout human history, sexual infidelity threatened men's certainty about paternity (since they couldn't be sure a child was genetically theirs)",
+      "suggestedLesson": "3-connection",
+      "needsReview": false
     },
     {
       "stem": "Generalized reciprocity differs from dyadic reciprocity in that generalized reciprocity:",
@@ -514,7 +379,10 @@
       "kn": "KN15",
       "kn_explanation": "The question clarifies distinct forms of reciprocity in social interaction and relationships, under the social and cultural bases of behavior domain (KN15).",
       "difficulty": "medium",
-      "quality_comment": "This item distinguishes similar concepts with closely related terminology, testing precise conceptual understanding suitable for EPPP."
+      "quality_comment": "This item distinguishes similar concepts with closely related terminology, testing precise conceptual understanding suitable for EPPP.",
+      "lessonExcerpt": "DeSteno and Salovey proposed the double-shot hypothesis in 1996, which suggests men and women have different beliefs about how sexual and emotional infidelity co-occur",
+      "suggestedLesson": "3-connection",
+      "needsReview": false
     },
     {
       "stem": "In a study on social affiliation, researchers found that individuals experiencing high levels of anxiety are more likely to seek out:",
@@ -534,7 +402,10 @@
       "lock_in_level": "easier",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "Men prioritized: Physical attractiveness, Youth, Specific physical markers",
+      "suggestedLesson": "3-connection",
+      "needsReview": false
     },
     {
       "stem": "A group of researchers is examining the behavior of individuals in stressful situations. They hypothesize that those with high anxiety will prefer to engage in group activities with:",
@@ -554,7 +425,10 @@
       "lock_in_level": "harder",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "Men across cultures tend to prefer a WHR of approximately 0.7 (waist circumference about 70% of hip circumference), considered a marker of good health and reproductive ability.",
+      "suggestedLesson": "3-connection",
+      "needsReview": false
     }
   ]
 }

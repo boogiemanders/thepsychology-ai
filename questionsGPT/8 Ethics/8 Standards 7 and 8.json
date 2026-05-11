@@ -85,27 +85,6 @@
       "inspirationIndex": 19
     },
     {
-      "stem": "Under the Buckley Amendment, what is a student's right regarding their educational records?",
-      "options": [
-        "Students have no rights to access their records.",
-        "Students can request to amend their records if they believe they are inaccurate.",
-        "Students can demand that their records be destroyed after graduation.",
-        "Students can access their records only if they are currently enrolled."
-      ],
-      "answer": "Students can request to amend their records if they believe they are inaccurate.",
-      "explanation": "The correct answer reflects the rights granted under the Buckley Amendment, which allows students to request amendments to their records. The lesson supports this by stating that students have rights concerning their educational records. The other options misrepresent students' rights under the amendment.",
-      "kn": "KN62",
-      "kn_explanation": "This question is best aligned with KN62 because it tests Professional standards and relevant guidelines for the practice of psychology (e.g., standards for educational and psychological testing).",
-      "difficulty": "medium",
-      "quality_comment": "The question is clear and tests understanding of student rights regarding educational records.",
-      "suggestedLesson": "8-standards-7-8",
-      "suggestedParagraph": "## The Foundation: Base Your Conclusions on Solid Ground",
-      "lessonExcerpt": "Students have the right to request to amend their records if they believe they are inaccurate.",
-      "needsReview": false,
-      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 6
-    },
-    {
       "stem": "When a psychologist suspects child abuse based on a disclosure from a child, what is their primary ethical obligation?",
       "options": [
         "To confront the parents about the allegations before taking any action.",
@@ -119,9 +98,9 @@
       "kn_explanation": "This question is best aligned with KN63 because it tests Laws, statutes, and judicial decisions that affect psychological practice.",
       "difficulty": "hard",
       "quality_comment": "The question effectively tests knowledge of child protection laws and ethical responsibilities.",
-      "suggestedLesson": "8-standards-7-8",
+      "suggestedLesson": "8-standards-3-4",
       "suggestedParagraph": "## Standard 7: Education and Training",
-      "lessonExcerpt": "You must ensure it's accurate and ethical.",
+      "lessonExcerpt": "Mandatory reporting laws require reporting suspected child abuse or neglect to protective services.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 15
@@ -140,9 +119,9 @@
       "kn_explanation": "This question is best aligned with KN63 because it tests Laws, statutes, and judicial decisions that affect psychological practice.",
       "difficulty": "hard",
       "quality_comment": "The question effectively tests knowledge of child protection laws and ethical responsibilities.",
-      "suggestedLesson": "8-standards-7-8",
+      "suggestedLesson": "8-standards-3-4",
       "suggestedParagraph": "## Standard 7: Education and Training",
-      "lessonExcerpt": "You must ensure it's accurate and ethical.",
+      "lessonExcerpt": "Mandatory reporting laws require reporting suspected child abuse or neglect to protective services. You report when you have \"reasonable cause to suspect\". Not when you're certain.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 18
@@ -184,7 +163,7 @@
       "quality_comment": "The question is well-structured and tests a nuanced understanding of authorship ethics.",
       "suggestedLesson": "8-standards-7-8",
       "suggestedParagraph": "## Standard 8: Research and Publication",
-      "lessonExcerpt": "Authorship should reflect significant contributions to the conception, design, execution, or interpretation of the research.",
+      "lessonExcerpt": "Publication credit: Standard 8.12 addresses who gets credit for published work. The principle is simple: Take credit only for work you actually did or substantially contributed to. Author order should reflect the relative contributions of each person involved.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 21
@@ -205,31 +184,10 @@
       "quality_comment": "The question effectively assesses understanding of authorship criteria.",
       "suggestedLesson": "8-standards-7-8",
       "suggestedParagraph": "## Standard 8: Research and Publication",
-      "lessonExcerpt": "Authorship should reflect significant contributions to the conception, design, execution, or interpretation of the research.",
+      "lessonExcerpt": "What counts as substantial contribution? According to the APA Publication Manual: Formulating the problem or hypothesis; Structuring the study design; Organizing and conducting the analysis; Interpreting results",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 24
-    },
-    {
-      "stem": "What should a psychologist do if they receive an unresolved complaint from a student in an academic setting?",
-      "options": [
-        "Ignore the complaint if it seems trivial.",
-        "Address the complaint through established institutional procedures.",
-        "Discuss the complaint with other faculty members immediately.",
-        "Respond to the student with a personal opinion."
-      ],
-      "answer": "Address the complaint through established institutional procedures.",
-      "explanation": "The appropriate response is to follow institutional procedures for addressing complaints, ensuring that the process is formal and fair. Ignoring the complaint or discussing it informally undermines the seriousness of the issue.",
-      "kn": "KN62",
-      "kn_explanation": "This question is best aligned with KN62 because it tests Professional standards and relevant guidelines for the practice of psychology (e.g., standards for educational and psychological testing).",
-      "difficulty": "medium",
-      "quality_comment": "The question is relevant and tests knowledge of professional ethics in an academic context.",
-      "suggestedLesson": "8-standards-7-8",
-      "suggestedParagraph": "## Standard 7: Education and Training",
-      "lessonExcerpt": "The lesson does not specifically address unresolved complaints, indicating a gap in coverage.",
-      "needsReview": false,
-      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 26
     },
     {
       "stem": "What ethical requirement must psychology students fulfill regarding their psychotherapy training?",
@@ -289,7 +247,7 @@
       "quality_comment": "Tests the commonly examined distinction between routine advising and substantial intellectual contribution in dissertation authorship. Realistic scenario with plausible distractors.",
       "suggestedLesson": "8-standards-7-8",
       "suggestedParagraph": "## Standard 8: Research and Publication",
-      "lessonExcerpt": "",
+      "lessonExcerpt": "Students must be listed as principal author on articles substantially based on their dissertations, except in exceptional circumstances.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 29
@@ -307,7 +265,10 @@
       "kn": "KN61",
       "kn_explanation": "This question assesses knowledge of ethical principles regarding education and training programs, specifically confidentiality and disclosure requirements, falling under ethical, legal, and professional issues (KN61).",
       "difficulty": "medium",
-      "quality_comment": "The stem clearly asks about a specific ethical standard and the distractors are plausible but incorrect interpretations of the standard, providing a clear assessment of the examinee's understanding."
+      "quality_comment": "The stem clearly asks about a specific ethical standard and the distractors are plausible but incorrect interpretations of the standard, providing a clear assessment of the examinee's understanding.",
+      "lessonExcerpt": "You can only require this disclosure when: You clearly stated this requirement in the admissions materials before students signed up, OR You need the information to evaluate whether personal problems are preventing a student from performing competently or posing a threat",
+      "suggestedLesson": "8-standards-7-8",
+      "needsReview": false
     },
     {
       "stem": "If a graduate program requires therapy for students, what practice should be avoided to prevent dual relationships?",
@@ -322,7 +283,10 @@
       "kn": "KN64",
       "kn_explanation": "This question is best aligned with KN64 because it tests Identification and management of potential ethical issues.",
       "difficulty": "medium",
-      "quality_comment": "The question distinguishes a clear ethical violation from acceptable practices, with reasonable distractors that probe knowledge of therapy requirements in training."
+      "quality_comment": "The question distinguishes a clear ethical violation from acceptable practices, with reasonable distractors that probe knowledge of therapy requirements in training.",
+      "lessonExcerpt": "Students must be able to choose a therapist who isn't affiliated with the program. Additionally, faculty members who evaluate students' academic performance cannot provide that therapy themselves.",
+      "suggestedLesson": "8-standards-7-8",
+      "needsReview": false
     },
     {
       "stem": "When is using deception in research ethically justifiable?",
@@ -337,7 +301,10 @@
       "kn": "KN69",
       "kn_explanation": "This question is best aligned with KN69 because it tests ethical issues in the conduct of research.",
       "difficulty": "medium",
-      "quality_comment": "The question is clear with plausible distractors that reflect common misconceptions, good for testing ethical decision-making understanding."
+      "quality_comment": "The question is clear with plausible distractors that reflect common misconceptions, good for testing ethical decision-making understanding.",
+      "lessonExcerpt": "You can only use deception when: It's justified by significant scientific, educational, or applied value; Non-deceptive alternatives aren't available; You're not deceiving people about procedures likely to cause physical pain or severe emotional distress",
+      "suggestedLesson": "8-standards-7-8",
+      "needsReview": false
     },
     {
       "stem": "What must psychologists do about Institutional Review Board approval before starting research with human participants?",
@@ -352,7 +319,10 @@
       "kn": "KN69",
       "kn_explanation": "This question is best aligned with KN69 because it tests ethical issues in the conduct of research.",
       "difficulty": "easy",
-      "quality_comment": "The question is straightforward and covers essential ethical practice, with distractors that are clearly incorrect, fitting basic knowledge testing."
+      "quality_comment": "The question is straightforward and covers essential ethical practice, with distractors that are clearly incorrect, fitting basic knowledge testing.",
+      "lessonExcerpt": "Before you start research involving human subjects, you need approval from an Institutional Review Board (IRB). Once you get approval, you must obtain informed consent from participants",
+      "suggestedLesson": "8-standards-7-8",
+      "needsReview": false
     },
     {
       "stem": "Which statement best describes the APA Ethics Code requirements for informed consent in research involving children who are unable to provide consent themselves?",
@@ -367,7 +337,10 @@
       "kn": "KN69",
       "kn_explanation": "This question is best aligned with KN69 because it tests ethical issues in the conduct of research.",
       "difficulty": "hard",
-      "quality_comment": "The question involves nuanced regulatory knowledge and has distractors reflecting common misunderstandings, making it appropriate for advanced ethical reasoning."
+      "quality_comment": "The question involves nuanced regulatory knowledge and has distractors reflecting common misunderstandings, making it appropriate for advanced ethical reasoning.",
+      "lessonExcerpt": "Federal regulations allow waiving a child's assent when the research offers health benefits they can't get elsewhere.",
+      "suggestedLesson": "8-standards-7-8",
+      "needsReview": false
     },
     {
       "stem": "According to the Ethics Code, what must psychologists do when they discover significant errors in their published research data?",
@@ -382,7 +355,10 @@
       "kn": "KN60",
       "kn_explanation": "This question is best aligned with KN60 because it tests dissemination and presentation of research findings.",
       "difficulty": "medium",
-      "quality_comment": "The distractors are plausible but incorrect, and the stem clearly tests knowledge of ethical standards for handling errors, making this a well-constructed item."
+      "quality_comment": "The distractors are plausible but incorrect, and the stem clearly tests knowledge of ethical standards for handling errors, making this a well-constructed item.",
+      "lessonExcerpt": "Correcting errors: If you discover significant errors in your published data, you must take reasonable steps to correct them through a correction, retraction, or erratum.",
+      "suggestedLesson": "8-standards-7-8",
+      "needsReview": false
     },
     {
       "stem": "What distinguishes duplicate publication from piecemeal publication according to APA guidelines?",
@@ -397,7 +373,10 @@
       "kn": "KN60",
       "kn_explanation": "This question is best aligned with KN60 because it tests dissemination and presentation of research findings.",
       "difficulty": "medium",
-      "quality_comment": "The question clearly differentiates similar ethical concepts, with distractors reflecting common confusions, making it useful for precise knowledge assessment."
+      "quality_comment": "The question clearly differentiates similar ethical concepts, with distractors reflecting common confusions, making it useful for precise knowledge assessment.",
+      "lessonExcerpt": "Duplicate publication means publishing the same data in two separate works. Piecemeal publication means splitting findings from one study into multiple publications.",
+      "suggestedLesson": "8-standards-7-8",
+      "needsReview": false
     },
     {
       "stem": "After research is published, what are psychologists' obligations around sharing data for verification?",
@@ -412,7 +391,10 @@
       "kn": "KN60",
       "kn_explanation": "This question is best aligned with KN60 because it tests dissemination and presentation of research findings.",
       "difficulty": "medium",
-      "quality_comment": "The options are balanced in detail and highlight critical concepts, making the question effective for testing understanding of post-publication data sharing ethics."
+      "quality_comment": "The options are balanced in detail and highlight critical concepts, making the question effective for testing understanding of post-publication data sharing ethics.",
+      "lessonExcerpt": "After publishing research, you must share your data with competent professionals who want to verify your findings, as long as you can protect participants' confidentiality.",
+      "suggestedLesson": "8-standards-7-8",
+      "needsReview": false
     },
     {
       "stem": "As a peer reviewer for manuscripts or grant proposals, what is a key ethical obligation?",
@@ -427,7 +409,10 @@
       "kn": "KN60",
       "kn_explanation": "This question is best aligned with KN60 because it tests dissemination and presentation of research findings.",
       "difficulty": "easy",
-      "quality_comment": "The question is straightforward, with clear and plausible distractors, suitable for testing foundational ethical knowledge about peer review."
+      "quality_comment": "The question is straightforward, with clear and plausible distractors, suitable for testing foundational ethical knowledge about peer review.",
+      "lessonExcerpt": "If you review grant applications, manuscripts, or conference submissions, you must: Keep the content confidential (don't share documents or information about them without permission)",
+      "suggestedLesson": "8-standards-7-8",
+      "needsReview": false
     },
     {
       "stem": "When may psychologists waive obtaining informed consent from research participants?",
@@ -442,7 +427,10 @@
       "kn": "KN68",
       "kn_explanation": "This question is best aligned with KN68 because it tests Client and patient rights.",
       "difficulty": "medium",
-      "quality_comment": "The item has plausible distractors and a clear stem, effectively assessing understanding of informed consent waivers."
+      "quality_comment": "The item has plausible distractors and a clear stem, effectively assessing understanding of informed consent waivers.",
+      "lessonExcerpt": "Standard 8.05 allows you to dispense with informed consent when the research isn't likely to cause harm and involves: Studying normal educational practices in schools; Using anonymous questionnaires, naturalistic observations, or archival research (with confidentiality protected)",
+      "suggestedLesson": "8-standards-7-8",
+      "needsReview": false
     },
     {
       "stem": "What ethical guidelines should a psychologist follow when requiring students to participate in personal psychotherapy as part of their training program?",
@@ -457,7 +445,10 @@
       "kn": "KN64",
       "kn_explanation": "This question is best aligned with KN64 because it tests Identification and management of potential ethical issues.",
       "difficulty": "medium",
-      "quality_comment": "The stem clearly targets ethical training standards, and distractors include common missteps, making it effective for knowledge assessment."
+      "quality_comment": "The stem clearly targets ethical training standards, and distractors include common missteps, making it effective for knowledge assessment.",
+      "lessonExcerpt": "Justified by training objectives | The therapy requirement must make sense for what the program is teaching. Disclosed in application materials | No surprises. Student choice in therapist selection. No multiple relationships. Financially feasible options",
+      "suggestedLesson": "8-standards-7-8",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best describes a psychologist's responsibility regarding continuing professional development according to ethical standards?",
@@ -472,22 +463,10 @@
       "kn": "KN66",
       "kn_explanation": "This question covers the underrepresented area of continuing professional development within ethical, legal, and professional issues, which is relevant to maintaining ethical competence (KN66).",
       "difficulty": "medium",
-      "quality_comment": "The question addresses an often overlooked but important ethical obligation, with plausible distractors enhancing discriminability."
-    },
-    {
-      "stem": "What is an important consideration when psychologists identify and manage potential ethical issues arising in their practice?",
-      "options": [
-        "Ignoring minor issues to avoid complications.",
-        "Discussing concerns openly with supervisors or ethics committees to seek guidance.",
-        "Handling issues independently without documentation.",
-        "Waiting for formal complaints before addressing ethical dilemmas."
-      ],
-      "answer": "Discussing concerns openly with supervisors or ethics committees to seek guidance.",
-      "explanation": "1. The correct answer, \"Discussing concerns openly with supervisors or ethics committees to seek guidance,\" aligns with the ethical standards outlined in the APA Ethics Code, particularly regarding the importance of supervision and consultation in managing ethical dilemmas. Psychologists are encouraged to seek guidance when faced with ethical issues to ensure they are making informed decisions that adhere to professional standards and protect the welfare of clients and students.\n\n2. The option \"Ignoring minor issues to avoid complications\" is incorrect because neglecting even minor ethical concerns can lead to larger problems and undermine professional integrity. \"Handling issues independently without documentation\" is wrong as proper documentation is essential for accountability and transparency in ethical decision-making, as well as for protecting the rights of all parties involved. Lastly, \"Waiting for formal complaints before addressing ethical dilemmas\" is inappropriate because proactive management of ethical issues is crucial; addressing concerns before they escalate into formal complaints demonstrates a commitment to ethical practice and the well-being of clients and students.",
-      "kn": "KN64",
-      "kn_explanation": "This question targets the ethical knowledge area involving the identification and management of ethical issues, emphasizing consultation and ethical problem-solving (KN64).",
-      "difficulty": "medium",
-      "quality_comment": "This item highlights proactive ethical management strategies with realistic distractors, supporting assessment of applied ethics knowledge."
+      "quality_comment": "The question addresses an often overlooked but important ethical obligation, with plausible distractors enhancing discriminability.",
+      "lessonExcerpt": "Ignoring continuing education requirements (yes, people actually get disciplined for this)",
+      "suggestedLesson": "8-practice-issues",
+      "needsReview": false
     },
     {
       "stem": "Emerging social, legal, or ethical issues can impact psychological practice. What is a recommended way for psychologists to address these evolving concerns?",
@@ -502,27 +481,10 @@
       "kn": "KN61",
       "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
       "difficulty": "medium",
-      "quality_comment": "The question tests understanding of professional responsibility towards evolving ethical and legal issues, fitting for current practice demands."
-    },
-    {
-      "stem": "Under what circumstances can a psychologist require clients to share personal information during therapy sessions?",
-      "options": [
-        "Only if the client agrees to share information voluntarily.",
-        "When the psychologist believes it will directly impact the therapeutic process.",
-        "If the client is informed that such information is necessary for treatment planning.",
-        "When the psychologist feels that the client is withholding critical information."
-      ],
-      "answer": "If the client is informed that such information is necessary for treatment planning.",
-      "explanation": "1. The correct answer, \"If the client is informed that such information is necessary for treatment planning,\" aligns with Standard 7.04 of the APA Ethics Code, which states that personal information can only be required if it is clearly identified in program materials or necessary for evaluating or assisting students. In therapy, informing clients that sharing personal information is essential for their treatment planning adheres to ethical guidelines, ensuring clients understand the relevance of the information to their care.\n\n2. The option \"Only if the client agrees to share information voluntarily\" is incorrect because it does not acknowledge that there are situations where specific information may be essential for effective treatment planning, which necessitates disclosure beyond voluntary agreement. The statement \"When the psychologist believes it will directly impact the therapeutic process\" is misleading since it lacks the requirement of informing the client about the necessity of the information, which is crucial for ethical practice. Lastly, \"When the psychologist feels that the client is withholding critical information\" is also incorrect, as it does not meet the ethical standard of requiring clear communication about the necessity of sharing personal information for treatment purposes; instead, it implies a subjective judgment without proper client involvement.",
-      "difficulty": "easy",
-      "kn": "KN61",
-      "kn_explanation": "This question assesses knowledge of ethical principles regarding education and training programs, specifically confidentiality and disclosure requirements, falling under ethical, legal, and professional issues (KN61).",
-      "quality_comment": "This question effectively tests understanding of ethical requirements for client disclosures in therapy.",
-      "is_lock_in_drill": true,
-      "lock_in_level": "easier",
-      "tags": [
-        "lock_in_drill"
-      ]
+      "quality_comment": "The question tests understanding of professional responsibility towards evolving ethical and legal issues, fitting for current practice demands.",
+      "lessonExcerpt": "The APA's Guidelines for Telepsychology (2024) recommend that psychologists stay current with evolving competencies through research and literature.",
+      "suggestedLesson": "8-standards-1-2",
+      "needsReview": false
     },
     {
       "stem": "In what situation might a psychologist ethically request personal information from a supervisee during supervision?",
@@ -542,7 +504,10 @@
       "lock_in_level": "harder",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "You need the information to evaluate whether personal problems are preventing a student from performing competently or posing a threat to themselves or others",
+      "suggestedLesson": "8-standards-7-8",
+      "needsReview": false
     }
   ]
 }

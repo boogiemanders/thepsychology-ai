@@ -56,7 +56,7 @@
       "quality_comment": "Procedure-sequence item with clinically realistic distractors, including the common no-suicide-contract trap.",
       "suggestedLesson": "6-cbt",
       "suggestedParagraph": "### Safety Planning Intervention (SPI)",
-      "lessonExcerpt": "Use internal coping strategies (distraction, self-soothing). Contact social supports for distraction.",
+      "lessonExcerpt": "2. Use internal coping strategies (distraction, self-soothing)\n3. Contact social supports for distraction\n4. Contact family or friends who can help resolve the crisis",
       "needsReview": false,
       "inspirationDomain": "TREATMENT/INTERVENTION"
     },
@@ -187,27 +187,6 @@
       "inspirationIndex": 9
     },
     {
-      "stem": "A psychologist receives a referral for a 52-year-old patient with chronic low back pain. What should the psychologist's first step be in working with this patient?",
-      "options": [
-        "Implement a cognitive-behavioral pain management protocol",
-        "Conduct a comprehensive assessment of the pain experience including physical, emotional, and cognitive factors",
-        "Prescribe a time-contingent medication schedule in consultation with the referring physician",
-        "Begin relaxation training and biofeedback to reduce muscle tension"
-      ],
-      "answer": "Conduct a comprehensive assessment of the pain experience including physical, emotional, and cognitive factors",
-      "explanation": "Chronic pain is considered a multifactorial process with both physical and emotional effects (depression, anger, anxiety, tense muscles, limited mobility, lack of energy). Before implementing any specific intervention, a thorough assessment is essential to understand the full picture. While CBT (A) and relaxation training (D) are evidence-based interventions for chronic pain, they should follow assessment. Time-contingent medication scheduling (C) relates to medication management, which would be the physician's domain, and the psychologist's role requires understanding the patient's pain experience first.",
-      "kn": "KN42",
-      "kn_explanation": "First step in treatment decision-making, matching treatment to assessment",
-      "difficulty": "medium",
-      "quality_comment": "Good clinical reasoning question. The lesson discusses chronic pain as multifactorial but doesn't explicitly state 'assess first' as a step—this is implied by general clinical practice principles.",
-      "suggestedLesson": "6-cbt",
-      "suggestedParagraph": "## Why Cognitive-Behavioral Therapies Matter for Your EPPP",
-      "lessonExcerpt": "Chronic pain is a considered to be a multi-factorial process, largely affected by neural memories of previous pain... Chronic pain affects people both physically and emotionally. Physical effects may include tense muscles, limited mobility, and lack of energy. Emotional effects may include depression, anger, and anxiety.",
-      "needsReview": false,
-      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 12
-    },
-    {
       "stem": "A depressed client tells her therapist, 'My coworker didn't say hello to me this morning, so she must hate me.' According to Beck's cognitive therapy, this thought is best classified as which type of cognitive distortion?",
       "options": [
         "Selective abstraction, because the client is focusing on one negative detail",
@@ -248,27 +227,6 @@
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
       "inspirationIndex": 9
-    },
-    {
-      "stem": "A psychologist receives a referral for a 42-year-old construction worker who sustained a back injury eight months ago and continues to report significant pain despite medical clearance indicating the injury has healed. What should the psychologist's first step be?",
-      "options": [
-        "Begin a course of cognitive-behavioral therapy for pain management",
-        "Conduct a comprehensive biopsychosocial assessment of the pain experience",
-        "Teach relaxation and mindfulness techniques to reduce pain perception",
-        "Refer the client back to the physician for additional medical evaluation"
-      ],
-      "answer": "Conduct a comprehensive biopsychosocial assessment of the pain experience",
-      "explanation": "When receiving a chronic pain referral, the appropriate first step is always a comprehensive assessment. Chronic pain is considered a multi-factorial process affected by neural memories of previous pain, physical effects (tense muscles, limited mobility), and emotional effects (depression, anger, anxiety). Jumping directly to CBT (A) or relaxation techniques (C) without first understanding the full picture of the client's pain experience would be premature. Referring back to the physician (D) is inappropriate when medical clearance has already been given. A thorough assessment informs the treatment plan and ensures that all contributing factors—biological, psychological, and social—are properly identified before intervention begins.",
-      "kn": "KN42",
-      "kn_explanation": "Treatment decision-making for chronic pain referral, matching treatment to assessment",
-      "difficulty": "medium",
-      "quality_comment": "Tests the fundamental principle that assessment precedes intervention. Distractors represent common but premature interventions.",
-      "suggestedLesson": "6-cbt",
-      "suggestedParagraph": "## Why Cognitive-Behavioral Therapies Matter for Your EPPP (and Your Future Practice)",
-      "lessonExcerpt": "Chronic pain is a considered to be a multi-factorial process, largely affected by neural memories of previous pain.",
-      "needsReview": false,
-      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 12
     },
     {
       "stem": "A therapist is developing a treatment plan for a client diagnosed with obsessive-compulsive disorder who experiences intrusive thoughts about contamination and responds by washing her hands for up to three hours daily. Based on cognitive-behavioral principles, which behavioral intervention has the strongest empirical support as the first-line treatment for this presentation?",
@@ -397,48 +355,6 @@
       "inspirationIndex": 9
     },
     {
-      "stem": "A psychologist is conducting an initial assessment of a 44-year-old patient with a 3-year history of chronic low back pain who is simultaneously pursuing a long-term disability claim. His treating physician's chart notes significant discrepancy between objective imaging findings and the patient's reported functional limitations. What should be the PRIMARY assessment priority before interpreting any self-report data?",
-      "options": [
-        "Identifying specific pain locations and quality using a standardized body diagram and numeric rating scale",
-        "Evaluating response validity and the degree of psychological overlay including secondary gain factors",
-        "Administering a full neuropsychological battery to rule out cognitive contributors to functional impairment",
-        "Obtaining a detailed three-generation family history to assess hereditary musculoskeletal vulnerability"
-      ],
-      "answer": "Evaluating response validity and the degree of psychological overlay including secondary gain factors",
-      "explanation": "When objective medical findings are disproportionate to reported limitations — especially in the context of pending disability benefits (a clear secondary gain context) — the psychologist's primary obligation is to establish whether self-report data are valid before drawing any clinical conclusions. Secondary gain refers to external incentives (financial compensation, avoidance of occupational demands, increased social support) that may consciously or unconsciously inflate symptom reporting. Assessment must include symptom validity tests (SVTs), MMPI-2 validity scale interpretation, and clinical observation of functional inconsistencies. Interpreting pain ratings, neuropsychological findings, or family history without first confirming data validity risks generating misleading and potentially harmful conclusions. Pain mapping and neuropsychological testing may follow, but only after validity is established.",
-      "kn": "KN43",
-      "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
-      "difficulty": "hard",
-      "quality_comment": "Well-constructed clinical scenario with clear hierarchy of priorities; tests sophisticated integration of assessment validity and secondary gain knowledge at the doctoral level.",
-      "suggestedLesson": "6-cbt",
-      "suggestedParagraph": "## Beck's Cognitive Therapy: The Foundation",
-      "lessonExcerpt": "LESSON CONTENT DOES NOT EXPLICITLY ADDRESS SECONDARY GAIN ASSESSMENT IN CHRONIC PAIN EVALUATIONS IN THE PROVIDED EXCERPTS",
-      "needsReview": false,
-      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 12
-    },
-    {
-      "stem": "A forensic psychologist consulting with a prison treatment team is asked which type of consequence most effectively modifies behavior in inmates with antisocial personality disorder (ASPD). Drawing on the treatment literature for personality disorders, the consultant would most accurately advise that this population is most responsive to consequences that are:",
-      "options": [
-        "Internally generated through enhanced empathy training and restorative justice exercises",
-        "Delayed punishments delivered after a structured reflection period to promote insight",
-        "Immediate, concrete, and externally applied, such as loss of privileges tied directly to specific behaviors",
-        "Socially mediated through confrontation by prosocial peers in therapeutic community settings"
-      ],
-      "answer": "Immediate, concrete, and externally applied, such as loss of privileges tied directly to specific behaviors",
-      "explanation": "Individuals with ASPD characteristically lack internalized guilt, empathy, and sensitivity to delayed consequences. The treatment literature consistently indicates they are most responsive to immediate, external, and concrete consequences rather than internally mediated or delayed ones. Option A is incorrect because ASPD is associated with profound empathy deficits that severely limit the effectiveness of empathy-based interventions. Option B is incorrect because delayed consequences are far less effective given ASPD-related deficits in connecting future outcomes to present behavior. Option D is incorrect because peer confrontation alone, without clear external contingencies, is insufficient to modify behavior in this population.",
-      "kn": "KN43",
-      "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
-      "difficulty": "hard",
-      "quality_comment": "Doctoral-level question requiring nuanced knowledge of ASPD treatment. Content goes beyond current lesson material — valid EPPP topic, no lesson excerpt available.",
-      "suggestedLesson": "6-cbt",
-      "suggestedParagraph": "## Personality Disorder Treatment",
-      "lessonExcerpt": "",
-      "needsReview": false,
-      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 21
-    },
-    {
       "stem": "A sex therapist applies aversive counterconditioning to treat a client whose shoe fetish is causing marked personal distress. The therapist repeatedly and systematically pairs visual presentations of the fetish object with a highly aversive stimulus to extinguish the problematic arousal response. In classical conditioning terminology, the fetish object in this procedure is correctly identified as the:",
       "options": [
         "Unconditioned stimulus, because it automatically and reflexively elicits sexual arousal independent of any prior learning history",
@@ -452,9 +368,9 @@
       "kn_explanation": "This question is best aligned with KN44 because it tests Treatment techniques and interventions, and the evidence for their comparative efficacy and effectiveness.",
       "difficulty": "hard",
       "quality_comment": "Technically precise question requiring accurate application of classical conditioning terminology. The role of the CS in aversive counterconditioning for paraphilias is. Content goes beyond current lesson material — valid EPPP topic, no lesson excerpt available.",
-      "suggestedLesson": "6-cbt",
+      "suggestedLesson": "2-pavlov-and-classical-conditioning",
       "suggestedParagraph": "## Aversive Counterconditioning",
-      "lessonExcerpt": "",
+      "lessonExcerpt": "Unconditioned Stimulus (US)**: This is something that naturally, automatically triggers a response without any learning required. In Pavlov's studies, meat powder was the US.",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
       "inspirationIndex": 30
@@ -493,7 +409,10 @@
       "kn": "KN43",
       "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
       "difficulty": "medium",
-      "quality_comment": "The question clearly targets a key CBT construct with distractors that reflect related but distinct concepts, enhancing test-taker discrimination."
+      "quality_comment": "The question clearly targets a key CBT construct with distractors that reflect related but distinct concepts, enhancing test-taker discrimination.",
+      "lessonExcerpt": "These are deep, enduring beliefs we develop in childhood based on our experiences.",
+      "suggestedLesson": "6-cbt",
+      "needsReview": false
     },
     {
       "stem": "Which cognitive distortion involves drawing negative conclusions without any evidence to support them?",
@@ -508,7 +427,10 @@
       "kn": "KN43",
       "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
       "difficulty": "easy",
-      "quality_comment": "This question uses well-known distortions with clear definitions, making it appropriate for straightforward knowledge assessment."
+      "quality_comment": "This question uses well-known distortions with clear definitions, making it appropriate for straightforward knowledge assessment.",
+      "lessonExcerpt": "| Arbitrary Inference | Drawing negative conclusions without evidence | \"My boss didn't smile at me this morning, so I'm probably getting fired\" |",
+      "suggestedLesson": "6-cbt",
+      "needsReview": false
     },
     {
       "stem": "In Beck's CBT, what is the purpose of the Dysfunctional Thought Record (DTR)?",
@@ -523,7 +445,10 @@
       "kn": "KN44",
       "kn_explanation": "This question focuses on treatment techniques and interventions in CBT, which falls under treatment, intervention, and prevention (KN44).",
       "difficulty": "medium",
-      "quality_comment": "The question has a clear stem and plausible but incorrect options, effectively distinguishing understanding of CBT tools."
+      "quality_comment": "The question has a clear stem and plausible but incorrect options, effectively distinguishing understanding of CBT tools.",
+      "lessonExcerpt": "In therapy, clients often use a Dysfunctional Thought Record (DTR) to track these thoughts. The DTR captures: The situation that triggered the emotion, The automatic thought that followed, The emotion and its intensity (rated 0-100), An alternative, more balanced thought",
+      "suggestedLesson": "6-cbt",
+      "needsReview": false
     },
     {
       "stem": "Ellis’s Rational Emotive Behavior Therapy (REBT) conceptualizes psychological disturbance primarily as the result of:",
@@ -538,7 +463,10 @@
       "kn": "KN43",
       "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
       "difficulty": "medium",
-      "quality_comment": "Distractors include closely related CBT concepts, requiring nuanced understanding of REBT's unique emphasis on irrational beliefs."
+      "quality_comment": "Distractors include closely related CBT concepts, requiring nuanced understanding of REBT's unique emphasis on irrational beliefs.",
+      "lessonExcerpt": "Notice the key difference from regular worry: irrational beliefs contain absolute demands expressed as \"must,\" \"should,\" \"have to,\" or \"ought.\" These inflexible demands create unnecessary suffering.",
+      "suggestedLesson": "6-cbt",
+      "needsReview": false
     },
     {
       "stem": "What is the main focus of Meichenbaum’s Stress Inoculation Training (SIT)?",
@@ -553,7 +481,10 @@
       "kn": "KN44",
       "kn_explanation": "This question addresses cognitive-behavioral treatment techniques designed to intervene in stress-related problems (KN44).",
       "difficulty": "medium",
-      "quality_comment": "The question accurately targets SIT's features with plausible distractors drawn from related CBT principles."
+      "quality_comment": "The question accurately targets SIT's features with plausible distractors drawn from related CBT principles.",
+      "lessonExcerpt": "Also developed by Meichenbaum, stress inoculation training prepares people to handle stress better. Not just current stressors, but future ones too.",
+      "suggestedLesson": "6-cbt",
+      "needsReview": false
     },
     {
       "stem": "In Acceptance and Commitment Therapy (ACT), what is the process of 'cognitive defusion' designed to accomplish?",
@@ -568,7 +499,10 @@
       "kn": "KN43",
       "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
       "difficulty": "medium",
-      "quality_comment": "Distractors reflect plausible misunderstandings of ACT processes, encouraging precise knowledge of its therapeutic components."
+      "quality_comment": "Distractors reflect plausible misunderstandings of ACT processes, encouraging precise knowledge of its therapeutic components.",
+      "lessonExcerpt": "| Cognitive Defusion | Cognitive fusion | Creating distance from thoughts; seeing thoughts as just thoughts, not reality |",
+      "suggestedLesson": "6-cbt",
+      "needsReview": false
     },
     {
       "stem": "Which of the following distinguishes 'clean pain' from 'dirty pain' in Acceptance and Commitment Therapy?",
@@ -583,7 +517,10 @@
       "kn": "KN43",
       "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
       "difficulty": "hard",
-      "quality_comment": "The question probes subtle conceptual distinctions in ACT, with distractors designed to mislead those unfamiliar with this model."
+      "quality_comment": "The question probes subtle conceptual distinctions in ACT, with distractors designed to mislead those unfamiliar with this model.",
+      "lessonExcerpt": "**Clean pain** is the unavoidable discomfort that's part of being human. **Dirty pain** is the additional suffering we create by struggling against clean pain.",
+      "suggestedLesson": "6-cbt",
+      "needsReview": false
     },
     {
       "stem": "Which intervention is an essential and empirically supported component of CBT for suicide prevention used across various client populations?",
@@ -598,7 +535,10 @@
       "kn": "KN44",
       "kn_explanation": "This item tests knowledge of empirically supported CBT techniques for suicide prevention, part of treatment/intervention methods (KN44).",
       "difficulty": "medium",
-      "quality_comment": "Distractors are credible therapeutic techniques, but only safety planning has consistent empirical backing in this context, making the question clinically relevant."
+      "quality_comment": "Distractors are credible therapeutic techniques, but only safety planning has consistent empirical backing in this context, making the question clinically relevant.",
+      "lessonExcerpt": "Safety Planning Intervention (SPI): This six-step approach is essential to know for the EPPP. It starts with internal strategies and moves to external support when needed: 1. Recognize warning signs of an impending suicidal crisis 2. Use internal coping strategies",
+      "suggestedLesson": "6-cbt",
+      "needsReview": false
     },
     {
       "stem": "Self-instructional training (Meichenbaum) aims to improve children's impulsivity mainly by teaching them to:",
@@ -613,7 +553,10 @@
       "kn": "KN43",
       "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
       "difficulty": "medium",
-      "quality_comment": "The question offers concise but distinct options that require knowledge of the sequential stages in self-instructional training."
+      "quality_comment": "The question offers concise but distinct options that require knowledge of the sequential stages in self-instructional training.",
+      "lessonExcerpt": "Donald Meichenbaum developed this approach initially for impulsive children, but it's useful across populations. The idea is to teach people to guide their own behavior through internal speech.",
+      "suggestedLesson": "6-cbt",
+      "needsReview": false
     },
     {
       "stem": "Mindfulness-Based Cognitive Therapy (MBCT) primarily seeks to help clients:",
@@ -628,22 +571,10 @@
       "kn": "KN43",
       "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
       "difficulty": "medium",
-      "quality_comment": "Distractors describe plausible but inaccurate mechanisms, requiring an understanding of MBCT’s unique therapeutic goals."
-    },
-    {
-      "stem": "In cognitive-behavioral therapy for suicide prevention, what does the 'chain analysis' technique primarily involve?",
-      "options": [
-        "Evaluating the efficacy of safety plans after discharge",
-        "Identifying the series of events and thoughts leading up to the suicide attempt",
-        "Teaching relaxation skills to manage suicidal urges",
-        "Disputing irrational beliefs about self-worth and hopelessness"
-      ],
-      "answer": "Identifying the series of events and thoughts leading up to the suicide attempt",
-      "explanation": "1. The correct answer, \"Identifying the series of events and thoughts leading up to the suicide attempt,\" accurately describes the chain analysis technique used in cognitive-behavioral therapy for suicide prevention (CT-SP). This technique focuses on understanding the specific circumstances and cognitive processes that culminate in a suicidal crisis, allowing both the therapist and client to explore the connections between events and thoughts that contribute to suicidal behavior, thereby informing safety planning and coping strategies.\n\n2. The option \"Evaluating the efficacy of safety plans after discharge\" is incorrect because chain analysis is concerned with understanding the antecedents to a suicide attempt rather than assessing post-discharge interventions. \"Teaching relaxation skills to manage suicidal urges\" is not correct as chain analysis does not focus on skill acquisition but rather on the sequence of events and thoughts leading to the crisis. Lastly, \"Disputing irrational beliefs about self-worth and hopelessness\" is misleading because while addressing irrational beliefs is a component of cognitive therapies, chain analysis specifically aims to map the events and thoughts rather than directly disputing beliefs.",
-      "kn": "KN43",
-      "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
-      "difficulty": "medium",
-      "quality_comment": "The question is clear and focused on a practical CBT technique, with plausible distractors enhancing differentiation."
+      "quality_comment": "Distractors describe plausible but inaccurate mechanisms, requiring an understanding of MBCT’s unique therapeutic goals.",
+      "lessonExcerpt": "The goal is to help clients become aware of distressing thoughts and feelings and learn to \"de-center\" from them. Observe them without getting caught up in them.",
+      "suggestedLesson": "6-cbt",
+      "needsReview": false
     },
     {
       "stem": "Which core process in Acceptance and Commitment Therapy (ACT) counters attempts to alter or avoid unpleasant private experiences by promoting an open and accepting attitude toward them?",
@@ -658,7 +589,10 @@
       "kn": "KN43",
       "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
       "difficulty": "medium",
-      "quality_comment": "Distractors are ACT-related but conceptually distinct, requiring examinees to differentiate among nuanced therapeutic targets."
+      "quality_comment": "Distractors are ACT-related but conceptually distinct, requiring examinees to differentiate among nuanced therapeutic targets.",
+      "lessonExcerpt": "| Experiential Acceptance | Experiential avoidance | Embracing difficult private experiences without trying to change or avoid them |",
+      "suggestedLesson": "6-cbt",
+      "needsReview": false
     },
     {
       "stem": "In cognitive-behavioral therapy, what role do cognitive schemas play in influencing a person's emotional responses?",
@@ -678,7 +612,10 @@
       "lock_in_level": "easier",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "These are deep, enduring beliefs we develop in childhood based on our experiences. You're not always aware of them, but they influence everything.",
+      "suggestedLesson": "6-cbt",
+      "needsReview": false
     },
     {
       "stem": "Which of the following statements best illustrates the impact of cognitive schemas on an individual's perception of reality in cognitive-behavioral therapy?",
@@ -698,7 +635,10 @@
       "lock_in_level": "harder",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "Someone with social anxiety might have schemas centered on being judged or humiliated, while someone with panic disorder might have schemas about physical sensations being dangerous.",
+      "suggestedLesson": "6-cbt",
+      "needsReview": false
     }
   ]
 }

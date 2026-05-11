@@ -1,48 +1,6 @@
 {
   "questions": [
     {
-      "stem": "A researcher conducting a study on the effectiveness of a new therapeutic intervention inadvertently provides more encouraging nonverbal cues to participants in the treatment group than to those in the control group. This pattern of behavior, in which the researcher's expectations subtly influence participant responses, is BEST described as:",
-      "options": [
-        "The Hawthorne effect",
-        "Demand characteristics",
-        "The Rosenthal effect",
-        "Observer bias"
-      ],
-      "answer": "The Rosenthal effect",
-      "explanation": "The Rosenthal effect (also called experimenter expectancy effect) refers to subtle cues or clues transmitted by the experimenter that influence participant behavior in the direction of the experimenter's hypothesis. This is distinct from the Hawthorne effect (behavior change due to awareness of being observed), demand characteristics (cues that inform participants about what behavior is expected, which come from the experimental situation rather than the experimenter specifically), and observer bias (systematic errors in recording or interpreting data, rather than influencing participant behavior).",
-      "kn": "KN6",
-      "kn_explanation": "This question addresses experimenter expectancy effects, which fall under research methodology concepts within the Cognitive-Affective Bases of Behavior domain.",
-      "difficulty": "medium",
-      "quality_comment": "Tests a commonly confused set of research artifacts. The scenario clearly describes experimenter-transmitted cues rather than participant awareness or recording errors.",
-      "suggestedLesson": "7-research-designs",
-      "suggestedParagraph": "### Teacher Expectations",
-      "lessonExcerpt": "Experimenter expectancies, also known as the Rosenthal effect, refer to the cues or clues transmitted to the subjects by the experimenter.",
-      "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 1
-    },
-    {
-      "stem": "A school psychologist wants to determine the percentage of time a student spends on-task during a 30-minute independent reading period. The psychologist divides the observation period into 60 equal intervals and checks at the end of each interval whether the student is engaged in reading at that exact moment. This procedure is BEST described as:",
-      "options": [
-        "Event recording",
-        "Whole-interval sampling",
-        "Momentary time sampling",
-        "Continuous recording"
-      ],
-      "answer": "Momentary time sampling",
-      "explanation": "Momentary time sampling involves recording whether the target behavior is present or absent at the moment the time interval ends. This matches the described procedure of checking at the end of each interval. Whole-interval sampling requires the behavior to be exhibited for the full duration of the interval to be scored positively. Event recording involves tallying each occurrence of a discrete behavior. Continuous recording tracks every instance of a behavior with exact onset and offset times.",
-      "kn": "KN31",
-      "kn_explanation": "This question is best aligned with KN31 because it tests Assessment methods and their strengths and limitations (e.g., self-report, multi-informant reports, psychophysiological measures, work samples, assessment centers, direct observation, structured and semi-structured interviews).",
-      "difficulty": "medium",
-      "quality_comment": "Requires distinguishing between momentary time sampling and whole-interval sampling based on the specific recording criterion; scenario provides clear procedural details",
-      "suggestedLesson": "7-research-designs",
-      "suggestedParagraph": "## Observational studies",
-      "lessonExcerpt": "MOMENTARY TIME SAMPLING Momentary time sampling involves the observer simply recording whether the target behavior is present or absent at the moment that the time interval ends.",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 12
-    },
-    {
       "stem": "A school psychologist implements a new social skills intervention with a student diagnosed with autism spectrum disorder. During the baseline phase, the student's disruptive behavior is stable at approximately 12 incidents per day. After introducing the intervention (Phase B), disruptive behavior drops to 4 incidents per day. However, the school also hired a new, highly engaging classroom aide at the same time the intervention began. Which threat to internal validity is MOST concerning in this AB design?",
       "options": [
         "Maturation, because the student may have naturally developed better social skills over time",
@@ -224,9 +182,9 @@
       "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
       "difficulty": "hard",
       "quality_comment": "The question effectively tests knowledge of ANCOVA's purpose in research.",
-      "suggestedLesson": "7-research-designs",
+      "suggestedLesson": "7-stats-tests",
       "suggestedParagraph": "## The Big Picture: Qualitative vs. Quantitative",
-      "lessonExcerpt": "ANCOVA allows researchers to compare means across groups while controlling for covariates.",
+      "lessonExcerpt": "**ANCOVA (Analysis of Covariance):** Another way to control for an extraneous variable, but instead of including it as a factor, ANCOVA statistically removes its effects from the dependent variable.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
       "inspirationIndex": 3
@@ -245,9 +203,9 @@
       "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
       "difficulty": "hard",
       "quality_comment": "The question is well-constructed and tests knowledge of a specific experimental design.",
-      "suggestedLesson": "7-research-designs",
+      "suggestedLesson": "7-internal-external-validity",
       "suggestedParagraph": "## The Big Picture: Qualitative vs. Quantitative",
-      "lessonExcerpt": "The Solomon Four-Group design helps control for the effects of pre-testing on the dependent variable.",
+      "lessonExcerpt": "The **Solomon four-group design** simultaneously addresses testing as a threat to internal validity and pretest-treatment interaction as a threat to external validity.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
       "inspirationIndex": 6
@@ -266,9 +224,9 @@
       "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
       "difficulty": "hard",
       "quality_comment": "The question effectively assesses knowledge of SEM and its application in research.",
-      "suggestedLesson": "7-research-designs",
+      "suggestedLesson": "7-correlation-and-regression",
       "suggestedParagraph": "## The Big Picture: Qualitative vs. Quantitative",
-      "lessonExcerpt": "Structural equation modeling assesses the fit of a proposed model to the observed data.",
+      "lessonExcerpt": "**Step 4: Model Evaluation** – Researchers use statistics like the goodness-of-fit index (GFI) to determine whether their theoretical model fits the actual data well.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
       "inspirationIndex": 10
@@ -289,7 +247,7 @@
       "quality_comment": "The question is well-constructed and tests understanding of research designs.",
       "suggestedLesson": "7-research-designs",
       "suggestedParagraph": "## The Big Picture: Qualitative vs. Quantitative",
-      "lessonExcerpt": "The ABAB design is used to assess the effectiveness of an intervention.",
+      "lessonExcerpt": "When behavior returns to baseline after treatment withdrawal and improves again when treatment is reintroduced, you have strong evidence the treatment works.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
       "inspirationIndex": 5
@@ -310,7 +268,7 @@
       "quality_comment": "The question effectively assesses knowledge of single-subject design principles.",
       "suggestedLesson": "7-research-designs",
       "suggestedParagraph": "## The Big Picture: Qualitative vs. Quantitative",
-      "lessonExcerpt": "Returning to the baseline phase allows researchers to observe whether the behavior returns to baseline levels after the intervention is withdrawn.",
+      "lessonExcerpt": "When behavior returns to baseline after treatment withdrawal and improves again when treatment is reintroduced, you have strong evidence the treatment works.",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
       "inspirationIndex": 12
@@ -329,9 +287,9 @@
       "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
       "difficulty": "hard",
       "quality_comment": "The question effectively assesses knowledge of research design principles.",
-      "suggestedLesson": "7-research-designs",
+      "suggestedLesson": "7-internal-external-validity",
       "suggestedParagraph": "## The Big Picture: Qualitative vs. Quantitative",
-      "lessonExcerpt": "Conducting a double-blind study helps reduce experimenter bias.",
+      "lessonExcerpt": "**Double-blind technique**: Neither participants nor researchers interacting with them know who's in which group",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
       "inspirationIndex": 5
@@ -352,7 +310,7 @@
       "quality_comment": "The question is relevant and tests knowledge of research design challenges.",
       "suggestedLesson": "7-research-designs",
       "suggestedParagraph": "## Why Research Design Matters (And Why You'll Actually Use This)",
-      "lessonExcerpt": "Single-subject designs often face challenges in generalizing findings to larger populations.",
+      "lessonExcerpt": "**Single-subject designs** (AB, ABAB, multiple baseline) are powerful for evaluating individual treatment effects",
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
       "inspirationIndex": 8
@@ -433,22 +391,10 @@
       "kn": "KN54",
       "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
       "difficulty": "medium",
-      "quality_comment": "The question clearly differentiates among qualitative approaches with plausible distractors, challenging test-takers to distinguish based on key goals and data collection methods."
-    },
-    {
-      "stem": "In single-subject experimental designs, what is the main methodological advantage of an ABAB reversal design over a simple AB design?",
-      "options": [
-        "It allows for random assignment of subjects to groups.",
-        "It controls for history effects by demonstrating reversibility of behavior change.",
-        "It uses multiple subjects simultaneously to improve external validity.",
-        "It eliminates the need for a baseline phase."
-      ],
-      "answer": "It controls for history effects by demonstrating reversibility of behavior change.",
-      "explanation": "In single-subject experimental designs, the ABAB reversal design is advantageous because it includes multiple phases that allow researchers to observe changes in behavior across different conditions. This design demonstrates reversibility; if a behavior returns to baseline levels when the treatment is withdrawn (during the second baseline phase), it indicates that the observed changes were likely due to the treatment rather than external historical events that could have influenced the results. Thus, it effectively controls for history effects.\n\nNow, let’s examine why the incorrect options are not valid:\n\n- **It allows for random assignment of subjects to groups.** This statement is incorrect because single-subject designs, including ABAB designs, do not involve random assignment; they focus on repeated measures of the same individual or individuals treated as a single group.\n\n- **It uses multiple subjects simultaneously to improve external validity.** This is incorrect as well; while multiple subjects can be included in single-subject designs, the primary focus of an ABAB design is on changes within the same subject, not on improving external validity through simultaneous group comparisons.\n\n- **It eliminates the need for a baseline phase.** This option is also wrong because both AB and ABAB designs require a baseline phase to establish a reference point for measuring the effects of the treatment. The ABAB design actually emphasizes the importance of having at least two baseline phases to assess the impact of the treatment more effectively. \n\nIn summary, the ABAB design's ability to demonstrate reversibility of behavior change is its main advantage over the simpler AB design, while the incorrect options misrepresent the characteristics and methodologies of single-subject experimental designs.",
-      "kn": "KN54",
-      "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
-      "difficulty": "medium",
-      "quality_comment": "The options provide relevant design features; only one correctly captures the essence of the reversal design’s strength, making it a fair EPPP question."
+      "quality_comment": "The question clearly differentiates among qualitative approaches with plausible distractors, challenging test-takers to distinguish based on key goals and data collection methods.",
+      "lessonExcerpt": "**Grounded Theory**: Researchers develop a theory by deeply listening to participants' experiences.",
+      "suggestedLesson": "7-research-designs",
+      "needsReview": false
     },
     {
       "stem": "A researcher is conducting a study comparing depressive symptoms following low, moderate, and high doses of an antidepressant, assigning different participants to each dose group randomly. Which research design is being used?",
@@ -463,7 +409,10 @@
       "kn": "KN54",
       "kn_explanation": "This question tests understanding of experimental group designs, particularly between-subjects versus within-subjects, pertinent to research design principles (KN54).",
       "difficulty": "easy",
-      "quality_comment": "The scenario is clearly described and distractors are plausible but distinct, providing good discrimination of group design knowledge."
+      "quality_comment": "The scenario is clearly described and distractors are plausible but distinct, providing good discrimination of group design knowledge.",
+      "lessonExcerpt": "Different groups get different treatments. Each person experiences only one condition.",
+      "suggestedLesson": "7-research-designs",
+      "needsReview": false
     },
     {
       "stem": "Which of the following triangulation types involves using multiple methods like interviews, questionnaires, and observations to collect data in order to increase the credibility of qualitative research findings?",
@@ -478,7 +427,10 @@
       "kn": "KN54",
       "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
       "difficulty": "medium",
-      "quality_comment": "Distractors represent real triangulation types, requiring test-takers to carefully differentiate their definitions, making this a challenging but fair item."
+      "quality_comment": "Distractors represent real triangulation types, requiring test-takers to carefully differentiate their definitions, making this a challenging but fair item.",
+      "lessonExcerpt": "| Methodological | Use multiple methods | Combine interviews, surveys, and observations of workplace stress |",
+      "suggestedLesson": "7-research-designs",
+      "needsReview": false
     },
     {
       "stem": "In a multiple baseline design across behaviors, what is the main advantage compared to a reversal design?",
@@ -493,7 +445,10 @@
       "kn": "KN54",
       "kn_explanation": "This item targets understanding of single-subject design strengths related to internal validity and experimental control (KN54).",
       "difficulty": "medium",
-      "quality_comment": "The options contrast features of experimental designs well, ensuring test-takers must understand the practical advantages of design differences."
+      "quality_comment": "The options contrast features of experimental designs well, ensuring test-takers must understand the practical advantages of design differences.",
+      "lessonExcerpt": "Instead of withdrawing treatment, you apply it sequentially to different baselines (different behaviors, settings, or people).",
+      "suggestedLesson": "7-research-designs",
+      "needsReview": false
     },
     {
       "stem": "Which developmental research design measures cognitive functioning in individuals aged 40, 50, 60, 70, and 80 years at one specific point in time?",
@@ -508,7 +463,10 @@
       "kn": "KN54",
       "kn_explanation": "This question assesses knowledge of developmental research designs, particularly cross-sectional studies, an essential part of research design (KN54).",
       "difficulty": "easy",
-      "quality_comment": "Clear and straightforward, this question assesses a fundamental difference in developmental designs with plausible but distinguishable options."
+      "quality_comment": "Clear and straightforward, this question assesses a fundamental difference in developmental designs with plausible but distinguishable options.",
+      "lessonExcerpt": "**Cross-sectional**: Compare different age groups at one time point.",
+      "suggestedLesson": "7-research-designs",
+      "needsReview": false
     },
     {
       "stem": "Regarding probability sampling methods, which sampling technique involves dividing the population into subgroups based on relevant characteristics and then randomly sampling from each subgroup?",
@@ -523,7 +481,10 @@
       "kn": "KN54",
       "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
       "difficulty": "medium",
-      "quality_comment": "Options represent common probability sampling methods with clear definitions; the question is well-constructed to test precise knowledge."
+      "quality_comment": "Options represent common probability sampling methods with clear definitions; the question is well-constructed to test precise knowledge.",
+      "lessonExcerpt": "**Stratified random sampling**: {{M}}Imagine you're selecting participants and want to ensure various age groups are represented. You divide your population into age categories (strata), then randomly select from each category.{{/M}}",
+      "suggestedLesson": "7-research-designs",
+      "needsReview": false
     },
     {
       "stem": "What is the primary goal of Community-Based Participatory Research (CBPR)?",
@@ -538,7 +499,10 @@
       "kn": "KN59",
       "kn_explanation": "This question pertains to community involvement and participatory research approaches within research methods (KN59).",
       "difficulty": "medium",
-      "quality_comment": "The distractors clearly contrast with key CBPR principles, making the correct answer stand out while testing conceptual understanding."
+      "quality_comment": "The distractors clearly contrast with key CBPR principles, making the correct answer stand out while testing conceptual understanding.",
+      "lessonExcerpt": "CBPR is action research that aims to improve social problems by involving community members as equal partners throughout the research process.",
+      "suggestedLesson": "7-research-designs",
+      "needsReview": false
     },
     {
       "stem": "A correlational study analyzes the relationship between the predictor X (hours studied) and criterion Y (exam score). What does the regression equation derived from this analysis primarily allow the researcher to do?",
@@ -553,7 +517,10 @@
       "kn": "KN54",
       "kn_explanation": "This question tests understanding of correlational research and regression analysis within quantitative research methods (KN54).",
       "difficulty": "medium",
-      "quality_comment": "Distractors cover various unrelated statistical concepts, compelling test-takers to correctly apply the concept of regression in correlational research."
+      "quality_comment": "Distractors cover various unrelated statistical concepts, compelling test-takers to correctly apply the concept of regression in correlational research.",
+      "lessonExcerpt": "Once you've established that two variables are correlated, regression analysis lets you make predictions. The correlational study produces a **regression equation** – essentially a formula that takes someone's predictor score and estimates their criterion score.",
+      "suggestedLesson": "7-correlation-and-regression",
+      "needsReview": false
     },
     {
       "stem": "What is the major limitation of randomized controlled trials (RCTs) that affects the generalizability of their results?",
@@ -568,7 +535,10 @@
       "kn": "KN54",
       "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
       "difficulty": "medium",
-      "quality_comment": "The question requires knowledge of strengths and weaknesses of RCT methodology, with plausible but distinct distractors enhancing test quality."
+      "quality_comment": "The question requires knowledge of strengths and weaknesses of RCT methodology, with plausible but distinct distractors enhancing test quality.",
+      "lessonExcerpt": "The random assignment increases internal validity (confidence that the treatment caused the effect) but the strict conditions can limit external validity (generalizability to real-world settings).",
+      "suggestedLesson": "7-research-designs",
+      "needsReview": false
     },
     {
       "stem": "In qualitative research, what is the primary purpose of thematic analysis?",
@@ -583,7 +553,10 @@
       "kn": "KN54",
       "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
       "difficulty": "easy",
-      "quality_comment": "The question is straightforward with clear options, providing good differentiation between qualitative and quantitative methods."
+      "quality_comment": "The question is straightforward with clear options, providing good differentiation between qualitative and quantitative methods.",
+      "lessonExcerpt": "**Thematic Analysis**: This is the method where researchers identify recurring patterns or themes in their data.",
+      "suggestedLesson": "7-research-designs",
+      "needsReview": false
     },
     {
       "stem": "Which type of observation involves recording whether or not a behavior occurred during predefined intervals and is best suited for frequent behaviors without clear beginnings or ends?",
@@ -598,7 +571,10 @@
       "kn": "KN54",
       "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
       "difficulty": "medium",
-      "quality_comment": "Distractors include related but distinct observational methods, making this an effective test of detailed procedural knowledge."
+      "quality_comment": "Distractors include related but distinct observational methods, making this an effective test of detailed procedural knowledge.",
+      "lessonExcerpt": "**Interval Recording** (also called time sampling): You divide observation time into chunks and note whether the behavior occurred in each chunk.",
+      "suggestedLesson": "7-research-designs",
+      "needsReview": false
     },
     {
       "stem": "In a mixed research design measuring the effects of drug dose on depression over time, drug dose is manipulated between subjects, while depressive symptoms measured weekly represent which type of variable?",
@@ -613,7 +589,10 @@
       "kn": "KN54",
       "kn_explanation": "This item focuses on understanding mixed research designs involving both between- and within-subjects variables, a core research design concept (KN54).",
       "difficulty": "hard",
-      "quality_comment": "The question requires integration of design concepts, making distractors plausible and the item challenging at the EPPP level."
+      "quality_comment": "The question requires integration of design concepts, making distractors plausible and the item challenging at the EPPP level.",
+      "lessonExcerpt": "Each person experiences all (or multiple) conditions at different times.",
+      "suggestedLesson": "7-research-designs",
+      "needsReview": false
     },
     {
       "stem": "Which sampling method involves selecting participants who are easiest to access, often leading to potential sampling bias?",
@@ -628,7 +607,10 @@
       "kn": "KN54",
       "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
       "difficulty": "medium",
-      "quality_comment": "The item clearly contrasts convenience sampling with other common sampling techniques, aiding differentiation and conceptual understanding."
+      "quality_comment": "The item clearly contrasts convenience sampling with other common sampling techniques, aiding differentiation and conceptual understanding.",
+      "lessonExcerpt": "**Convenience sampling**: You use whoever's easily available.",
+      "suggestedLesson": "7-research-designs",
+      "needsReview": false
     },
     {
       "stem": "What is a primary disadvantage of analogue research compared to naturalistic research settings?",
@@ -643,7 +625,10 @@
       "kn": "KN54",
       "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
       "difficulty": "medium",
-      "quality_comment": "The distractors reflect common research trade-off misconceptions, making the correct choice clear yet requiring understanding of validity concepts."
+      "quality_comment": "The distractors reflect common research trade-off misconceptions, making the correct choice clear yet requiring understanding of validity concepts.",
+      "lessonExcerpt": "**Disadvantage**: Worse external validity (findings may not generalize)",
+      "suggestedLesson": "7-research-designs",
+      "needsReview": false
     },
     {
       "stem": "Which of the following is a key feature of cross-sequential developmental research design?",
@@ -658,7 +643,10 @@
       "kn": "KN54",
       "kn_explanation": "This item focuses on understanding developmental research designs, specifically cross-sequential methods distinguishing confounding factors (KN54).",
       "difficulty": "medium",
-      "quality_comment": "The item provides clear, distinct plausible options that require knowledge beyond basic developmental design definitions."
+      "quality_comment": "The item provides clear, distinct plausible options that require knowledge beyond basic developmental design definitions.",
+      "lessonExcerpt": "**Cross-sequential**: Combine both approaches.",
+      "suggestedLesson": "7-research-designs",
+      "needsReview": false
     },
     {
       "stem": "Which qualitative research method focuses on understanding the lived experiences of individuals and often involves in-depth interviews?",
@@ -678,7 +666,10 @@
       "lock_in_level": "easier",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "**Phenomenology**: This approach focuses on the lived experience of a phenomenon.",
+      "suggestedLesson": "7-research-designs",
+      "needsReview": false
     },
     {
       "stem": "In qualitative research, which method emphasizes the development of theories based on data collected from participants, often through iterative coding processes?",
@@ -698,7 +689,10 @@
       "lock_in_level": "harder",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "**Grounded Theory**: Researchers develop a theory by deeply listening to participants' experiences.",
+      "suggestedLesson": "7-research-designs",
+      "needsReview": false
     }
   ]
 }

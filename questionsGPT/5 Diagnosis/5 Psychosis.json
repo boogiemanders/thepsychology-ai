@@ -16,7 +16,7 @@
       "quality_comment": "Tests critical DSM-5 changes that differentiate psychotic disorders — a high-yield EPPP topic.",
       "suggestedLesson": "5-psychosis",
       "suggestedParagraph": "## Core Symptoms: The Building Blocks",
-      "lessonExcerpt": "elimination of the allowance that bizarre delusions or two or more voices conversing suffice for a diagnosis of schizophrenia; thus the requirement is now at least two symptoms... There is no longer a requirement that the delusions in delusional disorder are non-bizarre; a specifier is added for bizarre type.",
+      "lessonExcerpt": "Delusional Disorder: Highly Focused Beliefs This is different from schizophrenia in important ways: - One or more delusions lasting at least 1 month - Overall functioning is NOT markedly impaired (except for direct effects of the delusion) - No prominent hallucinations, disorganized speech, or negative symptoms",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 15
@@ -34,7 +34,9 @@
       "kn": "KN36",
       "kn_explanation": "This question focuses on diagnostic criteria, which is part of classification systems and applying diagnostic classification rationales and limitations (KN36).",
       "difficulty": "medium",
-      "quality_comment": "The stem is clear and options reflect durations from related disorders, enhancing the plausibility of distractors and testing precise knowledge."
+      "quality_comment": "The stem is clear and options reflect durations from related disorders, enhancing the plausibility of distractors and testing precise knowledge.",
+      "lessonExcerpt": "**Brief Psychotic Disorder**: Symptoms last 1 day to less than 1 month",
+      "needsReview": false
     },
     {
       "stem": "Which of the following pairs of symptoms must be present for at least two weeks without mood symptoms to diagnose schizoaffective disorder?",
@@ -49,7 +51,9 @@
       "kn": "KN36",
       "kn_explanation": "This question addresses specific diagnostic criteria for schizoaffective disorder, reflecting classification systems and categorical diagnosis rationale.",
       "difficulty": "hard",
-      "quality_comment": "Distractors contain recognizable schizophrenia symptoms but only the correct option specifies symptoms required independent of mood symptoms, making it challenging."
+      "quality_comment": "Distractors contain recognizable schizophrenia symptoms but only the correct option specifies symptoms required independent of mood symptoms, making it challenging.",
+      "lessonExcerpt": "BUT there must be a period of at least 2 weeks where delusions or hallucinations occur without mood symptoms",
+      "needsReview": false
     },
     {
       "stem": "Which subtype of delusional disorder is characterized by the belief that one’s spouse or partner is unfaithful?",
@@ -64,7 +68,9 @@
       "kn": "KN36",
       "kn_explanation": "This question tests knowledge of peripheral schizophrenia spectrum disorders and subtypes of delusional disorder under classification approaches.",
       "difficulty": "medium",
-      "quality_comment": "Options represent common delusional disorder subtypes, making distractors plausible and testing detailed diagnostic knowledge clearly."
+      "quality_comment": "Options represent common delusional disorder subtypes, making distractors plausible and testing detailed diagnostic knowledge clearly.",
+      "lessonExcerpt": "| Jealous | Their partner is unfaithful |",
+      "needsReview": false
     },
     {
       "stem": "Which neurotransmitter abnormality is associated with positive symptoms of schizophrenia according to the revised dopamine hypothesis?",
@@ -79,7 +85,9 @@
       "kn": "KN36",
       "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
       "difficulty": "medium",
-      "quality_comment": "The question clearly differentiates related neurotransmitter hypotheses with realistic distractors that test understanding of neurochemical models."
+      "quality_comment": "The question clearly differentiates related neurotransmitter hypotheses with realistic distractors that test understanding of neurochemical models.",
+      "lessonExcerpt": "**Positive symptoms** (hallucinations, delusions): caused by dopamine *hyperactivity* in subcortical regions (especially the striatum)",
+      "needsReview": false
     },
     {
       "stem": "Which of the following factors is associated with a better prognosis in schizophrenia?",
@@ -94,7 +102,9 @@
       "kn": "KN37",
       "kn_explanation": "This question is best aligned with KN37 because it tests Factors influencing evidence-based interpretation of data and decision-making (e.g., base rates, group differences, cultural biases and differences, heuristics).",
       "difficulty": "medium",
-      "quality_comment": "Distractors include well-known negative prognostic factors, making the question balanced and testing clinical prognostic knowledge well."
+      "quality_comment": "Distractors include well-known negative prognostic factors, making the question balanced and testing clinical prognostic knowledge well.",
+      "lessonExcerpt": "**Better Prognosis Associated With:** Female gender Acute and late onset (rather than gradual, early onset)",
+      "needsReview": false
     },
     {
       "stem": "Which antipsychotic medication is considered the most effective for treatment-resistant schizophrenia?",
@@ -109,7 +119,9 @@
       "kn": "KN40",
       "kn_explanation": "This question is best aligned with KN40 because it tests Measurement of outcomes and changes due to prevention or intervention efforts with individuals, couples, families, groups, and organizations.",
       "difficulty": "medium",
-      "quality_comment": "Options include common antipsychotics, but only clozapine is well-established for treatment resistance, providing a clear correct choice."
+      "quality_comment": "Options include common antipsychotics, but only clozapine is well-established for treatment resistance, providing a clear correct choice.",
+      "lessonExcerpt": "**Clozapine** (an SGA) is the most effective for treatment-resistant schizophrenia.",
+      "needsReview": false
     },
     {
       "stem": "A 23-year-old man experiences hallucinations and delusions lasting for four months with prominent negative symptoms and marked impairment in functioning. He meets criteria for which diagnosis?",
@@ -124,7 +136,9 @@
       "kn": "KN36",
       "kn_explanation": "The question tests the application of duration and symptom criteria distinguishing schizophrenia spectrum diagnoses, pertinent to classification systems (KN36).",
       "difficulty": "medium",
-      "quality_comment": "Clinical vignette format promotes application of diagnostic criteria and contrasts similar disorders, suitable for EPPP clinical reasoning."
+      "quality_comment": "Clinical vignette format promotes application of diagnostic criteria and contrasts similar disorders, suitable for EPPP clinical reasoning.",
+      "lessonExcerpt": "Schizophreniform | 2 of 5 symptoms | Delusions, hallucinations, OR disorganized speech | 1 month to <6 months",
+      "needsReview": false
     },
     {
       "stem": "Which of the following statements accurately describes the heritability of schizophrenia based on twin studies?",
@@ -139,7 +153,9 @@
       "kn": "KN37",
       "kn_explanation": "This question is best aligned with KN37 because it tests Factors influencing evidence-based interpretation of data and decision-making (e.g., base rates, group differences, cultural biases and differences, heuristics).",
       "difficulty": "medium",
-      "quality_comment": "The question includes realistic but incorrect percentages and tests precise knowledge of familial risk and genetic influence."
+      "quality_comment": "The question includes realistic but incorrect percentages and tests precise knowledge of familial risk and genetic influence.",
+      "lessonExcerpt": "Dizygotic (fraternal) twin | 17% ... Monozygotic (identical) twin | 48%",
+      "needsReview": false
     },
     {
       "stem": "Which term describes the phase in schizophrenia characterized by lower-than-normal activity in the prefrontal cortex, contributing to negative and cognitive symptoms?",
@@ -154,7 +170,9 @@
       "kn": "KN36",
       "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
       "difficulty": "medium",
-      "quality_comment": "The distractors are plausible neuropsychiatric terms but distinct enough to effectively assess knowledge of brain function in schizophrenia."
+      "quality_comment": "The distractors are plausible neuropsychiatric terms but distinct enough to effectively assess knowledge of brain function in schizophrenia.",
+      "lessonExcerpt": "**Hypofrontality**: Reduced activity in the prefrontal cortex, contributing to negative and cognitive symptoms",
+      "needsReview": false
     },
     {
       "stem": "Which psychosocial intervention for schizophrenia specifically helps patients develop skills to manage illness by processing triggers and challenging self-stigmatizing beliefs?",
@@ -169,7 +187,9 @@
       "kn": "KN40",
       "kn_explanation": "This question is best aligned with KN40 because it tests Measurement of outcomes and changes due to prevention or intervention efforts with individuals, couples, families, groups, and organizations.",
       "difficulty": "hard",
-      "quality_comment": "The question requires detailed knowledge of specific psychosocial methods, differentiating among multiple evidence-based interventions."
+      "quality_comment": "The question requires detailed knowledge of specific psychosocial methods, differentiating among multiple evidence-based interventions.",
+      "lessonExcerpt": "Individual resiliency training (based on CBTp)... The resiliency training helps patients understand their psychotic episode triggers, challenge self-stigmatizing beliefs, and strengthen positive feelings, thoughts, and behaviors.",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best describes the concordance rate pattern for schizophrenia in offspring of discordant monozygotic twins?",
@@ -184,7 +204,9 @@
       "kn": "KN37",
       "kn_explanation": "This question is best aligned with KN37 because it tests Factors influencing evidence-based interpretation of data and decision-making (e.g., base rates, group differences, cultural biases and differences, heuristics).",
       "difficulty": "hard",
-      "quality_comment": "The question tests nuanced interpretation of twin study findings, with carefully written options to distinguish genetic liability concepts."
+      "quality_comment": "The question tests nuanced interpretation of twin study findings, with carefully written options to distinguish genetic liability concepts.",
+      "lessonExcerpt": "When studying identical twins where only one has schizophrenia, the offspring of both twins (affected and unaffected) show similar increased risk.",
+      "needsReview": false
     },
     {
       "stem": "Which model explains the coexistence of positive and negative symptoms in schizophrenia by implicating dysfunction in cortical and subcortical brain regions?",
@@ -199,7 +221,9 @@
       "kn": "KN36",
       "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
       "difficulty": "medium",
-      "quality_comment": "The distractors are plausible but mostly unrelated terms, focusing test-takers on understanding neuroanatomical models."
+      "quality_comment": "The distractors are plausible but mostly unrelated terms, focusing test-takers on understanding neuroanatomical models.",
+      "lessonExcerpt": "One comprehensive model suggests dysfunction in the temporal-limbic-frontal network causes negative symptoms and disinhibits subcortical areas, which then release excess dopamine in the striatum, causing positive symptoms.",
+      "needsReview": false
     },
     {
       "stem": "Which of the following biases refers to the tendency to overestimate the likelihood of rare but dramatic outcomes when interpreting assessment data for schizophrenia?",
@@ -214,7 +238,10 @@
       "kn": "KN37",
       "kn_explanation": "This assesses knowledge of cognitive biases and heuristics relevant to evidence-based interpretation of assessment data (KN37).",
       "difficulty": "medium",
-      "quality_comment": "The question effectively tests conceptual understanding of heuristics with commonly confused terms as distractors."
+      "quality_comment": "The question effectively tests conceptual understanding of heuristics with commonly confused terms as distractors.",
+      "lessonExcerpt": "Availability Heuristic: How Easily Can I Think of Examples? The **availability heuristic** involves judging the frequency or likelihood of events based on how easily we can recall examples.",
+      "suggestedLesson": "3-errors-and-shortcuts",
+      "needsReview": false
     },
     {
       "stem": "Which early intervention program for first-episode psychosis includes team-based treatment, family education, and supported employment?",
@@ -229,7 +256,9 @@
       "kn": "KN40",
       "kn_explanation": "This question addresses assessment and outcome measurement through early intervention programs in schizophrenia (KN40).",
       "difficulty": "medium",
-      "quality_comment": "Options include real programs but only NAVIGATE matches the described multidisciplinary, early psychosis model."
+      "quality_comment": "Options include real programs but only NAVIGATE matches the described multidisciplinary, early psychosis model.",
+      "lessonExcerpt": "Programs like **NAVIGATE** target people experiencing their first psychotic episode. Components include: Family education Individual resiliency training (based on CBTp) Supported employment and education Individualized medication treatment",
+      "needsReview": false
     },
     {
       "stem": "What is the minimum duration of symptoms required for a diagnosis of schizophreniform disorder according to DSM-5-TR?",
@@ -249,7 +278,9 @@
       "lock_in_level": "easier",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "Duration: at least 1 month but less than 6 months",
+      "needsReview": false
     },
     {
       "stem": "In diagnosing schizoaffective disorder, what is the required duration of mood episode symptoms in relation to psychotic symptoms according to DSM-5-TR?",
@@ -269,7 +300,9 @@
       "lock_in_level": "harder",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "BUT there must be a period of at least 2 weeks where delusions or hallucinations occur without mood symptoms",
+      "needsReview": false
     }
   ]
 }

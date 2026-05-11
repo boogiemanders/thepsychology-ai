@@ -97,7 +97,7 @@
       "quality_comment": "Tests the key distinguishing feature of ERG theory (frustration-regression) rather than simple recall of the three need categories.",
       "suggestedLesson": "2-work-motivation",
       "suggestedParagraph": "### Theory #2: Maslow's Need Hierarchy Theory",
-      "lessonExcerpt": "A modification of Maslow's theory, ERG Theory (1972) divides needs into those based on existence, relatedness and growth. Rather than arranging the needs hierarchically, Alderfer posits that all needs may influence a person at the same time. Further, according to the principle of frustration-regression, if a person is frustrated, he or she will move towards a previously met need.",
+      "lessonExcerpt": "The key concept: The lowest unsatisfied need is \"prepotent\". It dominates motivation.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 2
@@ -181,7 +181,7 @@
       "quality_comment": "Tests understanding of the core theoretical premise (malleability) rather than surface-level recall of the three needs.",
       "suggestedLesson": "2-work-motivation",
       "suggestedParagraph": "### McClelland's Acquired Needs Theory: What Really Drives You?",
-      "lessonExcerpt": "He identified three core drivers shaped by our early experiences and life circumstances.",
+      "lessonExcerpt": "David McClelland focused on psychological needs that develop through life experience rather than being hardwired from birth.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 21
@@ -202,7 +202,7 @@
       "quality_comment": "Applied scenario that tests the critical distinction in Herzberg's theory—that satisfaction and dissatisfaction are separate dimensions with different determinants.",
       "suggestedLesson": "2-work-motivation",
       "suggestedParagraph": "### Herzberg's Two-Factor Theory: Why Raises Don't Always Work",
-      "lessonExcerpt": "Hygiene Factors (also called job context factors) include salary, benefits, working conditions, company policies, and job security. These prevent dissatisfaction when adequate, but don't create motivation or satisfaction.",
+      "lessonExcerpt": "**Hygiene Factors** (job context): These include pay, benefits, working conditions, company policies, and supervision. When these are inadequate, workers feel dissatisfied. But here's the counterintuitive part: When they're adequate, workers simply aren't dissatisfied. They're not necessarily satisfied or motivated either.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 22
@@ -221,9 +221,9 @@
       "kn_explanation": "This question is best aligned with KN8 because it tests Major research-based theories and models of memory and their application.",
       "difficulty": "medium",
       "quality_comment": "Conceptually clean question with a clear correct answer. Content goes beyond current lesson material — valid EPPP topic, no lesson excerpt available.",
-      "suggestedLesson": "2-work-motivation",
+      "suggestedLesson": "2-3-work-satisfaction",
       "suggestedParagraph": "## Job Satisfaction",
-      "lessonExcerpt": "",
+      "lessonExcerpt": "**Absenteeism and turnover**: Satisfied employees are less likely to miss work or quit, but again, the relationships are moderate",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 2
@@ -242,9 +242,9 @@
       "kn_explanation": "This question is best aligned with KN9 because it tests Major research-based theories and models of motivation and their application.",
       "difficulty": "hard",
       "quality_comment": "Tests both substantive knowledge and methodological reasoning (correlation vs. causation); appropriate doctoral-level demand.",
-      "suggestedLesson": "2-work-motivation",
+      "suggestedLesson": "2-3-work-satisfaction",
       "suggestedParagraph": "## Job Satisfaction and Organizational Outcomes",
-      "lessonExcerpt": "N/A — no work motivation or job satisfaction lesson file was included in the provided content. This question is grounded in standard EPPP I-O psychology content but cannot be anchored to the provided lesson text.",
+      "lessonExcerpt": "**Job performance**: The correlation ranges from .17 to .30 depending on the study. Statistically significant but not enormous",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 15
@@ -265,7 +265,7 @@
       "quality_comment": "Scenario requires two-step reasoning: identify which factor category was addressed, then predict the theoretical outcome. Strong discriminative validity across distractors.",
       "suggestedLesson": "2-work-motivation",
       "suggestedParagraph": "## Herzberg's Two-Factor Theory",
-      "lessonExcerpt": "N/A — no work motivation lesson file was included in the provided content. This question is grounded in standard EPPP I-O psychology content but cannot be anchored to the provided lesson text.",
+      "lessonExcerpt": "**Hygiene Factors** (job context): These include pay, benefits, working conditions, company policies, and supervision. When these are inadequate, workers feel dissatisfied. But here's the counterintuitive part: When they're adequate, workers simply aren't dissatisfied. They're not necessarily satisfied or motivated either.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 16
@@ -304,7 +304,10 @@
       "kn": "KN9",
       "kn_explanation": "This question focuses on understanding foundational motivation theories, which are within major theories and models of motivation (KN9).",
       "difficulty": "easy",
-      "quality_comment": "Clear stem with plausible distractors representing other motivation concepts; assesses basic theory knowledge effectively."
+      "quality_comment": "Clear stem with plausible distractors representing other motivation concepts; assesses basic theory knowledge effectively.",
+      "lessonExcerpt": "Clark Hull introduced drive-reduction theory in 1943, arguing that humans are basically motivated to maintain balance. What he called homeostasis.",
+      "suggestedLesson": "2-work-motivation",
+      "needsReview": false
     },
     {
       "stem": "Which type of need, according to McClelland’s Acquired Needs Theory, best describes a person motivated by seeking status and influence over others?",
@@ -319,7 +322,10 @@
       "kn": "KN9",
       "kn_explanation": "This question examines knowledge of motivation theories related to psychological needs, fitting under major theories and models of motivation (KN9).",
       "difficulty": "medium",
-      "quality_comment": "Options are closely related psychological needs, making distractors plausible and the correct answer appropriately targeted."
+      "quality_comment": "Options are closely related psychological needs, making distractors plausible and the correct answer appropriately targeted.",
+      "lessonExcerpt": "**Need for Power (nPow):** These people are energized by influence, control, and recognition. They're drawn to leadership positions and situations where they can impact others' decisions or gain status.",
+      "suggestedLesson": "2-work-motivation",
+      "needsReview": false
     },
     {
       "stem": "In Maslow’s Need Hierarchy Theory, which need is considered never fully satisfied and remains a continual motivator?",
@@ -334,7 +340,10 @@
       "kn": "KN9",
       "kn_explanation": "This assesses understanding of Maslow’s hierarchical motivation model, part of major research-based motivation theories (KN9).",
       "difficulty": "medium",
-      "quality_comment": "Distractors are common hierarchical needs, increasing the challenge and relevance of the correct choice."
+      "quality_comment": "Distractors are common hierarchical needs, increasing the challenge and relevance of the correct choice.",
+      "lessonExcerpt": "The exception? Self-actualization never gets fully satisfied. There's always room for more growth and development.",
+      "suggestedLesson": "2-work-motivation",
+      "needsReview": false
     },
     {
       "stem": "According to Herzberg’s Two-Factor Theory, what is the effect of improving hygiene factors like pay and working conditions on worker motivation?",
@@ -349,7 +358,10 @@
       "kn": "KN9",
       "kn_explanation": "This question concerns Herzberg’s motivation theory, focusing on factors affecting job satisfaction and motivation (KN9).",
       "difficulty": "medium",
-      "quality_comment": "The options are nuanced and reflect common misconceptions, effectively testing discriminative understanding."
+      "quality_comment": "The options are nuanced and reflect common misconceptions, effectively testing discriminative understanding.",
+      "lessonExcerpt": "**Hygiene Factors** (job context): These include pay, benefits, working conditions, company policies, and supervision. When these are inadequate, workers feel dissatisfied. But here's the counterintuitive part: When they're adequate, workers simply aren't dissatisfied. They're not necessarily satisfied or motivated either.",
+      "suggestedLesson": "2-work-motivation",
+      "needsReview": false
     },
     {
       "stem": "Which core job characteristic in the Job Characteristics Model primarily leads to employees experiencing their work as meaningful?",
@@ -364,7 +376,10 @@
       "kn": "KN9",
       "kn_explanation": "This tests knowledge of job design theory and its impact on psychological states of workers, a key aspect of motivation models (KN9).",
       "difficulty": "hard",
-      "quality_comment": "The question is clear but challenging, as all options relate to meaningfulness; it demands application of detailed model knowledge."
+      "quality_comment": "The question is clear but challenging, as all options relate to meaningfulness; it demands application of detailed model knowledge.",
+      "lessonExcerpt": "- **Experienced Meaningfulness**: The work feels worthwhile (from variety, identity, and significance)",
+      "suggestedLesson": "2-work-motivation",
+      "needsReview": false
     },
     {
       "stem": "In Adams’ Equity Theory, how does underpayment inequity influence a worker’s motivation and behavior?",
@@ -379,7 +394,10 @@
       "kn": "KN9",
       "kn_explanation": "This probes understanding of social comparison processes in work motivation, a core aspect of major motivation theories (KN9).",
       "difficulty": "medium",
-      "quality_comment": "Distractors include both accurate and inaccurate statements, solidly testing comprehension of equity theory."
+      "quality_comment": "Distractors include both accurate and inaccurate statements, solidly testing comprehension of equity theory.",
+      "lessonExcerpt": "**Underpayment Inequity**: Your ratio is worse than others' (more work for less pay). This motivates you to decrease quality/quantity or seek better outcomes.",
+      "suggestedLesson": "2-work-motivation",
+      "needsReview": false
     },
     {
       "stem": "According to Expectancy Theory, a worker will have high motivation only if which combination of beliefs is held?",
@@ -394,7 +412,10 @@
       "kn": "KN9",
       "kn_explanation": "This assesses knowledge of the cognitive components that drive motivation in expectancy theory, a fundamental motivation model (KN9).",
       "difficulty": "medium",
-      "quality_comment": "Answer choices carefully address critical components, requiring integrative understanding rather than rote recall."
+      "quality_comment": "Answer choices carefully address critical components, requiring integrative understanding rather than rote recall.",
+      "lessonExcerpt": "Here's the critical part for the exam: **All three must be positive for high motivation.** If any single factor is zero or negative, motivation plummets.",
+      "suggestedLesson": "2-work-motivation",
+      "needsReview": false
     },
     {
       "stem": "Goal-Setting Theory emphasizes that worker commitment to a goal is maximized when the goals are:",
@@ -409,7 +430,10 @@
       "kn": "KN9",
       "kn_explanation": "The question checks comprehension of goal-setting principles, a widely researched and applied motivation model (KN9).",
       "difficulty": "easy",
-      "quality_comment": "This is a straightforward question with well-constructed distractors, ideal for confirming fundamental theory knowledge."
+      "quality_comment": "This is a straightforward question with well-constructed distractors, ideal for confirming fundamental theory knowledge.",
+      "lessonExcerpt": "Research shows goal acceptance and commitment are maximized when goals are:\n- **Specific** (not vague)\n- **Moderately difficult** (challenging but achievable)\n- **Accompanied by immediate feedback**",
+      "suggestedLesson": "2-work-motivation",
+      "needsReview": false
     },
     {
       "stem": "According to Hackman and Oldham’s Job Characteristics Model, which worker trait moderates how strongly the five core job characteristics affect job outcomes?",
@@ -424,7 +448,10 @@
       "kn": "KN9",
       "kn_explanation": "This question involves moderating personality traits in motivation theory, closely aligned with research on models of motivation (KN9).",
       "difficulty": "hard",
-      "quality_comment": "Distractors are relevant needs but only one is a moderator in this model, testing detailed theoretical understanding."
+      "quality_comment": "Distractors are relevant needs but only one is a moderator in this model, testing detailed theoretical understanding.",
+      "lessonExcerpt": "The moderating factor? **Growth-need strength**. Workers who seek to fulfill higher-order needs respond more positively to jobs with these five characteristics.",
+      "suggestedLesson": "2-work-motivation",
+      "needsReview": false
     },
     {
       "stem": "Which of the following statements about McClelland’s need for achievement is correct?",
@@ -439,7 +466,10 @@
       "kn": "KN9",
       "kn_explanation": "This examines detailed components of acquired psychological needs from motivation theory, a major area in KN9.",
       "difficulty": "medium",
-      "quality_comment": "Distractors reflect common misconceptions or other needs, making this a well-crafted question on key concept differentiation."
+      "quality_comment": "Distractors reflect common misconceptions or other needs, making this a well-crafted question on key concept differentiation.",
+      "lessonExcerpt": "**Need for Achievement (nAch):** These individuals are motivated by success and accomplishment. {{M}}Picture someone who chooses to lead a challenging project with a 50/50 success rate rather than taking the safe, boring assignment everyone else wants.{{/M}} They want personal responsibility (they won't delegate much), prefer moderate risk (not too easy, not impossible), and crave frequent feedback about their performance.",
+      "suggestedLesson": "2-work-motivation",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best describes job enrichment, according to Herzberg’s theory?",
@@ -454,7 +484,10 @@
       "kn": "KN9",
       "kn_explanation": "This question taps into Herzberg's motivation theory and practical applications for job design to increase motivation (KN9).",
       "difficulty": "medium",
-      "quality_comment": "Distractors include common job design terms, requiring test takers to discriminate closely related concepts."
+      "quality_comment": "Distractors include common job design terms, requiring test takers to discriminate closely related concepts.",
+      "lessonExcerpt": "**Job Enrichment** emerged from this theory. It's about redesigning jobs to include more motivator factors, adding meaningful challenges, autonomy, and responsibility.",
+      "suggestedLesson": "2-work-motivation",
+      "needsReview": false
     },
     {
       "stem": "Which of the following is a primary assumption of the drive-reduction theory of motivation?",
@@ -469,7 +502,10 @@
       "kn": "KN9",
       "kn_explanation": "This item assesses understanding of foundational assumptions behind early motivation theories, situated in theories and models of motivation (KN9).",
       "difficulty": "easy",
-      "quality_comment": "Well-constructed with plausible distractors representing other motivation perspectives; tests key conceptual understanding."
+      "quality_comment": "Well-constructed with plausible distractors representing other motivation perspectives; tests key conceptual understanding.",
+      "lessonExcerpt": "When you're hungry (imbalance), you feel uncomfortable, which creates a drive to eat (behavior), which satisfies the need and restores balance.",
+      "suggestedLesson": "2-work-motivation",
+      "needsReview": false
     },
     {
       "stem": "According to Equity Theory, what is the most likely reaction of a worker who perceives overpayment inequity?",
@@ -484,7 +520,10 @@
       "kn": "KN9",
       "kn_explanation": "The question focuses on the motivational responses to perceived social inequities in the workplace, a key element of Equity Theory (KN9).",
       "difficulty": "medium",
-      "quality_comment": "The options are balanced and test application of theory to worker behavior, enhancing conceptual learning."
+      "quality_comment": "The options are balanced and test application of theory to worker behavior, enhancing conceptual learning.",
+      "lessonExcerpt": "**Overpayment Inequity**: Your ratio is better than others' (less work for more pay). This motivates you to increase quality or quantity of work to restore fairness.",
+      "suggestedLesson": "2-work-motivation",
+      "needsReview": false
     },
     {
       "stem": "In McClelland’s Acquired Needs Theory, which need is primarily focused on forming close relationships and being accepted by others?",
@@ -504,7 +543,10 @@
       "lock_in_level": "easier",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "**Need for Affiliation (nAff):** These individuals prioritize relationships and social acceptance. They're motivated by opportunities to connect with others and be liked by their colleagues.",
+      "suggestedLesson": "2-work-motivation",
+      "needsReview": false
     },
     {
       "stem": "According to McClelland’s Acquired Needs Theory, which need is associated with the desire to excel and achieve personal goals?",
@@ -524,7 +566,10 @@
       "lock_in_level": "harder",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "**Need for Achievement (nAch):** These individuals are motivated by success and accomplishment.",
+      "suggestedLesson": "2-work-motivation",
+      "needsReview": false
     }
   ]
 }

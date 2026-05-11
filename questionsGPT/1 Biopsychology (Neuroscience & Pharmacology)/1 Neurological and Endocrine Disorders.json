@@ -56,7 +56,7 @@
       "quality_comment": "Good medical-rule-out item for psychiatry versus endocrine mimicry.",
       "suggestedLesson": "1-neurological-endocrine-disorders",
       "suggestedParagraph": "### Thyroid Disorders",
-      "lessonExcerpt": "Hypothyroidism (too little thyroid hormone): Decreased metabolism, lowered temperature, cold intolerance. Reduced appetite with weight gain. Slowed heart rate. Depression, lethargy, decreased libido. Confusion, impaired concentration and memory.",
+      "lessonExcerpt": "**Hypothyroidism** (too little thyroid hormone): - Decreased metabolism, lowered temperature, cold intolerance - Reduced appetite with weight gain - Slowed heart rate - Depression, lethargy, decreased libido - Confusion, impaired concentration and memory",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR"
     },
@@ -137,9 +137,9 @@
       "kn_explanation": "Cerebral palsy etiology involves neurobiological bases of behavior pertaining to brain development and chronic neurobehavioral disease processes",
       "difficulty": "hard",
       "quality_comment": "The lesson content does not specifically cover cerebral palsy. This question requires knowledge beyond what is presented in the available lessons.",
-      "suggestedLesson": "1-neurological-endocrine-disorders",
+      "suggestedLesson": "4-before-birth",
       "suggestedParagraph": "## Movement Disorders: When Motor Control Breaks Down",
-      "lessonExcerpt": "N/A - Cerebral palsy is not explicitly covered in the available lesson content.",
+      "lessonExcerpt": "**Reality**: Some effects, particularly neurodevelopmental ones, emerge later as children face age-appropriate cognitive demands. A child exposed to alcohol prenatally might seem okay as an infant but struggle with executive function and impulse control in school.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 18
@@ -242,9 +242,9 @@
       "kn_explanation": "This question relates to the biological bases of behavior, specifically the electrophysiological aspects of brain function.",
       "difficulty": "medium",
       "quality_comment": "The question effectively assesses knowledge of brain wave patterns and their associations.",
-      "suggestedLesson": "1-neurological-endocrine-disorders",
+      "suggestedLesson": "1-memory-and-sleep",
       "suggestedParagraph": "## Recovery Timeline",
-      "lessonExcerpt": "Beta waves are associated with active thinking and problem-solving.",
+      "lessonExcerpt": "Stage R (REM sleep) is called **paradoxical sleep** for good reason. Your brain shows beta waves (normally associated with being awake and alert) and theta waves.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 6
@@ -265,7 +265,7 @@
       "quality_comment": "The question is straightforward and tests knowledge of genetic conditions.",
       "suggestedLesson": "1-neurological-endocrine-disorders",
       "suggestedParagraph": "## Huntington's Disease: The Genetic Movement Disorder",
-      "lessonExcerpt": "Klinefelter's syndrome is characterized by an extra X chromosome in males.",
+      "lessonExcerpt": "**Huntington's disease** is a devastating hereditary condition caused by a mutated gene on chromosome 4.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 14
@@ -284,9 +284,9 @@
       "kn_explanation": "This KN code applies as it relates to the biological bases of behavior, specifically in understanding neurological disorders.",
       "difficulty": "hard",
       "quality_comment": "The question effectively distinguishes between symptoms of different neurological conditions.",
-      "suggestedLesson": "1-neurological-endocrine-disorders",
+      "suggestedLesson": "1-cerebral-cortex",
       "suggestedParagraph": "## Strokes: When Blood Flow Gets Cut Off",
-      "lessonExcerpt": "Gerstmann's syndrome is characterized by agraphia, acalculia, and left-right disorientation.",
+      "lessonExcerpt": "Damage can cause: - Visual agnosia (seeing but not recognizing what you're looking at) - Visual hallucinations - Achromatopsia (loss of color vision, seeing only in grayscale) - Cortical blindness",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 19
@@ -307,7 +307,7 @@
       "quality_comment": "The question is relevant and tests knowledge of neurotransmitter roles in mood disorders.",
       "suggestedLesson": "1-neurological-endocrine-disorders",
       "suggestedParagraph": "## Strokes: When Blood Flow Gets Cut Off",
-      "lessonExcerpt": "Serotonin is believed to play a significant role in the pathophysiology of seasonal affective disorder.",
+      "lessonExcerpt": "**Migraines** involve intense, throbbing pain (usually one-sided) often with nausea/vomiting and sensitivity to light or other stimuli. They're linked to low serotonin and abnormalities in glutamate, dopamine, and norepinephrine.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 20
@@ -328,7 +328,7 @@
       "quality_comment": "The question accurately tests knowledge of seizure types and their characteristics.",
       "suggestedLesson": "1-neurological-endocrine-disorders",
       "suggestedParagraph": "## Seizures: When the Brain Misfires",
-      "lessonExcerpt": "Absence seizures are characterized by sudden, brief lapses in attention.",
+      "lessonExcerpt": "4. **\"All seizures involve convulsions\"**: Focal onset aware seizures don't affect consciousness at all, and absence seizures just look like brief staring spells.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 22
@@ -389,9 +389,9 @@
       "kn_explanation": "This question is best aligned with KN1 because it tests Functional correlates and determinants of the neurobiological and genetic bases of behavior pertaining to perception, cognition, personality, and mood and affect in normal, acute and chronic neurobehavioral disease processes and disease, comorbidities.",
       "difficulty": "hard",
       "quality_comment": "The question is well-structured and requires a deep understanding of neurological conditions.",
-      "suggestedLesson": "1-neurological-endocrine-disorders",
+      "suggestedLesson": "1-cerebral-cortex",
       "suggestedParagraph": "## Neurological and Endocrine Disorders",
-      "lessonExcerpt": "Anosognosia refers to a lack of awareness of one's own deficits, often seen in neurological conditions.",
+      "lessonExcerpt": "- **Anosognosia**: Denies their illness (a patient with paralyzed left arm insists it works fine)",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 2
@@ -410,9 +410,9 @@
       "kn_explanation": "This question is best aligned with KN1 because it tests Functional correlates and determinants of the neurobiological and genetic bases of behavior pertaining to perception, cognition, personality, and mood and affect in normal, acute and chronic neurobehavioral disease processes and disease, comorbidities.",
       "difficulty": "hard",
       "quality_comment": "The question effectively tests knowledge of Alzheimer's disease pathology.",
-      "suggestedLesson": "1-neurological-endocrine-disorders",
+      "suggestedLesson": "5-neurocognitive",
       "suggestedParagraph": "## Neurological and Endocrine Disorders",
-      "lessonExcerpt": "Neurofibrillary tangles are a hallmark of Alzheimer's disease.",
+      "lessonExcerpt": "**Neurofibrillary tangles**: Abnormal tau protein accumulation inside neurons that creates twisted threads",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 9
@@ -433,7 +433,7 @@
       "quality_comment": "The question is relevant and tests knowledge of the impact of neurological lesions.",
       "suggestedLesson": "1-neurological-endocrine-disorders",
       "suggestedParagraph": "## Traumatic Brain Injury: When the Brain Gets Shaken or Pierced",
-      "lessonExcerpt": "Neurological lesions often result in paralysis or weakness in the affected areas of the body.",
+      "lessonExcerpt": "**Middle cerebral artery** (most common) | Weakness/paralysis on opposite side of body, vision loss in half the visual field, slurred speech, language problems (dominant hemisphere) or spatial neglect (nondominant hemisphere)",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 10
@@ -496,7 +496,7 @@
       "quality_comment": "The question effectively assesses knowledge of post-concussion syndrome symptoms.",
       "suggestedLesson": "1-neurological-endocrine-disorders",
       "suggestedParagraph": "## Traumatic Brain Injury: When the Brain Gets Shaken or Pierced",
-      "lessonExcerpt": "After someone regains consciousness from a TBI, they typically experience a mix of problems: **Memory issues** are particularly important to understand: - **Anterograde amnesia** (also called post-traumatic amnesia): Can't form new memories after the injury.",
+      "lessonExcerpt": "The classic symptoms of diabetes are the \"**Three P's**\": **P**olyuria (increased urination), **P**olydipsia (increased thirst), and **P**olyphagia (increased appetite).",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 1
@@ -517,7 +517,7 @@
       "quality_comment": "The question accurately assesses knowledge of diagnostic tests for seizures.",
       "suggestedLesson": "1-neurological-endocrine-disorders",
       "suggestedParagraph": "## Seizures: When Blood Flow Gets Cut Off",
-      "lessonExcerpt": "An EEG is the primary diagnostic test used to assess seizure activity.",
+      "lessonExcerpt": "The computer records electrical activity as brain waves showing frequency and amplitude. EEG is useful for:",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 4
@@ -536,9 +536,9 @@
       "kn_explanation": "This question is best aligned with KN1 because it tests Functional correlates and determinants of the neurobiological and genetic bases of behavior pertaining to perception, cognition, personality, and mood and affect in normal, acute and chronic neurobehavioral disease processes and disease, comorbidities.",
       "difficulty": "medium",
       "quality_comment": "The question effectively tests knowledge of akathisia.",
-      "suggestedLesson": "1-neurological-endocrine-disorders",
+      "suggestedLesson": "1-pharmacology-antidepressants-antipsychotics",
       "suggestedParagraph": "## Movement Disorders: When Motor Control Breaks Down",
-      "lessonExcerpt": "Akathisia is characterized by a subjective feeling of restlessness and an objective inability to sit still.",
+      "lessonExcerpt": "**Extrapyramidal Side Effects** | High-potency FGAs (haloperidol, fluphenazine) | Parkinsonism (tremor, rigidity), dystonia (muscle spasms), akathisia (restlessness), tardive dyskinesia",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 5
@@ -559,7 +559,7 @@
       "quality_comment": "The question accurately assesses knowledge of headache types.",
       "suggestedLesson": "1-neurological-endocrine-disorders",
       "suggestedParagraph": "## Headaches: When Pain Becomes a Problem",
-      "lessonExcerpt": "Migraine headaches are characterized by unilateral throbbing pain, often accompanied by nausea.",
+      "lessonExcerpt": "**Migraines** involve intense, throbbing pain (usually one-sided) often with nausea/vomiting and sensitivity to light or other stimuli. They're linked to low serotonin and abnormalities in glutamate, dopamine, and norepinephrine.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 6
@@ -578,9 +578,9 @@
       "kn_explanation": "This question is best aligned with KN1 because it tests Functional correlates and determinants of the neurobiological and genetic bases of behavior pertaining to perception, cognition, personality, and mood and affect in normal, acute and chronic neurobehavioral disease processes and disease, comorbidities.",
       "difficulty": "hard",
       "quality_comment": "The question effectively tests knowledge of the consequences of severing the corpus callosum.",
-      "suggestedLesson": "1-neurological-endocrine-disorders",
+      "suggestedLesson": "1-cerebral-cortex",
       "suggestedParagraph": "## Brain Lateralization: The Two Hemispheres",
-      "lessonExcerpt": "Severing the corpus callosum can lead to split-brain syndrome.",
+      "lessonExcerpt": "- **Split-brain research revealed lateralization**: Each hemisphere has specialized functions that become apparent when they can't communicate",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 9
@@ -601,7 +601,7 @@
       "quality_comment": "The question accurately assesses knowledge of medical explanations for unexplained physical symptoms.",
       "suggestedLesson": "1-neurological-endocrine-disorders",
       "suggestedParagraph": "## Medical Explanations for Physical Symptoms",
-      "lessonExcerpt": "Endocrine disorders can often manifest as physical symptoms without a clear medical diagnosis.",
+      "lessonExcerpt": "Understanding neurological and endocrine disorders isn't just important for the EPPP; it's essential for being a competent psychologist who knows when symptoms point to a medical emergency rather than a mental health concern.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 10
@@ -622,7 +622,7 @@
       "quality_comment": "The question is clear and directly tests knowledge of genetic syndromes.",
       "suggestedLesson": "1-neurological-endocrine-disorders",
       "suggestedParagraph": "## Huntington's Disease: The Genetic Movement Disorder",
-      "lessonExcerpt": "Cri-du-chat syndrome is caused by a deletion on chromosome 5.",
+      "lessonExcerpt": "**Huntington's disease** is a devastating hereditary condition caused by a mutated gene on chromosome 4.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 12
@@ -683,9 +683,9 @@
       "kn_explanation": "This question is best aligned with KN4 because it tests Behavioral genetics, transmission and expression of genetic information, and its modification, and the role and limitations of this information in understanding disorders.",
       "difficulty": "medium",
       "quality_comment": "The question effectively assesses knowledge of dietary management for PKU.",
-      "suggestedLesson": "1-neurological-endocrine-disorders",
+      "suggestedLesson": "4-before-birth",
       "suggestedParagraph": "## Dietary Management of Phenylketonuria",
-      "lessonExcerpt": "Individuals with phenylketonuria (PKU) must adhere to a low phenylalanine diet to prevent cognitive impairment.",
+      "lessonExcerpt": "People with PKU cannot properly metabolize phenylalanine, an amino acid found in protein. Without treatment starting immediately after birth, phenylalanine builds up and causes:",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 7
@@ -704,9 +704,9 @@
       "kn_explanation": "This question is best aligned with KN1 because it tests Functional correlates and determinants of the neurobiological and genetic bases of behavior pertaining to perception, cognition, personality, and mood and affect in normal, acute and chronic neurobehavioral disease processes and disease, comorbidities.",
       "difficulty": "medium",
       "quality_comment": "The question effectively tests knowledge of neurotransmitter roles in Alzheimer's disease.",
-      "suggestedLesson": "1-neurological-endocrine-disorders",
+      "suggestedLesson": "1-neurons-and-neurotransmitters",
       "suggestedParagraph": "## Neurotransmitter Involvement in Alzheimer's Disease",
-      "lessonExcerpt": "Acetylcholine levels are significantly reduced in individuals with Alzheimer's disease.",
+      "lessonExcerpt": "- **Memory**: Low ACh levels in the entorhinal cortex and hippocampus are linked to early Alzheimer's disease memory loss (this is why cholinesterase inhibitors like donepezil are used to treat Alzheimer's. They prevent ACh breakdown)",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 10
@@ -727,7 +727,7 @@
       "quality_comment": "The question effectively assesses knowledge of the medical aspects of anxiety disorders.",
       "suggestedLesson": "1-neurological-endocrine-disorders",
       "suggestedParagraph": "## Strokes: When Blood Flow Gets Cut Off",
-      "lessonExcerpt": "Anxiety symptoms can be attributed to hormonal imbalances.",
+      "lessonExcerpt": "Thyroid disorders are one of the first medical disorders to suspect when there are psychiatric symptoms. Hyperthyroidism mimics anxiety or mania. Hypothyroidism mimics depression.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 13
@@ -748,7 +748,7 @@
       "quality_comment": "The question effectively assesses knowledge of symptoms related to trauma and concussion.",
       "suggestedLesson": "1-neurological-endocrine-disorders",
       "suggestedParagraph": "## Traumatic Brain Injury: When the Brain Gets Shaken or Pierced",
-      "lessonExcerpt": "Memory issues are particularly important to understand.",
+      "lessonExcerpt": "**Posterior cerebral artery** | Opposite-side weakness and sensory loss, vision problems, memory loss, nausea/vomiting",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 15
@@ -769,7 +769,7 @@
       "quality_comment": "The question is well-structured and tests understanding of cognitive disorders.",
       "suggestedLesson": "1-neurological-endocrine-disorders",
       "suggestedParagraph": "## Movement Disorders: When Motor Control Breaks Down",
-      "lessonExcerpt": "Pseudodementia is characterized by cognitive impairment that can be reversed, unlike Alzheimer's disease.",
+      "lessonExcerpt": "According to the 2011 NIA guidelines, Alzheimer's disease progresses through three stages:",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 16
@@ -788,9 +788,9 @@
       "kn_explanation": "This KN code applies as it pertains to the biological bases of behavior, particularly in nutritional deficiencies.",
       "difficulty": "medium",
       "quality_comment": "The question effectively assesses knowledge of the relationship between nutritional deficiencies and neurological conditions.",
-      "suggestedLesson": "1-neurological-endocrine-disorders",
+      "suggestedLesson": "1-hindbrain-midbrain-forebrain",
       "suggestedParagraph": "## Movement Disorders: When Motor Control Breaks Down",
-      "lessonExcerpt": "Wernicke's encephalopathy is caused by thiamine deficiency.",
+      "lessonExcerpt": "**EPPP tip:** Don't confuse this with Wernicke-Korsakoff syndrome, which includes Wernicke's encephalopathy (acute confusion, ataxia, eye movement problems) followed by Korsakoff syndrome. The exam might present a case of chronic alcoholism with severe memory problems and confabulation.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 17
@@ -811,7 +811,7 @@
       "quality_comment": "Challenging question that requires detailed knowledge of seizure types.",
       "suggestedLesson": "1-neurological-endocrine-disorders",
       "suggestedParagraph": "## Types of Seizures",
-      "lessonExcerpt": "Tonic-clonic seizures involve a combination of muscle rigidity and rhythmic jerking movements.",
+      "lessonExcerpt": "- **Generalized convulsive SE**: Loss of consciousness with tonic-clonic seizures - **Non-convulsive SE**: Seizure activity on EEG without obvious motor symptoms; may involve altered consciousness, delusions, hallucinations, automatisms, or language problems",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 23
@@ -832,7 +832,7 @@
       "quality_comment": "Rich clinical vignette requiring recognition of temporal lobe seizure semiology; strong distractors reflect other focal seizure types with distinct features.",
       "suggestedLesson": "1-neurological-endocrine-disorders",
       "suggestedParagraph": "## Strokes: When Blood Flow Gets Cut Off",
-      "lessonExcerpt": "[Partial complex seizures and their temporal lobe origin are covered in the seizure disorders section of the lesson — full content extends beyond the provided excerpt]",
+      "lessonExcerpt": "**Temporal lobe** (most common focal type) | Aura with strange taste/smell, stomach rising sensation, intense fear, déjà vu or jamais vu; autonomic symptoms (sweating, dilated pupils, rapid heart rate); automatisms (lip-smacking, chewing, fidgeting); speech problems with impaired understanding",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 7
@@ -872,9 +872,9 @@
       "kn_explanation": "Understanding endocrine mechanisms of stress, specifically the HPA axis and cortisol as a physiological marker, is foundational Biological Bases of Behavior content relevant to health psychology.",
       "difficulty": "medium",
       "quality_comment": "Solid question; the epinephrine distractor is particularly strong as it targets a common confusion between adrenal medulla (acute stress) and adrenal cortex (chronic HPA activation)",
-      "suggestedLesson": "1-neurological-endocrine-disorders",
+      "suggestedLesson": "1-hindbrain-midbrain-forebrain",
       "suggestedParagraph": "## Endocrine Disorders and the HPA Axis",
-      "lessonExcerpt": "Content about cortisol and the HPA axis stress response was in the truncated portion of the lesson file.",
+      "lessonExcerpt": "The hypothalamus initiates the stress response by releasing hormones that trigger the pituitary, which triggers the adrenal glands, the HPA (hypothalamic-pituitary-adrenal) axis. This is fundamental for understanding trauma responses, chronic stress effects, and conditions like PTSD and depression.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 17
@@ -893,9 +893,9 @@
       "kn_explanation": "Understanding the timing and etiology of neurodevelopmental disorders such as cerebral palsy is core content within the Biological Bases of Behavior domain, specifically neurodevelopmental disorders.",
       "difficulty": "medium",
       "quality_comment": "Strong question with practical parent-counseling framing; the third-trimester/myelination distractor appropriately tests precision of developmental timing knowledge",
-      "suggestedLesson": "1-neurological-endocrine-disorders",
+      "suggestedLesson": "2-stress-and-emotion",
       "suggestedParagraph": "## Movement Disorders: When Motor Control Breaks Down",
-      "lessonExcerpt": "Content about cerebral palsy timing and etiology was in the truncated portion of the lesson file.",
+      "lessonExcerpt": "**Psychoeducation**: Explaining the stress response normalizes symptoms. {{M}}When you tell a client that their racing heart during panic isn't dangerous (it's just their SAM system activating when there's no actual threat{{/M}}) you're providing cognitive restructuring material.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 18
@@ -934,7 +934,10 @@
       "kn": "KN1",
       "kn_explanation": "This question relates to the neurobiological bases of vascular brain injury and neurological disease processes, fitting KN1.",
       "difficulty": "medium",
-      "quality_comment": "The question is clear, with plausible distractors focused on stroke types, making it suitable for testing neurovascular knowledge."
+      "quality_comment": "The question is clear, with plausible distractors focused on stroke types, making it suitable for testing neurovascular knowledge.",
+      "lessonExcerpt": "**Ischemic strokes** (the most common type) occur when something blocks an artery: - **Thrombotic stroke**: A blood clot forms right in a brain artery - **Embolic stroke**: A clot forms elsewhere (like the heart) and travels to the brain",
+      "suggestedLesson": "1-neurological-endocrine-disorders",
+      "needsReview": false
     },
     {
       "stem": "A patient with contralateral hemiparesis predominantly affecting the leg, urinary incontinence, impaired insight, and mutism most likely has a stroke involving which artery?",
@@ -949,7 +952,10 @@
       "kn": "KN1",
       "kn_explanation": "This tests knowledge of functional neuroanatomy and clinical neurological signs, a core concept within neurobiological bases (KN1).",
       "difficulty": "hard",
-      "quality_comment": "The clinical vignette is detailed and demands integration of symptom localization, providing an excellent challenge for advanced candidates."
+      "quality_comment": "The clinical vignette is detailed and demands integration of symptom localization, providing an excellent challenge for advanced candidates.",
+      "lessonExcerpt": "**Anterior cerebral artery** | Leg weakness especially, poor judgment, apathy, confusion, urinary incontinence",
+      "suggestedLesson": "1-neurological-endocrine-disorders",
+      "needsReview": false
     },
     {
       "stem": "Which of the following symptoms is most characteristic of Huntington's disease?",
@@ -964,7 +970,10 @@
       "kn": "KN1",
       "kn_explanation": "This question addresses the neurobiological basis of motor disorders and genetic neurodegenerative disease processes, aligning with KN1.",
       "difficulty": "medium",
-      "quality_comment": "Options are plausible movement disorders, making the correct answer a clear choice to those knowledgeable about Huntington’s."
+      "quality_comment": "Options are plausible movement disorders, making the correct answer a clear choice to those knowledgeable about Huntington’s.",
+      "lessonExcerpt": "**Middle stage**: Short-term memory problems, poor concentration and judgment, **chorea** (jerky, uncontrollable movements in hands, face, limbs, and torso) 3.",
+      "suggestedLesson": "1-neurological-endocrine-disorders",
+      "needsReview": false
     },
     {
       "stem": "Which neurotransmitter deficiency is primarily responsible for the motor symptoms observed in Parkinson’s disease?",
@@ -979,7 +988,10 @@
       "kn": "KN1",
       "kn_explanation": "This question focuses on neurochemical processes underlying Parkinson’s disease motor symptoms, fitting the neurobiological bases domain (KN1).",
       "difficulty": "easy",
-      "quality_comment": "The options focus on neurotransmitters implicated in neurological conditions, making a clear, straightforward question."
+      "quality_comment": "The options focus on neurotransmitters implicated in neurological conditions, making a clear, straightforward question.",
+      "lessonExcerpt": "The core problem is degeneration of dopamine-producing cells in the **substantia nigra**, which reduces dopamine in the basal ganglia. But it's not just about dopamine. Low levels of acetylcholine, norepinephrine, and excessive glutamate activity also play roles in various symptoms.",
+      "suggestedLesson": "1-neurological-endocrine-disorders",
+      "needsReview": false
     },
     {
       "stem": "A patient presents with repeated brief loss of consciousness characterized by staring and rapid blinking but no convulsive movements. This presentation is most consistent with which type of seizure?",
@@ -994,7 +1006,10 @@
       "kn": "KN1",
       "kn_explanation": "This assesses understanding of seizure classification by clinical presentation, falling under neurological disease and neurobiological bases (KN1).",
       "difficulty": "medium",
-      "quality_comment": "The clinical description is precise, and distractors are plausible seizure types, enhancing discrimination."
+      "quality_comment": "The clinical description is precise, and distractors are plausible seizure types, enhancing discrimination.",
+      "lessonExcerpt": "**Generalized onset non-motor seizures** (absence seizures, petit mal): Very brief loss of consciousness with a blank stare, possibly rapid blinking. {{M}}From the outside, it might look like someone suddenly zoned out for a few seconds{{/M}}, but they've actually had a seizure.",
+      "suggestedLesson": "1-neurological-endocrine-disorders",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best characterizes central diabetes insipidus?",
@@ -1009,7 +1024,10 @@
       "kn": "KN1",
       "kn_explanation": "This question covers endocrine neurobiology and hormone-related disorders, within KN1’s scope of physiological neurobehavioral disease processes.",
       "difficulty": "medium",
-      "quality_comment": "Options contrast related endocrine disorders well, requiring specific knowledge of diabetes insipidus pathophysiology."
+      "quality_comment": "Options contrast related endocrine disorders well, requiring specific knowledge of diabetes insipidus pathophysiology.",
+      "lessonExcerpt": "The pituitary releases **antidiuretic hormone (ADH)**, which controls water excretion in urine. When ADH is too low (due to tumor, infection, stroke, or surgery), it causes **central diabetes insipidus** (different from diabetes mellitus).",
+      "suggestedLesson": "1-neurological-endocrine-disorders",
+      "needsReview": false
     },
     {
       "stem": "Which neuroimaging technique provides detailed three-dimensional images of brain structures and better detects microhemorrhages compared to CT scans?",
@@ -1024,7 +1042,10 @@
       "kn": "KN5",
       "kn_explanation": "This question addresses the applications and strengths of structural brain imaging, matching knowledge in brain imaging methods (KN5).",
       "difficulty": "easy",
-      "quality_comment": "The options include common neurodiagnostic tools providing plausible alternatives, enhancing test validity."
+      "quality_comment": "The options include common neurodiagnostic tools providing plausible alternatives, enhancing test validity.",
+      "lessonExcerpt": "**MRI (magnetic resonance imaging)**: - Uses magnetic fields and radio waves (no radiation) - More detailed three-dimensional images - Can detect microhemorrhages, contusions, and scarring that CT misses - Downsides: takes longer, requires staying very still, produces loud noise",
+      "suggestedLesson": "1-neurological-endocrine-disorders",
+      "needsReview": false
     },
     {
       "stem": "The first-line medication for alleviating the bradykinesia symptoms of Parkinson’s disease, which is converted to dopamine in the brain, is:",
@@ -1039,7 +1060,10 @@
       "kn": "KN2",
       "kn_explanation": "This question focuses on the pharmacological treatment mechanisms for neurological disorders, fitting drug classifications and effects (KN2).",
       "difficulty": "medium",
-      "quality_comment": "Distractors include plausible neurological medications, challenging examinees’ knowledge of Parkinson’s treatment."
+      "quality_comment": "Distractors include plausible neurological medications, challenging examinees’ knowledge of Parkinson’s treatment.",
+      "lessonExcerpt": "**Medications:** - **Levodopa** (first-line treatment): Converts to dopamine in the brain; best for bradykinesia, may help rigidity and tremor - **Dopamine agonists**: Mimic dopamine at receptors; may delay progression and have fewer long-term side effects like dyskinesias",
+      "suggestedLesson": "1-neurological-endocrine-disorders",
+      "needsReview": false
     },
     {
       "stem": "What is the main difference between post-traumatic seizures (PTS) and post-traumatic epilepsy (PTE) following traumatic brain injury?",
@@ -1054,7 +1078,10 @@
       "kn": "KN1",
       "kn_explanation": "This question addresses neurological sequelae and prognosis following brain injury, fitting neurobiological disease understanding (KN1).",
       "difficulty": "hard",
-      "quality_comment": "Question requires specific knowledge of timing and classification of seizures post-TBI, good for discriminating advanced knowledge."
+      "quality_comment": "Question requires specific knowledge of timing and classification of seizures post-TBI, good for discriminating advanced knowledge.",
+      "lessonExcerpt": "**Provoked seizures** have a known cause (brain injury, infection, stroke, fever, alcohol withdrawal). **Unprovoked seizures** occur without an identifiable trigger. When unprovoked seizures recur, the diagnosis becomes **epilepsy**.",
+      "suggestedLesson": "1-neurological-endocrine-disorders",
+      "needsReview": false
     },
     {
       "stem": "Which of the following is a key risk factor for developing type 2 diabetes mellitus?",
@@ -1069,7 +1096,10 @@
       "kn": "KN1",
       "kn_explanation": "This question relates to endocrine system disorders and their neurobiological and physiological risk factors, consistent with KN1.",
       "difficulty": "easy",
-      "quality_comment": "Options contrast type 1 and type 2 diabetes features well, facilitating clear understanding of disease epidemiology."
+      "quality_comment": "Options contrast type 1 and type 2 diabetes features well, facilitating clear understanding of disease epidemiology.",
+      "lessonExcerpt": "**Type 1 diabetes**: Autoimmune disease destroying insulin-producing cells; genetic predisposition is the primary risk factor, can be triggered by viral infections",
+      "suggestedLesson": "1-neurological-endocrine-disorders",
+      "needsReview": false
     },
     {
       "stem": "A complex partial seizure (focal onset impaired awareness seizure) originating in the temporal lobe is most likely to include which of the following features?",
@@ -1084,7 +1114,10 @@
       "kn": "KN1",
       "kn_explanation": "This item evaluates knowledge of focal seizure semiology and neuroanatomical localization, key concepts in neurobehavioral disorders (KN1).",
       "difficulty": "medium",
-      "quality_comment": "Includes distinctive semiological features that differentiate temporal lobe seizures from other focal seizures."
+      "quality_comment": "Includes distinctive semiological features that differentiate temporal lobe seizures from other focal seizures.",
+      "lessonExcerpt": "**Temporal lobe** (most common focal type) | Aura with strange taste/smell, stomach rising sensation, intense fear, déjà vu or jamais vu; autonomic symptoms (sweating, dilated pupils, rapid heart rate); automatisms (lip-smacking, chewing, fidgeting); speech problems with impaired understanding",
+      "suggestedLesson": "1-neurological-endocrine-disorders",
+      "needsReview": false
     },
     {
       "stem": "Which of the following characterizes migraine headaches with aura?",
@@ -1099,7 +1132,10 @@
       "kn": "KN1",
       "kn_explanation": "This question addresses neurological symptomatology and neurochemical underpinnings of migraine headaches, relevant to KN1.",
       "difficulty": "easy",
-      "quality_comment": "Distractors are common headache misconceptions making the correct answer stand out for those familiar with migraine features."
+      "quality_comment": "Distractors are common headache misconceptions making the correct answer stand out for those familiar with migraine features.",
+      "lessonExcerpt": "**Migraine with aura** (classic migraine): Preceded by warning signs like visual disturbances",
+      "suggestedLesson": "1-neurological-endocrine-disorders",
+      "needsReview": false
     },
     {
       "stem": "Status epilepticus is considered a medical emergency defined primarily by:",
@@ -1114,7 +1150,10 @@
       "kn": "KN1",
       "kn_explanation": "The question covers clinical diagnostic criteria and neurobiological emergency management of seizure disorders (KN1).",
       "difficulty": "medium",
-      "quality_comment": "Clear and precise options with plausible seizure durations and types, improving reliability of candidate responses."
+      "quality_comment": "Clear and precise options with plausible seizure durations and types, improving reliability of candidate responses.",
+      "lessonExcerpt": "**Status epilepticus (SE)** is when a seizure continues for 5+ minutes or multiple seizures occur without regaining consciousness between them. This is a true emergency.",
+      "suggestedLesson": "1-neurological-endocrine-disorders",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best characterizes the role of electroencephalography (EEG) in neurological diagnosis?",
@@ -1129,7 +1168,10 @@
       "kn": "KN5",
       "kn_explanation": "This question focuses on the principle and clinical applications of EEG, a key neurodiagnostic tool covered under neurological diagnostic tests (KN5).",
       "difficulty": "medium",
-      "quality_comment": "The options contrast EEG’s function with other neurodiagnostic methods, providing a clear test of basic neurodiagnostic knowledge."
+      "quality_comment": "The options contrast EEG’s function with other neurodiagnostic methods, providing a clear test of basic neurodiagnostic knowledge.",
+      "lessonExcerpt": "**EEG** measures electrical impulses between neurons using small electrodes on the scalp. {{M}}It's like putting microphones on the outside of a concert hall to hear what's happening inside{{/M}}. You get information about groups of neurons near each electrode.",
+      "suggestedLesson": "1-neurological-endocrine-disorders",
+      "needsReview": false
     },
     {
       "stem": "Regarding neuroimaging techniques, which method is uniquely used to assess the structural integrity of white matter tracts by tracking water molecule diffusion?",
@@ -1144,7 +1186,10 @@
       "kn": "KN1",
       "kn_explanation": "This question is best aligned with KN1 because it tests Functional correlates and determinants of the neurobiological and genetic bases of behavior pertaining to perception, cognition, personality, and mood and affect in normal, acute and chronic neurobehavioral disease processes and disease, comorbidities.",
       "difficulty": "medium",
-      "quality_comment": "Options represent diverse neuroimaging types, making the correct identification of DTI a good measure of detailed knowledge."
+      "quality_comment": "Options represent diverse neuroimaging types, making the correct identification of DTI a good measure of detailed knowledge.",
+      "lessonExcerpt": "**DTI (diffusion tensor imaging)**: - MRI-based technique for examining white matter tracts (the brain's \"wiring\") - Detects abnormalities in how water molecules move along axons - Used for TBI, concussion, neurocognitive disorders, schizophrenia, autism, epilepsy, multiple sclerosis",
+      "suggestedLesson": "1-neurological-endocrine-disorders",
+      "needsReview": false
     },
     {
       "stem": "Which of the following neurotransmitter abnormalities is implicated in the non-motor symptoms of Parkinson’s disease such as depression and sleep disturbances?",
@@ -1159,7 +1204,10 @@
       "kn": "KN1",
       "kn_explanation": "This tests understanding of neurochemical contributions to Parkinson’s disease symptoms beyond dopamine, relevant to the biological bases of neurological diseases (KN1).",
       "difficulty": "medium",
-      "quality_comment": "Includes plausible neurotransmitter options, requiring integration of neurochemical and clinical symptom knowledge."
+      "quality_comment": "Includes plausible neurotransmitter options, requiring integration of neurochemical and clinical symptom knowledge.",
+      "lessonExcerpt": "The core problem is degeneration of dopamine-producing cells in the **substantia nigra**, which reduces dopamine in the basal ganglia. But it's not just about dopamine. Low levels of acetylcholine, norepinephrine, and excessive glutamate activity also play roles in various symptoms.",
+      "suggestedLesson": "1-neurological-endocrine-disorders",
+      "needsReview": false
     },
     {
       "stem": "What type of stroke is characterized by bleeding in the brain, often due to a ruptured blood vessel?",
@@ -1179,7 +1227,10 @@
       "lock_in_level": "easier",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "**Hemorrhagic strokes** happen when an artery ruptures and bleeds: - **Intracerebral hemorrhage**: Bleeding inside the brain tissue - **Subarachnoid hemorrhage**: Bleeding in the space around the brain",
+      "suggestedLesson": "1-neurological-endocrine-disorders",
+      "needsReview": false
     },
     {
       "stem": "Which of the following conditions is a temporary episode of neurological dysfunction caused by a brief interruption of blood flow to the brain, often considered a warning sign for future strokes?",
@@ -1199,7 +1250,10 @@
       "lock_in_level": "harder",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "There's also something called a **transient ischemic attack (TIA)**, which is like a warning shot. The blockage clears in less than five minutes, symptoms are temporary, but it's a serious sign that a major stroke could be coming. Always treat TIAs as medical emergencies.",
+      "suggestedLesson": "1-neurological-endocrine-disorders",
+      "needsReview": false
     }
   ]
 }

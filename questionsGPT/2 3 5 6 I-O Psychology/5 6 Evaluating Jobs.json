@@ -100,7 +100,7 @@
       "quality_comment": "Strong question requiring nuanced distinction between criterion contamination and halo effect, which are commonly confused concepts.",
       "suggestedLesson": "5-6-evaluating-jobs",
       "suggestedParagraph": "### The Gap Between Perfect and Practical Measurement",
-      "lessonExcerpt": "Criterion contamination means we're measuring things we shouldn't. This happens when ratings get polluted by irrelevant factors. If your supervisor's ratings are influenced by knowing you were hired through a prestigious fellowship program, or by your gender or ethnicity, or simply by whether they like you personally, that's contamination.",
+      "lessonExcerpt": "**Criterion contamination** occurs when the measure is influenced by factors unrelated to actual job performance. Common sources of contamination include:\n\n- Demographics: When a supervisor's ratings are influenced by an employee's gender, race, age, or appearance rather than actual performance\n- Knowledge of hiring scores: When a supervisor knows how well someone scored on pre-employment tests and lets that knowledge color performance ratings",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 2
@@ -121,7 +121,7 @@
       "quality_comment": "Well-constructed question that tests knowledge of FOR training as the preferred intervention for rating biases and distinguishes it from less effective bias awareness approaches.",
       "suggestedLesson": "5-6-evaluating-jobs",
       "suggestedParagraph": "## Fixing Rating Problems: Strategies That Actually Work",
-      "lessonExcerpt": "The better approach is frame-of-reference (FOR) training. This comprehensive training helps raters understand: Job performance is multidimensional... What the organization defines as effective versus ineffective performance... How to observe and categorize performance accurately... FOR training includes practice opportunities: raters watch performance examples, assign ratings, and receive feedback on their accuracy.",
+      "lessonExcerpt": "The superior approach is **frame-of-reference (FOR) training**, which includes:\n\n1. **Teaching the multidimensional nature of performance**",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 6
@@ -142,7 +142,7 @@
       "quality_comment": "Uses the lesson's own example scenario, making it a strong content-grounded question testing the distinction between criterion deficiency and contamination.",
       "suggestedLesson": "5-6-evaluating-jobs",
       "suggestedParagraph": "### The Gap Between Perfect and Practical Measurement",
-      "lessonExcerpt": "**Criterion deficiency** means we're missing important stuff. A job knowledge test for clinical psychologists covering only diagnosis and treatment but ignoring ethics, consultation skills, and cultural competence is deficient—it leaves out crucial aspects of actual performance.",
+      "lessonExcerpt": "**Criterion deficiency** occurs when our measure misses important aspects of performance.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 22
@@ -160,7 +160,10 @@
       "kn": "KN34",
       "kn_explanation": "This question targets assessment methods and their strengths and limitations in organizational settings, aligning well with organizational and personnel assessment (KN34).",
       "difficulty": "medium",
-      "quality_comment": "The question clearly contrasts key approaches within job analysis, and the distractors are plausible but distinct, testing nuanced understanding."
+      "quality_comment": "The question clearly contrasts key approaches within job analysis, and the distractors are plausible but distinct, testing nuanced understanding.",
+      "lessonExcerpt": "**Work-oriented job analysis** focuses on the actual tasks someone does.",
+      "suggestedLesson": "5-6-evaluating-jobs",
+      "needsReview": false
     },
     {
       "stem": "What is the primary focus of competency modeling in organizations?",
@@ -175,7 +178,10 @@
       "kn": "KN34",
       "kn_explanation": "This question addresses organizational assessment and personnel functions, specifically exploring competency modeling as part of assessment methods within groups and organizations (KN34).",
       "difficulty": "medium",
-      "quality_comment": "Options differentiate closely related concepts, requiring test-takers to discriminate between job analysis and competency modeling effectively."
+      "quality_comment": "Options differentiate closely related concepts, requiring test-takers to discriminate between job analysis and competency modeling effectively.",
+      "lessonExcerpt": "While job analysis examines individual positions, **competency modeling** takes a broader view. It identifies the core attributes needed across multiple jobs within an organization. Characteristics tied to the organization's values and strategic goals.",
+      "suggestedLesson": "5-6-evaluating-jobs",
+      "needsReview": false
     },
     {
       "stem": "Which job evaluation method involves assigning points to compensable factors such as skill and responsibility to determine job value?",
@@ -190,7 +196,10 @@
       "kn": "KN34",
       "kn_explanation": "This item relates to organizational assessment and job evaluation techniques within personnel assessment (KN34).",
       "difficulty": "medium",
-      "quality_comment": "The distractors are related organizational concepts, which enhances the question's discriminative power and relevance for the domain."
+      "quality_comment": "The distractors are related organizational concepts, which enhances the question's discriminative power and relevance for the domain.",
+      "lessonExcerpt": "The **point system** is a common evaluation method:\n1. Identify compensable factors (effort, skill, responsibility, working conditions)\n2. Assign points to each factor based on the job's requirements",
+      "suggestedLesson": "5-6-evaluating-jobs",
+      "needsReview": false
     },
     {
       "stem": "Which of the following is an advantage of using subjective performance appraisal measures over objective measures?",
@@ -205,7 +214,10 @@
       "kn": "KN34",
       "kn_explanation": "The question concerns evaluation of assessment methods and their limitations in organizational settings (KN34).",
       "difficulty": "easy",
-      "quality_comment": "Clear stem and plausible distractors make this a well-constructed question for testing comprehension of performance appraisal approaches."
+      "quality_comment": "Clear stem and plausible distractors make this a well-constructed question for testing comprehension of performance appraisal approaches.",
+      "lessonExcerpt": "**Subjective measures** involve ratings and judgments, typically from supervisors. They're the most common type of performance assessment because they can:\n- Assess aspects of performance that can't be measured objectively\n- Account for situational factors affecting performance",
+      "suggestedLesson": "5-6-evaluating-jobs",
+      "needsReview": false
     },
     {
       "stem": "The forced distribution method of performance appraisal is best described as:",
@@ -220,7 +232,10 @@
       "kn": "KN34",
       "kn_explanation": "This item evaluates knowledge of subjective rating scale techniques used in performance assessment within organizations (KN34).",
       "difficulty": "medium",
-      "quality_comment": "The answer and distractors clearly correspond to different appraisal methods, encouraging precise understanding of forced distribution advantages and limitations."
+      "quality_comment": "The answer and distractors clearly correspond to different appraisal methods, encouraging precise understanding of forced distribution advantages and limitations.",
+      "lessonExcerpt": "**Forced distribution method**: The rater must assign specific percentages of employees to predetermined categories.",
+      "suggestedLesson": "5-6-evaluating-jobs",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best exemplifies the criterion contamination problem in performance appraisal?",
@@ -235,7 +250,10 @@
       "kn": "KN34",
       "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
       "difficulty": "medium",
-      "quality_comment": "Distractors represent related but distinct issues, making this an effective item for assessing nuanced knowledge of criterion validity concepts."
+      "quality_comment": "Distractors represent related but distinct issues, making this an effective item for assessing nuanced knowledge of criterion validity concepts.",
+      "lessonExcerpt": "- Demographics: When a supervisor's ratings are influenced by an employee's gender, race, age, or appearance rather than actual performance",
+      "suggestedLesson": "5-6-evaluating-jobs",
+      "needsReview": false
     },
     {
       "stem": "Which rater bias is demonstrated when a supervisor gives all employees the same average rating regardless of their actual performance?",
@@ -250,7 +268,10 @@
       "kn": "KN34",
       "kn_explanation": "This question focuses on rater biases affecting subjective performance ratings, part of personnel and organizational assessment knowledge (KN34).",
       "difficulty": "easy",
-      "quality_comment": "The question clearly differentiates common rater biases with realistic distractors, making it appropriate for foundational knowledge testing."
+      "quality_comment": "The question clearly differentiates common rater biases with realistic distractors, making it appropriate for foundational knowledge testing.",
+      "lessonExcerpt": "**Central tendency bias**: The rater gives everyone average ratings.",
+      "suggestedLesson": "5-6-evaluating-jobs",
+      "needsReview": false
     },
     {
       "stem": "Behaviorally Anchored Rating Scales (BARS) differ from graphic rating scales primarily because:",
@@ -265,7 +286,10 @@
       "kn": "KN34",
       "kn_explanation": "This item tests knowledge of performance appraisal scale types, a key topic within organizational and personnel assessment (KN34).",
       "difficulty": "medium",
-      "quality_comment": "The options contrast key features of BARS versus other rating scales, supporting discrimination of item-level knowledge."
+      "quality_comment": "The options contrast key features of BARS versus other rating scales, supporting discrimination of item-level knowledge.",
+      "lessonExcerpt": "**Behaviorally Anchored Rating Scales (BARS)**: These improve on simple graphic scales by anchoring each scale point with specific behavioral descriptions.",
+      "suggestedLesson": "5-6-evaluating-jobs",
+      "needsReview": false
     },
     {
       "stem": "Which of the following rater training approaches aims to improve rating accuracy by teaching raters about multidimensional job performance and providing rating practice with feedback?",
@@ -280,7 +304,10 @@
       "kn": "KN34",
       "kn_explanation": "This question addresses methods to improve assessment accuracy and reduce biases, an important facet of organizational assessment (KN34).",
       "difficulty": "hard",
-      "quality_comment": "This question tests conceptual understanding of specific training methods to reduce rater errors, suitable for advanced preparation."
+      "quality_comment": "This question tests conceptual understanding of specific training methods to reduce rater errors, suitable for advanced preparation.",
+      "lessonExcerpt": "The superior approach is **frame-of-reference (FOR) training**, which includes:\n\n1. **Teaching the multidimensional nature of performance**: Helping raters understand that someone can be strong in some areas and weak in others, and that these dimensions should be evaluated independently",
+      "suggestedLesson": "5-6-evaluating-jobs",
+      "needsReview": false
     },
     {
       "stem": "A Position Analysis Questionnaire (PAQ) is most accurately described as:",
@@ -295,7 +322,10 @@
       "kn": "KN34",
       "kn_explanation": "This question focuses on assessment methods used for job and worker analysis within organizations (KN34).",
       "difficulty": "medium",
-      "quality_comment": "The question clearly distinguishes among various organizational instruments, improving test-taker discrimination."
+      "quality_comment": "The question clearly distinguishes among various organizational instruments, improving test-taker discrimination.",
+      "lessonExcerpt": "The **Position Analysis Questionnaire (PAQ)** is a widely-used worker-oriented tool that examines six categories:",
+      "suggestedLesson": "5-6-evaluating-jobs",
+      "needsReview": false
     },
     {
       "stem": "The contrast error in subjective performance ratings occurs when:",
@@ -310,7 +340,10 @@
       "kn": "KN34",
       "kn_explanation": "The question evaluates knowledge of common rater biases in subjective ratings within organizational assessments (KN34).",
       "difficulty": "medium",
-      "quality_comment": "This question uses a clear example of contrast error with plausible distractors to enhance discriminability."
+      "quality_comment": "This question uses a clear example of contrast error with plausible distractors to enhance discriminability.",
+      "lessonExcerpt": "**Contrast error** occurs when ratings of one employee are influenced by the performance of a previously evaluated employee rather than by absolute standards.",
+      "suggestedLesson": "5-6-evaluating-jobs",
+      "needsReview": false
     },
     {
       "stem": "Which performance appraisal method involves identifying exceptional positive and negative behaviors to assess employee performance?",
@@ -325,7 +358,10 @@
       "kn": "KN34",
       "kn_explanation": "This question highlights a specific job analysis and performance assessment method relevant to personnel assessment (KN34).",
       "difficulty": "medium",
-      "quality_comment": "Options contrast different appraisal methods well, aiding in testing recognition of the CIT’s unique characteristics."
+      "quality_comment": "Options contrast different appraisal methods well, aiding in testing recognition of the CIT’s unique characteristics.",
+      "lessonExcerpt": "**Critical Incident Technique (CIT)**: This method involves collecting specific examples of behaviors that represent exceptionally good or exceptionally poor performance.",
+      "suggestedLesson": "5-6-evaluating-jobs",
+      "needsReview": false
     },
     {
       "stem": "Which of the following is a key benefit of using electronic performance monitoring as part of a job analysis?",
@@ -340,7 +376,10 @@
       "kn": "KN34",
       "kn_explanation": "This question fits with organizational assessment methods, emphasizing sources of job analysis data including technology-based approaches relevant to job and performance assessment (KN34).",
       "difficulty": "medium",
-      "quality_comment": "The question effectively probes understanding of modern data collection methods for job analysis with clearly distinct distractors."
+      "quality_comment": "The question effectively probes understanding of modern data collection methods for job analysis with clearly distinct distractors.",
+      "lessonExcerpt": "**Electronic performance monitoring**: Digital systems track activities, though this raises privacy concerns and may not capture the full scope of performance.",
+      "suggestedLesson": "5-6-evaluating-jobs",
+      "needsReview": false
     },
     {
       "stem": "When developing a behaviorally anchored rating scale (BARS), which group is typically involved in identifying performance dimensions and defining behavioral anchors?",
@@ -355,7 +394,10 @@
       "kn": "KN34",
       "kn_explanation": "This item highlights the collaborative process used in developing performance appraisal tools, a component of organizational assessment and job performance measurement (KN34).",
       "difficulty": "medium",
-      "quality_comment": "The question targets the procedural context of BARS development and contrasts typical vs. inappropriate contributors, enhancing content validity."
+      "quality_comment": "The question targets the procedural context of BARS development and contrasts typical vs. inappropriate contributors, enhancing content validity.",
+      "lessonExcerpt": "Development involves having job experts identify essential performance dimensions and describe specific behaviors representing excellent, average, and poor performance for each dimension.",
+      "suggestedLesson": "5-6-evaluating-jobs",
+      "needsReview": false
     },
     {
       "stem": "Which of the following is the primary focus of a task-oriented job analysis?",
@@ -375,7 +417,10 @@
       "lock_in_level": "easier",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "The most common work-oriented method is **task analysis**. Here's how it works: employees and supervisors create a comprehensive list of job tasks, then subject matter experts rate each task on how frequently it occurs and how important it is.",
+      "suggestedLesson": "5-6-evaluating-jobs",
+      "needsReview": false
     },
     {
       "stem": "In the context of performance assessment, which approach emphasizes the evaluation of job tasks to inform performance criteria?",
@@ -395,7 +440,10 @@
       "lock_in_level": "harder",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "The most common work-oriented method is **task analysis**. Here's how it works: employees and supervisors create a comprehensive list of job tasks, then subject matter experts rate each task on how frequently it occurs and how important it is.",
+      "suggestedLesson": "5-6-evaluating-jobs",
+      "needsReview": false
     }
   ]
 }

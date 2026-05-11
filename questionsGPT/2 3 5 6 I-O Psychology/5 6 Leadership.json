@@ -55,7 +55,10 @@
       "kn": "KN46",
       "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
       "difficulty": "medium",
-      "quality_comment": "The question is clear and targets knowledge of personality traits in leadership, with plausible distractors that could challenge test-takers."
+      "quality_comment": "The question is clear and targets knowledge of personality traits in leadership, with plausible distractors that could challenge test-takers.",
+      "lessonExcerpt": "| Extraversion | .31 |\n| Conscientiousness | .28 |",
+      "suggestedLesson": "5-6-leadership",
+      "needsReview": false
     },
     {
       "stem": "Which of the following descriptions best aligns with a leader high in 'initiating structure' according to Ohio State studies on leader behavior?",
@@ -70,7 +73,10 @@
       "kn": "KN46",
       "kn_explanation": "The question tests knowledge of leadership behavior dimensions and their impact on performance, fitting within treatment and intervention models (KN46).",
       "difficulty": "easy",
-      "quality_comment": "The question is straightforward with clearly distinct options, ensuring comprehension of key leadership behavior constructs."
+      "quality_comment": "The question is straightforward with clearly distinct options, ensuring comprehension of key leadership behavior constructs.",
+      "lessonExcerpt": "**Initiating Structure**: Task-oriented behavior focused on getting things done, setting goals, organizing work, and achieving performance objectives.",
+      "suggestedLesson": "5-6-leadership",
+      "needsReview": false
     },
     {
       "stem": "Which leadership style is most characteristic of female leaders compared to male leaders, based on meta-analyses by Eagly and colleagues?",
@@ -85,7 +91,10 @@
       "kn": "KN46",
       "kn_explanation": "This question relates to differences in leadership styles by gender, which informs intervention strategies and supervision approaches (KN46).",
       "difficulty": "medium",
-      "quality_comment": "Options reflect nuanced leadership distinctions by gender; distractors are scientifically grounded yet distinguishable."
+      "quality_comment": "Options reflect nuanced leadership distinctions by gender; distractors are scientifically grounded yet distinguishable.",
+      "lessonExcerpt": "**Female leaders are more likely to:**\n- Use transformational leadership approaches (inspiring and developing people)\n- Provide contingency rewards (a transactional element)",
+      "suggestedLesson": "5-6-leadership",
+      "needsReview": false
     },
     {
       "stem": "According to French and Raven’s bases of social power, which type of power is most likely to foster commitment rather than mere compliance or resistance?",
@@ -100,7 +109,10 @@
       "kn": "KN46",
       "kn_explanation": "Understanding leadership power bases and their effects on subordinate motivation is important for intervention strategies covered in KN46.",
       "difficulty": "medium",
-      "quality_comment": "Distractors are all plausible types of power; correct answer requires specific recall of power outcomes."
+      "quality_comment": "Distractors are all plausible types of power; correct answer requires specific recall of power outcomes.",
+      "lessonExcerpt": "| Expert Power | Knowledge, skills, expertise | Commitment |\n| Referent Power | Respect, admiration, identification | Commitment |",
+      "suggestedLesson": "5-6-leadership",
+      "needsReview": false
     },
     {
       "stem": "In Fiedler’s Contingency Model, what does a low Least Preferred Coworker (LPC) score indicate about a leader’s style?",
@@ -115,7 +127,10 @@
       "kn": "KN46",
       "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
       "difficulty": "hard",
-      "quality_comment": "This question requires understanding of a specific and less commonly known leadership assessment tool, raising its difficulty appropriately."
+      "quality_comment": "This question requires understanding of a specific and less commonly known leadership assessment tool, raising its difficulty appropriately.",
+      "lessonExcerpt": "- **Low LPC leaders** (task-oriented): Rate their least preferred coworker negatively because they focus on that person's poor task performance",
+      "suggestedLesson": "5-6-leadership",
+      "needsReview": false
     },
     {
       "stem": "According to Hersey and Blanchard’s Situational Leadership Theory, what leadership style is best for subordinates who have high job ability but low willingness?",
@@ -130,7 +145,10 @@
       "kn": "KN46",
       "kn_explanation": "This question covers leadership style adaptation based on subordinate characteristics, which aligns with treatment and intervention approaches (KN46).",
       "difficulty": "medium",
-      "quality_comment": "Distractors are balanced and reflect the core four styles; clinical application of theory is effectively tested."
+      "quality_comment": "Distractors are balanced and reflect the core four styles; clinical application of theory is effectively tested.",
+      "lessonExcerpt": "| Low willingness, High ability | Participating | Low task, High relationship |",
+      "suggestedLesson": "5-6-leadership",
+      "needsReview": false
     },
     {
       "stem": "House's Path-Goal Theory suggests which leadership style is most appropriate for subordinates who have a high need for affiliation and are performing mundane tasks with low job satisfaction?",
@@ -145,7 +163,10 @@
       "kn": "KN46",
       "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
       "difficulty": "medium",
-      "quality_comment": "Clear and focused stem with plausible distractors, requiring precise application of the theory."
+      "quality_comment": "Clear and focused stem with plausible distractors, requiring precise application of the theory.",
+      "lessonExcerpt": "- Supportive style works best when: Subordinates have high affiliation needs and low satisfaction AND the task is mundane and unchallenging",
+      "suggestedLesson": "5-6-leadership",
+      "needsReview": false
     },
     {
       "stem": "The Vroom-Yetton-Jago decision model helps leaders determine:",
@@ -160,7 +181,10 @@
       "kn": "KN46",
       "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
       "difficulty": "medium",
-      "quality_comment": "Distractors are credible and somewhat related to leadership theory, adequately challenging knowledge without being misleading."
+      "quality_comment": "Distractors are credible and somewhat related to leadership theory, adequately challenging knowledge without being misleading.",
+      "lessonExcerpt": "Based on these ratings, the model recommends one of five strategies ranging from highly autocratic (decide alone) to highly democratic (let the group decide).",
+      "suggestedLesson": "5-6-leadership",
+      "needsReview": false
     },
     {
       "stem": "In Leader-Member Exchange (LMX) theory, subordinates classified as 'in-group' typically experience:",
@@ -175,7 +199,10 @@
       "kn": "KN46",
       "kn_explanation": "This question involves understanding leader-subordinate interactions and their implications for workplace outcomes, fitting into treatment and intervention knowledge (KN46).",
       "difficulty": "medium",
-      "quality_comment": "The response options reflect contrasting out-group and in-group experiences well, making this an effective discrimination item."
+      "quality_comment": "The response options reflect contrasting out-group and in-group experiences well, making this an effective discrimination item.",
+      "lessonExcerpt": "**In-group members** (perceived as competent, trustworthy, willing to take responsibility):\n- Receive more attention and support\n- Participate in decision-making\n- Get interesting, challenging assignments\n- Show higher job satisfaction, performance, commitment, and organizational citizenship",
+      "suggestedLesson": "5-6-leadership",
+      "needsReview": false
     },
     {
       "stem": "Which characteristic is NOT a defining feature of transformational leadership according to Bass (1997)?",
@@ -190,7 +217,10 @@
       "kn": "KN46",
       "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
       "difficulty": "medium",
-      "quality_comment": "The question clearly differentiates related constructs; distractors reflect both leadership styles to test nuanced understanding."
+      "quality_comment": "The question clearly differentiates related constructs; distractors reflect both leadership styles to test nuanced understanding.",
+      "lessonExcerpt": "Transformational leadership elevates both leaders and followers to higher levels of ethics, morality, and motivation (Bass, 1997; Bass & Steidlmeier, 1999). It has four components.",
+      "suggestedLesson": "5-6-leadership",
+      "needsReview": false
     },
     {
       "stem": "Management-by-exception in transactional leadership is characterized by:",
@@ -205,7 +235,10 @@
       "kn": "KN46",
       "kn_explanation": "Understanding leadership interventions and their mechanisms is central to treatment and supervision in leadership contexts (KN46).",
       "difficulty": "medium",
-      "quality_comment": "The distractors are all plausible leadership-related behaviors, but only one accurately describes management-by-exception."
+      "quality_comment": "The distractors are all plausible leadership-related behaviors, but only one accurately describes management-by-exception.",
+      "lessonExcerpt": "**Management-by-Exception (MBE)**: Intervening to correct mistakes or rule violations\n- **Active MBE**: Closely monitoring and taking immediate corrective action to prevent problems\n- **Passive MBE**: Not monitoring closely; only acting after serious problems occur",
+      "suggestedLesson": "5-6-leadership",
+      "needsReview": false
     },
     {
       "stem": "Which of the following leadership traits has been found to predict leader effectiveness better when the leader’s stress level is low and the leader uses a directive style?",
@@ -220,7 +253,10 @@
       "kn": "KN46",
       "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
       "difficulty": "medium",
-      "quality_comment": "This question requires integration of trait and situational influences, providing moderate difficulty and differentiation."
+      "quality_comment": "This question requires integration of trait and situational influences, providing moderate difficulty and differentiation.",
+      "lessonExcerpt": "Here's what's interesting: Intelligence predicts effectiveness better when stress is low and when leaders use a directive (telling people what to do) rather than participative (involving people in decisions) style.",
+      "suggestedLesson": "5-6-leadership",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best describes the role of leader power bases in eliciting subordinate responses, according to Yukl (2002)?",
@@ -235,7 +271,10 @@
       "kn": "KN46",
       "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
       "difficulty": "medium",
-      "quality_comment": "Choices are nuanced and related; the correct answer requires precise knowledge of power bases and influence outcomes."
+      "quality_comment": "Choices are nuanced and related; the correct answer requires precise knowledge of power bases and influence outcomes.",
+      "lessonExcerpt": "| Reward Power | Control over pay, promotions, recognition | Compliance |\n| Coercive Power | Control over punishments, penalties | Resistance |\n| Legitimate Power | Formal position, title, role authority | Compliance |\n| Expert Power | Knowledge, skills, expertise | Commitment |\n| Referent Power | Respect, admiration, identification | Commitment |",
+      "suggestedLesson": "5-6-leadership",
+      "needsReview": false
     },
     {
       "stem": "In Fiedler’s model, which situational factor would NOT contribute to a very favorable situation for a leader?",
@@ -250,47 +289,10 @@
       "kn": "KN46",
       "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
       "difficulty": "medium",
-      "quality_comment": "Clear distractors focus on key situational elements; discriminates well between knowledge levels about leadership contingencies."
-    },
-    {
-      "stem": "Which two Big Five personality traits are most commonly associated with successful team collaboration in organizational settings?",
-      "options": [
-        "Extraversion and agreeableness",
-        "Neuroticism and openness",
-        "Conscientiousness and neuroticism",
-        "Openness and extraversion"
-      ],
-      "answer": "Extraversion and agreeableness",
-      "explanation": "1. \"Extraversion and agreeableness\" is the correct answer because these two Big Five personality traits have been shown to correlate positively with leader effectiveness, which is essential for successful team collaboration in organizational settings. Extraversion reflects sociability and assertiveness, promoting effective communication and relationship-building within teams. Agreeableness enhances cooperation and trust, fostering a supportive team environment that facilitates collaboration.\n\n2. The option \"Neuroticism and openness\" is incorrect because neuroticism typically relates to emotional instability, which can hinder effective collaboration, while openness, although valuable, does not have a direct correlation with team collaboration as strongly as extraversion and agreeableness. \n\nThe option \"Conscientiousness and neuroticism\" is wrong because, while conscientiousness is associated with reliability and goal achievement, neuroticism can negatively impact team dynamics and collaboration due to its association with anxiety and emotional instability. \n\nLastly, \"Openness and extraversion\" is incorrect because, although extraversion is beneficial for team collaboration, openness does not directly correlate with team success in the same way agreeableness does, as it primarily relates to creativity and willingness to consider new ideas rather than interpersonal collaboration.",
-      "difficulty": "easy",
-      "kn": "KN46",
-      "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
-      "quality_comment": "This question effectively assesses understanding of personality traits in a different but relevant context.",
-      "is_lock_in_drill": true,
-      "lock_in_level": "easier",
-      "tags": [
-        "lock_in_drill"
-      ]
-    },
-    {
-      "stem": "In the context of transformational leadership, which Big Five personality traits have been found to predict a leader's ability to inspire and motivate followers?",
-      "options": [
-        "Extraversion and openness",
-        "Conscientiousness and agreeableness",
-        "Neuroticism and extraversion",
-        "Agreeableness and conscientiousness"
-      ],
-      "answer": "Extraversion and openness",
-      "explanation": "1. \"Extraversion and openness\" is the correct answer because these traits are associated with transformational leadership, which emphasizes the ability to inspire and motivate followers. Extraversion, characterized by sociability and assertiveness, facilitates a leader's charisma and ability to engage with others, while openness to experience fosters creativity and adaptability, both crucial for effective transformational leadership.\n\n2. \n- **Conscientiousness and agreeableness**: While conscientiousness relates to dependability and organization, and agreeableness involves being cooperative and compassionate, neither trait specifically predicts a leader's ability to inspire and motivate followers in the context of transformational leadership.\n  \n- **Neuroticism and extraversion**: Neuroticism, which involves emotional instability and anxiety, typically does not correlate positively with effective leadership; thus, it does not predict a leader's ability to inspire, even though extraversion is a relevant trait.\n\n- **Agreeableness and conscientiousness**: Similar to the first incorrect option, although these traits contribute to a leader’s interpersonal relationships and reliability, they do not directly relate to the characteristics needed for inspiring and motivating followers within transformational leadership.",
-      "difficulty": "hard",
-      "kn": "KN46",
-      "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
-      "quality_comment": "This question challenges the test-taker to apply knowledge of personality traits to a specific leadership style, enhancing critical thinking.",
-      "is_lock_in_drill": true,
-      "lock_in_level": "harder",
-      "tags": [
-        "lock_in_drill"
-      ]
+      "quality_comment": "Clear distractors focus on key situational elements; discriminates well between knowledge levels about leadership contingencies.",
+      "lessonExcerpt": "Three factors determine how much control a leader has:\n1. Leader-member relations (good or poor)\n2. Task structure (structured or unstructured)  \n3. Position power (strong or weak)",
+      "suggestedLesson": "5-6-leadership",
+      "needsReview": false
     }
   ]
 }

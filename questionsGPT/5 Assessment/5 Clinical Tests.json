@@ -1,69 +1,6 @@
 {
   "questions": [
     {
-      "stem": "In behavior analysis, what is the primary function of interval recording?",
-      "options": [
-        "To measure the frequency of a behavior over a set period.",
-        "To assess the duration of a specific behavior.",
-        "To determine the latency of a behavior before it occurs.",
-        "To record whether a behavior occurs within specified time intervals."
-      ],
-      "answer": "To record whether a behavior occurs within specified time intervals.",
-      "explanation": "Interval recording focuses on whether a behavior occurs during predetermined intervals, making it useful for tracking behaviors that may not happen frequently. The other options describe different measurement methods.",
-      "kn": "KN30",
-      "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
-      "difficulty": "medium",
-      "quality_comment": "The question accurately tests knowledge of interval recording in behavior analysis.",
-      "suggestedLesson": "5-clinical-tests",
-      "suggestedParagraph": "## Use of Interval Recording in Behavior Analysis",
-      "lessonExcerpt": "Interval recording is used to record whether a behavior occurs within specified time intervals.",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 6
-    },
-    {
-      "stem": "Which of the following symptoms is NOT typically associated with narcolepsy?",
-      "options": [
-        "Excessive daytime sleepiness",
-        "Cataplexy",
-        "Sleep paralysis",
-        "Chronic insomnia"
-      ],
-      "answer": "Chronic insomnia",
-      "explanation": "Chronic insomnia is not a symptom of narcolepsy; rather, narcolepsy is characterized by excessive daytime sleepiness, cataplexy (sudden loss of muscle tone), and sleep paralysis. The other options are directly related to narcolepsy symptoms.",
-      "kn": "KN30",
-      "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively distinguishes between narcolepsy symptoms and unrelated conditions.",
-      "suggestedLesson": "5-clinical-tests",
-      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
-      "lessonExcerpt": "The symptoms of narcolepsy include excessive daytime sleepiness, cataplexy, and sleep paralysis.",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 1
-    },
-    {
-      "stem": "Which demographic factor has been shown to correlate with increased suicide risk?",
-      "options": [
-        "Higher socioeconomic status",
-        "Marital status",
-        "Age",
-        "Educational attainment"
-      ],
-      "answer": "Age",
-      "explanation": "Research indicates that age is a significant demographic factor correlated with suicide risk, particularly among older adults. The other options do not consistently show a direct correlation with increased suicide risk.",
-      "kn": "KN38",
-      "kn_explanation": "This question is best aligned with KN38 because it tests Constructs of epidemiology and base rates of psychological and behavioral disorders.",
-      "difficulty": "medium",
-      "quality_comment": "The question is relevant and tests knowledge of demographic factors related to suicide risk.",
-      "suggestedLesson": "5-clinical-tests",
-      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
-      "lessonExcerpt": "Age is a demographic factor that correlates with increased suicide risk.",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 5
-    },
-    {
       "stem": "Which of the following personality disorders is characterized by a pervasive pattern of disregard for the rights of others?",
       "options": [
         "Borderline Personality Disorder",
@@ -77,54 +14,12 @@
       "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
       "difficulty": "medium",
       "quality_comment": "The question effectively tests knowledge of personality disorder characteristics.",
-      "suggestedLesson": "5-clinical-tests",
+      "suggestedLesson": "5-eating-sleep-elimination",
       "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
-      "lessonExcerpt": "Antisocial Personality Disorder is characterized by a pervasive pattern of disregard for the rights of others.",
+      "lessonExcerpt": "**Diagnosis Requires ONE of These:**\n\n- Episodes of cataplexy (loss of muscle tone)\n- Hypocretin deficiency\n- REM sleep latency of 15 minutes or less on polysomnography",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 8
-    },
-    {
-      "stem": "Which of the following is a primary advantage of behavior observation methods in behavioral assessment?",
-      "options": [
-        "They provide a comprehensive personality profile.",
-        "They capture real-time behavior in natural settings.",
-        "They rely solely on self-reported data.",
-        "They are less time-consuming than other methods."
-      ],
-      "answer": "They capture real-time behavior in natural settings.",
-      "explanation": "The correct answer is 'They capture real-time behavior in natural settings.' This advantage allows for a more accurate assessment of behavior as it occurs in the individual's environment. The other options are incorrect as they either misrepresent the nature of behavior observation methods or do not highlight their primary strengths.",
-      "kn": "KN30",
-      "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
-      "difficulty": "medium",
-      "quality_comment": "The question is clear and assesses knowledge of behavioral assessment methods effectively.",
-      "suggestedLesson": "5-clinical-tests",
-      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
-      "lessonExcerpt": "The lesson does not specifically address behavior observation methods, indicating a need for review.",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 12
-    },
-    {
-      "stem": "Which of the following criteria is essential for diagnosing bipolar I disorder according to the DSM-5?",
-      "options": [
-        "Presence of at least one major depressive episode",
-        "At least one manic episode",
-        "Presence of hypomanic episodes",
-        "A history of psychotic episodes"
-      ],
-      "answer": "At least one manic episode",
-      "explanation": "The correct answer is 'At least one manic episode' because the DSM-5 specifies that the diagnosis of bipolar I disorder requires at least one manic episode. The other options are incorrect as they do not represent the necessary criteria for this diagnosis.",
-      "kn": "KN36",
-      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
-      "difficulty": "hard",
-      "quality_comment": "The question accurately tests knowledge of bipolar I disorder diagnostic criteria.",
-      "suggestedLesson": "5-clinical-tests",
-      "suggestedParagraph": "## Why Clinical Tests Matter for Your EPPP Success",
-      "lessonExcerpt": "The lesson does not specifically cover bipolar I disorder criteria, indicating a need for review.",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 13
     },
     {
       "stem": "What is a common comorbidity associated with Tourette's disorder?",
@@ -140,33 +35,12 @@
       "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
       "difficulty": "medium",
       "quality_comment": "The question effectively assesses knowledge of comorbid conditions related to Tourette's disorder.",
-      "suggestedLesson": "5-clinical-tests",
+      "suggestedLesson": "5-personality",
       "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
       "lessonExcerpt": "The lesson does not specifically address Tourette's disorder comorbidities, indicating a need for review.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 14
-    },
-    {
-      "stem": "Research indicates that which gender is more likely to experience major depressive disorder?",
-      "options": [
-        "Males",
-        "Females",
-        "Both genders equally",
-        "No significant difference"
-      ],
-      "answer": "Females",
-      "explanation": "The correct answer is 'Females' as research consistently shows that females are more likely to experience major depressive disorder compared to males. The other options are incorrect as they do not reflect the established findings in depression epidemiology.",
-      "kn": "KN38",
-      "kn_explanation": "This question is best aligned with KN38 because it tests Constructs of epidemiology and base rates of psychological and behavioral disorders.",
-      "difficulty": "medium",
-      "quality_comment": "The question is straightforward and tests knowledge of gender differences in depression.",
-      "suggestedLesson": "5-clinical-tests",
-      "suggestedParagraph": "## Why Clinical Tests Matter for Your EPPP Success",
-      "lessonExcerpt": "The lesson does not specifically cover gender differences in major depressive disorder, indicating a need for review.",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 15
     },
     {
       "stem": "Which method is most effective for optimizing incremental validity in selection processes?",
@@ -182,33 +56,12 @@
       "kn_explanation": "This question is best aligned with KN37 because it tests Factors influencing evidence-based interpretation of data and decision-making (e.g., base rates, group differences, cultural biases and differences, heuristics).",
       "difficulty": "hard",
       "quality_comment": "The question is well-structured and assesses knowledge of selection methods effectively.",
-      "suggestedLesson": "5-clinical-tests",
+      "suggestedLesson": "5-mood",
       "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
-      "lessonExcerpt": "The lesson does not specifically address optimizing incremental validity, indicating a need for review.",
+      "lessonExcerpt": "**Incremental validity** asks: Does this new predictor improve prediction accuracy beyond what we already have?",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 16
-    },
-    {
-      "stem": "What is the phenomenon of diagnostic overshadowing primarily concerned with?",
-      "options": [
-        "Overlooking a primary diagnosis due to a secondary condition",
-        "Misdiagnosing a condition due to bias",
-        "Focusing on one diagnosis while ignoring others",
-        "The impact of cultural factors on diagnosis"
-      ],
-      "answer": "Overlooking a primary diagnosis due to a secondary condition",
-      "explanation": "The correct answer is 'Overlooking a primary diagnosis due to a secondary condition' as diagnostic overshadowing occurs when a clinician focuses on a more apparent condition, potentially missing other significant diagnoses. The other options do not accurately describe the primary concern of this phenomenon.",
-      "kn": "KN33",
-      "kn_explanation": "This question is best aligned with KN33 because it tests Issues of differential diagnosis and integration of non-psychological information into psychological assessment.",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively tests knowledge of diagnostic overshadowing.",
-      "suggestedLesson": "5-clinical-tests",
-      "suggestedParagraph": "## Why Clinical Tests Matter for Your EPPP Success",
-      "lessonExcerpt": "The lesson does not specifically cover diagnostic overshadowing, indicating a need for review.",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 17
     },
     {
       "stem": "What is the reported prevalence of obsessive-compulsive disorder (OCD) in girls compared to boys?",
@@ -224,7 +77,7 @@
       "kn_explanation": "This question is best aligned with KN38 because it tests Constructs of epidemiology and base rates of psychological and behavioral disorders.",
       "difficulty": "medium",
       "quality_comment": "The question is clear and effectively assesses knowledge of OCD prevalence.",
-      "suggestedLesson": "5-clinical-tests",
+      "suggestedLesson": "5-neurodevelopmental",
       "suggestedParagraph": "## Why Clinical Tests Matter for Your EPPP Success",
       "lessonExcerpt": "The lesson does not specifically cover OCD prevalence in girls, indicating a need for review.",
       "needsReview": false,
@@ -245,9 +98,9 @@
       "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
       "difficulty": "medium",
       "quality_comment": "The question effectively tests knowledge of the halo effect and its implications.",
-      "suggestedLesson": "5-clinical-tests",
+      "suggestedLesson": "5-mood",
       "suggestedParagraph": "## Why Clinical Tests Matter for Your EPPP Success",
-      "lessonExcerpt": "The lesson does not specifically cover the halo effect in performance ratings, indicating a need for review.",
+      "lessonExcerpt": "The **halo error** (also called halo effect or halo bias) occurs when a rater's impression of one performance dimension bleeds over into ratings of unrelated dimensions.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 20
@@ -266,33 +119,12 @@
       "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
       "difficulty": "medium",
       "quality_comment": "The question effectively assesses knowledge of autism characteristics.",
-      "suggestedLesson": "5-clinical-tests",
+      "suggestedLesson": "5-can-tests-predict",
       "suggestedParagraph": "## Why Clinical Tests Matter for Your EPPP Success",
-      "lessonExcerpt": "Individuals with autism spectrum disorder often experience challenges in social interactions and communication.",
+      "lessonExcerpt": "**Incremental validity** asks: Does this new predictor improve prediction accuracy beyond what we already have?",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 21
-    },
-    {
-      "stem": "Which of the following best differentiates bipolar I disorder from schizoaffective disorder?",
-      "options": [
-        "A. Presence of hallucinations in bipolar I disorder",
-        "B. Duration of mood episodes in schizoaffective disorder",
-        "C. Presence of mood episodes in schizoaffective disorder",
-        "D. Severity of depressive episodes in bipolar I disorder"
-      ],
-      "answer": "C. Presence of mood episodes in schizoaffective disorder",
-      "explanation": "Option C is correct because schizoaffective disorder is characterized by the presence of mood episodes alongside psychotic symptoms, which is a key differentiator from bipolar I disorder. Option A is incorrect as hallucinations can occur in both disorders. Option B is misleading; the duration of mood episodes is not a distinguishing factor. Option D does not accurately differentiate the two disorders.",
-      "kn": "KN36",
-      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively assesses knowledge of mood disorder differentiation.",
-      "suggestedLesson": "5-clinical-tests",
-      "suggestedParagraph": "## Why Clinical Tests Matter for Your EPPP Success",
-      "lessonExcerpt": "Schizoaffective disorder is characterized by the presence of mood episodes alongside psychotic symptoms.",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 25
     },
     {
       "stem": "What does the Kappa coefficient measure in the context of psychometric assessments?",
@@ -308,9 +140,9 @@
       "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
       "difficulty": "medium",
       "quality_comment": "The question is clear and tests knowledge of psychometric concepts.",
-      "suggestedLesson": "5-clinical-tests",
+      "suggestedLesson": "5-anxiety-and-ocd",
       "suggestedParagraph": "## Why Clinical Tests Matter for Your EPPP Success",
-      "lessonExcerpt": "The Kappa coefficient specifically measures the level of agreement between raters beyond chance.",
+      "lessonExcerpt": "**Cohen's Kappa:** A more sophisticated measure that corrects for chance agreement. It's used when two raters are assigning ratings on a nominal scale",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 27
@@ -329,9 +161,9 @@
       "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
       "difficulty": "medium",
       "quality_comment": "The question accurately assesses knowledge of schizophrenia symptoms.",
-      "suggestedLesson": "5-clinical-tests",
+      "suggestedLesson": "5-6-evaluating-jobs",
       "suggestedParagraph": "## Why Clinical Tests Matter for Your EPPP Success",
-      "lessonExcerpt": "Auditory hallucinations are the most common type reported by individuals with schizophrenia.",
+      "lessonExcerpt": "The **halo error** (also called halo effect or halo bias) occurs when a rater's impression of one performance dimension bleeds over into ratings of unrelated dimensions.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 28
@@ -350,7 +182,7 @@
       "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
       "difficulty": "medium",
       "quality_comment": "The question is relevant and tests knowledge of impulse control disorders.",
-      "suggestedLesson": "5-clinical-tests",
+      "suggestedLesson": "5-neurodevelopmental",
       "suggestedParagraph": "## Why Clinical Tests Matter for Your EPPP Success",
       "lessonExcerpt": "Intermittent Explosive Disorder is characterized by sudden episodes of aggressive outbursts.",
       "needsReview": false,
@@ -371,7 +203,7 @@
       "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
       "difficulty": "medium",
       "quality_comment": "The question effectively assesses knowledge of strengths in children with autism.",
-      "suggestedLesson": "5-clinical-tests",
+      "suggestedLesson": "5-psychosis",
       "suggestedParagraph": "## Why Clinical Tests Matter for Your EPPP Success",
       "lessonExcerpt": "Children with autism spectrum disorder often exhibit an intense focus on specific interests.",
       "needsReview": false,
@@ -392,9 +224,9 @@
       "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
       "difficulty": "medium",
       "quality_comment": "The question is clear and directly assesses knowledge of anxiety disorders.",
-      "suggestedLesson": "5-clinical-tests",
+      "suggestedLesson": "5-items-and-reliability",
       "suggestedParagraph": "## Why Clinical Tests Matter for Your EPPP Success",
-      "lessonExcerpt": "These tests help you determine whether they're dealing with depression, a traumatic brain injury, or early dementia.",
+      "lessonExcerpt": "**Cohen's Kappa:** A more sophisticated measure that corrects for chance agreement. It's used when two raters are assigning ratings on a nominal scale",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 2
@@ -413,7 +245,7 @@
       "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
       "difficulty": "hard",
       "quality_comment": "The question is well-structured and tests specific knowledge of personality disorder symptoms.",
-      "suggestedLesson": "5-clinical-tests",
+      "suggestedLesson": "5-psychosis",
       "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
       "lessonExcerpt": "Schizotypal personality disorder is characterized by odd beliefs or magical thinking.",
       "needsReview": false,
@@ -434,9 +266,9 @@
       "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
       "difficulty": "medium",
       "quality_comment": "The question effectively tests understanding of a specific concept in assessment validity.",
-      "suggestedLesson": "5-clinical-tests",
+      "suggestedLesson": "5-acting-out",
       "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
-      "lessonExcerpt": "Criterion contamination occurs when the predictor measure influences the criterion measure.",
+      "lessonExcerpt": "**Criterion contamination** occurs when the measure is influenced by factors unrelated to actual job performance.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 14
@@ -455,7 +287,7 @@
       "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
       "difficulty": "medium",
       "quality_comment": "The question is relevant and tests knowledge of predictors of job performance.",
-      "suggestedLesson": "5-clinical-tests",
+      "suggestedLesson": "5-neurodevelopmental",
       "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
       "lessonExcerpt": "Ability tests are strong predictors of job performance.",
       "needsReview": false,
@@ -476,7 +308,7 @@
       "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
       "difficulty": "medium",
       "quality_comment": "The question is clear and effectively assesses knowledge of test validity.",
-      "suggestedLesson": "5-clinical-tests",
+      "suggestedLesson": "5-what-tests-measure",
       "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
       "lessonExcerpt": "Validity refers to the degree to which a test measures what it claims to measure.",
       "needsReview": false,
@@ -497,7 +329,7 @@
       "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
       "difficulty": "hard",
       "quality_comment": "The question is well-constructed and tests important knowledge about suicide risk assessment.",
-      "suggestedLesson": "5-clinical-tests",
+      "suggestedLesson": "5-personality",
       "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
       "lessonExcerpt": "Previous suicide attempts are one of the strongest predictors of future suicide risk.",
       "needsReview": false,
@@ -518,9 +350,9 @@
       "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
       "difficulty": "hard",
       "quality_comment": "The question effectively assesses knowledge of diagnostic criteria for acute stress disorder.",
-      "suggestedLesson": "5-clinical-tests",
+      "suggestedLesson": "5-6-evaluating-jobs",
       "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
-      "lessonExcerpt": "A key diagnostic criterion for acute stress disorder is the presence of dissociative symptoms.",
+      "lessonExcerpt": "**Criterion contamination** occurs when the measure is influenced by factors unrelated to actual job performance.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 18
@@ -539,7 +371,7 @@
       "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
       "difficulty": "medium",
       "quality_comment": "The question is relevant and tests knowledge of triggers for manic episodes in bipolar disorder.",
-      "suggestedLesson": "5-clinical-tests",
+      "suggestedLesson": "5-hiring-methods",
       "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
       "lessonExcerpt": "Sleep deprivation is a well-known trigger for manic episodes in individuals with bipolar I disorder.",
       "needsReview": false,
@@ -560,7 +392,7 @@
       "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
       "difficulty": "hard",
       "quality_comment": "The question is well-structured and tests knowledge of ADHD diagnosis challenges.",
-      "suggestedLesson": "5-clinical-tests",
+      "suggestedLesson": "5-what-tests-measure",
       "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
       "lessonExcerpt": "The symptoms of ADHD can overlap with those of other developmental disorders, complicating diagnosis.",
       "needsReview": false,
@@ -581,9 +413,9 @@
       "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
       "difficulty": "hard",
       "quality_comment": "The question effectively assesses understanding of the relationship between IQ and achievement tests in diagnosing specific learning disorders.",
-      "suggestedLesson": "5-clinical-tests",
+      "suggestedLesson": "5-mood",
       "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
-      "lessonExcerpt": "Achievement test scores are more indicative of a specific learning disorder than IQ scores.",
+      "lessonExcerpt": "People with specific learning disorders typically have average to above-average IQ but elevated rates of other problems. ADHD is the most common comorbid psychiatric disorder.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 21
@@ -602,7 +434,7 @@
       "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
       "difficulty": "medium",
       "quality_comment": "The question accurately assesses knowledge of the situational type of female orgasmic disorder.",
-      "suggestedLesson": "5-clinical-tests",
+      "suggestedLesson": "5-trauma-dissociation-somatic",
       "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
       "lessonExcerpt": "The situational type occurs only in specific contexts or situations.",
       "needsReview": false,
@@ -623,7 +455,7 @@
       "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
       "difficulty": "medium",
       "quality_comment": "The question effectively tests knowledge of comorbid conditions with specific learning disorders.",
-      "suggestedLesson": "5-clinical-tests",
+      "suggestedLesson": "5-mood",
       "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
       "lessonExcerpt": "ADHD is frequently comorbid with specific learning disorders.",
       "needsReview": false,
@@ -644,7 +476,7 @@
       "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
       "difficulty": "hard",
       "quality_comment": "The question accurately assesses understanding of adverse impact in the context of employment testing.",
-      "suggestedLesson": "5-clinical-tests",
+      "suggestedLesson": "5-neurodevelopmental",
       "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
       "lessonExcerpt": "Adverse impact may disproportionately affect certain demographic groups.",
       "needsReview": false,
@@ -665,7 +497,7 @@
       "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
       "difficulty": "medium",
       "quality_comment": "The question effectively tests knowledge of genetic risk factors for schizophrenia.",
-      "suggestedLesson": "5-clinical-tests",
+      "suggestedLesson": "5-psychosis",
       "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
       "lessonExcerpt": "A family history of schizophrenia is a significant genetic risk factor.",
       "needsReview": false,
@@ -686,9 +518,9 @@
       "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
       "difficulty": "hard",
       "quality_comment": "The question accurately assesses knowledge of cataplexy as a diagnostic criterion for narcolepsy.",
-      "suggestedLesson": "5-clinical-tests",
+      "suggestedLesson": "5-sex-and-gender",
       "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
-      "lessonExcerpt": "Cataplexy is characterized by sudden muscle weakness triggered by strong emotions.",
+      "lessonExcerpt": "Episodes of cataplexy (loss of muscle tone)",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 26
@@ -707,33 +539,12 @@
       "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
       "difficulty": "medium",
       "quality_comment": "The question effectively tests knowledge of empirical criterion-keying in test development.",
-      "suggestedLesson": "5-clinical-tests",
+      "suggestedLesson": "5-neurodevelopmental",
       "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
-      "lessonExcerpt": "Empirical criterion-keying focuses on selecting test items based on their ability to predict performance in specific settings.",
+      "lessonExcerpt": "These were developed through **empirical criterion keying**, which is a fancy way of saying the test creators gave hundreds of questions to people with specific diagnoses and people without mental health issues, then kept only the questions that reliably told the groups apart.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 27
-    },
-    {
-      "stem": "Which of the following indicators may suggest malingering in memory deficits during testing?",
-      "options": [
-        "Consistent performance across different memory tasks.",
-        "Inconsistent memory test results that do not align with clinical observations.",
-        "A sudden improvement in memory performance after initial testing.",
-        "A history of memory problems documented in medical records."
-      ],
-      "answer": "Inconsistent memory test results that do not align with clinical observations.",
-      "explanation": "Inconsistent results that contradict clinical observations may indicate malingering, as they suggest an attempt to feign or exaggerate memory deficits. The other options do not provide strong indicators of malingering.",
-      "kn": "KN30",
-      "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
-      "difficulty": "hard",
-      "quality_comment": "The question accurately assesses knowledge of malingering indicators in memory testing.",
-      "suggestedLesson": "5-clinical-tests",
-      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
-      "lessonExcerpt": "Inconsistent memory test results that do not align with clinical observations may suggest malingering.",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 28
     },
     {
       "stem": "Which of the following symptoms is most indicative of bipolar disorder in adolescents?",
@@ -749,7 +560,7 @@
       "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
       "difficulty": "hard",
       "quality_comment": "The question effectively tests knowledge of bipolar disorder symptoms in adolescents.",
-      "suggestedLesson": "5-clinical-tests",
+      "suggestedLesson": "5-do-hiring-tools-work",
       "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
       "lessonExcerpt": "Bipolar disorder is characterized by episodes of extreme mood swings between mania and depression.",
       "needsReview": false,
@@ -770,7 +581,7 @@
       "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
       "difficulty": "medium",
       "quality_comment": "The question effectively assesses knowledge of symptom differentiation.",
-      "suggestedLesson": "5-clinical-tests",
+      "suggestedLesson": "5-psychosis",
       "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
       "lessonExcerpt": "Caffeine intoxication can lead to symptoms such as increased heart rate and gastrointestinal disturbances.",
       "needsReview": false,
@@ -791,9 +602,9 @@
       "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
       "difficulty": "hard",
       "quality_comment": "The question effectively tests knowledge of self-injurious behavior.",
-      "suggestedLesson": "5-clinical-tests",
+      "suggestedLesson": "5-eating-sleep-elimination",
       "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
-      "lessonExcerpt": "Self-injurious behavior includes actions such as deliberate cutting of the skin.",
+      "lessonExcerpt": "Episodes of cataplexy (loss of muscle tone)",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 7
@@ -812,33 +623,12 @@
       "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
       "difficulty": "medium",
       "quality_comment": "The question effectively tests knowledge of ADHD prevalence.",
-      "suggestedLesson": "5-clinical-tests",
+      "suggestedLesson": "5-mmpi",
       "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
-      "lessonExcerpt": "The estimated prevalence of ADHD among children in the United States is approximately 5-10%.",
+      "lessonExcerpt": "These were developed through **empirical criterion keying**, which is a fancy way of saying the test creators gave hundreds of questions to people with specific diagnoses and people without mental health issues, then kept only the questions that reliably told the groups apart.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 9
-    },
-    {
-      "stem": "Which aspect of scoring in Rorschach tests is primarily concerned with the developmental quality of responses?",
-      "options": [
-        "Content analysis",
-        "Form quality",
-        "Developmental quality",
-        "Location analysis"
-      ],
-      "answer": "Developmental quality",
-      "explanation": "Developmental quality refers to how responses to the Rorschach reflect the individual's cognitive and emotional development. Content analysis focuses on the themes present in responses, form quality assesses the accuracy of the response to the inkblot, and location analysis examines which part of the blot was used. Therefore, the correct answer is 'Developmental quality'.",
-      "kn": "KN30",
-      "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
-      "difficulty": "hard",
-      "quality_comment": "The question is well-structured and tests specific knowledge of Rorschach scoring.",
-      "suggestedLesson": "5-clinical-tests",
-      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
-      "lessonExcerpt": "Developmental quality is a key aspect of scoring in Rorschach tests.",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 11
     },
     {
       "stem": "In the context of borderline personality disorder, which symptom is most indicative of indecision and procrastination?",
@@ -854,7 +644,7 @@
       "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
       "difficulty": "medium",
       "quality_comment": "The question effectively assesses knowledge of borderline personality disorder symptoms.",
-      "suggestedLesson": "5-clinical-tests",
+      "suggestedLesson": "5-mood",
       "suggestedParagraph": "## Why Clinical Tests Matter for Your EPPP Success",
       "lessonExcerpt": "Indecision and procrastination are common symptoms in borderline personality disorder.",
       "needsReview": false,
@@ -875,7 +665,7 @@
       "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
       "difficulty": "hard",
       "quality_comment": "The question is challenging and directly assesses knowledge of autism spectrum disorder diagnostic criteria.",
-      "suggestedLesson": "5-clinical-tests",
+      "suggestedLesson": "5-substance-misuse",
       "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
       "lessonExcerpt": "Key features in diagnosing autism spectrum disorder include deficits in social-emotional reciprocity.",
       "needsReview": false,
@@ -896,7 +686,7 @@
       "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
       "difficulty": "medium",
       "quality_comment": "The question effectively assesses understanding of the criteria for intellectual disability.",
-      "suggestedLesson": "5-clinical-tests",
+      "suggestedLesson": "5-neurodevelopmental",
       "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
       "lessonExcerpt": "The primary criterion for diagnosing intellectual disability includes deficits in adaptive functioning.",
       "needsReview": false,
@@ -917,33 +707,12 @@
       "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
       "difficulty": "hard",
       "quality_comment": "The question is well-structured and tests knowledge of prognostic factors in schizophrenia.",
-      "suggestedLesson": "5-clinical-tests",
+      "suggestedLesson": "5-neurodevelopmental",
       "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
       "lessonExcerpt": "Gender differences are significant prognostic factors in schizophrenia.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 15
-    },
-    {
-      "stem": "What testing procedure can enhance performance by allowing for adjustments during the assessment?",
-      "options": [
-        "Standardized testing",
-        "Testing-of-limits",
-        "Norm-referenced testing",
-        "Criterion-referenced testing"
-      ],
-      "answer": "Testing-of-limits",
-      "explanation": "Testing-of-limits is a procedure that enhances performance by allowing the examiner to modify the testing conditions or provide additional support to the test-taker. Standardized testing does not allow for such adjustments, while norm-referenced and criterion-referenced testing focus on comparing scores rather than modifying the assessment process.",
-      "kn": "KN34",
-      "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively assesses knowledge of testing procedures.",
-      "suggestedLesson": "5-clinical-tests",
-      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
-      "lessonExcerpt": "Testing-of-limits allows for adjustments during the assessment to enhance performance.",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 16
     },
     {
       "stem": "What is a common sleep disorder in children characterized by episodes of sudden arousal and fear during sleep?",
@@ -959,9 +728,9 @@
       "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
       "difficulty": "medium",
       "quality_comment": "The question is clear and tests knowledge of sleep disorders in children.",
-      "suggestedLesson": "5-clinical-tests",
+      "suggestedLesson": "5-personality-tests",
       "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
-      "lessonExcerpt": "Sleep terror is a common sleep disorder in children characterized by episodes of sudden arousal and fear.",
+      "lessonExcerpt": "| | 16 PF | 16 primary traits from WORDS (lexical) | | EPPS | 15 NEEDS, forced-choice, IPSATIVE scores (no comparing people) | | MBTI | 4 dimensions, 16 TYPES, based on Jung | | NEO-PI-3 | Big Five (OCEAN), has FACETS, predicts cognitive decline | | Rorschach | INKBLOTS, Exner's system, color = emotion, confabulation = problems | | TAT | STORIES about pictures, identify hero's needs and press | **For the Rorschach scoring categories:** Use the acronym **L-D-C-F-P**: - **L**ocation -...",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 17
@@ -980,7 +749,7 @@
       "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
       "difficulty": "medium",
       "quality_comment": "The question effectively assesses knowledge of personality traits related to avoidant personality disorder.",
-      "suggestedLesson": "5-clinical-tests",
+      "suggestedLesson": "5-personality",
       "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
       "lessonExcerpt": "Low self-esteem is a significant trait associated with avoidant personality disorder.",
       "needsReview": false,
@@ -1001,7 +770,7 @@
       "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
       "difficulty": "medium",
       "quality_comment": "The question is well-structured and tests understanding of reliability in testing.",
-      "suggestedLesson": "5-clinical-tests",
+      "suggestedLesson": "5-neurodevelopmental",
       "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
       "lessonExcerpt": "Increasing the number of test items can improve the reliability of psychological testing by providing more data points.",
       "needsReview": false,
@@ -1022,33 +791,12 @@
       "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
       "difficulty": "hard",
       "quality_comment": "The question effectively assesses knowledge of the causes of dissociative identity disorder.",
-      "suggestedLesson": "5-clinical-tests",
+      "suggestedLesson": "5-neurodevelopmental",
       "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
       "lessonExcerpt": "Childhood trauma is a primary cause linked to the development of dissociative identity disorder.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 20
-    },
-    {
-      "stem": "Which of the following is a common indicator of hearing problems in children that may affect their communication skills?",
-      "options": [
-        "Frequent requests for repetition",
-        "High levels of energy and activity",
-        "Advanced vocabulary for their age",
-        "Strong preference for solitary play"
-      ],
-      "answer": "Frequent requests for repetition",
-      "explanation": "Frequent requests for repetition can indicate that a child is having difficulty hearing or processing auditory information, which directly impacts their communication skills. The other options do not specifically relate to hearing problems; high energy levels, advanced vocabulary, and solitary play do not necessarily indicate hearing issues.",
-      "kn": "KN30",
-      "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively assesses knowledge of communication issues related to hearing problems in children.",
-      "suggestedLesson": "5-clinical-tests",
-      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
-      "lessonExcerpt": "The lesson does not specifically cover communication issues in children related to hearing problems.",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 21
     },
     {
       "stem": "What do Taylor-Russell tables primarily help assess in the context of selection decision-making?",
@@ -1064,33 +812,12 @@
       "kn_explanation": "This question is best aligned with KN37 because it tests Factors influencing evidence-based interpretation of data and decision-making (e.g., base rates, group differences, cultural biases and differences, heuristics).",
       "difficulty": "hard",
       "quality_comment": "The question effectively assesses knowledge of Taylor-Russell tables and their application.",
-      "suggestedLesson": "5-clinical-tests",
+      "suggestedLesson": "5-psychosis",
       "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
-      "lessonExcerpt": "The lesson does not specifically cover Taylor-Russell tables.",
+      "lessonExcerpt": "The **Taylor-Russell tables** let you estimate how much a new predictor will improve hiring success for different combinations of validity coefficients, selection ratios, and base rates.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 23
-    },
-    {
-      "stem": "What is the primary purpose of trainability tests in the context of training assessment?",
-      "options": [
-        "To measure cognitive abilities",
-        "To evaluate physical fitness",
-        "To assess the potential for learning new skills",
-        "To determine personality traits"
-      ],
-      "answer": "To assess the potential for learning new skills",
-      "explanation": "The primary purpose of trainability tests is to evaluate an individual's potential to learn new skills, particularly in a training context. The other options do not accurately reflect the focus of trainability tests.",
-      "kn": "KN30",
-      "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively assesses knowledge of the purpose of trainability tests.",
-      "suggestedLesson": "5-clinical-tests",
-      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
-      "lessonExcerpt": "The lesson does not specifically cover the purpose of trainability tests.",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 25
     },
     {
       "stem": "Which personnel selection method allows for a range of scores to be considered acceptable for hiring decisions?",
@@ -1106,9 +833,9 @@
       "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
       "difficulty": "medium",
       "quality_comment": "The question effectively assesses knowledge of banding in personnel selection.",
-      "suggestedLesson": "5-clinical-tests",
+      "suggestedLesson": "5-eating-sleep-elimination",
       "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
-      "lessonExcerpt": "The lesson does not specifically cover banding in personnel selection methods.",
+      "lessonExcerpt": "**Sleep Terrors:**\n- Abrupt arousal usually starting with panicky scream\n- Intense fear with autonomic arousal",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 26
@@ -1127,9 +854,9 @@
       "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
       "difficulty": "hard",
       "quality_comment": "The question effectively assesses knowledge of validity assessment methods.",
-      "suggestedLesson": "5-clinical-tests",
+      "suggestedLesson": "5-personality",
       "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
-      "lessonExcerpt": "The lesson does not specifically cover the multitrait-multimethod matrix.",
+      "lessonExcerpt": "One of the most elegant ways to assess construct validity is the multitrait-multimethod matrix, developed by Campbell and Fiske.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 28
@@ -1148,33 +875,12 @@
       "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
       "difficulty": "hard",
       "quality_comment": "The question effectively assesses understanding of GAD versus normal worries.",
-      "suggestedLesson": "5-clinical-tests",
+      "suggestedLesson": "5-items-and-reliability",
       "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
-      "lessonExcerpt": "GAD is characterized by excessive worry that is difficult to control and occurs more days than not for at least six months.",
+      "lessonExcerpt": "GAD involves excessive anxiety and worry about multiple events or activities occurring most days for at least six months. The person finds it difficult to control the worry.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 1
-    },
-    {
-      "stem": "Which of the following factors is a strong predictor of community success post-hospitalization in individuals with schizophrenia?",
-      "options": [
-        "The presence of supportive family relationships.",
-        "The severity of psychotic symptoms at the time of discharge.",
-        "The duration of the hospitalization.",
-        "The individual's age at the onset of schizophrenia."
-      ],
-      "answer": "The presence of supportive family relationships.",
-      "explanation": "Supportive family relationships are crucial for community success after hospitalization, as they provide emotional and practical support. The other options may influence outcomes but are not as consistently predictive as family support.",
-      "kn": "KN30",
-      "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
-      "difficulty": "medium",
-      "quality_comment": "The question accurately tests knowledge of predictors of community success in schizophrenia.",
-      "suggestedLesson": "5-clinical-tests",
-      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
-      "lessonExcerpt": "The presence of supportive family relationships is a strong predictor of community success post-hospitalization in individuals with schizophrenia.",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 4
     },
     {
       "stem": "Which of the following genetic factors is most strongly associated with bipolar I disorder?",
@@ -1190,75 +896,12 @@
       "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
       "difficulty": "hard",
       "quality_comment": "The question effectively assesses understanding of genetic factors in bipolar I disorder.",
-      "suggestedLesson": "5-clinical-tests",
+      "suggestedLesson": "5-trauma-dissociation-somatic",
       "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
       "lessonExcerpt": "A family history of mood disorders is strongly associated with bipolar I disorder.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 7
-    },
-    {
-      "stem": "Which of the following factors is considered a prognostic indicator for schizophrenia outcomes?",
-      "options": [
-        "The presence of positive symptoms at the time of diagnosis.",
-        "The age of onset of the disorder.",
-        "The duration of untreated psychosis.",
-        "The individual's level of education at the time of diagnosis."
-      ],
-      "answer": "The duration of untreated psychosis.",
-      "explanation": "Research indicates that a longer duration of untreated psychosis is associated with poorer outcomes in schizophrenia. The other options may influence prognosis but are not as strongly predictive.",
-      "kn": "KN30",
-      "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively assesses understanding of prognostic factors in schizophrenia.",
-      "suggestedLesson": "5-clinical-tests",
-      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
-      "lessonExcerpt": "The duration of untreated psychosis is a significant prognostic indicator for schizophrenia outcomes.",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 9
-    },
-    {
-      "stem": "In signal detection theory, what is a false alarm?",
-      "options": [
-        "A correct identification of a signal present",
-        "An incorrect identification of a signal when none is present",
-        "A correct rejection of a non-signal",
-        "An incorrect rejection of a signal present"
-      ],
-      "answer": "An incorrect identification of a signal when none is present",
-      "explanation": "A false alarm occurs when a person mistakenly identifies a signal that is not actually present, leading to an incorrect response. The other options describe correct identifications or rejections, which do not fit the definition of a false alarm.",
-      "kn": "KN30",
-      "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively assesses understanding of signal detection theory.",
-      "suggestedLesson": "5-clinical-tests",
-      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
-      "lessonExcerpt": "The lesson does not explicitly cover false alarms in signal detection theory.",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 11
-    },
-    {
-      "stem": "Which of the following is a common measure of operant behavior?",
-      "options": [
-        "Self-report questionnaires",
-        "Behavioral observation",
-        "Projective tests",
-        "Cognitive assessments"
-      ],
-      "answer": "Behavioral observation",
-      "explanation": "Behavioral observation is a direct method of measuring operant behavior by watching and recording actions in real-time. Self-report questionnaires assess subjective experiences, projective tests reveal underlying thoughts and feelings, and cognitive assessments evaluate mental processes, none of which directly measure operant behavior.",
-      "kn": "KN31",
-      "kn_explanation": "This question is best aligned with KN31 because it tests Assessment methods and their strengths and limitations (e.g., self-report, multi-informant reports, psychophysiological measures, work samples, assessment centers, direct observation, structured and semi-structured interviews).",
-      "difficulty": "medium",
-      "quality_comment": "The question is clear and tests knowledge of behavioral assessment methods.",
-      "suggestedLesson": "5-clinical-tests",
-      "suggestedParagraph": "## Why Clinical Tests Matter for Your EPPP Success",
-      "lessonExcerpt": "The lesson does not specifically mention common measures of operant behavior.",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 12
     },
     {
       "stem": "What is the primary concern regarding the predictive validity of infant development tests?",
@@ -1274,75 +917,12 @@
       "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
       "difficulty": "hard",
       "quality_comment": "The question effectively challenges understanding of predictive validity in developmental assessments.",
-      "suggestedLesson": "5-clinical-tests",
+      "suggestedLesson": "5-do-hiring-tools-work",
       "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
-      "lessonExcerpt": "The lesson does not adequately cover predictive validity of infant development tests.",
+      "lessonExcerpt": "The **Taylor-Russell tables** let you estimate how much a new predictor will improve hiring success for different combinations of validity coefficients, selection ratios, and base rates.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 13
-    },
-    {
-      "stem": "Which of the following is a common outcome for children experiencing remission of night terrors?",
-      "options": [
-        "Increased frequency of nightmares",
-        "Development of sleepwalking",
-        "Improved sleep quality",
-        "Persistent anxiety about sleep"
-      ],
-      "answer": "Improved sleep quality",
-      "explanation": "Remission of night terrors typically leads to improved sleep quality as the episodes decrease or cease. The other options describe potential negative outcomes or unrelated issues.",
-      "kn": "KN41",
-      "kn_explanation": "This question is best aligned with KN41 because it tests Use of technology in implementing tests, surveys, and other forms of assessment and diagnostic evaluation (e.g., validity, cost-effectiveness, consumer acceptability).",
-      "difficulty": "medium",
-      "quality_comment": "The question is relevant and assesses knowledge of childhood sleep disorder outcomes.",
-      "suggestedLesson": "5-clinical-tests",
-      "suggestedParagraph": "## Why Clinical Tests Matter for Your EPPP Success",
-      "lessonExcerpt": "The lesson does not specifically address the outcomes of remission of night terrors.",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 14
-    },
-    {
-      "stem": "How does test difficulty impact the rates of true and false positives in diagnostic assessments?",
-      "options": [
-        "Higher difficulty increases true positives and decreases false positives.",
-        "Higher difficulty decreases both true and false positives.",
-        "Higher difficulty increases false positives and decreases true positives.",
-        "Higher difficulty has no effect on true and false positives."
-      ],
-      "answer": "Higher difficulty increases false positives and decreases true positives.",
-      "explanation": "As test difficulty increases, it often leads to more false positives due to misinterpretation of results, while true positives may decrease as fewer individuals meet the criteria accurately. The other options do not accurately reflect the relationship between test difficulty and diagnostic accuracy.",
-      "kn": "KN29",
-      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
-      "difficulty": "hard",
-      "quality_comment": "The question is complex and requires a deep understanding of test construction principles.",
-      "suggestedLesson": "5-clinical-tests",
-      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
-      "lessonExcerpt": "The lesson does not adequately cover the effects of test difficulty on true and false positives.",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 15
-    },
-    {
-      "stem": "Which of the following best describes selective mutism as a disorder?",
-      "options": [
-        "A temporary inability to speak due to trauma.",
-        "A consistent failure to speak in specific social situations despite speaking in other contexts.",
-        "A developmental delay in speech production.",
-        "A refusal to speak as a form of rebellion."
-      ],
-      "answer": "A consistent failure to speak in specific social situations despite speaking in other contexts.",
-      "explanation": "Selective mutism is characterized by a child's inability to speak in certain social settings while being able to communicate in more comfortable environments. The other options do not accurately capture the essence of this disorder.",
-      "kn": "KN41",
-      "kn_explanation": "This question is best aligned with KN41 because it tests Use of technology in implementing tests, surveys, and other forms of assessment and diagnostic evaluation (e.g., validity, cost-effectiveness, consumer acceptability).",
-      "difficulty": "medium",
-      "quality_comment": "The question is clear and tests knowledge of selective mutism.",
-      "suggestedLesson": "5-clinical-tests",
-      "suggestedParagraph": "## Why Clinical Tests Matter for Your EPPP Success",
-      "lessonExcerpt": "The lesson does not adequately cover selective mutism as a disorder.",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 18
     },
     {
       "stem": "What does criterion contamination refer to in the context of validity assessment?",
@@ -1358,9 +938,9 @@
       "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
       "difficulty": "hard",
       "quality_comment": "The question effectively challenges understanding of validity concepts.",
-      "suggestedLesson": "5-clinical-tests",
+      "suggestedLesson": "5-hiring-methods",
       "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
-      "lessonExcerpt": "The lesson does not adequately cover criterion contamination in validity assessment.",
+      "lessonExcerpt": "**Criterion contamination** occurs when the measure is influenced by factors unrelated to actual job performance.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 19
@@ -1379,9 +959,9 @@
       "kn_explanation": "This question is best aligned with KN31 because it tests Assessment methods and their strengths and limitations (e.g., self-report, multi-informant reports, psychophysiological measures, work samples, assessment centers, direct observation, structured and semi-structured interviews).",
       "difficulty": "medium",
       "quality_comment": "The question is relevant and assesses knowledge of stuttering diagnosis.",
-      "suggestedLesson": "5-clinical-tests",
+      "suggestedLesson": "5-interpreting-scores",
       "suggestedParagraph": "## Why Clinical Tests Matter for Your EPPP Success",
-      "lessonExcerpt": "The lesson does not adequately cover the diagnosis of childhood stuttering.",
+      "lessonExcerpt": "Banding groups scores into ranges based on the test's standard error of measurement. All scores within a band are considered statistically equivalent.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 20
@@ -1400,33 +980,12 @@
       "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
       "difficulty": "hard",
       "quality_comment": "The question effectively assesses understanding of a complex psychological concept.",
-      "suggestedLesson": "5-clinical-tests",
+      "suggestedLesson": "5-what-tests-measure",
       "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
-      "lessonExcerpt": "Self-mutilation is often a maladaptive behavior used to cope with overwhelming emotional pain.",
+      "lessonExcerpt": "One of the most elegant ways to assess construct validity is the multitrait-multimethod matrix, developed by Campbell and Fiske.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 21
-    },
-    {
-      "stem": "In premenstrual dysphoric disorder (PMDD), when do symptoms typically begin in relation to the menstrual cycle?",
-      "options": [
-        "During the luteal phase, approximately one week before menstruation.",
-        "At the onset of menstruation.",
-        "In the follicular phase, after menstruation has ended.",
-        "Immediately after ovulation."
-      ],
-      "answer": "During the luteal phase, approximately one week before menstruation.",
-      "explanation": "PMDD symptoms typically arise during the luteal phase of the menstrual cycle, which is about one week before menstruation begins. The other options incorrectly place the timing of symptoms either at the wrong phase or at the wrong time in relation to the menstrual cycle.",
-      "kn": "KN36",
-      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
-      "difficulty": "medium",
-      "quality_comment": "The question is clear and tests knowledge of a specific aspect of PMDD.",
-      "suggestedLesson": "5-clinical-tests",
-      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
-      "lessonExcerpt": "Symptoms of PMDD typically begin during the luteal phase, approximately one week before menstruation.",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 22
     },
     {
       "stem": "Which of the following is NOT a criterion for diagnosing autism spectrum disorder (ASD)?",
@@ -1450,48 +1009,6 @@
       "inspirationIndex": 23
     },
     {
-      "stem": "Which of the following best describes the difference between traditional assessment and behavioral assessment?",
-      "options": [
-        "Traditional assessment focuses on observable behaviors, while behavioral assessment emphasizes subjective reports.",
-        "Behavioral assessment is more structured than traditional assessment.",
-        "Traditional assessment often uses standardized tests, while behavioral assessment relies on direct observation.",
-        "Behavioral assessment is less reliable than traditional assessment."
-      ],
-      "answer": "Traditional assessment often uses standardized tests, while behavioral assessment relies on direct observation.",
-      "explanation": "Traditional assessment typically involves standardized tests that measure various psychological constructs, while behavioral assessment focuses on observing and recording specific behaviors in real-time. The other options mischaracterize the distinctions between the two methodologies.",
-      "kn": "KN30",
-      "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively tests knowledge of assessment methodologies.",
-      "suggestedLesson": "5-clinical-tests",
-      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
-      "lessonExcerpt": "Traditional assessment often uses standardized tests, while behavioral assessment relies on direct observation.",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 25
-    },
-    {
-      "stem": "What are the diagnostic criteria for separation anxiety disorder?",
-      "options": [
-        "Excessive fear of separation from home or attachment figures lasting at least four weeks.",
-        "Persistent worry about losing a significant other or event causing separation.",
-        "Fear of social situations leading to avoidance behavior.",
-        "Recurrent panic attacks occurring unexpectedly."
-      ],
-      "answer": "Excessive fear of separation from home or attachment figures lasting at least four weeks.",
-      "explanation": "The primary diagnostic criterion for separation anxiety disorder includes excessive fear of separation that lasts for at least four weeks. The other options describe different anxiety-related disorders.",
-      "kn": "KN36",
-      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
-      "difficulty": "medium",
-      "quality_comment": "The question accurately assesses knowledge of separation anxiety disorder.",
-      "suggestedLesson": "5-clinical-tests",
-      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
-      "lessonExcerpt": "The diagnostic criteria for separation anxiety disorder include excessive fear of separation from home or attachment figures lasting at least four weeks.",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 26
-    },
-    {
       "stem": "What is a common treatment outcome for individuals diagnosed with schizoaffective disorder?",
       "options": [
         "Complete remission of all symptoms without medication.",
@@ -1505,7 +1022,7 @@
       "kn_explanation": "This question is best aligned with KN40 because it tests Measurement of outcomes and changes due to prevention or intervention efforts with individuals, couples, families, groups, and organizations.",
       "difficulty": "medium",
       "quality_comment": "The question effectively assesses knowledge of treatment outcomes.",
-      "suggestedLesson": "5-clinical-tests",
+      "suggestedLesson": "5-psychosis",
       "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
       "lessonExcerpt": "Significant improvement in mood symptoms with antipsychotic treatment is common for individuals diagnosed with schizoaffective disorder.",
       "needsReview": false,
@@ -1526,54 +1043,12 @@
       "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
       "difficulty": "hard",
       "quality_comment": "The question effectively distinguishes between factitious behavior and typical symptoms of social phobia.",
-      "suggestedLesson": "5-clinical-tests",
+      "suggestedLesson": "5-psychosis",
       "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
       "lessonExcerpt": "Exaggerating symptoms to gain attention is considered factitious behavior.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 29
-    },
-    {
-      "stem": "What does test validity refer to in psychometric properties?",
-      "options": [
-        "The consistency of test scores over time.",
-        "The degree to which a test measures what it claims to measure.",
-        "The ease of administering and scoring the test.",
-        "The ability of a test to predict future performance."
-      ],
-      "answer": "The degree to which a test measures what it claims to measure.",
-      "explanation": "Test validity specifically refers to how well a test measures the construct it is intended to measure. The other options describe different aspects of test reliability or practicality, not validity.",
-      "kn": "KN29",
-      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
-      "difficulty": "medium",
-      "quality_comment": "The question accurately assesses knowledge of test validity.",
-      "suggestedLesson": "5-clinical-tests",
-      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
-      "lessonExcerpt": "Test validity refers to the degree to which a test measures what it claims to measure.",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 30
-    },
-    {
-      "stem": "A 7-year-old boy is hospitalized repeatedly over 14 months with unexplained seizures, vomiting, and lethargy. Extensive neurological and laboratory workups are consistently negative. Hospital staff observe that symptoms arise exclusively when the child's mother is present and resolve when she leaves. Video surveillance confirms the mother administering an unknown substance to the child. Under DSM-5, which of the following best describes the correct diagnosis and its assignment?",
-      "options": [
-        "Somatic symptom disorder, assigned to the child because he is the one experiencing physical symptoms",
-        "Factitious disorder imposed on another, assigned to the mother as the perpetrating caregiver",
-        "Malingering, assigned to the mother because she is deceiving medical staff for secondary gain",
-        "Illness anxiety disorder, assigned to the mother because she is excessively preoccupied with her child's health"
-      ],
-      "answer": "Factitious disorder imposed on another, assigned to the mother as the perpetrating caregiver",
-      "explanation": "In factitious disorder imposed on another (FDIA, formerly Munchausen syndrome by proxy), the DSM-5 assigns the diagnosis to the perpetrating caregiver, not the victim. The caregiver falsifies or induces physical or psychological signs and symptoms in another person under their care, without external incentives. Somatic symptom disorder would be assigned to the person experiencing symptoms who genuinely believes they are ill. Malingering involves external incentives such as financial reward or avoidance of legal responsibility, which are absent here. Illness anxiety disorder involves preoccupation with having or acquiring a disease, not the deliberate induction of illness in another. The critical distinguishing feature of FDIA is intentional deception directed at medical providers through a dependent victim.",
-      "kn": "KN36",
-      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
-      "difficulty": "medium",
-      "quality_comment": "Vignette clearly operationalizes the diagnostic criteria; tests the commonly missed rule that the diagnosis is assigned to the perpetrator, not the victim.",
-      "suggestedLesson": "5-clinical-tests",
-      "suggestedParagraph": "## Why Clinical Tests Matter for Your EPPP Success",
-      "lessonExcerpt": "",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 1
     },
     {
       "stem": "A 44-year-old male presents to a cardiologist for the fifth time in eight months complaining of crushing chest pain, left arm numbness, diaphoresis, and an overwhelming sense that he is about to die. Each episode lasts approximately 10–15 minutes and then resolves completely. Electrocardiograms, echocardiography, and a cardiac stress test are all normal. He is referred for psychological evaluation. Which diagnosis should be ranked highest in the differential?",
@@ -1589,75 +1064,12 @@
       "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
       "difficulty": "medium",
       "quality_comment": "Classic EPPP presentation; the cardiac context is realistic and the episode profile clearly operationalizes panic attack criteria.",
-      "suggestedLesson": "5-clinical-tests",
+      "suggestedLesson": "5-cognitive-tests",
       "suggestedParagraph": "## Why Clinical Tests Matter for Your EPPP Success",
-      "lessonExcerpt": "",
+      "lessonExcerpt": "They don't. While tests like the FTII show predictive validity, infant assessment is better for identifying developmental delays than predicting exact future IQ scores.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 9
-    },
-    {
-      "stem": "A psychiatry resident asks a consulting psychologist about the heritability of bipolar I disorder, noting that twin studies offer the clearest evidence of genetic contribution. Which of the following most accurately characterizes the monozygotic (MZ) twin concordance rate for bipolar I disorder and the appropriate interpretation of this finding?",
-      "options": [
-        "MZ concordance is approximately 5–15%, suggesting genetics plays a minimal role and environmental factors predominate",
-        "MZ concordance is approximately 20–25%, roughly equivalent to dizygotic (DZ) twin rates, indicating primarily shared environmental influence",
-        "MZ concordance is approximately 40–70%, substantially higher than DZ rates, indicating a significant but incomplete genetic contribution",
-        "MZ concordance approaches 95–100%, indicating that bipolar I disorder is almost entirely genetically determined with negligible environmental input"
-      ],
-      "answer": "MZ concordance is approximately 40–70%, substantially higher than DZ rates, indicating a significant but incomplete genetic contribution",
-      "explanation": "Twin studies consistently show MZ concordance rates for bipolar I disorder in the range of approximately 40–70%, compared to DZ twin rates of approximately 5–15%. The substantially higher MZ rate (compared to DZ) confirms a strong genetic contribution, while the fact that concordance falls well below 100% demonstrates that environmental factors also play a meaningful etiological role. A 5–15% rate would imply minimal heritability, contradicting the research literature. Nearly identical MZ and DZ rates would suggest that shared environment rather than genetics drives familial aggregation. Near-perfect MZ concordance would imply a purely genetic etiology, which the evidence does not support.",
-      "kn": "KN29",
-      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
-      "difficulty": "hard",
-      "quality_comment": "Well-constructed question requiring both factual knowledge and conceptual interpretation of twin study logic; distractors span the plausible range of concordance values and test understanding of what each rate implies.",
-      "suggestedLesson": "5-clinical-tests",
-      "suggestedParagraph": "## Mood Disorders: Heritability",
-      "lessonExcerpt": "Not found in provided lesson content. Needs review.",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 14
-    },
-    {
-      "stem": "A clinician conducting a differential diagnosis notes that a patient holds bizarre delusions—beliefs that are clearly implausible and outside ordinary human experience (e.g., believing that interdimensional beings have physically replaced his organs without leaving scars). According to DSM-5 criteria, which of the following conditions specifically EXCLUDES bizarre delusions as part of its defining diagnostic requirements?",
-      "options": [
-        "Schizophrenia",
-        "Brief psychotic disorder",
-        "Delusional disorder",
-        "Schizoaffective disorder"
-      ],
-      "answer": "Delusional disorder",
-      "explanation": "By DSM-5 definition, delusional disorder requires that the delusions be non-bizarre—that is, they must involve situations that could plausibly occur in real life (e.g., being followed, being poisoned, having a disease, being deceived by a partner). Bizarre delusions, which are implausible by any ordinary real-world standard, rule out the diagnosis of delusional disorder. In contrast, schizophrenia, brief psychotic disorder, and schizoaffective disorder may all include bizarre delusions; notably, in schizophrenia, a single bizarre delusion alone can satisfy Criterion A even in the absence of other psychotic symptoms. This distinction between bizarre and non-bizarre delusions is a high-yield differential diagnosis point on the EPPP.",
-      "kn": "KN33",
-      "kn_explanation": "This question is best aligned with KN33 because it tests Issues of differential diagnosis and integration of non-psychological information into psychological assessment.",
-      "difficulty": "hard",
-      "quality_comment": "Excellent targeted differential diagnosis question; the clinical vignette grounds the concept, and the four options cover the most commonly confused psychotic disorder categories.",
-      "suggestedLesson": "5-clinical-tests",
-      "suggestedParagraph": "## Psychotic Disorder Differential Diagnosis",
-      "lessonExcerpt": "Not found in provided lesson content. Needs review.",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 15
-    },
-    {
-      "stem": "A researcher reviewing epidemiological literature on obsessive-compulsive disorder (OCD) notices a distinctive pattern in how sex differences in prevalence change across development. Which of the following most accurately characterizes the relationship between sex and OCD prevalence from childhood through adulthood?",
-      "options": [
-        "OCD is more prevalent in females across both childhood and adult populations, with the disparity most pronounced during adolescence",
-        "OCD shows male predominance in childhood, but the sex difference diminishes and becomes roughly equal by adulthood",
-        "OCD prevalence is essentially equal across sex at all developmental stages, with no consistent pattern across studies",
-        "OCD shows female predominance in childhood and then shifts to male predominance by middle adulthood"
-      ],
-      "answer": "OCD shows male predominance in childhood, but the sex difference diminishes and becomes roughly equal by adulthood",
-      "explanation": "Epidemiological research consistently finds that childhood and adolescent OCD has a male predominance, with boys being diagnosed at higher rates and at younger ages than girls. By adulthood, this sex difference largely disappears, and adult OCD prevalence approximates equality between men and women (with some community samples showing a slight female preponderance). This developmental shift distinguishes OCD from disorders like major depressive disorder and generalized anxiety disorder, which show female predominance across all age groups, and is an important EPPP epidemiological fact. Option A is incorrect because the childhood male predominance is well established. Option C is incorrect because the childhood male predominance is a reliable cross-study finding. Option D reverses the actual developmental pattern.",
-      "kn": "KN38",
-      "kn_explanation": "This question is best aligned with KN38 because it tests Constructs of epidemiology and base rates of psychological and behavioral disorders.",
-      "difficulty": "medium",
-      "quality_comment": "Well-crafted epidemiological question targeting a specific, commonly tested developmental pattern; the reversal distractor (Option D) effectively traps candidates who know a sex difference exists but are uncertain about the direction.",
-      "suggestedLesson": "5-clinical-tests",
-      "suggestedParagraph": "## OCD Epidemiology",
-      "lessonExcerpt": "Not found in provided lesson content. Needs review.",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 20
     },
     {
       "stem": "A 7-year-old child assigned female at birth has, for the past 8 months, strongly insisted on being called by a male name, expressed a persistent desire to be a boy, preferred rough-and-tumble play exclusively with male peers, and refused to wear feminine clothing. The child's parents report significant distress at school, including refusal to use the girls' restroom and daily crying before school. According to DSM-5, which of the following is required in addition to the specified incongruence criteria to diagnose Gender Dysphoria in Children?",
@@ -1673,9 +1085,9 @@
       "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
       "difficulty": "hard",
       "quality_comment": "Well-grounded in DSM-5 diagnostic criteria. Vignette-based format appropriate for doctoral-level difficulty. Distractors are plausible misconceptions about the diagnosis.",
-      "suggestedLesson": "5-clinical-tests",
+      "suggestedLesson": "5-6-evaluating-jobs",
       "suggestedParagraph": "## Clinical Diagnosis and DSM-5 Classification",
-      "lessonExcerpt": "NOT COVERED: The provided lesson files (5-career-interests, 5-clinical-tests, 5-cognitive-tests, 5-iq-tests, 5-mmpi, 5-personality-tests) do not contain content on Gender Dysphoria diagnosis. A dedicated lesson on DSM-5 neurodevelopmental and gender-related diagnoses is needed.",
+      "lessonExcerpt": "**Criterion contamination** occurs when the measure is influenced by factors unrelated to actual job performance.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 21
@@ -1694,7 +1106,7 @@
       "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
       "difficulty": "hard",
       "quality_comment": "High-quality vignette isolating the etiological criterion. Distractors probe common confusions between DSED/RAD and between different types of early adversity. Appropriate doctoral-level difficulty.",
-      "suggestedLesson": "5-clinical-tests",
+      "suggestedLesson": "5-neurodevelopmental",
       "suggestedParagraph": "## DSM-5 Trauma- and Stressor-Related Disorders",
       "lessonExcerpt": "NOT COVERED: The provided lesson files do not address Disinhibited Social Engagement Disorder or Reactive Attachment Disorder. A lesson on DSM-5 trauma- and stressor-related disorders diagnoses is needed for this content.",
       "needsReview": false,
@@ -1715,54 +1127,12 @@
       "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
       "difficulty": "medium",
       "quality_comment": "Clinically realistic scenario. Tests precise knowledge of DSM-5 restructuring. The SCD distractor is particularly effective as a sophisticated misconception held by many clinicians.",
-      "suggestedLesson": "5-clinical-tests",
+      "suggestedLesson": "5-personality",
       "suggestedParagraph": "## DSM-5 Neurodevelopmental Disorder Classification",
       "lessonExcerpt": "NOT COVERED: The provided lesson files do not cover Autism Spectrum Disorder diagnosis or the DSM-IV to DSM-5 reclassification of Asperger's Disorder. A dedicated lesson on DSM-5 neurodevelopmental disorders is needed for this content. The file 5-clinical-tests.md does reference ASD in the context of WCST performance ('Poor performance connects to frontal lobe dysfunction and appears in autism spectrum disorder') but does not address diagnostic criteria or classification.",
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 24
-    },
-    {
-      "stem": "A client reports recurrent episodes of heart racing, chest tightness, trembling, and a fear of humiliating herself that last 8 to 12 minutes. Review of her history reveals these episodes occur exclusively when she must speak in front of groups, when she is introduced to new people at social gatherings, and when she believes others are observing her eating. She reports no episodes occurring while alone, during sleep, or without an identifiable social trigger. Which of the following most accurately explains why Panic Disorder is NOT the appropriate primary diagnosis?",
-      "options": [
-        "Her symptoms do not meet the full symptomatic threshold for a panic attack, so they cannot form the basis of any anxiety disorder diagnosis",
-        "Panic attacks in Social Anxiety Disorder produce physiological symptoms that are less severe than those required for Panic Disorder",
-        "Her panic attacks are situationally bound to social-evaluative contexts rather than unexpected and uncued, which is required for Panic Disorder",
-        "Panic Disorder requires a minimum of four panic attacks per month, whereas Social Anxiety Disorder has no such frequency requirement"
-      ],
-      "answer": "Her panic attacks are situationally bound to social-evaluative contexts rather than unexpected and uncued, which is required for Panic Disorder",
-      "explanation": "The defining feature of Panic Disorder is recurrent UNEXPECTED panic attacks—those that arise without an apparent trigger or situational cue—followed by persistent concern about additional attacks or maladaptive behavioral changes. In this vignette, all panic attacks are situationally bound to feared social-evaluative situations, which is characteristic of Social Anxiety Disorder (SAD). DSM-5 explicitly permits panic attacks as a specifier across multiple anxiety disorders; their presence does not automatically indicate Panic Disorder. Option A is incorrect; the client's symptoms (racing heart, chest tightness, trembling, fear) can constitute a full-criteria panic attack regardless of the trigger. Option B is incorrect; DSM-5 does not impose differential symptom severity thresholds between disorder types for panic attacks—both can involve full-symptom panic attacks. Option D is incorrect; DSM-5 does not require a specific frequency of panic attacks (such as four per month) for a Panic Disorder diagnosis.",
-      "kn": "KN36",
-      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
-      "difficulty": "hard",
-      "quality_comment": "Excellent differential diagnosis question. The clinical vignette is precisely constructed to highlight the expected/unexpected distinction. Distractors address common misconceptions about panic attack criteria and frequency thresholds.",
-      "suggestedLesson": "5-clinical-tests",
-      "suggestedParagraph": "## Anxiety Disorder Differential Diagnosis",
-      "lessonExcerpt": "NOT COVERED: The provided lesson files do not address anxiety disorder differential diagnosis or the distinction between situationally-bound panic attacks in Social Anxiety Disorder versus unexpected panic attacks in Panic Disorder. A clinical diagnosis lesson is needed for this content.",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 25
-    },
-    {
-      "stem": "A longitudinal research team studying Type A behavior pattern and cardiovascular outcomes follows 1,500 middle-aged adults over 22 years. After controlling for traditional cardiovascular risk factors (blood pressure, cholesterol, smoking, BMI), the researchers conduct multivariate analyses to determine which specific Type A component independently predicts incident coronary artery disease. Based on the preponderance of psychophysiological research, which Type A component would most likely emerge as the significant independent predictor?",
-      "options": [
-        "Time urgency and chronic time pressure",
-        "Hostility and cynical mistrust of others",
-        "Achievement striving and competitive drive",
-        "Rapid speech rate and psychomotor agitation"
-      ],
-      "answer": "Hostility and cynical mistrust of others",
-      "explanation": "Research by Williams, Barefoot, Dembroski, and others decomposed the Type A behavior pattern and found that hostility—specifically cynical hostility (distrustful, antagonistic interpersonal orientation and resentful reactivity to others)—is the 'toxic component' most consistently associated with cardiovascular disease risk after controlling for other variables. Hostility is thought to produce heightened sympathetic nervous system reactivity, neuroendocrine dysregulation (elevated cortisol, catecholamines), and greater inflammatory response, all contributing to atherosclerosis. Options A, C, and D (time urgency, achievement striving, rapid speech/psychomotor agitation) have not shown consistent independent predictive validity for coronary artery disease in multivariate studies, and in some research, achievement striving has been associated with lower CVD risk. This finding has clinical implications for health psychology interventions targeting cardiac-prone individuals.",
-      "kn": "KN29",
-      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
-      "difficulty": "medium",
-      "quality_comment": "Tests a specific and frequently misunderstood nuance within Type A research. The distractors represent the other Type A components that examinees may incorrectly identify as the key predictor. Clinically relevant for health psychology practice.",
-      "suggestedLesson": "5-clinical-tests",
-      "suggestedParagraph": "## Health Psychology and Behavioral Medicine",
-      "lessonExcerpt": "NOT COVERED: The provided lesson files do not address Type A personality, hostility, or cardiovascular disease risk. This content belongs in a health psychology or behavioral medicine lesson, not the assessment files provided.",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 26
     },
     {
       "stem": "Which of the following best describes the purpose of the Halstead-Reitan Neuropsychological Battery?",
@@ -1777,7 +1147,10 @@
       "kn": "KN32",
       "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
       "difficulty": "medium",
-      "quality_comment": "The stem clearly focuses on test purpose, and the distractors are all plausible psychological assessments but differ in focus, promoting critical thinking."
+      "quality_comment": "The stem clearly focuses on test purpose, and the distractors are all plausible psychological assessments but differ in focus, promoting critical thinking.",
+      "lessonExcerpt": "**Halstead-Reitan Neuropsychological Battery** is the comprehensive physical exam of brain function testing. Available for ages 5 and up, it evaluates memory, abstract reasoning, concentration, manual dexterity, and visual-motor integration.",
+      "suggestedLesson": "5-clinical-tests",
+      "needsReview": false
     },
     {
       "stem": "When interpreting the Halstead Impairment Index, what does a score of 0.6 indicate about an examinee's neuropsychological functioning?",
@@ -1792,7 +1165,10 @@
       "kn": "KN37",
       "kn_explanation": "This question is best aligned with KN37 because it tests Factors influencing evidence-based interpretation of data and decision-making (e.g., base rates, group differences, cultural biases and differences, heuristics).",
       "difficulty": "easy",
-      "quality_comment": "This question is straightforward with clear cutoff ranges, useful for assessing interpretation skills of neuropsych test results."
+      "quality_comment": "This question is straightforward with clear cutoff ranges, useful for assessing interpretation skills of neuropsych test results.",
+      "lessonExcerpt": "| 0.5 to 0.7 | Moderate impairment |",
+      "suggestedLesson": "5-anxiety-and-ocd",
+      "needsReview": false
     },
     {
       "stem": "The Boston Process Approach differs from traditional neuropsychological batteries in that it:",
@@ -1807,7 +1183,10 @@
       "kn": "KN34",
       "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
       "difficulty": "medium",
-      "quality_comment": "Good differentiation between qualitative and quantitative assessment; distractors represent common misconceptions about standardized testing."
+      "quality_comment": "Good differentiation between qualitative and quantitative assessment; distractors represent common misconceptions about standardized testing.",
+      "lessonExcerpt": "Instead of just recording whether someone got the answer right, it focuses on *how* they arrived at their answer. This qualitative approach means you might modify standardized tests on the fly",
+      "suggestedLesson": "5-psychosis",
+      "needsReview": false
     },
     {
       "stem": "Which neuropsychological test is designed to assess executive functions such as abstract reasoning, perseveration, and set shifting by requiring examinees to match cards according to undisclosed sorting rules?",
@@ -1822,7 +1201,10 @@
       "kn": "KN32",
       "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
       "difficulty": "medium",
-      "quality_comment": "The options are plausible neuropsychological tests, reinforcing discrimination of similar but distinct tests targeting executive functions."
+      "quality_comment": "The options are plausible neuropsychological tests, reinforcing discrimination of similar but distinct tests targeting executive functions.",
+      "lessonExcerpt": "**Wisconsin Card Sorting Test (WCST)** evaluates abstract reasoning, cognitive flexibility, and the ability to shift strategies based on feedback (all executive functions linked to frontal lobe activity.",
+      "suggestedLesson": "5-trauma-dissociation-somatic",
+      "needsReview": false
     },
     {
       "stem": "A 72-year-old patient with suspected neurocognitive disorder obtains a score of 22 on the Mini-Mental State Exam (MMSE). How should this score be interpreted?",
@@ -1837,7 +1219,10 @@
       "kn": "KN36",
       "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
       "difficulty": "easy",
-      "quality_comment": "The question is direct and focused on interpreting a widely used tool, appropriate for foundational assessment knowledge."
+      "quality_comment": "The question is direct and focused on interpreting a widely used tool, appropriate for foundational assessment knowledge.",
+      "lessonExcerpt": "30 maximum points, with 24 as the typical cutoff. Below 24 suggests cognitive impairment, and lower scores indicate greater severity.",
+      "suggestedLesson": "5-what-tests-measure",
+      "needsReview": false
     },
     {
       "stem": "Which clinical test uses a five-point Global Scoring System to evaluate visual-motor integration by having examinees copy geometric figures and then recall them from memory?",
@@ -1852,7 +1237,10 @@
       "kn": "KN32",
       "kn_explanation": "This question assesses knowledge of commonly used instruments for visual-motor assessment and their scoring methods (KN32).",
       "difficulty": "medium",
-      "quality_comment": "Well-constructed with plausible distractors involving other visual and neuropsych tests, requiring detailed content knowledge."
+      "quality_comment": "Well-constructed with plausible distractors involving other visual and neuropsych tests, requiring detailed content knowledge.",
+      "lessonExcerpt": "The Global Scoring System rates each drawing from 0 (no resemblance) to 4 (nearly perfect).",
+      "suggestedLesson": "5-trauma-dissociation-somatic",
+      "needsReview": false
     },
     {
       "stem": "The Glasgow Coma Scale (GCS) score of 7 in a patient with traumatic brain injury indicates:",
@@ -1867,7 +1255,10 @@
       "kn": "KN37",
       "kn_explanation": "This question is best aligned with KN37 because it tests Factors influencing evidence-based interpretation of data and decision-making (e.g., base rates, group differences, cultural biases and differences, heuristics).",
       "difficulty": "easy",
-      "quality_comment": "Clear clinical relevance and straightforward scoring criteria make this question effective for exam preparation."
+      "quality_comment": "Clear clinical relevance and straightforward scoring criteria make this question effective for exam preparation.",
+      "lessonExcerpt": "| 8 or less | Coma/Severe injury |",
+      "suggestedLesson": "5-anxiety-and-ocd",
+      "needsReview": false
     },
     {
       "stem": "Which of the following is TRUE regarding the Wechsler Memory Scale – Fourth Edition (WMS-IV)?",
@@ -1882,7 +1273,10 @@
       "kn": "KN32",
       "kn_explanation": "This question pertains to knowledge about specific assessment instruments and their constructs measured, a core part of clinical assessment (KN32).",
       "difficulty": "medium",
-      "quality_comment": "Distractors contain partially true and false statements enhancing discrimination; question promotes integration of test knowledge."
+      "quality_comment": "Distractors contain partially true and false statements enhancing discrimination; question promotes integration of test knowledge.",
+      "lessonExcerpt": "Four main index scales emerge from the primary subtests",
+      "suggestedLesson": "5-mood",
+      "needsReview": false
     },
     {
       "stem": "The Stroop Color and Word Test is sensitive to deficits primarily in which brain region?",
@@ -1897,7 +1291,10 @@
       "kn": "KN32",
       "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
       "difficulty": "easy",
-      "quality_comment": "Simple, anatomically focused question with plausible distractors that test neuropsychological knowledge relevant to the EPPP."
+      "quality_comment": "Simple, anatomically focused question with plausible distractors that test neuropsychological knowledge relevant to the EPPP.",
+      "lessonExcerpt": "Like the WCST, it's sensitive to frontal lobe dysfunction",
+      "suggestedLesson": "5-psychosis",
+      "needsReview": false
     },
     {
       "stem": "Which statement best characterizes the Rancho Scale of Cognitive Functioning (Revised)?",
@@ -1912,7 +1309,10 @@
       "kn": "KN32",
       "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
       "difficulty": "medium",
-      "quality_comment": "This question effectively discriminates test knowledge relevant to post-injury recovery assessment with plausible distractors describing other clinical measures."
+      "quality_comment": "This question effectively discriminates test knowledge relevant to post-injury recovery assessment with plausible distractors describing other clinical measures.",
+      "lessonExcerpt": "**Rancho Scale of Cognitive Functioning Revised** tracks cognitive recovery during the first weeks after head injury.",
+      "suggestedLesson": "5-anxiety-and-ocd",
+      "needsReview": false
     },
     {
       "stem": "A clinician wants to screen for adaptive functioning to assist in diagnosing intellectual disability. Which assessment is most appropriate?",
@@ -1927,7 +1327,10 @@
       "kn": "KN32",
       "kn_explanation": "This question evaluates knowledge about an adaptive behavior measure used in clinical diagnosis and intervention planning (KN32).",
       "difficulty": "easy",
-      "quality_comment": "The distractors are common psychological tests but measure different constructs, supporting clear discrimination for EPPP-level examinees."
+      "quality_comment": "The distractors are common psychological tests but measure different constructs, supporting clear discrimination for EPPP-level examinees.",
+      "lessonExcerpt": "**Vineland Adaptive Behavior Scales, 3rd Edition (Vineland-3)** assesses how well someone functions in daily life, from birth to age 90.",
+      "suggestedLesson": "5-sex-and-gender",
+      "needsReview": false
     },
     {
       "stem": "Which neuropsychological test includes subtests scored on a 3-point scale indicating normal, borderline, or impaired performance, with final scores converted to age- and education-based T scores?",
@@ -1942,7 +1345,10 @@
       "kn": "KN32",
       "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
       "difficulty": "medium",
-      "quality_comment": "Options include well-known neuropsych tests, requiring nuanced knowledge of scoring procedures to answer correctly."
+      "quality_comment": "Options include well-known neuropsych tests, requiring nuanced knowledge of scoring procedures to answer correctly.",
+      "lessonExcerpt": "**Luria-Nebraska Neuropsychological Battery** takes a different approach with 11 scales covering reading, writing, arithmetic, expressive language, receptive language, and intellectual functioning. Available for ages 8 and up, it uses a straightforward 3-point scoring system",
+      "suggestedLesson": "5-trauma-dissociation-somatic",
+      "needsReview": false
     },
     {
       "stem": "Which test is best suited for assessing visual perception, visual memory, and visuoconstructive abilities through reproduction of geometric figures from memory in individuals aged 8 and older?",
@@ -1957,7 +1363,10 @@
       "kn": "KN32",
       "kn_explanation": "This tests knowledge of specific neuropsychological instruments and their appropriate uses in assessing visual memory and perception (KN32).",
       "difficulty": "medium",
-      "quality_comment": "The question appropriately targets recognition of test purpose with distractors that assess different domains or ages."
+      "quality_comment": "The question appropriately targets recognition of test purpose with distractors that assess different domains or ages.",
+      "lessonExcerpt": "**Benton Visual Retention Test, 5th Edition (BVRT)** serves a similar purpose for ages 8 and up, focusing on visual perception, visual memory, and visuo-constructive skills.",
+      "suggestedLesson": "5-clinical-tests",
+      "needsReview": false
     },
     {
       "stem": "When administering the Stroop Color and Word Test, what cognitive ability is primarily being assessed?",
@@ -1972,22 +1381,10 @@
       "kn": "KN29",
       "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
       "difficulty": "medium",
-      "quality_comment": "This item clearly differentiates cognitive processes and highlights the underlying constructs assessed by the Stroop test."
-    },
-    {
-      "stem": "What does the Halstead Impairment Index specifically quantify in neuropsychological assessment?",
-      "options": [
-        "The ratio of impaired subtest performances to total subtests administered",
-        "The total number of cognitive symptoms reported by the patient",
-        "The severity of depressive symptoms during neurocognitive testing",
-        "The baseline intelligence quotient of the examinee"
-      ],
-      "answer": "The ratio of impaired subtest performances to total subtests administered",
-      "explanation": "The Halstead Impairment Index is calculated by dividing the number of impaired neuropsychological subtests by the total number administered, providing a quantitative severity estimate of brain dysfunction.",
-      "kn": "KN30",
-      "kn_explanation": "This question addresses the conceptual basis and calculation method of an assessment score, fitting assessment theories and models related to neuropsych testing (KN30).",
-      "difficulty": "medium",
-      "quality_comment": "The stem and options are concise and test precise knowledge about measure construction, helpful for deep understanding."
+      "quality_comment": "This item clearly differentiates cognitive processes and highlights the underlying constructs assessed by the Stroop test.",
+      "lessonExcerpt": "the Stroop Test evaluates cognitive flexibility, processing speed, selective attention, and response inhibition.",
+      "suggestedLesson": "5-anxiety-and-ocd",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best describes the clinical utility of the Vineland Adaptive Behavior Scales, 3rd Edition (Vineland-3) in assessment?",
@@ -2002,7 +1399,10 @@
       "kn": "KN32",
       "kn_explanation": "This question relates to the practical use of adaptive behavior measures in clinical assessment frameworks, matching the knowledge area on test applications (KN32).",
       "difficulty": "easy",
-      "quality_comment": "The item clearly contrasts different types of assessments, making it suitable for assessing real-world clinical decision-making knowledge."
+      "quality_comment": "The item clearly contrasts different types of assessments, making it suitable for assessing real-world clinical decision-making knowledge.",
+      "lessonExcerpt": "**Halstead-Reitan Neuropsychological Battery** is the comprehensive physical exam of brain function testing. Available for ages 5 and up, it evaluates memory, abstract reasoning, concentration, manual dexterity, and visual-motor integration.",
+      "suggestedLesson": "5-clinical-tests",
+      "needsReview": false
     },
     {
       "stem": "What is the primary aim of the Wechsler Adult Intelligence Scale (WAIS)?",
@@ -2022,7 +1422,10 @@
       "lock_in_level": "easier",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "| 0.5 to 0.7 | Moderate impairment |",
+      "suggestedLesson": "5-clinical-tests",
+      "needsReview": false
     },
     {
       "stem": "Which neuropsychological assessment is specifically focused on identifying deficits in executive functioning?",
@@ -2042,7 +1445,10 @@
       "lock_in_level": "harder",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "Instead of just recording whether someone got the answer right, it focuses on *how* they arrived at their answer. This qualitative approach means you might modify standardized tests on the fly",
+      "suggestedLesson": "5-clinical-tests",
+      "needsReview": false
     }
   ]
 }

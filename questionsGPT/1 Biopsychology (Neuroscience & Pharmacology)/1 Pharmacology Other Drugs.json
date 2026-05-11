@@ -16,7 +16,7 @@
       "quality_comment": "Clinically important misconception that is commonly tested on the EPPP. Tests critical thinking about the relationship between treatment response and diagnosis.",
       "suggestedLesson": "1-pharmacology-other-drugs",
       "suggestedParagraph": "## ADHD Medications: Stimulants and Beyond",
-      "lessonExcerpt": "Psychostimulants improve attention and reduce hyperactivity in most children, not just those with ADHD, so a positive response cannot be used to confirm an ADHD diagnosis.",
+      "lessonExcerpt": "**Worth noting:** Research shows that when people without ADHD use stimulants for cognitive enhancement, they may increase attention and positive mood but don't improve reading comprehension and may actually impair working memory and academic performance.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 8
@@ -37,7 +37,7 @@
       "quality_comment": "The lesson content mentions alcohol withdrawal in the context of benzodiazepine uses and barbiturate withdrawal causing seizures, delirium, and death, but The question draws on related content about withdrawal syndromes",
       "suggestedLesson": "1-pharmacology-other-drugs",
       "suggestedParagraph": "### Barbiturates: The Old Guard",
-      "lessonExcerpt": "Side effects mirror benzodiazepines: drowsiness, confusion, cognitive impairment, and paradoxical excitement. The danger level is higher, though. Sudden withdrawal can cause seizures, delirium, and de",
+      "lessonExcerpt": "Side effects mirror benzodiazepines: drowsiness, confusion, cognitive impairment, and paradoxical excitement. The danger level is higher, though. Sudden withdrawal can cause seizures, delirium, and death. Like benzodiazepines, mixing barbiturates with alcohol can be fatal.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 15
@@ -100,7 +100,7 @@
       "quality_comment": "Clinically practical question that integrates side effect knowledge across multiple drug classes. Distractors are well-chosen to represent medications with notably different cognitive side effect profiles.",
       "suggestedLesson": "1-pharmacology-other-drugs",
       "suggestedParagraph": "### Benzodiazepines: Fast Relief with a Catch",
-      "lessonExcerpt": "Common side effects of benzodiazepines include drowsiness, sedation, weakness, memory impairment, and confusion (especially in older adults).",
+      "lessonExcerpt": "Benzodiazepines include diazepam (Valium), alprazolam (Xanax), and lorazepam (Ativan). These drugs work by increasing GABA activity.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 10
@@ -140,9 +140,9 @@
       "kn_explanation": "This question is best aligned with KN2 because it tests Drug classification, mechanisms of action, and desired/adverse effects of therapeutic agents, drugs of abuse, and complementary or alternative agents.",
       "difficulty": "easy",
       "quality_comment": "Straightforward terminology question. Lesson content mentions these terms in the context of stimulant intoxication but does not provide detailed definitions in the primary lesson files.",
-      "suggestedLesson": "1-pharmacology-other-drugs",
+      "suggestedLesson": "1-hindbrain-midbrain-forebrain",
       "suggestedParagraph": "## Narcotic-Analgesics (Opioids): Pain Relief and Public Health Crisis",
-      "lessonExcerpt": "tachycardia (rapid heart rate) or bradycardia (slowed heart rate), changes in blood pressure, nausea or vomiting",
+      "lessonExcerpt": "The medulla (also called medulla oblongata) handles the functions you literally cannot live without: breathing, heart rate, and blood pressure. It also manages involuntary mouth and throat movements for swallowing, coughing, and sneezing.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 16
@@ -163,7 +163,7 @@
       "quality_comment": "The question effectively assesses understanding of drug tolerance concepts.",
       "suggestedLesson": "1-pharmacology-other-drugs",
       "suggestedParagraph": "## Narcotic-Analgesics (Opioids): Pain Relief and Public Health Crisis",
-      "lessonExcerpt": "Cross-tolerance occurs when tolerance to one drug reduces the effects of another drug that is similar in action.",
+      "lessonExcerpt": "**Cross-tolerance:** Tolerance to one drug creates tolerance to others in the same class. For example, alcohol tolerance produces tolerance to benzodiazepines and barbiturates because they're all central nervous system depressants.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 2
@@ -205,7 +205,7 @@
       "quality_comment": "The question is relevant and tests knowledge of medication side effects.",
       "suggestedLesson": "1-pharmacology-other-drugs",
       "suggestedParagraph": "## Sedatives, Hypnotics, and Anxiolytics: The Calming Agents",
-      "lessonExcerpt": "Common side effects of stimulant medications like Ritalin include insomnia.",
+      "lessonExcerpt": "Common side effects: insomnia, nervousness, decreased appetite, weight loss, abdominal pain. Stimulants can suppress growth in children, but \"drug holidays\" during school vacations can reverse this effect.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 6
@@ -226,7 +226,7 @@
       "quality_comment": "The question effectively tests knowledge of the risks of benzodiazepine use.",
       "suggestedLesson": "1-pharmacology-other-drugs",
       "suggestedParagraph": "## Benzodiazepines: Fast Relief with a Catch",
-      "lessonExcerpt": "Long-term use of benzodiazepines can lead to tolerance and dependence.",
+      "lessonExcerpt": "Benzodiazepines excel at reducing physical anxiety symptoms (racing heart, sweating, trembling) but don't do much for the cognitive symptoms (worried thoughts, rumination). They also come with significant risks: tolerance, physical dependence, and withdrawal problems.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 7
@@ -253,48 +253,6 @@
       "inspirationIndex": 14
     },
     {
-      "stem": "Which of the following is a contraindication for prescribing Ritalin in children diagnosed with ADHD?",
-      "options": [
-        "History of seizures",
-        "Mild anxiety",
-        "Low blood pressure",
-        "Poor academic performance"
-      ],
-      "answer": "History of seizures",
-      "explanation": "A history of seizures is a significant contraindication for prescribing Ritalin (methylphenidate), as it can exacerbate seizure activity. Mild anxiety, low blood pressure, and poor academic performance are not absolute contraindications.",
-      "kn": "KN2",
-      "kn_explanation": "This question is best aligned with KN2 because it tests Drug classification, mechanisms of action, and desired/adverse effects of therapeutic agents, drugs of abuse, and complementary or alternative agents.",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively tests knowledge of ADHD treatment considerations.",
-      "suggestedLesson": "1-pharmacology-other-drugs",
-      "suggestedParagraph": "## ADHD Medications",
-      "lessonExcerpt": "A history of seizures is a significant contraindication for prescribing Ritalin.",
-      "needsReview": false,
-      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 3
-    },
-    {
-      "stem": "Which medication is contraindicated for patients with alcohol use disorder?",
-      "options": [
-        "Disulfiram",
-        "Naltrexone",
-        "Acamprosate",
-        "Benzodiazepines"
-      ],
-      "answer": "Benzodiazepines",
-      "explanation": "Benzodiazepines are contraindicated in alcohol use disorder due to the risk of respiratory depression and increased sedation when combined with alcohol. The other medications listed are used to treat alcohol use disorder.",
-      "kn": "KN2",
-      "kn_explanation": "This question is best aligned with KN2 because it tests Drug classification, mechanisms of action, and desired/adverse effects of therapeutic agents, drugs of abuse, and complementary or alternative agents.",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively assesses knowledge of medication safety in substance use disorders.",
-      "suggestedLesson": "1-pharmacology-other-drugs",
-      "suggestedParagraph": "## Sedatives, Hypnotics, and Anxiolytics: The Calming Agents",
-      "lessonExcerpt": "Benzodiazepines are contraindicated in alcohol use disorder due to the risk of respiratory depression.",
-      "needsReview": false,
-      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 16
-    },
-    {
       "stem": "What is a common treatment approach for premature ejaculation?",
       "options": [
         "Cognitive-behavioral therapy",
@@ -310,31 +268,10 @@
       "quality_comment": "The question is relevant and addresses a common clinical issue.",
       "suggestedLesson": "1-pharmacology-other-drugs",
       "suggestedParagraph": "## Sedatives, Hypnotics, and Anxiolytics: The Calming Agents",
-      "lessonExcerpt": "SSRIs are used to treat premature ejaculation due to their effect on delaying orgasm.",
+      "lessonExcerpt": "**Common side effects** of benzodiazepines include drowsiness, sedation, weakness, memory impairment, and confusion (especially in older adults).",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 20
-    },
-    {
-      "stem": "What is the most appropriate medication for managing chronic pain in patients without Axis I disorders?",
-      "options": [
-        "A. Antidepressants",
-        "B. Opioids",
-        "C. Nonsteroidal anti-inflammatory drugs (NSAIDs)",
-        "D. Antipsychotics"
-      ],
-      "answer": "C. Nonsteroidal anti-inflammatory drugs (NSAIDs)",
-      "explanation": "NSAIDs are commonly used for chronic pain management, especially in patients without Axis I disorders. Opioids may be used but are typically reserved for more severe pain due to their risk of dependence. Antidepressants can be effective for certain types of pain but are not first-line for all chronic pain. Antipsychotics are not indicated for pain management.",
-      "kn": "KN2",
-      "kn_explanation": "This KN code applies as it pertains to pharmacological approaches to pain management.",
-      "difficulty": "hard",
-      "quality_comment": "The question is relevant and tests knowledge of appropriate medication choices in pain management.",
-      "suggestedLesson": "1-pharmacology-other-drugs",
-      "suggestedParagraph": "## Narcotic-Analgesics (Opioids): Pain Relief and Public Health Crisis",
-      "lessonExcerpt": "This category includes natural opioids (morphine, heroin, codeine) and synthetic versions (methadone, oxycodone, hydrocodone, fentanyl).",
-      "needsReview": false,
-      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 2
     },
     {
       "stem": "Which of the following is a common withdrawal symptom associated with opioid abuse?",
@@ -352,31 +289,10 @@
       "quality_comment": "The question is relevant and effectively tests knowledge of withdrawal symptoms from opioid abuse.",
       "suggestedLesson": "1-pharmacology-other-drugs",
       "suggestedParagraph": "## Narcotic-Analgesics (Opioids): Pain Relief and Public Health Crisis",
-      "lessonExcerpt": "Withdrawal symptoms start flu-like (runny nose, watery eyes, muscle aches, fever, yawning), then progress to more severe symptoms (insomnia, abdominal cramps, vomiting, diarrhea, rapid heartbeat, elevated blood pressure).",
+      "lessonExcerpt": "Here's the crucial comparison for the exam: **Benzodiazepines versus SSRIs/SNRIs for anxiety**. {{M}}Think of benzodiazepines as the fast-food option{{/M}}.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 5
-    },
-    {
-      "stem": "What is a common side effect of beta-blockers?",
-      "options": [
-        "A. Weight gain",
-        "B. Bradycardia",
-        "C. Insomnia",
-        "D. Increased anxiety"
-      ],
-      "answer": "B. Bradycardia",
-      "explanation": "Bradycardia, or a slower heart rate, is a common side effect of beta-blockers due to their action on the sympathetic nervous system. Weight gain is more associated with certain antipsychotics. Insomnia is not a typical side effect of beta-blockers, and increased anxiety is not a common effect; in fact, beta-blockers are used to reduce physical symptoms of anxiety.",
-      "kn": "KN2",
-      "kn_explanation": "This question is best aligned with KN2 because it tests Drug classification, mechanisms of action, and desired/adverse effects of therapeutic agents, drugs of abuse, and complementary or alternative agents.",
-      "difficulty": "medium",
-      "quality_comment": "The question is relevant and tests knowledge of the side effects of beta-blockers.",
-      "suggestedLesson": "1-pharmacology-other-drugs",
-      "suggestedParagraph": "## Beta-Blockers: Calming the Body's Alarm System",
-      "lessonExcerpt": "Beta-blockers like propranolol (Inderal) work by inhibiting sympathetic nervous system activity.",
-      "needsReview": false,
-      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 6
     },
     {
       "stem": "What is the primary purpose of stimulant medications prescribed for ADHD?",
@@ -394,7 +310,7 @@
       "quality_comment": "The question effectively assesses knowledge of ADHD treatment.",
       "suggestedLesson": "1-pharmacology-other-drugs",
       "suggestedParagraph": "## Sedatives, Hypnotics, and Anxiolytics: The Calming Agents",
-      "lessonExcerpt": "Stimulant medications are primarily prescribed to enhance attention and focus.",
+      "lessonExcerpt": "**Worth noting:** Research shows that when people without ADHD use stimulants for cognitive enhancement, they may increase attention and positive mood but don't improve reading comprehension and may actually impair working memory and academic performance.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 19
@@ -436,7 +352,7 @@
       "quality_comment": "Tests a commonly misunderstood clinical pharmacology concept; distractors address real misconceptions, including the false belief that calming effects are universal.",
       "suggestedLesson": "1-pharmacology-other-drugs",
       "suggestedParagraph": "## ADHD Medications",
-      "lessonExcerpt": "[The paradoxical calming effects of stimulants in children with ADHD versus the stimulant effects in neurotypical children are covered in the ADHD medications section — full content extends beyond the provided excerpt]",
+      "lessonExcerpt": "**Worth noting:** Research shows that when people without ADHD use stimulants for cognitive enhancement, they may increase attention and positive mood but don't improve reading comprehension and may actually impair working memory and academic performance.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 8
@@ -478,7 +394,7 @@
       "quality_comment": "Well-structured question; the SSRI distractor is an excellent foil as it is contraindicated—not merely less effective—in bipolar I, testing nuanced pharmacological reasoning",
       "suggestedLesson": "1-pharmacology-other-drugs",
       "suggestedParagraph": "## Mood Stabilizers",
-      "lessonExcerpt": "Content about lithium and mood stabilizers was in the truncated portion of the lesson file.",
+      "lessonExcerpt": "Methylphenidate (Ritalin, Concerta), pemoline (Cylert), and amphetamine-dextroamphetamine (Adderall) are the go-to medications for ADHD. They increase dopamine and norepinephrine activity in the prefrontal cortex, improving attention, concentration, and reducing hyperactivity and impulsivity.",
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 16
@@ -496,7 +412,10 @@
       "kn": "KN2",
       "kn_explanation": "This question focuses on drug mechanisms and clinical application of anxiolytics, which falls under drug classification, mechanisms of action, and therapeutic effects (KN2).",
       "difficulty": "medium",
-      "quality_comment": "The question clearly addresses a clinically important distinction; distractors include common misconceptions, making it an effective test of knowledge."
+      "quality_comment": "The question clearly addresses a clinically important distinction; distractors include common misconceptions, making it an effective test of knowledge.",
+      "lessonExcerpt": "| Feature | Benzodiazepines | SSRIs/SNRIs | |---------|----------------|-------------| | Onset | Fast (30-60 min) | Slow (2-4 weeks) | | Best for | Physical symptoms, acute anxiety | Cognitive symptoms, chronic anxiety | | Duration | Short-term | Long-term | | Dependence risk | High | Low |",
+      "suggestedLesson": "1-pharmacology-other-drugs",
+      "needsReview": false
     },
     {
       "stem": "A patient who has been on long-term alprazolam (Xanax) therapy wishes to discontinue use. What is the best approach to minimize withdrawal symptoms?",
@@ -511,7 +430,10 @@
       "kn": "KN2",
       "kn_explanation": "This question assesses knowledge of the pharmacological management and withdrawal characteristics of anxiolytic drugs, a key component of KN2.",
       "difficulty": "medium",
-      "quality_comment": "Options are phrased to target common clinical errors; the correct answer is clear and well justified, suitable for EPPP standards."
+      "quality_comment": "Options are phrased to target common clinical errors; the correct answer is clear and well justified, suitable for EPPP standards.",
+      "lessonExcerpt": "**Misconception #3:** \"All mood stabilizers work the same way.\" **Reality:** Lithium, anticonvulsants, and some atypical antipsychotics are all used as mood stabilizers, but they have different mechanisms, side effect profiles, and monitoring requirements.",
+      "suggestedLesson": "1-pharmacology-other-drugs",
+      "needsReview": false
     },
     {
       "stem": "Which side effect is most characteristic of barbiturate use and warrants caution due to its severity?",
@@ -526,7 +448,10 @@
       "kn": "KN2",
       "kn_explanation": "This question tests knowledge of drug adverse effects and risks associated with sedative-hypnotic barbiturates, core content in KN2.",
       "difficulty": "medium",
-      "quality_comment": "Distractors reflect side effects of related drug classes, increasing the plausibility and discriminative quality of the item."
+      "quality_comment": "Distractors reflect side effects of related drug classes, increasing the plausibility and discriminative quality of the item.",
+      "lessonExcerpt": "| Feature | Benzodiazepines | SSRIs/SNRIs | |---------|----------------|-------------| | Onset | Fast (30-60 min) | Slow (2-4 weeks) | | Best for | Physical symptoms, acute anxiety | Cognitive symptoms, chronic anxiety | | Duration | Short-term | Long-term | | Dependence risk | High | Low |",
+      "suggestedLesson": "1-pharmacology-other-drugs",
+      "needsReview": false
     },
     {
       "stem": "Which anxiolytic drug is preferred when sedation, tolerance, and dependence are significant clinical concerns?",
@@ -541,7 +466,10 @@
       "kn": "KN2",
       "kn_explanation": "The question focuses on pharmacological properties distinguishing anxiolytic agents, specifically drug side effect profiles, which aligns with KN2.",
       "difficulty": "easy",
-      "quality_comment": "The concise options contrast well-known drugs with a unique alternative, facilitating clear differentiation for examinees."
+      "quality_comment": "The concise options contrast well-known drugs with a unique alternative, facilitating clear differentiation for examinees.",
+      "lessonExcerpt": "**Nicotine replacement therapy (NRT):** Provides stable low levels of nicotine to prevent withdrawal symptoms that trigger relapse. {{M}}It's like gradually stepping down from a high-caffeine habit by switching to progressively weaker coffee rather than quitting cold turkey.{{/M}}",
+      "suggestedLesson": "1-pharmacology-other-drugs",
+      "needsReview": false
     },
     {
       "stem": "Methadone is primarily used in the treatment of which condition and why?",
@@ -556,7 +484,10 @@
       "kn": "KN2",
       "kn_explanation": "This item assesses understanding of opioid pharmacotherapy in substance use disorders, a drug mechanism and clinical application topic in KN2.",
       "difficulty": "medium",
-      "quality_comment": "Distractors are plausible drugs but irrelevant for the treatment described, maintaining focus on opioid pharmacology."
+      "quality_comment": "Distractors are plausible drugs but irrelevant for the treatment described, maintaining focus on opioid pharmacology.",
+      "lessonExcerpt": "Side effects mirror benzodiazepines: drowsiness, confusion, cognitive impairment, and paradoxical excitement. The danger level is higher, though. Sudden withdrawal can cause seizures, delirium, and death. Like benzodiazepines, mixing barbiturates with alcohol can be fatal.",
+      "suggestedLesson": "1-pharmacology-other-drugs",
+      "needsReview": false
     },
     {
       "stem": "Propranolol is sometimes used to treat anxiety because it primarily reduces which type of symptoms?",
@@ -571,7 +502,10 @@
       "kn": "KN2",
       "kn_explanation": "This item evaluates knowledge of pharmacodynamic effects of beta-blockers in anxiety treatment, consistent with drug classification and effects in KN2.",
       "difficulty": "easy",
-      "quality_comment": "The stem clearly directs attention to symptom types; distractors represent other symptom domains to challenge the examinee's precision."
+      "quality_comment": "The stem clearly directs attention to symptom types; distractors represent other symptom domains to challenge the examinee's precision.",
+      "lessonExcerpt": "Barbiturates like thiopental (Pentothal) and secobarbital (Seconal) also enhance GABA activity. They're less commonly prescribed today because they're more dangerous than benzodiazepines. They're used as general anesthetics and for treating anxiety, insomnia, and seizures.",
+      "suggestedLesson": "1-pharmacology-other-drugs",
+      "needsReview": false
     },
     {
       "stem": "Which of the following statements best characterizes the drug half-life and its importance in medication management?",
@@ -586,7 +520,10 @@
       "kn": "KN2",
       "kn_explanation": "This question assesses foundational pharmacokinetic concepts relevant to drug action and dosing, a key pharmacological principle in KN2.",
       "difficulty": "medium",
-      "quality_comment": "Distractors include common misconceptions, but the correct answer is clearly stated, testing critical pharmacological knowledge."
+      "quality_comment": "Distractors include common misconceptions, but the correct answer is clearly stated, testing critical pharmacological knowledge.",
+      "lessonExcerpt": "**Clinical uses:** pre-surgery anesthetic, pain management, and heroin detoxification (methadone). Methadone works by reducing heroin cravings and withdrawal symptoms without producing heroin's euphoric effects.",
+      "suggestedLesson": "1-pharmacology-other-drugs",
+      "needsReview": false
     },
     {
       "stem": "A drug with a narrow therapeutic window is characterized by which of the following?",
@@ -601,7 +538,10 @@
       "kn": "KN2",
       "kn_explanation": "Understanding therapeutic index and drug safety is fundamental to pharmacology, which fits well within KN2’s scope of drug classification and safety.",
       "difficulty": "medium",
-      "quality_comment": "Options contrast safety profiles effectively, and the correct answer requires integration of pharmacological concepts."
+      "quality_comment": "Options contrast safety profiles effectively, and the correct answer requires integration of pharmacological concepts.",
+      "lessonExcerpt": "- **Beta-blockers** (especially propranolol) reduce physical anxiety symptoms better than psychological symptoms. Think performance anxiety. Require tapering, not abrupt discontinuation.",
+      "suggestedLesson": "1-pharmacology-other-drugs",
+      "needsReview": false
     },
     {
       "stem": "For managing ADHD symptoms in a patient who cannot tolerate stimulant side effects, which medication is considered a second-line treatment option?",
@@ -616,7 +556,10 @@
       "kn": "KN2",
       "kn_explanation": "This question targets knowledge about pharmacological treatment alternatives for ADHD, an important clinical drug application in KN2.",
       "difficulty": "medium",
-      "quality_comment": "The options include well-known stimulants and nonstimulants; the question is clear and discriminates well among medications."
+      "quality_comment": "The options include well-known stimulants and nonstimulants; the question is clear and discriminates well among medications.",
+      "lessonExcerpt": "The half-life is the time needed for blood levels to decrease to 50% of peak levels. This determines dosing intervals. Short half-life means more frequent doses, and vice versa.",
+      "suggestedLesson": "1-pharmacology-other-drugs",
+      "needsReview": false
     },
     {
       "stem": "Which of the following drugs is FDA approved for slowing progression in moderate to severe Alzheimer's disease and exerts its effects potentially by regulating glutamate activity?",
@@ -631,7 +574,10 @@
       "kn": "KN2",
       "kn_explanation": "This assesses knowledge of Alzheimer's pharmacotherapy and drug mechanisms outside classical neurotransmitter systems, fitting in KN2.",
       "difficulty": "hard",
-      "quality_comment": "Options are all cholinesterase inhibitors except memantine, challenging examinees to recall specific drug mechanisms."
+      "quality_comment": "Options are all cholinesterase inhibitors except memantine, challenging examinees to recall specific drug mechanisms.",
+      "lessonExcerpt": "- **Lithium** is first-line for classic bipolar disorder but has a narrow therapeutic window requiring regular blood level monitoring to avoid toxicity.",
+      "suggestedLesson": "1-pharmacology-other-drugs",
+      "needsReview": false
     },
     {
       "stem": "Which of the following is a common side effect of psychostimulant medications used for ADHD in children?",
@@ -646,7 +592,10 @@
       "kn": "KN2",
       "kn_explanation": "This question targets knowledge about side effect profiles of stimulant treatments for ADHD, focusing on clinical pharmacology in KN2.",
       "difficulty": "easy",
-      "quality_comment": "Clear and straightforward, with plausible distractors reflecting other drug side effects, appropriate for standard testing."
+      "quality_comment": "Clear and straightforward, with plausible distractors reflecting other drug side effects, appropriate for standard testing.",
+      "lessonExcerpt": "**Atomoxetine (Strattera):** A norepinephrine reuptake inhibitor and the most common nonstimulant for ADHD. More effective than stimulants for patients with comorbid tic disorders, sleep disorders, anxiety, or depression.",
+      "suggestedLesson": "1-pharmacology-other-drugs",
+      "needsReview": false
     },
     {
       "stem": "In terms of pharmacological treatment of tobacco use disorder, which medication is known to reduce both nicotine craving and withdrawal symptoms and was originally developed as an antidepressant?",
@@ -661,7 +610,10 @@
       "kn": "KN2",
       "kn_explanation": "This question assesses pharmacological interventions for substance use disorders, an essential part of KN2's drug mechanism and treatment focus.",
       "difficulty": "medium",
-      "quality_comment": "Options cover a range of substances and medications associated with addiction treatment, effectively challenging knowledge."
+      "quality_comment": "Options cover a range of substances and medications associated with addiction treatment, effectively challenging knowledge.",
+      "lessonExcerpt": "**NMDA receptor antagonists** like memantine (Namenda) are approved for moderate to severe Alzheimer's disease. Memantine works by regulating glutamate activity.",
+      "suggestedLesson": "1-pharmacology-other-drugs",
+      "needsReview": false
     },
     {
       "stem": "Which neurotransmitter system is primarily affected by benzodiazepines to produce their anxiolytic and sedative effects?",
@@ -676,7 +628,10 @@
       "kn": "KN2",
       "kn_explanation": "Understanding the mechanism of benzodiazepines involves knowledge of neurotransmitter systems, a fundamental topic in KN2.",
       "difficulty": "easy",
-      "quality_comment": "Very clear question focusing on core pharmacological mechanisms with plausible distractors, appropriate for the EPPP."
+      "quality_comment": "Very clear question focusing on core pharmacological mechanisms with plausible distractors, appropriate for the EPPP.",
+      "lessonExcerpt": "Common side effects: insomnia, nervousness, decreased appetite, weight loss, abdominal pain. Stimulants can suppress growth in children, but \"drug holidays\" during school vacations can reverse this effect.",
+      "suggestedLesson": "1-pharmacology-other-drugs",
+      "needsReview": false
     },
     {
       "stem": "Which pharmacological property best explains the need for “drug holidays” in children treated with psychostimulants for ADHD?",
@@ -691,7 +646,10 @@
       "kn": "KN2",
       "kn_explanation": "This question highlights an important clinical pharmacological consideration related to ADHD medications and their side effects, fitting within drug effects and management (KN2).",
       "difficulty": "medium",
-      "quality_comment": "The question addresses a clinically relevant concept that may be overlooked; options are plausible and test understanding of side effects versus pharmacokinetics."
+      "quality_comment": "The question addresses a clinically relevant concept that may be overlooked; options are plausible and test understanding of side effects versus pharmacokinetics.",
+      "lessonExcerpt": "**Bupropion:** Originally an antidepressant, also reduces nicotine craving and withdrawal symptoms.",
+      "suggestedLesson": "1-pharmacology-other-drugs",
+      "needsReview": false
     },
     {
       "stem": "Which class of psychoactive drugs is known to produce paradoxical excitability or increased anxiety, especially in children and older adults?",
@@ -706,7 +664,10 @@
       "kn": "KN2",
       "kn_explanation": "This item addresses drug side effect profiles, specifically paradoxical reactions to benzodiazepines, a relevant topic in drug action and adverse effects (KN2).",
       "difficulty": "medium",
-      "quality_comment": "The question targets a nuanced side effect, helping discriminate knowledgeable examinees; distractors are related drug classes for strong content validity."
+      "quality_comment": "The question targets a nuanced side effect, helping discriminate knowledgeable examinees; distractors are related drug classes for strong content validity.",
+      "lessonExcerpt": "Benzodiazepines include diazepam (Valium), alprazolam (Xanax), and lorazepam (Ativan). These drugs work by increasing GABA activity.",
+      "suggestedLesson": "1-pharmacology-other-drugs",
+      "needsReview": false
     },
     {
       "stem": "What is the major pharmacological action of beta-blockers such as propranolol when used to reduce anxiety symptoms?",
@@ -721,7 +682,10 @@
       "kn": "KN2",
       "kn_explanation": "This question assesses understanding of the pharmacodynamics of beta-blockers in anxiety treatment, consistent with drug mechanism knowledge in KN2.",
       "difficulty": "medium",
-      "quality_comment": "The options provide plausible pharmacological actions, requiring precise knowledge of adrenergic receptor pharmacology."
+      "quality_comment": "The options provide plausible pharmacological actions, requiring precise knowledge of adrenergic receptor pharmacology.",
+      "lessonExcerpt": "Common side effects: insomnia, nervousness, decreased appetite, weight loss, abdominal pain. Stimulants can suppress growth in children, but \"drug holidays\" during school vacations can reverse this effect.",
+      "suggestedLesson": "1-pharmacology-other-drugs",
+      "needsReview": false
     },
     {
       "stem": "What is a primary reason benzodiazepines are often preferred for acute anxiety episodes over other medications?",
@@ -741,7 +705,10 @@
       "lock_in_level": "easier",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "Side effects mirror benzodiazepines: drowsiness, confusion, cognitive impairment, and paradoxical excitement. The danger level is higher, though. Sudden withdrawal can cause seizures, delirium, and death. Like benzodiazepines, mixing barbiturates with alcohol can be fatal.",
+      "suggestedLesson": "1-pharmacology-other-drugs",
+      "needsReview": false
     },
     {
       "stem": "In the context of treating panic attacks, which of the following statements accurately reflects a significant benefit of using benzodiazepines?",
@@ -761,7 +728,10 @@
       "lock_in_level": "harder",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "Beta-blockers like propranolol (Inderal) work by inhibiting sympathetic nervous system activity. Primary uses include hypertension, cardiac arrhythmias, migraines, and essential tremor.",
+      "suggestedLesson": "1-pharmacology-other-drugs",
+      "needsReview": false
     }
   ]
 }

@@ -16,7 +16,7 @@
       "quality_comment": "Strong question with clear lesson support differentiating flextime from compressed workweek outcomes.",
       "suggestedLesson": "6-how-orgs-change",
       "suggestedParagraph": "### Technostructural Interventions",
-      "lessonExcerpt": "Flextime: Strongest effect on reducing absenteeism; weakest effect on self-rated performance; beneficial for job satisfaction... compressed workweeks boost satisfaction most, while flextime reduces absenteeism most.",
+      "lessonExcerpt": "| Flextime | Fixed total hours and core time (e.g., 10am-2pm) but flexible start/end times | Strongest effect on reducing absenteeism; weakest effect on self-rated performance; beneficial for job satisfaction |",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
       "inspirationIndex": 16
@@ -55,7 +55,10 @@
       "kn": "KN42",
       "kn_explanation": "This question is best aligned with KN42 because it tests Factors related to treatment or intervention decision-making (e.g., relevant research, matching treatment to assessment/diagnosis, matching client or patient with psychologist characteristics, knowledge and use of allied services, cost and benefit, readiness to change).",
       "difficulty": "medium",
-      "quality_comment": "The question clearly assesses knowledge of foundational change theory, with plausible distractors that test differentiation of model stages."
+      "quality_comment": "The question clearly assesses knowledge of foundational change theory, with plausible distractors that test differentiation of model stages.",
+      "lessonExcerpt": "**Unfreezing** is about disrupting the status quo. Before any real change can happen, you need to shake people out of their comfortable routines. This means identifying what's keeping things stuck (resistances) and reducing those forces while simultaneously increasing the forces pushing for change.",
+      "suggestedLesson": "6-how-orgs-change",
+      "needsReview": false
     },
     {
       "stem": "During which phase of Cummings and Worley’s general model of planned change does the OD consultant work with organization members to reach an agreement on expectations and develop a contractual arrangement?",
@@ -70,7 +73,10 @@
       "kn": "KN46",
       "kn_explanation": "This question focuses on organizational development consultation models and processes involving collaboration and contracting, fitting within interventions with systems (KN46).",
       "difficulty": "medium",
-      "quality_comment": "Distractors are distinct phases of planned change, requiring the test taker to have precise knowledge of the timing and activities for each stage."
+      "quality_comment": "Distractors are distinct phases of planned change, requiring the test taker to have precise knowledge of the timing and activities for each stage.",
+      "lessonExcerpt": "### Phase 1: Entering and Contracting\n\nThis is where the organization realizes it has a problem and brings in help. Key activities include:\n\n- Identifying the core issues that need addressing\n- Determining who needs to be involved in solving them\n- Selecting an OD practitioner (consultant)\n- Establishing a collaborative relationship\n- Creating a contract that specifies expectations and working relationships",
+      "suggestedLesson": "6-how-orgs-change",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best describes the role of a process consultant in organizational development?",
@@ -85,7 +91,10 @@
       "kn": "KN46",
       "kn_explanation": "The question addresses a specific OD method focused on enhancing organizational functioning and self-management, making it relevant to interventions with organizations (KN46).",
       "difficulty": "medium",
-      "quality_comment": "The options include common misconceptions about consultation, enhancing the discriminative quality of the question."
+      "quality_comment": "The options include common misconceptions about consultation, enhancing the discriminative quality of the question.",
+      "lessonExcerpt": "Here's what makes it unique: the process consultant doesn't provide answers or solutions. Instead, they help the organization develop the capacity to diagnose and solve its own problems.",
+      "suggestedLesson": "6-how-orgs-change",
+      "needsReview": false
     },
     {
       "stem": "What is a key characteristic of self-managed work teams (SMWTs)?",
@@ -100,7 +109,10 @@
       "kn": "KN46",
       "kn_explanation": "This question tests knowledge of team structures and their roles in organizational development and performance, a topic covered under organizational interventions (KN46).",
       "difficulty": "easy",
-      "quality_comment": "Clear stem and well-balanced options make this suitable for testing basic knowledge of SMWTs."
+      "quality_comment": "Clear stem and well-balanced options make this suitable for testing basic knowledge of SMWTs.",
+      "lessonExcerpt": "These are groups with complete responsibility and control over their work, including budgets, task assignments, work methods, schedules, hiring, training, and performance appraisal. There's no supervisor in the traditional sense",
+      "suggestedLesson": "6-how-orgs-change",
+      "needsReview": false
     },
     {
       "stem": "Which technostructural intervention involves radically redesigning core business processes to achieve dramatic improvements in efficiency?",
@@ -115,7 +127,10 @@
       "kn": "KN46",
       "kn_explanation": "This item concerns interventions focused on structural and technological changes in organizations to enhance effectiveness, aligning it with organizational development interventions (KN46).",
       "difficulty": "medium",
-      "quality_comment": "Distractors are related OD concepts of similar length and detail, challenging test takers’ knowledge of specific intervention types."
+      "quality_comment": "Distractors are related OD concepts of similar length and detail, challenging test takers’ knowledge of specific intervention types.",
+      "lessonExcerpt": "**Business Process Reengineering (BPR)** involves radically redesigning core organizational processes like financial systems and communication channels. It's not about tweaking. It's about fundamental reconstruction for dramatic efficiency gains.",
+      "suggestedLesson": "6-how-orgs-change",
+      "needsReview": false
     },
     {
       "stem": "Research examining the compressed workweek has found it to have which of the following effects?",
@@ -130,7 +145,10 @@
       "kn": "KN46",
       "kn_explanation": "Knowledge of research-based effects of alternative work schedules on organizational outcomes corresponds to interventions aimed at improving work conditions and employee motivation (KN46).",
       "difficulty": "hard",
-      "quality_comment": "This question requires recall of nuanced research findings, demanding careful reading of each option’s details."
+      "quality_comment": "This question requires recall of nuanced research findings, demanding careful reading of each option’s details.",
+      "lessonExcerpt": "| Compressed Workweek | Fewer days with longer hours (e.g., four 10-hour days) | Strong positive effect on job satisfaction; positive but weaker effect on productivity; unclear effects on absenteeism |",
+      "suggestedLesson": "6-how-orgs-change",
+      "needsReview": false
     },
     {
       "stem": "In Total Quality Management (TQM), which technique involves small groups of employees volunteering to identify quality problems and suggest solutions?",
@@ -145,7 +163,10 @@
       "kn": "KN46",
       "kn_explanation": "Understanding the components and techniques of TQM as part of organizational improvement processes falls within the domain of system-level interventions (KN46).",
       "difficulty": "medium",
-      "quality_comment": "Options are all valid organizational techniques, making this a plausible and fair test of knowledge specificity."
+      "quality_comment": "Options are all valid organizational techniques, making this a plausible and fair test of knowledge specificity.",
+      "lessonExcerpt": "**Quality Circles (QCs)** are small volunteer groups that meet regularly to identify and solve quality and productivity problems.",
+      "suggestedLesson": "6-how-orgs-change",
+      "needsReview": false
     },
     {
       "stem": "What is the primary purpose of a program logic model in organizational program planning?",
@@ -160,7 +181,10 @@
       "kn": "KN42",
       "kn_explanation": "This question is best aligned with KN42 because it tests Factors related to treatment or intervention decision-making (e.g., relevant research, matching treatment to assessment/diagnosis, matching client or patient with psychologist characteristics, knowledge and use of allied services, cost and benefit, readiness to change).",
       "difficulty": "medium",
-      "quality_comment": "The distractors are plausible but clearly distinct from the definition, helping assess understanding of program logic models."
+      "quality_comment": "The distractors are plausible but clearly distinct from the definition, helping assess understanding of program logic models.",
+      "lessonExcerpt": "Think of it as a roadmap showing how your program will get from identifying a need to achieving results. It's typically displayed as a flowchart with arrows connecting components to show causal relationships.",
+      "suggestedLesson": "6-how-orgs-change",
+      "needsReview": false
     },
     {
       "stem": "Which of the following phases is NOT part of the '4D cycle' in Appreciative Inquiry?",
@@ -175,7 +199,10 @@
       "kn": "KN46",
       "kn_explanation": "The question covers a positive organizational development approach focused on change methodology, fitting under organizational interventions (KN46).",
       "difficulty": "medium",
-      "quality_comment": "Options are similar in wording and related to different phases or approaches, effectively testing recognition of model components."
+      "quality_comment": "Options are similar in wording and related to different phases or approaches, effectively testing recognition of model components.",
+      "lessonExcerpt": "| Discovery | Appreciate \"what is\" | What are our current strengths? |\n| Dream | Envision \"what could be\" | What's our ideal future? |\n| Design | Determine \"what should be\" | What structures will get us there? |\n| Delivery/Destiny | Sustain \"what will be\" | How do we maintain progress? |",
+      "suggestedLesson": "6-how-orgs-change",
+      "needsReview": false
     },
     {
       "stem": "Which component of a program logic model includes the human, financial, and organizational resources needed to support the program?",
@@ -190,7 +217,10 @@
       "kn": "KN42",
       "kn_explanation": "This question is best aligned with KN42 because it tests Factors related to treatment or intervention decision-making (e.g., relevant research, matching treatment to assessment/diagnosis, matching client or patient with psychologist characteristics, knowledge and use of allied services, cost and benefit, readiness to change).",
       "difficulty": "easy",
-      "quality_comment": "Clear definitions make the question straightforward but effective for foundational knowledge assessment."
+      "quality_comment": "Clear definitions make the question straightforward but effective for foundational knowledge assessment.",
+      "lessonExcerpt": "**Inputs** are the resources needed to support your program: people, money, organizational support, community resources, data sources, and funding.",
+      "suggestedLesson": "6-how-orgs-change",
+      "needsReview": false
     },
     {
       "stem": "Which method involves collecting employee feedback via surveys, sharing the summary results with employees, and collaboratively developing an action plan?",
@@ -205,7 +235,10 @@
       "kn": "KN46",
       "kn_explanation": "This question focuses on specific OD methods aimed at improving organizational climate and effectiveness, tied to intervention strategies (KN46).",
       "difficulty": "medium",
-      "quality_comment": "All options are valid OD methods, making the question a fair test differentiating their key characteristics."
+      "quality_comment": "All options are valid OD methods, making the question a fair test differentiating their key characteristics.",
+      "lessonExcerpt": "1. **Collect data**: Employees at all levels complete surveys about attitudes, perceptions, and opinions regarding work conditions, supervision, policies, and other issues\n2. **Provide feedback**: Results are summarized and shared so everyone understands current strengths and weaknesses\n3. **Develop action plan**: Employees offer recommendations, and management creates a plan",
+      "suggestedLesson": "6-how-orgs-change",
+      "needsReview": false
     },
     {
       "stem": "In the context of Organizational Development, 'job enrichment' primarily aims to:",
@@ -220,7 +253,10 @@
       "kn": "KN46",
       "kn_explanation": "This question involves a motivational approach within technostructural interventions aimed at improving job content and employee satisfaction (KN46).",
       "difficulty": "medium",
-      "quality_comment": "Distractors represent other work redesign strategies but differ distinctly from job enrichment, encouraging nuanced understanding."
+      "quality_comment": "Distractors represent other work redesign strategies but differ distinctly from job enrichment, encouraging nuanced understanding.",
+      "lessonExcerpt": "**Job Enrichment**, originally described by Herzberg in 1966, means designing jobs to include more responsibility, challenge, advancement opportunities, and other motivating factors that increase satisfaction and drive.",
+      "suggestedLesson": "6-how-orgs-change",
+      "needsReview": false
     },
     {
       "stem": "Which aspect of organizational change and development is most directly supported by the use of a program logic model?",
@@ -235,7 +271,10 @@
       "kn": "KN46",
       "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
       "difficulty": "medium",
-      "quality_comment": "The question clearly distinguishes the unique role of logic models, avoiding confusion with other organizational development methods."
+      "quality_comment": "The question clearly distinguishes the unique role of logic models, avoiding confusion with other organizational development methods.",
+      "lessonExcerpt": "Think of it as a roadmap showing how your program will get from identifying a need to achieving results. It's typically displayed as a flowchart with arrows connecting components to show causal relationships.",
+      "suggestedLesson": "6-how-orgs-change",
+      "needsReview": false
     },
     {
       "stem": "In the general model of planned change by Cummings and Worley, which phase primarily focuses on assessing organizational readiness to change and planning interventions?",
@@ -250,7 +289,10 @@
       "kn": "KN42",
       "kn_explanation": "This question is best aligned with KN42 because it tests Factors related to treatment or intervention decision-making (e.g., relevant research, matching treatment to assessment/diagnosis, matching client or patient with psychologist characteristics, knowledge and use of allied services, cost and benefit, readiness to change).",
       "difficulty": "medium",
-      "quality_comment": "Options correspond to distinct phases of change, requiring detailed knowledge of the model’s stages."
+      "quality_comment": "Options correspond to distinct phases of change, requiring detailed knowledge of the model’s stages.",
+      "lessonExcerpt": "### Phase 3: Planning and Implementing\n\nThis is where things get real. The phase includes several critical activities:\n\n- Assessing readiness for change (are people actually prepared for this?)",
+      "suggestedLesson": "6-how-orgs-change",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best exemplifies an outcome in a program logic model for an employee wellness program?",
@@ -265,7 +307,10 @@
       "kn": "KN42",
       "kn_explanation": "This question is best aligned with KN42 because it tests Factors related to treatment or intervention decision-making (e.g., relevant research, matching treatment to assessment/diagnosis, matching client or patient with psychologist characteristics, knowledge and use of allied services, cost and benefit, readiness to change).",
       "difficulty": "easy",
-      "quality_comment": "The options contrast tangible resources and products with actual benefits, helping test comprehension of evaluation terminology."
+      "quality_comment": "The options contrast tangible resources and products with actual benefits, helping test comprehension of evaluation terminology.",
+      "lessonExcerpt": "**Outcomes** are the changes or benefits expected from your activities and outputs.",
+      "suggestedLesson": "6-how-orgs-change",
+      "needsReview": false
     },
     {
       "stem": "In the context of Lewin's change model, what is the main objective during the 'unfreezing' phase?",
@@ -285,7 +330,10 @@
       "lock_in_level": "easier",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "**Unfreezing** is about disrupting the status quo. Before any real change can happen, you need to shake people out of their comfortable routines.",
+      "suggestedLesson": "6-how-orgs-change",
+      "needsReview": false
     },
     {
       "stem": "Which of the following actions best exemplifies the 'unfreezing' stage in Lewin's model of change?",
@@ -305,7 +353,10 @@
       "lock_in_level": "harder",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "**Unfreezing** is about disrupting the status quo. Before any real change can happen, you need to shake people out of their comfortable routines. This means identifying what's keeping things stuck (resistances) and reducing those forces while simultaneously increasing the forces pushing for change.",
+      "suggestedLesson": "6-how-orgs-change",
+      "needsReview": false
     }
   ]
 }

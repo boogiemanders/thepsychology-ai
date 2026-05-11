@@ -100,7 +100,7 @@
       "quality_comment": "Directly tests the distinction between higher-order conditioning and stimulus generalization—a common EPPP confusion point—using a concrete experimental scenario.",
       "suggestedLesson": "2-pavlov-and-classical-conditioning",
       "suggestedParagraph": "### Higher-Order Conditioning: Chaining Responses",
-      "lessonExcerpt": "Once you've established a CS, you can use it like a US to condition yet another neutral stimulus. This is higher-order conditioning (also called second-order conditioning when it involves two stimuli, third-order when it involves three, and so on).",
+      "lessonExcerpt": "In higher-order conditioning, a CS is treated as if it were a US and paired with a new neutral stimulus. This allows conditioning to spread without ever presenting the original US again.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 24
@@ -121,7 +121,7 @@
       "quality_comment": "The question is challenging and requires a deep understanding of classical conditioning.",
       "suggestedLesson": "2-pavlov-and-classical-conditioning",
       "suggestedParagraph": "## The Foundation: Pavlov's Discovery",
-      "lessonExcerpt": "Classical conditioning explains involuntary, automatic responses.",
+      "lessonExcerpt": "Conditioned Response (CR): This is the learned response to the CS.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 12
@@ -163,7 +163,7 @@
       "quality_comment": "The question is well-structured and tests a nuanced understanding of conditioning concepts.",
       "suggestedLesson": "2-pavlov-and-classical-conditioning",
       "suggestedParagraph": "## What Happens After Conditioning: Important Processes",
-      "lessonExcerpt": "Higher-order conditioning involves a new conditioned stimulus being paired with an existing conditioned response.",
+      "lessonExcerpt": "Stimulus generalization occurs when stimuli similar to the original CS also elicit the CR, even though they were never paired with the US.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 24
@@ -184,7 +184,7 @@
       "quality_comment": "The question is straightforward and tests foundational knowledge of classical conditioning.",
       "suggestedLesson": "2-pavlov-and-classical-conditioning",
       "suggestedParagraph": "## The Foundation: Pavlov's Discovery",
-      "lessonExcerpt": "Classical conditioning involves learning through the association of a neutral stimulus with an unconditioned stimulus.",
+      "lessonExcerpt": "Conditioned Stimulus (CS): After repeated pairings with the US, the neutral stimulus becomes a CS. It now triggers a response on its own.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 6
@@ -268,7 +268,7 @@
       "quality_comment": "Scenario carefully constructs the necessary conditions for higher-order conditioning and provides plausible distractors that require precise conceptual differentiation.",
       "suggestedLesson": "2-pavlov-and-classical-conditioning",
       "suggestedParagraph": "## What Happens After Conditioning: Important Processes",
-      "lessonExcerpt": "The provided file was truncated before reaching the higher-order conditioning section. The foundational conditioning procedures and post-conditioning processes are established in the lesson, but the specific higher-order conditioning subsection was not available in the excerpt provided.",
+      "lessonExcerpt": "In higher-order conditioning, a CS is treated as if it were a US and paired with a new neutral stimulus. After a bell becomes a CS that produces salivation, you can pair that bell with a light. Eventually, the light alone will produce salivation.",
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 18
@@ -328,7 +328,10 @@
       "kn": "KN7",
       "kn_explanation": "This question tests knowledge of conditioning procedures within classical learning theories, which is central to the major research-based theories and principles of learning (KN7).",
       "difficulty": "medium",
-      "quality_comment": "The question clearly distinguishes between different conditioning paradigms with plausible distractors, aiding test-takers in distinguishing procedural differences."
+      "quality_comment": "The question clearly distinguishes between different conditioning paradigms with plausible distractors, aiding test-takers in distinguishing procedural differences.",
+      "lessonExcerpt": "Delay Conditioning | CS starts, then US appears while CS is still present (they overlap) | MOST EFFECTIVE, especially with about 0.5 second delay",
+      "suggestedLesson": "2-pavlov-and-classical-conditioning",
+      "needsReview": false
     },
     {
       "stem": "Which phenomenon occurs when a previously extinguished conditioned response (CR) reappears after a rest period without further conditioning?",
@@ -343,7 +346,10 @@
       "kn": "KN7",
       "kn_explanation": "Spontaneous recovery is a key concept in learning theory relating to how conditioned responses change over time, fitting under major theories of learning (KN7).",
       "difficulty": "easy",
-      "quality_comment": "This straightforward question effectively distinguishes key classical conditioning terms, with distractors that are often confused concepts, making it a solid foundational question."
+      "quality_comment": "This straightforward question effectively distinguishes key classical conditioning terms, with distractors that are often confused concepts, making it a solid foundational question.",
+      "lessonExcerpt": "Even after a CR appears completely extinguished, if you wait a while and then present the CS again, the CR often returns. Though in a weaker form. Pavlov called this spontaneous recovery.",
+      "suggestedLesson": "2-pavlov-and-classical-conditioning",
+      "needsReview": false
     },
     {
       "stem": "In Pavlov's classical conditioning studies, the phenomenon where a dog salivates in response to tones similar but not identical to the conditioned stimulus tone is called:",
@@ -358,7 +364,10 @@
       "kn": "KN7",
       "kn_explanation": "Understanding generalization and discrimination of stimuli is fundamental to learning theory, situated in models and principles of learning (KN7).",
       "difficulty": "medium",
-      "quality_comment": "The question targets understanding of different stimulus-response phenomena in classical conditioning with well-balanced answer choices."
+      "quality_comment": "The question targets understanding of different stimulus-response phenomena in classical conditioning with well-balanced answer choices.",
+      "lessonExcerpt": "Stimulus generalization occurs when stimuli similar to the original CS also elicit the CR, even though they were never paired with the US.",
+      "suggestedLesson": "2-pavlov-and-classical-conditioning",
+      "needsReview": false
     },
     {
       "stem": "What is an example of conditioned inhibition in classical conditioning?",
@@ -373,7 +382,10 @@
       "kn": "KN7",
       "kn_explanation": "Conditioned inhibition illustrates how conditioned responses can be suppressed, important in theories of learning and classical conditioning (KN7).",
       "difficulty": "hard",
-      "quality_comment": "This question requires specific knowledge of conditioned inhibition and differentiates it carefully from related concepts like compound conditioning, making it challenging."
+      "quality_comment": "This question requires specific knowledge of conditioned inhibition and differentiates it carefully from related concepts like compound conditioning, making it challenging.",
+      "lessonExcerpt": "After establishing that a ringing bell (CS+) produces salivation, you repeatedly present the bell together with a blinking light (CS-) WITHOUT the meat powder. The light becomes a conditioned inhibitor.",
+      "suggestedLesson": "2-pavlov-and-classical-conditioning",
+      "needsReview": false
     },
     {
       "stem": "During compound conditioning, what occurs in the blocking effect?",
@@ -388,7 +400,10 @@
       "kn": "KN7",
       "kn_explanation": "This question tests understanding of compound conditioning phenomena, which are integral to models explaining learning processes (KN7).",
       "difficulty": "hard",
-      "quality_comment": "The question is well-constructed with closely related distractors, requiring detailed knowledge of compound conditioning effects to answer correctly."
+      "quality_comment": "The question is well-constructed with closely related distractors, requiring detailed knowledge of compound conditioning effects to answer correctly.",
+      "lessonExcerpt": "Blocking happens when you first establish one CS, then try to add a second stimulus.",
+      "suggestedLesson": "2-pavlov-and-classical-conditioning",
+      "needsReview": false
     },
     {
       "stem": "What best describes higher-order conditioning?",
@@ -403,7 +418,10 @@
       "kn": "KN7",
       "kn_explanation": "This concept is key in understanding the extension and complexity of conditioning in learning theory (KN7).",
       "difficulty": "medium",
-      "quality_comment": "Options are clear and concise with strong distractors that test discrimination among stages of conditioning, fitting EPPP exam style."
+      "quality_comment": "Options are clear and concise with strong distractors that test discrimination among stages of conditioning, fitting EPPP exam style.",
+      "lessonExcerpt": "In higher-order conditioning, a CS is treated as if it were a US and paired with a new neutral stimulus.",
+      "suggestedLesson": "2-pavlov-and-classical-conditioning",
+      "needsReview": false
     },
     {
       "stem": "In Pavlov's stimulus discrimination studies, dogs became extremely agitated and aggressive when discrimination was difficult. This pattern of behavior is known as:",
@@ -418,7 +436,10 @@
       "kn": "KN7",
       "kn_explanation": "Understanding behavioral consequences of complex discrimination is important for learning models and their CNS correlates (KN7).",
       "difficulty": "hard",
-      "quality_comment": "This question taps into less commonly tested but important classical conditioning research, backed by plausible distractors aiding discrimination."
+      "quality_comment": "This question taps into less commonly tested but important classical conditioning research, backed by plausible distractors aiding discrimination.",
+      "lessonExcerpt": "Pavlov discovered something troubling: when discriminations became too difficult (like distinguishing a circle from a very similar ellipse), dogs developed what he called experimental neurosis.",
+      "suggestedLesson": "2-pavlov-and-classical-conditioning",
+      "needsReview": false
     },
     {
       "stem": "How does overshadowing affect classical conditioning when two neutral stimuli are presented together before the US?",
@@ -433,7 +454,10 @@
       "kn": "KN7",
       "kn_explanation": "This question involves understanding complex interactions between stimuli during conditioning trials, a key aspect of learning theory models (KN7).",
       "difficulty": "medium",
-      "quality_comment": "Distractors are plausible and concise, and the question targets a nuanced concept, appropriate for mid-level challenge."
+      "quality_comment": "Distractors are plausible and concise, and the question targets a nuanced concept, appropriate for mid-level challenge.",
+      "lessonExcerpt": "Overshadowing occurs when two neutral stimuli are presented together from the beginning, right before the US. Both stimuli are present during conditioning, but the more salient (noticeable, intense) stimulus becomes a strong CS while the less salient stimulus produces little or no CR",
+      "suggestedLesson": "2-pavlov-and-classical-conditioning",
+      "needsReview": false
     },
     {
       "stem": "Which classical conditioning term refers to the reduction or elimination of a conditioned response when the conditioned stimulus is repeatedly presented without the unconditioned stimulus?",
@@ -448,7 +472,10 @@
       "kn": "KN7",
       "kn_explanation": "Extinction is a fundamental process in learning theory, critical for understanding how conditioned responses change and are modulated (KN7).",
       "difficulty": "easy",
-      "quality_comment": "This is a foundational question suitable for early-stage mastery testing, with clearly distinguishable options."
+      "quality_comment": "This is a foundational question suitable for early-stage mastery testing, with clearly distinguishable options.",
+      "lessonExcerpt": "Once a CR is established, you might think it's permanent. But if you repeatedly present the CS without the US, the CR gradually disappears. This is classical extinction.",
+      "suggestedLesson": "2-pavlov-and-classical-conditioning",
+      "needsReview": false
     },
     {
       "stem": "In the Little Albert experiment, the infant exhibited fear responses not only to the white rat (CS) but also to other white furry objects. This phenomenon exemplifies:",
@@ -463,7 +490,10 @@
       "kn": "KN7",
       "kn_explanation": "This question relates to the classical conditioning principle of generalization, which is crucial to understanding fears and phobias acquisition (KN7).",
       "difficulty": "medium",
-      "quality_comment": "Includes a classic applied example that enhances the relevance and appeal of the question, with carefully chosen distractors."
+      "quality_comment": "Includes a classic applied example that enhances the relevance and appeal of the question, with carefully chosen distractors.",
+      "lessonExcerpt": "Albert's fear didn't stop there. He also became afraid of a white rabbit, a fur coat, and even a Santa Claus mask. All these white, furry objects were similar enough to the original CS that they triggered the fear response.",
+      "suggestedLesson": "2-pavlov-and-classical-conditioning",
+      "needsReview": false
     },
     {
       "stem": "Which classical conditioning phenomenon illustrates that the conditioned response (CR) is typically weaker than the unconditioned response (UR) and increases with repeated CS-US pairings?",
@@ -478,7 +508,10 @@
       "kn": "KN7",
       "kn_explanation": "Understanding the strength and magnitude of conditioned responses is part of the core principles and mechanisms in classical conditioning (KN7).",
       "difficulty": "medium",
-      "quality_comment": "Good item focusing on response magnitude, with distractors addressing other classical conditioning phenomena, supporting comprehension of response dynamics."
+      "quality_comment": "Good item focusing on response magnitude, with distractors addressing other classical conditioning phenomena, supporting comprehension of response dynamics.",
+      "lessonExcerpt": "Conditioned Response (CR): This is the learned response to the CS. Here's something important: the CR is always weaker than the UR.",
+      "suggestedLesson": "2-pavlov-and-classical-conditioning",
+      "needsReview": false
     },
     {
       "stem": "Why is backward conditioning generally considered ineffective in classical conditioning procedures?",
@@ -493,7 +526,10 @@
       "kn": "KN7",
       "kn_explanation": "This question tests understanding of the importance of stimulus order and contingency in classical conditioning, central to learning theory (KN7).",
       "difficulty": "medium",
-      "quality_comment": "The distractors are plausible alternative procedures, helping assess grasp of temporal factors affecting conditioning efficacy."
+      "quality_comment": "The distractors are plausible alternative procedures, helping assess grasp of temporal factors affecting conditioning efficacy.",
+      "lessonExcerpt": "Backward Conditioning | US comes before CS | Usually ineffective - When you present the US before the CS (backward conditioning), there's no predictive relationship.",
+      "suggestedLesson": "2-pavlov-and-classical-conditioning",
+      "needsReview": false
     },
     {
       "stem": "What is the optimal time interval between the conditioned stimulus (CS) and unconditioned stimulus (US) presentation during delay conditioning?",
@@ -508,7 +544,10 @@
       "kn": "KN7",
       "kn_explanation": "This item probes specific parameters influencing conditioning strength, emphasizing procedural nuances recognized in classical conditioning research (KN7).",
       "difficulty": "medium",
-      "quality_comment": "This focused question reinforces knowledge of timing critical to optimal conditioning, balancing specificity with plausible distractors."
+      "quality_comment": "This focused question reinforces knowledge of timing critical to optimal conditioning, balancing specificity with plausible distractors.",
+      "lessonExcerpt": "Delay Conditioning | CS starts, then US appears while CS is still present (they overlap) | MOST EFFECTIVE, especially with about 0.5 second delay",
+      "suggestedLesson": "2-pavlov-and-classical-conditioning",
+      "needsReview": false
     },
     {
       "stem": "Which of the following conditioning procedures is most likely to lead to a strong association between the conditioned stimulus (CS) and the unconditioned stimulus (US)?",
@@ -528,7 +567,10 @@
       "lock_in_level": "easier",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "Delay Conditioning | CS starts, then US appears while CS is still present (they overlap) | MOST EFFECTIVE",
+      "suggestedLesson": "2-pavlov-and-classical-conditioning",
+      "needsReview": false
     },
     {
       "stem": "In a study on classical conditioning, a researcher uses a procedure where the conditioned stimulus (CS) is presented continuously while the unconditioned stimulus (US) is introduced shortly after the CS begins. What is this conditioning method called?",
@@ -548,7 +590,10 @@
       "lock_in_level": "harder",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "Delay Conditioning | CS starts, then US appears while CS is still present (they overlap)",
+      "suggestedLesson": "2-pavlov-and-classical-conditioning",
+      "needsReview": false
     }
   ]
 }

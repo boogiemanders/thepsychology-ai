@@ -184,31 +184,10 @@
       "quality_comment": "The question effectively assesses understanding of financial ethics in therapy.",
       "suggestedLesson": "8-standards-5-6",
       "suggestedParagraph": "### The Degree Credential Rule",
-      "lessonExcerpt": "You must ensure it's accurate and ethical.",
+      "lessonExcerpt": "Standard 6.04 requires reaching agreement with clients about fees \"as early as feasible\". Ideally during your initial contact or first session.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 17
-    },
-    {
-      "stem": "How should psychologists determine their fees for therapy services?",
-      "options": [
-        "Based on what competitors charge.",
-        "By considering their own financial needs.",
-        "In accordance with the APA guidelines and community standards.",
-        "By charging the highest possible rate."
-      ],
-      "answer": "In accordance with the APA guidelines and community standards.",
-      "explanation": "Psychologists should establish their fees based on ethical guidelines and community standards to ensure fairness and accessibility. Charging based on competitors or personal financial needs can lead to unethical practices.",
-      "kn": "KN61",
-      "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
-      "difficulty": "medium",
-      "quality_comment": "The question is relevant and tests knowledge of ethical fee-setting practices.",
-      "suggestedLesson": "8-standards-5-6",
-      "suggestedParagraph": "### The Core Principle: Truth in All Forms",
-      "lessonExcerpt": "You must ensure it's accurate and ethical.",
-      "needsReview": false,
-      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 18
     },
     {
       "stem": "What is a key ethical consideration for psychologists when promoting their services through media?",
@@ -245,33 +224,12 @@
       "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
       "difficulty": "medium",
       "quality_comment": "The question effectively tests knowledge of ethical citation practices.",
-      "suggestedLesson": "8-standards-5-6",
+      "suggestedLesson": "8-standards-7-8",
       "suggestedParagraph": "## The Core Principle: Truth in All Forms",
-      "lessonExcerpt": "All quotes must be accurately attributed to the original author to maintain integrity.",
+      "lessonExcerpt": "Plagiarism: Standard 8.11 prohibits presenting others' work as your own, even if you cite the source occasionally.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 5
-    },
-    {
-      "stem": "What is a psychologist's responsibility when they discover that a public statement they made was misleading?",
-      "options": [
-        "They should ignore it if no one has complained.",
-        "They must correct the misrepresentation as soon as possible.",
-        "They can wait until they receive a formal complaint before addressing it.",
-        "They should deny any responsibility for the misleading statement."
-      ],
-      "answer": "They must correct the misrepresentation as soon as possible.",
-      "explanation": "The correct answer reflects the ethical obligation to correct any misleading public statements to maintain integrity and trust. Ignoring it or waiting for complaints does not align with ethical standards.",
-      "kn": "KN61",
-      "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively assesses knowledge of ethical responsibilities regarding public statements.",
-      "suggestedLesson": "8-standards-5-6",
-      "suggestedParagraph": "## Standard 5: Advertising and Other Public Statements",
-      "lessonExcerpt": "Psychologists must correct the misrepresentation as soon as possible.",
-      "needsReview": false,
-      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 23
     },
     {
       "stem": "Which of the following best describes the ethical considerations involved in marketing psychological services?",
@@ -289,7 +247,7 @@
       "quality_comment": "The question effectively tests knowledge of advertising ethics.",
       "suggestedLesson": "8-standards-5-6",
       "suggestedParagraph": "## Standard 5: Advertising and Other Public Statements",
-      "lessonExcerpt": "Psychologists should ensure that all marketing materials are truthful and not misleading.",
+      "lessonExcerpt": "Standard 5.01 establishes the foundation: psychologists cannot knowingly make false, deceptive, or fraudulent public statements about their work. This applies to everything. Your website, your LinkedIn profile, what you say in a lecture, your resume, even your listing in a directory.",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 25
@@ -331,31 +289,10 @@
       "quality_comment": "The question effectively tests knowledge of managed care considerations in psychological practice.",
       "suggestedLesson": "8-standards-5-6",
       "suggestedParagraph": "## Standard 5: Advertising and Other Public Statements",
-      "lessonExcerpt": "You must ensure it's accurate and ethical.",
+      "lessonExcerpt": "Insurance or institutional policies may differ - The nature of services may warrant longer retention (like forensic work) ## The Money Talk: Fees and Financial Arrangements",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 17
-    },
-    {
-      "stem": "In the context of countertransference, what is the most appropriate way for a therapist to manage their feelings towards a client who reminds them of a close friend?",
-      "options": [
-        "Discuss these feelings openly with the client to build rapport.",
-        "Seek supervision or consultation to explore these feelings and their impact on therapy.",
-        "Ignore the feelings and focus solely on the client's issues.",
-        "Terminate the therapeutic relationship to avoid conflict."
-      ],
-      "answer": "Seek supervision or consultation to explore these feelings and their impact on therapy.",
-      "explanation": "The correct answer highlights the importance of seeking supervision to manage countertransference, which is crucial for maintaining professional boundaries and effective therapy. The other options either involve inappropriate disclosure, avoidance, or premature termination, which do not address the underlying issue effectively.",
-      "kn": "KN62",
-      "kn_explanation": "This question is best aligned with KN62 because it tests Professional standards and relevant guidelines for the practice of psychology (e.g., standards for educational and psychological testing).",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively assesses understanding of countertransference management.",
-      "suggestedLesson": "8-standards-5-6",
-      "suggestedParagraph": "## Standard 6: Human Relations",
-      "lessonExcerpt": "When faced with countertransference, therapists should seek supervision or consultation to explore these feelings and their impact on therapy.",
-      "needsReview": false,
-      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 22
     },
     {
       "stem": "When reporting diagnoses to insurance companies, what ethical consideration must psychologists keep in mind?",
@@ -373,7 +310,7 @@
       "quality_comment": "The question is relevant and tests knowledge of ethical reporting standards.",
       "suggestedLesson": "8-standards-5-6",
       "suggestedParagraph": "## Standard 5: Advertising and Other Public Statements",
-      "lessonExcerpt": "They must ensure that the information is accurate and reflects the client's actual condition.",
+      "lessonExcerpt": "Standard 6.06 requires providing accurate information to whoever pays for services. Whether that's the client, an insurance company, or another third party. This means accurately reporting: Diagnosis codes...",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 27
@@ -413,9 +350,9 @@
       "kn_explanation": "This question is best aligned with KN62 because it tests Professional standards and relevant guidelines for the practice of psychology (e.g., standards for educational and psychological testing).",
       "difficulty": "medium",
       "quality_comment": "The question effectively assesses understanding of ethical communication with clients.",
-      "suggestedLesson": "8-standards-5-6",
+      "suggestedLesson": "8-standards-9-10",
       "suggestedParagraph": "## Standard 9: Assessment (Getting It Right)",
-      "lessonExcerpt": "You must ensure that your conclusions are based on solid ground.",
+      "lessonExcerpt": "Standard 9.03 outlines what clients need to know before assessment: The nature and purpose of the assessment; Fees involved; Whether third parties will be involved; Limits of confidentiality; Opportunity to ask questions",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 15
@@ -562,7 +499,7 @@
       "quality_comment": "Practical question testing application of confidentiality principles to modern billing practices. Distractors represent common misconceptions.",
       "suggestedLesson": "8-standards-5-6",
       "suggestedParagraph": "## Standard 6: Record Keeping and Fees",
-      "lessonExcerpt": "",
+      "lessonExcerpt": "Encryption | Scrambles data so only authorized users can read it | Encrypting all client files on your computer. HIPAA-compliant cloud storage | Ensures storage providers meet legal requirements",
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 26
@@ -580,7 +517,10 @@
       "kn": "KN61",
       "kn_explanation": "This question is focused on the ethical standards governing accurate representation of credentials, fitting within the ethical and professional issues domain (KN61).",
       "difficulty": "medium",
-      "quality_comment": "The question clearly targets an important ethical standard with plausible distractors that reflect common misunderstandings about credential representation."
+      "quality_comment": "The question clearly targets an important ethical standard with plausible distractors that reflect common misunderstandings about credential representation.",
+      "lessonExcerpt": "According to Standard 5.01, acceptable degrees are either: Doctoral degrees in psychology from regionally accredited institutions, OR Degrees (from any institution) that your state licensing board accepted as the basis for your psychology license",
+      "suggestedLesson": "8-standards-5-6",
+      "needsReview": false
     },
     {
       "stem": "What is an unethical way to use client testimonials in advertising therapy services?",
@@ -595,7 +535,10 @@
       "kn": "KN61",
       "kn_explanation": "This question assesses knowledge of ethical prohibitions related to client interactions and public statements, corresponding to professional ethical standards (KN61).",
       "difficulty": "medium",
-      "quality_comment": "The options are concise and the correct answer is clearly supported by the Ethics Code, making it a solid question for EPPP preparation."
+      "quality_comment": "The options are concise and the correct answer is clearly supported by the Ethics Code, making it a solid question for EPPP preparation.",
+      "lessonExcerpt": "Standard 5.05 prohibits soliciting testimonials from current therapy clients or other vulnerable individuals.",
+      "suggestedLesson": "8-standards-5-6",
+      "needsReview": false
     },
     {
       "stem": "When storing confidential information in a database, how should a psychologist protect client identity?",
@@ -610,7 +553,10 @@
       "kn": "KN61",
       "kn_explanation": "This item deals with confidentiality and record-keeping practices grounded in ethical standards, situating it within ethical and professional issues (KN61).",
       "difficulty": "medium",
-      "quality_comment": "The distractors are relatively plausible and the correct answer is directly taken from the ethics code, facilitating clear understanding of confidentiality requirements."
+      "quality_comment": "The distractors are relatively plausible and the correct answer is directly taken from the ethics code, facilitating clear understanding of confidentiality requirements.",
+      "lessonExcerpt": "Standard 6.02(b) requires using coding or other techniques to protect personal identifiers when entering confidential information into databases that unauthorized people might access.",
+      "suggestedLesson": "8-standards-5-6",
+      "needsReview": false
     },
     {
       "stem": "What is the ethical approach to discussing fees and financial arrangements with clients?",
@@ -625,7 +571,10 @@
       "kn": "KN61",
       "kn_explanation": "This question tests knowledge of ethical guidelines on financial transparency and agreements, which fall under ethical and professional standards (KN61).",
       "difficulty": "easy",
-      "quality_comment": "The question is straightforward with clearly distinguishable distractors, making it an effective and accessible item for exam takers."
+      "quality_comment": "The question is straightforward with clearly distinguishable distractors, making it an effective and accessible item for exam takers.",
+      "lessonExcerpt": "Standard 6.04 requires reaching agreement with clients about fees \"as early as feasible\". Ideally during your initial contact or first session.",
+      "suggestedLesson": "8-standards-5-6",
+      "needsReview": false
     },
     {
       "stem": "Which billing practice would be fraudulent?",
@@ -640,7 +589,10 @@
       "kn": "KN61",
       "kn_explanation": "This item pertains to ethical and legal requirements for honest billing and insurance documentation, fitting within ethical and professional issues (KN61).",
       "difficulty": "medium",
-      "quality_comment": "Distractors are realistic and closely related, challenging examinees to distinguish ethical from unethical billing practices."
+      "quality_comment": "Distractors are realistic and closely related, challenging examinees to distinguish ethical from unethical billing practices.",
+      "lessonExcerpt": "Assigning inaccurate diagnosis for insurance coverage | Misrepresents the client's condition; insurance fraud",
+      "suggestedLesson": "8-standards-5-6",
+      "needsReview": false
     },
     {
       "stem": "What type of in-person solicitation is off-limits for psychologists?",
@@ -655,7 +607,10 @@
       "kn": "KN61",
       "kn_explanation": "This question focuses on ethical rules about solicitation and client vulnerability, which relate to professional conduct standards (KN61).",
       "difficulty": "medium",
-      "quality_comment": "The question clearly tests an important ethical restriction with plausible exceptions, supporting higher-order reasoning about professional boundaries."
+      "quality_comment": "The question clearly tests an important ethical restriction with plausible exceptions, supporting higher-order reasoning about professional boundaries.",
+      "lessonExcerpt": "Standard 5.06 addresses uninvited in-person solicitation of business from vulnerable individuals. You cannot show up at someone's door or approach them in person to solicit therapy services when they're in vulnerable circumstances.",
+      "suggestedLesson": "8-standards-5-6",
+      "needsReview": false
     },
     {
       "stem": "Why must psychologists maintain thorough professional records?",
@@ -670,7 +625,10 @@
       "kn": "KN62",
       "kn_explanation": "This question is best aligned with KN62 because it tests Professional standards and relevant guidelines for the practice of psychology (e.g., standards for educational and psychological testing).",
       "difficulty": "medium",
-      "quality_comment": "Options are balanced and the correct answer reflects foundational ethical record-keeping practices, reinforcing important clinical documentation guidelines."
+      "quality_comment": "Options are balanced and the correct answer reflects foundational ethical record-keeping practices, reinforcing important clinical documentation guidelines.",
+      "lessonExcerpt": "Facilitating continuity of care if services transfer to another provider; Ensuring accurate billing and documentation; Complying with legal requirements; Protecting both the psychologist and client if disputes arise",
+      "suggestedLesson": "8-standards-5-6",
+      "needsReview": false
     },
     {
       "stem": "When is it acceptable to divide or pay fees related to client referrals?",
@@ -685,7 +643,10 @@
       "kn": "KN64",
       "kn_explanation": "This question is best aligned with KN64 because it tests Identification and management of potential ethical issues.",
       "difficulty": "medium",
-      "quality_comment": "The scenario-based item creates plausible alternatives, strengthening the item’s ability to discriminate knowledge of nuanced ethical guidance."
+      "quality_comment": "The scenario-based item creates plausible alternatives, strengthening the item’s ability to discriminate knowledge of nuanced ethical guidance.",
+      "lessonExcerpt": "This standard doesn't prohibit: Paying legitimate psychology referral services; Fee-splitting when multiple professionals provide services to the same client; Paying employees a percentage of fees as part of their compensation",
+      "suggestedLesson": "8-standards-5-6",
+      "needsReview": false
     },
     {
       "stem": "Which statement reflects ethical bartering for services?",
@@ -700,7 +661,10 @@
       "kn": "KN61",
       "kn_explanation": "This question assesses ethical considerations regarding financial arrangements beyond typical payment methods, consistent with ethical and professional guidelines (KN61).",
       "difficulty": "hard",
-      "quality_comment": "The question presents nuanced options requiring detailed knowledge of ethical standards and professional discretion, suitable for higher-level cognitive processing."
+      "quality_comment": "The question presents nuanced options requiring detailed knowledge of ethical standards and professional discretion, suitable for higher-level cognitive processing.",
+      "lessonExcerpt": "Standard 6.05 defines barter as accepting goods, services, or other non-monetary payment for psychological services. It's allowed when: Not clinically contraindicated; Not exploitative",
+      "suggestedLesson": "8-standards-5-6",
+      "needsReview": false
     },
     {
       "stem": "Regarding maintenance and storage of professional records, APA’s Record Keeping Guidelines recommend retaining client records for at least how long if no legal requirement supersedes?",
@@ -715,7 +679,10 @@
       "kn": "KN62",
       "kn_explanation": "This question is best aligned with KN62 because it tests Professional standards and relevant guidelines for the practice of psychology (e.g., standards for educational and psychological testing).",
       "difficulty": "easy",
-      "quality_comment": "The question is clearly stated and answer options are comparably detailed, helping to prevent guessing based on option length."
+      "quality_comment": "The question is clearly stated and answer options are comparably detailed, helping to prevent guessing based on option length.",
+      "lessonExcerpt": "For adults: 7 years after the last service date. For minors: Until 3 years after they reach the age of majority (typically 21 in most states)",
+      "suggestedLesson": "8-standards-5-6",
+      "needsReview": false
     },
     {
       "stem": "Which of the following security measures is explicitly recommended by the APA Ethics Code and APA Record Keeping Guidelines for protecting client confidentiality in digital records?",
@@ -730,7 +697,10 @@
       "kn": "KN61",
       "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
       "difficulty": "medium",
-      "quality_comment": "The question addresses practical application of ethical standards in digital confidentiality, balancing technical and ethical knowledge with plausible distractors."
+      "quality_comment": "The question addresses practical application of ethical standards in digital confidentiality, balancing technical and ethical knowledge with plausible distractors.",
+      "lessonExcerpt": "Encryption | Scrambles data so only authorized users can read it; HIPAA-compliant cloud storage | Ensures storage providers meet legal requirements",
+      "suggestedLesson": "8-standards-5-6",
+      "needsReview": false
     },
     {
       "stem": "If a psychologist plans to retire or close a practice, what should they arrange for client records?",
@@ -745,7 +715,10 @@
       "kn": "KN64",
       "kn_explanation": "This question relates to ethical management and protection of client information when psychologists end their practice, illustrating responsible professional conduct (KN64).",
       "difficulty": "medium",
-      "quality_comment": "The vignette format clarifies complex ethical responsibilities around records management, offering realistic choices to inform clinical decision making."
+      "quality_comment": "The vignette format clarifies complex ethical responsibilities around records management, offering realistic choices to inform clinical decision making.",
+      "lessonExcerpt": "Standard 6.02(c) requires having a plan for what happens to client records if you can no longer practice. This is called a \"professional will.\" Your plan might include: Designating a trusted colleague to manage records",
+      "suggestedLesson": "8-standards-5-6",
+      "needsReview": false
     },
     {
       "stem": "Which of the following is TRUE regarding the ethical use of sliding fee scales and free initial sessions according to APA Ethics Code standards and commentary?",
@@ -760,7 +733,10 @@
       "kn": "KN61",
       "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
       "difficulty": "medium",
-      "quality_comment": "The question integrates ethical guidance with interpretive commentary, challenging test-takers to apply standards thoughtfully."
+      "quality_comment": "The question integrates ethical guidance with interpretive commentary, challenging test-takers to apply standards thoughtfully.",
+      "lessonExcerpt": "Sliding fee scales based on income are generally considered acceptable when: Applied consistently and equitably; Compliant with state laws and insurance contracts; Clearly explained to clients. Free First Sessions: Some psychologists offer free initial consultations.",
+      "suggestedLesson": "8-standards-5-6",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best reflects an emerging social and ethical issue in psychological practice related to digital data storage and communication?",
@@ -775,27 +751,10 @@
       "kn": "KN61",
       "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
       "difficulty": "medium",
-      "quality_comment": "The question is current and relevant, requiring knowledge of ethics as they apply to evolving technological practices in psychology."
-    },
-    {
-      "stem": "What is the appropriate way for psychologists to represent their professional experience in advertisements?",
-      "options": [
-        "A. Psychologists should only include experiences that are directly relevant to their current practice.",
-        "B. Psychologists can exaggerate their past experiences to make their services more appealing.",
-        "C. Psychologists may include any work experience, regardless of its relevance to their practice.",
-        "D. Psychologists are permitted to list volunteer experiences as if they were formal employment."
-      ],
-      "answer": "A. Psychologists should only include experiences that are directly relevant to their current practice.",
-      "explanation": "1. The correct answer, \"A. Psychologists should only include experiences that are directly relevant to their current practice,\" aligns with Standard 5.01 of the APA Ethics Code, which prohibits psychologists from making false, deceptive, or fraudulent public statements about their qualifications. Including only relevant experiences ensures that psychologists accurately represent their training and expertise, thereby maintaining ethical standards in advertising.\n\n2. \n- **B. Psychologists can exaggerate their past experiences to make their services more appealing.** This option is incorrect because exaggerating experiences violates the ethical mandate to provide truthful and accurate information about one’s qualifications, as stated in Standard 5.01. \n\n- **C. Psychologists may include any work experience, regardless of its relevance to their practice.** This is wrong because including irrelevant work experience could mislead clients about the psychologist's qualifications, contradicting the requirement of truthful representation in advertisements.\n\n- **D. Psychologists are permitted to list volunteer experiences as if they were formal employment.** This option is incorrect as it misrepresents the nature of volunteer work, which could be considered deceptive and misleading in advertisements, violating the ethical standards of accurate representation outlined in Standard 5.01.",
-      "difficulty": "easy",
-      "kn": "KN62",
-      "kn_explanation": "This question is best aligned with KN62 because it tests Professional standards and relevant guidelines for the practice of psychology (e.g., standards for educational and psychological testing).",
-      "quality_comment": "This question effectively assesses understanding of ethical representation of professional experience.",
-      "is_lock_in_drill": true,
-      "lock_in_level": "easier",
-      "tags": [
-        "lock_in_drill"
-      ]
+      "quality_comment": "The question is current and relevant, requiring knowledge of ethics as they apply to evolving technological practices in psychology.",
+      "lessonExcerpt": "Modern protection strategies include: Encryption; HIPAA-compliant cloud storage; Two-factor authentication; Air-gapped computers",
+      "suggestedLesson": "8-standards-5-6",
+      "needsReview": false
     },
     {
       "stem": "In what manner should psychologists disclose their affiliations in professional communications?",
@@ -815,7 +774,10 @@
       "lock_in_level": "harder",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "Once you put information out there for others to see, you're accountable for its accuracy. This includes statements about: Your training and education; Your experience and expertise; Your credentials and licenses; The services you offer; Your fees; The organizations you're affiliated with",
+      "suggestedLesson": "8-standards-5-6",
+      "needsReview": false
     }
   ]
 }

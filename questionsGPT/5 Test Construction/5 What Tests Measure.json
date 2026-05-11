@@ -34,7 +34,10 @@
       "kn": "KN29",
       "kn_explanation": "This question focuses on test construction and validity evidence, topics central to psychometric theories and test characteristics (KN29).",
       "difficulty": "medium",
-      "quality_comment": "The question clearly differentiates content validity from other forms, and distractors are plausible, enhancing discriminability in an exam setting."
+      "quality_comment": "The question clearly differentiates content validity from other forms, and distractors are plausible, enhancing discriminability in an exam setting.",
+      "lessonExcerpt": "Content validity is straightforward: it's about whether a test actually samples the domain it claims to measure. This is especially important for achievement tests, job knowledge tests, and work samples.",
+      "suggestedLesson": "5-what-tests-measure",
+      "needsReview": false
     },
     {
       "stem": "Face validity is best described as:",
@@ -49,7 +52,10 @@
       "kn": "KN29",
       "kn_explanation": "This question targets understanding of types of validity and test characteristics, integral to psychometric theories (KN29).",
       "difficulty": "easy",
-      "quality_comment": "The question is straightforward with clear distractors, well suited for testing basic knowledge of validity concepts."
+      "quality_comment": "The question is straightforward with clear distractors, well suited for testing basic knowledge of validity concepts.",
+      "lessonExcerpt": "Face validity refers to whether a test looks valid to the people taking it. It's not actual validity at all. It's about appearances and perceptions.",
+      "suggestedLesson": "5-what-tests-measure",
+      "needsReview": false
     },
     {
       "stem": "Which coefficient in a multitrait-multimethod matrix provides evidence of convergent validity?",
@@ -64,7 +70,10 @@
       "kn": "KN29",
       "kn_explanation": "This question addresses test validation techniques, specifically convergent validity assessment using multitrait-multimethod matrices, key to psychometric evaluation (KN29).",
       "difficulty": "hard",
-      "quality_comment": "The question requires precise knowledge about validity coefficients; distractors are plausible which enhances its difficulty and discrimination."
+      "quality_comment": "The question requires precise knowledge about validity coefficients; distractors are plausible which enhances its difficulty and discrimination.",
+      "lessonExcerpt": "Monotrait-Heteromethod (same trait, different method): A high correlation here provides evidence of convergent validity. Both methods are measuring sociability, and they agree.",
+      "suggestedLesson": "5-what-tests-measure",
+      "needsReview": false
     },
     {
       "stem": "In a multitrait-multimethod matrix, a low correlation between the target test and a different trait measured by the same method provides evidence of:",
@@ -79,7 +88,10 @@
       "kn": "KN29",
       "kn_explanation": "This question concerns construct validity components and their statistical indicators, fundamental in test psychometric theory (KN29).",
       "difficulty": "medium",
-      "quality_comment": "The question clearly distinguishes divergent from convergent and content validity, with plausible distractors, suitable for intermediate learners."
+      "quality_comment": "The question clearly distinguishes divergent from convergent and content validity, with plausible distractors, suitable for intermediate learners.",
+      "lessonExcerpt": "Heterotrait-Monomethod (different trait, same method): A low correlation here provides evidence of divergent validity. Even though both use the same method (self-report), they're measuring different things, so they shouldn't correlate much.",
+      "suggestedLesson": "5-what-tests-measure",
+      "needsReview": false
     },
     {
       "stem": "When factor analysis of a test and related measures yields high factor loadings on one factor and low on another unrelated factor, this primarily supports which type of validity?",
@@ -94,7 +106,10 @@
       "kn": "KN29",
       "kn_explanation": "This question reviews the use of factor analysis in establishing construct validity, a key concept in psychometric test evaluation (KN29).",
       "difficulty": "medium",
-      "quality_comment": "The item integrates an understanding of factor analysis and validity, challenging test-takers to apply knowledge rather than recall simple definitions."
+      "quality_comment": "The item integrates an understanding of factor analysis and validity, challenging test-takers to apply knowledge rather than recall simple definitions.",
+      "lessonExcerpt": "For your new Test A, this provides strong evidence of both convergent and divergent validity: Convergent validity: Test A loads highly (.80) on the same factor as other locus of control tests, Divergent validity: Test A loads minimally (.10) on the self-esteem factor",
+      "suggestedLesson": "5-what-tests-measure",
+      "needsReview": false
     },
     {
       "stem": "Assuming factors are orthogonal, how is the communality of a test item in factor analysis calculated?",
@@ -109,7 +124,10 @@
       "kn": "KN29",
       "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
       "difficulty": "hard",
-      "quality_comment": "The question requires knowledge of factor analysis computations, making it appropriate for advanced examinees; distractors are reasonable but clearly incorrect."
+      "quality_comment": "The question requires knowledge of factor analysis computations, making it appropriate for advanced examinees; distractors are reasonable but clearly incorrect.",
+      "lessonExcerpt": "If communality isn't provided, you can calculate it (when factors are orthogonal/uncorrelated) by squaring each loading and adding them up: Test A: (.80)^2 + (.10)^2 = .64 + .01 = .65",
+      "suggestedLesson": "5-what-tests-measure",
+      "needsReview": false
     },
     {
       "stem": "Which source of validity evidence includes systematic review by subject matter experts to ensure representativeness of test items?",
@@ -124,7 +142,10 @@
       "kn": "KN29",
       "kn_explanation": "This question highlights a key process in establishing test content validity, integral to psychometric theories and test construction (KN29).",
       "difficulty": "medium",
-      "quality_comment": "The item clearly distinguishes among types of validity evidence with plausible distractors, making it effective for knowledge assessment."
+      "quality_comment": "The item clearly distinguishes among types of validity evidence with plausible distractors, making it effective for knowledge assessment.",
+      "lessonExcerpt": "Step 3: Expert Review. Subject matter experts systematically review the items to ensure they're appropriate, accurate, and comprehensive. These experts verify that the test covers all critical aspects of the domain.",
+      "suggestedLesson": "5-what-tests-measure",
+      "needsReview": false
     },
     {
       "stem": "Why might face validity be undesirable for certain tests, such as those assessing honesty or criminality?",
@@ -139,7 +160,10 @@
       "kn": "KN29",
       "kn_explanation": "This question tests understanding of the implications of face validity and response biases on psychological assessment, relevant to test fairness and bias (KN29).",
       "difficulty": "medium",
-      "quality_comment": "The question is clear and addresses a nuanced concept; distractors are plausible but distinguishable with careful reading."
+      "quality_comment": "The question is clear and addresses a nuanced concept; distractors are plausible but distinguishable with careful reading.",
+      "lessonExcerpt": "Sometimes face validity is actually undesirable. Tests measuring socially sensitive topics like honesty, criminal thinking, or prejudice often work better when they're not face valid. If it's obvious what you're measuring, people can fake their responses to look better.",
+      "suggestedLesson": "5-what-tests-measure",
+      "needsReview": false
     },
     {
       "stem": "Which statement about the monotrait-monomethod coefficient in a multitrait-multimethod matrix is true?",
@@ -154,7 +178,10 @@
       "kn": "KN29",
       "kn_explanation": "This question targets psychometric concepts of reliability and their interpretation within validation studies, important for assessment theory (KN29).",
       "difficulty": "hard",
-      "quality_comment": "The item is precise and requires detailed knowledge of multitrait-multimethod methodology; distractors are plausible, increasing discriminability."
+      "quality_comment": "The item is precise and requires detailed knowledge of multitrait-multimethod methodology; distractors are plausible, increasing discriminability.",
+      "lessonExcerpt": "Monotrait-Monomethod (same trait, same method): This is actually a reliability coefficient for your test, something like coefficient alpha or test-retest reliability. It should be high.",
+      "suggestedLesson": "5-what-tests-measure",
+      "needsReview": false
     },
     {
       "stem": "Which of the following steps is NOT part of the factor analysis process used to assess test validity?",
@@ -169,7 +196,10 @@
       "kn": "KN29",
       "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
       "difficulty": "medium",
-      "quality_comment": "The distractors are believable steps related to test validation, making the question good for assessing procedural knowledge."
+      "quality_comment": "The distractors are believable steps related to test validation, making the question good for assessing procedural knowledge.",
+      "lessonExcerpt": "Factor analysis involves four main steps: 1. Administration: Give your test to a sample of people, along with tests of related and unrelated constructs. 2. Correlation: Calculate correlations between all pairs of tests and create a correlation matrix. 3. Factor Extraction. 4. Rotation: Rotate the factors to make them easier to interpret.",
+      "suggestedLesson": "5-what-tests-measure",
+      "needsReview": false
     },
     {
       "stem": "Which source of validity evidence would best address whether the interpretation of test scores is supported by theoretical relationships with other constructs?",
@@ -184,7 +214,10 @@
       "kn": "KN29",
       "kn_explanation": "This question evaluates understanding of validity evidence types and their theoretical basis in psychometric evaluation (KN29).",
       "difficulty": "medium",
-      "quality_comment": "The question is well-constructed with clear and plausible distractors, helping to solidify concepts of validity evidence."
+      "quality_comment": "The question is well-constructed with clear and plausible distractors, helping to solidify concepts of validity evidence.",
+      "lessonExcerpt": "The Standards identify five sources of validity evidence: Evidence based on test content, Evidence based on response processes, Evidence based on internal structure, Evidence based on relationships with other variables, Evidence based on consequences of testing",
+      "suggestedLesson": "5-what-tests-measure",
+      "needsReview": false
     },
     {
       "stem": "A newly developed self-report sociability test shows a high correlation with a teacher report sociability test and a low correlation with a teacher report impulsivity test. This pattern of correlations primarily demonstrates:",
@@ -199,7 +232,10 @@
       "kn": "KN29",
       "kn_explanation": "The question targets understanding of construct validity components and their interpretation using correlation patterns within validation research (KN29).",
       "difficulty": "medium",
-      "quality_comment": "The scenario-based question integrates concepts well, with distractors reflecting common validity misconceptions."
+      "quality_comment": "The scenario-based question integrates concepts well, with distractors reflecting common validity misconceptions.",
+      "lessonExcerpt": "Convergent Validity: Scores on your test should correlate highly with scores on other measures of the same or similar constructs. Divergent Validity (also called discriminant validity): Scores on your test should have low correlations with measures of unrelated constructs.",
+      "suggestedLesson": "5-what-tests-measure",
+      "needsReview": false
     },
     {
       "stem": "Which validity evidence source focuses on how respondents engage with test items during administration to ensure accurate construct measurement?",
@@ -214,7 +250,10 @@
       "kn": "KN29",
       "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
       "difficulty": "medium",
-      "quality_comment": "This question adds coverage on validity evidence related to response processes, filling an underrepresented validity source area with clear distractors."
+      "quality_comment": "This question adds coverage on validity evidence related to response processes, filling an underrepresented validity source area with clear distractors.",
+      "lessonExcerpt": "The Standards identify five sources of validity evidence: Evidence based on test content, Evidence based on response processes, Evidence based on internal structure, Evidence based on relationships with other variables, Evidence based on consequences of testing",
+      "suggestedLesson": "5-what-tests-measure",
+      "needsReview": false
     },
     {
       "stem": "In the context of construct validity, how does the multitrait-multimethod matrix aid in understanding measurement error?",
@@ -229,7 +268,10 @@
       "kn": "KN29",
       "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
       "difficulty": "hard",
-      "quality_comment": "The item targets higher-level understanding of the multitrait-multimethod approach, adding depth to the question bank with well-crafted distractors."
+      "quality_comment": "The item targets higher-level understanding of the multitrait-multimethod approach, adding depth to the question bank with well-crafted distractors.",
+      "lessonExcerpt": "The matrix is elegant because it separates trait variance (what you actually want to measure) from method variance (artificial similarity created by using the same assessment method).",
+      "suggestedLesson": "5-what-tests-measure",
+      "needsReview": false
     },
     {
       "stem": "How can factor analysis help in identifying construct-irrelevant variance in a psychological test?",
@@ -244,7 +286,10 @@
       "kn": "KN29",
       "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
       "difficulty": "medium",
-      "quality_comment": "The question introduces the application of factor analysis beyond simple construct confirmation, enhancing conceptual coverage with balanced options."
+      "quality_comment": "The question introduces the application of factor analysis beyond simple construct confirmation, enhancing conceptual coverage with balanced options.",
+      "lessonExcerpt": "Tests measuring the same construct should load on the same factor",
+      "suggestedLesson": "5-what-tests-measure",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best illustrates construct validity evidence using external correlates?",
@@ -259,7 +304,10 @@
       "kn": "KN29",
       "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
       "difficulty": "medium",
-      "quality_comment": "This question broadens coverage into evidence evaluation and construct validation, supporting interpretive skill development with plausible distractors."
+      "quality_comment": "This question broadens coverage into evidence evaluation and construct validation, supporting interpretive skill development with plausible distractors.",
+      "lessonExcerpt": "Convergent Validity: Scores on your test should correlate highly with scores on other measures of the same or similar constructs. Divergent Validity: Scores on your test should have low correlations with measures of unrelated constructs.",
+      "suggestedLesson": "5-what-tests-measure",
+      "needsReview": false
     },
     {
       "stem": "Which of the following statements best illustrates the concept of construct validity in psychological assessments?",
@@ -279,7 +327,10 @@
       "lock_in_level": "easier",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "Construct validity is essential when you're measuring hypothetical traits. Things you can't directly observe but must infer from behavior.",
+      "suggestedLesson": "5-what-tests-measure",
+      "needsReview": false
     },
     {
       "stem": "In the context of test validity, which scenario best exemplifies a threat to content validity?",
@@ -299,7 +350,10 @@
       "lock_in_level": "harder",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "Step 2: Sample Representatively. Once the domain is defined, test items must represent all important aspects of that domain proportionally.",
+      "suggestedLesson": "5-what-tests-measure",
+      "needsReview": false
     }
   ]
 }

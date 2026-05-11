@@ -14,9 +14,9 @@
       "kn_explanation": "Comparing theoretical models of addiction (AA model) falls under contemporary research-based theories and models of treatment/intervention",
       "difficulty": "medium",
       "quality_comment": "Good discrimination question with plausible distractors representing distinct theoretical models. The lesson references AA as abstinence-based but the disease model conceptualization is more implied than explicitly stated.",
-      "suggestedLesson": "6-brief-therapies",
+      "suggestedLesson": "2-classical-conditioning-interventions",
       "suggestedParagraph": "## The Three Faces of Prevention",
-      "lessonExcerpt": "Unlike AA and other abstinence based programs, Marlatt views addiction as an overlearned habit, and attempts to minimize the effects of relapses by teaching recovering addicts to view relapses as inevitable experiences.",
+      "lessonExcerpt": "They also identify negative beliefs about themselves related to the trauma (\"I'm powerless\") and practice replacing these with adaptive beliefs (\"I did the best I could\"). **The controversy:** Does EMDR work because of the eye movements, or just because you're doing exposure in imagination?",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
       "inspirationIndex": 13
@@ -35,9 +35,9 @@
       "kn_explanation": "This question is best aligned with KN44 because it tests Treatment techniques and interventions, and the evidence for their comparative efficacy and effectiveness.",
       "difficulty": "medium",
       "quality_comment": "Clear contrast between disease model and behavioral models of addiction. The Marlatt comparison in the source material provides strong support.",
-      "suggestedLesson": "6-brief-therapies",
+      "suggestedLesson": "5-substance-misuse",
       "suggestedParagraph": "## Motivational Interviewing (MI)",
-      "lessonExcerpt": "Unlike AA and other abstinence based programs, Marlatt views addiction as an overlearned habit, and attempts to minimize the effects of relapses by teaching recovering addicts to view relapses as inevitable experiences.",
+      "lessonExcerpt": "Research shows VBRT effectively promotes abstinence for cocaine, opiates, marijuana, and tobacco. But there's a catch: Effects often fade when vouchers stop.",
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
       "inspirationIndex": 13
@@ -97,7 +97,10 @@
       "kn": "KN43",
       "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
       "difficulty": "medium",
-      "quality_comment": "The distractors are plausible therapy goals but differ clearly from IPT’s focus, providing a good test of conceptual understanding."
+      "quality_comment": "The distractors are plausible therapy goals but differ clearly from IPT’s focus, providing a good test of conceptual understanding.",
+      "lessonExcerpt": "Developed by Klerman and Weissman originally for depression, IPT operates from a medical model perspective. It views mental disorders as treatable illnesses and focuses on how interpersonal factors contribute to symptoms.",
+      "suggestedLesson": "6-brief-therapies",
+      "needsReview": false
     },
     {
       "stem": "In Solution-Focused Therapy, which type of question is most useful for identifying client strengths and past successes in managing problems?",
@@ -112,7 +115,10 @@
       "kn": "KN42",
       "kn_explanation": "This question is best aligned with KN42 because it tests Factors related to treatment or intervention decision-making (e.g., relevant research, matching treatment to assessment/diagnosis, matching client or patient with psychologist characteristics, knowledge and use of allied services, cost and benefit, readiness to change).",
       "difficulty": "medium",
-      "quality_comment": "Options include commonly confused question types, making for a good discriminative item on therapy techniques."
+      "quality_comment": "Options include commonly confused question types, making for a good discriminative item on therapy techniques.",
+      "lessonExcerpt": "**Exception Questions**: \"When was a time recently when the problem didn't happen, or wasn't as bad?\" These questions help clients recognize they already have resources and times of success.",
+      "suggestedLesson": "6-brief-therapies",
+      "needsReview": false
     },
     {
       "stem": "According to the Transtheoretical Model, which stage is characterized by clients having no intention to change behavior within the next six months and often resisting advice?",
@@ -127,7 +133,10 @@
       "kn": "KN42",
       "kn_explanation": "This question is best aligned with KN42 because it tests Factors related to treatment or intervention decision-making (e.g., relevant research, matching treatment to assessment/diagnosis, matching client or patient with psychologist characteristics, knowledge and use of allied services, cost and benefit, readiness to change).",
       "difficulty": "easy",
-      "quality_comment": "The stem is precise and options are clearly defined stages, reducing ambiguity and facilitating recall."
+      "quality_comment": "The stem is precise and options are clearly defined stages, reducing ambiguity and facilitating recall.",
+      "lessonExcerpt": "| Precontemplation | No intention to change | Not in next 6 months | Consciousness raising, dramatic relief, environmental reevaluation |",
+      "suggestedLesson": "6-brief-therapies",
+      "needsReview": false
     },
     {
       "stem": "Which strategy is most appropriate for clients in the contemplation stage of the Transtheoretical Model?",
@@ -142,7 +151,10 @@
       "kn": "KN42",
       "kn_explanation": "This question is best aligned with KN42 because it tests Factors related to treatment or intervention decision-making (e.g., relevant research, matching treatment to assessment/diagnosis, matching client or patient with psychologist characteristics, knowledge and use of allied services, cost and benefit, readiness to change).",
       "difficulty": "medium",
-      "quality_comment": "Options include plausible therapeutic strategies, but only one is stage-matched, effectively assessing clinical application."
+      "quality_comment": "Options include plausible therapeutic strategies, but only one is stage-matched, effectively assessing clinical application.",
+      "lessonExcerpt": "| Contemplation | Thinking about change | Within 6 months | Above strategies + self-reevaluation |",
+      "suggestedLesson": "6-brief-therapies",
+      "needsReview": false
     },
     {
       "stem": "Which of the following is NOT a typical component of Motivational Interviewing (MI)?",
@@ -157,7 +169,10 @@
       "kn": "KN43",
       "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
       "difficulty": "medium",
-      "quality_comment": "Distractors are closely related techniques used in MI, ensuring examinees must know therapy-specific components."
+      "quality_comment": "Distractors are closely related techniques used in MI, ensuring examinees must know therapy-specific components.",
+      "lessonExcerpt": "The \"sick role\" is a distinctive IPT concept. It allows clients to acknowledge they're ill without self-blame and frames the condition as temporary and treatable.",
+      "suggestedLesson": "6-brief-therapies",
+      "needsReview": false
     },
     {
       "stem": "Which of these statements best exemplifies 'change talk' in Motivational Interviewing?",
@@ -172,7 +187,10 @@
       "kn": "KN42",
       "kn_explanation": "This question is best aligned with KN42 because it tests Factors related to treatment or intervention decision-making (e.g., relevant research, matching treatment to assessment/diagnosis, matching client or patient with psychologist characteristics, knowledge and use of allied services, cost and benefit, readiness to change).",
       "difficulty": "easy",
-      "quality_comment": "Options represent distinct client attitudes, making the correct answer clear to those familiar with MI concepts."
+      "quality_comment": "Options represent distinct client attitudes, making the correct answer clear to those familiar with MI concepts.",
+      "lessonExcerpt": "| Change talk | Statements favoring change | \"I'd probably feel better if I quit smoking\" | Elicit and strengthen |",
+      "suggestedLesson": "6-brief-therapies",
+      "needsReview": false
     },
     {
       "stem": "Which brief therapy emphasizes focusing on solutions and future goals rather than exploring the history or causes of problems?",
@@ -187,7 +205,10 @@
       "kn": "KN43",
       "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
       "difficulty": "easy",
-      "quality_comment": "The options list well-known therapies with distinct characteristics, making this a straightforward knowledge check."
+      "quality_comment": "The options list well-known therapies with distinct characteristics, making this a straightforward knowledge check.",
+      "lessonExcerpt": "Created by Steve de Shazer, this approach flips traditional therapy on its head. Instead of digging into what caused the problem, it asks: \"What does the solution look like?\"",
+      "suggestedLesson": "6-brief-therapies",
+      "needsReview": false
     },
     {
       "stem": "Which of the following is a shared characteristic of brief psychodynamic psychotherapy approaches?",
@@ -202,7 +223,10 @@
       "kn": "KN43",
       "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
       "difficulty": "medium",
-      "quality_comment": "Distractors are plausible but incorrect, testing familiarity with the brief psychodynamic framework effectively."
+      "quality_comment": "Distractors are plausible but incorrect, testing familiarity with the brief psychodynamic framework effectively.",
+      "lessonExcerpt": "2. **Limited, agreed-upon goals**. Identified early in treatment",
+      "suggestedLesson": "6-brief-therapies",
+      "needsReview": false
     },
     {
       "stem": "In the transtheoretical model, which factor is the most important determinant of motivation during the contemplation stage?",
@@ -217,7 +241,10 @@
       "kn": "KN42",
       "kn_explanation": "This question is best aligned with KN42 because it tests Factors related to treatment or intervention decision-making (e.g., relevant research, matching treatment to assessment/diagnosis, matching client or patient with psychologist characteristics, knowledge and use of allied services, cost and benefit, readiness to change).",
       "difficulty": "hard",
-      "quality_comment": "Options include closely related motivational constructs requiring nuanced knowledge, elevating item difficulty."
+      "quality_comment": "Options include closely related motivational constructs requiring nuanced knowledge, elevating item difficulty.",
+      "lessonExcerpt": "1. **Decisional balance**, weighing pros and cons of change; most important during contemplation",
+      "suggestedLesson": "6-brief-therapies",
+      "needsReview": false
     },
     {
       "stem": "Which strategy would be most effective for clients in the action stage of behavior change according to the transtheoretical model?",
@@ -232,7 +259,10 @@
       "kn": "KN42",
       "kn_explanation": "This question is best aligned with KN42 because it tests Factors related to treatment or intervention decision-making (e.g., relevant research, matching treatment to assessment/diagnosis, matching client or patient with psychologist characteristics, knowledge and use of allied services, cost and benefit, readiness to change).",
       "difficulty": "medium",
-      "quality_comment": "Distractors reflect earlier stages’ strategies, helping to test precise knowledge of stage-appropriate interventions."
+      "quality_comment": "Distractors reflect earlier stages’ strategies, helping to test precise knowledge of stage-appropriate interventions.",
+      "lessonExcerpt": "| Action | Actively changing | Currently | Contingency management, stimulus control, counterconditioning |",
+      "suggestedLesson": "6-brief-therapies",
+      "needsReview": false
     },
     {
       "stem": "Which brief therapy explicitly assigns clients the 'sick role' to reduce self-blame for their symptoms?",
@@ -247,7 +277,10 @@
       "kn": "KN43",
       "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
       "difficulty": "medium",
-      "quality_comment": "Options are prominent brief therapies, promoting integration of conceptual and procedural knowledge."
+      "quality_comment": "Options are prominent brief therapies, promoting integration of conceptual and procedural knowledge.",
+      "lessonExcerpt": "The \"sick role\" is a distinctive IPT concept. It allows clients to acknowledge they're ill without self-blame and frames the condition as temporary and treatable.",
+      "suggestedLesson": "6-brief-therapies",
+      "needsReview": false
     },
     {
       "stem": "Which of the following is true about the use of decision balance in Motivational Interviewing?",
@@ -262,7 +295,10 @@
       "kn": "KN42",
       "kn_explanation": "This question is best aligned with KN42 because it tests Factors related to treatment or intervention decision-making (e.g., relevant research, matching treatment to assessment/diagnosis, matching client or patient with psychologist characteristics, knowledge and use of allied services, cost and benefit, readiness to change).",
       "difficulty": "hard",
-      "quality_comment": "The distractors are nuanced and conceptually challenging, suitable for higher-level comprehension."
+      "quality_comment": "The distractors are nuanced and conceptually challenging, suitable for higher-level comprehension.",
+      "lessonExcerpt": "- **Use decisional balance when**: You want to maintain neutrality while assessing readiness",
+      "suggestedLesson": "6-brief-therapies",
+      "needsReview": false
     },
     {
       "stem": "Research indicates that combining Motivational Interviewing (MI) with Cognitive Behavior Therapy (CBT) for anxiety disorders results in:",
@@ -277,7 +313,10 @@
       "kn": "KN43",
       "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
       "difficulty": "medium",
-      "quality_comment": "The stem is clear, and distractors address potential misconceptions about treatment efficacy."
+      "quality_comment": "The stem is clear, and distractors address potential misconceptions about treatment efficacy.",
+      "lessonExcerpt": "Beneficial when added before other treatments (e.g., MI before CBT shows greater improvement than CBT alone for anxiety disorders)",
+      "suggestedLesson": "6-brief-therapies",
+      "needsReview": false
     },
     {
       "stem": "Which of the following elements is essential in a therapist’s approach when conducting brief psychodynamic psychotherapy?",
@@ -292,7 +331,10 @@
       "kn": "KN43",
       "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
       "difficulty": "medium",
-      "quality_comment": "The item requires understanding subtle differences in therapist roles across therapy types, promoting higher-order thinking."
+      "quality_comment": "The item requires understanding subtle differences in therapist roles across therapy types, promoting higher-order thinking.",
+      "lessonExcerpt": "4. **Active therapist role**. From the start, to establish alliance and maintain focus",
+      "suggestedLesson": "6-brief-therapies",
+      "needsReview": false
     },
     {
       "stem": "Which of the following best describes the role of relapse prevention in the Transtheoretical Model's maintenance stage?",
@@ -307,7 +349,10 @@
       "kn": "KN44",
       "kn_explanation": "This addresses treatment techniques used to sustain behavioral change, fitting within treatment and intervention knowledge (KN44).",
       "difficulty": "medium",
-      "quality_comment": "The distractors include related but inaccurate strategies for maintenance, enhancing discriminative value."
+      "quality_comment": "The distractors include related but inaccurate strategies for maintenance, enhancing discriminative value.",
+      "lessonExcerpt": "| Maintenance | Sustaining change | 6+ months of change | Same as action stage, focus on relapse prevention |",
+      "suggestedLesson": "6-brief-therapies",
+      "needsReview": false
     },
     {
       "stem": "In Motivational Interviewing, what does 'discord' in the therapeutic relationship typically indicate?",
@@ -322,7 +367,10 @@
       "kn": "KN44",
       "kn_explanation": "Understanding therapeutic relationship dynamics and their contemporary management strategies are key in treatment interventions (KN44).",
       "difficulty": "medium",
-      "quality_comment": "Clear distinctions among options require nuanced understanding of client-therapist interactions."
+      "quality_comment": "Clear distinctions among options require nuanced understanding of client-therapist interactions.",
+      "lessonExcerpt": "| Discord | Signals relationship strain | \"You don't understand what I'm going through\" | Resolve |",
+      "suggestedLesson": "6-brief-therapies",
+      "needsReview": false
     },
     {
       "stem": "What is the main focus of Cognitive Behavioral Therapy (CBT) in treating anxiety disorders?",
@@ -342,7 +390,10 @@
       "lock_in_level": "easier",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "CBT uses both cognitive techniques (like reframing thoughts and examining evidence) and behavioral techniques (like activity scheduling, exposure therapy, and behavioral rehearsal).",
+      "suggestedLesson": "6-cbt",
+      "needsReview": false
     },
     {
       "stem": "Which therapeutic approach emphasizes the importance of social support in alleviating depressive symptoms?",
@@ -362,7 +413,10 @@
       "lock_in_level": "harder",
       "tags": [
         "lock_in_drill"
-      ]
+      ],
+      "lessonExcerpt": "Developed by Klerman and Weissman originally for depression, IPT operates from a medical model perspective. It views mental disorders as treatable illnesses and focuses on how interpersonal factors contribute to symptoms.",
+      "suggestedLesson": "6-brief-therapies",
+      "needsReview": false
     }
   ]
 }
