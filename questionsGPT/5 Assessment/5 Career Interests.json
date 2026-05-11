@@ -22,24 +22,6 @@
       "inspirationIndex": 31
     },
     {
-      "stem": "Which of the following scales on the Strong Interest Inventory (SII) provides scores based on Holland's six occupational themes such as realistic and investigative?",
-      "options": [
-        "Basic Interest Scales (BISs)",
-        "General Occupational Themes (GOTs)",
-        "Occupational Scales (OSs)",
-        "Personal Styles Scales (PSSs)"
-      ],
-      "answer": "General Occupational Themes (GOTs)",
-      "explanation": "1. The correct answer is \"General Occupational Themes (GOTs)\" because this scale of the Strong Interest Inventory (SII) specifically provides scores based on Holland's six occupational themes, which include realistic, investigative, artistic, social, enterprising, and conventional. This allows examinees to understand their interests in relation to these established categories of occupations.\n\n2. The \"Basic Interest Scales (BISs)\" are incorrect because they provide scores on 30 specific interests that represent the six occupational themes, rather than directly scoring on the themes themselves. The \"Occupational Scales (OSs)\" are also incorrect as they indicate the similarity of the examinee's interests to those of individuals in specific occupations, rather than categorizing them into Holland's themes. Lastly, the \"Personal Styles Scales (PSSs)\" are incorrect because they focus on the examinee’s preferences regarding personal work styles and environments, rather than on the occupational themes defined by Holland.",
-      "kn": "KN32",
-      "kn_explanation": "KN32 relates to commonly used instruments and their scales, here focusing on the SII and its components for vocational assessment.",
-      "difficulty": "medium",
-      "quality_comment": "The question clearly contrasts different SII scales, with plausible distractors referencing other legitimate scales, enhancing content validity for EPPP level.",
-      "lessonExcerpt": "| Exploration | 15 to 24 | Trying out different options, narrowing choices |",
-      "suggestedLesson": "6-how-careers-develop",
-      "needsReview": false
-    },
-    {
       "stem": "Which personal style is NOT assessed by the Personal Styles Scales (PSSs) in the Strong Interest Inventory?",
       "options": [
         "Leadership style",
@@ -246,6 +228,66 @@
       "lessonExcerpt": "ipsative scores allow you to compare a person's interests against their own other interests (intra-individual comparison), but you cannot meaningfully compare one person's scores to another person's scores",
       "suggestedLesson": "5-career-interests",
       "needsReview": false
+    },
+    {
+      "stem": "Which of the following scales on the Strong Interest Inventory (SII) provides scores based on Holland's six occupational themes such as realistic and investigative?",
+      "options": [
+        "Basic Interest Scales (BISs)",
+        "General Occupational Themes (GOTs)",
+        "Occupational Scales (OSs)",
+        "Personal Styles Scales (PSSs)"
+      ],
+      "answer": "General Occupational Themes (GOTs)",
+      "explanation": "1. The correct answer is \"General Occupational Themes (GOTs)\" because this scale of the Strong Interest Inventory (SII) specifically provides scores based on Holland's six occupational themes, which include realistic, investigative, artistic, social, enterprising, and conventional. This allows examinees to understand their interests in relation to these established categories of occupations.\n\n2. The \"Basic Interest Scales (BISs)\" are incorrect because they provide scores on 30 specific interests that represent the six occupational themes, rather than directly scoring on the themes themselves. The \"Occupational Scales (OSs)\" are also incorrect as they indicate the similarity of the examinee's interests to those of individuals in specific occupations, rather than categorizing them into Holland's themes. Lastly, the \"Personal Styles Scales (PSSs)\" are incorrect because they focus on the examinee’s preferences regarding personal work styles and environments, rather than on the occupational themes defined by Holland.",
+      "kn": "KN32",
+      "kn_explanation": "KN32 relates to commonly used instruments and their scales, here focusing on the SII and its components for vocational assessment.",
+      "difficulty": "medium",
+      "quality_comment": "The question clearly contrasts different SII scales, with plausible distractors referencing other legitimate scales, enhancing content validity for EPPP level.",
+      "lessonExcerpt": "| Exploration | 15 to 24 | Trying out different options, narrowing choices |",
+      "suggestedLesson": "5-career-interests",
+      "needsReview": false
+    },
+    {
+      "stem": "Which of the following strengths is commonly observed in children with autism spectrum disorder?",
+      "options": [
+        "A. Exceptional verbal communication skills",
+        "B. Advanced mathematical abilities",
+        "C. Intense focus on specific interests",
+        "D. High levels of social adaptability"
+      ],
+      "answer": "C. Intense focus on specific interests",
+      "explanation": "Option C is correct because children with autism spectrum disorder often exhibit an intense focus on specific interests, which can be a strength. Option A is incorrect as not all children with autism have exceptional verbal skills. Option B, while possible, is not universally applicable. Option D is misleading as social adaptability is often a challenge for these children.",
+      "kn": "KN32",
+      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of strengths in children with autism.",
+      "suggestedLesson": "5-career-interests",
+      "suggestedParagraph": "## Why Clinical Tests Matter for Your EPPP Success",
+      "lessonExcerpt": "Children with autism spectrum disorder often exhibit an intense focus on specific interests.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 30
+    },
+    {
+      "stem": "What is the primary purpose of empirical criterion keying in personality assessment?",
+      "options": [
+        "To ensure the test is culturally fair.",
+        "To identify items that differentiate between groups.",
+        "To create a forced-choice format.",
+        "To enhance the test's face validity."
+      ],
+      "answer": "To identify items that differentiate between groups.",
+      "explanation": "Empirical criterion keying focuses on selecting items that effectively distinguish between individuals with different diagnoses or characteristics, enhancing the test's predictive validity. The other options do not accurately describe the primary purpose of this method.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and assesses knowledge of personality assessment methods.",
+      "suggestedLesson": "5-career-interests",
+      "suggestedParagraph": "## Understanding Personality Assessment Tools: Your Guide to Structured and Projective Tests",
+      "lessonExcerpt": "These were developed through **empirical criterion keying**",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 16
     }
   ]
 }

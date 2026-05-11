@@ -555,6 +555,153 @@
       "lessonExcerpt": "We attribute our own behaviors to situations, but we attribute other people's behaviors to their personalities.",
       "suggestedLesson": "3-why-people-do-things",
       "needsReview": false
+    },
+    {
+      "stem": "Which cognitive bias is primarily responsible for individuals who believe in astrology focusing on information that confirms their beliefs while ignoring contradictory evidence?",
+      "options": [
+        "Availability heuristic",
+        "Confirmation bias",
+        "Fundamental attribution error",
+        "Self-serving bias"
+      ],
+      "answer": "Confirmation bias",
+      "explanation": "Confirmation bias is the tendency to seek out and pay attention to information that confirms existing beliefs while ignoring information that contradicts them. The availability heuristic refers to making judgments based on readily available information, while the fundamental attribution error involves overestimating personality factors in others' behaviors. The self-serving bias pertains to attributing successes to oneself and failures to external factors. Therefore, confirmation bias is the correct answer as it directly relates to the belief in astrology.",
+      "kn": "KN14",
+      "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
+      "difficulty": "hard",
+      "quality_comment": "High-quality question that tests understanding of cognitive biases.",
+      "suggestedLesson": "3-why-people-do-things",
+      "suggestedParagraph": "### Confirmation Bias: Your Brain's Echo Chamber",
+      "lessonExcerpt": "For the EPPP, you'll need to recognize different types of attribution biases and understand how people decide whether behavior stems from someone's personality or their circumstances. Let's break this down in a way that sticks.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 1
+    },
+    {
+      "stem": "What cognitive bias is illustrated by the halo effect in social perception?",
+      "options": [
+        "Overgeneralization",
+        "Confirmation bias",
+        "Self-serving bias",
+        "Attribution error"
+      ],
+      "answer": "Attribution error",
+      "explanation": "Attribution error is the correct answer as the halo effect involves making assumptions about someone's character based on a single positive trait, leading to biased evaluations. The other options do not specifically capture this cognitive bias.",
+      "kn": "KN14",
+      "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests knowledge of cognitive biases and their implications in social perception.",
+      "suggestedLesson": "3-why-people-do-things",
+      "suggestedParagraph": "## The Major Players: Errors and Biases",
+      "lessonExcerpt": "topic_name: Social Cognition – Causal Attributions domain: 3: Social Psychology slug: social-cognition-causal-attributions generated_at: 2025-11-16T15:23:20.860Z model: claude-sonnet-4-5-20250929 version: 3 --- ## Why Causal Attributions Matter in Your Career as a Psychologist",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 9
+    },
+    {
+      "stem": "In Rosenthal and Jacobson's (1968) Pygmalion in the Classroom study, teachers were falsely informed that randomly selected students had been identified by a test as poised for significant intellectual growth. At the end of the academic year, those students showed measurably greater IQ gains than matched controls. Which mechanism MOST accurately explains this outcome?",
+      "options": [
+        "The students identified as high-potential were unconsciously placed into more advanced instructional groups by school administrators",
+        "Teacher expectations altered the frequency and quality of teacher-student interactions, producing a behavioral self-fulfilling prophecy",
+        "The designated students experienced stereotype lift and increased intrinsic motivation after learning of their high-potential identification",
+        "Regression to the mean caused the randomly selected students to score closer to the population ceiling on subsequent testing"
+      ],
+      "answer": "Teacher expectations altered the frequency and quality of teacher-student interactions, producing a behavioral self-fulfilling prophecy",
+      "explanation": "The Pygmalion effect demonstrates that teacher expectancies — even when experimentally fabricated — modify teachers' behaviors toward students (greater warmth, more challenging material, more feedback), which in turn produce real gains in student performance. This is the defining mechanism of a behavioral self-fulfilling prophecy. Option A involves administrative tracking, which did not occur in the original study design. Option C (stereotype lift) requires that students be aware of the positive stereotype attributed to them, which was not the case in Rosenthal and Jacobson's design. Option D (regression to the mean) would predict randomly selected students trending toward average scores, not exceeding matched controls.",
+      "kn": "KN14",
+      "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
+      "difficulty": "hard",
+      "quality_comment": "Classic study with carefully constructed distractors targeting three distinct alternative explanations; tests mechanistic understanding rather than mere study recognition.",
+      "suggestedLesson": "3-why-people-do-things",
+      "suggestedParagraph": "## Confirmation Bias: Your Brain's Echo Chamber",
+      "lessonExcerpt": "topic_name: Social Cognition – Causal Attributions domain: 3: Social Psychology slug: social-cognition-causal-attributions generated_at: 2025-11-16T15:23:20.860Z model: claude-sonnet-4-5-20250929 version: 3 --- ## Why Causal Attributions Matter in Your Career as a Psychologist",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 6
+    },
+    {
+      "stem": "A psychologist working in a residential facility for adults with intellectual disabilities notices that staff members consistently attribute a resident's social withdrawal, appetite changes, and sleep disturbance solely to the resident's intellectual disability rather than considering a possible mood disorder. This pattern BEST illustrates:",
+      "options": [
+        "Confirmation bias",
+        "Diagnostic overshadowing",
+        "Fundamental attribution error",
+        "Anchoring heuristic"
+      ],
+      "answer": "Diagnostic overshadowing",
+      "explanation": "Diagnostic overshadowing originally described the tendency to attribute all problems of people with intellectual disabilities to that diagnosis while overlooking other conditions, such as comorbid psychiatric disorders. In this case, symptoms consistent with depression are being attributed to the intellectual disability rather than being evaluated as a separate condition. Confirmation bias involves seeking information that confirms preexisting beliefs. The fundamental attribution error involves overattributing behavior to dispositional rather than situational factors. The anchoring heuristic involves over-reliance on an initial piece of information when making judgments.",
+      "kn": "KN35",
+      "kn_explanation": "This question is best aligned with KN35 because it tests Criteria for selection and adaptation of assessment methods (e.g., evidenced-based knowledge of assessment limitations, cultural appropriateness, trans-cultural adaptation, and language accommodations).",
+      "difficulty": "medium",
+      "quality_comment": "Uses the classic population (intellectual disability) where diagnostic overshadowing was originally described, grounded directly in lesson content",
+      "suggestedLesson": "3-why-people-do-things",
+      "suggestedParagraph": "## Diagnostic Overshadowing: When One Factor Eclipses Everything",
+      "lessonExcerpt": "Diagnostic overshadowing originally described attributing all problems of people with intellectual disabilities to that diagnosis, overlooking other issues.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 17
+    },
+    {
+      "stem": "Which of the following best illustrates the self-serving bias in social cognition?",
+      "options": [
+        "A person attributes their success in a job interview to their skills and preparation.",
+        "A student blames a poor exam score on the difficulty of the questions.",
+        "An athlete credits their victory to their team's support and strategy.",
+        "A musician believes their recent performance was successful due to their talent."
+      ],
+      "answer": "A student blames a poor exam score on the difficulty of the questions.",
+      "explanation": "The self-serving bias involves taking credit for successes (internal attribution) while blaming failures on external factors. The correct answer illustrates this by showing the student attributing their failure to external circumstances (difficulty of questions) rather than their own performance. The other options either attribute success to personal qualities or do not illustrate the bias effectively.",
+      "kn": "KN14",
+      "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of self-serving bias with relevant options.",
+      "suggestedLesson": "3-why-people-do-things",
+      "suggestedParagraph": "## The Major Attribution Biases You Need to Know",
+      "lessonExcerpt": "The self-serving bias means we take credit for our successes (internal attribution) but blame circumstances for our failures (external attribution).",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 21
+    },
+    {
+      "stem": "Research on gender-role stereotypes and academic achievement has found that parents typically attribute their sons' success in mathematics to ability, while attributing their daughters' success in mathematics to:",
+      "options": [
+        "Innate talent",
+        "Effort",
+        "Teacher favoritism",
+        "Luck"
+      ],
+      "answer": "Effort",
+      "explanation": "Research on gender stereotypes in academic attribution shows that parents expect sons to excel at math and attribute their success to ability, but attribute daughters' success to effort. This differential attribution pattern creates self-fulfilling prophecies that affect children's confidence, interest, course selection, and career choices. 'Innate talent' is incorrect because that is what parents attribute to sons, not daughters. 'Teacher favoritism' and 'Luck' are not the attributions identified in this research.",
+      "kn": "KN14",
+      "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
+      "difficulty": "medium",
+      "quality_comment": "Directly supported by lesson content with a clear correct answer grounded in research findings.",
+      "suggestedLesson": "3-why-people-do-things",
+      "suggestedParagraph": "## Sex Differences in Cognitive Abilities and Self-Esteem",
+      "lessonExcerpt": "Parents expect sons to excel at math and attribute their success to ability, but attribute daughters' success to effort. Children internalize these views, affecting confidence, interest, course selection, and career choices.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 1
+    },
+    {
+      "stem": "In the diagnosis of female orgasmic disorder, which of the following best describes the situational type?",
+      "options": [
+        "It occurs only in specific contexts or situations.",
+        "It is characterized by a complete inability to achieve orgasm.",
+        "It is always accompanied by significant distress.",
+        "It is diagnosed when orgasm is achieved in all situations."
+      ],
+      "answer": "It occurs only in specific contexts or situations.",
+      "explanation": "The situational type of female orgasmic disorder refers to difficulties in achieving orgasm that occur only in certain contexts, not universally. The other options misrepresent the nature of the disorder.",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
+      "difficulty": "medium",
+      "quality_comment": "The question accurately assesses knowledge of the situational type of female orgasmic disorder.",
+      "suggestedLesson": "3-why-people-do-things",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "The situational type occurs only in specific contexts or situations.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 22
     }
   ]
 }

@@ -124,24 +124,6 @@
       "needsReview": false
     },
     {
-      "stem": "Which form of inheritance involves a trait influenced by a gene located on the X chromosome?",
-      "options": [
-        "Sex-linked inheritance",
-        "Single gene-pair inheritance",
-        "Polygenic inheritance",
-        "Mitochondrial inheritance"
-      ],
-      "answer": "Sex-linked inheritance",
-      "explanation": "1. **Correct Answer: Sex-linked inheritance**  \nSex-linked inheritance is the correct answer because it specifically refers to traits influenced by genes located on the sex chromosomes, most commonly the X chromosome. This means that characteristics associated with sex-linked inheritance can be passed down through generations via the X chromosome, which is particularly relevant for traits that exhibit different patterns of inheritance based on gender.\n\n2. **Incorrect Options:**\n\n- **Single gene-pair inheritance:** This form of inheritance involves a characteristic influenced by a single pair of genes, not specifically related to the location of those genes on sex chromosomes.\n\n- **Polygenic inheritance:** Polygenic inheritance refers to traits influenced by multiple genes, and does not pertain to genes located on specific chromosomes, including the X chromosome.\n\n- **Mitochondrial inheritance:** Mitochondrial inheritance involves genes found in mitochondrial DNA, which is inherited exclusively from the mother, and is unrelated to genes located on sex chromosomes.",
-      "kn": "KN22",
-      "kn_explanation": "This question is best aligned with KN22 because it tests Influence of individual-environment interaction on development over time (e.g., the relationship between the individual and the social, academic, work, community environment).",
-      "difficulty": "easy",
-      "quality_comment": "Options are tightly related but only one accurately describes sex-linked inheritance, aiding discrimination.",
-      "lessonExcerpt": "Fragile X Syndrome (FXS) is also X-linked dominant but affects both males and females, with males typically showing more severe symptoms.",
-      "suggestedLesson": "4-before-birth",
-      "needsReview": false
-    },
-    {
       "stem": "Which of the following best describes the role of passive genotype-environment correlation?",
       "options": [
         "Parents provide both genes and supportive environments consistent with the child’s genetic traits.",
@@ -176,6 +158,90 @@
       "lessonExcerpt": "Active Gene-Environment Correlation: As we develop, we actively select and create environments that match our genetic predispositions.",
       "suggestedLesson": "4-heredity-and-environment",
       "needsReview": false
+    },
+    {
+      "stem": "In which genetic inheritance pattern does a single copy of a mutated gene from one parent lead to the expression of a disorder?",
+      "options": [
+        "Autosomal recessive",
+        "X-linked recessive",
+        "Autosomal dominant",
+        "Mitochondrial inheritance"
+      ],
+      "answer": "Autosomal dominant",
+      "explanation": "In autosomal dominant inheritance, only one copy of the mutated gene is necessary for the disorder to manifest, which is characteristic of conditions like Huntington's disease. Autosomal recessive requires two copies of the mutated gene, X-linked recessive is linked to genes on the X chromosome, and mitochondrial inheritance involves genes in mitochondria.",
+      "kn": "KN4",
+      "kn_explanation": "This question is best aligned with KN4 because it tests Behavioral genetics, transmission and expression of genetic information, and its modification, and the role and limitations of this information in understanding disorders.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses knowledge of genetic inheritance.",
+      "suggestedLesson": "4-heredity-and-environment",
+      "suggestedParagraph": "## Huntington's Disease: The Genetic Movement Disorder",
+      "lessonExcerpt": "Huntington's disease is a devastating hereditary condition caused by a mutated gene on chromosome 4. Because it's autosomal dominant, each child of an affected parent has a 50% chance of inheriting it.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 25
+    },
+    {
+      "stem": "Which of the following genetic factors is most strongly associated with an increased risk of developing schizophrenia?",
+      "options": [
+        "Having a family history of schizophrenia",
+        "Experiencing a traumatic brain injury",
+        "Being diagnosed with a mood disorder",
+        "Having a high IQ"
+      ],
+      "answer": "Having a family history of schizophrenia",
+      "explanation": "A family history of schizophrenia is one of the most significant genetic risk factors for developing the disorder. The other options do not have the same level of association with genetic risk for schizophrenia.",
+      "kn": "KN30",
+      "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of genetic risk factors for schizophrenia.",
+      "suggestedLesson": "4-heredity-and-environment",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "A family history of schizophrenia is a significant genetic risk factor.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 25
+    },
+    {
+      "stem": "Which of the following genetic factors is most strongly associated with bipolar I disorder?",
+      "options": [
+        "A single gene mutation that guarantees the disorder.",
+        "A family history of mood disorders.",
+        "Environmental stressors that trigger episodes.",
+        "A specific chromosomal abnormality."
+      ],
+      "answer": "A family history of mood disorders.",
+      "explanation": "Research indicates that a family history of mood disorders is a significant genetic factor in the development of bipolar I disorder. The other options do not accurately reflect the genetic basis of the disorder.",
+      "kn": "KN30",
+      "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of genetic factors in bipolar I disorder.",
+      "suggestedLesson": "4-heredity-and-environment",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "A family history of mood disorders is strongly associated with bipolar I disorder.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 7
+    },
+    {
+      "stem": "A clinical psychologist is educating a family about the genetic contribution to bipolar I disorder. When discussing concordance rates in twin studies, which of the following most accurately reflects the research findings?",
+      "options": [
+        "Concordance is approximately 10-15% for monozygotic twins and 2-5% for dizygotic twins",
+        "Concordance is approximately 40-80% for monozygotic twins and 5-30% for dizygotic twins",
+        "Concordance is approximately 90-95% for monozygotic twins and 40-60% for dizygotic twins",
+        "Concordance rates for monozygotic and dizygotic twins are approximately equal at 30-40%"
+      ],
+      "answer": "Concordance is approximately 40-80% for monozygotic twins and 5-30% for dizygotic twins",
+      "explanation": "Twin studies of bipolar disorder show concordance rates of 40-80% for monozygotic (identical) twins and 5-30% for dizygotic (fraternal) twins, reflecting high heritability (60-90%). Option A underestimates the concordance rates significantly. Option C overestimates the monozygotic rate and dramatically overestimates the dizygotic rate. Option D incorrectly suggests similar concordance regardless of zygosity, which would indicate minimal genetic contribution — contradicting the strong genetic evidence for bipolar disorder.",
+      "kn": "KN39",
+      "kn_explanation": "Twin study concordance rates for bipolar I disorder relate to major research-based theories and models of psychopathology, specifically the genetic/biological underpinnings of mental disorders.",
+      "difficulty": "medium",
+      "quality_comment": "Tests specific quantitative knowledge about bipolar genetics that is commonly examined on the EPPP.",
+      "suggestedLesson": "4-heredity-and-environment",
+      "suggestedParagraph": "### The Genetics Are Strong",
+      "lessonExcerpt": "The concordance rates tell the story: Monozygotic (identical) twins: 40-80% Dizygotic (fraternal) twins: 5-30%",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 14
     }
   ]
 }

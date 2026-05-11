@@ -148,27 +148,6 @@
       "inspirationIndex": 8
     },
     {
-      "stem": "Which brain structure, when lesioned, is most likely to disrupt the regulation of sleep, particularly REM sleep?",
-      "options": [
-        "Cerebellum",
-        "Pons",
-        "Hippocampus",
-        "Thalamus"
-      ],
-      "answer": "Pons",
-      "explanation": "The pons plays a crucial role in regulating sleep, especially deep sleep and REM sleep. Lesions in this area can lead to significant sleep disturbances. The cerebellum is primarily involved in motor coordination, the hippocampus is associated with memory consolidation, and the thalamus acts as a relay station for sensory information, but does not directly regulate sleep cycles.",
-      "kn": "KN1",
-      "kn_explanation": "This question relates to the biological bases of behavior, specifically the impact of brain structures on sleep regulation.",
-      "difficulty": "hard",
-      "quality_comment": "The question is well-structured and tests specific knowledge of brain functions related to sleep.",
-      "suggestedLesson": "1-hindbrain-midbrain-forebrain",
-      "suggestedParagraph": "### Pons (The Coordinator and Sleep Regulator)",
-      "lessonExcerpt": "The pons... regulates sleep, particularly deep sleep and REM sleep.",
-      "needsReview": false,
-      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 1
-    },
-    {
       "stem": "What is the primary role of the cerebellum in motor coordination?",
       "options": [
         "Initiating movement",
@@ -188,27 +167,6 @@
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 8
-    },
-    {
-      "stem": "Which imaging technique is most commonly used to visualize brain pathology?",
-      "options": [
-        "Electroencephalography (EEG)",
-        "Magnetic Resonance Imaging (MRI)",
-        "Computed Tomography (CT)",
-        "Positron Emission Tomography (PET)"
-      ],
-      "answer": "Magnetic Resonance Imaging (MRI)",
-      "explanation": "MRI is widely used for visualizing brain structures and detecting pathologies due to its high resolution and ability to differentiate between various types of tissues. EEG measures electrical activity, CT provides less detailed images, and PET is used for metabolic processes but is less common for structural imaging.",
-      "kn": "KN1",
-      "kn_explanation": "This KN code applies as it pertains to the biological bases of brain imaging techniques.",
-      "difficulty": "medium",
-      "quality_comment": "The question is clear and tests knowledge of imaging techniques effectively.",
-      "suggestedLesson": "1-hindbrain-midbrain-forebrain",
-      "suggestedParagraph": "## The Three-Story Brain: Location Matters",
-      "lessonExcerpt": "Understanding neurological and endocrine disorders isn't just important for the EPPP; it's essential for being a competent psychologist who knows when symptoms point to a medical emergency rather than a mental health concern.",
-      "needsReview": false,
-      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 12
     },
     {
       "stem": "Which brain structures are primarily involved in the regulation of aggression?",
@@ -232,27 +190,6 @@
       "inspirationIndex": 22
     },
     {
-      "stem": "What physiological response is typically observed during exposure to a phobic stimulus?",
-      "options": [
-        "Increased heart rate and sweating",
-        "Decreased blood pressure and calmness",
-        "Heightened cognitive processing and focus",
-        "Increased appetite and relaxation"
-      ],
-      "answer": "Increased heart rate and sweating",
-      "explanation": "The correct answer reflects the typical physiological response of the sympathetic nervous system during a phobic reaction. The other options describe responses that are not characteristic of fear or phobia exposure.",
-      "kn": "KN1",
-      "kn_explanation": "This KN code applies as it relates to understanding fear response mechanisms and physiological reactions.",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively assesses knowledge of physiological responses to fear.",
-      "suggestedLesson": "1-hindbrain-midbrain-forebrain",
-      "suggestedParagraph": "## Midbrain: The Alert System and Movement Moderator",
-      "lessonExcerpt": "The medulla (also called medulla oblongata) handles the functions you literally cannot live without: breathing, heart rate, and blood pressure. It also manages involuntary mouth and throat movements for swallowing, coughing, and sneezing.",
-      "needsReview": false,
-      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 13
-    },
-    {
       "stem": "What neurological structure is primarily associated with the regulation of tics and OCD?",
       "options": [
         "A. Hippocampus",
@@ -272,69 +209,6 @@
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 4
-    },
-    {
-      "stem": "Which visual field deficit is most commonly associated with a stroke affecting the middle cerebral artery?",
-      "options": [
-        "Bilateral vision loss",
-        "Homonymous hemianopia",
-        "Quadrantanopia",
-        "Visual neglect"
-      ],
-      "answer": "Visual neglect",
-      "explanation": "The correct answer is visual neglect, which is often seen in strokes affecting the middle cerebral artery, particularly in the nondominant hemisphere. The other options describe different types of visual field deficits that are not specifically linked to this type of stroke.",
-      "kn": "KN1",
-      "kn_explanation": "This KN code applies as it relates to the biological bases of behavior, particularly in neurology.",
-      "difficulty": "hard",
-      "quality_comment": "The question is challenging and requires specific knowledge of stroke-related visual deficits.",
-      "suggestedLesson": "1-hindbrain-midbrain-forebrain",
-      "suggestedParagraph": "## Strokes: When Blood Flow Gets Cut Off",
-      "lessonExcerpt": "Weakness/paralysis on opposite side of body, vision loss in half the visual field, slurred speech, language problems (dominant hemisphere) or spatial neglect (nondominant hemisphere)",
-      "needsReview": false,
-      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 14
-    },
-    {
-      "stem": "Which brain damage indicator is most closely associated with apraxia?",
-      "options": [
-        "Damage to the occipital lobe",
-        "Damage to the parietal lobe",
-        "Damage to the frontal lobe",
-        "Damage to the temporal lobe"
-      ],
-      "answer": "Damage to the parietal lobe",
-      "explanation": "The correct answer is damage to the parietal lobe, which is associated with apraxia, a disorder characterized by difficulty in performing purposeful movements. The other options do not directly relate to apraxia.",
-      "kn": "KN1",
-      "kn_explanation": "This KN code applies as it pertains to the biological bases of behavior, particularly in neuroanatomy.",
-      "difficulty": "hard",
-      "quality_comment": "The question is challenging and tests specific knowledge of neuroanatomy related to motor function.",
-      "suggestedLesson": "1-hindbrain-midbrain-forebrain",
-      "suggestedParagraph": "## The Three-Story Brain: Location Matters",
-      "lessonExcerpt": "Most students remember \"cerebellum = balance and coordination,\" but that's only scratching the surface. Yes, it coordinates voluntary movements and maintains posture. Yes, damage causes **ataxia** (unsteady, clumsy movements).",
-      "needsReview": false,
-      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 20
-    },
-    {
-      "stem": "Which neuroimaging technique is primarily used to assess brain activity by measuring changes in blood flow?",
-      "options": [
-        "CT scan",
-        "MRI",
-        "fMRI",
-        "PET scan"
-      ],
-      "answer": "fMRI",
-      "explanation": "Functional MRI (fMRI) measures brain activity by detecting changes in blood flow, making it the correct answer. CT scans and MRIs are used for structural imaging, while PET scans measure metabolic activity but are less commonly used for real-time brain activity assessment.",
-      "kn": "KN1",
-      "kn_explanation": "This question is best aligned with KN1 because it tests Functional correlates and determinants of the neurobiological and genetic bases of behavior pertaining to perception, cognition, personality, and mood and affect in normal, acute and chronic neurobehavioral disease processes and disease, comorbidities.",
-      "difficulty": "medium",
-      "quality_comment": "Clear and relevant question that tests knowledge of neuroimaging methods.",
-      "suggestedLesson": "1-neurological-endocrine-disorders",
-      "suggestedParagraph": "## Brain Imaging Techniques",
-      "lessonExcerpt": "- **fMRI (functional MRI)**: Uses magnetic fields and radio waves to measure blood flow",
-      "needsReview": false,
-      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 24
     },
     {
       "stem": "A patient presents with severely disrupted sleep-wake cycles following a lesion in the anterior hypothalamus. Neuroimaging confirms damage to a small paired structure in this region that synchronizes biological rhythms to the 24-hour light-dark cycle by receiving direct retinal input. Which structure has been damaged?",
@@ -601,24 +475,6 @@
       "needsReview": false
     },
     {
-      "stem": "Which subcortical forebrain structure plays a key role in transferring declarative memories from short-term to long-term storage and spatial memory?",
-      "options": [
-        "Hippocampus",
-        "Cingulate cortex",
-        "Hypothalamus",
-        "Basal ganglia"
-      ],
-      "answer": "Hippocampus",
-      "explanation": "1. The **hippocampus** is the correct answer because it is specifically responsible for transferring declarative memories from short-term to long-term memory and plays a crucial role in spatial memory, which involves remembering the spatial characteristics of the environment. Damage to the hippocampus is linked to impairments in episodic memory and spatial navigation, demonstrating its essential function in memory processing.\n\n2. The **cingulate cortex** is incorrect because, while it plays a role in motivation, memory, and emotions, it is not primarily responsible for transferring memories between short-term and long-term storage. The **hypothalamus** is also incorrect as it regulates essential bodily functions and homeostasis but does not play a significant role in memory transfer. Lastly, the **basal ganglia** are incorrect because they are involved in the initiation and control of voluntary movements and procedural learning, rather than the specific transfer of declarative memories.",
-      "kn": "KN1",
-      "kn_explanation": "This question is best aligned with KN1 because it tests Functional correlates and determinants of the neurobiological and genetic bases of behavior pertaining to perception, cognition, personality, and mood and affect in normal, acute and chronic neurobehavioral disease processes and disease, comorbidities.",
-      "difficulty": "easy",
-      "quality_comment": "Clear phrasing and well-differentiated answer choices make this suitable for foundational memory knowledge.",
-      "lessonExcerpt": "- **Hippocampus = memory converter + spatial memory:** Transfers declarative memories to long-term storage. Damaged in Alzheimer's, affected by stress/cortisol, smaller in PTSD.",
-      "suggestedLesson": "1-hindbrain-midbrain-forebrain",
-      "needsReview": false
-    },
-    {
       "stem": "Which of the following symptoms would MOST likely occur with damage to the cingulate cortex?",
       "options": [
         "Unable to feel pain",
@@ -789,6 +645,108 @@
       "lessonExcerpt": "The reticular formation is a network of neurons extending from the medulla into the midbrain. Within it lies the **reticular activating system (RAS)**. Also called the ascending reticular activating system (ARAS).",
       "suggestedLesson": "1-hindbrain-midbrain-forebrain",
       "needsReview": false
+    },
+    {
+      "stem": "What condition is characterized by Wernicke's encephalopathy due to thiamine deficiency?",
+      "options": [
+        "Korsakoff syndrome",
+        "Alzheimer's disease",
+        "Huntington's disease",
+        "Multiple sclerosis"
+      ],
+      "answer": "Korsakoff syndrome",
+      "explanation": "The correct answer is Korsakoff syndrome, which is directly associated with Wernicke's encephalopathy resulting from thiamine deficiency. The other conditions are unrelated to thiamine deficiency.",
+      "kn": "KN1",
+      "kn_explanation": "This KN code applies as it pertains to the biological bases of behavior, particularly in nutritional deficiencies.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of the relationship between nutritional deficiencies and neurological conditions.",
+      "suggestedLesson": "1-hindbrain-midbrain-forebrain",
+      "suggestedParagraph": "## Movement Disorders: When Motor Control Breaks Down",
+      "lessonExcerpt": "**EPPP tip:** Don't confuse this with Wernicke-Korsakoff syndrome, which includes Wernicke's encephalopathy (acute confusion, ataxia, eye movement problems) followed by Korsakoff syndrome. The exam might present a case of chronic alcoholism with severe memory problems and confabulation.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 17
+    },
+    {
+      "stem": "A health psychologist is designing a study to assess biological markers of chronic stress in nurses working in high-acuity ICU settings. To capture HPA axis activation associated with prolonged occupational stress, the researcher selects a salivary biomarker secreted by the adrenal cortex in response to CRH and ACTH signaling. Which biomarker is MOST appropriate for this purpose?",
+      "options": [
+        "Epinephrine, which is released by the adrenal medulla during acute sympathetic arousal",
+        "Insulin, which is secreted by the pancreas to regulate blood glucose homeostasis",
+        "Cortisol, which is the primary glucocorticoid released during HPA axis activation",
+        "Testosterone, which is primarily associated with reproductive function and aggression"
+      ],
+      "answer": "Cortisol, which is the primary glucocorticoid released during HPA axis activation",
+      "explanation": "Cortisol is the primary glucocorticoid produced by the adrenal cortex in response to hypothalamic-pituitary-adrenal (HPA) axis activation and is the most widely validated biological marker of chronic stress. Epinephrine is released by the adrenal medulla (not cortex) as part of rapid, acute sympathetic nervous system activation—it is a marker of short-term stress rather than chronic HPA dysregulation. Insulin is a pancreatic hormone and is unrelated to the stress response cascade. Testosterone is an androgen associated with sexual function and may fluctuate with stress, but it is not the primary or direct marker of HPA activation.",
+      "kn": "KN1",
+      "kn_explanation": "Understanding endocrine mechanisms of stress, specifically the HPA axis and cortisol as a physiological marker, is foundational Biological Bases of Behavior content relevant to health psychology.",
+      "difficulty": "medium",
+      "quality_comment": "Solid question; the epinephrine distractor is particularly strong as it targets a common confusion between adrenal medulla (acute stress) and adrenal cortex (chronic HPA activation)",
+      "suggestedLesson": "1-hindbrain-midbrain-forebrain",
+      "suggestedParagraph": "## Endocrine Disorders and the HPA Axis",
+      "lessonExcerpt": "The hypothalamus initiates the stress response by releasing hormones that trigger the pituitary, which triggers the adrenal glands, the HPA (hypothalamic-pituitary-adrenal) axis. This is fundamental for understanding trauma responses, chronic stress effects, and conditions like PTSD and depression.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 17
+    },
+    {
+      "stem": "During a neuropsychological evaluation, a psychologist reviews medical records noting that a patient experienced both tachycardia and bradycardia during stimulant intoxication. These terms refer, respectively, to:",
+      "options": [
+        "Rapid breathing and slow breathing",
+        "Rapid heart rate and slowed heart rate",
+        "Elevated blood pressure and decreased blood pressure",
+        "Excessive sweating and absence of sweating"
+      ],
+      "answer": "Rapid heart rate and slowed heart rate",
+      "explanation": "Tachycardia refers to rapid (abnormally fast) heart rate, and bradycardia refers to slowed (abnormally slow) heart rate. Both can occur during stimulant intoxication. Rapid and slow breathing (A) would be tachypnea and bradypnea. Elevated and decreased blood pressure (C) would be hypertension and hypotension. Excessive and absent sweating (D) would be hyperhidrosis and anhidrosis.",
+      "kn": "KN2",
+      "kn_explanation": "This question is best aligned with KN2 because it tests Drug classification, mechanisms of action, and desired/adverse effects of therapeutic agents, drugs of abuse, and complementary or alternative agents.",
+      "difficulty": "easy",
+      "quality_comment": "Straightforward terminology question. Lesson content mentions these terms in the context of stimulant intoxication but does not provide detailed definitions in the primary lesson files.",
+      "suggestedLesson": "1-hindbrain-midbrain-forebrain",
+      "suggestedParagraph": "## Narcotic-Analgesics (Opioids): Pain Relief and Public Health Crisis",
+      "lessonExcerpt": "The medulla (also called medulla oblongata) handles the functions you literally cannot live without: breathing, heart rate, and blood pressure. It also manages involuntary mouth and throat movements for swallowing, coughing, and sneezing.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 16
+    },
+    {
+      "stem": "Damage to the left hemisphere areas of the cerebral cortex involved in emotion typically results in which reaction?",
+      "options": [
+        "An indifference reaction with inappropriate euphoria and lack of emotional response",
+        "A catastrophic reaction characterized by depression, anxiety, fear, and paranoia",
+        "Increased expression of sadness and negative emotions without cognitive awareness",
+        "Loss of all emotional experience including positive and negative emotions"
+      ],
+      "answer": "A catastrophic reaction characterized by depression, anxiety, fear, and paranoia",
+      "explanation": "1. \"A catastrophic reaction characterized by depression, anxiety, fear, and paranoia\" is the correct answer because, according to the reference material, areas in the left hemisphere of the cerebral cortex are associated with mediating happiness and other positive emotions. Damage to these areas can lead to significant emotional disturbances, resulting in a catastrophic reaction that manifests as depression, anxiety, fear, and paranoia.\n\n2. The option \"An indifference reaction with inappropriate euphoria and lack of emotional response\" is incorrect because this reaction is associated with damage to the right hemisphere, which mediates sadness and negative emotions, not the left. The option \"Increased expression of sadness and negative emotions without cognitive awareness\" is wrong because it does not accurately reflect the emotional outcomes of left hemisphere damage, which primarily affects positive emotions rather than increasing negative emotions. Lastly, \"Loss of all emotional experience including positive and negative emotions\" is incorrect as damage to the left hemisphere does not result in a total loss of emotional experience; rather, it specifically leads to the predominance of negative emotional reactions.",
+      "kn": "KN10",
+      "kn_explanation": "This question is best aligned with KN10 because it tests Major research-based theories and models of emotion and their application.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are plausible but incorrect, making this question effective for assessing neurological knowledge relevant to emotion.",
+      "lessonExcerpt": "Damage here can be catastrophic. We're talking respiratory failure, coma, or death.",
+      "suggestedLesson": "1-hindbrain-midbrain-forebrain",
+      "needsReview": false
+    },
+    {
+      "stem": "Which structures are primarily involved in the secretion of hormones in the endocrine system?",
+      "options": [
+        "Thalamus and hypothalamus",
+        "Pituitary gland and adrenal glands",
+        "Cerebellum and brainstem",
+        "Amygdala and hippocampus"
+      ],
+      "answer": "Pituitary gland and adrenal glands",
+      "explanation": "The pituitary gland is often referred to as the 'master gland' of the endocrine system, controlling various hormone functions, while the adrenal glands produce hormones like cortisol. The thalamus and hypothalamus are involved in regulation but not direct secretion, and the cerebellum and brainstem are not involved in hormone secretion.",
+      "kn": "KN1",
+      "kn_explanation": "This KN code applies as it relates to the biological bases of behavior and the endocrine system.",
+      "difficulty": "medium",
+      "quality_comment": "The question accurately assesses knowledge of endocrine structures.",
+      "suggestedLesson": "1-hindbrain-midbrain-forebrain",
+      "suggestedParagraph": "## Why Neurological and Endocrine Disorders Matter for Clinical Practice",
+      "lessonExcerpt": "Understanding neurological and endocrine disorders isn't just important for the EPPP; it's essential for being a competent psychologist.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 15
     }
   ]
 }

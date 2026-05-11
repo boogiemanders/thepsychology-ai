@@ -148,69 +148,6 @@
       "inspirationIndex": 3
     },
     {
-      "stem": "What is a psychologist's responsibility regarding confidentiality when making referrals to Employee Assistance Programs (EAPs)?",
-      "options": [
-        "They must disclose all client information to the EAP.",
-        "They must maintain confidentiality unless the client provides consent.",
-        "They can share information freely as long as it is for a work-related issue.",
-        "They should inform the EAP of any past treatment history."
-      ],
-      "answer": "They must maintain confidentiality unless the client provides consent.",
-      "explanation": "The correct answer emphasizes the importance of maintaining client confidentiality, which is a fundamental ethical obligation. The other options incorrectly suggest that confidentiality can be breached without consent.",
-      "kn": "KN64",
-      "kn_explanation": "This question is best aligned with KN64 because it tests Identification and management of potential ethical issues.",
-      "difficulty": "medium",
-      "quality_comment": "The question is clear and directly addresses confidentiality issues in EAP referrals.",
-      "suggestedLesson": "8-standards-3-4",
-      "suggestedParagraph": "## What Actually Gets Psychologists in Trouble",
-      "lessonExcerpt": "Employee Assistance Programs (EAPs): Confidentiality works the same as in other therapy. Information isn't shared with supervisors or employers without written authorization, even for mandatory referrals.",
-      "needsReview": false,
-      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 5
-    },
-    {
-      "stem": "Who is ultimately responsible for errors in test interpretation?",
-      "options": [
-        "The individual who administered the test.",
-        "The psychologist who interpreted the results.",
-        "The client who provided the information.",
-        "The test publisher."
-      ],
-      "answer": "The psychologist who interpreted the results.",
-      "explanation": "The correct answer identifies the psychologist as the responsible party for interpreting test results accurately. The other options do not hold the psychologist accountable for their professional judgments.",
-      "kn": "KN62",
-      "kn_explanation": "This question is best aligned with KN62 because it tests Professional standards and relevant guidelines for the practice of psychology (e.g., standards for educational and psychological testing).",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively assesses understanding of accountability in test interpretation.",
-      "suggestedLesson": "8-standards-9-10",
-      "suggestedParagraph": "## Understanding Malpractice: The Four Ds You Can't Forget",
-      "lessonExcerpt": "You can use these services, but remember: you retain full responsibility for the appropriate application and interpretation of the results.",
-      "needsReview": false,
-      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 8
-    },
-    {
-      "stem": "What is a significant concern regarding racial and cultural biases in IQ testing?",
-      "options": [
-        "IQ tests are designed to be culturally neutral.",
-        "Bias can lead to misinterpretation of a person's abilities.",
-        "All individuals score equally on IQ tests.",
-        "Cultural factors do not influence test performance."
-      ],
-      "answer": "Bias can lead to misinterpretation of a person's abilities.",
-      "explanation": "The correct answer highlights the risk of bias affecting the interpretation of test results, which can have significant implications for individuals. The other options are incorrect as they misrepresent the nature of IQ tests and cultural influences.",
-      "kn": "KN67",
-      "kn_explanation": "This question is best aligned with KN67 because it tests Emerging social, legal, ethical, and policy issues and their impact on psychological practice.",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively assesses understanding of cultural biases in testing.",
-      "suggestedLesson": "5-cognitive-tests",
-      "suggestedParagraph": "## Racial and cultural biases in IQ testing",
-      "lessonExcerpt": "When you need to minimize cultural bias or language barriers, your top two choices are: KABC-II, Raven's SPM. The Kaufman Assessment Battery for Children (KABC-II) and Raven's Standard Progressive Matrices (SPM) reduce cultural bias and aren't affected by English proficiency or cultural learning.",
-      "needsReview": false,
-      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 10
-    },
-    {
       "stem": "Which ethical principle emphasizes the importance of minimizing harm to research animals in psychological studies?",
       "options": [
         "Beneficence and Nonmaleficence",
@@ -230,27 +167,6 @@
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 11
-    },
-    {
-      "stem": "According to the APA Ethics Code, what is the primary purpose of maintaining accurate records in psychological practice?",
-      "options": [
-        "To ensure compliance with insurance requirements",
-        "To provide a basis for future treatment decisions",
-        "To protect the psychologist from malpractice claims",
-        "To facilitate client billing and payment"
-      ],
-      "answer": "To provide a basis for future treatment decisions",
-      "explanation": "Maintaining accurate records is essential for providing continuity of care and making informed treatment decisions. While compliance and billing are important, they are secondary to the primary goal of client care.",
-      "kn": "KN61",
-      "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively assesses understanding of the importance of record keeping in psychology.",
-      "suggestedLesson": "8-standards-5-6",
-      "suggestedParagraph": "## Understanding Malpractice: The Four Ds You Can't Forget",
-      "lessonExcerpt": "Standard 6.01 requires psychologists to create, maintain, and eventually dispose of records appropriately. The reasons are practical: Facilitating continuity of care if services transfer to another provider",
-      "needsReview": false,
-      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 12
     },
     {
       "stem": "What should a psychologist do when they receive a subpoena for client records?",
@@ -358,27 +274,6 @@
       "inspirationIndex": 25
     },
     {
-      "stem": "What is a psychologist's legal obligation when they suspect a client has disclosed child abuse?",
-      "options": [
-        "To keep the information confidential.",
-        "To report the suspicion to the appropriate authorities.",
-        "To confront the client about the disclosure.",
-        "To document the disclosure in the client's file."
-      ],
-      "answer": "To report the suspicion to the appropriate authorities.",
-      "explanation": "Psychologists are legally required to report any suspicions of child abuse to the appropriate authorities. Keeping the information confidential or merely documenting it does not fulfill their legal obligations.",
-      "kn": "KN63",
-      "kn_explanation": "This question is best aligned with KN63 because it tests Laws, statutes, and judicial decisions that affect psychological practice.",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively assesses understanding of mandatory reporting laws.",
-      "suggestedLesson": "8-standards-3-4",
-      "suggestedParagraph": "## When a Subpoena Lands on Your Desk",
-      "lessonExcerpt": "Mandatory reporting laws require reporting suspected child abuse or neglect to protective services. You report when you have \"reasonable cause to suspect\". Not when you're certain.",
-      "needsReview": false,
-      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 30
-    },
-    {
       "stem": "After a psychologist's contract with a managed care organization is terminated, which of the following ethical obligations remains in effect regarding client information?",
       "options": [
         "A) The psychologist can freely share client information with other providers without consent.",
@@ -440,27 +335,6 @@
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 0
-    },
-    {
-      "stem": "What is the minimum retention period for HIPAA documentation according to HIPAA regulations?",
-      "options": [
-        "1 year",
-        "3 years",
-        "5 years",
-        "6 years"
-      ],
-      "answer": "6 years",
-      "explanation": "The correct answer is 6 years, which is the standard retention period for HIPAA documentation. This is supported by HIPAA regulations that require covered entities to retain documentation for this duration. The other options do not meet the minimum requirement set by HIPAA.",
-      "kn": "KN62",
-      "kn_explanation": "This question is best aligned with KN62 because it tests Professional standards and relevant guidelines for the practice of psychology (e.g., standards for educational and psychological testing).",
-      "difficulty": "hard",
-      "quality_comment": "The question is precise and tests specific knowledge of HIPAA regulations.",
-      "suggestedLesson": "8-standards-7-8",
-      "suggestedParagraph": "## Understanding Malpractice: The Four Ds You Can't Forget",
-      "lessonExcerpt": "HIPAA regulations (for health information): At least 6 years after authorization is signed",
-      "needsReview": false,
-      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 2
     },
     {
       "stem": "Which of the following best describes ethical collaboration among professionals in psychology?",
@@ -673,27 +547,6 @@
       "inspirationIndex": 2
     },
     {
-      "stem": "What is the primary ethical concern regarding referral fees in therapy?",
-      "options": [
-        "They can create a conflict of interest.",
-        "They are always illegal.",
-        "They ensure therapists are compensated fairly.",
-        "They enhance client trust."
-      ],
-      "answer": "They can create a conflict of interest.",
-      "explanation": "Referral fees can lead to conflicts of interest where the therapist may prioritize financial gain over the best interests of the client. The other options misrepresent the nature of referral fees; they are not inherently illegal, do not guarantee fair compensation, and do not necessarily enhance trust.",
-      "kn": "KN64",
-      "kn_explanation": "This question is best aligned with KN64 because it tests Identification and management of potential ethical issues.",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively highlights the ethical implications of referral fees in therapeutic settings.",
-      "suggestedLesson": "8-standards-5-6",
-      "suggestedParagraph": "## What Actually Gets Psychologists in Trouble",
-      "lessonExcerpt": "Standard 6.07 states that referral fees must be \"based on the services provided\" and not \"on the referral itself.\"",
-      "needsReview": false,
-      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 3
-    },
-    {
       "stem": "Which ethical principle is primarily concerned with the treatment of animals in research?",
       "options": [
         "Beneficence",
@@ -713,27 +566,6 @@
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 4
-    },
-    {
-      "stem": "In the context of therapy, what is a significant ethical concern regarding multiple relationships?",
-      "options": [
-        "They can enhance therapeutic effectiveness.",
-        "They may lead to exploitation or harm.",
-        "They are always beneficial for the client.",
-        "They simplify the therapeutic process."
-      ],
-      "answer": "They may lead to exploitation or harm.",
-      "explanation": "Multiple relationships can create power imbalances and conflicts of interest, increasing the risk of exploitation or harm to the client. The other options incorrectly suggest that multiple relationships are inherently beneficial or simplify therapy, which is not the case.",
-      "kn": "KN64",
-      "kn_explanation": "This question is best aligned with KN64 because it tests Identification and management of potential ethical issues.",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively highlights the potential dangers of multiple relationships in therapeutic settings.",
-      "suggestedLesson": "8-practice-issues",
-      "suggestedParagraph": "## The Four Sections of the Ethics Code",
-      "lessonExcerpt": "Only those that 'could reasonably be expected to impair objectivity, competence, or effectiveness' or risk exploitation or harm.",
-      "needsReview": false,
-      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 5
     },
     {
       "stem": "What is the primary consideration when making psychological decisions in the best interests of a child?",
@@ -778,27 +610,6 @@
       "inspirationIndex": 8
     },
     {
-      "stem": "What should a psychologist do if they observe unethical behavior by a colleague?",
-      "options": [
-        "Ignore it to avoid conflict",
-        "Report it to the appropriate authorities",
-        "Confront the colleague directly without documentation",
-        "Discuss it with the client's family"
-      ],
-      "answer": "Report it to the appropriate authorities",
-      "explanation": "The ethical obligation is to report observed unethical behavior to the appropriate authorities to protect clients and uphold professional standards. Ignoring the behavior or confronting the colleague without documentation does not address the issue adequately. Discussing it with the client's family could breach confidentiality.",
-      "kn": "KN62",
-      "kn_explanation": "This question is best aligned with KN62 because it tests Professional standards and relevant guidelines for the practice of psychology (e.g., standards for educational and psychological testing).",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively highlights the importance of reporting unethical behavior in the field.",
-      "suggestedLesson": "8-standards-1-2",
-      "suggestedParagraph": "## What Actually Gets Psychologists in Trouble",
-      "lessonExcerpt": "Standard 1.05 (Formal Reporting): You must report to an ethics committee, licensing board, or other authority when: The violation has caused or is likely to cause substantial harm",
-      "needsReview": false,
-      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 9
-    },
-    {
       "stem": "What is a psychologist's ethical responsibility when addressing a misdiagnosis that may have led to inappropriate medication being prescribed?",
       "options": [
         "To inform the client and collaborate with the prescribing physician to adjust the treatment plan.",
@@ -818,111 +629,6 @@
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 11
-    },
-    {
-      "stem": "In psychological research, what is the primary purpose of obtaining informed consent from participants?",
-      "options": [
-        "To ensure participants are aware of their rights.",
-        "To protect researchers from legal liability.",
-        "To guarantee that participants will complete the study.",
-        "To enhance the credibility of the research findings."
-      ],
-      "answer": "To ensure participants are aware of their rights.",
-      "explanation": "The primary purpose of informed consent is to ensure that participants understand their rights and the nature of the research. While protecting researchers and enhancing credibility are important, they are not the primary purpose of informed consent.",
-      "kn": "KN68",
-      "kn_explanation": "This question is best aligned with KN68 because it tests Client and patient rights.",
-      "difficulty": "hard",
-      "quality_comment": "The question clearly focuses on a fundamental aspect of research ethics.",
-      "suggestedLesson": "8-standards-7-8",
-      "suggestedParagraph": "## Why Professional Issues Matter More Than You Think",
-      "lessonExcerpt": "When someone agrees to participate in your research, they need to know what they're signing up for. Standard 8.02 requires you to tell prospective participants",
-      "needsReview": false,
-      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 2
-    },
-    {
-      "stem": "In therapy, what is a critical ethical requirement regarding multiple relationships and informed consent?",
-      "options": [
-        "Therapists must disclose all personal relationships with clients.",
-        "Clients must agree to all forms of dual relationships.",
-        "Therapists should avoid any dual relationships that could impair their effectiveness.",
-        "Therapists can engage in dual relationships if clients are informed."
-      ],
-      "answer": "Therapists should avoid any dual relationships that could impair their effectiveness.",
-      "explanation": "The ethical requirement is to avoid dual relationships that could impair objectivity or effectiveness. While informing clients is important, it does not justify engaging in potentially harmful dual relationships.",
-      "kn": "KN64",
-      "kn_explanation": "This question is best aligned with KN64 because it tests Identification and management of potential ethical issues.",
-      "difficulty": "medium",
-      "quality_comment": "The question addresses a significant ethical concern in therapeutic practices.",
-      "suggestedLesson": "8-standards-3-4",
-      "suggestedParagraph": "## Why Professional Issues Matter More Than You Think",
-      "lessonExcerpt": "Not all multiple relationships are prohibited. Only those that \"could reasonably be expected to impair objectivity, competence, or effectiveness\" or risk exploitation or harm.",
-      "needsReview": false,
-      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 4
-    },
-    {
-      "stem": "What is the key distinction between informed consent and assent in psychological research involving minors?",
-      "options": [
-        "Informed consent is required only for adults, while assent is for minors.",
-        "Assent allows minors to agree to participate, but informed consent is needed from parents.",
-        "Informed consent is a legal requirement, while assent is optional.",
-        "Assent can be obtained verbally, while informed consent must be written."
-      ],
-      "answer": "Assent allows minors to agree to participate, but informed consent is needed from parents.",
-      "explanation": "Informed consent involves obtaining permission from a parent or guardian, while assent is the minor's agreement to participate. The other options misrepresent the relationship between consent and assent.",
-      "kn": "KN68",
-      "kn_explanation": "This question is best aligned with KN68 because it tests Client and patient rights.",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively clarifies a critical distinction in research ethics.",
-      "suggestedLesson": "8-standards-3-4",
-      "suggestedParagraph": "## Why Professional Issues Matter More Than You Think",
-      "lessonExcerpt": "Minors: Most people under 18 cannot legally consent to treatment. You must... Seek their assent (agreement). Think of informed consent with minors like a group project at work: the manager (parent) has final authority, but you still explain the project to the junior employee (minor) and get their buy-in.",
-      "needsReview": false,
-      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 5
-    },
-    {
-      "stem": "Which ethical principle is primarily concerned with the fairness of billing practices in psychological services?",
-      "options": [
-        "Beneficence",
-        "Justice",
-        "Integrity",
-        "Fidelity"
-      ],
-      "answer": "Justice",
-      "explanation": "The principle of justice emphasizes fairness and equality in access to psychological services, including billing practices. The other principles, while important, do not specifically address billing fairness.",
-      "kn": "KN61",
-      "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively connects ethical principles to financial practices.",
-      "suggestedLesson": "8-standards-1-2",
-      "suggestedParagraph": "## Why Professional Issues Matter More Than You Think",
-      "lessonExcerpt": "D: Justice | Ensure fairness | Everyone deserves access to psychology's benefits and equal quality services",
-      "needsReview": false,
-      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 6
-    },
-    {
-      "stem": "What is the primary difference between ethical guidelines and legal obligations for psychologists?",
-      "options": [
-        "Ethical guidelines are enforceable by law, while legal obligations are not.",
-        "Legal obligations are mandatory, while ethical guidelines are aspirational.",
-        "Ethical guidelines apply only to clinical practice, while legal obligations apply to all areas.",
-        "Legal obligations can be ignored if ethical guidelines are followed."
-      ],
-      "answer": "Legal obligations are mandatory, while ethical guidelines are aspirational.",
-      "explanation": "Legal obligations must be followed and can result in penalties if violated, while ethical guidelines serve as aspirational standards that may not have legal consequences. The other options misrepresent the relationship between ethics and law.",
-      "kn": "KN62",
-      "kn_explanation": "This question is best aligned with KN62 because it tests Professional standards and relevant guidelines for the practice of psychology (e.g., standards for educational and psychological testing).",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively clarifies a fundamental difference in professional standards.",
-      "suggestedLesson": "8-standards-1-2",
-      "suggestedParagraph": "## Why Professional Issues Matter More Than You Think",
-      "lessonExcerpt": "These are aspirational. They can't be used to sanction you, but they represent the highest ideals of the profession. They're like the philosophy behind the rules... General Principles are aspirational only. You can't be sanctioned based on them alone. Only the Ethical Standards are enforceable.",
-      "needsReview": false,
-      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 7
     },
     {
       "stem": "What ethical considerations should a psychologist keep in mind when refusing treatment to a client?",
@@ -1455,6 +1161,48 @@
       "lessonExcerpt": "Direct Cause: Your breach directly caused the harm",
       "suggestedLesson": "8-practice-issues",
       "needsReview": false
+    },
+    {
+      "stem": "What must a psychologist demonstrate to establish legal liability in a malpractice case?",
+      "options": [
+        "The client must show emotional distress.",
+        "The psychologist must have a personal relationship with the client.",
+        "The psychologist must have breached a duty of care that caused measurable harm.",
+        "The client must have a prior history of mental health issues."
+      ],
+      "answer": "The psychologist must have breached a duty of care that caused measurable harm.",
+      "explanation": "The correct answer reflects the essential elements required to establish legal liability in a malpractice case, specifically the breach of duty and resulting harm. The other options do not accurately represent the legal requirements for establishing malpractice.",
+      "kn": "KN63",
+      "kn_explanation": "This question is best aligned with KN63 because it tests Laws, statutes, and judicial decisions that affect psychological practice.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of legal liability in psychology.",
+      "suggestedLesson": "8-practice-issues",
+      "suggestedParagraph": "## Understanding Malpractice: The Four Ds You Can't Forget",
+      "lessonExcerpt": "Malpractice claims follow a predictable pattern called the \"Four Ds.\" Duty of Care: A professional relationship existed where you owed the client a standard of care. Dereliction of Duty: You breached that standard through negligence or misconduct. Damages: The client suffered measurable harm. Direct Cause: Your breach directly caused the harm.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 26
+    },
+    {
+      "stem": "What ethical obligation does a psychologist have when testifying as a fact witness?",
+      "options": [
+        "To provide only opinions based on personal beliefs.",
+        "To disclose all information about the client without restrictions.",
+        "To testify truthfully based on their observations and knowledge.",
+        "To advocate for the client's interests during testimony."
+      ],
+      "answer": "To testify truthfully based on their observations and knowledge.",
+      "explanation": "As a fact witness, a psychologist is obligated to provide truthful testimony based on their observations and knowledge, without bias or personal opinion. The other options misrepresent the role and responsibilities of a fact witness.",
+      "kn": "KN61",
+      "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and effectively assesses knowledge of ethical obligations in legal contexts.",
+      "suggestedLesson": "8-practice-issues",
+      "suggestedParagraph": "## Standard 9: Assessment (Getting It Right)",
+      "lessonExcerpt": "Testifies only to what they directly saw, heard, or observed | Cannot give opinions or speculate | Must have firsthand knowledge",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 29
     }
   ]
 }

@@ -423,6 +423,165 @@
       "lessonExcerpt": "| -2 SD | -2.0 | 30 | 70 | 1 | 2 |",
       "suggestedLesson": "5-interpreting-scores",
       "needsReview": false
+    },
+    {
+      "stem": "How do you determine the score threshold for a specific percentile in a normal distribution?",
+      "options": [
+        "By calculating the mean and standard deviation",
+        "By using z-scores",
+        "By applying the central limit theorem",
+        "By conducting a t-test"
+      ],
+      "answer": "By using z-scores",
+      "explanation": "To determine the score threshold for a specific percentile in a normal distribution, you use z-scores, which indicate how many standard deviations a score is from the mean. The other options do not directly relate to finding percentiles.",
+      "kn": "KN55",
+      "kn_explanation": "This question is best aligned with KN55 because it tests Analytic methods, including qualitative (e.g., thematic, phenomenological) and quantitative (e.g., probability theory; descriptive, inferential, and parametric statistics; meta-analysis; factor analysis; causal modeling).",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests knowledge of statistical concepts.",
+      "suggestedLesson": "5-interpreting-scores",
+      "suggestedParagraph": "## The Foundation: Sampling Distributions and Probability",
+      "lessonExcerpt": "Z-Scores: The Foundation Z-scores have a mean of 0 and a standard deviation of 1.0.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 7
+    },
+    {
+      "stem": "When ranking scores based on percentiles, which of the following statements is true?",
+      "options": [
+        "Percentiles indicate the percentage of scores that fall below a specific score.",
+        "Percentiles provide the exact score corresponding to a specific percentile rank.",
+        "Percentiles can only be used with normally distributed data.",
+        "Percentiles are the same as standard scores."
+      ],
+      "answer": "Percentiles indicate the percentage of scores that fall below a specific score.",
+      "explanation": "The correct answer accurately describes what percentiles represent in a dataset. The other options either misinterpret the concept of percentiles or incorrectly limit their applicability.",
+      "kn": "KN54",
+      "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
+      "difficulty": "medium",
+      "quality_comment": "The question is well-constructed and tests knowledge of descriptive statistics.",
+      "suggestedLesson": "5-interpreting-scores",
+      "suggestedParagraph": "### Scales of Measurement: How We Quantify Experience",
+      "lessonExcerpt": "A percentile rank tells you the percentage of people in the reference group who scored at or below a particular score. If your client receives a percentile rank of 82, it means 82% of people in the comparison group scored the same or lower.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 4
+    },
+    {
+      "stem": "Which of the following statements best describes the interpretation of IQ and achievement test scores in relation to specific learning disorder?",
+      "options": [
+        "IQ scores are the sole determinant of a specific learning disorder diagnosis.",
+        "Achievement test scores are more indicative of a specific learning disorder than IQ scores.",
+        "Both IQ and achievement test scores are irrelevant in diagnosing specific learning disorders.",
+        "IQ scores must always be higher than achievement test scores to diagnose a specific learning disorder."
+      ],
+      "answer": "Achievement test scores are more indicative of a specific learning disorder than IQ scores.",
+      "explanation": "Achievement test scores provide a clearer picture of a person's academic skills and difficulties, which are central to diagnosing specific learning disorders. The other options incorrectly emphasize the primacy of IQ scores or misinterpret the relationship between IQ and achievement in this context.",
+      "kn": "KN30",
+      "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of the relationship between IQ and achievement tests in diagnosing specific learning disorders.",
+      "suggestedLesson": "5-interpreting-scores",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "People with specific learning disorders typically have average to above-average IQ but elevated rates of other problems. ADHD is the most common comorbid psychiatric disorder.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 21
+    },
+    {
+      "stem": "Which personnel selection method allows for a range of scores to be considered acceptable for hiring decisions?",
+      "options": [
+        "Banding",
+        "Ranking",
+        "Cut-off scores",
+        "Weighted scoring"
+      ],
+      "answer": "Banding",
+      "explanation": "Banding is a personnel selection method that allows for a range of scores to be considered acceptable, rather than relying on a single cut-off score. The other options do not provide this flexibility in scoring.",
+      "kn": "KN34",
+      "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of banding in personnel selection.",
+      "suggestedLesson": "5-interpreting-scores",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "**Sleep Terrors:**\n- Abrupt arousal usually starting with panicky scream\n- Intense fear with autonomic arousal",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 26
+    },
+    {
+      "stem": "When interpreting the Halstead Impairment Index, what does a score of 0.6 indicate about an examinee's neuropsychological functioning?",
+      "options": [
+        "Severe impairment",
+        "Normal functioning",
+        "Mild impairment",
+        "Moderate impairment"
+      ],
+      "answer": "Moderate impairment",
+      "explanation": "1. The correct answer, \"Moderate impairment,\" is indicated by a Halstead Impairment Index score of 0.6. According to the reference material, scores ranging from 0.5 to 0.7 reflect moderate impairment in neuropsychological functioning, suggesting that the examinee experiences difficulties that are significant but not as severe as those classified under higher scores.\n\n2. The option \"Severe impairment\" is incorrect because it corresponds to scores from 0.8 to 1.0, which indicate a higher level of dysfunction than a score of 0.6. \"Normal functioning\" is also incorrect, as scores from 0 to 0.2 represent normal functioning, clearly below the 0.6 score. The option \"Mild impairment\" is wrong because it applies to scores from 0.3 to 0.4, which is lower than the 0.6 score indicating moderate impairment.",
+      "kn": "KN37",
+      "kn_explanation": "This question is best aligned with KN37 because it tests Factors influencing evidence-based interpretation of data and decision-making (e.g., base rates, group differences, cultural biases and differences, heuristics).",
+      "difficulty": "easy",
+      "quality_comment": "This question is straightforward with clear cutoff ranges, useful for assessing interpretation skills of neuropsych test results.",
+      "lessonExcerpt": "| 0.5 to 0.7 | Moderate impairment |",
+      "suggestedLesson": "5-interpreting-scores",
+      "needsReview": false
+    },
+    {
+      "stem": "A 72-year-old patient with suspected neurocognitive disorder obtains a score of 22 on the Mini-Mental State Exam (MMSE). How should this score be interpreted?",
+      "options": [
+        "Indicates intact cognitive functioning",
+        "Suggests moderate cognitive impairment",
+        "Demonstrates mild cognitive impairment",
+        "Falls within normal limits for age"
+      ],
+      "answer": "Suggests moderate cognitive impairment",
+      "explanation": "1. The correct answer \"Suggests moderate cognitive impairment\" is supported by the Mini-Mental State Exam (MMSE) scoring guidelines. A score of 22 falls below the commonly used cutoff of 24, indicating cognitive impairment, and according to the reference material, scores below 24 suggest varying degrees of impairment, with lower scores reflecting greater severity. Specifically, while the MMSE does not provide exact classifications for scores between 24 and lower thresholds, a score of 22 typically aligns with moderate cognitive impairment.\n\n2. The incorrect options are as follows:\n\n- **Indicates intact cognitive functioning**: This option is incorrect because a score of 22 is below the cutoff of 24, which is indicative of cognitive impairment rather than intact functioning.\n  \n- **Demonstrates mild cognitive impairment**: This option is misleading as it underestimates the severity; a score of 22 suggests moderate impairment, not mild, based on the scoring criteria.\n\n- **Falls within normal limits for age**: This is incorrect since normal cognitive functioning would typically be represented by scores at or above 24 on the MMSE, and a score of 22 does not meet this criterion.",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
+      "difficulty": "easy",
+      "quality_comment": "The question is direct and focused on interpreting a widely used tool, appropriate for foundational assessment knowledge.",
+      "lessonExcerpt": "30 maximum points, with 24 as the typical cutoff. Below 24 suggests cognitive impairment, and lower scores indicate greater severity.",
+      "suggestedLesson": "5-interpreting-scores",
+      "needsReview": false
+    },
+    {
+      "stem": "The Glasgow Coma Scale (GCS) score of 7 in a patient with traumatic brain injury indicates:",
+      "options": [
+        "Mild injury and full consciousness",
+        "Moderate injury with possible confusion",
+        "Coma and severe injury",
+        "Normal brain functioning"
+      ],
+      "answer": "Coma and severe injury",
+      "explanation": "1. The correct answer, \"Coma and severe injury,\" is based on the scoring criteria of the Glasgow Coma Scale (GCS). A GCS score of 7 indicates a total score that falls within the range of 3 to 8, which signifies a coma and severe injury. This score reflects a critically low level of consciousness, suggesting that the patient is unresponsive and requires significant medical attention.\n\n2. The option \"Mild injury and full consciousness\" is incorrect because a GCS score of 7 does not indicate any level of consciousness, let alone full consciousness, which would require a higher score. The option \"Moderate injury with possible confusion\" is wrong as well; a score of 7 indicates severe impairment, not moderate injury, which would typically range from 9 to 12. Lastly, the option \"Normal brain functioning\" is incorrect because a GCS score of 7 signifies a severe deficit in consciousness and neurological function, far from normal functioning.",
+      "kn": "KN37",
+      "kn_explanation": "This question is best aligned with KN37 because it tests Factors influencing evidence-based interpretation of data and decision-making (e.g., base rates, group differences, cultural biases and differences, heuristics).",
+      "difficulty": "easy",
+      "quality_comment": "Clear clinical relevance and straightforward scoring criteria make this question effective for exam preparation.",
+      "lessonExcerpt": "| 8 or less | Coma/Severe injury |",
+      "suggestedLesson": "5-interpreting-scores",
+      "needsReview": false
+    },
+    {
+      "stem": "If a student scores in the 75th percentile on a standardized test, what does this indicate about their performance relative to their peers?",
+      "options": [
+        "They scored higher than 75% of the test-takers.",
+        "They scored lower than 75% of the test-takers.",
+        "They scored exactly at the average level.",
+        "They are in the top 25% of all test-takers."
+      ],
+      "answer": "They scored higher than 75% of the test-takers.",
+      "explanation": "A percentile rank indicates the percentage of scores that fall below a particular score. Therefore, scoring in the 75th percentile means the student performed better than 75% of their peers. The other options misinterpret the meaning of percentile ranks.",
+      "kn": "KN55",
+      "kn_explanation": "This question is best aligned with KN55 because it tests Analytic methods, including qualitative (e.g., thematic, phenomenological) and quantitative (e.g., probability theory; descriptive, inferential, and parametric statistics; meta-analysis; factor analysis; causal modeling).",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of percentile ranks and their interpretation.",
+      "suggestedLesson": "5-interpreting-scores",
+      "suggestedParagraph": "## The Foundation: What Correlation Actually Tells Us",
+      "lessonExcerpt": "The **p-value** tells you what percentage of test-takers got the item right. **Calculation:** Number who answered correctly ÷ Total number of test-takers",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 11
     }
   ]
 }

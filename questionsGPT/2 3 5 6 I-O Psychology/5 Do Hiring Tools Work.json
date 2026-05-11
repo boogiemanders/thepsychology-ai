@@ -345,6 +345,213 @@
       "lessonExcerpt": "To establish construct validity, you'd show that:\n- Scores correlate highly with other valid measures of the same construct (convergent validity)",
       "suggestedLesson": "5-do-hiring-tools-work",
       "needsReview": false
+    },
+    {
+      "stem": "A human resources consultant wants to use Taylor-Russell tables to estimate the proportion of selected job candidates who will be successful performers after implementing a new aptitude test. Which combination of three variables is required as input to use these tables correctly?",
+      "options": [
+        "The test's reliability coefficient, the selection ratio, and the applicant pool size",
+        "The test's validity coefficient, the selection ratio, and the base rate of success in the current workforce",
+        "The test's validity coefficient, the test's reliability coefficient, and the standard deviation of job performance ratings",
+        "The base rate of success, the selection ratio, and the standard deviation of the predictor score distribution"
+      ],
+      "answer": "The test's validity coefficient, the selection ratio, and the base rate of success in the current workforce",
+      "explanation": "Taylor-Russell tables require exactly three inputs to estimate the proportion of selectees who will be successful: (1) the validity coefficient of the selection instrument (its correlation with job performance), (2) the selection ratio (the proportion of applicants who will be hired), and (3) the base rate (the proportion of employees who are currently successful without the new selection procedure). Together, these variables allow the consultant to determine the incremental utility of the new test. Reliability is not a direct input to Taylor-Russell tables. Applicant pool size and SD of performance ratings are relevant to other utility analyses (such as the Brogden-Cronbach-Gleser model) but not to Taylor-Russell tables specifically.",
+      "kn": "KN37",
+      "kn_explanation": "This question is best aligned with KN37 because it tests Factors influencing evidence-based interpretation of data and decision-making (e.g., base rates, group differences, cultural biases and differences, heuristics).",
+      "difficulty": "hard",
+      "quality_comment": "High-quality question targeting a specific and commonly tested psychometric tool; distractors substitute plausible but incorrect psychometric terms drawn from related utility frameworks.",
+      "suggestedLesson": "5-do-hiring-tools-work",
+      "suggestedParagraph": "## Incremental Validity and Selection Utility",
+      "lessonExcerpt": "The **Taylor-Russell tables** let you estimate how much a new predictor will improve hiring success for different combinations of validity coefficients, selection ratios, and base rates.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 12
+    },
+    {
+      "stem": "A psychologist is evaluating an employer's selection process for potential adverse impact. She finds that White applicants are hired at a rate of 60%, while Black applicants are hired at a rate of 44%. Applying the four-fifths (80%) rule as specified in the EEOC Uniform Guidelines on Employee Selection Procedures, which of the following conclusions is MOST appropriate?",
+      "options": [
+        "Adverse impact is present, because 44% falls below the required minimum selection rate of 48% for the protected group",
+        "Adverse impact is absent, because the absolute difference of 16 percentage points falls within an acceptable 20-point margin",
+        "Adverse impact is present, because any statistically significant difference in selection rates across groups constitutes adverse impact",
+        "Adverse impact is absent, because 44% exceeds one-third of the majority group's selection rate of 60%"
+      ],
+      "answer": "Adverse impact is present, because 44% falls below the required minimum selection rate of 48% for the protected group",
+      "explanation": "The four-fifths (80%) rule specifies that adverse impact is indicated when the selection rate for any protected group is less than 80% of the selection rate for the highest-selected group. With a White selection rate of 60%, the required minimum for Black applicants is 60% × 0.80 = 48%. The actual Black selection rate of 44% falls below this threshold, indicating adverse impact. Option B is incorrect because the four-fifths rule is a ratio-based standard, not a raw percentage-point difference rule. Option C is incorrect because statistical significance is not the criterion used by the four-fifths rule; small samples with large differences may not reach significance yet still trigger adverse impact concern. Option D is incorrect because one-third is not the threshold specified by the EEOC Uniform Guidelines.",
+      "kn": "KN34",
+      "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
+      "difficulty": "hard",
+      "quality_comment": "Strong applied question requiring correct mathematical application of the four-fifths rule with a realistic vignette; distractors test common misunderstandings of the rule's mechanics.",
+      "suggestedLesson": "5-do-hiring-tools-work",
+      "suggestedParagraph": "## Adverse Impact and Test Fairness",
+      "lessonExcerpt": "**Adverse impact is occurring when the hiring rate for a protected group is less than 80% of the hiring rate for the majority group.**",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 16
+    },
+    {
+      "stem": "In 1971, the U.S. Supreme Court ruled in Griggs v. Duke Power Co. that Duke Power's requirement of a high school diploma and passing scores on two general intelligence tests for internal job transfers was unlawful under Title VII of the Civil Rights Act. The company had not validated these requirements as related to successful job performance, and Black employees were disproportionately excluded. Which of the following most accurately captures the central principle established by this ruling for employment selection testing?",
+      "options": [
+        "Employers must use only content-valid tests developed internally from job task analyses and may not purchase commercially developed assessments for selection purposes",
+        "Employment selection procedures that produce disparate impact on a protected class must be demonstrably job-related and justified by business necessity",
+        "Standardized intelligence tests are categorically prohibited from use in employment selection under federal civil rights law",
+        "Disparate impact in employment testing can only be legally challenged after the EEOC has conducted a formal administrative investigation"
+      ],
+      "answer": "Employment selection procedures that produce disparate impact on a protected class must be demonstrably job-related and justified by business necessity",
+      "explanation": "Griggs v. Duke Power Co. established the legal doctrine of adverse (disparate) impact discrimination in employment. The Supreme Court held unanimously that employment practices neutral on their face—but producing a disproportionate adverse impact on members of a protected class—are unlawful under Title VII unless the employer demonstrates the requirement is job-related and consistent with business necessity. The intelligence tests used by Duke Power had not been validated for the jobs in question, and the company could not demonstrate they predicted job performance. This ruling transformed employment testing by requiring demonstrated job-relatedness for selection tools with adverse impact, laying the groundwork for the Uniform Guidelines on Employee Selection Procedures (1978). Option A is incorrect; the ruling does not mandate internally developed or content-valid-only tests—job-relatedness can be demonstrated through multiple validation strategies. Option C is incorrect; intelligence tests are not categorically prohibited; they must be job-relevant. Option D is incorrect; the ruling established that individual employees and the courts could challenge adverse impact directly; no prerequisite EEOC investigation is required to bring suit.",
+      "kn": "KN34",
+      "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
+      "difficulty": "hard",
+      "quality_comment": "Tests a specific landmark legal case with direct implications for psychological testing practice. Distractors probe common misconceptions about what the ruling did and did not prohibit. Appropriate doctoral-level difficulty with real-world practice relevance.",
+      "suggestedLesson": "5-do-hiring-tools-work",
+      "suggestedParagraph": "## Legal Foundations of Employment Testing",
+      "lessonExcerpt": "Adverse impact** (also called disparate impact) occurs when a selection method negatively affects protected group members compared to majority group members. The Uniform Guidelines on Employee Selection Procedures outlines two main problems that cause adverse impact:",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 28
+    },
+    {
+      "stem": "What does the standard error of measurement (SEM) indicate in the context of psychological testing?",
+      "options": [
+        "It reflects the degree to which a test score can vary due to measurement error.",
+        "It measures the reliability of a test based on the number of items it contains.",
+        "It indicates the validity of a test by comparing it to other established measures.",
+        "It determines the average score of a population on a specific test."
+      ],
+      "answer": "It reflects the degree to which a test score can vary due to measurement error.",
+      "explanation": "The SEM quantifies the amount of error associated with a test score, providing insight into the precision of the measurement. The other options misinterpret the purpose of SEM or confuse it with other testing concepts.",
+      "kn": "KN32",
+      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
+      "difficulty": "medium",
+      "quality_comment": "The question accurately tests knowledge of SEM in psychological assessment.",
+      "suggestedLesson": "5-do-hiring-tools-work",
+      "suggestedParagraph": "## Individual Tests: Matching the Right Tool to the Right Person",
+      "lessonExcerpt": "The **standard error of measurement (SEM)** quantifies this uncertainty.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 2
+    },
+    {
+      "stem": "Which of the following best describes the primary purpose of using Taylor-Russell tables in evaluating a new predictor test?",
+      "options": [
+        "Estimating the incremental validity by determining the increase in correct decisions due to the new predictor",
+        "Calculating the standard error of estimate for predicted criterion scores",
+        "Determining the test–retest reliability of the predictor",
+        "Assessing the internal consistency of the predictor test items"
+      ],
+      "answer": "Estimating the incremental validity by determining the increase in correct decisions due to the new predictor",
+      "explanation": "1. The correct answer, \"Estimating the incremental validity by determining the increase in correct decisions due to the new predictor,\" is accurate because Taylor-Russell tables are specifically designed to evaluate how much a new predictor contributes to the accuracy of predictions regarding criterion performance. By using these tables, one can assess the extent to which the new predictor improves the rate of correct hiring decisions compared to existing methods, thus quantifying its incremental validity.\n\n2. The option \"Calculating the standard error of estimate for predicted criterion scores\" is incorrect because the standard error of estimate is derived from the criterion-related validity coefficient, not directly related to the use of Taylor-Russell tables. The option \"Determining the test–retest reliability of the predictor\" is also wrong, as Taylor-Russell tables focus on evaluating predictive validity rather than reliability measures like test-retest. Finally, the option \"Assessing the internal consistency of the predictor test items\" is incorrect because internal consistency pertains to the reliability of test items, which is not the purpose of Taylor-Russell tables; they are not used for this type of analysis.",
+      "kn": "KN37",
+      "kn_explanation": "This question is best aligned with KN37 because it tests Factors influencing evidence-based interpretation of data and decision-making (e.g., base rates, group differences, cultural biases and differences, heuristics).",
+      "difficulty": "medium",
+      "quality_comment": "This question adds depth by addressing specific methods used to evaluate incremental validity, with distractors related to other psychometric concepts.",
+      "lessonExcerpt": "The Taylor-Russell tables let you estimate how much a new predictor will improve hiring success for different combinations of validity coefficients, selection ratios, and base rates.",
+      "suggestedLesson": "5-do-hiring-tools-work",
+      "needsReview": false
+    },
+    {
+      "stem": "When adjusting predictor cutoffs in hiring processes, what is a primary consideration?",
+      "options": [
+        "A. The cost of the testing materials",
+        "B. The potential impact on diversity in hiring",
+        "C. The length of the assessment process",
+        "D. The popularity of the assessment tool"
+      ],
+      "answer": "B. The potential impact on diversity in hiring",
+      "explanation": "Option B is correct because adjusting predictor cutoffs can significantly affect the diversity of candidates selected for hiring. Options A, C, and D are less relevant to the ethical and practical implications of cutoff adjustments.",
+      "kn": "KN32",
+      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of hiring practices and diversity considerations.",
+      "suggestedLesson": "5-do-hiring-tools-work",
+      "suggestedParagraph": "## Individual Tests: Matching the Right Tool to the Right Person",
+      "lessonExcerpt": "Adjusting predictor cutoffs in hiring processes requires consideration of the potential impact on diversity.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 10
+    },
+    {
+      "stem": "Which method is most effective for optimizing incremental validity in selection processes?",
+      "options": [
+        "Using multiple assessment tools",
+        "Relying solely on interviews",
+        "Implementing a single standardized test",
+        "Conducting background checks"
+      ],
+      "answer": "Using multiple assessment tools",
+      "explanation": "The correct answer is 'Using multiple assessment tools' as this approach enhances the overall predictive validity of the selection process by providing a more comprehensive view of candidates. The other options are less effective as they do not incorporate diverse data sources.",
+      "kn": "KN37",
+      "kn_explanation": "This question is best aligned with KN37 because it tests Factors influencing evidence-based interpretation of data and decision-making (e.g., base rates, group differences, cultural biases and differences, heuristics).",
+      "difficulty": "hard",
+      "quality_comment": "The question is well-structured and assesses knowledge of selection methods effectively.",
+      "suggestedLesson": "5-do-hiring-tools-work",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "**Incremental validity** asks: Does this new predictor improve prediction accuracy beyond what we already have?",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 16
+    },
+    {
+      "stem": "What is a primary concern regarding adverse impact in employment testing?",
+      "options": [
+        "It ensures that all candidates are treated equally.",
+        "It may disproportionately affect certain demographic groups.",
+        "It guarantees that only the most qualified candidates are selected.",
+        "It eliminates the need for test validation."
+      ],
+      "answer": "It may disproportionately affect certain demographic groups.",
+      "explanation": "Adverse impact refers to employment tests that may disadvantage certain demographic groups, raising concerns about fairness and discrimination. The other options misrepresent the nature of adverse impact.",
+      "kn": "KN30",
+      "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
+      "difficulty": "hard",
+      "quality_comment": "The question accurately assesses understanding of adverse impact in the context of employment testing.",
+      "suggestedLesson": "5-do-hiring-tools-work",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "Adverse impact may disproportionately affect certain demographic groups.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 24
+    },
+    {
+      "stem": "What do Taylor-Russell tables primarily help assess in the context of selection decision-making?",
+      "options": [
+        "The reliability of a test",
+        "The validity of a selection method",
+        "The utility of a selection method",
+        "The fairness of a selection process"
+      ],
+      "answer": "The utility of a selection method",
+      "explanation": "Taylor-Russell tables are used to evaluate the utility of a selection method by showing how the selection ratio and the validity of a test affect the expected performance of selected candidates. The other options relate to different aspects of assessment but not specifically to the utility of selection methods.",
+      "kn": "KN37",
+      "kn_explanation": "This question is best aligned with KN37 because it tests Factors influencing evidence-based interpretation of data and decision-making (e.g., base rates, group differences, cultural biases and differences, heuristics).",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses knowledge of Taylor-Russell tables and their application.",
+      "suggestedLesson": "5-do-hiring-tools-work",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "The **Taylor-Russell tables** let you estimate how much a new predictor will improve hiring success for different combinations of validity coefficients, selection ratios, and base rates.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 23
+    },
+    {
+      "stem": "Based on 2022 CDC epidemiological data, a psychologist conducting a suicide risk assessment should be MOST aware that the highest rate of completed suicide among males occurs in which demographic group?",
+      "options": [
+        "Males aged 75 and older",
+        "Males aged 45 to 64",
+        "Males aged 25 to 34",
+        "Males aged 15 to 24"
+      ],
+      "answer": "Males aged 75 and older",
+      "explanation": "According to the lesson content citing 2022 CDC data, the highest suicide rate for males is in those aged 75 and older. The lesson states: 'Males: 4 times higher suicide rate than females; Highest rate for males: ages 75+; Highest rate for females: ages 45-64.' Option B (45-64) is the highest rate age group for females, not males. Options C and D represent younger age groups that, while at risk, do not have the highest completion rates. The lesson also notes that non-Hispanic American Indian/Alaskan Native individuals have the highest rates among ethnic groups.",
+      "kn": "KN38",
+      "kn_explanation": "This question is best aligned with KN38 because it tests Constructs of epidemiology and base rates of psychological and behavioral disorders.",
+      "difficulty": "medium",
+      "quality_comment": "Straightforward factual recall question targeting a high-yield EPPP topic. The lesson provides clear, specific data supporting the correct answer.",
+      "suggestedLesson": "5-do-hiring-tools-work",
+      "suggestedParagraph": "## Suicide: The Critical Risk Factor",
+      "lessonExcerpt": "Males: 4 times higher suicide rate than females. Highest rate for males: ages 75+. Highest rate for females: ages 45-64. Ethnicity: Highest rates for non-Hispanic American Indian/Alaskan Native individuals.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 5
     }
   ]
 }

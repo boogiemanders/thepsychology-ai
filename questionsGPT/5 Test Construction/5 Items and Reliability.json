@@ -187,27 +187,6 @@
       "inspirationIndex": 4
     },
     {
-      "stem": "A researcher validates two cognitive screening tests against the same criterion (clinician-rated functional impairment, SD = 12). Test A has a validity coefficient of .80 and a standard error of estimate of 7.2. Test B has a validity coefficient of .00 and a standard error of estimate of 12.0. Which of the following best explains the difference in these standard errors of estimate?",
-      "options": [
-        "Test A's higher reliability reduces unsystematic error, which lowers the standard error of estimate independently of validity",
-        "The standard error of estimate equals the criterion SD when validity is zero and decreases toward zero as validity approaches 1.0, reflecting the amount of criterion variance left unexplained",
-        "Test B's standard error of estimate is inflated because of restriction of range in the criterion variable",
-        "The standard error of estimate is equivalent to one minus the validity coefficient multiplied by the criterion SD"
-      ],
-      "answer": "The standard error of estimate equals the criterion SD when validity is zero and decreases toward zero as validity approaches 1.0, reflecting the amount of criterion variance left unexplained",
-      "explanation": "The standard error of estimate (SEest = SDy × √[1 – r²]) quantifies the average prediction error around the regression line. When the validity coefficient r = .00, SEest = SDy × √(1 – 0) = SDy = 12, confirming that the test predicts no better than the criterion mean—the entire criterion SD represents residual error. As r approaches 1.0, SEest approaches zero because essentially all criterion variance is explained. Test A's validity of .80 yields SEest = 12 × √(1 – .64) ≈ 12 × .60 = 7.2, matching the reported value. Reliability affects validity (through attenuation) but is not the direct cause of SEest differences when validity is the variable under examination. Restriction of range would attenuate both coefficients equally and is not described here. Subtracting r from 1 and multiplying by SDy (option D) conflates SEest with the formula for mean absolute error and yields incorrect values.",
-      "kn": "KN29",
-      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
-      "difficulty": "hard",
-      "quality_comment": "Quantitative vignette requiring formula derivation and conceptual understanding; distractors target common computational errors.",
-      "suggestedLesson": "5-can-tests-predict",
-      "suggestedParagraph": "## Standard Error of Estimate",
-      "lessonExcerpt": "The standard error ranges from 0 (when r = +/-1.0, perfect prediction, no error) to the full standard deviation of the criterion (when r = 0, no relationship, maximum error).",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 5
-    },
-    {
       "stem": "Two doctoral-level clinicians independently administer and score a structured diagnostic interview with 40 patients. Their raw percentage agreement is 75%. Given the base rates of diagnoses in this clinic population, chance agreement is estimated at 50%. The computed kappa coefficient is .50. Which of the following statements accurately interprets this kappa value?",
       "options": [
         "The raters agreed on exactly half of all diagnoses, indicating unacceptable reliability for clinical use",
@@ -227,27 +206,6 @@
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 7
-    },
-    {
-      "stem": "A psychologist is explaining the properties of the standard error of measurement (SEM) to an intern. She notes that regardless of the test being used, the SEM always falls within a predictable range relative to the test's standard deviation (SD). Which of the following most accurately describes the boundaries of this range?",
-      "options": [
-        "The SEM always equals the SD, because both reflect total score variability",
-        "The SEM ranges from zero to a value equal to the full SD of the test",
-        "The SEM can exceed the SD when reliability falls below 0.50",
-        "The SEM is fixed at exactly one-half of the SD for any well-constructed test"
-      ],
-      "answer": "The SEM ranges from zero to a value equal to the full SD of the test",
-      "explanation": "The SEM is calculated as SEM = SD × √(1 − rxx). When reliability (rxx) equals 1.0 (perfect reliability), SEM = SD × √0 = 0. When reliability equals 0.0 (completely unreliable), SEM = SD × √1 = SD. Therefore, the SEM can range from a minimum of zero to a maximum equal to the full SD, never exceeding it. Option A is incorrect because SEM equals SD only at zero reliability, not universally. Option C is incorrect because the SEM can never mathematically exceed the SD regardless of how low reliability falls. Option D is incorrect because the SEM is not fixed at half the SD; its value depends entirely on the test's specific reliability coefficient.",
-      "kn": "KN29",
-      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
-      "difficulty": "medium",
-      "quality_comment": "Clean conceptual question with plausible numerical distractors; effectively tests understanding of the SEM formula's boundary conditions rather than rote formula recall.",
-      "suggestedLesson": "5-can-tests-predict",
-      "suggestedParagraph": "## Standard Error of Measurement",
-      "lessonExcerpt": "Predictive values** change with prevalence; they're not stable test properties - **Reliability sets the ceiling** for validity; maximum validity equals the square root of reliability Understanding criterion-related validity helps you choose appropriate tests, interpret scores with appropriate humility, set reasonable expectations, and explain both the power and limitations of psychological assessment to clients, colleagues, and courts.",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 11
     },
     {
       "stem": "In classical test theory, an observed test score (X) is conceptualized as the sum of which two components?",
@@ -600,6 +558,171 @@
       "lessonExcerpt": "Test-retest reliability matters for characteristics that should be stable over time, like intelligence or enduring personality traits.",
       "suggestedLesson": "5-items-and-reliability",
       "needsReview": false
+    },
+    {
+      "stem": "Research on the pratfall effect shows that a competent person who makes a blunder is perceived as:",
+      "options": [
+        "More attractive because the blunder humanizes them",
+        "Less attractive because they lose credibility",
+        "More attractive only if the blunder is minor",
+        "Less attractive regardless of competence"
+      ],
+      "answer": "More attractive because the blunder humanizes them",
+      "explanation": "1. The correct answer, \"More attractive because the blunder humanizes them,\" is supported by the research of Aronson, Willerman, and Floyd (1966), which indicates that when a competent person commits a blunder, it increases their attractiveness. This occurs because the blunder makes them appear more relatable and human, which enhances their likability rather than diminishing their perceived competence.\n\n2. \n- **Less attractive because they lose credibility:** This option is incorrect because the pratfall effect specifically shows that a blunder can enhance attractiveness rather than detract from it, particularly for competent individuals.\n- **More attractive only if the blunder is minor:** This option is misleading; the research does not specify that the blunder must be minor for the effect to occur, as the key factor is the humanizing aspect of the blunder itself.\n- **Less attractive regardless of competence:** This is incorrect because the pratfall effect highlights that competent individuals actually become more attractive after making a blunder, contradicting the idea that their attractiveness would decrease.",
+      "kn": "KN15",
+      "kn_explanation": "This question involves understanding social perception and attraction processes within interpersonal relationships (KN15).",
+      "difficulty": "medium",
+      "quality_comment": "Question clearly differentiates between competence and the blunder's effect, with distractors testing common misconceptions.",
+      "lessonExcerpt": "ssical Test Theory | Item Response Theory | |----------------------|---------------------| | Test-based (focuses on total scores) | Item-based (focuses on individual items) | | Sample-dependent (item statistics change with different groups) | Sample-invariant (item properties stable across groups) | | Less suitable for adaptive testing | Ideal for adaptive testing | | Simpler to understand and calculate | More complex but more powerful | ### The Core Idea: Item Characteristic Curves",
+      "suggestedLesson": "5-items-and-reliability",
+      "needsReview": false
+    },
+    {
+      "stem": "What does test-retest reliability measure in psychological testing?",
+      "options": [
+        "The consistency of a test's results over time",
+        "The accuracy of a test in predicting outcomes",
+        "The degree to which a test measures what it claims to measure",
+        "The agreement between different raters scoring the same test"
+      ],
+      "answer": "The consistency of a test's results over time",
+      "explanation": "Test-retest reliability specifically assesses how consistent a test's results are when administered at different times. The other options refer to different types of reliability or validity.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests knowledge of reliability types in psychological testing.",
+      "suggestedLesson": "5-items-and-reliability",
+      "suggestedParagraph": "## Tests Based on Brain Processing Models",
+      "lessonExcerpt": "### Item Discrimination Index (D)",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 3
+    },
+    {
+      "stem": "What is the primary purpose of the Kuder-Richardson formula in psychological testing?",
+      "options": [
+        "A. To assess the validity of a test",
+        "B. To estimate the reliability of a test with dichotomous choices",
+        "C. To determine the standard error of measurement",
+        "D. To analyze the variance in test scores"
+      ],
+      "answer": "B. To estimate the reliability of a test with dichotomous choices",
+      "explanation": "Option B is correct because the Kuder-Richardson formula is specifically designed to estimate the reliability of tests that have dichotomous (yes/no) responses. Option A refers to validity, C pertains to standard error, and D relates to variance analysis.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and tests knowledge of reliability estimation.",
+      "suggestedLesson": "5-items-and-reliability",
+      "suggestedParagraph": "## Individual Tests: Matching the Right Tool to the Right Person",
+      "lessonExcerpt": "**Kuder-Richardson 20 (KR-20):** A version of coefficient alpha specifically for items scored as right/wrong (dichotomous scoring).",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 3
+    },
+    {
+      "stem": "What is the primary purpose of the Stroop Color Interference Test in cognitive assessment?",
+      "options": [
+        "To measure verbal intelligence and vocabulary.",
+        "To assess cognitive flexibility and processing speed.",
+        "To evaluate memory retention over time.",
+        "To determine the level of emotional distress in individuals."
+      ],
+      "answer": "To assess cognitive flexibility and processing speed.",
+      "explanation": "The Stroop Test evaluates how well individuals can manage conflicting information, which reflects cognitive flexibility and processing speed. The other options do not accurately describe the primary purpose of the test.",
+      "kn": "KN32",
+      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of the Stroop Test's purpose.",
+      "suggestedLesson": "5-items-and-reliability",
+      "suggestedParagraph": "## Executive Function Tests",
+      "lessonExcerpt": "The **standard error of measurement (SEM)** quantifies this uncertainty.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 5
+    },
+    {
+      "stem": "Which type of delusional disorder is characterized by the belief that one is being persecuted or harmed?",
+      "options": [
+        "Grandiose delusions",
+        "Persecutory delusions",
+        "Somatic delusions",
+        "Nihilistic delusions"
+      ],
+      "answer": "Persecutory delusions",
+      "explanation": "Persecutory delusions specifically involve the belief that one is being targeted or harmed by others. The other options describe different types of delusions that do not fit this definition.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
+      "difficulty": "medium",
+      "quality_comment": "The question is straightforward and tests knowledge of delusional disorder types.",
+      "suggestedLesson": "5-items-and-reliability",
+      "suggestedParagraph": "## Understanding Intelligence: The Theoretical Foundation",
+      "lessonExcerpt": "This matters tremendously for intellectual disability diagnoses.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 4
+    },
+    {
+      "stem": "What does the Kappa coefficient measure in the context of psychometric assessments?",
+      "options": [
+        "A. The correlation between two tests",
+        "B. The agreement between raters",
+        "C. The internal consistency of a test",
+        "D. The validity of a test"
+      ],
+      "answer": "B. The agreement between raters",
+      "explanation": "Option B is correct because the Kappa coefficient specifically measures the level of agreement between raters beyond chance. Option A refers to correlation, which is different from agreement. Option C pertains to internal consistency, which is not what Kappa measures. Option D relates to validity, which is a separate concept.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and tests knowledge of psychometric concepts.",
+      "suggestedLesson": "5-items-and-reliability",
+      "suggestedParagraph": "## Why Clinical Tests Matter for Your EPPP Success",
+      "lessonExcerpt": "**Cohen's Kappa:** A more sophisticated measure that corrects for chance agreement. It's used when two raters are assigning ratings on a nominal scale",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 27
+    },
+    {
+      "stem": "How can increasing the number of test items improve the reliability of psychological testing?",
+      "options": [
+        "By reducing test length",
+        "By increasing variability",
+        "By enhancing item difficulty",
+        "By providing more data points"
+      ],
+      "answer": "By providing more data points",
+      "explanation": "Increasing the number of test items provides more data points, which can lead to a more accurate representation of the test-taker's abilities and reduce the impact of random error. Reducing test length would likely decrease reliability, while increasing variability and enhancing item difficulty do not directly relate to reliability improvements.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
+      "difficulty": "medium",
+      "quality_comment": "The question is well-structured and tests understanding of reliability in testing.",
+      "suggestedLesson": "5-items-and-reliability",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "Increasing the number of test items can improve the reliability of psychological testing by providing more data points.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 19
+    },
+    {
+      "stem": "What is the primary method for optimizing test reliability during the development of psychological assessments?",
+      "options": [
+        "A. Increasing the number of test items",
+        "B. Ensuring a diverse test population",
+        "C. Standardizing test administration procedures",
+        "D. Using subjective scoring methods"
+      ],
+      "answer": "C. Standardizing test administration procedures",
+      "explanation": "Option C is correct because standardizing test administration procedures is crucial for ensuring that tests yield consistent results across different administrations. Option A may help but does not guarantee reliability. Option B is important for validity but not directly for reliability. Option D is incorrect as subjective scoring can introduce variability and reduce reliability.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests understanding of reliability in test development.",
+      "suggestedLesson": "5-items-and-reliability",
+      "suggestedParagraph": "## Understanding Intelligence: The Theoretical Foundation",
+      "lessonExcerpt": "**Fluid intelligence (Gf)** is your raw ability to solve new problems, see patterns, and think abstractly without relying on previous knowledge.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 26
     }
   ]
 }

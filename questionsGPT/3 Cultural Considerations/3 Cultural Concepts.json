@@ -208,27 +208,6 @@
       "inspirationIndex": 18
     },
     {
-      "stem": "A psychologist working in a residential facility for adults with intellectual disabilities notices that staff members consistently attribute a resident's social withdrawal, appetite changes, and sleep disturbance solely to the resident's intellectual disability rather than considering a possible mood disorder. This pattern BEST illustrates:",
-      "options": [
-        "Confirmation bias",
-        "Diagnostic overshadowing",
-        "Fundamental attribution error",
-        "Anchoring heuristic"
-      ],
-      "answer": "Diagnostic overshadowing",
-      "explanation": "Diagnostic overshadowing originally described the tendency to attribute all problems of people with intellectual disabilities to that diagnosis while overlooking other conditions, such as comorbid psychiatric disorders. In this case, symptoms consistent with depression are being attributed to the intellectual disability rather than being evaluated as a separate condition. Confirmation bias involves seeking information that confirms preexisting beliefs. The fundamental attribution error involves overattributing behavior to dispositional rather than situational factors. The anchoring heuristic involves over-reliance on an initial piece of information when making judgments.",
-      "kn": "KN35",
-      "kn_explanation": "This question is best aligned with KN35 because it tests Criteria for selection and adaptation of assessment methods (e.g., evidenced-based knowledge of assessment limitations, cultural appropriateness, trans-cultural adaptation, and language accommodations).",
-      "difficulty": "medium",
-      "quality_comment": "Uses the classic population (intellectual disability) where diagnostic overshadowing was originally described, grounded directly in lesson content",
-      "suggestedLesson": "3-cultural-concepts",
-      "suggestedParagraph": "## Diagnostic Overshadowing: When One Factor Eclipses Everything",
-      "lessonExcerpt": "Diagnostic overshadowing originally described attributing all problems of people with intellectual disabilities to that diagnosis, overlooking other issues.",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 17
-    },
-    {
       "stem": "According to Sue's worldview framework, which type of worldview is most characteristic of mainstream American culture?",
       "options": [
         "Internal locus of control and external locus of responsibility (IC-ER)",
@@ -373,24 +352,6 @@
       "needsReview": false
     },
     {
-      "stem": "Which assessment battery is recommended to reduce cultural bias and minimize the influence of English proficiency in cognitive testing of culturally diverse children?",
-      "options": [
-        "Wechsler Intelligence Scale for Children (WISC-V)",
-        "Kaufman Assessment Battery for Children, Second Edition (KABC-II)",
-        "Stanford-Binet Intelligence Scales",
-        "Minnesota Multiphasic Personality Inventory (MMPI)"
-      ],
-      "answer": "Kaufman Assessment Battery for Children, Second Edition (KABC-II)",
-      "explanation": "1. The **Kaufman Assessment Battery for Children, Second Edition (KABC-II)** is the correct answer because it is specifically designed to reduce cultural bias in cognitive testing and is less influenced by English proficiency. This assessment allows for a more accurate evaluation of cognitive abilities in culturally diverse children by focusing on nonverbal skills and minimizing language dependence.\n\n2. The **Wechsler Intelligence Scale for Children (WISC-V)** is incorrect because it relies heavily on verbal skills and may disadvantage children with limited English proficiency, leading to biased results. The **Stanford-Binet Intelligence Scales** is also incorrect as it similarly emphasizes verbal abilities, which can be influenced by cultural and language factors, potentially skewing the assessment outcomes. Lastly, the **Minnesota Multiphasic Personality Inventory (MMPI)** is inappropriate in this context as it is primarily a personality assessment tool, not designed for cognitive testing, and does not address cultural bias in cognitive abilities.",
-      "kn": "KN18",
-      "kn_explanation": "This question is best aligned with KN18 because it tests Cultural and sociopolitical psychology (e.g., privilege, cross-cultural comparisons, political differences, international and global awareness, religiosity and spirituality, acculturation).",
-      "difficulty": "medium",
-      "quality_comment": "Distractors include well-known tests but only one focuses on reducing cultural and language bias, making the question discriminative.",
-      "lessonExcerpt": "The Kaufman Assessment Battery for Children (KABC-II) and Raven's Standard Progressive Matrices (SPM) reduce cultural bias and aren't affected by English proficiency or cultural learning.",
-      "suggestedLesson": "3-cultural-concepts",
-      "needsReview": false
-    },
-    {
       "stem": "Minority stress theory distinguishes proximal and distal stress processes experienced by sexual minority individuals. Which of the following is a proximal stress process?",
       "options": [
         "Experiencing verbal harassment due to sexual orientation",
@@ -459,24 +420,6 @@
       "difficulty": "medium",
       "quality_comment": "The options include related but distinct terms, providing a clear test of conceptual knowledge of intervention strategies.",
       "lessonExcerpt": "**Autoplastic interventions** focus on changing the client to fit the environment, developing insight, learning new skills, or modifying behaviors.",
-      "suggestedLesson": "3-cultural-concepts",
-      "needsReview": false
-    },
-    {
-      "stem": "Which assessment is especially useful for minimizing cultural and language biases in nonverbal intelligence testing?",
-      "options": [
-        "Raven’s Standard Progressive Matrices",
-        "Wechsler Adult Intelligence Scale (WAIS-IV)",
-        "Stanford-Binet Intelligence Scales",
-        "Kaufman Assessment Battery for Children (KABC-II)"
-      ],
-      "answer": "Raven’s Standard Progressive Matrices",
-      "explanation": "1. **Raven’s Standard Progressive Matrices** is the correct answer because it is specifically designed to assess nonverbal intelligence and minimize cultural and language biases. This assessment focuses on abstract reasoning and pattern recognition, which reduces the influence of linguistic and cultural knowledge that might affect performance on other intelligence tests.\n\n2. The **Wechsler Adult Intelligence Scale (WAIS-IV)** is incorrect because it includes verbal components that can disadvantage individuals with limited English proficiency or different cultural backgrounds. The **Stanford-Binet Intelligence Scales** are also incorrect as they incorporate verbal reasoning tasks that may not accurately reflect the abilities of individuals from diverse cultural contexts. Lastly, the **Kaufman Assessment Battery for Children (KABC-II)**, while designed to reduce cultural bias, still includes elements that may be influenced by language proficiency, making it less effective than the Raven’s Matrices for nonverbal intelligence assessment.",
-      "kn": "KN18",
-      "kn_explanation": "Assessment tools that reduce cultural bias by focusing on nonverbal skills are important in cross-cultural psychology (KN18).",
-      "difficulty": "medium",
-      "quality_comment": "The question clearly contrasts verbal and nonverbal assessments to test knowledge of culturally fair instruments.",
-      "lessonExcerpt": "The Kaufman Assessment Battery for Children (KABC-II) and Raven's Standard Progressive Matrices (SPM) reduce cultural bias and aren't affected by English proficiency or cultural learning.",
       "suggestedLesson": "3-cultural-concepts",
       "needsReview": false
     },
@@ -559,6 +502,66 @@
         "lock_in_drill"
       ],
       "lessonExcerpt": "| IC-ER | Internal | External | \"I could succeed if others weren't blocking me\" | Some minority groups facing systemic barriers |",
+      "suggestedLesson": "3-cultural-concepts",
+      "needsReview": false
+    },
+    {
+      "stem": "A licensed psychologist at a community mental health clinic consistently interprets Latino clients' somatic complaints as pathological somatization, dismisses spirituality-based explanatory models as irrational, and applies manualized CBT protocols without culturally responsive modification. The clinical supervisor observes that this therapist appears unaware that these worldviews differ from mainstream Western psychological assumptions. This pattern BEST exemplifies which phenomenon?",
+      "options": [
+        "Differential diagnostic error stemming from insufficient clinical training in somatic presentations",
+        "Cultural encapsulation, in which the therapist applies a single cultural framework to all clients",
+        "Negative countertransference arising from unresolved personal biases toward this population",
+        "Practitioner ethnocentrism limited to the diagnostic labeling process but not treatment delivery"
+      ],
+      "answer": "Cultural encapsulation, in which the therapist applies a single cultural framework to all clients",
+      "explanation": "Cultural encapsulation (Wrenn, 1962) describes a clinician who defines reality through a single cultural set of assumptions, ignores cultural variation, and applies techniques without awareness of their cultural embeddedness. The vignette illustrates this pattern across diagnosis, explanatory models, and treatment selection. Option A frames the error as a knowledge deficit about somatic presentations rather than a cultural awareness problem. Option C (countertransference) refers to the therapist's personal emotional reactions projected onto clients, which is not the focus here. Option D incorrectly restricts cultural encapsulation to diagnostic labeling alone; the concept applies across the entire clinical encounter.",
+      "kn": "KN18",
+      "kn_explanation": "This question is best aligned with KN18 because it tests Cultural and sociopolitical psychology (e.g., privilege, cross-cultural comparisons, political differences, international and global awareness, religiosity and spirituality, acculturation).",
+      "difficulty": "hard",
+      "quality_comment": "Strong vignette with multiple behavioral indicators spanning diagnosis, conceptualization, and treatment; distractors target frequent confusions among related multicultural constructs.",
+      "suggestedLesson": "3-cultural-concepts",
+      "suggestedParagraph": "## Multicultural Competence",
+      "lessonExcerpt": "Wrenn coined this term to describe mental health professionals who can't work effectively across cultures. **Culturally encapsulated** therapists assume their cultural assumptions about mental health apply universally. They're insensitive to differences and impose their worldview on all clients.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 0
+    },
+    {
+      "stem": "During a home visit, a family therapist observes that an African American family's infant is regularly cared for by the maternal grandmother, two aunts, and an older teenage cousin in addition to the parents, with childcare responsibilities shifting fluidly among all of them across different households. This arrangement is BEST understood as an expression of which characteristic strength consistently identified in the research literature on African American families?",
+      "options": [
+        "Patriarchal authority structures that preserve intergenerational role clarity and parental hierarchy",
+        "Extended family and kinship network support providing flexible, collectively shared caregiving",
+        "Nuclear family self-sufficiency as a primary buffer against institutional racism",
+        "Egalitarian marital role flexibility as the central protective factor against socioeconomic stress"
+      ],
+      "answer": "Extended family and kinship network support providing flexible, collectively shared caregiving",
+      "explanation": "Research by Hill (1972), McAdoo, and Boyd-Franklin consistently identifies strong extended family and kinship bonds — including shared caregiving across household boundaries — as a defining resilience-promoting strength of African American families. Option A incorrectly attributes the strength to rigid patriarchal hierarchy, which is not supported by the research literature. Option C misidentifies the mechanism; it is collective extended-network support rather than nuclear-family insularity that functions protectively. Option D refers to marital role flexibility, which is a related but distinct finding and does not capture the cross-household extended kinship arrangement described in the vignette.",
+      "kn": "KN18",
+      "kn_explanation": "This question is best aligned with KN18 because it tests Cultural and sociopolitical psychology (e.g., privilege, cross-cultural comparisons, political differences, international and global awareness, religiosity and spirituality, acculturation).",
+      "difficulty": "medium",
+      "quality_comment": "Grounded in observational clinical vignette; distractors test common stereotypes and partial knowledge that may mislead less-prepared examinees.",
+      "suggestedLesson": "3-cultural-concepts",
+      "suggestedParagraph": "## Multicultural Considerations in Family Systems",
+      "lessonExcerpt": "Extended kinship networks often include friends and church community, not just family. Family roles are often flexible and egalitarian.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 5
+    },
+    {
+      "stem": "According to social identity theory, prejudice and discrimination toward outgroup members stem primarily from:",
+      "options": [
+        "Competition for scarce resources",
+        "Categorizing people into groups and favoring one’s ingroup",
+        "Authoritarian personality traits",
+        "Unconscious negative feelings about minorities"
+      ],
+      "answer": "Categorizing people into groups and favoring one’s ingroup",
+      "explanation": "1. The correct answer, \"Categorizing people into groups and favoring one’s ingroup,\" aligns with Tajfel and Turner’s social identity theory, which posits that individuals have a natural tendency to categorize themselves and others into groups. This categorization leads to in-group favoritism, where individuals feel positively toward their own group, which can result in prejudice and discrimination against out-group members as a means of enhancing their self-esteem and group identity.\n\n2. The option \"Competition for scarce resources\" is incorrect because it relates to realistic conflict theory, which suggests that prejudice arises from direct competition between groups rather than mere categorization. \"Authoritarian personality traits\" is wrong as it refers to a specific personality type associated with extreme prejudice, not the broader categorization process emphasized in social identity theory. Lastly, \"Unconscious negative feelings about minorities\" is incorrect since it pertains to theories such as aversive racism, which focuses on internalized biases rather than the fundamental group categorization and favoritism that drive prejudice according to social identity theory.",
+      "kn": "KN14",
+      "kn_explanation": "This question targets foundational social cognition theories around group membership and prejudice, fitting social cognition (KN14).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are plausible competing theories of prejudice, making this question effective for assessing theory knowledge.",
+      "lessonExcerpt": "Culturally adapted interventions** systematically modify evidence-based treatments to align with clients' cultural patterns, meanings, and values. Adaptations might include: - Content changes: Addressing acculturation, racism, spirituality - Format changes: Delivering treatment in native language, adopting culturally appropriate interpersonal styles, including indigenous healers",
       "suggestedLesson": "3-cultural-concepts",
       "needsReview": false
     }

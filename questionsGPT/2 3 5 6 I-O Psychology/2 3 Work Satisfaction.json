@@ -318,6 +318,69 @@
       "lessonExcerpt": "**Affective disposition** refers to your general tendency to respond to situations favorably or unfavorably. Some people have a naturally positive outlook, while others tend toward negativity across different contexts.",
       "suggestedLesson": "2-3-work-satisfaction",
       "needsReview": false
+    },
+    {
+      "stem": "An industrial-organizational psychologist reviews exit interview data and employee satisfaction surveys from a large healthcare organization. She finds that units with the lowest mean job satisfaction scores show the highest rates of voluntary employee turnover. Which of the following best characterizes this statistical relationship?",
+      "options": [
+        "A positive correlation, indicating that higher satisfaction predicts greater likelihood of leaving",
+        "A negative correlation, indicating that lower satisfaction predicts greater likelihood of leaving",
+        "An absence of a reliable relationship, because turnover is primarily determined by external labor market conditions rather than internal satisfaction",
+        "A U-shaped curvilinear relationship, in which both very low and very high satisfaction predict elevated turnover rates"
+      ],
+      "answer": "A negative correlation, indicating that lower satisfaction predicts greater likelihood of leaving",
+      "explanation": "The established finding in I/O psychology is that job satisfaction and voluntary turnover are negatively correlated: as job satisfaction decreases, the probability of an employee voluntarily leaving the organization increases. This relationship is one of the most replicated findings in organizational behavior research. The positive correlation option reverses the established direction. While labor market conditions moderate the relationship, satisfaction remains a reliable independent predictor, contradicting the 'no relationship' option. A U-shaped relationship is not supported by the literature for this outcome.",
+      "kn": "KN8",
+      "kn_explanation": "This question is best aligned with KN8 because it tests Major research-based theories and models of memory and their application.",
+      "difficulty": "medium",
+      "quality_comment": "Conceptually clean question with a clear correct answer. Content goes beyond current lesson material — valid EPPP topic, no lesson excerpt available.",
+      "suggestedLesson": "2-3-work-satisfaction",
+      "suggestedParagraph": "## Job Satisfaction",
+      "lessonExcerpt": "**Absenteeism and turnover**: Satisfied employees are less likely to miss work or quit, but again, the relationships are moderate",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 2
+    },
+    {
+      "stem": "An industrial-organizational psychologist reviewing the empirical literature on job satisfaction reports to leadership that satisfaction is moderately correlated with job performance and is more strongly associated with turnover and absenteeism than with output quality. She cautions that the relationship with performance should not be interpreted as demonstrating that improving satisfaction will cause proportional performance gains. Her caution reflects which empirical and interpretive consideration?",
+      "options": [
+        "Satisfaction and performance are causally linked, so raising satisfaction reliably increases performance above baseline levels",
+        "The satisfaction-performance correlation is correlational, not necessarily causal, and tenure-related outcomes such as turnover show stronger associations than performance metrics",
+        "Job satisfaction is entirely determined by hygiene factors, making performance improvements dependent only on extrinsic working conditions",
+        "Satisfaction is orthogonal to performance because intrinsic motivation fully mediates any apparent relationship between the two variables"
+      ],
+      "answer": "The satisfaction-performance correlation is correlational, not necessarily causal, and tenure-related outcomes such as turnover show stronger associations than performance metrics",
+      "explanation": "The research literature consistently shows a modest positive correlation between job satisfaction and performance (meta-analytic estimates typically around r = .30), but the relationship is correlational and causality is difficult to establish. Satisfaction shows stronger and more consistent relationships with turnover intention, absenteeism, and organizational citizenship behaviors than with objective performance outputs. Option A overstates the causal and predictive power of satisfaction on performance. Option C incorrectly invokes Herzberg's hygiene factors as the exclusive determinant of satisfaction. Option D incorrectly claims orthogonality; the established modest positive correlation rules out a zero relationship.",
+      "kn": "KN9",
+      "kn_explanation": "This question is best aligned with KN9 because it tests Major research-based theories and models of motivation and their application.",
+      "difficulty": "hard",
+      "quality_comment": "Tests both substantive knowledge and methodological reasoning (correlation vs. causation); appropriate doctoral-level demand.",
+      "suggestedLesson": "2-3-work-satisfaction",
+      "suggestedParagraph": "## Job Satisfaction and Organizational Outcomes",
+      "lessonExcerpt": "**Job performance**: The correlation ranges from .17 to .30 depending on the study. Statistically significant but not enormous",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 15
+    },
+    {
+      "stem": "What is a common psychological effect of a compressed work week on employee productivity?",
+      "options": [
+        "Increased stress levels leading to burnout.",
+        "Improved work-life balance and job satisfaction.",
+        "Decreased collaboration among team members.",
+        "Higher rates of absenteeism."
+      ],
+      "answer": "Improved work-life balance and job satisfaction.",
+      "explanation": "Research indicates that a compressed work week can enhance employees' work-life balance, leading to greater job satisfaction. The other options typically reflect negative outcomes rather than the benefits associated with this work arrangement.",
+      "kn": "KN8",
+      "kn_explanation": "This question is best aligned with KN8 because it tests Major research-based theories and models of memory and their application.",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests knowledge of work psychology.",
+      "suggestedLesson": "2-3-work-satisfaction",
+      "suggestedParagraph": "## Why Memory Matters for Psychologists",
+      "lessonExcerpt": "Memory span (also called primary memory): The basic storage capacity. How much you can hold",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 22
     }
   ]
 }

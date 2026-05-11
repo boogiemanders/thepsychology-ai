@@ -103,48 +103,6 @@
       "inspirationIndex": 11
     },
     {
-      "stem": "According to ethical guidelines, what is the primary purpose of providing feedback after an evaluation?",
-      "options": [
-        "To inform the client of their diagnosis and treatment options.",
-        "To fulfill legal requirements for documentation.",
-        "To ensure the client understands the evaluation process and results.",
-        "To establish a therapeutic alliance with the client."
-      ],
-      "answer": "To ensure the client understands the evaluation process and results.",
-      "explanation": "The correct answer emphasizes the importance of client understanding, which is crucial in ethical practice. The lesson states that feedback is essential for clients to comprehend their evaluations, thus supporting this answer. The other options, while relevant, do not capture the primary ethical purpose of feedback.",
-      "kn": "KN62",
-      "kn_explanation": "This question is best aligned with KN62 because it tests Professional standards and relevant guidelines for the practice of psychology (e.g., standards for educational and psychological testing).",
-      "difficulty": "medium",
-      "quality_comment": "The question is clear and directly assesses knowledge of ethical feedback practices.",
-      "suggestedLesson": "8-standards-9-10",
-      "suggestedParagraph": "## Making Ethical Decisions: A Practical Framework",
-      "lessonExcerpt": "Standard 9.10 requires you to explain assessment results to clients unless there's a valid reason not to (like employment screening or forensic evaluations).",
-      "needsReview": false,
-      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 1
-    },
-    {
-      "stem": "Which of the following is a limit of confidentiality that psychologists must ethically uphold?",
-      "options": [
-        "Psychologists can disclose any information if the client requests it.",
-        "Psychologists must break confidentiality if they believe the client poses a danger to themselves or others.",
-        "Psychologists can share client information with family members without consent.",
-        "Psychologists are allowed to disclose information for marketing purposes."
-      ],
-      "answer": "Psychologists must break confidentiality if they believe the client poses a danger to themselves or others.",
-      "explanation": "The correct answer is that psychologists have an ethical obligation to break confidentiality if there is a risk of harm to the client or others. The other options violate ethical standards regarding confidentiality and client autonomy.",
-      "kn": "KN71",
-      "kn_explanation": "This question is best aligned with KN71 because it tests ethical issues in technology-assisted psychological services.",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively tests knowledge of ethical obligations regarding confidentiality.",
-      "suggestedLesson": "8-standards-3-4",
-      "suggestedParagraph": "## Understanding Malpractice: The Four Ds You Can't Forget",
-      "lessonExcerpt": "Many jurisdictions follow the Tarasoff decision, establishing a duty to protect third parties from client violence. This typically applies when: The client communicates a clear and imminent threat... Appropriate actions: warn the intended victim, notify police, or hospitalize the client.",
-      "needsReview": false,
-      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 21
-    },
-    {
       "stem": "What should a psychologist do when they receive a court order for client records?",
       "options": [
         "Immediately comply without question.",
@@ -227,27 +185,6 @@
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 12
-    },
-    {
-      "stem": "What must a psychologist demonstrate to establish legal liability in a malpractice case?",
-      "options": [
-        "The client must show emotional distress.",
-        "The psychologist must have a personal relationship with the client.",
-        "The psychologist must have breached a duty of care that caused measurable harm.",
-        "The client must have a prior history of mental health issues."
-      ],
-      "answer": "The psychologist must have breached a duty of care that caused measurable harm.",
-      "explanation": "The correct answer reflects the essential elements required to establish legal liability in a malpractice case, specifically the breach of duty and resulting harm. The other options do not accurately represent the legal requirements for establishing malpractice.",
-      "kn": "KN63",
-      "kn_explanation": "This question is best aligned with KN63 because it tests Laws, statutes, and judicial decisions that affect psychological practice.",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively assesses understanding of legal liability in psychology.",
-      "suggestedLesson": "8-practice-issues",
-      "suggestedParagraph": "## Understanding Malpractice: The Four Ds You Can't Forget",
-      "lessonExcerpt": "Malpractice claims follow a predictable pattern called the \"Four Ds.\" Duty of Care: A professional relationship existed where you owed the client a standard of care. Dereliction of Duty: You breached that standard through negligence or misconduct. Damages: The client suffered measurable harm. Direct Cause: Your breach directly caused the harm.",
-      "needsReview": false,
-      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 26
     },
     {
       "stem": "Which standard emphasizes the necessity of competence in assessment practices for psychologists?",
@@ -685,6 +622,191 @@
         "lock_in_drill"
       ],
       "lessonExcerpt": "Standard 1.05 (Formal Reporting): You must report to an ethics committee, licensing board, or other authority when: The violation has caused or is likely to cause substantial harm; Informal resolution isn't appropriate; Informal resolution didn't work",
+      "suggestedLesson": "8-standards-1-2",
+      "needsReview": false
+    },
+    {
+      "stem": "What should a psychologist do if they observe unethical behavior by a colleague?",
+      "options": [
+        "Ignore it to avoid conflict",
+        "Report it to the appropriate authorities",
+        "Confront the colleague directly without documentation",
+        "Discuss it with the client's family"
+      ],
+      "answer": "Report it to the appropriate authorities",
+      "explanation": "The ethical obligation is to report observed unethical behavior to the appropriate authorities to protect clients and uphold professional standards. Ignoring the behavior or confronting the colleague without documentation does not address the issue adequately. Discussing it with the client's family could breach confidentiality.",
+      "kn": "KN62",
+      "kn_explanation": "This question is best aligned with KN62 because it tests Professional standards and relevant guidelines for the practice of psychology (e.g., standards for educational and psychological testing).",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively highlights the importance of reporting unethical behavior in the field.",
+      "suggestedLesson": "8-standards-1-2",
+      "suggestedParagraph": "## What Actually Gets Psychologists in Trouble",
+      "lessonExcerpt": "Standard 1.05 (Formal Reporting): You must report to an ethics committee, licensing board, or other authority when: The violation has caused or is likely to cause substantial harm",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 9
+    },
+    {
+      "stem": "Which ethical principle is primarily concerned with the fairness of billing practices in psychological services?",
+      "options": [
+        "Beneficence",
+        "Justice",
+        "Integrity",
+        "Fidelity"
+      ],
+      "answer": "Justice",
+      "explanation": "The principle of justice emphasizes fairness and equality in access to psychological services, including billing practices. The other principles, while important, do not specifically address billing fairness.",
+      "kn": "KN61",
+      "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively connects ethical principles to financial practices.",
+      "suggestedLesson": "8-standards-1-2",
+      "suggestedParagraph": "## Why Professional Issues Matter More Than You Think",
+      "lessonExcerpt": "D: Justice | Ensure fairness | Everyone deserves access to psychology's benefits and equal quality services",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 6
+    },
+    {
+      "stem": "What is the primary difference between ethical guidelines and legal obligations for psychologists?",
+      "options": [
+        "Ethical guidelines are enforceable by law, while legal obligations are not.",
+        "Legal obligations are mandatory, while ethical guidelines are aspirational.",
+        "Ethical guidelines apply only to clinical practice, while legal obligations apply to all areas.",
+        "Legal obligations can be ignored if ethical guidelines are followed."
+      ],
+      "answer": "Legal obligations are mandatory, while ethical guidelines are aspirational.",
+      "explanation": "Legal obligations must be followed and can result in penalties if violated, while ethical guidelines serve as aspirational standards that may not have legal consequences. The other options misrepresent the relationship between ethics and law.",
+      "kn": "KN62",
+      "kn_explanation": "This question is best aligned with KN62 because it tests Professional standards and relevant guidelines for the practice of psychology (e.g., standards for educational and psychological testing).",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively clarifies a fundamental difference in professional standards.",
+      "suggestedLesson": "8-standards-1-2",
+      "suggestedParagraph": "## Why Professional Issues Matter More Than You Think",
+      "lessonExcerpt": "These are aspirational. They can't be used to sanction you, but they represent the highest ideals of the profession. They're like the philosophy behind the rules... General Principles are aspirational only. You can't be sanctioned based on them alone. Only the Ethical Standards are enforceable.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 7
+    },
+    {
+      "stem": "In therapy, what is the most ethical approach when a psychologist realizes they lack cultural competence to effectively treat a client?",
+      "options": [
+        "Continue therapy while attempting to learn about the client's culture.",
+        "Refer the client to another professional who has the necessary cultural competence.",
+        "Discuss the psychologist's limitations with the client and seek their input.",
+        "Ignore the issue and focus on the therapeutic goals."
+      ],
+      "answer": "Refer the client to another professional who has the necessary cultural competence.",
+      "explanation": "The correct answer emphasizes the ethical responsibility to ensure clients receive competent care, which may involve referral when a psychologist lacks the necessary cultural understanding. The other options either compromise the client's care or do not adequately address the issue.",
+      "kn": "KN61",
+      "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests knowledge of cultural competence ethics.",
+      "suggestedLesson": "8-standards-1-2",
+      "suggestedParagraph": "## Standard 3: Human Relations",
+      "lessonExcerpt": "Standard 2.01(b) addresses cultural competence: If understanding issues related to gender, gender identity, race, ethnicity, or other characteristics is essential for effective service, you must have the necessary knowledge and training. If you don't, make appropriate referrals.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 25
+    },
+    {
+      "stem": "During a supervision session, a psychologist expresses reluctance to work with clients from a specific cultural background. What should the supervisor emphasize regarding ethical practice?",
+      "options": [
+        "It is acceptable to avoid clients from certain backgrounds if it affects the therapist's comfort.",
+        "Supervisors should encourage psychologists to confront their biases and seek training in cultural competence.",
+        "Psychologists can refuse clients based on cultural background if they feel it would impair their effectiveness.",
+        "Supervisors should support the psychologist's decision to refuse clients based on personal preferences."
+      ],
+      "answer": "Supervisors should encourage psychologists to confront their biases and seek training in cultural competence.",
+      "explanation": "This answer is correct because ethical practice requires psychologists to address their biases and enhance their cultural competence to provide effective services to all clients, regardless of background.",
+      "difficulty": "hard",
+      "kn": "KN61",
+      "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
+      "quality_comment": "This question challenges the test-taker to apply ethical principles in a supervisory context, enhancing critical thinking.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "harder",
+      "tags": [
+        "lock_in_drill"
+      ],
+      "lessonExcerpt": "Standard 2.01(b) addresses cultural competence: If understanding issues related to gender, gender identity, race, ethnicity, or other characteristics is essential for effective service, you must have the necessary knowledge and training.",
+      "suggestedLesson": "8-standards-1-2",
+      "needsReview": false
+    },
+    {
+      "stem": "Emerging social, legal, or ethical issues can impact psychological practice. What is a recommended way for psychologists to address these evolving concerns?",
+      "options": [
+        "Avoid adapting practice standards until official code revisions occur.",
+        "Stay informed through professional organizations and update their practice accordingly.",
+        "Refer all new issues to legal counsel and avoid ethical decision-making.",
+        "Disregard emerging issues as they generally do not impact direct practice."
+      ],
+      "answer": "Stay informed through professional organizations and update their practice accordingly.",
+      "explanation": "1. The correct answer, \"Stay informed through professional organizations and update their practice accordingly,\" is vital because psychologists must remain aware of emerging social, legal, and ethical issues that can impact their practice. Engaging with professional organizations ensures that psychologists receive timely updates and guidance on best practices, allowing them to adapt their approaches to align with current standards and ethical guidelines, as emphasized in the APA Ethics Code.\n\n2. The option \"Avoid adapting practice standards until official code revisions occur\" is incorrect because it suggests a passive approach that could leave psychologists unprepared for current issues affecting their practice, which can be detrimental to clients and the profession. \"Refer all new issues to legal counsel and avoid ethical decision-making\" is wrong as it undermines the psychologist's responsibility to engage in ethical decision-making and take proactive steps in addressing issues rather than deferring entirely to legal counsel. Lastly, \"Disregard emerging issues as they generally do not impact direct practice\" is flawed because it dismisses the significant influence that evolving social and ethical concerns have on psychological practice, potentially compromising the well-being of clients and the integrity of the profession.",
+      "kn": "KN61",
+      "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
+      "difficulty": "medium",
+      "quality_comment": "The question tests understanding of professional responsibility towards evolving ethical and legal issues, fitting for current practice demands.",
+      "lessonExcerpt": "The APA's Guidelines for Telepsychology (2024) recommend that psychologists stay current with evolving competencies through research and literature.",
+      "suggestedLesson": "8-standards-1-2",
+      "needsReview": false
+    },
+    {
+      "stem": "What is one of the primary goals of the APA's Ethical Principles?",
+      "options": [
+        "To promote financial gain for psychologists.",
+        "To ensure the protection of individuals with whom psychologists work.",
+        "To establish a hierarchy of psychological practices.",
+        "To limit the scope of practice for psychologists."
+      ],
+      "answer": "To ensure the protection of individuals with whom psychologists work.",
+      "explanation": "One of the primary goals of the APA's Ethical Principles is to protect the welfare of individuals involved in psychological services. The other options do not reflect the core mission of the ethical principles.",
+      "kn": "KN61",
+      "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively captures a fundamental goal of the APA's ethical framework.",
+      "suggestedLesson": "8-standards-1-2",
+      "suggestedParagraph": "## Standard 9: Assessment",
+      "lessonExcerpt": "The Preamble states the Ethics Code's primary goals: protecting the people psychologists work with and educating everyone about ethical standards.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 9
+    },
+    {
+      "stem": "What is the appropriate action for a psychologist who witnesses an ethical violation by a colleague?",
+      "options": [
+        "Ignore the violation if it does not directly affect clients.",
+        "Report the violation to the appropriate authorities.",
+        "Confront the colleague directly and demand they correct their behavior.",
+        "Discuss the violation with clients to inform them."
+      ],
+      "answer": "Report the violation to the appropriate authorities.",
+      "explanation": "The appropriate action is to report the violation to ensure accountability and protect clients. Ignoring the violation or discussing it with clients does not address the ethical breach, and confronting the colleague may not be safe or effective.",
+      "kn": "KN61",
+      "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively addresses a critical ethical responsibility for psychologists.",
+      "suggestedLesson": "8-standards-1-2",
+      "suggestedParagraph": "## Standard 10: Reporting Ethical Violations",
+      "lessonExcerpt": "Standard 1.05 (Formal Reporting): You must report to an ethics committee, licensing board, or other authority when: The violation has caused or is likely to cause substantial harm",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 10
+    },
+    {
+      "stem": "Which of the following best describes a psychologist's responsibility regarding continuing professional development according to ethical standards?",
+      "options": [
+        "Psychologists may choose to engage in continuing education when convenient without formal documentation.",
+        "Psychologists must undertake ongoing education to maintain competence and ensure current knowledge.",
+        "Once licensed, psychologists are not ethically required to pursue further training.",
+        "Continuing professional development is solely the responsibility of employers, not the individual psychologist."
+      ],
+      "answer": "Psychologists must undertake ongoing education to maintain competence and ensure current knowledge.",
+      "explanation": "1. The correct answer, \"Psychologists must undertake ongoing education to maintain competence and ensure current knowledge,\" aligns with the ethical standards outlined in the APA Ethics Code, particularly Standard 7.02. This standard emphasizes that psychologists must take \"reasonable steps\" to ensure their education and training descriptions are accurate, indicating a commitment to continuous professional development to stay informed and competent in their field.\n\n2. The first incorrect option, \"Psychologists may choose to engage in continuing education when convenient without formal documentation,\" is wrong because ethical standards require psychologists to maintain accurate records of their education and training, suggesting that ongoing education should be a structured and documented process rather than a casual choice. \n\nThe second incorrect option, \"Once licensed, psychologists are not ethically required to pursue further training,\" is incorrect because the APA Ethics Code implies an ongoing responsibility for professional development beyond initial licensure to ensure competence in practice. \n\nFinally, the third incorrect option, \"Continuing professional development is solely the responsibility of employers, not the individual psychologist,\" is inaccurate because it places the onus of professional growth entirely on employers, whereas ethical standards highlight the individual psychologist's obligation to engage in ongoing education and training for their own competence.",
+      "kn": "KN66",
+      "kn_explanation": "This question covers the underrepresented area of continuing professional development within ethical, legal, and professional issues, which is relevant to maintaining ethical competence (KN66).",
+      "difficulty": "medium",
+      "quality_comment": "The question addresses an often overlooked but important ethical obligation, with plausible distractors enhancing discriminability.",
+      "lessonExcerpt": "Ignoring continuing education requirements (yes, people actually get disciplined for this)",
       "suggestedLesson": "8-standards-1-2",
       "needsReview": false
     }

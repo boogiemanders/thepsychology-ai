@@ -64,27 +64,6 @@
       "inspirationIndex": 7
     },
     {
-      "stem": "Which leadership style focuses on inspiring and motivating followers to achieve higher levels of performance?",
-      "options": [
-        "Transactional leadership.",
-        "Transformational leadership.",
-        "Autocratic leadership.",
-        "Laissez-faire leadership."
-      ],
-      "answer": "Transformational leadership.",
-      "explanation": "The correct answer identifies transformational leadership as the style that emphasizes inspiration and motivation. The other options describe different leadership styles that do not focus on inspiring followers.",
-      "kn": "KN16",
-      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively assesses understanding of leadership styles.",
-      "suggestedLesson": "3-influence",
-      "suggestedParagraph": "## The Three Pillars of Social Influence",
-      "lessonExcerpt": "Understanding these patterns is essential for your EPPP exam.",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 8
-    },
-    {
       "stem": "Which type of conformity involves changing one's beliefs or behaviors based on information from others?",
       "options": [
         "Normative conformity",
@@ -121,24 +100,6 @@
       "quality_comment": "The distractors are plausible alternatives related to social influence concepts, making the question a solid test of key conceptual understanding.",
       "lessonExcerpt": "Informational Influence: This happens when you genuinely believe others know more than you do. You're not just going along to avoid conflict",
       "suggestedLesson": "3-influence",
-      "needsReview": false
-    },
-    {
-      "stem": "In Asch's conformity experiments, what was a key finding that differentiated his work from Sherif's autokinetic effect studies?",
-      "options": [
-        "Asch found conformity only occurred in ambiguous situations",
-        "Asch found conformity even when the correct answer was obvious and unambiguous",
-        "Sherif’s study demonstrated conformity only in unambiguous situations",
-        "Sherif’s study involved foot-in-the-door compliance tactics"
-      ],
-      "answer": "Asch found conformity even when the correct answer was obvious and unambiguous",
-      "explanation": "1. The correct answer, \"Asch found conformity even when the correct answer was obvious and unambiguous,\" highlights a significant distinction in Asch's experiments compared to Sherif's. In Asch's studies, participants conformed to the group norm even when the correct answer was clear, demonstrating that social influence can occur in situations where there is no ambiguity. This contrasts with Sherif's work, where conformity was primarily observed in ambiguous situations, such as the autokinetic effect, where individuals were uncertain about the correct response.\n\n2. The option \"Asch found conformity only occurred in ambiguous situations\" is incorrect because Asch's findings specifically show that conformity happened in clear, unambiguous scenarios, which is a key difference from Sherif's research. The statement \"Sherif’s study demonstrated conformity only in unambiguous situations\" is also wrong, as Sherif's research focused on ambiguous situations, where participants were unsure of the light's movement. Lastly, the option \"Sherif’s study involved foot-in-the-door compliance tactics\" is incorrect because Sherif's study did not utilize compliance tactics like foot-in-the-door; it was primarily an investigation into conformity based on ambiguous stimuli rather than compliance techniques.",
-      "kn": "KN16",
-      "kn_explanation": "Understanding these seminal studies in conformity highlights group dynamics and social influences, core topics within group and systems processes (KN16).",
-      "difficulty": "medium",
-      "quality_comment": "Options contrast the key differences between landmark studies; distractors are credible misconceptions.",
-      "lessonExcerpt": "Requires excessive admiration - Sense of entitlement - Interpersonally exploitative - Lacks empathy - Often envious or believes others envy them - Arrogant behaviors and attitudes {{M}}These are the colleagues who dominate meetings talking about their accomplishments, expect special treatment, but can't genuinely celebrate your promotion.{{/M}} The lack of empathy combined with entitlement creates significant interpersonal problems.",
-      "suggestedLesson": "5-personality",
       "needsReview": false
     },
     {
@@ -310,6 +271,45 @@
         "lock_in_drill"
       ],
       "lessonExcerpt": "70% of Burger's participants continued delivering shocks at 150 volts, compared to 82.5% in Milgram's original study. That difference wasn't statistically significant",
+      "suggestedLesson": "3-influence",
+      "needsReview": false
+    },
+    {
+      "stem": "A community health program aims to increase cervical cancer screening rates among women who already believe the procedure is effective but nonetheless fail to schedule appointments. According to the Theory of Planned Behavior, which intervention MOST directly targets the subjective norm component in order to strengthen behavioral intention?",
+      "options": [
+        "Distributing pamphlets with vivid statistics about cervical cancer incidence and mortality to increase perceived susceptibility",
+        "Providing transportation vouchers and extended clinic hours to eliminate logistical barriers to scheduling",
+        "Disseminating messages emphasizing that physicians, family members, and community leaders strongly encourage regular screening",
+        "Offering guided practice in navigating the online scheduling system to build procedural self-efficacy"
+      ],
+      "answer": "Disseminating messages emphasizing that physicians, family members, and community leaders strongly encourage regular screening",
+      "explanation": "Subjective norms in the Theory of Planned Behavior reflect what a person believes important referent others think she should do. An intervention communicating that trusted social figures (physicians, family, community leaders) endorse the behavior directly strengthens this component and, through it, behavioral intention. Option A targets perceived severity, a component from the Health Belief Model rather than subjective norms. Option B addresses perceived behavioral control by removing structural barriers. Option D also targets perceived behavioral control by building confidence in one's ability to perform the scheduling behavior. All three TPB components contribute to intention, but only Option C specifically addresses subjective norms.",
+      "kn": "KN14",
+      "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
+      "difficulty": "medium",
+      "quality_comment": "Well-anchored in lesson content; distractors each map to a distinct competing construct, making this an effective test of TPB component differentiation.",
+      "suggestedLesson": "3-influence",
+      "suggestedParagraph": "## Three Models for Predicting Behavior from Attitudes",
+      "lessonExcerpt": "Brehm and Brehm (1981) identified this phenomenon as psychological reactance.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 2
+    },
+    {
+      "stem": "In Asch's conformity experiments, what was a key finding that differentiated his work from Sherif's autokinetic effect studies?",
+      "options": [
+        "Asch found conformity only occurred in ambiguous situations",
+        "Asch found conformity even when the correct answer was obvious and unambiguous",
+        "Sherif’s study demonstrated conformity only in unambiguous situations",
+        "Sherif’s study involved foot-in-the-door compliance tactics"
+      ],
+      "answer": "Asch found conformity even when the correct answer was obvious and unambiguous",
+      "explanation": "1. The correct answer, \"Asch found conformity even when the correct answer was obvious and unambiguous,\" highlights a significant distinction in Asch's experiments compared to Sherif's. In Asch's studies, participants conformed to the group norm even when the correct answer was clear, demonstrating that social influence can occur in situations where there is no ambiguity. This contrasts with Sherif's work, where conformity was primarily observed in ambiguous situations, such as the autokinetic effect, where individuals were uncertain about the correct response.\n\n2. The option \"Asch found conformity only occurred in ambiguous situations\" is incorrect because Asch's findings specifically show that conformity happened in clear, unambiguous scenarios, which is a key difference from Sherif's research. The statement \"Sherif’s study demonstrated conformity only in unambiguous situations\" is also wrong, as Sherif's research focused on ambiguous situations, where participants were unsure of the light's movement. Lastly, the option \"Sherif’s study involved foot-in-the-door compliance tactics\" is incorrect because Sherif's study did not utilize compliance tactics like foot-in-the-door; it was primarily an investigation into conformity based on ambiguous stimuli rather than compliance techniques.",
+      "kn": "KN16",
+      "kn_explanation": "Understanding these seminal studies in conformity highlights group dynamics and social influences, core topics within group and systems processes (KN16).",
+      "difficulty": "medium",
+      "quality_comment": "Options contrast the key differences between landmark studies; distractors are credible misconceptions.",
+      "lessonExcerpt": "Requires excessive admiration - Sense of entitlement - Interpersonally exploitative - Lacks empathy - Often envious or believes others envy them - Arrogant behaviors and attitudes {{M}}These are the colleagues who dominate meetings talking about their accomplishments, expect special treatment, but can't genuinely celebrate your promotion.{{/M}} The lack of empathy combined with entitlement creates significant interpersonal problems.",
       "suggestedLesson": "3-influence",
       "needsReview": false
     }

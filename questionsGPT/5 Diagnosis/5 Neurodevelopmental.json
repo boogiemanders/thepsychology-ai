@@ -1,90 +1,6 @@
 {
   "questions": [
     {
-      "stem": "A psychologist is evaluating a 10-year-old boy referred for academic difficulties. Testing reveals average intelligence but significant reading deficits. Which of the following is MOST accurate regarding specific learning disorder with impairment in reading?",
-      "options": [
-        "It is diagnosed when IQ scores fall significantly below average",
-        "It represents approximately 80% of all specific learning disorder cases",
-        "ADHD is rarely comorbid with specific learning disorders",
-        "It is equally common in boys and girls and typically resolves by adolescence"
-      ],
-      "answer": "It represents approximately 80% of all specific learning disorder cases",
-      "explanation": "Approximately 80% of children with specific learning disorders have a reading disorder, making it by far the most common subtype. Option A is incorrect because people with specific learning disorders typically have average to above-average IQ; that discrepancy is part of what distinguishes learning disorders from intellectual disability. Option C is wrong because ADHD is actually the most common comorbid psychiatric disorder with specific learning disorders. Option D is misleading; while prevalence rates may be similar across genders in some studies, learning disorders tend to be chronic conditions that persist into adulthood rather than resolving by adolescence.",
-      "kn": "KN28",
-      "kn_explanation": "Reading deficiency in a child despite average intelligence suggests a specific learning disorder (e.g., dyslexia), which is a disorder that impacts the expected course of development over the lifespan.",
-      "difficulty": "medium",
-      "quality_comment": "Tests key epidemiological facts about reading disorders. The lesson covers prevalence and comorbidity well but long-term prognosis is",
-      "suggestedLesson": "5-neurodevelopmental",
-      "suggestedParagraph": "### The Numbers",
-      "lessonExcerpt": "About 5-15% of school-age children have a specific learning disorder. Of these, approximately 80% have a reading disorder. The most common reading disorder is dyslexia, and the most common type of dys",
-      "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 14
-    },
-    {
-      "stem": "A developmental psychologist is reviewing epidemiological data on autism spectrum disorder (ASD) for a grant proposal. Based on current prevalence estimates, which of the following statements most accurately describes the sex distribution of ASD diagnoses?",
-      "options": [
-        "Females are diagnosed approximately twice as often as males",
-        "Males and females are diagnosed at approximately equal rates",
-        "Males are diagnosed three to four times more often than females",
-        "Males are diagnosed ten times more often than females"
-      ],
-      "answer": "Males are diagnosed three to four times more often than females",
-      "explanation": "Research consistently shows that males receive ASD diagnoses 3-4 times more often than females. This is one of the most well-established epidemiological findings in developmental psychology. Option A reverses the sex ratio. Option B incorrectly suggests equal rates. Option D exaggerates the male predominance — while the ratio is significant, it is not as extreme as 10:1.",
-      "kn": "KN38",
-      "kn_explanation": "The question asks about epidemiological data and prevalence rates of a psychological disorder (ASD), which directly maps to KN38: Constructs of epidemiology and base rates of psychological and behavioral disorders.",
-      "difficulty": "easy",
-      "quality_comment": "Straightforward factual recall question testing a frequently examined epidemiological fact about ASD.",
-      "suggestedLesson": "5-neurodevelopmental",
-      "suggestedParagraph": "### Prevalence and Gender Differences",
-      "lessonExcerpt": "Males receive diagnoses three to four times more often than females.",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 13
-    },
-    {
-      "stem": "A child psychologist is conducting an initial evaluation of a 9-year-old boy who was referred for multiple motor tics (eye blinking, shoulder shrugging) and one vocal tic (throat clearing) that have been present for 18 months. The psychologist should be MOST alert to the possible co-occurrence of which condition?",
-      "options": [
-        "Obsessive-compulsive disorder",
-        "Specific learning disorder",
-        "Attention-deficit/hyperactivity disorder",
-        "Separation anxiety disorder"
-      ],
-      "answer": "Attention-deficit/hyperactivity disorder",
-      "explanation": "ADHD is the most common comorbid disorder with Tourette's disorder. The child described meets criteria for Tourette's (multiple motor tics AND at least one vocal tic persisting for more than one year with onset before age 18), so the psychologist should screen for ADHD. While OCD is also commonly associated with Tourette's, ADHD is specifically identified as the most common comorbidity. Specific learning disorder and separation anxiety disorder are not as strongly associated with Tourette's.",
-      "kn": "KN36",
-      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
-      "difficulty": "medium",
-      "quality_comment": "Tests specific knowledge of Tourette's most common comorbidity rather than just recognition of tic disorders",
-      "suggestedLesson": "5-neurodevelopmental",
-      "suggestedParagraph": "### The Three Tic Disorder Diagnoses",
-      "lessonExcerpt": "ADHD is the most common comorbid disorder with Tourette's.",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 14
-    },
-    {
-      "stem": "Epidemiological research on autism spectrum disorder (ASD) consistently identifies a significant difference in diagnostic prevalence between males and females. Which of the following most accurately describes the male-to-female sex ratio in ASD diagnoses across population-based studies?",
-      "options": [
-        "Approximately 1:1, with equal prevalence in males and females",
-        "Approximately 2:1, with males diagnosed twice as often as females",
-        "Approximately 4:1, with males diagnosed approximately four times as often as females",
-        "Approximately 8:1, with males dramatically overrepresented across all age groups"
-      ],
-      "answer": "Approximately 4:1, with males diagnosed approximately four times as often as females",
-      "explanation": "Epidemiological research consistently estimates a male-to-female ratio of approximately 4:1 in ASD diagnoses. This disparity is thought to reflect a combination of genuine biological sex differences in vulnerability and the possibility that females are underdiagnosed because they may camouflage or 'mask' symptoms more effectively—a phenomenon that has gained increased research attention. A 1:1 ratio would imply equal prevalence, which contradicts established epidemiological data. A 2:1 ratio underestimates the disparity documented in population studies. An 8:1 ratio substantially overestimates the difference and is not supported by current community-based research.",
-      "kn": "KN38",
-      "kn_explanation": "This question is best aligned with KN38 because it tests Constructs of epidemiology and base rates of psychological and behavioral disorders.",
-      "difficulty": "medium",
-      "quality_comment": "Focused factual question with well-spaced numerical distractors spanning above and below the correct ratio; tests a frequently examined EPPP epidemiological fact.",
-      "suggestedLesson": "5-neurodevelopmental",
-      "suggestedParagraph": "## Autism Spectrum Disorder Epidemiology",
-      "lessonExcerpt": "Males receive diagnoses three to four times more often than females.",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 13
-    },
-    {
       "stem": "Which of the following is a core deficit required for the diagnosis of Intellectual Developmental Disorder according to DSM-5-TR?",
       "options": [
         "Deficits in intellectual functioning determined by standardized intelligence testing",
@@ -289,24 +205,6 @@
       "needsReview": false
     },
     {
-      "stem": "Which theory or model best explains the importance of base rates and potential biases in interpreting neuropsychological test results?",
-      "options": [
-        "Signal Detection Theory",
-        "Classical Test Theory",
-        "Bayesian Probability Theory",
-        "Piaget’s Stage Theory"
-      ],
-      "answer": "Bayesian Probability Theory",
-      "explanation": "1. **Bayesian Probability Theory** is the correct answer because it emphasizes the role of prior knowledge (base rates) and evidence in updating beliefs about the likelihood of a particular outcome. In the context of interpreting neuropsychological test results, Bayesian approaches allow clinicians to consider the prevalence of conditions (base rates) and adjust their interpretations of test scores accordingly, thus minimizing biases that may arise from overestimating or underestimating the significance of test results in individual cases.\n\n2. **Signal Detection Theory** is incorrect because it focuses on the ability to distinguish between signal (true positives) and noise (false positives) in decision-making, rather than incorporating base rates into the interpretation of test results. **Classical Test Theory** is also not applicable, as it primarily deals with the reliability and validity of test scores without addressing the influence of base rates or biases in interpretation. Lastly, **Piaget’s Stage Theory** is irrelevant in this context as it pertains to cognitive development stages in children, rather than the statistical and interpretative frameworks used in neuropsychological assessment.",
-      "kn": "KN37",
-      "kn_explanation": "This question targets evidence-based interpretation of data and how knowledge of base rates and biases influence clinical judgment (KN37).",
-      "difficulty": "medium",
-      "quality_comment": "Distractors are plausible psychological or testing theories, but only Bayesian theory specifically relates to base rate use and bias interpretation.",
-      "lessonExcerpt": "The Foundation: Sampling Distributions and Probability Let's start with a core concept that trips up many students: the sampling distribution of means.",
-      "suggestedLesson": "7-inferential-stats",
-      "needsReview": false
-    },
-    {
       "stem": "Which common bias can lead clinicians to overestimate the likelihood of a rare disorder when interpreting assessment data?",
       "options": [
         "Base rate neglect",
@@ -322,24 +220,6 @@
       "quality_comment": "Distractors are all common biases to create a challenging item requiring knowledge of base rate effects specifically.",
       "lessonExcerpt": "Even if you know that social anxiety affects only about 7% of the population (the base rate), you might focus instead on those specific behavioral details and overestimate the likelihood{{/M}}. This matters in forensic settings too.",
       "suggestedLesson": "3-errors-and-shortcuts",
-      "needsReview": false
-    },
-    {
-      "stem": "What type of validity evidence is most relevant for evaluating whether a neurodevelopmental disorder assessment tool accurately predicts treatment outcomes?",
-      "options": [
-        "Content validity",
-        "Construct validity",
-        "Predictive validity",
-        "Face validity"
-      ],
-      "answer": "Predictive validity",
-      "explanation": "1. **Predictive validity** is the correct answer because it assesses how well a neurodevelopmental disorder assessment tool can forecast the outcomes of treatment based on the results of the assessment. In the context of neurodevelopmental disorders, demonstrating predictive validity ensures that the tool is effective in identifying individuals who will benefit from specific interventions, which is crucial for improving treatment efficacy and planning.\n\n2. **Content validity** is incorrect because it refers to how well the assessment tool covers the relevant domains of the disorder, rather than its ability to predict treatment outcomes. **Construct validity** is also not applicable here, as it evaluates whether the tool accurately measures the theoretical construct of the disorder rather than its predictive capabilities regarding treatment effectiveness. Lastly, **face validity** is not relevant because it simply assesses whether the tool appears to measure what it is intended to measure, based on subjective judgment, without providing evidence of its predictive power for treatment outcomes.",
-      "kn": "KN29",
-      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
-      "difficulty": "medium",
-      "quality_comment": "Distractors are valid forms of validity but only predictive validity relates to future outcome prediction, making the item conceptually sound.",
-      "lessonExcerpt": "Predictive Validity: Future Outcomes **Predictive validity** means we collect predictor scores first, then wait to collect criterion scores later.",
-      "suggestedLesson": "5-can-tests-predict",
       "needsReview": false
     },
     {

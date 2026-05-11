@@ -169,69 +169,6 @@
       "inspirationIndex": 10
     },
     {
-      "stem": "What is the primary purpose of using ANCOVA in research design?",
-      "options": [
-        "To compare means across multiple groups while controlling for covariates.",
-        "To assess the relationship between two categorical variables.",
-        "To determine the effect of a single independent variable on a dependent variable.",
-        "To analyze variance within a single group."
-      ],
-      "answer": "To compare means across multiple groups while controlling for covariates.",
-      "explanation": "ANCOVA is specifically designed to compare means while controlling for other variables (covariates). The other options describe different statistical methods and do not accurately reflect the purpose of ANCOVA.",
-      "kn": "KN54",
-      "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively tests knowledge of ANCOVA's purpose in research.",
-      "suggestedLesson": "7-stats-tests",
-      "suggestedParagraph": "## The Big Picture: Qualitative vs. Quantitative",
-      "lessonExcerpt": "**ANCOVA (Analysis of Covariance):** Another way to control for an extraneous variable, but instead of including it as a factor, ANCOVA statistically removes its effects from the dependent variable.",
-      "needsReview": false,
-      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 3
-    },
-    {
-      "stem": "What is the primary purpose of the Solomon Four-Group design in experimental research?",
-      "options": [
-        "To control for the effects of pre-testing on the dependent variable.",
-        "To compare multiple treatment conditions simultaneously.",
-        "To assess the long-term effects of an intervention.",
-        "To evaluate the reliability of measurement tools."
-      ],
-      "answer": "To control for the effects of pre-testing on the dependent variable.",
-      "explanation": "The Solomon Four-Group design is specifically structured to assess the impact of pre-testing on outcomes by including groups that do and do not receive pre-tests. The other options do not accurately reflect the primary purpose of this design.",
-      "kn": "KN54",
-      "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
-      "difficulty": "hard",
-      "quality_comment": "The question is well-constructed and tests knowledge of a specific experimental design.",
-      "suggestedLesson": "7-internal-external-validity",
-      "suggestedParagraph": "## The Big Picture: Qualitative vs. Quantitative",
-      "lessonExcerpt": "The **Solomon four-group design** simultaneously addresses testing as a threat to internal validity and pretest-treatment interaction as a threat to external validity.",
-      "needsReview": false,
-      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 6
-    },
-    {
-      "stem": "What is the primary function of structural equation modeling (SEM) in testing causal models?",
-      "options": [
-        "To establish correlations between variables without inferring causation.",
-        "To assess the fit of a proposed model to the observed data.",
-        "To compare means across different groups.",
-        "To analyze the variance within a single group."
-      ],
-      "answer": "To assess the fit of a proposed model to the observed data.",
-      "explanation": "The primary function of SEM is to evaluate how well a proposed causal model fits the observed data, allowing researchers to test complex relationships between variables. The other options do not accurately reflect the purpose of SEM.",
-      "kn": "KN54",
-      "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively assesses knowledge of SEM and its application in research.",
-      "suggestedLesson": "7-correlation-and-regression",
-      "suggestedParagraph": "## The Big Picture: Qualitative vs. Quantitative",
-      "lessonExcerpt": "**Step 4: Model Evaluation** – Researchers use statistics like the goodness-of-fit index (GFI) to determine whether their theoretical model fits the actual data well.",
-      "needsReview": false,
-      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 10
-    },
-    {
       "stem": "In an ABAB design, what is the primary purpose of the sequential treatment phases?",
       "options": [
         "To establish a control group",
@@ -272,27 +209,6 @@
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
       "inspirationIndex": 12
-    },
-    {
-      "stem": "Which of the following methods is most effective in reducing experimenter bias in research design?",
-      "options": [
-        "Using a single-blind design where participants are unaware of the treatment conditions.",
-        "Employing random assignment to groups.",
-        "Conducting a double-blind study where both participants and researchers are unaware of the treatment conditions.",
-        "Using a control group that receives no treatment."
-      ],
-      "answer": "Conducting a double-blind study where both participants and researchers are unaware of the treatment conditions.",
-      "explanation": "The correct answer is the most effective method for minimizing experimenter bias, as it prevents both participants and researchers from influencing the results. The other options may reduce bias but do not eliminate it as effectively as a double-blind design.",
-      "kn": "KN54",
-      "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively assesses knowledge of research design principles.",
-      "suggestedLesson": "7-internal-external-validity",
-      "suggestedParagraph": "## The Big Picture: Qualitative vs. Quantitative",
-      "lessonExcerpt": "**Double-blind technique**: Neither participants nor researchers interacting with them know who's in which group",
-      "needsReview": false,
-      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 5
     },
     {
       "stem": "Which of the following is a common challenge faced in single-subject research design?",
@@ -505,24 +421,6 @@
       "needsReview": false
     },
     {
-      "stem": "A correlational study analyzes the relationship between the predictor X (hours studied) and criterion Y (exam score). What does the regression equation derived from this analysis primarily allow the researcher to do?",
-      "options": [
-        "Establish a causal relationship between hours studied and exam score.",
-        "Describe the characteristics of the sample using descriptive statistics.",
-        "Predict an individual's exam score based on their hours studied.",
-        "Determine the population mean exam score."
-      ],
-      "answer": "Predict an individual's exam score based on their hours studied.",
-      "explanation": "1. The correct answer, \"Predict an individual's exam score based on their hours studied,\" is accurate because a regression equation derived from correlational analysis allows researchers to use the relationship between the predictor variable (hours studied) and the criterion variable (exam score) to make predictions about individual outcomes. In this context, the regression equation provides a formula that estimates the expected exam score for a given number of hours studied, demonstrating the predictive utility of the correlation.\n\n2. The option \"Establish a causal relationship between hours studied and exam score\" is incorrect because correlational studies do not manipulate variables or control for confounding factors, meaning they cannot confirm causation. \"Describe the characteristics of the sample using descriptive statistics\" is wrong because while descriptive statistics summarize data, they do not utilize the regression equation to make predictions about individual scores. Lastly, \"Determine the population mean exam score\" is incorrect as the regression equation focuses on individual predictions rather than calculating the mean for the entire population, which would require different statistical approaches.",
-      "kn": "KN54",
-      "kn_explanation": "This question tests understanding of correlational research and regression analysis within quantitative research methods (KN54).",
-      "difficulty": "medium",
-      "quality_comment": "Distractors cover various unrelated statistical concepts, compelling test-takers to correctly apply the concept of regression in correlational research.",
-      "lessonExcerpt": "Once you've established that two variables are correlated, regression analysis lets you make predictions. The correlational study produces a **regression equation** – essentially a formula that takes someone's predictor score and estimates their criterion score.",
-      "suggestedLesson": "7-correlation-and-regression",
-      "needsReview": false
-    },
-    {
       "stem": "What is the major limitation of randomized controlled trials (RCTs) that affects the generalizability of their results?",
       "options": [
         "Use of random assignment to groups",
@@ -573,24 +471,6 @@
       "difficulty": "medium",
       "quality_comment": "Distractors include related but distinct observational methods, making this an effective test of detailed procedural knowledge.",
       "lessonExcerpt": "**Interval Recording** (also called time sampling): You divide observation time into chunks and note whether the behavior occurred in each chunk.",
-      "suggestedLesson": "7-research-designs",
-      "needsReview": false
-    },
-    {
-      "stem": "In a mixed research design measuring the effects of drug dose on depression over time, drug dose is manipulated between subjects, while depressive symptoms measured weekly represent which type of variable?",
-      "options": [
-        "Between-subjects variable",
-        "Within-subjects variable",
-        "Confounding variable",
-        "Independent variable"
-      ],
-      "answer": "Within-subjects variable",
-      "explanation": "1. The correct answer, \"Within-subjects variable,\" is accurate because, in this mixed research design, each participant is assessed on depressive symptoms multiple times over the course of the study, specifically measuring their symptoms weekly after being assigned to different drug doses. This means that each participant serves as their own control across the different time points, which is characteristic of a within-subjects design.\n\n2. The option \"Between-subjects variable\" is incorrect because, in a between-subjects design, different groups of participants would receive different levels of the independent variable, but here, the same participants are measured over time. \"Confounding variable\" is not applicable in this context, as it refers to an extraneous factor that may affect the dependent variable, but the question specifically addresses the manipulation and measurement of the independent variable. Lastly, \"Independent variable\" is incorrect because, while drug dose is indeed an independent variable in this study, the question specifically asks about the type of variable represented by the weekly measurements of depressive symptoms, which is classified as a within-subjects variable.",
-      "kn": "KN54",
-      "kn_explanation": "This item focuses on understanding mixed research designs involving both between- and within-subjects variables, a core research design concept (KN54).",
-      "difficulty": "hard",
-      "quality_comment": "The question requires integration of design concepts, making distractors plausible and the item challenging at the EPPP level.",
-      "lessonExcerpt": "Each person experiences all (or multiple) conditions at different times.",
       "suggestedLesson": "7-research-designs",
       "needsReview": false
     },
@@ -691,6 +571,45 @@
         "lock_in_drill"
       ],
       "lessonExcerpt": "**Grounded Theory**: Researchers develop a theory by deeply listening to participants' experiences.",
+      "suggestedLesson": "7-research-designs",
+      "needsReview": false
+    },
+    {
+      "stem": "Which of the following best exemplifies cluster sampling in research?",
+      "options": [
+        "Selecting every tenth person from a list of registered voters.",
+        "Randomly choosing a few schools from a district and surveying all students within those schools.",
+        "Surveying individuals from different socioeconomic backgrounds across a city.",
+        "Choosing participants based on their availability and willingness to participate."
+      ],
+      "answer": "Randomly choosing a few schools from a district and surveying all students within those schools.",
+      "explanation": "The correct answer illustrates cluster sampling, where entire groups (clusters) are selected, and all individuals within those clusters are surveyed. The other options describe different sampling methods.",
+      "kn": "KN53",
+      "kn_explanation": "This question is best aligned with KN53 because it tests Sampling and data collection methods.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of sampling techniques.",
+      "suggestedLesson": "7-research-designs",
+      "suggestedParagraph": "## The Selection Process: Your Decision Framework",
+      "lessonExcerpt": "**Cluster random sampling**: {{M}}Instead of randomly selecting individual users from all of Twitter (impossible), you randomly select specific hashtag communities, then sample from within those communities.{{/M}}",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 10
+    },
+    {
+      "stem": "The Boston Process Approach differs from traditional neuropsychological batteries in that it:",
+      "options": [
+        "Requires standardized administration without modifications to ensure consistency",
+        "Focuses on obtaining qualitative data about patient problem-solving strategies",
+        "Uses only quantitative total scores to determine brain dysfunction severity",
+        "Exclusively assesses visual-motor integration in children"
+      ],
+      "answer": "Focuses on obtaining qualitative data about patient problem-solving strategies",
+      "explanation": "The Boston Process Approach emphasizes qualitative information about how problems are solved, rather than just quantitative scores, and allows modifications during testing to explore performance limits.",
+      "kn": "KN34",
+      "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
+      "difficulty": "medium",
+      "quality_comment": "Good differentiation between qualitative and quantitative assessment; distractors represent common misconceptions about standardized testing.",
+      "lessonExcerpt": "Instead of just recording whether someone got the answer right, it focuses on *how* they arrived at their answer. This qualitative approach means you might modify standardized tests on the fly",
       "suggestedLesson": "7-research-designs",
       "needsReview": false
     }

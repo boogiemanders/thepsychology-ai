@@ -358,48 +358,6 @@
       "inspirationIndex": 13
     },
     {
-      "stem": "An organizational psychologist evaluates the effects of implementing a compressed four-day, 40-hour workweek across a mid-sized logistics company. After six months, she compares pre- and post-implementation data. Based on the empirical literature on alternative work schedules, which pattern of outcomes is she most likely to find?",
-      "options": [
-        "Both employee morale and objective productivity measures show significant, sustained improvements",
-        "Employee morale and job satisfaction improve significantly, but productivity gains are modest and inconsistent",
-        "Objective productivity improves substantially while morale effects are neutral or slightly negative due to scheduling complexity",
-        "Neither morale nor productivity shows reliable change at the group level; individual differences overwhelm any schedule effect"
-      ],
-      "answer": "Employee morale and job satisfaction improve significantly, but productivity gains are modest and inconsistent",
-      "explanation": "The I/O psychology literature on alternative work schedules consistently documents robust improvements in attitudinal outcomes — job satisfaction, morale, sense of autonomy, and reduced absenteeism — when employees shift to compressed workweeks or flextime arrangements. However, the same literature does not support equally consistent improvements in actual job performance or quantitative productivity. Workers report feeling greater control over their time and work-life balance, producing genuine attitudinal benefits, but the volume and quality of work output are not reliably affected — particularly in roles with fixed throughput demands (e.g., logistics, manufacturing) that are structurally independent of scheduling. This morale-vs-performance distinction is a canonical finding in I/O psychology and is directly testable on the EPPP.",
-      "kn": "KN46",
-      "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
-      "difficulty": "medium",
-      "quality_comment": "Tests a precise empirical distinction between attitudinal and performance outcomes — a classic and frequently tested I/O psychology finding; distractors are plausible and require careful discrimination.",
-      "suggestedLesson": "6-how-orgs-change",
-      "suggestedParagraph": "## Understanding Prevention, Consultation, and Psychotherapy Research",
-      "lessonExcerpt": "Compressed workweeks improve satisfaction more than productivity. Flextime's biggest benefit is reducing absenteeism, not improving performance ratings.",
-      "needsReview": false,
-      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 16
-    },
-    {
-      "stem": "A community mental health center serving a racially diverse urban population reviews its utilization data and finds that clients from racial and ethnic minority backgrounds are terminating services significantly earlier than non-minority clients with comparable presenting problems and insurance coverage. Which of the following most accurately characterizes what the empirical literature predicts about this pattern and its etiology?",
-      "options": [
-        "Higher early termination rates among minority clients reflect greater baseline resilience and faster natural symptom resolution in these populations",
-        "Premature termination is primarily explained by logistical barriers such as transportation and scheduling, with therapeutic relationship factors playing a negligible role",
-        "Racial and ethnic minority clients demonstrate higher rates of premature termination and poorer average outcomes in traditional therapy, typically attributed to cultural incompatibility of treatment models and microaggressions within the therapeutic relationship",
-        "Outcome disparities are eliminated when therapists adhere strictly to evidence-based treatment manuals, rendering therapist-client racial matching clinically unnecessary"
-      ],
-      "answer": "Racial and ethnic minority clients demonstrate higher rates of premature termination and poorer average outcomes in traditional therapy, typically attributed to cultural incompatibility of treatment models and microaggressions within the therapeutic relationship",
-      "explanation": "Research by Sue, Zane, and colleagues consistently documents that racial and ethnic minority clients have higher rates of unilateral premature termination and poorer average outcomes in traditional Western psychotherapy models compared to non-minority clients. Contributing factors include cultural incompatibility (Western therapy's individualist assumptions conflicting with collectivist worldviews), cultural mistrust of mental health systems rooted in historical mistreatment, microaggressions in the therapeutic relationship, language barriers, and inadequate cultural adaptation of interventions. The 'natural resilience' explanation is empirically unsupported and clinically harmful. Logistical barriers are real but insufficient to explain the full disparity — clinical relationship factors contribute independently. Adherence to manualized treatments does not automatically eliminate cultural disparities; ethnic and racial matching of therapist and client has shown some benefit for reducing premature termination in several studies, though effects are not universal.",
-      "kn": "KN45",
-      "kn_explanation": "This question is best aligned with KN45 because it tests methods and their evidence base for prevention, intervention, and rehabilitation with diverse and special populations.",
-      "difficulty": "hard",
-      "quality_comment": "Requires nuanced understanding of the multicultural therapy literature; avoids oversimplification while demanding precise knowledge of etiology and magnitude of disparities.",
-      "suggestedLesson": "3-helping-and-hurting",
-      "suggestedParagraph": "## Understanding Prevention, Consultation, and Psychotherapy Research",
-      "lessonExcerpt": "redlining | | **Institutional** | Organizational practices that marginalize racial groups | Zero-tolerance school policies that disproportionately suspend minority students | | **Interpersonal** | Individual behaviors that harm other racial groups | Microaggressions: subtle comments that communicate hostile or demeaning messages | | **Internalized** | Acceptance of negative stereotypes about one's own group | Colorism: minorities accepting negative beliefs about darker skin tones |...",
-      "needsReview": false,
-      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 17
-    },
-    {
       "stem": "A first-year doctoral student is reviewing Smith, Glass, and Miller's seminal 1980 meta-analysis of psychotherapy outcome research. Her supervisor tells her: 'The average treated client in that study fared better than approximately 80 percent of untreated controls — a finding that established psychotherapy's overall efficacy beyond reasonable scientific doubt.' Which numerical effect size corresponds to this benchmark?",
       "options": [
         "d = 0.20",
@@ -421,27 +379,6 @@
       "inspirationIndex": 18
     },
     {
-      "stem": "A 59-year-old woman with a 25-year history of recurrent major depressive disorder has failed three adequate antidepressant trials, including one augmentation strategy with lithium. She is currently experiencing severe neurovegetative symptoms, mood-congruent delusions of guilt, and passive suicidal ideation with a plan. Her psychiatrist is evaluating electroconvulsive therapy. For which clinical profile does ECT have the strongest empirical support as a primary intervention?",
-      "options": [
-        "Schizophrenia with prominent negative symptoms, flat affect, and treatment-resistant social withdrawal",
-        "Severe, treatment-resistant major depressive disorder, particularly when accompanied by psychotic features",
-        "Generalized anxiety disorder with prominent somatic symptoms and medication intolerance",
-        "Bipolar II disorder characterized by recurrent hypomanic episodes and chronic low-grade interepisode depression"
-      ],
-      "answer": "Severe, treatment-resistant major depressive disorder, particularly when accompanied by psychotic features",
-      "explanation": "ECT's strongest empirical support is for severe, treatment-resistant major depressive disorder — which describes this patient precisely. The presence of mood-congruent psychotic features (delusions of guilt) further strengthens the indication, as response rates for psychotic depression to ECT consistently exceed those for non-psychotic depression (70-90% vs. 50-70%). Additional indications include acute suicidality requiring rapid clinical response (pharmacotherapy typically takes weeks), melancholic features, and cases where medications are contraindicated or poorly tolerated. ECT has modest evidence for catatonia and acute mania but lacks support for negative-symptom schizophrenia or anxiety-spectrum conditions. Bipolar II with hypomania is not a primary ECT indication; ECT is reserved for more severe bipolar presentations such as treatment-resistant bipolar depression or mixed states with psychosis.",
-      "kn": "KN44",
-      "kn_explanation": "This question is best aligned with KN44 because it tests Treatment techniques and interventions, and the evidence for their comparative efficacy and effectiveness.",
-      "difficulty": "medium",
-      "quality_comment": "Realistic clinical vignette with diagnostically specific features that sharpen the indication; distractors span multiple DSM categories requiring precise knowledge of ECT's evidence base.",
-      "suggestedLesson": "1-pharmacology-antidepressants-antipsychotics",
-      "suggestedParagraph": "## Understanding Prevention, Consultation, and Psychotherapy Research",
-      "lessonExcerpt": "What They Treat:** Treatment-resistant depression and atypical depression (characterized by reversed vegetative symptoms like oversleeping, increased appetite, and mood reactivity). **The Major Concern: Hypertensive Crisis",
-      "needsReview": false,
-      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 19
-    },
-    {
       "stem": "Following a six-month psychiatric hospitalization for treatment-resistant bipolar disorder, a patient is referred to a supported housing program where staff provide daily living skills coaching, facilitate gradual reintegration into community activities, and coordinate outpatient follow-up care. The treatment team explicitly emphasizes relapse prevention and functional rehabilitation as the program's goals. According to Caplan's classic prevention framework, this program is best classified as:",
       "options": [
         "Primary prevention, because it aims to reduce the incidence of new episodes across the general population",
@@ -461,48 +398,6 @@
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
       "inspirationIndex": 23
-    },
-    {
-      "stem": "A human resources consultant recommends two separate interventions to a manufacturing company. The first involves adding several assembly steps to each worker's role so that employees rotate through a broader set of tasks, all at the same complexity level. The second involves redesigning positions to include planning, quality inspection, and scheduling responsibilities that were previously handled exclusively by supervisors. Which statement correctly distinguishes job enlargement from job enrichment as illustrated in this scenario?",
-      "options": [
-        "Job enlargement incorporates higher-level managerial responsibilities; job enrichment increases the number of tasks at the worker's existing skill level",
-        "Job enlargement and job enrichment are functionally interchangeable strategies for reducing employee monotony through task variety",
-        "Job enlargement increases task variety horizontally by adding similar-level tasks; job enrichment adds vertical depth by incorporating greater autonomy and responsibility",
-        "Job enrichment expands the number of workers assigned to a role; job enlargement increases the total individual workload without changing task complexity"
-      ],
-      "answer": "Job enlargement increases task variety horizontally by adding similar-level tasks; job enrichment adds vertical depth by incorporating greater autonomy and responsibility",
-      "explanation": "Job enlargement refers to horizontal loading—adding more tasks at the same level of skill and complexity, increasing variety without increasing challenge, decision-making authority, or responsibility. Job enrichment, associated with Herzberg's motivation-hygiene theory, refers to vertical loading—adding higher-level responsibilities such as planning, self-inspection, and decision-making that were previously reserved for supervisors, thereby increasing the meaningfulness and motivating potential of the role. Option A reverses these definitions. Option B incorrectly treats the two as interchangeable. Option D confuses job enrichment with workforce staffing decisions.",
-      "kn": "KN42",
-      "kn_explanation": "This question is best aligned with KN42 because it tests Factors related to treatment or intervention decision-making (e.g., relevant research, matching treatment to assessment/diagnosis, matching client or patient with psychologist characteristics, knowledge and use of allied services, cost and benefit, readiness to change).",
-      "difficulty": "medium",
-      "quality_comment": "Clear scenario with well-differentiated distractors. This topic is not present in the provided lesson files; flagged for verification against the appropriate I/O psychology lesson.",
-      "suggestedLesson": "2-work-motivation",
-      "suggestedParagraph": "## Job Design",
-      "lessonExcerpt": "Misconception #2**: \"Job enlargement and job enrichment are the same thing.\" **Reality**: Enlargement adds more tasks at the same level (horizontal loading). Enrichment adds depth, meaning, and responsibility (vertical loading).",
-      "needsReview": false,
-      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 27
-    },
-    {
-      "stem": "According to Fiedler's contingency model, a leader with a low LPC (Least Preferred Coworker) score would be MOST effective in which of the following situations?",
-      "options": [
-        "A moderately favorable situation where leader-member relations are good but task structure is low",
-        "A highly favorable or highly unfavorable situation",
-        "A moderately favorable situation regardless of leader-member relations",
-        "Any situation, provided the leader receives leadership training to adapt their style"
-      ],
-      "answer": "A highly favorable or highly unfavorable situation",
-      "explanation": "Fiedler's contingency model posits that low-LPC leaders (task-oriented) perform best in situations that are either very favorable or very unfavorable, while high-LPC leaders (relationship-oriented) perform best in moderately favorable situations. Situational favorability is determined by leader-member relations, task structure, and position power. Option A describes a moderate situation better suited to high-LPC leaders. Option C incorrectly removes leader-member relations from the equation. Option D contradicts Fiedler's core assertion that leadership style is relatively fixed and the situation must be engineered to match the leader, not the other way around.",
-      "kn": "KN44",
-      "kn_explanation": "This question is best aligned with KN44 because it tests Treatment techniques and interventions, and the evidence for their comparative efficacy and effectiveness.",
-      "difficulty": "hard",
-      "quality_comment": "Solid contingency model question testing the core matching principle. However, the provided domain 6 lesson content does not cover Fiedler's contingency model or leadership theory at all — this topic typically falls under I/O Psychology. Content goes beyond current lesson material — valid EPPP topic, no lesson excerpt available.",
-      "suggestedLesson": "5-6-leadership",
-      "suggestedParagraph": "## Understanding Prevention, Consultation, and Psychotherapy Research: Your Complete Guide",
-      "lessonExcerpt": "These combine to create situations ranging from very favorable to very unfavorable. **The Match-Up",
-      "needsReview": false,
-      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 31
     },
     {
       "stem": "According to Caplan's model of prevention, which type of prevention aims to reduce the occurrence of new cases of a disorder by targeting entire populations or groups regardless of risk status?",
@@ -855,6 +750,27 @@
       "lessonExcerpt": "**Universal Prevention** reaches everyone in a population without screening for risk. A drug abuse prevention program delivered to every single high school student in a district? That's universal.",
       "suggestedLesson": "6-prevention-and-consultation",
       "needsReview": false
+    },
+    {
+      "stem": "A psychologist is evaluating a 10-year-old boy referred for academic difficulties. Testing reveals average intelligence but significant reading deficits. Which of the following is MOST accurate regarding specific learning disorder with impairment in reading?",
+      "options": [
+        "It is diagnosed when IQ scores fall significantly below average",
+        "It represents approximately 80% of all specific learning disorder cases",
+        "ADHD is rarely comorbid with specific learning disorders",
+        "It is equally common in boys and girls and typically resolves by adolescence"
+      ],
+      "answer": "It represents approximately 80% of all specific learning disorder cases",
+      "explanation": "Approximately 80% of children with specific learning disorders have a reading disorder, making it by far the most common subtype. Option A is incorrect because people with specific learning disorders typically have average to above-average IQ; that discrepancy is part of what distinguishes learning disorders from intellectual disability. Option C is wrong because ADHD is actually the most common comorbid psychiatric disorder with specific learning disorders. Option D is misleading; while prevalence rates may be similar across genders in some studies, learning disorders tend to be chronic conditions that persist into adulthood rather than resolving by adolescence.",
+      "kn": "KN28",
+      "kn_explanation": "Reading deficiency in a child despite average intelligence suggests a specific learning disorder (e.g., dyslexia), which is a disorder that impacts the expected course of development over the lifespan.",
+      "difficulty": "medium",
+      "quality_comment": "Tests key epidemiological facts about reading disorders. The lesson covers prevalence and comorbidity well but long-term prognosis is",
+      "suggestedLesson": "6-prevention-and-consultation",
+      "suggestedParagraph": "### The Numbers",
+      "lessonExcerpt": "About 5-15% of school-age children have a specific learning disorder. Of these, approximately 80% have a reading disorder. The most common reading disorder is dyslexia, and the most common type of dys",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 14
     }
   ]
 }

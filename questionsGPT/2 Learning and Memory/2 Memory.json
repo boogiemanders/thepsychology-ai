@@ -187,27 +187,6 @@
       "inspirationIndex": 25
     },
     {
-      "stem": "Which statement best summarizes the ERG theory's expansion of Maslow's hierarchy of needs?",
-      "options": [
-        "It categorizes needs into existence, relatedness, and growth, allowing for more flexibility in need satisfaction.",
-        "It strictly follows the order of needs as proposed by Maslow, emphasizing the importance of fulfilling lower needs first.",
-        "It suggests that all needs must be satisfied simultaneously for optimal functioning.",
-        "It eliminates the concept of needs entirely, focusing instead on individual motivation."
-      ],
-      "answer": "It categorizes needs into existence, relatedness, and growth, allowing for more flexibility in need satisfaction.",
-      "explanation": "ERG theory, developed by Clayton Alderfer, condenses Maslow's five levels of needs into three categories: existence, relatedness, and growth, allowing for more flexibility in how needs can be satisfied. Option B incorrectly states that it follows Maslow's order strictly, while Option C misrepresents the theory's premise, and Option D is incorrect as ERG theory still focuses on needs.",
-      "kn": "KN9",
-      "kn_explanation": "This question is best aligned with KN9 because it tests Major research-based theories and models of motivation and their application.",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively tests knowledge of ERG theory and its differences from Maslow's hierarchy.",
-      "suggestedLesson": "2-memory",
-      "suggestedParagraph": "## Why Memory Matters for Psychologists",
-      "lessonExcerpt": "Understanding these systems helps you distinguish normal forgetting from pathological memory problems.",
-      "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 2
-    },
-    {
       "stem": "How does semantic similarity influence memory recall according to cognitive psychology?",
       "options": [
         "It enhances recall by creating stronger associations between similar concepts.",
@@ -229,27 +208,6 @@
       "inspirationIndex": 3
     },
     {
-      "stem": "In Maslow's hierarchy of needs, which of the following best describes deficiency needs?",
-      "options": [
-        "Needs that arise from a lack of something essential for survival and well-being.",
-        "Needs that are fulfilled through self-actualization and personal growth.",
-        "Needs that are secondary to the fulfillment of growth needs.",
-        "Needs that can be ignored without significant impact on overall functioning."
-      ],
-      "answer": "Needs that arise from a lack of something essential for survival and well-being.",
-      "explanation": "Deficiency needs in Maslow's hierarchy refer to basic needs that must be met for an individual to function effectively, such as physiological and safety needs. Option B incorrectly describes growth needs, while Option C misrepresents the hierarchy's structure, and Option D is incorrect as deficiency needs are critical for functioning.",
-      "kn": "KN9",
-      "kn_explanation": "This question is best aligned with KN9 because it tests Major research-based theories and models of motivation and their application.",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively tests knowledge of Maslow's theory.",
-      "suggestedLesson": "2-memory",
-      "suggestedParagraph": "## Why Memory Matters for Psychologists",
-      "lessonExcerpt": "Understanding these systems helps you distinguish normal forgetting from pathological memory problems.",
-      "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 4
-    },
-    {
       "stem": "What is the primary function of working memory in cognitive tasks?",
       "options": [
         "To store information permanently for later retrieval.",
@@ -269,27 +227,6 @@
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 7
-    },
-    {
-      "stem": "What phenomenon describes the creation of false memories due to confabulation?",
-      "options": [
-        "The process of recalling memories that are entirely fabricated.",
-        "The blending of real memories with imagined details.",
-        "The inability to remember past events accurately.",
-        "The enhancement of memory recall through suggestion."
-      ],
-      "answer": "The blending of real memories with imagined details.",
-      "explanation": "Confabulation involves the unintentional creation of false memories where real memories are mixed with fabricated details. Option A misrepresents the nature of confabulation, while Option C describes a different memory issue, and Option D refers to a different process of memory enhancement.",
-      "kn": "KN8",
-      "kn_explanation": "This question is best aligned with KN8 because it tests Major research-based theories and models of memory and their application.",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively tests knowledge of confabulation and its implications for memory.",
-      "suggestedLesson": "1-hindbrain-midbrain-forebrain",
-      "suggestedParagraph": "## Types of Long-Term Memory: Not All Memories Are Equal",
-      "lessonExcerpt": "They can't save new files (anterograde amnesia), some old files got corrupted (retrograde amnesia), and when they can't find a file, their system automatically generates a plausible substitute that they can't distinguish from real memories (confabulation).{{/M}} **EPPP tip:** Don't confuse this with Wernicke-Korsakoff syndrome, which includes Wernicke's encephalopathy (acute confusion, ataxia, eye movement problems) followed by Korsakoff syndrome.",
-      "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 8
     },
     {
       "stem": "Which of the following best describes prospective memory impairment?",
@@ -374,27 +311,6 @@
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 18
-    },
-    {
-      "stem": "What is a common psychological effect of a compressed work week on employee productivity?",
-      "options": [
-        "Increased stress levels leading to burnout.",
-        "Improved work-life balance and job satisfaction.",
-        "Decreased collaboration among team members.",
-        "Higher rates of absenteeism."
-      ],
-      "answer": "Improved work-life balance and job satisfaction.",
-      "explanation": "Research indicates that a compressed work week can enhance employees' work-life balance, leading to greater job satisfaction. The other options typically reflect negative outcomes rather than the benefits associated with this work arrangement.",
-      "kn": "KN8",
-      "kn_explanation": "This question is best aligned with KN8 because it tests Major research-based theories and models of memory and their application.",
-      "difficulty": "medium",
-      "quality_comment": "The question is relevant and tests knowledge of work psychology.",
-      "suggestedLesson": "2-memory",
-      "suggestedParagraph": "## Why Memory Matters for Psychologists",
-      "lessonExcerpt": "Memory span (also called primary memory): The basic storage capacity. How much you can hold",
-      "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 22
     },
     {
       "stem": "Which statement best reflects the relationship between hypnosis and memory recall accuracy?",
@@ -871,24 +787,6 @@
       "needsReview": false
     },
     {
-      "stem": "According to Bandura's social cognitive theory, which of the following is NOT one of the four mediational processes required for observational learning?",
-      "options": [
-        "Attention",
-        "Encoding",
-        "Retention",
-        "Motivation"
-      ],
-      "answer": "Encoding",
-      "explanation": "1. **Why \"Encoding\" is the Correct Answer**: \"Encoding\" is the correct answer because it is not one of the four mediational processes identified by Bandura in his social cognitive theory. The four processes are attention, retention, production, and motivation, which describe the steps necessary for observational learning to occur. Encoding, while related to memory processes, is not explicitly mentioned as a mediational process in Bandura's framework.\n\n2. **Why Each Incorrect Option is Wrong**:\n   - **Attention**: Attention is essential because the learner must notice and focus on the model's behavior for observational learning to take place.\n   - **Retention**: Retention refers to the learner's ability to store information about the model's behavior in memory, which is crucial for later imitation.\n   - **Motivation**: Motivation is necessary as it determines whether the learner is willing to perform the observed behavior, influenced by various forms of reinforcement.",
-      "kn": "KN7",
-      "kn_explanation": "This question addresses major theories of learning, specifically observational learning, covered in KN7.",
-      "difficulty": "medium",
-      "quality_comment": "The distractors include three correct mediational processes and one related but incorrect term, requiring precise knowledge of Bandura's theory.",
-      "lessonExcerpt": "Retrograde amnesia**: Can't remember things from before the injury. Recent memories disappear first, and when memories return, the oldest ones come back first.",
-      "suggestedLesson": "1-neurological-endocrine-disorders",
-      "needsReview": false
-    },
-    {
       "stem": "In the Deese-Roediger-McDermott (DRM) procedure, participants commonly demonstrate false memories by:",
       "options": [
         "Confusing words from different semantic lists",
@@ -1093,6 +991,123 @@
         "lock_in_drill"
       ],
       "lessonExcerpt": "Elaborative rehearsal works better. Connect new information to what you already know or create personally meaningful examples.",
+      "suggestedLesson": "2-memory",
+      "needsReview": false
+    },
+    {
+      "stem": "A practicum student watches a senior clinician skillfully redirect a client's catastrophic thinking using Socratic questioning during a live supervision session. Without ever having practiced the technique directly or receiving any feedback on their own performance, the student begins successfully using Socratic questioning in their own caseload the following week. Which theoretical framework best explains this acquisition, and who is its primary theorist?",
+      "options": [
+        "Operant conditioning; B.F. Skinner, because the student's behavior was shaped by the reinforcing descriptions of the technique's outcomes",
+        "Classical conditioning; Ivan Pavlov, because the student formed an association between the clinical setting and the modeled behavior",
+        "Observational learning; Albert Bandura, because the student acquired the behavior by attending to and retaining a model's performance without direct reinforcement",
+        "Insight learning; Wolfgang Köhler, because the student perceptually reorganized prior clinical experience into a novel solution"
+      ],
+      "answer": "Observational learning; Albert Bandura, because the student acquired the behavior by attending to and retaining a model's performance without direct reinforcement",
+      "explanation": "Bandura's social learning (social cognitive) theory proposes that new behaviors can be acquired vicariously through observation of a model, without requiring the observer to perform the behavior or receive direct reinforcement. The four subprocesses are attention (observing the model), retention (encoding what was observed), reproduction (executing the behavior), and motivation (having reason to perform it). The student attended to the senior clinician, retained the strategy, and later reproduced it — a textbook example of observational/vicarious learning. Skinner's operant conditioning requires direct contingencies acting on the learner's own behavior. Pavlov's classical conditioning involves pairing stimuli to elicit reflexive responses. Köhler's insight learning involves sudden perceptual reorganization of a problem environment, not modeled observation.",
+      "kn": "KN7",
+      "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
+      "difficulty": "medium",
+      "quality_comment": "Clinical training scenario is realistic and engaging. Content goes beyond current lesson material — valid EPPP topic, no lesson excerpt available.",
+      "suggestedLesson": "2-memory",
+      "suggestedParagraph": "## Understanding Operant Conditioning: The Psychology of Consequences",
+      "lessonExcerpt": "Bandura's bobo doll experiments showed children learn through observation without direct reinforcement. Observational learning requires four processes",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 24
+    },
+    {
+      "stem": "According to Bandura's social cognitive theory, which of the following is NOT one of the four mediational processes required for observational learning?",
+      "options": [
+        "Attention",
+        "Encoding",
+        "Retention",
+        "Motivation"
+      ],
+      "answer": "Encoding",
+      "explanation": "1. **Why \"Encoding\" is the Correct Answer**: \"Encoding\" is the correct answer because it is not one of the four mediational processes identified by Bandura in his social cognitive theory. The four processes are attention, retention, production, and motivation, which describe the steps necessary for observational learning to occur. Encoding, while related to memory processes, is not explicitly mentioned as a mediational process in Bandura's framework.\n\n2. **Why Each Incorrect Option is Wrong**:\n   - **Attention**: Attention is essential because the learner must notice and focus on the model's behavior for observational learning to take place.\n   - **Retention**: Retention refers to the learner's ability to store information about the model's behavior in memory, which is crucial for later imitation.\n   - **Motivation**: Motivation is necessary as it determines whether the learner is willing to perform the observed behavior, influenced by various forms of reinforcement.",
+      "kn": "KN7",
+      "kn_explanation": "This question addresses major theories of learning, specifically observational learning, covered in KN7.",
+      "difficulty": "medium",
+      "quality_comment": "The distractors include three correct mediational processes and one related but incorrect term, requiring precise knowledge of Bandura's theory.",
+      "lessonExcerpt": "Retrograde amnesia**: Can't remember things from before the injury. Recent memories disappear first, and when memories return, the oldest ones come back first.",
+      "suggestedLesson": "2-memory",
+      "needsReview": false
+    },
+    {
+      "stem": "What cognitive issue is commonly observed in elderly individuals related to memory retrieval?",
+      "options": [
+        "Increased speed of memory retrieval",
+        "Difficulty in recalling specific details",
+        "Enhanced memory for recent events",
+        "Improved working memory capacity"
+      ],
+      "answer": "Difficulty in recalling specific details",
+      "explanation": "Elderly individuals often experience difficulty in recalling specific details, which is a common cognitive issue associated with aging. The other options incorrectly suggest improvements or enhancements in memory.",
+      "kn": "KN23",
+      "kn_explanation": "This question is best aligned with KN23 because it tests Major research-based theories and models of development.",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests knowledge of cognitive aging.",
+      "suggestedLesson": "2-memory",
+      "suggestedParagraph": "## Adult Brain Changes: The Long Decline",
+      "lessonExcerpt": "Brain weight and volume start gradually decreasing around age 30 due to neuron loss.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 8
+    },
+    {
+      "stem": "Which of the following cognitive changes is most commonly associated with aging?",
+      "options": [
+        "Improved problem-solving skills",
+        "Increased processing speed",
+        "Decline in working memory",
+        "Enhanced verbal skills"
+      ],
+      "answer": "Decline in working memory",
+      "explanation": "A common cognitive change associated with aging is a decline in working memory, which affects the ability to hold and manipulate information. The other options incorrectly suggest improvements or enhancements.",
+      "kn": "KN23",
+      "kn_explanation": "This question is best aligned with KN23 because it tests Major research-based theories and models of development.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of cognitive changes with aging.",
+      "suggestedLesson": "2-memory",
+      "suggestedParagraph": "## Adult Brain Changes: The Long Decline",
+      "lessonExcerpt": "The frontal lobes (especially that prefrontal cortex) and parietal lobes show the greatest decrease in size.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 9
+    },
+    {
+      "stem": "Which of the following is TRUE regarding the Wechsler Memory Scale – Fourth Edition (WMS-IV)?",
+      "options": [
+        "It exclusively assesses long-term visual memory in individuals over 90 years old.",
+        "It provides separate index scales for auditory memory, visual memory, and visual working memory.",
+        "It is normed only for children and adolescents between 10 and 18 years of age.",
+        "It does not allow comparison of memory performance to general intellectual ability."
+      ],
+      "answer": "It provides separate index scales for auditory memory, visual memory, and visual working memory.",
+      "explanation": "1. The statement \"It provides separate index scales for auditory memory, visual memory, and visual working memory\" is correct because the Wechsler Memory Scale – Fourth Edition (WMS-IV) includes specific index scales that measure distinct aspects of memory. These index scales are the Auditory Memory Index (AMI), Visual Memory Index (VMI), and Visual Working Memory Index (VWMI), each assessing immediate and delayed recall for auditory and visual information, thereby offering a comprehensive evaluation of memory functions.\n\n2. The option \"It exclusively assesses long-term visual memory in individuals over 90 years old\" is incorrect because the WMS-IV is designed for individuals aged 16 to 90 years, and it evaluates both immediate and delayed memory rather than focusing solely on long-term visual memory. The statement \"It is normed only for children and adolescents between 10 and 18 years of age\" is false since the WMS-IV is normed for a broader age range, specifically from ages 16 to 90 years, including both adults and older adults. Lastly, the claim \"It does not allow comparison of memory performance to general intellectual ability\" is incorrect because the WMS-IV is co-normed with the WAIS-IV, allowing for comparisons between memory performance and general intellectual ability, particularly through the examination of subtest scores.",
+      "kn": "KN32",
+      "kn_explanation": "This question pertains to knowledge about specific assessment instruments and their constructs measured, a core part of clinical assessment (KN32).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors contain partially true and false statements enhancing discrimination; question promotes integration of test knowledge.",
+      "lessonExcerpt": "Four main index scales emerge from the primary subtests",
+      "suggestedLesson": "2-memory",
+      "needsReview": false
+    },
+    {
+      "stem": "Which test is best suited for assessing visual perception, visual memory, and visuoconstructive abilities through reproduction of geometric figures from memory in individuals aged 8 and older?",
+      "options": [
+        "Benton Visual Retention Test (BVRT)",
+        "Bender Visual-Motor Gestalt Test",
+        "Stroop Color and Word Test",
+        "Mini-Mental State Exam (MMSE)"
+      ],
+      "answer": "Benton Visual Retention Test (BVRT)",
+      "explanation": "1. The **Benton Visual Retention Test (BVRT)** is the correct answer because it specifically assesses visual perception, visual memory, and visuoconstructive skills by requiring individuals aged 8 and older to reproduce geometric figures from memory. The BVRT includes ten cards with geometric figures that the examinee must remember and accurately reproduce, making it ideal for evaluating these specific cognitive abilities.\n\n2. The **Bender Visual-Motor Gestalt Test** is incorrect because, while it also assesses visual-motor perception and integration, it focuses on copying and recalling geometric designs but is not exclusively aimed at visual perception and memory as the BVRT is. The **Stroop Color and Word Test** is not suitable because it primarily measures cognitive flexibility, selective attention, and response inhibition rather than visual perception or memory. Lastly, the **Mini-Mental State Exam (MMSE)** is inappropriate for this question as it is a screening tool for cognitive impairment that evaluates various cognitive domains, but it does not specifically target visual perception or memory skills like the BVRT does.",
+      "kn": "KN32",
+      "kn_explanation": "This tests knowledge of specific neuropsychological instruments and their appropriate uses in assessing visual memory and perception (KN32).",
+      "difficulty": "medium",
+      "quality_comment": "The question appropriately targets recognition of test purpose with distractors that assess different domains or ages.",
+      "lessonExcerpt": "**Benton Visual Retention Test, 5th Edition (BVRT)** serves a similar purpose for ages 8 and up, focusing on visual perception, visual memory, and visuo-constructive skills.",
       "suggestedLesson": "2-memory",
       "needsReview": false
     }

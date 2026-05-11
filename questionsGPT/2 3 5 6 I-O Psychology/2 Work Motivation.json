@@ -208,48 +208,6 @@
       "inspirationIndex": 22
     },
     {
-      "stem": "An industrial-organizational psychologist reviews exit interview data and employee satisfaction surveys from a large healthcare organization. She finds that units with the lowest mean job satisfaction scores show the highest rates of voluntary employee turnover. Which of the following best characterizes this statistical relationship?",
-      "options": [
-        "A positive correlation, indicating that higher satisfaction predicts greater likelihood of leaving",
-        "A negative correlation, indicating that lower satisfaction predicts greater likelihood of leaving",
-        "An absence of a reliable relationship, because turnover is primarily determined by external labor market conditions rather than internal satisfaction",
-        "A U-shaped curvilinear relationship, in which both very low and very high satisfaction predict elevated turnover rates"
-      ],
-      "answer": "A negative correlation, indicating that lower satisfaction predicts greater likelihood of leaving",
-      "explanation": "The established finding in I/O psychology is that job satisfaction and voluntary turnover are negatively correlated: as job satisfaction decreases, the probability of an employee voluntarily leaving the organization increases. This relationship is one of the most replicated findings in organizational behavior research. The positive correlation option reverses the established direction. While labor market conditions moderate the relationship, satisfaction remains a reliable independent predictor, contradicting the 'no relationship' option. A U-shaped relationship is not supported by the literature for this outcome.",
-      "kn": "KN8",
-      "kn_explanation": "This question is best aligned with KN8 because it tests Major research-based theories and models of memory and their application.",
-      "difficulty": "medium",
-      "quality_comment": "Conceptually clean question with a clear correct answer. Content goes beyond current lesson material — valid EPPP topic, no lesson excerpt available.",
-      "suggestedLesson": "2-3-work-satisfaction",
-      "suggestedParagraph": "## Job Satisfaction",
-      "lessonExcerpt": "**Absenteeism and turnover**: Satisfied employees are less likely to miss work or quit, but again, the relationships are moderate",
-      "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 2
-    },
-    {
-      "stem": "An industrial-organizational psychologist reviewing the empirical literature on job satisfaction reports to leadership that satisfaction is moderately correlated with job performance and is more strongly associated with turnover and absenteeism than with output quality. She cautions that the relationship with performance should not be interpreted as demonstrating that improving satisfaction will cause proportional performance gains. Her caution reflects which empirical and interpretive consideration?",
-      "options": [
-        "Satisfaction and performance are causally linked, so raising satisfaction reliably increases performance above baseline levels",
-        "The satisfaction-performance correlation is correlational, not necessarily causal, and tenure-related outcomes such as turnover show stronger associations than performance metrics",
-        "Job satisfaction is entirely determined by hygiene factors, making performance improvements dependent only on extrinsic working conditions",
-        "Satisfaction is orthogonal to performance because intrinsic motivation fully mediates any apparent relationship between the two variables"
-      ],
-      "answer": "The satisfaction-performance correlation is correlational, not necessarily causal, and tenure-related outcomes such as turnover show stronger associations than performance metrics",
-      "explanation": "The research literature consistently shows a modest positive correlation between job satisfaction and performance (meta-analytic estimates typically around r = .30), but the relationship is correlational and causality is difficult to establish. Satisfaction shows stronger and more consistent relationships with turnover intention, absenteeism, and organizational citizenship behaviors than with objective performance outputs. Option A overstates the causal and predictive power of satisfaction on performance. Option C incorrectly invokes Herzberg's hygiene factors as the exclusive determinant of satisfaction. Option D incorrectly claims orthogonality; the established modest positive correlation rules out a zero relationship.",
-      "kn": "KN9",
-      "kn_explanation": "This question is best aligned with KN9 because it tests Major research-based theories and models of motivation and their application.",
-      "difficulty": "hard",
-      "quality_comment": "Tests both substantive knowledge and methodological reasoning (correlation vs. causation); appropriate doctoral-level demand.",
-      "suggestedLesson": "2-3-work-satisfaction",
-      "suggestedParagraph": "## Job Satisfaction and Organizational Outcomes",
-      "lessonExcerpt": "**Job performance**: The correlation ranges from .17 to .30 depending on the study. Statistically significant but not enormous",
-      "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 15
-    },
-    {
       "stem": "According to Herzberg's two-factor theory, a hospital administrator notices that nursing staff frequently complain about inadequate pay, poor scheduling, and interpersonal conflicts with supervisors. She implements salary increases, adopts flexible scheduling, and offers conflict-resolution workshops. Several months later, complaints decrease but employee motivation and engagement remain unchanged. Herzberg would most likely explain this outcome by noting that:",
       "options": [
         "The salary and scheduling improvements constitute motivators that reduce dissatisfaction but cannot produce active motivation",
@@ -570,6 +528,174 @@
       "lessonExcerpt": "**Need for Achievement (nAch):** These individuals are motivated by success and accomplishment.",
       "suggestedLesson": "2-work-motivation",
       "needsReview": false
+    },
+    {
+      "stem": "According to Acquired Needs Theory, which of the following statements best describes the stability of work-related needs over time?",
+      "options": [
+        "Work-related needs are fixed and do not change throughout a person's career.",
+        "Work-related needs can evolve based on life experiences and personal growth.",
+        "Work-related needs are solely determined by external factors such as salary.",
+        "Work-related needs are only relevant during the initial stages of a career."
+      ],
+      "answer": "Work-related needs can evolve based on life experiences and personal growth.",
+      "explanation": "The correct answer reflects the idea that individuals' needs can change as they gain new experiences and insights over time. The other options suggest a static view of needs or limit their relevance, which does not align with the dynamic nature of human motivation.",
+      "kn": "KN7",
+      "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of a complex psychological theory.",
+      "suggestedLesson": "2-work-motivation",
+      "suggestedParagraph": "## Why Classical Conditioning Interventions Matter for Your Career",
+      "lessonExcerpt": "Theory #1: McClelland's Acquired Needs Theory David McClelland focused on psychological needs that develop through life experience rather than being hardwired from birth.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 21
+    },
+    {
+      "stem": "Expectancy in motivational theories primarily refers to which of the following?",
+      "options": [
+        "The belief that one can achieve a desired outcome.",
+        "The anticipation of negative consequences.",
+        "The expectation of external rewards.",
+        "The understanding of social norms."
+      ],
+      "answer": "The belief that one can achieve a desired outcome.",
+      "explanation": "Expectancy in motivational theories is about the belief in one's ability to achieve goals, which influences motivation. The other options do not accurately reflect the concept of expectancy.",
+      "kn": "KN10",
+      "kn_explanation": "This question is best aligned with KN10 because it tests Major research-based theories and models of emotion and their application.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of expectancy in motivation.",
+      "suggestedLesson": "2-work-motivation",
+      "suggestedParagraph": "## The Stress Response: From Perception to Action",
+      "lessonExcerpt": "Theory #6: Expectancy Theory (VIE Theory) Vroom's expectancy theory says motivation is a calculation based on three factors:",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 17
+    },
+    {
+      "stem": "A human resources consultant recommends two separate interventions to a manufacturing company. The first involves adding several assembly steps to each worker's role so that employees rotate through a broader set of tasks, all at the same complexity level. The second involves redesigning positions to include planning, quality inspection, and scheduling responsibilities that were previously handled exclusively by supervisors. Which statement correctly distinguishes job enlargement from job enrichment as illustrated in this scenario?",
+      "options": [
+        "Job enlargement incorporates higher-level managerial responsibilities; job enrichment increases the number of tasks at the worker's existing skill level",
+        "Job enlargement and job enrichment are functionally interchangeable strategies for reducing employee monotony through task variety",
+        "Job enlargement increases task variety horizontally by adding similar-level tasks; job enrichment adds vertical depth by incorporating greater autonomy and responsibility",
+        "Job enrichment expands the number of workers assigned to a role; job enlargement increases the total individual workload without changing task complexity"
+      ],
+      "answer": "Job enlargement increases task variety horizontally by adding similar-level tasks; job enrichment adds vertical depth by incorporating greater autonomy and responsibility",
+      "explanation": "Job enlargement refers to horizontal loading—adding more tasks at the same level of skill and complexity, increasing variety without increasing challenge, decision-making authority, or responsibility. Job enrichment, associated with Herzberg's motivation-hygiene theory, refers to vertical loading—adding higher-level responsibilities such as planning, self-inspection, and decision-making that were previously reserved for supervisors, thereby increasing the meaningfulness and motivating potential of the role. Option A reverses these definitions. Option B incorrectly treats the two as interchangeable. Option D confuses job enrichment with workforce staffing decisions.",
+      "kn": "KN42",
+      "kn_explanation": "This question is best aligned with KN42 because it tests Factors related to treatment or intervention decision-making (e.g., relevant research, matching treatment to assessment/diagnosis, matching client or patient with psychologist characteristics, knowledge and use of allied services, cost and benefit, readiness to change).",
+      "difficulty": "medium",
+      "quality_comment": "Clear scenario with well-differentiated distractors. This topic is not present in the provided lesson files; flagged for verification against the appropriate I/O psychology lesson.",
+      "suggestedLesson": "2-work-motivation",
+      "suggestedParagraph": "## Job Design",
+      "lessonExcerpt": "Misconception #2**: \"Job enlargement and job enrichment are the same thing.\" **Reality**: Enlargement adds more tasks at the same level (horizontal loading). Enrichment adds depth, meaning, and responsibility (vertical loading).",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 27
+    },
+    {
+      "stem": "Which statement best summarizes the ERG theory's expansion of Maslow's hierarchy of needs?",
+      "options": [
+        "It categorizes needs into existence, relatedness, and growth, allowing for more flexibility in need satisfaction.",
+        "It strictly follows the order of needs as proposed by Maslow, emphasizing the importance of fulfilling lower needs first.",
+        "It suggests that all needs must be satisfied simultaneously for optimal functioning.",
+        "It eliminates the concept of needs entirely, focusing instead on individual motivation."
+      ],
+      "answer": "It categorizes needs into existence, relatedness, and growth, allowing for more flexibility in need satisfaction.",
+      "explanation": "ERG theory, developed by Clayton Alderfer, condenses Maslow's five levels of needs into three categories: existence, relatedness, and growth, allowing for more flexibility in how needs can be satisfied. Option B incorrectly states that it follows Maslow's order strictly, while Option C misrepresents the theory's premise, and Option D is incorrect as ERG theory still focuses on needs.",
+      "kn": "KN9",
+      "kn_explanation": "This question is best aligned with KN9 because it tests Major research-based theories and models of motivation and their application.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests knowledge of ERG theory and its differences from Maslow's hierarchy.",
+      "suggestedLesson": "2-work-motivation",
+      "suggestedParagraph": "## Why Memory Matters for Psychologists",
+      "lessonExcerpt": "Understanding these systems helps you distinguish normal forgetting from pathological memory problems.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 2
+    },
+    {
+      "stem": "In Maslow's hierarchy of needs, which of the following best describes deficiency needs?",
+      "options": [
+        "Needs that arise from a lack of something essential for survival and well-being.",
+        "Needs that are fulfilled through self-actualization and personal growth.",
+        "Needs that are secondary to the fulfillment of growth needs.",
+        "Needs that can be ignored without significant impact on overall functioning."
+      ],
+      "answer": "Needs that arise from a lack of something essential for survival and well-being.",
+      "explanation": "Deficiency needs in Maslow's hierarchy refer to basic needs that must be met for an individual to function effectively, such as physiological and safety needs. Option B incorrectly describes growth needs, while Option C misrepresents the hierarchy's structure, and Option D is incorrect as deficiency needs are critical for functioning.",
+      "kn": "KN9",
+      "kn_explanation": "This question is best aligned with KN9 because it tests Major research-based theories and models of motivation and their application.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of Maslow's theory.",
+      "suggestedLesson": "2-work-motivation",
+      "suggestedParagraph": "## Why Memory Matters for Psychologists",
+      "lessonExcerpt": "Understanding these systems helps you distinguish normal forgetting from pathological memory problems.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 4
+    },
+    {
+      "stem": "According to Equity Theory, what prediction can be made about an individual's performance when they perceive inequity in their work environment?",
+      "options": [
+        "Their performance will likely improve as they strive to restore equity.",
+        "Their performance will likely decrease as they feel demotivated by perceived unfairness.",
+        "Their performance will remain unchanged regardless of perceived equity.",
+        "Their performance will be enhanced by increased competition."
+      ],
+      "answer": "Their performance will likely decrease as they feel demotivated by perceived unfairness.",
+      "explanation": "Equity Theory posits that perceived inequity leads to feelings of demotivation, which can result in decreased performance. Option A incorrectly suggests that performance improves, while Option C misrepresents the theory's implications, and Option D is unrelated to the concept of equity.",
+      "kn": "KN7",
+      "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of Equity Theory and its implications for performance.",
+      "suggestedLesson": "2-work-motivation",
+      "suggestedParagraph": "## Positive Reinforcement: Building New Behaviors",
+      "lessonExcerpt": "The smart approach to applying these interventions starts with a functional behavioral assessment (FBA).",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 6
+    },
+    {
+      "stem": "According to Herzberg's theory, which of the following factors is considered a hygiene factor in job motivation?",
+      "options": [
+        "Achievement",
+        "Recognition",
+        "Salary",
+        "Responsibility"
+      ],
+      "answer": "Salary",
+      "explanation": "The correct answer is C because salary is classified as a hygiene factor that can prevent dissatisfaction but does not necessarily motivate employees. Option A is incorrect as achievement is a motivator. Option B is incorrect because recognition is also a motivator. Option D is incorrect as responsibility is a motivator as well.",
+      "kn": "KN7",
+      "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests understanding of motivation theories.",
+      "suggestedLesson": "2-work-motivation",
+      "suggestedParagraph": "## Positive Reinforcement: Building New Behaviors",
+      "lessonExcerpt": "Variable Ratio (VR): Reinforcement comes after an unpredictable number of responses. This is the most powerful schedule. It produces the highest response rate and the greatest resistance to extinction.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 13
+    },
+    {
+      "stem": "What is the primary effect of job enrichment on workers according to motivation theories?",
+      "options": [
+        "Increases job dissatisfaction.",
+        "Decreases employee turnover.",
+        "Reduces the need for training.",
+        "Enhances intrinsic motivation."
+      ],
+      "answer": "Enhances intrinsic motivation.",
+      "explanation": "Job enrichment is designed to enhance intrinsic motivation by providing employees with more meaningful work, greater autonomy, and opportunities for personal growth. The other options do not accurately reflect the primary outcomes associated with job enrichment.",
+      "kn": "KN10",
+      "kn_explanation": "This question is best aligned with KN10 because it tests Major research-based theories and models of emotion and their application.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of job enrichment and its motivational impact.",
+      "suggestedLesson": "2-work-motivation",
+      "suggestedParagraph": "## Why Understanding Emotions and Stress Matters for Your EPPP Success",
+      "lessonExcerpt": "This fascinating prediction says: if you're externally rewarded for doing something you already enjoy intrinsically, your intrinsic motivation decreases. **Classic Study**: Children who enjoyed drawing with markers were either rewarded or not rewarded for drawing during a play period.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 4
     }
   ]
 }

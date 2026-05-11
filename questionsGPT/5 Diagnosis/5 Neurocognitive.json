@@ -1,27 +1,6 @@
 {
   "questions": [
     {
-      "stem": "A psychologist is conducting a neuropsychological evaluation of an HIV-positive client who presents with forgetfulness, difficulty concentrating, psychomotor slowing, and social withdrawal. These symptoms are most consistent with which pattern of neurocognitive impairment?",
-      "options": [
-        "Cortical neurocognitive disorder, characterized by aphasia, agnosia, and apraxia",
-        "Subcortical neurocognitive disorder, characterized by cognitive slowing, apathy, and motor problems",
-        "Cortico-subcortical neurocognitive disorder, characterized by variable symptoms depending on areas affected",
-        "Frontotemporal neurocognitive disorder, characterized by personality changes and disinhibition"
-      ],
-      "answer": "Subcortical neurocognitive disorder, characterized by cognitive slowing, apathy, and motor problems",
-      "explanation": "The lesson states that HIV-related NCD is 'Caused by HIV infection affecting the brain' and 'Shows subcortical symptoms: forgetfulness, poor attention, cognitive slowing, psychomotor slowing, apathy, social withdrawal, tremors, clumsiness.' The client's presentation matches this subcortical pattern exactly. Option A is incorrect because cortical NCDs (like Alzheimer's) feature aphasia, agnosia, and apraxia as primary symptoms. Option C describes cortico-subcortical patterns seen in vascular NCD or Lewy body disease. Option D describes frontotemporal NCD, which is a cortical disorder featuring personality changes as the earliest symptom.",
-      "kn": "KN42",
-      "kn_explanation": "Neuropsychological evaluation of an HIV-positive client with cognitive symptoms relates to matching treatment/intervention decisions to assessment and diagnosis findings, including consideration of medical comorbidities and special population factors.",
-      "difficulty": "medium",
-      "quality_comment": "Tests ability to identify subcortical vs. cortical NCD patterns in a specific medical population. Lesson coverage is adequate but brief.",
-      "suggestedLesson": "5-neurocognitive",
-      "suggestedParagraph": "### HIV-Related NCD",
-      "lessonExcerpt": "Caused by HIV infection affecting the brain. Shows subcortical symptoms: forgetfulness, poor attention, cognitive slowing, psychomotor slowing, apathy, social withdrawal, tremors, clumsiness.",
-      "needsReview": false,
-      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 4
-    },
-    {
       "stem": "Which of the following best characterizes the diagnostic criteria of delirium?",
       "options": [
         "A gradual onset of cognitive decline over months with no fluctuations and no attention disturbance",
@@ -240,24 +219,6 @@
       "difficulty": "medium",
       "quality_comment": "Options balance protective and risk factors well, requiring applied knowledge.",
       "lessonExcerpt": "Low educational attainment Obesity Hearing loss",
-      "needsReview": false
-    },
-    {
-      "stem": "Which theory or model is primarily concerned with how base rates and cognitive biases can affect the interpretation of neuropsychological test results?",
-      "options": [
-        "Dual process theory",
-        "Information processing model",
-        "Heuristics and biases framework",
-        "Cognitive load theory"
-      ],
-      "answer": "Heuristics and biases framework",
-      "explanation": "1. The \"Heuristics and biases framework\" is the correct answer because it specifically addresses how cognitive shortcuts (heuristics) and systematic errors (biases) can influence decision-making and interpretation of information, including neuropsychological test results. This framework highlights the potential for misinterpretation of data based on cognitive biases, which can lead to inaccurate conclusions about an individual's cognitive functioning.\n\n2. The \"Dual process theory\" is incorrect because it focuses on two distinct types of thinking—intuitive and analytical—rather than specifically addressing biases in interpreting test results. The \"Information processing model\" is also incorrect as it describes how information is encoded, processed, and retrieved, but does not specifically consider biases that affect interpretation. Finally, \"Cognitive load theory\" is wrong because it pertains to the limitations of working memory and how excessive cognitive load impacts learning and performance, rather than the biases affecting the interpretation of neuropsychological assessments.",
-      "kn": "KN37",
-      "kn_explanation": "KN37 covers evidence-based interpretation of data including base rates and biases, making this framework relevant to interpreting assessment results.",
-      "difficulty": "medium",
-      "quality_comment": "The options include other cognitive models but only the heuristics and biases framework specifically addresses judgment biases in assessment.",
-      "lessonExcerpt": "topic_name: Social Cognition – Errors, Biases, and Heuristics domain: 3: Social Psychology slug: social-cognition-errors-biases-and-heuristics generated_at: 2025-11-16T15:25:15.002Z model: claude-sonnet-4-5-20250929 version: 3 --- ## Why Your Brain Takes Shortcuts (And How That Shows Up on the EPPP)",
-      "suggestedLesson": "3-errors-and-shortcuts",
       "needsReview": false
     },
     {

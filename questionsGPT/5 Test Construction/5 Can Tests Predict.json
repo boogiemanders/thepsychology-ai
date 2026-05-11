@@ -244,24 +244,6 @@
       "needsReview": false
     },
     {
-      "stem": "Which of the following best describes the primary purpose of using Taylor-Russell tables in evaluating a new predictor test?",
-      "options": [
-        "Estimating the incremental validity by determining the increase in correct decisions due to the new predictor",
-        "Calculating the standard error of estimate for predicted criterion scores",
-        "Determining the test–retest reliability of the predictor",
-        "Assessing the internal consistency of the predictor test items"
-      ],
-      "answer": "Estimating the incremental validity by determining the increase in correct decisions due to the new predictor",
-      "explanation": "1. The correct answer, \"Estimating the incremental validity by determining the increase in correct decisions due to the new predictor,\" is accurate because Taylor-Russell tables are specifically designed to evaluate how much a new predictor contributes to the accuracy of predictions regarding criterion performance. By using these tables, one can assess the extent to which the new predictor improves the rate of correct hiring decisions compared to existing methods, thus quantifying its incremental validity.\n\n2. The option \"Calculating the standard error of estimate for predicted criterion scores\" is incorrect because the standard error of estimate is derived from the criterion-related validity coefficient, not directly related to the use of Taylor-Russell tables. The option \"Determining the test–retest reliability of the predictor\" is also wrong, as Taylor-Russell tables focus on evaluating predictive validity rather than reliability measures like test-retest. Finally, the option \"Assessing the internal consistency of the predictor test items\" is incorrect because internal consistency pertains to the reliability of test items, which is not the purpose of Taylor-Russell tables; they are not used for this type of analysis.",
-      "kn": "KN37",
-      "kn_explanation": "This question is best aligned with KN37 because it tests Factors influencing evidence-based interpretation of data and decision-making (e.g., base rates, group differences, cultural biases and differences, heuristics).",
-      "difficulty": "medium",
-      "quality_comment": "This question adds depth by addressing specific methods used to evaluate incremental validity, with distractors related to other psychometric concepts.",
-      "lessonExcerpt": "The Taylor-Russell tables let you estimate how much a new predictor will improve hiring success for different combinations of validity coefficients, selection ratios, and base rates.",
-      "suggestedLesson": "5-do-hiring-tools-work",
-      "needsReview": false
-    },
-    {
       "stem": "When constructing confidence intervals around predicted criterion scores, which of the following increases the width of the interval?",
       "options": [
         "Decreased criterion-related validity coefficient",
@@ -339,6 +321,174 @@
       "tags": [
         "lock_in_drill"
       ]
+    },
+    {
+      "stem": "What does the Kappa coefficient measure in psychological assessments?",
+      "options": [
+        "A. The internal consistency of a test",
+        "B. The agreement between two raters",
+        "C. The validity of a test",
+        "D. The reliability of test scores over time"
+      ],
+      "answer": "B. The agreement between two raters",
+      "explanation": "Option B is correct because the Kappa coefficient specifically measures the level of agreement between two raters or observers. Options A, C, and D refer to different aspects of test evaluation.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
+      "difficulty": "medium",
+      "quality_comment": "The question clearly assesses knowledge of interrater reliability.",
+      "suggestedLesson": "5-can-tests-predict",
+      "suggestedParagraph": "## Individual Tests: Matching the Right Tool to the Right Person",
+      "lessonExcerpt": "**Cohen's Kappa:** A more sophisticated measure that corrects for chance agreement.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 6
+    },
+    {
+      "stem": "A researcher validates two cognitive screening tests against the same criterion (clinician-rated functional impairment, SD = 12). Test A has a validity coefficient of .80 and a standard error of estimate of 7.2. Test B has a validity coefficient of .00 and a standard error of estimate of 12.0. Which of the following best explains the difference in these standard errors of estimate?",
+      "options": [
+        "Test A's higher reliability reduces unsystematic error, which lowers the standard error of estimate independently of validity",
+        "The standard error of estimate equals the criterion SD when validity is zero and decreases toward zero as validity approaches 1.0, reflecting the amount of criterion variance left unexplained",
+        "Test B's standard error of estimate is inflated because of restriction of range in the criterion variable",
+        "The standard error of estimate is equivalent to one minus the validity coefficient multiplied by the criterion SD"
+      ],
+      "answer": "The standard error of estimate equals the criterion SD when validity is zero and decreases toward zero as validity approaches 1.0, reflecting the amount of criterion variance left unexplained",
+      "explanation": "The standard error of estimate (SEest = SDy × √[1 – r²]) quantifies the average prediction error around the regression line. When the validity coefficient r = .00, SEest = SDy × √(1 – 0) = SDy = 12, confirming that the test predicts no better than the criterion mean—the entire criterion SD represents residual error. As r approaches 1.0, SEest approaches zero because essentially all criterion variance is explained. Test A's validity of .80 yields SEest = 12 × √(1 – .64) ≈ 12 × .60 = 7.2, matching the reported value. Reliability affects validity (through attenuation) but is not the direct cause of SEest differences when validity is the variable under examination. Restriction of range would attenuate both coefficients equally and is not described here. Subtracting r from 1 and multiplying by SDy (option D) conflates SEest with the formula for mean absolute error and yields incorrect values.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
+      "difficulty": "hard",
+      "quality_comment": "Quantitative vignette requiring formula derivation and conceptual understanding; distractors target common computational errors.",
+      "suggestedLesson": "5-can-tests-predict",
+      "suggestedParagraph": "## Standard Error of Estimate",
+      "lessonExcerpt": "The standard error ranges from 0 (when r = +/-1.0, perfect prediction, no error) to the full standard deviation of the criterion (when r = 0, no relationship, maximum error).",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 5
+    },
+    {
+      "stem": "A psychologist is explaining the properties of the standard error of measurement (SEM) to an intern. She notes that regardless of the test being used, the SEM always falls within a predictable range relative to the test's standard deviation (SD). Which of the following most accurately describes the boundaries of this range?",
+      "options": [
+        "The SEM always equals the SD, because both reflect total score variability",
+        "The SEM ranges from zero to a value equal to the full SD of the test",
+        "The SEM can exceed the SD when reliability falls below 0.50",
+        "The SEM is fixed at exactly one-half of the SD for any well-constructed test"
+      ],
+      "answer": "The SEM ranges from zero to a value equal to the full SD of the test",
+      "explanation": "The SEM is calculated as SEM = SD × √(1 − rxx). When reliability (rxx) equals 1.0 (perfect reliability), SEM = SD × √0 = 0. When reliability equals 0.0 (completely unreliable), SEM = SD × √1 = SD. Therefore, the SEM can range from a minimum of zero to a maximum equal to the full SD, never exceeding it. Option A is incorrect because SEM equals SD only at zero reliability, not universally. Option C is incorrect because the SEM can never mathematically exceed the SD regardless of how low reliability falls. Option D is incorrect because the SEM is not fixed at half the SD; its value depends entirely on the test's specific reliability coefficient.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
+      "difficulty": "medium",
+      "quality_comment": "Clean conceptual question with plausible numerical distractors; effectively tests understanding of the SEM formula's boundary conditions rather than rote formula recall.",
+      "suggestedLesson": "5-can-tests-predict",
+      "suggestedParagraph": "## Standard Error of Measurement",
+      "lessonExcerpt": "Predictive values** change with prevalence; they're not stable test properties - **Reliability sets the ceiling** for validity; maximum validity equals the square root of reliability Understanding criterion-related validity helps you choose appropriate tests, interpret scores with appropriate humility, set reasonable expectations, and explain both the power and limitations of psychological assessment to clients, colleagues, and courts.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 11
+    },
+    {
+      "stem": "What is criterion contamination in the context of psychological assessments?",
+      "options": [
+        "When the predictor measure influences the criterion measure.",
+        "When the assessment tool is not reliable.",
+        "When the test results are misinterpreted.",
+        "When the assessment lacks validity."
+      ],
+      "answer": "When the predictor measure influences the criterion measure.",
+      "explanation": "Criterion contamination occurs when the predictor measure (like a test score) influences the criterion measure (like job performance), leading to biased results. The other options describe different issues related to assessment but do not define criterion contamination.",
+      "kn": "KN30",
+      "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests understanding of a specific concept in assessment validity.",
+      "suggestedLesson": "5-can-tests-predict",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "**Criterion contamination** occurs when the measure is influenced by factors unrelated to actual job performance.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 14
+    },
+    {
+      "stem": "What is a key diagnostic criterion for narcolepsy related to cataplexy?",
+      "options": [
+        "The presence of excessive daytime sleepiness.",
+        "The occurrence of sudden muscle weakness triggered by strong emotions.",
+        "The ability to stay awake during the day.",
+        "The absence of REM sleep."
+      ],
+      "answer": "The occurrence of sudden muscle weakness triggered by strong emotions.",
+      "explanation": "Cataplexy is characterized by sudden muscle weakness or paralysis triggered by strong emotions, which is a key diagnostic criterion for narcolepsy. The other options do not accurately describe cataplexy.",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
+      "difficulty": "hard",
+      "quality_comment": "The question accurately assesses knowledge of cataplexy as a diagnostic criterion for narcolepsy.",
+      "suggestedLesson": "5-can-tests-predict",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "Episodes of cataplexy (loss of muscle tone)",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 26
+    },
+    {
+      "stem": "What is the estimated prevalence of ADHD among children in the United States?",
+      "options": [
+        "A. 1-3%",
+        "B. 5-10%",
+        "C. 10-15%",
+        "D. 20-25%"
+      ],
+      "answer": "B. 5-10%",
+      "explanation": "Option B is correct as studies estimate that the prevalence of ADHD among children in the United States falls within the 5-10% range. Options A, C, and D are incorrect as they underestimate or overestimate the prevalence.",
+      "kn": "KN30",
+      "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of ADHD prevalence.",
+      "suggestedLesson": "5-can-tests-predict",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "These were developed through **empirical criterion keying**, which is a fancy way of saying the test creators gave hundreds of questions to people with specific diagnoses and people without mental health issues, then kept only the questions that reliably told the groups apart.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 9
+    },
+    {
+      "stem": "Which of the following is NOT a criterion for diagnosing autism spectrum disorder (ASD)?",
+      "options": [
+        "Persistent deficits in social communication and interaction.",
+        "Restricted, repetitive patterns of behavior, interests, or activities.",
+        "Significant impairment in cognitive functioning.",
+        "Symptoms must be present in early developmental periods."
+      ],
+      "answer": "Significant impairment in cognitive functioning.",
+      "explanation": "While cognitive functioning can be affected in individuals with ASD, it is not a required criterion for diagnosis. The other options are all essential criteria for diagnosing ASD.",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively distinguishes between diagnostic criteria and related concepts.",
+      "suggestedLesson": "5-can-tests-predict",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "Criteria for diagnosing autism spectrum disorder include persistent deficits in social communication and interaction, and restricted, repetitive patterns of behavior.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 23
+    },
+    {
+      "stem": "How does the standard error of estimate relate to the validity of a psychological test?",
+      "options": [
+        "A. A higher standard error indicates greater validity.",
+        "B. A lower standard error suggests less reliability.",
+        "C. A lower standard error enhances the test's predictive validity.",
+        "D. The standard error is unrelated to validity."
+      ],
+      "answer": "C. A lower standard error enhances the test's predictive validity.",
+      "explanation": "Option C is correct because a lower standard error of estimate indicates that the predictions made by the test are more accurate, thus enhancing its predictive validity. Options A and B are incorrect as they misinterpret the relationship, and D is false as the standard error is indeed related to validity.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests understanding of validity and standard error.",
+      "suggestedLesson": "5-can-tests-predict",
+      "suggestedParagraph": "## Individual Tests: Matching the Right Tool to the Right Person",
+      "lessonExcerpt": "| Perceptual Reasoning (PRI) | Block Design, Matrix Reasoning, Visual Puzzles | Nonverbal reasoning, spatial processing |",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 5
     }
   ]
 }

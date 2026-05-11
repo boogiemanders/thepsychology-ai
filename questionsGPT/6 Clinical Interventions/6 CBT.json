@@ -61,27 +61,6 @@
       "inspirationDomain": "TREATMENT/INTERVENTION"
     },
     {
-      "stem": "A psychologist is treating a client diagnosed with obsessive-compulsive disorder who engages in extensive hand-washing rituals triggered by contamination fears. The psychologist plans to use the most well-supported behavioral intervention for this condition. Which technique should the psychologist implement?",
-      "options": [
-        "Systematic desensitization with progressive muscle relaxation",
-        "Exposure with response prevention using prolonged in vivo contact with contaminants",
-        "Covert sensitization pairing contamination imagery with relaxation",
-        "Implosive therapy incorporating psychodynamic themes of contamination"
-      ],
-      "answer": "Exposure with response prevention using prolonged in vivo contact with contaminants",
-      "explanation": "Exposure with response prevention (ERP) is the evidence-based behavioral treatment for OCD and anxiety disorders. The technique involves exposing the client to feared stimuli (contaminants) while preventing the usual avoidance or ritualistic response (hand-washing), allowing extinction of the conditioned fear response. Systematic desensitization (A) uses counterconditioning with relaxation and is primarily indicated for phobias, not OCD rituals. Covert sensitization (C) is used to reduce unwanted approach behaviors (e.g., addictions), not anxiety-based avoidance. Implosive therapy (D) adds psychodynamic elements to imaginal flooding and is less commonly used; it is not the standard treatment for OCD.",
-      "kn": "KN44",
-      "kn_explanation": "ERP is a specific treatment technique for OCD with strong evidence base",
-      "difficulty": "medium",
-      "quality_comment": "Well-grounded in lesson content with clear distractor rationale. Tests applied knowledge of intervention selection.",
-      "suggestedLesson": "6-cbt",
-      "suggestedParagraph": "## The Foundation: What Makes These Interventions Work",
-      "lessonExcerpt": "Exposure with Response Prevention... is your workhorse intervention for anxiety disorders. The name tells you exactly what happens: you expose the client to what they fear while preventing their usual escape or avoidance response.",
-      "needsReview": false,
-      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 1
-    },
-    {
       "stem": "Masters and Johnson's sensate focus technique for treating sexual dysfunctions is best understood as an application of which behavioral learning principle?",
       "options": [
         "Operant extinction through removal of reinforcement for avoidance",
@@ -101,48 +80,6 @@
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
       "inspirationIndex": 2
-    },
-    {
-      "stem": "A client with alcohol use disorder reports experiencing intense cravings whenever he drives past the bar where he used to drink regularly. From a behavioral perspective, this craving response is BEST explained by:",
-      "options": [
-        "Operant conditioning, in which the bar serves as a positive discriminative stimulus signaling reinforcement availability",
-        "Classical conditioning, in which the bar has become a conditioned stimulus eliciting a conditioned craving response",
-        "Negative reinforcement, in which drinking at the bar previously removed withdrawal symptoms",
-        "Both classical conditioning creating the cue-triggered craving and operant conditioning maintaining drinking through positive reinforcement"
-      ],
-      "answer": "Both classical conditioning creating the cue-triggered craving and operant conditioning maintaining drinking through positive reinforcement",
-      "explanation": "Addictive behaviors are maintained through the interplay of both classical and operant conditioning. Through classical conditioning, environmental cues (the bar) become conditioned stimuli that elicit conditioned craving responses. Through operant conditioning, the drinking behavior is maintained by positive reinforcement (pleasurable effects of alcohol) and negative reinforcement (removal of withdrawal symptoms or stress). The lesson on cue exposure therapy explains: 'With addiction, certain cues become powerfully associated with use... These become conditioned stimuli that trigger cravings and use.' Meanwhile, operant principles explain why the behavior persists. Option A captures only the operant component; Option B captures only the classical component; Option C is partially correct but incomplete, addressing only one type of reinforcement.",
-      "kn": "KN44",
-      "kn_explanation": "Behavioral conceptualization of cravings informing treatment intervention",
-      "difficulty": "hard",
-      "quality_comment": "Tests integration of two learning paradigms in addiction—a common EPPP application question format.",
-      "suggestedLesson": "6-cbt",
-      "suggestedParagraph": "### Cue Exposure Therapy",
-      "lessonExcerpt": "With addiction, certain cues become powerfully associated with use. The smell of cigarette smoke in a bar, the sight of friends you used to drink with, even the specific route home that passes your dealer's corner. These become conditioned stimuli that trigger cravings and use.",
-      "needsReview": false,
-      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 3
-    },
-    {
-      "stem": "A client developed a conditioned fear of elevators after being trapped in one during a power outage. To extinguish this classically conditioned fear response, the therapist should:",
-      "options": [
-        "Pair elevator exposure with an aversive stimulus to create a competing response",
-        "Repeatedly present the conditioned stimulus (elevator) without the unconditioned stimulus (being trapped)",
-        "Reinforce the client each time they successfully avoid elevators",
-        "Have the client practice relaxation while imagining elevators, progressing through a fear hierarchy"
-      ],
-      "answer": "Repeatedly present the conditioned stimulus (elevator) without the unconditioned stimulus (being trapped)",
-      "explanation": "Classical extinction occurs when the conditioned stimulus (CS) is repeatedly presented without the unconditioned stimulus (US), breaking the learned association. The lesson states: 'Extinction means breaking the connection between a trigger (conditioned stimulus) and the unwanted response... the trigger no longer leads to the old reaction because you've interrupted that pathway enough times.' Option A describes aversion therapy, which creates new aversive associations rather than extinguishing existing ones. Option C reinforces avoidance, which would maintain the fear through negative reinforcement. Option D describes systematic desensitization, which Wolpe conceptualized as counterconditioning (not extinction), though research suggests its effectiveness may actually work through extinction.",
-      "kn": "KN44",
-      "kn_explanation": "Extinction of conditioned fear is a treatment technique (exposure-based)",
-      "difficulty": "easy",
-      "quality_comment": "Foundational question clearly supported by lesson content. Good distractors that test related but distinct concepts.",
-      "suggestedLesson": "6-cbt",
-      "suggestedParagraph": "## Extinction-Based Interventions: Breaking Old Connections",
-      "lessonExcerpt": "Extinction means breaking the connection between a trigger (conditioned stimulus) and the unwanted response... the trigger no longer leads to the old reaction because you've interrupted that pathway enough times.",
-      "needsReview": false,
-      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 7
     },
     {
       "stem": "In Beck's cognitive therapy model, the primary therapeutic focus is on identifying and modifying:",
@@ -271,48 +208,6 @@
       "inspirationIndex": 2
     },
     {
-      "stem": "A behavioral analyst is training a child with autism to use a new functional communication device to request preferred items. To maximize the rate at which this new behavior is acquired during initial training, which schedule of reinforcement should be implemented?",
-      "options": [
-        "Variable-ratio schedule, because it produces the highest sustained response rates and greatest resistance to extinction",
-        "Fixed-ratio schedule, because the predictable contingency clearly signals the response requirement",
-        "Continuous reinforcement, because reinforcing every correct response produces the fastest initial acquisition",
-        "Fixed-interval schedule, because timed delivery allows the trainer to manage reinforcer satiation"
-      ],
-      "answer": "Continuous reinforcement, because reinforcing every correct response produces the fastest initial acquisition",
-      "explanation": "Continuous reinforcement (CRF), in which every correct response is reinforced, is optimal during initial acquisition because the perfect contingency between behavior and consequence makes the response-reinforcement relationship maximally clear and learnable. Although variable-ratio schedules produce the highest response rates and greatest extinction resistance in established behaviors, the unpredictability of reinforcement delivery during acquisition makes it harder for the learner to detect the critical behavioral contingency. Fixed-ratio schedules produce high rates but include post-reinforcement pauses and are better suited once a behavior is established. Fixed-interval schedules produce the lowest overall response rates with a characteristic scallop pattern and are inappropriate for acquisition training.",
-      "kn": "KN44",
-      "kn_explanation": "This question is best aligned with KN44 because it tests Treatment techniques and interventions, and the evidence for their comparative efficacy and effectiveness.",
-      "difficulty": "medium",
-      "quality_comment": "Requires discriminating between acquisition-phase and maintenance-phase reinforcement considerations; lesson",
-      "suggestedLesson": "6-cbt",
-      "suggestedParagraph": "## Beck's Cognitive Therapy: The Foundation",
-      "lessonExcerpt": "CBT uses both cognitive techniques (like reframing thoughts and examining evidence) and behavioral techniques (like activity scheduling, exposure therapy, and behavioral rehearsal).",
-      "needsReview": false,
-      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 6
-    },
-    {
-      "stem": "A client successfully completed exposure-based therapy for dog phobia two years ago, reporting no fear during her final session. She encounters a dog unexpectedly at a park and experiences a strong fear response. Her therapist explains this is a predictable phenomenon rooted in classical conditioning principles. Which mechanism best explains what has occurred?",
-      "options": [
-        "Stimulus generalization, in which the fear response has transferred from the original conditioned stimulus to a novel but similar stimulus",
-        "Spontaneous recovery, in which the previously extinguished conditioned response has returned following a rest period without extinction trials",
-        "Higher-order conditioning, in which new stimuli previously associated with the conditioned stimulus have acquired conditioned fear properties",
-        "Disinhibition, in which a novel extraneous stimulus encountered at the park disrupted the inhibitory process maintaining extinction"
-      ],
-      "answer": "Spontaneous recovery, in which the previously extinguished conditioned response has returned following a rest period without extinction trials",
-      "explanation": "Spontaneous recovery is the reappearance of an extinguished conditioned response after a rest interval without additional conditioning or extinction trials. This phenomenon reveals that extinction does not permanently erase the original learning but instead creates new inhibitory learning that competes with the original excitatory conditioned response. Over time, the inhibitory memory fades relative to the original conditioning, allowing the CR to re-emerge. Stimulus generalization involves fear spreading to novel stimuli resembling the CS, not the return of fear to the original CS. Higher-order conditioning involves a CS becoming a UCS for other neutral stimuli, which is a different mechanism. Disinhibition occurs when an extraneous novel stimulus disrupts ongoing extinction during a session, not a return of fear after a two-year gap.",
-      "kn": "KN43",
-      "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
-      "difficulty": "hard",
-      "quality_comment": "Clinically relevant scenario connecting conditioning principles to treatment durability; requires precise discrimination between similar conditioning phenomena. Lesson",
-      "suggestedLesson": "6-cbt",
-      "suggestedParagraph": "## Beck's Cognitive Therapy: The Foundation",
-      "lessonExcerpt": "CBT uses both cognitive techniques (like reframing thoughts and examining evidence) and behavioral techniques (like activity scheduling, exposure therapy, and behavioral rehearsal).",
-      "needsReview": false,
-      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 7
-    },
-    {
       "stem": "During a cognitive therapy session, a client who recently received mostly positive performance feedback at work states, 'My supervisor included one critical comment in my evaluation, which proves I'm completely incompetent.' According to Beck's model, this statement most clearly illustrates which cognitive distortion?",
       "options": [
         "Arbitrary inference, drawing a negative conclusion about one's competence without sufficient supporting evidence",
@@ -353,27 +248,6 @@
       "needsReview": false,
       "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
       "inspirationIndex": 9
-    },
-    {
-      "stem": "A sex therapist applies aversive counterconditioning to treat a client whose shoe fetish is causing marked personal distress. The therapist repeatedly and systematically pairs visual presentations of the fetish object with a highly aversive stimulus to extinguish the problematic arousal response. In classical conditioning terminology, the fetish object in this procedure is correctly identified as the:",
-      "options": [
-        "Unconditioned stimulus, because it automatically and reflexively elicits sexual arousal independent of any prior learning history",
-        "Conditioned stimulus, because it has acquired its capacity to elicit sexual arousal through prior associative learning experiences",
-        "Unconditioned response, because sexual arousal in the presence of the fetish object is a biologically hardwired reflexive reaction",
-        "Conditioned response, because the pattern of arousal to non-sexual objects developed through a history of conditioning experiences"
-      ],
-      "answer": "Conditioned stimulus, because it has acquired its capacity to elicit sexual arousal through prior associative learning experiences",
-      "explanation": "In the classical conditioning account of paraphilias such as fetishism, a neutral object (e.g., a shoe) acquires sexually arousing properties through repeated pairing with sexual arousal early in the individual's conditioning history. The fetish object thus functions as a conditioned stimulus (CS) that reliably elicits sexual arousal (the conditioned response, CR). In aversive counterconditioning, the CS (fetish object) is paired with an aversive unconditioned stimulus (UCS)—such as chemically induced nausea or aversive imagery—to extinguish or counter-condition the CR. Option A is incorrect because the fetish object does not innately and automatically elicit arousal without prior associative learning. Options C and D confuse stimuli with responses within the classical conditioning framework: arousal to the fetish is the conditioned response, not the object itself.",
-      "kn": "KN44",
-      "kn_explanation": "This question is best aligned with KN44 because it tests Treatment techniques and interventions, and the evidence for their comparative efficacy and effectiveness.",
-      "difficulty": "hard",
-      "quality_comment": "Technically precise question requiring accurate application of classical conditioning terminology. The role of the CS in aversive counterconditioning for paraphilias is. Content goes beyond current lesson material — valid EPPP topic, no lesson excerpt available.",
-      "suggestedLesson": "2-pavlov-and-classical-conditioning",
-      "suggestedParagraph": "## Aversive Counterconditioning",
-      "lessonExcerpt": "Unconditioned Stimulus (US)**: This is something that naturally, automatically triggers a response without any learning required. In Pavlov's studies, meat powder was the US.",
-      "needsReview": false,
-      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 30
     },
     {
       "stem": "A psychologist is treating a client with obsessive-compulsive disorder who engages in elaborate hand-washing rituals after touching doorknobs. Which treatment approach has the strongest evidence base for this condition, and what is its primary mechanism of action?",
@@ -639,6 +513,50 @@
       "lessonExcerpt": "Someone with social anxiety might have schemas centered on being judged or humiliated, while someone with panic disorder might have schemas about physical sensations being dangerous.",
       "suggestedLesson": "6-cbt",
       "needsReview": false
+    },
+    {
+      "stem": "What is the main focus of Cognitive Behavioral Therapy (CBT) in treating anxiety disorders?",
+      "options": [
+        "Enhancing emotional insight",
+        "Reducing anxiety symptoms through cognitive restructuring",
+        "Exploring childhood experiences",
+        "Promoting self-actualization"
+      ],
+      "answer": "Reducing anxiety symptoms through cognitive restructuring",
+      "explanation": "1. The correct answer, \"Reducing anxiety symptoms through cognitive restructuring,\" aligns with the principles of Cognitive Behavioral Therapy (CBT), which focuses on identifying and changing negative thought patterns that contribute to anxiety. CBT aims to alleviate anxiety symptoms by helping clients reframe their thoughts and beliefs, thus reducing their emotional distress and improving their coping strategies.\n\n2. The option \"Enhancing emotional insight\" is incorrect because it primarily relates to therapies that emphasize understanding and processing emotions, rather than the cognitive restructuring focus of CBT. \"Exploring childhood experiences\" is wrong as it pertains more to psychodynamic approaches that delve into past experiences to understand current behavior, which is not a primary goal of CBT. Lastly, \"Promoting self-actualization\" is not applicable here, as it is more relevant to humanistic approaches that emphasize personal growth and fulfillment, rather than the symptom-focused approach of CBT in treating anxiety.",
+      "difficulty": "easy",
+      "kn": "KN44",
+      "kn_explanation": "This question assesses knowledge of treatment goals and therapeutic interventions, which falls under treatment techniques and their effectiveness (KN44).",
+      "quality_comment": "This question effectively tests knowledge of a specific therapy's goal, similar to the IPT focus.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "easier",
+      "tags": [
+        "lock_in_drill"
+      ],
+      "lessonExcerpt": "CBT uses both cognitive techniques (like reframing thoughts and examining evidence) and behavioral techniques (like activity scheduling, exposure therapy, and behavioral rehearsal).",
+      "suggestedLesson": "6-cbt",
+      "needsReview": false
+    },
+    {
+      "stem": "Which of the following best describes self-mutilation as a coping mechanism in trauma survivors?",
+      "options": [
+        "A form of self-expression that enhances emotional regulation.",
+        "A maladaptive behavior used to cope with overwhelming emotional pain.",
+        "A culturally accepted practice for managing stress.",
+        "A therapeutic technique recommended for trauma recovery."
+      ],
+      "answer": "A maladaptive behavior used to cope with overwhelming emotional pain.",
+      "explanation": "Self-mutilation is often a maladaptive behavior that trauma survivors may use to cope with intense emotional distress, rather than a healthy or therapeutic practice. The other options either mischaracterize self-mutilation or suggest it is beneficial, which is not supported by the literature.",
+      "kn": "KN30",
+      "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of a complex psychological concept.",
+      "suggestedLesson": "6-cbt",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "One of the most elegant ways to assess construct validity is the multitrait-multimethod matrix, developed by Campbell and Fiske.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 21
     }
   ]
 }

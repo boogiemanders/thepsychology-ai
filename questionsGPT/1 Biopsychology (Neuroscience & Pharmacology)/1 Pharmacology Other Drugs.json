@@ -127,27 +127,6 @@
       "inspirationIndex": 13
     },
     {
-      "stem": "During a neuropsychological evaluation, a psychologist reviews medical records noting that a patient experienced both tachycardia and bradycardia during stimulant intoxication. These terms refer, respectively, to:",
-      "options": [
-        "Rapid breathing and slow breathing",
-        "Rapid heart rate and slowed heart rate",
-        "Elevated blood pressure and decreased blood pressure",
-        "Excessive sweating and absence of sweating"
-      ],
-      "answer": "Rapid heart rate and slowed heart rate",
-      "explanation": "Tachycardia refers to rapid (abnormally fast) heart rate, and bradycardia refers to slowed (abnormally slow) heart rate. Both can occur during stimulant intoxication. Rapid and slow breathing (A) would be tachypnea and bradypnea. Elevated and decreased blood pressure (C) would be hypertension and hypotension. Excessive and absent sweating (D) would be hyperhidrosis and anhidrosis.",
-      "kn": "KN2",
-      "kn_explanation": "This question is best aligned with KN2 because it tests Drug classification, mechanisms of action, and desired/adverse effects of therapeutic agents, drugs of abuse, and complementary or alternative agents.",
-      "difficulty": "easy",
-      "quality_comment": "Straightforward terminology question. Lesson content mentions these terms in the context of stimulant intoxication but does not provide detailed definitions in the primary lesson files.",
-      "suggestedLesson": "1-hindbrain-midbrain-forebrain",
-      "suggestedParagraph": "## Narcotic-Analgesics (Opioids): Pain Relief and Public Health Crisis",
-      "lessonExcerpt": "The medulla (also called medulla oblongata) handles the functions you literally cannot live without: breathing, heart rate, and blood pressure. It also manages involuntary mouth and throat movements for swallowing, coughing, and sneezing.",
-      "needsReview": false,
-      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 16
-    },
-    {
       "stem": "What is the phenomenon called when tolerance to one substance leads to a reduced response to another, chemically similar substance?",
       "options": [
         "Cross-tolerance",
@@ -251,27 +230,6 @@
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 14
-    },
-    {
-      "stem": "What is a common treatment approach for premature ejaculation?",
-      "options": [
-        "Cognitive-behavioral therapy",
-        "Selective serotonin reuptake inhibitors (SSRIs)",
-        "Surgical intervention",
-        "Hormone therapy"
-      ],
-      "answer": "Selective serotonin reuptake inhibitors (SSRIs)",
-      "explanation": "SSRIs are commonly used to treat premature ejaculation due to their side effect of delaying orgasm. The other options are not standard treatments for this condition.",
-      "kn": "KN2",
-      "kn_explanation": "This question is best aligned with KN2 because it tests Drug classification, mechanisms of action, and desired/adverse effects of therapeutic agents, drugs of abuse, and complementary or alternative agents.",
-      "difficulty": "medium",
-      "quality_comment": "The question is relevant and addresses a common clinical issue.",
-      "suggestedLesson": "1-pharmacology-other-drugs",
-      "suggestedParagraph": "## Sedatives, Hypnotics, and Anxiolytics: The Calming Agents",
-      "lessonExcerpt": "**Common side effects** of benzodiazepines include drowsiness, sedation, weakness, memory impairment, and confusion (especially in older adults).",
-      "needsReview": false,
-      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 20
     },
     {
       "stem": "Which of the following is a common withdrawal symptom associated with opioid abuse?",
@@ -732,6 +690,470 @@
       "lessonExcerpt": "Beta-blockers like propranolol (Inderal) work by inhibiting sympathetic nervous system activity. Primary uses include hypertension, cardiac arrhythmias, migraines, and essential tremor.",
       "suggestedLesson": "1-pharmacology-other-drugs",
       "needsReview": false
+    },
+    {
+      "stem": "Which cognitive side effect is commonly associated with the use of antipsychotic medications?",
+      "options": [
+        "Memory loss",
+        "Increased attention",
+        "Improved problem-solving",
+        "Enhanced creativity"
+      ],
+      "answer": "Memory loss",
+      "explanation": "Memory loss is a common cognitive side effect associated with antipsychotic medications, particularly due to their impact on neurotransmitter systems. Increased attention and improved problem-solving are not typical effects, and enhanced creativity is not a recognized side effect of these medications.",
+      "kn": "KN2",
+      "kn_explanation": "This question is best aligned with KN2 because it tests Drug classification, mechanisms of action, and desired/adverse effects of therapeutic agents, drugs of abuse, and complementary or alternative agents.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses knowledge of medication side effects.",
+      "suggestedLesson": "1-pharmacology-other-drugs",
+      "suggestedParagraph": "## The Foundation: How These Medications Work",
+      "lessonExcerpt": "They target cognitive symptoms more effectively and don't create the same dependence issues, though they come with their own side effect profile. **Common side effects** of benzodiazepines include drowsiness, sedation, weakness, memory impairment, and confusion (especially in older adults).",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 10
+    },
+    {
+      "stem": "Which medication is commonly used to treat bipolar disorder?",
+      "options": [
+        "Fluoxetine",
+        "Lithium",
+        "Sertraline",
+        "Haloperidol"
+      ],
+      "answer": "Lithium",
+      "explanation": "Lithium is a well-known mood stabilizer used to treat bipolar disorder. Fluoxetine and sertraline are antidepressants, while haloperidol is an antipsychotic.",
+      "kn": "KN2",
+      "kn_explanation": "This question is best aligned with KN2 because it tests Drug classification, mechanisms of action, and desired/adverse effects of therapeutic agents, drugs of abuse, and complementary or alternative agents.",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and tests knowledge of bipolar disorder treatment options.",
+      "suggestedLesson": "1-pharmacology-other-drugs",
+      "suggestedParagraph": "## Antipsychotics: The Three Generations",
+      "lessonExcerpt": "**Misconception #3:** \"All mood stabilizers work the same way.\" **Reality:** Lithium, anticonvulsants, and some atypical antipsychotics are all used as mood stabilizers, but they have different mechanisms, side effect profiles, and monitoring requirements.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 8
+    },
+    {
+      "stem": "Which medication is most likely to cause tremors as a side effect?",
+      "options": [
+        "A. SSRIs",
+        "B. Beta-blockers",
+        "C. Lithium",
+        "D. Benzodiazepines"
+      ],
+      "answer": "C. Lithium",
+      "explanation": "Lithium is known to cause tremors as a side effect, particularly at therapeutic levels. SSRIs and benzodiazepines are less commonly associated with tremors, while beta-blockers are more likely to reduce tremors rather than cause them. Therefore, lithium is the correct answer.",
+      "kn": "KN2",
+      "kn_explanation": "This question is best aligned with KN2 because it tests Drug classification, mechanisms of action, and desired/adverse effects of therapeutic agents, drugs of abuse, and complementary or alternative agents.",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests knowledge of medication side effects.",
+      "suggestedLesson": "1-pharmacology-other-drugs",
+      "suggestedParagraph": "## The Foundation: How These Medications Work",
+      "lessonExcerpt": "Common side effects: nausea, vomiting, diarrhea, metallic taste, increased thirst, weight gain, hand tremor, fatigue, memory impairment. The critical concern with lithium is its **narrow therapeutic window**, the difference between an effective dose and a toxic dose is small.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 9
+    },
+    {
+      "stem": "Which of the following is a characteristic symptom of Intermittent Explosive Disorder?",
+      "options": [
+        "A. Chronic sadness and hopelessness",
+        "B. Sudden episodes of aggressive outbursts",
+        "C. Persistent anxiety and worry",
+        "D. Difficulty in maintaining relationships"
+      ],
+      "answer": "B. Sudden episodes of aggressive outbursts",
+      "explanation": "Option B is correct because Intermittent Explosive Disorder is characterized by sudden episodes of aggressive outbursts that are disproportionate to the situation. Option A describes symptoms of depression, which are not characteristic of this disorder. Option C relates to anxiety disorders, and option D, while potentially relevant, does not specifically define Intermittent Explosive Disorder.",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests knowledge of impulse control disorders.",
+      "suggestedLesson": "1-pharmacology-other-drugs",
+      "suggestedParagraph": "## Why Clinical Tests Matter for Your EPPP Success",
+      "lessonExcerpt": "Intermittent Explosive Disorder is characterized by sudden episodes of aggressive outbursts.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 29
+    },
+    {
+      "stem": "Which of the following is a key characteristic of social anxiety disorder?",
+      "options": [
+        "Persistent fear of social situations where embarrassment may occur",
+        "Inability to recall important personal information",
+        "Delusions of grandeur or persecution",
+        "Compulsive behaviors to reduce anxiety"
+      ],
+      "answer": "Persistent fear of social situations where embarrassment may occur",
+      "explanation": "The correct answer identifies the hallmark of social anxiety disorder, which is the intense fear of social situations. The other options describe symptoms of different disorders, such as dissociative disorders and obsessive-compulsive disorder.",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and directly assesses knowledge of anxiety disorders.",
+      "suggestedLesson": "1-pharmacology-other-drugs",
+      "suggestedParagraph": "## Why Clinical Tests Matter for Your EPPP Success",
+      "lessonExcerpt": "**Cohen's Kappa:** A more sophisticated measure that corrects for chance agreement. It's used when two raters are assigning ratings on a nominal scale",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 2
+    },
+    {
+      "stem": "What is a key diagnostic criterion for acute stress disorder?",
+      "options": [
+        "Symptoms must last for more than one month.",
+        "The individual must experience dissociative symptoms.",
+        "The event must involve direct exposure to death.",
+        "The symptoms must cause significant impairment in social functioning."
+      ],
+      "answer": "The individual must experience dissociative symptoms.",
+      "explanation": "A key diagnostic criterion for acute stress disorder is the presence of dissociative symptoms following exposure to a traumatic event. The other options do not accurately reflect the diagnostic criteria for acute stress disorder.",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses knowledge of diagnostic criteria for acute stress disorder.",
+      "suggestedLesson": "1-pharmacology-other-drugs",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "**Criterion contamination** occurs when the measure is influenced by factors unrelated to actual job performance.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 18
+    },
+    {
+      "stem": "What is a significant challenge in diagnosing ADHD in young children?",
+      "options": [
+        "The symptoms can overlap with other developmental disorders.",
+        "ADHD symptoms are often more pronounced in structured environments.",
+        "Parents may have difficulty recognizing symptoms.",
+        "Standardized tests are not available for young children."
+      ],
+      "answer": "The symptoms can overlap with other developmental disorders.",
+      "explanation": "One of the significant challenges in diagnosing ADHD in young children is that its symptoms can overlap with those of other developmental disorders, making accurate diagnosis difficult. The other options, while relevant, do not capture the primary challenge in diagnosis.",
+      "kn": "KN30",
+      "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
+      "difficulty": "hard",
+      "quality_comment": "The question is well-structured and tests knowledge of ADHD diagnosis challenges.",
+      "suggestedLesson": "1-pharmacology-other-drugs",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "The symptoms of ADHD can overlap with those of other developmental disorders, complicating diagnosis.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 20
+    },
+    {
+      "stem": "Which of the following coexisting diagnoses is most commonly associated with specific learning disorder?",
+      "options": [
+        "Bipolar disorder",
+        "Generalized anxiety disorder",
+        "Attention-deficit/hyperactivity disorder (ADHD)",
+        "Obsessive-compulsive disorder"
+      ],
+      "answer": "Attention-deficit/hyperactivity disorder (ADHD)",
+      "explanation": "ADHD is frequently comorbid with specific learning disorders, as both can affect academic performance and attention. The other disorders listed do not have the same level of common association with specific learning disorders.",
+      "kn": "KN30",
+      "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of comorbid conditions with specific learning disorders.",
+      "suggestedLesson": "1-pharmacology-other-drugs",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "ADHD is frequently comorbid with specific learning disorders.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 23
+    },
+    {
+      "stem": "Which symptom is most likely to differentiate caffeine intoxication from anxiety disorders?",
+      "options": [
+        "A. Increased heart rate",
+        "B. Feelings of restlessness",
+        "C. Presence of gastrointestinal disturbances",
+        "D. Excessive worry about everyday issues"
+      ],
+      "answer": "C. Presence of gastrointestinal disturbances",
+      "explanation": "Option C is correct as gastrointestinal disturbances are more commonly associated with caffeine intoxication than with anxiety disorders. Options A and B can occur in both conditions, while D is specific to anxiety disorders.",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of symptom differentiation.",
+      "suggestedLesson": "1-pharmacology-other-drugs",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "Caffeine intoxication can lead to symptoms such as increased heart rate and gastrointestinal disturbances.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 2
+    },
+    {
+      "stem": "Which of the following best distinguishes Generalized Anxiety Disorder (GAD) from normal worries?",
+      "options": [
+        "GAD is characterized by excessive worry that is difficult to control and occurs more days than not for at least six months.",
+        "Normal worries are typically more intense and persistent than those seen in GAD.",
+        "GAD only occurs in children and adolescents, while normal worries can affect adults.",
+        "Individuals with GAD usually have a clear trigger for their anxiety, unlike those with normal worries."
+      ],
+      "answer": "GAD is characterized by excessive worry that is difficult to control and occurs more days than not for at least six months.",
+      "explanation": "The correct answer highlights the chronic and uncontrollable nature of anxiety in GAD, which is a key diagnostic criterion. The other options misrepresent the characteristics of GAD or incorrectly define normal worries.",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of GAD versus normal worries.",
+      "suggestedLesson": "1-pharmacology-other-drugs",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "GAD involves excessive anxiety and worry about multiple events or activities occurring most days for at least six months. The person finds it difficult to control the worry.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 1
+    },
+    {
+      "stem": "A 44-year-old male presents to a cardiologist for the fifth time in eight months complaining of crushing chest pain, left arm numbness, diaphoresis, and an overwhelming sense that he is about to die. Each episode lasts approximately 10–15 minutes and then resolves completely. Electrocardiograms, echocardiography, and a cardiac stress test are all normal. He is referred for psychological evaluation. Which diagnosis should be ranked highest in the differential?",
+      "options": [
+        "Somatic symptom disorder, because he has persistent, medically unexplained physical symptoms accompanied by excessive health-related worry",
+        "Panic disorder, because the discrete, time-limited episodes include multiple cardinal panic attack symptoms with no identified medical etiology",
+        "Illness anxiety disorder, because he is preoccupied with having a serious cardiac illness despite normal medical findings",
+        "Conversion disorder (functional neurological symptom disorder), because the arm numbness represents a neurological symptom without a structural cause"
+      ],
+      "answer": "Panic disorder, because the discrete, time-limited episodes include multiple cardinal panic attack symptoms with no identified medical etiology",
+      "explanation": "The presentation describes recurrent discrete episodes of abrupt-onset chest pain, paresthesia, diaphoresis, and fear of dying—symptoms that are among the 13 DSM-5 panic attack criteria—each lasting approximately 10–15 minutes and resolving spontaneously, with a recurrence pattern over months and negative cardiac workup. This fits panic disorder's definition of recurrent unexpected panic attacks with persistent concern about additional attacks. Somatic symptom disorder requires persistent physical symptoms (typically present for more than 6 months) accompanied by disproportionate thoughts, feelings, or behaviors about those symptoms, but does not capture the discrete episodic onset and offset characteristic of panic. Illness anxiety disorder centers on preoccupation with having or acquiring illness with few or no somatic symptoms, not acute physical symptom episodes. Conversion disorder involves neurological symptoms (e.g., pseudoseizures, paralysis) that are clearly functional; paresthesia can occur in conversion but the dominant presentation here (chest pain, diaphoresis, fear of death in episodes) is more parsimoniously explained by panic.",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
+      "difficulty": "medium",
+      "quality_comment": "Classic EPPP presentation; the cardiac context is realistic and the episode profile clearly operationalizes panic attack criteria.",
+      "suggestedLesson": "1-pharmacology-other-drugs",
+      "suggestedParagraph": "## Why Clinical Tests Matter for Your EPPP Success",
+      "lessonExcerpt": "They don't. While tests like the FTII show predictive validity, infant assessment is better for identifying developmental delays than predicting exact future IQ scores.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 9
+    },
+    {
+      "stem": "A 32-year-old woman presents to the emergency department with sudden onset of chest pain, heart palpitations, dizziness, and intense fear of dying. Cardiac workup and other medical tests reveal no abnormalities. She reports that similar episodes have occurred three times over the past two months, and she now avoids exercising because she fears triggering another episode. The most likely diagnosis is:",
+      "options": [
+        "Somatic symptom disorder",
+        "Illness anxiety disorder",
+        "Panic disorder",
+        "Generalized anxiety disorder"
+      ],
+      "answer": "Panic disorder",
+      "explanation": "This presentation is classic for panic disorder: recurrent, unexpected panic attacks (sudden onset of chest pain, palpitations, dizziness, fear of dying — at least four of the 13 panic attack symptoms) followed by maladaptive behavior change (avoiding exercise for fear of triggering attacks). The lesson states panic disorder involves 'recurrent, unexpected panic attacks followed by at least one month of either persistent concern about additional attacks or their consequences, OR significant maladaptive behavior change related to the attacks.' Medical causes have been ruled out, which the lesson notes is essential. Somatic symptom disorder (Option A) is incorrect because it requires excessive thoughts, emotions, or behaviors about somatic symptoms rather than discrete panic episodes. Illness anxiety disorder (Option B) involves preoccupation with having a serious illness with absent or mild somatic symptoms, not acute panic episodes. GAD (Option D) involves chronic worry across multiple domains, not discrete sudden-onset episodes with specific physical symptoms.",
+      "kn": "KN33",
+      "kn_explanation": "Differential diagnosis requiring integration of medical/non-psychological information (ruling out cardiac conditions vs. panic disorder)",
+      "difficulty": "medium",
+      "quality_comment": "Classic EPPP-style vignette with well-constructed distractors from related diagnostic categories, directly supported by lesson content.",
+      "suggestedLesson": "1-pharmacology-other-drugs",
+      "suggestedParagraph": "## Panic Disorder",
+      "lessonExcerpt": "Panic disorder involves recurrent, unexpected panic attacks followed by at least one month of either: Persistent concern about additional attacks or their consequences, OR Significant maladaptive behavior change related to the attacks... These symptoms overlap with medical conditions like hyperthyroidism and cardiac arrhythmia. Always rule out medical causes before diagnosing panic disorder.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 9
+    },
+    {
+      "stem": "A 28-year-old woman presents to the emergency department reporting heart palpitations, chest tightness, shortness of breath, dizziness, and tingling in her extremities. She states the episode came on suddenly while watching television and peaked within approximately 10 minutes. Medical workup including EKG, troponin levels, and thyroid panel are all within normal limits. She reports persistent worry about having additional episodes and has begun avoiding situations where she previously experienced similar symptoms. The most likely diagnosis is:",
+      "options": [
+        "Somatic symptom disorder",
+        "Illness anxiety disorder",
+        "Panic disorder",
+        "Generalized anxiety disorder"
+      ],
+      "answer": "Panic disorder",
+      "explanation": "This presentation is classic panic disorder: recurrent unexpected panic attacks (abrupt surge of intense fear peaking within minutes) with at least four symptoms (palpitations, chest tightness, shortness of breath, dizziness, paresthesias), followed by persistent worry about future attacks and maladaptive behavioral changes (avoidance). The medical workup ruled out cardiac and thyroid conditions, which is important because hyperthyroidism and cardiac arrhythmia can mimic panic attacks. Somatic symptom disorder involves excessive thoughts, feelings, or behaviors about somatic symptoms—the focus is on disproportionate concern about symptoms, not sudden episodic surges of fear. Illness anxiety disorder involves preoccupation with having a serious illness with minimal or no somatic symptoms, whereas this patient has prominent acute physical symptoms during discrete episodes. GAD involves excessive worry about multiple life domains, not discrete episodes of sudden intense fear with specific physiological symptoms.",
+      "kn": "KN33",
+      "kn_explanation": "Differentiating panic disorder from medical conditions (e.g., cardiac) requires differential diagnosis and integration of non-psychological information into psychological assessment.",
+      "difficulty": "medium",
+      "quality_comment": "Strong clinical vignette requiring differential diagnosis. Well-supported by lesson content on panic disorder criteria and the need to rule out medical conditions.",
+      "suggestedLesson": "1-pharmacology-other-drugs",
+      "suggestedParagraph": "### Panic Disorder: The Alarm System Gone Haywire",
+      "lessonExcerpt": "Panic disorder involves recurrent, unexpected panic attacks followed by at least one month of either: Persistent concern about additional attacks or their consequences, OR Significant maladaptive behavior change related to the attacks",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 9
+    },
+    {
+      "stem": "A 28-year-old woman reports intense fear and avoidance of work meetings, dinner parties, and any situation where she might be observed by others. She experiences heart palpitations, sweating, and trembling exclusively in these social contexts. She does not experience panic attacks at any other time. The most appropriate diagnosis is:",
+      "options": [
+        "Panic disorder",
+        "Specific phobia, situational type",
+        "Social anxiety disorder",
+        "Agoraphobia"
+      ],
+      "answer": "Social anxiety disorder",
+      "explanation": "This presentation is most consistent with social anxiety disorder because the fear and physiological symptoms occur exclusively in social situations where the person might face scrutiny. The lesson states: 'Social anxiety disorder involves fear or anxiety in social situations where scrutiny might occur. The person fears showing anxiety symptoms that others will negatively evaluate.' The panic-like symptoms (palpitations, sweating, trembling) are situationally bound to social contexts, not unexpected. Panic disorder (A) requires recurrent unexpected panic attacks—these attacks are expected and tied to social situations. Specific phobia, situational type (B) involves fears of specific situations like elevators or flying, not social evaluation. Agoraphobia (D) involves fear of situations where escape might be difficult, not specifically fear of social scrutiny.",
+      "kn": "KN36",
+      "kn_explanation": "Identifying social anxiety disorder from a symptom presentation involves applying DSM classification systems and diagnostic criteria to evaluate client functioning.",
+      "difficulty": "hard",
+      "quality_comment": "Tests a clinically important differential diagnosis point—distinguishing situationally-bound panic symptoms in social anxiety from unexpected panic attacks in panic disorder.",
+      "suggestedLesson": "1-pharmacology-other-drugs",
+      "suggestedParagraph": "### Social Anxiety Disorder: Fear of the Spotlight",
+      "lessonExcerpt": "Social anxiety disorder involves fear or anxiety in social situations where scrutiny might occur. The person fears showing anxiety symptoms that others will negatively evaluate. Duration requirement: six months minimum.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 25
+    },
+    {
+      "stem": "A psychologist is evaluating a 32-year-old patient who has experienced a single episode of markedly elevated mood, decreased need for sleep, pressured speech, and grandiose delusions lasting 10 days, requiring hospitalization. The patient has never experienced a major depressive episode. Based on DSM-5 criteria, what is the MOST appropriate diagnosis?",
+      "options": [
+        "Bipolar II disorder",
+        "Bipolar I disorder",
+        "Cyclothymic disorder",
+        "Unspecified bipolar and related disorder"
+      ],
+      "answer": "Bipolar I disorder",
+      "explanation": "Bipolar I disorder requires at least one manic episode lasting at least one week (or any duration if hospitalization is required). This patient meets criteria with a 10-day episode requiring hospitalization. Critically, Bipolar I does NOT require a depressive episode—only one manic episode is needed. Bipolar II requires at least one hypomanic AND one major depressive episode, and by definition the person has never had a full manic episode. Cyclothymic disorder involves chronic fluctuating hypomanic and depressive symptoms that never meet full episode criteria. Unspecified bipolar disorder is inappropriate when full criteria for a specific diagnosis are met.",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
+      "difficulty": "medium",
+      "quality_comment": "Tests the critical distinction that Bipolar I requires only ONE manic episode and does NOT require depression; a common exam trap",
+      "suggestedLesson": "1-pharmacology-other-drugs",
+      "suggestedParagraph": "## The Bipolar Disorders: Different Combinations, Different Diagnoses",
+      "lessonExcerpt": "Bipolar I only requires ONE manic episode. That person might never have depression, but they still have Bipolar I.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 13
+    },
+    {
+      "stem": "A psychologist is conducting a neuropsychological evaluation of an HIV-positive client who presents with forgetfulness, difficulty concentrating, psychomotor slowing, and social withdrawal. These symptoms are most consistent with which pattern of neurocognitive impairment?",
+      "options": [
+        "Cortical neurocognitive disorder, characterized by aphasia, agnosia, and apraxia",
+        "Subcortical neurocognitive disorder, characterized by cognitive slowing, apathy, and motor problems",
+        "Cortico-subcortical neurocognitive disorder, characterized by variable symptoms depending on areas affected",
+        "Frontotemporal neurocognitive disorder, characterized by personality changes and disinhibition"
+      ],
+      "answer": "Subcortical neurocognitive disorder, characterized by cognitive slowing, apathy, and motor problems",
+      "explanation": "The lesson states that HIV-related NCD is 'Caused by HIV infection affecting the brain' and 'Shows subcortical symptoms: forgetfulness, poor attention, cognitive slowing, psychomotor slowing, apathy, social withdrawal, tremors, clumsiness.' The client's presentation matches this subcortical pattern exactly. Option A is incorrect because cortical NCDs (like Alzheimer's) feature aphasia, agnosia, and apraxia as primary symptoms. Option C describes cortico-subcortical patterns seen in vascular NCD or Lewy body disease. Option D describes frontotemporal NCD, which is a cortical disorder featuring personality changes as the earliest symptom.",
+      "kn": "KN42",
+      "kn_explanation": "Neuropsychological evaluation of an HIV-positive client with cognitive symptoms relates to matching treatment/intervention decisions to assessment and diagnosis findings, including consideration of medical comorbidities and special population factors.",
+      "difficulty": "medium",
+      "quality_comment": "Tests ability to identify subcortical vs. cortical NCD patterns in a specific medical population. Lesson coverage is adequate but brief.",
+      "suggestedLesson": "1-pharmacology-other-drugs",
+      "suggestedParagraph": "### HIV-Related NCD",
+      "lessonExcerpt": "Caused by HIV infection affecting the brain. Shows subcortical symptoms: forgetfulness, poor attention, cognitive slowing, psychomotor slowing, apathy, social withdrawal, tremors, clumsiness.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 4
+    },
+    {
+      "stem": "A child psychologist is conducting an initial evaluation of a 9-year-old boy who was referred for multiple motor tics (eye blinking, shoulder shrugging) and one vocal tic (throat clearing) that have been present for 18 months. The psychologist should be MOST alert to the possible co-occurrence of which condition?",
+      "options": [
+        "Obsessive-compulsive disorder",
+        "Specific learning disorder",
+        "Attention-deficit/hyperactivity disorder",
+        "Separation anxiety disorder"
+      ],
+      "answer": "Attention-deficit/hyperactivity disorder",
+      "explanation": "ADHD is the most common comorbid disorder with Tourette's disorder. The child described meets criteria for Tourette's (multiple motor tics AND at least one vocal tic persisting for more than one year with onset before age 18), so the psychologist should screen for ADHD. While OCD is also commonly associated with Tourette's, ADHD is specifically identified as the most common comorbidity. Specific learning disorder and separation anxiety disorder are not as strongly associated with Tourette's.",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
+      "difficulty": "medium",
+      "quality_comment": "Tests specific knowledge of Tourette's most common comorbidity rather than just recognition of tic disorders",
+      "suggestedLesson": "1-pharmacology-other-drugs",
+      "suggestedParagraph": "### The Three Tic Disorder Diagnoses",
+      "lessonExcerpt": "ADHD is the most common comorbid disorder with Tourette's.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 14
+    },
+    {
+      "stem": "A 35-year-old graduate student presents with restlessness, insomnia, muscle twitching, rambling speech, tachycardia, and psychomotor agitation. She reports consuming approximately 8-10 cups of coffee daily to stay awake while studying for comprehensive exams. She denies use of any other substances, and her urine drug screen is negative. The most likely diagnosis is:",
+      "options": [
+        "Generalized anxiety disorder",
+        "Stimulant intoxication due to amphetamine use",
+        "Caffeine intoxication",
+        "Hypomanic episode"
+      ],
+      "answer": "Caffeine intoxication",
+      "explanation": "The patient's symptoms—restlessness, insomnia, muscle twitching, rambling speech, tachycardia, and psychomotor agitation—are classic features of caffeine intoxication, which develops during or shortly after excessive caffeine consumption. Her reported intake of 8-10 cups of coffee daily is well above typical consumption. The negative urine drug screen rules out stimulant intoxication from amphetamines, though the symptom presentation can be similar since caffeine is itself a stimulant. GAD involves excessive worry about multiple domains for at least 6 months—while restlessness and insomnia overlap, GAD does not typically present with muscle twitching, rambling speech, and tachycardia as a cluster. A hypomanic episode would require a distinct period of elevated, expansive, or irritable mood lasting at least 4 days, and the symptoms here are better explained by the known excessive caffeine intake.",
+      "kn": "KN33",
+      "kn_explanation": "This question is best aligned with KN33 because it tests Issues of differential diagnosis and integration of non-psychological information into psychological assessment.",
+      "difficulty": "medium",
+      "quality_comment": "Good clinical vignette. However, the lesson content on caffeine intoxication is minimal—it only notes caffeine 'can cause intoxication' without listing specific symptoms. The specific symptoms used in this question are based on DSM-5-TR criteria rather than lesson content.",
+      "suggestedLesson": "1-pharmacology-other-drugs",
+      "suggestedParagraph": "## The Big Picture: Two Categories, Ten Substances",
+      "lessonExcerpt": "We're talking about intoxication, withdrawal, and other mental disorders directly caused by substances (like substance-induced depression or anxiety). **Substance-Use Disorders** are the ongoing patterns.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 10
+    },
+    {
+      "stem": "A 26-year-old graduate student drinks six cups of coffee between 8 AM and noon while preparing for a qualifying exam. At noon she visits the student health center reporting restlessness she cannot control, visible muscle twitching in her legs, a racing heart (pulse 112 bpm), and speech that staff describe as rapid and loosely organized. She denies anxiety symptoms prior to her caffeine intake and has no psychiatric history. Which DSM-5 diagnosis is most appropriate?",
+      "options": [
+        "Generalized anxiety disorder, because her symptoms include restlessness, muscle tension, and difficulty concentrating",
+        "Caffeine intoxication, because recent high-dose caffeine consumption has produced multiple characteristic physiological and behavioral symptoms",
+        "Hypomanic episode, because she exhibits elevated energy, pressured speech, and psychomotor activation lasting several hours",
+        "Stimulant use disorder, mild, because she is using caffeine in a way that causes physical harm"
+      ],
+      "answer": "Caffeine intoxication, because recent high-dose caffeine consumption has produced multiple characteristic physiological and behavioral symptoms",
+      "explanation": "DSM-5 caffeine intoxication requires: (1) recent caffeine consumption, typically more than 250 mg; (2) five or more of the following symptoms developing during or shortly after use: restlessness, nervousness, excitement, insomnia, flushed face, diuresis, GI disturbance, muscle twitching, rambling flow of thought or speech, tachycardia or cardiac arrhythmia, periods of inexhaustibility, and psychomotor agitation; and (3) symptoms causing significant distress or functional impairment. Six large cups of coffee can easily exceed 750–900 mg of caffeine. The student meets at least five criteria (restlessness, muscle twitching, tachycardia, rambling speech, and psychomotor agitation) temporally linked to intake. GAD requires symptoms present more days than not for at least 6 months and cannot be diagnosed when a substance fully explains the presentation. A hypomanic episode requires at least 4 consecutive days of elevated/expansive mood and cannot be attributed to substance effects. Stimulant use disorder requires a maladaptive pattern of use with significant impairment over at least 12 months; a single acute episode does not meet criteria.",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
+      "difficulty": "easy",
+      "quality_comment": "Straightforward but clinically important vignette; distractors test ability to apply substance-exclusion rules in GAD and to distinguish intoxication from episodic mood disorder.",
+      "suggestedLesson": "1-pharmacology-other-drugs",
+      "suggestedParagraph": "## Caffeine-Related Disorders",
+      "lessonExcerpt": "Alcohol Intoxication** is what most people call being drunk, but the clinical diagnosis requires specific criteria. You need problematic behavioral or psychological changes (inappropriate sexual or aggressive behavior, mood swings, poor judgment) plus at least one physical sign: slurred speech, poor coordination, unsteady walking, nystagmus (involuntary eye movements), problems with attention or memory, or stupor/coma.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 10
+    },
+    {
+      "stem": "Which symptom is NOT one of the criteria for Cannabis Intoxication in DSM-5-TR?",
+      "options": [
+        "Increased appetite",
+        "Dry mouth",
+        "Euphoria",
+        "Pupillary constriction"
+      ],
+      "answer": "Pupillary constriction",
+      "explanation": "1. \"Pupillary constriction\" is the correct answer because it is not listed as a symptom of Cannabis Intoxication in the DSM-5-TR. Instead, Cannabis Intoxication is characterized by symptoms such as increased appetite, dry mouth, and euphoria, which are associated with the effects of cannabis use. Pupillary constriction is more commonly associated with opioid intoxication rather than cannabis.\n\n2. \n- **Increased appetite**: This is a recognized symptom of Cannabis Intoxication, often referred to as \"the munchies,\" where users experience heightened hunger.\n- **Dry mouth**: Also known as \"cottonmouth,\" dry mouth is a common symptom of Cannabis Intoxication due to its effects on salivary glands.\n- **Euphoria**: This symptom reflects the mood-enhancing effects of cannabis, making it a key feature of Cannabis Intoxication.",
+      "difficulty": "easy",
+      "kn": "KN36",
+      "kn_explanation": "This question assesses knowledge of specific symptom criteria used in psychiatric diagnosis (KN36).",
+      "quality_comment": "This question effectively tests knowledge of intoxication criteria while maintaining a clear distinction between substances.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "easier",
+      "tags": [
+        "lock_in_drill"
+      ],
+      "lessonExcerpt": "Opioid Intoxication** involves problematic behavioral or psychological changes (initial euphoria followed by apathy or dysphoria, impaired judgment) plus pupillary constriction (pinpoint pupils (this is a key sign) and at least one of: drowsiness or coma, slurred speech, or impaired attention/memory. Sometimes people experience perceptual disturbances) hallucinations with intact reality testing or illusions without delirium.",
+      "suggestedLesson": "1-pharmacology-other-drugs",
+      "needsReview": false
+    },
+    {
+      "stem": "A pediatrician refers a 4-year-old child to a psychologist after the child has been hospitalized multiple times for unexplained symptoms. The mother appears unusually knowledgeable about medical procedures and seems invested in the child remaining hospitalized, but no external incentives such as financial gain or avoidance of legal consequences can be identified. Which diagnosis is most appropriate for the mother?",
+      "options": [
+        "Malingering",
+        "Factitious disorder imposed on another",
+        "Somatic symptom disorder",
+        "Illness anxiety disorder"
+      ],
+      "answer": "Factitious disorder imposed on another",
+      "explanation": "Factitious disorder imposed on another involves falsifying or inducing symptoms in another person (often a child) and presenting them as ill, with deception occurring even without obvious external rewards. This is the correct answer because the mother is inducing symptoms in her child with no identifiable external gain. Malingering is incorrect because it requires clear external rewards (money, drugs, avoiding consequences) and is not a mental disorder. Somatic symptom disorder is incorrect because it involves the person's own distressing physical symptoms, not inducing symptoms in another. Illness anxiety disorder is incorrect because it involves preoccupation with having a serious illness oneself, with absent or mild somatic symptoms.",
+      "kn": "KN33",
+      "kn_explanation": "Integrating non-psychological medical information (unexplained hospitalizations, pediatrician referral) into psychological assessment for differential diagnosis, likely involving Factitious Disorder Imposed on Another",
+      "difficulty": "medium",
+      "quality_comment": "Strong question testing the key distinction between factitious disorder imposed on another and malingering based on motivation, well-supported by lesson content.",
+      "suggestedLesson": "1-pharmacology-other-drugs",
+      "suggestedParagraph": "### Factitious Disorder: The Intent to Deceive",
+      "lessonExcerpt": "Factitious Disorder Imposed on Another: Same as above, but symptoms are induced in another person (often a child by their parent)... Factitious Disorder: Internal psychological need; no obvious external reward... Malingering: Clear external reward (money, drugs, avoiding work/legal consequences)",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 1
+    },
+    {
+      "stem": "A pediatrician reports that a 4-year-old patient has been hospitalized multiple times for symptoms that cannot be medically explained, and lab results appear to have been tampered with. The child's mother, who has medical training, is always present and appears very engaged with hospital staff. There is no evidence of external incentive such as financial gain or avoidance of legal responsibility. Which diagnosis is most appropriate for the mother?",
+      "options": [
+        "Malingering",
+        "Factitious disorder imposed on another",
+        "Somatic symptom disorder",
+        "Illness anxiety disorder"
+      ],
+      "answer": "Factitious disorder imposed on another",
+      "explanation": "Factitious disorder imposed on another involves falsifying or inducing symptoms in another person (often a child) with associated deception and no clear external reward. This distinguishes it from malingering, which requires a clear external motivation such as financial gain, avoiding work, or obtaining drugs. Somatic symptom disorder involves excessive thoughts/emotions/behaviors about one's own real symptoms, not fabrication of symptoms in another person. Illness anxiety disorder involves preoccupation with having a serious illness oneself, with minimal somatic symptoms. The key distinguishing feature is the absence of obvious external reward combined with the deception directed at a dependent person.",
+      "kn": "KN33",
+      "kn_explanation": "Integrating non-psychological medical information (unexplained hospitalizations, lab results) into psychological assessment points to differential diagnosis with medical data",
+      "difficulty": "medium",
+      "quality_comment": "Good differential diagnosis question requiring distinction between factitious disorder imposed on another and malingering based on motivation, and from somatic symptom/illness anxiety disorders based on who is affected.",
+      "suggestedLesson": "1-pharmacology-other-drugs",
+      "suggestedParagraph": "### Factitious Disorder: The Deception Element",
+      "lessonExcerpt": "Imposed on another: Person causes symptoms in someone else (often a child)... The person presents themselves as ill or impaired even without obvious external reward. This distinguishes it from malingering.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 1
     }
   ]
 }

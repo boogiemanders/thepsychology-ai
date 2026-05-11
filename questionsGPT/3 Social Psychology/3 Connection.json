@@ -64,111 +64,6 @@
       "inspirationIndex": 25
     },
     {
-      "stem": "In the context of sexual identity development, what characterizes the identity pride stage?",
-      "options": [
-        "Exploration of sexual orientation",
-        "Acceptance of one's sexual identity",
-        "Integration of sexual identity into overall self-concept",
-        "Public affirmation of sexual identity"
-      ],
-      "answer": "Public affirmation of sexual identity",
-      "explanation": "The identity pride stage is characterized by a strong public affirmation of one's sexual identity, often accompanied by pride in that identity. Exploration occurs in earlier stages, while acceptance and integration are part of later stages. Thus, the correct answer is public affirmation of sexual identity.",
-      "kn": "KN19",
-      "kn_explanation": "This question is best aligned with KN19 because it tests Identity diversity and intersectionality (e.g., psychological impact of diversity on individuals, families, and systems).",
-      "difficulty": "hard",
-      "quality_comment": "The question accurately assesses knowledge of sexual identity development stages.",
-      "suggestedLesson": "5-sex-and-gender",
-      "suggestedParagraph": "## What Makes Us Attracted to Specific People?",
-      "lessonExcerpt": "Gender-Affirmative**: Dutch = \"wait and see then proceed\"; Gender-Affirmative = \"support authentic identity as it emerges.\" The Dutch protocol emphasizes caution and waiting for persistence; the gender-affirmative model emphasizes affirmation and authenticity. ## Key Takeaways",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 14
-    },
-    {
-      "stem": "Research indicates that which leadership style is often associated with better outcomes in gender-diverse teams?",
-      "options": [
-        "Autocratic leadership",
-        "Transformational leadership",
-        "Transactional leadership",
-        "Laissez-faire leadership"
-      ],
-      "answer": "Transformational leadership",
-      "explanation": "Transformational leadership is often associated with better outcomes in gender-diverse teams as it emphasizes inspiration, motivation, and the development of team members. Autocratic leadership tends to stifle input, transactional leadership focuses on exchanges rather than development, and laissez-faire leadership can lead to a lack of direction. Therefore, the correct answer is transformational leadership.",
-      "kn": "KN19",
-      "kn_explanation": "This KN code applies as it pertains to understanding gender differences in leadership styles.",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively tests knowledge of leadership styles in diverse teams.",
-      "suggestedLesson": "3-cultural-identity",
-      "suggestedParagraph": "## The Need for Affiliation: Why We Seek Others",
-      "lessonExcerpt": "Immersion-Emersion:** They reject White culture completely and immerse themselves in Black culture. This is an intense, emotionally charged stage.",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 19
-    },
-    {
-      "stem": "According to social exchange theory, what primarily drives interpersonal attraction?",
-      "options": [
-        "The pursuit of emotional intimacy and connection.",
-        "The perceived rewards and costs associated with a relationship.",
-        "The influence of societal norms and expectations.",
-        "The biological instincts for reproduction and survival."
-      ],
-      "answer": "The perceived rewards and costs associated with a relationship.",
-      "explanation": "Social exchange theory posits that interpersonal attraction is driven by the evaluation of the rewards and costs involved in a relationship. The other options reflect different theories of attraction but do not align with the principles of social exchange theory.",
-      "kn": "KN15",
-      "kn_explanation": "This question is best aligned with KN15 because it tests Social interaction and relationships (e.g., attraction, aggression, altruism, organizational justice, verbal and non-verbal communication, internet communication, mate selection, empathy).",
-      "difficulty": "medium",
-      "quality_comment": "The question is relevant and tests understanding of attraction theories.",
-      "suggestedLesson": "3-cultural-identity",
-      "suggestedParagraph": "## What Makes Us Attracted to Specific People?",
-      "lessonExcerpt": "Immersion-Emersion:** They reject White culture completely and immerse themselves in Black culture. This is an intense, emotionally charged stage.",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 24
-    },
-    {
-      "stem": "A researcher analyzing data from a longitudinal couples study finds that individuals with objectively higher physical attractiveness ratings consistently form partnerships with others of comparably high attractiveness, and that couples with large attractiveness discrepancies report significantly lower relationship satisfaction. This pattern is MOST consistent with:",
-      "options": [
-        "Byrne's law of attraction, which predicts partner selection based on proportional attitude similarity",
-        "The matching hypothesis, derived from social exchange principles that partners seek equity in interpersonal value",
-        "The mere exposure effect, which predicts increasing attraction through repeated contact and familiarity",
-        "The pratfall effect, which predicts that perceived imperfections increase attraction in high-competence individuals"
-      ],
-      "answer": "The matching hypothesis, derived from social exchange principles that partners seek equity in interpersonal value",
-      "explanation": "The matching hypothesis, grounded in social exchange theory, proposes that individuals pair with partners of similar social desirability (including physical attractiveness) because exchange equity is maximized when both partners contribute comparable interpersonal value. Dissatisfaction in mismatched couples reflects the perceived inequity in the exchange. Byrne's law of attraction pertains to attitude similarity predicting attraction strength — not attractiveness matching in partner selection. The mere exposure effect describes how repeated exposure creates familiarity-based liking regardless of attribute matching. The pratfall effect describes how a minor mistake increases liking for a highly competent person — it is unrelated to the matching dynamic described in this finding.",
-      "kn": "KN14",
-      "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
-      "difficulty": "medium",
-      "quality_comment": "Tests conceptual understanding of why the matching hypothesis is grounded in social exchange theory; distractors require careful discrimination among the major theories of attraction.",
-      "suggestedLesson": "5-sex-and-gender",
-      "suggestedParagraph": "What Makes Us Attracted to Specific People?",
-      "lessonExcerpt": "Gender-Affirmative**: Dutch = \"wait and see then proceed\"; Gender-Affirmative = \"support authentic identity as it emerges.\" The Dutch protocol emphasizes caution and waiting for persistence; the gender-affirmative model emphasizes affirmation and authenticity. ## Key Takeaways",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 14
-    },
-    {
-      "stem": "A psychologist-in-training is waiting to learn whether she passed a high-stakes oral examination. She feels anxious and is unsure whether her distress level is reasonable or excessive. Rather than seeking out faculty who have administered the exam many times, she finds herself wanting to talk with other trainees who are in the same waiting period. According to social comparison theory, what best explains this selective preference?",
-      "options": [
-        "She is seeking emotional support from peers who share her professional identity",
-        "She wants to compare her emotional response with similar others in the same situation to gauge whether her anxiety level is appropriate",
-        "She is engaging in downward social comparison to reassure herself that others are worse off",
-        "She is avoiding evaluation apprehension by choosing confidants unlikely to judge her performance"
-      ],
-      "answer": "She wants to compare her emotional response with similar others in the same situation to gauge whether her anxiety level is appropriate",
-      "explanation": "Social comparison theory (Festinger, 1954) holds that when people are uncertain about how to feel, think, or react, they look to similar others to assess whether their responses are appropriate. The trainee is not choosing experienced faculty—who have a different vantage point—but peers facing the exact same situation, because only those in an equivalent position can serve as a valid comparison standard for calibrating emotional reactions. Option A reframes the behavior as support-seeking rather than information-seeking, which misses the specific mechanism Festinger identified. Option C (downward comparison) would require seeking out those doing worse, not those in the same boat. Option D describes evaluation apprehension, a distinct construct concerning fear of being judged while performing.",
-      "kn": "KN14",
-      "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
-      "difficulty": "medium",
-      "quality_comment": "Scenario cleanly instantiates the uncertainty-reduction function of social comparison and requires distinguishing it from three plausible but distinct alternatives. Direct lesson support is strong.",
-      "suggestedLesson": "5-6-leadership",
-      "suggestedParagraph": "Schachter's Anxiety Studies: Misery Loves Company (But Only Certain Company)",
-      "lessonExcerpt": "A meta-analysis by Eagly, Johannesen-Schmidt, and van Engen (2003) revealed something interesting about transformational and transactional leadership: **Female leaders are more likely to:** - Use transformational leadership approaches (inspiring and developing people) - Provide contingency rewards (a transactional element)",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 21
-    },
-    {
       "stem": "According to Schachter's (1959) research on affiliation, highly anxious individuals tend to prefer waiting with:",
       "options": [
         "Other highly anxious participants rather than non-participants",
@@ -220,24 +115,6 @@
       "quality_comment": "Distractors include nuanced choices around valence, which challenges the test taker to recall precise conditions of the mere exposure effect.",
       "lessonExcerpt": "This effect works when our initial reaction is neutral, mildly negative, or positive. If you absolutely can't stand someone from your first meeting, seeing them repeatedly won't magically fix that.",
       "suggestedLesson": "3-connection",
-      "needsReview": false
-    },
-    {
-      "stem": "Research on the pratfall effect shows that a competent person who makes a blunder is perceived as:",
-      "options": [
-        "More attractive because the blunder humanizes them",
-        "Less attractive because they lose credibility",
-        "More attractive only if the blunder is minor",
-        "Less attractive regardless of competence"
-      ],
-      "answer": "More attractive because the blunder humanizes them",
-      "explanation": "1. The correct answer, \"More attractive because the blunder humanizes them,\" is supported by the research of Aronson, Willerman, and Floyd (1966), which indicates that when a competent person commits a blunder, it increases their attractiveness. This occurs because the blunder makes them appear more relatable and human, which enhances their likability rather than diminishing their perceived competence.\n\n2. \n- **Less attractive because they lose credibility:** This option is incorrect because the pratfall effect specifically shows that a blunder can enhance attractiveness rather than detract from it, particularly for competent individuals.\n- **More attractive only if the blunder is minor:** This option is misleading; the research does not specify that the blunder must be minor for the effect to occur, as the key factor is the humanizing aspect of the blunder itself.\n- **Less attractive regardless of competence:** This is incorrect because the pratfall effect highlights that competent individuals actually become more attractive after making a blunder, contradicting the idea that their attractiveness would decrease.",
-      "kn": "KN15",
-      "kn_explanation": "This question involves understanding social perception and attraction processes within interpersonal relationships (KN15).",
-      "difficulty": "medium",
-      "quality_comment": "Question clearly differentiates between competence and the blunder's effect, with distractors testing common misconceptions.",
-      "lessonExcerpt": "ssical Test Theory | Item Response Theory | |----------------------|---------------------| | Test-based (focuses on total scores) | Item-based (focuses on individual items) | | Sample-dependent (item statistics change with different groups) | Sample-invariant (item properties stable across groups) | | Less suitable for adaptive testing | Ideal for adaptive testing | | Simpler to understand and calculate | More complex but more powerful | ### The Core Idea: Item Characteristic Curves",
-      "suggestedLesson": "5-items-and-reliability",
       "needsReview": false
     },
     {
@@ -427,6 +304,24 @@
         "lock_in_drill"
       ],
       "lessonExcerpt": "Men across cultures tend to prefer a WHR of approximately 0.7 (waist circumference about 70% of hip circumference), considered a marker of good health and reproductive ability.",
+      "suggestedLesson": "3-connection",
+      "needsReview": false
+    },
+    {
+      "stem": "Which type of depth cue do infants begin using at about five to six months of age, providing the impression of depth from static, one-eyed images?",
+      "options": [
+        "Kinetic cues",
+        "Binocular (stereoscopic) cues",
+        "Pictorial (static-monocular) cues",
+        "Motion parallax"
+      ],
+      "answer": "Pictorial (static-monocular) cues",
+      "explanation": "1. **Correct Answer: Pictorial (static-monocular) cues**  \nPictorial (static-monocular) cues are the type of depth information that infants begin using at about five to six months of age. These cues create the impression of depth through visual elements that can be perceived with one eye, such as size, texture gradients, shadows, and linear perspective, helping infants interpret their visual environment more effectively.\n\n2. **Incorrect Options:**\n- **Kinetic cues:** Kinetic cues are based on the movement of objects and are utilized by infants starting as early as three or four weeks of age, not at five to six months.\n- **Binocular (stereoscopic) cues:** Binocular (stereoscopic) cues rely on the integration of images received by both eyes and begin to develop between two and three months of age, making them an earlier form of depth perception than pictorial cues.\n- **Motion parallax:** Motion parallax is a depth cue that involves the perception of depth based on the relative motion of objects as an observer moves, which is not specifically tied to the static, one-eyed images that pictorial cues represent.",
+      "kn": "KN21",
+      "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are plausible types of depth cues, requiring test-takers to know specific developmental timing and cue types.",
+      "lessonExcerpt": "These different reproductive challenges shaped what triggers jealousy most intensely. ### Alternative Explanation: The Double-Shot Hypothesis",
       "suggestedLesson": "3-connection",
       "needsReview": false
     }

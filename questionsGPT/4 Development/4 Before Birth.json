@@ -420,6 +420,213 @@
       "lessonExcerpt": "Either the damage is so severe that implantation fails (often before a woman even knows she's pregnant)",
       "suggestedLesson": "4-before-birth",
       "needsReview": false
+    },
+    {
+      "stem": "A parent brings in a 4-year-old child diagnosed with cerebral palsy and asks when the brain damage most likely occurred. Based on current understanding of cerebral palsy etiology, which of the following is the most accurate response?",
+      "options": [
+        "The brain damage most commonly occurs during the birth process due to oxygen deprivation",
+        "The brain damage typically results from environmental toxin exposure during the first year of life",
+        "The brain damage can occur prenatally, perinatally, or postnatally, with prenatal causes being most common",
+        "The brain damage is exclusively genetic in origin and occurs during the first trimester"
+      ],
+      "answer": "The brain damage can occur prenatally, perinatally, or postnatally, with prenatal causes being most common",
+      "explanation": "Cerebral palsy results from brain damage that can occur before birth (prenatal), during birth (perinatal), or after birth (postnatal), with prenatal factors being the most common cause. Option A reflects a common misconception—while birth asphyxia can cause cerebral palsy, it is not the most common cause. Option B is incorrect because environmental toxin exposure in the first year is not the primary etiology. Option D is incorrect because cerebral palsy is not exclusively genetic, though genetic factors may contribute.",
+      "kn": "KN1",
+      "kn_explanation": "Cerebral palsy etiology involves neurobiological bases of behavior pertaining to brain development and chronic neurobehavioral disease processes",
+      "difficulty": "hard",
+      "quality_comment": "The lesson content does not specifically cover cerebral palsy. This question requires knowledge beyond what is presented in the available lessons.",
+      "suggestedLesson": "4-before-birth",
+      "suggestedParagraph": "## Movement Disorders: When Motor Control Breaks Down",
+      "lessonExcerpt": "**Reality**: Some effects, particularly neurodevelopmental ones, emerge later as children face age-appropriate cognitive demands. A child exposed to alcohol prenatally might seem okay as an infant but struggle with executive function and impulse control in school.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 18
+    },
+    {
+      "stem": "What dietary management is essential for individuals with phenylketonuria (PKU)?",
+      "options": [
+        "A. High protein diet",
+        "B. Low phenylalanine diet",
+        "C. Gluten-free diet",
+        "D. High carbohydrate diet"
+      ],
+      "answer": "B. Low phenylalanine diet",
+      "explanation": "Individuals with phenylketonuria (PKU) must adhere to a low phenylalanine diet to prevent cognitive impairment and other health issues. A high protein diet would be harmful as it contains high levels of phenylalanine. A gluten-free diet is not relevant to PKU, and a high carbohydrate diet does not address the metabolic needs of individuals with this condition.",
+      "kn": "KN4",
+      "kn_explanation": "This question is best aligned with KN4 because it tests Behavioral genetics, transmission and expression of genetic information, and its modification, and the role and limitations of this information in understanding disorders.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of dietary management for PKU.",
+      "suggestedLesson": "4-before-birth",
+      "suggestedParagraph": "## Dietary Management of Phenylketonuria",
+      "lessonExcerpt": "People with PKU cannot properly metabolize phenylalanine, an amino acid found in protein. Without treatment starting immediately after birth, phenylalanine builds up and causes:",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 7
+    },
+    {
+      "stem": "Which form of inheritance involves a trait influenced by a gene located on the X chromosome?",
+      "options": [
+        "Sex-linked inheritance",
+        "Single gene-pair inheritance",
+        "Polygenic inheritance",
+        "Mitochondrial inheritance"
+      ],
+      "answer": "Sex-linked inheritance",
+      "explanation": "1. **Correct Answer: Sex-linked inheritance**  \nSex-linked inheritance is the correct answer because it specifically refers to traits influenced by genes located on the sex chromosomes, most commonly the X chromosome. This means that characteristics associated with sex-linked inheritance can be passed down through generations via the X chromosome, which is particularly relevant for traits that exhibit different patterns of inheritance based on gender.\n\n2. **Incorrect Options:**\n\n- **Single gene-pair inheritance:** This form of inheritance involves a characteristic influenced by a single pair of genes, not specifically related to the location of those genes on sex chromosomes.\n\n- **Polygenic inheritance:** Polygenic inheritance refers to traits influenced by multiple genes, and does not pertain to genes located on specific chromosomes, including the X chromosome.\n\n- **Mitochondrial inheritance:** Mitochondrial inheritance involves genes found in mitochondrial DNA, which is inherited exclusively from the mother, and is unrelated to genes located on sex chromosomes.",
+      "kn": "KN22",
+      "kn_explanation": "This question is best aligned with KN22 because it tests Influence of individual-environment interaction on development over time (e.g., the relationship between the individual and the social, academic, work, community environment).",
+      "difficulty": "easy",
+      "quality_comment": "Options are tightly related but only one accurately describes sex-linked inheritance, aiding discrimination.",
+      "lessonExcerpt": "Fragile X Syndrome (FXS) is also X-linked dominant but affects both males and females, with males typically showing more severe symptoms.",
+      "suggestedLesson": "4-before-birth",
+      "needsReview": false
+    },
+    {
+      "stem": "A 30-year-old male client presents with tall stature, long limbs, difficulties with social cognition and executive function, and reports a history of incomplete secondary sex characteristic development. Genetic testing would most likely reveal which chromosomal pattern?",
+      "options": [
+        "Trisomy 21",
+        "XO (monosomy X)",
+        "XXY",
+        "Deletion on chromosome 15"
+      ],
+      "answer": "XXY",
+      "explanation": "The clinical presentation describes Klinefelter syndrome, which affects males who have XXY chromosomes instead of the typical XY. Characteristics include tall stature, long limbs, incomplete development of secondary sex characteristics, and difficulties with executive function and social cognition. Trisomy 21 (A) causes Down syndrome. XO/monosomy X (B) causes Turner syndrome, which affects females. Deletion on chromosome 15 (D) causes either Prader-Willi or Angelman syndrome depending on parental origin.",
+      "kn": "KN4",
+      "kn_explanation": "This question is best aligned with KN4 because it tests Behavioral genetics, transmission and expression of genetic information, and its modification, and the role and limitations of this information in understanding disorders.",
+      "difficulty": "medium",
+      "quality_comment": "Good clinical vignette integrating multiple features of Klinefelter syndrome. Note: primary lesson coverage is in the development domain (4-before-birth), not biopsychology lessons.",
+      "suggestedLesson": "4-before-birth",
+      "suggestedParagraph": "## Sex Chromosome Variations",
+      "lessonExcerpt": "Klinefelter Syndrome affects males who have XXY (or sometimes XXXY or more X chromosomes) instead of the typical XY. They develop male identity and typically masculine appearance, but have: Incomplete development of secondary sex characteristics",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 14
+    },
+    {
+      "stem": "Klinefelter's syndrome is characterized by which of the following genetic conditions?",
+      "options": [
+        "An extra X chromosome in males",
+        "A missing Y chromosome in females",
+        "An extra Y chromosome in males",
+        "A deletion of chromosome 21"
+      ],
+      "answer": "An extra X chromosome in males",
+      "explanation": "Klinefelter's syndrome is specifically characterized by the presence of an extra X chromosome in males (47,XXY). The other options do not accurately describe this genetic condition.",
+      "kn": "KN4",
+      "kn_explanation": "This question is best aligned with KN4 because it tests Behavioral genetics, transmission and expression of genetic information, and its modification, and the role and limitations of this information in understanding disorders.",
+      "difficulty": "medium",
+      "quality_comment": "The question is straightforward and tests knowledge of genetic conditions.",
+      "suggestedLesson": "4-before-birth",
+      "suggestedParagraph": "## Huntington's Disease: The Genetic Movement Disorder",
+      "lessonExcerpt": "**Huntington's disease** is a devastating hereditary condition caused by a mutated gene on chromosome 4.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 14
+    },
+    {
+      "stem": "Cri-du-chat syndrome is primarily caused by a deletion on which chromosome?",
+      "options": [
+        "Chromosome 5",
+        "Chromosome 4",
+        "Chromosome 7",
+        "Chromosome 21"
+      ],
+      "answer": "Chromosome 5",
+      "explanation": "Cri-du-chat syndrome is caused by a deletion on chromosome 5, specifically affecting the 5p region. The other options do not correspond to the genetic basis of this syndrome.",
+      "kn": "KN1",
+      "kn_explanation": "This KN code applies as it relates to chromosomal abnormalities and their genetic implications.",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and directly tests knowledge of genetic syndromes.",
+      "suggestedLesson": "4-before-birth",
+      "suggestedParagraph": "## Huntington's Disease: The Genetic Movement Disorder",
+      "lessonExcerpt": "**Huntington's disease** is a devastating hereditary condition caused by a mutated gene on chromosome 4.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 12
+    },
+    {
+      "stem": "What is a common comorbidity associated with Tourette's disorder?",
+      "options": [
+        "Major depressive disorder",
+        "Obsessive-compulsive disorder",
+        "Bipolar disorder",
+        "Schizophrenia"
+      ],
+      "answer": "Obsessive-compulsive disorder",
+      "explanation": "The correct answer is 'Obsessive-compulsive disorder' as it is frequently found in individuals with Tourette's disorder. The other options are less commonly associated with Tourette's, making them incorrect.",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of comorbid conditions related to Tourette's disorder.",
+      "suggestedLesson": "4-before-birth",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "The lesson does not specifically address Tourette's disorder comorbidities, indicating a need for review.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 14
+    },
+    {
+      "stem": "Which of the following is a key feature in diagnosing autism spectrum disorder related to social communication difficulties?",
+      "options": [
+        "Repetitive behaviors",
+        "Restricted interests",
+        "Deficits in social-emotional reciprocity",
+        "Sensory sensitivities"
+      ],
+      "answer": "Deficits in social-emotional reciprocity",
+      "explanation": "Deficits in social-emotional reciprocity are a core feature of autism spectrum disorder, specifically relating to social communication difficulties. While repetitive behaviors and restricted interests are also characteristics of autism, they do not directly pertain to social communication. Sensory sensitivities are additional features but not central to the diagnosis.",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
+      "difficulty": "hard",
+      "quality_comment": "The question is challenging and directly assesses knowledge of autism spectrum disorder diagnostic criteria.",
+      "suggestedLesson": "4-before-birth",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "Key features in diagnosing autism spectrum disorder include deficits in social-emotional reciprocity.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 13
+    },
+    {
+      "stem": "What is the primary criterion for diagnosing intellectual disability related to adaptive functioning?",
+      "options": [
+        "IQ score below 70",
+        "Onset during developmental period",
+        "Deficits in adaptive functioning",
+        "Cultural considerations"
+      ],
+      "answer": "Deficits in adaptive functioning",
+      "explanation": "Deficits in adaptive functioning are crucial for diagnosing intellectual disability, as they reflect the individual's ability to cope with everyday demands. While an IQ score below 70 is a common criterion, it is not sufficient alone without considering adaptive functioning. Onset during the developmental period is also necessary but does not directly address the adaptive functioning aspect.",
+      "kn": "KN30",
+      "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of the criteria for intellectual disability.",
+      "suggestedLesson": "4-before-birth",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "The primary criterion for diagnosing intellectual disability includes deficits in adaptive functioning.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 14
+    },
+    {
+      "stem": "A developmental psychologist is reviewing epidemiological data on autism spectrum disorder (ASD) for a grant proposal. Based on current prevalence estimates, which of the following statements most accurately describes the sex distribution of ASD diagnoses?",
+      "options": [
+        "Females are diagnosed approximately twice as often as males",
+        "Males and females are diagnosed at approximately equal rates",
+        "Males are diagnosed three to four times more often than females",
+        "Males are diagnosed ten times more often than females"
+      ],
+      "answer": "Males are diagnosed three to four times more often than females",
+      "explanation": "Research consistently shows that males receive ASD diagnoses 3-4 times more often than females. This is one of the most well-established epidemiological findings in developmental psychology. Option A reverses the sex ratio. Option B incorrectly suggests equal rates. Option D exaggerates the male predominance — while the ratio is significant, it is not as extreme as 10:1.",
+      "kn": "KN38",
+      "kn_explanation": "The question asks about epidemiological data and prevalence rates of a psychological disorder (ASD), which directly maps to KN38: Constructs of epidemiology and base rates of psychological and behavioral disorders.",
+      "difficulty": "easy",
+      "quality_comment": "Straightforward factual recall question testing a frequently examined epidemiological fact about ASD.",
+      "suggestedLesson": "4-before-birth",
+      "suggestedParagraph": "### Prevalence and Gender Differences",
+      "lessonExcerpt": "Males receive diagnoses three to four times more often than females.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 13
     }
   ]
 }

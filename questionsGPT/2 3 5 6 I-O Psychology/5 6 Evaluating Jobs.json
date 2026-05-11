@@ -444,6 +444,111 @@
       "lessonExcerpt": "The most common work-oriented method is **task analysis**. Here's how it works: employees and supervisors create a comprehensive list of job tasks, then subject matter experts rate each task on how frequently it occurs and how important it is.",
       "suggestedLesson": "5-6-evaluating-jobs",
       "needsReview": false
+    },
+    {
+      "stem": "Before conducting performance appraisals, a plant supervisor reviews the standardized selection test scores that each employee received when they were hired two years ago. An employee who scored at the 95th percentile on the selection battery subsequently receives a 'superior' performance rating from the supervisor, despite producing output that is objectively average according to production records. This error is best classified as:",
+      "options": [
+        "Halo effect, because the supervisor allowed one positive characteristic to influence ratings on unrelated dimensions",
+        "Criterion contamination, because knowledge of predictor scores has influenced the criterion measure",
+        "Leniency bias, because the supervisor consistently gives overly favorable ratings to all employees",
+        "Central tendency error, because the supervisor is avoiding extreme ratings by anchoring to a mid-range standard"
+      ],
+      "answer": "Criterion contamination, because knowledge of predictor scores has influenced the criterion measure",
+      "explanation": "Criterion contamination occurs when information about predictor scores (the selection test result) influences the criterion measure (the performance appraisal rating), artificially inflating the apparent validity of the predictor. This is distinct from halo effect, which arises from a general favorable impression of a person affecting multiple rating dimensions without necessarily involving a formal predictor score. Leniency bias produces uniformly elevated ratings across all employees and does not require knowledge of predictor data. Central tendency error produces ratings compressed toward the midpoint, the opposite pattern from what is described. Criterion contamination is particularly problematic in validation studies because it creates spurious validity coefficients.",
+      "kn": "KN34",
+      "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
+      "difficulty": "hard",
+      "quality_comment": "Stem provides precise behavioral detail to separate criterion contamination from halo; requires fine-grained definitional knowledge.",
+      "suggestedLesson": "5-6-evaluating-jobs",
+      "suggestedParagraph": "## Performance Appraisal Biases",
+      "lessonExcerpt": "- Knowledge of hiring scores: When a supervisor knows how well someone scored on pre-employment tests and lets that knowledge color performance ratings",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 2
+    },
+    {
+      "stem": "A hospital is revising its annual performance evaluation process for nursing staff after an audit revealed that supervisors consistently assign nearly identical scores across all competency dimensions (clinical skills, communication, professionalism, and teamwork) even when objective indicators suggest meaningful differences between nurses on these dimensions. Which intervention would most directly address the cognitive mechanism producing this rating pattern?",
+      "options": [
+        "Requiring supervisors to submit written justifications for any rating above 'meets expectations'",
+        "Implementing behaviorally anchored rating scales (BARS) that provide specific behavioral descriptions for each score level on each dimension",
+        "Increasing the frequency of evaluations from annual to quarterly to reduce memory decay",
+        "Training supervisors on statistical concepts such as variance and range restriction"
+      ],
+      "answer": "Implementing behaviorally anchored rating scales (BARS) that provide specific behavioral descriptions for each score level on each dimension",
+      "explanation": "The pattern described—uniform scores across all dimensions regardless of actual differences—is the halo effect: a global impression of a ratee contaminates ratings on distinct dimensions. BARS directly counter halo by anchoring each scale point to specific, observable behaviors, forcing evaluators to assess each dimension independently based on behavioral evidence rather than a diffuse overall impression. Written justification requirements may increase effort but do not change the cognitive anchoring mechanism. Increasing evaluation frequency addresses recency bias but not the halo mechanism. Training on statistical variance concepts is abstract and does not provide the behavioral anchors needed at the point of rating. BARS are considered one of the most effective methods specifically for reducing halo error.",
+      "kn": "KN34",
+      "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
+      "difficulty": "medium",
+      "quality_comment": "Well-grounded vignette with a clearly defensible correct answer; tests mechanism-level understanding of why BARS reduce halo specifically.",
+      "suggestedLesson": "5-6-evaluating-jobs",
+      "suggestedParagraph": "## Rater Bias Control Methods",
+      "lessonExcerpt": "**Behaviorally Anchored Rating Scales (BARS)**: These improve on simple graphic scales by anchoring each scale point with specific behavioral descriptions.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 6
+    },
+    {
+      "stem": "Which strategy is most effective in addressing rater leniency during performance appraisals?",
+      "options": [
+        "Implementing a forced-choice rating system",
+        "Providing extensive training on rating criteria",
+        "Using a peer review process",
+        "Conducting appraisals more frequently"
+      ],
+      "answer": "Providing extensive training on rating criteria",
+      "explanation": "Providing extensive training on rating criteria helps raters understand the standards and reduces leniency bias. The other options may help but do not directly address the root cause of leniency.",
+      "kn": "KN34",
+      "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests knowledge of performance appraisal techniques.",
+      "suggestedLesson": "5-6-evaluating-jobs",
+      "suggestedParagraph": "## Understanding Personality Assessment Tools: Your Guide to Structured and Projective Tests",
+      "lessonExcerpt": "Personality tests fall into two main camps: structured tests (where questions have clear, specific answers) and projective tests (where people respond to ambiguous images and reveal themselves indirectly).",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 6
+    },
+    {
+      "stem": "Which of the following best describes the halo effect in performance ratings?",
+      "options": [
+        "Rating based on a single characteristic",
+        "Bias towards negative traits",
+        "Equal evaluation across all traits",
+        "Focus on past performance only"
+      ],
+      "answer": "Rating based on a single characteristic",
+      "explanation": "The correct answer is 'Rating based on a single characteristic' as the halo effect occurs when an evaluator allows one positive trait to influence their overall assessment of an individual. The other options do not accurately capture the essence of the halo effect.",
+      "kn": "KN34",
+      "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of the halo effect and its implications.",
+      "suggestedLesson": "5-6-evaluating-jobs",
+      "suggestedParagraph": "## Why Clinical Tests Matter for Your EPPP Success",
+      "lessonExcerpt": "The **halo error** (also called halo effect or halo bias) occurs when a rater's impression of one performance dimension bleeds over into ratings of unrelated dimensions.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 20
+    },
+    {
+      "stem": "What is a key characteristic of the forced distribution method in employee performance evaluations?",
+      "options": [
+        "A. It allows for unlimited ratings across all employees.",
+        "B. It requires employees to be ranked within a predetermined distribution curve.",
+        "C. It focuses solely on qualitative feedback.",
+        "D. It eliminates bias in performance ratings."
+      ],
+      "answer": "B. It requires employees to be ranked within a predetermined distribution curve.",
+      "explanation": "Option B is correct because the forced distribution method mandates that employees be ranked according to a specific distribution, often leading to a set percentage of employees being categorized into performance tiers. Options A, C, and D are incorrect as they misrepresent the forced distribution method.",
+      "kn": "KN32",
+      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of forced distribution in evaluations.",
+      "suggestedLesson": "5-6-evaluating-jobs",
+      "suggestedParagraph": "## Individual Tests: Matching the Right Tool to the Right Person",
+      "lessonExcerpt": "**Cohen's Kappa:** A more sophisticated measure that corrects for chance agreement.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 8
     }
   ]
 }

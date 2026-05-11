@@ -106,132 +106,6 @@
       "inspirationIndex": 20
     },
     {
-      "stem": "What is a critical ethical consideration for psychologists working in forensic settings?",
-      "options": [
-        "Psychologists should avoid any involvement with legal cases.",
-        "Psychologists must ensure they maintain objectivity and competence.",
-        "Psychologists can prioritize their personal beliefs over professional standards.",
-        "Psychologists should only work with clients they personally agree with."
-      ],
-      "answer": "Psychologists must ensure they maintain objectivity and competence.",
-      "explanation": "The correct answer highlights the necessity for psychologists to uphold objectivity and competence in forensic settings, which is a key ethical requirement. The lesson emphasizes the importance of these qualities in forensic work. The other options misrepresent ethical obligations and suggest unprofessional conduct.",
-      "kn": "KN61",
-      "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
-      "difficulty": "hard",
-      "quality_comment": "The question is well-structured and tests critical understanding of forensic ethics.",
-      "suggestedLesson": "8-standards-3-4",
-      "suggestedParagraph": "## The Foundation: Base Your Conclusions on Solid Ground",
-      "lessonExcerpt": "Forensic work: Providing both therapeutic and forensic services to the same person impairs objectivity",
-      "needsReview": false,
-      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 8
-    },
-    {
-      "stem": "In custody cases, what is an ethical obligation of psychologists who testify?",
-      "options": [
-        "To advocate for the parent they believe is best for the child.",
-        "To provide objective and unbiased testimony based on their evaluations.",
-        "To prioritize the interests of the court over the child's welfare.",
-        "To only testify if they have a personal connection to the case."
-      ],
-      "answer": "To provide objective and unbiased testimony based on their evaluations.",
-      "explanation": "The correct answer emphasizes the ethical obligation to provide objective and unbiased testimony, which is crucial in custody cases. The lesson supports this by stating that psychologists must maintain objectivity in their professional roles. The other options misrepresent the ethical responsibilities of psychologists in these situations.",
-      "kn": "KN62",
-      "kn_explanation": "This question is best aligned with KN62 because it tests Professional standards and relevant guidelines for the practice of psychology (e.g., standards for educational and psychological testing).",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively tests understanding of ethical obligations in legal testimony.",
-      "suggestedLesson": "8-standards-3-4",
-      "suggestedParagraph": "## The Foundation: Base Your Conclusions on Solid Ground",
-      "lessonExcerpt": "Child custody evaluations: Never conduct evaluations with current or former therapy clients",
-      "needsReview": false,
-      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 9
-    },
-    {
-      "stem": "In research involving minors, what is a critical component of obtaining informed consent?",
-      "options": [
-        "Only the parents need to provide consent for the minor's participation.",
-        "The minor must be informed about the research in an age-appropriate manner and assent to participate.",
-        "Informed consent is not necessary if the research poses minimal risk.",
-        "The researcher can proceed without consent if they believe the research is beneficial."
-      ],
-      "answer": "The minor must be informed about the research in an age-appropriate manner and assent to participate.",
-      "explanation": "The correct answer emphasizes the importance of obtaining assent from minors, in addition to parental consent, ensuring that the minor understands the research. The other options either neglect the minor's role in consent or misinterpret the requirements.",
-      "kn": "KN68",
-      "kn_explanation": "This question is best aligned with KN68 because it tests Client and patient rights.",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively tests knowledge of informed consent processes in research.",
-      "suggestedLesson": "8-standards-7-8",
-      "suggestedParagraph": "## Standard 9: Assessment (Getting It Right)",
-      "lessonExcerpt": "Special considerations for children: Children typically need to give assent in addition to their parents' consent.",
-      "needsReview": false,
-      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 16
-    },
-    {
-      "stem": "In cases where there is a risk of imminent harm, what is a psychologist's duty to warn?",
-      "options": [
-        "To inform the potential victim of the threat.",
-        "To maintain confidentiality and not disclose any information.",
-        "To seek legal advice before taking any action.",
-        "To document the threat but take no further action."
-      ],
-      "answer": "To inform the potential victim of the threat.",
-      "explanation": "The correct answer reflects the psychologist's ethical and legal obligation to warn potential victims of imminent harm. The other options either neglect this duty or suggest inappropriate inaction.",
-      "kn": "KN63",
-      "kn_explanation": "This question is best aligned with KN63 because it tests Laws, statutes, and judicial decisions that affect psychological practice.",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively tests knowledge of ethical obligations in cases of imminent harm.",
-      "suggestedLesson": "8-standards-3-4",
-      "suggestedParagraph": "## Standard 9: Assessment (Getting It Right)",
-      "lessonExcerpt": "Many jurisdictions follow the Tarasoff decision, establishing a duty to protect third parties from client violence.",
-      "needsReview": false,
-      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 19
-    },
-    {
-      "stem": "What is one of the primary goals of the APA's Ethical Principles?",
-      "options": [
-        "To promote financial gain for psychologists.",
-        "To ensure the protection of individuals with whom psychologists work.",
-        "To establish a hierarchy of psychological practices.",
-        "To limit the scope of practice for psychologists."
-      ],
-      "answer": "To ensure the protection of individuals with whom psychologists work.",
-      "explanation": "One of the primary goals of the APA's Ethical Principles is to protect the welfare of individuals involved in psychological services. The other options do not reflect the core mission of the ethical principles.",
-      "kn": "KN61",
-      "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively captures a fundamental goal of the APA's ethical framework.",
-      "suggestedLesson": "8-standards-1-2",
-      "suggestedParagraph": "## Standard 9: Assessment",
-      "lessonExcerpt": "The Preamble states the Ethics Code's primary goals: protecting the people psychologists work with and educating everyone about ethical standards.",
-      "needsReview": false,
-      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 9
-    },
-    {
-      "stem": "What is the appropriate action for a psychologist who witnesses an ethical violation by a colleague?",
-      "options": [
-        "Ignore the violation if it does not directly affect clients.",
-        "Report the violation to the appropriate authorities.",
-        "Confront the colleague directly and demand they correct their behavior.",
-        "Discuss the violation with clients to inform them."
-      ],
-      "answer": "Report the violation to the appropriate authorities.",
-      "explanation": "The appropriate action is to report the violation to ensure accountability and protect clients. Ignoring the violation or discussing it with clients does not address the ethical breach, and confronting the colleague may not be safe or effective.",
-      "kn": "KN61",
-      "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively addresses a critical ethical responsibility for psychologists.",
-      "suggestedLesson": "8-standards-1-2",
-      "suggestedParagraph": "## Standard 10: Reporting Ethical Violations",
-      "lessonExcerpt": "Standard 1.05 (Formal Reporting): You must report to an ethics committee, licensing board, or other authority when: The violation has caused or is likely to cause substantial harm",
-      "needsReview": false,
-      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 10
-    },
-    {
       "stem": "What ethical considerations must psychologists keep in mind when administering psychological tests?",
       "options": [
         "Tests should only be administered if the psychologist is familiar with the client.",
@@ -251,27 +125,6 @@
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 17
-    },
-    {
-      "stem": "What ethical obligation does a psychologist have when testifying as a fact witness?",
-      "options": [
-        "To provide only opinions based on personal beliefs.",
-        "To disclose all information about the client without restrictions.",
-        "To testify truthfully based on their observations and knowledge.",
-        "To advocate for the client's interests during testimony."
-      ],
-      "answer": "To testify truthfully based on their observations and knowledge.",
-      "explanation": "As a fact witness, a psychologist is obligated to provide truthful testimony based on their observations and knowledge, without bias or personal opinion. The other options misrepresent the role and responsibilities of a fact witness.",
-      "kn": "KN61",
-      "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
-      "difficulty": "medium",
-      "quality_comment": "The question is clear and effectively assesses knowledge of ethical obligations in legal contexts.",
-      "suggestedLesson": "8-practice-issues",
-      "suggestedParagraph": "## Standard 9: Assessment (Getting It Right)",
-      "lessonExcerpt": "Testifies only to what they directly saw, heard, or observed | Cannot give opinions or speculate | Must have firsthand knowledge",
-      "needsReview": false,
-      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 29
     },
     {
       "stem": "A graduate student asks Dr. Rivera to share the actual test items from the WISC-V so the student can study intelligence testing for a class assignment. Dr. Rivera should:",
@@ -651,27 +504,127 @@
       "needsReview": false
     },
     {
-      "stem": "During a consultation, a psychologist discusses a client's treatment history based on records from another provider. What is the best practice for the psychologist in this scenario?",
+      "stem": "Regarding minority influence in groups, Moscovici proposed that minorities are most effective at persuading the majority when they:",
       "options": [
-        "Present the treatment history as if it were their own assessment",
-        "Mention the other provider's involvement and any potential biases",
-        "Avoid discussing the treatment history to prevent misinformation",
-        "Only refer to the treatment history if the client agrees"
+        "Express their opinion consistently but without rigidity or dogmatism",
+        "Apply pressure through repeated majority normative influence",
+        "Rely on informal social sanctions against the majority",
+        "Accept public compliance but avoid conversion"
       ],
-      "answer": "Mention the other provider's involvement and any potential biases",
-      "explanation": "1. The correct answer, \"Mention the other provider's involvement and any potential biases,\" aligns with Standard 9.01(b) of the APA Ethics Code, which requires psychologists to communicate any limitations of their conclusions when relying on information from other professionals. By acknowledging the other provider's involvement, the psychologist ensures transparency about the source of the treatment history and any potential biases that may arise from that perspective, thereby maintaining ethical standards in assessment and interpretation.\n\n2. The option \"Present the treatment history as if it were their own assessment\" is incorrect because it violates the ethical obligation to accurately represent the source of information, potentially misleading others about the psychologist's role in the assessment. \"Avoid discussing the treatment history to prevent misinformation\" is also wrong, as it disregards the importance of transparency and the ethical responsibility to provide a complete account of the client's treatment history, which can inform current assessments. Lastly, \"Only refer to the treatment history if the client agrees\" is inappropriate because it implies that the psychologist can withhold relevant information from consultations, which undermines the ethical obligation to share pertinent data that could affect treatment decisions.",
-      "difficulty": "hard",
+      "answer": "Express their opinion consistently but without rigidity or dogmatism",
+      "explanation": "1. The correct answer, \"Express their opinion consistently but without rigidity or dogmatism,\" aligns with Moscovici's (1980) findings on minority influence. He emphasized that for a minority to effectively persuade the majority, they must consistently express their opinion while maintaining a flexible approach, avoiding a dogmatic stance. This balance allows the minority to be perceived as credible and reasonable, increasing the likelihood of influencing the majority's views.\n\n2. The option \"Apply pressure through repeated majority normative influence\" is incorrect because it describes a tactic typically used by the majority to maintain conformity, rather than a strategy employed by minorities who rely on consistency and behavioral style. \"Rely on informal social sanctions against the majority\" is wrong because Moscovici's theory focuses on persuasion through consistent expression rather than coercive methods or sanctions. Lastly, \"Accept public compliance but avoid conversion\" is incorrect as it misrepresents the goal of minority influence; Moscovici posited that minorities aim for private acceptance (conversion) rather than mere public compliance, which is more characteristic of majority influence.",
+      "kn": "KN16",
+      "kn_explanation": "This question tests understanding of social influence, particularly minority influence processes within groups, aligned with KN16.",
+      "difficulty": "medium",
+      "quality_comment": "The stem and options clearly address a nuanced aspect of social influence with plausible but conceptually distinct distractors.",
+      "lessonExcerpt": "When to terminate**: End therapy when the client no longer needs it or isn't benefiting from it. This doesn't mean you must terminate the moment progress slows.",
+      "suggestedLesson": "8-standards-9-10",
+      "needsReview": false
+    },
+    {
+      "stem": "Who is ultimately responsible for errors in test interpretation?",
+      "options": [
+        "The individual who administered the test.",
+        "The psychologist who interpreted the results.",
+        "The client who provided the information.",
+        "The test publisher."
+      ],
+      "answer": "The psychologist who interpreted the results.",
+      "explanation": "The correct answer identifies the psychologist as the responsible party for interpreting test results accurately. The other options do not hold the psychologist accountable for their professional judgments.",
+      "kn": "KN62",
+      "kn_explanation": "This question is best aligned with KN62 because it tests Professional standards and relevant guidelines for the practice of psychology (e.g., standards for educational and psychological testing).",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of accountability in test interpretation.",
+      "suggestedLesson": "8-standards-9-10",
+      "suggestedParagraph": "## Understanding Malpractice: The Four Ds You Can't Forget",
+      "lessonExcerpt": "You can use these services, but remember: you retain full responsibility for the appropriate application and interpretation of the results.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 8
+    },
+    {
+      "stem": "According to ethical guidelines, what is the primary purpose of providing feedback after an evaluation?",
+      "options": [
+        "To inform the client of their diagnosis and treatment options.",
+        "To fulfill legal requirements for documentation.",
+        "To ensure the client understands the evaluation process and results.",
+        "To establish a therapeutic alliance with the client."
+      ],
+      "answer": "To ensure the client understands the evaluation process and results.",
+      "explanation": "The correct answer emphasizes the importance of client understanding, which is crucial in ethical practice. The lesson states that feedback is essential for clients to comprehend their evaluations, thus supporting this answer. The other options, while relevant, do not capture the primary ethical purpose of feedback.",
+      "kn": "KN62",
+      "kn_explanation": "This question is best aligned with KN62 because it tests Professional standards and relevant guidelines for the practice of psychology (e.g., standards for educational and psychological testing).",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and directly assesses knowledge of ethical feedback practices.",
+      "suggestedLesson": "8-standards-9-10",
+      "suggestedParagraph": "## Making Ethical Decisions: A Practical Framework",
+      "lessonExcerpt": "Standard 9.10 requires you to explain assessment results to clients unless there's a valid reason not to (like employment screening or forensic evaluations).",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 1
+    },
+    {
+      "stem": "What should a psychologist disclose to clients regarding supervision in their practice?",
+      "options": [
+        "The psychologist should not disclose any information about supervision.",
+        "The psychologist must inform clients about the nature and purpose of supervision.",
+        "Clients do not need to know about supervision as it is an internal matter.",
+        "Supervision details should only be disclosed if the client asks about them."
+      ],
+      "answer": "The psychologist must inform clients about the nature and purpose of supervision.",
+      "explanation": "The correct answer emphasizes the importance of transparency regarding supervision, which is an ethical obligation. The lesson states that psychologists should disclose relevant information to clients, including supervision details. The other options either promote secrecy or fail to recognize the importance of client awareness.",
+      "kn": "KN64",
+      "kn_explanation": "This question is best aligned with KN64 because it tests Identification and management of potential ethical issues.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of ethical obligations related to supervision disclosure.",
+      "suggestedLesson": "8-standards-9-10",
+      "suggestedParagraph": "## Multiple Relationships: The Most Complex Standard",
+      "lessonExcerpt": "Trainee therapists (Standard 10.01(c)): Clients must know if their therapist is in training, that they're supervised, and who the supervisor is.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 7
+    },
+    {
+      "stem": "What is the ethical stance on sexual relationships with former clients according to the APA Ethics Code?",
+      "options": [
+        "They are permissible after a two-year waiting period.",
+        "They are prohibited for at least two years after termination, and after that only in the most unusual circumstances.",
+        "They are allowed if the former client consents.",
+        "They are acceptable if the relationship does not impair professional judgment."
+      ],
+      "answer": "They are prohibited for at least two years after termination, and after that only in the most unusual circumstances.",
+      "explanation": "APA Ethics Code Standard 10.08 prohibits sexual intimacies with former clients for at least two years after termination of therapy. Even after two years, such relationships are still prohibited except in the 'most unusual circumstances,' and the psychologist bears the burden of proving that the relationship is not exploitative. The 'permissible after two years' option is too permissive; in practice, these relationships remain ethically problematic.",
       "kn": "KN61",
       "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
-      "quality_comment": "This question challenges the test-taker to apply ethical principles in a more complex scenario.",
-      "is_lock_in_drill": true,
-      "lock_in_level": "harder",
-      "tags": [
-        "lock_in_drill"
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of ethical boundaries in therapy.",
+      "suggestedLesson": "8-standards-9-10",
+      "suggestedParagraph": "## Standard 3: Human Relations",
+      "lessonExcerpt": "Standard 10.08: No sexual intimacies with former clients for at least two years after termination. After two years, it's still prohibited except in the \"most unusual circumstances,\" and you bear the burden of proving the relationship isn't exploitative.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 28
+    },
+    {
+      "stem": "How should a psychologist respond if a client expresses concerns about the testing process?",
+      "options": [
+        "Dismiss the concerns as irrelevant to the testing.",
+        "Acknowledge the concerns and provide clear information about the testing process.",
+        "Tell the client that their concerns are unfounded.",
+        "Reassure the client that testing is always accurate."
       ],
-      "lessonExcerpt": "Standard 4.06 allows consulting with colleagues about clients but requires not disclosing identifying information without authorization. Disclose only what's necessary for the consultation purpose.",
-      "suggestedLesson": "8-standards-3-4",
-      "needsReview": false
+      "answer": "Acknowledge the concerns and provide clear information about the testing process.",
+      "explanation": "The correct answer emphasizes the importance of open communication and addressing client concerns, which is essential for ethical practice. The other options either dismiss the client's feelings or provide misleading information.",
+      "kn": "KN62",
+      "kn_explanation": "This question is best aligned with KN62 because it tests Professional standards and relevant guidelines for the practice of psychology (e.g., standards for educational and psychological testing).",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of ethical communication with clients.",
+      "suggestedLesson": "8-standards-9-10",
+      "suggestedParagraph": "## Standard 9: Assessment (Getting It Right)",
+      "lessonExcerpt": "Standard 9.03 outlines what clients need to know before assessment: The nature and purpose of the assessment; Fees involved; Whether third parties will be involved; Limits of confidentiality; Opportunity to ask questions",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 15
     }
   ]
 }

@@ -594,6 +594,192 @@
       "lessonExcerpt": "Delay Conditioning | CS starts, then US appears while CS is still present (they overlap)",
       "suggestedLesson": "2-pavlov-and-classical-conditioning",
       "needsReview": false
+    },
+    {
+      "stem": "A sex therapist applies aversive counterconditioning to treat a client whose shoe fetish is causing marked personal distress. The therapist repeatedly and systematically pairs visual presentations of the fetish object with a highly aversive stimulus to extinguish the problematic arousal response. In classical conditioning terminology, the fetish object in this procedure is correctly identified as the:",
+      "options": [
+        "Unconditioned stimulus, because it automatically and reflexively elicits sexual arousal independent of any prior learning history",
+        "Conditioned stimulus, because it has acquired its capacity to elicit sexual arousal through prior associative learning experiences",
+        "Unconditioned response, because sexual arousal in the presence of the fetish object is a biologically hardwired reflexive reaction",
+        "Conditioned response, because the pattern of arousal to non-sexual objects developed through a history of conditioning experiences"
+      ],
+      "answer": "Conditioned stimulus, because it has acquired its capacity to elicit sexual arousal through prior associative learning experiences",
+      "explanation": "In the classical conditioning account of paraphilias such as fetishism, a neutral object (e.g., a shoe) acquires sexually arousing properties through repeated pairing with sexual arousal early in the individual's conditioning history. The fetish object thus functions as a conditioned stimulus (CS) that reliably elicits sexual arousal (the conditioned response, CR). In aversive counterconditioning, the CS (fetish object) is paired with an aversive unconditioned stimulus (UCS)—such as chemically induced nausea or aversive imagery—to extinguish or counter-condition the CR. Option A is incorrect because the fetish object does not innately and automatically elicit arousal without prior associative learning. Options C and D confuse stimuli with responses within the classical conditioning framework: arousal to the fetish is the conditioned response, not the object itself.",
+      "kn": "KN44",
+      "kn_explanation": "This question is best aligned with KN44 because it tests Treatment techniques and interventions, and the evidence for their comparative efficacy and effectiveness.",
+      "difficulty": "hard",
+      "quality_comment": "Technically precise question requiring accurate application of classical conditioning terminology. The role of the CS in aversive counterconditioning for paraphilias is. Content goes beyond current lesson material — valid EPPP topic, no lesson excerpt available.",
+      "suggestedLesson": "2-pavlov-and-classical-conditioning",
+      "suggestedParagraph": "## Aversive Counterconditioning",
+      "lessonExcerpt": "Unconditioned Stimulus (US)**: This is something that naturally, automatically triggers a response without any learning required. In Pavlov's studies, meat powder was the US.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 30
+    },
+    {
+      "stem": "What role does classical conditioning play in the development of attitudes as conditioned responses?",
+      "options": [
+        "Attitudes are formed through direct reinforcement of behaviors.",
+        "Attitudes develop as a result of repeated pairings of stimuli that evoke emotional responses.",
+        "Attitudes are solely based on cognitive evaluations of situations.",
+        "Attitudes cannot be modified once established."
+      ],
+      "answer": "Attitudes develop as a result of repeated pairings of stimuli that evoke emotional responses.",
+      "explanation": "Classical conditioning suggests that attitudes can be formed through the association of neutral stimuli with emotional responses, leading to conditioned attitudes. Option A misrepresents the role of reinforcement, while Option C ignores the emotional aspect, and Option D is incorrect as attitudes can be modified.",
+      "kn": "KN7",
+      "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses knowledge of classical conditioning and its impact on attitudes.",
+      "suggestedLesson": "2-pavlov-and-classical-conditioning",
+      "suggestedParagraph": "## Why Classical Conditioning Matters for Your Practice",
+      "lessonExcerpt": "Understanding classical conditioning isn't just about passing the EPPP. It's about recognizing one of the most powerful ways our nervous system learns.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 5
+    },
+    {
+      "stem": "A therapist is conducting aversion therapy with a client who has a fetishistic disorder. In this counterconditioning paradigm, the fetish object (e.g., a specific article of clothing) is repeatedly presented immediately before an aversive stimulus such as a mild electric shock. In classical conditioning terms, the fetish object serves as the:",
+      "options": [
+        "Unconditioned stimulus (US)",
+        "Conditioned stimulus (CS)",
+        "Conditioned response (CR)",
+        "Unconditioned response (UR)"
+      ],
+      "answer": "Conditioned stimulus (CS)",
+      "explanation": "In aversion therapy, the stimuli associated with the problem behavior serve as the conditioned stimulus (CS). The fetish object is a previously learned stimulus that currently elicits a pleasurable response; the goal of aversion therapy is to pair it with an unconditioned stimulus (electric shock, which naturally produces pain/discomfort as the UR) so that the fetish object eventually elicits an aversive conditioned response (CR) instead of pleasure. The unconditioned stimulus (A) is the aversive stimulus itself (shock). The conditioned response (C) is the new aversive reaction to the fetish object after conditioning. The unconditioned response (D) is the natural pain reaction to the shock.",
+      "kn": "KN44",
+      "kn_explanation": "Aversion therapy is a specific treatment technique (counterconditioning paradigm) for a diagnosed disorder, fitting KN44's focus on treatment techniques/interventions and their efficacy.",
+      "difficulty": "medium",
+      "quality_comment": "Directly supported by lesson content which explicitly lists the fetish object as a CS example. Clear, unambiguous answer.",
+      "suggestedLesson": "2-pavlov-and-classical-conditioning",
+      "suggestedParagraph": "### Aversion Therapy",
+      "lessonExcerpt": "Conditioned Stimulus (CS): Stimuli associated with the problem behavior (alcohol, cigarettes, fetish object). Unconditioned Stimulus (US): Something naturally unpleasant (electric shock, nausea-inducing drug, foul odor).",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 30
+    },
+    {
+      "stem": "In aversion therapy, the fetish object serves as which of the following in classical conditioning terms?",
+      "options": [
+        "Conditioned stimulus (CS)",
+        "Unconditioned stimulus (US)",
+        "Unconditioned response (UR)",
+        "Conditioned response (CR)"
+      ],
+      "answer": "Conditioned stimulus (CS)",
+      "explanation": "1. The correct answer is \"Conditioned stimulus (CS)\" because in aversion therapy, the fetish object is initially a neutral stimulus that becomes associated with an unconditioned stimulus (US), such as electric shock. As a result of this pairing, the fetish object elicits a conditioned response (CR) of pain or discomfort rather than the original self-reinforcing response, making it a conditioned stimulus.\n\n2. The option \"Unconditioned stimulus (US)\" is incorrect because the US is the stimulus that naturally elicits an unlearned response, such as the electric shock, not the fetish object. \"Unconditioned response (UR)\" is wrong because the UR is the natural reaction to the unconditioned stimulus, which in this case would be the pain from the shock, not the fetish object. Finally, \"Conditioned response (CR)\" is incorrect because the CR is the learned response to the conditioned stimulus, which is the pain or discomfort elicited by the fetish object after conditioning, rather than the fetish object itself.",
+      "kn": "KN7",
+      "kn_explanation": "This question assesses knowledge of classical conditioning terminology as applied to behavioral interventions (KN7).",
+      "difficulty": "easy",
+      "quality_comment": "This is a straightforward, well-constructed question testing fundamental classical conditioning concepts in treatment context.",
+      "lessonExcerpt": "Conditioned Stimulus (CS): Stimuli associated with the problem behavior (alcohol, cigarettes, fetish object)",
+      "suggestedLesson": "2-pavlov-and-classical-conditioning",
+      "needsReview": false
+    },
+    {
+      "stem": "Which of the following elements is NOT associated with operant conditioning?",
+      "options": [
+        "Reinforcement schedules",
+        "Shaping behaviors",
+        "Classical conditioning",
+        "Punishment types"
+      ],
+      "answer": "Classical conditioning",
+      "explanation": "Classical conditioning is a different learning process than operant conditioning, which focuses on reinforcement and punishment. The other options are all components of operant conditioning.",
+      "kn": "KN7",
+      "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests knowledge of learning theories and their distinctions.",
+      "suggestedLesson": "2-pavlov-and-classical-conditioning",
+      "suggestedParagraph": "## Why Operant Conditioning Still Matters in Modern Practice",
+      "lessonExcerpt": "Time out (formally \"time out from positive reinforcement\") removes access to ALL reinforcement for a brief period.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 12
+    },
+    {
+      "stem": "Masters and Johnson's sensate focus technique for treating sexual dysfunctions is theoretically classified as which type of intervention?",
+      "options": [
+        "An extinction-based procedure that habituates the anxiety response through repeated exposure",
+        "A counterconditioning technique that uses pleasure to inhibit performance anxiety",
+        "A cognitive restructuring approach that challenges irrational beliefs about sexual performance",
+        "An operant conditioning procedure that reinforces successive approximations of sexual behavior"
+      ],
+      "answer": "A counterconditioning technique that uses pleasure to inhibit performance anxiety",
+      "explanation": "Sensate focus is classified as a counterconditioning intervention. According to the reference material, it 'uses pleasure as the counterconditioning response to inhibit performance anxiety.' Pleasure is elicited through body massages that are discontinued at the first sign of anxiety, and the couple initially abstains from intercourse to reduce performance pressure. Option A is incorrect because sensate focus is not primarily an extinction procedure—it actively pairs a new response (pleasure) with the anxiety-provoking stimulus. Option C is incorrect because sensate focus is a behavioral, not cognitive, technique. Option D is incorrect because sensate focus is based on classical conditioning (counterconditioning), not operant conditioning or shaping.",
+      "kn": "KN44",
+      "kn_explanation": "Sensate focus is a specific treatment technique for sexual dysfunctions; the question asks about classifying the intervention type, which maps to treatment techniques and their evidence base.",
+      "difficulty": "hard",
+      "quality_comment": "Tests precise theoretical classification of a commonly tested intervention. Distractors represent plausible but incorrect mechanisms.",
+      "suggestedLesson": "2-pavlov-and-classical-conditioning",
+      "suggestedParagraph": "### Erectile Disorder: Understanding the Numbers",
+      "lessonExcerpt": "Sensate Focus (developed by Masters and Johnson in 1970) is the gold standard behavioral intervention. It works by gradually rebuilding intimacy while removing performance pressure.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 2
+    },
+    {
+      "stem": "A client with alcohol use disorder reports experiencing intense cravings whenever he drives past the bar where he used to drink regularly. From a behavioral perspective, this craving response is BEST explained by:",
+      "options": [
+        "Operant conditioning, in which the bar serves as a positive discriminative stimulus signaling reinforcement availability",
+        "Classical conditioning, in which the bar has become a conditioned stimulus eliciting a conditioned craving response",
+        "Negative reinforcement, in which drinking at the bar previously removed withdrawal symptoms",
+        "Both classical conditioning creating the cue-triggered craving and operant conditioning maintaining drinking through positive reinforcement"
+      ],
+      "answer": "Both classical conditioning creating the cue-triggered craving and operant conditioning maintaining drinking through positive reinforcement",
+      "explanation": "Addictive behaviors are maintained through the interplay of both classical and operant conditioning. Through classical conditioning, environmental cues (the bar) become conditioned stimuli that elicit conditioned craving responses. Through operant conditioning, the drinking behavior is maintained by positive reinforcement (pleasurable effects of alcohol) and negative reinforcement (removal of withdrawal symptoms or stress). The lesson on cue exposure therapy explains: 'With addiction, certain cues become powerfully associated with use... These become conditioned stimuli that trigger cravings and use.' Meanwhile, operant principles explain why the behavior persists. Option A captures only the operant component; Option B captures only the classical component; Option C is partially correct but incomplete, addressing only one type of reinforcement.",
+      "kn": "KN44",
+      "kn_explanation": "Behavioral conceptualization of cravings informing treatment intervention",
+      "difficulty": "hard",
+      "quality_comment": "Tests integration of two learning paradigms in addiction—a common EPPP application question format.",
+      "suggestedLesson": "2-pavlov-and-classical-conditioning",
+      "suggestedParagraph": "### Cue Exposure Therapy",
+      "lessonExcerpt": "With addiction, certain cues become powerfully associated with use. The smell of cigarette smoke in a bar, the sight of friends you used to drink with, even the specific route home that passes your dealer's corner. These become conditioned stimuli that trigger cravings and use.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 3
+    },
+    {
+      "stem": "A client developed a conditioned fear of elevators after being trapped in one during a power outage. To extinguish this classically conditioned fear response, the therapist should:",
+      "options": [
+        "Pair elevator exposure with an aversive stimulus to create a competing response",
+        "Repeatedly present the conditioned stimulus (elevator) without the unconditioned stimulus (being trapped)",
+        "Reinforce the client each time they successfully avoid elevators",
+        "Have the client practice relaxation while imagining elevators, progressing through a fear hierarchy"
+      ],
+      "answer": "Repeatedly present the conditioned stimulus (elevator) without the unconditioned stimulus (being trapped)",
+      "explanation": "Classical extinction occurs when the conditioned stimulus (CS) is repeatedly presented without the unconditioned stimulus (US), breaking the learned association. The lesson states: 'Extinction means breaking the connection between a trigger (conditioned stimulus) and the unwanted response... the trigger no longer leads to the old reaction because you've interrupted that pathway enough times.' Option A describes aversion therapy, which creates new aversive associations rather than extinguishing existing ones. Option C reinforces avoidance, which would maintain the fear through negative reinforcement. Option D describes systematic desensitization, which Wolpe conceptualized as counterconditioning (not extinction), though research suggests its effectiveness may actually work through extinction.",
+      "kn": "KN44",
+      "kn_explanation": "Extinction of conditioned fear is a treatment technique (exposure-based)",
+      "difficulty": "easy",
+      "quality_comment": "Foundational question clearly supported by lesson content. Good distractors that test related but distinct concepts.",
+      "suggestedLesson": "2-pavlov-and-classical-conditioning",
+      "suggestedParagraph": "## Extinction-Based Interventions: Breaking Old Connections",
+      "lessonExcerpt": "Extinction means breaking the connection between a trigger (conditioned stimulus) and the unwanted response... the trigger no longer leads to the old reaction because you've interrupted that pathway enough times.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 7
+    },
+    {
+      "stem": "A client successfully completed exposure-based therapy for dog phobia two years ago, reporting no fear during her final session. She encounters a dog unexpectedly at a park and experiences a strong fear response. Her therapist explains this is a predictable phenomenon rooted in classical conditioning principles. Which mechanism best explains what has occurred?",
+      "options": [
+        "Stimulus generalization, in which the fear response has transferred from the original conditioned stimulus to a novel but similar stimulus",
+        "Spontaneous recovery, in which the previously extinguished conditioned response has returned following a rest period without extinction trials",
+        "Higher-order conditioning, in which new stimuli previously associated with the conditioned stimulus have acquired conditioned fear properties",
+        "Disinhibition, in which a novel extraneous stimulus encountered at the park disrupted the inhibitory process maintaining extinction"
+      ],
+      "answer": "Spontaneous recovery, in which the previously extinguished conditioned response has returned following a rest period without extinction trials",
+      "explanation": "Spontaneous recovery is the reappearance of an extinguished conditioned response after a rest interval without additional conditioning or extinction trials. This phenomenon reveals that extinction does not permanently erase the original learning but instead creates new inhibitory learning that competes with the original excitatory conditioned response. Over time, the inhibitory memory fades relative to the original conditioning, allowing the CR to re-emerge. Stimulus generalization involves fear spreading to novel stimuli resembling the CS, not the return of fear to the original CS. Higher-order conditioning involves a CS becoming a UCS for other neutral stimuli, which is a different mechanism. Disinhibition occurs when an extraneous novel stimulus disrupts ongoing extinction during a session, not a return of fear after a two-year gap.",
+      "kn": "KN43",
+      "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
+      "difficulty": "hard",
+      "quality_comment": "Clinically relevant scenario connecting conditioning principles to treatment durability; requires precise discrimination between similar conditioning phenomena. Lesson",
+      "suggestedLesson": "2-pavlov-and-classical-conditioning",
+      "suggestedParagraph": "## Beck's Cognitive Therapy: The Foundation",
+      "lessonExcerpt": "CBT uses both cognitive techniques (like reframing thoughts and examining evidence) and behavioral techniques (like activity scheduling, exposure therapy, and behavioral rehearsal).",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 7
     }
   ]
 }

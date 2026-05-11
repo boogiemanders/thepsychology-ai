@@ -438,6 +438,48 @@
       "lessonExcerpt": "History occurs when outside events during the study affect the results.",
       "suggestedLesson": "7-internal-external-validity",
       "needsReview": false
+    },
+    {
+      "stem": "What is the primary purpose of the Solomon Four-Group design in experimental research?",
+      "options": [
+        "To control for the effects of pre-testing on the dependent variable.",
+        "To compare multiple treatment conditions simultaneously.",
+        "To assess the long-term effects of an intervention.",
+        "To evaluate the reliability of measurement tools."
+      ],
+      "answer": "To control for the effects of pre-testing on the dependent variable.",
+      "explanation": "The Solomon Four-Group design is specifically structured to assess the impact of pre-testing on outcomes by including groups that do and do not receive pre-tests. The other options do not accurately reflect the primary purpose of this design.",
+      "kn": "KN54",
+      "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
+      "difficulty": "hard",
+      "quality_comment": "The question is well-constructed and tests knowledge of a specific experimental design.",
+      "suggestedLesson": "7-internal-external-validity",
+      "suggestedParagraph": "## The Big Picture: Qualitative vs. Quantitative",
+      "lessonExcerpt": "The **Solomon four-group design** simultaneously addresses testing as a threat to internal validity and pretest-treatment interaction as a threat to external validity.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 6
+    },
+    {
+      "stem": "Which of the following methods is most effective in reducing experimenter bias in research design?",
+      "options": [
+        "Using a single-blind design where participants are unaware of the treatment conditions.",
+        "Employing random assignment to groups.",
+        "Conducting a double-blind study where both participants and researchers are unaware of the treatment conditions.",
+        "Using a control group that receives no treatment."
+      ],
+      "answer": "Conducting a double-blind study where both participants and researchers are unaware of the treatment conditions.",
+      "explanation": "The correct answer is the most effective method for minimizing experimenter bias, as it prevents both participants and researchers from influencing the results. The other options may reduce bias but do not eliminate it as effectively as a double-blind design.",
+      "kn": "KN54",
+      "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses knowledge of research design principles.",
+      "suggestedLesson": "7-internal-external-validity",
+      "suggestedParagraph": "## The Big Picture: Qualitative vs. Quantitative",
+      "lessonExcerpt": "**Double-blind technique**: Neither participants nor researchers interacting with them know who's in which group",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 5
     }
   ]
 }

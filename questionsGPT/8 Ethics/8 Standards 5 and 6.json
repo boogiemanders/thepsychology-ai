@@ -211,27 +211,6 @@
       "inspirationIndex": 24
     },
     {
-      "stem": "What is the ethical guideline regarding quoting academic work in psychological publications?",
-      "options": [
-        "Quoting is allowed without attribution as long as the source is well-known.",
-        "All quotes must be accurately attributed to the original author.",
-        "Paraphrasing is preferred over direct quotes.",
-        "Only use quotes from peer-reviewed journals."
-      ],
-      "answer": "All quotes must be accurately attributed to the original author.",
-      "explanation": "The correct answer is that all quotes must be attributed, which is a fundamental ethical guideline in academic writing. The lesson emphasizes the importance of proper citation to maintain integrity in academic work. The other options misrepresent ethical standards regarding quoting and attribution.",
-      "kn": "KN61",
-      "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively tests knowledge of ethical citation practices.",
-      "suggestedLesson": "8-standards-7-8",
-      "suggestedParagraph": "## The Core Principle: Truth in All Forms",
-      "lessonExcerpt": "Plagiarism: Standard 8.11 prohibits presenting others' work as your own, even if you cite the source occasionally.",
-      "needsReview": false,
-      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 5
-    },
-    {
       "stem": "Which of the following best describes the ethical considerations involved in marketing psychological services?",
       "options": [
         "Psychologists can make exaggerated claims about their services to attract clients.",
@@ -335,27 +314,6 @@
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 13
-    },
-    {
-      "stem": "How should a psychologist respond if a client expresses concerns about the testing process?",
-      "options": [
-        "Dismiss the concerns as irrelevant to the testing.",
-        "Acknowledge the concerns and provide clear information about the testing process.",
-        "Tell the client that their concerns are unfounded.",
-        "Reassure the client that testing is always accurate."
-      ],
-      "answer": "Acknowledge the concerns and provide clear information about the testing process.",
-      "explanation": "The correct answer emphasizes the importance of open communication and addressing client concerns, which is essential for ethical practice. The other options either dismiss the client's feelings or provide misleading information.",
-      "kn": "KN62",
-      "kn_explanation": "This question is best aligned with KN62 because it tests Professional standards and relevant guidelines for the practice of psychology (e.g., standards for educational and psychological testing).",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively assesses understanding of ethical communication with clients.",
-      "suggestedLesson": "8-standards-9-10",
-      "suggestedParagraph": "## Standard 9: Assessment (Getting It Right)",
-      "lessonExcerpt": "Standard 9.03 outlines what clients need to know before assessment: The nature and purpose of the assessment; Fees involved; Whether third parties will be involved; Limits of confidentiality; Opportunity to ask questions",
-      "needsReview": false,
-      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 15
     },
     {
       "stem": "When providing advice in public settings, what is a key ethical boundary psychologists must maintain?",
@@ -778,6 +736,48 @@
       "lessonExcerpt": "Once you put information out there for others to see, you're accountable for its accuracy. This includes statements about: Your training and education; Your experience and expertise; Your credentials and licenses; The services you offer; Your fees; The organizations you're affiliated with",
       "suggestedLesson": "8-standards-5-6",
       "needsReview": false
+    },
+    {
+      "stem": "According to the APA Ethics Code, what is the primary purpose of maintaining accurate records in psychological practice?",
+      "options": [
+        "To ensure compliance with insurance requirements",
+        "To provide a basis for future treatment decisions",
+        "To protect the psychologist from malpractice claims",
+        "To facilitate client billing and payment"
+      ],
+      "answer": "To provide a basis for future treatment decisions",
+      "explanation": "Maintaining accurate records is essential for providing continuity of care and making informed treatment decisions. While compliance and billing are important, they are secondary to the primary goal of client care.",
+      "kn": "KN61",
+      "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of the importance of record keeping in psychology.",
+      "suggestedLesson": "8-standards-5-6",
+      "suggestedParagraph": "## Understanding Malpractice: The Four Ds You Can't Forget",
+      "lessonExcerpt": "Standard 6.01 requires psychologists to create, maintain, and eventually dispose of records appropriately. The reasons are practical: Facilitating continuity of care if services transfer to another provider",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 12
+    },
+    {
+      "stem": "What is the primary ethical concern regarding referral fees in therapy?",
+      "options": [
+        "They can create a conflict of interest.",
+        "They are always illegal.",
+        "They ensure therapists are compensated fairly.",
+        "They enhance client trust."
+      ],
+      "answer": "They can create a conflict of interest.",
+      "explanation": "Referral fees can lead to conflicts of interest where the therapist may prioritize financial gain over the best interests of the client. The other options misrepresent the nature of referral fees; they are not inherently illegal, do not guarantee fair compensation, and do not necessarily enhance trust.",
+      "kn": "KN64",
+      "kn_explanation": "This question is best aligned with KN64 because it tests Identification and management of potential ethical issues.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively highlights the ethical implications of referral fees in therapeutic settings.",
+      "suggestedLesson": "8-standards-5-6",
+      "suggestedParagraph": "## What Actually Gets Psychologists in Trouble",
+      "lessonExcerpt": "Standard 6.07 states that referral fees must be \"based on the services provided\" and not \"on the referral itself.\"",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 3
     }
   ]
 }

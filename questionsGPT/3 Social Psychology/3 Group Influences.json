@@ -82,27 +82,6 @@
       "inspirationIndex": 10
     },
     {
-      "stem": "A therapist is leading a process group that has been meeting weekly for six weeks. During the most recent session, two members openly challenged the therapist's leadership style, while another member criticized a peer's tendency to dominate discussions. According to Yalom's model of group development, these behaviors are MOST characteristic of which stage?",
-      "options": [
-        "The orientation stage, in which members seek structure and test boundaries",
-        "The conflict stage, characterized by rebellion toward leaders and attempts at dominance",
-        "The cohesiveness stage, marked by trust building and authentic sharing",
-        "The termination stage, in which members process feelings about the group ending"
-      ],
-      "answer": "The conflict stage, characterized by rebellion toward leaders and attempts at dominance",
-      "explanation": "Yalom's model describes three stages of group development: orientation/dependency, conflict/dominance, and cohesiveness. The second stage is characterized by conflict among group members, rebellion toward group leaders, and attempts at dominance—exactly what is described in the scenario. The orientation stage (A) involves hesitant participation and seeking structure, not challenging leadership. The cohesiveness stage (C) involves trust and mutual concern, which has not yet developed. There is no separate termination stage in Yalom's three-stage model (D).",
-      "kn": "KN16",
-      "kn_explanation": "Group development stages (Tuckman's storming) and group process",
-      "difficulty": "medium",
-      "quality_comment": "Well-grounded in lesson content from both the group therapy lesson and the reference text. Tests application rather than simple recall.",
-      "suggestedLesson": "5-acting-out",
-      "suggestedParagraph": "### Three Formative Stages (Yalom & Leszcz)",
-      "lessonExcerpt": "Normal adolescent rebellion doesn't meet criteria. **Misconception 2:** \"CD and ASPD are the same thing.\" **Reality:** CD cannot be diagnosed after age 18 if the person meets criteria for Antisocial Personality Disorder.",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 19
-    },
-    {
       "stem": "A clinical treatment team individually favors a moderately conservative approach to a complex case. After extensive group discussion, they collectively decide on an even more cautious plan than any individual member originally endorsed. This outcome is best explained by:",
       "options": [
         "Groupthink, because the team suppressed dissenting opinions to maintain harmony",
@@ -145,90 +124,6 @@
       "inspirationIndex": 5
     },
     {
-      "stem": "What condition is most likely to lead to groupthink in decision-making processes?",
-      "options": [
-        "A) A diverse group with varying opinions.",
-        "B) High levels of stress and time pressure.",
-        "C) Open communication and debate.",
-        "D) A strong leader who encourages dissent."
-      ],
-      "answer": "B) High levels of stress and time pressure.",
-      "explanation": "Option B is correct because high stress and time pressure can lead to groupthink by discouraging critical evaluation of alternatives. Option A is incorrect as diversity typically reduces groupthink. Option C promotes healthy discussion, countering groupthink. Option D encourages dissent, which is contrary to the nature of groupthink.",
-      "kn": "KN16",
-      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively tests understanding of conditions that foster groupthink.",
-      "suggestedLesson": "5-6-workplace-decisions",
-      "suggestedParagraph": "## When Others Watch: Social Facilitation and Social Inhibition",
-      "lessonExcerpt": "Here's what makes groupthink likely: - **High cohesiveness**: The group members really like and trust each other - **Strong directive leader**: One person's opinion carries outsized weight - **Isolation from outside perspectives**: The group operates in an echo chamber - **Pressure for quick decisions**: Time constraints prevent thorough analysis",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 15
-    },
-    {
-      "stem": "In decision-making processes, which of the following statements is true regarding the effectiveness of groups compared to individuals?",
-      "options": [
-        "A) Groups always make better decisions than individuals.",
-        "B) Individuals are less prone to biases than groups.",
-        "C) Groups can benefit from diverse perspectives but may also fall prey to groupthink.",
-        "D) Individual decisions are always faster than group decisions."
-      ],
-      "answer": "C) Groups can benefit from diverse perspectives but may also fall prey to groupthink.",
-      "explanation": "Option C is correct as groups can leverage diverse perspectives but are also susceptible to groupthink, which can hinder decision-making. Option A is incorrect; groups do not always make better decisions. Option B is misleading; individuals can also exhibit biases. Option D is false; group decisions can be slower due to discussion.",
-      "kn": "KN16",
-      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively tests understanding of group decision-making dynamics.",
-      "suggestedLesson": "5-6-workplace-decisions",
-      "suggestedParagraph": "## Losing Yourself in the Crowd: Deindividuation",
-      "lessonExcerpt": "Here's what makes groupthink likely: - **High cohesiveness**: The group members really like and trust each other - **Strong directive leader**: One person's opinion carries outsized weight - **Isolation from outside perspectives**: The group operates in an echo chamber - **Pressure for quick decisions**: Time constraints prevent thorough analysis",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 20
-    },
-    {
-      "stem": "In group settings, what phenomenon describes the tendency for individuals to adopt more extreme positions than they would alone?",
-      "options": [
-        "Groupthink",
-        "Social loafing",
-        "Response polarization",
-        "Deindividuation"
-      ],
-      "answer": "Response polarization",
-      "explanation": "Response polarization refers to the tendency of group members to adopt more extreme positions after group discussions than they would individually. Groupthink involves consensus-seeking that can suppress dissent, social loafing refers to reduced effort in groups, and deindividuation involves loss of self-awareness in groups.",
-      "kn": "KN16",
-      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
-      "difficulty": "hard",
-      "quality_comment": "The question is well-structured and requires a nuanced understanding of group dynamics.",
-      "suggestedLesson": "5-6-workplace-decisions",
-      "suggestedParagraph": "## When Others Watch: Social Facilitation and Social Inhibition",
-      "lessonExcerpt": "Here's what makes groupthink likely: - **High cohesiveness**: The group members really like and trust each other - **Strong directive leader**: One person's opinion carries outsized weight - **Isolation from outside perspectives**: The group operates in an echo chamber - **Pressure for quick decisions**: Time constraints prevent thorough analysis",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 22
-    },
-    {
-      "stem": "What type of group task is characterized by a single solution that is determined by the most competent member of the group?",
-      "options": [
-        "Disjunctive task",
-        "Conjunctive task",
-        "Additive task",
-        "Compensatory task"
-      ],
-      "answer": "Disjunctive task",
-      "explanation": "A disjunctive task is one where the group's success depends on the performance of the best member, as there is a single correct solution. In contrast, conjunctive tasks require all members to contribute for success, additive tasks combine individual contributions, and compensatory tasks average the contributions of all members. Therefore, disjunctive task is the correct answer.",
-      "kn": "KN16",
-      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
-      "difficulty": "medium",
-      "quality_comment": "Clear question that assesses knowledge of group task types.",
-      "suggestedLesson": "5-6-workplace-decisions",
-      "suggestedParagraph": "## Types of Group Tasks",
-      "lessonExcerpt": "Two specific phenomena can seriously undermine group decision-making: groupthink and group polarization. These patterns are so common and so damaging that understanding them is critical for your professional life.",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 4
-    },
-    {
       "stem": "Which phenomenon describes the tendency for individuals to exert less effort when working in a group compared to when working alone?",
       "options": [
         "Social facilitation",
@@ -250,48 +145,6 @@
       "inspirationIndex": 5
     },
     {
-      "stem": "Which term describes a situation where group members prioritize consensus over critical evaluation of alternatives, often leading to poor decision-making?",
-      "options": [
-        "Social facilitation",
-        "Groupthink",
-        "Social loafing",
-        "Deindividuation"
-      ],
-      "answer": "Groupthink",
-      "explanation": "Groupthink occurs when group members prioritize consensus and harmony over critical evaluation of alternatives, which can lead to poor decision-making. Social facilitation refers to improved performance in the presence of others, social loafing involves reduced effort in groups, and deindividuation refers to loss of self-awareness in groups. Thus, groupthink is the correct answer.",
-      "kn": "KN16",
-      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
-      "difficulty": "hard",
-      "quality_comment": "Insightful question that assesses understanding of group decision-making.",
-      "suggestedLesson": "5-6-workplace-decisions",
-      "suggestedParagraph": "## Decision-making and Group Dynamics",
-      "lessonExcerpt": "Two specific phenomena can seriously undermine group decision-making: groupthink and group polarization. These patterns are so common and so damaging that understanding them is critical for your professional life.",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 6
-    },
-    {
-      "stem": "What effect does group monitoring have on individual effort in a collaborative task?",
-      "options": [
-        "It decreases individual effort due to social loafing.",
-        "It increases individual effort by creating accountability.",
-        "It has no effect on individual effort.",
-        "It increases individual effort only in competitive environments."
-      ],
-      "answer": "It increases individual effort by creating accountability.",
-      "explanation": "Group monitoring typically increases individual effort because it creates a sense of accountability among group members. When individuals know they are being observed, they are more likely to contribute fully. The other options misrepresent the relationship between monitoring and effort.",
-      "kn": "KN16",
-      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively tests knowledge of group dynamics and individual effort.",
-      "suggestedLesson": "5-6-workplace-decisions",
-      "suggestedParagraph": "## The Free Rider Effect: Social Loafing",
-      "lessonExcerpt": "Two specific phenomena can seriously undermine group decision-making: groupthink and group polarization. These patterns are so common and so damaging that understanding them is critical for your professional life.",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 15
-    },
-    {
       "stem": "An ongoing therapy group has met weekly for two months. During the first several sessions, members were polite, tended to seek the facilitator's approval before speaking, and kept disclosures superficial. In the eighth session, a previously cooperative member directly confronts the facilitator: 'You always validate the same people and dismiss what I say.' Two other members immediately express similar grievances about the facilitator's perceived favoritism. According to developmental models of group therapy, this pattern of member hostility toward the leader MOST likely signals that the group has entered:",
       "options": [
         "The initial/orientation stage, as members continue to test whether the group environment is psychologically safe",
@@ -311,45 +164,6 @@
       "needsReview": false,
       "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
       "inspirationIndex": 19
-    },
-    {
-      "stem": "In an environmental psychology experiment, two groups of participants complete proofreading tasks while exposed to loud, unpredictable noise. Group A is given a button they are told can stop the noise, but are asked not to press it; Group B has no such button. Despite the fact that Group A never actually uses the button, they make significantly fewer errors and report less frustration than Group B. This finding is BEST accounted for by which of the following?",
-      "options": [
-        "Learned helplessness: Group B's lack of control extinguishes motivated responding more rapidly than noise alone would",
-        "Perceived control: the belief that one can terminate an aversive stimulus reduces its disruptive effects even when control is never exercised",
-        "Reactance: providing a control option in Group A elicits greater effort to protect perceived freedom",
-        "Stimulus overload: Group A's attention is divided between the task and monitoring the button, paradoxically reducing the salience of the noise"
-      ],
-      "answer": "Perceived control: the belief that one can terminate an aversive stimulus reduces its disruptive effects even when control is never exercised",
-      "explanation": "The Glass and Singer (1972) research program established that perceived controllability is the primary determinant of how disruptive noise proves to be—not the actual reduction of noise or the exercise of control. Group A participants who believed they could stop the noise showed better performance and less physiological arousal than those with no option, despite never pressing the button. This demonstrates that it is the cognitive representation of control, not its execution, that buffers against environmental stressors. Option A (learned helplessness) applies to Group B's situation but does not explain why Group A outperforms—learned helplessness describes a deficit, not a buffer. Option C (reactance) concerns motivation to restore threatened freedom, not performance protection. Option D describes an attentional mechanism that would predict worse performance in Group A, the opposite of the finding.",
-      "kn": "KN16",
-      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
-      "difficulty": "hard",
-      "quality_comment": "Well-grounded in classic empirical research; tests a precise and frequently examined principle. Flagged for review: the provided lesson files do not contain content on environmental psychology or perceived control over noise—this question draws on Glass and Singer (1972), a standard EPPP topic not represented in the supplied materials.",
-      "suggestedLesson": "5-6-workplace-decisions",
-      "suggestedParagraph": "## Introduction: Why Groups Change Everything",
-      "lessonExcerpt": "Group Polarization: When Groups Amplify Extremes **Group polarization** describes the tendency for groups to make more extreme decisions than individual members would make alone.",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 22
-    },
-    {
-      "stem": "According to Zajonc’s drive theory, social facilitation occurs because the presence of others increases physiological arousal, which strengthens the dominant response. For which type of task is this dominant response typically correct, leading to improved performance?",
-      "options": [
-        "Difficult and unfamiliar tasks",
-        "Tasks requiring creative problem solving",
-        "Easy and well-learned tasks",
-        "Tasks involving new or complex skills"
-      ],
-      "answer": "Easy and well-learned tasks",
-      "explanation": "1. \"Easy and well-learned tasks\" is the correct answer because, according to Zajonc’s drive theory, the presence of others increases physiological arousal, which in turn strengthens the dominant response. For tasks that are easy and well-learned, the dominant response is typically the correct one, leading to improved performance when others are present.\n\n2. The option \"Difficult and unfamiliar tasks\" is incorrect because, in such tasks, the increased arousal from the presence of others can lead to social inhibition, resulting in decreased performance as the dominant response is often incorrect. \"Tasks requiring creative problem solving\" is also wrong, as these tasks do not align with the straightforward nature of easy tasks; they often require more complex thought processes that may not benefit from heightened arousal. Lastly, \"Tasks involving new or complex skills\" is incorrect because, similar to difficult tasks, these require a level of proficiency that can be hindered by increased arousal, leading to poor performance rather than improvement.",
-      "kn": "KN16",
-      "kn_explanation": "This question focuses on social influence and group processes impacting individual behavior, which aligns with Group and systems processes (KN16).",
-      "difficulty": "medium",
-      "quality_comment": "The question clearly targets a core mechanism of social facilitation with plausible distractors related to task difficulty and familiarity.",
-      "lessonExcerpt": "MTFC (Multidimensional Treatment Foster Care): Alternative to residential care **For etiology of CD:** Remember the three G's plus F: **Genes, Gut reactions (low physiological arousal), and Grueling family experiences**.",
-      "suggestedLesson": "5-acting-out",
-      "needsReview": false
     },
     {
       "stem": "Which of the following best describes social loafing?",
@@ -403,24 +217,6 @@
       "quality_comment": "Options contrast different group phenomena well; distractors are similar concepts that challenge recall and conceptual understanding.",
       "lessonExcerpt": "Deindividuation refers to losing your sense of individuality and the normal restraints against behavior you'd typically avoid. It happens when you can act anonymously.",
       "suggestedLesson": "3-group-influences",
-      "needsReview": false
-    },
-    {
-      "stem": "Regarding minority influence in groups, Moscovici proposed that minorities are most effective at persuading the majority when they:",
-      "options": [
-        "Express their opinion consistently but without rigidity or dogmatism",
-        "Apply pressure through repeated majority normative influence",
-        "Rely on informal social sanctions against the majority",
-        "Accept public compliance but avoid conversion"
-      ],
-      "answer": "Express their opinion consistently but without rigidity or dogmatism",
-      "explanation": "1. The correct answer, \"Express their opinion consistently but without rigidity or dogmatism,\" aligns with Moscovici's (1980) findings on minority influence. He emphasized that for a minority to effectively persuade the majority, they must consistently express their opinion while maintaining a flexible approach, avoiding a dogmatic stance. This balance allows the minority to be perceived as credible and reasonable, increasing the likelihood of influencing the majority's views.\n\n2. The option \"Apply pressure through repeated majority normative influence\" is incorrect because it describes a tactic typically used by the majority to maintain conformity, rather than a strategy employed by minorities who rely on consistency and behavioral style. \"Rely on informal social sanctions against the majority\" is wrong because Moscovici's theory focuses on persuasion through consistent expression rather than coercive methods or sanctions. Lastly, \"Accept public compliance but avoid conversion\" is incorrect as it misrepresents the goal of minority influence; Moscovici posited that minorities aim for private acceptance (conversion) rather than mere public compliance, which is more characteristic of majority influence.",
-      "kn": "KN16",
-      "kn_explanation": "This question tests understanding of social influence, particularly minority influence processes within groups, aligned with KN16.",
-      "difficulty": "medium",
-      "quality_comment": "The stem and options clearly address a nuanced aspect of social influence with plausible but conceptually distinct distractors.",
-      "lessonExcerpt": "When to terminate**: End therapy when the client no longer needs it or isn't benefiting from it. This doesn't mean you must terminate the moment progress slows.",
-      "suggestedLesson": "8-standards-9-10",
       "needsReview": false
     },
     {
@@ -592,6 +388,45 @@
         "lock_in_drill"
       ],
       "lessonExcerpt": "When a minority changes someone's mind, it tends to result in private acceptance (genuine conversion)",
+      "suggestedLesson": "3-group-influences",
+      "needsReview": false
+    },
+    {
+      "stem": "What type of group task is characterized by a single solution that is determined by the most competent member of the group?",
+      "options": [
+        "Disjunctive task",
+        "Conjunctive task",
+        "Additive task",
+        "Compensatory task"
+      ],
+      "answer": "Disjunctive task",
+      "explanation": "A disjunctive task is one where the group's success depends on the performance of the best member, as there is a single correct solution. In contrast, conjunctive tasks require all members to contribute for success, additive tasks combine individual contributions, and compensatory tasks average the contributions of all members. Therefore, disjunctive task is the correct answer.",
+      "kn": "KN16",
+      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
+      "difficulty": "medium",
+      "quality_comment": "Clear question that assesses knowledge of group task types.",
+      "suggestedLesson": "3-group-influences",
+      "suggestedParagraph": "## Types of Group Tasks",
+      "lessonExcerpt": "Two specific phenomena can seriously undermine group decision-making: groupthink and group polarization. These patterns are so common and so damaging that understanding them is critical for your professional life.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 4
+    },
+    {
+      "stem": "According to Zajonc’s drive theory, social facilitation occurs because the presence of others increases physiological arousal, which strengthens the dominant response. For which type of task is this dominant response typically correct, leading to improved performance?",
+      "options": [
+        "Difficult and unfamiliar tasks",
+        "Tasks requiring creative problem solving",
+        "Easy and well-learned tasks",
+        "Tasks involving new or complex skills"
+      ],
+      "answer": "Easy and well-learned tasks",
+      "explanation": "1. \"Easy and well-learned tasks\" is the correct answer because, according to Zajonc’s drive theory, the presence of others increases physiological arousal, which in turn strengthens the dominant response. For tasks that are easy and well-learned, the dominant response is typically the correct one, leading to improved performance when others are present.\n\n2. The option \"Difficult and unfamiliar tasks\" is incorrect because, in such tasks, the increased arousal from the presence of others can lead to social inhibition, resulting in decreased performance as the dominant response is often incorrect. \"Tasks requiring creative problem solving\" is also wrong, as these tasks do not align with the straightforward nature of easy tasks; they often require more complex thought processes that may not benefit from heightened arousal. Lastly, \"Tasks involving new or complex skills\" is incorrect because, similar to difficult tasks, these require a level of proficiency that can be hindered by increased arousal, leading to poor performance rather than improvement.",
+      "kn": "KN16",
+      "kn_explanation": "This question focuses on social influence and group processes impacting individual behavior, which aligns with Group and systems processes (KN16).",
+      "difficulty": "medium",
+      "quality_comment": "The question clearly targets a core mechanism of social facilitation with plausible distractors related to task difficulty and familiarity.",
+      "lessonExcerpt": "MTFC (Multidimensional Treatment Foster Care): Alternative to residential care **For etiology of CD:** Remember the three G's plus F: **Genes, Gut reactions (low physiological arousal), and Grueling family experiences**.",
       "suggestedLesson": "3-group-influences",
       "needsReview": false
     }

@@ -148,90 +148,6 @@
       "inspirationIndex": 19
     },
     {
-      "stem": "What is a potential impact of domestic violence on children's development?",
-      "options": [
-        "Increased cognitive abilities due to heightened awareness of their environment",
-        "Development of emotional and behavioral problems",
-        "Enhanced social skills from observing conflict resolution",
-        "Improved academic performance due to increased resilience"
-      ],
-      "answer": "Development of emotional and behavioral problems",
-      "explanation": "Children exposed to domestic violence often develop emotional and behavioral problems due to the trauma and instability in their environment. The other options suggest positive outcomes that are not typically associated with exposure to domestic violence.",
-      "kn": "KN25",
-      "kn_explanation": "This question is best aligned with KN25 because it tests Family development, configuration, and functioning and their impact on the individual across the lifespan.",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively assesses understanding of the negative impacts of domestic violence on children.",
-      "suggestedLesson": "4-bonding-and-attachment",
-      "suggestedParagraph": "## Introduction: Why Attachment and Social Development Matter for Your Practice",
-      "lessonExcerpt": "Understanding socioemotional development isn't just about memorizing attachment styles for the EPPP. It's about recognizing patterns that show up daily in your consulting room.",
-      "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 1
-    },
-    {
-      "stem": "In Erikson's psychosocial development theory, which stage is primarily concerned with the psychosocial task of identity?",
-      "options": [
-        "Trust vs. Mistrust",
-        "Identity vs. Role Confusion",
-        "Intimacy vs. Isolation",
-        "Generativity vs. Stagnation"
-      ],
-      "answer": "Identity vs. Role Confusion",
-      "explanation": "The correct answer is 'Identity vs. Role Confusion' as this stage focuses on adolescents developing a sense of self and personal identity. The other options represent different stages of psychosocial development.",
-      "kn": "KN23",
-      "kn_explanation": "This question is best aligned with KN23 because it tests Major research-based theories and models of development.",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively assesses knowledge of Erikson's theory.",
-      "suggestedLesson": "4-temperament-and-personality",
-      "suggestedParagraph": "## Bowlby's Ethological Theory: Survival Through Connection",
-      "lessonExcerpt": "| Adolescence | Identity vs. Role Confusion | Fidelity |",
-      "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 5
-    },
-    {
-      "stem": "At what age do infants typically begin to engage in social referencing, looking to caregivers for cues on how to respond in uncertain situations?",
-      "options": [
-        "3-4 months",
-        "6-8 months",
-        "10-12 months",
-        "12-18 months"
-      ],
-      "answer": "6-8 months",
-      "explanation": "Social referencing typically begins around 6-8 months of age, as infants start looking to their caregivers' facial expressions to determine how to react in uncertain situations. The other options are incorrect as they do not align with the developmental timeline for this behavior.",
-      "kn": "KN25",
-      "kn_explanation": "This question is best aligned with KN25 because it tests Family development, configuration, and functioning and their impact on the individual across the lifespan.",
-      "difficulty": "medium",
-      "quality_comment": "The question is clear and directly assesses knowledge of social referencing in infants.",
-      "suggestedLesson": "4-temperament-and-personality",
-      "suggestedParagraph": "## Signs That Attachment Has Formed",
-      "lessonExcerpt": "| Adolescence | Identity vs. Role Confusion | Fidelity |",
-      "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 21
-    },
-    {
-      "stem": "Which of the following best describes the identity status of foreclosure in Erikson's theory of identity development?",
-      "options": [
-        "A commitment to an identity without exploration of alternatives",
-        "A period of exploration without commitment to any identity",
-        "A stable identity achieved through exploration and commitment",
-        "A rejection of all societal norms and values"
-      ],
-      "answer": "A commitment to an identity without exploration of alternatives",
-      "explanation": "Foreclosure occurs when individuals commit to an identity without exploring other options, often adopting the beliefs and values of their parents or society. The other options describe different identity statuses: moratorium (exploration without commitment), achieved identity (commitment after exploration), and identity diffusion (lack of commitment and exploration).",
-      "kn": "KN25",
-      "kn_explanation": "This question is best aligned with KN25 because it tests Family development, configuration, and functioning and their impact on the individual across the lifespan.",
-      "difficulty": "hard",
-      "quality_comment": "The question is well-structured and tests understanding of a specific concept in identity development.",
-      "suggestedLesson": "4-temperament-and-personality",
-      "suggestedParagraph": "## The Foundation: What Attachment Really Means",
-      "lessonExcerpt": "| Identity Foreclosure | No | Yes | Committed without exploration. Accepted parents'/authority's values |",
-      "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 11
-    },
-    {
       "stem": "What is social referencing in infants, and why is it important?",
       "options": [
         "Infants look to caregivers for emotional cues to guide their behavior in uncertain situations.",
@@ -253,48 +169,6 @@
       "inspirationIndex": 17
     },
     {
-      "stem": "Which of the following describes insecure attachment styles in infants?",
-      "options": [
-        "Infants show consistent and responsive behavior towards caregivers.",
-        "Infants exhibit anxiety and avoidance in relationships.",
-        "Infants demonstrate a strong preference for strangers over caregivers.",
-        "Infants are indifferent to caregiver presence and absence."
-      ],
-      "answer": "Infants exhibit anxiety and avoidance in relationships.",
-      "explanation": "Insecure attachment styles, such as avoidant and ambivalent attachment, are characterized by anxiety and avoidance in relationships. The other options describe secure attachment or do not accurately reflect the behaviors associated with insecure attachment.",
-      "kn": "KN25",
-      "kn_explanation": "This question is best aligned with KN25 because it tests Family development, configuration, and functioning and their impact on the individual across the lifespan.",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively assesses knowledge of attachment styles and their characteristics.",
-      "suggestedLesson": "4-temperament-and-personality",
-      "suggestedParagraph": "## The Strange Situation: Mapping Attachment Patterns",
-      "lessonExcerpt": "| Identity Foreclosure | No | Yes | Committed without exploration. Accepted parents'/authority's values |",
-      "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 20
-    },
-    {
-      "stem": "According to Erikson's psychosocial development theory, which of the following is the primary challenge faced during the stage of late adulthood?",
-      "options": [
-        "Integrity vs. Despair",
-        "Generativity vs. Stagnation",
-        "Intimacy vs. Isolation",
-        "Trust vs. Mistrust"
-      ],
-      "answer": "Integrity vs. Despair",
-      "explanation": "The correct answer is 'Integrity vs. Despair', as this is the psychosocial challenge identified by Erikson for late adulthood. The other options represent challenges from different stages of development: 'Generativity vs. Stagnation' pertains to middle adulthood, 'Intimacy vs. Isolation' to young adulthood, and 'Trust vs. Mistrust' to infancy.",
-      "kn": "KN23",
-      "kn_explanation": "This question is best aligned with KN23 because it tests Major research-based theories and models of development.",
-      "difficulty": "medium",
-      "quality_comment": "The question is clear and directly assesses knowledge of Erikson's theory.",
-      "suggestedLesson": "4-temperament-and-personality",
-      "suggestedParagraph": "## The Foundation: What Attachment Really Means",
-      "lessonExcerpt": "| Late adulthood | Integrity vs. Despair | Wisdom |",
-      "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 1
-    },
-    {
       "stem": "During which period of development do infants first begin to show signs of attachment according to Bowlby's theory?",
       "options": [
         "Preattachment",
@@ -314,69 +188,6 @@
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 3
-    },
-    {
-      "stem": "Which attachment style, identified by Ainsworth, is characterized by a child who shows distress when separated from the caregiver but is ambivalent upon reunion?",
-      "options": [
-        "Secure attachment",
-        "Insecure/Resistant (Ambivalent) attachment",
-        "Insecure/Avoidant attachment",
-        "Disorganized attachment"
-      ],
-      "answer": "Insecure/Resistant (Ambivalent) attachment",
-      "explanation": "The correct answer describes the Insecure/Resistant (Ambivalent) attachment style, where the child is distressed by separation and exhibits ambivalence upon reunion. Secure attachment is characterized by comfort with exploration and a positive reunion, while Insecure/Avoidant attachment shows indifference. Disorganized attachment involves a lack of clear attachment behavior.",
-      "kn": "KN25",
-      "kn_explanation": "This question is best aligned with KN25 because it tests Family development, configuration, and functioning and their impact on the individual across the lifespan.",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively tests understanding of attachment styles at a doctoral level.",
-      "suggestedLesson": "4-temperament-and-personality",
-      "suggestedParagraph": "## The Strange Situation: Mapping Attachment Patterns",
-      "lessonExcerpt": "| Late adulthood | Integrity vs. Despair | Wisdom |",
-      "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 13
-    },
-    {
-      "stem": "Which parenting style is associated with the most positive outcomes in children, including higher self-esteem and better social skills?",
-      "options": [
-        "Authoritarian",
-        "Permissive",
-        "Neglectful",
-        "Authoritative"
-      ],
-      "answer": "Authoritative",
-      "explanation": "The authoritative parenting style is characterized by high responsiveness and high demands, leading to the best outcomes in children. The other styles either lack responsiveness or impose excessive control, which can hinder development.",
-      "kn": "KN25",
-      "kn_explanation": "This question is best aligned with KN25 because it tests Family development, configuration, and functioning and their impact on the individual across the lifespan.",
-      "difficulty": "hard",
-      "quality_comment": "The question is well-structured and assesses understanding of parenting styles effectively.",
-      "suggestedLesson": "4-temperament-and-personality",
-      "suggestedParagraph": "## The Foundation: What Attachment Really Means",
-      "lessonExcerpt": "Child outcomes: Best overall. Self-confident, independent, cooperative, good social skills, high academic achievement",
-      "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 23
-    },
-    {
-      "stem": "A pediatrician refers a family to a psychologist because the parents are alarmed that their 15-month-old son screams, clings to them, and attempts to follow them whenever they leave his sight. They fear something is psychologically wrong. Based on normative developmental data, the psychologist's first priority should be to:",
-      "options": [
-        "Assess for disorganized attachment, since the intensity of the response exceeds what is developmentally expected at this age",
-        "Inform the parents that separation anxiety typically peaks between 14 and 18 months, making this response developmentally normative",
-        "Recommend a structured desensitization protocol to reduce the child's distress during separations",
-        "Evaluate whether the parents' caregiving behavior is reinforcing the child's distress through contingent comforting"
-      ],
-      "answer": "Inform the parents that separation anxiety typically peaks between 14 and 18 months, making this response developmentally normative",
-      "explanation": "Separation anxiety emerges as early as 6–8 months of age and reaches its developmental peak between 14 and 18 months, which is exactly when this child is presenting. The intensity and quality of this behavior—distress at separation, attempts to follow—is not only normal but expected and reflects the successful formation of a specific attachment bond rather than pathology. Informing and normalizing for the parents is the appropriate first response. Disorganized attachment is characterized by contradictory or disoriented behavior, not typical separation protest. Desensitization or a focus on parental reinforcement would be premature and potentially misdirected absent evidence of a clinical problem.",
-      "kn": "KN25",
-      "kn_explanation": "This question is best aligned with KN25 because it tests Family development, configuration, and functioning and their impact on the individual across the lifespan.",
-      "difficulty": "easy",
-      "quality_comment": "Clear clinical application question testing knowledge of developmental norms. Strong distractors that could trap examinees unfamiliar with the specific peak age window.",
-      "suggestedLesson": "4-temperament-and-personality",
-      "suggestedParagraph": "### Signs That Attachment Has Formed",
-      "lessonExcerpt": "Erikson expanded personality development across the entire lifespan, emphasizing social and cultural influences over biological drives.",
-      "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 6
     },
     {
       "stem": "A researcher conducting a prospective longitudinal study administers the Adult Attachment Interview (AAI) to expectant mothers during pregnancy and then assesses the attachment classifications of their infants at 12 months using the Strange Situation. What does this research design most directly investigate?",
@@ -419,24 +230,6 @@
       "needsReview": false,
       "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
       "inspirationIndex": 24
-    },
-    {
-      "stem": "In Harlow and Zimmerman's (1959) study with infant monkeys, what was the main finding regarding attachment?",
-      "options": [
-        "Monkeys preferred the wire mother because it provided food",
-        "Monkeys showed equal attachment to the wire and cloth mothers",
-        "Monkeys became attached to the cloth mother despite the wire mother providing food",
-        "Monkeys did not show significant attachment behaviors toward either surrogate mother"
-      ],
-      "answer": "Monkeys became attached to the cloth mother despite the wire mother providing food",
-      "explanation": "1. The correct answer, \"Monkeys became attached to the cloth mother despite the wire mother providing food,\" reflects Harlow and Zimmerman's (1959) findings that emphasized the importance of *contact comfort* in attachment. The infant monkeys preferred the soft, cloth mother for comfort and security, seeking her out even when the wire mother provided sustenance, demonstrating that emotional needs can outweigh basic physical needs in forming attachments.\n\n2. The option \"Monkeys preferred the wire mother because it provided food\" is incorrect because the study showed that the monkeys chose the cloth mother for comfort over the wire mother that provided food, indicating that attachment is driven more by emotional connection than by the availability of food. The statement \"Monkeys showed equal attachment to the wire and cloth mothers\" is also wrong, as the research clearly indicated a strong preference for the cloth mother, highlighting the significance of comfort in attachment. Lastly, the option \"Monkeys did not show significant attachment behaviors toward either surrogate mother\" is inaccurate because the monkeys exhibited clear attachment behaviors, such as clinging to the cloth mother and seeking her out when distressed, confirming the presence of attachment.",
-      "kn": "KN25",
-      "kn_explanation": "This question is best aligned with KN25 because it tests Family development, configuration, and functioning and their impact on the individual across the lifespan.",
-      "difficulty": "medium",
-      "quality_comment": "The question is clear, and the distractors are plausible, reflecting common misconceptions about attachment and early behavior research.",
-      "lessonExcerpt": "Child outcomes: Best overall. Self-confident, independent, cooperative, good social skills, high academic achievement",
-      "suggestedLesson": "4-temperament-and-personality",
-      "needsReview": false
     },
     {
       "stem": "According to Bowlby’s ethological theory of attachment, what is the primary purpose of infant attachment behaviors such as crying and smiling?",
@@ -735,6 +528,131 @@
       "lessonExcerpt": "Bowlby identified four stages of attachment during the first two years: 1. Preattachment; 2. Attachment-in-the-making; 3. Clear-cut attachment; 4. Formation of reciprocal relationships",
       "suggestedLesson": "4-bonding-and-attachment",
       "needsReview": false
+    },
+    {
+      "stem": "According to Patterson's model of aggression, what is a key factor contributing to conduct problems in children?",
+      "options": [
+        "Parental warmth",
+        "Peer influence",
+        "Inconsistent discipline",
+        "High academic achievement"
+      ],
+      "answer": "Inconsistent discipline",
+      "explanation": "Patterson's model suggests that inconsistent discipline from parents can lead to conduct problems in children, as it fails to provide clear boundaries and expectations. The other options do not align with the core principles of Patterson's model regarding the development of aggression.",
+      "kn": "KN22",
+      "kn_explanation": "This question is best aligned with KN22 because it tests Influence of individual-environment interaction on development over time (e.g., the relationship between the individual and the social, academic, work, community environment).",
+      "difficulty": "hard",
+      "quality_comment": "The question accurately assesses knowledge of Patterson's model and its implications for child behavior.",
+      "suggestedLesson": "4-bonding-and-attachment",
+      "suggestedParagraph": "## The Foundation: How Relationships Shape Us",
+      "lessonExcerpt": "Coercive Family Interaction Model (Patterson): This model describes a destructive cycle where parents use threats and punishment to temporarily stop misbehavior",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 20
+    },
+    {
+      "stem": "Which of the following describes insecure attachment styles in infants?",
+      "options": [
+        "Infants show consistent and responsive behavior towards caregivers.",
+        "Infants exhibit anxiety and avoidance in relationships.",
+        "Infants demonstrate a strong preference for strangers over caregivers.",
+        "Infants are indifferent to caregiver presence and absence."
+      ],
+      "answer": "Infants exhibit anxiety and avoidance in relationships.",
+      "explanation": "Insecure attachment styles, such as avoidant and ambivalent attachment, are characterized by anxiety and avoidance in relationships. The other options describe secure attachment or do not accurately reflect the behaviors associated with insecure attachment.",
+      "kn": "KN25",
+      "kn_explanation": "This question is best aligned with KN25 because it tests Family development, configuration, and functioning and their impact on the individual across the lifespan.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses knowledge of attachment styles and their characteristics.",
+      "suggestedLesson": "4-bonding-and-attachment",
+      "suggestedParagraph": "## The Strange Situation: Mapping Attachment Patterns",
+      "lessonExcerpt": "| Identity Foreclosure | No | Yes | Committed without exploration. Accepted parents'/authority's values |",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 20
+    },
+    {
+      "stem": "Which attachment style, identified by Ainsworth, is characterized by a child who shows distress when separated from the caregiver but is ambivalent upon reunion?",
+      "options": [
+        "Secure attachment",
+        "Insecure/Resistant (Ambivalent) attachment",
+        "Insecure/Avoidant attachment",
+        "Disorganized attachment"
+      ],
+      "answer": "Insecure/Resistant (Ambivalent) attachment",
+      "explanation": "The correct answer describes the Insecure/Resistant (Ambivalent) attachment style, where the child is distressed by separation and exhibits ambivalence upon reunion. Secure attachment is characterized by comfort with exploration and a positive reunion, while Insecure/Avoidant attachment shows indifference. Disorganized attachment involves a lack of clear attachment behavior.",
+      "kn": "KN25",
+      "kn_explanation": "This question is best aligned with KN25 because it tests Family development, configuration, and functioning and their impact on the individual across the lifespan.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests understanding of attachment styles at a doctoral level.",
+      "suggestedLesson": "4-bonding-and-attachment",
+      "suggestedParagraph": "## The Strange Situation: Mapping Attachment Patterns",
+      "lessonExcerpt": "| Late adulthood | Integrity vs. Despair | Wisdom |",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 13
+    },
+    {
+      "stem": "A 5-year-old child recently placed with foster parents after removal from a severely neglectful home readily approaches unfamiliar adults at the park, climbs onto strangers' laps, and agrees to leave with people she has just met without hesitation or glancing back at her caregiver. She shows no stranger wariness and initiates physical contact indiscriminately. The foster parents report this behavior has been consistent across multiple settings since placement. According to DSM-5, which of the following etiological conditions must be present to diagnose Disinhibited Social Engagement Disorder (DSED)?",
+      "options": [
+        "A co-occurring diagnosis of Reactive Attachment Disorder established prior to the current placement",
+        "Documented traumatic exposure to domestic violence or abuse before age 3",
+        "A history of social neglect or other forms of pathogenic care reflecting insufficient caregiving",
+        "Evidence of neurological compromise affecting the orbitofrontal cortex or amygdala"
+      ],
+      "answer": "A history of social neglect or other forms of pathogenic care reflecting insufficient caregiving",
+      "explanation": "DSM-5 Criterion C for Disinhibited Social Engagement Disorder requires that the child experienced a pattern of extremes of insufficient care, which includes social neglect (persistent deprivation of basic emotional needs), repeated changes in primary caregivers, or rearing in settings that severely limit opportunities to form selective attachments (e.g., institutional care). This pathogenic care history is a necessary etiological criterion that distinguishes DSED from disinhibited behavior with other causes. Option A is incorrect; while DSED and RAD can co-occur, a prior RAD diagnosis is not required for DSED. Option B is incorrect; generalized traumatic exposure (e.g., domestic violence, abuse) is not specifically listed in DSM-5 Criterion C—the pathogenic care must involve insufficient caregiving that limits attachment formation. Option D is incorrect; neurological compromise is considered in differential diagnosis but is not a diagnostic criterion for DSED.",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
+      "difficulty": "hard",
+      "quality_comment": "High-quality vignette isolating the etiological criterion. Distractors probe common confusions between DSED/RAD and between different types of early adversity. Appropriate doctoral-level difficulty.",
+      "suggestedLesson": "4-bonding-and-attachment",
+      "suggestedParagraph": "## DSM-5 Trauma- and Stressor-Related Disorders",
+      "lessonExcerpt": "NOT COVERED: The provided lesson files do not address Disinhibited Social Engagement Disorder or Reactive Attachment Disorder. A lesson on DSM-5 trauma- and stressor-related disorders diagnoses is needed for this content.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 23
+    },
+    {
+      "stem": "An adult becomes intensely distressed whenever her partner leaves for work trips, refuses to stay home alone, repeatedly reports nausea and headaches before each separation, and has shown this pattern for the past four months. Assuming the symptom threshold is otherwise met, which fact would prevent a DSM diagnosis of Separation Anxiety Disorder in this case?",
+      "options": [
+        "The symptoms are accompanied by physical complaints",
+        "The fear is focused on separation from an attachment figure",
+        "The duration has been only four months",
+        "The anxiety causes the person to avoid being alone"
+      ],
+      "answer": "The duration has been only four months",
+      "explanation": "The duration is the best answer because adults must show the pattern for at least six months, whereas children and adolescents require only four weeks. Physical complaints are wrong because they can be part of the disorder. Fear centered on separation from an attachment figure is wrong because that is a defining feature. Avoidance of being alone is also wrong because it is consistent with separation-related fear.",
+      "kn": "KN36",
+      "kn_explanation": "This question assesses classification systems and diagnostic criteria for evaluating client functioning.",
+      "difficulty": "hard",
+      "quality_comment": "Criterion-threshold item that tests adult-versus-child duration without copying textbook language into the stem.",
+      "suggestedLesson": "4-bonding-and-attachment",
+      "suggestedParagraph": "## Separation Anxiety Disorder",
+      "lessonExcerpt": "Duration requirements: Four weeks for children and adolescents, six months for adults.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS"
+    },
+    {
+      "stem": "A 4-year-old child who spent the first two years of life in a severely understaffed orphanage now lives with an adoptive family. The child readily approaches unfamiliar adults at the park, sits on strangers' laps, and has wandered off with an unknown person at a store without showing distress. This presentation is most consistent with a diagnosis of:",
+      "options": [
+        "Reactive attachment disorder",
+        "Disinhibited social engagement disorder",
+        "Separation anxiety disorder",
+        "Attention-deficit/hyperactivity disorder, predominantly hyperactive-impulsive presentation"
+      ],
+      "answer": "Disinhibited social engagement disorder",
+      "explanation": "Disinhibited Social Engagement Disorder (DSED) is characterized by indiscriminate social behavior toward unfamiliar adults following a history of extreme insufficient care. The lesson describes DSED: 'these kids act like every adult is potentially their caregiver. They'll approach strangers without hesitation, act overly familiar with people they just met, wander off without checking back with their actual caregivers, and might leave with strangers readily.' Reactive attachment disorder (A) involves the opposite response—emotional withdrawal and failure to seek comfort. Separation anxiety disorder (C) involves excessive distress about separation from attachment figures, not indiscriminate approach behavior. ADHD (D) involves hyperactivity and impulsivity but not the characteristic pattern of indiscriminate social approach with strangers following neglect.",
+      "kn": "KN36",
+      "kn_explanation": "Describing a child with indiscriminate attachment behavior following institutional deprivation points to classification/diagnosis of a disorder (likely Reactive Attachment Disorder or Disinhibited Social Engagement Disorder)",
+      "difficulty": "medium",
+      "quality_comment": "Strong clinical vignette that tests the critical distinction between RAD and DSED as opposite responses to severe neglect.",
+      "suggestedLesson": "4-bonding-and-attachment",
+      "suggestedParagraph": "### The Early Years: When Caregiving Goes Wrong",
+      "lessonExcerpt": "Instead of withdrawing, these children show inappropriately friendly behavior with strangers. They need at least two of these four symptoms: Little to no hesitation approaching or interacting with unfamiliar adults, Willingly goes off with strangers with minimal hesitation",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 23
     }
   ]
 }

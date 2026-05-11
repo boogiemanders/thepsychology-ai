@@ -279,6 +279,27 @@
       "lessonExcerpt": "| Maintenance | 45 to 64 | Sustaining achievements, updating skills |",
       "suggestedLesson": "6-how-careers-develop",
       "needsReview": false
+    },
+    {
+      "stem": "Which of the following factors is most likely to contribute to higher employee turnover rates in an organization?",
+      "options": [
+        "High levels of employee engagement and satisfaction.",
+        "Lack of opportunities for career advancement.",
+        "Strong organizational culture and values.",
+        "Effective communication between management and staff."
+      ],
+      "answer": "Lack of opportunities for career advancement.",
+      "explanation": "The correct answer highlights that a lack of career advancement opportunities can lead to dissatisfaction and increased turnover. The other options are associated with lower turnover rates, as they contribute positively to employee retention.",
+      "kn": "KN15",
+      "kn_explanation": "This question is best aligned with KN15 because it tests Social interaction and relationships (e.g., attraction, aggression, altruism, organizational justice, verbal and non-verbal communication, internet communication, mate selection, empathy).",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests knowledge of organizational behavior factors.",
+      "suggestedLesson": "6-how-careers-develop",
+      "suggestedParagraph": "## Why This Matters for Your Psychology Career",
+      "lessonExcerpt": "TAT = Only storytelling ## Real-World Applications",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 2
     }
   ]
 }

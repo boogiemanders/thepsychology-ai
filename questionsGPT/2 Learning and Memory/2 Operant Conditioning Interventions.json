@@ -22,27 +22,6 @@
       "inspirationIndex": 6
     },
     {
-      "stem": "According to Equity Theory, what prediction can be made about an individual's performance when they perceive inequity in their work environment?",
-      "options": [
-        "Their performance will likely improve as they strive to restore equity.",
-        "Their performance will likely decrease as they feel demotivated by perceived unfairness.",
-        "Their performance will remain unchanged regardless of perceived equity.",
-        "Their performance will be enhanced by increased competition."
-      ],
-      "answer": "Their performance will likely decrease as they feel demotivated by perceived unfairness.",
-      "explanation": "Equity Theory posits that perceived inequity leads to feelings of demotivation, which can result in decreased performance. Option A incorrectly suggests that performance improves, while Option C misrepresents the theory's implications, and Option D is unrelated to the concept of equity.",
-      "kn": "KN7",
-      "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively tests knowledge of Equity Theory and its implications for performance.",
-      "suggestedLesson": "2-operant-conditioning-interventions",
-      "suggestedParagraph": "## Positive Reinforcement: Building New Behaviors",
-      "lessonExcerpt": "The smart approach to applying these interventions starts with a functional behavioral assessment (FBA).",
-      "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 6
-    },
-    {
       "stem": "What is the typical behavioral response observed during an extinction burst in operant conditioning?",
       "options": [
         "A sudden increase in the frequency of the undesired behavior.",
@@ -106,69 +85,6 @@
       "inspirationIndex": 5
     },
     {
-      "stem": "How does negative reinforcement play a role in smoking behavior?",
-      "options": [
-        "It increases the likelihood of smoking by adding a pleasurable experience.",
-        "It decreases smoking behavior by removing stress.",
-        "It maintains smoking behavior by alleviating withdrawal symptoms.",
-        "It has no effect on smoking behavior."
-      ],
-      "answer": "It maintains smoking behavior by alleviating withdrawal symptoms.",
-      "explanation": "Negative reinforcement in smoking behavior occurs when smoking alleviates unpleasant withdrawal symptoms, thus maintaining the behavior. The other options misinterpret the role of negative reinforcement in this context.",
-      "kn": "KN7",
-      "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively assesses understanding of negative reinforcement in the context of smoking.",
-      "suggestedLesson": "2-skinner-and-operant-conditioning",
-      "suggestedParagraph": "## Negative Reinforcement: Building New Behaviors",
-      "lessonExcerpt": "Negative Reinforcement: You have a persistent headache, take ibuprofen, and the pain goes away. You're more likely to take ibuprofen for headaches in the future because it removed the unpleasant sensation.",
-      "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 9
-    },
-    {
-      "stem": "Which of the following elements is NOT associated with operant conditioning?",
-      "options": [
-        "Reinforcement schedules",
-        "Shaping behaviors",
-        "Classical conditioning",
-        "Punishment types"
-      ],
-      "answer": "Classical conditioning",
-      "explanation": "Classical conditioning is a different learning process than operant conditioning, which focuses on reinforcement and punishment. The other options are all components of operant conditioning.",
-      "kn": "KN7",
-      "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively tests knowledge of learning theories and their distinctions.",
-      "suggestedLesson": "2-operant-conditioning-interventions",
-      "suggestedParagraph": "## Why Operant Conditioning Still Matters in Modern Practice",
-      "lessonExcerpt": "Time out (formally \"time out from positive reinforcement\") removes access to ALL reinforcement for a brief period.",
-      "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 12
-    },
-    {
-      "stem": "What is the primary reason for extinction resistance in reinforcement schedules?",
-      "options": [
-        "The unpredictability of reinforcement.",
-        "The consistency of punishment.",
-        "The clarity of the behavior's consequences.",
-        "The duration of the reinforcement period."
-      ],
-      "answer": "The unpredictability of reinforcement.",
-      "explanation": "Extinction resistance is often due to the unpredictability of reinforcement, which makes behaviors harder to extinguish. The other options do not accurately capture the primary reason for this phenomenon.",
-      "kn": "KN7",
-      "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively tests knowledge of reinforcement schedules.",
-      "suggestedLesson": "2-skinner-and-operant-conditioning",
-      "suggestedParagraph": "## Reinforcement Schedules: Timing Is Everything",
-      "lessonExcerpt": "Negative Reinforcement: You have a persistent headache, take ibuprofen, and the pain goes away. You're more likely to take ibuprofen for headaches in the future because it removed the unpleasant sensation.",
-      "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 19
-    },
-    {
       "stem": "In operant conditioning, what is the effect of negative consequences on behavior?",
       "options": [
         "They always increase the likelihood of the behavior occurring again.",
@@ -190,48 +106,6 @@
       "inspirationIndex": 26
     },
     {
-      "stem": "According to Herzberg's theory, which of the following factors is considered a hygiene factor in job motivation?",
-      "options": [
-        "Achievement",
-        "Recognition",
-        "Salary",
-        "Responsibility"
-      ],
-      "answer": "Salary",
-      "explanation": "The correct answer is C because salary is classified as a hygiene factor that can prevent dissatisfaction but does not necessarily motivate employees. Option A is incorrect as achievement is a motivator. Option B is incorrect because recognition is also a motivator. Option D is incorrect as responsibility is a motivator as well.",
-      "kn": "KN7",
-      "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
-      "difficulty": "medium",
-      "quality_comment": "The question is relevant and tests understanding of motivation theories.",
-      "suggestedLesson": "2-skinner-and-operant-conditioning",
-      "suggestedParagraph": "## Positive Reinforcement: Building New Behaviors",
-      "lessonExcerpt": "Variable Ratio (VR): Reinforcement comes after an unpredictable number of responses. This is the most powerful schedule. It produces the highest response rate and the greatest resistance to extinction.",
-      "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 13
-    },
-    {
-      "stem": "In behavior modification, which of the following best describes negative punishment?",
-      "options": [
-        "Adding an unpleasant stimulus to decrease a behavior",
-        "Removing a pleasant stimulus to decrease a behavior",
-        "Adding a pleasant stimulus to increase a behavior",
-        "Removing an unpleasant stimulus to increase a behavior"
-      ],
-      "answer": "Removing a pleasant stimulus to decrease a behavior",
-      "explanation": "The correct answer is B because negative punishment involves taking away a desirable stimulus to reduce the occurrence of a behavior. Option A is incorrect as that describes positive punishment. Option C is incorrect as it describes positive reinforcement. Option D is incorrect as it describes negative reinforcement.",
-      "kn": "KN7",
-      "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
-      "difficulty": "medium",
-      "quality_comment": "The question is relevant and tests understanding of behavioral modification.",
-      "suggestedLesson": "2-skinner-and-operant-conditioning",
-      "suggestedParagraph": "## The Four Core Consequences",
-      "lessonExcerpt": "Negative Punishment | Decreases | Something desirable is removed | Loss",
-      "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 17
-    },
-    {
       "stem": "In the context of motivation theories, what is the primary challenge of approach-avoidance conflict?",
       "options": [
         "The individual must choose between two equally attractive options.",
@@ -251,27 +125,6 @@
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 23
-    },
-    {
-      "stem": "What is the optimal timing for reinforcement to enhance learning according to behavioral psychology?",
-      "options": [
-        "Immediate reinforcement",
-        "Delayed reinforcement",
-        "Random reinforcement",
-        "No reinforcement"
-      ],
-      "answer": "Immediate reinforcement",
-      "explanation": "Immediate reinforcement is most effective for enhancing learning because it provides clear feedback and strengthens the association between the behavior and the consequence. Delayed reinforcement can weaken this association, while random reinforcement may lead to confusion about what behavior is being rewarded.",
-      "kn": "KN7",
-      "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
-      "difficulty": "hard",
-      "quality_comment": "The question is challenging and requires a solid understanding of reinforcement principles.",
-      "suggestedLesson": "2-skinner-and-operant-conditioning",
-      "suggestedParagraph": "## Positive Reinforcement: Building New Behaviors",
-      "lessonExcerpt": "Negative Punishment | Decreases | Something desirable is removed | Loss",
-      "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 6
     },
     {
       "stem": "The overjustification effect suggests that external rewards can undermine intrinsic motivation. Which of the following scenarios best illustrates this effect?",
@@ -693,6 +546,69 @@
       "lessonExcerpt": "Differential reinforcement combines extinction of the problem behavior with reinforcement of alternative behaviors.",
       "suggestedLesson": "2-operant-conditioning-interventions",
       "needsReview": false
+    },
+    {
+      "stem": "A special education classroom operates a token economy. A student with a history of verbal outbursts earns tokens throughout the day for appropriate behavior. After each instance of shouting, the teacher removes five tokens from the student's running total. Over the following two weeks, the frequency of shouting decreases significantly. According to the operant conditioning framework described in the lesson, the mechanism producing the behavior reduction is best classified as:",
+      "options": [
+        "Positive punishment, because the act of token removal is itself an unpleasant event that is added following the behavior",
+        "Negative reinforcement, because the student reduces outbursts to avoid the aversive experience of losing tokens",
+        "Negative punishment (response cost), because a desirable stimulus—previously earned tokens—is removed contingent on the target behavior",
+        "Extinction, because the reinforcer that previously maintained the shouting behavior is being withheld"
+      ],
+      "answer": "Negative punishment (response cost), because a desirable stimulus—previously earned tokens—is removed contingent on the target behavior",
+      "explanation": "Response cost is a specific form of negative punishment in which a quantity of a previously earned or available reinforcer (here, tokens) is removed contingent on an undesired behavior, resulting in decreased frequency of that behavior. The lesson defines negative punishment as a consequence in which something desirable is removed and behavior decreases. Positive punishment requires adding an aversive stimulus following the behavior; token removal does not add anything aversive. Negative reinforcement involves the removal of an aversive stimulus to increase behavior, not the removal of a positive reinforcer to decrease it. Extinction involves withholding the reinforcer that functionally maintains the target behavior; because the lesson has not established that tokens were maintaining the shouting, and because the procedure actively removes earned tokens rather than simply withholding a consequence, response cost is the more precise classification.",
+      "kn": "KN7",
+      "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
+      "difficulty": "medium",
+      "quality_comment": "Excellent question testing precise use of the four-consequence taxonomy. Directly supported by the lesson's consequence table.",
+      "suggestedLesson": "2-operant-conditioning-interventions",
+      "suggestedParagraph": "## The Four Core Consequences",
+      "lessonExcerpt": "Response cost is negative punishment, you remove something valued when an undesired behavior occurs. In clinical settings, this might look like a token economy where clients earn points for appropriate behaviors and lose a set number of points for specific problem behaviors.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 9
+    },
+    {
+      "stem": "Which of the following behaviors is classified as self-injurious behavior in children?",
+      "options": [
+        "A. Excessive hand-washing due to anxiety",
+        "B. Deliberate cutting of the skin",
+        "C. Frequent tantrums in response to frustration",
+        "D. Avoidance of social interactions"
+      ],
+      "answer": "B. Deliberate cutting of the skin",
+      "explanation": "Option B is correct as deliberate cutting of the skin is a clear example of self-injurious behavior. Option A relates to compulsive behavior, C describes emotional dysregulation, and D pertains to social anxiety, none of which are classified as self-injurious.",
+      "kn": "KN30",
+      "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests knowledge of self-injurious behavior.",
+      "suggestedLesson": "2-operant-conditioning-interventions",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "Episodes of cataplexy (loss of muscle tone)",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 7
+    },
+    {
+      "stem": "Which of the following best describes the developmental model of antisocial behavior?",
+      "options": [
+        "Antisocial behavior is solely a result of genetic factors.",
+        "Antisocial behavior develops through a combination of biological, psychological, and social factors.",
+        "Antisocial behavior is primarily influenced by peer pressure during adolescence.",
+        "Antisocial behavior is a learned response to environmental stressors."
+      ],
+      "answer": "Antisocial behavior develops through a combination of biological, psychological, and social factors.",
+      "explanation": "The developmental model of antisocial behavior emphasizes the interaction of multiple factors, including genetics, individual psychology, and social influences. The other options oversimplify the causes of antisocial behavior.",
+      "kn": "KN21",
+      "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses knowledge of the complexities involved in antisocial behavior development.",
+      "suggestedLesson": "2-operant-conditioning-interventions",
+      "suggestedParagraph": "## Personality Development: Classical Theories",
+      "lessonExcerpt": "Psychologist Terrie Moffitt (1993) proposed an influential framework distinguishing two types of antisocial behavior: Life-Course-Persistent Type... While parenting factors contribute, the etiology is multifactorial, including genetic, neurobiological, and environmental influences.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 16
     }
   ]
 }

@@ -1,48 +1,6 @@
 {
   "questions": [
     {
-      "stem": "Which strategy is most effective in addressing rater leniency during performance appraisals?",
-      "options": [
-        "Implementing a forced-choice rating system",
-        "Providing extensive training on rating criteria",
-        "Using a peer review process",
-        "Conducting appraisals more frequently"
-      ],
-      "answer": "Providing extensive training on rating criteria",
-      "explanation": "Providing extensive training on rating criteria helps raters understand the standards and reduces leniency bias. The other options may help but do not directly address the root cause of leniency.",
-      "kn": "KN34",
-      "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
-      "difficulty": "medium",
-      "quality_comment": "The question is relevant and tests knowledge of performance appraisal techniques.",
-      "suggestedLesson": "5-6-evaluating-jobs",
-      "suggestedParagraph": "## Understanding Personality Assessment Tools: Your Guide to Structured and Projective Tests",
-      "lessonExcerpt": "Personality tests fall into two main camps: structured tests (where questions have clear, specific answers) and projective tests (where people respond to ambiguous images and reveal themselves indirectly).",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 6
-    },
-    {
-      "stem": "What is the primary purpose of empirical criterion keying in personality assessment?",
-      "options": [
-        "To ensure the test is culturally fair.",
-        "To identify items that differentiate between groups.",
-        "To create a forced-choice format.",
-        "To enhance the test's face validity."
-      ],
-      "answer": "To identify items that differentiate between groups.",
-      "explanation": "Empirical criterion keying focuses on selecting items that effectively distinguish between individuals with different diagnoses or characteristics, enhancing the test's predictive validity. The other options do not accurately describe the primary purpose of this method.",
-      "kn": "KN29",
-      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
-      "difficulty": "medium",
-      "quality_comment": "The question is clear and assesses knowledge of personality assessment methods.",
-      "suggestedLesson": "5-mmpi",
-      "suggestedParagraph": "## Understanding Personality Assessment Tools: Your Guide to Structured and Projective Tests",
-      "lessonExcerpt": "These were developed through **empirical criterion keying**",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 16
-    },
-    {
       "stem": "What is the main purpose of projective tests in psychology?",
       "options": [
         "To measure specific personality traits directly.",
@@ -62,24 +20,6 @@
       "needsReview": false,
       "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
       "inspirationIndex": 17
-    },
-    {
-      "stem": "Which personality assessment is based on the assumption that important personality traits are encoded in the English language and uses factor analysis to identify both primary and global traits?",
-      "options": [
-        "Sixteen Personality Factor Questionnaire (16 PF)",
-        "NEO Personality Inventory-3 (NEO-PI-3)",
-        "Myers-Briggs Type Indicator (MBTI)",
-        "Edwards Personal Preference Schedule (EPPS)"
-      ],
-      "answer": "Sixteen Personality Factor Questionnaire (16 PF)",
-      "explanation": "1. The \"Sixteen Personality Factor Questionnaire (16 PF)\" is the correct answer because it was developed by Cattell using the lexical strategy, which posits that important personality traits are encoded in language. Cattell employed factor analysis to distill a large number of personality descriptors into 16 primary traits and five broader global traits, effectively identifying both specific and overarching aspects of personality.\n\n2. The \"NEO Personality Inventory-3 (NEO-PI-3)\" is incorrect because, while it also uses a lexical approach and factor analysis, it focuses specifically on the Big Five personality traits rather than identifying a broader range of primary and global traits like the 16 PF. The \"Myers-Briggs Type Indicator (MBTI)\" is wrong because it is based on Jung’s personality typology and identifies personality types through four bipolar dimensions, rather than deriving traits from language and factor analysis. Lastly, the \"Edwards Personal Preference Schedule (EPPS)\" is incorrect as it assesses basic needs through a forced-choice format, focusing on relative strengths of needs rather than employing factor analysis to identify personality traits.",
-      "kn": "KN32",
-      "kn_explanation": "This question evaluates knowledge of commonly used personality assessment instruments and their theoretical basis.",
-      "difficulty": "medium",
-      "quality_comment": "Clear stem with well-differentiated options focused on specific test characteristics, appropriate for the EPPP.",
-      "lessonExcerpt": "These were developed through **empirical criterion keying**",
-      "suggestedLesson": "5-mmpi",
-      "needsReview": false
     },
     {
       "stem": "What type of scoring does the Edwards Personal Preference Schedule (EPPS) use, and what is a key limitation of these scores?",
@@ -322,6 +262,235 @@
         "lock_in_drill"
       ],
       "lessonExcerpt": "Ipsative scores only allow intra-individual comparisons (within one person). You cannot use EPPS results to say one person has higher achievement needs than another person.",
+      "suggestedLesson": "5-personality-tests",
+      "needsReview": false
+    },
+    {
+      "stem": "A doctoral student is preparing a presentation comparing classical Freudian theory with Neo-Freudian approaches. Her supervisor asks her to identify the most fundamental theoretical shift introduced by Neo-Freudian theorists. Which of the following most accurately characterizes the primary reconceptualization advanced by theorists such as Adler and Horney?",
+      "options": [
+        "Rejection of the unconscious as a clinically meaningful construct in favor of conscious, rational self-determination",
+        "Extension of Freud's psychosexual stage model through late adolescence to capture later developmental conflicts",
+        "De-emphasis of biological, intrapsychic drives in favor of social, cultural, and interpersonal determinants of personality and psychopathology",
+        "Adoption of a conditioning framework that replaced mentalistic unconscious concepts with observable stimulus-response relationships"
+      ],
+      "answer": "De-emphasis of biological, intrapsychic drives in favor of social, cultural, and interpersonal determinants of personality and psychopathology",
+      "explanation": "Neo-Freudian theorists retained the core psychodynamic architecture — the unconscious, the importance of early development, and the primacy of inner conflict — but fundamentally repositioned the source of that conflict. Alfred Adler proposed that the primary motivational force is striving for superiority over inferiority feelings, rooted in social relationships, not libido. He introduced 'social interest' (gemeinschaftsgefühl) as the measure of psychological health. Karen Horney argued that neurosis originates from cultural conditions and disturbed interpersonal relationships, explicitly rejecting Freud's penis envy as a cultural artifact. Neo-Freudians did not abandon the unconscious or adopt behaviorism — these would describe entirely different theoretical traditions. Extending psychosexual stages captures Erikson's contribution but is secondary to the social-vs-biological shift.",
+      "kn": "KN43",
+      "kn_explanation": "This question is best aligned with KN43 because it tests Contemporary research-based theories and models of treatment, intervention, and prevention.",
+      "difficulty": "medium",
+      "quality_comment": "Clean conceptual discrimination question; appropriately tests the theoretical core rather than peripheral facts about individual Neo-Freudians.",
+      "suggestedLesson": "5-personality-tests",
+      "suggestedParagraph": "## The Psychodynamic Perspective: Understanding the Hidden Forces",
+      "lessonExcerpt": "Determinants:** What characteristics influenced the response? - Form (the shape) - Movement (perceived action) - Color - Shading",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 14
+    },
+    {
+      "stem": "Which of the following statements best reflects the concept of trait theory in personality psychology?",
+      "options": [
+        "Personality traits are consistent across different situations and over time.",
+        "Personality is solely determined by environmental factors.",
+        "Personality traits can change dramatically with life experiences.",
+        "Personality is a fixed characteristic that does not evolve."
+      ],
+      "answer": "Personality traits are consistent across different situations and over time.",
+      "explanation": "Trait theory posits that individuals have stable characteristics that influence their behavior across various situations. The other options suggest that personality is either entirely environmental or fixed, which contradicts the essence of trait theory.",
+      "kn": "KN21",
+      "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses knowledge of trait theory and its implications.",
+      "suggestedLesson": "5-personality-tests",
+      "suggestedParagraph": "## Temperament: The Raw Material of Personality",
+      "lessonExcerpt": "Temperament is your biological starting point (genetically influenced but shaped by environment. Think of temperament as the default settings on a new phone)",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 21
+    },
+    {
+      "stem": "Which of the following personality disorders is characterized by a pervasive pattern of disregard for the rights of others?",
+      "options": [
+        "Borderline Personality Disorder",
+        "Narcissistic Personality Disorder",
+        "Antisocial Personality Disorder",
+        "Avoidant Personality Disorder"
+      ],
+      "answer": "Antisocial Personality Disorder",
+      "explanation": "Antisocial Personality Disorder is defined by a pervasive pattern of disregard for the rights of others, including deceit and manipulation. The other options describe different patterns of behavior and interpersonal relationships.",
+      "kn": "KN30",
+      "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of personality disorder characteristics.",
+      "suggestedLesson": "5-personality-tests",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "**Diagnosis Requires ONE of These:**\n\n- Episodes of cataplexy (loss of muscle tone)\n- Hypocretin deficiency\n- REM sleep latency of 15 minutes or less on polysomnography",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 8
+    },
+    {
+      "stem": "Which of the following symptoms is most characteristic of schizotypal personality disorder?",
+      "options": [
+        "A pervasive pattern of grandiosity",
+        "A lack of interest in social relationships",
+        "Odd beliefs or magical thinking",
+        "Emotional instability"
+      ],
+      "answer": "Odd beliefs or magical thinking",
+      "explanation": "Schizotypal personality disorder is characterized by odd beliefs or magical thinking, which is a key symptom. The other options describe symptoms of different personality disorders: grandiosity is more associated with narcissistic personality disorder, lack of interest in social relationships is typical of schizoid personality disorder, and emotional instability is a hallmark of borderline personality disorder.",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
+      "difficulty": "hard",
+      "quality_comment": "The question is well-structured and tests specific knowledge of personality disorder symptoms.",
+      "suggestedLesson": "5-personality-tests",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "Schizotypal personality disorder is characterized by odd beliefs or magical thinking.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 11
+    },
+    {
+      "stem": "Which personality trait is most closely associated with avoidant personality disorder?",
+      "options": [
+        "Extraversion",
+        "Agreeableness",
+        "Neuroticism",
+        "Low self-esteem"
+      ],
+      "answer": "Low self-esteem",
+      "explanation": "Low self-esteem is a core feature of avoidant personality disorder, leading individuals to avoid social situations due to feelings of inadequacy. While neuroticism may also be present, it is not as directly linked as low self-esteem. Extraversion and agreeableness are not characteristic of avoidant personality disorder.",
+      "kn": "KN30",
+      "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of personality traits related to avoidant personality disorder.",
+      "suggestedLesson": "5-personality-tests",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "Low self-esteem is a significant trait associated with avoidant personality disorder.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 18
+    },
+    {
+      "stem": "Which neuropsychological assessment is specifically focused on identifying deficits in executive functioning?",
+      "options": [
+        "The Wisconsin Card Sorting Test",
+        "The Beck Depression Inventory",
+        "The Rorschach Inkblot Test",
+        "The Minnesota Multiphasic Personality Inventory"
+      ],
+      "answer": "The Wisconsin Card Sorting Test",
+      "explanation": "1. The correct answer, \"The Wisconsin Card Sorting Test (WCST),\" is specifically focused on identifying deficits in executive functioning. The WCST measures abstract reasoning, cognitive flexibility, and the ability to adapt cognitive strategies in response to feedback, which are essential components of executive functioning. Additionally, it is sensitive to frontal lobe dysfunction, making it a valuable tool for assessing executive deficits.\n\n2. The Beck Depression Inventory (BDI-II) is a self-report measure that assesses the severity of depressive symptoms, not executive functioning. The Rorschach Inkblot Test is a projective personality assessment that provides insights into an individual's personality and emotional functioning rather than specifically targeting executive functions. The Minnesota Multiphasic Personality Inventory (MMPI-2) is a comprehensive personality assessment tool designed to evaluate psychological conditions and personality structure, but it does not focus on executive functioning deficits.",
+      "difficulty": "hard",
+      "kn": "KN30",
+      "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
+      "quality_comment": "This question challenges the test-taker to apply their understanding of specific neuropsychological assessments related to executive functioning.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "harder",
+      "tags": [
+        "lock_in_drill"
+      ],
+      "lessonExcerpt": "Instead of just recording whether someone got the answer right, it focuses on *how* they arrived at their answer. This qualitative approach means you might modify standardized tests on the fly",
+      "suggestedLesson": "5-personality-tests",
+      "needsReview": false
+    },
+    {
+      "stem": "What is a key characteristic of the Thematic Apperception Test (TAT) in projective testing?",
+      "options": [
+        "It uses standardized questions with fixed responses",
+        "It assesses personality through storytelling based on ambiguous images",
+        "It measures cognitive abilities through problem-solving tasks",
+        "It provides a quantitative score for personality traits"
+      ],
+      "answer": "It assesses personality through storytelling based on ambiguous images",
+      "explanation": "The TAT is designed to elicit stories from individuals based on ambiguous images, which helps reveal underlying personality traits. The other options describe characteristics of structured tests or cognitive assessments.",
+      "kn": "KN32",
+      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests knowledge of projective testing methods.",
+      "suggestedLesson": "5-personality-tests",
+      "suggestedParagraph": "## Understanding Intelligence: The Theoretical Foundation",
+      "lessonExcerpt": "This matters tremendously for intellectual disability diagnoses.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 7
+    },
+    {
+      "stem": "Which personality assessment is based on the assumption that important personality traits are encoded in the English language and uses factor analysis to identify both primary and global traits?",
+      "options": [
+        "Sixteen Personality Factor Questionnaire (16 PF)",
+        "NEO Personality Inventory-3 (NEO-PI-3)",
+        "Myers-Briggs Type Indicator (MBTI)",
+        "Edwards Personal Preference Schedule (EPPS)"
+      ],
+      "answer": "Sixteen Personality Factor Questionnaire (16 PF)",
+      "explanation": "1. The \"Sixteen Personality Factor Questionnaire (16 PF)\" is the correct answer because it was developed by Cattell using the lexical strategy, which posits that important personality traits are encoded in language. Cattell employed factor analysis to distill a large number of personality descriptors into 16 primary traits and five broader global traits, effectively identifying both specific and overarching aspects of personality.\n\n2. The \"NEO Personality Inventory-3 (NEO-PI-3)\" is incorrect because, while it also uses a lexical approach and factor analysis, it focuses specifically on the Big Five personality traits rather than identifying a broader range of primary and global traits like the 16 PF. The \"Myers-Briggs Type Indicator (MBTI)\" is wrong because it is based on Jung’s personality typology and identifies personality types through four bipolar dimensions, rather than deriving traits from language and factor analysis. Lastly, the \"Edwards Personal Preference Schedule (EPPS)\" is incorrect as it assesses basic needs through a forced-choice format, focusing on relative strengths of needs rather than employing factor analysis to identify personality traits.",
+      "kn": "KN32",
+      "kn_explanation": "This question evaluates knowledge of commonly used personality assessment instruments and their theoretical basis.",
+      "difficulty": "medium",
+      "quality_comment": "Clear stem with well-differentiated options focused on specific test characteristics, appropriate for the EPPP.",
+      "lessonExcerpt": "These were developed through **empirical criterion keying**",
+      "suggestedLesson": "5-personality-tests",
+      "needsReview": false
+    },
+    {
+      "stem": "According to the DSM-5-TR, the ten specific personality disorders are organized using which classification approach?",
+      "options": [
+        "A categorical model grouping disorders into three clusters based on shared descriptive features",
+        "A dimensional model rating personality traits along five continuous spectra derived from the Big Five",
+        "A hierarchical model with a single general personality pathology factor at the top and specific disorders below",
+        "A prototype matching model requiring clinicians to rate overall similarity to ideal disorder descriptions"
+      ],
+      "answer": "A categorical model grouping disorders into three clusters based on shared descriptive features",
+      "explanation": "The DSM-5-TR uses a categorical classification model in which the ten personality disorders are organized into three clusters based on shared descriptive characteristics: Cluster A (odd/eccentric: paranoid, schizoid, schizotypal), Cluster B (dramatic/emotional/erratic: antisocial, borderline, histrionic, narcissistic), and Cluster C (anxious/fearful: avoidant, dependent, obsessive-compulsive). Option B describes a dimensional approach (the alternative DSM-5 model in Section III, not the primary classification). Option C describes a hierarchical factor model that is a research framework but not the DSM-5-TR's primary organization. Option D describes prototype matching, which is an alternative diagnostic approach not used as the primary DSM-5-TR system.",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
+      "difficulty": "easy",
+      "quality_comment": "Foundational question about personality disorder classification. Clearly supported by lesson content describing the three-cluster categorical model.",
+      "suggestedLesson": "5-personality-tests",
+      "suggestedParagraph": "## The Three Clusters: Your Organizational Framework",
+      "lessonExcerpt": "The DSM-5-TR organizes the ten personality disorders into three clusters based on shared characteristics... Cluster A: Odd, eccentric behaviors... Cluster B: Dramatic, emotional, erratic behaviors... Cluster C: Anxious, fearful behaviors.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 8
+    },
+    {
+      "stem": "Which of the following best describes the relationship between histrionic and antisocial personality disorders according to Hamburger et al. (1996)?",
+      "options": [
+        "They share psychopathy as an underlying trait, with biological sex influencing the manifestation.",
+        "They share a common cause rooted in childhood trauma.",
+        "They are unrelated disorders with completely distinct symptomatology.",
+        "Diagnosis biases explain the similarity in symptoms between men and women."
+      ],
+      "answer": "They share psychopathy as an underlying trait, with biological sex influencing the manifestation.",
+      "explanation": "1. The correct answer, \"They share psychopathy as an underlying trait, with biological sex influencing the manifestation,\" is supported by Hamburger et al. (1996), who propose that both histrionic and antisocial personality disorders exhibit psychopathy but differ in expression based on biological sex. Specifically, they suggest that men with high levels of psychopathy are more likely to exhibit features of antisocial personality disorder, while women are more likely to display features of histrionic personality disorder.\n\n2. The option \"They share a common cause rooted in childhood trauma\" is incorrect because the reference material does not establish a direct causal link between childhood trauma and these personality disorders. The statement \"They are unrelated disorders with completely distinct symptomatology\" is wrong as it overlooks the shared underlying trait of psychopathy identified by Hamburger et al. (1996). Lastly, \"Diagnosis biases explain the similarity in symptoms between men and women\" is incorrect because the material attributes the differences in symptom manifestation to biological sex rather than diagnostic biases, suggesting a more intrinsic factor rather than external bias influencing diagnosis.",
+      "kn": "KN36",
+      "kn_explanation": "This question addresses conceptual models regarding gender differences and personality disorder traits, related to classification and underlying theory.",
+      "difficulty": "hard",
+      "quality_comment": "The question includes advanced content on differential expression hypotheses, with distractors plausible but clearly distinct for trained examinees.",
+      "lessonExcerpt": "There's debate about whether these disorders represent gender-biased expressions of similar underlying traits (psychopathy), but research hasn't strongly supported this hypothesis. Some experts suggest diagnostic bias explains why antisocial is more common in men and histrionic in women.",
+      "suggestedLesson": "5-personality-tests",
+      "needsReview": false
+    },
+    {
+      "stem": "According to DSM-5-TR, which statement is accurate regarding the diagnosis of narcissistic personality disorder in individuals who are still in their teenage years?",
+      "options": [
+        "It can be diagnosed if there is a clear pattern of grandiosity.",
+        "It requires evidence of a stable and pervasive pattern of behavior.",
+        "It cannot be diagnosed before the age of 18.",
+        "It is only diagnosed if there is a history of academic failure."
+      ],
+      "answer": "It cannot be diagnosed before the age of 18.",
+      "explanation": "1. The correct answer, \"It cannot be diagnosed before the age of 18,\" is accurate because narcissistic personality disorder, like antisocial personality disorder, has specific age criteria in the DSM-5-TR. While most personality disorders can be diagnosed in individuals under 18 if symptoms have been present for at least one year, narcissistic personality disorder does not allow for diagnosis until the individual reaches adulthood (18 years of age).\n\n2. The option \"It can be diagnosed if there is a clear pattern of grandiosity\" is incorrect because, although grandiosity is a key feature of narcissistic personality disorder, the DSM-5-TR specifies that the diagnosis cannot be made prior to age 18, regardless of symptom presence. The statement \"It requires evidence of a stable and pervasive pattern of behavior\" is also incorrect as it does not address the age limitation; while stability and pervasiveness are important for diagnosis, they do not override the age requirement. Lastly, the option \"It is only diagnosed if there is a history of academic failure\" is incorrect because academic failure is not a criterion for diagnosing narcissistic personality disorder; the diagnosis is based on specific behavioral patterns and traits, not academic performance.",
+      "difficulty": "hard",
+      "kn": "KN36",
+      "kn_explanation": "This question focuses on diagnostic criteria and classification systems, highlighting limits and rationales for diagnosis under DSM-5-TR, which aligns with assessment and diagnosis knowledge.",
+      "quality_comment": "This question challenges the test-taker's understanding of the developmental considerations in diagnosing personality disorders.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "harder",
+      "tags": [
+        "lock_in_drill"
+      ],
+      "lessonExcerpt": "Reality:** CD cannot be diagnosed after age 18 if the person meets criteria for Antisocial Personality Disorder. CD is essentially the developmental precursor.",
       "suggestedLesson": "5-personality-tests",
       "needsReview": false
     }

@@ -588,6 +588,71 @@
       "lessonExcerpt": "Your pupils dilate (better vision), heart rate increases (more blood flow), respiration quickens (more oxygen), you start sweating (cooling system activated), and digestion slows down (resources redirected to muscles).",
       "suggestedLesson": "1-neurons-and-neurotransmitters",
       "needsReview": false
+    },
+    {
+      "stem": "Which neurotransmitter is primarily involved in the pathophysiology of Alzheimer's disease?",
+      "options": [
+        "A. Serotonin",
+        "B. Dopamine",
+        "C. Acetylcholine",
+        "D. Norepinephrine"
+      ],
+      "answer": "C. Acetylcholine",
+      "explanation": "Acetylcholine is primarily involved in the pathophysiology of Alzheimer's disease, as its levels are significantly reduced in affected individuals. Serotonin and dopamine are involved in other disorders, while norepinephrine is not specifically linked to Alzheimer's. Therefore, acetylcholine is the correct answer.",
+      "kn": "KN1",
+      "kn_explanation": "This question is best aligned with KN1 because it tests Functional correlates and determinants of the neurobiological and genetic bases of behavior pertaining to perception, cognition, personality, and mood and affect in normal, acute and chronic neurobehavioral disease processes and disease, comorbidities.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of neurotransmitter roles in Alzheimer's disease.",
+      "suggestedLesson": "1-neurons-and-neurotransmitters",
+      "suggestedParagraph": "## Neurotransmitter Involvement in Alzheimer's Disease",
+      "lessonExcerpt": "- **Memory**: Low ACh levels in the entorhinal cortex and hippocampus are linked to early Alzheimer's disease memory loss (this is why cholinesterase inhibitors like donepezil are used to treat Alzheimer's. They prevent ACh breakdown)",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 10
+    },
+    {
+      "stem": "Which neurotransmitter is believed to play a significant role in the pathophysiology of seasonal affective disorder (SAD)?",
+      "options": [
+        "Dopamine",
+        "Serotonin",
+        "Acetylcholine",
+        "GABA"
+      ],
+      "answer": "Serotonin",
+      "explanation": "Serotonin is believed to play a significant role in the pathophysiology of seasonal affective disorder, particularly due to its influence on mood regulation. The other neurotransmitters listed do not have the same established connection to SAD.",
+      "kn": "KN1",
+      "kn_explanation": "This KN code applies as it relates to the biological bases of behavior, particularly in understanding neurotransmitter functions in mood disorders.",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests knowledge of neurotransmitter roles in mood disorders.",
+      "suggestedLesson": "1-neurons-and-neurotransmitters",
+      "suggestedParagraph": "## Strokes: When Blood Flow Gets Cut Off",
+      "lessonExcerpt": "**Migraines** involve intense, throbbing pain (usually one-sided) often with nausea/vomiting and sensitivity to light or other stimuli. They're linked to low serotonin and abnormalities in glutamate, dopamine, and norepinephrine.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 20
+    },
+    {
+      "stem": "In the context of eating disorders, which of the following psychological factors is most likely to perpetuate the cycle of disordered eating behaviors as identified in transdiagnostic CBT-E?",
+      "options": [
+        "Perfectionism regarding body shape",
+        "Desire for social acceptance",
+        "Fear of weight gain",
+        "Negative self-esteem related to appearance"
+      ],
+      "answer": "Perfectionism regarding body shape",
+      "explanation": "Perfectionism, particularly concerning body shape and weight, can drive individuals to engage in disordered eating behaviors as they strive for an unattainable ideal. CBT-E addresses these perfectionistic tendencies to help break the cycle.",
+      "difficulty": "hard",
+      "kn": "KN32",
+      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
+      "quality_comment": "This question challenges the test-taker to connect psychological factors with eating disorder maintenance.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "harder",
+      "tags": [
+        "lock_in_drill"
+      ],
+      "lessonExcerpt": "This requires preoccupation with orderliness, perfectionism, and control that limits flexibility and efficiency. You need at least four of eight symptoms:",
+      "suggestedLesson": "1-neurons-and-neurotransmitters",
+      "needsReview": false
     }
   ]
 }

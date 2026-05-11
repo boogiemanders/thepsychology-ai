@@ -293,6 +293,111 @@
       "lessonExcerpt": "Three factors determine how much control a leader has:\n1. Leader-member relations (good or poor)\n2. Task structure (structured or unstructured)  \n3. Position power (strong or weak)",
       "suggestedLesson": "5-6-leadership",
       "needsReview": false
+    },
+    {
+      "stem": "A psychologist-in-training is waiting to learn whether she passed a high-stakes oral examination. She feels anxious and is unsure whether her distress level is reasonable or excessive. Rather than seeking out faculty who have administered the exam many times, she finds herself wanting to talk with other trainees who are in the same waiting period. According to social comparison theory, what best explains this selective preference?",
+      "options": [
+        "She is seeking emotional support from peers who share her professional identity",
+        "She wants to compare her emotional response with similar others in the same situation to gauge whether her anxiety level is appropriate",
+        "She is engaging in downward social comparison to reassure herself that others are worse off",
+        "She is avoiding evaluation apprehension by choosing confidants unlikely to judge her performance"
+      ],
+      "answer": "She wants to compare her emotional response with similar others in the same situation to gauge whether her anxiety level is appropriate",
+      "explanation": "Social comparison theory (Festinger, 1954) holds that when people are uncertain about how to feel, think, or react, they look to similar others to assess whether their responses are appropriate. The trainee is not choosing experienced faculty—who have a different vantage point—but peers facing the exact same situation, because only those in an equivalent position can serve as a valid comparison standard for calibrating emotional reactions. Option A reframes the behavior as support-seeking rather than information-seeking, which misses the specific mechanism Festinger identified. Option C (downward comparison) would require seeking out those doing worse, not those in the same boat. Option D describes evaluation apprehension, a distinct construct concerning fear of being judged while performing.",
+      "kn": "KN14",
+      "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
+      "difficulty": "medium",
+      "quality_comment": "Scenario cleanly instantiates the uncertainty-reduction function of social comparison and requires distinguishing it from three plausible but distinct alternatives. Direct lesson support is strong.",
+      "suggestedLesson": "5-6-leadership",
+      "suggestedParagraph": "Schachter's Anxiety Studies: Misery Loves Company (But Only Certain Company)",
+      "lessonExcerpt": "A meta-analysis by Eagly, Johannesen-Schmidt, and van Engen (2003) revealed something interesting about transformational and transactional leadership: **Female leaders are more likely to:** - Use transformational leadership approaches (inspiring and developing people) - Provide contingency rewards (a transactional element)",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 21
+    },
+    {
+      "stem": "According to Fiedler's contingency model, a leader with a low LPC (Least Preferred Coworker) score would be MOST effective in which of the following situations?",
+      "options": [
+        "A moderately favorable situation where leader-member relations are good but task structure is low",
+        "A highly favorable or highly unfavorable situation",
+        "A moderately favorable situation regardless of leader-member relations",
+        "Any situation, provided the leader receives leadership training to adapt their style"
+      ],
+      "answer": "A highly favorable or highly unfavorable situation",
+      "explanation": "Fiedler's contingency model posits that low-LPC leaders (task-oriented) perform best in situations that are either very favorable or very unfavorable, while high-LPC leaders (relationship-oriented) perform best in moderately favorable situations. Situational favorability is determined by leader-member relations, task structure, and position power. Option A describes a moderate situation better suited to high-LPC leaders. Option C incorrectly removes leader-member relations from the equation. Option D contradicts Fiedler's core assertion that leadership style is relatively fixed and the situation must be engineered to match the leader, not the other way around.",
+      "kn": "KN44",
+      "kn_explanation": "This question is best aligned with KN44 because it tests Treatment techniques and interventions, and the evidence for their comparative efficacy and effectiveness.",
+      "difficulty": "hard",
+      "quality_comment": "Solid contingency model question testing the core matching principle. However, the provided domain 6 lesson content does not cover Fiedler's contingency model or leadership theory at all — this topic typically falls under I/O Psychology. Content goes beyond current lesson material — valid EPPP topic, no lesson excerpt available.",
+      "suggestedLesson": "5-6-leadership",
+      "suggestedParagraph": "## Understanding Prevention, Consultation, and Psychotherapy Research: Your Complete Guide",
+      "lessonExcerpt": "These combine to create situations ranging from very favorable to very unfavorable. **The Match-Up",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 31
+    },
+    {
+      "stem": "Research indicates that men and women may exhibit different leadership styles. Which of the following is a commonly observed difference?",
+      "options": [
+        "Men are more likely to use transformational leadership",
+        "Women are more likely to adopt a democratic leadership style",
+        "Men are more likely to use a participative approach",
+        "Women are more likely to use an authoritarian style"
+      ],
+      "answer": "Women are more likely to adopt a democratic leadership style",
+      "explanation": "Research has shown that women tend to adopt a more democratic or participative leadership style, which contrasts with the more autocratic styles often associated with men. The other options do not accurately reflect the common findings in leadership research.",
+      "kn": "KN10",
+      "kn_explanation": "This question is best aligned with KN10 because it tests Major research-based theories and models of emotion and their application.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses knowledge of gender differences in leadership.",
+      "suggestedLesson": "5-6-leadership",
+      "suggestedParagraph": "## The Brain's Emotion Centers: Meet Your Neural Cast",
+      "lessonExcerpt": "Theory #6: Expectancy Theory (VIE Theory) Vroom's expectancy theory says motivation is a calculation based on three factors:",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 4
+    },
+    {
+      "stem": "Research indicates that which leadership style is often associated with better outcomes in gender-diverse teams?",
+      "options": [
+        "Autocratic leadership",
+        "Transformational leadership",
+        "Transactional leadership",
+        "Laissez-faire leadership"
+      ],
+      "answer": "Transformational leadership",
+      "explanation": "Transformational leadership is often associated with better outcomes in gender-diverse teams as it emphasizes inspiration, motivation, and the development of team members. Autocratic leadership tends to stifle input, transactional leadership focuses on exchanges rather than development, and laissez-faire leadership can lead to a lack of direction. Therefore, the correct answer is transformational leadership.",
+      "kn": "KN19",
+      "kn_explanation": "This KN code applies as it pertains to understanding gender differences in leadership styles.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of leadership styles in diverse teams.",
+      "suggestedLesson": "5-6-leadership",
+      "suggestedParagraph": "## The Need for Affiliation: Why We Seek Others",
+      "lessonExcerpt": "Immersion-Emersion:** They reject White culture completely and immerse themselves in Black culture. This is an intense, emotionally charged stage.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 19
+    },
+    {
+      "stem": "Which leadership style focuses on inspiring and motivating followers to achieve higher levels of performance?",
+      "options": [
+        "Transactional leadership.",
+        "Transformational leadership.",
+        "Autocratic leadership.",
+        "Laissez-faire leadership."
+      ],
+      "answer": "Transformational leadership.",
+      "explanation": "The correct answer identifies transformational leadership as the style that emphasizes inspiration and motivation. The other options describe different leadership styles that do not focus on inspiring followers.",
+      "kn": "KN16",
+      "kn_explanation": "This question is best aligned with KN16 because it tests Group and systems processes (e.g., school, work, and family systems, job satisfaction, team functioning, conformity, persuasion) and social influences on functioning.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of leadership styles.",
+      "suggestedLesson": "5-6-leadership",
+      "suggestedParagraph": "## The Three Pillars of Social Influence",
+      "lessonExcerpt": "Understanding these patterns is essential for your EPPP exam.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 8
     }
   ]
 }

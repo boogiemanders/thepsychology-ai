@@ -22,27 +22,6 @@
       "inspirationIndex": 17
     },
     {
-      "stem": "How does cognitive dissonance typically lead to attitude change?",
-      "options": [
-        "By reinforcing existing beliefs",
-        "By creating discomfort that motivates change",
-        "By providing new information that contradicts beliefs",
-        "By increasing confidence in one's decisions"
-      ],
-      "answer": "By creating discomfort that motivates change",
-      "explanation": "The correct answer is 'By creating discomfort that motivates change' because cognitive dissonance arises when there is a conflict between beliefs and behaviors, leading to psychological discomfort that individuals seek to resolve by changing their attitudes. 'By reinforcing existing beliefs' is incorrect as cognitive dissonance challenges existing beliefs. 'By providing new information that contradicts beliefs' does not capture the essence of dissonance, which is about internal conflict. 'By increasing confidence in one's decisions' is misleading, as dissonance often leads to uncertainty.",
-      "kn": "KN14",
-      "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively assesses understanding of cognitive dissonance.",
-      "suggestedLesson": "3-attitudes",
-      "suggestedParagraph": "## Why Persuasion Matters for Psychologists",
-      "lessonExcerpt": "you experience psychological discomfort called dissonance. This discomfort motivates you to reduce it.",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 16
-    },
-    {
       "stem": "According to the elaboration likelihood model, which route to persuasion is most effective when individuals are motivated and able to process information?",
       "options": [
         "Peripheral route.",

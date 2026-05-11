@@ -424,6 +424,128 @@
       "lessonExcerpt": "**Misconception 2: \"A high F scale always means faking\"**\nNot necessarily. High F can indicate severe genuine pathology, random responding, or exaggeration.",
       "suggestedLesson": "5-mmpi",
       "needsReview": false
+    },
+    {
+      "stem": "A researcher develops a performance appraisal instrument for hospital-based clinical psychologists that measures only session count, client symptom reduction scores, and therapy completion rates. An expert review panel notes that the measure omits supervisory competence, interdisciplinary consultation skills, administrative contributions, and training program involvement—all of which are established components of the performance domain for this role. The panel's primary psychometric concern regarding this instrument is best described as:",
+      "options": [
+        "Criterion contamination, because extraneous variables have been introduced into the criterion measure",
+        "Criterion deficiency, because the criterion measure fails to capture the full scope of the performance construct",
+        "Predictive bias, because the instrument will underpredict performance for some demographic subgroups",
+        "Convergent invalidity, because the measure correlates too highly with a single dimension of performance"
+      ],
+      "answer": "Criterion deficiency, because the criterion measure fails to capture the full scope of the performance construct",
+      "explanation": "Criterion deficiency occurs when a criterion measure does not assess all relevant dimensions of the construct it is intended to represent, leaving important aspects of the performance domain unmeasured. In this case, supervisory competence, consultation, administrative duties, and training contributions are legitimate components of a clinical psychologist's role that are absent from the appraisal. Option A (criterion contamination) is the opposite problem—variance in the criterion attributable to factors unrelated to true performance, not missing dimensions. Option C (predictive bias) refers to differential prediction of criterion scores across demographic groups, which is a validity generalization issue rather than a domain-coverage issue. Option D is incorrect because convergent invalidity involves pattern-of-correlations evidence and does not describe incomplete domain sampling.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
+      "difficulty": "medium",
+      "quality_comment": "Clear real-world vignette effectively differentiates criterion deficiency from the commonly confused criterion contamination. Distractors test precise conceptual distinctions appropriate for doctoral-level assessment.",
+      "suggestedLesson": "5-mmpi",
+      "suggestedParagraph": "## Validity and Test Development Concepts",
+      "lessonExcerpt": "Neurotic Triad (1-2-3 elevation)** When scales 1 (Hypochondriasis), 2 (Depression), and 3 (Hysteria) are all elevated together, you're looking at someone experiencing significant distress across multiple domains. These individuals struggle with depression, physical complaints, work problems, relationship issues, and general life dissatisfaction.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 22
+    },
+    {
+      "stem": "In the context of borderline personality disorder, which symptom is most indicative of indecision and procrastination?",
+      "options": [
+        "Fear of abandonment",
+        "Impulsivity",
+        "Chronic feelings of emptiness",
+        "Difficulty making decisions"
+      ],
+      "answer": "Difficulty making decisions",
+      "explanation": "Difficulty making decisions is a hallmark symptom of indecision and procrastination, particularly in borderline personality disorder. While fear of abandonment and impulsivity are also symptoms, they do not specifically relate to indecision. Chronic feelings of emptiness are more about emotional states than decision-making processes.",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of borderline personality disorder symptoms.",
+      "suggestedLesson": "5-mmpi",
+      "suggestedParagraph": "## Why Clinical Tests Matter for Your EPPP Success",
+      "lessonExcerpt": "Indecision and procrastination are common symptoms in borderline personality disorder.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 12
+    },
+    {
+      "stem": "When diagnosing social phobia, which of the following behaviors would be considered factitious?",
+      "options": [
+        "Exaggerating symptoms to gain attention.",
+        "Avoiding social situations due to fear of embarrassment.",
+        "Seeking reassurance from others about social performance.",
+        "Engaging in compulsive behaviors to manage anxiety."
+      ],
+      "answer": "Exaggerating symptoms to gain attention.",
+      "explanation": "Factitious behavior involves intentionally producing or exaggerating symptoms for attention or other external incentives. The other options describe behaviors associated with social phobia but do not involve factitious behavior.",
+      "kn": "KN30",
+      "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively distinguishes between factitious behavior and typical symptoms of social phobia.",
+      "suggestedLesson": "5-mmpi",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "Exaggerating symptoms to gain attention is considered factitious behavior.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 29
+    },
+    {
+      "stem": "Which statement best characterizes the Rancho Scale of Cognitive Functioning (Revised)?",
+      "options": [
+        "It quantifies severity of depression during neurorehabilitation.",
+        "It assesses adaptive behavior from birth to 90 years of age.",
+        "It rates levels of cognitive recovery after head injury across ten levels.",
+        "It measures visual memory deficits in children over 8 years."
+      ],
+      "answer": "It rates levels of cognitive recovery after head injury across ten levels.",
+      "explanation": "1. The correct answer, \"It rates levels of cognitive recovery after head injury across ten levels,\" accurately describes the Rancho Scale of Cognitive Functioning Revised. This scale evaluates cognitive recovery in patients following a head injury by categorizing their level of response and assistance needs into ten distinct levels, ranging from unresponsive to purposeful and appropriate responses.\n\n2. The incorrect options are as follows:\n- \"It quantifies severity of depression during neurorehabilitation.\" This statement is incorrect because the Rancho Scale does not assess depression; it focuses specifically on cognitive recovery levels after brain injury.\n- \"It assesses adaptive behavior from birth to 90 years of age.\" This option is wrong as it describes the Vineland Adaptive Behavior Scales, not the Rancho Scale, which is specifically aimed at cognitive functioning post-injury.\n- \"It measures visual memory deficits in children over 8 years.\" This statement is incorrect because it pertains to tests like the Benton Visual Retention Test, while the Rancho Scale evaluates cognitive recovery levels, not visual memory.",
+      "kn": "KN32",
+      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
+      "difficulty": "medium",
+      "quality_comment": "This question effectively discriminates test knowledge relevant to post-injury recovery assessment with plausible distractors describing other clinical measures.",
+      "lessonExcerpt": "**Rancho Scale of Cognitive Functioning Revised** tracks cognitive recovery during the first weeks after head injury.",
+      "suggestedLesson": "5-mmpi",
+      "needsReview": false
+    },
+    {
+      "stem": "Which neuropsychological test includes subtests scored on a 3-point scale indicating normal, borderline, or impaired performance, with final scores converted to age- and education-based T scores?",
+      "options": [
+        "Luria-Nebraska Neuropsychological Battery",
+        "Halstead-Reitan Neuropsychological Battery",
+        "Bender Visual-Motor Gestalt Test",
+        "Tower of London"
+      ],
+      "answer": "Luria-Nebraska Neuropsychological Battery",
+      "explanation": "1. The **Luria-Nebraska Neuropsychological Battery** is the correct answer because it consists of 11 scales that assess various aspects of neuropsychological functioning, with each item scored on a 3-point scale: 0 for normal performance, 1 for borderline performance, and 2 for impaired performance. The raw scale scores obtained from these items are then converted to T scores, which are interpreted based on the examinee's age and education level.\n\n2. The **Halstead-Reitan Neuropsychological Battery** is incorrect because it utilizes a different scoring method, specifically the Halstead Impairment Index, which ranges from 0 to 1.0 to indicate levels of impairment rather than a 3-point scale. The **Bender Visual-Motor Gestalt Test** is also incorrect as it evaluates designs using a Global Scoring System on a five-point scale, not a 3-point scale. Finally, the **Tower of London** is incorrect because it assesses problem-solving and planning without the use of a 3-point scoring system; it focuses on total correct responses and rule violations instead.",
+      "kn": "KN32",
+      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
+      "difficulty": "medium",
+      "quality_comment": "Options include well-known neuropsych tests, requiring nuanced knowledge of scoring procedures to answer correctly.",
+      "lessonExcerpt": "**Luria-Nebraska Neuropsychological Battery** takes a different approach with 11 scales covering reading, writing, arithmetic, expressive language, receptive language, and intellectual functioning. Available for ages 8 and up, it uses a straightforward 3-point scoring system",
+      "suggestedLesson": "5-mmpi",
+      "needsReview": false
+    },
+    {
+      "stem": "Which of the following is true regarding the diagnosis of borderline personality disorder in adolescents according to DSM-5-TR criteria?",
+      "options": [
+        "It can be diagnosed if the individual exhibits unstable interpersonal relationships.",
+        "It cannot be diagnosed before the age of 18.",
+        "It requires a history of depressive episodes.",
+        "It is diagnosed only if there is a history of substance abuse."
+      ],
+      "answer": "It cannot be diagnosed before the age of 18.",
+      "explanation": "1. The statement \"It cannot be diagnosed before the age of 18\" is correct because the DSM-5-TR specifies that a diagnosis of borderline personality disorder (BPD) typically has an onset in late adolescence, and symptoms are most severe in early adulthood. While symptoms can emerge in adolescence, the formal diagnosis requires that the individual is at least 18 years old, as personality disorders are generally considered stable patterns of behavior that develop over time.\n\n2. The option \"It can be diagnosed if the individual exhibits unstable interpersonal relationships\" is incorrect because, while unstable interpersonal relationships are a symptom of BPD, the diagnosis cannot be made until the individual is 18 years old. The option \"It requires a history of depressive episodes\" is misleading as BPD does not specifically require depressive episodes for diagnosis; rather, it focuses on a pervasive pattern of instability and impulsivity. Finally, \"It is diagnosed only if there is a history of substance abuse\" is incorrect because substance abuse is not a criterion for diagnosing BPD; the disorder can be diagnosed independently of any history of substance use.",
+      "difficulty": "easy",
+      "kn": "KN36",
+      "kn_explanation": "This question focuses on diagnostic criteria and classification systems, highlighting limits and rationales for diagnosis under DSM-5-TR, which aligns with assessment and diagnosis knowledge.",
+      "quality_comment": "This question effectively tests knowledge of age-related diagnostic criteria for personality disorders.",
+      "is_lock_in_drill": true,
+      "lock_in_level": "easier",
+      "tags": [
+        "lock_in_drill"
+      ],
+      "lessonExcerpt": "Reality:** CD cannot be diagnosed after age 18 if the person meets criteria for Antisocial Personality Disorder. CD is essentially the developmental precursor.",
+      "suggestedLesson": "5-mmpi",
+      "needsReview": false
     }
   ]
 }

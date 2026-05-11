@@ -22,69 +22,6 @@
       "inspirationIndex": 5
     },
     {
-      "stem": "According to Patterson's model of aggression, what is a key factor contributing to conduct problems in children?",
-      "options": [
-        "Parental warmth",
-        "Peer influence",
-        "Inconsistent discipline",
-        "High academic achievement"
-      ],
-      "answer": "Inconsistent discipline",
-      "explanation": "Patterson's model suggests that inconsistent discipline from parents can lead to conduct problems in children, as it fails to provide clear boundaries and expectations. The other options do not align with the core principles of Patterson's model regarding the development of aggression.",
-      "kn": "KN22",
-      "kn_explanation": "This question is best aligned with KN22 because it tests Influence of individual-environment interaction on development over time (e.g., the relationship between the individual and the social, academic, work, community environment).",
-      "difficulty": "hard",
-      "quality_comment": "The question accurately assesses knowledge of Patterson's model and its implications for child behavior.",
-      "suggestedLesson": "4-bonding-and-attachment",
-      "suggestedParagraph": "## The Foundation: How Relationships Shape Us",
-      "lessonExcerpt": "Coercive Family Interaction Model (Patterson): This model describes a destructive cycle where parents use threats and punishment to temporarily stop misbehavior",
-      "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 20
-    },
-    {
-      "stem": "Which of the following factors is most strongly associated with predicting adolescent alcohol use?",
-      "options": [
-        "Peer influence",
-        "Parental supervision",
-        "Socioeconomic status",
-        "Academic performance"
-      ],
-      "answer": "Peer influence",
-      "explanation": "The correct answer is 'Peer influence', as research consistently shows that adolescents are more likely to engage in alcohol use when they have peers who drink. While parental supervision, socioeconomic status, and academic performance can influence behavior, peer influence is a more direct predictor of alcohol use among adolescents.",
-      "kn": "KN22",
-      "kn_explanation": "This question is best aligned with KN22 because it tests Influence of individual-environment interaction on development over time (e.g., the relationship between the individual and the social, academic, work, community environment).",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively tests knowledge of adolescent behavior and substance use.",
-      "suggestedLesson": "4-body-growth",
-      "suggestedParagraph": "## Predicting Divorce: Warning Signs in Communication",
-      "lessonExcerpt": "Risk Factors: Stressful life events, Parental substance abuse, Weak parent-child relationships, Affiliation with substance-using peers",
-      "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 2
-    },
-    {
-      "stem": "What impact does poor parenting have on the likelihood of delinquency in children?",
-      "options": [
-        "It has no significant impact",
-        "It increases the likelihood of delinquency",
-        "It decreases the likelihood of delinquency",
-        "It only affects academic performance"
-      ],
-      "answer": "It increases the likelihood of delinquency",
-      "explanation": "The correct answer is 'It increases the likelihood of delinquency', as research indicates that poor parenting practices, such as lack of supervision and inconsistent discipline, are associated with higher rates of delinquent behavior in children. The other options are incorrect as they do not accurately reflect the established link between parenting and delinquency.",
-      "kn": "KN22",
-      "kn_explanation": "This question is best aligned with KN22 because it tests Influence of individual-environment interaction on development over time (e.g., the relationship between the individual and the social, academic, work, community environment).",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively assesses knowledge of the relationship between parenting and delinquency.",
-      "suggestedLesson": "4-temperament-and-personality",
-      "suggestedParagraph": "## Marriage, Divorce, and What Comes After",
-      "lessonExcerpt": "Most strongly associated with juvenile delinquency among all parenting styles.",
-      "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 9
-    },
-    {
       "stem": "A psychologist is evaluating two children from the same household where intimate partner violence occurs. Child A has been directly physically abused by the perpetrating parent, while Child B has not been directly abused but has regularly witnessed the violence between parents. Based on the research literature on family violence and child outcomes, which of the following statements is MOST accurate?",
       "options": [
         "Child B is unlikely to develop significant psychological symptoms because the violence was not directed at them",
@@ -211,27 +148,6 @@
       "inspirationIndex": 7
     },
     {
-      "stem": "Which of the following is considered a protective factor in the context of developmental resilience?",
-      "options": [
-        "Exposure to high levels of stress",
-        "Strong family support",
-        "Chronic health conditions",
-        "Low socioeconomic status"
-      ],
-      "answer": "Strong family support",
-      "explanation": "Strong family support is a well-documented protective factor that can help individuals cope with stress and adversity, promoting resilience. The other options are risk factors that can hinder development and well-being.",
-      "kn": "KN27",
-      "kn_explanation": "This question is best aligned with KN27 because it tests Risk and protective factors that may impact a developmental course (e.g., nutrition, prenatal care, health care, social support, socioeconomic status, abuse, victimization, and resiliency).",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively assesses knowledge of resilience factors in development.",
-      "suggestedLesson": "4-body-growth",
-      "suggestedParagraph": "## Marriage, Divorce, and What Comes After",
-      "lessonExcerpt": "Protective Factors: Parental disapproval of substance use, Supportive parenting, Age-appropriate parental monitoring",
-      "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 14
-    },
-    {
       "stem": "A psychologist is presenting grand rounds on post-divorce adjustment. She summarizes the empirical literature as follows: 'The primary stressor differs by gender, and the chronicity of effects also differs.' Which of the following most accurately captures the gender-differentiated findings on adjustment to divorce?",
       "options": [
         "Men experience primarily chronic economic hardship, while women experience primarily social isolation and loss of support networks",
@@ -268,24 +184,6 @@
       "quality_comment": "The question is clear and covers a key concept with plausible distractors that test knowledge of specific relationship dynamics.",
       "lessonExcerpt": "Interestingly, contempt alone is the single strongest predictor of divorce.",
       "suggestedLesson": "4-school-and-family",
-      "needsReview": false
-    },
-    {
-      "stem": "What pattern of couple communication is associated with divorce occurring later in the marriage?",
-      "options": [
-        "Emotionally volatile (attack-defend) pattern",
-        "Emotionally expressive (engagement) pattern",
-        "Emotionally inexpressive (avoidant) pattern",
-        "Emotionally supportive pattern"
-      ],
-      "answer": "Emotionally inexpressive (avoidant) pattern",
-      "explanation": "1. The \"Emotionally inexpressive (avoidant) pattern\" is the correct answer because it is characterized by couples who avoid conflict and self-disclosure, leading to emotional distance and ultimately, divorce later in the marriage. This pattern contrasts with the emotionally volatile pattern, which tends to lead to earlier divorces due to frequent arguments and escalating conflicts.\n\n2. The \"Emotionally volatile (attack-defend) pattern\" is incorrect because it is associated with frequent arguments, criticism, and contempt, leading to divorce earlier in the marriage. The \"Emotionally expressive (engagement) pattern\" is also incorrect, as it is not mentioned in the reference material and does not relate to the patterns identified by Gottman and Levenson. Lastly, the \"Emotionally supportive pattern\" is incorrect because it similarly does not appear in the reference material and is not linked to the timing of divorce as described in the context of couple communication patterns.",
-      "kn": "KN22",
-      "kn_explanation": "This question is best aligned with KN22 because it tests Influence of individual-environment interaction on development over time (e.g., the relationship between the individual and the social, academic, work, community environment).",
-      "difficulty": "medium",
-      "quality_comment": "Clear stem and well-constructed distractors that distinguish between emotional expression styles in couples.",
-      "lessonExcerpt": "Protective Factors: Parental disapproval of substance use, Supportive parenting, Age-appropriate parental monitoring",
-      "suggestedLesson": "4-body-growth",
       "needsReview": false
     },
     {
@@ -508,6 +406,66 @@
       "lessonExcerpt": "Stepfather Adjustment. Stepfathers adjust better when they: - Have their own biological children living in the household",
       "suggestedLesson": "4-school-and-family",
       "needsReview": false
+    },
+    {
+      "stem": "The empathy-altruism hypothesis proposes that people help others primarily due to:",
+      "options": [
+        "A desire to reduce their own distress",
+        "Empathic concern for the other person's welfare",
+        "Social pressure to conform",
+        "Anticipation of external rewards"
+      ],
+      "answer": "Empathic concern for the other person's welfare",
+      "explanation": "1. The correct answer, \"Empathic concern for the other person's welfare,\" aligns with the empathy-altruism hypothesis proposed by Batson (1991), which asserts that individuals help others primarily because they genuinely care about their well-being. This altruistic motive is driven by feelings of empathy, which motivate people to act in ways that benefit others, rather than focusing on their own needs or desires.\n\n2. The option \"A desire to reduce their own distress\" is incorrect because it reflects the negative state relief model, which posits that people help others primarily to alleviate their own feelings of sadness or guilt rather than from a selfless concern for the other person. \"Social pressure to conform\" is also wrong, as it suggests that individuals help others primarily due to external expectations, rather than out of genuine empathy for the person in need. Lastly, \"Anticipation of external rewards\" is incorrect because it implies that helping behavior is motivated by the expectation of receiving rewards, which contradicts the essence of altruism as described in the empathy-altruism hypothesis.",
+      "kn": "KN15",
+      "kn_explanation": "This question tests knowledge of motivational theories behind prosocial behavior, relating to social cognition and social interaction (KN15).",
+      "difficulty": "easy",
+      "quality_comment": "The correct option is conceptually distinct and distractors reflect alternative motivational explanations, enhancing test validity.",
+      "lessonExcerpt": "Fewer externalizing and internalizing problems ### Teacher Expectations",
+      "suggestedLesson": "4-school-and-family",
+      "needsReview": false
+    },
+    {
+      "stem": "What is a potential impact of domestic violence on children's development?",
+      "options": [
+        "Increased cognitive abilities due to heightened awareness of their environment",
+        "Development of emotional and behavioral problems",
+        "Enhanced social skills from observing conflict resolution",
+        "Improved academic performance due to increased resilience"
+      ],
+      "answer": "Development of emotional and behavioral problems",
+      "explanation": "Children exposed to domestic violence often develop emotional and behavioral problems due to the trauma and instability in their environment. The other options suggest positive outcomes that are not typically associated with exposure to domestic violence.",
+      "kn": "KN25",
+      "kn_explanation": "This question is best aligned with KN25 because it tests Family development, configuration, and functioning and their impact on the individual across the lifespan.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of the negative impacts of domestic violence on children.",
+      "suggestedLesson": "4-school-and-family",
+      "suggestedParagraph": "## Introduction: Why Attachment and Social Development Matter for Your Practice",
+      "lessonExcerpt": "Understanding socioemotional development isn't just about memorizing attachment styles for the EPPP. It's about recognizing patterns that show up daily in your consulting room.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 1
+    },
+    {
+      "stem": "A 7-year-old child assigned female at birth has, for the past 8 months, strongly insisted on being called by a male name, expressed a persistent desire to be a boy, preferred rough-and-tumble play exclusively with male peers, and refused to wear feminine clothing. The child's parents report significant distress at school, including refusal to use the girls' restroom and daily crying before school. According to DSM-5, which of the following is required in addition to the specified incongruence criteria to diagnose Gender Dysphoria in Children?",
+      "options": [
+        "Clinically significant distress or impairment in social, school, or other important areas of functioning",
+        "Documented biological evidence of a sex chromosome variation or hormonal atypicality",
+        "Onset of gender incongruence symptoms prior to age 5",
+        "Presence of co-occurring separation anxiety disorder or oppositional defiant disorder"
+      ],
+      "answer": "Clinically significant distress or impairment in social, school, or other important areas of functioning",
+      "explanation": "DSM-5 Gender Dysphoria in Children requires two criteria: Criterion A, a marked incongruence between experienced/expressed gender and assigned gender manifested by at least 6 of 8 specified indicators lasting at least 6 months, AND Criterion B, clinically significant distress or impairment. The distress/impairment criterion (Criterion B) is essential because it distinguishes Gender Dysphoria from gender nonconformity that does not cause distress. The 8-month duration in this vignette satisfies the minimum 6-month threshold. Option B is incorrect because biological sex variations are not required; they may be noted as a specifier if present. Option C is incorrect because DSM-5 imposes no age-of-onset requirement before age 5. Option D is incorrect because comorbid diagnoses are not required for the Gender Dysphoria diagnosis.",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
+      "difficulty": "hard",
+      "quality_comment": "Well-grounded in DSM-5 diagnostic criteria. Vignette-based format appropriate for doctoral-level difficulty. Distractors are plausible misconceptions about the diagnosis.",
+      "suggestedLesson": "4-school-and-family",
+      "suggestedParagraph": "## Clinical Diagnosis and DSM-5 Classification",
+      "lessonExcerpt": "**Criterion contamination** occurs when the measure is influenced by factors unrelated to actual job performance.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 21
     }
   ]
 }

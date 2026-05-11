@@ -5087,5 +5087,55 @@
     "original_file": "questionsGPT/8 Ethics/8 Standards 7 and 8.json",
     "original_index": 4,
     "reason": "Concept in reference RTF but no current lesson covers it"
+  },
+  {
+    "stem": "In the context of sexual identity development, what characterizes the identity pride stage?",
+    "options": [
+      "Exploration of sexual orientation",
+      "Acceptance of one's sexual identity",
+      "Integration of sexual identity into overall self-concept",
+      "Public affirmation of sexual identity"
+    ],
+    "answer": "Public affirmation of sexual identity",
+    "explanation": "The identity pride stage is characterized by a strong public affirmation of one's sexual identity, often accompanied by pride in that identity. Exploration occurs in earlier stages, while acceptance and integration are part of later stages. Thus, the correct answer is public affirmation of sexual identity.",
+    "kn": "KN19",
+    "kn_explanation": "This question is best aligned with KN19 because it tests Identity diversity and intersectionality (e.g., psychological impact of diversity on individuals, families, and systems).",
+    "difficulty": "hard",
+    "quality_comment": "The question accurately assesses knowledge of sexual identity development stages.",
+    "suggestedLesson": "5-sex-and-gender",
+    "suggestedParagraph": "## What Makes Us Attracted to Specific People?",
+    "lessonExcerpt": "Gender-Affirmative**: Dutch = \"wait and see then proceed\"; Gender-Affirmative = \"support authentic identity as it emerges.\" The Dutch protocol emphasizes caution and waiting for persistence; the gender-affirmative model emphasizes affirmation and authenticity. ## Key Takeaways",
+    "needsReview": false,
+    "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+    "inspirationIndex": 14,
+    "archived_date": "2026-05-11",
+    "original_file": "questionsGPT/3 Social Psychology/3 Connection.json",
+    "original_index": 3,
+    "reason": "No destination lesson file for suggestedLesson=5-sex-and-gender"
+  },
+  {
+    "stem": "A researcher analyzing data from a longitudinal couples study finds that individuals with objectively higher physical attractiveness ratings consistently form partnerships with others of comparably high attractiveness, and that couples with large attractiveness discrepancies report significantly lower relationship satisfaction. This pattern is MOST consistent with:",
+    "options": [
+      "Byrne's law of attraction, which predicts partner selection based on proportional attitude similarity",
+      "The matching hypothesis, derived from social exchange principles that partners seek equity in interpersonal value",
+      "The mere exposure effect, which predicts increasing attraction through repeated contact and familiarity",
+      "The pratfall effect, which predicts that perceived imperfections increase attraction in high-competence individuals"
+    ],
+    "answer": "The matching hypothesis, derived from social exchange principles that partners seek equity in interpersonal value",
+    "explanation": "The matching hypothesis, grounded in social exchange theory, proposes that individuals pair with partners of similar social desirability (including physical attractiveness) because exchange equity is maximized when both partners contribute comparable interpersonal value. Dissatisfaction in mismatched couples reflects the perceived inequity in the exchange. Byrne's law of attraction pertains to attitude similarity predicting attraction strength — not attractiveness matching in partner selection. The mere exposure effect describes how repeated exposure creates familiarity-based liking regardless of attribute matching. The pratfall effect describes how a minor mistake increases liking for a highly competent person — it is unrelated to the matching dynamic described in this finding.",
+    "kn": "KN14",
+    "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
+    "difficulty": "medium",
+    "quality_comment": "Tests conceptual understanding of why the matching hypothesis is grounded in social exchange theory; distractors require careful discrimination among the major theories of attraction.",
+    "suggestedLesson": "5-sex-and-gender",
+    "suggestedParagraph": "What Makes Us Attracted to Specific People?",
+    "lessonExcerpt": "Gender-Affirmative**: Dutch = \"wait and see then proceed\"; Gender-Affirmative = \"support authentic identity as it emerges.\" The Dutch protocol emphasizes caution and waiting for persistence; the gender-affirmative model emphasizes affirmation and authenticity. ## Key Takeaways",
+    "needsReview": false,
+    "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+    "inspirationIndex": 14,
+    "archived_date": "2026-05-11",
+    "original_file": "questionsGPT/3 Social Psychology/3 Connection.json",
+    "original_index": 6,
+    "reason": "No destination lesson file for suggestedLesson=5-sex-and-gender"
   }
 ]

@@ -64,27 +64,6 @@
       "inspirationIndex": 3
     },
     {
-      "stem": "When ranking scores based on percentiles, which of the following statements is true?",
-      "options": [
-        "Percentiles indicate the percentage of scores that fall below a specific score.",
-        "Percentiles provide the exact score corresponding to a specific percentile rank.",
-        "Percentiles can only be used with normally distributed data.",
-        "Percentiles are the same as standard scores."
-      ],
-      "answer": "Percentiles indicate the percentage of scores that fall below a specific score.",
-      "explanation": "The correct answer accurately describes what percentiles represent in a dataset. The other options either misinterpret the concept of percentiles or incorrectly limit their applicability.",
-      "kn": "KN54",
-      "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
-      "difficulty": "medium",
-      "quality_comment": "The question is well-constructed and tests knowledge of descriptive statistics.",
-      "suggestedLesson": "5-interpreting-scores",
-      "suggestedParagraph": "### Scales of Measurement: How We Quantify Experience",
-      "lessonExcerpt": "A percentile rank tells you the percentage of people in the reference group who scored at or below a particular score. If your client receives a percentile rank of 82, it means 82% of people in the comparison group scored the same or lower.",
-      "needsReview": false,
-      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 4
-    },
-    {
       "stem": "A researcher collects annual income data from a sample of psychologists but many participants at the high end report only that they earn '$200,000 or more' rather than providing exact figures. When selecting a measure of central tendency for this dataset, the researcher should use the:",
       "options": [
         "Mean, because income is a ratio-level variable",
@@ -382,6 +361,45 @@
         "lock_in_drill"
       ],
       "lessonExcerpt": "The **independent variable** is what researchers manipulate or compare (it's the \"cause\" side of the equation.",
+      "suggestedLesson": "7-variables",
+      "needsReview": false
+    },
+    {
+      "stem": "In a study examining the relationship between education level and job performance, which of the following best describes the role of education as a moderator variable?",
+      "options": [
+        "Education level directly affects job performance without influencing other variables.",
+        "Education level changes the strength or direction of the relationship between job performance and other factors.",
+        "Education level is an independent variable that predicts job performance.",
+        "Education level has no impact on job performance."
+      ],
+      "answer": "Education level changes the strength or direction of the relationship between job performance and other factors.",
+      "explanation": "Education as a moderator variable indicates that it influences how other variables relate to job performance. The first option misrepresents its role, the third option incorrectly categorizes it as an independent variable, and the last option denies any impact, which is incorrect.",
+      "kn": "KN55",
+      "kn_explanation": "This question is best aligned with KN55 because it tests Analytic methods, including qualitative (e.g., thematic, phenomenological) and quantitative (e.g., probability theory; descriptive, inferential, and parametric statistics; meta-analysis; factor analysis; causal modeling).",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses knowledge of moderator variables in correlation analysis.",
+      "suggestedLesson": "7-variables",
+      "suggestedParagraph": "## The Foundation: What Correlation Actually Tells Us",
+      "lessonExcerpt": "A **moderator variable** changes the strength or direction of the relationship between your independent and dependent variables.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 1
+    },
+    {
+      "stem": "In a mixed research design measuring the effects of drug dose on depression over time, drug dose is manipulated between subjects, while depressive symptoms measured weekly represent which type of variable?",
+      "options": [
+        "Between-subjects variable",
+        "Within-subjects variable",
+        "Confounding variable",
+        "Independent variable"
+      ],
+      "answer": "Within-subjects variable",
+      "explanation": "1. The correct answer, \"Within-subjects variable,\" is accurate because, in this mixed research design, each participant is assessed on depressive symptoms multiple times over the course of the study, specifically measuring their symptoms weekly after being assigned to different drug doses. This means that each participant serves as their own control across the different time points, which is characteristic of a within-subjects design.\n\n2. The option \"Between-subjects variable\" is incorrect because, in a between-subjects design, different groups of participants would receive different levels of the independent variable, but here, the same participants are measured over time. \"Confounding variable\" is not applicable in this context, as it refers to an extraneous factor that may affect the dependent variable, but the question specifically addresses the manipulation and measurement of the independent variable. Lastly, \"Independent variable\" is incorrect because, while drug dose is indeed an independent variable in this study, the question specifically asks about the type of variable represented by the weekly measurements of depressive symptoms, which is classified as a within-subjects variable.",
+      "kn": "KN54",
+      "kn_explanation": "This item focuses on understanding mixed research designs involving both between- and within-subjects variables, a core research design concept (KN54).",
+      "difficulty": "hard",
+      "quality_comment": "The question requires integration of design concepts, making distractors plausible and the item challenging at the EPPP level.",
+      "lessonExcerpt": "Each person experiences all (or multiple) conditions at different times.",
       "suggestedLesson": "7-variables",
       "needsReview": false
     }

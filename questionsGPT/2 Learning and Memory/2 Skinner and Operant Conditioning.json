@@ -400,27 +400,6 @@
       "inspirationIndex": 8
     },
     {
-      "stem": "A special education classroom operates a token economy. A student with a history of verbal outbursts earns tokens throughout the day for appropriate behavior. After each instance of shouting, the teacher removes five tokens from the student's running total. Over the following two weeks, the frequency of shouting decreases significantly. According to the operant conditioning framework described in the lesson, the mechanism producing the behavior reduction is best classified as:",
-      "options": [
-        "Positive punishment, because the act of token removal is itself an unpleasant event that is added following the behavior",
-        "Negative reinforcement, because the student reduces outbursts to avoid the aversive experience of losing tokens",
-        "Negative punishment (response cost), because a desirable stimulus—previously earned tokens—is removed contingent on the target behavior",
-        "Extinction, because the reinforcer that previously maintained the shouting behavior is being withheld"
-      ],
-      "answer": "Negative punishment (response cost), because a desirable stimulus—previously earned tokens—is removed contingent on the target behavior",
-      "explanation": "Response cost is a specific form of negative punishment in which a quantity of a previously earned or available reinforcer (here, tokens) is removed contingent on an undesired behavior, resulting in decreased frequency of that behavior. The lesson defines negative punishment as a consequence in which something desirable is removed and behavior decreases. Positive punishment requires adding an aversive stimulus following the behavior; token removal does not add anything aversive. Negative reinforcement involves the removal of an aversive stimulus to increase behavior, not the removal of a positive reinforcer to decrease it. Extinction involves withholding the reinforcer that functionally maintains the target behavior; because the lesson has not established that tokens were maintaining the shouting, and because the procedure actively removes earned tokens rather than simply withholding a consequence, response cost is the more precise classification.",
-      "kn": "KN7",
-      "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
-      "difficulty": "medium",
-      "quality_comment": "Excellent question testing precise use of the four-consequence taxonomy. Directly supported by the lesson's consequence table.",
-      "suggestedLesson": "2-operant-conditioning-interventions",
-      "suggestedParagraph": "## The Four Core Consequences",
-      "lessonExcerpt": "Response cost is negative punishment, you remove something valued when an undesired behavior occurs. In clinical settings, this might look like a token economy where clients earn points for appropriate behaviors and lose a set number of points for specific problem behaviors.",
-      "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 9
-    },
-    {
       "stem": "A parent repeatedly nags a teenager about completing homework each evening. The teenager eventually shouts at the parent, who immediately leaves the room and stops nagging. Over the following month, the teenager's shouting behavior increases in frequency. Which operant conditioning process best accounts for the maintenance of the shouting behavior?",
       "options": [
         "Positive reinforcement, because the parent's attention following the shouting serves as a rewarding stimulus",
@@ -503,48 +482,6 @@
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 23
-    },
-    {
-      "stem": "A practicum student watches a senior clinician skillfully redirect a client's catastrophic thinking using Socratic questioning during a live supervision session. Without ever having practiced the technique directly or receiving any feedback on their own performance, the student begins successfully using Socratic questioning in their own caseload the following week. Which theoretical framework best explains this acquisition, and who is its primary theorist?",
-      "options": [
-        "Operant conditioning; B.F. Skinner, because the student's behavior was shaped by the reinforcing descriptions of the technique's outcomes",
-        "Classical conditioning; Ivan Pavlov, because the student formed an association between the clinical setting and the modeled behavior",
-        "Observational learning; Albert Bandura, because the student acquired the behavior by attending to and retaining a model's performance without direct reinforcement",
-        "Insight learning; Wolfgang Köhler, because the student perceptually reorganized prior clinical experience into a novel solution"
-      ],
-      "answer": "Observational learning; Albert Bandura, because the student acquired the behavior by attending to and retaining a model's performance without direct reinforcement",
-      "explanation": "Bandura's social learning (social cognitive) theory proposes that new behaviors can be acquired vicariously through observation of a model, without requiring the observer to perform the behavior or receive direct reinforcement. The four subprocesses are attention (observing the model), retention (encoding what was observed), reproduction (executing the behavior), and motivation (having reason to perform it). The student attended to the senior clinician, retained the strategy, and later reproduced it — a textbook example of observational/vicarious learning. Skinner's operant conditioning requires direct contingencies acting on the learner's own behavior. Pavlov's classical conditioning involves pairing stimuli to elicit reflexive responses. Köhler's insight learning involves sudden perceptual reorganization of a problem environment, not modeled observation.",
-      "kn": "KN7",
-      "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
-      "difficulty": "medium",
-      "quality_comment": "Clinical training scenario is realistic and engaging. Content goes beyond current lesson material — valid EPPP topic, no lesson excerpt available.",
-      "suggestedLesson": "2-memory",
-      "suggestedParagraph": "## Understanding Operant Conditioning: The Psychology of Consequences",
-      "lessonExcerpt": "Bandura's bobo doll experiments showed children learn through observation without direct reinforcement. Observational learning requires four processes",
-      "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 24
-    },
-    {
-      "stem": "A psychologist consulted by a treatment program for gambling disorder is asked to explain why individuals who have lost money gambling for weeks continue to return to the casino, and why abstinence is so difficult to maintain even after extended breaks. The psychologist's most accurate explanation for both the persistence and high extinction resistance of gambling behavior is that slot machines operate on a:",
-      "options": [
-        "Fixed ratio schedule, because a payout occurs after a predictable number of lever pulls, creating a strong learned expectancy",
-        "Continuous reinforcement schedule, because every pull of the lever produces some form of outcome feedback that maintains engagement",
-        "Fixed interval schedule, because gamblers learn to concentrate their play around predictable time-based payout cycles",
-        "Variable ratio schedule, because reinforcement is delivered after an unpredictable, variable number of responses, producing the highest resistance to extinction"
-      ],
-      "answer": "Variable ratio schedule, because reinforcement is delivered after an unpredictable, variable number of responses, producing the highest resistance to extinction",
-      "explanation": "Variable ratio (VR) schedules deliver reinforcement after an unpredictable, variable number of responses, producing the highest and most consistent response rates and the greatest resistance to extinction of any reinforcement schedule. Slot machines exemplify VR schedules because the gambler cannot predict which response will produce a payout, preventing the 'post-reinforcement pause' seen with fixed schedules and making the behavior highly resistant to stopping. The lesson contrasts this with continuous reinforcement, which it explicitly notes causes behavior to 'disappear rapidly' when reinforcement stops — the opposite of what is observed in gambling. Fixed ratio schedules produce predictable pauses after each reinforcement and weaker extinction resistance than VR. Fixed interval schedules produce scalloping and are time-based, not response-based. Continuous reinforcement is the schedule most vulnerable to extinction.",
-      "kn": "KN7",
-      "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
-      "difficulty": "medium",
-      "quality_comment": "Classic EPPP scenario anchored in a real-world clinical application. The continuous reinforcement distractor exploits a common misconception. Well-supported by lesson content on intermittent schedules.",
-      "suggestedLesson": "2-memory",
-      "suggestedParagraph": "### The Four Intermittent Schedules",
-      "lessonExcerpt": "Bandura's bobo doll experiments showed children learn through observation without direct reinforcement. Observational learning requires four processes",
-      "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 26
     },
     {
       "stem": "A behavioral psychologist wants to establish a new target behavior as quickly as possible during the initial acquisition phase of treatment. Which reinforcement schedule would produce the fastest learning of the new behavior?",
@@ -900,6 +837,153 @@
       "lessonExcerpt": "Negative Reinforcement | Increases/maintains | Something unpleasant is removed | Relief",
       "suggestedLesson": "2-skinner-and-operant-conditioning",
       "needsReview": false
+    },
+    {
+      "stem": "How does negative reinforcement play a role in smoking behavior?",
+      "options": [
+        "It increases the likelihood of smoking by adding a pleasurable experience.",
+        "It decreases smoking behavior by removing stress.",
+        "It maintains smoking behavior by alleviating withdrawal symptoms.",
+        "It has no effect on smoking behavior."
+      ],
+      "answer": "It maintains smoking behavior by alleviating withdrawal symptoms.",
+      "explanation": "Negative reinforcement in smoking behavior occurs when smoking alleviates unpleasant withdrawal symptoms, thus maintaining the behavior. The other options misinterpret the role of negative reinforcement in this context.",
+      "kn": "KN7",
+      "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of negative reinforcement in the context of smoking.",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "suggestedParagraph": "## Negative Reinforcement: Building New Behaviors",
+      "lessonExcerpt": "Negative Reinforcement: You have a persistent headache, take ibuprofen, and the pain goes away. You're more likely to take ibuprofen for headaches in the future because it removed the unpleasant sensation.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 9
+    },
+    {
+      "stem": "What is the primary reason for extinction resistance in reinforcement schedules?",
+      "options": [
+        "The unpredictability of reinforcement.",
+        "The consistency of punishment.",
+        "The clarity of the behavior's consequences.",
+        "The duration of the reinforcement period."
+      ],
+      "answer": "The unpredictability of reinforcement.",
+      "explanation": "Extinction resistance is often due to the unpredictability of reinforcement, which makes behaviors harder to extinguish. The other options do not accurately capture the primary reason for this phenomenon.",
+      "kn": "KN7",
+      "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests knowledge of reinforcement schedules.",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "suggestedParagraph": "## Reinforcement Schedules: Timing Is Everything",
+      "lessonExcerpt": "Negative Reinforcement: You have a persistent headache, take ibuprofen, and the pain goes away. You're more likely to take ibuprofen for headaches in the future because it removed the unpleasant sensation.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 19
+    },
+    {
+      "stem": "In behavior modification, which of the following best describes negative punishment?",
+      "options": [
+        "Adding an unpleasant stimulus to decrease a behavior",
+        "Removing a pleasant stimulus to decrease a behavior",
+        "Adding a pleasant stimulus to increase a behavior",
+        "Removing an unpleasant stimulus to increase a behavior"
+      ],
+      "answer": "Removing a pleasant stimulus to decrease a behavior",
+      "explanation": "The correct answer is B because negative punishment involves taking away a desirable stimulus to reduce the occurrence of a behavior. Option A is incorrect as that describes positive punishment. Option C is incorrect as it describes positive reinforcement. Option D is incorrect as it describes negative reinforcement.",
+      "kn": "KN7",
+      "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests understanding of behavioral modification.",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "suggestedParagraph": "## The Four Core Consequences",
+      "lessonExcerpt": "Negative Punishment | Decreases | Something desirable is removed | Loss",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 17
+    },
+    {
+      "stem": "What is the optimal timing for reinforcement to enhance learning according to behavioral psychology?",
+      "options": [
+        "Immediate reinforcement",
+        "Delayed reinforcement",
+        "Random reinforcement",
+        "No reinforcement"
+      ],
+      "answer": "Immediate reinforcement",
+      "explanation": "Immediate reinforcement is most effective for enhancing learning because it provides clear feedback and strengthens the association between the behavior and the consequence. Delayed reinforcement can weaken this association, while random reinforcement may lead to confusion about what behavior is being rewarded.",
+      "kn": "KN7",
+      "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
+      "difficulty": "hard",
+      "quality_comment": "The question is challenging and requires a solid understanding of reinforcement principles.",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "suggestedParagraph": "## Positive Reinforcement: Building New Behaviors",
+      "lessonExcerpt": "Negative Punishment | Decreases | Something desirable is removed | Loss",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 6
+    },
+    {
+      "stem": "A psychologist consulted by a treatment program for gambling disorder is asked to explain why individuals who have lost money gambling for weeks continue to return to the casino, and why abstinence is so difficult to maintain even after extended breaks. The psychologist's most accurate explanation for both the persistence and high extinction resistance of gambling behavior is that slot machines operate on a:",
+      "options": [
+        "Fixed ratio schedule, because a payout occurs after a predictable number of lever pulls, creating a strong learned expectancy",
+        "Continuous reinforcement schedule, because every pull of the lever produces some form of outcome feedback that maintains engagement",
+        "Fixed interval schedule, because gamblers learn to concentrate their play around predictable time-based payout cycles",
+        "Variable ratio schedule, because reinforcement is delivered after an unpredictable, variable number of responses, producing the highest resistance to extinction"
+      ],
+      "answer": "Variable ratio schedule, because reinforcement is delivered after an unpredictable, variable number of responses, producing the highest resistance to extinction",
+      "explanation": "Variable ratio (VR) schedules deliver reinforcement after an unpredictable, variable number of responses, producing the highest and most consistent response rates and the greatest resistance to extinction of any reinforcement schedule. Slot machines exemplify VR schedules because the gambler cannot predict which response will produce a payout, preventing the 'post-reinforcement pause' seen with fixed schedules and making the behavior highly resistant to stopping. The lesson contrasts this with continuous reinforcement, which it explicitly notes causes behavior to 'disappear rapidly' when reinforcement stops — the opposite of what is observed in gambling. Fixed ratio schedules produce predictable pauses after each reinforcement and weaker extinction resistance than VR. Fixed interval schedules produce scalloping and are time-based, not response-based. Continuous reinforcement is the schedule most vulnerable to extinction.",
+      "kn": "KN7",
+      "kn_explanation": "This question is best aligned with KN7 because it tests Major research-based theories, models, and principles of learning and their application.",
+      "difficulty": "medium",
+      "quality_comment": "Classic EPPP scenario anchored in a real-world clinical application. The continuous reinforcement distractor exploits a common misconception. Well-supported by lesson content on intermittent schedules.",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "suggestedParagraph": "### The Four Intermittent Schedules",
+      "lessonExcerpt": "Bandura's bobo doll experiments showed children learn through observation without direct reinforcement. Observational learning requires four processes",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 26
+    },
+    {
+      "stem": "A forensic psychologist is developing a treatment plan for a client diagnosed with antisocial personality disorder who has a history of manipulation and disregard for social norms. Based on the literature regarding treatment of antisocial personality disorder, which type of consequence would be MOST effective in influencing this client's behavior?",
+      "options": [
+        "Empathic confrontation within a supportive therapeutic alliance",
+        "Natural and logical consequences directly tied to the client's actions",
+        "Positive reinforcement delivered on a continuous schedule for prosocial behavior",
+        "Insight-oriented interpretation of unconscious motivations for antisocial acts"
+      ],
+      "answer": "Natural and logical consequences directly tied to the client's actions",
+      "explanation": "Individuals with antisocial personality disorder are generally most responsive to natural and logical consequences—real-world outcomes that follow directly from their behavior—because they are less responsive to social reinforcement, empathy-based interventions, or insight-oriented approaches. Empathic confrontation (A) may be ineffective because these individuals often lack the emotional responsiveness to benefit from relationship-based interventions. Continuous positive reinforcement (C) is less effective than consequences that mirror real-world contingencies. Insight-oriented interpretation (D) is typically ineffective because individuals with ASPD generally lack the motivation for self-reflection and may use insight to further manipulate.",
+      "kn": "KN44",
+      "kn_explanation": "This question is best aligned with KN44 because it tests Treatment techniques and interventions, and the evidence for their comparative efficacy and effectiveness.",
+      "difficulty": "hard",
+      "quality_comment": "Clinically relevant question but lesson content does not directly cover ASPD treatment. Based on standard EPPP knowledge.",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "suggestedParagraph": "### Antisocial Personality Disorder",
+      "lessonExcerpt": "Treatment is notoriously difficult because these individuals don't believe they have a problem. However, cognitive-behavioral group interventions may reduce reoffending, and contingency management can help with comorbid substance use.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 21
+    },
+    {
+      "stem": "A behavioral analyst is training a child with autism to use a new functional communication device to request preferred items. To maximize the rate at which this new behavior is acquired during initial training, which schedule of reinforcement should be implemented?",
+      "options": [
+        "Variable-ratio schedule, because it produces the highest sustained response rates and greatest resistance to extinction",
+        "Fixed-ratio schedule, because the predictable contingency clearly signals the response requirement",
+        "Continuous reinforcement, because reinforcing every correct response produces the fastest initial acquisition",
+        "Fixed-interval schedule, because timed delivery allows the trainer to manage reinforcer satiation"
+      ],
+      "answer": "Continuous reinforcement, because reinforcing every correct response produces the fastest initial acquisition",
+      "explanation": "Continuous reinforcement (CRF), in which every correct response is reinforced, is optimal during initial acquisition because the perfect contingency between behavior and consequence makes the response-reinforcement relationship maximally clear and learnable. Although variable-ratio schedules produce the highest response rates and greatest extinction resistance in established behaviors, the unpredictability of reinforcement delivery during acquisition makes it harder for the learner to detect the critical behavioral contingency. Fixed-ratio schedules produce high rates but include post-reinforcement pauses and are better suited once a behavior is established. Fixed-interval schedules produce the lowest overall response rates with a characteristic scallop pattern and are inappropriate for acquisition training.",
+      "kn": "KN44",
+      "kn_explanation": "This question is best aligned with KN44 because it tests Treatment techniques and interventions, and the evidence for their comparative efficacy and effectiveness.",
+      "difficulty": "medium",
+      "quality_comment": "Requires discriminating between acquisition-phase and maintenance-phase reinforcement considerations; lesson",
+      "suggestedLesson": "2-skinner-and-operant-conditioning",
+      "suggestedParagraph": "## Beck's Cognitive Therapy: The Foundation",
+      "lessonExcerpt": "CBT uses both cognitive techniques (like reframing thoughts and examining evidence) and behavioral techniques (like activity scheduling, exposure therapy, and behavioral rehearsal).",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 6
     }
   ]
 }

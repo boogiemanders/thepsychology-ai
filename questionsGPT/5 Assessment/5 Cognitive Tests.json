@@ -103,237 +103,6 @@
       "inspirationIndex": 9
     },
     {
-      "stem": "What does test-retest reliability measure in psychological testing?",
-      "options": [
-        "The consistency of a test's results over time",
-        "The accuracy of a test in predicting outcomes",
-        "The degree to which a test measures what it claims to measure",
-        "The agreement between different raters scoring the same test"
-      ],
-      "answer": "The consistency of a test's results over time",
-      "explanation": "Test-retest reliability specifically assesses how consistent a test's results are when administered at different times. The other options refer to different types of reliability or validity.",
-      "kn": "KN29",
-      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively tests knowledge of reliability types in psychological testing.",
-      "suggestedLesson": "5-items-and-reliability",
-      "suggestedParagraph": "## Tests Based on Brain Processing Models",
-      "lessonExcerpt": "### Item Discrimination Index (D)",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 3
-    },
-    {
-      "stem": "What is the primary purpose of the Kuder-Richardson formula in psychological testing?",
-      "options": [
-        "A. To assess the validity of a test",
-        "B. To estimate the reliability of a test with dichotomous choices",
-        "C. To determine the standard error of measurement",
-        "D. To analyze the variance in test scores"
-      ],
-      "answer": "B. To estimate the reliability of a test with dichotomous choices",
-      "explanation": "Option B is correct because the Kuder-Richardson formula is specifically designed to estimate the reliability of tests that have dichotomous (yes/no) responses. Option A refers to validity, C pertains to standard error, and D relates to variance analysis.",
-      "kn": "KN29",
-      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
-      "difficulty": "medium",
-      "quality_comment": "The question is clear and tests knowledge of reliability estimation.",
-      "suggestedLesson": "5-items-and-reliability",
-      "suggestedParagraph": "## Individual Tests: Matching the Right Tool to the Right Person",
-      "lessonExcerpt": "**Kuder-Richardson 20 (KR-20):** A version of coefficient alpha specifically for items scored as right/wrong (dichotomous scoring).",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 3
-    },
-    {
-      "stem": "In the WISC-IV, which cognitive ability is primarily assessed by the Perceptual Reasoning Index?",
-      "options": [
-        "A. Verbal comprehension",
-        "B. Visual-spatial skills",
-        "C. Working memory",
-        "D. Processing speed"
-      ],
-      "answer": "B. Visual-spatial skills",
-      "explanation": "Option B is correct because the Perceptual Reasoning Index of the WISC-IV specifically measures visual-spatial skills and non-verbal reasoning. Options A, C, and D pertain to other cognitive abilities assessed by different indices.",
-      "kn": "KN32",
-      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively assesses knowledge of the WISC-IV structure.",
-      "suggestedLesson": "5-items-and-reliability",
-      "suggestedParagraph": "## Individual Tests: Matching the Right Tool to the Right Person",
-      "lessonExcerpt": "**Kuder-Richardson 20 (KR-20):** A version of coefficient alpha specifically for items scored as right/wrong (dichotomous scoring).",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 4
-    },
-    {
-      "stem": "How does the standard error of estimate relate to the validity of a psychological test?",
-      "options": [
-        "A. A higher standard error indicates greater validity.",
-        "B. A lower standard error suggests less reliability.",
-        "C. A lower standard error enhances the test's predictive validity.",
-        "D. The standard error is unrelated to validity."
-      ],
-      "answer": "C. A lower standard error enhances the test's predictive validity.",
-      "explanation": "Option C is correct because a lower standard error of estimate indicates that the predictions made by the test are more accurate, thus enhancing its predictive validity. Options A and B are incorrect as they misinterpret the relationship, and D is false as the standard error is indeed related to validity.",
-      "kn": "KN29",
-      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively tests understanding of validity and standard error.",
-      "suggestedLesson": "5-iq-tests",
-      "suggestedParagraph": "## Individual Tests: Matching the Right Tool to the Right Person",
-      "lessonExcerpt": "| Perceptual Reasoning (PRI) | Block Design, Matrix Reasoning, Visual Puzzles | Nonverbal reasoning, spatial processing |",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 5
-    },
-    {
-      "stem": "What does the Kappa coefficient measure in psychological assessments?",
-      "options": [
-        "A. The internal consistency of a test",
-        "B. The agreement between two raters",
-        "C. The validity of a test",
-        "D. The reliability of test scores over time"
-      ],
-      "answer": "B. The agreement between two raters",
-      "explanation": "Option B is correct because the Kappa coefficient specifically measures the level of agreement between two raters or observers. Options A, C, and D refer to different aspects of test evaluation.",
-      "kn": "KN29",
-      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
-      "difficulty": "medium",
-      "quality_comment": "The question clearly assesses knowledge of interrater reliability.",
-      "suggestedLesson": "5-can-tests-predict",
-      "suggestedParagraph": "## Individual Tests: Matching the Right Tool to the Right Person",
-      "lessonExcerpt": "**Cohen's Kappa:** A more sophisticated measure that corrects for chance agreement.",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 6
-    },
-    {
-      "stem": "What is a key characteristic of the forced distribution method in employee performance evaluations?",
-      "options": [
-        "A. It allows for unlimited ratings across all employees.",
-        "B. It requires employees to be ranked within a predetermined distribution curve.",
-        "C. It focuses solely on qualitative feedback.",
-        "D. It eliminates bias in performance ratings."
-      ],
-      "answer": "B. It requires employees to be ranked within a predetermined distribution curve.",
-      "explanation": "Option B is correct because the forced distribution method mandates that employees be ranked according to a specific distribution, often leading to a set percentage of employees being categorized into performance tiers. Options A, C, and D are incorrect as they misrepresent the forced distribution method.",
-      "kn": "KN32",
-      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively assesses understanding of forced distribution in evaluations.",
-      "suggestedLesson": "5-items-and-reliability",
-      "suggestedParagraph": "## Individual Tests: Matching the Right Tool to the Right Person",
-      "lessonExcerpt": "**Cohen's Kappa:** A more sophisticated measure that corrects for chance agreement.",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 8
-    },
-    {
-      "stem": "When adjusting predictor cutoffs in hiring processes, what is a primary consideration?",
-      "options": [
-        "A. The cost of the testing materials",
-        "B. The potential impact on diversity in hiring",
-        "C. The length of the assessment process",
-        "D. The popularity of the assessment tool"
-      ],
-      "answer": "B. The potential impact on diversity in hiring",
-      "explanation": "Option B is correct because adjusting predictor cutoffs can significantly affect the diversity of candidates selected for hiring. Options A, C, and D are less relevant to the ethical and practical implications of cutoff adjustments.",
-      "kn": "KN32",
-      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively assesses understanding of hiring practices and diversity considerations.",
-      "suggestedLesson": "5-6-evaluating-jobs",
-      "suggestedParagraph": "## Individual Tests: Matching the Right Tool to the Right Person",
-      "lessonExcerpt": "Adjusting predictor cutoffs in hiring processes requires consideration of the potential impact on diversity.",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 10
-    },
-    {
-      "stem": "What does the standard error of measurement (SEM) indicate in the context of psychological testing?",
-      "options": [
-        "It reflects the degree to which a test score can vary due to measurement error.",
-        "It measures the reliability of a test based on the number of items it contains.",
-        "It indicates the validity of a test by comparing it to other established measures.",
-        "It determines the average score of a population on a specific test."
-      ],
-      "answer": "It reflects the degree to which a test score can vary due to measurement error.",
-      "explanation": "The SEM quantifies the amount of error associated with a test score, providing insight into the precision of the measurement. The other options misinterpret the purpose of SEM or confuse it with other testing concepts.",
-      "kn": "KN32",
-      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
-      "difficulty": "medium",
-      "quality_comment": "The question accurately tests knowledge of SEM in psychological assessment.",
-      "suggestedLesson": "5-do-hiring-tools-work",
-      "suggestedParagraph": "## Individual Tests: Matching the Right Tool to the Right Person",
-      "lessonExcerpt": "The **standard error of measurement (SEM)** quantifies this uncertainty.",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 2
-    },
-    {
-      "stem": "What is the primary purpose of the Stroop Color Interference Test in cognitive assessment?",
-      "options": [
-        "To measure verbal intelligence and vocabulary.",
-        "To assess cognitive flexibility and processing speed.",
-        "To evaluate memory retention over time.",
-        "To determine the level of emotional distress in individuals."
-      ],
-      "answer": "To assess cognitive flexibility and processing speed.",
-      "explanation": "The Stroop Test evaluates how well individuals can manage conflicting information, which reflects cognitive flexibility and processing speed. The other options do not accurately describe the primary purpose of the test.",
-      "kn": "KN32",
-      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively assesses understanding of the Stroop Test's purpose.",
-      "suggestedLesson": "5-items-and-reliability",
-      "suggestedParagraph": "## Executive Function Tests",
-      "lessonExcerpt": "The **standard error of measurement (SEM)** quantifies this uncertainty.",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 5
-    },
-    {
-      "stem": "Raven's Progressive Matrices is frequently cited in factor-analytic research as one of the strongest available indicators of Spearman's g (general intelligence). Based on the test's core characteristics, which of the following BEST explains why it serves as such a high-loading measure of g?",
-      "options": [
-        "It assesses crystallized intelligence by sampling a wide range of culturally acquired verbal knowledge and reasoning skills",
-        "It measures abstract reasoning and fluid intelligence with minimal dependence on cultural knowledge or formal education, closely approximating pure cognitive processing capacity",
-        "It uses empirical criterion keying to select items that reliably distinguish individuals across a range of occupational performance levels",
-        "It provides separate composite scores for verbal and nonverbal domains, allowing g to be computed as the shared variance between the two composites"
-      ],
-      "answer": "It measures abstract reasoning and fluid intelligence with minimal dependence on cultural knowledge or formal education, closely approximating pure cognitive processing capacity",
-      "explanation": "Raven's Progressive Matrices requires examinees to identify which option completes an incomplete geometric pattern—a task demanding abstract reasoning and fluid intelligence (Gf) rather than accumulated knowledge. Because the test minimizes the role of language, cultural content, and formal educational background, it is considered relatively culture-fair and is thought to tap the core cognitive processing capacity that Spearman conceptualized as g. Factor-analytic studies consistently show Raven's has among the highest g-loadings of any widely used cognitive instrument. Option A is incorrect because Raven's explicitly avoids crystallized content. Option C (empirical criterion keying) describes the construction of the MMPI clinical scales and the Strong Interest Inventory's Occupational Scales, not Raven's. Option D is incorrect because Raven's does not yield separate verbal and nonverbal composites.",
-      "kn": "KN29",
-      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
-      "difficulty": "hard",
-      "quality_comment": "Strong conceptual question linking Raven's design features to the construct of g; the distractor referencing empirical criterion keying is an effective high-level foil for well-prepared candidates.",
-      "suggestedLesson": "5-clinical-tests",
-      "suggestedParagraph": "## Raven's Standard Progressive Matrices (SPM)",
-      "lessonExcerpt": "the Stroop Test evaluates cognitive flexibility, processing speed, selective attention, and response inhibition.",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 19
-    },
-    {
-      "stem": "Which of the following assessments is primarily designed to evaluate non-verbal intelligence?",
-      "options": [
-        "Wechsler Adult Intelligence Scale",
-        "Stanford-Binet Intelligence Scale",
-        "Leiter International Performance Scale",
-        "Minnesota Multiphasic Personality Inventory"
-      ],
-      "answer": "Leiter International Performance Scale",
-      "explanation": "The Leiter International Performance Scale is specifically designed to assess non-verbal intelligence, making it suitable for individuals with communication difficulties. The other assessments, such as the Wechsler and Stanford-Binet, include verbal components.",
-      "kn": "KN32",
-      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
-      "difficulty": "hard",
-      "quality_comment": "The question is clear and directly assesses knowledge of non-verbal intelligence assessments.",
-      "suggestedLesson": "5-clinical-tests",
-      "suggestedParagraph": "## Individual Tests: Matching the Right Tool to the Right Person",
-      "lessonExcerpt": "**Mini-Mental State Exam (MMSE)** is the quick cognitive screening tool you'll see everywhere, particularly in settings with older adults.",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 13
-    },
-    {
       "stem": "Which test is particularly useful for assessing receptive vocabulary in individuals with speech or motor impairments, as it does not require reading or writing skills?",
       "options": [
         "Peabody Picture Vocabulary Test-Fifth Edition (PPVT-5)",
@@ -594,6 +363,180 @@
       "lessonExcerpt": "CAT typically uses **item response theory (IRT)** in development.",
       "suggestedLesson": "5-cognitive-tests",
       "needsReview": false
+    },
+    {
+      "stem": "A 68-year-old retired attorney scores at the 80th percentile on a test of legal vocabulary and professional knowledge, yet scores at the 40th percentile compared to younger adults on a novel matrix reasoning task administered under time pressure. This dissociation best illustrates which well-documented pattern in cognitive aging?",
+      "options": [
+        "Crystallized intelligence declines in parallel with working memory capacity, while fluid intelligence remains stable until the 8th decade",
+        "Fluid intelligence declines earlier and more steeply across adulthood than crystallized intelligence, which remains relatively stable or increases",
+        "Both fluid and crystallized intelligence decline uniformly beginning at age 60 due to generalized cortical atrophy",
+        "Fluid intelligence is preserved in professional domains due to expertise effects, while crystallized intelligence shows selective decline"
+      ],
+      "answer": "Fluid intelligence declines earlier and more steeply across adulthood than crystallized intelligence, which remains relatively stable or increases",
+      "explanation": "Research on cognitive aging, drawing on Cattell and Horn's theory of fluid (Gf) and crystallized (Gc) intelligence, consistently shows that these two constructs follow distinct developmental trajectories. Fluid intelligence — reflecting novel problem-solving, processing speed, and abstract reasoning — peaks in early adulthood and shows a gradual, then steeper, decline with age. Crystallized intelligence — reflecting accumulated knowledge, vocabulary, and expertise derived from cultural learning — remains stable and may increase into late middle adulthood before showing modest decline in very old age. The attorney's preserved legal knowledge (Gc) alongside reduced novel reasoning performance (Gf) exemplifies this classic dissociation. Option A incorrectly characterizes the relative trajectories. Option C overstates the uniformity and timing of decline. Option D misattributes preserved Gf to expertise and incorrectly predicts selective Gc decline.",
+      "kn": "KN21",
+      "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
+      "difficulty": "medium",
+      "quality_comment": "Well-constructed clinical vignette; distractors require distinguishing the two constructs rather than guessing based on surface features.",
+      "suggestedLesson": "5-cognitive-tests",
+      "suggestedParagraph": "## Cognitive Development",
+      "lessonExcerpt": "Nonverbal tests typically emphasize fluid intelligence (reasoning with new information) while minimizing crystallized intelligence (learned knowledge). They're measuring different aspects of cognitive ability.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 16
+    },
+    {
+      "stem": "What is a significant concern regarding racial and cultural biases in IQ testing?",
+      "options": [
+        "IQ tests are designed to be culturally neutral.",
+        "Bias can lead to misinterpretation of a person's abilities.",
+        "All individuals score equally on IQ tests.",
+        "Cultural factors do not influence test performance."
+      ],
+      "answer": "Bias can lead to misinterpretation of a person's abilities.",
+      "explanation": "The correct answer highlights the risk of bias affecting the interpretation of test results, which can have significant implications for individuals. The other options are incorrect as they misrepresent the nature of IQ tests and cultural influences.",
+      "kn": "KN67",
+      "kn_explanation": "This question is best aligned with KN67 because it tests Emerging social, legal, ethical, and policy issues and their impact on psychological practice.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of cultural biases in testing.",
+      "suggestedLesson": "5-cognitive-tests",
+      "suggestedParagraph": "## Racial and cultural biases in IQ testing",
+      "lessonExcerpt": "When you need to minimize cultural bias or language barriers, your top two choices are: KABC-II, Raven's SPM. The Kaufman Assessment Battery for Children (KABC-II) and Raven's Standard Progressive Matrices (SPM) reduce cultural bias and aren't affected by English proficiency or cultural learning.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 10
+    },
+    {
+      "stem": "Which assessment battery is recommended to reduce cultural bias and minimize the influence of English proficiency in cognitive testing of culturally diverse children?",
+      "options": [
+        "Wechsler Intelligence Scale for Children (WISC-V)",
+        "Kaufman Assessment Battery for Children, Second Edition (KABC-II)",
+        "Stanford-Binet Intelligence Scales",
+        "Minnesota Multiphasic Personality Inventory (MMPI)"
+      ],
+      "answer": "Kaufman Assessment Battery for Children, Second Edition (KABC-II)",
+      "explanation": "1. The **Kaufman Assessment Battery for Children, Second Edition (KABC-II)** is the correct answer because it is specifically designed to reduce cultural bias in cognitive testing and is less influenced by English proficiency. This assessment allows for a more accurate evaluation of cognitive abilities in culturally diverse children by focusing on nonverbal skills and minimizing language dependence.\n\n2. The **Wechsler Intelligence Scale for Children (WISC-V)** is incorrect because it relies heavily on verbal skills and may disadvantage children with limited English proficiency, leading to biased results. The **Stanford-Binet Intelligence Scales** is also incorrect as it similarly emphasizes verbal abilities, which can be influenced by cultural and language factors, potentially skewing the assessment outcomes. Lastly, the **Minnesota Multiphasic Personality Inventory (MMPI)** is inappropriate in this context as it is primarily a personality assessment tool, not designed for cognitive testing, and does not address cultural bias in cognitive abilities.",
+      "kn": "KN18",
+      "kn_explanation": "This question is best aligned with KN18 because it tests Cultural and sociopolitical psychology (e.g., privilege, cross-cultural comparisons, political differences, international and global awareness, religiosity and spirituality, acculturation).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors include well-known tests but only one focuses on reducing cultural and language bias, making the question discriminative.",
+      "lessonExcerpt": "The Kaufman Assessment Battery for Children (KABC-II) and Raven's Standard Progressive Matrices (SPM) reduce cultural bias and aren't affected by English proficiency or cultural learning.",
+      "suggestedLesson": "5-cognitive-tests",
+      "needsReview": false
+    },
+    {
+      "stem": "Which assessment is especially useful for minimizing cultural and language biases in nonverbal intelligence testing?",
+      "options": [
+        "Raven’s Standard Progressive Matrices",
+        "Wechsler Adult Intelligence Scale (WAIS-IV)",
+        "Stanford-Binet Intelligence Scales",
+        "Kaufman Assessment Battery for Children (KABC-II)"
+      ],
+      "answer": "Raven’s Standard Progressive Matrices",
+      "explanation": "1. **Raven’s Standard Progressive Matrices** is the correct answer because it is specifically designed to assess nonverbal intelligence and minimize cultural and language biases. This assessment focuses on abstract reasoning and pattern recognition, which reduces the influence of linguistic and cultural knowledge that might affect performance on other intelligence tests.\n\n2. The **Wechsler Adult Intelligence Scale (WAIS-IV)** is incorrect because it includes verbal components that can disadvantage individuals with limited English proficiency or different cultural backgrounds. The **Stanford-Binet Intelligence Scales** are also incorrect as they incorporate verbal reasoning tasks that may not accurately reflect the abilities of individuals from diverse cultural contexts. Lastly, the **Kaufman Assessment Battery for Children (KABC-II)**, while designed to reduce cultural bias, still includes elements that may be influenced by language proficiency, making it less effective than the Raven’s Matrices for nonverbal intelligence assessment.",
+      "kn": "KN18",
+      "kn_explanation": "Assessment tools that reduce cultural bias by focusing on nonverbal skills are important in cross-cultural psychology (KN18).",
+      "difficulty": "medium",
+      "quality_comment": "The question clearly contrasts verbal and nonverbal assessments to test knowledge of culturally fair instruments.",
+      "lessonExcerpt": "The Kaufman Assessment Battery for Children (KABC-II) and Raven's Standard Progressive Matrices (SPM) reduce cultural bias and aren't affected by English proficiency or cultural learning.",
+      "suggestedLesson": "5-cognitive-tests",
+      "needsReview": false
+    },
+    {
+      "stem": "Which neuropsychological test is designed to assess executive functions such as abstract reasoning, perseveration, and set shifting by requiring examinees to match cards according to undisclosed sorting rules?",
+      "options": [
+        "Stroop Color and Word Test",
+        "Wisconsin Card Sorting Test",
+        "Tower of London",
+        "Halstead-Reitan Battery"
+      ],
+      "answer": "Wisconsin Card Sorting Test",
+      "explanation": "1. The **Wisconsin Card Sorting Test (WCST)** is the correct answer because it specifically assesses executive functions such as abstract reasoning, perseveration, and the ability to change cognitive strategies in response to feedback. The test requires examinees to sort cards according to undisclosed rules, which they must discover through trial and error, making it a direct measure of cognitive flexibility and executive functioning.\n\n2. The **Stroop Color and Word Test** is incorrect because it primarily evaluates cognitive flexibility, selective attention, and response inhibition, rather than executive functions like abstract reasoning and set shifting. The **Tower of London** is also incorrect as it focuses on problem-solving and planning rather than card sorting and abstract reasoning. Lastly, the **Halstead-Reitan Battery** is not the correct choice because it is designed to determine the severity and nature of brain damage, assessing various cognitive functions but not specifically targeting executive functions through card sorting tasks.",
+      "kn": "KN32",
+      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
+      "difficulty": "medium",
+      "quality_comment": "The options are plausible neuropsychological tests, reinforcing discrimination of similar but distinct tests targeting executive functions.",
+      "lessonExcerpt": "**Wisconsin Card Sorting Test (WCST)** evaluates abstract reasoning, cognitive flexibility, and the ability to shift strategies based on feedback (all executive functions linked to frontal lobe activity.",
+      "suggestedLesson": "5-cognitive-tests",
+      "needsReview": false
+    },
+    {
+      "stem": "A clinician wants to screen for adaptive functioning to assist in diagnosing intellectual disability. Which assessment is most appropriate?",
+      "options": [
+        "Beck Depression Inventory-II (BDI-II)",
+        "Vineland Adaptive Behavior Scales, 3rd Edition (Vineland-3)",
+        "Benton Visual Retention Test (BVRT)",
+        "Mini-Mental State Exam (MMSE)"
+      ],
+      "answer": "Vineland Adaptive Behavior Scales, 3rd Edition (Vineland-3)",
+      "explanation": "1. The **Vineland Adaptive Behavior Scales, 3rd Edition (Vineland-3)** is the correct answer because it specifically assesses adaptive functioning across various domains, such as communication, daily living skills, and socialization, which are crucial for diagnosing intellectual disability. This tool is designed for individuals from birth to 90 years of age and provides valuable information that can aid in treatment planning and diagnosis.\n\n2. The **Beck Depression Inventory-II (BDI-II)** is incorrect because it measures the severity of depressive symptoms rather than adaptive functioning, making it unsuitable for diagnosing intellectual disability. The **Benton Visual Retention Test (BVRT)** is also inappropriate as it assesses visual perception, visual memory, and visuo-constructive skills, not adaptive behavior. Finally, the **Mini-Mental State Exam (MMSE)** primarily screens for cognitive impairment and does not focus on adaptive functioning, which is essential for diagnosing intellectual disabilities.",
+      "kn": "KN32",
+      "kn_explanation": "This question evaluates knowledge about an adaptive behavior measure used in clinical diagnosis and intervention planning (KN32).",
+      "difficulty": "easy",
+      "quality_comment": "The distractors are common psychological tests but measure different constructs, supporting clear discrimination for EPPP-level examinees.",
+      "lessonExcerpt": "**Vineland Adaptive Behavior Scales, 3rd Edition (Vineland-3)** assesses how well someone functions in daily life, from birth to age 90.",
+      "suggestedLesson": "5-cognitive-tests",
+      "needsReview": false
+    },
+    {
+      "stem": "Which of the following best describes the clinical utility of the Vineland Adaptive Behavior Scales, 3rd Edition (Vineland-3) in assessment?",
+      "options": [
+        "It provides quantitative data on depressive symptom severity over two weeks.",
+        "It offers a comprehensive assessment of adaptive behavior domains necessary for diagnosis and treatment planning.",
+        "It is a performance-based test requiring direct patient interaction with visual stimuli.",
+        "It screens for cognitive impairment through immediate and delayed recall tasks."
+      ],
+      "answer": "It offers a comprehensive assessment of adaptive behavior domains necessary for diagnosis and treatment planning.",
+      "explanation": "1. The statement \"It offers a comprehensive assessment of adaptive behavior domains necessary for diagnosis and treatment planning\" is correct because the Vineland Adaptive Behavior Scales, 3rd Edition (Vineland-3) is specifically designed to evaluate adaptive functioning across various domains, including Communication, Daily Living Skills, and Socialization. This comprehensive assessment aids in diagnosing conditions such as intellectual disability and autism spectrum disorder and assists in treatment planning based on the individual's adaptive behavior profile.\n\n2. The incorrect options are as follows:\n- \"It provides quantitative data on depressive symptom severity over two weeks.\" This statement is incorrect because it describes the Beck Depression Inventory-II (BDI-II), which specifically measures depressive symptoms rather than adaptive behavior.\n- \"It is a performance-based test requiring direct patient interaction with visual stimuli.\" This is inaccurate as the Vineland-3 primarily gathers information through caregiver or teacher reports rather than direct performance-based assessments.\n- \"It screens for cognitive impairment through immediate and delayed recall tasks.\" This option is wrong because it refers to tests like the Wechsler Memory Scale, which assess memory functions, not the adaptive behaviors evaluated by the Vineland-3.",
+      "kn": "KN32",
+      "kn_explanation": "This question relates to the practical use of adaptive behavior measures in clinical assessment frameworks, matching the knowledge area on test applications (KN32).",
+      "difficulty": "easy",
+      "quality_comment": "The item clearly contrasts different types of assessments, making it suitable for assessing real-world clinical decision-making knowledge.",
+      "lessonExcerpt": "**Halstead-Reitan Neuropsychological Battery** is the comprehensive physical exam of brain function testing. Available for ages 5 and up, it evaluates memory, abstract reasoning, concentration, manual dexterity, and visual-motor integration.",
+      "suggestedLesson": "5-cognitive-tests",
+      "needsReview": false
+    },
+    {
+      "stem": "Raven's Progressive Matrices is frequently cited in factor-analytic research as one of the strongest available indicators of Spearman's g (general intelligence). Based on the test's core characteristics, which of the following BEST explains why it serves as such a high-loading measure of g?",
+      "options": [
+        "It assesses crystallized intelligence by sampling a wide range of culturally acquired verbal knowledge and reasoning skills",
+        "It measures abstract reasoning and fluid intelligence with minimal dependence on cultural knowledge or formal education, closely approximating pure cognitive processing capacity",
+        "It uses empirical criterion keying to select items that reliably distinguish individuals across a range of occupational performance levels",
+        "It provides separate composite scores for verbal and nonverbal domains, allowing g to be computed as the shared variance between the two composites"
+      ],
+      "answer": "It measures abstract reasoning and fluid intelligence with minimal dependence on cultural knowledge or formal education, closely approximating pure cognitive processing capacity",
+      "explanation": "Raven's Progressive Matrices requires examinees to identify which option completes an incomplete geometric pattern—a task demanding abstract reasoning and fluid intelligence (Gf) rather than accumulated knowledge. Because the test minimizes the role of language, cultural content, and formal educational background, it is considered relatively culture-fair and is thought to tap the core cognitive processing capacity that Spearman conceptualized as g. Factor-analytic studies consistently show Raven's has among the highest g-loadings of any widely used cognitive instrument. Option A is incorrect because Raven's explicitly avoids crystallized content. Option C (empirical criterion keying) describes the construction of the MMPI clinical scales and the Strong Interest Inventory's Occupational Scales, not Raven's. Option D is incorrect because Raven's does not yield separate verbal and nonverbal composites.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
+      "difficulty": "hard",
+      "quality_comment": "Strong conceptual question linking Raven's design features to the construct of g; the distractor referencing empirical criterion keying is an effective high-level foil for well-prepared candidates.",
+      "suggestedLesson": "5-cognitive-tests",
+      "suggestedParagraph": "## Raven's Standard Progressive Matrices (SPM)",
+      "lessonExcerpt": "the Stroop Test evaluates cognitive flexibility, processing speed, selective attention, and response inhibition.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 19
+    },
+    {
+      "stem": "Which of the following assessments is primarily designed to evaluate non-verbal intelligence?",
+      "options": [
+        "Wechsler Adult Intelligence Scale",
+        "Stanford-Binet Intelligence Scale",
+        "Leiter International Performance Scale",
+        "Minnesota Multiphasic Personality Inventory"
+      ],
+      "answer": "Leiter International Performance Scale",
+      "explanation": "The Leiter International Performance Scale is specifically designed to assess non-verbal intelligence, making it suitable for individuals with communication difficulties. The other assessments, such as the Wechsler and Stanford-Binet, include verbal components.",
+      "kn": "KN32",
+      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
+      "difficulty": "hard",
+      "quality_comment": "The question is clear and directly assesses knowledge of non-verbal intelligence assessments.",
+      "suggestedLesson": "5-cognitive-tests",
+      "suggestedParagraph": "## Individual Tests: Matching the Right Tool to the Right Person",
+      "lessonExcerpt": "**Mini-Mental State Exam (MMSE)** is the quick cognitive screening tool you'll see everywhere, particularly in settings with older adults.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 13
     }
   ]
 }

@@ -22,27 +22,6 @@
       "inspirationIndex": 8
     },
     {
-      "stem": "In 1971, the U.S. Supreme Court ruled in Griggs v. Duke Power Co. that Duke Power's requirement of a high school diploma and passing scores on two general intelligence tests for internal job transfers was unlawful under Title VII of the Civil Rights Act. The company had not validated these requirements as related to successful job performance, and Black employees were disproportionately excluded. Which of the following most accurately captures the central principle established by this ruling for employment selection testing?",
-      "options": [
-        "Employers must use only content-valid tests developed internally from job task analyses and may not purchase commercially developed assessments for selection purposes",
-        "Employment selection procedures that produce disparate impact on a protected class must be demonstrably job-related and justified by business necessity",
-        "Standardized intelligence tests are categorically prohibited from use in employment selection under federal civil rights law",
-        "Disparate impact in employment testing can only be legally challenged after the EEOC has conducted a formal administrative investigation"
-      ],
-      "answer": "Employment selection procedures that produce disparate impact on a protected class must be demonstrably job-related and justified by business necessity",
-      "explanation": "Griggs v. Duke Power Co. established the legal doctrine of adverse (disparate) impact discrimination in employment. The Supreme Court held unanimously that employment practices neutral on their face—but producing a disproportionate adverse impact on members of a protected class—are unlawful under Title VII unless the employer demonstrates the requirement is job-related and consistent with business necessity. The intelligence tests used by Duke Power had not been validated for the jobs in question, and the company could not demonstrate they predicted job performance. This ruling transformed employment testing by requiring demonstrated job-relatedness for selection tools with adverse impact, laying the groundwork for the Uniform Guidelines on Employee Selection Procedures (1978). Option A is incorrect; the ruling does not mandate internally developed or content-valid-only tests—job-relatedness can be demonstrated through multiple validation strategies. Option C is incorrect; intelligence tests are not categorically prohibited; they must be job-relevant. Option D is incorrect; the ruling established that individual employees and the courts could challenge adverse impact directly; no prerequisite EEOC investigation is required to bring suit.",
-      "kn": "KN34",
-      "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
-      "difficulty": "hard",
-      "quality_comment": "Tests a specific landmark legal case with direct implications for psychological testing practice. Distractors probe common misconceptions about what the ruling did and did not prohibit. Appropriate doctoral-level difficulty with real-world practice relevance.",
-      "suggestedLesson": "5-do-hiring-tools-work",
-      "suggestedParagraph": "## Legal Foundations of Employment Testing",
-      "lessonExcerpt": "Adverse impact** (also called disparate impact) occurs when a selection method negatively affects protected group members compared to majority group members. The Uniform Guidelines on Employee Selection Procedures outlines two main problems that cause adverse impact:",
-      "needsReview": false,
-      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
-      "inspirationIndex": 28
-    },
-    {
       "stem": "A company is concerned about adverse impact in their hiring process after learning that their general mental ability test disproportionately screens out qualified applicants from certain minority groups. An I-O psychologist recommends replacing the cognitive test with a selection method that asks applicants to perform actual job tasks under standardized conditions. The psychologist is recommending:",
       "options": [
         "An assessment center with leaderless group discussions",
@@ -381,6 +360,111 @@
       "lessonExcerpt": "**Structured interviews** follow a script. Every candidate gets asked the same predetermined questions, often developed from a job analysis, and responses are scored using a standardized system. For years, researchers believed structured interviews were clearly superior predictors of job performance.",
       "suggestedLesson": "5-hiring-methods",
       "needsReview": false
+    },
+    {
+      "stem": "A pediatric neuropsychologist is providing psychoeducation to parents of a 9-year-old recently diagnosed with reading disorder (dyslexia). Which statement most accurately represents current research on the long-term prognosis of this condition?",
+      "options": [
+        "The majority of children with reading disorder will achieve grade-level reading by high school even without formal intervention",
+        "Reading disorder is a persistent condition throughout the lifespan, though individuals can acquire compensatory strategies that improve functional reading",
+        "Reading disorder typically co-occurs with global intellectual disability and requires lifelong academic support across all domains",
+        "Pharmacological treatment remains the most evidence-based approach and significantly alters the long-term trajectory of reading disorder"
+      ],
+      "answer": "Reading disorder is a persistent condition throughout the lifespan, though individuals can acquire compensatory strategies that improve functional reading",
+      "explanation": "Reading disorder (dyslexia) is characterized by a persistent phonological processing deficit that does not remit with age, even with effective intervention. The condition is lifelong; however, with early, intensive, evidence-based intervention targeting phonological awareness and decoding, individuals often develop compensatory strategies sufficient for functional literacy. Option A overstates spontaneous improvement and significantly underestimates the persistence of the deficit in the absence of structured intervention. Option C incorrectly associates reading disorder with global intellectual disability; by diagnostic definition, reading disorder occurs in individuals with at least average general intelligence and represents a specific, not global, deficit. Option D is incorrect because there are no approved pharmacological treatments that directly address the core deficits of reading disorder.",
+      "kn": "KN28",
+      "kn_explanation": "This question is best aligned with KN28 because it tests Disorders and diseases that impact the expected course of development over the lifespan.",
+      "difficulty": "hard",
+      "quality_comment": "Clinically important question; requires distinguishing persistence from pervasiveness and knowing the evidence base for intervention.",
+      "suggestedLesson": "5-hiring-methods",
+      "suggestedParagraph": "## Cognitive Development",
+      "lessonExcerpt": "There are two main approaches: compensatory and noncompensatory methods. ### Compensatory Methods: Balance Is Possible",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 14
+    },
+    {
+      "stem": "Which of the following employee selection methods is most appropriate for assessing multiple skills in candidates?",
+      "options": [
+        "A structured interview focusing on past experiences.",
+        "A cognitive ability test.",
+        "A work sample test that simulates job tasks.",
+        "A personality inventory."
+      ],
+      "answer": "A work sample test that simulates job tasks.",
+      "explanation": "A work sample test is designed to assess a candidate's ability to perform specific tasks related to the job, making it ideal for evaluating multiple skills. The other options focus on narrower aspects of candidate evaluation.",
+      "kn": "KN55",
+      "kn_explanation": "This question is best aligned with KN55 because it tests Analytic methods, including qualitative (e.g., thematic, phenomenological) and quantitative (e.g., probability theory; descriptive, inferential, and parametric statistics; meta-analysis; factor analysis; causal modeling).",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests knowledge of effective employee selection methods.",
+      "suggestedLesson": "5-hiring-methods",
+      "suggestedParagraph": "## Introduction: Why Inferential Statistics Matter for Your Psychology Career",
+      "lessonExcerpt": "There's a specialized version called **trainability work sample tests** designed for applicants without previous experience. These incorporate training periods followed by evaluation, helping organizations determine whether inexperienced applicants are likely to benefit from on-the-job training.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 13
+    },
+    {
+      "stem": "Which of the following is considered a strong predictor of job performance?",
+      "options": [
+        "Personality tests",
+        "Ability tests",
+        "Interest inventories",
+        "Projective tests"
+      ],
+      "answer": "Ability tests",
+      "explanation": "Ability tests are considered strong predictors of job performance as they assess the skills and competencies necessary for specific tasks. Personality tests and interest inventories provide insight into preferences and traits but do not directly measure job-related abilities. Projective tests are not typically used for job performance prediction.",
+      "kn": "KN34",
+      "kn_explanation": "This question is best aligned with KN34 because it tests Instruments and methods appropriate for the assessment of groups and organizations (e.g., program evaluation, needs assessment, organizational and personnel assessment).",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests knowledge of predictors of job performance.",
+      "suggestedLesson": "5-hiring-methods",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "Ability tests are strong predictors of job performance.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 15
+    },
+    {
+      "stem": "Which factor is most critical when assessing an individual's risk of suicide?",
+      "options": [
+        "The presence of a mental health disorder.",
+        "The individual's social support system.",
+        "Previous suicide attempts.",
+        "Current life stressors."
+      ],
+      "answer": "Previous suicide attempts.",
+      "explanation": "Previous suicide attempts are one of the strongest predictors of future suicide risk, making this factor critical in assessment. While the other factors are also important, they do not carry the same weight as a history of attempts.",
+      "kn": "KN30",
+      "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
+      "difficulty": "hard",
+      "quality_comment": "The question is well-constructed and tests important knowledge about suicide risk assessment.",
+      "suggestedLesson": "5-hiring-methods",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "Previous suicide attempts are one of the strongest predictors of future suicide risk.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 17
+    },
+    {
+      "stem": "What is the primary concern regarding the predictive validity of infant development tests?",
+      "options": [
+        "They are too expensive to administer.",
+        "They may not accurately predict later cognitive abilities.",
+        "They require extensive training to interpret.",
+        "They are only useful for diagnosing disabilities."
+      ],
+      "answer": "They may not accurately predict later cognitive abilities.",
+      "explanation": "The main concern with infant development tests is their limited ability to predict future cognitive abilities, as early development can vary widely and does not always correlate with later outcomes. The other options do not directly address the validity of these tests.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively challenges understanding of predictive validity in developmental assessments.",
+      "suggestedLesson": "5-hiring-methods",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "The **Taylor-Russell tables** let you estimate how much a new predictor will improve hiring success for different combinations of validity coefficients, selection ratios, and base rates.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 13
     }
   ]
 }

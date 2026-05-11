@@ -274,27 +274,6 @@
       "inspirationIndex": 28
     },
     {
-      "stem": "What should a psychologist disclose to clients regarding supervision in their practice?",
-      "options": [
-        "The psychologist should not disclose any information about supervision.",
-        "The psychologist must inform clients about the nature and purpose of supervision.",
-        "Clients do not need to know about supervision as it is an internal matter.",
-        "Supervision details should only be disclosed if the client asks about them."
-      ],
-      "answer": "The psychologist must inform clients about the nature and purpose of supervision.",
-      "explanation": "The correct answer emphasizes the importance of transparency regarding supervision, which is an ethical obligation. The lesson states that psychologists should disclose relevant information to clients, including supervision details. The other options either promote secrecy or fail to recognize the importance of client awareness.",
-      "kn": "KN64",
-      "kn_explanation": "This question is best aligned with KN64 because it tests Identification and management of potential ethical issues.",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively assesses understanding of ethical obligations related to supervision disclosure.",
-      "suggestedLesson": "8-standards-9-10",
-      "suggestedParagraph": "## Multiple Relationships: The Most Complex Standard",
-      "lessonExcerpt": "Trainee therapists (Standard 10.01(c)): Clients must know if their therapist is in training, that they're supervised, and who the supervisor is.",
-      "needsReview": false,
-      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 7
-    },
-    {
       "stem": "According to the APA Ethics Code, which of the following behaviors constitutes sexual harassment in the workplace?",
       "options": [
         "A. A single instance of inappropriate touching.",
@@ -379,27 +358,6 @@
       "inspirationIndex": 27
     },
     {
-      "stem": "In the context of psychological evaluations, how should psychologists address language barriers to ensure cultural competence?",
-      "options": [
-        "By using a translator without considering the cultural context of the client.",
-        "By providing assessments only in the client's primary language and ensuring the translator is culturally competent.",
-        "By avoiding testing altogether if the client does not speak English.",
-        "By simplifying the language of the tests to make them more accessible."
-      ],
-      "answer": "By providing assessments only in the client's primary language and ensuring the translator is culturally competent.",
-      "explanation": "The correct answer emphasizes the need for culturally competent practices in psychological evaluations, ensuring that language barriers do not compromise the assessment's validity. The other options either neglect cultural considerations or suggest inadequate practices.",
-      "kn": "KN71",
-      "kn_explanation": "This question is best aligned with KN71 because it tests ethical issues in technology-assisted psychological services.",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively tests knowledge of cultural competence in psychological practice.",
-      "suggestedLesson": "8-standards-1-2",
-      "suggestedParagraph": "## Standard 3: Human Relations (Navigating Professional Boundaries)",
-      "lessonExcerpt": "Use certified professional interpreters when possible (National Board of Certification for Medical Interpreters). Obtain client consent before bringing in an interpreter. Discuss confidentiality obligations with the interpreter",
-      "needsReview": false,
-      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 13
-    },
-    {
       "stem": "When a psychologist receives a request for information from another psychologist regarding a mutual client, what is the most ethical course of action?",
       "options": [
         "Provide all requested information immediately to maintain transparency.",
@@ -419,48 +377,6 @@
       "needsReview": false,
       "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
       "inspirationIndex": 23
-    },
-    {
-      "stem": "In therapy, what is the most ethical approach when a psychologist realizes they lack cultural competence to effectively treat a client?",
-      "options": [
-        "Continue therapy while attempting to learn about the client's culture.",
-        "Refer the client to another professional who has the necessary cultural competence.",
-        "Discuss the psychologist's limitations with the client and seek their input.",
-        "Ignore the issue and focus on the therapeutic goals."
-      ],
-      "answer": "Refer the client to another professional who has the necessary cultural competence.",
-      "explanation": "The correct answer emphasizes the ethical responsibility to ensure clients receive competent care, which may involve referral when a psychologist lacks the necessary cultural understanding. The other options either compromise the client's care or do not adequately address the issue.",
-      "kn": "KN61",
-      "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
-      "difficulty": "medium",
-      "quality_comment": "The question is relevant and tests knowledge of cultural competence ethics.",
-      "suggestedLesson": "8-standards-1-2",
-      "suggestedParagraph": "## Standard 3: Human Relations",
-      "lessonExcerpt": "Standard 2.01(b) addresses cultural competence: If understanding issues related to gender, gender identity, race, ethnicity, or other characteristics is essential for effective service, you must have the necessary knowledge and training. If you don't, make appropriate referrals.",
-      "needsReview": false,
-      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 25
-    },
-    {
-      "stem": "What is the ethical stance on sexual relationships with former clients according to the APA Ethics Code?",
-      "options": [
-        "They are permissible after a two-year waiting period.",
-        "They are prohibited for at least two years after termination, and after that only in the most unusual circumstances.",
-        "They are allowed if the former client consents.",
-        "They are acceptable if the relationship does not impair professional judgment."
-      ],
-      "answer": "They are prohibited for at least two years after termination, and after that only in the most unusual circumstances.",
-      "explanation": "APA Ethics Code Standard 10.08 prohibits sexual intimacies with former clients for at least two years after termination of therapy. Even after two years, such relationships are still prohibited except in the 'most unusual circumstances,' and the psychologist bears the burden of proving that the relationship is not exploitative. The 'permissible after two years' option is too permissive; in practice, these relationships remain ethically problematic.",
-      "kn": "KN61",
-      "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively assesses understanding of ethical boundaries in therapy.",
-      "suggestedLesson": "8-standards-9-10",
-      "suggestedParagraph": "## Standard 3: Human Relations",
-      "lessonExcerpt": "Standard 10.08: No sexual intimacies with former clients for at least two years after termination. After two years, it's still prohibited except in the \"most unusual circumstances,\" and you bear the burden of proving the relationship isn't exploitative.",
-      "needsReview": false,
-      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
-      "inspirationIndex": 28
     },
     {
       "stem": "What is the primary ethical concern when managing dual relationships with friends in therapy?",
@@ -1084,27 +1000,258 @@
       "needsReview": false
     },
     {
-      "stem": "During a supervision session, a psychologist expresses reluctance to work with clients from a specific cultural background. What should the supervisor emphasize regarding ethical practice?",
+      "stem": "What is a psychologist's responsibility regarding confidentiality when making referrals to Employee Assistance Programs (EAPs)?",
       "options": [
-        "It is acceptable to avoid clients from certain backgrounds if it affects the therapist's comfort.",
-        "Supervisors should encourage psychologists to confront their biases and seek training in cultural competence.",
-        "Psychologists can refuse clients based on cultural background if they feel it would impair their effectiveness.",
-        "Supervisors should support the psychologist's decision to refuse clients based on personal preferences."
+        "They must disclose all client information to the EAP.",
+        "They must maintain confidentiality unless the client provides consent.",
+        "They can share information freely as long as it is for a work-related issue.",
+        "They should inform the EAP of any past treatment history."
       ],
-      "answer": "Supervisors should encourage psychologists to confront their biases and seek training in cultural competence.",
-      "explanation": "This answer is correct because ethical practice requires psychologists to address their biases and enhance their cultural competence to provide effective services to all clients, regardless of background.",
+      "answer": "They must maintain confidentiality unless the client provides consent.",
+      "explanation": "The correct answer emphasizes the importance of maintaining client confidentiality, which is a fundamental ethical obligation. The other options incorrectly suggest that confidentiality can be breached without consent.",
+      "kn": "KN64",
+      "kn_explanation": "This question is best aligned with KN64 because it tests Identification and management of potential ethical issues.",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and directly addresses confidentiality issues in EAP referrals.",
+      "suggestedLesson": "8-standards-3-4",
+      "suggestedParagraph": "## What Actually Gets Psychologists in Trouble",
+      "lessonExcerpt": "Employee Assistance Programs (EAPs): Confidentiality works the same as in other therapy. Information isn't shared with supervisors or employers without written authorization, even for mandatory referrals.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 5
+    },
+    {
+      "stem": "What is a psychologist's legal obligation when they suspect a client has disclosed child abuse?",
+      "options": [
+        "To keep the information confidential.",
+        "To report the suspicion to the appropriate authorities.",
+        "To confront the client about the disclosure.",
+        "To document the disclosure in the client's file."
+      ],
+      "answer": "To report the suspicion to the appropriate authorities.",
+      "explanation": "Psychologists are legally required to report any suspicions of child abuse to the appropriate authorities. Keeping the information confidential or merely documenting it does not fulfill their legal obligations.",
+      "kn": "KN63",
+      "kn_explanation": "This question is best aligned with KN63 because it tests Laws, statutes, and judicial decisions that affect psychological practice.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of mandatory reporting laws.",
+      "suggestedLesson": "8-standards-3-4",
+      "suggestedParagraph": "## When a Subpoena Lands on Your Desk",
+      "lessonExcerpt": "Mandatory reporting laws require reporting suspected child abuse or neglect to protective services. You report when you have \"reasonable cause to suspect\". Not when you're certain.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 30
+    },
+    {
+      "stem": "In therapy, what is a critical ethical requirement regarding multiple relationships and informed consent?",
+      "options": [
+        "Therapists must disclose all personal relationships with clients.",
+        "Clients must agree to all forms of dual relationships.",
+        "Therapists should avoid any dual relationships that could impair their effectiveness.",
+        "Therapists can engage in dual relationships if clients are informed."
+      ],
+      "answer": "Therapists should avoid any dual relationships that could impair their effectiveness.",
+      "explanation": "The ethical requirement is to avoid dual relationships that could impair objectivity or effectiveness. While informing clients is important, it does not justify engaging in potentially harmful dual relationships.",
+      "kn": "KN64",
+      "kn_explanation": "This question is best aligned with KN64 because it tests Identification and management of potential ethical issues.",
+      "difficulty": "medium",
+      "quality_comment": "The question addresses a significant ethical concern in therapeutic practices.",
+      "suggestedLesson": "8-standards-3-4",
+      "suggestedParagraph": "## Why Professional Issues Matter More Than You Think",
+      "lessonExcerpt": "Not all multiple relationships are prohibited. Only those that \"could reasonably be expected to impair objectivity, competence, or effectiveness\" or risk exploitation or harm.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 4
+    },
+    {
+      "stem": "What is the key distinction between informed consent and assent in psychological research involving minors?",
+      "options": [
+        "Informed consent is required only for adults, while assent is for minors.",
+        "Assent allows minors to agree to participate, but informed consent is needed from parents.",
+        "Informed consent is a legal requirement, while assent is optional.",
+        "Assent can be obtained verbally, while informed consent must be written."
+      ],
+      "answer": "Assent allows minors to agree to participate, but informed consent is needed from parents.",
+      "explanation": "Informed consent involves obtaining permission from a parent or guardian, while assent is the minor's agreement to participate. The other options misrepresent the relationship between consent and assent.",
+      "kn": "KN68",
+      "kn_explanation": "This question is best aligned with KN68 because it tests Client and patient rights.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively clarifies a critical distinction in research ethics.",
+      "suggestedLesson": "8-standards-3-4",
+      "suggestedParagraph": "## Why Professional Issues Matter More Than You Think",
+      "lessonExcerpt": "Minors: Most people under 18 cannot legally consent to treatment. You must... Seek their assent (agreement). Think of informed consent with minors like a group project at work: the manager (parent) has final authority, but you still explain the project to the junior employee (minor) and get their buy-in.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 5
+    },
+    {
+      "stem": "Which of the following is a limit of confidentiality that psychologists must ethically uphold?",
+      "options": [
+        "Psychologists can disclose any information if the client requests it.",
+        "Psychologists must break confidentiality if they believe the client poses a danger to themselves or others.",
+        "Psychologists can share client information with family members without consent.",
+        "Psychologists are allowed to disclose information for marketing purposes."
+      ],
+      "answer": "Psychologists must break confidentiality if they believe the client poses a danger to themselves or others.",
+      "explanation": "The correct answer is that psychologists have an ethical obligation to break confidentiality if there is a risk of harm to the client or others. The other options violate ethical standards regarding confidentiality and client autonomy.",
+      "kn": "KN71",
+      "kn_explanation": "This question is best aligned with KN71 because it tests ethical issues in technology-assisted psychological services.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests knowledge of ethical obligations regarding confidentiality.",
+      "suggestedLesson": "8-standards-3-4",
+      "suggestedParagraph": "## Understanding Malpractice: The Four Ds You Can't Forget",
+      "lessonExcerpt": "Many jurisdictions follow the Tarasoff decision, establishing a duty to protect third parties from client violence. This typically applies when: The client communicates a clear and imminent threat... Appropriate actions: warn the intended victim, notify police, or hospitalize the client.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 21
+    },
+    {
+      "stem": "When a psychologist suspects child abuse based on a disclosure from a child, what is their primary ethical obligation?",
+      "options": [
+        "To confront the parents about the allegations before taking any action.",
+        "To report the suspected abuse to the appropriate authorities as mandated by law.",
+        "To wait for further evidence before making any reports.",
+        "To discuss the allegations with the child to gather more details."
+      ],
+      "answer": "To report the suspected abuse to the appropriate authorities as mandated by law.",
+      "explanation": "The correct answer reflects the psychologist's legal and ethical obligation to report suspected child abuse to protect the child. The other options either delay necessary action or compromise the child's safety.",
+      "kn": "KN63",
+      "kn_explanation": "This question is best aligned with KN63 because it tests Laws, statutes, and judicial decisions that affect psychological practice.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests knowledge of child protection laws and ethical responsibilities.",
+      "suggestedLesson": "8-standards-3-4",
+      "suggestedParagraph": "## Standard 7: Education and Training",
+      "lessonExcerpt": "Mandatory reporting laws require reporting suspected child abuse or neglect to protective services.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 15
+    },
+    {
+      "stem": "When a client discloses potential child abuse during therapy, what is the psychologist's ethical obligation?",
+      "options": [
+        "To maintain confidentiality and not report the disclosure.",
+        "To report the disclosure to the authorities as required by law.",
+        "To discuss the disclosure with the client before taking any action.",
+        "To document the disclosure but take no further action."
+      ],
+      "answer": "To report the disclosure to the authorities as required by law.",
+      "explanation": "The correct answer reflects the psychologist's legal and ethical obligation to report suspected child abuse to protect the child. The other options either delay necessary action or compromise the child's safety.",
+      "kn": "KN63",
+      "kn_explanation": "This question is best aligned with KN63 because it tests Laws, statutes, and judicial decisions that affect psychological practice.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests knowledge of child protection laws and ethical responsibilities.",
+      "suggestedLesson": "8-standards-3-4",
+      "suggestedParagraph": "## Standard 7: Education and Training",
+      "lessonExcerpt": "Mandatory reporting laws require reporting suspected child abuse or neglect to protective services. You report when you have \"reasonable cause to suspect\". Not when you're certain.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 18
+    },
+    {
+      "stem": "What is a critical ethical consideration for psychologists working in forensic settings?",
+      "options": [
+        "Psychologists should avoid any involvement with legal cases.",
+        "Psychologists must ensure they maintain objectivity and competence.",
+        "Psychologists can prioritize their personal beliefs over professional standards.",
+        "Psychologists should only work with clients they personally agree with."
+      ],
+      "answer": "Psychologists must ensure they maintain objectivity and competence.",
+      "explanation": "The correct answer highlights the necessity for psychologists to uphold objectivity and competence in forensic settings, which is a key ethical requirement. The lesson emphasizes the importance of these qualities in forensic work. The other options misrepresent ethical obligations and suggest unprofessional conduct.",
+      "kn": "KN61",
+      "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
+      "difficulty": "hard",
+      "quality_comment": "The question is well-structured and tests critical understanding of forensic ethics.",
+      "suggestedLesson": "8-standards-3-4",
+      "suggestedParagraph": "## The Foundation: Base Your Conclusions on Solid Ground",
+      "lessonExcerpt": "Forensic work: Providing both therapeutic and forensic services to the same person impairs objectivity",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 8
+    },
+    {
+      "stem": "In custody cases, what is an ethical obligation of psychologists who testify?",
+      "options": [
+        "To advocate for the parent they believe is best for the child.",
+        "To provide objective and unbiased testimony based on their evaluations.",
+        "To prioritize the interests of the court over the child's welfare.",
+        "To only testify if they have a personal connection to the case."
+      ],
+      "answer": "To provide objective and unbiased testimony based on their evaluations.",
+      "explanation": "The correct answer emphasizes the ethical obligation to provide objective and unbiased testimony, which is crucial in custody cases. The lesson supports this by stating that psychologists must maintain objectivity in their professional roles. The other options misrepresent the ethical responsibilities of psychologists in these situations.",
+      "kn": "KN62",
+      "kn_explanation": "This question is best aligned with KN62 because it tests Professional standards and relevant guidelines for the practice of psychology (e.g., standards for educational and psychological testing).",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests understanding of ethical obligations in legal testimony.",
+      "suggestedLesson": "8-standards-3-4",
+      "suggestedParagraph": "## The Foundation: Base Your Conclusions on Solid Ground",
+      "lessonExcerpt": "Child custody evaluations: Never conduct evaluations with current or former therapy clients",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 9
+    },
+    {
+      "stem": "In cases where there is a risk of imminent harm, what is a psychologist's duty to warn?",
+      "options": [
+        "To inform the potential victim of the threat.",
+        "To maintain confidentiality and not disclose any information.",
+        "To seek legal advice before taking any action.",
+        "To document the threat but take no further action."
+      ],
+      "answer": "To inform the potential victim of the threat.",
+      "explanation": "The correct answer reflects the psychologist's ethical and legal obligation to warn potential victims of imminent harm. The other options either neglect this duty or suggest inappropriate inaction.",
+      "kn": "KN63",
+      "kn_explanation": "This question is best aligned with KN63 because it tests Laws, statutes, and judicial decisions that affect psychological practice.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests knowledge of ethical obligations in cases of imminent harm.",
+      "suggestedLesson": "8-standards-3-4",
+      "suggestedParagraph": "## Standard 9: Assessment (Getting It Right)",
+      "lessonExcerpt": "Many jurisdictions follow the Tarasoff decision, establishing a duty to protect third parties from client violence.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 19
+    },
+    {
+      "stem": "During a consultation, a psychologist discusses a client's treatment history based on records from another provider. What is the best practice for the psychologist in this scenario?",
+      "options": [
+        "Present the treatment history as if it were their own assessment",
+        "Mention the other provider's involvement and any potential biases",
+        "Avoid discussing the treatment history to prevent misinformation",
+        "Only refer to the treatment history if the client agrees"
+      ],
+      "answer": "Mention the other provider's involvement and any potential biases",
+      "explanation": "1. The correct answer, \"Mention the other provider's involvement and any potential biases,\" aligns with Standard 9.01(b) of the APA Ethics Code, which requires psychologists to communicate any limitations of their conclusions when relying on information from other professionals. By acknowledging the other provider's involvement, the psychologist ensures transparency about the source of the treatment history and any potential biases that may arise from that perspective, thereby maintaining ethical standards in assessment and interpretation.\n\n2. The option \"Present the treatment history as if it were their own assessment\" is incorrect because it violates the ethical obligation to accurately represent the source of information, potentially misleading others about the psychologist's role in the assessment. \"Avoid discussing the treatment history to prevent misinformation\" is also wrong, as it disregards the importance of transparency and the ethical responsibility to provide a complete account of the client's treatment history, which can inform current assessments. Lastly, \"Only refer to the treatment history if the client agrees\" is inappropriate because it implies that the psychologist can withhold relevant information from consultations, which undermines the ethical obligation to share pertinent data that could affect treatment decisions.",
       "difficulty": "hard",
       "kn": "KN61",
       "kn_explanation": "This question is best aligned with KN61 because it tests Current ethical principles and codes for psychologists (APA, CPA).",
-      "quality_comment": "This question challenges the test-taker to apply ethical principles in a supervisory context, enhancing critical thinking.",
+      "quality_comment": "This question challenges the test-taker to apply ethical principles in a more complex scenario.",
       "is_lock_in_drill": true,
       "lock_in_level": "harder",
       "tags": [
         "lock_in_drill"
       ],
-      "lessonExcerpt": "Standard 2.01(b) addresses cultural competence: If understanding issues related to gender, gender identity, race, ethnicity, or other characteristics is essential for effective service, you must have the necessary knowledge and training.",
-      "suggestedLesson": "8-standards-1-2",
+      "lessonExcerpt": "Standard 4.06 allows consulting with colleagues about clients but requires not disclosing identifying information without authorization. Disclose only what's necessary for the consultation purpose.",
+      "suggestedLesson": "8-standards-3-4",
       "needsReview": false
+    },
+    {
+      "stem": "In the context of therapy, what is a significant ethical concern regarding multiple relationships?",
+      "options": [
+        "They can enhance therapeutic effectiveness.",
+        "They may lead to exploitation or harm.",
+        "They are always beneficial for the client.",
+        "They simplify the therapeutic process."
+      ],
+      "answer": "They may lead to exploitation or harm.",
+      "explanation": "Multiple relationships can create power imbalances and conflicts of interest, increasing the risk of exploitation or harm to the client. The other options incorrectly suggest that multiple relationships are inherently beneficial or simplify therapy, which is not the case.",
+      "kn": "KN64",
+      "kn_explanation": "This question is best aligned with KN64 because it tests Identification and management of potential ethical issues.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively highlights the potential dangers of multiple relationships in therapeutic settings.",
+      "suggestedLesson": "8-standards-3-4",
+      "suggestedParagraph": "## The Four Sections of the Ethics Code",
+      "lessonExcerpt": "Only those that 'could reasonably be expected to impair objectivity, competence, or effectiveness' or risk exploitation or harm.",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 5
     }
   ]
 }

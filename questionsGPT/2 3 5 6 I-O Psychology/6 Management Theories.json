@@ -236,6 +236,27 @@
       "lessonExcerpt": "| Merit-based employment | Hiring and promotion based on competence, not favoritism |",
       "suggestedLesson": "6-management-theories",
       "needsReview": false
+    },
+    {
+      "stem": "After completing a brief personality inventory, a client receives feedback containing the following statements: 'You sometimes have serious doubts about whether you have made the right decision,' 'You have a great deal of unused capacity that you have not yet fully developed,' and 'You prefer a certain amount of variety and become dissatisfied when hemmed in by restrictions and limitations.' The client responds, 'This is remarkably accurate — it describes me better than anything I've ever read about myself.' This reaction MOST directly illustrates:",
+      "options": [
+        "Illusory correlation, because the client perceives a meaningful relationship between the test content and their personality where no valid relationship exists",
+        "The Barnum (Forer) effect, because universally applicable, vague statements are accepted as uniquely and personally accurate self-descriptions",
+        "Confirmation bias, because the client is selectively attending to statements that confirm their pre-existing self-concept",
+        "Self-verification theory, because the client is seeking out feedback that is consistent with their prior self-image"
+      ],
+      "answer": "The Barnum (Forer) effect, because universally applicable, vague statements are accepted as uniquely and personally accurate self-descriptions",
+      "explanation": "The Barnum effect (Forer, 1949) describes the tendency for individuals to accept broad, vague, and universally applicable personality descriptions as highly accurate and uniquely self-descriptive characterizations. The statements in the vignette are classic Barnum statements — each is true of virtually any adult. Illusory correlation involves perceiving a spurious relationship between two distinct things (e.g., group membership and negative behavior) and does not describe the mechanism of accepting vague feedback as self-relevant. Confirmation bias involves selectively attending to confirming information while dismissing disconfirming information — while superficially related, the Barnum effect specifically operates through the universality of the statements themselves, not through selective attention. Self-verification theory (Swann) describes actively seeking feedback consistent with the existing self-concept, including negative self-views; it would apply if the client sought out negative feedback to confirm a negative self-image, which is not what the vignette describes.",
+      "kn": "KN14",
+      "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
+      "difficulty": "hard",
+      "quality_comment": "High clinical relevance for assessment practice; requires precise discrimination among four related but mechanistically distinct cognitive phenomena; the Barnum effect is frequently confused with confirmation bias on the EPPP.",
+      "suggestedLesson": "6-management-theories",
+      "suggestedParagraph": "The Major Players: Errors and Biases",
+      "lessonExcerpt": "McGregor's Theory X/Theory Y: The Self-Fulfilling Prophecy Douglas McGregor's 1960 theory focuses on supervisor-subordinate interactions and introduces a powerful psychological concept: your assumptions about people shape how they behave.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 15
     }
   ]
 }

@@ -510,6 +510,48 @@
       "lessonExcerpt": "children entering this stage start to understand that rules are created through mutual agreement and can be changed when people agree to change them.",
       "suggestedLesson": "4-morality",
       "needsReview": false
+    },
+    {
+      "stem": "According to Piaget's theory of cognitive development, which stage is characterized by children's understanding of rules as fixed and unchangeable, primarily judging actions by their consequences rather than intentions?",
+      "options": [
+        "Premoral Stage",
+        "Heteronomous Stage",
+        "Autonomous Stage",
+        "Concrete Operational Stage"
+      ],
+      "answer": "Heteronomous Stage",
+      "explanation": "The Heteronomous Stage is where children understand that rules exist but believe they are handed down by authorities and cannot be changed. In contrast, the Premoral Stage lacks a grasp of rules, the Autonomous Stage involves understanding rules as mutual agreements, and the Concrete Operational Stage focuses on logical operations rather than moral reasoning.",
+      "kn": "KN23",
+      "kn_explanation": "This question is best aligned with KN23 because it tests Major research-based theories and models of development.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of Piaget's stages and requires understanding of moral reasoning.",
+      "suggestedLesson": "4-morality",
+      "suggestedParagraph": "## The Foundation: Piaget's Three-Stage Theory",
+      "lessonExcerpt": "The key feature of this stage is moral realism – kids judge actions purely by their consequences, not by intentions.",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 11
+    },
+    {
+      "stem": "A therapist is leading a process group that has been meeting weekly for six weeks. During the most recent session, two members openly challenged the therapist's leadership style, while another member criticized a peer's tendency to dominate discussions. According to Yalom's model of group development, these behaviors are MOST characteristic of which stage?",
+      "options": [
+        "The orientation stage, in which members seek structure and test boundaries",
+        "The conflict stage, characterized by rebellion toward leaders and attempts at dominance",
+        "The cohesiveness stage, marked by trust building and authentic sharing",
+        "The termination stage, in which members process feelings about the group ending"
+      ],
+      "answer": "The conflict stage, characterized by rebellion toward leaders and attempts at dominance",
+      "explanation": "Yalom's model describes three stages of group development: orientation/dependency, conflict/dominance, and cohesiveness. The second stage is characterized by conflict among group members, rebellion toward group leaders, and attempts at dominance—exactly what is described in the scenario. The orientation stage (A) involves hesitant participation and seeking structure, not challenging leadership. The cohesiveness stage (C) involves trust and mutual concern, which has not yet developed. There is no separate termination stage in Yalom's three-stage model (D).",
+      "kn": "KN16",
+      "kn_explanation": "Group development stages (Tuckman's storming) and group process",
+      "difficulty": "medium",
+      "quality_comment": "Well-grounded in lesson content from both the group therapy lesson and the reference text. Tests application rather than simple recall.",
+      "suggestedLesson": "4-morality",
+      "suggestedParagraph": "### Three Formative Stages (Yalom & Leszcz)",
+      "lessonExcerpt": "Normal adolescent rebellion doesn't meet criteria. **Misconception 2:** \"CD and ASPD are the same thing.\" **Reality:** CD cannot be diagnosed after age 18 if the person meets criteria for Antisocial Personality Disorder.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 19
     }
   ]
 }

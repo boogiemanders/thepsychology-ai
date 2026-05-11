@@ -64,27 +64,6 @@
       "inspirationIndex": 11
     },
     {
-      "stem": "When calculating expected frequencies for a chi-square test, which of the following is the correct formula to use?",
-      "options": [
-        "Total number of observations divided by the number of categories.",
-        "Row total multiplied by column total divided by the grand total.",
-        "Observed frequency divided by total frequency.",
-        "Total frequency minus observed frequency."
-      ],
-      "answer": "Row total multiplied by column total divided by the grand total.",
-      "explanation": "The correct formula for calculating expected frequencies in a chi-square test involves multiplying the row total by the column total and then dividing by the grand total. The other options do not accurately describe the method for calculating expected frequencies.",
-      "kn": "KN55",
-      "kn_explanation": "This question is best aligned with KN55 because it tests Analytic methods, including qualitative (e.g., thematic, phenomenological) and quantitative (e.g., probability theory; descriptive, inferential, and parametric statistics; meta-analysis; factor analysis; causal modeling).",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively assesses understanding of chi-square calculations.",
-      "suggestedLesson": "5-substance-misuse",
-      "suggestedParagraph": "## The Chi-Square Test: Analyzing Categories",
-      "lessonExcerpt": "M}}People often describe it as feeling like the worst flu of their life, multiplied by ten.{{/M}} ### Stimulant Intoxication and Withdrawal",
-      "needsReview": false,
-      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 8
-    },
-    {
       "stem": "When comparing multiple outcome measures, which statistical test is most appropriate to use?",
       "options": [
         "ANOVA",
@@ -125,27 +104,6 @@
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
       "inspirationIndex": 6
-    },
-    {
-      "stem": "What is the primary purpose of structural equation modeling (SEM) in statistical analysis?",
-      "options": [
-        "To analyze the relationship between two categorical variables",
-        "To test complex relationships among multiple variables simultaneously",
-        "To determine the mean differences between two groups",
-        "To assess the reliability of a measurement scale"
-      ],
-      "answer": "To test complex relationships among multiple variables simultaneously",
-      "explanation": "Structural equation modeling (SEM) is designed to evaluate complex relationships involving multiple variables, allowing researchers to test theoretical models. The other options do not accurately describe the purpose of SEM.",
-      "kn": "KN54",
-      "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
-      "difficulty": "hard",
-      "quality_comment": "The question is well-structured and assesses understanding of advanced statistical methods.",
-      "suggestedLesson": "7-correlation-and-regression",
-      "suggestedParagraph": "## The Two Main Families of Statistical Tests",
-      "lessonExcerpt": "SEM combines factor analysis with multiple regression to test complex theories about how variables relate to each other.",
-      "needsReview": false,
-      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 12
     },
     {
       "stem": "A researcher wants to use a chi-square test to examine whether there is an association between therapeutic orientation (psychodynamic, humanistic, cognitive-behavioral) and client dropout (yes/no). The study includes 60 participants, but one cell in the contingency table contains only 3 observations. Which of the following is the PRIMARY concern with this analysis?",
@@ -484,6 +442,150 @@
         "lock_in_drill"
       ],
       "lessonExcerpt": "**Nonparametric tests** handle nominal and ordinal data. Categories and rankings.",
+      "suggestedLesson": "7-stats-tests",
+      "needsReview": false
+    },
+    {
+      "stem": "In a one-way ANOVA, what is the primary purpose of the analysis?",
+      "options": [
+        "To compare means across multiple groups",
+        "To assess the correlation between two variables",
+        "To test the difference between two means",
+        "To evaluate the reliability of a measure"
+      ],
+      "answer": "To compare means across multiple groups",
+      "explanation": "The primary purpose of a one-way ANOVA is to compare means across multiple groups, making it the correct answer. The other options refer to different statistical analyses: correlation assesses relationships, t-tests compare two means, and reliability tests evaluate consistency.",
+      "kn": "KN55",
+      "kn_explanation": "This question is best aligned with KN55 because it tests Analytic methods, including qualitative (e.g., thematic, phenomenological) and quantitative (e.g., probability theory; descriptive, inferential, and parametric statistics; meta-analysis; factor analysis; causal modeling).",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of ANOVA and its purpose.",
+      "suggestedLesson": "7-stats-tests",
+      "suggestedParagraph": "## Making Decisions: The Four Possible Outcomes",
+      "lessonExcerpt": "When you have one independent variable with more than two levels and one dependent variable on an interval or ratio scale, you need a one-way analysis of variance (ANOVA).",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 2
+    },
+    {
+      "stem": "Which statistical test is most appropriate for analyzing non-linear outcomes in a dataset?",
+      "options": [
+        "ANOVA",
+        "Regression analysis",
+        "Trend analysis",
+        "Chi-square test"
+      ],
+      "answer": "Trend analysis",
+      "explanation": "Trend analysis is specifically designed to analyze non-linear outcomes, making it the correct choice. ANOVA is used for comparing means, regression analysis can handle linear relationships, and chi-square tests are for categorical data.",
+      "kn": "KN55",
+      "kn_explanation": "This question is best aligned with KN55 because it tests Analytic methods, including qualitative (e.g., thematic, phenomenological) and quantitative (e.g., probability theory; descriptive, inferential, and parametric statistics; meta-analysis; factor analysis; causal modeling).",
+      "difficulty": "hard",
+      "quality_comment": "The question is challenging and requires a nuanced understanding of statistical tests.",
+      "suggestedLesson": "7-stats-tests",
+      "suggestedParagraph": "## The Selection Process: Your Decision Framework",
+      "lessonExcerpt": "**Trend Analysis:** Used with quantitative independent variables to determine if there's a linear or nonlinear relationship with the dependent variable.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 8
+    },
+    {
+      "stem": "What is a key advantage of using MANOVA over ANOVA?",
+      "options": [
+        "It reduces the risk of Type I error",
+        "It is simpler to conduct",
+        "It requires fewer assumptions",
+        "It can only analyze one dependent variable"
+      ],
+      "answer": "It reduces the risk of Type I error",
+      "explanation": "MANOVA reduces the risk of Type I error by allowing researchers to test multiple dependent variables simultaneously, which is its primary advantage over ANOVA. The other options are incorrect as MANOVA is more complex, has similar assumptions, and analyzes multiple dependent variables.",
+      "kn": "KN55",
+      "kn_explanation": "This question is best aligned with KN55 because it tests Analytic methods, including qualitative (e.g., thematic, phenomenological) and quantitative (e.g., probability theory; descriptive, inferential, and parametric statistics; meta-analysis; factor analysis; causal modeling).",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively highlights a key advantage of MANOVA.",
+      "suggestedLesson": "7-stats-tests",
+      "suggestedParagraph": "## The Two Main Families of Statistical Tests",
+      "lessonExcerpt": "**MANOVA (Multivariate Analysis of Variance):** For studies with multiple dependent variables, each measured on an interval or ratio scale.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 9
+    },
+    {
+      "stem": "When conducting multiple t-tests, what is the primary concern regarding Type I error rates?",
+      "options": [
+        "The Type I error rate remains constant regardless of the number of tests conducted.",
+        "The Type I error rate increases with each additional t-test performed.",
+        "The Type I error rate decreases as more tests are conducted.",
+        "The Type I error rate is irrelevant when using t-tests."
+      ],
+      "answer": "The Type I error rate increases with each additional t-test performed.",
+      "explanation": "The correct answer highlights that conducting multiple t-tests increases the likelihood of making at least one Type I error, which is a common issue in statistical testing. The other options incorrectly state the behavior of Type I error rates in relation to multiple tests.",
+      "kn": "KN56",
+      "kn_explanation": "This question is best aligned with KN56 because it tests Statistical interpretation (e.g., power, effect size, causation vs. association, clinical vs. statistical significance).",
+      "difficulty": "hard",
+      "quality_comment": "The question is well-structured and tests a critical understanding of statistical principles.",
+      "suggestedLesson": "7-stats-tests",
+      "suggestedParagraph": "### Type I Error: The False Alarm",
+      "lessonExcerpt": "Running multiple tests inflates this risk, the **experimentwise error rate**.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 1
+    },
+    {
+      "stem": "What is the primary purpose of using ANCOVA in research design?",
+      "options": [
+        "To compare means across multiple groups while controlling for covariates.",
+        "To assess the relationship between two categorical variables.",
+        "To determine the effect of a single independent variable on a dependent variable.",
+        "To analyze variance within a single group."
+      ],
+      "answer": "To compare means across multiple groups while controlling for covariates.",
+      "explanation": "ANCOVA is specifically designed to compare means while controlling for other variables (covariates). The other options describe different statistical methods and do not accurately reflect the purpose of ANCOVA.",
+      "kn": "KN54",
+      "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests knowledge of ANCOVA's purpose in research.",
+      "suggestedLesson": "7-stats-tests",
+      "suggestedParagraph": "## The Big Picture: Qualitative vs. Quantitative",
+      "lessonExcerpt": "**ANCOVA (Analysis of Covariance):** Another way to control for an extraneous variable, but instead of including it as a factor, ANCOVA statistically removes its effects from the dependent variable.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 3
+    },
+    {
+      "stem": "When calculating expected frequencies for a chi-square test, which of the following is the correct formula to use?",
+      "options": [
+        "Total number of observations divided by the number of categories.",
+        "Row total multiplied by column total divided by the grand total.",
+        "Observed frequency divided by total frequency.",
+        "Total frequency minus observed frequency."
+      ],
+      "answer": "Row total multiplied by column total divided by the grand total.",
+      "explanation": "The correct formula for calculating expected frequencies in a chi-square test involves multiplying the row total by the column total and then dividing by the grand total. The other options do not accurately describe the method for calculating expected frequencies.",
+      "kn": "KN55",
+      "kn_explanation": "This question is best aligned with KN55 because it tests Analytic methods, including qualitative (e.g., thematic, phenomenological) and quantitative (e.g., probability theory; descriptive, inferential, and parametric statistics; meta-analysis; factor analysis; causal modeling).",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of chi-square calculations.",
+      "suggestedLesson": "7-stats-tests",
+      "suggestedParagraph": "## The Chi-Square Test: Analyzing Categories",
+      "lessonExcerpt": "M}}People often describe it as feeling like the worst flu of their life, multiplied by ten.{{/M}} ### Stimulant Intoxication and Withdrawal",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 8
+    },
+    {
+      "stem": "Which statistical test is generally more powerful when data meet the required assumptions?",
+      "options": [
+        "Nonparametric chi-square test",
+        "Parametric t-test",
+        "Wilcoxon signed-rank test",
+        "Mann-Whitney U test"
+      ],
+      "answer": "Parametric t-test",
+      "explanation": "1. The \"Parametric t-test\" is the correct answer because it is a type of inferential statistical test that is more powerful than nonparametric tests when the data meet the required assumptions of normality and homogeneity of variance. Parametric tests, such as the t-test, utilize the specific characteristics of the data distribution, allowing for more sensitive detection of significant effects compared to nonparametric tests.\n\n2. The \"Nonparametric chi-square test\" is incorrect because it is designed for nominal data and does not take advantage of the parametric assumptions that can increase statistical power. The \"Wilcoxon signed-rank test\" is also incorrect as it is a nonparametric test that, while useful for paired data, lacks the power of parametric tests when the assumptions are met. Lastly, the \"Mann-Whitney U test\" is incorrect because it is a nonparametric test used for comparing two independent samples, which is less powerful than the t-test when the data meet parametric assumptions.",
+      "kn": "KN55",
+      "kn_explanation": "This question is best aligned with KN55 because it tests Analytic methods, including qualitative (e.g., thematic, phenomenological) and quantitative (e.g., probability theory; descriptive, inferential, and parametric statistics; meta-analysis; factor analysis; causal modeling).",
+      "difficulty": "medium",
+      "quality_comment": "The distractors are appropriate examples of nonparametric tests, providing a meaningful challenge for test takers.",
+      "lessonExcerpt": "**Parametric tests** (like t-tests and ANOVA) are more powerful than **nonparametric tests** (like chi-square).",
       "suggestedLesson": "7-stats-tests",
       "needsReview": false
     }

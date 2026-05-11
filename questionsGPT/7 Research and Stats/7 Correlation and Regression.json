@@ -64,27 +64,6 @@
       "inspirationIndex": 12
     },
     {
-      "stem": "In a study examining the relationship between education level and job performance, which of the following best describes the role of education as a moderator variable?",
-      "options": [
-        "Education level directly affects job performance without influencing other variables.",
-        "Education level changes the strength or direction of the relationship between job performance and other factors.",
-        "Education level is an independent variable that predicts job performance.",
-        "Education level has no impact on job performance."
-      ],
-      "answer": "Education level changes the strength or direction of the relationship between job performance and other factors.",
-      "explanation": "Education as a moderator variable indicates that it influences how other variables relate to job performance. The first option misrepresents its role, the third option incorrectly categorizes it as an independent variable, and the last option denies any impact, which is incorrect.",
-      "kn": "KN55",
-      "kn_explanation": "This question is best aligned with KN55 because it tests Analytic methods, including qualitative (e.g., thematic, phenomenological) and quantitative (e.g., probability theory; descriptive, inferential, and parametric statistics; meta-analysis; factor analysis; causal modeling).",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively assesses knowledge of moderator variables in correlation analysis.",
-      "suggestedLesson": "7-correlation-and-regression",
-      "suggestedParagraph": "## The Foundation: What Correlation Actually Tells Us",
-      "lessonExcerpt": "A **moderator variable** changes the strength or direction of the relationship between your independent and dependent variables.",
-      "needsReview": false,
-      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 1
-    },
-    {
       "stem": "In predictive modeling, which of the following best describes the role of multiple predictor variables?",
       "options": [
         "They are used to manipulate the dependent variable directly.",
@@ -188,27 +167,6 @@
       "needsReview": false,
       "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
       "inspirationIndex": 8
-    },
-    {
-      "stem": "If a student scores in the 75th percentile on a standardized test, what does this indicate about their performance relative to their peers?",
-      "options": [
-        "They scored higher than 75% of the test-takers.",
-        "They scored lower than 75% of the test-takers.",
-        "They scored exactly at the average level.",
-        "They are in the top 25% of all test-takers."
-      ],
-      "answer": "They scored higher than 75% of the test-takers.",
-      "explanation": "A percentile rank indicates the percentage of scores that fall below a particular score. Therefore, scoring in the 75th percentile means the student performed better than 75% of their peers. The other options misinterpret the meaning of percentile ranks.",
-      "kn": "KN55",
-      "kn_explanation": "This question is best aligned with KN55 because it tests Analytic methods, including qualitative (e.g., thematic, phenomenological) and quantitative (e.g., probability theory; descriptive, inferential, and parametric statistics; meta-analysis; factor analysis; causal modeling).",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively tests knowledge of percentile ranks and their interpretation.",
-      "suggestedLesson": "5-items-and-reliability",
-      "suggestedParagraph": "## The Foundation: What Correlation Actually Tells Us",
-      "lessonExcerpt": "The **p-value** tells you what percentage of test-takers got the item right. **Calculation:** Number who answered correctly ÷ Total number of test-takers",
-      "needsReview": false,
-      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
-      "inspirationIndex": 11
     },
     {
       "stem": "In the context of correlation, what does it mean for two variables to be orthogonal?",
@@ -571,6 +529,87 @@
       "lessonExcerpt": "The relationship between your variables needs to be linear – meaning when you plot the data points, they roughly form a straight line rather than a curve.",
       "suggestedLesson": "7-correlation-and-regression",
       "needsReview": false
+    },
+    {
+      "stem": "In stepwise regression, what is the primary criterion for selecting predictors?",
+      "options": [
+        "The strength of the relationship with the dependent variable",
+        "The number of predictors already included",
+        "The order of entry into the model",
+        "The sample size of the study"
+      ],
+      "answer": "The strength of the relationship with the dependent variable",
+      "explanation": "The correct answer is 'The strength of the relationship with the dependent variable' because stepwise regression selects predictors based on their statistical significance and contribution to explaining variance in the dependent variable. The other options do not accurately reflect the primary criterion for predictor selection.",
+      "kn": "KN55",
+      "kn_explanation": "This question is best aligned with KN55 because it tests Analytic methods, including qualitative (e.g., thematic, phenomenological) and quantitative (e.g., probability theory; descriptive, inferential, and parametric statistics; meta-analysis; factor analysis; causal modeling).",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses knowledge of regression techniques.",
+      "suggestedLesson": "7-correlation-and-regression",
+      "suggestedParagraph": "## The Selection Process: Your Decision Framework",
+      "lessonExcerpt": "**Stepwise multiple regression** adds predictors one at a time, identifying which ones add meaningful predictive power.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 7
+    },
+    {
+      "stem": "What is the primary function of structural equation modeling (SEM) in testing causal models?",
+      "options": [
+        "To establish correlations between variables without inferring causation.",
+        "To assess the fit of a proposed model to the observed data.",
+        "To compare means across different groups.",
+        "To analyze the variance within a single group."
+      ],
+      "answer": "To assess the fit of a proposed model to the observed data.",
+      "explanation": "The primary function of SEM is to evaluate how well a proposed causal model fits the observed data, allowing researchers to test complex relationships between variables. The other options do not accurately reflect the purpose of SEM.",
+      "kn": "KN54",
+      "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses knowledge of SEM and its application in research.",
+      "suggestedLesson": "7-correlation-and-regression",
+      "suggestedParagraph": "## The Big Picture: Qualitative vs. Quantitative",
+      "lessonExcerpt": "**Step 4: Model Evaluation** – Researchers use statistics like the goodness-of-fit index (GFI) to determine whether their theoretical model fits the actual data well.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 10
+    },
+    {
+      "stem": "A correlational study analyzes the relationship between the predictor X (hours studied) and criterion Y (exam score). What does the regression equation derived from this analysis primarily allow the researcher to do?",
+      "options": [
+        "Establish a causal relationship between hours studied and exam score.",
+        "Describe the characteristics of the sample using descriptive statistics.",
+        "Predict an individual's exam score based on their hours studied.",
+        "Determine the population mean exam score."
+      ],
+      "answer": "Predict an individual's exam score based on their hours studied.",
+      "explanation": "1. The correct answer, \"Predict an individual's exam score based on their hours studied,\" is accurate because a regression equation derived from correlational analysis allows researchers to use the relationship between the predictor variable (hours studied) and the criterion variable (exam score) to make predictions about individual outcomes. In this context, the regression equation provides a formula that estimates the expected exam score for a given number of hours studied, demonstrating the predictive utility of the correlation.\n\n2. The option \"Establish a causal relationship between hours studied and exam score\" is incorrect because correlational studies do not manipulate variables or control for confounding factors, meaning they cannot confirm causation. \"Describe the characteristics of the sample using descriptive statistics\" is wrong because while descriptive statistics summarize data, they do not utilize the regression equation to make predictions about individual scores. Lastly, \"Determine the population mean exam score\" is incorrect as the regression equation focuses on individual predictions rather than calculating the mean for the entire population, which would require different statistical approaches.",
+      "kn": "KN54",
+      "kn_explanation": "This question tests understanding of correlational research and regression analysis within quantitative research methods (KN54).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors cover various unrelated statistical concepts, compelling test-takers to correctly apply the concept of regression in correlational research.",
+      "lessonExcerpt": "Once you've established that two variables are correlated, regression analysis lets you make predictions. The correlational study produces a **regression equation** – essentially a formula that takes someone's predictor score and estimates their criterion score.",
+      "suggestedLesson": "7-correlation-and-regression",
+      "needsReview": false
+    },
+    {
+      "stem": "What is the primary purpose of structural equation modeling (SEM) in statistical analysis?",
+      "options": [
+        "To analyze the relationship between two categorical variables",
+        "To test complex relationships among multiple variables simultaneously",
+        "To determine the mean differences between two groups",
+        "To assess the reliability of a measurement scale"
+      ],
+      "answer": "To test complex relationships among multiple variables simultaneously",
+      "explanation": "Structural equation modeling (SEM) is designed to evaluate complex relationships involving multiple variables, allowing researchers to test theoretical models. The other options do not accurately describe the purpose of SEM.",
+      "kn": "KN54",
+      "kn_explanation": "This question is best aligned with KN54 because it tests Design of case, correlational, quasi-experimental, and experimental studies.",
+      "difficulty": "hard",
+      "quality_comment": "The question is well-structured and assesses understanding of advanced statistical methods.",
+      "suggestedLesson": "7-correlation-and-regression",
+      "suggestedParagraph": "## The Two Main Families of Statistical Tests",
+      "lessonExcerpt": "SEM combines factor analysis with multiple regression to test complex theories about how variables relate to each other.",
+      "needsReview": false,
+      "inspirationDomain": "RESEARCH METHODS AND STATISTICS",
+      "inspirationIndex": 12
     }
   ]
 }

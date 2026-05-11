@@ -43,27 +43,6 @@
       "inspirationIndex": 18
     },
     {
-      "stem": "Dr. Martinez is conducting a neuropsychological evaluation of a 68-year-old client. She expects to find age-related decline on tasks measuring fluid intelligence but relatively preserved performance on tasks measuring crystallized intelligence. Which pattern of test results would be MOST consistent with this expectation?",
-      "options": [
-        "Decreased vocabulary scores and increased performance on novel problem-solving tasks",
-        "Decreased performance on timed pattern recognition tasks and preserved general knowledge scores",
-        "Equally decreased performance across all cognitive domains",
-        "Preserved processing speed with decreased fund of information"
-      ],
-      "answer": "Decreased performance on timed pattern recognition tasks and preserved general knowledge scores",
-      "explanation": "Fluid intelligence involves the ability to solve novel problems, reason abstractly, and process information quickly—capacities that decline with age. Timed pattern recognition is a classic fluid intelligence task. Crystallized intelligence encompasses accumulated knowledge, vocabulary, and learned skills, which remain stable or even increase across much of the lifespan. General knowledge is a crystallized ability. Option A reverses the expected pattern. Option C describes global decline more consistent with dementia. Option D also reverses the expected pattern, as processing speed (a fluid ability) declines while fund of information (crystallized) is preserved.",
-      "kn": "KN21",
-      "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
-      "difficulty": "hard",
-      "quality_comment": "Requires applied understanding of the Gf/Gc distinction in a clinical assessment context. The lesson discusses age-related brain changes and cognitive compensation.",
-      "suggestedLesson": "4-body-growth",
-      "suggestedParagraph": "### Adult Brain Changes: The Long Decline",
-      "lessonExcerpt": "Brain weight and volume start gradually decreasing around age 30 due to neuron loss. This process accelerates after age 60... the brain isn't helpless against this decline. It compensates through: Developing new connections between remaining neurons",
-      "needsReview": false,
-      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
-      "inspirationIndex": 20
-    },
-    {
       "stem": "Which neonatal reflex is crucial for successful breastfeeding?",
       "options": [
         "Moro reflex",
@@ -247,24 +226,6 @@
       "quality_comment": "Clear stem with plausible distractors involving related brain development processes makes it suitable for EPPP-level testing.",
       "lessonExcerpt": "After this explosive growth in synapses, something counterintuitive happens: the brain starts cutting connections. This process is called synaptic pruning, and it continues through adolescence.",
       "suggestedLesson": "4-body-growth",
-      "needsReview": false
-    },
-    {
-      "stem": "Which type of depth cue do infants begin using at about five to six months of age, providing the impression of depth from static, one-eyed images?",
-      "options": [
-        "Kinetic cues",
-        "Binocular (stereoscopic) cues",
-        "Pictorial (static-monocular) cues",
-        "Motion parallax"
-      ],
-      "answer": "Pictorial (static-monocular) cues",
-      "explanation": "1. **Correct Answer: Pictorial (static-monocular) cues**  \nPictorial (static-monocular) cues are the type of depth information that infants begin using at about five to six months of age. These cues create the impression of depth through visual elements that can be perceived with one eye, such as size, texture gradients, shadows, and linear perspective, helping infants interpret their visual environment more effectively.\n\n2. **Incorrect Options:**\n- **Kinetic cues:** Kinetic cues are based on the movement of objects and are utilized by infants starting as early as three or four weeks of age, not at five to six months.\n- **Binocular (stereoscopic) cues:** Binocular (stereoscopic) cues rely on the integration of images received by both eyes and begin to develop between two and three months of age, making them an earlier form of depth perception than pictorial cues.\n- **Motion parallax:** Motion parallax is a depth cue that involves the perception of depth based on the relative motion of objects as an observer moves, which is not specifically tied to the static, one-eyed images that pictorial cues represent.",
-      "kn": "KN21",
-      "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
-      "difficulty": "medium",
-      "quality_comment": "Distractors are plausible types of depth cues, requiring test-takers to know specific developmental timing and cue types.",
-      "lessonExcerpt": "These different reproductive challenges shaped what triggers jealousy most intensely. ### Alternative Explanation: The Double-Shot Hypothesis",
-      "suggestedLesson": "3-connection",
       "needsReview": false
     },
     {
@@ -474,6 +435,108 @@
       "lessonExcerpt": "Protective factors include: Back sleeping position; Breastfeeding; Bare crib (minimal bedding); Avoiding overheating; Room-sharing without bed-sharing",
       "suggestedLesson": "4-body-growth",
       "needsReview": false
+    },
+    {
+      "stem": "Which of the following factors is most strongly associated with predicting adolescent alcohol use?",
+      "options": [
+        "Peer influence",
+        "Parental supervision",
+        "Socioeconomic status",
+        "Academic performance"
+      ],
+      "answer": "Peer influence",
+      "explanation": "The correct answer is 'Peer influence', as research consistently shows that adolescents are more likely to engage in alcohol use when they have peers who drink. While parental supervision, socioeconomic status, and academic performance can influence behavior, peer influence is a more direct predictor of alcohol use among adolescents.",
+      "kn": "KN22",
+      "kn_explanation": "This question is best aligned with KN22 because it tests Influence of individual-environment interaction on development over time (e.g., the relationship between the individual and the social, academic, work, community environment).",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests knowledge of adolescent behavior and substance use.",
+      "suggestedLesson": "4-body-growth",
+      "suggestedParagraph": "## Predicting Divorce: Warning Signs in Communication",
+      "lessonExcerpt": "Risk Factors: Stressful life events, Parental substance abuse, Weak parent-child relationships, Affiliation with substance-using peers",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 2
+    },
+    {
+      "stem": "Which of the following is considered a protective factor in the context of developmental resilience?",
+      "options": [
+        "Exposure to high levels of stress",
+        "Strong family support",
+        "Chronic health conditions",
+        "Low socioeconomic status"
+      ],
+      "answer": "Strong family support",
+      "explanation": "Strong family support is a well-documented protective factor that can help individuals cope with stress and adversity, promoting resilience. The other options are risk factors that can hinder development and well-being.",
+      "kn": "KN27",
+      "kn_explanation": "This question is best aligned with KN27 because it tests Risk and protective factors that may impact a developmental course (e.g., nutrition, prenatal care, health care, social support, socioeconomic status, abuse, victimization, and resiliency).",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of resilience factors in development.",
+      "suggestedLesson": "4-body-growth",
+      "suggestedParagraph": "## Marriage, Divorce, and What Comes After",
+      "lessonExcerpt": "Protective Factors: Parental disapproval of substance use, Supportive parenting, Age-appropriate parental monitoring",
+      "needsReview": false,
+      "inspirationDomain": "GROWTH AND LIFESPAN DEVELOPMENT",
+      "inspirationIndex": 14
+    },
+    {
+      "stem": "What pattern of couple communication is associated with divorce occurring later in the marriage?",
+      "options": [
+        "Emotionally volatile (attack-defend) pattern",
+        "Emotionally expressive (engagement) pattern",
+        "Emotionally inexpressive (avoidant) pattern",
+        "Emotionally supportive pattern"
+      ],
+      "answer": "Emotionally inexpressive (avoidant) pattern",
+      "explanation": "1. The \"Emotionally inexpressive (avoidant) pattern\" is the correct answer because it is characterized by couples who avoid conflict and self-disclosure, leading to emotional distance and ultimately, divorce later in the marriage. This pattern contrasts with the emotionally volatile pattern, which tends to lead to earlier divorces due to frequent arguments and escalating conflicts.\n\n2. The \"Emotionally volatile (attack-defend) pattern\" is incorrect because it is associated with frequent arguments, criticism, and contempt, leading to divorce earlier in the marriage. The \"Emotionally expressive (engagement) pattern\" is also incorrect, as it is not mentioned in the reference material and does not relate to the patterns identified by Gottman and Levenson. Lastly, the \"Emotionally supportive pattern\" is incorrect because it similarly does not appear in the reference material and is not linked to the timing of divorce as described in the context of couple communication patterns.",
+      "kn": "KN22",
+      "kn_explanation": "This question is best aligned with KN22 because it tests Influence of individual-environment interaction on development over time (e.g., the relationship between the individual and the social, academic, work, community environment).",
+      "difficulty": "medium",
+      "quality_comment": "Clear stem and well-constructed distractors that distinguish between emotional expression styles in couples.",
+      "lessonExcerpt": "Protective Factors: Parental disapproval of substance use, Supportive parenting, Age-appropriate parental monitoring",
+      "suggestedLesson": "4-body-growth",
+      "needsReview": false
+    },
+    {
+      "stem": "What is the reported prevalence of obsessive-compulsive disorder (OCD) in girls compared to boys?",
+      "options": [
+        "Higher in boys",
+        "Higher in girls",
+        "Equal prevalence",
+        "No significant data available"
+      ],
+      "answer": "Higher in girls",
+      "explanation": "The correct answer is 'Higher in girls' as research indicates that OCD is more prevalent in females than in males. The other options are incorrect as they do not reflect the established findings regarding gender differences in OCD prevalence.",
+      "kn": "KN38",
+      "kn_explanation": "This question is best aligned with KN38 because it tests Constructs of epidemiology and base rates of psychological and behavioral disorders.",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and effectively assesses knowledge of OCD prevalence.",
+      "suggestedLesson": "4-body-growth",
+      "suggestedParagraph": "## Why Clinical Tests Matter for Your EPPP Success",
+      "lessonExcerpt": "The lesson does not specifically cover OCD prevalence in girls, indicating a need for review.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 19
+    },
+    {
+      "stem": "A researcher studying the epidemiology of major depressive disorder across the lifespan finds that prevalence rates for boys and girls are roughly equivalent until a specific developmental period, after which rates diverge significantly. This divergence is MOST likely to become apparent during:",
+      "options": [
+        "Middle childhood (ages 6-8)",
+        "Early adolescence",
+        "Early adulthood (ages 18-25)",
+        "Middle adulthood (ages 40-50)"
+      ],
+      "answer": "Early adolescence",
+      "explanation": "Research consistently shows that during childhood, depression rates are similar for boys and girls, but in early adolescence, rates for females increase substantially while male rates remain stable. This pattern is attributed to hormonal changes at puberty that may sensitize females but desensitize males to stress from negative life events, resulting in females having rates 1.5 to 3 times higher than males throughout adulthood. The divergence does not occur in middle childhood, early adulthood, or middle adulthood—it begins specifically at early adolescence.",
+      "kn": "KN38",
+      "kn_explanation": "This question is best aligned with KN38 because it tests Constructs of epidemiology and base rates of psychological and behavioral disorders.",
+      "difficulty": "medium",
+      "quality_comment": "Tests specific knowledge of when the gender gap in depression emerges, not just that it exists",
+      "suggestedLesson": "4-body-growth",
+      "suggestedParagraph": "### The Gender Gap",
+      "lessonExcerpt": "During childhood, depression rates are similar for boys and girls. But in early adolescence, rates for females skyrocket while male rates stay stable.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 15
     }
   ]
 }

@@ -85,27 +85,6 @@
       "inspirationIndex": 16
     },
     {
-      "stem": "A community health program aims to increase cervical cancer screening rates among women who already believe the procedure is effective but nonetheless fail to schedule appointments. According to the Theory of Planned Behavior, which intervention MOST directly targets the subjective norm component in order to strengthen behavioral intention?",
-      "options": [
-        "Distributing pamphlets with vivid statistics about cervical cancer incidence and mortality to increase perceived susceptibility",
-        "Providing transportation vouchers and extended clinic hours to eliminate logistical barriers to scheduling",
-        "Disseminating messages emphasizing that physicians, family members, and community leaders strongly encourage regular screening",
-        "Offering guided practice in navigating the online scheduling system to build procedural self-efficacy"
-      ],
-      "answer": "Disseminating messages emphasizing that physicians, family members, and community leaders strongly encourage regular screening",
-      "explanation": "Subjective norms in the Theory of Planned Behavior reflect what a person believes important referent others think she should do. An intervention communicating that trusted social figures (physicians, family, community leaders) endorse the behavior directly strengthens this component and, through it, behavioral intention. Option A targets perceived severity, a component from the Health Belief Model rather than subjective norms. Option B addresses perceived behavioral control by removing structural barriers. Option D also targets perceived behavioral control by building confidence in one's ability to perform the scheduling behavior. All three TPB components contribute to intention, but only Option C specifically addresses subjective norms.",
-      "kn": "KN14",
-      "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
-      "difficulty": "medium",
-      "quality_comment": "Well-anchored in lesson content; distractors each map to a distinct competing construct, making this an effective test of TPB component differentiation.",
-      "suggestedLesson": "3-influence",
-      "suggestedParagraph": "## Three Models for Predicting Behavior from Attitudes",
-      "lessonExcerpt": "Brehm and Brehm (1981) identified this phenomenon as psychological reactance.",
-      "needsReview": false,
-      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
-      "inspirationIndex": 2
-    },
-    {
       "stem": "A predoctoral intern receives two equally attractive internship offers — one at a prestigious clinical training site and one at a highly regarded research-focused site. After accepting the clinical position, the intern tells a colleague one week later: 'The more I think about it, the more I realize the research site would have been too narrow for my long-term goals — clinical training is clearly the stronger choice.' According to cognitive dissonance theory, this post-decisional reevaluation is BEST explained by:",
       "options": [
         "Rationalization as a defense mechanism, in which unconscious conflict is managed through logically coherent but post-hoc justifications",
@@ -423,6 +402,48 @@
       "lessonExcerpt": "Latitude of Rejection: Positions so different from yours that you immediately reject them. Messages here can backfire, making you more entrenched in your original position.",
       "suggestedLesson": "3-attitudes",
       "needsReview": false
+    },
+    {
+      "stem": "How does cognitive dissonance typically lead to attitude change?",
+      "options": [
+        "By reinforcing existing beliefs",
+        "By creating discomfort that motivates change",
+        "By providing new information that contradicts beliefs",
+        "By increasing confidence in one's decisions"
+      ],
+      "answer": "By creating discomfort that motivates change",
+      "explanation": "The correct answer is 'By creating discomfort that motivates change' because cognitive dissonance arises when there is a conflict between beliefs and behaviors, leading to psychological discomfort that individuals seek to resolve by changing their attitudes. 'By reinforcing existing beliefs' is incorrect as cognitive dissonance challenges existing beliefs. 'By providing new information that contradicts beliefs' does not capture the essence of dissonance, which is about internal conflict. 'By increasing confidence in one's decisions' is misleading, as dissonance often leads to uncertainty.",
+      "kn": "KN14",
+      "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses understanding of cognitive dissonance.",
+      "suggestedLesson": "3-attitudes",
+      "suggestedParagraph": "## Why Persuasion Matters for Psychologists",
+      "lessonExcerpt": "you experience psychological discomfort called dissonance. This discomfort motivates you to reduce it.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 16
+    },
+    {
+      "stem": "What is the primary mechanism through which cognitive dissonance leads to attitude adjustment?",
+      "options": [
+        "Increased awareness of conflicting beliefs.",
+        "Rationalization of behavior to align with beliefs.",
+        "Social comparison with others.",
+        "Emotional regulation strategies."
+      ],
+      "answer": "Rationalization of behavior to align with beliefs.",
+      "explanation": "The correct answer highlights that cognitive dissonance often leads individuals to rationalize their behavior to reduce discomfort, thereby adjusting their attitudes. The other options do not accurately capture the primary mechanism of cognitive dissonance.",
+      "kn": "KN14",
+      "kn_explanation": "This question is best aligned with KN14 because it tests Major research-based theories and models of social cognition (e.g., person perception, development of stereotypes, prejudice).",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of cognitive dissonance.",
+      "suggestedLesson": "3-attitudes",
+      "suggestedParagraph": "## The Major Players: Errors and Biases",
+      "lessonExcerpt": "Understanding how people make judgments and decisions is crucial for the EPPP.",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 7
     }
   ]
 }

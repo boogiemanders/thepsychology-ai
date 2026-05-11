@@ -1,69 +1,6 @@
 {
   "questions": [
     {
-      "stem": "What is the primary effect of job enrichment on workers according to motivation theories?",
-      "options": [
-        "Increases job dissatisfaction.",
-        "Decreases employee turnover.",
-        "Reduces the need for training.",
-        "Enhances intrinsic motivation."
-      ],
-      "answer": "Enhances intrinsic motivation.",
-      "explanation": "Job enrichment is designed to enhance intrinsic motivation by providing employees with more meaningful work, greater autonomy, and opportunities for personal growth. The other options do not accurately reflect the primary outcomes associated with job enrichment.",
-      "kn": "KN10",
-      "kn_explanation": "This question is best aligned with KN10 because it tests Major research-based theories and models of emotion and their application.",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively assesses understanding of job enrichment and its motivational impact.",
-      "suggestedLesson": "3-attitudes",
-      "suggestedParagraph": "## Why Understanding Emotions and Stress Matters for Your EPPP Success",
-      "lessonExcerpt": "This fascinating prediction says: if you're externally rewarded for doing something you already enjoy intrinsically, your intrinsic motivation decreases. **Classic Study**: Children who enjoyed drawing with markers were either rewarded or not rewarded for drawing during a play period.",
-      "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 4
-    },
-    {
-      "stem": "According to the James-Lange theory of emotion, which of the following statements is true?",
-      "options": [
-        "Emotions are experienced before physiological changes occur.",
-        "Physiological changes occur and then lead to emotional experiences.",
-        "Emotions are solely based on cognitive appraisal.",
-        "Physiological responses have no impact on emotional experiences."
-      ],
-      "answer": "Physiological changes occur and then lead to emotional experiences.",
-      "explanation": "The James-Lange theory posits that physiological responses precede and inform emotional experiences. The other options misrepresent the theory's core premise.",
-      "kn": "KN10",
-      "kn_explanation": "This question is best aligned with KN10 because it tests Major research-based theories and models of emotion and their application.",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively tests knowledge of emotion theories.",
-      "suggestedLesson": "2-work-motivation",
-      "suggestedParagraph": "## The Brain's Emotion Centers: Meet Your Neural Cast",
-      "lessonExcerpt": "Adams' equity theory is all about fairness through social comparison. Workers naturally compare their input/outcome ratio to others doing similar work:",
-      "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 14
-    },
-    {
-      "stem": "Expectancy in motivational theories primarily refers to which of the following?",
-      "options": [
-        "The belief that one can achieve a desired outcome.",
-        "The anticipation of negative consequences.",
-        "The expectation of external rewards.",
-        "The understanding of social norms."
-      ],
-      "answer": "The belief that one can achieve a desired outcome.",
-      "explanation": "Expectancy in motivational theories is about the belief in one's ability to achieve goals, which influences motivation. The other options do not accurately reflect the concept of expectancy.",
-      "kn": "KN10",
-      "kn_explanation": "This question is best aligned with KN10 because it tests Major research-based theories and models of emotion and their application.",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively tests knowledge of expectancy in motivation.",
-      "suggestedLesson": "2-work-motivation",
-      "suggestedParagraph": "## The Stress Response: From Perception to Action",
-      "lessonExcerpt": "Theory #6: Expectancy Theory (VIE Theory) Vroom's expectancy theory says motivation is a calculation based on three factors:",
-      "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 17
-    },
-    {
       "stem": "Which of the following stages is NOT part of Kubler-Ross's stages of grief?",
       "options": [
         "Denial",
@@ -84,27 +21,6 @@
       "needsReview": false,
       "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
       "inspirationIndex": 16
-    },
-    {
-      "stem": "Research indicates that men and women may exhibit different leadership styles. Which of the following is a commonly observed difference?",
-      "options": [
-        "Men are more likely to use transformational leadership",
-        "Women are more likely to adopt a democratic leadership style",
-        "Men are more likely to use a participative approach",
-        "Women are more likely to use an authoritarian style"
-      ],
-      "answer": "Women are more likely to adopt a democratic leadership style",
-      "explanation": "Research has shown that women tend to adopt a more democratic or participative leadership style, which contrasts with the more autocratic styles often associated with men. The other options do not accurately reflect the common findings in leadership research.",
-      "kn": "KN10",
-      "kn_explanation": "This question is best aligned with KN10 because it tests Major research-based theories and models of emotion and their application.",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively assesses knowledge of gender differences in leadership.",
-      "suggestedLesson": "2-work-motivation",
-      "suggestedParagraph": "## The Brain's Emotion Centers: Meet Your Neural Cast",
-      "lessonExcerpt": "Theory #6: Expectancy Theory (VIE Theory) Vroom's expectancy theory says motivation is a calculation based on three factors:",
-      "needsReview": false,
-      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
-      "inspirationIndex": 4
     },
     {
       "stem": "In auditory tasks, what is the primary function of selective attention?",
@@ -269,24 +185,6 @@
       "needsReview": false
     },
     {
-      "stem": "Damage to the left hemisphere areas of the cerebral cortex involved in emotion typically results in which reaction?",
-      "options": [
-        "An indifference reaction with inappropriate euphoria and lack of emotional response",
-        "A catastrophic reaction characterized by depression, anxiety, fear, and paranoia",
-        "Increased expression of sadness and negative emotions without cognitive awareness",
-        "Loss of all emotional experience including positive and negative emotions"
-      ],
-      "answer": "A catastrophic reaction characterized by depression, anxiety, fear, and paranoia",
-      "explanation": "1. \"A catastrophic reaction characterized by depression, anxiety, fear, and paranoia\" is the correct answer because, according to the reference material, areas in the left hemisphere of the cerebral cortex are associated with mediating happiness and other positive emotions. Damage to these areas can lead to significant emotional disturbances, resulting in a catastrophic reaction that manifests as depression, anxiety, fear, and paranoia.\n\n2. The option \"An indifference reaction with inappropriate euphoria and lack of emotional response\" is incorrect because this reaction is associated with damage to the right hemisphere, which mediates sadness and negative emotions, not the left. The option \"Increased expression of sadness and negative emotions without cognitive awareness\" is wrong because it does not accurately reflect the emotional outcomes of left hemisphere damage, which primarily affects positive emotions rather than increasing negative emotions. Lastly, \"Loss of all emotional experience including positive and negative emotions\" is incorrect as damage to the left hemisphere does not result in a total loss of emotional experience; rather, it specifically leads to the predominance of negative emotional reactions.",
-      "kn": "KN10",
-      "kn_explanation": "This question is best aligned with KN10 because it tests Major research-based theories and models of emotion and their application.",
-      "difficulty": "medium",
-      "quality_comment": "Distractors are plausible but incorrect, making this question effective for assessing neurological knowledge relevant to emotion.",
-      "lessonExcerpt": "Damage here can be catastrophic. We're talking respiratory failure, coma, or death.",
-      "suggestedLesson": "1-hindbrain-midbrain-forebrain",
-      "needsReview": false
-    },
-    {
       "stem": "Which of the following best characterizes the resistance stage in Selye’s general adaptation syndrome model of stress?",
       "options": [
         "An initial sympathetic nervous system activation releasing energy for immediate response",
@@ -362,6 +260,69 @@
       "lessonExcerpt": "Schachter-Singer Two-Factor Theory - Stanley Schachter and Jerome Singer proposed that emotion requires both physiological arousal AND cognitive interpretation.",
       "suggestedLesson": "2-stress-and-emotion",
       "needsReview": false
+    },
+    {
+      "stem": "A psychologist is providing parent education to the family of a child recently diagnosed with spastic cerebral palsy (CP). The parents ask when the brain injury that caused the diagnosis most likely occurred. Based on the established etiology of cerebral palsy, the psychologist should explain that the responsible brain damage most commonly occurs:",
+      "options": [
+        "During the first trimester of gestation, when neural tube formation is occurring",
+        "During the perinatal period, encompassing the time just before, during, or shortly after birth",
+        "Between 18 and 24 months of postnatal age, during the critical period for myelination",
+        "After age three, following a period of normal motor development, due to viral encephalitis"
+      ],
+      "answer": "During the perinatal period, encompassing the time just before, during, or shortly after birth",
+      "explanation": "Cerebral palsy is a non-progressive neuromotor disorder most commonly caused by brain damage occurring during the perinatal period, typically due to hypoxic-ischemic injury (oxygen deprivation) before, during, or shortly after birth. First trimester damage (Option A) more commonly results in structural brain malformations or neural tube defects. Damage during the myelination window (Option C) can cause motor impairment, but CP is defined by a broader perinatal injury window. Damage after age three following normal development (Option D) would be classified as an acquired brain injury, not cerebral palsy, since CP requires injury prior to established normal development.",
+      "kn": "KN1",
+      "kn_explanation": "Understanding the timing and etiology of neurodevelopmental disorders such as cerebral palsy is core content within the Biological Bases of Behavior domain, specifically neurodevelopmental disorders.",
+      "difficulty": "medium",
+      "quality_comment": "Strong question with practical parent-counseling framing; the third-trimester/myelination distractor appropriately tests precision of developmental timing knowledge",
+      "suggestedLesson": "2-stress-and-emotion",
+      "suggestedParagraph": "## Movement Disorders: When Motor Control Breaks Down",
+      "lessonExcerpt": "**Psychoeducation**: Explaining the stress response normalizes symptoms. {{M}}When you tell a client that their racing heart during panic isn't dangerous (it's just their SAM system activating when there's no actual threat{{/M}}) you're providing cognitive restructuring material.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 18
+    },
+    {
+      "stem": "What physiological response is typically observed during exposure to a phobic stimulus?",
+      "options": [
+        "Increased heart rate and sweating",
+        "Decreased blood pressure and calmness",
+        "Heightened cognitive processing and focus",
+        "Increased appetite and relaxation"
+      ],
+      "answer": "Increased heart rate and sweating",
+      "explanation": "The correct answer reflects the typical physiological response of the sympathetic nervous system during a phobic reaction. The other options describe responses that are not characteristic of fear or phobia exposure.",
+      "kn": "KN1",
+      "kn_explanation": "This KN code applies as it relates to understanding fear response mechanisms and physiological reactions.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of physiological responses to fear.",
+      "suggestedLesson": "2-stress-and-emotion",
+      "suggestedParagraph": "## Midbrain: The Alert System and Movement Moderator",
+      "lessonExcerpt": "The medulla (also called medulla oblongata) handles the functions you literally cannot live without: breathing, heart rate, and blood pressure. It also manages involuntary mouth and throat movements for swallowing, coughing, and sneezing.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 13
+    },
+    {
+      "stem": "According to the James-Lange theory of emotion, which of the following statements is true?",
+      "options": [
+        "Emotions are experienced before physiological changes occur.",
+        "Physiological changes occur and then lead to emotional experiences.",
+        "Emotions are solely based on cognitive appraisal.",
+        "Physiological responses have no impact on emotional experiences."
+      ],
+      "answer": "Physiological changes occur and then lead to emotional experiences.",
+      "explanation": "The James-Lange theory posits that physiological responses precede and inform emotional experiences. The other options misrepresent the theory's core premise.",
+      "kn": "KN10",
+      "kn_explanation": "This question is best aligned with KN10 because it tests Major research-based theories and models of emotion and their application.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests knowledge of emotion theories.",
+      "suggestedLesson": "2-stress-and-emotion",
+      "suggestedParagraph": "## The Brain's Emotion Centers: Meet Your Neural Cast",
+      "lessonExcerpt": "Adams' equity theory is all about fairness through social comparison. Workers naturally compare their input/outcome ratio to others doing similar work:",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 14
     }
   ]
 }

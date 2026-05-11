@@ -1,48 +1,6 @@
 {
   "questions": [
     {
-      "stem": "A clinical psychologist is comparing different theoretical models of addiction with a graduate student. How does the Alcoholics Anonymous (AA) model conceptualize the etiology of alcohol dependence?",
-      "options": [
-        "As an overlearned maladaptive habit maintained by reinforcement contingencies",
-        "As a disease that the individual is powerless to control without external support",
-        "As a behavior maintained by negative reinforcement through withdrawal avoidance",
-        "As a consequence of irrational beliefs about the necessity of alcohol for coping"
-      ],
-      "answer": "As a disease that the individual is powerless to control without external support",
-      "explanation": "AA follows a disease model of addiction, viewing alcoholism as an illness over which the individual is powerless—a core tenet of the 12-step philosophy. This contrasts sharply with Marlatt's cognitive-behavioral relapse prevention model, which views addiction as 'an overlearned habit' (A) and treats relapses as learning opportunities rather than failures. The negative reinforcement model (C) represents a behavioral learning perspective, and the irrational beliefs model (D) reflects a cognitive therapy approach (like REBT). The lesson explicitly contrasts AA's abstinence-based approach with Marlatt's model.",
-      "kn": "KN43",
-      "kn_explanation": "Comparing theoretical models of addiction (AA model) falls under contemporary research-based theories and models of treatment/intervention",
-      "difficulty": "medium",
-      "quality_comment": "Good discrimination question with plausible distractors representing distinct theoretical models. The lesson references AA as abstinence-based but the disease model conceptualization is more implied than explicitly stated.",
-      "suggestedLesson": "2-classical-conditioning-interventions",
-      "suggestedParagraph": "## The Three Faces of Prevention",
-      "lessonExcerpt": "They also identify negative beliefs about themselves related to the trauma (\"I'm powerless\") and practice replacing these with adaptive beliefs (\"I did the best I could\"). **The controversy:** Does EMDR work because of the eye movements, or just because you're doing exposure in imagination?",
-      "needsReview": false,
-      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 13
-    },
-    {
-      "stem": "A graduate student is comparing different models of addiction. Which of the following best describes how Alcoholics Anonymous (AA) conceptualizes addiction?",
-      "options": [
-        "Addiction is an overlearned maladaptive habit that can be unlearned through skills training",
-        "Addiction is a disease that requires lifelong abstinence and is never fully cured",
-        "Addiction results from operant conditioning and is maintained by reinforcement contingencies",
-        "Addiction is a rational choice made in response to environmental contingencies"
-      ],
-      "answer": "Addiction is a disease that requires lifelong abstinence and is never fully cured",
-      "explanation": "Alcoholics Anonymous conceptualizes addiction as a disease—a chronic condition that cannot be cured but can be managed through complete abstinence. This is contrasted in the literature with cognitive-behavioral approaches like Marlatt's relapse prevention model, which views addiction as an overlearned habit (A) rather than a disease. The operant conditioning model (C) represents a pure behavioral perspective, while the rational choice model (D) represents an economic/decision-making perspective. AA's disease model is significant because it frames recovery as requiring lifelong management and abstinence, and views any use as a relapse rather than a learning opportunity.",
-      "kn": "KN44",
-      "kn_explanation": "This question is best aligned with KN44 because it tests Treatment techniques and interventions, and the evidence for their comparative efficacy and effectiveness.",
-      "difficulty": "medium",
-      "quality_comment": "Clear contrast between disease model and behavioral models of addiction. The Marlatt comparison in the source material provides strong support.",
-      "suggestedLesson": "5-substance-misuse",
-      "suggestedParagraph": "## Motivational Interviewing (MI)",
-      "lessonExcerpt": "Research shows VBRT effectively promotes abstinence for cocaine, opiates, marijuana, and tobacco. But there's a catch: Effects often fade when vouchers stop.",
-      "needsReview": false,
-      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
-      "inspirationIndex": 13
-    },
-    {
       "stem": "A client in alcohol use disorder treatment has maintained sobriety for eight months but describes an intensifying internal pull toward drinking whenever he passes bars on his commute. According to the Transtheoretical Model, which variable most directly accounts for his elevated relapse risk at this stage?",
       "options": [
         "Declining self-efficacy caused by the duration of maintenance demands exceeding his coping resources",
@@ -370,29 +328,6 @@
       "quality_comment": "Clear distinctions among options require nuanced understanding of client-therapist interactions.",
       "lessonExcerpt": "| Discord | Signals relationship strain | \"You don't understand what I'm going through\" | Resolve |",
       "suggestedLesson": "6-brief-therapies",
-      "needsReview": false
-    },
-    {
-      "stem": "What is the main focus of Cognitive Behavioral Therapy (CBT) in treating anxiety disorders?",
-      "options": [
-        "Enhancing emotional insight",
-        "Reducing anxiety symptoms through cognitive restructuring",
-        "Exploring childhood experiences",
-        "Promoting self-actualization"
-      ],
-      "answer": "Reducing anxiety symptoms through cognitive restructuring",
-      "explanation": "1. The correct answer, \"Reducing anxiety symptoms through cognitive restructuring,\" aligns with the principles of Cognitive Behavioral Therapy (CBT), which focuses on identifying and changing negative thought patterns that contribute to anxiety. CBT aims to alleviate anxiety symptoms by helping clients reframe their thoughts and beliefs, thus reducing their emotional distress and improving their coping strategies.\n\n2. The option \"Enhancing emotional insight\" is incorrect because it primarily relates to therapies that emphasize understanding and processing emotions, rather than the cognitive restructuring focus of CBT. \"Exploring childhood experiences\" is wrong as it pertains more to psychodynamic approaches that delve into past experiences to understand current behavior, which is not a primary goal of CBT. Lastly, \"Promoting self-actualization\" is not applicable here, as it is more relevant to humanistic approaches that emphasize personal growth and fulfillment, rather than the symptom-focused approach of CBT in treating anxiety.",
-      "difficulty": "easy",
-      "kn": "KN44",
-      "kn_explanation": "This question assesses knowledge of treatment goals and therapeutic interventions, which falls under treatment techniques and their effectiveness (KN44).",
-      "quality_comment": "This question effectively tests knowledge of a specific therapy's goal, similar to the IPT focus.",
-      "is_lock_in_drill": true,
-      "lock_in_level": "easier",
-      "tags": [
-        "lock_in_drill"
-      ],
-      "lessonExcerpt": "CBT uses both cognitive techniques (like reframing thoughts and examining evidence) and behavioral techniques (like activity scheduling, exposure therapy, and behavioral rehearsal).",
-      "suggestedLesson": "6-cbt",
       "needsReview": false
     },
     {

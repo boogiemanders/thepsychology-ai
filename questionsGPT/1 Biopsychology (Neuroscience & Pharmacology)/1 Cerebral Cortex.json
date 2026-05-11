@@ -106,27 +106,6 @@
       "inspirationIndex": 11
     },
     {
-      "stem": "A clinician observes that a patient with Tourette's disorder involuntarily repeats the last several words spoken by the examiner during a clinical interview. This phenomenon is best described as:",
-      "options": [
-        "Echopraxia",
-        "Palilalia",
-        "Echolalia",
-        "Coprolalia"
-      ],
-      "answer": "Echolalia",
-      "explanation": "Echolalia is the involuntary repetition of another person's speech (repeating others' words). It is classified as a vocal tic in Tourette's disorder. Echopraxia (A) involves imitating others' movements, not speech. Palilalia (B) involves involuntary repetition of one's own words or phrases, not another person's. Coprolalia (D) involves involuntary swearing or use of obscene language.",
-      "kn": "KN1",
-      "kn_explanation": "This question tests knowledge of speech and language pathology terminology relevant to neurological and neurodevelopmental conditions within biological bases.",
-      "difficulty": "medium",
-      "quality_comment": "Good discrimination between similar-sounding terms. All distractors are plausible phenomena seen in tic disorders or neurological conditions.",
-      "suggestedLesson": "5-neurodevelopmental",
-      "suggestedParagraph": "### Understanding Tics",
-      "lessonExcerpt": "A tic is a sudden, rapid, recurrent, nonrhythmic motor movement or vocalization. Motor tics include eye blinking, facial grimacing, shoulder shrugging, and echopraxia (imitating others' movements). Vocal tics include throat clearing, barking, and echolalia (repeating others' words).",
-      "needsReview": false,
-      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 17
-    },
-    {
       "stem": "A neuropsychologist evaluates a patient with left parietal lobe damage who presents with difficulty distinguishing right from left, inability to identify individual fingers when touched, loss of writing ability, and inability to perform simple arithmetic. This symptom cluster is most consistent with:",
       "options": [
         "Contralateral neglect syndrome",
@@ -293,27 +272,6 @@
       "needsReview": false,
       "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
       "inspirationIndex": 5
-    },
-    {
-      "stem": "Which brain region is primarily involved in the interpretation of emotional stimuli?",
-      "options": [
-        "Hippocampus",
-        "Amygdala",
-        "Cerebellum",
-        "Thalamus"
-      ],
-      "answer": "Amygdala",
-      "explanation": "The amygdala is crucial for processing emotional information and attaching emotional significance to memories. The hippocampus is involved in memory consolidation, the cerebellum primarily coordinates movement and balance, and the thalamus acts as a sensory relay station. Therefore, the amygdala is the correct answer.",
-      "kn": "KN1",
-      "kn_explanation": "This KN code applies as it relates to the biological bases of emotional processing in the brain.",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively assesses knowledge of brain regions related to emotion.",
-      "suggestedLesson": "1-cerebral-cortex",
-      "suggestedParagraph": "## The Amygdala: Your Emotional Highlighter",
-      "lessonExcerpt": "The amygdala does something fascinating: it attaches emotional significance to your memories.",
-      "needsReview": false,
-      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 11
     },
     {
       "stem": "Which type of aphasia is characterized by impaired language production but relatively intact comprehension?",
@@ -778,6 +736,168 @@
         "lock_in_drill"
       ],
       "lessonExcerpt": "Located in the dominant hemisphere (usually left), Wernicke's area is where language comprehension happens. Damage produces **Wernicke's aphasia**. Also called receptive or fluent aphasia.",
+      "suggestedLesson": "1-cerebral-cortex",
+      "needsReview": false
+    },
+    {
+      "stem": "Which of the following symptoms is NOT typically associated with Gerstmann's syndrome?",
+      "options": [
+        "Agraphia",
+        "Acalculia",
+        "Left-right disorientation",
+        "Visual agnosia"
+      ],
+      "answer": "Visual agnosia",
+      "explanation": "Gerstmann's syndrome is characterized by agraphia, acalculia, and left-right disorientation, but visual agnosia is not a symptom associated with this syndrome. The other options are directly related to Gerstmann's syndrome.",
+      "kn": "KN1",
+      "kn_explanation": "This KN code applies as it relates to the biological bases of behavior, specifically in understanding neurological disorders.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively distinguishes between symptoms of different neurological conditions.",
+      "suggestedLesson": "1-cerebral-cortex",
+      "suggestedParagraph": "## Strokes: When Blood Flow Gets Cut Off",
+      "lessonExcerpt": "Damage can cause: - Visual agnosia (seeing but not recognizing what you're looking at) - Visual hallucinations - Achromatopsia (loss of color vision, seeing only in grayscale) - Cortical blindness",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 19
+    },
+    {
+      "stem": "What is the term for a lack of awareness of one's own deficits, often seen in neurological conditions?",
+      "options": [
+        "Anosognosia",
+        "Agnosia",
+        "Aphasia",
+        "Apraxia"
+      ],
+      "answer": "Anosognosia",
+      "explanation": "Anosognosia refers to a lack of awareness of one's own deficits, commonly observed in conditions such as stroke or traumatic brain injury. Agnosia involves difficulty recognizing objects, aphasia is related to language difficulties, and apraxia refers to problems with motor planning.",
+      "kn": "KN1",
+      "kn_explanation": "This question is best aligned with KN1 because it tests Functional correlates and determinants of the neurobiological and genetic bases of behavior pertaining to perception, cognition, personality, and mood and affect in normal, acute and chronic neurobehavioral disease processes and disease, comorbidities.",
+      "difficulty": "hard",
+      "quality_comment": "The question is well-structured and requires a deep understanding of neurological conditions.",
+      "suggestedLesson": "1-cerebral-cortex",
+      "suggestedParagraph": "## Neurological and Endocrine Disorders",
+      "lessonExcerpt": "- **Anosognosia**: Denies their illness (a patient with paralyzed left arm insists it works fine)",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 2
+    },
+    {
+      "stem": "What is a primary effect of severing the corpus callosum in patients?",
+      "options": [
+        "Increased interhemispheric communication",
+        "Difficulty in coordinating movements",
+        "Split-brain syndrome",
+        "Enhanced cognitive function"
+      ],
+      "answer": "Split-brain syndrome",
+      "explanation": "Severing the corpus callosum can lead to split-brain syndrome, where the two hemispheres of the brain cannot communicate effectively. This results in unique cognitive and perceptual deficits. Increased interhemispheric communication is incorrect as the procedure disrupts it, difficulty in coordinating movements is not a direct result, and enhanced cognitive function is not associated with this condition.",
+      "kn": "KN1",
+      "kn_explanation": "This question is best aligned with KN1 because it tests Functional correlates and determinants of the neurobiological and genetic bases of behavior pertaining to perception, cognition, personality, and mood and affect in normal, acute and chronic neurobehavioral disease processes and disease, comorbidities.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests knowledge of the consequences of severing the corpus callosum.",
+      "suggestedLesson": "1-cerebral-cortex",
+      "suggestedParagraph": "## Brain Lateralization: The Two Hemispheres",
+      "lessonExcerpt": "- **Split-brain research revealed lateralization**: Each hemisphere has specialized functions that become apparent when they can't communicate",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 9
+    },
+    {
+      "stem": "Which brain damage indicator is most closely associated with apraxia?",
+      "options": [
+        "Damage to the occipital lobe",
+        "Damage to the parietal lobe",
+        "Damage to the frontal lobe",
+        "Damage to the temporal lobe"
+      ],
+      "answer": "Damage to the parietal lobe",
+      "explanation": "The correct answer is damage to the parietal lobe, which is associated with apraxia, a disorder characterized by difficulty in performing purposeful movements. The other options do not directly relate to apraxia.",
+      "kn": "KN1",
+      "kn_explanation": "This KN code applies as it pertains to the biological bases of behavior, particularly in neuroanatomy.",
+      "difficulty": "hard",
+      "quality_comment": "The question is challenging and tests specific knowledge of neuroanatomy related to motor function.",
+      "suggestedLesson": "1-cerebral-cortex",
+      "suggestedParagraph": "## The Three-Story Brain: Location Matters",
+      "lessonExcerpt": "Most students remember \"cerebellum = balance and coordination,\" but that's only scratching the surface. Yes, it coordinates voluntary movements and maintains posture. Yes, damage causes **ataxia** (unsteady, clumsy movements).",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 20
+    },
+    {
+      "stem": "A 71-year-old right-handed woman is referred for neuropsychological assessment three weeks after a cerebrovascular accident involving the right middle cerebral artery. During the evaluation, she copies only the right half of a complex geometric figure, consistently marks the rightward third of a horizontal line when asked to bisect it, and omits all objects placed to her left during a cancellation task. Her primary care physician notes she also lacks awareness of these errors and does not report any subjective difficulties. Which of the following BEST explains the neurological basis of this clinical presentation?",
+      "options": [
+        "Left hemisphere damage disrupting language-mediated spatial orientation",
+        "Right (nondominant) hemisphere damage impairing visuospatial processing, producing hemispatial neglect",
+        "Bilateral occipital lobe infarction causing symmetric visual field loss",
+        "Left parietal damage selectively impairing constructional praxis without attentional involvement"
+      ],
+      "answer": "Right (nondominant) hemisphere damage impairing visuospatial processing, producing hemispatial neglect",
+      "explanation": "The constellation of findings—contralesional spatial neglect (ignoring left hemispace), line bisection error biased rightward, anosognosia (unawareness of deficits), and failure to attend to left-sided stimuli—is the classic presentation of right hemisphere stroke affecting visuospatial processing. Because the right (nondominant) hemisphere specializes in visuospatial functions, damage here produces neglect of the contralateral (left) side of space. Option A is incorrect: left hemisphere strokes characteristically produce language deficits (aphasia), not hemispatial neglect. Option C is incorrect: bilateral occipital damage would cause visual field cuts (homonymous hemianopia) but not the attentional and anosognosic features present here. Option D is incorrect: left parietal damage would affect the right hemispace and would more likely produce apraxia or Gerstmann syndrome, not the described leftward neglect pattern.",
+      "kn": "KN1",
+      "kn_explanation": "This question falls under KN1 (Biological Bases of Behavior), addressing cerebral lateralization and the functional specialization of the right (nondominant) hemisphere for visuospatial processing, as evidenced by the clinical consequences of right hemisphere stroke.",
+      "difficulty": "hard",
+      "quality_comment": "Strong doctoral-level question that integrates cerebral lateralization, stroke symptomatology, and clinical neuropsychological presentation. Requires distinguishing hemispatial neglect from visual field deficits and from left-hemisphere stroke sequelae. The lesson provides moderate support via spatial neglect referenced in the MCA stroke table; the right-hemisphere visuospatial specialization principle is implied rather than explicitly stated, which is noted.",
+      "suggestedLesson": "1-cerebral-cortex",
+      "suggestedParagraph": "Recognizing Stroke Symptoms by Location",
+      "lessonExcerpt": "Middle cerebral artery (most common): Weakness/paralysis on opposite side of body, vision loss in half the visual field, slurred speech, language problems (dominant hemisphere) or spatial neglect (nondominant hemisphere)",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 22
+    },
+    {
+      "stem": "How is childhood stuttering typically diagnosed?",
+      "options": [
+        "Through self-report questionnaires from parents.",
+        "By observing speech patterns and frequency of disfluencies.",
+        "Using standardized intelligence tests.",
+        "Through projective tests assessing personality."
+      ],
+      "answer": "By observing speech patterns and frequency of disfluencies.",
+      "explanation": "Childhood stuttering is diagnosed primarily through direct observation of speech patterns and the frequency of disfluencies, rather than through self-reports or personality assessments. The other options do not provide the appropriate methods for diagnosing stuttering.",
+      "kn": "KN31",
+      "kn_explanation": "This question is best aligned with KN31 because it tests Assessment methods and their strengths and limitations (e.g., self-report, multi-informant reports, psychophysiological measures, work samples, assessment centers, direct observation, structured and semi-structured interviews).",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and assesses knowledge of stuttering diagnosis.",
+      "suggestedLesson": "1-cerebral-cortex",
+      "suggestedParagraph": "## Why Clinical Tests Matter for Your EPPP Success",
+      "lessonExcerpt": "Banding groups scores into ranges based on the test's standard error of measurement. All scores within a band are considered statistically equivalent.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 20
+    },
+    {
+      "stem": "Which of the following best describes the purpose of the Halstead-Reitan Neuropsychological Battery?",
+      "options": [
+        "To estimate the severity of cognitive impairment in Alzheimer's disease",
+        "To evaluate severity and nature of brain damage from trauma or neurocognitive disorders",
+        "To assess adaptive functioning in individuals with intellectual disability",
+        "To measure depressive symptoms across mood, cognitive, and physical domains"
+      ],
+      "answer": "To evaluate severity and nature of brain damage from trauma or neurocognitive disorders",
+      "explanation": "1. The correct answer, \"To evaluate severity and nature of brain damage from trauma or neurocognitive disorders,\" accurately describes the purpose of the Halstead-Reitan Neuropsychological Battery. This battery is specifically designed to assess brain damage and includes subtests that measure various cognitive abilities such as memory, abstract reasoning, and concentration, which are impacted by traumatic brain injuries and neurocognitive disorders.\n\n2. The option \"To estimate the severity of cognitive impairment in Alzheimer's disease\" is incorrect because the Halstead-Reitan is not specifically tailored for Alzheimer's; it assesses brain damage more broadly rather than focusing solely on cognitive impairment due to Alzheimer's disease. The option \"To assess adaptive functioning in individuals with intellectual disability\" is wrong because this purpose aligns with the Vineland Adaptive Behavior Scales, not the Halstead-Reitan. Lastly, \"To measure depressive symptoms across mood, cognitive, and physical domains\" is incorrect as it describes the Beck Depression Inventory-II, which is specifically designed to evaluate depressive symptoms, rather than the Halstead-Reitan's focus on neuropsychological functioning.",
+      "kn": "KN32",
+      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
+      "difficulty": "medium",
+      "quality_comment": "The stem clearly focuses on test purpose, and the distractors are all plausible psychological assessments but differ in focus, promoting critical thinking.",
+      "lessonExcerpt": "**Halstead-Reitan Neuropsychological Battery** is the comprehensive physical exam of brain function testing. Available for ages 5 and up, it evaluates memory, abstract reasoning, concentration, manual dexterity, and visual-motor integration.",
+      "suggestedLesson": "1-cerebral-cortex",
+      "needsReview": false
+    },
+    {
+      "stem": "The Stroop Color and Word Test is sensitive to deficits primarily in which brain region?",
+      "options": [
+        "Temporal lobe",
+        "Occipital lobe",
+        "Parietal lobe",
+        "Frontal lobe"
+      ],
+      "answer": "Frontal lobe",
+      "explanation": "1. The correct answer is \"Frontal lobe\" because the Stroop Color and Word Test assesses cognitive flexibility, selective attention, and response inhibition, which are functions primarily associated with the frontal lobe. Poor performance on this test has been linked to frontal lobe dysfunction, indicating that this brain region plays a crucial role in managing the cognitive processes required to inhibit a habitual response in favor of a less familiar one.\n\n2. The incorrect options are as follows:\n   - **Temporal lobe**: This region is primarily involved in auditory processing and memory, not the cognitive flexibility and inhibition tasks assessed by the Stroop Test.\n   - **Occipital lobe**: The occipital lobe is mainly responsible for visual processing, which does not directly relate to the cognitive functions measured by the Stroop Test.\n   - **Parietal lobe**: While the parietal lobe is involved in sensory integration and spatial awareness, it is not primarily associated with the executive functions of inhibition and attention that the Stroop Test evaluates.",
+      "kn": "KN32",
+      "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
+      "difficulty": "easy",
+      "quality_comment": "Simple, anatomically focused question with plausible distractors that test neuropsychological knowledge relevant to the EPPP.",
+      "lessonExcerpt": "Like the WCST, it's sensitive to frontal lobe dysfunction",
       "suggestedLesson": "1-cerebral-cortex",
       "needsReview": false
     }

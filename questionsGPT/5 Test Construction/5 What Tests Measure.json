@@ -354,6 +354,180 @@
       "lessonExcerpt": "Step 2: Sample Representatively. Once the domain is defined, test items must represent all important aspects of that domain proportionally.",
       "suggestedLesson": "5-what-tests-measure",
       "needsReview": false
+    },
+    {
+      "stem": "In the context of test development, what does empirical criterion-keying primarily assess?",
+      "options": [
+        "The theoretical validity of test items.",
+        "The ability of test items to predict performance in specific settings.",
+        "The subjective opinions of test developers.",
+        "The consistency of test scores over time."
+      ],
+      "answer": "The ability of test items to predict performance in specific settings.",
+      "explanation": "Empirical criterion-keying focuses on selecting test items based on their ability to differentiate between groups based on actual performance, making it a practical approach to test development. The other options do not accurately describe the primary focus of this method.",
+      "kn": "KN30",
+      "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively tests knowledge of empirical criterion-keying in test development.",
+      "suggestedLesson": "5-what-tests-measure",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "These were developed through **empirical criterion keying**, which is a fancy way of saying the test creators gave hundreds of questions to people with specific diagnoses and people without mental health issues, then kept only the questions that reliably told the groups apart.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 27
+    },
+    {
+      "stem": "Which validity assessment method allows researchers to evaluate the convergence and divergence of different measures?",
+      "options": [
+        "Multitrait-multimethod matrix",
+        "Criterion-related validity",
+        "Content validity",
+        "Construct validity"
+      ],
+      "answer": "Multitrait-multimethod matrix",
+      "explanation": "The multitrait-multimethod matrix is a validity assessment method that evaluates the convergence and divergence of different measures, helping to establish construct validity. The other options do not specifically focus on this aspect of validity assessment.",
+      "kn": "KN30",
+      "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses knowledge of validity assessment methods.",
+      "suggestedLesson": "5-what-tests-measure",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "One of the most elegant ways to assess construct validity is the multitrait-multimethod matrix, developed by Campbell and Fiske.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 28
+    },
+    {
+      "stem": "What does criterion contamination refer to in the context of validity assessment?",
+      "options": [
+        "The influence of external factors on test scores.",
+        "The overlap between the test content and the criterion measure.",
+        "The effect of test-taker motivation on results.",
+        "The impact of cultural bias on test interpretation."
+      ],
+      "answer": "The overlap between the test content and the criterion measure.",
+      "explanation": "Criterion contamination occurs when the test items are too similar to the criterion being measured, leading to inflated validity estimates. The other options describe different issues that may affect validity but do not define criterion contamination.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively challenges understanding of validity concepts.",
+      "suggestedLesson": "5-what-tests-measure",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "**Criterion contamination** occurs when the measure is influenced by factors unrelated to actual job performance.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 19
+    },
+    {
+      "stem": "Which clinical test uses a five-point Global Scoring System to evaluate visual-motor integration by having examinees copy geometric figures and then recall them from memory?",
+      "options": [
+        "Bender Visual-Motor Gestalt Test, 2nd Edition",
+        "Benton Visual Retention Test, 5th Edition",
+        "Luria-Nebraska Neuropsychological Battery",
+        "Stroop Color and Word Test"
+      ],
+      "answer": "Bender Visual-Motor Gestalt Test, 2nd Edition",
+      "explanation": "1. The \"Bender Visual-Motor Gestalt Test, 2nd Edition\" is the correct answer because it specifically evaluates visual-motor perception and integration through a two-phase process: first, examinees copy geometric figures, and then they recall and draw those figures from memory. The test uses a five-point Global Scoring System to assess the quality of the designs, which ranges from 0 (no resemblance) to 4 (nearly perfect), making it a valid tool for measuring visual-motor skills.\n\n2. The \"Benton Visual Retention Test, 5th Edition\" is incorrect because, while it assesses visual memory and perception, it does not use a five-point scoring system and focuses solely on recalling geometric figures rather than copying them first. The \"Luria-Nebraska Neuropsychological Battery\" is also incorrect as it evaluates various neuropsychological functions across multiple scales, rather than specifically focusing on visual-motor integration through a scoring system related to copying and recalling figures. Lastly, the \"Stroop Color and Word Test\" is not the correct answer because it measures cognitive flexibility and response inhibition, not visual-motor integration, and does not involve copying geometric figures.",
+      "kn": "KN32",
+      "kn_explanation": "This question assesses knowledge of commonly used instruments for visual-motor assessment and their scoring methods (KN32).",
+      "difficulty": "medium",
+      "quality_comment": "Well-constructed with plausible distractors involving other visual and neuropsych tests, requiring detailed content knowledge.",
+      "lessonExcerpt": "The Global Scoring System rates each drawing from 0 (no resemblance) to 4 (nearly perfect).",
+      "suggestedLesson": "5-what-tests-measure",
+      "needsReview": false
+    },
+    {
+      "stem": "When administering the Stroop Color and Word Test, what cognitive ability is primarily being assessed?",
+      "options": [
+        "Selective attention and response inhibition",
+        "Long-term memory recall",
+        "Visual-motor integration",
+        "Auditory processing"
+      ],
+      "answer": "Selective attention and response inhibition",
+      "explanation": "The Stroop Test measures the ability to inhibit automatic responses (like reading a word) in favor of less familiar responses (naming the ink color), which taps selective attention and response inhibition skills.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
+      "difficulty": "medium",
+      "quality_comment": "This item clearly differentiates cognitive processes and highlights the underlying constructs assessed by the Stroop test.",
+      "lessonExcerpt": "the Stroop Test evaluates cognitive flexibility, processing speed, selective attention, and response inhibition.",
+      "suggestedLesson": "5-what-tests-measure",
+      "needsReview": false
+    },
+    {
+      "stem": "What is the primary purpose of establishing test validity during the construction of psychological assessments?",
+      "options": [
+        "A. To ensure the test is easy to administer",
+        "B. To confirm that the test measures what it claims to measure",
+        "C. To increase the number of test items",
+        "D. To enhance the test's reliability"
+      ],
+      "answer": "B. To confirm that the test measures what it claims to measure",
+      "explanation": "Option B is correct because test validity is fundamentally about ensuring that the test accurately measures the construct it is intended to assess. Option A is incorrect as ease of administration is not a primary concern of validity. Option C does not relate to validity; increasing the number of items does not guarantee validity. Option D, while related to test quality, focuses on reliability rather than validity.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
+      "difficulty": "hard",
+      "quality_comment": "The question is well-structured and tests a critical understanding of test construction.",
+      "suggestedLesson": "5-what-tests-measure",
+      "suggestedParagraph": "## Understanding Intelligence: The Theoretical Foundation",
+      "lessonExcerpt": "They don't. While tests like the FTII show predictive validity, infant assessment is better for identifying developmental delays than predicting exact future IQ scores.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 22
+    },
+    {
+      "stem": "Which theory or model is primarily concerned with how base rates and cognitive biases can affect the interpretation of neuropsychological test results?",
+      "options": [
+        "Dual process theory",
+        "Information processing model",
+        "Heuristics and biases framework",
+        "Cognitive load theory"
+      ],
+      "answer": "Heuristics and biases framework",
+      "explanation": "1. The \"Heuristics and biases framework\" is the correct answer because it specifically addresses how cognitive shortcuts (heuristics) and systematic errors (biases) can influence decision-making and interpretation of information, including neuropsychological test results. This framework highlights the potential for misinterpretation of data based on cognitive biases, which can lead to inaccurate conclusions about an individual's cognitive functioning.\n\n2. The \"Dual process theory\" is incorrect because it focuses on two distinct types of thinking—intuitive and analytical—rather than specifically addressing biases in interpreting test results. The \"Information processing model\" is also incorrect as it describes how information is encoded, processed, and retrieved, but does not specifically consider biases that affect interpretation. Finally, \"Cognitive load theory\" is wrong because it pertains to the limitations of working memory and how excessive cognitive load impacts learning and performance, rather than the biases affecting the interpretation of neuropsychological assessments.",
+      "kn": "KN37",
+      "kn_explanation": "KN37 covers evidence-based interpretation of data including base rates and biases, making this framework relevant to interpreting assessment results.",
+      "difficulty": "medium",
+      "quality_comment": "The options include other cognitive models but only the heuristics and biases framework specifically addresses judgment biases in assessment.",
+      "lessonExcerpt": "topic_name: Social Cognition – Errors, Biases, and Heuristics domain: 3: Social Psychology slug: social-cognition-errors-biases-and-heuristics generated_at: 2025-11-16T15:25:15.002Z model: claude-sonnet-4-5-20250929 version: 3 --- ## Why Your Brain Takes Shortcuts (And How That Shows Up on the EPPP)",
+      "suggestedLesson": "5-what-tests-measure",
+      "needsReview": false
+    },
+    {
+      "stem": "Which theory or model best explains the importance of base rates and potential biases in interpreting neuropsychological test results?",
+      "options": [
+        "Signal Detection Theory",
+        "Classical Test Theory",
+        "Bayesian Probability Theory",
+        "Piaget’s Stage Theory"
+      ],
+      "answer": "Bayesian Probability Theory",
+      "explanation": "1. **Bayesian Probability Theory** is the correct answer because it emphasizes the role of prior knowledge (base rates) and evidence in updating beliefs about the likelihood of a particular outcome. In the context of interpreting neuropsychological test results, Bayesian approaches allow clinicians to consider the prevalence of conditions (base rates) and adjust their interpretations of test scores accordingly, thus minimizing biases that may arise from overestimating or underestimating the significance of test results in individual cases.\n\n2. **Signal Detection Theory** is incorrect because it focuses on the ability to distinguish between signal (true positives) and noise (false positives) in decision-making, rather than incorporating base rates into the interpretation of test results. **Classical Test Theory** is also not applicable, as it primarily deals with the reliability and validity of test scores without addressing the influence of base rates or biases in interpretation. Lastly, **Piaget’s Stage Theory** is irrelevant in this context as it pertains to cognitive development stages in children, rather than the statistical and interpretative frameworks used in neuropsychological assessment.",
+      "kn": "KN37",
+      "kn_explanation": "This question targets evidence-based interpretation of data and how knowledge of base rates and biases influence clinical judgment (KN37).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are plausible psychological or testing theories, but only Bayesian theory specifically relates to base rate use and bias interpretation.",
+      "lessonExcerpt": "The Foundation: Sampling Distributions and Probability Let's start with a core concept that trips up many students: the sampling distribution of means.",
+      "suggestedLesson": "5-what-tests-measure",
+      "needsReview": false
+    },
+    {
+      "stem": "What type of validity evidence is most relevant for evaluating whether a neurodevelopmental disorder assessment tool accurately predicts treatment outcomes?",
+      "options": [
+        "Content validity",
+        "Construct validity",
+        "Predictive validity",
+        "Face validity"
+      ],
+      "answer": "Predictive validity",
+      "explanation": "1. **Predictive validity** is the correct answer because it assesses how well a neurodevelopmental disorder assessment tool can forecast the outcomes of treatment based on the results of the assessment. In the context of neurodevelopmental disorders, demonstrating predictive validity ensures that the tool is effective in identifying individuals who will benefit from specific interventions, which is crucial for improving treatment efficacy and planning.\n\n2. **Content validity** is incorrect because it refers to how well the assessment tool covers the relevant domains of the disorder, rather than its ability to predict treatment outcomes. **Construct validity** is also not applicable here, as it evaluates whether the tool accurately measures the theoretical construct of the disorder rather than its predictive capabilities regarding treatment effectiveness. Lastly, **face validity** is not relevant because it simply assesses whether the tool appears to measure what it is intended to measure, based on subjective judgment, without providing evidence of its predictive power for treatment outcomes.",
+      "kn": "KN29",
+      "kn_explanation": "This question is best aligned with KN29 because it tests Psychometric theories, item and test characteristics, test construction and standardization procedures, reliability and validity, sensitivity and specificity, and test fairness and bias.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are valid forms of validity but only predictive validity relates to future outcome prediction, making the item conceptually sound.",
+      "lessonExcerpt": "Predictive Validity: Future Outcomes **Predictive validity** means we collect predictor scores first, then wait to collect criterion scores later.",
+      "suggestedLesson": "5-what-tests-measure",
+      "needsReview": false
     }
   ]
 }

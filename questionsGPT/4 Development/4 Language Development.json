@@ -384,6 +384,108 @@
       "lessonExcerpt": "Many professionals now advocate for the combined approach, noting: Cochlear implants aren't typically implanted until 12+ months; Infants can access sign language from birth",
       "suggestedLesson": "4-language-development",
       "needsReview": false
+    },
+    {
+      "stem": "Which explanation for childhood amnesia emphasizes the role of language in encoding memories?",
+      "options": [
+        "The theory that infant brain structures are underdeveloped",
+        "The hypothesis that children lack a stable sense of self necessary for memory",
+        "The idea that limited language ability in young children restricts memory encoding",
+        "The proposal that early memories are replaced by later experiences"
+      ],
+      "answer": "The idea that limited language ability in young children restricts memory encoding",
+      "explanation": "1. **Correct Answer Explanation**: \"The idea that limited language ability in young children restricts memory encoding\" is the correct answer because language plays a crucial role in how memories are formed and organized. Children under the age of three or four have limited language skills, which may hinder their ability to encode memories effectively, making it difficult for them to retrieve these memories later in life.\n\n2. **Incorrect Option Explanations**:\n   - **The theory that infant brain structures are underdeveloped**: While it is true that brain development is ongoing during infancy, this explanation does not specifically address the role of language in the encoding of memories.\n   - **The hypothesis that children lack a stable sense of self necessary for memory**: Although a coherent sense of self may contribute to memory formation, this option does not focus on the impact of language on encoding memories.\n   - **The proposal that early memories are replaced by later experiences**: This explanation suggests a replacement mechanism rather than addressing how language limitations affect the initial encoding of memories in young children.",
+      "kn": "KN21",
+      "kn_explanation": "The question deals with normal cognitive development and memory processes across the lifespan, falling under growth and lifespan development (KN21).",
+      "difficulty": "medium",
+      "quality_comment": "Distractors include plausible but inaccurate theories, making this a well-balanced question.",
+      "lessonExcerpt": "1. Language allows memory encoding, and very young children have limited language",
+      "suggestedLesson": "4-language-development",
+      "needsReview": false
+    },
+    {
+      "stem": "A 32-year-old adult presents for neuropsychological evaluation requesting clarification of a diagnosis. Records show a DSM-IV-TR diagnosis of Asperger's Disorder made in 2009, documented by deficits in social reciprocity and restricted interests in the absence of clinically significant language or intellectual delays. The evaluating psychologist explains that DSM-5 eliminated Asperger's Disorder as a separate diagnostic category. Which of the following best describes how individuals previously diagnosed with Asperger's Disorder should be classified under DSM-5?",
+      "options": [
+        "Social (Pragmatic) Communication Disorder, because preserved language ability excludes an autism spectrum diagnosis",
+        "Autism Spectrum Disorder with specifiers indicating absence of intellectual impairment and absence of language impairment",
+        "High-Functioning Autism Disorder, which is the DSM-5 replacement for the Asperger's Disorder category",
+        "Unspecified Neurodevelopmental Disorder, pending updated validity evidence for restructured autism criteria"
+      ],
+      "answer": "Autism Spectrum Disorder with specifiers indicating absence of intellectual impairment and absence of language impairment",
+      "explanation": "The DSM-5 collapsed the DSM-IV-TR pervasive developmental disorders (Autistic Disorder, Asperger's Disorder, Childhood Disintegrative Disorder, and PDD-NOS) into a single dimensional diagnosis: Autism Spectrum Disorder. Severity and associated features are communicated via specifiers rather than separate categories. An individual previously diagnosed with Asperger's Disorder—who had preserved language and typical intellectual functioning—would now receive ASD Level 1 with specifiers noting 'without accompanying intellectual impairment' and 'without accompanying language impairment.' Option A is incorrect; Social (Pragmatic) Communication Disorder (SCD) was created for individuals with social communication deficits who do NOT meet ASD criteria (i.e., no restricted/repetitive behaviors); prior Asperger's diagnoses typically included restricted interests qualifying for ASD. Option C is incorrect; 'High-Functioning Autism' is not an official DSM-5 diagnostic term. Option D is incorrect; 'Unspecified Neurodevelopmental Disorder' is used when there is insufficient information to specify a diagnosis, not as a reclassification of established diagnoses.",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
+      "difficulty": "medium",
+      "quality_comment": "Clinically realistic scenario. Tests precise knowledge of DSM-5 restructuring. The SCD distractor is particularly effective as a sophisticated misconception held by many clinicians.",
+      "suggestedLesson": "4-language-development",
+      "suggestedParagraph": "## DSM-5 Neurodevelopmental Disorder Classification",
+      "lessonExcerpt": "NOT COVERED: The provided lesson files do not cover Autism Spectrum Disorder diagnosis or the DSM-IV to DSM-5 reclassification of Asperger's Disorder. A dedicated lesson on DSM-5 neurodevelopmental disorders is needed for this content. The file 5-clinical-tests.md does reference ASD in the context of WCST performance ('Poor performance connects to frontal lobe dysfunction and appears in autism spectrum disorder') but does not address diagnostic criteria or classification.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 24
+    },
+    {
+      "stem": "A clinician observes that a patient with Tourette's disorder involuntarily repeats the last several words spoken by the examiner during a clinical interview. This phenomenon is best described as:",
+      "options": [
+        "Echopraxia",
+        "Palilalia",
+        "Echolalia",
+        "Coprolalia"
+      ],
+      "answer": "Echolalia",
+      "explanation": "Echolalia is the involuntary repetition of another person's speech (repeating others' words). It is classified as a vocal tic in Tourette's disorder. Echopraxia (A) involves imitating others' movements, not speech. Palilalia (B) involves involuntary repetition of one's own words or phrases, not another person's. Coprolalia (D) involves involuntary swearing or use of obscene language.",
+      "kn": "KN1",
+      "kn_explanation": "This question tests knowledge of speech and language pathology terminology relevant to neurological and neurodevelopmental conditions within biological bases.",
+      "difficulty": "medium",
+      "quality_comment": "Good discrimination between similar-sounding terms. All distractors are plausible phenomena seen in tic disorders or neurological conditions.",
+      "suggestedLesson": "4-language-development",
+      "suggestedParagraph": "### Understanding Tics",
+      "lessonExcerpt": "A tic is a sudden, rapid, recurrent, nonrhythmic motor movement or vocalization. Motor tics include eye blinking, facial grimacing, shoulder shrugging, and echopraxia (imitating others' movements). Vocal tics include throat clearing, barking, and echolalia (repeating others' words).",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 17
+    },
+    {
+      "stem": "What is echolalia, and how does it manifest in child development?",
+      "options": [
+        "The ability to create original sentences",
+        "Repetition of phrases or sentences heard from others",
+        "The use of sign language for communication",
+        "A delay in speech development"
+      ],
+      "answer": "Repetition of phrases or sentences heard from others",
+      "explanation": "Echolalia is characterized by the repetition of phrases or sentences that a child hears, often as a part of language acquisition. The other options do not accurately describe this phenomenon.",
+      "kn": "KN1",
+      "kn_explanation": "This KN code applies as it relates to the biological bases of behavior, specifically in understanding language acquisition.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of language development.",
+      "suggestedLesson": "4-language-development",
+      "suggestedParagraph": "## The Foundation: Sensation vs. Perception",
+      "lessonExcerpt": "This disorder involves disturbed fluency and speech timing inappropriate for the person's age and language skills. Look for sound/syllable repetitions, sound prolongations, broken words, blocking, circumlocutions, excessive tension when speaking, or whole-word repetitions.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 17
+    },
+    {
+      "stem": "In the context of psychological evaluations, how should psychologists address language barriers to ensure cultural competence?",
+      "options": [
+        "By using a translator without considering the cultural context of the client.",
+        "By providing assessments only in the client's primary language and ensuring the translator is culturally competent.",
+        "By avoiding testing altogether if the client does not speak English.",
+        "By simplifying the language of the tests to make them more accessible."
+      ],
+      "answer": "By providing assessments only in the client's primary language and ensuring the translator is culturally competent.",
+      "explanation": "The correct answer emphasizes the need for culturally competent practices in psychological evaluations, ensuring that language barriers do not compromise the assessment's validity. The other options either neglect cultural considerations or suggest inadequate practices.",
+      "kn": "KN71",
+      "kn_explanation": "This question is best aligned with KN71 because it tests ethical issues in technology-assisted psychological services.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests knowledge of cultural competence in psychological practice.",
+      "suggestedLesson": "4-language-development",
+      "suggestedParagraph": "## Standard 3: Human Relations (Navigating Professional Boundaries)",
+      "lessonExcerpt": "Use certified professional interpreters when possible (National Board of Certification for Medical Interpreters). Obtain client consent before bringing in an interpreter. Discuss confidentiality obligations with the interpreter",
+      "needsReview": false,
+      "inspirationDomain": "ETHICAL/LEGAL/PROFESSIONAL ISSUES",
+      "inspirationIndex": 13
     }
   ]
 }

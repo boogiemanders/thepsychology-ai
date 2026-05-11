@@ -357,6 +357,48 @@
       "lessonExcerpt": "**Unfreezing** is about disrupting the status quo. Before any real change can happen, you need to shake people out of their comfortable routines. This means identifying what's keeping things stuck (resistances) and reducing those forces while simultaneously increasing the forces pushing for change.",
       "suggestedLesson": "6-how-orgs-change",
       "needsReview": false
+    },
+    {
+      "stem": "An organizational psychologist evaluates the effects of implementing a compressed four-day, 40-hour workweek across a mid-sized logistics company. After six months, she compares pre- and post-implementation data. Based on the empirical literature on alternative work schedules, which pattern of outcomes is she most likely to find?",
+      "options": [
+        "Both employee morale and objective productivity measures show significant, sustained improvements",
+        "Employee morale and job satisfaction improve significantly, but productivity gains are modest and inconsistent",
+        "Objective productivity improves substantially while morale effects are neutral or slightly negative due to scheduling complexity",
+        "Neither morale nor productivity shows reliable change at the group level; individual differences overwhelm any schedule effect"
+      ],
+      "answer": "Employee morale and job satisfaction improve significantly, but productivity gains are modest and inconsistent",
+      "explanation": "The I/O psychology literature on alternative work schedules consistently documents robust improvements in attitudinal outcomes — job satisfaction, morale, sense of autonomy, and reduced absenteeism — when employees shift to compressed workweeks or flextime arrangements. However, the same literature does not support equally consistent improvements in actual job performance or quantitative productivity. Workers report feeling greater control over their time and work-life balance, producing genuine attitudinal benefits, but the volume and quality of work output are not reliably affected — particularly in roles with fixed throughput demands (e.g., logistics, manufacturing) that are structurally independent of scheduling. This morale-vs-performance distinction is a canonical finding in I/O psychology and is directly testable on the EPPP.",
+      "kn": "KN46",
+      "kn_explanation": "This question is best aligned with KN46 because it tests Interventions to enhance growth and performance of individuals, couples, families, groups, systems, and organizations.",
+      "difficulty": "medium",
+      "quality_comment": "Tests a precise empirical distinction between attitudinal and performance outcomes — a classic and frequently tested I/O psychology finding; distractors are plausible and require careful discrimination.",
+      "suggestedLesson": "6-how-orgs-change",
+      "suggestedParagraph": "## Understanding Prevention, Consultation, and Psychotherapy Research",
+      "lessonExcerpt": "Compressed workweeks improve satisfaction more than productivity. Flextime's biggest benefit is reducing absenteeism, not improving performance ratings.",
+      "needsReview": false,
+      "inspirationDomain": "TREATMENT, INTERVENTION, AND PREVENTION",
+      "inspirationIndex": 16
+    },
+    {
+      "stem": "What strategy is most effective in reducing racial prejudice according to intergroup contact theory?",
+      "options": [
+        "Increased competition between groups",
+        "Encouraging group isolation",
+        "Facilitating positive interactions between groups",
+        "Promoting stereotypes"
+      ],
+      "answer": "Facilitating positive interactions between groups",
+      "explanation": "Intergroup contact theory suggests that facilitating positive interactions between groups can effectively reduce racial prejudice. Increased competition can exacerbate tensions, group isolation does not foster understanding, and promoting stereotypes is counterproductive. Therefore, facilitating positive interactions is the correct answer.",
+      "kn": "KN15",
+      "kn_explanation": "This question is best aligned with KN15 because it tests Social interaction and relationships (e.g., attraction, aggression, altruism, organizational justice, verbal and non-verbal communication, internet communication, mate selection, empathy).",
+      "difficulty": "medium",
+      "quality_comment": "Relevant question that assesses understanding of prejudice reduction strategies.",
+      "suggestedLesson": "6-how-orgs-change",
+      "suggestedParagraph": "## Reducing Conflict Through Cooperation",
+      "lessonExcerpt": "Job Enrichment**, originally described by Herzberg in 1966, means designing jobs to include more responsibility, challenge, advancement opportunities, and other motivating factors that increase satisfaction and drive. **Alternative Work Schedules** include two main types:",
+      "needsReview": false,
+      "inspirationDomain": "SOCIAL AND MULTICULTURAL BASES OF BEHAVIOR",
+      "inspirationIndex": 8
     }
   ]
 }

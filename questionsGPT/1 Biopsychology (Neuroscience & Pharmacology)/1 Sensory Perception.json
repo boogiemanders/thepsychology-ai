@@ -1,27 +1,6 @@
 {
   "questions": [
     {
-      "stem": "What is echolalia, and how does it manifest in child development?",
-      "options": [
-        "The ability to create original sentences",
-        "Repetition of phrases or sentences heard from others",
-        "The use of sign language for communication",
-        "A delay in speech development"
-      ],
-      "answer": "Repetition of phrases or sentences heard from others",
-      "explanation": "Echolalia is characterized by the repetition of phrases or sentences that a child hears, often as a part of language acquisition. The other options do not accurately describe this phenomenon.",
-      "kn": "KN1",
-      "kn_explanation": "This KN code applies as it relates to the biological bases of behavior, specifically in understanding language acquisition.",
-      "difficulty": "medium",
-      "quality_comment": "The question effectively assesses knowledge of language development.",
-      "suggestedLesson": "5-neurodevelopmental",
-      "suggestedParagraph": "## The Foundation: Sensation vs. Perception",
-      "lessonExcerpt": "This disorder involves disturbed fluency and speech timing inappropriate for the person's age and language skills. Look for sound/syllable repetitions, sound prolongations, broken words, blocking, circumlocutions, excessive tension when speaking, or whole-word repetitions.",
-      "needsReview": false,
-      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 17
-    },
-    {
       "stem": "According to the gate control theory of pain perception, what mechanism is primarily responsible for modulating pain signals?",
       "options": [
         "Endorphin release",
@@ -357,6 +336,69 @@
       "lessonExcerpt": "- **Sensation** receives environmental stimuli; **perception** interprets them. Bottom-up processing builds from sensory data; top-down uses existing knowledge.",
       "suggestedLesson": "1-sensory-perception",
       "needsReview": false
+    },
+    {
+      "stem": "A child psychologist is conducting an intake evaluation for an 8-year-old boy referred for repetitive hand-washing and intrusive thoughts about contamination. When considering the epidemiology of obsessive-compulsive disorder, the psychologist should be aware that:",
+      "options": [
+        "OCD affects males and females equally across all age groups",
+        "Males have earlier onset than females, resulting in higher childhood prevalence of OCD in males",
+        "Females have earlier onset than males, resulting in higher childhood prevalence of OCD in females",
+        "OCD is diagnosed exclusively in adults, making this referral inconsistent with the disorder's typical presentation"
+      ],
+      "answer": "Males have earlier onset than females, resulting in higher childhood prevalence of OCD in males",
+      "explanation": "Research shows that males have earlier onset of OCD than females, which results in higher childhood prevalence among males. In contrast, females have slightly higher adult prevalence. This sex difference in onset timing is a commonly tested EPPP fact. Option A is wrong because there are clear sex differences in onset and prevalence across the lifespan. Option C reverses the pattern — it is males, not females, who have earlier onset. Option D is wrong because OCD can and does present in childhood, and the question scenario itself describes a childhood presentation.",
+      "kn": "KN38",
+      "kn_explanation": "This question is best aligned with KN38 because it tests Constructs of epidemiology and base rates of psychological and behavioral disorders.",
+      "difficulty": "medium",
+      "quality_comment": "Contextualizes an epidemiological fact within a clinical scenario, testing both factual knowledge and clinical application.",
+      "suggestedLesson": "1-sensory-perception",
+      "suggestedParagraph": "### Demographics and Comorbidity",
+      "lessonExcerpt": "Males have earlier onset than females (higher childhood prevalence). Females have slightly higher adult prevalence.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 20
+    },
+    {
+      "stem": "When comparing the epidemiology of obsessive-compulsive disorder across gender, which statement MOST accurately describes the research findings?",
+      "options": [
+        "Males and females have equal prevalence rates across all age groups",
+        "Males have higher prevalence in childhood, while females have slightly higher prevalence in adulthood",
+        "Females have higher prevalence rates in both childhood and adulthood",
+        "Males have higher prevalence rates in both childhood and adulthood"
+      ],
+      "answer": "Males have higher prevalence in childhood, while females have slightly higher prevalence in adulthood",
+      "explanation": "Research on OCD epidemiology shows that males have earlier onset than females, resulting in higher childhood prevalence for males. However, females have slightly higher adult prevalence. This creates a crossover pattern across development. Equal prevalence across all age groups is incorrect because there are documented gender differences. Females do not have higher rates in both childhood and adulthood. Males do not have higher rates across both periods either—the pattern shifts from male predominance in childhood to female predominance in adulthood.",
+      "kn": "KN38",
+      "kn_explanation": "This question is best aligned with KN38 because it tests Constructs of epidemiology and base rates of psychological and behavioral disorders.",
+      "difficulty": "medium",
+      "quality_comment": "Tests the nuanced developmental crossover pattern in OCD gender prevalence rather than a simple male-vs-female comparison",
+      "suggestedLesson": "1-sensory-perception",
+      "suggestedParagraph": "### Demographics and Comorbidity",
+      "lessonExcerpt": "Males have earlier onset than females (higher childhood prevalence); Females have slightly higher adult prevalence",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 19
+    },
+    {
+      "stem": "Epidemiological research on autism spectrum disorder (ASD) consistently identifies a significant difference in diagnostic prevalence between males and females. Which of the following most accurately describes the male-to-female sex ratio in ASD diagnoses across population-based studies?",
+      "options": [
+        "Approximately 1:1, with equal prevalence in males and females",
+        "Approximately 2:1, with males diagnosed twice as often as females",
+        "Approximately 4:1, with males diagnosed approximately four times as often as females",
+        "Approximately 8:1, with males dramatically overrepresented across all age groups"
+      ],
+      "answer": "Approximately 4:1, with males diagnosed approximately four times as often as females",
+      "explanation": "Epidemiological research consistently estimates a male-to-female ratio of approximately 4:1 in ASD diagnoses. This disparity is thought to reflect a combination of genuine biological sex differences in vulnerability and the possibility that females are underdiagnosed because they may camouflage or 'mask' symptoms more effectively—a phenomenon that has gained increased research attention. A 1:1 ratio would imply equal prevalence, which contradicts established epidemiological data. A 2:1 ratio underestimates the disparity documented in population studies. An 8:1 ratio substantially overestimates the difference and is not supported by current community-based research.",
+      "kn": "KN38",
+      "kn_explanation": "This question is best aligned with KN38 because it tests Constructs of epidemiology and base rates of psychological and behavioral disorders.",
+      "difficulty": "medium",
+      "quality_comment": "Focused factual question with well-spaced numerical distractors spanning above and below the correct ratio; tests a frequently examined EPPP epidemiological fact.",
+      "suggestedLesson": "1-sensory-perception",
+      "suggestedParagraph": "## Autism Spectrum Disorder Epidemiology",
+      "lessonExcerpt": "Males receive diagnoses three to four times more often than females.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 13
     }
   ]
 }

@@ -190,48 +190,6 @@
       "inspirationIndex": 9
     },
     {
-      "stem": "What phenomenon occurs during the transition from wakefulness to sleep, often involving vivid auditory or visual hallucinations?",
-      "options": [
-        "Hypnopompic hallucinations",
-        "Hypnogogic hallucinations",
-        "Sleep paralysis",
-        "REM sleep behavior disorder"
-      ],
-      "answer": "Hypnogogic hallucinations",
-      "explanation": "Hypnogogic hallucinations occur during the transition from wakefulness to sleep and can involve vivid sensory experiences. Hypnopompic hallucinations occur during the transition from sleep to wakefulness. Sleep paralysis is the inability to move while falling asleep or waking up, and REM sleep behavior disorder involves acting out dreams.",
-      "kn": "KN1",
-      "kn_explanation": "This KN code applies as it relates to the biological bases of behavior, particularly sleep disorders.",
-      "difficulty": "hard",
-      "quality_comment": "The question effectively assesses understanding of sleep-related phenomena.",
-      "suggestedLesson": "1-cerebral-cortex",
-      "suggestedParagraph": "## How Memories Get Made: The Neural Level",
-      "lessonExcerpt": "This processes sound. Damage can cause: - Auditory agnosia (hearing sounds but not recognizing what they are) - Auditory hallucinations - Cortical deafness (the ears work fine, but the brain can't process the signals)",
-      "needsReview": false,
-      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 23
-    },
-    {
-      "stem": "Which phenomenon is commonly observed during NREM sleep?",
-      "options": [
-        "Dreaming",
-        "Sleepwalking",
-        "Rapid eye movement",
-        "Increased heart rate"
-      ],
-      "answer": "Sleepwalking",
-      "explanation": "Sleepwalking is a phenomenon that typically occurs during NREM sleep, particularly in the deeper stages. Dreaming and rapid eye movement are associated with REM sleep, while increased heart rate is not a defining characteristic of NREM sleep.",
-      "kn": "KN1",
-      "kn_explanation": "This KN code applies as it relates to the biological bases of behavior and sleep phenomena.",
-      "difficulty": "medium",
-      "quality_comment": "The question accurately assesses knowledge of sleep stages and associated behaviors.",
-      "suggestedLesson": "5-eating-sleep-elimination",
-      "suggestedParagraph": "## How Memories Get Made: The Neural Level",
-      "lessonExcerpt": "Non-REM Sleep Arousal Disorders: Sleepwalking and Sleep Terrors These disorders involve incomplete awakening from sleep, usually during Stage 3 or 4 sleep in the first third of a major sleep period.",
-      "needsReview": false,
-      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
-      "inspirationIndex": 17
-    },
-    {
       "stem": "What is a common change in sleep patterns observed in older adults?",
       "options": [
         "Increased REM sleep duration",
@@ -672,6 +630,272 @@
       "lessonExcerpt": "This tragic case taught us that the hippocampus serves as a **consolidation hub**. It takes declarative information (facts and events) from short-term storage and helps transfer it into long-term storage.",
       "suggestedLesson": "1-memory-and-sleep",
       "needsReview": false
+    },
+    {
+      "stem": "Which type of brain wave activity is typically observed during focused cognitive tasks?",
+      "options": [
+        "Delta waves",
+        "Theta waves",
+        "Alpha waves",
+        "Beta waves"
+      ],
+      "answer": "Beta waves",
+      "explanation": "Beta waves are associated with active thinking, problem-solving, and focused cognitive tasks. Delta waves are linked to deep sleep, theta waves are associated with light sleep and relaxation, and alpha waves occur during calm, relaxed states but not during intense cognitive activity.",
+      "kn": "KN1",
+      "kn_explanation": "This question relates to the biological bases of behavior, specifically the electrophysiological aspects of brain function.",
+      "difficulty": "medium",
+      "quality_comment": "The question effectively assesses knowledge of brain wave patterns and their associations.",
+      "suggestedLesson": "1-memory-and-sleep",
+      "suggestedParagraph": "## Recovery Timeline",
+      "lessonExcerpt": "Stage R (REM sleep) is called **paradoxical sleep** for good reason. Your brain shows beta waves (normally associated with being awake and alert) and theta waves.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 6
+    },
+    {
+      "stem": "Which brain region is primarily involved in the interpretation of emotional stimuli?",
+      "options": [
+        "Hippocampus",
+        "Amygdala",
+        "Cerebellum",
+        "Thalamus"
+      ],
+      "answer": "Amygdala",
+      "explanation": "The amygdala is crucial for processing emotional information and attaching emotional significance to memories. The hippocampus is involved in memory consolidation, the cerebellum primarily coordinates movement and balance, and the thalamus acts as a sensory relay station. Therefore, the amygdala is the correct answer.",
+      "kn": "KN1",
+      "kn_explanation": "This KN code applies as it relates to the biological bases of emotional processing in the brain.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses knowledge of brain regions related to emotion.",
+      "suggestedLesson": "1-memory-and-sleep",
+      "suggestedParagraph": "## The Amygdala: Your Emotional Highlighter",
+      "lessonExcerpt": "The amygdala does something fascinating: it attaches emotional significance to your memories.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 11
+    },
+    {
+      "stem": "What phenomenon occurs during the transition from wakefulness to sleep, often involving vivid auditory or visual hallucinations?",
+      "options": [
+        "Hypnopompic hallucinations",
+        "Hypnogogic hallucinations",
+        "Sleep paralysis",
+        "REM sleep behavior disorder"
+      ],
+      "answer": "Hypnogogic hallucinations",
+      "explanation": "Hypnogogic hallucinations occur during the transition from wakefulness to sleep and can involve vivid sensory experiences. Hypnopompic hallucinations occur during the transition from sleep to wakefulness. Sleep paralysis is the inability to move while falling asleep or waking up, and REM sleep behavior disorder involves acting out dreams.",
+      "kn": "KN1",
+      "kn_explanation": "This KN code applies as it relates to the biological bases of behavior, particularly sleep disorders.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively assesses understanding of sleep-related phenomena.",
+      "suggestedLesson": "1-memory-and-sleep",
+      "suggestedParagraph": "## How Memories Get Made: The Neural Level",
+      "lessonExcerpt": "This processes sound. Damage can cause: - Auditory agnosia (hearing sounds but not recognizing what they are) - Auditory hallucinations - Cortical deafness (the ears work fine, but the brain can't process the signals)",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 23
+    },
+    {
+      "stem": "Which brain structure, when lesioned, is most likely to disrupt the regulation of sleep, particularly REM sleep?",
+      "options": [
+        "Cerebellum",
+        "Pons",
+        "Hippocampus",
+        "Thalamus"
+      ],
+      "answer": "Pons",
+      "explanation": "The pons plays a crucial role in regulating sleep, especially deep sleep and REM sleep. Lesions in this area can lead to significant sleep disturbances. The cerebellum is primarily involved in motor coordination, the hippocampus is associated with memory consolidation, and the thalamus acts as a relay station for sensory information, but does not directly regulate sleep cycles.",
+      "kn": "KN1",
+      "kn_explanation": "This question relates to the biological bases of behavior, specifically the impact of brain structures on sleep regulation.",
+      "difficulty": "hard",
+      "quality_comment": "The question is well-structured and tests specific knowledge of brain functions related to sleep.",
+      "suggestedLesson": "1-memory-and-sleep",
+      "suggestedParagraph": "### Pons (The Coordinator and Sleep Regulator)",
+      "lessonExcerpt": "The pons... regulates sleep, particularly deep sleep and REM sleep.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 1
+    },
+    {
+      "stem": "Which subcortical forebrain structure plays a key role in transferring declarative memories from short-term to long-term storage and spatial memory?",
+      "options": [
+        "Hippocampus",
+        "Cingulate cortex",
+        "Hypothalamus",
+        "Basal ganglia"
+      ],
+      "answer": "Hippocampus",
+      "explanation": "1. The **hippocampus** is the correct answer because it is specifically responsible for transferring declarative memories from short-term to long-term memory and plays a crucial role in spatial memory, which involves remembering the spatial characteristics of the environment. Damage to the hippocampus is linked to impairments in episodic memory and spatial navigation, demonstrating its essential function in memory processing.\n\n2. The **cingulate cortex** is incorrect because, while it plays a role in motivation, memory, and emotions, it is not primarily responsible for transferring memories between short-term and long-term storage. The **hypothalamus** is also incorrect as it regulates essential bodily functions and homeostasis but does not play a significant role in memory transfer. Lastly, the **basal ganglia** are incorrect because they are involved in the initiation and control of voluntary movements and procedural learning, rather than the specific transfer of declarative memories.",
+      "kn": "KN1",
+      "kn_explanation": "This question is best aligned with KN1 because it tests Functional correlates and determinants of the neurobiological and genetic bases of behavior pertaining to perception, cognition, personality, and mood and affect in normal, acute and chronic neurobehavioral disease processes and disease, comorbidities.",
+      "difficulty": "easy",
+      "quality_comment": "Clear phrasing and well-differentiated answer choices make this suitable for foundational memory knowledge.",
+      "lessonExcerpt": "- **Hippocampus = memory converter + spatial memory:** Transfers declarative memories to long-term storage. Damaged in Alzheimer's, affected by stress/cortisol, smaller in PTSD.",
+      "suggestedLesson": "1-memory-and-sleep",
+      "needsReview": false
+    },
+    {
+      "stem": "What phenomenon describes the creation of false memories due to confabulation?",
+      "options": [
+        "The process of recalling memories that are entirely fabricated.",
+        "The blending of real memories with imagined details.",
+        "The inability to remember past events accurately.",
+        "The enhancement of memory recall through suggestion."
+      ],
+      "answer": "The blending of real memories with imagined details.",
+      "explanation": "Confabulation involves the unintentional creation of false memories where real memories are mixed with fabricated details. Option A misrepresents the nature of confabulation, while Option C describes a different memory issue, and Option D refers to a different process of memory enhancement.",
+      "kn": "KN8",
+      "kn_explanation": "This question is best aligned with KN8 because it tests Major research-based theories and models of memory and their application.",
+      "difficulty": "hard",
+      "quality_comment": "The question effectively tests knowledge of confabulation and its implications for memory.",
+      "suggestedLesson": "1-memory-and-sleep",
+      "suggestedParagraph": "## Types of Long-Term Memory: Not All Memories Are Equal",
+      "lessonExcerpt": "They can't save new files (anterograde amnesia), some old files got corrupted (retrograde amnesia), and when they can't find a file, their system automatically generates a plausible substitute that they can't distinguish from real memories (confabulation).{{/M}} **EPPP tip:** Don't confuse this with Wernicke-Korsakoff syndrome, which includes Wernicke's encephalopathy (acute confusion, ataxia, eye movement problems) followed by Korsakoff syndrome.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 8
+    },
+    {
+      "stem": "A client regains consciousness after a moderate traumatic brain injury and can describe events from childhood and even details from the morning of the accident. However, throughout the next several days, the client repeatedly asks where he is and cannot retain new information from one conversation to the next. This pattern is most consistent with:",
+      "options": [
+        "Retrograde amnesia",
+        "Anterograde amnesia",
+        "Aprosodia",
+        "Spatial neglect"
+      ],
+      "answer": "Anterograde amnesia",
+      "explanation": "Anterograde amnesia is the best answer because the client cannot form new memories after the injury despite retaining older memories. Retrograde amnesia is wrong because that refers to loss of memory for events before the injury. Aprosodia is wrong because it involves difficulty expressing or understanding emotional tone in speech. Spatial neglect is wrong because it involves inattention to one side of space rather than impaired memory formation.",
+      "kn": "KN1",
+      "kn_explanation": "This question tests functional correlates of neurobehavioral disease processes, specifically memory impairment following traumatic brain injury.",
+      "difficulty": "medium",
+      "quality_comment": "Strong neuropsychology discrimination item with realistic TBI presentation and clean distractors.",
+      "suggestedLesson": "1-memory-and-sleep",
+      "suggestedParagraph": "### What Happens After TBI",
+      "lessonExcerpt": "Anterograde amnesia (also called post-traumatic amnesia): Can't form new memories after the injury.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR"
+    },
+    {
+      "stem": "Which memory type is most likely to show significant decline as adults age?",
+      "options": [
+        "Remote long-term memory",
+        "Recent long-term (secondary) memory",
+        "Procedural memory",
+        "Short-term storage (primary) memory"
+      ],
+      "answer": "Recent long-term (secondary) memory",
+      "explanation": "1. \"Recent long-term (secondary) memory\" is the correct answer because research consistently shows that older adults experience the greatest age-related decline in this type of memory. This decline is often attributed to older adults being less likely than younger adults to use effective encoding strategies, which hinders their ability to retain recently acquired information.\n\n2. The option \"Remote long-term memory\" is incorrect because it is relatively unaffected by increasing age, allowing older adults to retain memories from their past. \"Procedural memory\" is also incorrect, as it typically remains stable during adulthood, involving skills and actions that do not decline significantly with age. Lastly, \"Short-term storage (primary) memory\" is incorrect because this aspect of memory, which involves the immediate retention of information, is less impacted by age compared to recent long-term memory.",
+      "kn": "KN21",
+      "kn_explanation": "This question is best aligned with KN21 because it tests Normal growth and development across the lifespan.",
+      "difficulty": "medium",
+      "quality_comment": "Distractors are all legitimate memory types, making this question effective for distinguishing knowledge of age-related memory effects.",
+      "lessonExcerpt": "| Recent long-term (secondary) memory | Greatest decline |",
+      "suggestedLesson": "1-memory-and-sleep",
+      "needsReview": false
+    },
+    {
+      "stem": "Which environmental stressor is most likely to trigger a manic episode in individuals with bipolar I disorder?",
+      "options": [
+        "Loss of a job",
+        "A major life transition",
+        "Substance abuse",
+        "Sleep deprivation"
+      ],
+      "answer": "Sleep deprivation",
+      "explanation": "Sleep deprivation is a well-known trigger for manic episodes in individuals with bipolar I disorder. While the other stressors can contribute to mood episodes, sleep deprivation is particularly potent in precipitating mania.",
+      "kn": "KN30",
+      "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
+      "difficulty": "medium",
+      "quality_comment": "The question is relevant and tests knowledge of triggers for manic episodes in bipolar disorder.",
+      "suggestedLesson": "1-memory-and-sleep",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "Sleep deprivation is a well-known trigger for manic episodes in individuals with bipolar I disorder.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 19
+    },
+    {
+      "stem": "What is a common sleep disorder in children characterized by episodes of sudden arousal and fear during sleep?",
+      "options": [
+        "Nightmares",
+        "Sleepwalking",
+        "Sleep terror",
+        "Insomnia"
+      ],
+      "answer": "Sleep terror",
+      "explanation": "Sleep terror, also known as night terrors, is characterized by episodes of sudden arousal and fear during sleep, often accompanied by screaming and confusion. Nightmares occur during REM sleep and are remembered, while sleepwalking involves physical activity during sleep. Insomnia refers to difficulty falling or staying asleep, which is not the same as sleep terror.",
+      "kn": "KN30",
+      "kn_explanation": "This question is best aligned with KN30 because it tests Assessment theories and models (e.g., developmental, behavioral, ecological, neuropsychological).",
+      "difficulty": "medium",
+      "quality_comment": "The question is clear and tests knowledge of sleep disorders in children.",
+      "suggestedLesson": "1-memory-and-sleep",
+      "suggestedParagraph": "## Neuropsychological Assessment: Understanding Brain Function",
+      "lessonExcerpt": "| | 16 PF | 16 primary traits from WORDS (lexical) | | EPPS | 15 NEEDS, forced-choice, IPSATIVE scores (no comparing people) | | MBTI | 4 dimensions, 16 TYPES, based on Jung | | NEO-PI-3 | Big Five (OCEAN), has FACETS, predicts cognitive decline | | Rorschach | INKBLOTS, Exner's system, color = emotion, confabulation = problems | | TAT | STORIES about pictures, identify hero's needs and press | **For the Rorschach scoring categories:** Use the acronym **L-D-C-F-P**: - **L**ocation -...",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 17
+    },
+    {
+      "stem": "A 28-year-old patient presents with a chief complaint of suddenly falling asleep during conversations and at work, occurring approximately four times per week for the past six months. She also reports vivid, dream-like visual experiences just as she is waking up. Her sleep study reveals a REM sleep latency of 12 minutes. Which additional finding would be MOST consistent with a diagnosis of narcolepsy?",
+      "options": [
+        "Episodes of sudden bilateral loss of muscle tone triggered by strong emotions",
+        "Repeated occurrences of extended, well-remembered nightmares during the second half of the sleep period",
+        "Incomplete awakenings from Stage 3 sleep with panicky screaming and autonomic arousal",
+        "Difficulty maintaining sleep characterized by frequent awakenings occurring three or more nights per week"
+      ],
+      "answer": "Episodes of sudden bilateral loss of muscle tone triggered by strong emotions",
+      "explanation": "Narcolepsy diagnosis requires irresistible sleep attacks plus at least ONE of: cataplexy (episodes of loss of muscle tone), hypocretin deficiency, or REM sleep latency ≤15 minutes. The patient already meets the REM latency criterion (12 minutes), but cataplexy—sudden loss of muscle tone often triggered by strong emotions—is the hallmark associated feature of narcolepsy and would further confirm the diagnosis. Option B describes nightmare disorder (REM sleep, second half of sleep period, well-remembered). Option C describes sleep terrors (non-REM sleep arousal disorder with panicky screaming and no memory). Option D describes insomnia disorder symptoms, not narcolepsy.",
+      "kn": "KN36",
+      "kn_explanation": "This question is best aligned with KN36 because it tests Classification systems and their underlying rationales and limitations for evaluating client functioning; dimensional vs. categorical approaches to diagnosis.",
+      "difficulty": "medium",
+      "quality_comment": "Strong question requiring differential knowledge of sleep-wake disorders and specific narcolepsy diagnostic criteria. Integrates cataplexy, hallucinations, and REM latency.",
+      "suggestedLesson": "1-memory-and-sleep",
+      "suggestedParagraph": "### Narcolepsy: Irresistible Sleep Attacks",
+      "lessonExcerpt": "Diagnosis Requires ONE of These: Episodes of cataplexy (loss of muscle tone), Hypocretin deficiency, REM sleep latency of 15 minutes or less on polysomnography... Because cataplexy is often triggered by strong emotions, people with narcolepsy may try to control their emotions to prevent sleep episodes.",
+      "needsReview": false,
+      "inspirationDomain": "ASSESSMENT AND DIAGNOSIS",
+      "inspirationIndex": 1
+    },
+    {
+      "stem": "Which phenomenon is commonly observed during NREM sleep?",
+      "options": [
+        "Dreaming",
+        "Sleepwalking",
+        "Rapid eye movement",
+        "Increased heart rate"
+      ],
+      "answer": "Sleepwalking",
+      "explanation": "Sleepwalking is a phenomenon that typically occurs during NREM sleep, particularly in the deeper stages. Dreaming and rapid eye movement are associated with REM sleep, while increased heart rate is not a defining characteristic of NREM sleep.",
+      "kn": "KN1",
+      "kn_explanation": "This KN code applies as it relates to the biological bases of behavior and sleep phenomena.",
+      "difficulty": "medium",
+      "quality_comment": "The question accurately assesses knowledge of sleep stages and associated behaviors.",
+      "suggestedLesson": "1-memory-and-sleep",
+      "suggestedParagraph": "## How Memories Get Made: The Neural Level",
+      "lessonExcerpt": "Non-REM Sleep Arousal Disorders: Sleepwalking and Sleep Terrors These disorders involve incomplete awakening from sleep, usually during Stage 3 or 4 sleep in the first third of a major sleep period.",
+      "needsReview": false,
+      "inspirationDomain": "BIOLOGICAL BASES OF BEHAVIOR",
+      "inspirationIndex": 17
+    },
+    {
+      "stem": "A patient with a history of chronic alcohol dependence is asked what he did yesterday. He provides a detailed, coherent account of visiting his daughter at college, though his daughter confirms he was in the hospital all day. The patient appears to genuinely believe his account. This phenomenon is BEST described as:",
+      "options": [
+        "Malingering",
+        "Confabulation",
+        "Delusional disorder",
+        "Retrospective falsification"
+      ],
+      "answer": "Confabulation",
+      "explanation": "Confabulation is a hallmark feature of Korsakoff syndrome, which results from thiamine deficiency due to chronic alcoholism. Individuals with Korsakoff syndrome fill in memory gaps with fabricated information without intent to deceive—their brain is attempting to make sense of missing information. Malingering (A) involves intentional fabrication for external gain, which contradicts the patient genuinely believing his account. Delusional disorder (C) involves fixed false beliefs not related to memory gaps from brain damage. Retrospective falsification (D) involves unconscious distortion of actual memories, whereas confabulation involves fabrication to fill gaps where no memory exists.",
+      "kn": "KN12",
+      "kn_explanation": "This question is best aligned with KN12 because it tests Relations among cognitions/beliefs, behavior, affect, temperament, and mood.",
+      "difficulty": "medium",
+      "quality_comment": "Clinical vignette tests the key feature of confabulation—fabrication without intent to deceive—in the context of alcohol-related brain damage.",
+      "suggestedLesson": "1-memory-and-sleep",
+      "suggestedParagraph": "### Alcohol-Induced Major Neurocognitive Disorder",
+      "lessonExcerpt": "People with Korsakoff syndrome often confabulate, meaning they fill in memory gaps with fabricated information. They're not lying) their brain is trying to make sense of missing information.",
+      "needsReview": false,
+      "inspirationDomain": "COGNITIVE-AFFECTIVE BASES OF BEHAVIOR",
+      "inspirationIndex": 8
     }
   ]
 }
