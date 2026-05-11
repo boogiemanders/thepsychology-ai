@@ -144,10 +144,10 @@ export function SocialProofTestimonials({
     <div className="w-full">
       <div className="relative overflow-hidden py-8">
         <Marquee className="[--duration:60s]" dragToScroll>
-          {orderedTestimonials.map((card) => {
+          {orderedTestimonials.map(({ id, anonymous, ...card }) => {
             return (
               <div
-                key={card.id}
+                key={id}
                 className="w-[420px] min-h-[200px] flex justify-center"
               >
                 <TestimonialCard {...card} className="w-full break-words" />
