@@ -54,6 +54,7 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion'
 import { LockInDrillButton } from '@/components/lock-in-drill-button'
+import { ExplanationBlock } from '@/components/explanation-block'
 
 interface QuizQuestion {
   id: number
@@ -112,27 +113,6 @@ const normalizeQuestionText = (value: string): string => {
     .replace(/[^a-z0-9\s]+/g, ' ')
     .replace(/\s+/g, ' ')
     .trim()
-}
-
-const splitExplanationIntoParagraphs = (explanation: string): string[] => {
-  const text = explanation.trim()
-  if (!text) return []
-
-  const numberedSections = text
-    .match(/(?:^|\s)\d+[.)]\s[\s\S]*?(?=(?:\s+\d+[.)]\s)|$)/g)
-    ?.map((section) => section.trim())
-    .filter(Boolean)
-
-  if (numberedSections && numberedSections.length > 1) {
-    return numberedSections
-  }
-
-  const paragraphs = text
-    .split(/\n{2,}/)
-    .map((paragraph) => paragraph.trim())
-    .filter(Boolean)
-
-  return paragraphs.length > 0 ? paragraphs : [text]
 }
 
 export function QuizzerContent() {
@@ -1473,12 +1453,12 @@ export function QuizzerContent() {
 
                           {/* Explanation - expanded by default */}
                           <div className="rounded-lg border border-border p-4">
-                            <h4 className="text-sm font-semibold mb-2">Explanation</h4>
-                            <div className="text-sm text-muted-foreground space-y-3">
-                              {splitExplanationIntoParagraphs(q.explanation).map((paragraph, idx) => (
-                                <p key={`${idx}-${paragraph.slice(0, 24)}`}>{paragraph}</p>
-                              ))}
-                            </div>
+                            <h4 className="text-sm font-semibold mb-3">Explanation</h4>
+                            <ExplanationBlock
+                              explanation={q.explanation}
+                              options={q.options}
+                              correctAnswer={q.correctAnswer}
+                            />
                           </div>
 
                           {/* Action buttons for wrong answers */}

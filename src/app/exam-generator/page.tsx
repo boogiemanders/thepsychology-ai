@@ -14,6 +14,7 @@ import { Checkbox } from '@/components/ui/checkbox'
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sheet'
 import { ScrollArea } from '@/components/ui/scroll-area'
+import { ExplanationBlock } from '@/components/explanation-block'
 import { motion } from 'motion/react'
 import { LoadingAnimation } from '@/components/ui/loading-animation'
 import { useAuth } from '@/context/auth-context'
@@ -2015,9 +2016,11 @@ export default function ExamGeneratorPage() {
                         </div>
                       </div>
                       <Separator className="my-3" />
-                      <p className="text-sm text-muted-foreground">
-                        {question.explanation}
-                      </p>
+                      <ExplanationBlock
+                        explanation={question.explanation}
+                        options={question.options}
+                        correctAnswer={question.correct_answer}
+                      />
                     </motion.div>
                   )}
                 </CardContent>
