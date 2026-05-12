@@ -4,13 +4,23 @@ import { getManualRate, legend } from '../lib/compensation-legend'
 import { formatShortDate } from '../lib/date-utils'
 import { buildPayrollWorkbook, suggestFilename } from '../lib/xlsx-exporter'
 import { buildJustWorksCSV, suggestJustWorksFilename } from '../lib/justworks-csv-exporter'
-import type { PayrollResultWithHours, ManualAdditionKind, ClinicianSummary, PendingSession, PendingSessionStatus, BretInsurance } from '../lib/types'
+import { parseClientRoster } from '../lib/client-roster-parser'
+import type { PayrollResultWithHours, ManualAdditionKind, ClinicianSummary, PendingSession, PendingSessionStatus, BretInsurance, ClientRecord } from '../lib/types'
 
 const csvInput = document.getElementById('csv-input') as HTMLInputElement
 const uploadLabel = document.querySelector('.upload-label') as HTMLLabelElement
 const uploadSection = document.getElementById('upload-section')!
+const rosterInput = document.getElementById('roster-input') as HTMLInputElement
+const rosterUploadLabel = document.querySelector('.upload-label-secondary') as HTMLLabelElement
+const rosterUploadText = document.getElementById('roster-upload-text')!
+const rosterToggleBtn = document.getElementById('roster-toggle') as HTMLButtonElement
+const rosterClearBtn = document.getElementById('roster-clear') as HTMLButtonElement
+const rosterBody = document.getElementById('roster-body')!
+const rosterSearchInput = document.getElementById('roster-search') as HTMLInputElement
+const rosterListEl = document.getElementById('roster-list')!
 const resultsSection = document.getElementById('results-section')!
 const clinicianList = document.getElementById('clinician-list')!
+const insuranceStat = document.getElementById('insurance-stat')!
 const bretSection = document.getElementById('bret-section')!
 const bretDetails = document.getElementById('bret-details')!
 const clearBtn = document.getElementById('clear-btn')!
@@ -66,6 +76,15 @@ let pendingSessions: PendingSession[] = []
 // so anyone reading chrome.storage.local sees opaque hex, not patient names.
 let bretInsuranceMap: Record<string, BretInsurance> = {}
 
+// Client roster — persists across payroll runs. Loaded from SimplePractice
+// "Client Details" report. Used to (1) auto-show Bret's insurance when no
+// manual pick exists and (2) power the searchable client browser below the
+// upload area. Only name + insurance + primary clinician are stored —
+// address/phone/email/insurance ID are dropped at parse time.
+let clientRoster: ClientRecord[] = []
+// name (lowercased) -> record. Built once per roster load for O(1) lookup.
+let rosterByName: Map<string, ClientRecord> = new Map()
+
 // Memo: raw client name -> 16-char hex hash. Lets render path stay sync after
 // an async warmup pass. Cleared on "Clear saved data".
 const hashMemo = new Map<string, string>()
@@ -101,6 +120,61 @@ function isValidPendingStatus(s: unknown): s is PendingSessionStatus {
 
 function saveBretInsuranceMap() {
   chrome.storage.local.set({ bretInsuranceMapV2: bretInsuranceMap })
+}
+
+function setClientRoster(records: ClientRecord[]) {
+  clientRoster = records
+  rosterByName = new Map()
+  for (const r of records) {
+    rosterByName.set(r.name.trim().toLowerCase(), r)
+  }
+}
+
+function saveClientRoster() {
+  chrome.storage.local.set({
+    clientRoster: { uploadedAt: Date.now(), records: clientRoster },
+  })
+}
+
+function getRosterRecord(clientName: string): ClientRecord | undefined {
+  if (!clientName) return undefined
+  return rosterByName.get(clientName.trim().toLowerCase())
+}
+
+function rosterUploadLabelText(): string {
+  if (clientRoster.length === 0) return 'Drop client roster CSV (optional)'
+  return `Roster loaded: ${clientRoster.length} clients (re-upload to refresh)`
+}
+
+function refreshRosterControls() {
+  rosterUploadText.textContent = rosterUploadLabelText()
+  if (clientRoster.length > 0) {
+    rosterToggleBtn.classList.remove('hidden')
+    rosterClearBtn.classList.remove('hidden')
+  } else {
+    rosterToggleBtn.classList.add('hidden')
+    rosterClearBtn.classList.add('hidden')
+    rosterBody.classList.add('hidden')
+  }
+}
+
+// Format a clinician's typical session pay as a short string for the roster row.
+// For cpt_based: shows their 90837/90834 rates. For flat: single rate. For Bret: 80% note.
+function clinicianRateBlurb(clinicianName: string): string {
+  const cfg = legend[clinicianName]
+  if (!cfg) return ''
+  if (cfg.type === 'flat') return `$${cfg.rate}/session`
+  if (cfg.type === 'payer_dependent') return '80% of billing'
+  // cpt_based
+  const r37 = cfg.rates['90837']
+  const r34 = cfg.rates['90834']
+  const r91 = cfg.rates['90791']
+  const parts: string[] = []
+  if (r91) parts.push(`$${r91}/90791`)
+  if (r37) parts.push(`$${r37}/90837`)
+  if (r34) parts.push(`$${r34}/90834`)
+  if (parts.length === 0 && cfg.default) parts.push(`$${cfg.default}/default`)
+  return parts.join(' · ')
 }
 
 // HTML date input gives YYYY-MM-DD; the engine uses MM/DD/YYYY
@@ -289,10 +363,24 @@ function buildBretInsuranceHtml(summary: ClinicianSummary): string {
 
   const rowsHtml = clients.map(c => {
     // data-client stays the raw display name; we hash before using as map key
-    const current = bretInsuranceMap[hashClientSync(c)]
-    const mkBtn = (value: BretInsurance, label: string) =>
-      `<button class="ins-btn${current === value ? ' active' : ''}" data-client="${esc(c)}" data-value="${value}">${label}</button>`
-    const unsetMark = !current ? '<span class="ins-unset">pick insurance</span>' : ''
+    const manualPick = bretInsuranceMap[hashClientSync(c)]
+    const rosterRec = getRosterRecord(c)
+    const rosterPick = rosterRec?.insuranceNormalized ?? null
+    // Manual pick wins. If no manual pick, the roster's value is shown as the
+    // active button (visually flagged "from roster") but the user can override.
+    const effective = manualPick ?? rosterPick
+    const fromRoster = !manualPick && !!rosterPick
+    const mkBtn = (value: BretInsurance, label: string) => {
+      const active = effective === value ? ' active' : ''
+      const rosterCls = active && fromRoster ? ' from-roster' : ''
+      return `<button class="ins-btn${active}${rosterCls}" data-client="${esc(c)}" data-value="${value}">${label}</button>`
+    }
+    let badge = ''
+    if (!effective) {
+      badge = '<span class="ins-unset">pick insurance</span>'
+    } else if (fromRoster) {
+      badge = `<span class="ins-from-roster" title="${esc(rosterRec?.insuranceRaw ?? '')}">from roster</span>`
+    }
     return `
       <div class="ins-row">
         <span class="ins-client">${esc(c)}</span>
@@ -300,7 +388,7 @@ function buildBretInsuranceHtml(summary: ClinicianSummary): string {
           ${mkBtn('united', 'United')}
           ${mkBtn('aetna', 'Aetna')}
         </span>
-        ${unsetMark}
+        ${badge}
       </div>
     `
   }).join('')
@@ -661,6 +749,117 @@ async function processCsvFile(file: File) {
   recomputeFromBase()
 }
 
+async function processRosterFile(file: File) {
+  if (!file.name.toLowerCase().endsWith('.csv')) {
+    showStatus('Roster file must be a CSV.', 'error')
+    return
+  }
+  const text = await file.text()
+  const records = parseClientRoster(text)
+  if (records.length === 0) {
+    showStatus('No active clients found. Make sure CSV has Client + Primary insurance columns.', 'error')
+    return
+  }
+  setClientRoster(records)
+  saveClientRoster()
+  refreshRosterControls()
+  renderRosterList()
+  // If results are showing, re-render so Bret's section picks up roster fallback.
+  if (currentResult) renderResults(currentResult)
+  showStatus(`Loaded ${records.length} clients.`, 'success')
+}
+
+function renderRosterList() {
+  const q = (rosterSearchInput.value || '').trim().toLowerCase()
+  const filtered = q
+    ? clientRoster.filter(r =>
+        r.name.toLowerCase().includes(q) ||
+        r.insuranceRaw.toLowerCase().includes(q) ||
+        r.primaryClinician.toLowerCase().includes(q))
+    : clientRoster
+
+  if (filtered.length === 0) {
+    rosterListEl.innerHTML = '<div class="roster-empty">No matches.</div>'
+    return
+  }
+
+  // Cap at 100 rows for popup perf; user can search to narrow.
+  const capped = filtered.slice(0, 100)
+  const moreNote = filtered.length > capped.length
+    ? `<div class="roster-more">+${filtered.length - capped.length} more — refine search</div>`
+    : ''
+
+  rosterListEl.innerHTML = capped.map(r => {
+    const insLabel = r.insuranceRaw || '<span class="ins-faint">no insurance</span>'
+    const clin = r.primaryClinician || '<span class="ins-faint">unassigned</span>'
+    const rate = r.primaryClinician ? clinicianRateBlurb(r.primaryClinician) : ''
+    const rateHtml = rate ? `<span class="roster-rate">${rate}</span>` : ''
+    return `
+      <div class="roster-row">
+        <div class="roster-row-top">
+          <span class="roster-name">${esc(r.name)}</span>
+          <span class="roster-clinician">${typeof clin === 'string' ? esc(clin) : clin}</span>
+        </div>
+        <div class="roster-row-bot">
+          <span class="roster-ins">${typeof insLabel === 'string' ? esc(insLabel) : insLabel}</span>
+          ${rateHtml}
+        </div>
+      </div>
+    `
+  }).join('') + moreNote
+}
+
+rosterInput.addEventListener('change', async () => {
+  const file = rosterInput.files?.[0]
+  if (!file) return
+  await processRosterFile(file)
+})
+
+;['dragenter', 'dragover'].forEach((evt) => {
+  rosterUploadLabel.addEventListener(evt, (e) => {
+    e.preventDefault()
+    e.stopPropagation()
+    rosterUploadLabel.classList.add('dragging')
+  })
+})
+
+;['dragleave', 'drop'].forEach((evt) => {
+  rosterUploadLabel.addEventListener(evt, (e) => {
+    e.preventDefault()
+    e.stopPropagation()
+    rosterUploadLabel.classList.remove('dragging')
+  })
+})
+
+rosterUploadLabel.addEventListener('drop', async (e) => {
+  const file = (e as DragEvent).dataTransfer?.files?.[0]
+  if (!file) return
+  await processRosterFile(file)
+})
+
+rosterToggleBtn.addEventListener('click', () => {
+  const showing = !rosterBody.classList.contains('hidden')
+  if (showing) {
+    rosterBody.classList.add('hidden')
+    rosterToggleBtn.textContent = `Show roster (${clientRoster.length})`
+  } else {
+    rosterBody.classList.remove('hidden')
+    rosterToggleBtn.textContent = 'Hide roster'
+    renderRosterList()
+  }
+})
+
+rosterClearBtn.addEventListener('click', () => {
+  if (!confirm('Remove the saved client roster?')) return
+  setClientRoster([])
+  chrome.storage.local.remove('clientRoster')
+  refreshRosterControls()
+  if (currentResult) renderResults(currentResult)
+  showStatus('Roster cleared.', 'success')
+})
+
+rosterSearchInput.addEventListener('input', renderRosterList)
+
 csvInput.addEventListener('change', async () => {
   const file = csvInput.files?.[0]
   if (!file) return
@@ -704,10 +903,10 @@ clearBtn.addEventListener('click', () => {
   chrome.storage.local.remove('payrollData')
 })
 
-// Wipe all button — nukes everything in chrome.storage.local (payroll + insurance).
+// Wipe all button — nukes everything in chrome.storage.local (payroll + insurance + roster).
 // For end-of-session PHI hygiene.
 wipeAllBtn.addEventListener('click', () => {
-  if (!confirm('Wipe all payroll + insurance data from this browser?')) return
+  if (!confirm('Wipe all payroll + insurance + roster data from this browser?')) return
   chrome.storage.local.clear(() => {
     baseResult = null
     currentResult = null
@@ -715,7 +914,10 @@ wipeAllBtn.addEventListener('click', () => {
     pendingSessions = []
     bretInsuranceMap = {}
     hashMemo.clear()
+    setClientRoster([])
+    refreshRosterControls()
     csvInput.value = ''
+    rosterInput.value = ''
     resultsSection.classList.add('hidden')
     uploadSection.classList.remove('hidden')
     clinicianList.innerHTML = ''
@@ -809,6 +1011,28 @@ function renderResults(result: PayrollResultWithHours) {
   uploadSection.classList.add('hidden')
   resultsSection.classList.remove('hidden')
   clinicianList.innerHTML = ''
+
+  // Insurance billing stat — total billed across CPT-coded sessions + 8% of it.
+  // 8% is the standard biller cut Carlos uses to estimate billing fees.
+  const ib = result.insuranceBilling
+  if (ib && ib.totalBilled > 0) {
+    const fee = ib.totalBilled * 0.08
+    insuranceStat.innerHTML = `
+      <div class="ins-stat-row">
+        <span class="ins-stat-label">Insurance billed</span>
+        <span class="ins-stat-value">$${ib.totalBilled.toFixed(2)}</span>
+        <span class="ins-stat-meta">${ib.sessionCount} session${ib.sessionCount === 1 ? '' : 's'}</span>
+      </div>
+      <div class="ins-stat-row ins-stat-fee">
+        <span class="ins-stat-label">8% of billed</span>
+        <span class="ins-stat-value">$${fee.toFixed(2)}</span>
+      </div>
+    `
+    insuranceStat.classList.remove('hidden')
+  } else {
+    insuranceStat.innerHTML = ''
+    insuranceStat.classList.add('hidden')
+  }
 
   for (const c of result.clinicians) {
     const isBret = c.name === 'Bret Boatwright'
@@ -959,7 +1183,16 @@ function showStatus(msg: string, type: 'success' | 'error' | 'info') {
   statusEl.className = type
 }
 
-chrome.storage.local.get(['payrollData', 'bretInsuranceMap', 'bretInsuranceMapV2'], async (data) => {
+chrome.storage.local.get(['payrollData', 'bretInsuranceMap', 'bretInsuranceMapV2', 'clientRoster'], async (data) => {
+  // Client roster — load before payroll so renderResults sees roster fallback.
+  if (data.clientRoster && Array.isArray(data.clientRoster.records)) {
+    const records = (data.clientRoster.records as ClientRecord[]).filter(r =>
+      r && typeof r === 'object' && typeof r.name === 'string')
+    setClientRoster(records)
+  }
+  refreshRosterControls()
+  rosterToggleBtn.textContent = `Show roster (${clientRoster.length})`
+
   // Long-lived Bret insurance map — load V2 (hashed keys) first.
   if (data.bretInsuranceMapV2 && typeof data.bretInsuranceMapV2 === 'object') {
     bretInsuranceMap = {}

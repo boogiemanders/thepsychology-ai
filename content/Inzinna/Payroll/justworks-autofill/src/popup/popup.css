@@ -68,7 +68,7 @@ h1 {
 }
 
 /* ---------- Upload ---------- */
-#csv-input { display: none; }
+#csv-input, #roster-input { display: none; }
 
 .upload-label {
   display: flex;
@@ -106,6 +106,100 @@ h1 {
   color: var(--ink);
 }
 
+/* ---------- Roster (client details) ---------- */
+#roster-section {
+  margin-top: 12px;
+  margin-bottom: 16px;
+}
+
+.roster-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.upload-label-secondary {
+  flex: 1;
+  flex-direction: row;
+  padding: 10px 14px;
+  font-size: 11px;
+  gap: 8px;
+}
+
+.upload-label-secondary .upload-icon {
+  font-size: 14px;
+}
+
+#roster-body {
+  margin-top: 10px;
+  padding: 10px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+#roster-search {
+  width: 100%;
+  padding: 6px 8px;
+  font-size: 12px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  margin-bottom: 8px;
+  font-family: inherit;
+}
+
+#roster-list {
+  max-height: 280px;
+  overflow-y: auto;
+}
+
+.roster-row {
+  padding: 6px 4px;
+  border-bottom: 1px solid var(--border);
+  font-size: 11.5px;
+}
+
+.roster-row:last-child { border-bottom: 0; }
+
+.roster-row-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.roster-row-bot {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 1px;
+  color: var(--text-muted);
+  font-size: 10.5px;
+}
+
+.roster-name { font-weight: 600; color: var(--ink); }
+.roster-clinician { color: var(--text-muted); }
+.roster-rate {
+  font-family: var(--mono);
+  color: var(--pale-green-ink);
+}
+.roster-empty, .roster-more {
+  padding: 8px;
+  text-align: center;
+  font-size: 11px;
+  color: var(--text-faint);
+}
+.ins-faint { color: var(--text-faint); font-style: italic; }
+.ins-from-roster {
+  font-size: 10px;
+  color: var(--pale-blue-ink);
+  font-style: italic;
+}
+.ins-btn.from-roster {
+  outline: 1px dashed var(--pale-blue-ink);
+  outline-offset: -1px;
+}
+
 /* ---------- Results ---------- */
 .hidden { display: none !important; }
 
@@ -124,6 +218,46 @@ h1 {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--text-muted);
+}
+
+/* ---------- Insurance billing stat ---------- */
+.insurance-stat {
+  background: var(--pale-blue-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 8px 12px;
+  margin-bottom: 12px;
+}
+
+.insurance-stat .ins-stat-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-size: 12px;
+}
+
+.insurance-stat .ins-stat-row + .ins-stat-row {
+  margin-top: 2px;
+}
+
+.insurance-stat .ins-stat-label {
+  color: var(--text-muted);
+  flex: 1;
+}
+
+.insurance-stat .ins-stat-value {
+  font-family: var(--mono);
+  font-weight: 600;
+  color: var(--pale-blue-ink);
+}
+
+.insurance-stat .ins-stat-meta {
+  color: var(--text-faint);
+  font-size: 11px;
+}
+
+.insurance-stat .ins-stat-fee .ins-stat-value {
+  color: var(--pale-green-ink);
 }
 
 /* ---------- Clinician cards ---------- */

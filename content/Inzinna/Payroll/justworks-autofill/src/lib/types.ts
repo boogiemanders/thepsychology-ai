@@ -55,6 +55,10 @@ export interface PayrollResult {
     totalSupervision: number
     grandTotal: number
   }
+  insuranceBilling: {
+    totalBilled: number
+    sessionCount: number
+  }
 }
 
 export type ClinicianType = 'flat' | 'cpt_based' | 'payer_dependent'
@@ -109,3 +113,15 @@ export interface PendingSession {
 }
 
 export type BretInsurance = 'united' | 'aetna'
+
+export interface ClientRecord {
+  name: string
+  insuranceRaw: string                     // "UnitedHealthcare (87726)"
+  insuranceNormalized: BretInsurance | null  // mapped only for Bret's binary picker
+  primaryClinician: string
+}
+
+export interface ClientRoster {
+  uploadedAt: number
+  records: ClientRecord[]
+}

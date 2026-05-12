@@ -1,12 +1,22 @@
 import type { SessionRow, ClinicianSummary, PayrollResult, PayrollResultWithHours, JustWorksFillData, DailyHours, PendingSessionStatus } from './types'
 import { getPayRate, getCodeDurationMinutes } from './compensation-legend'
 
+// Real CPT therapy/eval codes — these are what gets billed to insurance.
+// Excludes practice-internal codes (00001 no-show, 00002 late cancel,
+// 00005 contact, EFC50, Admin) which never go to a payer.
+const CPT_BILLED_CODES = new Set([
+  '90791', '90832', '90834', '90837', '90846', '90847',
+  '96130', '96131', '96132', '96133', '96138', '96139',
+])
+
 /**
  * Process parsed CSV rows into per-clinician pay summaries.
  * Mirrors payroll-calc.py main() logic.
  */
 export function calculatePayroll(rows: SessionRow[]): PayrollResult {
   const byClinicianMap = new Map<string, ClinicianSummary>()
+  let insuranceBilledTotal = 0
+  let insuranceBilledCount = 0
 
   for (const row of rows) {
     if (!byClinicianMap.has(row.clinician)) {
@@ -34,6 +44,23 @@ export function calculatePayroll(rows: SessionRow[]): PayrollResult {
     summary.sessionCount++
     const codes = row.billingCode.split('\n').map(c => c.trim()).filter(Boolean)
     const durationMinutes = codes.reduce((sum, c) => sum + getCodeDurationMinutes(c), 0)
+
+    // Tally insurance billing: each CPT code on this row contributes its
+    // matching ratePerUnit. Multi-code rows have rates separated by '\n'
+    // in the same order as the codes.
+    const rates = row.ratePerUnit.split('\n').map(r => r.trim())
+    let countedThisRow = false
+    for (let i = 0; i < codes.length; i++) {
+      if (!CPT_BILLED_CODES.has(codes[i])) continue
+      const rateStr = i < rates.length ? rates[i] : rates[0] || ''
+      const parsed = parseFloat(rateStr.replace(/[^\d.\-]/g, ''))
+      if (!isFinite(parsed) || parsed <= 0) continue
+      insuranceBilledTotal += parsed
+      if (!countedThisRow) {
+        insuranceBilledCount++
+        countedThisRow = true
+      }
+    }
 
     summary.rows.push({
       date: row.dateOfService,
@@ -77,6 +104,10 @@ export function calculatePayroll(rows: SessionRow[]): PayrollResult {
       supervisionFromKaren,
       totalSupervision,
       grandTotal: bretSessionPay + totalSupervision,
+    },
+    insuranceBilling: {
+      totalBilled: Math.round(insuranceBilledTotal * 100) / 100,
+      sessionCount: insuranceBilledCount,
     },
   }
 }

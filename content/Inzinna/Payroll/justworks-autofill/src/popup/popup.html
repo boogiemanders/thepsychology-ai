@@ -17,6 +17,22 @@
       <input type="file" id="csv-input" accept=".csv" />
     </div>
 
+    <div id="roster-section">
+      <div class="roster-controls">
+        <label for="roster-input" class="upload-label upload-label-secondary">
+          <span class="upload-icon">+</span>
+          <span id="roster-upload-text">Drop client roster CSV (optional)</span>
+        </label>
+        <input type="file" id="roster-input" accept=".csv" />
+        <button id="roster-toggle" class="btn-small hidden">Show roster</button>
+        <button id="roster-clear" class="btn-small hidden" title="Remove saved roster">Clear roster</button>
+      </div>
+      <div id="roster-body" class="hidden">
+        <input type="search" id="roster-search" placeholder="Search by client or insurance..." />
+        <div id="roster-list"></div>
+      </div>
+    </div>
+
     <div id="results-section" class="hidden">
       <div id="summary-header">
         <h2>Pay Period Summary</h2>
@@ -25,6 +41,8 @@
           <button id="clear-btn" class="btn-small">Clear</button>
         </div>
       </div>
+
+      <div id="insurance-stat" class="insurance-stat hidden"></div>
 
       <div id="clinician-list"></div>
 
