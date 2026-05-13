@@ -2322,7 +2322,7 @@
     },
     {
       "id": 110,
-      "question": "The Cattell-Horn-Carroll (CHC) theory has most influenced the development and revision of which intelligence test?",
+      "question": "Which intelligence test's five cognitive factors, each split into verbal and nonverbal domains, are explicitly derived from Cattell-Horn-Carroll (CHC) theory?",
       "options": [
         "Wechsler Adult Intelligence Scale, 3rd Edition",
         "Woodcock-Johnson Tests of Cognitive Abilities",
@@ -2330,7 +2330,7 @@
         "Stanford-Binet Intelligence Test, 5th Edition"
       ],
       "correct_answer": "Stanford-Binet Intelligence Test, 5th Edition",
-      "explanation": "1. The correct answer is \"Stanford-Binet Intelligence Test, 5th Edition\" because the CHC theory, which combines elements of Horn-Cattell and Carroll theories, explicitly influenced its development. The SB5 is based on a hierarchical general mental ability model that incorporates five cognitive factors derived from the CHC theory, making it a direct application of this theoretical framework.\n\n2. The \"Wechsler Adult Intelligence Scale, 3rd Edition\" is incorrect because, although it is based on a hierarchical model of intelligence, it is not explicitly identified as being influenced by the CHC theory, unlike its more recent versions. \"Raven's Progressive Matrices\" is also incorrect as it primarily measures fluid intelligence without a direct connection to the CHC theory's broader cognitive abilities framework. Lastly, the \"Woodcock-Johnson Tests of Cognitive Abilities\" is incorrect because, while it includes various cognitive assessments, it is not explicitly stated in the reference material as being influenced by the CHC theory in the same way as the SB5.",
+      "explanation": "1. The correct answer is \"Stanford-Binet Intelligence Test, 5th Edition\" because the SB5's structure is built directly on CHC theory: five cognitive factors (Fluid Reasoning, Knowledge, Quantitative Reasoning, Visual-Spatial Processing, Working Memory), each split into verbal and nonverbal domains. No other test on this list uses that exact five-factor verbal/nonverbal architecture.\n\n2. \"Wechsler Adult Intelligence Scale, 3rd Edition\" is incorrect: it provides four indexes (VCI, PRI, WMI, PSI), not five CHC factors, and Wechsler tests do not officially claim CHC as their framework. \"Raven's Progressive Matrices\" is a single-factor measure of fluid intelligence (Gf) and is not structured around CHC. \"Woodcock-Johnson Tests of Cognitive Abilities\" is also CHC-based and is closely tied to CHC theory in the psychometric literature, but it is organized around the broader 7-10 CHC broad abilities, not the SB5's five-factor verbal/nonverbal structure that the lesson describes.",
       "domain": "Domain 5: Assessment, Diagnosis & Psychopathology",
       "knId": "KN32",
       "source_file": "5 IQ Tests.json",
