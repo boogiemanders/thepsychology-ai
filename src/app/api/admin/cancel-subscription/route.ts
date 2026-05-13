@@ -109,7 +109,7 @@ export async function POST(request: NextRequest) {
 <p>We weren't able to process your payment for your <strong>thePsychology.ai Pro</strong> subscription. You have 7 days to update your payment method before your account is downgraded to the free plan.</p>
 ${topicLine}
 <p>To keep your Pro access, please update your payment method:</p>
-<p><a href="${portalUrl}" style="display:inline-block;padding:10px 20px;background:#000;color:#fff;text-decoration:none;border-radius:6px;font-weight:bold;">Update Payment Method</a></p>
+<p><a href="${portalUrl}" style="display:inline-block;padding:12px 24px;background:#111827;color:#ffffff;text-decoration:none;border-radius:6px;font-weight:bold;border:1px solid #111827;mso-padding-alt:0;"><span style="color:#ffffff;">Update Payment Method</span></a></p>
 <p>This is an automated message. If you have any questions, you can reply to this email and Anders will get back to you.</p>
 <p>The thePsychology.ai Team</p>
 `.trim()
