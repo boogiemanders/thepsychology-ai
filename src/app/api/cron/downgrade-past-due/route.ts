@@ -77,7 +77,7 @@ export async function GET(request: NextRequest) {
 <p>Your <strong>thePsychology.ai Pro</strong> subscription has been moved to the Free plan because we weren't able to process your payment in the last 7 days.</p>
 <p>Your study progress is safe. Everything you've completed is still there. You can keep studying on the Free plan (10 lessons, 3 quizzes/day).</p>
 <p>To restore Pro access, update your payment method:</p>
-<p><a href="${portalUrl}" style="display:inline-block;padding:10px 20px;background:#000;color:#fff;text-decoration:none;border-radius:6px;font-weight:bold;">Restore Pro</a></p>
+<p><a href="${portalUrl}" style="display:inline-block;padding:12px 24px;background:#111827;color:#ffffff;text-decoration:none;border-radius:6px;font-weight:bold;border:1px solid #111827;mso-padding-alt:0;"><span style="color:#ffffff;">Restore Pro</span></a></p>
 <p>Reply to this email if you want help. Anders will get back to you.</p>
 <p>The thePsychology.ai Team</p>
 `.trim()
