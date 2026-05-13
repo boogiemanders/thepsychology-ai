@@ -461,6 +461,9 @@ export async function POST(request: Request) {
 
       // Start the 7-day grace countdown if not already running for this customer.
       // Preserved across Stripe Smart Retries so the deadline doesn't reset.
+      // Read the deadline back so the email shows actual remaining days
+      // (retry on day 3 -> "4 days", not "7 days").
+      let daysRemaining = 7
       if (stripeCustomerId) {
         try {
           const supabase = getSupabaseClient(undefined, { requireServiceRole: true })
@@ -471,11 +474,23 @@ export async function POST(request: Request) {
               .update({ grace_period_ends_at: graceEnds })
               .eq('stripe_customer_id', stripeCustomerId)
               .is('grace_period_ends_at', null)
+
+            const { data: userRow } = await supabase
+              .from('users')
+              .select('grace_period_ends_at')
+              .eq('stripe_customer_id', stripeCustomerId)
+              .single()
+
+            if (userRow?.grace_period_ends_at) {
+              const msLeft = new Date(userRow.grace_period_ends_at).getTime() - Date.now()
+              daysRemaining = Math.max(0, Math.ceil(msLeft / (24 * 60 * 60 * 1000)))
+            }
           }
         } catch (err) {
-          console.warn('[Stripe] Failed to set grace_period_ends_at on payment failure', err)
+          console.warn('[Stripe] Failed to set/read grace_period_ends_at on payment failure', err)
         }
       }
+      const daysLabel = `${daysRemaining} day${daysRemaining === 1 ? '' : 's'}`
 
       // Generate billing portal URL so customer can update payment method
       let portalUrl = 'https://thepsychology.ai'
@@ -529,7 +544,7 @@ export async function POST(request: Request) {
 
         const html = `
 <p>${greeting}</p>
-<p>We weren't able to process your payment for your <strong>thePsychology.ai Pro</strong> subscription. You have 7 days to update your payment method before your account is downgraded to the free plan.</p>
+<p>We weren't able to process your payment for your <strong>thePsychology.ai Pro</strong> subscription. You have ${daysLabel} to update your payment method before your account is downgraded to the free plan.</p>
 ${topicLine}
 <p>To keep your Pro access, please update your payment method:</p>
 <p><a href="${portalUrl}" style="display:inline-block;padding:10px 20px;background:#000;color:#fff;text-decoration:none;border-radius:6px;font-weight:bold;">Update Payment Method</a></p>
@@ -540,7 +555,7 @@ ${topicLine}
         const text = [
           greeting,
           '',
-          "We weren't able to process your payment for your thePsychology.ai Pro subscription. You have 7 days to update your payment method before your account is downgraded to the free plan.",
+          `We weren't able to process your payment for your thePsychology.ai Pro subscription. You have ${daysLabel} to update your payment method before your account is downgraded to the free plan.`,
           ...(recentTopic
             ? [`Your lessons on ${recentTopic} have been tailored to your interests. We'd love to keep that going.`]
             : []),
