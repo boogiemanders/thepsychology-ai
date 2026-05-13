@@ -124,20 +124,20 @@
       "needsReview": false
     },
     {
-      "stem": "Which intelligence test's five cognitive factors, each split into verbal and nonverbal domains, are explicitly derived from Cattell-Horn-Carroll (CHC) theory?",
+      "stem": "The Cattell-Horn-Carroll (CHC) theory has most influenced the development and revision of which intelligence test?",
       "options": [
         "Stanford-Binet Intelligence Test, 5th Edition",
         "Wechsler Adult Intelligence Scale, 3rd Edition",
         "Raven's Progressive Matrices",
         "Woodcock-Johnson Tests of Cognitive Abilities"
       ],
-      "answer": "Stanford-Binet Intelligence Test, 5th Edition",
-      "explanation": "1. The correct answer is \"Stanford-Binet Intelligence Test, 5th Edition\" because the SB5's structure is built directly on CHC theory: five cognitive factors (Fluid Reasoning, Knowledge, Quantitative Reasoning, Visual-Spatial Processing, Working Memory), each split into verbal and nonverbal domains. No other test on this list uses that exact five-factor verbal/nonverbal architecture.\n\n2. \"Wechsler Adult Intelligence Scale, 3rd Edition\" is incorrect: it provides four indexes (VCI, PRI, WMI, PSI), not five CHC factors, and Wechsler tests do not officially claim CHC as their framework. \"Raven's Progressive Matrices\" is a single-factor measure of fluid intelligence (Gf) and is not structured around CHC. \"Woodcock-Johnson Tests of Cognitive Abilities\" is also CHC-based and is closely tied to CHC theory in the psychometric literature, but it is organized around the broader 7-10 CHC broad abilities, not the SB5's five-factor verbal/nonverbal structure that the lesson describes.",
+      "answer": "Woodcock-Johnson Tests of Cognitive Abilities",
+      "explanation": "1. The correct answer is \"Woodcock-Johnson Tests of Cognitive Abilities\" because Kevin McGrew, one of the WJ authors, co-developed CHC theory with John Horn and John Carroll, and the WJ-III (2001) was the first major intelligence battery designed explicitly around CHC theory. The WJ-IV measures seven CHC broad abilities (Gf, Gc, Gv, Gwm, Ga, Glr, Gs) and is widely considered the canonical operationalization of CHC in the psychometric literature.\n\n2. \"Stanford-Binet Intelligence Test, 5th Edition\" is incorrect in the comparative sense the question asks about: SB5 (2003) also uses CHC, but it adopted the framework after WJ-III and measures fewer broad abilities, so it is not the test CHC \"most influenced.\" \"Wechsler Adult Intelligence Scale, 3rd Edition\" does not officially claim CHC as its framework, though researchers have mapped its indexes onto CHC abilities. \"Raven's Progressive Matrices\" is a single-factor measure of fluid intelligence (Gf) and is not structured around CHC.",
       "kn": "KN32",
       "kn_explanation": "This question is best aligned with KN32 because it tests Commonly used instruments for the measurement of characteristics and behaviors of individuals and their appropriate use with various populations.",
       "difficulty": "medium",
       "quality_comment": "Distractors are credible alternate intelligence tests, making the correct answer plausible yet distinguished by careful recall.",
-      "lessonExcerpt": "Carroll organized intelligence into three levels:\n- **Stratum III**: General intelligence (g) at the top\n- **Stratum II**: Eight broad abilities (including Gc, Gf, short-term memory)\n- **Stratum I**: Numerous specific abilities",
+      "lessonExcerpt": "The Woodcock-Johnson (WJ-III, 2001 and WJ-IV, 2014) was the first major intelligence battery designed explicitly around CHC theory, and it remains the canonical operationalization of CHC in the psychometric literature.",
       "suggestedLesson": "5-iq-tests",
       "needsReview": false
     },

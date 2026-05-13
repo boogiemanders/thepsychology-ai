@@ -42,9 +42,11 @@ Carroll organized intelligence into three levels:
 
 ### CHC Theory: The Modern Framework
 
-The Cattell-Horn-Carroll (CHC) theory combines elements from previous theories and currently includes 16 broad cognitive abilities and over 80 narrow abilities. This theory is the backbone of modern intelligence testing. The Stanford-Binet 5th Edition explicitly uses CHC theory, and while Wechsler tests don't officially claim it as their framework, researchers have mapped Wechsler indexes to CHC abilities.
+The Cattell-Horn-Carroll (CHC) theory combines John Horn's expansion of Raymond Cattell's Gf-Gc dichotomy with John Carroll's three-stratum hierarchical model. Kevin McGrew proposed integrating the two in 1997, and the term "CHC theory" was formalized around 1999-2001 during the development of the Woodcock-Johnson III. The theory currently includes about 16 broad cognitive abilities and over 80 narrow abilities, and it is the backbone of modern intelligence testing.
 
-Here's the practical connection you need to know:
+The Woodcock-Johnson (WJ-III, 2001 and WJ-IV, 2014) was the first major intelligence battery designed explicitly around CHC theory, and it remains the canonical operationalization of CHC in the psychometric literature. The Stanford-Binet 5th Edition (2003) also uses CHC but measures fewer broad abilities and was not designed as a comprehensive CHC battery. Wechsler tests don't officially claim CHC as their framework, but researchers have mapped Wechsler indexes onto CHC abilities.
+
+Here's the practical Wechsler-to-CHC mapping you need to know:
 
 | Wechsler Index | CHC Ability |
 |----------------|-------------|
@@ -96,6 +98,38 @@ After routing, you establish a **basal level** (the highest point where the pers
 - Verbal IQ
 - Nonverbal IQ
 - Abbreviated Battery IQ (quick estimate from just the two routing subtests)
+
+## Woodcock-Johnson Tests of Cognitive Abilities (WJ-IV)
+
+### Who and What
+
+The Woodcock-Johnson is the most comprehensive, theory-driven operationalization of CHC theory. It's designed from the ground up to measure the broadest range of CHC broad and narrow cognitive abilities of any individually administered intelligence battery, which is why most CHC research uses the WJ family.
+
+The current edition (WJ-IV, 2014) covers ages 2 to 90+ and proposes seven broad CHC abilities:
+
+| CHC Ability | What It Measures |
+|-------------|------------------|
+| Fluid Reasoning (Gf) | Novel problem-solving and inductive/deductive logic |
+| Comprehension-Knowledge (Gc) | Acquired knowledge and vocabulary |
+| Visual Processing (Gv) | Spatial and visual pattern analysis |
+| Short-Term Working Memory (Gwm) | Holding and manipulating information |
+| Auditory Processing (Ga) | Phonological awareness and sound discrimination |
+| Long-Term Retrieval (Glr) | Storing and retrieving information over time |
+| Processing Speed (Gs) | Speed of simple cognitive tasks |
+
+### How It Works
+
+The WJ-IV's General Intellectual Ability (GIA) composite isn't a simple average. Tests are weighted by their g-loadings, so tests that load more heavily on general intelligence count more. This makes the GIA a psychometrically optimized estimate of g.
+
+{{M}}Think of GIA like a weighted GPA where AP classes count more than electives, not because the AP teacher likes them more, but because those classes are better predictors of college performance.{{/M}}
+
+### Cross-Battery Assessment (XBA)
+
+Dawn Flanagan and Kevin McGrew (later with Samuel Ortiz) developed Cross-Battery Assessment in the late 1990s. XBA uses CHC theory as an organizing framework to supplement a primary battery with subtests from others, so all relevant CHC abilities get measured. The WJ is central to XBA because it provides the broadest CHC coverage of any single battery.
+
+### Why This Matters for the EPPP
+
+If a question asks which intelligence test was "most influenced by" or "designed around" or "operationalizes" CHC theory, the answer is **Woodcock-Johnson**. SB5 also uses CHC but is a less comprehensive CHC battery and adopted the framework after WJ-III.
 
 ## Wechsler Adult Intelligence Scale, 4th Edition (WAIS-IV)
 
@@ -247,7 +281,7 @@ When you're sitting across from a client who just completed a WAIS-IV, you won't
 
 - **Crystallized intelligence (Gc)** represents learned knowledge and stays strong until late life; **Fluid intelligence (Gf)** represents raw problem-solving ability and peaks earlier (30-40 years)
 
-- **CHC theory** underlies modern intelligence testing and maps onto Wechsler indexes (VCI = Gc, FRI = Gf, VSI = Gv, WMI = Gsm, PSI = Gs)
+- **CHC theory** underlies modern intelligence testing. The **Woodcock-Johnson** (WJ-III/IV) is the canonical CHC battery and was designed around CHC from the ground up, measuring 7 broad abilities (Gf, Gc, Gv, Gwm, Ga, Glr, Gs). The **Stanford-Binet 5th Edition** also uses CHC but with fewer broad abilities. Wechsler indexes map onto CHC abilities post-hoc (VCI = Gc, FRI = Gf, VSI = Gv, WMI = Gsm, PSI = Gs)
 
 - **The Flynn effect** caused IQ scores to rise ~3 points per decade in the 20th century, making it critical to use current norms for accurate assessment, especially in intellectual disability evaluations
 
