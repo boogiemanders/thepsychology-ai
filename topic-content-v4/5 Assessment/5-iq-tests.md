@@ -103,33 +103,33 @@ After routing, you establish a **basal level** (the highest point where the pers
 
 ### Who and What
 
-The Woodcock-Johnson is the most comprehensive, theory-driven operationalization of CHC theory. It's designed from the ground up to measure the broadest range of CHC broad and narrow cognitive abilities of any individually administered intelligence battery, which is why most CHC research uses the WJ family.
+If CHC theory had a "home" intelligence test, it would be the Woodcock-Johnson. Kevin McGrew, one of the WJ authors, helped invent CHC theory itself. So when the WJ-III came out in 2001, it was the first major IQ test built directly around CHC from the ground up. Most CHC research today still uses the WJ.
 
-The current edition (WJ-IV, 2014) covers ages 2 to 90+ and proposes seven broad CHC abilities:
+The current version (WJ-IV, 2014) tests people ages 2 to 90+ and measures seven broad CHC abilities:
 
 | CHC Ability | What It Measures |
 |-------------|------------------|
-| Fluid Reasoning (Gf) | Novel problem-solving and inductive/deductive logic |
-| Comprehension-Knowledge (Gc) | Acquired knowledge and vocabulary |
-| Visual Processing (Gv) | Spatial and visual pattern analysis |
-| Short-Term Working Memory (Gwm) | Holding and manipulating information |
-| Auditory Processing (Ga) | Phonological awareness and sound discrimination |
-| Long-Term Retrieval (Glr) | Storing and retrieving information over time |
-| Processing Speed (Gs) | Speed of simple cognitive tasks |
+| Fluid Reasoning (Gf) | Solving new problems you've never seen before |
+| Comprehension-Knowledge (Gc) | What you know and your vocabulary |
+| Visual Processing (Gv) | Seeing patterns and thinking about space |
+| Short-Term Working Memory (Gwm) | Holding info in your head and using it |
+| Auditory Processing (Ga) | Hearing the difference between sounds |
+| Long-Term Retrieval (Glr) | Storing things and getting them back later |
+| Processing Speed (Gs) | How fast your brain does simple tasks |
 
 ### How It Works
 
-The WJ-IV's General Intellectual Ability (GIA) composite isn't a simple average. Tests are weighted by their g-loadings, so tests that load more heavily on general intelligence count more. This makes the GIA a psychometrically optimized estimate of g.
+The WJ-IV gives you a General Intellectual Ability (GIA) score, kind of like an overall IQ. But it's not a simple average of every test. Tests that better predict general intelligence count more than tests that don't.
 
-{{M}}Think of GIA like a weighted GPA where AP classes count more than electives, not because the AP teacher likes them more, but because those classes are better predictors of college performance.{{/M}}
+{{M}}Think of GIA like a weighted GPA where AP classes count more than electives. Not because AP teachers are nicer, but because those grades say more about how you'll do in college.{{/M}}
 
 ### Cross-Battery Assessment (XBA)
 
-Dawn Flanagan and Kevin McGrew (later with Samuel Ortiz) developed Cross-Battery Assessment in the late 1990s. XBA uses CHC theory as an organizing framework to supplement a primary battery with subtests from others, so all relevant CHC abilities get measured. The WJ is central to XBA because it provides the broadest CHC coverage of any single battery.
+Sometimes one IQ test doesn't cover everything you want to measure. Cross-Battery Assessment is a method (created by Dawn Flanagan and Kevin McGrew) that lets you mix subtests from different IQ tests to fill in the gaps, all organized around CHC abilities. The WJ is usually the starting point because it covers more CHC abilities than any other single test.
 
 ### Why This Matters for the EPPP
 
-If a question asks which intelligence test was "most influenced by" or "designed around" or "operationalizes" CHC theory, the answer is **Woodcock-Johnson**. SB5 also uses CHC but is a less comprehensive CHC battery and adopted the framework after WJ-III.
+If a question asks which intelligence test is most tied to CHC theory, or was built around CHC, or "operationalizes" CHC, the answer is **Woodcock-Johnson**. The SB5 also uses CHC but covers fewer abilities and came after the WJ-III.
 
 ## Wechsler Adult Intelligence Scale, 4th Edition (WAIS-IV)
 
