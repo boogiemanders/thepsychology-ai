@@ -105,6 +105,8 @@ After routing, you establish a **basal level** (the highest point where the pers
 
 If CHC theory had a "home" intelligence test, it would be the Woodcock-Johnson. Kevin McGrew, one of the WJ authors, helped invent CHC theory itself. So when the WJ-III came out in 2001, it was the first major IQ test built directly around CHC from the ground up. Most CHC research today still uses the WJ.
 
+{{M}}If CHC theory is the blueprint for how intelligence works, the WJ is the building someone actually constructed from it. The SB5 is a nearby building that borrowed parts of the same blueprint.{{/M}}
+
 The current version (WJ-IV, 2014) tests people ages 2 to 90+ and measures seven broad CHC abilities:
 
 | CHC Ability | What It Measures |
@@ -126,6 +128,8 @@ The WJ-IV gives you a General Intellectual Ability (GIA) score, kind of like an 
 ### Cross-Battery Assessment (XBA)
 
 Sometimes one IQ test doesn't cover everything you want to measure. Cross-Battery Assessment is a method (created by Dawn Flanagan and Kevin McGrew) that lets you mix subtests from different IQ tests to fill in the gaps, all organized around CHC abilities. The WJ is usually the starting point because it covers more CHC abilities than any other single test.
+
+{{M}}XBA is like mixing tools from different toolboxes. Your WJ wrench fits most bolts, but sometimes you grab a Wechsler screwdriver to finish the job.{{/M}}
 
 ### Why This Matters for the EPPP
 
