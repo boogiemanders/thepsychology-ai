@@ -57,7 +57,7 @@ function getDomainFolder(domain: string): string | null {
   }
 
   // Try to find a folder that contains this domain name
-  const rootDir = path.join(process.cwd(), 'topic-content-v4')
+  const rootDir = path.join(process.cwd(), 'EPPP/content/topic-content-v4')
   try {
     const folders = readdirSync(rootDir, { withFileTypes: true })
       .filter(d => d.isDirectory())
@@ -174,7 +174,7 @@ function resolveLessonIdFromDomainTopic(domain: string, topic: string): string |
     return null
   }
 
-  const rootDir = path.join(process.cwd(), 'topic-content-v4')
+  const rootDir = path.join(process.cwd(), 'EPPP/content/topic-content-v4')
   const baseDir = path.join(rootDir, domainFolder)
 
   if (!existsSync(baseDir)) {
@@ -203,7 +203,7 @@ function resolveLessonIdFromDomainTopic(domain: string, topic: string): string |
  * This supports links that omit `domain`.
  */
 function resolveLessonIdFromTopic(topic: string): string | null {
-  const rootDir = path.join(process.cwd(), 'topic-content-v4')
+  const rootDir = path.join(process.cwd(), 'EPPP/content/topic-content-v4')
   const topicSlug = slugifyTopicName(topic)
   const matches: string[] = []
   const seenFolders = new Set<string>()

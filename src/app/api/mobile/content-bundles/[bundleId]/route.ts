@@ -78,7 +78,7 @@ function extractSections(markdown: string): string[] {
 }
 
 async function handleLesson(slug: string) {
-  const baseDir = join(process.cwd(), 'topic-content-v4')
+  const baseDir = join(process.cwd(), 'EPPP/content/topic-content-v4')
   const filePath = await findFileBySlug(baseDir, slug, '.md')
   if (!filePath) return null
 
@@ -101,7 +101,7 @@ async function handleLesson(slug: string) {
 
 async function handleExam(slug: string) {
   // Exams are markdown-based question sets; look in topic-content-v4 or a dedicated exam dir
-  const baseDir = join(process.cwd(), 'topic-content-v4')
+  const baseDir = join(process.cwd(), 'EPPP/content/topic-content-v4')
   const filePath = await findFileBySlug(baseDir, slug, '.md')
   if (!filePath) return null
 

@@ -8,7 +8,7 @@ const BLOCK_INVALID = process.env.SKIP_VALIDATION !== '1'
 
 const ROOT = process.cwd()
 const QUESTIONS_DIR = path.join(ROOT, 'EPPP/content/questionsGPT')
-const LESSONS_DIR = path.join(ROOT, 'topic-content-v4')
+const LESSONS_DIR = path.join(ROOT, 'EPPP/content/topic-content-v4')
 const REVIEW_SOURCES = [
   { name: 'AATBS', dir: path.join(ROOT, 'staging', 'review', 'AATBS') },
   { name: 'psychprep', dir: path.join(ROOT, 'staging', 'review', 'psychprep') },

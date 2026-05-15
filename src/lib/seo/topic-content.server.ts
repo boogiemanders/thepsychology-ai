@@ -2,6 +2,7 @@ import "server-only"
 
 import fs from "node:fs"
 import path from "node:path"
+import { V4_FOLDER_TO_URL_DOMAIN, URL_DOMAIN_TO_V4_FOLDER } from "@/lib/topic-paths"
 
 export type TopicContentEntry = {
   domainDir: string
@@ -17,7 +18,7 @@ type FrontmatterParseResult = {
   content: string
 }
 
-const TOPIC_CONTENT_ROOT = path.join(process.cwd(), "topic-content")
+const TOPIC_CONTENT_ROOT = path.join(process.cwd(), "EPPP/content/topic-content-v4")
 
 function parseFrontmatter(raw: string): FrontmatterParseResult {
   if (!raw.startsWith("---\n")) {
@@ -64,11 +65,16 @@ function listDomainDirs() {
 }
 
 export function getAllTopicContentEntries(): TopicContentEntry[] {
-  const domains = listDomainDirs()
+  const onDiskFolders = listDomainDirs()
   const entries: TopicContentEntry[] = []
 
-  for (const domainDir of domains) {
-    const domainPath = path.join(TOPIC_CONTENT_ROOT, domainDir)
+  for (const onDiskFolder of onDiskFolders) {
+    // Only surface folders we have a URL mapping for. v4 may contain extras
+    // (e.g. unsorted reference files) we don't want to expose as SEO pages.
+    const urlDomainSlug = V4_FOLDER_TO_URL_DOMAIN[onDiskFolder]
+    if (!urlDomainSlug) continue
+
+    const domainPath = path.join(TOPIC_CONTENT_ROOT, onDiskFolder)
     const files = fs
       .readdirSync(domainPath, { withFileTypes: true })
       .filter((entry) => entry.isFile() && entry.name.toLowerCase().endsWith(".md"))
@@ -81,11 +87,11 @@ export function getAllTopicContentEntries(): TopicContentEntry[] {
       const { data } = parseFrontmatter(raw)
       const slug = data.slug?.trim() || getSlugFromFilename(filename)
       const topicName = data.topic_name?.trim() || slug.replace(/-/g, " ")
-      const domainLabel = data.domain?.trim() || domainDir
+      const domainLabel = data.domain?.trim() || onDiskFolder
       const stat = fs.statSync(filePath)
 
       entries.push({
-        domainDir,
+        domainDir: urlDomainSlug,
         slug,
         topicName,
         domainLabel,
@@ -99,6 +105,9 @@ export function getAllTopicContentEntries(): TopicContentEntry[] {
 }
 
 export function getTopicContentMarkdown(domainDir: string, slug: string) {
+  // domainDir is the URL-facing kebab slug; map back to the v4 on-disk folder.
+  if (!URL_DOMAIN_TO_V4_FOLDER[domainDir]) return null
+
   const entries = getAllTopicContentEntries()
   const entry = entries.find((e) => e.domainDir === domainDir && e.slug === slug)
   if (!entry) return null

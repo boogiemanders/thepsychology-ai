@@ -42,7 +42,7 @@ import { computeChunkHash, computeContentHash, TIMING_SCHEMA_VERSION } from './l
 import { runMFABatch, parseTextGrid, writeTranscript, checkMFAInstalled, checkMFAModels } from './lib/mfa-align'
 
 // Configuration
-const DEFAULT_CONTENT_ROOT = 'topic-content-v4'
+const DEFAULT_CONTENT_ROOT = 'EPPP/content/topic-content-v4'
 const DEFAULT_TTS_MODEL = 'gpt-4o-mini-tts'
 const FALLBACK_TTS_MODEL = 'tts-1'
 const DEFAULT_VOICE = 'alloy'

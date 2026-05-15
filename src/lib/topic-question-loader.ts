@@ -80,7 +80,7 @@ function findTopicContentAlias(topicName: string, domainId: string): string | nu
   const domainFolder = DOMAIN_FOLDER_MAP[domainId]
   if (!domainFolder) return null
 
-  const topicDir = path.join(process.cwd(), 'topic-content-v4', domainFolder)
+  const topicDir = path.join(process.cwd(), 'EPPP/content/topic-content-v4', domainFolder)
   if (!fs.existsSync(topicDir)) return null
 
   const targetKey = normalizeTopicLookupKey(topicName)

@@ -5,7 +5,7 @@ import path from 'path'
 
 const ROOT = process.cwd()
 const QUESTIONS_DIR = path.join(ROOT, 'EPPP/content/questionsGPT')
-const LESSONS_DIR = path.join(ROOT, 'topic-content-v4')
+const LESSONS_DIR = path.join(ROOT, 'EPPP/content/topic-content-v4')
 const KNS_PATH = path.join(ROOT, 'KNs.md')
 
 const STOPWORDS = new Set([

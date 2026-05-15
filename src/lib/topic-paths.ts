@@ -16,6 +16,28 @@ export const DOMAIN_FOLDER_MAP: Record<string, string> = {
   '3-5-6': '2 3 5 6 I-O Psychology',
 }
 
+// Maps v4 on-disk folder names to the stable kebab slug used in public SEO URLs
+// (e.g. /resources/topics/<slug>/...). Lets SEO read v4 lessons while keeping
+// pre-existing URLs intact.
+export const V4_FOLDER_TO_URL_DOMAIN: Record<string, string> = {
+  '1 Biopsychology (Neuroscience & Pharmacology)': '1-biological-bases',
+  '2 Learning and Memory': '2-cognitive-affective-bases',
+  '2 3 5 6 I-O Psychology': '3-5-6-organizational-psychology',
+  '3 Cultural Considerations': '3-cultural-psychology',
+  '3 Social Psychology': '3-social-psychology',
+  '4 Development': '4-growth-lifespan-development',
+  '5 Assessment': '5-assessment',
+  '5 Diagnosis': '5-diagnosis-psychopathology',
+  '5 Test Construction': '5-test-construction',
+  '6 Clinical Interventions': '6-treatment-intervention',
+  '7 Research and Stats': '7-research-methods-statistics',
+  '8 Ethics': '8-ethical-legal-professional-issues',
+}
+
+export const URL_DOMAIN_TO_V4_FOLDER: Record<string, string> = Object.fromEntries(
+  Object.entries(V4_FOLDER_TO_URL_DOMAIN).map(([folder, slug]) => [slug, folder])
+)
+
 export const DOMAIN_NUMBER_MAP: Record<string, string[]> = {
   '1': ['1'],
   '2': ['2'],

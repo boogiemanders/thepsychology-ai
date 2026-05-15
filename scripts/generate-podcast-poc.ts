@@ -26,7 +26,7 @@ const SCRIPT_PATH = 'podcast-output/3-attitudes-script.json'
 const OUTPUT_DIR = 'podcast-output'
 const OUTPUT_MP3 = 'podcast-output/3-attitudes.mp3'
 const OUTPUT_MP4 = 'podcast-output/3-attitudes.mp4'
-const LESSON_MD = 'topic-content-v4/3 Social Psychology/3-attitudes.md'
+const LESSON_MD = 'EPPP/content/topic-content-v4/3 Social Psychology/3-attitudes.md'
 
 const VOICES: Record<string, string> = {
   A: 'en-US-GuyNeural',   // Host A: teacher

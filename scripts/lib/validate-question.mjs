@@ -1,7 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 
-const CONTENT_DIR_DEFAULT = path.resolve('topic-content-v4')
+const CONTENT_DIR_DEFAULT = path.resolve('EPPP/content/topic-content-v4')
 
 const lessonTextCache = new Map()
 

@@ -42,7 +42,7 @@ type TopicIndexEntry = {
 }
 
 const TOPIC_CONTENT_ROOTS: Record<TopicContentRootKey, string> = {
-  default: path.join(process.cwd(), 'topic-content-v4'),
+  default: path.join(process.cwd(), 'EPPP/content/topic-content-v4'),
   free: path.join(process.cwd(), 'EPPP/content/free-contentGPT'),
 }
 

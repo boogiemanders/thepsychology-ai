@@ -36,7 +36,7 @@ const DOMAIN_FOLDER_MAP = {
 
 const PARSED_DIR = path.resolve('staging/pdf-parsed')
 const REVIEW_DIR = path.resolve('staging/review/psychprep')
-const CONTENT_DIR = path.resolve('topic-content-v4')
+const CONTENT_DIR = path.resolve('EPPP/content/topic-content-v4')
 const OPENAI_MODEL = process.env.OPENAI_MODEL || 'gpt-4o-mini'
 
 function sanitizeOpenAIApiKey(raw) {
