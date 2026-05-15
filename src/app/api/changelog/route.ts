@@ -72,6 +72,11 @@ const EXCLUDED_CHANGELOG_TEXT_PATTERNS = [
   /\btava\b/i,
   /\bga4\b/i,
   /\bgpt\b/i,
+  // PII safety: never expose person names anywhere in title or body
+  /\bdr\.?\s+[A-Z][a-z]/,
+  /\bmr\.?\s+[A-Z][a-z]/,
+  /\bms\.?\s+[A-Z][a-z]/,
+  /\bmrs\.?\s+[A-Z][a-z]/,
 ]
 
 // Also exclude commits that mention lab or SENSE in the title
@@ -119,6 +124,47 @@ const EXCLUDED_CHANGELOG_TITLE_PATTERNS = [
   /feedback[\s-]mcp/i,
   /feedback inbox/i,
   /resend/i,
+  // Chrome extensions / privacy policy edits
+  /zocdoc/i,
+  /chrome[\s-]?web[\s-]?store/i,
+  /\bprivacy policy\b/i,
+  /\bphi\b/i,
+  /^ext-/i,
+  /-ext:/i,
+  // Internal admin / triage work
+  /\binbox\b/i,
+  /\btriage\b/i,
+  /\badmin\b/i,
+  // Internal content folder / research / protocol commits
+  /^content\//i,
+  /\boe research\b/i,
+  /openevidence/i,
+  /\bchronic pain\b/i,
+  /pain neuroscience/i,
+  /\bnpc\b/i,
+  /\bprotocol\b/i,
+  /\bbiomarker/i,
+  /code plan/i,
+  /content plan/i,
+  /content design/i,
+  /content spec/i,
+  /\bcpaq\b/i,
+  /\btsk(-17)?\b/i,
+  /\bbpi(-sf)?\b/i,
+  /\bprt\b/i,
+  /easevrx/i,
+  /\binzi\b/i,
+  /\binzinna\b/i,
+  /\bchatbot\b/i,
+  /clinic manual/i,
+  /employee handbook/i,
+  /brand strategy/i,
+  /google docs?/i,
+  // Block any commit referencing a person ("Dr. Surname", "Mr.", "Ms.", "Mrs.")
+  /\bdr\.?\s+[A-Z]/,
+  /\bmr\.?\s+[A-Z]/,
+  /\bms\.?\s+[A-Z]/,
+  /\bmrs\.?\s+[A-Z]/,
 ]
 
 function normalizeChangelogAuthor(author: string | null | undefined): string | null {
@@ -187,6 +233,12 @@ function isMergeCommit(title: string): boolean {
 function isUserRelevantEntry(entry: ApiChangelogEntry): boolean {
   const text = `${entry.title} ${entry.body || ''}`
   const normalizedText = text.toLowerCase()
+
+  // Exclude commits authored by Claude / bots — those are internal automation
+  const author = (entry.author || '').toLowerCase()
+  if (author === 'claude' || author === 'claude-bot' || author.includes('[bot]')) {
+    return false
+  }
 
   // Check keyword exclusions
   if (EXCLUDED_CHANGELOG_KEYWORDS.some(keyword => normalizedText.includes(keyword))) {
