@@ -8,6 +8,8 @@ export const metadata: Metadata = {
   description: 'Side projects, month by month. Anders Chan personal roadmap across the year.',
 }
 
+export const dynamic = 'force-dynamic'
+
 const TIMELINE_KEY = 'anders-personal'
 
 // Only people on Anders' personal projects show in the picker.
