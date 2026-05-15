@@ -4,9 +4,9 @@ import fs from 'fs'
 import path from 'path'
 
 const ROOT = process.cwd()
-const EXAMS_DIR = path.join(ROOT, 'examsGPT')
+const EXAMS_DIR = path.join(ROOT, 'EPPP/content/examsGPT')
 const REVIEW_DIR = path.join(ROOT, 'staging', 'review')
-const ROOT_BANK_DIR = path.join(ROOT, 'questionsGPT')
+const ROOT_BANK_DIR = path.join(ROOT, 'EPPP/content/questionsGPT')
 const LESSONS_DIR = path.join(ROOT, 'topic-content-v4')
 
 function readJson(filePath) {

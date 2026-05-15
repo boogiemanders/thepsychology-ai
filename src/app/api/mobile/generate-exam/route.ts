@@ -167,7 +167,7 @@ export async function POST(request: NextRequest) {
     let questions: ServerQuestion[] | null = null
 
     if (examType === 'diagnostic') {
-      const freeDir = join(cwd, 'free-examsGPT')
+      const freeDir = join(cwd, 'EPPP/content/free-examsGPT')
       if (isPro) {
         questions = loadJsonFile(freeDir, 'diagnostic-exam-', 'diagnostic-exam-short-')
       }
@@ -175,7 +175,7 @@ export async function POST(request: NextRequest) {
         questions = loadJsonFile(freeDir, 'diagnostic-exam-short-')
       }
     } else {
-      const proDir = join(cwd, 'examsGPT')
+      const proDir = join(cwd, 'EPPP/content/examsGPT')
       questions = loadJsonFile(proDir, 'practice-exam-')
     }
 

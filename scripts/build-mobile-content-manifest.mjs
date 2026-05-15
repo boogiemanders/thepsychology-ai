@@ -17,7 +17,7 @@ import { createHash } from 'node:crypto';
 
 const ROOT = resolve(import.meta.dirname, '..');
 const CONTENT_DIR = join(ROOT, 'topic-content-v4');
-const QUESTIONS_DIR = join(ROOT, 'questionsGPT');
+const QUESTIONS_DIR = join(ROOT, 'EPPP/content/questionsGPT');
 const EXAMS_PRACTICE_DIR = join(ROOT, 'exams', 'practice');
 const EXAMS_DIAGNOSTIC_DIR = join(ROOT, 'exams', 'diagnostic');
 const EXAMS_EXPLANATIONS_DIR = join(ROOT, 'exams', 'explanations');

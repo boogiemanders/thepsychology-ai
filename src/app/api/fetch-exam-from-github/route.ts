@@ -48,7 +48,7 @@ export async function GET(request: NextRequest) {
       )
     } else {
       // Fall back to legacy exams/ markdown files
-      const examsDir = join(process.cwd(), 'exams', examType)
+      const examsDir = join(process.cwd(), 'EPPP/content/exams', examType)
       const filePath = join(examsDir, examFile)
 
       let content: string
@@ -107,8 +107,8 @@ function loadExamFromGptJson(
 
   const gptDir =
     examType === 'practice'
-      ? join(process.cwd(), 'examsGPT')
-      : join(process.cwd(), 'diagnosticGPT')
+      ? join(process.cwd(), 'EPPP/content/examsGPT')
+      : join(process.cwd(), 'EPPP/tooling/diagnosticGPT')
   const jsonFileName =
     examType === 'practice'
       ? `practice-exam-${examNumber}.json`

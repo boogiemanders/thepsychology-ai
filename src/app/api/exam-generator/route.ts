@@ -496,7 +496,7 @@ function loadFreeExamFromGpt(
   examType: 'diagnostic' | 'practice',
   length: 'short' | 'default' = 'default',
 ) {
-  const freeDir = join(process.cwd(), 'free-examsGPT')
+  const freeDir = join(process.cwd(), 'EPPP/content/free-examsGPT')
   if (!existsSync(freeDir)) {
     throw new Error(`free-examsGPT directory not found at ${freeDir}`)
   }
@@ -605,7 +605,7 @@ function loadFreeExamFromGpt(
  * question shape expected by the exam generator page.
  */
 function loadDiagnosticFromGpt() {
-  const diagnosticDir = join(process.cwd(), 'diagnosticGPT')
+  const diagnosticDir = join(process.cwd(), 'EPPP/tooling/diagnosticGPT')
   if (!existsSync(diagnosticDir)) {
     throw new Error(`diagnosticGPT directory not found at ${diagnosticDir}`)
   }
@@ -682,7 +682,7 @@ function loadDiagnosticFromGpt() {
  * This avoids needing to call Anthropic if we already have cached practice exams.
  */
 function loadPracticeFromGpt() {
-  const practiceDir = join(process.cwd(), 'examsGPT')
+  const practiceDir = join(process.cwd(), 'EPPP/content/examsGPT')
   if (!existsSync(practiceDir)) {
     throw new Error(`examsGPT directory not found at ${practiceDir}`)
   }

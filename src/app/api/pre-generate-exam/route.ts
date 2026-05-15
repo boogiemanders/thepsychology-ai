@@ -321,7 +321,7 @@ export async function POST(request: NextRequest) {
 
     // Save to filesystem
     try {
-      const examsDir = join(process.cwd(), 'exams', examType)
+      const examsDir = join(process.cwd(), 'EPPP/content/exams', examType)
 
       // Create directory if it doesn't exist
       try {

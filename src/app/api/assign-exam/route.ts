@@ -187,8 +187,8 @@ function getAvailableExamFilesList(examType: 'diagnostic' | 'practice'): string[
   const prefix = examType === 'diagnostic' ? 'diagnostic-exam-' : 'practice-exam-'
   const gptDir =
     examType === 'diagnostic'
-      ? join(process.cwd(), 'diagnosticGPT')
-      : join(process.cwd(), 'examsGPT')
+      ? join(process.cwd(), 'EPPP/tooling/diagnosticGPT')
+      : join(process.cwd(), 'EPPP/content/examsGPT')
 
   if (existsSync(gptDir)) {
     const gptFiles = readdirSync(gptDir)
@@ -208,7 +208,7 @@ function getAvailableExamFilesList(examType: 'diagnostic' | 'practice'): string[
     }
   }
 
-  const legacyDir = join(process.cwd(), 'exams', examType)
+  const legacyDir = join(process.cwd(), 'EPPP/content/exams', examType)
   if (existsSync(legacyDir)) {
     return readdirSync(legacyDir)
       .filter((name) => name.startsWith(prefix) && name.endsWith('.md'))
@@ -245,7 +245,7 @@ function loadExamFromDisk(
   }
 
   try {
-    const examsDir = join(process.cwd(), 'exams', examType)
+    const examsDir = join(process.cwd(), 'EPPP/content/exams', examType)
     const filePath = join(examsDir, examFile)
 
     console.log(`[Assign Exam] Loading exam from disk: ${filePath}`)
@@ -259,7 +259,7 @@ function loadExamFromDisk(
     if (examData.metadata.version >= 3 || examData.metadata.format === 'split') {
       try {
         // Load explanations from separate file
-        const explanationsDir = join(process.cwd(), 'exams', 'explanations')
+        const explanationsDir = join(process.cwd(), 'EPPP/content/exams', 'explanations')
         const explanationFile = examFile.replace('.md', '-explanations.json')
         const explanationPath = join(explanationsDir, explanationFile)
 
@@ -316,8 +316,8 @@ function loadExamFromGptJson(
 
   const gptDir =
     examType === 'practice'
-      ? join(process.cwd(), 'examsGPT')
-      : join(process.cwd(), 'diagnosticGPT')
+      ? join(process.cwd(), 'EPPP/content/examsGPT')
+      : join(process.cwd(), 'EPPP/tooling/diagnosticGPT')
   const jsonFileName =
     examType === 'practice'
       ? `practice-exam-${examNumber}.json`

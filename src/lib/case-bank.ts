@@ -6,7 +6,7 @@ import { z } from 'zod'
 import { findTopicFile } from './topic-paths'
 
 const CASES_DIR = path.join(process.cwd(), 'caseBank', 'cases')
-const QUESTIONS_DIR = path.join(process.cwd(), 'questionsGPT')
+const QUESTIONS_DIR = path.join(process.cwd(), 'EPPP/content/questionsGPT')
 
 const CaseOptionSchema = z.object({
   id: z.string().min(1),

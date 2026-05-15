@@ -20,7 +20,7 @@ type QuestionSet = {
   questions: PracticeQuestion[]
 }
 
-const QUESTIONS_ROOT = path.join(process.cwd(), "questions")
+const QUESTIONS_ROOT = path.join(process.cwd(), "EPPP/content/questions")
 
 function normalizeOptions(options: unknown): Array<{ label: string; text: string }> {
   if (Array.isArray(options)) {

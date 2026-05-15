@@ -2,7 +2,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import OpenAI from 'openai'
 
-const QUESTIONS_ROOT = path.join(process.cwd(), 'questionsGPT')
+const QUESTIONS_ROOT = path.join(process.cwd(), 'EPPP/content/questionsGPT')
 
 const DEFAULT_MODEL = 'gpt-4o-mini'
 const DEFAULT_CONCURRENCY = 2

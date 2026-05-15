@@ -227,7 +227,7 @@ async function generateExam(type: 'diagnostic' | 'practice', number: number) {
   console.log(`✓ Parsed ${examData.questions.length} questions`)
 
   // Save to file
-  const dir = join(process.cwd(), 'exams', type)
+  const dir = join(process.cwd(), 'EPPP/content/exams', type)
   mkdirSync(dir, { recursive: true })
 
   const filename = `${type}-exam-${String(number).padStart(3, '0')}.md`

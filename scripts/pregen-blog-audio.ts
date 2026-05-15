@@ -27,7 +27,7 @@ import { computeChunkHash, computeContentHash, TIMING_SCHEMA_VERSION } from './l
 import { runMFABatch, parseTextGrid, writeTranscript, checkMFAInstalled, checkMFAModels } from './lib/mfa-align'
 
 // Configuration
-const BLOG_CONTENT_DIR = 'blog-content'
+const BLOG_CONTENT_DIR = 'EPPP/content/blog-content'
 const DEFAULT_MAX_CHARS_PER_CHUNK = 1400
 
 // Edge TTS configuration

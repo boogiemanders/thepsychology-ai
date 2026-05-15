@@ -45,7 +45,7 @@ interface ExamQuestion {
 
 const ROOT = process.cwd()
 const STAGING_DIR = join(ROOT, 'staging', 'review', 'psychprep')
-const FALLBACK_DIR = join(ROOT, 'questionsGPT')
+const FALLBACK_DIR = join(ROOT, 'EPPP/content/questionsGPT')
 const OUTPUT_DIR = join(ROOT, 'exams', 'practice')
 
 // Full domain labels used in the quizzer

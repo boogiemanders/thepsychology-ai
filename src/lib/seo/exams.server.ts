@@ -21,7 +21,7 @@ export type SampleExam = {
   questions: ExamQuestion[]
 }
 
-const EXAMS_ROOT = path.join(process.cwd(), "exams")
+const EXAMS_ROOT = path.join(process.cwd(), "EPPP/content/exams")
 
 function parseFrontmatterAndBody(raw: string) {
   if (!raw.startsWith("---\n")) {

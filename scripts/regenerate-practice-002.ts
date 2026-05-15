@@ -111,7 +111,7 @@ IMPORTANT:
 - Provide explanations for all 225 questions (indices 0-224)`
 
 async function generateExam() {
-  const examDir = join(process.cwd(), 'exams', 'practice')
+  const examDir = join(process.cwd(), 'EPPP/content/exams', 'practice')
   mkdirSync(examDir, { recursive: true })
 
   const examFile = join(examDir, 'practice-exam-002.md')

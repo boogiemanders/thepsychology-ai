@@ -20,7 +20,7 @@ type FrontmatterParseResult = {
   content: string
 }
 
-const BLOG_CONTENT_ROOT = path.join(process.cwd(), "blog-content")
+const BLOG_CONTENT_ROOT = path.join(process.cwd(), "EPPP/content/blog-content")
 
 function parseFrontmatter(raw: string): FrontmatterParseResult {
   if (!raw.startsWith("---\n")) {

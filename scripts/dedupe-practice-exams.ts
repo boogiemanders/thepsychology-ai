@@ -17,8 +17,8 @@ import { createHash } from 'crypto'
 import path from 'path'
 
 const REPO = path.resolve(__dirname, '..')
-const EXAMS_DIR = path.join(REPO, 'examsGPT')
-const BANK_DIR = path.join(REPO, 'questionsGPT')
+const EXAMS_DIR = path.join(REPO, 'EPPP/content/examsGPT')
+const BANK_DIR = path.join(REPO, 'EPPP/content/questionsGPT')
 const REPORT_PATH = path.join(REPO, 'scripts', 'dedupe-report.json')
 
 type RawQuestion = Record<string, any>

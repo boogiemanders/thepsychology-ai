@@ -7,7 +7,7 @@ import { validateQuestion } from './lib/validate-question.mjs'
 const BLOCK_INVALID = process.env.SKIP_VALIDATION !== '1'
 
 const ROOT = process.cwd()
-const QUESTIONS_DIR = path.join(ROOT, 'questionsGPT')
+const QUESTIONS_DIR = path.join(ROOT, 'EPPP/content/questionsGPT')
 const LESSONS_DIR = path.join(ROOT, 'topic-content-v4')
 const REVIEW_SOURCES = [
   { name: 'AATBS', dir: path.join(ROOT, 'staging', 'review', 'AATBS') },

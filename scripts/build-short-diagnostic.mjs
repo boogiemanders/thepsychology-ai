@@ -7,8 +7,8 @@ import { fileURLToPath } from 'node:url'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const ROOT = join(__dirname, '..')
-const SRC = join(ROOT, 'free-questionsGPT')
-const OUT = join(ROOT, 'free-examsGPT', 'diagnostic-exam-short-1.json')
+const SRC = join(ROOT, 'EPPP/content/free-questionsGPT')
+const OUT = join(ROOT, 'EPPP/content/free-examsGPT', 'diagnostic-exam-short-1.json')
 
 function collectDomainQuestions(domain) {
   // Match single-domain folders only (e.g. "2 Cognitive..."), skip multi-domain

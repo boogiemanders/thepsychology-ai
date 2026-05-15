@@ -17,8 +17,8 @@ import Anthropic from '@anthropic-ai/sdk'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const ROOT_DIR = path.join(__dirname, '..')
-const QUESTIONS_DIR = path.join(ROOT_DIR, 'questionsGPT')
-const REFERENCE_DIR = path.join(ROOT_DIR, 'eppp-reference og')
+const QUESTIONS_DIR = path.join(ROOT_DIR, 'EPPP/content/questionsGPT')
+const REFERENCE_DIR = path.join(ROOT_DIR, 'EPPP/content/eppp-reference og')
 
 // Initialize Anthropic
 const anthropic = new Anthropic({

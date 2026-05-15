@@ -119,7 +119,7 @@ async function handleExam(slug: string) {
 }
 
 async function handleQuiz(slug: string) {
-  const baseDir = join(process.cwd(), 'questionsGPT')
+  const baseDir = join(process.cwd(), 'EPPP/content/questionsGPT')
   const filePath = await findFileBySlug(baseDir, slug, '.json')
   if (!filePath) return null
 

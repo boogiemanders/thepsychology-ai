@@ -176,7 +176,7 @@ async function generateQuestions(type: 'diagnostic' | 'practice', number: number
   console.log(`✓ Parsed ${examData.questions.length} questions`)
 
   // Save questions file
-  const dir = join(process.cwd(), 'exams', type)
+  const dir = join(process.cwd(), 'EPPP/content/exams', type)
   mkdirSync(dir, { recursive: true })
 
   const filename = `${type}-exam-${String(number).padStart(3, '0')}.md`
@@ -259,7 +259,7 @@ Generate explanations for ALL ${examData.questions.length} questions.`
   console.log(`✓ Parsed ${Object.keys(explanationsData.explanations).length} explanations`)
 
   // Save explanations file
-  const dir = join(process.cwd(), 'exams', 'explanations')
+  const dir = join(process.cwd(), 'EPPP/content/exams', 'explanations')
   mkdirSync(dir, { recursive: true })
 
   const filename = `${type}-exam-${String(number).padStart(3, '0')}-explanations.json`

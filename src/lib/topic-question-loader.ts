@@ -2,7 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import { DOMAIN_FOLDER_MAP, DOMAIN_NUMBER_MAP, findTopicFile } from './topic-paths'
 
-const QUESTIONS_DIR = path.join(process.cwd(), 'questionsGPT')
+const QUESTIONS_DIR = path.join(process.cwd(), 'EPPP/content/questionsGPT')
 
 export interface TopicQuestion {
   stem?: string

@@ -4,8 +4,8 @@ import fs from 'fs'
 import path from 'path'
 
 const ROOT = process.cwd()
-const QUESTIONS_DIR = path.join(ROOT, 'questionsGPT')
-const PRACTICE_OUTPUT_DIR = path.join(ROOT, 'examsGPT')
+const QUESTIONS_DIR = path.join(ROOT, 'EPPP/content/questionsGPT')
+const PRACTICE_OUTPUT_DIR = path.join(ROOT, 'EPPP/content/examsGPT')
 const DIAGNOSTIC_OUTPUT_DIR = path.join(ROOT, 'EPPP/tooling/diagnosticGPT')
 const KNS_CANDIDATE_PATHS = ['EPPP/docs/KNs.md', 'EPPP/docs/Kns.md', 'KNs.md', 'Kns.md']
 
