@@ -3,7 +3,7 @@
 set -euo pipefail
 
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-ENV_FILE="${FEEDBACK_MCP_ENV_FILE:-$HOME/thepsychology-ai/.env.local}"
+ENV_FILE="${EPPP_MCP_ENV_FILE:-${FEEDBACK_MCP_ENV_FILE:-$HOME/thepsychology-ai/.env.local}}"
 
 if [ -f "$ENV_FILE" ]; then
   set -a
