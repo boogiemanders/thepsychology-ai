@@ -105,6 +105,20 @@ const EXCLUDED_CHANGELOG_TITLE_PATTERNS = [
   /karpathy/i,
   /emotion code/i,
   /claude\.md/i,
+  // VR / Unity / Quest internal work
+  /\bvr\b/i,
+  /\bunity\b/i,
+  /\bquest\b/i,
+  /\bxr\b/i,
+  /\boculus\b/i,
+  /\bmuse\b/i,
+  /\bhrv\b/i,
+  /\beeg\b/i,
+  // MCP servers / internal tooling
+  /\bmcp\b/i,
+  /feedback[\s-]mcp/i,
+  /feedback inbox/i,
+  /resend/i,
 ]
 
 function normalizeChangelogAuthor(author: string | null | undefined): string | null {
