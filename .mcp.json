@@ -45,8 +45,8 @@
         "TOKEN_PATH": "/Users/anderschan/.claude/google-token.json"
       }
     },
-    "feedback": {
-      "command": "/Users/anderschan/thepsychology-ai/mcp/feedback-mcp/run.sh"
+    "eppp": {
+      "command": "/Users/anderschan/thepsychology-ai/mcp/eppp-mcp/run.sh"
     }
   }
 }

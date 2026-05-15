@@ -13,7 +13,7 @@ const RESEND_API_KEY = process.env.RESEND_API_KEY;
 const NOTIFY_EMAIL_FROM = process.env.NOTIFY_EMAIL_FROM;
 
 if (!SUPABASE_URL || !SERVICE_KEY) {
-  console.error("[feedback-mcp] Missing NEXT_PUBLIC_SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY");
+  console.error("[eppp-mcp] Missing NEXT_PUBLIC_SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY");
   process.exit(1);
 }
 
@@ -121,6 +121,17 @@ const tools = [
     },
   },
   {
+    name: "growth_chart",
+    description: "ASCII bar chart of new signups and new paid (Stripe) users over time. Pick a granularity (day, week, month) and lookback window.",
+    inputSchema: {
+      type: "object",
+      properties: {
+        granularity: { type: "string", enum: ["day", "week", "month"], default: "day" },
+        lookback: { type: "integer", description: "Number of buckets to look back (e.g. 30 days, 12 weeks, 12 months). Defaults: day=30, week=12, month=12." },
+      },
+    },
+  },
+  {
     name: "send_reply",
     description: "Send an email reply via Resend to the user who left this feedback, then mark the feedback as resolved with the reply body saved in admin_notes. Use after you've drafted body text and confirmed with the founder.",
     inputSchema: {
@@ -137,7 +148,7 @@ const tools = [
 ];
 
 const server = new Server(
-  { name: "feedback-mcp", version: "0.1.0" },
+  { name: "eppp-mcp", version: "0.2.0" },
   { capabilities: { tools: {} } }
 );
 
@@ -147,7 +158,8 @@ server.setRequestHandler(CallToolRequestSchema, async (req) => {
   const { name, arguments: args = {} } = req.params;
   try {
     const result = await handle(name, args as Record<string, any>);
-    return { content: [{ type: "text", text: JSON.stringify(result, null, 2) }] };
+    const text = typeof result === "string" ? result : JSON.stringify(result, null, 2);
+    return { content: [{ type: "text", text }] };
   } catch (e: any) {
     return { content: [{ type: "text", text: `ERROR: ${e.message}` }], isError: true };
   }
@@ -285,6 +297,88 @@ async function handle(name: string, args: Record<string, any>): Promise<any> {
       };
     }
 
+    case "growth_chart": {
+      const granularity = (args.granularity ?? "day") as "day" | "week" | "month";
+      const defaultLookback = granularity === "day" ? 30 : 12;
+      const lookback = Math.max(1, Math.min(args.lookback ?? defaultLookback, 365));
+
+      const now = new Date();
+      const startDate = new Date(now);
+      if (granularity === "day") startDate.setUTCDate(now.getUTCDate() - lookback + 1);
+      else if (granularity === "week") startDate.setUTCDate(now.getUTCDate() - lookback * 7 + 1);
+      else startDate.setUTCMonth(now.getUTCMonth() - lookback + 1);
+      startDate.setUTCHours(0, 0, 0, 0);
+      const startIso = startDate.toISOString();
+
+      const bucketKey = (d: Date): string => {
+        if (granularity === "day") return d.toISOString().slice(0, 10);
+        if (granularity === "week") {
+          const monday = new Date(d);
+          const dow = (monday.getUTCDay() + 6) % 7;
+          monday.setUTCDate(monday.getUTCDate() - dow);
+          return monday.toISOString().slice(0, 10);
+        }
+        return d.toISOString().slice(0, 7);
+      };
+
+      const buckets: string[] = [];
+      const cursor = new Date(startDate);
+      while (cursor <= now) {
+        const k = bucketKey(cursor);
+        if (!buckets.length || buckets[buckets.length - 1] !== k) buckets.push(k);
+        if (granularity === "day") cursor.setUTCDate(cursor.getUTCDate() + 1);
+        else if (granularity === "week") cursor.setUTCDate(cursor.getUTCDate() + 7);
+        else cursor.setUTCMonth(cursor.getUTCMonth() + 1);
+      }
+
+      const [signups, paid] = await Promise.all([
+        sbGet(`users?created_at=gte.${startIso}&select=created_at&order=created_at.asc&limit=20000`).catch(() => []),
+        sbGet(`stripe_webhook_log?event_type=eq.checkout.session.completed&received_at=gte.${startIso}&select=received_at,customer_id&order=received_at.asc&limit=20000`).catch(() => []),
+      ]);
+
+      const signupCounts = new Map<string, number>();
+      const paidByBucket = new Map<string, Set<string>>();
+      for (const b of buckets) {
+        signupCounts.set(b, 0);
+        paidByBucket.set(b, new Set());
+      }
+      for (const row of signups) {
+        const k = bucketKey(new Date(row.created_at));
+        if (signupCounts.has(k)) signupCounts.set(k, (signupCounts.get(k) ?? 0) + 1);
+      }
+      for (const row of paid) {
+        const k = bucketKey(new Date(row.received_at));
+        if (paidByBucket.has(k) && row.customer_id) paidByBucket.get(k)!.add(row.customer_id);
+      }
+
+      const series = buckets.map((b) => ({
+        bucket: b,
+        new_users: signupCounts.get(b) ?? 0,
+        new_paid: paidByBucket.get(b)?.size ?? 0,
+      }));
+
+      const maxVal = Math.max(1, ...series.flatMap((s) => [s.new_users, s.new_paid]));
+      const barWidth = 30;
+      const bar = (n: number) => "█".repeat(Math.round((n / maxVal) * barWidth));
+
+      const totalUsers = series.reduce((a, s) => a + s.new_users, 0);
+      const totalPaid = series.reduce((a, s) => a + s.new_paid, 0);
+      const convPct = totalUsers ? ((totalPaid / totalUsers) * 100).toFixed(1) : "0.0";
+
+      const lines: string[] = [];
+      lines.push(`Growth chart — ${granularity} (last ${lookback}) — ${startIso.slice(0, 10)} to ${now.toISOString().slice(0, 10)}`);
+      lines.push("");
+      lines.push("NEW USERS (signups)");
+      for (const s of series) lines.push(`  ${s.bucket.padEnd(10)}  ${String(s.new_users).padStart(4)}  ${bar(s.new_users)}`);
+      lines.push("");
+      lines.push("NEW PAID (Stripe checkout.session.completed, distinct customers)");
+      for (const s of series) lines.push(`  ${s.bucket.padEnd(10)}  ${String(s.new_paid).padStart(4)}  ${bar(s.new_paid)}`);
+      lines.push("");
+      lines.push(`TOTALS — ${totalUsers} signups, ${totalPaid} paid (${convPct}% conversion)`);
+
+      return lines.join("\n");
+    }
+
     case "send_reply": {
       if (!RESEND_API_KEY || !NOTIFY_EMAIL_FROM) {
         throw new Error("Missing RESEND_API_KEY or NOTIFY_EMAIL_FROM");
@@ -312,7 +406,7 @@ async function handle(name: string, args: Record<string, any>): Promise<any> {
       if (!r.ok) throw new Error(`Resend ${r.status}: ${await r.text()}`);
       const sent = await r.json();
 
-      const adminNotes = `Replied via feedback-mcp on ${new Date().toISOString()}\nSubject: ${args.subject}\n\n${args.body}`;
+      const adminNotes = `Replied via eppp-mcp on ${new Date().toISOString()}\nSubject: ${args.subject}\n\n${args.body}`;
       await sbPatch(`feedback?id=eq.${args.feedback_id}`, {
         status: "resolved",
         admin_notes: adminNotes,
@@ -328,4 +422,4 @@ async function handle(name: string, args: Record<string, any>): Promise<any> {
 
 const transport = new StdioServerTransport();
 await server.connect(transport);
-console.error("[feedback-mcp] ready");
+console.error("[eppp-mcp] ready");
