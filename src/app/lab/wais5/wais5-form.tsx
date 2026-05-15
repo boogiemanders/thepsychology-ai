@@ -18,6 +18,7 @@ import {
   type Tag,
 } from './wais5-config'
 import { SCRIPTS, SUBTEST_INTROS, GENERAL_TEST_INTRO } from './wais5-scripts'
+import { supabase } from '@/lib/supabase'
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@/components/ui/accordion'
 
 const STORAGE_KEY = 'wais5-form-v1'
@@ -78,6 +79,7 @@ function tagBadge(t: Tag) {
 export default function Wais5Form() {
   const [data, setData] = useState<FormData>({})
   const [activeItemKey, setActiveItemKey] = useState<string | null>(null)
+  const [stimUrls, setStimUrls] = useState<Record<string, string>>({})
   const [toast, setToast] = useState<string | null>(null)
   const toastTimer = useRef<number | null>(null)
   const importInputRef = useRef<HTMLInputElement | null>(null)
@@ -89,6 +91,27 @@ export default function Wais5Form() {
       if (raw) setData(JSON.parse(raw))
     } catch {}
     hydrated.current = true
+  }, [])
+
+  // Fetch signed URLs for every item that has a `stim` asset (one round trip, 1h expiry).
+  useEffect(() => {
+    const paths: string[] = []
+    for (const sub of Object.values(SCRIPTS)) {
+      if (!sub) continue
+      for (const item of Object.values(sub)) {
+        if (item.stim) paths.push(item.stim)
+      }
+    }
+    if (paths.length === 0) return
+    supabase.storage
+      .from('wais5-stim')
+      .createSignedUrls(paths, 60 * 60)
+      .then(({ data: urls, error }) => {
+        if (error || !urls) return
+        const map: Record<string, string> = {}
+        for (const u of urls) if (u.path && u.signedUrl) map[u.path] = u.signedUrl
+        setStimUrls(map)
+      })
   }, [])
 
   useEffect(() => {
@@ -347,10 +370,10 @@ export default function Wais5Form() {
                     </p>
                   ) : null}
                 </div>
-                {script?.stim ? (
+                {script?.stim && stimUrls[script.stim] ? (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img
-                    src={script.stim}
+                    src={stimUrls[script.stim]}
                     alt=""
                     className="w-32 sm:w-40 h-auto rounded border border-zinc-200 dark:border-zinc-800 shrink-0"
                   />

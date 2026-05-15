@@ -554,7 +554,7 @@ const RAW = {
     "1": {
       "prompt": "What is this?",
       "stageDirection": "Point to the picture in the stimulus book.",
-      "stim": "/wais5/stim1/p049.png",
+      "stim": "stim1/p049.png",
       "scoring": {
         "2": [],
         "1": ["Book"],
@@ -565,7 +565,7 @@ const RAW = {
     "2": {
       "prompt": "What is this?",
       "stageDirection": "Point to the picture in the stimulus book.",
-      "stim": "/wais5/stim1/p050.png",
+      "stim": "stim1/p050.png",
       "scoring": {
         "2": [],
         "1": ["Airplane; Plane", "Aircraft", "Jet"],
@@ -576,7 +576,7 @@ const RAW = {
     "3": {
       "prompt": "What is this?",
       "stageDirection": "Point to the picture in the stimulus book.",
-      "stim": "/wais5/stim1/p051.png",
+      "stim": "stim1/p051.png",
       "scoring": {
         "2": [],
         "1": ["Basket"],
