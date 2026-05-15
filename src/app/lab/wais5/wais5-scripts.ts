@@ -4,6 +4,10 @@
 
 export type ItemScript = {
   prompt: string
+  /** Optional action note (e.g. "Point to the picture") shown subtly above the spoken prompt. */
+  stageDirection?: string
+  /** Optional stim book image path (under /public). */
+  stim?: string
   scoring: { '2': string[]; '1': string[]; '0': string[] }
   corrective?: string | null
 }
@@ -18,6 +22,7 @@ export type SampleScript = {
 
 export type SubtestIntro = {
   sample?: SampleScript
+  instruction?: string
   notes?: string[]
 }
 
@@ -34,9 +39,10 @@ export const SUBTEST_INTROS: Record<string, SubtestIntro> = {
     notes: ['Score 2, 1, or 0 points. Record responses verbatim.'],
   },
   vocab: {
+    instruction: 'I am going to say some words. Listen carefully and tell me what each word means.',
     notes: [
       'Picture Items (1-3): Point to the picture and say, "What is this?" Score 0 or 1.',
-      'Verbal Items (4-24): Say, "I am going to say some words. Listen carefully and tell me what each word means." Score 0, 1, or 2.',
+      'Verbal Items (4-24): Read the verbal-items instruction above, then point to each word on the stimulus page. Score 0, 1, or 2.',
     ],
   },
   info: {
@@ -545,6 +551,39 @@ const RAW = {
     }
   },
   "vocab": {
+    "1": {
+      "prompt": "What is this?",
+      "stageDirection": "Point to the picture in the stimulus book.",
+      "stim": "/wais5/stim1/p049.png",
+      "scoring": {
+        "2": [],
+        "1": ["Book"],
+        "0": ["Reader (Q)", "Read it (Q)", "Story (Q)"]
+      },
+      "corrective": null
+    },
+    "2": {
+      "prompt": "What is this?",
+      "stageDirection": "Point to the picture in the stimulus book.",
+      "stim": "/wais5/stim1/p050.png",
+      "scoring": {
+        "2": [],
+        "1": ["Airplane; Plane", "Aircraft", "Jet"],
+        "0": ["Fly; Flies; Flyer (Q)", "Ride it (Q)", "Takes you places (Q)"]
+      },
+      "corrective": null
+    },
+    "3": {
+      "prompt": "What is this?",
+      "stageDirection": "Point to the picture in the stimulus book.",
+      "stim": "/wais5/stim1/p051.png",
+      "scoring": {
+        "2": [],
+        "1": ["Basket"],
+        "0": ["Container (Q)", "Holder; Holds things (Q)", "(Carry, Put) things in it (Q)"]
+      },
+      "corrective": null
+    },
     "4": {
       "prompt": "BANANA. What is a banana?",
       "scoring": {

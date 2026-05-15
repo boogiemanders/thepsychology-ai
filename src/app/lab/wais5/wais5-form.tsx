@@ -331,13 +331,30 @@ export default function Wais5Form() {
           const script = subtestScripts?.[it.k]
           return (
             <div key={it.k} className="rounded border border-slate-200 dark:border-zinc-800 p-3">
-              <div className="mb-2 flex flex-wrap items-baseline gap-2">
-                <span className="w-12 font-semibold text-slate-500 dark:text-zinc-400">{tagBadge(it.tag ?? null)}{it.k}.</span>
-                {script
-                  ? <span className="text-[15px] font-semibold leading-snug text-[#4EBFD4]">{script.prompt}</span>
-                  : it.label
-                    ? <span className="text-[14px] font-semibold text-slate-700 dark:text-zinc-300">{it.label}</span>
-                    : null}
+              <div className="mb-2 flex flex-wrap items-start gap-3">
+                <div className="flex-1 min-w-0">
+                  <div className="flex flex-wrap items-baseline gap-2">
+                    <span className="w-12 font-semibold text-slate-500 dark:text-zinc-400">{tagBadge(it.tag ?? null)}{it.k}.</span>
+                    {script
+                      ? <span className="text-[15px] font-semibold leading-snug text-[#4EBFD4]">{script.prompt}</span>
+                      : it.label
+                        ? <span className="text-[14px] font-semibold text-slate-700 dark:text-zinc-300">{it.label}</span>
+                        : null}
+                  </div>
+                  {script?.stageDirection ? (
+                    <p className="mt-1 pl-14 text-[11px] italic text-zinc-500 dark:text-zinc-400">
+                      {script.stageDirection}
+                    </p>
+                  ) : null}
+                </div>
+                {script?.stim ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={script.stim}
+                    alt=""
+                    className="w-32 sm:w-40 h-auto rounded border border-zinc-200 dark:border-zinc-800 shrink-0"
+                  />
+                ) : null}
               </div>
 
               {script && (script.scoring['2'].length + script.scoring['1'].length + script.scoring['0'].length > 0) ? (
@@ -908,6 +925,16 @@ export default function Wais5Form() {
             <span className="font-bold">{st.n}.</span> {st.name}
           </h2>
           <p className="mb-3 text-[11px] text-slate-500 dark:text-zinc-400">{st.rules}</p>
+          {intro?.instruction ? (
+            <div className="mb-4 rounded border-l-2 border-l-[#4EBFD4] p-3">
+              <p className="mb-1 text-[10px] font-mono uppercase tracking-[0.16em] text-[#4EBFD4]">
+                Read aloud · Instructions
+              </p>
+              <p className="text-[14px] leading-snug text-zinc-800 dark:text-zinc-200">
+                &ldquo;{intro.instruction}&rdquo;
+              </p>
+            </div>
+          ) : null}
           {intro?.sample ? (
             <div className="mb-4 rounded border border-zinc-200 dark:border-zinc-800 border-l-2 border-l-[#4EBFD4] p-3">
               <p className="mb-1 text-[10px] font-mono uppercase tracking-[0.16em] text-[#4EBFD4]">
