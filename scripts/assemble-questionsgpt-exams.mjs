@@ -6,8 +6,8 @@ import path from 'path'
 const ROOT = process.cwd()
 const QUESTIONS_DIR = path.join(ROOT, 'questionsGPT')
 const PRACTICE_OUTPUT_DIR = path.join(ROOT, 'examsGPT')
-const DIAGNOSTIC_OUTPUT_DIR = path.join(ROOT, 'diagnosticGPT')
-const KNS_CANDIDATE_PATHS = ['KNs.md', 'Kns.md']
+const DIAGNOSTIC_OUTPUT_DIR = path.join(ROOT, 'EPPP/tooling/diagnosticGPT')
+const KNS_CANDIDATE_PATHS = ['EPPP/docs/KNs.md', 'EPPP/docs/Kns.md', 'KNs.md', 'Kns.md']
 
 const DEFAULT_TYPE = 'practice'
 const DEFAULT_COUNT = 4
