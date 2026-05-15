@@ -37,10 +37,10 @@ export function getCodeDurationMinutes(code: string): number {
 export const legend: Record<string, ClinicianConfig> = {
   'Anders Chan': {
     type: 'cpt_based',
-    rates: { '90791': 75, '90837': 75 },
-    default: 50,
+    rates: { '90791': 90, '90837': 90 },
+    default: 65,
     noShow: { '00001': 40, '00002': 40 },
-    manualRates: { didactic: 75 },
+    manualRates: { didactic: 90 },
   },
   'Bret Boatwright': {
     type: 'payer_dependent',
