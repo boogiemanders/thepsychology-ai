@@ -155,10 +155,10 @@ export async function GET(request: NextRequest) {
     const { range } = parsedQuery.data
     const rangeStart = getDateRangeFilter(range)
 
-    // Get all users for total count
+    // Get all users for total count + paid signup chart
     const { data: allUsers, error: allUsersError } = await supabase
       .from('users')
-      .select('id, created_at')
+      .select('id, created_at, stripe_customer_id, subscription_started_at')
 
     if (allUsersError) {
       console.error('Failed to fetch all users:', allUsersError)
@@ -166,6 +166,7 @@ export async function GET(request: NextRequest) {
     }
 
     const totalUsers = allUsers?.length || 0
+    const totalPaidUsers = allUsers?.filter((u) => u.stripe_customer_id).length || 0
 
     // Calculate time-based counts
     const now = new Date()
@@ -237,28 +238,42 @@ export async function GET(request: NextRequest) {
       }))
       .sort((a, b) => b.count - a.count)
 
-    // Get signups by day for chart (last 30 days regardless of range)
-    const thirtyDaysAgo = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000)
-    const signupsByDayMap: Record<string, number> = {}
+    // Signups + paid conversions by day, respecting the selected range
+    const chartDays = range === '7d' ? 7 : range === '30d' ? 30 : range === '90d' ? 90 : 180
+    const chartStart = new Date(now.getTime() - (chartDays - 1) * 24 * 60 * 60 * 1000)
+    chartStart.setHours(0, 0, 0, 0)
 
-    // Initialize all days with 0
-    for (let i = 0; i < 30; i++) {
-      const date = new Date(thirtyDaysAgo.getTime() + i * 24 * 60 * 60 * 1000)
+    const signupsByDayMap: Record<string, number> = {}
+    const paidByDayMap: Record<string, number> = {}
+
+    for (let i = 0; i < chartDays; i++) {
+      const date = new Date(chartStart.getTime() + i * 24 * 60 * 60 * 1000)
       const dateStr = date.toISOString().split('T')[0]
       signupsByDayMap[dateStr] = 0
+      paidByDayMap[dateStr] = 0
     }
 
-    // Count signups
     for (const user of allUsers || []) {
-      const dateStr = new Date(user.created_at).toISOString().split('T')[0]
-      if (signupsByDayMap[dateStr] !== undefined) {
-        signupsByDayMap[dateStr]++
+      const signupDate = new Date(user.created_at).toISOString().split('T')[0]
+      if (signupsByDayMap[signupDate] !== undefined) {
+        signupsByDayMap[signupDate]++
+      }
+      if (user.stripe_customer_id) {
+        const paidAt = user.subscription_started_at || user.created_at
+        const paidDate = new Date(paidAt).toISOString().split('T')[0]
+        if (paidByDayMap[paidDate] !== undefined) {
+          paidByDayMap[paidDate]++
+        }
       }
     }
 
-    const signupsByDay = Object.entries(signupsByDayMap)
-      .map(([date, count]) => ({ date, count }))
-      .sort((a, b) => a.date.localeCompare(b.date))
+    const signupsByDay = Object.keys(signupsByDayMap)
+      .sort()
+      .map((date) => ({
+        date,
+        signups: signupsByDayMap[date],
+        paid: paidByDayMap[date],
+      }))
 
     // Recent signups (most recent 50)
     const recentSignups = (rangeUsers || []).slice(0, 50).map(user => ({
@@ -274,6 +289,7 @@ export async function GET(request: NextRequest) {
 
     return NextResponse.json({
       totalUsers,
+      totalPaidUsers,
       usersThisMonth,
       usersThisWeek,
       usersToday,

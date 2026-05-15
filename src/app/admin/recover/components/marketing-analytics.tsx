@@ -11,9 +11,11 @@ import { Badge } from '@/components/ui/badge'
 import { supabase } from '@/lib/supabase'
 import { REFERRAL_SOURCES, getReferralSourceByValue } from '@/lib/referral-sources'
 import { GA4Analytics } from './ga4-analytics'
+import { SignupRateChart } from './signup-rate-chart'
 
 type MarketingData = {
   totalUsers: number
+  totalPaidUsers: number
   usersThisMonth: number
   usersThisWeek: number
   usersToday: number
@@ -30,7 +32,8 @@ type MarketingData = {
   }>
   signupsByDay: Array<{
     date: string
-    count: number
+    signups: number
+    paid: number
   }>
   deviceBreakdown: Array<{
     device: string
@@ -198,7 +201,7 @@ export function MarketingAnalytics() {
       </Card>
 
       {/* Key Metrics */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-xs text-muted-foreground font-normal">Total Users</CardTitle>
@@ -231,7 +234,20 @@ export function MarketingAnalytics() {
             <div className="text-2xl font-bold">{data?.usersToday || 0}</div>
           </CardContent>
         </Card>
+        <Card>
+          <CardHeader className="pb-2">
+            <CardTitle className="text-xs text-muted-foreground font-normal">Stripe Paid Users</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold text-green-600">{data?.totalPaidUsers || 0}</div>
+          </CardContent>
+        </Card>
       </div>
+
+      {/* Signup Rate Chart */}
+      {data?.signupsByDay && data.signupsByDay.length > 0 && (
+        <SignupRateChart data={data.signupsByDay} />
+      )}
 
       {/* Two Column Layout */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
