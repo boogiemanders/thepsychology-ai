@@ -322,10 +322,12 @@ async function handle(name: string, args: Record<string, any>): Promise<any> {
       };
 
       const buckets: string[] = [];
+      const finalKey = bucketKey(now);
       const cursor = new Date(startDate);
-      while (cursor <= now) {
+      while (true) {
         const k = bucketKey(cursor);
         if (!buckets.length || buckets[buckets.length - 1] !== k) buckets.push(k);
+        if (k === finalKey) break;
         if (granularity === "day") cursor.setUTCDate(cursor.getUTCDate() + 1);
         else if (granularity === "week") cursor.setUTCDate(cursor.getUTCDate() + 7);
         else cursor.setUTCMonth(cursor.getUTCMonth() + 1);
