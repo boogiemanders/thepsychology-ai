@@ -94,6 +94,17 @@ const EXCLUDED_CHANGELOG_TITLE_PATTERNS = [
   /changelog.*filter/i,
   /hide.*commit/i,
   /remove.*github/i,
+  // Internal docs / protocol references
+  /^docs:/i,
+  /^chore:/i,
+  /^ci:/i,
+  /^build:/i,
+  /^refactor:/i,
+  /^style:/i,
+  /^test:/i,
+  /karpathy/i,
+  /emotion code/i,
+  /claude\.md/i,
 ]
 
 function normalizeChangelogAuthor(author: string | null | undefined): string | null {

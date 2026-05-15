@@ -356,7 +356,7 @@ export default function Wais5Form() {
                     ))}
                   </div>
                   {script.corrective ? (
-                    <p className="mt-2 rounded border-l-2 border-[#4EBFD4] bg-zinc-50 dark:bg-zinc-950 p-2 text-[12px] text-zinc-700 dark:text-zinc-300">
+                    <p className="mt-2 rounded border-l-2 border-[#4EBFD4] p-2 text-[12px] text-zinc-700 dark:text-zinc-300">
                       <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-slate-500 dark:text-zinc-400">Corrective feedback: </span>
                       Say, &ldquo;{script.corrective}&rdquo;
                     </p>
@@ -730,13 +730,13 @@ export default function Wais5Form() {
   return (
     <div className="space-y-5">
       {/* sticky action bar */}
-      <div className="sticky top-0 z-40 -mx-4 flex flex-wrap items-center gap-2 border-b border-slate-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 px-4 py-2 print:hidden">
+      <div className="sticky top-0 z-40 -mx-4 flex flex-wrap items-center gap-2 border-b border-zinc-200 dark:border-zinc-800 px-4 py-2 print:hidden">
         <p className="mr-auto text-[11px] font-mono uppercase tracking-[0.16em] text-slate-500 dark:text-zinc-400">WAIS-5 Record Form</p>
-        <button type="button" onClick={handleSave} className="rounded border border-slate-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 px-3 py-1 text-[12px] hover:bg-slate-50 dark:hover:bg-zinc-800 dark:bg-zinc-950">Save</button>
-        <button type="button" onClick={handleExport} className="rounded border border-slate-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 px-3 py-1 text-[12px] hover:bg-slate-50 dark:hover:bg-zinc-800 dark:bg-zinc-950">Export JSON</button>
-        <button type="button" onClick={() => importInputRef.current?.click()} className="rounded border border-slate-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 px-3 py-1 text-[12px] hover:bg-slate-50 dark:hover:bg-zinc-800 dark:bg-zinc-950">Import JSON</button>
+        <button type="button" onClick={handleSave} className="rounded border border-zinc-300 dark:border-zinc-700 px-3 py-1 text-[12px] text-zinc-700 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800">Save</button>
+        <button type="button" onClick={handleExport} className="rounded border border-zinc-300 dark:border-zinc-700 px-3 py-1 text-[12px] text-zinc-700 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800">Export JSON</button>
+        <button type="button" onClick={() => importInputRef.current?.click()} className="rounded border border-zinc-300 dark:border-zinc-700 px-3 py-1 text-[12px] text-zinc-700 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800">Import JSON</button>
         <input ref={importInputRef} type="file" accept="application/json" className="hidden" onChange={handleImport} />
-        <button type="button" onClick={() => window.print()} className="rounded border border-slate-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 px-3 py-1 text-[12px] hover:bg-slate-50 dark:hover:bg-zinc-800 dark:bg-zinc-950">Print</button>
+        <button type="button" onClick={() => window.print()} className="rounded border border-zinc-300 dark:border-zinc-700 px-3 py-1 text-[12px] text-zinc-700 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800">Print</button>
         <button type="button" onClick={handleClear} className="rounded border border-[#E7437D] bg-[#E7437D] px-3 py-1 text-[12px] text-white hover:opacity-90">New</button>
       </div>
 
@@ -809,7 +809,7 @@ export default function Wais5Form() {
       </section>
 
       {/* general intro */}
-      <section className="rounded-lg border border-zinc-200 dark:border-zinc-800 border-l-2 border-l-[#4EBFD4] bg-white dark:bg-zinc-900 p-4 print:hidden">
+      <section className="rounded-lg border border-zinc-200 dark:border-zinc-800 border-l-2 border-l-[#4EBFD4] p-4 print:hidden">
         <p className="mb-2 text-[10px] font-mono uppercase tracking-[0.16em] text-[#4EBFD4]">
           Read aloud · General introduction
         </p>
@@ -828,7 +828,7 @@ export default function Wais5Form() {
           </h2>
           <p className="mb-3 text-[11px] text-slate-500 dark:text-zinc-400">{st.rules}</p>
           {intro?.sample ? (
-            <div className="mb-4 rounded border border-zinc-200 dark:border-zinc-800 border-l-2 border-l-[#4EBFD4] bg-zinc-50 dark:bg-zinc-950 p-3">
+            <div className="mb-4 rounded border border-zinc-200 dark:border-zinc-800 border-l-2 border-l-[#4EBFD4] p-3">
               <p className="mb-1 text-[10px] font-mono uppercase tracking-[0.16em] text-[#4EBFD4]">
                 Sample item · Read aloud
               </p>
@@ -865,7 +865,7 @@ export default function Wais5Form() {
           ) : null}
           <div className="mt-3 flex items-center justify-end gap-3 text-[13px] text-slate-500 dark:text-zinc-400">
             {st.name} Total Raw Score (Max {st.max}):
-            <span className="inline-block min-w-[48px] rounded border border-zinc-900 dark:border-zinc-100 bg-zinc-900 dark:bg-zinc-100 px-2 py-1 text-center text-[15px] font-semibold text-white dark:text-zinc-900">
+            <span className="inline-block min-w-[48px] px-2 py-1 text-center text-[15px] font-semibold text-zinc-900 dark:text-zinc-100">
               {totals[st.id] || 0}
             </span>
           </div>
