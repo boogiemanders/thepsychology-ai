@@ -77,6 +77,9 @@ const EXCLUDED_CHANGELOG_TEXT_PATTERNS = [
   /\bmr\.?\s+[A-Z][a-z]/,
   /\bms\.?\s+[A-Z][a-z]/,
   /\bmrs\.?\s+[A-Z][a-z]/,
+  // PII safety: phrases that indicate a person is being named
+  /\b[A-Z][a-z]+\s+[A-Z][a-z]+\s+(flagged|reported|noticed|asked|emailed|complained|said)\b/,
+  /\b(flagged|reported|noticed|asked|emailed|complained|said)\s+by\s+[A-Z][a-z]+\s+[A-Z][a-z]+\b/,
 ]
 
 // Also exclude commits that mention lab or SENSE in the title
@@ -193,8 +196,34 @@ function toApiEntriesFromFallback(entries: ChangelogEntry[]): ApiChangelogEntry[
   }))
 }
 
+// Words that look capitalized but are NOT person names — don't redact these.
+const NON_NAME_CAPITALIZED_PAIRS = new Set([
+  'Block Design', 'Visual Puzzles', 'Visual Spatial', 'Verbal Comprehension',
+  'Fluid Reasoning', 'Working Memory', 'Processing Speed', 'Matrix Reasoning',
+  'Figure Weights', 'Digit Sequencing', 'Running Digits', 'Symbol Search',
+  'Symbol Span', 'Set Relations', 'Spatial Addition', 'Digits Forward',
+  'Digits Backward', 'Naming Speed', 'Letter Number', 'Letter-Number',
+  'Pearson Blue', 'Google Docs', 'Google Doc', 'Web Store', 'Chrome Web',
+  'Personal Timeline', 'Personal Profile', 'Test Date', 'Birth Date',
+  'Test Age', 'Last Name', 'First Name', 'Sample Item', 'Read Aloud',
+  'Total Raw', 'Raw Score', 'Scaled Score', 'Sum Score', 'Index Score',
+  'Composite Score', 'Critical Value', 'Base Rate', 'Set Errors',
+  'Rotation Errors', 'Dimension Errors', 'Time Bonus', 'Partial Score',
+  'Constructed Design', 'Picture Items', 'New York', 'Hong Kong',
+  'Los Angeles', 'San Francisco', 'United States', 'United Kingdom',
+])
+
+function redactPersonNames(text: string): string {
+  // Replace "FirstName LastName" patterns (two capitalized words) with [user]
+  // unless they're in the allowlist of known non-name phrases.
+  return text.replace(/\b[A-Z][a-z]+\s+[A-Z][a-z]+\b/g, (match) => {
+    if (NON_NAME_CAPITALIZED_PAIRS.has(match)) return match
+    return '[user]'
+  })
+}
+
 function sanitizeChangelogText(text: string): string {
-  return text
+  return redactPersonNames(text)
     .replace(/examsGPT\//gi, 'exams folder')
     .replace(/\bexamsGPT\b/gi, 'exams folder')
 }
