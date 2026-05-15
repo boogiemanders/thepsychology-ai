@@ -18,6 +18,7 @@ import {
   type Tag,
 } from './wais5-config'
 import { SCRIPTS, SUBTEST_INTROS, GENERAL_TEST_INTRO } from './wais5-scripts'
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@/components/ui/accordion'
 
 const STORAGE_KEY = 'wais5-form-v1'
 
@@ -76,6 +77,7 @@ function tagBadge(t: Tag) {
 
 export default function Wais5Form() {
   const [data, setData] = useState<FormData>({})
+  const [activeItemKey, setActiveItemKey] = useState<string | null>(null)
   const [toast, setToast] = useState<string | null>(null)
   const toastTimer = useRef<number | null>(null)
   const importInputRef = useRef<HTMLInputElement | null>(null)
@@ -238,10 +240,13 @@ export default function Wais5Form() {
     />
   )
 
-  const TextArea = ({ name, className }: { name: string; className?: string }) => (
+  const TextArea = ({ name, className, onFocus, onKeyDown }: { name: string; className?: string; onFocus?: () => void; onKeyDown?: (e: React.KeyboardEvent<HTMLTextAreaElement>) => void }) => (
     <textarea
       value={data[name] || ''}
       onChange={e => set(name, e.target.value)}
+      onFocus={onFocus}
+      onKeyDown={onKeyDown}
+      data-form-name={name}
       className={`w-full resize-y rounded border border-slate-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 px-2 py-1 text-[13px] outline-none focus:border-zinc-900 dark:focus:border-zinc-100 min-h-[28px] ${className || ''}`}
     />
   )
@@ -336,36 +341,112 @@ export default function Wais5Form() {
               </div>
 
               {script && (script.scoring['2'].length + script.scoring['1'].length + script.scoring['0'].length > 0) ? (
-                <details className="mb-2 print:hidden">
-                  <summary className="cursor-pointer text-[11px] font-mono uppercase tracking-[0.14em] text-slate-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100">
-                    show scoring rubric
-                  </summary>
-                  <div className="mt-2 grid grid-cols-1 gap-2 text-[12px] sm:grid-cols-3">
-                    {(['2','1','0'] as const).map(sec => (
-                      <div key={sec} className="rounded bg-slate-50 dark:bg-zinc-950 p-2">
-                        <p className={`mb-1 text-[10px] font-mono uppercase tracking-[0.12em] ${sec==='2'?'text-[#B6D458]':sec==='1'?'text-[#F39E3A]':'text-[#E7437D]'}`}>
-                          {sec} {sec === '1' ? 'point' : 'points'}
-                        </p>
-                        <ul className="space-y-1 text-slate-700 dark:text-zinc-300">
-                          {script.scoring[sec].map((e, i) => (
-                            <li key={i} className="leading-snug">{e}</li>
-                          ))}
-                          {script.scoring[sec].length === 0 ? <li className="italic text-slate-400 dark:text-zinc-500">—</li> : null}
-                        </ul>
+                <Accordion
+                  type="single"
+                  collapsible
+                  className="mb-2 print:hidden"
+                  value={activeItemKey === `${st.id}-${it.k}` ? `${st.id}-${it.k}-rubric` : ''}
+                  onValueChange={(v) => {
+                    if (v) setActiveItemKey(`${st.id}-${it.k}`)
+                    else if (activeItemKey === `${st.id}-${it.k}`) setActiveItemKey(null)
+                  }}
+                >
+                  <AccordionItem value={`${st.id}-${it.k}-rubric`} className="border-0">
+                    <AccordionTrigger className="py-1 text-[11px] font-mono uppercase tracking-[0.14em] text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 hover:no-underline">
+                      show scoring rubric
+                    </AccordionTrigger>
+                    <AccordionContent className="pt-2 pb-0">
+                      <div className="grid grid-cols-1 gap-2 text-[12px] sm:grid-cols-3">
+                        {(['2','1','0'] as const).map(sec => (
+                          <div key={sec} className="p-2">
+                            <p className={`mb-1 text-[10px] font-mono uppercase tracking-[0.12em] ${sec==='2'?'text-[#B6D458]':sec==='1'?'text-[#F39E3A]':'text-[#E7437D]'}`}>
+                              {sec} {sec === '1' ? 'point' : 'points'}
+                            </p>
+                            <ul className="space-y-1 text-zinc-700 dark:text-zinc-300">
+                              {script.scoring[sec].map((e, i) => {
+                                const pickKey = `${name}-pick-${sec}-${i}`
+                                const picked = data[pickKey] === '1'
+                                return (
+                                  <li key={i}>
+                                    <button
+                                      type="button"
+                                      onClick={() => {
+                                        // Toggle this pick, then rebuild text + score from all active picks.
+                                        const next: FormData = { ...data, [pickKey]: picked ? '' : '1' }
+                                        const texts: string[] = []
+                                        let maxSec = -1
+                                        for (const s of ['2','1','0'] as const) {
+                                          script.scoring[s].forEach((entry, idx) => {
+                                            if (next[`${name}-pick-${s}-${idx}`] === '1') {
+                                              texts.push(entry.replace(/\s*\(Q\)\s*/g, '').trim())
+                                              const sNum = parseInt(s, 10)
+                                              if (sNum > maxSec) maxSec = sNum
+                                            }
+                                          })
+                                        }
+                                        next[`${name}-r`] = texts.join('; ')
+                                        const allowed = scoreValues(kind)
+                                        if (maxSec >= 0 && allowed.includes(maxSec)) {
+                                          next[name] = String(maxSec)
+                                        } else {
+                                          next[name] = ''
+                                        }
+                                        setData(next)
+                                      }}
+                                      className={`text-left leading-snug cursor-pointer ${picked ? 'underline decoration-2 text-zinc-900 dark:text-zinc-100' : 'hover:text-zinc-900 dark:hover:text-zinc-100 hover:underline'}`}
+                                    >
+                                      {e}
+                                    </button>
+                                  </li>
+                                )
+                              })}
+                              {script.scoring[sec].length === 0 ? <li className="italic text-zinc-400 dark:text-zinc-500">—</li> : null}
+                            </ul>
+                          </div>
+                        ))}
                       </div>
-                    ))}
-                  </div>
-                  {script.corrective ? (
-                    <p className="mt-2 rounded border-l-2 border-[#4EBFD4] p-2 text-[12px] text-zinc-700 dark:text-zinc-300">
-                      <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-slate-500 dark:text-zinc-400">Corrective feedback: </span>
-                      Say, &ldquo;{script.corrective}&rdquo;
-                    </p>
-                  ) : null}
-                </details>
+                      {script.corrective ? (
+                        <p className="mt-2 rounded border-l-2 border-[#4EBFD4] p-2 text-[12px] text-zinc-700 dark:text-zinc-300">
+                          <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-zinc-500 dark:text-zinc-400">Corrective feedback: </span>
+                          Say, &ldquo;{script.corrective}&rdquo;
+                        </p>
+                      ) : null}
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
               ) : null}
 
               <div className="flex flex-wrap items-start gap-3">
-                <TextArea name={`${name}-r`} className="min-w-[200px] flex-1" />
+                <TextArea
+                  name={`${name}-r`}
+                  className="min-w-[200px] flex-1"
+                  onFocus={() => setActiveItemKey(`${st.id}-${it.k}`)}
+                  onKeyDown={(e) => {
+                    // Tab / Shift+Tab / Cmd+Arrow = navigate items
+                    const goNext = (e.key === 'Tab' && !e.shiftKey) || ((e.metaKey || e.ctrlKey) && e.key === 'ArrowDown')
+                    const goPrev = (e.key === 'Tab' && e.shiftKey) || ((e.metaKey || e.ctrlKey) && e.key === 'ArrowUp')
+                    if (goNext || goPrev) {
+                      const items = st.items || []
+                      const idx = items.findIndex(x => x.k === it.k)
+                      const nextIdx = goNext ? idx + 1 : idx - 1
+                      const next = items[nextIdx]
+                      if (next) {
+                        e.preventDefault()
+                        const nextEl = document.querySelector<HTMLTextAreaElement>(`[data-form-name="${st.id}-${next.k}-r"]`)
+                        nextEl?.focus()
+                      }
+                    }
+                    // Cmd/Ctrl + 0/1/2 = score
+                    if ((e.metaKey || e.ctrlKey) && ['0', '1', '2'].includes(e.key)) {
+                      const allowed = scoreValues(kind)
+                      const v = parseInt(e.key, 10)
+                      if (allowed.includes(v)) {
+                        e.preventDefault()
+                        set(name, String(v))
+                      }
+                    }
+                  }}
+                />
                 <ScorePills name={name} kind={kind} />
               </div>
             </div>

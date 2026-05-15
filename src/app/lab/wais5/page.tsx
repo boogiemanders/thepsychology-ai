@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Wais5Form from './wais5-form'
 import AccessGate from './access-gate'
+import NavbarAutoHide from './navbar-autohide'
 
 export const metadata: Metadata = {
   title: 'WAIS-5 Digital Record Form | thePsychology.ai',
@@ -32,6 +33,7 @@ export default function Wais5Page() {
         </p>
       </header>
 
+      <NavbarAutoHide />
       <AccessGate>
         <Wais5Form />
       </AccessGate>
